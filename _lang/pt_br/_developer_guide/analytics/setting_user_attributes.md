@@ -1,19 +1,23 @@
 ---
-nav_title: Definição de atribuições do usuário
-article_title: Configuração das atribuições do usuário por meio do Braze SDK
+nav_title: Definir atribuições do usuário
+article_title: Defina atributos do usuário através do SDK Braze
 page_order: 1.2
-description: "Saiba como definir as atribuições do usuário por meio do Braze SDK."
+description: "Aprenda como definir atributos do usuário através do SDK Braze."
 ---
 
-# Definição das atribuições do usuário
+# Definir atribuições do usuário
 
-> Saiba como definir as atribuições do usuário por meio do Braze SDK.
+> Aprenda como definir atributos do usuário através do SDK Braze.
 
 {% alert note %}
-Para SDKs de wrapper não listados, use o método nativo relevante do Android ou Swift.
+Para SDKs wrapper não listados, use o método nativo Android ou Swift relevante.
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/analytics/setting_user_attributes.md %}
 {% endsdktab %}
@@ -22,15 +26,16 @@ Para SDKs de wrapper não listados, use o método nativo relevante do Android ou
 {% multi_lang_include developer_guide/swift/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
+{% sdktab flutter %}
+{% multi_lang_include developer_guide/flutter/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
+{% sdktab roku %}
+{% multi_lang_include developer_guide/roku/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/analytics/setting_user_attributes.md %}
-{% endsdktab %}
 {% endsdktabs %}

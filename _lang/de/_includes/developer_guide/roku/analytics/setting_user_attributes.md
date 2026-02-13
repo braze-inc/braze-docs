@@ -4,7 +4,7 @@
 
 ### Vordefinierte Methoden
 
-Braze bietet vordefinierte Methoden, um die folgenden Nutzer:innen-Attribute mit Hilfe des `m.Braze` Objekts einzustellen.
+Braze bietet vordefinierte Methoden zum Einstellen der folgenden Nutzer:innen-Attribute unter Verwendung des `m.Braze` Objekts.
 
 - `FirstName`
 - `LastName`
@@ -21,47 +21,47 @@ Braze bietet vordefinierte Methoden, um die folgenden Nutzer:innen-Attribute mit
 Um ein Standardattribut festzulegen, rufen Sie die entsprechende Methode für das Objekt `m.Braze` auf.
 
 {% tabs local %}
-{% tab Vorname %}
+{% tab First name %}
 ```brightscript
 m.Braze.setFirstName("Alex")
 ```
 {% endtab %}
-{% tab Nachname %}
+{% tab Last name %}
 ```brightscript
 m.Braze.setLastName("Smith")
 ```
 {% endtab %}
-{% tab E-Mail %}
+{% tab Email %}
 ```brightscript
 m.Braze.setEmail("alex@example.com")
 ```
 {% endtab %}
-{% tab Geschlecht %}
+{% tab Gender %}
 ```brightscript
 m.Braze.setGender("m") ' Accepts: "m", "f", "o", "n", "u", "p"
 ```
 {% endtab %}
-{% tab Geburtsdatum %}
+{% tab Birth date %}
 ```brightscript
 m.Braze.setDateOfBirth(1990, 5, 15) ' Year, month, day
 ```
 {% endtab %}
-{% tab Land %}
+{% tab Country %}
 ```brightscript
 m.Braze.setCountry("United States")
 ```
 {% endtab %}
-{% tab Sprache %}
+{% tab Language %}
 ```brightscript
 m.Braze.setLanguage("en")
 ```
 {% endtab %}
-{% tab Heimatstadt %}
+{% tab Home city %}
 ```brightscript
 m.Braze.setHomeCity("New York")
 ```
 {% endtab %}
-{% tab Rufnummer %}
+{% tab Phone number %}
 ```brightscript
 m.Braze.setPhoneNumber("+1234567890")
 ```
@@ -91,7 +91,7 @@ m.Braze.setCustomAttribute("intAttribute", 5)
 ```
 {% endtab %}
 
-{% tab Gleitkommazahlen %}
+{% tab Floating-points %}
 Braze behandelt die Werte von `float` und `double` genau gleich. So legen Sie ein angepasstes Attribut mit einem der beiden Werte fest:
 
 ```brightscript
@@ -99,7 +99,7 @@ m.Braze.setCustomAttribute("floatAttribute", 3.5)
 ```
 {% endtab %}
 
-{% tab Boolesch %}
+{% tab Boolean %}
 So legen Sie ein angepasstes Attribut mit einem `boolean` Wert fest:
 
 ```brightscript
@@ -107,7 +107,7 @@ m.Braze.setCustomAttribute("boolAttribute", true)
 ```
 {% endtab %}
 
-{% tab Datum %}
+{% tab Date %}
 So legen Sie ein angepasstes Attribut mit einem `date` Wert fest:
 
 ```brightscript

@@ -19,7 +19,7 @@ _Esta integración está mantenida por Lob._
 Con esta integración, puedes:
 
 - Envía cartas, postales y cheques por correo utilizando los webhooks Braze y la API Lob.
-- Comparte eventos de Lob con Braze como atributos y eventos personalizados utilizando la Transformación de Datos Braze y los webhooks de Lob.
+- Comparte los eventos de Lob con Braze como atributos y eventos personalizados utilizando la Transformación de Datos Braze y los webhooks de Lob.
 
 ## Requisitos previos
 
@@ -60,7 +60,7 @@ Lob requiere un encabezado HTTP para la autorización y un método HTTP. Lo sigu
   - **Autorización**: Básica `{{'<LOB_API_KEY>:' | base64_encode}}`
   - **Content-Type**: application/json
 
-![Código del cuerpo de la solicitud y URL del webhook mostrados en la pestaña de composición del constructor de webhook Braze.]({% image_buster /assets/img_archive/lob_full_request.png %})
+![Código del cuerpo de la solicitud y URL del webhook mostrados en la pestaña de composición del creador de webhooks Braze.]({% image_buster /assets/img_archive/lob_full_request.png %})
 
 #### Cuerpo de la solicitud
 
@@ -89,14 +89,14 @@ En este punto, tu campaña debería estar lista para probarla y enviarla. Compru
 Recuerda guardar tu plantilla antes de salir de la página. <br>Las plantillas webhook actualizadas pueden encontrarse en la lista **Plantillas webhook guardadas** al crear una nueva [campaña webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
 {% endalert %}
 
-![Un registro de mensajes de error que muestra la hora, el nombre de la aplicación, el canal y el mensaje de error. El mensaje de error incluye la alerta de mensaje y el código de estado.]({% image_buster /assets/img_archive/error_log.png %})
+![Un registro de mensajes de error que muestra la hora, el nombre de la aplicación, el canal y el mensaje de error. El mensaje de error incluye el mensaje de alerta y el código de estado.]({% image_buster /assets/img_archive/error_log.png %})
 
 ## Compartir eventos mediante webhooks Lob 
 
 [La Transformación de Datos Braze]({{site.baseurl}}/user_guide/data/data_transformation/overview) te permite crear y administrar webhooks para automatizar el flujo de datos desde plataformas externas a Braze. A cada transformación se le asigna un punto final único, que otras plataformas pueden utilizar como destino de su webhook.
 
 {% alert important %}
-La plantilla de Transformación de Datos de Lob envía eventos utilizando tu [punto final`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track), que consume puntos de datos en Braze. Te recomendamos que establezcas un límite de velocidad en la configuración de tu webhook de Lob, para evitar un consumo excesivo de datos.
+La plantilla de Transformación de Datos de Lob envía eventos utilizando tu [punto final`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track), que registra puntos de datos. Te recomendamos que establezcas un límite de velocidad en la configuración de tu webhook de Lob para evitar el registro excesivo de datos.
 {% endalert %}
 
 ### Paso 1: Crear una transformación en Braze
@@ -156,4 +156,4 @@ return brazecall;
 ### Paso 3: Crear un webhook en Lob
 
 1. Cuando hayas terminado de crear tu plantilla, selecciona **Activar** y, a continuación, copia la **URL del webhook** en el portapapeles.
-2. En Lob, [crea un nuevo webhook](https://help.lob.com/print-and-mail/getting-data-and-results/using-webhooks#receiving-a-webhook-1) y utiliza la URL de tu webhook de Braze para recibir el webhook.
+2. En Lob, [crea un nuevo webhook](https://help.lob.com/print-and-mail/getting-data-and-results/using-webhooks#receiving-a-webhook-1) y, a continuación, utiliza la URL de tu webhook de Braze para recibir el webhook.

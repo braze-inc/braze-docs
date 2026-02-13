@@ -32,12 +32,16 @@ Sie müssen sicherstellen, dass Sie die folgenden Artikel erstellt, abgeschlosse
 | Anforderung | Herkunft | Beschreibung |
 | --- | --- | --- |
 | LinkedIn Anzeigenkonto | [LinkedIn](https://www.linkedin.com/campaignmanager) | Ein aktives LinkedIn-Anzeigenkonto, das mit Ihrer Marke verknüpft ist.<br><br>Vergewissern Sie sich, dass Sie alle relevanten LinkedIn-Bedingungen für den Zugriff und die Nutzung dieses Kontos akzeptiert haben und dass Ihr LinkedIn-Administrator Ihnen die entsprechenden Berechtigungen zur Verwaltung von Zielgruppen erteilt hat. |
-| LinkedIn Bedingungen und Richtlinien | LinkedIn | Sie erklären sich damit einverstanden, alle von LinkedIn geforderten Bedingungen, Richtlinien und Dokumentationen in Bezug auf Ihre Nutzung von LinkedIn Audience Sync einzuhalten, einschließlich aller darin referenzierten Bedingungen, Richtlinien und Dokumentationen, zu denen auch die von LinkedIn gehören können: Bedingungen für Serviceleistungen; Dienste, Anzeigenvereinbarung, Datenverarbeitungsvereinbarung und Richtlinien der Professional Community. |
+| LinkedIn Bedingungen & Richtlinien | LinkedIn | Sie erklären sich damit einverstanden, alle von LinkedIn geforderten Bedingungen, Richtlinien und Dokumentationen in Bezug auf Ihre Nutzung von LinkedIn Audience Sync einzuhalten, einschließlich aller darin referenzierten Bedingungen, Richtlinien und Dokumentationen, zu denen auch die von LinkedIn gehören können: Bedingungen für Serviceleistungen; Dienste, Anzeigenvereinbarung, Datenverarbeitungsvereinbarung und Richtlinien der Professional Community. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integration
 
 ### Schritt 1: Mit LinkedIn verbinden
+
+{% alert important %}
+Sie müssen die [ Berechtigung "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) haben, um LinkedIn mit Ihrem Braze-Konto zu verbinden.
+{% endalert %}
 
 Gehen Sie im Braze-Dashboard zu **Technologiepartner** und wählen Sie **LinkedIn** aus. Wählen Sie im Bereich **LinkedIn Audience Sync** die Option **LinkedIn verbinden** aus.
 
@@ -63,7 +67,7 @@ Wenn Sie den [iOS Identifier for Advertisers (IDFA) über das Braze SDK]({{site.
 
 Wenn Sie `opt-ins`, `opt-outs`, `Do Not Sell Or Share` oder andere relevante angepasste Attribute sammeln, sollten Sie diese in Ihre Canvas-Eingangskriterien als Filter einbeziehen:
 
-![Ein Canvas mit einem Eingang Zielgruppe "opted_in_marketing" ist gleich "true".]({% image_buster /assets/img/linkedin/linkedin4.png %}){: style="max-width:75%;"}
+![Ein Canvas mit einem Eingang der Zielgruppe "opted_in_marketing" ist gleich "wahr".]({% image_buster /assets/img/linkedin/linkedin4.png %}){: style="max-width:75%;"}
 
 Wenn Sie mehr darüber erfahren möchten, wie Sie diese Datenschutzgesetze innerhalb der Braze-Plattform einhalten können, lesen Sie bitte den Abschnitt [Technische Unterstützung zum Datenschutz]({{site.baseurl}}/dp-technical-assistance/).
 
@@ -71,7 +75,7 @@ Wenn Sie mehr darüber erfahren möchten, wie Sie diese Datenschutzgesetze inner
 
 Fügen Sie eine Komponente in Ihrem Canvas hinzu und wählen Sie Audience Sync. Klicken Sie auf den Button **Angepasste Zielgruppe**, um den Komponenteneditor zu öffnen.
 
-![Der Canvas Editor mit der Liste der verfügbaren Komponenten.]({% image_buster /assets/img/linkedin/linkedin2.png %}){: style="max-width:35%;"} ![Die ausgewählte Audience Sync Komponente.]({% image_buster /assets/img/linkedin/linkedin1.png %}){: style="max-width:29%;"}
+![Der Canvas-Editor mit der Liste der verfügbaren Komponenten.]({% image_buster /assets/img/linkedin/linkedin2.png %}){: style="max-width:35%;"} ![Die ausgewählte Audience Sync Komponente.]({% image_buster /assets/img/linkedin/linkedin1.png %}){: style="max-width:29%;"}
 
 ### Schritt 4: Sync-Einrichtung
 
@@ -84,7 +88,7 @@ Wählen Sie dann das gewünschte LinkedIn-Anzeigenkonto aus. Geben Sie in der Dr
 ![Synchronisierung der Zielgruppe mit LinkedIn, wobei Braze als Anzeigenkonto ausgewählt ist.]({% image_buster /assets/img/linkedin/linkedin20.png %})
 
 {% tabs %}
-{% tab Eine neue Zielgruppe erstellen %}
+{% tab Create a New Audience %}
 
 **Eine neue Zielgruppe erstellen**<br>
 Geben Sie einen Namen für die neue Zielgruppe ein, wählen Sie **Nutzer:innen zur Zielgruppe hinzufügen** und wählen Sie aus, welche Felder Sie mit LinkedIn synchronisieren möchten. Für diese Integration unterstützen wir derzeit Folgendes: 
@@ -96,14 +100,14 @@ Als nächstes speichern Sie Ihre Zielgruppe, indem Sie unten im Schritteditor au
 
 ![Ein Beispiel für eine "Leads"-Zielgruppe mit dem ausgewählten Braze-Konto, der "Leads"-Zielgruppe, der Aktion zum Hinzufügen von Nutzer:innen zur Zielgruppe und E-Mail, Android GAID sowie Vor- und Nachname als abzugleichende Felder.]({% image_buster /assets/img/linkedin/linkedin10.png %})
 
-Nutzer:innen werden im oberen Bereich des Schritteditors benachrichtigt, wenn die Zielgruppe erfolgreich erstellt wurde oder wenn dabei Fehler auftreten. Nutzer:innen können diese Zielgruppe auch referenzieren, um sie später in Canvas zu entfernen, da die Zielgruppe im Entwurfsmodus erstellt wurde.
+Braze zeigt am oberen Rand des Schritteditors eine Benachrichtigung an, wenn die Zielgruppe erfolgreich erstellt wurde oder wenn Fehler auftreten. Nutzer:innen können diese Zielgruppe referenzieren, um sie später in Canvas zu entfernen, da die Zielgruppe im Entwurfsmodus erstellt wurde.
 
 ![Bestätigung, dass die Zielgruppe "Leads" erstellt wurde.]({% image_buster /assets/img/linkedin/linkedin9.png %})
 
 Wenn Sie ein Canvas mit einer neuen Zielgruppe starten, synchronisiert Braze die Nutzer:innen nahezu in Realtime, sobald sie die Audience Sync Komponente betreten.
 
 {% endtab %}
-{% tab Mit einer bestehenden Zielgruppe synchronisieren %}
+{% tab Sync with an Existing Audience %}
 
 **Mit einer bestehenden Zielgruppe synchronisieren**<br>
 Braze bietet auch die Möglichkeit, Nutzer:innen zu bestehenden LinkedIn Zielgruppen hinzuzufügen, um zu bestätigen, dass diese Zielgruppen aktuell sind. Um mit einer bestehenden Zielgruppe zu synchronisieren, geben Sie den Namen der bestehenden Zielgruppe in das Dropdown-Menü ein und **fügen Sie sie hinzu**. Braze fügt dann Nutzer:innen nahezu in Realtime hinzu, sobald sie die Audience Sync-Komponente betreten.
@@ -123,9 +127,9 @@ Sie können die Zielgruppen auf LinkedIn einsehen, indem Sie in Ihr Anzeigenkont
 
 ## Überlegungen zur Synchronisierung von Nutzer:innen und Rate-Limits
 
-Wenn Nutzer:innen den Audience Sync-Schritt erreichen, wird Braze diese Nutzer:innen nahezu in Realtime synchronisieren und dabei die Rate-Limits der LinkedIn API beachten. In der Praxis wird Braze versuchen, alle 5 Sekunden so viele Nutzer:innen wie möglich zu verarbeiten, bevor diese an LinkedIn weitergeleitet werden.
+Sobald Nutzer:innen den Schritt Audience Sync erreichen, synchronisiert Braze sie nahezu in Realtime und respektiert dabei die Rate-Limits der LinkedIn API. Braze stapelt und verarbeitet alle 5 Sekunden so viele Nutzer:innen wie möglich, bevor es sie an LinkedIn sendet.
 
-LinkedIns API Rate-Limits besagen, dass nicht mehr als zehn Abfragen pro Sekunde und 100.000 Nutzer:innen pro Anfrage möglich sind. Erreicht eine Braze-Kund:in dieses Rate-Limit, wird Braze-Canvas die Synchronisierung für bis zu 13 Stunden wiederholen. Wenn die Synchronisierung nicht möglich ist, werden diese Nutzer:innen unter der Metriken Users Errored aufgeführt.
+LinkedIns Rate-Limits für die API erlauben nicht mehr als zehn Abfragen pro Sekunde und 100.000 Nutzer:innen pro Anfrage. Erreicht eine Kund:in dieses Limit, wiederholt Braze die Synchronisierung für bis zu etwa 13 Stunden. Wenn die Synchronisierung immer noch nicht möglich ist, listet Braze diese Nutzer:innen in der Metrik Fehlerhafte Nutzer:innen auf.
 
 ## Analytics verstehen
 

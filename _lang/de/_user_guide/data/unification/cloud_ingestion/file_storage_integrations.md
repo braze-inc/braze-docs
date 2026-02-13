@@ -32,9 +32,9 @@ Für die Integration benötigen Sie die folgenden Ressourcen:
 
 ### AWS-Definitionen
 
-Lassen Sie uns zunächst einige der in dieser Aufgabe verwendeten Begriffe definieren.
+Definieren Sie zunächst die Begriffe, die in dieser Aufgabe verwendet werden.
 
-| Begriff | Definition |
+| Term | Definition |
 | --- | --- |
 | Amazon Ressourcen-Name (ARN) | Der ARN ist ein eindeutiger Bezeichner für AWS-Ressourcen. |
 | Identitäts- und Zugriffsmanagement (IAM) | IAM ist ein Internet-Dienst, mit dem Sie den Zugriff auf AWS-Ressourcen sicher kontrollieren können. In dieser Anleitung erstellen Sie eine IAM-Richtlinie und weisen sie einer IAM-Rolle zu, um Ihr S3-Bucket mit Braze Cloud Data Ingestion zu integrieren. |
@@ -148,7 +148,7 @@ Erstellen Sie eine IAM Richtlinie, um Braze die Interaktion mit Ihrem Source Buc
 
 4. Geben Sie der Richtlinie einen Namen und eine Beschreibung und wählen Sie dann **Richtlinie erstellen**.  
 
-![Eine Beispielrichtlinie mit dem Namen "new-policy-name".]({% image_buster /assets/img/create_policy_3_name.png %})
+![Eine Beispiel-Richtlinie mit dem Namen "new-policy-name".]({% image_buster /assets/img/create_policy_3_name.png %})
 
 ![Das Beschreibungsfeld für die Richtlinie.]({% image_buster /assets/img/create_policy_4_created.png %})
 
@@ -170,14 +170,14 @@ Um die Einrichtung auf AWS abzuschließen, erstellen Sie eine IAM-Rolle und füg
 {: start="4"}
 4\. Hängen Sie die in Schritt 4 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste, und wählen Sie ein Häkchen neben der Richtlinie aus, um sie anzuhängen. Wählen Sie nach Abschluss **Weiter** aus.
 
-<br><br>![Rollen-ARN mit dem ausgewählten new-policy-name.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
+<br><br>![Rollen-ARN mit dem ausgewählten neuen Richtlinien-Namen.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
 
 Geben Sie der Rolle einen Namen und eine Beschreibung, und wählen Sie **Rolle erstellen**.
 
 <br><br>![Eine Beispielrolle mit dem Namen "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
 
 {: start="5"}
-5\. Notieren Sie sich den ARN der soeben erstellten Rolle und die externe ID, die Sie generiert haben, da Sie diese zum Erstellen der Integration für die Datenaufnahme in der Cloud verwenden werden.
+5\. Notieren Sie sich den ARN der von Ihnen erstellten Rolle und die externe ID, die Sie generiert haben, denn Sie benötigen sie, um die Integration für die Datenaufnahme in der Cloud zu erstellen.
 
 ## Einrichten der Datenaufnahme in der Cloud in Braze
 
@@ -196,12 +196,12 @@ Geben Sie der Rolle einen Namen und eine Beschreibung, und wählen Sie **Rolle e
 {: start="3"}
 3\. Benennen Sie Ihre Integration und wählen Sie den Datentyp für diese Integration aus. 
 
-<br><br>![Einrichten der Synchronisationsdetails für "cdi-s3-als-Quelle-Integration" mit Nutzer:in-Attributen als Datentyp.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
+<br><br>![Einrichten von Synchronisierungsdetails für "cdi-s3-as-source-integration" mit Nutzer:in-Attributen als Datentyp.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
 
 {: start="4"}
 4\. Fügen Sie eine E-Mail für Benachrichtigungen hinzu, wenn die Synchronisierung aufgrund von Zugriffs- oder Berechtigungsproblemen unterbrochen wird. Schalten Sie optional Benachrichtigungen für Fehler auf Nutzer:innen-Ebene und erfolgreiche Synchronisierungen ein. 
 
-<br><br> ![Einrichten von Benachrichtigungseinstellungen für Synchronisationsfehler-Benachrichtigungen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
+<br><br> ![Einrichten von Benachrichtigungseinstellungen für Sync-Fehlerbenachrichtigungen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
 
 {: start="5"}
 5\. Testen Sie schließlich die Verbindung und speichern Sie die Synchronisierung. 

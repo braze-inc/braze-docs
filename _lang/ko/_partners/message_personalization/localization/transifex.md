@@ -10,21 +10,21 @@ search_tag: Partner
 
 # Transifex
 
-> Transifex를 사용하면 언어에 관계없이 사용자 기반 전반에 걸쳐 강력한 로컬라이제이션이 가능합니다.
+> [Transifex는](https://www.transifex.com/) 언어에 관계없이 사용자 기반 전반에 걸쳐 강력한 현지화를 인에이블먼트합니다.
 
 _이 통합은 Transifex에서 유지 관리합니다._
 
 ## 통합 정보
 
-Braze와 Transifex의 통합을 통해 연결된 콘텐츠를 활용하여 리소스 문자열 모음을 가져오고 언어 기반 조건부 서식 대신 관련 번역을 메시지에 포함할 수 있습니다. 이를 통해 번역을 자동화하고 팀은 뛰어난 고객 경험을 제공하는 데 집중할 수 있습니다.
+Braze와 Transifex 통합은 연결된 콘텐츠를 사용하여 리소스 문자열 컬렉션을 가져와 언어 기반 조건부 서식의 줄 대신 메시징에 관련 번역을 포함할 수 있도록 합니다. 이를 통해 번역을 자동화하고 팀은 뛰어난 고객 경험을 제공하는 데 집중할 수 있습니다.
 
 {% alert important %}
 2022년 4월 7일 이후 Transifex는 버전 3을 위해 API 버전 2 및 2.5를 더 이상 지원하지 않습니다. v2 및 v2.5는 더 이상 작동하지 않으며, 관련 요청은 실패합니다. <br><br>다음 통합 지침은 버전 3 업데이트를 반영합니다. 이에 따라 커넥티드 콘텐츠 호출을 업데이트하세요.
 {% endalert %}
 
-## 전제 조건
+## Prerequisites
 
-| 요구 사항| 설명|
+| Requirement| 설명|
 | ---| ---|
 |Transifex 계정 | 이 파트너십을 이용하려면 [Transifex 계정이](https://www.transifex.com/signin/) 필요합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -42,7 +42,7 @@ curl --request GET \
      --header 'Authorization: Bearer 1/<TRANSFIX_BEARER_TOKEN>'
 ```
 
-예를 들어 Transifex 프로젝트가 `https://www.transifex.com/appboy-3/french2/french_translationspo/` 에 있는 경우 `project_name` 은 "french2"가 되고 `resource_name` 은 "french_translationspo"가 됩니다.
+예를 들어 Transifex 프로젝트가 `https://www.transifex.com/appboy-3/french2/french_translationspo/` 에 있는 경우 `project_name` 은 "french2"가 되고 `resource_name` 는 다음과 같이 됩니다. "french_translationspo".
 
 ## 커넥티드 콘텐츠 메시지 예시
 

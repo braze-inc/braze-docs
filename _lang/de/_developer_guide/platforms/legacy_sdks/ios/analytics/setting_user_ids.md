@@ -1,6 +1,6 @@
 ---
-nav_title: "Nutzer:innen einstellen"
-article_title: "Nutzer:innen IDs für iOS einstellen"
+nav_title: "Nutzer:innen IDs festlegen"
+article_title: "Nutzer:innen IDs für iOS festlegen"
 platform: iOS
 page_order: 1
 description: "Dieser referenzierte Artikel zeigt Ihnen, wie Sie Nutzer:innen IDs in Ihrer iOS App einrichten, welche Namenskonventionen für Nutzer:innen vorgeschlagen werden und wie Sie am besten vorgehen."
@@ -30,7 +30,7 @@ Sobald der Nutzer identifiziert ist (in der Regel nach dem Einloggen), sollten S
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")

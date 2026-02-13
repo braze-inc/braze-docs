@@ -14,13 +14,15 @@ channel:
 
 > MMS und SMS sind beide an den SMS-Kanal von Braze gebunden. Für den Zugang zu MMS auf Ihrem Konto ist der Kauf von SMS für diejenigen erforderlich, die noch keinen Zugang erworben haben. Bestehende SMS-Kund:innen können auf MMS zugreifen, nachdem sie es erworben haben. 
 
-MMS wird derzeit für US-Kurznummern (5- bis 6-stellige Nummern), US- und kanadische Langnummern (10-stellige Nummern) sowie US- und kanadische Kundennummern unterstützt. Der Versand von MMS an Nummern außerhalb der USA/Kanada ist möglich, aber MMS-Nachrichten werden in eine SMS-Nachricht mit einem Link zum Medienobjekt umgewandelt. Weitere Informationen finden Sie unter [Kurze und lange Codes]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/).
+MMS wird derzeit für US-Kurznummern (5- bis 6-stellige Nummern), US- und kanadische Langnummern (10-stellige Nummern) sowie US- und kanadische Kundennummern unterstützt. MMS wird von bestimmten Dienstanbietern für gebührenfreie Nummern unterstützt. 
+
+Der Versand von MMS an Nummern außerhalb der USA und Kanadas ist möglich, aber MMS-Nachrichten werden in eine SMS-Nachricht mit einem Link zum Medienobjekt umgewandelt. Weitere Informationen finden Sie unter [Kurze und lange Codes]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/).
 
 ## MMS-Kurzcodes
 
 Einige Benutzer werden möglicherweise keine MMS-Kurznummern einrichten oder verwenden, aber sie werden bei Bedarf zu einem späteren Zeitpunkt verfügbar sein.
 
-Alle Nutzer:innen, die ihre Kurzwahlnummern vor der Einführung von MMS durch Braze erhalten haben, können MMS sofort aktivieren. Wenden Sie sich an Ihren Customer Success Manager, wenn diese Situation auf Sie zutrifft und Sie MMS aktivieren möchten.
+Alle Nutzer:innen, die ihre Kurzwahlnummern vor der Einführung von MMS durch Braze erhalten haben, können MMS sofort aktivieren. Wenden Sie sich an Ihren Customer-Success-Manager:in, wenn diese Situation auf Sie zutrifft und Sie MMS aktivieren möchten.
 
 {% alert important %}
 Wenn Sie MMS für Kurzwahlnummern aktivieren, für die MMS zuvor nicht aktiviert war, müssen die Kurzwahlnummern unter Umständen in einem Genehmigungsverfahren neu genehmigt werden, das Wochen dauern kann. Es ist wichtig, dieses Timing zu berücksichtigen, wenn Sie sich für die Aktivierung von MMS entscheiden.

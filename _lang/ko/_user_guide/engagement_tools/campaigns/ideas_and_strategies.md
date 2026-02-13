@@ -1,5 +1,5 @@
 ---
-nav_title: 아이디어 및 전략
+nav_title: 아이디어와 전략
 article_title: 아이디어 및 전략
 layout: dev_guide
 guide_top_header: "아이디어 및 전략"
@@ -24,10 +24,10 @@ guide_featured_list:
   - name: 휴면 사용자 캡처
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/
     image: /assets/img/braze_icons/users-01.svg
-  - name: 설치 경로 기여도 캠페인
+  - name: 설치 속성 캠페인
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/
     image: /assets/img/braze_icons/pie-chart-01.svg
-  - name: 기능 인식 및 새로운 앱 버전
+  - name: 기능 인식 및 새 앱 버전
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/
     image: /assets/img/braze_icons/phone-02.svg
   - name: 리타겟팅 캠페인
@@ -42,7 +42,7 @@ guide_menu_list:
   - name: 현지화
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/annotation-question.svg
-  - name: 오른쪽에서 왼쪽으로 메시지 만들기
+  - name: Creating Right-to-Left Messages
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/
     image: /assets/img/braze_icons/globe-02.svg
   - name: 예약 알림 이메일 시스템

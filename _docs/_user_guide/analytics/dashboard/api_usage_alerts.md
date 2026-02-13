@@ -16,7 +16,7 @@ You can use API usage alerts to monitor request volumes for the following catego
 | API Category | Details |
 |--------------|---------|
 | REST API Endpoints | Tracks usage of all REST API calls made to Braze’s backend, such as sending messages, creating campaigns, or exporting users. |
-| SDK API Requests | Tracks API requests made from Braze SDKs in client apps, such as triggering in-app messages or syncing user data.<br><br>_*Only available to customers who have purchased Monthly Active Users – CY 24–25._ |
+| SDK API Requests | Tracks API requests made from Braze SDKs in client apps, such as triggering in-app messages or syncing user data.<br><br>_*Only available to customers who have purchased Monthly Active Users – CY 24-25._ |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Creating an API usage alert
@@ -79,17 +79,17 @@ The following is a sample payload for the body of an API Usage Alert webhook.
   "data": {
     "alert_name": "My First API Usage Alert",
     "alert_type": "API Usage Alert",
-    "alert_criteria": [
+    "alert_criteria": {
     	"response_codes": ["201", "202", "203"],
-    	"threshold_condition: "Increased by %",
+    	"threshold_condition": "Increased by %",
     	"threshold_volume": 50,
     	"within": "1 day"
-    	],
-    "timeframe_start": 2025-03-20T15:35:00Z,
-    "timeframe_end": 2025-03-20T16:35:00Z,
+    },
+    "timeframe_start": "2025-03-20T15:35:00Z",
+    "timeframe_end": "2025-03-20T16:35:00Z",
     "volume": 1500,
-    "previous_timeframe_start": 2025-03-20T14:35:00Z,
-    "previous_timeframe_end": 2025-03-20T15:35:00Z,
+    "previous_timeframe_start": "2025-03-20T14:35:00Z",
+    "previous_timeframe_end": "2025-03-20T15:35:00Z",
     "previous_volume": 1000
   },
   "text": "Your My First API Usage Alert alert has triggered. You can view your alert and usage here: <link>. Note that this alert will reset in 1 day, as each alert will only send one notification per 8 hours."

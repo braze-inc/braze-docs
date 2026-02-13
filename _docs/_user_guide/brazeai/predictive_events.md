@@ -2,7 +2,7 @@
 nav_title: Predictive Events
 article_title: Predictive Events
 description: "This article covers Predictive Events (previously Predictive Purchases), a tool in the Braze Predictive Suite that gives marketers the ability to identify and message users based on their likelihood to perform an event."
-page_order: 2.1
+page_order: 10
 alias: /predictive_purchases/
 search_rank: 1
 ---
@@ -21,7 +21,7 @@ The real value of Predictive Events lies in using prediction results to create a
 
 ## Accessing Predictive Events
 
-The **Predictions** page is located in the **Analytics** section. For full access, contact your account manager.
+{% include brazeai/predictions_page_access.md %}
 
 Prior to purchasing this feature, it is available in preview mode. This will allow you to see a demo prediction with synthetic data as well as create one preview prediction model at a time. This prediction will be created based on your actual user data, but it will not allow you to target users for messaging according to their likelihood score. It will also not update regularly after creation.
 

@@ -120,7 +120,7 @@ Once you have finished using a Content Block, you can archive it from the [Templ
 
 - When your block is only used in a few emails, we recommend archiving the outdated block and updating your live messages with a newer block that has not been archived.
 - When your block only has a typo or needs a minor change, we do not recommend archiving the block. Instead, update the block and get sending!
-- When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block and archiving it. This will ensure no outdated information is included in any newly sent emails.
+- When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block. This prevents the inclusion of outdated information in any messages.
 - If you accidentally archive a Content Block, you can unarchive it.
 
 ![Saved Content Blocks panel where the settings dropdown menu for "Test_32" is expanded to show three options: Unarchive, Duplicate, and Copy to workspace]({% image_buster /assets/img/unarchive-content-block.png %})

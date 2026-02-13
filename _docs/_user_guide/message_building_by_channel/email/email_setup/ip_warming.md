@@ -5,7 +5,8 @@ page_order: 1
 page_type: reference
 description: "This reference article covers the topic of IP warming and best practices."
 channel: email
-
+local_redirect:
+  automated-ip-warming: '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/automated_ip_warming/'
 ---
 
 # IP warming
@@ -20,13 +21,13 @@ IP warming is designed to help you establish a positive reputation with internet
 
 ISPs throttle email delivery when suspicion of spam arises so that they can protect their users. For example, if you send to 100,000 users, the ISP might deliver the email only to 5,000 of those users over the first hour. Then, the ISP monitors measures of engagement such as open rates, click rates, unsubscribes, and spam reports. So, if a significant number of spam reports occur, they might choose to relegate the remainder of that send to the spam folder rather than delivering it to the user's inbox. 
 
-If engagement is moderate, they may continue to throttle your email to collect more engagement data to determine whether or not the mail is spam with more certainty. If the email has very high engagement metrics, they may cease to throttle this email entirely. They use that data to create an email reputation that will eventually determine whether or not your emails are filtered to spam automatically.
+If engagement is moderate, they may continue to throttle your email to collect more engagement data to determine whether or not the email is spam with more certainty. If the email has very high engagement metrics, they may cease to throttle this email entirely. They use that data to create an email reputation that will eventually determine whether or not your emails are filtered to spam automatically.
 
 If your domain or IP is blocked by an ISP, the message logs in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) will contain information about what websites to visit to appeal to these ISPs and to get off those lists.
 
 ## IP warming schedules
 
-We strongly recommend adhering to this IP warming schedule strictly to support deliverability. It's also important that you don't skip days as consistent scaling improves delivery metrics.
+We strongly recommend adhering to this IP warming schedule strictly to support deliverability. It's also important that you don't skip days, as consistent scaling improves delivery metrics.
 
 Day | # of Emails to be Sent
 ----|--------------------------|
@@ -51,7 +52,7 @@ Day | # of Emails to be Sent
 
 We suggest warming up to your peak sending. That is to say, if you normally send 2 million emails a day but plan to send 7 million for a seasonal period, that "peak" sending is what you should warm up to.
 
-Once warming is complete and you've reached your desired daily volume, you should aim to maintain that volume daily. Some fluctuation is expected, but reaching the desired volume, then only doing a mass blast once a week may negatively affect your delivery metrics and sender reputation. 
+After IP warming is complete and you've reached your desired daily volume, you should aim to maintain that volume daily. Some fluctuation is expected, but reaching the desired volume, then only doing a mass blast once a week, may negatively affect your delivery metrics and sender reputation. 
 
 {% alert important %}
 Most ISPs only store reputation data for 30 days. If you go a month without sending any messages, you'll have to repeat the IP warming process.
@@ -65,7 +66,7 @@ Our built-in user limiting feature serves as a useful tool to help you with warm
 
 ## Subdomain segmentation
 
-Many ISPs and email access providers no longer only filter by IP address reputation. These filtering technologies now also account for domain-based reputation. This means that filters will look at all data associated with the sender's domain and not just single out the IP address. For this reason, in addition to warming up your email IP, we also recommend having separate domains or subdomains for marketing, transactional, and corporate mail. 
+Many ISPs and email access providers no longer filter by IP address reputation. These filtering technologies now also account for domain-based reputation. This means that filters will look at all data associated with the sender's domain and not just single out the IP address. For this reason, in addition to warming up your email IP, we also recommend having separate domains or subdomains for marketing, transactional, and corporate mail. 
 
 {% alert important %}
 Subdomain segmentation is especially important for large-volume senders. These senders should work with a Braze representative when setting up their account to confirm they adhere to this practice.
@@ -75,7 +76,7 @@ We recommend segmenting your domains so that corporate mail is sent through your
 
 ## Best practices
 
-All of the consequences of not IP warming can be avoidable if you follow these IP warming best practices.
+You can avoid all the consequences of not IP warming by following these best practices:
 
 ### Start with small sending volumes of email
 

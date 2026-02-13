@@ -1,5 +1,5 @@
 ---
-nav_title: "Cas d'utilisation"
+nav_title: "Cas d’utilisation"
 article_title: "Cas d'utilisation des extensions de segments SQL"
 page_order: 2
 page_type: glossary
@@ -67,7 +67,7 @@ HAVING COUNT(DISTINCT id) > 3
 Événement, Période
 {% endapitags %}
 
-Sélectionnez les utilisateurs qui ont effectué un achat au cours de chacun des quatre derniers trimestres. Ce segment d'utilisateurs peut être utilisé avec la [synchronisation d'audience]({{site.baseurl}}/partners/canvas_audience_sync/) pour identifier des clients lookalike de grande valeur pour l'acquisition.
+Sélectionnez les utilisateurs qui ont effectué un achat au cours de chacun des quatre derniers trimestres. Ce segment d'utilisateurs peut être utilisé avec la [synchronisation d'audience]({{site.baseurl}}/partners/canvas_audience_sync/) pour identifier des clients similaires de grande valeur pour l'acquisition.
 
 ```sql
 ELECT DISTINCT user_id
@@ -91,7 +91,7 @@ WHERE to_timestamp_ntz(time) >= DATEADD(day, -365, CURRENT_TIMESTAMP()) AND to_t
 {% api %}
 ## Sélectionnez tout achat présentant certaines propriétés
 {% apitags %}
-Achat, propriétés d'achat
+Achat, propriété
 {% endapitags %}
 
 Sélectionnez les clients qui ont effectué un achat contenant la propriété `“type = shops”` dans les 14 jours. 
@@ -123,7 +123,7 @@ HAVING COUNT(id) > 0;
 Message, réception/distribution
 {% endapitags %}
 
-Sélectionnez les utilisateurs qui ont reçu une campagne de communication par SMS ou Canvas, mais dont le message n'est pas parvenu à l'opérateur. Par exemple, le message peut avoir été interrompu par un débordement de la file d'attente. 
+Sélectionnez les utilisateurs qui ont reçu une campagne de communication par SMS ou Canvas, mais dont le message n'est pas parvenu à l'opérateur. Par exemple, le message peut avoir été arrêté en raison d’un débordement de la file d'attente. 
 
 ```sql
 SELECT
@@ -141,7 +141,7 @@ HAVING COUNT(id) > 0;
 {% api %}
 ## Retrouvez tous les messages SMS qui ont été envoyés mais qui ne sont pas parvenus à l'opérateur en raison d'un dépassement de la file d'attente.
 {% apitags %}
-Message, transporteur
+Message, opérateur
 {% endapitags %}
 
 Cela peut être réutilisé pour d'autres types de messages envoyés à partir d'un Canvas particulier et qui n'ont pas été délivrés.
@@ -163,7 +163,7 @@ HAVING COUNT(id) > 0;
 {% api %}
 ## Sélectionnez les utilisateurs qui ont effectué un achat avec un tableau de propriétés contenant une valeur spécifique.
 {% apitags %}
-Achat, propriétés d'achat
+Achat, propriété
 {% endapitags %}
 
 ```sql
@@ -180,7 +180,7 @@ WHERE f.VALUE::STRING = 'Bacon'
 Erreur, réception/distribution
 {% endapitags %}
 
-C'est utile pour résoudre les situations où vous voulez arrêter l'envoi aux utilisateurs qui ne reçoivent pas de messages mais qui ne sont pas marqués comme invalides parce qu'ils n'ont pas le code d'erreur requis. Vous pouvez soit recibler ces utilisateurs pour qu'ils mettent à jour leur numéro de téléphone, soit les désabonner. 
+Ceci est utile pour résoudre les situations où vous voulez arrêter l'envoi aux utilisateurs qui ne reçoivent pas de messages mais qui ne sont pas marqués comme invalides parce qu'ils n'ont pas le code d'erreur requis. Vous pouvez soit recibler ces utilisateurs pour qu'ils mettent à jour leur numéro de téléphone, soit les désabonner. 
 
 Cette requête utilise l'éditeur incrémental et recherche les utilisateurs dont trois envois ou plus ont été rejetés au cours des 90 derniers jours et dont aucune réception/distribution n'a été effectuée.
 
@@ -206,7 +206,7 @@ GROUP BY 1, 2;
 
 Trouvez les utilisateurs qui remplissent simultanément les conditions suivantes :
 
-- Transaction d'une valeur totale supérieure à 500 $ (somme de plusieurs événements `Transact` )
+- Transaction d'une valeur totale supérieure à 500 $ (somme de plusieurs événements `Transact`)
 - Transactions au centre commercial `Funan`
 - Transactions effectuées plus de trois fois au cours des 90 derniers jours
 
@@ -228,7 +228,7 @@ AND COUNT(*) > 3
 {% endapi %}
 
 {% api %}
-## Sélectionnez les utilisateurs dont la session la plus récente s'est déroulée sur un modèle d'appareil spécifique.
+## Sélectionnez les utilisateurs dont la dernière session s'est déroulée sur un modèle d'appareil spécifique.
 {% apitags %}
 Session, appareil
 {% endapitags %}
@@ -246,7 +246,7 @@ group by user_id, external_user_id, device_id, platform, os_version, device_mode
 {% api %}
 ## Trouvez les utilisateurs qui ont sélectionné le deuxième bouton d'un message in-app dans une plage de temps spécifique.
 {% apitags %}
-Durée
+Intervalle de temps
 {% endapitags %}
 
 ```sql
@@ -291,7 +291,7 @@ Evénement, Propriété
 
 Envoi d'un message aux utilisateurs qui ont regardé une série au cours des six derniers mois et qui s'apprêtent à quitter la plateforme. 
 
-La propriété est l'ID du titre ; sinon, vous devriez inclure plus de 100 ID de titres dans un filtre. Les extensions de segments peuvent être optimisées en termes de coûts et vous pouvez spécifier la plage de dates dans l'en-tête.
+La propriété est l'ID du titre. Sinon, vous auriez dû inclure plus de 100 ID de titres dans un filtre. L’extension de segment incrémentielle peut être optimisée en termes de coûts et vous pouvez spécifier la plage de dates dans l'en-tête.
 
 ```sql
 SELECT 

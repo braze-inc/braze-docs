@@ -35,16 +35,16 @@ Die Integration von Braze und Komo erlaubt es Ihnen, First-Party-Daten und Zero-
 ## Anwendungsfälle
 
 {% tabs local %}
-{% tab Datenerfassung - Übermittlung von Formularen %}
+{% tab Data Capture - Form Submission %}
 
 Wenn ein Nutzer:innen ein anpassbares Datenerfassungsformular in Komo abschickt, werden die in der Braze Integration abgebildeten Komo-Felder über den `/users/track/` API-Aufruf an Braze übergeben.
 
 Datenerfassungsformulare gibt es entweder am Anfang oder am Ende von Karten.
 
 {% endtab %}
-{% tab Marktforschung - Demnächst %}
+{% tab Market Research - Coming soon %}
 
-In Kürze wird Komo die Möglichkeit bieten, Marktforschungsdaten weiterzuleiten, die erfasst werden, wenn ein Nutzer eine Quizfrage, eine Umfrage, einen Persönlichkeitstest, einen Swiper usw. beantwortet. Diese Daten ermöglichen es Ihnen, das Profil eines Nutzers:innen über die in Formularen erfassten Daten hinaus zu erweitern.
+Komo ermöglicht auch die Weitergabe von Marktforschungsdaten, die erfasst werden, wenn ein Nutzer eine Quizfrage, eine Umfrage, einen Persönlichkeitstest, einen Swiper und ähnliches beantwortet. Diese Daten ermöglichen es Ihnen, das Profil eines Nutzers:innen über die in Formularen erfassten Daten hinaus zu erweitern.
 
 {% endtab %}
 {% endtabs %}
@@ -53,32 +53,34 @@ In Kürze wird Komo die Möglichkeit bieten, Marktforschungsdaten weiterzuleiten
 
 ### Schritt 1: Veröffentlichen Sie einen Komo Engagement Hub und eine Karte
 
-Sie müssen einen Komo Engagement Hub mit mindestens einer Karte veröffentlichen, die ein Formular zur Datenerfassung enthält. Nach der Veröffentlichung können Sie die Nutzer:innen End-to-End testen und überprüfen, ob die Integration korrekt funktioniert.
+Sie müssen einen Komo Hub mit mindestens einer Karte veröffentlichen, die ein Datenerfassungsformular enthält. Nach der Veröffentlichung können Sie die Nutzer:innen End-to-End testen und überprüfen, ob die Integration korrekt funktioniert.
 
-![]({% image_buster /assets/img/komo/komo_hub_publish.png %})
+![Komo Hub.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step1.png %})
 
-### Schritt 2: Fügen Sie die Integration von Braze hinzu
+### Schritt 2: Hinzufügen der Braze Connected App 
 
-Gehen Sie in Komo auf den Tab **Hub-Einstellungen** und wählen Sie den Bereich **Integrationen** aus. Suchen Sie dann die Braze Integration in der Liste und wählen Sie den Button **Verbinden**, um die Integration zu aktivieren.
+Gehen Sie in Komo auf den Tab **Unternehmenseinstellungen** und wählen Sie den Abschnitt **Verbundene Apps** aus. 
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_integrations.png %})
+Suchen Sie dann die Braze Integration in der Liste und wählen Sie den Button **Verbinden**, um die Integration zu aktivieren.
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_connect.png %})
+![Connect Braze Integration.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2a.png %}){: style="max-width:50%;"}
 
-#### Konfigurieren Sie die Abbildung der Nutzer:innen
+![Verbinden Sie Braze Integration Schritt 2b.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2b.png %})
 
-Als erstes müssen Sie konfigurieren, wie Sie die in Komo erfassten Nutzer:innen den Nutzern in Braze zuordnen. Wenn Sie die `braze_id` oder `external_id` über ein Feld innerhalb von Komo erfassen, können Sie den entsprechenden Schlüssel auswählen; andernfalls wählen Sie als häufigste Option einen Nutzer:innen-Alias von E-Mail oder Telefon.
+#### Konfigurieren Sie die Integration über einen Workflow
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_key.png %}){: style="max-width:65%;"}
+Jetzt müssen Sie einen Workflow innerhalb eines Workspace, einer Site oder einer Karte einrichten, um Daten mit Braze zu synchronisieren. 
 
-Als nächstes müssen Sie eine Abbildung der Komo-Felder definieren, die Sie in Braze-Attribute übertragen möchten. Komo erfasst eine große Menge an Daten, so dass nur die Felder, die in der Braze Integration abgebildet sind, an Braze gesendet werden.
+Ob Sie den Workflow auf den gesamten Workspace, eine Site (die viele Karten enthält) oder eine einzelne Karte anwenden, hängt davon ab, ob Sie den Workflow über viele Karten oder Kampagnen hinweg triggern möchten. 
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_settings.png %}){: style="max-width:65%;"}
+Nachdem Sie einen Workflow erstellt haben, definieren Sie Ihren Trigger, suchen im Schrittmenü nach Braze und fügen den Schritt "Nutzer:in verfolgen" hinzu. 
 
-Fügen Sie schließlich Ihren API-Schlüssel und die URL des REST-Endpunkts hinzu und klicken Sie auf **Speichern**, um die Integration zu aktivieren.
+![Tracking Nutzer:innen einrichten.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3a.png %})
+
+Von hier aus konfigurieren Sie die Ereignisse, Attribute und Abos, die Sie von Komo mit Braze synchronisieren möchten. 
+
+![Content-Blöcke Liste.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3b.png %})
 
 ## Verwendung der Integration
 
-Sobald Ihre Integration abgeschlossen ist, können Sie die an Braze gesendeten Komo-Daten verwenden, um Segmente für das Targeting zu erstellen.
-
-
+Jetzt ist Ihre Integration betriebsbereit, und Sie können jeden Lauf auf dem Tab Workflow-Läufe überwachen. 

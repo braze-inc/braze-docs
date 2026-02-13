@@ -47,7 +47,7 @@ Sie können auch eine Empfehlung direkt aus einem einzelnen Katalog erstellen. W
 
 Geben Sie Ihrer Empfehlung einen Namen und eine optionale Beschreibung.
 
-!["Empfehlungsdetails" Schritt mit den Feldern Name und Beschreibung.]({% image_buster /assets/img/item_recs_1.png %})
+![Schritt "Empfehlungsdetails" mit den Feldern Name und Beschreibung.]({% image_buster /assets/img/item_recs_1.png %})
 
 ### Schritt 3: Definieren Sie Ihre Empfehlung {#recommendation-type}
 
@@ -61,7 +61,7 @@ Wenn Sie die Option **Neueste** oder **KI personalisiert** verwenden, erhalten B
 
 Um zu vermeiden, dass Artikel vorgeschlagen werden, die ein Benutzer bereits gekauft oder mit denen er interagiert hat, wählen Sie **Keine Artikel empfehlen, mit denen Benutzer zuvor interagiert** haben. Diese Option ist nur verfügbar, wenn der **Empfehlungstyp** auf **AI personalisiert** eingestellt ist.
 
-!["Definieren Sie Ihre Empfehlung" mit "KI Personalisiert" als Typ und der ausgewählten Option "Keine Artikel empfehlen, mit denen Nutzer:innen zuvor interagiert haben".]({% image_buster /assets/img/item_recs_2-3.png %})
+![Schritt "Definieren Sie Ihre Empfehlung" mit "KI Personalisiert" als Typ und der ausgewählten Option "Keine Artikel empfehlen, mit denen Nutzer:innen zuvor interagiert haben".]({% image_buster /assets/img/item_recs_2-3.png %})
 
 Diese Einstellung verhindert, dass Nachrichten die Artikel wiederverwenden, die ein Benutzer bereits gekauft oder mit denen er interagiert hat, vorausgesetzt, die Empfehlung wurde kürzlich aktualisiert. Artikel, die Sie zwischen den Empfehlungsaktualisierungen gekauft haben oder mit denen Sie interagiert haben, können weiterhin angezeigt werden. Für die kostenlose Version der Artikel-Empfehlungen werden wöchentlich Aktualisierungen vorgenommen. In der Pro-Version erfolgt die Aktualisierung der KI-Artikelempfehlungen alle 24 Stunden.
 
@@ -93,7 +93,11 @@ Möglich sind:
 
 Unter **Benutzerdefiniertes Ereignis** können Sie ein Ereignis aus der Liste auswählen.
 
-![Das angepasste Event "Abgeschlossener Kauf" ausgewählt, wie die Events derzeit getrackt werden.]({% image_buster /assets/img/item_recs_3.png %})
+![Das angepasste Event "Abgeschlossener Kauf" ausgewählt, wie Events derzeit getrackt werden.]({% image_buster /assets/img/item_recs_3.png %})
+
+{% alert note %}
+Angepasste Events müssen über ausreichende Daten verfügen, bevor sie in der Event-Liste erscheinen. Wenn Ihr angepasstes Event nicht angezeigt wird, kann es daran liegen, dass das Braze Backend es noch nicht verarbeitet hat oder dass es nicht genügend Daten für das Modelltraining enthält. KI-Empfehlungen stützen sich auf historische Daten, um Insights zu generieren, so dass neu erstellte oder selten getriggerte Ereignisse erst dann zur Verfügung stehen, wenn mehr Daten gesammelt wurden.
+{% endalert %}
 
 ### Schritt 5: Wählen Sie den entsprechenden Eigenschaftsnamen {#property-name}
 
@@ -103,7 +107,7 @@ Wählen Sie dieses Feld für den **Eigenschaftsnamen**.
 
 Das Feld **Eigenschaftsname** wird mit einer Liste von Feldern vorausgefüllt, die über das SDK an Braze gesendet werden. Wenn genügend Daten zur Verfügung gestellt werden, werden diese Eigenschaften auch in der Reihenfolge der Wahrscheinlichkeit, dass es sich um die richtige Eigenschaft handelt, eingeordnet. Wählen Sie daraus das aus, das zu dem Katalogfeld `id` passt.
 
-![Der Name der Eigenschaft "purchase_item" wurde ausgewählt, die den IDs der Artikel im Katalog entspricht.]({% image_buster /assets/img/item_recs_4.png %})
+![Der Name der Eigenschaft "purchase_item" ausgewählt, die den IDs der Artikel im Katalog entspricht.]({% image_buster /assets/img/item_recs_4.png %})
 
 #### Anforderungen {#requirements}
 
@@ -113,6 +117,7 @@ Es gibt einige Vorbedingungen zur Auswahl von Eigenschaften:
 - **Wenn Sie Kaufobjekt ausgewählt haben,** muss sie die `product_id` oder ein `properties`-Ereignisfeld sein.
 - **Wenn Sie Benutzerdefiniertes Ereignis ausgewählt haben,** Muss ein Feld aus dem `properties` Ihres benutzerdefinierten Ereignisses sein.
 - Verschachtelte Felder müssen in der Dropdown-Liste **Eigenschaftsname** in Punktschreibweise im Format `event_property.nested_property` eingegeben werden. Wenn Sie zum Beispiel die verschachtelte Eigenschaft `district_name` in der Ereigniseigenschaft `location` auswählen, geben Sie `location.district_name` ein.
+- **Wenn Sie [E-Commerce-Ereignisse]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/) nutzen, um Artikel-Empfehlungen zu trainieren:** Fügen Sie `products.product_id` hinzu, um auf die ID des Produkts über Ereignisse zuzugreifen.
 - Das Feld kann sich innerhalb eines Arrays von Produkten befinden oder mit einem Array von IDs enden. In beiden Fällen werden die Produkt-IDs als separate aufeinanderfolgende Ereignisse mit demselben Zeitstempel behandelt.
 
 #### Beispiel-Zuordnungen

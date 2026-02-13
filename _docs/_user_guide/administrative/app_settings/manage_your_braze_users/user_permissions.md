@@ -202,12 +202,15 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Archive Canvas Templates|Allows users to archive Canvas templates.|
 |Workspace|Manage Custom Event Property Segmentation|Allows users to create segments based on event property recency and frequency.|
 |Workspace|Publish Landing Pages|Allows users to publish [landing pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/).|
-|Workspace|Create Landing Page Drafts|Allows users to create and save landing page drafts.|
-|Workspace|Access Landing Pages|Allows users to access the **Landing Pages** page.|
-|Workspace|Create and Edit Landing Page Templates|Allows users to create and edit landing page templates.|
+|Workspace|Edit Landing Page Drafts|Allows users to create and save landing page drafts.|
+|Workspace|View Landing Pages|Allows users to access the **Landing Pages** page.|
+|Workspace|Edit Landing Page Templates|Allows users to create and edit landing page templates.|
 |Workspace|View Landing Page Templates|Allows users to view landing page templates.|
 |Workspace|Archive Landing Page Templates|Allows users to archive landing page templates.|
 |Workspace|View Custom AI Agents|Allows users to view [custom AI agents]({{site.baseurl}}/user_guide/brazeai/agents/). This feature is currently in beta.|
 |Workspace|Create Custom AI Agents|Allows users to create custom AI agents. This feature is currently in beta.|
 |Workspace|Edit Custom AI Agents|Allows users to edit custom AI agents. This feature is currently in beta.|
+| Workspace | View WhatsApp Message Templates | Allows users to view [WhatsApp message templates]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/?tab=template%20messages#step-2-compose-your-whatsapp-message). |
+| Workspace | Edit WhatsApp Message Templates | Allows users to create WhatsApp message templates in the template builder. This feature is currently in early access. |
+| Workspace | Delete Whatsapp Message Templates | Allows users to delete WhatsApp message templates in the template builder. This feature is currently in early access. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

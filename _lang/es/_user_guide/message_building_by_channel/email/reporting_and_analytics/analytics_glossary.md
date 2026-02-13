@@ -1,11 +1,11 @@
 ---
-nav_title: Glosario de análisis de correo electrónico
-article_title: Glosario de análisis de correo electrónico
+nav_title: Glosario de Email Analytics
+article_title: Glosario de Email Analytics
 layout: email_report_metrics
 page_order: 0
 excerpt_separator: ""
 page_type: glossary
-description: "Este glosario incluye los términos que encontrarás en la sección de análisis de tu campaña de correo electrónico o Canvas, tras el lanzamiento. Este glosario no incluye las métricas de Currents."
+description: "Este glosario incluye los términos que encontrará en la sección de análisis de su campaña de correo electrónico o Canvas, tras el lanzamiento. Este glosario no incluye las métricas Currents."
 channel: 
   - email
 ---
@@ -22,12 +22,12 @@ channel:
 ### Variación
 
 {% apitags %}
-Cuenta
+Recuento
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Variation' %}
 
-<span class="calculation-line">Cálculo: Cuenta</span>
+<span class="calculation-line">Cálculo: Recuento</span>
 
 {% endapi %}
 
@@ -36,18 +36,18 @@ Cuenta
 ### Envío por correo electrónico
 
 {% apitags %}
-Cuenta
+Recuento
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Emailable' %}
 
-<span class="calculation-line">Cálculo: Cuenta</span>
+<span class="calculation-line">Cálculo: Recuento</span>
 
 {% endapi %}
 
 {% api %}
 
-### Audiencia
+### % de audiencia
 
 {% apitags %}
 Porcentaje
@@ -64,26 +64,26 @@ Porcentaje
 ### Destinatarios únicos
 
 {% apitags %}
-Cuenta
+Recuento
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} Este número se recibe de Braze.
 
-<span class="calculation-line">Cálculo: Cuenta</span>
+<span class="calculation-line">Cálculo: Recuento</span>
 
 {% endapi %}
 
 {% api %}
 
-### Envía
+### Envíos
 
 {% apitags %}
-Cuenta
+Recuento
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Sends' %}  Esta métrica la proporciona Braze.
 
-<span class="calculation-line">Cálculo: Cuenta</span>
+<span class="calculation-line">Cálculo: Recuento</span>
 
 {% endapi %}
 
@@ -92,12 +92,12 @@ Cuenta
 ### Mensajes enviados
 
 {% apitags %}
-Cuenta
+Recuento
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Messages Sent' %}  Esta métrica la proporciona Braze.
 
-<span class="calculation-line">Cálculo: Cuenta</span>
+<span class="calculation-line">Cálculo: Recuento</span>
 
 {% endapi %}
 
@@ -106,7 +106,7 @@ Cuenta
 ### Entregas
 
 {% apitags %}
-Cuenta
+Recuento
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Deliveries' %} En el caso de los correos electrónicos, las *entregas* son el número total de mensajes (envíos) enviados y recibidos correctamente por las partes que pueden enviar correos electrónicos.
@@ -147,7 +147,7 @@ Un rebote de correo electrónico para clientes que utilizan SendGrid consiste en
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><b><i>Rebota</i>:</b> Cuenta</li>
+        <li><b><i>Rebota</i>:</b> Recuento</li>
         <li><b><i>% de rebote</i> o <i>tasa de rebote %</i>:</b> (Rebota) / (Envía)</li>
     </ul>
 </span>
@@ -160,7 +160,7 @@ Un rebote de correo electrónico para clientes que utilizan SendGrid consiste en
 ### Rebote duro
 
 {% apitags %}
-Cuenta
+Recuento
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
@@ -171,10 +171,10 @@ Cuenta
 
 {% api %}
 
-### Rebote blando
+### Rebote suave
 
 {% apitags %}
-Cuenta
+Recuento
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} Si un correo electrónico recibe un rebote blando, normalmente lo reintentaremos en un plazo de 72 horas, pero el número de intentos de reintento varía de un receptor a otro. 
@@ -199,7 +199,7 @@ Recuento, Porcentaje
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><b><i>Correo no deseado</i>:</b> Cuenta</li>
+        <li><b><i>Correo no deseado</i>:</b> Recuento</li>
         <li><b><i>% de correo no deseado</i> o <i>% de tasa de correo no deseado</i>:</b> (Marcado como correo no deseado) / (Envía)</li>
     </ul>
 </span>
@@ -209,7 +209,7 @@ Recuento, Porcentaje
 
 {% api %}
   
-### Unique Opens
+### Aperturas únicas
 
 {% apitags %}
 Recuento, Porcentaje
@@ -221,7 +221,7 @@ Recuento, Porcentaje
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><b><i>Unique Opens</i>:</b> Cuenta</li>
+        <li><b><i>Unique Opens</i>:</b> Recuento</li>
         <li><b><i>Unique Opens %</i> o <i>tarifa abierta única</i>:</b> (Unique Opens) / (Entregas)</li>
     </ul>
 </span>
@@ -237,13 +237,13 @@ Recuento, Porcentaje
 Recuento, Porcentaje
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Esto se sigue durante un periodo de siete días para el correo electrónico y se mide mediante <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Esto incluye los clics en los enlaces para cancelar suscripción proporcionados por Braze.
+{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Esto se sigue durante un periodo de siete días para el correo electrónico y se mide mediante <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Esto incluye los clics en los enlaces de cancelación de suscripción proporcionados por Braze.
 
 {::nomarkdown}
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><b><i>Clics únicos</i>:</b> Cuenta</li>
+        <li><b><i>Clics únicos</i>:</b> Recuento</li>
         <li><b><i>Porcentaje de clics únicos</i> o <i>tasa de clics</i>:</b> (Clics únicos) / (Entregas)</li>
     </ul>
 </span>
@@ -265,7 +265,7 @@ Recuento, Porcentaje
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><b><i>Cancelar suscripción</i> o <i>darse de baja</i>:</b> Cuenta</li>
+        <li><b><i>Cancelar suscripción</i> o <i>darse de baja</i>:</b> Recuento</li>
         <li><b><i>Suscriptores %</i> o <i>tasa de cancelación de suscripciones</i>:</b> (Cancelaciones de suscripción) / (Entregas)</li>
     </ul>
 </span>
@@ -278,7 +278,7 @@ Recuento, Porcentaje
 ### Ingresos
 
 {% apitags %}
-Cuenta
+Recuento
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Revenue' %}
@@ -301,7 +301,7 @@ Recuento, Porcentaje
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><b><i>Conversiones primarias (A)</i> o <i>evento de conversión primaria</i>:</b> Cuenta</li>
+        <li><b><i>Conversiones primarias (A)</i> o <i>evento de conversión primaria</i>:</b> Recuento</li>
         <li><b><i>Conversiones primarias (A) %</i> o <i>tasa del evento de conversión primaria</i>:</b> (Conversiones primarias) / (Destinatarios únicos)</li>
     </ul>
 </span>
@@ -314,7 +314,7 @@ Recuento, Porcentaje
 ### Confianza
 
 {% apitags %}
-Cuenta
+Recuento
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confidence' %}
@@ -323,7 +323,7 @@ Cuenta
 
 {% api %}
 
-### La máquina se abre
+### Machine Opens (Aperturas automáticas)
   
 {% multi_lang_include analytics/metrics.md metric='Machine Opens' %} Esta métrica es objeto de seguimiento a partir del 11 de noviembre de 2021 para SendGrid y del 2 de diciembre de 2021 para SparkPost.
 
@@ -333,13 +333,13 @@ Cuenta
 
 {% api %}
 
-### Otros Abre
+### Otras aperturas
 
 {% apitags %}
-Cuenta
+Recuento
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Other Opens' %} Ten en cuenta que un usuario también puede abrir un correo electrónico (como el recuento de aperturas para <i>Otras aperturas</i>) antes de que se registre un recuento de <i>Aperturas de máquina</i>. Si un usuario abre un correo electrónico una vez (o más) después de un evento de apertura de máquina desde un buzón de entrada que no sea de Apple Mail, entonces la cantidad de veces que el usuario abre el correo electrónico se calcula para <i>Otras aperturas</i> y sólo una vez para <i>Aperturas únicas</i>.
+{% multi_lang_include analytics/metrics.md metric='Other Opens' %} Ten en cuenta que un usuario también puede abrir un correo electrónico (como el recuento de aperturas para <i>Otras aperturas</i>) antes de que se registre un recuento de <i>Aperturas de máquina</i>. Si un usuario abre un correo electrónico una vez (o más) después de un evento de apertura automática desde una bandeja de entrada que no sea de Apple Mail, entonces la cantidad de veces que el usuario abre el correo electrónico se calcula para <i>Otras aperturas</i> y sólo una vez para <i>Aperturas únicas</i>.
 
 <span class="calculation-line">Cálculo: Cuenta </span>
 
@@ -347,7 +347,7 @@ Cuenta
 
 {% api %}
 
-### Tasa de clics abiertos
+### Tasa de clics de apertura
 
 {% apitags %}
 Porcentaje

@@ -28,14 +28,14 @@ Braze hat keine Kontrolle über die Anzeigereihenfolge, wenn sowohl ein Nachrich
 
 ### Unterscheiden sich die Preise für MMS und SMS?
 
-MMS und SMS haben unterschiedliche Kosten und werden separat nach Volumen berechnet. Wenden Sie sich an das Braze Onboarding-Team, um Preisinformationen zu erhalten.
+MMS und SMS haben unterschiedliche Kosten und werden separat nach Volumen berechnet. Kontaktieren Sie das Braze Onboarding Team für Preisinformationen.
 
 ### Ist für MMS ein separater Einführungsprozess erforderlich?
 
 Nein! MMS ist jetzt in unserem SMS-Onboarding-Prozess enthalten. Bestehende Kund:innen, die das Onboarding bereits durchlaufen haben, können nach Abschluss der folgenden Schritte mit dem Versand von MMS-Kampagnen beginnen:
 
 1. MMS kaufen.
-2. Wenden Sie sich an das Onboarding Team von Braze, um die Aktivierung des MMS Features anzufragen. Dadurch wird MMS aktiviert und eine SMS/MMS-Abonnementgruppe wird für Sie erstellt oder aktualisiert.
+2. Wenden Sie sich an das Braze Onboarding Team, um die Aktivierung des MMS Features anzufragen. Dadurch wird MMS aktiviert und eine SMS/MMS-Abonnementgruppe wird für Sie erstellt oder aktualisiert.
 
 Als nächstes stellt das Braze Onboarding-Team sicher, dass Ihre Kurz- und Langcodes (in den USA und Kanada) für MMS aktiviert sind. Sie werden auch Ihre Abo-Gruppen aktualisieren, um Ihre aktuellen Nummern anzuzeigen, die hinzugefügt oder für MMS aktiviert wurden. Nachdem diese Schritte abgeschlossen sind, können Sie sofort MMS-Nachrichten aus unserem nativen SMS Composer versenden.
 

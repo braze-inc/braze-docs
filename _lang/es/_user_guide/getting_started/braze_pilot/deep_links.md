@@ -3,7 +3,7 @@ nav_title: Enlaces profundos de navegación
 article_title: Enlaces profundos de navegación en Braze Pilot
 page_order: 4
 page_type: reference
-description: "Este artículo de referencia cubre brevemente los pasos de integración que deben dar tus ingenieros o desarrolladores."
+description: "Este artículo de referencia cubre brevemente los pasos de integración que deben seguir sus ingenieros o desarrolladores."
 ---
 
 # Enlaces profundos de navegación en Braze Pilot
@@ -81,7 +81,7 @@ th:nth-child(6), td:nth-child(6) {
         <tr>
             <th>Parámetro</th>
             <th>Descripción</th>
-            <th>Necesario</th>
+            <th>Obligatoria</th>
             <th>Predeterminado (si no se especifica)</th>
             <th>Tipo</th>
             <th>Ejemplo</th>
@@ -89,15 +89,15 @@ th:nth-child(6), td:nth-child(6) {
     </thead>
     <tbody>
         <tr>
-            <td><code>título</code></td>
+            <td><code>title</code></td>
             <td>El título que se utilizará en la parte superior de la pantalla.</td>
             <td>Sí</td>
             <td></td>
             <td>Cadena</td>
-            <td>Correr</td>
+            <td>En ejecución</td>
         </tr>
         <tr>
-            <td><code>icono</code></td>
+            <td><code>icon</code></td>
             <td>Una cadena que representa qué icono utilizar.</td>
             <td>No</td>
             <td><code>RUNNING_HOME</code></td>
@@ -105,7 +105,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>HEART_DETAILS</td>
         </tr>
         <tr>
-            <td><code>imagen</code></td>
+            <td><code>image</code></td>
             <td>La URL de la imagen del artículo.</td>
             <td>Sí</td>
             <td></td>
@@ -121,7 +121,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>This%20workout%20is%20awesome%21</td>
         </tr>
         <tr>
-            <td><code>entrenamiento</code></td>
+            <td><code>workout</code></td>
             <td>El nombre del entrenamiento. Enviado en el <code>st_completed_class</code> evento.</td>
             <td>Sí</td>
             <td></td>
@@ -129,7 +129,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>5k%20Carrera</td>
         </tr>
         <tr>
-            <td><code>calorías</code></td>
+            <td><code>calories</code></td>
             <td>El número de calorías que se mostrará en la pantalla de entrenamiento activo. Enviado en el <code>st_completed_class</code> evento.</td>
             <td>No</td>
             <td>Número aleatorio entre 500 y 1.250</td>
@@ -137,7 +137,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>600</td>
         </tr>
         <tr>
-            <td><code>longitud</code></td>
+            <td><code>length</code></td>
             <td>La duración del entrenamiento. Enviado en el <code>st_completed_class</code> evento.</td>
             <td>No</td>
             <td></td>
@@ -197,17 +197,17 @@ th:nth-child(6), td:nth-child(6) {
 
 ##### Opciones de iconos
 
-| Icono | Imagen |
+| Ícono | Imagen |
 | --- | --- |
-| `RUNNING_HOME` | Un icono de zapatillas de correr.]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}){:style="max-width:30%"} |
-| `HEART_DETAILS` | Un icono de corazón.]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}){:style="max-width:30%"} |
-| `TIMER_DETAILS` | Un icono de cronómetro.]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}){:style="max-width:30%"} |
-| `YOGA_HOME` | Icono de persona en postura de yoga.]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}){:style="max-width:30%"} |
-| `BICYCLE_HOME` | Un icono de bicicleta.]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}){:style="max-width:30%"} |
-| `DUMBBELL_HOME` | Icono de una mancuerna.]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}){:style="max-width:30%"} |
+| `RUNNING_HOME` | ![Un icono de las zapatillas de correr.]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}){:style="max-width:30%"} |
+| `HEART_DETAILS` | ![Un icono de corazón.]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}){:style="max-width:30%"} |
+| `TIMER_DETAILS` | ![Un icono de cronómetro.]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}){:style="max-width:30%"} |
+| `YOGA_HOME` | ![Un icono de persona en postura de yoga.]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}){:style="max-width:30%"} |
+| `BICYCLE_HOME` | ![Un icono de la bicicleta.]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}){:style="max-width:30%"} |
+| `DUMBBELL_HOME` | ![El icono de una mancuerna.]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}){:style="max-width:30%"} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## PantalonesLaberinto
+## PantsLabyrinth
 
 Estos son los vínculos profundos de la aplicación de la marca ficticia PantsLabyrinth en Piloto.
 
@@ -264,7 +264,7 @@ th:nth-child(6), td:nth-child(6) {
         <tr>
             <th>Parámetro</th>
             <th>Descripción</th>
-            <th>Necesario</th>
+            <th>Obligatoria</th>
             <th>Predeterminado (si no se especifica)</th>
             <th>Tipo</th>
             <th>Ejemplo</th>
@@ -272,7 +272,7 @@ th:nth-child(6), td:nth-child(6) {
     </thead>
     <tbody>
         <tr>
-            <td><code>nombre</code></td>
+            <td><code>name</code></td>
             <td>El nombre del elemento.</td>
             <td>Sí</td>
             <td></td>
@@ -280,7 +280,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>Vaqueros</td>
         </tr>
         <tr>
-            <td><code>precio</code></td>
+            <td><code>price</code></td>
             <td>El precio del artículo.</td>
             <td>Sí</td>
             <td></td>
@@ -288,7 +288,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>85</td>
         </tr>
         <tr>
-            <td><code>imagen</code></td>
+            <td><code>image</code></td>
             <td>La URL de la imagen del artículo.</td>
             <td>Sí</td>
             <td></td>
@@ -296,7 +296,7 @@ th:nth-child(6), td:nth-child(6) {
             <td><code>https://picsum.photos/400</code></td>
         </tr>
         <tr>
-            <td><code>descripción</code></td>
+            <td><code>description</code></td>
             <td>La descripción del artículo.</td>
             <td>Sí</td>
             <td></td>
@@ -304,7 +304,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>This%20item%20is%20awesome%21</td>
         </tr>
         <tr>
-            <td><code>cantidad</code></td>
+            <td><code>quantity</code></td>
             <td>La cantidad del artículo.</td>
             <td>No</td>
             <td>1</td>
@@ -312,7 +312,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>2</td>
         </tr>
         <tr>
-            <td><code>talla</code></td>
+            <td><code>size</code></td>
             <td>Una cadena que representa el tamaño del artículo.</td>
             <td>No</td>
             <td>M</td>
@@ -320,7 +320,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>Grande</td>
         </tr>
         <tr>
-            <td><code>colores</code></td>
+            <td><code>colors</code></td>
             <td>Una lista de colores hexadecimales separados por comas. Estos son los colores disponibles para el artículo.</td>
             <td>No</td>
             <td>%23000000</td>
@@ -372,7 +372,7 @@ Estos son los vínculos profundos de la aplicación de la marca ficticia Steppin
 
 #### Parámetros aceptados
 
-| Parámetro | Descripción | Necesario | Tipo | Ejemplo |
+| Parámetro | Descripción | Obligatoria | Tipo | Ejemplo |
 | --- | --- | --- | --- | --- |
 | `id` | El ID de la película. | Sí | Número | 1 |
 | `title` | El título de la película. | Sí | Cadena | Mandíbulas |

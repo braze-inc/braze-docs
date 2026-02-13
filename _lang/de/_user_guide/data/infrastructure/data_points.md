@@ -52,7 +52,7 @@ Bei den folgenden Aktionen werden keine Datenpunkte protokolliert:
 Ein Array ist eine geordnete Sammlung von Artikeln, die in einem angepassten Attribut gespeichert sind. Was den Verbrauch betrifft, so kostet das Update eines Arrays einen Datenpunkt pro API-Aufruf. Wenn Sie einem Array schrittweise Werte hinzufügen, wird dies als ein Datenpunkt pro Wert gezählt. 
 
 {% alert tip %}
-Wenn Sie das gesamte Array auf einmal setzen, wird es als ein einziger Datenpunkt gezählt. Daher sind Arrays ein hervorragendes Instrument, um Nutzer:innen-Profile mit relevanten Informationen auf dem neuesten Stand zu halten und Kosten zu senken.
+Wenn Sie bei einfachen Arrays das gesamte Array auf einmal setzen, gilt dies als ein einziger Datenpunkt. Daher sind Arrays ein hervorragendes Instrument, um Nutzer:innen-Profile mit relevanten Informationen auf dem neuesten Stand zu halten und Kosten zu senken. <br><br> Arrays von Objekten verbrauchen einen Datenpunkt für jeden Schlüssel, der aktualisiert wird. Reduzieren Sie den Verbrauch unnötiger Datenpunkte, indem Sie Updates nur an Braze weitergeben.
 {% endalert %}
 
 #### Verschachtelte angepasste Attribute

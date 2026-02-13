@@ -19,10 +19,10 @@ Cette page analyse des informations précédentes sur nos messages in-app. Pour 
 
 Ceci analyse des informations précédentes sur nos messages in-app. Pour voir les informations les plus récentes sur notre génération actuelle de messages intégrés à l'application, consultez notre [documentation de présentation des messages intégrés à l'application]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
 
-{% details Plein écran %}
+{% details Fullscreen %}
 Ils sont les plus attrayants, mais aussi les plus intrusifs, car ils occupent tout l’écran de votre utilisateur. Ils sont parfaits pour afficher de grandes images riches, et ils s’avèrent utiles pour transmettre des informations cruciales, telles que de nouvelles fonctionnalités clés et des promotions arrivant à terme. Sachant qu’ils perturbent davantage l’expérience utilisateur, utilisez-les avec modération pour le contenu prioritaire.
 
-![Message en plein écran]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
+![Message plein écran]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
 
 **Fonctionnalités personnalisables**
 
@@ -36,7 +36,7 @@ Ils sont les plus attrayants, mais aussi les plus intrusifs, car ils occupent to
 {% details  Modal %}
 Ces messages ne sont pas aussi intrusifs que ceux en plein écran, car ils permettent toujours aux utilisateurs de voir une partie de l’interface de votre application. Comme ils contiennent toujours des boutons et des images, les messages modaux peuvent constituer une option preferable aux slideups pour une campagne visuelle plus interactive. Ils sont parfaits pour le contenu de priorité moyenne, comme les mises à jour d’applications et les offres et événements non urgents.
 
-![Message Modal]({% image_buster /assets/img_archive/braze_modal.png %}){: style="max-width:80%;"}
+![Message modale/boîte de dialogue modale etc.]({% image_buster /assets/img_archive/braze_modal.png %}){: style="max-width:80%;"}
 
 **Fonctionnalités personnalisables**
 
@@ -48,10 +48,10 @@ Ces messages ne sont pas aussi intrusifs que ceux en plein écran, car ils perme
 
 {% enddetails %}
 
-{% details Diapositive traditionnelle %}
+{% details Traditional Slideup %}
 Il s’agit du type de message le moins intrusif, bien qu’il puisse attirer l’attention selon les couleurs et les icônes de badge employées. Cela peut être le format de message à utiliser lors de l'intégration de nouveaux utilisateurs et de les diriger vers des fonctionnalités spécifiques de l'application, car ils ne suspendent pas l'expérience de l'application et permettent une exploration continue.
 
-![Message de glissement vers le haut]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %}){: style="max-width:50%;"}
+![Message contextuel]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %}){: style="max-width:50%;"}
 
 **Fonctionnalités personnalisables**
 
@@ -68,12 +68,12 @@ Il s’agit du type de message le moins intrusif, bien qu’il puisse attirer l�
 
 ## Web
 
-Ceci analyse des informations précédentes sur des messages in-app plus personnalisés. Pour voir les informations les plus à jour sur notre génération actuelle de messages intégrés, consultez notre [documentation de personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
+Ceci analyse des informations précédentes sur des messages in-app plus personnalisés. Pour voir les informations les plus à jour sur notre génération actuelle de messages intégrés, consultez notre [documentation de personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
-{% details Message de capture d’e-mail %}
+{% details Email capture message %}
 Les messages de capture d’e-mail vous permettent d’inviter facilement les utilisateurs de votre site à soumettre leur adresse e-mail, après quoi vous en disposerez dans le système Braze pour l’ensemble de vos campagnes de communication.
 
-![Message de capture d'email]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
+![Message de capture d'e-mail]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
 
 >  Pour activer les messages in-app de capture d’e-mail via le SDK Web, vous devez fournir l'option d'initialisation `allowUserSuppliedJavascript` à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages in-app HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
 
@@ -87,9 +87,9 @@ Les messages de capture d’e-mail vous permettent d’inviter facilement les ut
 
 {% enddetails %}
 
-{% details Message HTML personnalisé %}
+{% details Custom HTML Message %}
 
-Bien que les messages in-app Braze soient personnalisés de diverses façons, vous pouvez contrôler encore davantage l’apparence et l’impression de vos campagnes à l’aide de messages conçus et élaborés avec HTML, CSS et JavaScript. Via à une composition simple, vous pouvez débloquer des fonctionnalités et des marques personnalisées pour répondre à vos besoins. Les messages in-app HTML offrent un contrôle accru de l’apparence et de l’impression d’un message, et tout ce qui est pris en charge par HTML5 l’est également par Braze.
+Bien que les messages in-app par défaut de Braze puissent être personnalisés de diverses manières, vous pouvez avoir un contrôle encore plus grand sur l'aspect et la convivialité de vos campagnes en utilisant des messages conçus et créés à l'aide de HTML, CSS et JavaScript. Via à une composition simple, vous pouvez débloquer des fonctionnalités et des marques personnalisées pour répondre à vos besoins. Les messages in-app HTML offrent un contrôle accru de l’apparence et de l’impression d’un message, et tout ce qui est pris en charge par HTML5 l’est également par Braze.
 
 **JavaScript Bridge (appboyBridge)**
 
@@ -103,7 +103,7 @@ En outre, pour le suivi des analyses, tous les éléments `<a>` ou `<button>` da
 
 {% enddetails %}
 
-{% details Modèles de messages intégrés en HTML %}
+{% details HTML In App-Message Templates %}
 
 Nous avons conçu un ensemble de modèles de messages in-app HTML5 pour vous aider à démarrer. Découvrez notre [répertoire GitHub](https://github.com/braze-inc/in-app-message-templates) qui contient des instructions détaillées sur la façon d'utiliser et de personnaliser ces modèles selon vos besoins.
 
@@ -153,19 +153,16 @@ Les stratégies suivantes sont utiles pour conserver de petites tailles de fichi
 
 - Les polices de référence intégrées dans votre application ou site Web permettent de personnaliser vos messages in-app HTML au lieu de les inclure dans votre dossier ZIP de ressources HTML.
 - Assurez-vous qu’aucun CSS ou Javascript superflu ou dupliqué ne figure dans vos zips de ressources HTML.
-- Utilisez [ImageOptim][25] sur toutes les images pour les compresser à leur taille minimale possible sans réduction de qualité.
+- Utilisez [ImageOptim](https://imageoptim.com/) sur toutes les images pour les compresser à leur taille minimale possible sans réduction de qualité.
 
 ### Spécifications de l’iPhone 5
 
-![Spécifications de l’iPhone 5][18]
+![Spécifications de l’iPhone 5]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %})
 
 ### Spécifications de l’iPhone 6
 
-![Spécifications de l’iPhone 6][19]
+![Spécifications de l’iPhone 6]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %})
 
 
-[18]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %}
 
-[19]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %}
 
-[25]: https://imageoptim.com/

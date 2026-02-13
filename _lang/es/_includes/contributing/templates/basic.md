@@ -1,6 +1,6 @@
 Puedes utilizar esta plantilla para crear cualquier página o sección para Braze Docs. Para ver un ejemplo, consulta [Generar una vista previa]({{site.baseurl}}/contributing/generating_a_preview/). Para obtener directrices sobre los tipos de documentación utilizados en el artículo, consulta [Tipos de página]({{site.baseurl}}/contributing/page_types/).
 
-{% details Mostrar plantilla %}
+{% details Show template %}
 {% raw %}
 `````markdown
 ---

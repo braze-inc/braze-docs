@@ -14,7 +14,7 @@ Tool:
 
 > Using the Braze Audience Sync to Facebook, you can elect to add your own users' data from your Braze integration to Facebook custom audiences to deliver advertisements based on behavioral triggers, segmentation, and more.
 
-Any criteria you'd typically use to trigger a message (push, email, SMS, or webhook) in a Braze Canvas based on your user data can now be used to trigger an ad to that user in Facebook using custom audiences. For example, when you configure an Audience Sync to Facebook, you will be able to use a wide variety of first-party fields like email, phone, first name, and last name.
+Any criteria you'd typically use to trigger a message (push, email, SMS, or webhook) in a Braze Canvas based on your user data can now be used to trigger an ad to that user in Facebook using custom audiences. 예를 들어 오디언스 동기화를 Facebook에 구성하면 이메일, 전화, 이름, 성 등 다양한 퍼스트 파티 필드를 사용할 수 있습니다.
 
 **Common use cases for syncing custom audiences include**:
 
@@ -27,11 +27,11 @@ This feature allows brands to control what specific first-party data is shared w
 
 ## User syncing and rate limit considerations
  
-As users reach the Audience Sync step, Braze will sync these users in near real-time while also respecting Facebook's Marketing API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Facebook. 
+사용자가 오디언스 동기화 단계에 도달하면, Braze는 Facebook의 마케팅 API 속도 제한을 준수하면서 거의 실시간으로 동기화합니다. Braze는 5초마다 가능한 한 많은 사용자를 일괄 처리하여 Facebook으로 전송합니다. 
 
-Facebook's Marketing API rate limit states no more than ~190,000 API requests for each ad account in a one-hour time period. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync isn't possible, these users are listed under the Users Errored metric.
+Facebook의 마케팅 API 속도 제한에 따라 광고 계정당 1시간 동안 최대 190,000건의 API 요청을 허용하지 않습니다. 고객이 이 제한에 도달하면 Braze는 최대 13시간 동안 동기화를 다시 시도합니다. 그래도 동기화가 되지 않으면 Braze는 이러한 사용자를 사용자 오류 측정기준 아래에 나열합니다.
 
-## Prerequisites
+## 필수 조건
 
 You'll need to confirm that you have the following items created and completed before setting up your Facebook Audience step in Canvas. 
 
@@ -46,22 +46,26 @@ You'll need to confirm that you have the following items created and completed b
 
 ### Step 1: Connect to Facebook
 
+{% alert important %}
+Facebook을 Braze 계정에 연결하려면 ['관리자' 권한이]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) 있어야 합니다.
+{% endalert %}
+
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Facebook**. Under Facebook Audience Export, select **Connect Facebook**.
 
-![Facebook technology page in Braze that includes an Overview section and Facebook Audience Export section with the Connected Facebook button.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:85%;"}
+![개요 섹션과 연결된 페이스북 버튼이 있는 페이스북 오디언스 내보내기 섹션이 포함된 Braze의 페이스북 기술 페이지입니다.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:85%;"}
 
-A Facebook oAuth dialog window will appear to authorize Braze to create Custom Audiences into your Facebook ad accounts.
+Facebook 광고 계정에 커스텀 오디언스를 생성할 수 있도록 Braze에 권한을 부여하는 Facebook oAuth 대화창이 나타납니다.
 
-![The first facebook dialogue box prompting to "Connect as X", where X is your Facebook username.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![The second Facebook dialogue box prompting for permission to manage ads for your ad accounts.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
+!['X로 연결'이라는 프롬프트가 표시된 첫 번째 Facebook 대화 상자. 여기서, X는 Facebook 사용자 아이디입니다.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![광고 계정에 대한 광고 관리 권한을 묻는 두 번째 Facebook 대화 상자입니다.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
 
 After linking Braze to your Facebook account, select the ad accounts you would like to sync within your Braze workspace. When you're connected, you'll be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-![An updated version of the Facebook technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/fb/afb_5.png %}){: style="max-width:85%;"}
+![Facebook 기술 파트너 페이지의 업데이트된 버전으로 광고 계정이 성공적으로 연결되었음을 보여줍니다.]({% image_buster /assets/img/fb/afb_5.png %}){: style="max-width:85%;"}
 
-Your Facebook connection is applied at the Braze workspace level. If your Facebook admin removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook Audience components will show errors, and Braze will not be able to sync users. 
+Facebook 연결은 Braze 워크스페이스 수준에서 적용됩니다. If your Facebook admin removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook Audience components will show errors, and Braze will not be able to sync users. 
 
 {% alert important %}
-For customers who have previously undergone the Facebook App Review process for [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) and [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), your System User Token will still be valid for the Facebook Audience component. You will not be able to edit or revoke the Facebook System User Token through the Facebook partner page. Instead, you can connect your Facebook account to replace your Facebook System User Token within your Braze workspace. 
+For customers who have previously undergone the Facebook App Review process for [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) and [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), your System User Token will still be valid for the Facebook Audience component. Facebook 파트너 페이지를 통해서는 Facebook 시스템 사용자 토큰을 편집하거나 취소할 수 없습니다. Instead, you can connect your Facebook account to replace your Facebook System User Token within your Braze workspace. 
 
 <br><br>The Facebook oAuth configuration will also apply to [Facebook exports using Segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites).
 {% endalert %}
@@ -71,24 +75,24 @@ For customers who have previously undergone the Facebook App Review process for 
 Before building out your Canvas, you must accept the following Facebook terms of service at the following links:
 
 - **Customer List Custom Audiences Terms for your personal account:** `https://www.facebook.com/ads/manage/customaudiences/tos.php?act=<ACCOUNT_ID>`.
-- **Facebook Business Tools Terms for your business account:** `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
+- **비즈니스 계정에 대한 Facebook 비즈니스 도구 약관:** `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
 
-![An example of the terms to accept for customer list custom audiences.]({% image_buster /assets/img/fb_audience_sync/fb_sync_tos.png %}){: style="max-width:85%;"}
-![An example of the terms to accept for Facebook business tools.]({% image_buster /assets/img/fb_audience_sync/fb_sync_tos2.png %}){: style="max-width:85%;"}
+![고객 목록 맞춤 오디언스에 대해 수락해야 할 약관의 예입니다.]({% image_buster /assets/img/fb_audience_sync/fb_sync_tos.png %}){: style="max-width:85%;"}
+![Facebook 비즈니스 도구에 대해 수락해야 할 약관의 예입니다.]({% image_buster /assets/img/fb_audience_sync/fb_sync_tos2.png %}){: style="max-width:85%;"}
 
-Refer to the [FAQ section](#terms) for more details on auditing your Facebook account when integrating.
+통합 시 Facebook 계정을 감사하는 데 대한 자세한 내용은 [FAQ 섹션](#terms)을 참조하십시오.
 
-### Step 3: Add a Facebook Audience component in Canvas Flow
+### 3단계: 캔버스에 Facebook 오디언스 컴포넌트 추가하기
 
 Add a component in your Canvas and select **Facebook Audience**.
 
-![A list of components to add to the Canvas.]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![The Audience Sync component.]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
+![Canvas에 추가할 구성 요소 목록입니다.]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![Audience Sync 구성 요소입니다.]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
-### Step 4: Sync setup
+### 4단계: Sync setup
 
-Select on the **Custom Audience** button to open the component editor. Then, select **Facebook** as the Audience Sync partner.
+Select on the **Custom Audience** button to open the component editor. 그런 다음 **Facebook**을(를) 오디언스 동기화 파트너로 선택합니다.
 
-!["Set up Audience Sync" with options for choosing a partner.]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
+!["오디언스 동기화 설정"에서 파트너 선택 옵션이 있습니다.]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
 
 Select the desired Facebook ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience. 
 
@@ -99,7 +103,7 @@ Select the desired Facebook ad account. Under the **Choose a New or Existing Aud
 2. Select **Add Users to Audience**, and choose the fields you would like to sync with Facebook. 
 3. Next, select **Create Audience** to save your audience.
 
-![Audience sync setup for an audience with the email, phone, first name, and last name information to match.]({% image_buster /assets/img/audience_sync/fb_sync.png %})
+![이메일, 전화, 이름, 성 정보가 일치하는 오디언스에 대한 오디언스 동기화 설정을 지정할 수 있습니다.]({% image_buster /assets/img/audience_sync/fb_sync.png %})
 
 You'll be notified at the top of the step editor if the audience is created successfully or if an error occurs during this process. You can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
@@ -114,10 +118,10 @@ Braze offers the ability to either add or remove users from existing Facebook cu
 2. Choose whether you want to **Add to the Audience** or **Remove from the Audience**. 
 3. Braze will either add or remove users in near real-time as they enter the Facebook Audience step. 
 
-![Audience sync setup to remove the email, phone, first name, and last name information.]({% image_buster /assets/img/audience_sync/fb_sync3.png %})
+![오디언스 동기화 설정을 통해 이메일, 전화, 이름, 성 정보를 제거할 수 있습니다.]({% image_buster /assets/img/audience_sync/fb_sync3.png %})
 
 {% alert important %}
-Facebook prohibits removing users from custom audiences where the audience sizes are too low (typically fewer than 1,000 users). As a result, Braze will be unable to sync users for a removal from the Audience Sync step until the audience reaches the appropriate audience size.
+Facebook prohibits removing users from custom audiences where the audience sizes are too low (typically fewer than 1,000 users). 그 결과, Braze는 오디언스가 적절한 오디언스 규모에 도달할 때까지 오디언스 동기화 단계에서 사용자를 동기화할 수 없습니다.
 {% endalert %}
 
 {% endtab %}
@@ -125,11 +129,11 @@ Facebook prohibits removing users from custom audiences where the audience sizes
 
 ### Step 5: Launch Canvas
 
-After configuring your Facebook Audience component, it's time to launch the Canvas! The new custom audience will be created, and users who flow through the Facebook Audience step will be passed into this custom audience on Facebook. If your Canvas contains subsequent steps, your users will then advance to the next step in their user journey.
+After configuring your Facebook Audience component, it's time to launch the Canvas! 새로운 커스텀 오디언스가 생성되고, Facebook 오디언스 단계를 통해 유입된 사용자는 Facebook에서 이 커스텀 오디언스로 전달됩니다. If your Canvas contains subsequent steps, your users will then advance to the next step in their user journey.
 
-The **History** tab of the custom audience in the Facebook Audience Manager will reflect the number of users sent to the audience from Braze. If a user re-enters the step, they will be sent to Facebook again.
+The **History** tab of the custom audience in the Facebook Audience Manager will reflect the number of users sent to the audience from Braze. 사용자가 해당 단계에 다시 들어가면 Facebook으로 다시 전송됩니다.
 
-![Audience details and the History tab for a given Facebook audience that includes an Audience History table with columns for the activity, activity details, items changed, and the date and time.]({% image_buster /assets/img/fb_audience_sync/audience_history.png %}){: style="max-width:80%;"}
+![활동, 활동 세부 정보, 변경된 항목, 날짜 및 시간에 대한 열이 있는 오디언스 기록 표가 포함된 특정 Facebook 오디언스에 대한 오디언스 세부 정보 및 기록 탭.]({% image_buster /assets/img/fb_audience_sync/audience_history.png %}){: style="max-width:80%;"}
 
 ## Understanding analytics
 
@@ -147,7 +151,7 @@ The following table includes metrics and descriptions to help you better underst
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-There will be a delay in reporting for users synced and users errored metrics due to internal processing.
+동기화된 사용자에 대한 보고가 지연되고 내부 처리로 인해 측정기준에 오류가 발생했습니다.
 {% endalert %}
 
 ## Frequently asked questions
@@ -178,12 +182,12 @@ At this time, value-based custom audiences aren't supported by Braze. If you're 
 
 Once email data is normalized, Braze hashes it with SHA256.
 
-**IDFA/AAID/phone:** Braze hashes with SHA256. The audience types we sync to are always one of the following:
+**IDFA/AAID/전화:** SHA256으로 Braze 해시. The audience types we sync to are always one of the following:
 
 - IDFA_SHA256
 - AAID_SHA256
 - EMAIL_SHA256
-- PHONE_SHA256\.
+- PHONE_SHA256.
 
 In terms of frequency, Braze will only hash user personally identifiable information (PII) as users enter into the Audience Sync step in the user journey in preparation for the sync.
 
@@ -200,10 +204,10 @@ At this time, value-based lookalike custom audiences are not supported by Braze.
 
 ### I’ve received an email related to Facebook custom audience terms of service. What should I do to resolve this?
 
-To use Audience Sync to Facebook, you need to accept these terms of service agreement. 
+Facebook 오디언스 동기화 기능을 사용하려면 본 서비스 약관에 동의해야 합니다. 
 
 - If your ad account is directly associated with your personal Facebook account, you can accept the terms of service from in your personal account here: `https://www.facebook.com/ads/manage/customaudiences/tos.php?act=<ACCOUNT_ID>`.
-- If your ad account is tied to your company's Business Manager account, you need to accept the terms of service in your Facebook Business Manager account here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
+- 광고 계정이 회사의 비즈니스 매니저 계정에 연결되어 있는 경우, Facebook 비즈니스 매니저 계정에서 서비스 약관에 동의해야 합니다: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
 
 After you have accepted your Facebook custom audience terms of service, do the following:
 
@@ -271,7 +275,7 @@ table td {
     </tr>
     <tr>
       <td><b>Failed to create audience</b></td>
-      <td>On the Facebook Technology Partner page, you are seeing “Connected”, but there’s an error on the Facebook Audience Sync step when syncing an audience, “Failed to create audience 'audience name'". Authorization of your Facebook account failed. Please visit the Technology Partners page to reconnect your account.</td>
+      <td>On the Facebook Technology Partner page, you are seeing “Connected”, but there’s an error on the Facebook Audience Sync step when syncing an audience, “Failed to create audience 'audience name'". Authorization of your Facebook account failed. 기술 파트너 페이지를 방문하여 계정을 다시 연결하세요.</td>
       <td>Follow the steps in <a href='/docs/partners/canvas_steps/facebook_audience_sync/#audit-your-facebook-account'>this troubleshooting section</a> to check your account for any issues.
       </td>
     </tr>
@@ -296,7 +300,7 @@ Accept any pending Terms of Service (TOS) from Facebook. Facebook periodically w
 - Custom Audience TOS for your personal Facebook account:
 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=<AD_ACCOUNT_ID>`
 
-![An account with full control permissions to manage an ad account.]({% image_buster /assets/img/fb_audience_sync/ad_account_permission.png %}){: style="max-width:70%;"}
+![광고 계정을 관리할 수 있는 모든 권한이 있는 계정입니다.]({% image_buster /assets/img/fb_audience_sync/ad_account_permission.png %}){: style="max-width:70%;"}
 
 To find your account and business ID, follow these steps:
 
@@ -304,13 +308,13 @@ To find your account and business ID, follow these steps:
 2. Confirm you're using the right ad account by verifying it in the dropdown menu.
 3. In the URL, find the account ID after `act=` and the business ID after `business_id=`
 
-![The URL with the account ID and business ID highlighted.]({% image_buster /assets/img/fb_audience_sync/fb_businessid_url.png %}){: style="max-width:90%;"}
+![계정 ID와 비즈니스 ID가 강조 표시된 URL입니다.]({% image_buster /assets/img/fb_audience_sync/fb_businessid_url.png %}){: style="max-width:90%;"}
 
 {:start="4"}
 
 4. Read and select **Accept** for the Custom Audience Terms. We recommend confirming which account the terms of service are being signed for by using the dropdown at the top of the terms.
 
-![The dropdown that shows the account that is signing the terms of service.]({% image_buster /assets/img/fb_audience_sync/confirm_accept_tos.png %}){: style="max-width:90%;"}
+![서비스 약관에 서명하는 계정을 표시하는 드롭다운입니다.]({% image_buster /assets/img/fb_audience_sync/confirm_accept_tos.png %}){: style="max-width:90%;"}
 
 {:start="5"}
 5\. You must select **Accept** for the terms of service. After, you'll see this message: "You have accepted these terms of service on behalf of Braze".
@@ -324,12 +328,12 @@ Check if you have any pending tasks with Facebook that could be blocking you fro
 
 1. [Log into Facebook Ads Manager](https://adsmanager.facebook.com/).
 2. Select the ad account you are having issues with.
-3. In the navigation, select your **Account Overview**. <br> ![The navigation with Account Overview selected.]({% image_buster /assets/img/fb_audience_sync/ads_manager_accouint_overview.png %})
-4. Check if there are any alerts that need to be addressed. <br> ![An account with an expired credit card.]({% image_buster /assets/img/fb_audience_sync/resolve_alerts.png %})
+3. In the navigation, select your **Account Overview**. <br> ![계정 개요가 선택된 탐색 화면입니다.]({% image_buster /assets/img/fb_audience_sync/ads_manager_accouint_overview.png %})
+4. Check if there are any alerts that need to be addressed. <br> ![만료된 신용 카드가 있는 계정입니다.]({% image_buster /assets/img/fb_audience_sync/resolve_alerts.png %})
 
 {:start="5"}
 
-5. Check if there are any setup tasks that need to be completed. <br> ![An account with a partially completed account setup.]({% image_buster /assets/img/fb_audience_sync/confirm_tasks.png %})
+5. Check if there are any setup tasks that need to be completed. <br> ![계정 설정이 부분적으로 완료된 계정입니다.]({% image_buster /assets/img/fb_audience_sync/confirm_tasks.png %})
 
 #### Connect with a different user
 
