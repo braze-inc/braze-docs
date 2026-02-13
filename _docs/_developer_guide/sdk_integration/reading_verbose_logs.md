@@ -66,7 +66,7 @@ Requesting data flush on internal session close flush timer.
 ### What to check
 
 - Verify that a session start log appears when the app launches.
-- If you don't see a session start, check that the SDK is properly initialized and that `openSession` (Android) is being called.
+- If you don't see a session start, check that the SDK is properly initialized and that [Activity Lifecycle Integration]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_step-5-enable-user-session-tracking) (Android) is enabled.
 - On Android, confirm that a network request is being made to the Braze endpoint. If you don't see this, verify your API key and endpoint configuration.
 
 ## Push notifications
