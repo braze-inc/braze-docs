@@ -134,6 +134,48 @@ Then, initialize an instance of the Braze plugin by calling `new BrazePlugin()` 
 To avoid undefined behaviors, only allocate and use a single instance of the `BrazePlugin` in your Dart code.
 {% endalert %}
 
+### Step 4: Delay automatic initialization (optional)
+
+{% tabs %}
+{% tab Android %}
+
+To delay initialization in Flutter on Android, disable the automatic integration initializer in your project's `braze.xml`.
+
+#### Step 4.1: Update your `braze.xml`
+
+Automatic integration initialization is enabled by default. To delay initialization, set the following boolean in your `braze.xml`:
+
+```xml
+<bool name="com_braze_flutter_enable_automatic_integration_initializer">false</bool>
+```
+
+{% endtab %}
+{% tab iOS %}
+
+iOS delayed initialization is configured in Swift code.
+
+#### Step 4.1: Prepare for delayed initialization (Swift)
+
+In your app's launch flow (for example, `application(_:didFinishLaunchingWithOptions:)` in an `AppDelegate`), call:
+
+```swift
+Braze.prepareForDelayedInitialization(pushAutomation: true)
+```
+
+#### Step 4.2: Initialize Braze later
+
+When you're ready to initialize the SDK, create the Braze instance using the normal configuration flow:
+
+```swift
+let configuration = Braze.Configuration(apiKey: brazeApiKey, endpoint: brazeEndpoint)
+configuration.push.automation = true
+let braze = Braze(configuration: configuration)
+AppDelegate.braze = braze
+```
+
+{% endtab %}
+{% endtabs %}
+
 ## Testing the integration
 
 You can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in dashboard (in the **Overview** section).
