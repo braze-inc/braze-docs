@@ -2,8 +2,11 @@
 nav_title: Create agents
 article_title: Create custom agents
 description: "Learn how to create agents, what to prepare before you start, and how to put them to work across messaging, decisioning, and data management."
-alias: /creating-agents/
 page_order: 1
+alias: /creating-agents/
+local_redirect:
+  models: '/docs/user_guide/brazeai/agents/reference/#models'
+
 ---
 
 # Create custom agents
@@ -65,18 +68,36 @@ You can use Liquid in your instructions to reference user attributes, such as th
 
 Select **Add context** to choose what your agent can reference. This includes:
 
-- [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Provide more details on the product or customer.
-- [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Consider a user's membership in a segment when personalizing messages.
+- [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Provide catalog fields for the agent to reference.
+- [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Consider a user's membership in a segment when personalizing messages. You can select up to three segments.
 - [Brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
-- [Canvas Context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Reference the context variables that apply to the user.
+- [Canvas Context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analyze all Canvas Context variables for a user when this agent is invoked.
 
 #### Step 2.2: Add optional settings
 
-You can set the daily execution limit for your agent. By default, this is 50,000 and can be up to 100,000.
+In the **Optional settings**, you can adjust the [Temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) of the agent-generated copy. A higher temperature allows the agent to use the information provided to be more creative. 
+
+You can also set the daily execution limit for your agent. By default, this value is set to 50,000, but can be raised up to 100,000. If you're interested in increasing the limit above 100,000, reach out to your customer success manager to learn more.
 
 ### Step 3: Select the output
 
-In the **Output** section, you can organize and define the agent's output by manually structuring fields or using JSON. 
+In the **Output** section, you can organize and define the agent's output by basic schemas or advanced schemas.
+
+#### Basic schemas
+
+Basic schemas are a simple output that an agent returns. This can be a string, a number, a boolean, an array of strings, or array of numbers.
+
+Let's say you want to collect user sentiment scores from a simple feedback survey to determine how satisfied your customers are after receiving a product. You can select **Number** as a basic schema to structure the output format.
+
+{% alert important %}
+Arrays are only available for Canvas agents, not catalog agents.
+{% endalert %}
+
+![Agent Console with number selected as a basic schema.]({% image_buster /assets/img/ai_agent/basic_schema.png %}){: style="max-width:85%;"}
+
+#### Advanced schemas
+
+Advanced schema options include manually structuring fields or using JSON.
 
 - **Fields:** A no-code way to enforce an agent output that you can use consistently. 
 - **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema.
@@ -118,14 +139,8 @@ Let's say you want to collect user feedback for their most recent dining experie
 }
 ```
 
-If you try to use an agent with a JSON output in a catalog, it will not follow your schema. Instead, consider using the defined output fields.
-
 {% endtab %}
 {% endtabs %}
-
-{% alert important %}
-Output formats aren't currently supported by Claude AI. If you're using an Anthropic key, we recommend manually adding the structure to the agent prompt.
-{% endalert %}
 
 ### Step 4: Test and create the agent
 
