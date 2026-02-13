@@ -2,12 +2,9 @@
 
 > The Credits Usage dashboard provides self-service insights into your credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
 
-The **Credits Usage** dashboard is divided into three sections:
+The **Credits Usage** dashboard is divided into two sections:
 - [Message credit usage overview](#message-credits-usage-overview)
-- [LINE](#line)
-- [SMS/MMS/RCS](#sms-mms-and-rcs)
-- [Webhooks](#webhooks)
-- [WhatsApp](#whatsapp)
+- [Channel tabs](#channels)
 
 Access the dashboard by going to **Settings** > **Billing** > **Credits Usage**.
 
@@ -29,9 +26,16 @@ The **Message Credits Usage over Contract** graph shows your usage over the sele
 
 ![Message Credits Usage Overview dashboard with sections for credit usage, credit contract overview, and credit consumption over contract.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
 
-## LINE
+## Channels
 
-## SMS, MMS, and RCS
+The **Credits Usage** tab shows the channels that are applicable to your company. For example, if you don't have WhatsApp, its tab won't appear.
+
+Refer to the following tabs for details on what is shown for each channel.
+
+{% tabs %}
+{% tab SMS, MMS, and RCS %}
+
+### SMS, MMS, and RCS
 
 **SMS/MMS/RCS Credits Usage** shows the usage breakdown for the SMS, MMS, and RCS channel. The columns in the data table generally require you to have purchased Message Credits (though Braze still supports older billing models temporarily), and the **Credit ratio** and **Credits** columns indicate the respective country rate and consumed credits. Additionally, high-level tiles will indicate the total SMS and, when relevant, MMS consumption across the selected date range.
 
@@ -47,13 +51,14 @@ It’s possible to select a date range that contains both non-credits and messag
 
 ![SMS/MMS/RCS Credits Usage table with null values.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
 
-## Webhooks
+{% endtab %}
+{% tab WhatsApp %}
 
-## WhatsApp
+### WhatsApp
 
 **WhatsApp Credits Usage** shows the usage breakdown for the WhatsApp channel. The tiles display the total WhatsApp credit usage, which can be broken down in the **Usage by account** section by applying filters to limit the data table results to a specific workspace.
 
-### Filters
+#### Filters
 
 You can filter your data by:
 - Country
@@ -63,6 +68,9 @@ You can filter your data by:
 - Region
 
 ![WhatsApp Credits Usage with a tile for total credits consumed and a usage by account table.]({% image_buster /assets/img/app_settings/whatsapp_credit_consumption4.png %}){: style="max-width:70%;"}
+
+{% endtab %}
+{% endtabs %}
 
 ## Things to know
 
