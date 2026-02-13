@@ -159,7 +159,7 @@ The following steps cover how to save and send custom events, custom attributes,
 
 In Xcode, add the `App Groups` capability to your main app target. Turn on **App Groups**, then click **+** to add a new group. Use your app's bundle ID to create the group identifier (for example, `group.com.company.appname.xyz`). Turn on **App Groups** for both your main app target and the content extension target.
 
-![]({% image_buster /assets/img/swift/push_story/add_app_groups.png %})
+![Xcode showing App Groups capability enabled for main app and notification extension]({% image_buster /assets/img/swift/push_story/add_app_groups.png %})
 
 ### Step 2: Choose what to log
 
@@ -172,7 +172,7 @@ Before you implement the snippets, choose which analytics category you want to l
 The helper files in this section (`RemoteStorage`, `UserAttribute`, and `EventName Dictionary`) are local utility files used by this sample implementation. They are not built-in SDK classes. They store payload-derived data in `UserDefaults`, define a typed model for pending user updates, and standardize event payload construction. For more information about local data storage behavior, see [Storage]({{site.baseurl}}/developer_guide/storage/?tab=swift).
 
 {% alert note %}
-The helper file examples in this section are Swift-specific. For Android and Web approaches to logging custom events and attributes, see [Logging custom events]({{site.baseurl}}/developer_guide/analytics/logging_events/) ([Android]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)) and [Setting user attributes]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/) ([Android]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?tab=web)).
+The helper file examples in this section are iOS-specific (Swift and Objective-C). For Android and Web approaches to logging custom events and attributes, see [Logging custom events]({{site.baseurl}}/developer_guide/analytics/logging_events/) ([Android]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)) and [Setting user attributes]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/) ([Android]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?tab=web)).
 {% endalert %}
 
 {% tabs local %}
@@ -221,10 +221,10 @@ func saveCustomEvent(with properties: [String: Any]? = nil) {
   // 3
   if (pendingEvents) {
     [pendingEvents addObject:customEventDictionary];
-    [remoteStorage store:pendingEvents forKey:RemoteStorageKeyPendingCustomAttributes];
+    [remoteStorage store:pendingEvents forKey:RemoteStorageKeyPendingCustomEvents];
   } else {
     // 4
-    [remoteStorage store:@[ customEventDictionary ] forKey:RemoteStorageKeyPendingCustomAttributes];
+    [remoteStorage store:@[ customEventDictionary ] forKey:RemoteStorageKeyPendingCustomEvents];
   }
 }
 ```
@@ -256,7 +256,7 @@ func logPendingCustomEventsIfNecessary() {
     
     // 2
     for (key, value) in event {
-      if key == PushNotificationKey.eventName.rawValue {
+      if key == "event_name" {
         // 3
         if let eventNameValue = value as? String {
           eventName = eventNameValue
@@ -270,7 +270,7 @@ func logPendingCustomEventsIfNecessary() {
     }
     // 5
     if let eventName = eventName {
-      AppDelegate.braze?.logCustomEvent(eventName, properties: properties)
+      AppDelegate.braze?.logCustomEvent(name: eventName, properties: properties)
     }
   }
   
@@ -452,7 +452,7 @@ When saving user attributes, create a custom object to capture which user field 
 ```swift
 func saveUserAttribute() {
   // 1
-  guard let data = try? PropertyListEncoder().encode(UserAttribute.userAttributeType("USER-ATTRIBUTE-VALUE")) else { return }
+  guard let data = try? PropertyListEncoder().encode(UserAttribute.email("USER-ATTRIBUTE-VALUE")) else { return }
   
   // 2
   let remoteStorage = RemoteStorage(storageType: .suite)
@@ -521,7 +521,7 @@ func logPendingUserAttributesIfNecessary() {
     // 3
     switch userAttribute {
     case .email(let email):
-      user?.email = email
+      AppDelegate.braze?.user.set(email: email)
     }
   }
   // 4
@@ -590,7 +590,8 @@ class RemoteStorage: NSObject {
     case .standard:
       return .standard
     case .suite:
-      return UserDefaults(suiteName: "YOUR-DOMAIN-IDENTIFIER")!
+      // Use the App Group identifier you created in Step 1.
+      return UserDefaults(suiteName: "group.com.company.appname.xyz")!
     }
   }()
    
@@ -655,17 +656,17 @@ class RemoteStorage: NSObject {
 }
  
 - (NSUserDefaults *)defaults {
-  if (!self.defaults) {
+  if (!_defaults) {
     switch (self.storageType) {
       case StorageTypeStandard:
-        return [NSUserDefaults standardUserDefaults];
+        _defaults = [NSUserDefaults standardUserDefaults];
         break;
       case StorageTypeSuite:
-        return [[NSUserDefaults alloc] initWithSuiteName:@"YOUR-DOMAIN-IDENTIFIER"];
+        _defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.company.appname.xyz"];
+        break;
     }
-  } else {
-    return self.defaults;
   }
+  return _defaults;
 }
  
 - (NSString*)rawValueForKey:(RemoteStorageKey)remoteStorageKey {
@@ -704,14 +705,14 @@ extension UserAttribute: Codable {
      
     switch self {
     case .email(let email):
-      try values.encode(email, forKey: .email)
+      try values.encodeIfPresent(email, forKey: .email)
     }
   }
    
   init(from decoder: Decoder) throws {
     let values = try decoder.container(keyedBy: CodingKeys.self)
      
-    let email = try values.decode(String.self, forKey: .email)
+    let email = try values.decodeIfPresent(String.self, forKey: .email)
     self = .email(email)
   }
 }
@@ -770,18 +771,20 @@ extension Dictionary where Key == String, Value == Any {
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-@implementation NSDictionary (Helper)
- 
-- (id)initWithEventName:(NSString *)eventName properties:(NSDictionary *)properties {
-  self = [self init];
-  if (self) {
-    dict[@"event_name"] = eventName;
-     
-    for(id key in properties) {
+@implementation NSMutableDictionary (Helper)
+
++ (instancetype)dictionaryWithEventName:(NSString *)eventName
+                              properties:(NSDictionary *)properties {
+  NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+  dict[@"event_name"] = eventName;
+
+  if (properties) {
+    for (id key in properties) {
       dict[key] = properties[key];
     }
   }
-  return self;
+
+  return dict;
 }
  
 @end
