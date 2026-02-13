@@ -86,7 +86,7 @@ At this point, you will need to go back to Snowflake to complete the setup. Add 
 
 For additional information on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). If you want to rotate the keys at any point, Mozart Data can generate a new key pair and provide you with the new public key.
 
-```json
+```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 ```
 
