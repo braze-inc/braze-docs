@@ -192,6 +192,9 @@ $nav_toggle_border: #525256;
 		div.nav_item_row {
 			width: 100%;
 		}
+		div.nav-item {
+			width: 100%;
+		}
 		a.nav_toggle i {
 			width: 15px;
 			text-align: center;
@@ -250,6 +253,21 @@ $nav_toggle_border: #525256;
 			text-align: center;
 			line-height: 1;
 			font-size: 10px;
+		}
+	}
+	// Focus indicator for nav links — matches button.nav_toggle style
+	a.nav_link {
+		display: inline-flex;
+		align-items: center;
+		min-height: 28px;
+		width: 100%;
+		border-radius: 4px;
+		&:focus {
+			outline: 2px solid $braze-purple;
+			outline-offset: 2px;
+		}
+		&:focus:not(:focus-visible) {
+			outline: none;
 		}
 	}
 	// Consistent row height for leaf items — match parent row height (set by button.nav_toggle min-height)
@@ -348,6 +366,9 @@ $nav_toggle_border: #525256;
 			div.nav_item_row {
 				width: 100%;
 			}
+			div.nav-item {
+				width: 100%;
+			}
 			&.active_parent {
 					opacity: 1;
 					font-family: $braze-medium;
@@ -358,7 +379,7 @@ $nav_toggle_border: #525256;
 				&.active {
 					color: $nav_active_color;
 					font-family: $braze-medium;
-					width: fit-content;
+					width: 100%;
 					opacity: 1;
 					div.nav_block {
 						display: inline-block;
