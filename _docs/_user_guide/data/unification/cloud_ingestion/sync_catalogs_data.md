@@ -198,6 +198,16 @@ Set up your source files in S3 by providing JSON or CSV files. Keep in mind:
 
 - Files cannot include an `UPDATED_AT` column  
 - You can include an optional `DELETED` field to mark items for removal 
+- Complete S3 setup requires an S3 bucket, SQS queue, and IAM role/policy configuration
+- Braze only processes files uploaded after the sync is created; re-upload existing files you want to ingest
+
+For the full S3 setup flow, see [File storage integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/), especially:
+
+- [Setting up Cloud Data Ingestion in AWS]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/#setting-up-cloud-data-ingestion-in-aws)
+- [Setting up Cloud Data Ingestion in Braze]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/#setting-up-cloud-data-ingestion-in-braze)
+- [Troubleshooting]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/#troubleshooting)
+
+For common AWS-side notification and permission issues, refer to [Granting permissions to publish event notification messages to a destination](https://docs.aws.amazon.com/AmazonS3/latest/userguide/grant-destinations-permissions-to-s3.html).
 
 {% subtabs %}
 {% subtab JSON %}
@@ -216,7 +226,7 @@ ID,PAYLOAD,DELETED
 {% endsubtab %}
 {% endsubtabs %}
 
-For setup details, see [File storage integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
+For setup details and additional file examples, see [File storage integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
 
 {% endtab %}
 {% endtabs %}
