@@ -31,6 +31,10 @@ La integración de Braze y Google Cloud Storage te permite transmitir datos de C
 
 Para integrarse con Google Cloud Storage, debe configurar las credenciales adecuadas que permitan a Braze obtener información sobre los buckets de almacenamiento en los que se está escribiendo (`storage.buckets.get`) y crear objetos dentro de ese bucket (`storage.objects.create`). 
 
+{% alert note %}
+Workload Identity Federation (WIF) no es compatible como método de autenticación para Currents. Debes utilizar una cuenta de servicio con una clave privada JSON.
+{% endalert %}
+
 Para ello, siga las siguientes instrucciones, que le guiarán a través de la creación de un rol y una cuenta de servicio que generarán una clave privada para utilizarla en su integración de Currents.
 
 ### Paso 1: Crear rol
@@ -77,7 +81,7 @@ En la parte inferior de la página, utilice el botón **Crear clave** para crear
 
 En Braze, ve a **Corrientes** > **\+ Crear corriente** > **Exportación de datos de Google Cloud Storage** e indica tu nombre de integración y tu correo electrónico de contacto.
 
-A continuación, sube tu clave privada JSON en **Credenciales JSON** de CGS e indica tu nombre de contenedor de CGS y el prefijo de CGS (opcional). 
+A continuación, sube tu clave privada JSON en **Credenciales JSON GCS** e indica tu nombre de contenedor GCS y el prefijo GCS (opcional). Ten en cuenta que debes generar estas credenciales a través de Google Cloud Platform, como se describe en los pasos anteriores.
 
 {% alert important %}
 Es importante que mantengas actualizado tu archivo de credenciales; si las credenciales de tu conector caducan, el conector dejará de enviar eventos. Si esto persiste durante más de **5 días**, los eventos del conector se eliminarán y los datos se perderán permanentemente.
@@ -115,7 +119,7 @@ Para verificar estos permisos en el panel de Braze, ve a la página **Google Clo
 
 ## Comportamiento de la exportación
 
-Los usuarios que hayan integrado una solución de almacenamiento de datos en la nube e intenten exportar API, informes de cuadros de mando o informes CSV experimentarán lo siguiente:
+Los usuarios que hayan integrado una solución de almacenamiento en la nube y estén intentando exportar API, informes de panel o informes CSV experimentarán lo siguiente:
 
 - Todas las exportaciones de la API no devolverán una URL de descarga en el cuerpo de la respuesta y deberán recuperarse a través del almacenamiento de datos.
 - Todos los informes del panel y los informes CSV se enviarán al correo electrónico del usuario para su descarga (sin necesidad de permisos de almacenamiento) y se realizará una copia de seguridad en Almacenamiento de datos.
