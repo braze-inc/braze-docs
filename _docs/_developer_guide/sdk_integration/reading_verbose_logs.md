@@ -9,7 +9,7 @@ description: "Learn how to read and interpret verbose log output from the Braze 
 
 > This page explains how to interpret the verbose log output from the Braze SDK. For each messaging channel, you'll find the key log entries to look for, what they mean, and common issues to watch for.
 
-Before you start, make sure you've [enabled verbose logging]({{site.baseurl}}/developer_guide/verbose_logging) and know how to collect logs on your platform.
+Before you start, make sure you've [enabled verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging) and know how to collect logs on your platform.
 
 ## Sessions
 
