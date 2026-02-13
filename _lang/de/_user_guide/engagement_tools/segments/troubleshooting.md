@@ -1,6 +1,6 @@
 ---
 nav_title: Fehlersuche
-article_title: Segmente zur Fehlerbehebung
+article_title: Fehlerbehebung Segmente
 page_order: 12
 page_type: reference
 tool: 
@@ -8,13 +8,15 @@ tool:
 description: "Dieser Referenzartikel behandelt die Schritte zur Fehlerbehebung und die Überlegungen, die Sie bei der Verwendung von Segmenten beachten müssen."
 ---
 
-# Segmente zur Fehlerbehebung
+# Fehlerbehebung für Segmente
 
 ## Fehler
 
 ### Zielgruppe zu komplex zum Starten
 
 Dieser seltene Fehler tritt auf, wenn Ihre Zielgruppe zu viele Regex-Werte, zu lange Regex-Werte, zu detaillierte Filter (wie "ist eine von 30.000 Postleitzahlen") oder zu viele Filter enthält. Dazu gehören alle Filter in einer Kampagne oder Canvas-Zielgruppe, unabhängig davon, ob sich die Filter innerhalb der referenzierten Segmente befinden oder als Filter im Schritt **Targeting** hinzugefügt wurden.
+
+![Fehler für eine Zielgruppe, die die Komplexitätsschwelle erreicht.]({% image_buster /assets/img/segment/target_audience_too_complex_error.png %})
 
 Wenn Sie einer Kampagne oder einem Canvas Segmente hinzufügen, werden diese Filter in Braze in Abfragen übersetzt (die Anzahl der Zeichen dieser Abfragen entspricht nicht 1:1 der Anzahl der Zeichen, die ein Nutzer:innen des Dashboards sieht). Wenn Braze eine Kampagne oder ein Canvas versendet, führen wir eine Abfrage durch, die alle Filter der Zielgruppen kombiniert. Wir wenden einen Schwellenwert an, der die Anzahl der Zeichen in der resultierenden Suchanfrage für eine Zielgruppe begrenzt. Für eine bestimmte Kampagne oder ein bestimmtes Canvas summieren wir die Anzahl der Zeichen über alle referenzierten Segmente, einschließlich aller zusätzlichen Filter. Für ein bestimmtes Segment summieren wir die Anzahl der Zeichen über alle Filter und Filterwerte hinweg.
 
@@ -35,9 +37,16 @@ Wir haben im April 2025 begonnen, die Anzahl der Zeichen zu begrenzen. Für Kamp
 
 Dieses Banner wird oben in einer Kampagne oder Canvas-Liste angezeigt, wenn aktive oder gestoppte Kampagnen oder Canvase Zielgruppen haben, die den Schwellenwert für die Komplexität der Zielgruppe überschreiten. Wählen Sie das Banner aus, um die Liste auf die Kampagnen oder Canvase zu filtern, die den Schwellenwert überschreiten, und befolgen Sie dann die Schritte zur Fehlerbehebung unter [Zielgruppe ist zu komplex zum Einführen](#target-audience-is-too-complex-to-launch).
 
-### Filter überschreitet 10.000 Zeichen oder ist zu lang zum Speichern
+![Fehlerbanner, das besagt, dass 4 aktive oder gestoppte Canvase den Schwellenwert für die Komplexität der Zielgruppe überschreiten.]({% image_buster /assets/img/segment/audience_complexity_threshold_banner.png %})
 
-Braze begrenzt die Filter für einzelne Segmente auf maximal 10.000 Zeichen. Eine Warnung wird angezeigt, wenn ein einzelner Filter 10.000 Zeichen überschreitet, unabhängig davon, ob der Filter innerhalb eines Segments oder direkt zu einer Kampagne oder einem Canvas hinzugefügt wurde. 
+### Filter überschreitet 10.000 Bytes oder ist zu lang zum Speichern
+
+Braze begrenzt einzelne Segmente auf maximal 10.000 Bytes, was 10.000 englischen Zeichen oder 3.333 japanischen Zeichen entspricht. Eine Warnung wird angezeigt, wenn ein einzelner Filter 10.000 Bytes überschreitet, unabhängig davon, ob der Filter innerhalb eines Segments oder direkt zu einer Kampagne oder einem Canvas hinzugefügt wurde. 
+
+![Fehlerbanner für einen Filter mit einem Wert, der 10.000 Zeichen überschreitet.]({% image_buster /assets/img/segment/filter_error.png %})
+
+![Fehler bei einem angepassten Filter für ein Attribut, `menu_item`,, dessen Attributwert 10.000 Zeichen überschreitet.]({% image_buster /assets/img/segment/segment_filter_error.png %})
+
 
 Dieser Fehler tritt sehr selten auf, aber wenn er auftritt, dann in der Regel bei Regex-Filtern, die eine Liste von Nutzer:innen oder E-Mail-Adressen zusammenstellen. In diesem Fall können Sie die folgenden Schritte ausführen, um die Filter in eine CSV-Datei zu konvertieren:
 

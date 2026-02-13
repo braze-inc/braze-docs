@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Crear Centro de Preferencias"
-article_title: "POST: Crear Centro de Preferencias"
+nav_title: "PUBLICAR: Crear un centro de preferencias"
+article_title: "PUBLICAR: Crear Centro de Preferencias"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## Parámetros de la solicitud
@@ -81,7 +81,7 @@ Consulta las siguientes etiquetas de Liquid que puedes incluir en tu HTML para g
 
 | Liquid | Descripción |
 | --------- | ---------|
-|`{{subscribed_state.${email_global}}}`| Obtiene el estado global de suscripción al correo electrónico del usuario (como "opted_in", "subscribed" o "unsubscribed"). |
+|`{{subscribed_state.${email_global}}}`| Obtiene el estado global de suscripción al correo electrónico del usuario (como "opted_in", "suscrito", o "cancelado". |
 |`{{subscribed_state.${<subscription_group_id>}}}`| Obtiene el estado de suscripción del grupo de suscripción especificado para el usuario (como "suscrito" o "cancelado"). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -89,7 +89,7 @@ Consulta las siguientes etiquetas de Liquid que puedes incluir en tu HTML para g
 
 | Liquid | Descripción |
 | --------- | ---------|
-|`{% form_field_name :email_global_state %}`| Indica que un elemento de entrada de formulario específico corresponde al estado de suscripción global al correo electrónico del usuario. El estado de selección del usuario debe ser "opted_in", "subscribed" o "unsubscribed" cuando se envía el formulario con datos de selección para el estado de suscripción global al correo electrónico. Si es una casilla de verificación, el usuario será "opted_in" o "unsubscribed". Para una entrada oculta, también será válido el estado "suscrito". |
+|`{% form_field_name :email_global_state %}`| Indica que un elemento de entrada de formulario específico corresponde al estado de suscripción global al correo electrónico del usuario. El estado de selección del usuario debe ser "opted_in", "suscrito", o "dado de baja" cuando se envía el formulario con datos de selección para el estado global suscrito al correo electrónico. Si es una casilla de verificación, el usuario se "opted_in" o "cancelará suscripción". Para una entrada oculta, también será válido el estado "suscrito". |
 |`{% form_field_name :subscription_group <subscription_group_id> %}`| Indica que un elemento de entrada de formulario concreto corresponde a un grupo de suscripción determinado. El estado de selección del usuario debe ser "suscrito" o "cancelado" cuando el formulario se envía con datos de selección de un grupo de suscripción concreto. |
 |`{{preference_center_submit_url}}`| Genera la URL para el envío del formulario. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

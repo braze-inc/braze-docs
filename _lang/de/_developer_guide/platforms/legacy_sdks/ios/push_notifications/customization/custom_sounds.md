@@ -1,5 +1,5 @@
 ---
-nav_title: Benutzerdefinierte Sounds
+nav_title: Benutzerdefinierte Klänge
 article_title: Benutzerdefinierte Push-Benachrichtigungstöne für iOS
 platform: iOS
 page_order: 3

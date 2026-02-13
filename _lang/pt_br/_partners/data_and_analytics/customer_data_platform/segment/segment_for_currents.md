@@ -32,7 +32,7 @@ A integração do Braze com o Segment permite que você utilize o Braze Currents
 No dashboard da Segment, selecione sua fonte da Segment. Em seguida, acesse **Settings > API keys** (Configurações > Chaves de API). Aqui você encontrará a **chave de gravação de segmento**.
 
 {% alert warning %}
-É importante manter sua chave de gravação de segmento atualizada. Se as credenciais do conector expirarem, ele deixará de enviar eventos. Se isso persistir por mais de **48 horas**, os eventos do conector serão descartados e os dados serão perdidos permanentemente.
+É importante manter sua chave de gravação de segmento atualizada. Se as credenciais do conector expirarem, ele deixará de enviar eventos. Se isso persistir por mais de **5 dias**, os eventos do conector serão descartados e os dados serão perdidos permanentemente.
 {% endalert %}
 
 ### Etapa 2: Criar um novo conector Currents
@@ -41,19 +41,19 @@ No dashboard da Segment, selecione sua fonte da Segment. Em seguida, acesse **Se
 2. Clique em **\+ Criar nova integração com o Currents** > **Exportar dados do segmento**.
 3. Em seguida, forneça nome de integração, e-mail de contato, chave de gravação do Segment e região do Segment.
 
-![A página Segment Currents na Braze. Aqui, você pode encontrar campos para o nome da integração, o e-mail do contato, a região do segmento e a chave de API.]({% image_buster /assets/img/segment/segment_currents_integration_config.png %})
+![A página Segment Currents na Braze. Aqui você pode encontrar campos para nome da integração, e-mail do contato, região do segmento e chave de API.]({% image_buster /assets/img/segment/segment_currents_integration_config.png %})
 
 ### Etapa 3: Exportar eventos de engajamento com mensagens
 
-Em seguida, selecione os eventos de engajamento com mensagens que você gostaria de exportar. Consulte a tabela de eventos e propriedades de exportação listada a seguir. Todos os eventos enviados ao Segment incluirão o endereço `external_user_id` do usuário como `userId` e o endereço `braze_id` do usuário como `anonymousId`.
+Em seguida, selecione os eventos de engajamento com mensagens que você gostaria de exportar. Consulte a tabela de eventos e propriedades de exportação listada a seguir. Todos os eventos enviados para o Segment incluirão o `external_user_id` do usuário como o `userId` e o `braze_id` do usuário como o `anonymousId`.
 
-Lembre-se de que o Braze só envia dados de usuários sem um `external_user_id` se a opção **Include events from anonymous users (Incluir eventos de usuários anônimos** ) estiver marcada.
+Tenha em mente que o Braze só envia dados de eventos para usuários sem um `external_user_id` se **Incluir eventos de usuários anônimos** estiver marcado.
 
 {% alert important %}
-A exportação anônima de usuários está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
+A exportação de usuários anônimos está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
 {% endalert %}
 
-![Lista de todos os eventos de engajamento com mensagens disponíveis na página Segment Currents no Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
+![Lista de todos os eventos de engajamento com mensagens disponíveis na página Segment Currents na Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
 
 Por fim, selecione **Abrir Current**.
 

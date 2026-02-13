@@ -28,7 +28,7 @@ Wenn Sie Ihre Zielgruppe für die Vorhersage erstellen, um die Art der Nutzung, 
 
 "Nicht genug Abgewanderte in der Vergangenheit, um eine zuverlässige Prognose zu erstellen"
 
-![Prognose Daten Anforderungen zeigen 31 Abgewanderte in der Vergangenheit (erfüllt die Anforderung) und 0 Nicht-Abgewanderte in der Vergangenheit (unter dem Minimum). Eine Nachricht mit einer Warnung weist darauf hin, dass nicht genügend Abgewanderte die Prognose erstellen.]({% image_buster /assets/img/churn/audience_size_error.png %})
+![Die Daten für die Prognosen zeigen 31 Abgewanderte in der Vergangenheit (erfüllt die Anforderungen) und 0 Nicht-Abgewanderte in der Vergangenheit (unter dem Minimum). Eine Nachricht mit einer Warnung weist darauf hin, dass nicht genügend Abgewanderte die Prognose erstellen.]({% image_buster /assets/img/churn/audience_size_error.png %})
 
 Wenn Ihre Definition der Zielgruppe für die Vorhersage zu eng gefasst ist, können Sie möglicherweise nicht mit einem ausreichend großen Pool an historischen und aktiven Nutzern arbeiten. Um dies zu beheben, müssen Sie entweder die Anzahl der Tage und die Art der Attribute ändern, die in dieser Definition verwendet werden, oder die Aktionen ändern, die die Abwanderung definieren, oder beides. 
 

@@ -38,7 +38,7 @@ Os recursos para Banners incluem:
 
 Os posicionamentos de banner são locais específicos em seu app ou site [criados com o SDK do Braze]({{site.baseurl}}/developer_guide/banners/placements/) que designam onde os banners podem aparecer.
 
-Os locais comuns incluem a parte superior de sua página inicial, páginas de detalhes de produtos e fluxos de checkout. Depois que os canais são criados, os banners podem ser [atribuídos em sua campanha de banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/).
+Os locais comuns incluem a parte superior de sua página inicial, páginas de detalhes de produtos e fluxos de checkout. Depois que os canais são criados, os banners podem ser [atribuídos em sua campanha de banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/).
 
 Não há limite fixo para o número de colocações que podem ser criadas por espaço de trabalho, e você pode criar quantas IDs de colocação forem necessárias para sua experiência. Cada colocação deve ser exclusiva em um espaço de trabalho. Um único ID de posicionamento pode ser referenciado por até 10 campanhas ativas ao mesmo tempo.
 
@@ -48,9 +48,9 @@ Evite modificar os IDs de posicionamento após o lançamento de uma campanha de 
 
 ### Prioridade do banner {#priority}
 
-Quando várias campanhas fazem referência ao mesmo ID de posicionamento, os banners são exibidos em ordem de prioridade: alta, média ou baixa. Por padrão, os Banners recém-criados são definidos como médios, mas você pode [definir manualmente a prioridade]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#set-priority) ao criar ou editar sua campanha de Banner. 
+Quando várias mensagens de banner fazem referência ao mesmo ID de posicionamento, os banners são exibidos em ordem de prioridade: alta, média ou baixa. Por padrão, os Banners são definidos como médios, mas você pode [definir manualmente a prioridade]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#set-priority) ao criar ou editar sua campanha de Banner. 
 
-Se vários Banners estiverem definidos com a mesma prioridade, o Banner mais novo para o qual o usuário é elegível será exibido primeiro.
+Se vários Banners forem definidos com a mesma prioridade, o Banner mais novo para o qual o usuário é elegível será exibido primeiro.
 
 ### Solicitações de colocação {#requests}
 
@@ -67,7 +67,7 @@ Os iframes permitem atualizações de conteúdo dinâmicas e personalizadas que 
 Veja a seguir o que você precisa saber sobre as dimensões e o tamanho do Banner:
 
 - Embora o criador permita que você faça uma prévia dos banners em diferentes dimensões, essas informações não são salvas nem enviadas ao SDK.
-- O HTML ocupará toda a largura do contêiner em que for renderizado.
+- O HTML ocupa a largura total do contêiner em que é renderizado.
 - Recomendamos criar um elemento de dimensão fixa e testar essas dimensões no criador.
 
 ## Limitações
@@ -76,7 +76,6 @@ Cada espaço de trabalho pode suportar até 200 campanhas ativas do Banner. Se e
 
 Além disso, as mensagens de banner não são compatíveis com os seguintes recursos:
 
-- Integração do Canva
 - Campanhas acionadas por API e baseadas em ações
 - Conteúdo conectado
 - Códigos promocionais
@@ -89,8 +88,8 @@ Quer ajudar a priorizar o que está por vir? Entre em contato com [banners-feedb
 
 ## Próximos passos
 
-Agora que você já sabe sobre Banners, está pronto para as próximas etapas:
+Agora que você já conhece os Banners, está pronto para as próximas etapas:
 
 1. [Criação de posicionamentos de banner em seu app ou site]({{site.baseurl}}/developer_guide/banners/placements/)
-2. [Criação de campanhas de banner no Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/)
+2. [Criação de campanhas de banner no Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/)
 3. [Tutorial: Exibição de um banner por ID de posicionamento]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)

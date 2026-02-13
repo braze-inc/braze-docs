@@ -62,7 +62,7 @@ Um höhere Bewertungen zu erhalten, bitten Sie Ihre Power-User, Ihre App im App 
 - Hat diese Apps in den letzten 14 Tagen mehr als 10 Mal verwendet
 - Hat mehr als 50 Dollar ausgegeben
 
-\![Ein Beispiel für ein Segment, das auf leistungsstarke Nutzer:innen einer App abzielt.]({% image_buster /assets/img_archive/ratings_power_users.png %})
+![Ein Beispiel für ein Segment, das auf leistungsstarke Nutzer:innen einer App abzielt.]({% image_buster /assets/img_archive/ratings_power_users.png %})
 
 Der Besuch des App Stores kostet Ihre Benutzer Zeit. Um die Wahrscheinlichkeit zu erhöhen, dass sie sich die Mühe machen, bitten Sie sie um eine Bewertung oder Rezension, nachdem sie gerade eine positive Erfahrung mit Ihrer App gemacht haben. Fragen Sie sie z.B., nachdem sie ein Spiellevel besiegt oder einen Einkauf mit einem Rabattcode getätigt haben. In unserem Artikel über die [Zustimmung zu Daten]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) finden Sie weitere Informationen darüber, wie Sie sicherstellen können, dass Ihre Anfrage mit den Erwartungen der Benutzer übereinstimmt.
 

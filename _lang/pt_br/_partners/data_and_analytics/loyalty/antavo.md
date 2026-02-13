@@ -15,7 +15,7 @@ _Essa integração é mantida pela Antavo._
 
 ## Sobre a integração
 
-A integração entre a Antavo e a Braze permite que você use dados relacionados ao programa de fidelidade para criar campanhas personalizadas e aprimorar a experiência do cliente. O Antavo oferece suporte à sincronização de dados de fidelidade entre as duas plataformas - essa é uma sincronização de dados unidirecional apenas, do Antavo para o Braze. A integração oferece suporte ao campo `external_id` Braze, que o Antavo usa para sincronizar o ID do membro de fidelidade.
+A integração entre a Antavo e a Braze permite que você use dados relacionados ao programa de fidelidade para criar campanhas personalizadas e aprimorar a experiência do cliente. O Antavo oferece suporte à sincronização de dados de fidelidade entre as duas plataformas - essa é uma sincronização de dados unidirecional apenas, do Antavo para o Braze. A integração oferece suporte ao campo `external_id` Braze, que a Antavo usa para sincronizar o ID do membro de fidelidade.
 
 ## Pré-requisitos
 
@@ -41,7 +41,7 @@ Forneça as seguintes credenciais:
 
 Depois de inserir as credenciais, clique em **Connect (Conectar**).
 
-![Conecte a tela do Braze no Antavo com o URL da instância, o token da API e o identificador do app.]({% image_buster /assets/img/antavo/connect_braze.png %})
+![Conecte a tela da Braze na Antavo com o URL da instância, o token da API e o identificador do app.]({% image_buster /assets/img/antavo/connect_braze.png %})
 
 ### Etapa 2: Configurar o mapeamento de campos
 
@@ -64,10 +64,10 @@ Você pode encontrar sua lista de atributos personalizados no Braze em **Data Se
 
 Quando qualquer valor dos campos configurados é alterado no Antavo, não apenas a sincronização desse valor único é disparada, mas todos os campos adicionados ao mapeamento de campos são incluídos na solicitação.
 
-![Página Sync Fields no Antavo.]({% image_buster /assets/img/antavo/data_field_mapping.png %})
+![Página de campos de sincronização na Antavo.]({% image_buster /assets/img/antavo/data_field_mapping.png %})
 
 {% alert important %}
-Para minimizar o consumo de pontos de dados, recomendamos mapear apenas os campos que serão acionados na Braze.
+Para minimizar o uso de pontos de dados, recomendamos mapear apenas os campos que serão acionados no Braze.
 {% endalert %}
 
 #### Tipos de dados suportados

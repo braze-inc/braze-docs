@@ -10,14 +10,14 @@ page_order: 4
 > 랜딩 페이지에서 Liquid 개인화를 사용하여 사용자 프로필 데이터로 콘텐츠를 동적으로 맞춤화할 수 있습니다. 예를 들어 여러 개의 정적 랜딩 페이지를 관리하지 않고도 다양한 사용자 속성에 따라 헤드라인을 개인화할 수 있습니다.
 
 {% alert important %}
-랜딩 페이지에 대한 Liquid 개인화는 Pro 티어의 랜딩 페이지에서만 사용할 수 있습니다. 현재 [연결된 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) 및 [프로모션 코드는]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) 랜딩 페이지에서 Liquid 개인화를 지원하지 않습니다.
+랜딩 페이지에 대한 Liquid 개인화는 Pro 티어의 랜딩 페이지에서만 사용할 수 있습니다. 현재 [연결된 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), [다국어]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings) 및 [프로모션 코드는]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) 랜딩 페이지에서 Liquid 개인화를 지원하지 않습니다.
 {% endalert %}
 
 ## Liquid 삽입
 
 드래그 앤 드롭 편집기에서는 편집기와 오른쪽 패널의 페이지 또는 블록 설정 모두에서 Liquid 개인화를 삽입할 수 있습니다. Liquid 구현에 대한 지침은 전용 [Liquid 설명서를]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1) 참조하세요.
 
-Liquid 개인화 기능이 추가된 랜딩 페이지 편집기.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
+![Liquid 개인화 기능이 추가된 랜딩 페이지 편집기.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 
 ## 미리 보기 및 테스트
 
@@ -40,6 +40,13 @@ Liquid 개인화 기능이 추가된 랜딩 페이지 편집기.]({% image_buste
 
 - 대규모 데이터 세트를 지속적으로 반복하거나 참조하지 않습니다.
 - Liquid 블록 내에서 광범위한 수학적 또는 조건 로직에 의존하지 않습니다.
+
+### 식별자 및 익명 사용자를 위한 Liquid 사용 
+
+Liquid는 식별자 및 익명 방문자 모두를 위해 랜딩 페이지 경험을 커스텀할 수 있습니다.
+
+- **식별된 사용자:** Braze 메시지에서 랜딩 페이지로 연결하고 [랜딩 페이지 Liquid 태그를]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/#using-landing-page-liquid-tags) 포함하세요. 이렇게 하면 사용자를 Braze 프로필과 연결하고 페이지 경험을 개인화할 수 있습니다.
+- **익명 방문자:** 임의의 숫자나 시간대별 인사말과 같이 프로필 기반이 아닌 상황별 콘텐츠에는 Liquid를 사용하세요.
 
 ## 대체 페이지
 

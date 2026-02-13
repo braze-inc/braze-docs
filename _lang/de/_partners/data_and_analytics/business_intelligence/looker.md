@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Lernangebote]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
+# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"} Looker
 
 > [Looker](https://looker.com/), eine Business-Intelligence- und Big-Data-Analytics-Plattform, ermöglicht es Ihnen, Realtime Business Analytics nahtlos zu erforschen, zu analysieren und zu teilen.
 
@@ -145,7 +145,7 @@ Authorization: Bearer [API_KEY]
 
 Um in Braze ein Segment dieser markierten Nutzer:innen zu erstellen, navigieren Sie zu **Segmente** unter **Engagement**, benennen Sie Ihr Segment und wählen Sie **Looker_Export** als Filter. Als nächstes verwenden Sie die Option "Wert einschließen" und geben das angepasste Attribut-Flag an, das Sie in Looker zugewiesen haben.
 
-![Im Braze Segment Builder wird der Filter "looker_export" auf "includes_value" und "Looker" gesetzt.]({% image_buster /assets/img/braze_segments.png %})
+![Im Braze Segment Builder ist der Filter "looker_export" auf "includes_value" und "Looker" eingestellt.]({% image_buster /assets/img/braze_segments.png %})
 
 Einmal gespeichert, können Sie dieses Segment bei der Erstellung von Canvas oder Kampagnen im Schritt Targeting Nutzer:innen referenzieren.
 

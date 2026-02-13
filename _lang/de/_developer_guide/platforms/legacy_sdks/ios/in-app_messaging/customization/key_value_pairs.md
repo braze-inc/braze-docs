@@ -1,5 +1,5 @@
 ---
-nav_title: Schlüssel-Werte-Paare
+nav_title: Schlüssel-Wert-Paare
 article_title: In-App Nachrichten Schlüssel-Wert-Paare für iOS
 platform: iOS
 page_order: 30

@@ -8,7 +8,7 @@ description: "Aprende todo sobre las herramientas de recomendaciones de artícul
 
 # Recomendaciones
 
-> Intensifica tu juego de recomendaciones con Braze creando una herramienta de recomendaciones que pueda sugerir a tus usuarios artículos y contenidos que realmente desean. Desde personalizar experiencias con IA hasta construir tus propios motores con Liquid o Contenido conectado, encontrarás todo lo que necesitas para que cada recomendación cuente.
+> Mejora tus recomendaciones con Braze creando una herramienta de recomendaciones que pueda sugerir a tus usuarios artículos y contenidos que realmente desean. Desde personalizar experiencias con IA hasta construir tus propios motores con Liquid o Contenido conectado, encontrarás todo lo que necesitas para que cada recomendación cuente.
 
 ## Requisitos previos
 
@@ -20,7 +20,7 @@ Antes de que puedas crear o utilizar recomendaciones de artículos en Braze, ten
 
 Como parte de la característica [de recomendaciones de artículos de la]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/) IA, las recomendaciones personalizadas de la IA aprovechan el aprendizaje profundo para predecir lo que más probablemente interesará a tus usuarios a continuación, basándose en lo que les ha interesado en el pasado. Este método proporciona un sistema de recomendación dinámico y a medida que se adapta al comportamiento del usuario.
 
-Las recomendaciones personalizadas de IA utilizan los datos de los últimos 6 meses de interacción con los artículos, como compras o eventos personalizados, para construir el modelo de recomendación. Para los usuarios sin datos suficientes para una lista personalizada, los elementos más populares sirven como alternativa para que tus usuarios sigan recibiendo sugerencias relevantes.
+Las recomendaciones personalizadas de IA utilizan los datos de los últimos 6 meses de interacción con los artículos, como compras o eventos personalizados, para construir el modelo de recomendación. Para los usuarios sin datos suficientes para una lista personalizada, los elementos más populares sirven como alternativa, de modo que tus usuarios siguen recibiendo sugerencias relevantes.
 
 Con las recomendaciones de artículos de IA, también puedes filtrar aún más los artículos disponibles con
 [selecciones]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/). Sin embargo, las selecciones con Liquid no pueden utilizarse en las recomendaciones de la IA, así que tenlo en cuenta cuando construyas las selecciones de tu catálogo.
@@ -29,7 +29,7 @@ Con las recomendaciones de artículos de IA, también puedes filtrar aún más l
 Las recomendaciones personalizadas con IA funcionan mejor con cientos o miles de artículos y, normalmente, al menos 30.000 usuarios con datos de compra o interacción. Esto es sólo una guía aproximada y puede variar. Los otros tipos de recomendación pueden funcionar con menos datos.
 {% endalert %}
 
-#### Casos de uso
+#### Ejemplos
 
 Según los datos de interacción que se estén siguiendo, los casos de uso de este modelo podrían incluir:
 
@@ -38,12 +38,12 @@ Según los datos de interacción que se estén siguiendo, los casos de uso de es
 Predecir y recomendar los artículos que un usuario tiene más probabilidades de comprar a continuación, basándose en eventos de compra o eventos personalizados relacionados con las compras. Por ejemplo:
 
 - Un sitio de viajes podría sugerir paquetes de vacaciones, vuelos o estancias en hoteles basándose en el historial de navegación y las reservas anteriores de un usuario, anticipándose a su próximo destino de viaje y facilitándole la planificación del mismo.
-- Una plataforma de streaming puede analizar los hábitos de visionado para recomendar los programas o películas que un usuario tiene más probabilidades de ver a continuación, manteniéndolo enganchado y reduciendo las tasas de abandono.
+- Una plataforma de streaming puede analizar los hábitos de visionado para recomendar programas o películas que un usuario tiene más probabilidades de ver a continuación, manteniéndolo enganchado y reduciendo las tasas de abandono.
 
 {% details Requirements %}
-- Recomendaciones sobre el tema AI
+- Recomendaciones de artículos de AI
 - Catálogo de elementos relevantes
-- Un método de seguimiento de compras, ya sea un objeto de compra o un evento personalizado
+- Un método de seguimiento de compras, ya sea de un objeto de compra o de un evento personalizado
 {% enddetails %}
 
 {% details Setting it up %}
@@ -60,9 +60,9 @@ Predecir y recomendar los artículos que un usuario tiene más probabilidades de
 
 ### Artículo más popular {#most-popular}
 
-El modelo de recomendación "Más populares" presenta los elementos con los que los usuarios tienen más interacción.
+El modelo de recomendación "Más populares" presenta los elementos con los que más interactúan los usuarios.
 
-#### Casos de uso
+#### Ejemplos
 
 Basándose en los datos de interacción que se están siguiendo, los casos de uso de este modelo podrían incluir la recomendación:
 
@@ -71,7 +71,7 @@ Basándose en los datos de interacción que se están siguiendo, los casos de us
 Anima a los usuarios a explorar los artículos más populares de tu catálogo en función de sus compras. Para asegurarte de que sólo aparece contenido relevante, te recomendamos filtrar con una selección. Por ejemplo, un servicio de entrega de comida podría destacar los platos o restaurantes mejor valorados dentro de la zona de un usuario, basándose en la popularidad de los pedidos en toda la plataforma, fomentando la prueba y el descubrimiento.
 
 {% details Requirements %}
-- Recomendaciones sobre el tema AI
+- Recomendaciones de artículos de AI
 - Catálogo de elementos relevantes
 - Un objeto de compra o cualquier evento personalizado
 {% enddetails %}
@@ -91,7 +91,7 @@ Anima a los usuarios a explorar los artículos más populares de tu catálogo en
 Anima a los usuarios a explorar artículos que les han gustado recientemente o artículos que son populares, basándote en un evento personalizado para los "Me gusta". Por ejemplo, una aplicación de streaming de música podría crear listas de reproducción personalizadas o sugerir el lanzamiento de nuevos álbumes basándose en los géneros o artistas que le han gustado a un usuario en el pasado, mejorando la interacción del usuario y el tiempo que pasa en la aplicación.
 
 {% details Requirements %}
-- Recomendaciones sobre el tema AI
+- Recomendaciones de artículos de AI
 - Catálogo de elementos relevantes
 - Evento personalizado para likes
 {% enddetails %}
@@ -111,7 +111,7 @@ Anima a los usuarios a explorar artículos que les han gustado recientemente o a
 Destaca los artículos que han llamado la atención de tu base de usuarios a través de las visualizaciones para fomentar la interacción o las compras. Por ejemplo, un sitio web inmobiliario podría mostrar los anuncios más vistos en la zona de búsqueda de un usuario para destacar las propiedades que atraen mucha atención, lo que podría indicar buenas ofertas o ubicaciones deseables.
 
 {% details Requirements %}
-- Recomendaciones sobre el tema AI
+- Recomendaciones de artículos de AI
 - Catálogo de elementos relevantes
 - Evento personalizado para vistas
 {% enddetails %}
@@ -133,7 +133,7 @@ Muestra artículos añadidos a los carritos por muchos otros compradores, propor
 Por ejemplo, un comercio minorista de moda podría promocionar ropa y accesorios que estén de moda basándose en las adiciones populares a los carritos por parte de otros clientes. A continuación, pueden crear una sección dinámica de "Tendencias actuales" en su página de inicio y aplicación móvil, que se actualiza en tiempo real para animar a los compradores a comprar antes de que se agoten los artículos.
 
 {% details Requirements %}
-- Recomendaciones sobre el tema AI
+- Recomendaciones de artículos de AI
 - Catálogo de elementos relevantes
 - Evento personalizado para añadido a la cesta
 {% enddetails %}
@@ -154,7 +154,7 @@ Por ejemplo, un comercio minorista de moda podría promocionar ropa y accesorios
 
 El modelo de recomendación "Más reciente" presenta los elementos con los que más interactúan los usuarios. Utiliza este modelo para reducir el abandono animando a los usuarios que abandonan a volver a interactuar con contenidos relevantes.
 
-#### Casos de uso
+#### Ejemplos
 
 Basándose en los datos de interacción que se están siguiendo, los casos de uso de este modelo podrían incluir la recomendación:
 
@@ -163,7 +163,7 @@ Basándose en los datos de interacción que se están siguiendo, los casos de us
 Anima a los usuarios a volver a visitar los elementos en los que han hecho clic recientemente, basándote en un evento personalizado para los clics. Por ejemplo, un minorista de moda online podría crear una recomendación para enviar correos electrónicos de seguimiento o notificaciones push con prendas por las que un usuario ha mostrado interés al hacer clic en ellas, animándole a volver a visitar el artículo y realizar una compra.
 
 {% details Requirements %}
-- Recomendaciones sobre el tema AI
+- Recomendaciones de artículos de AI
 - Catálogo de elementos relevantes
 - Evento personalizado para los clics
 {% enddetails %}
@@ -183,7 +183,7 @@ Anima a los usuarios a volver a visitar los elementos en los que han hecho clic 
 Anima a los usuarios a explorar artículos que les han gustado recientemente o artículos que son populares, basándote en un evento personalizado para los "Me gusta". Por ejemplo, una aplicación de streaming de música podría crear listas de reproducción personalizadas o sugerir el lanzamiento de nuevos álbumes basándose en los géneros o artistas que le han gustado a un usuario en el pasado, mejorando la interacción del usuario y el tiempo que pasa en la aplicación.
 
 {% details Requirements %}
-- Recomendaciones sobre el tema AI
+- Recomendaciones de artículos de AI
 - Catálogo de elementos relevantes
 - Evento personalizado para likes
 {% enddetails %}
@@ -207,7 +207,7 @@ Promociona artículos con los que los usuarios hayan interactuado recientemente,
 - **Comercio minorista de mejoras para el hogar:** Después de que un cliente compre una herramienta eléctrica, un comercio minorista puede recomendarle accesorios relacionados o engranajes de seguridad basados en su compra reciente, mejorando la experiencia y la seguridad del usuario.
 
 {% details Requirements %}
-- Recomendaciones sobre el tema AI
+- Recomendaciones de artículos de AI
 - Catálogo de elementos relevantes
 - Un objeto de compra o cualquier evento personalizado para una interacción con los clientes
 {% enddetails %}
@@ -227,7 +227,7 @@ Promociona artículos con los que los usuarios hayan interactuado recientemente,
 Recuerda a los usuarios su interés por artículos que han añadido recientemente a su cesta, pero que aún no han comprado. Por ejemplo, un comercio minorista online podría enviar recordatorios u ofrecer descuentos por tiempo limitado en los artículos de su cesta, animando a los usuarios a completar sus compras antes de que caduquen las ofertas.
 {% details Requirements %}
 
-- Recomendaciones sobre el tema AI
+- Recomendaciones de artículos de AI
 - Catálogo de elementos relevantes
 - Evento personalizado para añadido a la cesta
 {% enddetails %}
@@ -250,7 +250,7 @@ El modelo de recomendación "Tendencias" presenta los artículos que han mostrad
 
 A diferencia del modelo "Más populares", que presenta artículos con una interacción alta y constante, este modelo presenta artículos que han experimentado un repunte en las interacciones. Puedes utilizarlo para recomendar productos prometedores y que actualmente están teniendo una mayor aceptación.
 
-#### Casos de uso
+#### Ejemplos
 
 Basándose en los datos de interacción que se están siguiendo, los casos de uso de este modelo podrían incluir la recomendación:
 
@@ -259,7 +259,7 @@ Basándose en los datos de interacción que se están siguiendo, los casos de us
 Destaca los artículos que tus usuarios han comprado recientemente con mayor frecuencia. Por ejemplo, una empresa de comercio electrónico podría recomendar artículos de temporada de los que los usuarios están empezando a abastecerse durante sus preparativos para la próxima temporada. 
 
 {% details Requirements %}
-- Recomendaciones sobre el tema AI
+- Recomendaciones de artículos de AI
 - Catálogo de elementos relevantes
 - Un método de seguimiento de las compras (ya sea un objeto de compra o un evento personalizado)
 {% enddetails %}
@@ -279,7 +279,7 @@ Destaca los artículos que tus usuarios han comprado recientemente con mayor fre
 Destaca los elementos que han gustado recientemente a tus usuarios con mayor frecuencia. Por ejemplo, una aplicación de música podría presentar artistas prometedores que hayan experimentado un reciente aumento de los "me gusta" de los usuarios.
 
 {% details Requirements %}
-- Recomendaciones sobre el tema AI
+- Recomendaciones de artículos de AI
 - Catálogo de elementos relevantes
 - Evento personalizado para el seguimiento de los Me gusta
 {% enddetails %}
@@ -298,11 +298,15 @@ Destaca los elementos que han gustado recientemente a tus usuarios con mayor fre
 
 ### Basado en selecciones {#selections-based}
 
-[Las selecciones]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) son grupos específicos de datos del catálogo. Cuando utilizas una selección, básicamente estás configurando filtros personalizados basados en columnas específicas de tu catálogo. Esto podría incluir filtros por marca, tamaño, ubicación, fecha de adición, etc. Te da el control sobre lo que recomiendas al permitirte definir los criterios que deben cumplir los elementos para mostrarse a los usuarios.
+[Las selecciones]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) son grupos específicos de datos del catálogo. Cuando utilizas una selección, básicamente estás configurando filtros personalizados basados en columnas específicas de tu catálogo. Esto podría incluir filtros por marca, tamaño, ubicación, fecha de adición, etc. Te da el control sobre lo que recomiendas, permitiéndote definir los criterios que deben cumplir los elementos para mostrarse a los usuarios.
 
 Los tres tipos anteriores implican la configuración y el entrenamiento de un modelo de recomendación en Braze. Aunque también puedes utilizar selecciones en esos modelos, también puedes llevar a cabo algunos casos de uso de recomendaciones sólo con selecciones de catálogo y personalización de Liquid.
 
-#### Casos de uso
+{% alert note %}
+Si utilizas selecciones, el campo de ordenación y cualquier límite no se utilizarán con las recomendaciones de elementos de la IA. Esto significa que si creas una selección con un campo de ordenación específico y limitas el número de elementos devueltos, esas restricciones no se utilizarán cuando se procesen las recomendaciones de elementos de IA.
+{% endalert %}
+
+#### Ejemplos
 
 Basándose en los datos de interacción que se están siguiendo, los casos de uso de este modelo podrían incluir la recomendación:
 
@@ -349,9 +353,9 @@ Por ejemplo, una librería online podría ofrecer la característica "Sorprénde
 
 Una herramienta de [recomendaciones basada en reglas]({{site.baseurl}}/rules_based_recommendations/) utiliza datos de usuario e información sobre productos para sugerir a los usuarios elementos relevantes dentro de los mensajes. Utiliza Liquid y los catálogos Braze o el Contenido conectado para personalizar dinámicamente el contenido en función del comportamiento y los atributos del usuario.
 
-Las recomendaciones basadas en reglas se basan en una lógica fija que debes establecer manualmente. Esto significa que tus recomendaciones no se ajustarán al historial de compras y gustos individuales de un usuario a menos que actualices la lógica, por lo que este método es mejor para recomendaciones que no necesiten actualizaciones frecuentes.
+Las recomendaciones basadas en reglas se basan en una lógica fija que debes establecer manualmente. Esto significa que tus recomendaciones no se ajustarán al historial de compras y gustos individuales de un usuario a menos que actualices la lógica; por tanto, este método es mejor para recomendaciones que no necesiten actualizaciones frecuentes.
 
-#### Casos de uso
+#### Ejemplos
 
 Según los datos de interacción que se estén siguiendo, los casos de uso de este modelo podrían incluir:
 
@@ -373,6 +377,8 @@ Esto ocurre en algunas condiciones específicas:
 - El modelo encuentra menos de 30 artículos que coinciden con tus criterios.
 - Los artículos relevantes ya no están disponibles o en stock.
 - Los artículos no cumplen los criterios de selección actuales, quizás debido a un cambio en las existencias o a las preferencias del usuario.
+
+Ten en cuenta que las recomendaciones funcionan de forma independiente y no tienen conocimiento de lo que recomiendan los otros modelos. Esto significa que cada sección puede tener elementos duplicados ya mostrados en otras secciones de recomendación de IA en el mismo correo electrónico.
 
 ### ¿Las recomendaciones existentes se entrenan semanalmente después de actualizar a Recomendaciones de Artículos Pro?
 

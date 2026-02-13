@@ -42,7 +42,7 @@ Braze puede incluirse en las siguientes áreas de tu extensión:
 
 No se requieren permisos adicionales en tu `manifest.json` cuando se integra el SDK de Braze (`braze.min.js`) como un archivo local incluido con tu extensión. 
 
-Sin embargo, si utilizas [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), o haces referencia al SDK de Braze desde una URL externa, o has establecido una Política de seguridad de contenidos estricta para tu extensión, tendrás que ajustar la opción [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) configuración en tu `manifest.json` para permitir fuentes de scripts remotas.
+Sin embargo, si utilizas [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), o haces referencia al SDK de Braze desde una URL externa, o has establecido una Política de Seguridad de Contenidos estricta para tu extensión, tendrás que ajustar la opción [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) configuración en tu `manifest.json` para permitir fuentes de scripts remotas.
 
 ## Cómo empezar
 
@@ -58,7 +58,7 @@ Una vez descargado, asegúrate de copiar el archivo `braze.min.js` en algún lug
 
 ### Extensiones emergentes {#popup}
 
-Para añadir Braze a una extensión emergente, haz referencia al archivo JavaScript local en tu `popup.html`, como harías en un sitio web normal. Si utilizas Google Tag Manager, puedes añadir Braze utilizando nuestras [plantillas de Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) en su lugar.
+Para añadir Braze a una extensión emergente, haz referencia al archivo JavaScript local en tu `popup.html`, como harías en un sitio web normal. Si utilizas Google Tag Manager, puedes añadir Braze utilizando nuestras [plantillas de Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) ].
 
 ```html
 <html>
@@ -110,5 +110,5 @@ Para más información sobre las opciones de inicialización admitidas, visita l
 
 ## Push
 
-Los diálogos emergentes de las extensiones no permiten las solicitudes push (no tienen la barra de URL en la navegación). Así que para registrarte y solicitar permiso push en el cuadro de diálogo emergente de una extensión, tendrás que utilizar una solución alternativa para el dominio, como se describe en [Dominio push alternativo]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain).
+Los diálogos emergentes de las extensiones no permiten las solicitudes push (no tienen la barra de URL en la navegación). Así que para registrarte y solicitar el permiso push en el cuadro de diálogo emergente de una extensión, tendrás que utilizar una solución alternativa para el dominio, como se describe en [Dominio push alternativo]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain).
 

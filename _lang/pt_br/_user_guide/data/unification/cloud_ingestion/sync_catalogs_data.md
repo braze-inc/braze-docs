@@ -1,6 +1,6 @@
 ---
 nav_title: Sincronizar e excluir dados do catálogo
-article_title: Sincronização e exclusão de dados do catálogo
+article_title: Sincronizar e Excluir Dados do Catálogo
 page_order: 4
 page_type: reference
 description: "Esta página fornece uma visão geral de como sincronizar os dados do catálogo."
@@ -13,20 +13,20 @@ description: "Esta página fornece uma visão geral de como sincronizar os dados
  
 ## Etapa 1: Criar um novo catálogo
 
-Antes de criar uma nova integração de ingestão de dados na nuvem (CDI) para [catálogos]({{site.baseurl}}/user_guide/data/activation/catalogs/), você precisa criar um novo catálogo ou identificar um catálogo existente que deseja usar para a integração. Há algumas maneiras de criar um novo catálogo, e qualquer uma delas funcionará para a integração com o CDI:
-- Carregar um [CSV]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#method-1-upload-csv)
-- Crie um catálogo no [painel de controle do Braze]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#method-2-create-in-browser) ou durante a configuração do CDI.
-- Crie um catálogo usando o [ponto de extremidade Criar catálogo]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)
+Antes de criar uma nova integração de ingestão de dados na nuvem (CDI) para [catálogos]({{site.baseurl}}/user_guide/data/activation/catalogs/), você precisa criar um novo catálogo ou identificar um catálogo existente que deseja usar para a integração. Existem algumas maneiras de criar um novo catálogo e qualquer uma delas funcionará para a integração CDI:
+- Faça upload de um [CSV]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#method-1-upload-csv)
+- Crie um catálogo no [dashboard da Braze]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#method-2-create-in-browser) ou durante a configuração do CDI.
+- Crie um catálogo usando o [endpoint de criação de catálogo]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)
 
-Todas as alterações no esquema do catálogo (por exemplo, adicionar novos campos ou alterar o tipo de campo) devem ser feitas por meio do painel do catálogo antes que os dados atualizados sejam sincronizados por meio do CDI. Recomendamos fazer essas atualizações quando a sincronização estiver pausada ou não programada para ser executada para evitar conflitos entre os dados do data warehouse e o esquema no Braze.
+Quaisquer alterações no esquema do catálogo (por exemplo, adicionar novos campos ou alterar o tipo de campo) devem ser feitas através do dashboard do catálogo antes que os dados atualizados sejam sincronizados através do CDI. Recomendamos fazer essas atualizações quando a sincronização estiver pausada ou não programada para ser executada para evitar conflitos entre os dados do seu data warehouse e o esquema no Braze.
 
-## Etapa 2: Integrar a ingestão de dados na nuvem com os dados do catálogo
-A configuração de uma sincronização de catálogo segue de perto o processo de [integrações CDI de dados do usuário]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
+## Etapa 2: Integrar a Ingestão de Dados na Nuvem com dados de catálogo
+A configuração para uma sincronização de catálogo segue de perto o processo para [integrações CDI de dados do usuário]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
 
 {% tabs %}
 {% tab Snowflake %}
 
-1. Configure uma tabela de origem no Snowflake. Você pode usar os nomes do exemplo a seguir ou escolher seus próprios nomes de banco de dados, esquema e tabela. Você também pode usar uma visualização ou uma visualização materializada em vez de uma tabela.
+1. Configure uma tabela de origem no Snowflake. Você pode usar os nomes no exemplo a seguir ou escolher seus próprios nomes de banco de dados, esquema e tabela. Você também pode usar uma visão ou uma visão materializada em vez de uma tabela.
   ```json
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
@@ -98,7 +98,7 @@ A configuração de uma sincronização de catálogo segue de perto o processo d
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
-Crie uma ou mais tabelas para usar em sua integração CDI com os seguintes campos:
+Crie uma ou mais tabelas para usar na sua integração CDI com os seguintes campos:
 
 ```json
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
@@ -112,27 +112,27 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 
 | NOME DO CAMPO | TIPO | MODO |
 | --- | --- | --- |
-| UPDATED_AT | TEMPO | OBRIGATÓRIO |
+| UPDATED_AT | TIMESTAMP | OBRIGATÓRIO |
 | PAYLOAD | JSON | OBRIGATÓRIO |
 | ID | STRING | OBRIGATÓRIO |
-| ELIMINADO | BOOLEÃO | OPCIONAL |
+| DELETED | BOOLEAN | OPCIONAL |
 
 {:start="2"}
 
-2. Configure um usuário e conceda as permissões adequadas. Se você já tiver credenciais de uma sincronização existente, poderá reutilizá-las, mas certifique-se de estender o acesso à tabela de origem do catálogo.
+2. Configurar um usuário e conceder as permissões adequadas. Se você já tiver credenciais de uma sincronização existente, poderá reutilizá-las, mas certifique-se de estender o acesso à tabela de origem do catálogo.
 A conta de serviço deve ter as permissões abaixo:
-- Usuário de conexão do BigQuery: Isso permitirá que o Braze faça conexões.
-- Usuário do BigQuery: Isso fornecerá acesso ao Braze para executar consultas, ler metadados de conjuntos de dados e listar tabelas.
-- Visualizador de dados do BigQuery: Isso fornecerá acesso ao Braze para visualizar conjuntos de dados e seus conteúdos.
-- Usuário do BigQuery Job: Isso fornecerá acesso ao Braze para executar trabalhos<br><br>Depois de criar a conta de serviço e conceder permissões, gere uma chave JSON. Consulte [Criar e excluir chaves](https://cloud.google.com/iam/docs/keys-create-delete) para obter mais informações. Você atualizará isso para o painel do Braze mais tarde.
+- Usuário de conexão do BigQuery: Isso permitirá que a Braze faça conexões.
+- Usuário do BigQuery: Isso fornecerá acesso à Braze para executar consultas, ler metadados do conjunto de dados e listar tabelas.
+- Visualizador de dados do BigQuery: Isso fornecerá acesso à Braze para visualizar conjuntos de dados e seus conteúdos.
+- Usuário do BigQuery Job: Isso fornecerá acesso ao Braze para executar trabalhos<br><br>Depois de criar a conta de serviço e conceder permissões, gere uma chave JSON. Para saber mais, consulte [Criar e excluir chaves](https://cloud.google.com/iam/docs/keys-create-delete). Você atualizará isso no dashboard do Braze mais tarde.
 
 {:start="3"}
-3\. Se você tiver políticas de rede em vigor, deverá conceder ao Braze acesso de rede à sua instância do BigQuery. Para obter uma lista de IPs, consulte [Ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+3\. Se você tiver políticas de rede em vigor, deve conceder acesso à rede da Braze à sua instância do BigQuery. Para obter uma lista de IPs, consulte [Ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
 {% tab Databricks %}
 
-1. Configure uma tabela de origem no Databricks. Você pode usar os nomes do exemplo a seguir ou escolher seus nomes de catálogo, esquema e tabela. Você também pode usar uma visualização ou uma visualização materializada em vez de uma tabela.
+1. Configurar uma tabela de origem no Databricks. Você pode usar os nomes no exemplo a seguir ou escolher seu catálogo, esquema e nomes de tabelas. Você também pode usar uma visão ou uma visão materializada em vez de uma tabela.
 
 ```json
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
@@ -150,24 +150,24 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 
 | NOME DO CAMPO | TIPO | MODO |
 | --- | --- | --- |
-| UPDATED_AT | TEMPO | OBRIGATÓRIO |
-| PAYLOAD | STRING, STRUCT ou MAP | OBRIGATÓRIO |
+| UPDATED_AT | TIMESTAMP | OBRIGATÓRIO |
+| PAYLOAD | STRING, STRUCT ou MAP | REQUIRED |
 | ID | STRING | OBRIGATÓRIO |
-| ELIMINADO | BOOLEÃO | NULLABLE |
+| DELETED | BOOLEAN | NULLABLE |
 
 {:start="2"}
 
-2. Crie um token de acesso pessoal em seu espaço de trabalho do Databricks.
+2. Crie um token de acesso pessoal no seu espaço de trabalho do Databricks.
 
-- a. Selecione seu nome de usuário da Databricks e, em seguida, selecione **User Settings (Configurações do usuário** ) no menu suspenso.
-- b. Na guia **Access tokens (Tokens de acesso** ), selecione **Generate new token (Gerar novo token**).
-- c. Insira um comentário que o ajude a identificar esse token, como "Braze CDI". 
-- d. Altere o tempo de vida do token para nenhum tempo de vida, deixando a caixa **Tempo de vida (dias)** em branco. Selecione **Generate (Gerar**).
-- e. Copie o token exibido e selecione **Concluído**. 
-- f. Mantenha o token em um local seguro até precisar inseri-lo durante a etapa de criação de credenciais no painel do Braze.
+- a. Selecione seu nome de usuário do Databricks e, em seguida, selecione **Configurações do usuário** no menu suspenso.
+- b. Na guia **Tokens de acesso**, selecione **Gerar novo token**.
+- c. Insira um comentário que o ajude a identificar esse token, como "CDI Braze". 
+- d. Altere o tempo de vida do token para nenhum tempo de vida deixando a caixa **Lifetime (days)** em branco. Selecione **Gerar**.
+- e. Copie o token exibido e, em seguida, selecione **Concluído**. 
+- f. Mantenha o token em um local seguro até que você precise inseri-lo durante a etapa de criação de credenciais no dashboard do Braze.
 
 {:start="3"}
-3\. Se você tiver políticas de rede em vigor, deverá conceder ao Braze acesso de rede à sua instância do Databricks. Para obter uma lista de IPs, consulte a página [Ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+3\. Se você tiver políticas de rede em vigor, deve conceder acesso à rede da Braze à sua instância do Databricks. Para uma lista de IPs, consulte a página [Ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
 {% tab Microsoft Fabric %}
@@ -187,17 +187,17 @@ GO
 
 {:start="2"}
 
-2. Configure uma entidade de serviço e conceda as permissões adequadas. Se você já tiver credenciais de uma sincronização existente, poderá reutilizá-las - apenas certifique-se de estender o acesso à tabela de origem do catálogo. Para saber mais sobre como criar uma nova entidade de serviço e credenciais, consulte a página [Ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views). 
+2. Configure um principal de serviço e conceda as permissões adequadas. Se você já possui credenciais de uma sincronização existente, pode reutilizá-las—apenas certifique-se de estender o acesso à tabela de origem do catálogo. Para saber mais sobre como criar uma nova entidade de serviço e credenciais, consulte a página [Ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views). 
 
 {:start="3"}
-3\. Se você tiver políticas de rede em vigor, deverá conceder ao Braze acesso de rede à sua instância do Microsoft Fabric. Para obter uma lista de IPs, consulte [Ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+3\. Se você tiver políticas de rede em vigor, deverá conceder à Braze acesso de rede à sua instância do Microsoft Fabric. Para uma lista de IPs, consulte a [Ingestão de Dados na Nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
 {% tab S3 %}
 Configure seus arquivos de origem no S3 fornecendo arquivos JSON ou CSV. Tenha em mente:
 
-- Os arquivos não podem incluir uma coluna `UPDATED_AT`   
-- Você pode incluir um campo opcional `DELETED` para marcar itens para remoção 
+- Os arquivos não podem incluir uma coluna `UPDATED_AT`  
+- Você pode incluir um campo `DELETED` opcional para marcar itens para remoção 
 
 {% subtabs %}
 {% subtab JSON %}
@@ -216,16 +216,16 @@ ID,PAYLOAD,DELETED
 {% endsubtab %}
 {% endsubtabs %}
 
-Para obter detalhes de configuração, consulte [Integrações de armazenamento de arquivos]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
+Para detalhes de configuração, veja [Integrações de armazenamento de arquivos]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
 
 {% endtab %}
 {% endtabs %}
 
-## Como funciona a integração
+## Como a integração funciona
 
-Sempre que a sincronização for executada, o Braze extrairá todas as linhas em que `UPDATED_AT` for igual ou posterior ao último registro de data e hora sincronizado. Recomendamos criar uma visualização em seu data warehouse a partir dos dados do catálogo para configurar uma tabela de origem que será totalmente atualizada sempre que uma sincronização for executada. Com as exibições, você não precisará reescrever a consulta todas as vezes.
+Cada vez que a sincronização é executada, o Braze irá puxar todas as linhas onde `UPDATED_AT` é igual ou posterior ao último timestamp sincronizado. Recomendamos criar uma visualização no seu data warehouse a partir dos dados do seu catálogo para configurar uma tabela de origem que será totalmente atualizada cada vez que uma sincronização for executada. Com visualizações, você não precisará reescrever a consulta cada vez.
 
-Por exemplo, se você tiver uma tabela de dados de produto (`product_catalog_1`) com `product_id` e três atributos adicionais, poderá sincronizar a exibição abaixo:
+Por exemplo, se você tiver uma tabela de dados de produtos (`product_catalog_1`) com `product_id` e três atributos adicionais, você poderá sincronizar a visualização abaixo:
 
 {% tabs %}
 {% tab Snowflake %}
@@ -305,6 +305,6 @@ FROM [braze].[product_catalog] ;
 {% endtab %}
 {% endtabs %}
 
-- Os dados obtidos da integração serão usados para criar ou atualizar itens no catálogo de destino com base no endereço `id` fornecido.
-- Se DELETED for definido como `true`, o item de catálogo correspondente será excluído.
-- A sincronização não registrará pontos de dados, mas todos os dados sincronizados contarão para o uso total do catálogo; esse uso é medido com base no total de dados armazenados, portanto, não é necessário se preocupar em sincronizar apenas os dados alterados.
+- Os dados obtidos da integração serão usados para criar ou atualizar itens no catálogo alvo com base no `id` fornecido.
+- Se DELETED estiver definido como `true`, o item do catálogo correspondente será excluído.
+- A sincronização não registrará pontos de dados, mas todos os dados sincronizados contarão para o seu uso total do catálogo; esse uso é medido com base no total de dados armazenados, então você não precisa se preocupar em sincronizar apenas dados alterados.

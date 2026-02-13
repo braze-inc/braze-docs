@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
+# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"} Snowflake
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) ist ein speziell entwickeltes SQL Data Warehouse in der Cloud, das als Software-as-a-Service (SaaS) angeboten wird. Snowflake bietet ein Data Warehouse, das schneller, benutzerfreundlicher und wesentlich flexibler ist als herkömmliche Data Warehouse-Angebote. Mit der eindeutigen und patentierten Architektur von Snowflake ist es ein Leichtes, all Ihre Daten zu sammeln, schnelle Analytics zu ermöglichen und datengestützte Insights für alle Ihre Nutzer:innen zu gewinnen.
 
@@ -40,7 +40,7 @@ Bevor Sie dieses Feature nutzen können, müssen Sie die folgenden Schritte ausf
 
 | Anforderung | Beschreibung |
 | ----------- | ----------- |
-| Braze Zugang | Um auf dieses Feature in Braze zuzugreifen, müssen Sie sich an Ihren Braze-Konto oder Customer-Success-Manager:in wenden. |
+| Braze Zugang | Um auf dieses Feature in Braze zuzugreifen, müssen Sie sich an Ihren Braze-Konto-Manager oder Customer-Success-Manager:in wenden. |
 | Snowflake Konto | Ein Snowflake-Konto mit `admin` Berechtigungen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -57,7 +57,7 @@ Bei Snowflake findet die gemeinsame Nutzung von Daten zwischen einem [Datenanbie
 
 ### Schritt 2: Erstellen Sie die Datenbank in Snowflake
 
-1. Nach ein paar Minuten sollten Sie die eingehende Datenfreigabe in Ihrem Snowflake-Konto erhalten.
+1. Nach ein paar Minuten sollten Sie den eingehenden Datenaustausch in Ihrem Snowflake-Konto erhalten.
 2. Erstellen Sie mit Hilfe der eingehenden Datenfreigabe eine Datenbank zum Anzeigen und Abfragen der Tabellen. Zum Beispiel:
     ```sql
     CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>
@@ -80,7 +80,7 @@ Nachdem die Datenfreigabe bereitgestellt wurde, müssen Sie aus der eingehenden 
 - Abbildung roher Ereignis- oder Nutzerdaten in einem CRM (wie Salesforce)
 - Und mehr
 
-[Laden Sie die rohen Tabellenschemata hier herunter.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
+[Laden Sie die Rohtabellenschemata hier herunter.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
 
 ### Schema der Nutzer:innen ID
 
@@ -115,9 +115,9 @@ Wenn es möglich ist, werden Änderungen mit einer Ankündigung und einem Zeitra
 
 ### Snowflake Regionen
 
-Braze hostet derzeit alle Nutzer:innen-Daten in den Snowflake AWS Regionen US East-1 und EU-Central (Frankfurt). Für Nutzer:innen außerhalb dieser Regionen kann Braze Daten für gemeinsame Kunden bereitstellen, die ihre Snowflake Infrastruktur in einer beliebigen AWS, Azure oder GCP Region hosten.
+Braze hostet derzeit alle Nutzerdaten in den Snowflake AWS Regionen US East-1, EU-Central (Frankfurt), AP-Southeast-2 (Sydney) und AP-Southeast-3 (Jakarta). Für Nutzer:innen außerhalb dieser Regionen kann Braze Daten für gemeinsame Kunden bereitstellen, die ihre Snowflake Infrastruktur in einer beliebigen AWS, Azure oder GCP Region hosten.
 
-### Datenaufbewahrung
+### Bindung von Daten
 
 #### Richtlinie zur Bindung
 

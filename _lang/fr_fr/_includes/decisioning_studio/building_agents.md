@@ -1,4 +1,4 @@
-# Créer des agents
+# Créer des agents décisionnels d'intelligence artificielle
 
 > Découvrez comment créer un agent pour BrazeAI Decisioning Studio™, afin d'automatiser les expérimentations personnalisées et d'optimiser les résultats tels que les conversions, la fidélisation ou le chiffre d'affaires, sans tests A/B manuels.
 
@@ -16,7 +16,7 @@ Pour créer un agent efficace :
 - Définissez les dimensions à tester, telles que l'offre, la ligne d'objet, le contenu créatif, le canal ou l'heure d'envoi.
 - Sélectionnez les options pour chaque dimension, par exemple e-mail ou SMS, ou fréquence quotidienne ou hebdomadaire.
 
-![Example diagram of a decisioning studio agent for referral emails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![Exemple de diagramme d'un agent de studio décisionnel pour les e-mails de recommandation.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Exemples d'agents
 

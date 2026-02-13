@@ -8,7 +8,7 @@ guide_top_text: "> Après avoir unifié vos données dans Braze, il est temps de
 page_type: landing
 description: "Cette section comprend des articles relatifs à l'activation des données pour la plateforme de données de Braze."
 
-guide_featured_title: "Articles de section"
+guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Données personnalisées
     link: /docs/user_guide/data/activation/custom_data/
@@ -19,10 +19,10 @@ guide_featured_list:
 
 guide_menu_title: "More articles"
 guide_menu_list:
-  - name: Analyse/analytique (si utilisé comme adjectif)
+  - name: Analyse
     link: /docs/user_guide/analytics/reporting/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: Intelligence artificielle de Braze
+  - name: IA de Braze
     link: /docs/user_guide/brazeai/
     image: /assets/img/braze_icons/stars-01.svg
 ---

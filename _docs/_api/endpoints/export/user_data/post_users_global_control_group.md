@@ -231,7 +231,7 @@ User export object (we include the least data possible—if a field is missing f
         "last_used" : (string) date
       },
       ...
-    ],
+    ]
 }
 ```
 
@@ -310,7 +310,7 @@ User export object (we include the least data possible—if a field is missing f
         "last_used": "2021-11-11T00:25:19.201Z"
       },
       ...
-    ],
+    ]
 }
 ```
 

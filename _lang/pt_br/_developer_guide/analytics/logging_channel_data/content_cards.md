@@ -1,11 +1,11 @@
 ---
 nav_title: Cartões de conteúdo
-article_title: Registro de dados do cartão de conteúdo por meio do SDK do Braze
+article_title: Registre os dados do cartão de conteúdo através do SDK Braze
 page_order: 7.0
-description: "Saiba como registrar os dados do cartão de conteúdo por meio do SDK do Braze."
+description: "Aprenda como registrar os dados do cartão de conteúdo através do SDK Braze."
 noindex: true
 ---
 
-# Registro de dados do cartão de conteúdo
+# Registre os dados do cartão de conteúdo
 
 {% multi_lang_include developer_guide/_shared/logging_analytics/content_cards.md %}

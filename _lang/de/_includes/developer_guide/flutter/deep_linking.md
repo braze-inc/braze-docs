@@ -13,7 +13,7 @@ Bevor Sie Deeplinks in Ihre Flutter App implementieren können, müssen Sie Deep
 3. Stellen Sie den Schlüssel auf `FlutterDeepLinkingEnabled`.
 4. Setzen Sie den Typ auf `Boolean`.
 5. Setzen Sie den Wert auf `YES`.
-    ![Die `Info.plist` Datei eines Beispielprojekts mit dem hinzugefügten Schlüssel-Wert-Paar.]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File")
+    ![Ein Beispiel für die Datei "Info.plist" mit dem hinzugefügten Schlüssel-Wert-Paar.]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File")
 {% endtab %}
 
 {% tab Android %}

@@ -68,7 +68,7 @@ En la URL del webhook, debe:
 - Pasa el identificador único de tu aplicación para Android (como "com.example") e iOS (como "012345678").
 - Inserte [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid) para el atributo personalizado adecuado que esté rastreando como ID de publicidad de Google. Tenga en cuenta que el ID de publicidad de Google aparece como `aaid` en este ejemplo, pero tendrá que sustituirlo por el nombre de atributo personalizado que establezcan sus desarrolladores.
 
-![La URL del webhook y la vista previa del mensaje mostrados en el constructor de webhook Braze.]({% image_buster /assets/img/jampp_webhook.png %})
+![La URL del webhook y la vista previa del mensaje se muestran en el constructor de webhook Braze.]({% image_buster /assets/img/jampp_webhook.png %})
 
 {% alert important %}
 Braze no recoge automáticamente el IDFA/AAID del dispositivo, por lo que debe almacenar estos valores usted mismo. Tenga en cuenta que puede necesitar el consentimiento del usuario para recopilar estos datos.
@@ -82,7 +82,7 @@ El webhook de Jampp requiere un método HTTP y una cabecera de solicitud.
 - **Encabezados de solicitud**:
   - **Content-Type**: application/json
 
-![Los encabezados de solicitud, el método HTTP y la vista previa del mensaje que se muestran en el constructor de webhook Braze.]({% image_buster /assets/img/jampp_method.png %})
+![Los encabezados de solicitud, el método HTTP y la vista previa del mensaje mostrados en el creador de webhook Braze.]({% image_buster /assets/img/jampp_method.png %})
 
 #### Cuerpo de la solicitud
 

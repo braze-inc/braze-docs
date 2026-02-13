@@ -1,6 +1,6 @@
 ## Mise en place d'un suivi des désinstallations
 
-### Étape 1 : Activer les notifications push d’arrière-plan
+### Étape 1 : Activer les notifications push d’arrière-plan
 
 Dans votre projet Xcode, allez dans **Capacités** et assurez-vous que les **Modes d'arrière-plan** sont activés. Pour plus d'informations, voir la [notification push silencieuse]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift).
 

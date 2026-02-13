@@ -24,7 +24,7 @@ Esta función permite a las marcas controlar qué datos específicos de origen s
 
 {% alert important %}
 **Cláusula de exención de responsabilidad de Audience Sync Pro**<br>
-Braze Audience Sync to TikTok es una integración de Audience Sync Pro. Para obtener más información sobre esta integración, póngase en contacto con su gestor de cuentas Braze.
+Braze Audience Sync to TikTok es una integración de Audience Sync Pro. Para más información sobre esta integración, ponte en contacto con tu director de cuentas Braze.
 {% endalert %}
 
 ## Requisitos previos
@@ -35,16 +35,20 @@ Debes asegurarte de que los siguientes elementos están creados, completados y/o
 | ----------- | ------ | ----------- |
 | Cuenta de TikTok para Business Center | [TikTok](https://business.tiktok.com/) | Una herramienta centralizada para gestionar los activos TikTok de tu marca (como cuentas de anuncios, páginas, aplicaciones). |
 | Cuenta publicitaria de TikTok | [TikTok](https://ads.tiktok.com/) | Una cuenta de anuncios TikTok activa vinculada a la cuenta Business Center de tu marca.<br><br>Asegúrese de que su administrador de TikTok Business Center le ha concedido permisos de administrador a las cuentas de anuncios de TikTok que planea utilizar con Braze. |
-| Términos y políticas de TikToK | [TikTok](https://ads.tiktok.com/i18n/official/policy/terms) | Aceptas cumplir cualquiera de los términos, políticas, directrices y documentación requeridos por TikTok relacionados con tu uso de la Sincronización de Audiencia de Pinterest, incluidos los términos, políticas, directrices y documentación incorporados por referencia a los mismos, que pueden incluir: las Condiciones Comerciales del Servicio, las Condiciones de Publicidad, la Política de Privacidad, las Condiciones de Audiencia Personalizada, las Condiciones de Servicio del Desarrollador, el Acuerdo de Intercambio de Datos del Desarrollador, las Políticas de Publicidad, las Directrices de la Marca y las Directrices de la Comunidad. |
+| Condiciones de TikToK & políticas | [TikTok](https://ads.tiktok.com/i18n/official/policy/terms) | Aceptas cumplir cualquiera de los términos, políticas, directrices y documentación requeridos por TikTok relacionados con tu uso de la Sincronización de Audiencia de Pinterest, incluidos los términos, políticas, directrices y documentación incorporados por referencia a los mismos, que pueden incluir: las Condiciones Comerciales del Servicio, las Condiciones de Publicidad, la Política de Privacidad, las Condiciones de Audiencia Personalizada, las Condiciones de Servicio del Desarrollador, el Acuerdo de Intercambio de Datos del Desarrollador, las Políticas de Publicidad, las Directrices de la Marca y las Directrices de la Comunidad. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integración 
 
 ### Paso 1: Conéctate a TikTok
 
+{% alert important %}
+Debes tener el [ permiso "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) para conectar TikTok a tu cuenta Braze.
+{% endalert %}
+
 En el salpicadero de Braze, ve a **Integraciones de socios** > **Socios tecnológicos** y selecciona **TikTok**. En Sincronizar audiencia de TikTok, selecciona **Conectar TikTok**.
 
-![La página de la tecnología TikTok en Braze incluye una sección de resumen y otra de sincronización de la audiencia de TikTok con el botón de TikTok conectado.]({% image_buster /assets/img/tiktok/tiktok1.png %}){: style="max-width:75%;"}
+![La página de la tecnología TikTok en Braze incluye una sección de resumen y otra de sincronización de la audiencia de TikTok con el botón TikTok conectado.]({% image_buster /assets/img/tiktok/tiktok1.png %}){: style="max-width:75%;"}
 
 A continuación, serás redirigido a la página de TikTok OAuth para autorizar Braze para la gestión de cuentas de anuncios y Audience Management. Una vez que hayas seleccionado **Confirmar**, se te redirigirá de nuevo a Braze para que selecciones las cuentas de anuncios de TikTok con las que deseas sincronizar. 
 
@@ -56,7 +60,7 @@ Una vez conectado correctamente, volverás a la página del socio. Aquí puede v
 
 Tu conexión TikTok se aplicará a nivel del grupo de aplicaciones Braze. Si tu administrador de TikTok te elimina de tu TikTok Business Center o del acceso a las cuentas TikTok conectadas, Braze detectará un token inválido. Como resultado, tus Canvases activos que utilicen componentes de TikTok Audience mostrarán errores, y Braze no podrá sincronizar usuarios.
 
-### Paso 2: Añadir un componente TikTok Audience en Canvas Flow
+### Paso 2: Añade un componente de audiencia de TikTok en Canvas
 
 Añada un componente a su lienzo y seleccione **Sincronización con el público**. 
 
@@ -75,23 +79,23 @@ A continuación, selecciona la cuenta de anuncios de TikTok deseada. En el despl
 ![]({% image_buster /assets/img/tiktok/tiktok11.png %})
 
 {% tabs %}
-{% tab Crear una nueva audiencia %}
+{% tab Create a New Audience %}
 
 **Crear una nueva audiencia**<br>
-Introduce un nombre para el nuevo público, selecciona **Añadir usuarios al público** y selecciona los campos que deseas sincronizar con TikTok. A continuación, guarde su público haciendo clic en el botón **Crear público** situado en la parte inferior del editor de pasos.
+Introduce un nombre para el nuevo público, selecciona **Añadir usuarios al público** y selecciona los campos que deseas sincronizar con TikTok. A continuación, guarda tu audiencia haciendo clic en el botón **Crear audiencia** situado en la parte inferior del editor de pasos.
 
 ![]({% image_buster /assets/img/audience_sync/tiktok3.png %})
 
-Los usuarios recibirán una notificación en la parte superior del editor de pasos si la audiencia se crea correctamente o si surgen errores durante este proceso. Los usuarios también pueden hacer referencia a este público para la eliminación de usuarios más adelante en el recorrido Canvas, ya que el público se creó en modo borrador.
+Braze muestra una notificación en la parte superior del editor de pasos si la audiencia se crea correctamente o si se producen errores. Los usuarios pueden hacer referencia a este público para la eliminación de usuarios más adelante en el recorrido Canvas, ya que el público se creó en modo borrador.
 
 ![]({% image_buster /assets/img/audience_sync/tiktok2.png %})
 
 Cuando lanzas un Canvas con una nueva audiencia, Braze sincroniza a los usuarios casi en tiempo real a medida que entran en el paso de audiencia.
 
 {% endtab %}
-{% tab Sincronización con un público existente %}
+{% tab Sync with an Existing Audience %}
 
-**Sincronización con un público existente**<br>
+**Sincronízate con una audiencia existente**<br>
 Braze también ofrece la posibilidad de añadir usuarios a las audiencias de TikTok existentes para garantizar que estas audiencias estén actualizadas. Para sincronizar con una audiencia existente, escribe el nombre de la audiencia existente en el desplegable y selecciona **Añadir a la audiencia**. A continuación, Braze añadirá usuarios casi en tiempo real a medida que entren en el paso TikTok Audience.
 
 ![Vista ampliada del paso en Canvas Audiencia personalizada. Aquí se seleccionan la cuenta publicitaria deseada y la audiencia existente.]({% image_buster /assets/img/audience_sync/tiktok.png %})
@@ -104,13 +108,13 @@ Una vez que haya configurado su componente TikTok Audience, ¡simplemente inicie
 
 Puedes ver la audiencia en TikTok entrando en tu **cuenta de Ads Manager** y seleccionando **Audiencias** en el desplegable de **Activos**. En la página **Audiencia**, puedes ver el tamaño de cada audiencia cuando alcance aproximadamente 1000.
 
-![Página de TikTok que enumera las siguientes métricas para la audiencia dada.]({% image_buster /assets/img/tiktok/tiktok5.png %})
+![Página de TikTok que muestra las siguientes métricas para la audiencia dada.]({% image_buster /assets/img/tiktok/tiktok5.png %})
 
 ## Consideraciones sobre la sincronización de usuarios y el límite de velocidad
 
-A medida que los usuarios alcanzan el paso de Sincronización de Audiencia, Braze sincronizará estos usuarios casi en tiempo real respetando los límites de velocidad de la API de Marketing de TikTok. Esto significa que Braze intentará procesar el mayor número de usuarios cada 5 segundos antes de enviarlos a TikTok.
+A medida que los usuarios alcanzan el paso de Sincronización de Audiencia, Braze los sincroniza casi en tiempo real respetando los límites de tasa de la API de marketing de TikTok. Braze agrupa y procesa el mayor número posible de usuarios cada 5 segundos antes de enviarlos a TikTok.
 
-El límite de velocidad de la API de Segmentación de TikTok establece no más de 50 consultas por segundo y 10k usuarios por solicitud. Si un cliente de Braze alcanza este límite de velocidad, el Canvas reintentará la sincronización durante un máximo de ~13 horas. Si la sincronización no es posible, estos usuarios aparecen en la lista de la métrica Users Errored.
+El límite de velocidad de la API de Segmentos de TikTok no permite más de 50 consultas por segundo y 10.000 usuarios por solicitud. Si un cliente alcanza este límite, Braze reintenta la sincronización durante un máximo de ~13 horas. Si la sincronización sigue sin ser posible, Braze lista a estos usuarios en la métrica Usuarios erróneos.
 
 ## Comprender los análisis
 
@@ -139,7 +143,7 @@ Puedes desconectar y volver a conectar tu cuenta de TikTok en la página de soci
 
 ### ¿Por qué no se puede iniciar mi Canvas?
 
-Confirma que tu cuenta de TikTok se conecta correctamente a Braze en la página del socio de TikTok. A continuación, asegúrate de haber seleccionado una cuenta de publicidad, introducido un nombre para la nueva audiencia y seleccionado los campos que coincidan.
+Confirma que tu cuenta de TikTok se conecta correctamente a Braze en la página del socio de TikTok. A continuación, asegúrate de haber seleccionado una cuenta publicitaria, introducido un nombre para la nueva audiencia y seleccionado los campos que coincidan.
 
 ### ¿Cómo sé si los usuarios han coincidido después de pasar usuarios a TikTok?
 
@@ -159,4 +163,6 @@ Esto se debe a que en TikTok, un ID puede estar asociado a varios usuarios de Ti
 
 Además, TikTok también cuenta a los usuarios de Pangle como usuarios coincidentes, lo que en algunos casos puede dar lugar a una tasa de coincidencia elevada. Sin embargo, cuando utilizas la audiencia para la entrega de anuncios, es posible que el tamaño real de la audiencia entregable no sea tan alto como el tamaño del usuario emparejado, ya que depende de la ubicación y de otros factores que influyen.
 
+### ¿Por qué recibo un correo electrónico con el asunto "La audiencia no existe para Canvas"?
 
+Esto puede ocurrir si la audiencia con la que elegiste sincronizar no es una audiencia de streaming (por ejemplo, si es una audiencia similar o una audiencia de archivo de usuario). Prueba a crear una nueva audiencia mediante el paso en Canvas de Sincronización de Audiencia Braze.

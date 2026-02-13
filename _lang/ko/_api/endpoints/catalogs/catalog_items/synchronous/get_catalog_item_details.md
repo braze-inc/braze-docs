@@ -19,7 +19,7 @@ description: "이 문서에서는 목록 카탈로그 항목 세부 정보 Braze
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#52c6631c-7366-48e5-9e0e-16de7b6285cc {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `catalogs.get_item` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -31,8 +31,8 @@ description: "이 문서에서는 목록 카탈로그 항목 세부 정보 Braze
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
-| `catalog_name` | 필수 | 문자열 | 카탈로그의 이름입니다. |
-| `item_id` | 필수 | 문자열 | 카탈로그 항목의 ID입니다. |
+| `catalog_name` | Required | 문자열 | 카탈로그의 이름입니다. |
+| `item_id` | Required | 문자열 | 카탈로그 항목의 ID입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 매개변수

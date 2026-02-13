@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT: Mehrere Katalogartikel ersetzen"
+nav_title: "PUT: Ersetzen Sie mehrere Artikel im Katalog"
 article_title: "PUT: Mehrere Katalogartikel ersetzen"
 search_tag: Endpoint
 page_order: 4

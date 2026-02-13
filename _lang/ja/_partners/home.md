@@ -23,7 +23,7 @@ valid_partner_list:
 - name: Lob
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
 - name: Messenger
-  url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
+  url: /docs/partners/messenger/
 - name: Adjust
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
@@ -31,9 +31,6 @@ valid_partner_list:
 - name: Branch
   title: Deeplinking
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
-  alt:
-    - title: Attribution
-      url: /docs/partners/message_orchestration/attribution/branch/branch_for_attribution/
 - name: Facebook Zapier
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/facebook_via_zapier/
 - name: Kochava
@@ -77,7 +74,7 @@ valid_partner_list:
 - name: Microsoft Azure
   url: /docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/
 - name: Apteligent
-  url: /docs/partners/data_and_infrastructure_agility/crash_analytics/apteligent/
+  url: /docs/partners/apteligent/
 - name: Snowflake
   url: /docs/partners/data_and_infrastructure_agility/data_warehouses/snowflake/
 - name: Amplitude
@@ -108,8 +105,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/playable/
 - name: Movable Ink
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink
-- name: Liftigniter
-  url: /docs/partners/message_personalization/dynamic_content/liftigniter/
 - name: Transifex
   url: /docs/partners/message_personalization/localization/transifex/
 - name: Crowdin
@@ -181,7 +176,7 @@ valid_partner_list:
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: WSC Sports
-  url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
+  url: /docs/partners/wsc_sports/
 - name: Extole
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
 - name: ViralSweep
@@ -249,7 +244,7 @@ valid_partner_list:
 - name: Regal
   url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
 - name: Kognitiv
-  url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
+  url: /docs/partners/kognitiv/
 - name: SalesWings
   url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
 - name: OneTrust
@@ -261,7 +256,7 @@ valid_partner_list:
 - name: Redpoint
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/redpoint/  
 - name: Simon Data
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata/
+  url: /docs/partners/simon_data/
 - name: Ketch
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/ketch/
 - name: Antavo
@@ -276,8 +271,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/smartersends/
 - name: Typeform
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
-- name: Scuba
-  url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
 - name: Celebrus
   url: /docs/partners/data_and_infrastructure_agility/analytics/celebrus/
 - name: Friendbuy
@@ -301,7 +294,7 @@ valid_partner_list:
 - name: マイポストカード
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
 - name: SEEN
-  url: /docs/partners/message_personalization/dynamic_content/seen
+  url: /docs/partners/seen/
 - name: Dixa
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 - name: Narvar
@@ -327,9 +320,9 @@ valid_partner_list:
 - name: Front
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/front/
 - name: Notify
-  url: /docs/partners/message_personalization/dynamic_content/notify/
+  url: /docs/partners/notify/
 - name: Odicci
-  url: /docs/partners/message_personalization/dynamic_content/odicc/
+  url: /docs/partners/odicci/
 - name: Pinterest
   url: /docs/partners/canvas_steps/pinterest_audience_sync/
 - name: Snapchat
@@ -341,9 +334,9 @@ valid_partner_list:
 - name: VWO
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/vwo/
 - name: SessionM
-  url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
+  url: /docs/partners/sessionm/
 - name: Tapcart
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+  url: /docs/partners/tapcart/
 - name: Mention Me
   url: /docs/partners/mention_me/
 - name: Just Words
@@ -375,5 +368,20 @@ valid_partner_list:
 - name: 記事全文
   url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
 - name: オラクル・クラウドツイスト
+  url: /docs/partners/crowdtwist/
+- name: ブリングス
+  url: /docs/partners/blings/
+- name: Google オーディエンスの同期
+  url: /docs/google_audience_sync/ 
+- name: Optimizely
+  url: /docs/partners/optimizely/
+- name: その他のレベル
+  url: /docs/partners/otherlevels/
   url: /docs/partners/crowdtwist
+- name: 記事全文
+  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
+- name: 開封ロイヤルティ
+  url: /docs/partners/openloyalty/
+- name: DOTS.ECO
+  url: /docs/partners/dots.eco/
 ---

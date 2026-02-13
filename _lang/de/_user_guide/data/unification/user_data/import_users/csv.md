@@ -1,5 +1,5 @@
 ---
-nav_title: Eine CSV verwenden
+nav_title: CSV-Import
 article_title: "CSV-Import"
 description: "Erfahren Sie, wie Sie Nutzer-Attribute und angepasste Events mit Hilfe des CSV-Imports erfassen und aktualisieren können."
 page_order: 1.2
@@ -227,10 +227,10 @@ Das angepasste Event `trip_booked` kann zum Beispiel die Eigenschaften `destinat
 
 ### Schritt 4: Hochladen und Vorschau Ihrer Daten
 
-Bevor Braze Ihre CSV-Datei verarbeitet, generiert es eine Vorschau der ersten Zeilen, damit Sie diese auf eventuelle Probleme überprüfen können. Um Ihre Vorschau zu erstellen, wählen Sie **Attribute** oder **Ereignisse**, dann wählen Sie **Dateien durchsuchen** und laden Ihre CSV-Datei hoch. 
+Bevor Braze Ihre CSV-Datei verarbeitet, generiert es eine Vorschau auf die ersten Zeilen, damit Sie diese auf eventuelle Probleme überprüfen können. Um Ihre Vorschau zu erstellen, wählen Sie **Attribute** oder **Ereignisse**, dann wählen Sie **Dateien durchsuchen** und laden Ihre CSV-Datei hoch. 
 
 <!-- old image -->
-![CSV-Upload abgeschlossen mit Fehlern bei gemischten Datentypen in einer einzelnen Spalte]({% image_buster /assets/img/csv_import/upload_csv.png %}){: style="max-width:70%"}
+![CSV-Upload mit Fehlern bei gemischten Datentypen in einer einzelnen Spalte abgeschlossen]({% image_buster /assets/img/csv_import/upload_csv.png %}){: style="max-width:70%"}
 
 {% alert important %}
 Die Vorschau des Nutzerimports scannt nicht jede Zeile der Eingabedatei. Fehler nach den ersten paar Zeilen werden möglicherweise nicht erkannt, daher sollten Sie die CSV-Datei vollständig überprüfen.
@@ -246,7 +246,7 @@ Sie können auch zwischen den folgenden Targeting-Einstellungen wählen. Wenn Si
 | Neue Segmente | Um auch ein neues Segment aus Ihrem neuen Targeting Filter zu erstellen, wählen Sie **Targeting Filter erstellen und zu neuem Segment hinzufügen**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-![Eine Filtergruppe mit dem Filter "Aktualisiert/Importiert aus CSV", die eine CSV-Datei mit dem Titel "Halloween-Saisonspaß" enthält.]({% image_buster /assets/img/csv_import/add_filter_group.png %}){: style="max-width:85%;"}
+![Eine Filtergruppe mit dem Filter "Aktualisiert/Importiert aus CSV" einschließlich einer CSV-Datei mit dem Titel "Halloween-Saisonspaß".]({% image_buster /assets/img/csv_import/add_filter_group.png %}){: style="max-width:85%;"}
 
 ### Schritt 6: Starten Sie Ihren CSV-Import
 
@@ -260,7 +260,7 @@ Sie können mehr als eine CSV-Datei gleichzeitig importieren. CSV-Importe erfolg
 
 ## Überlegungen zu Datenpunkten
 
-Jede aus einer CSV-Datei importierte Kundendaten überschreibt den bestehenden Wert in den Nutzerprofilen und protokolliert einen Datenpunkt, außer bei externen IDs und leeren Werten. Wenn Sie Fragen zu den Datenpunkten von Braze haben, kann Ihr Braze-Konto Manager:in sie beantworten.
+Jede aus einer CSV-Datei importierte Kundendaten überschreibt den vorhandenen Wert in den Nutzerprofilen und protokolliert einen Datenpunkt, außer bei externen IDs und leeren Werten. Wenn Sie Fragen zu den Datenpunkten von Braze haben, kann Ihr Braze-Konto Manager:in diese Fragen beantworten.
 
 | Betrachtung | Details |
 |---|---|

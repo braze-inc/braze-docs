@@ -38,7 +38,7 @@ L'intégration de Braze et d’IAM Studio, vous permet de facilement insérer de
 
 Choisissez un modèle de message in-app que vous souhaitez utiliser dans la galerie de modèles de messages in-app
 
-![La galerie de modèles d'IAM Studio présente différents modèles tels que "carousel slide modal", "simple icon modal", "modal full image", et bien d'autres encore.]({% image_buster /assets/img/iam_studio/iam_template_gallery.png %})
+![La galerie de modèles IAM Studio montre différents modèles tels que « fenêtre modale de diapositive de carrousel », « fenêtre modale d'icône simple », « fenêtre modale pleine image », et plus encore.]({% image_buster /assets/img/iam_studio/iam_template_gallery.png %})
 
 ### Étape 2 : Personnaliser le modèle
 
@@ -48,10 +48,10 @@ Tout d'abord, personnalisez l'image, le texte et le bouton de votre contenu. Ass
 {% tab Image %}
 ![L'interface utilisateur de IAM Studio montrant les options pour personnaliser l'image. Ces options incluent l'image, le rayon de l'image et l'image atténuée.]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
 {% endtab %}
-{% tab Texte %}
+{% tab Text %}
 ![L'interface utilisateur de IAM Studio montrant les options pour personnaliser le titre et le sous-titre de votre message. Ces options incluent le texte, la mise en forme et la police.]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
 {% endtab %}
-{% tab Bouton %}
+{% tab Button %}
 ![L'interface utilisateur de IAM Studio montrant les options pour personnaliser le bouton principal, gauche et droit. Ces options incluent la couleur, le lien profond, le texte et la mise en forme.]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
 {% endtab %}
 {% endtabs %}
@@ -59,14 +59,14 @@ Tout d'abord, personnalisez l'image, le texte et le bouton de votre contenu. Ass
 Ensuite, créez votre message in-app personnalisé en ajoutant des polices personnalisées et en utilisant des tags liquid. Pour activer la journalisation et le suivi, sélectionnez **Journaliser les données et suivre le comportement des utilisateurs**.
 
 {% tabs local %}
-{% tab Polices %}
-![L'interface utilisateur IAM Studio montrant les options pour ajouter du liquid. Ces options comprennent l'élaboration de phrases personnalisées.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
+{% tab Fonts %}
+![L'interface utilisateur IAM Studio montrant les options pour ajouter du liquid. Ces options comprennent la personnalisation de la phrase.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Liquid %}
-![L'interface utilisateur de IAM Studio montrant les options pour personnaliser la journalisation des événements/attributs. Ces options incluent ce journal de comportement des utilisateurs.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
+![L'interface utilisateur de IAM Studio montrant les options pour personnaliser la journalisation des événements/attributs. Ces options comprennent l'enregistrement du comportement de l'utilisateur.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
 {% endtab %}
-{% tab Journalisation et suivi %}
-![L'interface utilisateur de IAM Studio montrant les options pour personnaliser la police. Ces options incluent une option permettant à l'utilisateur de personnaliser le style de police.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
+{% tab Logging and Tracking %}
+![L'interface utilisateur de IAM Studio montrant les options pour personnaliser la police. Ces options permettent notamment à l'utilisateur de personnaliser le style de la police.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
 {% endtab %}
 {% endtabs %}
 

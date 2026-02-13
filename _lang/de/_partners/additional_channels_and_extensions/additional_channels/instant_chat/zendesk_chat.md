@@ -31,7 +31,7 @@ Verbessern Sie die Effizienz des Kund:innen-Supports, indem Sie die SMS-Funktion
 
 1. Gehen Sie in der Entwicklungskonsole von Zendesk zu Webhooks: {% raw %}`https://{{url}}.zendesk.com/admin/apps-integrations/webhooks/webhooks`{% endraw %}
 2. Wählen Sie unter **Webhook erstellen** den Punkt **Triggern oder Automatisierung** aus.
-3. Fügen Sie für **Endpunkt-URL** den Endpunkt **/campaign/trigger/send** hinzu.
+3. Fügen Sie als **Endpunkt-URL** den Endpunkt **/campaign/trigger/send** hinzu.
 4. Wählen Sie unter **Authentifizierung** das **Token Bearer** aus und fügen Sie den REST API-Schlüssel von Braze mit den Berechtigungen `campaigns.trigger.send` hinzu.
 
 ![Ein Beispiel für einen Webhook von Zendesk.]({% image_buster /assets/img/zendesk/instant_chat/chat1.png %}){: style="max-width:70%;"}
@@ -70,7 +70,7 @@ Feel free to respond directly to this number!
 
 #### Schritt 2.2: Zeitplan für die Zustellung
 
-Wählen Sie für die Art der Zustellung die **API-getriggerte Zustellung** aus und kopieren Sie dann die ID der Kampagne, die in den nächsten Schritten verwendet werden soll.
+Wählen Sie für die Art der Zustellung die **API-getriggerte Zustellung** aus und kopieren Sie dann die ID der Kampagne, die in den nächsten Schritten verwendet wird.
 
 ![API Ausgelöste Zustellung]({% image_buster /assets/img/zendesk/instant_chat/chat4.png %}){: style="max-width:70%;"}
 
@@ -86,7 +86,7 @@ Gehen Sie zu **Objekte und Regeln** > **Geschäftsregeln** > **Triggers** (Ausl�
 2. Erstellen Sie einen neuen **Trigger** (z.B. **Reagieren per SMS Braze**).
 3. Wählen Sie unter **Bedingungen**:
 - **Ticket>Kommentar** ist **vorhanden und der Anfragende kann den Kommentar sehen**, so dass die Nachricht immer dann getriggert wird, wenn ein neuer öffentlicher Kommentar in ein Ticket Update aufgenommen wird
-- **Ticket>Update** *ist kein* **Internet Dienst (API)**, so dass eine Nachricht, die ein Nutzer:innen von Braze aus sendet, nicht an sein Mobiltelefon weitergeleitet wird. Nur Nachrichten, die von Zendesk kommen, werden weitergeleitet.
+- **Ticket>Update** *ist kein* **Internet Dienst (API)**, so dass eine Nachricht, die ein Nutzer:innen von Braze aus sendet, nicht an sein Mobiltelefon weitergeleitet wird. Es werden nur Nachrichten weitergeleitet, die von Zendesk kommen.
 
 ![Antworten Sie per SMS Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat6.png %}){: style="max-width:70%;"}
 
@@ -175,7 +175,7 @@ Gehen Sie im Braze-Dashboard auf **Zielgruppe**, wählen Sie Ihre **SMS-Abo-Grup
 |------------------|---------------------------------------------------------------------------------------------------------------------------|
 | Keyword-Kategorie | Der Name Ihrer Schlüsselwortkategorie, z. B. `ZendeskSMS1`.                                                                 |
 | Keyword         | Ihre angepassten Schlüsselwörter, wie z.B. `SUPPORT`.                                                                                  |
-| Antwortnachricht    | Die Nachricht, die gesendet wird, wenn ein Schlüsselwort erkannt wird, z.B. "Ein Mitarbeiter des Kundendienstes wird sich in Kürze bei Ihnen melden." |
+| Antwortnachricht    | Die Nachricht, die gesendet wird, wenn ein Schlüsselwort erkannt wird, z.B. "Ein Mitarbeiter des Kund:in wird sich in Kürze bei Ihnen melden." |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ![Ein Beispiel für eine SMS-Schlüsselwortkategorie in Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat11.png %}){: style="max-width:70%;"}
@@ -262,6 +262,6 @@ Beispiel Körper:
 #### Schritt 6.5: Einrichtung der zweiten Webhook-Kampagne abschließen
 - Richten Sie einen aktionsbasierten Trigger für Nutzer:in ein, die eine eingehende Nachricht in der Kategorie "Andere" senden.
 - Legen Sie Kriterien für die Wiederzulassung fest.
-- Fügen Sie anwendbare Zielgruppen hinzu (in diesem Fall ist das angepasste Attribut **zendesk_ticket_open** **wahr**).
+- Anwendbare Zielgruppen hinzufügen (in diesem Fall ist das angepasste Attribut **zendesk_ticket_open** ist **wahr**).
 
 [2]: {% image_buster /assets/img/zendesk/instant_chat/chat2.png %}

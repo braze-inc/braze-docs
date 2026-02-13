@@ -1,16 +1,16 @@
 ---
 nav_title: Barrierefreiheit
-article_title: Barrierefreie Nachrichten in Braze erstellen
-page_order: 10.1
+article_title: Erstellen Sie barrierefreie Nachrichten in Braze
+page_order: 0.5
 page_type: reference
 description: "Dieser referenzierte Artikel erklärt, warum Barrierefreiheit bei Ihren Marketing-Inhalten wichtig ist und wie Sie in Braze barrierefreie Nachrichten erstellen können."
 ---
 
-# Erstellen zugänglicher Nachrichten in Braze
+# Erstellen Sie zugängliche Nachrichten in Braze
 
 > Verstehen Sie, warum Barrierefreiheit bei Ihren Marketing-Inhalten wichtig ist und wie Sie in Braze barrierefreie Nachrichten erstellen können. Weitere Anleitungen finden Sie in unserem Kurs [Grundlagen des barrierefreien Messaging](https://learning.braze.com/accessible-messaging-foundations) auf Braze Lernangebote.
 
-Marketing-Inhalte, die Menschen mit Behinderungen ausschließen, selbst wenn dies unabsichtlich geschieht, können Millionen von Menschen davon abhalten, mit Ihrer Marke zu interagieren. Bei der Zugänglichkeit im Marketing geht es darum, es jedem leicht zu machen, Ihr Marketing zu erleben, Ihre Kommunikation zu erhalten und zu verstehen und die Opportunity zu haben, in Ihr Produkt, Ihren Dienst oder Ihre Marke zu investieren oder ein Fan davon zu werden. 
+Marketing-Inhalte, die Menschen mit Behinderungen ausschließen, selbst wenn dies unabsichtlich geschieht, können Millionen von Menschen davon abhalten, mit Ihrer Marke zu interagieren. Bei der Zugänglichkeit im Marketing geht es darum, jedem die Möglichkeit zu geben, Ihr Marketing zu erleben, Ihre Kommunikation zu verstehen und die Opportunity zu haben, in Ihr Produkt, Ihren Dienst oder Ihre Marke zu investieren oder ein Fan davon zu werden. 
 
 Nehmen Sie sich bei der Gestaltung Ihres Messagings besonders viel Zeit, um zu überlegen, wie Sie Ihre Designs allen Kund:innen zugänglich machen können.
 
@@ -241,7 +241,7 @@ Touch Targets sind alle Teile Ihrer Nachricht, auf die Nutzer:innen tippen, um e
 Wenn die Touch-Targets zu klein sind oder zu dicht beieinander liegen, kann es für Nutzer:innen mit eingeschränkter Mobilität oder Geschicklichkeit frustrierend oder unmöglich sein, mit Ihrer Nachricht zu interagieren. Wenn Sie dies verbessern, können Sie Fehler reduzieren und eine reibungslosere Erfahrung für alle schaffen.
 
 Das sollten Sie beachten:
-- **Erleichtern Sie das Antippen.** Streben Sie eine Mindestgröße für das Targeting von 44 x 44 Pixeln an. Dies entspricht den WCAG 2.2-Richtlinien für [Touch-Targeting](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) und den üblichen Standards für mobile Benutzerfreundlichkeit.
+- **Verwenden Sie eine angemessene Targeting-Größe.** Streben Sie eine Mindestgröße für das Targeting von 44 x 44 Pixeln an. Dies entspricht den WCAG 2.2-Richtlinien für [Touch-Targeting](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) und den üblichen Standards für mobile Benutzerfreundlichkeit.
 - **Geben Sie jedem Targeting Raum zum Atmen.** Wenn Tap-Targets zu dicht beieinander liegen - wie gestapelte Links oder eng gruppierte Buttons -, kann man sie leicht übersehen oder auf das falsche tippen. Fügen Sie Abstand oder Padding zwischen den Elementen hinzu, um dies zu verhindern.
 - **Verlassen Sie sich nicht nur auf das Visuelle.** Selbst kleine Symbole können durch zusätzliches Padding besser nutzbar gemacht werden, so dass sie die Mindestgrößenanforderungen erfüllen, ohne das Layout zu verändern.
 - **Vorschau auf das Handy.** Testen Sie Ihre Nachrichten auf verschiedenen Bildschirmgrößen und stellen Sie sicher, dass die interaktiven Elemente einfach zu bedienen sind.
@@ -598,7 +598,7 @@ E-Mails, die mit dem Drag-and-Drop-Editor für E-Mails erstellt wurden, sind aut
 Damit Sie Probleme mit der Barrierefreiheit frühzeitig erkennen und beheben können, bietet Braze automatisierte Barrierefreiheitstests in den folgenden Bereichen an:
 
 - [Posteingang Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#accessibility-testing) für E-Mails
-- [Barrierefreiheits-Scanner]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/#accessibility-scanner) für Nachrichten, die mit unserem HTML-Editor erstellt wurden (z.B. In-App-Nachrichten, HTML Content-Blöcke, [angepasste E-Mail-Fußzeilen]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), [Opt-in-Seiten]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page) und [Seiten zum Abmelden von E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)).
+- [Barrierefreiheits-Scanner]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/?tab=in-app%20message#accessibility-scanner) für Nachrichten, die mit unserem HTML-Editor erstellt wurden (z.B. In-App-Nachrichten, HTML Content-Blöcke, [angepasste E-Mail-Fußzeilen]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), [Opt-in-Seiten]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page) und [Seiten zum Abmelden von E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)).
 
 Diese Tests überprüfen Ihre Nachrichten anhand der Web Content Accessibility Guidelines[(WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)), einer Reihe international anerkannter technischer Standards für barrierefreie Inhalte. Alle Probleme, die automatisch erkannt werden können, werden markiert und nach Schweregrad kategorisiert, damit Sie Prioritäten setzen können.
 

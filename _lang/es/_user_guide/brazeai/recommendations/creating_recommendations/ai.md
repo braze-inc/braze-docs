@@ -25,7 +25,7 @@ Utiliza las recomendaciones de artículos de IA para calcular los productos más
 
 Antes de empezar, tendrás que completar lo siguiente:
 
-- Debes tener al menos un [catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/) para utilizar cualquiera de los tipos de recomendación descritos a continuación.
+- Debes tener al menos un [catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/) para utilizar cualquiera de los tipos de recomendación que se describen a continuación.
 - Debes tener datos de compra o evento en Braze (eventos personalizados o el objeto de compra) que incluyan una referencia a ID de producto únicos almacenados en un catálogo.
 
 ### Paso 1: Crear una nueva recomendación
@@ -43,13 +43,13 @@ También puedes elegir crear una recomendación directamente desde un catálogo 
 {% endtab %}
 {% endtabs %}
 
-### Paso 2: Añadir detalles de la recomendación
+### Paso 2: Añadir detalles de la recomendación
 
 Dale a tu recomendación un nombre y una descripción opcional.
 
-\!["Detalles de la recomendación" paso con los campos nombre y descripción.]({% image_buster /assets/img/item_recs_1.png %})
+![Paso "Detalles de la recomendación" con los campos nombre y descripción.]({% image_buster /assets/img/item_recs_1.png %})
 
-### Paso 3: Define tu recomendación {#recommendation-type}
+### Paso 3: Define tu recomendación {#recommendation-type}
 
 Selecciona un tipo de recomendación. Cada tipo utiliza los últimos seis meses de datos de interacción de artículos, como una compra o datos de eventos personalizados. Para obtener información más detallada y casos de uso de cada uno, consulta [Tipos y casos de uso]({{site.baseurl}}/user_guide/brazeai/recommendations/).
 
@@ -61,13 +61,13 @@ Al utilizar **Más recientes** o **AI personalizada**, los usuarios con datos in
 
 Para evitar sugerir artículos que un usuario ya haya comprado o con los que ya haya interactuado, selecciona **No recomendar artículos con los que los usuarios hayan interactuado previamente**. Esta opción sólo está disponible cuando el **Tipo de** recomendación está configurado como **AI Personalizado**.
 
-\!["Define tu recomendación" paso con "AI Personalizada" como tipo y la opción "No recomendar artículos con los que los usuarios hayan interactuado previamente" seleccionada.]({% image_buster /assets/img/item_recs_2-3.png %})
+![Paso "Define tu recomendación" con "AI Personalizada" como tipo y la opción "No recomendar artículos con los que los usuarios hayan interactuado previamente" seleccionada.]({% image_buster /assets/img/item_recs_2-3.png %})
 
 Esta configuración impide que la mensajería reutilice los artículos que un usuario ya ha comprado o con los que ya ha interactuado, siempre que la recomendación se haya actualizado recientemente. Los artículos comprados o con los que se haya interactuado entre las actualizaciones de las recomendaciones pueden seguir apareciendo. En la versión gratuita de las recomendaciones de artículos, las actualizaciones son semanales. Para la versión pro de las recomendaciones de elementos de IA, las actualizaciones se producen cada 24 horas.
 
 Por ejemplo, al utilizar la versión pro de las recomendaciones de artículos de IA, si un usuario compra algo y luego recibe un correo electrónico de marketing en 30 minutos, es posible que el artículo que acaba de comprar no se excluya del correo electrónico a tiempo. Sin embargo, los mensajes enviados después de 24 horas no incluirán ese elemento.
 
-#### Paso 3.2: Selecciona un catálogo
+#### Paso 3.2: Seleccionar un catálogo
 
 Si aún no está rellenado, selecciona el [catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/) del que esta recomendación extraerá artículos.
 
@@ -75,10 +75,10 @@ Si aún no está rellenado, selecciona el [catálogo]({{site.baseurl}}/user_guid
 
 Si quieres tener más control sobre tu recomendación, elige una [selección]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) para aplicar filtros personalizados. Las selecciones filtran las recomendaciones por columnas específicas de tu catálogo, como marca, tamaño o ubicación. Las selecciones que contienen Liquid no pueden utilizarse en tu recomendación.
 
-\![Un ejemplo de la selección "en stock" seleccionada para la recomendación.]({% image_buster /assets/img/item_recs_2-2.png %})
+![Un ejemplo de la selección "en stock" seleccionada para la recomendación.]({% image_buster /assets/img/item_recs_2-2.png %})
 
 {% alert tip %}
-Si no encuentras tu selección, asegúrate primero de que está configurada en tu catálogo.
+Si no puedes encontrar tu selección, asegúrate de que esté configurada en tu catálogo.
 {% endalert %}
 
 ### Paso 4: Selecciona la interacción para impulsar las recomendaciones
@@ -93,7 +93,11 @@ Puedes optimizar para:
 
 Si eliges **Evento personalizado**, selecciona tu evento de la lista.
 
-\![El evento personalizado "Compra finalizada" seleccionado como la forma en que se realiza actualmente el seguimiento de los eventos.]({% image_buster /assets/img/item_recs_3.png %})
+![El evento personalizado "Compra finalizada" seleccionado es la forma en que se realiza actualmente el seguimiento de los eventos.]({% image_buster /assets/img/item_recs_3.png %})
+
+{% alert note %}
+Los eventos personalizados deben tener datos suficientes antes de aparecer en la lista de eventos. Si tu evento personalizado no aparece, puede deberse a que el backend Braze aún no lo ha procesado o a que carece de datos suficientes para el entrenamiento del modelo. Las recomendaciones de la IA se basan en datos históricos para generar información, por lo que los eventos recién creados o desencadenados raramente estarán disponibles hasta que se recopilen más datos.
+{% endalert %}
 
 ### Paso 5: Elige el nombre de la propiedad correspondiente {#property-name}
 
@@ -103,7 +107,7 @@ Selecciona este campo para el **Nombre de la propiedad**.
 
 El campo **Nombre de propiedad** se rellenará previamente con una lista de campos enviados a través del SDK a Braze. Si se proporcionan datos suficientes, estas propiedades también se clasificarán por orden de probabilidad de ser la propiedad correcta. Selecciona la que corresponda al campo `id` del catálogo.
 
-\![El nombre de la propiedad "purchase_item" seleccionada que corresponde al ID del artículo en el catálogo.]({% image_buster /assets/img/item_recs_4.png %})
+![El nombre de la propiedad "purchase_item" seleccionada que corresponde al ID del artículo en el catálogo.]({% image_buster /assets/img/item_recs_4.png %})
 
 #### Requisitos {#requirements}
 
@@ -113,6 +117,7 @@ Hay algunos requisitos para seleccionar tu propiedad:
 - **Si has seleccionado Objeto de compra:** Debe ser el `product_id` o un campo del `properties` de tu evento de interacción.
 - **Si has seleccionado Evento personalizado:** Debe ser un campo de tu evento personalizado `properties`.
 - Los campos anidados deben escribirse en el desplegable **Nombre de la propiedad** en notación de puntos con el formato `event_property.nested_property`. Por ejemplo, si seleccionas la propiedad anidada `district_name` dentro de la propiedad de evento `location`, introducirías `location.district_name`.
+- **Si utilizas [eventos de comercio electrónico]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/) para formar recomendaciones de artículos:** Añade `products.product_id` para acceder al ID del producto desde los eventos.
 - El campo puede estar dentro de una matriz de productos, o terminar con una matriz de ID. En cualquier caso, cada ID de producto se tratará como un evento independiente y secuencial con la misma marca de tiempo.
 
 #### Ejemplos de mapeados
@@ -185,7 +190,7 @@ Este evento tiene `"product_sku": "ADI-BL-7"`, que coincide con el primer elemen
 
 ##### Ejemplo de objeto evento personalizado con una matriz de productos
 
-Si las propiedades del evento contienen varios productos en una matriz, cada ID de producto se tratará como un evento independiente y secuencial. Este evento puede utilizar la propiedad `products.sku` para que coincida con el primer y el tercer elemento del catálogo de muestras.
+Si tus propiedades del evento contienen varios productos en una matriz, cada ID de producto se tratará como un evento independiente y secuencial. Este evento puede utilizar la propiedad `products.sku` para que coincida con el primer y el tercer elemento del catálogo de muestras.
 
 ```json
 {
@@ -266,7 +271,7 @@ Este evento tiene `"product_id": "ADI-BL-7`, que mapea al primer elemento del ca
 
 ##### Ejemplo de objeto de compra mapeado a un campo de propiedades
 
-Este evento tiene una propiedad de `"sku": "ADI-RD-8"`, que mapea al segundo elemento del catálogo.
+Este evento tiene una propiedad `"sku": "ADI-RD-8"`, que está mapeada en el segundo elemento del catálogo.
 
 ```json
 {

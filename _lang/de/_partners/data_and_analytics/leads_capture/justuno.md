@@ -36,11 +36,11 @@ Um Nutzer:innen-Attribute von Justuno mit Braze zu synchronisieren, müssen Sie 
 
 Um die Braze App zu Ihrem Justuno-Konto hinzuzufügen, gehen Sie zu **Kontoeinstellungen** > **Apps**, suchen Sie dann nach der Braze App und wählen Sie sie aus.
 
-![Die Seite "Apps verbinden" in Justuno mit der App Braze in der Liste der Suchergebnisse.]({% image_buster /assets/img/justuno/search-for-braze.png %})
+![Die Seite "Apps verbinden" in Justuno mit der Braze App in der Liste der Suchergebnisse.]({% image_buster /assets/img/justuno/search-for-braze.png %})
 
 Geben Sie den API-Schlüssel und die Basis-URL ein [, die Sie zuvor erstellt haben](#prerequisites), und wählen Sie dann **Verbinden**.
 
-![Das Braze-Authentifizierungs-Popup-Fenster, das nach einem Braze-API-Schlüssel und der Basis-URL fragt.]({% image_buster /assets/img/justuno/authenticate-braze.png %}){: style="max-width:75%;"}
+![Das Braze-Authentifizierungs-Popup-Fenster, in dem Sie nach einem Braze-API-Schlüssel und der Basis-URL gefragt werden.]({% image_buster /assets/img/justuno/authenticate-braze.png %}){: style="max-width:75%;"}
 
 #### Schritt 2.2: Fügen Sie es Ihrem Arbeitsablauf hinzu
 
@@ -69,7 +69,7 @@ So finden Sie diese IDs im Braze-Dashboard:
 
 Öffnen Sie in Ihrem Justuno-Workflow die Braze App und geben Sie dann die IDs für die einzelnen Abo-Gruppen ein.
 
-![Die Braze App geöffnet in einem Justuno-Workflow mit der Option, E-Mail- und SMS-Abo-Gruppen-IDs hinzuzufügen.]({% image_buster /assets/img/justuno/enter-subscription-groups.png %}){: style="max-width:55%;"}
+![Die Öffnung der App Braze in einem Justuno-Workflow mit der Option, E-Mail- und SMS-Abo-Gruppen IDs hinzuzufügen.]({% image_buster /assets/img/justuno/enter-subscription-groups.png %}){: style="max-width:55%;"}
 
 ### Schritt 4: Konfigurieren Sie Ihre Attribute
 

@@ -16,28 +16,28 @@ guide_featured_list:
   - name: "OBTER: Exibir tradução para uma campanha"
     link: /docs/api/endpoints/translations/campaigns/get_translation_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "OBTER: Ver todas as traduções de uma campanha"
-    link: /docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns/
-    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Atualizar Tradução em uma Campanha"
     link: /docs/api/endpoints/translations/campaigns/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
+  - name: "OBTER: Exibir traduções de origem padrão da campanha"
+    link: /docs/api/endpoints/translations/campaigns/get_source_campaign/
+    image: /assets/img/braze_icons/message-plus-square.svg
 
 guide_menu_title: "Canvas endpoints"
 guide_menu_list:
   - name: "OBTER: Ver tradução para uma canva"
     link: /docs/api/endpoints/translations/canvas/get_translation_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "OBTER: Ver todas as traduções de uma tela"
-    link: /docs/api/endpoints/translations/canvas/get_bulk_translations_canvases/
-    image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "PUT: Atualizar Tradução em uma canva"
+  - name: "PUT: Atualizar a conversão em uma tela"
     link: /docs/api/endpoints/translations/canvas/put_update_translation_canvas/
     image: /assets/img/braze_icons/target-04.svg
-  
+  - name: "OBTER: Exibir traduções de origem padrão da tela"
+    link: /docs/api/endpoints/translations/canvas/get_source_canvas/
+    image: /assets/img/braze_icons/message-plus-square.svg
+
 guide_menu_title2: "Email template endpoints"
 guide_menu_list2:
-  - name: "OBTER: Exibir tradução da fonte"
+  - name: "OBTER: Exibir traduções de origem padrão do modelo de e-mail"
     link: /docs/api/endpoints/translations/email_templates/get_view_source_template/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "OBTER: Exibir localização e tradução específicas"

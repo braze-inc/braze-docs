@@ -85,13 +85,13 @@ Créez un deuxième modèle d'exportation pour les opérations d’ajout uniquem
 
 Vous ne définirez que deux attributs pour ce modèle. Pour **PID**, définissez la **valeur de la ligne d'en-tête** sur `external_id`. Pour **Output Name**, définissez la **Header Row** comme `output_name`.
 
-![Un exemple de modèle d'exportation avec les attributs `external_id` et output name.]({% image_buster /assets/img/redpoint/rpi_to_braze_append_export_format.png %}){: style="max-width:75%;"}
+![Un exemple de modèle d'export avec les attributs `external_id` et le nom de sortie.]({% image_buster /assets/img/redpoint/rpi_to_braze_append_export_format.png %}){: style="max-width:75%;"}
 
 #### Étape 1c: Définir le format de la date
 
 Pour les deux modèles d'exportation, accédez à l'**Options** onglet et définissez le **Format de date** sur la valeur de **Format personnalisé**. Définir le format comme **yyyy-MM-dd**.
 
-![L'onglet des options indique que le format de la date est défini sur aaaa-MM-jj.]({% image_buster /assets/img/redpoint/rpi_to_braze_export_format_config.png %}){: style="max-width:75%;"}
+![L'onglet des options montrant le format de date défini sur aaaa-MM-jj.]({% image_buster /assets/img/redpoint/rpi_to_braze_export_format_config.png %}){: style="max-width:75%;"}
 
 ### Étape 2 : Créer des canaux sortants
 
@@ -131,16 +131,16 @@ L'archive contenant les artefacts de gestion des données Redpoint (RPDM) pour p
 
 #### Étape 4a: Mettre à jour le RPI vers l'automatisation Braze avec votre endpoint REST Braze et le répertoire de sortie de base RPI 
 
-Après avoir importé les composants associés de Braze dans le composant de gestion des données Redpoint, ouvrez l'automatisation nommée **AUTO_Process_RPI_to_Braze** et mettez à jour les deux variables d'automatisation suivantes avec les valeurs de votre environnement :
+Après avoir importé les artefacts liés à Braze dans le gestionnaire de données Redpoint, ouvrez l'automatisation nommée **AUTO_Process_RPI_to_Braze** et mettez à jour les deux variables d'automatisation suivantes avec les valeurs de votre environnement :
 
 * **BRAZE_API_URL**: L'endpoint REST de Braze
-* **BASE_OUTPUT_DIRECTORY** : Le répertoire de sortie partagé entre la fonction d’interaction de Redpoint et la fonction de gestion des données de Redpoint
+* **BASE_OUTPUT_DIRECTORY**: Le répertoire de sortie partagé entre la fonction d’interaction de Redpoint et la fonction de gestion des données de Redpoint
 
 ![]({% image_buster /assets/img/redpoint/rpi_to_braze_auto_variables.png %}){: style="max-width:40%;"}
 
 #### Étape 4b : Mettre à jour le RPI pour le projet d'ajout de Braze 
 
-Le projet de gestion des données Redpoint nommé **PROJ_RPI_to_Braze_Append** contient le schéma de fichier d'exportation de distribution sortant et les mappages pour l'objet attribut personnalisé `rpi_cdp_attributes` dans Braze. 
+Le projet de gestion des données de Redpoint nommé **PROJ_RPI_to_Braze_Append** contient le schéma du fichier d'exportation de réception/distribution et les mappages pour l'objet d'attribut personnalisé `rpi_cdp_attributes` dans Braze. 
 
 Mettre à jour le schéma de fichier d'entrée et l'outil d'injection de document nommé **RPI to Braze Document Injector** avec tous les attributs CDP personnalisés supplémentaires définis dans votre modèle de fichier d'exportation. Cet exemple montre le mappage supplémentaire de l'éducation, des revenus et de l'état civil :
 

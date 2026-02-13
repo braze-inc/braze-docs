@@ -43,9 +43,9 @@ tool: Canvas
 
 ### 知っておくべきこと
 
-- キャンバスのエントリプロパティは、Liquid でのみ参照できます。キャンバス内のプロパティをフィルタリングするには、代わりに[イベントプロパティのセグメンテーション]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/)を使用します。
-- アプリ内メッセージチャネルの場合、`canvas_entry_properties` はキャンバスでのみ参照できます。`event_properties` はアプリ内メッセージチャネルには使用できません。
-- `event_properties` は先頭のメッセージステップで使用できません。代わりに、`canvas_entry_properties` を使用するか、`event_properties` を含むメッセージステップの**前に**、対応するイベントを持つアクションパスステップを追加する必要があります。 
+- キャンバスのエントリプロパティは、Liquid でのみ参照できます。キャンバスのプロパティをフィルターするには、代わりに[イベントプロパティ セグメンテーション]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/)を使用します。
+- アプリ内メッセージ チャネルs では、キャンバス内の`canvas_entry_properties` および`event_properties` を参照できます。`event_properties` は、最初のキャンバスステップにトリガーベースであるため、アクセスできます。
+- `event_properties` は先頭のメッセージステップで使用できません。代わりに、`canvas_entry_properties` を使用するか、対応するイベント**before** で`event_properties` を含むメッセージステップにアクションパスステップを追加できます。
 - アクションパスステップに [SMS インバウンドメッセージを送信しました] または [WhatsApp インバウンドメッセージを送信しました] トリガーが含まれている場合、後続のキャンバスステップに SMS または WhatsApp Liquid プロパティを含めることができます。これは、キャンバスでのイベントプロパティの動作を反映します。こうすることで、メッセージを活用して、ユーザープロファイルや会話メッセージに関するファーストパーティデータを保存し、参照することができる。
 
 {% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
@@ -58,7 +58,7 @@ tool: Canvas
 
 {% raw %}
 ```liquid
-{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%H:%M" }
+{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%H:%M" }}
 ```
 {% endraw %}
 
@@ -71,13 +71,13 @@ tool: Canvas
 
 ![行動パス ステップの後に、ウィッシュリストに項目を追加したユーザーの遅延ステップとメッセージステップ、および他のすべてのユーザのパスが続きます。]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
-`canvas_entry_properties` と`event_properties` の違いをさらに理解するために、ユーザーが「ウィッシュリストにアイテムを追加」というカスタムイベントを実行すると、アクションベースのキャンバスに入るというシナリオを考えてみます。 
+`canvas_entry_properties` と`event_properties` の違いをさらに理解するために、ユーザーがカスタムイベント &quot を実行する場合にアクション ベースのキャンバスを入力し、wishlist" に項目を追加するこのシナリオを考えてみましょう。 
 
-`canvas_entry_properties` は、キャンバスの作成時に[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule)ステップで設定され、ユーザーがキャンバスに入るタイミングに対応します。これらの`canvas_entry_properties` は、Message ステップでも参照できます。
+`canvas_entry_properties` は、キャンバスを作成する[入力スケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule) ステップで設定され、ユーザーがキャンバスに入ったときに対応します。これらの`canvas_entry_properties` は、Message ステップでも参照できます。
 
-このキャンバスには、ユーザーがウィッシュリストにアイテムを追加したかどうかを判断するアクションパスのステップから始まるユーザージャーニーがあります。ここから、ユーザーがアイテムを追加した場合、メッセージステップから「ウィッシュリストに新しいアイテムを追加しました」というメッセージを受け取る前に、遅延が発生します。 
+このキャンバスには、ユーザーがウィッシュリストにアイテムを追加したかどうかを判断するアクションパスのステップから始まるユーザージャーニーがあります。ここから、ユーザーがアイテムを追加した場合、メッセージステップからメッセージ"wishlist!"の新規アイテムを受信するまでに遅延が発生します。 
 
-ユーザージャーニーの最初のメッセージステップは、アクションパスのステップからのカスタムの `event_properties` にアクセスできます。この場合、このメッセージステップにメッセージ内容の一部として ``{% raw %} {{event_properties.${property_name}}} {% endraw %}`` を含めることができます。ユーザーがウィッシュリストにアイテムを追加しなかった場合、「その他のユーザー」パスを進みます。そのため、`event_properties` を参照できず、無効な設定エラーが反映されます。
+アクションパスステップから、ユーザージャーニーの最初のメッセージステップがカスタム`event_properties` にアクセスできます。この場合、このメッセージステップにメッセージ内容の一部として ``{% raw %} {{event_properties.${property_name}}} {% endraw %}`` を含めることができます。ユーザーがウィッシュリストに項目を追加しない場合、Everyone Else パスを経由します。つまり、`event_properties` は参照できず、不正な設定 s エラーが反映されます。
 
-なお、`event_properties` にアクセスできるのは、メッセージステップが、アクションパスステップの「その他のユーザー」以外のパスに遡ることができる場合のみです。メッセージステップが「その他のユーザー」パスに接続されていても、ユーザージャーニー内のアクションパスステップに遡ることができる場合には、`event_properties` にアクセスすることが可能です。これらの動作の詳細については、[メッセージステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)を参照してください。
+なお、`event_properties` にアクセスできるのは、メッセージステップが、アクションパスステップの「その他のユーザー」以外のパスに遡ることができる場合のみです。Message ステップがEveryone Else パスに接続されているが、ユーザージャーニーのAction パス s ステップに遡ることができる場合でも、`event_properties` にアクセスできます。これらの動作の詳細については、[メッセージステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)を参照してください。
 

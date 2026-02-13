@@ -16,11 +16,11 @@ Par exemple, vous pouvez avoir un événement personnalisé nommé “cart_updat
 Les événements recommandés sont actuellement en accès anticipé. Contactez votre gestionnaire satisfaction client Braze si vous souhaitez participer à cet accès anticipé. <br><br>Si vous exploitez le nouveau [connecteur Shopify]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), ces événements recommandés seront automatiquement disponibles grâce à l'intégration.
 {% endalert %}
 
-## Comment cela fonctionne-t-il ?
+## Fonctionnement
 
 Braze applique une validation spéciale à tous les événements recommandés, et certains événements recommandés font l'objet d'un post-traitement particulier. Pour certains événements recommandés par l'industrie, Braze peut prendre en charge un traitement spécial, comme de nouveaux déclencheurs basés sur des actions pour les campagnes et les Canvases.
 
-Les événements recommandés fonctionnent de la même manière que les [événements personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_events). Vous pouvez exporter des événements recommandés à partir de Currents, les mettre en liste de blocage et les utiliser dans des rapports. Vous pouvez également envoyer des données dans Braze pour le suivi de ces événements à l'aide du [SDK de Braze]({{site.baseurl}}/developer_guide/getting_started/sdk_overview) ou de l'[endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track).
+Les événements recommandés fonctionnent de la même manière que les [événements personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_events). Vous pouvez exporter les événements recommandés à partir de Currents, les mettre en liste de blocage et les utiliser dans les rapports. Vous pouvez également envoyer des données dans Braze pour le suivi de ces événements à l'aide du [SDK de Braze]({{site.baseurl}}/developer_guide/getting_started/sdk_overview) ou de l'[endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track).
 
 ### Événements recommandés pour le commerce électronique
 
@@ -35,9 +35,9 @@ Les [événements recommandés pour le commerce électronique]({{site.baseurl}}/
 
 #### Modèles de canevas pour le commerce électronique
 
-Consultez nos [cas d'utilisation]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/) dédiés à [l'e-commerce]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/) pour plus d'idées sur la façon d'utiliser les modèles préconstruits de Braze Canvas pour mettre en œuvre des stratégies essentielles.
+Consultez nos [cas d'utilisation dédiés à l'e-commerce]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/) pour plus d'idées sur la façon d'utiliser les modèles préconstruits de Braze Canvas pour mettre en œuvre des stratégies essentielles.
 
-## Questions fréquemment posées
+## Foire aux questions
 
 ### Les événements recommandés sont-ils les mêmes que les événements personnalisés ?
 

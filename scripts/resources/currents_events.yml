@@ -130,6 +130,8 @@ event_documentation:
       - Abort
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 WhatsApp messages every 1 week`"
   users.messages.whatsapp.InboundReceive:
     description: This event occurs when one of your users sends a WhatsApp message to a phone number in one of your Braze WhatsApp subscription groups.
     api_tags:
@@ -142,6 +144,8 @@ event_documentation:
       - Content Cards
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Content Card messages every 1 week`"
   users.messages.email.Abort:
     description: This event occurs if an email message was aborted based on Liquid aborts, etc.
     api_tags:
@@ -149,6 +153,8 @@ event_documentation:
       - Email
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 email messages every 1 week`"
   users.messages.pushnotification.Abort:
     description: This event occurs if a push notification message was aborted based on Liquid aborts, etc.
     api_tags:
@@ -156,11 +162,16 @@ event_documentation:
       - Push
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 push messages every 1 week`"
   users.messages.sms.Abort:
     description: This event occurs if an SMS message was aborted based on Liquid aborts, etc.
     api_tags:
       - Abort
       - SMS
+    property_details:
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 SMS messages every 1 week`"
   users.messages.webhook.Abort:
     description: This event occurs if a webhook message was aborted based on Liquid aborts, etc.
     api_tags:
@@ -168,6 +179,8 @@ event_documentation:
       - Webhooks
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 webhook messages every 1 week`"
   users.messages.webhook.Failure:
     description: This event occurs if a webhook message was delivered but failed with an error response from the endpoint.
     api_tags:
@@ -236,7 +249,7 @@ event_documentation:
       - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.email.Send:
-    description: This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the user's inbox.
+    description: This event occurs when an email send request was successfully communicated between Braze and SendGrid. However, this does not mean the email was received in the user's inbox. Braze does not log events to user profiles or any Currents destination (such as Snowflake) if the event cannot be matched to both the email and user ID associated with the email event
     api_tags:
       - Email
       - Sends
@@ -333,6 +346,9 @@ event_documentation:
     api_tags:
       - In-App Messages
       - Abort
+    property_details:
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 in-app messages every 1 week`"
   users.messages.inappmessage.Click:
     description: This event occurs when a user clicks an in-app message.
     alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
@@ -536,6 +552,9 @@ event_documentation:
     api_tags:
       - Banner
       - Abort
+    property_details:
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Banner messages every 1 week`"
   users.messages.banner.Click:
     description: This event occurs when a user clicks a banner.
     api_tags:
@@ -558,6 +577,8 @@ event_documentation:
       - Abort
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 LINE messages every 1 week`"
   users.messages.line.Send:
     description: This event occurs when a LINE message is sent to LINE.
     api_tags:
@@ -608,4 +629,45 @@ event_documentation:
     api_tags:
       - RCS
       - Abort
+    property_details:
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 RCS messages every 1 week`"
+  users.messages.email.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - Email
+      - Retry
+  users.messages.line.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - LINE
+      - Retry
+  users.messages.pushnotification.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - Push
+      - Retry
+  users.messages.whatsapp.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - WhatsApp
+      - Retry
+  users.messages.sms.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - SMS
+      - Retry
+  users.messages.webhook.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - Webhooks
+      - Retry
+  agentconsole.AgentExecuted:
+    description: This is the Kafka record schema for when an Agent Console agent is executed.
+    api_tags:
+      - Agent
+  agentconsole.ToolInvocation:
+    description: This is the Kafka record schema for when a tool is executed.
+    api_tags:
+      - Agent
 
