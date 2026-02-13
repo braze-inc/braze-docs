@@ -44,5 +44,5 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 {% endalert %}
 
 {% alert note %}
-The events in this glossary are for SDK-initiated changes. It is expected that `sdk_version`, `gender`, `language`, and `country` return `null`.
+Many of the events in this glossary are SDK-initiated. For SDK-initiated events, the `sdk_version`, `gender`, `language`, and `country` fields may be `null` if that information is not available or not set for the user.
 {% endalert %}
