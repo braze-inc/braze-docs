@@ -167,6 +167,20 @@ Braze processes time values based on the dashboard timestamp. For example, if a 
 {% endtab %}
 {% endtabs %}
 
+## Catalog data types
+
+Catalogs support various data types to help you organize and structure your data effectively. The following table describes each supported data type:
+
+| Data Type | Format | Example | Description |
+|-----------|--------|---------|-------------|
+| String | Text | `"Hello World"` | Any sequence of characters used for text data such as names, descriptions, and IDs. |
+| Time | ISO 8601 or timestamp | `"2024-03-15T14:30:00Z"` | Date and time values formatted as ISO 8601 or Unix timestamp. |
+| Boolean | `true` or `false` | `true` | Logical values representing true or false states. |
+| Number | Integer or decimal | `42` or `19.99` | Numeric values including integers and floating-point numbers for prices, quantities, ratings, etc. |
+| JSON Object | JSON format | `{"key": "value", "price": 10}` | Complex nested data structures. Only available via API or CDI. Will display in the platform. |
+| String array | Array of strings | `["red", "blue", "green"]` | Lists of string values. Only available via API or CDI. Will display in the platform. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
 ## Using templates in catalog names {#template-catalog-names}
 
 When naming your catalog, you can also use templates in a catalog name. This lets you dynamically generate catalog names based on variables like language or campaign. For example, you can use the following:
