@@ -6,7 +6,7 @@ page_type: reference
 description: "This reference article covers the topic of IP warming and best practices."
 channel: email
 local_redirect:
-  automated-ip-warming: '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/automated-ip-warming/'
+  automated-ip-warming: '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/automated_ip_warming/'
 ---
 
 # IP warming
