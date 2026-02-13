@@ -96,7 +96,7 @@ In the **Message** textbox, add the following Liquid code, along with any opt-ou
 
 Your message should be similar to the following:
 
-![Liquid 코드를 사용한 메시지의 예.]({% image_buster /assets/img/front/sms_to_braze.png %}){: style="max-width:80%;"}
+![Liquid 코드를 사용하는 메시지의 예.]({% image_buster /assets/img/front/sms_to_braze.png %}){: style="max-width:80%;"}
 
 #### 2.2 Schedule the delivery
 
@@ -144,7 +144,7 @@ In the Braze dashboard, go to **Audience**, choose your **SMS subscription group
 |---|---|
 |Keyword Category|The name of your keyword category, such as `FrontSMS1`.|
 |Keywords|Your custom keywords, such as `TIMETOMOW`. Avoid common words to prevent accidental triggers. Keep in mind, keywords are case insensitive, so `lawn` would match `LAWN`.|
-|Reply Message|키워드가 감지될 때 전송될 메시지, 예를 들어 "조경사가 곧 연락드릴 것입니다."|
+|Reply Message|키워드가 감지될 때 전송될 메시지, 예: "조경사가 곧 연락드릴 것입니다."|
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ![Braze의 SMS 키워드 카테고리 예시.]({% image_buster /assets/img/front/front_keyword.png %}){: style="max-width:65%;"}
@@ -198,7 +198,7 @@ Under **Delivery Controls**, enable re-eligibility.
 
 For **Schedule Delivery**, set the **action-based trigger** and the **SMS subscription group** to the same as [your the first delivery](#step-53-schedule-the-first-delivery). However, for **keyword category**, choose **Other**.
 
-![두 번째 웹훅 캠페인을 위한 "예정된 전달" 페이지, 키워드 카테고리로 "기타"가 선택됨.]({% image_buster /assets/img/front/front_actionbased_other_keyword.png %})
+![두 번째 웹훅 캠페인을 위한 "전달 일정" 페이지, 키워드 카테고리로 "기타"가 선택됨.]({% image_buster /assets/img/front/front_actionbased_other_keyword.png %})
 
 #### Step 5.6: Add an audience filter
 
