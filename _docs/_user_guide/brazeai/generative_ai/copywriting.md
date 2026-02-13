@@ -39,10 +39,10 @@ Selecting a tone adds a style instruction to the prompt sent to OpenAI, so the e
   - **Personal:** More 1:1 and empathetic. Uses "you" more, can feel more tailored, especially if you add personalization like {% raw %}`{{user.first_name}}`{% endraw %} to the message you're creating.
   - **Eye-catching:** More attention-grabbing. Punchier phrasing, higher energy, stronger hooks and CTAs (often reads more "promo" than the other tones).
   - **Sophisticated:** More elevated, refined language. Less casual, more "premium" positioning.
-  - **Professional:** Businesslike and clear. Similar to Formal, but usually less stiff and more modern.
+  - **Professional:** Businesslike and clear. More modern and approachable than Formal, while still maintaining authority.
   - **Passive:** Softer, less pushy language. Fewer direct commands, more suggestive phrasing.
   - **Urgent:** Emphasizes immediacy and time sensitivity. Stronger CTAs, deadlines, scarcity cues.
-  - **Exciting:** More energetic and enthusiastic. More hype and celebratory language (often more punchy).
+  - **Exciting:** More energetic and enthusiastic. Emphasizes positive emotion and celebration (often more hype-focused than Eye-catching's hook-driven approach).
  
   
 - **Reference past campaign data**: When enabled, previous mobile push notifications sent through your campaigns or Canvas steps are used for stylistic reference to generate your new copy. For more information, see [Using past campaign data](#past-campaign-data).
