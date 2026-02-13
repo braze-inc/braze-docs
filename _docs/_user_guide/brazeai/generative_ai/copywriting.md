@@ -30,7 +30,7 @@ To customize your copy further, you can:
 - **Apply brand guidelines:** After [generating brand guidelines with BrazeAI<sup>TM</sup>]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines), you can use them to help generate your copy.
 - **Choose a tone:** Each tone will generate copy in a different style. Choose the tone that best matches your brand voice.
   
-  These tone options are not strict templates with a published, deterministic rule set. In practice, selecting a tone adds a style instruction to the prompt sent to OpenAI, so the exact output can vary by input, channel length, brand guidelines, and the model. 
+Selecting a tone adds a style instruction to the prompt sent to OpenAI, so the exact output can vary by input, channel length, brand guidelines, and the model. 
   
   Here's what each tone is intended to do by default:
   - **Formal:** More professional and polished wording. Full sentences, more courteous language, minimal slang.
@@ -38,6 +38,8 @@ To customize your copy further, you can:
   - **Casual:** More relaxed and conversational. Friendlier phrasing, simpler words, lighter energy.
   - **Personal:** More 1:1 and empathetic. Uses "you" more, can feel more tailored, especially if you add personalization like {% raw %}`{{user.first_name}}`{% endraw %} to the message you're creating.
   - **Eye-catching:** More attention-grabbing. Punchier phrasing, higher energy, stronger hooks and CTAs (often reads more "promo" than the other tones).
+ 
+  
 - **Reference past campaign data**: When enabled, previous mobile push notifications sent through your campaigns or Canvas steps are used for stylistic reference to generate your new copy. For more information, see [Using past campaign data](#past-campaign-data).
 - **Auto-translate copy:** You can choose a different output language for your copy. Generated content will be output to that language.
 
