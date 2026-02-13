@@ -35,6 +35,7 @@ jobs:
           else
             echo "No image files to optimize."
           fi
+          exit 0
 
       # Automatically commits any optimized images back into the PR branch.
       - uses: stefanzweifel/git-auto-commit-action@v5
