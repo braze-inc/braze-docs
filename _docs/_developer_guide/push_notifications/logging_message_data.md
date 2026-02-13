@@ -159,7 +159,7 @@ The following steps cover how to save and send custom events, custom attributes,
 
 In Xcode, add the `App Groups` capability to your main app target. Turn on **App Groups**, then click **+** to add a new group. Use your app's bundle ID to create the group identifier (for example, `group.com.company.appname.xyz`). Turn on **App Groups** for both your main app target and the content extension target.
 
-![Xcode App Groups capability enabled for main app and notification content extension targets]({% image_buster /assets/img/swift/push_story/add_app_groups.png %})
+![Xcode showing App Groups capability enabled for main app and notification extension]({% image_buster /assets/img/swift/push_story/add_app_groups.png %})
 
 ### Step 2: Choose what to log
 
@@ -662,7 +662,7 @@ class RemoteStorage: NSObject {
         _defaults = [NSUserDefaults standardUserDefaults];
         break;
       case StorageTypeSuite:
-        _defaults = [[NSUserDefaults alloc] initWithSuiteName:@"YOUR-DOMAIN-IDENTIFIER"];
+        _defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.company.appname.xyz"];
         break;
     }
   }
