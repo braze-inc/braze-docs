@@ -179,7 +179,7 @@ When collecting logs for Braze Support, start logging before launching your app 
 
 ## Reading verbose logs
 
-Verbose logs follow a consistent structure that helps you trace what the SDK is doing. To learn how to interpret log output for specific channels, including what key entries to look for and common troubleshooting patterns, see [Reading verbose logs]({{site.baseurl}}/developer_guide/verbose_log_reading).
+Verbose logs follow a consistent structure that helps you trace what the SDK is doing. To learn how to interpret log output for specific channels, including what key entries to look for and common troubleshooting patterns, see [Reading verbose logs]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs).
 
 ## Sharing logs with Braze Support
 
