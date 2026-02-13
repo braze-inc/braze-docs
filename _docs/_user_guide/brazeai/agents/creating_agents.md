@@ -151,7 +151,7 @@ The **Preview** pane is an instance of the agent that shows up as a side-by-side
 
 Review the output with a critical eye. Consider the following questions:
 
-- Does the copy feel on brand? 
+- Does the copy feel on brand?
 - Does the decision logic route customers as intended?
 - Are the calculated values accurate?
 
