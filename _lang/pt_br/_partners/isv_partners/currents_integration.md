@@ -4,15 +4,15 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# Conector Currents personalizado
+# Conector de Currents personalizado
 
-> Aprenda a integrar um conector Currents personalizado, para que você possa obter dados de eventos do Braze em tempo real, permitindo análises, relatórios e automação mais personalizados.
+> Aprenda a integrar um conector de Currents personalizado, para que você possa obter dados de eventos do Braze em tempo real, permitindo análises, relatórios e automação mais personalizados.
 
 ## Pré-requisitos
 
-Para integrar um conector Currents personalizado no Braze, você precisará fornecer uma URL de endpoint e um [token de autenticação opcional](#authentication).
+Para integrar um conector de Currents personalizado no Braze, você precisará fornecer uma URL de endpoint e um [token de autenticação opcional](#authentication).
 
-Além disso, se você tiver mais de um grupo de app no Braze, precisará configurar um conector Currents personalizado para cada grupo. No entanto, você pode apontar todos os grupos de app para o mesmo endpoint, ou para um endpoint com um `GET` parâmetro adicional, como `your_app_group_key=”Brand A”`.
+Além disso, se você tiver mais de um grupo de app no Braze, precisará configurar um conector de Currents personalizado para cada grupo. No entanto, você pode apontar todos os grupos de app para o mesmo endpoint, ou para um endpoint com um `GET` parâmetro adicional, como `your_app_group_key=”Brand A”`.
 
 ## Prevenindo perda de dados
 
@@ -24,12 +24,12 @@ Para a maioria dos tipos de erro, (como erros de servidor, erros de conexão de 
 
 ### Resiliência a mudanças
 
-Ocasionalmente, faremos alterações não disruptivas nos esquemas Currents do Braze. Alterações não disruptivas são novas colunas ou tipos de eventos que podem ser nulos.
+Ocasionalmente, faremos alterações não disruptivas nos esquemas de Currents do Braze. Alterações não disruptivas são novas colunas ou tipos de eventos que podem ser nulos.
 
 Normalmente, damos um aviso de duas semanas para essas mudanças, mas às vezes isso não é possível. É essencial que você projete sua integração para lidar com campos ou tipos de eventos não reconhecidos, caso contrário, isso provavelmente levará à perda de dados.
 
 {% alert tip %}
-Para a lista completa de esquemas de eventos Currents, [Eventos de Engajamento de Mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events).
+Para a lista completa de esquemas de eventos de Currents, [Eventos de Engajamento de Mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events).
 {% endalert %}
 
 ## Agrupamento e serialização
@@ -397,7 +397,7 @@ Authorization: Bearer 0p3n5354m3==
 ```
 
 {% alert note %}
-No futuro, podemos usar cabeçalhos `Authorization` para implementar um esquema de autorização personalizado, chave-valor, que é exclusivo do Braze. Isso aderiria à especificação [RFC 7235](https://tools.ietf.org/html/rfc7235), que é como algumas empresas implementam seus esquemas de autenticação, como a Amazon Web Services (AWS).
+No futuro, podemos usar cabeçalhos `Authorization` para implementar um esquema de autorização personalizado, chave-valor, que é exclusivo para Braze. Isso aderirá à especificação [RFC 7235](https://tools.ietf.org/html/rfc7235), que é como algumas empresas implementam seus esquemas de autenticação, como a Amazon Web Services (AWS).
 {% endalert %}
 
 ## Versão
@@ -408,7 +408,7 @@ Todas as solicitações da nossa integração de conector HTTP serão enviadas c
 Braze-Currents-Version: 1
 ```
 
-A versão será sempre `1` a menos que, como não esperamos incrementar esse número com muita frequência, se é que algum dia.
+A versão será sempre `1`, a menos que, como não esperamos incrementar esse número com muita frequência, se é que algum dia.
 
 Assim como nossos [esquemas de armazenamento de data warehouse]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics?redirected=1), cada campo de evento em um evento individual é garantido ser retrocompatível com versões anteriores de carga útil de eventos, de acordo com a definição de retrocompatibilidade do [Apache Avro](https://avro.apache.org/):
 
@@ -418,9 +418,9 @@ Assim como nossos [esquemas de armazenamento de data warehouse]({{site.baseurl}}
 
 ## Mecanismo de tratamento de erros e novas tentativas
 
-Se ocorrer um erro, o Braze irá enfileirar e tentar novamente a solicitação com base no código de retorno HTTP recebido. Ele continuará a tentar por pelo menos dois dias, desde que os dados estejam armazenados em buffer no sistema. Se os dados estiverem presos por mais de 24 horas, nossos engenheiros de plantão serão alertados automaticamente. Neste momento, nossa estratégia de recuo é tentar novamente periodicamente.
+Se ocorrer um erro, Braze irá enfileirar e tentar novamente a solicitação com base no código de retorno HTTP recebido. Ele continuará a tentar por pelo menos dois dias, desde que os dados estejam armazenados em buffer no sistema. Se os dados estiverem parados por mais de 24 horas, nossos engenheiros de plantão serão alertados automaticamente. Neste momento, nossa estratégia de recuo é tentar novamente periodicamente.
 
-Se sua integração Currents começar a retornar erros `4XX`, o Braze enviará automaticamente um e-mail de notificação e estenderá automaticamente o período de retenção para um mínimo de sete dias.
+Se sua integração Currents começar a retornar erros `4XX`, Braze enviará automaticamente um e-mail de notificação e estenderá automaticamente o período de retenção para um mínimo de sete dias.
 
 Qualquer código de erro HTTP não listado abaixo será tratado como um erro HTTP `5XX`.
 
