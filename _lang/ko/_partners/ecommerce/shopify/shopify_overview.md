@@ -12,7 +12,7 @@ page_order: 0
 
 > [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere.
 
-Braze와 Shopify의 통합은 고객 참여를 강화하고 개인화된 마케팅 활동을 추진하고자 하는 전자상거래 비즈니스에 강력한 솔루션을 제공합니다. 이 통합은 Shopify의 강력한 이커머스 기능과 고도화된 고객 참여 플랫폼을 원활하게 연결하여 실시간 쇼핑 행동 및 트랜잭션 데이터를 기반으로 사용자에게 관련성 있고 시의적절한 메시지를 전달할 수 있도록 지원합니다.
+Braze와 Shopify의 통합은 고객 참여를 강화하고 개인화된 마케팅 활동을 추진하고자 하는 이커머스 비즈니스에 강력한 솔루션을 제공합니다. 이 통합은 Shopify의 강력한 이커머스 기능과 고도화된 고객 참여 플랫폼을 원활하게 연결하여 실시간 쇼핑 행동 및 트랜잭션 데이터를 기반으로 사용자에게 관련성 있고 시의적절한 메시지를 전달할 수 있도록 지원합니다.
 
 ## 요구 사항
 
