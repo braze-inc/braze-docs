@@ -21,7 +21,7 @@ When you log in, the dashboard provides a centralized view of your engagement to
 - **Left navigation**: Organizes tools by function (messaging, audience, analytics, settings)
 - **Global header**: Provides quick access to search, support, language settings, notifications, and your account
 
-Your dashboard experience is organized by [workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/), which help you manage content for different brands, regions, or teams. You can [switch between workspaces](#workspace-switcher) at any time from the side navigation.
+Your dashboard experience is organized by [workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces), which help you manage content for different brands, regions, or teams. You can [switch between workspaces](#workspace-switcher) at any time from the side navigation.
 
 ## Access your dashboard
 
@@ -143,16 +143,7 @@ For more information, see [Home dashboard]({{site.baseurl}}/user_guide/data_and_
 
 ### Adding favorite workspaces
 
-If you work across multiple workspaces, you can mark your most frequently used ones as favorites for faster access.
-
-To add favorite workspaces:
-
-1. Select your profile icon in the global header, then select **Manage your account**.
-2. In the **Account Profile** section, locate the **Favorite workspaces** field.
-3. Select the workspaces you want to favorite from the list.
-4. Select **Save changes**.
-
-Your favorite workspaces will appear at the top of the workspace switcher for quick access.
+If you work across multiple workspaces, you can mark your most frequently used ones as favorites for faster access. To add favorite workspaces, [access your profile settings](#accessing-your-profile-settings), locate the **Favorite workspaces** field in the **Account Profile** section, and select the workspaces you want to favorite. Your favorite workspaces will appear at the top of the workspace switcher for quick access.
 
 ### Accessing your profile settings
 
