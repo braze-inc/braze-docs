@@ -24,14 +24,17 @@ jobs:
 
       # Finds only added/modified PNG or JPG files in the PR and optimizes them in place.
       - run: |
-          git diff --name-only --diff-filter=AM origin/${{ github.base_ref }}...HEAD \
-            | grep -E '^assets/img/.*\.(png|jpg|jpeg)$' \
-            | while read f; do
-                case "$f" in
-                  *.png)  pngquant --skip-if-larger --ext .png --force 80 "$f" ;;
-                  *.jpg|*.jpeg) jpegoptim --strip-all --max=80 "$f" ;;
-                esac
-              done
+          files=$(git diff --name-only --diff-filter=AM origin/${{ github.base_ref }}...HEAD | grep -E '^assets/img/.*\.(png|jpg|jpeg)$' || true)
+          if [[ -n "$files" ]]; then
+            echo "$files" | while read f; do
+              case "$f" in
+                *.png)  pngquant --skip-if-larger --ext .png --force 80 "$f" ;;
+                *.jpg|*.jpeg) jpegoptim --strip-all --max=80 "$f" ;;
+              esac
+            done
+          else
+            echo "No image files to optimize."
+          fi
 
       # Automatically commits any optimized images back into the PR branch.
       - uses: stefanzweifel/git-auto-commit-action@v5
