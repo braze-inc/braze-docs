@@ -66,7 +66,7 @@ When using Segment's device-mode, you do not need to integrate the Braze SDK dir
 {% endalert %}
 
 {% alert important %}
-For device-mode integrations on mobile, you must add the Braze destination plugin to your app in addition to configuring the destination in the Segment dashboard. The Segment SDK does not include the Braze plugin by default — without it, Braze SDK calls are not forwarded and features like push, in-app messages, and Content Cards won't work. See the platform-specific tabs below for installation instructions.
+For device-mode integrations on mobile, you must add the Braze destination plugin to your app in addition to configuring the destination in the Segment dashboard. The Segment SDK does not include the Braze plugin by default — without it, the Segment SDK cannot forward data or mapped method calls to Braze, and features like push, in-app messages, and Content Cards won't work. See the platform-specific tabs below for installation instructions.
 {% endalert %}
 
 When using a device-mode connection, similar to integrating the Braze SDK natively, the Braze SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
