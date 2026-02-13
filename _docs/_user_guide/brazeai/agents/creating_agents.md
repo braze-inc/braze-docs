@@ -159,7 +159,7 @@ If something feels off, update the agent’s configuration and test again. Run a
 
 ### Step 5: Use and monitor your agent
 
-Your agent is now ready to use! For details, see [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
+Your agent is now ready to use! For details, refer to [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
 
 In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location.
 
