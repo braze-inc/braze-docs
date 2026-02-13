@@ -73,7 +73,7 @@ When using a device-mode connection, similar to integrating the Braze SDK native
 
 {% alert note %}
 If you use [destination filters](https://segment.com/docs/connections/destinations/destination-filters/) with device-mode (Kotlin or Swift) destinations, you must configure the destination plugin with the filter support enabled. Refer to Segment's [destination filters documentation](https://segment.com/docs/connections/destinations/destination-filters/) for details on supported plugin versions.
-{% endalert %} 
+{% endalert %}
 
 {% tabs local %}
 {% tab Android %}
