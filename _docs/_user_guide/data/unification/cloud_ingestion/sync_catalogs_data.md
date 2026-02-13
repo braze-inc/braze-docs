@@ -198,7 +198,7 @@ Set up your source files in S3 by providing JSON or CSV files. Keep in mind:
 
 - Files cannot include an `UPDATED_AT` column  
 - You can include an optional `DELETED` field to mark items for removal 
-- Complete S3 setup requires an S3 bucket, SQS queue, and IAM role/policy configuration
+- Complete S3 setup requires an S3 bucket, Amazon SQS (Simple Queue Service) queue, and AWS Identity and Access Management (IAM) role and policy configuration
 - Braze only processes files uploaded after the sync is created; re-upload existing files you want to ingest
 
 For the full S3 setup flow, see [File storage integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/), especially:
