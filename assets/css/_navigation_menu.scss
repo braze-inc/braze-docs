@@ -60,11 +60,11 @@ $nav_toggle_border: #525256;
 					color: $black-shark;
 				}
 				&:focus {
-					outline: none;
-				}
-				&:focus-visible {
 					outline: 2px solid $braze-purple;
 					outline-offset: 2px;
+				}
+				&:focus:not(:focus-visible) {
+					outline: none;
 				}
 			}
 		}
@@ -239,11 +239,11 @@ $nav_toggle_border: #525256;
 			background-color: rgba(0, 0, 0, 0.06);
 		}
 		&:focus {
-			outline: none;
-		}
-		&:focus-visible {
 			outline: 2px solid $braze-purple;
 			outline-offset: 2px;
+		}
+		&:focus:not(:focus-visible) {
+			outline: none;
 		}
 		i {
 			width: 10px;
@@ -251,6 +251,13 @@ $nav_toggle_border: #525256;
 			line-height: 1;
 			font-size: 10px;
 		}
+	}
+	// Consistent row height for leaf items — match parent row height (set by button.nav_toggle min-height)
+	.nav div.nav-item > .nav_reg,
+	.nav div.nav-item > .nav_block {
+		display: flex;
+		align-items: center;
+		min-height: 28px;
 	}
 	.nav {
 		font-family: $braze-regular;
@@ -417,11 +424,11 @@ $nav_toggle_border: #525256;
 		background: transparent;
 		padding: 0.5rem 0.75rem;
 		&:focus {
-			outline: none;
-		}
-		&:focus-visible {
 			outline: 2px solid $braze-purple;
 			outline-offset: 2px;
+		}
+		&:focus:not(:focus-visible) {
+			outline: none;
 		}
 	}
 	#nav_filter {
