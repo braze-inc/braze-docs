@@ -149,7 +149,7 @@ No, this is not a bug. Certain customers are limited in the number of users they
 
 As the EA program progresses, this capacity is designed to increase until all customers can delete up to 100 million users.
 
-If you want to increase this capacity, contact your Braze account manager to submit a request. Requests are granted at the discretion of the product team.
+If you want to increase this capacity, contact your Braze account manager. Requests are granted at the discretion of the product team.
 
 ### Does automated user merging affect user deletion?
 
