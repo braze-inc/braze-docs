@@ -113,7 +113,7 @@ Você pode visualizar o público no Pinterest entrando em sua conta do Gerenciad
 
 Quando os usuários atingem a etapa de sincronização do público, o Braze os sincroniza quase em tempo real, respeitando os limites de frequência da API de marketing do Pinterest. O Braze agrupa e processa o maior número possível de usuários a cada 5 segundos antes de enviá-los ao Pinterest.
 
-O limite de frequência da API de segmento do Pinterest não permite mais do que sete consultas por segundo por usuário e 1.900 usuários por solicitação. Se um cliente atingir esse limite, o Braze tentará novamente a sincronização por até 13 horas. Se a sincronização ainda não for possível, o Braze listará esses usuários na métrica Usuários com erro.
+O limite de frequência da API de segmentos do Pinterest não permite mais do que sete consultas por segundo por usuário e 1.900 usuários por solicitação. Se um cliente atingir esse limite, o Braze tentará novamente a sincronização por até 13 horas. Se a sincronização ainda não for possível, o Braze listará esses usuários na métrica Usuários com erro.
 
 ## Compreensão da análise de dados
 
