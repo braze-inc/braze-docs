@@ -3273,15 +3273,9 @@ validurls['/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/'] = '/do
 validurls['/docs/user_guide/getting_started/b2b_use_cases/b2b_salesforce_sales_cloud/'] = '/docs/user_guide/get_started/b2b_use_cases/b2b_salesforce_sales_cloud/';
 
 // BrazeAI renames (landing pages)
-validurls['/docs/user_guide/brazeai/mcp_server/'] = '/docs/user_guide/brazeai/braze_mcp_server/';
 validurls['/docs/user_guide/brazeai/intelligence/'] = '/docs/user_guide/brazeai/intelligence_suite/';
 validurls['/docs/user_guide/brazeai/recommendations/'] = '/docs/user_guide/brazeai/item_recommendations/';
 validurls['/docs/user_guide/brazeai/predictive_churn/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/';
-
-// BrazeAI > Braze MCP server children
-validurls['/docs/user_guide/brazeai/mcp_server/setup/'] = '/docs/user_guide/brazeai/braze_mcp_server/setup/';
-validurls['/docs/user_guide/brazeai/mcp_server/usage/'] = '/docs/user_guide/brazeai/braze_mcp_server/usage/';
-validurls['/docs/user_guide/brazeai/mcp_server/available_api_functions/'] = '/docs/user_guide/brazeai/braze_mcp_server/available_api_functions/';
 
 // BrazeAI > Intelligence Suite children
 validurls['/docs/user_guide/brazeai/intelligence/intelligent_channel/'] = '/docs/user_guide/brazeai/intelligence_suite/intelligent_channel/';

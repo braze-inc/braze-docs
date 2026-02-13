@@ -17,7 +17,7 @@ guide_featured_list:
     link: /docs/user_guide/brazeai/agents/
     image: /assets/img/braze_icons/star-06.svg
   - name: Braze MCP Server
-    link: /docs/user_guide/brazeai/braze_mcp_server/
+    link: /docs/user_guide/brazeai/mcp_server/
     image: /assets/img/braze_icons/dataflow-01.svg
   - name: Content Optimizer
     link: /docs/user_guide/brazeai/content_optimizer/
