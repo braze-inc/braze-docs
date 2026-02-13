@@ -57,7 +57,7 @@ Here are some general best practices to get you started with prompting:
 4. Ask for structure ("Return JSON/bullet list/table...").
 5. Show, don't tell. Include a few high-quality examples.
 6. Break complex tasks into ordered steps ("Step 1... Step 2...").
-7. Encourage reasoning ("Think aloud, then answer").
+7. Encourage reasoning ("Think through the steps internally, then provide a concise final answer," or "briefly explain your decision").
 8. Pilot, inspect, and iterate. Small tweaks can lead to big quality gains.
 9. Handle the edge cases, add guardrails, and add refusal instructions.
 10. Measure and document what works internally for reuse and scaling.

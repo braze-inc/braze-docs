@@ -18,7 +18,7 @@ Braze Agents are currently in beta. For help getting started, contact your custo
 
 In the **Agent Usage** section of your agent, you can reference and navigate to where the agent is being actively used in catalogs and Canvases.
 
-![Agent Usage section that shows two active agents and one inactive agent for Canvases.]( {% image_buster /assets/img/ai_agent/agent_usage.png %} )
+![Agent Usage section that shows two active agents and one inactive agent for Canvases.]({% image_buster /assets/img/ai_agent/agent_usage.png %})
 
 ## Agents in Canvas  
 

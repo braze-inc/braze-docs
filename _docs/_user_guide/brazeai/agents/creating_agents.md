@@ -143,11 +143,11 @@ Let's say you want to collect user feedback for their most recent dining experie
 
 The **Preview** pane is an instance of the agent that shows up as a side-by-side panel within the configuration experience. You can use it to test the agent while you're creating or making updates to it to experience it in a similar way to end users. This step helps you confirm that it’s behaving the way you expect, and gives you a chance to fine-tune before it goes live.
 
-![Agent Console showing the Preview pane for testing a custom agent. The interface displays a Sample inputs field with example customer data, a Run test button, and a response area where the agent output appears.]( {% image_buster /assets/img/ai_agent/custom_agent_test.png %} )
-
 1. In the **Test your agent** field, enter example customer data or customer responses—anything that reflects real scenarios your agent will handle.
 2. Preview the agent's response for a random user, existing user, or custom user. 
 3. Select **Simulate response**. The agent will execute based on your configuration and display its response. Test runs count toward your daily execution limit.
+
+![Agent Console showing the Preview pane for testing a custom agent. The interface displays a Sample inputs field with example customer data, a Run test button, and a response area where the agent output appears.]({% image_buster /assets/img/ai_agent/custom_agent_test.png %})
 
 Review the output with a critical eye. Consider the following questions:
 
@@ -163,8 +163,8 @@ Your agent is now ready to use! For details, see [Deploy agents]({{site.baseurl}
 
 In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location.
 
-![Logs for an agent Story Teller, which include when and where the agent has been called.]( {% image_buster /assets/img/ai_agent/agent_activity_logs.png %} )
+![Logs for an agent Story Teller, which include when and where the agent has been called.]({% image_buster /assets/img/ai_agent/agent_activity_logs.png %})
 
 Select **View** for a specific agent call to see the input, output, and user ID.
 
-![Logs for an agent Story Teller. The details panel shows the input prompt, output response, and an associated user ID.]( {% image_buster /assets/img/ai_agent/agent_logs.png %} )
+![Logs for an agent Story Teller. The details panel shows the input prompt, output response, and an associated user ID.]({% image_buster /assets/img/ai_agent/agent_logs.png %})
