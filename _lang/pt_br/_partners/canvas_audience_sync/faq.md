@@ -23,7 +23,7 @@ O tempo necessário para preencher um público depende do parceiro específico. 
 
 Os campos específicos usados para cada parceiro podem variar de acordo com os requisitos do parceiro. 
 
-Por exemplo, ao configurar uma sincronização de público do Facebook, você pode usar uma grande variedade de campos primários, como e-mail, telefone, nome e sobrenome, enquanto que, com o Snapchat, você só pode selecionar e-mail, telefone ou ID do anunciante móvel. 
+Por exemplo, ao configurar uma sincronização de público do Facebook, é possível usar uma grande variedade de campos próprios, como e-mail, telefone, nome e sobrenome, ao passo que, no Snapchat, só é possível selecionar e-mail, telefone ou ID do anunciante móvel. 
 
 É importante notar que os campos de usuário que podem ser selecionados para sincronização estão correlacionados com os atributos padrão do Braze e os IDs de publicidade móvel. Você deve garantir a transmissão adequada desses dados por meio de nossos SDKs ou APIs. 
 
