@@ -152,8 +152,8 @@ The **Preview** pane is an instance of the agent that shows up as a side-by-side
 Review the output with a critical eye. Consider the following questions:
 
 - Does the copy feel on brand? 
-- Does the decision logic route customers as intended? 
-- Are the calculated values accurate? 
+- Does the decision logic route customers as intended?
+- Are the calculated values accurate?
 
 If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
 
