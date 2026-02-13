@@ -158,7 +158,7 @@ You don't need to include sensitive data like your API key while using the JSON 
 * Fields related to push token imports
 
 {% alert important %}
-Canvas properties (such as `canvas_id`, `canvas_name`, and `canvas_variant_name` Liquid tags) are not supported in User Update steps.
+Canvas properties (such as the `canvas_id`, `canvas_name`, and `canvas_variant_name` Liquid tags) are not supported in User Update steps.
 {% endalert %}
 
 {% raw %}
