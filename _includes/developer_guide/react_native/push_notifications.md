@@ -195,26 +195,6 @@ func application(
 }
 ```
 {% endsubtab %}
-{% subtab Objective-C %}
-```objc
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-  self.moduleName = @"YOUR_MODULE_NAME";
-  self.initialProps = @{};
-
-  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
-  configuration.triggerMinimumTimeInterval = 1;
-  configuration.logger.level = BRZLoggerLevelInfo;
-  Braze *braze = [BrazeReactBridge initBraze:configuration];
-  AppDelegate.braze = braze;
-
-  [self registerForPushNotifications];
-  [[BrazeReactUtils sharedInstance] populateInitialPayloadFromLaunchOptions:launchOptions];
-
-  return [super application:application didFinishLaunchingWithOptions:launchOptions];
-}
-```
-{% endsubtab %}
 {% endsubtabs %}
 
 #### Step 3.2: Handle deep links from a closed state
