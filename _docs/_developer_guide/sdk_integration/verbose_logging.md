@@ -12,7 +12,7 @@ description: "Learn how to enable verbose logging for the Braze SDK, collect log
 When something isn't working as expected—such as a push notification not arriving, an in-app message not displaying, or user data not syncing—verbose logs help you identify the root cause. Instead of guessing, you can see exactly what the SDK is doing at each step.
 
 {% alert tip %}
-If you want to debug without enabling verbose logging manually, you can use the [SDK Debugger]({{site.baseurl}}/developer_guide/debugging) to create debugging sessions directly in the Braze dashboard.
+If you want to debug without enabling verbose logging manually, you can use the [SDK Debugger]({{site.baseurl}}/developer_guide/sdk_integration/debugging) to create debugging sessions directly in the Braze dashboard.
 {% endalert %}
 
 ## When to use verbose logging
