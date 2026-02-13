@@ -29,7 +29,7 @@ Cette fonctionnalité permet aux marques de contrôler quelles données first-pa
  
 Lorsque les utilisateurs atteignent l'étape de synchronisation de l'audience, Braze les synchronise quasiment en temps réel tout en respectant les limites de débit de l'API marketing de Facebook. Braze met en lots et traite autant d'utilisateurs que possible toutes les 5 secondes avant de les envoyer à Facebook. 
 
-La limite de débit de l'API marketing de Facebook n'autorise pas plus de 190 000 requêtes API par compte publicitaire sur une période d'une heure. Si un client atteint cette limite, Braze retente la synchronisation pendant environ 13 heures. Si la synchronisation n'est toujours pas possible, Braze répertorie ces utilisateurs dans la métrique Utilisateurs erronés.
+La limite de débit de l'API marketing de Facebook ne permet pas plus de ~190 000 requêtes API par compte publicitaire sur une période d'une heure. Si un client atteint cette limite, Braze retente la synchronisation pendant environ 13 heures. Si la synchronisation n'est toujours pas possible, Braze répertorie ces utilisateurs dans la métrique Utilisateurs erronés.
 
 ## Conditions préalables
 
@@ -151,7 +151,7 @@ Le tableau suivant comprend des indicateurs et des descriptions pour vous aider 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-Il y a un retard dans les rapports sur les indicateurs des utilisateurs synchronisés et des utilisateurs erronés en raison d'un traitement interne.
+Il y a un retard dans les rapports pour les indicateurs des utilisateurs synchronisés et des utilisateurs erronés en raison d'un traitement interne.
 {% endalert %}
 
 ## Foire aux questions
