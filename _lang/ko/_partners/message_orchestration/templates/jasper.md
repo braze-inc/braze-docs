@@ -73,7 +73,7 @@ Jasper에서 콘텐츠를 생성하고 Braze 템플릿을 업데이트하는 방
 {: .reset-td-br-1 .rest-td-br-2 role=“presentation” }
 
 {: start="4"}
-4\. Jasper API를 통해 템플릿을 실행하여 출력을 생성하세요. 그러면 `subject`, `preheader`, `body` (HTML 콘텐츠)가 포함된 JSON 페이로드가 생성됩니다.
+4\. Jasper API를 통해 템플릿을 실행하여 출력을 생성하세요. 이렇게 하면 `subject`, `preheader`, `body` (HTML 콘텐츠)가 포함된 JSON 페이로드가 생성됩니다.
 
 {% subtabs %}
 {% subtab Sample request %}
@@ -81,7 +81,7 @@ Jasper에서 콘텐츠를 생성하고 Braze 템플릿을 업데이트하는 방
 ### 샘플 요청
 
 {% raw %}
-```json
+```bash
 curl --location 'https://api.jasper.ai/v1/templates/skl_BC53D8AC5B4B47E8BE557EBB706E9B47/run?toneId=ton_811696974b3c4db4b3ac0041685c3b7c&knowledgeIds=kno_0a62fc17529e4fe69a71f30b6f0e88a7&audienceId=aud_0199117a690a7cc98481f8700916e2a6' \
 --header 'Content-Type: application/json' \
 --header 'x-api-key: ••••••' \
@@ -122,7 +122,7 @@ curl --location 'https://api.jasper.ai/v1/templates/skl_BC53D8AC5B4B47E8BE557EBB
 
 ### 이메일 템플릿을 생성하기 위한 샘플 Braze API 요청
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \
@@ -176,7 +176,7 @@ Jasper Studio는 IT 지원 없이도 맞춤형 AI 앱을 구축할 수 있는 Ja
 ## 샘플 Braze API 요청(커스텀 앱 출력 사용)
 
 {% raw %}
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \
