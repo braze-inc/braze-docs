@@ -102,11 +102,6 @@ curl -X POST --location 'https://rest.iad-01.braze.com/media_library/create' \
 --data '{"asset_file":<BINARY FILE DATA>, "name":"Cat Graphic"}'
 ```
 
-
-To find your REST endpoint, log in to Braze and go to **Settings** > **APIs and Identifiers** > **API Keys**, then copy the REST endpoint value shown on the **API Keys** tab for your workspace.
-
-For more information, see [Endpoints]({{site.baseurl}}/api/basics/#endpoints).
-
 ### Error responses
 
 This section lists potential errors and their corresponding messages and descriptions. 
