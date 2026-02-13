@@ -359,7 +359,7 @@ Vous trouverez ci-dessous un exemple de charge utile pour un événement `contac
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.attribute.edited",
   "properties": {
@@ -423,7 +423,7 @@ Vous trouverez ci-dessous un exemple de charge utile pour un événement `contac
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.experiment.assigned",
   "properties": {
