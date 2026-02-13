@@ -27,7 +27,7 @@ This is the simplest option, with no extra setup required. Braze provides access
 
 ### Option 2: Bring your own API key
 
-With this option, you can connect your Braze account with providers like OpenAI, Anthropic, AWS Bedrock, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not from Braze.
+With this option, you can connect your Braze account with providers like OpenAI, Anthropic, AWS Bedrock, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
 
 {% alert important %}
 We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months.
@@ -69,7 +69,7 @@ We recommend also including a default as a catch-all response if the agent recei
 This example prompt takes a survey input and outputs a simple sentiment analysis:
 
 ```
-From the survey text, classify overall sentiment toward product quality, delivery, and price as Positive, Neutral, or Negative
+From the survey text, classify overall sentiment toward product quality, delivery, and price as Positive, Neutral, or Negative.
 Always output a single string with just one label.
 If any category is missing or unclear, treat it as Neutral.
 If sentiment across categories is mixed, return Neutral.
