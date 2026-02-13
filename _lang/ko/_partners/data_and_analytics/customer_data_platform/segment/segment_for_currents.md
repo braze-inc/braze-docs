@@ -49,17 +49,13 @@ Next, select the message engagement events you would like to export. Reference t
 
 Keep in mind, Braze only sends event data for users without an `external_user_id` if **Include events from anonymous users** is checked.
 
-{% alert important %}
-Anonymous user export is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Anonymous user export' %}
 
 ![Braze의 세그먼트 커런츠 페이지에서 사용 가능한 모든 메시지 참여 이벤트 목록입니다.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
 
 마지막으로, **현재 실행**을 선택합니다.
 
-{% alert warning %}
-If you intend to create more than one of the same Currents connectors (for example, two message engagement event connectors), they must be in different workspaces. Because the Braze Segment Currents integration cannot isolate events by different apps in a single workspace, failure to do this will lead to unnecessary data deduping and lost data.
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Segment Currents multiple connectors' %}
 
 To read more, visit Segment [documentation](https://segment.com/docs/connections/sources/catalog/cloud-apps/braze/).
 
