@@ -43,7 +43,7 @@ Antes de começar, você precisa dos seguintes itens:
 
 ### Etapa 1: Crie um Canva e adicione uma etapa de atualização do usuário
 
-No dashboard do Braze, crie uma nova tela que dispara quando um usuário conclui um evento-chave (como uma compra, inscrição ou marco).
+No dashboard do Braze, crie um novo Canvas que dispara quando um usuário conclui um evento-chave (como uma compra, inscrição ou marco).
 
 Adicione uma etapa de atualização do usuário logo após a etapa de entrada. Essa etapa será usada para chamar a API DOTS.ECO via Connected Content e armazenar os dados de certificado retornados no perfil do usuário.
 
