@@ -149,9 +149,9 @@ Avec le jeton d'autorisation créé précédemment, utilisez la structure de req
 Vous pouvez exploiter n'importe laquelle des données disponibles dans l'objet ci-dessus à l'aide de l'étiquette Liquid contextuelle à un stade ultérieur du parcours Canvas de l'utilisateur. Les étapes suivantes montrent comment vous pouvez utiliser ces données dans une étape du canvas de l'[agent d'intelligence artificielle](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components/agent_step).
 
 {% alert Note %}
-Pour éviter tout comportement inattendu, incluez une étape de parcours d'audience après l'étape de contexte, qui peut faire sortir les utilisateurs du contexte si leur étiquette de contexte est vide, ce qui indique que l'appel au contenu connecté a échoué ou n'a pas renvoyé d'informations.
+Pour éviter tout comportement inattendu, incluez une étape de parcours d'audience après l'étape de contexte, qui peut exclure les utilisateurs du contexte si leur étiquette de contexte est vide, ce qui indique que l'appel au contenu connecté a échoué ou n'a pas renvoyé d'informations.
 
-![Capture d'écran de l'étape Braze Audience]({% image_buster /assets/img/fullstory/3.png %})
+![Capture d'écran de l'étape de Braze Audience]({% image_buster /assets/img/fullstory/3.png %})
 
 {% endalert %}
 
