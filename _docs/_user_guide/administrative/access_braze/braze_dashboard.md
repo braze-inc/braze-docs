@@ -1,7 +1,7 @@
 ---
 nav_title: The dashboard
 article_title: The Braze dashboard
-page_order: 2
+page_order: 5
 page_type: reference
 description: "The Braze dashboard is your central workspace for building, managing, and analyzing customer engagement. It brings together messaging tools, audience insights, segmentation, and real-time performance data in one place."
 
@@ -9,7 +9,7 @@ description: "The Braze dashboard is your central workspace for building, managi
 
 # The Braze dashboard
 
-> The Braze dashboard is our web interface at [dashboard.braze.com](https://dashboard.braze.com/) or [dashboard.braze.eu](https://dashboard.braze.eu/)
+> The Braze dashboard is your central workspace for building, managing, and analyzing customer engagement. Access it at [dashboard.braze.com](https://dashboard.braze.com/) or [dashboard.braze.eu](https://dashboard.braze.eu/).
 
 Use the Braze dashboard to plan campaigns, launch and manage messages, explore audience insights, adjust segmentation, and review real-time performance and engagement metrics from a single interface.
 
@@ -124,5 +124,12 @@ The Braze dashboard uses brand colors that meet WCAG AA standards for color cont
 ## Sharing feedback
 
 Want to tell us what you think? You can share feedback about navigation, accessibility, usability, visual design, and more. Open the **Support** menu in the global header and select **Share feedback**. We review all feedback to help improve your Braze experience.
+
+## Related resources
+
+- [Create and manage workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)
+- [Manage Braze users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- [User permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)
+- [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)
 
 
