@@ -72,9 +72,9 @@ Select **Add context** to choose what your agent can reference. This includes:
 
 #### Step 2.2: Add optional settings
 
-In the **Optional settings**, you can adjust the [Temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) of the agent-generated copy. A higher temperature allows the agent to use the information provided to be more creative.
+In the **Optional settings**, you can adjust the [temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) of the agent-generated copy. A higher temperature allows the agent to use the information provided to be more creative.
 
-You can also set the daily execution limit for your agent. By default, this value is set to 50,000, but can be raised up to 100,000. If you're interested in increasing the limit above 100,000, reach out to your customer success manager to learn more.
+You can also set the daily execution limit for your agent. By default, this value is set to 50,000, but can be raised to 100,000. If you're interested in increasing the limit above 100,000, contact your customer success manager to learn more.
 
 ### Step 3: Select the output
 
@@ -159,7 +159,7 @@ If something feels off, update the agent’s configuration and test again. Run a
 
 ### Step 5: Use and monitor your agent
 
-Your agent is now ready to use! For details, see [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
+Your agent is now ready to use! For details, refer to [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
 
 In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location.
 
