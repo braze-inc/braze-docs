@@ -23,7 +23,7 @@ guide_featured_list:
 - name: API and SDK Endpoints
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
-- name: The Braze dashboard
+- name: The Braze Dashboard
   link: /docs/user_guide/administrative/access_braze/braze_dashboard/
   image: /assets/img/braze_icons/browser.svg
 - name: Product Portal
