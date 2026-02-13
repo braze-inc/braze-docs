@@ -212,7 +212,7 @@ Test the Branch link outside of Braze to isolate the issue:
 | `isUniversalLink: true` | SDK identified the URL as a universal link |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more details on reading these logs, see [Reading verbose logs]({{site.baseurl}}/developer_guide/verbose_log_reading).
+For more details on reading these logs, see [Reading verbose logs]({{site.baseurl}}/developer_guide/verbose_logging).
 
 ### Test links in isolation
 
