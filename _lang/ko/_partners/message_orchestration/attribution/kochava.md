@@ -42,7 +42,7 @@ Apppboy.getInstance(context).getDeviceId();
 #### iOS
 
 {% alert important %}
-2023년 2월 이전에는 Kochava 어트리뷰션 데이터 통합에서 IDFV(Identifier for Vendor)를 기본 식별자로 사용하여 iOS 어트리뷰션 데이터를 매칭했습니다. Objective-C를 사용하는 Braze 고객은 서비스 중단이 없으므로 설치 시 Braze `device_id` 를 가져와서 Kochava로 전송할 필요가 없습니다.
+2023년 2월 이전에는 Kochava 어트리뷰션 데이터 통합에서 iOS 어트리뷰션 데이터를 매칭하기 위해 IDFV(Identifier for Vendor)를 기본 식별자로 사용했습니다. Objective-C를 사용하는 Braze 고객은 서비스 중단이 없으므로 설치 시 Braze `device_id` 를 가져와서 Kochava로 전송할 필요가 없습니다.
 {% endalert%}
 
 Swift SDK v5.7.0 이상을 사용하는 경우 IDFV를 상호 식별자로 계속 사용하려면 `useUUIDAsDeviceId` 필드를 `false`로 설정하여 통합이 중단되지 않도록 해야 합니다. `true`로 설정한 경우, 앱 설치 시 Braze `device_id`를 Kochava로 전달하여 Braze가 iOS 기여도와 적절히 일치하도록 Swift용 iOS 기기 ID 매핑을 구현해야 합니다.
