@@ -131,6 +131,10 @@ The most robust solution is to implement your own bot filtering logic before ini
 
 Consider delaying SDK initialization until a user performs a meaningful interaction, such as accepting a cookie consent banner, scrolling, or clicking. This approach is often easier to implement and can be highly effective at filtering bot traffic.
 
+{% alert important %}
+Delaying SDK initialization until user interaction might cause Banners and Content Cards to also not display until that interaction occurs.
+{% endalert %}
+
 #### Custom bot detection
 
 Implement custom detection based on your specific bot traffic patterns, such as:
