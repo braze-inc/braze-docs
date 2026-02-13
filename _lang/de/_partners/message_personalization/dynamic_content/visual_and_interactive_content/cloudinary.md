@@ -18,7 +18,7 @@ Durch die Verbindung von Cloudinary mit Braze erhalten Marken Zugriff auf visuel
 Auf dieser Seite werden vier mögliche, aber nicht erschöpfende Integrationsmethoden zwischen Cloudinary und Braze beschrieben. Diese Integrationsmethoden beruhen in erster Linie auf der manuellen Änderung von Asset-Links, die aus der Medienbibliothek von Cloudinary kopiert wurden. 
 
 {% alert important %}
-Vorangebrachte Integrationsmethoden, einschließlich der Verwendung von [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) zum Aufrufen der [Admin-API](https://cloudinary.com/documentation/admin_api#banner) von Cloudinary, sind möglich, aber der Ansatz ist von Kund:in zu Kunde unterschiedlich. Wenden Sie sich an Ihren Customer-Success-Manager von Cloudinary und Braze, wenn Sie Hilfe benötigen.
+Vorangebrachte Integrationsmethoden, einschließlich der Verwendung von [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) zum Aufrufen der [Admin-API](https://cloudinary.com/documentation/admin_api#banner) von Cloudinary, sind möglich, aber die Vorgehensweise ist von Kund:in zu Kunde unterschiedlich. Wenden Sie sich an Ihren Customer-Success-Manager von Cloudinary und Braze, wenn Sie Hilfe benötigen.
 {% endalert %}
 
 ## Voraussetzungen
@@ -31,7 +31,7 @@ Vorangebrachte Integrationsmethoden, einschließlich der Verwendung von [Connect
 ## Integrationsmethoden
 
 {% alert tip %}
-Einige dieser Integrationsmethoden nutzen die `f_auto` und `q_auto` Cloudinary Transformations, die eine tiefere Anpassung des Verhaltens und des Erscheinungsbildes von [Bild-](https://cloudinary.com/documentation/image_transformations#banner) und [Video-Assets](https://cloudinary.com/documentation/video_manipulation_and_delivery#banner) ermöglichen. Weitere Informationen zum Ändern eines Cloudinary-Asset-Links, um Transformationen einzubeziehen, finden Sie unter [URL-Struktur für Transformationen](https://cloudinary.com/documentation/image_transformations#transformation_url_structure).
+Einige dieser Integrationsmethoden nutzen die `f_auto` und `q_auto` Cloudinary Transformations, die eine tiefere Anpassung des Verhaltens und des Aussehens von [Bild-](https://cloudinary.com/documentation/image_transformations#banner) und [Video-Assets](https://cloudinary.com/documentation/video_manipulation_and_delivery#banner) ermöglichen. Weitere Informationen zum Ändern eines Cloudinary-Asset-Links, um Transformationen einzubeziehen, finden Sie unter [URL-Struktur für Transformationen](https://cloudinary.com/documentation/image_transformations#transformation_url_structure).
 {% endalert %}
 
 {% tabs %}
