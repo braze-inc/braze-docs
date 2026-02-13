@@ -8,6 +8,10 @@ description: "This reference article covers guidance on how to add deep linking 
 
 # Deep linking to in-app content
 
+{% alert tip %}
+**For developers:** For a guide to choosing between custom schemes, universal links, and other options — including when you need an AASA file, which app delegate methods to implement, and how to debug issues — see [iOS deep linking guide]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide) and [Deep linking troubleshooting]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+{% endalert %}
+
 ## What is deep linking?
 
 Deep linking is a way of launching a native app and providing additional information telling it to do a specific action or show specific content.
