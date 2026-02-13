@@ -13,6 +13,16 @@ description: "The Braze dashboard is your central workspace for building, managi
 
 Use the Braze dashboard to plan campaigns, launch and manage messages, explore audience insights, adjust segmentation, and review real-time performance and engagement metrics from a single interface.
 
+## Dashboard overview
+
+When you log in, the dashboard provides a centralized view of your engagement tools and data:
+
+- **Home page**: Shows your [recently edited content](#tips-for-getting-around-faster) and key performance metrics at a glance
+- **Left navigation**: Organizes tools by function (messaging, audience, analytics, settings)
+- **Global header**: Provides quick access to search, support, language settings, notifications, and your account
+
+Your dashboard experience is organized by [workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/), which help you manage content for different brands, regions, or teams. You can [switch between workspaces](#workspace-switcher) at any time from the side navigation.
+
 ## Access your dashboard
 
 To get started, [sign in to your Braze account]({{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account). Your access to pages within the dashboard and permission to perform certain actions are based on your assigned [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions). If you need help with your permissions, contact your Braze administrators.
@@ -41,6 +51,8 @@ The vertical menu on the left organizes Braze tools by function and keeps your m
 Located at the top of the side navigation, the workspace switcher lets you move between different workspaces in your Braze instance. The active workspace is highlighted.
 
 [Workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces) help organize content by brand, region, product line, or team. Each workspace includes its own data, campaigns, and settings. Your access can vary between workspaces. For example, you might have editing access in one workspace and view-only access in another.
+
+To switch workspaces, select the workspace dropdown at the top of the side navigation and choose the workspace you want to access. You can also [add favorite workspaces](#adding-favorite-workspaces) for faster access to the ones you use most often.
 
 #### Minimizing the side navigation
 
@@ -117,6 +129,40 @@ table td {
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
+## Tips for getting around faster
+
+The Braze dashboard includes several features to help you work more efficiently and quickly access the tools and content you use most.
+
+### Pick up where you left off
+
+On the **Home** page, the dashboard displays your recently edited or created campaigns, Canvases, and segments. This makes it easy to return to work in progress without searching. Each item includes tags showing the content type and status (such as draft, active, or stopped).
+
+![A Canvas draft, an active segment, and a campaign draft in the "Pick up where you left off" section.]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
+
+For more information, see [Home dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/home_dashboard/#pick-up-where-you-left-off).
+
+### Adding favorite workspaces
+
+If you work across multiple workspaces, you can mark your most frequently used ones as favorites for faster access.
+
+To add favorite workspaces:
+
+1. Select your profile icon in the global header, then select **Manage your account**.
+2. In the **Account Profile** section, locate the **Favorite workspaces** field.
+3. Select the workspaces you want to favorite from the list.
+4. Select **Save changes**.
+
+Your favorite workspaces will appear at the top of the workspace switcher for quick access.
+
+### Accessing your profile settings
+
+To manage your account settings, notification preferences, and personal information:
+
+1. Select your profile icon in the global header.
+2. Select **Manage your account** to access your profile page.
+
+From your profile page, you can update your email settings, configure two-factor authentication, view your API keys, and manage other account details.
+
 ## Accessibility in the dashboard
 
 The Braze dashboard uses brand colors that meet WCAG AA standards for color contrast. This supports an inclusive experience for all users and aligns with accessibility best practices.
@@ -127,9 +173,19 @@ Want to tell us what you think? You can share feedback about navigation, accessi
 
 ## Related resources
 
+### Administrative tasks
+
 - [Create and manage workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)
 - [Manage Braze users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
 - [User permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)
 - [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)
+
+### Key tasks and next steps
+
+- **Build campaigns**: [Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/)
+- **Create journeys**: [Build a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
+- **Define audiences**: [Create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)
+- **Review performance**: [Analytics overview]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/)
+- **Configure settings**: [App settings]({{site.baseurl}}/user_guide/administrative/app_settings/)
 
 
