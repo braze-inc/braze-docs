@@ -156,7 +156,7 @@ Your `BrazeDelegate` must intercept Branch links and pass them to the Branch SDK
 func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
   if let host = context.url.host, host.contains("app.link") {
     // Route to Branch SDK
-    Branch.getInstance().handleDeepLink(context.url)
+    Branch.getInstance.handleDeepLink(context.url)
     return false
   }
   // Let Braze handle other links

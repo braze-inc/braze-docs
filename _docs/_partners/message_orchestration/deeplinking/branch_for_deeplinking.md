@@ -80,7 +80,7 @@ func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
   if let host = context.url.host,
      host.contains("app.link") || host.contains("yourdomain.com") {
     // Let Branch handle this link
-    Branch.getInstance().handleDeepLink(context.url)
+    Branch.getInstance.handleDeepLink(context.url)
     return false
   }
   // Let Braze handle all other links
