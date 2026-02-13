@@ -19,10 +19,10 @@ Para integrar sua loja Shopify headless ao Braze, você precisa concluir essas d
 1. **Inicialize e carregue o Braze Web SDK para ativar o rastreamento no local**<br><br> Adicione manualmente o código em seu site do Shopify para ativar o rastreamento no site do Braze. Ao implementar o Braze SDK em sua loja Shopify headless, é possível rastrear as atividades no local, incluindo sessões, comportamento anônimo do usuário, ações do comprador antes do checkout e quaisquer [eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) ou [atributos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) que você decida incluir com sua equipe de desenvolvimento. Você também pode adicionar quaisquer canais compatíveis com os SDKs, como mensagens no app ou cartões de conteúdo. 
 
 {: start="2"}
-2\. **Instalar a integração do Braze com o Shopify**<br><br> Depois de conectar sua loja Shopify ao Braze, você terá acesso aos dados de clientes, checkout, pedidos e produtos por meio de webhooks do Shopify.
+2\. **Instale a integração do Braze com o Shopify**<br><br> Depois de conectar sua loja Shopify ao Braze, você terá acesso aos dados de clientes, checkout, pedidos e produtos por meio de webhooks do Shopify.
 
 {% alert important %}
-Antes de iniciar sua integração, confirme se você configurou corretamente o subdomínio de checkout para sua vitrine do Shopify. Para saber mais, consulte [Migrar da loja on-line para o Hydrogen](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate).<br><br> Se essa configuração não for feita corretamente, o Braze não poderá processar os webhooks de checkout do Shopify. Também não será possível testar a integração em um ambiente de desenvolvimento local, pois isso depende de um domínio compartilhado entre a loja e a página de checkout.
+Antes de iniciar sua integração, confirme que você configurou corretamente o subdomínio de checkout para sua vitrine do Shopify. Para saber mais, consulte [Migrar da loja on-line para o Hydrogen](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate).<br><br> Se essa configuração não for feita corretamente, o Braze não poderá processar os webhooks de checkout do Shopify. Também não será possível testar a integração em um ambiente de desenvolvimento local, pois isso depende de um domínio compartilhado entre a loja e a página de checkout.
 {% endalert %}
 
 Para concluir essas metas, siga estas etapas:
@@ -34,7 +34,7 @@ Para concluir essas metas, siga estas etapas:
 No Braze, acesse **Settings** > **App Settings** > e selecione **Add App**. Nomeie o app como "Shopify".
 
 {% alert warning %}
-A loja deve ter o nome "Shopify" ou a integração poderá não funcionar corretamente.
+A loja precisa ter o nome "Shopify" ou a integração poderá não funcionar corretamente.
 {% endalert %}
 
 ### Etapa 2: Adicionar subdomínio e variáveis ambientais {#step-2}
@@ -571,7 +571,7 @@ function CartLineUpdateButton({children, lines}) {
 }
 ```
 
-## Instalar a integração do Braze com o Shopify
+## Instale a integração do Braze com o Shopify
 
 ### Etapa 1: Conecte sua loja da Shopify
 
@@ -759,13 +759,13 @@ Para ativar mensagens no app, cartões de conteúdo e Feature Flags usando a int
 
 - **Mensagens no app** Para ativar mensagens no aplicativo para casos de uso de formulários de captura de leads, consulte [Mensagens no aplicativo]({{site.baseurl}}/developer_guide/in_app_messages/).
 - **Cartões de conteúdo:** Para ativar os cartões de conteúdo para casos de uso de caixa de entrada ou banner de site, consulte [Cartões de conteúdo]({{site.baseurl}}/developer_guide/content_cards/).
-- **Feature Flag:** Para ativar os Feature Flags para casos de uso de experimentação no site, consulte [Feature Flags]({{site.baseurl}}/developer_guide/feature_flags/).
+- **Feature Flag:** Para ativar Feature Flags para casos de uso de experimentação no site, consulte [Feature flags]({{site.baseurl}}/developer_guide/feature_flags/).
 
 ### Etapa 9: Concluir configuração
 
-Depois de acessar todas as etapas, selecione **Finish Setup (Concluir configuração)** para retornar à página do parceiro. Em seguida, ative a incorporação do app Braze em sua página de administração do Shopify, conforme indicado pelo banner exibido.
+Depois de concluir todas as etapas, selecione **Finish Setup (Concluir configuração)** para retornar à página do parceiro. Em seguida, ative a incorporação do app Braze em sua página de administração do Shopify, conforme indicado pelo banner exibido.
 
-![Banner que diz para ativar a incorporação do app Braze no Shopify para que você possa concluir a configuração de sua integração.]({% image_buster /assets/img/Shopify/shopify_app_embed_banner.png %})
+![Banner que diz para ativar a incorporação do app Braze na Shopify para que você possa concluir a configuração de sua integração.]({% image_buster /assets/img/Shopify/shopify_app_embed_banner.png %})
 
 #### Exemplo de código
 
