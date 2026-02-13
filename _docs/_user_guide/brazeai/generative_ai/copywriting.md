@@ -36,7 +36,7 @@ To customize your copy further, you can:
   - **Formal:** More professional and polished wording. Full sentences, more courteous language, minimal slang.
   - **Straight-forward:** More direct and concise. Fewer adjectives, less "marketing fluff," clearer calls to action.
   - **Casual:** More relaxed and conversational. Friendlier phrasing, simpler words, lighter energy.
-  - **Personal:** More 1:1 and empathetic. Uses "you" more, can feel more tailored (especially if you add personalization like {% raw %}`{{user.first_name}}`{% endraw %} in your final message).
+  - **Personal:** More 1:1 and empathetic. Uses "you" more, can feel more tailored, especially if you add personalization like {% raw %}`{{user.first_name}}`{% endraw %} to the message you're creating.
   - **Eye-catching:** More attention-grabbing. Punchier phrasing, higher energy, stronger hooks and CTAs (often reads more "promo" than the other tones).
 - **Reference past campaign data**: When enabled, previous mobile push notifications sent through your campaigns or Canvas steps are used for stylistic reference to generate your new copy. For more information, see [Using past campaign data](#past-campaign-data).
 - **Auto-translate copy:** You can choose a different output language for your copy. Generated content will be output to that language.
