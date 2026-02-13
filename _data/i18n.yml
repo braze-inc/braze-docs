@@ -8,6 +8,13 @@ en:
   edit_github: Edit this page on GitHub
   page_nav_title: On this page
   helpful: "HOW HELPFUL WAS THIS PAGE?"
+  collapse_navigation: Collapse navigation
+  expand_navigation: Expand navigation
+  minimize_menu: Minimize menu
+  expand_menu: Expand menu
+  filter_navigation_topics: Filter navigation topics
+  clear_filter: Clear filter
+  documentation_nav: Documentation
 fr:
   next: SUIVANTE
   previous: PRÉCÉDENTE
@@ -18,6 +25,13 @@ fr:
   edit_github: Modifier cette page sur GitHub
   page_nav_title: Sur cette page
   helpful: "CETTE PAGE A-T-ELLE ÉTÉ UTILE?"
+  collapse_navigation: Réduire la navigation
+  expand_navigation: Développer la navigation
+  minimize_menu: Réduire le menu
+  expand_menu: Développer le menu
+  filter_navigation_topics: Filtrer les sujets de navigation
+  clear_filter: Effacer le filtre
+  documentation_nav: Documentation
 ja:
   next: 次へ
   previous: 前へ
@@ -28,6 +42,13 @@ ja:
   edit_github: GitHub でこのページを編集
   page_nav_title: このページについて
   helpful: 「このページはどの程度役に立ちましたか?」
+  collapse_navigation: ナビゲーションを折りたたむ
+  expand_navigation: ナビゲーションを展開する
+  minimize_menu: メニューを最小化
+  expand_menu: メニューを展開
+  filter_navigation_topics: ナビゲーションのトピックをフィルター
+  clear_filter: フィルターをクリア
+  documentation_nav: ドキュメント
 ko:
   next: 다음
   previous: 이전
@@ -38,6 +59,13 @@ ko:
   edit_github: GitHub 에서 이 페이지를 편집합니다.
   page_nav_title: 이 페이지에
   helpful: "이 페이지가 얼마나 도움이 되었나요?"
+  collapse_navigation: 탐색 접기
+  expand_navigation: 탐색 펼치기
+  minimize_menu: 메뉴 최소화
+  expand_menu: 메뉴 확장
+  filter_navigation_topics: 탐색 주제 필터
+  clear_filter: 필터 지우기
+  documentation_nav: 문서
 pt-br:
   next: PRÓXIMO
   previous: ANTERIOR
@@ -48,6 +76,13 @@ pt-br:
   edit_github: Editar esta página no GitHub
   page_nav_title: Nesta página
   helpful: "QUÃO ÚTIL FOI ESTA PÁGINA?"
+  collapse_navigation: Recolher navegação
+  expand_navigation: Expandir navegação
+  minimize_menu: Minimizar menu
+  expand_menu: Expandir menu
+  filter_navigation_topics: Filtrar tópicos da navegação
+  clear_filter: Limpar filtro
+  documentation_nav: Documentação
 es:
   next: SIGUIENTE
   previous: ANTERIOR
@@ -58,6 +93,13 @@ es:
   edit_github: Editar esta página en GitHub
   page_nav_title: En esta página
   helpful: "¿QUÉ TAN ÚTIL FUE ESTA PÁGINA?"
+  collapse_navigation: Contraer navegación
+  expand_navigation: Expandir navegación
+  minimize_menu: Minimizar menú
+  expand_menu: Expandir menú
+  filter_navigation_topics: Filtrar temas de navegación
+  clear_filter: Borrar filtro
+  documentation_nav: Documentación
 de:
   next: NÄCHSTES
   previous: VORHERIGES
@@ -68,3 +110,10 @@ de:
   edit_github: Diese Seite auf GitHub bearbeiten
   page_nav_title: Auf dieser Seite
   useful: "WIE HILFREICH WAR DIESE SEITE?"
+  collapse_navigation: Navigation einklappen
+  expand_navigation: Navigation erweitern
+  minimize_menu: Menü minimieren
+  expand_menu: Menü erweitern
+  filter_navigation_topics: Navigationsthemen filtern
+  clear_filter: Filter löschen
+  documentation_nav: Dokumentation

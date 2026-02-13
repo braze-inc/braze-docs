@@ -17,28 +17,54 @@ $nav_transition_time: 0.35s;
 $nav_filter_height: 0; //hidding filter 75px;
 $nav_bottom_height: 60px;
 
+// Sidebar toggle: colors chosen for WCAG 2.2 AA (3:1 for UI components)
+// #525256 contrasts ≥3:1 with $grey-athens and $grey-ghost
+$nav_toggle_border: #525256;
+
 #nav_bar {
-	padding-top: $base_font_size;
+	padding-top: 24px;
 	background-color: $grey-athens;
 	@media print {
 		display: none !important;
 	}
 	width: 100%;
-	#sidebar_toggle {
+	.sidebar-toggle-row {
 		display: none;
 	}
 	#nav_col {
 		@media (min-width: $window-medium-px) {
+			.sidebar-toggle-row {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				padding: 12px 15px 4px;
+				min-height: 48px;
+			}
 			#sidebar_toggle {
-				background-color: unset !important;
-				color: $grey-boulder;
-				display: block;
-				position: absolute;
-				right: 10px;
-				z-index: 20;
-				&:focus,
-				&.focus {
-					box-shadow: none;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				min-width: 36px;
+				min-height: 36px;
+				padding: 6px 8px;
+				border-radius: 6px;
+				background-color: $grey-ghost;
+				border: 1px solid $nav_toggle_border;
+				color: $black-shark;
+				@media (prefers-reduced-motion: no-preference) {
+					transition: background-color $nav_transition_time ease, border-color $nav_transition_time ease, color $nav_transition_time ease;
+				}
+				&:hover {
+					background-color: darken($grey-ghost, 8%);
+					border-color: darken($nav_toggle_border, 10%);
+					color: $black-shark;
+				}
+				&:focus {
+					outline: none;
+				}
+				&:focus-visible {
+					outline: 2px solid $braze-purple;
+					outline-offset: 2px;
 				}
 			}
 		}
@@ -53,12 +79,10 @@ $nav_bottom_height: 60px;
 		overflow-x: hidden;
 		position: -webkit-sticky;
 		position: sticky;
-		//top: $calc_offset_top;
 		z-index: 101;
 
 		margin-top: 0px;
 		top: $header_height;
-		padding: 0px;
 
 		font-size: 14px;
 		line-height: 20px;
@@ -71,7 +95,7 @@ $nav_bottom_height: 60px;
 			);
 			align-items: flex-start;
 			overflow-y: auto;
-			padding: 10px 15px 10px 15px;
+			padding: 4px 15px 10px 15px;
 			@media (min-width: $window-medium-px) {
 				width: $nav_width - 5px;
 			}
@@ -85,10 +109,41 @@ $nav_bottom_height: 60px;
 			}
 		}
 		&.hide_sidebar {
-			max-width: $nav_width_collapsed;
+			flex: 0 0 $nav_width_collapsed;
+			width: $nav_width_collapsed;
 			min-width: $nav_width_collapsed;
+			max-width: $nav_width_collapsed;
+			overflow-x: visible;
+			overflow-y: visible;
+			z-index: 102;
+			pointer-events: auto;
+			#nav_col {
+				width: 100%;
+				min-width: 0;
+				overflow: visible;
+				pointer-events: auto;
+			}
+			.sidebar-toggle-row {
+				justify-content: center;
+				align-items: center;
+				padding: 8px;
+				min-width: 0;
+				width: 100%;
+				min-height: 44px;
+				position: relative;
+				z-index: 1;
+				pointer-events: auto;
+			}
 			#sidebar_toggle {
-				right: 0px !important;
+				flex-shrink: 0;
+				min-width: 36px;
+				position: relative;
+				z-index: 2;
+				cursor: pointer;
+				pointer-events: auto;
+			}
+			#nav_filter {
+				display: none !important;
 			}
 			#nav_top,
 			#nav_bottom,
@@ -134,11 +189,67 @@ $nav_bottom_height: 60px;
 		div {
 			width: fit-content;
 		}
+		div.nav_item_row {
+			width: 100%;
+		}
 		a.nav_toggle i {
 			width: 15px;
 			text-align: center;
 			position: absolute;
 			line-height: 18px;
+		}
+	}
+	// GitLab-style row: link on left, caret on right — applies at all nesting levels
+	.nav_item_row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 8px;
+		width: 100%;
+		min-width: 0;
+		.nav_link,
+		.nav_title {
+			min-width: 0;
+			flex: 1 1 auto;
+			border-bottom: 2px solid transparent;
+			transition: border-color $nav_transition_time ease;
+		}
+		&:hover .nav_link,
+		&:hover .nav_title {
+			border-bottom-color: $nav_active_color;
+		}
+	}
+	button.nav_toggle {
+		flex-shrink: 0;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 28px;
+		min-height: 28px;
+		padding: 4px;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		background: transparent;
+		color: $black-shark;
+		cursor: pointer;
+		@media (prefers-reduced-motion: no-preference) {
+			transition: background-color $nav_transition_time ease, border-color $nav_transition_time ease, color $nav_transition_time ease;
+		}
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.06);
+		}
+		&:focus {
+			outline: none;
+		}
+		&:focus-visible {
+			outline: 2px solid $braze-purple;
+			outline-offset: 2px;
+		}
+		i {
+			width: 10px;
+			text-align: center;
+			line-height: 1;
+			font-size: 10px;
 		}
 	}
 	.nav {
@@ -182,16 +293,13 @@ $nav_bottom_height: 60px;
 					font-family: $braze-regular;
 					color: $left-nav;
 				}
-				a[aria-expanded="true"] i.fas:after {
-					content: icon($nav_expanded);
-					line-height: 18px;
-					font-size: 9px;
+				a[aria-expanded="true"] i.fas:after,
+				button.nav_toggle[aria-expanded="true"] i.fas:after {
+					content: none; /* GitLab-style uses fa-chevron-down icon */
 				}
-
-				a[aria-expanded="false"] i.fas:after {
-					content: icon($nav_collapsed);
-					line-height: 18px;
-					font-size: 9px;
+				a[aria-expanded="false"] i.fas:after,
+				button.nav_toggle[aria-expanded="false"] i.fas:after {
+					content: none; /* GitLab-style uses fa-chevron-right icon */
 				}
 
 				&:hover {
@@ -213,21 +321,27 @@ $nav_bottom_height: 60px;
 						border-bottom-width: 2px;
 						border-color: $nav_active_color;
 					}
+					.nav_item_row .nav_title {
+						border-bottom-color: $nav_active_color;
+					}
 				}
 
-				div {
-					width: fit-content;
-					// transition: all ease $nav_transition_time;
-					// -webkit-transition:  all ease $nav_transition_time;
-					// -moz-transition:  all ease $nav_transition_time;
-					// &:after {
-					//   content:"";
-					//   height: 2px;
-					//   display: block;
-					//   margin: 3px auto 0px auto;
-					// }
-				}
-				&.active_parent {
+			div {
+				width: fit-content;
+				// transition: all ease $nav_transition_time;
+				// -webkit-transition:  all ease $nav_transition_time;
+				// -moz-transition:  all ease $nav_transition_time;
+				// &:after {
+				//   content:"";
+				//   height: 2px;
+				//   display: block;
+				//   margin: 3px auto 0px auto;
+				// }
+			}
+			div.nav_item_row {
+				width: 100%;
+			}
+			&.active_parent {
 					opacity: 1;
 					font-family: $braze-medium;
 					a {
@@ -247,6 +361,9 @@ $nav_bottom_height: 60px;
 							display: inline;
 						}
 					}
+					.nav_item_row .nav_title {
+						border-bottom: 2px solid $nav_active_color;
+					}
 				}
 			}
 		}
@@ -260,9 +377,9 @@ $nav_bottom_height: 60px;
 		}
 	}
 
-	*,
-	*::before,
-	*::after {
+	& *,
+	& *::before,
+	& *::after {
 		border-width: 0;
 		border-style: solid;
 	}
@@ -296,6 +413,16 @@ $nav_bottom_height: 60px;
 	}
 	#filter-action {
 		cursor: pointer;
+		border: none;
+		background: transparent;
+		padding: 0.5rem 0.75rem;
+		&:focus {
+			outline: none;
+		}
+		&:focus-visible {
+			outline: 2px solid $braze-purple;
+			outline-offset: 2px;
+		}
 	}
 	#nav_filter {
 		display: none;
@@ -330,10 +457,11 @@ $nav_bottom_height: 60px;
 		}
 
 		.input-group-append {
+			#filter-action i,
 			i {
 				font-size: 15px;
-				padding-top: 0.5rem;
-				padding-left: 0.75rem;
+				padding-top: 0;
+				padding-left: 0;
 				width: 2rem;
 			}
 		}
