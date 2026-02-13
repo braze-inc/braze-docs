@@ -495,10 +495,9 @@ Verbose logs include full HTTP request and response details for SDK communicatio
 [http] request POST: <ENDPOINT>/api/v3/data
 - Headers:
   - Content-Type: application/json
-  - XBraze-ApiKey: <REDACTED>
-  - XBraze-DataRequest: true
-  - XBraze-Req-Attempt: 1
-  - XBraze-Req-Tokens-Remaining: <COUNT>
+  - X-Braze-Api-Key: <REDACTED>
+  - X-Braze-Req-Attempt: 1
+  - X-Braze-Req-Tokens-Remaining: <COUNT>
 - Body: { ... }
 ```
 
