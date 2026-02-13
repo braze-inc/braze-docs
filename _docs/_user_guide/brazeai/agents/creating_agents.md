@@ -72,7 +72,7 @@ Select **Add context** to choose what your agent can reference. This includes:
 
 #### Step 2.2: Add optional settings
 
-In the **Optional settings**, you can adjust the [Temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) of the agent-generated copy. A higher temperature allows the agent to use the information provided to be more creative. 
+In the **Optional settings**, you can adjust the [Temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) of the agent-generated copy. A higher temperature allows the agent to use the information provided to be more creative.
 
 You can also set the daily execution limit for your agent. By default, this value is set to 50,000, but can be raised up to 100,000. If you're interested in increasing the limit above 100,000, reach out to your customer success manager to learn more.
 
