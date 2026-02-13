@@ -9,7 +9,7 @@ search_tag: Partner
 
 # retenção de dados Snowflake
 
-> Braze anonimiza—remove informações pessoalmente identificáveis (IPI)—de todos os dados de eventos armazenados no Snowflake que têm mais de dois anos. Se você usar o compartilhamento de dados do Snowflake, poderá optar por reter os dados completos dos eventos em seu ambiente armazenando uma cópia em sua conta do Snowflake antes que a política de retenção seja aplicada.
+> Braze anonimiza (remove informações pessoalmente identificáveis, ou IPI) a partir da maioria dos dados de eventos armazenados no Snowflake que têm mais de dois anos. Certos eventos são retidos até que um usuário seja excluído, conforme descrito mais adiante nesta página. Se você usar o compartilhamento de dados do Snowflake, poderá optar por reter os dados completos dos eventos em seu ambiente armazenando uma cópia em sua conta do Snowflake antes que a política de retenção seja aplicada.
 
 Esta página apresenta duas maneiras de reter dados não anonimizados: 
 
@@ -19,6 +19,15 @@ Esta página apresenta duas maneiras de reter dados não anonimizados:
 {% alert warning %}
 Braze anonimamente os dados de eventos para usuários que são excluídos do Braze, conforme descrito em [Assistência Técnica de Proteção de Dados]({{site.baseurl}}/dp-technical-assistance/). Nenhum dado copiado fora do banco de dados compartilhado será incluído neste processo, pois a Braze não o gerencia mais.
 {% endalert %}
+
+## Eventos isentos da política de retenção de dois anos
+Braze retém eventos relacionados ao ciclo de vida do usuário, status de inscrição e envio de mensagens até que um usuário seja excluído. Os seguintes eventos estão isentos da política padrão de retenção de dois anos:
+- `users.UserOrphan`
+- `users.UserDeleteRequest`
+- `users.behaviors.subscription.GlobalStateChange`
+- `users.behaviors.subscriptiongroup.StateChange`
+- `users.messages.sms.InboundReceive`
+- `users.messages.whatsapp.InboundReceive`
 
 ## Copiando todos os dados para outro banco de dados Snowflake
 
