@@ -17,7 +17,7 @@ Use the Braze dashboard to plan campaigns, launch and manage messages, explore a
 
 When you log in, the dashboard provides a centralized view of your engagement tools and data:
 
-- **Home page**: Shows your [recently edited content](#tips-for-getting-around-faster) and key performance metrics at a glance
+- **Home page**: Shows your [recently edited content](#pick-up-where-you-left-off) and key performance metrics at a glance
 - **Left navigation**: Organizes tools by function (messaging, audience, analytics, settings)
 - **Global header**: Provides quick access to search, support, language settings, notifications, and your account
 
