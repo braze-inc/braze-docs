@@ -9,13 +9,13 @@ search_tag: Partner
 
 # Jasper 
 
-> [O Jasper](https://www.jasper.ai/) é uma plataforma de conteúdo com IA que permite que sua marca crie, gerencie e dimensione conteúdo de alta qualidade e de acordo com a marca em vários canais, incluindo blogs, anúncios e redes sociais.
+> [O Jasper](https://www.jasper.ai/) é uma plataforma de conteúdo com IA que permite que sua marca crie, gerencie e dimensione conteúdo de alta qualidade e dentro da marca em vários canais, incluindo blogs, anúncios e redes sociais.
 
 _Essa integração é mantida pela Jasper._
 
 ## Visão geral
 
-A integração entre Jasper e Braze permite que você otimize a criação de conteúdo e a execução de campanhas. Com o Jasper, suas equipes de marketing podem gerar textos de alta qualidade e de acordo com a marca em minutos. O Braze facilitará o envio dessas mensagens para o público certo no momento ideal. Essa integração promove fluxos de trabalho contínuos, reduz o esforço manual e gera resultados de engajamento mais sólidos.
+A integração entre a Jasper e o Braze permite que você otimize a criação de conteúdo e a execução de campanhas. Com o Jasper, suas equipes de marketing podem gerar textos de alta qualidade e de acordo com a marca em minutos. O Braze facilitará o envio dessas mensagens para o público certo no momento ideal. Essa integração promove fluxos de trabalho contínuos, reduz o esforço manual e gera resultados de engajamento mais sólidos.
 
 Os benefícios de usar essa integração incluem:
 
@@ -44,7 +44,7 @@ Há dois métodos para gerar conteúdo no Jasper e atualizar os modelos do Braze
 {% tabs %}
 {% tab Jasper API %}
 
-## Método: Usar diretamente a API do Jasper
+## Método: Usar a API do Jasper diretamente
 
 Esse método é ideal para criar e atualizar programaticamente modelos HTML de e-mail no Braze, evitando a configuração manual no Jasper e no Braze.
 
@@ -81,7 +81,7 @@ Esse método é ideal para criar e atualizar programaticamente modelos HTML de e
 ### Solicitação de amostra
 
 {% raw %}
-```json
+```bash
 curl --location 'https://api.jasper.ai/v1/templates/skl_BC53D8AC5B4B47E8BE557EBB706E9B47/run?toneId=ton_811696974b3c4db4b3ac0041685c3b7c&knowledgeIds=kno_0a62fc17529e4fe69a71f30b6f0e88a7&audienceId=aud_0199117a690a7cc98481f8700916e2a6' \
 --header 'Content-Type: application/json' \
 --header 'x-api-key: ••••••' \
@@ -122,7 +122,7 @@ Usando os endereços `subject`, `preheader` e `body` gerados pelo Jasper na etap
 
 ### Exemplo de solicitação da API do Braze para criar um modelo de e-mail
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \
@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/cr
 
 O Jasper Studio é uma plataforma sem código dentro do Jasper que lhe permite criar apps de IA personalizados sem precisar de suporte de TI. Você pode criar um app personalizado que gere estruturas JSON formatadas especificamente para a API do Braze ou gerar conteúdo que possa ser adicionado manualmente às suas mensagens no app.
 
-1. Na tela inicial do Jasper, selecione **Create an App (Criar um aplicativo**).
+1. Na tela inicial do Jasper, selecione **Create an App**.
 2. Especifique o app que deseja criar, como **Braze HTML Email Template** ou **Content Block Template**.
 3. Edite os campos de prompt de entrada que o Jasper gera. Para um modelo de e-mail HTML, você pode incluir formulários de entrada para a linha de assunto, pré-cabeçalho, corpo HTML, tags, alternância de CSS em linha e o nome do modelo.
 4. Integrar incorporações de conhecimento com orientação sobre as práticas recomendadas da Liquid para personalização consistente e conteúdo dinâmico.
@@ -176,7 +176,7 @@ O Jasper Studio é uma plataforma sem código dentro do Jasper que lhe permite c
 ## Exemplo de solicitação da API do Braze (usando a saída do app personalizado)
 
 {% raw %}
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \
