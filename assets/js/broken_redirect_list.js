@@ -2628,9 +2628,9 @@ validurls['/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction
 // SELF-REDIRECT after IA migration: validurls['/docs/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users'] = '/docs/user_guide/brazeai/predictive_churn/messaging_users';
 validurls['/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_faq'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/troubleshooting';
 validurls['/docs/user_guide/brazeai/predictive_suite/predictive_events'] = '/docs/user_guide/brazeai/predictive_events';
-validurls['/docs/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics'] = '/docs/user_guide/brazeai/predictive_events/analytics';
-validurls['/docs/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction'] = '/docs/user_guide/brazeai/predictive_events/creating_an_event_prediction';
-validurls['/docs/user_guide/brazeai/predictive_suite/predictive_events/messaging_users'] = '/docs/user_guide/brazeai/predictive_events/messaging_users';
+validurls['/docs/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/analytics';
+// SELF-REDIRECT after IA migration: validurls['/docs/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction'] = '/docs/user_guide/brazeai/predictive_events/creating_an_event_prediction';
+// SELF-REDIRECT after IA migration: validurls['/docs/user_guide/brazeai/predictive_suite/predictive_events/messaging_users'] = '/docs/user_guide/brazeai/predictive_events/messaging_users';
 validurls['/docs/user_guide/brazeai/recommendations/ai_item_recommendations'] = '/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai';
 validurls['/docs/user_guide/brazeai/recommendations/rules_based_recommendations'] = '/docs/user_guide/brazeai/item_recommendations/creating_recommendations/rules_based';
 validurls['/docs/user_guide/brazeai/generative_ai/ai_content_qa'] = '/docs/user_guide/brazeai/generative_ai/content_qa/';
@@ -3090,7 +3090,7 @@ validurls['/docs/user_guide/brazeai/generative_ai/liquid/#generating-liquid-code
 validurls['/docs/user_guide/brazeai/agents/deploying_agents/#deploying-custom-agents'] = '/docs/user_guide/brazeai/agents/deploying_agents/#deploy-custom-agents';
 validurls['/docs/user_guide/brazeai/agents/creating_agents/#creating-custom-agents'] = '/docs/user_guide/brazeai/agents/creating_agents/#create-custom-agents';
 validurls['/docs/user_guide/brazeai/predictive_churn/creating_a_churn_prediction/#creating-a-churn-prediction'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#create-a-churn-prediction';
-validurls['/docs/user_guide/brazeai/predictive_events/creating_an_event_prediction/#creating-an-event-prediction'] = '/docs/user_guide/brazeai/predictive_events/creating_an_event_prediction/#create-an-event-prediction';
+validurls['/docs/user_guide/brazeai/predictive_events/creating_an_event_prediction/#creating-an-event-prediction'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction/#create-an-event-prediction';
 validurls['/docs/user_guide/brazeai/decisioning_studio/reporting/#viewing-decisioning-studio-reports'] = '/docs/user_guide/brazeai/decisioning_studio/reporting/#view-decisioning-studio-reporting';
 
 // User Guide - Message Building
@@ -3216,8 +3216,8 @@ validurls['/docs/hidden/archive_docs/windows_universal/analytics/setting_user_id
 validurls['/docs/hidden/archive_docs/windows_universal/analytics/setting_custom_attributes/#setting-custom-attributes'] = '/docs/hidden/archive_docs/windows_universal/analytics/setting_custom_attributes/#set-custom-attributes';
 
 validurls['/docs/user_guide/message_building_by_channel/banners/creating_campaigns'] = '/docs/user_guide/message_building_by_channel/banners/create';
-validurls['/docs/user_guide/brazeai/predictive_events/prediction_analytics/#prediction_quality'] = '/docs/user_guide/brazeai/predictive_events/analytics/#prediction_quality';
-validurls['/docs/user_guide/brazeai/predictive_events/prediction_analytics/#purchase_score'] = '/docs/user_guide/brazeai/predictive_events/analytics/#purchase_score';
+validurls['/docs/user_guide/brazeai/predictive_events/prediction_analytics/#prediction_quality'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/analytics/#prediction_quality';
+validurls['/docs/user_guide/brazeai/predictive_events/prediction_analytics/#purchase_score'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/analytics/#purchase_score';
 
 validurls['/docs/user_guide/data/unification/user_data/delete_users/'] = '/docs/delete_users/';
 
@@ -3296,6 +3296,13 @@ validurls['/docs/user_guide/brazeai/recommendations/creating_recommendations/'] 
 validurls['/docs/user_guide/brazeai/recommendations/creating_recommendations/rules_based/'] = '/docs/user_guide/brazeai/item_recommendations/creating_recommendations/rules_based/';
 validurls['/docs/user_guide/brazeai/recommendations/creating_recommendations/ai/'] = '/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/';
 validurls['/docs/user_guide/brazeai/recommendations/using_recommendations/'] = '/docs/user_guide/brazeai/item_recommendations/using_recommendations/';
+
+// BrazeAI > Predictive Suite > Predictive events
+validurls['/docs/user_guide/brazeai/predictive_events/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/';
+validurls['/docs/user_guide/brazeai/predictive_events/analytics/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/analytics/';
+validurls['/docs/user_guide/brazeai/predictive_events/creating_an_event_prediction/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction/';
+validurls['/docs/user_guide/brazeai/predictive_events/messaging_users/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/messaging_users/';
+validurls['/docs/user_guide/brazeai/predictive_events/use_case/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/use_case/';
 
 // BrazeAI > Predictive Suite > Predictive churn children
 validurls['/docs/user_guide/brazeai/predictive_churn/creating_a_churn_prediction/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/';
