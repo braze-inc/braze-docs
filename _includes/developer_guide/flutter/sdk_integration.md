@@ -149,6 +149,10 @@ Automatic integration initialization is enabled by default. To delay initializat
 <bool name="com_braze_flutter_enable_automatic_integration_initializer">false</bool>
 ```
 
+#### Step 4.2: Initialize Braze later
+
+After disabling the automatic integration initializer, initialize Braze from your Android app at the point in your launch flow where you're ready to start the SDK.
+
 {% endtab %}
 {% tab iOS %}
 
@@ -164,14 +168,18 @@ Braze.prepareForDelayedInitialization(pushAutomation: true)
 
 #### Step 4.2: Initialize Braze later
 
-When you're ready to initialize the SDK, create the Braze instance using the normal configuration flow:
+When you're ready to initialize the SDK, create the Braze instance using the Flutter plugin initialization flow:
 
 ```swift
-let configuration = Braze.Configuration(apiKey: brazeApiKey, endpoint: brazeEndpoint)
+let configuration = Braze.Configuration(apiKey: "<BRAZE_API_KEY>", endpoint: "<BRAZE_ENDPOINT>")
 configuration.push.automation = true
-let braze = Braze(configuration: configuration)
+let braze = BrazePlugin.initBraze(configuration)
 AppDelegate.braze = braze
 ```
+
+{% alert note %}
+If you're using delayed initialization, don't initialize Braze in `application(_:didFinishLaunchingWithOptions:)` from Step 2. Keep the delayed initialization call in Step 4.1 and move SDK initialization to a later point as shown in Step 4.2.
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
