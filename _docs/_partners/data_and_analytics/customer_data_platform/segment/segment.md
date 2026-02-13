@@ -72,7 +72,7 @@ For device-mode integrations on mobile, you must add the Braze destination plugi
 When using a device-mode connection, similar to integrating the Braze SDK natively, the Braze SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
 
 {% alert note %}
-If you use [destination filters](https://segment.com/docs/connections/destinations/destination-filters/) with device-mode (Kotlin or Swift) destinations, the destination plugin must be configured with the filter support enabled. Refer to Segment's [destination filters documentation](https://segment.com/docs/connections/destinations/destination-filters/) for details on supported plugin versions.
+If you use [destination filters](https://segment.com/docs/connections/destinations/destination-filters/) with device-mode (Kotlin or Swift) destinations, you must configure the destination plugin with the filter support enabled. Refer to Segment's [destination filters documentation](https://segment.com/docs/connections/destinations/destination-filters/) for details on supported plugin versions.
 {% endalert %} 
 
 {% tabs local %}
