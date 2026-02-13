@@ -21,9 +21,7 @@ Usando o Braze Audience Sync no LinkedIn, as marcas podem adicionar dados de usu
 
 Esse recurso permite que as marcas controlem quais dados primários específicos são compartilhados com o LinkedIn. Na Braze, as integrações com as quais você pode e não pode compartilhar seus dados primários recebem a máxima consideração. Para saber mais, consulte nossa [política de privacidade](https://www.braze.com/privacy).
 
-{% alert important %}
-O Audience Sync to LinkedIn está atualmente na versão beta. Entre em contato com o gerente da sua conta Braze se quiser participar da versão beta.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Audience Sync to LinkedIn' type='beta' %}
 
 ## Pré-requisitos
 
