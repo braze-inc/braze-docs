@@ -227,7 +227,7 @@ As a result, the next time someone loads the app, they will see the new Thanksgi
 
 Use feature flags to synchronize a feature's rollout and messaging and strengthen collaboration between product and marketing teams. By coordinating feature releases and messaging through feature flags, both teams can align their strategies and create consistent user experiences.
 
-For example let's say that we're launching a new loyalty rewards program for our users. It can be difficult for marketing and product teams to perfectly coordinate the timing of promotional messaging with a feature's rollout. However, with feature flags in Canvas, our product team can apply sophisticated logic to enable a feature for a specific audience, while our marketing team controls the related messaging to those same users.
+For example, let's say that we're launching a new loyalty rewards program for our users. It can be difficult for marketing and product teams to perfectly coordinate the timing of promotional messaging with a feature's rollout. However, with feature flags in Canvas, our product team can apply sophisticated logic to enable a feature for a specific audience, while our marketing team controls the related messaging to those same users.
 
 To effectively coordinate feature rollout and messaging, we'll create a new feature flag called `show_loyalty_program`. For our initial phased release, we'll let Canvas control when and for whom the feature flag is enabled. For now, we'll leave the rollout percentage at 0% and not select any target segments.
 
@@ -237,7 +237,7 @@ Then, in Canvas, we'll create a [Feature Flag step]({{site.baseurl}}/user_guide/
 
 ![An example of a Canvas with an Audience Split step where the high-value customers segment turns on the show_loyalty_program feature flag.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 
-Now, users in this segment will start to see the new loyalty program, and after it's enabled, an email and survey will be sent out automatically to help our teams gather feedback.
+Now, users in this segment start to see the new loyalty program, and after it's enabled, an email and survey are sent out automatically to help our teams gather feedback.
 
 ### Feature experimentation
 
