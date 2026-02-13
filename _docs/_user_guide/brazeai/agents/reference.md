@@ -18,7 +18,7 @@ Braze Agents are currently in beta. For help getting started, contact your custo
 When you set up an agent, you can choose the model it uses to generate responses. You have two options: using a Braze-powered model or bringing your own API key.
 
 {% alert important %}
-When using the Braze-powered **Auto** model, we have optimized for models whose thinking capabilities are sufficient to perform tasks such as catalog search and user segmentation membership. When using other models, we recommend testing to confirm your model works well for your use case. You may need to adjust your [instructions](#writing-instructions) to give different levels of detail or step-by-step thinking to models with different speeds and capabilities.
+The Braze-powered **Auto** model is optimized for models whose thinking capabilities are sufficient to perform tasks such as catalog search and user segmentation membership. When using other models, we recommend testing to confirm your model works well for your use case. You may need to adjust your [instructions](#writing-instructions) to give different levels of detail or step-by-step thinking to models with different speeds and capabilities.
 {% endalert %}
 
 ### Option 1: Use a Braze-powered model
