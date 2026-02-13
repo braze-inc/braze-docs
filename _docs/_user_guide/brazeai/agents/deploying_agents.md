@@ -3,6 +3,7 @@ nav_title: Deploy agents
 article_title: Deploy custom agents
 description: "Learn how to put custom agents to use in Braze after you create them."
 alias: /deploying-agents/
+page_order: 2
 ---
 
 # Deploy custom agents
@@ -17,11 +18,11 @@ Braze Agents are currently in beta. For help getting started, contact your custo
 
 In the **Agent Usage** section of your agent, you can reference and navigate to where the agent is being actively used in catalogs and Canvases.
 
-![Agent Usage section that shows two active agents and one inactive agent for Canvases.]( {% image_buster /assets/img/ai_agent/agent_usage.png %} )
+![Agent Usage section that shows two active agents and one inactive agent for Canvases.]({% image_buster /assets/img/ai_agent/agent_usage.png %})
 
 ## Agents in Canvas  
 
-You can use agents as steps in a journey to personalize messages or guide decisioning in real time. For detailed setup steps, refer to [Agent Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
+You can use agents as steps in a journey to personalize messages or guide decisioning in real time. For detailed setup steps, refer to [Agent step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
 
 ### Use cases
 
