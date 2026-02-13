@@ -198,7 +198,7 @@ Como sua segunda campanha de webhook corresponde à primeira, você pode [duplic
 
 Para **Programar entrega**, defina o **disparo baseado em ação** e o **grupo de inscrições de SMS** como os mesmos da [primeira entrega](#step-53-schedule-the-first-delivery). Entretanto, para a **categoria de palavra-chave**, escolha **Other** (Outra).
 
-![A página "Scheduled Delivery" (Entrega programada) da segunda campanha de webhook, com "Other" (Outro) escolhido como a categoria de palavra-chave.]({% image_buster /assets/img/front/front_actionbased_other_keyword.png %})
+![A página "Scheduled Delivery" (Entrega agendada) da segunda campanha de webhook, com "Other" (Outro) escolhido como a categoria de palavra-chave.]({% image_buster /assets/img/front/front_actionbased_other_keyword.png %})
 
 #### Etapa 5.6: Adicionar um filtro de público
 
