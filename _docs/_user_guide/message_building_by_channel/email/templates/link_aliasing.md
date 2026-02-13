@@ -111,12 +111,14 @@ The following tables provide examples of links in an email body, link aliasing r
 
 ### Link with anchor and capture tag
 
-**Logic:** When using link aliasing with URLs that contain anchors (#), Braze expects the anchor to be placed after the query parameters. This means that the `lid` value must be appended before the anchor for proper tracking, and since Braze reads the URL from left to right, the question mark (?) and `lid` should come before the anchor.
+**Logic:** When using link aliasing with URLs that contain anchors (#), Braze expects the anchor to be placed after the query parameters. This means that the `lid` value must be appended **before** the anchor for proper tracking, and since Braze reads the URL from left to right, the question mark (?) and `lid` should come before the anchor.
 
 | Link in Email Body                                                                        | Link with Aliasing                                                                                           |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a>` {%endraw%} |
+| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions?lid={{link_alias}}#special-offer">Check out our special offer!</a>` {%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+<a href="https://example.com/page{{captured_params}}#section-anchor">Link text</a>
 
 ## Tracking link aliases
 
