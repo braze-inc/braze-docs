@@ -8,7 +8,7 @@ description: "Este artigo de referência fornece alguns casos de uso da transfor
 
 # Casos de uso de transformação de dados
 
-> Considere os seguintes casos de uso possíveis com o Braze Data Transformation e uma combinação de webhooks das plataformas externas de exemplo.
+> Considere os seguintes casos de uso possíveis para a transformação de dados da Braze e uma combinação de webhooks das plataformas externas de exemplo.
 
 ## Geração de leads
 
@@ -17,26 +17,26 @@ Você hospeda um formulário Typeform de geração de leads em seu site. Quando 
 - Adicione-os a uma de suas listas de e-mail do Braze.
 - Sincronize algumas de suas respostas como atributos personalizados no Braze, pois suas respostas são dados primários valiosos que podem alimentar experiências de mensagens personalizadas para uso futuro.
 
-## Abertura de tíquetes de serviço
+## Abertura de tickets de serviço
 
 Quando os clientes abrem tickets de atendimento ao cliente em uma plataforma como a Zendesk, você pode:
-- Escreva um evento personalizado no Braze quando um tíquete do Zendesk for criado.
+- Escreva um evento personalizado no Braze quando um ticket do Zendesk for criado.
 - Escreva um evento personalizado com propriedades de evento no Braze quando uma classificação CSAT negativa for fornecida ao Zendesk.
 
 ## Integração com o Braze
 
-A Braze tem uma integração com a [Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/), uma plataforma de pesquisas e percepções do cliente. Com a Transformação de dados, é possível salvar várias respostas de questionário em um atributo personalizado aninhado, em vez de na integração existente que salva vários atributos personalizados.
+O Braze tem uma integração com a [Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/), uma plataforma de insights e pesquisas com clientes. Com a Transformação de dados, é possível salvar várias respostas de pesquisa em um atributo personalizado aninhado, em vez da integração existente que salva vários atributos personalizados.
 
 ## Exemplo de código de transformação
 
 Considere este exemplo de carga útil da Typeform, uma plataforma de pesquisa, que é enviada sempre que uma resposta de pesquisa é recebida.
 
-\![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
+![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
 
 {% tabs local %}
 {% tab Basic transformation %}
 
-Este exemplo usa as respostas da pesquisa como atributos e grava um evento para indicar que a pesquisa foi concluída:
+Este exemplo usa as respostas da pesquisa como atribuições e grava um evento para indicar que a pesquisa foi concluída:
 
 ```
 return {
@@ -65,7 +65,7 @@ return {
 {% endtab %}
 {% tab Advanced transformation %}
 
-Vamos continuar com o exemplo básico de transformação e introduzir uma declaração `if` para categorizar o usuário em uma das respostas.
+Vamos continuar com o exemplo de transformação básica e introduzir uma declaração `if` para categorizar o usuário em uma das respostas.
 
 ```
 let nps_category;

@@ -143,7 +143,7 @@ To do so, switch to the **Test** tab and send a test webhook. You can test the w
 
 After sending the test webhook, a dialog will appear with the response message. If the webhook request is unsuccessful, refer to the error message for assistance in troubleshooting your webhook. The following example details the response of a webhook with an invalid webhook URL.
 
-```json
+```http
 404 Not Found
 
 {

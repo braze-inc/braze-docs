@@ -27,7 +27,7 @@ En intégrant Braze et Stripe, vous pouvez :
 
 ## Intégration
 
-### Étape 1 : Configurez la transformation de données de Braze pour qu'elle accepte les webhooks de Braze. {#step-1}
+### Étape 1 : Configurez la transformation de données de Braze pour qu'elle accepte les webhooks de Braze. {#step-1}
 
 {% multi_lang_include create_transformation.md %}
 
@@ -50,7 +50,7 @@ Ensuite, vous transformerez la charge utile du webhook qui sera envoyée par Str
 3. Sélectionnez **Valider** pour obtenir un aperçu du résultat de votre code et vérifier s'il s'agit d'une demande `/users/track` acceptable.
 4. Enregistrez et activez votre transformation de données.
 
-![Exemple de détails de webhook et de code de transformation.]({% image_buster /assets/img/stripe/stripe_data_transformation.png %})
+![Un exemple de détails de webhook et de code de transformation.]({% image_buster /assets/img/stripe/stripe_data_transformation.png %})
 
 #### Format du corps de la requête
 
@@ -244,7 +244,7 @@ Dans cet exemple de modèle, nous enregistrons un événement personnalisé dans
 Dans cet exemple de modèle, nous utilisons le champ "client" comme identifiant.
 
 {% tabs local %}
-{% tab Entrée %}
+{% tab Input %}
 
 ```javascript
 
@@ -283,7 +283,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Sortie %}
+{% tab Output %}
 
 ```json
 {

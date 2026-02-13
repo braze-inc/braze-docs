@@ -1,7 +1,7 @@
 ---
 nav_title: "MMS"
 article_title: Über MMS
-page_order: 15
+page_order: 16
 description: "In diesem Artikel erfahren Sie, was MMS-Nachrichten sind und welche Anwendungsfälle es für sie gibt."
 page_type: reference
 alias: /about_mms/
@@ -10,7 +10,7 @@ channel:
 search_rank: 2  
 ---
 
-# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"} Über MMS Nachrichten
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"} Über MMS-Nachrichten
 
 > MMS, auch bekannt als Multimedia Message Service, wird verwendet, um Nachrichten mit Multimedia-Inhalten (JPEG, GIF, PNG) an Mobiltelefone zu senden.<br><br>Wie SMS ist auch MMS ein Messaging-Kanal mit hoher Dringlichkeit, der es Ihnen erlaubt, so zu kommunizieren, wie Sie es auf keinem anderen Kanal können. MMS erweitert jedoch die Möglichkeiten von SMS, indem es Ihnen die Möglichkeit gibt, einer ansonsten reinen Text-SMS Medien hinzuzufügen.
 

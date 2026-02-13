@@ -80,6 +80,7 @@ Em `app.json`, adicione o plug-in Braze Expo. Você pode fornecer as seguintes o
 | `enableBrazeIosRichPush`                      | booleano | Somente iOS. Define se deve ativar recursos avançados de push para iOS.                                                                                                  |
 | `enableBrazeIosPushStories`                   | booleano | Somente iOS. Se deseja ativar os stories por push da Braze para iOS.                                                                                                  |
 | `iosPushStoryAppGroup`                        | string  | Somente iOS. O grupo de app usado para o iOS Push Stories.                                                                                                       |
+| `iosUseUUIDAsDeviceId`                        | booleano | Somente iOS. Se o ID do dispositivo usará um UUID gerado aleatoriamente.                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Exemplo de configuração:
@@ -263,6 +264,7 @@ cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 Importe o SDK da Braze na parte superior do arquivo `AppDelegate.swift`:
 ```swift
 import BrazeKit
+import braze_react_native_sdk
 ```
 
 No método `application(_:didFinishLaunchingWithOptions:)`, substitua a [chave]({{site.baseurl}}/api/identifier_types/) de API e o [endpoint]({{site.baseurl}}/api/basics/#endpoints) pelos valores de seu app. Em seguida, crie a instância da Braze usando a configuração e crie uma propriedade estática em `AppDelegate` para facilitar o acesso:
@@ -351,7 +353,7 @@ static Braze *_braze = nil;
 
 ### Etapa 3: Importar a biblioteca
 
-Em seguida, `import` a biblioteca em seu código do React Native. Para obter mais detalhes, confira nosso [projeto de amostra](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). 
+Em seguida, `import` a biblioteca em seu código do React Native. Para obter mais detalhes, confira nosso [projeto de exemplo](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). 
 
 ```javascript
 import Braze from "@braze/react-native-sdk";

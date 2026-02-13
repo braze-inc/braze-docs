@@ -195,7 +195,7 @@ CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 Braze では、バックグラウンドプッシュ通知を使用してジオフェンスがデバイスと同期されます。以下の手順に従って、サーバーからのジオフェンス更新が適切に処理されるように、[サイレントプッシュ通知を設定]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift)する。
 
 {% alert note %}
-Brazeのジオフェンス同期通知を受信してもアプリケーションが不要なアクションを起こさないようにするには、[サイレントプッシュを無視する]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications)記事に従ってください。
+Brazeのジオフェンス同期通知を受信してもアプリケーションが不要なアクションを起こさないようにするには、[サイレントプッシュの無視の]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications)記事に従ってください。
 {% endalert %}
 
 ## ジオフェンスを手動でリクエストする {#manually-request-geofences}
@@ -278,7 +278,7 @@ Brazeでは、不要なリクエストを避けるため、ジオフェンスの
 
 #### Brazeと非Brazeの両方のジオフェンス機能を使用している場合、どのように機能するのか？
 
-前述の通り、iOSでは1つのアプリに最大20個のジオフェンスを保存できる。このストレージは、BrazeとBraze以外のジオフェンスの両方で共有され、[CLLocationManagerによって](https://developer.apple.com/documentation/corelocation/cllocationmanager)管理される。
+前述したように、iOSでは1つのアプリに最大20個のジオフェンスを保存できる。このストレージは、BrazeとBraze以外のジオフェンスの両方で共有され、[CLLocationManagerによって](https://developer.apple.com/documentation/corelocation/cllocationmanager)管理される。
 
 例えば、アプリに20の非Brazeジオフェンスが含まれている場合、Brazeジオフェンスをトラッキング追跡するストレージはない（逆も同様）。新しいジオフェンスを受信するには、[アップルの位置情報APIを](https://developer.apple.com/documentation/corelocation)使用して、デバイス上の既存のジオフェンスの一部の監視を停止する必要がある。
 

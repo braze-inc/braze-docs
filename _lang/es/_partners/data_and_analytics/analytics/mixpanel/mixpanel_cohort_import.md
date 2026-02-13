@@ -10,9 +10,9 @@ search_tag: Partner
 
 > Este artículo describe cómo importar cohortes de usuarios de [Mixpanel](https://mixpanel.com/) a Braze. Para obtener más información sobre la integración de Mixpanel y sus otras funcionalidades, consulte el [artículo principal sobre Mixpanel]({{site.baseurl}}/partners/data_and_analytics/analytics/mixpanel/).
 
-## Integración de la importación de datos
+## Integración de importación de datos
 
-Cualquier integración que establezca contará para el volumen de puntos de datos de su cuenta.
+Cualquier integración que configures registrará puntos de datos. Si tienes alguna pregunta sobre los matices de los puntos de datos Braze, tu administrador de cuentas Braze puede responderte.
 
 {% alert important %}
 En cumplimiento de las políticas de retención de datos de Mixpanel, los eventos enviados antes del 1 de enero de 2010 se eliminarán durante la importación.

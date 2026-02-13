@@ -54,14 +54,14 @@ Em **Configuração de privacidade do app**, escolha **NSPrivacyTracking** e def
 
 Em **Configuração de privacidade do app**, escolha **NSPrivacyTrackingDomains**. Na matriz de domínios, adicione um novo elemento e defina seu valor como o ponto de extremidade que você [adicionou anteriormente ao seu `AppDelegate`]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/#update-your-app-delegate), prefixado com `sdk-tracking`.
 
-![O arquivo 'PrivacyInfo.xcprivacy' aberto com um endpoint de rastreamento da Braze listado em "NSPrivacyTrackingDomains".]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytrackingdomains.png %})
+![O arquivo 'PrivacyInfo.xcprivacy' é aberto com um ponto de extremidade de rastreamento do Braze listado em "NSPrivacyTrackingDomains".]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytrackingdomains.png %})
 
 ### Etapa 4: Declare seus dados de rastreamento
 
 Em seguida, abra o site `AppDelegate.swift` e liste cada [propriedade de rastreamento](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) que deseja declarar, criando uma lista de rastreamento estática ou dinâmica. Lembre-se de que a Apple bloqueará essas propriedades até que o usuário final aceite o prompt de ATT, portanto, liste apenas as propriedades que você e sua equipe jurídica consideram rastreamento. Por exemplo:
 
 {% tabs %}
-{% tab exemplo estático %}
+{% tab static example %}
 No exemplo a seguir, `dateOfBirth`, `customEvent` e `customAttribute` são declarados como dados de rastreamento em uma lista estática. 
 
 ```swift
@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 {% endtab %}
 
-{% tab exemplo dinâmico %}
+{% tab dynamic example %}
 No exemplo a seguir, a lista de rastreamento é atualizada automaticamente depois que o usuário final aceita o prompt ATT.
 
 ```swift

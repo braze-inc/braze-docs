@@ -1,13 +1,13 @@
 ---
-nav_title: カスタムイベントのトラッキング
-article_title: Windows Universal のカスタムイベントの追跡
+nav_title: トラックカスタムイベントs
+article_title: Windows ユニバーサル用のカスタムイベントの追跡
 platform: Windows Universal
 page_order: 2
 description: "このリファレンス記事では、Windows ユニバーサルプラットフォームでカスタムイベントを追跡する方法について説明します。"
 hidden: true
 ---
 
-# カスタムイベントのトラッキング
+# トラックカスタムイベントs
 {% multi_lang_include archive/windows_deprecation.md %}
 
 Braze でカスタムイベントを記録することで、アプリの使用パターンに関する詳細を把握し、ダッシュボードでのアクションによってユーザーをセグメント化できます。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。

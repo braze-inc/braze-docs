@@ -1,9 +1,9 @@
 ---
-nav_title: "Objeto Webhook"
+nav_title: "Objeto de webhook"
 article_title: Objeto de envio de mensagens de webhook
 page_order: 13
 page_type: reference
-channel: 
+channel:
   - webhook
 description: "Este artigo de referência descreve o objeto webhook do Braze."
 
@@ -23,4 +23,4 @@ description: "Este artigo de referência descreve o objeto webhook do Braze."
 }
 ```
 
-Como prática recomendada, a Braze recomenda fornecer um valor explícito para `Content-Type` no campo `request_headers` para um comportamento consistente e com previsão, já que os remetentes e servidores podem mudar com o tempo. Se um valor não for especificado para o cabeçalho `Content-Type`, ele será inferido do corpo da solicitação.
+Como prática recomendada, a Braze recomenda fornecer um valor explícito para `Content-Type` no campo `request_headers` para um comportamento consistente e com previsão, já que os remetentes e servidores podem mudar com o tempo. Se você não especificar um valor para o cabeçalho `Content-Type`, o sistema infere um valor do corpo da solicitação.

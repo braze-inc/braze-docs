@@ -18,7 +18,7 @@ Com a integração do Zeotap e do Braze, você pode ampliar a escala e o alcance
 | --- | --- |
 |Conta Zeotap | É necessário ter uma [conta da Zeotap](https://zeotap.com/) para usar a parceria. |
 | Chave da API REST do Braze | Uma chave da API REST da Braze com permissões `users.track`. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Ponto de extremidade REST do Braze  | Sua URL de endpoint REST. Seu endpoint dependerá do [URL do Braze para sua instância]({% image_buster /assets/img/zeotap/zeotap1.png %}). |
+| Ponto de extremidade REST do Braze  | Seu URL do ponto de extremidade REST. Seu endpoint dependerá do [URL da Braze para sua instância]({% image_buster /assets/img/zeotap/zeotap1.png %}). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Integração

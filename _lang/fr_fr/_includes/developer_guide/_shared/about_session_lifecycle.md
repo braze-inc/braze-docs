@@ -3,6 +3,10 @@
 Une session désigne la période pendant laquelle le SDK de Braze suit l'activité de l'utilisateur dans votre application après son lancement. Vous pouvez également forcer une nouvelle session en [appelant la méthode `changeUser()` ]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/#setting-a-user-id).
 
 {% tabs %}
+{% tab web %}
+Par défaut, une session démarre lorsque vous appelez `braze.openSession()` pour la première fois. La session restera active jusqu'à `30` minutes d'inactivité (sauf si vous [modifiez le délai par défaut de la session]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web#change-session-timeout) ou si l'utilisateur ferme l'application).
+{% endtab %}
+
 {% tab android %}
 {% alert note %}
 Si vous avez configuré le [rappel du cycle de vie de l'activité]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android) pour Android, Braze appellera automatiquement [`openSession()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/open-session.html) et [`closeSession()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/close-session.html) pour chaque activité de votre application.
@@ -17,9 +21,5 @@ L'appel à `closeSession()` ne met pas immédiatement fin à la session. Au lieu
 Par défaut, une session démarre lorsque vous appelez `Braze.init(configuration:)`. Cela se produit lorsque la notification `UIApplicationWillEnterForegroundNotification` est déclenchée, ce qui signifie que l'application est passée au premier plan.
 
 Si votre application passe en arrière-plan, `UIApplicationDidEnterBackgroundNotification` sera déclenché. Lorsque votre application revient au premier plan, le SDK vérifie si plus de 10 secondes se sont écoulées depuis le début de la session (sauf si vous [modifiez le délai d'attente par défaut de la session]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift#change-session-timeout)). Si c'est le cas, une nouvelle session commencera.
-{% endtab %}
-
-{% tab web %}
-Par défaut, une session démarre lorsque vous appelez `braze.openSession()` pour la première fois. La session restera active jusqu'à `30` minutes d'inactivité (sauf si vous [modifiez le délai par défaut de la session]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web#change-session-timeout) ou si l'utilisateur ferme l'application).
 {% endtab %}
 {% endtabs %}

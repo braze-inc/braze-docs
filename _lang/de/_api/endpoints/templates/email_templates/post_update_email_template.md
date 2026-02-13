@@ -16,7 +16,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Update E-Mail 
 
 > Verwenden Sie diesen Endpunkt, um E-Mail Templates auf dem Braze-Dashboard zu aktualisieren.
 
-Sie können auf die `email_template_id` einer E-Mail-Vorlage zugreifen, indem Sie auf der Seite **Templates und Medien** zu ihr navigieren.  Der [Endpunkt E-Mail-Vorlage erstellen]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) gibt auch eine `email_template_id` Referenz zurück.
+Sie können auf die `email_template_id` einer E-Mail-Vorlage zugreifen, indem Sie auf der Seite **Templates & Medien** zu ihr navigieren. Der [Endpunkt E-Mail-Vorlage erstellen]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) gibt auch eine `email_template_id` Referenz zurück.
 
 Alle Felder außer `email_template_id` sind optional, aber Sie müssen mindestens ein Feld zum Aktualisieren angeben.
 
@@ -25,7 +25,7 @@ Alle Felder außer `email_template_id` sind optional, aber Sie müssen mindesten
 ## Voraussetzungen
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `templates.email.update`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 

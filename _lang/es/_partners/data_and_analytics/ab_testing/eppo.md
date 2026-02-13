@@ -38,7 +38,7 @@ Puedes utilizar características nativas de pruebas A/B en tus campañas y Canva
 Para realizar experimentos utilizando datos de Braze en Eppo, crea [tablas de asignaciones](https://docs.geteppo.com/data-management/definitions/assignment-sql/) en tu almacén basadas en los datos de eventos de mensajes a nivel de usuario exportados desde Braze. Se recomiendan tablas separadas para los experimentos en Canvas y en campañas, porque se basan en metadatos diferentes.
 
 {% tabs local %}
-{% tab experimentos en Canvas %}
+{% tab canvas experiments %}
 Para los experimentos en Canvas, las asignaciones pueden crearse de dos formas:
 
 - En el nivel de entrada Canvas (`users.canvas.Entry`)
@@ -48,7 +48,7 @@ En estos casos, se utilizan campos como `canvas_name`, `experiment_step_id`, `ca
 
 {% endtab %}
 
-{% tab experimentos de campaña %}
+{% tab campaign experiments %}
 Para los experimentos de campaña, utiliza eventos de envío (como push, correo electrónico, SMS) para determinar cuándo ha entrado un usuario en el experimento. `campaign_name` Para rellenar la tabla de asignaciones, se utilizan las direcciones `message_variation_name` y `time`.
 
 {% endtab %}

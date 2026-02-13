@@ -40,7 +40,7 @@ Tu sitio web debe tener un archivo de prestador de servicios que importe la bibl
 
 Los navegadores más populares (como Safari, Chrome, FireFox y Edge) admiten notificaciones push web en sus versiones posteriores. Para solicitar permiso push en iOS o iPadOS, tu sitio web debe añadirse a la pantalla **de** inicio del usuario seleccionando **Compartir en** > **Añadir a pantalla de inicio**. [Añadir a la](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) pantalla de [inicio](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) permite a los usuarios marcar tu sitio web, añadiendo tu icono a su valioso espacio en la pantalla de inicio.
 
-![Un iPhone mostrando opciones para marcar un sitio web y guardarlo en la pantalla de inicio]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
+![Un iPhone que muestra opciones para marcar un sitio web y guardarlo en la pantalla de inicio]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
 
 ### Paso 5: Mostrar el mensaje push nativo {#push-prompt}
 Una vez añadida la aplicación a tu pantalla de inicio, ahora puedes solicitar permiso push cuando el usuario realice una acción (como hacer clic en un botón). Esto puede hacerse utilizando el método [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) o con un [mensaje dentro de la aplicación como push primer sin código]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
@@ -49,7 +49,7 @@ Una vez añadida la aplicación a tu pantalla de inicio, ahora puedes solicitar 
 Después de aceptar o rechazar el aviso, tienes que borrar y volver a instalar el sitio web en tu pantalla de inicio para poder volver a mostrar el aviso.
 {% endalert %}
 
-![Un aviso push preguntando "permitir" o "no permitir" Notificaciones]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
+![Una notificación push pidiendo "permitir" o "no permitir" Notificaciones]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
 
 Por ejemplo:
 

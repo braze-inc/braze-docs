@@ -25,7 +25,7 @@ Deberá clonar el [repositorio de Retail Demo Store](https://github.com/aws-samp
 
 Antes de configurar Braze para enviar mensajes personalizados a los usuarios, revisa los componentes relevantes necesarios para un sitio web típico de comercio electrónico, utilizando como ejemplo la arquitectura de la tienda de demostración minorista.
 
-![Una imagen en la que se desglosa la arquitectura de personalización Braze y se observa cómo interactúan entre sí los distintos componentes.]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
+![Una imagen que desglosa la arquitectura de personalización de Braze, anotando cómo interactúan entre sí los distintos componentes.]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
 
 1. La interfaz de usuario web de Retail Demo Store utiliza la biblioteca JavaScript de AWS Amplify para enviar eventos de formación a Amazon Personalize.
 2. Los registros de usuario de la campaña Braze se actualizan desde el servicio Usuario de tienda global.

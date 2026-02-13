@@ -25,7 +25,11 @@ You'll need the following to integrate LINE with Braze:
 - [LINE developers account](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [LINE messaging API channel](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-Sending LINE messages from Braze will draw from your account's Message Credits.
+Sending LINE messages from Braze draws from your account's Message Credits.
+
+{% alert note %}
+**Setting `native_line_id`**: You can set `native_line_id` by sending user updates to Braze (for example, with the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). If your client-side SDK doesn’t have a dedicated field for `native_line_id`, send it in server-side user updates using one of these methods.
+{% endalert %}
 
 ## Types of LINE accounts
 
@@ -339,7 +343,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 After the user logs in, a change is made on your website or app so that the user ID is sent back to Braze to associate it with the LINE ID that was passed as part of the URL, with example code such as:
 
-```json
+```javascript
 const currentUrl = new URL(window.location.href)
 const queryParams = new URLSearchParams(currentUrl.search);
 const lineUserId = queryParams.get("line_user_id")

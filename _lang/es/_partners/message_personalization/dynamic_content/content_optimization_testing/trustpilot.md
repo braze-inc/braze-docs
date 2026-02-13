@@ -47,7 +47,7 @@ Configura una campaña webhook Braze basada en acciones para desencadenar que la
 ### Paso 2: Recuperar el token de acceso
 
 1. Utiliza [Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) para realizar una solicitud [al punto final de autenticación de Trustpilot](https://documentation-apidocumentation.trustpilot.com/authentication?_gl=1*1hxojlc*_ga*MjEzMDkzNjQ5NS4xNzMxNjgxOTQ0*_ga_3TEL80JZSG*MTczNjU0MzY0Ny45LjAuMTczNjU0MzY0Ny4wLjAuMA..) para recuperar el token de acceso.
-2. Utiliza el tipo de concesión **client_credentials** e introduce tu clave de API y tu secreto en una etiqueta de Contenido conectado para recuperar un token. La solicitud de contenido conectado puede introducirse en el encabezado de solicitud. El Contenido conectado puede tener este aspecto:
+2. Utiliza el **client_credentials** e introduce tu clave de API y tu secreto en una etiqueta de Contenido conectado para recuperar un token. La solicitud de contenido conectado puede introducirse en el encabezado de solicitud. El Contenido conectado puede tener este aspecto:
   
 {% raw %}
 

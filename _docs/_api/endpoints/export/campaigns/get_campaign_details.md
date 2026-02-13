@@ -124,7 +124,7 @@ The `messages` response will contain information about each message. The followi
             {
                 "header":
                     {
-                         "text":(string) the display text for the header of the survey,
+                         "text":(string) the display text for the header of the survey
                     }
                 "choices": [
                     {
@@ -132,7 +132,7 @@ The `messages` response will contain information about each message. The followi
                        "text": (string) the display text,
                        "custom_attribute_key": (string) the custom attribute key,
                        "custom_attribute_value": (sting) the custom attribute value,
-                       "deleted": (boolean) deleted from live campaign,
+                       "deleted": (boolean) deleted from live campaign
                     },
                     ...
                 ]

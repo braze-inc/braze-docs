@@ -27,5 +27,8 @@ guide_featured_list:
   - name: Dashboard zur API-Nutzung
     link: /docs/user_guide/analytics/dashboard/api_usage_dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
+  - name: E-Commerce-Einnahmen Dashboard
+    link: /docs/ecommerce_revenue_dashboard/
+    image: /assets/img/braze_icons/line-chart-up-04.svg  
 ---
 <br><br>

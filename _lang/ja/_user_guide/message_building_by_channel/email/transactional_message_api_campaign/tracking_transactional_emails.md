@@ -1,6 +1,6 @@
 ---
-nav_title: トラックトランスアクションのメールs
-article_title: Trans アクションメールの追跡
+nav_title: トランザクションメールの追跡
+article_title: トランザクションメールの追跡
 page_order: 1
 description: "この参考記事では、トランザクションメールキャンペーンのリアルタイムトラッキングの設定方法について説明する。"
 page_type: reference
@@ -10,7 +10,7 @@ channel: email
 
 ---
 
-# トラックトランスアクションのメールs
+# トランザクションメールの追跡
 
 > このページでは、[トランザクションメールキャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/)のリアルタイム追跡を設定する方法について説明します。エンドポイント自体の詳細については、[API トリガー配信を使用したトランザクションメールの送信]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/)を参照してください。
 

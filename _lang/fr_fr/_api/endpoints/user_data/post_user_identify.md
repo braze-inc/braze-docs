@@ -21,15 +21,15 @@ description: "Cet article présente en détail l’endpoint Braze Identifier les
 
 ## Fonctionnement
 
-L'appel à `/users/identify` combine un profil utilisateur identifié par un alias (profil alias seul), une adresse e-mail (profil e-mail seul) ou un numéro de téléphone (profil numéro de téléphone seul) avec un profil utilisateur possédant un `external_id` (profil identifié), puis supprime le profil alias seul. 
+L'appel à `/users/identify` combine un profil utilisateur identifié par un alias (profil alias seul), une adresse e-mail (profil e-mail seul) ou un numéro de téléphone (profil numéro de téléphone seul) avec un profil utilisateur possédant un `external_id` (profil identifié), puis supprime le profil alias seul.
 
 L'identification d'un utilisateur nécessite qu'une adresse `external_id` soit incluse dans les objets suivants :
 
 - `aliases_to_identify`
-- `emails_to_identify` 
+- `emails_to_identify`
 - `phone_numbers_to_identify`
 
-S'il n'existe pas d'utilisateur possédant cette adresse `external_id`, l'adresse `external_id` sera ajoutée à l'enregistrement de l'utilisateur aliasé et l'utilisateur sera considéré comme identifié. Les utilisateurs ne peuvent avoir qu'un seul alias pour un libellé donné. Si un utilisateur existe déjà sur le site `external_id` et qu'il dispose d'un alias existant avec le même libellé que le profil alias uniquement, les profils utilisateurs ne seront pas combinés.
+S'il n'existe pas d'utilisateur possédant ce `external_id`, le `external_id` est ajouté à l'enregistrement de l'utilisateur aliasé, et l'utilisateur est considéré comme identifié. Les utilisateurs ne peuvent avoir qu'un seul alias pour un libellé donné. Si un utilisateur existe déjà sur le site `external_id` et qu'il dispose d'un alias existant avec le même libellé que le profil alias uniquement, les profils utilisateurs ne sont pas combinés.
 
 {% alert tip %}
 Pour éviter toute perte inattendue de données lors de l'identification des utilisateurs, nous vous recommandons vivement de vous reporter d'abord aux [meilleures pratiques en]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) matière de [collecte de données]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) pour savoir comment capturer les données des utilisateurs lorsque des informations sur les utilisateurs sous forme d'alias seulement sont déjà présentes.
@@ -37,42 +37,42 @@ Pour éviter toute perte inattendue de données lors de l'identification des uti
 
 ### Comportement de fusion
 
-Par défaut, cet endpoint fusionnera la liste suivante de champs trouvés **exclusivement** sur l'utilisateur anonyme vers l'utilisateur identifié.
+Par défaut, cet endpoint fusionne la liste suivante de champs trouvés **exclusivement** sur l'utilisateur anonyme vers l'utilisateur identifié.
 
-{% details Liste des champs qui sont fusionnés %}
+{% details List of fields that are merged %}
 - Prénom
-- Nom
-- E-mail
+- Nom de famille
+- e-mail
 - Genre
 - Date de naissance
 - Numéro de téléphone
 - Fuseau horaire
-- Ville d’origine
+- Ville d'origine
 - Pays
 - Langue
 - Décompte des sessions (la somme des sessions des deux profils)
-- Date de la première session (Braze choisira la date la plus ancienne parmi les deux)
-- Date de la dernière session (Braze choisira la date la plus récente parmi les deux)
+- Date de la première session (Braze choisit la première des deux dates)
+- Date de la dernière session (Braze choisit la dernière des deux dates)
 - Attributs personnalisés
 - Données d'événements personnalisés et d'événements d'achat
-- Propriétés de l’événement d’achat et personnalisées pour la segmentation « X fois en Y jours » (où X <= 50 et Y <= 30)
+- Propriétés d'événement personnalisé et d'achat pour la segmentation "X fois dans Y jours" (où X<=50 et Y<=30)
 - Résumé des événements personnalisés pouvant être segmentés
   - Nombre d’événements (la somme des deux profils)
-  - Événement survenu pour la première fois (Braze choisira la date la plus ancienne parmi les deux)
-  - Événement survenu pour la dernière fois (Braze choisira la date la plus récente parmi les deux)
+  - Date à laquelle l'événement s'est produit pour la première fois (Braze choisit la première des deux dates)
+  - Dernière date à laquelle l'événement s'est produit (Braze choisit la date la plus tardive des deux)
 - Total des achats intégrés à l’application en centimes (la somme des deux profils)
 - Nombre total d’achats (la somme des deux profils)
-- Date du premier achat (Braze choisira la date la plus ancienne parmi les deux)
-- Date du dernier achat (Braze choisira la date la plus récente parmi les deux)
+- Date du premier achat (Braze choisit la première des deux dates)
+- Date du dernier achat (Braze choisit la date la plus tardive des deux dates)
 - Résumés des applications
-- Champs Last_X_at (Braze mettra à jour les champs si les champs du profil orphelins sont plus récents).
-- Résumés de campagne (Braze choisira les champs de date les plus récents)
-- Résumés du flux de travail (Braze choisira les champs de date les plus récents)
+- Last_X_at champs (Braze met à jour les champs si les champs du profil orphelins sont plus récents)
+- Résumés de campagne (Braze sélectionne les champs de date les plus récents)
+- Résumés du flux de travail (Braze sélectionne les champs de date les plus récents)
 - Message et historique d’engagement du message
-- Nombre d’événements d’achats et personnalisés, ainsi que les horodatages correspondant à la première et dernière dates 
-  - Ces champs fusionnés mettront à jour les filtres « pour X événements en Y jours ». Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
+- Nombre d’événements d’achats et personnalisés, ainsi que les horodatages correspondant à la première et dernière dates
+  - Ces champs fusionnés mettent à jour les filtres "pour X événements dans Y jours". Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
 - Données de session si l'application existe sur les deux profils utilisateurs.
-  - Par exemple, si votre utilisateur cible ne dispose pas d’un résumé d’application pour « ABCApp », mais que votre utilisateur d’origine l’a, l’utilisateur cible disposera du résumé d’application pour « ABCApp » sur son profil après la fusion.
+  - Par exemple, si notre utilisateur cible n'a pas de résumé d'application pour "ABCApp" mais que notre utilisateur d'origine en a un, l'utilisateur cible a le résumé d'application "ABCApp" sur son profil après la fusion.
 {% enddetails %}
 
 ## Conditions préalables
@@ -117,7 +117,7 @@ L'un des éléments suivants est requis : `aliases_to_identify`, `emails_to_iden
 
 Si une adresse e-mail ou un numéro de téléphone est spécifié comme identifiant, vous devez également inclure `prioritization` dans l'identifiant.
 
-`prioritization` doit être un tableau spécifiant l'utilisateur à fusionner si plusieurs utilisateurs ont été trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'aura pas lieu.
+`prioritization` doit être un tableau spécifiant l'utilisateur à fusionner si plusieurs utilisateurs ont été trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'a pas lieu.
 
 Les valeurs autorisées pour le tableau sont les suivantes :
 
@@ -166,8 +166,6 @@ Pour plus d'informations sur `alias_name` et `alias_label`, consultez notre docu
 ## Réponse
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"

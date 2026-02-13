@@ -10,16 +10,16 @@ Push-Benachrichtigungen sind Rate-Limits, also haben Sie keine Angst davor, so v
 
 ### Schritt 2: Aktivieren Sie Push-Funktionen
 
-Gehen Sie in Xcode zum Abschnitt **Signing & Capabilities** des Hauptziel der App und fügen Sie die Fähigkeit für Push-Benachrichtigungen hinzu.
+Gehen Sie in Xcode zum Abschnitt **Signing & Capabilities** des Haupt-Targetings der App und fügen Sie die Funktion für Push-Benachrichtigungen hinzu.
 
-![Der Abschnitt "Signing & Capabilities" in einem Xcode-Projekt.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![Der Abschnitt 'Signieren & Fähigkeiten' in einem Xcode-Projekt.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ### Schritt 3: Einrichten der Push-Bearbeitung
 
 Sie können das Swift SDK verwenden, um die Verarbeitung der von Braze empfangenen Fernbenachrichtigungen zu automatisieren. Dies ist die einfachste Art, Push-Benachrichtigungen zu handhaben und die empfohlene Bearbeitungsmethode.
 
 {% tabs local %}
-{% tab Automatisch %}
+{% tab Automatic %}
 #### Schritt 3.1: Enablement der Automatisierung in der Push-Eigenschaft
 
 Um die automatische Push Integration zu aktivieren, setzen Sie die Eigenschaft `automation` in der Konfiguration von `push` auf `true`:
@@ -370,7 +370,7 @@ Die dynamische Verwaltung des Apple Push Notification Service (APNs) Gateways ve
 
 Mit der dynamischen APNs-Gateway-Verwaltung haben Sie:
 
-- **Verbesserte Zuverlässigkeit:** Benachrichtigungen werden immer an die richtige APN-Umgebung zugestellt, wodurch die Zahl der fehlgeschlagenen Zustellungen reduziert wird.
+- **Verbesserte Zuverlässigkeit:** Benachrichtigungen werden immer der richtigen APN-Umgebung zugestellt, so dass weniger Zustellungen fehlschlagen.
 - **Vereinfachte Konfiguration:** Sie müssen die APN-Gateway-Einstellungen nicht mehr manuell verwalten.
 - **Fehlerresistenz:** Ungültige oder fehlende Gateway-Werte werden zuverlässig behandelt, so dass der Dienst nicht unterbrochen wird.
 

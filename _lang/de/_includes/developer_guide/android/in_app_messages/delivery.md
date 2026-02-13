@@ -117,7 +117,7 @@ Erstellen Sie eine [stille Push-Kampagne]({{site.baseurl}}/developer_guide/push_
 
 Die Push-Kampagne muss Schlüssel-Wert-Paare enthalten, die angeben, dass diese Push-Kampagne gesendet wird, um ein angepasstes SDK-Event zu protokollieren. Dieses Event wird verwendet, um die In-App-Nachricht zu triggern.
 
-![Zwei Sätze von Schlüssel-Wert-Paaren: IS_SERVER_EVENT auf "true" und CAMPAIGN_NAME auf "example campaign name" gesetzt.]({% image_buster /assets/img_archive/kvpConfiguration.png %}){: style="max-width:70%;" }
+![Zwei Sätze von Schlüssel-Wert-Paaren: IS_SERVER_EVENT auf "true" und CAMPAIGN_NAME auf "Name der Beispielkampagne" gesetzt.]({% image_buster /assets/img_archive/kvpConfiguration.png %}){: style="max-width:70%;" }
 
 Der frühere Code für den Push Callback erkennt die Schlüssel-Wert-Paare und protokolliert das entsprechende angepasste SDK-Event.
 

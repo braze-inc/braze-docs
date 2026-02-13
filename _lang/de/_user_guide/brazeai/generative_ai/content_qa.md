@@ -32,7 +32,7 @@ Dieses Feature ist zur Zeit nur für SMS, Android Push, iOS Push und traditionel
 2. Suchen Sie den Abschnitt **Inhalts-Qualitätssicherung mit KI**.
 3. Klicken Sie auf **Inhalt testen**.
 
-\![Content QA mit KI Abschnitt des Tabs Test.]({% image_buster /assets/img/content_qa_ai.png %})
+![Inhalts-Qualitätssicherung mit KI auf dem Tab Test.]({% image_buster /assets/img/content_qa_ai.png %})
 
 ## Bewährte Praktiken
 

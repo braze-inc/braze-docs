@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}Erste Schritte: Übersicht über die Plattform
+# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"} Erste Schritte: Übersicht über die Plattform
 
 > Dieser Artikel beschreibt die grundlegenden Komponenten und Funktionen der Braze-Plattform. Links in diesem Artikel führen zu wichtigen Themen von Braze. 
 
@@ -25,11 +25,11 @@ Schauen Sie sich unseren kostenlosen Kurs [Developer Learning Path](https://lear
 
 ## Was ist Braze?
 
-Braze ist eine Plattform zur Kundenbindung. Das bedeutet ganz einfach, dass Braze Ihnen dabei hilft, Ihren Benutzern zuzuhören, ihre Handlungen und ihr Verhalten zu verstehen und dann entsprechend zu handeln. Die Braze-Plattform weist drei Hauptkomponenten auf: das SDK, das Dashboard und die REST API.
+Braze ist eine Plattform zur Kundenbindung. Es nimmt Nutzerdaten auf, zeigt Benutzeraktionen und -verhalten an und lässt Sie darauf reagieren. Die Plattform besteht aus drei Hauptkomponenten: dem SDK, dem Dashboard und der REST API.
 
 Für Marketer, die einen allgemeinen Überblick über Braze suchen, empfiehlt sich stattdessen der Abschnitt [Erste Schritte für Marketer]({{site.baseurl}}/user_guide/getting_started/overview/).
 
-![Braze hat verschiedene Schichten. Insgesamt besteht es aus dem SDK, der API, dem Dashboard und den Partnerintegrationen. Diese tragen jeweils zu einem Datenaufnahme-Layer, einem Klassifizierungs-Layer, einem Orchestrierungs-Layer, einem Personalisierungs-Layer und einem Aktions-Layer bei. Der Aktions-Layer verfügt über verschiedene Kanäle, darunter Push, In-App-Nachrichten, verbundener Katalog, Webhook, SMS und E-Mail.]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
+![Braze hat verschiedene Schichten. Insgesamt besteht es aus dem SDK, der API, dem Dashboard und den Partnerintegrationen. Diese tragen jeweils zu einem Datenaufnahme-Layer, einem Klassifizierungs-Layer, einem Orchestrierungs-Layer, einem Personalisierungs-Layer und einem Aktions-Layer bei. Die Aktionsschicht verfügt über verschiedene Kanäle, darunter Push, In-App-Nachrichten, Connected Catalog, Webhook, SMS und E-Mail.]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
 
 ### SDK
 
@@ -64,11 +64,11 @@ Mehr über die Teile und Komponenten von Braze finden Sie hier: [Erste Schritte:
 
 Die in Braze gespeicherten Daten bleiben erhalten und können für Segmentierung, Personalisierung und Targeting verwendet werden, solange Sie Kunde bei Braze sind. So können Sie auf Nutzerprofildaten (z. B. Sitzungsaktivitäten oder Käufe) zugreifen, bis Sie sich entscheiden, diese Informationen zu löschen. Ein Streaming-Dienst könnte zum Beispiel die angesehenen Inhalte jedes Abonnenten vom ersten Tag an verfolgen (auch wenn das schon viele Jahre her ist) und diese Daten nutzen, um relevante Nachrichten zu versenden.
 
-![Segment im Braze-Dashboard mit der Bezeichnung "Aktuelle Käufer" neben einem Telefonbildschirm, auf dem eine E-Mail mit "Top-Empfehlungen für Linda" angezeigt wird.]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
+![Ein Segment im Braze-Dashboard mit der Bezeichnung "Jüngste Käufer" neben einem Telefonbildschirm, der eine E-Mail mit "Top-Empfehlungen für Linda" anzeigt.]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
 
 ### App-Analysen
 
-Das Braze-Dashboard zeigt Diagramme an, die in Echtzeit auf der Grundlage von Analytics-Metriken und angepassten Events, die Sie in Ihrer Anwendung instrumentieren, aktualisiert werden. Die konsequente Messung und Optimierung Ihrer Kampagnen mit A/B-Tests, benutzerdefinierten Berichten und Analysen sowie automatisierten Informationen hilft Ihnen, Ihre Kunden zu binden und sich von den Wettbewerbern in Ihrem Bereich abzuheben.
+Das Braze-Dashboard zeigt Diagramme an, die auf der Grundlage von Analytics-Metriken und angepassten Events, die Sie instrumentieren, in Echtzeit aktualisiert werden. Die konsequente Messung und Optimierung mithilfe von A/B-Tests, angepassten Berichten, Analytics und automatisierter Intelligenz hilft Ihnen, Ihr Customer-Engagement und Ihre Differenzierung zu unterstützen.
 
 ### Benutzer-Segmentierung
 
@@ -80,7 +80,7 @@ Mehr über unsere Datenmodelle erfahren Sie hier: [Erste Schritte: Übersicht ü
 
 Nachdem Sie ein Segment definiert haben, können Sie mit den Messaging-Tools von Braze auf dynamische, personalisierte Weise mit Ihren Benutzern in Kontakt treten. Braze wurde mit einem kanalunabhängigen, nutzerzentrierten Datenmodell entwickelt. Die Nachrichtenübermittlung erfolgt innerhalb Ihrer App oder Website (z. B. durch das Versenden von In-App-Nachrichten oder durch grafische Elemente wie Content Card-Karusselle und Banner) oder außerhalb Ihrer App (z. B. durch das Versenden von Push-Benachrichtigungen oder E-Mails). So können Ihre Marketingexperten beispielsweise eine Push-Benachrichtigung und eine E-Mail an das im vorherigen Abschnitt definierte Beispielsegment senden.
 
-![Erstellen und triggern Sie personalisierte Nachrichten auf jedem Kanal – sowohl außerhalb als auch innerhalb Ihrer App oder Website.]({% image_buster /assets/img/getting-started/messaging-channels.png %}){: style="border:none" }
+![Erstellen und triggern Sie personalisierte Nachrichten auf jedem Kanal, ob außerhalb oder innerhalb Ihrer App oder Website.]({% image_buster /assets/img/getting-started/messaging-channels.png %}){: style="border:none" }
 
 | Kanal                                                                                              | Beschreibung                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -99,9 +99,9 @@ Nachdem Sie ein Segment definiert haben, können Sie mit den Messaging-Tools von
 ### Anpassbare Komponenten
 
 {% gallery %}
-{{site.baseurl}}/assets/img/getting-started/crawl-example.png <br> Alle Komponenten von Braze sind barrierefrei, anpassungsfähig und individuell gestaltbar. Sie können mit Braze beginnen, indem Sie die Standardkomponenten der `BrazeUI` verwenden und sie an Ihre Marke und Ihren Anwendungsfall anpassen.
-{{site.baseurl}}/assets/img/getting-started/walk-example.png <br> Um über die Standardoptionen hinauszugehen, können Sie benutzerdefinierten Code schreiben, um das Aussehen eines Nachrichtenkanals zu aktualisieren, damit er besser zu Ihrer Marke passt. So können Sie beispielsweise die Schriftart, die Schriftgröße und die Farbe der Komponenten ändern. Marketer behalten direkt im Braze-Dashboard die Kontrolle über die Zielgruppe, den Inhalt, das On-Click-Verhalten und den Ablauf von Kampagnen.
-{{site.baseurl}}/assets/img/getting-started/run-example.png <br> Sie können auch vollständig angepasste Komponenten erstellen, um zu steuern, wie Ihre Nachrichten aussehen, wie sie sich verhalten und wie sie mit anderen Messaging-Kanälen interagieren (z. B. Triggern einer Content-Card auf der Grundlage einer Push-Benachrichtigung). Braze bietet SDK-Methoden, mit denen Sie Metriken wie Impressionen, Klicks und Ausblendungen im Braze-Dashboard protokollieren können. Für jeden Messaging-Kanal gibt es einen Analyse-Artikel mit hilfreichen Informationen.
+{{site.baseurl}}/assets/img/anfangen/kriechen-example.png <br> Alle Komponenten von Braze sind barrierefrei, anpassungsfähig und individuell gestaltbar. Sie können mit Braze beginnen, indem Sie die Standardkomponenten der `BrazeUI` verwenden und sie an Ihre Marke und Ihren Anwendungsfall anpassen.
+{{site.baseurl}}/assets/img/einstieg/walk-example.png <br> Um über die Standardoptionen hinauszugehen, können Sie benutzerdefinierten Code schreiben, um das Aussehen eines Nachrichtenkanals zu aktualisieren, damit er besser zu Ihrer Marke passt. So können Sie beispielsweise die Schriftart, die Schriftgröße und die Farbe der Komponenten ändern. Marketer behalten direkt im Braze-Dashboard die Kontrolle über die Zielgruppe, den Inhalt, das On-Click-Verhalten und den Ablauf von Kampagnen.
+{{site.baseurl}}/assets/img/starten/laufen-example.png <br> Sie können auch vollständig angepasste Komponenten erstellen, um zu steuern, wie Ihre Nachrichten aussehen, wie sie sich verhalten und wie sie mit anderen Messaging-Kanälen interagieren (z. B. Triggern einer Content-Card auf der Grundlage einer Push-Benachrichtigung). Braze bietet SDK-Methoden, mit denen Sie Metriken wie Impressionen, Klicks und Ausblendungen im Braze-Dashboard protokollieren können. Für jeden Messaging-Kanal gibt es einen Analyse-Artikel mit hilfreichen Informationen.
 {% endgallery %}
 
 <br>
@@ -109,7 +109,7 @@ Nachdem Sie ein Segment definiert haben, können Sie mit den Messaging-Tools von
 
 ## Integration von Braze
 
-Braze ist so konzipiert, dass Sie es schnell und einfach in Betrieb nehmen können. Unsere durchschnittliche Time-to-Value beträgt sechs Wochen bei unserem Kundenstamm von Hunderten von Marken. Mehr über den Integrationsprozess erfahren Sie hier: [Erste Schritte: Übersicht über die Integration]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
+Braze ist für eine schnelle Integration konzipiert. Die durchschnittliche Time-to-Value beträgt bei unseren Kund:innen sechs Wochen. Weitere Informationen zur Integration finden Sie unter [Erste Schritte: Übersicht über die Integration]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 ## Ressourcen als Lesezeichen
 

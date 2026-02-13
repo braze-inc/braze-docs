@@ -1,33 +1,33 @@
 ---
-nav_title: Transferência de dados do Amazon S3 para o Snowflake
+nav_title: Transferir dados do Amazon S3 para o Snowflake
 article_title: Transferência de dados do Amazon S3 para o Snowflake
 page_order: 7
 page_type: tutorial
-description: "Este artigo explica como transferir dados do armazenamento em nuvem (como o Amazon S3) para um depósito (como o Snowflake) usando o processo Extract, Transform, Load (ETL)."
+description: "Este artigo de instruções o orientará na transferência de dados do armazenamento em nuvem (como o Amazon S3) para um data warehouse (como o Snowflake) usando o processo de ETL."
 tool: Currents
 
 ---
 
-# Transferência de dados do Amazon S3 para o Snowflake
+# Transferir dados do Amazon S3 para o Snowflake
 
-> Se seus dados estiverem atualmente no Amazon S3, você poderá transferi-los para o Snowflake ou outro data warehouse relacional usando o processo Extract, Load, Transform (ELT). Esta página explica como fazer isso.
+> Se seus dados estiverem atualmente no Amazon S3, você poderá transferi-los para o Snowflake ou outro data warehouse relacional usando o processo ELT (Extract Load Transform). Esta página explica como fazer isso.
 
 {% alert note %}
-Se você tiver casos de uso mais específicos e quiser que a Braze faça a manutenção da sua instância do Currents, entre em contato com o gerente da sua conta Braze e pergunte sobre o Braze Data Professional Services.
+Se tiver casos de uso mais específicos e quiser que a Braze faça a manutenção da sua instância do Currents, entre em contato com o gerente da sua conta Braze e pergunte sobre o Braze Data Professional Services.
 {% endalert %}
 
-## Como funciona
+## Como funciona?
 
-O processo Extract, Load, Transform (ELT) é um processo automatizado que transfere dados para o [Snowflake](https://www.snowflake.com/), o que permitirá que você use os [Braze Looker Blocks](https://marketplace.looker.com/marketplace/directory) para visualizar esses dados no Looker e ajudar a gerar insights e feedback sobre suas campanhas, Canvases e segmentos.
+O processo Extract, Load, Transform (ELT) é um processo automatizado que move os dados para o [Snowflake](https://www.snowflake.com/), o que lhe permitirá usar os [blocos do Looker do Braze](https://marketplace.looker.com/marketplace/directory) para visualizar esses dados no Looker e ajudar a gerar insights e feedback em suas campanhas, Canvas e segmentos.
 
-Depois de configurar uma exportação do Currents para o S3 e receber dados de eventos ao vivo, você poderá configurar seu pipeline de ELT ao vivo no Snowflake configurando os seguintes componentes:
+Depois de configurar uma exportação do Currents para o S3 e de receber dados de eventos ao vivo, você poderá configurar seu pipeline ELT ao vivo no Snowflake configurando os seguintes componentes:
 
--   [Filas do AWS SQS](#aws-sqs-queues)
--   [Tubos de neve autoinstrumentados](#auto-ingest-snowpipes)
+-   [Filas SQS da AWS](#aws-sqs-queues)
+-   [Snowpipes de ingestão automática](#auto-ingest-snowpipes)
 
 ## Configuração das filas do AWS SQS
 
-**Os Snowpipes de teste automático** dependem de filas SQS para enviar notificações do S3 para o Snowpipe. Esse processo é gerenciado pelo Snowflake após a configuração do SQS.
+Os **Snowpipes de ingestão automática** dependem de filas SQS para enviar notificações do S3 para o Snowpipe. Esse processo é gerenciado pelo Snowflake após a configuração do SQS.
 
 ### Etapa 1: Configurar o estágio S3 externo
 
@@ -35,12 +35,12 @@ Depois de configurar uma exportação do Currents para o S3 e receber dados de e
 As tabelas em seu banco de dados são criadas nesse estágio.
 {% endalert %}
 
-1. Quando você configurar o Currents no Braze, especifique um caminho de pasta para os arquivos do Currents seguirem para o seu bucket S3. Aqui usamos ```currents```, o caminho padrão da pasta.
+1. Ao configurar o Currents na Braze, especifique uma jornada de pasta para os arquivos do Currents seguirem para o bucket S3. Aqui usamos ```currents```, a jornada padrão da pasta.
 
 2. Crie os seguintes itens na ordem listada:
-  2.1 No AWS, crie um novo **par de chaves público-privadas** para o bucket S3 desejado, com concessões de acordo com os requisitos de segurança de sua organização.
+  Na AWS, crie um novo **par de chaves público-privadas** para o bucket S3 desejado, com concessões de acordo com os requisitos de segurança de sua organização.
   2.2. No Snowflake, crie um banco de dados e um esquema de sua escolha (denominados ```currents``` e ```public``` no exemplo a seguir).
-  2.3. Crie um Snowflake S3 Stage (chamado `braze_data`):
+  2.3. Crie um estágio Snowflake S3 (chamado `braze_data`):
 
 ```sql
 CREATE OR REPLACE STAGE
@@ -103,36 +103,36 @@ COPY INTO
 ```
 
 {: start="4"}
-4\. Por fim, use o comando `show pipes;` para mostrar suas informações de SQS. O nome da fila SQS estará visível em uma nova coluna chamada `NOTIFICATION_CHANNEL` porque esse pipe foi criado como um pipe de teste automático.
+4\. Por fim, use o comando `show pipes;` para mostrar suas informações de SQS. O nome da fila SQS ficará visível em uma nova coluna chamada `NOTIFICATION_CHANNEL` porque esse pipe foi criado como um pipe de teste automático.
 
 ### Etapa 2: Criar eventos de balde
 
-1. No AWS, navegue até o bucket correspondente do novo estágio do Snowflake. Em seguida, na guia **Properties (Propriedades** ), vá para **Events (Eventos**).
+1. Na AWS, navegue até o bucket correspondente do novo estágio do Snowflake. Em seguida, na guia **Properties (Propriedades** ), acesse **Events (Eventos**).
 
-\![Guia Propriedades da AWS]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
+![Guia Propriedades da AWS]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
 
 {: start="2"}
-2\. Crie novos eventos para cada conjunto de dados atuais, conforme necessário[(mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/), [comportamento do usuário]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)), ou ambos.
+2\. Crie novos eventos para cada conjunto de Currents Data, conforme necessário [(envio de mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/), [comportamento do usuário]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)), ou ambos.
 
-\![Criando um novo evento no AWS]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
+![Criação de um novo evento na AWS]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
 
 {: start="3"}
 3\. Marque a caixa apropriada para as notificações de criação de objeto, bem como o ARN na parte inferior do formulário (da coluna do canal de notificação no Snowflake).
 
 ## Configuração de Snowpipes de teste automático {#auto-ingest-snowpipes}
 
-Para que a configuração do AWS SQS produza as tabelas corretas, é necessário definir adequadamente a estrutura dos dados de entrada usando os seguintes exemplos e esquemas determinados em nossa documentação do Currents para [eventos de engajamento de mensagens ou de mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/), [eventos de comportamento do usuário ou do cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/), ou ambos.
+Para garantir que a configuração do AWS SQS produza as tabelas corretas, é necessário definir adequadamente a estrutura dos dados de entrada usando os seguintes exemplos e esquemas determinados em nossa documentação do Currents para [eventos de engajamento com mensagens ou envio de mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/), [eventos de comportamento do usuário ou do cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/), ou ambos.
 
 É fundamental estruturar suas tabelas de acordo com os esquemas do Braze Currents, pois o Braze Currents carregará continuamente os dados nelas por meio de campos específicos com tipos de dados específicos. Por exemplo, um `user_id` será carregado como uma string e chamado de `user_id` nos dados do Currents.
 
 {% alert note %}
-  Dependendo da sua integração com o Currents, você pode ter diferentes eventos que devem ser configurados (como [Message Engagement ou Messaging Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) e [User ou Customer Behavior Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)). Você também pode escrever um script para parte ou todo esse processo.
+  Dependendo da sua integração com o Currents, pode haver diferentes eventos que devem ser configurados (como [eventos de engajamento com mensagens ou envio de mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) e [eventos de comportamento do usuário ou do cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)). Você também pode escrever um script para parte ou todo esse processo.
 {% endalert %}
 
 {% tabs %}
   {% tab User Behavior Events %}
 
-1. Crie uma tabela `INTO` que será carregada continuamente usando a seguinte estrutura do esquema Currents:
+1. Primeiro, crie uma tabela `INTO` que será carregada continuamente usando a seguinte estrutura do esquema Currents:
 
 ```sql
 CREATE TABLE
@@ -196,7 +196,7 @@ Você deve repetir os comandos `CREATE TABLE` e `CREATE PIPE` para cada tipo de 
  {% endtab %}
  {% tab Messaging Events %}
 
-1. Crie uma tabela `INTO` que será carregada continuamente usando a seguinte estrutura do esquema Currents:
+1. Primeiro, crie uma tabela `INTO` que será carregada continuamente usando a seguinte estrutura do esquema Currents:
 
 ```sql
 CREATE TABLE
@@ -272,9 +272,9 @@ Você deve repetir os comandos `CREATE TABLE` e `CREATE PIPE` para cada tipo de 
   {% endtab %}
 {% endtabs %}
 
-Para ver os tipos de análise que você pode realizar usando o Braze Currents, consulte nossos [Looker Blocks](https://github.com/llooker?q=braze).
+Para ver os tipos de análise de dados que você pode realizar usando o Braze Currents, consulte nossos [blocos do Looker](https://github.com/llooker?q=braze).
 
 {% alert note %}
-Entre em contato com o gerente da sua conta Braze se tiver alguma dúvida ou se estiver interessado em receber orientação da Braze durante esse processo.
+Entre em contato com seu gerente de conta Braze se tiver alguma dúvida ou se estiver interessado em ser orientado pelo Braze durante esse processo.
 {% endalert %}
 

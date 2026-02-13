@@ -36,25 +36,7 @@ Email validation is done when a user's email address has been updated or is bein
 
 Email addresses targeted via the Braze servers must be validated per [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) standards, Braze does not accept certain characters and recognizes them as invalid. If an email is bounced, Braze marks the email as invalid and the subscription status is not changed. 
 
-{% details Unaccepted characters outside of RFC standards %}
-- *
-- /
-- ?
-- !
-- $
-- #
-- %
-- &#94;
-- &
-- (
-- )
-- {
-- }
-- [
-- ]
-- ~
-- ,
-{% enddetails %}
+For information about disallowed characters and email validation rules, see [Email validation]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/#how-it-works).
 
 ### Setting from and reply-to addresses
 

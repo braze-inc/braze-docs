@@ -49,7 +49,7 @@ Hightouch unterstützt die Synchronisierung sowohl mit Nutzer:innen als auch mit
 | Events | Synchronisiert Aufzeichnungen als Ereignisse mit Ihrem Ziel; dies geschieht oft in Form eines Tracking-Aufrufs. | Tracking von Ereignissen oder Käufen |
 
 {% alert note %}
-Weitere Informationen darüber, wie sich Synchronisierungen auf den Verbrauch Ihrer Datenpunkte bei Braze auswirken, finden Sie bei [Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption).
+Weitere Informationen darüber, wie sich Synchronisierungen auf die Protokollierung von Datenpunkten auswirken, finden Sie bei [Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption).
 {% endalert %}
 
 #### Synchronisieren von Braze Objekten

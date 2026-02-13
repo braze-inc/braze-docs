@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Campañas duplicadas"
-article_title: "POST: Campañas duplicadas"
+nav_title: "PUBLICAR: Campañas duplicadas"
+article_title: "PUBLICAR: Campañas duplicadas"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
