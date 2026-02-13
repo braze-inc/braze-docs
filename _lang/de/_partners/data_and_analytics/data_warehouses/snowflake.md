@@ -66,6 +66,7 @@ Bei Snowflake findet die gemeinsame Nutzung von Daten zwischen einem [Datenanbie
 
 {% alert warning %}
 Wenn Sie eine Freigabe im Braze-Dashboard löschen und neu erstellen, müssen Sie die zuvor erstellte Datenbank löschen und sie mit `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` neu erstellen, um die eingehende Freigabe abzufragen.
+Wenn Sie mehrere Workspaces haben, die Daten für dasselbe Snowflake-Konto freigeben, finden Sie in den [Snowflake-FAQs zur gemeinsamen Datennutzung]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/) Hinweise zur Verwaltung von Konfigurationen mit mehreren Workspaces.
 {% endalert %}
 
 ## Verwendung und Visualisierung
@@ -131,7 +132,7 @@ Das Archiv der historischen Ereignisdaten in Snowflake reicht bis April 2019 zur
 
 ### Einhaltung der allgemeinen Datenschutzverordnung (DSGVO)
 
-Nahezu jeder Ereignisdatensatz, den Braze speichert, enthält einige Felder, die Nutzer:innen persönlich identifizierbare Informationen (PII) liefern. Einige Ereignisse können E-Mail Adresse, Telefonnummer, ID des Geräts, Sprache, Geschlecht und Standortinformationen enthalten. Wenn die Anfrage eines Nutzers auf Vergessenwerden an Braze übermittelt wird, löschen wir diese PII-Felder für alle Ereignisse, die diesen Nutzer:innen gehören. Auf diese Weise wird die historische Aufzeichnung des Ereignisses nicht gelöscht, aber das Ereignis kann nun nicht mehr mit einer bestimmten Person in Verbindung gebracht werden.
+{% include partners/snowflake_pii_gdpr.md %}
 
 ### Geschwindigkeit, Performance, Kosten der Abfragen
 
