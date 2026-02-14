@@ -169,16 +169,16 @@ Braze processes time values based on the dashboard timestamp. For example, if a 
 
 ## Catalog data types
 
-Catalogs support various data types to help you organize and structure your data effectively. The following table describes each supported data type:
+Catalogs support various data types to help you organize and structure your data effectively. The following table describes each supported data type and how it maps to CSV and API type names:
 
 | Data Type | Format | Example | Description |
 |-----------|--------|---------|-------------|
-| String | Text | `"Hello World"` | Any sequence of characters used for text data such as names, descriptions, and IDs. |
-| Time | ISO 8601 or timestamp | `"2024-03-15T14:30:00Z"` | Date and time values formatted as ISO 8601 or Unix timestamp. |
-| Boolean | `true` or `false` | `true` | Logical values representing true or false states. |
-| Number | Integer or decimal | `42` or `19.99` | Numeric values including integers and floating-point numbers for prices, quantities, ratings, etc. |
-| JSON Object | JSON format | `{"key": "value", "price": 10}` | Complex nested data structures. Only available via API or CDI. Will display in the platform. |
-| String array | Array of strings | `["red", "blue", "green"]` | Lists of string values. Only available via API or CDI. Will display in the platform. |
+| String | Text | `"Hello World"` | Any sequence of characters used for text data such as names, descriptions, and IDs. Equivalent to the `string` type in CSV and API imports. |
+| Time | ISO 8601 or Unix timestamp (seconds) | `"2024-03-15T14:30:00Z"` | Date and time values formatted as ISO 8601 or Unix timestamp in seconds. Equivalent to the `time` type in the API and the `datetime` type in CSV imports. |
+| Boolean | `true` or `false` | `true` | Logical values representing true or false states. Equivalent to the `boolean` type in CSV and API imports. |
+| Number | Integer or decimal | `42` or `19.99` | Numeric values including integers and floating-point numbers for prices, quantities, ratings, and more. Equivalent to the `integer` and `float` types in CSV imports and the `number` type in the API. |
+| Object | JSON object | `{"key": "value", "price": 10}` | Complex nested data structures. API `type` value is `object`. Displayed as JSON Object in the dashboard. Only available via API or Cloud Data Ingestion (CDI). |
+| Array | Array of strings | `["red", "blue", "green"]` | Lists of string values. API `type` value is `array`. Displayed as String array in the dashboard. Only available via API or CDI. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 ## Using templates in catalog names {#template-catalog-names}
@@ -204,7 +204,7 @@ To update your catalog after uploading a CSV or creating a catalog in the browse
 
 As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
 
-Supported data types for using API include: string, integer, float, boolean, or datetime. You can also upload arrays and objects when managing your catalogs with the API.
+Supported data types for using API include: string, number, boolean, time, array, and object.
 
 ### Using Cloud Data Ingestion
 
