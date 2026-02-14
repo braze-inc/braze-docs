@@ -32,7 +32,7 @@ Drag and drop the **Agent** component from the sidebar, or select the <i class="
 
 ### Step 2: Select your agent  
 
-Select the agent that will process data in this step. Choose an existing agent, or create a new one directly from this step. For setup guidance, see [Create custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/).
+Select the agent that will process data in this step. Any agent set to operate in Canvas will appear in the dropdown.
 
 ### Step 3: Define the output variable
 
