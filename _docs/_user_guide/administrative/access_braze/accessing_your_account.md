@@ -96,7 +96,7 @@ If clearing your browser cache and cookies doesn't resolve your issues, contact 
 
 ### Accessing the drag-and-drop editor
 
-For most Braze users, the drag-and-drop editor should load. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that `*.bz-rndr.com` is allowlisted.
+For most company users, the drag-and-drop editor should load. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that `*.bz-rndr.com` is allowlisted.
 
 The editor may experience loading issues due to the following:
 
