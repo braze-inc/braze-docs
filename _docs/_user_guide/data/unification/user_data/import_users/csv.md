@@ -237,7 +237,7 @@ Without correct formatting, your event properties may not import correctly, or y
 
 Dot notation is used to define the hierarchical relationship between a custom event and its properties. This formatting convention allows you to import structured event data that includes specific attributes for each event.
 
-The dot notation format follows this structure: `<event_name>.properties.<property_name>`
+The dot notation format follows this structure: `event_name.properties.property_name`
 
 **How dot notation works:**
 
