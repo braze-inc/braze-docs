@@ -62,7 +62,7 @@ Message archiving uses the **Dashboard Data Export** integration method. When fo
 1. Create a dedicated S3 bucket for Braze (or use an existing one).
 2. Choose an authentication method—either AWS secret access key or AWS role ARN. Both methods work for message archiving.
 3. Follow all steps for your chosen method under the **Dashboard Data Export** tabs (not the **Braze Currents** tabs).
-4. Configure the integration in Braze at **Settings** > **Integrations** > **Technology Partners** > **Amazon S3**.
+4. Configure the integration in Braze at **Partner Integrations** > **Technology Partners** > **Amazon S3**.
 
 After completing the S3 integration, return here to enable message archiving for specific channels. For detailed setup instructions, see [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/).
 
