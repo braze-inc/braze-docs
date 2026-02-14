@@ -177,8 +177,8 @@ Catalogs support various data types to help you organize and structure your data
 | Time | ISO 8601 or Unix timestamp (seconds) | `"2024-03-15T14:30:00Z"` | Date and time values formatted as ISO 8601 or Unix timestamp in seconds. Equivalent to the `time` type in the API and the `datetime` type in CSV imports. |
 | Boolean | `true` or `false` | `true` | Logical values representing true or false states. Equivalent to the `boolean` type in CSV and API imports. |
 | Number | Integer or decimal | `42` or `19.99` | Numeric values including integers and floating-point numbers for prices, quantities, ratings, and more. Equivalent to the `integer` and `float` types in CSV imports and the `number` type in the API. |
-| Object | JSON object | `{"key": "value", "price": 10}` | Complex nested data structures. API `type` value is `object`. Displayed as JSON Object in the dashboard. Only available via API or Cloud Data Ingestion (CDI). Will display in the platform. |
-| Array | Array of strings | `["red", "blue", "green"]` | Lists of string values. API `type` value is `array`. Displayed as String array in the dashboard. Only available via API or Cloud Data Ingestion (CDI). Will display in the platform. |
+| Object | JSON object | `{"key": "value", "price": 10}` | Complex nested data structures. API `type` value is `object`. Displayed as JSON Object in the dashboard. Only available via API or Cloud Data Ingestion (CDI). |
+| Array | Array of strings | `["red", "blue", "green"]` | Lists of string values. API `type` value is `array`. Displayed as String array in the dashboard. Only available via API or Cloud Data Ingestion (CDI). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 ## Using templates in catalog names {#template-catalog-names}
