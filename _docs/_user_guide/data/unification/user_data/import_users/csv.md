@@ -266,8 +266,8 @@ The following table demonstrates the correct formatting for importing custom eve
 
 | external_id | name | time | rented_movie.properties.movie_name | rented_movie.properties.genre | bought_movie.properties.movie_name | bought_movie.properties.genre |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| 123 | rented_movie | 2024-06-10T12:00:00.000Z | Ghostbusters | Action | | |
-| 456 | bought_movie | 2024-06-12T12:00:00.000Z | | | Ghostbusters | Action |
+| 123 | rented_movie | 2024-06-10T12:00:00Z | Ghostbusters | Action | | |
+| 456 | bought_movie | 2024-06-12T12:00:00Z | | | Ghostbusters | Action |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 .reset-td-br-7 role="presentation"}
 
 In this example:
