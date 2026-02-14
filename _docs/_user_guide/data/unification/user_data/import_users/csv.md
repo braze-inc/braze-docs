@@ -222,6 +222,60 @@ For example, the custom event `trip_booked` may have the properties `destination
 | `time` | String | The time of the event. May be passed in one of the following ISO-8601 formats: "YYYY-MM-DD" "YYYY-MM-DDTHH:MM:SS+00:00" "YYYY-MM-DDTHH:MM:SSZ" "YYYY-MM-DDTHH:MM:SS" (for example, 2019-11-20T18:38:57) | Yes |
 | `<event name>.properties.<property name>` | Multiple | An event property associated with a custom event. An example is `trip_booked.properties.destination` | No |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+#### Formatting requirements for custom events
+
+When importing custom events via CSV, you must format your file according to specific requirements to ensure successful data import.
+
+##### Understanding custom event formatting
+
+Properly formatting your custom events CSV is critical for successful data import. Unlike user attributes, which use straightforward column headers, custom events with properties require a specific naming convention called dot notation to indicate the relationship between an event and its associated properties.
+
+Without correct formatting, your event properties may not import correctly, or your import may fail entirely. The dot notation structure is designed to help Braze understand which properties belong to which events, especially when importing multiple event types in a single file.
+
+##### Using dot notation for event properties
+
+Dot notation is used to define the hierarchical relationship between a custom event and its properties. This formatting convention allows you to import structured event data that includes specific attributes for each event.
+
+The dot notation format follows this structure: `<event_name>.properties.<property_name>`
+
+**How dot notation works:**
+
+- The event name comes first
+- Followed by `.properties.` to indicate that what follows is an event property
+- Finally, the specific property name
+
+**Example:**
+
+For a custom event called `rented_movie` with properties `movie_name` and `genre`, your CSV column headers would be:
+
+- `rented_movie.properties.movie_name`
+- `rented_movie.properties.genre`
+
+This notation tells Braze to create a custom event named `rented_movie` and attach the properties `movie_name` and `genre` to that specific event instance.
+
+##### One event per row
+
+Each row in your CSV represents a single custom event for a single user. If a user has multiple events, you must include a separate row for each event, even if they share the same user identifier.
+
+**Important:** When a row contains data for a specific event, only populate the columns for that event's properties. Leave the columns for other events blank.
+
+##### Example CSV structure
+
+The following table demonstrates the correct formatting for importing custom events with properties. This example shows two users who each performed different events: one rented a movie, and another bought a movie.
+
+| external_id | name | time | rented_movie.properties.movie_name | rented_movie.properties.genre | bought_movie.properties.movie_name | bought_movie.properties.genre |
+| :---- | :---- | :---- | :---- | :---- | :---- | :---- |
+| 123 | rented_movie | 2024-06-10T12:00:00.000Z | Ghostbusters | Action | | |
+| 456 | bought_movie | 2024-06-12T12:00:00.000Z | | | Ghostbusters | Action |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 .reset-td-br-7 role="presentation"}
+
+In this example:
+
+- User `123` triggered the `rented_movie` event with the properties `movie_name` (Ghostbusters) and `genre` (Action)
+- User `456` triggered the `bought_movie` event with the properties `movie_name` (Ghostbusters) and `genre` (Action)
+- Each event only populates its relevant property columns, leaving other event property columns blank
+
 {% endtab %}
 {% endtabs %}
 
