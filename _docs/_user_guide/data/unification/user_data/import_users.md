@@ -48,7 +48,7 @@ You can use CSV import to record and update the following user attributes and cu
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 {% alert note %}
-When importing custom events with properties, you must use dot notation in your CSV column headers. For more information about formatting custom events, refer to [Understanding custom event formatting]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/#understanding-custom-event-formatting).
+When importing custom events with properties, you must use dot notation in your CSV column headers. For more information about formatting custom events, refer to [Understanding custom event formatting]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/?tab=custom%20events#understanding-custom-event-formatting).
 {% endalert %}
 
 ### Lambda user CSV import
