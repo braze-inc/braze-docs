@@ -28,8 +28,24 @@ Common failures may include:
 - People are passing Braze registration tokens manually but don't call `getToken()`. For example, they may pass the entire instance ID. The token in the error message looks like `&#124;ID&#124;1&#124;:[regular token]`.  
 - People are registering with multiple services. We currently expect push registration intents to arrive old-style, so if folks are registering in multiple places and we catch intents from other services we can get malformed push tokens.
 
-### Push bounced: NotRegistered
+### Push bounced: NotRegistered {#notregistered}
 `NotRegistered` usually means that the app has been deleted from the device (such as our signal for Uninstall). This can also occur if multiple registration is happening and a second registration is invalidating the push token that Braze receives.
+
+### DEVICE_UNREGISTERED {#device-unregistered}
+
+This error appears in the Message Activity Log as:
+
+`Received 'Error: DEVICE_UNREGISTERED, ' sending to '[Token String]'`
+
+This typically occurs for one of the following reasons:
+
+- **The user uninstalled the app.** This is the most common cause. When the app is removed from a device, the push token becomes invalid.
+- **Push credentials were updated in the app.** If your team changed the FCM credentials or certificates bundled with the app, users who registered with the previous credentials will have invalid tokens until the app re-registers them.
+- **Custom logic is unregistering users from push.** This is rare, but it's technically possible to programmatically unregister a device from push using the Firebase/Android SDK.
+
+{% alert note %}
+This error does not mean the user is push disabled — only that a specific token was removed from their profile. This is common for users who are testing functionality and frequently installing and uninstalling the app. To check if the user still has valid tokens, go to **User Search** and review the **Contact Settings** section on the **Engagement** tab.
+{% endalert %}
 
 {% endtab %}
 {% tab iOS %}
@@ -66,6 +82,22 @@ The `BadToken` error may occur for several reasons:
 	- This can happen if your certificate doesn't match the one that was used to get the token. If this is suspected, the next steps include:
 		- Ensuring that the push certificate being used to send push from the Braze dashboard and the provisioning profile are configured correctly.
 		- Recreating the APNS certification and then recreate the provisioning profile after the APNS certificate is configured to the `app_id`. This can sometimes solve some more visible problems.
+
+### Unregistered {#ios-unregistered}
+
+This error appears in the Message Activity Log as:
+
+`Received 'Unregistered' sending to '[Token String]'`
+
+This is the iOS equivalent of the Android [DEVICE_UNREGISTERED](#device-unregistered) error. It typically occurs for one of the following reasons:
+
+- **The user uninstalled the app.** This is the most common cause.
+- **Push certificates were updated.** If your team changed or renewed the APNs certificates, users who registered with the previous certificates may have invalid tokens until the app re-registers them.
+- **Custom logic is unregistering users from push.** This is rare, but it's technically possible to programmatically unregister from remote notifications using the iOS SDK.
+
+{% alert note %}
+This error does not mean the user is push disabled — only that a specific token was removed from their profile. To check if the user still has valid tokens, go to **User Search** and review the **Contact Settings** section on the **Engagement** tab.
+{% endalert %}
 
 ### Push bounced: APNS feedback service removed
 

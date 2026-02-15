@@ -191,5 +191,9 @@ Your push permissions are now reset. Open a new tab to your site and try it out.
 {% endtab %}
 {% endtabs %}
 
+## Push error messages
+
+If you're seeing errors like `DEVICE_UNREGISTERED`, `NotRegistered`, `Unregistered`, or `BadToken` in the Message Activity Log, refer to [Common push error messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/) for causes and next steps.
+
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
