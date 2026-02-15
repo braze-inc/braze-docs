@@ -135,6 +135,10 @@ The number of users entering a campaign may differ from your expected number bec
 For further assistance with campaign troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence, as we only have the last 30 days of diagnostic logs.
 {% endalert %}
 
+### Why did users receive my campaign twice after I edited it?
+
+If you edit a live campaign without stopping it first, users may receive the message twice. This happens because editing a live campaign re-enqueues users for the updated version while the original queue is still being processed. Users who haven't been delivered the original message yet can end up in both queues. To prevent this, always [stop the campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/#risks-of-editing-live) before making changes.
+
 ### What's the difference between the CSV Export User Data and CSV Export Email Address options on my campaign analytics page?
 
 Selecting the **CSV Export Email Addresses** option will only download data for users with email addresses. For example, if you have a segment of 100,000 users, but only 50,000 of those users have email addresses, and you click **CSV Export Email Addresses**, then you should expect to see only 50,000 rows of data in the CSV file. In comparison, selecting **CSV Export User Data** will export all user data.

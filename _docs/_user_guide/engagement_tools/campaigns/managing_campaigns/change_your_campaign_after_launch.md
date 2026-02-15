@@ -12,6 +12,22 @@ description: "This reference article gives an overview of the result of editing 
 
 > This article gives an overview of the result of editing certain aspects of a campaign post-launch.
 
+## Why you should stop a campaign before editing {#risks-of-editing-live}
+
+{% alert important %}
+Braze recommends stopping a campaign before making changes, rather than editing it while it's live. Editing a live campaign without stopping it first can lead to unexpected behavior, including users receiving the message twice.
+{% endalert %}
+
+When a campaign is launched, all eligible users are enqueued to receive the message. However, a user isn't marked as having received the campaign until the message is actually delivered — not when they're enqueued. If you edit a live campaign without stopping it first, Braze re-enqueues eligible users for the updated version while the original queue is still being processed. Users who haven't yet received the original message will be in both queues, which can result in:
+
+- Users receiving the campaign twice (the original and the updated version), even if re-eligibility is turned off
+- The original version of the campaign still being delivered to users in the first queue
+- Unexpected audience counts in campaign analytics
+
+This is most likely to occur with campaigns that target a large audience and are scheduled to send immediately, since there's a large queue of users being processed at once. For action-based campaigns with gradual triggers (such as sign-up events), the risk is lower because only a small number of users are typically queued at any given time.
+
+To safely make changes, [stop the campaign](#stopping-your-campaign) first, then either edit the stopped campaign or [duplicate it](#making-immediate-changes) with your changes.
+
 ## Stopping your campaign
 
 To stop a campaign, open your **Campaign Details** page and select **Stop Campaign**. When a campaign is stopped:
