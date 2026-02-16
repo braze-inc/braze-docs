@@ -27,7 +27,7 @@ Ao definir suas configurações de e-mail, suas configurações de e-mail de sa�
 {% tabs local %}
 {% tab Display Name Address %}
 
-Nessa seção, é possível adicionar os nomes e endereços de e-mail que podem ser usados quando o Braze envia e-mails para seus usuários. Os nomes de exibição e os endereços de e-mail estão disponíveis nas opções **Editar informações de envio** à medida que você cria sua campanha de e-mail. Observe que as atualizações feitas nas configurações de e-mail de saída não afetam retroativamente os envios existentes.
+Nessa seção, é possível adicionar os nomes e endereços de e-mail que podem ser usados quando o Braze enviar e-mails para seus usuários. Os nomes de exibição e os endereços de e-mail estão disponíveis nas opções **Editar informações de envio** à medida que você cria sua campanha de e-mail. Observe que as atualizações feitas nas configurações de e-mail de saída não afetam retroativamente os envios existentes.
 
 ![Seção "Outbound Email Settings" (Configurações de envio de e-mail) com campos para diferentes nomes de exibição e domínios.]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
@@ -77,13 +77,11 @@ Esta seção permite gerenciar os endereços BCC que podem ser anexados às mens
 
 Os endereços BCC estão disponíveis apenas para SendGrid e SparkPost. Como alternativa aos endereços BCC, recomendamos o uso do [arquivamento de mensagens]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/) para salvar uma cópia das mensagens enviadas aos usuários para fins de arquivamento ou conformidade.
 
-{% alert important %}
-Anexar um endereço BCC à sua campanha ou Canvas resultará na duplicação de seus e-mails faturáveis para o componente da campanha ou do Canvas, pois o Braze enviará uma mensagem para o usuário e outra para o endereço BCC.
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='BCC address billable emails' %}
 
 ![Endereço BCC na seção Endereço BCC da guia Configurações de e-mail.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
 
-Depois de adicionar um endereço, ele ficará disponível para seleção durante o envio de um e-mail nas etapas de campanhas ou do Canva. Selecione **Tornar padrão** ao lado de um endereço para definir que esse endereço seja selecionado por padrão ao iniciar uma nova campanha de e-mail ou componente do Canva. Para substituir isso no nível da mensagem, você pode selecionar **No BCC** ao configurar a mensagem.
+Depois de adicionar um endereço, ele ficará disponível para seleção ao enviar um e-mail nas etapas de campanhas ou do Canva. Selecione **Tornar padrão** ao lado de um endereço para definir que esse endereço seja selecionado por padrão ao iniciar uma nova campanha de e-mail ou componente do Canva. Para substituir isso no nível da mensagem, você pode selecionar **No BCC** ao configurar a mensagem.
 
 Se você precisar que todas as mensagens de e-mail enviadas pelo Braze tenham um endereço BCC incluído, poderá selecionar a opção **Exigir um endereço BCC para todas as suas campanhas de e-mail**. Isso exigirá que você selecione um endereço padrão, que será automaticamente selecionado em novas campanhas de e-mail ou etapas do Canva. O endereço padrão também será adicionado automaticamente a todas as mensagens disparadas por meio de nossa API REST. Não há necessidade de alterar a solicitação de API existente para incluir o endereço.
 
@@ -93,7 +91,7 @@ Com o BCC dinâmico, você pode usar Liquid em seu endereço BCC. Observe que es
 
 Por exemplo, é possível adicionar {% raw %}`{{custom_attribute.${support_agent}}}`{% endraw %} como endereço BCC para os e-mails da sua equipe de suporte.
 
-![Endereço BCC da guia Configurações de e-mail com um endereço BCC usando o Liquid.]({% image_buster /assets/img/email_settings/dynamic_bcc.png %}){: style="max-width:90%;" }
+![Endereço BCC na seção Endereço BCC da guia Configurações de e-mail com um endereço BCC usando o Liquid.]({% image_buster /assets/img/email_settings/dynamic_bcc.png %}){: style="max-width:90%;" }
 
 {% endtab %}
 {% endtabs %}
@@ -102,7 +100,7 @@ Por exemplo, é possível adicionar {% raw %}`{{custom_attribute.${support_agent
 
 [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
-O pixel de rastreamento de abertura de abertura de e-mail é uma imagem invisível de 1 x 1 px que é inserida automaticamente no HTML de seu e-mail. Esse pixel ajuda a Braze a detectar se os usuários finais abriram seu e-mail. As informações de abertura de e-mails podem ser muito úteis, ajudando os usuários a determinar estratégias de marketing eficazes ao compreender as taxas de abertura correspondentes.
+O pixel de rastreamento de abertura de abertura de e-mail é uma imagem invisível de 1 x 1 px e é inserido automaticamente no HTML de seu e-mail. Esse pixel ajuda o Braze a detectar se seus usuários abriram seu e-mail. Quando o cliente de e-mail de um usuário faz uma solicitação ao nosso pixel de rastreamento, a solicitação pode conter informações como o endereço IP, o agente do usuário e o registro de data e hora. As informações sobre abertura de e-mails podem ser muito úteis, pois ajudam a determinar estratégias de marketing eficazes, compreendendo as taxas de abertura correspondentes.
 
 ### Colocação do pixel de rastreamento
 
@@ -162,7 +160,7 @@ A exibição do cabeçalho é determinada, em última análise, pelo provedor de
 1. Selecione **Mostrar Original** no e-mail. Isso abre uma nova guia com a versão bruta do e-mail e seus cabeçalhos.
 2. Pesquise por "List-Unsubscribe".
 
-Se o cabeçalho estiver na versão bruta do e-mail, mas não for exibido, o provedor de caixa de e-mail determinou não mostrar a opção de cancelamento de inscrição, o que significa que não temos mais insight sobre o motivo pelo qual o provedor de caixa de e-mail não está exibindo o cabeçalho. A visualização do cabeçalho list-unsubscribe é, em última análise, baseada na reputação. Na maioria dos casos, quanto melhor for a reputação do remetente com o provedor de caixa de e-mail, maior será a probabilidade de o cabeçalho list-unsubscribe aparecer.
+Se o cabeçalho estiver na versão bruta do e-mail, mas não for exibido, o provedor de caixa de e-mail determinou não mostrar a opção de cancelamento de inscrição, o que significa que não temos mais insights sobre o motivo pelo qual o provedor de caixa de e-mail não está exibindo o cabeçalho. A visualização do cabeçalho list-unsubscribe é, em última análise, baseada na reputação. Na maioria dos casos, quanto melhor for a reputação do remetente com o provedor de caixa de e-mail, maior será a probabilidade de o cabeçalho list-unsubscribe aparecer.
 
 ### Cabeçalho de cancelamento de inscrição de e-mail em espaços de trabalho
 
@@ -215,7 +213,7 @@ Em seu editor de e-mail, acesse **Configurações de envio** > **Informações d
 - **Usar o espaço de trabalho padrão**: Usa as configurações **do cabeçalho de cancelamento de inscrição de e-mail** definidas em **Preferências de e-mail**. Todas as alterações feitas nessa configuração se aplicam a todas as mensagens.
 - **Cancelar inscrição globalmente de todos os e-mails**: Usa o cabeçalho de cancelamento de inscrição com um clique padrão da Braze. Os usuários que clicam no botão de cancelamento de inscrição têm seu estado global de inscrição de e-mail definido como "Cancelado".
 - **Cancelar inscrição em um grupo de inscrições específico**: Usa o grupo de inscrições especificado. O Braze cancela a inscrição dos usuários que clicarem no botão de cancelamento de inscrição do grupo de inscrições selecionado.
-    - Ao selecionar um grupo de inscrições, adicione o filtro **Grupo de inscrições** em **Públicos-alvo** para direcionar apenas os usuários que estão inscritos nesse grupo específico. O grupo de inscrições selecionado para cancelar inscrição com um clique deve corresponder ao grupo de inscrições que está sendo direcionado. Se houver uma incompatibilidade no grupo de inscrições, você pode correr o risco de enviar para um usuário que está tentando cancelar a inscrição em um grupo de inscrições do qual ele já cancelou a inscrição.
+    - Ao selecionar um grupo de inscrições, adicione o filtro **Grupo de inscrições** em **Públicos-alvo** para direcionar apenas os usuários que estão inscritos nesse grupo específico. O grupo de inscrições selecionado para cancelar inscrição com um clique deve corresponder ao grupo de inscrições que está sendo direcionado. Se houver uma incompatibilidade no grupo de inscrições, você pode correr o risco de enviar para um usuário que está tentando cancelar a inscrição de um grupo de inscrições do qual ele já cancelou a inscrição.
 
 {% alert important %}
 A configuração **Cancelar inscrição de um grupo de inscrições específico** só se aplica ao cabeçalho de cancelamento de inscrição na lista de um clique. O cabeçalho mailto list-unsubscribe não é afetado ao selecionar essa opção. Isso significa que um destinatário que cancela a inscrição usando esse método registra um cancelamento de inscrição global, não um cancelamento de inscrição do grupo de inscrições específico. Para excluir o cabeçalho mailto list-unsubscribe de cancelar globalmente a inscrição de usuários, ao selecionar essa configuração, entre em contato com [o Suporte]({{site.baseurl}}/support_contact/).
