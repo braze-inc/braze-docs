@@ -105,7 +105,7 @@ Cuando estés listo, utiliza los bloques de contenido de arrastrar y soltar para
 
 1. Seleccione el panel **Filas**. Arrastre y suelte las configuraciones de las filas en el editor principal. Esto mapeará el diseño del contenido de tu correo electrónico.
 - Tenga en cuenta que las nuevas configuraciones deben arrastrarse a la parte superior o inferior de una sección existente.
-- Cuando seleccionas una configuración de fila, aparece la configuración de **Propiedades de fila** para personalizar aún más los colores de fondo de las filas, las imágenes y los tamaños personalizados de las columnas.
+- Cuando seleccionas una configuración de filas, aparece la configuración de **Propiedades de filas** para personalizar aún más los colores de fondo de las filas, las imágenes y los tamaños personalizados de las columnas.
 2. Seleccione el panel **Contenido**. Arrastre y suelte los mosaicos de contenido que desee en los componentes de la fila.
 - También puede arrastrar cualquiera de los mosaicos de **contenido** al editor principal. Esto crea una fila para el mosaico.
 - Puede refinar aún más el mosaico seleccionándolo y ajustando los campos en **Propiedades de contenido** y **Opciones de bloque**. Esto incluye la edición del espaciado entre letras, el relleno, la altura de línea, etc.
@@ -244,7 +244,11 @@ La personalización líquida no es compatible con los bloques de imágenes y los
 
 #### Imágenes dinámicas
 
-Puede optar por incluir imágenes dinámicas en sus mensajes de correo electrónico incluyendo Liquid en su atributo de fuente de imagen. Por ejemplo, en lugar de una imagen estática, puede insertar {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} como URL de la imagen para incluir el nombre de pila de un usuario en la imagen. Esto ayuda a personalizar sus correos electrónicos para cada usuario.
+Puedes optar por incluir imágenes dinámicas en tu mensajería electrónica incluyendo [Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) o [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) en tu atributo de fuente de imagen. Por ejemplo, en lugar de una imagen estática, puede insertar {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} como URL de la imagen para incluir el nombre de pila de un usuario en la imagen. Esto ayuda a personalizar sus correos electrónicos para cada usuario.
+
+{% alert important %}
+La URL de tu imagen debe empezar por `https://`. Utilizar `http://` bloquea tu aplicación.
+{% endalert %}
 
 ### Dirección del texto
 
