@@ -36,9 +36,7 @@ Après avoir créé un événement personnalisé ou un produit, sélectionnez **
 
 Pour assurer la traçabilité des attributs personnalisés, événements, produits ou propriétés d'événement ajoutés, vous devez demander à votre équipe de développement de les créer dans le SDK en utilisant le nom exact que vous avez utilisé pour les ajouter précédemment. Vous pouvez également utiliser l'[API]({{site.baseurl}}/api/basics/) de Braze pour importer des données sur cet attribut. Ensuite, l'attribut personnalisé, l'événement ou autre sera exploitable et s'appliquera à vos utilisateurs.
 
-{% alert note %}
-Toutes les données des profils utilisateurs (événements personnalisés, attributs personnalisés, données personnalisées) sont stockées tant que ces profils sont actifs.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Manage custom data storage' %}
 
 ## Ajout à la liste de blocage des données personnalisées
 
@@ -64,7 +62,7 @@ Pour arrêter le suivi d'un attribut personnalisé, d'un événement ou d'un pro
 2. Sélectionnez l'attribut personnalisé, l'événement ou le produit. Pour les attributs et les events personnalisés, vous pouvez en sélectionner jusqu'à 100 à la fois.
 3. Sélectionnez **Liste de blocage**.
 
-![Plusieurs attributs personnalisés sélectionnés qui sont mis en liste bloquée sur la page Attributs personnalisés.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
+![Plusieurs attributs personnalisés sélectionnés qui sont mis en liste de blocage sur la page Attributs personnalisés.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
 Vous pouvez placer en liste de blocage jusqu'à 300 attributs personnalisés et 300 événements personnalisés. Pour empêcher la collecte de certains attributs d'appareils, consultez notre [guide SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
 
