@@ -2,7 +2,7 @@
 nav_title: Postergação 
 article_title: Postergação 
 alias: "/delay_step/"
-page_order: 3
+page_order: 8
 page_type: reference
 description: "Este artigo de referência aborda como adicionar uma postergação ao seu Canva sem a necessidade de adicionar uma mensagem associada."
 tool: Canvas
@@ -40,7 +40,7 @@ A seleção de **Duration** permite a postergação de usuários por um número 
 Note a diferença entre a forma como os "dias" e os "dias corridos" são calculados.
   
 - Um "dia" tem 24 horas e é calculado a partir do momento em que o usuário entra na etapa de postergação. 
-- Um "dia do calendário" define o tempo de espera até o próximo horário especificado, que pode ser inferior a 24 horas. É possível optar pela postergação no horário da empresa ou no fuso local do usuário. Se não for especificada uma hora, o usuário terá uma postergação até a meia-noite do dia seguinte no horário da empresa.
+- Um "dia do calendário" define o tempo de espera até o próximo horário especificado, que pode ser inferior a 24 horas. É possível optar pela postergação no horário da empresa ou no fuso local do usuário. Se uma hora não for especificada, o usuário terá uma postergação até a meia-noite do dia seguinte no horário da empresa.
 
 Também é possível selecionar **Em um horário específico** para especificar quando os usuários avançarão no Canva. Essa opção leva em conta a hora em que o usuário entrou na etapa de postergação. Se esse tempo estiver além do tempo configurado nas configurações, acrescentaremos mais horas à postergação. 
 
@@ -104,11 +104,9 @@ Se adicionar um componente de postergação ao seu Canvas e não houver etapas s
 
 ### Postergações personalizadas
 
-{% alert important %}
-As postergações personalizadas e estendidas estão em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The personalized delays and extended delays feature' %}
 
-Selecione a opção **Personalizar postergação** para configurar uma postergação personalizada para seus usuários. Você pode usar isso com uma [etapa de Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) para selecionar a variável de contexto para a postergação. Isso substituirá a hora do dia definida na atribuição ou propriedade selecionada. Isso é útil quando se aplica uma compensação em dias ou semanas e se deseja que os usuários avancem em um momento específico. O fuso horário vem da atribuição ou propriedade, ou usa o fallback se não houver nenhum disponível. 
+Selecione a opção **Personalizar postergação** para configurar uma postergação personalizada para seus usuários. Você pode usar isso com uma [etapa de Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) para selecionar a variável de contexto para a postergação. Isso substituirá a hora do dia definida na atribuição ou propriedade selecionada. Isso é útil quando se aplica um deslocamento em dias ou semanas e se deseja que os usuários avancem em um momento específico. O fuso horário vem da atribuição ou propriedade, ou usa o fallback se não houver nenhum disponível. 
 
 #### Comportamento do fuso horário para "em um horário específico"
 
@@ -116,7 +114,7 @@ Ao configurar postergações personalizadas com a opção de **horário específ
 
 - **Tipo de dados string com fuso horário:** Se a variável de atribuição ou de contexto for um tipo de dados de string que inclua informações de fuso horário, ela estará em conformidade com o fuso horário especificado na string. Por exemplo, o site `2025-06-10T10:00:00-08:00` usa UTC-8.
 - **Tipo de dados string sem fuso horário:** Se a variável de atribuição ou de contexto for um tipo de dados string sem informações de fuso horário, ela estará em conformidade com o fuso horário fallback. Por exemplo, o site `2025-06-10` usa o fuso horário fallback.
-- **Tipo de dados de tempo:** Se o atributo ou a variável de contexto for um tipo de dados de tempo, ele estará em conformidade com o UTC. Isso ocorre porque o tipo de dados de hora é sempre convertido para UTC quando salvo no banco de dados, portanto, "at specific time" sempre fará referência a UTC quando a variável for definida como tipo de dados de hora. Por exemplo, o site `2025-06-10T10:00:00-08:00` usa UTC+0.
+- **Tipo de dados de tempo:** Se o atributo ou a variável de contexto for um tipo de dados de tempo, ele estará em conformidade com o UTC. Isso ocorre porque o tipo de dados de hora é sempre convertido em UTC quando salvo no banco de dados, portanto, "at specific time" sempre fará referência a UTC quando a variável for definida como tipo de dados de hora. Por exemplo, o site `2025-06-10T10:00:00-08:00` usa UTC+0.
 
 {% alert note %}
 É possível que um atributo personalizado ou uma variável de contexto não tenha uma hora específica nem um fuso horário se for um tipo de dados de string. Se for um tipo de dados de tempo, você precisará especificar a hora e o fuso horário. No entanto, se o atributo personalizado ou a variável de contexto for uma string "irrelevante" (como "product_name"), ), o usuário sairá do Canva.
@@ -136,7 +134,7 @@ Em seguida, como deseja lembrar seus clientes daqui a 30 dias, selecione **Until
 
 ## Análise de dados de postergação
 
-Os componentes de postergação têm as seguintes métricas disponíveis na exibição de análise de dados de um Canva ativo ou previamente ativo.
+Os componentes de postergação têm as seguintes métricas disponíveis na visualização de análise de dados de um Canva ativo ou previamente ativo.
 
 | Métrico | Descrição |
 |---|---|
