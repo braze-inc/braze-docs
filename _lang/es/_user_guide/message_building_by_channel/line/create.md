@@ -72,6 +72,8 @@ Escribe tu mensaje utilizando la personalización (como Liquid o Contenido conec
 
 Si piensa utilizar Liquid, asegúrese de incluir un valor por defecto para su personalización. Esto evitará que los destinatarios con perfiles de usuario incompletos reciban un marcador de posición en blanco. Por ejemplo, en lugar de que un usuario reciba el mensaje "¡Hola, !", podría recibir el mensaje "¡Hola, nuevo abonado!".
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Crear mensajes de derecha a izquierda
 
 El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
