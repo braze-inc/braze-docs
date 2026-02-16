@@ -11,26 +11,26 @@ description: "Dieser Artikel beschreibt, wie Sie Connected-Content-Antworten fü
 
 Braze protokolliert und speichert die **Connected-Content-Antwortkörper** nicht permanent. Während des Renderings von Nachrichten können Antworten vorübergehend gehalten werden (z.B. im Speicher und im Cache), damit Braze Liquid rendern und die Nachricht senden kann.
 
-Um das Zwischenspeichern zu verhindern, können Sie `:no_cache` angeben, was zu erhöhtem Netzwerkverkehr führen kann. Um die Fehlerbehebung und die Überwachung des Systemzustands zu unterstützen, protokolliert Braze die Metadaten der Connected-Content-Anfrage (wie die vollständig gerenderte Anfrage-URL und den Response Status Code) für erfolgreiche und fehlgeschlagene Aufrufe. Diese Protokolle werden bis zu 30 Tage lang aufbewahrt.
+Um das Zwischenspeichern zu verhindern, können Sie `:no_cache` angeben, was zu erhöhtem Netzwerkverkehr führen kann. Um die Fehlerbehebung und die Überwachung des Systemzustands zu erleichtern, protokolliert Braze die Metadaten der Connected-Content-Anfrage (wie die vollständig gerenderte Anfrage-URL und den Response Status Code) für erfolgreiche und fehlgeschlagene Aufrufe. Diese Protokolle werden bis zu 30 Tage lang aufbewahrt.
 
 {% details Connected Content rendering and data handling (advanced) %}
 Dieser Abschnitt bietet eine detailliertere End-to-End-Ansicht, wie Braze Liquid und Connected-Content darstellt und wo Daten vorübergehend existieren können, bevor eine Nachricht gesendet wird. Dies kann bei der Überprüfung des Datenschutzes und des Umgangs mit Daten helfen.
 
 #### Was gespeichert wird und was nicht
 
-- **Connected-Content-Antwortkörper:** Von Braze nicht dauerhaft gespeichert. Sie können vorübergehend im Speicher gehalten und, wenn das Caching aktiviert ist, mit einer Time-to-Live (TTL) im Cache gespeichert werden.
+- **Connected-Content-Antwortkörper:** Von Braze nicht dauerhaft gespeichert. Sie können vorübergehend im Speicher gehalten und bei aktiviertem Caching mit einer Time-to-Live (TTL) im Cache gespeichert werden.
 - **Connected-Content-Anfrage-Metadaten:** Metadaten der Anfrage, wie die vollständig gerenderte URL, der HTTP Status Code und die Antwortdauer, werden zur Fehlerbehebung und Überwachung protokolliert. Diese Protokolle werden bis zu 30 Tage lang aufbewahrt. 
 - **Endgültig gerenderte Nachricht:** Existiert während des Renderns im Speicher. Je nach Konfiguration und Kanal (z.B. Nachrichtenarchivierung oder Content-Cards) kann dies auch an anderer Stelle gespeichert sein.
 
 #### Rendering Fluss (hohe Ebene)
 
-Der folgende Ablauf beschreibt, wie Braze Nachrichten für anbieterbasierte Kanäle wie E-Mail, SMS und Push rendert und versendet. SDK-vermittelte Kanäle wie Content-Cards verwenden dasselbe zugrunde liegende Liquid- und Connected-Content-Rendering, unterscheiden sich aber darin, wann die Inhalte generiert und wie sie zugestellt werden.
+Der folgende Ablauf beschreibt, wie Braze Nachrichten für anbieterbasierte Kanäle wie E-Mail, SMS und Push rendert und versendet. SDK-vermittelte Kanäle wie Content-Cards nutzen dasselbe zugrunde liegende Liquid- und Connected-Content-Rendering, unterscheiden sich aber darin, wann die Inhalte generiert und wie sie zugestellt werden.
 
 1. Ein Hintergrundworker rendert das Liquid Template für eine Nachricht, wenn die Nachricht für die Zustellung vorbereitet wird.
 2. Connected-Content Tags werden während des Liquid-Renderings ausgewertet.
 3. Für jedes Connected-Content Tag überprüft Braze einen mehrstufigen Cache. Wenn kein Wert im Cache vorhanden ist (oder das Caching deaktiviert ist), ruft Braze Ihren Endpunkt auf und empfängt die Antwort.
 4. Die Antwort wird in das Liquid Template eingespeist und die Nachricht wird vollständig gerendert.
-5. Bei anbieterbasierten Kanälen wird die gerenderte Nachricht an den Kanalanbieter und dann an den Nutzer:innen gesendet. Bei Kanälen, die per SDK zugestellt werden, wie z.B. Content-Cards, wird der gerenderte Inhalt mit dem Braze SDK synchronisiert und kann zum Zeitpunkt der ersten Impression oder der ersten Anzeige generiert werden, bei der er dem Nutzer:innen gezeigt wird.
+5. Bei anbieterbasierten Kanälen wird die gerenderte Nachricht an den Kanalanbieter und dann an den Nutzer:innen gesendet. Bei Kanälen, die per SDK zugestellt werden, wie z.B. Content-Cards, wird der gerenderte Inhalt mit dem Braze SDK synchronisiert und kann zum Zeitpunkt der ersten Impression oder der ersten Anzeige generiert werden, bei der er dem Nutzer:innen angezeigt wird.
 
 #### Wo Connected-Content-Antworten vorübergehend leben können
 
@@ -79,7 +79,7 @@ Der Antwortkörper von Connected-Content kann bis zu 1 MB groß sein. Wenn der A
 
 Connected-Content speichert den Wert, den es von GET-Endpunkten zurückgibt, mindestens fünf Minuten lang. Wenn keine Cache-Zeit angegeben wird, beträgt die Standard-Cache-Zeit fünf Minuten.
 
-Die Cache-Zeit von Connected-Content kann mit :cache_max_age, länger eingestellt werden, wie im folgenden Beispiel gezeigt. Die minimale Cache-Zeit beträgt fünf Minuten und die maximale Cache-Zeit beträgt vier Stunden. Connected-Content-Daten werden mit einem flüchtigen Cache-System, wie z. B. Memcached, im Speicher zwischengespeichert. 
+Die Cache-Zeit für Connected-Content kann mit :cache_max_age, wie im folgenden Beispiel gezeigt länger eingestellt werden. Die minimale Cache-Zeit beträgt fünf Minuten und die maximale Cache-Zeit beträgt vier Stunden. Connected-Content-Daten werden mit einem flüchtigen Cache-System, wie z. B. Memcached, im Speicher zwischengespeichert. 
 
 Daher kann es vorkommen, dass Connected-Content-Daten unabhängig von der angegebenen Cache-Zeit früher als angegeben aus dem In-Memory-Cache von Braze entfernt werden. Das bedeutet, dass es sich bei den Cache-Dauern um Vorschläge handelt, die nicht unbedingt der Dauer entsprechen, die Braze für die Daten im Cache garantiert, und dass Sie möglicherweise mehr Connected Content-Anfragen sehen, als Sie bei einer bestimmten Cache-Dauer erwarten.
 
