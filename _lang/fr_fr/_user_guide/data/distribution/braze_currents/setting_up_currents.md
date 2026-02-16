@@ -27,7 +27,7 @@ Les conditions suivantes sont les exigences élémentaires et minimales pour s�
 | Condition | Origine | Accès | Description
 |---|---|---|---|
 | Compte chez le partenaire | Organisez un compte avec ce partenaire ou contactez votre gestionnaire de compte Braze pour obtenir des suggestions. | Consultez le site de ce partenaire ou contactez-le pour vous inscrire. | Braze n’enverra pas de données à un partenaire si vous n’avez pas accès à ces données via le compte de votre société.
-| Clé ou Jeton (token) de l’API du partenaire | Généralement le tableau de bord du partenaire. | Copiez-le et collez-le dans le champ Braze prévu à cet effet. | Braze a un champ désigné pour cela dans la page Intégrations pour ce partenaire. Nous en avons besoin pour mapper l'endroit où nous envoyons vos données. **Gardez vos clés ou jetons de partenaire à jour ; des identifiants non valides peuvent désactiver votre connecteur et faire tomber des événements.**
+| Clé ou Jeton (token) de l’API du partenaire | Généralement le tableau de bord du partenaire. | Copiez-le et collez-le dans le champ désigné pour Braze. | Braze a un champ désigné pour cela dans la page Intégrations pour ce partenaire. Nous en avons besoin pour mapper l'endroit où nous envoyons vos données. **Gardez vos clés ou jetons de partenaire à jour ; des identifiants non valides peuvent désactiver votre connecteur et faire tomber des événements.**
 | Code/Clé d’authentification, Clé secrète, Fichier de certification | Contactez un représentant de votre compte chez ce partenaire. Elles sont parfois présentes sur le tableau de bord du partenaire. | Copiez et collez les clés dans le champ Braze désigné. Générez et chargez `.json`ou d’autres fichiers de certification dans l’emplacement approprié de Braze. | Braze a un champ désigné pour cela dans la page Intégrations pour ce partenaire. Cela fournit des identifiants à Braze et nous autorise à écrire des fichiers sur le compte du Partenaire. **Il est important que vos informations d'authentification soient à jour ; des identifiants non valides peuvent entraîner la désactivation de votre connecteur et l'abandon d'événements.**
 | Compartiment, chemin de dossier | Certains partenaires organisent et trient des données par compartiments. Vous devriez le voir dans le tableau de bord du partenaire. | Le cas échéant, copiez le nom du compartiment ou le chemin d'accès au fichier exactement dans l'espace prévu à cet effet dans Braze. | Certains partenaires l’exigent, et c’est important de ne pas se tromper si vous le faites. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -93,10 +93,10 @@ Pour tester votre intégration, vous pouvez sélectionner **Envoyer des événem
 
 Les connecteurs Test Currents sont des versions gratuites de nos connecteurs existants qui peuvent être utilisées pour tester et essayer différentes destinations. Les connecteurs test Currents présentent les propriétés suivantes :
 
-- Le nombre de connecteurs Test Currents que vous pouvez créer n'est pas limité.
-- Un maximum global de 10 000 événements par période de déploiement de sept jours. Ce total d'événements est mis à jour toutes les heures sur le tableau de bord.
+- Jusqu'à 10 connecteurs de courants de test par espace de travail.
+- Un maximum global de 1 500 événements par période fixe de 24 heures, avec remise à zéro à minuit UTC. Ce total d'événements est mis à jour toutes les heures sur le tableau de bord.
 
-Lorsque vos connecteurs Test Currents atteignent la limite d'envoi, votre connecteur n'enverra plus d'événements jusqu'à la prochaine période de sept jours.
+Lorsque vos connecteurs Test Currents atteignent la limite d'envoi, votre connecteur n'enverra plus d'événements jusqu'au lendemain (à minuit UTC).
 
 Pour mettre à niveau votre connecteur Test Currents, modifiez l'intégration dans le tableau de bord et sélectionnez **Mettre à niveau l'intégration de test**.
 
