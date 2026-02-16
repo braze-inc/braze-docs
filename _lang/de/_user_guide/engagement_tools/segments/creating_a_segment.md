@@ -31,7 +31,7 @@ Optional können Sie auch Folgendes tun:
 
 Wählen Sie, welche Apps oder Plattformen Sie anvisieren möchten, indem Sie **Benutzer aus allen Apps** (Standard) oder **Benutzer aus bestimmten Apps** auswählen. **Benutzer aus bestimmten Apps** stellt Nutzer:innen mit mindestens einer Sitzung in den angegebenen Apps zusammen.
 
-Wenn Sie zum Beispiel eine In-App-Nachricht nur an iOS-Geräte senden möchten, wählen Sie Ihre iOS-App aus. So wird sichergestellt, dass Benutzer, die sowohl ein iOS- als auch ein Android-Gerät verwenden, die Nachricht nur auf ihrem iOS-Gerät erhalten. In der Liste der spezifischen Apps können Sie mit der Option **Nutzer:innen ohne** Sitzungen und ohne App-Daten (die in der Regel durch Nutzerimport oder REST API erstellt wurden) aufnehmen.
+Wenn Sie zum Beispiel eine In-App-Nachricht nur an iOS-Geräte senden möchten, wählen Sie Ihre iOS-App aus. So wird sichergestellt, dass Benutzer, die sowohl ein iOS- als auch ein Android-Gerät verwenden, die Nachricht nur auf ihrem iOS-Gerät erhalten. In der Liste der spezifischen Apps können Sie mit der Option **Nutzer:innen ohne** Sitzungen und ohne App-Daten (in der Regel durch Nutzerimport oder REST API erstellt) aufnehmen.
 
 ![Segmentdetails mit der Option „Nutzer:innen aus allen Apps“ im Abschnitt „Verwendete Apps“.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
 
@@ -39,9 +39,7 @@ Wenn Sie zum Beispiel eine In-App-Nachricht nur an iOS-Geräte senden möchten, 
 
 Fügen Sie mindestens einen Filter zu Ihrem Segment hinzu. Sie können so viele Filter kombinieren, wie Sie möchten, um Ihre Segmentierung zu präzisieren. 
 
-{% alert note %}
-Braze erstellt erst dann Profile für Benutzer, wenn diese die App zum ersten Mal verwendet haben. Sie können also keine Benutzer ansprechen, die Ihre App noch nicht geöffnet haben.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Segment profiles first app use' %}
 
 #### Gruppen filtern
 
