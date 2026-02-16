@@ -36,9 +36,7 @@ Depois de criar um evento personalizado ou produto, selecione **Gerenciar propri
 
 Para tornar rastreáveis esses atributos personalizados, eventos, produtos ou propriedades de eventos adicionados, é necessário pedir à equipe de desenvolvimento que os crie no SDK usando o nome exato que você usou para adicioná-los anteriormente. Ou você pode usar a [API]({{site.baseurl}}/api/basics/) do Braze para importar dados sobre essa atribuição. Depois disso, o atributo personalizado, evento ou outro será acionável e se aplicará aos seus usuários.
 
-{% alert note %}
-Todos os dados do perfil do usuário (eventos personalizados, atributos personalizados, dados personalizados) são armazenados enquanto esses perfis estiverem ativos.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Manage custom data storage' %}
 
 ## Lista de bloqueio de dados personalizados
 
