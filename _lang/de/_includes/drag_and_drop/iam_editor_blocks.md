@@ -58,6 +58,8 @@ Einzelheiten zu den Eigenschaften der einzelnen Editorblöcke finden Sie in den 
 
 ### Bild
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | URL | Die gehostete Adresse für das Bild |
@@ -125,13 +127,13 @@ Sie können eine Aktion zuweisen, die ausgeführt wird, wenn ein Nutzer:innen au
 | --- | --- |
 | Formular absenden, wenn auf den Button geklickt wird | Sendet das Formular ab und führt das ausgewählte Klickverhalten aus. Deaktivieren Sie diese Option, um nur das Verhalten beim Klicken auszuführen. |
 | Separate Verhaltensweisen für jede Plattform festlegen | Passt das Verhalten des Buttons für jede Plattform separat an. |
-| On-Click-Verhalten | Legt die Aktion fest, die ausgeführt werden soll, wenn der Nutzer:innen auf den Button klickt, z.B. die Nachricht schließen, die Web-URL öffnen, einen Deeplink zu einer bestimmten Seite der App herstellen, zu einer anderen Seite gehen oder [eine Push-Erlaubnis anfordern]({{site.baseurl}}/push_primer/). |
+| On-Click-Verhalten | Legt die Aktion fest, die ausgeführt werden soll, wenn der Nutzer:innen auf den Button klickt, z.B. die Nachricht schließen, die Web-URL öffnen, einen Deeplink zu einer bestimmten Seite der App herstellen, zu einer anderen Seite gehen oder [eine Push-Erlaubnis anfragen]({{site.baseurl}}/push_primer/). |
 | Angepasste Attribute oder Events protokollieren | Legt fest, ob ein Klick auf den Button das Profil des Nutzers mit angepassten Daten aktualisiert. Sie können auch den Bezeichner für die Berichterstattung auswählen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Bild
 
-Bildspezifikationen finden Sie in unseren [Spezifikationen für In-App-Nachricht-Bilder]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#in-app-messages).
+Die Spezifikationen für Bilder finden Sie in unseren [Spezifikationen für In-App-Nachricht-Bilder]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#in-app-messages).
 
 | Aktion | Beschreibung |
 | --- | --- |
