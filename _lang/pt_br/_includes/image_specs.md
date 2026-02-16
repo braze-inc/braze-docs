@@ -28,7 +28,7 @@ As mensagens modais no app são projetadas para se ajustarem ao dispositivo nas 
 
 Embora não haja limites para o número de caracteres de texto que você pode incluir em uma mensagem no app (assim como botões, título, corpo principal e outros), moderamos o número de caracteres de texto que você usa. O excesso de texto exigirá que os usuários expandam e rolem a mensagem.
 
-Todas as mensagens no aplicativo têm um tamanho de imagem recomendado de 500 KB, tamanho máximo de imagem de 5 MB e suportam os tipos de arquivo PNG, JPEG e GIF.
+Todas as mensagens no aplicativo têm um tamanho de imagem recomendado de 500 KB, tamanho máximo de imagem de 5 MB e suportam tipos de arquivo PNG, JPEG e GIF. Imagens WebP não são suportadas em todos os dispositivos ou navegadores; sugerimos converter imagens WebP para PNG ou JPEG antes de adicioná-las às mensagens no aplicativo.
 
 {% tabs %}
 {% tab Portrait %}
@@ -152,7 +152,7 @@ table td {
 | --- | --- | 
 | Tamanho | 5 MB |
 | Largura | Cabeçalho: 600 px<br>Corpo: 480 px |
-| Tipos de arquivos | PNG, JPEG, GIF |
+| Tipos de arquivos | PNG, JPEG, GIF<br><br> O suporte a imagens WebP varia entre os clientes de e-mail. Para renderização confiável, converta imagens WebP para PNG ou JPEG antes de adicioná-las às mensagens de e-mail. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Especificações de texto | Propriedades máximas recomendadas |
