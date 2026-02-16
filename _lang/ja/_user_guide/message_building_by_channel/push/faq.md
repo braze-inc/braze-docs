@@ -20,6 +20,12 @@ channel:
 
 ![コンタクト設定」セクションの「プッシュ・チャンネルログ」。]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
+### Error sending push because payload was invalid」とはどういう意味か？
+
+このメッセージは、APNが無効なペイロード(例えば、空のペイロードや大きすぎるペイロード)のためにプッシュリクエストを拒否したことを示す。
+
+詳細と次のステップについては、[よくあるプッシュのエラーメッセージを]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/)参照のこと。
+
 ### オプトイン済みのユーザーにプッシュトークンがないのはなぜですか?
 
 この状況は、ユーザーのプッシュトークンが、同じデバイスを使用していた他のユーザーに再割り当てられた場合に発生する可能性があります。
