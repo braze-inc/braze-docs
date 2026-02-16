@@ -141,7 +141,7 @@ Braze の[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_to
 {% subtab API %}
 
 次の API 呼び出しでカタログを作成します。
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -175,7 +175,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs' \
 
 次の API 呼び出しでアイテムを追加します。
 
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs/translations/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
