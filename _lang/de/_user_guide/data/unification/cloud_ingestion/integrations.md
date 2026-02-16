@@ -64,7 +64,7 @@ Wenn Braze eine Verbindung zu Classic- und Pro SQL-Instanzen herstellt, kann es 
 
 #### Schritt 1.1: Tabelle einrichten
 
-```json
+```sql
 CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
 CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
 CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
@@ -96,7 +96,7 @@ Sie können die Datenbank, das Schema und die Tabelle nach Belieben benennen, ab
 
 #### Schritt 1.2: Einrichten der Rolle und der Datenbankberechtigungen
 
-```json
+```sql
 CREATE ROLE BRAZE_INGESTION_ROLE;
 
 GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -108,7 +108,7 @@ Aktualisieren Sie die Namen nach Bedarf, aber die Berechtigungen sollten mit dem
 
 #### Schritt 1.3: Richten Sie das Lager ein und geben Sie der Rolle Braze Zugriff
 
-```json
+```sql
 CREATE WAREHOUSE BRAZE_INGESTION_WAREHOUSE;
 
 GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
@@ -120,7 +120,7 @@ Das Lagerhaus muss die Option zur **automatischen Wiederaufnahme** aktiviert hab
 
 #### Schritt 1.4: Einrichten der Nutzer:in
 
-```json
+```sql
 CREATE USER BRAZE_INGESTION_USER;
 
 GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
@@ -144,12 +144,12 @@ Je nach Konfiguration Ihres Snowflake-Kontos müssen Sie möglicherweise die fol
 #### Schritt 1.1: Tabelle einrichten 
 
 Optional können Sie eine neue Datenbank und ein neues Schema für Ihre Quelltabelle einrichten
-```json
+```sql
 CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
 CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
 ```
 Erstellen Sie eine Tabelle (oder Ansicht), die Sie für Ihre CDI-Integration verwenden
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
    updated_at timestamptz default sysdate,
    --at least one of external_id, alias_name and alias_label, or braze_id is required
@@ -179,7 +179,7 @@ Sie können die Datenbank, das Schema und die Tabelle nach Belieben benennen, ab
  
 #### Schritt 1.2: Nutzer:in anlegen und Berechtigungen erteilen
 
-```json
+```sql
 CREATE USER braze_user PASSWORD '{password}';
 GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
@@ -208,13 +208,13 @@ Erlauben Sie den Zugriff von den folgenden IPs, die der Region Ihres Braze Dashb
 
 Optional können Sie ein neues Projekt oder einen neuen Datensatz einrichten, der Ihre Quelltabelle enthält.
 
-```json
+```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
 Erstellen Sie eine oder mehrere Tabellen, die Sie für Ihre CDI-Integration verwenden möchten, mit den folgenden Feldern:
 
-```json
+```sql
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 (
   updated_at TIMESTAMP DEFAULT current_timestamp,
@@ -254,8 +254,16 @@ Sie können das Projekt, den Datensatz und die Tabelle nach Belieben benennen, a
     - `PHONE` - Die Telefonnummer der Nutzerin oder des Nutzers. Wenn mehrere Profile mit derselben Telefonnummer vorhanden sind, wird das zuletzt aktualisierte Profil bei Updates bevorzugt.
 - `PAYLOAD` - Dies ist ein JSON String mit den Feldern, die Sie mit dem Nutzer:innen in Braze synchronisieren möchten.
 
-{% alert tip %}
-Braze fragt Ihre BigQuery-Tabellen in Ihrem eigenen Projekt (unter Verwendung des vordefinierten Schemas) mit Prädikaten auf `UPDATED_AT` ab. Durch die Partitionierung großer Tabellen nach `UPDATED_AT` mit einer angemessenen Granularität (z.B. tägliche Granularität) kann BigQuery Partitionen beschneiden, so dass nur relevante Daten gescannt werden. Dies kann dazu beitragen, die Performance zu verbessern und die Kosten zu senken. Weitere Informationen finden Sie in der [Dokumentation zur BigQuery-Partitionierung](https://docs.cloud.google.com/bigquery/docs/partitioned-tables).
+{% alert important %}
+**BigQuery-Partitionierung**
+
+CDI unterstützt Partitionen für BigQuery. Wenn Sie nach einer Funktion von `UPDATED_AT` partitionieren (z. B. auf der Granularität eines Tages, einer Woche oder einer Stunde, je nach Größe Ihres Datensatzes), kann BigQuery die Daten, die es durchsuchen muss, beschneiden. Dies verbessert die Performance und Effizienz bei sehr großen Tabellen.
+
+Unterteilen Sie nicht nach anderen Feldern. Testen Sie verschiedene Konfigurationen, um das beste Setup für Ihre spezifischen Daten zu finden.
+
+Alle CDI-Abfragen filtern nach `UPDATED_AT`, aber dieses Verhalten könnte sich ändern. Entwerfen Sie Ihr Tabellenschema so, dass Abfragen diese Klausel _nicht_ enthalten müssen.
+
+Weitere Informationen finden Sie in der [Dokumentation zur BigQuery-Partitionierung](https://docs.cloud.google.com/bigquery/docs/partitioned-tables).
 {% endalert %}
 
 #### Schritt 1.2: Dienstkonto erstellen und Berechtigungen erteilen 
@@ -282,14 +290,14 @@ Wenn Sie über Netzwerkrichtlinien verfügen, müssen Sie Braze Netzwerkzugriff 
 
 Optional können Sie einen neuen Katalog oder ein neues Schema für Ihre Quelltabelle einrichten.
 
-```json
+```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
 Erstellen Sie eine oder mehrere Tabellen, die Sie für Ihre CDI-Integration verwenden möchten, mit den folgenden Feldern:
 
 
-```json
+```sql
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 (
   updated_at TIMESTAMP DEFAULT current_timestamp(),
@@ -379,7 +387,7 @@ Sie werden Braze den Zugang zu Ihrer Fabric-Instanz ermöglichen. Navigieren Sie
 #### Schritt 1.3: Tabelle einrichten
 Braze unterstützt sowohl Tabellen als auch Ansichten in Fabric Warehouses. Wenn Sie ein neues Data Warehouse erstellen möchten, gehen Sie in der Fabric-Konsole zu **Erstellen > Data Warehouse > Warehouse**. 
 
-```json
+```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
 (
   UPDATED_AT DATETIME2(6) NOT NULL,
@@ -460,7 +468,7 @@ An dieser Stelle müssen Sie zu Snowflake zurückkehren, um die Einrichtung abzu
 
 Weitere Informationen dazu finden Sie in der [Snowflake-Dokumentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). Wenn Sie die Schlüssel zu einem beliebigen Zeitpunkt austauschen möchten, können wir ein neues Schlüsselpaar erzeugen und Ihnen den neuen öffentlichen Schlüssel zur Verfügung stellen.
 
-```json
+```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 ```
 {% endtab %}
