@@ -53,8 +53,8 @@ Los siguientes mensajes se incluyen a modo de ejemplo y pueden no coincidir exac
 
 | Tipo de mensaje | Mensaje potencial | Descripción |
 |---|---|---|
-| Rebote suave | La dirección de correo electrónico same@example.com arrojó un rebote blando. | La dirección de correo electrónico era válida y el mensaje llegó al servidor de correo del destinatario, pero fue rechazado por un problema "temporal". <br><br>Entre las razones más comunes del rebote blando se incluyen: {::nomarkdown} <ul> <li> El buzón estaba lleno (el usuario ha superado su cuota) </li> <li> El servidor no funcionaba </li> <li> El mensaje era demasiado grande para la bandeja de entrada del destinatario </li>  </ul> {:/} Si un correo electrónico arroja un rebote blando, normalmente lo reintentaremos en un plazo de 72 horas, pero el número de intentos de reintento varía de un receptor a otro. |
-| Rebote duro | La cuenta de correo electrónico a la que ha intentado acceder no existe. Compruebe que la dirección de correo electrónico del destinatario no contenga erratas ni espacios innecesarios. | Tu mensaje nunca llegó a la bandeja de entrada de esta persona porque no había bandeja de entrada a la que llegar. Si quieres profundizar más, los mensajes de este tipo pueden tener a veces enlaces en la columna **Ver detalles** que te permitirán ver el perfil del destinatario.|
+| Rebote suave | La dirección de correo electrónico same@example.com arrojó un rebote blando. | La dirección de correo electrónico era válida y el mensaje llegó al servidor de correo del destinatario, pero fue rechazado por un problema "temporal". <br><br>Entre las razones más comunes del rebote blando se incluyen: {::nomarkdown} <ul> <li> El buzón estaba lleno (el usuario ha superado su cuota) </li> <li> El servidor no funcionaba </li> <li> El mensaje era demasiado grande para la bandeja de entrada del destinatario </li>  </ul> {:/} Si un correo electrónico ha recibido un rebote blando, solemos reintentarlo en un plazo de 72 horas, pero el número de intentos de reintento varía de un receptor a otro. |
+| Rebote duro | La cuenta de correo electrónico a la que ha intentado acceder no existe. Compruebe que la dirección de correo electrónico del destinatario no contenga erratas ni espacios innecesarios. | Tu mensaje nunca llegó a la bandeja de entrada de esta persona porque no había bandeja de entrada a la que llegar. Si quieres profundizar más, los mensajes de este tipo pueden tener a veces enlaces en la columna **Ver detalles** que te permiten ver el perfil del destinatario.|
 | Bloquear | El mensaje spam es rechazado debido a la política anti-spam. | Tu mensaje ha sido clasificado como spam. Este error de correo se registra para un usuario si hemos recibido un evento del ESP indicando que el correo electrónico ha sido descartado. Puede que sólo sea para ese destinatario, pero si ves este mensaje a menudo, quizá quieras reevaluar tus hábitos de envío o el contenido de tu mensaje. Además, haz memoria: [¿calentaste tu IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)? Si no es así, ponte en contacto con Braze para que te asesore sobre cómo ponerlo en marcha.|
 | Error de mensaje anulado | empty-cart_web | Si tiene una aplicación con un carrito o crea un envío con un mensaje de cancelación en el Líquido, puede personalizar qué mensaje se le devuelve si se cancela el envío. En este caso, el mensaje devuelto es empty-cart_web.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -76,8 +76,8 @@ Los errores de las últimas 60 horas están disponibles en los Registros de acti
 
 ### Número de registros de errores almacenados
 
-El número de registros guardados depende de varias condiciones. Por ejemplo, si se envía una campaña programada a miles de usuarios, podríamos ver una muestra de los errores en el Registro de actividad de mensajes en lugar de todos los errores. A continuación se presenta un resumen de las condiciones que afectan al número de registros que se guardarán:
-- Se guardarán hasta 20 registros de errores del mismo tipo de error para la misma campaña o paso en Canvas dentro de una hora de reloj fija para los siguientes tipos de error:
+El número de registros guardados depende de varias condiciones. Por ejemplo, si se envía una campaña programada a miles de usuarios, podríamos ver una muestra de los errores en el Registro de actividad de mensajes en lugar de todos los errores. A continuación se ofrece un resumen de las condiciones que afectan al número de registros que se guardan:
+- Se guardan hasta 20 registros de errores del mismo tipo de error para la misma campaña o paso en Canvas dentro de una hora de reloj fija para los siguientes tipos de error:
     - Errores en los contenidos conectados
     - Abortar errores de mensaje
     - Errores de webhook
@@ -85,7 +85,7 @@ El número de registros guardados depende de varias condiciones. Por ejemplo, si
     - Errores en la entrega de SMS
     - Errores de fallo de WhatsApp
     - Errores en las pruebas A/B
-- Se guardarán hasta 20 registros de errores de notificación push del mismo tipo de error para la misma campaña o combinación de paso en Canvas y aplicación para los siguientes tipos de error:
+- Se guardan hasta 20 registros de errores de notificación push del mismo tipo de error para la misma campaña o combinación de paso en Canvas y aplicación para los siguientes tipos de error:
     - Credencial push no válida
     - Token de notificaciones push no válido
     - Sin credenciales push
@@ -94,14 +94,26 @@ El número de registros guardados depende de varias condiciones. Por ejemplo, si
     - Reintentos agotados
     - Carga útil no válida
     - Error inesperado
-- Se guardarán hasta 100 registros de errores del mismo tipo de error para la misma aplicación dentro de una hora de reloj fija para los siguientes tipos de error:
+- Se guardan hasta 100 registros de errores del mismo tipo de error para la misma aplicación dentro de una hora de reloj fija para los siguientes tipos de error:
     - Error de actividad en vivo (No hay credenciales push)
     - Error de actividad en vivo (credencial push no válida)
     - Otros errores de la actividad en vivo
     - Retroalimentación APNS Errores de token eliminados
-- Se guardarán hasta 100 registros de errores del mismo tipo de error para la misma campaña o paso en Canvas dentro de una hora de reloj fija para los siguientes tipos de error:
+- Se guardan hasta 100 registros de errores del mismo tipo de error para la misma campaña o paso en Canvas dentro de una hora de reloj fija para los siguientes tipos de error:
     - Errores de rebote blando del correo electrónico
     - Errores de rebote duro de correo electrónico
     - Errores de bloqueo de correo electrónico
-- Se guardarán hasta 100 registros de errores de asignación de alias de usuario para el mismo espacio de trabajo dentro de una hora de reloj fija.
+- Se guardan hasta 100 registros de errores de asignación de alias de usuario para el mismo espacio de trabajo dentro de una hora de reloj fija.
 
+## Envíos de prueba
+
+El **Registro de actividad de mensajes** muestra los registros de prueba de estos canales de mensajería:
+
+- SMS
+- WhatsApp
+- LINE
+- Webhook
+
+Los registros de envíos de prueba no están disponibles para los siguientes canales: correo electrónico, tarjetas de contenido, mensajes dentro de la aplicación y push.
+
+Los registros de envío de prueba llevan el prefijo "[ENVÍO DE PRUEBA]", pero no se garantiza que todos los registros de envío de prueba tengan el prefijo (por ejemplo, los errores de Contenido conectado no lo tienen).
