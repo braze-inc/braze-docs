@@ -2,7 +2,7 @@
 nav_title: Eventos predecibles
 article_title: Eventos predecibles
 description: "Este artículo trata de los Eventos predictivos (antes Compras predictivas), una herramienta de Braze Predictive Suite que ofrece a los especialistas en marketing la posibilidad de identificar y enviar mensajes a los usuarios en función de su probabilidad de realizar un evento."
-page_order: 2.1
+page_order: 10
 alias: /predictive_purchases/
 search_rank: 1
 ---
@@ -21,7 +21,7 @@ El verdadero valor de los Eventos Predictivos reside en utilizar los resultados 
 
 ## Acceso a los eventos de predicción
 
-La página **Predicciones** se encuentra en la sección **Análisis**. Para obtener acceso completo, ponte en contacto con tu director de cuentas.
+{% include brazeai/predictions_page_access.md %}
 
 Antes de adquirir esta característica, está disponible en modo vista previa. Esto te permitirá ver una predicción de demostración con datos sintéticos, así como crear un modelo de predicción de vista previa cada vez. Esta predicción se creará basándose en tus datos de usuario reales, pero no te permitirá dirigirte a los usuarios para enviarles mensajes según su puntuación de probabilidad. Tampoco se actualizará regularmente tras su creación.
 
