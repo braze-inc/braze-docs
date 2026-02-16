@@ -112,7 +112,7 @@ Sie können Ihre Landing Page responsiv an die Größe des Geräts eines Nutzers
 
 Wenn dieses Enablement aktiviert ist, können Sie auch die Stapelspalten umkehren, um die vertikale Reihenfolge von mehrspaltigen Inhalten auf kleineren Bildschirmen zu steuern. Dadurch sehen die Seiten auf dem Handy besser aus und fühlen sich besser an, ohne angepassten Code.
 
-![Das Umschalten von "Vertikal stapeln auf kleineren Bildschirmen" in der Sektion "Spalten anpassen".]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
+![Das Umschalten von "Vertikal stapeln auf kleineren Bildschirmen" in der Rubrik "Spalten anpassen".]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
 #### Optionale und obligatorische Felder
 
@@ -139,7 +139,7 @@ Wenn Ihre Bestätigungsseite in einem neuen Tab geöffnet wird, kann ein Nutzer:
 {% endalert %}
 
 {% alert important %}
-Wenn Sie einen Button mit dem Enablement **Formular abschicken, wenn auf den Button geklickt wird** konfigurieren und das **Verhalten beim Klicken** verwenden, um eine Internet-URL in einem neuen Tab zu öffnen, kann der in iOS Safari integrierte Popup-Blocker die Navigation verhindern. Dies liegt daran, dass die Übermittlung eines Formulars und die anschließende Öffnung eines neuen Tabs als Popup behandelt wird.<br><br>Um dieses Problem zu vermeiden, konfigurieren Sie Buttons mit Formularübermittlung so, dass die resultierende URL in demselben Tab geöffnet wird (nicht in einem neuen Tab). Buttons ohne Formularübermittlung können URLs ohne Probleme in neuen Tabs öffnen.
+Wenn Sie einen Button mit dem Enablement **Formular abschicken, wenn auf den Button geklickt wird** konfigurieren und das **Verhalten beim Klicken** verwenden, um eine Internet-URL in einem neuen Tab zu öffnen, kann der in iOS Safari integrierte Popup-Blocker die Navigation verhindern. Dies liegt daran, dass die Übermittlung eines Formulars und die anschließende Öffnung eines neuen Tabs als Popup-Fenster behandelt wird.<br><br>Um dieses Problem zu vermeiden, konfigurieren Sie Buttons mit Formularübermittlung so, dass die resultierende URL in demselben Tab geöffnet wird (nicht in einem neuen Tab). Buttons ohne Formularübermittlung können URLs ohne Probleme in neuen Tabs öffnen.
 {% endalert %}
 
 ### Schritt 5: Vorschau auf die Seite
