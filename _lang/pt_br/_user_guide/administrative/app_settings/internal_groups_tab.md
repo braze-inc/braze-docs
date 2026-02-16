@@ -30,7 +30,7 @@ Para criar um grupo interno:
 
 | Tipo de grupo         | Descrição                                                                                 |
 |--------------------|---------------------------------------------------------------------------------------------|
-| **Grupo de eventos de usuários**   | Use-o para verificar eventos ou registros do seu dispositivo de teste.                                    |
+| **Grupo de eventos de usuários**   | Use isso para verificar eventos ou registros do seu dispositivo de teste.                                    |
 | **Grupo de teste de conteúdo** | Use isso em mensagens push, de e-mail e no app para enviar uma cópia renderizada da mensagem. |
 | **Grupo de teste**         | Envia automaticamente uma cópia do e-mail para todos no grupo de teste após o envio.               |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -42,7 +42,7 @@ Para criar um grupo interno:
 Depois de criar o grupo interno, adicione os usuários teste como membros desse grupo. 
 
 1. Na página de gerenciamento do seu grupo interno, selecione **Add test users (Adicionar usuários de teste**).
-2. Escolha um dos seguintes métodos para pesquisar e selecionar seus usuários teste.
+2. Escolha um dos seguintes métodos para pesquisar e selecionar os usuários teste.
 
 | Método                  | Descrição                                                                                                                                                                                                                                          |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -87,7 +87,7 @@ Os e-mails semente terão o endereço `[SEED]` anexado ao início da linha de as
 
 #### Comportamento da inscrição
 
-Os envios semeados são projetados para controle de qualidade e revisão internos, portanto, eles intencionalmente ignoram as verificações de inscrição para os usuários do dashboard semeado. Isso significa que os usuários com endereços de e-mail válidos que fazem parte de um Seed Group recebem a mensagem mesmo que não estejam inscritos. No entanto, a mensagem deve ser configurada para enviar cópias de teste para esse grupo.
+Os envios semente são projetados para controle de qualidade interno e revisão, portanto, intencionalmente ignoram as verificações de inscrição para os usuários da empresa semeada. Isso significa que os usuários com endereços de e-mail válidos que fazem parte de um Seed Group recebem a mensagem mesmo que não estejam inscritos. No entanto, a mensagem deve ser configurada para enviar cópias de teste para esse grupo.
 
 {% alert tip %}
 Se os membros do Seed Group informarem que não estão vendo a mensagem na caixa de entrada, verifique se eles estão listados no grupo interno, verifique se as linhas de assunto são diferentes e se o Gmail não agrupou os e-mails ou peça que verifiquem as pastas de spam.
@@ -115,4 +115,4 @@ Se você tiver uma campanha recorrente e qualquer uma das variantes for atualiza
 
 Os grupos de teste no Canva funcionam de forma semelhante a qualquer campanha disparada. O Braze detecta automaticamente todas as etapas que contêm uma mensagem de e-mail e envia para elas quando o usuário chega pela primeira vez a essa etapa específica de e-mail.
 
-Se uma etapa de e-mail tiver sido atualizada após o envio do grupo de teste, o Braze apresentará a opção de enviar somente para etapas atualizadas, para todas as etapas ou desativar as sementes.
+Se uma etapa de e-mail tiver sido atualizada após o envio do grupo de teste, o Braze apresentará a opção de enviar apenas para etapas atualizadas, para todas as etapas ou desativar as sementes.
