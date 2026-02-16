@@ -87,7 +87,7 @@ Se você está tendo problemas com o desempenho do dashboard, como seu dashboard
 Limpar cookies fará com que você saia, portanto, trabalhos não salvos serão perdidos.
 {% endalert %}
 
-- [Limpar o cache & cookies no Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
+- [Limpar cache & cookies no Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
 - [Limpar cookies no Safari no Mac](https://support.apple.com/en-gb/guide/safari/sfri11471/16.1/mac/13.0)
 - [Limpar cookies e dados do site no Firefox](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
 - [Excluir todos os cookies no Microsoft Edge](https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d#bkmk_deleteallcookies)
@@ -96,7 +96,7 @@ Se limpar o cache e os cookies do seu navegador não resolver seus problemas, en
 
 ### Acessando o editor de arrastar e soltar
 
-Para a maioria dos usuários do Braze, o editor de arrastar e soltar deve ser carregado. No entanto, se você estiver usando uma VPN ou estiver atrás de um firewall, talvez seja necessário colocar um domínio na lista de permissões. Entre em contato com o administrador de TI para verificar se o site `*.bz-rndr.com` está na lista de permissões.
+Para a maioria dos usuários da empresa, o editor de arrastar e soltar deve ser carregado. No entanto, se você estiver usando uma VPN ou estiver atrás de um firewall, talvez seja necessário colocar um domínio na lista de permissões. Entre em contato com o administrador de TI para verificar se o site `*.bz-rndr.com` está na lista de permissões.
 
 O editor pode apresentar problemas de carregamento devido ao seguinte:
 
@@ -104,7 +104,7 @@ O editor pode apresentar problemas de carregamento devido ao seguinte:
 - **Erro grave:** Isso pode envolver um problema subjacente de infraestrutura ou de produto.  Você pode verificar nossa [página de status do sistema Braze](https://braze.statuspage.io/), pois provavelmente estamos cientes da situação e trabalhando ativamente para resolvê-la.
 
 {% alert important %}
-Se ainda estiver com problemas, [abra um tíquete de suporte]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Antes de fazer isso, verifique se o administrador de TI confirmou que o site `*.bz-rndr.com` está na lista de permissões em seu local.
+Se ainda estiver com problemas, [abra um tíquete de suporte]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Antes de fazer isso, verifique se o administrador de TI confirmou que o endereço `*.bz-rndr.com` está na lista de permissões em seu local.
 {% endalert %}
 
 ### Acessando o aprendizado do Braze
@@ -114,7 +114,7 @@ Se estiver com problemas para registrar-se no Braze Learning e ficar preso em um
 1. Se você tiver várias contas Braze, o registro com a conta errada duas vezes o enviará para o dashboard Braze. Confirme se está registrando a conta correta. 
 2. Se você tiver um bloqueador de anúncios, confirme se ele está desativado. Ele pode bloquear os cookies necessários para a funcionalidade de logon único.
 3. Acesse Configurações da empresa > Configurações de segurança e verifique se o logon único (SSO) está ativado.
-4. Confirme se o perfil de usuário do dashboard inclui um nome e um sobrenome. O fato de não ter um sobrenome pode atrapalhar o processo de login.
+4. Confirme se o perfil de usuário do dashboard inclui um nome e um sobrenome. Não ter um sobrenome pode atrapalhar o processo de login.
 5. Acesse o Braze Learning em seu dashboard, indo para **Suporte** > **Braze Learning**. 
 6. Se continuar a ter problemas, considere a possibilidade de recriar sua conta. Os usuários que acessaram o Braze Learning durante a fase de teste gratuito podem ter dificuldades para acessá-lo agora.
 
