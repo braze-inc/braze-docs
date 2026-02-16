@@ -15,7 +15,7 @@ channel:
 
 ## Sobre tokens por push {#push-tokens}
 
-Quando um app solicita permissões de push de um dispositivo, o provedor de serviço de push do dispositivo gerará um token por push para esse app. Cada app recebe seu próprio token por push único e anônimo, que é como ele identifica o dispositivo e a instância atual do app ao enviar uma notificação por push.
+Quando um app solicita permissões de push de um dispositivo, o provedor de notificação por push do dispositivo gerará um token por push para esse app. Cada app recebe seu próprio token por push único e anônimo, que é como ele identifica o dispositivo e a instância atual do app ao enviar uma notificação por push.
 
 Tenha em mente que os tokens por push não são identificadores estáticos que duram para sempre—eles podem ser atualizados e podem [expirar](#push-token-expire).
 
@@ -51,6 +51,10 @@ Um app ou site só pode ter uma inscrição push por dispositivo. Portanto, quan
 
 Como não há uma maneira de os provedores de push (APNs/FCM) distinguirem entre vários usuários em um dispositivo, passamos o token por push para o último usuário que estava registrado para determinar qual usuário deve ser direcionado no dispositivo para push.
 
+{% alert tip %}
+Se você ver uma mensagem de erro em **Configurações de Contato** > **Changelog de Push**, consulte [Mensagens de erro comuns de push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/) para explicações e próximos passos.
+{% endalert %}
+
 ## Registro de token por push
 
 Cada plataforma de dispositivo lida com o registro de token por push de maneira diferente. Consulte o seguinte para detalhes específicos da plataforma:
@@ -76,7 +80,7 @@ O iOS não gera automaticamente tokens por push para um app quando é instalado.
 | versão                         | Autorização Provisória? | Informações                                                                                                                                                     |
 |------------------------------------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **iOS 12**      | Sim                         | Quando um usuário opta por participar das notificações por push, você recebe autorização padrão, permitindo que você envie [notificações por push em primeiro plano](#foreground-vs-background). No entanto, você também pode solicitar [autorização provisória]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push), que permite enviar [notificações por push em segundo plano](#foreground-vs-background) silenciosas diretamente para a central de notificações. |
-| **iOS 11 e posteriores** | Não                          | Todos os usuários devem aceitar explicitamente o recebimento de notificações por push. Um token por push é gerado apenas após a permissão ser concedida.                                     |
+| **iOS 11 ou anteriores** | Não                          | Todos os usuários devem aceitar explicitamente o recebimento de notificações por push. Um token por push é gerado apenas após a permissão ser concedida.                                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
@@ -85,7 +89,7 @@ O iOS não gera automaticamente tokens por push para um app quando é instalado.
 
 ![Perfil de usuário para John Doe com seu estado de inscrição push definido como Subscribed (Inscrito).]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-Existem duas maneiras de verificar o estado de inscrição por push de um usuário com a Braze:
+Há duas maneiras de verificar o estado da inscrição push de um usuário na Braze:
 
 - **Perfil do usuário**: Você pode acessar perfis de usuários individuais através do dashboard da Braze na página [Pesquisa de Usuários]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/). Depois de encontrar o perfil de um usuário (por meio de endereço de e-mail, número de telefone ou ID de usuário externo), é possível selecionar a guia **Engajamento** para visualizar e ajustar manualmente o estado da inscrição de um usuário.
 - **Exportação da API Rest**: Você pode exportar perfis de usuários individuais em formato JSON usando os endpoints de exportação [Usuários por segmento]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) ou [Usuários por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/). A Braze retornará um objeto de tokens por push que contém informações de capacitação por push por dispositivo.
