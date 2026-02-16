@@ -39,6 +39,19 @@ A continuación se muestra cómo se clasifica a un usuario en función de su pun
 
 Las puntuaciones y las categorías correspondientes se actualizarán según el calendario que hayas elegido en la página de **creación de predicciones**. El número de usuarios con puntuaciones de probabilidad en cada uno de los 20 contenedores de igual tamaño o en cada una de las categorías de probabilidad, se muestra en el gráfico de la parte superior de la página.
 
+### Acceder a las puntuaciones de probabilidad a nivel de usuario
+
+Para ver la puntuación de probabilidad de un solo usuario, búscalo en el panel y ve a **Interacción** > **Predicciones** para ver su puntuación. Para acceder a las puntuaciones y categorías de muchos usuarios a la vez, crea un [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) utilizando los filtros [Puntuación de Probabilidad de Suceso]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) o [Categoría de Probabilidad de Suceso]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-category), y luego exporta los usuarios de ese segmento. Al exportar, puedes incluir las puntuaciones de probabilidad en los datos de exportación.
+
+{% alert note %}
+Aunque tanto los eventos predictivos como el [abandono predictivo]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) asignan puntuaciones a los usuarios, hay diferencias importantes:<br><br>
+
+- **Eventos predictivos** (predicciones de compra): Considera a todos los usuarios de la audiencia de predicción, independientemente de si han realizado antes el evento objetivo. Por ejemplo, una predicción de compra puede identificar a los usuarios susceptibles de realizar su primera compra.
+- **Predictive Churn**: Sólo se tienen en cuenta los usuarios que ya han realizado el evento personalizado. Las predicciones de abandono identifican a los usuarios que han hecho algo antes y es probable que dejen de hacerlo. Un usuario que nunca se ha conectado no puede considerarse "abandonado" si no se conecta.
+
+Al exportar las puntuaciones de riesgo de abandono de un segmento, estas puntuaciones reflejan el modelo de predicción del abandono, que difiere de los modelos de predicción de compras u otros eventos.
+{% endalert %}
+
 ## Precisión estimada {#estimated_results}
 
 En la mitad derecha del panel, debajo del gráfico, mostramos estimaciones de la precisión esperada de dirigirte a la parte de la audiencia de predicción que seleccionaste de dos formas: cuántos usuarios seleccionados se espera que realicen el evento y cuántos se espera que no lo hagan.
@@ -74,3 +87,11 @@ Esta tabla sólo se actualiza cuando se reentrena la predicción y no cuando se 
 {% alert note %}
 Los datos de correlación de las predicciones de la vista previa estarán parcialmente ocultos. Se requiere una compra para revelar esta información. Ponte en contacto con tu director de cuentas para obtener más información.
 {% endalert %}
+
+## Solución de problemas
+
+### No se puede crear una predicción
+
+Si no puedes crear una predicción para un evento personalizado, puede deberse a que el tamaño de la muestra es insuficiente. Braze calcula el número de usuarios que han realizado el evento, y si un número suficiente de usuarios no ha realizado el evento, puede que la muestra no proporcione datos suficientes para entrenar el modelo. En este caso, el sistema puede extrapolar a ningún usuario, impidiendo la creación de predicciones.
+
+Para crear una predicción con éxito, asegúrate de que un número suficiente de usuarios de la audiencia de tu predicción han realizado tu evento personalizado objetivo. El umbral exacto varía, pero los eventos con un uso muy bajo en tu base de usuarios pueden no proporcionar datos suficientes para un entrenamiento fiable del modelo.
