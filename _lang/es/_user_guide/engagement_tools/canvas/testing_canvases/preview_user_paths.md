@@ -39,29 +39,29 @@ Si la prueba se solapa con un tipo de paso que no aparece en la lista anterior, 
 
 ### Detalles del paso de lona
 
-Para ver más detalles sobre los criterios de acceso, selecciona **Ver más**. Los pasos de la segmentación muestran los criterios cumplidos o no cumplidos. Los mensajes también lo muestran para las validaciones de entrega y la elegibilidad del canal. Los pasos de los mensajes muestran qué canales se enviaron y cuáles no.
+Para ver más detalles sobre los criterios de acceso, selecciona **Ver más**. Los pasos con segmentación muestran los criterios cumplidos o no cumplidos. Los mensajes también lo muestran para las validaciones de entrega y la elegibilidad del canal. Los pasos de los mensajes muestran qué canales se enviaron y cuáles no.
 
 ### Liquid
 
-Braze procesa la lógica Liquid durante una ejecución de prueba, aunque no envíes un mensaje de prueba real. Esto significa que la [lógica del mensaje de cancelación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) y otra lógica de Liquid se reflejan y podrían afectar al recorrido del usuario de Canvas.
+Braze procesa la lógica Liquid durante una ejecución de prueba, aunque no estés enviando un mensaje de prueba real. Esto significa que la [lógica del mensaje de cancelación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) y otra lógica de Liquid se reflejan y podrían afectar al recorrido del usuario de Canvas.
 
 Si tu vista previa envía el último paso de tu recorrido de usuario en lugar de abortarlo, es posible que la vista previa esté utilizando la hora actual como la hora que se está probando para la evaluación de Liquid, y no la hora real en la que el usuario estaría en el paso según la hora de entrada en Canvas.
 
 ## Vistas previas para la sincronización
 
-Para los Lienzos programados, el usuario de prueba entra a la siguiente hora de entrada programada. Para los Lienzos basados en acciones con fechas de inicio, el usuario de prueba entra en la fecha y hora de inicio. 
+Para los Lienzos programados, el usuario de prueba entra a la siguiente hora de entrada programada. En los Lienzos basados en acciones con fechas de inicio, el usuario de prueba entra en la fecha y hora de inicio. 
 
 Aunque se siguen aplicando las horas de inicio predeterminadas, la hora de entrada es configurable en todas las instancias, lo que significa que puedes simular una fecha en el pasado o en el futuro. Sin embargo, no puedes hacer pruebas antes de la fecha de inicio ni después de la fecha de finalización del Canvas.
 
 Los pasos de Mensaje y Retraso muestran el momento en el que un usuario progresaría o recibiría el mensaje sin necesidad de reconfigurar los retrasos. Ten en cuenta que, aunque los pasos indican si se utiliza Intelligent Timing, esta vista previa de la ruta del usuario no calcula una estimación para un usuario de prueba.
 
-Para los Canvas con una acción desencadenante como "cambio en el valor del atributo personalizado", Braze intenta simular el cambio configurando temporalmente el atributo del usuario en el desencadenante para que esté en blanco **sólo durante la ejecución de prueba del Canvas** (esto no afecta al perfil de usuario). Esto sirve para comprobar que el atributo cambia respecto a su valor actual.
+Para los Canvas con una acción desencadenante como "cambio en el valor del atributo personalizado", Braze intenta simular el cambio configurando temporalmente el atributo del usuario en el desencadenante para que esté en blanco **sólo durante la ejecución de prueba del Canvas** (esto no afecta al perfil de usuario). Sirve para comprobar que el atributo cambia respecto a su valor actual.
 
 ## Cuando los usuarios entran y salen
 
 Los usuarios de prueba entran en la vista previa aunque no sean elegibles en la vida real. Si no son elegibles, puedes ver por qué no han cumplido los criterios. Cuando un usuario de prueba entra en la vista previa, suponemos que ha cumplido los criterios de la audiencia objetivo y ha realizado los criterios de la acción desencadenante. Por ejemplo, para un Canvas que utiliza eventos personalizados en los criterios de entrada, se supone que el usuario de prueba ha realizado el evento personalizado tal y como se esperaba en los criterios de entrada. Sin embargo, si el mismo evento personalizado se utiliza en otra parte del Canvas (como en los criterios de salida), ten en cuenta cómo podría afectar esto a tu ruta de usuario.
 
-Los eventos, los desencadenantes de la API, los atributos personalizados y las propiedades de la entrada en el Canvas se aplican en función de la entrada en el Canvas. La ejecución de la prueba simula el recorrido del usuario sin aplicar estos elementos para cambiar el perfil de usuario real o el flujo del Canvas. Por ejemplo, durante las pruebas, cuando se utiliza un atributo personalizado como desencadenante de Canvas, los criterios de desencadenamiento se aplican a la vista previa del usuario **como si** éste hubiera desencadenado el cambio del atributo personalizado.
+Los eventos, desencadenantes de API, atributos personalizados y propiedades de entrada al Canvas que se supone que permiten a un usuario de prueba entrar en el Canvas no se actualizan en el perfil de usuario real y no persisten más allá de la ejecución de la prueba. Por ejemplo, durante las pruebas, cuando se utiliza un atributo personalizado como desencadenante de Canvas, los criterios de desencadenamiento se aplican a la vista previa del usuario **como si** éste hubiera desencadenado el cambio del atributo personalizado.
 
 ### Consideración
 
