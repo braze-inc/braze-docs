@@ -1166,7 +1166,8 @@ Este evento se produce cuando se inserta, actualiza o elimina un token de notifi
   "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "time_ms" : "(optional, long) Time in millisecond when the event happened",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
   "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
   "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1191,6 +1192,7 @@ Este evento se produce cuando se inserta, actualiza o elimina un token de notifi
     "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
     "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1226,6 +1228,7 @@ Este evento se produce cuando se inserta, actualiza o elimina un token de notifi
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
     "time" : "(required, int) UNIX timestamp at which the event happened",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
@@ -1240,7 +1243,7 @@ Este evento se produce cuando se inserta, actualiza o elimina un token de notifi
 // Push Notification Token State Changed (users.behaviors.pushnotification.TokenStateChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1258,6 +1261,7 @@ Este evento se produce cuando se inserta, actualiza o elimina un token de notifi
     "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
     "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1278,6 +1282,9 @@ Este evento se produce cuando se inserta, actualiza o elimina un token de notifi
   - Si el permiso push es desconocido, estará vacío. Por predeterminado, Braze intentará enviar notificaciones push en primer plano al token.
 - El campo `push_token_provisionally_opted_in` sólo se aplica a los tokens de notificaciones push de iOS.
   - Si tienes configurada [la Autorización Provisional]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push), los tokens provisionales tendrán este campo configurado en `true`. Todos los demás tokens de notificaciones push serán `false`.
+- El campo `sdk_version` sólo se rellenará si el SDK inicia el cambio de estado del token.
+  - Si se produce un evento del SDK `changeUser` que desencadene el traslado del token de un usuario a otro, se rellenará el campo `sdk_version`.
+  - Si hay un push rebotado (por ejemplo, debido a una desinstalación), el campo `sdk_version` estará en blanco.
 - Siempre que un token de notificaciones push entra en Braze, se registran los eventos de su ciclo de vida. Hay tres tipos de eventos de cambio de token ("añadir", "actualizar" y "eliminar") registrados en el campo `push_token_state_change_type`. Toma nota de los siguientes detalles:
   - Para un token nuevo que no ha existido antes, se introduce un evento "añadir".
   - Para actualizar el token con la misma cadena de token en el mismo usuario (puerta de enlace o `foreground_push_disabled` u otros campos "secundarios" cambiados), esto ingerirá un evento de "actualización" en el mismo token.
