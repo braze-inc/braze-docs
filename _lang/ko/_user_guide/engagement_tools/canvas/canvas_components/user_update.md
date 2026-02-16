@@ -2,7 +2,7 @@
 nav_title: 사용자 업데이트
 article_title: 사용자 업데이트 
 alias: "/user_update/"
-page_order: 6
+page_order: 12
 page_type: reference
 description: "이 참조 문서에서는 사용자 업데이트 구성 요소와 캔버스에서 이를 사용하는 방법에 대해 설명합니다."
 tool: Canvas
