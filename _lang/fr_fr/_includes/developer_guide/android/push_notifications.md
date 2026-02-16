@@ -232,7 +232,7 @@ Dans le champ **Rôle**, recherchez et sélectionnez **Firebase Cloud Messaging 
 Veillez à sélectionner **Firebase Cloud Messaging _API_ Admin**, et non **Admin Firebase Cloud Messaging**.
 {% endalert %}
 
-![Le formulaire "Grant this service account access to project" avec "Firebase Cloud Messaging API Admin" sélectionné comme rôle.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
+![Le formulaire pour "Grant this service account access to project" avec "Firebase Cloud Messaging API Admin" sélectionné comme rôle.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
 ### Étape 5 : Générer des identifiants JSON {#json}
 
@@ -556,6 +556,74 @@ Braze.configure(this, brazeConfig)
 {% endtabs %}
 
 Si vous souhaitez gérer de manière personnalisée les liens profonds, vous devrez créer un rappel de poussée qui écoute les poussées reçues et les intentions d'ouverture de Braze. Pour plus d'informations, voir [Utilisation d'un rappel pour les événements "push"]({{site.baseurl}}/developer_guide/push_notifications/customization#android_using-a-callback-for-push-events).
+
+## Gestion des notifications d'avant-plan
+
+Par défaut, lorsqu'une notification push arrive alors que votre application est au premier plan sur Android, le système l'affiche automatiquement. Pour que Braze traite la charge utile de la notification push (pour le suivi analytique, la gestion des liens profonds et le traitement personnalisé), achemine les données push entrantes vers Braze à l'intérieur de votre méthode `FirebaseMessagingService.onMessageReceived`.
+
+### Fonctionnement
+
+Lorsque vous appelez `BrazeFirebaseMessagingService.handleBrazeRemoteMessage`, Braze détermine si la charge utile est une notification push Braze et, si c'est le cas, crée et affiche la notification avec la méthode `NotificationManagerCompat`. Contrairement à iOS, Android affiche les notifications indépendamment du fait que l'application soit au premier plan ou en arrière-plan.
+
+{% tabs %}
+{% tab JAVA %}
+```java
+package com.example.push;
+
+import com.braze.push.BrazeFirebaseMessagingService;
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+
+public class MyFirebaseMessagingService extends FirebaseMessagingService {
+    @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        super.onMessageReceived(remoteMessage);
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+package com.example.push
+
+import com.braze.push.BrazeFirebaseMessagingService
+import com.google.firebase.messaging.FirebaseMessagingService
+import com.google.firebase.messaging.RemoteMessage
+
+class MyFirebaseMessagingService : FirebaseMessagingService() {
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        super.onMessageReceived(remoteMessage)
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+Pour plus d'informations, consultez l'[exemple d'intégration Firebase](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseMessagingService.kt) dans le référentiel SDK Android de Braze.
+
+### Personnalisation du comportement du premier plan
+
+Si vous souhaitez un comportement personnalisé au premier plan, tel que la suppression de la notification système ou l'affichage d'une interface utilisateur in-app, vous pouvez le faire :
+
+- Utilisez `subscribeToPushNotificationEvents` pour réagir aux événements "push" et gérez les liens profonds avec la méthode `BrazeNotificationUtils.routeUserWithNotificationOpenedIntent`. Pour plus d'informations, consultez l'[exemple Firebase push.](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt)
+- Créez et envoyez votre propre notification à l'aide d'une adresse `IBrazeNotificationFactory` personnalisée, ou supprimez la notification en n'appelant pas `notificationManager.notify` dans votre chemin de traitement.
+
+Pour plus d'informations sur la personnalisation des notifications, voir [Usine de notifications personnalisées]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#custom-notification-factory).
 
 #### Création de liens profonds personnalisés
 
