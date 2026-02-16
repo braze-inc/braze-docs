@@ -8,7 +8,7 @@ description: "Este artigo de referência aborda como exportar automaticamente ev
 
 # Exportação de eventos de segurança com o Amazon S3
 
-> Você pode exportar automaticamente eventos de segurança para o Amazon S3, um provedor de armazenamento em nuvem, com um trabalho diário que é executado à meia-noite UTC. Após a configuração, não é necessário exportar manualmente os eventos de segurança do dashboard. O trabalho exporta os eventos de segurança das últimas 24 horas em formato CSV para o armazenamento S3 configurado. O arquivo CSV tem a mesma estrutura de um relatório exportado manualmente.
+> Você pode exportar automaticamente eventos de segurança para o Amazon S3, um provedor de armazenamento em nuvem, com um trabalho diário que é executado à meia-noite UTC. Após a configuração, você não precisa exportar manualmente os eventos de segurança do dashboard. O trabalho exporta os eventos de segurança das últimas 24 horas em formato CSV para o armazenamento S3 configurado. O arquivo CSV tem a mesma estrutura de um relatório exportado manualmente.
 
 {% alert note %}
 O limite de 10.000 linhas se aplica apenas ao download manual de relatórios CSV do dashboard. As exportações de eventos de segurança para o S3 não estão sujeitas a esse limite de linhas.
@@ -65,7 +65,7 @@ Para recuperar a chave de acesso secreta e o ID da chave de acesso, será necess
 
 ### Etapa 4: Anexar política
 
-1. Depois de criar uma nova política, acesse **Usuários** e selecione seu usuário específico. 
+1. Depois de criar uma nova política, acesse **Usuários** e selecione o usuário específico. 
 2. Na guia **Permissões**, selecione **Adicionar permissões**, anexe diretamente a política e, em seguida, selecione essa política. 
 
 Agora, você está pronto para vincular suas credenciais da AWS à sua conta do Braze!
@@ -122,7 +122,7 @@ O método ARN de função da AWS gera um nome de recurso amazônico (ARN) de fun
 ```
 
 {: start="4"}
-4\. Selecione **Next** após revisar a política.
+4\. Selecione **Next** depois de revisar a política.
 
 ![Uma página que permite que você revise sua política e, opcionalmente, adicione permissões.]({% image_buster /assets/img/security_export/specify_permissions.png %})
 
@@ -172,7 +172,7 @@ Sua função recém-criada aparecerá na lista!
 ![Seção "Security Event Download" (Baixar eventos de segurança) com um botão de alternância ativado para "Export to AWS S3" (Exportar para AWS S3).]({% image_buster /assets/img/security_export/security_event_download3.png %})
 
 {: start="3"}
-3\. Certifique-se de que **o ARN da função AWS** esteja selecionado e, em seguida, insira o ARN da função e o nome do bucket S3 da AWS nos campos designados.
+3\. Certifique-se de que o **ARN da função AWS** esteja selecionado e, em seguida, insira o ARN da função e o nome do bucket S3 da AWS nos campos designados.
 4\. Selecione **Test Credentials (Testar credenciais** ) para confirmar que suas credenciais funcionam corretamente.
 5\. Selecione **Salvar alterações**. 
 
