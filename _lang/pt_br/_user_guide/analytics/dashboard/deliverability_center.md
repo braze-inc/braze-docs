@@ -14,7 +14,7 @@ channel:
 
 A entregabilidade de e-mail é o cerne do sucesso da campanha. Usando o Centro de Entregabilidade no dashboard do Braze, você pode visualizar seus domínios por **Reputação de IP** ou **Erros de Entrega** para descobrir e solucionar quaisquer problemas potenciais com a entregabilidade de e-mail. 
 
-Para acessar o Centro de Entregabilidade, você precisará de [permissões de usuário]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) "Acessar Campanhas, Canvas, Cartões, Segmentos, Biblioteca de Mídia" e "Ver Dados de Uso".
+Para acessar o Centro de Entregabilidade, você deve ter "Acessar Campanhas, Canvases, Cartões, Segmentos, Biblioteca de Mídia" e "Ver Dados de Uso" [permissões do usuário]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
 
 ## Configuração de sua conta do Google Postmaster
 
@@ -22,33 +22,35 @@ Antes de se conectar ao Centro de Entregabilidade, você precisará configurar u
 
 1. Acessar o [dashboard do Google Postmaster Tools](https://postmaster.google.com/managedomains?pli=1).
 2. No canto inferior direito, selecione o ícone de <i class="fas fa-plus-circle"></i> mais.
-3. Digite seu domínio raiz ou subdomínio para autenticar seu e-mail. Se você estiver adicionando e verificando o domínio raiz, isso permitirá que a verificação seja aplicada a jusante aos subdomínios. Por exemplo, ao verificar `braze.com`, você pode adicionar posteriormente `demo.braze.com` e outros subdomínios sem precisar verificá-los individualmente.
-4. O Google gerará um registro TXT que pode ser adicionado diretamente ao DNS do seu domínio. Isso é geralmente de propriedade de quem gerencia seu DNS. Para obter informações e orientações sobre como atualizar seu DNS específico, confira [Verificar seu domínio (etapas específicas do host)](https://support.google.com/a/topic/1409901).
-5. Selecione **Próximo**. <br>![Um domínio de exemplo "demo.braze.com" para autenticar um e-mail.]({% image_buster /assets/img_archive/domain_authentication.png %})
-6. Depois que o registro TXT for adicionado ao DNS, volte para o dashboard do Google Postmaster Tools e selecione **Verificar**. Esta etapa confirma que você possui o domínio, para que você possa acessar as métricas de entregabilidade do Gmail na sua conta do Postmaster. <br> ![Um prompt para verificar a propriedade do domínio "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
+3. Digite seu domínio raiz ou subdomínio para autenticar seu e-mail. Se você estiver adicionando e verificando o domínio raiz, isso permite que a verificação seja aplicada a subdomínios. Por exemplo, ao verificar `braze.com`, você pode adicionar mais tarde `demo.braze.com` e outros subdomínios sem verificá-los individualmente.
 
-{% alert tip %}
+{% alert important %}
 Certifique-se de que o registro TXT esteja vinculado ao domínio pai, não ao subdomínio que você está usando através do Braze.
 {% endalert %}
 
+{: start="4"}
+4\. O Google gera um registro TXT que pode ser adicionado diretamente ao DNS do seu domínio. Isso é geralmente de propriedade de quem gerencia seu DNS. Para obter informações e orientações sobre como atualizar seu DNS específico, confira [Verificar seu domínio (etapas específicas do host)](https://support.google.com/a/topic/1409901).
+5\. Selecione **Próximo**. <br>![Um domínio de exemplo "demo.braze.com" para autenticar um e-mail.]({% image_buster /assets/img_archive/domain_authentication.png %})
+6\. Depois que o registro TXT for adicionado ao DNS, volte para o dashboard do Google Postmaster Tools e selecione **Verificar**. Esta etapa confirma que você possui o domínio, para que você possa acessar as métricas de entregabilidade do Gmail em sua conta do Postmaster. <br> ![Um aviso para verificar a propriedade do domínio "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
+
 {% alert note %}
-Se seus subdomínios não estiverem incluídos no Centro de Entregabilidade do Google Postmaster, isso pode ser resultado de adicionar apenas o domínio pai ao Google Postmaster. Depois que os domínios principais forem verificados no Google Postmaster, você poderá adicionar seus subdomínios, que serão verificados automaticamente. Esse processo permite que o Google reporte métricas no nível do subdomínio, que podem então ser puxadas para o Centro de Entregabilidade da Braze.
+Se seus subdomínios não estiverem incluídos no Centro de Entregabilidade do Google Postmaster, isso pode ser resultado de adicionar apenas o domínio pai ao Google Postmaster. Depois que os domínios pais forem verificados no Google Postmaster, você pode adicionar seus subdomínios, que são verificados automaticamente. Esse processo permite que o Google reporte métricas no nível do subdomínio, que podem então ser puxadas para o Centro de Entregabilidade da Braze.
 {% endalert %}
 
 ## Integração do Google Postmaster
 
-Antes de configurar seu Centro de Entregabilidade, verifique se seus domínios foram [adicionados às Ferramentas do Postmaster do Gmail](https://support.google.com/mail/answer/9981691?hl=en).
+Antes de configurar seu Centro de Entregabilidade, verifique se seus domínios foram [adicionados às Ferramentas do Gmail Postmaster](https://support.google.com/mail/answer/9981691?hl=en).
 
 Siga estas etapas para integrar com o Google Postmaster e configurar seu Centro de Entregabilidade:
 
 1. Acessar **análise de dados** > **performance de e-mail**.
-2. Selecione a guia **Centro de Entregabilidade**. <br>![Um Centro de Entregabilidade desconectado do Google Postmaster.]({% image_buster /assets/img_archive/deliverability_center1.png %})
+2. Selecione a guia **Centro de Entregabilidade**. <br>![Um Centro de Entregabilidade com Google Postmaster desconectado.]({% image_buster /assets/img_archive/deliverability_center1.png %})
 3. Selecione **Conectar com o Google Postmaster**. 
 4. Selecione sua Conta do Google e, em seguida, selecione **Permitir** para permitir que o Braze visualize as métricas de tráfego de e-mail para os domínios registrados nas Ferramentas do Google Postmaster. 
 
-Seus domínios verificados serão exibidos no Centro de entregabilidade. 
+Seus domínios verificados são exibidos no Centro de Entregabilidade. 
 
-![Dois domínios verificados para o Google Postmaster com uma reputação média e baixa.]({% image_buster /assets/img_archive/deliverability_center2.png %})
+![Dois domínios verificados para Google Postmaster com reputação média e baixa.]({% image_buster /assets/img_archive/deliverability_center2.png %})
 
 Você também pode acessar o Google Postmaster no dashboard do Braze acessando **Partner Integrations** > **Technology Partners** > **Google Postmaster**. Após a integração, a Braze coleta dados de reputação e erros dos últimos 30 dias. Os dados podem não estar imediatamente disponíveis e podem levar vários minutos para serem preenchidos.
 
@@ -63,9 +65,9 @@ Para ajudar a entender as classificações de reputação de IP, consulte esta t
 | Classificação de Reputação | Definição |
 | ----- | ---------- |
 | Alta | Tem um bom histórico de gerar poucas reclamações de spam (como usuários clicando no botão "spam"). |
-| Médio/Justo | Conhecido por gerar engajamento positivo, mas ocasionalmente recebe reclamações de spam. A maioria dos e-mails deste domínio será enviada para a caixa de entrada, exceto quando as reclamações de spam aumentarem. |
-| Baixa | Conhecido por receber taxas elevadas de reclamações de spam regularmente. Emails deste remetente provavelmente serão filtrados para a pasta de spam. |
-| Ruim | Tem um histórico de receber taxas elevadas de reclamações de spam. Emails deste domínio quase sempre serão rejeitados no momento da conexão ou filtrados para a pasta de spam. |
+| Médio/Justo | Conhecido por gerar engajamento positivo, mas ocasionalmente recebe reclamações de spam. A maioria dos e-mails deste domínio é enviada para a caixa de entrada, exceto quando as reclamações de spam aumentam. |
+| Baixa | Conhecido por receber taxas elevadas de reclamações de spam regularmente. E-mails deste remetente provavelmente serão filtrados para a pasta de spam. |
+| Ruim | Tem um histórico de receber taxas elevadas de reclamações de spam. E-mails deste domínio quase sempre são rejeitados no momento da conexão ou filtrados para a pasta de spam. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Reputação de domínio 
@@ -74,10 +76,10 @@ Use a tabela a seguir para ajudar a monitorar e entender suas classificações d
 
 | Classificação de Reputação | Definição |
 | ----- | ---------- |
-| Alta | Tem um bom histórico de muito poucas reclamações de spam. Está em conformidade com as diretrizes do remetente do Gmail. Emails raramente são filtrados para a pasta de spam. Tem um bom histórico de uma taxa de spam muito baixa. Está em conformidade com [as diretrizes de remetente do Gmail](https://developers.google.com/gmail/markup/registering-with-google). |
-| Médio/Justo | Conhecido por gerar {engajamento} positivo, mas ocasionalmente recebeu um baixo volume de reclamações de spam. A maioria dos e-mails deste domínio chegará à caixa de entrada (exceto quando houver um aumento notável nos níveis de spam). |
-| Baixa | Conhecido por receber reclamações de spam regularmente. Emails deste remetente provavelmente serão filtrados para a pasta de spam. |
-| Ruim | Tem um histórico de receber taxas elevadas de reclamações de spam. Emails deste domínio quase sempre serão rejeitados no momento da conexão ou filtrados para a pasta de spam. |
+| Alta | Tem um bom histórico de muito poucas reclamações de spam. Está em conformidade com as diretrizes do remetente do Gmail. E-mails raramente são filtrados para a pasta de spam. Tem um bom histórico de uma taxa de spam muito baixa. Está em conformidade com [as diretrizes de remetente do Gmail](https://developers.google.com/gmail/markup/registering-with-google). |
+| Médio/Justo | Conhecido por gerar engajamento positivo, mas ocasionalmente recebeu um baixo volume de reclamações de spam. A maioria dos e-mails deste domínio chega à caixa de entrada (exceto quando há um aumento notável nos níveis de spam). |
+| Baixa | Conhecido por receber reclamações de spam regularmente. E-mails deste remetente provavelmente serão filtrados para a pasta de spam. |
+| Ruim | Tem um histórico de receber taxas elevadas de reclamações de spam. E-mails deste domínio quase sempre são rejeitados no momento da conexão ou filtrados para a pasta de spam. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Autenticação
@@ -101,7 +103,7 @@ Consulte esta tabela para entender qual porcentagem do seu tráfego de entrada e
 | TLS Saída | Mostra a porcentagem de e-mails enviados (do Gmail) aceitos via TLS em comparação com todos os e-mails enviados para esse domínio. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para mais ideias sobre como melhorar a entregabilidade, leia [armadilhas de entregabilidade e armadilhas de spam]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps). Certifique-se de consultar nossas [melhores práticas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/) para coisas que você deve verificar antes de enviar uma campanha de e-mail.
+Para mais ideias sobre como melhorar a entregabilidade, leia [Armadilhas e problemas de entregabilidade]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps). Certifique-se de consultar nossas [Melhores práticas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/) para coisas que você deve verificar antes de enviar uma campanha de e-mail.
 
 ## Configuração do Microsoft Smart Network Data Services (SNDS)
 
@@ -145,7 +147,7 @@ Para calcular a taxa de reclamações, divida o número de reclamações pelo n�
 | Resultado | Definição |
 | ----- | ---------- |
 | Menos de 0,3% | A taxa de reclamação ideal. |
-| Mais de 0,3% | Revise seu processo de inscrição e certifique-se de que seu link de cancelamento de inscrição está funcionando. Além disso, considere se o correio poderia ser melhor personalizado para seu público. |
+| Mais de 0,3% | Revise seu processo de inscrição e certifique-se de que seu link de cancelamento de inscrição está funcionando. Além disso, considere se o e-mail poderia ser melhor personalizado para o seu público. |
 | Mais de 100% | Observe que o SNDS exibe reclamações para o dia em que foram relatadas, não retroativamente contra o dia em que o e-mail reclamado foi entregue. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -154,7 +156,7 @@ Para calcular a taxa de reclamações, divida o número de reclamações pelo n�
 Os acertos de armadilhas de spam são o número de mensagens enviadas para "contas de armadilha", que são contas mantidas por Outlook.com que não solicitam nenhum e-mail. É provável que quaisquer mensagens enviadas para essas contas de armadilha sejam consideradas spam, portanto, é importante monitorar essa métrica para garantir que esteja baixa. Baixos hits de armadilha de spam significam que as mensagens não estão sendo enviadas para essas contas e estão sendo enviadas para contas reais em vez disso.
 
 {% alert tip %}
-Se você está procurando por registros relacionados a um dos seus domínios verificados no Braze, note que o Centro de Entregabilidade lista seus dados do Google Postmaster ou Microsoft SNDS, o que significa que é provável que qualquer uma das plataformas não tenha dados para compartilhar com o Braze. Alternativamente, sugerimos manter a entrega consistente de e-mails, pois isso pode levar a uma reputação mais alta.
+Se você está procurando registros relacionados a um de seus domínios verificados no Braze, note que o Centro de Entregabilidade lista seus dados do Google Postmaster ou Microsoft SNDS, o que significa que é provável que nenhuma das plataformas tenha dados para compartilhar com o Braze. Alternativamente, sugerimos manter a entrega consistente de e-mails, pois isso pode levar a uma reputação mais alta.
 {% endalert %}
 
 
