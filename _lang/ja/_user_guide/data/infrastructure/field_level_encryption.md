@@ -9,7 +9,7 @@ page_type: reference
 
 # 識別子フィールドレベルの暗号化
 
-> 識別子フィールドレベルの暗号化を使用すると、AWS Key Management Service (KMS) を使用してメールアドレスをシームレスに暗号化し、Braze で共有される個人を特定できる情報 (PII) を最小限に抑えることができます。暗号化は機密データを暗号文に置き換えます。これは読み取れない暗号化された情報です。
+{% include field_level_encryption_pii_description.md %}
 
 {% alert important %}
 識別子フィールドレベルの暗号化は、アドオン機能として利用できる。識別子フィールドレベルの暗号化を始めるには、Brazeアカウントマネージャーに連絡する。
