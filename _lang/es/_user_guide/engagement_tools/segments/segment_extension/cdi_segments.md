@@ -46,7 +46,13 @@ Para ver las tablas de datos disponibles, incluyendo su esquema y las descripcio
 
 A continuación, escribe el SQL para tu segmento utilizando [la sintaxis SQL de Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#writing-sql).
 
-Ten en cuenta que todas las extensiones de segmento CDI deben utilizar `external_user_id` como columna seleccionada, y que tu `external_user_id` debe coincidir con la establecida en Braze para los usuarios. Si los resultados de la consulta incluyen usuarios que no existen en Braze, dichos usuarios serán ignorados. Braze no creará nuevos usuarios basándose en la salida de tu extensión de segmento CDI.
+Ten en cuenta que todas las extensiones de segmento CDI deben utilizar `external_user_id` como columna seleccionada, y que tu `external_user_id` debe coincidir con la establecida en Braze para los usuarios.
+
+{% alert important %}
+`external_user_id` debe ser un valor de **cadena**. Si tu ID de origen se almacena como un número (por ejemplo, `client_id` como un entero), conviértelo [en una cadena en tu SQL](https://www.w3schools.com/sql/func_sqlserver_cast.asp) para que coincida con el tipo `external_id` en Braze.
+{% endalert %}
+
+Si los resultados de tu consulta incluyen usuarios que no existen en Braze, esos usuarios serán ignorados. Braze no crea nuevos usuarios basándose en la salida de tu extensión de segmento CDI.
 
 {% alert tip %}
 Para saber cómo puedes obtener una vista previa de tus extensiones de segmento, administrar tus extensiones de segmento y ejecutar actualizaciones automatizadas de los miembros, consulta [Extensiones de segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/).
