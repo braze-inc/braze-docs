@@ -41,7 +41,7 @@ Al importar números de teléfono, es importante que sigas el [formato recomenda
 - [Utilizando el punto final `/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track)
 
 {% alert important %}
-Los números de teléfono de usuario se muestran en Braze como una cadena de dígitos. Si importas un número que contiene algún no-dígito (como `,`, `-`, `(`, u otros), los no-dígitos se eliminarán cuando se rendericen en Braze. Por ejemplo, al importar `+1 (724) 123-4567` aparecerá como `17241234567`.
+Los números de teléfono de usuario aparecen en Braze como una cadena de dígitos. Si importas un número que contiene no-dígitos (como `,`, `-`, o `(`) aparte del {% raw %}`+`{% endraw %} inicial, los no-dígitos se eliminan cuando se renderizan en Braze. Por ejemplo, al importar `+1 (724) 123-4567` aparece como `+17241234567`.
 {% endalert %}
 
 ## Tratamiento de números de teléfono no válidos
