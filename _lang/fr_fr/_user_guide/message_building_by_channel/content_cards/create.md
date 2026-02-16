@@ -88,6 +88,8 @@ L'aspect final des messages de droite à gauche dépend largement de la manière
 
 Ajoutez une image à votre carte de contenu en sélectionnant **Ajouter une image** ou en fournissant l'URL de l'image. En sélectionnant **Ajouter une image**, vous ouvrez la **bibliothèque multimédia**, où vous pouvez sélectionner une image déjà téléchargée ou en ajouter une nouvelle. Chaque type de message et de plateforme peut avoir ses propres proportions et exigences. Vérifiez-les avant de commander ou de créer une image à partir de zéro ! N'oubliez pas que la taille totale des champs des messages de la carte de contenu est limitée à 2 Ko.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Épingler en haut
 
 Braze affiche une carte épinglée en haut du fil d'actualité d'un utilisateur et ce dernier ne peut pas la fermer. Si le flux d'un utilisateur contient plusieurs cartes épinglées, Braze les classe par ordre chronologique. Après avoir envoyé une carte, vous ne pouvez pas mettre à jour rétroactivement son option épinglée. La modification de cette option après l'envoi d'une campagne n'a d'incidence que sur les envois ultérieurs.
@@ -131,9 +133,7 @@ Les cartes de contenu peuvent être diffusées en fonction d'une heure planifié
 
 Vous pouvez également définir la durée de la campagne et les [heures calmes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) et déterminer l'expiration de la carte de contenu. Définissez une date d’expiration spécifique ou le nombre de jours avant l’expiration de la carte (jusqu’à 30 jours). Toutes les variantes ont la même date d’expiration.
 
-{% alert note %}
-La limite de fréquence ne s'applique pas aux cartes de contenu.
-{% endalert %}
+{% multi_lang_include alerts/note_alerts.md alert='Content Cards frequency capping' %}
 
 ##### Livraison planifiée
 
@@ -170,39 +170,136 @@ Ensuite, consultez la section [Rapports sur les cartes de contenu]({{site.baseur
 
 ## Choses à savoir
 
-### Limitation de la taille des cartes de contenu
+### Limitations de la charge utile et de l'alimentation
 
-La taille de la charge utile d'une carte de contenu peut atteindre 2 Ko après le rendu liquide. Il s'agit du **titre**, du **message**, de l'**URL de l'image**, du **texte du lien**, de l'**URL du ou des liens** et des **paires clé-valeur** (noms et valeurs). Toutefois, cette limite n'inclut pas la taille de l'image, mais seulement la longueur de l'URL de l'image.
+Pour favoriser les performances, les cartes de contenu sont soumises à deux contraintes essentielles : une limite sur la taille de la charge utile pour chaque carte et un nombre maximum de cartes pouvant apparaître dans un flux.
+
+#### Limitation de la taille des cartes de contenu
+
+La totalité des données d'une carte de contenu ne peut dépasser 2 Ko **après la** personnalisation des liquides. Ceci comprend :
+
+* Titre
+* Message
+* URL de l'image (la longueur de la chaîne de caractères de l'URL elle-même, et non la taille du fichier de l'image)
+* Texte du lien
+* Liens URL pour toutes les plateformes spécifiées (les URL distinctes pour iOS, Android et Web sont prises en compte dans le total)
+* Paires clé-valeur (à la fois les noms des clés et leurs valeurs)
+
+L'utilisation de Liquid pour extraire de longues chaînes de caractères (par exemple à partir d'attributs personnalisés) peut entraîner un dépassement de la limite. 
+
+Le compositeur de campagne affichera un avertissement si votre contenu statique dépasse la limite. (Nous ne prévoyons pas de taille pour le contenu dynamique utilisant Liquid). **Si la taille du message dépasse 2 Ko, il sera interrompu au moment de l'envoi.** Vous pouvez voir ces abandons dans le journal d'activité des messages avec la raison `Content card maximum size exceeded`.
 
 {% alert important %}
-Les messages de plus de 2 Ko ne seront pas envoyés. Lors des envois de test, les cartes de contenu qui dépassent 2 Ko peuvent encore être livrées et s'afficher correctement.
+Lors des envois de test, les cartes de contenu qui dépassent 2 Ko peuvent encore être livrées et s'afficher correctement.
 {% endalert %}
 
-### Nombre de cartes dans le flux
+Voici quelques bonnes pratiques pour gérer la taille de la carte de contenu :
 
-Chaque utilisateur peut avoir jusqu'à 250 cartes de contenu non expirées dans son flux à un moment donné. Lorsque cette limite est dépassée, Braze cesse de renvoyer les cartes les plus anciennes, même si elles ne sont pas lues. Les cartes retirées sont également prises en compte dans cette limite, ce qui signifie qu'un nombre élevé de cartes retirées peut réduire l'espace disponible pour les nouvelles cartes.
+* Utilisez des raccourcisseurs d'URL pour les liens longs. Les URL, en particulier celles qui contiennent de nombreux paramètres de suivi, peuvent se heurter à des problèmes de limite de taille. L'utilisation d'un service de raccourcissement d'URL peut réduire considérablement le nombre de caractères et libérer de l'espace dans la charge utile.
+* Tronquez le contenu dynamique avec Liquid. Lorsque vous personnalisez des cartes avec du texte dynamique provenant d'attributs utilisateur ou d'appels API, la longueur du contenu peut être imprévisible. Utilisez de manière proactive des filtres liquides tels que `truncate` pour limiter la longueur de tout texte dynamique.
+* Soyez efficace avec les URL multiplateformes. La limite de 2 Ko inclut les URL de toutes les plates-formes que vous définissez. L'utilisation d'URL longues et uniques pour chaque plateforme peut multiplier la taille de la charge utile. Si possible, utilisez un lien unique qui fonctionne sur toutes les plateformes, ou utilisez des raccourcisseurs d'URL si nécessaire.
+* Pensez aux bannières pour un contenu plus riche. Pour les cas d'utilisation qui nécessitent systématiquement de grandes quantités de contenu, les cartes de contenu ne sont peut-être pas le bon canal. Les bannières n'ont pas la même limitation de charge utile de 2 Ko et sont mieux adaptées à l'intégration d'un contenu plus riche directement dans une expérience sur une application ou un site web.
 
-### Comportement d’envoi
+#### Nombre de cartes dans le flux
 
-Une fois que Braze a envoyé les cartes de contenu, celles-ci sont placées dans une boîte de réception, prêtes à être envoyées à l'utilisateur (comme les e-mails). Après que Braze a tiré du contenu dans la carte de contenu au moment de l'affichage, le contenu ne change pas pendant la durée de vie de la carte. Cela inclut les appels à l'API via le contenu connecté si les données des endpoints changent. Braze ne met pas à jour ces données. Vous pouvez seulement arrêter d'envoyer de nouvelles cartes et supprimer les cartes existantes des flux. Si vous modifiez une campagne, seules les cartes à venir reflètent la mise à jour.
+Chaque utilisateur peut avoir jusqu'à 250 cartes de contenu non expirées dans son flux à un moment donné. Lorsque cette limite est dépassée, Braze cesse de renvoyer les cartes les plus anciennes, même si elles ne sont pas lues. Les cartes retirées sont également prises en compte dans cette limite, ce qui signifie qu'un nombre élevé de cartes retirées peut réduire l'espace disponible pour les cartes plus anciennes.
 
-Si vous devez retirer d'anciennes cartes, vous devez d'abord arrêter la campagne. Pour arrêter une campagne, ouvrez votre campagne de carte de contenu et sélectionnez **Arrêter la campagne**. En arrêtant la campagne, vous devrez décider comment traiter les utilisateurs qui ont déjà reçu votre carte. 
+Pour éviter les problèmes liés à la limite de la carte, nous vous conseillons de suivre les bonnes pratiques suivantes :
 
-Si vous souhaitez supprimer la carte de contenu des flux de vos utilisateurs, sélectionnez **Supprimer la carte du flux.** La carte sera alors masquée par le SDK lors de la prochaine synchronisation.
+- **Utilisez des dates de péremption plus courtes :** Pour les campagnes qui sont sensibles au temps (comme les soldes d'un week-end), fixez une date d'expiration spécifique. De cette façon, les cartes sont automatiquement retirées du flux et ne comptent pas dans la limite fixée une fois qu'elles ne sont plus pertinentes.
+- **Tirez parti de la suppression basée sur l'action :** Mettez en place des événements de retrait pour les cartes transactionnelles ou basées sur des objectifs. Par exemple, une carte invitant un utilisateur à compléter son profil doit être supprimée dès qu'un événement `profile_completed` est enregistré.
+- **Auditer les campagnes de longue durée :** Examinez les campagnes récurrentes ou en cours pour vous assurer qu'elles ne créent pas une mauvaise expérience pour vos utilisateurs en remplissant le flux avec trop de cartes au fil du temps.
 
-![Dialogue de confirmation de la désactivation de la carte de contenu]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
+### Comprendre la rééligibilité aux cartes de contenu
+
+La rééligibilité détermine si et quand un utilisateur peut recevoir plusieurs fois un message de la même campagne. Pour les cartes de contenu, il est essentiel de comprendre comment cela fonctionne pour gérer les campagnes récurrentes et s'assurer que les utilisateurs ne reçoivent pas de messages en double ou périmés.
 
 {% alert tip %}
 Vous souhaitez que votre contenu dure plus de 30 jours ? Essayez les [bannières]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 {% endalert %}
 
-### Événements de retrait de carte {#action-based-card-removal}
+#### Comment la rééligibilité est-elle calculée ?
 
-Certaines cartes de contenu ne sont pertinentes que jusqu'à ce que l'utilisateur effectue une action. Par exemple, une carte incitant les utilisateurs à activer leur compte ne doit pas être affichée une fois que l'utilisateur a terminé cette tâche d'onboarding.
+Si vous activez la rééligibilité, le compte à rebours pour le moment où un utilisateur peut "réintégrer" une campagne commence après l'envoi du message. Le moment précis où ce compte à rebours commence dépend des paramètres de création de votre carte :
 
-Dans une campagne ou un message Canvas, vous pouvez éventuellement ajouter un **événement de retrait** pour spécifier les événements personnalisés ou les achats qui doivent entraîner le retrait des cartes précédemment envoyées du flux de cet utilisateur, déclenché par le SDK ou l'API REST.
+* Les cartes de contenu utilisées [lors de la première impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) utilisent le temps d'impression pour calculer la réadmissibilité.
+* Les cartes de contenu créées lors du lancement de la campagne ou de l'étape du canvas sont envoyées au moment le plus récent.
 
-Braze retire les cartes lors des actualisations ultérieures après avoir traité l'événement spécifié.
+#### L'expiration de 30 jours et la réadmissibilité
+
+L'interaction entre la rééligibilité à une campagne et l'expiration automatique de 30 jours de toutes les cartes de contenu est une source fréquente de confusion. 
+
+Toutes les cartes de contenu sont automatiquement purgées des systèmes de Braze 30 jours après leur envoi ou leur suppression. Si vous avez une campagne récurrente de longue durée et que la rééligibilité est **désactivée**, un utilisateur peut encore recevoir la même carte au bout de 30 jours. Lorsque la carte originale est purgée, le système ne voit plus de trace de la campagne reçue par l'utilisateur, ce qui lui permet d'être à nouveau éligible lors de sa prochaine session. 
+
+Pour que les utilisateurs ne reçoivent qu'une seule fois un message d'une campagne spécifique, ajoutez un filtre d'audience à votre campagne ou étape du canvas pour les utilisateurs qui n'ont pas reçu de message de cette campagne. Ce filtre est le moyen le plus fiable d'éviter les envois en double dans les campagnes de longue durée.
+
+### Gestion des cartes de contenu en ligne/instantané
+
+Une fois que les cartes de contenu ont été envoyées, elles attendent dans une "boîte de réception", prêtes à être remises à l'utilisateur (comme c'est le cas pour les e-mails). Une fois que le contenu a été introduit dans la carte de contenu (au moment de l'affichage), il ne peut plus être modifié pendant sa durée de vie. Cela s'applique même si vous appelez une API par l'intermédiaire du contenu connecté et que les données de l'endpoint changent. Ces données ne seront pas mises à jour. On peut seulement arrêter de les envoyer à des nouveaux utilisateurs et les retirer des flux des utilisateurs. Si vous modifiez une campagne, seules les futures cartes envoyées auront la mise à jour.
+
+#### Mise à jour des cartes lancées
+
+Pour modifier une carte pour les utilisateurs qui l'ont déjà reçue, vous devez utiliser l'une des méthodes suivantes :
+
+##### Option 1 : Dupliquer la campagne (recommandé pour des changements immédiats)
+
+{% alert tip %}
+Nous recommandons cette option pour les messages dans lesquels vous montrez le dernier contenu de la carte, les changements doivent être affichés immédiatement ou lorsque la rééligibilité est désactivée.
+{% endalert %}
+
+La première approche consiste à archiver la campagne et à lancer une nouvelle campagne dupliquée :
+
+1. Arrêtez la campagne initiale et, lorsque vous y êtes invité, sélectionnez `Remove card after the next sync`.
+2. Dupliquez la campagne, modifiez-la et lancez la nouvelle version.
+
+Lorsque vous dupliquez la campagne, vous devez définir l'audience de la nouvelle version. Utilisez des filtres de segmentation pour contrôler qui reçoit la carte mise à jour :
+* Si les utilisateurs ne doivent jamais être rééligibles pour une carte de contenu, vous pouvez filtrer les utilisateurs qui n'ont pas reçu la version précédente de la carte de contenu en réglant le filtre `Received Message from Campaign` sur la condition `Has Not`.
+* Si les utilisateurs qui ont reçu la carte précédente doivent être rééligibles dans X jours, vous pouvez définir le filtre pour `Last Received Message from specific campaign` à plus de X jours **OU** `Received Message from Campaign` avec la condition `Has Not`.
+
+###### Impact
+
+* **Destinataires actuels :** Les nouveaux destinataires et les destinataires actuels verront la carte mise à jour lors de la prochaine actualisation du flux, s'ils sont éligibles.
+* **Rapport :** Chaque version de la carte ferait l'objet d'une analyse/analytique distincte.
+
+Supposons que vous ayez configuré une campagne pour qu'elle soit déclenchée par le début d'une session et que la rééligibilité soit fixée à 30 jours. Un utilisateur a reçu la campagne il y a deux jours et vous souhaitez modifier la copie. Tout d'abord, vous archivez la campagne et retirez les cartes du flux. Ensuite, vous reproduisez la campagne et la lancez à nouveau avec le nouveau texte. Si l'utilisateur a une autre session, il recevra immédiatement la nouvelle carte.
+
+##### Option 2 : Arrêter et relancer la même campagne
+
+{% alert tip %}
+Nous vous recommandons d'utiliser cette option pour les messages uniques dans un centre de notification ou une boîte de réception (comme les promotions), lorsqu'il est important que les analyses/analytiques soient unifiées, ou lorsque l'actualité du message n'est pas un problème (par exemple, les destinataires existants peuvent attendre la fenêtre d'éligibilité avant de voir les cartes mises à jour).
+{% endalert %}
+
+Cette approche permet d'unifier toutes vos analyses/analytiques (si elles sont utilisées en tant qu'adjectif) dans une seule campagne. Les utilisateurs nouvellement éligibles recevront la nouvelle carte, mais la mise à jour pour les destinataires existants est retardée jusqu'à ce qu'ils soient à nouveau éligibles :
+
+1. Arrêtez votre campagne et, lorsque vous y êtes invité, sélectionnez **Retirer la carte après la prochaine synchronisation**.
+2. Modifier votre campagne si nécessaire.
+3. Redémarrer votre campagne.
+
+###### Impact
+
+* **Destinataires actuels :** Les utilisateurs qui ont déjà reçu la carte ne recevront pas les cartes mises à jour tant qu'ils ne seront pas rééligibles. Si la rééligibilité est désactivée, ils ne recevront jamais la nouvelle carte.
+* **Rapport :** Une campagne contiendra toutes les analyses de rapports pour les versions de cartes lancées. Braze ne fera pas la différence entre les versions lancées.
+
+Imaginons que vous ayez une campagne déclenchée par le démarrage d'une session et dont la rééligibilité est fixée à 30 jours. Un utilisateur a reçu la campagne il y a deux jours et vous souhaitez modifier la copie. Tout d'abord, arrêtez la campagne et supprimez la carte du flux. Ensuite, republiez la campagne avec le nouveau texte. Si l'utilisateur a une autre session, il recevra la nouvelle carte dans 28 jours.
+
+#### Retrait et expiration des cartes
+
+##### Retrait manuel de la carte
+
+Vous pouvez à tout moment supprimer manuellement les cartes pour les flux de tous les utilisateurs en arrêtant la campagne.
+
+1. Ouvrez la campagne cartes de contenu et sélectionnez Arrêter la campagne.
+2. Lorsque vous y êtes invité, sélectionnez **Supprimer la carte après la prochaine synchronisation**. La carte sera retirée lors de la prochaine actualisation du flux.
+
+##### Retrait automatisé de la carte {#action-based-card-removal}
+
+Vous pouvez retirer automatiquement une carte lorsqu'un utilisateur effectue une action spécifique, telle que la réalisation d'un achat ou l'activation d'une fonctionnalité.
+
+Dans votre campagne ou étape du canvas, spécifiez un événement de suppression. Lorsqu'un utilisateur effectue cet événement, la carte est retirée de son flux lors d'une actualisation ultérieure, après que Braze a traité l'événement. 
+
+{% alert note %}
+Cette suppression n'est pas instantanée. Il y a un délai de traitement, de sorte qu'il peut s'écouler plusieurs minutes et plus d'une actualisation du flux avant que la carte ne disparaisse.
+{% endalert %}
 
 {% alert tip %}
 Vous pouvez spécifier plusieurs événements personnalisés ou achats avant qu’une carte soit retirée du flux des utilisateurs. Lorsque l'utilisateur effectue l' **une de** ces actions, toutes les cartes existantes envoyées par les cartes de la campagne sont supprimées. Toutes les futures cartes éligibles continueront d’être envoyées conformément au calendrier du message.
@@ -210,61 +307,18 @@ Vous pouvez spécifier plusieurs événements personnalisés ou achats avant qu�
 
 ![Panneau Conditions de retrait de la carte de contenu avec l'option Événement de retrait de la carte de contenu.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
-### Mise à jour des cartes lancées
+##### Expiration de la carte
 
-Vous ne pouvez pas modifier les cartes de contenu après les avoir envoyées. Si vous devez changer de carte envoyée, envisagez de recourir à la [réadmissibilité de la campagne]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) avec les options suivantes.
+Les cartes de contenu restent disponibles jusqu'à 30 jours à compter de leur envoi ; après 30 jours, Braze les supprime des flux d'utilisateurs et les purge des systèmes de Braze.
 
-{% alert note %}
-Lorsqu'une carte de contenu devient rééligible, elle peut être envoyée à nouveau lorsque la carte originale se trouve encore dans l'appli d'un utilisateur. Pour éviter les cartes en double dans l'application d'un utilisateur, vous pouvez désactiver la rééligibilité ou prolonger la fenêtre de rééligibilité de sorte que les utilisateurs ne reçoivent pas de nouvelle carte tant que la première n'a pas expiré.
-{% endalert %}
-
-Notez également que les cartes de contenu utilisant la [première impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) utilisent le temps d'impression pour calculer la réadmissibilité. Toutefois, les cartes de contenu créées au moment du lancement de la campagne ou de l'étape du canvas utilisent l'heure d'envoi ou d'impression la plus tardive.
-
-#### Option 1 : Duplication de la campagne
-
-Une approche consiste à archiver la campagne et à supprimer les cartes actives du flux. Vous pouvez ensuite dupliquer la campagne et la lancer avec des mises à jour afin que tous les utilisateurs éligibles reçoivent les cartes actualisées.
-
-* Si les utilisateurs ne doivent jamais être rééligibles pour une carte de contenu, vous pouvez filtrer les utilisateurs qui n'ont pas reçu la version précédente de la carte de contenu en réglant le filtre `Received Message from Campaign` sur la condition `Has Not`.
-* Si les utilisateurs qui ont reçu la carte précédente doivent être rééligibles dans X jours, vous pouvez définir le filtre pour `Last Received Message from specific campaign` à plus de X jours **OU** `Received Message from Campaign` avec la condition `Has Not`.
-
-##### Cas d’utilisation
-
-Supposons que vous ayez configuré une campagne pour qu'elle soit déclenchée par le début d'une session et que la rééligibilité soit fixée à 30 jours. Un utilisateur a reçu la campagne il y a deux jours et vous souhaitez modifier la copie. Tout d'abord, vous archivez la campagne et retirez les cartes du flux. Ensuite, vous reproduisez la campagne et la lancez à nouveau avec le nouveau texte. Si l'utilisateur a une autre session, il recevra immédiatement la nouvelle carte.
-
-##### Impact
-
-* **Rapport :** Chaque version de carte dispose d'une analyse/analytique distincte (si utilisée).
-* **Destinataires actuels :** Les nouveaux destinataires et les destinataires existants voient la carte mise à jour lors de la prochaine actualisation du flux, s'ils sont éligibles.
+#### Faire durer les cartes plus de 30 jours
 
 {% alert tip %}
-Nous recommandons cette option pour les messages dans lesquels vous affichez le contenu le plus récent de la carte (comme les bannières de la page d'accueil), lorsque les changements doivent être affichés immédiatement ou lorsque la rééligibilité est désactivée.
+Pour les cas d'utilisation nécessitant que les messages persistent plus longtemps que la limite de 30 jours de la carte de contenu type bannière, envisagez d'utiliser des bannières. Les bannières sont conçues pour durer et n'ont pas de date d'expiration obligatoire, ce qui leur permet de rester visibles aussi longtemps que nécessaire.
 {% endalert %}
 
-#### Option 2 : Arrêter et relancer
+Si vous souhaitez qu'une carte semble toujours disponible (i.e., dure plus longtemps que le maximum de 30 jours), vous pouvez créer une campagne récurrente qui remplace effectivement la carte tous les 30 jours :
 
-Si la rééligibilité d'une carte est activée, vous pouvez choisir de.. :
-
-1. Arrêter votre campagne.
-2. Supprimer les cartes de contenu actives des flux des utilisateurs.
-3. Modifier votre campagne si nécessaire.
-4. Redémarrer votre campagne.
-
-Selon cette approche, les utilisateurs nouvellement éligibles recevront la nouvelle carte, et les anciens destinataires recevront la nouvelle carte lorsqu'ils seront à nouveau éligibles.
-
-##### Cas d’utilisation
-
-Imaginons que vous ayez une campagne déclenchée par le démarrage d'une session et dont la rééligibilité est fixée à 30 jours. Un utilisateur a reçu la campagne il y a deux jours et vous souhaitez modifier la copie. Tout d'abord, arrêtez la campagne et supprimez la carte du flux. Ensuite, republiez la campagne avec le nouveau texte. Si l'utilisateur a une autre session, il recevra la nouvelle carte dans 28 jours.
-
-##### Impact
-
-* **Rapport :** Une campagne contient toutes les analyses/analytiques pour toutes les versions de cartes lancées. Braze ne fait pas de différence entre les versions.
-* **Destinataires actuels :** Les utilisateurs qui ont déjà reçu la carte ne recevront pas de cartes mises à jour tant qu'ils ne seront pas rééligibles. Si la rééligibilité est désactivée, ils ne reçoivent jamais la nouvelle carte.
-
-{% alert tip %}
-Nous vous recommandons d'utiliser cette option pour les messages uniques dans un centre de notification ou une boîte de réception (comme les promotions), lorsqu'il est important que les analyses/analytiques soient unifiées, ou lorsque l'actualité du message n'est pas un problème (par exemple, les destinataires existants peuvent attendre la fenêtre d'éligibilité avant de voir les cartes mises à jour).
-{% endalert %}
-
-#### Garder les cartes dans les fils d'actualité des utilisateurs
-
-Si vous le souhaitez, vous pouvez conserver une campagne cartes de contenu active dans le flux des utilisateurs et ne pas la supprimer. Lorsque la campagne en ligne est modifiée, la version précédente non modifiée de la fiche de campagne reste en ligne, et seuls les utilisateurs qui répondent aux critères après les modifications verront la nouvelle version. Cependant, les utilisateurs déjà exposés à la campagne peuvent voir deux versions de la carte.
-
+1. Fixez la durée de la carte de contenu à 30 jours.
+2. Fixez la rééligibilité de la campagne à 30 jours.
+3. Réglez la campagne pour qu'elle se déclenche au "début de la session".
