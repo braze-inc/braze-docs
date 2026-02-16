@@ -32,7 +32,7 @@ Wenn Sie außerdem versuchen, eine Nachricht mit einer Wiederholungsfrist von nu
 
 Die Anzahl, wie oft ein:e Nutzer:in eine über die API getriggerte Kampagne erhält, kann mit den Einstellungen für die erneute Qualifizierung begrenzt werden. Das bedeutet, dass der Benutzer die Kampagne nur einmal oder einmal in einem bestimmten Fenster erhält, unabhängig davon, wie oft der API-Auslöser ausgelöst wird.
 
-Nehmen wir zum Beispiel an, Sie verwenden eine API-getriggerte Kampagne, um dem Nutzer:innen eine Kampagne zu einem Artikel zu schicken, den er kürzlich angesehen hat. In diesem Fall können Sie die Kampagne darauf beschränken, maximal eine Nachricht pro Tag zu versenden, unabhängig davon, wie viele Artikel sie angesehen haben, und gleichzeitig den API-Trigger für jeden Artikel auslösen. Wenn Ihre API-ausgelöste Kampagne hingegen transaktionsabhängig ist, möchten Sie sicherstellen, dass der Benutzer die Kampagne jedes Mal erhält, wenn er die Transaktion durchführt, indem Sie die Verzögerung auf null Minuten einstellen.
+Nehmen wir zum Beispiel an, Sie verwenden eine API-getriggerte Kampagne, um dem Nutzer:innen eine Kampagne zu einem Artikel zu schicken, den er kürzlich angesehen hat. In diesem Fall können Sie die Kampagne darauf beschränken, maximal eine Nachricht pro Tag zu versenden, unabhängig davon, wie viele Artikel sie angesehen haben, und gleichzeitig den API-Trigger für jeden Artikel auszulösen. Wenn Ihre API-ausgelöste Kampagne hingegen transaktionsabhängig ist, möchten Sie sicherstellen, dass der Benutzer die Kampagne jedes Mal erhält, wenn er die Transaktion durchführt, indem Sie die Verzögerung auf null Minuten einstellen.
 {% endtab %}
 
 {% tab canvas %}
