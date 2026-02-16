@@ -47,17 +47,17 @@ Wenn Ihr Braze-Dashboard einen unerwarteten Fehler meldet und Ihr Browser-Konsol
 
 In Braze ist es nicht zulässig, dieselbe E-Mail für mehrere Nutzer:innen des Dashboards im selben Cluster zu registrieren (z.B. wenn Sie zwei Dashboards auf US-01 haben). Sie können dieselbe E-Mail verwenden, um Konten auf verschiedenen Clustern einzurichten (z.B. wenn Sie ein Dashboard auf US-01 und eines auf US-05 haben). Wenn Sie auf mehrere Braze-Dashboards im selben Cluster zugreifen müssen, können Sie wie folgt vorgehen:
 
-### E-Mail-Alias verwenden
+### E-Mail-Aliase verwenden
 
 Wenn Ihr E-Mail-Anbieter Gmail ist, können Sie Aliase erstellen, indem Sie ein `+` -Zeichen gefolgt von einem beliebigen Text an Ihre E-Mail-Adresse anhängen. Zum Beispiel:
 - **Ursprüngliche E-Mail:** `rocky@gmail.com`
 - **Alias E-Mail:** `rocky+1@gmail.com`
 
-Beide E-Mail-Adressen leiten E-Mails an denselben Posteingang, aber Braze erkennt sie als separate Konten, wenn Sie sich anmelden.
+Beide E-Mail-Adressen leiten E-Mails an denselben Posteingang weiter, aber Braze erkennt sie als separate Konten, wenn Sie sich anmelden.
 
 ### Erstellen Sie separate Aliase bei anderen Anbietern
 
-Wenn Ihr E-Mail-Provider `+` nicht unterstützt, können Sie trotzdem separate Aliase erstellen, z. B. `rocky@braze.com` als Weiterleitung an `rocky.lotito@braze.com` einrichten. So ist es zulässig, dass mehrere Adressen in denselben Posteingang geleitet werden, während sie von Braze als unterschiedliche E-Mails erkannt werden.
+Wenn Ihr E-Mail-Anbieter `+` nicht unterstützt, können Sie immer noch separate Aliase erstellen, z. B. `rocky@braze.com` als Weiterleitung an `rocky.lotito@braze.com` einrichten. So ist es zulässig, dass mehrere Adressen in denselben Posteingang geleitet werden, während sie von Braze als unterschiedliche E-Mails erkannt werden.
 
 ### Verwenden Sie Entwickler:in mehreren Unternehmen
 
@@ -96,7 +96,7 @@ Wenn das Löschen Ihres Browser-Caches und Ihrer Cookies Ihre Probleme nicht lö
 
 ### Zugriff auf den Drag-and-Drop-Editor
 
-Bei den meisten Nutzer:innen von Braze sollte der Drag-and-Drop-Editor geladen werden. Wenn Sie jedoch ein VPN verwenden oder sich hinter einer Firewall befinden, müssen Sie möglicherweise eine Domain in der Liste zulassen. Wenden Sie sich an Ihren IT-Administrator, um zu überprüfen, ob `*.bz-rndr.com` in der Liste der zulässigen Anwendungen aufgeführt ist.
+Bei den meisten Nutzer:innen des Unternehmens sollte der Drag-and-Drop-Editor geladen werden. Wenn Sie jedoch ein VPN verwenden oder sich hinter einer Firewall befinden, müssen Sie möglicherweise eine Domain in der Liste zulassen. Wenden Sie sich an Ihren IT-Administrator, um zu überprüfen, ob `*.bz-rndr.com` in der Liste der zulässigen Anwendungen aufgeführt ist.
 
 Beim Laden des Editors kann es aus folgenden Gründen zu Problemen kommen:
 
@@ -109,14 +109,14 @@ Wenn Sie immer noch Probleme haben, [öffnen Sie ein Support-Ticket]({{site.base
 
 ### Zugriff auf Braze Lernangebote
 
-Wenn Sie Probleme haben, sich bei Braze Lernangebote anzumelden und in einer Schleife stecken bleiben, die Sie zum Dashboard weiterleitet, führen Sie die folgenden Schritte aus:
+Wenn Sie Probleme bei der Anmeldung bei Braze Lernangebote haben und in einer Schleife stecken bleiben, die Sie zum Dashboard weiterleitet, führen Sie die folgenden Schritte aus:
 
 1. Wenn Sie mehrere Braze-Konten haben, werden Sie beim zweimaligen Einloggen mit dem falschen Konto auf das Braze-Dashboard weitergeleitet. Vergewissern Sie sich, dass Sie sich bei dem richtigen Konto anmelden. 
 2. Wenn Sie einen Werbeblocker verwenden, vergewissern Sie sich, dass er ausgeschaltet ist. Es kann Cookies blockieren, die für die Single Sign-on-Funktionalität erforderlich sind.
 3. Gehen Sie zu Unternehmenseinstellungen > Sicherheitseinstellungen und überprüfen Sie, ob Single Sign-on (SSO) aktiviert ist.
 4. Stellen Sie sicher, dass Ihr Nutzerprofil auf dem Dashboard sowohl einen Vor- als auch einen Nachnamen enthält. Das Fehlen eines Nachnamens kann zu Störungen bei der Anmeldung führen.
 5. Greifen Sie über Ihr Dashboard auf Braze Lernangebote zu, indem Sie zu **Support** > Braze Lernangebote gehen. 
-6. Wenn Sie weiterhin Probleme haben, sollten Sie Ihr Konto neu erstellen. Nutzer:innen, die während der kostenlosen Testphase auf Braze Lernangebote zugegriffen haben, haben jetzt möglicherweise Schwierigkeiten, darauf zuzugreifen.
+6. Wenn Sie weiterhin Probleme haben, sollten Sie Ihr Konto neu erstellen. Nutzer:innen, die während der kostenlosen Testphase auf Braze Lernangebote zugegriffen haben, haben jetzt möglicherweise Schwierigkeiten beim Zugriff.
 
 ### Probleme mit der Zwei-Faktor-Authentifizierung (2FA)
 
