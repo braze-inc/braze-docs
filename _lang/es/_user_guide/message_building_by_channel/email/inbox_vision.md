@@ -42,7 +42,7 @@ Para probar tu mensaje de correo electrónico en Inbox Vision:
 5\. Selecciona **Ejecutar Visión de Buzón de Entrada**. Esto puede llevar entre dos y diez minutos.
 
 {% alert note %}
-La Visión de Bandeja de Entrada no admite mensajes de correo electrónico que incluyan [una lógica de cancelación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages), ya que estos mensajes se muestran como contenido estático.
+La Visión de Bandeja de Entrada no admite mensajes de correo electrónico que incluyan [una lógica de cancelación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages), porque estos mensajes se muestran como contenido estático.
 {% endalert %}
 
 ### Vista previa como usuario
@@ -55,7 +55,7 @@ El análisis del código destaca los posibles problemas de HTML, muestra el núm
 
 ### Visualización de la información de análisis de código
 
-Encuentra esta información en la pestaña **Visión de la bandeja de entrada** seleccionando <i class="fas fa-list"></i> **Vista de lista**. La vista de lista sólo está disponible para plantillas de correo electrónico HTML. Para las plantillas de arrastrar y soltar, utiliza en su lugar vistas previas para resolver los problemas.
+Encuentra esta información en la pestaña **Visión de buzón de entrada** seleccionando <i class="fas fa-list"></i> **Vista de lista**. La vista de lista sólo está disponible para plantillas de correo electrónico HTML. Para las plantillas de arrastrar y soltar, utiliza en su lugar vistas previas para resolver los problemas.
 
 ![Ejemplo de análisis de código en la vista previa de Inbox Vision.]({% image_buster /assets/img_archive/inboxvision2.png %})
 
@@ -99,7 +99,7 @@ Inbox Vision clasifica los problemas según los cuatro [principios fundamentales
 | --- | --- |
 | Perceptible | La información y los componentes de la interfaz de usuario deben ser presentables a los usuarios de forma que puedan percibirlos.<br><br>Los usuarios deben poder percibir la información que se les presenta (no puede ser invisible a todos sus sentidos). |
 | Operable | Los componentes de la interfaz de usuario y la navegación deben ser operables.<br><br>Los usuarios deben ser capaces de manejar la interfaz (la interfaz no puede requerir una interacción que un usuario no pueda realizar). |
-| Comprensible | La información y el funcionamiento de la interfaz de usuario deben ser comprensibles.<br><br>Los usuarios deben ser capaces de comprender la información, así como el funcionamiento de la interfaz de usuario (el contenido o el funcionamiento no pueden estar más allá de su comprensión). |
+| Comprensible | La información y el funcionamiento de la interfaz de usuario deben ser comprensibles.<br><br>Los usuarios deben ser capaces de comprender tanto la información como el funcionamiento de la interfaz de usuario (el contenido o el funcionamiento no pueden estar más allá de su comprensión). |
 | Robusto | El contenido debe ser lo suficientemente sólido como para que pueda ser interpretado de forma fiable por una amplia variedad de agentes de usuario, incluidas las tecnologías de asistencia.<br><br>Los usuarios deben poder acceder al contenido a medida que avanzan las tecnologías (a medida que evolucionan las tecnologías y los agentes de usuario, el contenido debe seguir siendo accesible). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -111,7 +111,7 @@ Inbox Vision clasifica los problemas de accesibilidad por gravedad para ayudarte
 | --- | --- |
 | Crítico | Cuestiones que pueden bloquear el acceso a contenidos o funcionalidades para usuarios con discapacidad. Éstas son las más graves y debe darse prioridad a su reparación. |
 | Serias | Cuestiones que pueden causar obstáculos importantes, pero que pueden no bloquear completamente el acceso. Deben abordarse con prontitud. |
-| Moderado | Cuestiones que pueden causar alguna dificultad a los usuarios con discapacidad, pero que es menos probable que bloqueen totalmente el acceso. |
+| Moderado | Problemas que pueden causar alguna dificultad a los usuarios con discapacidad, pero es menos probable que bloqueen el acceso por completo. |
 | Menor | Cuestiones que tienen un impacto relativamente bajo en la accesibilidad y que solo pueden causar pequeñas molestias. |
 | Necesita revisión | Incapaz de detectar si puede haber un problema o no. Esto puede ocurrir cuando no somos capaces de determinar la relación de contraste al colocar el texto sobre una imagen de fondo. Debes revisarlo manualmente porque no se puede determinar automáticamente. |
 | Pasado correctamente | Ha superado las pruebas WCAG A, AA o las mejores prácticas de accesibilidad. |
