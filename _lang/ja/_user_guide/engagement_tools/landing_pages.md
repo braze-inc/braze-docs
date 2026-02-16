@@ -23,8 +23,8 @@ alias: /landing_pages/
 
 ランディングページにアクセス、作成、公開するには、管理者権限または次のすべての[権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions)が必要です。
 
-- ランディングページにアクセス
-- ランディングページの下書きを作成
+- ランディングページを表示
+- ランディングページの下書きを編集
 - ランディングページを公開
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
