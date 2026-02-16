@@ -92,5 +92,5 @@ Utilice esta etiqueta Liquid {%raw%}``{% catalog_items <name_of_your_catalog> {{
 
 - Los usuarios sólo están suscritos durante 90 días. Si el artículo no vuelve a estar disponible en 90 días, el usuario se da de baja.
 - Cuando se utiliza la regla de notificación **Notificar a todos los usuarios suscritos**, Braze notificará a 100.000 usuarios en 10 minutos.
-- Braze procesará 10 solicitudes de actualización de elementos del catálogo por minuto. Los puntos finales de actualización permiten 50 actualizaciones de artículos por solicitud, soportando hasta 500 actualizaciones de artículos por minuto que pueden desencadenar notificaciones de reposición de existencias
+- Braze soporta hasta 50.000 artículos actualizados diariamente que son elegibles para desencadenar notificaciones de agotamiento de existencias. Puedes tener hasta 100 millones de suscripciones activas en un momento dado, donde cada suscripción representa un perfil de usuario suscrito para ver un elemento del catálogo.
 
