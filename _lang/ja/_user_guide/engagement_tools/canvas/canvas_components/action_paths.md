@@ -2,7 +2,7 @@
 nav_title: アクションパス
 article_title: アクションパス 
 alias: /action_paths/
-page_order: 0.1
+page_order: 1
 page_type: reference
 description: "この記事では、行動に基づいてユーザーを並べ替えることができるコンポーネント、アクションパスの使い方を説明します。"
 tool: Canvas
