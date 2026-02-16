@@ -141,7 +141,7 @@ Cet endpoint a une limitation du débit de 100 requêtes par minute.
 
 <!---Additional if statement for Messaging endpoints-->
 
-{% if include.category == "message endpoints" %}
+{% if include.category == "endpoints de message" %}
 
 Les endpoints Braze prennent en charge les [requêtes d’API en lots]({{site.baseurl}}/api/api_limits/#batching-api-requests). Une seule demande aux endpoints de messagerie peut atteindre n’importe lequel des éléments suivants :
 
@@ -151,7 +151,7 @@ Les endpoints Braze prennent en charge les [requêtes d’API en lots]({{site.ba
 
 {% endif %}
 
-{% if include.category == "send messages endpoints" %}
+{% if include.category == "envoi de messages endpoints" %}
 
 Les endpoints Braze prennent en charge les [requêtes d’API en lots]({{site.baseurl}}/api/api_limits/#batching-api-requests). Une seule demande aux endpoints de messagerie peut atteindre n’importe lequel des éléments suivants :
 
@@ -162,7 +162,7 @@ Les endpoints Braze prennent en charge les [requêtes d’API en lots]({{site.ba
 
 <!---Additional if statement for Translation endpoints-->
 
-{% if include.endpoint == "translation endpoints" %}
+{% if include.endpoint == "les endpoints de traduction" %}
 
 Le débit de cet endpoint est limité à 250 000 requêtes par minute.
 
@@ -170,7 +170,7 @@ Le débit de cet endpoint est limité à 250 000 requêtes par minute.
 
 <!---Additional if statement for /messages/send endpoint-->
 
-{% if include.category == "message send endpoint" %}
+{% if include.category == "endpoint envoi de messages" %}
 
 Les endpoints Braze prennent en charge les [requêtes d’API en lots]({{site.baseurl}}/api/api_limits/#batching-api-requests). Une seule demande aux endpoints de messagerie peut atteindre n’importe lequel des éléments suivants :
 
