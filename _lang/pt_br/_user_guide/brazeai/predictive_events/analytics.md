@@ -39,6 +39,19 @@ A seguir está como um usuário é categorizado dependendo de sua pontuação de
 
 As pontuações e as categorias correspondentes serão atualizadas de acordo com o cronograma que você escolheu na página de **Criação de Previsão**. O número de usuários com pontuações de probabilidade em cada um dos 20 intervalos de tamanho igual ou em cada uma das categorias de probabilidade é exibido no gráfico no topo da página.
 
+### Acesso a pontuações de probabilidade no nível do usuário
+
+Para visualizar a pontuação de probabilidade de um único usuário, procure esse usuário no dashboard e acesse **Engajamento** > **Previsões** para ver sua pontuação. Para acessar pontuações e categorias de muitos usuários de uma só vez, crie um [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) usando os filtros [Event Likelihood Score]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) ou [Event Likelihood Category]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-category) e, em seguida, exporte os usuários desse segmento. Ao exportar, você pode incluir os escores de probabilidade nos dados de exportação.
+
+{% alert note %}
+Embora tanto os eventos de previsão quanto [o churn preditivo]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) atribuam pontuações aos usuários, há diferenças importantes:<br><br>
+
+- **Eventos preditivos** (previsões de compra): Considere todos os usuários no público da previsão, independentemente de já terem realizado o evento de direcionamento anteriormente. Por exemplo, uma previsão de compra pode identificar os usuários que provavelmente farão sua primeira compra.
+- **Previsão de churn**: Considera apenas os usuários que já realizaram o evento personalizado. As previsões de churn identificam os usuários que já fizeram algo antes e que provavelmente deixarão de fazê-lo. Um usuário que nunca fez login não pode ser considerado "churn" se não fizer o registro.
+
+Ao exportar as pontuações de risco de churn de um segmento, essas pontuações refletem o modelo de previsão de churn, que é diferente dos modelos de previsão de compra ou de outros eventos.
+{% endalert %}
+
 ## Precisão estimada {#estimated_results}
 
 Na metade direita do painel abaixo do gráfico, mostramos estimativas da precisão esperada do direcionamento da parte do público de previsão que você selecionou de duas maneiras: quantos usuários selecionados devem realizar o evento e quantos não devem.
@@ -74,3 +87,11 @@ Esta tabela é atualizada apenas quando a previsão é re-treinada e não quando
 {% alert note %}
 Os dados de correlação para prévia das previsões serão parcialmente ocultos. Uma compra é necessária para revelar esta informação. Entre em contato com o seu gerente de conta para saber mais.
 {% endalert %}
+
+## Solução de problemas
+
+### Não é possível criar uma previsão
+
+Se não for possível criar uma previsão para um evento personalizado, isso pode ser devido ao tamanho insuficiente da amostra. O Braze estima o número de usuários que realizaram o evento e, se um número suficiente de usuários não tiver realizado o evento, a amostra poderá não fornecer dados suficientes para treinar o modelo. Nesse caso, o sistema pode extrapolar para nenhum usuário, impedindo a criação de previsões.
+
+Para criar uma previsão bem-sucedida, certifique-se de que um número suficiente de usuários em seu público de previsão tenha realizado o evento personalizado de destino. O limite exato varia, mas eventos com uso muito baixo em sua base de usuários podem não fornecer dados suficientes para um treinamento confiável do modelo.
