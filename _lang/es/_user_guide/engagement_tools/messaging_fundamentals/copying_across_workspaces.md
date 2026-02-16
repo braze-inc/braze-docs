@@ -28,7 +28,7 @@ Puedes copiar campañas entre espacios de trabajo para estos canales compatibles
 Para copiar una campaña a otro espacio de trabajo:
 
 1. Selecciona el ícono de engranaje <i class="fas fa-cog"></i> situado junto a la campaña seleccionada.
-2. Selecciona **Copiar al espacio de trabajo**. 
+2. Selecciona **Copiar en espacio de trabajo**. 
 3. Después de copiar, revisa y prueba tu campaña para confirmar que todos los campos funcionan correctamente.
 
 {% endtab %}
@@ -43,7 +43,7 @@ Puedes copiar Canvases entre espacios de trabajo para estos canales compatibles:
 Para copiar un Canvas a otro espacio de trabajo:
 
 1. Selecciona el menú <i class="fa-solid fa-ellipsis-vertical"></i> situado junto al Canvas seleccionado.
-2. Selecciona **Copiar al espacio de trabajo**. 
+2. Selecciona **Copiar en espacio de trabajo**. 
 3. Después de copiar, revisa y prueba tu Canvas para confirmar que todos los campos funcionan correctamente.
 
 Al copiar un Canvas con pasos de Sincronización de Audiencia, la configuración no se copiará en el espacio de trabajo de destino, pero sí los pasos del trayecto.
@@ -68,7 +68,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 | Comportamientos de conversión (anidados) | Aprobaciones | 
 | Configuraciones del tiempo de silencio | Planificación por desencadenante | 
 | Configuraciones de limitación de frecuencia | Resúmenes de campaña | 
-| Estado de suscripción del destinatario |  | 
+| Estado de suscripción del destinatario | Filtros | 
 | Planificación recurrente |  | 
 | Es transaccional |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -84,7 +84,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 | Comportamientos de conversión (anidados) | Aprobaciones | 
 | Configuraciones del tiempo de silencio | Planificación por desencadenante | 
 | Configuraciones de limitación de frecuencia | Resúmenes en Canvas | 
-| Estado de suscripción del destinatario |  | 
+| Estado de suscripción del destinatario | Filtros | 
 | Planificación recurrente |  | 
 | Es transaccional |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
