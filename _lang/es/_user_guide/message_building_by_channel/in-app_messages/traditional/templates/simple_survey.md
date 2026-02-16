@@ -63,7 +63,7 @@ Para añadir un atributo personalizado a cada opción, seleccione un nombre de a
 El tipo de datos de sus atributos personalizados es importante dependiendo de cómo haya configurado su encuesta.
 
 - **Selección múltiple:** El tipo de datos del atributo personalizado debe ser un array. Si el atributo personalizado se establece en un tipo de datos diferente, las respuestas no se registrarán.
-- **Selección de opción simple:** El tipo de datos del atributo personalizado _no debe_ ser un array. Las respuestas no se registrarán si el atributo es una matriz.
+- **Selección de opción simple:** El tipo de datos del atributo personalizado debe ser una cadena. Los atributos personalizados que no sean de tipo cadena no aparecerán en el desplegable, y las respuestas no se registrarán.
 
 {% alert important %}
 Cuando la colección de atributos personalizados está activada, las opciones que comparten el mismo nombre de atributo personalizado se combinarán en una matriz.
@@ -134,7 +134,7 @@ Las opciones seleccionadas pasarán automáticamente a Currents, en la sección 
 
 **Objetivo:** Mida la satisfacción de los clientes y envíe campañas de recuperación a los usuarios que hayan dejado puntuaciones bajas.
 
-Para configurarlo, utiliza un cuestionario de selección de una sola opción con cinco opciones que vayan de "😡 Muy insatisfecho" a "😍 Muy satisfecho". Cada elección está mapeada en el atributo personalizado `customer_satisfaction`, con un valor numérico de 1 a 5 -donde 1 indica el menos satisfecho y 5 el más satisfecho-.
+Para configurarlo, utiliza un cuestionario de selección de una sola opción con cinco opciones que vayan de "😡 Muy insatisfecho" a "😍 Muy satisfecho". Cada elección está mapeada en el atributo personalizado `customer_satisfaction`, con un valor numérico de 1 a 5 -donde 1 indica el menos satisfecho y 5 el más satisfecho-. Ten en cuenta que estos valores numéricos se almacenan como cadenas, ya que los atributos personalizados de cadena son necesarios para la selección de una sola opción.
 
 | Elección                                | Atributo              | Valor |
 |---------------------------------------|------------------------|-------|
@@ -145,7 +145,7 @@ Para configurarlo, utiliza un cuestionario de selección de una sola opción con
 | 😍 Muy satisfecho                     | `customer_satisfaction` | 5     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Cuando un usuario envía el cuestionario, su valor seleccionado se registra como un atributo personalizado. A continuación, puedes crear campañas de seguimiento utilizando filtros de audiencia. Por ejemplo, dirige mensajes de recuperación a usuarios cuyo atributo `customer_satisfaction` sea 1 ó 2.
+Cuando un usuario envía el cuestionario, su valor seleccionado se registra como un atributo personalizado. A continuación, puedes crear campañas de seguimiento utilizando filtros de audiencia. Por ejemplo, dirigir mensajes de recuperación a usuarios cuyo atributo `customer_satisfaction` sea "1" o "2".
 
 {% endtab %}
 {% tab Notification preferences %}
@@ -154,14 +154,14 @@ Cuando un usuario envía el cuestionario, su valor seleccionado se registra como
 
 **Objetivo:** Deja que los usuarios opten por tipos específicos de notificaciones.
 
-Para configurarlo, utiliza un cuestionario de selección múltiple en el que cada opción represente un tema de notificación. En lugar de asignar el mismo atributo con distintos valores, cada elección mapea un atributo booleano distinto que refleja el interés del usuario por ese tema. Si un usuario selecciona una opción, el atributo correspondiente se establece en `true`. Si no se selecciona, el atributo no cambia.
+Para configurarlo, utiliza un cuestionario de selección múltiple en el que cada opción represente un tema de notificación. En lugar de asignar el mismo atributo con distintos valores, cada elección mapea un atributo booleano distinto que refleja el interés del usuario por ese tema. Si un usuario selecciona una opción, el atributo correspondiente se establece en `true`. Si no se selecciona, el atributo no se modifica.
 
 | Elección             | Atributo              | Valor  |
 |--------------------|------------------------|--------|
 | Actualizaciones de productos    | `wants_product_updates`| `true` |
 | Promociones         | `wants_promotions`     | `true` |
 | Invitaciones a eventos      | `wants_event_invites`  | `true` |
-| Cuestionarios & Opiniones | `wants_surveys`        | `true` |
+| Cuestionarios & Comentarios | `wants_surveys`        | `true` |
 | Consejos & Tutoriales   | `wants_tips`           | `true` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
