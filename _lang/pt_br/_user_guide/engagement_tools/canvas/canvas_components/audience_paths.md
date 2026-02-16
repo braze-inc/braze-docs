@@ -2,7 +2,7 @@
 nav_title: Jornadas do público
 article_title: Jornadas do público 
 alias: /audience_paths/
-page_order: 1
+page_order: 3
 page_type: reference
 description: "Este artigo de referência descreve como usar os Caminhos do Público no seu Canva para filtrar e segmentar usuários de forma intuitiva em grande escala com agrupamentos de usuários baseados em prioridades estratégicas."
 tool: Canvas
@@ -37,9 +37,9 @@ Os usuários são avaliados assim que chegam à etapa da jornada do público. De
 
 Por exemplo, se os usuários receberem a Mensagem A e a próxima etapa for uma jornada do público que avalia se eles interagiram com essa mensagem, todos os usuários avançarão para a etapa daqueles que não interagiram com essa mensagem. Isso ocorre porque os usuários avançaram imediatamente para a etapa da jornada do público sem tempo para interagir com a mensagem. Em outras palavras, os usuários são avaliados quanto a uma interação com a mensagem quase imediatamente após o envio da mensagem.
 
-Para que os usuários tenham tempo de interagir com uma mensagem enviada, é necessário haver uma postergação entre a etapa Mensagem e a Jornada do público. Por exemplo, uma postergação de 24 horas daria aos usuários 24 horas após o envio da mensagem para interagir com a Mensagem A antes de ser avaliada.
+Para dar aos usuários tempo para interagir com uma mensagem enviada, é necessário haver uma postergação entre a etapa Mensagem e a Jornada do público. Por exemplo, uma postergação de 24 horas daria aos usuários 24 horas após o envio da mensagem para interagir com a Mensagem A antes de ser avaliada.
 
-Note que os usuários avançam para a próxima etapa com base na primeira ação que realizaram depois de entrar na etapa Jornada do público na janela de avaliação. Isso significa que, se um usuário performar um segundo evento personalizado, ele não trocará de grupo de público.
+Observe que os usuários avançam para a próxima etapa com base na primeira ação que realizaram depois de entrar na etapa Jornada do público na janela de avaliação. Isso significa que, se um usuário performar um segundo evento personalizado, ele não trocará de grupo de público.
 
 ## Criando uma jornada do público
 
@@ -56,7 +56,7 @@ A captura de tela a seguir mostra o layout de uma etapa de Caminhos do público 
 
 Por exemplo, se quiser direcionar o envio de mensagens de integração para um grupo de usuários, poderá selecionar filtros de redirecionamento, como "Clicou no e-mail" e "Clicou na mensagem no app".
 
-![Uma jornada do público expandida com grupos para "Adora cozinha asiática", "Adora cozinha latina", "Adora cozinha europeia" e "Todos os outros".]({% image_buster /assets/img/audience_path/audience_path3.png %})
+![Uma jornada do público ampliada com grupos para "Adora cozinha asiática", "Adora cozinha latina", "Adora cozinha europeia" e "Todos os outros".]({% image_buster /assets/img/audience_path/audience_path3.png %})
 
 Depois que a etapa Jornada do público estiver concluída, cada grupo de público terá um ramo separado. Você pode continuar usando os Caminhos do Público para filtrar ainda mais seu público, ou continuar sua jornada no Canva com as etapas padrão do Canva. 
 
