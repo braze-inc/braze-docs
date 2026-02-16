@@ -113,6 +113,10 @@ MAU-Snapshots werden einmal pro Tag berechnet und ändern sich nie rückwirkend.
 Wenn Sie Braze zum ersten Mal integrieren, sehen alle Nutzer:innen wie neue Nutzer:innen aus, da Braze noch nie eine Sitzung für sie aufgezeichnet hat.
 {% endalert %}
 
+{% alert important %}
+Nutzer:innen, die mit mehr als einer App verbunden sind, werden für jede App separat gezählt. Das bedeutet, dass ein einzelner Nutzer:innen mehrfach zur Anzahl der *neuen Nutzer*:innen beitragen kann, wenn er Sitzungen in verschiedenen Apps in Ihrem Workspace startet.
+{% endalert %}
+
 ### Kundenbindung
 
 Der *Stickiness-Wert* ist ein Verhältnis zwischen DAU und MAU einer bestimmten Periode. Im Wesentlichen misst die Stickiness den Prozentsatz Ihrer MAU, die täglich wiederkommen.
