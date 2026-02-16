@@ -143,7 +143,7 @@ Wechseln Sie dazu auf die Registerkarte **Test** und senden Sie einen Test-Webho
 
 Nach dem Senden des Test-Webhooks wird ein Dialogfeld mit der Antwortnachricht angezeigt. Wenn die Webhook-Anfrage nicht erfolgreich war, lesen Sie die Fehlermeldung, um Hilfe bei der Fehlerbehebung Ihres Webhooks zu erhalten. Das folgende Beispiel zeigt die Antwort auf einen Webhook mit einer ungültigen Webhook-URL.
 
-```json
+```http
 404 Not Found
 
 {
