@@ -14,25 +14,27 @@ channel:
 
 Die Zustellbarkeit von E-Mails ist der Schlüssel zum Kampagnenerfolg. Mit dem Deliverability Center im Braze-Dashboard können Sie Ihre Domains nach **IP-Reputation** oder **Zustellungsfehlern** anzeigen, um mögliche Probleme mit der E-Mail-Zustellbarkeit zu erkennen und zu beheben. 
 
-Um auf das Deliverability Center zugreifen zu können, benötigen Sie die [Benutzerberechtigungen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)"Zugriff auf Kampagnen, Canvases, Karten, Segmente und Medienbibliothek" und "Nutzungsdaten anzeigen".
+Um auf das Zustellbarkeitscenter zugreifen zu können, müssen Sie über die [Nutzer]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/): [innen-Berechtigungen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)"Zugriff auf Kampagnen, Canvase, Karten, Segmente, Mediathek" und "Nutzungsdaten anzeigen" verfügen.
 
 ## Einrichten Ihres Google Postmaster-Kontos
 
-Bevor Sie sich mit dem Deliverability Center verbinden, müssen Sie ein Konto bei Google Postmaster Tools einrichten. Sie können ein berufliches oder privates Gmail-Konto verwenden, um Google Postmaster einzurichten. 
+Bevor Sie sich mit dem Deliverability Center verbinden, müssen Sie ein Konto bei Google Postmaster Tools einrichten. Sie können ein berufliches oder persönliches Google Mail-Konto verwenden, um Ihren Google Postmaster einzurichten. 
 
 1. Rufen Sie das [Dashboard der Google Postmaster Tools](https://postmaster.google.com/managedomains?pli=1) auf.
 2. Wählen Sie unten rechts das Plus-Symbol <i class="fas fa-plus-circle"></i> aus.
-3. Geben Sie Ihre Root- oder Subdomäne ein, um Ihre E-Mail-Adresse zu bestätigen. Wenn Sie die Root-Domain hinzufügen und bestätigen, wird die Verifizierung auch auf die Subdomains angewendet. Wenn Sie zum Beispiel `braze.com` bestätigen, können Sie später `demo.braze.com` und andere Subdomains hinzufügen, ohne diese separat verifizieren zu müssen.
-4. Google erstellt einen TXT-Eintrag, der direkt zum Domain-DNS hinzugefügt werden kann. Dieser gehört in der Regel der Person, die Ihr DNS verwaltet. Informationen und Anleitungen zur Aktualisierung Ihres DNS finden Sie unter [Domain-Verifizierung (für Hosts)](https://support.google.com/a/topic/1409901).
-5. Wählen Sie **Weiter**. <br>![Eine Beispiel-Domain "demo.braze.com" zur Authentifizierung einer E-Mail.]({% image_buster /assets/img_archive/domain_authentication.png %})
-6. Nachdem der TXT-Eintrag zum DNS hinzugefügt wurde, kehren Sie zum Dashboard der Google Postmaster Tools zurück und wählen **Überprüfen**. Damit wird bestätigt, dass die Domain Ihnen gehört, damit Sie in Ihrem Postmaster-Konto auf die Zustellbarkeitsdaten von Gmail zugreifen können. <br> ![Eine Aufforderung, den Besitz der Domain "demo.braze.com" zu überprüfen.]({% image_buster /assets/img_archive/domain_verification.png %})
+3. Geben Sie Ihre Root- oder Subdomäne ein, um Ihre E-Mail-Adresse zu bestätigen. Wenn Sie die Root Domain hinzufügen und überprüfen, ist es zulässig, die Überprüfung auch auf Subdomains anzuwenden. Wenn Sie zum Beispiel `braze.com` überprüfen, können Sie später `demo.braze.com` und andere Subdomains hinzufügen, ohne sie einzeln überprüfen zu müssen.
 
-{% alert tip %}
-Stellen Sie sicher, dass der TXT-Eintrag mit der übergeordnete Domain verknüpft ist und nicht mit der Subdomain, die Sie bei Braze verwenden.
+{% alert important %}
+Stellen Sie sicher, dass der TXT-Eintrag mit der übergeordneten Domain verknüpft ist, nicht mit der Subdomain, die Sie über Braze verwenden.
 {% endalert %}
 
+{: start="4"}
+4\. Google erstellt einen TXT-Eintrag, der direkt zum DNS Ihrer Domain hinzugefügt werden kann. Dieser gehört in der Regel der Person, die Ihr DNS verwaltet. Informationen und Anleitungen zur Aktualisierung Ihres DNS finden Sie unter [Domain-Verifizierung (für Hosts)](https://support.google.com/a/topic/1409901).
+5\. Wählen Sie **Weiter**. <br>![Eine Beispiel-Domain "demo.braze.com" zur Authentifizierung einer E-Mail.]({% image_buster /assets/img_archive/domain_authentication.png %})
+6\. Nachdem der TXT-Eintrag zum DNS hinzugefügt wurde, kehren Sie zum Dashboard der Google Postmaster Tools zurück und wählen **Überprüfen**. Dieser Schritt bestätigt, dass Sie die Domain besitzen, so dass Sie in Ihrem Postmaster-Konto auf die Metriken zur Zustellbarkeit von Google Mail zugreifen können. <br> ![Eine Aufforderung, den Besitz der Domain "demo.braze.com" zu überprüfen.]({% image_buster /assets/img_archive/domain_verification.png %})
+
 {% alert note %}
-Wenn Ihre Subdomains nicht im Zustellbarkeitscenter für Google Postmaster enthalten sind, kann dies daran liegen, dass nur die übergeordnete Domain zu Google Postmaster hinzugefügt wurde. Nachdem die übergeordneten Domains in Google Postmaster überprüft wurden, können Sie Ihre Subdomains hinzufügen, die dann automatisch überprüft werden. So kann Google Kennzahlen zur Subdomain erstellen, die dann in das Braze Deliverability Center übernommen werden können.
+Wenn Ihre Subdomains nicht im Zustellbarkeitscenter für Google Postmaster enthalten sind, kann dies daran liegen, dass nur die übergeordnete Domain zu Google Postmaster hinzugefügt wurde. Nachdem die übergeordneten Domains in Google Postmaster überprüft wurden, können Sie Ihre Subdomains hinzufügen, die automatisch überprüft werden. So kann Google Kennzahlen zur Subdomain erstellen, die dann in das Braze Deliverability Center übernommen werden können.
 {% endalert %}
 
 ## Integration von Google Postmaster
@@ -63,7 +65,7 @@ Um die Einstufungen für die IP-Reputation besser zu verstehen, sehen Sie sich d
 | Reputation | Definition |
 | ----- | ---------- |
 | Hoch | Gute Erfolgsbilanz mit wenig Beschwerden wegen Spam (etwa durch Anklicken der Schaltfläche "Spam"). |
-| Mittel | Es ist bekannt, dass es positives Engagement erzeugt, aber gelegentlich erhält es Spam-Beschwerden. Die meisten E-Mails von dieser Domain werden an den Posteingang gesendet, es sei denn, die Spam-Beschwerden nehmen zu. |
+| Mittel | Es ist bekannt, dass es positives Engagement erzeugt, aber gelegentlich erhält es Spam-Beschwerden. Die meisten E-Mails von dieser Domain werden an den Posteingang geschickt, es sei denn, die Spam-Beschwerden nehmen zu. |
 | Niedrig | Sie sind dafür bekannt, dass sie regelmäßig eine hohe Anzahl von Spam-Beschwerden erhalten. E-Mails von diesem Sender werden wahrscheinlich in den Spam-Ordner gefiltert. |
 | Schlecht | Hat einen Verlauf mit einer erhöhten Anzahl von Spam-Beschwerden. E-Mails von dieser Domain werden fast immer beim Verbindungsaufbau abgelehnt oder in den Spam-Ordner gefiltert. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -75,7 +77,7 @@ Mit dieser Tabelle können Sie die Reputation Ihrer Domain kontrollieren und ver
 | Reputation | Definition |
 | ----- | ---------- |
 | Hoch | Hat eine gute Erfolgsbilanz mit sehr wenigen Spam-Beschwerden. Entspricht den Richtlinien für Absender von Google Mail. E-Mails werden nur selten in den Spam-Ordner gefiltert. Hat eine gute Erfolgsbilanz mit einer sehr niedrigen Spam-Rate. Entspricht den [Gmail-Absenderrichtlinien](https://developers.google.com/gmail/markup/registering-with-google). |
-| Mittel | Es ist bekannt, dass es positives Engagement erzeugt, aber gelegentlich hat es eine geringe Anzahl von Spam-Beschwerden erhalten. Die meisten E-Mails von dieser Domain werden den Posteingang erreichen (es sei denn, das Spamaufkommen steigt merklich an). |
+| Mittel | Es ist bekannt, dass es ein positives Engagement erzeugt, aber gelegentlich hat es eine geringe Anzahl von Spam-Beschwerden erhalten. Die meisten E-Mails von dieser Domain erreichen den Posteingang (es sei denn, das Spamaufkommen steigt merklich an). |
 | Niedrig | Bekannt dafür, regelmäßig Spam-Beschwerden zu erhalten. E-Mails von diesem Sender werden wahrscheinlich in den Spam-Ordner gefiltert. |
 | Schlecht | Hat einen Verlauf mit einer erhöhten Anzahl von Spam-Beschwerden. E-Mails von dieser Domain werden fast immer beim Verbindungsaufbau abgelehnt oder in den Spam-Ordner gefiltert. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -145,7 +147,7 @@ Um die Beschwerdequote zu berechnen, teilen Sie die Anzahl der Beschwerden durch
 | Ergebnis | Definition |
 | ----- | ---------- |
 | Weniger als 0,3% | Die ideale Beschwerdequote. |
-| Mehr als 0,3% | Überprüfen Sie Ihren Anmeldeprozess und stellen Sie sicher, dass der Abmeldelink funktioniert. Überlegen Sie auch, ob Ihre Kommunikation noch besser auf Ihre Zielgruppe zugeschnitten werden könnte. |
+| Mehr als 0,3% | Überprüfen Sie Ihren Anmeldeprozess und stellen Sie sicher, dass der Abmeldelink funktioniert. Überlegen Sie auch, ob die Mail nicht besser auf Ihre Zielgruppe personalisiert werden könnte. |
 | Mehr als 100% | Beachten Sie, dass SNDS Beschwerden für den Tag anzeigt, an dem sie gemeldet wurden, und nicht rückwirkend für den Tag, an dem die beanstandete Post zugestellt wurde. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
