@@ -35,7 +35,7 @@ Voici quelques détails à prendre en compte lors de la création d'un extrait d
 
 Chaque liste de codes de promotion est assortie d'une date et d'une heure d'expiration qui sont définies lors de la création. La durée maximale d'expiration est de six mois à compter du jour où vous créez ou modifiez votre liste.
 
-Dans ce délai, vous pouvez modifier et mettre à jour la date d’expiration à plusieurs reprises. Cette date d'expiration s'applique à tous les codes ajoutés à cette liste. À l'expiration, les codes sont supprimés du système Braze et tout message appelant l'extrait de code de cette liste n'est pas envoyé.
+Dans ce délai, vous pouvez modifier et mettre à jour la date d’expiration à plusieurs reprises. Cette date d'expiration s'applique à tous les codes ajoutés à cette liste. À l'expiration, les codes sont supprimés du système Braze et les messages appelant l'extrait de code de cette liste ne sont pas envoyés.
 
 ![Les paramètres d'expiration de la liste indiquent que tous les codes restants expireront le 30 avril 2025 à 12 heures.]({% image_buster /assets/img/promocodes/promocode4.png %}){: style="max-width:80%"}
 
@@ -55,7 +55,7 @@ Veillez à ce que votre fichier CSV respecte ces directives :
 Vous pouvez utiliser notre intégration intégrée avec [Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) ou [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) pour créer et exporter des codes de promotion.
 
 {% alert important %}
-La taille maximale du fichier est de 100 Mo et la taille maximale de la liste est de 20 MM de codes non utilisés. Si vous constatez que le fichier téléchargé n'est pas le bon, téléchargez-en un nouveau pour remplacer le précédent.
+La taille maximale du fichier est de 100 Mo et la taille maximale de la liste est de 20 millions de codes inutilisés. Si vous constatez que le fichier téléchargé n'est pas le bon, téléchargez-en un nouveau pour remplacer le précédent.
 {% endalert %}
 
 1. Une fois le téléchargement terminé, sélectionnez **Enregistrer la liste** pour enregistrer tous les détails et codes que vous venez de saisir.
