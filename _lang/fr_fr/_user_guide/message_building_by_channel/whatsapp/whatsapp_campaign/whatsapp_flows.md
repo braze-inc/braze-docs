@@ -56,7 +56,7 @@ channel:
 
 ### Prévisualisation du flux
 
-Avant de lancer un Canvas avec un Flow, vous pouvez sélectionner Aperçu **du Flow** pour prévisualiser le Flow directement dans Braze afin de confirmer qu'il se comporte comme prévu. Vous pouvez également interagir avec le flux dans l'aperçu pour expérimenter la manière dont un utilisateur naviguerait dans le flux, puis procéder à des ajustements en temps réel. Si un flux contient plusieurs pages, vous pouvez interagir avec chaque page.
+Avant de lancer un Canvas avec un Flow, vous pouvez sélectionner Aperçu **du Flow** pour prévisualiser le Flow directement dans Braze afin de confirmer qu'il se comporte comme prévu. Vous pouvez également interagir avec le flux dans l'aperçu pour expérimenter la façon dont un utilisateur naviguerait dans le flux, puis procéder à des ajustements en temps réel. Si un flux contient plusieurs pages, vous pouvez interagir avec chaque page.
 
 ![Fenêtre de prévisualisation affichant un formulaire permettant à un utilisateur de terminer son inscription.]({% image_buster /assets/img/whatsapp/flows/flow_preview.png %}){: style="max-width:50%;"}
 
@@ -73,7 +73,7 @@ Le moyen le plus simple de fournir à Braze les informations relatives à la str
 
 #### Utilisation d'un flux qui n'a pas été utilisé dans Braze
 
-Si vous utilisez un flux qui n'a jamais été utilisé auparavant dans Braze, il se peut qu'aucune information ne s'affiche dans la section **Attribut personnalisé** du **flux** dans les **messages de composition.** Cela signifie que le schéma n'a pas encore été généré.
+Si vous utilisez un flux qui n'a jamais été utilisé auparavant dans Braze, il se peut que vous ne voyiez aucune information dans la section **Attribut personnalisé** du **flux** dans les **messages de composition.** Cela signifie que le schéma n'a pas encore été généré.
 
 ![Section Meta Flow avec une option permettant d'afficher l'attribut personnalisé du flux.]({% image_buster /assets/img/whatsapp/flows/flow_custom_attribute.png %}){: style="max-width:70%;"}
 
@@ -87,7 +87,7 @@ Pour résoudre ce problème, procédez comme suit :
 {: start="3"}
 3\. Envoyez un message test et complétez le flux en tant qu'utilisateur.
 
-Maintenant, Braze dispose de la forme de la réponse JSON du flux et peut générer l'attribut personnalisé.
+À présent, Braze dispose de la forme du JSON de la réponse au flux et peut générer l'attribut personnalisé.
 
 {% endtab %}
 {% tab Alternative methods %}
@@ -120,7 +120,7 @@ Une fois que Braze a reçu une réponse de Flow, nous enregistrons l'attribut pe
 
 ### Étape 2 : Visualiser la réponse au flux enregistrée
 
-Lorsque le flux est terminé, Braze crée automatiquement un attribut personnalisé de flux dont le nom est basé sur l'ID du flux. Vous pouvez ensuite accéder au profil utilisateur pour afficher la réponse Flow enregistrée sous la forme d'un objet imbriqué dans la section **Attributs personnalisés**.
+Lorsque le flux est terminé, Braze crée automatiquement un attribut personnalisé de flux dont le nom est basé sur l'ID du flux. Vous pouvez ensuite accéder au profil utilisateur pour afficher la réponse Flow enregistrée sous forme d'objet imbriqué dans la section **Attributs personnalisés**.
 
 Une fois le schéma généré, la section **Attribut personnalisé** du flux affiche la structure attendue, y compris les types de données prévus pour chaque réponse (par exemple, "Chaîne" ou "Tableau de chaînes").
 
@@ -148,7 +148,7 @@ Vous pouvez utiliser des attributs personnalisés imbriqués ou l'étiquette Liq
 {% tabs %}
 {% tab Nested custom attributes %}
 
-Pour enregistrer des parties spécifiques de la réponse de l'utilisateur au flux, suivez toutes les étapes de la section [Enregistrement de la réponse complète au flux](#full-flow), **y compris le lancement du Canvas**. Le Canvas doit être lancé pour créer l'attribut personnalisé imbriqué auquel vous ferez référence. Après avoir lancé le canvas et terminé un flux, effectuez les étapes suivantes :
+Pour enregistrer des parties spécifiques de la réponse de l'utilisateur au flux, suivez toutes les étapes de la section [Enregistrement de la réponse complète au flux](#full-flow), **y compris le lancement du Canvas**. Le Canvas doit être lancé pour créer l'attribut personnalisé imbriqué auquel vous ferez référence. Après avoir lancé le canvas et complété un flux, effectuez les étapes suivantes :
 
 1. Créez une étape ultérieure de mise à jour de l'utilisateur qui utilise l'éditeur d'interface utilisateur.
 2. Sélectionnez **Ajouter une personnalisation**, puis sélectionnez **Attribut personnalisé imbriqué** et l'attribut de niveau supérieur correspondant où le flux est stocké.  
