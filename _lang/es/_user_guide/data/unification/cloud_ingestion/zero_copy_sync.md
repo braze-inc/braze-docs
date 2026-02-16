@@ -10,9 +10,7 @@ description: "Esta página ofrece un resumen de cómo desencadenar Lienzos Braze
 
 > Aprende a desencadenar Canvas utilizando CDI para una personalización sin copia. Esta característica accede a información específica del usuario desde tu solución de almacenamiento de datos y la pasa a un Canvas de destino. Los pasos en Canvas pueden incluir opcionalmente campos de personalización que no persisten en los perfiles de usuario Braze.
 
-{% alert important %}
-Los desencadenantes del CDI Canvas están actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='CDI Canvas triggers' %}
 
 ## Sincronizar desencadenadores de Canvas
 
