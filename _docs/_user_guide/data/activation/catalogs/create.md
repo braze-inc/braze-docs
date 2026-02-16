@@ -29,12 +29,12 @@ The following table lists the supported catalog data types and how they can be c
 
 | Data type    | Description                                   | Available via CSV upload | Available via API and CDI |
 |--------------|-----------------------------------------------|:------------------------:|:-------------------------:|
-| String       | A sequence of characters.                     | &#10003;                 | &#10003;                  |
-| Number       | A numeric value, either integer or float.     | &#10003;                 | &#10003;                  |
-| Boolean      | A `true` or `false` value.                    | &#10003;                 | &#10003;                  |
-| Time         | A string formatted in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.                        | &#10003;                 | &#10003;                  |
-| JSON object  | A nested object with key-value pairs. Can be displayed in the platform but can only be created or updated through the API or CDI.         |           | &#10003;                  |
-| String array | A list of strings. Can be displayed in the platform but can only be created or updated through the API or CDI. Maximum of 100 elements. |           | &#10003;                  |
+| String       | A sequence of characters.                     | ✅ Yes                    | ✅ Yes                     |
+| Number       | A numeric value, either integer or float.     | ✅ Yes                    | ✅ Yes                     |
+| Boolean      | A `true` or `false` value.                    | ✅ Yes                    | ✅ Yes                     |
+| Time         | A string formatted in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.                        | ✅ Yes                    | ✅ Yes                     |
+| JSON object  | A nested object with key-value pairs. Can be displayed in the platform but can only be created or updated through the API or CDI.         | ⛔ No                     | ✅ Yes                     |
+| String array | A list of strings. Can be displayed in the platform but can only be created or updated through the API or CDI. Maximum of 100 elements. | ⛔ No                     | ✅ Yes                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Creating a catalog
