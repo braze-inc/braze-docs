@@ -23,8 +23,8 @@ La disponibilité des pages d'atterrissage et des domaines personnalisés dépen
 
 Avant de pouvoir accéder aux pages d'atterrissage, les créer et les publier, vous devez disposer [d'autorisations d']({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) administrateur ou de toutes les autorisations suivantes :
 
-- Accéder aux pages d’accueil
-- Créer des ébauches de page d’accueil
+- Afficher la page de destination
+- Modifier les projets de page de destination
 - Publier les pages d’accueil
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
@@ -41,7 +41,7 @@ Le nombre de pages de destination publiées et de domaines personnalisés que vo
 
 ## Ajout du Google Tag Manager à une page de destination
 
-Pour ajouter Google Tag Manager à vos pages de destination, ajoutez un bloc de **code personnalisé** à votre page de destination dans l'éditeur par glisser-déposer, puis insérez le code Tag Manager dans le bloc. Veillez à ajouter une couche de données avant le code du gestionnaire d'étiquettes, comme dans cet exemple :
+Pour ajouter Google Tag Manager à vos pages de destination, ajoutez un bloc de **code personnalisé** à votre page de destination dans l'éditeur par glisser-déposer, puis insérez le code Tag Manager dans le bloc. Veillez à ajouter une couche de données avant le code du gestionnaire des étiquettes, comme dans cet exemple :
 
 ```
 <script>
