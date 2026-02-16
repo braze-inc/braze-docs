@@ -17,9 +17,9 @@ channel:
 
 ## Formato recomendado
 
-Recomendamos importar números de telefone no formato [`E.164`](https://en.wikipedia.org/wiki/e.164) para garantir precisão no caso de você estar enviando para várias regiões com diferentes códigos de país ou de área—mesmo para números de telefone baseados em U.S.
+Recomendamos importar números de telefone no formato [`E.164`](https://en.wikipedia.org/wiki/e.164) para garantir precisão no caso de você estar enviando para várias regiões com diferentes códigos de país ou área - mesmo para números de telefone baseados em U.S.
 
-- **Exemplos de números:** Todos os números de U.S. devem ser números de telefone válidos, com 10 dígitos e um código de área válido. Se algum número de telefone de 10 dígitos estiver faltando um `+` e o código do país, a Braze o mapeará como U.S. números.
+- **U.S. números:** Todos os números de U.S. devem ser números de telefone válidos, com 10 dígitos e um código de área válido. Se algum número de telefone de 10 dígitos estiver faltando um `+` e código de país, a Braze o mapeará como U.S. números.
 - **Números internacionais:** Todos os números internacionais devem começar com um `+`, seguido pelo código do país e, em seguida, o número de telefone. Por exemplo, `+442071838750`.
 
 ![Exemplo de um número de telefone internacional e164 válido.]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
@@ -37,18 +37,18 @@ Aqui estão alguns exemplos mostrando as diferenças entre o formato local e `E.
 
 Ao importar números de telefone, é importante que você siga o [formato recomendado](#recommended-format). Para importar números de telefone, use um dos seguintes métodos:
 
-- [Carregando um CSV para a Braze]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv)
+- [Carregando um CSV para Braze]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv)
 - [Usando o endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track)
 
 {% alert important %}
-Os números de telefone dos usuários são exibidos na Braze como uma sequência de dígitos. Se você importar um número que contenha qualquer não-dígito (como `,`, `-`, `(` ou outros), os não-dígitos serão removidos quando renderizados na Braze. Por exemplo, a importação de `+1 (724) 123-4567` será exibida como `17241234567`.
+Os números de telefone dos usuários aparecem na Braze como uma sequência de dígitos. Se você importar um número que contém não-dígitos (como `,`, `-` ou `(`) além do {% raw %}`+`{% endraw %} inicial, os não-dígitos são removidos quando renderizados na Braze. Por exemplo, importar `+1 (724) 123-4567` aparece como `+17241234567`.
 {% endalert %}
 
 ## Tratamento de números de telefone inválidos
 
 Quando um número de telefone for considerado inválido, a Braze marcará o número de telefone do usuário como inválido e não tentará enviar mais comunicações para esse número de telefone. Um número de telefone inválido é marcado na **guia Engajamento** de um perfil de usuário.
 
-![Exemplo de mensagem de erro para números de telefone inválidos na Braze.]({% image_buster /assets/img/sms/invalid_banner.png %}){: style="max-width:50%;border: 0;"}
+![Mensagem de erro de exemplo para números de telefone inválidos na Braze.]({% image_buster /assets/img/sms/invalid_banner.png %}){: style="max-width:50%;border: 0;"}
 
 Um número de telefone é considerado inválido pelos seguintes motivos:
 
@@ -65,7 +65,7 @@ Você também pode incluir ou excluir qualquer usuário com números de telefone
 
 ## Adicionando usuários a grupos de inscrição de SMS e RCS
 
-Para que um usuário receba uma mensagem SMS ou RCS, ele deve ter um número de telefone válido e estar inscrito em um grupo de inscrição. Os grupos de inscrição estão vinculados ao programa SMS ou RCS que você está executando (certifique-se de seguir os [requisitos legais para SMS, MMS e RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/) e ter o consentimento registrado de cada cliente). Para saber mais, consulte [grupos de inscrição SMS e RCS]({{site.baseurl}}/sms_rcs_subscription_groups/).
+Para que um usuário receba uma mensagem SMS ou RCS, ele deve ter um número de telefone válido e estar inscrito em um grupo de inscrições. Os grupos de inscrições estão vinculados ao programa SMS ou RCS que você está executando (certifique-se de seguir os [requisitos legais para SMS, MMS e RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/) e ter o consentimento registrado de cada cliente). Para saber mais, consulte [grupos de inscrições SMS e RCS]({{site.baseurl}}/sms_rcs_subscription_groups/).
 
 ## Fornecimento e verificação por terceiros
 
