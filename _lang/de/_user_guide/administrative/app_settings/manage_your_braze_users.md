@@ -1,12 +1,12 @@
 ---
-nav_title: "Braze Nutzer:innen"
-article_title: "Braze Nutzer:innen verwalten"
+nav_title: "Unternehmensnutzer:innen"
+article_title: "Verwalten Sie Nutzer:innen des Unternehmens"
 page_order: 23
 page_type: reference
-description: "Auf dieser Seite finden Sie Informationen zur Verwaltung Ihrer Braze Nutzer:innen, wie z.B. das Hinzufügen und Löschen von Nutzern, das Festlegen von Nutzer:innen, das Erstellen von Teams und die Verwaltung von Unternehmenseinstellungen."
+description: "Auf dieser Seite finden Sie Informationen zur Verwaltung Ihrer Nutzer:innen, z.B. zum Hinzufügen und Löschen von Nutzern, zum Festlegen von Nutzerberechtigungen, zum Erstellen von Teams und zum Verwalten der Einstellungen Ihres Unternehmens."
 ---
 
-# Braze Nutzer:innen verwalten
+# Verwalten Sie Nutzer:innen des Unternehmens
 
 > Hier erfahren Sie, wie die Nutzerverwaltung in Ihrem Firmenkonto einschließlich Hinzufügen, Sperren und Löschen von Personen funktioniert.
 
@@ -14,7 +14,7 @@ description: "Auf dieser Seite finden Sie Informationen zur Verwaltung Ihrer Bra
 Mehrere Abschnitte auf dieser Seite verweisen auf die Seite **Benutzer des Unternehmens**. Wenn Sie die [ältere Navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/) verwenden, heißt **Company Users** **Benutzer verwalten** und befindet sich unter Ihrem Kontosymbol.
 {% endalert %}
 
-## Hinzufügen von Braze-Benutzern
+## Nutzer:innen der Firma hinzufügen
 
 Sie benötigen Administratorrechte, um Personen zu Ihrem Braze-Konto hinzuzufügen. 
 
@@ -50,9 +50,9 @@ Aus Sicherheitsgründen können Benutzer die mit ihrem Braze-Konto verknüpfte E
 
 {% multi_lang_include permissions.md content="Differences" %}
 
-## Personen in Braze sperren
+## Sperrung von Nutzer:innen des Unternehmens
 
-Wenn Sie einen Benutzer sperren, wird sein Konto in einen inaktiven Zustand versetzt, in dem er sich nicht mehr anmelden kann, die mit seinem Konto verbundenen Daten jedoch erhalten bleiben. Nur Administratoren können Braze-Benutzer suspendieren oder ihre Suspendierung aufheben.
+Wenn Sie einen Benutzer sperren, wird sein Konto in einen inaktiven Zustand versetzt, in dem er sich nicht mehr anmelden kann, die mit seinem Konto verbundenen Daten jedoch erhalten bleiben. Nur Administratoren können Nutzer:innen des Unternehmens suspendieren oder ihre Suspendierung aufheben.
 
 Um einen Benutzer zu sperren, gehen Sie zu **Einstellungen** > **Firmenbenutzer**, suchen Sie seinen Benutzernamen und wählen Sie <i class="fa-solid fa-user-lock"></i> **Sperren**.
 
@@ -62,7 +62,7 @@ Administratoren können einen Benutzer auch sperren, indem sie seinen Namen in d
 
 ![Einen Nutzer:innen bei der Bearbeitung der Benutzerdetails sperren.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
-## Löschung von Braze-Benutzern
+## Nutzer:innen der Firma löschen
 
 Um einen Benutzer zu löschen, gehen Sie zu **Einstellungen** > **Firmenbenutzer**, suchen Sie seinen Benutzernamen und wählen Sie <i class="fa fa-trash-can"></i> **Benutzer löschen**.
 
@@ -86,9 +86,9 @@ Braze speichert die folgenden Kontodaten:
 
 ### Auswirkungen des Löschens eines Dashboard Nutzers:innen
 
-Wenn ein Nutzer:innen des Dashboards gelöscht wird, hat dies keine nennenswerten Auswirkungen auf die von ihm im Dashboard erstellten Assets, wie Kampagnen, Segmente und Canvase. Beachten Sie jedoch, dass im Feld **Erstellt von** für diese Assets anstelle der E-Mail Adresse des gelöschten Nutzers:innen ein Wert "null" angezeigt wird.
+Wenn ein Nutzer:innen des Dashboards gelöscht wird, hat dies keine nennenswerten Auswirkungen auf die von ihm im Dashboard erstellten Assets, wie Kampagnen, Segmente und Canvase. Beachten Sie jedoch, dass im Feld **Erstellt von** für diese Assets anstelle der E-Mail Adresse des gelöschten Nutzer:innen ein "Null"-Wert angezeigt wird.
 
-Wenn anschließend ein neuer Dashboard-Benutzer mit der gleichen E-Mail Adresse wie der gelöschte Nutzer:innen angelegt wird, wird Braze die vom gelöschten Nutzer:innen angelegten Assets nicht erneut mit dem neuen Nutzer:innen verknüpfen. Der neue Nutzer:innen des Dashboards fängt bei Null an und wird nicht als Ersteller von bestehenden Assets im Dashboard anerkannt.
+Wenn anschließend ein neuer Dashboard-Benutzer mit der gleichen E-Mail Adresse wie der gelöschte Nutzer:innen angelegt wird, wird Braze die vom gelöschten Nutzer:innen angelegten Assets nicht erneut mit dem neuen Nutzer:innen verknüpfen. Der neue Nutzer:innen des Dashboards fängt mit einem Neuanfang an und wird nicht als Ersteller der vorhandenen Assets im Dashboard anerkannt.
 
 ## Fehlersuche
 
