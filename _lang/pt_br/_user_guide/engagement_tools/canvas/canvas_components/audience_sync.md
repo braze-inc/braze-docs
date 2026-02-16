@@ -1,6 +1,6 @@
 ---
-nav_title: Sincronização do público do Canva
-page_order: 10
+nav_title: Sincronização com o público
+page_order: 3.5
 noindex: true
 tool: Canvas
 layout: redirect
