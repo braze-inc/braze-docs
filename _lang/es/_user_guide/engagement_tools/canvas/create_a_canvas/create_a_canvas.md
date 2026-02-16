@@ -136,9 +136,7 @@ Sólo los usuarios que coincidan con tus criterios definidos pueden entrar en el
 
 En **Controles de entrada**, puedes limitar el número de usuarios cada vez que se programe la ejecución del Canvas. Para los Canvas basados en acciones y desencadenantes de API, este límite se produce a cada hora UTC. 
 
-{% alert important %}
-Evite configurar una campaña basada en acciones o Canvas con el mismo desencadenante que el filtro de audiencia (como un atributo modificado o la realización de un evento personalizado). Puede darse una [condición de carrera]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) en la que el usuario no esté en la audiencia en el momento de realizar el evento desencadenante, lo que significa que no recibirá la campaña ni entrará en el Canvas.
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Canvas race condition audience trigger' %}
 
 ##### Prueba tu audiencia
 
