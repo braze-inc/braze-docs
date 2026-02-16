@@ -162,6 +162,14 @@ Au lieu d'essayer de rattraper le retard et d'envoyer les 6 000 messages restant
 
 Les demandes de contenu connecté ne sont pas soumises à une limite de débit indépendante et suivent la limite de débit du webhook. Cela signifie que s'il y a un appel de contenu connecté à un endpoint unique par webhook, vous devriez vous attendre à 5 000 webhooks et également à 5 000 appels de contenu connecté par minute. Notez que la mise en cache peut avoir une incidence sur ce point et réduire le nombre d'appels au contenu connecté. En outre, les tentatives peuvent augmenter le nombre d'appels au contenu connecté. Nous vous recommandons donc de vérifier que le point de terminaison du contenu connecté peut supporter une certaine fluctuation à ce niveau.
 
+{% alert note %}
+**Les limites de débit sont des limites de vitesse et ne définissent pas une vitesse d'envoi exacte.** En général, les messages sont répartis uniformément au cours d'une minute donnée et, dans la grande majorité des cas, ils sont envoyés à la limite configurée ou très près de celle-ci. Ce n'est pas toujours le cas, par exemple lorsque les messages sont très volumineux (tels que les e-mails contenant de nombreux blocs de contenu, des étiquettes de contenu connecté ou des étiquettes d'éléments de catalogue) ou lorsqu'il y a de nombreux abandons de liquides (les messages abandonnés consomment toujours un emplacement et peuvent réduire les taux d'envoi effectifs).
+
+Dans la pratique, le taux d'envoi soutenu (messages terminés par minute) peut être inférieur à la limite de débit configurée en raison des tentatives, de la variabilité du réseau, de la latence des endpoints en aval et du lissage par minute.
+
+Si vous constatez systématiquement un débit nettement inférieur à celui attendu, vérifiez les temps de réponse de Connected Content, les taux d'erreur (tels que `429`) et le comportement des tentatives.
+{% endalert %}
+
 ## À propos de la limite de fréquence
 
 Alors que votre base d'utilisateurs continue de croître et que votre envoi de messages s'étend pour inclure des campagnes sur le cycle de vie, des campagnes déclenchées, des campagnes transactionnelles et des campagnes de conversion, il est important d'éviter que vos messages ne paraissent "spammy" ou dérangeants. En offrant un meilleur contrôle sur l’expérience de vos utilisateurs, la limite de fréquence vous permet de créer les campagnes que vous souhaitez sans surcharger votre audience.
