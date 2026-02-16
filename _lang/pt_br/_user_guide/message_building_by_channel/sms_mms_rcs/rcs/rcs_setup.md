@@ -40,7 +40,7 @@ Antes de poder enviar mensagens RCS, é necessário registrar um remetente verif
 
 ![Um exemplo de remetente verificado por RCS em uma mensagem RCS chamada "Cat Failz Cafe".]({% image_buster /assets/img/rcs/rcs_sender.png %}){: style="max-width:60%;"}
 
-Depois de adicionar a(s) SKU(s) RCS ao seu formulário de pedido, a Braze será notificada e entrará em contato com você com as informações de registro do remetente RCS. O formato delas dependerá dos países para os quais você deseja enviar mensagens RCS. 
+Depois de adicionar a(s) SKU(s) RCS ao seu formulário de pedido, a Braze será notificada e entrará em contato com as informações de registro do remetente RCS. O formato delas dependerá dos países para os quais você deseja enviar mensagens RCS. 
 
 Depois de enviar os formulários preenchidos ao Braze, concluiremos o processo de registro em seu nome. 
 
@@ -48,11 +48,11 @@ Depois de enviar os formulários preenchidos ao Braze, concluiremos o processo d
 
 Como a cobertura atual das operadoras varia de acordo com o país, e o suporte ao hardware e ao software do usuário varia de acordo com o indivíduo, o fallback de SMS é um componente essencial para ter um programa RCS bem-sucedido atualmente. Recomendamos a configuração de um fallback de SMS. Se uma operadora não for compatível com RCS ou se o dispositivo de um usuário não puder receber mensagens RCS, o SMS fallback enviará sua mensagem independentemente disso, para que você nunca perca um momento importante com seus usuários.
 
-É altamente recomendável analisar sua experiência atual de aceitação de SMS, grupos de inscrições e segmentação de público antes de implantar sua primeira campanha de RCS. Se necessário, seu gerente de sucesso do cliente está sempre disponível para fornecer orientação e ajudá-lo a navegar pelo processo de configuração.
+É altamente recomendável analisar sua experiência atual de aceitação de SMS, grupos de inscrições e segmentação de público antes de implementar sua primeira campanha de RCS. Se necessário, o gerente de sucesso do cliente está sempre disponível para fornecer orientação e ajudá-lo a navegar pelo processo de configuração.
 
 ### Cronograma para aprovação da operadora
 
-O cronograma para aprovação da operadora varia de acordo com o país e também pode variar dentro de um mesmo país. Lembre-se de que o mercado de RCS ainda está em sua infância, portanto, os processos das operadoras e dos agregadores estão evoluindo rapidamente. Nos Estados Unidos, a Braze estima que o tempo de aprovação da operadora para um remetente verificado pelo RCS normalmente fica na faixa de 4 a 6 semanas, e um remetente de teste normalmente é aprovado em uma semana.
+O cronograma para aprovação da operadora varia de acordo com o país e também pode variar dentro de um mesmo país. Lembre-se de que o mercado de RCS ainda está em sua infância, portanto, os processos das operadoras e dos agregadores estão evoluindo rapidamente. Nos Estados Unidos, a Braze estima que o tempo de aprovação da operadora para um remetente verificado pelo RCS normalmente fica na faixa de 4 a 6 semanas, com um remetente de teste normalmente aprovado em uma semana.
 
 Quando o remetente verificado por RCS for aprovado, nossa equipe de operações atualizará seus grupos de inscrições conforme necessário para confirmar que o remetente RCS está incluído neles. 
 
