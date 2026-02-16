@@ -39,9 +39,7 @@ search_rank: 3
 
 セグメントに少なくとも1つのフィルターを追加する。好きなだけフィルターを組み合わせて、セグメンテーションをより具体的にすることができる。 
 
-{% alert note %}
-Braze は、アプリを初めて使用するまでユーザーのプロファイルを生成しないため、アプリをまだ開いていないユーザーをターゲットにすることはできません。
-{% endalert %}
+{% include alerts/note_alerts.md alert='Segment profiles first app use' %}
 
 #### フィルターグループ
 
