@@ -84,12 +84,12 @@ Wenn Sie weitere Unterstützung bei der Fehlerbehebung für Canvas und Kampagnen
 
 #### Was Sie wissen sollten
 - **Liquid Personalisierung:** Die Liquid Personalisierung wird bei jeder Anfrage aktualisiert.
-- **Platzierung und Banner-Verhältnis:** Jede Bannerplatzierung kann in bis zu 10 Kampagnen in einem Workspace verwendet werden.  
+- **Platzierung und Banner-Verhältnis:** Jede Bannerplatzierung kann in bis zu 25 Nachrichten in einem Workspace verwendet werden.  
 - **Klicks und Impressionen:** Klicks und Impressionen für Banner werden mit dem SDK automatisch getrackt.
 - **Beschränkungen:**  Derzeit werden die folgenden Features nicht unterstützt: Canvas-Integration, API-getriggerte und aktionsbasierte Kampagnen, Connected-Content, Aktionscodes, benutzergesteuerte Kündigungen und `catalog_items` unter Verwendung des [Tags`:rerender` ]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
 - **Testen:** Um den Testbanner anzuzeigen, muss das Gerät, das Sie verwenden, Push-Benachrichtigungen im Vordergrund empfangen können.
 - **Angepasstes HTML:** Nutzen Sie die [JS-Bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge), um Klicks zu protokollieren, wenn Sie angepasstes HTML verwenden, um Klick-Aktionen, wie Links und Buttons, zu definieren. Klick-Aktionen werden nur dann automatisch protokolliert, wenn Sie die vorgefertigten Komponenten im Drag-and-Drop-Editor verwenden.
-- **Anfrage zur Platzierung:** In einer einzigen Anfrage zur Aktualisierung können bis zu 10 Platzierungen an das SDK zurückgegeben werden. Jede Platzierung enthält das Banner mit der höchsten Priorität, für das ein Nutzer:innen in Frage kommt.
+- **Anfrage zur Platzierung:** Bis zu 10 Platzierungen können in einer einzigen Anfrage an das SDK zurückgegeben werden. Jede Platzierung enthält das Banner mit der höchsten Priorität, für das ein Nutzer:innen in Frage kommt.
 
 ## Content-Cards
 
