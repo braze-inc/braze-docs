@@ -38,6 +38,8 @@ Os cartões de contato (às vezes conhecidos como vCard ou Virtual Contact Files
 
 A criação de uma mensagem MMS requer que seu grupo de inscrições esteja configurado para o envio de MMS. Isso é indicado pela visualização da tag MMS ao selecionar um grupo de inscrições. Ao selecionar um grupo de inscrições habilitado para MMS, você poderá fazer upload de uma imagem, fazer referência a um URL de imagem ou incluir um cartão de contato.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 ![A guia "Compor" para escrever sua mensagem.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Especificações da imagem
