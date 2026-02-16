@@ -37,7 +37,7 @@ Dans le tableau Extensions de segments, sélectionnez **Créer une nouvelle exte
 Il s’agit de la meilleure option si vous ne souhaitez pas utiliser de code SQL.
 - **Commencez par un modèle :** Créez un segment SQL avec un modèle personnalisable en utilisant des données Snowflake.
 - **Actualisation progressive :** Écrivez un segment SQL Snowflake qui actualise automatiquement les deux derniers jours de données ou les actualise manuellement selon les besoins. Il s’agit du meilleur compromis précision/coût.
-- **Actualisation complète :** Ecrivez un segment SQL avec les données de Snowflake ou toute autre [source connectée à CDI]({{site.baseurl}}/cdi_segment_extensions/) qui actualise l'ensemble de l'audience lors d'une réactualisation manuelle. Il s’agit de la meilleure option lorsque vous avez besoin d’une vision complète et actualisée de votre audience.
+- **Actualisation complète :** Écrivez un segment SQL avec les données de Snowflake ou toute [source connectée à CDI]({{site.baseurl}}/cdi_segment_extensions/) qui actualise l'ensemble de l'audience lors d'une réactualisation manuelle. Il s’agit de la meilleure option lorsque vous avez besoin d’une vision complète et actualisée de votre audience.
 
 ![Table avec différentes expériences de création d'extensions de segments à choisir.]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%"}
 
@@ -96,7 +96,7 @@ Vous n'avez pas besoin des extensions de segment pour utiliser les propriétés 
 
 ### Étape 5 : Enregistrez votre extension de segment
 
-Après avoir sélectionné **Enregistrer**, le traitement de votre extension de segments commencera. Le temps nécessaire pour générer votre extension de segmentation dépend du nombre d'utilisateurs, du nombre d'événements personnalisés ou d'événements d'achat que vous capturez et du nombre de jours de l'historique.
+Une fois que vous aurez **enregistré**, le traitement de votre extension de segments commencera. Le temps nécessaire pour générer votre extension de segmentation dépend du nombre d'utilisateurs, du nombre d'événements personnalisés ou d'événements d'achat que vous capturez et du nombre de jours de l'historique.
 
 Pendant que votre extension de segment est en cours de traitement, vous verrez une petite animation à côté du nom de l'extension de segment, et le mot "Processing" dans la colonne **Last Processed (Dernier traitement) de** la liste des extensions de segment. Notez que vous ne pourrez pas modifier une extension de segments pendant qu'elle est en cours de traitement.
 
@@ -112,7 +112,7 @@ Après avoir créé une extension de segment, vous pouvez l'utiliser comme filtr
 
 Dans la liste de filtres Extension de segment de Braze, choisissez l'extension de segment que vous souhaitez inclure ou exclure dans ce segment.
 
-![Un filtre "Braze Segment Extensions" qui comprend une segmentation "1 clic sur un e-mail au cours des 56 derniers jours".]({% image_buster /assets/img/segment/segment_extension6.png %})
+![Un filtre "Braze Segment Extensions" qui comprend une segmentation "1 clic sur l'e-mail au cours des 56 derniers jours".]({% image_buster /assets/img/segment/segment_extension6.png %})
 
 Pour consulter les critères de segmentation, sélectionnez **Afficher les détails de l'extension** pour afficher les détails dans une nouvelle fenêtre.
 
