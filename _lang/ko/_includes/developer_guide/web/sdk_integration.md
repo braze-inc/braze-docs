@@ -62,6 +62,10 @@ Safari의 기본값인 **사이트 간 추적 방지** 설정을 사용하면 CD
 
 웹사이트에 Braze 웹 SDK를 추가한 후, Braze 대시보드의 **설정** > **앱 설정에** 있는 API 키와 [SDK 엔드포인트 URL로]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) 라이브러리를 초기화하세요. `braze.initialize()` 에 대한 전체 옵션 목록과 다른 JavaScript 메서드에 대한 자세한 내용은 [Braze JavaScript 설명서를](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) 참조하세요.
 
+{% alert note %}
+**웹 소프트웨어 개발 키트 요청을 위한 커스텀 도메인은 지원되지 않습니다**: 웹 SDK `baseUrl` 는 Braze SDK 엔드포인트(예: `sdk.iad-05.braze.com`)여야 합니다. Braze는 CNAME 레코드를 통해 고객 소유 도메인을 통해 웹 소프트웨어 개발 키트 트래픽을 라우팅하는 것을 지원하지 않습니다. 웹 소프트웨어 개발 키트 요청을 자체 도메인에서 시작해야 하는 경우 Braze 지원팀에 문의하세요.
+{% endalert %}
+
 ```javascript
 // initialize the SDK
 braze.initialize('YOUR-API-KEY-HERE', {
@@ -241,7 +245,7 @@ service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey={YOUR_API_KEY}&baseU
 
 #### 지원 비활성화하기
 
-사이트에서 RequireJS 또는 다른 AMD 모듈 로더를 사용하지만 이 목록의 다른 옵션 중 하나를 통해 Braze 웹 SDK를 로드하려는 경우 AMD 지원이 포함되지 않은 라이브러리 버전을 로드할 수 있습니다. 이 라이브러리 버전은 다음 CDN 위치에서 로드할 수 있습니다:
+사이트에서 RequireJS 또는 다른 AMD 모듈 로더를 사용하지만 이 목록의 다른 옵션 중 하나를 통해 Braze 웹 SDK를 로드하려는 경우 AMD 지원을 포함하지 않는 라이브러리 버전을 로드할 수 있습니다. 이 라이브러리 버전은 다음 CDN 위치에서 로드할 수 있습니다:
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
@@ -276,7 +280,7 @@ Jest를 사용할 때 `SyntaxError: Unexpected token 'export'` 와 유사한 오
 
 ### SSR 프레임워크 {#ssr}
 
-Next.js 과 같은 서버 측 렌더링(SSR) 프레임워크를 사용하는 경우 소프트웨어 개발 키트가 브라우저 환경에서 실행되도록 되어 있기 때문에 오류가 발생할 수 있습니다. SDK를 동적으로 가져오면 이러한 문제를 해결할 수 있습니다.
+Next.js 와 같은 서버 측 렌더링(SSR) 프레임워크를 사용하는 경우 소프트웨어 개발 키트가 브라우저 환경에서 실행되도록 되어 있기 때문에 오류가 발생할 수 있습니다. SDK를 동적으로 가져오면 이러한 문제를 해결할 수 있습니다.
 
 SDK에서 필요한 부분을 별도의 파일로 내보낸 다음, 해당 파일을 구성요소에 동적으로 가져오는 방식으로 트리 셰이킹의 이점을 유지할 수 있습니다.
 
