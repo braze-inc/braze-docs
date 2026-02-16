@@ -38,6 +38,8 @@ Les cartes de contact (parfois appelées vCard ou Virtual Contact Files (vcf)) s
 
 Pour créer un message MMS, votre groupe d'abonnement doit être configuré pour l'envoi de MMS. Pour le savoir, consultez la balise MMS lors de la sélection d’un groupe d’abonnement. Lorsque vous sélectionnez un groupe d'abonnement compatible MMS, vous avez la possibilité de télécharger une image, de faire référence à l'URL d'une image ou d'inclure une carte de contact.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 ![L'onglet "Composer" pour rédiger votre message.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Spécifications des images
