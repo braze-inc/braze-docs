@@ -140,7 +140,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
           "color": "ORANGE",
           "size": "6",
           "brand": "Braze"
-        }
+        },
         "type": [
           "price_drop",
           "back_in_stock"
@@ -1173,4 +1173,4 @@ Wir verwenden standardisierte Nutzer:innen Feldberechnungen für die folgenden F
 
 Diese Benutzerfeldberechnungen sind auch auf dem Tab **Transaktionen** der Nutzerprofile enthalten.
 
-![Der Tab "Transaktionen" mit von Nutzer:innen berechneten Feldern.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+![Der Tab "Transaktionen" mit von Nutzer:innen berechneten Feldern.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:70%;"}
