@@ -47,11 +47,11 @@ Para cada grupo de filtros, é possível visualizar os usuários alcançáveis e
 Você pode visualizar a estimativa de usuários alcançáveis de um segmento inteiro, incluindo contagens estimadas de usuários para cada canal, no painel lateral **Usuários Alcançáveis**. Esta **estimativa** mostra um intervalo aproximado para o tamanho do seu segmento e uma estimativa de que porcentagem da sua base de usuários geral se enquadra neste segmento. Observe que as estatísticas estimadas são armazenadas em cache por 15 minutos, a menos que você faça edições no seu segmento, caso em que as estatísticas estimadas serão atualizadas automaticamente. Você também pode ver uma contagem exata de usuários alcançáveis (tanto para o segmento geral quanto por canal) selecionando **Calcular estatísticas exatas**. 
 
 
-![O painel "Usuários alcançáveis" informando que há 2,3M—2,4M de usuários estimados.]({% image_buster /assets/img_archive/reachable_users_side_panel.png %})
+![O painel "Usuários alcançáveis" afirma que há 2,3M—2,4M de usuários estimados.]({% image_buster /assets/img_archive/reachable_users_side_panel.png %})
 
 ### Considerações para contagens estimadas
 
-A Braze mede o número de usuários estimados consultando um subconjunto de seus usuários e, em seguida, extrapola esses resultados para todo o seu público. Como o subconjunto de usuários que a Braze consulta pode diferir a cada vez que calculamos essa estimativa, a estimativa também pode mudar em casos onde a sua adesão ao público tecnicamente deveria ter permanecido a mesma. Por exemplo, se você reordenar seus filtros ou reexaminar o mesmo segmento em um momento diferente, é possível que a contagem estimada mude (mesmo que **Calcular estatísticas exatas** revele os mesmos resultados se seu segmento não mudar).
+A Braze mede o número de usuários estimados consultando um subconjunto de seus usuários e, em seguida, extrapola esses resultados para todo o seu público. Como o subconjunto de usuários que a Braze consulta pode diferir a cada vez que calculamos essa estimativa, a estimativa também pode mudar em casos onde a adesão do seu público tecnicamente deveria ter permanecido a mesma. Por exemplo, se você reordenar seus filtros ou verificar o mesmo segmento em um momento diferente, é possível que a contagem estimada mude (mesmo que **Calcular estatísticas exatas** revele os mesmos resultados se seu segmento não mudar).
 
 Se você tiver uma grande população de usuários em seu espaço de trabalho, pode ver mais variação entre suas contagens estimadas em comparação com suas contagens de cálculo exatas, especialmente em casos onde seu segmento é uma porcentagem muito pequena da população total do seu espaço de trabalho. Isso ocorre porque a Braze mede a estimativa consultando um subconjunto de seus usuários e extrapolando os resultados para toda a sua base de usuários. Para bases de usuários maiores, diferenças maiores entre contagens estimadas e exatas são esperadas.
 
@@ -63,13 +63,13 @@ Segmentos muito pequenos terão uma faixa estimada que inclui 0, significando qu
 
 Para ver o número de usuários que são alcançáveis para cada canal de mensagem, selecione **Mostrar detalhamento** no painel **Usuários alcançáveis**. Isso exibe alguns dos canais de mensagem mais utilizados (como web push ou e-mail) e o número de usuários alcançáveis para esses canais específicos. 
 
-A métrica _Total_ representa usuários únicos. Por exemplo, se um usuário tem tanto push Android quanto push iOS, ele será contado para ambas as linhas, mas contará como 1 usuário na linha _Total_.
+A métrica _Total_ representa usuários únicos. Por exemplo, se um usuário tem tanto push do Android quanto push do iOS, ele será contado para ambas as linhas, mas contará como 1 usuário na linha _Total_.
 
 No entanto, é possível que o número total de usuários seja diferente da soma de usuários alcançáveis por cada canal, já que um único usuário pode pertencer a diferentes grupos de usuários alcançáveis. Por exemplo, um usuário pode ter um endereço de e-mail válido e um token por push válido para Android e ter aceitação em ambos, mas não ter um token por push para iOS associado. 
 
 Lembre-se, nem todos os canais estão listados na tabela **Usuários alcançáveis** (como Cartões de Conteúdo, webhooks e WhatsApp). Por exemplo, se você tiver usuários apenas alcançáveis através do Whatsapp, eles serão refletidos no _Total_ mas não em nenhuma das linhas específicas do canal. Isso significa que o total de usuários alcançáveis pode ser diferente da soma dos usuários para cada canal exibido.
 
-Nos casos em que o _Total_ é maior do que a soma dos canais, a diferença representa o número de usuários que se qualificaram para o segmento, mas não estão acessíveis através desses canais de comunicação.
+Em casos onde o _Total_ é maior que a soma dos canais, a diferença representa o número de usuários que se qualificaram para o segmento, mas não estão acessíveis através desses canais de comunicação.
 
 Para que um usuário seja listado como alcançável através de um determinado canal, o usuário deve ter:
 - Um endereço de e-mail válido ou token por push associado ao seu perfil, e
@@ -88,7 +88,7 @@ Os seguintes filtros são aplicados para cada canal ao determinar usuários alca
 
 ## Calculando estatísticas exatas 
 
-Para visualizar uma contagem precisa do número de usuários em seu segmento, selecione **Calcular estatísticas exatas** no painel **Usuários alcançáveis**.
+Para visualizar uma contagem precisa do número de usuários em seu segmento, selecione **Calcular estatísticas exatas** no painel **Usuários Alcançáveis**.
 
 Para atualizar as estatísticas de um cálculo que você executou anteriormente, selecione **Atualizar estatísticas exatas**. A data em que este cálculo foi executado pela última vez será atualizada automaticamente.
 
@@ -98,7 +98,7 @@ Observe que a precisão de um cálculo é de apenas 99,999% ou mais. Portanto, p
 Segmentos divididos igualmente por [números de balde aleatórios]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) não terão o mesmo tamanho. Por exemplo, se você criar um segmento com o filtro **Baldes Aleatórios # menor que 5000** e um segmento com o filtro **Baldes Aleatórios # pelo menos 5000**, é possível e esperado que os tamanhos dos segmentos variem em até alguns pontos percentuais. Isso se deve a situações como usuários inativos sendo excluídos e usuários sendo inacessíveis.
 {% endalert %}
 
-![O painel "Usuários alcançáveis" com uma opção para mostrar a divisão.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
+![O painel "Usuários Alcançáveis" com uma opção para mostrar a divisão.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
 
 As estatísticas em nível de filtro sempre serão estimadas, mesmo que você calcule estatísticas exatas. **Calcular estatísticas exatas** apenas calcula as estatísticas exatas no nível do segmento, não no nível do filtro ou grupo de filtros. Esse cálculo pode levar alguns minutos para ser executado. Espaços de trabalho maiores, em particular, podem exigir períodos mais longos para concluir os cálculos. Você pode acompanhar seu progresso na barra de progresso no painel **Usuários alcançáveis**. Quando um cálculo deve levar mais de cinco minutos, a Braze enviará um e-mail com os resultados. 
 
@@ -118,7 +118,7 @@ Para todos os segmentos, você pode visualizar um gráfico de associação hist�
 
 Como o objetivo deste gráfico é dar uma noção das tendências gerais de associação do segmento, a contagem diária é uma estimativa, semelhante a como o tamanho do segmento é uma estimativa antes de você selecionar **Calcular Estatísticas Exatas**. E como este gráfico mostra estimativas, é possível que o tamanho do seu segmento apareça como "0" neste gráfico, mesmo que seu tamanho real (que pode ser determinado após selecionar **Calcular Estatísticas Exatas**) não seja "0". É especialmente provável que o gráfico mostre uma estimativa de "0" se seu segmento for muito pequeno em relação ao tamanho da população do seu espaço de trabalho.
 
-Por exemplo, digamos que seu espaço de trabalho contenha 100 milhões de usuários e seu segmento tenha cerca de 700 usuários. É possível que em alguns dias, nenhum usuário esteja no segmento, e nenhum usuário caia na faixa de balde aleatório usada para a estimativa de associação histórica, resultando em uma contagem de associação de 0 em um dia.
+Por exemplo, digamos que seu espaço de trabalho contenha 100 milhões de usuários e seu segmento tenha cerca de 700 usuários. É possível que em alguns dias, nenhum usuário esteja no segmento, e nenhum usuário caia na faixa de balde aleatório usada para a estimativa de associação histórica, resultando em uma contagem de associação de um dia de 0.
 
 A Braze estima a contagem de membros do segmento consultando um subconjunto de seus usuários e, em seguida, extrapolando esses resultados para todo o seu público. Isso significa que os resultados do gráfico fornecem apenas uma estimativa de qual pode ser a contagem de membros do segmento naquele dia, e espera-se que também flutue de dia para dia, pois um conjunto diferente de usuários pode ser consultado para essa estimativa a cada dia.
 
@@ -136,6 +136,6 @@ A contagem de membros pode mudar significativamente por uma série de razões, c
 | Os usuários são importados por CSV | Um arquivo CSV de usuários foi importado que aumentou significativamente a contagem de membros do segmento. |
 | Os critérios de audiência do segmento são modificados | As regras de audiência de um segmento existente (como filtros) foram alteradas, causando mudanças significativas na contagem de membros do segmento. |
 | Os usuários são excluídos | Um número significativo de usuários foi excluído. |
-| Uma integração com parceiros foi sincronizada com a Braze | Um terceiro enviou dados para a Braze que influenciaram significativamente a contagem de membros do segmento. |
+| Uma integração com parceiros sincronizou com a Braze | Um terceiro enviou dados para a Braze que influenciaram significativamente a contagem de membros do segmento. |
 | Usuários inativos são arquivados | Um número significativo de perfis inativos foi arquivado. Por exemplo, um grande número de usuários importados por CSV nunca registra atividade e é arquivado ao mesmo tempo. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
