@@ -14,7 +14,7 @@ channel:
 
 La livrabilité des e-mails est au cœur de la réussite d'une campagne. Grâce au Centre de livrabilité du tableau de bord de Braze, vous pouvez visualiser vos domaines par **réputation IP** ou **erreurs de réception/distribution** afin de découvrir et de résoudre tout problème potentiel de livrabilité des e-mails. 
 
-Pour accéder au Centre de livrabilité, vous devez disposer des [autorisations utilisateur]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) « Accéder aux campagnes, aux canvas, aux cartes, aux segments, à la bibliothèque multimédia » et « Afficher les données d’utilisation ».
+Pour accéder au centre de livrabilité, vous devez disposer des [autorisations d'utilisateur]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)"Accéder aux campagnes, aux canevas, aux cartes, aux segments, à la bibliothèque multimédia" et "Voir les données d'utilisation".
 
 ## Configuration de votre compte Google Postmaster
 
@@ -22,17 +22,19 @@ Avant de vous connecter au Centre de livrabilité, vous devez créer un compte G
 
 1. Accédez au [tableau de bord de Google Postmaster Tools](https://postmaster.google.com/managedomains?pli=1).
 2. En bas à droite, sélectionnez l'icône <i class="fas fa-plus-circle"></i> plus.
-3. Saisissez votre domaine ou sous-domaine racine pour authentifier votre e-mail. Si vous ajoutez et vérifiez le domaine racine, cela permettra d'appliquer la vérification en aval aux sous-domaines. Par exemple, en vérifiant `braze.com`, vous pouvez ensuite ajouter `demo.braze.com` et d'autres sous-domaines sans devoir les vérifier individuellement.
-4. Google génère un enregistrement TXT qui peut être ajouté directement aux DNS de votre domaine. Il appartient généralement à la personne qui gère votre DNS. Pour obtenir des informations et des conseils sur la manière de mettre à jour votre DNS spécifique, consultez [Vérifier votre domaine (étapes spécifiques à l'hôte)](https://support.google.com/a/topic/1409901).
-5. Sélectionnez **Suivant.** <br>![Un exemple de domaine "demo.braze.com" pour authentifier un e-mail.]({% image_buster /assets/img_archive/domain_authentication.png %})
-6. Une fois l'enregistrement TXT ajouté aux DNS, retournez dans le tableau de bord de Google Postmaster Tools et sélectionnez **Vérifier.** Cette étape confirme que vous êtes propriétaire du domaine, ce qui vous permettra d'accéder aux indicateurs de livrabilité de Gmail dans votre compte Postmaster. <br> ![Invitation à vérifier la propriété du domaine "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
+3. Saisissez votre domaine ou sous-domaine racine pour authentifier votre e-mail. Si vous ajoutez et vérifiez le domaine racine, cela permet d'appliquer la vérification aux sous-domaines. Par exemple, en vérifiant `braze.com`, vous pouvez ensuite ajouter `demo.braze.com` et d'autres sous-domaines sans les vérifier individuellement.
 
-{% alert tip %}
-Assurez-vous que l'enregistrement TXT est lié au domaine parent, et non au sous-domaine que vous utilisez par l'intermédiaire de Braze.
+{% alert important %}
+Assurez-vous que l'enregistrement TXT est lié au domaine parent, et non au sous-domaine que vous utilisez via Braze.
 {% endalert %}
 
+{: start="4"}
+4\. Google génère un enregistrement TXT qui peut être ajouté directement aux DNS de votre domaine. Il appartient généralement à la personne qui gère votre DNS. Pour obtenir des informations et des conseils sur la manière de mettre à jour votre DNS spécifique, consultez [Vérifier votre domaine (étapes spécifiques à l'hôte)](https://support.google.com/a/topic/1409901).
+5\. Sélectionnez **Suivant.** <br>![Un exemple de domaine "demo.braze.com" pour authentifier un e-mail.]({% image_buster /assets/img_archive/domain_authentication.png %})
+6\. Une fois l'enregistrement TXT ajouté aux DNS, retournez dans le tableau de bord de Google Postmaster Tools et sélectionnez **Vérifier.** Cette étape confirme que vous êtes propriétaire du domaine, afin que vous puissiez accéder aux indicateurs de livrabilité de Gmail dans votre compte Postmaster. <br> ![Invitation à vérifier la propriété du domaine "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
+
 {% alert note %}
-Si vos sous-domaines ne sont pas inclus dans le centre de livrabilité de Google Postmaster, cela peut être dû au fait que vous n'avez ajouté que le domaine parent à Google Postmaster. Une fois les domaines parents vérifiés dans Google Postmaster, vous pouvez ajouter vos sous-domaines, qui seront vérifiés automatiquement. Ce processus permet à Google de fournir des indicateurs au niveau du sous-domaine, qui peuvent ensuite être intégrés dans le Centre de livrabilité de Braze.
+Si vos sous-domaines ne sont pas inclus dans le centre de livrabilité de Google Postmaster, cela peut être dû au fait que vous n'avez ajouté que le domaine parent à Google Postmaster. Une fois les domaines parents vérifiés dans Google Postmaster, vous pouvez ajouter vos sous-domaines, qui sont vérifiés automatiquement. Ce processus permet à Google de fournir des indicateurs au niveau du sous-domaine, qui peuvent ensuite être intégrés dans le Centre de livrabilité de Braze.
 {% endalert %}
 
 ## Intégration de Google Postmaster
@@ -46,7 +48,7 @@ Pour intégrer Google Postmaster et configurer votre Centre de livrabilité, pro
 3. Sélectionnez **Connecter avec Google Postmaster**. 
 4. Sélectionnez votre compte Google, puis sélectionnez **Autoriser** pour permettre à Braze d'afficher les indicateurs de trafic e-mail pour les domaines enregistrés avec les Outils Postmaster. 
 
-Vos domaines vérifiés s'afficheront dans le centre de livrabilité. 
+Vos domaines vérifiés s'affichent dans le Centre de livrabilité. 
 
 ![Deux domaines vérifiés pour Google Postmaster avec une réputation moyenne et faible.]({% image_buster /assets/img_archive/deliverability_center2.png %})
 
@@ -63,9 +65,9 @@ Pour vous aider à comprendre les évaluations de la réputation des adresses IP
 | Notation de la réputation | Définition |
 | ----- | ---------- |
 | Élevée | a de bons antécédents en ce qui concerne le nombre de plaintes pour spam (par exemple, les utilisateurs qui cliquent sur le bouton "spam"). |
-| Moyen/faible | Connu pour générer un engagement positif, mais reçoit occasionnellement des plaintes pour spam. La plupart des e-mails provenant de ce domaine seront envoyés dans la boîte de réception, sauf en cas d'augmentation des plaintes pour spam. |
+| Moyen/faible | Connu pour générer un engagement positif, mais reçoit occasionnellement des plaintes pour spam. La plupart des e-mails de ce domaine sont envoyés dans la boîte de réception, sauf en cas d'augmentation des plaintes pour spam. |
 | Faible | Connu pour recevoir régulièrement des taux élevés de plaintes pour spam. Les e-mails provenant de cet expéditeur seront probablement filtrés dans le dossier spam. |
-| Mauvais | a l'habitude de recevoir des taux élevés de plaintes pour spam. Les e-mails provenant de ce domaine seront presque toujours rejetés au moment de la connexion ou filtrés vers le dossier spam. |
+| Mauvais | a l'habitude de recevoir des taux élevés de plaintes pour spam. Les e-mails provenant de ce domaine sont presque toujours rejetés au moment de la connexion ou filtrés vers le dossier spam. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Réputation du domaine 
@@ -74,10 +76,10 @@ Utilisez le tableau suivant pour surveiller et comprendre les évaluations de la
 
 | Notation de la réputation | Définition |
 | ----- | ---------- |
-| Élevée | Il a de bons antécédents en ce qui concerne le nombre très faible de plaintes pour spam. Conforme aux directives de Gmail relatives aux expéditeurs. Les e-mails sont rarement filtrés vers le dossier spam. A un taux de spam très bas. Conforme aux [directives de Gmail relatives aux expéditeurs.](https://developers.google.com/gmail/markup/registering-with-google) |
-| Moyen/faible | Connu pour générer un engagement positif mais a occasionnellement reçu un faible volume de plaintes pour spam. La plupart des e-mails provenant de ce domaine arriveront dans la boîte de réception (sauf en cas d'augmentation notable du nombre de spams). |
+| Élevée | Il a de bons antécédents en ce qui concerne le nombre très faible de plaintes pour spam. Conforme aux directives de Gmail relatives aux expéditeurs. Les e-mails sont rarement filtrés dans le dossier spam. A un taux de spam très bas. Conforme aux [directives de Gmail relatives aux expéditeurs.](https://developers.google.com/gmail/markup/registering-with-google) |
+| Moyen/faible | Connu pour générer un engagement positif, mais a occasionnellement reçu un faible volume de plaintes pour spam. La plupart des e-mails provenant de ce domaine arrivent dans la boîte de réception (sauf en cas d'augmentation notable du nombre de spams). |
 | Faible | Connu pour recevoir régulièrement des plaintes pour spam. Les e-mails provenant de cet expéditeur seront probablement filtrés dans le dossier spam. |
-| Mauvais | a l'habitude de recevoir des taux élevés de plaintes pour spam. Les e-mails provenant de ce domaine seront presque toujours rejetés au moment de la connexion ou filtrés vers le dossier spam. |
+| Mauvais | a l'habitude de recevoir des taux élevés de plaintes pour spam. Les e-mails provenant de ce domaine sont presque toujours rejetés au moment de la connexion ou filtrés vers le dossier spam. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Authentification
@@ -154,7 +156,7 @@ Pour calculer le taux de réclamation, divisez le nombre de réclamations par le
 Le nombre d'occurrences du piège à spam correspond au nombre de messages envoyés à des "comptes pièges", c'est-à-dire des comptes gérés par Outlook.com qui ne sollicitent aucun courrier. Il est probable que les messages envoyés à ces comptes pièges soient considérés comme du spam, il est donc important de surveiller cette mesure pour s'assurer qu'elle est faible. Si le nombre d'occurrences du piège à spam est faible, cela signifie que les messages ne sont pas envoyés à ces comptes et qu'ils sont plutôt envoyés à des comptes réels.
 
 {% alert tip %}
-Si vous recherchez des enregistrements liés à l'un de vos domaines vérifiés dans Braze, notez que le Centre de livrabilité répertorie vos données à partir de Google Postmaster ou de Microsoft SNDS, ce qui signifie qu'il est probable que l'une ou l'autre plateforme n'ait pas de données à partager avec Braze. Par ailleurs, nous vous suggérons de maintenir une réception/distribution régulière des e-mails, ce qui peut vous permettre d'améliorer votre réputation.
+Si vous recherchez des enregistrements liés à l'un de vos domaines vérifiés dans Braze, notez que le Centre de livrabilité répertorie vos données à partir de Google Postmaster ou de Microsoft SNDS, ce qui signifie qu'il est probable que l'une ou l'autre plateforme n'ait aucune donnée à partager avec Braze. Par ailleurs, nous vous suggérons de maintenir une réception/distribution régulière des e-mails, ce qui peut vous permettre d'améliorer votre réputation.
 {% endalert %}
 
 
