@@ -2,7 +2,7 @@
 nav_title: エージェント
 article_title: エージェントステップ
 alias: /agent_step/
-page_order: 0.2
+page_order: 2
 page_type: reference
 description: "このリファレンス記事では、キャンバスでエージェントステップを使用してコンテンツを生成したり、リアルタイムでインテリジェントな意思決定を行う方法について説明します。"
 tool: Canvas
