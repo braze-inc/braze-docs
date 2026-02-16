@@ -48,6 +48,10 @@ Ya no puedes crear o duplicar Lienzos utilizando el editor original. Este artíc
 - No puedes utilizar `event_properties` en el paso Mensaje principal. En su lugar, puedes utilizar `canvas_entry_properties` o añadir un paso Rutas de acción con el evento correspondiente **antes** del paso Mensaje que incluye `event_properties`.
 - Cuando un paso de Ruta de acción contiene un activador "Envió de un mensaje SMS entrante" o "Envió de un mensaje WhatsApp entrante", los pasos posteriores de Canvas pueden incluir una propiedad SMS o WhatsApp Liquid. Esto refleja cómo funcionan las propiedades del evento en los Lienzos. De este modo, puede aprovechar sus mensajes para guardar y consultar datos de origen sobre perfiles de usuario y mensajería conversacional.
 
+{% alert note %}
+La elegibilidad de la audiencia se evalúa una vez a la entrada en Canvas. Si un usuario se fusiona durante la entrada, el usuario identificado continúa a través del Canvas y no se vuelve a evaluar según los criterios de segmentación del Canvas.
+{% endalert %}
+
 {% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
 
 ### Marcas de tiempo para propiedades del evento
