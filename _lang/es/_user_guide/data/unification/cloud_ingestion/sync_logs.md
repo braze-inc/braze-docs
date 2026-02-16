@@ -33,7 +33,7 @@ Los registros de sincronización también proporcionan los siguientes detalles p
 * **Resultados:** Un desglose de cuántas filas tuvieron éxito o fallaron en la ejecución.  
 * **Última "UPDATED_AT":** La marca de tiempo del registro más reciente procesado en esta ejecución de sincronización.  
 * **Hora de inicio de la carrera:** Cuando comenzó el trabajo de sincronización.  
-* **Duración de la carrera:** El tiempo total que tardó en completarse la tarea de sincronización.
+* **Duración de la carrera:** El tiempo total que tardó en completarse el trabajo de sincronización.
 
 ![Detalles de un registro de sincronización.]({% image_buster /assets/img/cloud_ingestion/sync_logs3.png %}){: style="max-width:80%"}
 
@@ -51,7 +51,7 @@ Puedes filtrar la tabla de registros de sincronización para encontrar ejecucion
 * **Estado:** Filtrar por uno o más estados de sincronización (como mostrar sólo los estados **Error** y **Éxito parcial** ).  
 * **Nombre de sincronización:** Busca una sincronización concreta por su nombre.
 
-Para investigar una sincronización concreta, selecciona el **ID de ejecución** correspondiente en la tabla Registros de sincronización. En la página **Detalles de la ejecución**, encontrarás un registro granular, fila por fila, de la sincronización.
+Para investigar una sincronización concreta, selecciona el **ID de ejecución** correspondiente de la tabla Registros de sincronización. En la página **Detalles de la ejecución**, encontrarás un registro granular, fila por fila, de la sincronización.
 
 ### Resumen de la ejecución
 
@@ -82,9 +82,7 @@ Selecciona **Exportar filas** para exportar los registros a nivel de fila de una
 * **Filas con errores:** Descarga un archivo que contiene sólo las filas que tenían un estado de **Error**.
 * **Todas las filas:** Descarga un archivo que contiene todas las filas procesadas en la ejecución.
 
-{% alert important %}
-La exportación de los registros de sincronización de todas las filas está actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Exporting sync logs for all rows' %}
 
 Los registros no se pueden exportar directamente desde el panel. Una vez generada la exportación, recibirás un correo electrónico con un enlace para descargar el archivo de exportación del registro. 
 
