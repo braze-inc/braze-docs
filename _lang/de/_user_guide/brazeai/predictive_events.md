@@ -2,7 +2,7 @@
 nav_title: Voraussichtliche Events
 article_title: Voraussichtliche Events
 description: "Dieser Artikel befasst sich mit Predictive Events (früher Predictive Purchases), einem Tool der Braze Predictive Suite, das Marketern die Möglichkeit gibt, Nutzer:in auf der Grundlage ihrer Wahrscheinlichkeit, ein Ereignis auszuführen, zu identifizieren und ihnen Nachrichten zu senden."
-page_order: 2.1
+page_order: 10
 alias: /predictive_purchases/
 search_rank: 1
 ---
@@ -21,7 +21,7 @@ Der wahre Wert von Predictive Events liegt in der Verwendung der Vorhersageergeb
 
 ## Zugriff auf prognostizierte Ereignisse
 
-Die Seite **Prognosen** befindet sich im Bereich **Analysen**. Für einen vollständigen Zugang wenden Sie sich bitte an Ihren Kundenbetreuer.
+{% include brazeai/predictions_page_access.md %}
 
 Bevor Sie dieses Feature kaufen, ist es in der Vorschau verfügbar. Dies erlaubt es Ihnen, eine Demo-Prognose mit synthetischen Daten zu sehen und jeweils eine Vorschau eines Prognosemodells zu erstellen. Diese Vorhersage wird auf der Grundlage Ihrer tatsächlichen Nutzerdaten erstellt, ermöglicht es Ihnen jedoch nicht, Nutzer entsprechend ihrer Wahrscheinlichkeitsbewertung für Nachrichten anzusprechen. Es wird auch nicht regelmäßig nach der Erstellung aktualisiert.
 
