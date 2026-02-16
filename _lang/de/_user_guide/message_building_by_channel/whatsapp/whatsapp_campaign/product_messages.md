@@ -78,7 +78,7 @@ Sie können die Produkte entweder manuell mit IDs auswählen oder, wenn Sie bei 
 1. Folgen Sie im [Meta Commerce Manager:](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fbusiness.facebook.com%2Fcommerce_manager%2F#)in den [Anweisungen von Meta](https://www.facebook.com/business/help/1275400645914358?id=725943027795860&ref=search_new_1), um Ihren Meta-Katalog zu erstellen. Vergewissern Sie sich, dass Sie sich in demselben Meta Business Portfolio befinden, in dem sich auch Ihr mit Braze verbundenes WhatsApp Business-Konto befindet.
 2. Folgen Sie den Anweisungen von Meta, um [Ihren Meta-Katalog](https://www.facebook.com/business/help/1953352334878186?id=2042840805783715) mit Ihrem mit Braze verbundenen WhatsApp Business Account [zu verbinden](https://www.facebook.com/business/help/1953352334878186?id=2042840805783715), indem Sie die Berechtigung "Katalog verwalten" im Meta Business Manager zuweisen. 
 
-![Meta-Seite "Kataloge" mit einem Pfeil, der auf den Button "Partner zuweisen" für den Katalog namens "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png %}){: style="max-width:90%;"}
+![Meta-Seite "Kataloge" mit einem Pfeil, der auf den Button "Partner zuweisen" für den Katalog namens "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png zeigt %}){: style="max-width:90%;"}
 
 Stellen Sie sicher, dass Sie die Braze Business Manager:in ID, `332231937299182`, als Partner Business ID verwenden.
 
@@ -100,7 +100,7 @@ Die besten Vorgehensweisen für die Erstellung von Meta-Katalogen finden Sie unt
 
 ## Erstellen einer Nachricht über ein Produkt
 
-Sie können eine Nachricht zu einem Produkt erstellen, indem Sie eine WhatsApp Template Nachricht oder eine Antwortnachricht verwenden.
+Sie können eine Nachricht über ein Produkt erstellen, indem Sie eine WhatsApp Template Nachricht oder eine Antwortnachricht verwenden.
 
 {% tabs local %}
 {% tab WhatsApp message template %}
@@ -251,7 +251,7 @@ Rufen Sie Ihr E-Commerce-System über eine API auf, um eine personalisierte Chec
 1. Erstellen Sie eine Webhook-Kampagne oder einen Canvas-Schritt, der durch das [`ecommerce.cart_update`]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/?tab=ecommerce.cart_updated) eCommerce-Ereignis ausgelöst wird, der die Daten des Warenkorbs an Ihr E-Commerce-System sendet.
 2. Erstellen Sie eine WhatsApp-Kampagne oder einen Canvas-Schritt, der durch dasselbe E-Commerce-Ereignis getriggert wird, um dem Nutzer:innen eine WhatsApp-Nachricht mit der URL des Warenkorbs zu senden. Folgen Sie den Anweisungen in der folgenden Nachricht, um [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) zu verwenden.
 
-![Das Diagramm zeigt den Checkout-Workflow für einen Connected-Content-Aufruf: Meta sendet eine Nachricht über den Eingang einer Bestellung an Braze, das mit einer E-Commerce-Plattform hin und her telefoniert, und schickt dann eine WhatsApp-Nachricht.]({% image_buster /assets/img/whatsapp/connected_content_checkout.png %})
+![Das Diagramm zeigt den Checkout-Workflow für einen Connected-Content-Aufruf: Meta sendet eine Nachricht über den Eingang einer Bestellung an Braze, die mit einer E-Commerce-Plattform hin und her telefoniert, und schickt dann eine WhatsApp-Nachricht.]({% image_buster /assets/img/whatsapp/connected_content_checkout.png %})
 
 {% endtab %}
 {% tab Webhook and custom events %}
