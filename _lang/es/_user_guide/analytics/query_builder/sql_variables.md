@@ -9,7 +9,7 @@ tool: Reports
 
 # Generador de consultas Variables SQL
 
-> Aprende a utilizar las variables SQL en el Generador de consultas, para que puedas reutilizar tus consultas y evitar codificar datos en tu código.
+> Aprende a utilizar variables SQL en el Generador de consultas, para que puedas reutilizar tus consultas y evitar codificar datos en tu código.
 
 ## ¿Por qué utilizar variables SQL?
 
@@ -53,7 +53,7 @@ WHERE campaign_id = '{{campaign.${Campaign}}}'
 
 ### Paso 2: Asignar un valor
 
-Por predeterminado, la pestaña **Variables** no se muestra en el Generador de consultas. Sólo aparece después de añadir tu primera variable a la consulta. Allí podrás asignarle un valor. Los valores específicos que puedes elegir dependerán del [tipo de](#variable-types) esa variable concreta.
+Por predeterminado, la pestaña **Variables** no se muestra en el Generador de consultas. Sólo aparece después de añadir tu primera variable a la consulta. Allí podrás asignarle un valor. Los valores concretos que puedes elegir dependerán del [tipo](#variable-types) específico de esa variable.
 
 En el siguiente ejemplo, se asigna un valor a la campaña "Lanzamiento de características en verano", junto con el primer y el último día de junio de 2025.
 
