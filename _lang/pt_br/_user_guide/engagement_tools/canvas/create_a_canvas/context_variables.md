@@ -26,9 +26,9 @@ Quando definida, você pode usar uma variável de contexto em todo o Canva fazen
 
 Por exemplo, o site {% raw %}`{{context.${flight_time}}}`{% endraw %} poderia retornar o horário do voo programado do usuário.
 
-Cada vez que um usuário entrar no Canva - mesmo que já tenha entrado antes - as variáveis de contexto serão redefinidas com base nos dados de entrada mais recentes e na configuração do Canvas. Essa abordagem com estado permite que cada entrada do Canva mantenha seu próprio contexto independente, permitindo que os usuários tenham vários estados ativos na mesma jornada, mantendo o contexto específico de cada estado.
+Cada vez que um usuário entrar no Canva, mesmo que já tenha entrado antes, as variáveis de contexto serão redefinidas com base nos dados de entrada mais recentes e na configuração do Canvas. Essa abordagem com estado permite que cada entrada do Canva mantenha seu próprio contexto independente, permitindo que os usuários tenham vários estados ativos na mesma jornada, mantendo o contexto específico de cada estado.
 
-Por exemplo, se um cliente tiver dois voos futuros, ele terá dois estados de jornada separados em execução simultaneamente - cada um com suas próprias variáveis de contexto específicas do voo, como horário de partida e destinos. Isso permite enviar lembretes personalizados sobre o voo das 14h para Nova York e, ao mesmo tempo, enviar atualizações diferentes sobre o voo das 8h para Los Angeles amanhã, de modo que cada mensagem permaneça relevante para a reserva específica.
+Por exemplo, se um cliente tiver dois voos futuros, ele terá dois estados de viagem separados em execução simultaneamente - cada um com suas próprias variáveis de contexto específicas do voo, como horário de partida e destinos. Isso permite enviar lembretes personalizados sobre o voo das 14h para Nova York e, ao mesmo tempo, enviar atualizações diferentes sobre o voo das 8h para Los Angeles amanhã, de modo que cada mensagem permaneça relevante para a reserva específica.
 
 ## Considerações
 
@@ -71,7 +71,7 @@ Por exemplo, se estiver enviando uma mensagem a um usuário no dia anterior ao s
 
 É possível usar variáveis de contexto em qualquer lugar que use Liquid em um Canva, como nas etapas [de Mensagem]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) e [Atualização do usuário]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update), selecionando **Adicionar personalização**.
 
-Por exemplo, digamos que você queira notificar os passageiros sobre o acesso à sala VIP antes do próximo voo. Essa mensagem deve ser enviada apenas aos passageiros que compraram um bilhete de primeira classe. Uma variável de contexto é uma maneira flexível de rastrear essas informações.
+Por exemplo, digamos que você queira notificar os passageiros sobre seu acesso à sala VIP antes do próximo voo. Essa mensagem deve ser enviada apenas aos passageiros que compraram um bilhete de primeira classe. Uma variável de contexto é uma maneira flexível de rastrear essas informações.
 
 Os usuários entrarão no Canva quando comprarem uma passagem aérea. Para determinar a elegibilidade de acesso ao lounge, criaremos uma variável de contexto chamada `lounge_access_granted` em uma etapa de Contexto e, em seguida, faremos referência a essa variável de contexto nas etapas subsequentes da jornada do usuário.
 
@@ -92,7 +92,7 @@ Em seguida, criaremos uma etapa de mensagens para direcionamento aos usuários o
 
 ### Para jornadas de ação e critérios de saída
 
-Você pode aproveitar a comparação de filtros de propriedades com variáveis de contexto ou atributos personalizados nessas ações-gatilho: **Realize o evento personalizado** e **faça a compra**. Essas ações-gatilho também suportam filtros de propriedade para propriedades básicas e aninhadas. 
+Você pode aproveitar a comparação de filtros de propriedade com variáveis de contexto ou atributos personalizados nessas ações-gatilho: **Execute o evento personalizado** e **faça a compra**. Essas ações-gatilho também suportam filtros de propriedade para propriedades básicas e aninhadas. 
 
 - Ao comparar com propriedades básicas, as comparações disponíveis corresponderão ao tipo de propriedade definido pelo evento personalizado. Por exemplo, as propriedades de string terão correspondências regex exatamente iguais. As propriedades booleanas serão verdadeiras ou falsas. 
 - Ao comparar com propriedades aninhadas, os tipos não são predefinidos, portanto, você pode selecionar comparações entre vários tipos de dados para booleanos, números, strings, hora e dia do ano, semelhante às comparações para atributos personalizados aninhados. Se for selecionado um tipo de dados que não corresponda ao tipo de dados real da propriedade aninhada no momento da comparação, o usuário não corresponderá aos critérios de jornada de ação ou de saída.
@@ -163,6 +163,8 @@ Da mesma forma que as variáveis de contexto do Canva têm tipos predefinidos, a
 Use o mesmo tipo de dados para sua variável de contexto e comparação. Por exemplo, se sua variável de contexto for um tipo de dados de tempo, use comparações de tempo (como "antes" ou "depois"). O uso de tipos de dados incompatíveis (como comparações de string com uma variável de contexto de tempo) pode causar um comportamento inesperado.
 {% endalert %}
 
+{% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
+
 Aqui está um exemplo de um filtro de variável de contexto que compara a variável de contexto `product_name` com o regex `/braze/`.
 
 ![Uma configuração de filtro para a variável de contexto "product_name" para corresponder ao regex "/braze/".]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}
@@ -201,4 +203,4 @@ Em todas as circunstâncias, recomendamos enfaticamente o uso dos [filtros Liqui
 ## Artigos relacionados
 
 - [Etapa de contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/)
-- [Personalização e conteúdo dinâmico com Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
+- [Personalização e conteúdo dinâmico com o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
