@@ -40,11 +40,7 @@ description: "このリファレンス記事では、Braze のユーザープロ
 
 ### 外部IDに関する考察
 
-{% alert warning %}
-ユーザープロファイルを一意に識別する前に、`external_id` を割り当てないこと。ユーザーを識別した後、匿名ユーザーに戻すことはできません。
-<br><br>
-`external_id` は[`/users/external_ids/rename` エンドポイントを使って]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/)更新できる。しかし、ユーザーのセッション中に異なる`external_id` を設定しようとすると、新しい`external_id` に関連付けられた新しいユーザープロファイルが作成される。2 つのプロファイル間でデータは渡されません。
-{% endalert %} 
+{% include alerts/warning_alerts.md alert='User profile external_id' %} 
 
 #### メールやハッシュ化されたメールを外部IDとして使用するリスク
 
