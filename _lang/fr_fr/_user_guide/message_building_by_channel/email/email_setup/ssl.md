@@ -22,7 +22,7 @@ La sécurisation de votre site Internet et des liens avec SSL est une pratique c
 
 ### Nécessaire pour le suivi des clics et des ouvertures
 
-Braze transforme vos liens en utilisant le sous-domaine de suivi des liens de votre marque pour suivre les clics et les ouvertures. Par défaut, ces liens commencent par HTTP. Les utilisateurs disposant de navigateurs ou d'extensions qui restreignent le trafic non sécurisé peuvent avoir des difficultés à passer par la redirection avant l'URL de destination, même si l'URL est sécurisée. Cela peut entraîner des ruptures d'images et un suivi imprécis. Appliquez SSL au sous-domaine de suivi des liens pour confirmer la sécurité des redirections.
+Braze transforme vos liens en utilisant le sous-domaine de suivi des liens de votre marque pour suivre les clics et les ouvertures. Par défaut, ces liens commencent par HTTP. Les utilisateurs disposant de navigateurs ou d'extensions qui restreignent le trafic non sécurisé peuvent avoir des difficultés à passer par la redirection avant l'URL de destination, même si l'URL est sécurisée. Cela peut entraîner des images cassées et un suivi imprécis. Appliquez SSL au sous-domaine de suivi des liens pour confirmer la sécurité des redirections.
 
 ### Exigences du navigateur
 
@@ -56,7 +56,7 @@ La configuration CDN se fait toujours lorsque Braze a obtenu et validé vos enre
 Pour le suivi des clics et des ouvertures, les partenaires de réception/distribution transforment les liens en utilisant un sous-domaine de marque et le réseau de diffusion de contenu applique le certificat SSL à ces liens transformés. Les partenaires doivent souvent présenter des certificats valides au navigateur du destinataire pour que les liens et les images s'affichent correctement. Braze ne demandant ni ne gérant les certificats, vous devez passer par un réseau de diffusion contenu. 
 
 {% alert note %}
-Si vous ne pouvez pas ou ne voulez pas utiliser les CDN répertoriés pour le suivi SSL des clics et des ouvertures, vous pouvez mettre en place une configuration SSL personnalisée. Les CDN alternatifs ou les proxys personnalisés peuvent donner lieu à une configuration plus complexe. Reportez-vous à la documentation de [SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) et de [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/).
+Si vous ne pouvez pas ou ne voulez pas utiliser les CDN listés pour le suivi SSL des clics et des ouvertures, vous pouvez mettre en place une configuration SSL personnalisée. Les CDN alternatifs ou les proxys personnalisés peuvent donner lieu à une configuration plus complexe. Reportez-vous à la documentation de [SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) et de [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/).
 {% endalert %}
 
 #### Ressources complémentaires
@@ -87,7 +87,7 @@ Bien que vous deviez gérer la configuration du réseau de diffusion de contenu,
 
 ##### Problèmes liés au registre des domaines
 
-Exécutez une commande dig pour confirmer que vous pointez le suivi des liens vers le réseau de diffusion de contenu. Dans votre terminal, lancez `dig CNAME link_tracking_subdomain`. Sous `ANSWER SECTION`, il est indiqué où votre CNAME pointe. S'il pointe vers le fournisseur de services e-mail (SendGrid ou SparkPost) et non vers votre réseau de diffusion de contenu, reconfigurez votre registre de domaine pour qu'il pointe vers votre réseau de diffusion de contenu.
+Exécutez une commande dig pour confirmer que vous pointez le suivi des liens sur le réseau de diffusion de contenu. Dans votre terminal, lancez `dig CNAME link_tracking_subdomain`. Sous `ANSWER SECTION`, il est indiqué où votre CNAME pointe. S'il pointe vers le fournisseur de services e-mail (SendGrid ou SparkPost) et non vers votre réseau de diffusion de contenu, reconfigurez votre registre de domaine pour qu'il pointe vers votre réseau de diffusion de contenu.
 
 ##### Problèmes liés au CDN
 
