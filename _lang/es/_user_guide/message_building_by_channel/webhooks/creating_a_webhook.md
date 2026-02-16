@@ -109,7 +109,7 @@ La opción de texto sin formato le ofrece la flexibilidad de escribir una solici
 
 Tanto la [personalización]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) como la [internacionalización]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) mediante Liquid son compatibles con el texto sin formato.
 
-![Un ejemplo de un cuerpo de solicitud con texto sin procesar utilizando Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
+![Un ejemplo de cuerpo de solicitud con texto sin procesar utilizando Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 
 Si establece el [encabezado de solicitud](#request-headers-optional) `Content-Type` en `application/x-www-form-url-encoded`, el cuerpo de la solicitud debe tener formato de cadena codificada en URL. Por ejemplo:
 
@@ -143,7 +143,7 @@ Para ello, cambie a la pestaña **Prueba** y envíe un webhook de prueba. Puede 
 
 Después de enviar el webhook de prueba, aparecerá un diálogo con el mensaje de respuesta. Si la solicitud de webhook no tiene éxito, consulte el mensaje de error para obtener ayuda en la solución de problemas de su webhook. El siguiente ejemplo detalla la respuesta de un webhook con una URL de webhook inválida.
 
-```json
+```http
 404 Not Found
 
 {
@@ -172,7 +172,7 @@ En este paso también puede especificar controles de entrega, como permitir que 
 
 #### Elige los usuarios a los que dirigirte
 
-A continuación, debes [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros para acotar tu audiencia. En este paso, seleccionas la audiencia más amplia de tus segmentos, y acotas aún más ese segmento con nuestros filtros, si así lo deseas. Automáticamente recibirás una vista previa del aspecto aproximado de la población de ese segmento. Ten en cuenta que la pertenencia exacta a un segmento siempre se calcula antes de enviar el mensaje.
+A continuación, debes [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros para reducir tu audiencia. En este paso, seleccionas la audiencia más amplia de tus segmentos, y acotas aún más ese segmento con nuestros filtros, si así lo deseas. Automáticamente recibirás una vista previa del aspecto aproximado de la población de ese segmento. Ten en cuenta que la pertenencia exacta a un segmento siempre se calcula antes de enviar el mensaje.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -199,7 +199,7 @@ Cuando hayas terminado de crear lo último de tu campaña o Canvas, revisa sus d
 
 Los webhooks dependen de que los servidores Braze realicen solicitudes a un punto final externo, y ocasionalmente pueden producirse errores. Los errores más comunes incluyen errores de sintaxis, claves de API caducadas, límites de tasa y problemas inesperados del lado del servidor. Antes de enviar una campaña webhook:
 
-- Comprueba si hay errores de sintaxis en tu webhook
+- Comprueba si tu webhook tiene errores de sintaxis
 - Garantizar que las variables personalizadas tengan valores predeterminados
 
 Si tu webhook no se envía, se registra un mensaje de error en el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/), e incluye detalles como la marca de tiempo del error, el nombre de la aplicación y detalles sobre el error.
