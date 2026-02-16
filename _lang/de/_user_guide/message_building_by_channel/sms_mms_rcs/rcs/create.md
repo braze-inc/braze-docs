@@ -22,7 +22,7 @@ Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canva
 {% tabs %}
 {% tab Campaign %}
 1. Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie **Kampagne erstellen**.
-2. Wählen Sie **SMS/MMS/RCS** oder, für Kampagnen, die auf mehrere Kanäle abzielen, **Multichannel**.
+2. Wählen Sie **SMS/MMS/RCS**, oder für Kampagnen, die auf mehrere Kanäle abzielen, wählen Sie **Multichannel**.
 3. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
 4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
    * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
@@ -77,7 +77,7 @@ Wie der Name schon sagt, liegt der Schwerpunkt von RCS Messaging auf Text als Me
     - **Suggested Replies** sind Buttons mit Antwortvorschlägen, auf die Nutzer:innen klicken und die sie in ihre Texteingabe einfügen können. So müssen sie nicht mehr selbst an eine Antwort denken, sondern haben eine begrenzte Auswahl. 
     - **Vorgeschlagene Aktionen** sind Buttons, die eine Aktion auf dem Nutzer:innen Gerät auslösen. Sie bestehen in der Regel aus einem oder zwei beschreibenden Wörtern und einem visuellen Symbol, damit der Nutzer:in versteht, was der Button bewirkt. Braze unterstützt derzeit OpenURL Suggested Actions. Dies funktioniert ähnlich wie eine URL, bei der Nutzer:innen, die den Button auswählen, zu einer Webseite oder einem anderen URL-identifizierten Standort weitergeleitet werden. 
 
-![Ein GIF mit drei vorgeschlagenen Aktionen für eine RCS Nachricht, die für aktuelle Modetrends wirbt: "Märchenhaftes Königtum", "Edgy Academia" und "Zeigen Sie mir Ihre anderen Stile".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
+![Ein GIF mit drei vorgeschlagenen Aktionen für eine RCS Nachricht, die für aktuelle Modetrends wirbt: "Märchenhaftes Königtum", "Edgy academia" und "Zeigen Sie mir Ihre anderen Stile".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
 
 #### Überlegungen
 
@@ -89,6 +89,8 @@ Wie der Name schon sagt, liegt der Schwerpunkt von RCS Messaging auf Text als Me
 
 {% tab Media %}
 RCS Nachrichten erlauben Ihnen die Verwendung von Medienformaten, die mit SMS nicht möglich sind. Dazu gehören Bild-, Video- und Dokumentationsdateien. Diese Medienoptionen helfen Ihnen, Ihre Zielgruppe noch stärker zu engagieren und ermöglichen völlig neue Anwendungsfälle. Im Moment wird nur das Hochladen von Bildern über die [Bibliothek]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) unterstützt. 
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 #### Features
 
@@ -127,7 +129,7 @@ Bevor Sie fortfahren, lesen Sie unsere [Richtlinien für die Begrenzung von RCS 
 
 ### Schritt 4: Vorschau und Test Ihrer Nachricht
 
-Da das RCS-Rendering vom Betriebssystem des Nutzers, dem Hersteller des Geräts, dem Netzbetreiber und der Messaging-App gesteuert wird (z.B. Google Messages vs. Apple Messaging) können Nachrichten unterschiedlich aussehen. Daher stimmt die in Braze angezeigte RCS Vorschau möglicherweise nicht genau mit dem überein, was ein Endnutzer:in letztendlich erhält. Die Unterschiede können Layout, Mediengröße, Buttons, Branding-Elemente oder unterstützte Features betreffen. Braze empfiehlt immer, Ihre Nachricht vor dem Versand in der Vorschau zu prüfen. Verwenden Sie den Tab **Test**, um einen Test-RCS an Inhaltstestgruppen oder einzelne Nutzer zu senden und eine Vorschau der Nachricht als Nutzer:innen direkt in Braze anzuzeigen. Das endgültige Rendering sollte jedoch nach Möglichkeit immer auf realen Geräten validiert werden, da Braze keine perfekte Parität für alle Kombinationen von Betriebssystemen, Geräten und Anbietern garantieren kann.
+Da das RCS-Rendering vom Betriebssystem des Nutzers, dem Hersteller des Geräts, dem Netzbetreiber und der Messaging-App gesteuert wird (z. B. Google Messages vs. Apple Messaging) können Nachrichten unterschiedlich aussehen. Daher stimmt die in Braze angezeigte RCS Vorschau möglicherweise nicht genau mit dem überein, was ein Endnutzer:in letztendlich erhält. Die Unterschiede können Layout, Mediengröße, Buttons, Branding-Elemente oder unterstützte Features betreffen. Braze empfiehlt immer, Ihre Nachricht vor dem Versand in der Vorschau zu prüfen. Verwenden Sie den Tab **Test**, um einen Test-RCS an Inhaltstestgruppen oder einzelne Nutzer zu senden und eine Vorschau der Nachricht als Nutzer:innen direkt in Braze anzuzeigen. Das endgültige Rendering sollte jedoch nach Möglichkeit immer auf realen Geräten validiert werden, da Braze keine perfekte Parität für alle Kombinationen von Betriebssystemen, Geräten und Anbietern garantieren kann.
 
 
 ### Schritt 5: Erstellen Sie den Rest Ihrer Kampagne oder Ihres Canvas
