@@ -18,7 +18,7 @@ As previsões prévias e de demonstração não permitirão que os usuários sej
 
 Na página **Previsões** individuais, depois de decidir o intervalo de pontuação de probabilidade ou categoria que deseja direcionar, você pode usar os botões **Criar segmento** ou **Criar campanha** para criar um novo segmento ou campanha. Esse segmento ou campanha filtrará os usuários com a pontuação de probabilidade ou a categoria selecionada com o controle deslizante.
 
-Você também pode usar os filtros "Pontuação de Probabilidade de Evento" e "Categoria de Probabilidade de Evento" em campanhas, canva ou segmentos para segmentar usuários de acordo com sua pontuação ou categoria de probabilidade, assim como você usa qualquer outro filtro no Braze.
+Você também pode usar os filtros "Pontuação de Probabilidade de Evento" e "Categoria de Probabilidade de Evento" em campanhas, Canva ou segmentos para segmentar usuários de acordo com sua pontuação ou categoria de probabilidade, assim como você usa qualquer outro filtro no Braze.
 
 ![Os filtros disponíveis ao definir um público incluem Categoria de probabilidade e Pontuação de probabilidade.]({% image_buster /assets/img_archive/predictive_event_filters.png %})
 
