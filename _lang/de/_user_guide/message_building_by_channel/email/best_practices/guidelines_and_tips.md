@@ -36,25 +36,7 @@ Die E-Mail-Überprüfung wird durchgeführt, wenn die E-Mail-Adresse einer Nutze
 
 E-Mail-Adressen, die über die Braze-Server angesprochen werden, müssen gemäß [RFC 2822-Standards](https://datatracker.ietf.org/doc/html/rfc2822) validiert werden. Braze akzeptiert bestimmte Zeichen nicht und erkennt sie als ungültig an. Wenn eine E-Mail gebounced wird, markiert Braze die E-Mail als ungültig und der Status des Abos wird nicht geändert. 
 
-{% details Unaccepted characters outside of RFC standards %}
-- *
-- /
-- ?
-- !
-- $
-- #
-- %
-- ^
-- &
-- (
-- )
-- {
-- }
-- [
-- ]
-- ~
-- ,
-{% enddetails %}
+Informationen über nicht zulässige Zeichen und Regeln für die Überprüfung von E-Mails finden Sie unter [Überprüfung von E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/#how-it-works).
 
 ### Absender- und Antwortadressen festlegen
 
