@@ -159,7 +159,7 @@ Salesforce에서 리드 상태를 Braze에서 업데이트하려면 트리거된
 
 1. 웹훅 캠페인에 "Salesforce > MQL로 리드 업데이트"와 같은 이름을 지정하세요.
 
-2. {% raw %}`https://YOUR_SALESFORCE_INSTANCE.my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`{% endraw %} 형식으로 웹훅 URL을 입력하세요. {% raw %}`{{$user_id}}}`{% endraw %}의 Braze 사용자 ID는 Salesforce 연락처 ID와 일치해야 합니다. 그렇지 않으면 {% raw %}`{{$user_id}}}`{% endraw %} 대신 별칭을 사용하십시오.
+2. {% raw %}`https://YOUR_SALESFORCE_INSTANCE.my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`{% endraw %} 형식으로 웹훅 URL을 입력하세요. {% raw %}`{{${user_id}}}`{% endraw %}의 Braze 사용자 ID는 Salesforce 연락처 ID와 일치해야 합니다. 그렇지 않으면 {% raw %}`{{${user_id}}}`{% endraw %} 대신 별칭을 사용하십시오.
 
 3. **HTTP Method**을 **PATCH**로 업데이트하십시오.
 
@@ -182,7 +182,7 @@ Salesforce에서 리드 상태를 Braze에서 업데이트하려면 트리거된
 
 | 헤더 | 콘텐츠 |
 | --- | --- |
-| 승인 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>토큰을 검색하려면 [OAuth 2.0 클라이언트 자격 증명 흐름에 대해 연결된 앱을 구성](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)한 다음 연결된 콘텐츠를 사용하여 Salesforce에서 베어러를 검색하세요: <br><br>{% raw %}<code>{% connected_content <mem_58436aaf-6f78-432f-ab99-a17f84d3991e/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| 승인 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>토큰을 검색하려면 [OAuth 2.0 클라이언트 자격 증명 흐름에 대해 연결된 앱을 구성](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)한 다음 연결된 콘텐츠를 사용하여 Salesforce에서 베어러를 검색하세요: <br><br>{% raw %}<code>{% connected_content <mem_e8e4448b-503a-43c2-8259-4c521dbd908d/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
