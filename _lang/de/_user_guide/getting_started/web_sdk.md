@@ -28,7 +28,7 @@ Um Zeit zu sparen und eine reibungslose Integration zu gewährleisten, empfehlen
 
 ## Datenaggregation
 
-Das Braze SDK erfasst automatisch Daten auf Benutzerebene und liefert Ihnen wichtige Metriken für Ihre App und Ihre Nutzer:innen-Basis. Gruppieren Sie ähnliche Apps in einem einzigen Workspace (z.B. iOS- und Android-Versionen zusammen), um gesammelte Daten plattformübergreifend zu betrachten und ein vollständiges Bild der Nutzer:in zu erhalten. Weitere Informationen finden Sie in dem Artikel auf der [Startseite]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/).
+Das Braze SDK erfasst automatisch Daten auf Benutzerebene und liefert Ihnen wichtige Metriken für Ihre App und Ihre Nutzer:innen-Basis. Gruppieren Sie ähnliche Apps in einem einzigen Workspace (z.B. iOS- und Android-Versionen zusammen), um gesammelte Daten plattformübergreifend zu betrachten und ein vollständiges Bild der Nutzer:in zu erstellen. Weitere Informationen finden Sie in dem Artikel auf der [Startseite]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/).
 
 ## In-App-Nachrichten
 
