@@ -100,7 +100,7 @@ tool: Currents
     * 새로운 `string` 필드 추가 `flow_id`: WhatsApp 매니저에 있는 플로우의 고유 ID입니다. 사용자가 WhatsApp 플로우에 응답하는 경우 표시합니다.
     * 새 `string` 필드 추가 `flow_response_json`: [PII] 사용자가 응답한 양식 값입니다. 사용자가 WhatsApp 플로우에 응답하는 경우 표시합니다.
     * 새로운 `string` 필드 추가 `message_id`: 이 메시징에 대해 메타에서 생성한 고유 ID입니다.
-    * 새로운 `string` 필드 추가 `in_reply_to`: 이 메시징이 회신하는 메시징의 message_id 
+    * 새로운 `string` 필드 추가 `in_reply_to`: 이 메시징이 답장하는 메시징의 message_id 
 
 * 이벤트 유형으로 필드 변경 `users.messages.whatsapp.Read`:
     * 새로운 `string` 필드 추가 `template_name`: [PII] WhatsApp 매니저에 있는 템플릿의 이름입니다. 템플릿 메시지를 보내는 경우 선물하기
