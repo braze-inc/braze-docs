@@ -58,6 +58,8 @@ En las tablas siguientes se detallan las propiedades de cada bloque de edición.
 
 ### Imagen
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 | Propiedad | Descripción |
 | --- | --- |
 | URL | La dirección de alojamiento de la imagen |
@@ -96,7 +98,7 @@ En las tablas siguientes se detallan las propiedades de cada bloque de edición.
 
 | Propiedad | Descripción |
 | --- | --- |
-| Grupo de suscripción | El [grupo de suscripción a]({{site.baseurl}}/whatsapp_subscription_groups/) [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) o WhatsApp al que se suscribirá el usuario recogiendo su número de teléfono, con la opción de recoger números de todos los países. |
+| Grupo de suscripción | El [grupo de suscripción a]({{site.baseurl}}/whatsapp_subscription_groups/) [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) o WhatsApp al que se suscribirá el usuario mediante la recopilación de su número de teléfono, con la opción de recopilar números de todos los países. |
 | Alineación de texto | Mueve el texto para alinearlo a la izquierda, al centro, a la derecha o justificado |
 | Texto del marcador de posición | Un marcador de posición de número de teléfono para mostrar |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
