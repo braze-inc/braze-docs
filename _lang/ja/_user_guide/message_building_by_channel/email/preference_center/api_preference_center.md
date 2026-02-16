@@ -106,7 +106,7 @@ My encoded string is: {{my_string}}
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 
