@@ -159,7 +159,7 @@ Um den Lead-Datensatz in Salesforce mit dem Lead-Status von Braze zu aktualisier
 
 1. Geben Sie Ihrer Webhook-Kampagne einen Namen, z. B. „Salesforce > Lead auf MQL aktualisieren“.
 
-2. Geben Sie Ihre Webhook-URL im Format von {% raw %}`https://YOUR_SALESFORCE_INSTANCE.my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`{% endraw %} ein. Die Braze-Benutzer-ID von {% raw %}`{{$user_id}}}`{% endraw %} sollte mit Ihrer Salesforce-Kontakt-ID übereinstimmen. Wenn nicht, verwenden Sie einen Alias anstelle von {% raw %}`{{$user_id}}}`{% endraw %}.
+2. Geben Sie Ihre Webhook-URL im Format von {% raw %}`https://YOUR_SALESFORCE_INSTANCE.my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`{% endraw %} ein. Die Braze-Benutzer-ID von {% raw %}`{{${user_id}}}`{% endraw %} sollte mit Ihrer Salesforce-Kontakt-ID übereinstimmen. Wenn nicht, verwenden Sie einen Alias anstelle von {% raw %}`{{${user_id}}}`{% endraw %}.
 
 3. Aktualisieren Sie die **HTTP-Methode** auf **PATCH**.
 
@@ -182,7 +182,7 @@ Um den Lead-Datensatz in Salesforce mit dem Lead-Status von Braze zu aktualisier
 
 | Header | Content |
 | --- | --- |
-| Autorisierung | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Um ein Token abzurufen, [konfigurieren Sie eine verbundene App](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) für den OAuth 2.0 Client-Zugangsdaten-Flow und verwenden Sie dann Connected-Content, um den Bearer aus Salesforce abzurufen: <br><br>{% raw %}<code>{% connected_content <mem_780d1a18-a78b-461d-b587-1feba10115d4/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorisierung | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Um ein Token abzurufen, [konfigurieren Sie eine verbundene App](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) für den OAuth 2.0 Client-Zugangsdaten-Flow und verwenden Sie dann Connected-Content, um den Bearer aus Salesforce abzurufen: <br><br>{% raw %}<code>{% connected_content <mem_24630699-0550-48b7-8107-9c2184707e4a/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
