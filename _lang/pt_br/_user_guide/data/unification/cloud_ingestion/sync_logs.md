@@ -48,7 +48,7 @@ Metadados da execução de sincronização, como o número de linhas processadas
 Você pode filtrar a tabela de registros de sincronização para encontrar execuções específicas. Os filtros disponíveis incluem:
 
 * **Data de início do trabalho:** Selecione um intervalo predefinido (como "Últimos 30 dias") ou um intervalo de datas personalizado.  
-* **Status:** Filtre por um ou mais status de sincronização (como mostrar apenas **Error** e **Sucesso parcial**).  
+* **Status:** Filtre por um ou mais status de sincronização (como mostrar apenas **Error** e **Sucesso parcial** status).  
 * **Nome da sincronização:** Pesquise por uma sincronização específica pelo seu nome.
 
 Para investigar uma sincronização específica, selecione o **ID da execução** relevante na tabela de logs de sincronização. Na página **Detalhes da execução**, você encontrará um log granular, linha por linha, da sincronização.
@@ -61,7 +61,7 @@ Esta seção resume a execução selecionada, incluindo seu horário de início,
 
 Esta tabela fornece visibilidade em nível de linha sobre os dados processados durante a sincronização, permitindo que você valide registros individuais.
 
-* **Pesquisar:** Você pode pesquisar por um usuário específico nos resultados da execução usando a barra **Pesquisar por ID de usuário**.  
+* **Pesquisar:** Você pode pesquisar um usuário específico nos resultados da execução usando a barra **Pesquisar por ID de usuário**.  
 * **Detalhes disponíveis:**   
   * **UPDATED_AT:** O timestamp da coluna `UPDATED_AT` para essa linha específica.  
   * **ID:** Os identificadores de usuário (como `external_id`, `email` ou `alias_name`) usados para corresponder o registro a um perfil de usuário Braze.  
@@ -71,7 +71,7 @@ Esta tabela fornece visibilidade em nível de linha sobre os dados processados d
 
 #### Visualizando cargas úteis
 
-Para ver os dados exatos enviados para a Braze para uma linha específica, selecione **Ver carga útil** na coluna de carga útil **Fonte**. Isso exibe a carga útil JSON bruta que foi processada para esse usuário.
+Para ver os dados exatos enviados para o Braze para uma linha específica, selecione **Ver carga útil** na coluna de carga útil **Fonte**. Isso exibe a carga útil JSON bruta que foi processada para esse usuário.
 
 ![Exemplo de carga útil para uma linha específica em um registro de sincronização.]({% image_buster /assets/img/cloud_ingestion/sync_logs2.png %}){: style="max-width:80%"}
 
@@ -82,9 +82,7 @@ Selecione **Exportar linhas** para exportar os registros em nível de linha para
 * **Linhas com erros:** Baixa um arquivo contendo apenas as linhas que tiveram um status de **Erro**.
 * **Todas as linhas:** Baixa um arquivo contendo todas as linhas processadas na execução.
 
-{% alert important %}
-Exportar registros de sincronização para todas as linhas está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Exporting sync logs for all rows' %}
 
 Os registros não podem ser exportados diretamente do dashboard. Após a exportação ser gerada, você receberá um e-mail com um link para baixar o arquivo de exportação do registro. 
 
@@ -94,11 +92,11 @@ Você pode configurar notificações por e-mail para se manter informado sobre o
 
 ### Notificações de erro
 
-Pelo menos um endereço de e-mail de contato é necessário para receber notificações sobre erros em nível de sincronização. Esses alertas são enviados quando um trabalho de sincronização inteiro falha ao ser executado ou concluído, ou se a sincronização encontra um erro que requer intervenção do usuário para mudar, como credenciais expiradas ou uma tabela de origem ausente.
+É necessário pelo menos um endereço de e-mail para receber notificações sobre erros em nível de sincronização. Esses alertas são enviados quando um trabalho de sincronização inteiro falha ao ser executado ou concluído, ou se a sincronização encontra um erro que requer intervenção do usuário para ser alterado, como credenciais expiradas ou uma tabela de origem ausente.
 
 Notificações adicionais incluem:
 
 - **Erro de linha:** Receber alertas quando uma certa porcentagem de linhas falhar ao atualizar dentro de uma sincronização.
-- **Limite de falha (%):** Especifique a porcentagem de falhas de linha que deve disparar um alerta. Por exemplo, definir isso para **1** enviaria uma notificação se 1% ou mais das linhas em uma execução de sincronização resultar em um erro.
-- **Sucesso da sincronização:** Receber uma notificação após a conclusão bem-sucedida de uma sincronização.
-- **Alerta mesmo se nenhuma linha mudar:** Receber uma notificação mesmo quando uma execução de sincronização bem-sucedida processa zero novas ou atualizadas linhas.
+- **Limite de falhas (%):** Especifique a porcentagem de falhas de linha que deve disparar um alerta. Por exemplo, definir isso para **1** enviaria uma notificação se 1% ou mais das linhas em uma execução de sincronização resultarem em erro.
+- **Sucesso da sincronização:** Receba uma notificação após a conclusão bem-sucedida de uma sincronização.
+- **Alerta mesmo se nenhuma linha mudar:** Receba uma notificação mesmo quando uma execução de sincronização bem-sucedida processa zero novas ou atualizadas.
