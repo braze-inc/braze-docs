@@ -91,7 +91,7 @@ Wenn Sie Texte in einer Sprache hinzufügen, die von rechts nach links geschrieb
 
 #### Variablen
 
-Wenn Sie bei der Erstellung der WhatsApp-Vorlage im Meta Business Manager Variablen hinzugefügt haben, werden diese Variablen im Message Composer als Leerstellen angezeigt. Ersetzen Sie diese Leerzeichen durch Liquid oder einfachen Text. Um reinen Text zu verwenden, benutzen Sie das Format "Text hier", das von doppelten Klammern umgeben ist. Wenn Sie sich bei der Erstellung Ihrer Vorlage für Bilder entschieden haben, können Sie Bilder aus der Mediathek hochladen oder hinzufügen, indem Sie auf eine Bild-URL verweisen.
+Wenn Sie bei der Erstellung der WhatsApp-Vorlage im Meta Business Manager Variablen hinzugefügt haben, werden diese Variablen im Message Composer als Leerstellen angezeigt. Ersetzen Sie diese Leerzeichen durch Liquid oder einfachen Text. Um reinen Text zu verwenden, benutzen Sie das Format "Text hier", das von doppelten Klammern umgeben ist. Wenn Sie sich bei der Erstellung Ihrer Vorlage für Bilder entschieden haben, können Sie Bilder aus der Mediathek hochladen oder hinzufügen, indem Sie auf eine Bild-URL verweisen. Nach Möglichkeit sollten Bilder direkt in Ihre Medienbibliothek hochgeladen werden, um einheitliche und zuverlässige Ergebnisse zu erhalten.
 
 Beachten Sie, dass deaktivierte Textfelder (grau unterlegt) nicht bearbeitet werden können, da sie Teil der genehmigten WhatsApp-Vorlage sind. Wenn Sie Änderungen am deaktivierten Text vornehmen möchten, müssen Sie Ihre Vorlage bearbeiten und erneut genehmigen lassen.
 
@@ -106,6 +106,10 @@ Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardw
 ### Dynamische Links 
 
 CTA-URLs können Variablen enthalten. Meta verlangt jedoch, dass diese wie bei `{% raw %}https://example.com/{{variable}}{% endraw %}` am Ende der URL stehen, wo sie dann in Braze durch Liquid ersetzt werden kann. Links können auch als Teil des Textes in Templates aufgenommen werden. Beide Links können gekürzt und mit [Klick Tracking]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/) verfolgt werden.
+
+### Dynamische Bilder
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 {% endtab %}
 {% tab Response messages %}
