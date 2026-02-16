@@ -62,14 +62,42 @@ Not every ticket uses all sections. Some tickets use a simpler format with just 
 
 ---
 
+## SF Knowledge Base article CSV
+
+The file `_data/sf_kb_articles.csv` contains the full content of Salesforce Knowledge Base articles exported as CSV. This is the primary source of article content for Phase 2.
+
+### CSV schema
+
+| Column | Description |
+|--------|-------------|
+| `Title` | Article title — **used to match to Jira tickets** |
+| `Summary` | Short article summary (may be empty) |
+| `Environment` | Product area (e.g., "Dashboard", "SDK and Segmentation") |
+| `Resolution` | **The main article content** — contains the customer-facing answer, steps, examples, and internal notes |
+| `URL Name` | URL-friendly slug of the title |
+| `Visible to Customer` | `1` if visible to customers |
+| `Knowledge ID` | Salesforce record ID (different format from the Jira `sf_url` ID) |
+
+### Matching tickets to articles
+
+Match Jira tickets to CSV articles by comparing the ticket `summary` field (case-insensitive) against the CSV `Title` column. This produces an ~81% exact match rate. For unmatched tickets, try substring matching. If no match is found, the user must provide the article content manually.
+
+**Important:** The CSV uses `latin-1` encoding (not UTF-8) due to non-breaking spaces and special characters. Always open with `encoding='latin-1'`.
+
+### Reading article content
+
+The `Resolution` column contains the article's answer. It may be multi-line and contain embedded newlines, HTML fragments, and special characters. The CSV is large (~48K rows with many duplicates across article versions), so when looking up an article by title, use the **first matching row** with a non-empty `Resolution` field.
+
+---
+
 ## Two-phase workflow
 
-Jira tickets contain **triage metadata** (what the gap is, where it should go, why it matters) but generally do NOT contain the **source content** needed to draft the docs update. The actual content lives in the linked Salesforce Knowledge Base articles.
+Jira tickets contain **triage metadata** (what the gap is, where it should go, why it matters) but generally do NOT contain the **source content** needed to draft the docs update. The actual content lives in the linked Salesforce Knowledge Base articles, which are now available locally in the CSV.
 
-- **Phase 1 (XML only):** Parse, triage, categorize, prioritize, and produce a ranked backlog with SF article URLs. This can be fully automated.
-- **Phase 2 (requires SF article content):** Draft the actual docs updates. The user must provide the SF article content for each ticket (since Salesforce requires authentication and is not accessible via API from this tool).
+- **Phase 1 (XML only):** Parse, triage, categorize, prioritize, and produce a ranked backlog. This can be fully automated.
+- **Phase 2 (CSV auto-lookup + drafting):** Draft the actual docs updates. For each ticket, automatically look up the article content from the CSV by title match. If no CSV match exists, prompt the user to provide the article content manually.
 
-Always complete Phase 1 first. For Phase 2, prompt the user to provide the SF article content for the highest-priority items, then draft updates as the content is provided.
+Always complete Phase 1 first. For Phase 2, use the CSV to auto-retrieve article content whenever possible.
 
 ---
 
@@ -152,24 +180,43 @@ After Phase 1 is complete, present a summary like:
 ```markdown
 ## Phase 1 Complete — Prioritized Backlog
 
-| Rank | Ticket | Summary | Target Doc | Ready? | SF Article URL |
-|------|--------|---------|------------|--------|----------------|
-| 1 | BD-XXXX | ... | `_docs/...` | No | [SF link] |
-| 2 | BD-YYYY | ... | `_docs/...` | Yes | [SF link] |
+| Rank | Ticket | Summary | Target Doc | CSV Match? | Linked Issues |
+|------|--------|---------|------------|------------|---------------|
+| 1 | BD-XXXX | ... | `_docs/...` | Yes | 274 |
+| 2 | BD-YYYY | ... | `_docs/...` | No | 235 |
 
-**To proceed with drafting, paste the SF Knowledge article content for the top-priority items.**
-Provide the article content in this format:
-- Ticket: BD-XXXX
-- Article content: [paste full text here]
+**X of Y tickets have CSV matches and can be auto-drafted.**
+To proceed, say: "Run Phase 2 for the top N tickets" or "Run Phase 2 for BD-XXXX".
+For tickets without CSV matches, paste the article content manually.
 ```
 
 ---
 
 # Phase 2: Draft Updates
 
-## Step 5: Draft Updates
+## Step 5: Retrieve article content
 
-For each docs update where SF article content has been provided:
+For each ticket being processed:
+
+1. **Auto-lookup from CSV:** Use Python to read `_data/sf_kb_articles.csv` (with `encoding='latin-1'`) and find the first row where the `Title` column matches the Jira ticket's `summary` (case-insensitive). Extract the `Resolution` column as the article content.
+2. **If no CSV match:** Prompt the user to paste the article content manually before proceeding.
+3. **If the `Resolution` field is empty:** The CSV row exists but has no useful content. Prompt the user.
+
+Example Python lookup:
+```python
+import csv
+def lookup_article(ticket_summary):
+    with open('_data/sf_kb_articles.csv', 'r', encoding='latin-1') as f:
+        for row in csv.DictReader(f):
+            if row['Title'].strip().lower() == ticket_summary.strip().lower():
+                if row['Resolution'].strip():
+                    return row['Resolution'].strip()
+    return None  # No match — ask user
+```
+
+## Step 6: Draft Updates
+
+For each ticket where article content is available (from CSV or user):
 
 1. Read the target file to understand existing structure
 2. **Separate public from internal content** — The SF article may contain:
@@ -182,9 +229,23 @@ For each docs update where SF article content has been provided:
 6. Do NOT include any content flagged as sensitive in the ticket or marked as internal in the SF article
 7. **Cross-reference source code** — Verify technical accuracy against the main product at `../platform` when possible
 
+## Batch processing
+
+When the user requests batch processing (e.g., "run Phase 2 on all matched tickets" or "run Phase 2 on the next 5"), process tickets **one at a time sequentially**, completing the full cycle (draft → branch → commit → push → PR) for each ticket before moving to the next. This ensures each PR is isolated and reviewable.
+
+**Recommended batch size:** 3-5 tickets per conversation to stay within context limits. After completing a batch, summarize what was done and offer to continue with the next batch.
+
+**Batch processing flow:**
+1. Identify all tickets in the requested scope (e.g., "all matched", "top 10 by linked issues", "all Email team tickets")
+2. Filter to only those with a CSV match (or user-provided content)
+3. Sort by priority (linked issues desc, then priority field)
+4. For each ticket in order: retrieve article → draft → branch → commit → push → PR
+5. After each ticket, briefly confirm completion before moving to the next
+6. After the batch, output a summary table of all PRs created
+
 ---
 
-## Step 6: Create a Properly Named Branch
+## Step 7: Create a Properly Named Branch
 **Always branch off `develop`**, not `main`. Before creating the branch, run:
 ```bash
 git checkout develop && git pull origin develop
@@ -194,12 +255,12 @@ Example: `sf-cursor-bd-4040`
 
 ---
 
-## Step 7: Commit and Push Changes
+## Step 8: Commit and Push Changes
 Stage and Commit all changes in `_docs` with a meaningful message derived from the summary
 
 ---
 
-## Step 8: Generate the PR for each branch
+## Step 9: Generate the PR for each branch
 Create each PR **targeting `develop`** as the base branch (use `--base develop`).
 Use the naming convention: `[Jira ticket number](SF) update summary`
 Example: `[BD-4040](SF) Add Currents FAQ entry about editing integration settings`
@@ -222,6 +283,8 @@ Cursor fills out the PR automatically:
 | Docs repo | (current repo) |
 | Main product | `../platform` |
 | Jira XML export | `_data/sf_migration_tasks.xml` |
+| Jira parsed JSON | `_data/sf_migration_parsed.json` |
+| SF KB articles CSV | `_data/sf_kb_articles.csv` |
 
 
 ## Example Prompts
@@ -241,15 +304,21 @@ Focus on [specific product area or priority level] if applicable.
 @salesforce-analyzer.mdc Run Phase 1 on tickets assigned to the Currents team.
 ```
 
-### Phase 2: Draft updates (after providing SF article content)
+### Phase 2: Draft updates (auto-lookup from CSV)
 
 ```
-@salesforce-analyzer.mdc Run Phase 2 for BD-4670. Here is the SF article content:
+@salesforce-analyzer.mdc Run Phase 2 for BD-4670.
+```
+
+```
+@salesforce-analyzer.mdc Run Phase 2 for the top 5 tickets by linked issues.
+```
+
+```
+@salesforce-analyzer.mdc Run Phase 2 for all matched Email team tickets.
+```
+
+```
+@salesforce-analyzer.mdc Run Phase 2 for BD-4670. The CSV didn't have a match, so here is the SF article content:
 [paste article content here]
-```
-
-```
-@salesforce-analyzer.mdc Run Phase 2 for the top 5 tickets. SF article content:
-- BD-XXXX: [paste]
-- BD-YYYY: [paste]
 ```
