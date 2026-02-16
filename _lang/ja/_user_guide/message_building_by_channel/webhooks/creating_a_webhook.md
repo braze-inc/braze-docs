@@ -143,7 +143,7 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 
 テストWebhookを送信した後、応答メッセージが表示されるダイアログが表示されます。Webhook リクエストが失敗した場合は、エラーメッセージを参照して Webhook のトラブルシューティングに役立ててください。次の例は、無効な webhook URL を持つ webhook の応答を詳しく示しています。
 
-```json
+```http
 404 Not Found
 
 {
