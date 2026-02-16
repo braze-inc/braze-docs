@@ -57,11 +57,11 @@ Um einen Anfangsschwellenwert für das Targeting festzulegen, verwendet Camila d
 Mit ihren Prognosen und Segmenten richtet Camila eine wiederkehrende Kampagne ein, die automatisch jede Woche Nutzer:innen erreicht, die ein Risiko darstellen.
 
 1. Camila erstellt eine wiederkehrende Kampagne und ermöglicht [intelligentes Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/), so dass jede Nachricht dann zugestellt wird, wenn jeder einzelne Nutzer:innen sich am ehesten engagiert, anstatt sich auf einen festen Tag und eine feste Uhrzeit zu verlassen.
-2. Sie targeting das soeben erstellte Segment "Likely to churn".
+2. Sie targeting das gerade erstellte Segment "Abwandern wahrscheinlich".
 3. Sie setzt das Konversions-Event der Kampagne auf das angepasste Event `stream_started`, um zu verfolgen, wie viele Nutzer:innen tatsächlich zurückkehren, um sich den Inhalt anzusehen.
 4. Camila wählt die E-Mail als primären Kanal - sie gibt ihr die Möglichkeit, mehrere personalisierte Inhalte in einem visuell reichhaltigen Format hervorzuheben, ohne dabei zu viel Druck auszuüben. Die E-Mail enthält:
    - Eine personalisierte Watchlist mit [KI Artikel-Empfehlungen]({{site.baseurl}}/user_guide/brazeai/recommendations/), dynamisch ausgewählt aus dem MovieCanon Katalog
-   - Ein Aufruf zum Handeln, der sie direkt in die App bringt.
+   - Ein Aufruf zum Handeln, der sie direkt in die App führt.
 
 So wird sichergestellt, dass MovieCanon jede Woche nur die Nutzer:innen erreicht, die einen Anstoß brauchen - kein übermäßiges Messaging, kein Rätselraten.
 
@@ -84,7 +84,7 @@ Sie sieht:
 
 Verglichen mit der alten Kampagne "Wir vermissen Sie" (bei der die Konversionsraten um die 3% lagen), senkt dieser neue Fluss die ABWANDERUNG VERRINGERN in der Zielgruppe um 28%. Sie schaut sich den [Funnel-Bericht]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) an, um zu sehen, wo Nutzer:innen abspringen. Während die Öffnungs- und Klickraten gut sind, bemerkt sie eine leichte Reibung zwischen Klick und Konversion - was sie dazu veranlasst, CTA-Texte zu testen oder mit dem Layout zu experimentieren.
 
-Um die langfristigen Auswirkungen zu verstehen, verfolgt Camila auch das Volumen der Nutzer:innen, die Woche für Woche in das Segment "Wahrscheinlich abwandern" fallen. Dies hilft ihr, den Gesamtzustand des Lebenszyklus zu beurteilen und die Strategie der Bindung auf einer breiteren Ebene zu informieren. Schließlich besucht sie die Seite [Predictive Analytics]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/) für ihre Prognose der Abwanderung, um die prognostizierten mit den tatsächlichen Abgewanderten zu vergleichen - eine nützliche Überprüfung, um sicherzustellen, dass das Modell die erwartete Performance erzielt.
+Um die langfristigen Auswirkungen zu verstehen, verfolgt Camila auch das Volumen der Nutzer:innen, die Woche für Woche in das Segment "Wahrscheinlich abwandern" eintreten. Dies hilft ihr, den Gesamtzustand des Lebenszyklus zu beurteilen und die Strategie der Bindung auf einer breiteren Ebene zu informieren. Schließlich besucht sie die Seite [Predictive Analytics]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/) für ihre Prognose der Abwanderung, um die prognostizierten mit den tatsächlichen Abgewanderten zu vergleichen - eine nützliche Überprüfung, um sicherzustellen, dass das Modell die erwartete Performance erzielt.
 
 Auf der Grundlage dieser Insights plant Camila A/B-Tests für Betreffzeilen, verschiedene Zeitfenster und Experimente mit Inhaltsformaten wie Empfehlungen im Karussell-Stil in einer In-App-Nachricht.
 
