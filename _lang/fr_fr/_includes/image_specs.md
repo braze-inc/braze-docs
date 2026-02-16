@@ -28,7 +28,7 @@ Les messages in-app modaux sont conçus pour s’adapter le mieux possible aux p
 
 Bien qu'il n'y ait pas de limite au nombre de caractères de texte que vous pouvez inclure dans un message in-app (ainsi que dans les boutons, le titre, le corps principal et autres), nous modérons le nombre de caractères de texte que vous utilisez. Un texte trop long obligera les utilisateurs à développer et à faire défiler le message.
 
-Tous les messages in-app ont une taille d'image recommandée de 500 Ko, une taille d'image maximale de 5 Mo, et prennent en charge les types de fichiers PNG, JPEG et GIF.
+Tous les messages in-app ont une taille d'image recommandée de 500 Ko, une taille d'image maximale de 5 Mo, et prennent en charge les types de fichiers PNG, JPEG et GIF. Les images WebP ne sont pas prises en charge par tous les appareils ou navigateurs ; nous vous suggérons de convertir les images WebP en PNG ou JPEG avant de les ajouter aux messages in-app.
 
 {% tabs %}
 {% tab Portrait %}
@@ -128,7 +128,7 @@ table td {
     <tr>
       <td>Image d'inclinaison Android</td>
       <td>3:2</td>
-      <td>N/A</td>
+      <td>S.O.</td>
       <td>S.O.</td>
       <td>PNG, JPEG</td>
       <td>Pour plus de détails, consultez la section <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Notifications push d’images insérées pour Android</a>.</td>
@@ -152,7 +152,7 @@ table td {
 | --- | --- | 
 | Taille | 5 MB |
 | Largeur | En-tête : 600 px<br>Corps : 480 px |
-| Types de fichier | PNG, JPEG, GIF |
+| Types de fichier | PNG, JPEG, GIF<br><br> La prise en charge des images WebP varie d'un client e-mail à l'autre. Pour un rendu fiable, convertissez les images WebP en PNG ou JPEG avant de les ajouter aux messages e-mail. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Spécifications du texte | Propriétés maximales recommandées |
