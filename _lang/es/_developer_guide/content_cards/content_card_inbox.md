@@ -375,7 +375,7 @@ lines-content_card_inbox.xml=1-24
 
 #### 2\. Construye una vista de IU
 
-En este tutorial, utilizamos la función de Android [`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>) para mostrar tarjetas de contenido, pero te recomendamos que construyas una interfaz de usuario con clases y componentes que se adapten a tu caso de uso. Braze proporciona la interfaz de usuario de forma predeterminada, pero este tutorial te guía para crear una vista personalizada para personalizar la apariencia y el comportamiento.
+En este tutorial, utilizamos la aplicación de Android [`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>) para mostrar tarjetas de contenido, pero te recomendamos que construyas una interfaz de usuario con clases y componentes que se adapten a tu caso de uso. Braze proporciona la interfaz de usuario de forma predeterminada, pero este tutorial te guía para crear una vista personalizada para personalizar la apariencia y el comportamiento.
 
 Paso
 líneas-ContentCardInboxActivity.kt=29-35,40-42,44
@@ -389,7 +389,7 @@ líneas-ContentCardInboxActivity.kt=73-84
 
 #### 4\. Construye una interfaz de usuario de buzón de entrada personalizada
 
-El uso de los [atributos](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) de las tarjetas de contenido como `title`, `description` y `url` te permite crear tarjetas de contenido que se ajusten a tus requisitos específicos de interfaz de usuario. En este caso, estamos construyendo un buzón de entrada con el nativo de Android `RecyclerView`.
+El uso de los [atributos](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) de las tarjetas de contenido, como `title`, `description` y `url`, te permite crear tarjetas de contenido que se ajusten a tus requisitos específicos de interfaz de usuario. En este caso, estamos construyendo un buzón de entrada con el nativo de Android `RecyclerView`.
 
 Paso
 líneas-ContentCardInboxActivity.kt=90,93
