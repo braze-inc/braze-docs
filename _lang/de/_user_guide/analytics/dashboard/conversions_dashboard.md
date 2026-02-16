@@ -75,7 +75,7 @@ Ihr Bericht ist in drei Abschnitte unterteilt:
 
 Die Tabelle mit den Konversionsdetails zeigt immer eine Spalte für *Empfänger:innen* und eine weitere für *Konversionen* (Rate und Summe). Die beiden verbleibenden Tabellenspalten, die angezeigt werden, hängen von den Optionen ab, die Sie beim Einrichten Ihres Berichts ausgewählt haben. 
 
-![Tabelle mit Konversionsdetails, die Berührungen als Attributionsmethode für die Spalten drei und vier anzeigt.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+![Tabelle mit den Details zur Konversion, in der Berührungen als Attributionsmethode für die Spalten drei und vier angezeigt werden.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
 
 Die folgende Tabelle beschreibt mögliche Metriken.
 
@@ -136,7 +136,7 @@ Um die Zeitreihendaten herunterzuladen, wählen Sie <i class="fas fa-bars"></i> 
 
 Ihre Konversionen sind vielleicht nicht so hoch, wie Sie es erwarten, wenn Sie sie mit früheren Kampagnen oder Ihren Erwartungen vergleichen. Konversionen sind eine knifflige Angelegenheit, aber sie hängen von ein paar einfachen Funktionen in unserer Plattform ab: Event Tracking und Konversionsfristen.
 
-Zur Fehlerbehebung empfehlen wir Ihnen, Ihr Tracking von Ereignissen und Konversions-Fristen zu überprüfen.
+Zur Fehlerbehebung empfehlen wir Ihnen, Ihr Tracking von Ereignissen und Konversionsfristen zu überprüfen.
 
 #### Tracking von Ereignissen
 
