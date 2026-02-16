@@ -1,7 +1,7 @@
 ---
 nav_title: Intelligence Suite
 article_title: Acerca de la línea de productos Braze Intelligence Suite
-page_order: 1
+page_order: 6
 search_rank: 12
 description: "La línea de productos Braze Intelligence Suite automatiza la toma de decisiones con información basada en datos. Desde el plazo de entrega hasta las pruebas multivariantes, las marcas pueden utilizar estas herramientas y características para crear experiencias dinámicas y a través de canales que se optimicen a escala."
 tool:
