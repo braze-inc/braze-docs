@@ -46,9 +46,11 @@ El push móvil incorpora Android, iOS, Kindle y otros canales de dispositivos m�
 
 Por ejemplo, si un usuario tiene varios dispositivos móviles, su tasa de interacción móvil estaría representada por la tasa más alta mostrada en todos los dispositivos. Sin embargo, esto no obligaría al usuario a recibir notificaciones push exclusivamente en ese dispositivo. Esta tasa sólo se utiliza cuando se comparan las tasas contra el correo electrónico y la notificación push web.
 
-## Canales individuales
+## Filtro de Probabilidad de Apertura de Mensajes para canales individuales {#individual-channels}
 
-En lugar de dejar que Braze elija el mejor canal para un usuario, también puedes filtrar simplemente a los usuarios en función de si es probable o no que abran un mensaje en un canal específico que elijas. Para ello puedes utilizar el filtro Probabilidad de apertura de mensajes en [Filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood).
+En lugar de dejar que Braze elija el mejor canal para un usuario, puedes utilizar el [ filtro de segmentación "Probabilidad de apertura de mensajes"]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood) para filtrar a los usuarios en función de si es probable o no que abran un mensaje en un canal específico que tú elijas. Este filtro se calcula dividiendo el porcentaje de interacciones por el total de mensajes recibidos de los últimos 100 mensajes enviados por canal.
+
+Ten en cuenta que un usuario debe haber recibido al menos tres mensajes en un canal específico antes de poder tener una puntuación de probabilidad para ese canal. Los usuarios sin datos suficientes para medir la probabilidad de un canal pueden seleccionarse mediante "está en blanco".
 
 ## Mejores prácticas y estrategia de uso eficaz
 
