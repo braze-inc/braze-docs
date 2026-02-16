@@ -59,7 +59,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 ### Étape 3 : Composer une bannière {#compose-a-banner}
 
-Pour composer votre bannière, vous pouvez choisir de.. :
+Pour composer votre Bannière, vous pouvez choisir de.. :
 
 - Commencer par un modèle vide
 - Utilisez un modèle de bannière Braze
@@ -70,6 +70,8 @@ Pour composer votre bannière, vous pouvez choisir de.. :
 #### Étape 3.1 : Style de la bannière
 
 Vous pouvez glisser-déposer des blocs et des lignes dans la zone du canvas pour commencer à créer votre message.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 Pour personnaliser les propriétés de l'arrière-plan de votre message, les paramètres de la bordure, etc., sélectionnez **Styles**. Si vous souhaitez uniquement personnaliser le style d'un bloc ou d'une ligne spécifique, sélectionnez-le pour apporter des modifications.
 
