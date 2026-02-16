@@ -343,7 +343,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 Después de que el usuario inicie sesión, se realiza un cambio en tu sitio web o aplicación para que el ID de usuario se envíe de nuevo a Braze para asociarlo con el ID de LINE que se pasó como parte de la URL, con un código de ejemplo como el siguiente:
 
-```json
+```javascript
 const currentUrl = new URL(window.location.href)
 const queryParams = new URLSearchParams(currentUrl.search);
 const lineUserId = queryParams.get("line_user_id")
