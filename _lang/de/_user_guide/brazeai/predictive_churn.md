@@ -2,7 +2,7 @@
 nav_title: Voraussichtliche Abwanderung
 article_title: Voraussichtliche Abwanderung
 description: "Diese Landing Page befasst sich mit Predictive Churn, einem Tool der Braze Predictive Suite, mit dem Sie definieren können, was Abwanderung für Ihr Unternehmen bedeutet und welche Nutzer:innen Sie von der Abwanderung abhalten möchten."
-page_order: 2.0
+page_order: 9
 alias: /predictive_churn/
 search_rank: 2
 ---
@@ -25,7 +25,7 @@ Die Aktualisierung der Risikobewertungen für die Zielgruppe der Prognosen kann 
 
 ## Zugriff auf voraussichtliche Abwanderung
 
-Die Seite **Prognosen** befindet sich im Bereich **Analysen**. Für einen vollständigen Zugang wenden Sie sich bitte an Ihren Kundenbetreuer.
+{% include brazeai/predictions_page_access.md %}
 
 Bevor Sie dieses Feature kaufen, ist es in der Vorschau verfügbar. Dies erlaubt Ihnen, eine Demo-Prognose der Abwanderung mit synthetischen Daten zu sehen und jeweils ein Prognosemodell für die Abwanderung auf der Grundlage Ihrer Nutzerdaten zu erstellen. Diese Vorschau erlaubt es Ihnen nicht, Nutzer:innen für Messaging nach dem Abwanderungsrisiko zusammenzustellen und wird nach der Erstellung nicht regelmäßig aktualisiert.
 
