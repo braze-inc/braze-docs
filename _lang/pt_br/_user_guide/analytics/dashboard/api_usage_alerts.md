@@ -79,17 +79,17 @@ A seguir, um exemplo de carga útil para o corpo de um webhook de alerta de uso 
   "data": {
     "alert_name": "My First API Usage Alert",
     "alert_type": "API Usage Alert",
-    "alert_criteria": [
+    "alert_criteria": {
     	"response_codes": ["201", "202", "203"],
-    	"threshold_condition: "Increased by %",
+    	"threshold_condition": "Increased by %",
     	"threshold_volume": 50,
     	"within": "1 day"
-    	],
-    "timeframe_start": 2025-03-20T15:35:00Z,
-    "timeframe_end": 2025-03-20T16:35:00Z,
+    },
+    "timeframe_start": "2025-03-20T15:35:00Z",
+    "timeframe_end": "2025-03-20T16:35:00Z",
     "volume": 1500,
-    "previous_timeframe_start": 2025-03-20T14:35:00Z,
-    "previous_timeframe_end": 2025-03-20T15:35:00Z,
+    "previous_timeframe_start": "2025-03-20T14:35:00Z",
+    "previous_timeframe_end": "2025-03-20T15:35:00Z",
     "previous_volume": 1000
   },
   "text": "Your My First API Usage Alert alert has triggered. You can view your alert and usage here: <link>. Note that this alert will reset in 1 day, as each alert will only send one notification per 8 hours."
@@ -140,5 +140,5 @@ Use a seguinte configuração de alerta para ser alertado quando uma integraçã
 
 ## Considerações
 
-- Cada alerta ativo só enviará uma notificação por e-mail ou webhook uma vez a cada 8 horas. Isso serve para evitar muitas notificações de um único alerta. Se o seu alerta estiver notificando-o prematuramente, considere editar os critérios de alerta para que correspondam melhor ao seu caso de uso.
+- Cada alerta ativo só enviará uma notificação por e-mail ou webhook uma vez a cada 8 horas. Isso serve para evitar o excesso de notificações de um único alerta. Se o seu alerta estiver notificando-o prematuramente, considere editar os critérios de alerta para que correspondam melhor ao seu caso de uso.
 - Você pode ter até 10 alertas por espaço de trabalho.
