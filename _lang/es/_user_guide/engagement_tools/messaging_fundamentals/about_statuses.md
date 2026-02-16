@@ -42,7 +42,7 @@ Estos son los estados disponibles para campañas y Lienzos:
 Cuando se detiene un Canvas, ocurre lo siguiente:
 
 - **Mensajes programados:** Tus mensajes programados no se enviarán, independientemente del lugar que ocupe un usuario en el Canvas. Esto también incluye a los usuarios que estaban en cola debido al límite de velocidad.
-- **Envíos por correo electrónico:** Los envíos por correo electrónico pueden no detenerse inmediatamente, ya que tu proveedor de servicios de correo electrónico (ESP) puede seguir procesando tus solicitudes existentes.
+- **Envíos por correo electrónico:** Es posible que los envíos por correo electrónico no se detengan inmediatamente, ya que tu proveedor de servicios de correo electrónico (ESP) puede seguir procesando tus solicitudes existentes.
 - **Pasos de retardo:** Los usuarios que se encuentren en un [paso en Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) permanecerán allí normalmente, pero saldrán del Canvas cuando finalice el periodo establecido.
 - **Cambios en el borrador:** Cualquier cambio en el borrador del Canvas se descartará cuando se detenga el Canvas.
 
