@@ -12,10 +12,12 @@ alias: /scim/automated_user_provisioning/
 
 > Utiliza el aprovisionamiento SCIM para crear y administrar automáticamente usuarios Braze a través de la API. Este artículo te explica qué información debes proporcionar, cómo generar tu token SCIM y dónde encontrar tu punto final de la API SCIM.
 
-## Acceder a la configuración de aprovisionamiento SCIM
+{% include early_access_beta_alert.md feature='SCIM provisioning' %}
 
-1. En el panel de Braze, ve a **Configuración** > **Configuración de administración** > **Aprovisionamiento SCIM** y añade un proveedor de identidad.
-2. En el paso de aprovisionamiento **de Braze**, selecciona un método de aprovisionamiento y proporciona la configuración de acceso.
+## Acceso a la configuración de aprovisionamiento SCIM
+
+1. En el panel Braze, ve a **Configuración** > **Configuración de administración** > **Aprovisionamiento SCIM** y, a continuación, selecciona **Configurar integración SCIM**.
+2. En el paso de **configuración de Braze**, selecciona un método de aprovisionamiento y proporciona la configuración de acceso.
 
 ![Una página para configurar la integración SCIM con secciones para seleccionar un método de aprovisionamiento y proporcionar configuraciones de acceso.]({% image_buster /assets/img_archive/scim_braze_config.png %}){: style="max-width:70%;"}
 
@@ -25,29 +27,39 @@ alias: /scim/automated_user_provisioning/
 {% tabs %}
 {% tab Okta - Braze app %}
 
-{% alert important %}
-La integración de Okta se encuentra actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Okta integration' %}
+
+Utiliza la opción **Okta - aplicación Braze** si configuras la aplicación Braze para SAML SSO en Okta. Si configuras una aplicación personalizada para el SSO, sigue las instrucciones de la pestaña [Okta - Integración de aplicaciones personalizadas]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/?tab=okta%20-%20custom%20app%20integration#step-1-set-up-scim-provisioning).
 
 ## Paso 1: Configurar el aprovisionamiento SCIM
 
 ### Paso 1.1: Habilitar SCIM
 
-1. Ve a tu aplicación Braze en Okta.
-2. Selecciona la pestaña **General**.
-3. En la sección **Configuración de la aplicación**, selecciona **Editar**.
-4. En el campo **Aprovisionamiento**, selecciona **SCIM** y, a continuación, **Guardar**.
+1. En Okta, ve a **Aplicaciones** > **Aplicaciones** y, a continuación, selecciona **Crear integración de aplicación**. Selecciona **SAML 2.0** como método de inicio de sesión.
+2. Rellena los siguientes datos (que se encuentran en [el paso de**configuración del IdP**](#accessing-scim-provisioning-settings) Braze) para crear una aplicación personalizada:
+- Logotipo de la aplicación
+- URL de inicio de sesión único
+- URL de la audiencia (ID de la entidad SP)
+3. Selecciona el **Acabado**.
+4. Selecciona la pestaña **General**. 
+5. En la sección **Configuración de la aplicación**, selecciona **Editar**.
+6. En el campo **Aprovisionamiento**, selecciona **SCIM**. 
 
-### Paso 1.2: Configurar la integración SCIM
+### Paso 1.2: Desactivar la visibilidad de la aplicación
+
+1. En el campo **Visibilidad de la aplicación**, selecciona la casilla **No mostrar el icono de la aplicación al usuario**. Esto impide a los usuarios acceder al SSO a través de la aplicación, que está destinada únicamente al SCIM. 
+2. Seleccione **Guardar**.
+
+### Paso 1.3: Configurar la integración SCIM
 
 1. Selecciona la pestaña **Aprovisionamiento**.
 2. En **Configuración** > **Integración** > **Conexión SCIM**, selecciona **Editar** y rellena los valores de los campos que aparecen en la tabla de la página **Configurar aprovisionamiento SCIM**.
 
-### Paso 1.3: Prueba las credenciales de la API
+### Paso 1.4: Prueba las credenciales de la API
 
 Selecciona **Probar credenciales API**. Aparecerá un mensaje de verificación si la integración se ha realizado correctamente y podrás guardarla.
 
-### Paso 1.4: Habilitar el aprovisionamiento a la aplicación
+### Paso 1.5: Habilitar la habilitación a la aplicación
 
 1. En **Aprovisionamiento** > **Configuración** > **A la aplicación** > **Aprovisionamiento a la aplicación**, selecciona **Editar**.
 2. Habilita lo siguiente:
@@ -66,9 +78,9 @@ Selecciona **Probar credenciales API**. Aparecerá un mensaje de verificación s
 {% endtab %}
 {% tab Okta - Custom app integration %}
 
-{% alert important %}
-La integración de Okta se encuentra actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Okta integration' %}
+
+Utiliza la opción **Okta - Integración de aplicaciones personalizadas** si configuras una aplicación personalizada para el SSO. Si configuraste la aplicación Braze para SAML SSO en Okta, sigue las instrucciones de la pestaña [Okta - Aplicación Braze]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/?tab=okta%20-%20braze%20app#step-1-set-up-scim-provisioning).
 
 ## Paso 1: Configurar el aprovisionamiento SCIM
 
@@ -87,7 +99,7 @@ La integración de Okta se encuentra actualmente en acceso anticipado. Ponte en 
 3. Prueba las credenciales de la API seleccionando **Probar credenciales de la API**.
 4. Seleccione **Guardar**.
 
-### Paso 1.3: Habilitar el aprovisionamiento a la aplicación
+### Paso 1.3: Habilitar la habilitación a la aplicación
 
 1. En **Aprovisionamiento** > **Configuración** > **A la aplicación** > **Aprovisionamiento a la aplicación**, selecciona **Editar**.
 2. Habilita lo siguiente:
@@ -106,13 +118,12 @@ La integración de Okta se encuentra actualmente en acceso anticipado. Ponte en 
 {% endtab %}
 {% tab Entra ID %}
 
-{% alert important %}
-La integración de Entra ID está actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Entra ID integration' %}
 
 ## Paso 1: Configurar la aplicación de aprovisionamiento SCIM
 
-### Paso 1.1. Accede al centro de administración de Microsoft Entra
+### Paso 1.1: Accede al centro de administración de Microsoft Entra
+
 Accede a tu centro de administración de Microsoft Entra.
 
 ### Paso 1.2: Crea y configura tu aplicación SCIM
@@ -129,7 +140,7 @@ Accede a tu centro de administración de Microsoft Entra.
 1. Ve a la sección **Gestionar** > **Aprovisionamiento** de tu aplicación SCIM.
 2. Selecciona **Conecta tu aplicación** o **Nueva configuración** y rellena los valores de los campos que aparecen en la tabla de la página de **configuración del aprovisionamiento SCIM**.
 
-### Paso 1.4: Habilitar el aprovisionamiento a la aplicación
+### Paso 1.4: Habilitar la habilitación a la aplicación
 
 1. Ve a la sección **Gestionar** > **Mapeado de atributos (vista previa)** de tu aplicación SCIM.
 2. Selecciona **Aprovisionar usuarios de Microsoft Entra ID**.
