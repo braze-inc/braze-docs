@@ -77,9 +77,7 @@ Esta sección te permite gestionar las direcciones CCO que puedes añadir a los 
 
 Las direcciones CCO sólo están disponibles para SendGrid y SparkPost. Como alternativa a las direcciones CCO, te recomendamos que utilices [el archivo de mensajería]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/) para guardar una copia de los mensajes enviados a los usuarios con fines de archivo o cumplimiento.
 
-{% alert important %}
-Si añades una dirección CCO a tu campaña o Canvas, se duplicarán tus correos electrónicos facturables para la campaña o el componente Canvas, ya que Braze enviará un mensaje a tu usuario y otro a tu dirección CCO.
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='BCC address billable emails' %}
 
 ![Sección Dirección CCO de la pestaña Configuración de correo electrónico.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
 
@@ -102,7 +100,7 @@ Por ejemplo, puedes añadir {% raw %}`{{custom_attribute.${support_agent}}}`{% e
 
 [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
-El píxel de seguimiento de apertura de correo electrónico es una imagen invisible de 1 x 1 px que se inserta automáticamente en el HTML de su correo electrónico. Este píxel ayuda a Braze a detectar si los usuarios finales han abierto su correo electrónico. La información sobre la apertura del correo electrónico puede ser muy útil, ya que ayuda a los usuarios a determinar estrategias de marketing eficaces al conocer las tasas de apertura correspondientes.
+El píxel de seguimiento de apertura de correo electrónico es una imagen invisible de 1 x 1 px y se inserta automáticamente en el HTML de tu correo electrónico. Este píxel ayuda a Braze a detectar si tus usuarios han abierto tu correo electrónico. Cuando el cliente de correo electrónico de un usuario realiza una solicitud a nuestro píxel de seguimiento, la solicitud puede contener información como la dirección IP, el agente de usuario y la marca de tiempo. La información sobre la apertura del correo electrónico puede ser muy útil, ya que te ayuda a determinar estrategias de marketing eficaces conociendo las tasas de apertura correspondientes.
 
 ### Colocación del píxel de seguimiento
 
@@ -178,9 +176,9 @@ Cuando se utiliza el "espacio de trabajo predeterminado", Braze no añade el enc
 Gmail pretende que los remitentes implementen la cancelación de suscripción con un solo clic para todos sus mensajes comerciales y promocionales salientes a partir del 1 de junio de 2024. Para obtener más información, consulta [las directrices para remitentes de Gmail](https://support.google.com/mail/answer/81126?hl=en#subscriptions&zippy=%2Crequirements-for-sending-or-more-messages-per-day:~:text=Make%20it%20easy%20to%20unsubscribe) y [las Preguntas frecuentes sobre directrices para remitentes de correo electrónico de Gmail](https://support.google.com/a/answer/14229414#zippy=%2Cwhat-time-range-or-duration-is-used-when-calculating-spam-rate%2Cif-the-list-header-is-missing-is-the-message-body-checked-for-a-one-click-unsubscribe-link%2Cif-unsubscribe-links-are-temporarily-unavailable-due-to-maintenance-or-other-reasons-are-messages-flagged-as-spam%2Ccan-a-one-click-unsubscribe-link-to-a-landing-or-preferences-page%2Cwhat-is-a-bulk-sender%2Chow-can-bulk-senders-make-sure-theyre-meeting-the-sender-guidelines%2Cdo-the-sender-guidelines-apply-to-messages-sent-to-google-workspace-accounts%2Cdo-the-sender-guidelines-apply-to-messages-sent-from-google-workspace-accounts%2Cwhat-happens-if-senders-dont-meet-the-requirements-in-the-sender-guidelines%2Cif-messages-are-rejected-because-they-dont-meet-the-sender-guidelines-do-you-send-an-error-message-or-other-alert%2Cwhat-happens-when-sender-spam-rate-exceeds-the-maximum-spam-rate-allowed-by-the-guidelines%2Cwhat-is-the-dmarc-alignment-requirement-for-bulk-senders%2Cif-messages-fail-dmarc-authentication-can-they-be-delivered-using-ip-allow-lists-or-spam-bypass-lists-or-will-these-messages-be-quarantined%2Ccan-bulk-senders-get-technical-support-for-email-delivery-issues%2Cdo-all-messages-require-one-click-unsubscribe:~:text=for%20mitigations.-,Unsubscribe%20links,-Do%20all%20messages). Yahoo anunció un plazo de principios de 2024 para los requisitos de actualización. Para más información, consulta [Más seguridad, menos correo no deseado: Aplicación de las normas de correo electrónico para mejorar la experiencia](https://blog.postmaster.yahooinc.com/).
 {% endalert %}
 
-Para utilizar la característica de cancelar suscripción de Braze para procesar directamente las bajas, selecciona **Incluir un encabezado de correo electrónico de lista de baja (mailto y HTTP) con un solo clic para los correos electrónicos enviados a usuarios suscritos o con adhesión voluntaria** y selecciona **Braze predeterminado** como URL y mail-to estándar de Braze. 
+Para utilizar la característica de cancelación de suscripción de Braze para procesar directamente las cancelaciones de suscripción, selecciona **Incluir un encabezado de correo electrónico de cancelación de suscripción de lista (mailto y HTTP) con un solo clic para los correos electrónicos enviados a usuarios suscritos o con adhesión voluntaria** y selecciona **Braze predeterminado** como URL y mail-to estándar de Braze. 
 
-![Opción de incluir automáticamente un encabezado de cancelar suscripción en los correos electrónicos enviados a usuarios suscritos o con adhesión voluntaria.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %})
+![Opción para incluir automáticamente un encabezado de cancelar suscripción en los correos electrónicos enviados a usuarios suscritos o con adhesión voluntaria.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %})
 
 Braze admite las siguientes versiones de la cabecera list-unsubscribe:
 
@@ -199,7 +197,7 @@ El uso de cancelar suscripción con un clic para la cabecera de baja de lista[(R
 
 ### Cancelación de la suscripción con un solo clic a nivel de mensaje
 
-La configuración de cancelar suscripción a la lista de mensajes con un clic anula el conjunto de características de la cabecera de cancelación de suscripción de correo electrónico para los espacios de trabajo. Aplique el comportamiento de cancelación de suscripción con un solo clic por campaña o paso de Canvas para los siguientes usos:
+La configuración de cancelar suscripción a la lista de mensajes con un clic anula el conjunto de características de la cabecera de cancelación de suscripción al correo electrónico para los espacios de trabajo. Aplique el comportamiento de cancelación de suscripción con un solo clic por campaña o paso de Canvas para los siguientes usos:
 
 - Añadir un Braze one-click unsubscribe para un grupo de suscripción específico para apoyar múltiples marcas/listas dentro de un espacio de trabajo.
 - Alternar entre la URL de cancelación de suscripción predeterminada de Braze o la personalizada
