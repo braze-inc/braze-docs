@@ -110,7 +110,7 @@ page_order: 0
 
 작은 화면에서 세로로 열을 쌓아 랜딩 페이지를 사용자 기기의 크기에 맞게 반응하도록 만들 수 있습니다. 이 기능을 인에이블하려면 반응형으로 만들려는 행에 열을 추가한 다음 **열 커스텀** 섹션에서 **작은 화면에서 세로 스택을** 토글합니다.
 
-인에이블먼트가 활성화되면 작은 화면에서 여러 열로 된 콘텐츠의 세로 순서를 제어하기 위해 열을 역방향으로 쌓을 수도 있습니다. 이렇게 하면 커스텀 코드 없이도 모바일에서 페이지의 모양과 느낌을 개선할 수 있습니다.
+인에이블먼트가 활성화되면 열을 역으로 쌓아 작은 화면에서 여러 열 콘텐츠의 세로 순서를 제어할 수도 있습니다. 이렇게 하면 커스텀 코드 없이도 모바일에서 페이지의 모양과 느낌을 개선할 수 있습니다.
 
 !['작은 화면에 세로로 쌓기' 토글은 '열 커스텀' 섹션에 있습니다.]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
@@ -120,7 +120,7 @@ page_order: 0
 
 예를 들어 양식 제출 전에 동의 캡처를 적용하려면 **필수 필드 입력을** 사용 설정하여 적절한 고지 사항 텍스트와 함께 확인란을 필수로 설정할 수 있습니다.
 
-!['필수 입력 필드' 토글이 선택된 체크박스 양식 필드입니다.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
+!['필수 입력 필드' 토글이 선택된 확인란 양식 필드입니다.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
 
 ### 4단계: 확인 페이지 만들기(선택 사항)
 
@@ -170,7 +170,7 @@ page_order: 0
 
 랜딩 페이지의 효과를 분석하려면 **메시징** > **랜딩 페이지로** 이동한 다음 게시한 랜딩 페이지를 선택합니다. 여기에서 페이지 조회 수, 페이지 클릭 수, 페이지 제출 수 및 랜딩 페이지의 제출 비율을 추적할 수 있습니다.
 
-![랜딩 페이지에 대한 분석 섹션입니다.]({% image_buster /assets/img/landing_pages/analytics.png %})
+![랜딩 페이지의 분석 섹션입니다.]({% image_buster /assets/img/landing_pages/analytics.png %})
 
 ## 양식 제출 오류 처리 {#handling-form-submission-errors}
 
