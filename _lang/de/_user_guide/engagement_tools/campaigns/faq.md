@@ -147,7 +147,7 @@ Ja, verwenden Sie den Filter `api_id:YOUR_API_ID` auf der Seite **Kampagnen**, u
 
 Die Behandlung von Leerzeichen unterscheidet sich zwischen Eingabefeldern und angezeigten Textkomponenten aufgrund des CSS-Stylings. In Textkomponenten mit dem Standard-CSS `white-space: normal` werden mehrere aufeinanderfolgende Leerzeichen bei der Anzeige zu einem einzigen Leerzeichen zusammengefasst. Dies ist das Standardverhalten von HTML für gerenderten Text. 
 
-Eingabefelder behalten mehrere Leerzeichen genau so bei, wie Sie sie eingeben, denn Sie müssen die genauen Abstände sehen und bearbeiten können, um die Daten korrekt einzugeben. Das bedeutet, dass Text mit mehreren Leerzeichen anders aussehen kann, wenn er in einem Eingabefeld angezeigt wird (wo alle Leerzeichen erhalten bleiben), als wenn er in anderen Teilen des Dashboards angezeigt wird (wo CSS mehrere Leerzeichen ausblenden kann). 
+Eingabefelder behalten mehrere Leerzeichen genau so bei, wie Sie sie eingeben, da Sie die genauen Abstände für eine genaue Dateneingabe sehen und bearbeiten müssen. Das bedeutet, dass Text mit mehreren Leerzeichen anders aussehen kann, wenn er in einem Eingabefeld angezeigt wird (wo alle Leerzeichen erhalten bleiben), als wenn er in anderen Teilen des Dashboards angezeigt wird (wo CSS mehrere Leerzeichen ausblenden kann). 
 
 Wenn Sie zum Beispiel einen Kampagnennamen oder einen UTM-Parameter mit mehreren Leerzeichen in ein Eingabefeld eingeben, bleiben alle Leerzeichen erhalten. Wenn derselbe Text jedoch in Suchergebnissen, Kampagnenlisten oder anderen Textkomponenten erscheint, können mehrere Leerzeichen aufgrund der CSS-Whitespace-Behandlung als ein einziges Leerzeichen erscheinen. 
 
