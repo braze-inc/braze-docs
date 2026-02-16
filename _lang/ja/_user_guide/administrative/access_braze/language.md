@@ -1,7 +1,7 @@
 ---
 nav_title: 言語設定
 article_title: 言語設定
-page_order: 2.5
+page_order: 3
 page_type: reference
 description: "この記事では、Braze ダッシュボードの表示言語を変更する方法について説明します。"
 
