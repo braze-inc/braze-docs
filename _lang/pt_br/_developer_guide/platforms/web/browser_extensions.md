@@ -83,7 +83,7 @@ Para usar a Braze no script em segundo plano de sua extensão, adicione a biblio
         "scripts": [
             "relative/path/to/braze.min.js",
             "background.js"
-        ],
+        ]
     }
 }
 ```
