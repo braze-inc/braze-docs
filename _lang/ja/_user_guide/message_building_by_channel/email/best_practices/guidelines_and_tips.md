@@ -36,25 +36,7 @@ channel: email
 
 Braze サーバーを介してターゲットされるメールアドレスは、[RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) 標準に従って検証されなければなりません。Braze は特定の文字を受け入れず、無効として認識します。メールがバウンスされた場合、Braze はメールを無効としてマークし、その購読ステータスは変更されません。 
 
-{% details Unaccepted characters outside of RFC standards %}
-- *
-- /
-- ?
-- !
-- $
-- #
-- %
-- ^
-- &
-- (
-- )
-- {
-- }
-- [
-- ]
-- ~
-- ,
-{% enddetails %}
+許可されない文字とメール検証ルールについては、[メール検証を]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/#how-it-works)参照のこと。
 
 ### 差出人アドレスと返信先アドレスの設定
 
