@@ -21,7 +21,7 @@ Braze reconnaît que la planification des données prend du temps. Nous encourag
 
 {% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
 
-Toute devise autre que le dollar américain s'affichera dans Braze en dollars américains, sur la base du taux de change en vigueur à la date de la déclaration. Pour éviter la conversion des devises, codifiez en dur la devise en USD.
+Toute devise autre que le dollar américain s'affichera dans Braze en dollars américains, sur la base du taux de change en vigueur à la date de la déclaration. Pour éviter la conversion des devises, coder en dur la devise en USD.
 
 {% tabs %}
 {% tab ecommerce.product_viewed %}
@@ -140,7 +140,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
           "color": "ORANGE",
           "size": "6",
           "brand": "Braze"
-        }
+        },
         "type": [
           "price_drop",
           "back_in_stock"
@@ -188,7 +188,7 @@ S'il y a deux paniers, ajoutez les deux à l'utilisateur fusionné. Remettez le 
 
 | Nom de la propriété | Requis | Type de données | Description | 
 |---|---|---|---|
-| `cart_id` | Oui | Chaîne de caractères | Si vous n'utilisez pas une plateforme tierce qui fournit un `cart_id`, vous pouvez utiliser l'[ID de session de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
+| `cart_id` | Oui | Chaîne de caractères | Si vous n'utilisez pas de plateforme tierce fournissant un `cart_id`, vous pouvez utiliser l'[ID de session de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
 | `total_value` | Oui | float | Valeur monétaire totale du panier. | 
 | `currency` | Oui | Chaîne de caractères | La devise dans laquelle le prix du produit est indiqué (par exemple "USD" ou "EUR") au [format ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
 | `products` | Oui | Tableau |  |
@@ -364,7 +364,7 @@ Semblable à l'événement `ecommerce.cart_updated`, cet événement vous permet
 | Nom de la propriété | Requis | Type de données | Description | 
 |---|---|---|---|
 | `checkout_id` | Oui | Chaîne de caractères | Identifiant unique de la caisse. |
-| `cart_id` | Non | Chaîne de caractères | Si vous n'utilisez pas une plateforme tierce qui fournit un `cart_id`, vous pouvez utiliser l'[ID de session de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). | 
+| `cart_id` | Non | Chaîne de caractères | Si vous n'utilisez pas de plateforme tierce fournissant un `cart_id`, vous pouvez utiliser l'[ID de session de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). | 
 | `total_value` | Oui | float | Valeur monétaire totale du panier. |
 | `currency` | Oui | Chaîne de caractères | Devise dans laquelle le panier est évalué. |
 | `products` | Oui | Tableau d’objets |  |
@@ -530,7 +530,7 @@ Vous pouvez utiliser l'événement "commande passée" pour déclencher le proces
 | Nom de la propriété | Requis | Type de données | Description | 
 |---|---|---|---|
 | `order_id` | Oui | Chaîne de caractères | Identifiant unique de la commande passée. |
-| `cart_id` | Non | Chaîne de caractères | Si vous n'utilisez pas une plateforme tierce qui fournit un `cart_id`, vous pouvez utiliser l'[ID de session de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
+| `cart_id` | Non | Chaîne de caractères | Si vous n'utilisez pas de plateforme tierce fournissant un `cart_id`, vous pouvez utiliser l'[ID de session de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
 | `total_value` | Oui | float | Valeur monétaire totale du panier. | 
 | `currency` | Oui | Chaîne de caractères | Devise dans laquelle le panier est évalué. |
 | `total_discounts` | Non | float | Montant total des réductions appliquées à la commande. | 
@@ -1173,4 +1173,4 @@ Nous utilisons des calculs normalisés pour les champs suivants :
 
 Ces calculs de champ d'utilisateur sont également inclus dans l'onglet **Transactions** des profils utilisateurs.
 
-![L'onglet "Transactions" avec les champs calculés par l'utilisateur.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+![L'onglet "Transactions" avec les champs calculés par l'utilisateur.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:70%;"}
