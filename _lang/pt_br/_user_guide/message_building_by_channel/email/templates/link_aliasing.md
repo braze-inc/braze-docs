@@ -27,7 +27,7 @@ Com o aliasing de link, você pode:
 
 O Braze identifica de forma única os links dentro dos emails ao anexar um parâmetro extra chamado `lid` (também conhecido como identificador de link) a cada URL de link. Este valor `lid` permite que Braze rastreie, monitore e agregue interações do usuário com o link, mesmo que o restante dos parâmetros da URL possa diferir. Isso ajuda a fornecer insights sobre como os usuários interagem com o conteúdo em suas campanhas de e-mail.
 
-Os identificadores de link também serão atualizados se uma campanha de e-mail, Canvas com uma mensagem de e-mail ou Bloco de Conteúdo for duplicado.
+Os identificadores de link também serão atualizados se uma campanha de e-mail, Canvas com uma mensagem de e-mail ou bloco de conteúdo for duplicado.
 
 ## Criação de um alias de link
 
@@ -77,25 +77,25 @@ As tabelas a seguir fornecem exemplos de links em um e-mail, resultados de alias
 
 **Lógica:** O Braze insere um ponto de interrogação (?) e adiciona o primeiro parâmetro de consulta ao URL.
 
-| Link no corpo do e-mail    | Link com aliasing                     |
+| Link no corpo do e-mail    | Link com alias                     |
 |-----------------------|----------------------------------------|
-| https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk |
+| `https://www.braze.com` | `https://www.braze.com?lid=slfdldtqdhdk` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Link com mais consulta parâmetros
 
 **Lógica:** A Braze detecta outros parâmetros de consulta e anexa o endereço `lid=` ao final do URL.
 
-| Link no corpo do e-mail                                            | Link com aliasing                                                             |
+| Link no corpo do e-mail                                            | Link com alias                                                             |
 |---------------------------------------------------------------|--------------------------------------------------------------------------------|
-| https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz |
+| `https://www.braze.com?utm_campaign=retention&utm_source=email` | `https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### link HTML
 
 **Lógica:** Braze reconhece que um link é uma URL e já possui um ponto de interrogação (?) presente, então o parâmetro de consulta `lid` é anexado após o ponto de interrogação.
 
-| Link no corpo do e-mail                                                | Link com aliasing                                                                |
+| Link no corpo do e-mail                                                | Link com alias                                                                |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -104,18 +104,18 @@ As tabelas a seguir fornecem exemplos de links em um e-mail, resultados de alias
 
 **Lógica:** O Braze espera que o URL use uma estrutura padrão em que as âncoras (#) estejam presentes após um ponto de interrogação (?). Porque Braze lê da esquerda para a direita, o ponto de interrogação e o valor `lid` são anexados antes do âncora.
 
-| Link no corpo do e-mail                               | Link com aliasing                                                |
+| Link no corpo do e-mail                               | Link com alias                                                |
 |--------------------------------------------------|-------------------------------------------------------------------|
-| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email |
+| `https://www.braze.com#bookmark1?utm_source=email` | `https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Link com âncora e captura de tag
 
-**Lógica:** Ao usar alias de link com URLs que contêm âncoras (#), Braze espera que a âncora seja colocada após os parâmetros de consulta. Isso significa que o valor `lid` deve ser anexado antes do âncora para um rastreamento adequado, e como o Braze lê a URL da esquerda para a direita, o ponto de interrogação (?) e `lid` devem vir antes do âncora.
+**Lógica:** Ao usar alias de link com URLs que contêm âncoras (#), Braze espera que a âncora seja colocada após os parâmetros de consulta. Isso significa que o valor `lid` deve ser anexado **antes** do âncora para rastreamento adequado, e como o Braze lê a URL da esquerda para a direita, o ponto de interrogação (?) e `lid` devem vir antes do âncora.
 
-| Link no corpo do e-mail                                                                        | Link com aliasing                                                                                           |
+| Link no corpo do e-mail                                                                        | Link com alias                                                                                           |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a>` {%endraw%} |
+| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions?lid={{link_alias}}#special-offer">Check out our special offer!</a>` {%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Rastreamento link aliases
@@ -128,7 +128,7 @@ Para rastrear as métricas de engajamento do link, seu link precisa ser precedid
 
 O Braze permite selecionar um número ilimitado de links para rastreamento, embora você só possa redirecionar os usuários para os links mais recentes que eles abriram. Os perfis de usuário incluem os 100 links clicados mais recentemente. Por exemplo, se você rastrear 500 links e um usuário clicar em todos os 500, poderá redirecionar ou criar segmentos com base nos 100 links clicados mais recentemente.
 
-![A guia de Gerenciamento de Links com dois links selecionados.]({% image_buster /assets/img/link_management_dnd.png %})
+![A aba de Gerenciamento de Links com dois links selecionados.]({% image_buster /assets/img/link_management_dnd.png %})
 
 {% alert note %}
 O Braze só rastreia até os últimos 100 aliases de links clicados no nível do perfil.
@@ -136,7 +136,7 @@ O Braze só rastreia até os últimos 100 aliases de links clicados no nível do
 
 ### Filtros baseados em ações
  
-Você pode criar mensagens baseadas em ações direcionando qualquer link (rastreado ou não rastreado) ou redirecionar usuários com base em se eles clicaram em um alias em qualquer campanha de e-mail ou componente do Canvas.
+Você pode criar mensagens baseadas em ações direcionando qualquer link (rastreado ou não rastreado) ou redirecionar usuários com base em se eles clicaram em um alias em qualquer campanha de e-mail ou componente Canvas.
 
 ![Opções Baseadas em Ação para segmentar usuários que clicaram em um alias em um componente Canva ou interagiram com uma campanha.]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
@@ -156,7 +156,7 @@ Desvincular um link não realocará os segmentos existentes com o filtro para o 
 
 Os links em mensagens arquivadas são automaticamente desmarcados. No entanto, se as mensagens arquivadas forem desarquivadas, os links precisarão ser rastreados novamente. Quando os aliases de links são rastreados, os relatórios de links são indexados pelo alias em vez de domínios de nível superior ou URLs completos.
 
-Para ver todos os links em sua campanha de e-mail e seus respectivos cliques totais, acesse **Análise de Mensagens** > **Desempenho de E-mail** > **Prévia & Mapa de Calor**, e selecione o alternador **Mostrar Mapa de Calor**.
+Para visualizar todos os links em sua campanha de e-mail e seus respectivos cliques totais, acesse **Análise de Mensagens** > **Desempenho de E-mail** > **Prévia & Mapa de Calor**, e selecione o alternador **Mostrar Mapa de Calor**.
 
 ![Painel da Tabela de Links por Cliques Totais com aliases de link e seus cliques totais.]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
 
