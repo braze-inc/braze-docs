@@ -41,7 +41,7 @@ Wenn Sie Telefonnummern importieren, ist es wichtig, dass Sie das [empfohlene Fo
 - [Verwendung des Endpunkts `/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track)
 
 {% alert important %}
-Nutzer:innen-Telefonnummern werden in Braze als String aus Ziffern angezeigt. Wenn Sie eine Zahl importieren, die keine Ziffern enthält (wie z.B. `,`, `-`, `(`, oder andere), werden die Nicht-Ziffern beim Rendern in Braze entfernt. Wenn Sie zum Beispiel `+1 (724) 123-4567` importieren, wird dies als `17241234567` angezeigt.
+Nutzer:innen-Telefonnummern erscheinen in Braze als String von Ziffern. Wenn Sie eine Zahl importieren, die außer der führenden {% raw %}`+`{% endraw %} auch andere Ziffern enthält (z.B. `,`, `-` oder `(`), werden diese Ziffern bei der Darstellung in Braze entfernt. Der Import von `+1 (724) 123-4567` erscheint zum Beispiel als `+17241234567`.
 {% endalert %}
 
 ## Umgang mit ungültigen Telefonnummern
