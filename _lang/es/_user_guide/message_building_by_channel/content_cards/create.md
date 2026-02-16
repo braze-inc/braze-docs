@@ -18,7 +18,7 @@ search_rank: 3.9
 
 ## Paso 1: Elige dónde construir tu mensaje
 
-Utiliza campañas para mensajes únicos y sencillos (como informar a los usuarios sobre un producto con un solo mensaje). Utiliza Canvases para recorridos de usuario de varios pasos (como el envío de sugerencias de productos personalizadas basadas en el comportamiento del usuario a lo largo del tiempo).
+Utiliza campañas para mensajes únicos y sencillos (como informar a los usuarios sobre un producto con un solo mensaje). Utiliza Canvases para recorridos de usuario de varios pasos (como el envío de sugerencias de productos a medida basadas en el comportamiento del usuario a lo largo del tiempo).
 
 {% tabs %}
 {% tab Campaign %}
@@ -88,6 +88,8 @@ Escribe lo que quieras. No hay límites, pero cuanto más rápido transmitas tu 
 
 Añade una imagen a tu tarjeta de contenido seleccionando **Añadir imagen** o proporcionando una URL de la imagen. Al seleccionar **Añadir imagen** se abre la **biblioteca multimedia**, donde puedes seleccionar una imagen cargada previamente o añadir una nueva. Cada tipo de mensaje y plataforma puede tener sus propias proporciones y requisitos sugeridos, así que asegúrate de comprobar cuáles son antes de encargar o hacer una imagen desde cero. Ten en cuenta que los campos de mensaje de la tarjeta de contenido están limitados a 2 KB de tamaño total.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Anclar a la parte superior
 
 Braze muestra una tarjeta anclada en la parte superior de la fuente de un usuario y éste no puede descartarla. Si la fuente de un usuario tiene varias tarjetas ancladas, Braze las ordena cronológicamente. Después de enviar una tarjeta, no puedes actualizar retroactivamente su opción anclada. Cambiar esta opción después de enviar una campaña sólo afecta a futuros envíos.
@@ -131,9 +133,7 @@ Las tarjetas de contenido pueden entregarse en función de una hora programada, 
 
 También puede establecer la duración de la campaña y [las horas de silencio]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) y determinar la caducidad de la tarjeta de contenido. Establezca una fecha de caducidad específica o los días que faltan para que caduque una Tarjeta, hasta 30 días. Todas las variantes tienen fechas de caducidad idénticas.
 
-{% alert note %}
-La limitación de frecuencia no se aplica a las tarjetas de contenido.
-{% endalert %}
+{% multi_lang_include alerts/note_alerts.md alert='Content Cards frequency capping' %}
 
 ##### Entrega programada
 
@@ -170,39 +170,136 @@ A continuación, consulte [los informes de Content Card]({{site.baseurl}}/user_g
 
 ## Lo que hay que saber
 
-### Limitaciones de tamaño para las tarjetas de contenido
+### Limitaciones de la carga útil y de la fuente
 
-El tamaño de la carga útil de una tarjeta de contenido puede ser de hasta 2 KB tras la renderización de Liquid. Esto incluye el **Título**, el **Mensaje**, la **URL de la imagen**, el **Texto del enlace**, la **(s) URL del enlace** y **los Pares clave-valor** (nombres y valores). Sin embargo, este límite no incluye el tamaño de la imagen, sólo la longitud de la URL de la imagen.
+Para favorecer el rendimiento, las tarjetas de contenido tienen dos restricciones clave: un límite en el tamaño de la carga útil de cada tarjeta y un número máximo de tarjetas que pueden aparecer en una fuente.
+
+#### Limitaciones de tamaño para las tarjetas de contenido
+
+La carga útil completa de datos de una sola tarjeta de contenido no puede superar los 2 KB **después de que** se realice cualquier personalización de Liquid. Esto incluye lo siguiente:
+
+* Título
+* Mensaje
+* URL de la imagen (la longitud de la cadena de la URL en sí, no el tamaño del archivo de la imagen)
+* Texto de enlace
+* Enlaza URLs para todas las plataformas especificadas (las URLs separadas para iOS, Android y Web cuentan para el total)
+* Pares clave-valor (tanto los nombres de las claves como sus valores)
+
+Si utilizas Liquid para introducir cadenas largas de texto (por ejemplo, de atributos personalizados), puedes sobrepasar el límite. 
+
+El compositor de campañas mostrará una advertencia si tu contenido estático supera el límite. (No predecimos el tamaño para el contenido dinámico utilizando Liquid). **Si el tamaño del mensaje supera los 2 KB, se cancelará en el momento del envío.** Puedes ver estos abortos en el Registro de Actividad de Mensajes con el motivo `Content card maximum size exceeded`.
 
 {% alert important %}
-No se enviarán mensajes de más de 2 KB. Durante los envíos de prueba, las tarjetas de contenido que superen los 2 KB pueden seguir entregándose y mostrándose correctamente.
+Durante los envíos de prueba, las tarjetas de contenido que superen los 2 KB pueden seguir entregándose y mostrándose correctamente.
 {% endalert %}
 
-### Número de tarjetas en la fuente
+He aquí algunas buenas prácticas para administrar el tamaño de la carga útil de la tarjeta de contenido:
 
-Cada usuario puede tener hasta 250 tarjetas de contenido no caducadas en su fuente en un momento dado. Cuando se supere este límite, Braze dejará de devolver las tarjetas más antiguas, aunque no se hayan leído. Las tarjetas descartadas también cuentan para este límite, lo que significa que un número elevado de tarjetas descartadas puede reducir el espacio disponible para las nuevas.
+* Utiliza acortadores de URL para los enlaces largos. Las URL, especialmente las que tienen muchos parámetros de seguimiento, pueden tener problemas de límite de tamaño. Utilizar un servicio de acortamiento de URL puede reducir drásticamente el número de caracteres y liberar espacio en la carga útil.
+* Trunca el contenido dinámico con Liquid. Al personalizar tarjetas con texto dinámico a partir de atributos de usuario o llamadas a la API, la longitud del contenido puede ser impredecible. Utiliza proactivamente filtros Liquid como `truncate` para limitar la longitud de cualquier texto dinámico.
+* Sé eficiente con las URL multiplataforma. El límite de 2 KB incluye las URL de todas las plataformas que definas. Utilizar URL largas y únicas para cada plataforma puede multiplicar el tamaño de la carga útil. Si es posible, utiliza un único enlace que funcione en todas las plataformas, o utiliza acortadores de URL cuando sea necesario.
+* Considera los banners para enriquecer el contenido. Para los casos de uso que requieren sistemáticamente grandes cantidades de contenido, puede que las tarjetas de contenido no sean el canal adecuado. Los banners no tienen la misma limitación de carga útil de 2 KB y son más adecuados para incrustar contenido más rico directamente en una aplicación o sitio web.
 
-### Comportamiento de envío
+#### Número de tarjetas en la fuente
 
-Después de que Braze envíe tarjetas de contenido, éstas se colocan en un "buzón de entrada" listas para ser entregadas al usuario (de forma similar a los correos electrónicos). Después de que Braze extraiga contenido de la tarjeta de contenido en el momento de la visualización, el contenido no cambia durante la vida útil de la tarjeta. Esto incluye las llamadas a la API a través del Contenido Conectado si cambian los datos del punto final. Braze no actualiza esos datos. Sólo puedes detener el envío de nuevas tarjetas y eliminar las tarjetas existentes de las fuentes. Si modificas una campaña, sólo las tarjetas futuras reflejarán la actualización.
+Cada usuario puede tener hasta 250 tarjetas de contenido no caducadas en su fuente en un momento dado. Cuando se supere este límite, Braze dejará de devolver las tarjetas más antiguas, aunque no se hayan leído. Las tarjetas descartadas también cuentan para este límite, lo que significa que un número elevado de tarjetas descartadas puede reducir el espacio disponible para las más antiguas.
 
-Si necesitas eliminar tarjetas antiguas, primero debes detener la campaña. Para detener una campaña, abra la campaña de la tarjeta de contenido y seleccione **Detener campaña**. Si detienes la campaña, deberás decidir cómo tratar a los usuarios que ya hayan recibido tu tarjeta. 
+Para evitar problemas con el límite de la tarjeta, te aconsejamos las siguientes buenas prácticas:
 
-Si quieres eliminar la tarjeta de contenido de las fuentes de tus usuarios, selecciona **Eliminar tarjeta de la fuente**. El SDK ocultará la tarjeta en la siguiente sincronización.
+- **Utiliza fechas de caducidad más cortas:** Para las campañas que son sensibles al tiempo (como una venta de fin de semana), establece una fecha de caducidad específica. De este modo, las tarjetas se eliminan automáticamente de la fuente y no contarán para el límite cuando ya no sean relevantes.
+- **Aprovecha la eliminación basada en acciones:** Configura eventos de eliminación para tarjetas transaccionales o basadas en objetivos. Por ejemplo, una tarjeta que pida a un usuario que complete su perfil debe eliminarse en cuanto se registre un evento `profile_completed`.
+- **Audita las campañas de larga duración:** Revisa las campañas recurrentes o en curso para asegurarte de que no están creando una mala experiencia para tus usuarios al llenar la fuente con demasiadas tarjetas a lo largo del tiempo.
 
-![Diálogo para confirmar la desactivación de la tarjeta de contenido]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
+### Cómo volver a ser elegible para las tarjetas de contenido
+
+La reelegibilidad determina si un usuario puede recibir un mensaje de la misma campaña más de una vez y cuándo. Para las tarjetas de contenido, entender cómo funciona esto es fundamental para gestionar campañas recurrentes y garantizar que los usuarios no reciban mensajes duplicados o caducados.
 
 {% alert tip %}
 ¿Quieres que tu contenido dure más de 30 días? Prueba [los Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 {% endalert %}
 
-### Eventos de retirada de tarjetas {#action-based-card-removal}
+#### Cómo se calcula la readmisibilidad
 
-Algunas tarjetas de contenido sólo son relevantes hasta que el usuario realiza alguna acción. Por ejemplo, una tarjeta que inste a los usuarios a activar su cuenta no debería mostrarse después de que el usuario complete esa tarea de incorporación.
+Si activas la reelegibilidad, la cuenta atrás para cuando un usuario puede "volver a entrar" en una campaña comienza después de que se le envíe el mensaje. El momento concreto en que comienza esta cuenta atrás depende de la configuración de creación de tu tarjeta:
 
-Dentro de una campaña o mensaje Canvas, puedes añadir opcionalmente un **Evento de eliminación** para especificar qué eventos personalizados o compras deben hacer que las tarjetas enviadas previamente se eliminen de la fuente de ese usuario, desencadenado por el SDK o la API REST.
+* Las tarjetas de contenido que se utilizan [en la primera impresión]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) utilizan el tiempo de impresión para calcular la reelegibilidad.
+* Las tarjetas de contenido creadas en el lanzamiento de la campaña o en la entrada en Canvas utilizan la hora de envío o de impresión que sea más tardía.
 
-Braze elimina las tarjetas en las siguientes actualizaciones después de procesar el evento especificado.
+#### Los 30 días de caducidad y la posibilidad de volver a ser elegible
+
+Una fuente común de confusión es la interacción entre la reelegibilidad de la campaña y la caducidad automática de 30 días de todas las tarjetas de contenido. 
+
+Todas las tarjetas de contenido se purgan automáticamente de los sistemas de Braze 30 días después de su envío o eliminación. Si tienes una campaña recurrente de larga duración con la reelección **desactivada**, un usuario puede volver a recibir la misma tarjeta al cabo de 30 días. Cuando se elimina la tarjeta original, el sistema deja de ver un registro de que ese usuario ha recibido la campaña, por lo que vuelve a ser elegible en su próxima sesión. 
+
+Para que los usuarios sólo reciban una vez un mensaje de una campaña específica, añade un filtro de audiencia a tu campaña o paso en Canvas para los usuarios que no hayan recibido un mensaje de esta campaña. Este filtro es la forma más fiable de evitar los envíos duplicados de las campañas de larga duración.
+
+### Gestión de tarjetas de contenido en vivo
+
+Una vez enviadas las tarjetas de contenido, quedan en espera en un "buzón de entrada" listas para ser entregadas al usuario (de forma similar a lo que ocurre con los correos electrónicos). Después de introducir el contenido en la tarjeta de contenido (en el momento de la visualización), no se puede cambiar durante su vida útil. Esto se aplica incluso si estás llamando a una API a través de Contenido conectado, y los datos del punto final cambian. Estos datos no se actualizarán. Sólo se puede impedir el envío a nuevos usuarios y eliminarlo de los feeds de los usuarios. Si modifica una campaña, sólo las futuras tarjetas que se envíen tendrán la actualización.
+
+#### Actualización de las tarjetas lanzadas
+
+Para cambiar una tarjeta para usuarios que ya la han recibido, debes utilizar uno de los siguientes métodos:
+
+##### Opción 1: Duplicar la campaña (recomendado para cambios inmediatos)
+
+{% alert tip %}
+Recomendamos esta opción para mensajes en los que muestres el contenido más reciente de la tarjeta, los cambios deban mostrarse inmediatamente, o cuando la reelegibilidad esté desactivada.
+{% endalert %}
+
+El primer enfoque consiste en archivar la campaña y lanzar una nueva campaña duplicada:
+
+1. Detén la campaña original y, cuando se te pida, selecciona `Remove card after the next sync`.
+2. Duplica la campaña, edítala y lanza la nueva versión.
+
+Cuando dupliques la campaña, tienes que definir la audiencia de la nueva versión. Utiliza filtros de segmentación para controlar quién recibe la tarjeta actualizada:
+* Si los usuarios no deben volver a ser elegibles para una tarjeta de contenido, puedes filtrar a los usuarios que no hayan recibido la versión anterior de la tarjeta de contenido configurando el filtro `Received Message from Campaign` a la condición de `Has Not`.
+* Si los usuarios que recibieron la tarjeta anterior deben volver a ser elegibles en X días, puede establecer el filtro para `Last Received Message from specific campaign` en hace más de X días **O** `Received Message from Campaign` con la condición `Has Not`.
+
+###### Impacto
+
+* **Beneficiarios existentes:** Los nuevos beneficiarios y los ya existentes verán la tarjeta actualizada en la próxima actualización del feed si cumplen los requisitos.
+* **Informar:** Cada versión de la tarjeta tendría sus propios análisis.
+
+Digamos que has configurado una campaña para que se desencadene con el inicio de una sesión, y que tiene la reelegibilidad establecida en 30 días. Un usuario recibió la campaña hace dos días y usted quiere cambiar la copia. Primero, archivarías la campaña y eliminarías las tarjetas de la fuente. En segundo lugar, duplicarías la campaña y la relanzarías con el nuevo texto. Si el usuario tiene otra sesión, recibirá inmediatamente la nueva tarjeta.
+
+##### Opción 2: Detener y relanzar la misma campaña
+
+{% alert tip %}
+Recomendamos utilizar esta opción para mensajes únicos en un centro de notificaciones o buzón de entrada de mensajes (como promociones), cuando sea importante que los análisis estén unificados o cuando la puntualidad del mensaje no sea una preocupación (como cuando los destinatarios existentes pueden esperar a la ventana de elegibilidad antes de ver las tarjetas actualizadas).
+{% endalert %}
+
+Este enfoque mantiene todos tus análisis unificados en una sola campaña. Los nuevos usuarios elegibles recibirán la nueva tarjeta, pero se retrasa la actualización para los destinatarios existentes hasta que vuelvan a ser elegibles:
+
+1. Detén tu campaña y, cuando se te solicite, selecciona **Eliminar tarjeta tras la siguiente sincronización**.
+2. Edite su campaña según sea necesario.
+3. Reinicia tu campaña.
+
+###### Impacto
+
+* **Beneficiarios existentes:** Los usuarios que ya hayan recibido la tarjeta no recibirán las tarjetas actualizadas hasta que vuelvan a ser elegibles. Si se desactiva la reelegibilidad, nunca recibirían la nueva tarjeta.
+* **Informar:** Una campaña contendrá todos los informes analíticos de las versiones de tarjetas lanzadas. Braze no diferenciará entre las versiones lanzadas.
+
+Supongamos que tienes una campaña desencadenada por el inicio de una sesión y con la posibilidad de volver a ser elegible establecida en 30 días. Un usuario recibió la campaña hace dos días y usted quiere cambiar la copia. Primero, detén la campaña y retira la tarjeta de la fuente. En segundo lugar, vuelve a publicar la campaña con el nuevo texto. Si el usuario tiene otra sesión, recibirá la nueva tarjeta en 28 días.
+
+#### Eliminar y caducar tarjetas
+
+##### Extracción manual de tarjetas
+
+Puedes eliminar manualmente las tarjetas de las fuentes de todos los usuarios en cualquier momento deteniendo la campaña.
+
+1. Abre la campaña de la tarjeta de contenido y selecciona Detener campaña.
+2. Cuando se te pregunte, selecciona **Eliminar tarjeta tras la siguiente sincronización**. La tarjeta se eliminará en la siguiente actualización de la fuente.
+
+##### Eliminación automatizada de tarjetas {#action-based-card-removal}
+
+Puedes eliminar automáticamente una tarjeta cuando un usuario realice una acción concreta, como completar una compra o activar una característica.
+
+En tu campaña o paso en Canvas, especifica un evento de eliminación. Cuando un usuario realice ese evento, la tarjeta se eliminará de su fuente en una actualización posterior, después de que Braze procese el evento. 
+
+{% alert note %}
+Esta eliminación no es instantánea. Hay un retraso en el procesamiento, por lo que pueden pasar varios minutos y más de una actualización de la fuente hasta que la tarjeta desaparezca.
+{% endalert %}
 
 {% alert tip %}
 Puede especificar varios eventos personalizados y compras que deben eliminar una tarjeta del feed de un usuario. Cuando el usuario realice **cualquiera** de estas acciones, se eliminarán todas las tarjetas enviadas por las tarjetas de la campaña. Las futuras tarjetas que cumplan los requisitos seguirán enviándose de acuerdo con la programación del mensaje.
@@ -210,61 +307,18 @@ Puede especificar varios eventos personalizados y compras que deben eliminar una
 
 ![Panel de Condiciones de Eliminación de Tarjetas de Contenido con la opción Evento de Eliminación de Tarjetas de Contenido.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
-### Actualización de las tarjetas lanzadas
+##### Caducidad de la tarjeta
 
-No puedes editar las tarjetas de contenido después de enviarlas. Si necesitas cambiar las tarjetas enviadas, considera la posibilidad de [volver a ser elegible en campaña]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) con las siguientes opciones.
+Las tarjetas de contenido permanecen disponibles durante un máximo de 30 días desde su envío; transcurridos 30 días, Braze las elimina de las fuentes de los usuarios y las purga de los sistemas de Braze.
 
-{% alert note %}
-Cuando una tarjeta de contenido vuelve a ser elegible, puede enviarse de nuevo cuando la tarjeta original aún está en la aplicación de un usuario. Para evitar la duplicación de tarjetas en la aplicación de un usuario, puedes desactivar la reelegibilidad o ampliar la ventana de reelegibilidad para que no se envíe a los usuarios una nueva tarjeta hasta que la original haya caducado.
-{% endalert %}
-
-Ten en cuenta también que las tarjetas de contenido que se utilizan [en la primera impresión]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) utilizan el tiempo de impresión para calcular la nueva elegibilidad. Sin embargo, las tarjetas de contenido creadas en el lanzamiento de la campaña o en la entrada en Canvas utilizan la hora de envío o de impresión que sea más tardía.
-
-#### Opción 1: Duplicar la campaña
-
-Un método consiste en archivar la campaña y eliminar las tarjetas activas del feed. Luego puedes duplicar la campaña y lanzarla con actualizaciones para que todos los usuarios elegibles reciban las tarjetas actualizadas.
-
-* Si los usuarios no deben volver a ser elegibles para una tarjeta de contenido, puedes filtrar a los usuarios que no hayan recibido la versión anterior de la tarjeta de contenido configurando el filtro `Received Message from Campaign` a la condición de `Has Not`.
-* Si los usuarios que recibieron la tarjeta anterior deben volver a ser elegibles en X días, puede establecer el filtro para `Last Received Message from specific campaign` en hace más de X días **O** `Received Message from Campaign` con la condición `Has Not`.
-
-##### Casos de uso
-
-Digamos que has configurado una campaña para que se desencadene con el inicio de una sesión, y que tiene la reelegibilidad establecida en 30 días. Un usuario recibió la campaña hace dos días y usted quiere cambiar la copia. Primero, archivarías la campaña y eliminarías las tarjetas de la fuente. En segundo lugar, duplicarías la campaña y la relanzarías con el nuevo texto. Si el usuario tiene otra sesión, recibirá inmediatamente la nueva tarjeta.
-
-##### Impacto
-
-* **Informar:** Cada versión de tarjeta tiene sus propios análisis.
-* **Beneficiarios existentes:** Los destinatarios nuevos y existentes ven la tarjeta actualizada en la siguiente actualización de la fuente, si son elegibles.
+#### Hacer que las tarjetas duren más de 30 días
 
 {% alert tip %}
-Recomendamos esta opción para mensajes en los que muestres el contenido más reciente de la tarjeta (como los banners de la página de inicio), los cambios deban mostrarse inmediatamente o cuando la reelegibilidad esté desactivada.
+Para casos de uso que requieran que los mensajes persistan más tiempo que el límite de 30 días de la tarjeta de contenido, considera el uso de banners. Los banners están diseñados para persistir y no tienen una fecha de caducidad obligatoria, lo que les permite permanecer visibles mientras se necesiten.
 {% endalert %}
 
-#### Opción 2: Parar y relanzar
+Si quieres que parezca que una tarjeta está siempre disponible (i.e., dura más que el máximo de 30 días), puedes crear una campaña recurrente que sustituya efectivamente la tarjeta cada 30 días:
 
-Si una tarjeta tiene activada la reelegibilidad, puedes optar por:
-
-1. Detén tu campaña.
-2. Eliminar las tarjetas de contenido activas de los feeds de los usuarios.
-3. Edite su campaña según sea necesario.
-4. Reinicia tu campaña.
-
-Con este planteamiento, los nuevos usuarios elegibles obtendrán la nueva tarjeta, y los anteriores destinatarios obtendrán la nueva tarjeta cuando vuelvan a ser elegibles.
-
-##### Casos de uso
-
-Supongamos que tienes una campaña desencadenada por el inicio de una sesión y con la posibilidad de volver a ser elegible establecida en 30 días. Un usuario recibió la campaña hace dos días y usted quiere cambiar la copia. Primero, detén la campaña y retira la tarjeta de la fuente. En segundo lugar, vuelve a publicar la campaña con el nuevo texto. Si el usuario tiene otra sesión, recibirá la nueva tarjeta en 28 días.
-
-##### Impacto
-
-* **Informar:** Una campaña contiene todos los análisis de todas las versiones de tarjeta lanzadas. Braze no distingue entre versiones.
-* **Beneficiarios existentes:** Los usuarios que ya recibieron la tarjeta no recibirán tarjetas actualizadas hasta que vuelvan a ser elegibles. Si no son elegibles, nunca reciben la nueva tarjeta.
-
-{% alert tip %}
-Recomendamos utilizar esta opción para mensajes únicos en un centro de notificaciones o buzón de entrada de mensajes (como promociones), cuando sea importante que los análisis estén unificados o cuando la puntualidad del mensaje no sea una preocupación (como cuando los destinatarios existentes pueden esperar a la ventana de elegibilidad antes de ver las tarjetas actualizadas).
-{% endalert %}
-
-#### Mantener las tarjetas en los feeds de los usuarios
-
-Si lo deseas, puedes mantener una campaña de tarjeta de contenido activa en las fuentes de los usuarios y no eliminarla. Cuando se edita la campaña en vivo, la versión anterior no editada de la tarjeta de campaña seguirá en vivo, y sólo los usuarios que cumplan los criterios tras las ediciones verán la nueva versión. Sin embargo, los usuarios ya expuestos a la campaña pueden ver dos versiones de la tarjeta.
-
+1. Fije la duración de la tarjeta de contenido en 30 días.
+2. Establezca la reelegibilidad de la campaña en 30 días.
+3. Configure la campaña para que se active en "Inicio de sesión".
