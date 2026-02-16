@@ -72,7 +72,7 @@ Para atualizar um objeto existente, envie um POST para `users/track` com o parâ
 Depois que essa solicitação for recebida, o objeto de atributo personalizado se parecerá com o seguinte:
 
 ```json
-"most_played_song": {
+{"most_played_song": {
   "song_name": "Solea",
   "artist_name" : "Miles Davis",
   "album_name": "Sketches of Spain",
@@ -82,7 +82,7 @@ Depois que essa solicitação for recebida, o objeto de atributo personalizado s
      "count": 1000,
      "top_10_listeners": true
   }
-}
+}}
 ```
 
 {% alert warning %}
@@ -328,14 +328,14 @@ Você pode gerar um esquema para seus objetos para criar filtros de segmento sem
 Para este exemplo, suponha que tenhamos um vetor de objetos `accounts` que acabamos de enviar à Braze:
 
 ```json
-"accounts": [
+{"accounts": [
   {"type": "taxable",
   "balance": 22500,
   "active": true},
   {"type": "non-taxable",
   "balance": 0,
-  "active": true},
- ]
+  "active": true}
+]}
 ```
 
 No dashboard da Braze, acesse **Configurações de dados** > **Atributos personalizados**.
