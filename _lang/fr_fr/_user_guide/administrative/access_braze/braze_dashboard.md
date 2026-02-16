@@ -1,7 +1,7 @@
 ---
 nav_title: Le tableau de bord
 article_title: Le tableau de bord de Braze
-page_order: 2
+page_order: 5
 page_type: reference
 description: "Le tableau de bord de Braze est votre espace de travail central pour créer, gérer et analyser l'engagement client. Il rassemble en un seul endroit des outils de messages, des informations sur l'audience, la segmentation et des données en temps réel sur les performances."
 
@@ -9,9 +9,19 @@ description: "Le tableau de bord de Braze est votre espace de travail central po
 
 # Le tableau de bord de Braze
 
-> Le tableau de bord de Braze est notre interface web à l'adresse suivante [dashboard.braze.com](https://dashboard.braze.com/) ou [dashboard.braze.eu](https://dashboard.braze.eu/)
+> Le tableau de bord de Braze est votre espace de travail central pour créer, gérer et analyser l'engagement client. Vous pouvez y accéder à l'adresse suivante [dashboard.braze.com](https://dashboard.braze.com/) ou [dashboard.braze.eu](https://dashboard.braze.eu/).
 
 Utilisez le tableau de bord de Braze pour planifier des campagnes, lancer et gérer des messages, explorer les informations sur l'audience, ajuster la segmentation et examiner les indicateurs de performance et d'engagement en temps réel à partir d'une interface unique.
+
+## Aperçu du tableau de bord
+
+Lorsque vous vous connectez, le tableau de bord offre une vue centralisée de vos outils d'engagement et de vos données :
+
+- **Page d'accueil :** Affiche d'un coup d'œil votre [contenu récemment modifié](#pick-up-where-you-left-off) et vos indicateurs de performance clés.
+- **Navigation à gauche :** Organise les outils par fonction (envoi de messages, audience, analyse/analytique, paramètres).
+- **En-tête global :** Accès rapide à la recherche, à l'assistance, aux paramètres linguistiques, aux notifications et à votre compte.
+
+L'expérience de votre tableau de bord est organisée par [espaces de travail]({{site.baseurl}}/user_guide/getting_started/workspaces), qui vous aident à gérer le contenu pour différentes marques, régions ou équipes. Vous pouvez [passer d'un espace de travail à l'autre](#workspace-switcher) à tout moment à partir de la navigation latérale.
 
 ## Accédez à votre tableau de bord
 
@@ -30,7 +40,7 @@ L'en-tête global est presque toujours visible en haut de l'écran. Il permet d'
 - Paramètres du compte
 - [BrazeAI Operator™]({{site.baseurl}}/user_guide/brazeai/operator/)
 
-### Utiliser la navigation latérale
+### Utilisez la navigation latérale
 
 Le menu vertical de gauche organise les outils Braze par fonction et permet de garder à portée de main vos articles les plus utilisés. Sélectionnez un élément du menu principal pour faire apparaître ses options dans une présentation verticale empilée. 
 
@@ -42,7 +52,9 @@ Situé en haut de la navigation latérale, le sélecteur d'espace de travail vou
 
 Les [espaces de travail]({{site.baseurl}}/user_guide/getting_started/workspaces) permettent d'organiser le contenu par marque, région, ligne de produits ou équipe. Chaque espace de travail comprend ses propres données, campagnes et paramètres. Votre accès peut varier d'un espace de travail à l'autre. Par exemple, vous pouvez avoir un accès en modification dans un espace de travail et un accès en consultation seule dans un autre.
 
-#### Minimiser la navigation latérale
+Pour changer d'espace de travail, sélectionnez la liste déroulante de l'espace de travail en haut de la navigation latérale et choisissez l'espace de travail auquel vous souhaitez accéder. Vous pouvez également [ajouter des espaces de travail favoris](#adding-favorite-workspaces) pour accéder plus rapidement à ceux que vous utilisez le plus souvent.
+
+#### Réduire la navigation latérale
 
 Pour réduire l'encombrement visuel, notamment lors de tâches telles que la conception d'un canvas, vous pouvez réduire le panneau de navigation latéral. Appuyez sur le **menu Minimiser** pour la réduire. Même lorsqu'elle est réduite, survolez n'importe quelle icône pour afficher des infobulles avec les noms des éléments du menu. Cela vous permet de passer rapidement d'un outil à l'autre tout en gardant votre espace de travail propre.
 
@@ -83,7 +95,7 @@ Chaque résultat est étiqueté avec une étiquette indiquant son type de conten
 
 ### Filtrer le contenu actif et brouillon
 
-Par défaut, la recherche inclut les éléments actifs, les brouillons et les éléments archivés. Utilisez la bascule **Afficher les actifs et les brouillons uniquement** pour affiner vos résultats.
+Par défaut, la recherche porte sur les éléments actifs, les brouillons et les éléments archivés. Utilisez la bascule **Afficher les actifs et les brouillons uniquement** pour affiner vos résultats.
 
 ![Le bouton bascule « Afficher uniquement les actifs et les brouillons ».]({% image_buster /assets/img/navigation/show_active_draft_new.png %})
 
@@ -116,6 +128,30 @@ table td {
 | Fermez le menu de recherche       | <kbd>Éch</kbd>  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+## Conseils
+
+Le tableau de bord de Braze comprend plusieurs fonctionnalités pour vous aider à travailler plus efficacement et à accéder rapidement aux outils et au contenu que vous utilisez le plus.
+
+### Reprendre là où vous vous êtes arrêté
+
+Sur la page d **'accueil**, le tableau de bord affiche vos campagnes, Canvas et segments récemment modifiés ou créés. Il est ainsi facile de revenir au travail en cours sans avoir à le rechercher. Chaque élément comporte des étiquettes indiquant le type de contenu et l'état (brouillon, actif ou arrêté, par exemple).
+
+![Un projet de canvas, un segment actif et un projet de campagne dans la section "Reprendre là où vous vous êtes arrêté".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
+
+Pour plus d'informations, consultez le [tableau de bord de l'accueil]({{site.baseurl}}/user_guide/data_and_analytics/analytics/home_dashboard/#pick-up-where-you-left-off).
+
+### Ajouter des espaces de travail favoris
+
+Si vous travaillez sur plusieurs espaces de travail, vous pouvez marquer vos espaces les plus fréquemment utilisés comme favoris pour y accéder plus rapidement. Pour ajouter des espaces de travail favoris, [accédez aux paramètres de votre profil](#accessing-your-profile-settings), localisez le champ **Espaces de travail favoris** dans la section **Profil du compte** et sélectionnez les espaces de travail que vous souhaitez mettre en favoris. Vos espaces de travail favoris apparaîtront en haut du sélecteur d'espace de travail pour un accès rapide.
+
+### Accéder aux paramètres de votre profil
+
+Pour gérer les paramètres de votre compte, vos préférences en matière de notification et vos personnalisations :
+
+1. Sélectionnez l'icône de votre profil dans l'en-tête global.
+2. Sélectionnez **Gérer votre compte** pour accéder à la page de votre profil.
+
+Depuis votre page de profil, vous pouvez mettre à jour vos paramètres d'e-mail, configurer l'authentification à deux facteurs, afficher vos clés API et gérer d'autres détails de votre compte.
 
 ## L'accessibilité dans le tableau de bord
 
@@ -124,5 +160,22 @@ Le tableau de bord de Braze utilise des couleurs de marque qui répondent aux no
 ## Partager le retour d'expérience
 
 Vous voulez nous dire ce que vous en pensez ? Vous pouvez faire part de vos commentaires sur la navigation, l'accessibilité, la convivialité, la conception visuelle, etc. Ouvrez le menu **Support** dans l'en-tête global et sélectionnez **Partager le feedback.** Nous examinons tous les commentaires afin d'améliorer votre expérience de Braze.
+
+## Ressources connexes
+
+### Tâches administratives
+
+- [Créer et gérer des espaces de travail]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)
+- [Gérer les utilisateurs de Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- [Autorisations utilisateur]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)
+- [Équipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)
+
+### Principales tâches et prochaines étapes
+
+- **Créez des campagnes**: [Créer une campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/)
+- **Créez des parcours**: [Créer une toile]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
+- **Définir les audiences**: [Créer un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)
+- **Examinez les performances**: [Aperçu analytique]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/)
+- **Configurez les paramètres**: [Paramètres de l'application]({{site.baseurl}}/user_guide/administrative/app_settings/)
 
 
