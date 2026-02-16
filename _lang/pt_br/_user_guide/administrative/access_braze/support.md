@@ -1,6 +1,7 @@
 ---
 nav_title: Suporte da Braze
 article_title: Suporte
+page_order: 7
 description: "Esta página ajudará você a localizar o portal de suporte da Braze para enviar feedback sobre o produto Braze. Esta página será acessível apenas para clientes Braze."
 alias: /braze_support/
 page_type: reference
@@ -45,7 +46,7 @@ Ao se comunicar com o suporte, você pode descobrir que precisa acessar seu cons
   3. Tire uma captura de tela da guia do console.<br><br>
 - Safari
   1. Acessar Safari na barra de menu no topo do seu canva e então selecionar **Preferências**.
-  2. Selecione **Avançado** e marque a caixa de seleção ao lado de **Mostrar menu Desenvolver na barra de menus**. Você pode então sair da janela.
+  2. Selecione **Advanced** e marque a caixa de seleção ao lado de **Show Develop menu in menu bar**. Você pode então sair da janela.
   3. Clique com o botão direito do mouse na página da Web e selecione **Inspecionar elemento**.
   4. Selecione a guia **Console** na janela que se abre.
   5. Tire uma captura de tela da guia do console.
@@ -90,4 +91,4 @@ Marcar um problema como "Crítico" significa que sua instância de produção es
 
 ## Solução de problemas de acesso
 
-Se receber um erro ao registrar-se no Portal de Suporte da Braze, como `Check your entry`, certifique-se de ter seguido o link em seu e-mail de boas-vindas para definir uma senha para o portal. Se já tiver feito isso ou se já tiver conseguido registrar-se no portal, crie um tíquete de suporte.
+Se receber um erro ao registrar-se no Portal de Suporte da Braze, como `Check your entry`, certifique-se de que seguiu o link em seu e-mail de boas-vindas para definir uma senha para o portal. Se tiver feito isso ou se já tiver conseguido registrar-se no portal, crie um tíquete de suporte.
