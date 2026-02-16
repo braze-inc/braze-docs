@@ -39,9 +39,7 @@ Por exemplo, se quiser enviar uma mensagem no app somente para dispositivos iOS,
 
 Adicione pelo menos um filtro ao seu segmento. Você pode combinar quantos filtros quiser para tornar sua segmentação mais específica. 
 
-{% alert note %}
-O Braze não gera perfis para os usuários até que eles tenham usado o aplicativo pela primeira vez, portanto, não é possível fazer o direcionamento para usuários que ainda não abriram o aplicativo.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Segment profiles first app use' %}
 
 #### Grupos de filtros
 
