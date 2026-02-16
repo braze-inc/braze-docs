@@ -83,13 +83,21 @@ class CustomPushService: HmsMessageService() {
 </service>
 ```
 
-### 4단계: 푸시 알림 테스트(선택 사항)
+### 4단계: 전경 알림 처리
+
+기본값으로 앱이 포그라운드에 있는 동안 푸시 알림이 도착하면 Huawei에서 자동으로 푸시 알림을 표시합니다. 분석 추적, 딥링크 처리 및 커스텀 처리를 위해 Braze가 푸시 알림 페이로드를 처리하도록 하려면 `HmsMessageService.onMessageReceived` 메서드 내에서 수신 푸시 데이터를 Braze로 라우팅하세요.
+
+`BrazeHuaweiPushHandler.handleHmsRemoteMessageData` 으로 전화하면 Braze는 페이로드가 Braze 푸시 알림인지 확인하고, 푸시 알림인 경우 알림을 생성하여 표시합니다. 자세한 내용은 Android 푸시 알림 설명서에서 [포그라운드 알림 처리하기를]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) 참조하세요.
+
+전체 예제는 Braze Android 소프트웨어 개발 키트 설명서의 [Huawei 핸들러 참조를 참조](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-huawei-push-handler/index.html) 하세요.
+
+### 5단계: 푸시 알림 테스트(선택 사항)
 
 지금까지 Braze 대시보드에서 새 Huawei Android 앱을 생성하고, Huawei 개발자 자격 증명으로 앱을 구성한 후 Braze 및 Huawei SDK를 앱에 통합했습니다.
 
 다음으로, Braze에서 새로운 푸시 캠페인을 테스트하여 통합을 테스트할 수 있습니다.
 
-#### Step 4.1: 새 푸시 알림 캠페인 생성
+#### 5.1단계: 새 푸시 알림 캠페인 생성
 
 **캠페인** 페이지에서 새 캠페인을 생성하고 메시지 유형으로 **푸시 알림**을 선택합니다.
 
@@ -99,7 +107,7 @@ class CustomPushService: HmsMessageService() {
 
 다음으로, 제목과 메시지와 함께 푸시 캠페인을 작성합니다.
 
-#### Step 4.2: 테스트 푸시 전송
+#### 5.2단계: 테스트 푸시 전송
 
 **테스트** 탭에서 [`changeUser(USER_ID_STRING)` 메서드]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id)를 사용하여 앱에서 설정한 사용자 ID를 입력하고 **테스트 보내기**를 클릭하여 테스트 푸시를 보냅니다.
 
@@ -107,7 +115,7 @@ class CustomPushService: HmsMessageService() {
 
 이 시점에서 Braze로부터 Huawei(HMS) 기기로 테스트 푸시 알림을 받습니다.
 
-#### Step 4.3: Huawei 세그먼트 세분화 설정(선택 사항)
+#### 5.3단계: Huawei 세그먼트 세분화 설정(선택 사항)
 
 Braze 대시보드의 Huawei 앱은 Android 푸시 플랫폼을 기반으로 빌드되었으므로 모든 Android 사용자(Firebase 클라우드 메시징 및 Huawei 모바일 서비스)에게 푸시를 보내거나 특정 앱으로 캠페인 오디언스를 세분화할 수 있는 유연성을 지원합니다.
 
