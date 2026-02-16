@@ -51,6 +51,10 @@ Une application ou un site Internet ne peuvent avoir qu’un seul abonnement aux
 
 Étant donné que les fournisseurs de notifications push (APN/FCM) n’ont aucun moyen de faire la différence entre plusieurs utilisateurs sur un même appareil, nous transmettons le jeton de notification push au dernier utilisateur qui s’est connecté pour déterminer quel utilisateur cibler sur l’appareil pour les notifications push.
 
+{% alert tip %}
+Si vous voyez un message d'erreur dans **Contact Settings** > **Push Changelog**, reportez-vous à [Common push error messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/) pour obtenir des explications et connaître les étapes suivantes.
+{% endalert %}
+
 ## Inscription au jeton de notification push
 
 Chaque plateforme d'appareil gère différemment l'enregistrement des jetons de poussée. Reportez-vous à ce qui suit pour les détails spécifiques à la plate-forme :
@@ -76,7 +80,7 @@ iOS ne génère pas automatiquement des jetons push pour une app lorsqu'elle est
 | Version                         | Autorisation provisoire ? | Détails                                                                                                                                                     |
 |------------------------------------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **iOS 12**      | Oui                         | Lorsqu'un utilisateur s'abonne aux notifications push, vous recevez une autorisation standard qui vous permet d'envoyer des [notifications push au premier plan](#foreground-vs-background). Toutefois, vous pouvez également demander une [autorisation provisoire]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push), qui vous permet d'envoyer des [notifications push silencieuses](#foreground-vs-background) en arrière-plan directement au centre de notification. |
-| **iOS 11 et versions ultérieures** | Non                          | Tous les utilisateurs doivent s’abonner explicitement pour recevoir des notifications push. Un jeton de poussée n'est généré qu'une fois l'autorisation accordée.                                     |
+| **iOS 11 ou antérieur** | Non                          | Tous les utilisateurs doivent s’abonner explicitement pour recevoir des notifications push. Un jeton de poussée n'est généré qu'une fois l'autorisation accordée.                                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
@@ -85,7 +89,7 @@ iOS ne génère pas automatiquement des jetons push pour une app lorsqu'elle est
 
 ![Profil utilisateur de John Doe dont l'état de l'abonnement push est défini sur Abonné.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-Il y a deux façons de vérifier l'état de l'abonnement push d'un utilisateur avec Braze :
+Il existe deux façons de vérifier l’état de l’abonnement aux notifications push d’un utilisateur avec Braze :
 
 - **Profil utilisateur**: Vous pouvez accéder aux profils utilisateurs individuels via le tableau de bord de Braze sur la page [Recherche d'utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/). Après avoir trouvé le profil d'un utilisateur (via l'adresse e-mail, le numéro de téléphone ou l'ID externe), vous pouvez sélectionner l'onglet **Engagement** pour afficher et ajuster manuellement l'état de l'abonnement d'un utilisateur.
 - **Exportation de l'API REST**: Vous pouvez exporter des profils utilisateurs individuels au format JSON à l'aide des endpoints d'exportation [Utilisateurs par segmentation]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) ou [Utilisateurs par identifiant]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/). Braze renvoie un objet jeton de notification push qui contient des informations sur l’activation de la notification par appareil.
