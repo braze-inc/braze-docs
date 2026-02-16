@@ -113,6 +113,10 @@ Les *utilisateurs actifs quotidiens* (DAU) affichent le nombre d'utilisateurs un
 Lors de l'intégration initiale de Braze, tous les utilisateurs auront l'air de nouveaux utilisateurs car Braze n'a jamais enregistré de session pour eux auparavant.
 {% endalert %}
 
+{% alert important %}
+Les utilisateurs associés à plus d'une application sont comptabilisés séparément pour chaque application. Cela signifie qu'un même utilisateur peut contribuer plusieurs fois au décompte des *nouveaux utilisateurs* s'il démarre des sessions dans différentes applications de votre espace de travail.
+{% endalert %}
+
 ### Adhérence
 
 La valeur d' *adhérence* est un rapport entre le nombre d'utilisateurs quotidiens et le nombre de MAU pour une période donnée. Par essence, l'adhérence mesure le pourcentage de vos utilisateurs actifs mensuels qui reviennent quotidiennement.
