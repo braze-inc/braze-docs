@@ -89,7 +89,7 @@ Una vez completada la configuración, tu número de teléfono aparecerá como gr
 Conecta cada cuenta de WhatsApp Business a una única cuenta de Infobip. Cada vez que conectes un número de teléfono o grupo de suscripción adicional, si la cuenta de WhatsApp Business ya está conectada a una cuenta de Infobip, deberás volver a introducir las credenciales API de la cuenta existente.
 {% endalert %}
 
-## Paso 3: Envío de mensajes
+## Paso 3: Envío de mensajería
 
 Sigue el proceso de envío de la integración nativa, incluyendo:
 - [Suscripción de usuarios al grupo de suscripción]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/)
