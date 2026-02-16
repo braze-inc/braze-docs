@@ -90,6 +90,8 @@ Comme leur nom l'indique, les messages texte RCS se concentrent sur le texte en 
 {% tab Media %}
 Les messages média RCS vous permettent d'utiliser des formats média attrayants qui ne sont pas possibles avec les SMS. Il s'agit notamment de fichiers d'images, de vidéos et de documents. Ces options médiatiques existent pour vous aider à engager votre audience encore plus profondément et permettre des cas d'utilisation entièrement nouveaux. Pour l'instant, seul le téléchargement d'images est pris en charge par la [bibliothèque multimédia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). 
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Fonctionnalités
 
 - Les types de messages multimédias prennent en charge tout ce qui est disponible dans les types de messages textuels, à savoir le texte, les réponses suggérées et les actions suggérées.
@@ -127,7 +129,7 @@ Avant de poursuivre, lisez nos [lignes directrices concernant les limites des me
 
 ### Étape 4 : Prévisualiser et tester votre message
 
-Parce que le rendu RCS est contrôlé par le système d'exploitation de l'utilisateur, le fabricant de l'appareil, l'opérateur et l'application d'envoi de messages (par exemple, Google Messages vs. Apple Messages), l'apparence des messages peut varier. Par conséquent, l'aperçu du RCS affiché dans Braze peut ne pas correspondre exactement à ce que l'utilisateur final reçoit en fin de compte. Les différences peuvent porter sur la mise en page, la taille des médias, les boutons, les éléments de marque ou les fonctionnalités prises en charge. Braze recommande toujours de prévisualiser et de tester votre message avant de l’envoyer. Utilisez l'onglet **Test** pour envoyer un RCS de test à des groupes de test de contenu ou à des utilisateurs individuels, et prévisualiser le message en tant qu'utilisateur directement dans Braze. Cependant, le rendu final doit toujours être validé sur des appareils réels dans la mesure du possible, car Braze ne peut pas garantir une parité parfaite pour toutes les combinaisons d'OS, d'appareils et d'opérateurs.
+Parce que le rendu RCS est contrôlé par le système d'exploitation de l'utilisateur, le fabricant de l'appareil, l'opérateur et l'application d'envoi de messages (par exemple, Google Messages vs. Apple Messages), l'apparence des messages peut varier. Par conséquent, l'aperçu du RCS affiché dans Braze peut ne pas correspondre exactement à ce que l'utilisateur final reçoit en fin de compte. Les différences peuvent porter sur la mise en page, la taille des supports, les boutons, les éléments de marque ou les fonctionnalités prises en charge. Braze recommande toujours de prévisualiser et de tester votre message avant de l’envoyer. Utilisez l'onglet **Test** pour envoyer un RCS de test à des groupes de test de contenu ou à des utilisateurs individuels, et prévisualiser le message en tant qu'utilisateur directement dans Braze. Cependant, le rendu final doit toujours être validé sur des appareils réels dans la mesure du possible, car Braze ne peut pas garantir une parité parfaite pour toutes les combinaisons d'OS, d'appareils et d'opérateurs.
 
 
 ### Étape 5 : Créer le reste de votre campagne ou de votre Canvas
