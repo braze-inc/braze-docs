@@ -34,6 +34,25 @@ Los fallos más comunes pueden ser:
 {% endtab %}
 {% tab iOS %}
 
+### Error al enviar push porque la carga útil no era válida
+
+Este mensaje puede aparecer en la pestaña de **interacción** del perfil de usuario, en **Configuración de contactos** > **Cambios push**, cuando el servicio de notificaciones push de Apple (APN) rechaza la solicitud push debido a una carga útil no válida.
+
+En Braze, este mensaje del panel puede mapearse con uno de los siguientes motivos de error de APN:
+
+- `PayloadEmpty`: A la carga útil le faltaba contenido necesario para el tipo de push que se estaba enviando.
+- `PayloadTooLarge`: La carga útil superó el tamaño máximo de carga útil de APN.
+
+Las causas más frecuentes son:
+
+- Claves personalizadas (y sus valores) que hacen que la carga útil sea demasiado grande (esto puede incluir valores renderizados de Liquid inesperadamente grandes).
+- Una alerta o cuerpo vacío o ausente cuando sea necesario (o una carga útil `aps` malformada de otro modo).
+
+Próximos pasos:
+
+- Reduce el tamaño de la carga útil recortando las claves personalizadas y acortando los valores dinámicos grandes.
+- Si envías a través de la API, valida la carga útil JSON final (incluido el tamaño) antes de enviar.
+
 ### El push rebotó: BadToken
 
 El error `BadToken` puede producirse por varias razones:
