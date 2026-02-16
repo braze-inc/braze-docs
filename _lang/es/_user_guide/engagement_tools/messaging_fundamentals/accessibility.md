@@ -123,7 +123,7 @@ Una vez establecida la estructura, el siguiente paso es asegurarte de que tus pa
 - **Escribe frases cortas y claras:** Las frases cortas son fáciles de entender para todos, especialmente para las personas que utilizan lectores de pantalla o que tienen problemas para procesar información compleja. Escribe a un nivel de lectura de séptimo grado de Estados Unidos. Puedes utilizar recursos como [la aplicación Hemingway](https://hemingwayapp.com/) para comprobar el nivel de lectura de tu texto.
 - **Elige tamaños de letra y espaciado legibles:** Un texto demasiado pequeño puede ser difícil de leer, sobre todo en el móvil. Utiliza al menos 14px para el cuerpo del texto. Haz los títulos más grandes para que los usuarios puedan ver claramente la diferencia. El espaciado adicional entre líneas (alrededor de 1,5 de altura de línea) y párrafos mejora la legibilidad, especialmente para las personas con necesidades visuales o cognitivas.
 - **Evita el texto justificado:** El texto justificado crea un espaciado desigual entre las palabras, lo que dificulta la lectura a las personas con dislexia o discapacidades cognitivas. Considera la posibilidad de alinear a la izquierda los contenidos que ocupen más de dos líneas en las lenguas de izquierda a derecha, o a la derecha en [las lenguas de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages).
-- **Utiliza negrita, cursiva y mayúsculas con moderación:** Enfatizar demasiado el texto dificulta la lectura, sobre todo a las personas con dislexia o deficiencias visuales. Hazlo sencillo.
+- **Utiliza con moderación la negrita, la cursiva y las mayúsculas:** Enfatizar demasiado el texto dificulta la lectura, sobre todo a las personas con dislexia o deficiencias visuales. Hazlo sencillo.
 
 #### Claridad y usabilidad
 
@@ -210,7 +210,7 @@ Como con todo el contenido, que sea sencillo y con el menor número posible de p
 
 #### Evita estilizar los enlaces como botones
 
-Los editores de arrastrar y soltar de Braze producen HTML semántico de forma predeterminada, por lo que los enlaces no tienen el estilo de los botones. Sin embargo, si trabajas con [HTML personalizado](#custom-html) o haces cambios a nivel de código, ten esto en cuenta:
+Los editores de arrastrar y soltar de Braze producen HTML semántico predeterminado, por lo que los enlaces no tienen el estilo de los botones. Sin embargo, si trabajas con [HTML personalizado](#custom-html) o haces cambios a nivel de código, ten esto en cuenta:
 
 - **Los enlaces (`<a>`** ) responden a la tecla <kbd>Intro</kbd>.
 - **Los botones (`<button>`** ) responden a las teclas <kbd>Intro</kbd> y <kbd>Espacio</kbd>.
@@ -220,7 +220,7 @@ Estilizar un enlace para que parezca un botón puede confundir a las personas qu
 Utiliza el elemento adecuado para la acción:
 
 - Utiliza `<button>` para acciones, como enviar un formulario o abrir un modal.
-- Utiliza `<a>` para la navegación, como enlace a otra página o archivo.
+- Utiliza `<a>` para navegar, por ejemplo para enlazar a otra página o archivo.
 
 {% raw %}
 
@@ -495,7 +495,7 @@ Un contraste de color suficiente ayuda a garantizar que tus mensajes sean fácil
 - Relación de contraste de 4,5:1 para texto normal (piensa en el cuerpo del texto, botones y enlaces)
 - Relación de contraste 3:1 para texto grande (piensa en títulos y etiquetas grandes)
 
-Puedes probar tus elecciones de color con la [herramienta de comprobación de contraste de WebAim](https://webaim.org/resources/contrastchecker/).
+Puedes probar tus elecciones de color utilizando la [herramienta de comprobación de contraste de WebAim](https://webaim.org/resources/contrastchecker/).
 
 {% multi_lang_include accessibility/color.md %}
 
@@ -516,11 +516,11 @@ Si utilizas algún HTML personalizado en tu mensajería:
 Cuando utilices el editor de arrastrar y soltar de correo electrónico, el valor del idioma para el correo electrónico se puede establecer yendo a la pestaña **Configuración** y seleccionando el valor del idioma adecuado.
 {% endalert %}
 
-- Utiliza [atributos ARIA](#aria-attributes) para dar más contexto. Estos atributos proporcionan información adicional a las tecnologías de asistencia, ayudando a aclarar la función, el estado o las propiedades de los elementos de la IU que, de otro modo, podrían no estar claros. 
+- Utiliza [atributos ARIA](#aria-attributes) para dar un contexto adicional. Estos atributos proporcionan información adicional a las tecnologías de asistencia, ayudando a aclarar la función, el estado o las propiedades de los elementos de la IU que, de otro modo, podrían no estar claros. 
 
 ### Atributos ARIA
 
-Cuando utilices código personalizado en los editores de Braze, puedes utilizar Aplicaciones de Internet Enriquecidas Accesibles[(ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)) para proporcionar soporte de accesibilidad adicional a los usuarios que dependen de tecnología de asistencia. Los roles y atributos ARIA ayudan a los lectores de pantalla a interpretar tu contenido con mayor claridad, especialmente cuando utilizas elementos que no transmiten significado por sí solos (como `<div>` o `<span>`).
+Cuando utilices código personalizado en los editores de Braze, puedes utilizar Aplicaciones de Internet Ricas Accesibles[(ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)) para proporcionar soporte de accesibilidad adicional a los usuarios que dependen de tecnología de asistencia. Los roles y atributos ARIA ayudan a los lectores de pantalla a interpretar tu contenido con mayor claridad, especialmente cuando utilizas elementos que no transmiten significado por sí solos (como `<div>` o `<span>`).
 
 {% alert important %}
 Aunque ARIA está diseñada para hacer más accesible el contenido Web, si se utiliza incorrectamente, puede hacer más mal que bien. ARIA no sustituye al HTML semántico, sino que lo complementa, así que utiliza ARIA sólo cuando los elementos HTML nativos no satisfagan tus necesidades.
@@ -612,7 +612,7 @@ Las pruebas automatizadas de accesibilidad son un buen punto de partida, pero no
 
 Puede que veas algunas cuestiones marcadas como **Necesita revisión**. Estos son casos en los que el verificador no puede decir con seguridad si algo es un problema para la accesibilidad. Cuando eso ocurra, te recomendamos que lo revises manualmente.
 
-Algunos ejemplos de lo que las herramientas de automatización no pueden detectar con fiabilidad son:
+Algunos ejemplos de lo que las herramientas de automatización no pueden detectar de forma fiable son:
 
 - Si el orden de enfoque de los elementos interactivos sigue una secuencia lógica
 - Si el contenido es totalmente manejable con un teclado, sin necesidad de un ratón
