@@ -1,7 +1,7 @@
 ---
 nav_title: Intelligence Suite
 article_title: À propos de la Braze Intelligence Suite
-page_order: 1
+page_order: 6
 search_rank: 12
 description: "La Braze Intelligence Suite automatise la prise de décision grâce à des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et cross-canal, afin d’optimiser l’ensemble."
 tool:
