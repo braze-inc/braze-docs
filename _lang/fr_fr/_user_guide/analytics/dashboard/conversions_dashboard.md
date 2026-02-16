@@ -101,7 +101,7 @@ Pour télécharger les données de la série temporelle, sélectionnez une optio
 Ce graphique n'affiche les données que pour un seul canal à la fois. Utilisez le menu déroulant **Canal** sur le graphique pour sélectionner un seul canal.
 {% endalert %}
 
-![Graphique à barres de l'entonnoir des conversions pour deux campagnes d'e-mails présentant des résultats similaires pour les e-mails délivrés, les e-mails ouverts, les e-mails cliqués et les conversions.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
+![Graphique à barres de l'entonnoir des conversions pour deux campagnes d'e-mail montrant des résultats similaires pour les e-mails délivrés, les e-mails ouverts, les e-mails cliqués et les conversions.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### Évolution des conversions
 
