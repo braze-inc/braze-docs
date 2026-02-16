@@ -186,7 +186,7 @@ lignes-ContentCardsInboxScreen.kt=25-37
 
 #### 3\. S'abonner aux mises à jour de la carte de contenu
 
-Utilisez un [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>) pour gérer le cycle de vie de l'abonnement, en veillant à ce qu'il soit correctement nettoyé lorsque le composable quitte la composition.
+Utilisez un [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>) pour gérer le cycle de vie des abonnements, en veillant à ce qu'ils soient correctement nettoyés lorsque le composable quitte la composition.
 
 !étape
 lignes-ContentCardsInboxScreen.kt=84-95
@@ -548,14 +548,14 @@ lignes-BrazeInboxView.swift=15-20
 
 #### 3\. S'abonner aux mises à jour de la carte de contenu
 
-Abonnez-vous à la liste d'écoute des cartes de contenu pour recevoir les dernières mises à jour, puis appelez `requestRefresh()` pour demander les dernières cartes de contenu pour cet utilisateur.
+Abonnez-vous à l'auditeur de cartes de contenu pour recevoir les dernières mises à jour, puis appelez `requestRefresh()` pour demander les dernières cartes de contenu pour cet utilisateur.
 
 !étape
 lignes-BrazeInboxView.swift=34-35
 
 #### 4\. Créer une boîte réception personnalisée
 
-Utilisation de la carte de contenu [`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) telles que `title`, `description`, et `imageUrl` vous permet de créer des cartes de contenu répondant à vos besoins spécifiques en matière d'interface utilisateur. Dans le cas présent, nous créons une boîte de réception avec les API de table natives de Swift.
+Utilisation de la carte de contenu [`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) telles que `title`, `description`, et `imageUrl` vous permet de créer des cartes de contenu répondant à vos besoins spécifiques en matière d'interface utilisateur. Dans ce cas, nous créons une boîte de réception avec les API de table natives de Swift.
 
 !étape
 lignes-BrazeInboxView.swift=8,43,49-56
