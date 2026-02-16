@@ -10,13 +10,13 @@ channel:
 
 # Inscrições em e-mail
 
-> Saiba sobre os estados de inscrição do usuário, como criar e gerenciar grupos de inscrição e como segmentar usuários com base em suas inscrições.
+> Saiba sobre os estados de inscrição do usuário, como criar e gerenciar grupos de inscrições e como segmentar usuários com base em suas inscrições.
 
 Este documento é apenas para fins informativos. Ele não se destina a fornecer, nem pode ser considerado como aconselhamento jurídico de qualquer tipo. O envio de e-mails de marketing e transação pode estar sujeito a requisitos legais específicos. Para garantir que esteja fazendo isso em conformidade com todas as leis, regras e regulamentos aplicáveis específicos da sua empresa, procure a orientação do seu consultor jurídico e/ou da equipe de conformidade regulamentar.
 
 ## Estados de inscrição {#subscription-states}
 
-A Braze tem três estados globais de inscrição para usuários de e-mail. Esses estados bloqueiam suas mensagens para os usuários. Por exemplo, usuários no estado `unsubscribed` não recebem mensagens direcionadas a `subscribed` ou `opted-in`.
+Braze tem três estados globais de inscrição para usuários de e-mail. Esses estados bloqueiam suas mensagens para os usuários. Por exemplo, usuários no estado `unsubscribed` não recebem mensagens direcionadas a `subscribed` ou `opted-in`.
 
 | Status | Definição |
 | ----- | ---------- |
@@ -31,9 +31,9 @@ A Braze não conta as alterações de estado da inscrição em relação aos seu
 
 ### Endereços de e-mail cancelados
 
-A Braze cancela automaticamente a inscrição de qualquer usuário que se desinscreva manualmente através de um [rodapé personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). Se o usuário atualizar seu endereço de e-mail e **Reinscrever usuários quando atualizarem seu e-mail** estiver habilitado em **Configuração de Envio**, o envio normal será retomado.
+Braze cancela automaticamente a inscrição de qualquer usuário que se descadastre manualmente através de um [rodapé personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). Se o usuário atualizar seu endereço de e-mail e **Reinscrever usuários quando atualizarem seu e-mail** estiver habilitado em **Configuração de Envio**, o envio normal é retomado.
 
-Se um usuário marcar um ou mais de seus e-mails como spam, a Braze enviará apenas e-mails transacionais para esse usuário. E-mails transacionais referem-se à opção **Enviar para todos os usuários, incluindo usuários não inscritos** em **Público-Alvo**.
+Se um usuário marcar um ou mais de seus e-mails como spam, Braze envia apenas e-mails transacionais para esse usuário. E-mails transacionais referem-se à opção **Enviar para todos os usuários, incluindo usuários descadastrados** em **Público-Alvo**.
 
 {% alert tip %}
 Consulte nossas práticas recomendadas [de aquecimento de IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) para obter orientação sobre como reengajar seus usuários de forma eficaz.
@@ -43,7 +43,7 @@ Consulte nossas práticas recomendadas [de aquecimento de IP]({{site.baseurl}}/u
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} 
 
-Quando um endereço de e-mail retorna com erro permanente, a Braze não define automaticamente o estado de inscrição do usuário como "não inscrito". Se um endereço retornar com erro permanente (inválido ou não existir), a Braze o marca como inválido e não tenta novos envios. Se o usuário alterar seu endereço de e-mail, a Braze retoma o envio. A Braze tenta novamente os erros temporários por 72 horas.
+Quando um endereço de e-mail retorna com erro permanente, Braze não define automaticamente o estado de inscrição do usuário como "descadastrado". Se um endereço retornar com erro permanente (inválido ou não existir), Braze o marca como inválido e não tenta novos envios. Se o usuário mudar seu endereço de e-mail, Braze retoma o envio. Braze tenta novamente envios com erro temporário por 72 horas.
 
 ### Atualização dos estados de envio de e-mail
 
@@ -60,13 +60,13 @@ Use o [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_us
 #### Perfil do usuário
 
 1. Localize o usuário em **Pesquisar usuários**. 
-2. Em **Engajamento**, selecione **Não Inscrito**, **Inscrito** ou **Optou por Receber** para alterar o status de inscrição do usuário. 
+2. Em **Engajamento**, selecione **Descadastrado**, **Inscrito** ou **Optou por Receber** para alterar o status de inscrição do usuário. 
 
 Se disponível, o perfil do usuário também exibe um carimbo de data/hora de quando a inscrição do usuário foi alterada pela última vez.
 
 #### Central de Preferências
 
-Inclua [Central de Preferências](#email-preference-center) Liquid no final de seus e-mails para permitir que os usuários optem por receber ou não. A Braze gerencia atualizações de estado de inscrição a partir da central de preferências.
+Inclua [Central de Preferências](#email-preference-center) Liquid no final de seus e-mails para permitir que os usuários optem por receber ou não. Braze gerencia atualizações de estado de inscrição a partir da central de preferências.
 
 ### Verificação do estado do envio de e-mail
 
@@ -113,7 +113,7 @@ Para arquivar seu grupo na página **Grupos de inscrições**, faça o seguinte:
 1. Encontre seu grupo na lista de grupos de inscrições. 
 2. Selecione **Arquivar** no menu suspenso <i class="fa-solid fa-ellipsis-vertical"></i>.
 
-A Braze não processa alterações de estado para usuários em grupos arquivados. Por exemplo, se você arquivar o Grupo de Inscrições 1 enquanto Alex está inscrito nele, Alex permanece "inscrito" mesmo que clique em um link de cancelamento de inscrição. Isso não importa porque o Grupo de Inscrições 1 está arquivado e você não pode enviar mensagens usando-o.
+Braze não processa alterações de estado para usuários em grupos arquivados. Por exemplo, se você arquivar o Grupo de Inscrições 1 enquanto Alex está inscrito nele, Alex permanece "inscrito" mesmo que clique em um link de cancelamento de inscrição. Isso não importa porque o Grupo de Inscrições 1 está arquivado e você não pode enviar mensagens usando-o.
 
 #### Visualização dos tamanhos dos grupos de inscrições
 
@@ -155,7 +155,7 @@ Isso permite que você evite criar um novo rodapé para cada modelo de e-mail ou
 
 #### Gerenciamento de estados de inscrição para endereços IP chineses
 
-Se você antecipar endereços IP chineses, não confie apenas em um link de cancelamento de inscrição para manter listas `unsubscribed`. Forneça caminhos alternativos de cancelamento de inscrição, como um ticket de suporte ou e-mail de representante do cliente. 
+Se você antecipar endereços IP chineses, não confie apenas em um link de cancelamento de inscrição para manter listas de `unsubscribed`. Forneça caminhos alternativos de cancelamento de inscrição, como um ticket de suporte ou e-mail de representante do cliente. 
 
 ### Criação de uma página de cancelamento de inscrição personalizada
 
@@ -166,13 +166,13 @@ Para criar uma landing page personalizada (em vez da padrão) exibida após a in
 1. Acesse **Preferências de e-mail** > **Páginas de inscrição e rodapés**.
 2. Forneça o HTML para sua landing page personalizada. 
 
-Inclua um link de reinscrição (como {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) para que os usuários possam reinscrever-se se se desinscreveram por acidente.
+Inclua um link de reinscrição (como {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) para que os usuários possam reinscrever-se caso tenham cancelado a inscrição por acidente.
 
 ![Página de cancelamento de inscrição personalizada com uma prévia "Lamentamos vê-lo partir!".]({% image_buster /assets/img/custom_unsubscribe.png %})
 
 ### Criação de uma página de aceitação personalizada
 
-Use uma página de aceitação personalizada para permitir que os usuários reconheçam e controlem as preferências de notificação antes da inscrição. Essa comunicação adicional pode ajudar as campanhas de e-mail a permanecerem fora das pastas de spam.
+Use uma página de aceitação personalizada para permitir que os usuários reconheçam e controlem as preferências de notificação antes da inscrição. Essa comunicação adicional pode ajudar as campanhas de e-mail a não irem para pastas de spam.
 
 1. Acesse **Configurações** > **Preferências de e-mail**.
 2. Selecione **Páginas de inscrição e rodapés**.
@@ -181,14 +181,14 @@ Use uma página de aceitação personalizada para permitir que os usuários reco
 Os usuários acessam esta página através da tag {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %}.
 
 {% alert tip %}
-Use um processo de dupla aceitação para melhorar o alcance. Braze envia um e-mail de confirmação adicional onde o usuário confirma as preferências de notificação através de um link. Após a confirmação, o usuário está inscrito.
+Use um processo de dupla aceitação para melhorar o alcance. Braze envia um e-mail de confirmação adicional onde o usuário confirma as preferências de notificação através de um link. Após a confirmação, o usuário está aceito.
 {% endalert %}
 
 ![E-mail de aceitação personalizado com uma mensagem "Ficamos felizes em ver que você ainda quer ouvir de nós".]({% image_buster /assets/img/custom_optin.png %})
 
 ## Inscrições e direcionamento de campanhas {#subscriptions-and-campaign-targeting}
 
-Por padrão, Braze direciona campanhas com mensagens push ou e-mail para usuários que estão inscritos ou aceitos. Altere isso em **Público-Alvo** selecionando o dropdown ao lado de **Enviar para esses usuários:**.
+Por padrão, Braze direciona campanhas com mensagens push ou e-mail para usuários que estão inscritos ou aceitos. Altere isso em **Público Alvo** selecionando o dropdown ao lado de **Enviar para esses usuários:**.
 
 A Braze oferece suporte a três estados de direcionamento:
 
@@ -204,7 +204,7 @@ A Braze oferece suporte a três estados de direcionamento:
 
 Use os filtros "Status de Inscrição por E-mail" e "Status de Inscrição por Push" para segmentar usuários por status de inscrição.
 
-Use isso para direcionar usuários que não se inscreveram nem se desinscreveram e incentivar uma aceitação explícita. Crie um segmento com o filtro "Status de Inscrição por E-mail/Push é Inscrito" e envie campanhas para usuários que estão inscritos, mas não aceitos.
+Use isso para direcionar usuários que não se inscreveram nem cancelaram e incentivar uma aceitação explícita. Crie um segmento com o filtro "Status de Inscrição por E-mail/Push é Inscrito" e envie campanhas para usuários que estão inscritos, mas não aceitos.
 
 ![Status da inscrição de e-mail usado como um filtro de segmento.]({% image_buster /assets/img_archive/not_optin.png %})
 
