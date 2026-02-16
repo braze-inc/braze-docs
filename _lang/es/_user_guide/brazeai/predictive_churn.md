@@ -2,14 +2,14 @@
 nav_title: Predictive Churn
 article_title: Predictive Churn
 description: "Esta página de aterrizaje trata del Predictive Churn, una herramienta de la línea de productos Predictive Suite de Braze que te permite definir lo que significa el abandono para tu empresa, así como los usuarios que te gustaría evitar que abandonen."
-page_order: 2.0
+page_order: 9
 alias: /predictive_churn/
 search_rank: 2
 ---
 
 # Predictive Churn
 
-> Con Predictive Churn, una herramienta de la línea de productos Braze Predictive Suite, puedes definir qué significa el abandono para tu empresa e identificar a los usuarios que quieres retener. Cuando creas una predicción, Braze entrena un modelo de aprendizaje automático que utiliza [árboles de decisión potenciados por gradiente](https://en.wikipedia.org/wiki/Gradient_boosting) para reconocer a los usuarios de riesgo mediante el análisis de patrones de comportamiento anteriores, tanto de los usuarios que abandonaron como de los que no.
+> Con Predictive Churn, una herramienta de la línea de productos Braze Predictive Suite, puedes definir qué significa el abandono para tu empresa e identificar a los usuarios que quieres retener. Cuando creas una predicción, Braze entrena un modelo de aprendizaje automático que utiliza [árboles de decisión potenciados por gradiente](https://en.wikipedia.org/wiki/Gradient_boosting) para reconocer a los usuarios de riesgo mediante el análisis de patrones de comportamiento anteriores, tanto de los usuarios que abandonaron como de los que no lo hicieron.
 
 {% alert tip %}
 Para más información, consulta [Definición de abandono]({{site.baseurl}}/user_guide/brazeai/predictive_churn/creating_a_churn_prediction/#step-2-define-churn) y [Predicción de audiencia]({{site.baseurl}}/user_guide/brazeai/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience).
@@ -25,7 +25,7 @@ La actualización de las puntuaciones de riesgo de la audiencia de predicción p
 
 ## Acceder al Predictive Churn
 
-La página **Predicciones** se encuentra en la sección **Análisis**. Para obtener acceso completo, ponte en contacto con tu director de cuentas.
+{% include brazeai/predictions_page_access.md %}
 
 Antes de adquirir esta característica, está disponible en modo vista previa. Esto te permitirá ver una predicción de abandono de demostración con datos sintéticos y crear un modelo de predicción de abandono basado en tus datos de usuario a la vez. Esta vista previa no te permitirá segmentar a los usuarios para la mensajería en función del riesgo de abandono y no se actualizará regularmente tras su creación.
 
