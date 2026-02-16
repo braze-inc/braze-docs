@@ -83,13 +83,13 @@ Considérez l'exemple suivant : un Canvas a 10 notifications push et l'événeme
 - L’utilisateur A ouvre l’application après l’accès, mais avant la réception du premier message.
 - L’utilisateur B ouvre l’application après chaque notification push.
 
-L'étape du canvas indique deux conversions, tandis que les étapes individuelles indiquent une conversion pour la première étape et aucune pour toutes les étapes suivantes. Si des heures calmes sont actives au moment de l'événement de conversion, les mêmes règles s'appliquent. 
+L'étape du canvas indiquera deux conversions, tandis que les étapes individuelles indiqueront une conversion pour la première étape et aucune pour toutes les étapes suivantes. Si des heures calmes sont actives au moment de l'événement de conversion, les mêmes règles s'appliquent. 
 
 Supposons maintenant que nous ayons un canvas avec des heures calmes et que les événements suivants se produisent :
 
 1. L'utilisateur A entre dans un Canvas.
 2. La première étape est une étape de retardement dans les heures calmes définies, de sorte que le message est supprimé.
-3. L'utilisateur A effectue l'événement de conversion.
+3. L'événement de conversion est effectué par l'utilisateur A.
 
 L'utilisateur A sera comptabilisé comme converti dans la variante globale du canvas, mais pas dans l'étape du canvas puisqu'il n'a pas reçu l'étape.
 
