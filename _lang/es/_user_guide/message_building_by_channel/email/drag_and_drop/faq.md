@@ -27,7 +27,7 @@ No puedes editar el relleno para las vistas móvil y Web exclusivamente, de modo
 
 Al crear un correo electrónico utilizando el editor de arrastrar y soltar, si creas una fila horizontal de botones de llamada a la acción, puede que te encuentres con que los botones cambian a una orientación vertical en el móvil. 
 
-Para mantener el mismo formato en todos los tamaños de dispositivo, recomendamos crear una fila separada con botones CTA que tengan relleno optimizado para móviles y estén configurados para ocultar la fila en un dispositivo de escritorio. Tener dos filas separadas significa que puedes establecer el relleno deseado para obtener la mejor representación del texto en ordenadores de sobremesa y dispositivos móviles.
+Para mantener el mismo formato en todos los tamaños de dispositivo, recomendamos crear una fila separada con botones CTA que tengan relleno optimizado para móviles y estén configurados para ocultar la fila en un dispositivo de escritorio. Al tener dos filas separadas, puedes establecer el relleno que desees para obtener la mejor representación del texto en ordenadores de sobremesa y dispositivos móviles.
 
 
 ### ¿Puedo ajustar la altura de la fila en el editor de arrastrar y soltar?
