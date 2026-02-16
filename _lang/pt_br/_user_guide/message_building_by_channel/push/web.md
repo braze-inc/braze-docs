@@ -54,7 +54,9 @@ Considere a possibilidade de usar uma mensagem no navegador para que os usuário
 
 ## Navegadores compatíveis
 
-Os navegadores a seguir oferecem suporte a notificações por push da Web. No entanto, as janelas de navegação privada não aceitam web push.
+Os navegadores a seguir oferecem suporte a notificações por push da Web.
+
+{% multi_lang_include alerts/important_alerts.md alert='Web push private browsing' %}
 
 - Chrome (e Chrome para celulares Android)
 - Safari
