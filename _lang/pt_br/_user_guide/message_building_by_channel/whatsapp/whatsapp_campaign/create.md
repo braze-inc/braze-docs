@@ -91,7 +91,7 @@ Se estiver adicionando cópia em um idioma escrito da direita para a esquerda, n
 
 #### Variáveis
 
-Se você adicionou variáveis ao criar o modelo do WhatsApp no Meta Business Manager, essas variáveis aparecerão como espaços em branco no criador de mensagens. Substitua esses espaços em branco por Liquid ou texto simples. Para usar texto simples, use o formato "texto aqui" entre colchetes duplos. Se tiver aceitado incluir imagens ao criar o modelo, poderá fazer upload ou adicionar imagens da biblioteca de mídia ou fazer referência a um URL de imagem.
+Se você adicionou variáveis ao criar o modelo do WhatsApp no Meta Business Manager, essas variáveis aparecerão como espaços em branco no criador de mensagens. Substitua esses espaços em branco por Liquid ou texto simples. Para usar texto simples, use o formato "texto aqui" entre colchetes duplos. Se tiver aceitado incluir imagens ao criar o modelo, poderá fazer upload ou adicionar imagens da biblioteca de mídia ou fazer referência a um URL de imagem. Quando possível, recomendamos fazer upload das imagens diretamente para a sua biblioteca de mídia para garantir a padronização e a credibilidade da imagem.
 
 Note que os campos de texto desativados (destacados em cinza) não podem ser editados, pois fazem parte do modelo aprovado do WhatsApp. Se quiser fazer atualizações no texto desativado, você deverá editar seu modelo e aprová-lo novamente.
 
@@ -106,6 +106,10 @@ Se planeja usar o Liquid, certifique-se de incluir um valor padrão para a perso
 ### Links dinâmicos 
 
 Os URLs de chamada para ação podem conter variáveis, embora o Meta exija que elas estejam no final do URL, como `{% raw %}https://example.com/{{variable}}{% endraw %}`, onde a variável pode ser substituída na Braze pelo Liquid. Os links também podem ser incluídos no corpo do texto como parte do modelo. Esses dois links podem ser encurtados e rastreados usando o [rastreamento de cliques]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/).
+
+### Imagens dinâmicas
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 {% endtab %}
 {% tab Response messages %}
@@ -184,7 +188,7 @@ Em seguida, confira [os relatórios do WhatsApp]({{site.baseurl}}/user_guide/mes
 
 ### Mensagens de saída
 
-Os recursos a seguir são compatíveis com as mensagens do WhatsApp que você envia pelo Braze:
+Os recursos a seguir são compatíveis com as mensagens enviadas pelo WhatsApp que você envia pelo Braze:
 
 | Recurso | Informações | Tamanho máximo | Formatos suportados |
 | ------- | ------- | ------------- | ---------------------- |
@@ -199,7 +203,7 @@ Os recursos a seguir são compatíveis com as mensagens do WhatsApp que você en
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-O Meta tem um problema conhecido que pode impedir a reprodução de alguns vídeos MP4 em dispositivos Android devido a configurações específicas de codificação ou contêiner. Até que uma correção permanente esteja disponível, a reformatação do arquivo MP4 resolve o problema para a maioria dos remetentes. Teste todos os vídeos em dispositivos Android para confirmar a entregabilidade correta. <br><br>Você pode reformatar o arquivo MP4 por MP4 usando uma ferramenta da Web, como o [CloudConvert](https://cloudconvert.com/mp4-converter). Faça upload de seu arquivo MP4 na ferramenta, converta-o para MP4 novamente e baixe o arquivo convertido.
+O Meta tem um problema conhecido que pode impedir a reprodução de alguns vídeos MP4 em dispositivos Android devido a configurações específicas de codificação ou contêiner. Até que uma correção permanente esteja disponível, a reformatação do arquivo MP4 resolve o problema para a maioria dos remetentes. Teste todos os vídeos em dispositivos Android para confirmar a entregabilidade correta. <br><br>Você pode reformatar o arquivo MP4 por MP4 usando uma ferramenta da Web, como o [CloudConvert](https://cloudconvert.com/mp4-converter). Faça upload de seu arquivo MP4 na ferramenta, converta-o para MP4 novamente e, em seguida, baixe o arquivo convertido.
 {% endalert %}
 
 ### Envios de mensagens de entrada
@@ -210,7 +214,7 @@ Os seguintes recursos são compatíveis com as mensagens recebidas do WhatsApp q
 | ------- | ------- | ------------------ |
 | Texto do corpo | Somente as strings padrão são suportadas. | - |
 | Imagens | As imagens devem ser de 8 bits e usar um modelo de cor RGB ou RGBA. Os arquivos devem ter menos de 5 MB. | `.jpg`, `.png` |
-| Áudio | Somente os arquivos Ogg codificados com o codec Opus são compatíveis. Outros formatos Ogg não são. | `.aac`, `.mp4`, `.mpeg`, `.amr`, `.ogg (Opus only)` |
+| Áudio | Somente arquivos Ogg codificados com o codec Opus são compatíveis. Outros formatos Ogg não são. | `.aac`, `.mp4`, `.mpeg`, `.amr`, `.ogg (Opus only)` |
 | Documentos | Os documentos são suportados por meio de anexos de mensagens. | `.txt`, `.pdf`, `.ppt`, `.doc`, `.xls`, `.docx`, `.pptx`, `.xlsx` |
 | Vídeo | Somente o codec de vídeo H.264 e o codec de áudio AAC são compatíveis. Os vídeos devem ter um único fluxo de áudio ou nenhum fluxo de áudio. | `.mp4`, `.3gp` |
 | Links de CTA | Há suporte para vários tipos de CTA (call-to-action). Para obter mais detalhes, consulte [Tipos de call-to-action](#ctas). | - |
