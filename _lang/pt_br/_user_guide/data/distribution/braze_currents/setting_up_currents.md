@@ -85,7 +85,7 @@ Antes de testar, considere dar uma olhada em nossos [dados de amostra do Current
 
 #### Envio de eventos de teste
 
-Para testar sua integração, você pode selecionar **Send Test Events (Enviar eventos de teste** ) para enviar um evento de cada um dos tipos de evento selecionados para essa corrente. Para obter informações detalhadas sobre cada tipo de evento, consulte nossas bibliotecas de [eventos de comportamento do cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) e [de eventos de engajamento com mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
+Para testar sua integração, você pode selecionar **Send Test Events (Enviar eventos de teste** ) para enviar um evento de cada um dos tipos de evento selecionados para essa corrente. Para obter informações detalhadas sobre cada tipo de evento, consulte nossas bibliotecas de [eventos de comportamento do cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) e [eventos de engajamento com mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
 
 ![A página "Currents Test" (Teste de correntes) no dashboard do Braze.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
@@ -93,10 +93,10 @@ Para testar sua integração, você pode selecionar **Send Test Events (Enviar e
 
 Os conectores Test Currents são versões gratuitas de nossos conectores existentes que podem ser usados para testar e experimentar diferentes destinos. As correntes de teste têm:
 
-- Não há limite para o número de conectores Test Currents que você pode construir.
-- Um máximo agregado de 10.000 eventos por período contínuo de sete dias. Esse total de eventos é atualizado de hora em hora no dashboard.
+- Até 10 conectores de Currents de teste por espaço de trabalho.
+- Um máximo agregado de 1.500 eventos por período fixo de 24 horas, reiniciando à meia-noite UTC. Esse total de eventos é atualizado de hora em hora no dashboard.
 
-Depois que seus conectores de teste do Currents atingirem o limite de envio, seu conector não enviará eventos até o próximo período de sete dias.
+Depois que seus conectores Test Currents atingirem o limite de envio, seu conector não enviará eventos até o dia seguinte (à meia-noite UTC).
 
 Para fazer upgrade de seu conector Test Currents, edite a integração no dashboard e selecione **Upgrade Test Integration**.
 
