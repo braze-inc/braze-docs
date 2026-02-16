@@ -112,7 +112,9 @@ In der folgenden Tabelle finden Sie Einzelheiten zum Editor-Block `Spacer`.
 
 ### Bild
 
-In der folgenden Tabelle finden Sie Einzelheiten zum Editor-Block `Image`. Für dynamische Bilder (Bilder mit Liquid) müssen Sie ein Fallback-Bild festlegen, um die Einstellungen für die automatische Breite zu verwenden. Die Spezifikationen für Bilder finden Sie in unseren [Spezifikationen für E-Mail-Bilder]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+In der folgenden Tabelle finden Sie Einzelheiten zum Editor-Block `Image`. Für dynamische Bilder (Bilder mit Liquid oder Connected-Content) müssen Sie ein Fallback-Bild festlegen, um die Einstellungen für die automatische Breite zu verwenden. Die Spezifikationen für Bilder finden Sie in unseren [Spezifikationen für E-Mail-Bilder]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 | Eigenschaften | Beschreibung |
 |---|---|
@@ -220,7 +222,7 @@ In der folgenden Tabelle finden Sie Einzelheiten zum Editor-Block `Button`.
 |---|---|
 |Link Typ| Bestimmt die Aktion beim Klicken auf den Button und legt das entsprechende Protokoll fest. |
 |URL| Dynamisch, basierend auf dem Link-Typ **Öffnung der Internet-Seite**.|
-|Mail an, Betreff und Text| Für den Linktyp **E-Mail senden** werden hier die E-Mail-Adresse des Empfängers, der Betreff und der Inhalt festgelegt, die in den Entwurf einer E-Mail eingefügt werden, wenn der Nutzer:innen den Button auswählt.|
+|Mail an, Betreff und Text| Für den Link-Typ **E-Mail senden** werden hier die E-Mail-Adresse des Empfängers, der Betreff und der Inhalt festgelegt, die in den Entwurf einer E-Mail eingefügt werden, wenn der Nutzer:innen den Button auswählt.|
 |Tel| Für den Linktyp **Anruf tätigen** und **SMS senden** wird hier die Telefonnummer festgelegt, die der Nutzer:innen anruft oder schreibt, wenn er den Button auswählt.|
 |Nachricht| Für den Link-Typ **SMS senden** wird hier der Inhalt festgelegt, der in den Entwurf einer SMS-Nachricht eingefügt wird, wenn der Nutzer:innen den Button auswählt.|
 |Button Optionen| Legt verschiedene Button-Optionen fest, wie Schriftart, Breite, Farbe und andere.|
