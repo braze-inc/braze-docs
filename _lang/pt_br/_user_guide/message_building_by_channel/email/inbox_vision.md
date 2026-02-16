@@ -22,7 +22,7 @@ O Inbox Vision poderá não funcionar se o conteúdo do seu e-mail depender de i
 
 Em geral, seu e-mail não funcionará com o Inbox Vision se o conteúdo do e-mail depender de informações de modelo, como informações de perfil de usuário. Isso ocorre porque o Braze modela um usuário vazio quando enviamos e-mails usando esse recurso.
 
-Você pode resolver isso adicionando valores padrão ou quaisquer valores do Liquid em sua mensagem de e-mail antes de executar o Inbox Vision. Quando você terminar o teste no Inbox Vision, a mensagem de e-mail original será exibida. Se nenhum valor for fornecido, o teste poderá falhar ao renderizar as prévias com êxito.
+Você pode resolver isso adicionando valores padrão ou quaisquer valores ao Liquid em sua mensagem de e-mail antes de executar o Inbox Vision. Quando você terminar o teste no Inbox Vision, a mensagem de e-mail original será exibida. Se nenhum valor for fornecido, o teste poderá falhar ao renderizar as prévias com êxito.
 
 Sua empresa tem um limite para o número de e-mails que podem ser prévios com o Inbox Vision. Você pode monitorar isso na guia **Pré-visualizações de e-mail** do Inbox Vision.
 
@@ -55,7 +55,7 @@ A análise de código destaca possíveis problemas de HTML, mostra o número de 
 
 ### Exibição de informações de análise de código
 
-Encontre essas informações na guia **Inbox Vision**, selecionando <i class="fas fa-list"></i> **List view**. A exibição de lista está disponível apenas para modelos de e-mail em HTML. No caso de modelos do tipo arrastar e soltar, use prévias para resolver problemas.
+Encontre essas informações na guia **Visão da caixa de entrada**, selecionando <i class="fas fa-list"></i> **List view**. A visualização de lista está disponível apenas para modelos de e-mail em HTML. No caso de modelos do tipo arrastar e soltar, use prévias para resolver problemas.
 
 ![Exemplo de análise de código na prévia do Inbox Vision.]({% image_buster /assets/img_archive/inboxvision2.png %})
 
@@ -77,11 +77,11 @@ Para verificar os resultados do teste de spam:
 
 ## Teste de acessibilidade
 
-O teste de acessibilidade destaca possíveis problemas de acessibilidade em seu e-mail e mostra quais elementos não atendem aos padrões. O Braze analisa o conteúdo de acordo com as[WCAG (](https://www.w3.org/WAI/standards-guidelines/wcag/)Web Content Accessibility Guidelines, Diretrizes de Acessibilidade para Conteúdo da Web), um conjunto de padrões internacionalmente reconhecidos desenvolvidos pelo W3C para tornar o conteúdo da Web mais acessível.
+O teste de acessibilidade destaca possíveis problemas de acessibilidade em seu e-mail e mostra quais elementos não atendem aos padrões. O Braze analisa o conteúdo de acordo com as[WCAG (](https://www.w3.org/WAI/standards-guidelines/wcag/)Web Content Accessibility Guidelines, Diretrizes de Acessibilidade para Conteúdo da Web), um conjunto de padrões reconhecidos internacionalmente e desenvolvidos pelo W3C para tornar o conteúdo da Web mais acessível.
 
 ### Como funciona?
 
-Quando você executa o Inbox Vision, o Braze verifica automaticamente se há problemas comuns de acessibilidade no [conjunto de regras WCAG 2.2 AA](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2&currentsidebar=%23col_customize&levels=aaa) (como texto alternativo ausente, contraste de cor insuficiente, estrutura de cabeçalho inadequada) e categoriza a gravidade para ajudá-lo a priorizar as correções. 
+Quando você executa o Inbox Vision, o Braze verifica automaticamente se há problemas comuns de acessibilidade no [conjunto de regras WCAG 2.2 AA](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2&currentsidebar=%23col_customize&levels=aaa) (como texto alternativo ausente, contraste de cor insuficiente, estrutura de título inadequada) e categoriza a gravidade para ajudá-lo a priorizar as correções. 
 
 {% alert important %}
 Os Testes de Acessibilidade podem ser usados para apoiar os esforços de conformidade do Cliente com regulamentos ou leis, como a [Lei de Acessibilidade Europeia](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers); no entanto, o Cliente reconhece que a Braze não faz representações ou garantias com relação ao fato de o uso dos Testes de Acessibilidade satisfazer ou não as obrigações de conformidade do Cliente e se isenta de qualquer responsabilidade com relação a isso.
@@ -118,7 +118,7 @@ O Inbox Vision classifica os problemas de acessibilidade por gravidade para ajud
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-O editor de arrastar e soltar não suporta a configuração de um elemento do documento `<title>`, portanto, o scanner de acessibilidade sempre falha nessa verificação.<br><br>Essa limitação é rastreada para melhorias futuras. Se isso afetar seus fluxos de trabalho ou seus usuários, [compartilhe seu feedback]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback) para que possamos priorizar correções impactantes.
+O editor de arrastar e soltar não suporta a configuração de um elemento do documento `<title>`, portanto, o scanner de acessibilidade sempre falha nessa verificação.<br><br>Essa limitação é rastreada para melhorias futuras. Se isso afetar seus fluxos de trabalho ou seus usuários, [compartilhe seus comentários]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback) para que possamos priorizar correções impactantes.
 {% endalert %}
 
 ### Compreensão dos testes automatizados de acessibilidade
@@ -131,7 +131,7 @@ O editor de arrastar e soltar não suporta a configuração de um elemento do do
 
 Consulte o [dashboard de insights de e-mail]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard#email-insights-dashboard) para determinar o tipo de dispositivo mais popular e os provedores de [e-mail]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard#email-insights-dashboard) com os quais seus assinantes estão se engajando. Se precisar de mais granularidade, como o navegador, o modelo do dispositivo e muito mais, poderá aproveitar os dados do [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents) ou o [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder) para recuperar esse nível de detalhe sobre o recente envio de e-mail dos usuários.
 
-Caso contrário, o Braze usa como padrão as 20 principais prévias com base em dados gerais do setor e de especialistas, que abrangem a maioria dos locais onde seus assinantes estão se engajando com seus e-mails. Se sua análise de dados apontar para outras prévias mais populares, você poderá definir um conjunto padrão de prévias sempre que executar o Inbox Vision.
+Caso contrário, o Braze usa como padrão as 20 principais prévias com base em dados gerais do setor e de especialistas, o que abrange a maioria dos locais onde seus assinantes estão se engajando com seus e-mails. Se sua análise de dados apontar para outras prévias mais populares, você poderá definir um conjunto padrão de prévias sempre que executar o Inbox Vision.
 
 ### Selecione prévias significativas e prévias afetadas
 
@@ -145,4 +145,4 @@ Sugerimos executar o Inbox Vision quando a mensagem de e-mail estiver pronta par
 
 A execução do Inbox Vision toda vez que você faz uma única edição ou alteração pode consumir rapidamente as prévias. Sugerimos que você faça todas as alterações necessárias no e-mail primeiro e, em seguida, execute o Inbox Vision para ter uma prévia de como todas as alterações podem afetar o envio de seu e-mail em todos os ambientes.
 
-A Braze executa testes com clientes de e-mail reais e trabalha para garantir que as renderizações sejam precisas. Se você sempre encontrar um problema com um cliente, abra um [tíquete de suporte]({{site.baseurl}}/braze_support/).
+O Braze executa testes com clientes de e-mail reais e trabalha para garantir que as renderizações sejam precisas. Se você sempre encontrar um problema com um cliente, abra um [tíquete de suporte]({{site.baseurl}}/braze_support/).
