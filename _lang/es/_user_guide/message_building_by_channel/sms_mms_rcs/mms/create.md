@@ -38,6 +38,8 @@ Las tarjetas de contacto (a veces conocidas como vCard o Archivos Virtuales de C
 
 La creación de un mensaje MMS requiere que su grupo de suscripción esté configurado para el envío de MMS. Esto se indica viendo la etiqueta MMS al seleccionar un grupo de suscripción. Al seleccionar un grupo de suscripción habilitado para MMS, tendrás la posibilidad de subir una imagen, hacer referencia a una URL de imagen o incluir una tarjeta de contacto.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 ![La pestaña "Redactar" para escribir tu mensaje.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Especificaciones de imagen
