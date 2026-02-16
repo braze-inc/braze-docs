@@ -12,7 +12,7 @@ tool:
 
 # 드래그 앤 드롭으로 이메일 만들기
 
-> 드래그 앤 드롭 편집기를 사용하면 이메일 본문을 구축할 때 HTML을 사용하지 않고도 캠페인이나 캔버스에 맞게 완전히 커스텀되고 개인화된 이메일 메시지를 만들 수 있습니다.
+> 드래그 앤 드롭 편집기를 사용하면 HTML을 사용하여 이메일 본문을 구축하지 않고도 캠페인 또는 캔버스에 대한 완전히 커스텀되고 개인화된 이메일 메시지를 만들 수 있습니다.
 
 ## 편집기 정보
 
@@ -244,7 +244,11 @@ You can set the language attribute by going to the **Settings** tab and selectin
 
 #### 동적 이미지
 
-이미지 소스 속성에 Liquid를 포함하여 이메일 메시지에 동적 이미지를 포함하도록 선택할 수 있습니다. 예를 들어 정적 이미지 대신 {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %}를 이미지 URL로 삽입하여 이미지에 사용자의 이름을 포함할 수 있습니다. 이렇게 하면 각 사용자에게 맞춤화된 이메일을 보낼 수 있습니다.
+이미지 소스 속성에 [연결된 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) 또는 [Liquid를]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) 포함하여 이메일 메시징에 동적 [콘텐츠를]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) 포함하도록 선택할 수 있습니다. 예를 들어 정적 이미지 대신 {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %}를 이미지 URL로 삽입하여 이미지에 사용자의 이름을 포함할 수 있습니다. 이렇게 하면 각 사용자에게 맞춤화된 이메일을 보낼 수 있습니다.
+
+{% alert important %}
+이미지 URL은 `https://` 로 시작해야 합니다. `http://` 을 사용하면 앱이 충돌합니다.
+{% endalert %}
 
 ### 텍스트 방향
 
