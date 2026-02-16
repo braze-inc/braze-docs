@@ -139,7 +139,7 @@ Os seguintes tipos de dados podem ser usados como atributos personalizados para 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert important %}
-Matrizes, tokens por push e tipos de dados de eventos personalizados não são compatíveis com a importação de usuários, pois as vírgulas no arquivo CSV serão interpretadas como separadores de coluna e causarão erros durante a análise do arquivo.<br><br>Para fazer upload desses tipos de valores, use o [ponto de extremidade`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) ou o [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/).
+Matrizes, tokens por push e tipos de dados de eventos personalizados não são suportados na importação de usuários, pois as vírgulas no seu arquivo CSV serão interpretadas como um separador de colunas e causarão erros ao analisar o arquivo.<br><br>Para fazer upload desses tipos de valores, use o [ponto de extremidade`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) ou o [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/).
 {% endalert %} 
 
 #### Atribuições padrão
@@ -264,7 +264,7 @@ Cada dado de cliente importado de um arquivo CSV substituirá o valor existente 
 
 | Considerações | Informações |
 |---|---|
-| IDs externas | Fazer upload de um CSV com apenas `external_id` não registrará pontos de dados. Isso permite segmentar os usuários existentes do Braze sem afetar os limites de dados. No entanto, a inclusão de campos como `email` ou `phone` substituirá os dados de usuários existentes e **registrará** os pontos de dados. <br><br>As importações de CSV usadas apenas para segmentação não registram pontos de dados, como os que contêm apenas `external_id`, `braze_id`, ou `user_alias_name`. |
+| IDs externas | Fazer upload de um CSV com apenas `external_id` não registrará pontos de dados. Isso permite segmentar os usuários existentes do Braze sem afetar os limites de dados. No entanto, a inclusão de campos como `email` ou `phone` sobrescreverá os dados de usuários existentes e **registrará** os pontos de dados. <br><br>As importações de CSV usadas apenas para segmentação não registram pontos de dados, como os que contêm apenas `external_id`, `braze_id`, ou `user_alias_name`. |
 | Valores em branco | Os valores em branco no seu CSV não substituirão os dados de perfil de usuários existentes. Não é necessário incluir todos os atributos de usuário ou eventos personalizados ao fazer a importação. |
 | Estados de inscrição | A atualização de `email_subscribe`, `push_subscribe`, `subscription_group_id`, ou `subscription_state` **não** conta para o uso do ponto de dados. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -295,7 +295,7 @@ Há algumas razões pelas quais o número de usuários importados pode não corr
 |---|---|
 | Duplicar IDs externas, aliases de usuários, IDs do Braze, endereços de e-mail ou números de telefone | Se houver colunas de ID externas duplicadas, isso poderá causar linhas malformadas ou não importadas, mesmo que as linhas estejam formatadas corretamente. Em alguns casos, isso pode não informar um erro específico. Verifique se há duplicatas e remova-as antes de fazer upload novamente. |
 | Caracteres acentuados | Seu CSV pode incluir nomes ou atribuições com acentos. Certifique-se de que o arquivo esteja codificado em UTF-8 para evitar problemas de importação. |
-| O Braze ID pertence a um usuário órfão | Se um usuário tiver sido mesclado com outro e o Braze não puder associar o Braze ID ao perfil restante, a linha não será importada. |
+| O Braze ID pertence a um usuário órfão | Se um usuário foi fundido com outro e o Braze não puder associar o Braze ID ao perfil restante, a linha não será importada. |
 | Linha vazia | As linhas em branco no CSV podem causar erros de dados malformados. Verifique usando um editor de texto simples, não o Excel ou o Sheets. |
 | Incluindo aspas duplas (`"` ) | Esse caractere é inválido e causará uma linha malformada. Em vez disso, use aspas simples (`'`). |
 | Quebras de linha inconsistentes | Quebras de linha mistas (e.g., `\n` e `\r\n`) podem fazer com que a primeira linha de dados seja tratada como parte do cabeçalho. Use um editor de texto hexadecimal ou avançado para inspecionar e corrigir. |
