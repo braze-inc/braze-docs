@@ -68,8 +68,8 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 | Konvertierungsverhalten (verschachtelt) | Genehmigungen | 
 | Konfigurationen für die stille Zeit | Auslösezeitplan | 
 | Frequency-Capping | Kampagnen-Zusammenfassungen | 
-| Abonnementstatus |  | 
-| Wiederholungen |  | 
+| Abonnementstatus | Filter | 
+| Wiederkehrender Zeitplan |  | 
 | Ist transaktional |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -84,8 +84,8 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 | Konvertierungsverhalten (verschachtelt) | Genehmigungen | 
 | Konfigurationen für die stille Zeit | Auslösezeitplan | 
 | Frequency-Capping | Canvas-Zusammenfassungen | 
-| Abonnementstatus |  | 
-| Wiederholungen |  | 
+| Abonnementstatus | Filter | 
+| Wiederkehrender Zeitplan |  | 
 | Ist transaktional |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
