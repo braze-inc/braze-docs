@@ -123,7 +123,7 @@ Auf der Seite **Abo-Gruppen** können Sie das Diagramm **Abo-Gruppe Zeitreihe** 
 
 #### Anzeigen von Abonnementgruppen in der Kampagnenanalyse
 
-Auf der Analytics-Seite einer Kampagne sehen Sie die Anzahl der Nutzer:innen, die ihr Abo geändert haben (abonniert oder abgemeldet).
+Auf der Analytics-Seite einer Kampagne sehen Sie die Anzahl der Nutzer:innen, die ihr Abo geändert haben (abgemeldet oder abgemeldet).
 
 1. Scrollen Sie auf der Seite **Campaign Analytics** für Ihre Kampagne nach unten zum Abschnitt **E-Mail Nachricht Performance**.
 2. Wählen Sie den Pfeil unter **Abo-Gruppen** aus, um die Gesamtzahl der Statusänderungen zu sehen, die von Ihren Kund:innen übermittelt wurden.
@@ -133,7 +133,7 @@ Auf der Analytics-Seite einer Kampagne sehen Sie die Anzahl der Nutzer:innen, di
 ### Überprüfen der E-Mail Abo-Gruppe eines Nutzers:innen
 
 - **Benutzerprofil:** Auf einzelne Benutzerprofile können Sie über das Braze-Dashboard von der Seite [Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) aus zugreifen. Hier können Sie Benutzerprofile nach E-Mail-Adresse, Telefonnummer oder externer Benutzer-ID abrufen. Auf dem Tab **Engagement** können Sie auch die E-Mail Abo-Gruppen eines Nutzers:innen einsehen.
-- **Braze REST API:** Verwenden Sie den [Endpunkt Abo-Gruppen des Nutzers auflisten]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) oder den [Endpunkt Abo-Gruppenstatus des Nutzers auflisten]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/), um die Abo-Gruppen einzelner Nutzerprofile anzuzeigen. 
+- **Braze REST API:** Verwenden Sie den [Endpunkt Abo-Gruppen des Nutzers auflisten]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) oder [Abo-Gruppenstatus des Nutzers auflisten]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/), um die Abo-Gruppen der einzelnen Nutzerprofile anzuzeigen. 
 
 ## E-Mail-Präferenzzentrum
 
@@ -145,7 +145,7 @@ Wenn Sie mehr darüber erfahren möchten, wie Sie ein Präferenzzentrum hinzufü
 
 In den meisten Fällen verwalten die Nutzer:innen ihr E-Mail Abo über Links in den E-Mails, die sie erhalten. Fügen Sie eine rechtskonforme Fußzeile mit einem Link zum Abmelden am Ende jeder E-Mail ein. Wenn Nutzer:innen die Abmelde-URL auswählen, meldet Braze sie ab und zeigt eine Landing Page an, die die Änderung bestätigt. Fügen Sie diesen Liquid-Tag ein: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
 
-Wenn ein Nutzer:innen im Einstellungscenter die Option "Von allen oben genannten Arten von E-Mails abmelden" auswählt, setzt Braze seinen globalen E-Mail-Abostatus auf `unsubscribed` und meldet ihn von allen Gruppen ab.
+Wenn ein Nutzer:innen im Einstellungscenter "Von allen oben genannten Arten von E-Mails abmelden" auswählt, setzt Braze seinen globalen E-Mail-Abostatus auf `unsubscribed` und meldet ihn von allen Gruppen ab.
 
 ### Benutzerdefinierte Fußzeilen erstellen {#custom-footer}
 
@@ -188,7 +188,7 @@ Verwenden Sie ein Double Opt-in-Verfahren, um die Reichweite zu verbessern. Braz
 
 ## Abos und Kampagnen-Targeting {#subscriptions-and-campaign-targeting}
 
-Standardmäßig stellt Braze Kampagnen mit Push- oder E-Mail-Nachrichten für Nutzer:innen zusammen, die ein Abonnent:in sind oder ein Opt-in haben. Ändern Sie dies in **Target Audience**, indem Sie das Dropdown-Menü neben **An diese Nutzer:innen senden** auswählen **:**.
+Standardmäßig stellt Braze Kampagnen mit Push- oder E-Mail-Nachrichten für Nutzer:innen zusammen, die ein Abonnent:in sind oder ein Opt-in gesetzt haben. Ändern Sie dies in **Target Audience**, indem Sie das Dropdown-Menü neben **An diese Nutzer:innen senden** auswählen.
 
 Braze unterstützt drei Targeting-Stufen:
 
