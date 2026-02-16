@@ -2,7 +2,7 @@
 nav_title: Message 
 article_title: Message 
 alias: "/message_step/"
-page_order: 5
+page_order: 11
 page_type: reference
 description: "Cet article de référence explique comment créer un message autonome à l'aide de l'étape Message."
 tool: Canvas
