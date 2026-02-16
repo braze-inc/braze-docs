@@ -1,7 +1,7 @@
 ---
 nav_title: Endpoints de API e SDK
 article_title: Endpoints de API e SDK
-page_order: 2.4
+page_order: 4
 page_type: reference
 description: "Este artigo de referência lista os URLs do dashboard, os endpoints da API e os endpoints do SDK para as instâncias disponíveis da Braze."
 
