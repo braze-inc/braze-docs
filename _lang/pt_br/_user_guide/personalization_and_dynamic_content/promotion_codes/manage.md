@@ -25,7 +25,7 @@ Cole os trechos de código em uma de suas mensagens no Braze e, em seguida, use 
 
 ### Etapas do Canva
 
-Quando um snippet de código é usado em uma campanha ou no Canva com mensagens em vários canais, cada usuário recebe um código exclusivo. Em um Canva com várias etapas que fazem referência a códigos promocionais, um usuário obtém um novo código para cada etapa em que entra.
+Quando um snippet de código é usado em uma campanha ou no Canva com mensagens em vários canais, cada usuário recebe um código exclusivo. Em um Canva com várias etapas que fazem referência a códigos promocionais, o usuário recebe um novo código para cada etapa em que entra.
 
 Para atribuir um código de promoção em um Canva e reutilizá-lo em todas as etapas:
 
@@ -60,7 +60,7 @@ Primeiro, selecione o seguinte para cada campo na etapa Atualização do usuári
 - **Ação:** Atualizar
 - **Valor-chave:** O trecho de código Liquid do código promocional, como {% raw %}`{% promotion('spring25') %}`{% endraw %}
 
-Em segundo lugar, adicione o atributo personalizado (neste exemplo, {% raw %}`{{custom_attribute.${Promo Code}}`{% endraw %}) a uma mensagem. O código de desconto é modelado em.
+Em segundo lugar, adicione o atributo personalizado (neste exemplo, {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %}) a uma mensagem. O código de desconto é modelado em.
 
 ## Visualização do uso do código promocional
 
