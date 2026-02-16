@@ -77,9 +77,7 @@ In diesem Abschnitt können Sie BCC-Adressen verwalten, die Sie an ausgehende Na
 
 BCC-Adressen sind nur für SendGrid und SparkPost verfügbar. Als Alternative zu BCC-Adressen empfehlen wir die Verwendung der [Messaging-Archivierung]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/), um eine Kopie der an Nutzer:innen gesendeten Nachrichten für Archivierungs- oder Compliance-Zwecke zu speichern.
 
-{% alert important %}
-Wenn Sie eine BCC-Adresse an Ihre Kampagne oder Ihr Canvas anhängen, verdoppeln sich Ihre abrechenbaren E-Mails für die Kampagne oder die Canvas-Komponente, da Braze eine Nachricht an Ihren Nutzer:innen und eine an Ihre BCC-Adresse sendet.
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='BCC address billable emails' %}
 
 ![BCC-Adresse auf dem Tab E-Mail-Einstellungen.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
 
@@ -102,7 +100,7 @@ So können Sie z.B. {% raw %}`{{custom_attribute.${support_agent}}}`{% endraw %}
 
 [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
-Das Tracking-Pixel für die E-Mail-Öffnung ist ein unsichtbares 1 x 1 px großes Bild, das automatisch in den HTML-Code Ihrer E-Mail eingefügt wird. Dieses Pixel hilft Braze zu erkennen, ob die Endnutzer Ihre E-Mail geöffnet haben. Informationen über die Öffnungsrate von E-Mails können sehr nützlich sein, da sie den Nutzern helfen, effektive Marketingstrategien festzulegen, indem sie die entsprechenden Öffnungsraten verstehen.
+Das Tracking-Pixel für Öffnungsrate ist ein unsichtbares 1 x 1 px großes Bild und wird automatisch in den HTML-Code Ihrer E-Mail eingefügt. Dieses Pixel hilft Braze zu erkennen, ob Ihre Nutzer:innen Ihre E-Mail geöffnet haben. Wenn der E-Mail Client eines Nutzers:innen eine Anfrage an unser Tracking-Pixel stellt, kann die Anfrage Informationen wie die IP-Adresse, den User-Agent und den Zeitstempel enthalten. Informationen über die Öffnung von E-Mails können sehr nützlich sein und Ihnen helfen, effektive Marketing-Strategien festzulegen, indem Sie die entsprechenden Öffnungsraten verstehen.
 
 ### Platzierung des Tracking-Pixels
 
@@ -129,7 +127,7 @@ Beim SSL Enablement wird die URL des Tracking-Pixels mit HTTPS statt mit HTTP ve
 ## Listenabmelde-Header {#list-unsubscribe}
 
 {% alert note %}
-Seit dem 15\. Februar 2024 ist bei neuen Unternehmen die Kopfzeile Liste-abmelden (mit einem Klick abmelden) standardmäßig aktiviert.
+Seit dem 15\. Februar 2024 ist bei neuen Unternehmen die Kopfzeile Liste-abmelden (mit Ein-Klick-Abmeldung) standardmäßig aktiviert.
 {% endalert %}
 
 Wenn Sie einen Listenabmelde-Header verwenden, können Ihre Empfänger:innen der Mailbox-UI und nicht in der Nachricht einen **Abmelden**-Button von Marketing-E-Mails anzeigen lassen.
@@ -199,7 +197,7 @@ Die Verwendung von One-Click Unsubscribe für den List-Unsubscribe-Header[(RFC 8
 
 ### Abbestellen der Liste auf Nachrichtenebene mit einem Klick
 
-Die Einstellung für das Abmelden der Liste auf Nachrichtenebene mit einem Klick setzt das Feature der Kopfzeile für das Abmelden von E-Mails in Workspaces außer Kraft. Wenden Sie das Verhalten zum Abmelden mit einem Klick pro Kampagne oder Canvas-Schritt für die folgenden Zwecke an:
+Die Einstellung für das Abmelden der Liste auf Nachrichtenebene mit einem Klick setzt das Feature für das Abmelden von E-Mails in Workspaces außer Kraft. Wenden Sie das Verhalten zum Abmelden mit einem Klick pro Kampagne oder Canvas-Schritt für die folgenden Zwecke an:
 
 - Fügen Sie eine Braze-Ein-Klick-Abmeldung für eine bestimmte Abo-Gruppe hinzu, um mehrere Marken/Listen innerhalb eines Workspace zu unterstützen.
 - Wechseln Sie zwischen der Standard-URL zum Abbestellen von Braze oder einer nutzerdefinierten URL.
@@ -213,7 +211,7 @@ Die Einstellung "Liste mit einem Klick abmelden" auf Nachrichtenebene ist nur be
 Gehen Sie in Ihrem E-Mail-Editor zu **Sendeeinstellungen** > **Sendeinfo**. Wählen Sie aus den folgenden Optionen:
 
 - **Workspace-Standard verwenden**: Verwendet die Einstellungen für den **E-Mail-Abmeldekopf**, die in den **E-Mail-Einstellungen** festgelegt wurden. Alle Änderungen an dieser Einstellung gelten für alle Nachrichten.
-- **Global von allen E-Mails abmelden**: Verwendet den Braze-Standard-Header zum Abmelden mit einem Klick. Nutzer:innen, die auf den Button Abmelden klicken, haben den Status ihres globalen E-Mail-Abos auf "Abgemeldet" gesetzt.
+- **Global von allen E-Mails abmelden**: Verwendet den Braze-Standard-Header zum Abmelden mit einem Klick. Für Nutzer:innen, die auf den Button Abmelden klicken, wird der Status ihres globalen E-Mail-Abos auf "Abgemeldet" gesetzt.
 - **Aus bestimmter Abo-Gruppe abmelden**: Verwendet die angegebene Abonnementgruppe. Braze meldet Nutzer:innen, die auf den Button "Abmelden" klicken, von der ausgewählten Abo-Gruppe ab.
     - Wenn Sie eine Abonnementgruppe auswählen, fügen Sie unter **Zielgruppen** den Filter **Abonnementgruppe** hinzu, um nur Benutzer anzusprechen, die bei dieser speziellen Gruppe abonniert sind. Die für das Abmelden mit einem Klick ausgewählte Abo-Gruppe muss mit der Abo-Gruppe übereinstimmen, die Sie als Targeting verwenden. Wenn die Abo-Gruppe nicht übereinstimmt, besteht die Gefahr, dass Sie an einen Nutzer:in senden, der versucht, sich von einer Abo-Gruppe abzumelden, von der er bereits abgemeldet ist.
 
@@ -228,7 +226,7 @@ Die Einstellung **Abmelden von bestimmten Abo-Gruppen** gilt nur für die Kopfze
 Das Abmelden mit einem Klick oder andere Abmeldemechanismen sollten nur für Messaging-Nachrichten zu Transaktionen, wie das Zurücksetzen von Passwörtern, Quittungen und Bestätigungs-E-Mails, verwendet werden.
 {% endalert %}
 
-Wenn Sie diese Einstellung anpassen, wird das Standardverhalten für das Abmelden von Listen mit einem Klick in dieser E-Mail außer Kraft gesetzt.
+Wenn Sie diese Einstellung anpassen, wird das Standardverhalten für das Abmelden der Liste mit einem Klick in dieser E-Mail außer Kraft gesetzt.
 
 ![]({% image_buster /assets/img/email_settings/one_click_list_unsubscribe_message_level.png %}){: style="max-width:70%;"}
 
@@ -300,7 +298,7 @@ Erfahren Sie mehr über bewährte Methoden zur Verwaltung von E-Mail-Listen unte
 {% endtabs %}
 
 {% alert tip %}
-Wählen Sie im Bereich **Vorschau** für eine Abo- oder Fußzeile die Option **Vorschau-Link kopieren** aus, um einen Vorschaulink zu generieren und zu kopieren, der zeigt, wie die E-Mail-Fußzeile, die Seite zum Abmelden oder die Opt-in-Seite für einen beliebigen Nutzer:innen aussieht. Der Link hält sieben Tage lang, bevor er erneuert werden muss.
+Wählen Sie im Bereich **Vorschau** für eine Abo-Seite oder Fußzeile die Option **Vorschau-Link kopieren** aus, um einen Vorschaulink zu generieren und zu kopieren, der zeigt, wie die E-Mail-Fußzeile, die Seite zum Abmelden oder die Opt-in-Seite für einen zufälligen Nutzer:innen aussieht. Der Link hält sieben Tage lang, bevor er erneuert werden muss.
 {% endalert %}
 
 ## Häufig gestellte Fragen
@@ -338,7 +336,7 @@ Die E-Mail-Kopfzeilen, die für das Abmelden mit einem Klick hinzugefügt wurden
 {% enddetails %}
 
 {% details Why do subscription groups have to match across message variants in order to launch? %}
-Bei einer Kampagne mit A/B-Tests schickt Braze einem Nutzer:innen nach dem Zufallsprinzip eine der Varianten. Wenn Sie für dieselbe Kampagne zwei verschiedene Abo-Gruppen festgelegt haben (Variante A ist auf Abo-Gruppe A und Variante B auf Abo-Gruppe B festgelegt), können wir nicht garantieren, dass Nutzer:innen, die nur die Abo-Gruppe B abonniert haben, die Variante B erhalten. Es kann ein Szenario geben, in dem Nutzer:innen sich von einer Abo-Gruppe abmelden, aus der sie sich bereits abgemeldet haben.
+Bei einer Kampagne mit A/B-Tests schickt Braze einem Nutzer:innen nach dem Zufallsprinzip eine der Varianten. Wenn Sie für dieselbe Kampagne zwei verschiedene Abo-Gruppen festgelegt haben (Variante A ist auf Abo-Gruppe A und Variante B auf Abo-Gruppe B festgelegt), können wir nicht garantieren, dass Nutzer:innen, die nur die Abo-Gruppe B abonniert haben, die Variante B erhalten. Es kann vorkommen, dass Nutzer:innen sich von einer Abo-Gruppe abmelden, aus der sie sich bereits abgemeldet haben.
 {% enddetails %}
 
 {% details The email unsubscribe header setting is turned off in Email Preferences, but in my campaign's sending info, the one-click list-unsubscribe setting is set to "Use workspace default". Is this a bug? %}
