@@ -20,7 +20,7 @@ Por conveniência, é fornecido um resumo das tags de personalização compatív
 | -------------  | ---- |
 | Atribuições padrão (predefinidas) | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
 | Atributos do dispositivo | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>Atributos da Lista de E-mail</a> | `{{${set_user_to_unsubscribed_url}}}` <br>Essa tag substitui a tag anterior `{{${unsubscribe_url}}}`. Embora a tag antiga ainda funcione em e-mails criados anteriormente, recomendamos que você use a tag mais recente. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
+| <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>Atributos da Lista de E-mails</a> | `{{${set_user_to_unsubscribed_url}}}` <br>Essa tag substitui a tag anterior `{{${unsubscribe_url}}}`. Embora a tag antiga ainda funcione em e-mails criados anteriormente, recomendamos que você use a tag mais recente. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
 | <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>Atributos de SMS</a> | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
 | <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>Atributos do WhatsApp</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` <br> `{{whats_app.${inbound_flow_response}}}` <br> `{{whats_app.${inbound_product_id}}}` <br> `{{whats_app.${inbound_catalog_id}}}` |
 | Atributos da campanha | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
@@ -71,7 +71,7 @@ Você pode modelar os seguintes atributos para o dispositivo mais recente do usu
 | `{{most_recently_used_device.${platform}}}` | A plataforma do dispositivo, se disponível. Se definido, o valor será um dos seguintes: `ios`, `android`, `kindle`, `android_china`, `web`, ou `tvos`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Como há uma ampla gama de operadoras de dispositivos, nomes de modelos e sistemas operacionais, aconselhamos que você teste minuciosamente qualquer Liquid que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico.
+Como há uma ampla variedade de operadoras de dispositivos, nomes de modelos e sistemas operacionais, aconselhamos que você teste minuciosamente qualquer Liquid que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico.
 
 ## Informações sobre aplicativos direcionados
 
@@ -113,7 +113,7 @@ Para notificações por push, mensagens no app e Banners, você pode modelar os 
 
 {% endraw %}
 
-Como há uma ampla gama de operadoras de dispositivos, nomes de modelos e sistemas operacionais, aconselhamos que você teste minuciosamente qualquer lógica que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico. 
+Como há uma ampla variedade de operadoras de dispositivos, nomes de modelos e sistemas operacionais, aconselhamos que você teste minuciosamente qualquer lógica que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico. 
 
 Além disso, para notificações por push, é possível que o Braze não consiga discernir o dispositivo anexado à notificação por push em determinadas circunstâncias, como se o token por push tivesse sido importado por meio da API, resultando em valores `null` para essas mensagens.
 
@@ -161,7 +161,7 @@ Nesse caso de uso, um usuário com um nome em branco ou nulo receberá a mensage
 
 ## Tags de variáveis
 
-Você pode usar a tag `assign` para criar uma variável no criador de mensagens. Recomendamos usar um nome exclusivo para sua variável. Se você criar uma variável com um nome semelhante aos tags de personalização suportados (como `language`), isso pode afetar sua lógica de envio de mensagens.
+Você pode usar a tag `assign` para criar uma variável no criador de mensagens. Recomendamos usar um nome único para sua variável. Se você criar uma variável com um nome semelhante aos tags de personalização suportados (como `language`), isso pode afetar sua lógica de envio de mensagens.
 
 Depois de criar uma variável, você pode fazer referência a ela na lógica ou na mensagem de envio de mensagens. Essa tag é útil quando você deseja reformatar o conteúdo que é retornado pelo nosso recurso [conteúdo conectado]({% image_buster /assets/img_archive/personalized_firstname_.png %})]. Você pode ler mais na documentação da Shopify sobre [tags variáveis](https://docs.shopify.com/themes/liquid/tags/variable-tags).
 
