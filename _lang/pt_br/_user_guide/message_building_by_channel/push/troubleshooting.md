@@ -56,7 +56,7 @@ Você pode fazer isso verificando [o limite de frequência global]({{site.baseur
 
 #### Limites de frequência
 
-Se você tiver um limite de frequência definido para sua campanha ou Canva, pode estar deixando de receber envios de mensagens por exceder esse limite. Para saber mais, consulte [Limite de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting).
+Se você tiver um limite de frequência definido para sua campanha ou Canva, pode estar deixando de receber envios de mensagens por exceder esse limite. Para saber mais, consulte Limite [de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting).
 
 #### Status do grupo de controle
 
