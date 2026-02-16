@@ -80,9 +80,7 @@ Lorsque ces objets sont inclus dans le déclencheur, les attributs sont traités
 
 Utilisez le [point de terminaison`/users/track/sync/` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) pour enregistrer les événements et attributs clients personnalisés et mettre à jour les attributs du profil utilisateur de manière synchrone. L'utilisation de cet endpoint pour mettre à jour les profils utilisateurs en même temps et en un seul appel peut aider à prévenir d'éventuelles conditions de concurrence.
 
-{% alert important %}
-Cet endpoint est actuellement en version bêta. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à la version bêta.
-{% endalert %}
+{% include early_access_beta_alert.md feature='This endpoint' type='beta' %}
 
 ## Scénario 3 : Associer des déclencheurs par événement et des filtres d’audience
 
@@ -127,4 +125,4 @@ En cas de condition de concurrence lors de l'évaluation de l'entrée dans le Ca
 
 Si un utilisateur déclenche l'événement d'entrée dans le canvas plusieurs fois au cours de la même seconde, Braze n'autorise qu'une seule entrée pour cette seconde (même si la réentrée est activée). Cela permet d'éviter les entrées en double, de sorte que le nombre total d'entrées dans les Canvas peut être inférieur au nombre total d'événements déclencheurs.
 
-Nous vous recommandons de confirmer comment les données des utilisateurs sont gérées et mises à jour, en particulier quand et comment des attributs spécifiques sont mis à jour, par exemple par SDK, API, API par lots et d'autres méthodes. Cela peut aider à identifier et à clarifier la raison pour laquelle un utilisateur est entré dans une campagne ou un Canvas par rapport au moment où le profil de l'utilisateur a été mis à jour.
+Nous vous recommandons de confirmer comment les données des utilisateurs sont gérées et mises à jour, en particulier quand et comment des attributs spécifiques sont mis à jour, par exemple par SDK, API, API par lots et autres méthodes. Cela peut aider à identifier et à clarifier la raison pour laquelle un utilisateur est entré dans une campagne ou un Canvas par rapport au moment où le profil de l'utilisateur a été mis à jour.
