@@ -2,7 +2,7 @@
 nav_title: Crea un Banner
 article_title: Crea un Banner
 page_order: 1
-description: "Este artículo de referencia explica cómo crear, componer, configurar y enviar Banners mediante campañas y Lienzos Braze."
+description: "Este artículo de referencia explica cómo crear, componer, configurar y enviar Banners utilizando campañas y Lienzos Braze."
 tool:
   - Campaigns
 channel:
@@ -59,7 +59,7 @@ Si todos los mensajes de su campaña van a ser similares o van a tener el mismo 
 
 ### Paso 3: Componer un Banner {#compose-a-banner}
 
-Para componer tu Banner, puedes elegir entre:
+Para componer tu Banner, puedes optar por:
 
 - Empieza con una plantilla en blanco
 - Utiliza una plantilla de pancarta Braze
@@ -67,9 +67,11 @@ Para componer tu Banner, puedes elegir entre:
 
 ![Opción de elegir un Banner en blanco o una plantilla.]({% image_buster /assets/img/banners/choose_banner_composer.png %})
 
-#### Paso 3.1: Estiliza la pancarta
+#### Paso 3.1: Estiliza el Banner
 
 Puedes arrastrar y soltar bloques y filas en el área del lienzo para empezar a construir tu mensaje.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 Para personalizar las propiedades del fondo de tu mensaje, la configuración de los bordes y mucho más, selecciona **Estilos**. Si sólo quieres personalizar el estilo de un bloque o fila concretos, selecciónalo para realizar los cambios.
 
