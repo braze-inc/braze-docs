@@ -8,7 +8,7 @@ description: "이 참고 문서에는 고급 필터, 예제 및 캠페인에서 
 
 # 고급 필터
 
-> 이 참조 기사는 Liquid의 고급 필터에 대한 개요와 이를 사용하는 방법을 제공합니다.
+> 이 참조 기사는 Liquid의 고급 필터에 대한 개요와 그것들이 어떻게 사용될 수 있는지를 제공합니다.
 
 ## 인코딩 필터
 
@@ -30,7 +30,7 @@ description: "이 참고 문서에는 고급 필터, 예제 및 캠페인에서 
 | 필터 이름 | 필터 설명 | 입력 예시 | 출력 예시 |
 |---|---|---|---|
 | `url_escape` | URLS에서 허용되지 않는 문자열의 모든 문자를 식별하고 해당 문자를 이스케이프된 변형으로 바꿉니다. | `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
-| `url_param_escape` | URL에서 허용되지 않는 모든 문자를 이스케이프된 변형으로 대체합니다. 여기에는 앰퍼샌드 (&)이 포함됩니다. | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
+| `url_param_escape` | URL에서 허용되지 않는 모든 문자를 이스케이프된 변형으로 대체합니다, 앰퍼샌드 (&)을 포함하여. | `{{'hey<&>hi' | url_param_escape}}` | hey%3C%26%3Ehi |
 | `url_encode` | URL 친화적인 문자열을 인코딩합니다. | `{{ 'google search' | url_encode }}` | google+search |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
