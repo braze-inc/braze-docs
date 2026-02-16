@@ -19,13 +19,13 @@ platform:
 
 {% multi_lang_include banners/placement_requests.md %}
 
-## Erstellen einer Platzierung
+## Platzierung erstellen
 
 ### Voraussetzungen
 
 Dies sind die Mindestversionen des SDK, die für die Erstellung von Bannerplatzierungen erforderlich sind:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+{% multi_lang_include sdk_versions.md feature='banners' %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
@@ -507,6 +507,32 @@ Testbanner sind wie alle anderen Banner, nur dass sie bei der nächsten App-Sitz
 ## Impressionen protokollieren
 
 Braze protokolliert automatisch Impressionen für Banner, die angezeigt werden, wenn Sie SDK-Methoden zum Einfügen eines Banners verwenden - Sie müssen also keine Impressionen manuell tracken.
+
+## Klicks protokollieren
+
+Die Methode zur Protokollierung von Banner-Klicks hängt davon ab, wie Ihr Banner gerendert wird und wo sich Ihr Click Handler befindet.
+
+### Standard-Banner-Inhalt (automatisch)
+
+Wenn Sie Standard-SDK-Methoden zum Einfügen von Bannern verwenden und Ihr Banner Standard-Editor-Komponenten (Bilder, Buttons, Text) verwendet, werden Klicks automatisch getrackt. Das SDK fügt diesen Elementen Klick-Hörer zu, so dass kein zusätzlicher Code erforderlich ist.
+
+### Angepasste Code-Blöcke
+
+Wenn Ihr Banner den Editor-Block für **angepassten Code** im Braze-Dashboard verwendet, müssen Sie `brazeBridge.logClick()` verwenden, um Klicks aus diesem angepassten HTML-Code heraus zu protokollieren. Dies gilt auch dann, wenn Sie SDK-Methoden zum Rendern des Banners verwenden, da das SDK nicht automatisch Listener an Elemente innerhalb Ihres angepassten Codes anhängen kann.
+
+```html
+<button onclick="brazeBridge.logClick()">
+  Click me
+</button>
+```
+
+Dies ähnelt der [JavaScript-Brücke]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge), die für In-App-Nachrichten im HTML-Format verwendet wird. Die `brazeBridge` bietet eine Kommunikationsschicht zwischen dem internen HTML des Banners und dem übergeordneten Braze SDK.
+
+### Angepasste UI-Implementierungen (headless)
+
+Wenn Sie ein vollständig angepasstes UI erstellen, das die [benutzerdefinierten Eigenschaften](#custom-properties) des Banners verwendet, anstatt den HTML-Code des Banners zu rendern, müssen Sie Klicks (und Impressionen) manuell in Ihrem Anwendungscode protokollieren. Da das SDK das Banner nicht rendert, hat es keine Möglichkeit, Interaktionen mit Ihren angepassten UI-Elementen automatisch zu tracken.
+
+Verwenden Sie die Methode `logClick()` für das Objekt Banner.
 
 ## Abmessungen und Größenangaben
 
