@@ -92,13 +92,13 @@ No Braze, um aborto ocorre quando um usuário realiza uma ação que o torna ele
 4. O Braze reconhece que Sam não deveria receber esse e-mail, e o e-mail é abortado.
 5. Um evento de aborto é registrado.
 
-No entanto, como as mensagens no app são um canal de envio de mensagens, a interrupção funciona de forma um pouco diferente para elas.
+No entanto, como as mensagens no app são um canal de envio de mensagens, o cancelamento funciona de forma um pouco diferente para elas.
 
 ### Comportamento de abortar mensagens no app
 
 As mensagens no app são recebidas pelo dispositivo no início da sessão e armazenadas em cache no dispositivo, portanto, independentemente da qualidade da conexão com a Internet, a mensagem pode ser entregue instantaneamente ao usuário. Por exemplo, se um usuário receber cinco mensagens no app em sua sessão, ele receberá todas as cinco no início da sessão. As mensagens serão armazenadas em cache localmente e aparecerão quando ocorrerem os eventos de gatilho definidos (início da sessão, o usuário clica em um botão que registra um evento personalizado ou outro).
 
-Em outras palavras, a lógica que determina se devemos abortar uma mensagem no app ocorre **antes da** ocorrência do disparo. Para demonstrar isso, digamos que o Sam do exemplo de e-mail esteja inscrito em notificações por push.
+Em outras palavras, a lógica que determina se devemos abortar uma mensagem no app ocorre **antes da** ocorrência do disparo. Para demonstrar isso, digamos que Sam, do exemplo de e-mail, esteja inscrito em notificações por push.
 
 1. Sam inicia uma sessão abrindo um app do Braze em seu telefone.
 2. Com base nos critérios de público das campanhas ativas no espaço de trabalho, Sam poderia ser elegível para cinco campanhas diferentes. Todos os cinco são colocados em seu telefone e armazenados em cache.
@@ -113,7 +113,7 @@ O Braze não registra nenhum evento de abortamento no caso de Sam porque isso n�
 
 [As mensagens no app modeladas](#templated-in-app-messages) forçam o SDK a reavaliar se uma mensagem deve ser exibida quando o evento de gatilho ocorrer. Isso tem um comportamento diferente de abortar. Para demonstrar, vamos considerar este exemplo:
 
-1. Sam inicia uma sessão do Braze ao iniciar um app habilitado para o Braze em seu telefone.
+1. Sam inicia uma sessão do Braze iniciando um app habilitado pelo Braze em seu telefone.
 2. Os critérios de público das campanhas ativas dizem que Sam pode ser elegível para uma mensagem no app modelada, portanto, as informações do disparo são enviadas para o dispositivo dele sem a carga útil da mensagem.
 3. Sam seleciona um botão que registra um evento personalizado, disparando a mensagem no app modelada.
 4. O dispositivo de Sam faz uma solicitação de rede para buscar a mensagem no app.
@@ -126,9 +126,11 @@ Esta tabela compara os fluxos de mensagens no app que Sam experimentou:
 | Mensagem no app | Comportamento de abortar |
 | --- | --- |
 | Padrão | Um evento de abortamento não foi registrado porque Sam não executou nenhuma ação que disparasse uma mensagem.<br><br>As mensagens no app padrão não registram abortos porque a definição de um aborto é "não viu a mensagem apesar de ter executado a ação-gatilho". Como as mensagens no app são entregues ao dispositivo antes que as ações-gatilho ocorram, não faz sentido considerar as mensagens no app omitidas por causa da lógica Liquid. |
-| Modelo | Foi registrado um evento de aborto porque Sam executou a ação-gatilho para disparar a mensagem no app, mas recebeu um aborto no modelo Liquid. <br><br>Mensagens no app com modelos registram abortos porque a avaliação do Liquid ocorre após a ação-gatilho ter sido executada. |
+| Modelo | Foi registrado um evento de aborto porque Sam executou a ação-gatilho para disparar a mensagem no app, mas recebeu um aborto no modelo Liquid. <br><br>Mensagens no app com modelo registram abortos porque a avaliação do Liquid ocorre após a ação-gatilho ter sido executada. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Mais recursos
 
 Antes de começar a criar suas próprias campanhas de mensagens no app - ou usar mensagens no app em uma campanha multicanais -, recomendamos que consulte nosso [guia de preparação de mensagens no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/). Este guia aborda questões de direcionamento, conteúdo e conversão que você deve considerar ao criar mensagens no app.
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
