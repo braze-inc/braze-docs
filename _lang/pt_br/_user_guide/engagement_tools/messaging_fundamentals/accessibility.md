@@ -6,7 +6,7 @@ page_type: reference
 description: "Este artigo de referência explica por que é importante considerar a acessibilidade em seu conteúdo de marketing e como você pode criar mensagens acessíveis no Braze."
 ---
 
-# Crie mensagens acessíveis no Braze
+# Crie envios de mensagens acessíveis no Braze
 
 > Entenda por que é importante considerar a acessibilidade em seu conteúdo de marketing e como você pode criar mensagens acessíveis no Braze. Para obter mais orientações, confira nosso curso [Fundamentos do Envio de Mensagens Acessíveis](https://learning.braze.com/accessible-messaging-foundations) no Braze Learning.
 
@@ -15,12 +15,12 @@ O conteúdo de marketing que exclui pessoas com deficiência, mesmo que não int
 Ao criar o envio de mensagens, reserve um tempo extra para considerar como tornar seus designs acessíveis a todos os clientes.
 
 {% alert important %}
-Este conteúdo é destinado à orientação geral e não garante a conformidade com os padrões de acessibilidade, como as WCAG. O Braze oferece ferramentas que dão suporte à criação de mensagens mais acessíveis, mas é sua responsabilidade garantir que o conteúdo final atenda a todos os requisitos aplicáveis. A acessibilidade é um tópico complexo com muitas partes móveis. Muitas empresas trabalham com especialistas ou consultores em acessibilidade para garantir que suas práticas de conteúdo, design e desenvolvimento atendam às necessidades de todos os usuários.
+Este conteúdo é destinado à orientação geral e não garante a conformidade com os padrões de acessibilidade, como o WCAG. O Braze oferece ferramentas que dão suporte à criação de mensagens mais acessíveis, mas é sua responsabilidade garantir que o conteúdo final atenda a todos os requisitos aplicáveis. A acessibilidade é um tópico complexo com muitas partes móveis. Muitas empresas trabalham com especialistas ou consultores em acessibilidade para garantir que suas práticas de conteúdo, design e desenvolvimento atendam às necessidades de todos os usuários.
 {% endalert %}
 
 ## Acessibilidade no Braze
 
-Apoiar a comunicação acessível significa manter-se aberto, curioso e disposto a aprender. No Braze, nos preocupamos em ajudar as pessoas a se conectarem - e sabemos que abrir espaço para todos faz parte de fazer isso bem. A acessibilidade não é algo que consideramos "pronto", e agradecemos a chance de continuar aprendendo.
+Apoiar a comunicação acessível significa manter-se aberto, curioso e disposto a aprender. No Braze, nós nos preocupamos em ajudar as pessoas a se conectarem - e sabemos que abrir espaço para todos faz parte de fazer isso bem. A acessibilidade não é algo que consideramos "pronto", e agradecemos a chance de continuar aprendendo.
 
 {% multi_lang_include accessibility/feedback.md %}
 
@@ -121,7 +121,7 @@ Vamos começar com a base. Quando o seu conteúdo tem uma estrutura clara, é ma
 Uma vez que sua estrutura esteja pronta, a próxima etapa é garantir que suas palavras sejam realmente fáceis de ler. Isso significa manter as coisas simples, digitalizáveis e confortáveis para leitura em todos os dispositivos e necessidades do usuário.
 
 - **Escreva frases curtas e claras:** Frases curtas são fáceis de serem entendidas por todos, especialmente por pessoas que usam leitores de tela ou que têm dificuldade para processar informações complexas. Escreva para um nível de leitura da sétima série dos Estados Unidos. Você pode usar recursos como o [Hemingway App](https://hemingwayapp.com/) para verificar o nível de leitura do seu texto.
-- **Escolha tamanhos de fonte e espaçamento legíveis:** O texto muito pequeno pode ser difícil de ler, especialmente em celulares. Use pelo menos 14px para o texto do corpo. Faça títulos maiores para que os usuários possam ver claramente a diferença. O espaçamento extra entre linhas (cerca de 1,5 de altura de linha) e parágrafos melhora a legibilidade, especialmente para pessoas com necessidades visuais ou cognitivas.
+- **Escolha tamanhos de fonte e espaçamento legíveis:** O texto muito pequeno pode ser difícil de ler, especialmente em celulares. Use pelo menos 14px para o texto do corpo. Aumente o tamanho dos títulos para que os usuários possam ver claramente a diferença. O espaçamento extra entre linhas (cerca de 1,5 de altura de linha) e parágrafos melhora a legibilidade, especialmente para pessoas com necessidades visuais ou cognitivas.
 - **Evite texto justificado:** O texto justificado cria um espaçamento desigual entre as palavras, dificultando a leitura para pessoas com dislexia ou deficiências cognitivas. Considere a possibilidade de alinhar à esquerda o conteúdo que se estende por mais de duas linhas nos idiomas da esquerda para a direita ou à direita nos [idiomas da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages).
 - **Use texto em negrito, itálico e caixa alta com moderação:** Enfatizar muito o texto dificulta a leitura, especialmente para pessoas com dislexia ou deficiências visuais. Mantenha a simplicidade.
 
@@ -130,7 +130,7 @@ Uma vez que sua estrutura esteja pronta, a próxima etapa é garantir que suas p
 Por fim, vamos falar sobre os detalhes mais finos - os aspectos que ajudam os usuários não apenas a ver seu conteúdo, mas a entender e interagir com ele. 
 
 - **Identifique claramente os links e botões:** Certifique-se de que o texto do [link](#links) e do [botão](#buttons) explique claramente o que acontecerá em seguida. Isso ajuda as pessoas que usam leitores de tela ou que navegam com um teclado a saber o que esperar.
-- **Acesse com calma os símbolos e emojis:** Caracteres especiais e emojis podem tornar seu conteúdo divertido, mas podem ser confusos quando lidos por leitores de tela. Use-as com moderação e certifique-se de que elas não substituam um texto claro e descritivo.
+- **Acesse com calma os símbolos e emojis:** Caracteres especiais e emojis podem tornar seu conteúdo divertido, mas podem ser confusos quando lidos por leitores de tela. Use-os com moderação e certifique-se de que eles não substituam um texto claro e descritivo.
 - **Teste de truncamento:** Sempre teste sua cópia [enviando uma mensagem de teste]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) para um dispositivo para garantir que o texto não esteja truncado. Se sua mensagem estiver sendo cortada, isso prejudica você e seu público, pois impede que seu conteúdo chegue até eles.
 
 ### Botões
@@ -185,7 +185,7 @@ O texto do botão deve ser fácil de ler em relação à cor de fundo do botão.
 - Taxa de contraste de 4,5:1 para texto de tamanho normal (a maioria dos botões)
 - Taxa de contraste de 3:1 para textos grandes (normalmente acima de 18pt)
 
-O alto contraste ajuda os botões a permanecerem legíveis e clicáveis para todos, inclusive para usuários com deficiências visuais ou para aqueles que visualizam a sua mensagem em ambientes desafiadores. Para obter mais orientações, consulte a seção [Contraste de cores](#color-contrast).
+O alto contraste ajuda os botões a permanecerem legíveis e clicáveis para todos, inclusive para usuários com deficiências visuais ou para aqueles que visualizam a mensagem em ambientes desafiadores. Para obter mais orientações, consulte a seção [Contraste de cores](#color-contrast).
 
 #### Torne os botões fáceis de tocar
 
@@ -236,14 +236,14 @@ Use o elemento certo para a ação:
 
 ### Alvos de toque
 
-Os direcionamentos de toque são qualquer parte da sua mensagem em que os usuários tocam para realizar uma ação, como botões, links ou ícones. Esses elementos precisam ser grandes e espaçados o suficiente para que as pessoas possam tocá-los facilmente, especialmente em dispositivos móveis.
+Os direcionamentos de toque são qualquer parte da sua mensagem em que os usuários tocam para realizar uma ação, como botões, links ou ícones. Esses elementos precisam ser grandes o suficiente e espaçados o bastante para que as pessoas possam tocá-los facilmente, especialmente em dispositivos móveis.
 
 Quando os direcionamentos de toque são muito pequenos ou muito próximos uns dos outros, pode ser frustrante ou impossível para os usuários com dificuldades de mobilidade ou destreza interagirem com a mensagem. Melhorar isso pode ajudar a reduzir erros e criar uma experiência mais tranquila para todos.
 
-Veja a seguir o que você deve ter em mente:
+Veja o que você deve ter em mente:
 - **Use o tamanho adequado do direcionamento de toque.** Procure obter um tamanho mínimo de alvo de toque de 44 x 44 pixels. Isso se alinha com as diretrizes WCAG 2.2 para [direcionamentos de toque](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) e padrões comuns de usabilidade móvel.
 - **Dê espaço para cada direcionamento.** Se os alvos de toque estiverem muito próximos uns dos outros - como links empilhados ou botões bem agrupados - pode ser fácil perder ou tocar no alvo errado. Adicione espaçamento ou preenchimento entre os elementos para evitar isso.
-- **Não dependa apenas de recursos visuais.** Até mesmo ícones pequenos podem se tornar mais úteis com preenchimento extra, permitindo que eles atendam aos requisitos de tamanho mínimo sem alterar o layout.
+- **Não se baseie apenas em recursos visuais.** Até mesmo ícones pequenos podem se tornar mais úteis com preenchimento extra, permitindo que eles atendam aos requisitos de tamanho mínimo sem alterar o layout.
 - **Pré-visualização no celular.** Teste sua mensagem em diferentes tamanhos de tela e certifique-se de que os elementos interativos sejam fáceis de usar.
 
 Melhorar os direcionamentos de toque é uma das maneiras mais eficazes de tornar sua mensagem mais acessível no celular - e é uma boa experiência do usuário para todos.
@@ -536,7 +536,7 @@ Aqui estão alguns exemplos que são especialmente úteis em contextos de envio 
 
 #### rótulo aria
 
-`aria-label` adiciona um nome acessível a elementos que não têm texto visível. Se você estiver usando um ícone sem texto (como uma lixeira ou um "X" para fechar), alguém que usa um leitor de tela não saberá o que ele faz, a menos que você o rotule. `aria-label` dá voz a esse ícone.
+`aria-label` adiciona um nome acessível a elementos que não têm texto visível. Se você estiver usando um ícone sem texto (como uma lixeira ou um "X" para fechar), alguém que usa um leitor de tela não saberá o que ele faz - a menos que você o rotule. `aria-label` dá voz a esse ícone.
 
 {% raw %}
 ```html
