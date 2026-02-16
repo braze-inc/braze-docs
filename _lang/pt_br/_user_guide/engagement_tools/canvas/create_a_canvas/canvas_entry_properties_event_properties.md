@@ -43,10 +43,14 @@ Não é mais possível criar ou duplicar Canvas usando o editor original. Este a
 
 ### Coisas para saber
 
-- As propriedades de entrada da tela estão disponíveis apenas para referência no Liquid. Para filtrar as propriedades na tela, use [a segmentação de propriedades de eventos]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
+- As propriedades de entrada da tela só estão disponíveis para referência no Liquid. Para filtrar as propriedades na tela, use [a segmentação de propriedades de eventos]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 - Para canais de envio de mensagens no app, você pode fazer referência a `canvas_entry_properties` e `event_properties` em um Canvas. `event_properties` pode ser acessado quando incluído na primeira etapa do Canvas porque é baseado em disparo.
 - Não é possível usar `event_properties` na etapa de envio de mensagens. Em vez disso, você pode usar `canvas_entry_properties` ou adicionar uma etapa de jornadas de ação com o evento correspondente **antes da** etapa de mensagem que inclui `event_properties`.
 - Quando uma etapa do caminho da ação contém um disparador "Enviou uma mensagem de entrada SMS" ou "Enviou uma mensagem de entrada WhatsApp", as etapas subsequentes do Canva podem incluir uma propriedade Liquid do SMS ou do WhatsApp. Isso reflete o funcionamento das propriedades de eventos nas telas. Dessa forma, você pode aproveitar suas mensagens para salvar e fazer referência a dados primários sobre perfis de usuários e envio de mensagens de conversação.
+
+{% alert note %}
+A elegibilidade do público é avaliada uma vez na entrada do Canva. Se um usuário for mesclado durante a entrada, o usuário identificado continuará no Canva e não será reavaliado em relação aos critérios de segmento do Canva.
+{% endalert %}
 
 {% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
 
