@@ -9,7 +9,7 @@ page_type: reference
 
 # 식별자 필드 수준 암호화
 
-> 식별자 필드 수준 암호화를 사용하면 AWS 키 관리 서비스(KMS)로 이메일 주소를 원활하게 암호화하여 Braze에서 공유되는 개인 식별 정보(PII)를 최소화할 수 있습니다. 암호화는 민감한 데이터를 읽을 수 없는 암호화된 정보인 암호 텍스트로 대체합니다.
+{% include field_level_encryption_pii_description.md %}
 
 {% alert important %}
 식별자 필드 수준 암호화는 애드온 기능으로 사용할 수 있습니다. 식별자 필드 수준 암호화를 시작하려면 Braze 계정 관리자에게 문의하세요.
