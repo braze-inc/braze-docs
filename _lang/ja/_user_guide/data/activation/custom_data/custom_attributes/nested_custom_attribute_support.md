@@ -72,7 +72,7 @@ description: "このリファレンス記事では、階層化カスタム属性
 このリクエストが受信されると、カスタム属性オブジェクトは以下のようになります。
 
 ```json
-"most_played_song": {
+{"most_played_song": {
   "song_name": "Solea",
   "artist_name" : "Miles Davis",
   "album_name": "Sketches of Spain",
@@ -82,7 +82,7 @@ description: "このリファレンス記事では、階層化カスタム属性
      "count": 1000,
      "top_10_listeners": true
   }
-}
+}}
 ```
 
 {% alert warning %}
@@ -328,14 +328,14 @@ Get to your {{segmented_nested_objects[0].goal}} goal faster, make a deposit usi
 この例では、さきほど Braze に送信した `accounts` オブジェクト配列があるとします。
 
 ```json
-"accounts": [
+{"accounts": [
   {"type": "taxable",
   "balance": 22500,
   "active": true},
   {"type": "non-taxable",
   "balance": 0,
-  "active": true},
- ]
+  "active": true}
+]}
 ```
 
 Braze ダッシュボードで、**データ設定** > **カスタム属性** に移動します。
