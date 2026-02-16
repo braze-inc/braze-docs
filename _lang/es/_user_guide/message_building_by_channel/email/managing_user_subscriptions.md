@@ -188,7 +188,7 @@ Utiliza un proceso de doble adhesión voluntaria para mejorar el alcance. Braze 
 
 ## Suscripciones y segmentación de campañas {#subscriptions-and-campaign-targeting}
 
-De forma predeterminada, Braze dirige campañas con mensajes push o de correo electrónico a usuarios suscritos o con adhesión voluntaria. Cámbialo en **Audiencia objetivo** seleccionando el desplegable junto a **Enviar a estos usuarios:**.
+Por defecto, Braze dirige las campañas con mensajes push o de correo electrónico a los usuarios suscritos o con adhesión voluntaria. Cámbialo en **Audiencia objetivo** seleccionando el desplegable junto a **Enviar a estos usuarios:**.
 
 Braze admite tres estados de segmentación:
 
@@ -204,7 +204,7 @@ Es tu responsabilidad cumplir las [leyes aplicables]({{site.baseurl}}/help/best_
 
 Utiliza los filtros "Estado de suscripción por correo electrónico" y "Estado de suscripción push" para segmentar a los usuarios por estado de suscripción.
 
-Utilízalo para dirigirte a usuarios que no han optado ni por la adhesión ni por la exclusión, y fomenta una adhesión voluntaria explícita. Crea un segmento con el filtro "El estado de la suscripción por correo electrónico/ push es suscrito" y envía campañas a los usuarios que están suscritos pero no han optado por la suscripción.
+Utilízalo para dirigirte a usuarios que no han optado ni por la adhesión ni por la exclusión, y fomenta una adhesión voluntaria explícita. Crea un segmento con el filtro "Estado de suscripción correo electrónico/ push es suscrito" y envía campañas a los usuarios que están suscritos pero no han optado por la suscripción.
 
 ![Estado de suscripción al correo electrónico utilizado como filtro de segmento.]({% image_buster /assets/img_archive/not_optin.png %})
 
