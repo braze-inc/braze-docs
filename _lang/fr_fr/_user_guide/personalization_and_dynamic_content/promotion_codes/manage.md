@@ -52,7 +52,7 @@ Les envois de test et les envois d'e-mails de groupes initiateurs utilisent des 
 
 ## Enregistrer les codes de promotion dans les profils utilisateurs {#save-to-profile}
 
-Pour référencer le même code de promotion dans les messages suivants, le code doit être enregistré dans le profil de l'utilisateur en tant qu'attribut personnalisé. Cela peut se faire par le biais d'une [étape de mise à jour de l'utilisateur]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) qui attribue le code de réduction à un attribut personnalisé, comme "Code promo", directement avant une étape de message.
+Pour référencer le même code de promotion dans les messages suivants, le code doit être enregistré dans le profil de l'utilisateur en tant qu'attribut personnalisé. Cela peut se faire par le biais d'une [étape de mise à jour de l'utilisateur]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) qui attribue le code de réduction à un attribut personnalisé, tel que "Code promo", directement avant une étape de message.
 
 Tout d'abord, sélectionnez les éléments suivants pour chaque champ de l'étape de mise à jour de l'utilisateur :
 
@@ -60,7 +60,7 @@ Tout d'abord, sélectionnez les éléments suivants pour chaque champ de l'étap
 - **Action :** Mettre à jour
 - **Valeur clé :** L'extrait de code liquid du code de promotion, par exemple {% raw %}`{% promotion('spring25') %}`{% endraw %}
 
-Ensuite, ajoutez l'attribut personnalisé (dans cet exemple, {% raw %}`{{custom_attribute.${Promo Code}}`{% endraw %}) à un message. Le code de réduction est présenté sous forme de modèle.
+Ensuite, ajoutez l'attribut personnalisé (dans cet exemple, {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %}) à un message. Le code de réduction est présenté sous forme de modèle.
 
 ## Visualisation de l'utilisation des codes de promotion
 
