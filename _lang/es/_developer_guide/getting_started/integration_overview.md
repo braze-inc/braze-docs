@@ -128,6 +128,10 @@ El SDK de Braze proporciona dos funciones fundamentales: recopila y sincroniza l
 Cuando se integra completamente con tu aplicación o sitio web, el SDK de Braze ofrece un nivel integral de sofisticación de marketing. Si pospones la integración del SDK de Braze, algunas de las funciones descritas en la documentación no estarán disponibles.
 {% endalert %}
 
+{% alert note %}
+Para añadir una capa adicional de seguridad, puedes habilitar [la Autenticación del SDK]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) para evitar solicitudes no autorizadas del SDK. Esta característica está disponible en las principales plataformas, como Web, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin) y Expo.
+{% endalert %}
+
 Durante la implementación del SDK, harás lo siguiente:
 
 * Escribe el código de integración de SDK para cada plataforma que quieras admitir.
