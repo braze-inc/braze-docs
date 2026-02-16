@@ -126,7 +126,7 @@ Your selection for **Rows** affects the metrics you can select.
 
 !["보고서 링크가 있는 '링크 공유' 드롭다운을 클릭합니다.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
 
-- **이메일을 보내거나 예약합니다:** 1시간 후에 만료되는 다운로드 링크가 포함된 이메일을 즉시 또는 지정된 시간에 전송합니다. **이메일 수신자** 드롭다운에 나열된 대시보드 사용자 중에서 수신자를 선택하거나 다른 이메일 주소를 입력할 수 있습니다.
+- **이메일을 보내거나 예약합니다:** 1시간 후에 만료되는 다운로드 링크가 포함된 이메일을 즉시 또는 지정된 시간에 전송합니다. **이메일 수신자** 드롭다운에 나열된 회사 사용자 중에서 수신자를 선택하거나 다른 이메일 주소를 입력할 수 있습니다.
 
 !['이메일 예약' 창에서 보고서 형식, 수신 대상, 전송 시기를 선택할 수 있는 필드가 있습니다.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
 
