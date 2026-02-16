@@ -18,7 +18,7 @@ Pour commencer à utiliser Braze Pilot, vous devrez d'abord télécharger l'appl
 
 Ensuite, acceptez les conditions générales, puis saisissez votre e-mail professionnel dans le formulaire. Votre e-mail sera utilisé pour l'analyse/analytique de l'utilisation de l'application uniquement et ne sera pas utilisé à des fins de marketing.
 
-![Page d'accueil du Braze Pilot.]({% image_buster /assets/img/braze_pilot/pilot_welcome.png %}){:style="max-width:30%"} ![Option permettant de saisir l'adresse e-mail de votre travail.]({% image_buster /assets/img/braze_pilot/pilot_signin.png %}){:style="max-width:30%"}
+![Page d'accueil de Braze Pilot.]({% image_buster /assets/img/braze_pilot/pilot_welcome.png %}){:style="max-width:30%"} ![Option permettant de saisir l'adresse e-mail de votre travail.]({% image_buster /assets/img/braze_pilot/pilot_signin.png %}){:style="max-width:30%"}
 
 ## Étape 3 : Initialiser la connexion avec le SDK de Braze
 
@@ -56,7 +56,7 @@ Cette connexion est spécifique à l'espace de travail. Cela signifie que si vou
 
 ## Étape 4 : Autoriser les permissions push
 
-Enfin, il est recommandé d'autoriser l'application à vous envoyer des autorisations de push si vous souhaitez tester les fonctionnalités de push via l'application. Vous pouvez donner ces autorisations à l'app de la manière suivante : en mettant à jour les paramètres de l'app dans les réglages de votre appareil, ou en lançant un message push primer de Braze vers l'app.
+Enfin, il est recommandé d'autoriser l'application à vous envoyer des autorisations de push si vous souhaitez tester les fonctionnalités de push via l'application. Vous pouvez donner ces autorisations à l'app de la manière suivante : mise à jour des paramètres de l'app dans les paramètres de votre appareil, ou lancement d'un message push primer de Braze vers l'app.
 
 {% tabs local %}
 {% tab Update the settings for the app %}
@@ -77,7 +77,7 @@ Ouvrez les emplacements de votre appareil et localisez Braze Pilot. Ensuite, met
 {% endtab %}
 {% tab Launch a push primer message %}
 
-Vous pouvez utiliser un message in-app de Braze pour demander des autorisations de push pour l'application, comme vous le feriez pour vos propres consommateurs. Pour savoir comment créer ce type de message dans Braze, consultez la rubrique [Messages in-app de l'amorce de poussée]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages#push-primer-in-app-messages).
+Vous pouvez utiliser un message in-app de Braze pour demander des autorisations de push pour l'application, comme vous le feriez pour vos propres consommateurs. Pour savoir comment créer ce type de message dans Braze, consultez la rubrique [Messages in-app de Push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages#push-primer-in-app-messages).
 
 <div class="imgDiv">
 <img src="{% image_buster /assets/img/braze_pilot/push_primer1.png %}" style="max-width:40%">
