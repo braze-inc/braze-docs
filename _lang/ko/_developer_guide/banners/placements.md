@@ -19,13 +19,13 @@ platform:
 
 {% multi_lang_include banners/placement_requests.md %}
 
-## 게재 위치 만들기
+## 배치 생성
 
 ### 필수 조건
 
 배너 배치를 만드는 데 필요한 최소 소프트웨어 개발 키트 버전입니다:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+{% multi_lang_include sdk_versions.md feature='banners' %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
@@ -504,9 +504,35 @@ This feature is not currently supported on Roku.
 테스트 배너는 다음 앱 세션에서 제거된다는 점을 제외하면 다른 배너와 비슷합니다.
 {% endalert %}
 
-## 노출 수 기록
+## 로그 노출 횟수
 
-소프트웨어 개발 키트 방식을 사용하여 배너를 삽입할 때 노출되는 배너의 노출 횟수를 자동으로 기록하므로 수동으로 노출 횟수를 추적할 필요가 없습니다.
+소프트웨어 개발 키트 방식을 사용하여 배너를 삽입할 때 노출되는 배너의 노출 횟수를 Braze가 자동으로 기록하므로 수동으로 노출 횟수를 추적할 필요가 없습니다.
+
+## 클릭 수 로깅
+
+배너 클릭을 기록하는 데 사용되는 방법은 배너가 렌더링되는 방식과 클릭 핸들러의 위치에 따라 달라집니다.
+
+### 표준 배너 콘텐츠(자동)
+
+기본값으로 제공되는 소프트웨어 개발 키트 방법을 사용하여 배너를 삽입하고 배너에 표준 편집기 구성요소(이미지, 버튼, 텍스트)를 사용하는 경우 클릭이 자동으로 추적됩니다. 소프트웨어 개발 키트는 이러한 요소에 클릭 리스너를 연결하므로 추가 코드가 필요하지 않습니다.
+
+### 커스텀 코드 블록
+
+배너가 Braze 대시보드의 **커스텀 코드** 편집기 블록을 사용하는 경우 `brazeBridge.logClick()` 을 사용하여 해당 커스텀 HTML 내에서 클릭을 기록해야 합니다. 이는 소프트웨어 개발 키트에서 커스텀 코드 내부의 요소에 리스너를 자동으로 첨부할 수 없으므로 SDK 메서드를 사용하여 배너를 렌더링하는 경우에도 적용됩니다.
+
+```html
+<button onclick="brazeBridge.logClick()">
+  Click me
+</button>
+```
+
+이는 HTML 인앱 메시징에 사용되는 [자바스크립트 브릿지와]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) 유사합니다. `brazeBridge` 은 배너의 내부 HTML과 상위 Braze 소프트웨어 개발 키트 간의 통신 계층을 제공합니다.
+
+### 커스텀 UI 구현(헤드리스)
+
+배너 HTML을 렌더링하지 않고 배너의 [커스텀 속성을](#custom-properties) 사용하여 완전한 커스텀 UI를 구축하는 경우 애플리케이션 코드에서 클릭 수(및 노출 횟수)를 수동으로 기록해야 합니다. 소프트웨어 개발 키트에서는 배너를 렌더링하지 않기 때문에 커스텀 UI 요소와의 상호작용을 자동으로 추적할 수 있는 방법이 없습니다.
+
+배너 객체에서 `logClick()` 메서드를 사용합니다.
 
 ## 크기 및 크기 조정
 
@@ -530,9 +556,9 @@ This feature is not currently supported on Roku.
 
 {% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 reactnative:17.0.0 flutter:15.1.0 %}
 
-### 커스텀 속성 액세스하기
+### 커스텀 속성에 액세스하기
 
-배너의 커스텀 속성에 액세스하려면 대시보드에 정의된 속성 유형에 따라 다음 방법 중 하나를 사용합니다. 키가 해당 유형의 속성과 일치하지 않거나 존재하지 않는 경우 메서드는 `null` 을 반환합니다.
+배너의 커스텀 속성에 액세스하려면 대시보드에 정의된 속성 유형에 따라 다음 방법 중 하나를 사용합니다. 키가 해당 유형의 속성과 일치하지 않거나 존재하지 않으면 메서드는 `null` 을 반환합니다.
 
 {% tabs local %}
 {% tab Web %}
