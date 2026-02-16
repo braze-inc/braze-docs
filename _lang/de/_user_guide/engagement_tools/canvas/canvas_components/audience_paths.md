@@ -2,7 +2,7 @@
 nav_title: Zielgruppen-Pfade
 article_title: Zielgruppenpfade 
 alias: /audience_paths/
-page_order: 1
+page_order: 3
 page_type: reference
 description: "Dieser Referenzartikel beschreibt, wie Sie Zielgruppenpfade in Ihrem Canvas verwenden können, um Nutzer:innen in großem Umfang intuitiv zu filtern und zu segmentieren, und zwar mit strategischen, prioritätsbasierten Nutzergruppierungen."
 tool: Canvas
@@ -60,7 +60,7 @@ Wenn Sie beispielsweise das Onboarding Messaging auf eine Gruppe von Nutzern aus
 
 Nachdem der Schritt für Zielgruppenpfade abgeschlossen ist, hat jede Zielgruppe einen eigenen Branch. Sie können mit der Verwendung von Zielgruppenpfaden fortfahren, um Ihr Publikum weiter zu filtern. Alternativ können Sie Ihre Canvas-Journey mit den Standard-Canvas-Schritten fortsetzen. 
 
-![Zwei Zielgruppen-Pfade mit unterschiedlichen Gruppen auf der Basis von Engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
+![Zwei Zielgruppen-Pfade mit unterschiedlichen Gruppen auf der Grundlage von Engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
 ### Testen von Zielgruppen
 
