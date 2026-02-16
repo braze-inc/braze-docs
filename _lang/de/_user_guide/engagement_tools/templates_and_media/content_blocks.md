@@ -120,7 +120,7 @@ Wenn Sie die Verwendung eines Content-Blocks beendet haben, können Sie ihn auf 
 
 - Wenn Ihr Block nur in wenigen E-Mails verwendet wird, empfehlen wir Ihnen, den veralteten Block zu archivieren und Ihre Live-Nachrichten mit einem neueren Block zu aktualisieren, der nicht archiviert wurde.
 - Wenn Ihr Block nur einen Tippfehler hat oder eine kleine Änderung benötigt, empfehlen wir nicht, den Block zu archivieren. Aktualisieren Sie stattdessen den Block und schicken Sie ihn ab!
-- Wenn Ihr Block in mehr Nachrichten verwendet wird, als Sie mit dem ersten Vorschlag in dieser Liste vernünftig verwalten können, empfehlen wir, alle Inhalte aus dem Block zu entfernen und ihn zu archivieren. So stellen Sie sicher, dass keine veralteten Informationen in neu versendeten E-Mails enthalten sind.
+- Wenn Ihr Block in mehr Nachrichten verwendet wird, als Sie mit dem ersten Vorschlag in dieser Liste vernünftig verwalten können, empfehlen wir, alle Inhalte aus dem Block zu entfernen. Dadurch wird verhindert, dass veraltete Informationen in Nachrichten aufgenommen werden.
 - Wenn Sie versehentlich einen Content-Block archiviert haben, können Sie die Archivierung aufheben.
 
 ![Das Panel Gespeicherte Content-Blöcke, in dem das Dropdown-Menü für die Einstellungen für "Test_32" erweitert wird, zeigt drei Optionen an: Entarchivieren, Duplizieren und Kopieren in den Arbeitsbereich]({% image_buster /assets/img/unarchive-content-block.png %})
