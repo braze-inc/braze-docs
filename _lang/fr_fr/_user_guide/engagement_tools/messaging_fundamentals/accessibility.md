@@ -1,6 +1,6 @@
 ---
 nav_title: Accessibilité
-article_title: Créer des messages accessibles en Braze
+article_title: Créez des messages accessibles en Braze
 page_order: 0.5
 page_type: reference
 description: "Cet article de référence explique pourquoi il est important de prendre en compte l’accessibilité dans votre contenu marketing et comment vous pouvez créer des messages accessibles dans Braze."
