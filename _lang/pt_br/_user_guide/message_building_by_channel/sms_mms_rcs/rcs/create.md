@@ -90,6 +90,8 @@ Como o nome indica, as mensagens de texto RCS se concentram no texto como um mei
 {% tab Media %}
 As mensagens de mídia RCS permitem o uso de formatos de mídia envolventes que não são possíveis com SMS. Isso inclui arquivos de imagem, vídeo e documentos. Essas opções de mídia existem para ajudá-lo a engajar seu público ainda mais profundamente e ativar casos de uso totalmente novos. No momento, apenas o upload de imagens é suportado pela [Biblioteca de mídia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). 
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Recursos
 
 - Os tipos de mensagens de mídia suportam tudo o que está disponível nos tipos de mensagens de texto, o que inclui texto, respostas sugeridas e ações sugeridas.
@@ -178,7 +180,7 @@ Se planeja usar o Liquid, certifique-se de incluir um valor padrão para a perso
 
 ### Geração de cópia de IA
 
-Precisa de ajuda para criar um texto envolvente? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
+Precisa de ajuda para criar um texto envolvente? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira o nome ou a descrição de um produto, e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
 
 ![Criador de mensagens com um ícone para abrir o assistente de Copywriting IA.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
 
