@@ -10,15 +10,13 @@ description: "Esta página fornece uma visão geral de como disparar Canvases do
 
 > Aprenda como sincronizar disparadores de Canvas usando CDI para personalização sem cópia. Este recurso acessa informações específicas do usuário da sua solução de armazenamento de dados e as passa para um Canvas de destino. Os passos do Canvas podem opcionalmente incluir campos de personalização que não são persistidos nos perfis de usuário do Braze.
 
-{% alert important %}
-Os disparadores de Canvas do CDI estão atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='CDI Canvas triggers' %}
 
 ## Sincronizando disparadores de Canvas
 
 ### Passos para início rápido
 
-Se você já está familiarizado com o Braze CDI, observe que a configuração para uma sincronização de disparador de Canvas segue de perto o processo para [integrações de CDI de dados do usuário]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/), com as seguintes ressalvas:
+Se você já está familiarizado com o CDI do Braze, note que a configuração para uma sincronização de disparador de Canvas segue de perto o processo para [integrações de CDI de dados do usuário]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/), com as seguintes ressalvas:
 
 - Apenas identificadores de ID externo ou alias de usuário são suportados. E-mails e números de telefone não são identificadores suportados.  
 - Apenas usuários existentes do Braze podem ser sincronizados. Novos usuários não podem ser criados.  
@@ -53,7 +51,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC (
 
 Você pode nomear o banco de dados, esquema e tabela como desejar, mas os nomes das colunas devem corresponder à definição anterior.
 
-* `UPDATED_AT`: O horário em que esta linha foi atualizada ou adicionada à tabela. Apenas as linhas adicionadas ou atualizadas desde a última sincronização serão sincronizadas.  
+* `UPDATED_AT`: O momento em que esta linha foi atualizada ou adicionada à tabela. Apenas as linhas adicionadas ou atualizadas desde a última sincronização serão sincronizadas.  
 * Ou `external_id` ou `alias_name` e `alias_label` como a coluna identificadora do usuário. Esses identificam os usuários para os quais você deseja disparar o envio de mensagens do Canvas.  
   * `EXTERNAL_ID`: Identifica o usuário a ser inserido no Canvas. Esse valor deve corresponder ao valor `external_id` usado no Braze.  
   * `ALIAS_NAME` e `ALIAS_LABEL`: Essas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador único, e `alias_label` especifica o tipo de alias. Os usuários podem ter múltiplos aliases com rótulos diferentes, mas apenas um alias_name por `alias_label`.  
@@ -85,7 +83,7 @@ GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 
 ##### Etapa 1.3: Configurar políticas de rede
 
-Se sua conta tiver políticas de rede, adicione os IPs do Braze à lista de permissões para habilitar a conexão do serviço CDI. Para a lista de IPs, veja [Ingestão de Dados em Nuvem]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=snowflake#step-15-allow-braze-ips-in-snowflake-network-policy-optional).  
+Se sua conta tiver políticas de rede, adicione os IPs do Braze à lista de permissões para habilitar a conexão do serviço CDI. Para a lista de IPs, veja [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=snowflake#step-15-allow-braze-ips-in-snowflake-network-policy-optional).  
 
 {% endtab %}
 {% tab Redshift %}
@@ -110,7 +108,7 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC (
 
 Você pode nomear o banco de dados, esquema e tabela como desejar, mas os nomes das colunas devem corresponder à definição anterior.
 
-* `UPDATED_AT`: O horário em que esta linha foi atualizada ou adicionada à tabela. Apenas as linhas adicionadas ou atualizadas desde a última sincronização serão sincronizadas.  
+* `UPDATED_AT`: O momento em que esta linha foi atualizada ou adicionada à tabela. Apenas as linhas adicionadas ou atualizadas desde a última sincronização serão sincronizadas.  
 * Ou `external_id` ou `alias_name` e `alias_label` como a coluna identificadora do usuário. Esses identificam os usuários para os quais você deseja disparar o envio de mensagens do Canvas.  
   * `EXTERNAL_ID`: Identifica o usuário a ser inserido no Canvas. Esse valor deve corresponder ao valor `external_id` usado no Braze.  
   * `ALIAS_NAME` e `ALIAS_LABEL`: Essas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador único, e alias_label especifica o tipo de alias. Os usuários podem ter múltiplos aliases com rótulos diferentes, mas apenas um `alias_name` por `alias_label`.  
@@ -132,7 +130,7 @@ GRANT SELECT ON TABLE CANVAS_TRIGGERS_SYNC TO braze_user;
 
 ##### Etapa 1.3: Configurar políticas de rede 
 
-Se sua conta tiver políticas de rede, adicione os IPs do Braze à lista de permissões para habilitar a conexão do serviço CDI. Para a lista de IPs, veja [Ingestão de Dados em Nuvem]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=redshift#step-13-allow-access-to-braze-ips).
+Se sua conta tiver políticas de rede, adicione os IPs do Braze à lista de permissões para habilitar a conexão do serviço CDI. Para a lista de IPs, veja [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=redshift#step-13-allow-access-to-braze-ips).
 
 {% endtab %}
 {% tab BigQuery %}
@@ -187,7 +185,7 @@ Crie um usuário e conceda permissões. Se você já tiver credenciais de outra 
 Após conceder permissões, gere uma chave JSON. Veja [Chaves criar e excluir](https://cloud.google.com/iam/docs/keys-create-delete) para instruções. Você fará upload dela no dashboard do Braze mais tarde.
 
 ##### Etapa 1.4: Configurar políticas de rede 
-Se sua conta tiver políticas de rede, adicione os IPs do Braze à lista de permissões para habilitar a conexão do serviço CDI. Para a lista de IPs, veja [Ingestão de Dados em Nuvem]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=bigquery#step-13-allow-access-to-braze-ips).
+Se sua conta tiver políticas de rede, adicione os IPs do Braze à lista de permissões para habilitar a conexão do serviço CDI. Para a lista de IPs, veja [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=bigquery#step-13-allow-access-to-braze-ips).
 
 {% endtab %}
 {% tab Databricks %}
@@ -213,11 +211,11 @@ Consulte o seguinte ao criar sua tabela de origem:
 
 Você pode nomear o esquema e a tabela como desejar, mas os nomes das colunas devem corresponder à definição anterior.
 
-* `UPDATED_AT`: O horário em que esta linha foi atualizada ou adicionada à tabela. Apenas as linhas adicionadas ou atualizadas desde a última sincronização serão sincronizadas.  
+* `UPDATED_AT`: O momento em que esta linha foi atualizada ou adicionada à tabela. Apenas as linhas adicionadas ou atualizadas desde a última sincronização serão sincronizadas.  
 * Ou `external_id` ou `alias_name` e `alias_label` como a coluna identificadora do usuário. Esses identificam os usuários para os quais você deseja disparar o envio de mensagens do Canvas.  
   * `EXTERNAL_ID`: Identifica o usuário a ser inserido no Canvas. Esse valor deve corresponder ao valor `external_id` usado no Braze.  
   * `ALIAS_NAME` e `ALIAS_LABEL`: Essas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador único, e `alias_label` especifica o tipo de alias. Os usuários podem ter múltiplos aliases com rótulos diferentes, mas apenas um alias_name por `alias_label`.  
-* `PROPERTIES`: Uma string ou estrutura de campos para disponibilizar como propriedades de personalização no seu canva. Isso deve conter informações específicas do usuário.
+* `PROPERTIES`: Uma string ou estrutura de campos para disponibilizar como propriedades de personalização em seu canva. Isso deve conter informações específicas do usuário.
 
 {% alert note %}
 Propriedades não são obrigatórias para cada linha ou usuário. No entanto, os valores das propriedades devem ser strings JSON válidas. Insira uma string `{}` vazia se não houver propriedades para a linha.
@@ -240,15 +238,15 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 
 Crie um token de acesso pessoal no Databricks:
 
-1. Selecione seu nome de usuário, depois selecione **Configurações do Usuário.**  
-2. Na aba **Tokens de acesso**, selecione **Gerar novo token.**  
+1. Selecione seu nome de usuário e, em seguida, selecione **Configurações do Usuário.**  
+2. Na aba **Tokens de Acesso**, selecione **Gerar novo token.**  
 3. Adicione um comentário para identificar o token, como “Braze CDI”.  
-4. Deixe **Duração (dias)** em branco para não expirar, depois selecione **Gerar**.  
+4. Deixe **Duração (dias)** em branco para não expirar, e então selecione **Gerar**.  
 5. Copie e salve o token com segurança para uso no dashboard do Braze.
 
 ##### Etapa 1.4: Configurar políticas de rede 
 
-Se sua conta tiver políticas de rede, adicione os IPs do Braze à lista de permissões para habilitar a conexão do serviço CDI. Para a lista de IPs, veja [Ingestão de Dados em Nuvem]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=databricks#step-13-allow-access-to-braze-ips).
+Se sua conta tiver políticas de rede, adicione os IPs do Braze à lista de permissões para habilitar a conexão do serviço CDI. Para a lista de IPs, veja [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=databricks#step-13-allow-access-to-braze-ips).
 
 {% endtab %}
 {% tab Fabric %}
@@ -275,22 +273,22 @@ Crie um principal de serviço e conceda permissões. Se você já tiver credenci
 
 ##### Etapa 1.3: Configurar políticas de rede 
 
-Se sua conta tiver políticas de rede, adicione os IPs do Braze à lista de permissões para habilitar a conexão do serviço CDI. Para a lista de IPs, veja [Ingestão de Dados em Nuvem]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=microsoft%20fabric#step-15-allow-braze-ips-in-firewall-optional).
+Se sua conta tiver políticas de rede, adicione os IPs do Braze à lista de permissões para habilitar a conexão do serviço CDI. Para a lista de IPs, veja [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=microsoft%20fabric#step-15-allow-braze-ips-in-firewall-optional).
 
 {% endtab %}
 {% tab File Storage %}
 
-Para sincronizar gatilhos do canva a partir do armazenamento de arquivos, crie um arquivo de origem com os seguintes campos.
+Para sincronizar os gatilhos do canva a partir do armazenamento de arquivos, crie um arquivo de origem com os seguintes campos.
 
 | Campo | Obrigatória | Descrição |
 | :---- | :---- | :---- |
 | `EXTERNAL_ID` | Sim, um de `external_id` ou `alias_name`, e `alias_label` | Isso identifica o usuário que você deseja atualizar. Esse valor deve corresponder ao valor `external_id` usado no Braze. |
 | `ALIAS_NAME` e `ALIAS_LABEL` | Sim, um de `external_id` ou `alias_name` e `alias_label` | Essas duas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador único, e `alias_label` especifica o tipo de alias. Os usuários podem ter vários aliases com rótulos diferentes, mas apenas um `alias_name` por `alias_label`. |
-| `PROPERTIES` | Sim | String JSON de campos para disponibilizar como propriedades de personalização no seu canva. Isso deve conter informações específicas do usuário. |
+| `PROPERTIES` | Sim | String JSON de campos para disponibilizar como propriedades de personalização em seu canva. Isso deve conter informações específicas do usuário. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-Os nomes dos arquivos devem seguir as regras da AWS e ser únicos. Anexe carimbos de data/hora para ajudar a garantir a exclusividade. Para mais informações sobre a sincronização do Amazon S3, veja [Integrações de Armazenamento de Arquivos](https://www.braze.com/docs/user_guide/data/cloud_ingestion/file_storage_integrations).
+Os nomes dos arquivos devem seguir as regras da AWS e ser únicos. Anexe carimbos de data e hora para ajudar a garantir a exclusividade. Para mais informações sobre a sincronização do Amazon S3, veja [Integrações de Armazenamento de Arquivos](https://www.braze.com/docs/user_guide/data/cloud_ingestion/file_storage_integrations).
 {% endalert %}
 
 {% endtab %}
@@ -308,17 +306,17 @@ Os nomes dos arquivos devem seguir as regras da AWS e ser únicos. Anexe carimbo
 
 Com a configuração da sua origem concluída e o Canvas de destino lançado, crie uma nova sincronização de dados:
 
-1. No Braze, acesse **Configurações de Dados** > **Ingestão de Dados em Nuvem**.
+1. No Braze, vá para **Configurações de Dados** > **Ingestão de Dados na Nuvem**.
 1. Configure a conexão inserindo os detalhes da conexão (ou reutilize credenciais existentes) e a tabela de origem de [Etapa 1](#step-1-set-up-data-source-for-canvas-triggers).
 2. Forneça um nome para a integração.
 3. Selecione o tipo de dados **Gatilhos do Canvas**.
 4. Escolha seu Canvas de destino (da [Etapa 2](#step-2-configure-your-destination-canvas)).
 5. Escolha uma frequência de sincronização.
 6. Configure as preferências de notificação.
-7. Selecione **Test Connection** para confirmar que tudo funciona como esperado. Se conectar ao Snowflake, primeiro adicione a chave pública exibida no dashboard ao usuário criado para o Braze se conectar ao Snowflake. Para completar esta etapa, você precisará de acesso **SECURITYADMIN** ou superior no Snowflake. 
+7. Selecione **Test Connection** para confirmar que tudo funciona como esperado. Se conectando ao Snowflake, primeiro adicione a chave pública exibida no dashboard ao usuário criado para o Braze se conectar ao Snowflake. Para completar esta etapa, você precisará de acesso **SECURITYADMIN** ou superior no Snowflake. 
 8. Salve a sincronização para começar a sincronizar os disparadores do Canvas.
 
-Quando a sincronização for executada, os usuários na sua tabela de origem começarão a entrar no Canvas. Use a análise do Canvas e a página de logs de sincronização de Ingestão de Dados na Nuvem para monitorar o desempenho.
+Quando a sincronização for executada, os usuários na sua tabela de origem começarão a entrar no Canvas. Use a análise de dados do Canvas e a página de logs de sincronização de Ingestão de Dados na Nuvem para monitorar a performance.
 
 {% alert tip %}  
 Revise toda a sua configuração (desde o comportamento da sincronização até a configuração do Canvas) para evitar envios inesperados. Configurações do Canvas, como limite de frequência, controle de frequência e filtros de segmentação, podem refinar ainda mais a entrega de mensagens.<br><br>Recomendamos realizar um teste com um público pequeno ou de teste antes de implementar casos de uso em produção.
