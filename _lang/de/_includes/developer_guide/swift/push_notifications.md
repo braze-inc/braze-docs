@@ -360,6 +360,41 @@ Wenn Sie die automatische Push-Integration verwenden, ist `subscribeToUpdates(_:
 Erstellen Sie Ihr Abo für Push-Benachrichtigungen in `application(_:didFinishLaunchingWithOptions:)`, um sicherzustellen, dass Ihr Abo ausgelöst wird, wenn ein Endnutzer:in auf eine Benachrichtigung tippt, während sich Ihre App in einem beendeten Zustand befindet.
 {% endalert %}
 
+## Umgang mit Benachrichtigungen im Vordergrund
+
+Standardmäßig wird eine Push-Benachrichtigung, die eintrifft, während Ihre App im Vordergrund ist, von iOS nicht automatisch angezeigt. Um Push-Benachrichtigungen im Vordergrund anzuzeigen und sie mit Braze Analytics zu tracken, rufen Sie die Methode `handleForegroundNotification(notification:)` innerhalb Ihrer `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)` Implementierung auf.
+
+### Funktionsweise
+
+Wenn Sie `handleForegroundNotification(notification:)` aufrufen, verarbeitet Braze die Nutzdaten der Benachrichtigung, um Analytics zu protokollieren und alle Deeplinks oder Button-Aktionen zu verarbeiten. Das tatsächliche Anzeigeverhalten wird durch die `UNNotificationPresentationOptions` gesteuert, die Sie an den Completion Handler übergeben.
+
+```swift
+import BrazeKit
+import UserNotifications
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+  func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+  ) {
+    // Let Braze process the notification payload
+    if let braze = AppDelegate.braze {
+      braze.notifications.handleForegroundNotification(notification: notification)
+    }
+    
+    // Control how the notification appears in the foreground
+    if #available(iOS 14.0, *) {
+      completionHandler([.banner, .list, .sound])
+    } else {
+      completionHandler([.alert, .sound])
+    }
+  }
+}
+```
+
+Ein vollständiges Beispiel finden Sie in dem [Beispiel für die manuelle Integration von Push-Benachrichtigungen](https://github.com/braze-inc/braze-swift-sdk/blob/e31907eaa0dbd151dc2e6826de66cc494242ba60/Examples/Swift/Sources/PushNotifications-Manual/AppDelegate.swift#L1-L120) im Braze Swift SDK Repository.
+
 ## Push-Primer {#push-primers}
 
 Push-Benachrichtigungskampagnen ermutigen Ihre Nutzer:innen, Push-Benachrichtigungen auf ihrem Gerät für Ihre App zu aktivieren. Dies kann ohne SDK-Anpassung mit unserem [No Code Push Primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) geschehen.
