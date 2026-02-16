@@ -37,7 +37,7 @@ Por ejemplo, supongamos que utilizas una campaña desencadenada por la API para 
 
 {% tab canvas %}
 
-Para activar la **reintroducción** en un Canvas, selecciona **Permitir a los usuarios reintroducir este Canvas** en la sección **Controles de entrada**. Puedes elegir entre permitir que los usuarios vuelvan a entrar tras la duración máxima del Canvas o tras una ventana especificada.
+Para activar la **reintroducción** en un Canvas, selecciona **Permitir a los usuarios reintroducir este Canvas** en la sección **Controles de entrada**. Puedes elegir entre permitir que los usuarios vuelvan a entrar después de la duración máxima del Canvas o después de una ventana especificada.
 
 La posibilidad de volver a optar a las variantes de Canvas está vinculada a la entrada en Canvas y no a la recepción del mensaje. Los usuarios que entren en un lienzo y no reciban ningún mensaje no podrán volver a entrar en el lienzo a menos que se active la reelección.
 
@@ -49,17 +49,17 @@ También puedes utilizar un [paso de Actualización de usuario]({{site.baseurl}}
 
 ### Ejemplo
 
-Por ejemplo, supongamos que un usuario sin dirección de correo electrónico entra en un Canvas recurrente diario que contiene un paso en el recorrido del usuario. Este paso sólo contiene un mensaje de correo electrónico, por lo que el usuario no recibe la interacción. Este usuario no podrá volver a entrar en el Canvas a menos que el Canvas tenga activada la re-elegibilidad. 
+Por ejemplo, supongamos que un usuario sin dirección de correo electrónico entra en un Canvas recurrente diario que contiene un paso en el recorrido del usuario. Este paso sólo contiene un mensaje de correo electrónico, por lo que el usuario no recibe la interacción. Este usuario no podrá volver a entrar en el Canvas a menos que el Canvas tenga activada la reelegibilidad. 
 
 Si tiene un lienzo activo recurrente o activado sin reelegibilidad, y desea que los usuarios vuelvan a entrar en el lienzo hasta que reciban un mensaje del mismo, puede considerar permitir que los usuarios vuelvan a ser elegibles para la entrada añadiendo un filtro a los criterios de entrada que excluya a los clientes que han recibido un mensaje del lienzo.
 
-Si la reelegibilidad para un lienzo es inferior a la duración del lienzo, es posible que los usuarios entren en el lienzo más de una vez, lo que puede dar lugar a un comportamiento engañoso para los lienzos que utilizan mensajes dentro de la aplicación con retrasos especialmente largos. Dado que varios mensajes dentro de la aplicación Canvas podrían desencadenarse con el mismo inicio de sesión, el usuario podría tener la experiencia de recibir el mismo mensaje repetidamente si un componente específico se renderiza más rápido que otros.
+Si la reelegibilidad para un lienzo es inferior a la duración del lienzo, es posible que los usuarios entren en el lienzo más de una vez, lo que puede dar lugar a un comportamiento engañoso para los lienzos que utilizan mensajes dentro de la aplicación con retrasos especialmente largos. Dado que varios mensajes dentro de la aplicación Canvas podrían ser desencadenados por el mismo inicio de sesión, el usuario podría tener la experiencia de recibir el mismo mensaje repetidamente si un componente específico se renderiza más rápido que otros.
 {% endtab %}
 {% endtabs %}
 
 ## Cálculo del plazo de readmisión
 
-La reelegibilidad tanto para campañas como para Lienzos se calcula en segundos, no en días de calendario. Esto significa que un día cuenta como 24 horas (u 86.400 segundos) a partir del momento en que el usuario recibe el mensaje, no como el siguiente día natural a medianoche. Del mismo modo, un mes cuenta exactamente como 2 592 000 segundos, lo que equivale aproximadamente a 30 días.
+La reelegibilidad tanto para campañas como para Lienzos se calcula en segundos, no en días naturales. Esto significa que un día cuenta como 24 horas (u 86.400 segundos) a partir del momento en que el usuario recibe el mensaje, no como el siguiente día natural a medianoche. Del mismo modo, un mes cuenta exactamente como 2 592 000 segundos, lo que equivale aproximadamente a 30 días.
 
 ### Ejemplo
 
@@ -68,7 +68,7 @@ Considera el siguiente escenario:
 * Se ha configurado una campaña para que se envíe mensualmente el día 15, con la posibilidad de volver a ser elegible establecida en 30 días.
 * Hay menos de 30 días entre el 15 de febrero y el 15 de marzo. 
 
-Esto significa que los usuarios que recibieron la campaña el 15 de febrero no podrán optar a la campaña que se enviará el 15 de marzo. Si la campaña está configurada para que se envíe diariamente a las 8 de la mañana con una reelegibilidad de 1 día, y hay una latencia en el envío del mensaje, los usuarios que recibieron la campaña a las 8:30 de la mañana aún no serán reelegibles al día siguiente a las 8 de la mañana.
+Esto significa que los usuarios que recibieron la campaña el 15 de febrero no podrán optar a la campaña que se enviará el 15 de marzo. Si la campaña está configurada para que se envíe diariamente a las 8 de la mañana con una reelegibilidad de 1 día, y hay una latencia en el envío del mensaje, los usuarios que recibieron la campaña a las 8:30 de la mañana aún no serán elegibles al día siguiente a las 8 de la mañana.
 
 ## Pruebas multivariantes
 
