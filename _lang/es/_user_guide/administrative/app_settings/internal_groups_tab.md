@@ -87,7 +87,7 @@ Los correos electrónicos con semillas tendrán `[SEED]` añadido al principio d
 
 #### Comportamiento de suscripción
 
-Los envíos semilla están diseñados para el control de calidad y la revisión internos, por lo que omiten intencionadamente las comprobaciones de suscripción de los usuarios del panel sembrado. Esto significa que los usuarios con direcciones de correo electrónico válidas que forman parte de un grupo semilla reciben el mensaje aunque no estén suscritos. Sin embargo, el mensaje debe estar configurado para enviar copias de semillas a ese grupo.
+Los envíos semilla están diseñados para el control de calidad y la revisión internos, por lo que omiten intencionadamente las comprobaciones de suscripción de los usuarios de la empresa sembrada. Esto significa que los usuarios con direcciones de correo electrónico válidas que forman parte de un grupo semilla reciben el mensaje aunque no estén suscritos. Sin embargo, el mensaje debe estar configurado para enviar copias de semillas a ese grupo.
 
 {% alert tip %}
 Si los miembros de tu grupo semilla dicen que no ven el mensaje en su buzón de entrada, comprueba que están incluidos en el grupo interno, verifica que las líneas del asunto son diferentes y que Gmail no ha agrupado los mensajes, o pídeles que comprueben sus carpetas de correo no deseado.
@@ -106,7 +106,7 @@ Los Grupos Semilla se envían una vez a cada variante de correo electrónico y s
 Si tu campaña es multivariante y tu variante tiene un porcentaje de envío del 0%, no se envía a los grupos semilla. Además, si la variante ya se ha enviado y no se ha actualizado para reenviarla en **Editar grupos semilla** en el paso **Destino**, no se vuelve a enviar por predeterminado.
 
 {% alert note %}
-Si tienes una campaña recurrente y se actualiza alguna de las variantes, puedes elegir enviar de nuevo sólo a las variantes actualizadas o a todas las variantes, o desactivar el envío de Grupo semilla al actualizarse.
+Si tienes una campaña recurrente y se actualiza alguna de las variantes, puedes elegir volver a enviar sólo a las variantes actualizadas o a todas las variantes, o desactivar el envío de Grupo semilla al actualizarse.
 {% endalert %}
 
 ![El Grupo semilla "Prueba de correo electrónico" seleccionado para que se le envíe la campaña de correo electrónico Variante 1.]({% image_buster /assets/img_archive/seed_group_campaign.png %})
