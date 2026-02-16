@@ -27,6 +27,8 @@ Wenn ein Canvas gestoppt, archiviert oder ein Schritt entfernt wird, erhalten al
 
 Eigenschaften in einem Canvas-Schritt können nach dem Start geändert werden, und sogar nachdem ein:e Nutzer:in den Schritt durchlaufen hat. Nutzer:innen erhalten immer eine dynamische Realtime-Version des Feature-Flags anstelle der älteren, zuvor gespeicherten Version.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## Überschreiben von Eigenschaften
 
 Bei der Erstellung eines Feature-Flags legen Sie Standard-Eigenschaften fest. Beim Einrichten eines Funktionskennzeichen-Leinwandschritts können Sie entweder die Standardwerte beibehalten oder die Werte für Benutzer, die diesen Schritt eingeben, überschreiben.
@@ -40,4 +42,3 @@ Gehen Sie zu **Messaging** > **Feature Flags**, um zusätzliche Eigenschaften zu
 Canvas und ein Feature-Flag-Rollout (Ziehen des Schiebereglers) können unabhängig voneinander funktionieren. Ein wichtiger Vorbehalt ist, dass der Entry zu einem Canvas-Schritt jede Standard-Rollout-Konfiguration überschreibt. Das heißt, wenn ein:e Nutzer:in nicht für ein Feature-Flag qualifiziert ist, kann ein Canvas-Schritt das Feature für diese:n Nutzer:in aktivieren.
 
 Ähnlich verhält es sich, wenn sich ein Benutzer mit bestimmten Eigenschaften für ein Feature-Flag-Rollout qualifiziert und gleichzeitig den Canvas-Schritt betritt, erhält er alle überschriebenen Werte aus diesem Canvas-Schritt.
-
