@@ -145,7 +145,7 @@ Une meilleure approche consisterait à faire appel à une audience plus large et
 - **Événement d'entrée :** Effectuer un achat
 - **Filtre d'entrée :** Dépenses totales au cours des 7 derniers jours > 10
 
-De cette façon, un achat qualifié répond au filtre et déclenche le message, sans qu'aucune autre action ne soit nécessaire.
+De cette manière, un achat qualifié répond au filtre et déclenche le message, sans qu'aucune autre action ne soit nécessaire.
 
 ## Bonnes pratiques
 
