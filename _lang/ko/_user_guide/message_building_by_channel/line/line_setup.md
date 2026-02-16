@@ -28,7 +28,7 @@ LINE과 Braze를 연동하려면 다음이 필요합니다:
 Braze에서 LINE 메시지를 보내면 계정의 메시지 크레딧이 사용됩니다.
 
 {% alert note %}
-**설정 `native_line_id`**: 사용자 업데이트를 Braze에 전송하여 `native_line_id` 을 설정할 수 있습니다(예: [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트, [CSV 가져오기]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) 또는 [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). 클라이언트 측 소프트웨어 개발 키트에 `native_line_id` 전용 필드가 없는 경우 다음 방법 중 하나를 사용하여 서버 측 사용자 업데이트에서 전송합니다.
+**설정 `native_line_id`**: 사용자 업데이트를 Braze로 전송하여 `native_line_id` 를 설정할 수 있습니다(예: [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트, [CSV 가져오기]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) 또는 [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). 클라이언트 측 소프트웨어 개발 키트에 `native_line_id` 전용 필드가 없는 경우 다음 방법 중 하나를 사용하여 서버 측 사용자 업데이트에서 전송합니다.
 {% endalert %}
 
 ## LINE 계정 유형
@@ -212,7 +212,7 @@ Braze에서 중복 사용자 관리에 대해 자세히 알아보려면 [중복 
 
 ## 사용자 설정
 
-LINE은 사용자 구독 상태에 대한 진실의 원천입니다. 사용자의 LINE ID(`native_line_id`)가 있더라도 해당 사용자가 보내는 LINE 채널을 팔로우하지 않는다면, LINE은 해당 사용자에게 메시지를 전달하지 않습니다.
+LINE은 사용자 구독 상태에 대한 진실의 원천입니다. 사용자의 LINE ID(`native_line_id`)가 있더라도 해당 사용자가 보내는 LINE 채널을 팔로우하지 않는 경우, LINE은 해당 사용자에게 메시지를 전달하지 않습니다.
 
 이를 관리하기 위해 Braze는 LINE 팔로우 및 언팔로우를 위한 구독 동기화, 이벤트 업데이트 등 잘 통합된 사용자 기반을 지원하는 툴과 로직을 제공합니다.
 
@@ -329,7 +329,7 @@ LINE ID와 기존 Braze 고객 프로필을 결합하는 방법은 두 가지가
 이 방법을 사용하면 사용자가 자신의 LINE 계정을 앱의 사용자 계정에 연결할 수 있습니다. 그런 다음, 예를 들어 {% raw %}`{{line_id}}`{% endraw %} 과 같은 Braze의 Liquid를 사용하여 사용자의 LINE ID를 웹사이트나 앱에 전달하는 사용자 맞춤 URL을 생성하고, 이를 알려진 사용자와 연결할 수 있습니다.
 
 1. 가입 상태 변화를 기반으로 사용자가 LINE 채널에 가입할 때 트리거되는 동작 기반 캔버스를 만들어 보세요.<br>![사용자가 LINE 채널에 가입할 때 트리거되는 캔버스입니다.]({% image_buster /assets/img/line/account_link_1.png %})
-2. 사용자가 웹사이트나 앱에 로그인하도록 유도하는 메시지를 작성하여 사용자의 LINE ID를 쿼리 파라미터로 전달합니다(예: Liquid를 통해):
+2. 사용자가 웹사이트나 앱에 로그인하도록 유도하는 메시지를 작성하여 사용자의 LINE ID를 쿼리 파라미터로 전달(예: Liquid를 통해)하세요:
 
 ```
 Thanks for following Flash n' Thread on LINE! For personalized offers and 20% off your next purchase, sign-in to your account: https://flashandthread.com/sign_in?line_user_id={{line_id}}
@@ -343,7 +343,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 사용자가 로그인한 후 웹사이트나 앱에서 사용자 ID를 다시 Braze로 전송하여 URL의 일부로 전달된 LINE ID와 연결되도록 변경합니다(예시 코드: 다음과 같은 코드):
 
-```json
+```javascript
 const currentUrl = new URL(window.location.href)
 const queryParams = new URLSearchParams(currentUrl.search);
 const lineUserId = queryParams.get("line_user_id")
@@ -376,7 +376,7 @@ if (user && isLoggedIn && lineUserId) {
 1. LINE에서 Braze에게 팔로우 이벤트를 보냅니다.
 2. Braze는 LINE ID, `line_id` 사용자 별칭 지정, LINE 구독 그룹 상태 `subscribed` 로 익명 사용자 프로필을 생성합니다.
 3. 사용자는 웹사이트와 앱으로 연결되는 링크가 포함된 LINE 메시지를 수신하고 로그인합니다. 이제 고객 프로필을 알 수 있습니다.
-4. 생성된 익명 사용자 프로필이 식별되고 [/users/identify 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) 통해 사용자의 알려진 사용자 프로필에 병합됩니다. 이제 알려진 고객 프로필에 LINE ID가 포함되고 가입 상태는 `subscribed` 입니다.
+4. 생성된 익명 사용자 프로필이 식별되고 [/users/identify 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) 통해 사용자의 알려진 사용자 프로필에 병합됩니다. 이제 알려진 고객 프로필에 LINE ID가 포함되어 있으며 가입 상태는 `subscribed` 입니다.
 5. (선택 사항) 사용자는 쿠폰 코드가 포함된 LINE 메시지를 수신하고, Braze는 전송 내용을 Braze 고객 프로필에 기록합니다.
 
 ## Braze에서 LINE 테스트 사용자 생성하기
