@@ -104,7 +104,7 @@ Cette section décrit les principales différences entre la création de cartes 
   <tr>
     <td class="leftHeader">Temps de traitement</td>
   <td class="tg-0pky">Braze crée des cartes pour chaque utilisateur éligible dans le segment au moment du lancement. Pour les audiences importantes, sélectionnez <b>Dès la première impression</b> afin que les cartes soient disponibles plus rapidement après le lancement.</td>
-  <td class="tg-0pky">Braze crée une carte la première fois qu'un utilisateur tente de l'afficher, ce qui peut prendre 1 à 2 secondes pour qu'elle s'affiche lors de la première impression.</td>
+  <td class="tg-0pky">Braze crée une carte la première fois qu'un utilisateur tente de l'afficher, il se peut donc qu'elle mette 1 à 2 secondes à s'afficher lors de la première impression.</td>
   </tr>
 </tbody>
 </table>
@@ -119,11 +119,11 @@ Braze recommande de ne pas modifier la façon dont les cartes sont créées apr�
 
 ### Temps de traitement potentiel
 
-Pour les audiences importantes, sélectionnez l'option de création de cartes dès la première impression afin que les cartes soient disponibles rapidement après le lancement. Les campagnes déclenchées au début de la session peuvent également bénéficier du passage à la création lors de la première impression (disponible par le biais de la réception/distribution programmée) afin d'améliorer les performances.
+Pour les audiences importantes, sélectionnez l'option de création de cartes dès la première impression afin que les cartes soient disponibles rapidement après le lancement. Les campagnes déclenchées au début de la session peuvent également bénéficier du passage à la création à la première impression (disponible par le biais de la réception/distribution programmée) afin d'améliorer les performances.
 
 Lorsque les cartes sont créées lors de la première impression, le traitement des cartes peut prendre 1 à 2 secondes. La durée de ce temps de traitement dépend de divers facteurs, tels que la taille de la carte et la complexité des options de modélisation du message. Par exemple, le temps de traitement des cartes utilisant le Contenu connecté sera au moins aussi long que le temps de réponse du Contenu connecté.
 
 ### Versions antérieures du SDK
 
-Si l'application d'un utilisateur exécute une version antérieure du SDK, il reçoit toujours les cartes de contenu que vous envoyez. Cependant, les cartes mettent plus de temps à apparaître et peuvent ne pas apparaître avant la prochaine synchronisation des cartes de contenu.
+Si l'application d'un utilisateur exécute une version antérieure du SDK, il reçoit toujours les cartes de contenu que vous envoyez. Cependant, les cartes prennent plus de temps à apparaître et peuvent ne pas apparaître avant la prochaine synchronisation des cartes de contenu.
 
