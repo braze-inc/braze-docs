@@ -40,7 +40,7 @@ Bannerplatzierungen sind bestimmte Standorte in Ihrer App oder Website, [die Sie
 
 Zu den üblichen Standorten gehören der obere Teil Ihrer Homepage, die Produktdetailseiten und die Kassenabläufe. Nachdem die Platzierungen erstellt wurden, können die Banner [in Ihrer Kampagne zugewiesen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/) werden.
 
-Es gibt keine feste Grenze für die Anzahl der Vermittlungen, die Sie pro Workspace erstellen können, und Sie können so viele Vermittlungs-IDs erstellen, wie Ihre Erfahrung erfordert. Jede Platzierung muss innerhalb eines Workspace eindeutig sein. Eine einzige Platzierungs-ID kann von bis zu 10 aktiven Kampagnen gleichzeitig referenziert werden.
+Es gibt keine feste Grenze für die Anzahl der Vermittlungen, die Sie pro Workspace erstellen können, und Sie können so viele Vermittlungs-IDs erstellen, wie Ihre Erfahrung erfordert. Jede Platzierung muss innerhalb eines Workspace eindeutig sein. Eine einzelne Platzierungs-ID kann von bis zu 25 aktiven Nachrichten gleichzeitig referenziert werden.
 
 {% alert important %}
 Vermeiden Sie die Änderung von Platzierungs-IDs nach dem Starten einer Kampagne.
@@ -61,6 +61,8 @@ Wenn mehrere Banner die gleiche Priorität haben, wird das neueste Banner, für 
 Bannernachrichten werden Ihrer App oder Website als HTML-Inhalt zugestellt, der in der Regel innerhalb eines iframe gerendert wird. Dies stellt sicher, dass Ihre Banner auf allen Geräten einheitlich dargestellt werden und hilft Ihnen, ihre Stile und Skripte vom Rest Ihres Codes zu trennen.
 
 Iframes ermöglichen dynamische und personalisierte Updates von Inhalten, die keine Änderungen an Ihrer Codebasis erfordern. Jeder iframe ruft den HTML-Code für jede Nutzer:innen-Sitzung ab und zeigt ihn mit Hilfe der Logik für das Targeting und die Personalisierung der Kampagne an.
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
 
 ### Abmessungen und Größenangaben
 
