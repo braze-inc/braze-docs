@@ -8,7 +8,7 @@ O SDK do Web Braze permite coletar análises de dados e exibir mensagens no app,
 
 Você pode integrar o SDK do Braze Web usando os seguintes métodos. Para obter opções adicionais, consulte [outros métodos de integração](#web_other-integration-methods).
 
-- **Integração baseada em código:** Integre o SDK do Braze Web diretamente em sua base de código usando seu gerenciador de pacotes preferido ou a CDN do Braze. Isso lhe dá controle total sobre como o SDK é carregado e configurado.
+- **Integração baseada em código:** Integre o Web Braze SDK diretamente em sua base de código usando seu gerenciador de pacotes preferido ou a CDN do Braze. Isso lhe dá controle total sobre como o SDK é carregado e configurado.
 - **Google Tag Manager:** Uma solução sem código que permite integrar o Web Braze SDK sem modificar o código do seu site. Para saber mais, consulte [Google Tag Manager com o SDK do Braze]({{site.baseurl}}/developer_guide/sdk_integration/google_tag_manager/).
 
 {% alert important %}
@@ -61,6 +61,10 @@ A configuração padrão **Prevent Cross-Site Tracking (Impedir rastreamento ent
 ### Etapa 2: Inicializar o SDK
 
 Depois que o Braze Web SDK for adicionado ao seu site, inicialize a biblioteca com a chave de API e [o endpoint de SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) encontrados em **Settings** > **App Settings** em seu dashboard do Braze. Para obter uma lista completa de opções para `braze.initialize()`, juntamente com nossos outros métodos JavaScript, consulte [a documentação do Braze JavaScript](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
+
+{% alert note %}
+**Não há suporte para domínios personalizados para solicitações do Web SDK**: O Web SDK `baseUrl` deve ser um endpoint de SDK do Braze (por exemplo, `sdk.iad-05.braze.com`). O Braze não oferece suporte ao roteamento do tráfego do Web SDK por meio de um domínio de propriedade do cliente via registros CNAME. Se precisar que as solicitações do Web SDK sejam originadas de seu próprio domínio, entre em contato com o suporte da Braze.
+{% endalert %}
 
 ```javascript
 // initialize the SDK
@@ -150,7 +154,7 @@ Os registros básicos são visíveis para todos os usuários, portanto, consider
 
 #### Registro personalizado
 
-Use `setLogger` para registrar mensagens de depuração personalizadas no console JavaScript. Ao contrário dos registros básicos, esses registros não são visíveis para os usuários.
+Use `setLogger` para registrar mensagens de depuração personalizadas no console do JavaScript. Ao contrário dos registros básicos, esses registros não são visíveis para os usuários.
 
 ```javascript
 setLogger(loggerFunction: (message: STRING) => void): void
@@ -170,7 +174,7 @@ braze.openSession();
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-Ao fazer referência ao Braze Web SDK a partir de nossa rede de fornecimento de conteúdo, por exemplo, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (conforme recomendado por nossas instruções de integração padrão), seus usuários recebem pequenas atualizações (correções de bugs e recursos compatíveis com versões anteriores, versões `a.a.a` a `a.a.z` nos exemplos acima) automaticamente quando atualizam seu site.
+Ao fazer referência ao Braze Web SDK a partir de nossa rede de distribuição de conteúdo, por exemplo, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (conforme recomendado por nossas instruções de integração padrão), seus usuários recebem pequenas atualizações (correções de bugs e recursos compatíveis com versões anteriores, versões `a.a.a` a `a.a.z` nos exemplos acima) automaticamente quando atualizam seu site.
 
 No entanto, quando lançamos alterações importantes, solicitamos que você faça upgrade do Braze Web SDK manualmente para garantir que as alterações não afetem sua integração. Além disso, se você baixar nosso SDK e hospedá-lo você mesmo, não receberá nenhuma atualização de versão automaticamente e deverá fazer upgrade manualmente para receber os recursos e as correções de bugs mais recentes.
 
