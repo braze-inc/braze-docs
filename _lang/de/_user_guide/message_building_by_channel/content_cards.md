@@ -62,6 +62,8 @@ Lassen Sie uns nun ein wenig technisch werden. Hinter den Kulissen besteht eine 
 
 Bei einer Standardimplementierung fügen Sie den Karteninhalt - das Modell - entweder über das Dashboard oder über APIs hinzu, und die Ansicht und der Controller werden von einem so genannten View Controller verwaltet. Ein View Controller ist der "Klebstoff" zwischen der Gesamtanwendung und dem Bildschirm.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## Anwendungsfälle
 
 In diesem Abschnitt finden Sie einige häufige Anwendungsfälle für Content Cards.
