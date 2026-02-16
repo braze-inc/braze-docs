@@ -127,7 +127,7 @@ Le fichier AASA contient un objet JSON avec une liste d'apps et les chemins d'UR
     "apps": [],
     "details": [
       {
-        "appID": “JHGFJHHYX.com.facebook.ios",
+        "appID": "JHGFJHHYX.com.facebook.ios",
         "paths": [
           "*"
         ]
