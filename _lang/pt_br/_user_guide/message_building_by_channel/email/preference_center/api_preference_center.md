@@ -106,7 +106,7 @@ Essa abordagem não requer pares de valores de string de consulta incorporados n
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 
@@ -137,13 +137,13 @@ ${unsubscribe_url}
 
 Então, através dos Currents, você poderia identificar quais usuários falam espanhol e quantos eventos de clique houve para aquele link de cancelamento.
 
-### Ambos os links de cancelamento e os centros de preferência de e-mail são necessários para o envio?
+### Ambos os links de cancelamento e centros de preferência de e-mail são necessários para o envio?
 
 Não. Se você ver a mensagem "Seu corpo de e-mail não inclui um link de cancelamento" ao compor uma campanha de e-mail, este aviso é esperado se seu link de cancelamento estiver em um bloco de conteúdo.
 
 ### Como atualizo o ícone padrão do navegador?
 
-Por padrão, o ícone ao lado do nome da aba do navegador (favicon) usa o logo do Braze. Para adicionar um favicon personalizado, você o define através do atributo `links-tags` na sua chamada de API de Criar ou Atualizar [Centro de Preferência API]({{site.baseurl}}/api/endpoints/preference_center). O Braze então injeta a tag {% raw %}`<link rel="icon" ...>`{% endraw %} na página hospedada para você.
+Por padrão, o ícone ao lado do nome da aba do navegador (favicon) usa o logo do Braze. Para adicionar um favicon personalizado, você o define através do atributo `links-tags` em sua chamada de API de Criar ou Atualizar [Centro de Preferência API]({{site.baseurl}}/api/endpoints/preference_center). O Braze então injeta a tag {% raw %}`<link rel="icon" ...>`{% endraw %} na página hospedada para você.
 
 {% raw %}
 ```
