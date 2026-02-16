@@ -204,7 +204,7 @@ To update your catalog after uploading a CSV or creating a catalog in the browse
 
 As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
 
-The API and CDI support all [catalog data types](#supported-data-types), including JSON objects and string arrays, which you create or update only through the API or CDI.
+The REST API supports all [catalog data types](#supported-data-types), including JSON objects and string arrays. JSON objects and string arrays can only be created or updated through the REST API.
 
 ### Using Cloud Data Ingestion
 
