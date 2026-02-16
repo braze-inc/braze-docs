@@ -86,7 +86,7 @@ Sea cual sea la opción elegida por el usuario, se añadirá el token o [estado 
 
 Podrá dirigirse a sus usuarios en función de si están autorizados provisionalmente o no utilizando nuestros [filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-![Panel Detalles del segmento con el filtro de segmento de muestra "Autorizado provisionalmente en Cronómetro iOS (iOS) es verdadero" para dirigirte a los usuarios.]({% image_buster /assets/img/segment-push-prov-auth.png %})
+![Panel de detalles de segmento con el filtro de segmento de muestra "Autorizado provisionalmente en Cronómetro iOS (iOS) es verdadero" para dirigirte a los usuarios.]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
 Si los usuarios eligen "Desactivar" el push provisional, no verán más mensajes push provisionales tuyos. Tenga cuidado con el contenido y la cadencia de los mensajes enviados mediante esta función.
