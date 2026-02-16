@@ -185,7 +185,7 @@ Consulte o objeto de [propriedades de compra]({{site.baseurl}}/api/objects_filte
 
 ### Segmentação de propriedade de evento
 
-A segmentação de propriedades de eventos permite o direcionamento de usuários com base não apenas nos eventos personalizados realizados, mas também nas propriedades associadas a esses eventos. Isso adiciona opções de filtragem adicionais ao segmentar compras e eventos personalizados.
+A segmentação de propriedades de eventos permite o direcionamento de usuários com base não apenas em eventos personalizados realizados, mas também nas propriedades associadas a esses eventos. Isso adiciona opções de filtragem adicionais ao segmentar compras e eventos personalizados.
 
 ![Filtros de segmentação para propriedades de eventos de compra, exibindo opções para filtrar usuários com base em valores específicos de propriedades de eventos de compra, como a filtragem de usuários que compraram um produto com uma determinada propriedade dentro de um período definido.]({% image_buster /assets/img/purchase_event_property.png %}){: style="max-width:80%;margin-left:15px;"}
 
