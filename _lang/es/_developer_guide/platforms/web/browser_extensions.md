@@ -83,7 +83,7 @@ Para utilizar Braze dentro del script de fondo de tu extensión, añade la bibli
         "scripts": [
             "relative/path/to/braze.min.js",
             "background.js"
-        ],
+        ]
     }
 }
 ```
