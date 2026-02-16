@@ -360,6 +360,41 @@ Cuando utilices la integración push automática, `subscribeToUpdates(_:)` es la
 Crea tu suscripción a notificaciones push en `application(_:didFinishLaunchingWithOptions:)` para asegurarte de que tu suscripción se desencadena cuando un usuario final toca una notificación mientras tu aplicación está en estado finalizado.
 {% endalert %}
 
+## Gestión de notificaciones en primer plano
+
+Por defecto, cuando llega una notificación push mientras tu aplicación está en primer plano, iOS no la muestra automáticamente. Para mostrar notificaciones push en primer plano y seguirlas con los análisis Braze, llama al método `handleForegroundNotification(notification:)` dentro de tu implementación de `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)`.
+
+### Cómo funciona
+
+Cuando llamas a `handleForegroundNotification(notification:)`, Braze procesa la carga útil de la notificación para registrar los análisis y gestionar los vínculos profundos o las acciones de los botones. El comportamiento real de la visualización está controlado por la dirección `UNNotificationPresentationOptions` que pases al controlador de finalización.
+
+```swift
+import BrazeKit
+import UserNotifications
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+  func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+  ) {
+    // Let Braze process the notification payload
+    if let braze = AppDelegate.braze {
+      braze.notifications.handleForegroundNotification(notification: notification)
+    }
+    
+    // Control how the notification appears in the foreground
+    if #available(iOS 14.0, *) {
+      completionHandler([.banner, .list, .sound])
+    } else {
+      completionHandler([.alert, .sound])
+    }
+  }
+}
+```
+
+Para ver un ejemplo completo, consulta el [ejemplo de integración manual de notificaciones](https://github.com/braze-inc/braze-swift-sdk/blob/e31907eaa0dbd151dc2e6826de66cc494242ba60/Examples/Swift/Sources/PushNotifications-Manual/AppDelegate.swift#L1-L120) push en el repositorio de SDK de Braze Swift.
+
 ## Push primers {#push-primers}
 
 Las campañas push primer animan a tus usuarios a habilitar las notificaciones push de tu aplicación en sus dispositivos. Esto puede hacerse sin necesidad de personalizar el SDK utilizando nuestro [primer push sin código]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
@@ -384,7 +419,7 @@ Braze es compatible con la gestión de pasarelas de APN dinámicas para notifica
 
 Cuando una aplicación iOS se integra con el SDK Braze Swift, envía datos relacionados con el dispositivo, incluyendo [`aps-environment`](https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment) a la API del SDK Braze, si está disponible. El valor `apns_gateway` indica si la aplicación está utilizando el entorno APN de desarrollo (`dev`) o de producción (`prod`).
 
-Braze también almacena el valor de puerta de enlace comunicado para cada dispositivo. Si se recibe un nuevo valor de puerta de enlace válido, Braze actualiza automáticamente el valor almacenado.
+Braze también almacena el valor de puerta de enlace notificado para cada dispositivo. Si se recibe un nuevo valor de puerta de enlace válido, Braze actualiza automáticamente el valor almacenado.
 
 Cuando Braze envía una notificación push:
 
