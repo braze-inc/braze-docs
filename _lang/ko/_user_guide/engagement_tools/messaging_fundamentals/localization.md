@@ -141,7 +141,7 @@ Braze [콘텐츠 블록]({{site.baseurl}}/user_guide/engagement_tools/templates_
 {% subtab API %}
 
 다음 API 호출을 통해 카탈로그를 만듭니다:
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -175,7 +175,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs' \
 
 다음 API 호출을 통해 항목을 추가합니다:
 
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs/translations/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
