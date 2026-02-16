@@ -2,7 +2,7 @@
 nav_title: Nachricht 
 article_title: Nachricht 
 alias: "/message_step/"
-page_order: 5
+page_order: 11
 page_type: reference
 description: "In diesem Referenzartikel wird erläutert, wie Sie mit dem Schritt „Nachricht“ eine eigenständige Nachricht erstellen."
 tool: Canvas
