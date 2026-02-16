@@ -66,7 +66,7 @@ This approach is particularly useful for companies like mobile gaming firms that
 
 - [앱 인스턴스](#app-instances)
 - [Teams](#teams)
-- [Braze 사용자 권한](#braze-user-permissions) (Braze 사용자 제외)
+- 회사 사용자 [권한](#company-user-permissions) (회사 사용자 제외)
 - [전류 커넥터](#currents-connectors)
 - [사용자 프로필](#user-profiles) 및 관련 사용자 데이터
 - [세그먼트, 캠페인 및 캔버스](#segments-campaigns-and-canvases)
@@ -79,7 +79,7 @@ This approach is particularly useful for companies like mobile gaming firms that
 
 [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) can be set up across customer base location, language, and custom attributes so that team members and non-team members have different access to messaging features and customer data.
 
-#### Braze 사용자 권한
+#### 회사 사용자 권한
 
 워크스페이스에는 독립적인 액세스 및 사용자 권한 정의가 있습니다. [User permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) allow you to create granular controls regarding what an individual dashboard user or team has access to within a single workspace.
 
@@ -195,7 +195,7 @@ All persistent data associated with a user is stored in their [user profile]({{s
         <td>A user profile's subscription statuses are combined across app instances.<br><br><b>팁:</b> You could use <a href='/docs/user_guide/data/custom_data/custom_attributes'>custom attributes</a> to manage your users' subscriptions instead.</td>
     </tr>
     <tr>
-        <td>Braze 사용자 권한</td>
+        <td>회사 사용자 권한</td>
         <td>N/A</td>
         <td>Updating <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>user permissions</a> for a dashboard user must be done separately for each workspace the user needs access to.</td>
         <td><a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>User permissions</a> can be set once for a dashboard user, and they will have the same permissions for all app instances in the workspace.</td>
@@ -205,7 +205,7 @@ All persistent data associated with a user is stored in their [user profile]({{s
         <td>콘텐츠 복제</td>
         <td>N/A</td>
         <td>Cannot duplicate segments, push or Content Card campaigns, or Canvases across workspaces.</td>
-        <td>다음 지원되는 채널에 대해 workspaces]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) 에서 캠페인을 중복할 수 있습니다: SMS, in-app messages, email, email templates, and Content Blocks. <br><br>세그먼트, 캠페인 및 캔버스를 복제하여 한 앱 인스턴스에서 다른 앱 인스턴스로 콘텐츠를 재사용할 수 있습니다.</td>
+        <td>다음과 같은 지원되는 채널에 대해 <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>워크스페이스 간에 캠페인을 복제할</a> 수 있습니다: SMS, in-app messages, email, email templates, and Content Blocks. <br><br>세그먼트, 캠페인 및 캔버스를 복제하여 한 앱 인스턴스에서 다른 앱 인스턴스로 콘텐츠를 재사용할 수 있습니다.</td>
         <td>N/A</td>
     </tr>
     <tr>
