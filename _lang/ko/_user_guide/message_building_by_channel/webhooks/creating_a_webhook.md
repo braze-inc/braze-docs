@@ -143,7 +143,7 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 
 테스트 웹훅을 보내면 응답 메시지와 함께 대화 상자가 나타납니다. 웹훅 요청이 실패한 경우 오류 메시지를 참조하여 웹훅 문제 해결에 도움을 받으세요. 다음 예에서는 잘못된 웹훅 URL이 포함된 웹훅의 응답에 대해 자세히 설명합니다.
 
-```json
+```http
 404 Not Found
 
 {
