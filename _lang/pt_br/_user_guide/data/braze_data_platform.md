@@ -1,5 +1,5 @@
 ---
-nav_title: Plataforma de dados Braze
+nav_title: Plataforma de dados da Braze
 article_title: Visão geral da Braze Data Platform
 page_order: 0
 page_type: reference
