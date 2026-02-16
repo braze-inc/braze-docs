@@ -37,4 +37,24 @@ The specified account is either not HIPAA-compliant or on [Snowflake Editions](h
 
 The system may still be processing the deletion of your previous data share. Wait a few minutes for the deprovisioning process to complete, then try creating the new data share again.
 
+### How many times do I need to run `CREATE DATABASE` when I have multiple workspaces sharing data to the same Snowflake account?
+
+You need to run `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` only once. When multiple data shares from different Braze workspaces are shared to the same Snowflake account, they are automatically combined into the same share. After you create the initial database, data from additional workspaces is automatically added to the existing database without requiring additional share requests or database creation steps.
+
+For example, if you create a data share to Snowflake Account 123 from Workspace A, you accept the share request and create a database. When you later create a data share to the same Snowflake Account 123 from Workspace B, no new share request is sent—the data is immediately added to the existing share and becomes available in the previously created database.
+
+### If I have multiple workspaces, does a single database contain data from all of them?
+
+Yes. When you share data from multiple Braze workspaces to the same Snowflake account, all data is combined into a single share and available in the same database. You can filter the data by `app_group_id` to distinguish between workspaces.
+
+As a best practice, always filter by `app_group_id` in your queries to future-proof them. This ensures your dashboards and reports remain accurate if you add additional workspaces in the future. Without this filter, your metrics may unexpectedly include data from newly added workspaces.
+
+### What is the recommended approach for managing data from multiple workspaces in Snowflake?
+
+Send all Braze data into the same database and filter by `app_group_id` to distinguish between workspaces. This approach simplifies data management and ensures consistent reporting across your organization.
+
+### How many Snowflake Data Share Connectors do I need for multiple workspaces?
+
+The number of Connectors you need depends on your specific configuration and entitlements. Contact your Braze account team to learn more about which entitlements are right for your use case.
+
 
