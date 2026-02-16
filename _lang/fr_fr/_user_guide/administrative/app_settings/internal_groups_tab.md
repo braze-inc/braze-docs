@@ -35,7 +35,7 @@ Pour créer un groupe interne :
 | **Groupe initiateur**         | Envoi automatique d'une copie de l'e-mail à tous les membres du groupe initiateur lors de l'envoi.               |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Un groupe interne nommé "Email test group".]({% image_buster /assets/img_archive/internal_group.png %})
+![Un groupe interne nommé "Groupe de test e-mail".]({% image_buster /assets/img_archive/internal_group.png %})
 
 ### Ajout d’utilisateurs de test
 
@@ -87,7 +87,7 @@ Les e-mails d'initiateurs porteront la mention `[SEED]` au début de la ligne d'
 
 #### Comportement d’abonnement
 
-Les envois d'initiateurs sont destinés à l'assurance qualité et à l'examen internes. Ils contournent donc intentionnellement les vérifications d'abonnement des utilisateurs du tableau de bord d'initiateurs. Cela signifie que les utilisateurs disposant d'une adresse e-mail valide et faisant partie d'un groupe initiateur reçoivent le message même s'ils ne sont pas abonnés. Cependant, le message doit être configuré pour envoyer des initiateurs à ce groupe.
+Les envois d'initiateurs sont conçus pour l'assurance qualité et l'examen internes, de sorte qu'ils contournent intentionnellement les vérifications d'abonnement pour les utilisateurs de l'entreprise initiée. Cela signifie que les utilisateurs disposant d'une adresse e-mail valide et faisant partie d'un groupe initiateur reçoivent le message même s'ils ne sont pas abonnés. Cependant, le message doit être configuré pour envoyer des initiateurs à ce groupe.
 
 {% alert tip %}
 Si les membres de votre groupe initiateur signalent qu'ils ne voient pas le message dans leur boîte réception, vérifiez qu'ils figurent dans le groupe interne, que vos lignes d'objet sont différentes et que Gmail n'a pas regroupé les e-mails, ou demandez-leur de vérifier leurs dossiers de courrier indésirable.
