@@ -2,7 +2,7 @@
 nav_title: Atualização do usuário
 article_title: Atualização de usuário 
 alias: "/user_update/"
-page_order: 6
+page_order: 12
 page_type: reference
 description: "Este artigo de referência aborda o componente atualização do usuário e como usá-lo em seus canvas."
 tool: Canvas
