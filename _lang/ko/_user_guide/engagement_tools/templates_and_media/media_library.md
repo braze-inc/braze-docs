@@ -41,7 +41,7 @@ Later when drafting a message in Braze, you can pull in your images from the med
 
 ## 이미지 사양
 
-모든 이미지는 미디어 라이브러리에 업로드된 5MB 미만이어야 합니다. 지원되는 파일 형식은 PNG, JPEG, GIF 및 SVG입니다. 메시징 채널별 특정 이미지 추천은 다음 섹션을 참조하십시오.
+모든 이미지는 미디어 라이브러리에 업로드된 5MB 미만이어야 합니다. 지원되는 파일 형식은 PNG, JPEG, GIF, SVG 및 WebP입니다. 메시징 채널별 특정 이미지 추천은 다음 섹션을 참조하십시오.
 
 ### 콘텐츠 카드
 
