@@ -136,9 +136,7 @@ search_rank: 1
 
 **항목 제어에서** 캔버스가 실행되도록 예약할 때마다 사용자 수를 제한할 수 있습니다. API 트리거 기반 및 작업 기반 캔버스의 경우 이 제한은 매 UTC 시간마다 발생합니다. 
 
-{% alert important %}
-행동 기반 캠페인 또는 캔버스를 오디언스 필터(예: 변경된 속성 또는 커스텀 이벤트 수행)와 동일한 트리거로 구성하지 마세요. 트리거 이벤트를 수행할 때 사용자가 오디언스에 없는 [경합 조건이]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) 발생할 수 있으며, 이는 사용자가 캠페인을 수신하지 않거나 캔버스에 입장하지 못한다는 것을 의미합니다.
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Canvas race condition audience trigger' %}
 
 ##### 오디언스를 테스트 중
 
