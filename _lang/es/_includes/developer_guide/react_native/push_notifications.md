@@ -261,7 +261,67 @@ Para ver un ejemplo de integración, consulta nuestra aplicación de muestra [aq
 {% endtab %}
 {% endtabs %}
 
-### Paso 4: Enviar una notificación push de prueba
+### Paso 4: Gestionar notificaciones en primer plano
+
+La gestión de las notificaciones en primer plano funciona de forma diferente según tu plataforma y configuración. Elige el enfoque que se adapte a tu integración:
+
+{% tabs local %}
+{% tab iOS %}
+Para iOS, la gestión de notificaciones en primer plano es la misma que la integración nativa de Swift. Llama a `handleForegroundNotification(notification:)` dentro de tu implementación de `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)`.
+
+Para obtener detalles completos y ejemplos de código, consulta [Manejo de notificaciones en primer plano]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#handling-foreground-notifications) en la documentación de notificaciones push de Swift.
+{% endtab %}
+
+{% tab Android %}
+Para Android, la gestión de las notificaciones en primer plano es la misma que la integración nativa de Android. Llama a `BrazeFirebaseMessagingService.handleBrazeRemoteMessage` dentro de tu método `FirebaseMessagingService.onMessageReceived`.
+
+Para obtener detalles completos y ejemplos de código, consulta [Manejar notificaciones en primer plano]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) en la documentación sobre notificaciones push de Android.
+{% endtab %}
+
+{% tab Expo %}
+En el flujo de trabajo gestionado por Expo, no llamas directamente a los controladores de notificación nativos. En su lugar, utiliza la API de Notificaciones Expo para controlar la presentación en primer plano, mientras que el Plugin Braze Expo se encarga automáticamente del procesamiento nativo.
+
+```javascript
+import * as Notifications from 'expo-notifications';
+import Braze from '@braze/react-native-sdk';
+
+// Control foreground presentation in Expo
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,    // Show alert while in foreground
+    shouldPlaySound: false,
+    shouldSetBadge: false,
+  }),
+});
+
+// React to Braze push events
+const subscription = Braze.addListener('pushNotificationEvent', (event) => {
+  console.log('Braze push event', {
+    type: event.payload_type,   // "push_received" | "push_opened"
+    title: event.title,
+    url: event.url,
+    is_silent: event.is_silent,
+  });
+  // Handle deep links, custom behavior, etc.
+});
+
+// Handle initial payload when app launches via push
+Braze.getInitialPushPayload((payload) => {
+  if (payload) {
+    console.log('Initial push payload', payload);
+  }
+});
+```
+
+{% alert note %}
+En el flujo de trabajo gestionado por Expo, el complemento Braze Expo se encarga automáticamente del procesamiento push nativo. Puedes controlar la interfaz de usuario en primer plano mediante las opciones de presentación de las Notificaciones Expo que se muestran arriba.
+{% endalert %}
+
+Para las integraciones de flujo de trabajo desnudo, sigue en su lugar los enfoques nativos de iOS y Android.
+{% endtab %}
+{% endtabs %}
+
+### Paso 5: Enviar una notificación push de prueba
 
 En este punto, deberías poder enviar notificaciones a los dispositivos. Sigue los pasos siguientes para probar tu integración push.
 
