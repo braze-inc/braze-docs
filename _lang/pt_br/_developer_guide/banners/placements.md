@@ -11,7 +11,7 @@ platform:
   - React Native
 ---
 
-# Gerenciar a colocação de banners
+# Gerenciar posicionamentos de banners
 
 > Saiba como criar e gerenciar posicionamentos de banner no SDK do Braze, incluindo o acesso a suas propriedades exclusivas e o registro de impressões. Para saber mais sobre informações gerais, consulte [Sobre banners]({{site.baseurl}}/developer_guide/banners).
 
@@ -19,13 +19,13 @@ platform:
 
 {% multi_lang_include banners/placement_requests.md %}
 
-## Criação de um posicionamento
+## Criar um posicionamento
 
 ### Pré-requisitos
 
 Essas são as versões mínimas do SDK necessárias para criar posicionamentos de banner:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+{% multi_lang_include sdk_versions.md feature='banners' %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
@@ -504,9 +504,35 @@ Antes de lançar uma campanha de banner, você pode [enviar um banner de teste](
 Os banners de teste são como qualquer outro banner, exceto pelo fato de serem removidos na próxima sessão do app.
 {% endalert %}
 
-## Registro de impressões
+## Impressões de registros
 
 O Braze registra automaticamente as impressões dos Banners que estão à vista quando você usa os métodos do SDK para inserir um Banner - portanto, não há necessidade de rastrear as impressões manualmente.
+
+## Registro de cliques
+
+O método usado para registrar os cliques no Banner depende de como o Banner é renderizado e do local onde o manipulador de cliques está localizado.
+
+### Conteúdo do banner padrão (automático)
+
+Se estiver usando métodos SDK padrão e prontos para uso para inserir Banners, e seu Banner usar componentes padrão do editor (imagens, botões, texto), os cliques serão rastreados automaticamente. O SDK anexa ouvintes de cliques a esses elementos, e nenhum código adicional é necessário.
+
+### Blocos de código personalizados
+
+Se o seu banner usar o bloco do editor **de código personalizado** no dashboard do Braze, será necessário usar o site `brazeBridge.logClick()` para registrar os cliques a partir desse HTML personalizado. Isso se aplica mesmo ao usar os métodos do SDK para renderizar o Banner, porque o SDK não pode anexar automaticamente ouvintes a elementos dentro do seu código personalizado.
+
+```html
+<button onclick="brazeBridge.logClick()">
+  Click me
+</button>
+```
+
+Isso é semelhante à [ponte JavaScript]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) usada para mensagens no app em HTML. O site `brazeBridge` fornece uma camada de comunicação entre o HTML interno do Banner e o SDK do Braze.
+
+### Implementações de interface do usuário personalizadas (sem cabeça)
+
+Se estiver criando uma interface do usuário totalmente personalizada usando as [propriedades personalizadas](#custom-properties) do banner em vez de renderizar o HTML do banner, será necessário registrar manualmente os cliques (e impressões) no código do aplicativo. Como o SDK não está renderizando o Banner, ele não tem como rastrear automaticamente as interações com seus elementos de IU personalizados.
+
+Use o método `logClick()` no objeto Banner.
 
 ## Dimensões e dimensionamento
 
@@ -530,7 +556,7 @@ Você precisará [adicionar propriedades personalizadas]({{site.baseurl}}/user_g
 
 {% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 reactnative:17.0.0 flutter:15.1.0 %}
 
-### Acesso a propriedades personalizadas
+### Acessar propriedades personalizadas
 
 Para acessar as propriedades personalizadas de um banner, use um dos seguintes métodos com base no tipo de propriedade definido no dashboard. Se a chave não corresponder a uma propriedade desse tipo ou não existir, o método retornará `null`.
 
