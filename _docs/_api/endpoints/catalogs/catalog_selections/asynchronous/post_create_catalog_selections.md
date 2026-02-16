@@ -36,7 +36,19 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 | Parameter   | Required | Data Type | Description                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `selection` | Required | Object    | An object that contains selection criteria. The selection objects could contain `name`, `description`, `filters`, `results_limit`, `sort_field`, and `sort_order`. |
+| `selection` | Required | Object    | An object that contains selection criteria. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+### Selection object
+
+| Parameter       | Required | Data Type | Description                                                                                                                                                                                                  |
+| --------------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`          | Required | String    | The name of the selection.                                                                                                                                                                                   |
+| `description`   | Optional | String    | A description of the selection.                                                                                                                                                                              |
+| `filters`       | Optional | Array     | An array of filter objects. Each filter object must contain `field`, `operator`, and `value`. See [filter operators](#filter-operators) for supported operators. A maximum of four filters can be included.   |
+| `results_limit` | Optional | Integer   | The maximum number of results to return. Must be a number between 1 and 50.                                                                                                                                 |
+| `sort_field`    | Optional | String    | The field to sort results by. Must be paired with `sort_order`. If `sort_field` and `sort_order` are not both present, results are returned in a random order.                                               |
+| `sort_order`    | Optional | String    | The direction to sort results. Accepted values are `asc` or `desc`. Must be paired with `sort_field`. If `sort_field` and `sort_order` are not both present, results are returned in a random order.         |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example Request
@@ -60,7 +72,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
         "operator": "greater than",
         "value": 7
       }
-    ]
+    ],
+    "results_limit": 5,
+    "sort_field": "Rating",
+    "sort_order": "desc"
   }
 }'
 ```
