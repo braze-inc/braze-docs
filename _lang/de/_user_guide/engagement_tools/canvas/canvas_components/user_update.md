@@ -2,7 +2,7 @@
 nav_title: "Nutzer:in-Update"
 article_title: Nutzeraktualisierung 
 alias: "/user_update/"
-page_order: 6
+page_order: 12
 page_type: reference
 description: "Dieser Referenzartikel behandelt die Komponente Nutzer:in Update und wie Sie sie in Ihren Canvase verwenden können."
 tool: Canvas
