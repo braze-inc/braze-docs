@@ -223,7 +223,7 @@ Pour gérer les liens profonds lorsque vous utilisez Jetpack Compose avec NavHos
         )
     }
     ```
-3. En fonction de l'architecture de votre application, il se peut que vous deviez également gérer la nouvelle intention envoyée à votre activité en cours.
+3. En fonction de l'architecture de votre application, il se peut que vous deviez également gérer la nouvelle intention envoyée à votre activité actuelle.
     ```kotlin
     DisposableEffect(Unit) {
         val listener = Consumer<Intent> {
