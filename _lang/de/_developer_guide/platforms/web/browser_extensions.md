@@ -83,7 +83,7 @@ Um Braze im Hintergrundskript Ihrer Erweiterung zu verwenden, fügen Sie die Bib
         "scripts": [
             "relative/path/to/braze.min.js",
             "background.js"
-        ],
+        ]
     }
 }
 ```
