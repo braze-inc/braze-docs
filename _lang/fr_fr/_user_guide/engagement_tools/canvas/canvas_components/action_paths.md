@@ -2,7 +2,7 @@
 nav_title: "Parcours d'action"
 article_title: Parcours d’actions 
 alias: /action_paths/
-page_order: 0.1
+page_order: 1
 page_type: reference
 description: "Cet article de référence explique comment utiliser les parcours d’action, un composant qui vous permet de trier les utilisateurs en fonction de leurs actions."
 tool: Canvas
