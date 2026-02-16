@@ -63,7 +63,7 @@ A Ingestão de Dados na Nuvem suporta os seguintes tipos de dados:
 
 ## Identificadores de usuários para ingestão de dados
 
-Ao sincronizar os dados de usuários por meio da ingestão de dados na nuvem, é possível identificar os usuários usando um ou mais dos seguintes tipos de identificadores. Cada linha em sua tabela de origem deve conter um valor para apenas um tipo de identificador por vez, mas sua tabela pode incluir colunas para um, dois, três, quatro ou todos os cinco tipos de identificadores.
+Ao sincronizar dados de usuários por meio do Cloud Data Ingestion, é possível identificar usuários usando um ou mais dos seguintes tipos de identificadores. Cada linha em sua tabela de origem deve conter um valor para apenas um tipo de identificador por vez, mas sua tabela pode incluir colunas para um, dois, três, quatro ou todos os cinco tipos de identificadores.
 
 | Identificador | Descrição |
 |------------|-------------|
