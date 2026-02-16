@@ -64,5 +64,18 @@ Vous pouvez filtrer vos données par :
 Les données présentées dans le tableau de bord de l' **utilisation des messages** se situent au niveau du contrat et ne se rapportent pas à une entreprise ou à un espace de travail particulier. Ces données reflètent l'utilisation de tous les espaces de travail de votre tableau de bord, et potentiellement de tous les tableaux de bord (si vous en avez plusieurs).
 {% endalert %}
 
-- Les données sous-jacentes sont fournies quotidiennement, les tableaux de données étant actualisés à 3 heures, 9 heures, 12 heures et 18 heures (heure de l'Est). La mise à jour du tableau de bord de l'**utilisation des messages** peut prendre plus de 48 heures après les modifications afin de laisser le temps aux données de se synchroniser.
+- Les données sous-jacentes sont fournies quotidiennement, les tableaux de données étant actualisés à 3 heures, 9 heures, 12 heures et 18 heures (heure de l'Est). La mise à jour du tableau de bord de l'**envoi des messages** peut prendre plus de 24 heures.
 - Braze suit la méthode d'arrondi standard : les chiffres sont arrondis au dixième le plus proche.
+
+### Sélection de la plage de dates
+
+Le tableau de bord de l'**utilisation des messages** exclut des résultats la date de fin de la plage sélectionnée. Par exemple, si vous sélectionnez la période du 1er au 31 octobre, les statistiques d'utilisation du 31 octobre sont exclues. Pour inclure le dernier jour de la période souhaitée, prolongez la plage d'un jour. Par exemple, pour inclure tout le mois d'octobre, sélectionnez la période du 1er octobre au 1er novembre.
+
+### Comparaison avec des fournisseurs tiers
+
+Lorsque vous comparez les données d'envoi des messages de Braze avec celles de fournisseurs tiers (tels qu'Infobip), gardez à l'esprit ce qui suit :
+
+- **Segments de messages vs messages :** Braze compte les messages SMS par segments. Un message SMS unique qui est divisé en plusieurs segments (par exemple, en raison de sa longueur) est compté comme plusieurs segments dans Braze. Pour plus d'informations, consultez les [calculateurs de facturation SMS et RCS.]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/)
+- **Envois de messages basés sur le crédit ou non :** Le tableau de bord comprend à la fois des messages basés sur des crédits et des messages non basés sur des crédits. Les fournisseurs tiers peuvent ne comptabiliser que les messages basés sur le crédit, ce qui peut entraîner des divergences dans les totaux.
+- **Inbound vs outbound**: Assurez-vous que vous comparez les mêmes types de messages. Certains tableaux de bord tiers incluent les messages entrants et sortants dans leurs totaux, tandis que Braze vous permet de filtrer par direction.
+- **Alignement des dates**: Comme le tableau de bord exclut la date de fin, les comparaisons au jour le jour peuvent être plus proches que des plages de dates plus longues. Si vous comparez des données pour une période spécifique, étendez votre plage de dates Braze d'un jour afin d'inclure le dernier jour de votre période de comparaison.
