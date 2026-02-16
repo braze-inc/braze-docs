@@ -27,6 +27,8 @@ Cuando se detiene un Canvas, o se archiva, o se elimina un paso, cualquier usuar
 
 Las propiedades de un paso de Canvas se pueden cambiar después del lanzamiento, e incluso después de que un usuario pase por el paso. Los usuarios recibirán siempre una versión dinámica y en tiempo real de la bandera de características, en lugar de la versión antigua guardada previamente.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## Sobrescribir propiedades
 
 Al crear una bandera de característica se especifican las propiedades por defecto. Al configurar un paso del Lienzo de marcado de funciones, puede mantener los valores predeterminados o sobrescribir los valores para los usuarios que entren en este paso.
@@ -40,4 +42,3 @@ Vaya a **Mensajería** > **Indicadores de funciones** para editar, añadir o eli
 El lienzo y el despliegue de una bandera de características (arrastrando el control deslizante) pueden funcionar independientemente el uno del otro. Una advertencia importante es que la entrada a un paso de Canvas sobrescribirá cualquier configuración de rollout por defecto. Esto significa que si un usuario no cumple los requisitos para una bandera de función, un paso de Canvas puede habilitar la función para ese usuario.
 
 Del mismo modo, si un usuario cumple los requisitos para el despliegue de una bandera de características con determinadas propiedades, si también entra en el paso del lienzo, recibirá cualquier valor sobrescrito de ese paso del lienzo.
-
