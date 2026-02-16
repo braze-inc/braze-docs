@@ -7,10 +7,10 @@ page_order: 2.0
 
 # ![Braze Logo]({% image_buster /assets/Braze_Primary_Icon_BLACK.svg %}){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze SDKを統合する。
 
-> Braze SDKをモバイルアプリに統合する方法を学習。各SDKは、独自のGitHub公開リポジトリでホストされており、Brazeの機能をテストしたり、独自のアプリケーションと一緒に実装したりするために使用できる、完全にビルド可能なサンプルアプリが含まれている。詳しくは、[参照資料、リポジトリ、サンプルアプリ]({{site.baseurl}}/developer_guide/references/)を参照してください。SDK に関する一般的な情報については、[はじめに] を参照してください。統合の概要]({{site.baseurl}}/developer_guide/getting_started/integration_overview/)。
+> Braze SDKの統合方法を学習する。各SDKは、独自のGitHub公開リポジトリでホストされており、Brazeの機能をテストしたり、独自のアプリケーションと一緒に実装したりするために使用できる、完全にビルド可能なサンプルアプリが含まれている。詳しくは、[参照資料、リポジトリ、サンプルアプリ]({{site.baseurl}}/developer_guide/references/)を参照してください。SDK に関する一般的な情報については、[はじめに] を参照してください。統合の概要]({{site.baseurl}}/developer_guide/getting_started/integration_overview/)。
 
 {% alert tip %}
-
+SDKを統合した後、[SDK認証を]({{site.baseurl}}/developer_guide/sdk_integration/authentication/)イネーブルメントにすることで、不正なSDKリクエストを防止し、セキュリティのレイヤーを追加することができる。SDK認証は、Web、Android、Swift、React Native、Flutter、Unity、Cordova、.NET MAUI（Xamarin）、Expoで利用できる。
 {% endalert %}
 
 {% sdktabs %}
