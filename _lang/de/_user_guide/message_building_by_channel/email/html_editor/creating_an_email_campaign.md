@@ -106,7 +106,7 @@ Im rechten Panel wird eine Vorschau mit Ihren Sendeinformationen eingeblendet. D
 
 #### Erweitert
 
-Schalten Sie unter **Sendeeinstellungen** > **Erweitert** Inline-CSS ein und fügen Sie eine Personalisierung für E-Mail-Kopfzeilen und E-Mail-Extras hinzu, um zusätzliche Daten an andere E-Mail-Dienstleister zurückzusenden.
+Schalten Sie unter **Sendeeinstellungen** > **Erweitert** Inline-CSS ein und fügen Sie die Personalisierung für E-Mail-Kopfzeilen und E-Mail-Extras hinzu, um zusätzliche Daten an andere E-Mail-Dienstleister zu senden.
 
 ##### E-Mail-Kopfzeilen
 
@@ -241,6 +241,10 @@ Als nächstes stellen Sie [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_
 Sie können Ihre Kampagne auch nur an Benutzer senden, die einen bestimmten [Abonnementstatus]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) haben, z. B. an diejenigen, die ein Abonnement abgeschlossen und sich für E-Mails angemeldet haben.
 
 Optional können Sie auch die Zustellung auf eine bestimmte Anzahl von Nutzern innerhalb des Segments beschränken oder zulassen, dass Nutzer die gleiche Nachricht bei einer Wiederholung der Kampagne zweimal erhalten.
+
+{% alert note %}
+Wenn Sie eine neue E-Mail-Kampagne erstellen, ist die Kontrollgruppe standardmäßig auf 20% eingestellt und kann nach Bedarf für Ihre Kampagne angepasst oder entfernt werden.
+{% endalert %}
 
 ##### Mehrkanalige Kampagnen mit E-Mail und Push
 
