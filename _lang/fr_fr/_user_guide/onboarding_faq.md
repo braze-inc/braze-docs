@@ -572,7 +572,7 @@ Pour planifier un rapport d’engagement récurrent, faites ce qui suit :
 3. Ajoutez les [campagnes et les messages Canvas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individuellement ou [par étiquette]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) que vous souhaitez compiler dans votre rapport.
 4. [Ajoutez des statistiques]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) à votre rapport.
 5. Sélectionnez la compression et le délimiteur pour votre rapport.
-6. Entrez les adresses e-mail des utilisateurs de Braze qui recevront ce rapport.
+6. Saisissez les adresses e-mail des utilisateurs de l'entreprise qui doivent recevoir ce rapport.
 7. Sélectionnez la [période]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) à partir de laquelle vous souhaitez que votre rapport exécute des données.
 8. Sélectionnez les [intervalles (quotidiens, hebdomadaires, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display) auxquels vous souhaitez voir la ventilation de vos données.
 9. Indiquez si le rapport doit être [envoyé immédiatement]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) ou à une [date future spécifiée]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
