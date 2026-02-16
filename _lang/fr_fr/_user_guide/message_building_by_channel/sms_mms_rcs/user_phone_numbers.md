@@ -41,7 +41,7 @@ Lorsque vous importez des numéros de téléphone, il est important de respecter
 - [Utilisation de l'endpoint `/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track)
 
 {% alert important %}
-Les numéros de téléphone des utilisateurs s'affichent dans Braze sous la forme d'une chaîne de caractères. Si vous importez un nombre qui contient des non chiffres (tels que `,`, `-`, `(`, ou autres), les non chiffres seront supprimés lors du rendu dans Braze. Par exemple, l'importation de `+1 (724) 123-4567` s'affichera sous la forme `17241234567`.
+Les numéros de téléphone des utilisateurs apparaissent dans Braze sous la forme d'une chaîne de caractères. Si vous importez un nombre qui contient des non chiffres (tels que `,`, `-`, ou `(`) autres que le premier {% raw %}`+`{% endraw %}, les non chiffres sont supprimés lors du rendu dans Braze. Par exemple, l'importation de `+1 (724) 123-4567` apparaît sous la forme `+17241234567`.
 {% endalert %}
 
 ## Gestion des numéros de téléphone non valides
