@@ -112,7 +112,9 @@
 
 ### 画像
 
-`Image` エディター・ブロックの詳細については、以下の表を参照のこと。ダイナミック画像 (Liquid 使用画像) については、自動幅設定を使用するためのフォールバック画像を設定する必要があります。"画像仕様については、[メール "画像仕様]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email)を参照してください。
+`Image` エディター・ブロックの詳細については、以下の表を参照のこと。ダイナミックな "画像 s (リキッドまたは接続コンテンツを含む"画像 s) の場合、自動幅設定s を使用するようにフォールバック "画像を設定する必要があります。"画像仕様については、[メール "画像仕様]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email)を参照してください。
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 | プロパティ | 説明 |
 |---|---|
