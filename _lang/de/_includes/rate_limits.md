@@ -141,7 +141,7 @@ Dieser Endpunkt hat ein Rate-Limit von 100 Anfragen pro Minute.
 
 <!---Additional if statement for Messaging endpoints-->
 
-{% if include.category == "message endpoints" %}
+{% if include.category == "Nachrichtenendpunkte" %}
 
 Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/api/api_limits/#batching-api-requests). Eine einzelne Anfrage an die Messaging-Endpunkte kann eines der folgenden Ziele erreichen:
 
@@ -151,7 +151,7 @@ Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/ap
 
 {% endif %}
 
-{% if include.category == "send messages endpoints" %}
+{% if include.category == "Nachrichten senden Endpunkte" %}
 
 Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/api/api_limits/#batching-api-requests). Eine einzelne Anfrage an die Messaging-Endpunkte kann eines der folgenden Ziele erreichen:
 
