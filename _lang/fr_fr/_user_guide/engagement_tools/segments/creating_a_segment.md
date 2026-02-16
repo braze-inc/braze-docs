@@ -39,9 +39,7 @@ Par exemple, si vous souhaitez envoyer un message in-app uniquement aux appareil
 
 Ajoutez au moins un filtre à votre segmentation. Vous pouvez combiner autant de filtres que vous le souhaitez pour rendre votre segmentation plus spécifique. 
 
-{% alert note %}
-Braze ne crée pas de profils pour les utilisateurs tant qu’ils n’ont pas utilisé l’application une première fois, ce qui signifie que vous ne pouvez pas cibler des utilisateurs qui n’ont pas encore ouvert votre application.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Segment profiles first app use' %}
 
 #### Groupes de filtres
 
