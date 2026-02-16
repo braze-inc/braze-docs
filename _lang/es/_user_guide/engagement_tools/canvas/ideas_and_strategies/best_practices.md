@@ -23,7 +23,11 @@ tool: Canvas
 Desbloquee nuevas combinaciones de recorridos de usuario con [componentes Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/).
 - Divide a tus usuarios con la [División de decisiones]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) y crea flujos de trabajo diferentes.
 - Espacia tus recorridos de usuario con un paso de [Retraso]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/).
-- Añade [mensajes independientes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) donde quieras en tu flujo Canvas. 
+- Añade [mensajes independientes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) donde quieras en tu flujo Canvas.
+
+{% alert note %}
+Los pasos en Canvas sólo pueden hacer avanzar a los usuarios en el flujo. No puedes configurar un Canvas para enlazar un paso con un paso anterior, ya que esto enviaría a los usuarios hacia atrás. Esta validación garantiza que los usuarios avancen en una única dirección a través de tu Canvas.
+{% endalert %}
 
 ## Crea mensajes más enriquecidos
 
