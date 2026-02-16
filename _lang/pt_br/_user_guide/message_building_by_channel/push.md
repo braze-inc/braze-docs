@@ -4,7 +4,7 @@ article_title: Push
 page_order: 4
 layout: dev_guide
 guide_top_header: "Push"
-guide_top_text: "As notificações por push são uma maneira comprovada de enviar chamadas para ação sensíveis ao tempo através de dispositivos móveis ou web, além de reengajar usuários que não acessam o app há algum tempo. Elas direcionam o usuário diretamente ao conteúdo e demonstram o valor do seu aplicativo. As notificações por push são úteis para levar os usuários a um lugar específico, mas você deve usá-las com sabedoria. <br><br> Leia qualquer um dos artigos a seguir ou confira nosso [curso Push Braze Learning] (https://learning.braze.com/messaging-channels-push) para saber para quem você pode enviar um push, como enviá-lo e quais recursos avançados de push o Braze oferece. Para exemplos de notificações por push, confira nossas [histórias de clientes](https://www.braze.com/customers)."
+guide_top_text: "As notificações por push são uma maneira comprovada de enviar chamadas para ação sensíveis ao tempo através de dispositivos móveis ou web, além de reengajar usuários que não acessam o app há algum tempo. Elas direcionam o usuário diretamente para o conteúdo e demonstram o valor do seu aplicativo. As notificações por push são úteis para levar os usuários a um lugar específico, mas você deve usá-las com sabedoria. <br><br> Leia qualquer um dos artigos a seguir ou confira nosso [curso Push Braze Learning] (https://learning.braze.com/messaging-channels-push) para saber para quem você pode enviar um push, como enviá-lo e quais recursos avançados de push o Braze oferece. Para exemplos de notificações por push, confira nossas [histórias de clientes](https://www.braze.com/customers)."
 description: "Essa landing page abriga as mensagens push. Aqui, você pode encontrar artigos sobre tipos de push, registro de push, capacitação de push, push primers, relatórios de push e muito mais."
 channel:
   - push
@@ -75,7 +75,7 @@ Notificações por push são uma ótima ferramenta para atrair novos usuários e
 | Ofertas Sensíveis ao Tempo | Se você tem uma oferta com tempo limitado, às vezes o push é uma ótima maneira de informar seus usuários sobre isso antes que expire. Essas mensagens geralmente carregam um alto senso de urgência e são ideais para lembrar os usuários que recentemente deixaram de usar seu app.<br><br> Por exemplo, suponha que seu app seja um jogo e você ofereça aos seus usuários um bônus de moeda no jogo se eles mantiverem uma sequência de jogar o jogo diariamente. Alertar um usuário de que a sequência está em perigo de ser quebrada pode ser um push razoável se eles excederem um certo número de dias. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para saber mais sobre como reengajar usuários inativos, veja nossa página [Quick Wins]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) sobre o assunto.
+Para mais informações sobre como reengajar usuários inativos, veja nossa página [Quick Wins]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) sobre o assunto.
 
 ## Pré-requisitos para usar push
 
