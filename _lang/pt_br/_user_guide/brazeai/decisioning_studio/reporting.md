@@ -1,17 +1,17 @@
 ---
-nav_title: Relatórios e Insights
-article_title: Relatórios e Insights
-page_order: 3
+nav_title: Relatórios e insights
+article_title: Relatórios e insights
 description: "Saiba como visualizar os relatórios do BrazeAI Decisioning Studio™ na Braze, para que você possa entender como as decisões baseadas em IA afetam suas campanhas."
+page_order: 3
 ---
 
-# Relatórios e Insights
+# Relatórios e insights
 
 > Saiba como visualizar os relatórios do BrazeAI Decisioning Studio™ na Braze, para que você possa entender como as decisões baseadas em IA afetam suas campanhas. Desde as métricas de desempenho até a integridade dos dados e as alterações no sistema, esses relatórios ajudam você a entender os resultados, solucionar problemas e tomar decisões informadas com confiança.
 
 ## Pré-requisitos
 
-Antes de poder visualizar os relatórios do Decisioning Studio na Braze, você precisará:
+Antes de poder visualizar os relatórios do Decisioning Studio no Braze, você precisará:
 
 - Ter um contrato ativo para a Braze e o BrazeAI Decisioning Studio™. 
 - Entrar em contato com seu CSM para habilitar o BrazeAI Decisioning Studio™ para você.
@@ -19,7 +19,7 @@ Antes de poder visualizar os relatórios do Decisioning Studio na Braze, você p
 
 ## Visualização de relatórios {#view}
 
-Para visualizar métricas de agentes de um estúdio de decisão na Braze, acesse **AI Decisioning** > **BrazeAI Decisioning Studio™** e, em seguida, selecione um agente.
+Para visualizar as métricas de um agente do Decisioning Studio no Braze, acesse **IA Decisioning** > **BrazeAI Decisioning Studio™** e, em seguida, selecione um agente.
 
 ![Tela inicial de relatórios do BrazeAI Decisioning Studio™ mostrando um dashboard com vários cartões de relatório. Cada cartão exibe um tipo de relatório, como Desempenho, Insights, Diagnóstico e Linha do tempo, com breves descrições e ícones para cada um.]( {% image_buster /assets/img/decisioning_studio/reporting_home.png %} )
 
@@ -41,7 +41,7 @@ Para definir ou excluir datas, selecione <i class="fa-solid fa-gear"></i> **Sett
 
 ### Performance
 
-O relatório de performance oferece métricas de alto nível que comparam grupos de tratamento (da Braze) a um ou mais grupos de controle (como receita). Ele permite duas visões diferentes: **Tendências** e **Driver Tree**.
+O relatório de performance oferece métricas de agente de alto nível que comparam grupos de tratamento (do Braze) a um ou mais grupos de controle (como receita). Ele permite duas visões diferentes: **Tendências** e **Driver Tree**.
 
 Por padrão, o relatório usa a visualização **Tendências**, que compara o desempenho do BrazeAI™ ao longo do tempo em relação aos seus grupos de controle e acompanha a evolução do aumento.
 
@@ -63,7 +63,7 @@ Para comparar o desempenho entre dois grupos, use os menus suspensos para seleci
 
 ### Insights
 
-Os insights mostram como são geradas as várias opções de recomendação em seu banco de ações, como SL ou seleção de blocos. Há dois relatórios de insights diferentes: **Preferências do agente** e **SHAPs**.
+Os insights mostram como são geradas as várias opções de recomendação em seu banco de ações, como a seleção de blocos. Há dois relatórios de insights diferentes: **Preferências do agente** e **SHAPs**.
 
 {% tabs local %}
 {% tab agent preferences %}
@@ -76,7 +76,7 @@ Consulte a tabela a seguir para saber mais sobre esse relatório:
 | Campo | Descrição |
 |-------|-------------|
 | Dimensão | O atributo usado para organizar os resultados, como canal, campanha ou plataforma. |
-| Grupo de comparação | Os grupos que você deseja comparar em seu relatório. Você pode selecionar vários grupos de comparação, até NUM. |
+| Grupo de comparação | Os grupos que você deseja comparar em seu relatório. Você pode selecionar vários grupos de comparação. |
 | Parâmetro | A métrica aplicada a esse atributo, como aberturas, cliques ou taxa de conversão. |
 | Segmento | O [segmento de público-alvo]({{site.baseurl}}/user_guide/engagement_tools/segments/) que você criou na Braze. |
 | Opção             | A opção de recomendação específica selecionada no banco de ações. |
@@ -87,9 +87,9 @@ Consulte a tabela a seguir para saber mais sobre esse relatório:
 {% endtab %}
 
 {% tab shaps %}
-O relatório **SHAPs** usa o modelo Shapley Additive exPlanations (SHAP) para ajudá-lo a quantificar como cada recurso ou variável contribui para o seu modelo de recomendação. Cada ponto no gráfico representa um SHAP e a distribuição dos pontos representa uma noção geral do impacto direcional de um recurso.
+O relatório **SHAPs** usa o modelo Shapley Additive exPlanations (SHAP) para ajudá-lo a quantificar como cada recurso ou variável contribui para o seu agente de recomendação. Cada ponto no gráfico representa um SHAP e a distribuição dos pontos representa uma noção geral do impacto direcional de um recurso.
 
-![Gráfico de relatório de SHAPs que exibe um gráfico de barras horizontais com várias barras coloridas representando diferentes recursos ou variáveis. Cada barra mostra o impacto de um recurso no modelo de recomendação, com o eixo x rotulado como valor SHAP e o eixo y listando os nomes dos recursos, como Recency, Frequency e Channel. O gráfico visualiza como cada recurso contribui positiva ou negativamente para as previsões do modelo.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
+![Gráfico de relatório de SHAPs que exibe um gráfico de barras horizontais com várias barras coloridas representando diferentes recursos ou variáveis. Cada barra mostra o impacto de um recurso no agente de recomendação, com o eixo x rotulado como valor SHAP e o eixo y listando os nomes dos recursos, como Recency, Frequency e Channel. O gráfico visualiza como cada recurso contribui positiva ou negativamente para as previsões do agente.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -108,7 +108,7 @@ O relatório de diagnóstico de saída mostra o volume diário de recomendaçõe
 
 {% tab inbound %}
 
-O relatório de diagnóstico de entrada monitora a integridade de seus feeds de dados no BrazeAI™. Ele rastreia detalhes como contagens de arquivos, tamanhos e volumes de linhas para cada ativo, ajudando a confirmar que os dados estão fluindo conforme o esperado e a solucionar problemas antes que eles afetem seus modelos ou campanhas.
+O relatório de diagnóstico de entrada monitora a integridade de seus feeds de dados no BrazeAI™. Ele rastreia detalhes como contagens de arquivos, tamanhos e volumes de linhas para cada ativo, ajudando-o a confirmar que os dados estão fluindo conforme o esperado e a solucionar problemas antes que eles afetem seus agentes ou campanhas.
 
 Use o menu suspenso para selecionar diferentes métricas de gráfico, como tamanho médio de arquivo ou contagem de arquivos.
 
@@ -132,16 +132,16 @@ Consulte a tabela a seguir para saber mais sobre cada métrica no relatório de 
 
 ### Linha do tempo
 
-O relatório de linha do tempo fornece um registro visual dos principais eventos juntamente com as métricas de desempenho. Esses eventos incluem execuções de modelos, alterações de configuração, atualizações de grades de proteção e muito mais. As anotações são exibidas diretamente nos gráficos de elevação e em uma guia de linha do tempo dedicada, oferecendo contexto instantâneo para mudanças nos resultados sem a necessidade de rastrear alterações históricas.
+O relatório de linha do tempo fornece um registro visual dos principais eventos juntamente com as métricas de desempenho. Esses eventos incluem execuções de agentes, alterações de configuração, atualizações de guardrail e muito mais. As anotações são exibidas diretamente nos gráficos de elevação e em uma guia de linha do tempo dedicada, oferecendo contexto instantâneo para mudanças nos resultados sem a necessidade de rastrear alterações históricas.
 
-![Relatório de linha do tempo mostrando um gráfico com métricas de performance ao longo do tempo. Os principais eventos, como execuções de modelos, alterações de configuração e atualizações de grades de proteção, são marcados como ícones ao longo da linha do tempo. Abaixo do gráfico, uma tabela lista os eventos com colunas para data, tipo, rótulo, detalhes e visibilidade nos gráficos.]({% image_buster /assets/img/decisioning_studio/reporting_timeline.png %})
+![Relatório de linha do tempo mostrando um gráfico com métricas de performance ao longo do tempo. Os principais eventos, como execuções de agentes, alterações de configuração e atualizações de grades de proteção, são marcados como ícones ao longo da linha do tempo. Abaixo do gráfico, uma tabela lista os eventos com colunas para data, tipo, rótulo, detalhes e visibilidade nos gráficos.]({% image_buster /assets/img/decisioning_studio/reporting_timeline.png %})
 
 Para comparar o desempenho entre dois grupos, use os menus suspensos para selecionar os critérios de comparação desejados. Consulte a tabela a seguir para saber mais:
 
 | Campo | Descrição |
 |-------|-------------|
 | Data | A data em que o evento ocorreu. |
-| Tipo | A categoria do evento, como atualização do sistema, execução de modelo ou alteração de configuração. |
+| Tipo | A categoria do evento, como atualização do sistema, execução do agente ou alteração de configuração. |
 | Rótulo | O nome ou identificador dado ao evento. |
 | Informações | Informações adicionais que descrevem o evento. |
 | Visível em gráficos | Indica se o evento é exibido em gráficos relacionados. |
