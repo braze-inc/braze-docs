@@ -2,7 +2,7 @@
 nav_title: Jornadas de ação
 article_title: Jornadas de ação 
 alias: /action_paths/
-page_order: 0.1
+page_order: 1
 page_type: reference
 description: "Este artigo de referência cobre como usar jornadas de ação, um componente que permite classificar os usuários com base em suas ações."
 tool: Canvas
@@ -75,7 +75,7 @@ Se os usuários entrarem em uma jornada de ação várias vezes e tiverem vária
 
 | Status de Classificação | Comportamento da jornada de ação |
 |---|--------------|
-| **Off** | Quando uma ação relevante é realizada, o Braze deduplica as entradas e avança imediatamente a entrada mais antiga através do grupo de ações relevantes. <br><br/> Quando uma ação relevante não é realizada, todas as entradas avançam no final da janela de avaliação relevante. Nenhuma deduplicação ocorre. |
+| **Off** | Quando uma ação relevante é realizada, a Braze deduplica as entradas e avança imediatamente a entrada mais antiga através do grupo de ações relevantes. <br><br/> Quando uma ação relevante não é realizada, todas as entradas avançam no final da janela de avaliação relevante. Nenhuma deduplicação ocorre. |
 | **On** | Todas as entradas avançam no final da janela de avaliação relevante. Nenhuma deduplicação ocorre. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
