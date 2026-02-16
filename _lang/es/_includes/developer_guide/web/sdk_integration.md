@@ -12,7 +12,7 @@ Puedes integrar el SDK Braze Web utilizando los siguientes métodos. Para más o
 - **Google Tag Manager:** Una solución sin código que te permite integrar el SDK de Web Braze sin modificar el código de tu sitio. Para más información, consulta [Google Tag Manager con el SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/google_tag_manager/).
 
 {% alert important %}
-Recomendamos utilizar el [método de integración NPM]({{site.baseurl}}/developer_guide/sdk_integration/?subtab=package%20manager&sdktab=web). Las ventajas incluyen el almacenamiento local de las bibliotecas SDK en tu sitio web, la inmunidad frente a las extensiones de bloqueo de anuncios y la contribución a tiempos de carga más rápidos como parte de la compatibilidad con el bundler.
+Te recomendamos que utilices el [método de integración NPM]({{site.baseurl}}/developer_guide/sdk_integration/?subtab=package%20manager&sdktab=web). Las ventajas incluyen el almacenamiento local de las bibliotecas SDK en tu sitio web, la inmunidad frente a las extensiones bloqueadoras de publicidad y la contribución a tiempos de carga más rápidos como parte de la compatibilidad con el bundler.
 {% endalert %}
 
 {% tabs local %}
@@ -61,6 +61,10 @@ La configuración predeterminada de **Evitar el seguimiento de sitios cruzados**
 ### Paso 2: Inicializar el SDK
 
 Una vez añadido el SDK para Web Braze a tu sitio web, inicializa la biblioteca con la clave de API y la [URL del punto final SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) que encontrarás en **Configuración** > **Configuración de la aplicación** dentro de tu panel Braze. Para obtener una lista completa de las opciones de `braze.initialize()`, junto con nuestros otros métodos de JavaScript, consulta la [documentación de JavaScript de Braze](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
+
+{% alert note %}
+**No se admiten dominios personalizados para solicitudes del SDK Web**: El Web SDK `baseUrl` debe ser un punto final SDK de Braze (por ejemplo, `sdk.iad-05.braze.com`). Braze no admite el enrutamiento del tráfico del SDK Web a través de un dominio propiedad del cliente mediante registros CNAME. Si necesitas que las solicitudes de SDK para Web se originen en tu propio dominio, ponte en contacto con el soporte de Braze.
+{% endalert %}
 
 ```javascript
 // initialize the SDK
@@ -113,7 +117,7 @@ Para habilitar rápidamente el registro, puedes añadir `?brazeLogging=true` com
 
 {% tabs local %}
 {% tab before initialization %}
-Utiliza `enableLogging` para registrar mensajes básicos de depuración en la consola JavaScript antes de que se inicialice el SDK.
+Utiliza `enableLogging` para registrar mensajes básicos de depuración en la consola de JavaScript antes de que se inicialice el SDK.
 
 ```javascript
 enableLogging: true
@@ -276,7 +280,7 @@ Al utilizar Jest, es posible que aparezca un error similar a `SyntaxError: Unexp
 
 ### Marcos SSR {#ssr}
 
-Si utilizas un marco de renderizado del lado del servidor (SSR) como Next.js, puedes encontrarte con errores porque el SDK está pensado para ejecutarse en un entorno de navegador. Puedes resolver estos problemas importando dinámicamente el SDK.
+Si utilizas un marco de renderizado del lado del servidor (SSR) como Next.js, puedes encontrar errores porque el SDK está pensado para ejecutarse en un entorno de navegador. Puedes resolver estos problemas importando dinámicamente el SDK.
 
 Puedes conservar las ventajas de la arborescencia al hacerlo exportando las partes del SDK que necesites en un archivo aparte y luego importando dinámicamente ese archivo en tu componente.
 
