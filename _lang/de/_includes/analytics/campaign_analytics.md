@@ -413,6 +413,8 @@ Diese Statistik verwendet ein proprietäres, von Braze entwickeltes Analysemodel
 
 Die _geschätzte tatsächliche Öffnungsrate_ wird 36 Stunden nach Beginn des E-Mail-Versands berechnet und danach alle 24 Stunden neu berechnet. Wenn sich eine Kampagne wiederholt, wird die Schätzung 36 Stunden nach einem weiteren Versand neu berechnet.
 
+Da diese Metrik ständig neu berechnet wird, kann sich der Wert für die _geschätzte reale Öffnungsrate_ im Laufe der Zeit ändern, wenn neue Signale für das Engagement (wie Öffnungen und Klicks) eingehen und in das Modell einfließen. In der Praxis kann die _geschätzte reale Öffnungsrate_ täglich aktualisiert werden, solange eine Kampagne aktiv bleibt.
+
 Normalerweise sind etwa 10.000 zugestellte E-Mails erforderlich, damit die Statistik erfolgreich berechnet werden kann, obwohl diese Zahl je nach Klickrate variieren kann. Wenn die Statistik nicht berechnet werden kann, wird in der Spalte "--" angezeigt.
 
 ###### Beschränkungen
@@ -430,7 +432,7 @@ Nachdem eine E-Mail unsere Server verlassen hat, haben wir nur einen begrenzten 
 1. Seien Sie sich bewusst, dass dies bei jedem Sender und fast jedem Empfänger:in passieren kann. Klicks sind ebenso wie Öffnungen kein zuverlässiger Indikator für die menschliche Interaktion mit Ihren Nachrichten, was bedeutet, dass NHI nicht verhindert werden kann.
 2. Ein höheres positives Engagement korreliert in der Regel mit einem niedrigeren NHI, daher ist es wichtig, die [Best Practices]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) für das Messaging per E-Mail zu befolgen. Dazu gehört, dass Sie die ausdrückliche Erlaubnis Ihrer Nutzer:innen für das Versenden von E-Mails einholen und nicht aktivierte Abonnent:innen regelmäßig Sunsetting betreiben. 
 3. Verwenden Sie wenn möglich HTTPS-Links in Ihren E-Mails. NHI ist bei Absendern, die sichere Links verwenden, weniger verbreitet.
-4. Wenn Sie sich mit einem einzigen Klick abmelden, sollten Sie ein [Präferenzzentrum]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview) einrichten, das Nutzer:innen auf eine Seite führt, auf der sie ihre Benachrichtigungspräferenzen bearbeiten und verwalten können. Dies kann hilfreich sein, da NHI Nutzer:innen versehentlich abmelden kann.
+4. Wenn Sie sich mit einem Klick abmelden, sollten Sie ein [Präferenzzentrum]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview) einrichten, das Nutzer:innen auf eine Seite führt, auf der sie ihre Benachrichtigungspräferenzen bearbeiten und verwalten können. Dies kann hilfreich sein, da NHI Nutzer:innen versehentlich abmelden kann.
 5. Ziehen Sie [andere Metriken]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#email-performance) in Betracht, um den Erfolg Ihres E-Mail Marketings zu messen, z.B. Konversionen, App-Sitzungen oder Website-Besuche.
 6. Fügen Sie einen ausgeblendeten Link in Ihre Kampagnen per E-Mail ein. Dieser Link wäre etwas, das ein Mensch nicht bemerken würde, wie z.B. weißer Text auf weißem Grund oder ein Interpunktionszeichen. Bots neigen dazu, auf alle Links zu klicken. Daraus können Sie schließen, dass Nutzer:innen, die Klick-Ereignisse auf den unsichtbaren Link erzeugen, in Wirklichkeit das Ergebnis von NHI sind, so dass die Öffnung oder der Klick nicht unbedingt auf ein positives Engagement hinweisen.
 
@@ -776,7 +778,7 @@ Das Panel **Details zum Konversions-Event** zeigt Ihnen die Performance Ihrer Ko
 
 Das Panel **Konversionskorrelation** gibt Ihnen Aufschluss darüber, welche Benutzerattribute und Verhaltensweisen die von Ihnen für Kampagnen festgelegten Ergebnisse fördern oder beeinträchtigen. Weitere Informationen finden Sie unter [Umrechnungskorrelation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/).
 
-![Das Conversion Correlation Panel mit einer Analyse der Attribute und des Verhaltens der Nutzer:innen aus dem primären Konversions-Event - A.]({% image_buster /assets/img/convcorr.png %})
+![Das Panel Conversion Correlation mit einer Analyse der Attribute und des Verhaltens der Nutzer:innen aus dem primären Konversions-Event - A.]({% image_buster /assets/img/convcorr.png %})
 
 {% if include.channel == "whatsapp" %}
 
