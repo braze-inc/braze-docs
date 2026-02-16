@@ -71,6 +71,14 @@ Los usuarios de este segmento no se eliminarán inmediatamente. En su lugar, se 
 Para garantizar que estos usuarios exactos se eliminan independientemente de los cambios de segmento, se crea automáticamente un filtro de segmento llamado **Eliminación pendiente**. Puedes [utilizar este filtro]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) para comprobar el estado de las eliminaciones pendientes.
 {% endalert %}
 
+## Confirmación de la supresión de segmentos
+
+Braze envía un correo electrónico de confirmación con el número de perfiles pendientes de eliminar.
+
+Para continuar con la eliminación, inicia sesión en Braze y confirma la solicitud de eliminación.
+
+Si no confirmas en el plazo indicado en el correo electrónico, la solicitud de eliminación caduca y no procede.
+
 ## Cancelación de la eliminación de segmentos {#cancel}
 
 Tienes 7 días para cancelar las eliminaciones de segmentos pendientes. Para cancelarlo, ve a **Audiencia** > **Gestionar audiencia** y, a continuación, selecciona la pestaña **Eliminar usuarios**.
@@ -134,6 +142,14 @@ También puedes comprobar el estado de eliminaciones anteriores descargando un i
 ### ¿Puedo eliminar segmentos con más de 100 millones de usuarios?
 
 No. No puedes eliminar segmentos con más de 100 millones de usuarios. Si necesitas ayuda para eliminar un segmento de este tamaño, ponte en contacto con [support@braze.com](mailto:support@braze.com).
+
+### Parece que no puedo eliminar 100 millones de usuarios y sólo puedo eliminar 10 millones. ¿Es un error?
+
+No, no es un error. Algunos clientes tienen limitado el número de usuarios que pueden eliminar durante el programa de acceso anticipado (EA).
+
+A medida que avance el programa de EA, esta capacidad está diseñada para aumentar hasta que todos los clientes puedan eliminar hasta 100 millones de usuarios.
+
+Si quieres aumentar esta capacidad, ponte en contacto con tu director de cuentas Braze. Las solicitudes se conceden a discreción del equipo de producto.
 
 ### ¿Afecta la automatización de la fusión de usuarios a la eliminación de usuarios?
 
