@@ -21,7 +21,7 @@ Para utilizar una plantilla Canvas:
 1. Ve a **Mensajería** > **Canvas**.
 2. Selecciona **Crear lienzo** > **Utilizar una plantilla de lienzo**.
 3. Busca en la pestaña **Plantillas Braze** la plantilla que quieras utilizar. Puedes obtener una vista previa de una plantilla seleccionando su nombre.
-4. Selecciona **Aplicar plantilla** para la plantilla que quieras utilizar.<br><br>![La página "Plantillas Canvas" se abre en la pestaña "Plantillas Braze" y muestra una lista de las plantillas utilizadas recientemente y de las plantillas Braze seleccionables.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
+4. Selecciona **Aplicar plantilla** para la plantilla que quieras utilizar.<br><br>![La página "Plantillas Canvas" se abrió en la pestaña "Plantillas Braze" y muestra una lista de las plantillas utilizadas recientemente y de las plantillas Braze seleccionables.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
 ## Plantillas Canvas para comercio electrónico
 
