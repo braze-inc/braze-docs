@@ -120,7 +120,7 @@ Une fois que vous avez fini d'utiliser un bloc de contenu, vous pouvez l'archive
 
 - Lorsque votre bloc n’est utilisé que dans quelques e-mails, nous vous recommandons d’archiver le bloc obsolète et de mettre à jour vos messages en cours avec un bloc plus récent qui n’a pas été archivé.
 - Si votre bloc ne contient qu’une seule faute de frappe ou n’a besoin que d’un changement mineur, nous ne recommandons pas d’archiver le bloc. Au lieu de cela, mettez à jour le bloc et envoyez !
-- Lorsque votre bloc est utilisé dans plus de messages que vous ne pouvez raisonnablement gérer avec la première suggestion de cette liste, nous vous recommandons de supprimer tout le contenu du bloc et de l'archiver. Cela garantira qu'aucune information obsolète n'est incluse dans les nouveaux e-mails envoyés.
+- Lorsque votre bloc est utilisé dans un nombre de messages supérieur à ce que vous pouvez raisonnablement gérer avec la première suggestion de cette liste, nous vous recommandons de supprimer tout le contenu du bloc. Cela permet d'éviter l'inclusion d'informations obsolètes dans les messages.
 - Si vous archivez accidentellement un bloc de contenu, vous pouvez le sortir des archives.
 
 ![Panneau "Blocs de contenu enregistrés" dans lequel le menu déroulant des paramètres de "Test_32" est élargi pour afficher trois options : Désarchiver, Dupliquer et Copier dans l'espace de travail]({% image_buster /assets/img/unarchive-content-block.png %})
