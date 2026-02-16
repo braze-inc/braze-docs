@@ -557,6 +557,74 @@ Braze.configure(this, brazeConfig)
 
 딥링크의 커스텀 처리를 설정하려면 Braze에서 푸시를 수신하고 여는 의도를 수신 대기하는 푸시 콜백을 만들어야 합니다. 자세한 내용은 [푸시 이벤트에 콜백 사용하기를]({{site.baseurl}}/developer_guide/push_notifications/customization#android_using-a-callback-for-push-events) 참조하세요.
 
+## 전경 알림 처리하기
+
+기본값은 Android에서 앱이 포그라운드에 있는 동안 푸시 알림이 도착하면 시스템이 자동으로 표시합니다. 분석 추적, 딥링크 처리 및 커스텀 처리를 위해 Braze가 푸시 알림 페이로드를 처리하도록 하려면 `FirebaseMessagingService.onMessageReceived` 메서드 내에서 수신 푸시 데이터를 Braze로 라우팅하세요.
+
+### 작동 방식
+
+`BrazeFirebaseMessagingService.handleBrazeRemoteMessage` 으로 호출하면 Braze는 해당 페이로드가 Braze 푸시 알림인지 확인하고, 그렇다면 `NotificationManagerCompat` 메서드를 사용하여 알림을 생성하고 표시합니다. iOS와 달리 Android는 앱이 포 그라운드에 있는지 또는 배경에 있는지 여부에 관계없이 알림을 표시합니다.
+
+{% tabs %}
+{% tab JAVA %}
+```java
+package com.example.push;
+
+import com.braze.push.BrazeFirebaseMessagingService;
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+
+public class MyFirebaseMessagingService extends FirebaseMessagingService {
+    @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        super.onMessageReceived(remoteMessage);
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+package com.example.push
+
+import com.braze.push.BrazeFirebaseMessagingService
+import com.google.firebase.messaging.FirebaseMessagingService
+import com.google.firebase.messaging.RemoteMessage
+
+class MyFirebaseMessagingService : FirebaseMessagingService() {
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        super.onMessageReceived(remoteMessage)
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+자세한 내용은 Braze SDK 리포지토리에서 [Firebase 통합 샘플을](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseMessagingService.kt) 참조하세요.
+
+### 포그라운드 고객 행동 커스텀하기
+
+시스템 알림을 표시하지 않거나 앱 내 UI를 대신 표시하는 등 커스텀 포그라운드 동작을 원하는 경우 가능합니다:
+
+- `subscribeToPushNotificationEvents` 을 사용하여 푸시 이벤트에 반응하고 `BrazeNotificationUtils.routeUserWithNotificationOpenedIntent` 메서드로 딥링킹을 처리하세요. 자세한 내용은 [Firebase 푸시 샘플을](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt) 참조하세요.
+- 커스텀 `IBrazeNotificationFactory` 을 사용하여 자체 알림을 구축하여 게시하거나 처리 경로에서 `notificationManager.notify` 을 호출하지 않음으로써 알림을 억제할 수 있습니다.
+
+알림 커스텀에 대한 자세한 내용은 [커스텀 알림 팩토리를]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#custom-notification-factory) 참조하세요.
+
 #### 사용자 지정 딥링크 만들기
 
 앱에 딥링킹을 아직 추가하지 않은 경우 [Android 개발자 설명서에](http://developer.android.com/training/app-indexing/deep-linking.html) 있는 딥링킹에 대한 지침을 따르세요. 딥링크 개념에 대한 자세한 내용은 [FAQ 문서]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking)를 참조하세요.
