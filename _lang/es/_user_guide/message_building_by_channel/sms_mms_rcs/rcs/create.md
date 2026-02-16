@@ -77,7 +77,7 @@ Como su nombre indica, los mensajes de texto RCS se centran en el texto como med
     - **Las respuestas sugeridas** son botones que contienen respuestas sugeridas para que los usuarios hagan clic en ellas y las introduzcan previamente en su texto, eliminando la fricción de tener que pensar en una respuesta al proporcionarles un conjunto limitado de opciones. 
     - **Las Acciones sugeridas** son botones que inician una acción en el dispositivo del usuario. Suelen consistir en una o dos palabras descriptivas y un icono visual para ayudar al usuario a entender lo que hace el botón. Braze admite actualmente las Acciones sugeridas de OpenURL. Funciona de forma similar a una URL, en la que los usuarios que seleccionan el botón son redirigidos a una página web o a otra ubicación identificada con una URL. 
 
-![Un GIF de tres Acciones Sugeridas para un mensaje RCS que promociona estilos de moda en tendencia: "Realeza de cuento de hadas", "Academia atrevida" y "Enséñame tus otros estilos".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
+![Un GIF de tres Acciones sugeridas para un mensaje RCS que promociona estilos de moda de tendencia: "Realeza de cuento de hadas", "Academia atrevida" y "Enséñame tus otros estilos".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
 
 #### Consideraciones
 
@@ -89,6 +89,8 @@ Como su nombre indica, los mensajes de texto RCS se centran en el texto como med
 
 {% tab Media %}
 Los mensajes multimedia RCS te permiten utilizar formatos multimedia atractivos que no son posibles con los SMS. Incluyen archivos de imagen, video y documentación. Estas opciones de medios existen para ayudarte a conseguir una interacción aún más profunda con tu audiencia y habilitar casos de uso totalmente nuevos. Por el momento, sólo es posible subir imágenes a través de la [biblioteca multimedia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). 
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 #### Características
 
@@ -106,7 +108,7 @@ Los mensajes multimedia RCS te permiten utilizar formatos multimedia atractivos 
 | Todo | \- El tamaño del archivo está limitado a 100 MB <br><br>\- La URL del archivo puede tener hasta 2048 caracteres |
 | Archivos de imagen | Los formatos de archivo compatibles son JPG, JPEG y GIF
 | Archivos de video | Los formatos de archivo compatibles son H263, M4V, MP4, MPEG-4, MPEG, WEBM |
-| Archivos de documentación | Formatos de archivo compatibles: PDF |
+| Archivos de documentación | Formatos de archivo admitidos: PDF |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Consideraciones
