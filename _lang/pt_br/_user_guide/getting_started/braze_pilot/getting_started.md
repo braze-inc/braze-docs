@@ -12,7 +12,7 @@ description: "Este artigo de referência aborda brevemente as etapas de integra�
 
 ## Etapa 1: Baixar Braze Pilot
 
-Para começar a usar o Braze Pilot, primeiro você precisa baixar o aplicativo na Apple App Store ou na Google Play Store. Você pode procurar o app na loja de aplicativos ou digitalizar os códigos QR abaixo para visitar a página do app para seu dispositivo.
+Para começar a usar o Braze Pilot, primeiro você precisa baixar o aplicativo da Apple App Store ou do Google Play Store. Você pode procurar o app na loja de aplicativos ou digitalizar os códigos QR abaixo para visitar a página do app para seu dispositivo.
 
 ## Etapa 2: Aceitar os termos e condições
 
@@ -77,7 +77,7 @@ Abra as configurações de seu dispositivo e localize o Braze Pilot. Em seguida,
 {% endtab %}
 {% tab Launch a push primer message %}
 
-Você pode usar uma mensagem no app do Braze para solicitar permissões push para o aplicativo, assim como faria para seus próprios consumidores. Para saber como criar esse tipo de mensagem no Braze, consulte [Mensagens no app do push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages#push-primer-in-app-messages).
+Você pode usar uma mensagem no app do Braze para solicitar permissões push para o aplicativo, da mesma forma que faria para seus próprios consumidores. Para saber como criar esse tipo de mensagem no Braze, consulte [Mensagens no app do push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages#push-primer-in-app-messages).
 
 <div class="imgDiv">
 <img src="{% image_buster /assets/img/braze_pilot/push_primer1.png %}" style="max-width:40%">
