@@ -80,9 +80,7 @@ Quando esses objetos são incluídos no disparador, as atribuições são proces
 
 Use o [endpoint `/users/track/sync/`]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) para registrar eventos e compras personalizados e atualizar os atributos do perfil do usuário de forma síncrona. O uso desse endpoint para atualizar os perfis de usuário ao mesmo tempo e em uma única chamada pode ajudar a evitar possíveis condições de corrida.
 
-{% alert important %}
-Esse ponto de extremidade está atualmente na versão beta. Entre em contato com o gerente da sua conta Braze se estiver interessado em participar da versão beta.
-{% endalert %}
+{% include early_access_beta_alert.md feature='This endpoint' type='beta' %}
 
 ## Cenário 3: Correspondência de disparadores baseados em ação e filtros de público
 
