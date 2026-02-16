@@ -75,6 +75,89 @@ Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_s
 {% endalert %}
 
 {% api %}
+## 에이전트가 실행한 이벤트 {#agent-executed-events}
+
+{% apitags %}
+에이전트
+{% endapitags %}
+
+이것은 에이전트 콘솔 에이전트가 실행될 때를 위한 Kafka 레코드 스키마입니다.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// agentconsole.AgentExecuted
+
+{
+  "agent_id" : "(required, string) BSON id of the CustomerDefinedAgent",
+  "agent_name" : "(required, string) Name of the CustomerDefinedAgent",
+  "cache_hit" : "(required, boolean) whether or not this request hit the cache to return the response",
+  "cache_tokens" : "(required, int) how many cached tokens this request used",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "completion_tokens" : "(required, int) how many completion tokens this request used",
+  "duration" : "(required, int) how long the invocation took in milliseconds",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "input" : "(optional, string) [PII] input to the LLM",
+  "invocation_id" : "(required, string) globally unique id for this message",
+  "invocation_source" : "(optional, string) which ruby object invoked the LLM request",
+  "is_error" : "(required, boolean) whether or not this request errored out",
+  "llm_owned_by_customer" : "(required, boolean) if the LLM call was the customer's; if true, we used customer's API key, if false, we use Braze's",
+  "model_name" : "(required, string) Name of the LLM model used in this request",
+  "model_provider" : "(required, string) Name of the LLM model provider",
+  "output" : "(optional, string) [PII] response from the LLM",
+  "prompt_tokens" : "(required, int) how many prompt tokens this request used",
+  "provider_request_id" : "(optional, string) any request ID given to us by the model provider for the api call",
+  "reasoning_tokens" : "(required, int) how many reasoning tokens this request used",
+  "request_id" : "(required, string) unique id for this overall LLM request and complete execution",
+  "time" : "(required, long) unix timestamp at which this event is logged",
+  "total_tokens" : "(required, int) how many total tokens this request used",
+  "user_id" : "(optional, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
+## 도구 호출 이벤트 {#tool-invocation-events}
+
+{% apitags %}
+에이전트
+{% endapitags %}
+
+이것은 도구가 실행될 때를 위한 Kafka 레코드 스키마입니다.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// agentconsole.ToolInvocation
+
+{
+  "agent_id" : "(required, string) BSON id of the CustomerDefinedAgent",
+  "agent_name" : "(required, string) Name of the CustomerDefinedAgent",
+  "duration" : "(required, int) How long the tool invocation took in milliseconds",
+  "id" : "(required, string) Globally unique ID for this event",
+  "invocation_source" : "(optional, string) which ruby object invoked the LLM request",
+  "is_error" : "(required, boolean) whether or not this request errored out",
+  "time" : "(required, long) unix timestamp at which this event is logged",
+  "tool_arguments" : "(required, string) [PII] JSON of the tool arguments",
+  "tool_call_id" : "(required, string) globally unique id for this tool call",
+  "tool_name" : "(required, string) Name of the Tool"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
 ## 이벤트 제거 {#uninstall-events}
 
 {% apitags %}
@@ -648,24 +731,8 @@ Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_s
 {% endtab %}
 {% endtabs %}
 
-#### 부동산 세부 정보
-
-- `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
-- `state_change_source` 은 전체 소스 이름의 문자열을 반환합니다. 예를 들어 소스 CSV 가져오기는 `CSV Import`라는 문자열을 반환합니다. 사용 가능한 소스는 아래에 나열되어 있습니다:
-
-| 소스 | 설명 |
-| --- | --- |
-| SDK | SDK 엔드포인트 |
-| 대시보드 | 대시보드의 사용자 프로필 페이지에서 사용자의 구독 상태가 업데이트되는 경우 |
-| 구독 페이지 | 사용자가 환경 설정 센터가 아닌 이메일 링크를 통해 구독을 취소하는 경우 |
-| REST API | REST API 엔드포인트 |
-| CSV 가져오기 | CSV 사용자 가져오기 |
-| 환경설정 센터 | 환경설정 센터에서 사용자가 업데이트되는 경우 |
-| 인바운드 메시지 | SMS 등의 채널을 통해 최종 사용자의 인바운드 메시지에 의해 사용자가 업데이트되는 경우 |
-| 마이그레이션 | 내부 마이그레이션 또는 유지 관리 스크립트에 의해 사용자가 업데이트되는 경우 |
-| 사용자 병합 | 사용자 병합 프로세스에 의해 사용자가 업데이트되는 경우 |
-| 캔버스 사용자 업데이트 단계 | 캔버스 사용자 업데이트 단계에서 사용자가 업데이트된 경우 |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+#### 부동산 세부 정보 {#property-details}
+{% include currents/property_details_dispatch_state_source.md %}
 
 {% endapi %}
 
@@ -2337,6 +2404,10 @@ This event occurs when an originally scheduled banner message was aborted for so
 {% endtab %}
 {% endtabs %}
 
+#### 부동산 세부 정보
+
+- `abort_type` 는 글로벌 최대 게재빈도 설정 규칙으로 인해 메시징이 중단된 경우 `frequency_capped` 가 됩니다. 
+- `abort_log` 에는 중단을 트리거한 특정 규칙에 대한 정보가 포함됩니다. 예를 들면 다음과 같습니다: `Frequency cap rule: 5 Banner messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -2585,6 +2656,7 @@ This event occurs when a user views a banner.
 }
 ```
 {% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Banner Impression (users.messages.banner.Impression)
@@ -2932,7 +3004,8 @@ This event occurs when a user views a banner.
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
-
+- `abort_type` 는 글로벌 최대 게재빈도 설정 규칙으로 인해 메시징이 중단된 경우 `frequency_capped` 가 됩니다. 
+- `abort_log` 에는 중단을 트리거한 특정 규칙에 대한 정보가 포함됩니다. 예를 들면 다음과 같습니다: `Frequency cap rule: 5 Content Card messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -4039,7 +4112,8 @@ This event occurs when a user views a banner.
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
-
+- `abort_type` 는 글로벌 최대 게재빈도 설정 규칙으로 인해 메시징이 중단된 경우 `frequency_capped` 가 됩니다. 
+- `abort_log` 에는 중단을 트리거한 특정 규칙에 대한 정보가 포함됩니다. 예를 들면 다음과 같습니다: `Frequency cap rule: 5 email messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -5162,8 +5236,6 @@ This event occurs when a user views a banner.
 
 #### 부동산 세부 정보
 
-#### 부동산 세부 정보
-
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
   - `dispatch_id`의 동작은 캔버스와 캠페인 간에 다르며, 이는 예약된 경우에도 Braze가 예약 가능한 진입 단계를 제외한 캔버스 단계를 트리거된 이벤트로 취급하기 때문입니다.
 {% endapi %}
@@ -5216,7 +5288,7 @@ This event occurs when a user views a banner.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_agent" : "(optional, string) User agent on which the open occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -5369,7 +5441,7 @@ This event occurs when a user views a banner.
 // Email Opened (users.messages.email.Open)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device"
@@ -5421,13 +5493,222 @@ This event occurs when a user views a banner.
 {% endapi %}
 
 {% api %}
+## 이메일 재시도 이벤트 {#email-retry-events}
+
+{% apitags %}
+이메일, 재시도
+{% endapitags %}
+
+이 이벤트는 메시지의 우선 순위가 떨어지거나 최대 게재빈도가 설정된 경우 발생하며 나중에 구성된 재시도 기간 내에 재시도됩니다. 메시지 우선순위 지정 베타 고객만 사용할 수 있습니다.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.email.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "country" : "(optional, string) [PII] Country of the user",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(required, string) [PII] Email address of the user",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "id" : "(required, string) Globally unique ID for this event",
+  "ip_pool" : "(optional, string) IP pool from which the email send was made",
+  "language" : "(optional, string) [PII] Language of the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// Email Retry (users.messages.email.Retry)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "email_address" : "(required, string) [PII] Email address of the user",
+    "ip_pool" : "(optional, string) IP pool from which the email send was made",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "timezone" : "(optional, string) Time zone of the user"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Email Retry (users.messages.email.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "email_address" : "(required, string) [PII] Email address of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "ip_pool" : "(optional, string) IP pool from which the email send was made",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Email Retries (users.messages.email.Retry)
+
+{
+  "device_info" : {
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_name" : "(optional, string) Name of the Canvas",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "ip_pool" : "(optional, string) IP pool from which the email send was made",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "source_request_id" : "(required, string) Globally unique ID for this event"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user",
+    "email" : "(required, string) [PII] Email address of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Email Retried (users.messages.email.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : {
+      "email" : "(required, string) [PII] Email address of the user"
+    }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "ip_pool" : "(optional, string) IP pool from which the email send was made",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
 ## 이메일 이벤트 보내기 {#email-send-events}
 
 {% apitags %}
 이메일, 보내기
 {% endapitags %}
 
-이 이벤트는 이메일 전송 요청이 Braze와 SendGrid 간에 성공적으로 전달되었을 때 발생합니다. 하지만 이것이 사용자의 받은편지함에 이메일이 수신되었음을 의미하지는 않습니다.
+이 이벤트는 이메일 전송 요청이 Braze와 SendGrid 간에 성공적으로 전달되었을 때 발생합니다. 그러나 이것이 사용자의 받은편지함에 이메일이 수신되었음을 의미하지는 않습니다. 이메일 이벤트와 연결된 이메일과 사용자 ID가 모두 일치하지 않는 경우 이벤트가 사용자 프로필이나 커런츠 대상(예: Snowflake)에 이벤트가 기록되지 않습니다.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -6052,6 +6333,7 @@ This event occurs when a user views a banner.
 
 기능 플래그 노출은 세션당 한 번만 기록됩니다.
 
+
 {% tabs %}
 {% tab Cloud Storage %}
 ```json
@@ -6489,6 +6771,11 @@ This event occurs when an originally scheduled in-app message was aborted.
 ```
 {% endtab %}
 {% endtabs %}
+
+#### 부동산 세부 정보
+
+- `abort_type` 는 글로벌 최대 게재빈도 설정 규칙으로 인해 메시징이 중단된 경우 `frequency_capped` 가 됩니다. 
+- `abort_log` 에는 중단을 트리거한 특정 규칙에 대한 정보가 포함됩니다. 예를 들면 다음과 같습니다: `Frequency cap rule: 5 in-app messages every 1 week`
 
 {% endapi %}
 
@@ -7174,6 +7461,8 @@ LINE, 중단
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
+- `abort_type` 는 글로벌 최대 게재빈도 설정 규칙으로 인해 메시징이 중단된 경우 `frequency_capped` 가 됩니다. 
+- `abort_log` 에는 중단을 트리거한 특정 규칙에 대한 정보가 포함됩니다. 예를 들면 다음과 같습니다: `Frequency cap rule: 5 LINE messages every 1 week`
 
 {% endapi %}
 
@@ -7387,7 +7676,6 @@ LINE, 클릭
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
-
 {% endapi %}
 
 {% api %}
@@ -7591,6 +7879,205 @@ LINE, 인바운드 수신
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
+{% endapi %}
+
+{% api %}
+## LINE 재시도 이벤트 {#line-retry-events}
+
+{% apitags %}
+LINE, 재시도
+{% endapitags %}
+
+이 이벤트는 메시지의 우선 순위가 떨어지거나 최대 게재빈도가 설정된 경우 발생하며 나중에 구성된 재시도 기간 내에 재시도됩니다. 메시지 우선순위 지정 베타 고객만 사용할 수 있습니다.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.line.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "line_channel_id" : "(optional, string) The LINE Channel ID the message was sent to or received from",
+  "line_channel_name" : "(optional, string) The LINE Channel Name the message was sent to or received from",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "native_line_id" : "(optional, string) [PII] The user's Line ID from which the message was sent to or received from",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// Line Retry (users.messages.line.Retry)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "line_channel_id" : "(optional, string) The LINE Channel ID the message was sent to or received from",
+    "line_channel_name" : "(optional, string) The LINE Channel Name the message was sent to or received from",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "native_line_id" : "(optional, string) [PII] The user's Line ID from which the message was sent to or received from",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "subscription_group_id" : "(optional, string) Subscription group API ID",
+    "timezone" : "(optional, string) Time zone of the user"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Line Retry (users.messages.line.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "line_channel_id" : "(optional, string) The LINE Channel ID the message was sent to or received from",
+    "line_channel_name" : "(optional, string) The LINE Channel Name the message was sent to or received from",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "native_line_id" : "(optional, string) [PII] The user's Line ID from which the message was sent to or received from",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "subscription_group_id" : "(optional, string) Subscription group API ID",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Line Retries (users.messages.line.Retry)
+
+{
+  "device_info" : {
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "line_channel_id" : "(optional, string) The LINE Channel ID the message was sent to or received from",
+          "line_channel_name" : "(optional, string) The LINE Channel Name the message was sent to or received from",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "native_line_id" : "(optional, string) [PII] The user's Line ID from which the message was sent to or received from",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "source_request_id" : "(required, string) Globally unique ID for this event",
+          "subscription_group_id" : "(optional, string) Subscription group API ID"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Line Retried (users.messages.line.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : { }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "line_channel_id" : "(optional, string) The LINE Channel ID the message was sent to or received from",
+    "line_channel_name" : "(optional, string) The LINE Channel Name the message was sent to or received from",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "native_line_id" : "(optional, string) [PII] The user's Line ID from which the message was sent to or received from",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "subscription_group_id" : "(optional, string) Subscription group API ID"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
 
 {% endapi %}
 
@@ -7790,7 +8277,6 @@ LINE, 보내기
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
-
 {% endapi %}
 
 {% api %}
@@ -8293,7 +8779,8 @@ Live Activity, Sends
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
-
+- `abort_type` 는 글로벌 최대 게재빈도 설정 규칙으로 인해 메시징이 중단된 경우 `frequency_capped` 가 됩니다. 
+- `abort_log` 에는 중단을 트리거한 특정 규칙에 대한 정보가 포함됩니다. 예를 들면 다음과 같습니다: `Frequency cap rule: 5 push messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -8331,6 +8818,7 @@ Live Activity, Sends
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(optional, string) Platform of the device",
+  "push_token" : "(optional, string) Push token of the event",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -8512,7 +9000,7 @@ Live Activity, Sends
 
 #### 부동산 세부 정보
 
-- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우, 고객 성공 관리자 또는 계정 매니저에게 문의하여 `ad_id` 으로 전송하기 위한 기능 플리퍼를 인에이블먼트하세요.
+- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자 또는 계정 매니저에게 문의하여 `ad_id` 으로 전송하기 위한 기능 플리퍼를 인에이블먼트하세요.
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
 {% endapi %}
 
@@ -8550,8 +9038,7 @@ Live Activity, Sends
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "platform" : "(optional, string) Platform of the device",
-  "push_token" : "(optional, string) Push token of the event",
+  "platform" : "(required, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -8920,6 +9407,213 @@ Live Activity, Sends
 - `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
+{% endapi %}
+
+{% api %}
+## 푸시 알림 재시도 이벤트 {#push-notification-retry-events}
+
+{% apitags %}
+푸시, 재시도
+{% endapitags %}
+
+이 이벤트는 메시지의 우선 순위가 떨어지거나 최대 게재빈도가 설정된 경우 발생하며 나중에 구성된 재시도 기간 내에 재시도됩니다. 메시지 우선순위 지정 베타 고객만 사용할 수 있습니다.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.pushnotification.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "country" : "(optional, string) [PII] Country of the user",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "id" : "(required, string) Globally unique ID for this event",
+  "language" : "(optional, string) [PII] Language of the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "platform" : "(required, string) Platform of the device",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// Push Notification Retry (users.messages.pushnotification.Retry)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "platform" : "(optional, string) Platform of the device",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "timezone" : "(optional, string) Time zone of the user"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Push Notification Retry (users.messages.pushnotification.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "platform" : "(optional, string) Platform of the device",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Push Notification Retries (users.messages.pushnotification.Retry)
+
+{
+  "device_info" : {
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred",
+    "platform" : "(optional, string) Platform of the device"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "app_id" : "(optional, string) API ID of the app on which this event occurred",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_name" : "(optional, string) Name of the Canvas",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "source_request_id" : "(required, string) Globally unique ID for this event"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Push Notification Retried (users.messages.pushnotification.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : { }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% endapi %}
 
 {% api %}
@@ -9329,6 +10023,10 @@ RCS, 중단
 {% endtab %}
 {% endtabs %}
 
+#### 부동산 세부 정보
+
+- `abort_type` 는 글로벌 최대 게재빈도 설정 규칙으로 인해 메시징이 중단된 경우 `frequency_capped` 가 됩니다. 
+- `abort_log` 에는 중단을 트리거한 특정 규칙에 대한 정보가 포함됩니다. 예를 들면 다음과 같습니다: `Frequency cap rule: 5 RCS messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -9750,7 +10448,6 @@ RCS, 전달
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
-
 {% endapi %}
 
 {% api %}
@@ -10151,7 +10848,7 @@ RCS, 거부
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -10284,7 +10981,7 @@ RCS, 거부
 // Rejected (users.messages.rcs.Rejection)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -10710,6 +11407,10 @@ RCS, 전송
 {% endtab %}
 {% endtabs %}
 
+#### 부동산 세부 정보
+
+- `abort_type` 는 글로벌 최대 게재빈도 설정 규칙으로 인해 메시징이 중단된 경우 `frequency_capped` 가 됩니다. 
+- `abort_log` 에는 중단을 트리거한 특정 규칙에 대한 정보가 포함됩니다. 예를 들면 다음과 같습니다: `Frequency cap rule: 5 SMS messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -10954,7 +11655,7 @@ SMS, 배달
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -11084,7 +11785,7 @@ SMS, 배달
 // SMS Delivered (users.messages.sms.Delivery)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -11162,7 +11863,7 @@ SMS, 배달
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -11295,7 +11996,7 @@ SMS, 배달
 // SMS Delivery Failed (users.messages.sms.DeliveryFailure)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -11349,6 +12050,7 @@ SMS, 인바운드 수신
 Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 모든 사용자에게 해당 인바운드 메시지의 어트리뷰션이 이루어집니다. 따라서 Braze 인스턴스의 여러 사용자가 동일한 전화번호를 공유하는 경우 인바운드 메시지당 여러 개의 이벤트를 수신할 수 있습니다. 해당 사용자에게 전송된 이전 메시지를 기반으로 특정 사용자 아이디를 어트리뷰션해야 하는 경우, SMS 전달됨 이벤트를 사용하여 가장 최근에 Braze 번호로 메시지를 수신한 사용자 아이디에 인바운드 수신 이벤트를 어트리뷰션할 수 있습니다.
 
 이 인바운드 메시지가 Braze에서 보낸 아웃바운드 캠페인 또는 캔버스 구성 요소에 대한 회신인 경우, 캠페인 또는 캔버스 메타데이터도 이벤트에 포함됩니다. Braze는 답장을 아웃바운드 메시지로부터 4시간 이내에 도착하는 인바운드 메시지로 정의합니다. 그러나 마지막으로 수신한 아웃바운드 SMS의 어트리뷰션 캠페인 정보에 대한 1분 캐시가 있습니다.
+
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -11566,7 +12268,7 @@ SMS, 거부
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
   "id" : "(required, string) Globally unique ID for this event",
-  "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
+  "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "provider_error_code" : "(optional, string) Error code from the SMS provider",
@@ -11575,7 +12277,7 @@ SMS, 거부
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -11599,7 +12301,7 @@ SMS, 거부
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "error" : "(optional, string) Error name",
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
-    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
+    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
@@ -11639,7 +12341,7 @@ SMS, 거부
     "error" : "(optional, string) Error name",
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "$insert_id" : "(required, string) Globally unique ID for this event",
-    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
+    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
@@ -11679,7 +12381,7 @@ SMS, 거부
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "error" : "(optional, string) Error name",
           "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
-          "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
+          "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
           "provider_error_code" : "(optional, string) Error code from the SMS provider",
@@ -11711,7 +12413,7 @@ SMS, 거부
 // SMS Rejected (users.messages.sms.Rejection)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -11734,7 +12436,7 @@ SMS, 거부
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "error" : "(optional, string) Error name",
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
-    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
+    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
@@ -11752,6 +12454,187 @@ SMS, 거부
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
+{% endapi %}
+
+{% api %}
+## SMS 재시도 이벤트 {#sms-retry-events}
+
+{% apitags %}
+SMS, 재시도
+{% endapitags %}
+
+이 이벤트는 메시지의 우선 순위가 떨어지거나 최대 게재빈도가 설정된 경우 발생하며 나중에 구성된 재시도 기간 내에 재시도됩니다. 메시지 우선순위 지정 베타 고객만 사용할 수 있습니다.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.sms.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// SMS Retry (users.messages.sms.Retry)
+
+{
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// SMS Retry (users.messages.sms.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// SMS Retries (users.messages.sms.Retry)
+
+{
+  "device_info" : { },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_name" : "(optional, string) Name of the Canvas",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "source_request_id" : "(required, string) Globally unique ID for this event",
+          "subscription_group_id" : "(optional, string) Subscription group API ID"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// SMS Retried (users.messages.sms.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : { }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% endapi %}
 
 {% api %}
@@ -11963,7 +12846,7 @@ SMS, 보내기
 {% endapi %}
 
 {% api %}
-## SMS 쇼트 링크 클릭 이벤트 {#sms-short-link-click-events}
+## SMS 짧은 링크 클릭 이벤트 {#sms-short-link-click-events}
 
 {% apitags %}
 SMS, 클릭
@@ -12360,6 +13243,8 @@ SMS, 클릭
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
+- `abort_type` 는 글로벌 최대 게재빈도 설정 규칙으로 인해 메시징이 중단된 경우 `frequency_capped` 가 됩니다. 
+- `abort_log` 에는 중단을 트리거한 특정 규칙에 대한 정보가 포함됩니다. 예를 들면 다음과 같습니다: `Frequency cap rule: 5 webhook messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -12589,6 +13474,204 @@ This event occurs if a webhook message was delivered but failed with an error re
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
+{% endapi %}
+
+{% api %}
+## 웹훅 재시도 이벤트 {#webhook-retry-events}
+
+{% apitags %}
+웹훅, 재시도
+{% endapitags %}
+
+이 이벤트는 메시지의 우선 순위가 떨어지거나 최대 게재빈도가 설정된 경우 발생하며 나중에 구성된 재시도 기간 내에 재시도됩니다. 메시지 우선순위 지정 베타 고객만 사용할 수 있습니다.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.webhook.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "country" : "(optional, string) [PII] Country of the user",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "id" : "(required, string) Globally unique ID for this event",
+  "language" : "(optional, string) [PII] Language of the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// Webhook Retry (users.messages.webhook.Retry)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "timezone" : "(optional, string) Time zone of the user"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Webhook Retry (users.messages.webhook.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Webhook Retries (users.messages.webhook.Retry)
+
+{
+  "device_info" : {
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_name" : "(optional, string) Name of the Canvas",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "source_request_id" : "(required, string) Globally unique ID for this event"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Webhook Retried (users.messages.webhook.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : { }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% endapi %}
 
 {% api %}
@@ -12984,6 +14067,8 @@ WhatsApp, 중단
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
+- `abort_type` 는 글로벌 최대 게재빈도 설정 규칙으로 인해 메시징이 중단된 경우 `frequency_capped` 가 됩니다. 
+- `abort_log` 에는 중단을 트리거한 특정 규칙에 대한 정보가 포함됩니다. 예를 들면 다음과 같습니다: `Frequency cap rule: 5 WhatsApp messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -13399,7 +14484,6 @@ WhatsApp, 배달
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
-
 {% endapi %}
 
 {% api %}
@@ -13448,23 +14532,7 @@ WhatsApp, 실패
 }
 ```
 {% endtab %}
-{% endtabs %}
 
-#### 부동산 세부 정보
-
-- `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
-{% endapi %}
-
-{% api %}
-## WhatsApp 실패 이벤트 {#whatsapp-failure-events}
-
-{% apitags %}
-WhatsApp, 실패
-{% endapitags %}
-
-이 이벤트는 WhatsApp이 사용자에게 메시지를 전달할 수 없을 때 발생합니다. 하드 바운스는 영구적인 전달 가능성 실패를 의미합니다.
-
-{% tabs %}
 {% tab Amplitude %}
 ```json
 // WhatsApp Failure (users.messages.whatsapp.Failure)
@@ -14104,6 +15172,208 @@ WhatsApp, 읽기
 #### 부동산 세부 정보
 
 - `dispatch_id` 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 `dispatch_id`. `dispatch_id` 을 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.
+{% endapi %}
+
+{% api %}
+## WhatsApp 재시도 이벤트 {#whatsapp-retry-events}
+
+{% apitags %}
+WhatsApp, 재시도
+{% endapitags %}
+
+이 이벤트는 메시지의 우선 순위가 떨어지거나 최대 게재빈도가 설정된 경우 발생하며 나중에 구성된 재시도 기간 내에 재시도됩니다. 메시지 우선순위 지정 베타 고객만 사용할 수 있습니다.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.whatsapp.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// WhatsApp Retry (users.messages.whatsapp.Retry)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID",
+    "timezone" : "(optional, string) Time zone of the user",
+    "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// WhatsApp Retry (users.messages.whatsapp.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// WhatsApp Retries (users.messages.whatsapp.Retry)
+
+{
+  "device_info" : {
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_name" : "(optional, string) Name of the Canvas",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "source_request_id" : "(required, string) Globally unique ID for this event",
+          "subscription_group_id" : "(optional, string) Subscription group API ID"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : {
+    "$mobile" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
+  },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// WhatsApp Retried (users.messages.whatsapp.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : {
+      "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
+    }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% endapi %}
 
 {% api %}
