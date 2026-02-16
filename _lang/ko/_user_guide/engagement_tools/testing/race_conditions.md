@@ -80,9 +80,7 @@ Instead of using multiple endpoints, you can include the [user attributes]({{sit
 
 Use the [`/users/track/sync/` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) to record custom events and purchases and update user profile attributes synchronously. Using this endpoint to update user profiles at the same time and in a single call can help prevent potential race conditions.
 
-{% alert important %}
-This endpoint is currently in beta. Contact your Braze account manager if you’re interested in participating in the beta.
-{% endalert %}
+{% include early_access_beta_alert.md feature='This endpoint' type='beta' %}
 
 ## Scenario 3: 액션 기반 트리거와 대상 필터 매칭하기
 
@@ -127,4 +125,4 @@ In this case, you can implement a trigger delay in a campaign or use a Delay ste
 
 사용자가 같은 초 내에 캔버스 입력 이벤트를 여러 번 트리거하는 경우, Braze는 해당 초에 한 번의 입력만 허용합니다(재입력이 인에이블먼트된 경우에도). 이렇게 하면 중복 항목을 방지할 수 있으므로 총 캔버스 항목 수가 총 트리거 이벤트 수보다 적을 수 있습니다.
 
-사용자 데이터가 어떻게 관리되고 업데이트되는지, 특히 특정 속성이 언제 어떻게 업데이트되는지(예: 소프트웨어 개발 키트, API, 배치 API 및 기타 방법)를 확인하는 것이 좋습니다. 이를 통해 사용자가 캠페인이나 캔버스에 들어온 이유와 사용자 프로필이 업데이트된 시점을 식별하고 명확하게 파악할 수 있습니다.
+사용자 데이터가 어떻게 관리되고 업데이트되는지, 특히 특정 속성이 언제 어떻게 업데이트되는지(예: 소프트웨어 개발 키트, API, 배치 API 및 기타 방법)를 확인하는 것이 좋습니다. 이를 통해 사용자가 캠페인이나 캔버스에 들어온 이유와 사용자 프로필이 업데이트된 시기를 식별하고 명확하게 파악할 수 있습니다.
