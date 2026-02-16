@@ -106,6 +106,7 @@ Segmentを作成するときに、[使用された固有のアプリs]({{site.ba
 2 番目のシナリオは、`app_id` フィールドが`/users/track` エンドポイントを使用してプッシュチケットを移行するときに入力される場合です。以下に例を示します。 
 
 ```json
+{
 "app_group_id": "{YOUR_APP_GROUP_ID}",
 "attributes": [
 {
@@ -119,4 +120,5 @@ Segmentを作成するときに、[使用された固有のアプリs]({{site.ba
       ]
   }
 ]
+}
 ```
