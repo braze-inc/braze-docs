@@ -56,6 +56,6 @@ StyleRyde라는 택시 또는 차량 공유 앱이 어떤 사용자 데이터를
 2. Using our message templates and [personalization features]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging) to drag the unique promotion code attribute into messaging directed at users.
 
 {% alert important %}
-Braze는 세션 수가 5,000,000개가 넘는 사용자("더미 사용자")를 금지 또는 차단하고, 일반적으로 잘못된 통합의 결과이므로 더 이상 해당 사용자의 SDK 이벤트를 수집하지 않습니다. 정당한 사용자에게 이러한 일이 발생한 경우, Braze 계정 매니저에게 연락하십시오.
+Braze는 세션 수가 5,000,000개가 넘는 사용자("더미 사용자")를 금지 또는 차단하고, 일반적으로 잘못된 통합의 결과이므로 더 이상 해당 사용자의 SDK 이벤트를 수집하지 않습니다. 합법적인 사용자에게 이러한 일이 발생한 경우, Braze 계정 매니저에게 연락하십시오.
 {% endalert %}
 
