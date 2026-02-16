@@ -71,6 +71,8 @@ Um Ihr Banner zu verfassen, können Sie Folgendes wählen:
 
 Sie können Blöcke und Zeilen per Drag-and-Drop in den Canvas-Bereich ziehen, um mit der Erstellung Ihrer Nachricht zu beginnen.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 Um die Eigenschaften des Hintergrunds Ihrer Nachricht, die Einstellungen für den Rahmen und mehr anzupassen, wählen Sie **Stile**. Wenn Sie nur den Stil für einen bestimmten Block oder eine bestimmte Zeile anpassen möchten, wählen Sie ihn aus, um Änderungen vorzunehmen.
 
 ![Style Panel des Banner Composers.]({% image_buster /assets/img/banners/banner_card_styles.png %})
@@ -129,7 +131,7 @@ Wenn Sie mehrere Bannerkampagnen haben, die dieselbe ID verwenden, empfehlen wir
 
 #### Wählen Sie Ihre Zielgruppe
 
-1. In **Zielgruppen** wählen Sie Segmente oder Filter, um Ihre Zielgruppe einzugrenzen. Sie erhalten automatisch eine Vorschau auf die ungefähre Größe der Segmente. Die genaue Segmentierung wird vor dem Versand der Nachricht berechnet.
+1. In **Zielgruppen** wählen Sie Segmente oder Filter, um Ihre Zielgruppe einzugrenzen. Sie erhalten automatisch eine Vorschau auf die ungefähre Zusammensetzung der Segmente. Die genaue Segmentierung wird vor dem Versand der Nachricht berechnet.
 
 {% multi_lang_include target_audiences.md %}
 
