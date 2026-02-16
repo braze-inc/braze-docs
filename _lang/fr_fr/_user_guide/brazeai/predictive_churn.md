@@ -2,7 +2,7 @@
 nav_title: Prédiction de l’attrition
 article_title: Prédiction du taux d’attrition
 description: "Cette page d'atterrissage présente Predictive Churn, un outil de la Predictive Suite de Braze qui vous permet de définir ce que le désabonnement signifie pour votre entreprise ainsi que les utilisateurs que vous aimeriez empêcher de désabonner."
-page_order: 2.0
+page_order: 9
 alias: /predictive_churn/
 search_rank: 2
 ---
@@ -25,7 +25,7 @@ La mise à jour des scores de risque de l'audience de prédictions peut se faire
 
 ## Accéder au taux prédictionnel de désabonnement
 
-La page des **prédictions** est située dans la section **Analyse/analytique**. Pour y obtenir un accès complet, contactez votre gestionnaire de compte.
+{% include brazeai/predictions_page_access.md %}
 
 Avant d’acheter cette fonction, vous disposez d’un mode aperçu. Il vous permettra de voir une démonstration de la prédiction du taux d’attrition avec des données synthétiques et de créer un modèle de prédiction d’attrition selon vos données utilisateur à un instant donné. Cet aperçu ne vous permettra pas de cibler des utilisateurs dans vos communications sur la base du risque d’attrition et ne se remettra pas à jour régulièrement après sa création.
 
