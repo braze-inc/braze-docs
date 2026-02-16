@@ -357,7 +357,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures' %}
 
-Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para que te ayude a comprender las razones de los fallos en la entrega.
+Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para que te ayude a comprender los motivos de los fallos en la entrega.
 
 <span class="calculation-line">Cálculo: (Envíos) - (Envíos al operador)</span>
 
@@ -373,7 +373,7 @@ RCS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures RCS' %}
 
-Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para que te ayude a comprender las razones de los fallos en la entrega.
+Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para que te ayude a comprender los motivos de los fallos en la entrega.
 
 <span class="calculation-line">Cálculo: (Envíos) - (Envíos al operador)</span>
 
@@ -389,7 +389,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Failed Delivery Rate' %}
 
-Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para que te ayude a comprender las razones de los fallos en la entrega.
+Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para que te ayude a comprender los motivos de los fallos en la entrega.
 
 <span class="calculation-line">Cálculo: (Fallos de entrega) / (Envíos)</span>
 
@@ -581,7 +581,7 @@ Tarjetas de contenido, correo electrónico, mensajes dentro de la aplicación, p
 Correo electrónico
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Machine Opens' %} Esta métrica es objeto de seguimiento a partir del 11 de noviembre de 2021 para SendGrid y del 2 de diciembre de 2021 para SparkPost. Para Amazon SES, los análisis aparecerán como _Abiertos_. Sin embargo, se podrá filtrar los clics de los robots.
+{% multi_lang_include analytics/metrics.md metric='Machine Opens' %} Esta métrica es objeto de seguimiento a partir del 11 de noviembre de 2021 para SendGrid y del 2 de diciembre de 2021 para SparkPost. Para Amazon SES, los análisis aparecerán como _Abiertos_. Sin embargo, se admitirá el filtrado de bots por clics.
 
 {% endapi %}
 
@@ -846,7 +846,7 @@ Correo electrónico
 {% multi_lang_include analytics/metrics.md metric='Spam' %}
 
 {% alert note %}
-Las reclamaciones por correo no deseado las gestionan directamente los proveedores de servicios de correo electrónico y luego se transmiten a Braze a través de un bucle de retroalimentación. La mayoría de los bucles de respuesta sólo informan de una parte de las quejas reales, por lo que la métrica _del correo no deseado_ suele representar una fracción del total real. Sólo los proveedores de servicios de correo electrónico pueden ver el verdadero volumen de reclamaciones por correo no deseado, lo que significa que _el Spam_ debe considerarse una métrica indicativa, no exhaustiva.
+Las reclamaciones por correo no deseado las gestionan directamente los proveedores de servicios de correo electrónico y luego se transmiten a Braze a través de un bucle de retroalimentación. La mayoría de los bucles de respuesta sólo informan de una parte de las quejas reales, por lo que la métrica _del correo no deseado_ suele representar una fracción del total real. Sólo los proveedores de servicios de correo electrónico pueden ver el volumen real de reclamaciones por correo no deseado, lo que significa que _el Spam_ debe considerarse una métrica indicativa, no exhaustiva.
 {% endalert %}
 
 {::nomarkdown}
@@ -979,7 +979,7 @@ Correo electrónico, push de iOS, push de Android, notificación push web, LINE
         <li><b><i>Aperturas totales</i> del correo electrónico:</b> Recuento</li>
         <li><b><i>Tasa de apertura total del</i> correo electrónico:</b> (Aperturas) / (Entregas)</li>
         <li><b>Web push <i>Total Aperturas</i>:</b> Recuento de <i>Direct Opens</i> </li>
-        <li><b>Web push <i>Tasa total de apertura</i>:</b> (Aperturas totales) / (Entregas)</li>
+        <li><b>Web push <i>Tarifa abierta total</i>:</b> (Aperturas totales) / (Entregas)</li>
         <li><b>iOS, Android y Kindle push <i>Aperturas totales</i>:</b> (Direct Opens) + (Influenced Opens)</li>
         <li><b>iOS, Android y Kindle push <i>Tasa total de apertura</i>:</b> (Aperturas totales) / (Entregas)</li>
     </ul>
