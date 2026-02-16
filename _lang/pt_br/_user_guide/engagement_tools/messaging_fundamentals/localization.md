@@ -94,7 +94,7 @@ Para obter um passo a passo completo, consulte o [guia sobre o uso de tags de tr
 
 {% tabs local %}
 {% tab Custom Liquid %}
-Você pode colar manualmente seu conteúdo no corpo da mensagem e usar [o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) para exibir [condicionalmente]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) o idioma correto para o destinatário. Para isso:
+Você pode colar manualmente seu conteúdo no corpo da mensagem e usar [o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) para exibir [condicionalmente]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) o idioma correto para o destinatário. Para fazer isso:
 
 1. Crie sua mensagem e selecione **Idioma** para gerar a lógica condicional Liquid para cada um dos idiomas selecionados.
 2. Você pode usar o modelo Liquid a seguir para ajudar a construir sua mensagem. Para cada campo com modelo, você deve inserir as variações após o segmento entre colchetes do modelo. A variação deve corresponder ao código de idioma referenciado entre colchetes antes dele.
@@ -141,7 +141,7 @@ Os blocos de conteúdo também podem ser utilizados como um processo de gerencia
 {% subtab API %}
 
 Crie um catálogo através da seguinte chamada de API:
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -175,7 +175,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs' \
 
 Adicione itens através da seguinte chamada de API:
 
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs/translations/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
