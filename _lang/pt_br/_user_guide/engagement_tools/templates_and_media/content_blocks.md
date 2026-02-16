@@ -120,7 +120,7 @@ Quando terminar de usar um bloco de conteúdo, você poderá arquivá-lo na pág
 
 - Quando seu bloco for usado apenas em alguns e-mails, recomendamos arquivar o bloco desatualizado e atualizar suas mensagens ao vivo com um bloco mais recente que não tenha sido arquivado.
 - Quando seu bloco tiver apenas um erro de digitação ou precisar de uma pequena alteração, não recomendamos arquivar o bloco. Em vez disso, atualize o bloco e comece a enviar!
-- Quando seu bloco for usado em mais mensagens do que você pode gerenciar razoavelmente com a primeira sugestão desta lista, recomendamos remover todo o conteúdo do bloco e arquivá-lo. Isso garantirá que nenhuma informação desatualizada seja incluída em qualquer e-mail recém-enviado.
+- Quando seu bloco for usado em mais mensagens do que você pode gerenciar razoavelmente com a primeira sugestão desta lista, recomendamos remover todo o conteúdo do bloco. Isso evita a inclusão de informações desatualizadas em quaisquer mensagens.
 - Se você arquivar acidentalmente um bloco de conteúdo, poderá desarquivá-lo.
 
 ![Painel Blocos de conteúdo salvos, onde o menu suspenso de configurações para "Test_32" é expandido para mostrar três opções: Desarquivar, duplicar e copiar para o espaço de trabalho]({% image_buster /assets/img/unarchive-content-block.png %})
