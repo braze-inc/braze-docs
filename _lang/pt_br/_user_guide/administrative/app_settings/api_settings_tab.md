@@ -31,7 +31,7 @@ Como criar um webhook Braze-to-Braze e usar o allowlisting? Confira nossa lista 
 
 ### Alertas de uso da API
 
-Configure alertas de uso da API para monitorar a atividade da chave de API e detectar problemas antecipadamente. Esses alertas o ajudam a detectar padrões de tráfego inesperados antes que eles afetem sua experiência.
+Configure alertas de uso da API para monitorar a atividade da chave de API e detectar problemas com antecedência. Esses alertas o ajudam a detectar padrões de tráfego inesperados antes que eles afetem sua experiência.
 
 Você pode rastrear dois tipos de atividade da API:
 
