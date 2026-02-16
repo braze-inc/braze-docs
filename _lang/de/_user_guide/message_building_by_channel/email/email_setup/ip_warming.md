@@ -5,7 +5,8 @@ page_order: 1
 page_type: reference
 description: "Dieser Referenzartikel behandelt das Thema IP-Warming und Best Practices."
 channel: email
-
+local_redirect:
+  automated-ip-warming: '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/automated_ip_warming/'
 ---
 
 # IP-Warming
@@ -23,14 +24,6 @@ ISPs drosseln die E-Mail-Zustellung, wenn der Verdacht auf Spam aufkommt, damit 
 Wenn das Engagement mäßig ist, kann es sein, dass sie Ihre E-Mail weiter drosseln, um mehr Daten über das Engagement zu sammeln, damit sie mit größerer Sicherheit feststellen können, ob es sich bei der E-Mail um Spam handelt oder nicht. Wenn die E-Mail sehr hohe Engagement-Metriken aufweist, werden sie diese E-Mail möglicherweise nicht mehr drosseln. Sie verwenden diese Daten, um eine E-Mail-Reputation zu erstellen, die letztendlich bestimmt, ob Ihre E-Mails automatisch als Spam gefiltert werden oder nicht.
 
 Wenn Ihre Domain oder IP von einem ISP blockiert wird, finden Sie in den [Nachrichtenprotokollen]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) Informationen darüber, welche Websites Sie besuchen sollten, um diese ISPs anzusprechen und von diesen Listen zu entfernen.
-
-## Automatisiertes IP-Warming
-
-Mit der Automatisierung des IP-Warming können Sie Ihr tägliches Sendevolumen allmählich erhöhen, so dass die Posteingangsprovider Ihre Sendemuster lernen und ihnen vertrauen können. Überwachen Sie Ihren IP-Warming-Tracker, indem Sie die Kachel **Automatisiertes IP-Warming** im Abschnitt **Weitermachen, wo Sie aufgehört haben** auf Ihrem Dashboard zu Hause auswählen. 
-
-Braze sendet zuerst an die Abonnent:innen mit dem größten Engagement, so dass das tägliche Volumen in einem Tempo wachsen kann, das den besten Praktiken entspricht. Dann verfolgt Braze die Signale für Engagement und Zustellbarkeit. Wenn irgendwelche Probleme entdeckt werden, wird Ihr Zeitplan automatisch angepasst.
-
-![IP-Warming-Tracker mit Sendevolumen für die Woche vom 16\. Januar.]({% image_buster /assets/img/automated_ip_warming_example.png %})
 
 ## Zeitplan für das IP-Warming
 
