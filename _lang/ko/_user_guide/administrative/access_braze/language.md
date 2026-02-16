@@ -1,7 +1,7 @@
 ---
 nav_title: 언어 설정
 article_title: 언어 설정
-page_order: 2.5
+page_order: 3
 page_type: reference
 description: "이 문서에서는 Braze 대시보드가 표시되는 언어를 변경하는 방법을 설명합니다."
 
