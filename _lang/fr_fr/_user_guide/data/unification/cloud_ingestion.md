@@ -26,7 +26,7 @@ Vous trouverez votre ID d'intégration dans l'URL lorsque vous visualisez une in
 Grâce aux fonctionnalités d'ingestion de données de Braze Cloud, vous pouvez :
 
 - Créez une intégration simple dans Braze directement depuis votre entrepôt de données ou solution de stockage de fichiers en quelques minutes seulement.
-- Synchronisez en toute sécurité les données des utilisateurs, y compris les attributs, les événements et les achats de votre entrepôt de données vers Braze.
+- Synchronisez en toute sécurité les données des utilisateurs, notamment les attributs, les événements et les achats, depuis votre entrepôt de données vers Braze.
 - Bouclez la boucle des données avec Braze en combinant l'ingestion de données dans le cloud avec le partage de données Currents ou Snowflake.
 
 En outre, les [sources connectées]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/connected_sources) sont une alternative à la copie zéro. Vous pouvez demander à Braze d'interroger directement votre entrepôt de données ou votre solution de stockage de fichiers pour construire des segments CDI, sans copier les données sous-jacentes dans Braze.
@@ -61,7 +61,7 @@ L'ingestion de données dans le nuage prend en charge les types de données suiv
 ### Envoi de messages sans copie
 - Sources connectées
 
-## Identificateurs d'utilisateurs pour l'ingestion de données
+## Identifiants d'utilisateurs pour l'ingestion de données
 
 Lors de la synchronisation des données utilisateur via Cloud Data Ingestion, vous pouvez identifier les utilisateurs à l'aide d'un ou plusieurs des types d'identifiants suivants. Chaque ligne de votre tableau source doit contenir une valeur pour un seul type d'identifiant à la fois, mais votre tableau peut inclure des colonnes pour un, deux, trois, quatre ou les cinq types d'identifiants.
 
