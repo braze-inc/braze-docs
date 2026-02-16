@@ -98,7 +98,7 @@ Sie können wählen, ob Sie Zugriff auf alle Tabellen in einem Schema gewähren 
 
 Die Berechtigung `create table` ist erforderlich, damit Braze eine Tabelle mit den Abfrageergebnissen Ihrer CDI Segment-Erweiterung erstellen kann, bevor das Segment in Braze aktualisiert wird. Braze erstellt eine temporäre Tabelle pro Segment, die nur persistent ist, solange Braze das Segment aktualisiert.
 
-```json
+```sql
 CREATE ROLE BRAZE_INGESTION_ROLE;
 
 GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -116,7 +116,7 @@ GRANT SELECT ON TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC TO 
 
 #### Schritt 2.2: Richten Sie das Lager ein und geben Sie der Rolle Braze Zugriff
 
-```json
+```sql
 CREATE WAREHOUSE BRAZE_INGESTION_WAREHOUSE;
 
 GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
@@ -127,7 +127,7 @@ Das Lagerhaus muss die Option zur **automatischen Wiederaufnahme** aktiviert hab
 {% endalert %}
 
 #### Schritt 2.3: Einrichten der Nutzer:in
-```json
+```sql
 CREATE USER BRAZE_INGESTION_USER;
 
 GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
@@ -149,7 +149,7 @@ Je nach Konfiguration Ihres Snowflake-Kontos müssen Sie die folgenden IP-Adress
 {% tab Redshift %}
 #### Schritt 2.1: Nutzer:in anlegen und Berechtigungen erteilen 
 
-```json
+```sql
 CREATE USER braze_user PASSWORD '{password}';
 GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT CREATE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
@@ -436,7 +436,7 @@ Wenn Sie die Schlüssel irgendwann wechseln möchten, können Sie einen neuen ö
 
 ![Datenzugriffsverwaltung für Snowflake Zugangsdaten, mit einem Button zur Generierung eines neuen Schlüssels.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
 
-```json
+```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
 ```
 
