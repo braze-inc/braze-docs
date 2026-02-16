@@ -54,7 +54,9 @@ Ziehen Sie eine In-Browser-Nachricht in Betracht, um Nutzer zum Opt-in für Web-
 
 ## Unterstützte Browser
 
-Die folgenden Browser unterstützen Web-Push-Benachrichtigungen. Private Browsing-Fenster unterstützen jedoch derzeit keinen Web-Push.
+Die folgenden Browser unterstützen Web-Push-Benachrichtigungen.
+
+{% multi_lang_include alerts/important_alerts.md alert='Web push private browsing' %}
 
 - Chrome (und Chrome für Android Mobil)
 - Safari
