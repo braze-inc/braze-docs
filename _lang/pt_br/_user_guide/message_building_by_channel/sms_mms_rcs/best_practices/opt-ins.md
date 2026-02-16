@@ -33,7 +33,7 @@ Depois que o usuário se inscrever, faça o seguinte:
 
 1. Use o [`/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/#update-users-subscription-group-status) para criar o usuário e salvar seus atributos.
 
-```json
+```http
 POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -49,7 +49,7 @@ POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 {: start="2"}
 2\. Use o [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para inscrever o usuário em SMS.
 
-```json
+```http
 POST `https://rest.aid-03.braze.com/users/track` \
 --header `Content-Type: application/json` \
 --header `Authorization: Bearer YOUR-REST-API-KEY` \
