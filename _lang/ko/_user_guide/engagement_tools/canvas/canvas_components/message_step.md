@@ -2,7 +2,7 @@
 nav_title: 메시지 
 article_title: 메시지 
 alias: "/message_step/"
-page_order: 5
+page_order: 11
 page_type: reference
 description: "이 참고 문서에서는 메시지 단계를 사용하여 독립형 메시지를 만드는 방법에 대해 설명합니다."
 tool: Canvas
