@@ -36,25 +36,7 @@ channel: email
 
 Braze 서버를 통해 전송되는 이메일 주소는 [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) 표준에 따라 유효성을 검사해야 하며, Braze는 특정 문자를 허용하지 않으며 유효하지 않은 것으로 인식합니다. 이메일이 반송되면 Braze는 이메일을 유효하지 않은 것으로 표시하고 구독 상태는 변경되지 않습니다. 
 
-{% details Unaccepted characters outside of RFC standards %}
-- *
-- /
-- ?
-- !
-- $
-- #
-- %
-- ^
-- &
-- (
-- )
-- {
-- }
-- [
-- ]
-- ~
-- ,
-{% enddetails %}
+허용되지 않는 문자 및 이메일 유효성 검사 규칙에 대한 정보는 [이메일 유효성 검사]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/#how-it-works)를 참조하십시오.
 
 ### 발신 주소 및 회신 주소 설정
 
