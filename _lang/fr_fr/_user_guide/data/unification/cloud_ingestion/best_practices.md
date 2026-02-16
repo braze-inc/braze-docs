@@ -303,7 +303,7 @@ Si vous préférez stocker de manière interne chaque attribut dans sa propre co
 
 {% tabs local %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
      attribute_2 string,
@@ -325,7 +325,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
      attribute_2 string,
@@ -347,7 +347,7 @@ SELECT
 ```
 {% endtab %}
 {% tab BigQuery %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (attribute_1 string,
      attribute_2 STRING,
      attribute_3 NUMERIC,
@@ -367,7 +367,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Databricks %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (
     attribute_1 string,
     attribute_2 STRING,
@@ -389,7 +389,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE TABLE [braze].[users] (
     attribute_1 VARCHAR,
     attribute_2 VARCHAR,
@@ -488,8 +488,8 @@ Notez que vous ne pouvez synchroniser qu'un seul événement d'achat par ligne.
     "price" : 219.98,
     "time" : "2013-07-16T19:20:30+01:00",
     "properties" : {
-        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99, },
-        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99, }
+        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99 },
+        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99 }
         ]
     }
 }
