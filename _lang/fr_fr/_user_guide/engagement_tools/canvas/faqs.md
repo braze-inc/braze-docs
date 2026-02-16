@@ -155,7 +155,7 @@ Notez que l'affectation des variations a lieu à l'entrée de la toile. Si un ut
 
 ### Comment convertir un canvas existant de l'éditeur d'origine vers l'éditeur actuel ?
 
-Vous pouvez [cloner votre Canvas]({{site.baseurl}}/cloning_canvases/). Cela crée une copie de votre Canvas original dans le flux de travail Canvas le plus récent.
+Vous pouvez [cloner votre Canvas]({{site.baseurl}}/cloning_canvases/). Cela permet de créer une copie de votre canvas original dans le flux de travail Canvas le plus récent.
 
 ### Quelles sont les principales différences entre les éditeurs actuels et les éditeurs originaux de Canvas ?
 
