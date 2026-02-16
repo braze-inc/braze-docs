@@ -2,7 +2,7 @@
 nav_title: 오디언스 경로
 article_title: 오디언스 경로 
 alias: /audience_paths/
-page_order: 1
+page_order: 3
 page_type: reference
 description: "이 참조 문서에서는 캔버스에서 오디언스 경로를 사용하여 전략적 우선순위 기반 사용자 그룹화를 통해 대규모로 사용자를 직관적으로 필터링하고 세그먼트화하는 방법을 설명합니다."
 tool: Canvas
@@ -17,7 +17,7 @@ tool: Canvas
 
 ## 작동 방식
 
-![참여 사용자와 그 외의 모든 사용자라는 두 그룹으로 구성된 오디언스 경로입니다.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
+![참여 사용자와 그 외 모든 사용자라는 두 그룹으로 구성된 오디언스 경로입니다.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
 
 오디언스 경로는 순위 기준이 있는 정렬 깔때기와 유사합니다. 사용자는 우선 순위 순서대로 각 기준에 대해 평가되며 자격을 갖춘 가장 높은 순위의 기준 경로로 보내집니다. 이것은 사용자가 어디로 갈지, 어떤 메시지를 받을지에 대한 모호성을 줄여줍니다. Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
