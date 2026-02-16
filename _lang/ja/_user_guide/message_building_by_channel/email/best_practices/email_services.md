@@ -12,7 +12,7 @@ channel: email
 
 > Eメールプログラムに関する追加サポートが必要な場合、Brazeは追加料金で定期サービスおよび1回限りのサービスを提供している。詳しくは、Brazeアカウントマネージャーに問い合わせを。
 
-## メール配信サービス {#email-deliverability-services}
+## メール配信サービス{#email-deliverability-services}
 
 定期的なEメールサポートは2段階ある：
 1. デラックス  
