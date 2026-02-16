@@ -61,7 +61,7 @@ Tool:
 
 테스트 사용자는 실제 자격이 없더라도 미리 보기에 참여할 수 있습니다. If they aren't eligible, you can see why they haven't met the criteria. When a test user enters the preview, we assume the test user has met the target audience criteria and performed the action trigger criteria. For example, for a Canvas that uses custom events in the entry criteria, the test user is assumed to have performed the custom event as expected in the entry criteria. However, if the same custom event is used elsewhere in the Canvas (like in the exit criteria), consider how this might impact your user path.
 
-이벤트, API 트리거, 사용자 지정 속성 및 캔버스 항목 속성은 캔버스 항목에 따라 적용됩니다. 테스트 실행은 이러한 요소를 적용하지 않고 사용자 여정을 시뮬레이션하여 실제 사용자 프로필이나 캔버스의 흐름을 변경합니다. 예를 들어, 테스트 중에 사용자 지정 속성을 캔버스 트리거로 사용하면 사용자 지정 속성 변경을 트리거한 **것처럼** 트리거 기준이 사용자의 미리 보기에 적용됩니다.
+테스트 사용자가 캔버스에 들어갈 수 있다고 가정한 이벤트, API 트리거, 커스텀 속성 및 캔버스 입력 속성은 실제 사용자 프로필에서 업데이트되지 않으며 테스트 실행 이후에도 지속되지 않습니다. 예를 들어, 테스트 중에 사용자 지정 속성을 캔버스 트리거로 사용하면 사용자 지정 속성 변경을 트리거한 **것처럼** 트리거 기준이 사용자의 미리 보기에 적용됩니다.
 
 ### Consideration
 
