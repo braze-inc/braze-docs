@@ -63,7 +63,7 @@ Um jeder Auswahl ein benutzerdefiniertes Attribut hinzuzufügen, wählen Sie den
 Der Datentyp Ihrer benutzerdefinierten Attribute hängt davon ab, wie Sie Ihre Umfrage eingerichtet haben.
 
 - **Auswahl im Multiple-Choice-Verfahren:** Der Datentyp des benutzerdefinierten Attributs muss ein Array sein. Wenn das angepasste Attribut auf einen anderen Datentyp eingestellt ist, werden die Antworten nicht protokolliert.
-- **Einzelne Auswahlmöglichkeiten:** Der Datentyp des angepassten Attributs _darf kein_ Array sein. Die Antworten werden nicht protokolliert, wenn das Attribut ein Array ist.
+- **Einzelne Auswahlmöglichkeiten:** Der Datentyp des angepassten Attributs muss ein String sein. Angepasste Attribute, die nicht vom Typ String sind, erscheinen nicht in der Auswahlliste, und die Antworten werden nicht protokolliert.
 
 {% alert important %}
 Wenn die Sammlung von benutzerdefinierten Attributen aktiviert ist, werden Auswahlmöglichkeiten, die denselben benutzerdefinierten Attributnamen haben, in einem Array zusammengefasst.
@@ -134,7 +134,7 @@ Die ausgewählten Optionen fließen automatisch in Currents ein, und zwar unter 
 
 **Das Ziel:** Messen Sie die Kundenzufriedenheit und senden Sie Win-Back-Kampagnen an Nutzer, die schlechte Bewertungen hinterlassen haben.
 
-Verwenden Sie dazu eine Umfrage mit einer Auswahl von fünf Optionen, die von "😡 Sehr unzufrieden" bis "😍 Sehr zufrieden" reichen. Jede Auswahl wird dem angepassten Attribut `customer_satisfaction` mit einem numerischen Wert von 1 bis 5 zugeordnet, wobei 1 für die geringste Zufriedenheit und 5 für die höchste Zufriedenheit steht.
+Verwenden Sie dazu eine Umfrage mit einer Auswahl von fünf Optionen, die von "😡 Sehr unzufrieden" bis "😍 Sehr zufrieden" reichen. Jede Auswahl wird dem angepassten Attribut `customer_satisfaction` mit einem numerischen Wert von 1 bis 5 zugeordnet, wobei 1 für die geringste Zufriedenheit und 5 für die höchste Zufriedenheit steht. Beachten Sie, dass diese numerischen Werte als Strings gespeichert werden, da angepasste Attribute in Form von Strings für die Single-Choice-Auswahl erforderlich sind.
 
 | Auswahl                                | Attribute              | Wert |
 |---------------------------------------|------------------------|-------|
@@ -145,7 +145,7 @@ Verwenden Sie dazu eine Umfrage mit einer Auswahl von fünf Optionen, die von "�
 | 😍 Sehr zufrieden                     | `customer_satisfaction` | (5 %)     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Wenn ein Nutzer:innen die Umfrage abschickt, wird sein ausgewählter Wert als angepasstes Attribut protokolliert. Anschließend können Sie mithilfe von Zielgruppen-Filtern Folgekampagnen erstellen. Richten Sie beispielsweise Nachrichten zur Rückgewinnung an Nutzer:innen, deren Attribut `customer_satisfaction` auf 1 oder 2 steht.
+Wenn ein Nutzer:innen die Umfrage abschickt, wird sein ausgewählter Wert als angepasstes Attribut protokolliert. Anschließend können Sie mithilfe von Zielgruppen-Filtern Folgekampagnen erstellen. Stellen Sie zum Beispiel Nachrichten zur Rückgewinnung für Nutzer:innen mit dem Attribut `customer_satisfaction` "1" oder "2" zusammen.
 
 {% endtab %}
 {% tab Notification preferences %}
