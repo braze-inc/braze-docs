@@ -360,6 +360,41 @@ Lorsque vous utilisez l'intégration push automatique, `subscribeToUpdates(_:)` 
 Créez votre abonnement de notification push dans `application(_:didFinishLaunchingWithOptions:)` pour vous assurer que votre abonnement est déclenché après qu'un utilisateur final a tapé sur une notification alors que votre appli est dans un état terminé.
 {% endalert %}
 
+## Gestion des notifications d'avant-plan
+
+Par défaut, lorsqu'une notification push arrive alors que votre app est au premier plan, iOS ne l'affiche pas automatiquement. Pour afficher les notifications push au premier plan et les suivre avec l'analyse/analytique de Braze, appelez la méthode `handleForegroundNotification(notification:)` dans votre implémentation `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)`.
+
+### Fonctionnement
+
+Lorsque vous appelez `handleForegroundNotification(notification:)`, Braze traite la charge utile de la notification pour enregistrer l'analyse/analytique et gérer les liens profonds ou les actions sur les boutons. Le comportement réel de l'affichage est contrôlé par l'adresse `UNNotificationPresentationOptions` que vous transmettez au gestionnaire d'achèvement.
+
+```swift
+import BrazeKit
+import UserNotifications
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+  func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+  ) {
+    // Let Braze process the notification payload
+    if let braze = AppDelegate.braze {
+      braze.notifications.handleForegroundNotification(notification: notification)
+    }
+    
+    // Control how the notification appears in the foreground
+    if #available(iOS 14.0, *) {
+      completionHandler([.banner, .list, .sound])
+    } else {
+      completionHandler([.alert, .sound])
+    }
+  }
+}
+```
+
+Pour un exemple complet, consultez l'[exemple d'intégration manuelle des notifications push](https://github.com/braze-inc/braze-swift-sdk/blob/e31907eaa0dbd151dc2e6826de66cc494242ba60/Examples/Swift/Sources/PushNotifications-Manual/AppDelegate.swift#L1-L120) dans le référentiel Braze Swift SDK.
+
 ## Amorces de notifications push {#push-primers}
 
 Les campagnes d'amorces de notifications push encouragent vos utilisateurs à activer les notifications push sur leur appareil pour votre appli. Ceci peut se faire sans personnalisation du SDK, grâce à notre [amorce de notifications push sans code]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
@@ -372,7 +407,7 @@ Grâce à la gestion dynamique des passerelles APN, vous aurez :
 
 - **Amélioration de la fiabilité :** Les notifications sont toujours envoyées à l'environnement des APN corrects, ce qui réduit les échecs de réception/distribution.
 - **Configuration simplifiée :** Vous n'avez plus besoin de gérer manuellement les paramètres des passerelles APN.
-- **Résilience aux erreurs :** Les valeurs invalides ou manquantes de la passerelle sont traitées avec élégance, ce qui permet d'assurer un service ininterrompu.
+- **Résilience des erreurs :** Les valeurs invalides ou manquantes de la passerelle sont traitées avec élégance, ce qui permet d'assurer un service ininterrompu.
 
 ### Conditions préalables
 
@@ -403,4 +438,4 @@ Cette fonctionnalité améliore les taux de réception/distribution en acheminan
 
 #### Puis-je désactiver cette fonctionnalité ?
 
-La gestion dynamique des passerelles APN est activée par défaut et permet d'améliorer la fiabilité. Si vous avez des cas d'utilisation spécifiques qui nécessitent une sélection manuelle de la passerelle, contactez l'[assistance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
+La gestion dynamique des passerelles APN est activée par défaut et permet d'améliorer la fiabilité. Si vous avez des cas d'utilisation spécifiques qui nécessitent une sélection manuelle de la passerelle, contactez le [service d'assistance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
