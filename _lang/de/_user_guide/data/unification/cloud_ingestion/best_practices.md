@@ -18,7 +18,7 @@ description: "Diese Seite bietet eine Übersicht über die Datenaufnahme in der 
 `UPDATED_AT` ist nur für Data Warehouse Integrationen relevant, nicht für S3-Synchronisationen.
 {% endalert %}
 
-Bei einer Synchronisierung stellt Braze eine direkte Verbindung zu Ihrer Data Warehouse-Instanz her, ruft alle neuen Daten aus der angegebenen Tabelle ab und aktualisiert die entsprechenden Daten auf Ihrem Braze-Dashboard. Jedes Mal, wenn die Synchronisierung ausgeführt wird, reflektiert Braze alle aktualisierten Daten.
+Bei einer Synchronisierung stellt Braze eine direkte Verbindung zu Ihrer Data Warehouse-Instanz her, ruft alle neuen Daten aus der angegebenen Tabelle ab und aktualisiert die entsprechenden Daten auf Ihrem Braze-Dashboard. Jedes Mal, wenn die Synchronisierung ausgeführt wird, spiegelt Braze alle aktualisierten Daten wider.
 
 {% alert important %}
 Braze CDI synchronisiert Zeilen ausschließlich auf der Grundlage des Wertes `UPDATED_AT`, unabhängig davon, ob der Inhalt der Zeile mit dem aktuellen Wert in Braze übereinstimmt. Daher empfehlen wir, `UPDATED_AT` so zu verwenden, dass nur neue oder aktualisierte Daten synchronisiert werden, um eine unnötige Datenpunkt-Nutzung zu vermeiden.
@@ -95,7 +95,7 @@ Die Spalte `UPDATED_AT` sollte in UTC sein, um Probleme mit der Sommerzeit zu ve
 
 ## Vergewissern Sie sich, dass die Zeit von `UPDATED_AT` nicht mit der Zeit Ihrer Synchronisierung übereinstimmt.
 
-Ihre CDI-Synchronisierung enthält möglicherweise doppelte Daten, wenn eines der Felder von `UPDATED_AT` genau die gleiche Uhrzeit hat wie der letzte `UPDATED_AT` Zeitstempel des vorherigen erfolgreichen Synchronisierungsauftrags. Das liegt daran, dass CDI eine "inklusive Grenze" wählt, wenn es eine Zeile identifiziert, die mit der vorherigen Synchronisierung übereinstimmt, und die Zeilen synchronisieren kann. CDI testet diese Zeilen erneut und erstellt doppelte Daten.
+Ihre CDI-Synchronisierung enthält möglicherweise doppelte Daten, wenn eines der Felder von `UPDATED_AT` genau dieselbe Uhrzeit hat wie der letzte `UPDATED_AT` Zeitstempel des vorherigen erfolgreichen Synchronisierungsauftrags. Das liegt daran, dass CDI eine "inklusive Grenze" wählt, wenn es eine Zeile identifiziert, die mit der vorherigen Synchronisierung übereinstimmt, und die Zeilen synchronisieren kann. CDI testet diese Zeilen erneut und erstellt doppelte Daten.
 
 Hier sind einige Vorschläge, um doppelte Daten zu vermeiden:
 
@@ -303,7 +303,7 @@ Wenn Sie es vorziehen, jedes Attribut intern in einer eigenen Spalte zu speicher
 
 {% tabs local %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
      attribute_2 string,
@@ -325,7 +325,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
      attribute_2 string,
@@ -347,7 +347,7 @@ SELECT
 ```
 {% endtab %}
 {% tab BigQuery %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (attribute_1 string,
      attribute_2 STRING,
      attribute_3 NUMERIC,
@@ -367,7 +367,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Databricks %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (
     attribute_1 string,
     attribute_2 STRING,
@@ -389,7 +389,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE TABLE [braze].[users] (
     attribute_1 VARCHAR,
     attribute_2 VARCHAR,
@@ -488,8 +488,8 @@ Beachten Sie, dass Sie nur ein Kauf-Ereignis pro Zeile synchronisieren können.
     "price" : 219.98,
     "time" : "2013-07-16T19:20:30+01:00",
     "properties" : {
-        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99, },
-        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99, }
+        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99 },
+        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99 }
         ]
     }
 }
