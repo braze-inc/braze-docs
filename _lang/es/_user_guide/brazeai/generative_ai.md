@@ -1,7 +1,7 @@
 ---
 nav_title: IA generativa
 article_title: IA generativa
-page_order: 20
+page_order: 5
 layout: dev_guide
 guide_top_header: "IA generativa"
 guide_top_text: "<sup>BrazeAITM</sup> impulsa varias características de automatización de IA generativa que ayudan a aumentar tu eficacia y creatividad. Crea atractivas experiencias del cliente a través de canales cruzados dedicando menos tiempo a tareas rutinarias de redacción, perfeccionamiento de contenidos y creación de imágenes."
