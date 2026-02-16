@@ -72,6 +72,8 @@ Escreva sua mensagem usando personalização (como Liquid ou Connected Content) 
 
 Se planeja usar o Liquid, certifique-se de incluir um valor padrão para sua personalização. Isso evitará que os destinatários com perfis de usuário incompletos recebam um espaço reservado em branco. Por exemplo, em vez de um usuário receber a mensagem "Olá, !", ele pode receber a mensagem "Olá, novo assinante!".
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Criação de mensagens da direita para a esquerda
 
 A aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
@@ -115,7 +117,7 @@ Também é possível definir eventos personalizados de conversão com base em se
 {% endtab %}
 {% tab Canvas %}
 
-Se ainda não o fez, conclua as seções restantes do seu Canva. Para obter mais detalhes sobre como criar o restante de seu Canvas, usar testes multivariantes e Intelligent Selection, entre outros, consulte [Criar um Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Se ainda não o fez, conclua as seções restantes do seu Canva. Para obter mais detalhes sobre como criar o restante de seu Canva, usar testes multivariantes e Intelligent Selection, entre outros, consulte [Criar um Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}
