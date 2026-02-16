@@ -27,7 +27,7 @@ Brazeのクラウドデータインジェスト機能を使えば、次のこと
 
 - お使いのデータウェアハウスやファイルストレージソリューションから Braze へのシンプルな直接統合を構築できます。所要時間はわずか数分です。
 - 属性、イベント、購入などのユーザーデータをデータウェアハウスからBrazeに安全に同期。
-- Brazeは、クラウドデータインジェストとCurrentsまたはSnowflakeデータ共有を組み合わせることで、データループを閉じる。
+- Brazeは、Cloud Data IngestionとCurrentsまたはSnowflake Data Sharingを組み合わせることで、データループを閉じることができる。
 
 さらに、[コネクテッド・ソースは]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/connected_sources)ゼロコピーの代替手段でもある。Brazeに基礎データをコピーすることなく、データウェアハウスやファイルストレージソリューションに直接クエリーしてCDIセグメンテーションを構築することができる。
 
