@@ -113,6 +113,10 @@ Las instantáneas de MAU se calculan una vez al día y nunca cambian retroactiva
 Cuando realices la integración inicial de Braze, todos los usuarios parecerán nuevos porque Braze nunca ha registrado una sesión para ellos.
 {% endalert %}
 
+{% alert important %}
+Los usuarios asociados a más de una aplicación se cuentan por separado para cada aplicación. Esto significa que un mismo usuario puede contribuir al recuento de *Nuevos Usuarios* varias veces si inicia sesiones en distintas aplicaciones de tu espacio de trabajo.
+{% endalert %}
+
 ### Adherencia de los usuarios
 
 El valor de *pegajosidad* es una relación entre el DAU y el MAU de un periodo determinado. En esencia, la adherencia mide el porcentaje de tus MAU que vuelven a diario.
