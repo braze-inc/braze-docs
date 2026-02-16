@@ -77,9 +77,7 @@ Cette section vous permet de gérer les adresses CCI que vous pouvez ajouter aux
 
 Les adresses CCI ne sont disponibles que pour SendGrid et SparkPost. Comme alternative aux adresses CCI, nous vous recommandons d'utiliser l'[archivage des messages]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/) pour enregistrer une copie des messages envoyés aux utilisateurs à des fins d'archivage ou de conformité.
 
-{% alert important %}
-L'ajout d'une adresse CCI à votre campagne ou Canvas aura pour effet de doubler vos e-mails facturables pour la campagne ou le composant Canvas puisque Braze enverra un message à votre utilisateur et un autre à votre adresse CCI.
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='BCC address billable emails' %}
 
 ![La section Adresse CCI de l'onglet Paramètres de l'e-mail.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
 
@@ -102,7 +100,7 @@ Avec la CCI dynamique, vous pouvez utiliser du liquide dans votre adresse de CCI
 
 [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
-Le pixel de suivi d'ouverture des e-mails est une image invisible de 1 x 1 px qui est automatiquement insérée dans le HTML de votre e-mail. Ce pixel aide Braze à détecter si les utilisateurs finaux ont ouvert votre e-mail. Les informations sur l’ouverture des e-mails peuvent être très utiles, car elles aident les utilisateurs à déterminer des stratégies de marketing efficaces en comprenant les taux d’ouverture correspondants.
+Le pixel de suivi d'ouverture d'e-mail est une image invisible de 1 x 1 px qui est automatiquement insérée dans le code HTML de votre e-mail. Ce pixel permet à Braze de détecter si vos utilisateurs ont ouvert votre e-mail. Lorsque le client e-mail d'un utilisateur fait une demande à notre pixel de suivi, la demande peut contenir des informations telles que l'adresse IP, l'agent utilisateur et l'horodatage. Les informations sur l'ouverture des e-mails peuvent être très utiles, vous aidant à déterminer des stratégies de marketing efficaces en comprenant les taux d'ouverture correspondants.
 
 ### Placement du pixel de suivi
 
@@ -155,7 +153,7 @@ Le tableau suivant résume la prise en charge des fournisseurs de messagerie pou
 | Yahoo! Mail | Pris en charge* | Non pris en charge | Pris en charge |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-_\*Yahoo et Gmail finiront par supprimer l'en-tête "mailto :" et n'autoriseront plus que le simple clic._
+_\*Yahoo et Gmail finiront par supprimer l'en-tête "mailto :" et n'autoriseront que le simple clic._
 
 L'affichage de l'en-tête est déterminé par le fournisseur de messagerie. Pour vérifier si l'en-tête de désabonnement de liste est inclus dans l'e-mail brut (texte) pour le destinataire dans Gmail, procédez comme suit :
 
