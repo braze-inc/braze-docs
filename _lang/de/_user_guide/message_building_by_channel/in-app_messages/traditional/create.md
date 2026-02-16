@@ -191,7 +191,9 @@ Wählen Sie **Sprachen hinzufügen** und wählen Sie die gewünschten Sprachen a
 
 ### Bild
 
-Je nach Art Ihrer Nachricht können Sie **ein Bild hochladen**, **ein Abzeichen auswählen** oder **Font Awesome** verwenden. Um ein Bild hochzuladen, klicken Sie auf **Bild hinzufügen** oder geben Sie eine Bild-URL an. Wenn Sie auf **Bild hinzufügen** klicken, öffnet sich die **Mediathek**, in der Sie ein zuvor hochgeladenes Bild auswählen oder ein neues Bild hinzufügen können. Die Empfehlungen zu Maßen und Anforderungen können je nach Nachrichtentyp und Plattform unterschiedlich sein. Überprüfen Sie diese, bevor Sie ein Bild in Auftrag geben oder selbst eines erstellen.
+Je nach Art Ihrer Nachricht können Sie **ein Bild hochladen**, **ein Abzeichen auswählen** oder **Font Awesome** verwenden. Um ein Bild hochzuladen, wählen Sie **Bild hinzufügen** oder geben Sie eine Bild-URL an. Wenn Sie **Bild hinzufügen** wählen, öffnet sich die **Mediathek**, in der Sie ein zuvor hochgeladenes Bild auswählen oder ein neues Bild hinzufügen können. Jede Art von Nachricht und jede Plattform kann ihre eigenen empfohlenen Proportionen und Anforderungen haben - überprüfen Sie diese, bevor Sie ein Bild in Auftrag geben oder von Grund auf neu erstellen.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 ### Kopfzeile und Körper
 
@@ -411,7 +413,7 @@ Die Zahl 200 bezieht sich auf laufende In-App-Nachrichtenkampagnen, die noch nic
 
 Wenn eine In-App-Nachricht-Kampagne unter Verwendung der Ortszeit des Nutzers geplant wird, wird die Auswertung der Start- und Endzeit der Kampagne auf dem Gerät selbst durchgeführt.
 
-In-App-Nachricht-Kampagnen werden in der Regel an das Gerät des Nutzers gepusht, wenn die App-Sitzung beginnt oder aktualisiert wird. In diesem Moment:
+In-App-Nachricht-Kampagnen werden in der Regel auf das Gerät des Nutzers gepusht, wenn die App-Sitzung beginnt oder aktualisiert wird. In diesem Moment:
 
 1. Das SDK prüft, ob der Nutzer:in für In-App-Nachrichten mit Triggern in Frage kommt.
 2. Das Gerät prüft, ob das triggernde Ereignis des Nutzers innerhalb der Start- und Endzeit der Kampagne liegt (entsprechend der Lokalisierung der Zeitzone des Nutzers).
@@ -420,4 +422,4 @@ In-App-Nachricht-Kampagnen werden in der Regel an das Gerät des Nutzers gepusht
 #### Überlegungen
 
 - Wenn ein Nutzer:innen kurz nach der Zustellung der In-App-Nachricht ein Ereignis triggert (z.B. einen Button antippen), erscheint die Nachricht möglicherweise erst bei der nächsten Aktualisierung der Sitzung - vorausgesetzt, alle Zulassungskriterien sind noch erfüllt.
-- Ähnlich wie bei anderen Kanälen sollten In-App-Nachrichten-Kampagnen idealerweise 24-48 Stunden im Voraus eingeführt werden. Dieser Puffer gibt den Nutzer:innen genügend Zeit, um die Berechtigung zu erfüllen und eine Sitzung zu initiieren, damit die Nachricht ausgewertet und angezeigt werden kann.
+- Ähnlich wie bei anderen Kanälen sollten In-App-Nachrichten-Kampagnen idealerweise 24-48 Stunden im Voraus eingeführt werden. Dieser Puffer gibt den Nutzer:innen genügend Zeit, die Voraussetzungen zu erfüllen und eine Sitzung zu initiieren, damit die Nachricht ausgewertet und angezeigt werden kann.
