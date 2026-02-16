@@ -2,7 +2,7 @@
 nav_title: 컨텍스트 
 article_title: 컨텍스트 
 alias: /context/
-page_order: 1.5
+page_order: 6
 page_type: reference
 toc_headers: "h2"
 description: "이 참조 문서에서는 캔버스에서 컨텍스트 단계를 만들고 사용하는 방법에 대해 설명합니다."
@@ -24,7 +24,11 @@ tool: Canvas
 
 컨텍스트 단계를 사용하면 사용자가 특정 캔버스를 통과하는 동안 임시 데이터를 생성하고 사용할 수 있습니다. 이 데이터는 해당 캔버스 여정 내에서만 존재하며 다른 캔버스나 세션 외부에 지속되지 않습니다.
 
+컨텍스트 변수는 특정 캔버스 여정에 대해서만 존재합니다. 사용자의 프로필은 영구적으로 변경되지 않으며 다른 캔버스에도 표시되지 않습니다. 따라서 특정 캠페인이나 워크플로에만 관련된 임시 정보에 이상적입니다.
+
+{% alert tip %}
 데이터 유형, 사용법, 모범 사례 등 컨텍스트 변수에 대한 전체 참조는 [컨텍스트 변수 참조를 참조]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/)하세요.
+{% endalert %}
 
 컨텍스트 단계에서는 최대 10개의 컨텍스트 변수를 정의하거나 업데이트할 수 있습니다. 이러한 변수를 사용하여 지연을 개인화하고, 사용자를 동적으로 세분화하고, 캔버스 전체에서 메시징을 강화할 수 있습니다. 예를 들어 사용자의 예정된 비행 시간에 대한 컨텍스트 변수를 만든 다음 이를 사용하여 개인화된 지연을 설정하고 미리 알림을 보낼 수 있습니다.
 
@@ -42,13 +46,10 @@ tool: Canvas
 컨텍스트 단계는 사용자를 일괄 처리하여 성능/성과를 최적화합니다. 사용자가 컨텍스트 단계를 입력하면 기본값으로 1,000명 단위로 일괄 처리합니다. 이러한 배치는 병렬로 처리되지만 각 배치 내에서 사용자는 순차적으로 처리됩니다.
 
 즉,
-- **병렬 배치 처리**: 1,000명의 사용자를 동시에 여러 배치로 처리할 수 있어 대규모 오디언스를 효율적으로 처리할 수 있습니다.
-- **배치 내에서 순차적으로 처리합니다**: 각 배치 내에서 사용자는 차례로 처리됩니다. 컨텍스트 단계에 [연결된 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) 호출이 포함된 경우 각 사용자의 연결된 콘텐츠 요청은 해당 배치의 다음 사용자가 처리되기 전에 완료되어야 합니다.
-- **독립적인 배치 진행**: 각 배치는 독립적으로 진행됩니다. 배치가 처리를 완료하면 다른 배치가 아직 처리 중이더라도 해당 사용자는 즉시 다음 단계로 진행합니다. 즉, 서로 다른 배치의 사용자가 서로 다른 시간에 후속 단계에 도달할 수 있습니다.
 
 **예시**: 3,500명의 사용자가 연결된 콘텐츠로 컨텍스트 단계에 진입하는 경우 사용자당 650ms가 소요됩니다:
-- Braze는 약 4개의 사용자 배치(이 예에서는 612, 802, 1,000, 880, 120 사용자)를 생성합니다.
-- 각 배치는 사용자를 순차적으로 처리하므로 1,000명의 사용자를 배치하는 데 약 11분(1,000×650ms)이 걸립니다.
+- Braze는 4개의 사용자 배치(이 예에서는 1,000명, 1,000명, 1,000명, 500명의 사용자)를 생성합니다.
+- 각 배치는 사용자를 순차적으로 처리하므로 1,000명의 사용자를 배치하는 데 약 10.8분(650초, 1,000×650ms)이 걸립니다.
 - 배치는 서로 다른 시간에 완료되므로 사용자는 배치가 완료되면 다음 단계로 넘어갑니다.
 - 배치 크기와 연결된 콘텐츠 응답 시간에 따라 첫 번째 사용자가 마지막 사용자보다 몇 분 먼저 다음 단계에 도달할 수 있습니다.
 
@@ -80,7 +81,7 @@ tool: Canvas
 컨텍스트 변수를 정의합니다:
 
 1. 컨텍스트 변수에 **이름을** 지정합니다.
-2. [데이터 유형을](#context-variable-types) 선택합니다.
+2. [데이터 유형을]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#data-types) 선택합니다.
 3. Liquid 표현식을 수동으로 작성하거나 **개인화 추가를** 사용하여 기존 속성에서 Liquid 스니펫을 만듭니다.
 4. **미리 보기를** 선택하여 컨텍스트 변수 값을 확인합니다.
 5. (선택 사항) 변수를 추가하려면 **컨텍스트 변수 추가를** 선택하고 1~4단계를 반복합니다.
@@ -88,9 +89,15 @@ tool: Canvas
 
 이제 메시지 및 사용자 업데이트 단계 등 Liquid를 사용하는 모든 곳에서 **개인화 추가를** 선택하여 컨텍스트 변수를 사용할 수 있습니다. 전체 안내는 [컨텍스트 변수 참조를 참조하세요]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
+{% alert important %}
+컨텍스트 변수를 참조할 때는 항상 {% raw %}`{{context.${variable_name}}}`{% endraw %} 형식을 사용하세요.
+{% endalert %}
+
 ### 컨텍스트 변수 필터
 
-[오디언스 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) 및 [결정 분할]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) 단계에서 컨텍스트 변수를 사용하여 필터를 만들 수 있습니다. 필터 설정, 비교 로직 및 진행 예시는 [컨텍스트 변수 참조를 참조]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters)하세요.
+[오디언스 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) 및 [결정 분할]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) 단계에서 컨텍스트 변수를 사용하여 필터를 만들 수 있습니다. 필터 설정, 비교 로직 및 진행 예제는 [컨텍스트 변수 참조를 참조]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters)하세요.
+
+{% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
 
 ## 사용자 경로 미리보기
 
@@ -100,7 +107,7 @@ tool: Canvas
 편집기의 **미리보기 & 테스트 보내기** 섹션에서 캔버스를 미리 보는 경우, 이 패널은 미리 보기를 문자열로 생성하므로 테스트 메시지 미리보기의 타임스탬프가 UTC로 **표준화되지 않습니다**. 즉, 캔버스가 `time` 개체를 허용하도록 설정된 경우 메시지 미리보기는 캔버스가 라이브 상태일 때 발생하는 내용을 정확하게 미리 보지 못합니다. 캔버스를 가장 정확하게 테스트하려면 대신 사용자 경로를 미리 보는 것이 좋습니다.
 {% endalert %}
 
-잘못된 컨텍스트 변수를 생성하는 일반적인 시나리오를 관찰하세요. 사용자 경로를 미리 볼 때 컨텍스트 변수를 사용하여 개인화된 지연 단계의 결과와 사용자를 컨텍스트 변수와 일치시키는 모든 대상, 의사 결정 또는 행동 경로 단계 비교를 볼 수 있습니다.
+잘못된 컨텍스트 변수를 생성하는 일반적인 시나리오를 관찰하세요. 사용자 경로를 미리 볼 때 컨텍스트 변수를 사용하여 개인화된 지연 단계의 결과와 사용자를 컨텍스트 변수와 일치시키는 모든 오디언스 또는 의사 결정 단계 비교를 볼 수 있습니다.
 
 컨텍스트 변수가 유효하면 캔버스 전체에서 해당 변수를 참조할 수 있습니다. 그러나 컨텍스트 변수가 올바르게 생성되지 않은 경우 캔버스의 향후 단계도 올바르게 수행되지 않습니다. 예를 들어 사용자에게 약속 시간을 할당하는 컨텍스트 단계를 만들고 약속 시간의 값을 과거 날짜로 설정하면 메시지 단계의 리마인더 이메일이 전송되지 않습니다.
 
@@ -114,14 +121,6 @@ tool: Canvas
 {{ product | as_json_string }}
 ```
 {%endraw%}
-
-## 시간대 일관성 표준화
-
-타임스탬프 유형을 사용하는 대부분의 이벤트 속성정보는 캔버스에서 이미 UTC로 표시되지만, 몇 가지 예외가 있습니다. 캔버스 컨텍스트가 추가됨에 따라 액션 기반 캔버스의 모든 기본값 타임스탬프 이벤트 속성정보는 UTC로 표시됩니다. 이러한 변화는 캔버스 단계와 메시지를 편집할 때 보다 예측 가능하고 일관된 경험을 보장하기 위한 광범위한 노력의 일환입니다. 이 변경 사항은 특정 캔버스가 컨텍스트 단계를 사용 중인지 여부에 관계없이 모든 액션 기반 캔버스에 영향을 줍니다.
-
-{% alert important %}
-어떤 상황에서도 원하는 시간대에 타임스탬프를 표시하려면 [Liquid time_zone 필터를]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) 사용할 것을 강력히 권장합니다. 이 [자주 묻는 질문을](#faq-example) 참조하여 예를 들어 보세요.
-{% endalert %}
 
 ## 문제 해결
 
@@ -144,11 +143,13 @@ tool: Canvas
 
 ### 연결된 콘텐츠로 전송이 지연됨
 
-컨텍스트 단계에서 연결된 콘텐츠가 실패하면 성공한 사용자는 즉시 다음 단계로 진행되며, 실패한 사용자는 별도로 재시도합니다. 즉, 일괄 처리는 모든 사용자가 성공할 때까지 기다렸다가 진행하지 않고, 성공한 사용자는 연결된 콘텐츠 호출이 완료되는 즉시 진행합니다.
+일괄 처리된 모든 사용자는 사용자가 진행하기 전에 처리됩니다. 일괄 처리가 완료되면 성공한 사용자는 다음 단계로 이동하고 실패한 사용자는 개별적으로 재시도하며, 성공한 사용자는 재시도가 성공할 때까지 기다리지 않고 진행합니다.
 
 **동작을 다시 시도합니다**: 컨텍스트 단계(및 모든 캔버스 단계)는 표준 연결된 콘텐츠 재시도 동작이 아닌 캔버스별 재시도 메커니즘을 사용합니다. 연결된 콘텐츠 호출이 실패하면 Braze는 지수 백오프를 사용하여 약 13번 단계를 다시 시도합니다. 모든 재시도가 실패하면 사용자는 캔버스를 종료합니다.
 
-**참고**: 표준 커넥티드 콘텐츠에 사용되는 `:retry` 태그는 캔버스 단계 내에서 이루어진 커넥티드 콘텐츠 호출에는 적용되지 않습니다. 캔버스 단계에는 캔버스 워크플로에 최적화된 자체 재시도 로직이 있습니다.
+{% alert note %}
+표준 커넥티드 콘텐츠에 사용되는 `:retry` 태그는 캔버스 단계 내에서 이루어진 커넥티드 콘텐츠 호출에는 적용되지 않습니다. 캔버스 단계에는 캔버스 워크플로에 최적화된 자체 재시도 로직이 있습니다.
+{% endalert %}
 
 **처리 시간**: 컨텍스트 단계를 통해 모든 사용자를 처리하는 데 걸리는 시간은 상황에 따라 다릅니다:
 - 단계에 진입하는 사용자 수
@@ -156,6 +157,14 @@ tool: Canvas
 - 배치 크기(기본값은 배치당 1,000명의 사용자)
 
 연결된 콘텐츠 엔드포인트에 속도 제한이 있는 경우 컨텍스트 단계가 각 배치 내에서 사용자를 순차적으로 처리하므로 속도 제한을 자연스럽게 준수할 수 있습니다. 그러나 여러 배치가 병렬로 처리되므로 엔드포인트가 여러 배치의 동시 요청을 처리할 수 있는지 확인해야 합니다.
+
+## 시간대 일관성 표준화
+
+타임스탬프 유형을 사용하는 대부분의 이벤트 속성정보는 캔버스에서 이미 UTC로 표시되지만, 몇 가지 예외가 있습니다. 캔버스 컨텍스트가 추가됨에 따라 액션 기반 캔버스의 모든 기본값 타임스탬프 이벤트 속성정보는 UTC로 표시됩니다. 이러한 변화는 캔버스 단계와 메시지를 편집할 때 보다 예측 가능하고 일관된 경험을 보장하기 위한 광범위한 노력의 일환입니다. 이 변경 사항은 특정 캔버스가 컨텍스트 단계를 사용 중인지 여부에 관계없이 모든 액션 기반 캔버스에 영향을 줍니다.
+
+{% alert important %}
+어떤 상황에서도 원하는 시간대에 타임스탬프를 표시하려면 [Liquid time_zone 필터를]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) 사용할 것을 강력히 권장합니다. 이 [자주 묻는 질문을](#faq-example) 참조하여 예를 들어 보세요.
+{% endalert %}
 
 ## Frequently asked questions
 
@@ -226,7 +235,7 @@ Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!
 
 미국/로스앤젤레스 시간대는 Liquid를 사용하여 지정되므로 여기서의 타임스탬프는 태평양 표준시(PST)입니다.
 
-선호하는 시간대는 이벤트 속성정보 페이로드로 전송하여 Liquid 로직에서 사용할 수도 있습니다:
+선호하는 시간대는 이벤트 속성정보 페이로드에 전송되어 Liquid 로직에서 사용될 수도 있습니다:
 
 ```
 {
@@ -247,7 +256,7 @@ Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!
 |---|---|---|
 |`favorite_cuisine`| {% raw %}`{{custom_attribute.${Favorite Cuisine}}}`{% endraw %} | 사용자가 가장 좋아하는 요리 유형입니다. |
 |`promo_code`| {% raw %}`EATFRESH`{% endraw %} | 사용자에게 사용 가능한 할인 코드입니다. |
-|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{context.promo_code}} "on delivery from your favorite" {{context.favorite_cuisine}} restaurants!"`{% endraw %} | 이전 변수를 결합한 개인화된 메시지입니다. 메시지 단계에서 Liquid 스니펫 {% raw %}`{{context.${personalized_message}}}`{% endraw %} 을 사용하여 컨텍스트 변수를 참조하여 각 사용자에게 개인화된 메시지를 전달할 수 있습니다. 컨텍스트 단계를 사용하여 [프로모션 코드]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) 값을 저장하고 캔버스 전체에서 다른 단계에 템플릿으로 사용할 수도 있습니다. |
+|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{context.${promo_code}}} "on delivery from your favorite" {{context.${favorite_cuisine}}} restaurants!"`{% endraw %} | 이전 변수를 결합한 개인화된 메시지입니다. 메시지 단계에서 Liquid 스니펫 {% raw %}`{{context.${personalized_message}}}`{% endraw %} 을 사용하여 컨텍스트 변수를 참조하여 각 사용자에게 개인화된 메시지를 전달할 수 있습니다. 컨텍스트 단계를 사용하여 [프로모션 코드]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) 값을 저장하고 캔버스 전체에서 다른 단계에 템플릿으로 사용할 수도 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 이는 여러 컨텍스트 단계에도 적용됩니다. 예를 들어 다음 시퀀스를 상상해 보세요:
