@@ -69,7 +69,7 @@ Visita [Solución de problemas de solicitudes de webhook y contenido conectado](
 
 Dado que Braze entrega mensajes a una tasa muy rápida, asegúrate de que tu servidor puede gestionar miles de conexiones simultáneas para que los servidores no se sobrecarguen al descargar contenidos. Cuando utilices API públicas, confirma que tu uso no infringe ningún límite de tasa que pueda emplear el proveedor de la API. Braze requiere que el tiempo de respuesta del servidor sea inferior a dos segundos por razones de rendimiento; si el servidor tarda más de dos segundos en responder, el contenido no se insertará.
 
-Los sistemas Braze pueden realizar la misma llamada a la API de contenido conectado más de una vez por destinatario. Esto se debe a que Braze puede necesitar realizar una llamada a la API de contenido conectado para representar la carga útil de un mensaje, y las cargas útiles de los mensajes pueden representarse varias veces por destinatario para validación, lógica de reintento u otros fines internos. Tus sistemas deben poder tolerar que la misma llamada de contenido conectado se haga más de una vez por destinatario.
+Los sistemas Braze pueden realizar la misma llamada a la API de contenido conectado más de una vez por destinatario. Esto se debe a que Braze puede necesitar realizar una llamada a la API de contenido conectado para representar la carga útil de un mensaje, y las cargas útiles de los mensajes pueden representarse varias veces por destinatario para validación, lógica de reintento u otros fines internos. Tus sistemas deben poder tolerar que la misma llamada de contenido conectado se realice más de una vez por destinatario.
 
 ## Lo que hay que saber
 
@@ -184,7 +184,7 @@ Puedes editar el nombre de las credenciales para los tipos de autenticación.
 
 Cuando se envía un mensaje que utiliza contenido conectado desde Braze, los servidores de Braze realizan automáticamente solicitudes de red a los servidores de nuestros clientes o de terceros para recuperar datos. Con las listas de IP permitidas, puedes verificar que las solicitudes de Contenido conectado proceden realmente de Braze, lo que añade una capa de seguridad.
 
-Braze enviará solicitudes de Contenido Conectado desde los siguientes rangos de IP. Los rangos enumerados se añaden automática y dinámicamente a cualquier clave de API que haya sido objeto de adhesión voluntaria a la lista de permitidos. 
+Braze enviará solicitudes de Contenido Conectado desde los siguientes rangos de IP. Los rangos enumerados se añaden automática y dinámicamente a cualquier clave de API que haya sido objeto de adhesión voluntaria a la lista permitida. 
 
 Braze tiene un conjunto reservado de IPs que se utilizan para todos los servicios, no todos los cuales están activos en un momento dado. Esto está diseñado para que Braze pueda enviar desde un centro de datos diferente o realizar tareas de mantenimiento, si es necesario, sin afectar a los clientes. Braze puede utilizar una, un subconjunto o todas las siguientes IP enumeradas al realizar solicitudes de Contenido conectado.
 
