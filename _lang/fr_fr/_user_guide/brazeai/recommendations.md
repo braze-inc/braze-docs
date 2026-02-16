@@ -1,7 +1,7 @@
 ---
 nav_title: Recommandations de poste
 article_title: "Recommandations d'articles en Braze"
-page_order: 15
+page_order: 7
 search_rank: 1
 description: "Apprenez tout sur les moteurs de recommandation d'articles dans Braze."
 ---
@@ -383,3 +383,7 @@ Notez que les recommandations fonctionnent de manière indépendante et n'ont au
 ### Les recommandations existantes font-elles l'objet d'une formation hebdomadaire après la mise à niveau vers Item Recommendations Pro ?
 
 Oui, mais seulement après la prochaine mise à jour planifiée. Les recommandations existantes ne passent pas à l'entraînement hebdomadaire et aux prédictions quotidiennes immédiatement après la mise à niveau vers Item Recommendations Pro. Toutefois, ils adopteront automatiquement la nouvelle planification lors de leur prochain cycle de recyclage. Par exemple, si une recommandation a été formée pour la dernière fois le 1er février et qu'elle est configurée pour se recycler tous les 30 jours, elle adoptera la nouvelle planification hebdomadaire après sa prochaine mise à jour, le 2 mars.
+
+### Comment puis-je faire en sorte que toutes les recommandations qui durent plusieurs jours expirent en même temps ?
+
+Si vous souhaitez que toutes les recommandations pluriquotidiennes expirent à une date précise (afin que toutes ces recommandations actives reçoivent de nouvelles prédictions en une seule fois), contactez le service d'assistance de Braze ou votre gestionnaire de la satisfaction client pour obtenir de l'aide. Les experts de l'intelligence artificielle de Braze effectuent cette opération manuellement pour garantir une performance maximale du modèle.
