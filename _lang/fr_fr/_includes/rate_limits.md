@@ -102,12 +102,17 @@ Nous appliquons à cet endpoint une limite de débit partagée de 1 000 requête
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-Lorsque vous spécifiez un segment ou une audience connectée dans votre demande, nous appliquons une limitation du débit de 250 demandes par minute à cet endpoint. Sinon, si vous spécifiez un `external_id`, cet endpoint présente une limitation du débit par défaut de 250 000 requêtes par heure, partagées entre `/messages/send`, `/campaigns/trigger/send` et `/canvas/trigger/send`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
+Lorsque vous utilisez les filtres d'audience connectée dans votre demande, nous appliquons une limite de débit de 250 requêtes par minute à cet endpoint. Sinon, si vous spécifiez un `external_id`, cet endpoint présente une limitation du débit par défaut de 250 000 requêtes par heure, partagées entre `/messages/send`, `/campaigns/trigger/send` et `/canvas/trigger/send`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
+
+Les endpoints de Braze prennent en charge la mise en lot des demandes d'API. Une seule demande aux endpoints de messagerie peut atteindre n’importe lequel des éléments suivants :
+
+- Jusqu’à 50 `external_ids` spécifiques, chacun avec des paramètres de message individuels
+- Un segment d'audience de toute taille, défini dans la demande comme un objet Audience connectée.
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-Les e-mails transactionnels de Braze ne sont pas soumis à une limitation du débit. Selon le package que vous avez choisi, un nombre défini d’e-mails transactionnels est couvert par heure par l’accord de niveau de service (SLA). Les requêtes qui dépassent ce taux sont toujours envoyées, mais ne sont pas couvertes par l'accord de niveau de service. 99,9 % des e-mails sont envoyés en moins d'une minute.
+Le point de terminaison `/transactional/v1/campaigns/{campaign_id}/send` est un point de terminaison payant en unités par heure (par exemple, 50 000 par heure selon votre forfait). Il n'y a pas de limite de débit distincte par endpoint : vous pouvez envoyer des données au-delà du volume qui vous est alloué, mais seul le volume alloué est couvert par l'accord de niveau de service. Les demandes adressées à cet endpoint sont prises en compte dans la [limite du débit de votre API externe.]({{site.baseurl}}/api/api_limits/) Si vous dépassez cette limite (par exemple, 250 000 requêtes par heure sur l'ensemble des endpoints), Braze renvoie 429 et les requêtes sont limitées. Le décompte du volume transactionnel est remis à zéro toutes les heures, de sorte qu'au bout d'une heure, un autre allotissement est disponible. Dans le volume couvert par l'accord de niveau de service, 99,9 % des e-mails seront envoyés en moins d'une minute.
 
 <!---/sends/id/create-->
 
@@ -204,4 +209,3 @@ Cet endpoint a une limitation du débit de 50 requêtes par minute, partagée e
 Cet endpoint a une limitation du débit de 50 000 requêtes par minute.
 
 {% endif %}
-
