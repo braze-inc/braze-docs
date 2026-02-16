@@ -2,7 +2,7 @@
 nav_title: Aktions-Pfade
 article_title: Aktionspfade 
 alias: /action_paths/
-page_order: 0.1
+page_order: 1
 page_type: reference
 description: "Dieser Referenzartikel beschreibt die Verwendung von Action Paths, einer Komponente, mit der Sie Benutzer auf der Grundlage ihrer Aktionen sortieren können."
 tool: Canvas
