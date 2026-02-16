@@ -112,6 +112,10 @@ Braze.enableDelayedInitialization(context)
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
+Lorsque l'initialisation différée est activée et qu'une notification push contient une action de lien profond, le lien profond ne se résout pas.
+{% endalert %}
+
 #### Étape 4.2 : Configurer l'analyse/analytique push (facultatif)
 
 Lorsque l'initialisation différée est activée, les analyses/analytiques push sont mises en file d'attente par défaut. Cependant, vous pouvez choisir de [mettre explicitement en file d'attente](#explicitly-queue-push-analytics) ou d'[abandonner l'](#drop-push-analytics) analyse/analytique push (si vous utilisez l'analyse/analytique push).
