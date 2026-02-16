@@ -39,7 +39,7 @@ Braze proporciona los siguientes filtros para ayudarte a limitar la tasa a la qu
 
 Digamos que hemos creado un segmento llamado "Escaparate de filtrado de reorientación" con un filtro "Última aplicación utilizada hace más de 7 días" para orientar a los usuarios. Sería un segmento estándar de reactivación de la interacción.
 
-Si tienes otros segmentos más específicos que han recibido notificaciones recientemente, puede que no quieras que tus usuarios reciban campañas más genéricas dirigidas a este segmento. Aplicando el filtro "Última notificación push recibida" a este segmento, el usuario se ha asegurado de que si ha recibido otra notificación en las últimas 24 horas, se deslizará fuera de este segmento durante las próximas 24 horas. Si 24 horas después siguen cumpliendo los demás criterios del segmento y no han recibido más notificaciones, volverán al segmento.
+Si tienes otros segmentos más específicos que han recibido notificaciones recientemente, puede que no quieras que tus usuarios reciban campañas más genéricas dirigidas a este segmento. Aplicando el filtro "Última notificación push recibida" a este segmento, el usuario se ha asegurado de que si ha recibido otra notificación en las últimas 24 horas, se deslizará fuera de este segmento durante las próximas 24 horas. Si 24 horas después siguen cumpliendo los demás criterios del segmento y no han recibido más notificaciones, volverán a entrar en el segmento.
 
 ![Un segmento llamado "Escaparate de filtrado de reorientación" con el grupo de filtrado "Última aplicación utilizada hace más de 7 días".]({% image_buster /assets/img_archive/rate_limit_daily.png %}){: style="max-width:80%;"} 
 
@@ -119,7 +119,7 @@ Si seleccionas un límite para las notificaciones push, no puedes establecer lí
 
 {% alert important %}
 **Actualización de la interfaz con límite de velocidad**<br>
-Braze actualizó la interfaz de limitación de tasas para proporcionar más transparencia y control sobre cómo se aplican los límites de velocidad a las campañas multicanal y a los Lienzos.<br><br>
+Braze actualizó la interfaz de limitación de tasas para ofrecer más transparencia y control sobre cómo se aplican los límites de velocidad a las campañas multicanal y a los Lienzos.<br><br>
 
 - **Campañas y lonas existentes:** Todas las campañas y Lienzos existentes se han migrado a esta interfaz. Su comportamiento de entrega sigue siendo el mismo. El panel muestra si la campaña utiliza lógica compartida o por canal.<br>
 - **Nuevas campañas y Lienzos:** Para todas las campañas y Lienzos nuevos, hay un botón manual para alternar la lógica de límite de velocidad que prefieras. Asegúrate de seleccionar el comportamiento de limitación de tasa que se ajuste a tu comportamiento previsto cuando configures o actualices un límite de velocidad de campaña o Canvas.
@@ -161,6 +161,14 @@ En lugar de intentar compensar el retraso y enviar los 6.000 mensajes restantes 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Las solicitudes de contenido conectado no están limitadas por la tasa de forma independiente y seguirán el límite de velocidad del webhook. Esto significa que si hay una llamada de Contenido conectado a un punto final único por webhook, esperarías 5.000 webhooks y también 5.000 llamadas de Contenido conectado por minuto. Ten en cuenta que el almacenamiento en caché puede afectar a esto y reducir el número de llamadas a Contenido conectado. Además, los reintentos pueden aumentar las llamadas de Contenido Conectado, por lo que recomendamos comprobar que el punto final de Contenido Conectado puede soportar cierta fluctuación aquí.
+
+{% alert note %}
+**Los límites de tasa son límites de velocidad y no definen una velocidad de envío exacta.** Por lo general, los mensajes se reparten uniformemente dentro de cada minuto, y en la inmensa mayoría de los casos se envían en el límite configurado o muy cerca de él. No siempre es así; por ejemplo, cuando los mensajes son muy grandes (como los correos electrónicos con muchos bloques de contenido, etiquetas de contenido conectado o etiquetas de elementos del catálogo), o cuando hay muchos abortos de Liquid (los mensajes abortados siguen consumiendo una ranura y pueden reducir las tasas de envío efectivas).
+
+En la práctica, la tasa de envío sostenida (mensajes completados por minuto) puede ser inferior al límite de velocidad configurado debido a los reintentos, la variabilidad de la red, la latencia del punto final descendente y el suavizado por minuto.
+
+Si observas sistemáticamente un rendimiento significativamente inferior al esperado, comprueba los tiempos de respuesta del contenido conectado, las tasas de error (como `429`) y el comportamiento de los reintentos.
+{% endalert %}
 
 ## Sobre la limitación de frecuencia
 
@@ -204,7 +212,7 @@ Este comportamiento cambia el comportamiento por defecto cuando se desactiva la 
 
 ![Sección Controles de entrega con la limitación de frecuencia activada.]({% image_buster /assets/img_archive/frequencycappingupdate.png %}){: style="max-width:90%;"} 
 
-Los distintos canales de una campaña multicanal cuentan individualmente para el límite de frecuencia. Por ejemplo, si creas una campaña multicanal con push y correo electrónico y has configurado la limitación de frecuencia para ambos canales, entonces el push cuenta para una campaña push, y el mensaje de correo electrónico cuenta para una campaña de mensajes de correo electrónico. La campaña también cuenta para una "campaña de cualquier tipo". Si los usuarios están limitados a una campaña push y a una campaña de correo electrónico al día, y un usuario recibe esta campaña multicanal, ya no será elegible para campañas push o de correo electrónico durante el resto del día (a menos que una campaña ignore las normas de limitación de frecuencia).
+Los distintos canales de una campaña multicanal cuentan individualmente para el límite de frecuencia. Por ejemplo, si creas una campaña multicanal con push y correo electrónico y has configurado la limitación de frecuencia para ambos canales, entonces el push cuenta para una campaña push, y el mensaje de correo electrónico cuenta para una campaña de mensajes de correo electrónico. La campaña también cuenta para una "campaña de cualquier tipo". Si los usuarios están limitados a una campaña push y a una campaña de correo electrónico al día, y un usuario recibe esta campaña multicanal, ya no es elegible para campañas push o de correo electrónico durante el resto del día (a menos que una campaña ignore las normas de limitación de frecuencia).
 
 Los mensajes dentro de la aplicación y las tarjetas de contenido no se tienen en cuenta para los límites de las campañas o los componentes de Canvas de cualquier tipo.
 
@@ -273,7 +281,7 @@ En este ejemplo, su usuario no recibirá más de una campaña de notificación p
 
 #### Recuento de etiquetas
 
-La limitación de frecuencia mediante reglas de etiquetas se calcula en el momento de enviar un mensaje. Esto significa que la limitación de frecuencia por etiqueta sólo cuenta las etiquetas que están actualmente en las campañas o los lienzos que un usuario recibió en el pasado. No cuenta las etiquetas que estaban en las campañas o Lienzos durante el tiempo en que se enviaron, pero que se han eliminado desde entonces. Cuenta si se añade posteriormente una etiqueta a un mensaje que un usuario recibió en el pasado, pero antes de que se envíe el mensaje etiquetado más reciente.
+La limitación de frecuencia por reglas de etiquetas se calcula en el momento de enviar un mensaje. Esto significa que la limitación de frecuencia por etiqueta sólo cuenta las etiquetas que están actualmente en las campañas o los lienzos que un usuario recibió en el pasado. No cuenta las etiquetas que estaban en las campañas o Lienzos durante el tiempo en que se enviaron, pero que se han eliminado desde entonces. Cuenta si se añade posteriormente una etiqueta a un mensaje que un usuario recibió en el pasado, pero antes de que se envíe el mensaje etiquetado más reciente.
 
 ##### Casos de uso
 
