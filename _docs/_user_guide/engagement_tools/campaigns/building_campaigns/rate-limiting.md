@@ -324,11 +324,7 @@ This rule determines that no users receive more than 100 emails per week because
 
 ### If I change a send throttle on an active Canvas, does it affect users already in the Canvas?
 
-Yes, the updated rate limit applies to users already in the Canvas, but only for their **next** Canvas step. Users who are already enqueued for a message step will be sent at the original throttle rate. The new rate limit takes effect when those users advance to subsequent steps.
-
-For example, if you lower the throttle from 10,000 messages per minute to 5,000 messages per minute while users are in the Canvas:
-- Users already queued for their current message step will be sent at the 10,000/min rate.
-- When those users reach their next message step, the 5,000/min rate will apply.
+Yes, when you increase or decrease a Canvas rate limit, the updated limit will take effect for new messages within approximately 30 seconds of the change due to caching.
 
 ### Does frequency capping cause users to exit a Canvas?
 
