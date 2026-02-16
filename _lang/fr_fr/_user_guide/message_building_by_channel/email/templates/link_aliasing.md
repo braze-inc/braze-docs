@@ -51,7 +51,7 @@ L'aliasing de lien est uniquement pris en charge dans les attributs `href` des b
 Pour afficher tous vos aliasages de liens suivis, procédez comme suit :
 
 1. Accédez à **Paramètres** > **Préférences de messagerie** sous **Paramètres de l'espace de travail**.
-2. Sélectionnez l'onglet **Paramètres d'aliasage de lien.** 
+2. Sélectionnez l'onglet **Paramètres d'aliasage de lien**.
 
 {% alert important %}
 Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), ces paramètres se trouvent sous **Gérer les paramètres**.
@@ -77,25 +77,25 @@ Les tableaux suivants présentent des exemples de liens dans le corps d'un e-mai
 
 **Logique :** Braze insère un point d’interrogation (?) et ajoute le premier paramètre de requête dans l’URL.
 
-| Lien dans le corps de l’e-mail    | Lien avec aliasage                     |
+| Lien dans le corps de l'e-mail    | Lien avec l'aliasage                     |
 |-----------------------|----------------------------------------|
-| https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk |
+| `https://www.braze.com` | `https://www.braze.com?lid=slfdldtqdhdk` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Lien avec plus de paramètres de requête
 
 **Logique :** Braze détecte d’autres paramètres de requête et ajoute `lid=` à la fin de l’URL.
 
-| Lien dans le corps de l’e-mail                                            | Lien avec aliasage                                                             |
+| Lien dans le corps de l'e-mail                                            | Lien avec l'aliasage                                                             |
 |---------------------------------------------------------------|--------------------------------------------------------------------------------|
-| https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz |
+| `https://www.braze.com?utm_campaign=retention&utm_source=email` | `https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Lien HTML
 
 **Logique :** Braze reconnaît qu'un lien est une URL et qu'il contient déjà un point d'interrogation ( ?). Le paramètre de requête `lid` est donc ajouté après le point d'interrogation.
 
-| Lien dans le corps de l’e-mail                                                | Lien avec aliasage                                                                |
+| Lien dans le corps de l'e-mail                                                | Lien avec l'aliasage                                                                |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -104,18 +104,18 @@ Les tableaux suivants présentent des exemples de liens dans le corps d'un e-mai
 
 **Logique :** Braze attend de l’URL qu’elle utilise une structure standard où les ancres (#) sont présentes après un point d’interrogation (?). Comme Braze lit de gauche à droite, le point d'interrogation et la valeur `lid` sont ajoutés avant l'ancre.
 
-| Lien dans le corps de l’e-mail                               | Lien avec aliasage                                                |
+| Lien dans le corps de l'e-mail                               | Lien avec l'aliasage                                                |
 |--------------------------------------------------|-------------------------------------------------------------------|
-| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email |
+| `https://www.braze.com#bookmark1?utm_source=email` | `https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Lien avec étiquette d'ancrage et de capture
 
-**Logique :** Lorsque vous utilisez l'aliasage de lien avec des URL contenant des ancres (#), Braze s'attend à ce que l'ancre soit placée après les paramètres de la requête. Cela signifie que la valeur `lid` doit être ajoutée avant l'ancre pour un suivi correct, et comme Braze lit l'URL de gauche à droite, le point d'interrogation ( ?) et `lid` doivent être placés avant l'ancre.
+**Logique :** Lorsque vous utilisez l'aliasage de lien avec des URL contenant des ancres (#), Braze s'attend à ce que l'ancre soit placée après les paramètres de la requête. Cela signifie que la valeur `lid` doit être ajoutée **avant l'** ancre pour un suivi correct, et comme Braze lit l'URL de gauche à droite, le point d'interrogation ( ?) et `lid` doivent être placés avant l'ancre.
 
-| Lien dans le corps de l’e-mail                                                                        | Lien avec aliasage                                                                                           |
+| Lien dans le corps de l'e-mail                                                                        | Lien avec l'aliasage                                                                                           |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a>` {%endraw%} |
+| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions?lid={{link_alias}}#special-offer">Check out our special offer!</a>` {%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Aliasage de lien de suivi
@@ -156,7 +156,7 @@ La suppression d'un lien n'entraînera pas la réaffectation des segments exista
 
 Les liens dans les messages archivés ne seront automatiquement plus suivis. Cependant, si les messages archivés sont désarchivés, les liens devront être resuivis. Lorsque des alias de liaison sont suivis, les rapports de liens sont indexés par l’alias plutôt que par des domaines de niveau supérieur ou des URL complètes.
 
-Pour afficher tous les liens de votre campagne e-mail et le nombre total de clics qu'ils ont générés, accédez à **Message Analytics** > **Email Performance** > **Preview & Heatmap**, et sélectionnez l'option **Show Heatmap toggle (Afficher la carte thermique)**.
+Pour afficher tous les liens de votre campagne e-mail et le nombre total de clics qu'ils ont générés, accédez à **Message Analytics** > **Email Performance** > **Preview & Heatmap**, et sélectionnez **Show Heatmap toggle (Afficher la carte thermique)**.
 
 ![Tableau des liens par nombre total de clics avec les alias de liens et leur nombre total de clics.]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
 
