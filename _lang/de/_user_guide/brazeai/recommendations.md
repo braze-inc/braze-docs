@@ -1,7 +1,7 @@
 ---
 nav_title: Artikel-Empfehlungen
 article_title: Artikel-Empfehlungen in Braze
-page_order: 15
+page_order: 7
 search_rank: 1
 description: "Erfahren Sie alles über Empfehlungssysteme für Artikel in Braze."
 ---
@@ -303,7 +303,7 @@ Heben Sie Artikel, die Ihren Nutzern in letzter Zeit gefallen haben, besonders h
 Bei den drei vorangegangenen Typen geht es darum, ein Empfehlungsmodell in Braze einzurichten und zu trainieren. Sie können zwar auch in diesen Modellen Auswahlen verwenden, aber Sie können einige Empfehlungsanwendungen auch nur mit Katalogauswahlen und Liquid-Personalisierung erreichen.
 
 {% alert note %}
-Wenn Sie Auswahlen verwenden, werden das Sortierfeld und eventuelle Einschränkungen bei KI-Artikel-Empfehlungen nicht verwendet. Das bedeutet, wenn Sie eine Auswahl mit einem bestimmten Sortierfeld erstellen und die Anzahl der zurückgegebenen Artikel begrenzen, werden diese Einschränkungen bei der Verarbeitung von KI-Artikel-Empfehlungen nicht verwendet.
+Wenn Sie Auswahlen verwenden, werden das Sortierfeld und eventuelle Einschränkungen bei KI-Artikel-Empfehlungen nicht verwendet. Das heißt, wenn Sie eine Auswahl mit einem bestimmten Sortierfeld erstellen und die Anzahl der zurückgegebenen Artikel begrenzen, werden diese Einschränkungen bei der Verarbeitung von KI-Artikel-Empfehlungen nicht berücksichtigt.
 {% endalert %}
 
 #### Anwendungsfälle
@@ -378,8 +378,12 @@ Dies geschieht unter einigen besonderen Bedingungen:
 - Die entsprechenden Artikel sind nicht mehr verfügbar oder auf Lager.
 - Die Artikel entsprechen nicht den aktuellen Auswahlkriterien, z.B. weil sich der Bestand oder die Präferenzen des Benutzers geändert haben.
 
-Beachten Sie, dass die Empfehlungen unabhängig voneinander funktionieren und keine Kenntnis darüber haben, was die anderen Modelle empfehlen. Das bedeutet, dass in jeder Sektion Artikel, die bereits in anderen KI-Empfehlungssektionen angezeigt werden, in derselben E-Mail doppelt vorkommen können.
+Beachten Sie, dass die Empfehlungen unabhängig voneinander funktionieren und nicht wissen, was die anderen Modelle empfehlen. Das bedeutet, dass in jeder Rubrik Artikel doppelt vorhanden sein können, die bereits in anderen KI-Empfehlungsrubriken in derselben E-Mail angezeigt werden.
 
 ### Werden bestehende Empfehlungen nach dem Upgrade auf Item Recommendations Pro wöchentlich trainiert?
 
 Ja, aber erst nach ihrem nächsten geplanten Update. Bestehende Empfehlungen schalten beim Upgrade auf Artikel-Empfehlungen Pro nicht sofort auf wöchentliches Training und tägliche Prognosen um. Sie werden den neuen Zeitplan jedoch automatisch bei ihrem nächsten Umschulungszyklus übernehmen. Wenn eine Empfehlung zum Beispiel zuletzt am 1\. Februar trainiert wurde und so eingestellt ist, dass sie alle 30 Tage neu trainiert wird, übernimmt sie den neuen wöchentlichen Zeitplan nach dem nächsten Update am 2\. März.
+
+### Wie kann ich alle Empfehlungen, die mehrere Tage dauern, auf einmal ablaufen lassen?
+
+Wenn Sie alle mehrtägigen Empfehlungen an einem bestimmten Datum ablaufen lassen möchten (so dass alle derartigen aktiven Empfehlungen auf einmal neue Prognosen erhalten), wenden Sie sich an den Braze Support oder Ihren Customer-Success-Manager. Die Experten von Braze AI führen dies manuell durch, um eine maximale Performance des Modells zu gewährleisten.
