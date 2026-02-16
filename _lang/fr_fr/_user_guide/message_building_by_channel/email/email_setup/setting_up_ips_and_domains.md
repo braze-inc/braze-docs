@@ -44,9 +44,8 @@ Nous vérifierons votre configuration et validerons toutes les informations de n
 
 Cette méthode permet de mettre en place un domaine d'envoi, un domaine de suivi et une IP au total pour une entreprise. Si vous envisagez d'en mettre d'autres en place, veuillez consulter l'équipe d’onboarding de Braze (méthode 1).
 
-{% alert important %}
-Cette fonctionnalité de configuration des e-mails en libre-service est actuellement en version bêta. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à la bêta.<br>Si vous utilisez la fonctionnalité de configuration des e-mails en libre-service, n'oubliez pas de consulter également l'équipe Braze Onboarding.
-{% endalert %}
+{% include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
+<br>Si vous utilisez la fonctionnalité de configuration des e-mails en libre-service, n'oubliez pas de consulter également l'équipe Braze Onboarding.
 
 ### Conditions préalables
 
