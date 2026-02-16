@@ -120,7 +120,7 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 
 - 블록이 몇 개의 이메일에서만 사용되는 경우, 오래된 블록을 보관하고 보관되지 않은 새 블록으로 실시간 메시지를 업데이트하는 것이 좋습니다.
 - 블록에 오타가 있거나 사소한 변경이 필요한 경우, 블록을 보관하는 것을 권장하지 않습니다. Instead, update the block and get sending!
-- When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block and archiving it. 이것은 새로 보낸 이메일에 오래된 정보가 포함되지 않도록 보장할 것입니다.
+- 이 목록의 첫 번째 제안으로 합리적으로 관리할 수 있는 것보다 많은 메시징에 차단이 사용되는 경우 차단에서 모든 콘텐츠를 삭제하는 것이 좋습니다. 이렇게 하면 메시징에 오래된 정보가 포함되는 것을 방지할 수 있습니다.
 - 콘텐츠 블록을 실수로 보관하면 보관 해제할 수 있습니다.
 
 ![저장된 콘텐츠 블록 패널에서 "Test_32" 에 대한 설정 드롭다운 메뉴가 확장되어 세 가지 옵션이 표시됩니다: 보관 해제, 복제 및 작업 공간으로 복사]({% image_buster /assets/img/unarchive-content-block.png %})
