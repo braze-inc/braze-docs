@@ -39,9 +39,7 @@ search_rank: 3
 
 세그먼트에 필터를 하나 이상 추가하세요. 필터를 원하는 만큼 결합하여 세분화를 더 구체적으로 만들 수 있습니다. 
 
-{% alert note %}
-Braze는 사용자가 앱을 처음 사용할 때까지 프로필을 생성하지 않으므로 아직 앱을 열지 않은 사용자를 타겟팅할 수 없습니다.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Segment profiles first app use' %}
 
 #### 필터 그룹
 
