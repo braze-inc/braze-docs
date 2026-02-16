@@ -39,7 +39,7 @@ Braze stellt Ihnen die folgenden Filter zur Verfügung, mit denen Sie die Geschw
 
 Nehmen wir an, wir haben ein Segment mit dem Namen "Retargeting Filter Showcase" mit einem Filter "Letzte Nutzung der App vor mehr als 7 Tagen" erstellt, um Nutzer:innen zu targetieren. Dies wäre ein Standardsegment für erneute Interaktion.
 
-Wenn Sie andere, gezieltere Segmente haben, die in letzter Zeit Benachrichtigungen erhalten haben, möchten Sie vielleicht nicht, dass Ihre Nutzer:innen durch allgemeinere Kampagnen, die an dieses Segment gerichtet sind, angesprochen werden. Durch das Anhängen des Filters "Zuletzt erhaltener Push" an dieses Segment hat der Nutzer:innen sichergestellt, dass er für die nächsten 24 Stunden aus diesem Segment herausrutscht, wenn er in den letzten 24 Stunden eine andere Benachrichtigung erhalten hat. Wenn sie 24 Stunden später immer noch die anderen Kriterien des Segments erfüllen und keine weiteren Benachrichtigungen erhalten haben, rutschen sie wieder in das Segment.
+Wenn Sie andere, gezieltere Segmente haben, die in letzter Zeit Benachrichtigungen erhalten haben, möchten Sie vielleicht nicht, dass Ihre Nutzer:innen durch allgemeinere Kampagnen, die an dieses Segment gerichtet sind, angesprochen werden. Durch das Anhängen des Filters "Zuletzt erhaltener Push" an dieses Segment hat der Nutzer:innen sichergestellt, dass er für die nächsten 24 Stunden aus diesem Segment herausrutscht, wenn er in den letzten 24 Stunden eine andere Benachrichtigung erhalten hat. Wenn sie 24 Stunden später immer noch die anderen Kriterien des Segments erfüllen und keine weiteren Benachrichtigungen erhalten haben, rutschen sie zurück in das Segment.
 
 ![Ein Segment namens "Retargeting Filter Showcase" mit der Filter-Gruppe "Letzte Nutzung der App vor mehr als 7 Tagen".]({% image_buster /assets/img_archive/rate_limit_daily.png %}){: style="max-width:80%;"} 
 
@@ -63,7 +63,7 @@ Wenn Sie **Jedes Mal, wenn die Kampagne geplant wird,** auswählen, werden diese
 
 #### Festlegen einer Obergrenze für Impressionen in Kampagnen
 
-Für In-App-Nachrichten können Sie den Marketing-Druck kontrollieren, indem Sie eine maximale Anzahl von Impressionen festlegen, die Ihrer Nutzerbasis angezeigt werden. Danach wird Braze keine weiteren Nachrichten mehr an Ihre Nutzer:innen senden. Es ist jedoch wichtig zu beachten, dass diese Obergrenze nicht exakt ist. 
+Für In-App-Nachrichten können Sie den Marketing-Druck kontrollieren, indem Sie eine maximale Anzahl von Impressionen festlegen, die Ihrer Nutzerbasis angezeigt werden. Danach sendet Braze keine weiteren Nachrichten mehr an Ihre Nutzer:innen. Es ist jedoch wichtig zu beachten, dass diese Obergrenze nicht exakt ist. 
 
 In-App-Nachricht-Regeln werden bei Sitzungsbeginn an eine App gesendet. Das bedeutet, dass Braze eine Nachricht an den Nutzer:innen senden kann, bevor die Obergrenze erreicht ist, aber zu dem Zeitpunkt, an dem der Nutzer:innen die Nachricht triggert, ist die Obergrenze bereits erreicht. In diesem Fall zeigt das Gerät weiterhin die Meldung an.
 
@@ -99,7 +99,7 @@ Seien Sie vorsichtig, wenn Sie zeitkritische Nachrichten mit dieser Form des Rat
 
 Wenn Sie ein Rate-Limit für die Zustellung für eine Multichannel-Kampagne oder Canvas festlegen, können Sie entweder ein gemeinsames Rate-Limit oder ein kanalbasiertes Limit festlegen.
 
-Wenn eine Multichannel-Kampagne oder ein Canvas ein gemeinsames Rate-Limit verwendet, bedeutet dies, dass die Gesamtzahl der Nachrichten, die pro Minute von der Kampagne oder dem Canvas gesendet werden, das Rate-Limit nicht überschreitet. Wenn Ihr Canvas beispielsweise ein Rate-Limit von 500.000 pro Minute hat und E-Mail- und SMS-Nachrichten-Schritte enthält, sendet Braze insgesamt 500.000 Nachrichten pro Minute über E-Mail und SMS.
+Wenn eine Multichannel-Kampagne oder ein Canvas ein gemeinsames Rate-Limit verwendet, bedeutet dies, dass die Gesamtzahl der Nachrichten, die pro Minute von der Kampagne oder dem Canvas gesendet werden, das Rate-Limit nicht überschreitet. Wenn Ihr Canvas beispielsweise ein Rate-Limit von 500.000 pro Minute hat und Schritte für E-Mail- und SMS-Nachrichten enthält, versendet Braze insgesamt 500.000 Nachrichten pro Minute per E-Mail und SMS.
 
 ![Die Option, die Rate zu begrenzen, mit der die Kampagne sendet, ausgewählt mit 500.000 Nachrichten pro Minute.]({% image_buster /assets/img_archive/multichannel_campaigns_rate_limit.png %}){: style="max-width:50%;"} 
 
@@ -162,6 +162,14 @@ Anstatt zu versuchen, die Verzögerung auszugleichen und die verbleibenden 6.000
 
 Connected-Content-Anfragen sind nicht unabhängig von der Rate-Limitierung und folgen dem Rate-Limit des Webhooks. Das bedeutet, dass Sie bei einem Connected-Content-Aufruf an einen eindeutigen Endpunkt pro Webhook mit 5.000 Webhooks und auch 5.000 Connected-Content-Aufrufen pro Minute rechnen müssen. Beachten Sie, dass die Zwischenspeicherung dies beeinflussen und die Anzahl der Connected-Content-Aufrufe reduzieren kann. Außerdem können Wiederholungsversuche die Connected-Content-Aufrufe erhöhen. Wir empfehlen daher zu überprüfen, ob der Connected-Content-Endpunkt hier mit einer gewissen Fluktuation umgehen kann.
 
+{% alert note %}
+**Rate-Limits sind Geschwindigkeitsbegrenzungen und legen keine exakte Sendegeschwindigkeit fest.** In der Regel werden die Nachrichten innerhalb einer Minute gleichmäßig verteilt und in den allermeisten Fällen wird das eingestellte Limit erreicht oder knapp überschritten. Dies ist nicht immer der Fall, z.B. bei sehr großen Nachrichten (wie E-Mails mit vielen Content-Blöcken, Connected-Content-Tags oder Tags für Katalogartikel) oder wenn es viele Liquid-Abbrüche gibt (abgebrochene Nachrichten verbrauchen immer noch einen Slot und können die effektive Versandrate verringern).
+
+In der Praxis kann die anhaltende Senderate (abgeschlossene Nachrichten pro Minute) aufgrund von Wiederholungsversuchen, Netzwerkvariabilität, Latenzzeiten der nachgelagerten Endpunkte und minutenweiser Glättung niedriger sein als das konfigurierte Rate-Limit.
+
+Wenn Sie durchgehend einen deutlich geringeren Durchsatz als erwartet feststellen, überprüfen Sie die Reaktionszeiten von Connected-Content, die Fehlerraten (z.B. `429`) und das Wiederholungsverhalten.
+{% endalert %}
+
 ## Über Frequency-Capping
 
 Wenn Ihre Nutzerbasis weiter wächst und Ihre Nachrichten auf Lebenszyklus-, Trigger-, Transaktions- und Konversionskampagnen ausgeweitet werden, ist es wichtig, dass Ihre Benachrichtigungen nicht als „Spam“ oder störend empfunden werden. Durch eine bessere Kontrolle über die Erfahrung Ihrer Nutzer ermöglicht Ihnen die Frequenzbegrenzung die Erstellung der gewünschten Kampagnen, ohne Ihr Publikum zu überfordern.
@@ -178,7 +186,7 @@ Standardmäßig ist das Frequency-Capping aktiviert, wenn neue Kampagnen erstell
 
 Dieser Zeitrahmen kann in Minuten, Tagen oder Wochen (sieben Tage) gemessen werden, wobei die maximale Dauer 30 Tage beträgt.
 
-Jede Zeile von Frequency-Caps wird mit dem Operator `AND` verbunden, und Sie können bis zu 10 Regeln pro Workspace hinzufügen. Sie können mehrere Obergrenzen für dieselben Nachrichtenarten angeben. So können Sie beispielsweise die Anzahl der Nutzer auf einen Push pro Tag und drei Pushs pro Woche begrenzen. Beachten Sie, dass abgebrochene Nachrichten nicht zum Frequency-Capping zählen.
+Jede Zeile von Frequency-Caps wird mit dem Operator `AND` verbunden, und Sie können bis zu 10 Regeln pro Workspace hinzufügen. Sie können mehrere Obergrenzen für dieselben Nachrichtentypen angeben. So können Sie beispielsweise die Anzahl der Nutzer auf einen Push pro Tag und drei Pushs pro Woche begrenzen. Beachten Sie, dass abgebrochene Nachrichten nicht zum Frequency-Capping zählen.
 
 ![Abschnitt Frequency-Capping mit Listen von Kampagnen und Canvase, für die die Regeln gelten und nicht gelten.]({% image_buster /assets/img_archive/rate_limiting_overview_2.png %}){: style="max-width:90%;"} 
 
@@ -194,7 +202,7 @@ Wenn Sie möchten, dass eine bestimmte Kampagne die Regeln für die Frequenzbegr
 
 Danach werden Sie gefragt, ob Sie diese Kampagne immer noch auf Ihre Frequenzobergrenze anrechnen lassen möchten. Nachrichten, die zum Frequency-Capping zählen, werden in die Berechnungen für den Filter „Intelligenter Kanal“ einbezogen. 
 
-Beim Versenden von [API-Kampagnen]({{site.baseurl}}/developer_guide/rest_api/messaging/#messaging), die oft transaktionsbezogen sind, können Sie angeben, dass eine Kampagne die Frequency-Capping-Regeln ignorieren soll, indem Sie in der API-Anfrage `override_frequency_capping` auf `true` setzen.
+Beim Versenden von [API Kampagnen]({{site.baseurl}}/developer_guide/rest_api/messaging/#messaging), die oft transaktionsbezogen sind, können Sie angeben, dass eine Kampagne Frequency-Capping-Regeln ignorieren soll, indem Sie in der API-Anfrage `override_frequency_capping` auf `true` setzen.
 
 Neue Kampagnen und Canvases, die sich nicht an die Häufigkeitsobergrenzen halten, werden standardmäßig auch nicht auf diese angerechnet. Dies ist für jede Kampagne und jeden Canvas konfigurierbar.
 
