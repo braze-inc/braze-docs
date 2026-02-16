@@ -54,13 +54,13 @@ Los envíos de prueba y los envíos de correo electrónico de grupo semilla util
 
 Para hacer referencia al mismo código promocional en mensajes posteriores, el código debe guardarse en el perfil de usuario como un atributo personalizado. Esto puede hacerse mediante un [paso de Actualización de usuario]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) que asigne el código de descuento a un atributo personalizado, como "Código promocional", directamente antes de un paso de Mensaje.
 
-Primero, selecciona lo siguiente para cada campo en el paso Actualización de usuario:
+En primer lugar, selecciona lo siguiente para cada campo en el paso Actualizar usuario:
 
 - **Nombre del atributo:** Código promocional
 - **Acción:** Actualizar
 - **Valor clave:** El fragmento de código Liquid del código promocional, como por ejemplo {% raw %}`{% promotion('spring25') %}`{% endraw %}
 
-En segundo lugar, añade el atributo personalizado (en este ejemplo, {% raw %}`{{custom_attribute.${Promo Code}}`{% endraw %}) a un mensaje. El código de descuento está en la plantilla.
+En segundo lugar, añade el atributo personalizado (en este ejemplo, {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %}) a un mensaje. El código de descuento está en la plantilla.
 
 ## Ver el uso del código promocional
 
@@ -97,7 +97,7 @@ En el siguiente ejemplo, se deducen las dos listas de códigos promocionales `vi
 ```
 {% endraw %}
 
-Braze recomienda subir más códigos promocionales de los que estimes utilizar. Si una lista de códigos promocionales caduca o se agotan los códigos promocionales, se cancelan los mensajes posteriores.
+Braze recomienda subir más códigos promocionales de los que estimes utilizar. Si una lista de códigos promocionales caduca o se quedan sin códigos promocionales, se cancelan los mensajes posteriores.
 
 {% alert tip %}
 **He aquí una analogía de cómo se utilizan los códigos promocionales en Braze.** <br><br>Imagina que enviar tu mensaje es como enviar una carta por correo postal. Entregas la carta a un empleado y éste ve que tu carta debe incluir un cupón. El empleado saca el primer cupón de la pila y lo añade al sobre. El empleado envía la carta, pero por alguna razón, la carta se pierde en el correo (y el cupón también se ha perdido). <br><br>En este caso, Braze es el empleado de correos, y tu código promocional es el cupón. No podemos recuperarlo después de haberlo sacado de la pila de códigos promocionales, independientemente del resultado del webhook.
