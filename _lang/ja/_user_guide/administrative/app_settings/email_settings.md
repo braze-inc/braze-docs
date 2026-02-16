@@ -77,9 +77,7 @@ global-support@company.com
 
 BCC アドレスは、SendGrid およびSparkPost でのみ使用できます。BCC アドレスの代わりに、[メッセージアーカイブ]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/) を使用して、アーカイブまたはコンプライアンスの目的でユーザに送信されるメッセージのコピーを保存することをお勧めします。
 
-{% alert important %}
-キャンペーンまたはキャンバスにBCC アドレスを追加すると、キャンペーンまたはキャンバスコンポーネントの請求可能なメールが2 倍になります。これは、Braze が1 つのメッセージをユーザに、1 つはBCC アドレスに送信するためです。
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='BCC address billable emails' %}
 
 ![メール設定]タブの[BCCアドレス]セクション。]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
 
@@ -102,7 +100,7 @@ Braze から送信されるすべてのメールメッセージに BCC アドレ
 
 [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
-メールの開封追跡ピクセルは、メールの HTML に自動的に挿入される非表示の 1 x 1 ピクセルの画像です。このピクセルにより、エンドユーザーがメールを開封したどうかを Braze が検出できます。メールの開封情報は非常に便利で、対応する開封率をユーザーが理解して効果的なマーケティング戦略を決定するときに役立ちます。
+メール開封トラッキングピクセルは非表示の1×1pxの画像で、メールHTMLに自動的に挿入される。このピクセルは、ユーザーがメールを開封したかどうかを検知するのに役立つ。ユーザーのメールクライアントが当社のトラッキングピクセルにリクエストを行うと、リクエストにはIPアドレス、ユーザーエージェント、タイムスタンプなどの情報が含まれることがある。メールの開封情報は、対応する開封率を把握することで、効果的なマーケティング戦略を決定するのに役立ち、非常に有用である。
 
 ### 追跡ピクセルの配置
 
