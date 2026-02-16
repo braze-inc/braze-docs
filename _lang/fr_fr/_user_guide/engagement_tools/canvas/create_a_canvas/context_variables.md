@@ -14,7 +14,7 @@ description: "Cet article de référence explique les variables de contexte dans
 Les variables de contexte peuvent être définies de deux manières :
 
 - **A l'entrée de la toile :** Lorsque les utilisateurs entrent dans un Canvas, les données de l'événement ou du déclencheur API peuvent automatiquement alimenter les variables de contexte.
-- **Dans une étape de Contexte :** Vous pouvez définir ou mettre à jour les variables de contexte manuellement dans le canvas en ajoutant une [étape Contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context).
+- **Dans une étape de Contexte :** Vous pouvez définir ou mettre à jour des variables de contexte manuellement dans le canvas en ajoutant une [étape Contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context).
 
 Chaque variable contextuelle comprend
 
@@ -115,7 +115,7 @@ Le parcours d'action suivant est mis en place pour trier les utilisateurs qui on
 
 Le parcours d'action suivant est mis en place pour faire correspondre la propriété de base `brand` pour le nom de produit spécifique `shoes` à une variable de contexte `promoted_shoe_brand`.
 
-![Exemple de parcours d'action faisant référence à une variable de contexte lors d'un achat.]({% image_buster /assets/img/context_action_path2.png %})
+![Exemple de parcours d'action qui fait référence à une variable de contexte lors d'un achat.]({% image_buster /assets/img/context_action_path2.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -125,7 +125,7 @@ Le parcours d'action suivant est mis en place pour faire correspondre la propri�
 {% tabs %}
 {% tab Perform custom event %}
 
-Les critères de sortie stipulent qu'à tout moment du parcours d'un utilisateur dans le Canvas, il quittera le Canvas si :
+Les critères de sortie stipulent qu'à tout moment du parcours d'un utilisateur dans le Canvas, il quittera le Canvas si
 
 - Ils exécutent l'événement personnalisé " **Abandon de panier"** et
 - La propriété de base **Item in Cart** correspond à la valeur chaîne de caractères de la variable de contexte `cart_item_threshold`.
@@ -162,6 +162,8 @@ De la même manière que les variables contextuelles de Canvas ont des types pr�
 {% alert note %}
 Utilisez le même type de données pour votre variable de contexte et votre comparaison. Par exemple, si votre variable de contexte est un type de données temporelles, utilisez des comparaisons temporelles (telles que "avant" ou "après"). L'utilisation de types de données non concordants (comme les comparaisons de chaînes de caractères avec une variable de contexte temporel) peut entraîner un comportement inattendu.
 {% endalert %}
+
+{% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
 
 Voici un exemple de filtre de variable contextuelle comparant la variable contextuelle `product_name` à l'expression régulière `/braze/`.
 
