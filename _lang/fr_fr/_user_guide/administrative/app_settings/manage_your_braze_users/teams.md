@@ -9,7 +9,7 @@ description: "Cet article de référence traite de l'utilisation de Braze Teams 
 
 # Équipes
 
-> En tant qu'administrateur Braze, vous pouvez regrouper les utilisateurs de votre tableau de bord en Teams, avec différents rôles et autorisations. Cela vous permet de faire travailler ensemble dans un même espace de travail plusieurs groupes d'utilisateurs de tableaux de bord sans lien entre eux, en séparant les types de contenu qui peuvent être modifiés.
+> En tant qu'administrateur de Braze, vous pouvez regrouper les utilisateurs de votre entreprise en Teams, avec des rôles et des autorisations d'utilisateur variés. Cela vous permet de faire travailler ensemble, dans un même espace de travail, plusieurs groupes d'utilisateurs de l'entreprise sans lien entre eux, en séparant les types de contenu qui peuvent être modifiés.
 
 Les Teams peuvent être constituées en fonction de l'emplacement/localisation des clients, de la langue et d'attributs personnalisés, de sorte que les membres de l'équipe et les non-membres aient un accès différent aux fonctionnalités d'envoi des messages et aux données des clients. Des filtres et des balises d’équipes peuvent être attribués à différents outils d’engagement. Il n'y a pas de limite au nombre de Teams que vous pouvez créer dans votre espace de travail.
 
@@ -31,7 +31,7 @@ Si une équipe est définie par un attribut personnalisé, une langue ou un pays
 
 ## Affecter des utilisateurs à des Teams
 
-Les administrateurs de Braze et les utilisateurs limités disposant de l'autorisation au niveau de l'entreprise "Peut gérer les paramètres de l'entreprise" peuvent attribuer des autorisations au niveau de l'équipe à un utilisateur du tableau de bord disposant d'un accès limité. Lorsqu'ils sont affectés à une équipe, les utilisateurs du tableau de bord sont limités à la lecture ou à l'écriture des données disponibles pour leur équipe particulière, telles que la langue de l'utilisateur, l'emplacement ou un attribut personnalisé, comme défini lors de la création de l'équipe.
+Les administrateurs de Braze et les utilisateurs limités disposant de l'autorisation au niveau de l'entreprise "Peut gérer les paramètres de l'entreprise" peuvent attribuer des autorisations au niveau de l'équipe à un utilisateur de l'entreprise disposant d'un accès limité. Lorsqu'ils sont affectés à une équipe, les utilisateurs de l'entreprise sont limités à la lecture ou à l'écriture des données disponibles pour leur équipe particulière, telles que la langue de l'utilisateur, l'emplacement ou un attribut personnalisé, tel que défini lors de la création de l'équipe.
 
 Pour affecter un utilisateur à une équipe, accédez à **Paramètres** > **Utilisateurs de l'entreprise** et sélectionnez l'utilisateur que vous souhaitez ajouter à votre équipe.
 
@@ -64,7 +64,7 @@ Vous trouverez ci-dessous toutes les autorisations disponibles que vous pouvez a
 - Créer et modifier des modèles Canvas
 - Afficher les modèles Canvas
 - Archiver les modèles Canvas
-- Créer et modifier des modèles de pages d'accueil
+- Modifier les modèles de page de destination
 - Voir les modèles de pages d'accueil
 - Archiver les modèles de pages d'accueil
 
