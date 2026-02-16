@@ -77,25 +77,25 @@ Las tablas siguientes proporcionan ejemplos de enlaces en el cuerpo de un correo
 
 **Lógica:** Braze inserta un signo de interrogación (?) y añade el primer parámetro de consulta en la URL.
 
-| Enlace en el cuerpo del correo electrónico    | Enlace con Aliasing                     |
+| Enlace en el cuerpo del correo electrónico    | Enlace con aliasing                     |
 |-----------------------|----------------------------------------|
-| https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk |
+| `https://www.braze.com` | `https://www.braze.com?lid=slfdldtqdhdk` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Enlace con más parámetros de consulta
 
 **Lógica:** Braze detecta otros parámetros de consulta y añade `lid=` al final de la URL.
 
-| Enlace en el cuerpo del correo electrónico                                            | Enlace con Aliasing                                                             |
+| Enlace en el cuerpo del correo electrónico                                            | Enlace con aliasing                                                             |
 |---------------------------------------------------------------|--------------------------------------------------------------------------------|
-| https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz |
+| `https://www.braze.com?utm_campaign=retention&utm_source=email` | `https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Enlace HTML
 
 **Lógica:** Braze reconoce que un enlace es una URL y ya tiene un signo de interrogación (?), por lo que el parámetro de consulta `lid` se añade después del signo de interrogación.
 
-| Enlace en el cuerpo del correo electrónico                                                | Enlace con Aliasing                                                                |
+| Enlace en el cuerpo del correo electrónico                                                | Enlace con aliasing                                                                |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -104,18 +104,18 @@ Las tablas siguientes proporcionan ejemplos de enlaces en el cuerpo de un correo
 
 **Lógica:** Braze espera que la URL utilice una estructura estándar en la que haya anclas (#) después de un signo de interrogación (?). Como Braze lee de izquierda a derecha, el signo de interrogación y el valor `lid` se añaden antes del ancla.
 
-| Enlace en el cuerpo del correo electrónico                               | Enlace con Aliasing                                                |
+| Enlace en el cuerpo del correo electrónico                               | Enlace con aliasing                                                |
 |--------------------------------------------------|-------------------------------------------------------------------|
-| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email |
+| `https://www.braze.com#bookmark1?utm_source=email` | `https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Enlace con ancla y etiqueta de captura
 
-**Lógica:** Al utilizar el aliasing de enlaces con URL que contienen anclas (#), Braze espera que el ancla se coloque después de los parámetros de consulta. Esto significa que el valor `lid` debe añadirse antes del ancla para que el seguimiento sea correcto, y como Braze lee la URL de izquierda a derecha, el signo de interrogación (?) y `lid` deben ir antes del ancla.
+**Lógica:** Al utilizar el aliasing de enlaces con URL que contienen anclas (#), Braze espera que el ancla se coloque después de los parámetros de consulta. Esto significa que el valor `lid` debe añadirse **antes** del ancla para que el seguimiento sea correcto, y como Braze lee la URL de izquierda a derecha, el signo de interrogación (?) y `lid` deben ir antes del ancla.
 
-| Enlace en el cuerpo del correo electrónico                                                                        | Enlace con Aliasing                                                                                           |
+| Enlace en el cuerpo del correo electrónico                                                                        | Enlace con aliasing                                                                                           |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a>` {%endraw%} |
+| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions?lid={{link_alias}}#special-offer">Check out our special offer!</a>` {%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Seguimiento de aliasing de enlaces
