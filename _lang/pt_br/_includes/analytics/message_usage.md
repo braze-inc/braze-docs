@@ -64,5 +64,18 @@ Você pode filtrar seus dados por:
 Os dados mostrados no dashboard **Uso de Mensagens** estão no nível do contrato e não estão restritos a uma empresa de dashboard individual ou espaço de trabalho. Estes dados refletem o uso de todos os espaços de trabalho dentro do seu dashboard e, potencialmente, em todos os dashboards (se você tiver múltiplos).
 {% endalert %}
 
-- Os dados subjacentes são fornecidos em uma cadência diária, com as tabelas de dados atualizadas às 3h, 9h, 12h e 18h EST. O dashboard **Message Usage** pode levar mais de 48 horas para ser atualizado após as alterações para permitir que os dados tenham tempo de ser sincronizados.
+- Os dados subjacentes são fornecidos em uma cadência diária, com as tabelas de dados atualizadas às 3h, 9h, 12h e 18h EST. O dashboard **de Uso de Mensagens** pode demorar mais de 24 horas para ser atualizado.
 - Braze segue a metodologia padrão de arredondamento: os números são arredondados para cima até a décima mais próxima.
+
+### Seleção de intervalo de datas
+
+O dashboard **Uso de mensagens** exclui dos resultados a data de ponta do intervalo selecionado. Por exemplo, se você selecionar 1-31 de outubro, as estatísticas de uso de 31 de outubro serão excluídas. Para incluir o último dia do período desejado, amplie o intervalo em um dia. Por exemplo, para incluir todo o mês de outubro, selecione 1º de outubro a 1º de novembro.
+
+### Comparação com provedores terceirizados
+
+Ao comparar os dados de uso de mensagens da Braze com dados de terceiros (como a Infobip), lembre-se:
+
+- **Segmentos de mensagens versus mensagens**: O Braze conta as mensagens SMS por segmentos. Uma única mensagem SMS que é dividida em vários segmentos (por exemplo, devido ao tamanho) é contada como vários segmentos no Braze. Para saber mais, consulte [Calculadoras de faturamento de SMS e RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
+- Envio **de mensagens com base em crédito ou sem crédito**: O dashboard inclui mensagens baseadas em crédito e não baseadas em crédito. Os provedores de terceiros podem contar apenas mensagens baseadas em crédito, o que pode causar discrepâncias nos totais.
+- **Inbound vs outbound**: Certifique-se de que esteja comparando os mesmos tipos de mensagens. Alguns dashboards de terceiros incluem mensagens de entrada e de saída em seus totais, enquanto o Braze permite filtrar por direção.
+- **Alinhamento do intervalo de datas**: Como o dashboard exclui a data de ponta, as comparações dia a dia podem se alinhar mais estreitamente do que intervalos de datas mais longos. Se estiver comparando dados de um período específico, estenda o intervalo de datas do Braze em um dia para incluir o último dia do período de comparação.
