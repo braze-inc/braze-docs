@@ -58,6 +58,8 @@ Os detalhes das propriedades de cada bloco de editor são fornecidos nas tabelas
 
 ### Imagem
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 | Propriedade | Descrição |
 | --- | --- |
 | URL | O endereço hospedado da imagem |
