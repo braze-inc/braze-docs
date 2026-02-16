@@ -28,7 +28,7 @@
 
 アプリ内メッセージに含めることができるテキスト文字数に制限はありませんが(ボタン、ヘッドライン、メインボディなどと同様に)、使用するテキスト文字数を調整します。テキストが多すぎると、ユーザーはメッセージを展開してスクロールする必要があります。
 
-すべてのアプリ内メッセージの推奨画像サイズは500 KB、最大画像サイズは5 MB で、PNG、JPEG、GIF のファイルタイプをサポートしています。
+すべてのアプリ内メッセージの推奨画像サイズは500 KB、最大画像サイズは5 MB で、PNG、JPEG、GIF のファイルタイプをサポートしています。WebP "画像は、すべてのデバイスまたはブラウザでサポートされているわけではありません。WebP "画像をPNG またはJPEG に変換してから、アプリ内メッセージs に追加することをお勧めします。
 
 {% tabs %}
 {% tab Portrait %}
@@ -128,7 +128,7 @@ table td {
     <tr>
       <td>Android傾斜像</td>
       <td>3:2</td>
-      <td>該当なし</td>
+      <td>N/A</td>
       <td>N/A</td>
       <td>PNG、JPEG</td>
       <td>詳細については、<a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Androidインラインイメージプッシュ</a>を参照してください。</td>
@@ -152,7 +152,7 @@ table td {
 | --- | --- | 
 | サイズ | 5 MB |
 | 幅 | ヘッダー:600 px<br>Body:480 px |
-| ファイルタイプ | PNG、JPEG、GIF |
+| ファイルタイプ | PNG、JPEG、GIF<br><br> ODP"画像支援はメール クライアントによって異なる。信頼性の高いレンダリングを行うには、WebP "画像をPNG またはJPEG に変換してから、メール に追加します。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | テキスト仕様 | 推奨最大プロパティ |
