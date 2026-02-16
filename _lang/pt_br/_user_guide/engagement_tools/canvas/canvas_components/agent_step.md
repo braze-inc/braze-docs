@@ -2,7 +2,7 @@
 nav_title: Agente
 article_title: Etapa do agente
 alias: /agent_step/
-page_order: 0.2
+page_order: 2
 page_type: reference
 description: "Este artigo de referência cobre como usar o passo do Agente no Canva para gerar conteúdo ou tomar decisões inteligentes em tempo real."
 tool: Canvas
@@ -13,7 +13,7 @@ toc_headers: h2
 
 > O passo do Agente permite que você adicione decisões e geração de conteúdo impulsionadas por IA diretamente no seu fluxo de trabalho do Canva. Para mais informações gerais, veja [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/). 
 
-![Um passo do Agente em uma jornada do usuário no Canva.]({% image_buster /assets/img/ai_agent/agent_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![Um passo do Agente em uma jornada do usuário do Canva.]({% image_buster /assets/img/ai_agent/agent_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 ## Como funciona?
 
@@ -45,9 +45,9 @@ As saídas do agente podem ser salvas como strings, números, booleanos ou objet
 
 | Tipo de dados | Usos comuns |
 | --- | --- |
-| String | Personalização de mensagens (linhas de assunto, cópias, respostas) |
+| String | Personalização de mensagens (linhas de assunto, cópia, respostas) |
 | Número | Pontuação, limites, roteamento em [Caminhos do Público]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) |
-| Booleano | Divisões Sim/Não em [Divisões de Decisão]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) |
+| Booleano | Divisão Sim/Não em [Divisões de Decisão]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) |
 | Objeto | Aproveite um ou mais dos tipos de dados acima com uma única chamada LLM em uma estrutura de dados previsível |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -67,7 +67,7 @@ Você deve decidir quais dados o agente deve receber em tempo de execução. As 
 - **Fornecer valores:** Passe apenas propriedades selecionadas, como o primeiro nome ou a cor favorita de um usuário. Escolha esta opção para dar ao agente acesso apenas aos valores que você atribui aqui. Para cada **Chave**, insira a [tag Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags) que define o campo de perfil de usuário específico ou variável de contexto.  
 
 {% alert note %}
-Braze passa os primeiros 10 KB de conteúdo para o agente. Fornecer valores que tenham um valor total superior a 10 KB resulta em truncamento.
+Braze passa os primeiros 10 KB de conteúdo para o agente. Fornecer valores que têm um valor total superior a 10 KB resulta em truncamento.
 {% endalert %}
 
 ### Etapa 5: Teste o agente
@@ -76,7 +76,7 @@ Após configurar sua etapa do Agente, você pode testar e visualizar a saída de
 
 ## Tratamento de erros  
 
-- Se o modelo conectado retornar um erro de limite de frequência, o Braze tenta novamente até cinco vezes com retrocesso exponencial.  
+- Se o modelo conectado retornar um erro de limite de taxa, o Braze tenta novamente até cinco vezes com retrocesso exponencial.  
 - Se o agente falhar por qualquer outro motivo (como chave de API inválida), a variável de saída é definida como `null`.
     - Se um agente atingir seu limite diário de invocações, a variável de saída é definida como `null`. Se você estiver usando a saída de um agente em uma etapa de Mensagem, considere usar a lógica de abortar Liquid.
 - As respostas são armazenadas em cache para entradas idênticas e podem ser reutilizadas para invocações idênticas repetidas dentro de alguns minutos.
@@ -102,7 +102,7 @@ Em geral, recomendamos usar uma etapa de Agente quando você quiser fornecer dad
 Vamos supor que você esteja enviando uma mensagem personalizada para recomendar um novo sabor de sorvete a um usuário que anteriormente pediu chocolate e morango. Aqui está a diferença entre usar uma etapa de Agente versus recomendações de itens de IA:
 
 - **Etapa de Agente:** Usa LLMs para tomar uma decisão qualitativa sobre o que o usuário pode querer com base nas instruções e pontos de dados contextuais fornecidos ao agente. Neste exemplo, uma etapa de Agente pode recomendar um novo sabor com base na possibilidade de o usuário querer experimentar sabores diferentes.
-- **Recomendações de itens de IA:** Usa modelos de aprendizado de máquina para prever os produtos que um usuário é mais provável de querer com base em eventos passados do usuário, como compras. Neste exemplo, as recomendações de itens de IA sugeririam um sabor (baunilha) com base nos dois pedidos anteriores do usuário (chocolate e morango) e como esses se comparam aos comportamentos de outros usuários em seu espaço de trabalho.
+- **Recomendações de itens de IA:** Usa modelos de machine learning para prever os produtos que um usuário é mais provável de querer com base em eventos passados do usuário, como compras. Neste exemplo, as recomendações de itens de IA sugeririam um sabor (baunilha) com base nos dois pedidos anteriores do usuário (chocolate e morango) e como esses se comparam aos comportamentos de outros usuários em seu espaço de trabalho.
 
 ### Quando devo usar um formato de saída padrão para um agente?
 
