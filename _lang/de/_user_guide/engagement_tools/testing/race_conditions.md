@@ -80,9 +80,7 @@ Wenn diese Objekte in den Trigger aufgenommen werden, werden die Attribute zuers
 
 Verwenden Sie den [Endpunkt`/users/track/sync/` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous), um angepasste Events und Käufe aufzuzeichnen und die Attribute des Nutzerprofils synchron zu aktualisieren. Wenn Sie diesen Endpunkt verwenden, um Nutzerprofile gleichzeitig und in einem einzigen Aufruf zu aktualisieren, können Sie mögliche Race-Conditions verhindern.
 
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit in der Beta-Phase. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an einer Teilnahme an der Beta interessiert sind.
-{% endalert %}
+{% include early_access_beta_alert.md feature='This endpoint' type='beta' %}
 
 ## Szenario 3: Abgleich von aktionsbasierten Triggern und Zielgruppenfiltern
 
