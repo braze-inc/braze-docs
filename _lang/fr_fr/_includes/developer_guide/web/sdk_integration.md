@@ -62,6 +62,10 @@ Le paramètre par défaut **Prévenir le suivi intersite** dans Safari peut emp�
 
 Une fois le SDK Web de Braze ajouté à votre site Web, initialisez la bibliothèque à l'aide de la clé API et de l'[URL de l'endpoint du SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) que vous trouverez dans **Paramètres** > **Paramètres de l'application** dans votre tableau de bord de Braze. Pour obtenir une liste complète des options de `braze.initialize()`, ainsi que de nos autres méthodes JavaScript, consultez la [documentation JavaScript de Braze](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
 
+{% alert note %}
+**Les domaines personnalisés pour les demandes de SDK Web ne sont pas pris en charge :** Le SDK Web `baseUrl` doit être un endpoint du SDK Braze (par exemple, `sdk.iad-05.braze.com`). Braze ne prend pas en charge l'acheminement du trafic du SDK Web via un domaine appartenant au client par le biais d'enregistrements CNAME. Si vous avez besoin que les demandes de SDK Web proviennent de votre propre domaine, contactez le service d'assistance de Braze.
+{% endalert %}
+
 ```javascript
 // initialize the SDK
 braze.initialize('YOUR-API-KEY-HERE', {
@@ -172,7 +176,7 @@ braze.openSession();
 
 Lorsque vous référencez le SDK Web de Braze à partir de notre réseau de réception/distribution de contenu, par exemple, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (comme le recommandent nos instructions d'intégration par défaut), vos utilisateurs reçoivent automatiquement des mises à jour mineures (corrections de bogues et fonctionnalités rétrocompatibles, versions `a.a.a` à `a.a.z` dans les exemples ci-dessus) lorsqu'ils actualisent votre site.
 
-Cependant, lorsque nous publions des changements majeurs, nous vous demandons de mettre à jour manuellement le SDK Braze Web afin de garantir que les changements de rupture n'ont pas d'impact sur votre intégration. En outre, si vous téléchargez notre SDK et l'hébergez vous-même, vous ne recevrez pas automatiquement les mises à jour de version et devrez effectuer une mise à niveau manuelle pour bénéficier des dernières fonctionnalités et corrections de bogues.
+Cependant, lorsque nous publions des changements majeurs, nous vous demandons de mettre à jour le SDK Braze Web manuellement afin de garantir que les changements de rupture n'ont pas d'impact sur votre intégration. En outre, si vous téléchargez notre SDK et l'hébergez vous-même, vous ne recevrez pas automatiquement les mises à jour de version et devrez effectuer une mise à niveau manuelle pour bénéficier des dernières fonctionnalités et corrections de bogues.
 
 Vous pouvez vous tenir au courant de notre dernière version [en suivant notre flux de publication](https://github.com/braze-inc/braze-web-sdk/tags.atom) avec le lecteur RSS ou le service de votre choix, et consulter [notre journal des modifications](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) pour un compte-rendu complet de l'historique des versions de notre SDK Web. Pour mettre à niveau le SDK Braze pour le Web :
 
