@@ -1,6 +1,6 @@
 ---
 nav_title: Permisos
-article_title: Permisos Braze
+article_title: Permisos de usuario de la empresa
 page_order: 2
 page_type: reference
 description: "Este artículo de referencia explica cómo funcionan los permisos de usuario en Braze. Aquí puedes aprender a editar y establecer permisos de usuario, eligiendo quién puede acceder a tus aplicaciones en el panel de control."
@@ -8,13 +8,13 @@ tool: Dashboard
 
 ---
 
-# Permisos Braze
+# Permisos de usuario de la empresa
 
 > Aprenda a crear conjuntos de permisos, crear funciones, editar permisos de usuario y exportar permisos de usuario, para que pueda asegurarse de que sus usuarios sólo acceden a los espacios de trabajo y las funciones que más necesitan.
 
 ## Creación de un conjunto de permisos
 
-Utilice conjuntos de permisos para agrupar permisos relacionados con áreas temáticas o acciones específicas. Pueden aplicarse a usuarios de cuadros de mando que necesiten el mismo acceso en distintos espacios de trabajo. Para crear un conjunto de permisos, vaya a **Configuración** > **Configuración de permisos** y, a continuación, seleccione **Crear conjunto de permisos**. Para ver una descripción de cada permiso, consulta [Lista de permisos](#list-of-permissions).
+Utilice conjuntos de permisos para agrupar permisos relacionados con áreas temáticas o acciones específicas. Pueden aplicarse a usuarios de la empresa que necesiten el mismo acceso en distintos espacios de trabajo. Para crear un conjunto de permisos, vaya a **Configuración** > **Configuración de permisos** y, a continuación, seleccione **Crear conjunto de permisos**. Para ver una descripción de cada permiso, consulta [Lista de permisos](#list-of-permissions).
 
 {% tabs local %}
 {% tab example permission sets %}
@@ -29,7 +29,7 @@ Utilice conjuntos de permisos para agrupar permisos relacionados con áreas tem�
 
 ## Crear un rol
 
-Las funciones permiten una mayor estructuración al agrupar los permisos personalizados individuales con los controles de acceso al espacio de trabajo. Esto es especialmente útil si tiene muchas marcas o espacios de trabajo regionales en un mismo cuadro de mandos. Con las funciones, puede añadir usuarios del cuadro de mandos a los espacios de trabajo adecuados y concederles directamente los permisos asociados. Para ver una descripción de cada permiso, consulta [Lista de permisos](#list-of-permissions).
+Las funciones permiten una mayor estructuración al agrupar los permisos personalizados individuales con los controles de acceso al espacio de trabajo. Esto es especialmente útil si tiene muchas marcas o espacios de trabajo regionales en un mismo cuadro de mandos. Con los roles, puedes añadir usuarios de la empresa a los espacios de trabajo adecuados y concederles directamente los permisos asociados. Para ver una descripción de cada permiso, consulta [Lista de permisos](#list-of-permissions).
 
 {% tabs local %}
 {% tab example roles %}
@@ -50,7 +50,7 @@ Las funciones permiten una mayor estructuración al agrupar los permisos persona
 
 Puedes encontrar dificultades al intentar guardar permisos en el panel de Braze, sobre todo al añadir o eliminar usuarios de un espacio de trabajo, o al añadirlos a un Equipo. El botón **Guardar/Actualizar usuarios** puede aparecer en gris si los permisos del usuario son idénticos a los que ya tiene a nivel de espacio de trabajo. Esta restricción existe porque no hay ninguna ventaja en tener un Equipo si todos los usuarios poseen los mismos permisos que todo el espacio de trabajo.
 
-Para añadir con éxito un usuario a un equipo manteniendo los mismos permisos, no asignes ningún permiso a nivel de espacio de trabajo. En su lugar, asigna permisos exclusivamente a nivel de equipo.
+Para añadir correctamente un usuario a un equipo manteniendo los mismos permisos, no asignes ningún permiso a nivel de espacio de trabajo. En su lugar, asigna permisos exclusivamente a nivel de equipo.
 
 ## Usuarios limitados
 
@@ -66,7 +66,7 @@ Los usuarios limitados tienen permisos específicos que les permiten gestionar d
 | Tipo de usuario limitado | Descripción |
 | --- | --- |
 | Administrador del grupo de aplicaciones | Los administradores de grupos de aplicaciones tienen permisos específicos para gestionar grupos de aplicaciones, pero no tienen la misma autoridad que los administradores de empresa. Los usuarios limitados pueden heredar permisos similares a los de los administradores de grupos de aplicaciones si tienen marcados los permisos necesarios. |
-| Administrador de la empresa | Los administradores de empresa tienen permisos más amplios, incluida la capacidad de eliminar usuarios del panel. Sin embargo, no pueden eliminar sus propias cuentas y deben ponerse en contacto con otro administrador de la empresa para realizar esa acción. |
+| Administrador de la empresa | Los administradores de empresa tienen permisos más amplios, incluida la capacidad de eliminar usuarios de la empresa. Sin embargo, no pueden eliminar sus propias cuentas y deben ponerse en contacto con otro administrador de la empresa para realizar esa acción. |
 | Permiso básico de sólo lectura | Para acceder a determinadas partes del panel, como la página de socios tecnológicos, los usuarios deben tener un permiso básico de sólo lectura. Esto incluye tener habilitada la opción "Gestionar integraciones externas", junto con permisos para Acceder a campañas, lienzos, tarjetas, segmentos y biblioteca multimedia. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -75,7 +75,7 @@ Los usuarios limitados tienen permisos específicos que les permiten gestionar d
 Los usuarios pueden encontrarse con mensajes como "Acceso limitado. No tienes permisos para acceder a esta Página". En estos casos, el administrador de la cuenta debe comprobar si puede resolver el problema deshabilitando y volviendo a habilitar los permisos del usuario.
 
 {% alert note %}
-No es posible fusionar o importar permisos de usuario de un usuario del panel a otro.
+No es posible fusionar o importar permisos de usuario de un usuario de la empresa a otro.
 {% endalert %}
 
 ## Editar los permisos de un usuario
@@ -92,8 +92,8 @@ Para editar los permisos actuales de administrador, empresa o espacio de trabajo
 Los administradores tienen acceso a todas las funciones y la posibilidad de modificar cualquier configuración de la empresa. Pueden hacerlo:
 
 - Cambiar [la configuración de aprobación]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)
-- Añadir, editar, eliminar, suspender o anular la suspensión de otros [usuarios de Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
-- Exportar usuarios Braze como CSV
+- Añadir, editar, eliminar, suspender o anular la suspensión de otros [usuarios de la empresa]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- Exportar usuarios de la empresa como CSV
 
 Para conceder o eliminar privilegios de administrador, seleccione **Este usuario es un administrador** y, a continuación, seleccione **Actualizar usuario**.
 
@@ -150,14 +150,14 @@ Cuando haya terminado, seleccione **Actualizar usuario**.
 
 ## Exportación de permisos de usuario
 
-Para descargar una lista de tus usuarios y sus permisos, ve a **Configuración** > **Usuarios de la empresa** y, a continuación, selecciona **Exportar usuarios**. En breve le enviaremos un archivo CSV a su dirección de correo electrónico.
+Para descargar una lista de los usuarios de tu empresa y sus permisos, ve a **Configuración** > **Usuarios de la empresa** y, a continuación, selecciona **Exportar usuarios**. En breve le enviaremos un archivo CSV a su dirección de correo electrónico.
 
 ![La página "Usuarios de la empresa" en Braze con la opción "Exportar usuarios" en primer plano.]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
 
 ## Lista de permisos
 
 {% alert important %}
-A partir de abril de 2024, para crear o actualizar listas de códigos promocionales, los usuarios de Braze necesitan el permiso "Acceder a campañas, lienzos, tarjetas, segmentos, biblioteca multimedia".
+A partir de abril de 2024, para crear o actualizar listas de códigos promocionales, los usuarios de la empresa necesitan el permiso "Acceder a campañas, lienzos, tarjetas, segmentos, biblioteca multimedia".
 {% endalert %}
 
 |Nivel|Apellidos|Definición|
@@ -165,7 +165,7 @@ A partir de abril de 2024, para crear o actualizar listas de códigos promociona
 |Administrador|Administrador|Permite a los usuarios acceder a todas las funciones disponibles. Esta es la configuración por defecto para todos los nuevos usuarios. Puede actualizar la configuración de la empresa (nombre de la empresa y zona horaria), cosa que no pueden hacer los usuarios limitados.|
 |Empresa|Crear y eliminar espacios de trabajo|Permite a los usuarios crear y eliminar espacios de trabajo.|
 |Empresa|Administrar configuración de empresa|Permite a los usuarios modificar cualquier configuración de la empresa.|
-|Espacio de trabajo|Acceda a Campañas, Lienzos, Tarjetas, Bloques de contenido, Banderas de características, Segmentos, Mediateca, Ubicaciones, Códigos de promoción y Centros de preferencias.|Permite a los usuarios ver las métricas de rendimiento de campañas y Canvas, crear y duplicar borradores de campañas y Lienzos, editar borradores y plantillas de campañas y Canvas, ver borradores de segmentos, plantillas y medios, crear plantillas, cargar medios, crear o actualizar listas de códigos promocionales, ver informes de interacción y ver la configuración de mensajes globales en el panel. Sin embargo, los usuarios con este permiso no pueden pausar ni editar los contenidos en directo existentes.|
+|Espacio de trabajo|Acceda a Campañas, Lienzos, Tarjetas, Bloques de contenido, Banderas de características, Segmentos, Mediateca, Ubicaciones, Códigos de promoción y Centros de preferencias.|Permite a los usuarios ver métricas de rendimiento de campañas y Canvas, crear y duplicar borradores de campañas y Lienzos, editar borradores y plantillas de campañas y Canvas, ver borradores de segmentos, plantillas y medios, crear plantillas, cargar medios, crear o actualizar listas de códigos promocionales, ver informes de interacción y ver la configuración de mensajes globales en el panel. Sin embargo, los usuarios con este permiso no pueden pausar ni editar los contenidos en directo existentes.|
 |Espacio de trabajo|Acceso a la consola para desarrolladores|Permite el acceso completo a los siguientes ajustes y registros:{::nomarkdown}<ul><li><a href='/docs/user_guide/administrative/app_settings/api_settings_tab/'>Claves de API</a></li><li><a href='/docs/user_guide/administrative/app_settings/internal_groups_tab/'>Grupos internos</a></li><li><a href='/docs/user_guide/administrative/app_settings/message_activity_log_tab/'>Registro de actividad de mensajes</a></li><li><a href='/docs/user_guide/administrative/app_settings/event_user_log_tab/'>Registro de eventos de usuario</a></li></ul>{:/}|
 |Espacio de trabajo|Aprobar y denegar campañas|Permite a los usuarios aprobar o denegar campañas. El [flujo de trabajo de aprobación de campañas]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) debe estar activado para que se aplique este permiso. Esta configuración está actualmente en acceso anticipado. Póngase en contacto con su gestor de cuenta si está interesado en participar en el acceso anticipado.|
 |Espacio de trabajo|Aprobar y denegar Canvas|Permite a los usuarios aprobar o denegar lienzos. El [flujo de trabajo de aprobación de Lienzos]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) debe estar activado para que se aplique este permiso.|
@@ -177,7 +177,7 @@ A partir de abril de 2024, para crear o actualizar listas de códigos promociona
 |Espacio de trabajo|Lanzar centros de preferencias|Permite a los usuarios lanzar [centros de preferencias]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Espacio de trabajo|Administrar aplicaciones|Permite a los usuarios editar **la configuración de la aplicación**.|
 |Espacio de trabajo|Administrar permisos para el dashboard de catálogos|Permite a los usuarios crear y gestionar catálogos.|
-|Espacio de trabajo|Administrar usuarios del dashboard| Permite a los no administradores ver, editar y gestionar la página **Usuarios de la empresa**, y gestionar los usuarios del panel en su espacio de trabajo modificando los permisos de cualquier usuario, incluidos los suyos propios. Los usuarios con este permiso no pueden eliminar usuarios (sólo los administradores pueden eliminar usuarios).<br><br>Esto corresponde al permiso heredado `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
+|Espacio de trabajo|Administrar usuarios del dashboard| Permite a los no administradores ver, editar y gestionar la página **Usuarios de la empresa**, y gestionar los usuarios de la empresa en su espacio de trabajo modificando los permisos de cualquier usuario, incluidos los suyos propios. Los usuarios con este permiso no pueden eliminar usuarios (sólo los administradores pueden eliminar usuarios).<br><br>Esto corresponde al permiso heredado `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
 |Espacio de trabajo|Administrar configuración del correo electrónico|Permite a los usuarios guardar los cambios de configuración del correo electrónico**(Configuración** > **Preferencias de correo electrónico**).|
 |Espacio de trabajo|Administrar eventos, atributos, compras|Permite a los usuarios editar atributos personalizados (los usuarios sin esta capacidad pueden seguir viendo atributos personalizados), editar y ver propiedades de eventos personalizados, y editar y ver propiedades de productos en **Configuración de datos**.|
 |Espacio de trabajo|Administrar integraciones externas|Permite acceder a todas las pestañas de **los socios tecnológicos**, sincronizar Braze con otras plataformas y gestionar [la ingesta de datos en la nube]({{site.baseurl}}/user_guide/data/cloud_ingestion/).|
@@ -202,12 +202,15 @@ A partir de abril de 2024, para crear o actualizar listas de códigos promociona
 |Espacio de trabajo|Archivar plantillas de Canvas|Permite a los usuarios archivar plantillas de Canvas.|
 |Espacio de trabajo|Gestionar la segmentación de propiedades de eventos personalizados|Permite a los usuarios crear segmentos en función de la frecuencia y la recurrencia de las propiedades del evento.|
 |Espacio de trabajo|Publicar páginas de inicio|Permite a los usuarios publicar [páginas de destino]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/).|
-|Espacio de trabajo|Crear borradores de página de inicio|Permite a los usuarios crear y guardar borradores de páginas de destino.|
-|Espacio de trabajo|Acceder a páginas de inicio|Permite a los usuarios acceder a la página **Páginas de destino**.|
-|Espacio de trabajo|Crea y edita plantillas de páginas de inicio|Permite a los usuarios crear y editar plantillas de páginas de destino.|
+|Espacio de trabajo|Editar borradores de páginas de destino|Permite a los usuarios crear y guardar borradores de páginas de destino.|
+|Espacio de trabajo|Ver páginas de inicio|Permite a los usuarios acceder a la página **Páginas de destino**.|
+|Espacio de trabajo|Editar plantillas de páginas de destino|Permite a los usuarios crear y editar plantillas de páginas de destino.|
 |Espacio de trabajo|Ver plantillas de páginas de inicio|Permite a los usuarios ver plantillas de páginas de destino.|
 |Espacio de trabajo|Archiva plantillas de páginas de inicio|Permite a los usuarios archivar plantillas de páginas de destino.|
 |Espacio de trabajo|Ver agentes de IA personalizados|Permite a los usuarios ver [agentes de IA personalizados]({{site.baseurl}}/user_guide/brazeai/agents/). Esta característica está actualmente en fase beta.|
 |Espacio de trabajo|Crear agentes de IA personalizados|Permite a los usuarios crear agentes de IA personalizados. Esta característica está actualmente en fase beta.|
 |Espacio de trabajo|Editar agentes de IA personalizados|Permite a los usuarios editar agentes de IA personalizados. Esta característica está actualmente en fase beta.|
+| Espacio de trabajo | Ver plantillas de mensajes de WhatsApp | Permite a los usuarios ver [plantillas de mensajes de WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/?tab=template%20messages#step-2-compose-your-whatsapp-message). |
+| Espacio de trabajo | Editar plantillas de mensajes de WhatsApp | Permite a los usuarios crear plantillas de mensajes de WhatsApp en el creador de plantillas. Esta característica está actualmente en acceso anticipado. |
+| Espacio de trabajo | Borrar plantillas de mensajes de Whatsapp | Permite a los usuarios eliminar plantillas de mensajes de WhatsApp en el creador de plantillas. Esta característica está actualmente en acceso anticipado. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
