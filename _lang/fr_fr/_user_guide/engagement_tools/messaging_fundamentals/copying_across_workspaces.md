@@ -68,7 +68,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Comportements de conversion (imbriqués) | Approbations | 
 | Configurations de l'heure de repos | Planification des déclencheurs | 
 | Configurations de limite de fréquence | Résumés de campagne | 
-| État de l'abonnement du destinataire |  | 
+| État de l'abonnement du destinataire | Filtres | 
 | Planification récurrente |  | 
 | Est transactionnel |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -84,7 +84,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Comportements de conversion (imbriqués) | Approbations | 
 | Configurations de l'heure de repos | Planification des déclencheurs | 
 | Configurations de limite de fréquence | Résumés de Canvas | 
-| État de l'abonnement du destinataire |  | 
+| État de l'abonnement du destinataire | Filtres | 
 | Planification récurrente |  | 
 | Est transactionnel |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
