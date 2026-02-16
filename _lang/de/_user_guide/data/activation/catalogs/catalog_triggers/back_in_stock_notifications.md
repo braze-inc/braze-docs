@@ -92,5 +92,5 @@ Verwenden Sie diesen Liquid-Tag {%raw%}``{% catalog_items <name_of_your_catalog>
 
 - Das Abonnement gilt nur für 90 Tage. Wenn der Artikel nicht innerhalb von 90 Tagen wieder auf Lager ist, wird der oder die Nutzer:in abgemeldet.
 - Wenn Sie die Benachrichtigungsregel **Alle abonnierten Benutzer benachrichtigen** verwenden, wird Braze 100.000 Benutzer innerhalb von 10 Minuten benachrichtigen.
-- Braze verarbeitet 10 Anfragen zum Update von Katalogartikeln pro Minute. Endpunkte für Updates erlauben 50 Artikel-Updates pro Anfrage und unterstützen bis zu 500 Artikel-Updates pro Minute, die Back-in-Stock-Benachrichtigungen auslösen können.
+- Braze unterstützt täglich bis zu 50.000 aktualisierte Artikel, die für das Triggern von Back-in-Stock-Benachrichtigungen geeignet sind. Sie können bis zu 100 Millionen aktive Abos zu einem bestimmten Zeitpunkt haben, wobei jedes Abonnent:in für ein Nutzerprofil steht, das einen Artikel des Katalogs anschaut.
 
