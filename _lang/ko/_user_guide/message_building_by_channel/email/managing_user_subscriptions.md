@@ -16,7 +16,7 @@ channel:
 
 ## 구독 상태 {#subscription-states}
 
-Braze는 이메일 사용자에 대해 세 가지 글로벌 구독 상태를 가지고 있습니다. 이 상태는 사용자에게 메시지를 차단합니다. 예를 들어, `unsubscribed` 상태의 사용자는 `subscribed` 또는 `opted-in`을(를) 대상으로 하는 메시지를 받지 않습니다.
+Braze는 이메일 사용자에 대해 세 가지 글로벌 구독 상태를 가지고 있습니다. 이 상태는 사용자에게 메시지를 차단합니다. 예를 들어, `unsubscribed` 상태의 사용자는 `subscribed` 또는 `opted-in`을 대상으로 하는 메시지를 받지 않습니다.
 
 | 상태 | 정의 |
 | ----- | ---------- |
@@ -43,7 +43,7 @@ Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channe
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %}{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} 
 
-이메일 주소가 하드 바운스되면, Braze는 사용자의 구독 상태를 "구독 취소됨"으로 자동 설정하지 않습니다. 주소가 하드 바운스(유효하지 않거나 존재하지 않음)되면, Braze는 이를 유효하지 않다고 표시하고 추가 전송을 시도하지 않습니다. 사용자가 이메일 주소를 변경하면, Braze는 전송을 재개합니다. Braze는 소프트 바운스를 72시간 동안 재시도합니다.
+이메일 주소가 하드 바운스되면, Braze는 자동으로 사용자의 구독 상태를 "구독 취소됨"으로 설정하지 않습니다. 주소가 하드 바운스(유효하지 않거나 존재하지 않음)되면, Braze는 이를 유효하지 않다고 표시하고 추가 전송을 시도하지 않습니다. 사용자가 이메일 주소를 변경하면, Braze는 전송을 재개합니다. Braze는 소프트 바운스를 72시간 동안 재시도합니다.
 
 ### 이메일 구독 상태 업데이트하기
 
@@ -72,7 +72,7 @@ Braze SDK를 사용하여 사용자의 구독 상태를 업데이트하세요.
 
 ![User profile for John Doe with their email subscription state set to Subscribed.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-사용자의 이메일 구독 상태를 확인하는 방법은 다음과 같습니다:
+다음 방법으로 사용자의 이메일 구독 상태를 확인할 수 있습니다:
 
 1. **REST API 내보내기:** Use the [Export users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Export users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints to export individual user profiles in JSON format.
 2. **사용자 프로필:** Find the user's profile on the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page, then select the **Engagement** tab to view and manually update a user's subscription state.
@@ -123,7 +123,7 @@ You can reference the **Subscription Group Timeseries** graph in the **Subscript
 
 #### 캠페인 분석에서 구독 그룹 보기
 
-특정 이메일 캠페인에서 구독 상태(구독 또는 탈퇴)를 변경한 사용자 수를 해당 캠페인의 분석 페이지에서 확인할 수 있습니다.
+특정 이메일 캠페인에서 구독 상태(구독 중 또는 탈퇴)를 변경한 사용자 수를 해당 캠페인의 분석 페이지에서 확인할 수 있습니다.
 
 1. From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section.
 2. Select the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
@@ -137,13 +137,13 @@ You can reference the **Subscription Group Timeseries** graph in the **Subscript
 
 ## 이메일 환경설정 센터
 
-이메일 선호 센터를 통해 어떤 사용자가 구독 그룹 뉴스레터를 받을지 관리할 수 있습니다. 대시보드의 **구독 그룹**에서 찾을 수 있습니다. 생성하는 각 구독 그룹은 환경설정 센터 목록에 추가됩니다. 
+이메일 선호 센터를 통해 어떤 사용자가 구독 그룹 뉴스레터를 받을지 관리할 수 있습니다. 대시보드의 **구독 그룹** 아래에서 찾을 수 있습니다. 생성하는 각 구독 그룹은 환경설정 센터 목록에 추가됩니다. 
 
 To learn more about how to add or customize a preference center, refer to [Preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).
 
 ## 이메일 구독 변경하기 {#changing-email-subscriptions}
 
-대부분의 경우, 사용자는 수신하는 이메일에 포함된 링크를 통해 이메일 구독을 관리합니다. 모든 이메일 하단에 탈퇴 링크가 포함된 법적으로 준수하는 바닥글을 삽입하세요. 사용자가 탈퇴 URL을 선택하면, Braze는 그들을 탈퇴시키고 변경을 확인하는 랜딩 페이지를 표시합니다. 이 Liquid 태그를 포함하세요: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
+대부분의 경우, 사용자는 수신하는 이메일에 포함된 링크를 통해 이메일 구독을 관리합니다. 모든 이메일 하단에 탈퇴 링크가 포함된 법적으로 준수하는 바닥글을 삽입하세요. 사용자가 탈퇴 URL을 선택하면, Braze는 그들을 탈퇴시키고 변경을 확인하는 랜딩 페이지를 표시합니다. 다음 Liquid 태그를 포함하세요: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
 
 사용자가 선호 센터에서 "위의 모든 유형의 이메일 탈퇴"를 선택하면, Braze는 그들의 전역 이메일 구독 상태를 `unsubscribed`로 설정하고 모든 그룹에서 탈퇴시킵니다.
 
@@ -204,7 +204,7 @@ It's your responsibility to comply with any applicable [spam laws]({{site.baseur
 
 "이메일 구독 상태" 및 "푸시 구독 상태" 필터를 사용하여 구독 상태에 따라 사용자를 세그먼트화하세요.
 
-옵트인도 하지 않고 탈퇴도 하지 않은 사용자를 타겟팅하고 명시적인 옵트인을 유도하는 데 사용하세요. "이메일/푸시 구독 상태가 구독됨" 필터로 세그먼트를 만들고 구독했지만 옵트인하지 않은 사용자에게 캠페인을 전송하세요.
+옵트인도 옵트아웃도 하지 않은 사용자를 타겟팅하고 명시적인 옵트인을 유도하는 데 사용하세요. "이메일/푸시 구독 상태가 구독됨" 필터로 세그먼트를 만들고 구독했지만 옵트인하지 않은 사용자에게 캠페인을 전송하세요.
 
 ![Email Subscription Status used as a segment filter.]({% image_buster /assets/img_archive/not_optin.png %})
 
