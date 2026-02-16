@@ -186,7 +186,7 @@ lines-ContentCardsInboxScreen.kt=47-69
 
 #### 3\. 콘텐츠 카드 업데이트 가입하기
 
-를 사용하여 [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>) 를 사용하여 구독 라이프사이클을 관리하여 컴포저블이 컴포저블을 떠날 때 적절한 정리가 이루어지도록 합니다.
+를 사용하여 [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>) 를 사용하여 구독 라이프사이클을 관리하고 컴포저블이 컴포저블을 떠날 때 적절한 정리가 이루어지도록 합니다.
 
 !!단계
 라인-ContentCardsInboxScreen.kt=84-95
