@@ -111,7 +111,7 @@ Selecione **Gerenciar idiomas** ao editar sua mensagem.
 
 ### Etapa 4: Baixar o modelo CSV {#download-csv}
 
-Depois de selecionar suas localidades, selecione **Baixar modelo** para baixar um modelo CSV contendo uma matriz de suas IDs de tradução e localidades selecionadas.
+Após selecionar suas localidades, selecione **Baixar modelo** para baixar um modelo CSV contendo uma matriz de suas IDs de tradução e localidades selecionadas.
 
 ![Exemplo de CSV para as localidades en, fr e es.]({% image_buster /assets/img/multi-language_support/example_translation_csv.png %}){: style="max-width:70%;"}
 
@@ -162,7 +162,7 @@ Para obter mais detalhes sobre o gerenciamento de campanhas e Canvas após o lan
 
 ### Duplicação de etapas ou campanhas do Canva e traduções
 
-As traduções são copiadas junto com uma etapa do canva, campanha ou variação de campanha. Isso também é verdadeiro ao copiar entre espaços de trabalho, desde que as localizações estejam definidas no espaço de trabalho de destino. Certifique-se de revisar e atualizar as traduções adequadamente ao fazer modificações em seu Canva ou campanha.
+As traduções são copiadas junto com uma etapa do canva, campanha ou variação de campanha. Isso também se aplica ao copiar entre espaços de trabalho, desde que as localizações estejam definidas no espaço de trabalho de destino. Certifique-se de revisar e atualizar as traduções adequadamente ao fazer modificações em seu Canva ou campanha.
 
 ### Uso da API multilíngue com o Canvas
 
