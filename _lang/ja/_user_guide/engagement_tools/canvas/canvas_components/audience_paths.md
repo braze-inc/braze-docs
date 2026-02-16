@@ -2,7 +2,7 @@
 nav_title: オーディエンスパス
 article_title: オーディエンスパス 
 alias: /audience_paths/
-page_order: 1
+page_order: 3
 page_type: reference
 description: "この記事では、キャンバスでオーディエンスパスを使用して、戦略的な優先順位に基づいたユーザーのグループ化を行って、ユーザーを大規模に直感的にフィルタリングしてセグメント化する方法について説明します。"
 tool: Canvas
