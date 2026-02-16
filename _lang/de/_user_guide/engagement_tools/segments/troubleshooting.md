@@ -106,6 +106,7 @@ Das erste Szenario ist, wenn das Feld `app_id` bei der Verwendung des Endpunkts 
 Das zweite Szenario ist, dass das Feld `app_id` ausgefüllt wird, wenn Sie den Endpunkt `/users/track` zur Migration von Push-Tickets verwenden, wie in diesem Beispiel: 
 
 ```json
+{
 "app_group_id": "{YOUR_APP_GROUP_ID}",
 "attributes": [
 {
@@ -119,4 +120,5 @@ Das zweite Szenario ist, dass das Feld `app_id` ausgefüllt wird, wenn Sie den E
       ]
   }
 ]
+}
 ```
