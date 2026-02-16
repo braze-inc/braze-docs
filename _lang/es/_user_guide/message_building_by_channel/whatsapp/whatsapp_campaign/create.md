@@ -91,7 +91,7 @@ Si añades texto en un idioma escrito de derecha a izquierda, ten en cuenta que 
 
 #### Variables
 
-Si has añadido variables al crear la plantilla de WhatsApp en el Meta Business Manager, esas variables aparecerán como espacios en blanco en el compositor del mensaje. Sustituya estos espacios en blanco por Liquid o texto sin formato. Para utilizar texto sin formato, utilice el formato "texto aquí" entre llaves dobles. Si has optado por incluir imágenes al crear tu plantilla, puedes cargar o añadir imágenes desde la biblioteca de medios o haciendo referencia a una URL de imagen.
+Si has añadido variables al crear la plantilla de WhatsApp en el Meta Business Manager, esas variables aparecerán como espacios en blanco en el compositor del mensaje. Sustituya estos espacios en blanco por Liquid o texto sin formato. Para utilizar texto sin formato, utilice el formato "texto aquí" entre llaves dobles. Si has optado por incluir imágenes al crear tu plantilla, puedes cargar o añadir imágenes desde la biblioteca de medios o haciendo referencia a una URL de imagen. Cuando sea posible, te recomendamos que subas las imágenes directamente a tu biblioteca multimedia para garantizar la coherencia y la fiabilidad.
 
 Tenga en cuenta que los campos de texto desactivados (resaltados en gris) no pueden editarse, ya que forman parte de la plantilla de WhatsApp aprobada. Si desea actualizar el texto desactivado, debe editar su plantilla y volver a aprobarla.
 
@@ -106,6 +106,10 @@ Si piensa utilizar Liquid, asegúrese de incluir un valor predeterminado para la
 ### Enlaces dinámicos 
 
 Las URL de llamada a la acción pueden contener variables, aunque Meta exige que estén al final de la URL, como `{% raw %}https://example.com/{{variable}}{% endraw %}`, donde la variable puede sustituirse en Braze por Liquid. Los enlaces también pueden incluirse en el cuerpo del texto como parte de la plantilla. Ambos enlaces pueden acortarse y seguirse mediante [el seguimiento de clics]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/).
+
+### Imágenes dinámicas
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 {% endtab %}
 {% tab Response messages %}
@@ -194,7 +198,7 @@ Las siguientes características son compatibles con los mensajes salientes de Wh
 | Enlaces CTA | Se admiten varios tipos de llamada a la acción (CTA). Para más detalles, consulta [Tipos de llamada a la acción](#ctas). | - | - |
 | Imágenes | Las imágenes pueden incrustarse dentro del cuerpo del texto. Deben ser de 8 bits y utilizar un modelo de color RGB o RGBA. | < 5 MB | `.png`, `.jpg`, `.jpeg` |
 | Documentos | Los documentos pueden incrustarse en el cuerpo del texto. Los archivos deben alojarse a través de la URL. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
-| Vídeos | Los videos pueden incrustarse en el cuerpo del texto. Los archivos deben estar alojados a través de URL o en la [biblioteca multimedia de Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
+| Vídeos | Los videos se pueden incrustar en el cuerpo del texto. Los archivos deben estar alojados a través de URL o en la [biblioteca multimedia de Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
 | Audio | El audio sólo se admite a través de la mensajería de respuesta. Los archivos deben alojarse a través de la URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
