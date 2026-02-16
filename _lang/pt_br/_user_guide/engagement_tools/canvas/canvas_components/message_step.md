@@ -2,7 +2,7 @@
 nav_title: Mensagem 
 article_title: Mensagem 
 alias: "/message_step/"
-page_order: 5
+page_order: 11
 page_type: reference
 description: "Este artigo de referência aborda como criar uma mensagem autônoma usando a etapa Message."
 tool: Canvas
@@ -103,7 +103,7 @@ Não é mais possível criar ou duplicar Canvas usando o editor original. Esta s
 
 - `event_properties` não pode ser usado em etapas completas programadas. No entanto, você pode usar `event_properties` na primeira etapa completa de um Canva baseado em ação, mesmo que a etapa completa esteja programada.
 - `canvas_entry_properties` pode ser referenciado somente na primeira etapa completa de um Canvas.
-- Especificamente para os canais de envio de mensagens no app, o `canvas_entry_properties` pode ser referenciado no editor do Canvas original se as propriedades de entrada persistente estiverem ativadas como parte do acesso antecipado anterior.
+- Especificamente para canais de envio de mensagens no app, o `canvas_entry_properties` pode ser referenciado no editor do Canvas original se as propriedades de entrada persistente estiverem ativadas como parte do acesso antecipado anterior.
 
 {% enddetails %}
 
