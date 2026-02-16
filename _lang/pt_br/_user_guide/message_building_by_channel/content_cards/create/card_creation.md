@@ -47,7 +47,7 @@ Você pode escolher quando o Braze cria um cartão na guia **Canais de envio de 
 As seguintes opções estão disponíveis:
 
 - **Na entrada da etapa:** O comportamento padrão anterior para os cartões de conteúdo. O Braze calcula a elegibilidade do público quando o usuário entra na etapa do canva e, em seguida, cria o cartão e o armazena até que o usuário abra seu app.
-- **Na primeira impressão (recomendado):** O Braze calcula a elegibilidade do público quando o usuário entra na etapa do canva. Quando o usuário abrir seu app da próxima vez (iniciar uma nova [sessão](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), o Braze modela qualquer personalização, como Liquid ou Connected Content, e cria o cartão. Essa opção oferece melhor performance na entrega de cartões e personalização mais atualizada.
+- **Na primeira impressão (recomendado):** O Braze calcula a elegibilidade do público quando o usuário entra na etapa do canva. Quando o usuário abrir seu app da próxima vez (iniciar uma nova [sessão](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), o Braze modela qualquer personalização, como Liquid ou Connected Content, e cria o cartão. Essa opção oferece melhor performance nas entregas de cartões e personalização mais atualizada.
 
 Independentemente da opção selecionada, a contagem regressiva da data de expiração do Content Card começará quando o usuário entrar na etapa do canva.
 
@@ -62,7 +62,7 @@ Se quiser que usuários anônimos vejam um cartão de conteúdo logo na primeira
 Em ambas as opções, depois que um cartão é criado, a Braze não recalcula a elegibilidade ou a personalização do público.
 {% endalert %}
 
-### Diferenças entre criar cartões no lançamento ou na entrada e na primeira impressão {#differences}
+### Diferenças entre a criação de cartões no lançamento ou na entrada e na primeira impressão {#differences}
 
 Esta seção descreve as principais diferenças entre a criação de cartões no lançamento da campanha ou na entrada da etapa e na primeira impressão.
 
