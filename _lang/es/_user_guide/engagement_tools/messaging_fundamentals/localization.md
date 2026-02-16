@@ -141,7 +141,7 @@ Los bloques de contenido también pueden utilizarse como un proceso de gestión 
 {% subtab API %}
 
 Cree un catálogo mediante la siguiente llamada a la API:
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -175,7 +175,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs' \
 
 Añada elementos mediante la siguiente llamada a la API:
 
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs/translations/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
