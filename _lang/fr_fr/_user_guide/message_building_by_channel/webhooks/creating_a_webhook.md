@@ -143,7 +143,7 @@ Pour ce faire, passez à l'onglet **Test** et envoyez un webhook de test. Vous p
 
 Après avoir envoyé le test de webhook, un dialogue s’affichera avec le message en réponse. Si la requête webhook échoue, consultez le message d’erreur pour obtenir de l’aide pour la résolution des problèmes de votre webhook. L’exemple suivant détaille la réponse d’un webhook ayant une URL de webhook invalide.
 
-```json
+```http
 404 Not Found
 
 {
