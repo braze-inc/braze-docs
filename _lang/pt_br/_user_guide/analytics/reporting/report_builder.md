@@ -32,7 +32,7 @@ page_order: 6.2
     - Canais
     - Tags
 
-    Observe que sua seleção de **linhas** afetará [as métricas que podem ser visualizadas](#metrics-availability). Por exemplo, você pode visualizar métricas multivariantes somente se gerar relatórios sobre **Canvas** ou **Campanhas** com um detalhamento de **Variante**. Não é possível visualizar essas métricas ao gerar relatórios sobre **campanhas e telas**, mesmo que essas campanhas e telas tenham testes multivariantes. 
+    Note que sua seleção de **linhas** afetará [as métricas que podem ser visualizadas](#metrics-availability). Por exemplo, você pode visualizar métricas multivariantes somente se gerar relatórios sobre **Canvas** ou **Campanhas** com um detalhamento de **Variante**. Não é possível visualizar essas métricas ao gerar relatórios sobre **campanhas e telas**, mesmo que essas campanhas e telas tenham testes multivariantes. 
 
 ![A seção "Rows and columns" (Linhas e colunas) contém campos para selecionar as linhas e os agrupamentos do seu relatório.]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
 
@@ -40,7 +40,7 @@ page_order: 6.2
 4\. (Opcional) Selecione **Adicionar detalhamento** para dividir seus dados em exibições mais granulares:
     \- Canais
     \- Data
-        \- Use isso para dividir seus dados em intervalos de tempo menores. Por exemplo, se estiver interessado em saber como foi a performance de suas campanhas por dia, selecione a seguinte configuração:
+        \- Use isso para dividir seus dados em intervalos de tempo menores. Por exemplo, se estiver interessado em saber a performance de suas campanhas por dia, selecione a seguinte configuração:
             - **Fileiras**: Campanhas
             - **Agrupamento:** Data
             - **Intervalo:** dias
@@ -61,7 +61,7 @@ Experimente diferentes configurações de opções de drilldown para explorar as
     \- Reorganize as métricas e colunas arrastando o ícone pontilhado para cima ou para baixo.
 7\. Em **Conteúdo do relatório**, configure o intervalo de datas para o qual você gostaria de incluir dados em seu relatório.
 8\. Em seguida, dependendo de suas seleções na etapa 3, escolha adicionar manual ou automaticamente campanhas, Canvas ou ambos ao seu relatório.
-    - **Adicionar manualmente:** Escolha cada campanha ou Canvas a ser incluído no relatório usando os filtros de datas e tags ou canais de **Último envio** ou pesquisando o nome da campanha ou do Canvas.<br><br>![A seção "Manually add campaigns and canvases" (Adicionar campanhas e telas manualmente) com uma lista de campanhas a serem selecionadas.]({% image_buster /assets/img/report_builder_2/manually_add.png %}){: style="width:90%;"}<br><br>
+    - **Adicionar manualmente:** Escolha cada campanha ou Canvas a ser incluído no relatório usando os filtros para datas e tags ou canais de **Último envio** ou pesquisando o nome da campanha ou do Canvas.<br><br>![A seção "Manually add campaigns and canvases" (Adicionar campanhas e telas manualmente) com uma lista de campanhas a serem selecionadas.]({% image_buster /assets/img/report_builder_2/manually_add.png %}){: style="width:90%;"}<br><br>
     - **Adicionar automaticamente:** Defina regras para quais campanhas ou telas devem ser incluídas no relatório. Você só precisa selecionar um campo nesta página.
         \- Note que, à medida que campanhas ou Canvas adicionais satisfizerem as condições definidas nessa tela, elas serão automaticamente adicionadas a futuras execuções do relatório.<br><br>![A seção "Automatically add campaigns and canvases" (Adicionar campanhas e telas automaticamente) com campos para definir regras para quais campanhas e telas devem ser adicionadas ao relatório.]({% image_buster /assets/img/report_builder_2/automatically_add.png %}){: style="width:90%;"}<br><br>
 9\. Execute o relatório selecionando **Salvar & Run**.
@@ -84,10 +84,10 @@ Se quiser fazer um relatório sobre as variantes ou etapas do Canvas, selecione 
 | --- | --- |
 | Métricas de conversão | Disponível para campanhas, telas, campanhas e telas. |
 | Entradas | Disponível para Campanhas, Canvas, Campanhas e Canvas, Tags. |
-| Data do último envio | Disponível para campanhas, telas, campanhas e telas. Somente é exibido para campanhas programadas - não é preenchido para campanhas baseadas em ações ou disparadas por API. |
+| Data do último envio | Disponível para campanhas, telas, campanhas e telas. Só é exibido para campanhas programadas - não é preenchido para campanhas baseadas em ações ou disparadas por API. |
 | Envios | Disponível para cada canal relevante. |
 | Mensagens enviadas | Disponível para Campanhas, Canvas, Campanhas e Canvas, Tags. |
-| Linha de assunto | Disponível para envios de e-mail com drilldown **de variantes**, Canvas e Canvas com drilldown **de variantes**. |
+| Linha de assunto | Disponível para envios de e-mail com drilldown **de variantes**, canvas e canvas com drilldown **de variantes**. |
 | Total de receitas | Disponível para Campanhas, Canvas, Campanhas e Canvas, Tags. Indisponível com a pesquisa de **canais**. |
 | Impressões únicas | Disponível para Campanhas, Canvas, Campanhas e Canvas, Tags. |
 | Destinatários únicos | Disponível para Campanhas, Canvas, Campanhas e Canvas, Tags. Indisponível com a pesquisa de **canais**. |
@@ -126,7 +126,7 @@ Você pode compartilhar um link do dashboard para o relatório selecionando **Co
 
 ![Menu suspenso "Compartilhar um link" com um link para o relatório.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
 
-- **Enviar ou agendar um e-mail:** Envie um e-mail imediatamente ou em um horário designado que contenha um link para baixar que expira após uma hora. É possível selecionar destinatários entre os usuários do dashboard listados no menu suspenso **Destinatários de e-mail** ou inserir qualquer outro endereço de e-mail.
+- **Enviar ou agendar um e-mail:** Envie um e-mail imediatamente ou em um horário designado que contenha um link para baixar que expira após uma hora. É possível selecionar destinatários entre os usuários da empresa listados no menu suspenso **Destinatários de e-mail** ou inserir qualquer outro endereço de e-mail.
 
 ![Janela "Agendar um e-mail" com campos para escolher como o relatório será formatado, quem deverá recebê-lo e quando deverá ser enviado.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
 
