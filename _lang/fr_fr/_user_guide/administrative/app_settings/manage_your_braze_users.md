@@ -1,12 +1,12 @@
 ---
-nav_title: Utilisateurs de Braze
-article_title: Gérer les utilisateurs de Braze
+nav_title: Utilisateurs de l’entreprise
+article_title: "Gérer les utilisateurs de l'entreprise"
 page_order: 23
 page_type: reference
-description: "Cette page traite de la gestion de vos utilisateurs Braze, notamment de l'ajout et de la suppression d'utilisateurs, de la définition des autorisations des utilisateurs, de la création de Teams et de la gestion des paramètres de l'entreprise."
+description: "Cette page traite de la gestion des utilisateurs de votre entreprise, comme l'ajout et la suppression d'utilisateurs, la définition des autorisations des utilisateurs, la création de Teams et la gestion des paramètres de l'entreprise."
 ---
 
-# Gérer les utilisateurs de Braze
+# Gérer les utilisateurs de l'entreprise
 
 > Apprenez à gérer les utilisateurs dans le compte de votre entreprise, y compris l'ajout, la suspension et la suppression d'utilisateurs.
 
@@ -14,7 +14,7 @@ description: "Cette page traite de la gestion de vos utilisateurs Braze, notamme
 Plusieurs sections de cette page renvoient à la page **Utilisateurs de l'entreprise**. Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), la rubrique **Utilisateurs de l'entreprise** s'appelle **Gérer les utilisateurs** et se trouve sous l'icône de votre compte.
 {% endalert %}
 
-## Ajouter des utilisateurs à Braze
+## Ajout d'utilisateurs de l'entreprise
 
 Vous devez disposer d'autorisations d'administrateur pour ajouter des utilisateurs à votre compte Braze. 
 
@@ -50,9 +50,9 @@ Pour des raisons de sécurité, les utilisateurs ne peuvent pas modifier l'adres
 
 {% multi_lang_include permissions.md content="Differences" %}
 
-## Suspension des utilisateurs de Braze
+## Suspension des utilisateurs de l'entreprise
 
-La suspension d'un utilisateur met son compte dans un état inactif, où l'utilisateur ne peut plus se connecter, mais où les données associées à son compte sont conservées. Seuls les administrateurs peuvent suspendre ou annuler la suspension des utilisateurs de Braze.
+La suspension d'un utilisateur met son compte dans un état inactif, où l'utilisateur ne peut plus se connecter, mais où les données associées à son compte sont conservées. Seuls les administrateurs peuvent suspendre ou annuler la suspension des utilisateurs de l'entreprise.
 
 Pour suspendre un utilisateur, allez dans **Paramètres** > **Utilisateurs de l'entreprise**, recherchez son nom d'utilisateur et sélectionnez <i class="fa-solid fa-user-lock"></i> **Suspendre**.
 
@@ -62,7 +62,7 @@ Les administrateurs peuvent également suspendre un utilisateur en sélectionnan
 
 ![Suspendez un utilisateur lorsque vous modifiez ses coordonnées.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
-## Suppression d'utilisateurs de Braze
+## Suppression des utilisateurs de l'entreprise
 
 Pour supprimer un utilisateur, allez dans **Paramètres** > **Utilisateurs de l'entreprise**, recherchez son nom d'utilisateur et sélectionnez <i class="fa fa-trash-can"></i> **Supprimer l'utilisateur**.
 
