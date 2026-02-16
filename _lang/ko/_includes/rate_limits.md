@@ -102,12 +102,17 @@ API 사용량 제한에서 설명한 대로 이 엔드포인트에 시간당 1,0
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-요청에 세그먼트 또는 연결된 오디언스를 지정할 때 이 엔드포인트에 분당 250건의 요청으로 사용량 제한을 적용합니다. 그렇지 않으면 `external_id`를 지정하는 경우 [API 사용량 제한]({{site.baseurl}}/api/api_limits/)에서 설명한 대로 이 엔드포인트에는 `/messages/send`, `/campaigns/trigger/send` 및 `/canvas/trigger/send` 간에 공유되는 시간당 250,000건의 요청으로 기본 사용량 제한이 적용됩니다.
+요청에 커넥티드 오디언스 필터를 사용하는 경우, 이 엔드포인트에는 분당 250건의 요청 속도 제한이 적용됩니다. 그렇지 않으면 `external_id`를 지정하는 경우 [API 사용량 제한]({{site.baseurl}}/api/api_limits/)에서 설명한 대로 이 엔드포인트에는 `/messages/send`, `/campaigns/trigger/send` 및 `/canvas/trigger/send` 간에 공유되는 시간당 250,000건의 요청으로 기본 사용량 제한이 적용됩니다.
+
+Braze 엔드포인트는 API 요청 일괄 처리를 지원합니다. 메시징 엔드포인트에 대한 단일 요청은 다음 중 하나에 도달할 수 있습니다.
+
+- 각각 개별 메시지 매개변수가 있는 최대 50개의 특정 `external_ids`
+- 요청에 연결된 오디언스 개체로 정의된 모든 규모의 오디언스 세그먼트입니다.
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-Braze 트랜잭션 이메일에는 사용량 제한이 적용되지 않습니다. 선택한 패키지에 따라 시간당 정해진 수의 트랜잭션 이메일이 SLA에 의해 보장됩니다. 해당 사용량을 초과하는 요청은 계속 전송되지만 SLA가 적용되지 않습니다. 99.9%의 이메일이 1분 이내에 전송됩니다.
+`/transactional/v1/campaigns/{campaign_id}/send` 엔드포인트는 시간당 단위(예: 패키지에 따라 시간당 50,000)로 유료로 제공되는 엔드포인트입니다. 엔드포인트당 별도의 요금 제한은 없습니다. 할당된 용량을 초과하여 전송할 수 있지만 할당된 용량에 대해서만 SLA가 적용됩니다. 이 엔드포인트에 대한 요청은 [전체 외부 API 요금 한도에]({{site.baseurl}}/api/api_limits/) 포함됩니다. 이 제한을 초과하면(예: 모든 엔드포인트에서 시간당 250,000건의 요청) Braze는 429를 반환하고 요청이 스로틀링됩니다. 트랜잭션 수량은 1시간마다 초기화되므로 1시간이 지나면 다른 할당을 사용할 수 있습니다. SLA가 적용되는 이메일 발송량 내에서 99.9%의 이메일이 1분 이내에 전송됩니다.
 
 <!---/sends/id/create-->
 
@@ -140,7 +145,7 @@ Braze 트랜잭션 이메일에는 사용량 제한이 적용되지 않습니다
 
 Braze 엔드포인트는 [API 요청 일괄 처리]({{site.baseurl}}/api/api_limits/#batching-api-requests)를 지원합니다. 메시징 엔드포인트에 대한 단일 요청은 다음 중 하나에 도달할 수 있습니다.
 
-- 각각 개별 메시지 매개변수가 있는 최대 50개의 특정 `external_ids`
+- 최대 50개의 특정 `external_ids`, 각각 개별 메시지 매개변수를 가지고 있습니다.
 - Braze 대시보드에서 생성된 모든 크기의 세그먼트로, `segment_id`로 지정됨
 - 요청에서 [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/) 오브젝트로 정의된 모든 크기의 오디언스 세그먼트
 
@@ -204,4 +209,3 @@ Braze 엔드포인트는 [API 요청 일괄 처리]({{site.baseurl}}/api/api_lim
 이 엔드포인트에는 분당 50,000건의 요청으로 사용량 제한이 적용됩니다.
 
 {% endif %}
-
