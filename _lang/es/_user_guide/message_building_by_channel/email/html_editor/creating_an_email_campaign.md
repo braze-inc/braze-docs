@@ -59,7 +59,7 @@ Braze ofrece dos experiencias de edición al crear una campaña de correo electr
 
 ![Elige entre el editor de arrastrar y soltar, el editor HTML o las plantillas para tu experiencia de edición de correo electrónico.]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
 
-A continuación, puedes seleccionar una [plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template) existente, [cargar una plantilla]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/) desde un archivo (sólo editor HTML) o utilizar una plantilla en blanco. 
+A continuación, puedes seleccionar una [plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template) existente, [subir una plantilla]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/) desde un archivo (sólo editor HTML) o utilizar una plantilla en blanco. 
 
 {% alert tip %}
 Recomendamos seleccionar una experiencia de edición por campaña de correo electrónico. Por ejemplo, elige el editor **HTML Clásico** o **Bloque** en una sola campaña de correo electrónico en lugar de cambiar entre editores.
@@ -241,6 +241,10 @@ A continuación, [dirígete a los usuarios]({{site.baseurl}}/user_guide/engageme
 También puede optar por enviar su campaña sólo a los usuarios que tengan un [estado de suscripción]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) específico, como los que estén suscritos y hayan optado por recibir correo electrónico.
 
 Opcionalmente, también puede limitar la entrega a un número determinado de usuarios dentro del segmento, o permitir que los usuarios reciban el mismo mensaje dos veces al repetirse la campaña.
+
+{% alert note %}
+Al crear una nueva campaña de correo electrónico, el Grupo de control está predeterminado al 20% y puede ajustarse o eliminarse según sea necesario para tu campaña.
+{% endalert %}
 
 ##### Campañas multicanal con correo electrónico y push
 
