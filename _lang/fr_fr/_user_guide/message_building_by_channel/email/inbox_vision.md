@@ -47,7 +47,7 @@ La boîte de réception Vision ne prend pas en charge les messages e-mail compor
 
 ### Prévisualisation en tant qu'utilisateur
 
-Lorsque vous effectuez une prévisualisation en tant qu'utilisateur aléatoire, Vision Boîte de réception n'enregistre pas les paramètres ou attributs spécifiques à l'utilisateur (tels que le nom ou les préférences). Lorsque vous sélectionnez un utilisateur personnalisé, l'aperçu de Vision Boîte de réception peut différer des autres aperçus car il utilise des données utilisateur spécifiques.
+Lorsque vous effectuez une prévisualisation en tant qu'utilisateur aléatoire, Vision Boîte de réception n'enregistre pas les paramètres ou attributs propres à l'utilisateur (tels que le nom ou les préférences). Lorsque vous sélectionnez un utilisateur personnalisé, l'aperçu de Vision Boîte de réception peut différer des autres aperçus car il utilise des données utilisateur spécifiques.
 
 ## Analyse des codes
 
@@ -84,7 +84,7 @@ Les tests d'accessibilité mettent en évidence les problèmes d'accessibilité 
 Lorsque vous exécutez Inbox Vision, Braze vérifie automatiquement les problèmes d'accessibilité courants dans l'[ensemble de règles WCAG 2.2 AA](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2&currentsidebar=%23col_customize&levels=aaa) (tels que l'absence de texte alt, le contraste insuffisant des couleurs, la structure incorrecte des titres) et classe la gravité pour vous aider à prioriser les correctifs. 
 
 {% alert important %}
-Les tests d'accessibilité peuvent être utilisés pour soutenir les efforts de conformité du client aux réglementations ou aux lois telles que la [loi européenne sur l'accessibilité](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers); toutefois, le client reconnaît que Braze ne fait aucune déclaration ni ne donne aucune garantie quant au fait que l'utilisation des tests d'accessibilité satisfasse ou non les obligations de conformité du client, et décline toute responsabilité à cet égard.
+Les tests d'accessibilité peuvent être utilisés pour soutenir les efforts de conformité du client aux réglementations ou aux lois telles que la [loi européenne sur l'accessibilité](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers); toutefois, le client reconnaît que Braze ne fait aucune déclaration et ne donne aucune garantie quant au fait que l'utilisation des tests d'accessibilité satisfait ou non aux obligations de conformité du client, et décline toute responsabilité à cet égard.
 {% endalert %}
 
 ### Visualisation des résultats des tests d'accessibilité
