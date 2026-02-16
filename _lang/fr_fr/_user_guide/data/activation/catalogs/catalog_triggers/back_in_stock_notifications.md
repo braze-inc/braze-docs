@@ -1,6 +1,6 @@
 ---
 nav_title: Notifications de rupture de stock
-article_title: Mettre en place des notifications de rupture de stock
+article_title: Mettre en place des notifications de réapprovisionnement
 page_order: 2
 description: "Découvrez comment mettre en place des notifications de rupture de stock à l'aide de votre catalogue et d'événements personnalisés, afin de pouvoir abonner automatiquement les clients à des notifications lorsqu'un article est de nouveau en stock."
 ---
@@ -11,7 +11,7 @@ description: "Découvrez comment mettre en place des notifications de rupture de
 
 ## Fonctionnement
 
-Vous pouvez définir un événement personnalisé à utiliser comme événement d'abonnement, tel qu'un événement `product_clicked`. Cet événement doit contenir une propriété de l'ID de l'article (ID des articles du catalogue). Nous vous suggérons d'inclure un nom de catalogue, mais ce n'est pas obligatoire. Vous indiquerez également le nom d'un champ de quantité d'inventaire, qui doit être un type de données de type numérique. 
+Vous pouvez définir un événement personnalisé à utiliser comme événement d'abonnement, tel qu'un événement `product_clicked`. Cet événement doit contenir une propriété de l'ID de l'article (ID des articles du catalogue). Nous vous suggérons d'inclure un nom de catalogue, mais ce n'est pas obligatoire. Vous fournirez également le nom d'un champ de quantité d'inventaire, qui doit être un type de données de type nombre. 
 
 Notez que le stock d'un article de catalogue doit être à zéro pour qu'un utilisateur puisse s'y abonner avec succès. Lorsqu'un article a une quantité en stock supérieure à zéro, Braze recherche tous les utilisateurs abonnés à cet article et envoie un événement personnalisé que vous pouvez utiliser pour déclencher une campagne ou un Canvas.
 
@@ -92,5 +92,5 @@ Utilisez cette étiquette Liquid {%raw%}``{% catalog_items <name_of_your_catalog
 
 - Les utilisateurs ne sont abonnés que pour 90 jours. Si l'article n'est pas de nouveau en stock dans les 90 jours, l'utilisateur est désabonné.
 - Lorsque vous utilisez la règle de notification **Notifier tous les utilisateurs abonnés**, Braze notifie 100 000 utilisateurs en 10 minutes.
-- Braze traitera 10 demandes de mise à jour d'éléments de catalogue par minute. Les endpoints de mise à jour permettent de mettre à jour 50 articles par demande, ce qui permet de mettre à jour jusqu'à 500 articles par minute et de déclencher des notifications de rupture de stock.
+- Braze prend en charge jusqu'à 50 000 articles mis à jour quotidiennement et susceptibles de déclencher des notifications de rupture de stock. Vous pouvez avoir jusqu'à 100 millions d'abonnements actifs à un moment donné, où chaque abonnement représente un profil utilisateur abonné pour regarder un article du catalogue.
 
