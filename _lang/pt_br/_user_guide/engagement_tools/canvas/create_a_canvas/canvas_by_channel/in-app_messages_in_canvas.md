@@ -40,7 +40,7 @@ Para etapas do Canva que têm entrada acionada por ação, os usuários podem en
 
 Você pode escolher quando a mensagem no app expirará. Durante esse tempo, a mensagem no app ficará aguardando para ser visualizada até atingir a data de vencimento. Depois que a mensagem no app é enviada, ela pode ser visualizada uma única vez.
 
-![A seção Controles de mensagens de uma etapa de Mensagem para uma mensagem no app. A mensagem no app expirará três dias após a etapa estar disponível.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
+![A seção Controles de Mensagens de uma etapa de Mensagem para uma mensagem no app. A mensagem no app expirará três dias após a etapa estar disponível.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
 
 | Opção | Descrição | Exemplo |
 |---|---|---|
@@ -213,7 +213,7 @@ Quando a opção **Todo o público** for selecionada, a mensagem no app ficará 
 
 ## Ações de gatilho
 
-É possível escolher entre as seguintes ações-gatilho para direcionar seus usuários:
+Você pode escolher entre as seguintes ações-gatilho para direcionar seus usuários:
 
 - **Faça a compra:** Direcionamento para usuários que fazem qualquer compra ou uma compra específica
 - **Iniciar sessão:** Direcionamento para usuários que iniciam uma sessão em qualquer aplicativo ou em um aplicativo específico
@@ -240,5 +240,5 @@ Há suporte para propriedades de eventos personalizados em mensagens no app para
 Aqui estão algumas considerações ao enviar mensagens no app em um Canva.
 
 - Se o usuário nunca reiniciar o aplicativo ou nunca iniciar uma sessão, o app não conseguirá descobrir se o usuário é elegível para a mensagem no app, o que significa que uma mensagem no app não será enviada.
-- Quando ocorrer o primeiro clique e houver uma variável de contexto do Canvas (propriedades de entrada do Canvas), e um usuário entrar novamente em um Canvas cinco vezes, o Braze pegará a quinta entrada e usará essa variável de contexto na mensagem no app.
+- Quando ocorrer o primeiro clique e houver uma variável de contexto do Canvas (propriedades da entrada do Canvas), e um usuário entrar novamente em um Canvas cinco vezes, o Braze pegará a quinta entrada e usará essa variável de contexto na mensagem no app.
 - Um usuário pode ser elegível para até 10 mensagens no app na mesma etapa do Canva. Por exemplo, se um Canvas permitir a reentrada e um usuário entrar no Canvas 11 vezes, ele receberá apenas 10 mensagens no app se nenhuma tiver expirado.
