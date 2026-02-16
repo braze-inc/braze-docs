@@ -86,7 +86,7 @@ El **Resumen de la audiencia** mostrará un resumen de quiénes forman parte de 
 
 En la sección **Pruebas A/B**, puedes configurar una prueba para comparar las respuestas de los usuarios a varias versiones de la misma campaña de marketing. Estas versiones comparten objetivos de marketing similares, pero difieren en la redacción y el estilo. El objetivo es identificar la versión de la campaña que mejor cumpla sus objetivos de marketing. 
 
-Para más información y mejores prácticas, consulta [Pruebas A/B multivariantes & ]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
+Para obtener más información y las mejores prácticas, consulta [Multivariante & Pruebas A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 #### Estadísticas de audiencia
 
