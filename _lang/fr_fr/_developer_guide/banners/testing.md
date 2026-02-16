@@ -18,6 +18,6 @@ Avant de pouvoir tester les messages des bannières dans Braze, vous devez crée
 
 Pour envoyer un test à des [groupes de test de contenu]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) ou à des utilisateurs individuels, la fonction push doit être activée sur vos appareils de test et des jetons push valides doivent être enregistrés pour l'utilisateur test avant l'envoi.
 
-## Tester une bannière
+## Testez une bannière
 
 {% multi_lang_include banners/testing.md page="testing" %}
