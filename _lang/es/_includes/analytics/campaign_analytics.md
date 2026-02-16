@@ -351,7 +351,7 @@ Aquí tienes algunas métricas clave específicas del correo electrónico que no
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Aperturas únicas</a></td>
             <td class="no-split">
-                {% multi_lang_include analytics/metrics.md metric='Unique Opens' %} En el caso del correo electrónico, el seguimiento se realiza durante un periodo de 7 días. Esta cifra debe estar entre el 30-40%. ¡Todo lo que supere el 40% es excepcional!
+                {% multi_lang_include analytics/metrics.md metric='Unique Opens' %} En el caso del correo electrónico, se realiza un seguimiento durante un periodo de 7 días. Esta cifra debe estar entre el 30-40%. ¡Todo lo que supere el 40% es excepcional!
             </td>
         </tr>
         <tr>
@@ -361,7 +361,7 @@ Aquí tienes algunas métricas clave específicas del correo electrónico que no
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">Tasa de correo no deseado</a></td>
             <td class="no-split">
-                {% multi_lang_include analytics/metrics.md metric='Spam' %} Si esta métrica es superior a 0,08, podría ser una señal de que o bien el texto de tu mensaje es demasiado vendedor, o bien deberías reconsiderar tus métodos de recogida de direcciones de correo electrónico (para confirmar que estás enviando mensajes a quienes están interesados en tu correspondencia).
+                {% multi_lang_include analytics/metrics.md metric='Spam' %} Si esta métrica es superior a 0,08, podría ser una señal de que, o bien el texto de tu mensaje es demasiado vendedor, o bien deberías reconsiderar tus métodos de recogida de direcciones de correo electrónico (para confirmar que estás enviando mensajes a quienes están interesados en tu correspondencia).
             </td>
         </tr>
         <tr>
@@ -413,6 +413,8 @@ Esta estadística utiliza un modelo de análisis propio creado por Braze para re
 
 _La tasa de apertura real estimada_ se calcula 36 horas después del inicio del envío del correo electrónico y se recalcula cada 24 horas a partir de entonces. Si una campaña se repite, la estimación se vuelve a calcular 36 horas después de que se produzca otro envío.
 
+Como esta métrica se recalcula continuamente, el valor de _la Tasa de apertura real estimada_ puede cambiar con el tiempo a medida que se reciben e incorporan al modelo nuevas señales de interacción (como aperturas y clics). En la práctica, la _tarifa abierta real estimada_ puede seguir actualizándose diariamente mientras una campaña permanezca activa.
+
 Normalmente se necesitan unos 10.000 correos electrónicos entregados para que la estadística se calcule correctamente, aunque ese número puede variar en función de la tasa de clics. Si no se puede calcular la estadística, la columna muestra "--".
 
 ###### Limitaciones
@@ -441,7 +443,7 @@ En última instancia, después de que un correo electrónico abandone nuestros s
 Aquí tienes algunas métricas clave de los mensajes dentro de la aplicación que puedes ver en tus análisis. Para ver las definiciones completas de todas las métricas de mensajes dentro de la aplicación utilizadas en Braze, consulta nuestro [Glosario de métricas de informes]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
 {% alert note %}
-La generación de informes para los _clics del botón 1_ y _los clics del botón 2_ sólo funciona cuando especificas el **identificador para la generación de** informes como "0" y "1" respectivamente en el mensaje dentro de la aplicación.
+Los informes para los _clics del botón 1_ y _los clics del botón 2_ sólo funcionan cuando especificas el **identificador para informes** como "0" y "1" respectivamente en el mensaje dentro de la aplicación.
 
 ![El campo "Identificador para informar" con valor "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
 {% endalert %}
