@@ -66,7 +66,7 @@ A continuación se enumeran todos los elementos clave que se configuran dentro d
 
 - [Instancias de la aplicación](#app-instances)
 - [Equipos](#teams)
-- [Permisos de usuario Braze](#braze-user-permissions) (pero no usuarios Braze)
+- [Permisos de usuario](#company-user-permissions) de empresa (pero no usuarios de empresa)
 - [Conectores de corriente](#currents-connectors)
 - [Perfiles de usuario](#user-profiles) y datos de usuario asociados
 - [Segmentos, campañas y lienzos](#segments-campaigns-and-canvases)
@@ -79,7 +79,7 @@ Debe crear instancias de aplicación distintas para cada versión de su aplicaci
 
 [Los equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) pueden configurarse en función de la ubicación de la base de clientes, el idioma y los atributos personalizados, de modo que los miembros del equipo y los que no lo son tengan diferente acceso a las funciones de mensajería y a los datos de los clientes.
 
-#### Permisos de usuario Braze
+#### Permisos de usuario de la empresa
 
 Los espacios de trabajo tienen definiciones independientes de acceso y permiso de usuario. [Los permisos de usuario]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) le permiten crear controles granulares sobre a qué tiene acceso un usuario individual del cuadro de mandos o un equipo dentro de un mismo espacio de trabajo.
 
@@ -195,7 +195,7 @@ En la tabla siguiente se describen las ventajas e inconvenientes de estos dos en
         <td>Los estados de suscripción de un perfil de usuario se combinan en todas las instancias de la aplicación.<br><br><b>Consejo:</b> En su lugar, podrías utilizar <a href='/docs/user_guide/data/custom_data/custom_attributes'>atributos personalizados</a> para gestionar las suscripciones de tus usuarios.</td>
     </tr>
     <tr>
-        <td>Permisos de usuario Braze</td>
+        <td>Permisos de usuario de la empresa</td>
         <td>N/A</td>
         <td>La actualización de <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>los permisos de</a> un usuario del panel debe hacerse por separado para cada espacio de trabajo al que el usuario necesite acceder.</td>
         <td><a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>Los permisos de usuario</a> pueden configurarse una vez para un usuario del panel, y tendrán los mismos permisos para todas las instancias de la aplicación en el espacio de trabajo.</td>
@@ -205,7 +205,7 @@ En la tabla siguiente se describen las ventajas e inconvenientes de estos dos en
         <td>Duplicación de contenidos</td>
         <td>N/A</td>
         <td>No se pueden duplicar segmentos, campañas push o de tarjeta de contenido, ni lienzos entre espacios de trabajo.</td>
-        <td>Puedes [duplicar campañas en workspaces]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) para los siguientes canales compatibles: SMS, mensajes dentro de la aplicación, correo electrónico, plantillas de correo electrónico y bloques de contenido. <br><br>Puede duplicar segmentos, campañas y lienzos para reutilizar el contenido de una aplicación a otra.</td>
+        <td>Puedes <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>duplicar campañas entre espacios de trabajo</a> para los siguientes canales compatibles: SMS, mensajes dentro de la aplicación, correo electrónico, plantillas de correo electrónico y bloques de contenido. <br><br>Puede duplicar segmentos, campañas y lienzos para reutilizar el contenido de una aplicación a otra.</td>
         <td>N/A</td>
     </tr>
     <tr>
