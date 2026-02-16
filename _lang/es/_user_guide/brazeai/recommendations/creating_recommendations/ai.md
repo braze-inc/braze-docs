@@ -25,7 +25,7 @@ Utiliza las recomendaciones de artículos de IA para calcular los productos más
 
 Antes de empezar, tendrás que completar lo siguiente:
 
-- Debes tener al menos un [catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/) para utilizar cualquiera de los tipos de recomendación que se describen a continuación.
+- Debes tener al menos un [catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/) para utilizar cualquiera de los tipos de recomendación descritos a continuación.
 - Debes tener datos de compra o evento en Braze (eventos personalizados o el objeto de compra) que incluyan una referencia a ID de producto únicos almacenados en un catálogo.
 
 ### Paso 1: Crear una nueva recomendación
