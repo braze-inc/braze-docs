@@ -2,7 +2,7 @@
 nav_title: Agent
 article_title: "Étape de l'agent"
 alias: /agent_step/
-page_order: 0.2
+page_order: 2
 page_type: reference
 description: "Cet article de référence traite de l'utilisation de l'étape du canvas Agent pour générer du contenu ou prendre des décisions intelligentes en temps réel."
 tool: Canvas
@@ -51,7 +51,7 @@ Les sorties de l'agent peuvent être enregistrées sous forme de chaînes de car
 | Objet | Exploitez un ou plusieurs des types de données ci-dessus avec un seul appel LLM dans une structure de données prévisible. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Une fois définie, vous pouvez utiliser une variable de sortie dans tout le Canvas en utilisant la même syntaxe de modèle que pour une variable de contexte. Vous pouvez soit utiliser le filtre de segmentation **Context Variable**, soit modeler les réponses des agents directement à l'aide de Liquid : {% raw %}`{{context.${response_variable_name}}}` {% endraw %}.
+Une fois définie, vous pouvez utiliser une variable de sortie dans l'ensemble du Canvas en utilisant la même syntaxe de modèle que pour une variable de contexte. Vous pouvez soit utiliser le filtre de segmentation **Context Variable**, soit modeler les réponses des agents directement à l'aide de Liquid : {% raw %}`{{context.${response_variable_name}}}` {% endraw %}.
 
 Pour utiliser une propriété spécifique d'une variable de sortie d'objet, utilisez la notation par points pour accéder à cette propriété à l'aide de Liquid : {% raw %}`{{context.${response_variable_name}.field_name}}`{% endraw %}
 
