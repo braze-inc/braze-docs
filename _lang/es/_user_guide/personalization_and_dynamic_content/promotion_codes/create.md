@@ -35,7 +35,7 @@ Aquí tienes algunos detalles que debes tener en cuenta al crear un fragmento de
 
 Cada lista de códigos promocionales tiene una fecha y hora de caducidad correspondientes que se establecen al crearla. La duración máxima de caducidad es de seis meses desde el día en que creas o editas tu lista.
 
-Dentro de ese plazo, puedes cambiar y actualizar la fecha de caducidad repetidamente. Esta fecha de caducidad se aplica a todos los códigos añadidos a esta lista. Al caducar, los códigos se eliminan del sistema Braze, y no se envía ningún mensaje que llame al fragmento de código de esa lista.
+Dentro de ese plazo, puedes cambiar y actualizar la fecha de caducidad repetidamente. Esta fecha de caducidad se aplica a todos los códigos añadidos a esta lista. Una vez caducados, los códigos se eliminan del sistema Braze, y no se envían los mensajes que llamen al fragmento de código de esa lista.
 
 ![Enumera la configuración de caducidad para que todos los códigos restantes caduquen el 30 de abril de 2025 a las 12 de la mañana.]({% image_buster /assets/img/promocodes/promocode4.png %}){: style="max-width:80%"}
 
@@ -55,7 +55,7 @@ Asegúrate de que tu archivo CSV sigue estas directrices:
 Puede utilizar nuestra integración con [Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) o [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) para crear y exportar códigos promocionales.
 
 {% alert important %}
-El tamaño máximo del archivo es de 100 MB y el tamaño máximo de la lista es de 20MM de códigos no utilizados. Si descubres que se ha subido un archivo incorrecto, sube uno nuevo que sustituya al anterior.
+El tamaño máximo del archivo es de 100 MB y el tamaño máximo de la lista es de 20 millones de códigos no utilizados. Si descubres que se ha subido un archivo incorrecto, sube uno nuevo que sustituya al anterior.
 {% endalert %}
 
 1. Una vez finalizada la carga, seleccione **Guardar lista** para guardar todos los datos y códigos que acaba de introducir.
