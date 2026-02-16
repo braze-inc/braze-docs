@@ -98,7 +98,7 @@ Braze가 클래식 및 프로 SQL 인스턴스에 연결할 때 2~5분 정도의
 
 `create table` 권한은 Braze에서 세그먼트를 업데이트하기 전에 CDI 세그먼트 확장 쿼리 결과가 포함된 테이블을 만들 수 있도록 하기 위해 필요합니다. Braze는 세그먼트당 임시 테이블을 생성하며, 테이블은 Braze가 세그먼트를 업데이트하는 동안에만 유지됩니다.
 
-```json
+```sql
 CREATE ROLE BRAZE_INGESTION_ROLE;
 
 GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -116,7 +116,7 @@ GRANT SELECT ON TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC TO 
 
 #### 2.2 단계: 웨어하우스를 설정하고 Braze 역할에 액세스 권한을 부여하세요.
 
-```json
+```sql
 CREATE WAREHOUSE BRAZE_INGESTION_WAREHOUSE;
 
 GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
@@ -127,7 +127,7 @@ GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
 {% endalert %}
 
 #### 2.3 단계: 사용자를 설정하세요.
-```json
+```sql
 CREATE USER BRAZE_INGESTION_USER;
 
 GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
@@ -149,7 +149,7 @@ Snowflake 계정의 구성에 따라 Snowflake 네트워크 정책에서 다음 
 {% tab Redshift %}
 #### 2.1 단계: 사용자를 생성하고 권한을 부여하십시오 
 
-```json
+```sql
 CREATE USER braze_user PASSWORD '{password}';
 GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT CREATE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
@@ -436,7 +436,7 @@ Microsoft Fabric 자격 증명, 소스 창고 및 스키마에 대한 정보를 
 
 ![새 키 생성 버튼이 있는 Snowflake 데이터 액세스 자격 증명을 위한 데이터 액세스 관리.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
 
-```json
+```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
 ```
 
