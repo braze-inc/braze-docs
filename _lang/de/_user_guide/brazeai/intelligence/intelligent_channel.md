@@ -46,9 +46,11 @@ Mobile Push umfasst Android, iOS, Kindle und andere Kanäle für mobile Geräte,
 
 Wenn ein:e Nutzer:in zum Beispiel mehrere mobile Geräte besitzt, wird seine Engagement-Rate durch die höchste Rate auf allen Geräten repräsentiert. Dies würde den Benutzer jedoch nicht dazu zwingen, Push-Benachrichtigungen ausschließlich auf diesem Gerät zu empfangen. Diese Rate wird nur beim Vergleich mit E-Mail und Web-Push verwendet.
 
-## Einzelne Kanäle
+## Filter für die Öffnung der Nachrichtenwahrscheinlichkeit für einzelne Kanäle {#individual-channels}
 
-Anstatt Braze den besten Kanal für einen Benutzer auswählen zu lassen, können Sie die Benutzer auch einfach danach filtern, ob sie eine Nachricht auf einem bestimmten von Ihnen ausgewählten Kanal öffnen werden oder nicht. Dazu können Sie den Filter Offene Wahrscheinlichkeit der Nachricht in den [Segmentierungsfiltern]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood) verwenden.
+Anstatt Braze den besten Kanal für einen Nutzer auswählen zu lassen, können Sie den [ Segmentierungsfilter "Wahrscheinlichkeit, dass eine Nachricht geöffnet wird"]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood) verwenden, um Nutzer:innen danach zu filtern, ob sie eine Nachricht auf einem bestimmten von Ihnen gewählten Kanal öffnen werden oder nicht. Dieser Filter errechnet sich aus dem Prozentsatz der Interaktionen, geteilt durch die Gesamtzahl der empfangenen Nachrichten für die letzten 100 Nachrichten pro Kanal.
+
+Beachten Sie, dass ein Nutzer:innen mindestens drei Nachrichten auf einem bestimmten Kanal erhalten haben muss, bevor er einen Likelihood-Wert für diesen Kanal erhalten kann. Benutzer ohne ausreichende Daten, um eine Wahrscheinlichkeit für einen Kanal zu messen, können mit "ist leer" ausgewählt werden.
 
 ## Bewährte Praktiken und effektive Nutzungsstrategie
 
