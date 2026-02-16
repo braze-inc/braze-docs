@@ -23,7 +23,11 @@ tool: Canvas
 Unlock new combinations of user journeys with [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/).
 - 사용자를 [결정 분할]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/)로 분할하고 다른 워크플로를 구축하십시오.
 - 사용자 여정을 [지연]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) 단계로 간격을 두세요.
-- 캔버스 흐름의 원하는 위치에 [독립형 메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)를 추가하세요. 
+- 캔버스 흐름의 원하는 위치에 [독립형 메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)를 추가하세요.
+
+{% alert note %}
+캔버스 단계는 사용자를 흐름에서 앞으로만 이동할 수 있습니다. 단계를 이전 단계에 연결하도록 캔버스를 구성할 수 없습니다. 이렇게 하면 사용자가 뒤로 이동하게 됩니다. 이 유효성 검사는 사용자가 캔버스를 통해 한 방향으로만 진행하도록 보장합니다.
+{% endalert %}
 
 ## 더 풍부한 메시지 만들기
 
