@@ -1,6 +1,6 @@
 ---
 nav_title: Autorisations
-article_title: Permissions de Braze
+article_title: "Autorisations pour les utilisateurs de l'entreprise"
 page_order: 2
 page_type: reference
 description: "Cet article de référence couvre le fonctionnement des permissions des utilisateurs chez Braze. Ici, vous pouvez apprendre comment modifier et définir les autorisations utilisateur, en choisissant qui peut accéder à vos applications dans le tableau de bord."
@@ -8,13 +8,13 @@ tool: Dashboard
 
 ---
 
-# Permissions de Braze
+# Autorisations pour les utilisateurs de l'entreprise
 
 > Apprenez à créer des jeux de permissions, à créer des rôles, à modifier les permissions des utilisateurs et à exporter les permissions des utilisateurs, afin de vous assurer que vos utilisateurs n'accèdent qu'aux espaces de travail et aux fonctionnalités dont ils ont le plus besoin.
 
 ## Création d'un ensemble de permissions
 
-Utilisez les ensembles d’autorisations pour regrouper les autorisations liées à des domaines ou actions spécifiques. Ils peuvent être appliqués aux utilisateurs du tableau de bord qui ont besoin du même accès dans différents espaces de travail. Pour créer un jeu de permissions, accédez à **Paramètres** > **Paramètres de permissions**, puis sélectionnez **Créer un jeu de permissions**. Pour obtenir une description de chaque autorisation, voir [Liste des autorisations](#list-of-permissions).
+Utilisez les ensembles d’autorisations pour regrouper les autorisations liées à des domaines ou actions spécifiques. Ils peuvent être appliqués aux utilisateurs de l'entreprise qui ont besoin du même accès dans différents espaces de travail. Pour créer un jeu de permissions, accédez à **Paramètres** > **Paramètres de permissions**, puis sélectionnez **Créer un jeu de permissions**. Pour obtenir une description de chaque autorisation, voir [Liste des autorisations](#list-of-permissions).
 
 {% tabs local %}
 {% tab example permission sets %}
@@ -29,13 +29,13 @@ Développeurs|« Accéder à la console de développement »|
 
 ## Création d'un rôle
 
-Les rôles permettent une meilleure structuration en regroupant vos autorisations personnalisées individuelles avec les contrôles d'accès à l'espace de travail. Ceci est particulièrement utile si vous avez plusieurs marques ou espaces de travail régionaux dans un seul tableau de bord. Grâce aux rôles, vous pouvez ajouter les utilisateurs du tableau de bord aux bons espaces de travail et leur accorder directement les autorisations associées. Pour obtenir une description de chaque autorisation, voir [Liste des autorisations](#list-of-permissions).
+Les rôles permettent une meilleure structuration en regroupant vos autorisations personnalisées individuelles avec les contrôles d'accès à l'espace de travail. Ceci est particulièrement utile si vous avez plusieurs marques ou espaces de travail régionaux dans un seul tableau de bord. Grâce aux rôles, vous pouvez ajouter des utilisateurs de l'entreprise aux espaces de travail appropriés et leur accorder directement les autorisations correspondantes. Pour obtenir une description de chaque autorisation, voir [Liste des autorisations](#list-of-permissions).
 
 {% tabs local %}
 {% tab example roles %}
 | Nom du rôle | Espace de travail | Permissions  
 ----------- | ----------- | ---------
-| Marketer - Fashion Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand {:/} | "Accédez aux campagnes, aux canevas, aux cartes, aux drapeaux de fonctionnalité, aux segments, à la bibliothèque multimédia et au centre de préférences"<br>"Gérer les ressources de la bibliothèque multimédia" |
+| Marketer - Fashion Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand {:/} | "Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Center"<br>"Gérer les ressources de la bibliothèque multimédia" |
 | Marketer - Skincare Brands | {::nomarkdown}[DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | "Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers" <br>"Gérer les ressources de la bibliothèque multimédia" |
 | Gestion des utilisateurs - Toutes les marques | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand, [DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | "Gérer les utilisateurs du tableau de bord"<br>"Gestion des Teams".
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -50,7 +50,7 @@ Les rôles permettent une meilleure structuration en regroupant vos autorisation
 
 Vous pouvez rencontrer des difficultés lorsque vous essayez d'enregistrer des autorisations dans le tableau de bord de Braze, notamment lorsque vous ajoutez ou supprimez des utilisateurs d'un espace de travail, ou lorsque vous les ajoutez à une équipe. Le bouton **Enregistrer/Mettre à jour les** utilisateurs peut devenir grisé si les autorisations de l'utilisateur sont identiques à celles dont il dispose déjà au niveau de l'espace de travail. Cette restriction existe parce qu'il n'y a aucun avantage à avoir une Teams si tous les utilisateurs possèdent les mêmes autorisations que l'ensemble de l'espace de travail.
 
-Pour réussir à ajouter un utilisateur à une Teams tout en conservant les mêmes autorisations, n'attribuez aucune autorisation au niveau de l'espace de travail. Au lieu de cela, attribuez des autorisations exclusivement au niveau de l'équipe.
+Pour réussir à ajouter un utilisateur à une Teams tout en conservant les mêmes autorisations, n'attribuez aucune autorisation au niveau de l'espace de travail. Au lieu de cela, attribuez les autorisations exclusivement au niveau de l'équipe.
 
 ## Utilisateurs limités
 
@@ -66,7 +66,7 @@ Les utilisateurs limités disposent d'autorisations spécifiques qui leur permet
 | Type d'utilisateur limité | Description |
 | --- | --- |
 | Groupe d'applications admin. | Les administrateurs de groupes d'applications disposent d'autorisations spécifiques à la gestion des groupes d'applications, mais n'ont pas la même autorité que les administrateurs d'entreprises. Les utilisateurs limités peuvent hériter d'autorisations similaires à celles des administrateurs de groupes d'applications si les autorisations nécessaires sont cochées. |
-| Administrateur de l'entreprise | Les administrateurs d'entreprise disposent d'autorisations plus étendues, y compris la possibilité de supprimer des utilisateurs du tableau de bord. Toutefois, ils ne peuvent pas supprimer leurs propres comptes et doivent contacter un autre administrateur de l'entreprise pour ce faire. |
+| Administrateur de l'entreprise | Les administrateurs d'entreprise disposent d'autorisations plus étendues, y compris la possibilité de supprimer des utilisateurs de l'entreprise. Toutefois, ils ne peuvent pas supprimer leurs propres comptes et doivent contacter un autre administrateur de l'entreprise pour ce faire. |
 | Autorisation de base en lecture seule | Pour accéder à certaines parties du tableau de bord, telles que la page partenaires technologiques, les utilisateurs doivent disposer d'une autorisation de base en lecture seule. Il faut notamment que l'option "Gérer les intégrations externes" soit activée, ainsi que les autorisations d'accès aux campagnes, aux canevas, aux cartes, aux segments et à la bibliothèque multimédia. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -75,7 +75,7 @@ Les utilisateurs limités disposent d'autorisations spécifiques qui leur permet
 Les utilisateurs peuvent recevoir des messages tels que "Accès limité". Vous n'avez pas l'autorisation d'accéder à cette page". Dans ce cas, l'administrateur du compte doit vérifier s'il peut résoudre le problème en désactivant et en réactivant les autorisations de l'utilisateur.
 
 {% alert note %}
-Il n'est pas possible de fusionner ou d'importer des autorisations d'utilisateurs d'un tableau de bord à un autre.
+Il n'est pas possible de fusionner ou d'importer des autorisations d'utilisateurs d'une entreprise à une autre.
 {% endalert %}
 
 ## Modifier les autorisations d'un utilisateur
@@ -92,8 +92,8 @@ Pour modifier les autorisations actuelles d'un utilisateur en matière d'adminis
 Les administrateurs ont accès à toutes les fonctionnalités et peuvent modifier tous les paramètres de l'entreprise. Ils peuvent le faire :
 
 - Modifier les [paramètres d'approbation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)
-- Ajouter, modifier, supprimer, suspendre ou annuler la suspension d'autres [utilisateurs de Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/).
-- Exporter les utilisateurs de Braze au format CSV
+- ajouter, modifier, supprimer, suspendre ou annuler la suspension d'autres [utilisateurs de l'entreprise]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- Exporter les utilisateurs de l'entreprise au format CSV
 
 Pour accorder ou supprimer les privilèges d'administrateur, sélectionnez **Cet utilisateur est un administrateur**, puis sélectionnez **Mettre à jour l'utilisateur**.
 
@@ -150,14 +150,14 @@ Lorsque vous avez terminé, sélectionnez **Mettre à jour l'utilisateur**.
 
 ## Exporter les autorisations des utilisateurs
 
-Pour télécharger une liste de vos utilisateurs et de leurs autorisations, allez dans **Paramètres** > **Utilisateurs de l'entreprise**, puis sélectionnez **Exporter les utilisateurs.** Un fichier CSV sera envoyé à votre adresse e-mail dans les plus brefs délais.
+Pour télécharger une liste des utilisateurs de votre entreprise et de leurs autorisations, allez dans **Paramètres** > **Utilisateurs de l'entreprise**, puis sélectionnez **Exporter les utilisateurs.** Un fichier CSV sera envoyé à votre adresse e-mail dans les plus brefs délais.
 
 ![La page "Utilisateurs de l'entreprise" dans Braze avec l'option "Exporter les utilisateurs" en point de mire.]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
 
 ## Liste des autorisations
 
 {% alert important %}
-À partir d'avril 2024, pour créer ou mettre à jour des listes de codes de promotion, les utilisateurs de Braze doivent disposer de l'autorisation « Accéder aux campagnes, aux canvas, aux cartes, aux segments, à la bibliothèque multimédia ».
+À partir d'avril 2024, pour créer ou mettre à jour des listes de codes de promotion, les utilisateurs de l'entreprise doivent disposer de l'autorisation "Accéder aux campagnes, aux toiles, aux cartes, aux segments, à la bibliothèque multimédia".
 {% endalert %}
 
 |Niveau|Nom|Définition|
@@ -177,7 +177,7 @@ Pour télécharger une liste de vos utilisateurs et de leurs autorisations, alle
 |Espace de travail|Gérer les centres de préférence|Permet aux utilisateurs de lancer des [centres de préférences]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Espace de travail|Gérer les applications|Permet aux utilisateurs de modifier les **paramètres de l'application.**|
 |Espace de travail|Gérer les autorisations sur le tableau de bord des catalogues|Permet aux utilisateurs de créer et de gérer des catalogues.|
-|Espace de travail|Gérer les utilisateurs du tableau de bord| Permet aux non-administrateurs d'afficher, de modifier et de gérer la page **Utilisateurs de la société**, et de gérer les utilisateurs du tableau de bord dans leur espace de travail en modifiant les autorisations de n'importe quel utilisateur, y compris les leurs. Les utilisateurs disposant de cette autorisation ne peuvent pas supprimer des utilisateurs (seuls les administrateurs peuvent supprimer des utilisateurs).<br><br>Cela correspond à l'ancienne autorisation `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
+|Espace de travail|Gérer les utilisateurs du tableau de bord| Permet aux non-administrateurs d'afficher, de modifier et de gérer la page **Utilisateurs de l'entreprise**, et de gérer les utilisateurs de l'entreprise dans leur espace de travail en modifiant les autorisations de n'importe quel utilisateur, y compris eux-mêmes. Les utilisateurs disposant de cette autorisation ne peuvent pas supprimer des utilisateurs (seuls les administrateurs peuvent supprimer des utilisateurs).<br><br>Cela correspond à l'ancienne autorisation `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
 |Espace de travail|Gérer les paramètres des e-mails|Permet aux utilisateurs d'enregistrer les modifications apportées à la configuration de l'e-mail**(Paramètres** > **Préférences e-mail**).|
 |Espace de travail|Gérer les événements, attributs, achats|Permet aux utilisateurs de modifier les attributs personnalisés (les utilisateurs qui n'ont pas cette capacité peuvent toujours afficher les attributs personnalisés), de modifier et d'afficher les propriétés des événements personnalisés, et de modifier et d'afficher les propriétés des produits sous **Paramètres des données.**|
 |Espace de travail|Gérer les intégrations externes|Permet d'accéder à tous les onglets sous **Partenaires technologiques**, de synchroniser Braze avec d'autres plateformes et de gérer l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data/cloud_ingestion/).|
@@ -202,12 +202,15 @@ Pour télécharger une liste de vos utilisateurs et de leurs autorisations, alle
 |Espace de travail|Archiver les modèles Canvas|Permet aux utilisateurs d'archiver les modèles de canvas.|
 |Espace de travail|Gérer la segmentation des propriétés d'événements personnalisés|Permet aux utilisateurs de créer des segments basés sur la récurrence et la fréquence des propriétés d'événement.|
 |Espace de travail|Publier les pages d’accueil|Permet aux utilisateurs de publier des [pages d'atterrissage]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/).|
-|Espace de travail|Créer des ébauches de page d’accueil|Permet aux utilisateurs de créer et d'enregistrer des brouillons de pages d'atterrissage.|
-|Espace de travail|Accéder aux pages d’accueil|Permet aux utilisateurs d'accéder à la page **Pages d'atterrissage**.|
-|Espace de travail|Créer et modifier des modèles de pages d'accueil|Permet aux utilisateurs de créer et de modifier des modèles de page d'atterrissage.|
+|Espace de travail|Modifier les projets de page de destination|Permet aux utilisateurs de créer et d'enregistrer des brouillons de pages d'atterrissage.|
+|Espace de travail|Afficher la page de destination|Permet aux utilisateurs d'accéder à la page **Pages d'atterrissage**.|
+|Espace de travail|Modifier les modèles de page de destination|Permet aux utilisateurs de créer et de modifier des modèles de page d'atterrissage.|
 |Espace de travail|Voir les modèles de pages d'accueil|Permet aux utilisateurs de visualiser les modèles de pages d'atterrissage.|
 |Espace de travail|Archiver les modèles de pages d'accueil|Permet aux utilisateurs d'archiver des modèles de pages d'atterrissage.|
 |Espace de travail|Voir les agents d'intelligence artificielle personnalisés|Permet aux utilisateurs de visualiser les [agents d'intelligence artificielle personnalisés]({{site.baseurl}}/user_guide/brazeai/agents/). Cette fonctionnalité est actuellement en version bêta.|
 |Espace de travail|Créer des agents d'intelligence artificielle personnalisés|Permet aux utilisateurs de créer des agents d'intelligence artificielle personnalisés. Cette fonctionnalité est actuellement en version bêta.|
 |Espace de travail|Modifier les agents d'intelligence artificielle personnalisés|Permet aux utilisateurs de modifier les agents d'intelligence artificielle personnalisés. Cette fonctionnalité est actuellement en version bêta.|
+| Espace de travail | Voir les modèles d'envoi de messages WhatsApp | Permet aux utilisateurs d'afficher les [modèles de messages WhatsApp.]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/?tab=template%20messages#step-2-compose-your-whatsapp-message) |
+| Espace de travail | Modifier les modèles d'envoi de messages WhatsApp | Permet aux utilisateurs de créer des modèles d'envoi de messages WhatsApp dans le générateur de modèles. Cette fonctionnalité est actuellement disponible en accès anticipé. |
+| Espace de travail | Supprimer les modèles de messages Whatsapp | Permet aux utilisateurs de supprimer des modèles d'envoi de messages WhatsApp dans le générateur de modèles. Cette fonctionnalité est actuellement disponible en accès anticipé. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
