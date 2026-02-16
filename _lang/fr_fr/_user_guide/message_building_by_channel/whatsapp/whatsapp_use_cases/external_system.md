@@ -32,7 +32,7 @@ Pour automatiser efficacement cette communication, cette intégration utilise de
 | - | - |
 | Système externe | Un système d'intelligence artificielle ou de communication tiers capable de créer et de gérer des chatbots, des systèmes de service client automatisés utilisant des API, ou les deux. |
 | Intégration de Braze et de WhatsApp | Un numéro WhatsApp géré par Braze |
-| Clé API REST de Braze | Une clé API REST avec des autorisations `campaigns.trigger.send`. Celle-ci peut être créée dans le tableau de bord de Braze en allant dans **Paramètres** > **Clés API.** |
+| Clé de l'API REST de Braze | Une clé API REST avec des autorisations `campaigns.trigger.send`. Celle-ci peut être créée dans le tableau de bord de Braze en allant dans **Paramètres** > **Clés API.** |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
 ## Configuration de l'intégration
@@ -62,7 +62,7 @@ Tout d'abord, créez une campagne webhook pour établir un moyen d'envoyer les m
 ![La réception/distribution par événement avec un déclencheur d'envoi d'un message entrant WhatsApp.]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
 
 {: start="6"}
-6\. Terminez la composition de votre campagne, puis enregistrez et lancez la campagne. Une fois la campagne lancée, à chaque fois qu'un message est reçu, Braze envoie un webhook à votre système externe.
+6\. Terminez la composition de votre campagne, puis enregistrez et lancez la campagne. Après avoir lancé la campagne, à chaque fois qu'un message est reçu, Braze envoie un webhook à votre système externe.
 
 ### Étape 2 : Créez une campagne déclenchée par l'API pour les messages envoyés. {#step-2}
 
@@ -74,12 +74,12 @@ Ensuite, créez une campagne déclenchée par l'API afin d'établir un moyen pou
 ![Compositeur de messages avec des options permettant de sélectionner le type de message et la présentation du message.]({% image_buster /assets/img/whatsapp/response_message_layout.png %})
 
 {: start="3"}
-3\. Ajoutez la propriété du déclencheur API au corps du message, par exemple {% raw %}```{{api_trigger_properties.${external_system_msg+body}}}```{% endraw %}. Cela permet à votre système d'intelligence artificielle d'alimenter le message qui sera envoyé.
+3\. Ajoutez la propriété du déclencheur API au corps du message, par exemple {% raw %}```{{api_trigger_properties.${external_system_msg+body}}}```{% endraw %}. Cela permet à votre système d'intelligence artificielle d'élaborer le message qui sera envoyé.
 
-![Compositeur de messages dont le corps du message contient les propriétés du déclencheur.]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
+![Compositeur de message dont le corps du message contient les propriétés du déclencheur.]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
 
 {: start="4"}
-4\. Dans l'étape **Planifier la réception/distribution** du compositeur de votre campagne, sélectionnez le type de **réception/distribution basé sur une action**.
+4\. Dans l'étape **Planifier la réception/distribution** du compositeur de votre campagne, sélectionnez le type de **réception/distribution Basé sur l'action.** 
 5\. Enregistrez la campagne, puis prenez note de l'unique `campaign_id` que Braze génère pour cette campagne. Vous aurez besoin de l'ID pour l'étape suivante.
 
 ### Étape 3 : Connecter le système externe à la campagne déclenchée par l'API
@@ -91,7 +91,7 @@ Enfin, configurez votre système externe pour qu'il appelle Braze et envoie la r
 3. Utilisez la propriété de déclencheur API de l' [étape 2](#step-2) pour insérer la réponse du système externe, et n'oubliez pas d'inclure votre clé API dans l'en-tête de la requête pour l'authentification, comme dans cet exemple cURL :
 
 {% raw %}
-```json
+```bash
 curl -X POST \
   -H 'Content-Type:application/json' \
   -H 'Authorization: Bearer a valid rest API key' \
