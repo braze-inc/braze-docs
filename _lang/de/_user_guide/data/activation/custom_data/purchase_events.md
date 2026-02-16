@@ -214,7 +214,7 @@ So lassen sich Produkte für die Segmentierung und das Triggern einfach identifi
 
 ## Kauf-Events auf die Blockliste setzen
 
-Es kann vorkommen, dass Sie Kauf-Events identifizieren, die entweder zu viele Datenpunkte protokollieren, für Ihre Marketing Strategie nicht mehr nützlich sind oder irrtümlich aufgezeichnet wurden. Um zu verhindern, dass diese Daten an Braze gesendet werden, können Sie das angepasste Datenobjekt auf eine Blockliste setzen, während Ihr Entwicklerteam daran arbeitet, es aus dem Backend Ihrer App oder Website zu entfernen.
+Es kann vorkommen, dass Sie Kauf-Events identifizieren, die entweder zu viele Datenpunkte aufzeichnen, für Ihre Marketing Strategie nicht mehr nützlich sind oder irrtümlich aufgezeichnet wurden. Um zu verhindern, dass diese Daten an Braze gesendet werden, können Sie das angepasste Datenobjekt auf eine Blockliste setzen, während Ihr Entwicklerteam daran arbeitet, es aus dem Backend Ihrer App oder Website zu entfernen.
 
 Im Braze-Dashboard können Sie das Blocklisting unter **Dateneinstellungen** > Produkte verwalten. Weitere Informationen finden Sie unter [Verwalten angepasster Daten]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/).
 
