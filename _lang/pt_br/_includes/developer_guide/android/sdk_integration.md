@@ -112,6 +112,10 @@ Braze.enableDelayedInitialization(context)
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
+Quando a inicialização postergada está ativada e uma notificação por push contém uma ação de deep linking, o deep link não é resolvido.
+{% endalert %}
+
 #### Etapa 4.2: Configurar a análise de dados push (opcional)
 
 Quando a inicialização com postergação é ativada, as análises de dados push são enfileiradas por padrão. No entanto, você pode optar por enfileirar ou [descartar](#drop-push-analytics) [explicitamente](#explicitly-queue-push-analytics) a análise de dados push.
