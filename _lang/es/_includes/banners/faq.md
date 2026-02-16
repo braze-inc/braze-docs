@@ -14,7 +14,7 @@ Para más información, consulta [Solicitudes de colocación]({% if include.sect
 
 ## ¿Cuántas campañas de Banner pueden estar activas simultáneamente?
 
-Cada espacio de trabajo puede albergar hasta 200 campañas de Banner activas. Si se alcanza este límite, tendrás que [archivar o desactivar]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) una campaña existente antes de crear una nueva.
+Cada espacio de trabajo puede soportar hasta 200 campañas de Banner activas. Si se alcanza este límite, tendrás que [archivar o desactivar]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) una campaña existente antes de crear una nueva.
 
 ## Para las campañas que comparten un emplazamiento, ¿qué Banner se muestra primero?
 
@@ -59,4 +59,10 @@ No. Sin embargo, la mayoría de las etiquetas de Liquid son compatibles con los 
 
 ## ¿Puedo capturar eventos de clic?
 
-Los eventos de clic sólo se capturan si se establece una acción al hacer clic en un elemento `logClick` y se llama utilizando el [puente JS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge).
+Sí. Cómo se capturan los eventos de clic depende de cómo se representa tu Banner:
+
+- **Componentes estándar del editor:** Si tu Banner utiliza componentes estándar del editor (imágenes, botones, texto), los clics se siguen automáticamente al utilizar los métodos de inserción del SDK.
+- **Bloques de código personalizados:** Si tu Banner utiliza el bloque de editor de código personalizado, debes llamar a `brazeBridge.logClick()` desde dentro de tu HTML personalizado para hacer un seguimiento de los clics. Esto se aplica incluso cuando se utilizan los métodos del SDK para insertar y renderizar el Banner. Funciona igual que el [puente JavaScript]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) para mensajes HTML dentro de la aplicación.
+- **IU personalizada (headless):** Si estás construyendo una interfaz de usuario totalmente personalizada utilizando las propiedades personalizadas del Banner en lugar de renderizar el HTML del Banner, llama a `logClick()` en el objeto Banner desde el código de tu aplicación.
+
+Para más información, consulta [Registrar clics]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks).
