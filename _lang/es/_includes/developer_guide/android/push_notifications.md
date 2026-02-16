@@ -557,6 +557,74 @@ Braze.configure(this, brazeConfig)
 
 Si quieres gestionar de forma personalizada los vínculos profundos, tendrás que crear una devolución de llamada push que escuche las intenciones push recibidas y abiertas de Braze. Para más información, consulta [Utilizar una devolución de llamada para eventos push]({{site.baseurl}}/developer_guide/push_notifications/customization#android_using-a-callback-for-push-events).
 
+## Gestión de notificaciones en primer plano
+
+Por predeterminado, cuando llega una notificación push mientras tu aplicación está en primer plano en Android, el sistema la muestra automáticamente. Para que Braze procese la carga útil de la notificación push (para el seguimiento de análisis, la gestión de vínculos profundos y el procesamiento personalizado), dirige los datos push entrantes a Braze dentro de tu método `FirebaseMessagingService.onMessageReceived`.
+
+### Cómo funciona
+
+Cuando llamas a `BrazeFirebaseMessagingService.handleBrazeRemoteMessage`, Braze determina si la carga útil es una notificación push de Braze y, si es así, crea y muestra la notificación con el método `NotificationManagerCompat`. A diferencia de iOS, Android muestra las notificaciones independientemente de si la aplicación está en primer o segundo plano.
+
+{% tabs %}
+{% tab JAVA %}
+```java
+package com.example.push;
+
+import com.braze.push.BrazeFirebaseMessagingService;
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+
+public class MyFirebaseMessagingService extends FirebaseMessagingService {
+    @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        super.onMessageReceived(remoteMessage);
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+package com.example.push
+
+import com.braze.push.BrazeFirebaseMessagingService
+import com.google.firebase.messaging.FirebaseMessagingService
+import com.google.firebase.messaging.RemoteMessage
+
+class MyFirebaseMessagingService : FirebaseMessagingService() {
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        super.onMessageReceived(remoteMessage)
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+Para más información, consulta el [ejemplo de integración de Firebase](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseMessagingService.kt) en el repositorio del SDK para Android de Braze.
+
+### Personalizar el comportamiento en primer plano
+
+Si quieres un comportamiento personalizado en primer plano, como suprimir la notificación del sistema o mostrar en su lugar una interfaz de usuario dentro de la aplicación, puedes hacerlo:
+
+- Utiliza `subscribeToPushNotificationEvents` para reaccionar a los eventos push y gestionar los vínculos profundos con el método `BrazeNotificationUtils.routeUserWithNotificationOpenedIntent`. Para más información, consulta [el ejemplo de push de Firebase](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt).
+- Construye y publica tu propia notificación utilizando un `IBrazeNotificationFactory` personalizado, o suprime la notificación no llamando a `notificationManager.notify` en tu ruta de manejo.
+
+Para más información sobre cómo personalizar las notificaciones, consulta [Fábrica de notificaciones personalizadas]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#custom-notification-factory).
+
 #### Crear vínculos profundos personalizados
 
 Sigue las instrucciones de la [documentación para desarrolladores de](http://developer.android.com/training/app-indexing/deep-linking.html) Android sobre vinculación en profundidad si aún no has añadido vínculos en profundidad a tu aplicación. Para saber más sobre qué son los vínculos profundos, consulta nuestro [artículo de Preguntas frecuentes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
