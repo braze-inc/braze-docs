@@ -102,12 +102,17 @@ Aplicamos un límite de velocidad compartido de 1.000 peticiones por hora a este
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-Al especificar un segmento o Audiencia Conectada en tu solicitud, aplicamos un límite de velocidad de 250 solicitudes por minuto a este punto final. De lo contrario, si se especifica un `external_id`, este punto final tiene un límite de velocidad predeterminado de 250 000 solicitudes por hora compartido entre `/messages/send`, `/campaigns/trigger/send` y `/canvas/trigger/send`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+Al utilizar filtros de audiencia conectada en tu solicitud, aplicamos un límite de velocidad de 250 solicitudes por minuto a este punto final. De lo contrario, si se especifica un `external_id`, este punto final tiene un límite de velocidad predeterminado de 250 000 solicitudes por hora compartido entre `/messages/send`, `/campaigns/trigger/send` y `/canvas/trigger/send`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+
+Los puntos finales Braze admiten solicitudes de API por lotes. Una única solicitud a los puntos finales de mensajería puede llegar a cualquiera de los siguientes elementos:
+
+- Hasta 50 `external_ids` específicos, cada uno con parámetros de mensaje individuales
+- Un segmento de audiencia de cualquier tamaño, definido en la solicitud como un objeto Audiencia Conectada
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-Los correos electrónicos transaccionales Braze no están sujetos a ningún límite de velocidad. Dependiendo del paquete que hayas elegido, el SLA cubre un número determinado de correos electrónicos transaccionales por hora. Las solicitudes que superen esa tasa seguirán enviándose, pero no estarán cubiertas por el SLA. El 99,9 % de los correos electrónicos se enviarán en menos de un minuto.
+El punto final `/transactional/v1/campaigns/{campaign_id}/send` es un punto final de pago en unidades por hora (por ejemplo, 50.000 por hora según tu paquete). No hay límite de velocidad por punto final: puedes enviar más allá del volumen asignado, pero sólo el volumen asignado está cubierto por el SLA. Las peticiones a este punto final cuentan para tu [límite de velocidad global de la API externa]({{site.baseurl}}/api/api_limits/). Si superas ese límite (por ejemplo, 250.000 solicitudes por hora en todos los puntos finales), Braze devuelve 429 y las solicitudes se estrangulan. El recuento del volumen de transacciones se reinicia cada hora, por lo que después de una hora, hay otra asignación disponible. Dentro del volumen cubierto por el SLA, el 99,9% de los correos electrónicos se enviarán en menos de un minuto.
 
 <!---/sends/id/create-->
 
@@ -204,4 +209,3 @@ Este punto final tiene un límite de velocidad compartido de 50 peticiones por m
 Este punto final tiene un límite de velocidad de 50 000 peticiones por minuto.
 
 {% endif %}
-
