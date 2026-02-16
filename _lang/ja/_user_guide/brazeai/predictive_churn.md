@@ -2,7 +2,7 @@
 nav_title: 解約予測
 article_title: 解約予測
 description: "このランディングページでは、Braze Predictive SuiteのツールであるPredictive Churn（解約予測）について説明している。"
-page_order: 2.0
+page_order: 9
 alias: /predictive_churn/
 search_rank: 2
 ---
@@ -25,7 +25,7 @@ search_rank: 2
 
 ## 解約予測へのアクセス
 
-[**予測**] ページは [**分析**] セクションにあります。フルアクセスが必要な場合、アカウントマネージャーにお問い合わせください。
+{% include brazeai/predictions_page_access.md %}
 
 この機能は、購入前にプレビューモードで使用できます。これにより、合成データを使用した解約予測のデモを見ることができ、お客様のユーザーデータに基づいて、解約予測モデルを一度に 1 つ作成できます。このプレビューでは、解約リスクに応じてユーザーをメッセージングのターゲットにすることはできず、作成後に定期的に更新されることもありません。
 
