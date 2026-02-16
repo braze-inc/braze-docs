@@ -68,7 +68,7 @@ Para criar um rascunho, faça o seguinte:
 
 1. Acesse sua campanha ativa.
 2. Faça suas alterações.
-3. Selecione **Salvar como rascunho**. Observe que, depois de criar um rascunho, você não poderá editar a campanha ativa até lançar ou descartar o rascunho.
+3. Selecione **Salvar como rascunho**. Observe que, depois de criar um rascunho, não é possível editar a campanha ativa até que você lance ou descarte o rascunho.
 
 ![Um rascunho de uma campanha ativa com uma opção para visualizar a campanha ativa.]({% image_buster /assets/img/campaign_draft.png %})
 
