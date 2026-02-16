@@ -141,7 +141,7 @@ Este punto final tiene un límite de velocidad de 100 peticiones por minuto.
 
 <!---Additional if statement for Messaging endpoints-->
 
-{% if include.category == "message endpoints" %}
+{% if include.category == "puntos finales de mensajería" %}
 
 Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseurl}}/api/api_limits/#batching-api-requests). Una única solicitud a los puntos finales de mensajería puede llegar a cualquiera de los siguientes elementos:
 
@@ -151,7 +151,7 @@ Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseur
 
 {% endif %}
 
-{% if include.category == "send messages endpoints" %}
+{% if include.category == "enviar mensajes puntos finales" %}
 
 Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseurl}}/api/api_limits/#batching-api-requests). Una única solicitud a los puntos finales de mensajería puede llegar a cualquiera de los siguientes elementos:
 
@@ -162,7 +162,7 @@ Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseur
 
 <!---Additional if statement for Translation endpoints-->
 
-{% if include.endpoint == "translation endpoints" %}
+{% if include.endpoint == "puntos finales de traducción" %}
 
 Este punto final tiene un límite de velocidad de 250.000 peticiones por minuto.
 
@@ -170,7 +170,7 @@ Este punto final tiene un límite de velocidad de 250.000 peticiones por minuto.
 
 <!---Additional if statement for /messages/send endpoint-->
 
-{% if include.category == "message send endpoint" %}
+{% if include.category == "punto final de envío de mensajes" %}
 
 Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseurl}}/api/api_limits/#batching-api-requests). Una única solicitud a los puntos finales de mensajería puede llegar a cualquiera de los siguientes elementos:
 
