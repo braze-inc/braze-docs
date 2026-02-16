@@ -96,7 +96,7 @@ Si la suppression du cache et des cookies de votre navigateur ne résout pas vos
 
 ### Accès à l'éditeur par glisser-déposer
 
-Pour la plupart des utilisateurs de Braze, l'éditeur par glisser-déposer devrait se charger. Toutefois, si vous utilisez un VPN ou si vous êtes derrière un pare-feu, il se peut que vous deviez autoriser la liste d'un domaine. Contactez votre administrateur informatique pour vérifier que `*.bz-rndr.com` est bien sur la liste des autorisations.
+Pour la plupart des utilisateurs de l'entreprise, l'éditeur par glisser-déposer devrait se charger. Toutefois, si vous utilisez un VPN ou si vous êtes derrière un pare-feu, il se peut que vous deviez autoriser la liste d'un domaine. Contactez votre administrateur informatique pour vérifier que `*.bz-rndr.com` est bien sur la liste des autorisations.
 
 L'éditeur peut rencontrer des problèmes de chargement pour les raisons suivantes :
 
