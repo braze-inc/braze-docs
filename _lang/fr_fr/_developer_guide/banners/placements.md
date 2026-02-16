@@ -19,13 +19,13 @@ platform:
 
 {% multi_lang_include banners/placement_requests.md %}
 
-## Création d'un placement
+## Créer un placement
 
 ### Conditions préalables
 
 Il s'agit des versions minimales du SDK nécessaires pour créer des placements de bannières :
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+{% multi_lang_include sdk_versions.md feature='banners' %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
@@ -115,7 +115,7 @@ This feature is not currently supported on Roku.
 ### Étape 3 : Écoutez les mises à jour {#subscribeToBannersUpdates}
 
 {% alert tip %}
-Si vous insérez des bannières à l'aide des méthodes du SDK décrites dans ce guide, tous les événements d'analyse/analytique (tels que les impressions et les clics) seront traités automatiquement, et les impressions ne seront enregistrées que lorsque la bannière sera visible.
+Si vous insérez des bannières à l'aide des méthodes du SDK décrites dans ce guide, tous les événements d'analyse/analytique (tels que les impressions et les clics) seront traités automatiquement, et les impressions ne seront enregistrées que lorsque la bannière est visible.
 {% endalert %}
 
 {% tabs %}
@@ -504,9 +504,35 @@ Avant de lancer une campagne de bannières, vous pouvez [envoyer une bannière d
 Les bannières de test sont comme toutes les autres bannières, sauf qu'elles sont retirées lors de la prochaine session de l'application.
 {% endalert %}
 
-## Enregistrement des impressions
+## Impressions du journal
 
 Braze enregistre automatiquement les impressions des bannières visibles lorsque vous utilisez les méthodes du SDK pour insérer une bannière - il n'est donc pas nécessaire de suivre les impressions manuellement.
+
+## Enregistrement des clics
+
+La méthode utilisée pour enregistrer les clics de la bannière dépend de la manière dont votre bannière est affichée et de l'emplacement/localisation de votre gestionnaire de clics.
+
+### Contenu de la bannière standard (automatique)
+
+Si vous utilisez les méthodes par défaut et prêtes à l'emploi du SDK pour insérer des bannières, et que votre bannière utilise des composants standard de l'éditeur (images, boutons, texte), les clics sont suivis automatiquement. Le SDK associe des récepteurs de clics à ces éléments, et aucun code supplémentaire n'est nécessaire.
+
+### Blocs de code personnalisés
+
+Si votre bannière utilise le bloc éditeur de **code personnalisé** dans le tableau de bord de Braze, vous devez utiliser `brazeBridge.logClick()` pour enregistrer les clics à partir de ce HTML personnalisé. Cela s'applique même lorsque vous utilisez les méthodes du SDK pour rendre la bannière, car le SDK ne peut pas attacher automatiquement des écouteurs aux éléments dans votre code personnalisé.
+
+```html
+<button onclick="brazeBridge.logClick()">
+  Click me
+</button>
+```
+
+Ceci est similaire au [pont JavaScript]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) utilisé pour les messages in-app en HTML. Le site `brazeBridge` fournit une couche de communication entre le code HTML interne de la bannière et le SDK parent de Braze.
+
+### Implémentations d'interfaces utilisateur personnalisées (headless)
+
+Si vous créez une interface utilisateur entièrement personnalisée en utilisant les [propriétés personnalisées de](#custom-properties) la bannière plutôt que de rendre le code HTML de la bannière, vous devez enregistrer manuellement les clics (et les impressions) à partir du code de votre application. Comme le SDK n'effectue pas le rendu de la bannière, il n'a aucun moyen de suivre automatiquement les interactions avec vos éléments d'interface utilisateur personnalisés.
+
+Utilisez la méthode `logClick()` sur l'objet Banner.
 
 ## Dimensions et taille
 
@@ -530,7 +556,7 @@ Vous devrez [ajouter des propriétés personnalisées]({{site.baseurl}}/user_gui
 
 {% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 reactnative:17.0.0 flutter:15.1.0 %}
 
-### Accès aux propriétés personnalisées
+### Accéder aux propriétés personnalisées
 
 Pour accéder aux propriétés personnalisées d'une bannière, utilisez l'une des méthodes suivantes en fonction du type de propriété défini dans le tableau de bord. Si la clé ne correspond pas à une propriété de ce type ou n'existe pas, la méthode renvoie `null`.
 
