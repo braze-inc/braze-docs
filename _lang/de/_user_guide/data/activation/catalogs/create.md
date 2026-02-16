@@ -153,7 +153,7 @@ Sie können auch [Templates in einem Katalognamen verwenden](#template-catalog-n
 
 ### Schritt 2: Erstellen Sie Ihren Katalog
 
-Wählen Sie Ihren Katalog aus der Liste aus und wählen Sie dann **Katalog aktualisieren** > **Felder hinzufügen**. Geben Sie den **Feldnamen** ein und wählen Sie über das Dropdown-Menü den Datentyp aus. Wiederholen Sie den Vorgang nach Bedarf.
+Wählen Sie Ihren Katalog aus der Liste aus und wählen Sie dann **Katalog aktualisieren** > **Felder hinzufügen**. Geben Sie den **Feldnamen** ein und wählen Sie über die Dropdown-Liste den Datentyp aus. Wiederholen Sie den Vorgang nach Bedarf.
 
 ![Zwei Beispielfelder "Bewertung" und "Name".]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}
 
