@@ -26,7 +26,7 @@ tool: Currents
 * Neuer Ereignistyp `users.messages.whatsapp.Retry` hinzugefügt.
 
 * Das Feld wechselt zum Ereignistyp `users.behaviors.pushnotification.TokenStateChange`:
-    * Neues Feld `long` hinzugefügt `time_ms`: Zeitpunkt in Millisekunden, zu dem das Ereignis eintrat
+    * Neues Feld `long` hinzugefügt `time_ms`: Zeitpunkt in Millisekunden, zu dem das Ereignis eingetreten ist
 
 
 ## Änderungen in Version 4 (Erscheinungsdatum 2026-01-08)
@@ -98,7 +98,7 @@ tool: Currents
     * Neues Feld `string` hinzugefügt `catalog_id`: Katalog ID eines Produkts, wenn ein Produkt in der eingehenden Nachricht referenziert wird. Andernfalls ist sie leer.
     * Neues Feld `string` hinzugefügt `product_id`: Produkt SKU, wenn ein Produkt in der eingehenden Nachricht referenziert wird. Andernfalls ist sie leer.
     * Neues Feld `string` hinzugefügt `flow_id`: Die eindeutige ID des Flows im WhatsApp Manager:in. Vorhanden, wenn der Nutzer:in auf einen WhatsApp Flow antwortet.
-    * Neues Feld `string` hinzugefügt `flow_response_json`: [PII] Die Formularwerte, mit denen der Nutzer:innen geantwortet hat. Vorhanden, wenn der Nutzer:in auf einen WhatsApp Flow antwortet.
+    * Neues Feld `string` hinzugefügt `flow_response_json`: [PII] Die Formularwerte, mit denen der Nutzer:in geantwortet hat. Vorhanden, wenn der Nutzer:in auf einen WhatsApp Flow antwortet.
     * Neues Feld `string` hinzugefügt `message_id`: Die eindeutige ID, die von Meta für diese Nachricht generiert wurde
     * Neues Feld `string` hinzugefügt `in_reply_to`: Die message_id der Nachricht, auf die diese Nachricht geantwortet hat
 
