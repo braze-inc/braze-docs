@@ -23,8 +23,8 @@ Die Verfügbarkeit von Landing Pages und angepassten Domains hängt von Ihrem Br
 
 Bevor Sie auf Landing Pages zugreifen, sie erstellen und veröffentlichen können, benötigen Sie entweder [Administratorrechte]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) oder alle der folgenden Rechte:
 
-- Startseiten aufrufen
-- Entwürfe für Startseite erstellen
+- Landing-Pages anzeigen
+- Entwürfe für Landing-Pages bearbeiten
 - Startseiten veröffentlichen
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
