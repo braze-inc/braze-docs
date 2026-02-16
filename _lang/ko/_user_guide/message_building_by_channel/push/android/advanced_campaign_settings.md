@@ -90,9 +90,7 @@ The summary text allows you to set additional text in the expanded notification 
 
 ## 알림 표시 우선순위
 
-{% alert important %}
-알림 표시 우선순위 설정은 Android O 이상을 실행하는 기기에서는 더 이상 사용되지 않습니다. 최신 장치의 경우 [알림 채널 구성](https://developer.android.com/training/notify-user/channels#importance)을 통해 우선 순위를 설정하십시오.
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='Android notification priority' %}
 
 푸시 알림의 우선순위 수준은 다른 알림에 비해 알림 트레이에 표시되는 방식에 영향을 미칩니다. 또한 우선순위가 일반 이하인 메시지는 배터리 수명을 보존하기 위해 지연 시간이 약간 더 길어지거나 일괄 발송되는 반면, 우선순위가 높은 메시지는 항상 즉시 발송되므로 전송 속도와 방식에도 영향을 줄 수 있습니다.
 
