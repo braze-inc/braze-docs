@@ -14,7 +14,7 @@ channel:
 
 > Cette page explique comment utiliser des paires clé-valeur pour envoyer des données supplémentaires aux appareils des utilisateurs. Cette fonctionnalité est disponible sur les canaux de communication de notifications push, de messages in-app, d’e-mail et de cartes de contenu.
 
-Utilisez des paires clé-valeur pour ajouter des métadonnées structurées aux messages. Ces données supplémentaires peuvent enrichir les messages avec des informations contextuelles supplémentaires qui peuvent influencer la façon dont un message est rendu ou traité.
+Utilisez des paires clé-valeur pour ajouter des métadonnées structurées aux messages. Ces données supplémentaires peuvent enrichir les messages avec des informations contextuelles supplémentaires qui peuvent influencer le rendu ou le traitement d'un message.
 
 Les paires clé-valeur étant des métadonnées, ces données ne sont pas nécessairement visibles par le destinataire, mais peuvent être utilisées par vos systèmes ou processus connectés pour personnaliser l'envoi des messages. 
 
