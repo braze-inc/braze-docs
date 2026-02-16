@@ -92,5 +92,5 @@ Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_en
 
 - 사용자는 90일 동안만 구독할 수 있습니다. 90일 이내에 품목이 재입고되지 않으면 사용자의 구독이 취소됩니다.
 - **구독한 모든 사용자에게 알림** 규칙을 사용할 때, Braze는 10분 동안 100,000명의 사용자에게 알림을 보냅니다.
-- Braze will process 10 requests to update catalog items per minute. Update endpoints allow for 50 item updates per request, supporting up to 500 item updates per minute that can trigger back-in-stock notifications
+- Braze는 품절 알림을 트리거할 수 있는 업데이트된 품목을 매일 최대 50,000개까지 지원합니다. 한 번에 최대 1억 개의 활성 구독을 보유할 수 있으며, 각 구독은 카탈로그 항목을 보기 위해 가입한 고객 프로필을 나타냅니다.
 
