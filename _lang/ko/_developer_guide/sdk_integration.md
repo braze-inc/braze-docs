@@ -7,10 +7,10 @@ page_order: 2.0
 
 # ![Braze 로고]({% image_buster /assets/Braze_Primary_Icon_BLACK.svg %}){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze SDK 통합하기
 
-> Braze SDK를 모바일 앱에 통합하는 방법을 알아보세요. 각 SDK는 자체 공개 GitHub 리포지토리에서 호스팅되며, 여기에는 Braze 기능을 테스트하거나 자체 애플리케이션과 함께 구현하는 데 사용할 수 있는 완전히 빌드 가능한 샘플 앱이 포함되어 있습니다. 자세히 알아보려면 [참조, 리포지토리 및 샘플 앱을 참조하세요]({{site.baseurl}}/developer_guide/references/). SDK에 대한 자세한 내용은 [시작하기를 참조하세요: 통합 개요]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
+> Braze SDK를 통합하는 방법을 알아보세요. 각 SDK는 자체 공개 GitHub 리포지토리에서 호스팅되며, 여기에는 Braze 기능을 테스트하거나 자체 애플리케이션과 함께 구현하는 데 사용할 수 있는 완전히 빌드 가능한 샘플 앱이 포함되어 있습니다. 자세히 알아보려면 [참조, 리포지토리 및 샘플 앱을 참조하세요]({{site.baseurl}}/developer_guide/references/). SDK에 대한 자세한 내용은 [시작하기를 참조하세요: 통합 개요]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 {% alert tip %}
-
+SDK 통합 후 [SDK 인증을]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) 인에이블먼트하여 무단 SDK 요청을 방지하여 보안 계층을 추가할 수 있습니다. 소프트웨어 개발 키트 인증은 Web, Android, Swift, React Native, Flutter, Unity, Cordova, .NET MAUI(Xamarin) 및 Expo에서 사용할 수 있습니다.
 {% endalert %}
 
 {% sdktabs %}
