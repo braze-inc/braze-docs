@@ -12,7 +12,7 @@ La disponibilité des bannières dépend de votre forfait Braze. Contactez votre
 
 Les bannières permettent aux équipes marketing et produit de personnaliser le contenu des applis ou des sites web de manière dynamique, en reflétant l'éligibilité et le comportement des utilisateurs en temps réel. Ils affichent en permanence des messages en ligne, offrant des expériences non intrusives et contextuellement pertinentes qui sont mises à jour automatiquement au début de chaque session d'utilisateur.
 
-Après l'intégration des Bannières dans une application ou un site web, les marketeurs peuvent concevoir et lancer des Bannières à l'aide d'un simple éditeur glisser-déposer, ce qui élimine le besoin d'assistance permanente des développeurs, réduit la complexité et améliore l'efficacité.
+Après l'intégration des Bannières dans une application ou un site web, les marketeurs peuvent concevoir et lancer des Bannières à l'aide d'un simple éditeur glisser-déposer, ce qui élimine le besoin d'une assistance permanente de la part des développeurs, réduit la complexité et améliore l'efficacité.
 
 | Cas d’utilisation | Explication |
 | --- | --- |
@@ -27,7 +27,7 @@ Après l'intégration des Bannières dans une application ou un site web, les ma
 Les fonctionnalités des bannières sont les suivantes :
 
 - **Créer facilement du contenu :** Créez et prévisualisez votre bannière à l'aide d'un éditeur visuel par glisser-déposer prenant en charge les images, le texte, les boutons, les formulaires de capture d'e-mail, le code personnalisé, etc.
-- **Placements flexibles :** Définissez plusieurs emplacements/localisations au sein de votre application ou de votre site web où les bannières peuvent apparaître, ce qui permet un ciblage précis en fonction de contextes ou d'expériences utilisateur spécifiques.
+- **Placements flexibles :** Définissez plusieurs emplacements au sein de votre application ou de votre site web où les bannières peuvent apparaître, ce qui permet un ciblage précis en fonction de contextes ou d'expériences utilisateur spécifiques.
 - **Personnalisation dynamique :** Les bannières s'actualisent dynamiquement à chaque nouvelle session d'utilisateur, garantissant que le contenu reste à jour et personnalisé grâce aux outils de personnalisation intégrés de Braze et à la logique Liquid.
 - **Priorité aux autochtones :** Définissez la priorité d'affichage lorsque plusieurs bannières ciblent le même emplacement, afin que le bon message atteigne les utilisateurs au bon moment.
 - **Support HTML personnalisé :** Incorporez des blocs HTML personnalisés pour une personnalisation avancée ou une intégration parfaite avec vos styles web existants.
@@ -40,7 +40,7 @@ Les emplacements/localisations des bannières sont des emplacements/localisation
 
 Les emplacements/localisations les plus courants sont la partie supérieure de votre page d'accueil, les pages de détail des produits et les flux de paiement. Une fois les placements créés, les bannières peuvent être [attribuées dans votre campagne de bannières]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/).
 
-Il n'y a pas de limite fixe au nombre de placements que vous pouvez créer par espace de travail, et vous pouvez créer autant d'ID de placement que votre expérience l'exige. Chaque placement doit être unique au sein d'un espace de travail. Un seul ID de placement peut être référencé par un maximum de 10 campagnes actives en même temps.
+Il n'y a pas de limite fixe au nombre de placements que vous pouvez créer par espace de travail, et vous pouvez créer autant d'ID de placement que votre expérience l'exige. Chaque placement doit être unique au sein d'un espace de travail. Un seul ID de placement peut être référencé par un maximum de 25 messages actifs en même temps.
 
 {% alert important %}
 Évitez de modifier les ID de placement après avoir lancé une campagne de bannières.
@@ -61,6 +61,8 @@ Si plusieurs bannières ont la même priorité, la bannière la plus récente à
 Les messages des bannières sont envoyés à votre application ou à votre site web sous forme de contenu HTML, généralement rendu à l'intérieur d'une iframe. Cela garantit un rendu cohérent de vos bannières sur tous les appareils et vous aide à séparer leurs styles et leurs scripts du reste de votre code.
 
 Les iframes permettent des mises à jour de contenu dynamiques et personnalisées qui ne nécessitent pas de modifications de votre base de code. Chaque iframe récupère et affiche le code HTML pour chaque session d'utilisateur à l'aide d'une logique de ciblage et de personnalisation de la campagne.
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
 
 ### Dimensions et taille
 
