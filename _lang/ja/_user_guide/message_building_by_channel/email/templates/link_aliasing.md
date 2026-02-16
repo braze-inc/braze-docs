@@ -77,25 +77,25 @@ Brazeは、メール内のリンクを評価し、リンクテンプレートを
 
 **ロジック:**Brazeはクエスチョンマーク(?)を挿入し、最初のクエリーパラメーターをURLに追加する。
 
-| メール本文にリンクを貼る    | エイリアスによるリンク                     |
+| メール本体で連動    | エイリアスのリンク                     |
 |-----------------------|----------------------------------------|
-| https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk |
+| `https://www.braze.com` | `https://www.braze.com?lid=slfdldtqdhdk` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### より多くのクエリーパラメーターを持つリンク
 
 **ロジック:**Braze は他のクエリパラメーターを検出し、URL の末尾に `lid=` を追加します。
 
-| メール本文にリンクを貼る                                            | エイリアスによるリンク                                                             |
+| メール本体で連動                                            | エイリアスのリンク                                                             |
 |---------------------------------------------------------------|--------------------------------------------------------------------------------|
-| https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz |
+| `https://www.braze.com?utm_campaign=retention&utm_source=email` | `https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTMLリンク
 
 **ロジック:**Brazeは、リンクがURLであり、すでにクエスチョンマーク(?)があると認識するため、クエスチョンマークの後に`lid` クエリーパラメータが追加される。
 
-| メール本文にリンクを貼る                                                | エイリアスによるリンク                                                                |
+| メール本体で連動                                                | エイリアスのリンク                                                                |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -104,18 +104,18 @@ Brazeは、メール内のリンクを評価し、リンクテンプレートを
 
 **ロジック:**Brazeは、クエスチョンマーク(?)の後にアンカー(#)がある標準的なURL構造を期待する。Brazeは左から右に読むので、クエスチョンマークと`lid` の値はアンカーの前に付加される。
 
-| メール本文にリンクを貼る                               | エイリアスによるリンク                                                |
+| メール本体で連動                               | エイリアスのリンク                                                |
 |--------------------------------------------------|-------------------------------------------------------------------|
-| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email |
+| `https://www.braze.com#bookmark1?utm_source=email` | `https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### アンカーとキャプチャタグによるリンク
 
-**ロジック:**アンカー(#)を含むURLでリンクエイリアスを使用する場合、Brazeはアンカーがクエリーパラメーターの後に置かれることを期待する。つまり、適切なトラッキングのためにアンカーの前に `lid` 値を付加する必要があります。Braze は URL を左から右の順で読み取るので、疑問符 (?) と `lid`はアンカーの前に配置されている必要があります。
+**ロジック:**アンカー(#)を含むURLでリンクエイリアスを使用する場合、Brazeはアンカーがクエリーパラメーターの後に置かれることを期待する。つまり、`lid` の値は、適切な"トラッキングのためにアンカーの前にアプリ終了した**でなければならず、Braze はURL を左から右に読み取るため、アンカーの前に疑問符(?) と`lid` が来る必要があります。
 
-| メール本文にリンクを貼る                                                                        | エイリアスによるリンク                                                                                           |
+| メール本体で連動                                                                        | エイリアスのリンク                                                                                           |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a>` {%endraw%} |
+| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions?lid={{link_alias}}#special-offer">Check out our special offer!</a>` {%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## トラッキングリンク エイリアス
