@@ -13,7 +13,7 @@ tool:
 
 > No Braze, há três maneiras diferentes de programar sua mensagem: programada, baseada em ação e disparada por API. A escolha de como e quando sua mensagem será transmitida é crucial para o desenvolvimento de uma mensagem eficaz. 
 
-Para campanhas, o tipo de entrega determina quando os usuários entrarão na campanha e quando ela será enviada. Como o Canva é construído como uma jornada contínua do usuário, o conceito de envio de mensagens de um agendamento é chamado de tipo de entrada.
+Para campanhas, o tipo de entrega determina quando os usuários entrarão na campanha e quando ela será enviada. Como um Canva é criado como uma jornada contínua do usuário, o conceito de envio de mensagens de um agendamento é chamado de tipo de entrada.
 
 | Entrega<nobr> e tipos de entrada | Descrição                                                                                                                                                                                                                                                                                                                                      |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
