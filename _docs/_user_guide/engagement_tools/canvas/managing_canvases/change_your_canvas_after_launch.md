@@ -181,4 +181,4 @@ The following issues are avoidable. If you need to make edits to a Canvas after 
 - The edits do not overwrite Currents data, so you may notice discrepancies between Canvas steps (such as `canvas_step_ids` that don't exist in the Canvas due to deletion)
 - Users can receive the same message twice
 - Users won't receive messages due to the existing rate limit
-  - When you update the rate limit on an active Canvas, the new rate limit takes effect for all future message sends, including users already in the Canvas. However, due to internal caching (up to 30 seconds), there may be a brief delay before the new rate limit is fully applied. Note that Braze enqueues users for the Message step they're currently at so the rate limit in effect when each step's message is actually sent is the one that applies.
+  - When users are dispatched into a Canvas, the rate limit applied to the Canvas when a user is dispatched is applied to the user. After the Canvas is sent, the rate limit cannot be edited for that user, so increasing or decreasing the rate limit post-launch won't affect users who are already dispatched.
