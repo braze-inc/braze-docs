@@ -103,7 +103,7 @@ Cursor fills out the PR automatically:
 * [If this was related to a Docs discrepancy, make sure to note to tag the Eng owner in the description]
 * [Cursor analyzes code changes and lists them]
 * List of changes to help the reviewer understand the scope
-* List the Salesforce case IDs that were addressed in the update in a bullet list of URLs with the format `https://braze.lightning.force.com/lightning/r/Case/<case ID>/view`
+* List the Salesforce case IDs that were addressed in the update in a bulleted list of URLs with the format `https://braze.lightning.force.com/lightning/r/Case/<case ID>/view`
 ```
 
 ## Step 8: Assign Reviewers Based Code Ownership where possible
