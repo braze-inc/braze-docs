@@ -25,6 +25,7 @@ For each unique Case ID, determine if docs action is needed:
 | Category | Criteria | Action |
 |----------|----------|--------|
 | **Docs Gap** | Customer couldn't find existing info; answer exists but is unclear | Update existing docs |
+| **Docs Discrepancy** | Docs and source code contradict each other | Update existing docs |
 | **New Feature** | Question about recently released or undocumented feature | Draft new section |
 | **Edge Case** | Unusual but valid use case not covered | Add FAQ or troubleshooting |
 | **Support-Only** | Account-specific, requires Braze internal access, or one-off config | Skip (no docs change) |
@@ -99,6 +100,7 @@ Cursor fills out the PR automatically:
 
 ```text
 # Changes
+* [If this was related to a Docs discrepancy, make sure to note to tag the Eng owner in the description]
 * [Cursor analyzes code changes and lists them]
 * List of changes to help the reviewer understand the scope
 * List the Salesforce case IDs that were addressed in the update in a bullet list of URLs with the format `https://braze.lightning.force.com/lightning/r/Case/<case ID>/view`
