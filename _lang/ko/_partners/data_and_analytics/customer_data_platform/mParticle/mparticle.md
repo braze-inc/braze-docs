@@ -156,7 +156,7 @@ mParticle에서 **설정 > 출력 > 출력 추가**로 이동하고 **Braze**를
 
 ### Embedded kit integration
 
-mParticle 및 Braze SDK는 내 애플리케이션에 내장된 키트 통합을 통해 존재합니다. However, unlike a direct Braze integration, mParticle takes care of calling the majority of Braze SDK methods for you. The mParticle methods you use to track user data will automatically be mapped to the Braze SDK methods. 
+mParticle 및 Braze SDK는 내장 키트 통합을 통해 귀하의 애플리케이션에 존재합니다. However, unlike a direct Braze integration, mParticle takes care of calling the majority of Braze SDK methods for you. The mParticle methods you use to track user data will automatically be mapped to the Braze SDK methods. 
 
 mParticle의 SDK에 대한 이러한 매핑은 [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy), 및 [Web](https://github.com/mparticle-integrations/mparticle-javascript-integration-braze)에 대해 오픈 소스이며 [mParticle의 GitHub 페이지](https://github.com/mparticle-integrations)에서 찾을 수 있습니다. 
 
@@ -218,7 +218,7 @@ Not all data types are supported between both platforms.
 - [커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)은 문자열, 숫자, 불리언, 날짜 객체 및 배열을 지원하지만 객체나 중첩 객체는 지원하지 않습니다. 
 
 {% alert note %}
-Braze doesn't support timestamps before year 0 or after year 3000 in `Time` type custom attributes. Braze는 mParticle에서 전송된 이러한 값을 수집하지만, 값은 문자열로 저장됩니다.
+Braze doesn't support timestamps before year 0 or after year 3000 in `Time` type custom attributes. Braze는 mParticle에 의해 전송될 때 이러한 값을 수집하지만, 값은 문자열로 저장됩니다.
 {% endalert %}
 
 #### Data mapping
@@ -263,7 +263,7 @@ Turning off this setting won't check for changing data. It will, however, preven
 
 There are a few considerations to be aware of when turning off **Include Enriched User Attributes**:
 1. The server-to-server integration uses the mParticle events API to send events to Braze. Each request is triggered by an event. When a user attribute is changed, such as updating an email address, but is not associated with a specific event (for example, a profile update custom event), the new value is only passed to an output like Braze as an "enriched attribute" in the payload of the next event triggered by the user. When **Include Enriched User Attributes** is turned off, this new attribute value unassociated with a specific event will not be passed to Braze.
-  - To solve this, we recommend creating a separate "user attribute updated" event that only sends the specific user attribute(s) that have been updated to Braze. 이 접근 방식을 사용하면 "사용자 속성 업데이트" 이벤트에 대해 추가 데이터 포인트를 여전히 기록하고 있지만, 기능이 활성화된 상태에서 모든 사용자 속성을 매 호출마다 전송하는 것보다 데이터 포인트 사용량이 훨씬 적습니다.
+  - To solve this, we recommend creating a separate "user attribute updated" event that only sends the specific user attribute(s) that have been updated to Braze. 이 접근 방식을 사용하면 "사용자 속성 업데이트" 이벤트에 대해 추가 데이터 포인트를 여전히 기록하고 있지만, 기능이 활성화된 모든 호출에서 모든 사용자 속성을 전송하는 것보다 데이터 포인트 사용량이 훨씬 적습니다.
 2. Calculated Attributes are passed to Braze as an enriched user attribute, so when "Enriched User Attributes" is turned off these will no longer be passed to Braze. To forward calculated attributes to Braze when "Enriched User Attributes" are turned off, a [calculated attribute feed](https://docs.mparticle.com/guides/platform-guide/calculated-attributes/using-calculated-attributes/#forward-calculated-attributes-in-the-calculated-attributes-feed) could help without pushing all the attributes. The feed will fire an update downstream to Braze when a calculated attribute changes. 
 
 ### Sending unnecessary or duplicate data to Braze

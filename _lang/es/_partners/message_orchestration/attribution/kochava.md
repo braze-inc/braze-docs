@@ -42,7 +42,7 @@ Apppboy.getInstance(context).getDeviceId();
 #### iOS
 
 {% alert important %}
-Antes de febrero de 2023, nuestra integración de atribución de Kochava utilizaba el Identificador de Vendedor (IDFV) como identificador principal para hacer coincidir los datos de atribución de iOS. No es necesario que los clientes de Braze que utilicen Objective-C obtengan la dirección `device_id` de Braze y la envíen a Kochava al instalarla, porque no se interrumpe el servicio.
+Antes de febrero de 2023, nuestra integración de atribución de Kochava utilizaba el Identificador de Vendedor (IDFV) como identificador principal para hacer coincidir los datos de atribución de iOS. No es necesario que los clientes de Braze que utilicen Objective-C obtengan la dirección Braze `device_id` y la envíen a Kochava al instalarla, porque no se interrumpe el servicio.
 {% endalert%}
 
 Para los que utilicen Swift SDK v5.7.0+, si deseas seguir utilizando IDFV como identificador mutuo, debes asegurarte de que el campo `useUUIDAsDeviceId` está configurado en `false` para que no haya interrupciones en la integración. Si se establece en `true`, debe implementar la asignación de ID de dispositivo iOS para Swift con el fin de pasar el `device_id` de Braze a Kochava al instalar la aplicación para que Braze coincida correctamente con las atribuciones de iOS.
@@ -68,7 +68,7 @@ Aquí encontrarás el punto final REST y generarás tu clave de importación de 
 
 ### Paso 3: Configurar un postback desde Kochava
 
-[Añade un postback](https://support.kochava.com/campaign-management/create-a-kochava-certified-postback) en tu panel Kochava. Se te pedirá la clave de importación de datos y el punto final REST que encontraste en el panel Braze.
+[Añade un postback](https://support.kochava.com/campaign-management/create-a-kochava-certified-postback) en tu panel Kochava. Se te pedirá la clave de importación de datos y el punto final REST que encontraste en el panel de Braze.
 
 ### Paso 4: Confirmar la integración
 

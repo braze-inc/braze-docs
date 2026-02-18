@@ -14,7 +14,7 @@ Die Plattform für Verhaltensdaten von Fullstory hilft Technologieführern, bess
 *Diese Integration wird von Fullstory gepflegt*
 
 ## Über diese Integration
-Sie können die Insights von Fullstory in Braze nutzen, um Moment-zu-Moment-Bilder der Website oder App-Erlebnisse eines Nutzers zu erstellen, um kontextuelles Messaging zu liefern. Die Session Summary API von Fullstory ermöglicht die Erfassung detaillierter Metadaten über das Surfverhalten eines Nutzers zur Verwendung im Braze Messaging, was besonders leistungsstark ist, wenn es in einem mehrstufigen Messaging-Prozess wie einem Canvas genutzt wird. 
+Sie können die Insights von Fullstory in Braze nutzen, um Moment-zu-Moment-Abbildungen der Website oder App-Erlebnisse eines Nutzers zu erstellen, um kontextuelles Messaging zu liefern. Die Session Summary API von Fullstory ermöglicht die Erfassung detaillierter Metadaten über das Surfverhalten eines Nutzers zur Verwendung im Braze Messaging, was besonders leistungsstark ist, wenn es in einem mehrstufigen Messaging-Prozess wie einem Canvas genutzt wird. 
 
 Der Realtime-Wert der Session Summary-Daten von Fullstory lässt sich am besten durch Connected-Content nutzen. Durch die Verwendung von Connected-Content in einem Canvas-Kontext-Schritt können Sie die Daten von Fullstory während der gesamten Canvas-Reise eines Nutzers zur Verwendung in allen nachfolgenden Canvas-Schritten speichern. Dadurch wird auch vermieden, dass diese Daten über angepasste Events oder Attribute in ein Nutzerprofil von Braze geschrieben werden müssen. 
 

@@ -86,7 +86,7 @@ The status code `400` could return the following response body. Refer to [Troubl
       "parameter_values": []
     }
   ],
-  "message": "Invalid Request",
+  "message": "Invalid Request"
 }
 ```
 

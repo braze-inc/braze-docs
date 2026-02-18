@@ -42,7 +42,7 @@ No arquivo CSV, exclua a linha 1 para remover o cabeçalho da coluna "Promo". Is
 
 ### Etapa 3: Adicione seus códigos de desconto ao Braze
 
-No Braze, acesse **Data Settings** > **Promotion Codes** > **Create Promotion Code List** e [configure sua lista de códigos de desconto]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#creating-a-promotion-code-list). Certifique-se de corresponder à data de expiração que foi configurada pelo Bulk Discounts Code Bot.
+No Braze, acesse **Data Settings** > **Promotion Codes** > **Create Promotion Code List** e [configure sua lista de códigos de desconto]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#creating-a-promotion-code-list). Verifique se você corresponde à data de expiração que foi configurada pelo Bulk Discounts Code Bot.
 
 Em seguida, faça upload de seu arquivo CSV e selecione **Save List (Salvar lista**).
 
@@ -75,7 +75,7 @@ Agora, você pode adicionar o atributo personalizado {% raw %}`{{custom_attribut
 
 {% details Multichannel campaign or Canvas step %}
 
-Quando um snippet de código de desconto é usado em uma campanha multicanal ou etapa do Canva, os usuários sempre recebem um código exclusivo. Se um usuário for elegível para receber um código por meio de mais de um canal, ele receberá o mesmo código em cada canal. Em outras palavras, um usuário elegível receberia apenas um código em todas as mensagens enviadas por essa campanha ou etapa do Canva.
+Quando um snippet de código de desconto é usado em uma campanha multicanal ou etapa do Canva, os usuários sempre recebem um código exclusivo. Se um usuário for elegível para receber um código por mais de um canal, ele receberá o mesmo código em cada canal. Em outras palavras, um usuário elegível receberia apenas um código em todas as mensagens enviadas por essa campanha ou etapa do Canva.
 
 {% enddetails %}
 

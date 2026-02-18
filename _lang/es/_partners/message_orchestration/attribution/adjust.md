@@ -84,7 +84,7 @@ Aquí encontrarás el punto final REST y generarás tu clave de importación de 
 
 ### Paso 4: Confirmar la integración
 
-Después de que Braze reciba los datos de atribución de Adjust, el indicador de estado de la conexión en la página de socios tecnológicos de Adjust en Braze cambia de "No conectado" a "Conectado" e incluye una marca de tiempo de la última solicitud realizada con éxito.
+Después de que Braze reciba datos de atribución de Adjust, el indicador de estado de la conexión en la página de socios tecnológicos de Adjust en Braze cambia de "No conectado" a "Conectado" e incluye una marca de tiempo de la última solicitud realizada con éxito.
 
 Este estado sólo cambia cuando Braze recibe datos sobre una instalación atribuida. Braze ignora las instalaciones orgánicas (las excluye del postback de Adjust) y no las cuenta a la hora de determinar si la conexión se ha realizado correctamente.
 

@@ -31,6 +31,10 @@ The Braze and Google Cloud Storage integration allows you to stream Currents dat
 
 To integrate with Google Cloud Storage, you must set up the appropriate credentials that allow Braze to get information about the storage buckets being written to (`storage.buckets.get`) and create objects within that bucket (`storage.objects.create`). 
 
+{% alert note %}
+Workload Identity Federation (WIF) is not supported as an authentication method for Currents. You must use a service account with a JSON private key.
+{% endalert %}
+
 This can be done using the following instructions, which will walk you through creating a role and service account that will generate a private key to use in your Currents integration.
 
 ### Step 1: Create role

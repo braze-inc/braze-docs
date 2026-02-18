@@ -66,7 +66,7 @@ A seguir estão todos os elementos-chave que são configurados em um espaço de 
 
 - [Instâncias do app](#app-instances)
 - [Equipes](#teams)
-- [Permissões de usuário do Braze](#braze-user-permissions) (mas não de usuários do Braze)
+- [Permissões de usuário da empresa](#company-user-permissions) (mas não de usuários da empresa)
 - [Conectores Currents](#currents-connectors)
 - [Perfis de usuário](#user-profiles) e dados de usuários associados
 - [Segmentos, campanhas e telas](#segments-campaigns-and-canvases)
@@ -79,7 +79,7 @@ Você deve criar instâncias do app separadas para cada versão do seu aplicativ
 
 [As equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) podem ser configuradas de acordo com o local, o idioma e os atributos personalizados da base de clientes, de modo que os membros e não membros da equipe tenham acesso diferente aos recursos de envio de mensagens e aos dados de clientes.
 
-#### Permissões de usuário do Braze
+#### Permissões de usuário da empresa
 
 Os espaços de trabalho têm acesso independente e definições de permissão de usuário. [As permissões de usuário]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) permitem criar controles granulares em relação ao que um usuário individual do dashboard ou uma equipe tem acesso em um único espaço de trabalho.
 
@@ -195,7 +195,7 @@ A tabela a seguir descreve os benefícios e as desvantagens dessas duas abordage
         <td>Os status de inscrição de um perfil de usuário são combinados entre as instâncias do app.<br><br><b>Dica:</b> Em vez disso, é possível usar <a href='/docs/user_guide/data/custom_data/custom_attributes'>atributos personalizados</a> para gerenciar as inscrições de seus usuários.</td>
     </tr>
     <tr>
-        <td>Permissões de usuário do Braze</td>
+        <td>Permissões de usuário da empresa</td>
         <td>N/D</td>
         <td>A atualização das <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>permissões de usuário</a> para um usuário do dashboard deve ser feita separadamente para cada espaço de trabalho ao qual o usuário precisa ter acesso.</td>
         <td>As <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>permissões de usuário</a> podem ser definidas uma vez para um usuário do dashboard, e ele terá as mesmas permissões para todas as instâncias do app no espaço de trabalho.</td>
@@ -205,7 +205,7 @@ A tabela a seguir descreve os benefícios e as desvantagens dessas duas abordage
         <td>Duplicação de conteúdo</td>
         <td>N/D</td>
         <td>Não é possível duplicar segmentos, campanhas push ou de cartão de conteúdo ou Canvas em espaços de trabalho.</td>
-        <td>Pode duplicar campanhas em workspaces]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) para os seguintes canais compatíveis: SMS, mensagens no app, e-mail, modelos de e-mail e Blocos de Conteúdo. <br><br>Pode duplicar segmentos, campanhas e Canvas para reutilizar conteúdo de uma instância do app para outra.</td>
+        <td>Pode <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>duplicar campanhas em espaços de trabalho</a> para os seguintes canais compatíveis: SMS, mensagens no app, e-mail, modelos de e-mail e Blocos de Conteúdo. <br><br>Pode duplicar segmentos, campanhas e Canvas para reutilizar conteúdo de uma instância do app para outra.</td>
         <td>N/D</td>
     </tr>
     <tr>

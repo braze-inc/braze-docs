@@ -66,7 +66,7 @@ Les éléments suivants sont tous des éléments clés qui sont configurés dans
 
 - [Instances de l'application](#app-instances)
 - [Équipes](#teams)
-- [Permissions des utilisateurs de Braze](#braze-user-permissions) (mais pas des utilisateurs de Braze)
+- [Autorisations pour les utilisateurs de l'entreprise](#company-user-permissions) (mais pas pour les utilisateurs de l'entreprise)
 - [Connecteurs de courant](#currents-connectors)
 - [Les profils utilisateurs](#user-profiles) et les données utilisateurs associées
 - [Segments, campagnes et canevas](#segments-campaigns-and-canvases)
@@ -79,7 +79,7 @@ Vous devez créer des instances d’application distinctes pour chaque version d
 
 Les [équipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) peuvent être constituées en fonction de l'emplacement/localisation de la base de clients, de la langue et d'attributs personnalisés, de sorte que les membres de l'équipe et les non-membres aient un accès différent aux fonctionnalités d'envoi de messages et aux données des clients.
 
-#### Autorisations pour les utilisateurs de Braze
+#### Autorisations pour les utilisateurs de l'entreprise
 
 Les espaces de travail ont des définitions indépendantes en termes d’accès et d’autorisations pour les utilisateurs. Les [autorisations utilisateur]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) vous permettent de créer des contrôles granulaires concernant l'accès d'un utilisateur ou d'une équipe au tableau de bord au sein d'un espace de travail unique.
 
@@ -195,7 +195,7 @@ Le tableau suivant décrit les avantages et les inconvénients de ces deux appro
         <td>Les statuts d'abonnement d'un profil utilisateur sont combinés entre les instances de l'application.<br><br><b>Conseil :</b> Vous pouvez utiliser des <a href='/docs/user_guide/data/custom_data/custom_attributes'>attributs personnalisés</a> pour gérer les abonnements de vos utilisateurs.</td>
     </tr>
     <tr>
-        <td>Autorisations pour les utilisateurs de Braze</td>
+        <td>Autorisations pour les utilisateurs de l'entreprise</td>
         <td>S.O.</td>
         <td>La mise à jour des <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>autorisations d'</a> un utilisateur de tableau de bord doit être effectuée séparément pour chaque espace de travail auquel l'utilisateur doit avoir accès.</td>
         <td>Les <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>autorisations de l'</a> utilisateur peuvent être définies une seule fois pour un utilisateur du tableau de bord, et il disposera des mêmes autorisations pour toutes les instances d'applications dans l'espace de travail.</td>
@@ -205,7 +205,7 @@ Le tableau suivant décrit les avantages et les inconvénients de ces deux appro
         <td>Duplication de contenu</td>
         <td>S.O.</td>
         <td>Vous ne pouvez pas dupliquer des segments, des campagnes de cartes de contenu ou de push, ou des canevas dans les espaces de travail.</td>
-        <td>Vous pouvez [dupliquer des campagnes sur workspaces]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) pour les canaux pris en charge suivants : SMS, messages in-app, e-mails, modèles d'e-mails et blocs de contenu. <br><br>Peut dupliquer les segments, les campagnes et les Canvases pour réutiliser le contenu d'une instance d'appli à l'autre.</td>
+        <td>Vous pouvez <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>dupliquer des campagnes dans les espaces de travail</a> pour les canaux pris en charge suivants : SMS, messages in-app, e-mails, modèles d'e-mails et blocs de contenu. <br><br>Peut dupliquer les segments, les campagnes et les Canvases pour réutiliser le contenu d'une instance d'appli à l'autre.</td>
         <td>S.O.</td>
     </tr>
     <tr>

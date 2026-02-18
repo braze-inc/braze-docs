@@ -1166,7 +1166,8 @@ Cet événement se produit lorsqu'un jeton est inséré, mis à jour ou supprim�
   "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "time_ms" : "(optional, long) Time in millisecond when the event happened",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
   "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
   "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1191,6 +1192,7 @@ Cet événement se produit lorsqu'un jeton est inséré, mis à jour ou supprim�
     "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
     "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1226,6 +1228,7 @@ Cet événement se produit lorsqu'un jeton est inséré, mis à jour ou supprim�
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
     "time" : "(required, int) UNIX timestamp at which the event happened",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
@@ -1240,7 +1243,7 @@ Cet événement se produit lorsqu'un jeton est inséré, mis à jour ou supprim�
 // Push Notification Token State Changed (users.behaviors.pushnotification.TokenStateChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1258,6 +1261,7 @@ Cet événement se produit lorsqu'un jeton est inséré, mis à jour ou supprim�
     "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
     "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1278,6 +1282,9 @@ Cet événement se produit lorsqu'un jeton est inséré, mis à jour ou supprim�
   - Si l'autorisation de pousser est inconnue, ce champ sera vide. Par défaut, Braze tentera d'envoyer des notifications push au premier plan au jeton.
 - Le champ `push_token_provisionally_opted_in` ne s'applique qu'aux jetons push iOS.
   - Si vous avez mis en place une [autorisation provisoire]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push), les jetons provisoires auront ce champ réglé sur `true`. Tous les autres jetons de poussée seront `false`.
+- Le champ `sdk_version` ne sera renseigné que si le changement d'état du jeton est initié par le SDK.
+  - Si un événement du SDK `changeUser` déclenche le transfert du jeton d'un utilisateur à un autre, le champ `sdk_version` se remplit.
+  - S'il y a un push bounce (par exemple, en raison d'une désinstallation), le champ `sdk_version` sera vide.
 - Chaque fois qu'un jeton push entre dans Braze, les événements de son cycle de vie sont enregistrés. Trois types d'événements de changement de jeton ("ajout", "mise à jour" et "suppression") sont enregistrés dans le champ `push_token_state_change_type`. Notez les détails suivants :
   - Pour un nouveau jeton qui n'a jamais existé auparavant, un événement "add" est enregistré.
   - Pour la mise à jour du jeton avec la même chaîne de caractères pour le même utilisateur (gateway ou `foreground_push_disabled` ou d'autres champs "secondaires" modifiés), un événement de "mise à jour" sera enregistré pour le même jeton.

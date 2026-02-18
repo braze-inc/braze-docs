@@ -132,3 +132,5 @@ Brazeはサムの場合、アボートイベントのログを記録していな
 ## その他のリソース
 
 独自のアプリ内メッセージキャンペーンを作成したり、アプリ内メッセージをマルチチャネルキャンペーンで使用したりする前に、「[アプリ内メッセージ準備ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/)」を確認することを強くお勧めします。このガイドでは、アプリ内メッセージを作成するときに考慮すべきターゲット設定、コンテンツ、およびコンバージョンに関する疑問について説明しています。
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}

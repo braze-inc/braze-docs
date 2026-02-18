@@ -2,7 +2,7 @@
 nav_title: Agent
 article_title: Agentenschritt
 alias: /agent_step/
-page_order: 0.2
+page_order: 2
 page_type: reference
 description: "In diesem referenzierten Artikel erfahren Sie, wie Sie den Agent-Schritt in Canvas verwenden, um Inhalte zu generieren oder intelligente Entscheidungen in Echtzeit zu treffen."
 tool: Canvas
@@ -79,7 +79,7 @@ Nachdem Sie Ihren Agent-Schritt eingerichtet haben, können Sie die Ausgabe dies
 - Wenn das verbundene Modell einen Rate-Limits-Fehler meldet, versucht Braze es bis zu fünf Mal mit exponentiellem Backoff.  
 - Wenn der Agent aus einem anderen Grund fehlschlägt (z.B. ungültiger API-Schlüssel), wird die Ausgabevariable auf `null` gesetzt.
     - Wenn ein Agent sein tägliches Aufruflimit erreicht, wird die Ausgangsvariable auf `null` gesetzt. Wenn Sie die Ausgabe eines Agenten in einem Nachrichtenschritt verwenden, sollten Sie die Abbruchlogik von Liquid nutzen.
-- Antworten werden für identische Eingaben zwischengespeichert und können für wiederholte identische Aufrufe innerhalb weniger Minuten wiederverwendet werden.
+- Die Antworten werden für identische Eingaben zwischengespeichert und können für wiederholte identische Aufrufe innerhalb weniger Minuten wiederverwendet werden.
     - Antworten, die zwischengespeicherte Werte verwenden, zählen trotzdem für die Gesamtzahl und die täglichen Aufrufe.
 
 ## Analytics  
@@ -102,19 +102,19 @@ Im Allgemeinen empfehlen wir die Verwendung eines Agenten-Schrittes, wenn Sie be
 Nehmen wir an, Sie senden eine personalisierte Nachricht, um einem Nutzer:innen, der zuvor Schokolade und Erdbeere bestellt hat, eine neue Eissorte zu empfehlen. Hier ist der Unterschied zwischen der Verwendung eines Agentenschritts und KI-Artikel-Empfehlungen:
 
 - **Schritt des Agenten:** Verwendet LLMs, um eine qualitative Entscheidung darüber zu treffen, was der Nutzer:in auf der Grundlage der Anweisungen und der Datenpunkte aus dem Kontext, die dem Agenten gegeben wurden, wünschen könnte. In diesem Beispiel könnte ein Agent eine neue Geschmacksrichtung empfehlen, wenn der Nutzer:innen verschiedene Geschmacksrichtungen ausprobieren möchte.
-- **KI Artikel Empfehlungen:** Nutzt Modelle des maschinellen Lernens, um auf der Grundlage vergangener Nutzer:innen-Events, wie z.B. Käufen, die Produkte zu prognostizieren, die ein Nutzer mit hoher Wahrscheinlichkeit haben möchte. In diesem Beispiel würden die KI-Empfehlungen für Artikel eine Geschmacksrichtung (Vanille) vorschlagen, die auf den beiden vorangegangenen Bestellungen des Nutzers (Schokolade und Erdbeere) und dem Verhalten der anderen Nutzer:innen in Ihrem Workspace basiert.
+- **KI-Artikel-Empfehlungen:** Nutzt Modelle des maschinellen Lernens, um auf der Grundlage vergangener Nutzer:innen-Events, wie z.B. Käufen, die Produkte zu prognostizieren, die ein Nutzer mit hoher Wahrscheinlichkeit haben möchte. In diesem Beispiel würden die KI-Empfehlungen für Artikel eine Geschmacksrichtung (Vanille) vorschlagen, die auf den beiden vorangegangenen Bestellungen des Nutzers (Schokolade und Erdbeere) und dem Verhalten der anderen Nutzer:innen in Ihrem Workspace basiert.
 
 ### Wann sollte ich ein Standardausgabeformat für einen Agenten verwenden?
 
 Wir empfehlen die Verwendung des Ausgabeformats, wenn Sie möchten, dass der Agent eine Datenstruktur mit mehreren strukturiert definierten Werten zurückgibt und nicht nur einen einzigen Wert ausgibt. Dies lässt zu, dass die Ausgabe besser als konsistente Kontextvariable formatiert wird.
 
-Sie können zum Beispiel in einem Agenten ein Ausgabeformat verwenden, das auf der Grundlage eines von einem Nutzer:innen eingereichten Formulars eine Beispiel-Reiseroute erstellen soll. Über das Ausgabeformat können Sie festlegen, dass jede Agentenantwort mit Werten für `tripStartDate`, `tripEndDate` und `destination` zurückkommen soll. Jeder dieser Werte kann aus Kontextvariablen extrahiert und in einen Schritt der Nachricht zur Personalisierung mit Liquid eingefügt werden.
+Sie können zum Beispiel in einem Agenten ein Ausgabeformat verwenden, das für einen Nutzer:innen auf der Grundlage eines von ihm eingereichten Formulars eine Beispiel-Reiseroute erstellen soll. Über das Ausgabeformat können Sie festlegen, dass jede Agentenantwort mit Werten für `tripStartDate`, `tripEndDate` und `destination` zurückkommen soll. Jeder dieser Werte kann aus Kontextvariablen extrahiert und in einen Schritt der Nachricht zur Personalisierung mit Liquid eingefügt werden.
 
 ### Wie verwenden die Agentenschritte Eingabedaten?
 
 Agentenschritte verwenden spezifische Kontextdaten, die [dem Agenten zur Verfügung gestellt](#step-4-decide-what-context-to-provide-the-agent) werden. 
 
-Sie haben die Wahl, entweder den gesamten Canvas-Kontext als Kontext an den Agenten zu übergeben oder bestimmte Werte mithilfe von Liquid-Tags in den Kontext dieses Agenten-Schritts zu übertragen. Sie können Connected-Content auch als Eingabewert in einem Agent-Schritt verwenden.
+Sie haben die Wahl, entweder den gesamten Canvas-Kontext als Kontext an den Agenten zu übergeben oder bestimmte Werte mit Hilfe von Liquid-Tags in den Kontext des jeweiligen Agenten-Schrittes zu übertragen. Sie können Connected-Content auch als Eingabewert in einem Agent-Schritt verwenden.
 
 ## Ähnliche Artikel  
 

@@ -163,7 +163,7 @@ Selecciona el catálogo que quieres utilizar para tu bloque de productos. Debes 
 
 ![La pestaña "Contenido" contiene bloques de editor, como los bloques de producto.]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
 
-### Paso 3: Configurar los campos del producto
+### Paso 3: Configurar campos de producto
 
 Selecciona qué [campos de producto](#product-fields) deben mostrarse en el bloque de producto. Selecciona **Aplicar configuración** después de cada cambio para ver las actualizaciones en el editor. 
 
@@ -184,7 +184,7 @@ Cambia las [opciones de diseño](#layout-options) para actualizar cómo se muest
 2. Especifica cuántos elementos quieres mostrar en la vista previa.
 3. Confirma que aparece el número correcto de elementos y que tus opciones de diseño se aplican correctamente. Ten en cuenta que los elementos que aparecen se seleccionan al azar.
 
-![Pestaña "Vista previa como usuario" con una sección desplegable "Bloque de productos dinámicos" que especifica que se muestren 4 artículos.]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
+![Pestaña "Vista previa como usuario" con una sección desplegable "Bloque de productos dinámicos" que especifica que se muestren 4 elementos.]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
 
 {% endtab %}
 {% tab Static product block %}

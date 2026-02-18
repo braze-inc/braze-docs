@@ -113,6 +113,10 @@ Os instantâneos de MAU são calculados uma vez por dia e nunca são alterados r
 Ao integrar o Braze inicialmente, todos os usuários parecerão novos porque o Braze nunca registrou uma sessão para eles antes.
 {% endalert %}
 
+{% alert important %}
+Os usuários associados a mais de um aplicativo são contados separadamente para cada aplicativo. Isso significa que um único usuário pode contribuir para a contagem de *novos usuários* várias vezes se iniciar sessões em diferentes apps no seu espaço de trabalho.
+{% endalert %}
+
 ### Aderência
 
 O valor de *aderência* é uma proporção entre o DAU e o MAU de um determinado período. Em essência, a aderência mede a porcentagem de seus MAUs que retornam diariamente.

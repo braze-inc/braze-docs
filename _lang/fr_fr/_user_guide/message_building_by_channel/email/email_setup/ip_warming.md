@@ -5,7 +5,8 @@ page_order: 1
 page_type: reference
 description: "Le présent article de référence couvre le sujet du réchauffement d’adresses IP et des bonnes pratiques."
 channel: email
-
+local_redirect:
+  automated-ip-warming: '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/automated_ip_warming/'
 ---
 
 # Réchauffement d’adresses IP
@@ -23,14 +24,6 @@ Les fournisseurs de services Internet arrêtent la livraison des e-mails lorsque
 Si l'engagement est modéré, ils peuvent continuer à étrangler votre e-mail pour collecter davantage de données d'engagement afin de déterminer avec plus de certitude si l'e-mail est un spam ou non. Si l’e-mail a des mesures d’engagement très élevées, il peut cesser de faire passer cet e-mail entièrement. Ils utilisent ces données pour créer une réputation de courrier électronique qui déterminera finalement si vos e-mails sont filtrés automatiquement vers le spam.
 
 Si votre domaine ou votre IP est bloqué par un FAI, les messages du [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) contiendront des informations sur les sites web à visiter pour faire appel à ces FAI et pour sortir de ces listes.
-
-## IP warming automatisé
-
-Vous pouvez utiliser le réchauffement d'adresses IP automatisé pour augmenter progressivement votre volume d'envoi quotidien, ce qui permet aux fournisseurs de boîtes de réception d'apprendre et de faire confiance à vos habitudes d'envoi. Surveillez votre réchauffeur IP en sélectionnant la tuile **Réchauffement IP automatisé** dans la section **Reprendre là où vous vous êtes arrêté de** votre tableau de bord d'accueil. 
-
-Braze envoie d'abord à vos abonnés les plus engagés, ce qui permet au volume quotidien d'augmenter à un rythme correspondant aux meilleures pratiques. Ensuite, Braze suit les signaux d'engagement et de livrabilité. Si un problème est détecté, votre planification est ajustée automatiquement.
-
-![Suivi du réchauffement d'adresses IP avec le volume d'envoi pour la semaine du 16 janvier.]({% image_buster /assets/img/automated_ip_warming_example.png %})
 
 ## Planifications de réchauffement d’adresses IP
 

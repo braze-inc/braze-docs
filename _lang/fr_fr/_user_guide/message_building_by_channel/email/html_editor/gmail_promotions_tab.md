@@ -115,7 +115,7 @@ Bien que vous puissiez utiliser Liquid dans ce script, nous vous conseillons for
 
 ## Mesurer les cartes Gmail
 
-Gmail ne renvoie pas d'analyse/analytique sur ces cartes, et les fournisseurs de services d'e-mailing (ESP) comme Braze ne peuvent pas insérer leur propre suivi des liens dans la section d'en-tête (y compris les cartes de promotion et les carrousels de produits). Toutefois, vous pouvez ajouter des paramètres UTM ou des codes uniques aux URL lors de la configuration. Ces paramètres vous permettent de suivre l'engagement à l'aide de votre propre analyse/analytique de site web ou du suivi des conversions, car le suivi fait partie de l'URL elle-même - il n'est pas inséré par l'ESP. Le suivi des clics au niveau ESP n'est pas disponible pour ces liens.
+Gmail ne renvoie pas d'analyse/analytique sur ces cartes, et les fournisseurs de services d'e-mailing (ESP) comme Braze ne peuvent pas insérer leur propre suivi de lien sur les liens de la section d'en-tête (y compris les cartes de promotion et les carrousels de produits). Toutefois, vous pouvez ajouter des paramètres UTM ou des codes uniques aux URL lors de la configuration. Ces paramètres vous permettent de suivre l'engagement à l'aide de votre propre analyse/analytique de site web ou du suivi des conversions, car le suivi fait partie de l'URL elle-même - il n'est pas inséré par l'ESP. Le suivi des clics au niveau ESP n'est pas disponible pour ces liens.
 
 ### Incorporer des images
 
@@ -149,4 +149,4 @@ Gmail détermine quand et à qui afficher la carte, il n'y a donc aucune garanti
 
 Les annotations ne sont pas prises en charge par Google Workspace. Pour prévisualiser les personnalisations, vous pouvez créer une adresse e-mail personnelle avec Gmail.
 
-Notez que les annotations ne s'affichent pas dans l'onglet **principal** ni dans aucun autre onglet de l'application mobile Gmail. Les annotations ne s'affichent pas après l'ouverture d'un e-mail par un utilisateur ou si vous utilisez le type d'annotation `DiscountOffer` et que l'heure et la date ont déjà expiré.
+Notez que les annotations ne s'affichent pas dans l'onglet **principal** ni dans aucun autre onglet de l'application mobile Gmail. Les annotations ne s'affichent pas après qu'un utilisateur a ouvert un e-mail ou si vous utilisez le type d'annotation `DiscountOffer` et que l'heure et la date ont déjà expiré.

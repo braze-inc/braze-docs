@@ -106,6 +106,7 @@ The first scenario is if the `app_id` field is populated when using the `/users/
 The second scenario is if the `app_id` field is populated when using the `/users/track` endpoint to migrate push tickets, such as in this example: 
 
 ```json
+{
 "app_group_id": "{YOUR_APP_GROUP_ID}",
 "attributes": [
 {
@@ -119,4 +120,5 @@ The second scenario is if the `app_id` field is populated when using the `/users
       ]
   }
 ]
+}
 ```

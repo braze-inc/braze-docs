@@ -48,7 +48,7 @@ Braze lehnt bestimmte Zeichen ab und markiert die Adresse als ungültig. Wenn ei
 
 Bei dieser Überprüfung handelt es sich um eine Syntaxprüfung, nicht um einen Validierungsdienst. Ein Ziel dieses Prozesses ist die Unterstützung internationaler Zeichen (wie UTF-8) im lokalen Teil der E-Mail Adresse.
 
-Braze überprüft die Syntax sowohl für den lokalen als auch für den Host-Teil einer E-Mail Adresse. Der lokale Teil ist alles, was vor dem Asperand (@) steht; der Host-Teil ist alles, was danach kommt. Der lokale Teil kann mit jedem zulässigen Zeichen außer einem Punkt (.) beginnen und enden. Dieser Prozess berücksichtigt nicht, ob die Domain einen gültigen MX Server hat oder ob ein Nutzer:innen in dieser Domain existiert.
+Braze prüft die Syntax sowohl für den lokalen als auch für den Host-Teil einer E-Mail Adresse. Der lokale Teil ist alles, was vor dem Asperand (@) steht; der Host-Teil ist alles, was danach kommt. Der lokale Teil kann mit jedem zulässigen Zeichen außer einem Punkt (.) beginnen und enden. Dieser Prozess berücksichtigt nicht, ob die Domain einen gültigen MX Server hat oder ob ein Nutzer:innen in dieser Domain existiert.
 
 {% alert important %}
 Wenn der Domain-Teil nicht standardmäßige ASCII-Zeichen enthält, muss er vor der Übergabe an Braze [mit Punycode kodiert](https://www.punycoder.com/) werden.
@@ -104,7 +104,7 @@ Der Domain-Name muss diese Parameter erfüllen:
 - Muss mindestens einen Punkt (.) enthalten
 - Kann nicht zwei oder mehr aufeinanderfolgende Perioden enthalten
 - Jede durch einen Punkt getrennte Label muss:
-	- Enthält nur alphanumerische Zeichen (a-z oder 0-9) und den Bindestrich (-)
+	- Nur alphanumerische Zeichen (a-z oder 0-9) und den Bindestrich (-) enthalten
 	- Beginnen Sie mit einem alphanumerischen Zeichen (a-z oder 0-9)
 	- Ende mit einem alphanumerischen Zeichen (a-z oder 0-9)
 	- Enthält 1 bis 63 Zeichen

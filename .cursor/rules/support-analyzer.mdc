@@ -1,0 +1,128 @@
+---
+alwaysApply: false
+---
+
+# Drafting docs updates from support tickets
+
+Analyze Braze support case CSVs to identify documentation gaps and propose docs updates.
+
+## CSV Schema
+
+| Column | Description |
+|--------|-------------|
+| `Support Cases Email Message Case ID` | Primary case identifier (e.g., `500VP00000nQrMKYA0`) |
+| `Support Cases Email Message Sent Date` | Timestamp of message |
+| `Support Cases Description` | Original support question |
+| `Support Cases Email Message Text Body` | Raw message content |
+| `Support Cases Email Message Text Body Cleaned` | Cleaned message for analysis |
+
+---
+
+## Step 1: Triage & Categorize
+
+For each unique Case ID, determine if docs action is needed:
+
+| Category | Criteria | Action |
+|----------|----------|--------|
+| **Docs Gap** | Customer couldn't find existing info; answer exists but is unclear | Update existing docs |
+| **Docs Discrepancy** | Docs and source code contradict each other | Update existing docs |
+| **New Feature** | Question about recently released or undocumented feature | Draft new section |
+| **Edge Case** | Unusual but valid use case not covered | Add FAQ or troubleshooting |
+| **Support-Only** | Account-specific, requires Braze internal access, or one-off config | Skip (no docs change) |
+| **Bug/Product** | Issue requiring code fix, not docs | Skip (escalate to eng) |
+
+---
+
+## Step 2: Per-Ticket Analysis
+
+For each **actionable** ticket:
+
+1. **Extract Q&A** - Distill the core question and resolution from message thread
+2. **Verify** - Cross-reference with source code of the Main Product at `../platform`. Do not rely solely on support cases or documentation to verify. Always cross-reference with source code. If you can verify the resolution against the source code, add a reference to the source file(s). If you cannot verify the resolution, say that you could not verify the resolution against the source code.
+3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
+4. **Document source support case number** - Which case numbers were analyzed?
+
+### Output Format Per Ticket to output.md and chat console
+
+```markdown
+### Case: [CASE_ID]
+- **Category**: [Docs Gap | Docs Discrepancy | New Feature | Edge Case]
+- **Question**: [One-sentence summary]
+- **Resolution**: [Brief answer]
+- **Verified behavior**: [Complete answer]
+- **Target Doc**: `_docs/_user_guide/path/to/file.md` (or "NEW: suggested_location")
+- **Suggested Change**: [What to add/update]
+```
+---
+
+## Step 3: Consolidate & Prioritize
+
+After processing all tickets:
+
+1. **Merge Duplicates** - Group tickets with identical or overlapping issues
+2. **Prioritize** by:
+   - Frequency (same question from multiple customers)
+   - Impact (blocks core functionality vs. edge case)
+   - Effort (quick clarification vs. new guide)
+3. **Batch by Doc** - Group changes targeting the same file
+4. **Maintain sources** - Maintain list of which Case IDs were referenced for the update
+
+---
+
+## Step 4: Draft Updates
+
+For each docs update:
+
+1. Read the target file to understand existing structure
+2. Draft changes following conventions in the codebase based on the style 
+guides in `_docs/_contributing/style_guide/*`
+3. Keep additions concise and scannable (bullets, tables, code blocks)
+4. Add to FAQ sections when appropriate (see `_docs/_user_guide/**/faq.md` patterns)
+
+---
+
+## Step 5: Create a Properly Named Branch
+For each file that is changed in `_docs`, create a Branch with the naming convention: `[SA]-Cursor-<pagename>-update-<ddmmyyyy>-`  
+Example: `[SA]-Cursor-liquid_use_cases-02122026`  
+
+---
+
+## Step 6: Commit and Push Changes
+Stage and Commit all changes in `_docs` with a meaningful message derived from the summary
+
+---
+
+## Step 7: Generate the PR for each branch
+Create each PR with the naming conventin: `[SA] update summary`
+Example: `[SA] Add FAQ entry about machine opens vs other opens`
+
+Cursor fills out the PR automatically:
+
+```text
+# Changes
+* [If this was related to a Docs discrepancy, make sure to note to tag the Eng owner in the description]
+* [Cursor analyzes code changes and lists them]
+* List of changes to help the reviewer understand the scope
+* List the Salesforce case IDs that were addressed in the update in a bulleted list of URLs with the format `https://braze.lightning.force.com/lightning/r/Case/<case ID>/view`
+```
+
+## Step 8: Assign Reviewers Based Code Ownership where possible
+Cursor identifies team members based on the CODEOWNERS file. If no owner is found for that file, assign to @braze-inc/docs-team
+
+
+## Source Code References
+
+| Resource | Path |
+|----------|------|
+| Docs repo | (current repo) |
+| Main product | `../platform` |
+
+
+## Example Prompt
+
+```
+@support-analyzer.mdc Analyze the CSV file in _data/ and draft docs updates.
+Focus on [specific product area] if applicable.
+```
+
+<!-- export from Looker https://braze.looker.com/x/qB0GXtyFV4YjUdsMKFgf85 -->

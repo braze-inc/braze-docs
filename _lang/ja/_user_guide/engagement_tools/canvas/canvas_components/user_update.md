@@ -2,7 +2,7 @@
 nav_title: ユーザー更新
 article_title: ユーザーの更新 
 alias: "/user_update/"
-page_order: 6
+page_order: 12
 page_type: reference
 description: "この記事では、ユーザー更新コンポーネントの概要と、そのキャンバスでの使用方法を説明します。"
 tool: Canvas
@@ -124,7 +124,7 @@ tool: Canvas
 
 ユーザーの更新ステップを使用して、`canvas_entry_property` を永続的に保存できます。例えば、アイテムがカートに追加されたときにトリガーされるイベントがあるとします。カートに追加された最新のアイテムの ID を保存し、それをリマーケッティングキャンペーンに使用できます。パーソナライゼーション機能を使用して、キャンバスのエントリプロパティを取得し、属性に保存します。
 
-![アイテムIDで属性"most_recent_cart_item" を更新するユーザー更新ステップ。]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
+![ユーザー更新ステップ。アイテムIDで属性"most_recent_cart_item" を更新する。]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
 
 ### パーソナライゼーション
 

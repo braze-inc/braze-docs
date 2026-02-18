@@ -29,7 +29,7 @@ O Braze Audience Sync com a Criteo é uma integração do Audience Sync Pro. Par
 
 ## Pré-requisitos 
 
-Você deve garantir que os itens a seguir tenham sido criados e/ou concluídos antes de configurar a sincronização do público com a Criteo.
+Você deve garantir que os seguintes itens tenham sido criados e/ou concluídos antes de configurar a sincronização do público com a Criteo.
 
 | Requisito | Origin | Descrição |
 | --- | --- | --- |

@@ -53,7 +53,7 @@ Campaign approval is not supported for [API campaigns]({{site.baseurl}}/api/api_
 
 ## Setting user permissions
 
-After you turn on the approval workflow, you must set user permissions so your dashboard users can approve or deny Campaigns and Canvases. Both permissions can also be applied to Workspaces or [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) or added to a [permission set]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets).
+After you turn on the approval workflow, you must set user permissions so your company users can approve or deny Campaigns and Canvases. Both permissions can also be applied to Workspaces or [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) or added to a [permission set]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets).
 
 {% tabs %}
 {% tab campaign %}

@@ -146,14 +146,14 @@ Você pode encontrar um snippet de amostra e a implementação do React [no site
 ![Insira a chave de API do espaço de trabalho de sua conta Braze e o URL das instâncias da Braze]({% image_buster /assets/img/survicate/survicate_13.png %})
 
 {% alert important %}
-Para conectar a Survicate ao Braze, a chave de API do Braze precisa ter as permissões `users.track`.
+Para conectar o Survicate ao Braze, a chave de API do Braze precisa ter as permissões `users.track`.
 {% endalert %}
 
 ### Conectando suas pesquisas ao Braze
 
 Agora que a integração do Braze está conectada, você pode definir configurações individuais para cada pesquisa. Acesse sua pesquisa, selecione a guia **Connect (Conectar** ) e escolha **Braze** na lista de integrações disponíveis.
 
-![Acesse sua pesquisa, selecione a guia Connect (Conectar) e escolha Braze]({% image_buster /assets/img/survicate/survicate_14.png %})
+![Acesse sua pesquisa, selecione a guia Conectar e escolha Braze]({% image_buster /assets/img/survicate/survicate_14.png %})
 
 ### Envio de respostas ao Braze como atributos personalizados
 
@@ -229,11 +229,11 @@ Depois de coletar as respostas por meio da pesquisa do Braze, é hora de analisa
 
 ### Feedback no Survicate
 
-Depois que o questionário começar a coletar respostas, elas serão exibidas imediatamente na guia Análise do questionário.
+Depois que o questionário começar a coletar respostas, elas serão imediatamente exibidas na guia Análise do questionário.
 
 ![Respostas na guia Analisar]({% image_buster /assets/img/survicate/survicate_28.png %})
 
-A guia Analisar mostra os resultados gerais com estatísticas e dados ao longo do tempo, bem como respostas individuais para examinar detalhadamente cada envio de pesquisa.
+A guia Analyze (Analisar) mostra os resultados gerais com estatísticas e dados ao longo do tempo, bem como respostas individuais para examinar detalhadamente cada envio de pesquisa.
 
 ### Feedback em Braze
 

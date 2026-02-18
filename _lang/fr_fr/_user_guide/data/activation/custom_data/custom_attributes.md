@@ -158,9 +158,7 @@ Prenez en compte le fait que, si vous saisissez des valeurs comprenant des espac
 | Vérifier si l'attribut chaîne **ne correspond pas partiellement à l'une des** chaînes de caractères saisies. | **NE CONTIENT AUCUN DES ÉLÉMENTS SUIVANTS** | **CHAÎNE DE CARACTÈRES**<br>Sensible à la casse ; plusieurs chaînes de caractères autorisées (256 au maximum) | Si ce filtre spécifie `gold` et qu'un profil utilisateur ne contient pas `gold` dans une chaîne de caractères, l'utilisateur correspondra à ce filtre.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-Une chaîne de caractères de date telle que "12-1-2021" ou "12/1/2021" sera convertie en objet datetime et traitée comme un [attribut time]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time).
-{% endalert %}
+{% include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 Lorsque vous effectuez une segmentation à l'aide du filtre **DOES NOT MATCH REGEX**, vous devez déjà disposer d'un attribut personnalisé avec une valeur attribuée dans ce profil utilisateur. Braze suggère d’utiliser la logique « OR » (OU) pour vérifier si un attribut personnalisé est vide pour s’assurer que les utilisateurs sont correctement ciblés.

@@ -83,7 +83,9 @@ The custom attribute's data type determines the comparisons that are valid for a
       "value": "blue"
     }
 }
+```
 
+```json
 {
   "custom_attribute":
   {
@@ -92,7 +94,9 @@ The custom attribute's data type determines the comparisons that are valid for a
     "value": "pizza"
   }
 }
+```
 
+```json
 {
   "custom_attribute":
   {
