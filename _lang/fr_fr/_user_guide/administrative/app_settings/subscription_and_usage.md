@@ -68,7 +68,7 @@ Les champs de cette section sont définis comme suit :
 - **Type de contrat :** Structure de la période de facturation, annuelle ou pluriannuelle.
 - **Date de début et de fin du contrat :** Date de début et de fin de l’intégralité du contrat.
 - **Points de données alloués :** La quantité de points de données alloués dans le contrat par terme de facturation.
-- **Utilisation des points de données du contrat :** Total cumulé de tous les points de données enregistrés pendant la durée de vie du contrat, qui n'est pas réinitialisé lors de la prochaine période de facturation.
+- **Utilisation des points de données du contrat :** Total cumulé de tous les points de données enregistrés pendant la durée du contrat, qui n'est pas réinitialisé lors de la prochaine période de facturation.
 
 ![Section Détails du contrat de l’onglet Utilisation du point de données total]({% image_buster /assets/img/contract_details.png %})
 

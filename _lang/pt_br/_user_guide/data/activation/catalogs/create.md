@@ -37,7 +37,7 @@ Antes de fazer upload do arquivo CSV, certifique-se de que ele atenda aos seguin
 |-----------------|---------|
 | Cabeçalhos | A primeira coluna do arquivo CSV deve ter o nome `id` e cada linha deve ter um valor exclusivo `id`. |
 | Colunas | Um arquivo CSV pode ter no máximo 1.000 campos (colunas), e cada nome de coluna pode ter até 250 caracteres. |
-| Tamanho do arquivo | Nos planos Free, o tamanho total de todos os arquivos CSV em uma empresa é limitado a 100 MB. Nos planos Pro, o tamanho máximo de um único arquivo CSV é de 2 GB. |
+| Tamanho do arquivo | Nos planos Free, o tamanho total de todos os arquivos CSV em uma empresa é limitado a 100 MB. Para os planos Pro, o tamanho máximo de um único arquivo CSV é de 2 GB. |
 | Valores de campo | Cada célula (valor de campo) pode conter até 5.000 caracteres. |
 | Caracteres válidos | A coluna `id` e todos os valores de cabeçalho só podem conter letras, números, hífens e sublinhados. |
 | Tipos de dados | Os tipos de dados suportados para fazer upload de um arquivo CSV incluem string, integer, float, boolean ou datetime. |

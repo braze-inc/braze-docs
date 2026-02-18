@@ -92,5 +92,5 @@ Use esta Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_en
 
 - Os usuários só se inscrevem por 90 dias. Se o item não estiver novamente em estoque em 90 dias, o usuário terá sua inscrição cancelada.
 - Ao usar a regra de notificação **Notificar todos os usuários inscritos**, a Braze notificará 100.000 usuários em 10 minutos.
-- O Braze processará 10 solicitações de atualização de itens do catálogo por minuto. Os pontos de extremidade de atualização permitem 50 atualizações de itens por solicitação, suportando até 500 atualizações de itens por minuto que podem disparar notificações de falta de estoque
+- O Braze suporta até 50.000 itens atualizados diariamente que são elegíveis para disparar notificações de falta de estoque. É possível ter até 100 milhões de inscrições ativas em um determinado momento, em que cada inscrição representa um perfil de usuário inscrito para assistir a um item do catálogo.
 

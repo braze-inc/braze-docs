@@ -27,7 +27,7 @@ Para archivar un grupo de suscripción de WhatsApp, sigue estos pasos:
 2. Ve a **Audiencia** > **Gestión de grupos de suscripción** y busca el grupo de suscripción asociado al número de teléfono de WhatsApp que quieres mover.
 3. Pasa el ratón por encima del estado del grupo de suscripción y selecciona <i class="fa-solid fa-box-archive"></i> **Archivo**, que marcará el grupo de suscripción como inactivo pero no lo eliminará.
 
-![Botón "Archivar" que aparece al pasar el ratón sobre el estado "Activo" de un grupo de suscripción.]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
+![Botón "Archivar" que aparece al pasar el ratón por encima del estado "Activo" de un grupo de suscripción.]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
 
 ### Paso 2: Integrar el número de teléfono de WhatsApp en el nuevo espacio de trabajo
 

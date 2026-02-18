@@ -1,7 +1,7 @@
 ---
 nav_title: Configuración de idioma
 article_title: Configuración de idioma
-page_order: 2.5
+page_order: 3
 page_type: reference
 description: "Este artículo describe cómo cambiar el idioma en el que aparece el panel de control de Braze."
 

@@ -2,7 +2,7 @@
 nav_title: División de decisiones
 article_title: División de decisiones 
 alias: /decision_split/
-page_order: 2
+page_order: 7
 page_type: reference
 description: "Este artículo de referencia explica cómo crear y utilizar divisiones de decisión en el lienzo."
 tool: Canvas
@@ -11,7 +11,7 @@ tool: Canvas
 
 # División de decisiones 
 
-> El componente Decision Split de Canvas le permite ofrecer experiencias personalizadas y en tiempo real a sus usuarios.
+> El componente de división de decisiones en Canvas te permite entregar experiencias personalizadas y en tiempo real a tus usuarios.
 
 ![Un paso para la división de decisiones llamado "¿Push habilitado?" para usuarios que no tienen push habilitado y usuarios que sí lo tienen.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 

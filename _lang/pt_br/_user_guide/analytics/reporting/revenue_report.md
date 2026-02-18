@@ -40,7 +40,7 @@ Você pode visualizar os seguintes dados no **gráfico Performance Over Time**:
 ## Compreensão dos cálculos de receita
 
 {% alert note %}
-Quando a receita é registrada para uma moeda sem taxa de câmbio, o Braze a registra como uma compra de US$ 0,00.
+Quando você registra a receita de uma moeda sem uma taxa de câmbio, o Braze a registra como uma compra de US$ 0,00.
 {% endalert %}
 
 <style>

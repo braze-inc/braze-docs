@@ -63,6 +63,12 @@ Tendrás que indicar la URL de destino para cualquier enlace con una URL base qu
 
 ![Sección "Botones" con campos para el nombre del botón, la URL del sitio web y la URL de seguimiento de los clics.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
+{% alert important %}
+**Envío de mensajes de plantilla a través de la API**: El seguimiento de clics de WhatsApp (utilizando `brz.ai` o un dominio de seguimiento personalizado y el campo **URL de seguimiento de clics** en el creador de mensajes) no es compatible cuando se envían mensajes de plantilla de WhatsApp a través del [punto final`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/).
+
+Si envías un mensaje de plantilla a través de la API, puedes rellenar variables de URL de CTA (utilizando `button_variables`), pero Braze no genera una URL de seguimiento de clics ni un enlace de redireccionamiento en el flujo de solicitud de la API. Para utilizar el seguimiento de clics, envía la plantilla desde el panel de Braze o a través de un desencadenante de campaña Braze.
+{% endalert %}
+
 {% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
 ## Personalización líquida en las URL

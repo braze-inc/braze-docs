@@ -1,6 +1,7 @@
 ---
 nav_title: Soporte de Braze
 article_title: Soporte
+page_order: 7
 description: "Esta página te ayudará a localizar el portal de soporte de Braze para enviar tus comentarios sobre los productos Braze. Sólo podrán acceder a esta página los clientes de Braze."
 alias: /braze_support/
 page_type: reference

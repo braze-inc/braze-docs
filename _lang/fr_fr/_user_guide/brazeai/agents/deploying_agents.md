@@ -3,6 +3,7 @@ nav_title: Déployer des agents
 article_title: Déployer des agents personnalisés
 description: "Découvrez comment utiliser les agents personnalisés dans Braze après les avoir créés."
 alias: /deploying-agents/
+page_order: 2
 ---
 
 # Déployer des agents personnalisés
@@ -13,15 +14,15 @@ alias: /deploying-agents/
 Les Braze Currents sont actuellement en version bêta. Pour obtenir de l'aide, contactez votre gestionnaire satisfaction client.
 {% endalert %}
 
-## Utilisation des agents
+## Utilisation de l'agent
 
 Dans la section **Utilisation de l'agent** de votre agent, vous pouvez référencer et naviguer vers les endroits où l'agent est activement utilisé dans les catalogues et les toiles.
 
-![La section Utilisation des agents montre deux agents actifs et un agent inactif pour les toiles.]( {% image_buster /assets/img/ai_agent/agent_usage.png %} )
+![La section Utilisation des agents montre deux agents actifs et un agent inactif pour les toiles.]({% image_buster /assets/img/ai_agent/agent_usage.png %})
 
 ## Agents in Canvas  
 
-Vous pouvez utiliser les agents comme des étapes d'un parcours pour personnaliser les messages ou guider la prise de décision en temps réel. Pour connaître les étapes détaillées de la configuration, reportez-vous à la section [Étape de l'agent.]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/)
+Vous pouvez utiliser les agents comme des étapes d'un parcours pour personnaliser les messages ou guider la prise de décision en temps réel. Pour les étapes détaillées de la configuration, reportez-vous à l'[étape Agent.]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/)
 
 ### Cas d’utilisation
 
@@ -43,7 +44,7 @@ Vous pouvez appliquer un agent aux champs du catalogue afin qu'il génère ou ca
 
 | Cas d’utilisation | Description |
 | --- | --- |
-| Générer des descriptions de produits | Créez automatiquement un court texte marketing pour les nouvelles entrées du catalogue, par exemple en générant une description accrocheuse à partir des données structurées du produit telles que le nom, la catégorie et les fonctionnalités. |
+| Générer des descriptions de produits | Créez automatiquement un texte marketing court pour les nouvelles entrées du catalogue, par exemple en générant une description accrocheuse à partir des données structurées du produit telles que le nom, la catégorie et les fonctionnalités. |
 | Enrichir les attributs du produit | Complétez les valeurs manquantes telles que la famille de couleurs, le style ou la saison en vous basant sur le nom et les détails d'un produit. Par exemple, si le nom d'un produit est "Laguna Polarized Sunglasses", l'agent peut attribuer le style "sport" et la famille de couleurs "bleu". |
 | Calculer les champs dérivés | Utilisez les champs existants pour générer de nouvelles données, telles qu'un "score d'adéquation" basé sur les attributs ou une "étiquette de popularité" à partir des ventes et du nombre d'avis. |
 | Catégoriser ou taguer des éléments | Attribuez des tags pour la logique de recommandation afin que les modèles de personnalisation puissent segmenter les produits plus efficacement. Par exemple, vous pouvez taguer les produits comme "outdoor", "festival ready" ou "premium". |
