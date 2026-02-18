@@ -77,25 +77,25 @@ In den folgenden Tabellen finden Sie Beispiele für Links in einem E-Mail-Text, 
 
 **Logik:** Braze fügt ein Fragezeichen (?) ein und fügt den ersten Abfrageparameter in die URL ein.
 
-| Link im E-Mail-Text    | Link mit Aliasing                     |
+| Link im Text der E-Mail    | Link mit Aliasing                     |
 |-----------------------|----------------------------------------|
-| https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk |
+| `https://www.braze.com` | `https://www.braze.com?lid=slfdldtqdhdk` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Link mit weiteren Abfrageparametern
 
 **Logik:** Braze erkennt andere Abfrageparameter und fügt `lid=` an das Ende der URL an.
 
-| Link im E-Mail-Text                                            | Link mit Aliasing                                                             |
+| Link im Text der E-Mail                                            | Link mit Aliasing                                                             |
 |---------------------------------------------------------------|--------------------------------------------------------------------------------|
-| https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz |
+| `https://www.braze.com?utm_campaign=retention&utm_source=email` | `https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTML-Link
 
 **Logik:** Braze erkennt, dass ein Link eine URL ist und bereits ein Fragezeichen (?) enthält. Daher wird der Abfrageparameter `lid` nach dem Fragezeichen angefügt.
 
-| Link im E-Mail-Text                                                | Link mit Aliasing                                                                |
+| Link im Text der E-Mail                                                | Link mit Aliasing                                                                |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -104,18 +104,18 @@ In den folgenden Tabellen finden Sie Beispiele für Links in einem E-Mail-Text, 
 
 **Logik:** Braze erwartet, dass die URL eine Standardstruktur verwendet, bei der Anker (#) nach einem Fragezeichen (?) vorhanden sind. Da Braze von links nach rechts liest, werden das Fragezeichen und der Wert `lid` vor dem Anker angehängt.
 
-| Link im E-Mail-Text                               | Link mit Aliasing                                                |
+| Link im Text der E-Mail                               | Link mit Aliasing                                                |
 |--------------------------------------------------|-------------------------------------------------------------------|
-| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email |
+| `https://www.braze.com#bookmark1?utm_source=email` | `https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Link mit Anker- und Erfassungs-Tag
 
-**Logik:** Wenn Sie Link Aliasing mit URLs verwenden, die Anker (#) enthalten, erwartet Braze, dass der Anker nach den Abfrageparametern platziert wird. Das bedeutet, dass der Wert `lid` vor dem Anker angehängt werden muss, damit er richtig verfolgt werden kann. Da Braze die URL von links nach rechts liest, sollten das Fragezeichen (?) und `lid` vor dem Anker stehen.
+**Logik:** Wenn Sie Link Aliasing mit URLs verwenden, die Anker (#) enthalten, erwartet Braze, dass der Anker nach den Abfrageparametern platziert wird. Das bedeutet, dass der Wert `lid` für ein korrektes Tracking **vor dem** Anker angehängt werden muss, und da Braze die URL von links nach rechts liest, sollten das Fragezeichen (?) und `lid` vor dem Anker stehen.
 
-| Link im E-Mail-Text                                                                        | Link mit Aliasing                                                                                           |
+| Link im Text der E-Mail                                                                        | Link mit Aliasing                                                                                           |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a>` {%endraw%} |
+| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions?lid={{link_alias}}#special-offer">Check out our special offer!</a>` {%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Link-Aliase tracken

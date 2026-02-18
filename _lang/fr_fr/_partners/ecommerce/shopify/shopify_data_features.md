@@ -317,7 +317,7 @@ L'intégration de Shopify utilise les [événements recommandés par l'eCommerce
        "price": "80.00",
        "fulfillment_status": null
      }
-   ],
+   ]
  }
 }
 ```
@@ -391,9 +391,9 @@ L'intégration de Shopify utilise les [événements recommandés par l'eCommerce
 {% subtab Account login %}
 ```json
 {
-	name: "shopify_account_login",
-	properties: {
-	source: "braze-mock-storefront.myshopify.com"
+	"name": "shopify_account_login",
+	"properties": {
+	"source": "braze-mock-storefront.myshopify.com"
   }
 }
 ```
@@ -513,7 +513,7 @@ Vous pouvez ensuite ajouter les étiquettes Liquid suivantes dans votre message 
 | Variable | Liquid templating |
 \|-------------------------|-----------------------------------------------------|
 | cart_id | `{{event_properties.${cart_id}}}` |
-| devises | `{{event_properties.${currency}}}` |
+| devise | `{{event_properties.${currency}}}` |
 | réductions | `{{event_properties.${discounts}}}` |
 | order_id | `{{event_properties.${order_id}}}` |
 | product_id | `{{event_properties.${products}[0].product_id}}` |
@@ -578,7 +578,7 @@ Statut Confirmé | `{{event_properties.${confirmed}}}` |
 | Expédition de la commande | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | UGS de la commande | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 Titre de la commande | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Fournisseur de la commande | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Fournisseur de la commande | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | ID de la variante | `{{event_properties.${line_items}[0].variant_id}}` |
 | Titre de la variante | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
@@ -628,7 +628,7 @@ Statut Confirmé | `{{event_properties.${confirmed}}}` |
 | Expédition de la commande | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | UGS de la commande | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 Titre de la commande | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Fournisseur de la commande | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Fournisseur de la commande | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | ID de la variante | `{{event_properties.${line_items}[0].variant_id}}` |
 | Titre de la variante | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }

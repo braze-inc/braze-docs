@@ -18,7 +18,7 @@ search_rank: 3.9
 
 ## Etapa 1: Escolha onde construir sua mensagem
 
-Use campanhas para envio único e simples de mensagens (como informar os usuários sobre um produto com uma mensagem). Use Canvases para jornadas de usuários em múltiplas etapas (como enviar sugestões de produtos personalizadas com base no comportamento do usuário ao longo do tempo).
+Use campanhas para mensagens únicas e simples (como informar os usuários sobre um produto com uma mensagem). Use Canvases para jornadas de usuários em múltiplas etapas (como enviar sugestões de produtos personalizadas com base no comportamento do usuário ao longo do tempo).
 
 {% tabs %}
 {% tab Campaign %}
@@ -88,9 +88,11 @@ Escreva o que você quiser. Não há limites, mas quanto mais rápido você cons
 
 Adicione uma imagem ao seu cartão de conteúdo selecionando **Add Image** ou fornecendo uma URL de imagem. Selecionar **Adicionar Imagem** abre a **Biblioteca de Mídia**, onde você pode selecionar uma imagem previamente carregada ou adicionar uma nova. Cada tipo de mensagem e plataforma pode ter suas próprias proporções e requisitos sugeridos, então certifique-se de verificar quais são antes de encomendar ou criar uma imagem do zero! Tenha em mente que os campos de mensagem do cartão de conteúdo são limitados a 2 KB no tamanho total.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Fixar no topo
 
-O Braze exibe um cartão fixado no topo do feed de um usuário e o usuário não pode descartá-lo. Se o feed de um usuário tiver vários cartões fixados, o Braze os ordena cronologicamente. Depois de enviar um cartão, você não pode atualizar retroativamente sua opção de fixação. Alterar esta opção após enviar uma campanha afeta apenas envios futuros.
+O Braze exibe um cartão fixado no topo do feed de um usuário e o usuário não pode descartá-lo. Se o feed de um usuário tiver vários cartões fixados, o Braze os ordena cronologicamente. Depois de enviar um cartão, você não pode atualizar retroativamente sua opção fixada. Alterar esta opção após enviar uma campanha afeta apenas envios futuros.
 
 ![Lado a lado da prévia do cartão de conteúdo na Braze para Mobile e Web com a opção "Fixar este cartão no topo do feed" selecionada.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
@@ -131,9 +133,7 @@ Os Cartões de Conteúdo podem ser entregues com base em um horário agendado, u
 
 Você também pode definir a duração e o [horário de silêncio]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) da campanha e determinar a expiração do cartão de conteúdo. Defina uma data de expiração específica ou os dias até a expiração de um cartão, até 30 dias. Todas as variantes têm datas de expiração idênticas.
 
-{% alert note %}
-A limitação de frequência não se aplica aos Cartões de Conteúdo.
-{% endalert %}
+{% multi_lang_include alerts/note_alerts.md alert='Content Cards frequency capping' %}
 
 ##### Entrega programada
 
@@ -170,101 +170,155 @@ Em seguida, confira [os relatórios do Content Card]({{site.baseurl}}/user_guide
 
 ## Coisas para saber
 
-### Limitações de tamanho para Cartões de Conteúdo
+### Limitações de carga útil e feed
 
-O tamanho de uma carga útil de Cartão de Conteúdo pode ser de até 2 KB após a renderização do Liquid. Isso inclui o **Título**, **Mensagem**, **URL da Imagem**, **Texto do Link**, **URL(s) do Link** e **Pares Chave-Valor** (nomes e valores). No entanto, esse limite não inclui o tamanho da imagem—apenas o comprimento da URL da imagem.
+Para suportar a performance, os Cartões de Conteúdo têm duas restrições principais: um limite no tamanho da carga útil para cada cartão e um número máximo de cartões que podem aparecer em um feed.
+
+#### Limitações de tamanho para Cartões de Conteúdo
+
+A carga útil de dados total para um único Cartão de Conteúdo não pode exceder 2 KB **depois** que qualquer personalização Liquid é renderizada. Isso inclui:
+
+* Título
+* Mensagem
+* URL da imagem (o comprimento da própria string da URL, não o tamanho do arquivo da imagem)
+* Texto do link
+* URLs de link para todas as plataformas especificadas (URLs separadas para iOS, Android e Web contam para o total)
+* Pares chave-valor (tanto os nomes das chaves quanto seus valores)
+
+Usar Liquid para puxar longas strings de texto (como de atributos personalizados) pode fazer você exceder o limite. 
+
+O criador da campanha exibirá um aviso se seu conteúdo estático exceder o limite. (Não prevemos o tamanho para conteúdo dinâmico usando Liquid.) **Se o tamanho da mensagem exceder 2 KB, será abortada no momento do envio.** Você pode ver esses abortos no Registro de Atividade da Mensagem com o motivo `Content card maximum size exceeded`.
 
 {% alert important %}
-Mensagens maiores que 2 KB não serão enviadas. Durante envios de teste, os Cartões de Conteúdo que excedem 2 KB ainda podem ser entregues e exibidos corretamente.
+Durante envios de teste, Cartões de Conteúdo que excedem 2 KB ainda podem ser entregues e exibidos corretamente.
 {% endalert %}
 
-### Número de cartões no feed
+Aqui estão algumas melhores práticas para gerenciar o tamanho da carga útil do Cartão de Conteúdo:
 
-Cada usuário pode ter até 250 cartões de conteúdo não expirados em seu feed a qualquer momento. Quando esse limite for excedido, o Braze deixará de devolver os cartões mais antigos, mesmo que não tenham sido lidos. Cartões dispensados também contam para esse limite, o que significa que um alto número de cartões dispensados pode reduzir o espaço disponível para novos.
+* Use encurtadores de URL para links longos. URLs, especialmente aquelas com parâmetros de rastreamento extensos, podem enfrentar problemas de limite de tamanho. Usar um serviço de encurtamento de URL pode reduzir drasticamente a contagem de caracteres e liberar espaço na carga útil.
+* Truncar conteúdo dinâmico com Liquid. Ao personalizar cartões com texto dinâmico de atributos de usuário ou chamadas de API, o comprimento do conteúdo pode ser imprevisível. Use proativamente filtros Liquid como `truncate` para limitar o comprimento de qualquer texto dinâmico.
+* Seja eficiente com URLs de múltiplas plataformas. O limite de 2 KB inclui as URLs para todas as plataformas que você define. Usar URLs longas e únicas para cada plataforma pode multiplicar o tamanho da carga útil. Se possível, use um único link que funcione em todas as plataformas, ou use encurtadores de URL conforme necessário.
+* Considere Banners para um conteúdo mais rico. Para casos de uso que exigem consistentemente grandes quantidades de conteúdo, os Cartões de Conteúdo podem não ser o canal certo. Banners não têm a mesma limitação de carga útil de 2 KB e são mais adequados para embutir conteúdo mais rico diretamente em uma experiência de app ou site.
 
-### Comportamento de envio
+#### Número de cartões no feed
 
-Após o Braze enviar Cartões de Conteúdo, eles ficam em uma "caixa de entrada" prontos para serem entregues ao usuário (semelhante a e-mails). Após o Braze puxar conteúdo para o Cartão de Conteúdo no momento da exibição, o conteúdo não muda durante a vida útil do cartão. Isso inclui chamadas de API através de Conteúdo Conectado se os dados do endpoint mudarem. O Braze não atualiza esses dados. Você só pode parar de enviar novos cartões e remover cartões existentes dos feeds. Se você modificar uma campanha, apenas os cartões futuros refletem a atualização.
+Cada usuário pode ter até 250 cartões de conteúdo não expirados em seu feed a qualquer momento. Quando esse limite for excedido, o Braze deixará de devolver os cartões mais antigos, mesmo que não tenham sido lidos. Cartões descartados também contam para esse limite, o que significa que um alto número de cartões descartados pode reduzir o espaço disponível para os mais antigos.
 
-Se você precisar remover cartões antigos, primeiro deve parar a campanha. Para interromper uma campanha, abra sua campanha do Content Card e selecione **Stop Campaign (Interromper campanha)** Parar a campanha solicitará que você decida como lidar com os usuários que já receberam seu cartão. 
+Para evitar problemas com o limite de cartões, recomendamos as seguintes melhores práticas:
 
-Se você quiser remover o cartão de conteúdo dos feeds dos seus usuários, selecione **Remover cartão do feed**. O cartão será então ocultado pelo SDK na próxima sincronização.
+- **Use datas de expiração mais curtas:** Para campanhas que são sensíveis ao tempo (como uma venda de fim de semana), defina uma data de expiração específica. Dessa forma, os cartões são removidos automaticamente do feed e não contarão para o limite após não serem mais relevantes.
+- **Aproveite a remoção baseada em ação:** Configure eventos de remoção para cartões transacionais ou baseados em metas. Por exemplo, um cartão que solicita a um usuário que complete seu perfil deve ser removido assim que um `profile_completed` evento for registrado.
+- **Audite campanhas de longa duração:** Revise campanhas recorrentes ou em andamento para garantir que não estejam criando uma experiência ruim para seus usuários, preenchendo o feed com muitos cartões ao longo do tempo.
 
-![Caixa de diálogo para confirmar a desativação do cartão de conteúdo]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
+### Entendendo a re-eligibilidade para Cartões de Conteúdo
+
+A re-eligibilidade determina se e quando um usuário pode receber uma mensagem da mesma campanha mais de uma vez. Para Cartões de Conteúdo, entender como isso funciona é crítico para gerenciar campanhas recorrentes e garantir que os usuários não recebam mensagens duplicadas ou desatualizadas.
 
 {% alert tip %}
 Você quer que seu conteúdo dure mais de 30 dias? Experimente [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 {% endalert %}
 
-### Eventos de remoção de cartões {#action-based-card-removal}
+#### Como a re-eligibilidade é calculada
 
-Alguns Cartões de Conteúdo são relevantes apenas até que um usuário realize alguma ação. Por exemplo, um cartão que incentiva os usuários a ativar sua conta não deve ser exibido depois que o usuário concluir essa tarefa de integração.
+Se você ativar a re-elegibilidade, a contagem regressiva para quando um usuário pode "reentrar" em uma campanha começa após o envio da mensagem. O momento específico em que essa contagem regressiva começa depende das configurações de criação do seu cartão:
 
-Dentro de uma campanha ou mensagem do Canvas, você pode opcionalmente adicionar um **Evento de Remoção** para especificar quais eventos ou compras personalizados devem fazer com que cartões enviados anteriormente sejam removidos do feed desse usuário, acionados pelo SDK ou API REST.
+* Os Cartões de Conteúdo usando [na primeira impressão]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) usam o tempo de impressão para calcular a re-elegibilidade.
+* Os Cartões de Conteúdo criados no lançamento da campanha ou na entrada da etapa do Canvas usam o tempo de envio ou o tempo de impressão mais recente.
 
-O Braze remove cartões em atualizações subsequentes após processar o evento especificado.
+#### A expiração de 30 dias e a re-elegibilidade
+
+Uma fonte comum de confusão é a interação entre a re-elegibilidade da campanha e a expiração automática de 30 dias de todos os Cartões de Conteúdo. 
+
+Todos os Cartões de Conteúdo são automaticamente removidos dos sistemas da Braze 30 dias após serem enviados ou removidos. Se você tiver uma campanha recorrente de longa duração com a re-elegibilidade desativada **off**, um usuário ainda pode receber o mesmo cartão novamente após 30 dias. Quando o cartão original é removido, o sistema não vê mais um registro de que aquele usuário recebeu a campanha, tornando-o elegível novamente na próxima sessão. 
+
+Para que os usuários recebam uma mensagem de uma campanha específica apenas uma vez, adicione um filtro de público à sua campanha ou etapa do Canvas para usuários que não receberam uma mensagem desta campanha. Esse filtro é a maneira mais confiável de evitar envios duplicados de campanhas de longa duração.
+
+### Gerenciando Cartões de Conteúdo ao vivo
+
+Após os Cartões de Conteúdo serem enviados, eles ficam aguardando em uma "caixa de entrada" prontos para serem entregues ao usuário (semelhante ao que acontece com os e-mails). Depois que o conteúdo é puxado para o Cartão de Conteúdo (no momento da exibição), ele não pode ser alterado durante sua vida útil. Isso se aplica mesmo que você esteja chamando uma API através do Conteúdo Conectado, e os dados do endpoint mudem. Esses dados não serão atualizados. Ele só pode ser impedido de ser enviado a novos usuários e removido dos feeds dos usuários. Se você modificar uma campanha, somente os cartões futuros que forem enviados terão a atualização.
+
+#### Atualização de cartões lançados
+
+Para alterar um cartão para usuários que já o receberam, você deve usar um dos seguintes métodos:
+
+##### Opção 1: Duplicar a campanha (recomendado para alterações imediatas)
+
+{% alert tip %}
+Recomendamos essa opção para mensagens em que você está mostrando o conteúdo mais recente no cartão, as alterações devem ser mostradas imediatamente ou quando a re-elegibilidade estiver desativada.
+{% endalert %}
+
+A primeira abordagem é arquivar a campanha e lançar uma nova campanha duplicada:
+
+1. Pare a campanha original e, quando solicitado, selecione `Remove card after the next sync`.
+2. Duplique a campanha, faça suas edições e lance a nova versão.
+
+Quando você duplica a campanha, precisa definir o público para a nova versão. Use filtros de segmentação para controlar quem recebe o cartão atualizado:
+* Se os usuários nunca devem ser elegíveis novamente para um cartão de conteúdo, você pode filtrar os usuários que não receberam a versão anterior do cartão de conteúdo definindo o filtro `Received Message from Campaign` para a condição `Has Not`.
+* Se os usuários que receberam o cartão anterior devem ser reelegíveis em X dias, você pode definir o filtro para `Last Received Message from specific campaign` como mais de X dias atrás **OU** `Received Message from Campaign` com a condição `Has Not`.
+
+###### Impacto
+
+* **Destinatários existentes:** Os destinatários novos e existentes verão o cartão atualizado na próxima atualização do feed, se forem elegíveis.
+* **Relatórios:** Cada versão do cartão teria uma análise de dados separada.
+
+Vamos supor que você tenha configurado uma campanha para ser acionada pelo início de uma sessão, e que tenha a re-elegibilidade definida para 30 dias. Um usuário recebeu a campanha há dois dias e você deseja alterar a cópia. Primeiro, você arquivaria a campanha e removeria os cartões do feed. Em segundo lugar, você duplicaria a campanha e relançaria com o novo texto. Se o usuário tiver outra sessão, ele receberá imediatamente o novo cartão.
+
+##### Opção 2: Pare e relance a mesma campanha
+
+{% alert tip %}
+Recomendamos usar esta opção para mensagens únicas em um centro de notificações ou caixa de mensagens (como promoções), quando é importante que a análise de dados esteja unificada, ou quando a pontualidade da mensagem não é uma preocupação (como os destinatários existentes podem esperar pela janela de elegibilidade antes de ver os cartões atualizados).
+{% endalert %}
+
+Essa abordagem mantém todas as suas análises unificadas em uma única campanha. Usuários recém-elegíveis receberão o novo cartão, mas isso atrasa a atualização para os destinatários existentes até que eles se tornem re-elegíveis:
+
+1. Pare sua campanha e, quando solicitado, selecione **Remover cartão após a próxima sincronização**.
+2. Edite sua campanha conforme necessário.
+3. Reinicie sua campanha.
+
+###### Impacto
+
+* **Destinatários existentes:** Os usuários que já receberam o cartão não receberão os cartões atualizados até que se tornem elegíveis novamente. Se a reelegibilidade for desativada, eles nunca receberão o novo cartão.
+* **Relatórios:** Uma campanha conterá todas as análises de dados de relatórios para as versões de cartões lançadas. Braze não diferenciará entre as versões lançadas.
+
+Vamos supor que você tenha uma campanha que é acionada pelo início de uma sessão e tem reeligibilidade definida para 30 dias. Um usuário recebeu a campanha há dois dias e você deseja alterar a cópia. Primeiro, interrompa a campanha e remova o cartão do feed. Em segundo lugar, republicar a campanha com o novo texto. Se o usuário tiver outra sessão, ele receberá o novo cartão em 28 dias.
+
+#### Removendo e expirando cartões
+
+##### Remoção manual de cartões
+
+Você pode remover manualmente cartões para os feeds de todos os usuários a qualquer momento, parando a campanha.
+
+1. Abra a campanha do Cartão de Conteúdo e selecione Parar Campanha.
+2. Quando solicitado, selecione **Remover cartão após a próxima sincronização**. O cartão será removido na próxima atualização do feed.
+
+##### Remoção automatizada de cartões {#action-based-card-removal}
+
+Você pode remover automaticamente um cartão quando um usuário realiza uma ação específica, como completar uma compra ou ativar um recurso.
+
+Na sua campanha ou etapa do canva, especifique um evento de remoção. Quando um usuário realiza esse evento, o cartão será removido do feed dele em uma atualização subsequente após o Braze processar o evento. 
+
+{% alert note %}
+Essa remoção não é instantânea. Há um atraso no processamento, então pode levar vários minutos e mais de uma atualização do feed para o cartão desaparecer.
+{% endalert %}
 
 {% alert tip %}
 É possível especificar vários eventos personalizados e compras que devem remover um cartão do feed de um usuário. Quando **qualquer uma** dessas ações for executada pelo usuário, todos os cartões existentes enviados pelos cartões da campanha serão removidos. Todos os cartões elegíveis futuros continuarão a ser enviados de acordo com a programação da mensagem.
 {% endalert %}
 
-![Painel de Condições de Remoção de Cartão de Conteúdo com opção de Evento de Remoção de Cartão de Conteúdo.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+![Condições do painel de remoção de cartão de conteúdo com a opção de evento de remoção de cartão de conteúdo.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
-### Atualização de cartões lançados
+##### Expiração do cartão
 
-Você não pode editar Cartões de Conteúdo após enviá-los. Se você precisar alterar cartões enviados, considere usar [re-eligibilidade da campanha]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) com as seguintes opções.
+Os cartões de conteúdo permanecem disponíveis por até 30 dias a partir do momento em que são enviados; após 30 dias, a Braze os remove dos feeds dos usuários e os exclui dos sistemas da Braze.
 
-{% alert note %}
-Quando um cartão de conteúdo se torna reelegível, ele pode ser enviado novamente quando o cartão original ainda estiver no app do usuário. Para evitar cartões duplicados no app de um usuário, é possível desativar a reelegibilidade ou estender a janela de reelegibilidade para que os usuários não recebam um novo cartão até que o original tenha expirado.
-{% endalert %}
-
-Observe também que os cartões de conteúdo que usam [a primeira impressão]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) usam o tempo de impressão para calcular a reelegibilidade. No entanto, os cartões de conteúdo criados no lançamento da campanha ou na entrada da etapa do Canva usam o tempo de envio ou impressão mais recente.
-
-#### Opção 1: Duplicação da campanha
-
-Uma abordagem é arquivar a campanha e remover os cartões ativos do feed. Então você pode duplicar a campanha e lançá-la com atualizações para que quaisquer usuários elegíveis recebam os cartões atualizados.
-
-* Se os usuários nunca devem ser elegíveis novamente para um cartão de conteúdo, você pode filtrar os usuários que não receberam a versão anterior do cartão de conteúdo definindo o filtro `Received Message from Campaign` para a condição `Has Not`.
-* Se os usuários que receberam o cartão anterior devem ser reelegíveis em X dias, você pode definir o filtro para `Last Received Message from specific campaign` como mais de X dias atrás **OU** `Received Message from Campaign` com a condição `Has Not`.
-
-##### Caso de uso
-
-Vamos supor que você configurou uma campanha para ser acionada pelo início de uma sessão, e ela tem a re-elegibilidade definida para 30 dias. Um usuário recebeu a campanha há dois dias e você deseja alterar a cópia. Primeiro, você arquivaria a campanha e removeria os cartões do feed. Em segundo lugar, você duplicaria a campanha e relançaria com o novo texto. Se o usuário tiver outra sessão, ele receberá imediatamente o novo cartão.
-
-##### Impacto
-
-* **Relatórios:** Cada versão do cartão tem análises separadas.
-* **Beneficiários existentes:** Novos e existentes destinatários veem o cartão atualizado na próxima atualização do feed, se forem elegíveis.
+#### Fazendo os cartões durarem mais de 30 dias
 
 {% alert tip %}
-Recomendamos esta opção para mensagens onde você está mostrando o conteúdo mais recente no cartão (como banners da página inicial), as mudanças devem ser mostradas imediatamente, ou quando a re-eligibilidade está desativada.
+Para casos de uso que exigem que as mensagens persistam por mais de 30 dias, considere usar Banners. Os Banners são projetados para persistência e não têm uma data de expiração obrigatória, permitindo que permaneçam visíveis enquanto forem necessários.
 {% endalert %}
 
-#### Opção 2: Parar e reiniciar
+Se você quiser que um cartão pareça sempre disponível (i.e., dure mais do que o máximo de 30 dias), você pode criar uma campanha recorrente que efetivamente substitui o cartão a cada 30 dias:
 
-Se um cartão tiver a re-elegibilidade ativada, você pode escolher:
-
-1. Interrompa sua campanha.
-2. Remova os cartões de conteúdo ativos dos feeds dos usuários.
-3. Edite sua campanha conforme necessário.
-4. Reinicie sua campanha.
-
-Com essa abordagem, usuários recém-elegíveis receberão o novo cartão, e destinatários anteriores receberão o novo cartão quando forem re-elegíveis.
-
-##### Caso de uso
-
-Vamos supor que você tenha uma campanha que é acionada pelo início de uma sessão e tem reeligibilidade definida para 30 dias. Um usuário recebeu a campanha há dois dias e você deseja alterar a cópia. Primeiro, interrompa a campanha e remova o cartão do feed. Em segundo lugar, republicar a campanha com o novo texto. Se o usuário tiver outra sessão, ele receberá o novo cartão em 28 dias.
-
-##### Impacto
-
-* **Relatórios:** Uma campanha contém todas as análises para todas as versões de cartão lançadas. A Braze não diferencia entre versões.
-* **Destinatários existentes:** Usuários que já receberam o cartão não recebem cartões atualizados até se tornarem re-elegíveis. Se a re-elegibilidade estiver desativada, eles nunca receberão o novo cartão.
-
-{% alert tip %}
-Recomendamos usar esta opção para mensagens exclusivas em um centro de notificações ou caixa de mensagens (como promoções), quando é importante que as análises sejam unificadas, ou quando a pontualidade da mensagem não é uma preocupação (como destinatários existentes podem esperar pela janela de elegibilidade antes de ver os cartões atualizados).
-{% endalert %}
-
-#### Manter os cartões nos feeds dos usuários
-
-Se desejado, você pode manter uma campanha ativa de Cartão de Conteúdo nos feeds dos usuários e não removê-la. Quando a campanha ativa é editada, a versão anterior não editada do cartão da campanha ainda estará ativa, e apenas usuários que atendem aos critérios após as edições verão a nova versão. No entanto, os usuários já expostos à campanha poderão ver duas versões do cartão.
-
+1. Defina a duração do cartão de conteúdo para 30 dias.
+2. Defina a reelegibilidade da campanha para 30 dias.
+3. Defina a campanha para disparar no "Início da sessão".

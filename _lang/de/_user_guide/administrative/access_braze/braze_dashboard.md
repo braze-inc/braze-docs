@@ -1,7 +1,7 @@
 ---
 nav_title: Das Dashboard
 article_title: Das Braze-Dashboard
-page_order: 2
+page_order: 5
 page_type: reference
 description: "Das Braze-Dashboard ist Ihr zentraler Workspace für den Aufbau, die Verwaltung und die Analyse des Customer-Engagements. Es vereint Messaging-Tools, Insights für die Zielgruppe, Segmentierung und Realtime Performance-Daten an einem Ort."
 
@@ -9,9 +9,19 @@ description: "Das Braze-Dashboard ist Ihr zentraler Workspace für den Aufbau, d
 
 # Das Braze-Dashboard
 
-> Das Braze-Dashboard ist unsere Schnittstelle im Internet unter [dashboard.braze.com](https://dashboard.braze.com/) oder [dashboard.braze.eu](https://dashboard.braze.eu/)
+> Das Braze-Dashboard ist Ihr zentraler Workspace für den Aufbau, die Verwaltung und die Analyse des Customer-Engagements. Besuchen Sie es unter [dashboard.braze.com](https://dashboard.braze.com/) oder [dashboard.braze.eu](https://dashboard.braze.eu/).
 
-Nutzen Sie das Braze-Dashboard, um Kampagnen zu planen, Nachrichten einzuführen und zu verwalten, Insights über die Zielgruppen zu erhalten, die Segmentierung anzupassen und Performance- und Engagement-Metriken in Echtzeit über eine einzige Schnittstelle zu überprüfen.
+Nutzen Sie das Braze-Dashboard, um Kampagnen zu planen, Nachrichten einzuführen und zu verwalten, Insights über die Zielgruppen zu erhalten, die Segmentierung anzupassen und Leistungs- und Engagement-Metriken in Echtzeit über eine einzige Schnittstelle zu überprüfen.
+
+## Dashboard Übersicht
+
+Wenn Sie sich anmelden, bietet Ihnen das Dashboard einen zentralen Überblick über Ihre Engagement-Tools und -Daten:
+
+- **Hauptseite:** Zeigt Ihre [zuletzt bearbeiteten Inhalte](#pick-up-where-you-left-off) und die wichtigsten Metriken zur Performance auf einen Blick
+- **Linke Navigation:** Organisiert die Tools nach Funktionen (Nachrichten, Zielgruppe, Analytics, Einstellungen)
+- **Globale Überschrift:** Bietet schnellen Zugriff auf Suche, Support, Spracheinstellungen, Benachrichtigungen und Ihr Konto
+
+Ihr Dashboard ist nach [Workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces) gegliedert, mit denen Sie Inhalte für verschiedene Marken, Regionen oder Teams verwalten können. Sie können jederzeit über die Seitennavigation [zwischen den Workspaces wechseln](#workspace-switcher).
 
 ## Zugriff auf Ihr Dashboard
 
@@ -30,7 +40,7 @@ Die globale Kopfzeile ist fast immer am oberen Rand des Bildschirms sichtbar. Si
 - Kontoeinstellungen
 - [BrazeAI Operator™]({{site.baseurl}}/user_guide/brazeai/operator/)
 
-### Verwenden der Seitennavigation
+### Verwenden Sie die Seitennavigation
 
 Das vertikale Menü auf der linken Seite ordnet die Braze-Tools nach Funktionen und hält die am häufigsten verwendeten Artikel in Reichweite. Wählen Sie einen Artikel des Hauptmenüs aus, um seine Optionen in einem gestapelten vertikalen Layout anzuzeigen. 
 
@@ -42,7 +52,9 @@ Mit dem Workspace-Wechsler, der sich oben in der Seitennavigation befindet, kön
 
 [Workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces) helfen bei der Organisation von Inhalten nach Marke, Region, Produktlinie oder Team. Jeder Workspace enthält seine eigenen Daten, Kampagnen und Einstellungen. Ihr Zugriff kann von Workspace zu Workspace variieren. So können Sie beispielsweise in einem Workspace Zugriff auf die Bearbeitung und in einem anderen nur auf die Ansicht haben.
 
-#### Minimierung der Seitennavigation
+Um den Workspace zu wechseln, wählen Sie das Workspace-Dropdown oben in der Seitennavigation aus und wählen Sie den Workspace, auf den Sie zugreifen möchten. Sie können auch [bevorzugte Workspaces hinzufügen](#adding-favorite-workspaces), um schneller auf die von Ihnen am häufigsten verwendeten zuzugreifen.
+
+#### Minimieren Sie die Seitennavigation
 
 Um die visuelle Unordnung zu reduzieren, insbesondere bei Aufgaben wie der Gestaltung eines Canvas, können Sie das seitliche Navigationspanel minimieren. Drücken Sie auf das **Menü Minimieren**, um es zu schließen. Auch im minimierten Zustand können Sie mit dem Mauszeiger über ein beliebiges Symbol fahren, um Tooltips mit den Namen der Artikel im Menü anzuzeigen. So können Sie schnell zwischen den Werkzeugen wechseln und gleichzeitig Ihren Workspace sauber halten.
 
@@ -116,6 +128,30 @@ table td {
 | Schließen Sie das Suchmenü       | <kbd>Esc</kbd>  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+## Tipps
+
+Das Braze-Dashboard enthält mehrere Features, die Ihnen helfen, effizienter zu arbeiten und schnell auf die von Ihnen am häufigsten verwendeten Tools und Inhalte zuzugreifen.
+
+### Machen Sie dort weiter, wo Sie aufgehört haben.
+
+Auf der **Startseite** zeigt das Dashboard Ihre kürzlich bearbeiteten oder erstellten Kampagnen, Canvase und Segmente an. So können Sie ganz einfach zur laufenden Arbeit zurückkehren, ohne zu suchen. Jeder Artikel enthält Tags, die den Inhaltstyp und den Status (z.B. Entwurf, aktiv oder gestoppt) anzeigen.
+
+![Ein Canvas-Entwurf, ein aktives Segment und ein Entwurf für eine Kampagne im Abschnitt "Weitermachen, wo Sie aufgehört haben".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
+
+Weitere Informationen finden Sie unter [Home Dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/home_dashboard/#pick-up-where-you-left-off).
+
+### Favorisierte Workspaces hinzufügen
+
+Wenn Sie in mehreren Workspaces arbeiten, können Sie Ihre am häufigsten verwendeten Workspaces als Favoriten markieren, um schneller darauf zugreifen zu können. Um favorisierte Workspaces hinzuzufügen, [rufen Sie Ihre Profileinstellungen auf](#accessing-your-profile-settings), suchen das Feld **Favorisierte Workspaces** im Abschnitt **Kontoprofil** und wählen die Workspaces aus, die Sie favorisieren möchten. Ihre bevorzugten Workspaces werden oben in der Workspace-Umschalttaste angezeigt, damit Sie schnell darauf zugreifen können.
+
+### Zugriff auf Ihre Profileinstellungen
+
+Um Ihre Kontoeinstellungen, Benachrichtigungspräferenzen und persönlichen Daten zu verwalten:
+
+1. Wählen Sie Ihr Profil-Symbol in der globalen Kopfzeile aus.
+2. Wählen Sie **Manager:in**, um Ihre Profilseite aufzurufen.
+
+Von Ihrer Profilseite aus können Sie Ihre E-Mail-Einstellungen aktualisieren, die Zwei-Faktor-Authentifizierung konfigurieren, Ihre API-Schlüssel einsehen und andere Kontodetails verwalten.
 
 ## Zugänglichkeit auf dem Dashboard
 
@@ -124,5 +160,22 @@ Das Braze-Dashboard verwendet Markenfarben, die den WCAG AA-Standards für Farbk
 ## Feedback teilen
 
 Möchten Sie uns Ihre Meinung mitteilen? Sie können uns Feedback zu Navigation, Zugänglichkeit, Benutzerfreundlichkeit, visuellem Design und mehr geben. Öffnen Sie das Menü **Support** in der globalen Kopfzeile und wählen Sie **Feedback teilen**. Wir prüfen alle Rückmeldungen, um Ihre Erfahrungen mit Braze zu verbessern.
+
+## Verwandte Ressourcen
+
+### Administrative Aufgaben
+
+- [Workspaces erstellen und verwalten]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)
+- [Braze Nutzer:innen verwalten]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- [Benutzerrechte]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)
+- [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)
+
+### Wichtige Aufgaben und nächste Schritte
+
+- **Bauen Sie Kampagnen**: [Eine Kampagne erstellen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/)
+- **Erstellen Sie Fahrten**: [Ein Canvas erstellen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
+- **Definieren Sie Zielgruppen**: [Ein Segment erstellen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)
+- **Überprüfen Sie die Performance**: [Übersicht über Analytics]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/)
+- **Konfigurieren Sie die Einstellungen**: [App Einstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/)
 
 

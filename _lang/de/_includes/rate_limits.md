@@ -102,12 +102,17 @@ Wir wenden auf diesen Endpunkt ein gemeinsames Rate-Limits von 1.000 Anfragen pr
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-Wenn Sie in Ihrer Anfrage ein Segment oder eine verbundene Zielgruppe angeben, gilt für diesen Endpunkt ein Rate-Limit von 250 Anfragen pro Minute. Andernfalls, wenn Sie `external_id` angeben, gilt für diesen Endpunkt ein Standard-Rate-Limit von 250.000 Anfragen pro Stunde, die zwischen `/messages/send`, `/campaigns/trigger/send` und `/canvas/trigger/send` aufgeteilt werden, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
+Wenn Sie Zielgruppen-Filter in Ihrer Anfrage verwenden, gilt für diesen Endpunkt ein Rate-Limit von 250 Anfragen pro Minute. Andernfalls, wenn Sie `external_id` angeben, gilt für diesen Endpunkt ein Standard-Rate-Limit von 250.000 Anfragen pro Stunde, die zwischen `/messages/send`, `/campaigns/trigger/send` und `/canvas/trigger/send` aufgeteilt werden, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
+
+Braze Endpunkte unterstützen das Stapeln von API-Anfragen. Eine einzelne Anfrage an die Messaging-Endpunkte kann eines der folgenden Ziele erreichen:
+
+- Bis zu 50 spezifische `external_ids`, jeweils mit individuellen Nachrichtenparametern
+- Ein Segment einer Zielgruppe beliebiger Größe, das in der Anfrage als Objekt "Connected Audience" definiert ist
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-Für Transaktions-E-Mails von Braze gibt es kein Rate-Limit. Je nach dem von Ihnen gewählten Paket ist eine bestimmte Anzahl von Transaktions-E-Mails pro Stunde durch das SLA abgedeckt. Anfragen, die diese Rate überschreiten, werden trotzdem gesendet, sind aber nicht durch das SLA abgedeckt. 99,9 % der E-Mails werden in weniger als einer Minute versendet.
+Der Endpunkt `/transactional/v1/campaigns/{campaign_id}/send` ist ein kostenpflichtiger Endpunkt in Einheiten pro Stunde (z.B. 50.000 pro Stunde, abhängig von Ihrem Paket). Es gibt kein separates Rate-Limit pro Endpunkt: Sie können über Ihr zugewiesenes Volumen hinaus senden, aber nur das zugewiesene Volumen ist durch das SLA abgedeckt. Anfragen an diesen Endpunkt werden auf Ihr [gesamtes Rate-Limit für externe APIs]({{site.baseurl}}/api/api_limits/) angerechnet. Wenn Sie diese Grenze überschreiten (z.B. 250.000 Anfragen pro Stunde über alle Endpunkte), gibt Braze 429 zurück und die Anfragen werden gedrosselt. Die Zählung des Transaktionsvolumens wird jede Stunde zurückgesetzt, so dass nach einer Stunde ein neues Kontingent zur Verfügung steht. Innerhalb des durch das SLA abgedeckten Volumens werden 99,9% der E-Mails in weniger als einer Minute versendet.
 
 <!---/sends/id/create-->
 
@@ -136,7 +141,7 @@ Dieser Endpunkt hat ein Rate-Limit von 100 Anfragen pro Minute.
 
 <!---Additional if statement for Messaging endpoints-->
 
-{% if include.category == "message endpoints" %}
+{% if include.category == "Nachrichtenendpunkte" %}
 
 Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/api/api_limits/#batching-api-requests). Eine einzelne Anfrage an die Messaging-Endpunkte kann eines der folgenden Ziele erreichen:
 
@@ -146,7 +151,7 @@ Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/ap
 
 {% endif %}
 
-{% if include.category == "send messages endpoints" %}
+{% if include.category == "Nachrichten senden Endpunkte" %}
 
 Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/api/api_limits/#batching-api-requests). Eine einzelne Anfrage an die Messaging-Endpunkte kann eines der folgenden Ziele erreichen:
 
@@ -204,4 +209,3 @@ Für diesen Endpunkt gilt ein gemeinsames Rate-Limit von 50 Anfragen pro Minute 
 Dieser Endpunkt hat ein Rate-Limit von 50.000 Anfragen pro Minute.
 
 {% endif %}
-

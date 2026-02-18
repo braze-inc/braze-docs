@@ -45,7 +45,7 @@ El recuento de eventos de conversión primaria es el número de eventos de conve
 Si abortas mensajes utilizando la etiqueta de Liquid `abort`, Braze aborta mensajes sólo para los usuarios que pasan por variantes. Los mensajes a los usuarios del grupo de control no se cancelan, lo que puede dar lugar a porcentajes de conversión sesgados entre variantes y grupos de control. Como solución, utilice [la segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) para dirigirse a sus usuarios en la campaña y en la entrada de Canvas.
 {% endalert %}
 
-## Crear una campaña con seguimiento de la conversión
+## Crear una campaña con seguimiento de conversiones
 
 ### Paso 1: Configura tu campaña
 

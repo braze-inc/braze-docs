@@ -64,7 +64,7 @@ Você pode visualizar até 100 relatórios de utilização por vez, marcando as 
 
 Ao visualizar um relatório de uso, selecione a guia **Valores** para visualizar os principais valores dos atributos personalizados selecionados com base em uma amostra de aproximadamente 250.000 usuários. Note que, como os resultados são amostrados a partir de um subconjunto de usuários, a amostra não incluirá todos os valores existentes. Isso significa que a guia **Valores** não deve ser usada para solução de problemas ou para casos de uso que exijam a incorporação de dados de todos os usuários.
 
-![Relatório de uso de atributos personalizados selecionados com uma guia "Valores" aberta mostrando um gráfico de pizza dos valores de atributos de país, como "US" e "PR".]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
+![Relatório de uso para atributos personalizados selecionados com uma guia "Valores" aberta mostrando um gráfico de pizza dos valores de atributos de país, como "US" e "PR".]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
 
 ## Definindo atributos personalizados
 
@@ -158,9 +158,7 @@ Note que se você inserir quaisquer valores com espaços entre, antes ou depois 
 | Verifique se o atributo de string **não corresponde parcialmente a nenhum** dos strings inseridos | **NÃO CONTÉM NENHUM DE** | **STRING**<br>Diferenciação entre maiúsculas e minúsculas; várias strings permitidas (máximo de 256) | Se este filtro especificar `gold` e um perfil de usuário não contiver `gold` em nenhuma string, o usuário corresponderá a este filtro.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-Uma string de data como "12-1-2021" ou "12/1/2021" será convertida em um objeto datetime e tratada como um [atributo de tempo]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time).
-{% endalert %}
+{% include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 Ao segmentar usando o filtro **NÃO CORRESPONDE À REGEX**, você deve já ter um atributo personalizado com um valor atribuído nesse perfil de usuário. Braze sugere usar a lógica "OU" para verificar se um atributo personalizado está em branco para garantir que os usuários sejam direcionados corretamente.

@@ -27,10 +27,10 @@ Um auf das Profil eines Benutzers zuzugreifen, gehen Sie auf die Seite **Benutze
 Wenn eine Übereinstimmung gefunden wird, können Sie die Informationen, die Sie für diese Nutzer:innen erfasst haben, mit dem Braze SDK einsehen. Andernfalls, wenn Ihre Suche mehrere Nutzerprofile ergibt, können Sie jedes Profil einzeln zusammenführen oder eine Massen-Zusammenführung von Nutzer:innen durchführen. Eine vollständige Anleitung finden Sie unter [Doppelte Benutzer]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
 {% alert important %}
-Wenn eine Telefonnummer in der Suche verwendet wird, wird sie in das [`E.164`](https://en.wikipedia.org/wiki/e.164) Format. Nutzer:innen, deren Telefonnummern nicht in das Format `E.164` umgewandelt werden können (z.B. weil die Telefonnummer einen ungültigen Code oder eine ungültige Ortsvorwahl hat), können nicht nach Telefonnummern gesucht werden.
+Wenn eine Telefonnummer in der Suche verwendet wird, wird sie in das [`E.164`](https://en.wikipedia.org/wiki/e.164) Format. Nutzer:innen, deren Telefonnummern nicht in das Format `E.164` umgewandelt werden können (z.B. weil die Telefonnummer einen ungültigen Code oder eine ungültige Ortsvorwahl hat), können nicht nach der Telefonnummer gesucht werden.
 {% endalert %}
 
-![Suchergebnisse mit einem Banner mit der Aufschrift "Mehrere Nutzer:innen entsprechen Ihren Suchkriterien" und zwei Buttons mit der Aufschrift Zurück und Weiter.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
+![Suchergebnisse mit einem Banner, auf dem steht "Mehrere Nutzer:innen entsprechen Ihren Suchkriterien" und zwei Buttons mit der Aufschrift Zurück und Weiter.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## Anwendungsfälle
 
@@ -149,7 +149,7 @@ In den folgenden Szenarien können einige Felder auf dem Tab **Verlauf der Nachr
 
 - Wenn bei einem Ereignis Daten für **Gesendete Nachrichten** fehlen, bedeutet dies, dass die Kampagne keine Nachrichtenvariationen enthält.
 - Wenn in einem Ereignis Daten für **Kampagne/Canvas** und **Gesendete Nachricht** fehlen, bedeutet dies, dass diese Nachricht von einer API-Kampagne (nicht von API-getriggerten Kampagnen) gesendet wurde, die nicht die `campaign_id` und `message_variation_id` angegeben hat. Diese Felder sind optional und können im Text der Anfrage weggelassen werden. Wenn diese Felder angegeben werden, werden diese Informationen in die Protokolle des Nachrichtenverlaufs aufgenommen.
-   - Wenn eine bestimmte Nachricht im Verlauf der Messaging-Kampagnen fehlt, aber im Protokoll **Empfangene Kampagnen** erscheint, hat der Nutzer:innen die Kampagne wahrscheinlich erhalten, bevor er als aktueller Nutzer identifiziert wurde. Wenn ein bestehendes Profil verwaist ist, wird das Protokoll **Empfangene Kampagnen** übertragen, der Verlauf der Messaging-Nachrichten jedoch nicht. 
+   - Wenn eine bestimmte Nachricht im Verlauf der Messaging-Kampagnen fehlt, aber im Protokoll **Empfangene Kampagnen** erscheint, hat der Nutzer:innen die Kampagne wahrscheinlich erhalten, bevor er als der aktuelle Nutzer identifiziert wurde. Wenn ein bestehendes Profil verwaist ist, wird das Protokoll **Empfangene Kampagnen** übertragen, der Verlauf der Messaging-Nachrichten jedoch nicht. 
 - Wenn Daten für **Kampagnen/Canvas** fehlen, wurde möglicherweise ein manueller Test gesendet. Manuelle Tests werden im Tab **Messaging-Verlauf** protokolliert, aber die Kampagne oder das Canvas, das gesendet wurde, wird nicht protokolliert.
 
 ## Ähnliche Artikel

@@ -20,6 +20,12 @@ Lorsqu'un jeton de poussée est réattribué, la modification est reflétée dan
 
 ![Le "Push Changelog" dans la section "Contact Settings".]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
+### Que signifie "Error sending push because the payload was invalid" ?
+
+Ce message indique que les APN ont rejeté la demande de push en raison d'une charge utile non valide (par exemple, une charge utile vide ou trop volumineuse).
+
+Pour plus de détails et les étapes suivantes, reportez-vous à la section [Messages d'erreur communs à la poussée]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
+
 ### Pourquoi un utilisateur bénéficiant d'un abonnement n'a-t-il pas de jeton de poussée ?
 
 Cela peut se produire si le jeton push de l'utilisateur a été réattribué à quelqu'un d'autre qui utilisait le même appareil.

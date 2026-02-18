@@ -31,7 +31,7 @@ Aprovecha los ricos datos de comportamiento de Snowplow para impulsar potentes i
 | Requisito             | Descripción                                                                                                                                                                                                                                                                              |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tubería quitanieves       | Necesitas una tubería quitanieves en funcionamiento.                                                                                                                                                                                                                                          |
-| Acceso a la consola quitanieves | Debes tener acceso a la consola de Snowplow para configurar los reenviadores de eventos.                                                                                                                                                                                                                                |
+| Acceso a la consola quitanieves | Debes tener acceso a la Consola Snowplow para configurar los reenviadores de eventos.                                                                                                                                                                                                                                |
 | Clave de API REST de Braze      | Una clave de API REST Braze con los siguientes permisos: `users.track`, `users.alias.new`, `users.identify`, `users.export.ids`, `users.merge`, `users.external_ids.rename`, y `users.alias.update`. <br><br> Puedes crearla en el panel de Braze desde **Configuración** > **Claves de API**. |
 | Punto final REST Braze     | [La URL de tu punto final REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Tu punto final depende de la URL Braze de tu instancia.                                                                                                                                     |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -50,7 +50,7 @@ Cree audiencias dinámicas en Braze basadas en los datos de comportamiento de al
 
 Para crear el reenviador de eventos:
 
-1. En la Consola Quitanieves, navega hasta **Destinos** y selecciona **Crear nuevo destino**.
+1. En la Consola del Quitanieves, navega hasta **Destinos** y selecciona **Crear nuevo destino**.
 2. Al configurar la conexión, selecciona **Braze** como tipo de conexión.
 3. Introduce tu clave de API Braze y el punto final de la API REST.
 4. Guarda la conexión.

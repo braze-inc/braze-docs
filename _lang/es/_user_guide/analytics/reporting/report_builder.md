@@ -19,7 +19,7 @@ page_order: 6.2
 2. Selecciona la flecha **Más opciones** situada junto al botón **Crear informe nuevo** y, a continuación, selecciona **Utilizar una plantilla de informe**.<br><br>![Botón desplegable "Crear informe nuevo" con opciones para crear un informe personalizado o utilizar una plantilla.]({% image_buster /assets/img/report_builder_2/create_new_report.png %}){: style="max-width:40%;"}<br><br>
 3. Selecciona una de las plantillas de informe de la biblioteca de plantillas Braze.
     - Utiliza el desplegable **Elementos de fila** y **Etiquetas** para encontrar informes relevantes para tus casos de uso.<br><br>![Ventana "Plantillas de informes Braze" con una lista de plantillas Braze para seleccionar.]({% image_buster /assets/img/report_builder_2/report_templates.png %}){: style="max-width:90%;"}<br><br>
-4. Sigue el paso 3 y siguientes de [Crear un informe](#creating-a-report) para personalizarlo aún más y adaptarlo a tu caso de uso.
+4. Sigue el paso 3 y siguientes en [Crear un informe](#creating-a-report) para personalizar aún más el informe y adaptarlo a tu caso de uso.
 
 ## Crear un informe
 
@@ -126,7 +126,7 @@ Puedes compartir un enlace del panel al informe seleccionando **Compartir** y un
 
 ![desplegable "Compartir un enlace" con un enlace al informe.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
 
-- **Envía o programa un correo electrónico:** Envía un correo electrónico inmediatamente o a una hora determinada que contenga un enlace de descarga que caduque al cabo de una hora. Puedes seleccionar destinatarios de entre los usuarios del panel que aparecen en el desplegable **Destinatarios de correo electrónico** o introducir cualquier otra dirección de correo electrónico.
+- **Envía o programa un correo electrónico:** Envía un correo electrónico inmediatamente o a una hora determinada que contenga un enlace de descarga que caduque al cabo de una hora. Puedes seleccionar destinatarios de entre los usuarios de la empresa que aparecen en el desplegable **Destinatarios de correo electrónico** o introducir cualquier otra dirección de correo electrónico.
 
 ![Ventana "Programar un correo electrónico" con campos para elegir el formato del informe, quién debe recibirlo y cuándo debe enviarse.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
 

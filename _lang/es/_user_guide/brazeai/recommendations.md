@@ -1,14 +1,14 @@
 ---
 nav_title: Recomendaciones
 article_title: Recomendaciones de artículos en Braze
-page_order: 15
+page_order: 7
 search_rank: 1
 description: "Aprende todo sobre las herramientas de recomendaciones de artículos en Braze."
 ---
 
 # Recomendaciones
 
-> Mejora tus recomendaciones con Braze creando una herramienta de recomendaciones que pueda sugerir a tus usuarios artículos y contenidos que realmente desean. Desde personalizar experiencias con IA hasta construir tus propios motores con Liquid o Contenido conectado, encontrarás todo lo que necesitas para que cada recomendación cuente.
+> Intensifica tu juego de recomendaciones con Braze creando una herramienta de recomendaciones que pueda sugerir a tus usuarios artículos y contenidos que realmente desean. Desde personalizar experiencias con IA hasta construir tus propios motores con Liquid o Contenido conectado, encontrarás todo lo que necesitas para que cada recomendación cuente.
 
 ## Requisitos previos
 
@@ -60,7 +60,7 @@ Predecir y recomendar los artículos que un usuario tiene más probabilidades de
 
 ### Artículo más popular {#most-popular}
 
-El modelo de recomendación "Más populares" presenta los elementos con los que más interactúan los usuarios.
+El modelo de recomendación "Más populares" presenta los elementos con los que los usuarios tienen más interacción.
 
 #### Ejemplos
 
@@ -383,3 +383,7 @@ Ten en cuenta que las recomendaciones funcionan de forma independiente y no tien
 ### ¿Las recomendaciones existentes se entrenan semanalmente después de actualizar a Recomendaciones de Artículos Pro?
 
 Sí, pero sólo después de su próxima actualización programada. Las recomendaciones existentes no cambian a entrenamiento semanal y predicción diaria inmediatamente después de actualizar a Recomendaciones de artículos Pro. Sin embargo, adoptarán el nuevo horario automáticamente en su próximo ciclo de reciclaje. Por ejemplo, si una recomendación se entrenó por última vez el 1 de febrero y está configurada para volver a entrenarse cada 30 días, adoptará el nuevo programa semanal tras su próxima actualización el 2 de marzo.
+
+### ¿Cómo puedo hacer que todas las recomendaciones que duran varios días caduquen a la vez?
+
+Si quieres que caduquen todas las recomendaciones de varios días en una fecha concreta (para que todas esas recomendaciones activas reciban nuevas predicciones a la vez), ponte en contacto con el soporte de Braze o con tu administrador del éxito del cliente para que te ayuden. Los expertos en IA de Braze lo realizan manualmente para garantizar el máximo rendimiento del modelo.

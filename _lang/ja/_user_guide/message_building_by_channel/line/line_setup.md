@@ -343,7 +343,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 ユーザーのログイン後に、Web サイトまたはアプリに対して変更が行われます。この変更により、ユーザー ID が Braze に再び送信され、URL の一部として渡された LINE ID に関連付けられます。次にコードの例を示します。
 
-```json
+```javascript
 const currentUrl = new URL(window.location.href)
 const queryParams = new URLSearchParams(currentUrl.search);
 const lineUserId = queryParams.get("line_user_id")

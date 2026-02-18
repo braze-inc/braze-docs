@@ -48,7 +48,7 @@ Por padrão, uma campanha contendo mensagens no app será enviada para todas as 
 
 Você pode criar um segmento de seus usuários da web definindo **Aplicativos e sites direcionados** para **Usuários de aplicativos específicos**, e então selecionar apenas seu site para os **Aplicativos Específicos**.
 
-![Página de Detalhes do Segmento com o app web em foco]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
+![Página de Detalhes do Segmento com o app da web em foco]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 Isso permitirá direcionar os usuários com base em seu comportamento de forma inteligente. Se quisesse direcionar os usuários da Web para incentivá-los a baixar seu app móvel, você criaria esse segmento como seu público-alvo. Se você quisesse enviar uma campanha de mensagens que incluísse uma mensagem no app para celular, mas não uma mensagem na Internet, desmarcaria o ícone do seu site no segmento de mensagens.
 

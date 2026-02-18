@@ -22,14 +22,17 @@ jobs:
       # Installs CLI tools for image optimization.
       - run: sudo apt-get update && sudo apt-get install -y pngquant jpegoptim
 
+      # Ensures the base branch ref is available for the diff.
+      - run: git fetch origin ${{ github.base_ref }} --no-tags
+
       # Finds only added/modified PNG or JPG files in the PR and optimizes them in place.
       - run: |
           files=$(git diff --name-only --diff-filter=AM origin/${{ github.base_ref }}...HEAD | grep -E '^assets/img/.*\.(png|jpg|jpeg)$' || true)
           if [[ -n "$files" ]]; then
-            echo "$files" | while read f; do
+            echo "$files" | while IFS= read -r f; do
               case "$f" in
-                *.png)  pngquant --skip-if-larger --ext .png --force 80 "$f" ;;
-                *.jpg|*.jpeg) jpegoptim --strip-all --max=80 "$f" ;;
+                *.png)  pngquant --skip-if-larger --ext .png --force 80 "$f" || true ;;
+                *.jpg|*.jpeg) jpegoptim --strip-all --max=80 "$f" || true ;;
               esac
             done
           else

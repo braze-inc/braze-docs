@@ -30,6 +30,12 @@ Führen Sie nun die entsprechenden Schritte für Ihre Datenquelle aus:
 
 {: start="4"}
 4\. Wählen Sie **\+ Kachel hinzufügen** und wählen Sie dann einen der Berichte aus, die Sie in [Report Builder (Neu)]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) erstellt haben.
+
+{% alert important %}
+Nachdem ein Bericht-Builder-Bericht zu einer Dashboard-Builder-Kachel hinzugefügt wurde, ist die Kachel nicht mit dem ursprünglichen Bericht verbunden. Wenn Sie den ursprünglichen Bericht in Report Builder bearbeiten, müssen Sie die vorhandene Dashboard-Kachel löschen und eine neue Kachel mit dem aktualisierten Bericht als Datenquelle erstellen.
+{% endalert %}
+
+{: start="5"}
 5\. Wählen Sie das Bleistiftsymbol aus, um die Anzeige des Titels und des Chart-Typs in der Kachel zu ändern.
     \- Sie können zwischen verschiedenen Chart-Typen unterhalb der Standard-Darstellung umschalten. Zu den aktuellen Optionen gehören Balkendiagramme (horizontal oder vertikal) und Liniendiagramme (nur verfügbar, wenn Sie bei der Einrichtung des Berichts-Builders das **Datum** als Drilldown-Option ausgewählt haben).<br><br>![Umschalter für verschiedene Chart-Typen.]({% image_buster /assets/img/report_builder_types.png %})<br><br>
     \- Verwenden Sie das Dropdown-Menü Metriken, um die Metriken auszuwählen, die Sie in Ihre Visualisierung aufnehmen möchten. Standardmäßig wird in der ersten Spalte des Berichts die Standard-Metrik angezeigt.
@@ -123,7 +129,7 @@ Zu den Berührungen gehören _E-Mail-Klick_ (Link-Klick), _Content-Card-Klick_, 
 |---|---|
 | Wöchentliche E-Mail Metriken (Raten) | E-Mail Engagement-Raten (Zustellungs-, Absprung-, Öffnungs-, Klick- und Abmeldungsraten), gruppiert nach Segmenten und als wöchentliche Zeitreihe angezeigt.|
 | Wöchentliche E-Mail Metriken (Zählungen) | Zählungen des E-Mail Engagements (gesendet, zugestellt, Bounces, Öffnungen, Klicks, Abmeldungen), gruppiert nach Segmenten und angezeigt als wöchentliche Zeitreihe.|
-| Wöchentliche Metriken zum Kauf (Kurse) | Konversionsraten (Umsatz pro Empfänger) von E-Mail Öffnungen und Klicks, gruppiert nach Segmenten und als wöchentliche Zeitreihe dargestellt.|
+| Wöchentliche Metriken zum Kauf (Kurse) | Konversionsraten (Umsatz pro Empfänger) von E-Mail Öffnungen und Klicks, gruppiert nach Segmenten und als wöchentliche Zeitreihe angezeigt.|
 | Wöchentliche Metriken für Käufe (Zählungen) | Kaufzahlen und Umsatzsummen aus Öffnungen und Klicks von E-Mails, gruppiert nach Segmenten und angezeigt als wöchentliche Zeitreihe.|
 | E-Mail Engagement nach Segmenten | Zusammenfassende Tabelle mit den Metriken für das gesamte E-Mail Engagement (gesendet, zugestellt, Bounces, Öffnungen, Klicks, Abmeldungen und deren Raten), aggregiert nach Segmenten.|
 | Käufe & Umsatzerlöse nach Segmenten | Zusammenfassende Tabelle mit den gesamten Metriken für Käufe (Käufe, Umsatz und Umsatz pro Empfänger:in) aus Öffnungen und Klicks von E-Mails, aggregiert nach Segmenten.|

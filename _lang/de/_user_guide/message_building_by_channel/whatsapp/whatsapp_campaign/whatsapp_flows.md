@@ -15,7 +15,7 @@ channel:
 
 > WhatsApp Flows ist eine Erweiterung des bestehenden WhatsApp-Kanals, die es Ihnen erlaubt, interaktive und dynamische Messaging-Erlebnisse zu erstellen. Auf dieser Seite finden Sie eine schrittweise Anleitung zur Verwendung von WhatsApp Flows.
 
-## Einrichten von WhatsApp Flows
+## WhatsApp-Flows einrichten
 
 1. Melden Sie sich bei Ihrem Meta-Konto an.
 2. Erstellen Sie Flows von einem der beiden Hauptstandorte aus:
@@ -137,7 +137,7 @@ Nachdem das Schema generiert wurde, zeigt der Abschnitt **Flussangepasste Attrib
 
 ### Schritt 1: Erstellen Sie einen Aktions-Pfad
 
-Erstellen Sie einen [Action-Pfad]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) Canvas-Schritt oder eine aktionsbasierte Kampagne. Wählen Sie einen Auslöser für **eingehende Nachrichten in WhatsApp** und die Bedingung **"Antwort auf Flow"** und wählen Sie dann den entsprechenden Flow oder **einen beliebigen Flow** aus.
+Erstellen Sie einen [Action-Pfad]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) Canvas-Schritt oder eine aktionsbasierte Kampagne. Wählen Sie einen Auslöser für **eine eingehende Nachricht in WhatsApp** und die Bedingung **Antwort auf Flow** und wählen Sie dann den entsprechenden Flow oder **einen beliebigen Flow** aus.
 
 ![Ein Trigger für Nutzer:innen, die eine eingehende WhatsApp Nachricht gesendet und auf einen Flow geantwortet haben.]({% image_buster /assets/img/whatsapp/flows/trigger_responded_flow.png %})
 

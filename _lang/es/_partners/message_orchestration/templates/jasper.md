@@ -78,10 +78,10 @@ Este método es ideal para crear y actualizar mediante programación plantillas 
 {% subtabs %}
 {% subtab Sample request %}
 
-### Solicitud de muestra
+### Solicitud de muestras
 
 {% raw %}
-```json
+```bash
 curl --location 'https://api.jasper.ai/v1/templates/skl_BC53D8AC5B4B47E8BE557EBB706E9B47/run?toneId=ton_811696974b3c4db4b3ac0041685c3b7c&knowledgeIds=kno_0a62fc17529e4fe69a71f30b6f0e88a7&audienceId=aud_0199117a690a7cc98481f8700916e2a6' \
 --header 'Content-Type: application/json' \
 --header 'x-api-key: ••••••' \
@@ -122,7 +122,7 @@ Utilizando las direcciones `subject`, `preheader`, y `body` generadas por Jasper
 
 ### Ejemplo de solicitud de la API Braze para crear una plantilla de correo electrónico
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \
@@ -176,7 +176,7 @@ Jasper Studio es una plataforma sin código dentro de Jasper que te permite crea
 ## Ejemplo de solicitud de la API Braze (utilizando la salida personalizada de la aplicación)
 
 {% raw %}
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \
@@ -198,5 +198,5 @@ Alternativamente, si eres especialista en marketing, puedes crear tu aplicación
 {% endtabs %}
 
 {% alert note %}
-Para obtener más ayuda, consulta [la documentación de la API de Jasper](https://developers.jasper.ai/reference/gettemplate-1) y el [Centro de Ayuda de Jasper Studio](https://help.jasper.ai/hc/en-us/articles/36783295610395-Jasper-Studio).
+Si necesitas más ayuda, consulta [la documentación de la API de Jasper](https://developers.jasper.ai/reference/gettemplate-1) y el [Centro de Ayuda de Jasper Studio](https://help.jasper.ai/hc/en-us/articles/36783295610395-Jasper-Studio).
 {% endalert %}
