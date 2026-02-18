@@ -15,7 +15,7 @@ description: "This article explains the Braze Canvas context object."
 > When using one of the endpoints for triggering or scheduling a Canvas through the API, you may provide a map of keys and values to customize messages sent by the first steps of your Canvas, in the `context` namespace.
 
 {% alert note %}
-The context object has a maximum size limit of 50 KB. 
+The context object has a maximum size limit of 50 KB.
 {% endalert %}
 
 ## Object body
