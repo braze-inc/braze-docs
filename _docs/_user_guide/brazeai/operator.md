@@ -13,6 +13,9 @@ guide_featured_list:
 - name: Getting Started
   link: /docs/user_guide/brazeai/operator/getting_started/
   image: /assets/img/braze_icons/book-open-01.svg
+- name: Reviewing Actions
+  link: /docs/user_guide/brazeai/operator/reviewing_actions/
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Troubleshooting
   link: /docs/user_guide/brazeai/operator/troubleshooting/
   image: /assets/img/braze_icons/alert-circle.svg

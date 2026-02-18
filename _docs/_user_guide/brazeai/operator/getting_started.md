@@ -109,4 +109,5 @@ At the bottom of each response, use the thumbs up or thumbs down buttons to prov
 
 ## Next steps
 
+- [Reviewing actions]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/) - Learn how to review and approve Operator's proposed changes
 - [Troubleshooting]({{site.baseurl}}/user_guide/brazeai/operator/troubleshooting/) - Common issues and solutions
