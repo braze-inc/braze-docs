@@ -809,7 +809,7 @@ Once disabled, any pending failed SDK requests will eventually be retried by the
 
 When using shared secrets, anyone with access to that shared secret, such as the Braze dashboard page, would be able to generate tokens and impersonate your end-users.
 
-Instead, we use public/private keys so that not even Braze Employees (let alone your dashboard users) have access to your private keys.
+Instead, we use public/private keys so that not even Braze Employees (let alone your company users) have access to your private keys.
 
 #### How will rejected requests be retried? {#faq-retry-logic}
 

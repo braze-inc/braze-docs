@@ -150,6 +150,8 @@ Pour plus d’informations sur l’utilisation des images dans vos notifications
 - [Créez des notifications riches pour iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
 - [Créez des notifications riches pour Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Comportement lors du clic
 
 Spécifiez ce qui se passe lorsqu'un utilisateur sélectionne le corps d'une notification push avec **On-Click Behavior**. Par exemple, vous pouvez inviter les clients à ouvrir votre application, les rediriger vers une URL Web spécifique ou même ouvrir une page spécifique de votre application à l'aide d'un [lien profond]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).

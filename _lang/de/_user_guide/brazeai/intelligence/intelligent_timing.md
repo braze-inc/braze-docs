@@ -22,7 +22,7 @@ Braze berechnet den optimalen Sendezeitpunkt auf der Grundlage einer statistisch
 
 So öffnet Sam vielleicht morgens regelmäßig Ihre E-Mails, aber abends öffnet sie Ihre App und interagiert mit Benachrichtigungen. Das bedeutet, dass Sam eine E-Mail-Kampagne mit intelligentem Timing am Morgen erhält, während sie Kampagnen mit Push-Benachrichtigungen am Abend erhält, wenn die Wahrscheinlichkeit größer ist, dass sie sich engagiert.
 
-Wenn ein Nutzer:innen nicht über genügend Daten zum Engagement verfügt, damit Braze den optimalen Sendezeitpunkt berechnen kann, können Sie einen Ausweichzeitpunkt festlegen.
+Wenn ein Nutzer:innen über keine relevanten Daten zum Engagement verfügt, damit Braze den optimalen Sendezeitpunkt berechnen kann, können Sie einen Fallback-Zeitpunkt festlegen.
 
 ## Anwendungsfälle
 
@@ -43,7 +43,7 @@ In diesem Abschnitt wird beschrieben, wie Sie das intelligente Timing für Ihre 
 3. Wählen Sie unter **Zeitbasierte Planungsoptionen** die Option **Intelligentes Timing**.
 4. Legen Sie die Häufigkeit der Eingänge fest. Für einmalige Sendungen wählen Sie **Einmalig** und wählen Sie ein Sendedatum aus. Für wiederkehrende Sendungen wählen Sie **Täglich**, **Wöchentlich** oder **Monatlich** und konfigurieren die Wiederholungsoptionen. Siehe [Einschränkungen](#limitations) für weitere Hinweise.
 5. Optional können Sie [Ruhezeiten](#quiet-hours) konfigurieren.
-6. Geben Sie eine [Ausweichzeit](#campaign-fallback) an. Dies ist der Zeitpunkt, zu dem die Nachricht gesendet wird, wenn das Profil eines Benutzers nicht genügend Daten enthält, um eine optimale Zeit zu berechnen.
+6. Geben Sie eine [Ausweichzeit](#campaign-fallback) an. Zu diesem Zeitpunkt wird die Nachricht gesendet, wenn das Profil eines Nutzers:innen keine relevanten Ereignisse enthält, um einen optimalen Zeitpunkt zu berechnen.
 
 ![Zeitplan für Kampagnen mit intelligentem Timing mit Fallback-Zeit und Ruhezeiten-Einstellungen]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
 
@@ -108,7 +108,7 @@ Wenn Sie intelligentes Timing verwenden, empfehlen wir, den Zeitplan für den Ve
 
 Optional können Sie das Zeitfenster für die Zustellung begrenzen. Dies kann nützlich sein, wenn sich Ihre Kampagne auf ein bestimmtes Ereignis, einen Verkauf oder eine Aktion bezieht, wird aber im Allgemeinen nicht empfohlen, wenn Sie Intelligent Timing verwenden. Weitere Informationen finden Sie unter [Einschränkungen](#limitations).
 
-Wenn Sie dies angeben, verwendet Braze nur Daten über das Engagement innerhalb dieses Zeitfensters, um die optimale Zustellung für einen Nutzer:innen zu bestimmen. Wenn innerhalb dieses Zeitfensters nicht genügend Daten zum Engagement vorhanden sind, wird die Nachricht zu der von Ihnen festgelegten Fallback-Zeit gesendet.
+Wenn Sie dies angeben, verwendet Braze nur Daten über das Engagement innerhalb dieses Zeitfensters, um die optimale Zustellung für einen Nutzer:innen zu bestimmen. Gibt es innerhalb dieses Zeitfensters keine relevanten Ereignisse, wird die Nachricht zu der von Ihnen festgelegten Fallback-Zeit gesendet.
 
 So legen Sie ein Zeitfenster für die Zustellung fest:
 
@@ -119,7 +119,7 @@ So legen Sie ein Zeitfenster für die Zustellung fest:
 
 ### Schritt 4: Wählen Sie eine Fallback-Zeit {#campaign-fallback}
 
-Wählen Sie einen Fallback-Zeitpunkt, der verwendet werden soll, wenn das Profil eines Nutzers:innen nicht genügend Daten für die Berechnung eines optimalen Zustellungszeitpunkts enthält.
+Wählen Sie eine Fallback-Zeit, die verwendet werden soll, wenn das Profil eines Nutzers:innen keine relevanten Ereignisse enthält, um eine optimale Zustellung zu berechnen.
 
 ![Zeitplan für eine Kampagne mit intelligentem Timing]({% image_buster /assets/img/intelligent_timing_1.png %})
 
@@ -137,7 +137,7 @@ Um eine Schätzung zu erhalten, wie viele Nutzer:innen die Nachricht in jeder St
 
 Wann immer Sie die Einstellungen für Intelligent Timing oder die Zielgruppe Ihrer Kampagne ändern, aktualisieren Sie die Daten erneut, um ein aktualisiertes Diagramm anzuzeigen.
 
-Das Diagramm zeigt Benutzer, die genügend Daten hatten, um eine optimale Zeit zu berechnen, in blau und Benutzer, die die Ausweichzeit nutzen werden, in rot. Verwenden Sie die Berechnungsfilter, um die Vorschau für einen detaillierteren Blick auf die einzelnen Nutzer:innen anzupassen.
+Das Chart zeigt Nutzer:innen, die relevante Ereignisse hatten, um eine optimale Zeit zu berechnen, in blau und Nutzer:innen, die die Fallback-Zeit nutzen werden, in rot. Verwenden Sie die Berechnungsfilter, um die Vorschau für einen detaillierteren Blick auf die einzelnen Nutzer:innen anzupassen.
 {% endtab %}
 
 {% tab Canvas %}
@@ -150,7 +150,7 @@ Nachrichten werden an Nutzer:innen gesendet, die den Schritt an diesem Tag zu ih
 
 ### Schritt 2: Wählen Sie eine Fallback-Zeit
 
-Wählen Sie eine Fallback-Zeit für die Nachricht, die an Nutzer:innen Ihrer Zielgruppe gesendet werden soll, die nicht über genügend Daten zum Engagement verfügen, damit Braze eine optimale Sendezeit berechnen kann. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
+Wählen Sie einen Fallback-Zeitpunkt für die Nachricht, die an Nutzer:innen Ihrer Zielgruppe gesendet werden soll, die keine relevanten Daten zum Engagement haben, damit Braze einen optimalen Sendezeitpunkt berechnen kann. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
 
 ### Schritt 4: Verzögerungsschritt hinzufügen
 
@@ -190,7 +190,7 @@ Intelligent Timing soll jedoch um 14 Uhr liefern, was bereits geschehen ist. Luk
 
 ### Vorschaudiagramm mit wenigen Benutzern mit optimalen Zeiten
 
-Braze benötigt eine gewisse Menge an Daten über das Engagement, um eine gute Schätzung vornehmen zu können. Wenn nicht genügend Sitzungsdaten vorhanden sind oder die anvisierten Benutzer nur wenige oder gar keine Klicks oder Öffnungen aufweisen (z. B. neue Benutzer), wird Braze standardmäßig die Ausweichzeit verwenden. Je nach Ihrer Konfiguration kann dies entweder die beliebteste App-Zeit oder eine benutzerdefinierte Ausweichzeit sein.
+Wenn es für einen Nutzer keine relevanten Events gibt (z.B. neue Nutzer mit wenig oder gar keinem Engagement), verwendet Braze die konfigurierte Fallback-Einstellung - entweder Ihre angepasste Fallback-Zeit oder die beliebteste Zeit für die Nutzung der App unter allen Nutzern:innen.
 
 ### Einfluss der Zeitzone auf die Zustellung von Intelligent Timing
 
@@ -238,9 +238,9 @@ Nein, [Öffnungen der Maschine]({{site.baseurl}}/user_guide/data/report_metrics/
 
 Intelligentes Timing plant Nachrichten während der "engagiertesten Stunde" jedes Nutzers, basierend auf dem Beginn der Sitzung und der Öffnung von Nachrichten. Innerhalb dieser Stunde wird der Zeitpunkt der Nachrichten auf die nächsten fünf Minuten gerundet. Wenn beispielsweise die optimale Zeit eines Nutzers:innen mit 16:58 Uhr berechnet wird, wird die Nachricht für 17:00 Uhr geplant. Es kann zu leichten Verzögerungen bei der Zustellung kommen, da das System in Stoßzeiten aktiv ist.
 
-#### Wie sehen die Fallback-Berechnungen aus, wenn nicht genügend Daten vorhanden sind?
+#### Wie sehen die Fallback-Berechnungen aus, wenn es keine relevanten Ereignisse gibt?
 
-Wenn für einen Nutzer:innen keine Daten verfügbar sind, verwendet Intelligentes Timing die Ausweichzeit in Ihren Nachrichteneinstellungen. 
+Wenn es für einen Nutzer keine relevanten Events gibt, verwendet Intelligentes Timing die konfigurierte Fallback-Einstellung in Ihren Nachrichten-Einstellungen - entweder eine angepasste Fallback-Zeit oder die unter allen Nutzern beliebteste Zeit für die Nutzung der App. 
 
 ### Kampagnen
 
@@ -250,7 +250,7 @@ Braze berechnet die optimale Zeit um Mitternacht in Samoa-Zeit, eine der ersten 
 
 #### Warum werden in meiner Intelligent Timing-Kampagne nur wenige oder gar keine Sendungen angezeigt?
 
-Braze benötigt eine ausreichende Anzahl von Datenpunkten, um eine gute Schätzung vornehmen zu können. Wenn die Sitzungsdaten nicht ausreichen oder die anvisierten Benutzer nur wenige oder gar keine E-Mail-Klicks oder -Öffnungen aufweisen (z. B. neue Benutzer), kann Intelligent Timing die beliebteste Stunde des Arbeitsbereichs an diesem Wochentag als Standard festlegen. Wenn es nicht genügend Informationen über den Workspace gibt, greifen wir auf die Standardzeit von 17 Uhr zurück. Sie können auch eine bestimmte Fallback-Zeit festlegen.
+Wenn es keine relevanten Engagement-Events für einen Nutzer gibt (z.B. neue Nutzer mit wenigen oder gar keinen Klicks oder Öffnungen), verwendet Intelligent Timing die konfigurierte Fallback-Einstellung - entweder Ihre angepasste Fallback-Zeit oder die beliebteste Zeit für die Nutzung der App unter allen Nutzern.
 
 #### Warum wird meine Intelligent Timing-Kampagne nach dem geplanten Datum gesendet?
 
@@ -279,7 +279,7 @@ Wenn die ermittelte optimale Zeit in die Ruhezeiten fällt, findet Braze den nä
 
 #### Kann ich Intelligent Timing und Ratenbegrenzung verwenden?
 
-Rate-Limiting kann bei einer Kampagne verwendet werden, die Intelligent Timing einsetzt. Rate-Limiting bedeutet jedoch, dass einige Nutzer:innen ihre Nachrichten zu einem suboptimalen Zeitpunkt erhalten, insbesondere wenn eine große Anzahl von Nutzer:innen im Verhältnis zur Rate-Limiting-Größe aufgrund unzureichender Daten auf den Zeitplan für den Fallback-Zeitpunkt gesetzt wird. 
+Rate-Limiting kann bei einer Kampagne verwendet werden, die Intelligent Timing einsetzt. Die Art des Rate-Limiting bedeutet jedoch, dass einige Nutzer:innen ihre Nachrichten zu einem nicht optimalen Zeitpunkt erhalten, insbesondere wenn eine große Anzahl von Nutzern:innen im Verhältnis zum Rate-Limits zum Fallback-Zeitpunkt eingeplant ist, weil sie keine relevanten Ereignisse haben. 
 
 Wir empfehlen die Verwendung von Rate-Limits bei einer Intelligent Timing Kampagne nur dann, wenn es technische Anforderungen gibt, die mit Rate-Limits erfüllt werden müssen.
 
@@ -300,6 +300,3 @@ Ja, maschinelle Öffnungen werden von Intelligent Timing herausgefiltert, so das
 #### Wie kann ich sicherstellen, dass Intelligent Timing so gut wie möglich funktioniert?
 
 Intelligentes Timing verwendet den individuellen Verlauf des Engagements jedes Nutzers:innen bei Nachrichten, unabhängig davon, zu welchen Zeiten sie diese erhalten haben. Bevor Sie intelligentes Timing verwenden, vergewissern Sie sich, dass Sie den Nutzer:innen Nachrichten zu verschiedenen Tageszeiten geschickt haben. Auf diese Weise können Sie "ausprobieren", wann der beste Zeitpunkt für die einzelnen Nutzer:innen ist. Eine unzureichende Auswahl verschiedener Tageszeiten kann dazu führen, dass Intelligent Timing eine suboptimale Sendezeit für eine:n Nutzer:in auswählt.
-
-
-

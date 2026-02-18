@@ -62,7 +62,7 @@ Substitua o seguinte:
 |`items`|A variável que armazena a matriz de itens recomendados.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-Em seguida, faça referência a itens específicos e seus campos usando a indexação de matriz e a notação de ponto:
+Em seguida, faça referência a itens específicos e seus campos usando indexação de matriz e notação de ponto:
 
 {% raw %}
 ```liquid

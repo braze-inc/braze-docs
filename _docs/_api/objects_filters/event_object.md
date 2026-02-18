@@ -89,7 +89,7 @@ Event properties are designed for filtering of, and Liquid personalization in, m
 
 #### Event example request
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY

@@ -136,9 +136,7 @@ Seuls les utilisateurs qui correspondent aux critères que vous avez définis pe
 
 Dans les **contrôles d'entrée**, vous pouvez limiter le nombre d'utilisateurs à chaque fois que le canvas est planifié pour s'exécuter. Pour les canvas déclenchés par API et livrés par événement, cette limite se produit à chaque heure UTC. 
 
-{% alert important %}
-Évitez de configurer une campagne ou un Canvas basé sur une action avec le même déclencheur que le filtre d'audience (comme un attribut modifié ou un événement personnalisé effectué). Une [condition de concurrence]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) peut se produire : l'utilisateur n'est pas dans l'audience au moment où il effectue le déclencheur, ce qui signifie qu'il ne recevra pas la campagne ou n'entrera pas dans le Canvas.
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Canvas race condition audience trigger' %}
 
 ##### Tester votre audience
 

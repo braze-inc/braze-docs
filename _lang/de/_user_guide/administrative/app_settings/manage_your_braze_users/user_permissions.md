@@ -1,6 +1,6 @@
 ---
 nav_title: Berechtigungen
-article_title: Braze-Berechtigungen
+article_title: "Nutzer:innen des Unternehmens"
 page_order: 2
 page_type: reference
 description: "Dieser Artikel erläutert Nutzerberechtigungen in Braze. Hier erfahren Sie, wie Sie Benutzerberechtigungen bearbeiten und festlegen und damit bestimmen, wer auf Ihre Apps im Dashboard zugreifen darf."
@@ -8,13 +8,13 @@ tool: Dashboard
 
 ---
 
-# Braze-Berechtigungen
+# Nutzer:innen des Unternehmens
 
 > Lernen Sie, wie Sie Berechtigungssätze erstellen, Rollen erstellen, Benutzerberechtigungen bearbeiten und Benutzerberechtigungen exportieren, damit Sie sicherstellen können, dass Ihre Benutzer nur auf die Arbeitsbereiche und Funktionen zugreifen, die sie am meisten benötigen.
 
 ## Erstellen eines Berechtigungssatzes
 
-Mit Berechtigungspaketen können Sie Berechtigungen für bestimmte Themenbereiche oder Aktionen bündeln. Sie können auf Dashboard-Benutzer angewendet werden, die in verschiedenen Arbeitsbereichen denselben Zugriff benötigen. Um einen Berechtigungssatz zu erstellen, gehen Sie zu **Einstellungen** > **Berechtigungseinstellungen** und wählen Sie dann **Berechtigungssatz erstellen**. Eine Beschreibung der einzelnen Berechtigungen finden Sie unter [Liste der Berechtigungen](#list-of-permissions).
+Mit Berechtigungspaketen können Sie Berechtigungen für bestimmte Themenbereiche oder Aktionen bündeln. Sie können auf Nutzer:innen des Unternehmens angewendet werden, die in verschiedenen Workspaces denselben Zugriff benötigen. Um einen Berechtigungssatz zu erstellen, gehen Sie zu **Einstellungen** > **Berechtigungseinstellungen** und wählen Sie dann **Berechtigungssatz erstellen**. Eine Beschreibung der einzelnen Berechtigungen finden Sie unter [Liste der Berechtigungen](#list-of-permissions).
 
 {% tabs local %}
 {% tab example permission sets %}
@@ -29,7 +29,7 @@ Mit Berechtigungspaketen können Sie Berechtigungen für bestimmte Themenbereich
 
 ## Eine Rolle erstellen
 
-Rollen ermöglichen eine bessere Strukturierung durch die Bündelung Ihrer individuell angepassten Berechtigungen mit den Zugriffskontrollen für den Workspace. Das ist besonders nützlich, wenn Sie viele Marken oder regionale Workspaces in einem Dashboard haben. Mit Rollen können Sie Dashboard-Benutzer zu den richtigen Arbeitsbereichen hinzufügen und ihnen direkt die entsprechenden Berechtigungen erteilen. Eine Beschreibung der einzelnen Berechtigungen finden Sie unter [Liste der Berechtigungen](#list-of-permissions).
+Rollen ermöglichen eine bessere Strukturierung durch die Bündelung Ihrer individuell angepassten Berechtigungen mit den Zugriffskontrollen für den Workspace. Das ist besonders nützlich, wenn Sie viele Marken oder regionale Workspaces in einem Dashboard haben. Mit Rollen können Sie Nutzer:innen des Unternehmens zu den richtigen Workspaces hinzufügen und ihnen direkt die entsprechenden Berechtigungen erteilen. Eine Beschreibung der einzelnen Berechtigungen finden Sie unter [Liste der Berechtigungen](#list-of-permissions).
 
 {% tabs local %}
 {% tab example roles %}
@@ -50,11 +50,11 @@ Rollen ermöglichen eine bessere Strukturierung durch die Bündelung Ihrer indiv
 
 Es kann zu Schwierigkeiten kommen, wenn Sie versuchen, im Braze-Dashboard Berechtigungen zu speichern, insbesondere wenn Sie Nutzer:innen zu einem Workspace oder zu einem Team hinzufügen oder entfernen. Der Button **Nutzer:innen speichern/aktualisieren** kann ausgegraut werden, wenn die Berechtigungen für den Nutzer:innen mit denen identisch sind, die er bereits auf Workspace-Ebene hat. Diese Einschränkung besteht, weil es keinen Nutzen hat, ein Team zu haben, wenn alle Nutzer:innen die gleichen Berechtigungen wie der gesamte Workspace besitzen.
 
-Um einen Nutzer:innen erfolgreich zu einem Team hinzuzufügen und dabei die gleichen Berechtigungen beizubehalten, vergeben Sie keine Berechtigungen auf der Ebene des Workspace. Vergeben Sie stattdessen Berechtigungen ausschließlich auf der Ebene des Teams.
+Um einen Nutzer:innen erfolgreich zu einem Team hinzuzufügen und dabei dieselben Berechtigungen beizubehalten, vergeben Sie keine Berechtigungen auf Workspace-Ebene. Vergeben Sie stattdessen Berechtigungen ausschließlich auf der Ebene des Teams.
 
 ## Eingeschränkte Nutzer:innen
 
-Eingeschränkte Nutzer:innen verfügen über bestimmte Rechte, die es ihnen erlauben, bestimmte Aspekte des Braze-Dashboards zu verwalten, während sie im Vergleich zu Unternehmensadministratoren und Workspace-Administratoren Einschränkungen haben.
+Eingeschränkte Nutzer:innen verfügen über bestimmte Berechtigungen, die es ihnen erlauben, bestimmte Aspekte des Braze-Dashboards zu verwalten, während sie im Vergleich zu Unternehmensadministratoren und Workspace-Administratoren Einschränkungen haben.
 
 | Berechtigungen | Eingeschränkte Nutzer:innen können die Berechtigungen anderer eingeschränkter Nutzer:innen bearbeiten, wenn sie die Berechtigung "Dashboard-Benutzer verwalten" aktiviert haben. Sie können auch neue eingeschränkte Nutzer:innen erstellen und deren Berechtigungen ändern. Sie können jedoch keine Firmenadministrationskonten erstellen oder verwalten. |
 | Rollenbeschränkungen | Wenn ein Nutzer:innen über alle Rechte außer "App-Gruppen-Admin" verfügt, hat er dennoch Zugriff auf alle anderen Rechte, die normalerweise einem Workspace-Admin gewährt werden. |
@@ -66,7 +66,7 @@ Eingeschränkte Nutzer:innen verfügen über bestimmte Rechte, die es ihnen erla
 | Eingeschränkter Nutzertyp:in | Beschreibung |
 | --- | --- |
 | App-Gruppe verwalten | App-Gruppen-Admins verfügen über spezielle Berechtigungen für die Verwaltung von App-Gruppen, haben aber nicht die gleichen Befugnisse wie Unternehmens-Admins. Eingeschränkte Nutzer:innen können ähnliche Berechtigungen wie App-Gruppen-Admins erben, wenn sie die erforderlichen Berechtigungen aktiviert haben. |
-| Unternehmen admin | Unternehmensadministratoren haben umfassendere Berechtigungen, einschließlich der Möglichkeit, Nutzer:innen des Dashboards zu löschen. Sie können jedoch nicht ihre eigenen Konten löschen und müssen sich für diese Aktion an einen anderen Unternehmensadministrator wenden. |
+| Unternehmen admin | Unternehmensadministratoren haben umfassendere Rechte, einschließlich der Möglichkeit, Nutzer:innen des Unternehmens zu löschen. Sie können jedoch nicht ihre eigenen Konten löschen und müssen sich für diese Aktion an einen anderen Unternehmensadministrator wenden. |
 | Grundlegende Nur-Lese-Erlaubnis | Für den Zugriff auf bestimmte Teile des Dashboards, wie z.B. die Technologie-Partnerseite, müssen Nutzer:innen über eine grundlegende Leseberechtigung verfügen. Dazu gehört, dass Sie "Externe Integrationen verwalten" aktiviert haben, zusammen mit den Berechtigungen für den Zugriff auf Kampagnen, Canvase, Karten, Segmente und die Mediathek. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -75,7 +75,7 @@ Eingeschränkte Nutzer:innen verfügen über bestimmte Rechte, die es ihnen erla
 Nutzer:innen erhalten möglicherweise Nachrichten wie "Eingeschränkter Zugang. Sie haben keine Berechtigung zum Zugriff auf diese Seite." In solchen Fällen sollte der Kontoverwalter prüfen, ob er das Problem durch Deaktivieren und Wiederaktivieren der Nutzer:innen-Berechtigungen lösen kann.
 
 {% alert note %}
-Es ist nicht möglich, Nutzer:innen von einem Dashboard-Benutzer zu einem anderen zusammenzuführen oder zu importieren.
+Es ist nicht möglich, Nutzer:innen von einem Unternehmen zu einem anderen zusammenzuführen oder zu importieren.
 {% endalert %}
 
 ## Bearbeiten der Berechtigungen eines Benutzers
@@ -92,8 +92,8 @@ Um die aktuellen Admin-, Unternehmens- oder Workspace-Berechtigungen eines Nutze
 Admins haben Zugriff auf alle Features und können alle Unternehmenseinstellungen ändern. Sie können:
 
 - [Genehmigungseinstellungen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval) ändern
-- Hinzufügen, Bearbeiten, Löschen, Suspendieren oder Aufheben der Suspendierung anderer [Braze-Benutzer]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
-- Braze-Benutzer als CSV-Datei exportieren
+- Hinzufügen, Bearbeiten, Löschen, Suspendieren oder Aufheben der Suspendierung anderer [Nutzer:innen des Unternehmens]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- Nutzer:innen des Unternehmens als CSV-Datei exportieren
 
 Um Admin-Rechte zu gewähren oder zu entfernen, wählen Sie **Dieser Benutzer ist ein Admin** und dann **Benutzer aktualisieren**.
 
@@ -150,14 +150,14 @@ Wenn Sie fertig sind, wählen Sie **Benutzer aktualisieren**.
 
 ## Benutzerberechtigungen exportieren
 
-Um eine Liste Ihrer Nutzer:innen und deren Berechtigungen herunterzuladen, gehen Sie zu **Einstellungen** > **Firmennutzer:innen** und wählen Sie dann **Nutzer:innen exportieren**. Eine CSV-Datei wird in Kürze an Ihre E-Mail-Adresse gesendet.
+Um eine Liste der Nutzer:innen Ihres Unternehmens und deren Berechtigungen herunterzuladen, gehen Sie zu **Einstellungen** > **Nutzer:innen des Unternehmens** und wählen Sie dann **Nutzer:innen exportieren**. Eine CSV-Datei wird in Kürze an Ihre E-Mail-Adresse gesendet.
 
 ![Die Seite "Unternehmen Nutzer:innen" in Braze mit der Option "Nutzer:innen exportieren" im Fokus.]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
 
 ## Liste der Berechtigungen
 
 {% alert important %}
-Ab April 2024 ist in Braze für die Erstellung und Aktualisierung von Listen mit Aktionscode die Berechtigung "Zugriff auf Kampagnen, Canvase, Cards, Segmente, Mediathek" erforderlich.
+Ab April 2024 benötigen Nutzer:innen eines Unternehmens die Berechtigung "Zugriff auf Kampagnen, Canvase, Karten, Segmente, Bibliothek", um Listen mit Aktionscodes zu erstellen oder zu aktualisieren.
 {% endalert %}
 
 |Ebene|Name|Definition|
@@ -177,7 +177,7 @@ Ab April 2024 ist in Braze für die Erstellung und Aktualisierung von Listen mit
 |Workspace|Präferenzzentren starten|Ermöglicht es Benutzern, [Einstellungszentren]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) zu starten.|
 |Workspace|Apps verwalten|Ermöglicht Benutzern die Bearbeitung der **App-Einstellungen**.|
 |Workspace|Dashboard-Berechtigungen zum Verwalten von Katalogen|Ermöglicht es Benutzern, Kataloge zu erstellen und zu verwalten.|
-|Workspace|Dashboard-Nutzer:innen verwalten| Ermöglicht es Nicht-Administratoren, die Seite **Unternehmensbenutzer** anzuzeigen, zu bearbeiten und zu verwalten sowie die Nutzer:innen des Dashboards in ihrem Workspace zu verwalten, indem sie die Berechtigungen aller Nutzer:innen, einschließlich ihrer eigenen, ändern. Benutzer mit dieser Berechtigung können Nutzer:innen nicht löschen (nur Administratoren können Nutzer:innen löschen).<br><br>Dies entspricht dem alten Recht `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
+|Workspace|Dashboard-Nutzer:innen verwalten| Erlaubt es Nicht-Administratoren, die Seite **Unternehmensbenutzer** anzuzeigen, zu bearbeiten und zu verwalten und die Nutzer:innen des Unternehmens in ihrem Workspace zu verwalten, indem sie die Berechtigungen aller Nutzer:innen, einschließlich ihrer eigenen, ändern. Benutzer mit dieser Berechtigung können Nutzer:innen nicht löschen (nur Administratoren können Nutzer:innen löschen).<br><br>Dies entspricht dem alten Recht `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
 |Workspace|E-Mail-Einstellungen verwalten|Ermöglicht es Benutzern, Änderungen an der E-Mail-Konfiguration zu speichern**(Einstellungen** > **E-Mail-Voreinstellungen**).|
 |Workspace|Events, Attribute und Käufe verwalten|Ermöglicht es Benutzern, benutzerdefinierte Attribute zu bearbeiten (Benutzer ohne diese Funktion können benutzerdefinierte Attribute weiterhin anzeigen), Eigenschaften von benutzerdefinierten Ereignissen zu bearbeiten und anzuzeigen und Eigenschaften von Produkten unter **Dateneinstellungen** zu bearbeiten und anzuzeigen.|
 |Workspace|Externe Integrationen verwalten|Erlaubt den Zugriff auf alle Tabs unter **Technologiepartner**, die Möglichkeit, Braze mit anderen Plattformen zu synchronisieren, und den Zugriff auf die Verwaltung der [Datenaufnahme in der Cloud]({{site.baseurl}}/user_guide/data/cloud_ingestion/).|
@@ -202,12 +202,15 @@ Ab April 2024 ist in Braze für die Erstellung und Aktualisierung von Listen mit
 |Workspace|Canvas-Templates archivieren|Ermöglicht es Benutzern, Canvas-Vorlagen zu archivieren.|
 |Workspace|Eigenschaftssegmentierung für angepasste Events verwalten|Erlaubt Nutzern:innen, Segmente auf der Grundlage der Eigenschaften Häufigkeit und Häufigkeit von Ereignissen zu erstellen.|
 |Workspace|Startseiten veröffentlichen|Erlaubt es Nutzer:innen, [Landing Pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/) zu veröffentlichen.|
-|Workspace|Entwürfe für Startseite erstellen|Erlaubt Nutzern:innen, Entwürfe für Landing Pages zu erstellen und zu speichern.|
-|Workspace|Startseiten aufrufen|Erlaubt Nutzern:innen den Zugriff auf die Seite **Landing Pages**.|
-|Workspace|Landing-Page-Templates erstellen und bearbeiten|Erlaubt Nutzern:innen die Erstellung und Bearbeitung von Landing Page Templates.|
+|Workspace|Entwürfe für Landing-Pages bearbeiten|Erlaubt Nutzern:innen, Entwürfe für Landing Pages zu erstellen und zu speichern.|
+|Workspace|Landing-Pages anzeigen|Erlaubt Nutzern:innen den Zugriff auf die Seite **Landing Pages**.|
+|Workspace|Landing-Page-Templates bearbeiten|Erlaubt Nutzern:innen die Erstellung und Bearbeitung von Landing Page Templates.|
 |Workspace|Landing-Page-Templates anzeigen|Erlaubt Nutzern:innen die Anzeige von Landing Page Templates.|
 |Workspace|Landing-Page-Templates archivieren|Erlaubt Nutzern:innen die Archivierung von Landing Page Templates.|
 |Workspace|Angepasste KI-Agenten anzeigen|Erlaubt Nutzern:innen, [angepasste KI-Agenten]({{site.baseurl}}/user_guide/brazeai/agents/) anzuzeigen. Dieses Feature befindet sich derzeit in der Beta-Phase.|
 |Workspace|Angepasste KI-Agenten erstellen|Erlaubt Nutzern:innen, angepasste KI-Agenten zu erstellen. Dieses Feature befindet sich derzeit in der Beta-Phase.|
 |Workspace|Angepasste KI-Agenten bearbeiten|Erlaubt Nutzern:innen, angepasste KI-Agenten zu bearbeiten. Dieses Feature befindet sich derzeit in der Beta-Phase.|
+| Workspace | Ansicht WhatsApp Nachrichten Templates | Erlaubt Nutzern:innen die Anzeige von [Templates für WhatsApp Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/?tab=template%20messages#step-2-compose-your-whatsapp-message). |
+| Workspace | WhatsApp Nachrichten Templates bearbeiten | Erlaubt Nutzern:innen die Erstellung von Templates für WhatsApp Nachrichten im Template Builder. Dieses Feature befindet sich derzeit in der Early Access-Phase. |
+| Workspace | Whatsapp-Nachrichten-Templates löschen | Erlaubt Nutzern:innen das Löschen von WhatsApp Nachrichten Templates im Template Builder. Dieses Feature befindet sich derzeit in der Early Access-Phase. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

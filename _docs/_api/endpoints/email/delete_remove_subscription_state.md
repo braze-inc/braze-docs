@@ -28,7 +28,7 @@ description: "This article outlines the details about the Delete subscription st
 
 ## Example request
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {

@@ -9,7 +9,7 @@ channel:
 
 # Melhore a latência para cartões de conteúdo como banners
 
-> Se você está enfrentando latência com a implementação de cartões de conteúdo para casos de uso críticos, como banners na página inicial, revise esta página para estratégias e dicas que ajudem a resolver e acelerar sua renderização.
+> Se você está enfrentando latência com a implementação de cartões de conteúdo para casos de uso críticos, como banners na página inicial, revise esta página para estratégias e dicas para ajudar a resolver e acelerar sua renderização.
 
 {% alert tip %}
 Você está tentando exibir banners personalizados e proeminentes em seu aplicativo ou site? Experimente [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/), que são projetados para suportar casos de uso de banners de baixa latência.
@@ -17,9 +17,9 @@ Você está tentando exibir banners personalizados e proeminentes em seu aplicat
 
 ## Use entrada programada em vez de entrada baseada em ação
 
-Cartões baseados em ação em campanhas e canavas exigem processamento em segundo plano. A Braze deve primeiro receber aviso da ação desencadeadora (como uma compra ocorrendo ou uma sessão começando) antes de criar um cartão para um usuário. Como resultado, haverá uma postergação antes que esses cartões fiquem disponíveis.
+Cartões baseados em ação em campanhas e canteiros exigem processamento em segundo plano. A Braze deve primeiro receber aviso da ação desencadeadora (como uma compra ocorrendo ou uma sessão começando) antes de criar um cartão para um usuário. Como resultado, haverá uma postergação antes que esses cartões se tornem disponíveis.
 
-Cartões baseados em ação introduzirão complexidade adicional ao seu aplicativo, onde você pode se ver continuamente consultando e atualizando para esperar que o cartão esteja disponível. Em vez disso, configure seu cartão para ser `Scheduled Entry`, que atuará como uma janela de disponibilidade para que o cartão esteja sempre disponível para o público-alvo.
+Cartões baseados em ação introduzirão complexidade adicional ao seu aplicativo, onde você pode se ver continuamente consultando e atualizando para esperar que o cartão esteja disponível. Em vez disso, configure seu cartão para ser `Scheduled Entry`, que atuará como uma janela de disponibilidade para o cartão estar sempre disponível para o público-alvo.
 
 Se você programar seus cartões com antecedência, eles estarão prontos, esperando que o usuário abra seu aplicativo e solicite cartões.
 
@@ -31,7 +31,7 @@ Isso significa que, juntamente com a entrada programada, os cartões estarão di
 
 ## Lembre-se de que a entrada do Canvas é um pré-requisito para receber cartões.
 
-Ao usar o canva, lembre-se de que um usuário deve primeiro entrar no canva com base nos critérios de entrada configurados, e *então* deve fluir através da etapa da mensagem do cartão de conteúdo. Somente então o cartão estará disponível para seu app ou site. Lembre-se, há uma latência embutida para que o cartão seja criado uma vez que o usuário passe pela etapa e pode haver uma postergação quando o cartão estiver disponível.
+Ao usar o canva, lembre-se de que um usuário deve primeiro entrar no canva com base nos critérios de entrada configurados, e *então* deve fluir através da etapa da mensagem do cartão de conteúdo. Somente então o cartão estará disponível para seu app ou site. Lembre-se, há uma latência embutida para o cartão ser criado uma vez que o usuário passa pela etapa e pode haver uma postergação quando o cartão estiver disponível.
 
 ## Não atualize os cartões excessivamente
 

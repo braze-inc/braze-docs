@@ -228,7 +228,7 @@ Quando você edita um endpoint, pode levar até 5 minutos para que o cache seja 
 #### Tentativas
 Atualmente, não há novas tentativas nesses eventos. Se uma resposta não for recebida em 5 segundos, o evento será descartado e não passará por novas tentativas. A Regal adicionará novas tentativas em uma versão futura.
 #### Eventos
-O [guia de Webhooks de Relatórios](https://developer.regal.io/docs/reporting-webhooks#events) da Regal inclui a lista completa de eventos de Relatórios que eles publicam. Lá você pode ver definições de propriedades e exemplos de cargas úteis.
+O [guia de Webhooks de Relatórios](https://developer.regal.io/docs/reporting-webhooks#events) da Regal inclui a lista completa de eventos de Relatório que eles publicam. Lá você pode ver definições de propriedades e exemplos de cargas úteis.
 
 ### Etapa 3: Transforme os eventos Regal em eventos Braze
 
@@ -359,7 +359,7 @@ Abaixo está um exemplo de carga útil para um evento `contact.attribute.edited`
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.attribute.edited",
   "properties": {
@@ -423,7 +423,7 @@ Abaixo está um exemplo de carga útil para um evento `contact.experiment.assign
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.experiment.assigned",
   "properties": {

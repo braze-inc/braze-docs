@@ -40,7 +40,7 @@ Depois de criar sua mensagem de Banner, você pode fazer uma prévia do Banner o
 
 1. Elabore sua mensagem de banner.
 2. Selecione **Preview** para fazer uma prévia de seu banner ou enviar uma mensagem de teste.
-3. Para enviar uma mensagem de teste, adicione um grupo de teste de conteúdo ou um ou mais usuários individuais como **Destinatários do teste** e, em seguida, selecione **Enviar teste**. 
+3. Para enviar uma mensagem de teste, adicione um grupo de teste de conteúdo ou um ou mais usuários individuais como **Destinatários de teste** e, em seguida, selecione **Enviar teste**. 
 
 Você poderá visualizar sua mensagem de teste no dispositivo por até 5 minutos.
 
@@ -156,14 +156,14 @@ Uma mensagem de push de teste será exibida na parte superior da tela do disposi
 ![Teste no aplicativo]({% image_buster /assets/img_archive/test-in-app.png %})
 
 {% alert important %}
-Os envios de teste podem resultar em mais de uma mensagem no app sendo enviada para cada destinatário.
+Os envios de teste podem resultar no envio de mais de uma mensagem no app para cada destinatário.
 {% endalert %}
 
 Ao clicar diretamente e abrir a mensagem push, você será direcionado para o app, onde poderá visualizar o teste da mensagem no app. Note que esse recurso de teste de mensagem no app depende de o usuário clicar em uma notificação por push de teste para disparar a mensagem no app. Dessa forma, o usuário deve ser elegível para receber notificações por push no app relevante para a entrega bem-sucedida da notificação por push de teste.
 
 ### Prévia
 
-Você pode fazer uma prévia da sua mensagem no app à medida que a cria na guia **Preview (Pré-visualização** ). Isso deve ajudá-lo a visualizar como será a mensagem final do ponto de vista do usuário. É possível fazer uma prévia de como será a mensagem para um usuário aleatório, um usuário específico ou um usuário personalizado. Também é possível fazer a prévia das mensagens em dispositivos móveis ou tablets.
+Você pode fazer uma prévia da sua mensagem no app à medida que a cria na guia **Preview (Pré-visualização** ). Isso deve ajudá-lo a visualizar como será a mensagem final do ponto de vista do usuário. É possível fazer uma prévia da aparência da mensagem para um usuário aleatório, um usuário específico ou um usuário personalizado. Também é possível fazer a prévia das mensagens em dispositivos móveis ou tablets.
 
 ![Guia "Criar" ao criar uma mensagem no app mostrando a prévia de como será a mensagem. Um usuário não é selecionado, portanto, o Liquid adicionado na seção do corpo é exibido como está.]({% image_buster /assets/img/in-app-message-preview.png %})
 
@@ -189,7 +189,7 @@ Para dar suporte às práticas recomendadas de acessibilidade, o Braze verifica 
 ![Resultados da varredura de acessibilidade]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
 
 {% alert note %}
-O scanner de acessibilidade de mensagens no app só funciona em mensagens criadas com HTML personalizado.
+O verificador de acessibilidade de mensagens no app só funciona em mensagens criadas com HTML personalizado.
 {% endalert %}
 
 #### Como funciona?
@@ -272,7 +272,7 @@ Se estiver testando campanhas que preenchem dados de usuários ou usam proprieda
 
 ### Teste de campanhas personalizadas com atribuições do usuário
 
-Se estiver usando [a personalização]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) em sua mensagem, precisará realizar etapas adicionais para fazer uma prévia adequada da campanha e verificar se os dados de usuários estão preenchendo adequadamente o conteúdo.
+Se estiver usando [a personalização]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) em sua mensagem, precisará realizar etapas adicionais para fazer uma prévia adequada de sua campanha e verificar se os dados de usuários estão preenchendo adequadamente o conteúdo.
 
 Ao enviar uma mensagem de teste, certifique-se de escolher a opção **Selecionar usuário existente** ou prévia como **usuário personalizado**.
 
@@ -369,4 +369,4 @@ Para envios de teste no Android e no iOS, as mensagens no app que usam o comport
 - **Android:** Os dispositivos devem estar usando o Android 13 e nosso Android SDK versão 21.0.0. Outro motivo pode ser o fato de o dispositivo em que a mensagem no app é exibida já ter um prompt no nível do sistema. Talvez você tenha selecionado **Não perguntar novamente**, portanto, talvez seja necessário reinstalar o app para redefinir as permissões de notificação antes de testar novamente.
 - **iOS:** Recomendamos que sua equipe de desenvolvedores revise a implementação de notificações por push para seu app e remova manualmente qualquer código que solicite permissões por push. Para saber mais, consulte [Mensagens no app do push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
-Para que uma campanha de mensagens no app baseada em ação seja entregue, é necessário o registro de usuários de eventos personalizados por meio do Braze SDK, e não de APIs REST, para que os usuários possam receber mensagens no app elegíveis diretamente em seus dispositivos. Os usuários recebem a mensagem no app se realizarem o evento durante a sessão.
+Para que uma campanha de mensagens no app baseada em ação seja entregue, é necessário o registro de usuários de eventos personalizados por meio do Braze SDK, e não de APIs REST, para que os usuários possam receber mensagens no app elegíveis diretamente em seus dispositivos. Os usuários receberão a mensagem no app se realizarem o evento durante a sessão.

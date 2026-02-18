@@ -68,7 +68,7 @@ Se não estiver usando o plug-in Braze Expo ou se, em vez disso, quiser definir 
 {% endtab %}
 
 {% tab iOS Native %}
-Se não estiver usando o plug-in Braze Expo ou se, em vez disso, quiser definir essas configurações nativamente, registre-se para push consultando as etapas a seguir do [guia de integração de push nativo do iOS]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift):
+Se não estiver usando o plug-in Braze Expo ou se, em vez disso, quiser definir essas configurações nativamente, registre-se para o push consultando as etapas a seguir do [guia de integração de push nativo do iOS]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift):
 
 #### Etapa 1.1: Solicitação de permissões push
 
@@ -261,7 +261,67 @@ Para obter um exemplo de integração, consulte nosso app de amostra [aqui](http
 {% endtab %}
 {% endtabs %}
 
-### Etapa 4: Enviar uma notificação por push de teste
+### Etapa 4: Lidar com notificações de primeiro plano
+
+O tratamento de notificações em primeiro plano funciona de forma diferente, dependendo de sua plataforma e configuração. Escolha a abordagem que corresponda à sua integração:
+
+{% tabs local %}
+{% tab iOS %}
+No iOS, o tratamento de notificações em primeiro plano é o mesmo da integração nativa do Swift. Chame `handleForegroundNotification(notification:)` em sua implementação `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)`.
+
+Para obter detalhes completos e exemplos de código, consulte [Manipulação de notificações em primeiro plano]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#handling-foreground-notifications) na documentação sobre notificações por push do Swift.
+{% endtab %}
+
+{% tab Android %}
+No Android, o tratamento de notificações em primeiro plano é o mesmo da integração nativa do Android. Chame `BrazeFirebaseMessagingService.handleBrazeRemoteMessage` dentro de seu método `FirebaseMessagingService.onMessageReceived`.
+
+Para obter detalhes completos e exemplos de código, consulte [Manipulação de notificações em primeiro plano]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) na documentação sobre notificações por push do Android.
+{% endtab %}
+
+{% tab Expo %}
+No fluxo de trabalho gerenciado pela Expo, você não chama diretamente os manipuladores de notificação nativos. Em vez disso, use a API de notificações da Expo para controlar a apresentação em primeiro plano, enquanto o plug-in da Braze Expo lida com o processamento nativo automaticamente.
+
+```javascript
+import * as Notifications from 'expo-notifications';
+import Braze from '@braze/react-native-sdk';
+
+// Control foreground presentation in Expo
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,    // Show alert while in foreground
+    shouldPlaySound: false,
+    shouldSetBadge: false,
+  }),
+});
+
+// React to Braze push events
+const subscription = Braze.addListener('pushNotificationEvent', (event) => {
+  console.log('Braze push event', {
+    type: event.payload_type,   // "push_received" | "push_opened"
+    title: event.title,
+    url: event.url,
+    is_silent: event.is_silent,
+  });
+  // Handle deep links, custom behavior, etc.
+});
+
+// Handle initial payload when app launches via push
+Braze.getInitialPushPayload((payload) => {
+  if (payload) {
+    console.log('Initial push payload', payload);
+  }
+});
+```
+
+{% alert note %}
+No fluxo de trabalho gerenciado pela Expo, o plug-in Braze Expo lida automaticamente com o processamento push nativo. Você controla a interface do usuário em primeiro plano por meio das opções de apresentação da Expo Notifications mostradas acima.
+{% endalert %}
+
+Para integrações de fluxo de trabalho simples, siga as abordagens nativas do iOS e do Android.
+{% endtab %}
+{% endtabs %}
+
+### Etapa 5: Enviar uma notificação por push de teste
 
 Nesse ponto, você deve poder enviar notificações aos dispositivos. Siga as etapas a seguir para testar sua integração push.
 
@@ -312,7 +372,7 @@ Estas são etapas comuns de solução de problemas para integrações de notific
 
 #### As notificações por push pararam de funcionar {#troubleshooting-stopped-working}
 
-Se as notificações por push por meio do plug-in Expo pararem de funcionar:
+Se as notificações por push por meio do plug-in Expo pararam de funcionar:
 
 1. Verifique se o SDK do Braze ainda está rastreando as sessões.
 2. Verifique se o SDK não foi desativado por uma chamada explícita ou implícita para `wipeData`.

@@ -29,7 +29,7 @@ tool: Currents
     * Añadido el nuevo campo `long` `time_ms` : Hora en milisegundos en que se produjo el suceso
 
 
-## Cambios en la Versión 4 (fecha de publicación 2026-01-08)
+## Cambios en la Versión 4 (fecha de lanzamiento 2026-01-08)
 
 * El campo cambia al tipo de evento `users.behaviors.pushnotification.TokenStateChange`:
     * Añadido el nuevo campo `string` `push_token` : Token de notificaciones push del evento

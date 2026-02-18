@@ -2,14 +2,14 @@
 nav_title: Oppizi
 article_title: Oppizi 
 alias: /partners/oppizi/
-description: "Este artigo de referência descreve a parceria entre a Braze e a Oppizi."
+description: "Este artigo de referência descreve a parceria entre Braze e Oppizi."
 page_type: partner
 search_tag: Partner
 ---
 
 # Oppizi
 
-> [Oppizi](https://www.oppizi.com/) é o líder global em marketing offline, fornecendo uma solução completa para empresas realizarem campanhas de mala direta e distribuição de panfletos mensuráveis e direcionadas.
+> [Oppizi](https://www.oppizi.com/) é o líder global em marketing offline, fornecendo uma solução completa para empresas realizarem campanhas de mala direta e panfletagem mensuráveis e direcionadas.
 
 _Esta integração é mantida pela Oppizi._
 
@@ -17,25 +17,25 @@ _Esta integração é mantida pela Oppizi._
 
 | Requisito                    | Descrição                                                                   |
 | ------------------------------ | ----------------------------------------------------------------------------- |
-| Conta da Oppizi                 | Uma conta ativa da Oppizi é necessária para usar esta integração.                 |
-| Chave de API da Oppizi                 | Encontrada na sua conta da Oppizi em **Integrações** > **Braze**.                |
-| ID do fluxo de trabalho de mala direta da Oppizi | Crie um fluxo de trabalho na Oppizi na página **Fluxo de Trabalho de Mala Direta** para obter um ID. |
+| Conta Oppizi                 | Uma conta Oppizi ativa é necessária para usar esta integração.                 |
+| Chave de API Oppizi                 | Encontrada na sua conta Oppizi em **Integrações** > **Braze**.                |
+| ID do fluxo de trabalho de mala direta Oppizi | Crie um fluxo de trabalho na Oppizi na página **Fluxo de Trabalho de Mala Direta** para obter um ID. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Casos de uso
 
-Com a integração da Oppizi, você pode:
+Com a integração Oppizi, você pode:
 
-* **Enviar postais de mala direta automatizados** usando gatilhos da Braze conectados ao webhook da Oppizi e fluxos de trabalho de mala direta.
+* **Enviar postais de mala direta automatizados** usando gatilhos Braze conectados ao webhook da Oppizi e fluxos de trabalho de mala direta.
 * **Configurar limites, ondas e limites** nos fluxos de trabalho de mala direta da Oppizi para controlar o envio de suas campanhas.
 * **Projetar postais profissionais** com a ferramenta de design integrada da Oppizi—sem experiência em design necessária.
 * **Rastrear o desempenho da campanha** em tempo real com o dashboard da Oppizi.
 
 ## Integração
 
-### Etapa 1: Gere sua chave de API da Oppizi 
+### Etapa 1: Gere sua chave de API Oppizi 
 
-Para usar seu modelo de webhook na Braze, você primeiro precisará gerar sua chave de API da Oppizi.
+Para usar seu modelo de webhook no Braze, você primeiro precisará gerar sua chave de API Oppizi.
 
 1. Faça login na Oppizi.
 2. Acesse **Integrações** > **Braze**.
@@ -61,15 +61,15 @@ Para o método de solicitação e cabeçalhos, a Oppizi requer um método HTTP j
   - **Autorização:** `Bearer <oppiziAPIKey>`
   - **Content-Type:** `application/json`
 
-![Um exemplo do cabeçalho de webhook da Oppizi no Braze.]({% image_buster /assets/img/oppizi/oppizi_braze_webhook_headers.png %})
+![Um exemplo do cabeçalho do webhook Oppizi no Braze.]({% image_buster /assets/img/oppizi/oppizi_braze_webhook_headers.png %})
 
-Para o **Corpo da Solicitação**, você deve incluir o campo **oppiziWorkflowID**. Este ID é gerado quando um fluxo de trabalho é criado na Oppiz e é necessário para especificar a qual fluxo de trabalho de mala direta seus destinatários devem ser adicionados. Cada fluxo de trabalho de mala direta na Oppizi tem um ID exclusivo, então, se você criar um modelo de webhook da Oppizi no Braze, certifique-se de sempre atualizar o ID do fluxo de trabalho para o correto.
+Para o **Corpo da Solicitação**, você deve incluir o campo **oppiziWorkflowID**. Este ID é gerado quando um fluxo de trabalho é criado na Oppiz e é necessário para especificar a qual fluxo de trabalho de mala direta seus destinatários devem ser adicionados. Cada fluxo de trabalho de mala direta na Oppizi tem um ID exclusivo, então, se você criar um modelo de webhook Oppizi no Braze, certifique-se de sempre atualizar o ID do fluxo de trabalho para o correto.
 
 {% alert note %}
-Verifique se os atributos personalizados necessários estão configurados na sua conta Braze para os endereços postais dos seus destinatários, pois estes são necessários para o envio de mala direta.
+Verifique se os atributos personalizados necessários estão configurados em sua conta Braze para os endereços postais de seus destinatários, pois estes são necessários para o envio de mala direta.
 {% endalert %}
 
-![Um exemplo de um modelo de webhook da Oppizi no Braze.]({% image_buster /assets/img/oppizi/oppizi_braze_webhook_example.png %})
+![Um exemplo de um modelo de webhook Oppizi no Braze.]({% image_buster /assets/img/oppizi/oppizi_braze_webhook_example.png %})
 
 O seguinte é um exemplo de corpo de solicitação:
 

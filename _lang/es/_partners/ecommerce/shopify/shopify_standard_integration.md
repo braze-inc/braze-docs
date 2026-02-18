@@ -10,7 +10,7 @@ page_order: 1
 
 # Configuración de la integración estándar de Shopify
 
-> Esta página te explica cómo integrar Braze con Shopify utilizando nuestra integración estándar para usuarios con una tienda online en Shopify. Si utilizas un sitio web Shopify headless o buscas implementar soluciones más personalizadas, consulta [Configuración de la integración personalizada de Shopify]({{site.baseurl}}/shopify_custom_integration/).
+> Esta página te explica cómo integrar Braze con Shopify utilizando nuestra integración estándar para usuarios con una tienda online en Shopify. Si utilizas un sitio web sin Shopify o quieres implementar soluciones más personalizadas, consulta [Configuración de la integración personalizada de Shopify]({{site.baseurl}}/shopify_custom_integration/).
 
 ## Paso 1: Conecta tu tienda Shopify
 
@@ -43,7 +43,7 @@ Para las tiendas online de Shopify, puedes seleccionar la configuración estánd
 Después de seleccionar la ruta de incorporación de la configuración estándar, tendrás que elegir cuándo Braze debe inicializarse y cargar los SDK de una de las siguientes opciones: 
 - En el momento de la visita, como el inicio de la sesión
     - Realiza un seguimiento tanto de los usuarios identificados como de los anónimos
-- Al registrar la cuenta, como iniciar sesión en la cuenta
+- Al registrar la cuenta, como iniciar sesión en ella
     - Rastrear solo a los usuarios identificados
     - Inicia el seguimiento de los datos cuando los visitantes del sitio se registran o acceden a sus cuentas
 
@@ -127,7 +127,7 @@ El seguimiento de los datos de clientes proporciona una información más profun
 
 Por ejemplo, el siguiente fragmento de código de JavaScript rastrea si el usuario actual se suscribe a un boletín de noticias y lo registra como un evento personalizado en su perfil de Braze:
 
-```json
+```javascript
 braze.logCustomEvent(
   “subscribed_to_newsletter”,
   {

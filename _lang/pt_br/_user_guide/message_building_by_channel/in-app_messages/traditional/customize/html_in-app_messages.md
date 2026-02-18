@@ -24,7 +24,7 @@ As mensagens no app em HTML permitem maior controle sobre a aparência de uma me
 As mensagens HTML personalizadas podem usar os métodos [do JavaScript Bridge](#javascript-bridge) para registrar eventos, definir atributos personalizados, fechar a mensagem e muito mais! Confira nosso [repositório no GitHub](https://github.com/braze-inc/in-app-message-templates), que contém instruções detalhadas sobre como usar e personalizar mensagens no app em HTML para suas necessidades, e um conjunto de modelos de mensagens no app em HTML5 para ajudá-lo a começar.
 
 {% alert note %}
-Para ativar mensagens no app HTML através do Web SDK, você deve fornecer a opção de inicialização `allowUserSuppliedJavascript` para a Braze, por exemplo, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Isso ocorre por motivos de segurança, pois as mensagens HTML no app podem executar JavaScript, portanto, exigimos que um mantenedor de site as ative.
+Para ativar as mensagens no app em HTML por meio do Web SDK, você deve fornecer a opção de inicialização `allowUserSuppliedJavascript` ao Braze: por exemplo, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Isso ocorre por motivos de segurança, pois as mensagens HTML no app podem executar JavaScript, portanto, exigimos que um mantenedor de site as ative.
 {% endalert %}
 
 ## Ponte JavaScript {#javascript-bridge}
@@ -32,7 +32,7 @@ Para ativar mensagens no app HTML através do Web SDK, você deve fornecer a op�
 As mensagens HTML no app para SDKs da Web, Android, iOS e Swift suportam uma "ponte" JavaScript para fazer a interface com o SDK da Braze, permitindo que você dispare ações personalizadas da Braze quando os usuários clicarem em elementos com links ou se engajarem com o seu conteúdo. Esses métodos existem com a variável global `brazeBridge` ou `appboyBridge`.
 
 {% alert important %}
-A Braze recomenda que você use a variável global `brazeBridge`. A variável global `appboyBridge` está obsoleta, mas continuará a funcionar para os usuários existentes. Se estiver usando `appboyBridge`, sugerimos que migre para `brazeBridge`. <br><br> `appboyBridge` foi preterido nas seguintes versões do SDK:
+A Braze recomenda que você use a variável global `brazeBridge`. A variável global `appboyBridge` está obsoleta, mas continuará a funcionar para os usuários existentes. Se estiver usando `appboyBridge`, sugerimos que migre para `brazeBridge`. <br><br> `appboyBridge` foi preterido nas seguintes versões do SDK:<br><br>
 - Web: [3.3.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#330)
 - Android: [14.0.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#1400)
 - iOS: [4.2.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/#420)
@@ -188,7 +188,6 @@ Se o nome de arquivo de um ativo corresponder ao de um ativo HTML local, ele ser
 
 Caso contrário, passe o mouse sobre um ativo da lista e selecione <i class="fas fa-copy"></i> **Copy** para copiar o URL do arquivo para a área de transferência. Em seguida, cole o URL do ativo copiado em seu HTML como faria normalmente ao fazer referência a um ativo remoto.
 
-
 ### editor de HTML
 
 As alterações feitas no HTML são renderizadas automaticamente no painel de prévia à medida que você digita. Todos os métodos [JavaScript do`brazeBridge` ](#bridge) que você usar no HTML não atualizarão os perfis de usuário durante a prévia no dashboard.
@@ -234,16 +233,13 @@ Ao usar métodos JavaScript em um atributo `onclick`, coloque os valores da stri
 ### Alterações incompatíveis com versões anteriores {#backward-incompatible-changes}
 
 1. A mudança incompatível mais notável com esse novo tipo de mensagem são os requisitos do SDK. Os usuários cujo app SDK não atende aos [requisitos mínimos de versão do SDK](#supported-sdk-versions) não receberão a mensagem.
-<br>
-
 2. O deeplink `braze://close`, que era suportado anteriormente em apps móveis, foi removido em favor do JavaScript `brazeBridge.closeMessage()`. Isso permite o envio de mensagens HTML para várias plataformas, já que a Web não oferece suporte a links profundos.
-
 3. O rastreamento automático de cliques, que usava `?abButtonId=0` para IDs de botões, e o rastreamento de "cliques no corpo" em botões de fechamento foram removidos. Os exemplos de código a seguir mostram como alterar seu HTML para usar nossos novos métodos JavaScript de rastreamento de cliques:
 
    | Antes | Após |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_97fe6226-0c13-45a0-b5d7-a7948f9dc8af/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_fab573ad-177f-4a2c-bd02-ceef0c59cc6c/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_3ce844b6-6a42-4233-b15f-e0be3798a696/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_d2f3e0e2-bab4-43f3-ac17-45283cd05d03/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_f92d0e17-fbdd-4f32-9c68-9e4974fe35e9/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_e2d9e526-f692-4be5-9d15-54b4734eecc8/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_e115ea92-a4e9-4d9b-a37a-c2ae4e1191c9/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_432eeda9-1d62-4b13-952d-b1ea16819bce/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_ba97c3ba-c2a4-482b-9a52-551c441be21b/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_6688bfc5-80f7-4d01-be96-2dd55216f81d/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 

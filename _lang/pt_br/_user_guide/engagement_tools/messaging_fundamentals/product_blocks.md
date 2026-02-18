@@ -95,7 +95,7 @@ Os estilos existentes para parágrafos e botões se aplicam automaticamente aos 
 ### Configuração do catálogo 
 
 {% alert important %}
-Se estiver usando a integração entre o Braze e o Shopify para [sincronização de produtos]({{site.baseurl}}/shopify_catalogs/), não será necessário realizar nenhuma etapa adicional para usar blocos de produtos de arrastar e soltar.<br><br> Se não tiver informações sobre a variante do produto, será necessário duplicar as informações de nível superior do produto nos campos do produto e da variante do produto nas cargas úteis e nos catálogos do evento. Isso significa que você precisa fornecer os mesmos detalhes do produto para ambos os identificadores a fim de manter a consistência para que o bloco de produtos funcione corretamente.
+Se estiver usando a integração entre o Braze e o Shopify para [sincronização de produtos]({{site.baseurl}}/shopify_catalogs/), não será necessário realizar nenhuma etapa adicional para usar blocos de produtos de arrastar e soltar.<br><br> Se você não tiver informações sobre a variante do produto, precisará duplicar as informações de nível superior do produto nos campos do produto e da variante do produto nas cargas úteis e nos catálogos do evento. Isso significa que você precisa fornecer os mesmos detalhes do produto para ambos os identificadores a fim de manter a consistência para que o bloco de produtos funcione corretamente.
 {% endalert %}
 
 Para usar os blocos de produtos do tipo arrastar e soltar, você precisa configurar um catálogo do Braze que inclua valores de campo específicos. Esses campos são usados na configuração do bloco de produtos. Certifique-se de que seu catálogo inclua os seguintes campos:
@@ -112,7 +112,7 @@ Comece a trabalhar com este [exemplo de Catálogo de Produtos]({{site.baseurl}}/
 
 #### Mapeamento para campos de catálogo
 
-Na guia **Settings (Configurações** ) do seu catálogo, é possível selecionar o botão de alternância **Product blocks (Blocos de produtos** ) para mapear campos e informações específicos em seu catálogo. Isso permite que você selecione os campos a serem usados como título do produto, URL do produto e URL da imagem. Observe que os campos do catálogo do Shopify são mapeados por padrão e não podem ser alterados.
+Na guia **Settings (Configurações** ) do seu catálogo, você pode selecionar o botão de alternância **Product blocks (Blocos de produtos** ) para mapear campos e informações específicos em seu catálogo. Isso permite que você selecione os campos a serem usados como título do produto, URL do produto e URL da imagem. Observe que os campos do catálogo do Shopify são mapeados por padrão e não podem ser alterados.
 
 {% alert note %}
 Se não estiver usando a Shopify, entre em contato com o gerente da sua conta para ativar o mapeamento de campo, que permite conectar qualquer catálogo a blocos de produtos e mapear seus campos para `product_title`, `product_url` e `variant_image_url`.

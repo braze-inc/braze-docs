@@ -185,7 +185,7 @@ Utilizando el modal **Añadir Personalización**, seleccione **Propiedades Avanz
 
 ### ¿El uso de objetos anidados registra puntos de datos adicionales?
 
-No hay ningún cambio en cómo registramos los puntos de datos como resultado de añadir esta capacidad. La segmentación basada en objetos anidados utiliza Extensiones de segmento, que no utilizan puntos de datos adicionales.
+No hay ningún cambio en la forma en que registramos los puntos de datos como resultado de añadir esta capacidad. La segmentación basada en objetos anidados utiliza Extensiones de segmento, que no utilizan puntos de datos adicionales.
 
 ### ¿Cuántos datos anidados se pueden enviar?
 

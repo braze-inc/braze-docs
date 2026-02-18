@@ -46,7 +46,7 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 - **Envio de fatores de volume**: Alguns fatores que determinam os volumes de envio capazes para um IP incluem:
   - Caixas de correio: Os grandes provedores de e-mail provavelmente podem lidar com milhões por dia a partir de um único IP, enquanto um provedor de caixa de e-mail regional menor ou com uma infraestrutura menor talvez não consiga lidar com essa quantidade.
   - Reputação do remetente: Talvez seja possível enviar um volume maior por dia a partir de um único IP se o remetente estiver preparado para esse volume e se a reputação do remetente for forte o suficiente em cada caixa de correio ou domínio para o qual está enviando.
-- **Práticas recomendadas**: Revise as [práticas recomendadas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) da Braze e entre em contato com sua equipe de contas da Braze se você gostaria de saber mais sobre os serviços de entregabilidade.
+- **Práticas recomendadas**: Revise as [melhores práticas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) da Braze e entre em contato com sua equipe de contas da Braze se você quiser saber mais sobre os serviços de entregabilidade.
 
 ## Push
 
@@ -84,10 +84,10 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 
 #### Coisas para saber
 - **Personalização Liquid:** A personalização Liquid é atualizada a cada solicitação de atualização.
-- **Colocação e proporção do banner:** Cada colocação de banner pode ser usada em até 10 campanhas em um espaço de trabalho.  
+- **Colocação e proporção de banners:** Cada colocação de banner pode ser usada em até 25 mensagens em um espaço de trabalho.  
 - **Cliques e impressões:** Cliques e impressões para banners são rastreados automaticamente com o SDK.
 - **Limitações:**  Atualmente, os seguintes recursos não são suportados: Integração de Canvas, campanhas acionadas por API e baseadas em ações, Conteúdo Conectado, códigos de promoção, dispensas controladas pelo usuário e `catalog_items` usando a [tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
-- **Teste:** Para exibir o banner de teste, o dispositivo que você está usando deve ser capaz de receber notificações push em primeiro plano.
+- **Teste:** Para exibir o banner de teste, o dispositivo que você está usando deve ser capaz de receber notificações por push em primeiro plano.
 - **HTML personalizado:** Aproveite o [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) para registrar cliques ao usar HTML personalizado para definir ações de clique, como links e botões. As ações de clique são registradas automaticamente apenas ao usar os componentes pré-construídos no editor de arrastar e soltar.
 - **Solicitando Colocações:** Até 10 colocações podem ser retornadas ao SDK em uma única solicitação de atualização. Cada colocação incluirá o Banner de maior prioridade para o qual um usuário é elegível.
 

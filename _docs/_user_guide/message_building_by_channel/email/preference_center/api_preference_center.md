@@ -106,7 +106,7 @@ This approach does not require query string value-pairs embedded in the URL as t
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 

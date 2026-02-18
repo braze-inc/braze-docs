@@ -26,11 +26,11 @@ A Braze transforma seus links usando seu subdomínio de rastreamento de links de
 
 ### Requisitos do navegador
 
-Principais navegadores como o Google Chrome restringem o tráfego através de URLs não seguras para proteger os usuários. Usar SSL ajuda a confirmar que o conteúdo é confiável e minimiza problemas como links e imagens quebradas em e-mails.
+Principais navegadores, como o Google Chrome, restringem o tráfego através de URLs não seguras para proteger os usuários. Usar SSL ajuda a confirmar que o conteúdo é confiável e minimiza problemas como links e imagens quebradas em e-mails.
 
 ### Requisito de domínios HSTS 
 
-Se você tiver um domínio HTTP Strict Transport Security (HSTS), configure SSL e configure um CDN para enviar os certificados de segurança necessários. Sem SSL, links de imagem e da web quebram.
+Se você tiver um domínio HTTP Strict Transport Security (HSTS), configure o SSL e configure um CDN para enviar os certificados de segurança necessários. Sem SSL, links de imagem e da web quebram.
 
 ## Aquisição de um certificado SSL
 
@@ -53,7 +53,7 @@ Uma rede de entrega de conteúdo (CDN) é uma plataforma de servidores que ajuda
 A configuração da CDN sempre ocorre depois que os registros DNS são validados pela Braze. Se você ainda não iniciou esta etapa, entre em contato com seu gerente de sucesso do cliente para mais informações sobre como começar.
 {% endalert %}
 
-Para rastreamento de cliques e aberturas, os parceiros de entrega transformam links usando um subdomínio de marca e o CDN aplica o certificado SSL a esses links transformados. Os parceiros muitas vezes devem apresentar certificados válidos ao navegador do destinatário para que links e imagens sejam exibidos corretamente. Como a Braze não solicita ou gerencia certificados, você deve configurar isso através de um CDN. 
+Para rastreamento de cliques e aberturas, os parceiros de entrega transformam links usando um subdomínio de marca e o CDN aplica o certificado SSL a esses links transformados. Os parceiros muitas vezes devem apresentar certificados válidos ao navegador do destinatário para que links e imagens sejam exibidos corretamente. Como a Braze não solicita nem gerencia certificados, você deve configurar isso através de um CDN. 
 
 {% alert note %}
 Se você não puder ou não quiser usar os CDNs listados para rastreamento de cliques e aberturas SSL, pode configurar uma configuração SSL personalizada. CDNs alternativos ou proxies personalizados podem resultar em uma configuração mais complexa. Consulte a documentação do [SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) e [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/).
@@ -78,7 +78,7 @@ Para Amazon SES, consulte [Opção 2: Configurando um domínio HTTPS](https://do
 - **Clusters Braze na UE:** `r.eu-central-1.awstrack.me`
 
 {% alert important %}
-Quando você configura o domínio de rastreamento de cliques do seu CDN, ative o cabeçalho `X-Forwarded-Host` para evitar possíveis problemas de segurança, como ataques de cabeçalho de host. Consulte a documentação do CDN ou sua equipe de suporte para obter etapas.
+Quando você configura o domínio de rastreamento de cliques do seu CDN, ative o cabeçalho `X-Forwarded-Host` para evitar potenciais problemas de segurança, como ataques de cabeçalho de host. Consulte a documentação do CDN ou sua equipe de suporte para obter etapas.
 {% endalert %}
 
 #### Solução de problemas

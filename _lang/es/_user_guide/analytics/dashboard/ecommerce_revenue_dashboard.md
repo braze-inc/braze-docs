@@ -20,7 +20,7 @@ Para ver tu panel de ingresos de **comercio** electrónico, ve a **Análisis** >
 
 | Métrica | Definición |
 | --- | --- |
-| Ingresos por comercio electrónico | Total de ingresos atribuidos al último contacto en función del intervalo de fechas y la ventana de conversión seleccionados. |
+| Ingresos por comercio electrónico | Total de ingresos atribuidos al último contacto, según el intervalo de fechas y la ventana de conversión seleccionados. |
 | Pedidos diarios realizados | El número medio de pedidos distintos realizados al día. |
 | Ingresos medios diarios por comercio electrónico | Promedio de ingresos atribuidos por día para el periodo de tiempo seleccionado. |
 | Ingresos por comercio electrónico a lo largo del tiempo | Una serie temporal de los ingresos atribuidos en el intervalo de fechas seleccionado. |

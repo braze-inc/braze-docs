@@ -83,7 +83,7 @@ Braze Web SDKを統合するには、まず最新のJavaScriptライブラリー
         "scripts": [
             "relative/path/to/braze.min.js",
             "background.js"
-        ],
+        ]
     }
 }
 ```

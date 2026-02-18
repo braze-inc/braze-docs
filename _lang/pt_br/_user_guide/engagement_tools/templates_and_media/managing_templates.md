@@ -38,7 +38,7 @@ Modelos duplicados podem ser encontrados classificando a coluna **Última Ediç�
 
 {% endraw %}
 
-![Três modelos classificados de acordo com a hora em que foram editados pela última vez, com um modelo copiado no topo da lista.]({% image_buster /assets/img/duplicate_multiple_template.gif %})
+![Três modelos classificados pela hora em que foram editados pela última vez, com um modelo copiado no topo da lista.]({% image_buster /assets/img/duplicate_multiple_template.gif %})
 
 ## Arquivando modelos
 

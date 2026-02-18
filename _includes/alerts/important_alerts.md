@@ -98,6 +98,14 @@ Canvas entry properties are part of Canvas context variables. This means `canvas
 
 {% endif %}
 
+{% if include.alert == 'Braze Agents beta' %}
+
+{% alert important %}
+This partner appears on your **Technology Partners** page only if you have Braze Agents enabled. Braze Agents are currently in beta. For help getting started, contact your customer success manager.
+{% endalert %}
+
+{% endif %}
+
 {% if include.alert == 'time filter types' %}
 
 {% alert important %}

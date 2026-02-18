@@ -82,8 +82,8 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
         "sync_finish_time": (string) time the sync finished in ISO 8601,
         "last_timestamp_synced": (string) last UPDATED_AT timestamp processed by the sync in ISO 8601,
         "rows_synced": (integer) number of rows successfully synced to Braze,
-        "rows_failed_with_errors": (integer) number of rows failed because of errors,
-    },
+        "rows_failed_with_errors": (integer) number of rows failed because of errors
+    }
   ],
   "message": "success"
 }

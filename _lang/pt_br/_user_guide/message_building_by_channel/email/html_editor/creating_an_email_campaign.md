@@ -71,7 +71,7 @@ Depois de selecionar o modelo, você verá uma visão geral do e-mail, onde pode
 
 ![O botão "Regenerar a partir do HTML".]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
 
-O Braze atualiza automaticamente a versão em texto simples a partir da versão em HTML até detectar uma edição no texto simples. Depois que o Braze detecta uma edição, ele para de atualizar o texto simples porque presume que você fez alterações intencionais. Para restaurar a sincronização automática, acesse **Plaintext** (Texto simples) e selecione **Regenerate from HTML** (visível somente quando o texto simples não estiver sendo sincronizado).
+O Braze atualiza automaticamente a versão em texto simples a partir da versão em HTML até detectar uma edição no texto simples. Depois que o Braze detecta uma edição, ele para de atualizar o texto simples porque presume que você fez alterações intencionais. Para restaurar a sincronização automática, acesse **Plaintext** (Texto simples) e selecione **Regenerate from HTML** (visível apenas quando o texto simples não estiver sendo sincronizado).
 
 {% alert tip %}
 Para adicionar movimento em um e-mail com uma prévia precisa, use GIFs em vez de elementos que exijam JavaScript, pois a maioria das caixas de entrada não oferece suporte a JavaScript.
@@ -93,7 +93,7 @@ Precisa de ajuda para criar mensagens da direita para a esquerda em idiomas como
 
 ### Etapa 3a: Adicione suas informações de envio
 
-Após terminar de projetar e criar sua mensagem de e-mail, adicione suas informações de envio em **Sending Settings (Configurações de envio**).
+Depois de terminar de projetar e criar sua mensagem de e-mail, adicione suas informações de envio em **Sending Settings (Configurações de envio**).
 
 1. Em **Informações de envio**, selecione um e-mail como **Nome de exibição + Endereço de origem**. Você também pode personalizar isso selecionando **Personalizar a partir do nome de exibição + endereço**.
 2. Selecione um e-mail como **endereço de resposta**. Você também pode personalizar essa opção selecionando **Personalizar endereço de resposta**.
@@ -242,6 +242,10 @@ Também é possível optar por enviar a campanha somente para usuários que tenh
 
 Opcionalmente, também é possível limitar a entrega a um número especificado de usuários dentro do segmento ou permitir que os usuários recebam a mesma mensagem duas vezes em caso de recorrência da campanha.
 
+{% alert note %}
+Ao criar uma nova campanha de e-mail, o Grupo de controle tem como padrão 20% e pode ser ajustado ou removido conforme necessário para sua campanha.
+{% endalert %}
+
 ##### Campanhas multicanal com envio de e-mail e push
 
 Para campanhas em vários canais direcionadas tanto para e-mail quanto para canais de envio de mensagens, talvez você queira limitar sua campanha para que somente os usuários com aceitação explícita recebam a mensagem (excluindo usuários inscritos ou cancelados). Por exemplo, digamos que você tenha três usuários com diferentes status de aceitação:
@@ -253,7 +257,7 @@ Para campanhas em vários canais direcionadas tanto para e-mail quanto para cana
 Para fazer isso, em **Resumo do público**, selecione enviar essa campanha apenas para "usuários com aceitação". Essa opção verificará se apenas os usuários com aceitação receberão seu e-mail, e o Braze enviará seu push apenas para os usuários que têm a capacitação push ativada por padrão.
 
 {% alert important %}
-Com essa configuração, não inclua nenhum filtro na etapa **Target Audiences** que limite o público a um único canal (por exemplo, `Foreground Push Enabled = True` ou `Email Subscription = Opted-In`).
+Com essa configuração, não inclua nenhum filtro na etapa **Target Audiences (Públicos-alvo** ) que limite o público a um único canal (por exemplo, `Foreground Push Enabled = True` ou `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### Selecionar eventos de conversão

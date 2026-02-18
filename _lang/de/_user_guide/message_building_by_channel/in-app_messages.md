@@ -87,7 +87,7 @@ Die Nachricht wird nicht zugestellt, wenn das Gerät keinen Internetzugang hat. 
 Bei Braze kommt es zu einem Abbruch, wenn ein Nutzer:innen eine Aktion durchführt, die ihn für den Empfang einer Nachricht qualifiziert, er die Nachricht aber nicht erhält, weil die Logik von Liquid ihn als nicht qualifiziert markiert. Zum Beispiel:
 
 1. Sam führt eine Aktion aus, die eine E-Mail Kampagne triggern soll.
-2. Der Textkörper der E-Mail enthält eine Liquid-Logik, die besagt, dass diese E-Mail nicht gesendet werden soll, wenn ein angepasstes Attribut einen Wert von weniger als 50 hat.
+2. Der Text der E-Mail enthält eine Liquid-Logik, die besagt, dass diese E-Mail nicht gesendet werden soll, wenn ein angepasstes Attribut weniger als 50 Punkte hat.
 3. Sams angepasste Attribute haben eine Punktzahl von 20.
 4. Braze erkennt, dass Sam diese E-Mail nicht erhalten sollte, und die E-Mail wird abgebrochen.
 5. Ein Abbruchereignis wird protokolliert.
@@ -116,7 +116,7 @@ Braze protokolliert in Sams Fall keine Abbruchereignisse, da dies nicht unserer 
 1. Sam beginnt eine Braze-Sitzung, indem er eine von Braze betriebene App auf seinem Telefon startet.
 2. Die Zielgruppen-Kriterien der aktiven Kampagnen besagen, dass Sam für eine In-App-Nachricht mit Template in Frage kommt, so dass die Trigger-Informationen ohne die Nutzlast der Nachricht an ihr Gerät gesendet werden.
 3. Sam wählt einen Button aus, der ein angepasstes Event protokolliert und damit die Template In-App-Nachricht triggert.
-4. Das Gerät von Sam stellt eine Anfrage an das Netzwerk, um die In-App-Nachricht abzurufen.
+4. Sams Gerät stellt eine Anfrage an das Netzwerk, um die In-App-Nachricht abzurufen.
 5. Die Liquid-Logik der Nachricht führt zu einem Abbruch, so dass Braze dies als Abbruch protokolliert; Sam hat die Aktion triggern vor dieser Auswertung durchgeführt.
 
 ##### Vergleich des Abbruchverhaltens von In-App-Nachricht
@@ -125,10 +125,12 @@ Diese Tabelle vergleicht die In-App-Nachrichten, die Sam erhalten hat:
 
 | In-App-Nachricht | Verhalten abbrechen |
 | --- | --- |
-| Standard | Ein Abbruchereignis wurde nicht protokolliert, weil Sam keine Aktionen durchgeführt hat, die eine Nachricht triggern würden.<br><br>Standard In-App-Nachrichten protokollieren keine Abbrüche, da die Definition eines Abbruchs lautet: "Habe die Nachricht nicht gesehen, obwohl ich die Aktion getriggert habe." Da In-App-Nachrichten dem Gerät zugestellt werden, bevor die Aktionen getriggert werden, macht es keinen Sinn, In-App-Nachrichten aufgrund der Liquid-Logik als ausgelassen zu betrachten. |
-| Templated | Ein Abbruchereignis wurde protokolliert, weil Sam die Aktion triggern ausgeführt hat, um die In-App-Nachricht zu triggern, aber einen Abbruch im Liquid-Templating erhalten hat. <br><br>Das Protokoll der In-App-Nachrichten bricht ab, weil die Liquid-Auswertung nach der Durchführung der triggernden Aktion erfolgt. |
+| Standard | Ein Abbruchereignis wurde nicht protokolliert, weil Sam keine Aktionen durchgeführt hat, die eine Nachricht triggern würden.<br><br>In-App-Nachrichten protokollieren standardmäßig keine Abbrüche, da die Definition eines Abbruchs lautet: "Habe die Nachricht nicht gesehen, obwohl ich die Aktion triggere." Da In-App-Nachrichten dem Gerät zugestellt werden, bevor die Aktionen getriggert werden, macht es keinen Sinn, In-App-Nachrichten aufgrund der Liquid-Logik als ausgelassen zu betrachten. |
+| Templated | Es wurde ein Abbruchereignis protokolliert, weil Sam die Aktion triggern ausgeführt hat, um die In-App-Nachricht zu triggern, aber einen Abbruch im Liquid-Templating erhalten hat. <br><br>Das Protokoll der In-App-Nachrichten bricht ab, weil die Liquid-Auswertung nach der Durchführung der triggernden Aktion erfolgt. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Mehr Ressourcen
 
 Bevor Sie mit der Erstellung Ihrer eigenen In-App-Nachrichten-Kampagnen beginnen - oder In-App-Nachrichten in einer Multikanal-Kampagne verwenden - empfehlen wir Ihnen dringend, sich unseren [Leitfaden zur Vorbereitung von In-App-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/) anzusehen. Dieser Leitfaden behandelt Fragen zu Targeting, Content und Konversion, die Sie bei der Erstellung von In-App-Nachrichten berücksichtigen sollten.
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}

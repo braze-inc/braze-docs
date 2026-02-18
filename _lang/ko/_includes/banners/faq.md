@@ -1,6 +1,6 @@
 # 배너: 자주 묻는 질문
 
-> 이것은 Braze의 배너에 대한 자주 묻는 질문에 대한 답변입니다. 더 일반적인 정보는 [배너에 대해]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %})를 참조하세요.
+> 이것은 Braze의 배너에 대한 자주 묻는 질문에 대한 답변입니다. 더 일반적인 정보는 [배너에 대한 내용]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %})을 참조하세요.
 
 ## 배너 업데이트는 사용자에게 언제 나타납니까?
 
@@ -10,7 +10,7 @@
 
 단일 새로 고침 요청에서 최대 10개의 배치를 요청할 수 있습니다. 요청한 각 배치에 대해 Braze는 사용자가 자격이 있는 가장 높은 우선 순위의 배너를 반환합니다. 추가 요청은 오류를 반환합니다.
 
-자세한 내용은 [배치 요청]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %})를 참조하세요.
+자세한 내용은 [배치 요청]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %})을 참조하세요.
 
 ## 동시에 활성화할 수 있는 배너 캠페인은 몇 개입니까?
 
@@ -18,7 +18,7 @@
 
 ## 배치를 공유하는 캠페인에서 어떤 배너가 먼저 표시됩니까?
 
-사용자가 동일한 배치를 공유하는 여러 배너 캠페인에 자격이 있는 경우, 가장 높은 우선 순위의 배너가 표시됩니다. 자세한 내용은 [배너 우선 순위]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %})를 참조하세요.
+사용자가 동일한 배치를 공유하는 여러 배너 캠페인에 자격이 있는 경우, 가장 높은 우선 순위의 배너가 표시됩니다. 자세한 내용은 [배너 우선 순위]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %})을 참조하세요.
 
 ## 기존 콘텐츠 카드 피드에서 배너를 사용할 수 있습니까?
 
@@ -28,18 +28,18 @@
 
 배너는 [실행 기반 전달]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery)을 지원하지 않지만, 세분화 및 우선 순위를 사용하여 과거 행동에 따라 사용자를 타겟팅할 수 있습니다.
 
-예를 들어, 특정 이벤트를 완료한 사용자에게만 특별한 배너를 표시하려면:
+예를 들어, 특정 배너를 `purchase` 이벤트를 완료한 사용자에게만 표시하려면:
 1. **타겟팅:** 캠페인에서 커스텀 이벤트 `purchase`를 최소 한 번 수행한 사용자 세그먼트를 타겟팅하세요.
 2. **우선순위:** 모든 사용자에게 일반 배너가 있고 구매자를 위한 특정 배너가 동일한 위치를 타겟팅하는 경우, 특정 배너의 우선 순위를 **높음**으로 설정하고 일반 배너는 **중간** 또는 **낮음**으로 설정하세요.
 
-사용자가 새 세션을 시작하거나 작업을 수행한 후 배너를 새로 고칠 때, Braze는 그들의 적격성을 평가합니다. 그들이 "구매" 세그먼트와 일치하면, 높은 우선 순위의 배너가 표시됩니다.
+사용자가 새 세션을 시작하거나 작업을 수행한 후 배너를 새로 고칠 때, Braze는 그들의 적합성을 평가합니다. 그들이 "구매" 세그먼트와 일치하면, 높은 우선 순위의 배너가 표시됩니다.
 
 
 ## 사용자가 배너를 수동으로 닫을 수 있나요?
 
-아니요. 사용자는 배너를 수동으로 닫을 수 없습니다. 그러나 사용자 세그먼트 적격성을 관리하여 배너 가시성을 제어할 수 있습니다. 사용자가 배너 캠페인에 대한 타겟팅 기준을 더 이상 충족하지 않으면, 다음 세션에서 다시 보지 않게 됩니다.
+아니요. 사용자는 배너를 수동으로 닫을 수 없습니다. 그러나 사용자 세그먼트 적합성을 관리하여 배너 가시성을 제어할 수 있습니다. 사용자가 배너 캠페인에 대한 타겟팅 기준을 더 이상 충족하지 않으면, 다음 세션에서 다시 보지 않게 됩니다.
 
-예를 들어, 사용자가 구매할 때까지 프로모션 배너를 표시하는 경우, `purchase_completed`과 같은 이벤트를 기록하면 해당 사용자가 타겟 세그먼트에서 제거되어 이후 세션에서 배너가 숨겨집니다.
+예를 들어, 사용자가 구매할 때까지 프로모션 배너를 표시하는 경우, `purchase_completed`과 같은 이벤트를 기록하면 해당 사용자가 타겟팅된 세그먼트에서 제거되어 이후 세션에서 배너가 숨겨집니다.
 
 ## Braze API를 사용하여 배너 캠페인 분석을 내보낼 수 있나요?
 
@@ -47,7 +47,7 @@
 
 ## 사용자는 언제 세그먼트화되나요?
 
-사용자는 세션 시작 시 세그먼트화됩니다. 캠페인의 타겟 세그먼트가 커스텀 속성, 커스텀 이벤트 또는 기타 타겟팅 속성에 의존하는 경우, 세션 시작 시 사용자에게 존재해야 합니다.
+사용자는 세션 시작 시 세그먼트화됩니다. 캠페인의 타겟팅 세그먼트가 커스텀 속성, 커스텀 이벤트 또는 기타 타겟팅 속성에 의존하는 경우, 세션 시작 시 사용자에게 존재해야 합니다.
 
 ## 최소 지연 시간을 보장하기 위해 배너를 어떻게 구성할 수 있나요?
 
@@ -59,4 +59,10 @@
 
 ## 클릭 이벤트를 캡처할 수 있나요?
 
-클릭 이벤트는 `logClick` 요소에 on-click 동작이 설정되고 [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge)를 사용하여 호출되는 경우에만 캡처됩니다.
+예. 클릭 이벤트가 캡처되는 방법은 배너가 렌더링되는 방식에 따라 다릅니다:
+
+- **표준 편집기 구성 요소:** 배너가 표준 편집기 구성 요소(이미지, 버튼, 텍스트)를 사용하는 경우, SDK의 삽입 방법을 사용할 때 클릭이 자동으로 추적됩니다.
+- **커스텀 코드 블록:** 배너가 커스텀 코드 편집기 블록을 사용하는 경우, 클릭을 추적하기 위해 커스텀 HTML 내에서 `brazeBridge.logClick()`를 호출해야 합니다. 이것은 배너를 삽입하고 렌더링하기 위해 SDK 방법을 사용할 때도 적용됩니다. 이것은 HTML 인앱 메시지에 대한 [JavaScript 브리지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge)와 동일하게 작동합니다.
+- **커스텀 UI (헤드리스):** 배너 HTML을 렌더링하는 대신 배너의 커스텀 속성을 사용하여 완전히 커스텀 UI를 구축하는 경우, 애플리케이션 코드에서 배너 객체에 대해 `logClick()`를 호출해야 합니다.
+
+자세한 정보는 [클릭 로깅]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks)을 참조하세요.

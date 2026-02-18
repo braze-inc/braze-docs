@@ -322,7 +322,7 @@ Deleting users is permanent and cannot be undone. Include only users you intend 
 {% endalert %}
 
 **Example – JSON (user deletes):**
-```json
+```jsonl
 {"external_id":"user-to-delete-001"}
 {"external_id":"user-to-delete-002"}
 {"braze_id":"braze-id-from-profile"}
@@ -348,7 +348,7 @@ To remove items from a catalog using file storage:
 Each row still needs `ID` and `PAYLOAD`. For rows marked for deletion, the payload can be minimal; Braze removes the item by `ID`.
 
 **Example – JSON (catalog item delete):**
-```json
+```jsonl
 {"id":"85","payload":"{\"product_name\": \"Product 85\", \"price\": 85.85}"}
 {"id":"1","payload":"{\"product_name\": \"Product 1\", \"price\": 1.01}","deleted":true}
 ```

@@ -95,7 +95,7 @@ Movable Ink tiene un sencillo editor para que arrastres y sueltes elementos como
 
 ![El editor de bloques Movable Ink mostrando los diferentes elementos personalizables.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
 
-Antes de finalizar tu campaña, asegúrate de obtener una vista previa de las imágenes dinámicas y probar los parámetros de consulta para ver qué aspecto tendrán las imágenes al visualizarlas. ¡Una vez completado, se generará una URL dinámica que podrás insertar en Braze!
+Antes de finalizar tu campaña, asegúrate de obtener una vista previa de las imágenes dinámicas y de probar los parámetros de consulta para ver qué aspecto tendrán las imágenes al visualizarlas. ¡Una vez completado, se generará una URL dinámica que podrás insertar en Braze!
 
 Para más información sobre cómo utilizar la Plataforma Movable Ink, visita el [centro de soporte de Movable Ink](https://support.movableink.com/)
 

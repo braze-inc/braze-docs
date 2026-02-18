@@ -86,7 +86,7 @@ Snowflake ウェアハウスの設定後に、Mozart Data の [**Integration**] 
 
 その方法の詳細については、[Snowflake のドキュメント](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)を参照してください。任意の時点でのキーのローテーションを行う場合、Mozart Data は新規のキーペアを生成して、新規の公開キーを提供できます。
 
-```json
+```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 ```
 

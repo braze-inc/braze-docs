@@ -1,7 +1,7 @@
 ---
 nav_title: "Points d'extrémité de l'API et du SDK"
 article_title: "Points d'extrémité de l'API et du SDK"
-page_order: 2.4
+page_order: 4
 page_type: reference
 description: "Cet article de référence répertorie les URL du tableau de bord, les endpoints de l’API et les endpoints du SDK pour les instances Braze disponibles."
 

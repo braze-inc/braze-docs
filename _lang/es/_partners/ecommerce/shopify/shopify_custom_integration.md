@@ -337,7 +337,7 @@ export function trackProductViewed(product, storefrontUrl) {
 ```
 
 {: start="2"}
-2\. Para llamar a la función anterior cada vez que un usuario visite una página de producto, añade un hook `useEffect` al componente Producto dentro del archivo `app/routes/products.$handle.jsx`:
+2\. Para llamar a la función anterior cada vez que un usuario visite una página de producto, añade un gancho `useEffect` al componente Producto dentro del archivo `app/routes/products.$handle.jsx`:
 
 ```java
 import { trackProductViewed } from '~/tracking';
@@ -757,7 +757,7 @@ Puedes sincronizar todos los productos de tu tienda Shopify con un catálogo Bra
 
 Para activar los mensajes dentro de la aplicación, las tarjetas de contenido y las banderas de características utilizando la integración directa de Shopify, añade cada canal a tu SDK. Sigue los enlaces de documentación que se indican a continuación para cada canal:
 
-- **Mensajes dentro de la aplicación:** Para habilitar los mensajes dentro de la aplicación para casos de uso de formularios de captación de clientes potenciales, consulta [Mensajes dentro de la aplicación]({{site.baseurl}}/developer_guide/in_app_messages/).
+- **Mensajes dentro de la aplicación:** Para habilitar los mensajes dentro de la aplicación para los casos de uso del formulario de captación de clientes potenciales, consulta [Mensajes dentro de la aplicación]({{site.baseurl}}/developer_guide/in_app_messages/).
 - **Tarjetas de contenido:** Para habilitar las tarjetas de contenido para casos de uso de buzón de entrada o banner de sitio web, consulta [Tarjetas de contenido]({{site.baseurl}}/developer_guide/content_cards/).
 - **Banderas de características:** Para habilitar las banderas [de]({{site.baseurl}}/developer_guide/feature_flags/) características para casos de uso de experimentación en el sitio, consulta [Banderas de características]({{site.baseurl}}/developer_guide/feature_flags/).
 
