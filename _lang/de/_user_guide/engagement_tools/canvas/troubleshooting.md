@@ -59,7 +59,7 @@ Bei der Erstellung Ihres Canvas haben Sie vielleicht erwartet, dass sich Ihre Zi
 Welcher Gruppe ein Nutzer:in beitritt, hängt von seinen Einstellungen ab. Dies kann entweder die Kontrollgruppe oder die Variante sein. Ein Nutzer:innen betritt ein Canvas, wenn er alle von Ihnen im [Eingangsschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=entry%20schedule#step-12-determine-your-canvas-entry-schedule) definierten Kriterien erfüllt. Bei der Einrichtung Ihres Canvas legen Sie fest, welcher Prozentsatz der Nutzer:innen jede Variante und die Kontrollgruppe betreten wird.
 
 Wenn Ihre Kontrollgruppe im Vergleich zu Ihrer Variante groß ist (was nicht Ihre Absicht ist), empfehlen wir Folgendes:
-1. Setzen Sie den Zielgruppen-Filter für Ihren Eingang auf **Foreground Push Enablement**.
+1. Setzen Sie den Zielgruppen-Filter für den Eingang auf **Foreground Push Enablement**.
 2. Setzen Sie den Zielgruppen-Filter für Ihren Eingang auf **Push-Abonnement-Status**, **E-Mail-Abonnement-Status** oder beides auf **Opt-in** oder **Abonnent**.
 
 Bestätigen Sie bei der Erstellung eines Canvas mit einer Kontrollgruppe, dass alle Nutzer:innen des Eingangs in der Lage sind, Nachrichten innerhalb des Canvas zu empfangen (z.B. wenn das Canvas Push- und E-Mail-Nachrichten enthält).
@@ -75,7 +75,7 @@ Stellen wir uns das folgende Szenario vor:
 
 In diesem Szenario werden 90% der Nutzer:innen, die den Canvas betreten, die Variante eingeben. 
 
-Wenn wir uns die aktiven Nutzer:innen ansehen, stellen wir fest, dass zwar 29,8k Nutzer:innen enthalten sind, aber nur 64% von ihnen Push aktiviert haben:
+Wenn wir uns die aktiven Nutzer:innen ansehen, können wir feststellen, dass trotz der 29,8k Nutzer:innen nur 64% von ihnen Push aktiviert haben:
 
 ![Segmente mit dem Filter "Push Enabled" auf "true" und geschätzten Nutzer:innen von 29,8k.]({% image_buster /assets/img_archive/trouble16.png %})
 

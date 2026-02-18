@@ -20,7 +20,7 @@ description: "Auf dieser Seite erfahren Sie, wie Sie mit dem Drag-and-Drop-Edito
 
 Wenn Sie eine In-App-Nachricht per Drag-and-Drop erstellen, wählen Sie die **SMS-Registrierung** (für RCS-Registrierungen) oder die **WhatsApp-Registrierung** für Ihr Template aus und wählen dann **Nachricht erstellen**. Diese Templates werden sowohl für mobile Apps als auch für Webbrowser unterstützt.
 
-![Modal zum Auswählen der SMS-Registrierung oder WhatsApp-Registrierung als Template beim Erstellen einer In-App-Nachricht.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}){: style="max-width:80%"}
+![Modal zum Auswählen der SMS-Registrierung oder der WhatsApp-Registrierung als Template beim Erstellen einer In-App-Nachricht.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}){: style="max-width:80%"}
 
 ### Schritt 2: Nachrichtenstile festlegen
 
@@ -32,7 +32,7 @@ Wenn Sie eine In-App-Nachricht per Drag-and-Drop erstellen, wählen Sie die **SM
 
 Um mit der Erstellung Ihres Anmeldeformulars zu beginnen, wählen Sie im Editor die Komponente zur Eingabe der Telefonnummer.
 
-![Vorschaubereich beim Erstellen eines Registrierungsformulars mit ausgewählter Komponente für die Eingabe der Telefonnummer.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%"}
+![Vorschaubereich beim Erstellen eines Registrierungsformulars mit ausgewählter Komponente zur Eingabe der Telefonnummer.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%"}
 
 Geben Sie im Seitenmenü an, für welche Abonnementgruppe diese Vorlage Telefonnummern sammeln soll. Um die bewährten Praktiken für die Compliance einzuhalten, können Sie nur die Zustimmung zu einer Abo-Gruppe pro Registrierungsformular für Telefonnummern einholen. Falls gewünscht, können Sie jedoch mehrere Formulare verwenden, um die Zustimmung für andere Abo-Gruppen einzuholen.
 

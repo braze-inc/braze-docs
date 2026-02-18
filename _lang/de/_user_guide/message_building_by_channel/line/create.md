@@ -72,6 +72,8 @@ Schreiben Sie Ihre Nachricht nach Bedarf mit Personalisierung (z. B. Liquid ode
 
 Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardwert für Ihre Personalisierung angeben. Dadurch wird verhindert, dass Empfänger mit unvollständigen Benutzerprofilen einen leeren Platzhalter erhalten. Zum Beispiel könnte ein:e Nutzer:in statt der Nachricht "Hallo!" die Nachricht "Hallo, neue:r Abonnent:in!" erhalten.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Erstellen von Nachrichten von rechts nach links
 
 Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) rechts nach links.
