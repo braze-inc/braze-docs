@@ -17,7 +17,7 @@ channel:
 
 A integração entre Braze e o sistema externo de IA ou de comunicação funciona como uma via de mão dupla, onde Braze é o canal de comunicação e o sistema externo é a "inteligência" que processa mensagens e formula respostas.
 
-O fluxo de trabalho de integração pode ser dividido em dois fluxos principais:
+O fluxo de trabalho da integração pode ser dividido em dois fluxos principais:
 **Fluxo de entrada:** A mensagem de um usuário chega ao Braze e é então encaminhada para o seu sistema externo para processamento.
 **Fluxo de saída:** Após processar a mensagem, seu sistema externo envia uma resposta ao Braze, que então entrega a mensagem ao usuário final.
 
@@ -64,7 +64,7 @@ Primeiro, crie uma campanha de webhook para estabelecer uma forma de enviar mens
 {: start="6"}
 6\. Finalize a composição da sua campanha, depois salve e lance a campanha. Após lançar a campanha, toda vez que uma mensagem for recebida, o Braze envia um webhook para seu sistema externo.
 
-### Etapa 2: Crie uma campanha acionada por API para mensagens enviadas {#step-2}.
+### Etapa 2: Crie uma campanha acionada por API para mensagens enviadas {#step-2}
 
 Em seguida, crie uma campanha acionada por API para estabelecer uma forma de seu sistema externo enviar mensagens de volta para os usuários através do WhatsApp.
 
@@ -79,10 +79,10 @@ Em seguida, crie uma campanha acionada por API para estabelecer uma forma de seu
 ![Criador de mensagem com corpo de mensagem que contém propriedades de disparo.]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
 
 {: start="4"}
-4\. Na etapa **Agendar Entrega** do criador de campanha, selecione **Ação Baseada** para o tipo de entrega.
+4\. Na etapa **Agendar Entrega** do seu criador de campanha, selecione **Ação Baseada** para o tipo de entrega.
 5\. Salve a campanha, depois anote a `campaign_id` única que a Braze gera para esta campanha. Você precisará do ID para a próxima etapa.
 
-### Etapa 3: Conecte o sistema externo à campanha disparada pela API.
+### Etapa 3: Conecte o sistema externo à campanha disparada pela API
 
 Por último, configure seu sistema externo para chamar a Braze e enviar a resposta.
 
@@ -91,7 +91,7 @@ Por último, configure seu sistema externo para chamar a Braze e enviar a respos
 3. Use a propriedade de disparo da API de [Etapa 2](#step-2) para inserir a resposta do sistema externo, e não se esqueça de incluir sua chave de API no cabeçalho da solicitação para autenticação, como neste exemplo de cURL:
 
 {% raw %}
-```json
+```bash
 curl -X POST \
   -H 'Content-Type:application/json' \
   -H 'Authorization: Bearer a valid rest API key' \

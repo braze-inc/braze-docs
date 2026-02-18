@@ -57,13 +57,13 @@ Primeiro, teste se o dashboard será carregado em um navegador diferente. Se o p
 Se o problema ocorrer em todos os navegadores, tente o seguinte:
 
 - **Verifique sua conexão de rede:** Tente desativar sua VPN, se possível, ou desative e reative sua conexão de rede.
-- **Reinicie seu dispositivo:** Tente fazer o registro no dashboard do Braze depois de reiniciar o dispositivo.
+- **Reinicie seu dispositivo:** Tente fazer o registro no dashboard do Braze após reiniciar o dispositivo.
 
 Se tiver resolvido os problemas anteriores e o dashboard ainda não carregar ou não funcionar como esperado, entre em contato com [o Suporte]({{site.baseurl}}/braze_support/).
 
 ## O usuário não pertence a nenhum espaço de trabalho
 
-Para verificar isso, acesse **Configurações** > **Usuários da empresa** e verifique as permissões do usuário no espaço de trabalho. Adicione os espaços de trabalho necessários aos **Espaços de trabalho**.
+Verifique isso acessando **Configurações** > **Usuários da empresa** e verificando as permissões no nível do espaço de trabalho do usuário. Adicione os espaços de trabalho necessários aos **Espaços de trabalho**.
 
 ## Solução de problemas como um novo usuário
 
@@ -77,7 +77,7 @@ Se for um novo usuário do Braze e estiver com problemas para registrar ou acess
 
 ### Recebi o e-mail, mas não consigo configurar a autenticação de dois fatores (2FA)
 
-- Redefinir a 2FA: Se estiver tendo problemas para configurar a 2FA, o administrador pode redefinir a 2FA para sua conta de usuário nas configurações.
+- Redefinir a 2FA: Se estiver com problemas para configurar a 2FA, o administrador pode redefinir a 2FA para sua conta de usuário nas configurações.
 - Adicionar novamente o usuário: Se os problemas persistirem, o administrador poderá excluir sua conta de usuário do dashboard e adicioná-la novamente. Isso permite a criação de um usuário com os mesmos detalhes.
 
 Se os problemas continuarem após essas etapas, entre em contato com [o Suporte]({{site.baseurl}}/braze_support/) para obter mais assistência.

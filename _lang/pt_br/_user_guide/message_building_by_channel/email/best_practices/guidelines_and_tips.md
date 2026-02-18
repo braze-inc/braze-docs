@@ -36,25 +36,7 @@ A validação de e-mail é feita quando o endereço de e-mail de um usuário foi
 
 Os endereços de e-mail direcionados por meio dos servidores Braze devem ser validados de acordo com os padrões [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822). O Braze não aceita determinados caracteres e os reconhece como inválidos. Se um e-mail for devolvido, a Braze marcará o e-mail como inválido e o status da inscrição não será alterado. 
 
-{% details Unaccepted characters outside of RFC standards %}
-- *
-- /
-- ?
-- !
-- $
-- #
-- %
-- ^
-- &
-- (
-- )
-- {
-- }
-- [
-- ]
-- ~
-- ,
-{% enddetails %}
+Para obter informações sobre caracteres não permitidos e regras de validação de e-mail, consulte [Validação de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/#how-it-works).
 
 ### Configuração dos endereços de origem e de resposta
 

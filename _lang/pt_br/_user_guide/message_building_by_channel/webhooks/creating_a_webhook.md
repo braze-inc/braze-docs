@@ -143,7 +143,7 @@ Para isso, vá para a guia **Teste** e envie um webhook de teste. É possível t
 
 Depois de enviar o webhook de teste, será exibida uma caixa de diálogo com a mensagem de resposta. Se a solicitação do webhook não for bem-sucedida, consulte a mensagem de erro para obter ajuda na solução de problemas do webhook. O exemplo a seguir detalha a resposta de um webhook com um URL de webhook inválido.
 
-```json
+```http
 404 Not Found
 
 {
@@ -172,7 +172,7 @@ Nessa etapa, também é possível especificar controles de entrega, como permiti
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, é necessário [direcionar os usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Nessa etapa, você seleciona o público maior de seus segmentos e restringe esse segmento ainda mais com nossos filtros, se desejar. Você recebe automaticamente uma prévia de como é essa população aproximada do segmento. Lembre-se de que a associação exata ao segmento de mensagem é sempre calculada antes do envio da mensagem.
+Em seguida, é necessário direcionar [os usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Nessa etapa, você seleciona o público maior de seus segmentos e restringe esse segmento ainda mais com nossos filtros, se desejar. Você recebe automaticamente uma prévia de como é essa população aproximada do segmento. Lembre-se de que a associação exata ao segmento de mensagem é sempre calculada antes do envio da mensagem.
 
 {% multi_lang_include target_audiences.md %}
 
