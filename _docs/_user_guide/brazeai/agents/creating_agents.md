@@ -8,7 +8,7 @@ alias: /creating-agents/
 
 # Create custom agents
 
-> Learn how to create custom agents, what to prepare before you start, and how to put them to work across messaging, decisioning, and data management. For more general information, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents). 
+> Learn how to create custom agents, what to prepare before you start, and how to put them to work across messaging, decisioning, and data management. For more general information, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents).
 
 {% alert important %}
 Braze Agents are currently in beta. For help getting started, contact your customer success manager.
@@ -19,7 +19,7 @@ Braze Agents are currently in beta. For help getting started, contact your custo
 Before you start, you'll need the following:
 
 - Access to the **Agent Console** in your workspace. Check with your Braze admins if you don’t see this option.  
-- Permission to create and edit custom AI Agents. 
+- Permission to create and edit custom AI Agents.
 - An idea of what you want the agent to accomplish. Braze Agents can support the following actions:  
    - **Messaging:** Generate subject lines, headlines, in-product copy, or other content.  
    - **Decisioning:** Route users in Canvas based on behavior, preferences, or custom attributes.  
@@ -96,7 +96,7 @@ Arrays are only available for Canvas agents, not catalog agents.
 
 Advanced schema options include manually structuring fields or using JSON.
 
-- **Fields:** A no-code way to enforce an agent output that you can use consistently. 
+- **Fields:** A no-code way to enforce an agent output that you can use consistently.
 - **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema.
 
 {% tabs %}
