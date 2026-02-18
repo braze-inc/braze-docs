@@ -44,6 +44,14 @@ This can happen for a variety of reasons, but a common solution is to make sure 
 
 Additionally, if your image was built in Photoshop (or a similar software) and has many layers, merging and reducing the number of layers can also help.
 
+### I see an "Unexpected Error" when uploading an image even though it's under 5 MB and in a supported format. What's wrong?
+
+This can happen for two main reasons:
+
+1. **Invalid metadata in the file** — The software Braze uses to process images may reject files with invalid or incompatible metadata. In some cases, the file may also be processed in a way that pushes it over the 5 MB limit. Try using a different image (for example, re-export or re-save the image from your image editor) or an image from another source.
+
+2. **Special characters in the file name** — File names that contain special characters (such as `&` or `%`) can cause the upload to fail. Rename the file to use only letters, numbers, hyphens, or underscores, then try uploading again.
+
 ### Why can't I upload any image I want into the push composers?
 
 This is because most composers have restrictions on the image ratio size that is allowed.
