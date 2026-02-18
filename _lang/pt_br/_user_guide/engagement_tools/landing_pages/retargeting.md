@@ -34,7 +34,7 @@ Quando você escolher sua opção de entrega para sua [campanha]({{site.baseurl}
 
 Todos os usuários que enviarem um formulário por meio desse formulário da landing page receberão um envio de mensagens pelo canal de envio de mensagens escolhido ou entrarão no Canva escolhido.
 
-![Ação-gatilho da landing page na mensagem.]({% image_buster /assets/img/landing_pages/trigger.png %})
+![Ação-gatilho da landing page em envio de mensagens.]({% image_buster /assets/img/landing_pages/trigger.png %})
 
 {% alert note %}
 A opção de entrega baseada em ação para landing pages não está disponível para mensagens no app. Para direcionar usuários que enviaram um formulário em uma landing page com uma mensagem no app, selecione o filtro **Formulário Enviado na Landing Page** nas **Opções de Direcionamento** da sua campanha.

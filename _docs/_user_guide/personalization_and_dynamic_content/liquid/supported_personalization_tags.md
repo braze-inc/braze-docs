@@ -31,8 +31,8 @@ As a convenience, a summary of supported personalization tags are provided. For 
 | Event Properties <br> (These are custom to your workspace.)| `{{event_properties.${your_custom_event_property}}}` |
 | Canvas Context Variables | `{{context}}` |
 | Custom Attributes <br> (These are custom to your workspace.) | `{{custom_attribute.${your_custom_attribute}}}` |
-| <a href='/docs/api/objects_filters/trigger_properties_object/'>API trigger Properties</a> |`{{api_trigger_properties}}` |
-| Canvas Entry Properties | `{{canvas_entry_properties.${property_name}}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>API Trigger Properties</a> |`{{api_trigger_properties}}` |
+| Canvas Entry Properties | `{{context.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}

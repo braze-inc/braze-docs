@@ -43,13 +43,13 @@ Para mensagens de modelo, o URL de base deve ser enviado corretamente ao criar o
 
 #### Etapa 1: Crie um modelo compatível com rastreamento de cliques no WhatsApp
 
-1. No Gerenciador do WhatsApp, crie um URL de base que seja seu domínio personalizado ou `brz.ai`.
+1. No Gerenciador do WhatsApp, crie uma URL de base que seja seu domínio personalizado ou `brz.ai`.
 2. Certifique-se de que os links incluídos no modelo sejam compatíveis com o rastreamento de cliques.
 3. Não altere as variáveis do modelo depois que ele for configurado como uma campanha no Braze; as alterações posteriores não poderão ser incorporadas.
 4. Para links de botões de CTA, selecione **Dynamic (Dinâmico**) e, em seguida, forneça o URL de base (`brz.ai` ou seu domínio personalizado).<br><br>![Seção para criar uma chamada para ação.]({% image_buster /assets/img/whatsapp/click_tracking/create_cta.png %})<br><br>
 5. Para links no corpo do texto, ao escrever o modelo em seu Gerenciador do WhatsApp, remova todos os espaços inseridos para links contidos no corpo que você deseja rastrear.<br><br>![Caixa de texto para inserir o corpo do conteúdo da chamada para ação.]({% image_buster /assets/img/whatsapp/click_tracking/cta_textbox.png %})
 
-#### Etapa 2: Complete seu modelo no Braze
+#### Etapa 2: Conclua seu modelo no Braze
 
 Ao criar, o Braze detectará automaticamente quais modelos têm domínios de URL compatíveis, tanto no corpo do texto quanto nos botões de CTA. O status será mostrado na parte inferior do modelo. 
 
@@ -62,6 +62,12 @@ Ao criar, o Braze detectará automaticamente quais modelos têm domínios de URL
 O URL de destino precisará ser fornecido para qualquer link com um URL de base que corresponda a `brz.ai` ou ao seu domínio personalizado. 
 
 ![Seção "Buttons" com campos para o nome do botão, URL do site e URL de rastreamento de cliques.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
+
+{% alert important %}
+**Envio de mensagens de modelo por meio da API**: O rastreamento de cliques do WhatsApp (usando `brz.ai` ou um domínio de rastreamento personalizado e o campo **URL de rastreamento de cliques** no criador de mensagens) não é compatível com o envio de mensagens modelo do WhatsApp por meio do [ponto de extremidade`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/).
+
+Se você enviar uma mensagem de modelo por meio da API, poderá preencher as variáveis de URL de CTA (usando `button_variables`), mas o Braze não gera um URL de rastreamento de cliques ou um link de redirecionamento no fluxo de solicitação da API. Para usar o rastreamento de cliques, envie o modelo a partir do dashboard do Braze ou por meio de um disparo de campanha do Braze.
+{% endalert %}
 
 {% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 

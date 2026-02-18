@@ -46,7 +46,7 @@ Im zweiten Absatz sollten Sie die Beziehung zwischen Braze und diesem Partner un
 
 ## Anforderungen oder Voraussetzungen
 
-In diesem Abschnitt erfahren Sie alles, was Sie für die Integration mit dem Partner und die Nutzung seiner Dienste benötigen. Am besten stellen Sie diese Informationen in einem kurzen Anweisungsabschnitt zu, in dem alle nichttechnischen wichtigen Details beschrieben werden, z.B. ob Ihre Integration zusätzlichen Sicherheitsprüfungen oder Genehmigungen unterliegt oder nicht. Dann sollten Sie ein Chart verwenden, um die technischen Anforderungen der Integration zu beschreiben.
+In diesem Abschnitt erfahren Sie alles, was Sie für die Integration mit dem Partner und die Nutzung seiner Dienste benötigen. Am besten stellen Sie diese Informationen in einem kurzen Anweisungsabschnitt zu, in dem alle nichttechnischen, wichtigen Details beschrieben werden, die Sie wissen müssen, z.B. ob Ihre Integration zusätzlichen Sicherheitsprüfungen oder Genehmigungen unterliegt oder nicht. Dann sollten Sie ein Chart verwenden, um die technischen Anforderungen der Integration zu beschreiben.
 
 {% alert important %}
 Die folgenden Anforderungen sind typische Anforderungen, die Sie von Braze benötigen könnten. Wir empfehlen, die Attribute Titel, Herkunft, Links und Formulierungen zu verwenden, die in dem folgenden Chart aufgeführt sind. Passen Sie die Beschreibung so an, dass Sie wissen, wozu diese Anforderungen jeweils dienen.
@@ -90,4 +90,4 @@ Einfach eine typische Schritt-für-Schritt-Anleitung.
 
 ## Anwendungsfälle
 
-Dies kann ein wichtiger Teil Ihrer Dokumentation sein. Dies ist zwar optional, aber es ist ein guter Ort, um typische oder sogar neuartige Anwendungsfälle für die Integration zu skizzieren. Dies kann als Mittel zum Verkauf oder Upselling der Beziehung genutzt werden - es liefert Kontext, Ideen und vor allem eine Möglichkeit, die Möglichkeiten der Integration zu visualisieren.
+Dies kann ein entscheidender Teil Ihrer Dokumentation sein. Dies ist zwar optional, aber es ist ein guter Ort, um typische oder sogar neuartige Anwendungsfälle für die Integration zu skizzieren. Dies kann als Mittel zum Verkauf oder Upselling der Beziehung genutzt werden - es liefert Kontext, Ideen und vor allem eine Möglichkeit, die Möglichkeiten der Integration zu visualisieren.

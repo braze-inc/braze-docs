@@ -14,7 +14,7 @@ Mit einer Kombination von Features der Braze Data Platform können Sie Ihre Date
 
 ## Vereinheitlichen Sie Ihre Daten 
 
-Sammeln und konsolidieren Sie First-Party-Daten aus beliebigen Quellen mit [APIs]({{site.baseurl}}/api/home) und [SDKs]({{site.baseurl}}/developer_guide/sdk_integration). Sie können auch integrierte Tools für die Datenaufnahme wie [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion) verwenden, um eine direkte Integration von Ihrem Data Warehouse oder Ihrer Dateispeicherlösung in Braze zu erstellen, oder Sie können [Data Transformation]({{site.baseurl}}/user_guide/data/unification/data_transformation) verwenden, um Webhook-Integrationen für die Übertragung von Daten in Braze zu erstellen und zu verwalten.
+Sammeln und konsolidieren Sie First-Party-Daten aus beliebigen Quellen mit [APIs]({{site.baseurl}}/api/home) und [SDKs]({{site.baseurl}}/developer_guide/sdk_integration). Sie können auch integrierte Tools zur Datenaufnahme wie [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion) verwenden, um eine direkte Integration von Ihrem Data Warehouse oder Ihrer Dateispeicherlösung in Braze zu erstellen, oder Sie verwenden [Data Transformation]({{site.baseurl}}/user_guide/data/unification/data_transformation), um Webhook-Integrationen zur Übertragung von Daten in Braze zu erstellen und zu verwalten.
 
 ## Aktivieren Sie Ihre Daten
 

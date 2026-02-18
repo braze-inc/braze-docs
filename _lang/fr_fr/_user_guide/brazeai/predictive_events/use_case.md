@@ -66,7 +66,7 @@ Il associe également l'événement de conversion Canvas à l'événement person
 {% tabs %}
 {% tab High intent, fitness %}
 
-Ces utilisateurs sont déjà actifs et très attachés aux fonctionnalités de suivi de la condition physique. Il est probable qu'ils passeront à l'étape supérieure sans incitations supplémentaires, c'est pourquoi le message met l'accent sur l'obtention d'informations plus approfondies et d'outils avancés qui créent des liens avec leurs habitudes existantes.
+Ces utilisateurs sont déjà actifs et très attachés aux fonctionnalités de suivi de la condition physique. Il est probable qu'ils passeront à l'étape supérieure sans incitations supplémentaires, c'est pourquoi le message se concentre sur l'obtention d'informations plus approfondies et d'outils avancés qui créent des liens avec leurs habitudes existantes.
 
 - **Ligne d'objet :** Allez plus loin dans vos objectifs de remise en forme
 - **En-tête :** Vos progrès méritent Pro
@@ -110,7 +110,7 @@ Après l'exécution de la campagne, Jordan examine les performances dans [Canvas
 
 Performance des e-mails par chemin d'accès :
 
-- **Haute intention, forme physique**
+- **Une intention élevée, une bonne forme physique**
    - *Taux d’ouverture :* 34%
    - *Taux de clics :* 20%
    - *Taux de conversion :* 13 %

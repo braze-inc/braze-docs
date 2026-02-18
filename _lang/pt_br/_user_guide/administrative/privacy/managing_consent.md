@@ -1,6 +1,6 @@
 ---
 nav_title: Gerenciar o consentimento
-article_title: Gerenciar o consentimento
+article_title: Gerenciar consentimento
 page_order: 10
 page_type: reference
 description: "Este artigo de referência fornece dicas sobre como gerenciar o consentimento usando a Braze."

@@ -10,13 +10,13 @@ description: "Este artigo de referência aborda o arquivamento de mensagens, um 
 
 # Arquivamento de mensagens
 
-> A arquivação de mensagens permite que você salve uma cópia das mensagens enviadas aos usuários para fins de arquivamento ou conformidade em seu bucket S3 da AWS, contêiner de Blob Storage do Azure ou bucket do Google Cloud Storage. <br><br> Este artigo cobre como configurar a arquivação de mensagens, referências de carga útil JSON e perguntas frequentes.
+> A arquivação de mensagens permite que você salve uma cópia das mensagens enviadas aos usuários para fins de arquivamento ou conformidade em seu bucket S3 da AWS, contêiner de Blob Storage do Azure ou bucket do Google Cloud Storage. <br><br> Este artigo aborda como configurar a arquivação de mensagens, referências de carga útil JSON e perguntas frequentes.
 
 O arquivamento de mensagens está disponível como um recurso complementar. Para começar com a arquivação de mensagens, entre em contato com seu gerente de sucesso do cliente da Braze.
 
 ## Como funciona?
 
-Quando esse recurso está ativado, se você conectou um bucket de armazenamento em nuvem à Braze e o marcou como o destino padrão de exportação de dados, a Braze gravará um arquivo JSON gzipped em seu bucket de armazenamento em nuvem para cada mensagem enviada a um usuário através dos canais selecionados (e-mail, SMS/MMS ou push). 
+Quando esse recurso está ativado, se você conectou um bucket de armazenamento em nuvem à Braze e o marcou como o destino de exportação de dados padrão, a Braze gravará um arquivo JSON compactado em gzip em seu bucket de armazenamento em nuvem para cada mensagem enviada a um usuário através dos canais selecionados (e-mail, SMS/MMS ou push). 
 
 Esse arquivo conterá os campos definidos em [Referências de arquivo](#file-references) e refletirá os modelos finais de mensagens enviadas ao usuário. Todos os valores de modelo definidos em sua campanha (por exemplo, {% raw %}`{{${first_name}}}`{% endraw %}) mostrarão o valor final que o usuário recebeu com base nas informações de perfil. Isso permite que você retenha uma cópia da mensagem enviada para atender aos requisitos de conformidade, auditoria ou suporte ao cliente.
 
@@ -73,7 +73,7 @@ Se você não vir o **envio de mensagens** em **Configurações**, confirme se s
 
 ## Referências de arquivos
 
-As seguintes são referências à carga útil JSON entregue ao seu bucket de armazenamento em nuvem cada vez que uma mensagem é enviada. Consulte nosso repositório de exemplos de código para obter [arquivos de amostra de arquivo de mensagens](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
+A seguir estão referências à carga útil JSON entregue ao seu bucket de armazenamento em nuvem cada vez que uma mensagem é enviada. Consulte nosso repositório de exemplos de código para obter [arquivos de amostra de arquivo de mensagens](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
 
 {% tabs %}
 {% tab Email %}

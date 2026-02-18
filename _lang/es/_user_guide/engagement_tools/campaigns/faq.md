@@ -82,7 +82,7 @@ Otro ejemplo: cree dos campañas programadas para enviarse el mismo día, una po
 
 Cuando programes una campaña, elige enviarla a una hora determinada y luego selecciona **Enviar campaña a los usuarios de su zona horaria local**.
 
-Braze recomienda encarecidamente que todas las campañas de zonas horarias locales se programen con 24 horas de antelación. Dado que una campaña de este tipo debe enviarse a lo largo de todo un día, programarla con 24 horas de antelación garantiza que tu mensaje llegará a todo tu segmento. Sin embargo, puedes programar estas campañas con menos de 24 horas de antelación si es necesario. Ten en cuenta que Braze no enviará mensajes a los usuarios que hayan incumplido la hora de envío en más de 1 hora. 
+Braze recomienda encarecidamente que todas las campañas de zonas horarias locales se programen con 24 horas de antelación. Dado que una campaña de este tipo debe enviarse durante todo un día, programarla con 24 horas de antelación garantiza que tu mensaje llegará a todo tu segmento. Sin embargo, puedes programar estas campañas con menos de 24 horas de antelación si es necesario. Ten en cuenta que Braze no enviará mensajes a los usuarios que hayan incumplido la hora de envío en más de 1 hora. 
 
 Por ejemplo, si es la 1 de la tarde y programa una campaña de zona horaria local para las 3 de la tarde, la campaña se enviará inmediatamente a todos los usuarios cuya hora local esté entre las 3 y las 4 de la tarde, pero no a los usuarios cuya hora local sea las 5 de la tarde. Además, la hora de envío que elija para su campaña tiene que no haber ocurrido todavía en la zona horaria de su empresa.
 
@@ -147,9 +147,9 @@ Sí, utilice el filtro `api_id:YOUR_API_ID` en la página **Campañas** para bus
 
 El manejo de los espacios en blanco difiere entre los campos de entrada y los componentes de texto mostrados debido al estilo CSS. En los componentes de texto con el CSS predeterminado `white-space: normal`, varios espacios consecutivos se contraen en un solo espacio al mostrarse. Este es el comportamiento estándar de HTML para el texto renderizado. 
 
-Los campos de entrada conservan los espacios múltiples exactamente como los introduces, porque necesitas ver y editar el espaciado exacto para una entrada de datos precisa. Esto significa que el texto con varios espacios puede aparecer de forma diferente cuando se visualiza en un campo de entrada (donde se conservan todos los espacios) y cuando se muestra en otras partes del panel (donde CSS puede contraer varios espacios). 
+Los campos de entrada conservan los espacios múltiples exactamente como los introduces, porque necesitas ver y editar el espaciado exacto para una entrada de datos precisa. Esto significa que el texto con varios espacios puede aparecer de forma diferente cuando se visualiza en un campo de entrada (donde se conservan todos los espacios) y cuando se visualiza en otras partes del panel (donde CSS puede contraer varios espacios). 
 
-Por ejemplo, si introduces un nombre de campaña o un parámetro UTM con varios espacios en un campo de entrada, verás que se conservan todos los espacios. Sin embargo, cuando ese mismo texto aparece en resultados de búsqueda, listas de campaña u otros componentes de texto, varios espacios pueden aparecer como un único espacio debido a la gestión de espacios en blanco de CSS. 
+Por ejemplo, si introduces un nombre de campaña o un parámetro UTM con varios espacios en un campo de entrada, verás que se conservan todos los espacios. Sin embargo, cuando ese mismo texto aparece en los resultados de búsqueda, listas de campaña u otros componentes de texto, varios espacios pueden aparecer como un único espacio debido a la gestión de espacios en blanco de CSS. 
 
 ### ¿Cuál es la diferencia entre las campañas API y las campañas desencadenadas por API?
 
@@ -179,7 +179,7 @@ Las campañas de entrega basadas en acciones o las campañas activadas por event
 
 #### Activada por API
 
-Las campañas activadas por API y por servidor son ideales para gestionar transacciones más avanzadas, permitiéndote desencadenar la entrega del contenido de la campaña desde tus propios servidores y sistemas. La solicitud de la API para desencadenar el mensaje también puede incluir datos adicionales que se incorporarán a la plantilla del mensaje en tiempo real.
+Las campañas activadas por API y por servidor son ideales para gestionar transacciones más avanzadas, permitiéndote desencadenar la entrega del contenido de la campaña desde tus propios servidores y sistemas. La solicitud de la API para desencadenar el mensaje también puede incluir datos adicionales que se plantillasen en el mensaje en tiempo real.
 
 | Beneficios | Consideraciones | 
 | ---- | ---- |

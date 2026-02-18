@@ -49,7 +49,7 @@ Se a sua prévia enviar a última etapa da jornada do usuário em vez de abortar
 
 ## Prévias para cronometragem
 
-Para Canvas agendadas, o usuário teste entra no próximo horário de entrada agendado. Para Canvas baseados em ações com datas de início, o usuário teste entra na data e hora de início. 
+Para as telas programadas, o usuário teste entra no próximo horário de entrada programado. Para Canvas baseados em ações com datas de início, o usuário teste entra na data e hora de início. 
 
 Embora os horários de início padrão ainda se apliquem, o horário de entrada é configurável em todas as instâncias, o que significa que você pode simular uma data no passado ou no futuro. No entanto, você não pode fazer o teste antes da data de início ou depois da data de término do Canva.
 
@@ -61,7 +61,7 @@ Para Canvas com uma ação-gatilho como "alteração no valor do atributo person
 
 Os usuários de teste entram na prévia mesmo que não sejam elegíveis na vida real. Se eles não forem elegíveis, você poderá ver por que não atenderam aos critérios. Quando um usuário de teste entra na prévia, presumimos que o usuário de teste atendeu aos critérios de público-alvo e executou os critérios de ação-gatilho. Por exemplo, para um Canva que usa eventos personalizados nos critérios de entrada, presume-se que o usuário teste tenha realizado o evento personalizado conforme esperado nos critérios de entrada. No entanto, se o mesmo evento personalizado for usado em outra parte da tela (como nos critérios de saída), considere como isso pode afetar a jornada do usuário.
 
-Eventos, disparos de API, atributos personalizados e propriedades de entrada do Canvas são aplicados com base na entrada do Canvas. A execução do teste simula a jornada do usuário sem aplicar esses elementos para alterar o perfil real do usuário ou o fluxo do Canvas Flow. Por exemplo, durante os testes, quando um atributo personalizado é usado como um disparador do Canvas, os critérios do disparador são aplicados à prévia do usuário **como se** ele tivesse disparado a alteração do atributo personalizado.
+Eventos, disparos de API, atributos personalizados e propriedades de entrada do Canvas que supostamente permitem que um usuário de teste entre no Canvas não são atualizados no perfil do usuário real e não persistem além da execução do teste. Por exemplo, durante os testes, quando um atributo personalizado é usado como um disparador do Canvas, os critérios do disparador são aplicados à prévia do usuário **como se** ele tivesse disparado a alteração do atributo personalizado.
 
 ### Considerações
 

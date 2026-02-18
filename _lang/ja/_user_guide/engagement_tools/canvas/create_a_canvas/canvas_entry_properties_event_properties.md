@@ -48,6 +48,10 @@ tool: Canvas
 - `event_properties` は先頭のメッセージステップで使用できません。代わりに、`canvas_entry_properties` を使用するか、対応するイベント**before** で`event_properties` を含むメッセージステップにアクションパスステップを追加できます。
 - アクションパスステップに [SMS インバウンドメッセージを送信しました] または [WhatsApp インバウンドメッセージを送信しました] トリガーが含まれている場合、後続のキャンバスステップに SMS または WhatsApp Liquid プロパティを含めることができます。これは、キャンバスでのイベントプロパティの動作を反映します。こうすることで、メッセージを活用して、ユーザープロファイルや会話メッセージに関するファーストパーティデータを保存し、参照することができる。
 
+{% alert note %}
+視聴者の適格性は、キャンバスエントリで一度に評価されます。ユーザーがエントリ中にマージされた場合、特定されたユーザーはキャンバスを通過し続け、キャンバスSegment条件に対して再評価されません。
+{% endalert %}
+
 {% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
 
 ### イベントプロパティのタイムスタンプ

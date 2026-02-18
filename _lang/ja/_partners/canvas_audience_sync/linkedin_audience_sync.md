@@ -21,9 +21,7 @@ Braze オーディエンス同期を LinkedIn に使用して、ブランドは 
 
 この機能により、ブランドはLinkedInと共有されている特定のファーストパーティデータをコントロールできます。Braze では、ファーストパーティデータを共有できる統合と共有できない統合を最大限に考慮しています。詳細については、私たちの[プライバシーポリシー](https://www.braze.com/privacy)を参照してください。
 
-{% alert important %}
-LinkedIn へのオーディエンス同期は現在ベータ版です。ベータ版に参加したい場合は、Braze アカウントマネージャーにお問い合わせください。
-{% endalert %}
+{% include early_access_beta_alert.md feature='Audience Sync to LinkedIn' type='beta' %}
 
 ## 前提条件
 

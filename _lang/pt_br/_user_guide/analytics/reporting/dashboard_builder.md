@@ -30,6 +30,12 @@ Agora, siga as respectivas etapas para sua fonte de dados:
 
 {: start="4"}
 4\. Selecione **\+ Add Tile** e, em seguida, escolha um dos relatórios que você criou no [Report Builder (New)]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
+
+{% alert important %}
+Depois que um relatório do Report Builder é adicionado a um bloco do Dashboard Builder, o bloco não é conectado ao relatório original. Se você editar o relatório original no Report Builder, deverá excluir o bloco do dashboard existente e criar um novo usando o relatório atualizado como fonte de dados.
+{% endalert %}
+
+{: start="5"}
 5\. Selecione o ícone de lápis para alterar a forma como o título e o tipo de gráfico são exibidos no bloco.
     \- Você pode alternar entre diferentes tipos de gráficos abaixo da visualização padrão. As opções atuais incluem gráficos de barras (horizontais ou verticais) e gráficos de linhas (disponíveis somente se você tiver selecionado **Data** como uma opção de pesquisa na configuração do Report Builder).<br><br>![Alterna para diferentes tipos de gráficos.]({% image_buster /assets/img/report_builder_types.png %})<br><br>
     \- Use o menu suspenso de métricas para selecionar as métricas a serem incluídas em sua visualização. Por padrão, a primeira coluna do relatório será a métrica padrão exibida.
@@ -42,7 +48,7 @@ Agora, siga as respectivas etapas para sua fonte de dados:
 5\. Para editar como os resultados da consulta são exibidos no bloco, selecione o ícone de lápis para alterar o título e o tipo de gráfico.
     \- Você pode alternar entre diferentes tipos de gráficos abaixo da visualização padrão. As opções atuais incluem tabelas, gráficos de barras (horizontais ou verticais) e gráficos de linhas.<br><br>![Alterna para diferentes tipos de gráficos.]({% image_buster /assets/img/query_builder_types.png %})<br><br>
         \- Se você escolher uma das opções de gráfico, use o menu suspenso **Eixo X** para selecionar uma única coluna dos resultados da consulta a ser usada como eixo x.
-        \- Use o menu suspenso **do eixo Y** para selecionar as métricas a serem incluídas em sua visualização. Por padrão, todas as colunas dos resultados da consulta serão exibidas, portanto, desmarque as colunas que não lhe interessam.<br><br>![Alterna para diferentes tipos de gráficos.]({% image_buster /assets/img/query_builder_axis.png %})<br><br>
+        \- Use o menu suspenso **do eixo Y** para selecionar quais métricas serão incluídas em sua visualização. Por padrão, todas as colunas dos resultados da consulta serão exibidas, portanto, desmarque as colunas que não lhe interessam.<br><br>![Alterna para diferentes tipos de gráficos.]({% image_buster /assets/img/query_builder_axis.png %})<br><br>
         \- (Opcional) Você pode usar o menu suspenso **Agrupamento** para agrupar os resultados da consulta. Por exemplo, se você tiver o ID da campanha como resultado de uma coluna e quiser somar todas as linhas com esse valor, use o menu suspenso **Agrupamento**.  
         \- (Opcional) Para editar os dados que estão sendo exibidos, selecione a consulta que está anexada ao visual e faça suas edições no [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/).
 6\. Selecione **Save (Salvar)** depois de alterar a visualização de acordo com suas preferências.

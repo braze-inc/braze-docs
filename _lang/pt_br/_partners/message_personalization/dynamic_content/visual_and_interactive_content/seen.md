@@ -50,11 +50,11 @@ Uma Jornada é um fluxo de trabalho configurável que:
 
 As Jornadas são compostas por **nós**, cada um com uma função específica:
 
-- **nó de Disparo**: Define como e quando uma Jornada começa (para integrações com o Braze, use um `On Create` disparador)
-- **nó Condicional**: Roteia usuários através de diferentes caminhos lógicos com base nos valores dos dados
-- **nó de Projeto**: Aplica personalização dinâmica de vídeo usando os dados recebidos
-- **nó de Player**: Gera uma URL de player de vídeo única
-- **nó de Webhook**: Define a carga útil de resposta enviada de volta ao Braze
+- **Nó de Disparo**: Define como e quando uma Jornada começa (para integrações com o Braze, use um `On Create` disparador)
+- **Nó Condicional**: Roteia usuários através de diferentes caminhos lógicos com base nos valores dos dados
+- **Nó de Projeto**: Aplica personalização dinâmica de vídeo usando os dados recebidos
+- **Nó de Player**: Gera uma URL de player de vídeo única
+- **Nó de Webhook**: Define a carga útil de resposta enviada de volta ao Braze
 
 Como as respostas da Jornada são configuráveis, certifique-se de que os campos de saída retornados pelo Seen correspondam aos atributos esperados pela sua Transformação de Dados do Braze.
 
@@ -100,7 +100,7 @@ Configure o webhook da seguinte forma:
   > Gere um [token de API](https://docs.seen.io/authorization) na Plataforma Seen nas configurações do Espaço de Trabalho. Você pode entrar em contato com seu gerente de sucesso do cliente da Seen para obter assistência.
 
 - Para testar o webhook com um usuário, mude para a guia **Teste**.
-- Após confirmar que o teste funciona como pretendido, complete a configuração do webhook.
+- Após confirmar que o teste funciona como esperado, complete a configuração do webhook.
 
 
 ### Etapa 2: Configure uma Jornada na Plataforma Seen
@@ -114,9 +114,9 @@ Para configurar sua Jornada:
 2. Adicione um **nó de Trigger** e selecione o `On Create` trigger  
    Isso garante que a Jornada comece quando a Braze enviar dados para o Seen. Crie e adicione qualquer lógica de [segmentação](https://docs.seen.io/segments) dentro do seu espaço de trabalho, se necessário.
 3. Construa sua lógica usando os seguintes nós conforme necessário:
-   - **nó Condicional**: Roteie usuários com base em valores de atributos (por exemplo, tipo de plano ou região)
-   - **nó de Projeto**: Aplique personalização dinâmica de vídeo usando os dados recebidos
-   - **nó de Player**: Gere uma URL única do player de vídeo
+   - **Nó Condicional**: Roteie usuários com base nos valores de atributo (por exemplo, tipo de plano ou região)
+   - **Nó de Projeto**: Aplique personalização dinâmica de vídeo usando os dados recebidos
+   - **Nó de Player**: Gere uma URL única do player de vídeo
 4. Adicione um **nó de Webhook** para definir a resposta enviada de volta para a Braze
 
 #### Requisitos de resposta do nó Webhook

@@ -40,11 +40,7 @@ Os benefícios adicionais de usar um `external_id` incluem o seguinte:
 
 ### Considerações sobre IDs externas
 
-{% alert warning %}
-Não atribua um `external_id` a um perfil de usuário antes de poder identificá-lo exclusivamente. Depois de identificar um usuário, não é possível revertê-lo para anônimo.
-<br><br>
-Um `external_id` pode ser atualizado usando o [`/users/external_ids/rename` endpoint]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/). No entanto, qualquer tentativa de definir um `external_id` diferente durante a sessão de um usuário criará um novo perfil de usuário com o novo `external_id` associado a ele. Nenhum dado será transmitido entre os dois perfis.
-{% endalert %} 
+{% include alerts/warning_alerts.md alert='User profile external_id' %} 
 
 #### Risco de usar um e-mail ou um e-mail com hash como uma ID externa
 
@@ -78,7 +74,7 @@ Cada alias funciona como um par chave-valor que consiste em duas partes: um `ali
 
 ### Atualização de aliases de usuário
 
-Um alias pode ser atualizado com um novo nome para um determinado rótulo depois de definido, seja usando nossos [endpoints de Dados de Usuários]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) ou passando um novo nome através do SDK. O alias do usuário ficará visível ao exportar os dados desse usuário.
+Um alias pode ser atualizado com um novo nome para um determinado rótulo depois de definido, seja usando nossos [Pontos de Dados de Usuários]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) ou passando um novo nome através do SDK. O alias do usuário ficará visível ao exportar os dados desse usuário.
 
 ![Dois perfis de usuário diferentes para usuários distintos com o mesmo rótulo de alias de usuário, mas com nomes de alias diferentes]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
 
@@ -104,7 +100,7 @@ Está com dificuldades para imaginar como isso pode ser visto no ciclo de vida d
 
 ## Caso de uso avançado
 
-Você pode definir um novo alias de usuário para perfis de usuário identificados existentes através do nosso SDK e nossa API usando os [endpoints de Dados de Usuários]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint). No entanto, os aliases de usuário não podem ser definidos por meio da API para um perfil de usuário desconhecido existente.
+Você pode definir um novo alias de usuário para perfis de usuários identificados existentes através do nosso SDK e nossa API usando os [Pontos de Dados de Usuários]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint). No entanto, os aliases de usuário não podem ser definidos por meio da API para um perfil de usuário desconhecido existente.
 
 Os aliases de usuário também são mesclados no processo. No entanto, se tanto o usuário órfão quanto o usuário de destino tiverem um alias com o mesmo rótulo, apenas o alias do usuário de destino será mantido.
 

@@ -16,7 +16,7 @@ _Diese Integration wird von Liftigniter gepflegt._
 
 ## Über die Integration
 
-Die Integration von Liftigniter und Braze nutzt Connected-Content, um es Ihnen zu ermöglichen, interessante Themen wie Nachrichtenartikel, Kleidung und andere Artikel und Videos aus dem Einzelhandel zu empfehlen.
+Die Integration von LiftIgniter und Braze nutzt Connected-Content, um Ihnen interessante Themen wie Nachrichtenartikel, Kleidung und andere Artikel und Videos aus dem Einzelhandel zu empfehlen.
 
 ## Voraussetzungen
 

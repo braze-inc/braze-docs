@@ -67,7 +67,7 @@ Quando um perfil de usuário é sincronizado, os seguintes campos são mesclados
 - Informações sobre o dispositivo
 - Contagem total de sessões (combinada de ambos os perfis)
 - Dados personalizados de eventos e compras
-- Propriedades de eventos personalizados para segmentação (por exemplo, "X vezes em Y dias" onde X ≤ 50 e Y ≤ 30)
+- Propriedades de eventos personalizados para segmentação (por exemplo, "X vezes em Y dias" em que X ≤ 50 e Y ≤ 30)
 - Contagem de eventos (combinada de ambos os perfis)
 - Datas do primeiro e último eventos (o Braze seleciona as datas mais antigas e mais recentes)
 - Dados de interação da campanha (campos de data mais recentes)

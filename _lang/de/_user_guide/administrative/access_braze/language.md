@@ -1,7 +1,7 @@
 ---
 nav_title: Spracheinstellungen
 article_title: Spracheinstellungen
-page_order: 2.5
+page_order: 3
 page_type: reference
 description: "Dieser Artikel beschreibt, wie Sie die Sprache ändern, in der das Braze-Dashboard angezeigt wird."
 
