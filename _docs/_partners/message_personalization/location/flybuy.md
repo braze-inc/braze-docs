@@ -48,7 +48,7 @@ Flybuy maps `loyalty_id` to the Braze `external_id` for logged-in users.
 - [Hotel Mobile Check-In and Ordering](https://www.flybuy.com/industries/hospitality)
 - [Marketing Suite](https://www.flybuy.com/flybuy-marketing-suite)
 
-## Event and Attribute-Based Trigger Examples
+## Event- and attribute-based trigger examples
 
 Custom events and custom attributes can be used to power a variety of personalized experiences.
 
