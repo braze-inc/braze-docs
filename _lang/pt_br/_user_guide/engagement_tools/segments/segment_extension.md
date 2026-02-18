@@ -15,7 +15,7 @@ A segmentação do Braze permite o direcionamento de usuários com base em event
 
 ## Por que usar extensões de segmento?
 
-Os Braze segments oferecem ferramentas poderosas de direcionamento para criar grupos dinâmicos de usuários. Para a maioria dos casos de uso, isso é suficiente para alcançar seu público de forma eficaz. As extensões de segmento são projetadas para casos de uso avançado em que é necessário analisar comportamentos de até dois anos atrás ou aplicar lógica complexa, sem comprometer a retenção de dados ou a performance do sistema. Você pode usar [SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) consultas (Extensões de Segmento SQL) ou dados do seu próprio [data warehouse]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments) para refinar ainda mais seu público.
+Os Braze segments oferecem ferramentas poderosas de direcionamento para criar grupos dinâmicos de usuários. Para a maioria dos casos de uso, isso é suficiente para alcançar seu público de forma eficaz. As extensões de segmento são projetadas para casos de uso avançado em que é necessário analisar comportamentos de até dois anos atrás ou aplicar lógica complexa, sem comprometer a retenção de dados ou a performance do sistema. Você pode usar consultas [SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) (Extensões de Segmento SQL) ou dados do seu próprio [data warehouse]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments) para refinar ainda mais seu público.
 
 Por exemplo, a segmentação padrão do Braze encontrará usuários que se encaixam em critérios específicos definidos por você, como a identificação de um usuário que comprou recentemente um de seus produtos. As extensões de segmento permitem que você vá mais fundo - como identificar usuários que compraram uma determinada cor de um produto específico pelo menos duas vezes entre 18 e 24 meses atrás. As extensões de segmento são um aprimoramento, não um requisito. Se você precisar de filtros mais avançados ou de uma janela de análise mais longa, eles são uma ótima ferramenta para ajudar a manter o uso de dados otimizado.
 
@@ -47,7 +47,7 @@ Se você selecionar uma experiência que usa SQL, consulte [Extensões de Segmen
 
 Os seguintes tipos de Extensão de Segmento consomem créditos SQL:
 
-- Extensões de Segmento SQL (tanto incremental quanto atualização completa)
+- Extensões de Segmento SQL (tanto incrementais quanto de atualização completa)
 - Segmentos do catálogo
 - Segmentos do CDI 
     - Os créditos são consumidos dentro do seu próprio data warehouse
@@ -96,9 +96,9 @@ Você não precisa de extensões de segmento para usar propriedades de evento ou
 
 ### Etapa 5: Salve sua extensão de segmento
 
-Após selecionar **Salvar**, sua Extensão de Segmento começará a processar. O tempo que leva para gerar sua Extensão de Segmento depende de quantos usuários você tem, quantos eventos personalizados ou eventos de compra você está capturando e quantos dias você está analisando no histórico.
+Após selecionar **Salvar**, sua Extensão de Segmento começará a ser processada. O tempo que leva para gerar sua Extensão de Segmento depende de quantos usuários você tem, quantos eventos personalizados ou eventos de compra você está capturando e quantos dias você está analisando no histórico.
 
-Enquanto sua Extensão de Segmento estiver processando, você verá uma pequena animação ao lado do nome da Extensão de Segmento e a palavra "Processando" na coluna **Último Processado** na lista de Extensões de Segmento. Observe que você não poderá editar uma Extensão de Segmento enquanto ela estiver processando.
+Enquanto sua Extensão de Segmento estiver sendo processada, você verá uma pequena animação ao lado do nome da Extensão de Segmento e a palavra "Processando" na coluna **Último Processado** na lista de Extensões de Segmento. Observe que você não poderá editar uma Extensão de Segmento enquanto ela estiver sendo processada.
 
 !["Extensões de Segmento" página com duas extensões ativas.]({% image_buster /assets/img/segment/segment_extension5.png %})
 
@@ -126,7 +126,7 @@ Agora você pode prosseguir como de costume com [criando seu segmento]({{site.ba
 
 Sim. Você pode adicionar múltiplos eventos ou referenciar múltiplas tabelas Snowflake ao usar [Extensões de Segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
-Ao usar **Extensão simples** Extensões de Segmento, você pode selecionar um evento personalizado, um evento de compra ou uma interação de canal. No entanto, você pode combinar múltiplas Extensões de Segmento com um AND ou OR ao criar o segmento padrão.
+Ao usar **Extensão simples** Extensões de Segmento, você pode selecionar um evento personalizado, um evento de compra ou uma interação de canal. No entanto, você pode combinar várias Extensões de Segmento com um AND ou OR ao criar o segmento padrão.
 
 ### Posso arquivar Extensões de Segmento se elas existirem em uma campanha ativa?
 

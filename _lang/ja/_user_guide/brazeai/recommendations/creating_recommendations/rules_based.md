@@ -284,9 +284,9 @@ Connected Content を使用してレコメンドエンジンを作成するに�
 {% for list in restaurants %}
 {% if {{list.restaurant.user_rating.rating_text}} == `Excellent` %}
 {% assign excellent_restaurants = excellent_restaurants | append: list.restaurant.name | append: `*` %}
-{% elseif {{list.restaurant.user_rating.rating_text}} == `Very Good` %}
+{% elsif {{list.restaurant.user_rating.rating_text}} == `Very Good` %}
 {% assign very_good_restaurants = very_good_restaurants | append: list.restaurant.name | append: `*` %}
-{% elseif {{list.restaurant.user_rating.rating_text}} == `Good` %}
+{% elsif {{list.restaurant.user_rating.rating_text}} == `Good` %}
 {% assign good_restaurants = good_restaurants | append: list.restaurant.name | append: `*` %}
 {% endif %}
 {% endfor %}

@@ -63,6 +63,12 @@ channel:
 
 !["Buttons"ボタンの名前、Web サイト URL、および"トラッキング URL のフィールドがs のセクション。]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
+{% alert important %}
+**API**によるテンプレート送信:[`/messages/send`エンドポイント]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)を介してWhatsApp テンプレートを送信する場合、WhatsAppクリック"トラッキング(`brz.ai`またはカスタム"トラッキングドメインを使用し、**クリック"トラッキング URL**フィールド)はサポートされません。
+
+API を介してテンプレート メッセージを送信する場合、CTA URL 変数を入力できますが(`button_variables` を使用)、Braze はAPI リクエストフローでクリック"トラッキング URL またはリダイレクトリンクを生成しません。クリック"トラッキングを使用するには、Braze ダッシュボードまたはBraze キャンペーン トリガーからテンプレートを送信します。
+{% endalert %}
+
 {% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
 ## URL での Liquid パーソナライゼーション

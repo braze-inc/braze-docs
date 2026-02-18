@@ -22,7 +22,7 @@ Braze calcule l’heure d’envoi optimale en fonction d’une analyse statistiq
 
 Par exemple, Sam peut ouvrir régulièrement vos e-mails le matin, mais elle préfère ouvrir votre application et interagir avec les notifications en soirée. Ceci veut dire que Sam recevrait une campagne e-mail avec un timing intelligent le matin, alors qu’elle recevrait les campagnes avec notifications push ou messages in-app en soirée, quand elle a plus de chance d’interagir.
 
-Si un utilisateur ne dispose pas de suffisamment de données d'engagement pour que Braze calcule l'heure d'envoi optimale, vous pouvez spécifier une heure de repli.
+Si un utilisateur ne dispose pas de données d'engagement pertinentes pour que Braze calcule l'heure d'envoi optimale, vous pouvez spécifier une heure de repli.
 
 ## Cas d’utilisation
 
@@ -43,7 +43,7 @@ Cette section décrit comment configurer le Timing Intelligent pour vos campagne
 3. Sous **Options de planification en fonction du temps**, sélectionnez **Timing intelligent**.
 4. Réglez la fréquence d'entrée. Pour les envois uniques, sélectionnez **Une fois** et choisissez une date d'envoi. Pour les envois récurrents, sélectionnez **Quotidien**, **Hebdomadaire** ou **Mensuel** et configurez les options de récurrence. Voir les [limitations](#limitations) pour plus d'informations.
 5. En option, configurez les [heures calmes](#quiet-hours).
-6. Spécifiez un [délai de repli](#campaign-fallback). Il s’agit du moment où votre message sera envoyé si un profil utilisateur n’a pas assez de données pour calculer une heure optimale.
+6. Spécifiez un [délai de repli](#campaign-fallback). C'est à ce moment-là que le message sera envoyé si le profil d'un utilisateur ne comporte pas d'événements pertinents pour calculer une heure optimale.
 
 ![L'écran de planification de la campagne montre le timing intelligent avec l'heure de repli et les heures calmes.]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
 
@@ -72,7 +72,7 @@ Pour afficher une estimation du nombre d’utilisateurs qui recevront le message
 2. Dans la section **Prévisualiser les horaires de livraison** (qui apparaît à la fois dans les étapes d’audiences cibles et de livraison planifiée), sélectionnez votre canal.
 3. Cliquez sur **Actualiser les données**.
 
-![Graphique de réception/distribution pour Android Push montrant un pic d'engagement entre 12h et 14h, et l'heure de l'application la plus populaire étant 14h.]({% image_buster /assets/img/intel-timing-preview.png %})
+![Graphique de réception/distribution pour Android Push montrant un pic d'engagement entre 12 et 14 heures, et l'heure de l'application la plus populaire étant 14 heures.]({% image_buster /assets/img/intel-timing-preview.png %})
 
 ### Étape 2 : Choisissez une date d'envoi
 
@@ -108,7 +108,7 @@ Lorsque vous utilisez le timing intelligent, nous vous recommandons de planifier
 
 En option, vous pouvez choisir de limiter la fenêtre de réception/distribution. Cela peut être utile si votre campagne concerne un événement, une vente ou une promotion spécifique, mais n'est généralement pas recommandé lorsque vous utilisez le timing intelligent. Pour plus d'informations, reportez-vous aux [limitations](#limitations).
 
-Lorsque cela est spécifié, Braze utilise uniquement les données d'engagement dans cette fenêtre pour déterminer le délai de réception/distribution optimal d'un utilisateur. S'il n'y a pas suffisamment de données d'engagement dans cette fenêtre, le message est envoyé à l'heure de repli que vous avez définie.
+Lorsque cela est spécifié, Braze utilise uniquement les données d'engagement dans cette fenêtre pour déterminer le délai de réception/distribution optimal d'un utilisateur. S'il n'y a pas d'événements pertinents dans cette fenêtre, le message est envoyé à l'heure de repli que vous avez définie.
 
 Pour définir une fenêtre de réception/distribution :
 
@@ -119,7 +119,7 @@ Pour définir une fenêtre de réception/distribution :
 
 ### Étape 4 : Choisissez une heure de repli {#campaign-fallback}
 
-Choisissez une heure de repli à utiliser si le profil d'un utilisateur ne dispose pas de suffisamment de données pour calculer une heure de réception/distribution optimale.
+Choisissez une heure de repli à utiliser si le profil d'un utilisateur ne comporte pas d'événements pertinents pour calculer une heure de réception/distribution optimale.
 
 ![Planifier une campagne avec le timing intelligent]({% image_buster /assets/img/intelligent_timing_1.png %})
 
@@ -137,7 +137,7 @@ Pour obtenir une estimation du nombre d'utilisateurs qui recevront le message à
 
 Chaque fois que vous modifiez des paramètres du timing intelligent ou de votre audience de campagne, rafraîchissez à nouveau les données pour afficher un graphique mis à jour.
 
-Le graphique affiche en bleu les utilisateurs qui ont assez de données pour calculer une heure optimale et en rouge les utilisateurs qui utiliseront l’heure de secours. Utilisez les filtres de calcul pour ajuster la prévisualisation pour afficher une visualisation plus granulaire pour chaque groupe d’utilisateur.
+Le graphique montre en bleu les utilisateurs qui ont eu des événements pertinents pour calculer une heure optimale et en rouge les utilisateurs qui utiliseront l'heure de repli. Utilisez les filtres de calcul pour ajuster la prévisualisation pour afficher une visualisation plus granulaire pour chaque groupe d’utilisateur.
 {% endtab %}
 
 {% tab Canvas %}
@@ -150,7 +150,7 @@ Les messages seront envoyés aux utilisateurs qui ont franchi l'étape ce jour-l
 
 ### Étape 2 : Choisissez une heure de repli
 
-Choisissez une heure de repli pour le message à envoyer aux utilisateurs de votre audience qui n'ont pas suffisamment de données d'engagement pour que Braze calcule une heure d'envoi optimale. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
+Choisissez une heure de repli pour le message à envoyer aux utilisateurs de votre audience qui ne disposent pas de données d'engagement pertinentes pour que Braze calcule une heure d'envoi optimale. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
 
 ### Étape 4 : Ajouter une étape de retard
 
@@ -190,7 +190,7 @@ Cependant, le timing intelligent est défini pour livrer à 14 h, heure qui est
 
 ### Graphique de prévisualisation affichant peu d’utilisateurs disposant de moments optimaux
 
-Braze a besoin d’un certain nombre de données d’engagement pour réaliser une estimation correcte. S’il n’y a pas assez de données de session ou que les utilisateurs ciblés ont peu ou pas de clics ou d’ouvertures (tels que les nouveaux utilisateurs), Braze passera par défaut sur l’heure de secours. Selon votre configuration, ceci pourrait être soit l’heure la plus populaire pour l’application ou une heure de secours personnalisée.
+S'il n'y a pas d'événements pertinents pour un utilisateur (par exemple, de nouveaux utilisateurs avec peu ou pas d'engagement), Braze utilise le paramètre de repli configuré - soit votre heure de repli personnalisée, soit l'heure d'utilisation de l'application la plus populaire parmi tous les utilisateurs.
 
 ### Impact du fuseau horaire sur la réception/distribution du timing intelligent
 
@@ -238,9 +238,9 @@ Non, les [ouvertures de machines]({{site.baseurl}}/user_guide/data/report_metric
 
 Le timing intelligent planifie les messages pendant l'heure où l'utilisateur est le plus engagé, en fonction de ses débuts de session et des événements d'ouverture des messages. Au cours de cette heure, l'heure du message est arrondie aux cinq minutes les plus proches. Par exemple, si l'heure optimale d'un utilisateur est calculée comme étant 16 h 58, le message sera planifié pour 17 h 00. Il peut y avoir de légers retards dans la réception/distribution en raison de l'activité du système pendant les périodes d'affluence.
 
-#### Quels sont les calculs de secours en cas de manque de données ?
+#### Quels sont les calculs de secours en l'absence d'événements pertinents ?
 
-Si aucune donnée n'est disponible pour un utilisateur, le timing intelligent utilise l'heure de repli indiquée dans les paramètres de votre message. 
+S'il n'y a pas d'événements pertinents pour un utilisateur, Intelligent Timing utilise le paramètre de repli configuré dans les paramètres de votre message - soit un événement de repli personnalisé, soit l'heure d'utilisation de l'appli la plus populaire parmi tous les utilisateurs. 
 
 ### Campagnes
 
@@ -250,7 +250,7 @@ Braze calcule le moment optimal à minuit, heure des Samoa, un des premiers fuse
 
 #### Pourquoi ma campagne de timing intelligent affiche-t-elle aucun ou peu d’envois ?
 
-Braze a besoin d’un nombre de points de données de référence pour réaliser une bonne estimation. S'il n'y a pas assez de données de session ou si les utilisateurs ciblés ont peu ou pas de clics ou d'ouvertures d'e-mails (comme les nouveaux utilisateurs), le timing intelligent peut prendre par défaut l'heure la plus populaire de l'espace de travail pour ce jour de la semaine. Si les informations sont insuffisantes concernant l’espace de travail, nous passons à 17 h, l’heure de secours par défaut. Vous pouvez également choisir de fixer un délai de repli spécifique.
+S'il n'y a pas d'événements d'engagement pertinents pour un utilisateur (par exemple, de nouveaux utilisateurs avec peu ou pas de clics ou d'ouvertures), le timing intelligent utilise le paramètre de repli configuré - soit votre événement de repli personnalisé, soit le moment le plus populaire d'utilisation de l'application parmi tous les utilisateurs.
 
 #### Pourquoi ma campagne de timing intelligent est-elle envoyée après la date planifiée ?
 
@@ -279,7 +279,7 @@ Si l'heure optimale déterminée tombe pendant les heures calmes, Braze trouve l
 
 #### Puis-je utiliser un timing intelligent et une limitation du taux ?
 
-La limite de débit peut être utilisée dans le cadre d'une campagne utilisant le timing intelligent. Toutefois, en raison de la nature de la limitation du débit, certains utilisateurs peuvent recevoir leur message à un moment qui n'est pas optimal, en particulier si un grand nombre d'utilisateurs par rapport à la taille de la limite de débit sont planifiés au moment du repli en raison d'un manque de données. 
+La limite de débit peut être utilisée dans le cadre d'une campagne utilisant le timing intelligent. Toutefois, en raison de la nature de la limitation du débit, certains utilisateurs peuvent recevoir leur message à un moment qui n'est pas optimal, en particulier si un grand nombre d'utilisateurs par rapport à la taille de la limite de débit sont planifiés à l'heure de repli parce qu'ils n'ont pas d'événements pertinents. 
 
 Nous vous recommandons de n'utiliser la limite de débit sur une campagne de timing intelligent que lorsque des exigences techniques doivent être respectées à l'aide de la limite de débit.
 
@@ -300,6 +300,3 @@ Oui, les ouvertures automatiques sont filtrées par le timing intelligent, de so
 #### Comment puis-je m'assurer que le timing intelligent fonctionne le mieux possible ?
 
 Le timing intelligent utilise l'historique individuel de l'engagement de chaque utilisateur dans les messages, quelle que soit l'heure à laquelle il les a reçus. Avant d'utiliser le timing intelligent, assurez-vous d'avoir envoyé aux utilisateurs des messages à différents moments de la journée. De cette manière, vous pouvez "échantillonner" le moment le plus propice pour chaque utilisateur. Un échantillonnage inadéquat des différents moments de la journée peut conduire le timing intelligent à choisir une heure d'envoi non optimale pour un utilisateur.
-
-
-

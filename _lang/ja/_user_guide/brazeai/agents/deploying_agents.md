@@ -3,6 +3,7 @@ nav_title: エージェントの展開
 article_title: カスタムエージェントのデプロイ
 description: "カスタムエージェントを作成した後にBraze で使用するためのカスタムエージェントを配置する方法について説明します。"
 alias: /deploying-agents/
+page_order: 2
 ---
 
 # カスタムエージェントのデプロイ
@@ -17,7 +18,7 @@ Braze代理店は現在ベータ版である。始めるには、顧客のサク
 
 エージェントの**Agent Usage** セクションでは、カタログ およびキャンバスでエージェントがアクティブに使用されている場所を参照してナビゲートできます。
 
-![「Agent Usage」セクションには、キャンバスの2 つのアクティブなエージェントと1 つの非アクティブなエージェントが表示されます。]( {% image_buster /assets/img/ai_agent/agent_usage.png %} )
+![「Agent Usage」セクションには、キャンバスの2 つのアクティブなエージェントと1 つの非アクティブなエージェントが表示されます。]({% image_buster /assets/img/ai_agent/agent_usage.png %})
 
 ## キャンバスのエージェント  
 

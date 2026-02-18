@@ -77,7 +77,7 @@ Si eres un nuevo usuario de Braze y tienes problemas para iniciar sesión o acce
 
 ### He recibido el correo electrónico, pero estoy atascado configurando la autenticación de dos factores (2FA).
 
-- Restablecer 2FA: Si tienes problemas para configurar 2FA, tu administrador puede restablecer 2FA para tu cuenta de usuario en la configuración.
+- Restablecer 2FA: Si tienes problemas para configurar la 2FA, tu administrador puede restablecer la 2FA para tu cuenta de usuario en la configuración.
 - Volver a añadir usuario: Si los problemas persisten, el administrador puede eliminar tu cuenta de usuario del panel y volver a añadirte. Esto permite crear el usuario con los mismos datos.
 
 Si los problemas continúan después de estos pasos, ponte en contacto con [el servicio de asistencia]({{site.baseurl}}/braze_support/) para obtener más ayuda.

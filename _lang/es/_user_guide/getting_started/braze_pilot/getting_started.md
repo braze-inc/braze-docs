@@ -89,6 +89,6 @@ Puedes utilizar un mensaje dentro de la aplicación Braze para solicitar permiso
 
 ## Paso 5: Experiencia de mensajería Braze en Piloto
 
-¡Ahora estás listo para empezar a recibir campañas y Lienzos desde tu panel Braze como usuario de Braze Pilot! Visita cualquiera de las campañas lanzadas en tu espacio de trabajo de demostración para ver una demostración rápida de los casos de uso de Braze, y luego dirígete a tu espacio de trabajo en vivo para empezar a enviar las tuyas.
+¡Ya estás listo para empezar a recibir campañas y Lienzos desde tu panel Braze como usuario de Braze Pilot! Visita cualquiera de las campañas lanzadas en tu espacio de trabajo de demostración para ver una demostración rápida de los casos de uso de Braze, y luego dirígete a tu espacio de trabajo en vivo para empezar a enviar las tuyas.
 
 Para más información sobre cómo configurar campañas y Lienzos en Braze, consulta [Primeros pasos: Campañas y lonas]({{site.baseurl}}/user_guide/getting_started/campaigns_canvases).

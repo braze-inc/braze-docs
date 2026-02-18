@@ -46,7 +46,7 @@ NSDictionary *brazeInfo = @{
 
 No Braze, navegue até **Integrações com Parceiros** > **Parceiros de Tecnologia** e selecione **a AppsFlyer**. 
 
-Aqui, você pode encontrar o endpoint REST e gerar sua chave de importação de dados Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o ponto de extremidade REST são usados na próxima etapa ao configurar um postback no dashboard da AppsFlyer.<br><br>![A caixa "Importação de dados usando a importação de coortes" na página de tecnologia da AppsFlyer. Essa caixa contém chave de importação de dados e o endpoint REST.]({% image_buster /assets/img/appsflyer_audiences/appsflyer_data_import_key.png %}){: style="max-width:90%;"}
+Aqui, você pode encontrar o endpoint REST e gerar sua chave de importação de dados do Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o ponto de extremidade REST são usados na próxima etapa ao configurar um postback no dashboard da AppsFlyer.<br><br>![A caixa "Importação de dados usando a importação de coortes" na página de tecnologia da AppsFlyer. Essa caixa contém chave de importação de dados e o endpoint REST.]({% image_buster /assets/img/appsflyer_audiences/appsflyer_data_import_key.png %}){: style="max-width:90%;"}
 
 ### Etapa 3: Configurar uma conexão Braze nos públicos da AppsFlyer
 

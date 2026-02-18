@@ -26,7 +26,7 @@ Die folgenden Anforderungen sind die grundlegenden, minimalen Anforderungen für
 
 | Anforderung | Herkunft | Zugang | Beschreibung
 |---|---|---|---|
-| Konto bei einem Partner | Vereinbaren Sie ein Konto mit diesem Partner oder wenden Sie sich an Ihren Braze-Konto Manager:in für Vorschläge. | Überprüfen Sie die Website dieses Partners oder kontaktieren Sie ihn, um sich zu registrieren. | Braze sendet keine Daten an einen Partner, wenn Sie nicht über Ihr Unternehmenskonto Zugriff auf diese Daten haben.
+| Konto bei einem Partner | Vereinbaren Sie ein Konto mit diesem Partner oder wenden Sie sich an Ihren Braze-Konto Manager:in für Vorschläge. | Prüfen Sie die Website dieses Partners oder kontaktieren Sie ihn, um sich zu registrieren. | Braze sendet keine Daten an einen Partner, wenn Sie nicht über Ihr Unternehmenskonto Zugriff auf diese Daten haben.
 | Partner API-Schlüssel oder Token | Normalerweise das Dashboard des Partners. | Kopieren Sie sie und fügen Sie sie in das vorgesehene Braze-Feld ein. | Braze hat dafür ein eigenes Feld auf der Integrationsseite für diesen Partner. Wir benötigen dies, um abzubilden, wohin wir Ihre Daten senden. **Halten Sie Ihre Partner-Schlüssel oder Token auf dem neuesten Stand; ungültige Zugangsdaten können Ihren Konnektor deaktivieren und Ereignisse ausfallen lassen.**
 | Authentifizierungscode/-schlüssel, geheimer Schlüssel, Zertifizierungsdatei | Kontaktieren Sie eine Vertretung für Ihr Konto bei diesem Partner. Kann auch im Dashboard des Partners vorhanden sein. | Kopieren Sie die Schlüssel und fügen Sie sie in das vorgesehene Braze-Feld ein. Generieren Sie `.json` oder andere Zertifizierungsdateien und laden Sie sie an die entsprechende Stelle in Braze hoch. | Braze hat dafür ein eigenes Feld auf der Integrationsseite für diesen Partner. Damit erhalten Sie die Zugangsdaten für Braze und autorisieren uns, Dateien auf Ihr Partner-Konto zu schreiben. **Es ist wichtig, dass Sie Ihre Authentifizierungsdaten auf dem neuesten Stand halten. Ungültige Zugangsdaten können dazu führen, dass Ihr Konnektor deaktiviert wird und Events gelöscht werden.**
 | Bucket, Ordnerpfad | Einige Partner organisieren und sortieren Daten nach Buckets. Dies sollte im Dashboard des Partners zu finden sein. | Wenn dies erforderlich ist, kopieren Sie den Bucket-Namen oder den Dateipfad genau in den vorgesehenen Bereich in Braze. | Obwohl dies für einige Partner erforderlich ist, ist es wichtig, es richtig zu machen, wenn Sie es brauchen. |
@@ -93,10 +93,10 @@ Um Ihre Integration zu testen, können Sie **Test-Ereignisse** auswählen, um je
 
 Die Test-Currents-Konnektoren sind kostenlose Versionen unserer bestehenden Konnektoren, die zum Testen und Ausprobieren verschiedener Ziele verwendet werden können. Test-Currents haben:
 
-- Keine Begrenzung der Anzahl der Test-Currents-Konnektoren, die Sie erstellen können.
-- insgesamt maximal 10.000 Events pro gleitendem Zeitraum von sieben Tagen. Diese Ereignissumme wird stündlich auf dem Dashboard aktualisiert.
+- Bis zu 10 Test Currents-Konnektoren pro Workspace.
+- Insgesamt maximal 1.500 Ereignisse pro festgelegtem 24-Stunden-Zeitraum, die um Mitternacht UTC zurückgesetzt werden. Diese Ereignissumme wird stündlich auf dem Dashboard aktualisiert.
 
-Wenn Ihre Test-Currents Konnektoren das Sende-Limit erreicht haben, sendet Ihr Konnektor bis zum nächsten Sieben-Tage-Zeitraum keine Events mehr.
+Nachdem Ihre Test Currents Konnektoren das Sende-Limit erreicht haben, wird Ihr Konnektor bis zum nächsten Tag (um Mitternacht UTC) keine Ereignisse mehr senden.
 
 Um Ihren Currents-Konnektor zu upgraden, bearbeiten Sie die Integration im Dashboard und wählen Sie **Test-Integration upgraden**.
 

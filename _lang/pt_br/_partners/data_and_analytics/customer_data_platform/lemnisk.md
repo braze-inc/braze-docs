@@ -16,14 +16,14 @@ _Esta integração é mantida pela Lemnisk._
 
 ## Sobre a integração
 
-A integração entre Lemnisk e Braze permite que marcas e empresas desbloqueiem todo o potencial do Braze, atuando como uma camada de inteligência liderada por CDP que unifica dados de usuários em tempo real entre plataformas, enviando as informações e comportamentos dos usuários coletados para o Braze em tempo real. A Lemnisk entrega perfis de clientes enriquecidos diretamente no Braze, misturando sinais comportamentais e atributos pessoais que permitem personalizar suas mensagens com um contexto mais profundo.
+A integração entre Lemnisk e Braze permite que marcas e empresas desbloqueiem todo o potencial do Braze, atuando como uma camada de inteligência liderada por CDP que unifica dados de usuários em tempo real entre plataformas, enviando as informações e comportamentos dos usuários coletados para o Braze em tempo real. A Lemnisk entrega perfis de clientes enriquecidos diretamente no Braze, misturando sinais comportamentais e atributos pessoais que permitem personalizar seu envio de mensagens com um contexto mais profundo.
 
 ## Pré-requisitos
 
 | Requisito | Descrição |
 | --- | --- |
 | Contas Lemnisk | Uma conta [Lemnisk](https://www.lemnisk.co/) é necessária para aproveitar esta parceria. |
-| API Externa na Lemnisk | Entre em contato com seu CSM da Lemnisk para habilitar **API Externa** para sua conta. |
+| API Externa na Lemnisk | Entre em contato com seu CSM da Lemnisk para habilitar a **API Externa** para sua conta. |
 | Chave da API REST do Braze | Uma chave da API REST do Braze com permissão `users.track`. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
 | Ponto de extremidade REST do Braze | Sua URL de endpoint REST. Seu endpoint dependerá da [URL do Braze para sua conta]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints#api-and-sdk-endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -54,7 +54,7 @@ Se suas credenciais e definições de API estiverem corretas, a Braze retornará
 
 ![Testando uma configuração de API Externa com uma carga útil de exemplo e resposta de sucesso]({% image_buster /assets/img/lemnisk/test_ext_api.png %})
 
-Em seguida, você verificará se seus eventos estão sendo enviados para a Braze com sucesso. No painel da Braze, acesse **público** > **Buscar Usuários**, e então insira um dos identificadores da sua configuração de API Externa (como um endereço de e-mail de usuário). Se tudo estiver funcionando corretamente, o perfil que recebeu seu disparo de API de teste será listado.
+Em seguida, você verificará se seus eventos estão sendo enviados para a Braze com sucesso. No painel da Braze, acesse **Público** > **Buscar Usuários**, e então insira um dos identificadores da sua configuração de API Externa (como um endereço de e-mail de usuário). Se tudo estiver funcionando corretamente, o perfil que recebeu seu disparo de API de teste será listado.
 
 ![Visualizando o perfil de um usuário e a visão geral da atividade na Braze]({% image_buster /assets/img/lemnisk/braze_cov.png %})
 

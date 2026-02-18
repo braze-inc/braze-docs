@@ -14,7 +14,7 @@ No Xcode, acesse a seção **Acessando & Capabilities** do direcionamento do apl
 
 ![A seção "Fazendo login & Capabilities" em um projeto Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
-### Etapa 3: Configurar o manuseio de push
+### Etapa 3: Configurar o manuseio do push
 
 Você pode usar o Swift SDK para automatizar o processamento de notificações remotas recebidas do Braze. Essa é a maneira mais simples de lidar com notificações por push e é o método de tratamento recomendado.
 
@@ -359,6 +359,41 @@ Ao usar a integração automática de push, `subscribeToUpdates(_:)` é a única
 {% alert tip %}
 Crie sua inscrição de notificação por push em `application(_:didFinishLaunchingWithOptions:)` para garantir que sua inscrição seja disparada depois que um usuário final tocar em uma notificação enquanto seu app estiver em um estado finalizado.
 {% endalert %}
+
+## Manipulação de notificações em primeiro plano
+
+Por padrão, quando uma notificação por push chega enquanto seu app está em primeiro plano, o iOS não a exibe automaticamente. Para exibir notificações por push em primeiro plano e rastreá-las com a análise de dados do Braze, chame o método `handleForegroundNotification(notification:)` dentro de sua implementação `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)`.
+
+### Como funciona?
+
+Quando você chama `handleForegroundNotification(notification:)`, o Braze processa a carga útil da notificação para análise de dados e trata de qualquer deep linking ou ação de botão. O comportamento real da exibição é controlado pelo `UNNotificationPresentationOptions` que você passa para o manipulador de conclusão.
+
+```swift
+import BrazeKit
+import UserNotifications
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+  func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+  ) {
+    // Let Braze process the notification payload
+    if let braze = AppDelegate.braze {
+      braze.notifications.handleForegroundNotification(notification: notification)
+    }
+    
+    // Control how the notification appears in the foreground
+    if #available(iOS 14.0, *) {
+      completionHandler([.banner, .list, .sound])
+    } else {
+      completionHandler([.alert, .sound])
+    }
+  }
+}
+```
+
+Para obter um exemplo completo, consulte o [exemplo de integração manual de notificações por push](https://github.com/braze-inc/braze-swift-sdk/blob/e31907eaa0dbd151dc2e6826de66cc494242ba60/Examples/Swift/Sources/PushNotifications-Manual/AppDelegate.swift#L1-L120) no repositório do Braze Swift SDK.
 
 ## Push primers {#push-primers}
 

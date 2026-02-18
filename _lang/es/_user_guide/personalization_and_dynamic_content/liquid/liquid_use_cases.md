@@ -186,7 +186,7 @@ Este caso de uso calcula la última vez que un usuario abrió tu aplicación y m
 
 {% raw %}
 ```liquid
-{% assign last_used_date = {{${last_used_app_date}} | date: "%s" %}
+{% assign last_used_date = {{${last_used_app_date}}} | date: "%s" %}
 {% assign now = 'now' | date: "%s" %}
 {% assign difference_in_days = {{now}} | minus: {{last_used_date}} | divided_by: 86400 %}
 {% if {{difference_in_days}} < 3 %}
@@ -203,7 +203,7 @@ Este caso de uso calcula cuánto tiempo hace que un usuario utilizó tu aplicaci
 
 {% raw %}
 ```liquid
-{% assign last_used_date = {{${last_used_app_date}} | date: "%s" %}
+{% assign last_used_date = {{${last_used_app_date}}} | date: "%s" %}
 {% assign now = 'now' | date: "%s" %}
 {% assign difference_in_days = {{now}} | minus: {{last_used_date}} | divided_by: 86400 %}
 {% if {{difference_in_days}} < 3 %}
@@ -745,27 +745,27 @@ Este caso de uso mostrará la fecha, el mes y el año actuales, con el mes en un
 
 {% if {{month}} == 'January' %}
 {{day}} Januari {{year}}
-{% elsif {{month)) == 'February' %}
+{% elsif {{month}} == 'February' %}
 {{day}} Februari {{year}}
-{% elsif {{month)) == 'March' %}
+{% elsif {{month}} == 'March' %}
 {{day}} Mars {{year}}
-{% elsif {{month)) == 'April' %}
+{% elsif {{month}} == 'April' %}
 {{day}} April {{year}}
-{% elsif {{month)) == 'May' %}
+{% elsif {{month}} == 'May' %}
 {{day}} Maj {{year}}
-{% elsif {{month)) == 'June' %}
+{% elsif {{month}} == 'June' %}
 {{day}} Juni {{year}}
-{% elsif {{month)) == 'July' %}
+{% elsif {{month}} == 'July' %}
 {{day}} Juli {{year}}
-{% elsif {{month)) == 'August' %}
+{% elsif {{month}} == 'August' %}
 {{day}} Augusti {{year}}
-{% elsif {{month)) == 'September' %}
+{% elsif {{month}} == 'September' %}
 {{day}} September {{year}}
-{% elsif {{month)) == 'October' %}
+{% elsif {{month}} == 'October' %}
 {{day}} Oktober {{year}}
-{% elsif {{month)) == 'November' %}
+{% elsif {{month}} == 'November' %}
 {{day}} November {{year}}
-{% elsif {{month)) == 'December' %}
+{% elsif {{month}} == 'December' %}
 {{day}} December {{year}}
 {% endif %}
 ```
@@ -1049,7 +1049,7 @@ The following step checks if the time_to_reminder is less than seven days away b
 Users are scheduled to enter the journey on day 2.
 {% endcomment %}
 
-{% else {{time_to_reminder}} < 604799 and {{time_to_reminder}} > 172860 %}
+{% elsif {{time_to_reminder}} < 604799 and {{time_to_reminder}} > 172860 %}
 {% assign time_to_first_message = reminder_start_date | plus: 172800 %}
 
 {
@@ -1310,7 +1310,7 @@ Para las notificaciones push y los canales de mensajes in-app, puede especificar
 
 {% raw %}
 ```liquid
-{% if {targeted_device.${carrier}} contains "verizon" or {targeted_device.${carrier}} contains "Verizon" %}
+{% if {{targeted_device.${carrier}}} contains "verizon" or {{targeted_device.${carrier}}} contains "Verizon" %}
 
 This is a message for Verizon users!
 
@@ -1334,7 +1334,7 @@ SMS
 
 ### Responde con mensajes diferentes en función de la palabra clave del SMS entrante {#sms-keyword-response}
 
-Este caso de uso incorpora el procesamiento dinámico de palabras clave de SMS para responder a mensajes entrantes específicos con diferentes textos de mensaje. Por ejemplo, puedes enviar respuestas diferentes cuando alguien envía un mensaje de texto de "INICIAR" frente a "UNIRSE".
+Este caso de uso incorpora el procesamiento dinámico de palabras clave de los SMS para responder a mensajes entrantes específicos con una copia de mensaje diferente. Por ejemplo, puedes enviar respuestas diferentes cuando alguien envía un mensaje de texto de "INICIAR" frente a "UNIRSE".
 
 {% raw %}
 ```liquid
@@ -1378,7 +1378,7 @@ Este caso de uso muestra mensajes diferentes en función de la zona horaria del 
 ```liquid
 {% if {{${time_zone}}} == 'xx' %}
 Message for time zone xx.
-{% elsif {{$time_zone}}} == 'yy' %}
+{% elsif {{${time_zone}}} == 'yy' %}
 Message for time zone yy.
 {% else %}
 {% abort_message("Invalid time zone") %}

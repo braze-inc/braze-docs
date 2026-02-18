@@ -22,16 +22,23 @@ jobs:
       # Installs CLI tools for image optimization.
       - run: sudo apt-get update && sudo apt-get install -y pngquant jpegoptim
 
+      # Ensures the base branch ref is available for the diff.
+      - run: git fetch origin ${{ github.base_ref }} --no-tags
+
       # Finds only added/modified PNG or JPG files in the PR and optimizes them in place.
       - run: |
-          git diff --name-only --diff-filter=AM origin/${{ github.base_ref }}...HEAD \
-            | grep -E '^assets/img/.*\.(png|jpg|jpeg)$' \
-            | while read f; do
-                case "$f" in
-                  *.png)  pngquant --skip-if-larger --ext .png --force 80 "$f" ;;
-                  *.jpg|*.jpeg) jpegoptim --strip-all --max=80 "$f" ;;
-                esac
-              done
+          files=$(git diff --name-only --diff-filter=AM origin/${{ github.base_ref }}...HEAD | grep -E '^assets/img/.*\.(png|jpg|jpeg)$' || true)
+          if [[ -n "$files" ]]; then
+            echo "$files" | while IFS= read -r f; do
+              case "$f" in
+                *.png)  pngquant --skip-if-larger --ext .png --force 80 "$f" || true ;;
+                *.jpg|*.jpeg) jpegoptim --strip-all --max=80 "$f" || true ;;
+              esac
+            done
+          else
+            echo "No image files to optimize."
+          fi
+          exit 0
 
       # Automatically commits any optimized images back into the PR branch.
       - uses: stefanzweifel/git-auto-commit-action@v5

@@ -1,8 +1,8 @@
 ---
 nav_title: Berichte und Insights
 article_title: Berichte und Insights
-page_order: 3
 description: "Erfahren Sie, wie Sie Berichte aus dem BrazeAI Decisioning Studio™ in Braze anzeigen können, damit Sie verstehen, wie KI-gestützte Entscheidungen Ihre Kampagnen beeinflussen."
+page_order: 3
 ---
 
 # Berichte und Insights
@@ -11,7 +11,7 @@ description: "Erfahren Sie, wie Sie Berichte aus dem BrazeAI Decisioning Studio�
 
 ## Voraussetzungen
 
-Bevor Sie die Berichte vom Decisioning Studio in Braze anzeigen können, müssen folgende Voraussetzungen erfüllt sein:
+Bevor Sie die Berichte von Decisioning Studio in der Braze anzeigen können, müssen Sie:
 
 - Es besteht ein aktiver Vertrag für Braze und BrazeAI Decisioning Studio™. 
 - Ihr CSM hat BrazeAI Decisioning Studio™ in Ihrem Namen für Sie aktiviert.
@@ -19,7 +19,7 @@ Bevor Sie die Berichte vom Decisioning Studio in Braze anzeigen können, müssen
 
 ## Berichte anzeigen {#view}
 
-Um Metriken für die Agenten eines Decisioning Studios in Braze anzuzeigen, gehen Sie zu **KI-Entscheidungsfindung** > **BrazeAI Decisioning Studio™** und wählen dann einen Agenten aus.
+Um Metriken für einen Decisioning Studio-Agenten in Braze anzuzeigen, gehen Sie zu **KI Decisioning** > **BrazeAI Decisioning Studio™** und wählen Sie einen Agenten aus.
 
 ![Der Startbildschirm des BrazeAI Decisioning Studio™ für Berichte zeigt ein Dashboard mit mehreren Berichtskarten. Jede Karte zeigt einen Berichtstyp (z. B. Performance, Insights, Diagnosen und Zeitleiste) mit kurzen Beschreibungen und Symbolen für jeden Bericht an.]( {% image_buster /assets/img/decisioning_studio/reporting_home.png %} )
 
@@ -41,7 +41,7 @@ Um Tage festzulegen oder auszuschließen, wählen Sie <i class="fa-solid fa-gear
 
 ### Performance
 
-Der Performance-Bericht enthält Übersichtsmetriken, die Behandlungsgruppen (von Braze) mit einer oder mehreren Kontrollgruppen (z. B. Umsatz) vergleichen. Er unterstützt zwei verschiedene Ansichten: **Trending** und **Treiberbaum**.
+Der Performance-Bericht bietet Metriken für Agenten auf hoher Ebene, die Behandlungsgruppen (von Braze) mit einer oder mehreren Kontrollgruppen (z.B. Umsatz) vergleichen. Er unterstützt zwei verschiedene Ansichten: **Trending** und **Treiberbaum**.
 
 Standardmäßig verwendet der Bericht die **Trending**-Ansicht, die vergleicht, wie BrazeAI™ gegenüber Ihren Kontrollgruppen im Zeitverlauf performt, und die Uplift-Entwicklung trackt.
 
@@ -63,7 +63,7 @@ Um die Performance zweier Gruppen zu vergleichen, wählen Sie in den Dropdown-Li
 
 ### Insights
 
-Insights zeigen Ihnen, wie die verschiedenen Empfehlungsoptionen in Ihrer Aktionsbank generiert werden, wie z. B. SL oder Blockauswahl. Es gibt zwei verschiedene Insights-Berichte: **Agentenpräferenzen** und **SHAPs**.
+Insights zeigen Ihnen, wie die verschiedenen Empfehlungsoptionen in Ihrer Aktionsbank erstellt werden, z.B. die Blockauswahl. Es gibt zwei verschiedene Insights-Berichte: **Agentenpräferenzen** und **SHAPs**.
 
 {% tabs local %}
 {% tab agent preferences %}
@@ -76,7 +76,7 @@ In der folgenden Tabelle finden Sie weitere Einzelheiten zu diesem Bericht:
 | Feld | Beschreibung |
 |-------|-------------|
 | Dimension | Das Attribut, das zur Organisation der Ergebnisse verwendet wird, z. B. Kanal, Kampagne oder Plattform. |
-| Vergleichsgruppe | Die Gruppen, die Sie in Ihrem Bericht vergleichen möchten. Sie können mehrere Vergleichsgruppen auswählen (bis zu NUM). |
+| Vergleichsgruppe | Die Gruppen, die Sie in Ihrem Bericht vergleichen möchten. Sie können mehrere Vergleichsgruppen auswählen. |
 | Parameter | Die Metrik, die auf dieses Attribut angewendet wird, z. B. Öffnungen, Klicks oder Konversionsrate. |
 | Segment | Das [Zielgruppensegment]({{site.baseurl}}/user_guide/engagement_tools/segments/), das Sie in Braze erstellt haben. |
 | Option             | Die konkrete Empfehlungsoption, die aus der Aktionsbank ausgewählt wurde. |
@@ -87,9 +87,9 @@ In der folgenden Tabelle finden Sie weitere Einzelheiten zu diesem Bericht:
 {% endtab %}
 
 {% tab shaps %}
-Der **SHAPs-Bericht** verwendet das Shapley Additive ExPlanations (SHAP)-Modell, um zu quantifizieren, wie jedes Feature oder jede Variable zu Ihrem Empfehlungsmodell beiträgt. Jeder Punkt im Chart steht für einen SHAP und die Verteilung der Punkte gibt einen allgemeinen Eindruck davon, wie die Features wirken.
+Der **SHAPs-Bericht** verwendet das Shapley Additive ExPlanations (SHAP)-Modell, um Ihnen dabei zu helfen, zu quantifizieren, wie jedes Feature oder jede Variable zu Ihrem Empfehlungsagenten beiträgt. Jeder Punkt im Chart steht für einen SHAP und die Verteilung der Punkte gibt einen allgemeinen Eindruck davon, wie die Features wirken.
 
-![SHAPs Report Chart, das ein horizontales Balkendiagramm mit mehreren farbigen Balken anzeigt, die verschiedene Features oder Variablen darstellen. Jeder Balken zeigt die Auswirkung eines Features auf das Empfehlungsmodell. Die x-Achse ist mit dem SHAP-Wert beschriftet, die y-Achse mit dem Namen der Features (wie Aktualität, Häufigkeit und Kanal). Der Chart visualisiert, wie jedes Feature positiv oder negativ zu den Prognosen des Modells beiträgt.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
+![SHAPs Report Chart, das ein horizontales Balkendiagramm mit mehreren farbigen Balken anzeigt, die verschiedene Features oder Variablen darstellen. Jeder Balken zeigt die Auswirkung eines Features auf den Empfehlungsagenten, wobei die x-Achse mit dem SHAP-Wert beschriftet ist und die y-Achse die Namen der Features wie Häufigkeit, Frequenz und Kanal auflistet. Das Chart visualisiert, wie jedes Feature positiv oder negativ zu den Prognosen des Agenten beiträgt.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -108,7 +108,7 @@ Der Diagnosebericht für ausgehende Nachrichten zeigt das tägliche Volumen der 
 
 {% tab inbound %}
 
-Der Diagnosebericht über eingehende Nachrichten überwacht die Integrität Ihrer Daten-Feeds in BrazeAI™. Darin werden Details wie die Anzahl der Dateien, die Größe und das Zeilenvolumen für jedes Asset verfolgt. So können Sie sicherstellen, dass die Daten wie erwartet einfließen und Fehler behoben werden, bevor sie sich auf Ihre Modelle oder Kampagnen auswirken.
+Der Diagnosebericht über eingehende Nachrichten überwacht die Integrität Ihrer Daten-Feeds in BrazeAI™. Es verfolgt Details wie die Anzahl der Dateien, die Größe und das Zeilenvolumen für jedes Asset. So können Sie sicherstellen, dass die Daten wie erwartet einfließen und Fehlerbehebungen durchführen, bevor sie sich auf Ihre Agenten oder Kampagnen auswirken.
 
 Über das Dropdown-Menü können Sie verschiedene Metriken für den Chart auswählen, z. B. die durchschnittliche Dateigröße oder die Anzahl der Dateien.
 
@@ -132,16 +132,16 @@ In der folgenden Tabelle finden Sie weitere Details zu den einzelnen Metriken im
 
 ### Zeitleiste
 
-Der Zeitleisten-Bericht bietet eine visuelle Aufzeichnung der wichtigsten Events zusammen mit Ihren Performance-Metriken. Zu diesen Events gehören Modellausführungen, Konfigurationsänderungen, Aktualisierungen der Guardrails und mehr. Anmerkungen werden direkt in den Uplift-Charts und in einem speziellen Tab für die Zeitleiste angezeigt. So können Sie Veränderungen in den Ergebnissen sofort erkennen, ohne Veränderungen tracken zu müssen.
+Der Zeitleisten-Bericht bietet eine visuelle Aufzeichnung der wichtigsten Events zusammen mit Ihren Performance-Metriken. Zu diesen Ereignissen gehören Agentenläufe, Konfigurationsänderungen, Updates der Leitplanken und mehr. Anmerkungen werden direkt in den Uplift-Charts und in einem speziellen Tab für die Zeitleiste angezeigt. So können Sie Veränderungen in den Ergebnissen sofort erkennen, ohne Veränderungen tracken zu müssen.
 
-![Zeitleistenbericht mit einem Chart mit Performance-Metriken im Zeitverlauf. Wichtige Events (wie Modellausführungen, Konfigurationsänderungen und Guardrail-Aktualisierungen) sind in der Zeitleiste mit Symbolen markiert. Unter dem Chart werden in einer Tabelle Events mit Spalten für Datum, Typ, Beschriftung, Details und Sichtbarkeit in Diagrammen aufgelistet.]({% image_buster /assets/img/decisioning_studio/reporting_timeline.png %})
+![Zeitleistenbericht mit einem Chart mit Performance-Metriken im Zeitverlauf. Wichtige Ereignisse, wie z.B. Agentenläufe, Konfigurationsänderungen und Updates der Leitplanken, werden in der Zeitleiste durch Symbole gekennzeichnet. Unter dem Chart werden in einer Tabelle Events mit Spalten für Datum, Typ, Beschriftung, Details und Sichtbarkeit in Diagrammen aufgelistet.]({% image_buster /assets/img/decisioning_studio/reporting_timeline.png %})
 
 Um die Performance zweier Gruppen zu vergleichen, wählen Sie in den Dropdown-Listen die gewünschten Vergleichskriterien aus. In der folgenden Tabelle finden Sie weitere Einzelheiten:
 
 | Feld | Beschreibung |
 |-------|-------------|
 | Datum | Das Datum, an dem das Event eingetreten ist. |
-| Typ | Die Kategorie des Events, z. B. System-Update, Modellausführung oder Konfigurationsänderung. |
+| Typ | Die Kategorie des Ereignisses, z. B. System-Update, Agentenlauf oder Konfigurationsänderung. |
 | Label | Der Name oder Bezeichner des Events. |
 | Details | Zusätzliche Informationen, die das Event beschreiben. |
 | Sichtbar in Charts | Gibt an, ob das Event in den entsprechenden Diagrammen angezeigt wird. |

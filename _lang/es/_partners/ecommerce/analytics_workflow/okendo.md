@@ -28,7 +28,7 @@ La integración de Braze con Okendo funciona en múltiples productos de la plata
 
 ## Integración
 
-### Paso 1: Configuración del conector Braze en Okendo
+### Paso 1: Configurar el conector Braze en Okendo
 
 1. En Okendo, ve a **Configuración** > **Integraciones** > **Correo electrónico & SMS** > **Braze**
 2. Añade el punto final de la API y la clave de API a la configuración de **integración**.
@@ -69,7 +69,7 @@ Para ver ejemplos de datos de eventos, consulta [la documentación de Okendo.](h
 
 #### Cuestionario
 
-- Encuesta enviada a Okendo
+- Enviada la Encuesta Okendo
 
 #### Concurso
 

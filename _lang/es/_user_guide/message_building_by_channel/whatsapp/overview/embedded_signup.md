@@ -23,7 +23,7 @@ Puedes añadir [varias cuentas de WhatsApp Business](({{site.baseurl}}/user_guid
 Vaya a **Integraciones de socios** > **Socios tecnológicos** y, a continuación, busque y seleccione **WhatsApp**. Su próxima selección dependerá de su caso de uso:
 
 - Si vas a integrar WhatsApp en tu espacio de trabajo, selecciona **Iniciar integración**. <br><br>![Página del socio de WhatsApp con un botón para iniciar la integración.]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:80%;"}<br><br>
-- Si va a añadir una cuenta de WhatsApp Business a una integración de WhatsApp existente, seleccione **Añadir cuenta de WhatsApp Business**. <br><br>!["Integración de mensajería WhatsApp" con opciones para añadir una cuenta de WhatsApp Business o un grupo de suscripción y un número.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %}){: style="max-width:80%;"}
+- Si va a añadir una cuenta de WhatsApp Business a una integración de WhatsApp existente, seleccione **Añadir cuenta de WhatsApp Business**. <br><br>!["Integración de mensajería de WhatsApp" con opciones para añadir una cuenta de WhatsApp Business o un grupo de suscripción y un número.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %}){: style="max-width:80%;"}
 
 El flujo de trabajo a partir de aquí es el mismo para ambos casos de uso.
 

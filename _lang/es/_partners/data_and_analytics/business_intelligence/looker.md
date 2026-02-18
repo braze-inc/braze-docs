@@ -77,7 +77,7 @@ Configura una acción de Looker de Braze con tu clave de API REST de Braze y tu 
 Dentro de Looker Develop, selecciona las vistas adecuadas. Añade `braze_id` a la etiqueta de dimensiones y confirma los cambios.
 Esta etiqueta `braze_id` se utiliza para determinar qué campo es la clave única.
 
-```json
+```lookml
 dimension: external_id {
     type: string
     primary_key: yes

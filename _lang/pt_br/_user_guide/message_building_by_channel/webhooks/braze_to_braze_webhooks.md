@@ -20,7 +20,7 @@ Para criar um webhook Braze para Braze, você precisará de uma [chave de API]({
 
 Embora os detalhes da sua solicitação de webhook variem de caso para caso, o fluxo de trabalho geral para criar um webhook Braze-para-Braze permanece o mesmo.
 
-1. [Crie um webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) como uma campanha ou componente do Canva. 
+1. [Crie um webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) como uma campanha ou componente do Canvas. 
 2. Escolha **Modelo em Branco**.
 3. Na **guia** Compose, especifique a **URL do Webhook** e o **Corpo da Solicitação** conforme observado para seu caso de uso.
 4. Na guia **Configurações**, especifique seu **Método HTTP** e **Headers de Solicitação** conforme observado para seu caso de uso.
