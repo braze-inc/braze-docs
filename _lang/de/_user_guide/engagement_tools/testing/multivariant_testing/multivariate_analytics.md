@@ -39,7 +39,7 @@ Wenn eine Variante alle anderen mit mehr als 95%iger [Sicherheit]({{site.baseurl
 
 Wenn keine Variante alle anderen mit 95%iger Sicherheit schlägt und Sie sich trotzdem dafür entscheiden, die leistungsstärkste Variante zu versenden, wird die leistungsstärkste Variante trotzdem versandt und mit der Bezeichnung "Gewinner" versehen.
 
-![Ergebnisse eines ersten Tests zur Ermittlung der Winning Variant, bei dem keine Variante mit ausreichender Sicherheit besser als die anderen abgeschnitten hat, um die 95 Prozent Konfidenzschwelle für statistische Signifikanz zu erreichen.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![Ergebnisse eines ersten Tests zur Ermittlung der Winning-Variante, bei dem keine Variante mit ausreichender Sicherheit besser als die anderen abgeschnitten hat, um die 95-Prozent-Konfidenzschwelle für statistische Signifikanz zu erreichen.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 #### Wie die Gewinnvariante ausgewählt wird
 
@@ -151,7 +151,7 @@ Unabhängig davon, ob Ihr Test einen klaren Gewinner hat oder nicht, kann es hil
 
 ## Diskrepanzen zwischen Kontrollgruppe und Variante
 
-Bei In-App-Nachricht-Kampagnen kann die Art und Weise, wie Nutzer:innen getrackt und Impressionen protokolliert werden, zu Diskrepanzen bei der erwarteten Aufteilung zwischen Kontrollgruppe und Variante führen. Der Grund dafür ist, dass die tatsächlich protokollierten Impressionen diese Aufteilung möglicherweise nicht widerspiegeln und Braze letztlich keine Kontrolle über das individuelle Verhalten der Nutzer:innen hat, die den Trigger ausführen.
+Bei In-App-Nachricht-Kampagnen kann die Art und Weise, wie Nutzer:innen getrackt und Impressionen protokolliert werden, zu Diskrepanzen bei der erwarteten Aufteilung zwischen Kontrollgruppe und Variante führen. Dies liegt daran, dass die tatsächlich protokollierten Impressionen diese Aufteilung möglicherweise nicht widerspiegeln, und Braze hat letztlich keine Kontrolle über das individuelle Verhalten der Nutzer:innen, die den Trigger ausführen.
 
 Nehmen wir zum Beispiel an, eine Kampagne hat beim Start eine Zielgruppe von 200 Nutzern, wobei 100 Nutzer:innen in der Kontrollgruppe und 100 Nutzer:innen in der Variante sind.
 

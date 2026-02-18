@@ -5,7 +5,8 @@ page_order: 1
 page_type: reference
 description: "Este artigo de referência cobre o tópico de aquecimento de IP e melhores práticas."
 channel: email
-
+local_redirect:
+  automated-ip-warming: '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/automated_ip_warming/'
 ---
 
 # aquecimento de IP
@@ -20,17 +21,9 @@ O aquecimento de IP é projetado para ajudar você a estabelecer uma reputação
 
 Os ISPs limitam a entrega de e-mails quando há suspeita de spam para que possam proteger seus usuários. Por exemplo, se você enviar para 100.000 usuários, o provedor de acesso à internet pode entregar o e-mail apenas para 5.000 desses usuários na primeira hora. Em seguida, o provedor de acesso à internet monitora medidas de engajamento, como taxas de abertura, taxas de cliques, cancelamentos de inscrição e relatórios de spam. Então, se um número significativo de relatórios de spam ocorrer, eles podem optar por relegar o restante desse envio para a pasta de spam em vez de entregá-lo na caixa de entrada do usuário. 
 
-Se o engajamento for moderado, eles podem continuar a limitar seu e-mail para coletar mais dados de engajamento e determinar com mais certeza se o e-mail é spam ou não. Se o e-mail tiver métricas de engajamento muito altas, eles podem parar de limitar esse e-mail completamente. Eles usam esses dados para criar uma reputação de e-mail que eventualmente determinará se seus e-mails serão filtrados automaticamente como spam.
+Se o engajamento for moderado, eles podem continuar a limitar seu e-mail para coletar mais dados de engajamento para determinar com mais certeza se o e-mail é spam ou não. Se o e-mail tiver métricas de engajamento muito altas, eles podem parar de limitar esse e-mail completamente. Eles usam esses dados para criar uma reputação de e-mail que eventualmente determinará se seus e-mails serão filtrados automaticamente como spam.
 
 Se o seu domínio ou IP for bloqueado por um provedor de acesso à internet, os registros de mensagens no [Registro de Atividade de Mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) conterão informações sobre quais sites visitar para apelar a esses provedores de acesso à internet e sair dessas listas.
-
-## Aquecimento de IP automatizado
-
-Você pode usar o aquecimento de IP automatizado para aumentar gradualmente seu volume de envio diário, permitindo que os provedores de caixa de entrada aprendam e confiem em seus padrões de envio. Monitore seu rastreador de aquecimento de IP selecionando o bloco **Aquecimento de IP Automatizado** na seção **Continue de onde parou** do seu painel inicial. 
-
-Braze envia primeiro para seus assinantes mais engajados, o que permite que o volume diário cresça em um ritmo que corresponde às melhores práticas. Em seguida, a Braze rastreia sinais de engajamento e entregabilidade. Se algum problema for detectado, seu cronograma é ajustado automaticamente.
-
-![Rastreador de aquecimento de IP com volume de envio para a semana de 16 de janeiro.]({% image_buster /assets/img/automated_ip_warming_example.png %})
 
 ## Cronograma de aquecimento de IP
 
@@ -59,7 +52,7 @@ Dia | \# de e-mails a serem enviados
 
 Sugerimos aquecer até o seu pico de envio. Ou seja, se você normalmente envia 2 milhões de e-mails por dia, mas planeja enviar 7 milhões durante um período sazonal, esse envio de "pico" é o que você deve aquecer.
 
-Após o aquecimento de IP ser concluído e você ter alcançado seu volume diário desejado, você deve se esforçar para manter esse volume diariamente. Alguma flutuação é esperada, mas alcançar o volume desejado e, em seguida, fazer apenas um envio em massa uma vez por semana, pode afetar negativamente suas métricas de entrega e reputação do remetente. 
+Após o aquecimento de IP ser concluído e você ter alcançado seu volume diário desejado, deve-se manter esse volume diariamente. Alguma flutuação é esperada, mas alcançar o volume desejado e, em seguida, fazer um envio em massa uma vez por semana, pode afetar negativamente suas métricas de entrega e a reputação do remetente. 
 
 {% alert important %}
 A maioria dos provedores armazena dados de reputação por apenas 30 dias. Se você passar um mês sem enviar nenhuma mensagem, terá que repetir o processo de aquecimento de IP.
@@ -101,12 +94,12 @@ Consulte nosso [cronograma de aquecimento de IP](#ip-warming-schedules) para dis
 
 ### Limpe suas listas de e-mail
 
-Confirme que sua lista de e-mails está limpa e não possui e-mails antigos ou não verificados. Garantir que você esteja em conformidade com [CASL e CAN-SPAM]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/) é ideal.
+Confirme que sua lista de e-mails está limpa e não possui e-mails antigos ou não verificados. Garantir que você esteja em conformidade com [CASL- e CAN-SPAM]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/) é ideal.
 
 ### Monitore a reputação do remetente
 
 Ao conduzir o processo de aquecimento de IP, monitore cuidadosamente sua reputação do remetente enquanto conduz o processo de aquecimento de IP. Essas métricas específicas são importantes de observar:
-- **Taxas de bounce:** Se alguma campanha retornar mais de 3-5%, você deve avaliar a limpeza da sua lista seguindo as diretrizes em nosso [Mantenha Limpo: A Importância da Higiene da Lista de E-mail](https://www.braze.com/blog/email-list-hygiene/) artigo. Além disso, você deve considerar implementar uma [política de descontinuação]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) para parar de enviar e-mails para endereços de e-mail não engajados ou inativos.
+- **Taxas de bounce:** Se qualquer campanha tiver uma taxa de rejeição superior a 3-5%, você deve avaliar a limpeza da sua lista seguindo as diretrizes em nosso [Mantenha Limpo: A Importância da Higiene da Lista de E-mail](https://www.braze.com/blog/email-list-hygiene/) artigo. Além disso, você deve considerar implementar uma [política de desativação]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) para parar de enviar e-mails para endereços de e-mail não engajados ou inativos.
 - **Relatórios de Spam:** Se qualquer campanha for relatada como spam a uma taxa superior a 0,08%, você deve reavaliar o conteúdo que está enviando, verificar se está direcionado a um público interessado e garantir que seus e-mails estejam adequadamente redigidos para despertar seu interesse.
 - **Taxas de Abertura:** As taxas de abertura são um proxy útil para a colocação na caixa de entrada. Se suas taxas de abertura únicas estiverem acima de 25%, você provavelmente está experimentando uma alta colocação na caixa de entrada, o que indica uma reputação positiva do remetente.
 

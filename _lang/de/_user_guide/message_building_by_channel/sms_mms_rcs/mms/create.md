@@ -38,6 +38,8 @@ Kontaktkarten (manchmal auch als vCard oder Virtual Contact Files (vcf) bezeichn
 
 Um eine MMS-Nachricht zu erstellen, muss Ihre Abo-Gruppe für den MMS-Versand konfiguriert sein. Sie erkennen dies daran, dass beim Auswählen einer Abo-Gruppe der MMS-Tag angezeigt wird. Wenn Sie eine MMS-aktivierte Abo-Gruppe auswählen, haben Sie die Möglichkeit, ein Bild hochzuladen, eine Bild-URL zu referenzieren oder eine Kontaktkarte einzufügen.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 ![Der Tab "Verfassen" zum Verfassen Ihrer Nachricht.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Bild-Spezifikationen

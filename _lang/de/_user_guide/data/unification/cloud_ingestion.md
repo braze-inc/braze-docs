@@ -9,7 +9,7 @@ toc_headers: h2
 
 # Cloud-Datenaufnahme von Braze
 
-> Braze Cloud Data Ingestion (CDI) ermöglicht es Ihnen, eine direkte Verbindung von Ihrer Datenspeicherlösung einzurichten, um relevante Nutzerdaten und andere Nicht-Nutzerdaten mit Braze zu synchronisieren. Diese Daten können dann für die Personalisierung oder Segmentierung verwendet werden, um Ihre Marketing-Anwendungsfälle zu unterstützen. Die flexible Integration von Cloud Data Ingestion unterstützt komplexe Datenstrukturen, einschließlich verschachtelter JSON und Arrays von Objekten.
+> Mit Braze Cloud Data Ingestion (CDI) können Sie eine direkte Verbindung von Ihrer Datenspeicherlösung einrichten, um relevante Nutzerdaten und andere Nicht-Nutzerdaten mit Braze zu synchronisieren. Diese Daten können dann zur Personalisierung oder Segmentierung verwendet werden, um Ihre Marketing-Anwendungsfälle voranzutreiben. Die flexible Integration von Cloud Data Ingestion unterstützt komplexe Datenstrukturen, einschließlich verschachtelter JSON und Arrays von Objekten.
 
 ## Funktionsweise
 
@@ -69,7 +69,7 @@ Wenn Sie Nutzerdaten über die Datenaufnahme in der Cloud synchronisieren, könn
 |------------|-------------|
 | `EXTERNAL_ID` | Die externe ID, die das zu erstellende oder zu aktualisierende Nutzerprofil identifiziert. Dies sollte dem in Braze verwendeten Wert `external_id` entsprechen. |
 | `ALIAS_NAME` und `ALIAS_LABEL` | Diese beiden Spalten erstellen ein Nutzer-Alias-Objekt. `alias_name` sollte ein eindeutiger Bezeichner sein, und `alias_label` gibt den Typ des Alias an. Nutzer:innen können mehrere Aliasnamen mit unterschiedlichen Labels haben, aber nur einen `alias_name` pro `alias_label`. |
-| `BRAZE_ID` | Der vom Braze SDK generierte Bezeichner für Braze Nutzer:innen. Neue Nutzer:innen können nicht mit einer Braze ID über die Cloud-Datenaufnahme erstellt werden. Um neue Nutzer:innen anzulegen, geben Sie eine externe Nutzer-ID oder einen Nutzer-Alias an. |
+| `BRAZE_ID` | Der vom Braze SDK generierte Nutzer:innen Bezeichner. Neue Nutzer:innen können nicht mit einer Braze ID über die Cloud-Datenaufnahme erstellt werden. Um neue Nutzer:innen anzulegen, geben Sie eine externe Nutzer-ID oder einen Nutzer-Alias an. |
 | `EMAIL` | Die E-Mail Adresse des Nutzers:innen. Wenn mehrere Profile mit der gleichen E-Mail Adresse existieren, wird das zuletzt aktualisierte Profil bei Updates bevorzugt. Wenn Sie sowohl E-Mail als auch Telefon angeben, wird E-Mail als primärer Bezeichner verwendet. |
 | `PHONE` | Die Telefonnummer der Nutzer:in. Wenn mehrere Profile mit derselben Telefonnummer vorhanden sind, wird das zuletzt aktualisierte Profil bei Updates bevorzugt. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

@@ -69,7 +69,7 @@ Braze rastrea las desinstalaciones observando cuándo los mensajes push enviados
 * Incrementa en uno el recuento de desinstalaciones de cada campaña que el usuario haya recibido correctamente en las últimas 24 horas.
 * Si un usuario recibe tres campañas en un periodo de 24 horas y luego las desinstala, incrementamos el recuento de "desinstalaciones" de las tres campañas.
 
-FCM y APN imponen restricciones al seguimiento de desinstalaciones. Braze sólo incrementa el recuento de desinstalaciones cuando FCM o APN nos dicen que un usuario ha desinstalado, pero estos sistemas de terceros pueden notificarnos desinstalaciones en cualquier momento. Utiliza el Uninstall Tracking para detectar tendencias direccionales en lugar de estadísticas precisas.
+FCM y APN imponen restricciones al seguimiento de desinstalaciones. Braze sólo incrementa el recuento de desinstalaciones cuando FCM o APN nos dicen que un usuario ha desinstalado, pero estos sistemas de terceros pueden notificarnos las desinstalaciones en cualquier momento. Utiliza el Uninstall Tracking para detectar tendencias direccionales en lugar de estadísticas precisas.
 
 Para más información sobre el uso de Uninstall Tracking, consulta la entrada de nuestro blog [Uninstall Tracking: Una mirada de la industria a sus puntos fuertes y sus limitaciones](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 

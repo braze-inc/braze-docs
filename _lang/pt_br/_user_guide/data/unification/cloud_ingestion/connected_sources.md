@@ -98,7 +98,7 @@ Você pode optar por conceder acesso a todas as tabelas em um esquema ou concede
 
 A permissão `create table` é necessária para que o Braze possa criar uma tabela com os resultados de sua consulta de extensão de segmento CDI antes de atualizar o segmento no Braze. A Braze criará uma tabela temporária por segmento, e a tabela só persistirá enquanto a Braze estiver atualizando o segmento.
 
-```json
+```sql
 CREATE ROLE BRAZE_INGESTION_ROLE;
 
 GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -116,7 +116,7 @@ GRANT SELECT ON TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC TO 
 
 #### Etapa 2.2: Configurar warehouse e dar acesso à função na Braze
 
-```json
+```sql
 CREATE WAREHOUSE BRAZE_INGESTION_WAREHOUSE;
 
 GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
@@ -127,7 +127,7 @@ O depósito precisa ter o sinalizador de **retomada automática** ativado. Se n�
 {% endalert %}
 
 #### Etapa 2.3: Configurar usuário
-```json
+```sql
 CREATE USER BRAZE_INGESTION_USER;
 
 GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
@@ -149,7 +149,7 @@ Dependendo da configuração de sua conta do Snowflake, talvez seja necessário 
 {% tab Redshift %}
 #### Etapa 2.1: Criar usuário e conceder permissões 
 
-```json
+```sql
 CREATE USER braze_user PASSWORD '{password}';
 GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT CREATE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
@@ -436,7 +436,7 @@ Se quiser girar as chaves a qualquer momento, você pode criar uma nova chave p�
 
 ![Gerenciamento de acesso a dados para credenciais de acesso a dados do Snowflake, com um botão para Gerar nova chave.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
 
-```json
+```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
 ```
 

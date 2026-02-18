@@ -242,6 +242,10 @@ Vous pouvez également choisir d'envoyer votre campagne uniquement aux utilisate
 
 Facultativement, vous pouvez également limiter la livraison à un nombre spécifié d’utilisateurs dans le segment, ou permettre aux utilisateurs de recevoir le même message deux fois dans le cadre d’une campagne récurrente.
 
+{% alert note %}
+Lors de la création d'une nouvelle campagne e-mail, le groupe de contrôle est fixé par défaut à 20 % et peut être ajusté ou supprimé en fonction des besoins de votre campagne.
+{% endalert %}
+
 ##### Campagnes multicanales avec e-mail et notification push
 
 Pour les campagnes multicanales avec e-mail et notifications push, vous pouvez limiter votre campagne pour que seuls les utilisateurs ayant explicitement consenti à recevoir des e-mails reçoivent le message (en excluant les utilisateurs abonnés et désabonnés). Par exemple, si vous avez trois utilisateurs avec un statut d’abonnement différent :

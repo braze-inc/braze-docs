@@ -44,9 +44,8 @@ Wir überprüfen Ihre Einrichtung und validieren alle Informationen in unseren i
 
 Mit dieser Methode wird eine Sende-Domain, eine Tracking-Domain und insgesamt eine IP für ein Unternehmen eingerichtet. Wenn Sie planen, mehr einzurichten, wenden Sie sich bitte an das Braze Onboarding-Team (Methode 1).
 
-{% alert important %}
-Diese Selbstbedienungsfunktion zur Einrichtung von E-Mails befindet sich derzeit in der Beta-Phase. Wenden Sie sich an Ihre:n Braze-Kundenbetreuer:in, wenn Sie an einer Teilnahme an der Beta interessiert sind.<br>Wenn Sie die Self-Service-E-Mail-Einrichtungsfunktion verwenden, sollten Sie sich auch mit dem Braze Onboarding-Team beraten.
-{% endalert %}
+{% include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
+<br>Wenn Sie die Self-Service-E-Mail-Einrichtungsfunktion verwenden, sollten Sie sich auch mit dem Braze Onboarding-Team beraten.
 
 ### Voraussetzungen
 

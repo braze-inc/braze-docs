@@ -1,7 +1,7 @@
 ---
 nav_title: Personalizar landing pages
 article_title: Personalizar landing pages
-description: "Este artigo aborda como personalizar landing pages do Braze com o editor de arrastar e soltar."
+description: "Este artigo cobre como personalizar landing pages do Braze com o editor de arrastar e soltar."
 page_order: 4
 ---
 
@@ -15,7 +15,7 @@ A personalização Liquid para landing pages está disponível apenas no nível 
 
 ## Inserindo Liquid
 
-No editor de arrastar e soltar, você pode inserir a personalização Liquid tanto no editor quanto nas configurações da página ou bloco no painel à direita. Para instruções sobre como implementar Liquid, confira nossa [documentação Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1) dedicada.
+No editor de arrastar e soltar, você pode inserir a personalização Liquid tanto no editor quanto nas configurações da página ou bloco no painel à direita. Para instruções sobre como implementar Liquid, consulte nossa [documentação Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1) dedicada.
 
 ![Editor de landing page com personalização Liquid adicionada.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 

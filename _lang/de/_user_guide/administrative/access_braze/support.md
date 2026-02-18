@@ -1,6 +1,7 @@
 ---
 nav_title: Braze Unterstützung
 article_title: Support
+page_order: 7
 description: "Auf dieser Seite finden Sie das Braze Support-Portal, über das Sie Feedback zu den Produkten von Braze abgeben können. Diese Seite ist nur für Braze Kund:innen zugänglich."
 alias: /braze_support/
 page_type: reference

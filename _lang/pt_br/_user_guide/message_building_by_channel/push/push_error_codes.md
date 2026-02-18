@@ -34,11 +34,30 @@ Falhas comuns podem incluir:
 {% endtab %}
 {% tab iOS %}
 
+### Erro ao enviar push porque a carga útil era inválida
+
+Esta mensagem pode aparecer no perfil do usuário **Engajamento** guia sob **Configurações de Contato** > **Changelog de Push** quando o serviço de Notificações por Push da Apple (APNs) rejeita a solicitação de push devido a uma carga útil inválida.
+
+No Braze, esta mensagem do dashboard pode mapear para uma das seguintes razões de erro do APNs:
+
+- `PayloadEmpty`: A carga útil estava faltando conteúdo obrigatório para o tipo de push que está sendo enviado.
+- `PayloadTooLarge`: A carga útil excedeu o tamanho máximo da carga útil do APNs.
+
+Causas comuns incluem:
+
+- Chaves personalizadas (e seus valores) tornando a carga útil muito grande (isso pode incluir valores renderizados em Liquid inesperadamente grandes).
+- Um alerta ou corpo vazio ou ausente onde necessário (ou uma carga útil `aps` malformada).
+
+Próximos passos:
+
+- Reduza o tamanho da carga útil cortando chaves personalizadas e encurtando valores dinâmicos grandes.
+- Se você enviar através da API, valide a carga útil JSON final (incluindo tamanho) antes de enviar.
+
 ### Push devolvido: BadToken
 
 O erro `BadToken` pode ocorrer por várias razões:
 - O token por push não está sendo enviado para nós corretamente em `[[Appboy sharedInstance] registerPushToken:]`
-	- Verifique o token no [Registro de Atividade de Mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Geralmente deve parecer uma longa sequência de letras e números (como `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). Se não parecer, verifique o código envolvido no envio de erros de token por push do Braze.<br><br>
+	- Verifique o token no [Registro de Atividade de Mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Deve geralmente parecer uma longa sequência de letras e números (como `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). Se não parecer, verifique o código envolvido no envio de erros de token por push do Braze.<br><br>
 - Ambiente de provisionamento incompatível:
 	- Se você se registrar com um certificado de desenvolvimento e tentar enviar com um de produção, poderá ver este erro.  
 	- Braze só suporta certificados universais para ambientes de produção. Testar push em ambientes de desenvolvimento com um certificado universal não funcionará. 

@@ -63,7 +63,7 @@ Para adicionar um atributo personalizado a cada escolha, selecione um nome de at
 O tipo de dado dos seus atributos personalizados importa dependendo de como você configurou sua pesquisa.
 
 - **Seleção de múltipla escolha:** O tipo de dado do atributo personalizado deve ser um array. Se o atributo personalizado estiver definido para um tipo de dado diferente, as respostas não serão registradas.
-- **Seleção de escolha única:** O tipo de dado do atributo personalizado _não deve_ ser um array. As respostas não serão registradas se o atributo for um array.
+- **Seleção de escolha única:** O tipo de dados do atributo personalizado deve ser uma string. Os atributos personalizados que não forem do tipo string não aparecerão no menu suspenso e as respostas não serão registradas.
 
 {% alert important %}
 Quando a coleta de atributo personalizado está ativada, as escolhas que compartilham o mesmo nome de atributo personalizado serão combinadas em um array.
@@ -71,7 +71,7 @@ Quando a coleta de atributo personalizado está ativada, as escolhas que compart
 
 ##### Exemplo 
 
-Por exemplo, em uma [pesquisa de preferências de notificação](#notification-preferences), você pode fazer de cada escolha um atributo booleano (verdadeiro/falso) para permitir que os usuários selecionem os tópicos nos quais estão interessados. Se um usuário marcar a opção "Promoções", isso atualizará seu [perfil de usuário]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) com o atributo personalizado `Promotions Topic` definido como `true`. Se eles deixarem a escolha desmarcada, esse mesmo atributo permanecerá inalterado.
+Por exemplo, em uma [pesquisa de preferências de notificação](#notification-preferences), cada opção pode ser um atributo booleano (verdadeiro/falso) para permitir que os usuários selecionem os tópicos nos quais estão interessados. Se um usuário marcar a opção "Promoções", isso atualizará seu [perfil de usuário]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) com o atributo personalizado `Promotions Topic` definido como `true`. Se eles deixarem a escolha desmarcada, esse mesmo atributo permanecerá inalterado.
 
 Em seguida, é possível usar o filtro `Custom Attribute` para criar um segmento para usuários com o atributo personalizado `Promotions Topic` `is` `true` para garantir que somente os usuários interessados em suas promoções recebam as campanhas relevantes.
 
@@ -113,7 +113,7 @@ As escolhas de pesquisa excluídas ainda aparecerão na análise de dados, mas n
 
 É possível encontrar as métricas de desempenho do questionário expandindo o menu suspenso **Resultados** para uma variante específica na seção **Desempenho de mensagens no app** da análise de dados. Aqui está um resumo do que você verá:
 
-- **O engajamento com o questionário** mostra como os usuários interagiram com o questionário em geral, incluindo o total de envios, recusas e cliques no corpo da mensagem.
+- **O engajamento com o questionário** mostra como os usuários interagiram com o questionário em geral, incluindo o total de envios, descartes e cliques no corpo da mensagem.
 - **Os resultados da pesquisa** exibem um detalhamento de quantos usuários selecionaram cada opção de resposta, juntamente com a porcentagem do total de envios que cada opção representa.
 - **As métricas da página de confirmação** (se ativadas) incluem quantos usuários visualizaram a tela de confirmação, clicaram em seu botão ou a descartaram sem interagir.
 
@@ -134,7 +134,7 @@ As escolhas selecionadas serão automaticamente transferidas para Currents, no c
 
 **Objetivo:** Meça a satisfação do cliente e envie campanhas de recuperar para usuários que deixaram baixas pontuações.
 
-Para configurar isso, use uma pesquisa de seleção de escolha única com cinco opções que variam de "😡 Muito insatisfeito" a "😍 Muito satisfeito". Cada escolha é mapeada para o atributo personalizado `customer_satisfaction`, com um valor numérico de 1 a 5, em que 1 indica o menos satisfeito e 5 o mais satisfeito.
+Para configurar isso, use uma pesquisa de seleção de escolha única com cinco opções que variam de "😡 Muito insatisfeito" a "😍 Muito satisfeito". Cada escolha é mapeada para o atributo personalizado `customer_satisfaction`, com um valor numérico de 1 a 5, em que 1 indica o menos satisfeito e 5 o mais satisfeito. Note que esses valores numéricos são armazenados como strings, pois os atributos personalizados de string são necessários para a seleção de escolha única.
 
 | Escolha                                | Atributo              | Valor |
 |---------------------------------------|------------------------|-------|
@@ -145,7 +145,7 @@ Para configurar isso, use uma pesquisa de seleção de escolha única com cinco 
 | Muito satisfeito                     | `customer_satisfaction` | 5     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Quando um usuário envia a pesquisa, o valor selecionado é registrado como um atributo personalizado. Em seguida, você pode criar campanhas de acompanhamento usando filtros de público. Por exemplo, direcione mensagens de recuperação para usuários cujo atributo `customer_satisfaction` seja 1 ou 2.
+Quando um usuário envia a pesquisa, o valor selecionado é registrado como um atributo personalizado. Em seguida, você pode criar campanhas de acompanhamento usando filtros de público. Por exemplo, envie mensagens de recuperação para usuários cuja atribuição `customer_satisfaction` seja "1" ou "2".
 
 {% endtab %}
 {% tab Notification preferences %}
@@ -172,7 +172,7 @@ Para configurar isso, use uma pesquisa de seleção de múltipla escolha em que 
 
 **Objetivo:** Identifique os principais motivos pelos quais os usuários visitam seu app.
 
-Para configurar isso, use um questionário de seleção de escolha única com cada opção representando uma meta ou intenção comum. Cada escolha é mapeada para o atributo personalizado `product_goal` com um valor correspondente à intenção do usuário selecionada.
+Para configurar isso, use uma pesquisa de seleção de escolha única com cada opção representando uma meta ou intenção comum. Cada escolha é mapeada para o atributo personalizado `product_goal` com um valor correspondente à intenção do usuário selecionada.
 
 | Escolha                     | Atributo       | Valor     |
 |----------------------------|------------------|-----------|
@@ -218,7 +218,7 @@ Para configurar isso, use uma pesquisa de seleção de múltipla escolha em que 
 |-------------------|--------------------|--------------|
 | Marcadores         | `favorite_features`| `bookmarks`  |
 | Aplicativo móvel        | `favorite_features`| `mobile`     |
-| Compartilhamento de postagens     | `favorite_features`| `sharing`    |
+| Compartilhamento de publicações     | `favorite_features`| `sharing`    |
 | Suporte ao cliente  | `favorite_features`| `support`    |
 | Personalização     | `favorite_features`| `custom`     |
 | Preço / Valor     | `favorite_features`| `value`      |

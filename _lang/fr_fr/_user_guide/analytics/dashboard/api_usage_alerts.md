@@ -48,7 +48,7 @@ Lorsque vous définissez vos critères d'alerte, vous pouvez ajuster les seuils 
         <ul>
           <li><strong>Augmenté de</strong> ou <strong>Diminué de</strong>: Compare les demandes par rapport à la fenêtre temporelle précédente.</li>
           <li><strong>Augmenté en pourcentage</strong> ou <strong>Diminué en pourcentage :</strong> Compare le pourcentage de variation des demandes par rapport à la fenêtre temporelle précédente.</li>
-          <li><strong>Supérieur ou égal</strong>, ou <strong>inférieur ou égal</strong>: Compte les demandes dans une fenêtre de temps.</li>
+          <li><strong>Supérieur ou égal</strong>, ou <strong>inférieur ou égal :</strong> Compte les demandes dans une fenêtre de temps.</li>
         </ul>
       </td>
     </tr>
@@ -79,17 +79,17 @@ Vous trouverez ci-dessous un exemple de charge utile pour le corps d'un webhook 
   "data": {
     "alert_name": "My First API Usage Alert",
     "alert_type": "API Usage Alert",
-    "alert_criteria": [
+    "alert_criteria": {
     	"response_codes": ["201", "202", "203"],
-    	"threshold_condition: "Increased by %",
+    	"threshold_condition": "Increased by %",
     	"threshold_volume": 50,
     	"within": "1 day"
-    	],
-    "timeframe_start": 2025-03-20T15:35:00Z,
-    "timeframe_end": 2025-03-20T16:35:00Z,
+    },
+    "timeframe_start": "2025-03-20T15:35:00Z",
+    "timeframe_end": "2025-03-20T16:35:00Z",
     "volume": 1500,
-    "previous_timeframe_start": 2025-03-20T14:35:00Z,
-    "previous_timeframe_end": 2025-03-20T15:35:00Z,
+    "previous_timeframe_start": "2025-03-20T14:35:00Z",
+    "previous_timeframe_end": "2025-03-20T15:35:00Z",
     "previous_volume": 1000
   },
   "text": "Your My First API Usage Alert alert has triggered. You can view your alert and usage here: <link>. Note that this alert will reset in 1 day, as each alert will only send one notification per 8 hours."

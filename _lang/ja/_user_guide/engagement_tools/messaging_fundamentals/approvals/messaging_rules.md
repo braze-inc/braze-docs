@@ -61,7 +61,7 @@ description: "このページでは、送信ボリュームが大きいキャン
 - 最大値を満たし、承認者が選択されている場合、承認権限を持つBrazeユーザーは、**Target Audienceの**承認ドロップダウンから**Approvedを**選択できる。
 - 最大値を満たし、承認者が選択されていない場合、キャンバスまたはキャンペーンは開始できない。
 
-![キャンバスワークフローの "Summary "ステップで、開始するには承認が必要であることを示す。]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
+![キャンバスワークフローの "Summary "ステップでは、起動に承認が必要であることがわかる。]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
 
 ## よくある質問
 

@@ -1028,7 +1028,7 @@ search_rank: 7
 {% endapi %}
 
 {% api %}
-## ライブ・アクティビティ更新 トークン変更イベント {#live-activity-update-token-change-events}
+## ライブ・アクティビティ更新トークン変更イベント {#live-activity-update-token-change-events}
 
 {% apitags %}
 ライブアクティビティ、更新トークン
@@ -1166,7 +1166,8 @@ search_rank: 7
   "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "time_ms" : "(optional, long) Time in millisecond when the event happened",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
   "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
   "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1191,6 +1192,7 @@ search_rank: 7
     "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
     "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1226,6 +1228,7 @@ search_rank: 7
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
     "time" : "(required, int) UNIX timestamp at which the event happened",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
@@ -1240,7 +1243,7 @@ search_rank: 7
 // Push Notification Token State Changed (users.behaviors.pushnotification.TokenStateChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1258,6 +1261,7 @@ search_rank: 7
     "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
     "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1277,7 +1281,10 @@ search_rank: 7
   - ユーザーが自分のデバイスで明示的にプッシュ通知権限を拒否した場合、これは`true` となり、トークンはバックグラウンドプッシュ通知でのみ許可される。
   - プッシュ権限が不明な場合は空白になる。デフォルトでは、Brazeはフォアグラウンドプッシュ通知をトークンに送信しようとする。
 - `push_token_provisionally_opted_in` フィールドはiOSプッシュトークンにのみ適用される。
-  - [Provisional Authorization を]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push)設定している場合、暫定トークンにはこのフィールドが`true` に設定される。その他のプッシュトークンはすべて`false` となる。
+  - [暫定認証が]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push)設定されている場合、暫定トークンにはこのフィールドが`true` に設定される。その他のプッシュトークンはすべて`false` となる。
+- `sdk_version` フィールドは、トークンの状態変更が SDK によって開始された場合にのみ入力される。
+  - トークンをユーザー間で移動させるトリガーとなる`changeUser` SDK イベントが発生すると、`sdk_version` フィールドに値が入る。
+  - プッシュバウンスがあった場合（アンインストールなど）、`sdk_version` フィールドは空白になる。
 - プッシュトークンがBrazeに入るたびに、そのライフサイクルイベントが記録される。`push_token_state_change_type` 、3種類のトークン変更イベント（"add"、"update"、"remove"）が記録される。以下の詳細に注目してほしい：
   - 今まで存在しなかった新しいトークンには、「add」イベントが1つインジェストされる。
   - 同じユーザーで同じトークン文字列を持つトークンを更新する場合（ゲートウェイまたは`foreground_push_disabled` 、あるいは他の「セカンダリ」フィールドが変更された）、これは同じトークンで1つの「更新」イベントをインジェストする。

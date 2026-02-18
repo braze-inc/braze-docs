@@ -42,7 +42,7 @@ Después de que Braze inicie la configuración, sigue estos pasos:
 1. Braze le proporcionará registros DNS para que los añada al registro de su dominio.
 2. Braze verificará si los registros se han añadido correctamente a su registro.
 3. Después de esto, seleccionarás una CDN y obtendrás certificados SSL de un proveedor externo. 
-4. En este punto, configurarás tu CDN. Ten en cuenta que Braze no podrá ayudarte a solucionar problemas de configuración de CDN. Ponte en contacto con tu proveedor de CDN si necesitas más ayuda.
+4. En este punto, configurarás tu CDN. Ten en cuenta que Braze no podrá ayudarte a solucionar problemas de configuración de CDN. Ponte en contacto con tu proveedor de CDN para obtener más ayuda.
 5. Ponte en contacto con tu administrador del éxito del cliente para activar el SSL.
 
 ### ¿Qué es una CDN y por qué la necesito?
@@ -56,7 +56,7 @@ La configuración de la CDN se realiza siempre después de que Braze haya valida
 Para el seguimiento de clics y aperturas, los socios de entrega transforman los enlaces utilizando un subdominio de marca y la CDN aplica el certificado SSL a esos enlaces transformados. A menudo, los socios deben presentar certificados válidos al navegador del destinatario para que los enlaces y las imágenes se muestren correctamente. Como Braze no solicita ni administra certificados, debes configurarlo a través de una CDN. 
 
 {% alert note %}
-Si no puedes o no quieres utilizar las CDN de la lista para el seguimiento SSL de clics y aperturas, puedes establecer una configuración SSL personalizada. Los CDN alternativos o los proxies personalizados pueden dar lugar a una configuración más compleja. Consulta la documentación [de SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) y [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/).
+Si no puedes o no quieres utilizar las CDN de la lista para el seguimiento SSL de clics y aperturas, puedes establecer una configuración SSL personalizada. Las CDN alternativas o los proxies personalizados pueden dar lugar a una configuración más compleja. Consulta la documentación [de SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) y [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/).
 {% endalert %}
 
 #### Recursos adicionales

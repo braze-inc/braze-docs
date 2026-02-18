@@ -46,7 +46,7 @@ Standardmäßig enthält der Current bestimmte PII-Attribute wie E-Mail und Adre
 
 ### Schritt 4: Jacquard X Code Snippets 
 
-Setzen Sie sich mit Ihrem Jacquard Team in Verbindung, um die erforderlichen Code Snippets zu erhalten.
+Wenden Sie sich an Ihr Jacquard-Team, um die erforderlichen Code-Snippets zu erhalten.
 
 Diese Snippets verwenden [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) und ziehen, nachdem sie in Ihren E-Mails platziert wurden, dynamisch Sprache und ein Tracking-Pixel ein, so dass Jacquard Ihre Sprache in Realtime mit Jacquard X optimieren kann.
 

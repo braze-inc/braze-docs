@@ -94,7 +94,7 @@ Antes de lanzar tu campaña o Canvas, es una buena práctica previsualizar y pro
 
 Esta vista previa se actualiza con la personalización pertinente y la URL acortada. El número de caracteres y los [segmentos facturables]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/) también se actualizan para reflejar la personalización renderizada y la URL acortada.
 
-Asegúrate de guardar la campaña o Canvas antes de enviar un mensaje de prueba para recibir una representación de la URL acortada que se envía en tu mensaje. Si la campaña o el Canvas no se guardan antes de un envío de prueba, el envío de prueba incluye una URL de marcador de posición.
+Asegúrate de guardar la campaña o el Canvas antes de enviar un mensaje de prueba para recibir una representación de la URL acortada que se envía en tu mensaje. Si la campaña o el Canvas no se guardan antes de un envío de prueba, el envío de prueba incluye una URL de marcador de posición.
 
 Para que los Canvas aparezcan en el filtro "Enlace SMS acortado en el que se ha hecho clic", el paso en Canvas que contiene el enlace corto también debe estar habilitado con el seguimiento avanzado, que permite el seguimiento de los clics a nivel de usuario. Si el enlace corto está configurado con un seguimiento básico, la opción de filtrar los eventos de clic del enlace corto SMS no está disponible.
 
@@ -134,7 +134,7 @@ En este momento, los eventos de clic de RCS no están disponibles a través de C
 
 ### ¿Funciona el acortamiento de enlaces con enlaces profundos o universales?
 
-El acortamiento de enlaces no funciona con los vínculos profundos. Como alternativa, puedes acortar enlaces universales de proveedores externos como Branch o Appsflyer, pero los usuarios pueden experimentar una breve redirección o un efecto de "parpadeo". Esto ocurre porque el enlace acortado pasa primero por la Web antes de resolverse en el enlace universal que admite la apertura de la aplicación. Además, Braze no puede solucionar los problemas que pueden surgir al acortar enlaces universales, como romper la atribución o provocar redireccionamientos inesperados.
+El acortamiento de enlaces no funciona con los vínculos profundos. Como alternativa, puedes acortar enlaces universales de proveedores de terceros, como Branch o Appsflyer, pero los usuarios pueden experimentar una breve redirección o un efecto de "parpadeo". Esto ocurre porque el enlace acortado pasa primero por la Web antes de resolverse en el enlace universal que admite la apertura de la aplicación. Además, Braze no puede solucionar los problemas que puedan surgir al acortar enlaces universales, como romper la atribución o provocar redireccionamientos inesperados.
 
 {% alert note %}
 Prueba la experiencia del usuario antes de implantar el acortamiento de enlaces con enlaces universales para confirmar que cumple tus expectativas.

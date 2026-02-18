@@ -135,7 +135,7 @@ Una vez creado el catálogo, puedes empezar a hacer referencia a [este en una ca
 {% tab Create in browser %}
 ### Requisitos previos
 
-Antes de poder editar o crear catálogos en el navegador, necesitarás el permiso **Gestionar panel de catálogos**.
+Para poder editar o crear catálogos en el navegador, necesitarás el permiso **Gestionar panel de catálogos**.
 
 ### Paso 1: Introduce los datos del catálogo
 
@@ -212,7 +212,7 @@ El derecho a paquete que se muestra en el panel de Braze se redondea a la unidad
 
 #### Versión gratuita
 
-El tamaño de almacenamiento para la versión gratuita de los catálogos es de hasta 100 MB. Puedes tener un número ilimitado de objetos, siempre que no superen los 100 MB. 
+El tamaño de almacenamiento para la versión gratuita de los catálogos es de hasta 100 MB. Puedes tener un número ilimitado de artículos siempre que no superen los 100 MB. 
 
 #### Catálogos Pro
 
