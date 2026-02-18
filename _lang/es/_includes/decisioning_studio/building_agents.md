@@ -16,7 +16,7 @@ Para crear un buen agente, deberás hacer lo siguiente:
 - Definir qué dimensiones probar, como la oferta, la línea del asunto, la creatividad, el canal o la hora de envío.
 - Seleccionar las opciones para cada dimensión, como correo electrónico frente a SMS, o frecuencia diaria frente a semanal.
 
-![Ejemplo de diagrama de un agente de estudio de decisión para correos electrónicos referidos.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![Diagrama de ejemplo de un agente de Decisioning Studio para correos electrónicos de referidos.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Agentes de muestra
 
@@ -49,7 +49,7 @@ Con el diseño en la mano, el equipo trabajará contigo para identificar y compl
 
 ### Paso 3: Configura tu plataforma de entrega
 
-A continuación, el equipo de Servicios Expertos en IA te ayudará a configurar tu plataforma de automatización del marketing. Aunque Decisioning Studio funciona mejor con Braze, es compatible con otras plataformas: ponte en contacto con tu equipo de Servicios Expertos en IA para obtener más recursos.
+A continuación, el equipo del Servicio Experto en IA te ayudará a configurar tu plataforma de interacción con los clientes. Aunque Decisioning Studio funciona mejor con Braze, es compatible con otras plataformas: ponte en contacto con tu equipo de servicio experto en IA para obtener más recursos.
 
 {% tabs local %}
 {% tab Braze %}

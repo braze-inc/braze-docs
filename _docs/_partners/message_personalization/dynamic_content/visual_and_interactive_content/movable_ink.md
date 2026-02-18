@@ -37,7 +37,7 @@ Expand our creative capabilities by leveraging Movable Ink's Intelligent Creativ
 
 ## Supported Movable Ink capabilities
 
-Intelligent Creative has many offerings that Braze users can take advantage of. The following list shows what capabilities are supported. 
+Intelligent Creative has many offerings that company users can take advantage of. The following list shows what capabilities are supported. 
 
 | Movable Ink Capability | Feature | Rich Push Notification | In-App Messaging / Content Cards / Email | Details |
 | ---------------------- |---| ---------------------- | -------------------------------- | ------- |

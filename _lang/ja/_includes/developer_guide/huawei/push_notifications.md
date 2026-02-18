@@ -83,13 +83,21 @@ class CustomPushService: HmsMessageService() {
 </service>
 ```
 
-### ステップ 4: プッシュ通知をテストする（オプション）
+### ステップ 4: フォアグラウンド通知を処理する
+
+デフォルトでは、アプリがフォアグラウンドにあるときにプッシュ通知が届くと、ファーウェイは自動的にそれを表示する。Brazeにプッシュ通知ペイロードを処理させるには（分析追跡、ディープリンク処理、カスタム処理のため）、`HmsMessageService.onMessageReceived` メソッド内部で、受信プッシュデータをBrazeにルーティングする。
+
+`BrazeHuaweiPushHandler.handleHmsRemoteMessageData` を呼び出すと、BrazeはペイロードがBrazeプッシュ通知であるかどうかを判断し、プッシュ通知であれば、通知を作成して表示する。詳細については、Androidプッシュ通知ドキュメントの[Handling foreground notificationsを]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications)参照のこと。
+
+完全な例については、Braze Android SDKドキュメントの[Huaweiハンドラリファレンスを](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-huawei-push-handler/index.html)参照のこと。
+
+### ステップ 5: プッシュ通知をテストする（オプション）
 
 ここまでで、Braze ダッシュボードに新しい Huawei Android アプリを作成し、Huawei 開発者の認証情報を使用して設定し、Braze および Huawei SDK をアプリに統合しました。
 
 次に、Braze で新しいプッシュキャンペーンをテストすることで、統合をテストします。
 
-#### ステップ4.1：新しいプッシュ通知キャンペーンを作成する
+#### ステップ 5.1:新しいプッシュ通知キャンペーンを作成する
 
 [**キャンペーン**] ページで、新しいキャンペーンを作成し、メッセージタイプとして [**プッシュ通知**] を選択します。
 
@@ -99,7 +107,7 @@ class CustomPushService: HmsMessageService() {
 
 次に、タイトルとメッセージを付けてプッシュキャンペーンを作成します。
 
-#### ステップ4.2：テストプッシュを送信する
+#### ステップ 5.2:テストプッシュを送信する
 
 [**Test**] タブで、[`changeUser(USER_ID_STRING)` method]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id) を使ってアプリに設定したユーザーIDを入力し、[**Send Test**] をクリックしてテストプッシュを送信する。
 
@@ -107,7 +115,7 @@ class CustomPushService: HmsMessageService() {
 
 この時点で、Braze から Huawei (HMS) デバイスにテストプッシュ通知が届くはずです。
 
-#### ステップ4.3：ファーウェイのセグメンテーションを設定する（オプション）
+#### ステップ 5.3:ファーウェイのセグメンテーションを設定する（オプション）
 
 Braze ダッシュボードの Huawei アプリは Android プッシュプラットフォーム上に構築されているため、すべての Android ユーザー (Firebase Cloud Messaging および Huawei Mobile Services) にプッシュを送信するか、キャンペーンオーディエンスを特定のアプリにセグメント化するかを柔軟に選択できます。
 

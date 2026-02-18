@@ -58,7 +58,7 @@ Os usuários agora estão registrados para o webinar com os detalhes que já exi
 
 	Exemplo de chamada de webhook para o ponto de extremidade do Zoom.<br>
 	{% raw %}
-	```json
+	```http
 	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{
@@ -94,7 +94,7 @@ Os usuários agora estão registrados para o webinar com os detalhes que já exi
 
 	Exemplo de chamada de webhook para o ponto de extremidade do Zoom.<br>
 	{% raw %}
-	```json
+	```http
 	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{

@@ -206,9 +206,14 @@ empty_swift_file.swift
 
 ### ステップ 2:遅延初期化の設定（オプション）
 
-アプリがSDKを開始する前に設定を読み込んだり、ユーザーの同意を待つ必要がある場合に便利な、Braze Swift SDKが初期化されるタイミングを遅らせるように選択できる。遅延初期化により、SDKの準備が整うまでBrazeプッシュ通知はキューに入れられる。
+アプリがSDKを開始する前に設定を読み込んだり、ユーザーの同意を待ったりする必要がある場合に便利な、Braze Swift SDKが初期化されるタイミングを遅らせるように選択できる。遅延初期化により、SDK初期化前に受信したプッシュ通知とプッシュトークンは、SDKが初期化されるとキューに入れられ、処理される。
 
-これを可能にするには、`Braze.prepareForDelayedInitialization()` にできるだけ早く、できれば`application(_:didFinishLaunchingWithOptions:)` の内部かその前に電話すること。
+遅延初期化を使用するには、Braze SDKの最小バージョンが必要である：
+{% sdk_min_versions swift:11.2.0 %}
+
+#### ステップ 2.1: 遅延初期化に備える
+
+アプリのライフサイクルのできるだけ早い段階、理想的には`application(_:didFinishLaunchingWithOptions:)` の中かその前に、`Braze.prepareForDelayedInitialization()` を呼び出す。これにより、SDKが初期化される前に受け取ったプッシュ通知が、後で適切に取り込まれ、処理されるようになる。
 
 {% alert note %}
 Brazeからのプッシュ通知にのみ適用される。その他のプッシュ通知は、システムデリゲートによって通常通り処理される。
@@ -272,14 +277,121 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 {% endtab %}
 {% endtabs %}
 
+遅延初期化を使用する場合、プッシュ通知のオートメーションは暗黙のうちにイネーブルメントになる。`pushAutomation` パラメータを渡すことで、[プッシュ・オートメーション](#swift_step-23-customize-push-automation-optional)設定を[カスタマイズ](#swift_step-23-customize-push-automation-optional)できる。
+
+#### ステップ 2.2:プッシュ分析の動作を設定する（オプション）
+
+遅延初期化をイネーブルメントにすると、プッシュ分析はデフォルトでキューに入れられる。しかし、その代わりにプッシュ分析を明示的にキューに入れたり、ドロップしたりすることもできる。
+
+##### 明示的にキューに入れる
+
+プッシュ分析を明示的にキューに入れる（デフォルトの行動）には、`analyticsBehavior` パラメータに`.queue` を渡す。初期化前にキューに入れられたプッシュ分析イベントは、初期化時に処理されサーバーにフラッシュされる。
+
+{% tabs local %}
+{% tab Swift %}
+```swift
+Braze.prepareForDelayedInitialization(analyticsBehavior: .queue)
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+[Braze prepareForDelayedInitializationWithAnalyticsBehavior:BRZPushEnqueueBehaviorQueue];
+```
+{% endtab %}
+{% endtabs %}
+
+##### ドロップ
+
+SDK初期化前に受信したプッシュ分析を削除するには、`analyticsBehavior` パラメータに`.drop` を渡す。このオプションでは、SDKが初期化されていない間に発生したプッシュ分析イベントは無視される。
+
+{% tabs local %}
+{% tab Swift %}
+```swift
+Braze.prepareForDelayedInitialization(analyticsBehavior: .drop)
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+[Braze prepareForDelayedInitializationWithAnalyticsBehavior:BRZPushEnqueueBehaviorDrop];
+```
+{% endtab %}
+{% endtabs %}
+
+#### ステップ 2.3:プッシュオートメーションのカスタマイズ（オプション）
+
+`pushAutomation` パラメータを渡すことで、プッシュ・オートメーション設定をカスタマイズできる。デフォルトでは、`requestAuthorizationAtLaunch` を除くすべてのオートメーション機能が有効になっている。
+
+{% tabs local %}
+{% tab SWIFT %}
+```swift
+// Enable all push automation
+featuresBraze.prepareForDelayedInitialization(pushAutomation: true)
+
+// Or customize specific automation options
+let automation = Braze.Configuration.Push.Automation()
+automation.automaticSetup = true
+automation.requestAuthorizationAtLaunch = false
+Braze.prepareForDelayedInitialization(pushAutomation: automation)
+```
+{% endtab %}
+
+{% tab OBJECTIVE-C %}
+```objc
+// Enable all push automation features
+[Braze prepareForDelayedInitializationWithPushAutomation:[[BRZConfigurationPushAutomation alloc] initWithAutomationEnabled:YES]];
+
+// Or customize specific automation options
+BRZConfigurationPushAutomation *automation = [[BRZConfigurationPushAutomation alloc] init];
+automation.automaticSetup = YES;
+automation.requestAuthorizationAtLaunch = NO;
+[Braze prepareForDelayedInitializationWithPushAutomation:automation analyticsBehavior:BRZPushEnqueueBehaviorQueue];
+```
+{% endtab %}
+{% endtabs %}
+
+#### ステップ 2.4:SDK の初期化
+
+選択した遅延時間（例えば、サーバーから設定をフェッチした後やユーザーの同意の後）が経過したら、通常通りSDKを初期化する：
+
+{% tabs local %}
+{% tab SWIFT %}
+```swift
+func initializeBraze() {  
+  let configuration = Braze.Configuration(apiKey: "YOUR-API-KEY", endpoint: "YOUR-ENDPOINT")    
+  
+  // Enable push automation to match the delayed initialization configuration  
+  configuration.push.automation = true    
+  let braze = Braze(configuration: configuration)    
+  
+  // Store the Braze instance for later use 
+  AppDelegate.braze = braze
+}
+```
+{% endtab %}
+{% tab OBJECTIVE-C %}
+```objc
+- (void)initializeBraze {
+  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"YOUR-API-KEY" endpoint:@"YOUR-ENDPOINT"];
+  
+  // Enable push automation to match the delayed initialization configuration
+  configuration.push.automation = [[BRZConfigurationPushAutomation alloc] initWithAutomationEnabled:YES];
+  Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+  
+  // Store the Braze instance for later use
+  AppDelegate.braze = braze;
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% alert note %}
-[`Braze.prepareForDelayedInitialization(pushAutomation:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)) オプションで`pushAutomation` 。`nil` に設定すると、起動時にプッシュ認証を要求する以外は、すべてのプッシュオートメーション機能がイネーブルメントになる。
+SDKが初期化されると、キューに入れられたすべてのプッシュ通知、プッシュトークン、ディープリンクが自動的に処理される。
 {% endalert %}
 
 ### ステップ 3:アプリデリゲートを更新する
 
 {% alert important %}
-以下は、すでにプロジェクトに`AppDelegate` （デフォルトでは生成されない）を追加していることを前提としている。使用する予定がない場合は、アプリの起動時など、できるだけ早い段階でBraze SDKを初期化しておくこと。
+以下は、すでにプロジェクトに`AppDelegate` （デフォルトでは生成されない）を追加しており、遅延初期化機能を使用していないことを前提としている。`AppDelegate` を使用する予定がない場合は、アプリの起動中など、できるだけ早い段階でBraze SDKを初期化しておくこと。遅延初期化機能を使用している場合、SDKの初期化については[ステップ2.4を](#swift_step-24-initialize-the-sdk)参照し、このステップは無視する。
 {% endalert %}
 
 {% subtabs local %}
@@ -356,7 +468,7 @@ AppDelegate.braze = braze;
 
 #### ログレベル
 
-Braze Swift SDKのデフォルトのログレベルは、`.error`。これは、ログがイネーブルメントである場合にサポートされる最小レベルでもある。以上がログレベルの全リストである：
+Braze Swift SDKのデフォルトのログレベルは、`.error`。これは、ログがイネーブルメントの場合にサポートされる最小レベルでもある。以上がログレベルの全リストである：
 
 | Swift       | Objective-C              | 説明                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |

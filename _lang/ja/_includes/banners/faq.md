@@ -59,4 +59,10 @@
 
 ## クリックイベントをキャプチャできますか?
 
-クリックイベントは、クリックアクションが`logClick` 要素に設定され、[JS ブリッジ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) を使用して呼び出された場合にのみキャプチャされます。
+はい。クリックイベントのキャプチャ方法は、バナーのレンダリング方法によって異なります。
+
+- **標準エディタコンポーネント:**バナーで標準のエディターコンポーネント("画像s、ボタン、テキスト)を使用している場合、SDKのインサート方法を使用すると、クリックが自動的にトラックされます。
+- **カスタムコードブロック:**バナーでカスタムコードエディタブロックを使用する場合は、カスタムHTML内から`brazeBridge.logClick()` を呼び出してクリックを追跡する必要があります。このアプリは、SDK メソッドを使用してバナーを挿入およびレンダリングする場合でも発生します。これは、HTML アプリ内メッセージs の[JavaScript ブリッジ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) と同じように機能します。
+- **カスタムUI (ヘッドレス):**バナーHTMLをレンダリングする代わりにバナーのカスタムプロパティを使用して完全にカスタムUI を構築する場合は、アプリのライケーションコードからバナーオブジェクトの`logClick()` を呼び出します。
+
+詳細については、[ロギングクリック]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks)を参照してください。

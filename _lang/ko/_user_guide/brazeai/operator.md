@@ -1,7 +1,7 @@
 ---
 nav_title: 연산자
 article_title: BrazeAI 운영자
-page_order: 0.7
+page_order: 8
 alias: /operator/
 description: "이 참조 문서에서는 Braze 대시보드에 구축된 AI 기반 어시스턴트인 BrazeAI Operator에 대해 설명합니다."
 ---
@@ -48,7 +48,7 @@ Braze가 OpenAI를 활용하는 것으로 식별하는 Braze AI 기능을 통해
 ![운영자를 위한 채팅 패널입니다.]({% image_buster /assets/img/operator/operator_panel.png %})
 
 {% alert tip %}
-패널을 최대화하여 보기 쉽게 확장하거나 최소화하여 작업을 계속하는 동안 오퍼레이터를 계속 사용할 수 있도록 하세요.  
+패널을 최대화하여 보기 쉽게 확장하거나 최소화하여 작업을 계속하는 동안 오퍼레이터를 계속 사용할 수 있도록 해보세요.  
 {% endalert %} 
 
 ## 운영자와 대화하는 방법

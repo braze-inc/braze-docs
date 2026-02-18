@@ -24,7 +24,7 @@ In-App-Nachrichten im HTML-Format ermöglichen eine größere Kontrolle über da
 Benutzerdefinierte HTML-Nachrichten können die Methoden von [JavaScript Bridge](#javascript-bridge) verwenden, um Ereignisse zu protokollieren, benutzerdefinierte Attribute zu setzen, die Nachricht zu schließen und vieles mehr! In unserem [GitHub-Repository](https://github.com/braze-inc/in-app-message-templates) finden Sie detaillierte Anleitungen zur Verwendung und Anpassung von HTML-In-App-Nachrichten für Ihre Bedürfnisse sowie eine Reihe von HTML5-Vorlagen für In-App-Nachrichten, die Ihnen den Einstieg erleichtern.
 
 {% alert note %}
-Um In-App-Nachrichten im HTML-Format über das Web SDK zu aktivieren, müssen Sie Braze die Initialisierungsoption `allowUserSuppliedJavascript` zur Verfügung stellen, zum Beispiel `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Dies dient der Sicherheit, da HTML-In-App-Nachrichten JavaScript ausführen können. Daher muss ein Website-Administrator sie aktivieren.
+Um HTML In-App-Nachrichten über das Internet SDK zu aktivieren, müssen Sie Braze die Initialisierungsoption `allowUserSuppliedJavascript` zur Verfügung stellen: zum Beispiel `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Dies dient der Sicherheit, da HTML-In-App-Nachrichten JavaScript ausführen können. Daher muss ein Website-Administrator sie aktivieren.
 {% endalert %}
 
 ## JavaScript-Brücke {#javascript-bridge}
@@ -32,7 +32,7 @@ Um In-App-Nachrichten im HTML-Format über das Web SDK zu aktivieren, müssen Si
 HTML-In-App-Nachrichten für Web-, Android-, iOS- und Swift-SDKs unterstützen eine JavaScript-„Bridge“ zur Verbindung mit dem Braze-SDK, sodass Sie angepassten Braze-Aktionen triggern können, wenn Nutzer:innen auf Elemente mit Links klicken oder auf andere Weise mit Ihrem Content interagieren. Diese Methoden existieren mit der globalen Variable `brazeBridge` oder `appboyBridge`.
 
 {% alert important %}
-Braze empfiehlt Ihnen, die globale Variable `brazeBridge` zu verwenden. Die globale Variable `appboyBridge` ist veraltet, wird aber für bestehende Benutzer weiterhin funktionieren. Wenn Sie `appboyBridge` verwenden, empfehlen wir Ihnen eine Migration auf `brazeBridge`. <br><br> `appboyBridge` wurde in den folgenden SDK-Versionen veraltet:
+Braze empfiehlt Ihnen, die globale Variable `brazeBridge` zu verwenden. Die globale Variable `appboyBridge` ist veraltet, wird aber für bestehende Benutzer weiterhin funktionieren. Wenn Sie `appboyBridge` verwenden, empfehlen wir Ihnen eine Migration auf `brazeBridge`. <br><br> `appboyBridge` wurde in den folgenden SDK-Versionen veraltet:<br><br>
 - Web: [3.3.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#330)
 - Android: [14.0.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#1400)
 - iOS: [4.2.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/#420)
@@ -173,7 +173,7 @@ Die folgenden Dateitypen werden für den Upload unterstützt:
 
 Braze empfiehlt das Hochladen von Assets in die Medienbibliothek aus zwei Gründen:
 
-1. Assets, die einer Kampagne über die Mediathek hinzugefügt werden, ermöglichen es, dass Ihre Nachrichten auch dann angezeigt werden, wenn der Benutzer offline ist oder eine schlechte Internetverbindung hat.
+1. Mit Assets, die einer Kampagne über die Bibliothek hinzugefügt werden, können Ihre Nachrichten auch dann angezeigt werden, wenn der Nutzer:innen offline ist oder eine schlechte Internetverbindung hat.
 2. Auf Braze hochgeladene Assets können kampagnenübergreifend wiederverwendet werden.
 
 ##### Hinzufügen von Asset-Dateien
@@ -184,10 +184,9 @@ Um neue Assets zu Ihrer Kampagne hinzuzufügen, verwenden Sie den Drag-and-Drop-
 
 Nachdem Sie Ihre Assets hinzugefügt haben, werden sie im Bereich **Assets für diese Kampagne** angezeigt. 
 
-Wenn der Dateiname eines Assets mit dem eines lokalen HTML-Assets übereinstimmt, wird es automatisch ersetzt (z. B. wenn `cat.png` hochgeladen wird und `<img src="cat.png" />` existiert). 
+Wenn der Dateiname eines Assets mit dem eines lokalen HTML-Assets übereinstimmt, wird es automatisch ersetzt (z.B. `cat.png` wird hochgeladen und `<img src="cat.png" />` existiert). 
 
 Andernfalls bewegen Sie den Mauszeiger über ein Asset aus der Liste und wählen <i class="fas fa-copy"></i> **Kopieren**, um die URL der Datei in Ihre Zwischenablage zu kopieren. Fügen Sie dann die kopierte Asset-URL in Ihren HTML-Code ein, wie Sie es normalerweise tun, wenn Sie auf ein entferntes Asset verweisen.
-
 
 ### HTML-Editor
 
@@ -234,16 +233,13 @@ Wenn Sie JavaScript-Methoden innerhalb eines `onclick` Attributs verwenden, schl
 ### Rückwärts inkompatible Änderungen {#backward-incompatible-changes}
 
 1. Die auffälligste inkompatible Änderung bei diesem neuen Nachrichtentyp sind die SDK-Anforderungen. Nutzern:innen, deren App-SDK nicht die [Mindestanforderungen an die SDK-Version](#supported-sdk-versions) erfüllt, wird die Nachricht nicht angezeigt.
-<br>
-
 2. Der `braze://close`-Deeplink, der bisher in mobilen Apps unterstützt wurde, wurde zugunsten von JavaScript `brazeBridge.closeMessage()` entfernt. Dies ist für plattformübergreifende HTML-Nachrichten zulässig, da das Internet keine Deeplinks unterstützt.
-
 3. Das automatische Tracking von Klicks, bei dem `?abButtonId=0` für Button IDs verwendet wurde, und das Tracking von "Body Clicks" bei Close Buttons wurden entfernt. Die folgenden Code-Beispiele zeigen, wie Sie Ihren HTML-Code so ändern, dass er unsere neuen JavaScript-Methoden zur Klickverfolgung verwendet:
 
    | Vor | Nach |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_78309b9e-9d6d-40a7-a1a1-71c9187dbc21/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_3968ee21-fe0f-4a54-a43c-7f3d426042c8/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_cf448ec2-a379-4e89-a483-a70dfa3d93b3/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_489b97fb-c50e-4106-b3f2-7dcc143938b3/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_9b002fab-6b0d-49b8-8019-0fd8dcfc340a/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_cd48e765-e938-4524-9cae-6ad0ff9c2ee3/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_00cff0d2-c807-475d-b0de-b650319d1275/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_692d7c83-ed9e-47be-a29b-6f7c36d7c062/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_b3ac2555-5a25-420f-9998-f572195d62d0/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_2a7c00e3-8c64-4d2d-88b8-d4aa0b8128d8/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 

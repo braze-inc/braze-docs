@@ -115,7 +115,7 @@ Tras seleccionar tus localizaciones, selecciona **Descargar plantilla** para des
 
 ![Ejemplo de CSV para las localizaciones en, fr y es.]({% image_buster /assets/img/multi-language_support/example_translation_csv.png %}){: style="max-width:70%;"}
 
-### Paso 5: Sube un CSV completo {#upload-csv}
+### Paso 5: Subir un CSV completo {#upload-csv}
 
 {% alert important %}
 Cualquier cambio en las ID o localizaciones del archivo CSV no se actualizará automáticamente en tu mensaje. Para actualizar las traducciones, actualiza el archivo CSV y vuelve a subir el archivo.
