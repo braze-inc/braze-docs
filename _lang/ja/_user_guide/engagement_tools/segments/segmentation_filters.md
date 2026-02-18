@@ -4,7 +4,7 @@ nav_title: セグメンテーションフィルター
 article_title: セグメンテーションフィルター
 layout: glossary_page
 glossary_top_header: "セグメンテーションフィルター"
-glossary_top_text: "Braze SDK には、特定の機能と属性に基づいてユーザーをSegmentし、ターゲットにするための強力なフィルターが備わっています。フィルターカテゴリごとに、これらのフィルターs を検索または絞り込むことができます。<br><br>s のカスタム属性データタイプについては、<a href=\"/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types\"> カスタム属性データタイプ</a> をSegment ユーザーしてください。"
+glossary_top_text: "Braze SDK には、特定の機能と属性に基づいてユーザーをセグメント化し、ターゲットにするための強力なフィルターが備わっています。フィルターカテゴリごとに、これらのフィルターを検索または絞り込むことができます。<br><br>ユーザーをセグメント化するために使用できる各種カスタム属性データタイプについては、<a href=\"/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types\">カスタム属性データタイプ</a>を参照してください。"
 
 page_type: glossary
 tool: Segments
@@ -14,25 +14,26 @@ glossary_tag_name: Filter Category
 glossary_filter_text: "Select a category to narrow the glossary:"
 
 # channel to icon/fa or image mapping
+# NOTE: glossary_tags names must match the "tags" under each glossary entry exactly (filter/checkbox logic). Do not translate.
 glossary_tags:
-  - name: セグメントまたはCSVメンバーシップ
-  - name: カスタム属性
-  - name: カスタムイベント
-  - name: セッション
-  - name: リターゲット
-  - name: チャンネルサブスクリプションの動作
-  - name: 購買行動
-  - name: e コマース
-  - name: 人口統計属性
-  - name: アプリ
-  - name: アンインストール
-  - name: デバイス
-  - name: ロケーション
-  - name: コホート会員
-  - name: アトリビューションのインストール
-  - name: インテリジェンスと予測
-  - name: 社会活動
-  - name: その他のフィルタ
+  - name: Segment or CSV membership
+  - name: Custom attribute
+  - name: Custom events
+  - name: Sessions
+  - name: Retargeting
+  - name: Channel subscription behavior
+  - name: Purchase behavior
+  - name: eCommerce
+  - name: Demographic attributes
+  - name: App
+  - name: Uninstall
+  - name: Devices
+  - name: Location
+  - name: Cohort membership
+  - name: Install attribution
+  - name: Intelligence and predictive
+  - name: Social activity
+  - name: Other Filters
 
 glossaries:
   - name: セグメントのメンバーシップ
