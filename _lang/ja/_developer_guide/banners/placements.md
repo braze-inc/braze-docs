@@ -19,13 +19,13 @@ platform:
 
 {% multi_lang_include banners/placement_requests.md %}
 
-## 配置を作成する
+## 配置を作成
 
 ### 前提条件
 
 バナー配置を作成するために必要な最低限のSDKは次のとおりです。
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+{% multi_lang_include sdk_versions.md feature='banners' %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
@@ -504,9 +504,35 @@ This feature is not currently supported on Roku.
 テストバナーは、次のアプリセッションで削除される以外は、他のバナーと同じです。
 {% endalert %}
 
-## インプレッションを記録する
+## 履歴インプレッションs
 
 Braze は、バナーを挿入するためにSDKの方法を使用するときに表示されるバナーのインプレッションs を自動的に記録します。そのため、インプレッションs を手動で追跡する必要はありません。
+
+## ロギングクリック
+
+バナークリックをログに記録する方法は、バナーのレンダリング方法とクリックハンドラーの位置によって異なります。
+
+### 標準バナーコンテンツ(自動)
+
+デフォルト を使用している場合、バナーを挿入するためのSDK方法があり、バナーが標準のエディターコンポーネント("画像s、ボタン、テキスト) を使用している場合、クリックは自動的にトラックされます。SDKは、これらの要素にクリックリスナーをアタッチします。追加のコードは必要ありません。
+
+### カスタムコードブロック
+
+バナーがBraze ダッシュボードで**カスタムコード**エディタブロックを使用している場合は、`brazeBridge.logClick()` を使用して、そのカスタムHTML内からクリックを記録する必要があります。このアプリは、SDK メソッドを使用してバナーをレンダリングする場合でも発生します。これは、SDKがカスタムコード内の要素にリスナーを自動的にアタッチできないためです。
+
+```html
+<button onclick="brazeBridge.logClick()">
+  Click me
+</button>
+```
+
+これは、HTML アプリ内メッセージs に使用される[JavaScript ブリッジ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) に似ています。`brazeBridge` は、バナーの内部 HTMLと親Braze SDK間の通信レイヤーを提供します。
+
+### カスタムUI 実装(ヘッドレス)
+
+バナーHTMLをレンダリングするのではなく、バナーの[カスタムプロパティ](#custom-properties) を使用して完全にカスタムUI を作成する場合は、アプリライケーションコードからクリック(およびインプレッションs) を手動で記録する必要があります。SDKはバナーをレンダリングしていないため、カスタムUI 要素を使用してアクション間を自動的に追跡することはできません。
+
+Banner オブジェクトで`logClick()` メソッドを使用します。
 
 ## 寸法とサイズ
 

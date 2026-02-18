@@ -20,7 +20,7 @@ Le canvas ou la campagne enverra un webhook à Kickbox, partageant l'adresse e-m
 | Condition                           | Description                                                                   |
 | --------------------------------------|-------------------------------------------------------------------------------|
 | Compte Kickbox                       | Un compte Kickbox actif est nécessaire pour utiliser cette intégration.                |
-| Clé API REST de Braze   | Une clé API Braze REST avec des autorisations `users.track`. <br><br>Celle-ci peut être créée dans le tableau de bord de Braze en allant dans **Paramètres** > **API et identifiants** > **Clés API.**|
+| Clé de l'API REST de Braze   | Une clé API Braze REST avec des autorisations `users.track`. <br><br>Celle-ci peut être créée dans le tableau de bord de Braze en allant dans **Paramètres** > **API et identifiants** > **Clés API.**|
 | Demandez l'accès à l'intégration.     | Demandez à l'équipe d'assistance de Teams de vous accorder l'accès à l'intégration de Braze.        |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 

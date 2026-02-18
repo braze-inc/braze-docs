@@ -82,7 +82,7 @@ Para una interacción eficaz con los clientes, debes [configurar eventos persona
 
 Dado que Recurly utiliza el punto final Braze `/users/track`, la integración está sujeta a los límites de velocidad estándar de Braze de 50.000 solicitudes por minuto.
 
-Recurly agrupa determinados eventos del ciclo de vida de la suscripción en una sola llamada a la API de Braze para reducir el número de solicitudes.
+Recurly agrupa determinados eventos del ciclo de vida de la suscripción en llamadas únicas a la API de Braze para reducir el número de solicitudes.
 
 - Recurly agrupa y envía múltiples suscripciones creadas al mismo tiempo como una única solicitud.
 - Recurly agrupa varias renovaciones simultáneas de una cuenta en una sola solicitud.

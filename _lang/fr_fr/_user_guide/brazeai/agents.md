@@ -1,11 +1,11 @@
 ---
-nav_title: Agents
+nav_title: Console des agents
 article_title: Agents Braze
-page_order: 0.5
-description: "Les agents Braze peuvent générer du contenu, prendre des décisions intelligentes et enrichir vos données afin que vous puissiez offrir des expériences client plus personnalisées."
+page_order: 1
+description: "Les agents Braze peuvent générer du contenu, prendre des décisions intelligentes et enrichir vos données afin que vous puissiez proposer des expériences client plus personnalisées."
 ---
 
-# Agents Braze
+# Agents de Braze dans la console des agents
 
 > Les agents Braze sont des assistants dotés d'une intelligence artificielle que vous pouvez créer à l'intérieur de Braze. Les agents peuvent générer du contenu, prendre des décisions intelligentes et enrichir vos données afin que vous puissiez proposer des expériences client plus personnalisées.
 
@@ -23,7 +23,7 @@ Au-delà de l'envoi de messages, les agents peuvent enrichir vos catalogues en c
 
 ### Quand utiliser les agents Braze par rapport aux autres fonctionnalités de BrazeAI ?
 
-Agents d'utilisation pour personnaliser le contenu à la volée en fonction du contexte spécifique de l'utilisateur. Par exemple, si un agent sait que le parfum de glace préféré d'un utilisateur est le chocolat et que sa garniture préférée est les oursons en gélatine, il peut proposer à cet utilisateur des messages push spécifiques à cette combinaison lors de son passage dans le Canvas.
+Agents d'utilisation pour personnaliser le contenu à la volée en fonction du contexte spécifique de l'utilisateur. Par exemple, si un agent sait que le parfum de glace préféré d'un utilisateur est le chocolat et que sa garniture préférée est un ourson en gélatine, il peut proposer à cet utilisateur un message push spécifique à cette combinaison lors de son passage dans le Canvas.
 
 Cependant, l'agent n'apprend pas par essais et erreurs, et il n'a aucune idée d'un objectif marketing ultime qu'il cherche à mesurer et à maximiser. Même si vous lui demandez de rédiger des textes qui génèrent des conversions, il ne dispose d'aucun mécanisme lui permettant de "surveiller" l'impact de ses écrits sur les conversions et d'intégrer ces données dans ses futurs appels d'offres. Vous pouvez considérer qu'il s'agit d'une prise de décision "vibratoire", et non d'une prise de décision d'intelligence artificielle basée sur la récompense.
 
@@ -46,13 +46,13 @@ Les agents sont configurés avec des instructions (invites du système) qui déf
 
 | Terme | Définition |
 | --- | --- |
-| [Modèle :]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#models) | Le "cerveau" de l'agent, en l'occurrence un grand modèle linguistique (LLM). Il interprète les entrées, génère des réponses et effectue des raisonnements. Un modèle plus solide (formé sur des données plus pertinentes) rend l'agent plus capable et plus polyvalent. |
-| [Instructions]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#writing-instructions) | Les règles ou directives que vous donnez à l'agent (invite du système). Ils définissent le comportement de l'agent à chaque fois qu'il s'exécute. Des prédictions claires rendent l'agent plus fiable et plus prévisible. |
-| Contexte | Données transmises à l'agent au moment de l'exécution, quel que soit l'endroit où il est déployé, telles que les champs du profil utilisateur ou les lignes du catalogue. Cette entrée fournit les informations que l'agent utilise pour générer des sorties. |
+| [Modèle :]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) | Le "cerveau" de l'agent, en l'occurrence un grand modèle linguistique (LLM). Il interprète les entrées, génère des réponses et effectue des raisonnements. Un modèle plus solide (formé sur des données plus pertinentes) rend l'agent plus capable et plus polyvalent. |
+| [Instructions]({{site.baseurl}}/user_guide/brazeai/agents/reference/#writing-instructions) | Les règles ou directives que vous donnez à l'agent (invite du système). Ils définissent le comportement de l'agent à chaque fois qu'il s'exécute. Des prédictions claires rendent l'agent plus fiable et plus prévisible. |
+| Contexte | Données transmises à l'agent au moment de l'exécution, quel que soit l'endroit où il est déployé, telles que les champs du profil utilisateur ou les lignes du catalogue. Ces données fournissent les informations que l'agent utilise pour générer des résultats. |
 | [Variable de sortie]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/#step-3-define-the-output-variable) | Le résultat produit par l'agent lorsqu'il est utilisé dans les étapes du canvas. Les variables de sortie stockent le résultat de l'agent pour personnaliser le contenu ou guider les chemins de flux de travail. Les variables de sortie peuvent être des chaînes de caractères, des nombres ou des données booléennes.  |
 | [Exécution](#limitations) | Une seule exécution de l'agent. Cela est pris en compte dans vos limites journalières. |
-| [Format de sortie]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#output-format) | La structure de données prédéfinie de la réponse de l'agent. |
-| [Température]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#temperature) | Le niveau d'écart pour la production de l'agent. Cela définit le degré de précision ou de créativité de votre agent. |
+| [Format de sortie]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#step-3-select-the-output) | La structure de données prédéfinie de la réponse de l'agent. |
+| [Température]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) | Le niveau d'écart pour la production de l'agent. Cela définit le degré de précision ou de créativité de votre agent. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Restrictions
@@ -60,7 +60,7 @@ Les agents sont configurés avec des instructions (invites du système) qui déf
 Pendant la période bêta, les limitations suivantes s'appliquent :
 
 - Chaque agent a une limite d'exécution quotidienne par défaut de 50 000 exécutions, qui peut être augmentée jusqu'à un maximum de 100 000 exécutions par jour.
-- Par défaut, chaque exécution doit se terminer dans les 15 secondes. Après 15 secondes, l'agent renvoie une réponse `null` à l'endroit où il est utilisé. 
+- Par défaut, chaque exécution doit se terminer dans les 15 secondes. Après 15 secondes, l'agent renvoie une réponse `null` à l'endroit où il est utilisé.
     - Si vos agents dépassent régulièrement le temps imparti, contactez votre gestionnaire de compte Braze pour augmenter cette limite.
 - Les données d'entrée sont limitées à 25 Ko par demande. Les entrées plus longues sont tronquées.
 

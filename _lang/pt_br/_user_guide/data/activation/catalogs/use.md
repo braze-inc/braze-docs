@@ -141,7 +141,7 @@ Você também pode usar modelos para extrair dinamicamente itens do catálogo co
 Os objetos JSON nos catálogos só são ingeridos por meio da API. Não é possível fazer upload de um objeto JSON usando um arquivo CSV.
 {% endalert %}
 
-Usando o envio de mensagens Liquid, você pode extrair dinamicamente os IDs da lista de desejos e usá-los em sua mensagem. Para fazer isso, [atribua uma variável]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) ao seu atributo personalizado e, em seguida, use o modal **Add Personalization** para extrair um item específico da matriz. As variáveis referenciadas como ID do item de catálogo devem ser colocadas entre colchetes para serem referenciadas corretamente, como `{{result}}`.
+Usando o envio de mensagens Liquid, você pode extrair dinamicamente os IDs da lista de desejos e usá-los em sua mensagem. Para fazer isso, [atribua uma variável]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) ao seu atributo personalizado e, em seguida, use o modal **Add Personalization** para extrair um item específico da matriz. As variáveis referenciadas como ID do item do catálogo devem ser colocadas entre colchetes para serem referenciadas corretamente, como `{{result}}`.
 
 {% alert tip %}
 Lembre-se de que as matrizes começam em `0`, e não em `1`.

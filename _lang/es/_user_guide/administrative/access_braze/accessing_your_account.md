@@ -57,7 +57,7 @@ Ambas direcciones de correo electrónico dirigirán los mensajes al mismo buzón
 
 ### Crear alias separados con otros proveedores
 
-Si tu proveedor de correo electrónico no admite el alias `+`, aún puedes crear alias separados, como configurar `rocky@braze.com` para que se reenvíe a `rocky.lotito@braze.com`. Esto permite que varias direcciones lleguen al mismo buzón de entrada y que Braze las reconozca como correos electrónicos diferentes.
+Si tu proveedor de correo electrónico no admite el alias `+`, aún puedes crear alias distintos, como configurar `rocky@braze.com` para que se reenvíe a `rocky.lotito@braze.com`. Esto permite que varias direcciones lleguen al mismo buzón de entrada y que Braze las reconozca como correos electrónicos diferentes.
 
 ### Utilizar desarrolladores multiempresa
 
@@ -96,7 +96,7 @@ Si al borrar la caché y las cookies de tu navegador no se resuelven tus problem
 
 ### Acceder al editor de arrastrar y soltar
 
-Para la mayoría de los usuarios de Braze, debería cargarse el editor de arrastrar y soltar. Sin embargo, si utilizas una VPN o estás detrás de un cortafuegos, puede que tengas que permitir un dominio. Ponte en contacto con tu administrador informático para comprobar que `*.bz-rndr.com` está en la lista de permitidos.
+Para la mayoría de los usuarios de la empresa, debería cargarse el editor de arrastrar y soltar. Sin embargo, si utilizas una VPN o estás detrás de un cortafuegos, puede que tengas que permitir un dominio. Ponte en contacto con tu administrador informático para comprobar que `*.bz-rndr.com` está en la lista de permitidos.
 
 El editor puede experimentar problemas de carga debido a lo siguiente:
 

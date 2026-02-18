@@ -13,33 +13,42 @@ tool: Canvas
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
-  - name: Paso de mensaje
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
-    image: /assets/img/braze_icons/message-square-02.svg
-  - name: Paso de demora
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
-    image: /assets/img/braze_icons/clock-stopwatch.svg
-  - name: Paso para la división de decisiones
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
-    image: /assets/img/braze_icons/dataflow-04.svg
-  - name: Paso de las rutas de audiencia
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
-    image: /assets/img/braze_icons/users-01.svg 
   - name: Paso de rutas de acción  
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
     image: /assets/img/braze_icons/zap.svg
+  - name: Paso de agente
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/agent_step/
+    image: /assets/img/braze_icons/briefcase-01.svg
+  - name: Paso de las rutas de audiencia
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
+    image: /assets/img/braze_icons/users-01.svg 
+  - name: Paso de Audience Sync
+    link: /docs/partners/canvas_audience_sync/
+    image: /assets/img/braze_icons/refresh-ccw-02.svg
+  - name: Paso del optimizador de contenidos
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step/
+    image: /assets/img/braze_icons/target-04.svg
+  - name: Paso de contexto
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/context/
+    image: /assets/img/braze_icons/file-search-02.svg
+  - name: Paso para la división de decisiones
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
+    image: /assets/img/braze_icons/dataflow-04.svg
+  - name: Paso de demora
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
+    image: /assets/img/braze_icons/clock-stopwatch.svg
   - name: Paso de recorridos de experimentos
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: Paso de actualización de usuario
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
-    image: /assets/img/braze_icons/user-check-01.svg
   - name: Banderas de características en Canvas
     link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
-  - name: Sincronización de audiencias en Canvas
-    link: /docs/partners/canvas_audience_sync/
-    image: /assets/img/braze_icons/refresh-ccw-02.svg
+  - name: Paso de mensaje
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
+    image: /assets/img/braze_icons/message-square-02.svg
+  - name: Paso de actualización de usuario
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
+    image: /assets/img/braze_icons/user-check-01.svg
 ---
 
 ## Acerca de los componentes de Canvas
@@ -63,4 +72,3 @@ Al crear sus recorridos de usuario, es posible que también desee probar la ruta
 ### Integración
 
 ¿Quieres sincronizarte con los datos de los usuarios de tu marca? Aprovecha las opciones de sincronización de audiencia disponibles para [Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) y [Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/).
-

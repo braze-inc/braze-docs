@@ -71,6 +71,8 @@ channel:
 
 ブロックと行をキャンバス領域にドラッグアンドドロップして、メッセージの作成を開始できます。
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 メッセージの背景プロパティ、ボーダー設定などをカスタマイズするには、**Styles** を選択します。特定のブロックまたは行のスタイルのみをカスタマイズする場合は、それを選択して変更します。
 
 ![バナー作成画面の [スタイル] パネル。]({% image_buster /assets/img/banners/banner_card_styles.png %})()

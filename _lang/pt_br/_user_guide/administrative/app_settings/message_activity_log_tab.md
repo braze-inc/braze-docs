@@ -53,9 +53,9 @@ As mensagens listadas a seguir são para fins de exemplo e podem não correspond
 
 | Tipo de mensagem | Mensagens em potencial | Descrição |
 |---|---|---|
-| Soft bounce | O endereço de e-mail same@example.com é um soft bounce. | O endereço de e-mail era válido e a mensagem de e-mail chegou ao servidor de e-mail do destinatário, mas foi rejeitada por um problema "temporário". <br><br>Os motivos comuns do soft bounce incluem: {::nomarkdown} <ul> <li> A caixa de correio estava cheia (o usuário ultrapassou sua cota) </li> <li> O servidor estava fora do ar </li> <li> A mensagem era muito grande para a caixa de entrada do destinatário </li>  </ul> {:/} Se um e-mail tiver recebido um soft bounce, geralmente tentaremos novamente em um período de 72 horas, mas o número de tentativas de nova tentativa varia de acordo com o destinatário. |
-| Hard bounce | A conta de e-mail que você tentou acessar não existe. Tente verificar novamente o endereço de e-mail do destinatário quanto a erros de digitação ou espaços desnecessários. | Sua mensagem nunca chegou à caixa de entrada dessa pessoa porque não havia uma caixa de entrada para ser acessada. Se quiser se aprofundar mais, mensagens como essa podem, às vezes, ter links na coluna **Exibir detalhes** que lhe permitirão visualizar o perfil do destinatário pretendido.|
-| Bloquear | A mensagem de spam é rejeitada devido à política anti-spam. | Sua mensagem foi categorizada como spam. Esse erro de e-mail é registrado para um usuário se tivermos recebido um evento do ESP indicando que o e-mail foi descartado. Pode ser que seja apenas para o destinatário pretendido, mas se estiver vendo essa mensagem com frequência, talvez queira reavaliar seus hábitos de envio ou o conteúdo da sua mensagem. Além disso, pense de volta—você [warm up your IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)? Se não, entre em contato com a Braze para obter conselhos sobre como fazer isso funcionar.|
+| Soft bounce | O endereço de e-mail same@example.com é um soft bounce. | O endereço de e-mail era válido e a mensagem de e-mail chegou ao servidor de e-mail do destinatário, mas foi rejeitada por um problema "temporário". <br><br>Os motivos comuns do soft bounce incluem: {::nomarkdown} <ul> <li> A caixa de correio estava cheia (o usuário ultrapassou sua cota) </li> <li> O servidor estava fora do ar </li> <li> A mensagem era muito grande para a caixa de entrada do destinatário </li>  </ul> {:/} Se um e-mail recebeu um soft bounce, geralmente tentamos novamente dentro de um período de 72 horas, mas o número de tentativas de reenvio varia de receptor para receptor. |
+| Hard bounce | A conta de e-mail que você tentou acessar não existe. Tente verificar novamente o endereço de e-mail do destinatário quanto a erros de digitação ou espaços desnecessários. | Sua mensagem nunca chegou à caixa de entrada dessa pessoa porque não havia uma caixa de entrada para ser acessada. Se você quiser investigar mais a fundo, mensagens como esta podem às vezes ter links na coluna **Ver Detalhes** que permitem visualizar o perfil do destinatário pretendido.|
+| Bloquear | A mensagem de spam é rejeitada devido à política anti-spam. | Sua mensagem foi categorizada como spam. Esse erro de e-mail é registrado para um usuário se tivermos recebido um evento do ESP indicando que o e-mail foi descartado. Pode ser que seja apenas para o destinatário pretendido, mas se estiver vendo essa mensagem com frequência, talvez queira reavaliar seus hábitos de envio ou o conteúdo da sua mensagem. Além disso, pense de volta—você [esquentou seu IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)? Se não, entre em contato com a Braze para obter conselhos sobre como fazer isso.|
 | Erro de mensagem abortado | empty-cart_web | Se você tiver um app com um carrinho ou criar um envio com uma mensagem de abortar no app, poderá personalizar a mensagem que será retornada se o envio for abortado. Neste caso, a mensagem retornada é empty-cart_web.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -68,7 +68,7 @@ Por exemplo, algumas mensagens de "Bloqueio" em potencial, além das listadas na
 - Infelizmente, mensagens de [_IP_ADDRESS_] não foram enviadas. Entre em contato com seu prestador de serviço de Internet, pois parte da rede dele está em nossa lista de bloqueio.
 - Mensagem rejeitada devido à política local.
 - A mensagem foi bloqueada pelo destinatário como spam.
-- Serviço indisponível, host do cliente [_IP_ADDRESS_] bloqueado usando Spamhaus.
+- Serviço indisponível, cliente host [_IP_ADDRESS_] bloqueado usando Spamhaus.
 
 ## Período de retenção de armazenamento
 
@@ -76,8 +76,8 @@ Os erros das últimas 60 horas estão disponíveis nos registros de atividades d
 
 ### Número de registros de erros armazenados
 
-O número de registros salvos é influenciado por várias condições. Por exemplo, se uma campanha programada for enviada a milhares de usuários, é possível que vejamos uma amostra dos erros no registro de atividades de mensagens em vez de todos os erros. A seguir, uma visão geral das condições que afetam quantos registros serão salvos:
-- Até 20 registros de erro do mesmo tipo de erro serão salvos para a mesma campanha ou etapa do canva dentro de uma hora fixa do relógio para os seguintes tipos de erro:
+O número de registros salvos é influenciado por várias condições. Por exemplo, se uma campanha programada for enviada a milhares de usuários, é possível que vejamos uma amostra dos erros no registro de atividades de mensagens em vez de todos os erros. A seguir, uma visão geral das condições que afetam quantos registros são salvos:
+- Até 20 registros de erro do mesmo tipo de erro são salvos para a mesma campanha ou etapa do canva dentro de uma hora fixa do relógio para os seguintes tipos de erro:
     - Erros de conteúdo conectado
     - Erros de Mensagem Abortada
     - Erros de webhook
@@ -85,23 +85,35 @@ O número de registros salvos é influenciado por várias condições. Por exemp
     - Erros de Falha na Entrega de SMS
     - Erros de Falha no WhatsApp
     - Erros de Testes A/B
-- Até 20 registros de erro de notificação por push do mesmo tipo de erro serão salvos para a mesma campanha ou combinação de etapa do canva e app para os seguintes tipos de erro:
+- Até 20 registros de erro de notificação por push do mesmo tipo de erro são salvos para a mesma campanha ou etapa do canva e combinação de app para os seguintes tipos de erro:
     - Credencial de Push Inválida
     - Token de Push Inválido
     - Sem Credencial de Push
     - Erros de Token
     - Cota Excedida
     - Tentativas Esgotadas
-    - Carga útil inválida
+    - Carga Útil Inválida
     - Erro inesperado
-- Até 100 logs de erro do mesmo tipo de erro serão salvos para o mesmo app dentro de uma hora fixa para os seguintes tipos de erro:
+- Até 100 registros de erro do mesmo tipo de erro são salvos para o mesmo app dentro de uma hora fixa do relógio para os seguintes tipos de erro:
     - Erro de Atividade ao Vivo (Sem credencial de push)
     - Erro de Atividade ao Vivo (Credencial de push inválida)
     - Outros erros de Atividade ao Vivo
     - Erros de Token removido do Feedback APNS
-- Até 100 logs de erro do mesmo tipo de erro serão salvos para a mesma campanha ou etapa do canva dentro de uma hora fixa para os seguintes tipos de erro:
+- Até 100 registros de erro do mesmo tipo de erro são salvos para a mesma campanha ou etapa do canva dentro de uma hora fixa do relógio para os seguintes tipos de erro:
     - Erros de Soft Bounce de e-mail
     - Erros de Hard Bounce de e-mail
-    - Erros de bloqueio de e-mail
-- Até 100 logs de erro de aliasing de usuário serão salvos para o mesmo espaço de trabalho dentro de uma hora fixa.
+    - Erros de Bloqueio de e-mail
+- Até 100 registros de erro de aliasing de usuário são salvos para o mesmo espaço de trabalho dentro de uma hora fixa do relógio.
 
+## Envios de teste
+
+O **Registro de Atividade de Mensagem** mostra registros de teste para esses canais de envio de mensagens:
+
+- SMS
+- WhatsApp
+- LINE
+- Webhook
+
+Registros de envio de teste não estão disponíveis para os seguintes canais: e-mail, Cartões de Conteúdo, mensagens no aplicativo e push.
+
+Registros de envio de teste são prefixados com "[TEST SEND]", mas não é garantido que todos os registros de envio de teste tenham o prefixo (por exemplo, erros de Conteúdo Conectado não têm o prefixo).

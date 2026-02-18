@@ -2,7 +2,7 @@
 nav_title: Mensaje 
 article_title: Mensaje 
 alias: "/message_step/"
-page_order: 5
+page_order: 11
 page_type: reference
 description: "Este artículo de referencia explica cómo crear un mensaje independiente utilizando el paso Mensaje."
 tool: Canvas
