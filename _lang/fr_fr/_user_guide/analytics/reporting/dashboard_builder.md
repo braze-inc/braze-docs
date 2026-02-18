@@ -30,6 +30,12 @@ Maintenant, suivez les étapes respectives pour votre source de données :
 
 {: start="4"}
 4\. Sélectionnez **\+ Ajouter une tuile**, puis choisissez l'un des rapports que vous avez créés dans le [générateur de rapports (Nouveau)]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
+
+{% alert important %}
+Après l'ajout d'un rapport Report Builder à une tuile Dashboard Builder, la tuile n'est pas connectée au rapport d'origine. Si vous modifiez le rapport original dans Report Builder, vous devez supprimer la tuile de tableau de bord existante et en créer une nouvelle en utilisant le rapport mis à jour comme source de données.
+{% endalert %}
+
+{: start="5"}
 5\. Sélectionnez l'icône du crayon pour modifier l'affichage du titre et du type de graphique dans la tuile.
     \- Vous pouvez basculer entre différents types de graphiques sous la visualisation par défaut. Les options actuelles comprennent les diagrammes à barres (horizontaux ou verticaux) et les diagrammes linéaires (disponibles uniquement si vous avez sélectionné **Date** comme option de recherche dans la configuration du générateur de rapports).<br><br>![Bascule pour différents types de graphiques.]({% image_buster /assets/img/report_builder_types.png %})<br><br>
     \- Utilisez le menu déroulant des indicateurs pour sélectionner les indicateurs à inclure dans votre visualisation. Par défaut, la première colonne du rapport sera la mesure affichée par défaut.
@@ -76,7 +82,7 @@ Ajustez la taille de la tuile en faisant glisser le coin inférieur droit de la 
 
 ## Exécution d'un tableau de bord
 
-1. Allez dans **Analyse/analytique** > **Générateur de tableau de bord (si vous utilisez un tableau adjectif**). La page d'accueil répertorie tous les tableaux de bord existants dans votre espace de travail, les tableaux de bord créés par Braze figurant en haut de la page. Ils sont signalés par la mention « (Braze) » dans le titre.
+1. Allez dans **Analyse/analytique** > **Générateur de tableau de bord (si vous utilisez un tableau adjectif**). La page d'accueil répertorie tous les tableaux de bord existants dans votre espace de travail, les tableaux de bord créés par Braze étant placés en haut de la page. Ils sont signalés par la mention « (Braze) » dans le titre.
 2. Sélectionnez le tableau de bord qui vous intéresse.
 3. Sélectionnez **Exécuter le tableau** de bord pour charger le tableau de bord correspondant à l'aide de ce tableau de bord.
 
@@ -126,7 +132,7 @@ Les touches comprennent le _clic sur l'e-mail_ (clic sur le lien), le clic _sur 
 | Indicateurs d'achats hebdomadaires (taux) | Taux de conversion des achats (chiffre d'affaires par destinataire) à partir des ouvertures et des clics sur les e-mails, regroupés par segment et affichés sous la forme d'une série chronologique hebdomadaire.|
 | Indicateurs d'achats hebdomadaires (nombre) | Nombre d'achats et total des chiffres d'affaires provenant des ouvertures et des clics sur les e-mails, regroupés par segment et affichés sous forme de séries chronologiques hebdomadaires.|
 | Engagement par e-mail par segmentation | Tableau récapitulatif des indicateurs d'engagement des e-mails (envoyés, livrés, rebonds, ouvertures, clics, désabonnements et leurs taux) agrégés par segment.|
-| Achats & Chiffre d'affaires par segment | Tableau récapitulatif des indicateurs d'achat totaux (achats, chiffre d'affaires et chiffre d'affaires par destinataire) provenant des ouvertures et des clics d'e-mails, regroupés par segmentation.|
+| Achats & Chiffre d'affaires par segment | Tableau récapitulatif des indicateurs d'achat totaux (achats, chiffre d'affaires et chiffre d'affaires par destinataire) provenant des ouvertures et des clics d'e-mails, agrégés par segmentation.|
 | Les 10 meilleures campagnes pour les indicateurs d'engagement | Liste classée des campagnes ayant les indicateurs d'engagement par e-mail les plus élevés (métrique configurable pour le classement).|
 | Les 10 campagnes les moins performantes en termes d'indicateurs d'engagement | Liste classée des campagnes dont les indicateurs d'engagement par e-mail sont les plus bas (métrique configurable pour le classement).|
 | Les 10 meilleures toiles pour les indicateurs d'engagement | Liste classée des Canevas ayant les indicateurs d'engagement par e-mail les plus élevés (métrique configurable pour le classement).|

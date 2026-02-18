@@ -114,7 +114,7 @@ Lorsque le raccourcissement des liens est activé, le tableau des **performances
 
 ![Tableau des indicateurs de performance des SMS et MMS.]({% image_buster /assets/img/link_shortening/shortening4.png %})
 
-Les tableaux " **Performances historiques** " et " **Performances SMS/MMS/RCS** " comportent également une option " **Nombre total de clics** " et affichent une série chronologique quotidienne d'événements de clics. Les clics sont incrémentés lors de la redirection (par exemple lorsqu'un utilisateur visite un lien) et peuvent être incrémentés plus d'une fois par utilisateur.
+Les tableaux " **Performances historiques** " et " **Performances SMS/MMS/RCS** " comprennent également une option " **Nombre total de clics** " et affichent une série chronologique quotidienne d'événements de clics. Les clics sont incrémentés lors de la redirection (par exemple lorsqu'un utilisateur visite un lien) et peuvent être incrémentés plus d'une fois par utilisateur.
 
 ## Reciblage des utilisateurs
 

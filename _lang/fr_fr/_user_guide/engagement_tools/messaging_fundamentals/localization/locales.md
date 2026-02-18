@@ -1,13 +1,13 @@
 ---
 nav_title: Locales dans les messages
-article_title: Traduire les locales
+article_title: Traduire les langues locales
 alias: /locales_in_messages/
 page_order: 0
 page_type: reference
 description: "Cet article explique comment utiliser les paramètres locaux dans vos messages."
 ---
 
-# Traduire les locales
+# Traduire les langues locales
 
 > Après avoir ajouté des locales à votre espace de travail, vous pouvez cibler des utilisateurs dans différentes langues au sein d'un même push, e-mail, bannière ou message in-app.
 
