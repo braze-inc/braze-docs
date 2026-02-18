@@ -45,7 +45,7 @@ Consulte a seção [Práticas recomendadas](#best-practices) para obter casos de
 
 {% details Expand for original Canvas editor details %}
 
-Tenha em mente as seguintes edições permitidas do Canvas após o lançamento, dependendo do fluxo de trabalho com o qual o Canvas foi criado. Se o seu Canvas usar o fluxo de trabalho original do Canvas, você precisará cloná-lo para o Canvas Flow primeiro para realizar edições pós-lançamento.
+Tenha em mente as seguintes edições permitidas do Canvas após o lançamento, dependendo do fluxo de trabalho com o qual o Canvas foi criado. Se o seu Canvas usar o fluxo de trabalho original do Canvas, será necessário cloná-lo para o Canvas Flow primeiro para realizar as edições pós-lançamento.
 
 Não é possível editar ou excluir conexões existentes e não é possível inserir uma etapa entre etapas conectadas existentes. Se quiser editar ou adicionar mais etapas à jornada do usuário do canva, os detalhes a seguir serão aplicados:
 
@@ -127,7 +127,7 @@ Quando as variantes são excluídas de um Canva, ocorre o seguinte:
 
 ### Propriedades de entrada da tela
 
-As propriedades de entrada do canva não estão no formato de modelos em etapas quando enviadas. Isso significa que, quando as propriedades de entrada do Canvas forem editadas após o lançamento do Canvas, essas alterações só serão aplicadas aos novos usuários que entrarem no Canvas. Se o seu canva permitir que os usuários reentrem no canva, qualquer usuário que reentrar será determinado pelas propriedades de entrada do canva atualizadas.
+As propriedades de entrada do canva não estão no formato de modelos em etapas quando enviadas. Isso significa que quando as propriedades de entrada do Canvas forem editadas após o lançamento do Canvas, essas alterações só serão aplicadas aos novos usuários que entrarem no Canvas. Se o seu canva permitir que os usuários reentrem no canva, qualquer usuário que reentrar será determinado pelas propriedades de entrada do canva atualizadas.
 
 ## Melhores práticas
 
@@ -172,7 +172,7 @@ Um usuário entra nesse canva às 14h01 e entra na etapa do canva ao mesmo tempo
 Os seguintes problemas comuns podem ser disparados ao editar ou adicionar mais componentes a qualquer outro componente em uma tela após o lançamento. 
 
 {% alert important %}
-Os problemas a seguir podem ser evitados. Se precisar fazer edições em um Canvas depois de ele ter sido lançado, recomendamos primeiro confirmar se todos os usuários que já entraram no Canvas concluíram sua jornada de usuário. Além disso, sugerimos que não exclua etapas que já tenham sido processadas por pelo menos um usuário.
+Os seguintes problemas podem ser evitados. Se precisar fazer edições em um Canvas depois de ele ter sido lançado, recomendamos primeiro confirmar se todos os usuários que já entraram no Canvas concluíram sua jornada de usuário. Além disso, sugerimos que você não exclua etapas que já tenham sido processadas por pelo menos um usuário.
 {% endalert %}
 
 - Dados de relatório ausentes (quando as variantes de mensagem são excluídas e adicionadas novamente)

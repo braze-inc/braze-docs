@@ -263,7 +263,7 @@ CDI sólo sincronizará las nuevas filas, por lo que la próxima sincronización
 
 ### Escribir sólo atributos nuevos o actualizados para minimizar el consumo
 
-Cada vez que se ejecuta una sincronización, Braze busca filas que no se hayan sincronizado previamente. Lo comprobamos utilizando la columna `UPDATED_AT` de su tabla o vista. Braze selecciona e importa cualquier fila en la que `UPDATED_AT` sea igual o posterior a la última marca de tiempo `UPDATED_AT` del último trabajo de sincronización realizado con éxito, independientemente de si coinciden o no con lo que hay actualmente en el perfil de usuario. Por ello, recomendamos sincronizar únicamente los atributos que desee añadir o actualizar.
+Cada vez que se ejecuta una sincronización, Braze busca filas que no se hayan sincronizado previamente. Lo comprobamos utilizando la columna `UPDATED_AT` de su tabla o vista. Braze selecciona e importa cualquier fila en la que `UPDATED_AT` sea igual o posterior a la última marca de tiempo de `UPDATED_AT` del último trabajo de sincronización realizado con éxito, independientemente de si coinciden o no con lo que hay actualmente en el perfil de usuario. Por ello, recomendamos sincronizar únicamente los atributos que desee añadir o actualizar.
 
 El uso de punto de datos es idéntico con CDI que con otros métodos de ingesta como las API REST o los SDK, por lo que depende de ti asegurarte de que sólo añades atributos nuevos o actualizados a tus tablas de origen.
 
@@ -303,7 +303,7 @@ Si prefiere almacenar internamente cada atributo en su propia columna, deberá c
 
 {% tabs local %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
      attribute_2 string,
@@ -325,7 +325,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
      attribute_2 string,
@@ -347,7 +347,7 @@ SELECT
 ```
 {% endtab %}
 {% tab BigQuery %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (attribute_1 string,
      attribute_2 STRING,
      attribute_3 NUMERIC,
@@ -367,7 +367,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Databricks %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (
     attribute_1 string,
     attribute_2 STRING,
@@ -389,7 +389,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE TABLE [braze].[users] (
     attribute_1 VARCHAR,
     attribute_2 VARCHAR,
@@ -488,8 +488,8 @@ Ten en cuenta que sólo puedes sincronizar un evento de compra por fila.
     "price" : 219.98,
     "time" : "2013-07-16T19:20:30+01:00",
     "properties" : {
-        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99, },
-        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99, }
+        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99 },
+        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99 }
         ]
     }
 }
@@ -518,7 +518,7 @@ Ten en cuenta que sólo puedes sincronizar un evento de compra por fila.
 {% endtab %}
 {% endtabs %}
 
-### Evita los tiempos de espera en las consultas al almacén de datos
+### Evita los tiempos de espera en las consultas del almacén de datos
 
 Recomendamos que las consultas se realicen en el plazo de una hora para obtener un rendimiento óptimo y evitar posibles errores. Si las consultas superan este plazo, considere la posibilidad de revisar la configuración de su almacén de datos. La optimización de los recursos asignados a su almacén puede ayudar a mejorar la velocidad de ejecución de las consultas.
 

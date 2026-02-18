@@ -90,9 +90,7 @@ O recurso **URI personalizado** permite especificar um URL da Web ou um recurso 
 
 ## Prioridade de exibição de notificação
 
-{% alert important %}
-A configuração Prioridade de exibição de notificação não é mais usada em dispositivos com Android O ou mais recente. Para dispositivos mais novos, defina a prioridade por meio da [configuração do canal de notificação](https://developer.android.com/training/notify-user/channels#importance).
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='Android notification priority' %}
 
 O nível de prioridade de uma notificação por push afeta a forma como a notificação é exibida na bandeja de notificações em relação a outras notificações. Isso também pode afetar a velocidade e a forma de entrega, pois as mensagens normais e de prioridade mais baixa podem ser enviadas com latência um pouco maior ou em lotes para preservar a vida útil da bateria, enquanto as mensagens de alta prioridade são sempre enviadas imediatamente.
 

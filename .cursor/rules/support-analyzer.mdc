@@ -25,6 +25,7 @@ For each unique Case ID, determine if docs action is needed:
 | Category | Criteria | Action |
 |----------|----------|--------|
 | **Docs Gap** | Customer couldn't find existing info; answer exists but is unclear | Update existing docs |
+| **Docs Discrepancy** | Docs and source code contradict each other | Update existing docs |
 | **New Feature** | Question about recently released or undocumented feature | Draft new section |
 | **Edge Case** | Unusual but valid use case not covered | Add FAQ or troubleshooting |
 | **Support-Only** | Account-specific, requires Braze internal access, or one-off config | Skip (no docs change) |
@@ -37,7 +38,7 @@ For each unique Case ID, determine if docs action is needed:
 For each **actionable** ticket:
 
 1. **Extract Q&A** - Distill the core question and resolution from message thread
-2. **Verify** - Cross-reference with source code of the Main Product at `../platform`. Do not rely on support cases or documentation alone.
+2. **Verify** - Cross-reference with source code of the Main Product at `../platform`. Do not rely solely on support cases or documentation to verify. Always cross-reference with source code. If you can verify the resolution against the source code, add a reference to the source file(s). If you cannot verify the resolution, say that you could not verify the resolution against the source code.
 3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
 4. **Document source support case number** - Which case numbers were analyzed?
 
@@ -45,10 +46,10 @@ For each **actionable** ticket:
 
 ```markdown
 ### Case: [CASE_ID]
-- **Category**: [Docs Gap | New Feature | Edge Case]
+- **Category**: [Docs Gap | Docs Discrepancy | New Feature | Edge Case]
 - **Question**: [One-sentence summary]
 - **Resolution**: [Brief answer]
-- **Verified behavior**: [Brief answer]
+- **Verified behavior**: [Complete answer]
 - **Target Doc**: `_docs/_user_guide/path/to/file.md` (or "NEW: suggested_location")
 - **Suggested Change**: [What to add/update]
 ```
@@ -99,9 +100,10 @@ Cursor fills out the PR automatically:
 
 ```text
 # Changes
+* [If this was related to a Docs discrepancy, make sure to note to tag the Eng owner in the description]
 * [Cursor analyzes code changes and lists them]
 * List of changes to help the reviewer understand the scope
-* List the Salesforce case numbers that were addressed in the update
+* List the Salesforce case IDs that were addressed in the update in a bulleted list of URLs with the format `https://braze.lightning.force.com/lightning/r/Case/<case ID>/view`
 ```
 
 ## Step 8: Assign Reviewers Based Code Ownership where possible

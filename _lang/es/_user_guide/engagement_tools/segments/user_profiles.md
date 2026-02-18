@@ -148,7 +148,7 @@ Aunque las estadísticas de apertura de correo electrónico pueden ser útiles e
 Algunos campos pueden estar ausentes en la pestaña **Historial de mensajes** de un usuario en los siguientes escenarios:
 
 - Cuando en un evento faltan datos para **Mensaje enviado**, esto indica que la campaña no tiene ninguna variación de mensaje.
-- Cuando a un evento le faltan datos para **Campaña/Canvas** y **Mensaje enviado**, esto indica que este mensaje fue enviado desde una campaña API (no campañas desencadenadas por API) que no especificó el `campaign_id` y `message_variation_id`. Estos campos son opcionales y pueden omitirse en el cuerpo de la solicitud. Cuando se especifican estos campos, esa información se rellena en los registros del historial de mensajes.
+- Cuando a un evento le faltan datos para **Campaña/Canvas** y **Mensaje enviado**, esto indica que este mensaje se envió desde una campaña de API (no campañas desencadenadas por API) que no especificó el `campaign_id` y `message_variation_id`. Estos campos son opcionales y pueden omitirse en el cuerpo de la solicitud. Cuando se especifican estos campos, esa información se rellena en los registros del historial de mensajes.
    - Si un mensaje concreto falta por completo del historial de mensajes, pero aparece en el registro de **Campañas recibidas**, es probable que el usuario haya recibido la campaña antes de ser identificado como el usuario actual. Si un perfil existente queda huérfano, se transfiere el registro de **campañas recibidas**, pero no el historial de mensajes. 
 - Si faltan datos para **Campaign/Canvas**, es posible que se haya enviado una prueba manual. Las pruebas manuales se registran en la pestaña **Historial de mensajería**, pero no se registrará la campaña o Canvas que se envió.
 

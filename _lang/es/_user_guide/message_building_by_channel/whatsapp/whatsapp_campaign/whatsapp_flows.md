@@ -29,7 +29,7 @@ channel:
   - **Formulario personalizado:** Para requisitos específicos
   - **Elementos prediseñados:** Para una configuración más rápida
 
-## Configuración de mensajes y respuestas de WhatsApp Flow
+## Configurar mensajes y respuestas de WhatsApp Flow
 
 {% tabs local %}
 {% tab Template message %}
@@ -42,7 +42,7 @@ channel:
 {% endtab %}
 {% tab Response message %}
 
-1. En un Canvas de Braze, crea un paso de mensaje de WhatsApp que utilice un mensaje de respuesta y un mensaje de flujo.
+1. En un Canvas de Braze, crea un paso en mensaje de WhatsApp que utilice un mensaje de respuesta y un mensaje de flujo.
 
 ![Un paso de mensaje para un tipo de mensaje de respuesta de WhatsApp y un diseño de mensaje de flujo.]({% image_buster /assets/img/whatsapp/flows/message_step_flow_message.png %}){: style="max-width:80%;"}
 
@@ -105,7 +105,7 @@ En el editor JSON avanzado, introduce {% raw %}`{"attributes": [{"flow_1": {{wha
 {% subtab UI editor %}
 
 1. Confirma que ya has creado un atributo personalizado con el tipo de datos de objeto ("flow_1" en este ejemplo) dentro de la configuración de datos de tu espacio de trabajo.
-2. En el editor de interfaz de usuario, utiliza Liquid {% raw %}```{{whats_app.${inbound_flow_response}}}``` para rellenar el atributo personalizado y guardar en él toda la respuesta Flow del usuario. Tienes que rellenar el valor clave como ```{{whats_app.${inbound_flow_response}}}```{% endraw %} antes de seleccionar el atributo personalizado que has creado.
+2. En el editor de la interfaz de usuario, utiliza Liquid {% raw %}```{{whats_app.${inbound_flow_response}}}``` para rellenar el atributo personalizado y guardar en él toda la respuesta Flow del usuario. Tienes que rellenar el valor clave como ```{{whats_app.${inbound_flow_response}}}```{% endraw %} antes de seleccionar el atributo personalizado que has creado.
 
 ![Paso de actualización de usuario que utiliza el editor de IU.]({% image_buster /assets/img/whatsapp/flows/user_update_ui_editor.png %})
 

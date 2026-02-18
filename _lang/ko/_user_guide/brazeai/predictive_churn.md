@@ -2,7 +2,7 @@
 nav_title: 예측 이탈
 article_title: 예측 이탈
 description: "이 랜딩 페이지에서는 비즈니스에 있어 이탈의 의미와 이탈을 방지하고자 하는 사용자를 정의할 수 있는 Braze Predictive Suite의 도구인 예측 이탈을 다룹니다."
-page_order: 2.0
+page_order: 9
 alias: /predictive_churn/
 search_rank: 2
 ---
@@ -25,7 +25,7 @@ search_rank: 2
 
 ## 예측 이탈에 액세스하기
 
-**예측** 페이지는 **분석** 섹션에 위치해 있습니다. 전체 액세스를 위해 계정 매니저에게 문의하세요.
+{% include brazeai/predictions_page_access.md %}
 
 이 기능을 구매하기 전에 미리보기 모드에서 사용할 수 있습니다. 이것은 데모 고객이탈 예측을 합성 데이터로 보고, 한 번에 사용자 데이터에 기반한 고객이탈 예측 모델을 만들 수 있게 해줍니다. 이 미리보기는 고객이탈 위험에 따라 메시징을 위해 사용자를 타겟팅할 수 없으며 생성 후 정기적으로 업데이트되지 않습니다.
 

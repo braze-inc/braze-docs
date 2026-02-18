@@ -18,7 +18,7 @@ Before you start, you'll need the following:
 | Requirement | 설명 |  
 | --- | --- |  
 | 카멜레온 계정 | 이 파트너십을 이용하려면 카멜레온 계정이 필요합니다.|  
-| Braze account| An active Braze account with the [Braze Web SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) integrated on your webpage. 이벤트 속성정보 세분화도 인에이블먼트해야 합니다. 요청하려면 [고려 사항을](#considerations) 참조하세요.|  
+| Braze account| An active Braze account with the [Braze Web SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) integrated on your webpage. 또한 이벤트 속성정보 세분화를 인에이블해야 합니다. 요청하려면 [고려 사항을](#considerations) 참조하세요.|  
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 사용 사례

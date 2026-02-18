@@ -33,9 +33,9 @@ Aqui estão alguns detalhes a serem considerados ao criar um trecho de código:
 
 ### Etapa 3: Selecionar opções de código promocional
 
-Cada lista de códigos promocionais tem uma data e hora de expiração correspondente que é definida no momento da criação. A duração máxima da expiração é de seis meses a partir do dia em que você estiver criando ou editando sua lista.
+Cada lista de códigos promocionais tem uma data e hora de expiração correspondente que é definida no momento da criação. A duração máxima da expiração é de seis meses a partir do dia em que você criou ou editou sua lista.
 
-Dentro desse período, você pode alterar e atualizar a data de expiração repetidamente. Essa data de expiração se aplica a todos os códigos adicionados a essa lista. Após a expiração, os códigos são excluídos do sistema Braze, e todas as mensagens que chamem o trecho de código dessa lista não serão enviadas.
+Dentro desse período, você pode alterar e atualizar a data de expiração repetidamente. Essa data de expiração se aplica a todos os códigos adicionados a essa lista. Após a expiração, os códigos são excluídos do sistema Braze e todas as mensagens que chamarem o trecho de código dessa lista não serão enviadas.
 
 ![As configurações de expiração da lista indicam que todos os códigos restantes expirarão em 30 de abril de 2025 às 12 horas.]({% image_buster /assets/img/promocodes/promocode4.png %}){: style="max-width:80%"}
 
@@ -55,7 +55,7 @@ Certifique-se de que seu arquivo CSV siga estas diretrizes:
 Você pode usar nossa integração embutida com [Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) ou [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) para criar e exportar códigos de promoção.
 
 {% alert important %}
-O tamanho máximo do arquivo é 100 MB e o tamanho máximo da lista é 20MM de códigos não utilizados. Se você descobrir que foi feito upload do arquivo errado, faça upload de um novo arquivo para substituir o anterior.
+O tamanho máximo do arquivo é de 100 MB e o tamanho máximo da lista é de 20 milhões de códigos não utilizados. Se você descobrir que foi feito upload do arquivo errado, faça upload de um novo arquivo para substituir o anterior.
 {% endalert %}
 
 1. Após o fazer upload ser concluído, selecione **Salvar Lista** para salvar todos os detalhes e códigos que você acabou de inserir.

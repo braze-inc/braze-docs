@@ -55,7 +55,7 @@ mParticle will create a single custom attribute called `SegmentMembership`. The 
 
 For example, if an mParticle audience "Ibiza dreamers" has an audience ID of "11036", you can segment these users with the filter `SegmentMembership` — `matches regex` — `11036`.
 
-While this is the default option in mParticle, most Braze users opt to use [single array attributes](#array) for the filtering experience when creating segments in Braze.
+While this is the default option in mParticle, most company users opt to use [single array attributes](#array) for the filtering experience when creating segments in Braze.
 
 {% alert important %}
 This solution is not recommended if you have more than a few audiences because custom attributes can be up to 255 characters long, so you will not be able to store dozens or hundreds of audiences on a user profile using this method. If you have a large number of cohorts per user, we strongly recommend the "one attribute per segment" configuration.

@@ -22,7 +22,7 @@ Braze calcula o horário de envio ideal com base em uma análise estatística da
 
 Por exemplo, Sam pode abrir seus e-mails pela manhã regularmente, mas ela abre seu app e interage com as notificações à noite. Isso significa que Sam receberia uma campanha de e-mail com Intelligent Timing pela manhã, enquanto ela receberia campanhas com notificações por push à noite, quando é mais provável que ela se envolva.
 
-Se um usuário não tiver dados de engajamento suficientes para que o Braze calcule o tempo de envio ideal, você poderá especificar um tempo de fallback.
+Se um usuário não tiver dados de engajamento relevantes para que o Braze calcule o tempo de envio ideal, você poderá especificar um tempo de fallback.
 
 ## Casos de uso
 
@@ -43,7 +43,7 @@ Esta seção descreve como configurar o Intelligent Timing para suas campanhas e
 3. Em **Opções de Agendamento Baseado no Tempo**, selecione **Intelligent Timing**.
 4. Defina a frequência de entrada. Para envios únicos, selecione **Once (Uma vez** ) e selecione uma data de envio. Para envios recorrentes, selecione **Daily**, **Weekly** ou **Monthly** e configure as opções de recorrência. Consulte as [limitações](#limitations) para obter mais orientações.
 5. Opcionalmente, configure [o Horário de silêncio](#quiet-hours).
-6. Especifique um [prazo de fallback](#campaign-fallback). Esta é a hora em que a mensagem será enviada se o perfil de um usuário não tiver dados suficientes para calcular um horário ideal.
+6. Especifique um [prazo de fallback](#campaign-fallback). É nesse momento que a mensagem será enviada se o perfil de um usuário não tiver nenhum evento relevante para calcular um horário ideal.
 
 ![Tela de programação de campanha mostrando o Intelligent Timing com configurações de horário de fallback e horário de silêncio]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
 
@@ -108,7 +108,7 @@ Ao usar o Intelligent Timing, recomendamos programar o horário de envio da vari
 
 Opcionalmente, você pode optar por limitar a janela de entrega. Isso pode ser útil se sua campanha estiver relacionada a um evento, venda ou promoção específica, mas geralmente não é recomendado quando se usa o Intelligent Timing. Para saber mais, consulte as [limitações](#limitations).
 
-Quando especificado, o Braze usa apenas os dados de engajamento dentro dessa janela para determinar o tempo de entrega ideal para o usuário. Se não houver dados de engajamento suficientes dentro dessa janela, a mensagem será enviada em seu horário de fallback definido.
+Quando especificado, o Braze usa apenas os dados de engajamento dentro dessa janela para determinar o tempo de entrega ideal para o usuário. Se não houver nenhum evento relevante dentro dessa janela, a mensagem será enviada no horário de fallback definido.
 
 Para definir uma janela de entrega:
 
@@ -119,7 +119,7 @@ Para definir uma janela de entrega:
 
 ### Etapa 4: Escolha um horário de fallback {#campaign-fallback}
 
-Escolha um tempo de fallback para usar se o perfil de um usuário não tiver dados suficientes para calcular um tempo de entrega ideal.
+Escolha um tempo fallback para usar se o perfil de um usuário não tiver nenhum evento relevante para calcular um tempo de entrega ideal.
 
 ![Agendando uma campanha com Intelligent Timing]({% image_buster /assets/img/intelligent_timing_1.png %})
 
@@ -133,11 +133,11 @@ Para ver uma estimativa de quantos usuários receberão a mensagem em cada hora 
 2. Na seção **Prévia dos horários de entrega para** (que aparece em ambos os passos de Públicos-alvos e Agendar Entrega), selecione seu canal.
 3. Selecione **Atualizar dados**.
 
-![Exemplo de prévia dos prazos de entrega para o Android Push.]({% image_buster /assets/img/intel-timing-preview.png %})
+![Exemplo de prévia dos tempos de entrega para o Android Push.]({% image_buster /assets/img/intel-timing-preview.png %})
 
 Sempre que você alterar qualquer configuração sobre Intelligent Timing ou seu público de campanha, atualize os dados novamente para visualizar um gráfico atualizado.
 
-O gráfico mostra os usuários que tinham dados suficientes para calcular um tempo ótimo em azul e os usuários que usarão o tempo fallback em vermelho. Use os filtros de cálculo para ajustar a {prévia} para uma visão mais granular de cada grupo de usuários.
+O gráfico mostra os usuários que tiveram eventos relevantes para calcular um tempo ideal em azul e os usuários que usarão o tempo de fallback em vermelho. Use os filtros de cálculo para ajustar a {prévia} para uma visão mais granular de cada grupo de usuários.
 {% endtab %}
 
 {% tab Canvas %}
@@ -146,11 +146,11 @@ O gráfico mostra os usuários que tinham dados suficientes para calcular um tem
 
 Em seu Canvas, adicione uma [etapa de Mensagem]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), acesse **Configurações de entrega** e selecione **Usar Intelligent Timing**.
 
-As mensagens serão enviadas aos usuários que entraram na etapa naquele dia em seu melhor horário local. No entanto, se o horário ideal já tiver passado naquele dia, ele será entregue naquele horário no dia seguinte. Etapas de mensagens que têm como alvo vários canais podem enviar ou tentar enviar mensagens em horários diferentes para canais diferentes. Quando a primeira mensagem em uma etapa de Mensagem tenta enviar, todos os usuários são avançados automaticamente.
+As mensagens serão enviadas aos usuários que entraram na etapa naquele dia em seu fuso local ideal. No entanto, se o horário ideal já tiver passado nesse dia, ele será entregue nesse horário no dia seguinte. Etapas de mensagens que têm como alvo vários canais podem enviar ou tentar enviar mensagens em horários diferentes para canais diferentes. Quando a primeira mensagem em uma etapa de Mensagem tenta enviar, todos os usuários são avançados automaticamente.
 
 ### Etapa 2: Escolha um horário de fallback
 
-Escolha um horário de fallback para a mensagem a ser enviada aos usuários do seu público que não têm dados de engajamento suficientes para que o Braze calcule um horário de envio ideal. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
+Escolha um horário de fallback para a mensagem a ser enviada aos usuários do seu público que não têm dados de engajamento relevantes para que o Braze calcule um horário de envio ideal. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
 
 ### Etapa 4: Adicionar uma etapa de postergação
 
@@ -190,7 +190,7 @@ No entanto, Intelligent Timing está programado para entregar às 14h, o que já
 
 ### Prévia do gráfico mostrando poucos usuários com horários ideais
 
-Braze precisa de uma certa quantidade de dados de engajamento para fazer uma boa estimativa. Se não houver dados de sessão suficientes ou se os usuários segmentados tiverem poucos ou nenhum clique ou abertura (como novos usuários), a Braze usará o tempo de fallback padrão. Dependendo da sua configuração, isso pode ser o tempo de app mais popular ou um tempo de fallback personalizado.
+Se não houver nenhum evento relevante para um usuário (por exemplo, novos usuários com pouco ou nenhum engajamento), o Braze usará a configuração de fallback configurada - seu horário de fallback personalizado ou o horário mais popular de uso do app entre todos os usuários.
 
 ### Impacto do fuso horário na entrega do Intelligent Timing
 
@@ -238,9 +238,9 @@ Não, as [Aberturas por máquina]({{site.baseurl}}/user_guide/data/report_metric
 
 O Intelligent Timing programa mensagens durante a "hora mais engajada" de cada usuário com base em seus inícios de sessão e eventos de abertura de mensagens. Dentro dessa hora, o tempo da mensagem é arredondado para o minuto mais próximo de cinco. Por exemplo, se o tempo ideal de um usuário for calculado como 16:58, a mensagem será programada para 17:00. Pode haver pequenos atrasos na entrega devido à atividade do sistema durante períodos de alta demanda.
 
-#### Quais são os cálculos de fallback se não houver dados suficientes?
+#### Quais são os cálculos de fallback se não houver eventos relevantes?
 
-Se não houver dados disponíveis para um usuário, o Intelligent Timing usará o tempo de fallback nas configurações de mensagem. 
+Se não houver eventos relevantes para um usuário, o Intelligent Timing usará a configuração de fallback configurada nas definições de mensagem - um horário de fallback personalizado ou o horário mais usado para usar o app entre todos os usuários. 
 
 ### Campanhas
 
@@ -250,7 +250,7 @@ A Braze calcula o horário ideal à meia-noite no horário de Samoa, um dos prim
 
 #### Por que minha campanha Intelligent Timing está mostrando pouco ou nenhum envio?
 
-A Braze precisa de um número básico de pontos de dados para fazer uma boa estimativa. Se não houver dados de sessão suficientes ou se os usuários direcionados tiverem poucos ou nenhum clique ou abertura de e-mail (como novos usuários), o Intelligent Timing poderá usar como padrão a hora mais popular do espaço de trabalho naquele dia da semana. Se não houver informações suficientes sobre o espaço de trabalho, voltaremos ao horário padrão de 17 horas. Você também pode optar por definir um tempo de fallback específico.
+Se não houver nenhum evento de engajamento relevante para um usuário (por exemplo, novos usuários com poucos ou nenhum clique ou abertura), o Intelligent Timing usará a configuração de fallback configurada - seu horário de fallback personalizado ou o horário mais popular para usar o app entre todos os usuários.
 
 #### Por que minha campanha do Intelligent Timing está sendo enviada após a data programada?
 
@@ -279,7 +279,7 @@ Se o horário ideal determinado cair dentro dos Horários de Silêncio, o Braze 
 
 #### Posso usar o Intelligent Timing e o limite de frequência?
 
-O limite de frequência pode ser usado em uma campanha que utiliza Intelligent Timing. No entanto, a natureza do limite de frequência significa que alguns usuários podem receber sua mensagem em um horário menos que ideal, particularmente se um grande número de usuários em relação ao tamanho do limite de frequência estiver agendado para o horário de fallback devido à falta de dados. 
+O limite de frequência pode ser usado em uma campanha que utiliza Intelligent Timing. No entanto, a natureza do limite de frequência significa que alguns usuários podem receber suas mensagens em um horário abaixo do ideal, principalmente se um grande número de usuários em relação ao tamanho do limite de frequência for agendado no horário de fallback porque não têm eventos relevantes. 
 
 Recomendamos usar o limite de frequência em uma campanha de Intelligent Timing apenas quando houver requisitos técnicos que devem ser atendidos usando o limite de frequência.
 
@@ -300,6 +300,3 @@ Sim, as aberturas por máquina são filtradas pelo Intelligent Timing, de modo q
 #### Como posso garantir que o Intelligent Timing funcione da melhor forma possível?
 
 Intelligent Timing usa o histórico individual de engajamento com mensagens de cada usuário em qualquer horário que eles receberam mensagens. Antes de usar o Intelligent Timing, certifique-se de ter enviado mensagens aos usuários em diferentes momentos do dia. Dessa forma, você pode "amostrar" quando pode ser o melhor horário para cada usuário. A amostragem inadequada de diferentes horários do dia pode fazer com que o Intelligent Timing escolha um horário de envio abaixo do ideal para um usuário.
-
-
-

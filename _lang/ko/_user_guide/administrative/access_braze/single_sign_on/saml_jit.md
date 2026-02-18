@@ -3,13 +3,13 @@ nav_title: SAML Just-in-Time 프로비저닝
 article_title: SAML Just-in-Time 프로비저닝
 page_order: 1
 page_type: tutorial
-description: "이 문서에서는 새로운 대시보드 사용자가 처음 로그인할 때 Braze 계정을 생성할 수 있도록 SAML 즉시 프로비저닝을 구성하는 방법을 안내합니다." 
+description: "이 문서에서는 신규 회사 사용자가 처음 로그인할 때 Braze 계정을 만들 수 있도록 SAML 적시 프로비저닝을 구성하는 방법을 안내합니다." 
 
 ---
 
 # SAML 즉시 프로비저닝 
 
-> Just-in-time 프로비저닝은 [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)와 함께 작동하여 새로운 대시보드 사용자가 처음 로그인할 때 Braze 계정을 생성할 수 있도록 합니다. 따라서 관리자가 새 대시보드 사용자의 계정을 수동으로 만들고, 권한을 선택하고, 워크스페이스에 할당하고, 사용자가 계정을 활성화할 때까지 기다릴 필요가 없습니다.
+> 적시 프로비저닝은 [SAML SSO와]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/) 함께 작동하여 신규 회사 사용자가 처음 로그인할 때 Braze 계정을 만들 수 있도록 합니다. 따라서 관리자가 새 회사 사용자의 계정을 수동으로 만들고, 권한을 선택하고, 워크스페이스에 할당하고, 사용자가 계정을 활성화할 때까지 기다릴 필요가 없습니다.
 
 보안 조치로 SAML 적시 프로비저닝(JITP)은 회사에 이미 존재하는 이메일 도메인을 가진 사용자에 대해서만 작동합니다. JITP는 회사에 이미 확인된 가장이 아닌 개발자가 한 명 이상 있는 도메인에만 사용할 수 있습니다. 
 
@@ -27,8 +27,8 @@ Braze 관리자에게 다음 작업을 수행하도록 하십시오:
 
 1. **설정** > **관리자 설정** > **보안 설정으로** 이동합니다.
 2. **SAML SSO** 섹션에서 **자동 사용자 프로비저닝** 옵션을 토글합니다.
-3. 기본값 작업 공간을 선택하여 새 대시보드 사용자를 추가하십시오.
-4. 새 대시보드 사용자에게 할당할 기본 권한 세트를 선택합니다. 사용자 권한 설정에 대해 알아보려면 [사용자 권한 설정]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)을 참조하세요.
+3. 새 회사 사용자를 추가할 기본값 워크스페이스를 선택합니다.
+4. 해당 새 회사 사용자에게 할당할 기본값 권한 집합을 선택합니다. 사용자 권한 설정에 대해 알아보려면 [사용자 권한 설정]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)을 참조하세요.
 6. 페이지 하단에서 **저장 변경 사항**을 선택하십시오
 7. SSO 제공자의 설정에서 Braze 액세스가 필요한 모든 사용자를 SSO 제공자의 디렉토리에 추가하세요.
 8. 사용자가 첫 로그인을 위해 IdP 포털을 통해 Braze에 액세스하도록 안내하세요. 이후에는 향후 로그인을 위한 SAML 싱글 사인온 버튼이 표시됩니다.

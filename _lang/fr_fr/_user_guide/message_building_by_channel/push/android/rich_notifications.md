@@ -20,8 +20,7 @@ tool:
 
 Avant de créer une notification push riche pour Android, notez les détails suivants :
 
-- Les notifications riches Android ne sont pas disponibles lors de la création d'une campagne de notification push rapide.
-- Les images de notification étendue Android doivent avoir un rapport 2:1, mais n’ont pas de limite de taille.
+- Les images de notification étendues pour Android doivent avoir un rapport de 2:1, mais n'ont pas de limite de taille.
 - Android permet également de définir une image séparée pour la vue de notification standard. Voici les dimensions recommandées pour les images : 
   - **Petites :** 512x256
   - **Intermédiaires :** 1024x512 
@@ -42,19 +41,18 @@ Suivez les étapes pour [créer une campagne]({{site.baseurl}}/user_guide/messag
 
 ### Étape 2 : Ajouter une légende
 
-Ajoutez le **texte récapitulatif/la légende de l'image** que vous souhaitez afficher avant l'image dans la notification.
+Ajoutez le **texte du résumé** que vous souhaitez afficher avant l'image dans la notification.
 
-![La section de l'image de notification étendue où vous pouvez ajouter une image ou entrer l'URL d'une image.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
+![Une notification push riche d'une app de nourriture pour animaux appelée Dog indiquant qu'il est temps de commander plus de nourriture pour spot avec un texte récapitulatif.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### Étape 3 : Ajouter des médias
 
-Ajoutez votre image dans le champ **Image de la notification élargie** dans le compositeur du message. Les images peuvent être téléchargées directement via le tableau de bord ou en spécifiant une URL pour le contenu hébergé ailleurs.
+Ajoutez votre image dans le champ **Image de notification Android** dans le compositeur du message. Les images peuvent être téléchargées directement via le tableau de bord ou en spécifiant une URL pour le contenu hébergé ailleurs.
 
 Pour plus d'informations sur les images prises en charge, consultez la rubrique [Spécifications des images.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push)
 
-![Un utilisateur reçoit une notification push pour iOS avec pour titre "Bonjour" et pour texte "Merci d'avoir adhéré à notre programme de fidélité !".]({% image_buster /assets/img_archive/android_rich_image.png %})
+![La section de l'image de notification Android où vous pouvez ajouter une image ou entrer une URL d'image.]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### Étape 4 : Continuer à créer votre campagne
 
 Une fois que le contenu de votre notification enrichie est téléchargé dans le tableau de bord, vous pouvez continuer à [planifier votre campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
-

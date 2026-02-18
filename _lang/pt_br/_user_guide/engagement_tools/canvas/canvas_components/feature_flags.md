@@ -27,6 +27,8 @@ Quando um Canva é interrompido, arquivado ou uma etapa é removida, qualquer us
 
 As propriedades em uma etapa do Canva podem ser alteradas após o lançamento e mesmo depois que o usuário passar pela etapa. Os usuários sempre receberão uma versão dinâmica e em tempo real do sinalizador de recurso, em vez da versão antiga, salva anteriormente.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## Sobregravação de propriedades
 
 Ao criar um sinalizador de recurso, você especifica as propriedades padrão. Ao configurar uma etapa do Canva do sinalizador de recurso, é possível manter os valores padrão ou substituir os valores para os usuários que entrarem nessa etapa.
@@ -40,4 +42,3 @@ Acesse **Envio de mensagens** > **Feature Flags** para editar, adicionar ou remo
 O canva e a rolagem do Feature Flag (arrastar o controle deslizante) podem funcionar independentemente uma da outra. Uma advertência importante é que a entrada em uma etapa do Canva substituirá qualquer configuração de distribuição padrão. Isso significa que, se um usuário não se qualificar para um sinalizador de recurso, uma etapa do Canva poderá ativar o recurso para esse usuário.
 
 Da mesma forma, se um usuário se qualificar para a implementação de um sinalizador de recurso com determinadas propriedades, se ele também entrar na etapa do Canva, receberá todos os valores substituídos dessa etapa do Canvas.
-

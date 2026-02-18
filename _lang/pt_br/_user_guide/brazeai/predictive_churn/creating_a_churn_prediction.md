@@ -34,7 +34,7 @@ Lembre-se de que não é necessário explicar quais comportamentos podem precede
 
 #### Janela de churn
 
-A janela de churn é o período em que a atividade de um usuário atende aos critérios para churn. Você pode configurá-la por até 60 dias, dependendo dos dados disponíveis. Esta janela é usada para puxar dados históricos para treinar sua previsão. Uma vez que a previsão é construída, você verá se havia dados suficientes para resultados precisos.
+A janela de churn é o período em que a atividade de um usuário atende aos critérios para churn. Você pode configurá-la para até 60 dias, dependendo dos dados disponíveis. Esta janela é usada para puxar dados históricos para treinar sua previsão. Uma vez que a previsão é construída, você verá se havia dados suficientes para resultados precisos.
 
 Após a construção da previsão e os usuários receberem pontuações, o _Score de Risco de Churn_ mostra quão provável é que um usuário churne dentro do período que você definiu na janela de churn. 
 
@@ -45,14 +45,14 @@ Aqui está um exemplo de uma definição simples baseada em sessões de lapso no
 Para esse caso, selecionamos `do not` e `start a session`. Você pode combinar outros filtros com `AND` e `OR` conforme achar adequado para criar a definição de que precisa. Interessado em algumas definições potenciais de churn a serem consideradas? Você pode encontrar alguma inspiração na seção a seguir sobre [Definições de churn de amostra](#sample-definitions).
 
 {% alert note %}
-Para `do`, assumimos que os usuários ativos não tomaram a ação que você especifica para esta linha antes de se tornarem churned. A realização da ação faz com que eles se tornem com churn. <br><br>Para `do not`, consideramos usuários ativos aqueles que realizaram essa ação nos dias anteriores e depois pararam. <br><br>**Exemplo:** Se churn é definido como "não comprou nos últimos 60 dias", consideramos usuários ativos aqueles que compraram nos últimos 60 dias. Como resultado, qualquer um que não fez uma compra nos últimos 60 dias não é considerado um usuário ativo. Isso significa que um público de churn criado a partir dessa definição de churn incluiria apenas usuários que compraram nos últimos 60 dias. Isso pode fazer com que o público preditivo de churn resultante pareça significativamente menor do que a população original— a maioria dos usuários em um espaço de trabalho pode já atender à definição de churned e, portanto, não estar ativa na previsão de churn.
+Para `do`, assumimos que os usuários ativos não tomaram a ação que você especifica para esta linha antes de se tornarem churned. A realização da ação faz com que eles se tornem com churn. <br><br>Para `do not`, consideramos usuários ativos aqueles que realizaram essa ação nos dias anteriores e depois pararam. <br><br>**Exemplo:** Se churn é definido como "não comprou nos últimos 60 dias", consideramos usuários ativos aqueles que compraram nos últimos 60 dias. Como resultado, qualquer um que não fez uma compra nos últimos 60 dias não é considerado um usuário ativo. Isso significa que um público de churn criado a partir dessa definição de churn incluiria apenas usuários que compraram nos últimos 60 dias. Isso pode fazer com que o público preditivo de churn resultante pareça significativamente menor do que a população original— a maioria dos usuários em um espaço de trabalho pode já atender à definição de churn e, portanto, não estar ativa na previsão de churn.
 {% endalert %}
 
 Abaixo da definição, você verá estimativas de quantos usuários (no passado, que churnaram e que não churnaram de acordo com sua definição) estão disponíveis. Você também verá os valores mínimos necessários. O Braze deve ter esse número mínimo de usuários disponíveis nos dados históricos para que a previsão tenha dados suficientes para aprender.
 
 ## Etapa 3: Filtrar seu público de previsão
 
-Seu público de previsão é o grupo de usuários para os quais você deseja prever o risco de churn. O público de previsão define o grupo de usuários que o modelo de machine learning analisa para aprender com o passado. Por padrão, isso está definido como **Todos os Usuários**, o que significa que esta previsão criará pontuações de risco de churn para todos os seus usuários ativos (consulte a nota anterior para saber quem é considerado ativo para um modelo de churn).
+Seu público de previsão é o grupo de usuários para os quais você deseja prever o risco de churn. O público de previsão define o grupo de usuários que o modelo de machine learning analisa para aprender com o passado. Por padrão, isso é definido como **Todos os Usuários**, o que significa que esta previsão criará pontuações de risco de churn para todos os seus usuários ativos (consulte a nota anterior para saber quem é considerado ativo para um modelo de churn).
 
 Dependendo do seu caso de uso, você pode querer usar filtros para especificar os usuários que deseja avaliar para o modelo. Para fazer isso, selecione **Definir meu próprio público de previsão** e escolha seus filtros de público. Por exemplo, se você é um aplicativo de viagem por aplicativo com motoristas e passageiros em sua base de usuários, e está construindo um modelo de churn para passageiros, você vai querer filtrar seu público de previsão apenas para passageiros. Tenha em mente que muitos casos de uso não exigem que você selecione um público de previsão específico. Por exemplo, se seu caso de uso é direcionar usuários na região da UE que são mais propensos a churn, você pode executar seu modelo em todos os usuários e, em seguida, simplesmente incluir um filtro para a região da UE no segmento da campanha.
 
@@ -62,7 +62,7 @@ Braze mostrará o tamanho estimado do seu público de previsão. Se você especi
 O público da previsão não pode exceder 100 milhões de usuários.
 {% endalert %}
 
-Quando a janela de previsão é de 14 dias ou menos, a janela de tempo para filtros que começam com "Último...", como "Último Usado App" e "Última Compra Feita" **não pode exceder a Janela de Churn especificada** na definição de churn. Por exemplo, se sua definição de churn tiver uma janela de 14 dias, a janela de tempo para os filtros "Últimos..." não poderá exceder 14 dias. 
+Quando a janela de previsão é de 14 dias ou menos, a janela de tempo para filtros que começam com "Último...", como "Último Uso do App" e "Última Compra Feita" **não pode exceder a Janela de Churn especificada** na definição de churn. Por exemplo, se sua definição de churn tiver uma janela de 14 dias, a janela de tempo para os filtros "Últimos..." não poderá exceder 14 dias. 
 
 A janela de churn é avaliada olhando para trás no número de dias a partir do dia em que o modelo foi executado pela última vez, então se a janela de churn é de 15 dias e o modelo foi executado pela última vez em 1º de dezembro, o modelo analisa de 16 de novembro a 30 de novembro para entender a atividade do usuário para elegibilidade do público e treinamento.
 
@@ -78,7 +78,7 @@ Assim como na página anterior, o painel inferior mostrará o número estimado d
 
 ## Etapa 4: Escolha a frequência de atualização para a previsão de churn
 
-O modelo de machine learning gerará pontuações de probabilidade de eventos para os usuários, e essas pontuações serão atualizadas com base no cronograma que você selecionar aqui. Você poderá direcionar usuários com base em sua pontuação de probabilidade de eventos. 
+O modelo de machine learning gerará pontuações de probabilidade de eventos para os usuários, e essas pontuações serão atualizadas com base na programação que você selecionar aqui. Você poderá direcionar usuários com base em sua pontuação de probabilidade de eventos. 
 
 Selecione a **frequência máxima de atualizações** que você considera útil. Por exemplo, se for enviar uma promoção semanal para evitar que os usuários desistam, defina a frequência de atualização como **Weekly (Semanal** ) no dia e hora de sua escolha. 
 

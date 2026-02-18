@@ -7,7 +7,7 @@ description: "Este artículo explica cómo almacenar en caché las respuestas de
 
 # Caché de respuestas de contenido conectado
 
-> Las respuestas del contenido conectado pueden almacenarse en caché en diferentes campañas o mensajes (en el mismo espacio de trabajo) para optimizar la velocidad de envío.
+> Las respuestas del Contenido conectado pueden almacenarse en caché en diferentes campañas o mensajes (en el mismo espacio de trabajo) para optimizar la velocidad de envío.
 
 Braze no registra ni almacena permanentemente **los cuerpos de respuesta** del Contenido conectado. Durante la renderización del mensaje, las respuestas pueden retenerse temporalmente (por ejemplo, en memoria y en caché) para que Braze pueda renderizar Liquid y enviar el mensaje.
 
@@ -44,11 +44,11 @@ Estas capas de caché son volátiles y pueden desalojar datos antes del TTL conf
 
 #### Qué cambia cuando utilizas `:no_cache`
 
-Para los puntos finales que no están alojados dentro de la infraestructura Braze, el uso de `:no_cache` impide que el cuerpo de respuesta del Contenido conectado se almacene en Memcached. En estos casos, la respuesta sólo permanece en vivo en la memoria del proceso del trabajador mientras dura el trabajo de renderizado (hasta ~11 minutos). Para los puntos finales que se resuelven a hosts internos de Braze, las respuestas pueden seguir almacenándose en caché, tal como se describe en [Reventar caché](#cache-busting).
+Para los puntos finales que no están alojados dentro de la infraestructura Braze, el uso de `:no_cache` impide que el cuerpo de respuesta del Contenido conectado se almacene en Memcached. En estos casos, la respuesta sólo permanece en vivo en la memoria del proceso del trabajador mientras dura el trabajo de renderizado (hasta ~11 minutos). En el caso de los puntos finales que se resuelven en hosts internos de Braze, las respuestas pueden seguir almacenándose en caché, tal y como se describe en [Reducción de caché](#cache-busting).
 
 #### Donde puede vivir el resultado final renderizado
 
-- **Archivo de mensajes:** Si está habilitado el Archivado de mensajes, Braze puede escribir el mensaje final renderizado en el contenedor de almacenamiento en la nube que hayas configurado. Si tu respuesta de Contenido conectado se incluye en el mensaje renderizado, se incluirá en la copia archivada.
+- **Archivo de mensajes:** Si está habilitado el archivado de mensajes, Braze puede escribir el mensaje final renderizado en el contenedor de almacenamiento en la nube que hayas configurado. Si tu respuesta de Contenido conectado se incluye en el mensaje renderizado, se incluirá en la copia archivada.
 - **Dispositivos de usuario:** Tras la entrega, el contenido del mensaje totalmente renderizado puede persistir en los dispositivos de los usuarios durante un tiempo desconocido.
 - **Tarjetas de contenido:** El contenido renderizado de las tarjetas de contenido se almacena en una base de datos Braze hasta que la tarjeta caduca.
 {% enddetails %}
@@ -77,7 +77,7 @@ El cuerpo de respuesta del Contenido conectado puede ser de hasta 1 MB. Si el cu
 
 ## Tiempo de caché 
 
-El Contenido Conectado guardará en caché el valor que devuelva de los puntos finales GET durante un mínimo de cinco minutos. Si no se especifica un tiempo de caché, el tiempo de caché predeterminado es de cinco minutos.
+El Contenido conectado guardará en caché el valor que devuelva de los puntos finales GET durante un mínimo de cinco minutos. Si no se especifica un tiempo de caché, el tiempo de caché predeterminado es de cinco minutos.
 
 El tiempo de caché del Contenido conectado puede configurarse para que sea más largo con :cache_max_age,, como se muestra en el siguiente ejemplo. El tiempo mínimo de caché es de cinco minutos y el máximo de cuatro horas. Los datos del Contenido conectado se almacenan en caché en memoria utilizando un sistema de caché volátil, como Memcached. 
 

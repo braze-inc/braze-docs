@@ -2,7 +2,7 @@
 nav_title: 결정 분할
 article_title: 결정 분할 
 alias: /decision_split/
-page_order: 2
+page_order: 7
 page_type: reference
 description: "이 참조 문서에서는 캔버스에서 의사 결정 분할을 만들고 사용하는 방법에 대해 설명합니다."
 tool: Canvas
@@ -11,9 +11,9 @@ tool: Canvas
 
 # 결정 분할 
 
-> 캔버스의 의사 결정 분할 구성 요소를 사용하면 사용자에게 개인화된 실시간 경험을 제공할 수 있습니다.
+> 캔버스의 결정 분할 구성 요소를 사용하면 사용자에게 개인화된 실시간 경험을 제공할 수 있습니다.
 
-![푸시가 활성화되지 않은 사용자와 푸시가 활성화된 사용자를 위한 "푸시 사용 가능?"이라는 결정 분할 단계.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
+![푸시가 활성화되지 않은 사용자와 푸시가 활성화된 사용자를 위한 "푸시 사용 가능?"이라는 결정 분할 단계가 있습니다.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 이 구성 요소는 사용자가 쿼리와 일치하는지 여부에 따라 캔버스 분기를 만드는 데 사용할 수 있습니다.
 

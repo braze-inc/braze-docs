@@ -24,14 +24,14 @@ In der folgenden Meta-Dokumentation finden Sie Anleitungen zu Anzeigenamen, Tele
 ## WhatsApp-Produktupdates
 
 ### April 2025: Pause für Marketing Nachrichten an US-Telefonnummern
-*Zuletzt aktualisiert im August 2025*
+*Letztes Update August 2025*
 
 Meta unterbricht die Zustellung aller Marketing Template Nachrichten an Nutzer:innen von WhatsApp, die eine Telefonnummer in den USA haben (eine Nummer, die sich aus einer `+1` Vorwahl und einer US-Vorwahl zusammensetzt). Es gibt keinen aktuellen Zeitplan, wann diese Pause aufgehoben werden soll. 
 
 Jeder Versuch, ein Template an einen Nutzer:innen von WhatsApp mit einer US-Telefonnummer zu senden, führt zu der Fehlermeldung `131049`.
 
 ### März 2025: Nutzerspezifische Werbetemplate-Nachrichtenlimits
-*Zuletzt aktualisiert im August 2025*
+*Letztes Update August 2025*
 
 Meta begrenzt die Anzahl der Marketing Template Nachrichten, die ein Nutzer:innen innerhalb eines bestimmten Zeitraums in allen Unternehmen erhalten kann, und beginnt mit Nachrichten, die mit geringerer Wahrscheinlichkeit gelesen werden. 
 

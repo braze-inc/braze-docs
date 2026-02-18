@@ -28,7 +28,7 @@ Los mensajes modales dentro de la aplicación están diseñados para ajustarse a
 
 Aunque no hay límites en cuanto al número de caracteres de texto que puedes incluir en un mensaje dentro de la aplicación (así como en los botones, el titular, el cuerpo principal y otros), moderamos el número de caracteres de texto que utilizas. Demasiado texto obligará a los usuarios a ampliar y desplazar el mensaje.
 
-Todos los mensajes dentro de la aplicación tienen un tamaño de imagen recomendado de 500 KB, un tamaño de imagen máximo de 5 MB y admiten los tipos de archivo PNG, JPEG y GIF.
+Todos los mensajes dentro de la aplicación tienen un tamaño de imagen recomendado de 500 KB, un tamaño de imagen máximo de 5 MB y admiten los tipos de archivo PNG, JPEG y GIF. Las imágenes WebP no son compatibles con todos los dispositivos o navegadores; te sugerimos que conviertas las imágenes WebP a PNG o JPEG antes de añadirlas a los mensajes dentro de la aplicación.
 
 {% tabs %}
 {% tab Portrait %}
@@ -152,7 +152,7 @@ table td {
 | --- | --- | 
 | Tamaño | 5 MB |
 | Ancho | Cabecera: 600 px<br>Cuerpo: 480 px |
-| Tipos de archivo | PNG, JPEG, GIF |
+| Tipos de archivo | PNG, JPEG, GIF<br><br> La compatibilidad con imágenes WebP varía según el cliente de correo electrónico. Para una reproducción fiable, convierte las imágenes WebP a PNG o JPEG antes de añadirlas a los mensajes de correo electrónico. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Especificaciones del texto | Propiedades máximas recomendadas |

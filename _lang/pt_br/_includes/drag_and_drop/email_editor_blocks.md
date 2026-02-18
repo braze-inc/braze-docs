@@ -112,7 +112,9 @@ Consulte a tabela a seguir para obter detalhes sobre o bloco do editor `Spacer`.
 
 ### Imagem
 
-Consulte a tabela a seguir para obter detalhes sobre o bloco do editor `Image`. Para imagens dinâmicas (imagens com Liquid), você deve definir uma imagem fallback para usar as configurações de largura automática. Para obter especificações de imagem, consulte nossas [especificações de imagem por e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+Consulte a tabela a seguir para obter detalhes sobre o bloco do editor `Image`. Para imagens dinâmicas (imagens com Liquid ou Connected Content), você deve definir uma imagem fallback para usar as configurações de largura automática. Para obter especificações de imagem, consulte nossas [especificações de imagem por e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 | Propriedades | Descrição |
 |---|---|
