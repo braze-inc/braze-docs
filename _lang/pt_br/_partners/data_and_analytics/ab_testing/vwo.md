@@ -43,7 +43,7 @@ Ao integrar o VWO com o Braze, você pode aproveitar os dados de experimentos do
 3. Na janela **Criar Segmento**, insira um nome para o segmento, depois **Criar Segmento**.
 4. No seu segmento recém-criado, selecione **Filtros** > **Adicionar Filtro**, depois escolha **Evento Personalizado** como o tipo de filtro.
 6. No dropdown de filtro, procure por **VWO**.
-7. Selecione a propriedade VWO relevante e especifique o valor necessário.
+7. Selecione a propriedade relevante do VWO e especifique o valor necessário.
 8. Se necessário, configure o número de visitas e o período de tempo. Quando terminar, selecione **Salvar**.
 
    ![Criação de Segmento Braze]({% image_buster /assets/img/vwo/vwo3_braze_segment.png %})
@@ -112,9 +112,9 @@ Se você não estiver vendo dados do VWO no Braze:
 2. Na aba **Rede**, procure por **Braze** para filtrar as chamadas de rede para o Braze.
 3. As chamadas de rede são preenchidas à medida que a página carrega. Você pode recarregar a página para visualizar as chamadas de rede.
 4. Selecione uma chamada de rede para ver mais detalhes.
-5. Acesse a seção **Payload da Solicitação** na aba **Carga Útil**, onde você pode encontrar eventos: que têm nome: **ce**, indicando Evento Personalizado.
-6. Expanda 0: e dados: para ver n: “VWO” (nome do Evento Personalizado) e p: {vwo_campaign_name: “<your vwo campaign name>”, vwo_variation_name: “<variation name>”. Esses indicam que os valores estão sendo enviados pelo VWO para o Braze.
+5. Acesse a seção **Payload da Solicitação** na aba **Carga Útil**, onde você pode encontrar eventos: que tem nome: **ce**, indicando Evento Personalizado.
+6. Expanda 0: e dados: para ver n: “VWO” (nome do Evento Personalizado) e p: {vwo_campaign_name: “<your vwo campaign name>”, vwo_variation_name: “<variation name>”. Isso indica que os valores estão sendo enviados pelo VWO para o Braze.
 
  ![Solução de Problemas do Braze]({% image_buster /assets/img/vwo/vwo5_troubleshooting.png %})
 
-Para suporte adicional, entre em contato com seu gerente de sucesso do cliente do VWO.
+Para suporte adicional, entre em contato com seu gerente de sucesso do cliente da VWO.

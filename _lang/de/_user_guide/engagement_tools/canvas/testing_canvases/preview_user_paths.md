@@ -51,7 +51,7 @@ Wenn Ihre Vorschau den letzten Schritt der User Journey sendet, anstatt abzubrec
 
 Bei geplanten Canvase betritt der Testnutzer:in zur nächsten geplanten Eintrittszeit. Bei aktionsbasierten Canvase mit Startterminen gibt der Testnutzer:in zum Startdatum und zur Startzeit ein. 
 
-Während die Standard-Startzeiten weiterhin gelten, ist die Eintrittszeit in allen Instanzen konfigurierbar, d.h. Sie können ein Datum in der Vergangenheit oder in der Zukunft simulieren. Sie können jedoch nicht vor dem Startdatum oder nach dem Enddatum des Canvas testen.
+Während die Standard-Startzeiten weiterhin gelten, ist die Eintrittszeit in allen Instanzen konfigurierbar, d.h. Sie können ein Datum in der Vergangenheit oder in der Zukunft simulieren. Sie können jedoch keine Tests vor dem Startdatum oder nach dem Enddatum des Canvas durchführen.
 
 Die Schritte "Nachricht" und "Verzögerung" geben den Zeitpunkt an, zu dem der Benutzer die Nachricht weiterleiten oder empfangen würde, ohne dass die Verzögerungen neu konfiguriert werden müssen. Beachten Sie, dass die Schritte zwar anzeigen, ob Intelligentes Timing verwendet wird, diese Vorschau des Benutzerpfads jedoch keine Schätzung für einen Testnutzer:in berechnet.
 
@@ -61,7 +61,7 @@ Bei Canvase mit einem Aktionsauslöser wie "Änderung des Werts eines angepasste
 
 Testnutzer:in nehmen an der Vorschau teil, auch wenn sie im wirklichen Leben nicht teilnahmeberechtigt sind. Wenn sie nicht in Frage kommen, können Sie sehen, warum sie die Kriterien nicht erfüllt haben. Wenn ein Testnutzer:in die Vorschau eintritt, gehen wir davon aus, dass der Testnutzer:in die Targeting-Kriterien passt und die Kriterien zum Auslösen der Aktion erfüllt. Bei einem Canvas, das angepasste Events in den Eingangskriterien verwendet, wird beispielsweise davon ausgegangen, dass der Testnutzer:in den Eingangskriterien das angepasste Event wie erwartet ausgeführt hat. Wenn jedoch dasselbe angepasste Event an anderer Stelle im Canvas verwendet wird (z.B. bei den Ausstiegskriterien), sollten Sie bedenken, wie sich dies auf den Pfad Ihrer Nutzer:innen auswirken könnte.
 
-Ereignisse, API-Trigger, angepasste Attribute und Canvas-Entry-Eigenschaften werden auf der Grundlage des Canvas-Entry angewendet. Der Testlauf simuliert die User Journey, ohne diese Elemente zur Änderung des Benutzerprofils oder des Canvas-Ablaufs anzuwenden. Wenn zum Beispiel beim Test ein angepasstes Attribut als Canvas-Trigger verwendet wird, werden die Triggerkriterien so auf die Nutzervorschau angewendet, **als wäre** die Änderung des angepassten Attributs getriggert worden.
+Ereignisse, API-Auslöser, angepasste Attribute und Canvas-Eingangs-Eigenschaften, von denen angenommen wird, dass sie einen Testbenutzer in das Canvas eintreten lassen, werden im tatsächlichen Benutzerprofil nicht aktualisiert und bleiben auch nicht über den Testlauf hinaus bestehen. Wenn zum Beispiel beim Test ein angepasstes Attribut als Canvas-Trigger verwendet wird, werden die Triggerkriterien so auf die Nutzervorschau angewendet, **als wäre** die Änderung des angepassten Attributs getriggert worden.
 
 ### Betrachtung
 
@@ -105,6 +105,6 @@ In diesem Szenario wird das Canvas so eingerichtet, dass es Nutzer anspricht, di
 
 ![Ein Beispiel für ein Canvas mit einem Nachrichten-Schritt, einem Verzögerungs-Schritt, einem Zielgruppen-Pfad-Schritt und zwei Nachrichten-Schritten.]({% image_buster /assets/img/preview_user_path_example.png %}){:style="max-width:70%"}
 
-Da der Testbenutzer die Zulassungskriterien für den Canvas erfüllt, kann er diesen betreten und die User Journey durchlaufen. Da unser Testnutzer:in jedoch die App am letzten Kalendertag nicht geöffnet hat, setzt er den Weg über "Alle anderen" fort und erhält eine Push-Benachrichtigung, in der steht: "Letzte Chance! Erledigen Sie Ihre erste Aufgabe und erhalten Sie einen exklusiven Bonus."
+Da der Testbenutzer die Zulassungskriterien für den Canvas erfüllt, kann er diesen betreten und die User Journey durchlaufen. Da unser Testnutzer:in jedoch die App seit einem Kalendertag nicht mehr geöffnet hat, setzt er den Weg über "Alle anderen" fort und erhält eine Push-Benachrichtigung, in der steht: "Letzte Chance! Erledigen Sie Ihre erste Aufgabe und erhalten Sie einen exklusiven Bonus."
 
 ![Der Abschnitt "Testergebnisse" zeigt an, dass der Testnutzer:in die Eingabekriterien erfüllt hat, und bietet eine Zusammenfassung seiner Reise, einschließlich der Schritte, die er gesendet wurde.]({% image_buster /assets/img/preview_user_path_results_example.png %})

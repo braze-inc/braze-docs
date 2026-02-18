@@ -22,7 +22,7 @@ The Canvas entry properties object has a maximum size limit of 50 KB.
 This object body contains an example request.
 
 ```json
-"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}
+{"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}}
 ```
 
 {% raw %}

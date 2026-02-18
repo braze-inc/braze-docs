@@ -138,7 +138,7 @@ For the example payload below:
             "deadmau5",
             "Marsh",
             "Enamour"
-        ],
+        ]
     },
     "recommendations": {
         "concerts": [
@@ -159,7 +159,7 @@ For the example payload below:
             "label": "Anjunadeep",
             "release_date": "2023-04-28"
         }
-    },
+    }
 }
 ```
 

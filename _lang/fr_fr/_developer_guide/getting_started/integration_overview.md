@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Mise en route : Présentation de l’intégration
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Démarrage : Présentation de l’intégration
 
 > Cet article donne un aperçu du processus d'onboarding.
 
@@ -126,6 +126,10 @@ Le SDK de Braze fournit deux fonctionnalités essentielles : il collecte et sync
 
 {% alert tip %}
 Lorsqu'il est entièrement intégré à votre application ou à votre site, le SDK de Braze offre un niveau de sophistication marketing entièrement réalisé. Si vous différez l'intégration du SDK de Braze, certaines des fonctionnalités décrites dans la documentation ne seront pas disponibles.
+{% endalert %}
+
+{% alert note %}
+Pour ajouter une couche de sécurité supplémentaire, vous pouvez activer l'[authentification SDK]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) afin d'empêcher les demandes SDK non autorisées. Cette fonctionnalité est disponible sur toutes les principales plateformes, notamment Web, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin) et Expo.
 {% endalert %}
 
 Au cours de l’implémentation du SDK :

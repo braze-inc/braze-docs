@@ -2,7 +2,7 @@
 nav_title: 배너 만들기
 article_title: 배너 만들기
 page_order: 1
-description: "이 참조 문서에서는 Braze 캠페인과 캔버스를 사용하여 배너를 만들고, 작성하고, 구성하고, 전송하는 방법에 대해 설명합니다."
+description: "이 참고 문서에서는 Braze 캠페인과 캔버스를 사용하여 배너를 만들고, 작성하고, 구성하고, 전송하는 방법을 설명합니다."
 tool:
   - Campaigns
 channel:
@@ -70,6 +70,8 @@ channel:
 #### 3.1 단계: 배너 스타일 지정
 
 블록과 행을 캔버스 영역으로 끌어다 놓아 메시지 작성을 시작할 수 있습니다.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 메시지의 배경 속성, 테두리 설정 등을 사용자 지정하려면 **스타일을** 선택합니다. 특정 블록 또는 행에 대해서만 스타일을 사용자 지정하려면 해당 블록 또는 행을 선택하여 변경합니다.
 

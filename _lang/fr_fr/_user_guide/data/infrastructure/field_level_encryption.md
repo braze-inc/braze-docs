@@ -9,7 +9,7 @@ page_type: reference
 
 # Cryptage au niveau du champ de l'identifiant
 
-> Grâce au chiffrement au niveau du champ d'identification, vous pouvez chiffrer de façon fluide/sans heurts les adresses e-mail avec AWS Key Management Service (KMS) afin de minimiser les informations personnelles identifiables (PII) partagées dans Braze. Le chiffrement remplace les données sensibles par du texte chiffré, c'est-à-dire des informations cryptées et non lisibles.
+{% include field_level_encryption_pii_description.md %}
 
 {% alert important %}
 Le cryptage au niveau du champ d'identification est disponible en tant que fonctionnalité supplémentaire. Pour commencer à utiliser le cryptage au niveau du champ d'identification, contactez votre gestionnaire de compte Braze.

@@ -16,7 +16,7 @@ Pour créer un agent efficace :
 - Définissez les dimensions à tester, telles que l'offre, la ligne d'objet, le contenu créatif, le canal ou l'heure d'envoi.
 - Sélectionnez les options pour chaque dimension, par exemple e-mail ou SMS, ou fréquence quotidienne ou hebdomadaire.
 
-![Exemple de diagramme d'un agent de studio décisionnel pour les e-mails de recommandation.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![Exemple de diagramme d'un agent Decisioning Studio pour les e-mails de recommandation.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Exemples d'agents
 
@@ -49,7 +49,7 @@ Avec la conception en main, l'équipe travaillera avec vous pour identifier et c
 
 ### Étape 3 : configurez votre plateforme de distribution
 
-Ensuite, l'équipe des services experts en IA vous aidera à configurer votre plateforme d'automatisation du marketing. Bien que Decisioning Studio fonctionne mieux avec Braze, diverses autres plateformes sont déjà prises en charge. Contactez votre équipe de services experts en IA pour obtenir des ressources supplémentaires.
+Ensuite, l'équipe du service d'experts en intelligence artificielle vous aidera à mettre en place votre plateforme d'engagement client. Bien que le Decisioning Studio fonctionne mieux avec Braze, une variété d'autres plateformes sont prises en charge - contactez votre équipe de service d'experts en intelligence artificielle pour obtenir des ressources supplémentaires.
 
 {% tabs local %}
 {% tab Braze %}

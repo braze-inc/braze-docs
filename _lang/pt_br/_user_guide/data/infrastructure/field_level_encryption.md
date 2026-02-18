@@ -9,7 +9,7 @@ page_type: reference
 
 # Criptografia em nível de campo do identificador
 
-> Usando a criptografia em nível de campo do identificador, é possível criptografar perfeitamente os endereços de e-mail com o AWS Key Management Service (KMS) para minimizar as informações de identificação pessoal (IPI) compartilhadas no Braze. A criptografia substitui dados confidenciais por texto cifrado, que é uma informação criptografada ilegível.
+{% include field_level_encryption_pii_description.md %}
 
 {% alert important %}
 A criptografia em nível de campo do identificador está disponível como um recurso complementar. Para começar a usar a criptografia no nível do campo do identificador, entre em contato com seu gerente de conta Braze.

@@ -44,16 +44,16 @@ Para copiar um Canvas para um espaço de trabalho diferente:
 
 1. Selecione o menu <i class="fa-solid fa-ellipsis-vertical"></i> ao lado do Canvas selecionado.
 2. Selecione **Copiar para espaço de trabalho**. 
-3. Após copiar, revise e teste seu Canva para confirmar que todos os campos funcionam corretamente.
+3. Após copiar, revise e teste seu Canvas para confirmar que todos os campos funcionam corretamente.
 
-Ao copiar um Canva com etapas de Sincronização de Público, as configurações não serão copiadas para o espaço de trabalho de destino, mas as etapas na jornada serão.
+Ao copiar um Canvas com etapas de Sincronização de Público, as configurações não serão copiadas para o espaço de trabalho de destino, mas as etapas na jornada serão.
 
 {% endtab %}
 {% endtabs %}
 
 ## O que é copiado entre espaços de trabalho
 
-Observe que a seguinte não é uma lista abrangente do que é copiado entre espaços de trabalho e o que é omitido. Como uma boa prática, verifique os detalhes da campanha e do Canva e teste para confirmar que sua mensagem funciona como esperado.
+Observe que a seguinte não é uma lista abrangente do que é copiado entre espaços de trabalho e o que é omitido. Como uma boa prática, verifique os detalhes da campanha e do Canvas e teste para confirmar que sua mensagem funciona como esperado.
 
 ### Informações
 
@@ -68,8 +68,8 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Comportamentos de conversão (aninhados) | Aprovações | 
 | Configurações de tempo de silêncio | Cronograma de disparo | 
 | Configurações de limitação de frequência | Resumos de campanhas | 
-| Estado de inscrição do destinatário |  | 
-| Agenda recorrente |  | 
+| Estado de inscrição do destinatário | Filtros | 
+| Cronograma recorrente |  | 
 | É Transacional |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -83,9 +83,9 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Ações (aninhadas) | Segmentos | 
 | Comportamentos de conversão (aninhados) | Aprovações | 
 | Configurações de tempo de silêncio | Cronograma de disparo | 
-| Configurações de limitação de frequência | Resumos de Canva | 
-| Estado de inscrição do destinatário |  | 
-| Agenda recorrente |  | 
+| Configurações de limitação de frequência | Resumos de Canvas | 
+| Estado de inscrição do destinatário | Filtros | 
+| Cronograma recorrente |  | 
 | É Transacional |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -111,7 +111,7 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Copiado | Omitido |
 |---|---|
 | Tipo de comportamento | IDs de espaços de trabalho |
-| Interação do Canva |  ID do canva | 
+| Interação do Canvas |  ID do canva | 
 | Nome do evento personalizado |  | 
 | Nome do produto |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -138,7 +138,7 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Copiado | Omitido |
 |---|---|
 | Tipo de comportamento | IDs de espaços de trabalho |
-| Interação do Canva |  ID do canva | 
+| Interação do Canvas |  ID do canva | 
 | Nome do evento personalizado |  | 
 | Nome do produto |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -319,7 +319,7 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 
 ## Copiando mensagens que contêm Liquid
 
-Referências Liquid dentro dos corpos das mensagens são copiadas para o espaço de trabalho de destino, mas as referências podem não funcionar como esperado. Isso significa que se um Canva do Espaço de Trabalho A for copiado para o Espaço de Trabalho B, então o Espaço de Trabalho B não pode referenciar os detalhes do Espaço de Trabalho A, incluindo referências Liquid. Por exemplo, campos como ações de disparar e filtros de público não são copiados.
+Referências Liquid dentro dos corpos das mensagens são copiadas para o espaço de trabalho de destino, mas as referências podem não funcionar como esperado. Isso significa que se um Canvas do Espaço de Trabalho A for copiado para o Espaço de Trabalho B, então o Espaço de Trabalho B não pode referenciar os detalhes do Espaço de Trabalho A, incluindo referências Liquid. Por exemplo, campos como ações de disparar e filtros de público não são copiados.
 
 Mantenha o controle das seguintes referências Liquid com dependências ao copiar campanhas e Canvases entre espaços de trabalho:
 
@@ -334,9 +334,9 @@ Mantenha o controle das seguintes referências Liquid com dependências ao copia
 
 ## Copiando mensagens com feature flags
 
-Para copiar uma campanha de feature flag e um Canva com uma etapa de Feature Flag entre espaços de trabalho, certifique-se de que o espaço de trabalho de destino tenha um [experimento de feature flag]({{site.baseurl}}/developer_guide/feature_flags/experiments) configurado com um ID que corresponda ao feature flag referenciado na campanha original ou à etapa de Feature Flag referenciada no Canva original.
+Para copiar uma campanha de feature flag e um Canvas com uma etapa de Feature Flag entre espaços de trabalho, certifique-se de que o espaço de trabalho de destino tenha um [experimento de feature flag]({{site.baseurl}}/developer_guide/feature_flags/experiments) configurado com um ID que corresponda ao feature flag referenciado na campanha original ou à etapa de Feature Flag referenciada no Canvas original.
 
-Se você copiar uma campanha ou Canva que tenha uma etapa de Feature Flag com um ID de feature flag que não existe no espaço de trabalho de destino, a etapa de Feature Flag será copiada, mas seu conteúdo não será.
+Se você copiar uma campanha ou Canvas que tenha uma etapa de Feature Flag com um ID de feature flag que não existe no espaço de trabalho de destino, a etapa de Feature Flag será copiada, mas seu conteúdo não será.
 
 ## Copiando mensagens com Blocos de Conteúdo
 

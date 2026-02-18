@@ -1,7 +1,7 @@
 ---
 nav_title: Operator
 article_title: BrazeAI Operator
-page_order: 0.7
+page_order: 8
 alias: /operator/
 description: "Dieser referenzierte Artikel behandelt BrazeAI Operator, einen KI-gestützten Assistenten, der in das Braze-Dashboard integriert ist."
 ---
@@ -48,7 +48,7 @@ Sie können Operator von jeder Seite des Braze-Dashboards aus öffnen.
 ![Das Chat Panel für Operator.]({% image_buster /assets/img/operator/operator_panel.png %})
 
 {% alert tip %}
-Versuchen Sie, das Panel zu maximieren, um es besser lesen zu können, oder es zu minimieren, damit Operator weiterhin verfügbar ist, während Sie weiterarbeiten.  
+Versuchen Sie, das Panel zu maximieren, um es besser lesen zu können, oder zu minimieren, damit Operator weiterhin verfügbar ist, während Sie weiterarbeiten.  
 {% endalert %} 
 
 ## Wie man mit Operator spricht
@@ -66,7 +66,7 @@ Betrachten Sie Operator als ein Gespräch, nicht als eine Suchmaschine. Kurze, n
 
 - **Seien Sie konkret:** Versuchen Sie anstelle von "Erzählen Sie mir von Canvas" lieber "Wie verwende ich Aktions-Pfade in Canvas?".  
 - **Verwenden Sie Nachfassaktionen:** Wenn die erste Antwort nicht das ist, was Sie brauchen, stellen Sie klärende Fragen. Der Operator kann die Antworten verfeinern.
-- **Verlassen Sie sich auf den Kontext:** Der Operator weiß, auf welcher Seite in Braze Sie sich befinden. Öffnen Sie Operator, während Sie sich auf der Seite befinden, mit der Sie arbeiten, um die wichtigsten Ergebnisse zu erhalten.
+- **Verlassen Sie sich auf den Kontext:** Operator weiß, auf welcher Seite Sie sich in Braze befinden. Öffnen Sie Operator, während Sie sich auf der Seite befinden, mit der Sie arbeiten, um die wichtigsten Ergebnisse zu erhalten.
 
 ## Features
 
@@ -85,7 +85,7 @@ Sie können aus diesen GPT-Modellen auswählen, um sie für verschiedene Arten v
 
 ### Seitenbezogener Kontext
 
-Operator versteht die Seite, an der Sie in Braze arbeiten, und kann die Antworten auf der Grundlage dieses Kontexts anpassen. Wenn Sie zum Beispiel Operator öffnen, während Sie ein Canvas erstellen, kann er Schritte vorschlagen oder Anleitungen für das Canvas bereitstellen, ohne dass Sie erklären müssen, wo Sie sich befinden. 
+Operator versteht die Seite, an der Sie in Braze arbeiten, und kann die Antworten auf der Grundlage dieses Kontexts anpassen. Wenn Sie zum Beispiel Operator öffnen, während Sie ein Canvas erstellen, kann es Schritte vorschlagen oder Anleitungen für das Canvas bereitstellen, ohne dass Sie erklären müssen, wo Sie sich befinden. 
 
 ### Vorgeschlagene Souffleure
 

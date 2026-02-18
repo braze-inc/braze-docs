@@ -126,7 +126,7 @@ Sie können einen Dashboard-Link zum Bericht freigeben, indem Sie **Teilen** und
 
 ![Dropdown-Menü "Einen Link freigeben" mit einem Link zum Bericht.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
 
-- **Senden oder planen Sie eine E-Mail:** Senden Sie sofort oder zu einem bestimmten Zeitpunkt eine E-Mail, die einen Download-Link enthält, der nach einer Stunde abläuft. Sie können Empfänger:innen aus den Nutzern:innen des Dashboards auswählen, die in der Dropdown-Liste **E-Mail-Empfänger** aufgeführt sind, oder eine beliebige andere E-Mail-Adresse eingeben.
+- **Senden oder planen Sie eine E-Mail:** Senden Sie sofort oder zu einem bestimmten Zeitpunkt eine E-Mail, die einen Download-Link enthält, der nach einer Stunde abläuft. Sie können Empfänger:innen aus den Nutzern:innen des Unternehmens auswählen, die in der Dropdown-Liste **E-Mail-Empfänger** aufgeführt sind, oder eine beliebige andere E-Mail-Adresse eingeben.
 
 ![Das Fenster "Zeitplan für eine E-Mail" mit Feldern, in denen Sie festlegen können, wie der Bericht formatiert wird, wer ihn erhalten soll und wann er gesendet werden soll.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
 

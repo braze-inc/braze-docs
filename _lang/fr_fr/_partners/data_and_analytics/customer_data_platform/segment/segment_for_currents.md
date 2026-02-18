@@ -49,17 +49,13 @@ Sélectionnez ensuite les événements d'engagement des messages que vous souhai
 
 N'oubliez pas que Braze n'envoie les données d'événements que pour les utilisateurs sans `external_user_id` si l'option **Inclure les événements des utilisateurs anonymes** est cochée.
 
-{% alert important %}
-L'exportation d'utilisateurs anonymes est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Anonymous user export' %}
 
 ![Liste de tous les événements d'engagement de messages disponibles sur la page Segment Currents de Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
 
 Enfin, sélectionnez **Lancer Currents**.
 
-{% alert warning %}
-Si vous avez l'intention de créer plusieurs connecteurs Currents identiques (par exemple, deux connecteurs d'événement d'engagement lié aux messages), ils doivent se trouver dans des espaces de travail différents. Étant donné que l'intégration Segment Currents Braze ne peut pas isoler les événements de différentes applications au sein d’un seul espace de travail, s’ils se trouvent dans un même espace, cela entraînera une déduplication inutile des données et des pertes de données.
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Segment Currents multiple connectors' %}
 
 Pour en savoir plus, consultez la [documentation](https://segment.com/docs/connections/sources/catalog/cloud-apps/braze/) sur les segments.
 

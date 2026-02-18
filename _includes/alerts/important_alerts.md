@@ -98,6 +98,14 @@ If you're participating in the Canvas Context early access, Canvas entry propert
 
 {% endif %}
 
+{% if include.alert == 'Braze Agents beta' %}
+
+{% alert important %}
+This partner appears on your **Technology Partners** page only if you have Braze Agents enabled. Braze Agents are currently in beta. For help getting started, contact your customer success manager.
+{% endalert %}
+
+{% endif %}
+
 {% if include.alert == 'time filter types' %}
 
 {% alert important %}

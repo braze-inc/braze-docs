@@ -159,7 +159,7 @@ Para actualizar el registro de clientes potenciales en Salesforce con el estado 
 
 1. Asigne un nombre a su campaña webhook, como "Salesforce > Actualizar cliente potencial a MQL".
 
-2. Introduzca la URL de su webhook en el formato {% raw %}`https://YOUR_SALESFORCE_INSTANCE.my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`{% endraw %}. El ID de usuario de Braze de {% raw %}`{{$user_id}}}`{% endraw %} debe coincidir con su ID de contacto de Salesforce. Si no, utilice un alias en lugar de {% raw %}`{{$user_id}}}`{% endraw %}.
+2. Introduzca la URL de su webhook en el formato {% raw %}`https://YOUR_SALESFORCE_INSTANCE.my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`{% endraw %}. El ID de usuario de Braze de {% raw %}`{{${user_id}}}`{% endraw %} debe coincidir con su ID de contacto de Salesforce. Si no, utilice un alias en lugar de {% raw %}`{{${user_id}}}`{% endraw %}.
 
 3. Actualice el **método HTTP** a **PATCH**.
 
@@ -182,7 +182,7 @@ Para actualizar el registro de clientes potenciales en Salesforce con el estado 
 
 | Encabezado | Contenido |
 | --- | --- |
-| Autorización | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar un token, [configura una aplicación conectada](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para el flujo de credenciales de cliente OAuth 2.0 y, a continuación, utiliza Contenido conectado para recuperar el portador de Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_a97638e9-a9fb-441c-9749-b5b688d1a3e3/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorización | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar un token, [configura una aplicación conectada](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para el flujo de credenciales de cliente OAuth 2.0 y, a continuación, utiliza Contenido conectado para recuperar el portador de Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_3d3e325a-b4e8-418e-87af-a6b4ff4b3a6c/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 

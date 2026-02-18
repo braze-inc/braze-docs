@@ -317,7 +317,7 @@ The Shopify integration uses [eCommerce recommended events]({{site.baseurl}}/use
        "price": "80.00",
        "fulfillment_status": null
      }
-   ],
+   ]
  }
 }
 ```
@@ -391,9 +391,9 @@ The Shopify integration uses [eCommerce recommended events]({{site.baseurl}}/use
 {% subtab Account login %}
 ```json
 {
-	name: "shopify_account_login",
-	properties: {
-	source: "braze-mock-storefront.myshopify.com"
+	"name": "shopify_account_login",
+	"properties": {
+	"source": "braze-mock-storefront.myshopify.com"
   }
 }
 ```

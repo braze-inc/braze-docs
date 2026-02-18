@@ -34,7 +34,7 @@ Avant de commencer, vous devez disposer des éléments suivants :
 | Prérequis | Description |
 |---|---|
 | DOTS.ECO compte | DOTS.ECO l'accès au compte. |
-| DOTS.ECO titres de compétences | La demande présentée dans cet article nécessite un jeton d'app DOTS.ECO, une clé API et un ID d'attribution. Pour les récupérer, contactez votre gestionnaire de la satisfaction client DOTS.ECO. |
+| DOTS.ECO pouvoirs | La demande présentée dans cet article nécessite un jeton d'app DOTS.ECO, une clé API et un ID d'attribution. Pour les récupérer, contactez votre gestionnaire de la satisfaction client DOTS.ECO. |
 | Clé d'API REST Braze | Une clé API Braze REST avec des autorisations `users.track`. Créez cette clé dans le tableau de bord de Braze sous **Paramètres** > **Clés API**. |
 | Endpoint REST Braze | [L'URL de votre endpoint REST.]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -53,7 +53,7 @@ Utilisez cette étape pour appeler l'API DOTS.ECO via le contenu connecté et st
 
 À l'étape de la **mise à jour de l'utilisateur**, passez à l'**éditeur JSON avancé** et utilisez le contenu connecté pour effectuer une demande POST à l'API du certificat DOTS.ECO.
 
-Utilisez l'étiquette `capture` et une demande de contenu connecté pour appeler l'endpoint de certificat de DOTS.ECO. Enregistrez ensuite la réponse dans le profil utilisateur en tant qu'attributs personnalisés.
+Utilisez l'étiquette `capture` et une demande de contenu connecté pour appeler l'endpoint de certificat de DOTS.ECO. Enregistrez ensuite la réponse dans le profil utilisateur sous forme d'attributs personnalisés.
 
 **Exemple de contenu connecté et de mise à jour par l'utilisateur**  
 {% raw %}

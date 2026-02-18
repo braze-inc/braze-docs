@@ -106,7 +106,7 @@ Este enfoque no requiere pares de valores de cadena de consulta incrustados en l
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 
@@ -120,7 +120,7 @@ Si vuelves a hacer referencia a {%raw%}`${preference_center_url}`{%endraw%} en u
 
 ### ¿Los centros de preferencias admiten varias lenguas?
 
-No. Sin embargo, puedes aprovechar Liquid para escribir el HTML de las páginas personalizadas de adhesión voluntaria y exclusión voluntaria. Si utilizas enlaces dinámicos para administrar las cancelaciones de suscripción, éste es un enlace único. 
+No. Sin embargo, puedes aprovechar Liquid para escribir el HTML de las páginas personalizadas de adhesión voluntaria y exclusión voluntaria. Si utilizas enlaces dinámicos para gestionar las bajas, éste es un enlace único. 
 
 Por ejemplo, si estás haciendo un seguimiento de la tasa de cancelación de suscripciones de los usuarios hispanohablantes, tendrías que utilizar campañas separadas o aprovechar los análisis en torno a Currents (como ver cuándo se da de baja un usuario y comprobar el idioma preferido de ese usuario).
 

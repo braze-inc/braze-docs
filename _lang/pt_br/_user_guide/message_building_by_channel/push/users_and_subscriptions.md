@@ -79,7 +79,7 @@ Você pode atualizar o estado de inscrição de um usuário com a API REST do Br
 
 Há duas maneiras de verificar o estado da inscrição push de um usuário na Braze:
 
-1. **Perfil do Usuário** Você pode acessar perfis de usuários individuais através do painel do Braze na página **[Pesquisa de Usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)**. Depois de encontrar o perfil de um usuário (por meio de endereço de e-mail, número de telefone ou ID de usuário externo), é possível selecionar a guia **Engajamento** para visualizar e ajustar manualmente o estado da inscrição de um usuário.
+1. **Perfil do Usuário** Você pode acessar perfis de usuários individuais através do painel do Braze na página **[Pesquisa de Usuários]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)**. Depois de encontrar o perfil de um usuário (por meio de endereço de e-mail, número de telefone ou ID de usuário externo), é possível selecionar a guia **Engajamento** para visualizar e ajustar manualmente o estado da inscrição de um usuário.
 2. **Exportação da API REST:** Você pode exportar perfis de usuários individuais em formato JSON usando os endpoints de exportação [Usuários por segmento]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) ou [Usuários por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/). A Braze retornará um objeto de tokens por push que contém informações de capacitação por push por dispositivo.
 
 ## Permissão de push
@@ -115,7 +115,7 @@ Push autorizado requer permissão explícita de um usuário antes de enviar qual
 
 Antes do iOS 12 (lançado em 2018), todos os usuários devem fazer a aceitação explícita para receber notificações por push.
 
-No iOS 12, a Apple introduziu [autorização provisória](https://www.braze.com/resources/articles/mastering-provisional-push), permitindo que marcas enviem notificações push silenciosas para o centro de notificações de seus usuários antes que eles optem explicitamente, dando a você a chance de demonstrar o valor de suas mensagens cedo. Consulte a [autorização provisória]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications) para saber mais.
+No iOS 12, a Apple introduziu [autorização provisória](https://www.braze.com/resources/articles/mastering-provisional-push), permitindo que marcas enviem notificações push silenciosas para o centro de notificações de seus usuários antes que eles aceitem explicitamente, dando a você a chance de demonstrar o valor de suas mensagens cedo. Consulte a [autorização provisória]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications) para saber mais.
 
 ### Web
 
@@ -222,7 +222,7 @@ No cenário em que um usuário, que inicialmente fez a aceitação no nível do 
 Nesse cenário, como ainda existirá um token por push em segundo plano, você poderá continuar a enviar notificações por push em segundo plano (silenciosas) com o filtro de segmentação `Background or Foreground Push Enabled = true`.
 
 {% alert note %}
-O iOS não permite que apps interceptem uma notificação push antes que a notificação push seja exibida. Isso significa que os apps (e o Braze) não têm controle sobre se você pode exibir ou ocultar a notificação. Um usuário pode optar por não receber notificações por push de um app nas configurações do dispositivo, mas isso é controlado pelo sistema operacional.
+O iOS não permite que apps interceptem uma notificação push antes que a notificação push seja exibida. Isso significa que os apps (e o Braze) não têm controle sobre se você pode exibir ou ocultar a notificação. Um usuário pode optar por não receber notificações por push para um app nas configurações do dispositivo, mas isso é controlado pelo sistema operacional.
 {% endalert %}
 
 {% endtab %}

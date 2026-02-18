@@ -24,7 +24,7 @@ Es gibt eine Obergrenze von fünf gleichzeitig aktiven Prognosen zur Abwanderung
 
 Auf der Seite **Grundlagen** geben Sie Ihrer neuen Vorhersage einen eindeutigen Namen. Sie können auch eine optionale Beschreibung eingeben, um sich Notizen zu dieser speziellen Vorhersage zu machen.
 
-Wählen Sie **Vorwärts**, um zum nächsten Schritt zu gelangen. Optional können Sie **Jetzt erstellen** auswählen, um alle Standardeinstellungen zu verwenden und zum letzten Schritt der Erstellung überzugehen. Sie haben die Opportunity, die Einstellungen zu überprüfen, bevor Sie mit der Erstellung beginnen. Sie können später zu jedem Schritt zurückkehren, indem Sie ihn in der Fortschrittsanzeige auswählen.
+Wählen Sie **Vorwärts**, um zum nächsten Schritt zu gelangen. Optional können Sie **Jetzt erstellen** auswählen, um alle Standardeinstellungen zu verwenden und zum letzten Schritt der Erstellung überzugehen. Sie haben die Opportunity, die Einstellungen zu überprüfen, bevor Sie mit dem Build-Prozess beginnen. Sie können später zu jedem Schritt zurückkehren, indem Sie ihn in der Fortschrittsanzeige auswählen.
 
 ## Schritt 2: Definieren Sie abwandern
 
@@ -107,7 +107,7 @@ Die Vorhersage wird alle **zwei Wochen automatisch** neu aufgebaut ("retrainiert
 Für die von uns skizzierten Definitionen der Abwanderung gibt es möglicherweise auch entsprechende Definitionen für Prognosen der Zielgruppen:<br>
 - **Sie haben das Abonnement vor mehr als 2 Wochen begonnen ODER Sie haben das Abonnement vor weniger als zwei Wochen begonnen**<br>Vielleicht möchten Sie in diesem Fall 2 Prognosen erstellen und neuen Abonnent:innen dann andere Nachrichten schicken als längerfristigen Abonnent:innen. Sie könnten dies auch als "Erster getätigter Kauf vor mehr als 30 Tagen" definieren.<br>
 - **Deinstallationsprogramme**<br>Sie könnten sich auf Kunden konzentrieren, die in der jüngsten Vergangenheit etwas gekauft oder die App erst kürzlich genutzt haben.<br>
-- **Diejenigen, die Gefahr laufen, nicht zu kaufen, als Definition von Abwandern**<br>Vielleicht möchten Sie sich auf Kund:innen konzentrieren, die in letzter Zeit in Ihrer App gestöbert oder gesucht haben oder sich in letzter Zeit mit Ihrer App beschäftigt haben. Vielleicht kann die richtige Rabattaktion die Abwanderung dieser engagierten Gruppe verhindern.
+- **Diejenigen, die Gefahr laufen, nicht zu kaufen, als Definition von Abwandern**<br>Vielleicht möchten Sie sich auf Kund:innen konzentrieren, die in letzter Zeit in Ihrer App gestöbert oder gesucht haben oder die sich in letzter Zeit mit Ihrer App beschäftigt haben. Vielleicht kann die richtige Rabattaktion die Abwanderung dieser engagierten Gruppe verhindern.
 
 ## Archivierte Vorhersagen
 

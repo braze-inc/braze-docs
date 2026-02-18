@@ -30,7 +30,7 @@ Antes de começar, você precisará concluir o seguinte:
 
 ### Etapa 1: Criar uma nova recomendação
 
-Você pode criar uma recomendação de item de IA a partir de qualquer lugar no dashboard:
+Você pode criar uma recomendação de itens de IA a partir de qualquer lugar no dashboard:
 
 {% tabs local %}
 {% tab From the navigation menu %}
@@ -96,7 +96,7 @@ Se você escolher **Evento personalizado**, selecione seu evento na lista.
 ![O evento personalizado "Compra Concluída" selecionado como a forma como os eventos estão sendo rastreados atualmente.]({% image_buster /assets/img/item_recs_3.png %})
 
 {% alert note %}
-Eventos personalizados devem ter dados suficientes antes de aparecerem na lista de eventos. Se seu evento personalizado não aparecer, pode ser porque o backend do Braze ainda não o processou ou ele carece de dados suficientes para o treinamento do modelo. Recomendações de IA dependem de dados históricos para gerar insights, portanto, eventos recém-criados ou raramente acionados não estarão disponíveis até que mais dados sejam coletados.
+Eventos personalizados devem ter dados suficientes antes de aparecerem na lista de eventos. Se seu evento personalizado não aparecer, pode ser porque o backend do Braze ainda não o processou ou ele não possui dados suficientes para o treinamento do modelo. As recomendações de IA dependem de dados históricos para gerar insights, portanto, eventos recém-criados ou raramente acionados não estarão disponíveis até que mais dados sejam coletados.
 {% endalert %}
 
 ### Etapa 5: Selecione o nome da propriedade correspondente {#property-name}
@@ -302,4 +302,4 @@ Esse evento tem uma propriedade de `"sku": "ADI-RD-8"`, que mapeia o segundo ite
 
 Quando estiver pronto, selecione **Criar recomendação**. Esse processo pode levar de 10 minutos a 36 horas para ser concluído. Você receberá uma atualização por e-mail quando a recomendação for treinada com sucesso ou uma explicação do motivo pelo qual a criação pode ter falhado.
 
-Você pode encontrar a recomendação na página **Previsões**, onde poderá editá-la ou arquivá-la conforme necessário. As recomendações serão automaticamente re-treinadas uma vez por semana (pago) ou mês (grátis).
+Você pode encontrar a recomendação na página **Previsões**, onde poderá editá-la ou arquivá-la conforme necessário. As recomendações serão automaticamente re-treinadas uma vez por semana (pago) ou por mês (grátis).

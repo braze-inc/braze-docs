@@ -23,7 +23,7 @@ Antes de começar, você precisará do seguinte:
 
 ## Casos de uso
 
-A Kameleoon envia eventos personalizados para o Braze para identificar os usuários que participam de campanhas de experimentação e personalização, ativando um direcionamento mais preciso e o envio de mensagens personalizadas.
+A Kameleoon envia eventos personalizados ao Braze para identificar os usuários que participam de campanhas de experimentação e personalização, ativando um direcionamento mais preciso e o envio de mensagens personalizadas.
 
 ## Integração do Kameleoon
 
@@ -78,7 +78,7 @@ Configure a integração no ambiente do sinalizador de recursos na seção **Int
 Depois que o Braze for definido como uma ferramenta de relatório para um experimento, você poderá selecioná-lo (ou desmarcá-lo) na página de resultados do Kameleoon no menu **de configuração do experimento**.
 
 {% alert note %}  
-Essa integração requer uma [implementação híbrida](https://developers.braze-presentation.preview.kameleoon.net/core-concepts/hybrid-experimentation?language=en#sending-exposure-events-to-third-party-analytics) e é compatível apenas com SDKs da Web.
+Essa integração requer uma [implementação híbrida](https://developers.braze-presentation.preview.kameleoon.net/core-concepts/hybrid-experimentation?language=en#sending-exposure-events-to-third-party-analytics) e só é compatível com SDKs da Web.
 {% endalert %}
 
 ![O painel lateral da página de resultados no Kameleoon.]({% image_buster /assets/img/kameleoon/img_8.png %}){: style="max-width:50%;" }
@@ -120,7 +120,7 @@ Antes de poder usar a segmentação de propriedades de eventos, você precisará
          Gostaríamos de ativar a segmentação de propriedades de eventos para eventos enviados de nossa integração com o Kameleoon&lt;>Braze. Aqui estão os detalhes:<br><br>
          - <strong>Nome do evento:</strong> Kameleoon<br>
          - <strong>Propriedades do evento:</strong> <code>kameleoon_campaign_name</code>, <code>kameleoon_variation_name</code><br><br>
-         Por favor, confirme quando as propriedades forem ativadas em nossa conta.<br><br>
+         Confirme quando as propriedades tiverem sido ativadas em nossa conta.<br><br>
          Obrigada.
          </td>
       </tr>

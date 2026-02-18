@@ -23,8 +23,8 @@ Landing page and custom domain availability depends on your Braze package. Conta
 
 Before you can access, create, and publish landing pages, you either need administrator [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) or all the following permissions:
 
-- Access Landing Pages
-- Create Landing Page Drafts
+- View Landing Pages
+- Edit Landing Page Drafts
 - Publish Landing Pages
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}

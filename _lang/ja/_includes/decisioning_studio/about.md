@@ -2,55 +2,63 @@
 
 > BrazeAI Decisioning Studio™ (旧名称 OfferFit by Braze) で、あらゆるビジネス指標を最大化する 1:1 の AI 意思決定を始めましょう!
 
-## BrazeAI Decisioning Studio™ とは
+## BrazeAI Decisioning Studio™とは？
 
-[BrazeAI Decisioning Studio™](https://www.braze.com/product/brazeai-decisioning-studio/) は、AB テストに代わる AI 意思決定であり、すべてをパーソナライズし、あらゆる指標を最大化し、クリックではなく収益の増加を促します。Decisioning Studio を使用すれば、ビジネスの KPI を最適化できます。
+[BrazeAIデシジョニングスタジオ（Decisioning Studio™）は](https://www.braze.com/product/brazeai-decisioning-studio/)、A/Bテストに代わり、すべてをパーソナライズし、あらゆる指標を最大化するデシジョニングエージェントを提供する。
 
 BrazeAI™ の意思決定エージェントが、顧客ごとに最適なアクションを自動的に発見します。BrazeAI™ は、お客様のファーストパーティデータを利用して、クロスセル、アップセル、再購入、リテンション、更新、紹介、ウィンバックなど、幅広いユースケースにおいて、あらゆるビジネス KPI を最大化することができます。
 
-AI エキスパートサービスチームは、BrazeAI Decisioning Studio™ をお客様のビジネスニーズに合わせてカスタマイズします。Decisioning Studio は Braze で最もよく機能しますが、他のさまざまなプラットフォームでもすでにサポートされています。詳しくは、Braze との[面談をご予約ください](https://www.braze.com/get-started/)。
+
+デシジョニング・スタジオの詳細や利用開始については、Brazeに[問い合わせを](https://www.braze.com/get-started/)。
+
+![Decisioning Studioのフィードバックループの概要]({% image_buster /assets/img/decisioning_studio/decisioniong_studio_feedback_loop.png %})
 
 ## 主な機能
 
-- **技術スタックはそのままに、頭脳を追加: **BrazeAI™ は、データシステムとマーケティングオートメーションプラットフォームの間の意思決定レイヤーとしてプラグインします。
+- **技術スタックはそのままに、頭脳を追加: **BrazeAI™は、データシステムとカスタマーエンゲージメントプラットフォームの間の意思決定レイヤーとしてプラグインされる。Decisioning StudioはBrazeで最もよく機能するが、他のさまざまなプラットフォームもサポートしている。 
 - **セグメントではなく、人のための勝者を選択: **すべてのファーストパーティデータを使用して、顧客ごとに最適な 1:1 の意思決定を行います。
 - **すべてをパーソナライズ: **AI 意思決定エージェントが、顧客ごとに、最良のメッセージ、製品、インセンティブ、チャネル、タイミング、頻度を見つけます。
 - **指標の最大化: **クリックが常に収益につながるとは限りません。BrazeAI™ を使って、収益、利益、CLV、またはその他のビジネス KPI を最大化するオファーやインセンティブを選びましょう。
 - **ブラックボックスを開く: **顧客行動の要因に関する深いくインサイトを得るために、AI 意思決定エージェントがどのようにパーソナライズするかを確認します。
+- **専門家が全面的にサポートする：**デシジョニング・スタジオ・プロには、当社のAIデシジョニング・サービス・チームによるサポートが含まれており、デシジョニング・エージェントをお客様のビジネス特有のニーズに合わせて調整する。
 
-## エージェントについて
+## デシジョン・スタジオについて
 
 ### 仕組み
 
-エージェントは、BrazeAI Decisioning Studio™ のカスタム設定であり、特定のビジネス目標を達成するためにパーソナライズされます。
+BrazeAI Decisioning Studio™では、あらゆるビジネス指標を最適化する意思決定エージェントを設計し、展開することができる。 
 
-例えば、初回販売後のフォローアップコンバージョンを増やすために、リピート購入エージェントを構築することができます。Braze でオーディエンスやメッセージを定義すると、Decisioning Studio が毎日実験を行い、顧客ごとに商品のオファー、メッセージのタイミング、頻度などのさまざまな組み合わせを自動的にテストします。時間の経過とともに、BrazeAI™ は何が最も効果的かを学習し、再購入率を最大化するために Braze を通じてパーソナライズされた送信を調整します。
+デシジョニング・スタジオを設定するには、次のようにする：
+- 顧客がエージェントの決定にどのように反応したかを伝えるデータソースを接続する。
+- 意思決定エージェントのアクションを実行するオーケストレーションを設定する
+- どのような結果を最大化したいのか、そのためにエージェントはどのようなアクションを取ることができるのかを定義するために、意思決定エージェントを設計する。
+- 意思決定エージェントを学習させ、継続的に学習させ、ビジネス成果のために最適化させる。
 
-優れたエージェントを作るためには、以下の点が重要です。
+Decisioning Studio Goがセルフサービスのプラットフォームであるのに対し、Decisioning Studio Proには、Brazeの前方展開データサイエンスチームによるAI意思決定サービスサポートが含まれており、ビジネス成果を最大化するためのエージェントの設計と設定をサポートする。[決断スタジオ囲碁vs.詳しくはDecisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro) を参照のこと。
 
-- 収益、コンバージョン、ARPU など、最適化する BrazeAI™ の成功指標を選択する。
-- オファー、件名、クリエイティブ、チャネル、送信時間など、テストするディメンションを定義する。
-- メールと SMS、1 日および 1 週あたりの頻度など、ディメンションごとにオプションを選択する。
+詳細については、[デシジョニング・スタジオ入門を]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/)参照のこと。
 
-### サンプルエージェント
+### 意思決定エージェントvs.BrazeAIエージェント
 
-BrazeAI Decisioning Studio™ で構築できるエージェントの例をいくつかご紹介します。AI の意思決定エージェントは、顧客とのやり取りから学習し、そのインサイトを翌日のアクションに活かします。
+どちらもBrazeAI™を搭載しているが、意思決定エージェントとBrazeエージェントは、マーケティングスタックにおいて異なる目的を果たす。
 
-{% multi_lang_include decisioning_studio/sample_agents.md %}
+**意思決定エージェントは**、キャンペーンの戦略的オーケストレーションである。彼らはキャンペーンレベルで活動し、収益、コンバージョン、ARPUなどのビジネス指標を最大化するために、オファー、チャネル、タイミング、頻度などの次元にわたって継続的に実験を行う。意思決定エージェントは、ウィンバック、クロスセル、更新などのユースケース全体をマネージャーし、個々の顧客に対してどのようなアクションの組み合わせが最適かを時間をかけて学習する。
 
-## API キーの権限について
+**Brazeエージェントは**、個々のキャンバスステップやカタログフィールドに常駐するAI搭載ヘルパーである。大規模な言語モデル（LLM）を使用して、コンテンツ（パーソナライズされた件名やメッセージコピーなど）を生成したり、顧客のコンテキストに基づいてルーティングを決定したり、動的に生成された値でカタログを充実させたりする。Brazeエージェントは、キャンペーン内の特定のタッチポイントにクリエイティビティとパーソナライゼーションをもたらすことを得意としている。
 
-BrazeAI Decisioning Studio™ の統合中に、統合の機能を定義する特定の権限を持つ Braze API キーを作成します。各権限の詳細については、以下の表でご確認ください。
+意思決定エージェントはキャンペーン戦略全体を指揮する指揮者であり、Brazeエージェントはカスタマージャーニーの個々の瞬間に創造性とニュアンスを加える音楽家である。意思決定エージェントが顧客ごとに最適なオファーとチャネルを決定し、Brazeエージェントがその特定のメッセージ用にパーソナライズされたコピーを生成する。
 
-{% alert tip %}
-この情報は、[BrazeAI Decisioning Studio™の統合]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration)ページにも掲載されています。
-{% endalert %}
 
-{% multi_lang_include decisioning_studio/api_key_permissions.md %}
+{% multi_lang_include decisioning_studio/go_vs_pro.md %}
+
+
+### このガイドについて
+
+このガイドでは、まずデシジョンエージェントとは何か、どのように機能するのかを学ぶ。次に、セルフサービスのDecisioning Studio Goを設定し、続いてサービス全般を取り扱うDecisioning Studio Proを設定する。最後に、レポートやインサイトを確認し、意思決定エージェントのパフォーマンスを理解する。
 
 ## 次のステップ
 
-BrazeAI Decisioning Studio™ の詳細が理解できたところで、次のステップに進みましょう。
-
-1. [Decisioning Studio の統合]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration/)
-2. [エージェントの構築]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/building_agents/)
+1. [Decisioning Studioを使い始める]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/)
+2. [Decisioning Studio Goの設定]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
+3. [デシジョニング・スタジオ・プロの設定]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
+4. [レポートとインサイトを見る]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/)

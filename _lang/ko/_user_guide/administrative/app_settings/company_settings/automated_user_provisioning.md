@@ -12,10 +12,12 @@ alias: /scim/automated_user_provisioning/
 
 > Use SCIM provisioning to automatically create and manage Braze users through API. This article walks you through what information to provide, how to generate your SCIM token, and where to find your SCIM API endpoint.
 
+{% include early_access_beta_alert.md feature='SCIM provisioning' %}
+
 ## SCIM 프로비저닝 설정에 액세스
 
-1. Braze 대시보드에서 **설정** > **관리자 설정** > **SCIM 프로비저닝으로** 이동하여 ID 공급자를 추가합니다.
-2. **Braze 프로비저닝** 단계에서 프로비저닝 방법을 선택하고 액세스 설정을 입력합니다.
+1. Braze 대시보드에서 **설정** > **관리자 설정** > **SCIM 프로비저닝으로** 이동한 다음 **SCIM 통합 구성을** 선택합니다.
+2. **Braze 구성** 단계에서 프로비저닝 방법을 선택하고 액세스 설정을 입력합니다.
 
 ![프로비저닝 방법 선택 및 액세스 설정을 위한 섹션이 있는 SCIM 통합을 설정하는 페이지입니다.]({% image_buster /assets/img_archive/scim_braze_config.png %}){: style="max-width:70%;"}
 
@@ -25,29 +27,39 @@ alias: /scim/automated_user_provisioning/
 {% tabs %}
 {% tab Okta - Braze app %}
 
-{% alert important %}
-Okta 통합은 현재 얼리 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Okta integration' %}
+
+Okta에서 SAML SSO를 위해 Braze 앱을 설정한 경우 **Okta - Braze 앱** 옵션을 사용하세요. SSO를 위한 커스텀 앱을 설정하는 경우 [Okta - 커스텀 앱 통합]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/?tab=okta%20-%20custom%20app%20integration#step-1-set-up-scim-provisioning) 탭의 지침을 따르세요.
 
 ## 1단계: SCIM 프로비저닝 설정
 
 ### 1.1단계: SCIM 활성화
 
-1. Okta에서 Braze 앱으로 이동합니다.
-2. **일반** 탭을 선택합니다.
-3. **앱 설정** 섹션에서 **편집을** 선택합니다.
-4. **프로비저닝** 필드에서 **SCIM을** 선택한 다음 **저장을** 선택합니다.
+1. Okta에서 **애플리케이션** > **애플리케이션으로** 이동한 다음 **앱 통합 만들기를** 선택합니다. 로그인 방법으로 **SAML 2.0을** 선택합니다.
+2. 다음 세부 정보(Braze [**IdP 구성** 단계에](#accessing-scim-provisioning-settings) 있음)를 입력하여 커스텀 앱을 만듭니다:
+- 앱 로고
+- SSO URL
+- 오디언스 URL(SP 엔티티 ID)
+3. Select **Finish**.
+4. **일반** 탭을 선택합니다. 
+5. **앱 설정** 섹션에서 **편집을** 선택합니다.
+6. **프로비저닝** 필드에서 **SCIM을** 선택합니다. 
 
-### 1.2단계: SCIM 통합 설정하기
+### 1.2단계: 애플리케이션 가시성 비활성화
+
+1. **애플리케이션 가시성** 필드에서 **사용자에게 애플리케이션 아이콘 표시 안 함** 확인란을 선택합니다. 이렇게 하면 사용자가 SCIM 전용인 앱을 통해 SSO에 액세스할 수 없습니다. 
+2. Select **Save**.
+
+### 1.3단계: SCIM 통합 설정하기
 
 1. **프로비저닝** 탭을 선택합니다.
 2. **설정** > **통합** > **SCIM 연결에서** **편집을** 선택하고 **SCIM 프로비저닝 설정** 페이지의 표에 채워지는 필드 값을 입력합니다.
 
-### 1.3단계: API 자격 증명 테스트
+### 1.4단계: API 자격 증명 테스트
 
 **API 자격 증명 테스트를** 선택합니다. 통합이 성공하여 저장할 수 있으면 확인 메시지가 표시됩니다.
 
-### 1.4단계: 앱에 대해 프로비저닝 활성화
+### 1.5단계: 앱에 프로비저닝 인에이블먼트 사용
 
 1. **프로비저닝** > **설정** > **앱으로** > **앱에 프로비저닝에서** **편집을** 선택합니다.
 2. 다음을 활성화합니다.
@@ -60,15 +72,15 @@ Okta 통합은 현재 얼리 액세스 중입니다. Contact your Braze account 
 
 1. **과제** 탭을 선택합니다.
 2. **할당을** 선택하고 옵션을 선택합니다.
-3. Braze에 액세스할 수 있어야 하는 사용자에게 앱을 할당합니다.
+3. Braze에 액세스할 수 있어야 하는 사람들에게 앱을 할당합니다.
 4. 과제를 완료하면 **완료를** 선택합니다.
 
 {% endtab %}
 {% tab Okta - Custom app integration %}
 
-{% alert important %}
-Okta 통합은 현재 얼리 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Okta integration' %}
+
+SSO를 위한 커스텀 앱을 설정하는 경우 **Okta - 커스텀 앱 통합** 옵션을 사용하세요. Okta에서 SAML SSO를 위해 Braze 앱을 설정한 경우, [Okta - Braze 앱]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/?tab=okta%20-%20braze%20app#step-1-set-up-scim-provisioning) 탭의 지침을 따르세요.
 
 ## 1단계: SCIM 프로비저닝 설정
 
@@ -87,7 +99,7 @@ Okta 통합은 현재 얼리 액세스 중입니다. Contact your Braze account 
 3. **API 자격** 증명 테스트를 선택하여 API 자격 증명을 테스트합니다.
 4. Select **Save**.
 
-### 1.3단계: 앱에 대해 프로비저닝 활성화
+### 1.3단계: 앱에 프로비저닝 인에이블먼트 사용
 
 1. **프로비저닝** > **설정** > **앱으로** > **앱에 프로비저닝에서** **편집을** 선택합니다.
 2. 다음을 활성화합니다.
@@ -106,13 +118,12 @@ Okta 통합은 현재 얼리 액세스 중입니다. Contact your Braze account 
 {% endtab %}
 {% tab Entra ID %}
 
-{% alert important %}
-Entra ID 통합은 현재 얼리 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Entra ID integration' %}
 
 ## 1단계: SCIM 프로비저닝 앱 설정
 
-### 1.1단계. Microsoft Entra 관리 센터에 로그인
+### 1.1단계: Microsoft Entra 관리 센터에 로그인
+
 Microsoft Entra 관리 센터에 로그인합니다.
 
 ### 1.2단계: SCIM 앱 만들기 및 설정하기
@@ -129,7 +140,7 @@ Microsoft Entra 관리 센터에 로그인합니다.
 1. SCIM 애플리케이션의 **관리** > **프로비저닝** 섹션으로 이동합니다.
 2. **애플리케이션 연결** 또는 **새 구성을** 선택하고 **SCIM 프로비저닝 설정** 페이지의 표에 채워지는 필드 값을 입력합니다.
 
-### 1.4단계: 앱에 대해 프로비저닝 활성화
+### 1.4단계: 앱에 프로비저닝 인에이블먼트 사용
 
 1. SCIM 애플리케이션의 **관리** > **속성 매핑(미리보기)** 섹션으로 이동합니다.
 2. **Microsoft Entra ID 사용자 프로비저닝을** 선택합니다.
@@ -152,7 +163,7 @@ Microsoft Entra 관리 센터에 로그인합니다.
 - **Service Origin:** Enter the origin domain of your SCIM requests. Braze uses this in the `X-Request-Origin` header to verify where requests are coming from.
 - **IP Allowlisting (optional):** You can restrict SCIM requests to specific IP addresses. Enter a comma-separated list or range of IP addresses to allow. 각 요청의 `X-Request-Origin` 헤더는 허용 목록에서 요청 IP 주소를 확인하는 데 사용됩니다.
 
-![SCIM Provisioning settings form with three fields: Default Workspace, Service Origin , and optional IP Allowlisting. "SCIM 토큰 생성" 버튼이 비활성화됩니다.]({% image_buster /assets/img/scim_unfilled.png %})
+![SCIM Provisioning settings form with three fields: 기본값 워크스페이스, 서비스 오리진 및 선택적 IP 허용 목록. "SCIM 토큰 생성" 버튼이 비활성화됩니다.]({% image_buster /assets/img/scim_unfilled.png %})
 
 ## 2단계: SCIM 토큰 생성하기
 

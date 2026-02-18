@@ -40,7 +40,7 @@ Não inclua uma coluna `PAYLOAD` em sua tabela para remoção de usuários. Para
 
 {% tabs %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
      UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
      --at least one of external_id, alias_name and alias_label, or braze_id is required  
@@ -54,7 +54,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
    updated_at timestamptz default sysdate,
    --at least one of external_id, alias_name and alias_label, or braze_id is required
@@ -92,7 +92,7 @@ Crie uma tabela com os seguintes campos:
 | `BRAZE_ID`| STRING | NULLABLE |
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[users_deletes] 
 (
   UPDATED_AT DATETIME2(6) NOT NULL,

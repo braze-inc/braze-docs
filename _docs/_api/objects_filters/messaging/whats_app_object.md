@@ -96,7 +96,7 @@ The `button_variables` object lets you specify values for button variables in th
 
 ```json
 {
-  "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1",
+  "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1"
 }
 ```
 

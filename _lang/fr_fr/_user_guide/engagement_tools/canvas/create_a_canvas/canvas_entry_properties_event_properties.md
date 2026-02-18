@@ -48,6 +48,10 @@ Vous ne pouvez plus créer ou dupliquer des toiles à l'aide de l'éditeur origi
 - Vous ne pouvez pas utiliser les `event_properties` dans la première étape de message. Au lieu de cela, vous pouvez utiliser `canvas_entry_properties` ou ajouter une étape de parcours d'action avec l'événement correspondant **avant l'** étape de message qui inclut `event_properties`.
 - Lorsqu'une étape du parcours action contient un déclencheur "Envoi d'un message SMS entrant" ou "Envoi d'un message WhatsApp entrant", les étapes du canvas suivantes peuvent inclure une propriété SMS ou WhatsApp Liquid. Cela reflète le fonctionnement des propriétés d'événement dans Canvases. Vous pouvez ainsi tirer parti de vos messages pour enregistrer et référencer des données first-party sur les profils utilisateurs et les envois de messages conversationnels.
 
+{% alert note %}
+L'éligibilité de l'audience est évaluée une fois à l'entrée du canvas. Si un utilisateur est fusionné au cours de l'entrée, l'utilisateur identifié continue dans le Canvas et n'est pas réévalué par rapport aux critères de segmentation du Canvas.
+{% endalert %}
+
 {% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
 
 ### Horodatage des propriétés d'événement

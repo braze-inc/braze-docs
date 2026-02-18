@@ -675,7 +675,7 @@ Die nächsten Schritte hängen davon ab, welche externe ID Sie ausgewählt haben
 3. Geben Sie für **Namensraum und Schlüssel** `braze.external_id` ein.
 4. Wählen Sie unter **Typ** den **ID-Typ** aus.
 
-Nachdem das Metafeld erstellt wurde, füllen Sie es für Ihre Kund:in aus. Wir empfehlen die folgenden Ansätze:
+Nachdem Sie das Metafeld erstellt haben, füllen Sie es für Ihre Kund:in aus. Wir empfehlen die folgenden Ansätze:
 
 - **Hören Sie sich die Webhooks zur Erstellung von Kund:in an:** Richten Sie einen Webhook ein, um auf die [Ereignisse von`customer/create` ](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks) zu warten. Damit können Sie das Metafeld schreiben, wenn eine neue Kund:in angelegt wird.
 - **Füllen Sie bestehende Kund:in nach:** Verwenden Sie die [Admin API](https://shopify.dev/docs/api/admin-graphql) oder die [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer), um das Metafeld für zuvor erstellte Kund:innen zu füllen.
@@ -692,7 +692,7 @@ Braze sendet die folgenden Parameter an Ihren Endpunkt:
 
 | Parameter            | Erforderlich | Datentyp | Beschreibung                                                      |
 |----------------------|----------|-----------|------------------------------------------------------------------|
-| shopify_customer_id  | Ja      | String    | Die Shopify ID des Kunden.                                         |
+| shopify_customer_id  | Ja      | String    | Die Shopify ID der Kund:in.                                         |
 | shopify_storefront   | Ja      | String    | Der Schaufenstername für die Anfrage. Ex: `<storefront_name>.myshopify.com` |
 | email_address        | Kein:e       | String    | Die E-Mail Adresse des angemeldeten Nutzers:in. <br><br>Dieses Feld kann in bestimmten Webhook-Szenarien fehlen. Ihre Endpunkt-Logik sollte hier Nullwerte berücksichtigen (z.B. holen Sie die E-Mail über shopify_customer_id, wenn Ihre interne Logik dies erfordert). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
@@ -731,7 +731,7 @@ Wiederholen Sie [Schritt 6](#step-6) und geben Sie Ihre Endpunkt-URL ein, nachde
 
 - Wenn Ihre externe ID nicht generiert wird, wenn Braze eine Anfrage an Ihren Endpunkt sendet, verwendet die Integration standardmäßig die Shopify Kund:innen-ID, wenn die Funktion `changeUser` aufgerufen wird. Dieser Schritt ist entscheidend für die Zusammenführung des anonymen Nutzerprofils mit dem identifizierten Nutzerprofil. Daher kann es vorübergehend vorkommen, dass in Ihrem Workspace verschiedene Arten von externen IDs existieren.
 - Wenn die externe ID im Metafeld `braze.external_id` verfügbar ist, wird die Integration diese externe ID priorisieren und zuweisen. 
-    - Wenn die Shopify Kund:in ID zuvor als externe ID von Braze eingestellt war, wird sie durch den Wert des Metafelds `braze.external_id` ersetzt. 
+    - Wenn die Shopify Kund:in ID zuvor als externe ID von Braze festgelegt wurde, wird sie durch den Wert des Metafelds `braze.external_id` ersetzt. 
 
 #### Schritt 6.4: Sammeln Sie Ihre E-Mail- oder SMS-Opt-ins von Shopify (optional)
 

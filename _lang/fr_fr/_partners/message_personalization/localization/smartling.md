@@ -15,9 +15,9 @@ _Cette intégration est maintenue par Smartling._
 
 ## À propos de l'intégration
 
-Le connecteur Braze prend en charge les traductions pour les messages dans les campagnes et les Canvases (messages e-mail, push et in-app), les modèles d'e-mail et les blocs de contenu. Consultez le tableau suivant pour en savoir plus sur les canaux et les fonctionnalités pris en charge lorsque vous décidez d'utiliser le nouveau connecteur avec une prise en charge multilingue ou un flux de travail hérité.
+Le connecteur Braze prend en charge les traductions des messages dans les campagnes et les Canvases (messages e-mail, push et in-app), les modèles d'e-mail et les blocs de contenu. Consultez le tableau suivant pour en savoir plus sur les canaux et les fonctionnalités pris en charge lorsque vous décidez d'utiliser le nouveau connecteur avec une prise en charge multilingue ou un flux de travail hérité.
 
-| Chaîne/Fonctionnalité | Éditeur traditionnel (ex. HTML) | Editeur par glisser-déposer |
+| Chaîne/Fonctionnalité | Éditeur traditionnel (ex. HTML) | Éditeur par glisser-déposer |
 | --------------- | ----------------------------- | -------------------- |
 | [E-mail]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=email) | ✅ | ✅ |
 | [IAM]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=in-app%20message) | ✅ | ✅ |

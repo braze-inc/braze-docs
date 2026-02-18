@@ -70,7 +70,7 @@ Depuis votre appli Wishlist Plus, allez dans l'onglet **Marketing** et trouvez l
 | Partager la liste de souhaits | Lorsqu'un acheteur partage sa liste de souhaits avec quelqu'un d'autre |  
 | Ajouter à la liste de souhaits | Lorsqu'un acheteur ajoute un article à sa liste de souhaits |  
 | Rappel de la liste de souhaits | Rappel des articles figurant dans la liste de souhaits d'un acheteur|   
-| Rappel d'enregistrement pour plus tard | Rappel concernant les articles enregistrés pour plus tard d'un acheteur |  
+| Rappel "enregistré pour plus tard | Rappel concernant les articles enregistrés pour plus tard d'un acheteur |  
 | Alerte de baisse de prix | Le produit d'une liste de souhaits est mis en vente |  
 | Alerte de stock faible | Le produit d'une liste de souhaits est en rupture de stock |  
 | Alerte de réapprovisionnement | Le produit d'une liste de souhaits est réapprovisionné |  
