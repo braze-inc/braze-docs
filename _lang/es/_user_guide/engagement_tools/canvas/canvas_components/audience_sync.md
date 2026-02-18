@@ -1,6 +1,6 @@
 ---
-nav_title: Sincronización de audiencias en Canvas
-page_order: 10
+nav_title: Sincronización de la audiencia
+page_order: 3.5
 noindex: true
 tool: Canvas
 layout: redirect

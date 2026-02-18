@@ -65,7 +65,7 @@ Para recuperar tu clave de acceso secreta y tu ID de clave de acceso, tendrás q
 
 ### Paso 4: Adjuntar política
 
-1. Tras crear una nueva política, ve a **Usuarios** y selecciona tu usuario concreto. 
+1. Después de crear una nueva política, ve a **Usuarios** y selecciona tu usuario específico. 
 2. En la pestaña **Permisos**, selecciona **Añadir permisos**, adjunta directamente la política y, a continuación, selecciona dicha política. 
 
 Ahora, ¡ya estás listo para vincular tus credenciales de AWS a tu cuenta de Braze!

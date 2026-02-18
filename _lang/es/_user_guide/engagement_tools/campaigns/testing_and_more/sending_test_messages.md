@@ -47,7 +47,7 @@ Podrás ver tu mensaje de prueba en el dispositivo durante un máximo de 5 minut
 ![Pestaña vista previa del compositor del Banner.]({% image_buster /assets/img/banners/preview_banner.png %})
 
 {% alert note %}
-Ten en cuenta que tu vista previa puede no ser idéntica a la representación final en el dispositivo de un usuario, debido a las diferencias entre el hardware.
+Ten en cuenta que tu vista previa puede no ser idéntica a la representación final en el dispositivo de un usuario debido a las diferencias entre el hardware.
 {% endalert %}
 
 ### Lista de comprobación
@@ -137,7 +137,7 @@ A partir de ahí, puede revisar la configuración y el contenido de sus mensajes
 3. Selecciona la pestaña **Envío de prueba** y añade tu dirección de correo electrónico o ID de usuario en el campo **Añadir usuarios individuales**. 
 4. Selecciona **Enviar prueba** para enviar el correo electrónico redactado a tu buzón de entrada.
 
-![Correo electrónico de prueba]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
+![Prueba de correo electrónico]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
 
 {% endtab %}
 {% tab In-app message %}

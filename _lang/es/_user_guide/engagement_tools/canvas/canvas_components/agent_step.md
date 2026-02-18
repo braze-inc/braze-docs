@@ -2,7 +2,7 @@
 nav_title: Agente
 article_title: Paso de agente
 alias: /agent_step/
-page_order: 0.2
+page_order: 2
 page_type: reference
 description: "Este artículo de referencia explica cómo utilizar el paso en Canvas del Agente para generar contenido o tomar decisiones inteligentes en tiempo real."
 tool: Canvas
@@ -106,13 +106,13 @@ Supongamos que envías un mensaje personalizado para recomendar un nuevo sabor d
 
 ### ¿Cuándo debo utilizar un formato de salida estándar para un agente?
 
-Te recomendamos que utilices el formato de salida cuando quieras que el agente devuelva una estructura de datos con múltiples valores definidos de forma estructurada, en lugar de una salida con un único valor. Esto permite formatear mejor la salida como una variable de contexto coherente.
+Te recomendamos que utilices el formato de salida cuando quieras que el agente devuelva una estructura de datos con múltiples valores definidos de forma estructurada, en lugar de una salida con un único valor. Esto permite formatear mejor la salida como una variable contextual coherente.
 
 Por ejemplo, puedes utilizar un formato de salida dentro de un agente destinado a crear un itinerario de viaje de muestra para un usuario basado en un formulario que haya enviado. El formato de salida te permite definir que la respuesta de cada agente incluya los valores `tripStartDate`, `tripEndDate` y `destination`. Cada uno de estos valores puede extraerse de las variables de contexto y colocarse en un paso de Mensaje para la personalización mediante Liquid.
 
 ### ¿Cómo utilizan los pasos del Agente los datos de entrada?
 
-Los pasos del agente utilizan datos contextuales específicos que se [proporcionan al agente](#step-4-decide-what-context-to-provide-the-agent). 
+Los pasos del agente utilizan datos de contexto específicos que se [proporcionan al agente](#step-4-decide-what-context-to-provide-the-agent). 
 
 Puedes elegir entre pasar la totalidad del contexto Canvas al agente como contexto, o pasar valores específicos utilizando etiquetas de Liquid al contexto de ese paso del agente. También puedes utilizar el Contenido conectado como valor de entrada en un paso del Agente.
 

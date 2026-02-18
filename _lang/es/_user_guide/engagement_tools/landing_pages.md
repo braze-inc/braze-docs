@@ -21,10 +21,10 @@ La disponibilidad de la página de destino y del dominio personalizado depende d
 
 ## Requisitos previos
 
-Para poder acceder a las páginas de destino, crearlas y publicarlas, necesitas [permisos de]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) administrador o todos los permisos siguientes:
+Para poder acceder, crear y publicar páginas de destino, necesitas [permisos de]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) administrador o todos los permisos siguientes:
 
-- Acceder a páginas de inicio
-- Crear borradores de página de inicio
+- Ver páginas de inicio
+- Editar borradores de páginas de destino
 - Publicar páginas de inicio
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
@@ -56,7 +56,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 ```
 
-Para más detalles sobre la implementación de Google Tag Manager, consulta [la documentación de Google.](https://developers.google.com/tag-platform/tag-manager/datalayer#installation)
+Para obtener más información sobre la implementación de Google Tag Manager, consulta [la documentación de Google.](https://developers.google.com/tag-platform/tag-manager/datalayer#installation)
 
 ## Preguntas más frecuentes
 
