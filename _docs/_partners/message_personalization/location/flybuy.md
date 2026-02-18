@@ -43,7 +43,9 @@ Flybuy maps `loyalty_id` to the Braze `external_id` for logged-in users.
 
 ## Use cases
 
-- [Pickup](https://www.flybuy.com/flybuypickup), [Delivery](https://www.flybuy.com/flybuydelivery), [Drive-Thru](https://www.flybuy.com/flybuydrivethru)
+- [Pickup](https://www.flybuy.com/flybuypickup)
+- [Delivery](https://www.flybuy.com/flybuydelivery)
+- [Drive-Thru](https://www.flybuy.com/flybuydrivethru)
 - [Table Service](https://www.flybuy.com/flybuytableservice)
 - [Hotel Mobile Check-In and Ordering](https://www.flybuy.com/industries/hospitality)
 - [Marketing Suite](https://www.flybuy.com/flybuy-marketing-suite)
