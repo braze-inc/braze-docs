@@ -38,6 +38,7 @@ body .ab-feed {
 }
 ```
 
+For a full list of properties you can modify, see [Braze's SDK configuration options](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)
 
 {% endtab %}
 {% tab android %}
