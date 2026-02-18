@@ -46,7 +46,7 @@ For each **actionable** ticket:
 
 ```markdown
 ### Case: [CASE_ID]
-- **Category**: [Docs Gap | New Feature | Edge Case]
+- **Category**: [Docs Gap | Docs Discrepancy | New Feature | Edge Case]
 - **Question**: [One-sentence summary]
 - **Resolution**: [Brief answer]
 - **Verified behavior**: [Complete answer]
