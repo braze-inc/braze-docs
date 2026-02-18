@@ -379,7 +379,6 @@ valid_partner_list:
   url: /docs/partners/optimizely/
 - name: OtherLevels
   url: /docs/partners/otherlevels/
-  url: /docs/partners/crowdtwist
 - name: Fullstory
   url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
 - name: Open Loyalty

@@ -3235,4 +3235,6 @@ validurls['/docs/user_guide/brazeai/decisioning_studio/integration'] = '/docs/us
 validurls['/docs/partners/tinyclues/'] = '/docs/partners/splio/';
 validurls['/docs/partners/data_and_analytics/cohort_import/tinyclues'] = '/docs/partners/splio/';
 
+validurls['/docs/user_guide/administrative/access_billing/billing/'] = '/docs/user_guide/administrative/app_settings/subscription_and_usage/';
+
 // validurls['OLD'] = 'NEW';

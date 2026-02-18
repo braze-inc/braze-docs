@@ -49,7 +49,7 @@ To create your custom agent:
 3. Enter a name and description to help your team understand its purpose.
 4. (optional) Add tags to filter your agent.
 5. Select the interaction site, which is the location where the agent is deployed. Note that the interaction site can't be updated after an agent is created.
-6. Choose the [model]({{site.baseurl}}/docs/user_guide/brazeai/agents/reference/#models) your agent will use.
+6. Choose the [model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) your agent will use.
 
 ![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:85%;"}
 
