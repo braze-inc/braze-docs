@@ -195,7 +195,7 @@ Note que, se o Intelligent Timing estiver ativado, a mensagem será enviada dent
 
 O evento de exceção é aplicado usando jornadas de ação, que são separadas das etapas de mensagens. O Horário de silêncio é aplicado no componente Mensagem. Isso significa que, se um usuário já tiver passado pela Jornada de ação (e não tiver sido excluído com o evento de exceção), encontrar o Horário de silêncio quando chegar ao componente Mensagem e tiver o Canva configurado de forma que a mensagem seja reenviada após o período de Horário de silêncio, o evento de exceção não será mais aplicado. Note que esse caso de uso não é comum.
 
-Para segmentos e filtros, a etapa de mensagem tem validações de entrega que permitem aos usuários configurar segmentos e filtros adicionais que são validados no momento do envio. Isso evita o caso extremo do Horário de silêncio mencionado anteriormente.
+Para segmentos e filtros, a etapa de Mensagem tem validações de entrega que permitem aos usuários configurar segmentos e filtros adicionais que são validados no momento do envio. Isso evita o caso extremo do Horário de silêncio mencionado anteriormente.
 
 ##### Configuração de programação "In" ou "On the next"
 

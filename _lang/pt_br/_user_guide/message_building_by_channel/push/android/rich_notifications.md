@@ -20,7 +20,6 @@ tool:
 
 Antes de criar uma notificação por push avançada para Android, observe os seguintes detalhes:
 
-- As notificações Rich do Android não estão disponíveis ao criar uma campanha push rápida.
 - As imagens de notificação estendida do Android devem ter uma proporção de 2:1, mas não têm um limite de tamanho.
 - O Android também permite a configuração de uma imagem separada para a exibição de notificação padrão. Essas são as imagens de tamanho recomendado: 
   - **Pequeno:** 512x256
@@ -42,19 +41,18 @@ Siga as etapas para [criar uma campanha]({{site.baseurl}}/user_guide/message_bui
 
 ### Etapa 2: Adicionar legendas
 
-Adicione o **texto de resumo/capítulo da imagem** que você deseja exibir antes da imagem na notificação.
+Adicione o **Texto de resumo** que você gostaria de exibir antes da imagem na notificação.
 
-![A seção Imagem de notificação expandida, na qual é possível adicionar uma imagem ou inserir um URL de imagem.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
+![Uma notificação por push de um app de comida para animais de estimação chamado Dog indicando que é hora de pedir mais comida para o local com um texto resumido.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### Etapa 3: Adicionar mídia
 
-Adicione sua imagem no campo **Expanded Notification Image (Imagem de notificação expandida)** no criador da mensagem. As imagens podem ser feitas upload diretamente pelo dashboard ou especificando um URL de conteúdo que esteja hospedado em outro lugar.
+Adicione sua imagem no campo **Android Notification Image (Imagem de notificação do Android** ) no criador da mensagem. As imagens podem ser feitas upload diretamente pelo dashboard ou especificando um URL de conteúdo que esteja hospedado em outro lugar.
 
 Para saber mais sobre as imagens compatíveis, consulte [Especificações da imagem]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push).
 
-![Um usuário recebe uma notificação por push para iOS com "Hi there" como título e "Thanks for joining out loyalty program!" como texto.]({% image_buster /assets/img_archive/android_rich_image.png %})
+![A seção de imagem de notificação do Android, onde é possível adicionar uma imagem ou inserir um URL de imagem.]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### Etapa 4: Continue criando sua campanha
 
 Depois que o conteúdo da notificação Rich for feito upload no dashboard, você poderá continuar [programando sua campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
-

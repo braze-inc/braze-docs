@@ -213,7 +213,7 @@ Al envolver su contenido alrededor de la etiqueta `raw`, el motor de procesamien
     <tbody>
         <tr>
             <td class="no-split">Total de aperturas</td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Opens' %} Para los correos electrónicos AMP, es el total de aperturas de las versiones HTML y en texto plano.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Opens' %} Para los correos electrónicos AMP, es el total de aperturas de las versiones HTML y de texto sin formato.</td>
         </tr>
         <tr>
             <td class="no-split">Clics totales</td>

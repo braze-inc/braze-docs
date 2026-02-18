@@ -46,9 +46,11 @@ Mobile push incorporates Android, iOS, Kindle, and other mobile device channels 
 
 For example, if a user has several mobile devices, their mobile engagement rate would be represented by the highest rate exhibited across the devices. This would not, however, force the user to receive push notifications exclusively on that device. This rate is only used when comparing rates against email and web push.
 
-## Individual channels
+## Message Open Likelihood filter for individual channels {#individual-channels}
 
-Rather than let Braze choose the single best channel for a user, you may also want to simply filter users based on whether or not they're likely to open a message on a specific channel you choose. For that you can use the Message Open Likelihood filter in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood).
+Rather than let Braze choose the single best channel for a user, you can use the ["Message Open Likelihood" segmentation filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood) to filter users based on whether or not they're likely to open a message on a specific channel you choose. This filter is calculated by the percentage of interactions divided by the total messages received for the last 100 messages sent per channel.
+
+Note that a user must have received at least three messages on a specific channel before they can have a likelihood score for that channel. Users without sufficient data to measure a likelihood for a channel can be selected using "is blank."
 
 ## Best practices and effective use strategy
 

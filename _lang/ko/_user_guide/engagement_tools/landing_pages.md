@@ -23,8 +23,8 @@ alias: /landing_pages/
 
 랜딩 페이지에 액세스하고, 만들고, 게시하려면 관리자 [권한]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) 또는 다음 권한이 모두 필요합니다:
 
-- Access Landing Pages
-- Create Landing Page Drafts
+- 랜딩 페이지 보기
+- 랜딩 페이지 초안 편집
 - Publish Landing Pages
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}

@@ -161,7 +161,7 @@ table td {
 | Affectation de cohorte Mixpanel | Toutes les affectations | |
 | Affectation de cohorte Hightouch | Toutes les affectations | |
 | Attribution de cohorte Appsflyer | Toutes les affectations | |
-| Localisation la plus récente | Toutes les localisations les plus récentes | Le fait d'entrer ou de sortir d'un géorepérage n'enregistre pas de points de données, car les données de géorepérage ne sont pas stockées dans le profil utilisateur. Les géorepérages sont surveillées par les services de localisation d’Apple et Google, Braze n’est averti qu’à un utilisateur qui déclenche une géorepérage. |
+| Localisation la plus récente | Toutes les localisations les plus récentes | Le fait d'entrer ou de sortir d'une géorepérage n'enregistre pas de points de données, car les données de géorepérage ne sont pas stockées dans le profil utilisateur. Les géorepérages sont surveillées par les services de localisation d’Apple et Google, Braze n’est averti qu’à un utilisateur qui déclenche une géorepérage. |
 | Twitter | Nom d’utilisateur | |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

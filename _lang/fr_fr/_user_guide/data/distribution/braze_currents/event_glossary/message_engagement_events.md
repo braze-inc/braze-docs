@@ -75,6 +75,89 @@ Si une cohérence totale est requise, nous vous recommandons d'attendre une heur
 {% endalert %}
 
 {% api %}
+## Événements exécutés par l'agent {#agent-executed-events}
+
+{% apitags %}
+Agent
+{% endapitags %}
+
+Il s'agit du schéma d'enregistrement Kafka pour l'exécution d'un agent de la console d'agent.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// agentconsole.AgentExecuted
+
+{
+  "agent_id" : "(required, string) BSON id of the CustomerDefinedAgent",
+  "agent_name" : "(required, string) Name of the CustomerDefinedAgent",
+  "cache_hit" : "(required, boolean) whether or not this request hit the cache to return the response",
+  "cache_tokens" : "(required, int) how many cached tokens this request used",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "completion_tokens" : "(required, int) how many completion tokens this request used",
+  "duration" : "(required, int) how long the invocation took in milliseconds",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "input" : "(optional, string) [PII] input to the LLM",
+  "invocation_id" : "(required, string) globally unique id for this message",
+  "invocation_source" : "(optional, string) which ruby object invoked the LLM request",
+  "is_error" : "(required, boolean) whether or not this request errored out",
+  "llm_owned_by_customer" : "(required, boolean) if the LLM call was the customer's; if true, we used customer's API key, if false, we use Braze's",
+  "model_name" : "(required, string) Name of the LLM model used in this request",
+  "model_provider" : "(required, string) Name of the LLM model provider",
+  "output" : "(optional, string) [PII] response from the LLM",
+  "prompt_tokens" : "(required, int) how many prompt tokens this request used",
+  "provider_request_id" : "(optional, string) any request ID given to us by the model provider for the api call",
+  "reasoning_tokens" : "(required, int) how many reasoning tokens this request used",
+  "request_id" : "(required, string) unique id for this overall LLM request and complete execution",
+  "time" : "(required, long) unix timestamp at which this event is logged",
+  "total_tokens" : "(required, int) how many total tokens this request used",
+  "user_id" : "(optional, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
+## Événements liés à l'invocation d'un outil {#tool-invocation-events}
+
+{% apitags %}
+Agent
+{% endapitags %}
+
+Il s'agit du schéma d'enregistrement Kafka pour l'exécution d'un outil.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// agentconsole.ToolInvocation
+
+{
+  "agent_id" : "(required, string) BSON id of the CustomerDefinedAgent",
+  "agent_name" : "(required, string) Name of the CustomerDefinedAgent",
+  "duration" : "(required, int) How long the tool invocation took in milliseconds",
+  "id" : "(required, string) Globally unique ID for this event",
+  "invocation_source" : "(optional, string) which ruby object invoked the LLM request",
+  "is_error" : "(required, boolean) whether or not this request errored out",
+  "time" : "(required, long) unix timestamp at which this event is logged",
+  "tool_arguments" : "(required, string) [PII] JSON of the tool arguments",
+  "tool_call_id" : "(required, string) globally unique id for this tool call",
+  "tool_name" : "(required, string) Name of the Tool"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
 ## Désinstaller des événements {#uninstall-events}
 
 {% apitags %}
@@ -648,24 +731,8 @@ Les groupes d'abonnement ne sont disponibles que pour les canaux e-mail, SMS, RC
 {% endtab %}
 {% endtabs %}
 
-#### Détails de la propriété
-
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
-- `state_change_source` renvoie une chaîne de caractères contenant le nom complet de la source. Par exemple, l'importation du fichier CSV source renverra la chaîne de caractères `CSV Import`. Les sources disponibles sont énumérées ci-dessous :
-
-| Source | Description |
-| --- | --- |
-| SDK | Endpoints SDK |
-| Tableau de bord | Lorsque l'état de l'abonnement d'un utilisateur est mis à jour à partir de la page Profil de l'utilisateur dans le tableau de bord |
-| Page d'abonnement | Lorsqu'un utilisateur se désinscrit par le biais d'un lien d'e-mail qui n'est pas le centre de préférences |
-| API REST | Points d'extrémité de l'API REST |
-| Importation CSV | Importation d'utilisateurs CSV |
-| Centre de préférences | Lorsqu'un utilisateur est mis à jour à partir du centre de préférences |
-| Message entrant | Lorsqu'un utilisateur est mis à jour par des messages entrants provenant d'utilisateurs finaux par le biais de canaux tels que les SMS |
-| Migration | Lorsqu'un utilisateur est mis à jour par des migrations internes ou des scripts de maintenance. |
-| Fusion d'utilisateurs | Lorsqu'un utilisateur est mis à jour par le processus de fusion des utilisateurs |
-| Étape de mise à jour de l’utilisateur du canvas | Lorsqu'un utilisateur est mis à jour par l'étape du canvas de mise à jour de l'utilisateur |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+#### Détails de la propriété {#property-details}
+{% include currents/property_details_dispatch_state_source.md %}
 
 {% endapi %}
 
@@ -843,7 +910,7 @@ Notez que l’événement de conversion est encodé dans le champ`conversion_beh
 {% endapi %}
 
 {% api %}
-## Groupe de contrôle de la campagne Événements liés à l'inscription {#campaign-control-group-enrollment-events}
+## Groupe de contrôle de la campagne Événements d'inscription {#campaign-control-group-enrollment-events}
 
 {% apitags %}
 Campagne, entrée
@@ -2337,6 +2404,10 @@ Cet événement se produit lorsqu'un message de bannière initialement planifié
 {% endtab %}
 {% endtabs %}
 
+#### Détails de la propriété
+
+- `abort_type` sera `frequency_capped` si l'envoi du message a été interrompu en raison d'une règle de limite de fréquence globale. 
+- `abort_log` comprend des informations sur la règle spécifique qui a déclenché l'abandon. En voici un exemple : `Frequency cap rule: 5 Banner messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -2585,6 +2656,7 @@ Cet événement se produit lorsqu'un utilisateur visualise une bannière.
 }
 ```
 {% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Banner Impression (users.messages.banner.Impression)
@@ -2931,8 +3003,9 @@ Cet événement se produit si un message de carte de contenu a été interrompu 
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
-
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `abort_type` sera `frequency_capped` si l'envoi du message a été interrompu en raison d'une règle de limite de fréquence globale. 
+- `abort_log` comprend des informations sur la règle spécifique qui a déclenché l'abandon. En voici un exemple : `Frequency cap rule: 5 Content Card messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -4038,8 +4111,9 @@ Cet événement se produit si un envoi de messages e-mail a été interrompu en 
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
-
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `abort_type` sera `frequency_capped` si l'envoi du message a été interrompu en raison d'une règle de limite de fréquence globale. 
+- `abort_log` comprend des informations sur la règle spécifique qui a déclenché l'abandon. En voici un exemple : `Frequency cap rule: 5 email messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -4256,7 +4330,7 @@ Cet événement survient lorsqu’un fournisseur de services Internet renvoie un
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
   - Le comportement de `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes du canvas (à l'exception des étapes d'entrée, qui peuvent être planifiées) comme des événements déclenchés, même lorsqu'elles sont planifiées. En savoir plus sur le [comportement des ID de répartition]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
@@ -4523,7 +4597,7 @@ Cet événement se produit lorsqu’un utilisateur clique sur un e-mail. Plusieu
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
   - Le comportement de `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes du canvas (à l'exception des étapes d'entrée, qui peuvent être planifiées) comme des événements déclenchés, même lorsqu'elles sont planifiées. En savoir plus sur le [comportement des ID de répartition]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
@@ -4742,7 +4816,7 @@ Cet événement se produit lorsqu'un fournisseur de services Internet ne délivr
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
   - Le comportement de `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes du canvas (à l'exception des étapes d'entrée, qui peuvent être planifiées) comme des événements déclenchés, même lorsqu'elles sont planifiées.
 {% endapi %}
 
@@ -4950,7 +5024,7 @@ Cet événement se produit lorsqu’un e-mail envoyé est arrivé dans la boîte
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
   - Le comportement de `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes du canvas (à l'exception des étapes d'entrée, qui peuvent être planifiées) comme des événements déclenchés, même lorsqu'elles sont planifiées.
 {% endapi %}
 
@@ -5162,9 +5236,7 @@ Cet événement se produit lorsque l’utilisateur final clique sur le bouton «
 
 #### Détails de la propriété
 
-#### Détails de la propriété
-
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
   - Le comportement de `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes du canvas (à l'exception des étapes d'entrée, qui peuvent être planifiées) comme des événements déclenchés, même lorsqu'elles sont planifiées.
 {% endapi %}
 
@@ -5216,7 +5288,7 @@ Le fait que les champs `device_model` et `mailbox_provider` de l'événement d'o
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_agent" : "(optional, string) User agent on which the open occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -5369,7 +5441,7 @@ Le fait que les champs `device_model` et `mailbox_provider` de l'événement d'o
 // Email Opened (users.messages.email.Open)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device"
@@ -5416,8 +5488,217 @@ Le fait que les champs `device_model` et `mailbox_provider` de l'événement d'o
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
   - Le comportement de `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes du canvas (à l'exception des étapes d'entrée, qui peuvent être planifiées) comme des événements déclenchés, même lorsqu'elles sont planifiées.
+{% endapi %}
+
+{% api %}
+## Événements de réessai d'e-mail {#email-retry-events}
+
+{% apitags %}
+E-mail, Réessayer
+{% endapitags %}
+
+Cet événement se produit lorsqu'un message est dépriorisé ou limité en fréquence et qu'il sera réessayé plus tard dans la fenêtre de réessai configurée. Cette fonction n'est disponible que pour les clients de la version bêta de la hiérarchisation des messages.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.email.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "country" : "(optional, string) [PII] Country of the user",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(required, string) [PII] Email address of the user",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "id" : "(required, string) Globally unique ID for this event",
+  "ip_pool" : "(optional, string) IP pool from which the email send was made",
+  "language" : "(optional, string) [PII] Language of the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// Email Retry (users.messages.email.Retry)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "email_address" : "(required, string) [PII] Email address of the user",
+    "ip_pool" : "(optional, string) IP pool from which the email send was made",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "timezone" : "(optional, string) Time zone of the user"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Email Retry (users.messages.email.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "email_address" : "(required, string) [PII] Email address of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "ip_pool" : "(optional, string) IP pool from which the email send was made",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Email Retries (users.messages.email.Retry)
+
+{
+  "device_info" : {
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_name" : "(optional, string) Name of the Canvas",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "ip_pool" : "(optional, string) IP pool from which the email send was made",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "source_request_id" : "(required, string) Globally unique ID for this event"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user",
+    "email" : "(required, string) [PII] Email address of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Email Retried (users.messages.email.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : {
+      "email" : "(required, string) [PII] Email address of the user"
+    }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "ip_pool" : "(optional, string) IP pool from which the email send was made",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% endapi %}
 
 {% api %}
@@ -5427,7 +5708,7 @@ Le fait que les champs `device_model` et `mailbox_provider` de l'événement d'o
 E-mail, envoi
 {% endapitags %}
 
-Cet événement se produit lorsqu’une demande d’envoi d’e-mail a été transmise avec succès entre Braze et SendGrid. Cela ne signifie toutefois pas que l'e-mail a été reçu dans la boîte de réception de l'utilisateur.
+Cet événement se produit lorsqu’une demande d’envoi d’e-mail a été transmise avec succès entre Braze et SendGrid. Toutefois, cela ne signifie pas que l'e-mail a été reçu dans la boîte de réception de l'utilisateur. Braze n'enregistre pas les événements dans les profils des utilisateurs ou dans une destination Braze Currents (telle que Snowflake) si l'événement ne peut pas être associé à l'e-mail et à l'ID de l'utilisateur associés à l'événement e-mail.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -5622,7 +5903,7 @@ Cet événement se produit lorsqu’une demande d’envoi d’e-mail a été tra
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
   - Le comportement de `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes du canvas (à l'exception des étapes d'entrée, qui peuvent être planifiées) comme des événements déclenchés, même lorsqu'elles sont planifiées. En savoir plus sur le [comportement des ID de répartition]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 - `message_extras` vous permet d’annoter vos événements d’envoi avec des données dynamiques à partir du Contenu connecté, des attributs personnalisés (tels que la langue, le pays) et des propriétés d’entrée Canvas. Pour en savoir plus, reportez-vous aux [suppléments de messages]({{site.baseurl}}/message_extras_tag/).
 {% endapi %}
@@ -5836,7 +6117,7 @@ Cet événement se produit lorsqu’un fournisseur de services Internet renvoie 
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
   - Le comportement de `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes du canvas (à l'exception des étapes d'entrée, qui peuvent être planifiées) comme des événements déclenchés, même lorsqu'elles sont planifiées. En savoir plus sur le [comportement des ID de répartition]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
@@ -6037,7 +6318,7 @@ L'événement `Unsubscribe` est considéré comme un événement de clic spécia
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
   - Le comportement de `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes du canvas (à l'exception des étapes d'entrée, qui peuvent être planifiées) comme des événements déclenchés, même lorsqu'elles sont planifiées. En savoir plus sur le [comportement des ID de répartition]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
@@ -6051,6 +6332,7 @@ Drapeaux de fonctionnalité, Impressions
 Cet événement se produit chaque fois qu'un utilisateur a eu l'occasion d'interagir avec votre fonctionnalité, ou qu'il aurait pu le faire si la fonctionnalité était désactivée (dans le cas d'un groupe de contrôle dans un test A/B).
 
 Les impressions des indicateurs de fonctionnalité ne sont enregistrées qu'une seule fois par session.
+
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -6489,6 +6771,11 @@ Cet événement se produit lorsqu'un message in-app initialement planifié a ét
 ```
 {% endtab %}
 {% endtabs %}
+
+#### Détails de la propriété
+
+- `abort_type` sera `frequency_capped` si l'envoi du message a été interrompu en raison d'une règle de limite de fréquence globale. 
+- `abort_log` comprend des informations sur la règle spécifique qui a déclenché l'abandon. En voici un exemple : `Frequency cap rule: 5 in-app messages every 1 week`
 
 {% endapi %}
 
@@ -7173,7 +7460,9 @@ Cet événement se produit lorsqu'un message LINE planifié ne peut être déliv
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `abort_type` sera `frequency_capped` si l'envoi du message a été interrompu en raison d'une règle de limite de fréquence globale. 
+- `abort_log` comprend des informations sur la règle spécifique qui a déclenché l'abandon. En voici un exemple : `Frequency cap rule: 5 LINE messages every 1 week`
 
 {% endapi %}
 
@@ -7386,8 +7675,7 @@ Cet événement se produit lorsqu'un utilisateur clique sur un lien dans un mess
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
-
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -7590,7 +7878,206 @@ Cet événement se produit lorsqu'un message LINE est reçu d'un utilisateur.
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+{% endapi %}
+
+{% api %}
+## LINE Réessais {#line-retry-events}
+
+{% apitags %}
+LINE, Retry
+{% endapitags %}
+
+Cet événement se produit lorsqu'un message est dépriorisé ou limité en fréquence et qu'il sera réessayé plus tard dans la fenêtre de réessai configurée. Cette fonction n'est disponible que pour les clients de la version bêta de la hiérarchisation des messages.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.line.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "line_channel_id" : "(optional, string) The LINE Channel ID the message was sent to or received from",
+  "line_channel_name" : "(optional, string) The LINE Channel Name the message was sent to or received from",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "native_line_id" : "(optional, string) [PII] The user's Line ID from which the message was sent to or received from",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// Line Retry (users.messages.line.Retry)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "line_channel_id" : "(optional, string) The LINE Channel ID the message was sent to or received from",
+    "line_channel_name" : "(optional, string) The LINE Channel Name the message was sent to or received from",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "native_line_id" : "(optional, string) [PII] The user's Line ID from which the message was sent to or received from",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "subscription_group_id" : "(optional, string) Subscription group API ID",
+    "timezone" : "(optional, string) Time zone of the user"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Line Retry (users.messages.line.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "line_channel_id" : "(optional, string) The LINE Channel ID the message was sent to or received from",
+    "line_channel_name" : "(optional, string) The LINE Channel Name the message was sent to or received from",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "native_line_id" : "(optional, string) [PII] The user's Line ID from which the message was sent to or received from",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "subscription_group_id" : "(optional, string) Subscription group API ID",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Line Retries (users.messages.line.Retry)
+
+{
+  "device_info" : {
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "line_channel_id" : "(optional, string) The LINE Channel ID the message was sent to or received from",
+          "line_channel_name" : "(optional, string) The LINE Channel Name the message was sent to or received from",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "native_line_id" : "(optional, string) [PII] The user's Line ID from which the message was sent to or received from",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "source_request_id" : "(required, string) Globally unique ID for this event",
+          "subscription_group_id" : "(optional, string) Subscription group API ID"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Line Retried (users.messages.line.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : { }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "line_channel_id" : "(optional, string) The LINE Channel ID the message was sent to or received from",
+    "line_channel_name" : "(optional, string) The LINE Channel Name the message was sent to or received from",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "native_line_id" : "(optional, string) [PII] The user's Line ID from which the message was sent to or received from",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "subscription_group_id" : "(optional, string) Subscription group API ID"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
 
 {% endapi %}
 
@@ -7789,8 +8276,7 @@ Cet événement se produit lorsqu'un message LINE est envoyé à LINE.
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
-
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -8292,8 +8778,9 @@ Cet événement se produit si un message de notification push a été interrompu
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
-
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `abort_type` sera `frequency_capped` si l'envoi du message a été interrompu en raison d'une règle de limite de fréquence globale. 
+- `abort_log` comprend des informations sur la règle spécifique qui a déclenché l'abandon. En voici un exemple : `Frequency cap rule: 5 push messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -8331,6 +8818,7 @@ Cet événement survient lorsqu’une erreur est reçue du service de notificati
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(optional, string) Platform of the device",
+  "push_token" : "(optional, string) Push token of the event",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -8513,7 +9001,7 @@ Cet événement survient lorsqu’une erreur est reçue du service de notificati
 #### Détails de la propriété
 
 - Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), contactez votre gestionnaire de satisfaction client ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour l'envoi de `ad_id`.
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -8550,8 +9038,7 @@ Cet événement n'est pas pris en charge par notre [SDK Swift](https://github.co
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "platform" : "(optional, string) Platform of the device",
-  "push_token" : "(optional, string) Push token of the event",
+  "platform" : "(required, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -8684,7 +9171,7 @@ Cet événement n'est pas pris en charge par notre [SDK Swift](https://github.co
 
 - Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devez collecter explicitement l'IDFA pour iOS et l'ID publicitaire Google pour Android par le biais des SDK natifs. En savoir plus sur cette configuration pour [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) et [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Si vous utilisez Kafka pour ingérer les données de [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), contactez votre gestionnaire de satisfaction client pour activer l'envoi de `ad_id`.
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -8919,7 +9406,214 @@ Dans de rares cas, un événement "push open" peut apparaître avant l'événeme
 
 - Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devez collecter explicitement l'IDFA pour iOS et l'ID publicitaire Google pour Android par le biais des SDK natifs. En savoir plus sur cette configuration pour [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) et [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Si vous utilisez Kafka pour ingérer les données de [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), contactez votre gestionnaire de satisfaction client pour activer l'envoi de `ad_id`.
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+{% endapi %}
+
+{% api %}
+## Événements de réessai de notification push {#push-notification-retry-events}
+
+{% apitags %}
+Pousser, Réessayer
+{% endapitags %}
+
+Cet événement se produit lorsqu'un message est dépriorisé ou limité en fréquence et qu'il sera réessayé plus tard dans la fenêtre de réessai configurée. Cette fonction n'est disponible que pour les clients de la version bêta de la hiérarchisation des messages.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.pushnotification.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "country" : "(optional, string) [PII] Country of the user",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "id" : "(required, string) Globally unique ID for this event",
+  "language" : "(optional, string) [PII] Language of the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "platform" : "(required, string) Platform of the device",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// Push Notification Retry (users.messages.pushnotification.Retry)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "platform" : "(optional, string) Platform of the device",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "timezone" : "(optional, string) Time zone of the user"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Push Notification Retry (users.messages.pushnotification.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "platform" : "(optional, string) Platform of the device",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Push Notification Retries (users.messages.pushnotification.Retry)
+
+{
+  "device_info" : {
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred",
+    "platform" : "(optional, string) Platform of the device"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "app_id" : "(optional, string) API ID of the app on which this event occurred",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_name" : "(optional, string) Name of the Canvas",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "source_request_id" : "(required, string) Globally unique ID for this event"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Push Notification Retried (users.messages.pushnotification.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : { }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% endapi %}
 
 {% api %}
@@ -9152,7 +9846,7 @@ Cet événement survient lorsque Braze traite un message de notification push po
 - Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devez collecter explicitement l'IDFA pour iOS et l'ID publicitaire Google pour Android par le biais des SDK natifs. En savoir plus sur cette configuration pour [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) et [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Si vous utilisez Kafka pour ingérer les données de [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), contactez votre gestionnaire de satisfaction client pour activer l'envoi de `ad_id`.
 - `message_extras` vous permet d’annoter vos événements d’envoi avec des données dynamiques à partir du Contenu connecté, des attributs personnalisés (tels que la langue, le pays) et des propriétés d’entrée Canvas. Pour en savoir plus, reportez-vous aux [suppléments de messages]({{site.baseurl}}/message_extras_tag/).
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -9329,6 +10023,10 @@ Cet événement est créé lorsqu'un envoi RCS est interrompu en raison d'une er
 {% endtab %}
 {% endtabs %}
 
+#### Détails de la propriété
+
+- `abort_type` sera `frequency_capped` si l'envoi du message a été interrompu en raison d'une règle de limite de fréquence globale. 
+- `abort_log` comprend des informations sur la règle spécifique qui a déclenché l'abandon. En voici un exemple : `Frequency cap rule: 5 RCS messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -9749,8 +10447,7 @@ Cet événement est créé lorsqu'un message RCS est envoyé avec succès à l'a
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
-
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -10151,7 +10848,7 @@ Un événement qui est créé lorsqu'un message RCS ne parvient pas à être dé
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -10284,7 +10981,7 @@ Un événement qui est créé lorsqu'un message RCS ne parvient pas à être dé
 // Rejected (users.messages.rcs.Rejection)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -10528,7 +11225,7 @@ Cet événement est créé lorsqu'un message RCS est envoyé depuis Braze à nos
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -10710,6 +11407,10 @@ Cet événement se produit si un message SMS a été interrompu en raison d'aban
 {% endtab %}
 {% endtabs %}
 
+#### Détails de la propriété
+
+- `abort_type` sera `frequency_capped` si l'envoi du message a été interrompu en raison d'une règle de limite de fréquence globale. 
+- `abort_log` comprend des informations sur la règle spécifique qui a déclenché l'abandon. En voici un exemple : `Frequency cap rule: 5 SMS messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -10915,7 +11616,7 @@ Cet événement survient lorsqu’un SMS est envoyé à l’opérateur.
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -10954,7 +11655,7 @@ Cet événement se produit lorsqu'un SMS a été transmis avec succès au télé
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -11084,7 +11785,7 @@ Cet événement se produit lorsqu'un SMS a été transmis avec succès au télé
 // SMS Delivered (users.messages.sms.Delivery)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -11122,7 +11823,7 @@ Cet événement se produit lorsqu'un SMS a été transmis avec succès au télé
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -11162,7 +11863,7 @@ Cet événement survient lorsqu’un SMS rencontre un problème de livraison. Ut
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -11295,7 +11996,7 @@ Cet événement survient lorsqu’un SMS rencontre un problème de livraison. Ut
 // SMS Delivery Failed (users.messages.sms.DeliveryFailure)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -11334,7 +12035,7 @@ Cet événement survient lorsqu’un SMS rencontre un problème de livraison. Ut
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -11349,6 +12050,7 @@ Cet événement se produit lorsque l’un de vos utilisateurs envoie un SMS à u
 Notez que lorsque Braze reçoit un SMS entrant, nous attribuons ce message entrant à tout utilisateur qui partage ce numéro de téléphone. Par conséquent, vous pouvez recevoir plusieurs événements par message entrant si plusieurs utilisateurs de votre instance Braze partagent le même numéro de téléphone. Si vous devez attribuer des ID Utilisateurs spécifiques sur la base des messages précédents envoyés à cet utilisateur, vous pouvez utiliser l’événement SMS Livré pour attribuer des événements entrants reçus à l’ID utilisateur qui a reçu le plus récemment un message de votre numéro Braze.
 
 Si nous détectons que ce message entrant est une réponse à une campagne sortante ou à une étape Canvas envoyée par Braze, nous inclurons également les métadonnées Canvas ou Campagne avec l’événement. Braze définit une réponse comme un message entrant dans les quatre heures suivant un message sortant. Cependant, il y a un cache d’une minute pour les informations d’attribution de campagne sur le dernier SMS sortant reçu.
+
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -11566,7 +12268,7 @@ Cet événement se produit lorsqu'un envoi de SMS est rejeté par l'opérateur. 
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
   "id" : "(required, string) Globally unique ID for this event",
-  "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
+  "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "provider_error_code" : "(optional, string) Error code from the SMS provider",
@@ -11575,7 +12277,7 @@ Cet événement se produit lorsqu'un envoi de SMS est rejeté par l'opérateur. 
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -11599,7 +12301,7 @@ Cet événement se produit lorsqu'un envoi de SMS est rejeté par l'opérateur. 
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "error" : "(optional, string) Error name",
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
-    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
+    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
@@ -11639,7 +12341,7 @@ Cet événement se produit lorsqu'un envoi de SMS est rejeté par l'opérateur. 
     "error" : "(optional, string) Error name",
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "$insert_id" : "(required, string) Globally unique ID for this event",
-    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
+    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
@@ -11679,7 +12381,7 @@ Cet événement se produit lorsqu'un envoi de SMS est rejeté par l'opérateur. 
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "error" : "(optional, string) Error name",
           "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
-          "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
+          "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
           "provider_error_code" : "(optional, string) Error code from the SMS provider",
@@ -11711,7 +12413,7 @@ Cet événement se produit lorsqu'un envoi de SMS est rejeté par l'opérateur. 
 // SMS Rejected (users.messages.sms.Rejection)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -11734,7 +12436,7 @@ Cet événement se produit lorsqu'un envoi de SMS est rejeté par l'opérateur. 
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "error" : "(optional, string) Error name",
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
-    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
+    "is_sms_fallback" : "(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) Error code from the SMS provider",
@@ -11751,7 +12453,188 @@ Cet événement se produit lorsqu'un envoi de SMS est rejeté par l'opérateur. 
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+{% endapi %}
+
+{% api %}
+## Événements de réessai de SMS {#sms-retry-events}
+
+{% apitags %}
+SMS, Réessayer
+{% endapitags %}
+
+Cet événement se produit lorsqu'un message est dépriorisé ou limité en fréquence et qu'il sera réessayé plus tard dans la fenêtre de réessai configurée. Cette fonction n'est disponible que pour les clients de la version bêta de la hiérarchisation des messages.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.sms.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// SMS Retry (users.messages.sms.Retry)
+
+{
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// SMS Retry (users.messages.sms.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// SMS Retries (users.messages.sms.Retry)
+
+{
+  "device_info" : { },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_name" : "(optional, string) Name of the Canvas",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "source_request_id" : "(required, string) Globally unique ID for this event",
+          "subscription_group_id" : "(optional, string) Subscription group API ID"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// SMS Retried (users.messages.sms.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : { }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% endapi %}
 
 {% api %}
@@ -11959,7 +12842,7 @@ Cet événement se produit lorsqu’un utilisateur envoie un SMS.
 #### Détails de la propriété
 
 - `message_extras` vous permet d’annoter vos événements d’envoi avec des données dynamiques à partir du Contenu connecté, des attributs personnalisés (tels que la langue, le pays) et des propriétés d’entrée Canvas. Pour en savoir plus, reportez-vous aux [suppléments de messages]({{site.baseurl}}/message_extras_tag/).
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -12359,7 +13242,9 @@ Cet événement se produit si un message webhook a été interrompu en raison d'
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `abort_type` sera `frequency_capped` si l'envoi du message a été interrompu en raison d'une règle de limite de fréquence globale. 
+- `abort_log` comprend des informations sur la règle spécifique qui a déclenché l'abandon. En voici un exemple : `Frequency cap rule: 5 webhook messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -12588,7 +13473,205 @@ Cet événement se produit si un message webhook a été envoyé mais a échoué
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+{% endapi %}
+
+{% api %}
+## Événements de réessai de webhook {#webhook-retry-events}
+
+{% apitags %}
+Webhooks, Retry
+{% endapitags %}
+
+Cet événement se produit lorsqu'un message est dépriorisé ou limité en fréquence et qu'il sera réessayé plus tard dans la fenêtre de réessai configurée. Cette fonction n'est disponible que pour les clients de la version bêta de la hiérarchisation des messages.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.webhook.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "country" : "(optional, string) [PII] Country of the user",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "id" : "(required, string) Globally unique ID for this event",
+  "language" : "(optional, string) [PII] Language of the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// Webhook Retry (users.messages.webhook.Retry)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "timezone" : "(optional, string) Time zone of the user"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Webhook Retry (users.messages.webhook.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Webhook Retries (users.messages.webhook.Retry)
+
+{
+  "device_info" : {
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_name" : "(optional, string) Name of the Canvas",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "source_request_id" : "(required, string) Globally unique ID for this event"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Webhook Retried (users.messages.webhook.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : { }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "send_id" : "(optional, string) Message send ID this message belongs to"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% endapi %}
 
 {% api %}
@@ -12779,7 +13862,7 @@ Cet événement se produit lorsqu’un webhook a été traité et envoyé à la 
 #### Détails de la propriété
 
 - `message_extras` vous permet d’annoter vos événements d’envoi avec des données dynamiques à partir du Contenu connecté, des attributs personnalisés (tels que la langue, le pays) et des propriétés d’entrée Canvas. Pour en savoir plus, reportez-vous aux [suppléments de messages]({{site.baseurl}}/message_extras_tag/).
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -12983,7 +14066,9 @@ Cet événement se produit si un message WhatsApp a été interrompu en raison d
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `abort_type` sera `frequency_capped` si l'envoi du message a été interrompu en raison d'une règle de limite de fréquence globale. 
+- `abort_log` comprend des informations sur la règle spécifique qui a déclenché l'abandon. En voici un exemple : `Frequency cap rule: 5 WhatsApp messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -13398,8 +14483,7 @@ Cet événement se produit lorsqu'un message WhatsApp envoyé est parvenu jusqu'
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
-
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -13448,23 +14532,7 @@ Cet événement se produit lorsque WhatsApp ne peut pas envoyer le message à l'
 }
 ```
 {% endtab %}
-{% endtabs %}
 
-#### Détails de la propriété
-
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
-{% endapi %}
-
-{% api %}
-## Événements de défaillance de WhatsApp {#whatsapp-failure-events}
-
-{% apitags %}
-WhatsApp, Échec
-{% endapitags %}
-
-Cet événement se produit lorsque WhatsApp ne peut pas envoyer le message à l'utilisateur. Un échec d'envoi définitif est un échec permanent de la livrabilité.
-
-{% tabs %}
 {% tab Amplitude %}
 ```json
 // WhatsApp Failure (users.messages.whatsapp.Failure)
@@ -13644,7 +14712,7 @@ Cet événement se produit lorsque WhatsApp ne peut pas envoyer le message à l'
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}
 
 {% api %}
@@ -14103,7 +15171,209 @@ Cet événement se produit lorsqu'un message WhatsApp est lu par l'utilisateur.
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+{% endapi %}
+
+{% api %}
+## Événements WhatsApp Retry {#whatsapp-retry-events}
+
+{% apitags %}
+WhatsApp, Réessayer
+{% endapitags %}
+
+Cet événement se produit lorsqu'un message est dépriorisé ou limité en fréquence et qu'il sera réessayé plus tard dans la fenêtre de réessai configurée. Cette fonction n'est disponible que pour les clients de la version bêta de la hiérarchisation des messages.
+
+{% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.whatsapp.Retry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "retry_log" : "(optional, string) Log message describing retry details",
+  "retry_type" : "(optional, string) Type of retry",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
+{% tab Amplitude %}
+```json
+// WhatsApp Retry (users.messages.whatsapp.Retry)
+
+{
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID",
+    "timezone" : "(optional, string) Time zone of the user",
+    "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// WhatsApp Retry (users.messages.whatsapp.Retry)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// WhatsApp Retries (users.messages.whatsapp.Retry)
+
+{
+  "device_info" : {
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_name" : "(optional, string) Name of the Canvas",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "retry_log" : "(optional, string) Log message describing retry details",
+          "retry_type" : "(optional, string) Type of retry",
+          "source_request_id" : "(required, string) Globally unique ID for this event",
+          "subscription_group_id" : "(optional, string) Subscription group API ID"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : {
+    "$mobile" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
+  },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// WhatsApp Retried (users.messages.whatsapp.Retry)
+
+{
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
+  "context" : {
+    "device" : { },
+    "traits" : {
+      "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
+    }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "retry_log" : "(optional, string) Log message describing retry details",
+    "retry_type" : "(optional, string) Type of retry",
+    "subscription_group_id" : "(optional, string) Subscription group API ID"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% endapi %}
 
 {% api %}
@@ -14326,5 +15596,5 @@ Cet événement se produit lorsqu'une demande d'envoi a été communiquée avec 
 
 #### Détails de la propriété
 
-- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent d'un même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
+- `dispatch_id` est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements de poussée qui proviennent du même envoi comprennent le même `dispatch_id`. Utilisez `dispatch_id` pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cet envoi (comme Envoyer, Rebondir et Ouvrir).
 {% endapi %}

@@ -27,7 +27,7 @@ La configuration d'une synchronisation de catalogue suit de près le processus d
 {% tab Snowflake %}
 
 1. Créez un tableau des sources dans Snowflake. Vous pouvez utiliser les noms de l'exemple suivant ou choisir vos propres noms de base de données, de schéma et de table. Vous pouvez également utiliser une vue ou une vue matérialisée au lieu d'une table.
-  ```json
+  ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC (
@@ -41,7 +41,7 @@ La configuration d'une synchronisation de catalogue suit de près le processus d
     );
     ```
 2. Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the catalog source table.
-    ```json
+    ```sql
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
     GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -66,7 +66,7 @@ La configuration d'une synchronisation de catalogue suit de près le processus d
 {% tab Redshift %}
 
 1. Set up a source table in Redshift. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
-    ```json
+    ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC (
@@ -81,7 +81,7 @@ La configuration d'une synchronisation de catalogue suit de près le processus d
     ```
 2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the catalog source table.
     {% raw %}
-    ```json 
+    ```sql 
     CREATE USER braze_user PASSWORD '{password}';
     GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
     GRANT SELECT ON TABLE CATALOGS_SYNC TO braze_user;
@@ -94,13 +94,13 @@ La configuration d'une synchronisation de catalogue suit de près le processus d
 
 1. Optionally, set up a new project or dataset to hold your source table. 
 
-```json
+```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
 Créez une ou plusieurs tables à utiliser pour votre intégration CDI avec les champs suivants :
 
-```json
+```sql
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 (
   updated_at TIMESTAMP DEFAULT current_timestamp,
@@ -134,11 +134,11 @@ Le compte de service doit disposer des autorisations suivantes :
 
 1. Créez une table source dans Databricks. Vous pouvez utiliser les noms de l'exemple suivant ou choisir vos noms de catalogue, de schéma et de table. Vous pouvez également utiliser une vue ou une vue matérialisée au lieu d'une table.
 
-```json
+```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
-```json
+```sql
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 (
   updated_at TIMESTAMP DEFAULT current_timestamp(),
@@ -174,7 +174,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 
 Créez une ou plusieurs tables à utiliser pour votre intégration CDI avec les champs suivants :
 
-```json
+```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
 (
   UPDATED_AT DATETIME2(6) NOT NULL,
@@ -201,7 +201,7 @@ Configurez vos fichiers sources dans S3 en fournissant des fichiers JSON ou CSV.
 
 {% subtabs %}
 {% subtab JSON %}
-```json
+```jsonl
 {"id":"85","payload":"{\"product_name\":\"Product 85\",\"price\":85.85}"}
 {"id":"1","payload":"{\"product_name\":\"Product 1\",\"price\":1.01}","deleted":true}
 ```
@@ -229,7 +229,7 @@ Par exemple, si vous avez une table de données produit (`product_catalog_1`) av
 
 {% tabs %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE VIEW BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS 
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -246,7 +246,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -263,7 +263,7 @@ SELECT
 ```
 {% endtab %}
 {% tab BigQuery %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     product_id as ID,
@@ -278,7 +278,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Databricks %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     product_id as ID,
@@ -293,7 +293,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE VIEW [braze].[user_update_example]
 AS SELECT 
     id as ID,
@@ -307,4 +307,4 @@ FROM [braze].[product_catalog] ;
 
 - Les données extraites de l'intégration seront utilisées pour créer ou mettre à jour des articles dans le catalogue cible en fonction de l'adresse `id` fournie.
 - Si DELETED est défini sur `true`, le produit de catalogue correspondant sera supprimé.
-- La synchronisation n'enregistre pas de points de données, mais toutes les données synchronisées sont prises en compte dans l'utilisation totale de votre catalogue. Cette utilisation est mesurée sur la base de l'ensemble des données stockées, vous n'avez donc pas à vous soucier de synchroniser uniquement les données modifiées.
+- La synchronisation n'enregistre pas les points de données, mais toutes les données synchronisées sont prises en compte dans l'utilisation totale de votre catalogue. Cette utilisation est mesurée sur la base de l'ensemble des données stockées, vous n'avez donc pas à vous soucier de synchroniser uniquement les données modifiées.

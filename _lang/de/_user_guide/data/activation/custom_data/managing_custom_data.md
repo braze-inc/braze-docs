@@ -36,9 +36,7 @@ Nachdem Sie ein angepasstes Event oder Produkt erstellt haben, wählen Sie **Eig
 
 Um diese hinzugefügten angepassten Attribute, Events, Produkte oder Event-Eigenschaften nachvollziehbar zu machen, müssen Sie Ihr Entwickler:in Team bitten, sie im SDK unter demselben Namen zu erstellen, unter dem Sie sie zuvor hinzugefügt haben. Oder Sie können die Braze [API]({{site.baseurl}}/api/basics/) verwenden, um Daten zu diesem Attribut zu importieren. Danach kann das angepasste Attribut, Event oder anderes auf Ihre Nutzer:innen angewendet werden.
 
-{% alert note %}
-Alle Nutzerprofildaten (angepasste Events, angepasste Attribute, angepasste Daten) werden gespeichert, solange diese Profile aktiv sind.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Manage custom data storage' %}
 
 ## Blocklisting angepasster Daten
 

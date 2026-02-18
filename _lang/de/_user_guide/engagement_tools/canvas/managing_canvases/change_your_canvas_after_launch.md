@@ -175,7 +175,7 @@ Die folgenden häufigen Probleme können durch die Bearbeitung oder das Hinzufü
 Die folgenden Probleme sind vermeidbar. Wenn Sie Änderungen an einem Canvas vornehmen müssen, nachdem dieser gestartet wurde, empfehlen wir Ihnen, sich zunächst zu vergewissern, dass alle Nutzer:innen, die den Canvas bereits betreten haben, ihre Nutzer:innenreise abgeschlossen haben. Wir empfehlen Ihnen außerdem, keine Schritte zu löschen, die bereits von mindestens einem Nutzer:innen bearbeitet wurden.
 {% endalert %}
 
-- Fehlende Daten für die Berichterstattung (wenn Varianten von Nachrichten gelöscht und wieder eingefügt werden)
+- Fehlende Berichtsdaten (wenn Varianten von Nachrichten gelöscht und wieder hinzugefügt werden)
 - Nutzer:innen folgen nicht dem erwarteten Pfad
 - Nachrichten werden zu unerwarteten Zeiten gesendet
 - Die Bearbeitungen überschreiben die Currents-Daten nicht, so dass Sie möglicherweise Diskrepanzen zwischen den Canvas-Schritten feststellen (z. B. `canvas_step_ids`, die aufgrund einer Löschung nicht im Canvas vorhanden sind).

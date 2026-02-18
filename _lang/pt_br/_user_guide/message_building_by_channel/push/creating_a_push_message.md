@@ -150,6 +150,8 @@ Para obter mais orientações sobre o uso de imagens em suas notificações por 
 - [Crie notificações Rich para iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
 - [Crie notificações Rich para Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Comportamento ao clicar
 
 Especifique o que acontece quando um usuário seleciona o corpo de uma notificação por push com o **comportamento ao clicar**. Por exemplo, você pode solicitar que os clientes abram o aplicativo, redirecionar os clientes para um URL da Web especificado ou até mesmo abrir uma página específica do aplicativo com um [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
@@ -192,7 +194,7 @@ Nessa etapa, também é possível especificar controles de entrega, como permiti
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, você deve [segmentar usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você recebe automaticamente uma prévia de como é a população aproximada desse segmento. Estatísticas detalhadas do público para os canais direcionados por sua campanha estão disponíveis no rodapé. Para ver qual porcentagem da sua base de usuários está sendo direcionada e o valor do tempo de vida desse segmento, selecione **Show Additional Stats (Mostrar estatísticas adicionais)**.
+Em seguida, você deve [direcionar usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você recebe automaticamente uma prévia de como é a população aproximada do segmento. Estatísticas detalhadas do público para os canais direcionados por sua campanha estão disponíveis no rodapé. Para ver qual porcentagem da sua base de usuários está sendo direcionada e o valor do tempo de vida desse segmento, selecione **Show Additional Stats (Mostrar estatísticas adicionais)**.
 
 {% multi_lang_include target_audiences.md %}
 

@@ -16,7 +16,7 @@ alias: /whatsapp_quick_replies/
 
 ## Activadores basados en acciones 
 
-Tanto las campañas como los Lienzos pueden iniciarse, ramificarse y tener cambios a mitad de camino a partir de un mensaje entrante de WhatsApp (un usuario que envía un mensaje a tu WhatsApp), como una palabra desencadenante. 
+Tanto las campañas como los Lienzos pueden iniciarse, ramificarse y tener cambios a mitad de camino a partir de un mensaje de WhatsApp entrante (un usuario que envía un mensaje a tu WhatsApp), como una palabra desencadenante. 
 
 Asegúrese de que su palabra desencadenante coincide con lo que espera de los usuarios.
 
@@ -91,7 +91,7 @@ Lo más probable es que quiera un mensaje de respuesta para cada respuesta. Reco
 
 Tenga en cuenta que puede utilizar cualquier acción posterior que ofrezca Braze Canvas, como mensajes en respuesta, actualizaciones de perfil de usuario o webhooks Braze-to-Braze. 
 
-## Listar mensajes
+## Mensajes de la lista
 
 Los mensajes de lista aparecen como un cuerpo de mensaje con una lista de opciones en las que se puede hacer clic. Cada lista puede tener varias secciones, y cada lista puede tener hasta 10 filas.
 
@@ -101,7 +101,7 @@ Los mensajes de lista aparecen como un cuerpo de mensaje con una lista de opcion
 
 #### Paso 1: Crear o editar un Lienzo basado en acciones existente
 
-Sólo puedes añadir a los Lienzos mensajes de listas de WhatsApp que estén basados en acciones, ya que tienen que ser en respuesta a un mensaje de un usuario.
+Sólo puedes añadir a los Lienzos mensajes de listas de WhatsApp que estén basados en acciones, ya que tienen que ser en respuesta a un mensaje de usuario.
 
 #### Paso 2: Paso 1\. Crear un mensaje de WhatsApp
 

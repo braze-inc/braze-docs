@@ -116,7 +116,7 @@ Vous pouvez insérer des variables préformatées avec des valeurs par défaut d
 
 La fenêtre modale insère Liquid avec la valeur par défaut que vous avez spécifiée à l'endroit où se trouvait votre curseur. Le point d'insertion est également spécifié par la boîte de prévisualisation, qui contient le texte avant et après. Si un bloc de texte est mis en surbrillance, le texte mis en surbrillance sera remplacé.
 
-![Un GIF de la modale Ajouter une personnalisation qui montre l'utilisateur insérant "compagnon de voyage" comme valeur par défaut, et la modale remplaçant le texte en surbrillance "nom" dans le compositeur par l'extrait de code Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
+![Une image GIF de la fenêtre modale Ajouter une personnalisation qui montre l'utilisateur insérant "compagnon de voyage" comme valeur par défaut, et la fenêtre modale remplaçant le texte en surbrillance "nom" dans le compositeur par l'extrait de code Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### Attribution des variables
 

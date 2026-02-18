@@ -5,7 +5,7 @@ Braze propose plusieurs types de messages in-app par défaut, chacun personnalis
 Leur comportement de base et leurs caractéristiques sont définis par l'interface [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) dans une sous-classe appelée [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html). `IInAppMessage` comprend également une sous-interface, [`IInAppMessageImmersive`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html)qui vous permet d'ajouter des [boutons de](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) fermeture, de clic-action et d'analyse/analytique à votre application.
 
 {% alert important %}
-Gardez à l'esprit que les messages in-app contenant des boutons incluront le message `clickAction` dans la charge utile finale si l'action de clic est ajoutée avant l'ajout du texte du bouton.
+N'oubliez pas que les messages in-app contenant des boutons incluront le message `clickAction` dans la charge utile finale si l'action de clic est ajoutée avant l'ajout du texte du bouton.
 {% endalert %}
 
 {% subtabs local %}
