@@ -2,6 +2,7 @@
 nav_title: Contextual Location
 article_title: Contextual Location
 page_type: landing
+page_order: 4
 description: "This page lists Braze partners (Alloys) who provide services for contextual location."
 layout: partner_page
 search_tag: Partner
