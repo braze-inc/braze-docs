@@ -21,7 +21,7 @@ description: "Esta página fornece uma visão geral da ingestão de dados na nuv
 Quando uma sincronização é executada, o Braze se conecta diretamente à sua instância de data warehouse, recupera todos os novos dados da tabela especificada e atualiza os dados correspondentes em seu dashboard do Braze. Cada vez que a sincronização é executada, a Braze reflete quaisquer dados atualizados.
 
 {% alert important %}
-A Braze CDI sincronizará linhas estritamente com base no valor `UPDATED_AT`, independentemente de o conteúdo da linha ser o mesmo do que está atualmente na Braze. Dado isso, recomendamos usar `UPDATED_AT` corretamente para sincronizar apenas dados novos ou atualizados, a fim de evitar o uso desnecessário de pontos de dados.
+A Braze CDI sincronizará linhas estritamente com base no valor `UPDATED_AT`, independentemente de o conteúdo da linha ser o mesmo do que está atualmente na Braze. Dado isso, recomendamos usar `UPDATED_AT` corretamente para sincronizar apenas dados novos ou atualizados para evitar o uso desnecessário de pontos de dados.
 {% endalert %}
 
 ### Exemplo: Sincronização recorrente
@@ -58,7 +58,7 @@ No seu data warehouse, adicione os seguintes usuários e atributos à sua tabela
 | `2022-07-19 09:07:23` | `customer_5678` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_4":true,<br>    "attribute_5":"testing_123"<br>} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Durante a próxima sincronização programada, a Braze sincroniza todas as linhas com um timestamp `UPDATED_AT` igual ou posterior ao timestamp mais recente para perfis de usuários. A Braze atualiza ou adiciona campos, então você não precisa sincronizar o perfil completo do usuário a cada vez. Após a sincronização, os perfis de usuários refletem as novas atualizações:
+Durante a próxima sincronização programada, a Braze sincroniza todas as linhas com um timestamp `UPDATED_AT` igual ou posterior ao timestamp mais recente para perfis de usuários. A Braze atualiza ou adiciona campos, então você não precisa sincronizar o perfil completo do usuário toda vez. Após a sincronização, os perfis de usuários refletem as novas atualizações:
 
 **Sincronização recorrente, segunda execução em 20 de julho de 2022 às 12h**
 
@@ -86,7 +86,7 @@ Uma linha foi adicionada, mas o valor `UPDATED_AT` é anterior a `2022-07-19 09:
 Nesta terceira execução, outra nova linha foi adicionada. Agora, uma linha tem um valor `UPDATED_AT` posterior ao `2022-07-19 09:07:23`, o que significa que apenas uma linha será sincronizada. O último `UPDATED_AT` agora está definido como `2022-07-21 08:30:00`.
 
 {% alert note %}
-Valores `UPDATED_AT` podem ser ainda mais tardios do que o horário de início da execução para uma sincronização dada. No entanto, isso não é recomendado, pois empurra a última marca de tempo `UPDATED_AT` "para o futuro" e as sincronizações subsequentes não sincronizarão valores anteriores.
+Valores `UPDATED_AT` podem ser ainda mais tardios do que o horário de início da execução para uma sincronização dada. No entanto, isso não é recomendado, pois empurra o último timestamp `UPDATED_AT` "para o futuro" e sincronizações subsequentes não sincronizarão valores anteriores.
 {% endalert %}
 
 ## Use um registro de data e hora UTC para a coluna `UPDATED_AT` 
@@ -95,7 +95,7 @@ A coluna `UPDATED_AT` deve estar em UTC para evitar problemas com o horário de 
 
 ## Certifique-se de que o horário `UPDATED_AT` não seja o mesmo que o da sua sincronização.
 
-Sua sincronização CDI pode ter dados duplicados se algum campo `UPDATED_AT` estiver exatamente no mesmo horário que a última marca de tempo `UPDATED_AT` da execução de sincronização bem-sucedida anterior. Isso ocorre porque o CDI escolherá um "limite inclusivo" quando identificar qualquer linha que tenha o mesmo horário da sincronização anterior e tornará as linhas capazes de sincronizar. O CDI irá re-ingressar essas linhas e criar dados duplicados.
+Sua sincronização CDI pode ter dados duplicados se algum campo `UPDATED_AT` estiver exatamente no mesmo horário que o último timestamp `UPDATED_AT` da execução de sincronização bem-sucedida anterior. Isso ocorre porque o CDI escolherá um "limite inclusivo" quando identificar qualquer linha que tenha o mesmo horário da sincronização anterior e tornará as linhas capazes de sincronizar. O CDI reingestará essas linhas e criará dados duplicados.
 
 Aqui estão algumas sugestões para evitar dados duplicados:
 
@@ -265,7 +265,7 @@ O CDI sincronizará apenas as novas linhas, então a próxima sincronização qu
 
 Cada vez que uma sincronização é executada, a Braze procura linhas que não foram sincronizadas anteriormente. Verificamos isso usando a coluna `UPDATED_AT` na sua tabela ou visualização. A Braze seleciona e importa quaisquer linhas onde `UPDATED_AT` é igual ou posterior ao último timestamp `UPDATED_AT` do último trabalho de sincronização bem-sucedido, independentemente de serem as mesmas que estão atualmente no perfil do usuário. Dito isso, recomendamos sincronizar apenas os atributos que você deseja adicionar ou atualizar.
 
-O uso de pontos de dados é idêntico usando CDI em comparação com outros métodos de ingestão, como APIs REST ou SDKs, portanto, cabe a você garantir que está apenas adicionando novos ou atributos atualizados em suas tabelas de origem.
+O uso de pontos de dados é idêntico usando CDI em comparação com outros métodos de ingestão, como APIs REST ou SDKs, então cabe a você garantir que está apenas adicionando novos ou atributos atualizados em suas tabelas de origem.
 
 ### Separe a coluna `EXTERNAL_ID` da coluna `PAYLOAD` 
 
@@ -303,7 +303,7 @@ Se você preferir armazenar cada atributo em sua própria coluna internamente, v
 
 {% tabs local %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
      attribute_2 string,
@@ -325,7 +325,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
      attribute_2 string,
@@ -347,7 +347,7 @@ SELECT
 ```
 {% endtab %}
 {% tab BigQuery %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (attribute_1 string,
      attribute_2 STRING,
      attribute_3 NUMERIC,
@@ -367,7 +367,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Databricks %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (
     attribute_1 string,
     attribute_2 STRING,
@@ -389,7 +389,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE TABLE [braze].[users] (
     attribute_1 VARCHAR,
     attribute_2 VARCHAR,
@@ -488,8 +488,8 @@ Observe que você só pode sincronizar um evento de compra por linha.
     "price" : 219.98,
     "time" : "2013-07-16T19:20:30+01:00",
     "properties" : {
-        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99, },
-        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99, }
+        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99 },
+        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99 }
         ]
     }
 }

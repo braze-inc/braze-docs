@@ -30,7 +30,7 @@ Seu Grupo de controle global se aplica a todos os canais, campanhas e Canvas, ex
 
 O Braze seleciona aleatoriamente vários intervalos de [números de buckets aleatórios]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) e inclui usuários desses buckets selecionados. Se estiver usando números de balde aleatórios para qualquer outra finalidade, consulte [Coisas a serem observadas](#things-to-watch-for). 
 
-Quando o seu grupo de controle global é gerado, todos os usuários com números aleatórios fazem parte do grupo. Além disso, os novos usuários que ingressarem após esse ponto (aqueles adquiridos depois que o Grupo de Controle Global foi gerado) que tiverem esses números aleatórios de bucket também serão adicionados ao Grupo de Controle Global. Da mesma forma, se muitos usuários forem excluídos, é de se esperar que o tamanho do seu Grupo de Controle Global diminua, pois uma porcentagem desses usuários excluídos foi incluída nesse grupo. Isso mantém o tamanho do seu grupo como uma porcentagem constante em relação a toda a sua base de usuários.
+Quando o seu Grupo de Controle Global é gerado, todos os usuários com números aleatórios de bucket fazem parte do grupo. Além disso, os novos usuários que ingressarem após esse ponto (aqueles adquiridos depois que o Grupo de Controle Global foi gerado) que tiverem esses números aleatórios de bucket também serão adicionados ao Grupo de Controle Global. Da mesma forma, se muitos usuários forem excluídos, é de se esperar que o tamanho do seu Grupo de Controle Global diminua, pois uma porcentagem desses usuários excluídos foi incluída nesse grupo. Isso mantém o tamanho do seu grupo como uma porcentagem constante em relação a toda a sua base de usuários.
 
 ### Atribua os usuários aleatoriamente ao grupo de tratamento para a geração de relatórios
 
@@ -102,7 +102,7 @@ Os grupos de controle históricos não são preservados, portanto, só é possí
 
 É possível visualizar a associação ao Grupo de Controle Global acessando a seção **Diversos** na guia **Engajamento** do perfil de um usuário individual.
 
-![Uma seção "Diversos" informando que o usuário tem um número de bucket aleatório de 6356 e não está no Grupo de Controle Global.]({% image_buster /assets/img/control_group/control_group1.png %}){: style="max-width:50%;"}
+![Uma seção "Diversos" informa que o usuário tem um número de bucket aleatório de 6356 e não está no Grupo de Controle Global.]({% image_buster /assets/img/control_group/control_group1.png %}){: style="max-width:50%;"}
 
 ## Relatórios
 
@@ -110,7 +110,7 @@ Consulte [Relatórios do grupo de controle global]({{site.baseurl}}/user_guide/a
 
 ## Solução de problemas
 
-Ao configurar os grupos de controle globais e visualizar os relatórios, veja a seguir os erros que podem ocorrer:
+Ao configurar os grupos de controle globais e visualizar os relatórios, veja os erros que podem ocorrer:
 
 | Problema | Solução de problemas |
 | --- | --- |
@@ -129,7 +129,7 @@ Seu grupo de controle global é formado usando números aleatórios de bucket e,
 
 #### Endereços de e-mail duplicados
 
-Se dois usuários com IDs de usuários externos diferentes tiverem o mesmo endereço de e-mail, e um deles estiver no grupo de controle e o outro não, um e-mail ainda será enviado a esse endereço de e-mail quando o usuário do grupo sem controle for elegível para receber um e-mail. Quando isso ocorre, marcamos ambos os perfis de usuário como tendo recebido a campanha ou o Canva que contém esse e-mail.
+Se dois usuários com IDs de usuário externo diferentes tiverem o mesmo endereço de e-mail, e um deles estiver no grupo de controle e o outro não, um e-mail ainda será enviado para esse endereço de e-mail quando o usuário do grupo sem controle for elegível para receber um e-mail. Quando isso ocorre, marcamos ambos os perfis de usuário como tendo recebido a campanha ou o Canva que contém esse e-mail.
 
 #### Grupo de controle global e grupos de controle específicos de mensagens
 

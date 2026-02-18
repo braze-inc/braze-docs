@@ -62,6 +62,8 @@ Agora vamos ficar um pouco técnicos. Nos bastidores, há três partes principai
 
 Para uma implementação padrão, você adiciona o conteúdo do cartão - o modelo - a partir do dashboard ou por meio de APIs, e a visualização e o controlador são tratados pelo que é chamado de view controller. Um controlador de visualização é a "cola" entre o aplicativo geral e a tela.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## Casos de uso
 
 Consulte esta seção para ver alguns casos de uso comuns de cartões de conteúdo.

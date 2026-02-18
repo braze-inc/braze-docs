@@ -110,13 +110,13 @@ Informationen zu den Berichtsmetriken finden Sie unter [Globale Kontrollgruppenb
 
 ## Fehlersuche
 
-Bei der Einrichtung Ihrer globalen Kontrollgruppen und der Anzeige von Berichten können Sie auf die folgenden Fehler stoßen:
+Bei der Einrichtung Ihrer globalen Kontrollgruppen und der Anzeige von Berichten können Sie auf folgende Fehler stoßen:
 
 | Fehler | Fehlersuche |
 | --- | --- |
 | Der Prozentsatz, der bei der Benennung einer globalen Kontrollgruppe eingegeben wurde, konnte nicht gespeichert werden. | Dieses Problem tritt auf, wenn Sie keine ganze Zahl oder eine ganze Zahl eingeben, die nicht zwischen 1 und 15 (einschließlich) liegt. |
 | Fehlermeldung "Braze kann die globale Kontrollgruppe nicht aktualisieren" in den globalen Einstellungen. | Dies bedeutet in der Regel, dass eine Komponente dieser Seite geändert wurde, wahrscheinlich aufgrund von Aktionen, die ein anderer Benutzer in Ihrem Braze-Konto vorgenommen hat. Aktualisieren Sie in diesem Fall die Seite und versuchen Sie es erneut. |
-| Der Bericht Globale Kontrollgruppe enthält keine Daten. | Wenn Sie den Bericht über die globale Kontrollgruppe aufrufen, ohne eine globale Kontrollgruppe gespeichert zu haben, sehen Sie keine Daten in dem Bericht. Erstellen und speichern Sie eine Globale Kontrollgruppe und versuchen Sie es erneut. |
+| Der Bericht Globale Kontrollgruppe enthält keine Daten. | Wenn Sie den Bericht Globale Kontrollgruppe aufrufen, ohne eine Globale Kontrollgruppe gespeichert zu haben, sehen Sie keine Daten in dem Bericht. Erstellen und speichern Sie eine Globale Kontrollgruppe und versuchen Sie es erneut. |
 | Meine Konversionsrate liegt bei 0% oder ich sehe die grafische Darstellung nicht, obwohl mehr als null Ereignisse stattfinden. | Wenn die Konversionsanzahl sehr gering und die Kontroll- bzw. Behandlungsgruppe sehr groß ist, kann die Konversionsrate auf 0 % aufgerundet werden und wird dann nicht im Diagramm angezeigt. Überprüfen Sie in diesem Fall die Ereignisanzahl. Sie können die Effektivität Ihrer beiden Gruppen mit Hilfe der Metrik des inkrementellen Uplifts in Prozent vergleichen.  |
 | Meine Konversionsrate (oder andere Metriken) ändern sich drastisch, je nachdem, für welchen Zeitraum ich die Daten ansehe. | Wenn Sie Daten über kurze Zeiträume betrachten, kann es vorkommen, dass Ihre Kennzahlen von Tag zu Tag oder von Woche zu Woche schwanken. Wir empfehlen Ihnen, mindestens die Kennzahlen für einen Monat zu betrachten. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -125,11 +125,11 @@ Bei der Einrichtung Ihrer globalen Kontrollgruppen und der Anzeige von Berichten
 
 #### Überlappende zufällige Bucket-Nummern
 
-Ihre globale Kontrollgruppe wird mit Hilfe von zufälligen Bucket-Nummern gebildet. Wenn Sie also andere Tests durchführen, die Segmente mit zufälligen Bucket-Nummern verwenden, sollten Sie bedenken, dass es zu Überschneidungen zwischen den von Ihnen erstellten Segmenten und den Nutzer:innen Ihrer globalen Kontrollgruppe kommen kann.
+Ihre globale Kontrollgruppe wird mit Hilfe von zufälligen Bucket-Nummern gebildet. Wenn Sie also andere Tests durchführen, bei denen Segmente mit zufälligen Bucket-Nummern gefiltert werden, denken Sie daran, dass es zu Überschneidungen zwischen den von Ihnen erstellten Segmenten und den Nutzer:innen der globalen Kontrollgruppe kommen kann.
 
 #### Doppelte E-Mail-Adressen
 
-Wenn zwei Nutzer:innen mit unterschiedlichen externen IDs dieselbe E-Mail-Adresse haben und einer dieser Nutzer:innen zur Kontrollgruppe gehört und der andere nicht, dann wird trotzdem eine E-Mail an diese E-Mail-Adresse gesendet, wenn der Nutzer:innen, der nicht zur Kontrollgruppe gehört, für eine E-Mail in Frage kommt. In diesem Fall markieren wir beide Nutzerprofile als Empfänger der Kampagne oder des Canvas mit dieser E-Mail.
+Wenn zwei Nutzer:innen mit unterschiedlichen externen IDs dieselbe E-Mail-Adresse haben und einer dieser Nutzer:innen zur Kontrollgruppe gehört und der andere nicht, dann wird trotzdem eine E-Mail an diese E-Mail-Adresse gesendet, wenn der Nutzer:innen, der nicht zur Kontrollgruppe gehört, für eine E-Mail berechtigt ist. In diesem Fall markieren wir beide Nutzerprofile als Empfänger der Kampagne oder des Canvas mit dieser E-Mail.
 
 #### Globale Kontrollgruppe und nachrichtenspezifische Kontrollgruppen
 

@@ -112,7 +112,9 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 ### Image
 
-Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Image`. Pour les images dynamiques (images avec Liquid), vous devez définir une image de repli pour utiliser les paramètres de largeur automatique. Pour les [spécifications de l'image]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email), reportez-vous aux [spécifications de l'image de]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email) notre [e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Image`. Pour les images dynamiques (images à contenu liquide ou connecté), vous devez définir une image de repli pour utiliser les paramètres de largeur automatique. Pour les [spécifications de l'image]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email), reportez-vous aux [spécifications de l'image de]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email) notre [e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 | Propriétés | Description |
 |---|---|

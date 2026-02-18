@@ -1,7 +1,7 @@
 ---
 nav_title: Première introduction
 article_title: Première introduction
-page_order: 20
+page_order: 5
 layout: dev_guide
 guide_top_header: "Première introduction"
 guide_top_text: "BrazeAI<sup>TM</sup> alimente diverses fonctionnalités d'IA générative d'automatisation qui contribuent à accroître votre efficacité et votre créativité. Créez des expériences client cross-canal engageantes, tout en consacrant moins de temps aux tâches de rédaction de routine, au perfectionnement du contenu et à la création d'images."

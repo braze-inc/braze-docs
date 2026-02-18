@@ -8,7 +8,7 @@ toc_headers: h2
 
 # Puxar dados do perfil do usuário
 
-> Esta página cobre como puxar perfis de usuários em suas chamadas de conteúdo conectado e as melhores práticas envolvendo a modelagem Liquid. 
+> Esta página cobre como puxar perfis de usuário para suas chamadas de conteúdo conectado e as melhores práticas envolvendo a modelagem Liquid. 
 
 ## Pré-requisitos
 
@@ -28,9 +28,9 @@ Hi ${first_name},
 
 A resposta do conteúdo conectado é {% raw %}`Your language is ${language}`{% endraw %}. O conteúdo exibido neste exemplo é `Hi Jon, your language is`. 
 
-A própria linguagem não será modelada. Isso ocorre porque a Braze precisa saber quais campos recuperar do usuário antes de fazermos a chamada de Conteúdo Conectado.
+A linguagem em si não será modelada. Isso ocorre porque a Braze precisa saber quais campos recuperar do usuário antes de fazermos a chamada de Conteúdo Conectado.
 
-Para renderizar corretamente o retorno Liquid, você deve incluir a tag {% raw %}`${language}`{% endraw %} em qualquer lugar da solicitação, como mostrado no seguinte trecho de código. O pré-processador Liquid saberá pegar o atributo "language" do usuário para tê-lo pronto para a modelagem da resposta.
+Para renderizar corretamente o retorno Liquid, você deve incluir a tag {% raw %}`${language}`{% endraw %} em qualquer lugar na solicitação, como mostrado no seguinte trecho de código. O pré-processador Liquid saberá pegar o atributo "language" do usuário para tê-lo pronto para a modelagem da resposta.
 
 {%raw%}
 ```liquid

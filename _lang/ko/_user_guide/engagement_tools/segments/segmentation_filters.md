@@ -244,7 +244,7 @@ glossaries:
     tags:
       - Retargeting
   - name: 캔버스 대조군에 속함
-    description: 특정 캔버스에 대한 대조군인지 여부에 따라 사용자를 세분화합니다. 이 필터는 캔버스를 입력한 사용자만 평가합니다.<br><br>예를 들어 캔버스의 대조군에 속하지 않는 사용자를 필터링하면 캔버스에 들어왔지만 대조군에 속하지 않은 모든 사용자를 받게 됩니다.
+    description: 특정 캔버스에 대한 대조군인지 여부에 따라 사용자를 세분화합니다. 이 필터는 캔버스를 입력한 사용자만 평가합니다.<br><br>예를 들어 캔버스의 대조군에 속하지 않는 사용자를 필터링하면 캔버스에 들어왔지만 대조군에 속하지 않는 모든 사용자를 받게 됩니다.
     tags:
       - Retargeting
   - name: 대조군에 등록된 마지막 시간
@@ -276,7 +276,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: 이메일 사용 가능
-    description: "유효한 이메일 주소가 있는지 여부와 이메일 구독 또는 옵트인 여부에 따라 사용자를 분류합니다. 이 필터는 사용자가 이메일을 수신 거부했는지, Braze가 하드 바운스를 받았는지, 이메일이 스팸으로 표시되었는지 등 세 가지 기준을 확인합니다. 이러한 기준 중 하나라도 충족되지 않거나 사용자에 대한 이메일이 존재하지 않는 경우 해당 사용자는 포함되지 않습니다.<br><br>트랜잭션 메시지를 보내는 경우 '이메일 사용 가능'이 다음과 같은 사용자는 <code>false</code> 는 대상자 계산에 포함되지 않지만 여전히 메시지를 받을 수 있습니다. 그러나 오디언스 계산에는 가입하거나 옵트인한 사용자만 포함됩니다. <br><br>옵트인 상태가 중요한 이메일의 경우 <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">이메일 주소</a> 필터 대신 '이메일 사용 가능' 필터를 사용하는 것이 좋으며, 추가 기준을 사용하면 메시지를 실제로 보고 싶어하는 사용자를 타겟팅하는 데 도움이 될 수 있습니다."
+    description: "유효한 이메일 주소가 있는지 여부와 이메일에 가입했는지 또는 옵트인했는지 여부에 따라 사용자를 세그먼트화합니다. 이 필터는 사용자가 이메일을 수신 거부했는지, Braze가 하드 바운스를 받았는지, 이메일이 스팸으로 표시되었는지 등 세 가지 기준을 확인합니다. 이러한 기준 중 하나라도 충족되지 않거나 사용자에 대한 이메일이 존재하지 않는 경우 해당 사용자는 포함되지 않습니다.<br><br>사용 가능한 이메일이 다음과 같은 사용자 <code>false</code> 는 캠페인 오디언스에서 제외되며 모든 사용자(탈퇴한 사용자 포함)에게 보내도록 전송 설정이 구성되어 있어도 이메일을 받지 못합니다.<br><br>옵트인 상태가 중요한 이메일의 경우 <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">이메일 주소</a> 대신 이메일 사용 가능을 사용하세요. 추가 기준은 이메일 수신 자격이 있는 사용자를 타겟팅하는 데 도움이 됩니다."
     tags:
       - Channel subscription behavior
   - name: 이메일 옵트인 날짜
@@ -356,7 +356,7 @@ glossaries:
     tags:
       - Purchase behavior
   - name: Y일 동안 지출한 X 금액
-    description: "사용자가 1~30일 사이의 지정된 마지막 달력 일수 동안 앱에서 지출한 금액에 따라 사용자를 분류합니다. 이 금액에는 최근 50회 구매의 합계만 포함됩니다. <br> <a href=\"/docs/x-in-y-behavior/\">여기에서 X-in-Y 동작에 대해 자세히 알아보세요.</a>"
+    description: "사용자가 1~30일 사이의 지정된 마지막 달력 일수 동안 앱에서 지출한 금액에 따라 사용자를 분류합니다. 이 금액에는 최근 50건의 구매 합계만 포함됩니다. <br> <a href=\"/docs/x-in-y-behavior/\">여기에서 X-in-Y 동작에 대해 자세히 알아보세요.</a>"
     tags:
       - Purchase behavior
   - name: 마지막 주문(최근 730일)
@@ -388,11 +388,11 @@ glossaries:
     tags:
       - eCommerce
   - name: 총 매출(지난 730일)
-    description: "지난 2년간 사용자의 주문에서 발생한 총 매출로 사용자를 세분화하며, 주문에 대한 <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">전자상거래 추천 이벤트와</a> 관련된 매출에서 주문 환불에 대한 전자상거래 이벤트와 관련된 매출을 차감하여 계산합니다(전자상거래 이벤트를 추적하지 않는 워크스페이스에는 이 필터에 대한 데이터가 없습니다). 사용자는 하루에 한 번 이 필터에 대해 평가받습니다.<br><br>이 필터는 베타 버전입니다. 이 필터를 사용하려면 Braze 계정 매니저에게 문의하세요."
+    description: "지난 2년간 사용자의 주문에서 발생한 총 매출로 사용자를 세분화하며, 주문에 대한 전자상거래 <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">추천 이벤트와</a> 관련된 매출에서 주문 환불에 대한 전자상거래 이벤트와 관련된 매출을 차감하여 계산합니다(전자상거래 이벤트를 추적하지 않는 워크스페이스에는 이 필터에 대한 데이터가 없습니다). 사용자는 하루에 한 번 이 필터에 대해 평가받습니다.<br><br>이 필터는 베타 버전입니다. 이 필터를 사용하려면 Braze 계정 매니저에게 문의하세요."
     tags:
       - eCommerce
   - name: 총 매출
-    description: "사용자의 평생 동안 사용자의 주문에서 발생한 총 매출을 기준으로 사용자를 세그먼트화하며, 주문에 대한 전자상거래 <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">추천 이벤트와</a> 관련된 매출에서 주문 환불에 대한 전자상거래 이벤트와 관련된 매출을 차감하여 계산합니다(전자상거래 이벤트를 추적하지 않는 워크스페이스에는 이 필터에 대한 데이터가 없음). 이 필터에 대한 사용자 평가는 실시간으로 이루어집니다.<br><br>이 필터는 베타 버전입니다. 이 필터를 사용하려면 Braze 계정 매니저에게 문의하세요."
+    description: "사용자의 일생 동안 사용자의 주문에서 발생한 총 매출을 기준으로 사용자를 세그먼트화하며, 주문에 대한 전자상거래 <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">추천 이벤트와</a> 관련된 매출에서 주문 환불에 대한 전자상거래 이벤트와 관련된 매출을 차감하여 계산합니다(전자상거래 이벤트를 추적하지 않는 워크스페이스에는 이 필터에 대한 데이터가 없습니다). 이 필터에 대한 사용자 평가는 실시간으로 이루어집니다.<br><br>이 필터는 베타 버전입니다. 이 필터를 사용하려면 Braze 계정 매니저에게 문의하세요."
     tags:
       - eCommerce
   - name: 평균 주문 금액(지난 730일)
@@ -588,7 +588,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: 메시지를 열 가능성
-    description: "지정된 채널에서 메시지를 열어볼 가능성에 따라 0~100% 범위에서 사용자를 필터링합니다. 채널의 가능성을 측정할 수 있는 충분한 데이터가 없는 사용자는 \"비어 있음\"을 사용하여 선택할 수 있습니다.<br><br>이메일의 경우, 머신 오픈은 가능성 계산에서 제외됩니다."
+    description: "<a href=\"/docs/user_guide/brazeai/intelligence/intelligent_channel/#individual-channels\">지정된 채널에서 메시지를 열 가능성에</a> 따라 0~100% 범위에서 사용자를 필터링합니다. 채널의 가능성을 측정할 수 있는 충분한 데이터가 없는 사용자는 \"비어 있음\"을 사용하여 선택할 수 있습니다.<br><br>이메일의 경우, 머신 오픈은 가능성 계산에서 제외됩니다."
     tags:
       - Intelligence and predictive
   - name: 앱을 사용 중인 Facebook 친구 수

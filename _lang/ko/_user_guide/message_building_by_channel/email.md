@@ -4,7 +4,7 @@ article_title: 이메일
 page_order: 1.5
 layout: dev_guide
 guide_top_header: "Email"
-guide_top_text: "Braze에서 이메일을 사용하면 캠페인이나 캔버스에서 사용자 맞춤형 이메일 메시지를 완전히 생성할 수 있어 앱이나 웹사이트 외부에서 사용자의 주목을 빠르게 끌 수 있습니다. 오디언스 관리부터 눈길을 사로잡는 멀티미디어 콘텐츠 포함까지 이메일 메시지를 맞춤 설정하세요. To see examples of email campaigns, check out our <a href='https://www.braze.com/customers/'>case studies</a>."
+guide_top_text: "Braze에서 이메일을 사용하면 캠페인이나 캔버스에서 사용자 맞춤형 이메일 메시지를 완전히 생성할 수 있어 앱이나 웹사이트 외부에서 사용자의 관심을 빠르게 끌 수 있습니다. 오디언스 관리부터 눈길을 사로잡는 멀티미디어 콘텐츠 포함까지 이메일 메시지를 맞춤 설정하세요. To see examples of email campaigns, check out our <a href='https://www.braze.com/customers/'>case studies</a>."
 description: "이 랜딩 페이지는 Braze 이메일의 홈 페이지입니다. 여기에서 이메일 캠페인을 만드는 방법, 드래그 앤 드롭 편집기 사용 방법, 사용자 구독 관리 방법, 환경설정 센터 등을 배울 수 있습니다."
 channel:
   - email

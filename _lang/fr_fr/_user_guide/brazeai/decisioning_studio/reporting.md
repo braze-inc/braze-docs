@@ -1,17 +1,17 @@
 ---
-nav_title: Rapports et Insights
-article_title: Rapports et Insights
-page_order: 3
+nav_title: Rapports et informations
+article_title: Rapports et informations
 description: "Découvrez comment afficher les rapports BrazeAI Decisioning Studio™ dans Braze afin de comprendre l'impact des décisions basées sur l'IA sur vos campagnes."
+page_order: 3
 ---
 
-# Rapports et Insights
+# Rapports et informations
 
 > Découvrez comment afficher les rapports BrazeAI Decisioning Studio™ dans Braze afin de comprendre l'impact des décisions basées sur l'IA sur vos campagnes. Des indicateurs de performances à la santé des données et aux modifications du système, ces rapports vous aident à comprendre les résultats, à résoudre les problèmes et à prendre des décisions avisées en toute confiance.
 
 ## Conditions préalables
 
-Avant de pouvoir afficher les rapports de Decisioning Studio dans la Braze, vous devez :
+Avant de pouvoir consulter les rapports du Decisioning Studio dans la Braze, vous devez :
 
 - Disposer d'un contrat actif pour Braze et BrazeAI Decisioning Studio™. 
 - Contacter votre CSM pour qu'il active BrazeAI Decisioning Studio™ en votre nom.
@@ -19,7 +19,7 @@ Avant de pouvoir afficher les rapports de Decisioning Studio dans la Braze, vous
 
 ## Afficher les rapports {#view}
 
-Pour afficher les indicateurs des agents de Decisioning Studio dans Braze, sélectionnez **AI Decisioning (Prise de décisions basées sur l’IA)** > **BrazeAI Decisioning Studio™**, puis sélectionnez un agent.
+Pour afficher les indicateurs d'un agent Decisioning Studio dans Braze, accédez à **Intelligence artificielle** > **BrazeAI Decisioning Studio™**, puis sélectionnez un agent.
 
 ![Écran d'accueil du rapport BrazeAI Decisioning Studio™ montrant un tableau de bord avec plusieurs fiches de rapport. Chaque fiche montre un type de rapport tel que les performances, les informations, les diagnostics et la chronologie, avec de brèves descriptions et les icônes correspondantes.]( {% image_buster /assets/img/decisioning_studio/reporting_home.png %} )
 
@@ -41,7 +41,7 @@ Pour définir ou exclure des dates, sélectionnez <i class="fa-solid fa-gear"></
 
 ### Performances
 
-Le rapport de performances propose des indicateurs généraux sur les agents. Ils permettent de comparer les groupes de traitement (de Braze) à un ou plusieurs groupes de contrôle (par exemple, le chiffre d'affaires). Il peut être affiché de deux façons différentes : **Trending (Tendances)** et**Driver Tree (Arborescence des facteurs)**.
+Le rapport de performance propose des indicateurs de haut niveau sur les agents qui comparent les groupes de traitement (de Braze) à un ou plusieurs groupes de contrôle (comme les chiffres d'affaires). Il peut être affiché de deux façons différentes : **Trending (Tendances)** et**Driver Tree (Arborescence des facteurs)**.
 
 Par défaut, le rapport utilise la vue **Trending (Tendances)**, qui compare les performances de BrazeAI™ dans le temps par rapport à vos groupes de contrôle, et suit l'évolution de l'augmentation.
 
@@ -63,7 +63,7 @@ Pour comparer les performances de deux groupes, utilisez les menus déroulants a
 
 ### Insights (Informations)
 
-Le rapport Insights (Informations) vous montre comment sont générées les différentes options de recommandations de votre banque d'actions, comme la sélection de blocs ou SL. Il existe deux rapports d'informations différents : **Agent preferences (Préférences des agents)** et **SHAPs (SHAP)**.
+Les informations exploitables vous montrent comment sont générées les différentes options de recommandation de votre banque d'actions, comme la sélection des blocs. Il existe deux rapports d'informations différents : **Agent preferences (Préférences des agents)** et **SHAPs (SHAP)**.
 
 {% tabs local %}
 {% tab agent preferences %}
@@ -76,7 +76,7 @@ Pour plus de détails sur ce rapport, reportez-vous au tableau suivant :
 | Champ | Description |
 |-------|-------------|
 | Dimension | Attribut utilisé pour organiser les résultats, comme le canal, la campagne ou la plateforme. |
-| Groupe de comparaison | Groupes que vous souhaitez comparer dans votre rapport. Vous pouvez sélectionner plusieurs groupes de comparaison, jusqu'à NUM. |
+| Groupe de comparaison | Groupes que vous souhaitez comparer dans votre rapport. Vous pouvez sélectionner plusieurs groupes de comparaison. |
 | Paramètre | Indicateur appliqué cet attribut, comme les ouvertures, les clics ou le taux de conversion. |
 | Segment | [Segment d'audience]({{site.baseurl}}/user_guide/engagement_tools/segments/) que vous avez créé dans Braze. |
 | Option             | Option de recommandation spécifique sélectionnée dans la banque d'actions. |
@@ -87,9 +87,9 @@ Pour plus de détails sur ce rapport, reportez-vous au tableau suivant :
 {% endtab %}
 
 {% tab shaps %}
-Le rapport **SHAPs** utilise le modèle SHAP (Shapley Additive exPlanations) pour vous aider à quantifier la contribution de chaque fonctionnalité ou variable à votre modèle de recommandation. Chaque point du graphique représente un SHAP et la distribution des points donne une idée générale de l'impact directionnel d'une fonctionnalité.
+Le rapport **SHAPs** utilise le modèle Shapley Additive exPlanations (SHAP) pour vous aider à quantifier la contribution de chaque fonctionnalité ou variable à votre agent de recommandation. Chaque point du graphique représente un SHAP et la distribution des points donne une idée générale de l'impact directionnel d'une fonctionnalité.
 
-![Le graphique du rapport SHAPs affiche un diagramme à barres horizontal avec plusieurs barres colorées représentant différentes fonctionnalités ou variables. Chaque barre montre l'impact d'une fonctionnalité sur le modèle de recommandation, l'axe des x affichant la valeur SHAP et l'axe des y énumérant les noms des fonctionnalités telles que le caractère récent, la fréquence et le canal. Le graphique visualise la contribution positive ou négative de chaque fonctionnalité dans les prédictions du modèle.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
+![Le graphique du rapport SHAPs affiche un diagramme à barres horizontal avec plusieurs barres colorées représentant différentes fonctionnalités ou variables. Chaque barre montre l'impact d'une fonctionnalité sur l'agent de recommandation, l'axe des x étant étiqueté valeur SHAP et l'axe des y énumérant les noms des fonctionnalités telles que la récence, la fréquence et le canal. Le graphique permet de visualiser la contribution positive ou négative de chaque fonctionnalité aux prédictions de l'agent.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -108,7 +108,7 @@ Le rapport de diagnostics sortants indique le volume quotidien de recommandation
 
 {% tab inbound %}
 
-Le rapport de diagnostics entrants permet de contrôler la santé de vos flux de données dans BrazeAI™. Il affiche des informations telles que le nombre de fichiers, leur taille et le volume des lignes pour chaque ressource, ce qui vous aide à vérifier que les données sont transmises comme prévu et à résoudre les problèmes avant qu'ils n'affectent vos modèles ou vos campagnes.
+Le rapport de diagnostics entrants permet de contrôler la santé de vos flux de données dans BrazeAI™. Il suit des détails tels que le nombre de fichiers, leur taille et le volume des lignes pour chaque ressource, ce qui vous aide à confirmer que les données sont transmises comme prévu et à résoudre les problèmes avant qu'ils n'affectent vos agents ou vos campagnes.
 
 Vous pouvez utiliser le menu déroulant pour sélectionner différents indicateurs, comme la taille moyenne des fichiers ou le nombre de fichiers.
 
@@ -132,16 +132,16 @@ Pour plus de détails sur chaque indicateur du rapport des diagnostics entrants,
 
 ### Timeline (Chronologie)
 
-Le rapport Timeline (Chronologie) fournit un enregistrement visuel des événements clés ainsi que de vos indicateurs de performances. Ces événements incluent, entre autres, les exécutions de modèles, les changements de configuration, les mises à jour des protections de sécurité, etc. Les annotations apparaissent directement sur les graphiques d'évolution et dans un onglet chronologique dédié, ce qui vous permet de connaître instantanément le contexte de l'évolution des résultats sans avoir à retracer l'historique des changements.
+Le rapport Timeline (Chronologie) fournit un enregistrement visuel des événements clés ainsi que de vos indicateurs de performances. Ces événements comprennent les exécutions d'agents, les changements de configuration, les mises à jour de garde-fous, etc. Les annotations apparaissent directement sur les graphiques d'évolution et dans un onglet chronologique dédié, ce qui vous permet de connaître instantanément le contexte de l'évolution des résultats sans avoir à retracer l'historique des changements.
 
-![Rapport chronologique présentant un graphique avec les indicateurs de performance au fil du temps. Les événements clés tels que les exécutions de modèles, les changements de configuration et les mises à jour de protections de sécurité sont marqués par des icônes le long de la ligne de temps. Sous le graphique, un tableau répertorie les événements avec des colonnes pour la date, le type, le libellé, les détails et la visibilité dans les graphiques.]({% image_buster /assets/img/decisioning_studio/reporting_timeline.png %})
+![Rapport chronologique présentant un graphique avec les indicateurs de performance au fil du temps. Les événements clés tels que les exécutions d'agents, les changements de configuration et les mises à jour de garde-corps sont marqués par des icônes le long de la chronologie. Sous le graphique, un tableau répertorie les événements avec des colonnes pour la date, le type, le libellé, les détails et la visibilité dans les graphiques.]({% image_buster /assets/img/decisioning_studio/reporting_timeline.png %})
 
 Pour comparer les performances de deux groupes, utilisez les menus déroulants afin de sélectionner les critères de comparaison souhaités. Pour plus de détails, reportez-vous au tableau suivant :
 
 | Champ | Description |
 |-------|-------------|
 | Date | Date à laquelle l'événement s'est produit. |
-| Type | Catégorie d'événement, telle qu’une mise à jour du système, une exécution de modèle ou un changement de configuration. |
+| Type | Catégorie d'événement, telle que mise à jour du système, exécution de l'agent ou modification de la configuration. |
 | Libellé | Nom ou identifiant donné à l'événement. |
 | Détails | Informations supplémentaires décrivant l'événement. |
 | Visible dans les graphiques | Indique si l'événement est affiché dans les graphiques connexes. |

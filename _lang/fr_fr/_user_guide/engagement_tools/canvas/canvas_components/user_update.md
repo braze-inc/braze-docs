@@ -2,7 +2,7 @@
 nav_title: "Mise à jour de l'utilisateur"
 article_title: Mise à jour utilisateur 
 alias: "/user_update/"
-page_order: 6
+page_order: 12
 page_type: reference
 description: "Cet article de référence aborde le composant de mises à jour de l’utilisateur et la façon de l’utiliser dans votre Canvas."
 tool: Canvas
@@ -34,7 +34,7 @@ Vous pouvez également tester les modifications apportées à ce composant en re
 
 Pour ajouter ou mettre à jour un attribut personnalisé, sélectionnez un nom d’attribut dans votre liste d’attributs et entrez la valeur clé.
 
-![L'étape de mise à jour de l'utilisateur qui met à jour les deux attributs "Membre Fidèle" et "Programme Fidèle" à "true".]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
+![Étape de mise à jour de l'utilisateur qui met à jour les deux attributs "Membre fidèle" et "Programme de fidélité" à "true".]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
 
 ### Suppression des attributs personnalisés
 

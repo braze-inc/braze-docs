@@ -25,7 +25,7 @@ Você precisará dos seguintes itens para integrar o LINE ao Braze:
 - [Conta de desenvolvedor do LINE](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [Canal de envio de mensagens do LINE](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-O envio de mensagens LINE do Braze utiliza os Créditos de Mensagem da sua conta.
+O envio de mensagens LINE a partir do Braze utiliza os Créditos de Mensagem da sua conta.
 
 {% alert note %}
 **Configuração `native_line_id`**: Você pode definir `native_line_id` enviando atualizações de usuário para o Braze (por exemplo, com o endpoint [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), [importação CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou [Ingestão de Dados na Nuvem]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Se o seu SDK do lado do cliente não tiver um campo dedicado para `native_line_id`, envie-o nas atualizações de usuário do lado do servidor usando um desses métodos.
@@ -66,7 +66,7 @@ Para configurar atualizações consistentes de usuários, traga os IDs LINE dos 
 5. [(Opcional) Mesclar perfis de usuário](#step-5-merge-profiles-optional)
 
 {% alert note %}
-Você só pode ter uma conta LINE em um único espaço de trabalho. Se você tiver várias contas LINE, recomendamos usar cada uma em um espaço de trabalho diferente.
+Você pode ter apenas uma conta LINE em um único espaço de trabalho. Se você tiver várias contas LINE, recomendamos usar cada uma em um espaço de trabalho diferente.
 {% endalert %}
 
 ## Etapa 1: Importação ou atualização de usuários existentes do LINE
@@ -343,7 +343,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 Depois que o usuário registra, é feita uma alteração em seu site ou app para que o ID do usuário seja enviado de volta ao Braze para associá-lo ao LINE ID que foi passado como parte do URL, com um código de exemplo como:
 
-```json
+```javascript
 const currentUrl = new URL(window.location.href)
 const queryParams = new URLSearchParams(currentUrl.search);
 const lineUserId = queryParams.get("line_user_id")

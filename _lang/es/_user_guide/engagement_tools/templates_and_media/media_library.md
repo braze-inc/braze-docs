@@ -1,6 +1,6 @@
 ---
-nav_title: Biblioteca de medios
-article_title: Biblioteca de medios
+nav_title: Mediateca
+article_title: Mediateca
 page_order: 0
 page_type: reference
 description: "Este artículo de referencia trata de la biblioteca multimedia. Aquí podrá aprender a gestionar sus activos en una ubicación única y centralizada, generar imágenes mediante IA y acceder a los medios en el compositor de mensajes."
@@ -41,7 +41,7 @@ Más tarde, cuando redactes un mensaje en Braze, podrás extraer tus imágenes d
 
 ## Especificaciones de imagen
 
-Todas las imágenes subidas a la biblioteca multimedia deben ocupar menos de 5 MB. Los tipos de archivo admitidos son PNG, JPEG, GIF y SVG. Para recomendaciones específicas de imágenes por canal de mensajería, consulte las secciones siguientes.
+Todas las imágenes subidas a la biblioteca multimedia deben ocupar menos de 5 MB. Los tipos de archivo admitidos son PNG, JPEG, GIF, SVG y WebP. Para recomendaciones específicas de imágenes por canal de mensajería, consulte las secciones siguientes.
 
 ### Tarjetas de contenido
 
@@ -62,7 +62,7 @@ Para más información, consulta [Detalles creativos de los mensajes dentro de l
 {% multi_lang_include image_specs.md variable_name="push notifications"  %}
 
 {% alert note %}
-Para más recursos, consulta [Especificaciones de imagen y texto push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
+Para obtener recursos adicionales, consulta [Especificaciones de imagen y texto push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 {% endalert %}
 
 ### Video

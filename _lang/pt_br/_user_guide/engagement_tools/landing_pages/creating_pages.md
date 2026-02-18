@@ -49,7 +49,7 @@ Se você ainda não fez isso, selecione **Salvar como rascunho**. Para começar 
 
 ![Um exemplo de landing page sendo criada no editor de arrastar e soltar.]({% image_buster /assets/img/landing_pages/template.png %})
 
-O editor usa dois tipos de componentes para a composição da landing page: blocos básicos e blocos de formulário. Todos os blocos devem ser colocados em uma fileira.
+O editor usa dois tipos de componentes para a composição da landing page: blocos básicos e blocos de formulários. Todos os blocos devem ser colocados em uma fileira.
 
 ![A seção "Build" contém "Rows" e "Form Blocks".]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
@@ -124,7 +124,7 @@ Por exemplo, para impor a captura de consentimento antes do envio do formulário
 
 ### Etapa 4: Criar uma página de confirmação (opcional)
 
-Se sua landing page não incluir um formulário, passe para a próxima etapa.
+Se sua landing page não incluir um formulário, prossiga para a próxima etapa.
 
 Se sua landing page incluir um [formulário](#form-blocks), crie uma segunda landing page para servir como experiência de confirmação. Essa página deve agradecer aos usuários ou fornecer uma próxima etapa após o envio do formulário.
 
@@ -158,7 +158,7 @@ Quando estiver pronto, selecione **Publicar landing page**.
 
 ## Uso de modelos
 
-Use modelos de landing page para criar modelos para suas próximas campanhas. Esses modelos podem ser acessados e gerenciados tanto no editor de landing page quanto na seção **Modelos** do dashboard**(Modelos** > **Modelos de landing page**). Os modelos de landing page requerem um nome e, opcionalmente, uma descrição. 
+Use os modelos de landing page para criar modelos para suas próximas campanhas. Esses modelos podem ser acessados e gerenciados tanto no editor de landing page quanto na seção **Modelos** do dashboard**(Modelos** > **Modelos de landing page**). Os modelos de landing page requerem um nome e, opcionalmente, uma descrição. 
 
 ## Gerenciamento de modelos
 
@@ -182,4 +182,4 @@ Causas comuns:
 - Caracteres especiais são usados em entradas de texto
 - Uma caixa de seleção obrigatória não está selecionada
 
-As mensagens de erro mostradas aos usuários não podem ser personalizadas. Faça uma prévia de sua landing page para confirmar o comportamento do campo antes de publicá-la. 
+As mensagens de erro mostradas aos usuários não podem ser personalizadas. Faça uma prévia de sua landing page para confirmar o comportamento do campo antes de publicar. 

@@ -150,6 +150,8 @@ Weitere Hinweise zur Verwendung von Bildern in Ihren Push-Benachrichtigungen fin
 - [Rich-Benachrichtigungen für iOS erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
 - [Rich-Benachrichtigungen für Android erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### On-Click-Verhalten
 
 Legen Sie mit **On-Click Behavior** fest, was passiert, wenn ein Benutzer den Text einer Push-Benachrichtigung auswählt. Sie können Kunden beispielsweise auffordern, Ihre Anwendung zu öffnen, Kunden zu einer bestimmten Web-URL umleiten oder sogar eine bestimmte Seite Ihrer Anwendung mit einem [Deep Link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) öffnen.

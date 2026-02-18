@@ -1,12 +1,12 @@
 ---
-nav_title: Braze users
-article_title: Manage Braze users
+nav_title: Company users
+article_title: Manage company users
 page_order: 23
 page_type: reference
-description: "This page covers managing your Braze users, such as adding and deleting users, setting user permissions, creating Teams, and managing company settings."
+description: "This page covers managing your company users, such as adding and deleting users, setting user permissions, creating Teams, and managing company settings."
 ---
 
-# Manage Braze users
+# Manage company users
 
 > Learn how to manage users in your company account, including adding, suspending, and deleting users.
 
@@ -14,7 +14,7 @@ description: "This page covers managing your Braze users, such as adding and del
 Several sections on this page refer to the **Company Users** page. If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), **Company Users** is called **Manage Users** and is located under your account icon.
 {% endalert %}
 
-## Adding Braze users
+## Adding company users
 
 You must have administrator permissions to add users to your Braze account. 
 
@@ -50,9 +50,9 @@ For security reasons, users cannot change the email address associate with their
 
 {% multi_lang_include permissions.md content="Differences" %}
 
-## Suspending Braze users
+## Suspending company users
 
-Suspending a user puts their account into an inactive state, where the user can no longer log in, but the data associated with their account is preserved. Only administrators can suspend or un-suspend Braze users.
+Suspending a user puts their account into an inactive state, where the user can no longer log in, but the data associated with their account is preserved. Only administrators can suspend or un-suspend company users.
 
 To suspend a user, go to **Settings** > **Company Users**, find their username and select <i class="fa-solid fa-user-lock"></i> **Suspend**.
 
@@ -62,7 +62,7 @@ Administrators can also suspend a user by selecting their name from the list and
 
 ![Suspend a user when editing the user details.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
-## Deleting Braze users
+## Deleting company users
 
 To delete a user, go to **Settings** > **Company Users**, find their username and select <i class="fa fa-trash-can"></i> **Delete user**.
 

@@ -37,4 +37,24 @@ Das angegebene Konto entspricht entweder nicht dem US-Gesetz zum Schutz medizini
 
 Es kann sein, dass das System die Löschung Ihrer bisherigen Daten noch nicht abgeschlossen hat. Warten Sie ein paar Minuten, bis die Deprovisionierung abgeschlossen ist, und versuchen Sie dann erneut, die neue Datenfreigabe zu erstellen.
 
+### Wie oft muss ich `CREATE DATABASE` ausführen, wenn ich mehrere Workspaces habe, die Daten für dasselbe Snowflake-Konto freigeben?
+
+Sie müssen `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` nur einmal ausführen. Wenn mehrere Datenfreigaben aus verschiedenen Braze Workspaces für dasselbe Snowflake-Konto freigegeben werden, werden sie automatisch in derselben Freigabe zusammengefasst. Nachdem Sie die erste Datenbank erstellt haben, werden Daten aus zusätzlichen Workspaces automatisch zur bestehenden Datenbank hinzugefügt, ohne dass zusätzliche Anfragen zur gemeinsamen Nutzung oder Schritte zur Erstellung der Datenbank erforderlich sind.
+
+Wenn Sie beispielsweise eine Datenfreigabe für Snowflake Konto 123 von Workspace A aus erstellen, akzeptieren Sie die Anfrage zur Freigabe und erstellen eine Datenbank. Wenn Sie später eine Datenfreigabe für dasselbe Snowflake Konto 123 von Workspace B aus erstellen, wird keine neue Anfrage zur Freigabe gesendet - die Daten werden sofort zur bestehenden Freigabe hinzugefügt und sind in der zuvor erstellten Datenbank verfügbar.
+
+### Wenn ich mehrere Workspaces habe, enthält dann eine einzige Datenbank die Daten aller dieser Workspaces?
+
+Ja Wenn Sie Daten aus mehreren Braze Workspaces für dasselbe Snowflake-Konto freigeben, werden alle Daten in einer einzigen Freigabe zusammengefasst und sind in derselben Datenbank verfügbar. Sie können die Daten nach `app_group_id` filtern, um zwischen Workspaces zu unterscheiden.
+
+Filtern Sie in Ihren Abfragen am besten immer nach `app_group_id`, um sie zukunftssicher zu machen. Dadurch wird sichergestellt, dass Ihre Dashboards und Berichte korrekt bleiben, wenn Sie in Zukunft weitere Workspaces hinzufügen. Ohne diesen Filter enthalten Ihre Metriken möglicherweise unerwartet Daten aus neu hinzugefügten Workspaces.
+
+### Welche Vorgehensweise wird für die Verwaltung von Daten aus mehreren Workspaces in Snowflake empfohlen?
+
+Senden Sie alle Daten von Braze in dieselbe Datenbank und filtern Sie nach `app_group_id`, um zwischen Workspaces zu unterscheiden. Dieser Ansatz vereinfacht die Datenverwaltung und gewährleistet eine konsistente Berichterstattung in Ihrem Unternehmen.
+
+### Wie viele Snowflake Konnektoren für die gemeinsame Nutzung von Daten benötige ich für mehrere Workspaces?
+
+Die Anzahl der Konnektoren, die Sie benötigen, hängt von Ihrer spezifischen Konfiguration und Ihren Berechtigungen ab. Kontaktieren Sie Ihr Braze-Konto Team, um mehr darüber zu erfahren, welche Berechtigungen für Ihren Anwendungsfall geeignet sind.
+
 

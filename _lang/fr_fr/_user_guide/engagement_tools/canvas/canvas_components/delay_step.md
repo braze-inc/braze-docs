@@ -2,7 +2,7 @@
 nav_title: Délai 
 article_title: Délai 
 alias: "/delay_step/"
-page_order: 3
+page_order: 8
 page_type: reference
 description: "Cet article de référence aborde la façon d’ajouter un délai à votre Canvas sans avoir à ajouter un message associé."
 tool: Canvas
@@ -40,7 +40,7 @@ Le choix de la **durée** vous permet de retarder les utilisateurs pendant un ce
 Prenez en compte la différence entre les calculs des « jours » et des « jours civils ».
   
 - Un "jour" correspond à 24 heures et est calculé à partir de l'heure à laquelle l'utilisateur entre dans l'étape Délai. 
-- Un "jour calendrier" définit le temps à attendre jusqu'à la prochaine heure spécifiée, qui peut être inférieure à 24 heures. Vous pouvez choisir de retarder le délai à l'heure de l'entreprise ou à l'heure locale de l'utilisateur. Si aucune heure n'est spécifiée, l'utilisateur sera retardé jusqu'à minuit le jour suivant à l'heure de la société.
+- Un "jour calendrier" définit le temps à attendre jusqu'à la prochaine heure spécifiée, qui peut être inférieure à 24 heures. Vous pouvez choisir de retarder l'heure de l'entreprise ou l'heure locale de l'utilisateur. Si aucune heure n'est spécifiée, l'utilisateur sera retardé jusqu'à minuit le jour suivant à l'heure de la société.
 
 Vous pouvez également sélectionner **À un moment précis** pour spécifier quand les utilisateurs avanceront dans la toile. Cette option prend en compte l'heure à laquelle l'utilisateur est entré dans l'étape Délai. Si cette durée est supérieure à la durée configurée dans les paramètres, nous ajouterons des heures supplémentaires au délai. 
 
@@ -104,9 +104,7 @@ Si vous ajoutez un composant Délai à votre canvas et qu'il n'y a pas d'étapes
 
 ### Délais personnalisés
 
-{% alert important %}
-Les délais personnalisés et les délais prolongés sont en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The personalized delays and extended delays feature' %}
 
 Sélectionnez la bascule **Personnaliser** le délai pour définir un délai personnalisé pour vos utilisateurs. Vous pouvez l'utiliser avec une [étape Contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) pour sélectionner la variable contextuelle à retarder. Cette option remplace l'heure définie dans l'attribut ou la propriété sélectionné(e). Cette fonction est utile lorsque vous appliquez un décalage en jours ou en semaines et que vous souhaitez que les utilisateurs avancent à un moment précis. Le fuseau horaire provient de l'attribut ou de la propriété, ou utilise la solution de remplacement si aucune n'est disponible. 
 

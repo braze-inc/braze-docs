@@ -22,7 +22,7 @@ Braze calcula la hora óptima de envío basándose en un análisis estadístico 
 
 Por ejemplo, Sam puede abrir tus correos electrónicos por la mañana con regularidad, pero abre tu aplicación e interactúa con las notificaciones por la tarde. Eso significa que Sam recibiría una campaña por correo electrónico con Intelligent Timing por la mañana, mientras que recibiría campañas con notificaciones push por la tarde, cuando es más probable que interactúe.
 
-Si un usuario no tiene suficientes datos de interacción para que Braze calcule la hora de envío óptima, puedes especificar una hora alternativa.
+Si un usuario no tiene datos de interacción relevantes para que Braze calcule la hora de envío óptima, puedes especificar una hora alternativa.
 
 ## Ejemplos
 
@@ -43,7 +43,7 @@ Esta sección describe cómo configurar Intelligent Timing para tus campañas y 
 3. En **Opciones de programación temporal**, selecciona **Temporización inteligente**.
 4. Configura la frecuencia de entrada. Para envíos únicos, selecciona **Una vez** y elige una fecha de envío. Para los envíos recurrentes, selecciona **Diario**, **Semanal** o **Mensual** y configura las opciones de recurrencia. Consulta las [limitaciones](#limitations) para obtener más orientación.
 5. Opcionalmente, configura [Horas tranquilas](#quiet-hours).
-6. Especifica una [hora de alternativa](#campaign-fallback). En este momento se enviará el mensaje si el perfil de un usuario no tiene suficientes datos para calcular un tiempo óptimo.
+6. Especifica una [hora de alternativa](#campaign-fallback). En este momento se enviará el mensaje si el perfil de un usuario no tiene ningún evento relevante para calcular una hora óptima.
 
 ![Pantalla de programación de la campaña que muestra el Intelligent Timing con la hora alternativa y la configuración de las horas tranquilas]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
 
@@ -108,7 +108,7 @@ Cuando utilices Intelligent Timing, te recomendamos programar la hora de envío 
 
 Opcionalmente, puedes elegir limitar la ventana de entrega. Esto puede ser útil si tu campaña pertenece a un evento, venta o promoción específicos, pero generalmente no se recomienda cuando se utiliza Intelligent Timing. Para más información, consulta las [limitaciones](#limitations).
 
-Cuando se especifica, Braze sólo utiliza los datos de interacción dentro de esa ventana para determinar la hora óptima de entrega de un usuario. Si no hay suficientes datos de interacción dentro de esa ventana, el mensaje se envía a la hora alternativa que hayas establecido.
+Cuando se especifica, Braze sólo utiliza los datos de interacción dentro de esa ventana para determinar la hora óptima de entrega de un usuario. Si no hay ningún evento relevante dentro de esa ventana, el mensaje se envía a la hora alternativa que hayas establecido.
 
 Para configurar una ventana de entrega:
 
@@ -119,7 +119,7 @@ Para configurar una ventana de entrega:
 
 ### Paso 4: Elige una hora alternativa {#campaign-fallback}
 
-Elige una hora alternativa para utilizar si el perfil de un usuario no tiene suficientes datos para calcular una hora de entrega óptima.
+Elige una hora alternativa a utilizar si el perfil de un usuario no tiene ningún evento relevante para calcular una hora de entrega óptima.
 
 ![Programar una campaña con Intelligent Timing]({% image_buster /assets/img/intelligent_timing_1.png %})
 
@@ -131,13 +131,13 @@ Para ver una estimación de cuántos usuarios recibirán el mensaje en cada hora
 
 1. Añade segmentos o filtros en el paso Audiencias objetivo.
 2. En la sección **Vista previa de horas de entrega para** (que aparece tanto en los pasos Audiencias objetivo como en Programar entrega), selecciona tu canal.
-3. Selecciona **Actualizar Datos**.
+3. Selecciona **Actualizar datos**.
 
 ![Ejemplo de vista previa de los plazos de entrega para Android Push.]({% image_buster /assets/img/intel-timing-preview.png %})
 
 Siempre que cambies cualquier configuración sobre Intelligent Timing o la audiencia de tu campaña, actualiza de nuevo los datos para ver un gráfico actualizado.
 
-El gráfico muestra en azul a los usuarios que tenían datos suficientes para calcular una hora óptima y en rojo a los usuarios que utilizarán la hora alternativa. Utiliza los filtros de cálculo para ajustar la vista previa y obtener una visión más granular de cualquiera de los grupos de usuarios.
+El gráfico muestra a los usuarios que tuvieron eventos relevantes para calcular una hora óptima en azul y a los usuarios que utilizarán la hora alternativa en rojo. Utiliza los filtros de cálculo para ajustar la vista previa y obtener una visión más granular de cualquiera de los grupos de usuarios.
 {% endtab %}
 
 {% tab Canvas %}
@@ -150,7 +150,7 @@ Los mensajes se enviarán a los usuarios que hayan entrado en el paso ese día a
 
 ### Paso 2: Elige una hora alternativa
 
-Elige una hora alternativa para enviar el mensaje a los usuarios de tu audiencia que no tengan suficientes datos de interacción para que Braze calcule una hora de envío óptima. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
+Elige una hora alternativa para el envío del mensaje a los usuarios de tu audiencia que no tengan datos de interacción relevantes para que Braze calcule una hora de envío óptima. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
 
 ### Paso 4: Añadir un paso de Retraso
 
@@ -174,7 +174,7 @@ Por ejemplo, supongamos que la hora óptima de Luka son las 14:00 h. Entra en el
 
 Sin embargo, Intelligent Timing está configurado para entregar a las 14 h, que ya ha pasado. Así que Luka no recibirá el mensaje hasta el día siguiente: 4 de marzo a las 14:00 h.
 
-![Gráfico que muestra la diferencia entre días y días de calendario, en el que si la hora óptima de un usuario son las 14:00, pero entra en el paso de retraso a las 14:01 y el retraso se establece en 2 días. Días entrega el mensaje 3 días más tarde porque el usuario entró en el paso después de su hora óptima, mientras que Días calendario entrega el mensaje 2 días más tarde, el último día del retraso.]({% image_buster /assets/img/intelligent_timing_daysvcalendardays.png %}){: style="border:none;"}
+![Gráfico que muestra la diferencia entre días y días de calendario, en el que si la hora óptima de un usuario son las 14:00, pero entra en el paso de retraso a las 14:01 y el retraso se establece en 2 días. Días entrega el mensaje 3 días más tarde porque el usuario entró en el paso después de su hora óptima, mientras que Días calendario entrega el mensaje 2 días más tarde, en el último día de retraso.]({% image_buster /assets/img/intelligent_timing_daysvcalendardays.png %}){: style="border:none;"}
 {% endtab %}
 {% endtabs %}
 
@@ -190,7 +190,7 @@ Sin embargo, Intelligent Timing está configurado para entregar a las 14 h, que 
 
 ### Gráfico de vista previa que muestra pocos usuarios con tiempos óptimos
 
-Braze necesita una cierta cantidad de datos de interacción para hacer una buena estimación. Si no hay suficientes datos de sesión o los usuarios objetivo tienen pocos o ningún clic o apertura (como los nuevos usuarios), Braze predeterminará el tiempo de espera. Dependiendo de tu configuración, podría ser la hora de la aplicación más popular o una hora alternativa personalizada.
+Si no hay ningún evento relevante para un usuario (por ejemplo, usuarios nuevos con poca o ninguna interacción), Braze utiliza la configuración de reserva configurada, ya sea tu hora de reserva personalizada o la hora más popular de uso de la aplicación entre todos los usuarios.
 
 ### Impacto de la zona horaria en la entrega de Intelligent Timing
 
@@ -238,9 +238,9 @@ No, [las Aperturas de máquina]({{site.baseurl}}/user_guide/data/report_metrics/
 
 Intelligent Timing programa mensajes durante la "hora de mayor interacción" de cada usuario, basándose en los eventos de inicio de sesión y apertura de mensajes. Dentro de esa hora, la hora del mensaje se redondea a los cinco minutos más próximos. Por ejemplo, si la hora óptima de un usuario se calcula a las 16:58, el mensaje se programará para las 17:00. Puede haber ligeros retrasos en la entrega debido a la actividad del sistema durante los periodos de mayor actividad.
 
-#### ¿Cuáles son los cálculos alternativos si no hay datos suficientes?
+#### ¿Cuáles son los cálculos alternativos si no hay acontecimientos relevantes?
 
-Si no hay datos disponibles para un usuario, Intelligent Timing utiliza la hora alternativa de tu configuración de mensajes. 
+Si no hay eventos relevantes para un usuario, Intelligent Timing utiliza la configuración alternativa configurada en tus ajustes de mensajes, ya sea una hora alternativa personalizada o la hora más popular de uso de la aplicación entre todos los usuarios. 
 
 ### Campañas
 
@@ -250,7 +250,7 @@ Braze calcula la hora óptima a medianoche en la hora de Samoa, uno de los prime
 
 #### ¿Por qué mi campaña de Intelligent Timing muestra pocos o ningún envío?
 
-Braze necesita un número base de puntos de datos para hacer una buena estimación. Si no hay suficientes datos de sesión o los usuarios objetivo tienen pocos o ningún clic o apertura de correo electrónico (como los nuevos usuarios), Intelligent Timing puede predeterminar la hora más popular del espacio de trabajo en ese día de la semana. Si no hay suficiente información sobre el espacio de trabajo, volvemos a la hora predeterminada de las 17 h. También puedes elegir establecer una hora específica de alternativa.
+Si no hay ningún evento de interacción relevante para un usuario (por ejemplo, usuarios nuevos con pocos o ningún clic o apertura), Intelligent Timing utiliza la configuración alternativa configurada, ya sea tu hora alternativa personalizada o la hora más popular de uso de la aplicación entre todos los usuarios.
 
 #### ¿Por qué mi campaña de Intelligent Timing se envía pasada la fecha programada?
 
@@ -279,7 +279,7 @@ Si la hora óptima determinada cae dentro de las Horas Tranquilas, Braze encuent
 
 #### ¿Puedo utilizar Intelligent Timing y la limitación de tasas?
 
-El límite de velocidad puede utilizarse en una campaña que utilice Intelligent Timing. Sin embargo, la naturaleza del límite de velocidad implica que algunos usuarios pueden recibir su mensaje en un momento que no sea el óptimo, sobre todo si un gran número de usuarios en relación con el tamaño del límite de velocidad están programados en el momento alternativo debido a la insuficiencia de datos. 
+El límite de velocidad puede utilizarse en una campaña que utilice Intelligent Timing. Sin embargo, la naturaleza de la limitación de velocidad implica que algunos usuarios pueden recibir su mensaje en un momento que no sea el óptimo, sobre todo si un gran número de usuarios en relación con el tamaño del límite de velocidad están programados en el momento alternativo porque no tienen eventos relevantes. 
 
 Recomendamos utilizar el límite de velocidad en una campaña de Intelligent Timing sólo cuando haya requisitos técnicos que deban cumplirse utilizando el límite de tasa.
 
@@ -300,6 +300,3 @@ Sí, las aperturas de la máquina son filtradas por Intelligent Timing, por lo q
 #### ¿Cómo puedo asegurarme de que Intelligent Timing funciona lo mejor posible?
 
 Intelligent Timing utiliza el historial individual de interacción con mensajes de cada usuario en cualquier momento en que haya recibido mensajes. Antes de utilizar Intelligent Timing, asegúrate de que has enviado mensajes a los usuarios a distintas horas del día. De ese modo, puedes "muestrear" cuándo puede ser el mejor momento para cada usuario. Un muestreo inadecuado de las distintas horas del día puede hacer que Intelligent Timing elija una hora de envío que no sea la óptima para un usuario.
-
-
-

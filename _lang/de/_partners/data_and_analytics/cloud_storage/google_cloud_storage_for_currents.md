@@ -31,6 +31,10 @@ Die Integration von Braze und Google Cloud Storage erlaubt es Ihnen, Daten von C
 
 Für die Integration mit Google Cloud Storage müssen Sie die entsprechenden Zugangsdaten einrichten, die es Braze erlauben, Informationen über die Speicher-Buckets zu erhalten, in die geschrieben wird (`storage.buckets.get`) und Objekte innerhalb dieses Buckets zu erstellen (`storage.objects.create`). 
 
+{% alert note %}
+Workload Identity Federation (WIF) wird als Authentifizierungsmethode für Currents nicht unterstützt. Sie müssen ein Dienstkonto mit einem JSON Private Key verwenden.
+{% endalert %}
+
 Verwenden Sie dazu die folgenden Anweisungen, die Sie durch die Erstellung einer Rolle und eines Dienstkontos führen, die einen Private Key für Ihre Currents-Integration erzeugen.
 
 ### Schritt 1: Rolle erstellen
@@ -77,7 +81,7 @@ Verwenden Sie unten auf der Seite den Button **Schlüssel erstellen**, um einen 
 
 Navigieren Sie in Braze zu **Currents** > **\+ Create Current** > **Google Cloud Storage Data Export** und geben Sie den Namen Ihrer Integration und Ihre E-Mail an.
 
-Als nächstes laden Sie Ihren Private Key im JSON-Format unter **GCS JSON Credentials** hoch und geben den Bucket-Namen und das GCS-Präfix (optional) an. 
+Als Nächstes laden Sie Ihren Private Key im JSON-Format unter **GCS JSON Credentials** hoch und geben den Bucket-Namen und das GCS-Präfix (optional) an. Beachten Sie, dass Sie diese Zugangsdaten über Google Cloud Platform generieren müssen, wie in den vorherigen Schritten beschrieben.
 
 {% alert important %}
 Es ist wichtig, dass Sie Ihre Zugangsdaten immer auf dem neuesten Stand halten. Wenn die Zugangsdaten für Ihren Konnektor ablaufen, sendet der Konnektor keine Ereignisse mehr. Wenn dieser Zustand länger als **5 Tage** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
@@ -115,7 +119,7 @@ Um diese Berechtigungen im Braze-Dashboard zu überprüfen, gehen Sie auf die Se
 
 ## Verhalten beim Exportieren
 
-Nutzer:innen, die eine Lösung zur Speicherung von Daten in der Cloud integriert haben und versuchen, APIs, Dashboard-Berichte oder CSV-Berichte zu exportieren, werden folgende Probleme haben:
+Nutzer:innen, die eine Lösung zur Speicherung von Daten in der Cloud integriert haben und versuchen, APIs, Dashboard-Berichte oder CSV-Berichte zu exportieren, werden folgendes feststellen:
 
 - Alle API-Exporte geben keine Download-URL im Antwortkörper zurück und müssen über den Datenspeicher abgerufen werden.
 - Alle Dashboard-Berichte und CSV-Berichte werden an die E-Mail des Nutzers:innen zum Download gesendet (keine Speicherberechtigung erforderlich) und auf dem Datenspeicher gesichert.

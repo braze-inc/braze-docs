@@ -132,13 +132,11 @@ Se um usuário entrar novamente no Canvas, chegar ao mesmo componente da entrada
 
 #### Etapa 1.3: Defina seu público-alvo de entrada
 
-Apenas os usuários que atendem aos seus critérios definidos podem entrar na jornada na etapa **Público-Alvo**, o que significa que a Braze avalia a elegibilidade do público-alvo primeiro **antes** que os usuários entrem na jornada do Canvas. Por exemplo, se quiser direcionar novos usuários, poderá selecionar um segmento de usuários que usaram seu app pela primeira vez há menos de uma semana.
+Apenas os usuários que correspondem aos seus critérios definidos podem entrar na jornada na etapa **Público-Alvo**, o que significa que a Braze avalia a elegibilidade do público-alvo primeiro **antes** que os usuários entrem na jornada do Canvas. Por exemplo, se quiser direcionar novos usuários, poderá selecionar um segmento de usuários que usaram seu app pela primeira vez há menos de uma semana.
 
 Em **Controles de Entrada**, você pode limitar o número de usuários toda vez que o Canvas estiver programado para ser executado. Para canvas baseados em ações e disparos de API, esse limite ocorre a cada hora UTC. 
 
-{% alert important %}
-Evite configurar uma campanha baseada em ação ou o Canva com o mesmo disparo do filtro de público (como um atributo alterado ou a realização de um evento personalizado). Uma [condição de corrida]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) pode ocorrer em que o usuário não está no público no momento em que realiza o evento de gatilho, o que significa que eles não receberão a campanha ou entrarão no Canvas.
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Canvas race condition audience trigger' %}
 
 ##### Testar seu público
 
@@ -152,7 +150,7 @@ Os controles de entrada determinam se os usuários têm permissão para entrar n
 
 Por exemplo, se você selecionar **Limitar volume de entrada** e definir o campo **Entradas máximas** para 5.000 usuários com **Diário** como a cadência limite, então o Canvas enviará apenas para 5.000 usuários por dia.
 
-![A página "Controles de Entrada" exibindo caixas de seleção para "Permitir que os usuários reentrem no Canvas" e "Limitar volume de entrada". O último permitindo que você defina as entradas máximas e se você gostaria de limitar diariamente, durante a vida útil do Canvas, ou toda vez que o Canvas estiver programado.]({% image_buster /assets/img_archive/entry_controls.png %})
+![A página "Controles de Entrada" exibindo caixas de seleção para "Permitir que os usuários reentrem no Canvas" e "Limitar volume de entrada". O último permitindo que você defina as entradas máximas e se você gostaria de limitar diariamente, durante a vida do Canvas, ou toda vez que o Canvas estiver programado.]({% image_buster /assets/img_archive/entry_controls.png %})
 
 {% alert tip %}
 A Braze não recomenda usar o recurso **Toda vez que o Canvas estiver programado** para aquecimento de IP, pois isso pode levar a volumes de envio aumentados.
@@ -223,7 +221,7 @@ Por padrão, a atribuição da variante do Canvas é bloqueada quando os usuári
 {% details Expand for steps %}
 
 1. Crie um atributo personalizado para armazenar seu número aleatório. Nomeie algo fácil de localizar, como "lottery_number" ou "random_assignment". Você pode criar o atributo [no seu dashboard]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/), ou através de chamadas de API para nosso [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
-2. Crie uma campanha de webhook no início de seu Canva. Essa campanha será o meio no qual você criará seu número aleatório e o armazenará como um atributo personalizado. Consulte [Criar um webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) para mais informações. Defina o URL para nosso endpoint `/users/track`.<br><br>
+2. Crie uma campanha de webhook no início de seu Canva. Essa campanha será o meio no qual você criará seu número aleatório e o armazenará como um atributo personalizado. Consulte [Acesse um webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) para mais informações. Defina o URL para nosso endpoint `/users/track`.<br><br>
 3. Crie o gerador de números aleatórios. Você pode fazer isso com o código [especificado aqui](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), que aproveita o tempo único de entrada de cada usuário para criar um número aleatório. Defina o número resultante como uma variável Liquid em sua campanha de webhook.<br><br>
 4. Formate a chamada `/users/track` em sua campanha webhook de modo que ela defina o atributo personalizado criado na etapa 1 como o número aleatório gerado no perfil do usuário atual. Quando essa etapa for executada, você terá criado com sucesso um número aleatório que muda cada vez que um usuário entra na sua campanha.<br><br>
 5. Ajuste as ramificações de seu Canva para que, em vez de serem divididas por variantes escolhidas aleatoriamente, elas sejam divididas com base nas regras do público. Nas regras de público de cada filial, defina o filtro de público de acordo com seu atributo personalizado. <br><br>Por exemplo, um ramo pode ter "lottery_number é menor que 3" como um filtro de público, enquanto outro ramo pode ter "lottery_number é maior que 3 e menor que 6" como um filtro de público.
@@ -231,7 +229,7 @@ Por padrão, a atribuição da variante do Canvas é bloqueada quando os usuári
 {% enddetails %}
 {% endalert %}
 
-#### Etapa 2.2: Adicione etapas do Canvas
+#### Etapa 2.2: Adicione etapas ao Canvas
 
 Você pode adicionar mais etapas ao seu fluxo de trabalho do Canva arrastando e soltando componentes da barra lateral **Components (Componentes** ). Ou selecione o botão <i class="fas fa-plus-circle"></i> plus para adicionar um componente com o menu popover.
 
@@ -239,7 +237,7 @@ Você pode adicionar mais etapas ao seu fluxo de trabalho do Canva arrastando e 
 À medida que você começa a adicionar mais etapas, pode aumentar o nível de zoom para se concentrar nos detalhes ou observar toda a jornada do usuário. Aumente o zoom com <kbd>Shift</kbd> + <kbd>+</kbd> ou diminua o zoom com <kbd>Shift</kbd> + <kbd>-</kbd>.
 {% endalert %}
 
-![A janela de pesquisa de componentes adicionando uma etapa de postergação ao Braze Canvas.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
+![A janela de busca de componentes adicionando uma etapa de postergação ao Canvas do Braze.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
 {% alert important %}
 Você pode adicionar até 200 etapas em um Canvas. Se o seu Canvas exceder 200 etapas, podem ocorrer problemas de carregamento.
@@ -274,7 +272,7 @@ Use a tag `campaign.${name}` Liquid no canva para exibir o nome do componente at
 
 O componente Message gerencia as mensagens enviadas aos usuários. Você pode selecionar seus **canais de envio de mensagens** e ajustar **as configurações de entrega** para otimizar o envio de mensagens do Canva. Para obter mais detalhes sobre esse componente, consulte [Mensagem]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 
-![A etapa "Configurar Mensagens", com "Canais de Mensagens" selecionados que exibem a lista de canais de mensagens disponíveis, como push android, cartões de conteúdo, e-mail e mais.]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
+![A etapa "Configurar Mensagens", com "Canais de Mensagens" selecionados que exibe a lista de canais de mensagens disponíveis, como push do android, cartões de conteúdo, e-mail, e mais.]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
 
 Selecione **Concluído** depois de terminar de configurar o componente Canva.
 
@@ -325,7 +323,7 @@ Lembre-se de que as telas multivariantes permitem que você teste mais do que o 
 
 ![A opção "Intelligent Selection" (Seleção inteligente) está ativada na página "Edit Variant Distribution" (Editar distribuição de variantes). Ao analisar e otimizar o Canva, ele exibe uma barra horizontal na página que é dividida em várias seções, cada uma variando em cor e tamanho. Esta é apenas uma representação visual e não se correlaciona a nenhuma análise específica.]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
-O Intelligent Selection for Canvas otimiza os resultados do Canvas, fazendo ajustes graduais em tempo real na distribuição de usuários classificados em cada variante. Quando o algoritmo estatístico determina um vencedor decisivo entre suas variantes, ele descartará as variantes de baixo desempenho e alocará todos os futuros destinatários elegíveis do canva nas Variantes Vencedoras. 
+O Intelligent Selection for Canvas otimiza os resultados do Canvas, fazendo ajustes graduais em tempo real na distribuição de usuários classificados em cada variante. Quando o algoritmo estatístico determina um vencedor decisivo entre suas variantes, ele descartará as variantes de baixo desempenho e alocará todos os futuros destinatários elegíveis do Canvas nas Variantes Vencedoras. 
 
 Por esse motivo, o Intelligent Selection funciona melhor em Canvas que têm novos usuários entrando com frequência.
 

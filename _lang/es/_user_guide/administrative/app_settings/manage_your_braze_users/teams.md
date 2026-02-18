@@ -9,7 +9,7 @@ description: "Este artículo de referencia explica cómo utilizar Braze Teams en
 
 # Equipos
 
-> Como administrador de Braze, puedes agrupar a los usuarios de tu panel en Equipos con distintas funciones y permisos de usuario. Esto le permite tener varios grupos de usuarios del cuadro de mandos no relacionados trabajando juntos en un espacio de trabajo separando los tipos de contenido que pueden editarse.
+> Como administrador de Braze, puedes agrupar a los usuarios de tu empresa en Equipos con distintas funciones y permisos de usuario. Esto te permite tener varios grupos no relacionados de usuarios de la empresa trabajando juntos en un mismo espacio de trabajo, separando los tipos de contenido que se pueden editar.
 
 Los equipos pueden configurarse en función de la ubicación de la base de clientes, el idioma y los atributos personalizados, de modo que los miembros del equipo y los que no lo son tengan diferente acceso a las funciones de mensajería y a los datos de clientes. Se pueden asignar filtros y etiquetas de equipo en varias herramientas de participación. No hay límite en el número de equipos que puedes crear en tu espacio de trabajo.
 
@@ -31,7 +31,7 @@ Si un equipo está definido por un atributo personalizado, un idioma o un país,
 
 ## Asignar usuarios a equipos
 
-Los administradores y usuarios limitados de Braze con el permiso de nivel de empresa "Puede administrar la configuración de la empresa" pueden asignar permisos de nivel de equipo a un usuario del panel con acceso limitado. Cuando se asignan a un Equipo, los usuarios del panel sólo pueden leer o escribir los datos disponibles para sus Equipos concretos, como el idioma del usuario, la ubicación o el atributo personalizado, según se definió al crear el Equipo.
+Los administradores y usuarios limitados de Braze con el permiso de nivel de empresa "Puede administrar la configuración de la empresa" pueden asignar permisos de nivel de equipo a un usuario de la empresa con acceso limitado. Cuando se asignan a un Equipo, los usuarios de la empresa sólo pueden leer o escribir datos disponibles para sus Equipos concretos, como el idioma del usuario, su ubicación o un atributo personalizado, tal y como se definió cuando se creó el Equipo.
 
 Para asignar un usuario a un equipo, ve a **Configuración** > **Usuarios de la empresa** y selecciona un usuario que quieras añadir a tu equipo.
 
@@ -64,7 +64,7 @@ A continuación se indican todos los permisos disponibles que puedes asignar a n
 - Crear y editar plantillas de Canvas
 - Ver plantillas de Canvas
 - Archivar plantillas de Canvas
-- Crea y edita plantillas de páginas de inicio
+- Editar plantillas de páginas de destino
 - Ver plantillas de páginas de inicio
 - Archiva plantillas de páginas de inicio
 
