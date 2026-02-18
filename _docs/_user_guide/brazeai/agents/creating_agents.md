@@ -68,7 +68,7 @@ Select **Add context** to choose what your agent can reference. This includes:
 - [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Provide catalog fields for the agent to reference.
 - [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Consider a user's membership in a segment when personalizing messages. You can select up to three segments.
 - [Brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
-- [Canvas Context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analyze all Canvas Context variables for a user when this agent is invoked.
+- [All Canvas Context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analyze all Canvas Context variables for a user when this agent is invoked, including any that are not referenced in the **Instructions** section.
 
 #### Step 2.2: Add optional settings
 
