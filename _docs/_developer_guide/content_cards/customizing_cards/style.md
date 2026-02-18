@@ -313,7 +313,7 @@ The structure of the Content Card pinned icon is:
 
 If you want to use a different FontAwesome icon, you can replace the class name of the `i` element with the class name of the desired icon. 
 
-If you want to switch the icon altogether, remove the `i` element and add the custom icon as a child of `ab-pinned-indicator`. There are several ways you can change hte icon, but one simple method is to use `replaceChildren()` on the `ab-pinned-indicator` element.
+If you want to switch the icon altogether, remove the `i` element and add the custom icon as a child of `ab-pinned-indicator`. There are several ways you can change the icon, but one simple method is to use `replaceChildren()` on the `ab-pinned-indicator` element.
 
 For example:
 
