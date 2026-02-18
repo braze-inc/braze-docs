@@ -360,6 +360,41 @@ BRZCancellable *cancellable = [notifications subscribeToUpdatesWithPayloadTypes:
 `application(_:didFinishLaunchingWithOptions:)` 에서 푸시 알림 구독을 생성하여 최종 사용자가 앱이 종료된 상태에서 알림을 탭한 후 구독이 트리거되도록 합니다.
 {% endalert %}
 
+## 전경 알림 처리하기
+
+기본값으로 앱이 포그라운드에 있는 동안 푸시 알림이 도착하면 iOS에서는 자동으로 표시하지 않습니다. 푸시 알림을 포그라운드에 표시하고 Braze 분석을 통해 추적하려면 `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)` 구현 내에서 `handleForegroundNotification(notification:)` 메서드를 호출하세요.
+
+### 작동 방식
+
+`handleForegroundNotification(notification:)` 으로 호출하면 Braze는 알림 페이로드를 처리하여 분석을 기록하고 딥링크 또는 버튼 동작을 처리합니다. 실제 표시 동작은 완료 핸들러에 전달한 `UNNotificationPresentationOptions` 에 의해 제어됩니다.
+
+```swift
+import BrazeKit
+import UserNotifications
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+  func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+  ) {
+    // Let Braze process the notification payload
+    if let braze = AppDelegate.braze {
+      braze.notifications.handleForegroundNotification(notification: notification)
+    }
+    
+    // Control how the notification appears in the foreground
+    if #available(iOS 14.0, *) {
+      completionHandler([.banner, .list, .sound])
+    } else {
+      completionHandler([.alert, .sound])
+    }
+  }
+}
+```
+
+전체 예제는 Braze Swift SDK 리포지토리에 있는 [푸시 알림 수동 통합 샘플을](https://github.com/braze-inc/braze-swift-sdk/blob/e31907eaa0dbd151dc2e6826de66cc494242ba60/Examples/Swift/Sources/PushNotifications-Manual/AppDelegate.swift#L1-L120) 참조하세요.
+
 ## 푸시 프라이머 {#push-primers}
 
 푸시 프라이머 캠페인은 사용자가 기기에서 앱에 대한 푸시 알림을 활성화할 것을 권장합니다. [노코드 푸시 프라이머]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)를 사용하면 SDK 사용자 지정 없이도 이 작업을 수행할 수 있습니다.

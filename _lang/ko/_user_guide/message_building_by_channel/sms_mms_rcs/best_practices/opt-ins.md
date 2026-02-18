@@ -33,7 +33,7 @@ Braze는 [SMS 이중 옵트인]({{site.baseurl}}/user_guide/message_building_by_
 
 1. [`/subscription/status/set` 엔드포인트]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/#update-users-subscription-group-status)를 사용하여 사용자를 생성하고 해당 사용자의 속성을 저장합니다.
 
-```json
+```http
 POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -49,7 +49,7 @@ POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 {: start="2"}
 2\. [`/users/track` 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 사용하여 사용자를 SMS에 가입시킵니다.
 
-```json
+```http
 POST `https://rest.aid-03.braze.com/users/track` \
 --header `Content-Type: application/json` \
 --header `Authorization: Bearer YOUR-REST-API-KEY` \
