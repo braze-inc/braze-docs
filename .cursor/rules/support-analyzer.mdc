@@ -38,7 +38,7 @@ For each unique Case ID, determine if docs action is needed:
 For each **actionable** ticket:
 
 1. **Extract Q&A** - Distill the core question and resolution from message thread
-2. **Verify** - Cross-reference with source code of the Main Product at `../platform`. Do not use support cases or documentation to verify. If you can verify the resolution against the source code, add a reference to the source file(s). If you cannot verify the resolution, say that you could not verify the resolution against the source code.
+2. **Verify** - Cross-reference with source code of the Main Product at `../platform`. Do not rely solely on support cases or documentation to verify. Always cross-reference with source code. If you can verify the resolution against the source code, add a reference to the source file(s). If you cannot verify the resolution, say that you could not verify the resolution against the source code.
 3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
 4. **Document source support case number** - Which case numbers were analyzed?
 
