@@ -392,6 +392,6 @@ valid_partner_list:
   url: /docs/partners/openai/
 - name: 구글 제미니
   url: /docs/partners/gemini/
-- name: 안소픽
+- name: 안트로픽
   url: /docs/partners/anthropic/
 ---
