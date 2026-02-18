@@ -296,7 +296,7 @@ Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk
 
 ### Custom pinned icons
 
-When creating a Content Card, marketers have the option of pinning the card. A pinned card displays at the top of a user's feed, and user can't dismiss it. As you customize your card styles, you can change how the pinned icon looks.
+When creating a Content Card, marketers have the option of pinning the card. A pinned card displays at the top of a user's feed, and the user can't dismiss it. As you customize your card styles, you can change how the pinned icon looks.
 
 ![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
