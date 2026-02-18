@@ -73,7 +73,7 @@ A maneira mais simples de fornecer ao Braze as informações sobre a estrutura d
 
 #### Usar um fluxo que não tenha sido usado no Braze
 
-Se você estiver usando um fluxo que não tenha sido usado anteriormente no Braze, ao visualizar a seção **Atributo personalizado do fluxo** no **criador de mensagens**, talvez não veja nenhuma informação. Isso significa que o esquema ainda não foi gerado.
+Se você estiver usando um fluxo que não tenha sido usado anteriormente no Braze, ao visualizar a seção **Atributo personalizado do fluxo** no criador **de mensagens**, talvez não veja nenhuma informação. Isso significa que o esquema ainda não foi gerado.
 
 ![Seção Meta Flow com uma opção para visualizar o atributo personalizado Flow.]({% image_buster /assets/img/whatsapp/flows/flow_custom_attribute.png %}){: style="max-width:70%;"}
 
@@ -104,7 +104,7 @@ No editor JSON avançado, digite {% raw %}`{"attributes": [{"flow_1": {{whats_ap
 {% endsubtab %}
 {% subtab UI editor %}
 
-1. Confirme que você já criou um atributo personalizado com o tipo de dados do objeto ("flow_1" (neste exemplo) dentro das configurações de dados do espaço de trabalho.
+1. Confirme que você já criou um atributo personalizado com o tipo de dados de objeto ("flow_1" (neste exemplo) dentro das configurações de dados do espaço de trabalho.
 2. No editor de interface do usuário, use o Liquid {% raw %}```{{whats_app.${inbound_flow_response}}}``` para preencher o atributo personalizado e salvar toda a resposta de fluxo do usuário nele. É necessário preencher o valor da chave como ```{{whats_app.${inbound_flow_response}}}```{% endraw %} antes de selecionar o atributo personalizado que você criou.
 
 ![Etapa de atualização do usuário que usa o editor da interface do usuário.]({% image_buster /assets/img/whatsapp/flows/user_update_ui_editor.png %})
@@ -191,7 +191,7 @@ Uma nova mensagem do WhatsApp "limpa" a capacidade do Canvas de usar (e reutiliz
 Para usar a resposta do Flow por meio do Liquid com [tags de personalização compatíveis]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/), conclua as etapas a seguir:
 
 1. Ao ser o criador de sua mensagem do WhatsApp, selecione o ícone de mais para abrir a janela **Adicionar personalização** 
-2. Selecione **WhatsApp Properties** para o tipo de personalização e **inbound_flow_response** para o atributo personalizado. Isso pode ser usado para salvar informações em perfis de usuário, incluí-las em mensagens ou encaminhá-las a outros serviços, como webhooks.
+2. Selecione **WhatsApp Properties** para o tipo de personalização e **inbound_flow_response** para o atributo personalizado. Isso pode ser usado para salvar informações em perfis de usuários, incluí-las em mensagens ou encaminhá-las a outros serviços, como webhooks.
 
 ![Criador de mensagens do WhatsApp com um componente "Adicionar personalização" para inserir uma personalização de propriedades do WhatsApp com o atributo personalizado inbound_flow_response.]({% image_buster /assets/img/whatsapp/flows/inbound_flow_response.png %}){: style="max-width:80%;"}
 

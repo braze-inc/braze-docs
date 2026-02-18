@@ -118,7 +118,7 @@ Inbox Vision klassifiziert Zugänglichkeitsprobleme nach Schweregrad und hilft I
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-Der Drag-and-Drop-Editor unterstützt das Setzen eines `<title>` Elements nicht, so dass der Barrierefreiheits-Scanner diese Prüfung immer nicht besteht.<br><br>Diese Einschränkung wird für zukünftige Verbesserungen getrackt. Wenn dies Ihre Arbeitsabläufe oder Ihre Nutzer:innen betrifft, [teilen Sie uns Ihr Feedback mit]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback), damit wir wirksame Korrekturen priorisieren können.
+Der Drag-and-Drop-Editor unterstützt das Setzen eines Elements `<title>` nicht, so dass der Eingabehilfen-Scanner diese Prüfung immer nicht besteht.<br><br>Diese Einschränkung wird für zukünftige Verbesserungen getrackt. Wenn dies Ihre Arbeitsabläufe oder Ihre Nutzer:innen betrifft, [teilen Sie uns Ihr Feedback mit]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback), damit wir wirksame Korrekturen priorisieren können.
 {% endalert %}
 
 ### Verständnis der automatisierten Zugänglichkeitstests
@@ -141,7 +141,7 @@ Wenn Sie Korrekturen vornehmen, die sich auf bestimmte Vorschauen auswirken, sol
 
 ### Führen Sie Inbox Vision für die endgültige Version der E-Mail aus
 
-Wir empfehlen, Inbox Vision auszuführen, wenn die E-Mail Nachricht produktionsreif ist oder kurz davor steht. Auf diese Weise können Sie die Anzahl der generierten Vorschauen reduzieren, da die E-Mail mehrere Iterationen durchläuft, bevor sie fertiggestellt und zum Versand an die Nutzer:innen bereit ist.
+Wir empfehlen, Inbox Vision auszuführen, wenn die E-Mail Nachricht produktionsreif ist oder kurz davor steht. Auf diese Weise können Sie die Anzahl der generierten Vorschauen reduzieren, da die E-Mail mehrere Iterationen durchläuft, bevor sie fertiggestellt ist und an die Nutzer:innen versendet werden kann.
 
 Wenn Sie Inbox Vision jedes Mal ausführen, wenn Sie eine einzelne Bearbeitung oder Änderung vornehmen, können Sie die Vorschau schnell verbrauchen. Wir empfehlen Ihnen, zunächst alle notwendigen Änderungen an der E-Mail vorzunehmen und dann Inbox Vision auszuführen, um eine Vorschau darauf zu erhalten, wie sich Ihre Änderungen auf die Darstellung Ihrer E-Mails in verschiedenen Umgebungen auswirken.
 

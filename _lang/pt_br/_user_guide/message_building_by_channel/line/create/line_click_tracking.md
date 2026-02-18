@@ -22,7 +22,7 @@ O rastreamento de cliques do LINE pode ser usado para mensagens de texto, ricas 
 
 Você pode gerenciar as configurações de rastreamento de cliques do LINE na guia **Configurações** enquanto cria uma mensagem. Quando ativado, os URLs serão encurtados usando o domínio padrão do Braze (`https://brz.ai`) ou o domínio personalizado especificado para o grupo de inscrições e personalizado para o usuário.
 
-Todos os URLs que começam com `http://` ou `https://` serão encurtados. Você pode ter até 25 URLs em uma mensagem. Os URLs encurtados que contêm personalização Liquid (como rastreamento no nível do usuário ou parâmetros UTM) serão válidos por dois meses.
+Todos os URLs que começarem com `http://` ou `https://` serão encurtados. Você pode ter até 25 URLs em uma mensagem. Os URLs encurtados que contêm personalização Liquid (como rastreamento no nível do usuário ou parâmetros UTM) serão válidos por dois meses.
 
 ## Configuração do rastreamento de cliques
 
@@ -63,7 +63,7 @@ Para configurar o rastreamento de cliques para uma mensagem baseada em cartão:
 1. Arraste uma **mensagem baseada em cartão** para o criador.
 2. Selecione **o URI** para o **comportamento ao clicar** nas áreas aplicáveis do cartão ou do botão.
 
-![Criador de mensagens LINE com uma mensagem baseada em cartão com dois botões, cada um com um URL.]({% image_buster /assets/img/line/card_based_message_click_tracking.png %})
+![Criador de mensagens do LINE com uma mensagem baseada em cartão com dois botões, cada um com um URL.]({% image_buster /assets/img/line/card_based_message_click_tracking.png %})
 
 {: start="3"}
 3\. Acesse a guia **Settings (Configurações** ) e confirme se **o rastreamento de cliques** está ativado. O rastreamento de cliques é ativado por padrão para todas as novas mensagens.

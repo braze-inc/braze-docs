@@ -40,16 +40,22 @@ Wählen Sie für Ihre Datenquelle **CDI-Datentabellen**.
 
 Als Teil Ihrer CDI-Einrichtung können Sie aus verschiedenen Verbindungen auswählen, die Sie in CDI Segment-Erweiterungen verwenden möchten. Jede Verbindung hat einen bestimmten Satz von Datentabellen. Ihr Entwicklungsteam kann Ihre Verbindungen und Datentabellen während der CDI-Einrichtung konfigurieren.
 
-Um die verfügbaren Datentabellen einschließlich ihres Schemas und aller verfügbaren Beschreibungen anzuzeigen, wählen Sie **Referenzieren**. Wenn Sie bereit sind, wählen Sie eine Verbindung aus.
+Um die verfügbaren Datentabellen, einschließlich ihres Schemas und aller verfügbaren Beschreibungen, anzuzeigen, wählen Sie **Referenzieren**. Wenn Sie bereit sind, wählen Sie eine Verbindung aus.
 
 ![]({% image_buster /assets/img/segment/connection_schema_with_descriptions.png %}){: style="max-width:100%;"}
 
 Als Nächstes schreiben Sie das SQL für Ihr Segment mit [der Braze SQL-Syntax]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#writing-sql).
 
-Denken Sie daran, dass alle CDI Segment-Erweiterungen `external_user_id` als ausgewählte Spalte verwenden müssen, und dass Ihre `external_user_id` mit der in Braze für Nutzer:innen eingestellten Spalte übereinstimmen sollte. Wenn Ihre Abfrageergebnisse Nutzer:innen enthalten, die in Braze nicht existieren, werden diese Nutzer:innen ignoriert. Braze wird keine neuen Nutzer:innen auf der Grundlage der Ausgabe Ihrer CDI Segment-Erweiterung erstellen.
+Denken Sie daran, dass alle CDI Segment-Erweiterungen `external_user_id` als ausgewählte Spalte verwenden müssen, und dass Ihre `external_user_id` mit der in Braze für Nutzer:innen eingestellten Spalte übereinstimmen sollte.
+
+{% alert important %}
+`external_user_id` muss ein **String-Wert** sein. Wenn Ihre ID als Zahl gespeichert ist (z.B. `client_id` als Integer), [wandeln Sie sie in Ihrem SQL in einen String um](https://www.w3schools.com/sql/func_sqlserver_cast.asp), damit sie dem `external_id` Typ in Braze entspricht.
+{% endalert %}
+
+Wenn Ihre Abfrageergebnisse Nutzer:in enthalten, die in Braze nicht existieren, werden diese Nutzer:innen ignoriert. Braze erstellt keine neuen Nutzer:innen auf der Grundlage der Ausgabe Ihrer CDI Segment-Erweiterung.
 
 {% alert tip %}
-Wie Sie eine Vorschau Ihrer Segment-Erweiterungen erhalten, Ihre Segment-Erweiterungen verwalten und automatische Mitgliedschaftsaktualisierungen durchführen können, erfahren Sie unter [SQL Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/).
+Wie Sie eine Vorschau auf Ihre Segment-Erweiterungen erhalten, Ihre Segment-Erweiterungen verwalten und automatische Mitgliedschaftsaktualisierungen durchführen können, erfahren Sie unter [SQL Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/).
 {% endalert %}
 
 Schließlich können Sie [diese Segmenterweiterung innerhalb eines Braze-Segments verwenden]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-5-use-your-extension-in-a-segment), um eine Kampagne oder ein Canvas an diese Zielgruppe zu senden.

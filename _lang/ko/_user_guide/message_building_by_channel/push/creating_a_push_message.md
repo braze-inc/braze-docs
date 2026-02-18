@@ -130,7 +130,7 @@ If you're adding copy in a language that is written right-to-left, note that the
 푸시를 개인화 및 타겟팅하기 위해 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)를 포함할 수 있습니다.
 
 {% alert important %}
-제목 없이 Android 푸시 메시지를 보낼 **수는** 없지만, 대신 공백 하나를 입력할 수 있습니다. 메시지에 공백이 하나만 포함된 경우 무음 푸시 알림으로 전송된다는 점에 유의하세요. 자세한 내용은 [무음 푸시 알림을]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) 참조하세요.
+제목 없이 Android 푸시 메시지를 보낼 **수는** 없지만 대신 공백을 하나만 입력할 수 있습니다. 메시지에 공백이 하나만 포함된 경우 무음 푸시 알림으로 전송된다는 점에 유의하세요. 자세한 내용은 [무음 푸시 알림을]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) 참조하세요.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -150,9 +150,11 @@ If you're adding copy in a language that is written right-to-left, note that the
 - [iOS용 리치 알림 만들기]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
 - [Android용 리치 알림 만들기]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### On-click behavior
 
-사용자가 **온클릭 동작을** 사용하여 푸시 알림 본문을 선택하면 어떤 일이 발생하는지 지정합니다. 예를 들어 고객에게 애플리케이션을 열라는 메시지를 표시하거나, 고객을 지정된 웹 URL로 리디렉션하거나, [딥링크]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/)를 통해 애플리케이션의 특정 페이지를 열 수 있습니다.
+사용자가 **온클릭 동작으로** 푸시 알림 본문을 선택하면 어떤 일이 발생하는지 지정합니다. 예를 들어 고객에게 애플리케이션을 열라는 메시지를 표시하거나, 고객을 지정된 웹 URL로 리디렉션하거나, [딥링크]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/)를 통해 애플리케이션의 특정 페이지를 열 수 있습니다.
 
 여기에서 푸시 알림 내에서 다음과 같은 버튼 프롬프트를 설정할 수도 있습니다:
 

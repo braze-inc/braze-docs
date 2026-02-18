@@ -191,7 +191,9 @@ Selecione **Add Languages (Adicionar idiomas)** e selecione os idiomas desejados
 
 ### Imagem
 
-Dependendo do tipo de mensagem, você pode fazer **upload de imagem**, **escolher um emblema** ou usar **Font Awesome**. Para fazer upload de uma imagem, clique em **Add Image (Adicionar imagem** ) ou forneça o URL da imagem. Clicar em **Add Image (Adicionar imagem** ) abre a **Media Library (Biblioteca de mídia)**, onde é possível selecionar uma imagem feita upload anteriormente ou adicionar uma nova. Cada tipo de mensagem e plataforma pode ter suas próprias proporções e requisitos sugeridos. Certifique-se de verificar quais são eles antes de encomendar ou criar uma imagem do zero!
+Dependendo do tipo de mensagem, você pode fazer **upload de imagem**, **escolher um emblema** ou usar **Font Awesome**. Para fazer upload de uma imagem, selecione **Add Image (Adicionar imagem** ) ou forneça o URL da imagem. Selecionar **Adicionar Imagem** abre a **Biblioteca de Mídia**, onde você pode selecionar uma imagem previamente carregada ou adicionar uma nova. Cada tipo de mensagem e plataforma pode ter suas próprias proporções e requisitos sugeridos - certifique-se de verificar quais são eles antes de encomendar ou criar uma imagem do zero.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 ### Cabeçalho e corpo
 

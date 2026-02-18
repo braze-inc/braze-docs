@@ -7,7 +7,7 @@ page_order: 1.2
 
 # Utiliza recomendaciones de artículos en tu mensajería
 
-> Una vez formada tu recomendación, puedes utilizar Liquid para obtener y mostrar los elementos recomendados en tus mensajes trabajando directamente con el objeto `product_recommendation` Liquid.
+> Una vez entrenada tu recomendación, puedes utilizar Liquid para obtener y mostrar los elementos recomendados en tus mensajes trabajando directamente con el objeto `product_recommendation` Liquid.
 
 {% alert tip %}
 Para un recorrido paso a paso, consulta nuestro curso de Braze Learning: [Crear experiencias personalizadas con IA](https://learning.braze.com/ai-item-recommendations-use-case/1996254).

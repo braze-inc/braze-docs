@@ -65,12 +65,12 @@ npx expo install @braze/expo-plugin
 | `firebaseCloudMessagingSenderId`              | ストリング  | Android のみ。Firebase Cloud Messaging の送信者 ID。React Native SDK v1.38.0とExpo Plugin v0.4.0で導入された。                                    |
 | `sessionTimeout`                              | 整数 | アプリケーションの Braze セッションタイムアウト (秒単位)。                                                                                               |
 | `enableSdkAuthentication`                     | ブーリアン | [SDK認証](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication)機能を有効にするかどうか。      |
-| `logLevel`                                    | 整数 | アプリケーションのログレベル。デフォルトのログレベルは8で、最小限の情報をロギングします。デバッグのために冗長ロギングを有効にするには、ログレベル0を使う。    |
+| `logLevel`                                    | 整数 | アプリケーションのログレベル。デフォルトのログレベルは8で、最小限の情報しか記録しない。デバッグのために冗長ロギングを有効にするには、ログレベル0を使う。    |
 | `minimumTriggerIntervalInSeconds`             | 整数 | トリガー間の最小時間間隔 (秒単位)。デフォルトは30秒です。                                                                           |
 | `enableAutomaticLocationCollection`           | ブーリアン | 自動位置情報収集が有効かどうか（ユーザーが許可した場合）。                                                                                  |
 | `enableGeofence`                              | ブーリアン | ジオフェンスを有効にするかどうか。                                                                                                                           |
 | `enableAutomaticGeofenceRequests`             | ブーリアン | ジオフェンスリクエストを自動で行うかどうか。                                                                                                  |
-| `dismissModalOnOutsideTap`                    | ブーリアン | iOSのみ。ユーザーがアプリ内メッセージの外側をクリックしたときに、モーダルアプリ内メッセージが閉じられるかどうか。                                           |
+| `dismissModalOnOutsideTap`                    | ブーリアン | iOSのみ。ユーザーがアプリ内メッセージの外側をクリックしたときに、モーダルなアプリ内メッセージを解除するかどうか。                                           |
 | `androidHandlePushDeepLinksAutomatically`     | ブーリアン | Android のみ。Braze SDKが自動的にプッシュディープリンクを処理するかどうか。                                                                         |
 | `androidPushNotificationHtmlRenderingEnabled` | ブーリアン | Android のみ。`android.text.Html.fromHtml` を使って、プッシュ通知のテキストコンテンツをHTMLとして解釈し、レンダリングするかどうかを設定する。        |
 | `androidNotificationAccentColor`              | ストリング  | Android のみ。Android通知のアクセントカラーを設定する。                                                                                                |
@@ -81,6 +81,7 @@ npx expo install @braze/expo-plugin
 | `enableBrazeIosPushStories`                   | ブーリアン | iOSのみ。iOSのBraze Push Storiesを有効にするかどうか。                                                                                                  |
 | `iosPushStoryAppGroup`                        | ストリング  | iOSのみ。iOSのプッシュストーリーズに使われているアプリ群だ。                                                                                                       |
 | `iosUseUUIDAsDeviceId`                        | ブーリアン | iOSのみ。デバイスIDにランダムに生成されたUUIDを使用するかどうか。                                                                                       |
+| `iosForwardUniversalLinks`                    | ブーリアン | iOSのみ。SDKが自動的にユニバーサルリンクを認識し、システムメソッドに転送するかどうかを指定する（デフォルト：`false` ）。イネーブルメントを有効にすると、SDKは[アプリのSupporting universal linksで](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks/)定義されたシステムメソッドにユニバーサルリンクを自動的に転送する。React Native SDK v11.1.0とExpo Plugin v3.2.0で導入された。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 構成例:
@@ -113,13 +114,65 @@ npx expo install @braze/expo-plugin
           "androidNotificationSmallIcon": "@drawable/custom_app_small_icon",
           "iosRequestPushPermissionsAutomatically": false,
           "enableBrazeIosPushStories": true,
-          "iosPushStoryAppGroup": "group.com.example.myapp.PushStories"
+          "iosPushStoryAppGroup": "group.com.example.myapp.PushStories",
+          "iosForwardUniversalLinks": false
         }
       ],
     ]
   }
 }
 ```
+
+##### Androidのプッシュ通知アイコンを設定する {#android-push-icons}
+
+`androidNotificationLargeIcon` 、`androidNotificationSmallIcon` 、アイコンを正しく表示するために以下のベストプラクティスに従うこと：
+
+###### アイコンの配置とフォーマット
+
+Braze Expoプラグインでカスタムプッシュ通知アイコンを使用する：
+
+1. [アイコンの要件で](#icon-requirements)詳しく説明されているように、Androidの要件に従ってアイコンファイルを作成する。
+2. それらをプロジェクトのAndroidネイティブ・ディレクトリの`android/app/src/main/res/drawable-<density>/` （例えば、`android/app/src/main/res/drawable-mdpi/` 、`drawable-hdpi/` 、または同様のもの）に置く。
+3. また、React Nativeディレクトリでアセットを管理している場合は、Expoの[app.json アイコン設定を](https://docs.expo.dev/versions/latest/config/app/#icon)使用するか、[Expo configプラグインを](https://docs.expo.dev/config-plugins/introduction/)作成して、プリビルド時にAndroid drawableフォルダにアイコンをコピーすることもできる。
+
+Braze Expoプラグインは、Androidの描画可能リソースシステムを使ってこれらのアイコンを参照する。
+
+###### アイコンの要件
+
+- **小さなアイコンだ：**透明なバックグラウンドに白いシルエットであること（これはAndroidプラットフォームの要件である）
+- **大きなアイコンだ：**フルカラーの画像、写真も可能である。
+- **フォーマットだ：**PNG形式を推奨する
+- **ネーミングだ：**小文字、数字、アンダースコアのみを使用する（例：`my_large_icon.png` ）。
+
+###### 構成 app.json
+
+`@drawable/` 」というプレフィックスの後に、拡張子を_除いた_ファイル名を付ける。例えば、アイコンファイルの名前が`large_icon.png` の場合、`@drawable/large_icon` として参照する：
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          "androidNotificationLargeIcon": "@drawable/large_icon",
+          "androidNotificationSmallIcon": "@drawable/small_icon"
+        }
+      ]
+    ]
+  }
+}
+```
+
+{% alert important %}
+アイコンを参照する際には、相対ファイルパス（`src/assets/images/icon.png` など）を使用したり、ファイル拡張子を含めないこと。Expoプラグインは、プリビルドプロセスの後、Androidネイティブフォルダ内のアイコンを適切に見つけるために、`@drawable/` プレフィックスを必要とする。
+{% endalert %}
+
+###### 仕組み
+
+Braze Expoプラグインは、Android`drawable` ディレクトリからアイコンファイルを参照する。`npx expo prebuild` を実行すると、ExpoはネイティブのAndroidプロジェクト構造を生成する。あなたのアイコンは、ビルドプロセスの前にAndroid`drawable` フォルダーに存在していなければならない（手動で配置するか、configプラグインでコピーする）。このプラグインは、Braze SDKがこれらの描画可能リソースを（パスや拡張子なしで）その名前で使用するように設定するため、設定に`@drawable/` プレフィックスが必要となる。
+
+Androidの通知アイコンの詳細については、[Androidの通知アイコンのガイドラインを](https://developer.android.com/develop/ui/views/notifications#icon)参照のこと。
 
 #### ステップ 2.3:アプリケーションのビルドおよび実行
 
@@ -148,9 +201,9 @@ buildscript {
 }
 ```
 
-これにより、Kotlin がプロジェクトに追加されます。
+これでプロジェクトにKotlinが追加される。
 
-#### ステップ2.2: Braze SDK の構成
+#### ステップ 2.2:Braze SDK の構成
 
 Braze サーバーに接続するには、プロジェクトの `res/values` フォルダで `braze.xml` ファイルを作成します。次のコードを貼り付け、API [キー]({{site.baseurl}}/api/identifier_types/)および[エンドポイント]({{site.baseurl}}/api/basics/#endpoints)を実際の値に置き換えます。
 
@@ -173,7 +226,7 @@ Braze サーバーに接続するには、プロジェクトの `res/values` フ
 Braze SDK バージョン12.2.0 以降では、`importBrazeLocationLibrary=true` を`gradle.properties` ファイルに設定することで、android-sdk-location ライブラリを自動的にプルインできます。
 {% endalert %}
 
-#### ステップ2.3: ユーザーセッショントラッキングの実装
+#### ステップ 2.3:ユーザーセッショントラッキングの実装
 
 `openSession()` および `closeSession()` への呼び出しは自動的に処理されます。
 `MainApplication` クラスの `onCreate()` メソッドに次のコードを追加します。
@@ -232,7 +285,7 @@ override fun onNewIntent(intent: Intent) {
 
 #### ステップ2.1: (オプション) ダイナミック XCFramework に関する Podfile の構成
 
-BrazeUI などの特定の Braze ライブラリーを Objective-C++ ファイルにインポートするには、`#import` 構文を使用する必要があります。Braze Swift SDKのバージョン7.4.0以降、バイナリにはこの構文と互換性のある[ダイナミック XCFramework としてのオプションの配布チャネル](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic)があります。
+BrazeUIなどの特定のBrazeライブラリをObjective-C++ファイルにインポートするには、`#import` 構文を使用する必要がある。Braze Swift SDKのバージョン7.4.0以降、バイナリにはこの構文と互換性のある[ダイナミック XCFramework としてのオプションの配布チャネル](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic)があります。
 
 この配布チャネルを使用する場合は、Podfile で CocoaPods のソースの場所を手動で上書きします。以下のサンプルを参照し、インポートする関連バージョンで `{your-version}` を置き換えてください。
 
@@ -386,3 +439,11 @@ const App = () => {
 ```
 
 Brazeのダッシュボードで、[ユーザー検索に]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search)行き、`some-user-id` に一致するIDを持つユーザーを探す。ここで、セッションデータとデバイスデータが記録されたことを確認できる。
+
+## 次のステップ
+
+Braze SDKを統合したら、一般的なメッセージング機能の実装を開始できる：
+
+- [プッシュ通知]({{site.baseurl}}/developer_guide/push_notifications/)：プッシュ通知を設定し、ユーザーに送信する。
+- [アプリ内メッセージ]({{site.baseurl}}/developer_guide/in_app_messages/):アプリ内で文脈に応じた状況に即したメッセージを表示する
+- [横断幕]({{site.baseurl}}/developer_guide/banners/)だ：アプリのインターフェイスに永続的なバナーを表示する

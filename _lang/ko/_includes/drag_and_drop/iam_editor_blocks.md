@@ -58,6 +58,8 @@
 
 ### 이미지
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 | Property | 설명 |
 | --- | --- |
 | URL | The hosted address for the image |
@@ -96,7 +98,7 @@
 
 | Property | 설명 |
 | --- | --- |
-| 구독 그룹 | 사용자의 전화번호를 수집하여 가입할 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹]({{site.baseurl}}/whatsapp_subscription_groups/) (모든 국가의 번호를 수집할 수 있는 옵션 포함) |
+| 구독 그룹 | 사용자가 전화번호를 수집하여 가입할 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹]({{site.baseurl}}/whatsapp_subscription_groups/) (모든 국가의 번호를 수집할 수 있는 옵션 포함) |
 | Text alignment | 텍스트를 왼쪽, 가운데, 오른쪽 또는 맞춤으로 정렬하도록 이동합니다. |
 | Placeholder text | A placeholder phone number to display |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

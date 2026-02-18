@@ -1,7 +1,7 @@
 ---
 nav_title: Operador
 article_title: Operador BrazeAI
-page_order: 0.7
+page_order: 8
 alias: /operator/
 description: "Este artigo de referência aborda o BrazeAI Operator, um assistente com IA incorporado ao dashboard do Braze."
 ---
@@ -24,7 +24,7 @@ Durante a versão beta, o Operator suporta apenas o modo **Ask**. Você pode:
 - Solucionar problemas usando [o contexto com reconhecimento de página](#page-aware-context)
 - Aprenda as melhores práticas e orientações sobre integração
 
-### Modelar provedores como subprocessadores ou provedores terceirizados
+### Modelar os provedores como subprocessadores ou provedores terceirizados
 
 Quando o Cliente utilizar uma integração com um provedor de LLM fornecido pela Braze por meio dos Serviços Braze ("LLM fornecido pela Braze"), os provedores de tal LLM fornecido pela Braze atuarão como Subprocessadores da Braze, sujeitos aos termos do Adendo de Processamento de Dados (DPA) entre o Cliente e a Braze. O BrazeAI Operator se integra ao OpenAI.
 
@@ -89,7 +89,7 @@ O Operator entende a página em que você está trabalhando no Braze e pode adap
 
 ### Sugestões
 
-Ao abrir o Operator, você verá alguns prompts sugeridos para ajudá-lo a começar. Selecione uma para começar ou digite sua própria pergunta.
+Ao abrir o Operator, você verá algumas sugestões de prompts para ajudá-lo a começar. Selecione uma para começar ou digite sua própria pergunta.
 
 ### Visualizando o raciocínio
 
@@ -99,7 +99,7 @@ O operador mostra suas etapas de raciocínio em seções recolhíveis rotuladas 
 
 ### Ações sugeridas
 
-Em alguns casos, o Operator recomendará as próximas etapas e fornecerá links diretos para as páginas relevantes em seu dashboard do Braze. Por exemplo, se você perguntar sobre as taxas de bounce de e-mail, a Operator poderá vinculá-lo à página **do Deliverability Center**. Esses atalhos ajudam você a agir mais rapidamente sem precisar navegar manualmente.
+Em alguns casos, o Operador recomendará as próximas etapas e fornecerá links diretos para as páginas relevantes em seu dashboard do Braze. Por exemplo, se você perguntar sobre as taxas de bounce de e-mail, a Operator poderá vinculá-lo à página **do Deliverability Center**. Esses atalhos ajudam você a agir mais rapidamente sem precisar navegar manualmente.
 
 ### Interrupção da geração
 
@@ -142,7 +142,7 @@ Embora o Operator tenha acesso ao contexto do trabalho que você está fazendo n
 
 Como uma versão beta privada, o Operator pode apresentar erros ocasionais, interrupções ou recursos incompletos.
 
-Se não tiver certeza de que uma pergunta é suportada, tente formulá-la em termos de como o Operator pode ajudá-lo a navegar ou realizar ações dentro do dashboard do Braze, em vez de extrair análises ou dados históricos.
+Se não tiver certeza de que uma pergunta é compatível, tente formulá-la em termos de como o Operator pode ajudá-lo a navegar ou a realizar ações dentro do dashboard do Braze, em vez de extrair análises ou dados históricos.
 
 ### Número de mensagens enviadas
 

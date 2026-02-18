@@ -77,7 +77,7 @@ Aquí tienes un ejemplo de evento personalizado:
 3. Configura la **regla de caída de precios**. Esta es la lógica utilizada para determinar si se debe enviar una notificación. Una bajada de precio puede configurarse como un cambio de precio porcentual o por el cambio de valor del campo de precio.
 4. Selecciona **Guardar configuración**.
 
-![Configuración del catálogo que muestra la función de bajada de precios activada. La regla de bajada de precios es un cambio del tres por ciento del precio original.]({% image_buster /assets/img/price_drop_notifications.png %})
+![Configuración del catálogo que muestra la función de bajada de precios activada. La regla de la bajada de precios es un cambio del tres por ciento del precio original.]({% image_buster /assets/img/price_drop_notifications.png %})
 
 {% alert important %}
 Las reglas de notificación de estos ajustes no sustituyen a los ajustes de notificación de Canvas, como Horas de silencio.

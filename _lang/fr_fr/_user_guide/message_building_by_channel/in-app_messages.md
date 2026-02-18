@@ -87,7 +87,7 @@ Le message ne sera pas envoyé si l'appareil n'a pas accès à l'internet. Le me
 Chez Braze, un abandon se produit lorsqu'un utilisateur entreprend une action qui le rend éligible pour recevoir un message, mais qu'il ne reçoit pas le message parce que la logique Liquid le marque comme inéligible. Par exemple :
 
 1. Sam effectue une action qui devrait déclencher une campagne d'e-mailing.
-2. Le corps de l'e-mail contient une logique Liquid qui indique que si le score d'un attribut personnalisé est inférieur à 50, il ne faut pas envoyer cet e-mail.
+2. Le corps de l'e-mail contient une logique liquide qui indique que si le score d'un attribut personnalisé est inférieur à 50, il ne faut pas envoyer cet e-mail.
 3. Le score de l'attribut personnalisé de Sam est de 20.
 4. Braze reconnaît que Sam ne devrait pas recevoir cet e-mail, et l'e-mail est interrompu.
 5. Un événement d'abandon est enregistré.
@@ -101,7 +101,7 @@ Les messages in-app sont récupérés par l'appareil au début de la session et 
 En d'autres termes, la logique qui détermine si nous devons interrompre un message in-app intervient **avant que** le déclencheur ne se produise. Pour le démontrer, disons que Sam, dans l'exemple de l'e-mail, est abonné aux notifications push.
 
 1. Sam commence une session en lançant une application alimentée par Braze sur leur téléphone.
-2. Sur la base des critères d'audience des campagnes actives dans l'espace de travail, Sam pourrait être éligible à cinq campagnes différentes. Les cinq sont téléchargés dans leur téléphone et mis en cache.
+2. Sur la base des critères d'audience des campagnes actives dans l'espace de travail, Sam pourrait être éligible à cinq campagnes différentes. Les cinq sont téléchargés sur leur téléphone et mis en cache.
 3. Sam **n'a** effectué **aucune** action qui déclencherait ces messages, mais il pourrait recevoir ces messages au cours de la session.
 4. Dans deux des messages in-app, le liquid a des règles qui excluent Sam de la réception du message (par exemple, l'attribut personnalisé de son score n'est pas assez élevé).
 5. Sam ne reçoit pas les deux messages in-app qui les excluent, mais ils reçoivent les trois autres messages.
@@ -132,3 +132,5 @@ Ce tableau compare les envois de messages in-app auxquels Sam a été confronté
 ## Ressources supplémentaires
 
 Avant de vous lancer dans la création de vos propres campagnes de messages in-app - ou dans l'utilisation de messages in-app dans le cadre d'une campagne multicanal - nous vous recommandons vivement de consulter notre [guide de préparation des messages in-app.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/) Ce guide couvre les questions de ciblage, de contenu et de conversion que vous devez prendre en compte lors de la création de messages in-app.
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}

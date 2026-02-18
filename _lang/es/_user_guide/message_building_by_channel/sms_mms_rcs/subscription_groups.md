@@ -91,7 +91,7 @@ Braze recomienda que pruebes a enviar RCS a volúmenes más pequeños de usuario
 
 ### Paso 1: Crea un Canvas y rellena el Calendario de Entrada
 
-Crea un Canvas y ponle un nombre fácilmente identificable (como "Transferencia de usuario del grupo de suscripción SMS-RCS"). Después, programa la campaña cuando te venga bien.
+Crea un Canvas y ponle un nombre fácilmente identificable (como "Transferencia de usuario de grupo de suscripción SMS-RCS"). Después, programa la campaña cuando te venga bien.
 
 ### Paso 2: Define tu audiencia
 

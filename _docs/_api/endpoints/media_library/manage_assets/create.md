@@ -87,7 +87,7 @@ This section includes two example `curl` requests, one for adding an asset using
 This request shows an example of adding an asset to the media library using an `asset_url`.
 
 ```
-curl -X POST --location 'http://api.dashboard-03.braze.com/media_library/create' \
+curl -X POST --location 'https://rest.iad-01.braze.com/media_library/create' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --header 'Content-Type: application/json' \
 --data '{"asset_url": "https://cdn.example.com/assets/cat.jpg", "name": "Cat Graphic"}'
@@ -96,7 +96,7 @@ curl -X POST --location 'http://api.dashboard-03.braze.com/media_library/create'
 This request shows an example of adding an asset to the media library using an `asset_file`.
 
 ```
-curl -X POST --location 'http://api.dashboard-03.braze.com/media_library/create' \
+curl -X POST --location 'https://rest.iad-01.braze.com/media_library/create' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --header 'Content-Type: application/json' \
 --data '{"asset_file":<BINARY FILE DATA>, "name":"Cat Graphic"}'

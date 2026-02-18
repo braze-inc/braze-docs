@@ -1,7 +1,7 @@
 ---
 nav_title: Paramètres linguistiques
 article_title: Paramètres linguistiques
-page_order: 2.5
+page_order: 3
 page_type: reference
 description: "Cet article explique comment modifier la langue dans laquelle le tableau de bord de Braze s'affiche."
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Recomendações de itens
 article_title: Recomendações de itens no Braze
-page_order: 15
+page_order: 7
 search_rank: 1
 description: "Saiba tudo sobre os mecanismos de recomendação de itens no Braze."
 ---
@@ -383,3 +383,7 @@ Note que as recomendações operam de forma independente e não têm conheciment
 ### As recomendações existentes treinam semanalmente após a atualização para Item Recommendations Pro?
 
 Sim, mas somente após a próxima atualização programada. As recomendações existentes não mudam para treinamento semanal e previsão diária imediatamente após o upgrade para o Item Recommendations Pro. No entanto, eles adotarão o novo cronograma automaticamente em seu próximo ciclo de retreinamento. Por exemplo, se uma recomendação foi treinada pela última vez em 1º de fevereiro e está definida para ser treinada novamente a cada 30 dias, ela adotará a nova programação semanal após a próxima atualização em 2 de março.
+
+### Como posso fazer com que todas as recomendações que duram vários dias expirem de uma vez?
+
+Se quiser expirar todas as recomendações de vários dias em uma data específica (para que todas essas recomendações ativas recebam novas previsões de uma só vez), entre em contato com o suporte da Braze ou com o gerente de sucesso do cliente para obter assistência. Os especialistas em IA da Braze realizam isso manualmente para garantir a performance máxima do modelo.

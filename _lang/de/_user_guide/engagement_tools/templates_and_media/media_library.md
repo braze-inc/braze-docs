@@ -41,7 +41,7 @@ Later when drafting a message in Braze, you can pull in your images from the med
 
 ## Bild-Spezifikationen
 
-Alle Bilder, die in die Medienbibliothek hochgeladen werden, müssen kleiner als 5 MB sein. Unterstützte Dateitypen sind PNG, JPEG, GIF und SVG. Spezielle Bildempfehlungen für die einzelnen Nachrichtenkanäle finden Sie in den folgenden Abschnitten.
+Alle Bilder, die in die Medienbibliothek hochgeladen werden, müssen kleiner als 5 MB sein. Unterstützte Dateitypen sind PNG, JPEG, GIF, SVG und WebP. Spezielle Bildempfehlungen für die einzelnen Nachrichtenkanäle finden Sie in den folgenden Abschnitten.
 
 ### Content-Cards
 

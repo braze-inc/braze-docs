@@ -30,6 +30,12 @@ Ahora, sigue los pasos correspondientes a tu origen de datos:
 
 {: start="4"}
 4\. Selecciona **\+ Añadir ficha** y, a continuación, elige uno de los informes que creaste en [el Generador de informes (Nuevo)]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
+
+{% alert important %}
+Después de añadir un informe del Generador de informes a un mosaico del Generador de paneles, el mosaico no está conectado al informe original. Si editas el informe original en el Generador de informes, debes eliminar el mosaico del panel existente y crear uno nuevo utilizando el informe actualizado como origen de datos.
+{% endalert %}
+
+{: start="5"}
 5\. Selecciona el icono del lápiz para cambiar cómo se muestran el título y el tipo de gráfico en el mosaico.
     \- Puedes alternar entre distintos tipos de gráficos por debajo de la visualización predeterminada. Las opciones actuales incluyen gráficos de barras (horizontales o verticales) y gráficos de líneas (sólo disponibles si seleccionaste **Fecha** como opción de desglose en la configuración del Generador de informes).<br><br>![Alterna entre distintos tipos de gráficos.]({% image_buster /assets/img/report_builder_types.png %})<br><br>
     \- Utiliza el desplegable de métricas para seleccionar qué métricas quieres incluir en tu visualización. Por defecto, la primera columna del informe será la métrica mostrada por defecto.
@@ -76,7 +82,7 @@ Adjust the tile size by dragging the bottom-right corner of the tile, and adjust
 
 ## Ejecutar un panel de control
 
-1. Ve a **Análisis** > **Generador de paneles**. La página de inicio enumera todos los paneles existentes en tu espacio de trabajo, con los paneles creados por Braze en la parte superior. Se indican con "(Braze)" en el título.
+1. Ve a **Análisis** > **Generador de paneles**. La página de inicio muestra todos los paneles existentes en tu espacio de trabajo, con los paneles creados por Braze en la parte superior. Se indican con "(Braze)" en el título.
 2. Selecciona el panel que te interese.
 3. Selecciona **Ejecutar panel** para cargar el panel correspondiente utilizando ese panel.
 
@@ -122,7 +128,7 @@ Los toques incluyen _Clic de correo electrónico_ (clic de enlace), _Clic de tar
 | Métrica  | Definición  |
 |---|---|
 | Métricas semanales de correo electrónico (tasas) | Tasas de interacción por correo electrónico (tasas de entrega, rebote, apertura, clic, cancelación suscripción) agrupadas por segmentos y mostradas como series temporales semanales.|
-| Métricas semanales de correo electrónico (recuentos) | Recuentos de interacción con el correo electrónico (envíos, entregas, rebotes, aperturas, clics, cancelaciones de suscripción) agrupados por segmentos y mostrados como series temporales semanales.|
+| Métricas semanales de correo electrónico (recuentos) | Recuentos de interacción con el correo electrónico (enviados, entregados, rebotados, abiertos, clics, suscripciones canceladas) agrupados por segmento y mostrados como series temporales semanales.|
 | Métricas semanales de compra (tasas) | Tasas de conversión de compras (ingresos por destinatario) a partir de aperturas y clics de correo electrónico, agrupadas por segmentos y mostradas como una serie temporal semanal.|
 | Métricas semanales de compra (recuentos) | Recuentos de compras y totales de ingresos de aperturas y clics de correos electrónicos, agrupados por segmentos y mostrados como una serie temporal semanal.|
 | Interacción por correo electrónico por segmento | Tabla resumen que muestra las métricas totales de interacción del correo electrónico (enviados, entregados, rebotes, aperturas, clics, cancelaciones de suscripción y sus tasas) agregadas por segmento.|
@@ -134,7 +140,7 @@ Los toques incluyen _Clic de correo electrónico_ (clic de enlace), _Clic de tar
 | Las 10 mejores campañas en métricas de compra | Lista clasificada de las campañas con las métricas de conversión de compra más altas a partir de la interacción por correo electrónico (métrica configurable para la clasificación).|
 | Las 10 campañas con las métricas de compra más bajas | Lista clasificada de las campañas con las métricas de conversión de compra más bajas a partir de la interacción por correo electrónico (métrica configurable para la clasificación).|
 | Los 10 mejores lienzos para métricas de compra | Lista clasificada de Lienzos con las métricas de conversión de compra más altas a partir de la interacción por correo electrónico (métrica configurable para la clasificación).|
-| Los 10 lienzos más bajos para las métricas de compra | Lista ordenada de las Lonas con las métricas de conversión de compra más bajas a partir de la interacción por correo electrónico (métrica configurable para la clasificación).|
+| Los 10 lienzos más bajos para las métricas de compra | Lista ordenada de las Lienzos con las métricas de conversión de compra más bajas a partir de la interacción por correo electrónico (métrica configurable para la clasificación).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Análisis de sesión

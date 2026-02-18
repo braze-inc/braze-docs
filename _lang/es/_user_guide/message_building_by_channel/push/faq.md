@@ -20,6 +20,12 @@ Cuando se reasigna un token de notificaciones push, el cambio se refleja en el r
 
 ![El "Registro de cambios push" en la sección "Configuración de contactos".]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
+### ¿Qué significa "Error al enviar push porque la carga útil no era válida"?
+
+Este mensaje indica que los APN rechazaron la solicitud push debido a una carga útil no válida (por ejemplo, una carga útil vacía o demasiado grande).
+
+Para más detalles y pasos a seguir, consulta [Mensajes de error push comunes]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
+
 ### ¿Por qué un usuario con adhesión voluntaria no tiene un token de notificaciones push?
 
 Esto puede ocurrir si el token de notificaciones push del usuario fue reasignado a otra persona que utilizó el mismo dispositivo.

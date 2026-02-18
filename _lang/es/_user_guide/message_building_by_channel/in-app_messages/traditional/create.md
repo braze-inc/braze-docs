@@ -191,7 +191,9 @@ Selecciona **Añadir idiomas** y selecciona los idiomas que desees de la lista p
 
 ### Imagen
 
-Dependiendo del tipo de mensaje, puedes **subir una imagen**, **elegir una insignia** o utilizar **Font Awesome**. Para cargar una imagen, haga clic en **Añadir imagen** o proporcione una URL de imagen. Al hacer clic en **Añadir imagen** se abre la **Biblioteca multimedia**, donde puede seleccionar una imagen cargada previamente o añadir una nueva. Cada tipo de mensaje y plataforma puede tener sus propias proporciones y requisitos; asegúrate de comprobarlos antes de encargar o crear una imagen desde cero.
+Dependiendo del tipo de mensaje, puedes **subir una imagen**, **elegir una insignia** o utilizar **Font Awesome**. Para subir una imagen, selecciona **Añadir imagen** o proporciona una URL de imagen. Al seleccionar **Añadir imagen** se abre la **biblioteca multimedia**, donde puedes seleccionar una imagen cargada previamente o añadir una nueva. Cada tipo de mensaje y plataforma puede tener sus propias proporciones y requisitos sugeridos: asegúrate de comprobarlos antes de encargar o crear una imagen desde cero.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 ### Cabecera y cuerpo
 
