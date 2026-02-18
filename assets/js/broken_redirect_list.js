@@ -3236,6 +3236,6 @@ validurls['/docs/user_guide/message_building_by_channel/email/email_setup/ip_war
 validurls['/docs/partners/tinyclues/'] = '/docs/partners/splio/';
 validurls['/docs/partners/data_and_analytics/cohort_import/tinyclues'] = '/docs/partners/splio/';
 
-validurls['/docs/api/objects_filters/canvas_entry_properties_object/'] = '/docs//api/objects_filters/context_object/';
+validurls['/docs/api/objects_filters/canvas_entry_properties_object/'] = '/docs/api/objects_filters/context_object/';
 
 // validurls['OLD'] = 'NEW';
