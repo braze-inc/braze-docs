@@ -31,6 +31,10 @@ The Braze and Google Cloud Storage integration allows you to stream Currents dat
 
 To integrate with Google Cloud Storage, you must set up the appropriate credentials that allow Braze to get information about the storage buckets being written to (`storage.buckets.get`) and create objects within that bucket (`storage.objects.create`). 
 
+{% alert note %}
+커런츠의 인증 방법으로 WIF(워크로드 ID 페더레이션)는 지원되지 않습니다. JSON 비공개 키가 있는 서비스 계정을 사용해야 합니다.
+{% endalert %}
+
 This can be done using the following instructions, which will walk you through creating a role and service account that will generate a private key to use in your Currents integration.
 
 ### 1단계: Create role
@@ -77,7 +81,7 @@ At the bottom of the page, use the **Create Key** button to create a **JSON** pr
 
 In Braze, navigate to **Currents** > **\+ Create Current** > **Google Cloud Storage Data Export** and provide your integration name and contact email.
 
-Next, upload your JSON private key under **GCS JSON Credentials** and provide your CGS bucket name and GCS prefix (optional). 
+그런 다음 **GCS JSON 자격 증명** 아래에 JSON 비공개 키를 업로드하고 GCS 버킷 이름과 GCS 접두사(선택 사항)를 입력합니다. 이전 단계에서 설명한 대로 Google Cloud Platform을 통해 이러한 자격 증명을 생성해야 한다는 점에 유의하세요.
 
 {% alert important %}
 It's important to keep your credentials file up to date; if your connector's credentials expire, the connector will stop sending events. 이 상태가 **5일** 이상 지속되면 커넥터의 이벤트가 삭제되고 데이터가 영구적으로 손실됩니다.
@@ -115,13 +119,13 @@ To verify these permissions in the Braze dashboard, go to the **Google Cloud Sto
 
 ## Export behavior
 
-Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
+클라우드 데이터 스토리지 솔루션을 통합하고 API, 대시보드 보고서 또는 CSV 보고서를 내보내려고 하는 사용자는 다음과 같은 경험을 하게 됩니다:
 
 - All API exports will not return a download URL in the response body and must be retrieved through data storage.
 - 모든 대시보드 보고서와 CSV 보고서는 다운로드할 수 있도록 사용자의 이메일로 전송되며(저장 권한 필요 없음) 데이터 스토리지에 백업됩니다.
 
 {% alert important %}
-**JSON 형식 요구 사항**: JSON 내보내기의 경우 Braze는 각 줄에 별도의 JSON 개체가 포함되는 JSONL(줄 바꿈으로 구분된 JSON) 형식을 사용합니다. 이 형식은 단일 JSON 배열 또는 오브젝트인 표준 JSON과 다릅니다. 내보낸 파일의 각 줄은 유효한 JSON 객체이지만 파일 전체가 하나의 유효한 JSON 설명서가 아닙니다. 이러한 파일을 처리할 때는 전체 파일을 하나의 JSON 설명서로 구문 분석하지 말고 각 줄을 별도의 JSON 객체로 개별적으로 구문 분석하세요.
+**JSON 형식 요구 사항**: JSON 내보내기의 경우 Braze는 각 줄에 별도의 JSON 개체가 포함되는 JSONL(줄 바꿈으로 구분된 JSON) 형식을 사용합니다. 이 형식은 단일 JSON 배열 또는 오브젝트인 표준 JSON과는 다릅니다. 내보낸 파일의 각 줄은 유효한 JSON 객체이지만 파일 전체가 하나의 유효한 JSON 설명서가 아닙니다. 이러한 파일을 처리할 때는 전체 파일을 하나의 JSON 설명서로 구문 분석하지 말고 각 줄을 별도의 JSON 객체로 개별적으로 구문 분석하세요.
 
 커런츠 내보내기는 JSON이 아닌 Apache Avro 형식(`.avro` 파일)을 사용합니다. 이 JSON 형식 요구 사항은 JSON 형식을 사용하는 대시보드 데이터 내보내기 및 API 내보내기에 적용됩니다.
 {% endalert %}

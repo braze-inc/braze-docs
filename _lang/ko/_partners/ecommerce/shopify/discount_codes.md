@@ -67,7 +67,7 @@ In the User Update step, do the following for each field:
 - **Action:** Select **Update**.
 - **Key Value:** Paste the Liquid code snippet.
 
-![Liquid 스니펫으로 "프로모션 코드" 속성을 업데이트하는 사용자 업데이트 단계입니다.][6].
+![Liquid 스니펫으로 "프로모션 코드" 속성을 업데이트하는 사용자 업데이트 단계.][6]
 
 Now, you can add the custom attribute {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %} to any message, and the discount code will be templated in.
 
