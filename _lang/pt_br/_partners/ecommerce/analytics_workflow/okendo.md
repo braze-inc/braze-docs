@@ -15,7 +15,7 @@ alias: /partners/okendo/
 
 ## Sobre a integração
 
-A integração do Braze com Okendo funciona em vários produtos na plataforma da Okendo, incluindo Avaliações, Fidelidade, Referências, Pesquisas e Questionários. Okendo envia eventos personalizados e atributos de usuário para o Braze, que podem ser usados para personalizar e disparar mensagens.  
+A integração do Braze com a Okendo funciona em vários produtos na plataforma da Okendo, incluindo Avaliações, Fidelidade, Referências, Pesquisas e Questionários. A Okendo envia eventos personalizados e atributos de usuário para o Braze, que podem ser usados para personalizar e disparar mensagens.  
 
 ## Pré-requisitos
 
@@ -28,16 +28,16 @@ A integração do Braze com Okendo funciona em vários produtos na plataforma da
 
 ## Integração
 
-### Etapa 1: Configurar o Conector Braze no Okendo
+### Etapa 1: Configurar o Conector Braze na Okendo
 
-1. No Okendo, vá para **Configurações** > **Integrações** > **Email & SMS** > **Braze**
-2. Adicione o endpoint da API e a chave da API nas configurações de **Integração**.
+1. Na Okendo, acesse **Configurações** > **Integrações** > **Email & SMS** > **Braze**
+2. Adicione o endpoint da API e a chave de API nas configurações de **Integração**.
 
 ### Etapa 2: Configure seu identificador
 
-O campo `external_id` é usado para identificar o usuário associado a cada evento. Ative **Usar ID de Cliente Shopify para identificação de usuário Braze** para associar o campo com IDs de Cliente Shopify. Caso contrário, desative para associá-lo ao endereço de e-mail de cada usuário.
+O campo `external_id` é usado para identificar o usuário associado a cada evento. Ative **Usar ID de Cliente Shopify para identificação de usuário Braze** para associar o campo com IDs de Clientes Shopify. Caso contrário, desative para associá-lo ao endereço de e-mail de cada usuário.
 
-## Sincronizando eventos e atributos do Okendo para o Braze
+## Sincronizando eventos e atributos da Okendo para o Braze
 
 ### Eventos personalizados
 
@@ -52,28 +52,28 @@ Para dados de eventos de exemplo, consulte [documentação da Okendo](https://su
 
 #### Eventos de referência
 
-- Referência enviada Okendo
-- Optou por referências Okendo
-- Convite de referência Okendo
-- Cupom de referência Okendo recebido
-- Cupom de referência Okendo resgatado
-- Referência Okendo rejeitada
+- Referência enviada para Okendo
+- Optou por referências do Okendo
+- Convite de referência do Okendo
+- Cupom de referência do Okendo recebido
+- Cupom de referência do Okendo resgatado
+- Referência do Okendo rejeitada
 
 #### Eventos de fidelidade
 
-- Inscrito no programa de fidelidade Okendo
-- Pontos de fidelidade Okendo concedidos
-- Pontos de fidelidade Okendo resgatados
-- Nível de fidelidade Okendo alterado
-- Pontos de fidelidade Okendo ajustados
+- Inscrito no programa de fidelidade do Okendo
+- Pontos de fidelidade do Okendo concedidos
+- Pontos de fidelidade do Okendo resgatados
+- Nível de fidelidade do Okendo alterado
+- Pontos de fidelidade do Okendo ajustados
 
 #### Evento de pesquisa
 
-- Pesquisa Okendo enviada
+- Pesquisa do Okendo enviada
 
 #### Evento de quiz
 
-- Quiz Okendo enviado
+- Quiz do Okendo enviado
 
 ### Atributos personalizados
 

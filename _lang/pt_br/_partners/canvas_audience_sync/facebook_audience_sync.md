@@ -1,7 +1,7 @@
 ---
 nav_title: Facebook
 article_title: Sincronização de canva público com o Facebook
-description: "Este artigo de referência abordará como usar o Braze Audience Sync no Facebook para fornecer anúncios com base em disparadores comportamentais, segmentação e muito mais."
+description: "Este artigo de referência abordará como usar o Braze Audience Sync para o Facebook para fornecer anúncios com base em disparadores comportamentais, segmentação e muito mais."
 page_order: 2
 alias: /audience_sync_facebook/
 
@@ -275,7 +275,7 @@ table td {
     </tr>
     <tr>
       <td><b>Falha ao criar público</b></td>
-      <td>Na página Parceiro de tecnologia do Facebook, você está vendo "Conectado", mas há um erro na etapa Sincronização de público do Facebook ao sincronizar um público, "Falha ao criar o público 'nome do público'". A autorização de sua conta do Facebook falhou. Visite a página Parceiros de tecnologia para reconectar sua conta.</td>
+      <td>Na página Parceiro de tecnologia do Facebook, você está vendo "Conectado", mas há um erro na etapa Sincronização de público do Facebook ao sincronizar um público: "Falha ao criar o público 'nome do público'". A autorização de sua conta do Facebook falhou. Visite a página Parceiros de tecnologia para reconectar sua conta.</td>
       <td>Siga as etapas <a href='/docs/partners/canvas_steps/facebook_audience_sync/#audit-your-facebook-account'>desta seção de solução de problemas</a> para verificar se há algum problema na sua conta.
       </td>
     </tr>
