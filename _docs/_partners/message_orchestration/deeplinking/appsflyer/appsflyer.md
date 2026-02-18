@@ -148,6 +148,10 @@ While widely used, issues can arise when using emailed deep links with click tra
 
 AppsFlyer provides a [service](https://support.appsflyer.com/hc/en-us/articles/26967438815377-Set-up-your-ESP-integration-with-AppsFlyer) that avoids these issues, enabling AppsFlyer to serve as an intermediary between the ESP server and your domain name.  Its role as a proxy enables the provision of association files (AASA/asset links), which facilitates deep linking. 
 
+{% alert note %}
+**AASA file hosting:** You do not need to send your AASA (Apple App Site Association) file to your ESP (for example, SparkPost) to host. We recommend using a CDN to serve the AASA file at the link required by your setup, similar to how you host your [SSL certificate]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl/#acquiring-an-ssl-certificate) for click tracking.
+{% endalert %}
+
 ## Step 1 - Create a Click Tracking Domain 
 
 Following the initial elements of [Braze’s Email set-up guidance]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl/#acquiring-an-ssl-certificate), create an email sending domain and a click tracking domain. For support, you can raise a ticket via the Braze Dashboard to initiate setup for the new CTD with the Braze Email team.
