@@ -48,6 +48,69 @@ Braze は現在、すべてのユーザーレベルのデータを Snowflake AWS
 - 既存のテーブルやビューからカラムを削除する
 - 既存のカラムのタイプまたはヌル可能性を変更する
 
+## SNAPSHOTS およびCHANGELOGS 表が更新 d の場合
+
+SNAPSHOTSテーブルとCHANGELOGSテーブルは、キャンペーンとキャンバスの変更を追跡します。これらのテーブルが更新であるかどうかを理解することは、最新のメッセージバリエーションやキャンバス設定を照会する際に大切です。
+
+### CHANGELOGS_CAMPAIGN_SHARED
+
+以下の場合、`CHANGELOGS_CAMPAIGN_SHARED` に行が追加されます。
+- キャンペーンが起動されます
+- 次のスナップショットテーブルフィールドのいずれかが変更されます。
+  - 名前
+  - アクション(メッセージ内容の変更を含む)
+  - 変換動作
+
+{% alert important %}
+起動後の下書きを保存または更新しても、更新は自動的にトリガーされません。更新がトリガーされるのは、キャンペーンを起動した場合、または起動後のキャンペーンへの変更をアプリした場合のみです。起動後の下書きは変更されます。
+{% endalert %}
+
+### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED
+
+`SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` は`CHANGELOGS_CAMPAIGN_SHARED` から派生したものです。このテーブルは、`CHANGELOGS_CAMPAIGN_SHARED` からアクションs 列を抽出し、個々のメッセージバリエーションレコードに統合します。`CHANGELOGS_CAMPAIGN_SHARED`が更新dのときは、それに応じて更新dとなる。
+
+### CHANGELOGS_CANVAS_SHARED
+
+以下の場合、`CHANGELOGS_CANVAS_SHARED` に行が追加されます。
+- キャンバスが起動するか、または
+- 次のスナップショットテーブルフィールドのいずれかが変更されます。
+  - 名前
+  - 変換動作
+  - バリエーション(パーセンテージe、最初のステップ代入、バリエーションの名前)
+
+{% alert important %}
+起動後の下書きを保存または更新しても、更新は自動的にトリガーされません。更新は、キャンバスを起動したときにのみトリガーされます。または、起動後の下書きがアクティブキャンバスに変更されるのをアプリします。
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_VARIATION_SHARED
+
+`SNAPSHOTS_CANVAS_VARIATION_SHARED` は`CHANGELOGS_CANVAS_SHARED` から派生したものです。このテーブルは、`SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` と同じエクストアクションパターンを使用し、`CHANGELOGS_CANVAS_SHARED` が更新 d の場合は更新 d になります。
+
+### SNAPSHOTS_CANVAS_STEP_SHARED
+
+以下の場合、`SNAPSHOTS_CANVAS_STEP_SHARED` に行が追加されます。
+- キャンバスが起動するか、または
+- アクティブキャンバスが更新d (起動後の下書き アプリが嘘)、または
+- 次のスナップショットテーブルフィールドのいずれかが変更されます。
+  - 名前
+  - アクション(メッセージバリエーション内でのメッセージ内容の変更を含む)
+
+{% alert important %}
+起動後の下書きを保存しても、更新は自動的にトリガーされません。更新は、キャンバスを起動したときにのみトリガーされます。または、起動後の下書きがアクティブキャンバスに変更されるのをアプリします。
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_FLOW_STEP_SHARED
+
+以下の場合、`SNAPSHOTS_CANVAS_FLOW_STEP_SHARED` に行が追加されます。
+- キャンバスが起動するか、または
+- アクティブキャンバスが更新d (起動後の下書き アプリが嘘)、または
+- 次のスナップショットテーブルフィールドのいずれかが変更されます。
+  - 名前
+
+{% alert important %}
+起動後の下書きを保存しても、更新は自動的にトリガーされません。更新は、キャンバスを起動したときにのみトリガーされます。または、起動後の下書きがアクティブキャンバスに変更されるのをアプリします。
+{% endalert %}
+
 ## 一般データ保護規則 (GDPR) への準拠
 
-Brazeが保存するほぼすべてのイベント記録には、ユーザーの個人を特定できる情報（PII）を表すフィールドがいくつか含まれている。いくつかのイベントには、電子メールアドレス、電話番号、デバイスID、言語、性別、位置情報が含まれることがある。ユーザーの忘れ去り要求がBrazeに提出された場合、Brazeは、そのユーザーに属するイベントのPIIフィールドを無効にする。こうすることで、その出来事の歴史的記録を削除することはないが、その出来事を特定の個人に結びつけることはできなくなる。
+{% include partners/snowflake_pii_gdpr.md %}

@@ -10,7 +10,7 @@ search_tag: OtherLevels
 
 # OtrosNiveles
 
-> La Plataforma de Experiencia [OtherLevels](https://www.otherlevels.com/) utiliza GenAI para transformar el modo en que las marcas deportivas, los editores y los operadores conectan con sus clientes, transformando el contenido tradicional en experiencias personalizadas de video y rich media a escala.
+> La Plataforma de Experiencia [OtherLevels](https://www.otherlevels.com/) utiliza GenAI para transformar la forma en que las marcas deportivas, los editores y los operadores conectan con sus clientes, transformando el contenido tradicional en experiencias personalizadas de video y rich media a escala.
 
 *Esta integración está mantenida por OtrosNiveles.*
 
@@ -18,7 +18,7 @@ search_tag: OtherLevels
 
 La integración de Braze y OtherLevels te permite crear videos GenAI personalizados a través de llamadas API a la plataforma de experiencia OtherLevels, y luego enviar estos videos a tus usuarios como videos push de iOS a través de [Braze Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/).
 
-Ofrece a tus usuarios una experiencia mejor con las experiencias potenciadas por IA de OtherLevels. Transforma el contenido existente y de terceros en video y rich media altamente escalables para audiencias que ya consumen contenido de forma diferente y responden con fuerza a las experiencias personalizadas contextualmente.
+Ofrece a tus usuarios una experiencia mejor con las experiencias potenciadas por IA de OtherLevels. Transforma los contenidos existentes y de terceros en video y rich media altamente escalables para audiencias que ya consumen contenidos de forma diferente y responden con fuerza a las experiencias personalizadas contextualmente.
 
 ## Requisitos previos
 
@@ -126,7 +126,7 @@ Sustituye lo siguiente:
 
 | Marcador de posición          | Descripción                                                                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| `OTHERLEVELS_PROJECT_KEY`   | Se te proporcionará una clave de proyecto de OtrosNiveles cuando se te proporcione una Cuenta de OtrosNiveles.                                                                     |
+| `OTHERLEVELS_PROJECT_KEY`   | Se te proporcionará una clave de proyecto OtherLevels cuando se te proporcione una Cuenta OtherLevels.                                                                     |
 | `BACKGROUND_IMAGE_URL`  | Una URL HTTPS para el fondo del video. |
 | `INSERT_TITLE` | El título del video, es una referencia interna y no se mostrará en el video.                                                 |
 | `TALENT_TEMPLATE` | A ID de la plantilla de talentos. OtherLevels trabajará contigo durante el aprovisionamiento de la cuenta para crear un talento (avatar). Se te proporcionará uno o varios ID de Talento que podrás utilizar.                                                 |

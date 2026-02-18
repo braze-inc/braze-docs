@@ -317,7 +317,7 @@ Shopifyインテグレーションでは、[eコマース推奨イベント]({{s
        "price": "80.00",
        "fulfillment_status": null
      }
-   ],
+   ]
  }
 }
 ```
@@ -391,9 +391,9 @@ Shopifyインテグレーションでは、[eコマース推奨イベント]({{s
 {% subtab Account login %}
 ```json
 {
-	name: "shopify_account_login",
-	properties: {
-	source: "braze-mock-storefront.myshopify.com"
+	"name": "shopify_account_login",
+	"properties": {
+	"source": "braze-mock-storefront.myshopify.com"
   }
 }
 ```
@@ -578,7 +578,7 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 | フルフィルメント配送 | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | フルフィルメント SKU｜`{{event_properties.${fulfillments}[0].line_items[0].sku}}`
 | フルフィルメントタイトル| `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| フルフィルメントベンダー | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| フルフィルメントベンダー | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | バリアント ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | バリアントタイトル |`{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
@@ -628,7 +628,7 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 | フルフィルメント配送 | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | フルフィルメント SKU｜`{{event_properties.${fulfillments}[0].line_items[0].sku}}`
 | フルフィルメントタイトル| `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| フルフィルメントベンダー | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| フルフィルメントベンダー | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | バリアント ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | バリアントタイトル |`{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
