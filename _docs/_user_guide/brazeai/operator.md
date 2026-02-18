@@ -16,6 +16,9 @@ guide_featured_list:
 - name: Reviewing Actions
   link: /docs/user_guide/brazeai/operator/reviewing_actions/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: Support Tickets
+  link: /docs/user_guide/brazeai/operator/support_tickets/
+  image: /assets/img/braze_icons/help-circle.svg
 - name: Troubleshooting
   link: /docs/user_guide/brazeai/operator/troubleshooting/
   image: /assets/img/braze_icons/alert-circle.svg
