@@ -41,7 +41,7 @@ To enable the integration, complete the following steps:
 Flybuy maps `loyalty_id` to the Braze `external_id` for logged-in users.
 {% endalert %}
 
-## Use Cases
+## Use cases
 
 - [Pickup](https://www.flybuy.com/flybuypickup), [Delivery](https://www.flybuy.com/flybuydelivery), [Drive-Thru](https://www.flybuy.com/flybuydrivethru)
 - [Table Service](https://www.flybuy.com/flybuytableservice)
