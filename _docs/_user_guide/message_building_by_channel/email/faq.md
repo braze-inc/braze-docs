@@ -90,7 +90,7 @@ To mitigate this:
 
 - **Recommend recipients allowlist your sending domain:** Work with the affected recipients' IT teams to add your sending domain and Braze tracking domains to their email security allow list.
 - **Use a preference center:** Instead of a direct unsubscribe link, use a [preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) that requires user interaction to confirm the unsubscribe action. Security scanners typically won't complete multi-step forms.
-- **Review unsubscribe logs:** Check the user agent and IP address in your Currents unsubscribe event data to identify patterns consistent with automated scanning (such as consistent user agents across multiple unsubscribes).
+- **Review unsubscribe logs:** Check the `User-Agent` header and IP address in your Currents unsubscribe event data to identify patterns consistent with automated scanning (such as consistent `User-Agent` headers across multiple unsubscribes).
 
 For more details on how server-side scanning can affect email metrics, refer to [Handling increases in click rates]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#handling-increases-in-click-rates).
 
