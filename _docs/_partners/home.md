@@ -111,6 +111,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/localization/crowdin/
 - name: Accuweather
   url: /docs/partners/message_personalization/location/accuweather/
+- name: Flybuy
+  url: /docs/partners/message_personalization/location/flybuy/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/
 - name: Infillion
