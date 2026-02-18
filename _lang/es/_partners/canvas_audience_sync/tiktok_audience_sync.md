@@ -114,7 +114,7 @@ Puedes ver la audiencia en TikTok entrando en tu **cuenta de Ads Manager** y sel
 
 A medida que los usuarios alcanzan el paso de Sincronización de Audiencia, Braze los sincroniza casi en tiempo real respetando los límites de tasa de la API de marketing de TikTok. Braze agrupa y procesa el mayor número posible de usuarios cada 5 segundos antes de enviarlos a TikTok.
 
-El límite de velocidad de la API de Segmentos de TikTok no permite más de 50 consultas por segundo y 10.000 usuarios por solicitud. Si un cliente alcanza este límite, Braze reintenta la sincronización durante un máximo de ~13 horas. Si la sincronización sigue sin ser posible, Braze lista a estos usuarios en la métrica Usuarios erróneos.
+El límite de velocidad de la API de segmentos de TikTok no permite más de 50 consultas por segundo y 10.000 usuarios por solicitud. Si un cliente alcanza este límite, Braze reintenta la sincronización durante un máximo de ~13 horas. Si la sincronización sigue sin ser posible, Braze lista a estos usuarios en la métrica Usuarios erróneos.
 
 ## Comprender los análisis
 
