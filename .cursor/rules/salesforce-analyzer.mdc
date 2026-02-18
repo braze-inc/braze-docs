@@ -138,7 +138,7 @@ For each **actionable** ticket:
 1. **Extract the request** — Read the "Migration request" and "Recommended actions" sections
 2. **Check for sensitive content** — Review the "Flag sensitive information" section; omit anything flagged
 3. **Read comments** — Comments often refine, expand, or link related tickets
-4. **Identify target doc** — Use the "Recommended Braze Docs page" URLs to find the target file in the repo. Map URLs like `https://www.braze.com/docs/user_guide/...` to local paths `_docs/_user_guide/...`
+4. **Identify target doc** — Use the "Recommended Braze Docs page" URLs to find the target file in the repo. Map URLs like `https://www.braze.com/docs/user_guide/...` to local paths `_docs/_user_guide/...`. **If the recommended target is under `_docs/_help/help_articles/`**, do not use it; search for related content elsewhere (e.g., same product area in `_user_guide/`, FAQ, or related topic) and record that **alternative location** as the target doc for the update.
 5. **Verify against existing docs** — Read the target file to check if the gap still exists
 6. **Assess drafting readiness** — Determine whether the ticket description contains enough detail to draft the update, or whether the SF article content is required
 
@@ -194,6 +194,10 @@ For tickets without CSV matches, paste the article content manually.
 
 # Phase 2: Draft Updates
 
+## Do not edit `_docs/_help/help_articles/`
+
+**Do not make updates to any files under `_docs/_help/help_articles/`.** If a ticket's recommended Braze Docs page or target file is under that path, do not use it as the target. Instead, look for related content elsewhere in the docs (e.g., the same product area in `_docs/_user_guide/`, relevant FAQ, or a closely related topic) and **recommend that better location** as the place to make the update. Draft and commit changes only to that alternative location.
+
 ## Step 5: Retrieve article content
 
 For each ticket being processed:
@@ -227,7 +231,8 @@ For each ticket where article content is available (from CSV or user):
 4. Keep additions concise and scannable (bullets, tables, code blocks)
 5. Add to FAQ sections when appropriate (see `_docs/_user_guide/**/faq.md` patterns)
 6. Do NOT include any content flagged as sensitive in the ticket or marked as internal in the SF article
-7. **Cross-reference source code** — Verify technical accuracy against the main product at `../platform` when possible
+7. **Do not edit files under `_docs/_help/help_articles/`** — if the ticket pointed there, apply the update to the alternative location you identified (related user guide, FAQ, or topic) instead
+8. **Cross-reference source code** — Verify technical accuracy against the main product at `../platform` when possible
 
 ## Batch processing
 
