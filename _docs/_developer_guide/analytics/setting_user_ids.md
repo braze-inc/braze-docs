@@ -159,6 +159,8 @@ Alternatively, you can hash an existing unique identifier (such as a name or ema
 
 {% alert warning %}
 Do not use a guessable value or incrementing number for your user ID. This may expose your organization to malicious attacks or data exfiltration.
+
+For added security, use [SDK Authentication]({{ site.baseurl }}/docs/developer_guide/sdk_integration/authentication).
 {% endalert %}
 
 While it's essential that you correctly name your user IDs from the start, you can always rename them in the future using the [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) endpoint.
