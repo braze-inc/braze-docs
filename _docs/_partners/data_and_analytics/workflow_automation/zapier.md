@@ -77,13 +77,13 @@ When setting up your webhook, use the following settings and provide your Braze 
 
 Once you've successfully set up your zap, you can customize your Braze campaigns or Canvases with WordPress data by using Liquid formatting to display the information in your messages.
 
-## Using Zapier with the /users/track endpoint
+## Using Zapier with the `/users/track` endpoint
 
-To send data to Braze's [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint (for example, when using a trigger like **New or Updated Spreadsheet Row** in Google Sheets), use **Webhooks by Zapier** with a **Custom Request**—do not use the standard **POST** action. The standard POST action formats the request in a way that is not compatible with the `/users/track` endpoint.
+To send data to Braze's [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint (for example, when using a trigger like **New or Updated Spreadsheet Row** in Google Sheets), use **Webhooks by Zapier** with a **Custom Request**—do not use the standard **POST** action. The standard POST action formats the request in a way that is not compatible with the `/users/track` endpoint.
 
-1. In Zapier, choose your trigger (e.g., **New or Updated Spreadsheet Row** in Google Sheets).
+1. In Zapier, choose your trigger (for example, **New or Updated Spreadsheet Row** in Google Sheets).
 2. For the action, select **Webhooks by Zapier** and choose **Custom Request** (not POST).
-3. Set **Method** to POST, enter your Braze REST endpoint URL (e.g., `https://rest.iad-01.braze.com/users/track`), and format the request body with double quotes around each element, as you would in a Postman or API call. Map fields from your trigger (e.g., spreadsheet columns) into the JSON body where appropriate.
+3. Set **Method** to POST, enter your Braze REST endpoint URL (for example, `https://rest.iad-01.braze.com/users/track`), and format the request body with double quotes around each element, as you would in a Postman or API call. Map fields from your trigger (for example, spreadsheet columns) into the JSON body where appropriate.
 4. Add the required headers:
    - **Content-Type**: `application/json`
    - **Authorization**: `Bearer YOUR-REST-API-KEY` (use your Braze REST API key with no brackets or quotes)
