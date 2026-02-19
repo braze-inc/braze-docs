@@ -393,4 +393,6 @@ valid_partner_list:
   url: /docs/partners/gemini/
 - name: Anthropic
   url: /docs/partners/anthropic/
+- name: GrowthBook
+  url: /docs/partners/growthbook/
 ---
