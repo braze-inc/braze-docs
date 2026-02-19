@@ -63,9 +63,9 @@ We recommend creating geofences with a radius of at least 200 meters for optimal
 
 ## Bulk upload geofences {#creating-geofence-sets-via-bulk-upload}
 
-Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `radius` key and an optional `name` key for each geofence. 
+Geofences may be uploaded in bulk as a JSON object of type `FeatureCollection`. Each geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `radius` key and an optional `name` key for each geofence. 
 
-To upload your GeoJSON, select **More** > **Upload GeoJSON**.
+To upload your JSON file, select **More** > **Upload JSON**.
 
 When creating your geofences, consider the following details:
 
@@ -74,7 +74,7 @@ When creating your geofences, consider the following details:
 
 ### Example
 
-The following example represents the correct GeoJSON for specifying two geofences: one for Braze headquarters in NYC, and one for the Statue of Liberty south of Manhattan.
+The following example represents the correct GeoJSON format we accept for specifying two geofences: one for Braze headquarters in NYC, and one for the Statue of Liberty south of Manhattan.
 
 ```
 {
@@ -84,7 +84,7 @@ The following example represents the correct GeoJSON for specifying two geofence
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-73.992473, 40.755669]
+        "coordinates": [-73.9853689, 40.7434683]
       },
       "properties": {
         "radius": 200,
