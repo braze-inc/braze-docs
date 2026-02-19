@@ -25,7 +25,7 @@ Das Windows Universal SDK wird über den [NuGet Package Manager:](http://www.nug
 4. Suchen Sie in "NuGet.org" nach "Appboy".
 5. Klicken Sie auf das NuGet-Paket "AppboyPlatform.Universal.Release" und klicken Sie auf Installieren
 
->  Die Windows Universal Library sollte für alle Windows 8.1, Windows Phone 8.1 und UWP-Anwendungen verwendet werden.
+>  Die Windows Universal Library sollte für alle Windows 8.1-, Windows Phone 8.1- und UWP-Anwendungen verwendet werden.
 
 ## Schritt 2: Erstellung und Konfiguration von AppboyConfiguration.xml
 
@@ -76,5 +76,5 @@ Appboy.SharedInstance.CloseSession();
 
 Braze sollte nun Daten von Ihrer Anwendung sammeln. In den folgenden Artikeln erfahren Sie, wie Sie [Attribute]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/), [Ereignisse]({{site.baseurl}}/developer_guide/analytics/logging_events/) und [Käufe]({{site.baseurl}}/developer_guide/analytics/logging_purchases/) in unserem SDK protokollieren und wie Sie Push Messaging einsetzen können.
 
->  Wenn Sie das Unity-Projekt von Braze in derselben App verwenden, müssen Sie Aufrufe an Braze möglicherweise vollständig als "AppboyPlatform.Universal.Appboy" qualifizieren.
+>  Wenn Sie das Unity-Projekt von Braze in der gleichen App verwenden, müssen Sie Aufrufe an Braze möglicherweise vollständig als "AppboyPlatform.Universal.Appboy" qualifizieren.
 

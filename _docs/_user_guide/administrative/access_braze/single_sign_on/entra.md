@@ -35,7 +35,7 @@ Upon setup, you will be asked to provide an Assertion Consumer Service (ACS) URL
 2. On the **Select a single sign-on method** page, select **SAML** as your method.
 3. On the **Set up Single Sign-On with SAML** page, select the edit icon for **Basic SAML Configuration**.
 4. Configure the application in IdP-initiated mode by entering a **Reply URL** that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
-5. Optionally configure RelayState by entering your Relay State generated API key into the **Relay State (Optional)** field.
+5. Configure RelayState by entering your Relay State generated API key into the **Relay State** field.
 
 {% alert important %}
 **Do not** set the **Sign-On URL** field. Leave this field blank to prevent issues with your IdP-initiated SAML SSO.
