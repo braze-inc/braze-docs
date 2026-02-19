@@ -222,17 +222,18 @@ def lookup_article(ticket_summary):
 
 For each ticket where article content is available (from CSV or user):
 
-1. Read the target file to understand existing structure
-2. **Separate public from internal content** — The SF article may contain:
+1. **Evaluate the full doc site, not just the ticket URL** — The "Recommended Braze Docs page" URL is the most likely target, but search the broader doc site for other pages that cover the same topic or product area. Related content may live in guides, reference pages, or FAQs elsewhere.
+2. **Prefer refining existing content over adding new elements** — After identifying the relevant file(s), read the surrounding content carefully. Look for opportunities to clarify, restructure, or expand language that's already there. Adjusting existing prose is almost always better than appending a new alert, callout, or FAQ entry.
+3. **Separate public from internal content** — The SF article may contain:
    - **Internal notes** (e.g., "Support should escalate to #team-channel") — omit these
    - **Internal workflows** (e.g., "CSM needs to confirm pricing") — generalize to "contact your customer success manager"
    - **Customer-facing content** (resolution steps, UI instructions, error explanations) — include this
-3. Draft changes following conventions in the codebase based on the style guides in `_docs/_contributing/style_guide/*`
-4. Keep additions concise and scannable (bullets, tables, code blocks)
-5. Add to FAQ sections when appropriate (see `_docs/_user_guide/**/faq.md` patterns)
-6. Do NOT include any content flagged as sensitive in the ticket or marked as internal in the SF article
-7. **Do not edit files under `_docs/_help/help_articles/`** — if the ticket pointed there, apply the update to the alternative location you identified (related user guide, FAQ, or topic) instead
-8. **Cross-reference source code** — Verify technical accuracy against the main product at `../platform` when possible
+4. Draft changes following conventions in the codebase based on the style guides in `_docs/_contributing/style_guide/*`
+5. Keep additions concise and scannable (bullets, tables, code blocks)
+6. **Use alerts and FAQ entries as a last resort** — Only add a new alert, callout, or FAQ entry when the information genuinely cannot be worked into existing prose. These elements contribute to doc bloat and should be reserved for content that doesn't fit naturally elsewhere.
+7. Do NOT include any content flagged as sensitive in the ticket or marked as internal in the SF article
+8. **Do not edit files under `_docs/_help/help_articles/`** — if the ticket pointed there, apply the update to the alternative location you identified (related user guide, FAQ, or topic) instead
+9. **Cross-reference source code** — Verify technical accuracy against the main product at `../platform` when possible
 
 ## Batch processing
 
