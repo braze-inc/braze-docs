@@ -97,6 +97,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `400 Invalid cursor` | Vérifiez que votre `cursor` est valide. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Pour connaître les autres codes d'état et les messages d'erreur associés, reportez-vous à la section [Erreurs fatales et réponses.]({{site.baseurl}}/api/errors/#fatal-errors)
+Pour connaître les autres codes d'état et les messages d'erreur associés, reportez-vous à la rubrique [Erreurs fatales & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

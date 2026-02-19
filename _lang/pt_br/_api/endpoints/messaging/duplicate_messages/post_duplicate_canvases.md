@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o ponto de extremidade Duplicate Canvas."
+description: "Este artigo descreve detalhes sobre o endpoint de Canvases Duplicados."
 ---
 
 {% api %}
-# Duplicação de telas usando a API
+# Canvases Duplicados usando a API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canva/duplicate
 {% endapimethod %}

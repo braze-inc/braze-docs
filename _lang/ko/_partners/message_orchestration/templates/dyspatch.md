@@ -36,15 +36,15 @@ In the Dyspatch administration portal, open your username dropdown menu and sele
 
 In the **Localize Exports By** field, you can choose how you would like to manage localization. This field allows you to [localize your email templates](https://docs.dyspatch.io/localization/localizing_a_template/) and export them to Braze to easily send emails personalized by language or locale. 
 
-![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_integration_create.png %}){: style="max-width:50%;"}
+![Dyspatch 내보내기 템플릿]({% image_buster /assets/img/dyspatch/dyspatch_integration_create.png %}){: style="max-width:50%;"}
 
-### Step 2: Export template to Braze
+### 2단계: Export template to Braze
 
 After completing an email in Dyspatch, to send your template to Braze, view the published email template and click **Download/Export** and then **Export to Integration**.
 
-If you want to upload your template manually, view the published email template and  click **Download/Export** and then **Download HTML**. Next, in the **Templates & Media > Email Templates** section of your Braze account, select **From File** to upload your template.
+If you want to upload your template manually, view the published email template and  click **Download/Export** and then **Download HTML**. 그런 다음 Braze 계정의 **템플릿 & 미디어 > 이메일 템플릿** 섹션에서 **파일에서를** 선택하여 템플릿을 업로드합니다.
 
-![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_export.gif %})
+![Dyspatch 내보내기 템플릿]({% image_buster /assets/img/dyspatch/dyspatch_export.gif %})
 
 {% alert important %}
 Do not select **Inline CSS** in the **Sending Info** section for any Dyspatch email template in Braze. Dyspatch takes care of this by making sure your emails are robust, responsive, and ready to send.
@@ -52,6 +52,6 @@ Do not select **Inline CSS** in the **Sending Info** section for any Dyspatch em
 
 ### Usage
 
-Find your uploaded Dyspatch template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
+Braze 계정의 **템플릿 & 미디어 > 이메일 템플릿** 섹션에서 업로드한 Dyspatch 템플릿을 찾으세요. You can now use this email template to start sending engaging email messages to your customers!
 
 

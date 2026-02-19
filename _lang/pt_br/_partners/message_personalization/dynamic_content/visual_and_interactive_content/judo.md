@@ -66,7 +66,7 @@ Depois de concluir a integração lado a lado do app, você pode testá-la execu
 
 Na plataforma Braze, crie uma campanha de mensagens no app com um tipo de mensagem de **código personalizado**. Em seguida, selecione **Upload de HTML** como o tipo personalizado. Certifique-se de preencher o conteúdo da mensagem com os campos básicos de envio de mensagens no app; esse conteúdo não será mostrado ao usuário.
 
-![Uma imagem da aparência do dashboard ao selecionar o tipo de mensagem "Custom Code" (Código personalizado).]({% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %})
+![Uma imagem da aparência do dashboard ao selecionar o tipo de mensagem "Código personalizado".]({% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %})
 
 Em seguida, use o seguinte snippet de HTML mínimo para satisfazer a validação do formulário: 
 ```
@@ -75,10 +75,10 @@ Em seguida, use o seguinte snippet de HTML mínimo para satisfazer a validação
 
 Note que isso não será exibido em produção em seu dispositivo, pois a Judo reescreverá e substituirá o snippet com uma Judo Experience.
 
-![Uma imagem mostrando o código de validação de formulário adicionado à etapa de criação de sua campanha.]({% image_buster /assets/img/judo/braze-html-boilerplate.png %})
+![Uma imagem mostrando o código de validação de formulário adicionado à etapa de criador de sua campanha.]({% image_buster /assets/img/judo/braze-html-boilerplate.png %})
 
 ### Etapa 2: Defina um par de valores-chave para o Judo
-![Esta imagem mostra o par chave-valor necessário para essa integração, com a "chave" sendo "judo-experience" e o "valor" sendo o seu link do Judo.]({% image_buster /assets/img/judo/braze-campaign-extras-judo-experience.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Esta imagem mostra o par chave-valor necessário para essa integração, sendo que a "chave" é "judo-experience" e o "valor" é o seu link da Judo.]({% image_buster /assets/img/judo/braze-campaign-extras-judo-experience.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Defina um [par chave-valor personalizado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) na campanha com uma chave de `judo-experience`. Forneça o URL da experiência de judô que gostaria de mostrar aqui. A biblioteca de integração do Braze detectará esse par chave-valor no manipulador e o usará para injetar sua experiência do Judo no lugar da interface de usuário padrão de mensagens no app do Braze.
 <br><br>

@@ -3,6 +3,10 @@
 
 [多言語サポート]({{site.baseurl}}/multi_language_support/)の編集および管理を行うには、「多言語設定を管理」のユーザー権限が必要です。メッセージにロケールを追加するには、キャンペーンの編集権限が必要だ。
 
+{% alert important %}
+現在、多言語サポートは早期アクセス段階です。早期アクセスに参加することに興味がある場合は、Brazeのアカウントマネージャーに連絡してください。
+{% endalert %}
+
 {% endif %}
 
 {% if include.section == "Preview" %}

@@ -26,9 +26,6 @@ guide_featured_list:
   - name: "Nutzer:in importieren"
     link: /docs/user_guide/data/unification/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
-  - name: "Nutzer:innen löschen"
-    link: /docs/user_guide/data/unification/user_data/delete_users/
-    image: /assets/img/braze_icons/users-01.svg
   - name: Anonyme Benutzer
     link: /docs/user_guide/data/unification/user_data_collection/user_profile_lifecycle/anonymous_users/
     image: /assets/img/braze_icons/user-circle.svg
@@ -40,7 +37,7 @@ guide_featured_list:
 <br>
 
 {% alert important %}
-Braze sperrt Nutzer:innen mit mehr als 5 Millionen Sitzungen und nimmt ihre SDK-Ereignisse nicht mehr auf, da sie in der Regel das Ergebnis von Fehlintegration sind. Wenn Sie feststellen, dass dies bei einem rechtmäßigen Nutzer:in passiert ist, wenden Sie sich an Ihren Braze-Konto Manager:in.
+Braze sperrt Nutzer:innen mit mehr als 5 Millionen Sitzungen und nimmt ihre SDK-Ereignisse nicht mehr auf, da sie in der Regel das Ergebnis von Fehlintegration sind. Wenn Sie feststellen, dass dies bei einem rechtmäßigen Nutzer:innen passiert ist, wenden Sie sich an Ihren Braze-Konto Manager:in.
 {% endalert %}
 
 <br>

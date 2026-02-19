@@ -13,7 +13,7 @@ guide_featured_list:
   - name: Braze Currents
     link: /docs/user_guide/data/distribution/braze_currents/
     image: /assets/img/braze_icons/waves.svg
-  - name: Exportar datos Braze
+  - name: Exportación de datos Braze
     link: /docs/user_guide/data/distribution/export_braze_data/
     image: /assets/img/braze_icons/file-download-01.svg
 ---

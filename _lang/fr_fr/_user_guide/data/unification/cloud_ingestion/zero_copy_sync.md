@@ -3,16 +3,14 @@ nav_title: Personnalisation sans copie
 article_title: "Personnalisation sans copie à l'aide du CDI"
 page_order: 4
 page_type: reference
-description: "Cette page donne un aperçu de la manière de déclencher des toiles Braze à l'aide du CDI."
+description: "Cette page donne un aperçu de la manière de déclencher les toiles Braze à l'aide du CDI."
 ---
 
 # Personnalisation sans copie à l'aide du CDI
 
-> Découvrez comment synchroniser les déclencheurs de Canvas à l'aide de CDI pour une personnalisation sans copie. Cette fonctionnalité permet d'accéder à des informations spécifiques à l'utilisateur à partir de votre solution de stockage de données et de les transmettre à un Canvas de destination. Les étapes du canvas peuvent éventuellement inclure des champs de personnalisation qui ne sont pas conservés dans les profils utilisateurs de Braze.
+> Apprenez à synchroniser les déclencheurs de Canvas à l'aide de CDI pour une personnalisation sans copie. Cette fonctionnalité permet d'accéder à des informations spécifiques à l'utilisateur à partir de votre solution de stockage de données et de les transmettre à un Canvas de destination. Les étapes du canvas peuvent éventuellement inclure des champs de personnalisation qui ne sont pas conservés dans les profils utilisateurs de Braze.
 
-{% alert important %}
-Les déclencheurs CDI Canvas sont actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l'accès anticipé.
-{% endalert %}
+{% include early_access_beta_alert.md feature='CDI Canvas triggers' %}
 
 ## Synchronisation des déclencheurs Canvas
 
@@ -28,12 +26,12 @@ Pour commencer, sélectionnez le type de données **Déclencheurs de toile** lor
 
 ### Utilisation des déclencheurs Canvas 
 
-#### Étape 1 : Configuration de la source de données pour les déclencheurs Canvas
+#### Étape 1 : Configuration de la source de données pour les déclencheurs Canvas
 
 {% tabs %}
 {% tab Snowflake %}
 
-##### Étape 1.1 : Configurez votre table source dans Snowflake
+##### Étape 1.1 : Configurez votre table source dans Snowflake
 
 Vous pouvez utiliser les noms de l'exemple suivant ou choisir vos propres noms de base de données, de schéma et de table. Vous pouvez également utiliser une vue ou une vue matérialisée au lieu d'une table.  
 
@@ -51,19 +49,19 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC (
 );
 ```
 
-Vous pouvez nommer la base de données, le schéma et la table comme vous le souhaitez, mais les noms des colonnes doivent correspondre à la définition précédente.
+Vous pouvez donner le nom que vous désirez à la base de données, au schéma et à la table, mais les noms de colonnes doivent correspondre à la définition précédente.
 
-* `UPDATED_AT`: Heure à laquelle cette ligne a été mise à jour ou ajoutée au tableau. Seules les lignes ajoutées ou mises à jour depuis la dernière synchronisation seront synchronisées.  
+* `UPDATED_AT` : Heure à laquelle cette ligne a été mise à jour ou ajoutée au tableau. Seules les lignes ajoutées ou mises à jour depuis la dernière synchronisation seront synchronisées.  
 * Soit `external_id`, soit `alias_name` et `alias_label` comme colonne d'identification de l'utilisateur. Ceux-ci identifient les utilisateurs pour lesquels vous souhaitez déclencher l'envoi de messages canvas.  
-  * `EXTERNAL_ID`: Identifie l'utilisateur à entrer dans le Canvas. Cette valeur devrait correspondre à la valeur `external_id` utilisée dans Braze.  
+  * `EXTERNAL_ID` : Identifie l'utilisateur à entrer dans le Canvas. Cela doit correspondre à la valeur `external_id` utilisée dans Braze.  
   * `ALIAS_NAME` et `ALIAS_LABEL`: Ces colonnes créent un objet alias d'utilisateur. `alias_name` doit être un identifiant unique et `alias_label` spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul alias_name par `alias_label`.  
-* `PROPERTIES`: Une chaîne JSON de caractères de champs à rendre disponibles en tant que propriétés de personnalisation dans votre Canvas. Elle doit contenir des informations spécifiques à l'utilisateur.
+* `PROPERTIES` : Une chaîne JSON de caractères de champs à rendre disponibles en tant que propriétés de personnalisation dans votre Canvas. Elle doit contenir des informations spécifiques à l'utilisateur.
 
 {% alert note %}
 Les propriétés ne sont pas nécessaires pour chaque ligne ou chaque utilisateur. Cependant, les valeurs des propriétés doivent être des chaînes de caractères JSON valides. Saisissez une chaîne vide `{}` caractères s'il n'y a pas de propriétés pour la ligne.
 {% endalert %}
 
-##### Étape 1.2 : Créer des informations d'identification
+##### Étape 1.2 : Créer des informations d'identification
 
 Définissez un rôle, un entrepôt et un utilisateur, et accordez les autorisations appropriées. Si vous disposez déjà d'informations d'identification provenant d'une synchronisation existante, vous pouvez les réutiliser, mais veillez à étendre l'accès à la table source des déclencheurs Canvas.  
 
@@ -83,14 +81,14 @@ GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 
 ```
 
-##### Étape 1.3 : Configurer les politiques de réseau
+##### Étape 1.3 : Configurer les politiques de réseau
 
 Si votre compte dispose de politiques de réseau, autorisez la liste des IP de Braze pour permettre la connexion au service CDI. Pour connaître la liste des IP, reportez-vous à la section [Ingestion de données dans le cloud]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=snowflake#step-15-allow-braze-ips-in-snowflake-network-policy-optional).  
 
 {% endtab %}
 {% tab Redshift %}
 
-##### Étape 1.1 : Configurez votre table source dans Redshift
+##### Étape 1.1 : Configurez votre table source dans Redshift
 
 Vous pouvez utiliser les noms de l'exemple suivant ou choisir vos propres noms de base de données, de schéma et de table. Vous pouvez également utiliser une vue ou une vue matérialisée au lieu d'une table.
 
@@ -108,19 +106,19 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC (
  );
 ```
 
-Vous pouvez nommer la base de données, le schéma et la table comme vous le souhaitez, mais les noms des colonnes doivent correspondre à la définition précédente.
+Vous pouvez donner le nom que vous désirez à la base de données, au schéma et à la table, mais les noms de colonnes doivent correspondre à la définition précédente.
 
-* `UPDATED_AT`: Heure à laquelle cette ligne a été mise à jour ou ajoutée au tableau. Seules les lignes ajoutées ou mises à jour depuis la dernière synchronisation seront synchronisées.  
+* `UPDATED_AT` : Heure à laquelle cette ligne a été mise à jour ou ajoutée au tableau. Seules les lignes ajoutées ou mises à jour depuis la dernière synchronisation seront synchronisées.  
 * Soit `external_id`, soit `alias_name` et `alias_label` comme colonne d'identification de l'utilisateur. Ceux-ci identifient les utilisateurs pour lesquels vous souhaitez déclencher l'envoi de messages canvas.  
-  * `EXTERNAL_ID`: Identifie l'utilisateur à entrer dans le Canvas. Cette valeur devrait correspondre à la valeur `external_id` utilisée dans Braze.  
+  * `EXTERNAL_ID` : Identifie l'utilisateur à entrer dans le Canvas. Cela doit correspondre à la valeur `external_id` utilisée dans Braze.  
   * `ALIAS_NAME` et `ALIAS_LABEL`: Ces colonnes créent un objet alias d'utilisateur. `alias_name` doit être un identifiant unique et alias_label spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul `alias_name` par `alias_label`.  
-* `PROPERTIES`: Une chaîne JSON de caractères de champs à rendre disponibles en tant que propriétés de personnalisation dans votre Canvas. Elle doit contenir des informations spécifiques à l'utilisateur.
+* `PROPERTIES` : Une chaîne JSON de caractères de champs à rendre disponibles en tant que propriétés de personnalisation dans votre Canvas. Elle doit contenir des informations spécifiques à l'utilisateur.
 
 {% alert note %}
 Les propriétés ne sont pas nécessaires pour chaque ligne ou chaque utilisateur. Cependant, les valeurs des propriétés doivent être une chaîne de caractères JSON valide. Saisissez une chaîne vide `{}` caractères s'il n'y a pas de propriétés pour la ligne.
 {% endalert %}
 
-##### Étape 1.2 : Créer des informations d'identification
+##### Étape 1.2 : Créer des informations d'identification
 
 Définissez un rôle, un entrepôt et un utilisateur et accordez les autorisations appropriées. Si vous disposez déjà d'informations d'identification provenant d'une synchronisation existante, vous pouvez les réutiliser, mais veillez à étendre l'accès à la table source des déclencheurs Canvas.
 
@@ -130,23 +128,23 @@ GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT SELECT ON TABLE CANVAS_TRIGGERS_SYNC TO braze_user;
 ```
 
-##### Étape 1.3 : Configurer les politiques de réseau 
+##### Étape 1.3 : Configurer les politiques de réseau 
 
 Si votre compte dispose de politiques de réseau, autorisez la liste des IP de Braze pour permettre la connexion au service CDI. Pour connaître la liste des IP, reportez-vous à la section [Ingestion de données dans le cloud]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=redshift#step-13-allow-access-to-braze-ips).
 
 {% endtab %}
 {% tab BigQuery %}
 
-##### Étape 1.1 : Créez un nouveau projet ou un nouveau jeu de données pour votre table source (facultatif).
+##### Étape 1.1 : Créez un nouveau projet ou un nouvel ensemble de données pour votre table source (facultatif).
 
 ```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
-##### Étape 1.2 : Configurez votre table source dans BigQuery
+##### Étape 1.2 : Configurez votre table source dans BigQuery
 Reportez-vous à ce qui suit lorsque vous créez votre tableau source :  
 
-| Nom du champ | Type | Nécessaire ? | 
+| Nom du champ | Type | Requise ? | 
 | :---- | :---- | :---- | 
 | **`UPDATED_AT`** | Horodatage | Oui | 
 | **`PROPERTIES`** | JSON | Oui | 
@@ -172,11 +170,11 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC`
 );
 ```
 
-##### Étape 1.3 : Créer des informations d'identification
+##### Étape 1.3 : Créer des informations d'identification
 
 Créez un utilisateur et accordez-lui des autorisations. Si vous disposez déjà d'informations d'identification provenant d'une autre synchronisation, vous pouvez les réutiliser tant qu'elles ont accès à la table des déclencheurs de canevas.
 
-| Permission | Objectif |
+| Autorisation | Objectif |
 | :---- | :---- |
 | Utilisateur de la connexion BigQuery | Permet à Braze de se connecter. |
 | Utilisateur de BigQuery | Permet à Braze d'exécuter des requêtes, de lire des métadonnées et de répertorier des tables. |
@@ -186,23 +184,23 @@ Créez un utilisateur et accordez-lui des autorisations. Si vous disposez déjà
 
 Après avoir accordé les autorisations, générez une clé JSON. Reportez-vous à la section [Création et suppression de clés](https://cloud.google.com/iam/docs/keys-create-delete) pour plus d'informations. Vous le téléchargerez plus tard dans le tableau de bord de Braze.
 
-##### Étape 1.4 : Configurer les politiques de réseau 
+##### Étape 1.4 : Configurer les politiques de réseau 
 Si votre compte dispose de politiques de réseau, autorisez la liste des IP de Braze pour permettre la connexion au service CDI. Pour connaître la liste des IP, reportez-vous à la section [Ingestion de données dans le cloud]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=bigquery#step-13-allow-access-to-braze-ips).
 
 {% endtab %}
 {% tab Databricks %}
 
-##### Étape 1.1 : Créez un catalogue ou un schéma pour votre table source.
+##### Étape 1.1 : Créez un catalogue ou un schéma pour votre table source.
 
 ```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
-#### Étape 1.2 : Configurez votre table source dans Databricks
+#### Étape 1.2 : Configurez votre table source dans Databricks
 
 Reportez-vous à ce qui suit lorsque vous créez votre tableau source :
 
-| Nom du champ | Type | Exigée |
+| Nom du champ | Type | Requis |
 | :---- | :---- | :---- |
 | `UPDATED_AT` | Horodatage | Oui |
 | `PROPERTIES` | JSON | Oui |
@@ -213,11 +211,11 @@ Reportez-vous à ce qui suit lorsque vous créez votre tableau source :
 
 Vous pouvez nommer le schéma et la table comme vous le souhaitez, mais les noms des colonnes doivent correspondre à la définition précédente.
 
-* `UPDATED_AT`: Heure à laquelle cette ligne a été mise à jour ou ajoutée au tableau. Seules les lignes ajoutées ou mises à jour depuis la dernière synchronisation seront synchronisées.  
+* `UPDATED_AT` : Heure à laquelle cette ligne a été mise à jour ou ajoutée au tableau. Seules les lignes ajoutées ou mises à jour depuis la dernière synchronisation seront synchronisées.  
 * Soit `external_id`, soit `alias_name` et `alias_label` comme colonne d'identification de l'utilisateur. Ceux-ci identifient les utilisateurs pour lesquels vous souhaitez déclencher l'envoi de messages canvas.  
-  * `EXTERNAL_ID`: Identifie l'utilisateur à entrer dans le Canvas. Cette valeur devrait correspondre à la valeur `external_id` utilisée dans Braze.  
+  * `EXTERNAL_ID` : Identifie l'utilisateur à entrer dans le Canvas. Cela doit correspondre à la valeur `external_id` utilisée dans Braze.  
   * `ALIAS_NAME` et `ALIAS_LABEL`: Ces colonnes créent un objet alias d'utilisateur. `alias_name` doit être un identifiant unique et `alias_label` spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul alias_name par `alias_label`.  
-* `PROPERTIES`: Une chaîne de caractères ou une structure de champs à rendre disponible en tant que propriétés de personnalisation dans votre Canvas. Elle doit contenir des informations spécifiques à l'utilisateur.
+* `PROPERTIES` : Une chaîne de caractères ou une structure de champs à rendre disponible en tant que propriétés de personnalisation dans votre Canvas. Elle doit contenir des informations spécifiques à l'utilisateur.
 
 {% alert note %}
 Les propriétés ne sont pas nécessaires pour chaque ligne ou chaque utilisateur. Cependant, les valeurs des propriétés doivent être des chaînes JSON valides. Saisissez une chaîne vide `{}` caractères s'il n'y a pas de propriétés pour la ligne.
@@ -236,7 +234,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 );
 ```
 
-##### Étape 1.3 : Créer des informations d'identification 
+##### Étape 1.3 : Créer des informations d'identification 
 
 Créez un jeton d'accès personnel dans Databricks :
 
@@ -246,14 +244,14 @@ Créez un jeton d'accès personnel dans Databricks :
 4. Laissez le champ **Durée de vie (jours)** vide pour ne pas avoir d'expiration, puis sélectionnez **Générer**.  
 5. Copiez et enregistrez le jeton en toute sécurité pour l'utiliser dans le tableau de bord de Braze.
 
-##### Étape 1.4 : Configurer les politiques de réseau 
+##### Étape 1.4 : Configurer les politiques de réseau 
 
 Si votre compte dispose de politiques de réseau, autorisez la liste des IP de Braze pour permettre la connexion au service CDI. Pour connaître la liste des IP, reportez-vous à la section [Ingestion de données dans le cloud]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=databricks#step-13-allow-access-to-braze-ips).
 
 {% endtab %}
 {% tab Fabric %}
 
-##### Étape 1.1 : Configurez votre tableau source dans Fabric
+##### Étape 1.1 : Configurez votre tableau source dans Fabric
 
 ```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
@@ -269,11 +267,11 @@ CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name]
 GO
 ```
 
-##### Étape 1.2 : Créer des informations d'identification 
+##### Étape 1.2 : Créer des informations d'identification 
 
 Créez un principal de service et accordez des autorisations. Si vous disposez déjà d'informations d'identification provenant d'une autre synchronisation, vous pouvez les réutiliser - assurez-vous simplement qu'elles ont accès à la table des comptes.
 
-##### Étape 1.3 : Configurer les politiques de réseau 
+##### Étape 1.3 : Configurer les politiques de réseau 
 
 Si votre compte dispose de politiques de réseau, autorisez la liste des IP de Braze pour permettre la connexion au service CDI. Pour connaître la liste des IP, reportez-vous à la section [Ingestion de données dans le cloud]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=microsoft%20fabric#step-15-allow-braze-ips-in-firewall-optional).
 
@@ -282,9 +280,9 @@ Si votre compte dispose de politiques de réseau, autorisez la liste des IP de B
 
 Pour synchroniser les déclencheurs Canvas à partir du stockage de fichiers, créez un fichier source contenant les champs suivants.
 
-| Champ d'application | Exigée | Description |
+| Champ | Requis | Description |
 | :---- | :---- | :---- |
-| `EXTERNAL_ID` | Oui, l'un des sites `external_id` ou `alias_name`, et `alias_label` | Il identifie l'utilisateur que vous souhaitez mettre à jour. Cette valeur devrait correspondre à la valeur `external_id` utilisée dans Braze. |
+| `EXTERNAL_ID` | Oui, l'un des sites `external_id` ou `alias_name`, et `alias_label` | Il identifie l'utilisateur que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `external_id` utilisée dans Braze. |
 | `ALIAS_NAME` et `ALIAS_LABEL` | Oui, l'un des sites `external_id` ou `alias_name` et `alias_label` | Ces deux colonnes créent un objet alias d'utilisateur. `alias_name` doit être un identifiant unique et `alias_label` spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul `alias_name` par `alias_label`. |
 | `PROPERTIES` | Oui | Chaîne de caractères JSON des champs à rendre disponibles en tant que propriétés de personnalisation dans votre Canvas. Elle doit contenir des informations spécifiques à l'utilisateur. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -296,7 +294,7 @@ Les noms de fichiers doivent respecter les règles AWS et être uniques. Ajoutez
 {% endtab %}
 {% endtabs %}
 
-#### Étape 2 : Configurez votre Canvas de destination
+#### Étape 2 : Configurez votre Canvas de destination
 
 1. Configurez vos déclencheurs Canvas for Canvas de destination. Créez un nouveau canvas ou sélectionnez un canvas existant déclenché par l'API. Reportez-vous à la section [Types de planification d'entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#entry-schedule-types) pour savoir comment créer un canvas avec un type de planification de réception/distribution déclenché par l'API.
 2. Après avoir sélectionné le type de planification de réception/distribution déclenchée par l'API, poursuivez la configuration de Canvas et créez votre Canvas. Les canevas peuvent aller du simple envoi d'un message unique à des flux de travail complexes pour les clients, avec plusieurs étapes.
@@ -304,7 +302,7 @@ Les noms de fichiers doivent respecter les règles AWS et être uniques. Ajoutez
   * Par exemple, si à l'étape 1 vous avez instrumenté un champ de propriétés pour `account_balance`, vous utiliserez le modèle Liquid suivant pour personnaliser votre message : `\{\{canvas_entry_properties.\$\{account_balance\}\}\}`.
 5. Après avoir créé votre Canvas, lancez-le et passez à l'[étape 3.](#step-3-create-your-zero-copy-sync)
 
-#### Étape 3 : Créez votre copie zéro de synchronisation
+#### Étape 3 : Créez votre copie zéro de synchronisation
 
 Une fois la configuration de la source terminée et le Canvas de destination lancé, créez une nouvelle synchronisation des données :
 
@@ -321,7 +319,7 @@ Une fois la configuration de la source terminée et le Canvas de destination lan
 Lorsque la synchronisation s'exécute, les utilisateurs de votre table source commencent à entrer dans le Canvas. Utilisez l'analyse/analytique Canvas et la page des journaux de synchronisation de l'ingestion de données dans le cloud pour surveiller les performances.
 
 {% alert tip %}  
-Passez en revue l'ensemble de votre configuration (du comportement de synchronisation à la configuration de Canvas) afin d'éviter les envois inattendus. Les paramètres du canvas, tels que la limite de débit, la limite de fréquence et les filtres de segmentation, permettent d'affiner encore l'envoi des messages.<br><br>Nous vous recommandons de procéder à un essai avec une audience réduite ou test avant de mettre en œuvre des cas d'utilisation en production.
+Passez en revue l'ensemble de votre configuration (du comportement de synchronisation à la configuration de Canvas) afin d'éviter les envois inattendus. Les paramètres du canvas tels que la limite de débit, la limite de fréquence et les filtres de segmentation permettent d'affiner encore l'envoi des messages.<br><br>Nous vous recommandons de procéder à un essai avec une audience réduite ou test avant de mettre en œuvre des cas d'utilisation en production.
 {% endalert %}
 
 ### Considérations

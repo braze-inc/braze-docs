@@ -25,7 +25,7 @@ Die Integration von Braze und Treasure Data erlaubt es Ihnen, den Informationsfl
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Treasure Data protokolliert jedes Ereignis in Stapeln. Weitere Informationen zur Abfrage von Treasure Data, um Ereigniszählungen zu erhalten, finden Sie unter [Braze Currents Import Integration](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration).
+Treasure Data protokolliert jedes Ereignis in Stapeln. Weitere Informationen darüber, wie Sie Treasure Data abfragen können, um die Anzahl der Ereignisse zu ermitteln, finden Sie unter [Abfragen von Daten](https://docs.treasuredata.com/articles/int/braze-currents-import-integration/a/h2__592056238).<br><br>Wenn Sie eine Integration mit dem neuen [Braze-Currents](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration/q/braze/qid/72364/qp/4) Konnektor von Treasure Data anstreben, lesen Sie die detaillierten Einrichtungsschritte in [Braze Currents Streaming Import Integration](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration/q/braze/qid/72364/qp/4). Wenn Sie Fragen zur Integration oder Einrichtung innerhalb von Braze haben, wenden Sie sich an Ihr Braze-Konto Team.
 {% endalert %}
 
 ## Integration
@@ -47,7 +47,7 @@ Navigieren Sie in Braze zu **Currents** > **\+ Create Current** > **Treasure Dat
 Alle Ereignisse, die an Treasure Data gesendet werden, enthalten die Daten des Nutzers:in `external_user_id`. Zur Zeit sendet Braze keine Ereignisdaten an Treasure Data für Nutzer:innen, die ihre `external_user_id` nicht eingestellt haben.
 
 {% alert important %}
-Halten Sie Ihre Treasure Data URL auf dem neuesten Stand. Wenn die URL Ihres Konnektors falsch ist, kann Braze keine Ereignisse senden. Wenn dieser Zustand länger als 48 Stunden anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
+Halten Sie Ihre Treasure Data URL auf dem neuesten Stand. Wenn die URL Ihres Konnektors falsch ist, kann Braze keine Ereignisse senden. Wenn dieser Zustand länger als **5 Tage** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
 {% endalert %}
 
 #### Beispiel Ereignisfeldwert

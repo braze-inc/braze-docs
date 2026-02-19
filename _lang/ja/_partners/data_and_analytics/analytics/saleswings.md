@@ -156,7 +156,7 @@ BrazeへのSalesWingsインサイトプッシュを有効にすると、SalesWin
 | `sw_lead_link_protected` | ストリング | セールスウィングスのリードプロファイルにアクセスするためのリンク（セールスウィングスのダッシュボードアカウントが必要） |
 | `sw_lead_owner` | ストリング | セールスウィングスまたはセールスフォースCRMでリードに設定された所有者 |
 | `sw_lead_score` | フロート | [セールスウィングスルールエンジンで](https://helium.saleswings.pro/falcon)設定されたセールスウィングスリードスコアの主な値 |
-| `sw_predictive_score` | ストリング | セールスウィングスの[予測スコアの](https://support.saleswingsapp.com/en/articles/581795-the-predictive-lead-score)値で、トラッキングされたアクティビティの回数と反復性に基づいてリードのエンゲージメントを評価する。取り得る値は、`HOT` 、`WARM` 、`NORMAL` 、`COLD` または `FROZEN` |
+| `sw_predictive_score` | ストリング | セールスウィングスの[予測スコアの](https://support.saleswingsapp.com/en/articles/581795-the-predictive-lead-score)値で、トラッキングされたアクティビティの回数と反復性に基づいてリードのエンゲージメントを評価する。設定可能な値は、`HOT` 、`WARM` 、`NORMAL` 、`COLD` または `FROZEN` |
 | `sw_salesforce_record_id` | ストリング | Salesforce CRM のリードまたはコンタクトレコードの ID |
 | `sw_salesforce_record_url` | ストリング | Salesforce CRM のリードレコードまたはコンタクトレコードの URL |
 | `sw_session_count` | 整数 | このリードのWebサイトでのトラッキング, 追跡セッション数 |

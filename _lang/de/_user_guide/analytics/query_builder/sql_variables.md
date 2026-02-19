@@ -409,11 +409,11 @@ workspace_id = '{{workspace.${app_group_id}}}'
 
 ### Kataloge
 
-Wählen Sie ein oder mehrere Katologe oder Katologfelder aus einer Liste aus.
+Wählen Sie einen oder mehrere Kataloge oder Katalogfelder aus einer Liste aus.
 
 {% tabs local %}
-{% tab catologs %}
-`catalogs` wird verwendet, um ein oder mehrere Kataloge aus dem Braze-Dashboard auszuwählen.
+{% tab catalogs %}
+`catalogs` wird verwendet, um einen oder mehrere Kataloge aus dem Braze-Dashboard auszuwählen.
 
 {% subtabs %}
 {% subtab usage %}
@@ -426,7 +426,7 @@ catalog_id = '{{catalogs.${catalog}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab catolog fields %}
+{% tab catalog fields %}
 `catalog_fields` wird verwendet, um ein oder mehrere Felder aus dem aktuell ausgewählten Katalog einzustellen. Erfordert eine gesetzte `catalogs` Variable.
 
 {% subtabs %}

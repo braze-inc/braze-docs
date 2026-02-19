@@ -1,5 +1,5 @@
 ---
-page_order: 13
+page_order: 14
 nav_title: Bewährte Praktiken
 article_title: E-Mail-Best-Practices
 layout: dev_guide

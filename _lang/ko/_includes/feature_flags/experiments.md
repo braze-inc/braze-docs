@@ -9,7 +9,7 @@
 기능 플래그 노출 횟수 로깅에 대해 자세히 알아보려면 [기능 플래그 생성]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions)을 참조하세요.
 
 {% tabs %}
-{% tab 웹 %}
+{% tab Web %}
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
@@ -74,13 +74,13 @@ if (featureFlag?.enabled == true) {
 
 추가 기본 속성을 편집, 추가 또는 제거하려면 **메시징** > **기능 플래그**에서 기능 플래그 자체를 편집하세요. 이형 상품이 비활성화되면 SDK는 지정된 기능 플래그에 대한 빈 속성 개체를 반환합니다.
 
-!['링크' 변수 키가 '/판매'로 덮어씌워진 '실험 변형' 섹션]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
+!['링크' 변수 키가 '/판매'로 덮어씌워진 '배리언트 실험' 섹션.]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
 
 ### 4단계: 타겟팅할 사용자 선택
 
 세그먼트 또는 필터 중 하나를 사용하여 [타겟 사용자를]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) 선택합니다. 예를 들어, **수신된 기능 플래그 변형** 필터를 사용하여 이미 A/B 테스트를 수신한 사용자를 리타겟팅할 수 있습니다.
 
-![필터 그룹 검색창에 '수신된 기능 플래그 변형'이 강조 표시된 기능 플래그 실험의 '대상' 페이지.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
+![필터 그룹 검색창에 '수신된 기능 플래그 배리언트'가 강조 표시된 기능 플래그 실험의 '타겟' 페이지.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
 {% alert note %}
 세그먼트 멤버십은 특정 사용자에 대한 기능 플래그가 새로 고쳐질 때 계산됩니다. 앱에서 기능 플래그를 새로 고치거나 새 세션을 시작할 때 변경 사항을 적용할 수 있습니다.
@@ -90,7 +90,7 @@ if (featureFlag?.enabled == true) {
 
 실험의 백분율 분포를 선택합니다. 실험을 시작한 후에는 배포를 변경하지 않는 것이 모범 사례입니다.
 
-### Step 6: 전환 할당
+### 6단계: 전환 할당
 
 Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 전환을 계산하는 기간을 최대 30일로 지정합니다.
 

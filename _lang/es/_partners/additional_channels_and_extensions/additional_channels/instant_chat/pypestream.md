@@ -31,7 +31,7 @@ La integración de Braze y Pypestream te permite orquestar fácilmente el ciclo 
 
 La asociación entre Braze y Pypestream puede utilizarse en tus Canvases para lograr casos de uso comunes como:
 * **Redireccionamiento inteligente**: Vuelva a dirigirse a los usuarios con Braze Canvas después de su interacción conversacional con su marca aprovechando todos los puntos de datos enriquecidos recopilados a través de Pypestream.
-* **Orientación dinámica**: Llegue a los clientes actuales y potenciales en función de sus cohortes y segmentos específicos, ofreciéndoles experiencias conversacionales personalizadas a través de Pypestream.
+* **Orientación dinámica**: Contacta con clientes actuales y potenciales en función de sus cohortes y segmentos específicos, ofreciéndoles experiencias conversacionales personalizadas a través de Pypestream.
 * **Información contextual sobre el cliente**: Después de que un usuario final (cliente existente o potencial) acceda a su sitio web, combine las etiquetas de la página web recibidas de Pypestream Event Listener con los datos del cliente almacenados en Braze para proporcionar una interacción conversacional totalmente personalizada y contextual.
 
 ## Integración
@@ -280,5 +280,5 @@ class BrazeExample:
 
 ### Paso 3: Actualizar los flujos de soluciones para redirigirlos en caso de éxito/fracaso del nodo de acción.
 
-Por último, en el diseño de cada solución, puede dirigir a los usuarios a los nodos en función de si la llamada a la API del nodo de acción se ha realizado correctamente. Si el nodo de acción recibe un mensaje de error, el usuario final debe ser tratado con cuidado. 
+Por último, en el diseño de cada solución, puede dirigir a los usuarios a los nodos en función de si la llamada a la API del nodo de acción se ha realizado correctamente. Si el nodo de acción recibe un mensaje de error, el usuario final debe ser tratado con cuidado.
 

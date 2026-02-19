@@ -14,7 +14,7 @@ Utilizando una combinación de características de la plataforma de datos Braze,
 
 ## Unifica tus datos 
 
-Recopila y consolida datos propios de cualquier fuente, utilizando [API] y [SDK]. También puedes aprovechar nuestras herramientas de ingesta integradas, como [la Ingesta de datos en la nube]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion), para crear una integración sencilla directamente desde tu almacén de datos o solución de almacenamiento de archivos a Braze, o utilizar [la Transformación de datos]({{site.baseurl}}/user_guide/data/unification/data_transformation) para crear y gestionar integraciones de webhook para recopilar tus datos y transferirlos a Braze.
+Recopila y consolida datos propios de cualquier fuente utilizando [API]({{site.baseurl}}/api/home) y [SDK]({{site.baseurl}}/developer_guide/sdk_integration). También puedes utilizar herramientas de ingesta integradas, como [la Ingesta de datos en la nube]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion), para crear una integración directa desde tu almacén de datos o solución de almacenamiento de archivos a Braze, o utilizar [la Transformación de datos]({{site.baseurl}}/user_guide/data/unification/data_transformation) para crear y administrar integraciones de webhook para transferir datos a Braze.
 
 ## Activa tus datos
 

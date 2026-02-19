@@ -33,12 +33,14 @@ Les instructions pour créer une source de données sont disponibles sur le site
 
 ### Étape 2 : Créer un flux Currents
 
-Dans Braze, naviguez vers **Currents > + Créer un flux Currents > Export Tealium**. Indiquez un nom d'intégration, un e-mail de contact et l'URL de Tealium. Sélectionnez ensuite l'événement que vous souhaitez suivre dans la liste des événements disponibles. Enfin, cliquez sur **Lancer le flux Currents**
+Dans Braze, naviguez vers **Currents** > **\+ Create Current** > **Tealium Export.** Indiquez un nom d'intégration, un e-mail de contact et l'URL de Tealium. 
 
-Tous les événements envoyés à Tealium comprendront l'adresse `external_user_id` de l'utilisateur. Pour l'instant, Braze n'envoie pas de données d'événement à Tealium pour les utilisateurs qui n'ont pas défini leur `external_user_id`.
+Sélectionnez ensuite l'événement que vous souhaitez suivre dans la liste des événements disponibles. Par défaut, tous les événements envoyés à Tealium incluent l'adresse `external_user_id` de l'utilisateur. Cependant, vous pouvez cocher la case **Inclure les événements des utilisateurs anonymes** pour envoyer également à Tealium les événements qui n'ont pas de `external_user_id`.
+
+Après avoir configuré votre intégration, sélectionnez **Lancer le courant.**
 
 {% alert important %}
-Il est important de maintenir votre URL Tealium à jour. Si l'URL de votre connecteur est incorrecte, Braze ne pourra pas envoyer d'événements. Si cette situation persiste pendant plus de **48 heures**, les événements du connecteur seront abandonnés et les données seront définitivement perdues.
+Il est important de maintenir votre URL Tealium à jour. Si l'URL de votre connecteur est incorrecte, Braze ne pourra pas envoyer d'événements. Si cette situation persiste pendant plus de **5 jours**, les événements du connecteur seront abandonnés et les données seront définitivement perdues.
 {% endalert %}
 
 ## Détails de l'intégration

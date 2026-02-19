@@ -1,6 +1,6 @@
 ---
-nav_title: "Erfassen von passiven Nutzer:innen"
-article_title: "Erfassen von passiven Nutzer:innen"
+nav_title: "Passive Nutzer:innen einfangen"
+article_title: "Passive Nutzer:innen einfangen"
 page_order: 1
 page_type: tutorial
 description: "In diesem Artikel erfahren Sie, wie Sie Braze-Kampagnen effektiv einsetzen können, um diese Nutzer:innen wieder einzubinden."
@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Erfassen von passiven Nutzer:innen
+# Passive Nutzer:innen einfangen
 
 > Wenn Ihre Zielgruppe schrumpft, ist es wichtig, sie zurückzugewinnen. Mit Braze können Sie automatisierte, wiederkehrende Kampagnen zur erneuten Interaktion einrichten, um passive Nutzer:innen zurückzugewinnen. Sie können den Zeitrahmen und die Häufigkeit der erneuten Interaktion wählen, die am besten zu Ihrer App passen. Zur Veranschaulichung beginnen wir mit einem 14-tägigen Plan zur erneuten Interaktion.
 

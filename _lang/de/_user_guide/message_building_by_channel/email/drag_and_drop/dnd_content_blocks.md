@@ -37,7 +37,7 @@ Um einen Content-Block im Editor hinzuzufügen, gehen Sie wie folgt vor:
 
 1. Gehen Sie im Editor auf die Registerkarte **Zeilen** und wählen Sie **Inhaltsblöcke**. 
 2. Ziehen Sie Ihren Content-Block per Drag & Drop in den E-Mail-Editor. 
-3. (Optional) Passen Sie die Breite Ihres Content-Blocks an, indem Sie den Button im Navigationsmenü auswählen. Der Standardwert für die Breite ist 100%, wenn Sie in den globalen Einstellungen für den E-Mail-Stil nichts angegeben haben. Andernfalls werden die globalen Einstellungen beachtet. <br><br>\![Ein doppelseitiger Pfeil mit einer Option zum Bearbeiten der Breite.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
+3. (Optional) Passen Sie die Breite Ihres Content-Blocks an, indem Sie den Button im Navigationsmenü auswählen. Der Standardwert für die Breite ist 100%, wenn Sie in den globalen Einstellungen für den E-Mail-Stil nichts angegeben haben. Andernfalls werden die globalen Einstellungen beachtet. <br><br>![Ein doppelseitiger Pfeil mit einer Option zur Bearbeitung der Breite.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
 
 Nachdem Sie den Content-Block zum E-Mail-Editor hinzugefügt haben, können Sie Änderungen am Content-Block vornehmen, die sich nicht auf den ursprünglichen Content-Block auswirken, den Sie in **Templates & Medien** erstellt haben. Das liegt daran, dass Content-Blöcke, die per Drag-and-Drop hinzugefügt werden, nicht mit dem ursprünglichen Content-Block verknüpft sind. Um alle Änderungen am ursprünglichen Content-Block anzuzeigen, ziehen Sie ihn erneut in den E-Mail-Editor. 
 
@@ -51,7 +51,7 @@ Um einen Content-Block mit Hilfe von Liquid hinzuzufügen, gehen Sie wie folgt v
 2. Klicken Sie auf <i class="fas fa-plus"></i> **Personalisierung**.
 3. Suchen Sie die Registerkarte **Personalisierung hinzufügen** und wählen Sie **Inhaltsblöcke** in der Dropdown-Liste **Personalisierungstyp**.
 4. Wählen Sie den Namen Ihres Inhaltsblocks im Feld **Attribut**. Das Liquid Snippet-Feld wird mit Ihrem Content Block Liquid Tag gefüllt. 
-5. Kopieren Sie das Liquid-Snippet und fügen Sie es in einen Texteditor-Block ein. <br>\![Der Tab Personalisierung hinzufügen mit Optionen.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
+5. Kopieren Sie das Liquid-Snippet und fügen Sie es in einen Texteditor-Block ein. <br>![Die Registerkarte Personalisierung hinzufügen mit Optionen.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
 
 Wenn Sie eine Vorschau Ihrer E-Mail-Nachrichten anzeigen, wird das Liquid-Snippet als Inhaltsblock des Drag-and-Drop-Editors angezeigt. 
 

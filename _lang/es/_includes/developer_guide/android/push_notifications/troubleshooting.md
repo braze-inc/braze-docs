@@ -14,7 +14,7 @@ sequenceDiagram
   participant BrazeAPI as Braze Server
   participant Firebase as Google Firebase
   Note over Device, Firebase: Register Option 1<br/>Register Automatically using `com_braze_firebase_cloud_messaging_registration_enabled` in braze.xml
-  App ->> Braze: App intializes Braze with the first Braze call<br>This could be automatic session handling
+  App ->> Braze: App initializes Braze with the first Braze call<br>This could be automatic session handling
   BrazeSDK ->> App: Get push token from Firebase Manager
   BrazeSDK ->> BrazeAPI: Send push token to Braze Server
   Note right of BrazeAPI: Braze will remove push token from any<br>other user who may have previously<br> been logged in on the same device.
@@ -33,7 +33,7 @@ sequenceDiagram
   Firebase ->> Device: Push message sent
   Device ->> App: Android will send the push to the App.<br>This could be blocked to Do Not Disturb, Power Saving Mode, etc.
   App ->> BrazeSDK: Message is sent to BrazeFirebaseMessagingService
-  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notfication and displayed.
+  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notification and displayed.
 
 ```
 
@@ -172,7 +172,7 @@ Los usuarios han desinstalado la aplicación. Esto invalidará su token de notif
 
 La clave del servidor de mensajería en la nube de Firebase proporcionada en el panel de Braze no es válida. El ID de remitente proporcionado debe coincidir con el indicado en el archivo `braze.xml` de tu aplicación. La clave del servidor y el ID del remitente se encuentran aquí, en tu Consola Firebase:
 
-![La plataforma Firebase, en "Configuración" y luego en "Mensajería en la nube", mostrará tu ID de servidor y tu clave de servidor.]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey")
+![La plataforma Firebase, en "Configuración" y, luego, en "Mensajería en la nube", mostrará el ID de tu servidor y la clave del servidor.]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey")
 
 ### Los clics push no se registran
 

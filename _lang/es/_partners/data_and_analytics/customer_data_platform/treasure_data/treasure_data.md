@@ -54,7 +54,7 @@ A continuación, seleccione **Exportar resultados** y seleccione una autenticaci
 
 Defina parámetros adicionales de exportación de resultados como se indica en la siguiente [sección de personalización](#customization). En el contenido de su integración de exportación, revise los parámetros de integración.
 
-![La página "Exportar resultados". En esta página hay campos para "modo", "tipo de seguimiento" y "campos preformateados". Para este ejemplo, "Usuario-Seguimiento" y "Eventos personalizados" se establecen en estos campos, respectivamente.]({% image_buster /assets/img/treasure_data/braze_export_configuration.png %}){: style="max-width:80%;"}
+![La página "Exportar resultados". En esta página hay campos para "modo", "tipo de seguimiento" y "campos preformateados". Para este ejemplo, "Seguimiento de usuario" y "Eventos personalizados" se establecen en estos campos, respectivamente.]({% image_buster /assets/img/treasure_data/braze_export_configuration.png %}){: style="max-width:80%;"}
 
 Por último, seleccione **Hecho**, ejecute la consulta y compruebe que los datos se han transferido a Braze.
 

@@ -50,7 +50,7 @@ Braze内に既に存在するユーザーのみがコホートに追加または
 ### ステップ4:KubitコホートでBrazeセグメントを作成する
 Braze にコホートをインポートしたら、それらのコホートをフィルターとして使用して、Braze セグメントを作成し、Braze キャンペーンまたはキャンバスに含めることができます。[Braze セグメントの作成方法]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment)の詳細については、セグメントのドキュメントを参照してください。
 
-![Brazeセグメントビルダーで、ユーザー属性「Kubitコホート」を"includes_value" に設定し、利用可能なコホートのリストを表示する。]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
+![Brazeセグメントビルダーで、ユーザー属性「Kubitコホート」が"includes_value" に設定され、利用可能なコホートのリストが表示される。]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
 
 ## ユーザーマッチング
 

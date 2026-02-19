@@ -10,7 +10,7 @@ search_tag: Partner
 
 # AccuWeather
 
-> A [AccuWeather](https://www.accuweather.com/) é uma empresa de mídia que fornece serviços de previsão do tempo em todo o mundo. Com o Accuweather, você pode enriquecer e personalizar suas campanhas de marketing, além de automatizar traduções por meio do uso do Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
+> A [AccuWeather](https://www.accuweather.com/) é uma empresa de mídia que fornece serviços de previsão do tempo em todo o mundo. Com o Accuweather, você pode enriquecer e personalizar suas campanhas de marketing, bem como automatizar traduções por meio do uso do Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
 
 _Essa integração é mantida pela Accuweather._
 
@@ -58,12 +58,12 @@ Enjoy the weather!
 ```
 {% endraw %}
 
-![Uma mensagem por push do conteúdo conectado que diz "Está chovendo! Grab an Umbrella!" mostrada em um dispositivo Android]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){: style="max-width:40%"}
+![Uma mensagem por push do conteúdo conectado que diz "Está chovendo! Pegue um guarda-chuva!" exibida em um dispositivo Android]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){: style="max-width:40%"}
 
 Um detalhamento das duas chamadas do conteúdo conectado está disponível nos exemplos a seguir.
 
 {% tabs %}
-{% tab Locais %}
+{% tab Locations %}
 #### Exemplo de API de locais
 
 {% raw %}
@@ -155,7 +155,7 @@ Aqui está um exemplo do que o Accuweather retornará como objeto JSON:
 O ID "Key" (Chave) é uma variável útil, pois é usada na segunda solicitação GET.
 Esse objeto JSON pode ser armazenado em uma variável local `location_info` especificando `:save location_info` após o URL.
 {% endtab %}
-{% tab Condições atuais %}
+{% tab Current conditions %}
 
 #### Exemplo de API de condições atuais
 

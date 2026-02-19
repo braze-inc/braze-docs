@@ -1,5 +1,5 @@
 ---
-nav_title: Vinculación en profundidad
+nav_title: Vínculos profundos
 article_title: Vinculación en profundidad para iOS
 platform: iOS
 page_order: 0
@@ -69,7 +69,7 @@ Para más información, consulta [la documentación de Apple](https://developer.
 Tras activar tu aplicación, iOS llamará al método [`application:openURL:options:`](https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc). El argumento importante es el objeto [NSURL](https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL).
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
@@ -102,7 +102,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 Para utilizar los enlaces universales, asegúrate de haber añadido un dominio registrado a las capacidades de tu aplicación y de haber subido un archivo `apple-app-site-association`. A continuación, implementa el método `application:continueUserActivity:restorationHandler:` en tu `AppDelegate`. Por ejemplo:
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application
@@ -214,7 +214,7 @@ A partir del SDK v2.21.0 de Braze para iOS, el SDK codifica porcentualmente los 
 Para descodificar un enlace codificado, utiliza el método `NSString` [`stringByRemovingPercentEncoding`](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instm/NSString/stringByRemovingPercentEncoding). Ten en cuenta que también debes devolver `YES` en `ABKURLDelegate` y que es necesaria una llamada a la acción para desencadenar la manipulación de la URL por parte de la aplicación. Por ejemplo:
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *, id> *)options {
@@ -253,7 +253,7 @@ El protocolo `ABKURLDelegate` puede utilizarse para personalizar el tratamiento 
 #### Ejemplo de integración: ABKURLDelegado
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)handleAppboyURL:(NSURL *)url fromChannel:(ABKChannel)channel withExtras:(NSDictionary *)extras {
@@ -296,7 +296,7 @@ iOS puede llevar a los usuarios de tu aplicación a su página en la aplicación
 3. Si utilizas vínculos profundos personalizados basados en esquemas, añade el siguiente código a tu método `application:openURL:options:`:
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)app

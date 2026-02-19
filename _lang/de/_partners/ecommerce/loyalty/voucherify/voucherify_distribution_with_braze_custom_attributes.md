@@ -52,7 +52,7 @@ Sowohl im manuellen als auch im automatischen Modus sendet Voucherify eindeutige
 ![Felder auf angepasste Attribute abbilden]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_fields_mapping.png %})
 
 {% tabs %}
-{% tab Manuelle Verteilung %}
+{% tab Manual distribution %}
 
 Der manuelle Modus ist eine einmalige Aktion, bei der einer ausgewählten Zielgruppe Codes zugewiesen werden. Gehen Sie zu den **Verteilungen** in Ihrem Dashboard, führen Sie den Verteilungsmanager mit dem Plus aus, und wählen Sie **Manuelle Nachricht**.
 
@@ -77,7 +77,7 @@ Der manuelle Modus ist eine einmalige Aktion, bei der einer ausgewählten Zielgr
 _Beachten Sie, dass alle manuellen Verteilungen mit einer 10-minütigen Verzögerung verschickt werden._
 
 {% endtab %}
-{% tab Automatischer Arbeitsablauf %}
+{% tab Automatic Workflow %}
 
 Voucherify kann als Reaktion auf die folgenden Trigger automatisch Codes an Braze pushen:
 

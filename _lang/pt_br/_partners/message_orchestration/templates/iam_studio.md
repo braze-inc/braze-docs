@@ -38,20 +38,20 @@ Com a integração do Braze e do IAM Studio, você pode inserir facilmente model
 
 Escolha um modelo de mensagem no app que você deseja usar na galeria de modelos de mensagens no app
 
-![A galeria de modelos do IAM Studio mostra diferentes modelos, como "modal de slide em carrossel", "modal de ícone simples", "modal de imagem completa" e mais.]({% image_buster /assets/img/iam_studio/iam_template_gallery.png %})
+![A galeria de modelos do IAM Studio mostra modelos diferentes, como "modal de slide de carrossel", "modal de ícone simples", "modal de imagem completa" e muito mais.]({% image_buster /assets/img/iam_studio/iam_template_gallery.png %})
 
 ### Etapa 2: Personalizar o modelo
 
 Primeiro, personalize a imagem, o texto e o botão para seu conteúdo. Certifique-se de conectar o **Deeplink** para a imagem e o botão.
 
 {% tabs local %}
-{% tab Imagem %}
-![A interface de usuário do IAM Studio mostra as opções para personalizar a imagem. Essas opções incluem a imagem, o raio da imagem e a imagem escurecida.]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
+{% tab Image %}
+![A interface de usuário do IAM Studio mostra as opções para personalizar a imagem. Essas opções incluem a imagem, o raio da imagem e a imagem atenuada.]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
 {% endtab %}
-{% tab Texto %}
+{% tab Text %}
 ![A interface de usuário do IAM Studio mostra as opções para personalizar o título e o subtítulo da mensagem. Essas opções incluem texto, formatação e fonte.]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
 {% endtab %}
-{% tab Botão %}
+{% tab Button %}
 ![A interface de usuário do IAM Studio mostra as opções para personalizar os botões principal, esquerdo e direito. Essas opções incluem cor, deep link, texto e formatação.]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
 {% endtab %}
 {% endtabs %}
@@ -59,14 +59,14 @@ Primeiro, personalize a imagem, o texto e o botão para seu conteúdo. Certifiqu
 Em seguida, crie sua mensagem personalizada no app adicionando fontes personalizadas e usando Liquid tags. Para ativar o registro e o rastreamento, selecione **Log data and track user behavior** (Registrar dados e rastrear o comportamento do usuário).
 
 {% tabs local %}
-{% tab Fontes %}
+{% tab Fonts %}
 ![A interface de usuário do IAM Studio mostra as opções para adicionar Liquid. Essas opções incluem a criação de frases personalizadas.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Liquid %}
 ![A interface do usuário do IAM Studio mostrando as opções para personalizar o registro de eventos/atributos. Essas opções incluem o registro do comportamento do usuário.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
 {% endtab %}
-{% tab Registro e rastreamento %}
-![A interface de usuário do IAM Studio mostra as opções para personalizar a fonte. Essas opções incluem a possibilidade de o usuário personalizar o estilo da fonte.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png %})
+{% tab Logging and Tracking %}
+![A interface de usuário do IAM Studio mostra as opções para personalizar a fonte. Essas opções incluem que o usuário pode personalizar o estilo da fonte.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
 {% endtab %}
 {% endtabs %}
 

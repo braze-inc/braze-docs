@@ -14,7 +14,7 @@ search_tag: Partner
 
 _This integration is maintained by Storyly._
 
-## About the integration
+## 통합 정보
 
 The Braze and Storyly integration allows you to use your segments in Braze as an audience in the Storyly platform. With this integration, you can:
 - Target your segments with specific stories

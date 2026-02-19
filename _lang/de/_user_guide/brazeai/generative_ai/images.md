@@ -5,7 +5,7 @@ page_order: 10
 description: "Erfahren Sie, wie Sie mit DALL-E 3, einem KI-System von OpenAI und einem Braze Drittanbieter, Bilder für Ihre Bibliothek generieren."
 ---
 
-# Erzeugen von Bildern mit <sup>BrazeAITM</sup>
+# Erzeugen Sie Bilder mit <sup>BrazeAITM</sup>
 
 > {% multi_lang_include brazeai/generative_ai/about_images.md %}
 
@@ -20,6 +20,6 @@ Mit der Mediathek können Sie Ihre Assets an einem einzigen, zentralisierten Ort
 3. Wählen Sie **Bilder generieren**. Es kann etwa eine Minute dauern, bis die Bilder generiert sind.
 4. Wählen Sie <i class="fas fa-download" title="Bild zur Mediathek hinzufügen"></i> auf die Bilder, die Sie zu Ihrer Mediathek hinzufügen möchten.
 
-![KI Bildgenerator Modal in der Mediathek.]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
+![KI-Bildgenerator Modal in der Medienbibliothek.]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
 
 {% multi_lang_include brazeai/generative_ai/policy.md %}

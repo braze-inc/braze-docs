@@ -1,12 +1,12 @@
 ---
 page_order: 0.1
-nav_title: Anpassen von Nachrichten
+nav_title: Nachrichten anpassen
 article_title: Anpassen von Push-Benachrichtigungen für das Braze SDK
 channel:
   - push notifications
 ---
 
-# Anpassen von Push-Benachrichtigungen
+# Push-Benachrichtigungen anpassen
 
 > Erfahren Sie, wie Sie Push-Benachrichtigungen für das Braze SDK anpassen können.
 

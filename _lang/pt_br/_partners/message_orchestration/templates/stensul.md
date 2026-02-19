@@ -2,7 +2,7 @@
 nav_title: Stensul
 article_title: Stensul
 alias: /partners/stensul
-description: "Este artigo de referência descreve a parceria entre o Braze e a Stensul, uma plataforma de e-mail corporativo que permite que você crie facilmente modelos de e-mail responsivos a dispositivos móveis em todos os canais."
+description: "Este artigo de referência descreve a parceria entre o Braze e a Stensul, uma plataforma de e-mail corporativo para a criação de modelos de e-mail responsivos a dispositivos móveis em todos os canais."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stensul
 
-> A [Stensul](https://stensul.com/) permite que os profissionais de marketing por e-mail criem facilmente e-mails responsivos para dispositivos móveis com alinhamento de marca na Stensul antes de enviá-los à Braze, em tempo real, para a criação de campanhas.
+> [A Stensul](https://stensul.com/) fornece aos profissionais de marketing de e-mail ferramentas para criar e-mails responsivos a dispositivos móveis e de acordo com a marca na Stensul antes de enviá-los ao Braze em tempo real para a criação de campanhas.
 
 _Essa integração é mantida pela Stensul._
 
@@ -44,14 +44,14 @@ Crie um e-mail na Stensul usando a plataforma Stensul e clique em **Complete** (
 ### Etapa 2: Exportar modelo para o Braze
 Na nova caixa de diálogo que aparece na página de conclusão, selecione **Upload to ESP** (Fazer upload para o provedor de serviços de e-mail).
 
-![Opções de upload da Stensul]({% image_buster /assets/img_archive/stensul_upload_options.png %})
+![Opções de upload do Stensul]({% image_buster /assets/img_archive/stensul_upload_options.png %})
 
 Em seguida, digite o **nome do modelo**, o **assunto** e o **pré-cabeçalho** do e-mail e selecione **Upload**. Em seguida, você receberá uma confirmação de que o upload foi bem-sucedido e um histórico de uploads anteriores do arquivo, se aplicável.
 
-![Sucesso do upload da Stensul]({% image_buster /assets/img_archive/stensul_upload_success.png %})
+![Sucesso no upload do Stensul]({% image_buster /assets/img_archive/stensul_upload_success.png %})
 
 ## Uso
 
-Encontre o modelo Stensul feito upload na seção **Modelos e mídias > Modelos de e-mail** da sua conta Braze. Agora você pode usar esse modelo de e-mail para começar a enviar mensagens de e-mail envolventes para seus clientes!
+Encontre o modelo Stensul feito upload na seção **Modelos** da sua conta Braze ** & Media > Email Templates**. Agora você pode usar este modelo de e-mail para começar a enviar mensagens de e-mail envolventes para seus clientes!
 
 

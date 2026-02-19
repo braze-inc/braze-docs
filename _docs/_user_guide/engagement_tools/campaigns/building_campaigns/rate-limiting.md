@@ -27,7 +27,7 @@ As you create more segments, there are going to be cases where the membership of
 
 #### Relevant segment filters
 
-Braze provides the following filters in order to help you limit the rate at which your users receive messages:
+Braze provides the following filters to help you limit the rate at which your users receive messages:
 
 - Last Engaged With Message
 - Last Received Any Message
@@ -39,7 +39,7 @@ Braze provides the following filters in order to help you limit the rate at whic
 
 Let's say we've created a segment named "Retargeting Filter Showcase" with a filter "Last used app more than 7 days ago" to target users. This would be a standard re-engagement segment.
 
-If you have other more targeted segments receiving notifications recently, you may not want your users to be targeted by more generic campaigns directed at this segment. Appending the "Last Received Push" filter to this segment, the user has ensured that if they've received another notification in the past 24 hours, they will slide out of this segment for the next 24 hours. If they still meet the other criteria of the segment 24 hours later and haven't received any more notifications they will slide back into the segment.
+If you have other, more targeted segments receiving notifications recently, you may not want your users to be targeted by more generic campaigns directed at this segment. Appending the "Last Received Push" filter to this segment, the user has ensured that if they've received another notification in the past 24 hours, they will slide out of this segment for the next 24 hours. If they still meet the other criteria of the segment 24 hours later and haven't received any more notifications, they will slide back into the segment.
 
 ![A segment named "Retargeting Filter Showcase" with the filter group "Last used app more than 7 days ago".]({% image_buster /assets/img_archive/rate_limit_daily.png %}){: style="max-width:80%;"} 
 
@@ -67,7 +67,7 @@ For in-app messages, you can control marketing pressure by setting a maximum num
 
 In-app message rules are sent down to an app on session start, meaning that Braze can send a message to the user before the cap is hit, but by the time the user triggers the message, the cap has now been hit. In this situation, the device will still display the message.
 
-For example, let's say you have a game with an in-app message that triggers when a user beats a level, and you cap it at 100 impressions. There have been 99 impressions so far. Alice and Bob both open the game and Braze tells their devices that they are eligible to receive the message when they beat a level. Alice beats a level first and gets the message. Bob beats the level next, but because his device hasn't communicated with Braze servers since his session started, his device is unaware that the message has met its cap and he will also receive the message. However, when an impression cap has been hit, the next time any device requests the list of eligible in-app messages, that message will not be sent down and will be removed from that device.
+For example, let's say you have a game with an in-app message that triggers when a user beats a level, and you cap it at 100 impressions. There have been 99 impressions so far. Alice and Bob both open the game, and Braze tells their devices that they are eligible to receive the message when they beat a level. Alice beats a level first and gets the message. Bob beats the level next, but because his device hasn't communicated with Braze servers since his session started, his device is unaware that the message has met its cap, and he also receives the message. However, when an impression cap has been hit, the next time any device requests the list of eligible in-app messages, the system does not send that message and removes the message from that device.
 
 ### Rate limiting and A/B testing
 
@@ -89,7 +89,7 @@ If you are trying to send out 75,000 messages with a 10,000-per-minute rate limi
 
 Note that rate-limited messages may not be sent evenly over the course of each minute. Using the example of a 10,000-per-minute rate limit, this means Braze makes sure no more than 10,000 messages are sent per minute. This could mean a higher percentage of the 10,000 messages are sent within the first half minute versus the last half minute.
 
-The rate limit is applied at the start of the message send attempt. When there are fluctuations in the time it takes for the send to complete, the number of completed sends may slightly exceed the rate limit in some minutes. Over time, the number of sends per minute will average out to no more than the rate limit.
+The rate limit is applied at the start of the message send attempt. When there are fluctuations in the time it takes for the send to complete, the number of completed sends may slightly exceed the rate limit for a few minutes. Over time, the number of sends per minute will average out to no more than the rate limit.
 
 {% alert important %}
 Be wary of delaying time-sensitive messages with this form of rate limiting in relation to the total number of users in a segment. For example, if the segment contains 30 million users but we set the rate limit to 10,000 per minute, a large portion of your user base won’t receive the message until the following day.
@@ -160,7 +160,15 @@ Instead of trying to make up for the delay and send the remaining 6,000 messages
 | 9      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Connected Content requests are not rate limited independently and will follow the webhook rate limit. This means if there is one Connected Content call to a unique endpoint per webhook, you would expect 5,000 webhooks and also 5,000 Connected Content calls per minute. Note that caching may affect this and reduce the number of Connected Content calls. Additionally, retries may increase the Connected Content calls, so we recommend checking that the Connected Content endpoint can handle some fluctuation here.
+Connected Content requests are not rate-limited independently and will follow the webhook rate limit. This means if there is one Connected Content call to a unique endpoint per webhook, you would expect 5,000 webhooks and also 5,000 Connected Content calls per minute. Note that caching may affect this and reduce the number of Connected Content calls. Additionally, retries may increase the Connected Content calls, so we recommend checking that the Connected Content endpoint can handle some fluctuation here.
+
+{% alert note %}
+**Rate limits are speed limits and do not define an exact send speed.** Generally, messages are spread out evenly within any given minute, and in the vast majority of cases they are sent at or very close to the configured limit. This is not always the case—for example, when messages are very large (such as emails with many Content Blocks, Connected Content tags, or Catalog item tags), or when there are many Liquid aborts (aborted messages still consume a slot and can reduce effective send rates).
+
+In practice, the sustained send rate (completed messages per minute) may be lower than the configured rate limit due to retries, network variability, downstream endpoint latency, and per-minute smoothing.
+
+If you consistently see significantly lower throughput than expected, check Connected Content response times, error rates (such as `429`), and retry behavior.
+{% endalert %}
 
 ## About frequency capping
 
@@ -172,23 +180,23 @@ Frequency capping is applied at the campaign or Canvas component send level and 
 
 By default, frequency capping is toggled on when new campaigns are created. From here, you can choose the following:
 
-- Which messaging channel you would like to cap: push, email, SMS, webhook, WhatsApp, LINE, or any of those channels.
-- How many times each user should receive a campaign or Canvas component sends from a channel within a certain time frame.
-- How many times each user should receive a campaign or Canvas component sends by [tag](#frequency-capping-by-tag) within a certain time frame.
+- The messaging channel you would like to cap: push, email, SMS, webhook, WhatsApp, LINE, or any of those channels.
+- How many times each user should receive a campaign or Canvas component sent from a channel within a certain time frame.
+- How many times each user should receive a campaign or Canvas component sent by [tag](#frequency-capping-by-tag) within a certain time frame.
 
 This time frame can be measured in minutes, days, or weeks (seven days), with a maximum duration of 30 days.
 
-Each line of frequency caps will be connected using the `AND` operator, and you can add up to 10 rules per workspace. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week.
+Each line of frequency caps is connected using the `AND` operator, and you can add up to 10 rules per workspace. You can include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week. Note that aborted messages do not count toward frequency capping.
 
 ![Frequency capping section with lists of campaigns and Canvases that rules will and will not apply to.]({% image_buster /assets/img_archive/rate_limiting_overview_2.png %}){: style="max-width:90%;"} 
 
 #### Behavior when users are frequency capped on a Canvas step
 
-If a Canvas user is frequency capped because of global frequency capping settings, then the user will immediately advance to the next Canvas step. The user will not exit the Canvas because of the frequency cap.
+If a Canvas user is frequency-capped because of global frequency capping settings, then the user will immediately advance to the next Canvas step. The user will not exit the Canvas because of the frequency cap.
 
 ### Delivery rules
 
-There may be some campaigns, like transactional messages, that you want to always reach the user, even if they have already reached their frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered regardless of how many campaigns the user has received.
+There may be some campaigns, like transactional messages, that you want to always reach the user, even if they have already reached their frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered, regardless of how many campaigns the user has received.
 
 If you want a particular campaign to override frequency capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling **Frequency Capping** to **OFF**. 
 
@@ -204,12 +212,12 @@ This behavior changes the default behavior when you turn off frequency capping f
 
 ![Delivery Controls section with Frequency Capping turned on.]({% image_buster /assets/img_archive/frequencycappingupdate.png %}){: style="max-width:90%;"} 
 
-Different channels within a multichannel campaign will individually count toward the frequency cap. For instance, if you create a multichannel campaign with both push and email and have frequency capping set up for both of those channels, then the push will count toward one push campaign and the email message will count toward one email message campaign. The campaign will also count toward one "campaign of any type." If users are capped to one push and one email campaign per day and a user receives this multichannel campaign, then they will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores frequency capping rules).
+Different channels within a multichannel campaign individually count toward the frequency cap. For instance, if you create a multichannel campaign with both push and email and have frequency capping set up for both of those channels, then the push counts toward one push campaign, and the email message counts toward one email message campaign. The campaign also counts toward one "campaign of any type." If users are capped to one push and one email campaign per day, and a user receives this multichannel campaign, then they no longer are eligible for push or email campaigns for the rest of the day (unless a campaign ignores frequency capping rules).
 
 In-app messages and Content Cards are not counted as or toward caps on campaigns or Canvas components of any type.
 
 {% alert important %}
-Global frequency capping is scheduled based on the user's time zone, and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone and they would be eligible to receive another message an hour later.
+Global frequency capping is scheduled based on the user's time zone, and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
 {% endalert %}
 
 #### Use cases
@@ -217,18 +225,18 @@ Global frequency capping is scheduled based on the user's time zone, and is calc
 {% tabs %}
 {% tab Use case 1 %}
 
-Let's say that you set a frequency capping rule which asks that your user receive no more than three push notification campaigns or Canvas steps per week from all campaign or Canvas steps.
+Let's say that you set a frequency capping rule so that your users receive no more than three push notification campaigns or Canvas steps per week from all campaigns or Canvas steps.
 
 If your user is slated to receive three push notifications, two in-app messages, and one Content Card this week, they will receive all of those messages.
 
 {% endtab %}
 {% tab Use case 2 %}
 
-This scenario uses a frequency capping rule for users to receive no more than two push notification campaigns or Canvas steps per week from all campaign or Canvas steps.
+This scenario uses a frequency capping rule for users to receive no more than two push notification campaigns or Canvas steps per week from all campaigns or Canvas steps.
 
 **When the following scenario occurs:**
 
-- A user triggers the same campaign, `Campaign ABC` three times over the course of a week.
+- A user triggers the same campaign `Campaign ABC` three times over the course of a week.
 - This user triggers `Campaign ABC` once on Monday, once on Wednesday, and once on Thursday.
 
 ![Frequency Capping section with the rule of sending no more than 2 push notification campaigns/Canvas steps from all campaigns/Canvas steps to a user every 1 week.]({% image_buster /assets/img/standard_rules_fnfn.png %})
@@ -245,26 +253,26 @@ This scenario uses a frequency capping rule for users to receive no more than tw
 
 [Frequency capping rules](#delivery-rules) can be applied to workspaces using specific tags you have applied to your campaigns and Canvases, allowing you to essentially base your frequency capping on custom-named groups.
 
-With frequency capping by tag, rules can be set on the main and nested tags, so Braze will take into account all tags. For example, if you've selected to use the main tag A to frequency cap, we'll also include information in all the nested tags (for example, tags B and C) when determining the limit.
+With frequency capping by tag, rules can be set on the main and nested tags, so Braze will take into account all tags. For example, if you've selected to use the main tag A as the frequency cap, we'll also include information in all the nested tags (for example, tags B and C) when determining the limit.
 
 You can also combine regular frequency capping with frequency capping by tags. Consider the following rules:
 
-1. No more than three push notification campaigns or Canvas components per week from all campaign and Canvas steps. <br>**AND**
-2. No more than two push notification campaign or Canvas components per week with the tag `promotional`.
+1. No more than three push notification campaigns or Canvas components per week from all campaigns and Canvas steps. <br>**AND**
+2. No more than two push notification campaigns or Canvas components per week with the tag `promotional`.
 
 ![Frequency Capping section with two rules limiting how many push notification campaigns/Canvases can be sent to a user every 1 week.]({% image_buster /assets/img/tag_rule_fnfn.png %} "rules")
 
 As a result, your users will receive no more than three campaign sends per week over all campaigns and Canvas steps and no more than two push notification campaigns or Canvas components with the tag `promotional`.
 
 {% alert important %}
-Canvases are tagged at the Canvas level, as opposed to tagging by component. So, each Canvas component will inherit all of the Canvas level tags.
+Canvases are tagged at the Canvas level, as opposed to tagging by component. So, each Canvas component will inherit all of the Canvas-level tags.
 {% endalert %}
 
 #### Conflicting rules
 
 When rules conflict, the most restrictive, applicable frequency capping rule is applied to your users. For example, let's say you have the following rules:
 
-1. No more than one push notification campaign or Canvas component per week from all campaign and Canvas components. <br>**AND**
+1. No more than one push notification campaign or Canvas component per week from all campaigns and Canvas components. <br>**AND**
 2. No more than three push notification campaigns or Canvas components per week with the tag `promotional`.
 
 ![Frequency Capping section with conflicting rules to limit how many push notification campaigns/Canvas steps are sent to a user every 1 week.]({% image_buster /assets/img/global_rules.png %} "global rules")
@@ -273,7 +281,7 @@ In this example, your user will not receive more than one push notification camp
 
 #### Tag count
 
-Frequency capping by tag rules compute at the time a message sends. This means that frequency capping by tag only counts tags that are currently on the campaigns or Canvases that a user received in the past. It does not count the tags that were on the campaigns or Canvases during the time they were sent but have since been removed. It counts if a tag is later added to a message that a user received in the past, but before the newest tagged message is sent.
+Frequency capping by tag rules is computed at the time a message is sent. This means that frequency capping by tag only counts tags that are currently on the campaigns or Canvases that a user received in the past. It does not count the tags that were on the campaigns or Canvases during the time they were sent, but have since been removed. It counts if a tag is later added to a message that a user received in the past, but before the newest tagged message is sent.
 
 ##### Use case
 
@@ -281,8 +289,8 @@ Consider the following campaigns and frequency capping by tag rule:
 
 **Campaigns**:
 
-- **Campaign A** is a push campaign tagged as `promotional`. It is slated to send at 9 am on Monday.
-- **Campaign B** is a push campaign tagged as `promotional`. It is slated to send at 9 am on Wednesday.
+- **Campaign A** is a push campaign tagged as `promotional`. It is slated to be sent at 9 am on Monday.
+- **Campaign B** is a push campaign tagged as `promotional`. It is slated to be sent at 9 am on Wednesday.
 
 **Frequency Capping by Tag Rule:**
 
@@ -308,7 +316,21 @@ Because 100 messages per channel are more messages than most brands send to thei
 
 For example, you might set up the following rule:
 
-> No more than three email campaigns or Canvas components per week from all campaign and Canvas steps.
+> No more than three email campaigns or Canvas components per week from all campaigns and Canvas steps.
 
 This rule determines that no users receive more than 100 emails per week because, at most, users receive three emails per week from campaigns or Canvas components with frequency capping turned on.
+
+## Frequently asked questions
+
+### If I change a send throttle on an active Canvas, does it affect users already in the Canvas?
+
+Yes, when you increase or decrease a Canvas rate limit, the updated limit will take effect for new messages within approximately 30 seconds of the change due to caching.
+
+### Does frequency capping cause users to exit a Canvas?
+
+No. If a Canvas user is frequency-capped because of global frequency capping settings, the user will immediately advance to the next Canvas step. The user will **not** exit the Canvas because of the frequency cap.
+
+### How can I identify users who were frequency capped in a Canvas?
+
+Users who are frequency capped don't generate a send event for that step. To identify these users, you can use [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) to track message frequency capped events. Alternatively, you can create a [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to analyze users who entered the Canvas but didn't receive the expected message.
 

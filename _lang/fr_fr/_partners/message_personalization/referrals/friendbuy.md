@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Friendbuy
 
-> Tirez parti de l'intégration entre Friendbuy et Braze pour étendre vos capacités en matière d'e-mails et de SMS tout en automatisant sans effort vos communications relatives aux programmes de recommandation et de fidélisation. Braze créera des profils de clients pour tous les numéros de téléphone ayant fait l'objet d'un abonnement et collectés par l'intermédiaire de Friendbuy.
+> Utilisez l'intégration entre [Friendbuy](https://www.friendbuy.com/) et Braze pour étendre vos capacités d'e-mail et de SMS tout en automatisant sans effort les communications de votre programme de recommandation et de fidélisation. Braze créera des profils de clients pour tous les numéros de téléphone ayant fait l'objet d'un abonnement et collectés par l'intermédiaire de Friendbuy.
 
 _Cette intégration est maintenue par Friendbuy._
 
@@ -60,7 +60,7 @@ Retournez à votre [compte Friendbuy](https://retailer.friendbuy.io/) et actuali
 
 Avant que les données des clients puissent être envoyées à Braze, les clients doivent donner leur abonnement par le biais du widget de recommandation en cochant une ou plusieurs cases des cases suivantes :
 
-![widget de recommandation]({% image_buster /assets/img/friendbuy/referral_widget.png %})
+![Widget de recommandation]({% image_buster /assets/img/friendbuy/referral_widget.png %})
 
 {% alert note %}
 Friendbuy utilise la norme internationale (E.164) pour vérifier les numéros de téléphone réels. Les numéros non valides, tels que `555-555-5555`, ne seront pas envoyés à Braze.

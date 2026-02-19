@@ -36,17 +36,17 @@ Para sincronizar los atributos de usuario de Justuno con Braze, tendrás que cre
 
 Para añadir la aplicación Braze a tu cuenta de Justuno, ve a **Configuración de la cuenta** > **Aplicaciones** y, a continuación, busca y selecciona la aplicación Braze.
 
-![La página "Conectar aplicaciones" en Justuno con la aplicación Braze mostrada en la lista de resultados de búsqueda.]({% image_buster /assets/img/justuno/search-for-braze.png %})
+![La página "Conectar Aplicaciones" en Justuno con la aplicación Braze mostrada en la lista de resultados de búsqueda.]({% image_buster /assets/img/justuno/search-for-braze.png %})
 
 Introduce la clave de API y la URL base [que creaste anteriormente](#prerequisites) y, a continuación, selecciona **Conectar**.
 
-![La ventana emergente de Autenticación Braze que solicita una clave de API Braze y una URL base.]({% image_buster /assets/img/justuno/authenticate-braze.png %}){: style="max-width:75%;"}
+![La ventana emergente de Autenticación Braze que pide una clave de API Braze y una URL base.]({% image_buster /assets/img/justuno/authenticate-braze.png %}){: style="max-width:75%;"}
 
 #### Paso 2.2: Añádelo a tu flujo de trabajo
 
 Para añadir la aplicación Braze a tu [flujo de trabajo de Justuno](https://hub.justuno.com/knowledge/workflows-overview), arrastra y suelta la acción **Sincronizar con aplicación** en tu flujo de trabajo, y luego elige **Seleccionar aplicación** > **Braze**.
 
-![La opción "Seleccionar aplicación" situada en la acción "Sincronizar con la aplicación".]({% image_buster /assets/img/justuno/select-app.png %}){: style="max-width:45%;"}
+![La opción "Seleccionar aplicación" situada en la acción "Sincronizar con aplicación".]({% image_buster /assets/img/justuno/select-app.png %}){: style="max-width:45%;"}
 
 ### Paso 3: Conecta tus grupos de suscripción Braze
 
@@ -69,7 +69,7 @@ Para localizar estos ID en el panel de Braze:
 
 En tu flujo de trabajo Justuno, abre la aplicación Braze e introduce los ID de cada grupo de suscripción.
 
-![La aplicación Braze abierta en un flujo de trabajo Justuno con la opción de añadir ID de grupo de suscripción por correo electrónico y SMS.]({% image_buster /assets/img/justuno/enter-subscription-groups.png %}){: style="max-width:55%;"}
+![La aplicación Braze se abrió en un flujo de trabajo Justuno con la opción de añadir ID de grupo de suscripción por correo electrónico y SMS.]({% image_buster /assets/img/justuno/enter-subscription-groups.png %}){: style="max-width:55%;"}
 
 ### Paso 4: Configura tus atributos
 
@@ -86,9 +86,9 @@ Los siguientes atributos se sincronizan automáticamente desde Justuno a Braze:
 Para sincronizar atributos adicionales:
 
 1. En la aplicación Braze dentro de tu flujo de trabajo, selecciona **Sincronizar otra propiedad**.
-    ![La aplicación Braze abierta en un flujo de trabajo de Justuno mostrando la opción "Sincronizar otra propiedad".]({% image_buster /assets/img/justuno/sync-another-property.png %}){: style="max-width:55%;"}
+    ![La aplicación Braze se abrió en un flujo de trabajo de Justuno mostrando la opción "Sincronizar otra propiedad".]({% image_buster /assets/img/justuno/sync-another-property.png %}){: style="max-width:55%;"}
 2. Elige qué atributos Braze quieres sincronizar.
-3. Haz coincidir las propiedades en Justuno con sus equivalentes en Braze (como los contactos sociales, cumpleaños, preferencias de compra, respuestas a cuestionarios y similares). Ten en cuenta que estas propiedades se consideran datos de 0 o datos de 1a parte. Para saber más, consulta [Justuno: Recopilación de datos de visitantes](https://www.justuno.com/guides/zero-first-party-data/).
+3. Haz coincidir las propiedades en Justuno con sus equivalentes en Braze (como los identificadores sociales, cumpleaños, preferencias de compra, respuestas a cuestionarios y similares). Ten en cuenta que estas propiedades se consideran datos de 0 o datos de 1a parte. Para saber más, consulta [Justuno: Recopilación de datos de visitantes](https://www.justuno.com/guides/zero-first-party-data/).
 4. En el constructor de flujos de trabajo, elige **Guardar**, **Vista previa** o **Publicar** tu flujo de trabajo.
     ![Se abrió el menú "Publicar" con las opciones de guardar, vista previa o mostrar el historial de versiones.]({% image_buster /assets/img/justuno/publish-workflow.png %}){: style="max-width:45%;"}
 

@@ -9,7 +9,7 @@ description: "Cet article explique les alias pour identifier la spécification d
 
 # Objet Alias d’identification
 
-Une demande API contenant l’un des champs de l’objet Attributs créera ou mettra à jour un attribut de ce nom avec la valeur donnée sur le profil utilisateur spécifié. 
+Une demande d'API comportant un champ quelconque dans l'objet attributs crée ou met à jour un attribut de ce nom avec la valeur donnée sur le profil utilisateur spécifié.
 
 Utilisez les noms de champs de profil utilisateur Braze (énumérés comme suit ou tout autre répertorié dans la section pour [Braze user profile fields]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)) pour mettre à jour ces valeurs spéciales sur le profil utilisateur dans le tableau de bord ou ajoutez vos propres données d'attributs personnalisés à l'utilisateur.
 
@@ -21,7 +21,7 @@ Utilisez les noms de champs de profil utilisateur Braze (énumérés comme suit 
   [
     {
       "external_id" : (required, string) see External user ID,
-      // external_ids for users that do not exist will return a non-fatal error.
+      // external_ids for users that do not exist return a non-fatal error.
       // See server responses for details.
       "user_alias" : {
         "alias_name" : (required, string) see User aliases,

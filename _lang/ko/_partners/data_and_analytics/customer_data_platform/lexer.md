@@ -64,7 +64,7 @@ Lexer Activate will automatically update your Braze profiles, adding or removing
 
 ![]({% image_buster /assets/img/lexer/lexer.png %})
 
-### Step 2: Verify activation
+### 2단계: Verify activation
 
 Once your activation has been confirmed as sent in Activate, you will see records begin to update in Braze. Your profiles won't be fully updated in Braze until after receiving a confirmation email from Lexer.
 

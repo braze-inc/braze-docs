@@ -1,6 +1,6 @@
 ---
-nav_title: Anpassen von Nachrichten
-article_title: Anpassen von In-App-Nachrichten für das Braze SDK
+nav_title: Nachrichten anpassen
+article_title: In-App-Nachrichten für das Braze SDK anpassen
 page_order: 0.1
 description: "Erfahren Sie, wie Sie In-App-Nachrichten für das Braze SDK einrichten können."
 platform: 
@@ -10,21 +10,21 @@ platform:
   - Web
 ---
 
-# Anpassen von In-App-Nachrichten
+# In-App-Nachrichten anpassen
 
-> Erfahren Sie, wie Sie In-App-Nachrichten für das Braze SDK anpassen können.
+> Erfahren Sie, wie Sie In-App-Nachrichten für das Braze SDK anpassen können. Für fortgeschrittene Styling-Techniken sehen Sie sich unser Tutorial zur [Anpassung des Nachrichten-Styles mit Hilfe von Schlüssel-Wert-Paaren]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling) an.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/in_app_messages/customization.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/in_app_messages/customization.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/in_app_messages/customization.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/in_app_messages/customization.md %}
 {% endsdktab %}
 
 {% sdktab react native %}

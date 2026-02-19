@@ -38,7 +38,7 @@ noindex: true
 
 ---
 
-# [Nome do parceiro]
+# [Nome do parceiro].
 
 > Bem-vindo ao modelo de página de parceiro! Aqui, você encontrará tudo o que precisa para criar sua própria página de parceiro. Nesta primeira seção, você deve descrever o parceiro no primeiro parágrafo em uma ou duas frases. Além disso, inclua um link para o site principal do parceiro.
 
@@ -60,7 +60,7 @@ Os requisitos a seguir são requisitos típicos que você pode precisar do Braze
 
 ## [Tipo de integração] Integração
 
-É aqui que você divide a integração em etapas. Não escreva apenas parágrafos intermináveis - esses são documentos técnicos que serão usados por profissionais de marketing e desenvolvedores para colocar a integração em funcionamento. Seu único objetivo nesta seção é escrever uma documentação descritiva que ajude o usuário do Braze a realizar o trabalho. Por "Tipo de integração" no título da seção, queremos indicar se é ou não uma integração lado a lado, de servidor para servidor ou fora da caixa. Isso permite que você tenha várias seções de integração se houver mais de uma maneira de integrar com este parceiro.
+É aqui que você divide a integração em etapas. Não escreva apenas parágrafos intermináveis - esses são documentos técnicos que serão usados por profissionais de marketing e desenvolvedores para colocar a integração em funcionamento. Seu único objetivo nesta seção é escrever uma documentação descritiva que ajude o usuário do Braze a realizar o trabalho. Por "Tipo de integração" no título da seção, queremos indicar se essa é ou não uma integração lado a lado, servidor a servidor ou padrão. Isso permite que você tenha várias seções de integração se houver mais de uma maneira de integrar com este parceiro.
 
 Se essa for uma integração do Currents, essa página deverá estar localizada na seção Currents e deverá ser criada uma página de navegação correspondente que redirecione para esse local no Currents.
 

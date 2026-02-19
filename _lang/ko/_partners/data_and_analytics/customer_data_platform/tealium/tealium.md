@@ -11,11 +11,11 @@ search_tag: Partner
 
 # Tealium
 
-> [Tealium](https://tealium.com/) is a universal data hub and customer data platform composed of EventStream, AudienceStream, and iQ Tag Management that enables you to connect mobile, web, and alternative data from third-party sources. Tealium's connection to Braze enables a data flow of custom events, user attributes, and purchases that empower you to act on your data in real-time.
+> [Tealium](https://tealium.com/) is a universal data hub and customer data platform composed of EventStream, AudienceStream, and iQ Tag Management that enables you to connect mobile, web, and alternative data from third-party sources. Braze에 Tealium을 연결하면 커스텀 이벤트, 사용자 속성, 구매 데이터의 데이터 흐름을 통해 실시간으로 데이터에 기반한 조치를 취할 수 있습니다.
 
-![A Tealium overview graphic showing how the different Tealium products and the Braze platform fit together to activate cross-channel campaigns in real-time.]({% image_buster /assets/img/tealium/tealium_overview.png %}){: style="border:0;"}
+![다양한 Tealium 제품과 Braze 플랫폼이 어떻게 크로스채널 캠페인을 실시간으로 활성화하는지를 보여주는 Tealium 개요 그래픽.]({% image_buster /assets/img/tealium/tealium_overview.png %}){: style="border:0;"}
 
-The Braze and Tealium integration allows you to track your users and route data to various user analytics providers. Tealium allows you to:
+Braze와 Tealium의 통합을 통해 사용자를 추적하고 다양한 사용자 분석 제공업체로 데이터를 라우팅할 수 있습니다. Tealium allows you to:
 - Sync Tealium audiences with [AudienceStream]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium_audience_stream/) to Braze for use in personalizing Braze campaigns and Canvases or building segments.
 - [Import data across platforms](#choose-your-integration-type). Braze offers both a [side-by-side](#side-by-side-sdk-integration) SDK integration for your Android, iOS, and web applications and a [server-to-server](#server-to-server-integration) integration that can be used within any platform that can report event data.<br><br>
 
@@ -145,7 +145,7 @@ Tealium requires that you first set up a valid data source for your connector to
 1. From the sidebar in Tealium under **Server-Side**, navigate to **Sources > Data Sources > + Add Data Source**.
 2. Locate your desired platform within the available categories, and name your source, this is a required field.<br>![]({% image_buster /assets/img/tealium/data_source.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
 3. From the **Event Specifications** options, choose the [event specifications](https://docs.tealium.com/server-side/event-specifications/about/) you would like to include. Event specifications help you identify the event names and required attributes to track in your installation. These specifications will be applied to incoming events.<br>![]({% image_buster /assets/img/tealium/event_specs.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>Take some time to think about what data is most valuable to you and which specifications seem most appropriate for your use case. [Custom event specifications](https://docs.tealium.com/iq-tag-management/events/about/) are also available. <br>
-4. The next dialogue advances to the **Get Code** step. The base code and event tracking code provided here serve as your installation guide. Download the provided PDF if you wish to share these instructions with your team. Select **Save & Continue** when finished.<br>
+4. The next dialogue advances to the **Get Code** step. The base code and event tracking code provided here serve as your installation guide. Download the provided PDF if you wish to share these instructions with your team. **저장을** 선택하고 ** & 완료되면** **계속합니다**.<br>
 5. You will now be able to view your saved source as well as add or remove event specs. <br>![]({% image_buster /assets/img/tealium/braze_connection.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>From the detailed data source view you can perform the following actions:
 - View and copy the data source key
 - View installation instructions
@@ -252,7 +252,7 @@ Refer to Tealium's [Trace documentation](https://docs.tealium.com/server-side/co
 
 ## Potential data point overages
 
-There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
+Tealium을 통해 Braze를 통합할 때 실수로 불필요한 데이터 포인트를 기록할 수 있는 세 가지 주요 방법이 있습니다:
 
 #### Sending duplicate data - only send Braze deltas of attributes
 
@@ -263,7 +263,7 @@ Tealium does not send Braze deltas of user attributes. For example, if you have 
 
 #### Sending irrelevant data or needlessly overwriting data
 
-If you have multiple EventStreams that target the same event feed, **all actions enabled for that connector** will automatically fire anytime a single action is triggered, \*\*this could also result in data being overwritten in Braze and consuming unnecessary data points.\\
+동일한 이벤트 피드를 타겟팅하는 이벤트스트림이 여러 개 있는 경우, **해당 커넥터에 인에이블된 모든 작업은** 단일 작업이 트리거될 때마다 자동으로 실행됩니다. 이로 인해 데이터를 Braze에서 덮어쓰고 불필요한 데이터 포인트를 기록할 수도 있습니다.
 
 **Solution**: <br>Set up a separate event specification or feed to track each action. <br>**OR**<br> Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
 

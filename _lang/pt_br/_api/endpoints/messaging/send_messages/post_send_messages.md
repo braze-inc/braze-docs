@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Envio de mensagens imediatamente usando somente a API"
+nav_title: "POST: Envio imediato de mensagens usando apenas a API"
 article_title: "POST: Envio de mensagens imediatamente usando somente a API"
 search_tag: Endpoint
 page_order: 4
@@ -33,7 +33,7 @@ Para usar esse endpoint, você precisará gerar uma chave de API com a permissã
 ## Corpo da solicitação
 
 {% alert tip %}
-Não se esqueça de incluir [objetos de envio de mensagens]({{site.baseurl}}/api/objects_filters/#messaging-objects) em seu corpo para completar suas solicitações.
+Certifique-se de incluir [envio de mensagens]({{site.baseurl}}/api/objects_filters/#messaging-objects) no seu corpo para completar suas solicitações.
 {% endalert %}
 
 ```
@@ -77,10 +77,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para um segmento inteiro que uma campanha ou canva segmenta. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir esta flag de forma não intencional pode fazer com que você envie sua mensagem para um público maior do que o esperado. |
 |`external_user_ids` | Opcional | Matriz de strings | Consulte [ID de usuário externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 |`user_aliases`| Opcional | Vetor de objetos de alias de usuário| Consulte o [objeto de alias de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-|`segment_id `| Opcional | String | Consulte [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
+|`segment_id `| Opcional | String | Consulte [identificador de segmento]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`audience`| Opcional | Objeto de público conectado | Veja [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Opcional* | String | Para saber mais, consulte o [identificador de campanha]({{site.baseurl}}/api/identifier_types/). <br><br>\*Necessário se você deseja rastrear as estatísticas da campanha (por exemplo, envios, cliques, bounces etc.) no dashboard do Braze. |
-|`send_id`| Opcional | String | Ver [identificador de envio]({{site.baseurl}}/api/identifier_types/) |
+|`campaign_id`| Opcional* | String | Para saber mais, consulte o [identificador de campanha]({{site.baseurl}}/api/identifier_types/#campaign-identifier/). <br><br>\*Obrigatório se você deseja rastrear métricas de campanha (como _Envios_, _Cliques_ ou _Retornos_) no dashboard do Braze. |
+|`send_id`| Opcional | String | Consulte [enviar identificador]({{site.baseurl}}/api/identifier_types/#send-identifier). |
 |`override_frequency_capping`| Opcional | Booleano | Ignore `frequency_capping` para campanhas, o padrão é `false`. |
 |`recipient_subscription_state`| Opcional | String | Use essa opção para enviar mensagens apenas para usuários que tenham aceitado receber mensagens (`opted_in`), apenas para usuários que tenham feito a inscrição ou aceitado receber mensagens (`subscribed`) ou para todos os usuários, inclusive os que cancelaram a inscrição (`all`). <br><br>O uso de usuários do `all` é útil para envio de mensagens por e-mail de transação. O padrão é `subscribed`. |
 |`messages`| Opcional | Objetos de envio de mensagens | Consulte os [objetos de envio de mensagens disponíveis]({{site.baseurl}}/api/objects_filters/#messaging-objects). |

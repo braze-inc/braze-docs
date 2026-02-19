@@ -19,7 +19,7 @@ Vous pouvez éventuellement fournir un corps POST en spécifiant `:body` suivi d
 Par défaut, le contenu connecté ne met pas non plus en cache les appels POST. Vous pouvez modifier ce comportement en ajoutant `:cache_max_age` à l'appel POST du contenu connecté.
 
 {% tabs %}
-{% tab Content-Type par défaut %}
+{% tab Default content-type %}
 
 {% raw %}
 ```js

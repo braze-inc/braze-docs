@@ -1,7 +1,7 @@
 ---
 page_order: 6
-nav_title: Avisos Soft Push
-article_title: Configuración de los avisos soft push para el SDK de Braze
+nav_title: Indicaciones push suaves
+article_title: Configurar avisos soft push para el SDK de Braze
 channel:
   - push notifications
 ---

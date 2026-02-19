@@ -1,6 +1,6 @@
 ---
-nav_title: セッションを追跡する
-article_title: Windows Universal のセッションの追跡
+nav_title: トラッキング、 追跡セッション
+article_title: Windowsユニバーサルのトラッキング、 追跡セッション
 platform: Windows Universal
 page_order: 0
 description: "このリファレンス記事では、Windows ユニバーサルプラットフォームでセッションを追跡する方法について説明します。"

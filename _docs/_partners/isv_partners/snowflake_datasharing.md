@@ -48,6 +48,69 @@ When possible, breaking changes will be preceded by an announcement and a migrat
 - Removing a column from an existing table or view
 - Changing the type or nullability of an existing column
 
+## When SNAPSHOTS and CHANGELOGS tables are updated
+
+The SNAPSHOTS and CHANGELOGS tables track changes to campaigns and Canvases. Understanding when these tables are updated is important for querying the most recent message variations and Canvas configurations.
+
+### CHANGELOGS_CAMPAIGN_SHARED
+
+A row is added to `CHANGELOGS_CAMPAIGN_SHARED` when:
+- The campaign is launched, OR
+- Any of the following snapshottable fields are changed:
+  - Name
+  - Actions (including message content changes)
+  - Conversion behaviors
+
+{% alert important %}
+Saving or updating the post-launch draft does not automatically trigger an update. The update is triggered only when you launch the campaign or apply the post-launch draft changes to the active campaign.
+{% endalert %}
+
+### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED
+
+`SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` is derived from `CHANGELOGS_CAMPAIGN_SHARED`. This table extracts and flattens the actions column from `CHANGELOGS_CAMPAIGN_SHARED` into individual message variation records. It is updated accordingly when `CHANGELOGS_CAMPAIGN_SHARED` is updated.
+
+### CHANGELOGS_CANVAS_SHARED
+
+A row is added to `CHANGELOGS_CANVAS_SHARED` when:
+- The Canvas is launched, OR
+- Any of the following snapshottable fields are changed:
+  - Name
+  - Conversion behaviors
+  - Variations (percentage, first step assignments, variation names)
+
+{% alert important %}
+Saving or updating the post-launch draft does not automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_VARIATION_SHARED
+
+`SNAPSHOTS_CANVAS_VARIATION_SHARED` is derived from `CHANGELOGS_CANVAS_SHARED`. This table uses the same extraction pattern as `SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` and is updated accordingly when `CHANGELOGS_CANVAS_SHARED` is updated.
+
+### SNAPSHOTS_CANVAS_STEP_SHARED
+
+A row is added to `SNAPSHOTS_CANVAS_STEP_SHARED` when:
+- The Canvas is launched, OR
+- The active Canvas is updated (post-launch draft applied), OR
+- Any of the following snapshottable fields are changed:
+  - Name
+  - Actions (including message content changes within message variations)
+
+{% alert important %}
+Saving the post-launch draft does not automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_FLOW_STEP_SHARED
+
+A row is added to `SNAPSHOTS_CANVAS_FLOW_STEP_SHARED` when:
+- The Canvas is launched, OR
+- The active Canvas is updated (post-launch draft applied), OR
+- Any of the following snapshottable fields are changed:
+  - Name
+
+{% alert important %}
+Saving the post-launch draft does not automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
+{% endalert %}
+
 ## General Data Protection Regulation (GDPR) compliance
 
-Nearly every event record Braze stores includes a few fields representing users’ personally identifiable information (PII). Some events may include email address, phone number, device ID, language, gender, and location information. If a user’s request to be forgotten is submitted to Braze, we will null out those PII fields for any event belonging to those users. This way, we’re not removing the historical record of the event, but now the event can never be tied back to a specific individual.
+{% include partners/snowflake_pii_gdpr.md %}

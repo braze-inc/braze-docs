@@ -110,7 +110,7 @@ Essas exibições fornecem instantâneos periódicos das atribuições do perfil
 * Execução mais rápida da consulta, especialmente ao filtrar por atribuições diferentes de `USER_ID`.
 * **Limitação:** Os dados não são atualizados em tempo real.
 
-## Visualizações de perfil de usuário em tempo real
+## Visualizações do perfil do usuário em tempo real
 
 Essas exibições fornecem atualizações quase em tempo real sobre as atribuições do perfil do usuário, com postergação de dados de até 10 minutos após a ocorrência de uma atualização no Braze.
 
@@ -161,8 +161,8 @@ Essas exibições fornecem atualizações quase em tempo real sobre as atribuiç
 * Fornece atribuições atualizadas do usuário com postergação mínima (~10 minutos).
 * Útil para análises em tempo real e cenários em que são necessários dados recentes.
 * **Considerações sobre a performance:**
-    * As consultas sobre usuários individuais são mais rápidas (menos de um minuto usando um grande depósito).
-    * As consultas sem filtros USER_ID exigem agregação em todos os usuários, o que leva a tempos de execução significativamente mais longos.
+    * As consultas sobre usuários individuais são mais rápidas (menos de um minuto usando um grande armazém).
+    * As consultas sem os filtros USER_ID exigem agregação em todos os usuários, o que leva a tempos de execução significativamente mais longos.
     * As consultas em um grande conjunto de dados (como mais de 100 milhões de usuários) podem levar muitos minutos.
 
 ## Registros históricos de alterações

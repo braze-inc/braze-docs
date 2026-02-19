@@ -141,23 +141,23 @@ Sie können auch eine Telefonnummer oder eine externe ID als Teil der Anfrage an
 
 ## Fehlersuche
 
-{% details Ich habe den Trigger und die Aktion erfolgreich getestet. Warum kann ich dann meinen Zapier-Zap nicht veröffentlichen? %}
+{% details I tested the Trigger and Action successfully, so why am I unable to publish my Zapier Zap? %}
 Um diese Integration nutzen zu können, müssen Sie über einen <a href="https://zapier.com/app/pricing/" target="_blank">Zapier-Plan</a> verfügen, der Premium-Apps unterstützt.
 {% enddetails %}
 
-{% details Warum werden Facebook-Leads nicht mit Braze synchronisiert? %}
+{% details Why aren’t Facebook leads syncing to Braze? %}
 1. Vergewissern Sie sich, dass Sie Administrator-Zugriff auf Ihre Facebook-Seite, Ihr Anzeigenkonto und Ihren Lead-Zugang haben. Verbinden Sie dann Ihr Konto in Zapier erneut.
 2. Überprüfen Sie, ob das von Ihnen in Facebook erstellte Sofortformular mit dem in Ihrem Trigger-Schritt ausgewählten Formular übereinstimmt. 
 3. Vergewissern Sie sich, dass Sie Zapier den Leads Access zugewiesen haben, indem Sie zu **Facebook Business Manager** > **Integrationen** > **Lead Access** gehen.
 {% enddetails %}
 
-{% details Warum sehe ich doppelte Nutzerprofile mit der gleichen E-Mail? %}
+{% details Why am I seeing duplicate user profiles with the same email? %}
 Es gibt eindeutige Möglichkeiten, Nutzerprofile in Braze auf der Grundlage ihres [Nutzerprofil-Lebenszyklus]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-profile-lifecycle) zu erstellen und zu verwalten.
 
 Abhängig von Ihren internen Prozessen und wenn Sie die Erstellung von Kund:in in Braze triggern, kann es zu doppelten Nutzerprofilen kommen, da eine Race-Condition zwischen dem Nutzerprofil, das von der Integration erstellt wird, und dem Nutzerprofil, das in Ihrem System erstellt wird, besteht. In Braze können Sie [Nutzer:innen-Profile zusammenführen]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
 {% enddetails %}
 
-{% details Ich habe kein Zapier-Konto. Wie kann ich Facebook Lead Ads Webhooks in Braze triggern? %}
+{% details I don’t have a Zapier account. How can I trigger Facebook Lead Ads webhooks into Braze? %}
 Wenn Sie Zapier nicht verwenden und auch nicht vorhaben, Zapier zu verwenden, können Sie die Integration direkt von Facebook in Braze erstellen. Weitere Informationen finden Sie in der <a href="https://developers.facebook.com/docs/marketing-api/guides/lead-ads/" target="_blank">Dokumentation von Lead Ads</a>.
 
 Um Leads von Facebook abzurufen, verwenden Sie <a href="https://developers.facebook.com/docs/marketing-api/guides/lead-ads/retrieving#webhooks" target="_blank">Webhooks</a>. Lesen Sie die <a href="https://developers.facebook.com/docs/graph-api/webhooks/getting-started" target="_blank">Dokumentation zu Webhooks</a>, um mit Webhooks in Facebook zu beginnen.

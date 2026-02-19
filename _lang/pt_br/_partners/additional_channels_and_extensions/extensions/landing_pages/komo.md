@@ -35,16 +35,16 @@ A integração entre a Braze e a Komo permite coletar dados primários e de terc
 ## Casos de uso
 
 {% tabs local %}
-{% tab Captura de dados - Envio de formulários %}
+{% tab Data Capture - Form Submission %}
 
 Quando um usuário enviar um formulário de captura de dados personalizável no Komo, os campos do Komo mapeados na integração do Braze serão passados para o Braze por meio da chamada da API `/users/track/`.
 
 Existem formulários de captura de dados no início ou no final dos cartões.
 
 {% endtab %}
-{% tab Pesquisa de mercado - em breve %}
+{% tab Market Research - Coming soon %}
 
-Em breve, a Komo adicionará a capacidade de transmitir dados de pesquisa de marketing capturados quando um usuário responder a uma pergunta de questionário, enquete, teste de personalidade, swiper etc. Esses dados o capacitarão a aprimorar o perfil de um usuário além dos dados capturados nos envios de formulários.
+A Komo também ativa a capacitação para transmitir dados de pesquisa de marketing capturados quando um usuário responde a uma pergunta de questionário, enquete, teste de personalidade, swiper e similares. Esses dados o capacitarão a aprimorar o perfil de um usuário além dos dados capturados nos envios de formulários.
 
 {% endtab %}
 {% endtabs %}
@@ -53,32 +53,34 @@ Em breve, a Komo adicionará a capacidade de transmitir dados de pesquisa de mar
 
 ### Etapa 1: Publicar um hub e um cartão de engajamento do Komo
 
-Você precisará publicar um hub de engajamento da Komo com pelo menos um cartão contendo um formulário de captura de dados. Quando publicado, é possível testar a experiência do usuário de ponta a ponta e verificar se a integração está funcionando corretamente.
+Você precisará publicar um Komo Hub com pelo menos um cartão contendo um formulário de captura de dados. Quando publicado, é possível testar a experiência do usuário de ponta a ponta e verificar se a integração está funcionando corretamente.
 
-![]({% image_buster /assets/img/komo/komo_hub_publish.png %})
+![Komo Hub.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step1.png %})
 
-### Etapa 2: Adicionar a integração do Braze
+### Etapa 2: Adicionar o app Braze Connected 
 
-No Komo, vá para a guia **Hub Settings (Configurações do hub)** e selecione a seção **Integrations (Integrações** ). Em seguida, localize a integração do Braze na lista e selecione o botão **Connect (Conectar** ) para ativar a integração.
+No Komo, vá para a guia **Company Settings (Configurações da empresa** ) e selecione a seção **Connected Apps (Aplicativos conectados** ). 
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_integrations.png %})
+Em seguida, localize a integração do Braze na lista e selecione o botão **Connect (Conectar** ) para ativar a integração.
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_connect.png %})
+![Integração com o Braze.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2a.png %}){: style="max-width:50%;"}
 
-#### Configurar o mapeamento de usuários
+![Conecte a integração do Braze Etapa 2b.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2b.png %})
 
-A primeira coisa que você precisará configurar é como mapear os usuários capturados no Komo para os usuários no Braze. Se estiver capturando o `braze_id` ou `external_id` por um campo na Komo, poderá selecionar a chave apropriada; caso contrário, selecione a opção mais comum, que é um alias de usuário de e-mail ou telefone.
+#### Configurar a integração por meio de um fluxo de trabalho
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_key.png %}){: style="max-width:65%;"}
+Agora você precisa configurar um fluxo de trabalho, em um espaço de trabalho, site ou cartão, para sincronizar os dados com o Braze. 
 
-Em seguida, você precisará definir um mapa dos campos da Komo que deseja transferir para as atribuições da Braze. O Komo captura uma grande quantidade de dados, portanto, somente os campos mapeados na integração do Braze serão enviados ao Braze.
+O escopo do fluxo de trabalho dentro do escopo de todo o espaço de trabalho, de um site (que contém muitos cartões) ou de um único cartão depende do fato de você querer que o fluxo de trabalho seja disparado em muitos cartões ou campanhas. 
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_settings.png %}){: style="max-width:65%;"}
+Depois de criar um fluxo de trabalho, defina seu disparador, procure o Braze no menu de etapas e adicione a etapa "Track User" (Rastrear usuário). 
 
-Por fim, adicione sua chave de API e o URL do ponto de extremidade REST e clique em **Salvar** para ativar a integração.
+![Configuração do usuário de rastreamento.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3a.png %})
+
+A partir daqui, configure os eventos, as atribuições e as inscrições que você deseja sincronizar do Komo para o Braze. 
+
+![Lista de blocos de conteúdo.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3b.png %})
 
 ## Usando a integração
 
-Depois que a integração for concluída, você poderá usar os dados do Komo enviados ao Braze para criar segmentos para direcionamento.
-
-
+Agora sua integração está funcionando e você pode monitorar cada execução na guia Execuções do fluxo de trabalho. 

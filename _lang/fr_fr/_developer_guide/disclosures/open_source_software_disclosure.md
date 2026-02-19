@@ -1,5 +1,5 @@
 ---
-nav_title: Divulgation du logiciel Open Source
+nav_title: Divulgation des logiciels libres
 article_title: Divulgation du logiciel Open Source
 page_order: 1
 page_type: reference

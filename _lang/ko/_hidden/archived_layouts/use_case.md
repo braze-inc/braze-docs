@@ -1,5 +1,5 @@
 ---
-nav_title: 사용 사례
+nav_title: Use case
 
 page_order: 7
 
@@ -97,6 +97,5 @@ noindex: true
 
 ### 여전히 길을 잃었나요?
 
-이 기사가 도움이 되지 않았다면, 피드백을 남기거나 [지원 티켓][support]을 여세요!
+이 기사가 도움이 되지 않았다면, 피드백을 남기거나 [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요!
 
-[support]: {{site.baseurl}}/braze_support/

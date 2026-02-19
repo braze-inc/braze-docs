@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Programar lienzos activados por la API"
-article_title: "POST: Programar lienzos activados por la API"
+nav_title: "PUBLICAR: Programar lienzos activados por la API"
+article_title: "PUBLICAR: Programar lienzos activados por la API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -28,7 +28,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## Cuerpo de la solicitud
 

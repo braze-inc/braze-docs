@@ -66,21 +66,21 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>mc_watched_movie</code></td>
             <td>MovieCanon</td>
             <td>Event</td>
-            <td><code>Titel: String</code></td>
+            <td><code>title: string</code></td>
             <td>Wenn der Nutzer:innen ein Video zu Ende angesehen hat</td>
         </tr>
         <tr>
             <td><code>mc_viewed_movie_page</code></td>
             <td>MovieCanon</td>
             <td>Event</td>
-            <td><code>Titel: String</code></td>
+            <td><code>title: string</code></td>
             <td>Wenn der Nutzer:in eine Filmseite blickt</td>
         </tr>
         <tr>
             <td><code>pl_viewed_item</code></td>
             <td>HosenLabyrinth</td>
             <td>Event</td>
-            <td><code>item_name: String</code></td>
+            <td><code>item_name: string</code></td>
             <td>Wenn der Nutzer:innen eine Produktseite aufruft</td>
         </tr>
         <tr>
@@ -94,21 +94,21 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>pl_added_item_to_wishlist</code></td>
             <td>HosenLabyrinth</td>
             <td>Event</td>
-            <td><code>item_name: String</code></td>
+            <td><code>item_name: string</code></td>
             <td>Wenn der Nutzer:innen einen Artikel zu seinem Wunschzettel hinzufügt</td>
         </tr>
         <tr>
             <td><code>pl_added_item_to_cart</code></td>
             <td>HosenLabyrinth</td>
             <td>Event</td>
-            <td><code>item_name: String</code></td>
+            <td><code>item_name: string</code></td>
             <td>Wenn der Nutzer:innen einen Artikel in den Warenkorb legt</td>
         </tr>
         <tr>
-            <td><code>&lt;purchase_event></code></td>
+            <td><code>&lt;purchase_event&gt;</code></td>
             <td>HosenLabyrinth</td>
             <td>Event</td>
-            <td><code>Name: String</code><br><code>Preis: Nummer</code></td>
+            <td><code>name: string</code><br><code>price: number</code></td>
             <td>Wenn der Nutzer:innen einen Kauf abschließt</td>
         </tr>
         <tr>
@@ -122,49 +122,49 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>st_completed_class</code></td>
             <td>Steppington</td>
             <td>Event</td>
-            <td><code>class_type: String</code><br><code>calories_burned: Nummer</code><br><code>workout_length: Nummer</code></td>
+            <td><code>class_type: string</code><br><code>calories_burned: number</code><br><code>workout_length: number</code></td>
             <td>Wenn der Nutzer:in ein Training abgeschlossen hat</td>
         </tr>
         <tr>
             <td><code>st_viewed_premium_benefit</code></td>
             <td>Steppington</td>
             <td>Event</td>
-            <td><code>benefit_type: String</code></td>
+            <td><code>benefit_type: string</code></td>
             <td>Wenn der Nutzer:innen den Tab Steppington+ besucht (wenn er mit dem Feature-Flag aktiviert ist)</td>
         </tr>
         <tr>
             <td><code>st_viewed_class</code></td>
             <td>Steppington</td>
             <td>Event</td>
-            <td><code>class_type: String</code></td>
+            <td><code>class_type: string</code></td>
             <td>Wenn der Nutzer:innen eine Trainingsseite besucht</td>
         </tr>
         <tr>
             <td><code>st_completed_class</code></td>
             <td>Steppington</td>
             <td>Event</td>
-            <td><code>class_type: String</code><br><code>calories_burned: Nummer</code><br><code>workout_length: Nummer</code></td>
+            <td><code>class_type: string</code><br><code>calories_burned: number</code><br><code>workout_length: number</code></td>
             <td>Wenn der Nutzer:in ein Training abgeschlossen hat</td>
         </tr>
         <tr>
             <td><code>st_most_recent_completed_class</code></td>
             <td>Steppington</td>
             <td>Attribut</td>
-            <td><code>String</code></td>
+            <td><code>string</code></td>
             <td>Wenn der Nutzer:in ein Training abgeschlossen hat</td>
         </tr>
         <tr>
             <td><code>st_favorited_class</code></td>
             <td>Steppington</td>
             <td>Event</td>
-            <td><code>class_type: String</code></td>
+            <td><code>class_type: string</code></td>
             <td>Wenn der Nutzer:innen eine Klasse favorisiert</td>
         </tr>
         <tr>
             <td><code>st_unfavorited_class</code></td>
             <td>Steppington</td>
             <td>Event</td>
-            <td><code>class_type: String</code></td>
+            <td><code>class_type: string</code></td>
             <td>Wenn der Nutzer:innen eine Klasse ablehnt</td>
         </tr>
         <tr>
@@ -178,7 +178,7 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>st_set_goal</code></td>
             <td>Steppington</td>
             <td>Event</td>
-            <td><code>goal_name: String</code><br><code>Ziel: Nummer</code><br><code>Einheiten: String</code></td>
+            <td><code>goal_name: string</code><br><code>goal: number</code><br><code>units: string</code></td>
             <td>Wenn der Nutzer:innen den Button <strong>Kostenlose Demo starten</strong> auswählt.</td>
         </tr>
     </tbody>

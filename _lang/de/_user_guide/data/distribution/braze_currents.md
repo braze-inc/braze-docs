@@ -12,9 +12,9 @@ search_rank: 9
 guide_top_header: "Braze-Currents"
 guide_top_text: "Die Wirkung Ihrer Engagement-Strategie sollten Sie genau kennen. Denn nur so können Sie Ihre Nutzerkommunikation unterfüttern und laufend nachschärfen. Um diese wertvollen Daten über das Engagement eng mit Ihren übrigen Abläufen zu verknüpfen und Ihre Investitionen in Data Science zu verstärken, verfolgt die Braze-Plattform eine breite Palette von Ereignisdaten aus Ihrer Integration für Analysen, Retargeting und andere Anwendungsfälle in Ihren eigenen Systemen. <br> <br>Currents ist ein Echtzeit-Datenstream zu Ihren Engagement-Ereignissen. Es ist der robusteste und zugleich kleinteiligste Export in Braze. Es stellt Ihnen Daten in einem Avro-Dateityp für einen unserer zahlreichen <a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>Partner</a> zur Verfügung und ermöglicht es Ihnen, die eindeutigen und wertvollen Daten, die Braze erstellt, für Ihre Business-Intelligence (BI) und Analytics-Bemühungen in anderen erstklassigen Plattformen zu nutzen."
 
-guide_featured_title: "Artikel im Abschnitt"
+guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
-- name: "Einrichtung"
+- name: "Currents einrichten"
   link: /docs/user_guide/data/braze_currents/setting_up_currents/
   image: /assets/img/braze_icons/building-01.svg
 - name: "Verfügbare Partner"
@@ -57,6 +57,6 @@ Es gibt noch viel mehr, was Sie mit Ereignisdaten in Currents anstellen können.
 
 ## Auf Currents zugreifen
 
-Ein Konnektor für Currents ist bereits in vielen Pro- und Enterprise-Pakete enthalten. Wenn Sie sich für Currents interessieren, wenden Sie sich an Ihren Account Manager. Ihr Account Manager und unsere Datenspezialisten können Sie bei der [Einrichtung und Integration von Currents]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) unterstützen.
+Ein Konnektor für Currents ist bereits in vielen Pro- und Enterprise-Pakete enthalten. Wenn Sie daran interessiert sind, Currents zu nutzen, wenden Sie sich an Ihren Account Manager:in. Ihr Account Manager und unsere Datenspezialisten können Sie bei der [Einrichtung und Integration von Currents]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) unterstützen.
 
 <br><br>

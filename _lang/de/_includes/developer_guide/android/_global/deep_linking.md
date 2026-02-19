@@ -144,7 +144,13 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 
 ## Anpassen der WebView-Aktivität {#Custom_Webview_Activity}
 
-Standardmäßig werden Deeplinks auf Websites, die innerhalb der App von Braze geöffnet werden, von [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html) verarbeitet. Um dies zu ändern:
+Wenn Braze innerhalb der App Deeplinks zu Websites öffnet, werden die Deeplinks von [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
+
+{% alert note %}
+Für angepasste HTML In-App-Nachrichten öffnen sich die mit `target="_blank"` konfigurierten Links im Standard Webbrowser des Geräts und werden nicht von `BrazeWebViewActivity` verarbeitet.
+{% endalert %}
+
+Um dies zu ändern:
 
 1. Erstellen Sie eine neue Aktivität, die die Ziel-URL von `Intent.getExtras()` mit dem Schlüssel `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA` behandelt. Für ein Beispiel, siehe [`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
 2. Fügen Sie diese Aktivität zu `AndroidManifest.xml` hinzu und setzen Sie `exported` auf `false`.

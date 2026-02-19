@@ -23,7 +23,7 @@ Puedes consultar el intervalo de tiempo específico en la sección Solución de 
 
 Los campos específicos utilizados para cada socio pueden variar en función de los requisitos del socio. 
 
-Por ejemplo, cuando configure una Sincronización de Audiencia con Facebook, podrá utilizar una amplia variedad de campos de origen como correo electrónico, teléfono, nombre y apellidos, mientras que, con Snapchat, sólo podrá seleccionar correo electrónico, teléfono o ID de anunciante móvil. 
+Por ejemplo, cuando configuras una Sincronización de audiencia con Facebook, puedes utilizar una amplia variedad de campos de origen, como correo electrónico, teléfono, nombre y apellidos, mientras que, con Snapchat, sólo puedes seleccionar correo electrónico, teléfono o ID de anunciante móvil. 
 
 Es importante tener en cuenta que los campos de usuario que puede seleccionar para sincronizar se correlacionan con los atributos estándar de Braze y los ID de publicidad móvil. Debe asegurarse de que transmite adecuadamente estos datos a través de nuestros SDK o API. 
 
@@ -51,7 +51,7 @@ El usuario que se vuelva a conectar debe tener acceso de lectura y escritura a t
 | Tamaño de la audiencia demasiado bajo | Esto puede ocurrir si has creado un paso de Sincronización de audiencias que elimine usuarios de tus audiencias. Si el tamaño de tu audiencia se acerca a cero, la red puede marcar que el tamaño de la audiencia es demasiado bajo para servir. | Confirma que estás considerando una estrategia de Sincronización de Audiencia que añada y elimine usuarios regularmente de forma que no se agote por completo el tamaño de la audiencia. |
 | La audiencia no existe | El paso Sincronizar audiencia utiliza una audiencia que no existe. Esto también puede activarse si no tienes el permiso necesario para acceder a la audiencia. | Añade una audiencia activa en tu configuración de Sincronización de Audiencias o crea una nueva audiencia. |
 | Intento de acceso a la cuenta publicitaria | Este error se produce si no tienes permiso para la cuenta de publicidad, para una audiencia que hayas seleccionado o para ambas. | Trabaja con los administradores de tu cuenta publicitaria para obtener el acceso y los permisos adecuados. |
-| Configuración no válida | Esto puede ocurrir si no has configurado un destino específico de Sincronización de Audiencia en Canvas, incluidos los campos de cuenta publicitaria, audiencia o usuario que deben coincidir. | Completa la configuración de cada socio antes del lanzamiento. |
+| Configuración no válida | Esto puede ocurrir si no has configurado un destino específico de Sincronización de público en Canvas, incluidos los campos de cuenta publicitaria, audiencia o usuario que deben coincidir. | Completa la configuración de cada socio antes del lanzamiento. |
 | Las condiciones de servicio | Para algunos destinos de Sincronización de Audiencias, como Facebook, la red publicitaria requiere que aceptes unas condiciones de servicio específicas para utilizar la característica de Sincronización de Audiencias. Este error se producirá si no ha aceptado las condiciones correspondientes. | Confirma que has aceptado las condiciones requeridas de cada socio. Para Facebook en concreto, revisa [la solución de problemas de Facebook]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/#troubleshooting). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

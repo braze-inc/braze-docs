@@ -68,6 +68,10 @@ Weitere Informationen darüber, was Sie nach dem Start bearbeiten können, finde
 
 Ein Benutzer kann nur einmal pro Canvas-Eintrag konvertieren. Umrechnungen werden der letzten Nachricht zugeordnet, die der Benutzer für diesen Eintrag erhalten hat. Der Zusammenfassungsblock am Anfang eines Canvas spiegelt alle Konvertierungen wider, die von Benutzern innerhalb dieses Pfads durchgeführt wurden, unabhängig davon, ob sie eine Nachricht erhalten haben oder nicht. Bei jedem weiteren Schritt werden nur Konversionen angezeigt, die während des letzten Schrittes, den der Nutzer:innen erhalten hat, stattgefunden haben.
 
+{% alert note %}
+Wenn ein Nutzer:innen ein Canvas erneut betritt, werden Konversions-Events nur für den letzten Eingang getrackt. Konversions-Ereignisse werden für frühere Eingänge nicht protokolliert, auch wenn das Konversions-Ereignis rückerfüllt wird.
+{% endalert %}
+
 {% details Expand for examples %}
 
 **Beispiel 1**

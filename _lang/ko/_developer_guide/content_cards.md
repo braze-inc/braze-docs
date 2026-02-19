@@ -15,17 +15,19 @@ platform:
 
 > Braze SDK의 콘텐츠 카드에 대해 배우고, 애플리케이션에 사용할 수 있는 다양한 데이터 모델과 카드별 속성을 포함합니다.
 
+{% multi_lang_include banners/content_card_alert.md %}
+
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/content_cards.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/content_cards.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
@@ -48,7 +50,7 @@ platform:
 {% multi_lang_include developer_guide/unity/content_cards.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% multi_lang_include developer_guide/xamarin/content_cards.md %}
 {% endsdktab %}
 {% endsdktabs %}

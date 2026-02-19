@@ -13,7 +13,7 @@ description: "Esta página de destino enumera los objetos y filtros de la API Br
 ## Objetos y filtros
 
 - [Objeto de propiedades de entrada del lienzo]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
-- [Filtro y objeto de Audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [Filtro de audiencia conectado & objeto]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Objeto del evento]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/)
 - [Objeto de destinatarios]({{site.baseurl}}/api/objects_filters/recipient_object/)

@@ -112,6 +112,10 @@ Braze.enableDelayedInitialization(context)
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
+遅延初期化がイネーブルメントで、プッシュ通知にディープリンクアクションが含まれている場合、ディープリンクが解決されない。
+{% endalert %}
+
 #### ステップ4.2：プッシュ分析を設定する（オプション）
 
 遅延初期化をイネーブルメントにすると、プッシュ分析はデフォルトでキューに入れられる。しかし、その代わりにプッシュ分析を[明示的にキューに入れたり](#explicitly-queue-push-analytics)、[ドロップ](#drop-push-analytics)したりすることもできる。

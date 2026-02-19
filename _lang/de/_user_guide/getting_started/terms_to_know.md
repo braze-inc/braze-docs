@@ -4,8 +4,8 @@ nav_title: "Begriffe, die Sie kennen sollten"
 article_title: Begriffe zum Thema Braze
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze. Give this a read before you begin your onboarding."
+glossary_top_header: "Begriffe zum Kennenlernen"
+glossary_top_text: "Diese Begriffe sollen Ihnen helfen, Ihre Reise zu einer besseren Bindung von Kund:innen und Nutzern:innen mit Braze zu beginnen. Lesen Sie dies, bevor Sie mit Ihrem Onboarding beginnen."
 page_type: glossary
 description: "Dieses Glossar enthält wichtige Begriffe, die Sie während des Onboarding-Prozesses bei Braze kennen sollten."
 
@@ -43,7 +43,7 @@ glossaries:
   - name: Benutzerdefinierte Ereignisse
     description: "<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">Angepasste Events</a> sind Aktionen, die von Ihren Nutzer:innen ausgeführt werden. Sie eignen sich am besten für das Tracking hochwertiger Nutzer:innen-Interaktionen mit Ihrer Anwendung."
   - name: Datenpunkt
-    description: "Ein Datenpunkt wird gezählt, wenn ein <a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">angepasstes Attribut</a> gesetzt oder aktualisiert wird (auch wenn Sie es mit demselben Wert aktualisieren), wenn ein <a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">angepasstes Event</a> oder ein Kaufereignis protokolliert wird, wenn irgendwelche Standarddaten (z.B. <code>E-Mail</code>, <code>Vorname</code>, <code>Nachname</code>, <code>Land</code> oder <code>Heimatort</code>) protokolliert werden, wenn eine Sitzung beginnt und wenn eine Sitzung endet."
+    description: "Ein Datenpunkt wird gezählt, wenn ein <a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">angepasstes Attribut</a> gesetzt oder aktualisiert wird (auch wenn Sie es mit demselben Wert aktualisieren), ein <a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">angepasstes Event</a> oder Kauf-Event protokolliert wird, beliebige Standarddaten (z.B., <code>email</code>, <code>first_name</code>, <code>last_name</code>, <code>country</code>, oder <code>home_city</code>) protokolliert wird, wann eine Sitzung beginnt und wann eine Sitzung endet."
   - name: Deeplinking
     description: "<a href=\"https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/\">Deeplinks</a> werden verwendet, um Kund:innen zu ihrer nächsten Aktion oder ihrem nächsten Engagement zu führen. Mit Deeplinks können Sie eine Nachricht mit einem gezielten Inhalt auf einer Website oder in einer mobilen App verbinden."
   - name: "Inaktive Nutzer:innen"
@@ -81,7 +81,7 @@ glossaries:
   - name: Push-Nachrichten
     description: "Eine <a href=\"https://www.braze.com/docs/user_guide/message_building_by_channel/push/\">Push-Nachricht</a> oder Push-Benachrichtigung ist eine Benachrichtigung, die von einer mobilen Anwendung angezeigt wird. Push-Benachrichtigungen erscheinen oft als Popup-Dialoge und Banner für iOS und Android."
   - name: Push-Token
-    description: "Ein Push-Token ist ein eindeutiger Schlüssel, der von Apple oder Google erstellt und zugewiesen wird, um eine Verbindung zwischen einer App und einem iOS-, Android- oder Web-Gerät herzustellen. <a href=\"https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration\">Die Push-Token-Migration</a> ist das Importieren dieser bereits generierten Schlüssel in Braze."
+    description: "Ein Push-Token ist ein eindeutiger Schlüssel, der von Apple oder Google erstellt und zugewiesen wird, um eine Verbindung zwischen einer App und einem iOS-, Android- oder Web-Gerät herzustellen. <a href=\"https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens\">Die Push-Token-Migration</a> ist das Importieren dieser bereits generierten Schlüssel in Braze."
   - name: Push Time to Live
     description: "Die auch als <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/\">Push-TTL</a> bezeichnete Zeit bis zur Auslieferung bezieht sich auf den Zeitraum, in dem Kampagnen weiterhin versuchen, einem Offline-Nutzer zugestellt zu werden."
   - name: Race-Condition

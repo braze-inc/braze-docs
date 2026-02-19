@@ -38,7 +38,7 @@ L'Eagle Eye Connect est une intégration bidirectionnelle entre Braze et AIR qui
 Les tableaux suivants présentent les deux types d'intégration pris en charge entre Braze et Eagle Eye AIR. Eagle Eye Connect est le logiciel intermédiaire qui permet l'échange de données entre AIR et des systèmes partenaires comme Braze. Pour en savoir plus, consultez [la documentation d'Eagle Eye sur la Braze](https://developer.eagleeye.com/docs/braze).
 
 {% tabs local %}
-{% tab sortant %}
+{% tab outbound %}
 <table>
   <thead>
     <tr>
@@ -73,7 +73,7 @@ Les tableaux suivants présentent les deux types d'intégration pris en charge e
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation"}
 {% endtab %}
 
-{% tab entrant %}
+{% tab inbound %}
 <table>
   <thead>
     <tr>
@@ -117,7 +117,7 @@ Actuellement, les connecteurs entrants et sortants ne peuvent être mis en place
 
 En travaillant avec votre équipe Eagle Eye, vous accomplirez les tâches suivantes :
 
-### Étape 1 : Fournir les détails de la configuration
+### Étape 1 : Fournir les détails de la configuration
 
 Tout d'abord, vous fournirez les informations suivantes à votre équipe Eagle Eye :
 

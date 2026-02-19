@@ -6,7 +6,7 @@ Antes de empezar este tutorial, comprueba que tu SDK de Braze cumple los requisi
 
 ## Mostrar banners para el SDK de Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Visualización de banners Android" %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Displaying Banners Android" %}
 
 {% scrolly %}
 

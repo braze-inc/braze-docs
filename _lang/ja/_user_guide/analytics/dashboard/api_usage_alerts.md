@@ -66,7 +66,7 @@ API使用アラートを作成する：
 
 ## アラート通知の設定
 
-メールアラート、Webhook アラート、またはその両方を設定できます。Webhookアラートは、Slackチャネルなどの外部プラットフォームにアラートを送信するといったユースケースで非常に役立つ。例として、Slackとのアラート統合に関する[ドキュメントで](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration)、通知設定を参照できる。
+メールアラート、Webhook アラート、またはその両方を設定できます。Webhookアラートは、Slackチャネルなどの外部プラットフォームにアラートを送信するといったユースケースで非常に役立つ。例として、Slackとアラートの統合に関する[ドキュメントで](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration)、通知設定を参照されたい。
 
 ![アラートの基準に達すると、選択したメールにメールが送信される。]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
 
@@ -79,17 +79,17 @@ API使用アラートを作成する：
   "data": {
     "alert_name": "My First API Usage Alert",
     "alert_type": "API Usage Alert",
-    "alert_criteria": [
+    "alert_criteria": {
     	"response_codes": ["201", "202", "203"],
-    	"threshold_condition: "Increased by %",
+    	"threshold_condition": "Increased by %",
     	"threshold_volume": 50,
     	"within": "1 day"
-    	],
-    "timeframe_start": 2025-03-20T15:35:00Z,
-    "timeframe_end": 2025-03-20T16:35:00Z,
+    },
+    "timeframe_start": "2025-03-20T15:35:00Z",
+    "timeframe_end": "2025-03-20T16:35:00Z",
     "volume": 1500,
-    "previous_timeframe_start": 2025-03-20T14:35:00Z,
-    "previous_timeframe_end": 2025-03-20T15:35:00Z,
+    "previous_timeframe_start": "2025-03-20T14:35:00Z",
+    "previous_timeframe_end": "2025-03-20T15:35:00Z",
     "previous_volume": 1000
   },
   "text": "Your My First API Usage Alert alert has triggered. You can view your alert and usage here: <link>. Note that this alert will reset in 1 day, as each alert will only send one notification per 8 hours."

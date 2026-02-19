@@ -1,3 +1,5 @@
+## Tablas de relaciones
+
 ### `FIRSTSESSION_SHARED`
 
 ```json
@@ -121,4 +123,3 @@
     }
 }
 ```
-

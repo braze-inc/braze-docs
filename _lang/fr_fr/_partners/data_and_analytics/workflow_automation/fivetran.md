@@ -44,7 +44,7 @@ Dans le [tableau de bord Fivetran](https://fivetran.com/dashboard), sélectionne
 
 Ouvrez la [console Amazon IAM](https://console.aws.amazon.com/iam/home#home) et naviguez vers **Politiques > Créer une politique.**
 
-![Console Amazon IAM avec liste des politiques.]({% image_buster /assets/img/fivetran_as3_iam.png %})
+![Console Amazon IAM avec la liste des politiques.]({% image_buster /assets/img/fivetran_as3_iam.png %})
 
 Ensuite, ouvrez l'onglet **JSON** et collez la politique suivante. Veillez à remplacer `{your-bucket-name}` par le nom de votre compartiment S3.
 
@@ -76,7 +76,7 @@ Ensuite, ouvrez l'onglet **JSON** et collez la politique suivante. Veillez à re
 
 Enfin, sélectionnez **Réviser** la politique et donnez-lui un nom et une description uniques. Sélectionnez **Créer une politique** pour créer votre politique. 
 
-![Champs pour nommer la politique et fournir une description.]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
+![Champs permettant de nommer la politique et d'en fournir une description.]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
 
 ##### Créer un rôle IAM {#step-two}
 
@@ -86,7 +86,7 @@ Dans AWS, accédez à **Rôles**, puis sélectionnez **Créer un nouveau rôle**
 
 Sélectionnez **un autre compte AWS** et indiquez l'ID du compte Fivetran `834469178297`. Veillez à cocher la case **Require external ID.** Vous y indiquerez l'ID externe trouvé à l'étape 1.
 
-![Le champ pour saisir votre "Account ID", une case à cocher pour exiger l'ID externe et une zone de texte vide pour saisir votre "ID externe".]({% image_buster /assets/img/fivetran_another_aws_account.png %})
+![Le champ pour saisir votre "Account ID", une case à cocher pour exiger l'ID externe, et une zone de texte vide pour saisir votre "ID externe".]({% image_buster /assets/img/fivetran_another_aws_account.png %})
 
 Ensuite, sélectionnez **Next : Permissions** pour sélectionner la politique que vous venez de créer.
 
@@ -94,7 +94,7 @@ Ensuite, sélectionnez **Next : Permissions** pour sélectionner la politique qu
 
 Sélectionnez **Next : Consultez le site**, donnez un nom à votre nouveau rôle (par exemple Fivetran) et sélectionnez **Créer un rôle**. Une fois le rôle créé, sélectionnez-le et notez l'ARN du rôle affiché.
 
-![L'ARN Amazon S3 indiqué dans le rôle.]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
+![L’ARN Amazon S3 répertorié dans le rôle.]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 
 {% alert note %}
 Vous pouvez spécifier des autorisations pour l'ARN de rôle que vous désignez pour Fivetran. L'attribution d'autorisations sélectives à ce rôle permet à Fivetran de synchroniser uniquement ce qu'il a le droit de voir.
@@ -114,7 +114,7 @@ Dans Fivetran, sélectionnez **\+ Connecteur**, puis le connecteur **Braze** pou
 Assurez-vous qu'**Amazon S3** est sélectionné comme choix de **stockage en nuage**.
 {% endalert %}
 
-Enfin, sélectionnez **Enregistrer et tester**, et Fivetran fera le reste en se synchronisant avec les données de votre compte Braze !
+Enfin, sélectionnez **Enregistrer le test & **, et Fivetran fera le reste en se synchronisant avec les données de votre compte Braze !
 
 ### Configuration de Braze Currents pour Google Cloud Storage
 
@@ -122,17 +122,17 @@ Enfin, sélectionnez **Enregistrer et tester**, et Fivetran fera le reste en se 
 
 Dans le [tableau de bord Fivetran](https://fivetran.com/dashboard), sélectionnez **\+ Connecteur**, puis le connecteur **Braze** pour lancer le formulaire de configuration. Ensuite, sélectionnez le **stockage dans le nuage de Google**. Notez l'adresse e-mail qui apparaît.
 
-![Le Fivetran a configuré un formulaire de connecteur Braze. Le champ de l'e-mail nécessaire à cette étape est situé au milieu de la page dans une boîte gris clair.]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
+![Le Fivetran a configuré un formulaire de connecteur Braze. Le champ e-mail nécessaire à cette étape est situé au milieu de la page dans un encadré gris clair.]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
 
 #### Étape 2 : Accorder l'accès au compartiment
 
 Accédez à votre [Google Storage Console](https://console.cloud.google.com/storage/browser) et sélectionnez le compartiment avec lequel vous avez configuré Braze Currents, puis sélectionnez **Modifier les autorisations du compartiment**.
 
-![Les compartiments disponibles de la console de Google Storage. Localisez un compartiment et sélectionnez l'icône verticale à trois points pour ouvrir le menu déroulant qui vous permet de modifier les emplacements du compartiment.]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
+![Les compartiments disponibles de la console de Google Storage. Localisez un compartiment et sélectionnez l'icône verticale à trois points pour ouvrir le menu déroulant qui vous permet de modifier les autorisations du compartiment.]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
 
 Ensuite, accordez à `Storage Object Viewer` l'accès à l'e-mail de l'[étape 1](#step-one2) en ajoutant l'e-mail en tant que membre. Notez le nom du compartiment ; vous en aurez besoin à l'étape suivante pour configurer Fivetran.
 
-![Seau avec autorisations.]({% image_buster /assets/img/fivetran_add_members_gcs.png %})
+![Compartiment avec permissions.]({% image_buster /assets/img/fivetran_add_members_gcs.png %})
 
 #### Étape 3 : Complétez le connecteur Fivetran
 
@@ -147,5 +147,5 @@ Dans Fivetran, sélectionnez **\+ Connecteur**, puis le connecteur **Braze** pou
 Assurez-vous que **Google cloud storage** est sélectionné comme choix de **stockage dans le nuage**.
 {% endalert %}
 
-Enfin, sélectionnez **Enregistrer et tester**, et Fivetran fera le reste en se synchronisant avec les données de votre compte Braze !
+Enfin, sélectionnez **Enregistrer le test & **, et Fivetran fera le reste en se synchronisant avec les données de votre compte Braze !
 

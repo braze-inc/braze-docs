@@ -3,7 +3,7 @@ nav_title: Ideas y estrategias
 article_title: Ideas y estrategias
 layout: dev_guide
 guide_top_header: "Ideas y estrategias"
-guide_top_text: "Obtén más información sobre cómo probar y comprobar tus Lienzos con diferentes ideas y estrategias."
+guide_top_text: "Obtenga más información sobre cómo probar y comprobar sus lienzos con diferentes ideas y estrategias."
 page_order: 5
 
 tool: Canvas

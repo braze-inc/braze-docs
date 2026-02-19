@@ -68,7 +68,7 @@ This return value must adhere to Braze’s `/users/track` request body format:
 
 ## Example Typeform webhook payload
 
-```json
+```http
 Content-Type: application/json
 
 {

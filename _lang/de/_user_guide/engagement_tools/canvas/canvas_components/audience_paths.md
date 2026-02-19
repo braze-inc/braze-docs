@@ -2,7 +2,7 @@
 nav_title: Zielgruppen-Pfade
 article_title: Zielgruppenpfade 
 alias: /audience_paths/
-page_order: 1
+page_order: 3
 page_type: reference
 description: "Dieser Referenzartikel beschreibt, wie Sie Zielgruppenpfade in Ihrem Canvas verwenden können, um Nutzer:innen in großem Umfang intuitiv zu filtern und zu segmentieren, und zwar mit strategischen, prioritätsbasierten Nutzergruppierungen."
 tool: Canvas
@@ -66,7 +66,7 @@ Nachdem der Schritt für Zielgruppenpfade abgeschlossen ist, hat jede Zielgruppe
 
 Nachdem Sie Ihrer Zielgruppe Segmente und Filter hinzugefügt haben, können Sie testen, ob Ihre Zielgruppen wie erwartet eingerichtet sind, indem Sie [nach einem Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), um zu überprüfen, ob er den Zielgruppenkriterien entspricht.
 
-![Die Rubrik "Nutzer:in".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
+![Die Rubrik "Nutzer:innen".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 ## Audience Paths verwenden
 

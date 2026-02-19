@@ -133,8 +133,8 @@ valid_partner_list:
   url: /docs/partners/amperity/
 - name: Hightouch
   url: /docs/partners/hightouch/
-- name: Tinyclues
-  url: /docs/partners/tinyclues/
+- name: Splio
+  url: /docs/partners/splio/
 - name: Transcend
   url: /docs/partners/transcend/
 - name: RevenueCat
@@ -145,6 +145,8 @@ valid_partner_list:
   url: /docs/partners/blueconic/
 - name: LINE
   url: /docs/partners/line/  
+- name: LinkedIn Audience Sync
+  url: /docs/partners/canvas_audience_sync/linkedin_audience_sync/
 - name: Judo
   url: /docs/partners/judo/
 - name: Shopify
@@ -383,4 +385,18 @@ valid_partner_list:
   url: /docs/deliverability_center/
 - name: Microsoft SNDS
   url: /docs/deliverability_center/
+- name: Fullstory
+  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
+- name: Open Loyalty
+  url: /docs/partners/openloyalty/
+- name: DOTS.ECO
+  url: /docs/partners/dots.eco/
+- name: Mailizio
+  url: /docs/partners/mailizio/
+- name: OpenAI
+  url: /docs/partners/openai/
+- name: Google Gemini
+  url: /docs/partners/gemini/
+- name: Anthropic
+  url: /docs/partners/anthropic/
 ---

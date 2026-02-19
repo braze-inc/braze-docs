@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Consulta à lista de endereços de e-mail cancelados"
+nav_title: "OBTER: Consulta à lista de endereços de e-mail que cancelaram inscrição"
 article_title: "OBTER: Consulta à lista de endereços de e-mail cancelados"
 search_tag: Endpoint
 page_order: 3
@@ -32,7 +32,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | ----------|-----------| ---------|------ |
-| `start_date` | Opcional <br>(ver nota) | String no formato YYYY-MM-DD| A data de início do intervalo para recuperar cancelamentos de inscrição deve ser anterior à data de término. Isso é tratado como meia-noite no horário UTC pela API. |
+| `start_date` | Opcional <br>(ver nota) | String no formato YYYY-MM-DD| Data de início do intervalo para recuperar cancelamentos de inscrição; deve ser anterior a end_date.. A API trata essa data como meia-noite no horário UTC. |
 | `end_date` | Opcional <br>(ver nota) | String no formato YYYY-MM-DD | Data final do intervalo para recuperar cancelamentos de inscrição. Isso é tratado como meia-noite no horário UTC pela API. |
 | `limit` | Opcional | Inteiro | Campo opcional para limitar o número de resultados retornados. O padrão é 100, o máximo é 500. |
 | `offset` | Opcional | Inteiro | Ponto inicial opcional na lista a ser recuperado. |
@@ -57,8 +57,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?
 As entradas são listadas em ordem decrescente.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

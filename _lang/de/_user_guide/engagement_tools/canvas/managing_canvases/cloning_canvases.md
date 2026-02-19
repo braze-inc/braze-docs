@@ -1,13 +1,13 @@
 ---
 nav_title: Klonen von Canvase
-article_title: Klonen von Canvase
+article_title: Canvase klonen
 page_order: 3
 alias: "/cloning_canvases/"
 description: "Dieser Referenzartikel beschreibt, wie Sie ein Canvas aus dem ursprünglichen Canvas-Editor in den Canvas Flow-Workflow klonen."
 tool: Canvas
 ---
 
-# Klonen von Canvase in Canvas Flow
+# Canvase zu Canvas Flow klonen
 
 {% alert important %}
 Sie können Canvase nicht mehr mit dem ursprünglichen Canvas-Experiment erstellen oder duplizieren. Braze empfiehlt Kunden, die das ursprüngliche Canvas-Erlebnis nutzen, den Wechsel zu Canvas Flow, dem aktuellen Canvas-Erlebnis.
@@ -36,7 +36,7 @@ Zuvor konnten einige Leinwände mit Verzweigungen nicht geklont werden. Jetzt k�
 Wenn Sie ein aktives Canvas klonen, sendet Braze die Nutzer:innen weiterhin über das ursprüngliche Canvas. Wir empfehlen, ein Canvas vor dem Klonen zu stoppen, um zu vermeiden, dass doppelte Nachrichten an Nutzer:innen von beiden Canvas gesendet werden.
 {% endalert %}
 
-![Canvas Dashboard mit zwei Canvase aufgelistet: V2 Kopie von Canvas V1 und Canvas V1. Die V2-Kopie von Canvas V1 hat ein Symbol, das anzeigt, dass der Canvas Flow-Workflow verwendetk wird.]({% image_buster /assets/img_archive/clone_to_v2_dashboard.png %})
+![Canvas-Dashboard mit zwei aufgelisteten Canvase: V2 Kopie von Canvas V1 und Canvas V1. Die V2-Kopie von Canvas V1 hat ein Symbol, das anzeigt, dass der Canvas Flow-Workflow verwendetk wird.]({% image_buster /assets/img_archive/clone_to_v2_dashboard.png %})
 
 Sie haben das Klonen Ihres Canvas in den Canvas Flow-Workflow abgeschlossen. Jetzt können Sie Ihre Canvase in dieser aktualisierten Umgebung weiter gestalten!
 

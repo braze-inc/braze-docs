@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Conservation des données par Snowflake
 
-> Braze anonymise - c'est-à-dire supprime les informations personnelles identifiables (IPI) - toutes les données relatives aux événements stockées dans Snowflake qui datent de plus de deux ans. Si vous utilisez le partage de données Snowflake, vous pouvez choisir de conserver l'intégralité des données d'événements dans votre environnement en stockant une copie dans votre compte Snowflake avant l'application de la politique de conservation.
+> Braze anonymise (supprime les informations personnelles identifiables, ou IPI) la plupart des données d'événements stockées dans Snowflake qui datent de plus de deux ans. Certains événements sont conservés jusqu'à la suppression de l'utilisateur, comme indiqué plus loin sur cette page. Si vous utilisez le partage de données Snowflake, vous pouvez choisir de conserver l'intégralité des données d'événements dans votre environnement en stockant une copie dans votre compte Snowflake avant l'application de la politique de conservation.
 
 Cette page décrit deux façons de conserver des données non anonymisées : 
 
@@ -19,6 +19,15 @@ Cette page décrit deux façons de conserver des données non anonymisées :
 {% alert warning %}
 Braze anonymise automatiquement les données des événements pour les utilisateurs qui sont supprimés de Braze, comme décrit dans l'[assistance technique sur la protection des données]({{site.baseurl}}/dp-technical-assistance/). Les données copiées en dehors de la base de données partagée ne seront pas incluses dans ce processus, car Braze ne les gère plus.
 {% endalert %}
+
+## Événements exemptés de la politique de conservation de deux ans
+Braze conserve les événements liés au cycle de vie de l'utilisateur, à l'état de l'abonnement et aux envois de messages entrants jusqu'à ce qu'un utilisateur soit supprimé. Les événements suivants sont exemptés de la politique de conservation standard de deux ans :
+- `users.UserOrphan`
+- `users.UserDeleteRequest`
+- `users.behaviors.subscription.GlobalStateChange`
+- `users.behaviors.subscriptiongroup.StateChange`
+- `users.messages.sms.InboundReceive`
+- `users.messages.whatsapp.InboundReceive`
 
 ## Copier toutes les données dans une autre base de données Snowflake
 
@@ -126,7 +135,7 @@ $$;
 2\. Exécutez l'une des commandes ci-dessous dans votre compte Snowflake pour exécuter la procédure.
 
 {% tabs %}
-{% tab Défaut %}
+{% tab Default %}
 
 Par défaut, la procédure sauvegarde les données datant de plus de deux ans pour tous les types d'événements `USERS_*`. 
 
@@ -139,7 +148,7 @@ CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA')
 ```
 {% endraw %}
 {% endtab %}
-{% tab Filtré %}
+{% tab Filtered %}
 
 Spécifiez un filtre pour choisir les données d'âge à sauvegarder et spécifiez un filtre de nom de table pour ne sauvegarder que les tables d'événements sélectionnées. 
 
@@ -238,7 +247,7 @@ $$;
 2\. Lancez l'une des commandes suivantes pour exécuter la procédure. 
 
 {% tabs %}
-{% tab Défaut %}
+{% tab Default %}
 
 Par défaut, la procédure copiera toutes les tables avec le préfixe `USERS_`.
 
@@ -257,7 +266,7 @@ LIST @MY_EXPORT_STAGE;
 ```
 {% endraw %}
 {% endtab %}
-{% tab Filtré %}
+{% tab Filtered %}
 
 Spécifiez un filtre dans la procédure pour ne décharger que les tables spécifiées.
 

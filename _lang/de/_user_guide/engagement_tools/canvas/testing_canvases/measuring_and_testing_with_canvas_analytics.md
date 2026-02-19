@@ -22,7 +22,7 @@ Der obere Teil der Seite **Canvas-Details** enthält die wichtigsten Canvas-Stat
 
 Hier können Sie sich einen Überblick verschaffen und überprüfen, wie Ihr Canvas im Vergleich zu Ihrem Ziel abschneidet.
 
-\![]({% image_buster /assets/img_archive/Journey_5.png %})
+![]({% image_buster /assets/img_archive/Journey_5.png %})
 
 ### Änderungen seit letztem Aufruf
 
@@ -38,7 +38,7 @@ Bei Canvas Flow verlässt ein Benutzer das Canvas, nachdem er die Nutzlast der N
 
 Zu den Metriken gehören auch Impressionen, eindeutige Empfänger:innen, die Anzahl der Konversionen und der erzielte Umsatz. Sie können auf eine Komponente klicken, um Ihre Daten weiter aufzuschlüsseln und die kanalspezifische Performance zu sehen.
 
-\![Zwei Beispiele für Performance-Details für Canvas-Komponenten. Auf der linken Seite sehen Sie die Leistungsdetails für einen Benutzerpfad mit einer Canvas-Komponente. Rechts sehen Sie Performance-Details für eine erweiterte Canvas-Komponente und einen verschachtelten Schritt, der die Anzahl der Impressionen von In-App-Nachrichten anzeigt.]({% image_buster /assets/img_archive/Journey_6.png %})
+![Zwei Beispiele für Leistungsdetails für Canvas-Komponenten. Auf der linken Seite sehen Sie die Leistungsdetails für einen Benutzerpfad mit einer Canvas-Komponente. Rechts sehen Sie Performance-Details für eine erweiterte Canvas-Komponente und einen verschachtelten Schritt, der die Anzahl der Impressionen von In-App-Nachrichten anzeigt.]({% image_buster /assets/img_archive/Journey_6.png %})
 
 ## Aufschlüsselung der Leistung nach Variante
 
@@ -54,7 +54,7 @@ Auf der Registerkarte **Varianten analysieren** sehen Sie eine Aufschlüsselung 
 
 Sie können schnell effektive Varianten ableiten und die richtige Kadenz, den richtigen Inhalt, die richtigen Auslöser, das richtige Timing und vieles mehr ermitteln.
 
-\![]({% image_buster /assets/img_archive/analyze_variants.png %})
+![]({% image_buster /assets/img_archive/analyze_variants.png %})
 
 Zu den grundlegenden Metriken gehören die folgenden:  
 
@@ -93,7 +93,7 @@ Nehmen wir nun an, wir haben einen Canvas mit Ruhezeiten und die folgenden Ereig
 
 Nutzer:in wird in der gesamten Canvas-Variante als konvertiert gezählt, aber nicht der Schritt, da er den Schritt nicht erhalten hat.
 
-Für unser letztes Beispiel nehmen wir an, wir haben ein Canvas mit aktivierter Wiederzulassungsfähigkeit. Wenn ein Nutzer:innen das Konversions-Event beim ersten Eingang und beim zweiten Eingang durchführt, werden zwei Konversionen gezählt.
+Für unser letztes Beispiel nehmen wir an, wir haben einen Canvas mit aktivierter Wiederzulassung. Wenn ein Nutzer:innen das Konversions-Event beim ersten Eingang und beim zweiten Eingang durchführt, werden zwei Konversionen gezählt.
 
 ### Funnel-Bericht
 

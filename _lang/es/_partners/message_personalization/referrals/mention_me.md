@@ -1,6 +1,6 @@
 ---
 nav_title: Mencióname
-article_title: Integración de Mention Me con Braze
+article_title: Integrar Mention Me con Braze
 description: Guía de configuración de la integración de Mention Me
 alias: /partners/mention_me/
 page_type: partner

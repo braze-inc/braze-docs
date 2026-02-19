@@ -1,4 +1,4 @@
-# Agenten erstellen
+# Aufbau von KI-Entscheidungsagenten
 
 > Erfahren Sie, wie Sie einen Agenten für BrazeAI Decisioning Studio™ erstellen, damit Sie personalisierte Experimente automatisieren und Ergebnisse wie Konversionen, Bindung oder Umsatz optimieren können – ohne manuelle A/B-Tests.
 
@@ -16,7 +16,7 @@ So erstellen Sie einen guten Agenten:
 - Legen Sie fest, welche Dimensionen getestet werden sollen, z. B. Angebot, Betreffzeile, Kreativität, Kanal oder Sendezeitpunkt.
 - Wählen Sie die Optionen für jede Dimension aus, z. B. E-Mail oder SMS oder tägliche oder wöchentliche Häufigkeit.
 
-![Example diagram of a decisioning studio agent for referral emails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![Beispieldiagramm eines Decisioning Studio-Agenten für E-Mails mit Empfehlungen.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Beispiel-Agenten
 
@@ -32,7 +32,7 @@ Bevor Sie einen Agenten erstellen können, müssen Sie [das BrazeAI Decisioning 
 
 ### Schritt 1: AI Expert Services kontaktieren
 
-Das Team von AI Expert Services wird eng mit Ihnen zusammenarbeiten, um Ihren Entscheidungsagenten zu konzipieren und zu erstellen. Wenn Sie es noch nicht getan haben, sollten Sie [Kontakt aufnehmen](https://www.braze.com/get-started/) und den Anfang machen.
+Das Team von AI Expert Services wird eng mit Ihnen zusammenarbeiten, um Ihren Entscheidungsagenten zu konzipieren und zu erstellen. Wenn Sie es noch nicht getan haben, [nehmen Sie Kontakt mit uns auf](https://www.braze.com/get-started/), um loszulegen.
 
 Sie werden die folgenden Schritte gemeinsam ausführen, um einen angepassten Agenten zu erstellen, der genau auf Sie zugeschnitten ist.
 
@@ -49,7 +49,7 @@ Wenn der Entwurf steht, wird das Team mit Ihnen zusammenarbeiten, um alle zusät
 
 ### Schritt 3: Richten Sie Ihre Zustellungsplattform ein
 
-Als nächstes hilft Ihnen das Team von AI Expert Services bei der Einrichtung Ihrer Plattform für die Automatisierung des Marketings. Das Decisioning Studio funktioniert zwar am besten mit Braze, aber auch eine Reihe anderer Plattformen werden unterstützt. Wenden Sie sich an Ihr Team von AI Expert Services, um weitere Ressourcen zu erhalten.
+Als nächstes hilft Ihnen das KI Expert Service Team bei der Einrichtung Ihrer Customer-Engagement-Plattform. Obwohl das Decisioning Studio am besten mit Braze funktioniert, wird eine Vielzahl anderer Plattformen unterstützt. Wenden Sie sich an Ihr KI Expert Service Team, um weitere Ressourcen zu erhalten.
 
 {% tabs local %}
 {% tab Braze %}

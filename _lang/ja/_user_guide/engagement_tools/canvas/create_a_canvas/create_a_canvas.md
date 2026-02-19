@@ -136,9 +136,7 @@ search_rank: 1
 
 **エントリコントロールでは**、キャンバスがスケジュールされるたびにユーザー数を制限することができる。APIトリガーベースおよびアクションベースのキャンバスでは、この制限はUTC時間ごとに発生する。 
 
-{% alert important %}
-オーディエンスフィルターと同じトリガー (属性の変更やカスタムイベントの実行など) でアクションベースのキャンペーンやキャンバスを設定しないでください。[競合条件が]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions)発生すると、ユーザーがトリガーイベントを実行した時点でオーディエンスにおらず、キャンペーンを受け取れなかったり、キャンバスに入れなかったりする。
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Canvas race condition audience trigger' %}
 
 ##### オーディエンスのテスト
 

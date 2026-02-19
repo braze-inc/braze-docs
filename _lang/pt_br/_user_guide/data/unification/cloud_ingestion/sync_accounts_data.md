@@ -1,49 +1,50 @@
 ---
 nav_title: Sincronizar e excluir dados da conta
-article_title: Sincronizando dados da conta usando CDI
+article_title: Sincronizar dados da conta usando CDI
 page_order: 4
 page_type: reference
-description: "Aprenda como sincronizar os dados da sua conta Braze usando CDI."
+description: "Saiba como sincronizar os dados de sua conta Braze usando o CDI."
 
 ---
 
-# Sincronizando dados da conta usando CDI
+# Sincronizar dados da conta usando CDI
 
-> Aprenda como sincronizar os dados da sua conta Braze usando CDI.
+> Saiba como sincronizar os dados de sua conta Braze usando o CDI.
 
 {% alert important %}
-[Objetos de conta](https://braze.com/unlisted_docs/account_opportunity_object/) estão atualmente em beta, o que é necessário para usar este recurso. Entre em contato com seu gerente de conta Braze se estiver interessado em participar da beta.
+[Os objetos de conta](https://braze.com/unlisted_docs/account_opportunity_object/) estão na versão beta e são necessários para usar esse recurso. Entre em contato com o gerente da sua conta Braze se estiver interessado em participar da versão beta.
 {% endalert %}
 
 ## Pré-requisitos
 
-Antes de sincronizar os dados da sua conta usando CDI, você precisará [configurar o esquema das suas contas](https://braze.com/unlisted_docs/account_opportunity_object/).
+Antes de sincronizar os dados da sua conta usando o CDI, você precisará [configurar o esquema de contas](https://braze.com/unlisted_docs/account_opportunity_object/).
 
 {% alert note %}
-Faça atualizações no esquema da sua conta apenas quando a sincronização estiver pausada ou não programada para evitar conflitos entre os dados do seu armazém de dados e o esquema no Braze.
+Somente faça atualizações no esquema de sua conta quando a sincronização estiver pausada ou não estiver programada para evitar conflitos entre os dados de seu data warehouse e o esquema no Braze.
 {% endalert %}
 
-## Como a sincronização funciona
+## Como funciona a sincronização
 
-- Cada sincronização importa linhas onde `UPDATED_AT` é posterior ao último timestamp sincronizado.
-- Os dados da integração criam ou atualizam contas com base no `id` fornecido.
-- Se `DELETED` for `true`, a conta é excluída.
-- A sincronização não registra pontos de dados, mas todos os dados sincronizados contam para o uso total de contas, medido pelo total de dados armazenados—não há necessidade de limitar apenas aos dados alterados.
-- Campos que não estão no esquema das suas contas são descartados; atualize o esquema antes de sincronizar novos campos.
+- Cada sincronização importa as linhas em que `UPDATED_AT` é posterior ao último registro de data e hora sincronizado.
+- Os dados da integração criam ou atualizam contas com base nos dados fornecidos `id`.
+- Se `DELETED` for `true`, a conta será excluída.
+- A sincronização não registra pontos de dados, mas todos os dados sincronizados contam para o uso total de suas contas, medido pelo total de dados armazenados - não há necessidade de limitar-se apenas aos dados alterados.
+- Os campos que não estão no esquema de suas contas são descartados; atualize o esquema antes de sincronizar novos campos.
+- Você pode atualizar, retomar ou pausar uma sincronização passando o mouse sobre o nome da sincronização e selecionando a ação relevante.
 
-## Sincronizando os dados da sua conta
+## Sincronize os dados de sua conta
 
-Você pode sincronizar os dados da sua conta usando CDI através de um armazém de dados ou um armazenamento de arquivos.
+Você pode sincronizar os dados de sua conta usando o CDI por meio de um data warehouse ou de um armazenamento de arquivos.
 
 {% tabs local %}
 {% tab Data Warehouse %}
-Para integrar sua fonte de dados com seu armazém de dados:
+Para integrar sua fonte de dados com seu data warehouse:
 
 {% subtabs %}
 {% subtab Snowflake %}
 
-1. Crie uma tabela de origem no Snowflake. Use os nomes do exemplo ou escolha seus próprios nomes de banco de dados, esquema e tabela. Você também pode usar uma visão ou visão materializada em vez de uma tabela.
-  ```json
+1. Crie uma tabela de origem no Snowflake. Use os nomes do exemplo ou escolha seus próprios nomes de banco de dados, esquema e tabela. Você também pode usar uma visualização ou visualização materializada em vez de uma tabela.
+  ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC (
@@ -58,8 +59,8 @@ Para integrar sua fonte de dados com seu armazém de dados:
          DELETED BOOLEAN
     );
     ```
-2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
-    ```json
+2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
+    ```sql
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
     GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -85,7 +86,7 @@ Para integrar sua fonte de dados com seu armazém de dados:
 {% subtab Redshift %}
 
 1. Create a source table in Redshift. Use the names in the example or choose your own database, schema, and table names. You can also use a view or materialized view instead of a table.
-    ```json
+    ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC (
@@ -100,9 +101,9 @@ Para integrar sua fonte de dados com seu armazém de dados:
        deleted boolean
     )
     ```
-2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     {% raw %}
-    ```json 
+    ```sql 
     CREATE USER braze_user PASSWORD '{password}';
     GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
     GRANT SELECT ON TABLE ACCOUNTS_SYNC TO braze_user;
@@ -114,12 +115,12 @@ Para integrar sua fonte de dados com seu armazém de dados:
 {% subtab BigQuery %}
 
 1. (Optional) Create a new project or dataset for your source table.  
-    ```json
+    ```sql
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
 2. Create the source table for your CDI integration:  
-    ```json
+    ```sql
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
       updated_at TIMESTAMP DEFAULT current_timestamp,
@@ -161,12 +162,12 @@ Para integrar sua fonte de dados com seu armazém de dados:
 {% subtab Databricks %}
 
 1. Create a catalog or schema for your source table.  
-    ```json
+    ```sql
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
 2. Create the source table for your CDI integration:  
-    ```json
+    ```sql
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
       updated_at TIMESTAMP DEFAULT current_timestamp(),
@@ -203,7 +204,7 @@ Para integrar sua fonte de dados com seu armazém de dados:
 {% subtab Microsoft Fabric %}
 
 1. Create one or more tables for your CDI integration with these fields:
-    ```json
+    ```sql
     CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
     (
       UPDATED_AT DATETIME2(6) NOT NULL,
@@ -216,7 +217,7 @@ Para integrar sua fonte de dados com seu armazém de dados:
     ```
 
 {:start="2"}
-2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
 
 {:start="3"}
 3. If you use network policies, allow Braze IPs to access your Microsoft Fabric instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
@@ -245,7 +246,7 @@ The following examples show valid JSON and CSV formats for syncing account data 
 
 {% subtabs %}
 {% subtab JSON Accounts %}
-```json  
+```jsonl  
 {"id":"s3-qa-0","name":"account0","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}"}
 {"id":"s3-qa-1","name":"account1","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":true}
 {"id":"s3-qa-2","name":"account2","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":false}
@@ -253,7 +254,7 @@ The following examples show valid JSON and CSV formats for syncing account data 
 ```  
 
 {% alert important %}
-Cada linha no seu arquivo de origem deve conter JSON válido ou o arquivo será ignorado.
+Cada linha em seu arquivo de origem deve conter JSON válido ou o arquivo será ignorado.
 {% endalert %}
 {% endsubtab %}
 {% subtab CSV Accounts with Delete %}
@@ -274,15 +275,15 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## Criando uma visão de sincronização
+## Criar uma visualização de sincronização
 
-Criar uma visão de sincronização em seu data warehouse permite que a origem seja atualizada automaticamente sem precisar reescrever consultas adicionais.
+A criação de uma visualização de sincronização em seu data warehouse permite que a fonte seja atualizada automaticamente sem a necessidade de reescrever consultas adicionais.
 
-Por exemplo, se você tiver uma tabela de dados de conta chamada `account_details_1` com `account_id`, `account_name` e três atributos adicionais, você poderia criar uma visão de sincronização como a seguinte:
+Por exemplo, se você tiver uma tabela de dados de conta chamada `account_details_1` com `account_id`, `account_name` e três atribuições adicionais, poderá criar uma visualização de sincronização como a seguinte:
 
 {% tabs %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE VIEW BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS 
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -300,7 +301,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -318,7 +319,7 @@ SELECT
 ```
 {% endtab %}
 {% tab BigQuery %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     account_id as ID,
@@ -334,7 +335,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Databricks %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     account_id as ID,
@@ -350,7 +351,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE VIEW [BRAZE_CLOUD_PRODUCTION].[INGESTION].[ACCOUNTS_SYNC]
 AS SELECT 
     account_id as ID,

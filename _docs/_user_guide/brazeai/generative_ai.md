@@ -1,7 +1,7 @@
 ---
 nav_title: Generative AI
 article_title: Generative AI
-page_order: 20
+page_order: 5
 layout: dev_guide
 guide_top_header: "Generative AI"
 guide_top_text: "BrazeAI<sup>TM</sup> powers various automation generative AI features that help increase your efficiency and creativity. Create engaging cross-channel customer experiences while spending less time on routine copywriting tasks, content refinement, and image creation."

@@ -2,7 +2,7 @@
 
 Mit Hilfe des [`/users/track`-Endpunkts]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) der Braze API können Sie Analytics in Realtime protokollieren. Senden Sie dazu den Wert `braze_id` in das Feld der Schlüssel-Wert-Paare (wie im folgenden Screenshot zu sehen), um das zu aktualisierende Nutzerprofil zu identifizieren.
 
-![Eine Push-Nachricht mit drei Gruppen von Schlüssel-Wert-Paaren. 1\. "Braze_id" als Liquid-Aufruf zum Abrufen der Braze-ID eingestellt. 2\. "cert_title" als "Braze Marketer Certification" festgelegt. 3\. "Cert_description" ist auf "Certified Braze marketers drive..." festgelegt.]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
+![Eine Push-Nachricht mit drei Gruppen von Schlüssel-Wert-Paaren. 1. "Braze_id" als Liquid-Anruf einstellen, um die Braze ID abzurufen. 2. "cert_title" als "Braze Marketer Certification" eingestellt. 3. "Cert_description" als "Certified Braze Marketers drive..." einstellen.]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
 
 ## Daten manuell protokollieren
 
@@ -10,7 +10,7 @@ Für die manuelle Protokollierung müssen Sie zunächst Workspaces-in Xcode konf
 
 Ein wichtiger Punkt, den es zu beachten gilt, ist, dass Analytics erst dann an Braze gesendet werden, wenn die mobile Anwendung anschließend gestartet wird. Das bedeutet, dass je nach Ihren Einstellungen für die Beendigung oft eine unbestimmte Zeitspanne zwischen der Beendigung einer Push-Benachrichtigung und dem Start der mobilen App und dem Abrufen der Analysen vergeht. Auch wenn dieser Zeitpuffer nicht alle Anwendungsfälle betrifft, sollten Sie diese Auswirkung berücksichtigen und Ihre Nutzer:innen so anpassen, dass sie die Öffnung der Anwendung einbeziehen, um dieses Problem zu lösen. 
 
-![Grafik, die die Verarbeitung von Analytics in Braze beschreibt. 1\. Es werden Analysedaten erstellt. 2\. Die Analysedaten werden gespeichert. 3\. Die Push-Benachrichtigung wird abgelehnt. 4\. Unbestimmte Zeitspanne zwischen der Ablehnung der Push-Benachrichtigung und dem Start der mobilen App. 5\. Die mobile App wird gestartet. 6\. Analysedaten werden empfangen. 7\. Die Analysedaten werden an Braze gesendet.]({% image_buster /assets/img/push_implementation_guide/push13.png %})
+![Grafik, die die Verarbeitung von Analytics in Braze beschreibt. 1\. Es werden Analysedaten erstellt. 2\. Die Analysedaten werden gespeichert. 3\. Die Push-Benachrichtigung wird abgelehnt. 4\. Unbestimmte Zeitspanne zwischen der Ablehnung der Push-Benachrichtigung und dem Start der mobilen App. 5\. Die mobile App wird gestartet. 6\. Analysedaten werden empfangen. 7\. Analytics Daten werden an Braze gesendet.]({% image_buster /assets/img/push_implementation_guide/push13.png %})
 
 ### Schritt 1: App-Gruppen in Xcode konfigurieren
 
@@ -23,7 +23,7 @@ Fügen Sie in Xcode die Funktion `App Groups` hinzu. Wenn Sie noch keine Workspa
 Die folgenden Code-Snippets sind eine hilfreiche Referenz, wie Sie angepasste Events, angepasste Attribute und Nutzerattribute speichern und senden können. Diese Anleitung bezieht sich auf `UserDefaults`, aber der Code wird in Form der Hilfsdatei `RemoteStorage` dargestellt. Es gibt zusätzliche Hilfsdateien, `UserAttributes` und `EventName Dictionary`, die beim Senden und Speichern von Nutzerattributen verwendet werden.
 
 {% tabs local %}
-{% tab Benutzerdefinierte Ereignisse %}
+{% tab Custom Events %}
 
 #### Speichern von benutzerdefinierten Ereignissen
 
@@ -164,7 +164,7 @@ func logPendingCustomEventsIfNecessary() {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Benutzerdefinierte Attribute %}
+{% tab Custom Attributes %}
 
 #### Speichern von benutzerdefinierten Attributen
 
@@ -281,7 +281,7 @@ func setCustomAttributesWith(keysAndValues: [String: Any]) {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Benutzerattribute %}
+{% tab User Attributes %}
 
 #### Speichern von Benutzerattributen
 
@@ -407,11 +407,11 @@ func logPendingUserAttributesIfNecessary() {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Hilfsdateien %}
+{% tab Helper Files %}
 
 #### Hilfsdateien
 
-{% details Hilfsdatei "RemoteStorage" %}
+{% details RemoteStorage Helper File %}
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
@@ -529,7 +529,7 @@ class RemoteStorage: NSObject {
 {% endsubtab %}
 {% endsubtabs %}
 {% enddetails %}
-{% details Hilfsdatei "UserAttribute" %}
+{% details UserAttribute Helper File %}
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
@@ -593,7 +593,7 @@ extension UserAttribute: Codable {
 {% endsubtab %}
 {% endsubtabs %}
 {% enddetails %}
-{% details Hilfedatei "EventName Dictionary" %}
+{% details EventName Dictionary Helper File %}
 {% subtabs global %}
 {% subtab Swift %}
 ```swift

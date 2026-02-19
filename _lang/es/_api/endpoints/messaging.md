@@ -25,7 +25,7 @@ description: "Esta página de inicio enumera los puntos finales de mensajería d
 page_type: landing
 
 guide_top_header: "Puntos finales de mensajería"
-guide_top_text: "La API de mensajería de Braze te ofrece dos opciones distintas para enviar mensajes a tus usuarios. Puedes proporcionar el contenido y la configuración del mensaje en la solicitud de API con la opción <code class='highlighter-rouge'>/messages/send</code> de puntos finales `/messages/schedule`. También puedes gestionar los detalles de tu mensaje con una campaña desencadenada por API en el panel de Braze y controlar cuándo y a quién se envía con los puntos finales `/campaigns/trigger/send` y `/campaigns/trigger/schedule`. En las secciones siguientes se detallan las especificaciones de las solicitudes de ambos métodos. <br> <br> De forma similar a otras campañas, puedes limitar el número de veces que un usuario concreto puede recibir una campaña de mensajería API configurando [ajustes de re-elegibilidad]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) en el panel de Braze. Braze no enviará mensajes API a usuarios que no hayan vuelto a ser elegibles para la campaña, independientemente del número de solicitudes API que se envíen. <br> <br> Los puntos finales Enviar mensaje permiten enviar mensajes inmediatos a usuarios designados. Si te estás dirigiendo a un segmento específico, se guardará un registro de tu solicitud en el **Registro de actividad de mensajes**. Utiliza los puntos finales Programar mensaje para enviar mensajes a una hora determinada y modificar o cancelar mensajes que ya habías programado."
+guide_top_text: "La API de mensajería de Braze te ofrece dos opciones distintas para enviar mensajes a tus usuarios. Puedes proporcionar el contenido y la configuración del mensaje en la solicitud de API con la opción <code class='highlighter-rouge'>/messages/send</code> de puntos finales `/messages/schedule`. También puedes gestionar los detalles de tu mensaje con una campaña desencadenada por API en el panel Braze y controlar cuándo y a quién se envía con los puntos finales `/campaigns/trigger/send` y `/campaigns/trigger/schedule`. En las secciones siguientes se detallan las especificaciones de las solicitudes de ambos métodos. <br> <br> De forma similar a otras campañas, puedes limitar el número de veces que un usuario concreto puede recibir una campaña de mensajería API configurando [ajustes de reelegibilidad]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-API-triggered-campaigns) en el panel de Braze. Braze no enviará mensajes API a usuarios que no hayan vuelto a ser elegibles para la campaña, independientemente del número de solicitudes API que se envíen. <br> <br> Los puntos finales Enviar mensaje permiten enviar mensajes inmediatos a usuarios designados. Si te estás dirigiendo a un segmento específico, se guardará un registro de tu solicitud en el **Registro de actividad de mensajes**. Utiliza los puntos finales Programar mensaje para enviar mensajes a una hora determinada y modificar o cancelar mensajes que ya habías programado."
 
 guide_featured_title: "Puntos finales Programar mensajes"
 guide_featured_list:
@@ -77,16 +77,16 @@ guide_menu_list:
 
 guide_menu_title2: "Duplicate message endpoints"
 guide_menu_list2:
-  - name: "POST: Campañas duplicadas"
+  - name: "PUBLICAR: Campañas duplicadas"
     link: /docs/api/endpoints/messaging/duplicate_messages/post_duplicate_campaigns/
     image: /assets/img/braze_icons/copy-04.svg
-  - name: "POST: Lienzos duplicados"
+  - name: "PUBLICAR: Lienzos duplicados"
     link: /docs/api/endpoints/messaging/duplicate_messages/post_duplicate_canvases/
     image: /assets/img/braze_icons/copy-04.svg
 
 guide_menu_title3: "Live Activity endpoints"
 guide_menu_list3:
-  - name: "POST: Actualizar actividad en vivo"
+  - name: "PUBLICAR: Actualizar actividad en vivo"
     link: /docs/api/endpoints/messaging/live_activity/update/
     image: /assets/img/braze_icons/tablet-01.svg
 ---

@@ -1,12 +1,12 @@
 ---
 page_order: 0.1
-nav_title: 메시지 사용자 지정
-article_title: Braze SDK용 푸시 알림 사용자 지정하기
+nav_title: 메시지 커스텀하기
+article_title: Braze 소프트웨어 개발 키트에 대한 푸시 알림 커스텀하기
 channel:
   - push notifications
 ---
 
-# 푸시 알림 사용자 지정
+# 푸시 알림 커스텀하기
 
 > Braze SDK의 푸시 알림을 사용자 지정하는 방법을 알아보세요.
 

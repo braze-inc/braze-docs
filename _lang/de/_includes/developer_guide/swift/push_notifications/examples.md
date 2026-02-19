@@ -6,7 +6,7 @@ Dieser Implementierungsleitfaden konzentriert sich auf eine Swift-Implementierun
 
 ## App-Erweiterungen für Benachrichtigungsinhalte
 
-![Zwei nebeneinander angezeigte Push-Nachrichten. Die Nachricht auf der linken Seite zeigt, wie ein Push mit dem Standard UI aussieht. Die Nachricht auf der rechten Seite zeigt einen Push für eine Bonus-Kaffeekarte, der durch Implementieren einer angepassten Push-UI erstellt wurde.]({% image_buster /assets/img/push_implementation_guide/push1.png %}){: style="max-width:65%;border:0;margin-top:10px"}
+![Zwei nebeneinander angezeigte Push-Nachrichten. Die Nachricht auf der linken Seite zeigt, wie ein Push mit dem Standard UI aussieht. Die Nachricht auf der rechten Seite zeigt einen Push für eine Kaffeelochkarte, der durch die Implementierung eines angepassten Push UI erstellt wurde.]({% image_buster /assets/img/push_implementation_guide/push1.png %}){: style="max-width:65%;border:0;margin-top:10px"}
 
 Die Erweiterungen der App für Benachrichtigungsinhalte bieten Ihnen eine großartige Möglichkeit zur Anpassung von Push-Benachrichtigungen. App-Erweiterungen für Benachrichtigungsinhalte zeigen eine angepasste Schnittstelle für die Benachrichtigungen Ihrer App an, wenn eine Push-Benachrichtigung erweitert wird.
 
@@ -38,7 +38,7 @@ Push-Benachrichtigungen können auf Nutzer:innen-Aktionen innerhalb einer App-Er
 
 Das folgende Beispiel zeigt eine Push-Benachrichtigung, bei der Nutzer innerhalb der erweiterten Benachrichtigung ein Spiel spielen können.
 
-![Ein Diagramm, wie die Phasen einer interaktiven Push-Benachrichtigung aussehen könnten. Eine Sequenz zeigt einen Nutzer, der auf eine Push-Benachrichtigung drückt, die ein interaktives Spiel anzeigt.]({% image_buster /assets/img/push_implementation_guide/push12.png %}){: style="border:0"}
+![Ein Diagramm, wie die Phasen einer interaktiven Push-Benachrichtigung aussehen könnten. Eine Sequenz zeigt einen Nutzer:innen, der auf eine Push-Benachrichtigung drückt, die ein interaktives Spiel anzeigt.]({% image_buster /assets/img/push_implementation_guide/push12.png %}){: style="border:0"}
 
 ### Dashboard Konfiguration
 
@@ -50,12 +50,12 @@ Um eine interaktive Push-Benachrichtigung zu erstellen, müssen Sie in Ihrem Das
 4. Legen Sie in der `.plist` Ihres Notification Content Extension Target das Attribut `UNNotificationExtensionCategory` auf Ihre angepasste iOS-Kategorie fest. Der hier angegebene Wert muss mit dem übereinstimmen, der im Braze-Dashboard unter **iOS Benachrichtigungskategorie** eingestellt ist. 
 5. Setzen Sie den Schlüssel `UNNotificationExtensionInteractionEnabled` auf `true`, um Nutzer in einer Push-Benachrichtigung zu aktivieren.
 
-![Die Optionen für den Button zur Benachrichtigung, die in den Einstellungen des Nachrichten-Editors für Push-Nachrichten zu finden sind.]({% image_buster /assets/img/push_implementation_guide/push16.png %}){: style="max-width:75%;border:0;margin-top:10px"}
+![Die Optionen des Buttons für Push-Benachrichtigungen, die Sie in den Einstellungen des Nachrichten-Editors finden.]({% image_buster /assets/img/push_implementation_guide/push16.png %}){: style="max-width:75%;border:0;margin-top:10px"}
 ![]({% image_buster /assets/img/push_implementation_guide/push17.png %}){: style="max-width:75%;border:0;margin-top:10px"}
 
 ## Personalisierte Push-Benachrichtigungen
 
-![Zwei iPhones werden nebeneinander angezeigt. Das erste iPhone zeigt die ungekürzte Ansicht der Push-Nachricht. Das zweite iPhone zeigt die erweiterte Version der Push-Nachricht mit einer Fortschrittsanzeige, die angibt, wie weit sie in einem Kurs fortgeschritten sind, den Namen der nächsten Sitzung und wann die nächste Sitzung abgeschlossen werden muss.]({% image_buster /assets/img/push_implementation_guide/push6.png %}){: style="float:right;max-width:40%;margin-left:15px;border:0"}
+![Zwei iPhones werden nebeneinander angezeigt. Das erste iPhone zeigt die ungekürzte Ansicht der Push-Nachricht. Das zweite iPhone zeigt die erweiterte Version der Push-Nachricht mit einer Fortschrittsanzeige, die angibt, wie weit sie in einem Kurs sind, den Namen der nächsten Sitzung und wann die nächste Sitzung abgeschlossen sein muss.]({% image_buster /assets/img/push_implementation_guide/push6.png %}){: style="float:right;max-width:40%;margin-left:15px;border:0"}
 
 Push-Benachrichtigungen können benutzerspezifische Informationen innerhalb einer Inhaltserweiterung anzeigen. Damit ist es zulässig, Push-Inhalte für Nutzer zu erstellen, z. B. die Option, Ihren Fortschritt auf verschiedenen Plattformen zu teilen, freigeschaltete Erfolge anzuzeigen oder Onboarding-Checklisten anzuzeigen. Dieses Beispiel zeigt eine Push-Benachrichtigung, die einem Nutzer:innen angezeigt wird, nachdem sie eine bestimmte Aufgabe im Braze-Lernkurs erledigt haben. Wenn Sie die Benachrichtigung erweitern, können die Nutzer ihren Fortschritt auf ihrem Lernpfad sehen. Die hier bereitgestellten Informationen sind benutzerspezifisch und können über einen API-Trigger ausgelöst werden, wenn eine Sitzung abgeschlossen ist oder eine bestimmte Nutzeraktion durchgeführt wird. 
 
@@ -69,7 +69,7 @@ Um eine personalisierte Push-Benachrichtigung zu erstellen, müssen Sie in Ihrem
 4. Auf dem Tab **Einstellungen** erstellen Sie Schlüssel-Wert-Paare mit dem Standard Liquid. Legen Sie die entsprechenden Nutzer:innen-Attribute fest, die in der Nachricht angezeigt werden sollen. Diese Ansichten können auf der Grundlage bestimmter Benutzerattribute eines bestimmten Benutzerprofils personalisiert werden.
 5. Legen Sie in der `.plist` Ihres Notification Content Extension Target das Attribut `UNNotificationExtensionCategory` auf Ihre angepasste iOS-Kategorie fest. Der hier angegebene Wert muss mit dem übereinstimmen, der im Braze-Dashboard unter **iOS Benachrichtigungskategorie** eingestellt ist. 
 
-![Vier Sätze von Schlüssel-Wert-Paaren, wobei "next_session_name" und "next_session_complete_date" als API-getriggerte Eigenschaft mit Liquid und "completed_session count" und "total_session_count" als angepasstes Nutzerattribut mit Liquid festgelegt werden.]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
+![Vier Sätze von Schlüssel-Wert-Paaren, wobei "next_session_name" und "next_session_complete_date" als Eigenschaft eines API-Triggers mit Liquid und "completed_session count" und "total_session_count" als angepasstes Attribut eines Nutzers:innen mit Liquid eingestellt werden.]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
 
 ### Umgang mit Schlüssel-Wert-Paaren
 
@@ -137,7 +137,7 @@ Um eine Push-Benachrichtigung zur Informationserfassung zu erstellen, müssen Si
 
 Wie im Beispiel zu sehen, können Sie auch ein Bild in Ihre Push-Benachrichtigung einfügen. Dazu müssen Sie [Rich Notifications]({{site.baseurl}}/developer_guide/push_notifications/rich/?sdktab=swift) integrieren, den Benachrichtigungsstil in Ihrer Kampagne auf Rich Notification einstellen und ein Rich-Push-Bild einfügen.
 
-![Eine Push-Nachricht mit drei Gruppen von Schlüssel-Wert-Paaren. 1\. "Braze_id" als Liquid-Aufruf zum Abrufen der Braze-ID eingestellt. 2\. "cert_title" als "Braze Marketer Certification" festgelegt. 3\. "Cert_description" ist auf "Certified Braze marketers drive..." festgelegt.]({% image_buster /assets/img/push_implementation_guide/push9.png %})
+![Eine Push-Nachricht mit drei Gruppen von Schlüssel-Wert-Paaren. 1. "Braze_id" als Liquid-Anruf einstellen, um die Braze ID abzurufen. 2. "cert_title" als "Braze Marketer Certification" eingestellt. 3. "Cert_description" als "Certified Braze Marketers drive..." einstellen.]({% image_buster /assets/img/push_implementation_guide/push9.png %})
 
 ### Verarbeitung von Button-Aktionen
 

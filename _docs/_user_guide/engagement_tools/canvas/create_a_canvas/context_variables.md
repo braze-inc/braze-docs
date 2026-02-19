@@ -163,6 +163,8 @@ Similar to how Canvas context variables have pre-defined types, the comparisons 
 Use the same data type for your context variable and comparison. For example, if your context variable is a time data type, use time comparisons (such as "before" or "after"). Using mismatching data types (such as string comparisons with a time context variable) may cause unexpected behavior.
 {% endalert %}
 
+{% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
+
 Here is an example of a context variable filter comparing the context variable `product_name` to the regex `/braze/`.
 
 ![A filter setup for the context variable "product_name" to match the regex "/braze/".]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}

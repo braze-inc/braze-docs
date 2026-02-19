@@ -1,11 +1,11 @@
 ---
 nav_title: 画像
-article_title: "BrazeAIで\"画像s を生成する"
+article_title: BrazeAIで画像を生成
 page_order: 10
 description: "DALL·E 3、OpenAI からのAI システム、およびBraze サードパーティのプロバイダーを使用してメディアライブラリーのイメージを生成する方法について説明します。"
 ---
 
-# BrazeAI<sup>TM</sup>で"画像sを生成します。
+# BrazeAI<sup>TM</sup>で画像を生成
 
 > {% multi_lang_include brazeai/generative_ai/about_images.md %}
 

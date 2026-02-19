@@ -49,7 +49,7 @@ Após o app ter sido adicionado à sua tela inicial, agora é possível solicita
 Depois de aceitar ou recusar o aviso, você precisa excluir e reinstalar o site na sua tela inicial para poder mostrar o aviso novamente.
 {% endalert %}
 
-![Um prompt push pedindo para "permitir" ou "não permitir" notificações]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
+![Uma notificação por push pedindo para "permitir" ou "não permitir" as notificações]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
 
 Por exemplo:
 

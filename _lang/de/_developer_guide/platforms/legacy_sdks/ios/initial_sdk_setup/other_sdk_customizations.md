@@ -38,7 +38,7 @@ Sie können die Protokollstufe auf jeden verfügbaren Wert einstellen. Die Einst
 Die Protokollstufe kann entweder zur Kompilierzeit oder zur Laufzeit zugewiesen werden:
 
 {% tabs local %}
-{% tab Kompilierzeit %}
+{% tab Compile Time %}
 
 Fügen Sie ein Wörterbuch mit dem Namen `Braze` zu Ihrer Datei `Info.plist` hinzu. Fügen Sie im Wörterbuch `Braze` den String-Untereintrag `LogLevel` hinzu und setzen Sie den Wert auf `0`. 
 
@@ -57,7 +57,7 @@ Beispiel `Info.plist` Inhalt:
 ```
 
 {% endtab %}
-{% tab Laufzeit %}
+{% tab Runtime %}
 
 Fügen Sie `ABKLogLevelKey` im Parameter `appboyOptions` hinzu, der an `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` übergeben wird. Setzen Sie seinen Wert auf die Ganzzahl `0`.
 
@@ -154,7 +154,7 @@ Erstellen Sie eine Klasse, die dem Protokoll [`ABKIDFADelegate`](https://github.
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 import Appboy_iOS_SDK

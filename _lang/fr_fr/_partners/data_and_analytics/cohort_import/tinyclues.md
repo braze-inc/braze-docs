@@ -31,7 +31,7 @@ Dans Braze, naviguez vers **Intégrations partenaires** > **Partenaires technolo
 
 Ici, vous trouverez votre endpoint REST et générerez la clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante.<br><br>![]({% image_buster /assets/img/tinyclues/tinyclues_6.png %}){: style="max-width:90%;"} 
 
-Pour terminer l'intégration, vous devrez fournir la clé d'importation des données et l'endpoint REST à votre équipe d'exploitation des données de Tinyclues. Tinyclues établira alors la connexion et vous contactera une fois la configuration terminée.
+Pour terminer l'intégration, vous devez fournir la clé d'importation des données et l'endpoint REST à votre équipe d'exploitation des données de Tinyclues. Tinyclues établira alors la connexion et vous contactera une fois la configuration terminée.
 
 ### Étape 2 : Exporter une campagne depuis la plateforme Tinyclues
 
@@ -46,7 +46,7 @@ Dans Tinyclues, sélectionnez la ou les campagnes que vous souhaitez exporter et
 Dans Braze, naviguez vers **Segments**, nommez votre segment de cohorte Tinyclues et sélectionnez **Cohortes Tinyclues** comme filtre. À partir de là, vous pouvez choisir la cohorte Tinyclues que vous souhaitez inclure. Une fois votre segment de cohorte Tinyclues créé, vous pouvez le sélectionner comme filtre d'audience lors de la création d'une campagne ou d'un Canvas.
 
 ![]({% image_buster /assets/img/tinyclues/tinyclues_3.png %}){: style="max-width:90%;"}<br><br>
-![Dans le générateur de segments de Braze, le filtre d'attributs utilisateur "cohorte Tinyclues" est défini sur "inclut" et "cohorte primaire".]({% image_buster /assets/img/tinyclues/tinyclues_4.png %}){: style="max-width:90%;"}
+![Dans le générateur de segments de Braze, le filtre d'attributs utilisateur "cohorte Tinyclues" est réglé sur "inclut" et "cohorte primaire".]({% image_buster /assets/img/tinyclues/tinyclues_4.png %}){: style="max-width:90%;"}
 
 Vous avez des difficultés à localiser votre cohorte ? Consultez notre section [résolution des problèmes](#troubleshooting) pour obtenir des conseils. 
 
@@ -58,7 +58,7 @@ Seuls les utilisateurs qui existent déjà dans Braze pourront être ajoutés ou
 
 Pour utiliser votre segment Tinyclues, créez une campagne ou un Canvas Braze et sélectionnez le segment comme audience cible. 
 
-![Dans le générateur de campagne de Braze, à l'étape du ciblage, le filtre "Cibler les utilisateurs par segment" est défini sur "Cohorte de Tinyclues".]({% image_buster /assets/img/tinyclues/tinyclues_5.png %}){: style="max-width:90%;"}
+![Dans le générateur de campagne de Braze, à l'étape du ciblage, le filtre "Cibler les utilisateurs par segment" est défini sur "Cohorte Tinyclues".]({% image_buster /assets/img/tinyclues/tinyclues_5.png %}){: style="max-width:90%;"}
 
 ## Correspondance entre les utilisateurs
 
@@ -68,7 +68,7 @@ Les utilisateurs identifiés peuvent être associés à leur adresse `external_i
 
 Vous avez du mal à trouver la bonne cohorte dans la liste ? Dans Tinyclues, affichez les détails de votre campagne et vérifiez le nom en cochant le **Nom du fichier d'exportation.**
 
-![Le nom de votre cohorte apparaît en bas de la page des détails de la campagne.]({% image_buster /assets/img/tinyclues/tinyclues_2.png %}){: style="max-width:30%;"}
+![Le nom de votre cohorte apparaît au bas de la page des détails de la campagne.]({% image_buster /assets/img/tinyclues/tinyclues_2.png %}){: style="max-width:30%;"}
 
 Vous n'arrivez toujours pas à extraire votre audience ? Contactez l'[équipe de Tinyclues](mailto:support@tinyclues.com) pour obtenir une assistance supplémentaire.
 

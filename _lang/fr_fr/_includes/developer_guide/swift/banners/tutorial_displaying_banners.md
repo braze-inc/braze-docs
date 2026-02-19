@@ -6,7 +6,7 @@ Avant de commencer ce tutoriel, vérifiez que votre SDK Braze répond aux exigen
 
 ## Affichage de bannières pour le SDK Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Afficher les bannières Swift" %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Displaying Banners Swift" %}
 
 {% tabs %}
 {% tab UIKit %}

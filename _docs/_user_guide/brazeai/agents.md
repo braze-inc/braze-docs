@@ -1,11 +1,11 @@
 ---
-nav_title: Agents
+nav_title: Agent Console
 article_title: Braze Agents
-page_order: 0.5
+page_order: 1
 description: "Braze Agents can generate content, make intelligent decisions, and enrich your data so you can deliver more personalized customer experiences."
 ---
 
-# Braze Agents
+# Braze Agents in Agent Console
 
 > Braze Agents are AI-powered helpers you can create inside Braze. Agents can generate content, make intelligent decisions, and enrich your data so you can deliver more personalized customer experiences.
 
@@ -33,7 +33,7 @@ In contrast, other BrazeAI tools are designed to maximize the metrics that they 
 
 Features for Braze Agents include:
 
-- **Flexible setup:** Use a Braze-provided LLM or connect your own model provider (such as OpenAI, Anthropic, Google Gemini, or AWS Bedrock).
+- **Flexible setup:** Use a Braze-provided LLM or connect your own model provider (such as OpenAI, Anthropic, or Google Gemini).
 - **Seamless integration:** Deploy agents directly in Canvas steps or catalog fields.
 - **Testing and logging tools:** Preview your agent's output by testing with sample inputs before you launch. View logs for each time the agent runs, including the input and output for that run.
 - **Usage controls:** Daily limits help manage performance and costs.
@@ -46,13 +46,13 @@ Agents are configured with instructions (system prompts) that define how they be
 
 | Term | Definition |
 | --- | --- |
-| [Model]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#models) | The agent’s “brain,” in this case a large language model (LLM). It interprets inputs, generates responses, and performs reasoning. A stronger model (trained on more relevant data) makes the agent more capable and versatile. |
-| [Instructions]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#writing-instructions) | The rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. Clear instructions make the agent more reliable and predictable. |
+| [Model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) | The agent’s “brain,” in this case a large language model (LLM). It interprets inputs, generates responses, and performs reasoning. A stronger model (trained on more relevant data) makes the agent more capable and versatile. |
+| [Instructions]({{site.baseurl}}/user_guide/brazeai/agents/reference/#writing-instructions) | The rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. Clear instructions make the agent more reliable and predictable. |
 | Context | Data passed into the agent at runtime wherever it is deployed, such as user profile fields or catalog rows. This input provides the information the agent uses to generate outputs. |
 | [Output variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/#step-3-define-the-output-variable) | The output the agent produces when used in Canvas steps. Output variables store the agent’s result to personalize content or guide workflow paths. Output variables can be a string, number, or boolean data type.  |
 | [Execution](#limitations) | A single run of the agent. This counts against your daily limits. |
-| [Output format]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#output-format) | The predefined data structure of the agent's response. |
-| [Temperature]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#temperature) | The level of deviation for the agent's output. This defines how precise or creative your agent can be. |
+| [Output format]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#step-3-select-the-output) | The predefined data structure of the agent's response. |
+| [Temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) | The level of deviation for the agent's output. This defines how precise or creative your agent can be. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Limitations
@@ -60,7 +60,7 @@ Agents are configured with instructions (system prompts) that define how they be
 During the beta period, the following limitations apply:
 
 - Each agent has a default daily execution limit of 50,000 runs, which can be increased up to a maximum of 100,000 runs per day.
-- By default, each run must complete within 15 seconds. After 15 seconds, the agent returns a `null` response where it is used. 
+- By default, each run must complete within 15 seconds. After 15 seconds, the agent returns a `null` response where it is used.
     - If your agents consistently time out, contact your Braze account manager to increase this limit.
 - Input data is limited to 25 KB per request. Longer inputs are truncated.
 

@@ -1,11 +1,11 @@
 ---
 nav_title: Regelbasierte Empfehlungen
-article_title: Erstellen von regelbasierten Artikel-Empfehlungen
+article_title: Erstellen Sie regelbasierte Artikel-Empfehlungen
 description: "Dieser Artikel beschreibt, wie Sie eine KI-Artikelempfehlung für Katalogposten erstellen."
 page_order: 2
 ---
 
-# Erstellen von regelbasierten Artikel-Empfehlungen
+# Erstellen Sie regelbasierte Artikelempfehlungen
 
 > Erfahren Sie, wie Sie ein regelbasiertes Empfehlungssystem aus Artikeln in Ihrem Katalog erstellen.
 
@@ -103,7 +103,7 @@ Nehmen wir an, Sie haben eine App für gesunde Ernährung und möchten eine Cont
 
 Nachdem der Katalog in Braze hochgeladen wurde, überprüfen Sie die Vorschau einer ausgewählten Anzahl von Katalogartikeln, um die Richtigkeit der importierten Informationen zu bestätigen. Die Artikel können in der Vorschau zufällig angeordnet sein, aber das hat keinen Einfluss auf die Ausgabe des Empfehlungssystems.
 
-\![Beispielkatalog in Braze.]({% image_buster /assets/img/recs/catalog_items.png %})
+![Beispielkatalog in Braze.]({% image_buster /assets/img/recs/catalog_items.png %})
 
 Erstellen Sie eine Content Card Kampagne. Geben Sie im Composer die Liquid-Logik ein, um zu bestimmen, welche Benutzer die Kampagne erhalten sollen und welches Rezept und welches Bild angezeigt werden soll. In diesem Anwendungsfall zieht Braze die `start_date` (oder das Datum der Registrierung) des Nutzers:innen und vergleicht sie mit dem aktuellen Datum. Die Differenz in Tagen bestimmt, welche Inhaltskarte gesendet wird.
 
@@ -154,7 +154,7 @@ Erstellen Sie eine Content Card Kampagne. Geben Sie im Composer die Liquid-Logik
 
 Zum Beispiel:
 
-\![Ein Beispiel für einen Nachrichten-Editor aus einer Content-Card-Kampagne.]({% image_buster /assets/img/recs/content_card_preview.png %})
+![Ein Beispiel für einen Nachrichten-Editor aus einer Content-Card-Kampagne.]({% image_buster /assets/img/recs/content_card_preview.png %})
 
 Geben Sie im Abschnitt **Bei Klick-Verhalten** die Liquid-Logik ein, wohin Benutzer weitergeleitet werden sollen, wenn sie auf iOS-, Android- und Web-Geräten auf die Content Card klicken. 
 
@@ -171,11 +171,11 @@ Geben Sie im Abschnitt **Bei Klick-Verhalten** die Liquid-Logik ein, wohin Benut
 
 Zum Beispiel:
 
-\![Ein Beispiel für einen Block zum Verhalten bei einem Klick im Composer.]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
+![Ein Beispiel für einen Block zum Verhalten bei einem Klick im Composer.]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
 
 Gehen Sie auf die Registerkarte **Test** und wählen Sie **Benutzerdefiniert** unter **Vorschau der Nachricht als Benutzer**. Geben Sie ein Datum in das Feld **Benutzerdefiniertes Attribut** ein, um eine Vorschau der Inhaltskarte zu erhalten, die an einen Benutzer gesendet wird, der sich an diesem Datum angemeldet hat. <br><br>
 
-\![Ein Beispiel für ein angepasstes Attribut namens 'start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
+![Ein Beispiel für ein angepasstes Attribut namens 'start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 {% endtab %}
 
 {% tab using Connected Content %}
@@ -284,9 +284,9 @@ So würde der endgültige Anruf aussehen:
 {% for list in restaurants %}
 {% if {{list.restaurant.user_rating.rating_text}} == `Excellent` %}
 {% assign excellent_restaurants = excellent_restaurants | append: list.restaurant.name | append: `*` %}
-{% elseif {{list.restaurant.user_rating.rating_text}} == `Very Good` %}
+{% elsif {{list.restaurant.user_rating.rating_text}} == `Very Good` %}
 {% assign very_good_restaurants = very_good_restaurants | append: list.restaurant.name | append: `*` %}
-{% elseif {{list.restaurant.user_rating.rating_text}} == `Good` %}
+{% elsif {{list.restaurant.user_rating.rating_text}} == `Good` %}
 {% assign good_restaurants = good_restaurants | append: list.restaurant.name | append: `*` %}
 {% endif %}
 {% endfor %}
@@ -328,6 +328,6 @@ Good places
 
 Im folgenden Screenshot sehen Sie ein Beispiel dafür, wie die Antwort auf dem Gerät eines Benutzers angezeigt wird.
 
-\![Rendering einer Restaurantliste, die durch den letzten Aufruf des Beispiels erzeugt wurde.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
+![Rendering einer Restaurantliste, die durch den letzten Aufruf des Beispiels erzeugt wurde.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
 {% endtab %}
 {% endtabs %}

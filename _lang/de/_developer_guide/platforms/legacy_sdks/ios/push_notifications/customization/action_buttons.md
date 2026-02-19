@@ -16,7 +16,7 @@ noindex: true
 
 Das Braze iOS SDK unterstützt die standardmäßigen Push-Kategorien, einschließlich URLs für jeden Push-Action-Button. Die Standard-Kategorien verfügen derzeit über vier Sets von Push-Action-Buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel`, und `More`. 
 
-![Ein GIF einer Push-Nachricht, die nach unten gezogen wird, um zwei anpassbare Aktions-Buttons anzuzeigen.]({% image_buster /assets/img_archive/iOS8Action.gif %})
+![Ein GIF einer Push Nachricht, die nach unten gezogen wird, um zwei anpassbare Aktions-Buttons anzuzeigen.]({% image_buster /assets/img_archive/iOS8Action.gif %})
 
 Um unsere Standard-Push-Kategorien zu registrieren, folgen Sie den Anweisungen zur Integration:
 
@@ -40,7 +40,7 @@ UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTy
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 // For UserNotification.framework (iOS 10+ only)
@@ -64,7 +64,7 @@ Wenn Sie Ihre eigenen angepassten Benachrichtigungskategorien erstellen möchten
 
 Wenn Sie das `UNNotification` Framework verwenden und Braze [Delegates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling) implementiert haben, sollten Sie diese Methode bereits integriert haben. 
 
-Um den Umgang mit Push-Action-Buttons, einschließlich Click Analytics und URL-Routing, zu aktivieren, fügen Sie den folgenden Code in die Delegate-Methode Ihrer App `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` ein:
+Um die Verarbeitung von Push-Action-Buttons, einschließlich Click Analytics und URL-Routing, zu aktivieren, fügen Sie den folgenden Code in die Delegate-Methode `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` Ihrer App ein:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -76,7 +76,7 @@ Um den Umgang mit Push-Action-Buttons, einschließlich Click Analytics und URL-R
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.userNotificationCenter(center,
@@ -99,7 +99,7 @@ Wenn Sie das UNNotification Framework nicht verwenden, müssen Sie den folgenden
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
@@ -122,6 +122,6 @@ Wenn Sie nicht das `UserNotifications`-Framework verwenden, lesen Sie die Dokume
 
 Diese Kategorien können dann über unser Dashboard Push-Benachrichtigungen zugewiesen werden, um die Aktion-Button-Konfigurationen Ihres Designs zu triggern. Hier ist ein Beispiel, das die `LIKE_CATEGORY` nutzt, die auf dem Gerät angezeigt wird:
 
-![Eine Push Nachricht, die zwei Push-Action-Buttons "unlike" und "like" anzeigt.]({% image_buster /assets/img_archive/push_example_category.png %})
+![Eine Push-Nachricht mit zwei Push-Action-Buttons "unlike" und "like".]({% image_buster /assets/img_archive/push_example_category.png %})
 
 

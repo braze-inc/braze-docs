@@ -12,8 +12,7 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Braze SDK 변경 로그
@@ -21,6 +20,14 @@ platform:
 > 이 참조 페이지에는 각 Braze SDK의 변경 로그와 공개 GitHub 리포지토리에 있는 변경 로그 링크가 포함되어 있습니다. 전체 리소스 목록은 [참조, 리포지토리 및 샘플 앱을 참조하세요]({{site.baseurl}}/developer_guide/references/).
 
 {% sdktabs %}
+{% sdktab web %}
+{% alert tip %}
+[웹 Braze SDK 변경 로그](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) 사본은 GitHub에서도 찾을 수 있습니다.
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% alert tip %}
 [Android Braze SDK 변경 로그](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) 사본은 GitHub에서도 찾을 수 있습니다.
@@ -35,14 +42,6 @@ platform:
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-swift-sdk/main/CHANGELOG.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% alert tip %}
-[웹 Braze SDK 변경 로그](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) 사본은 GitHub에서도 찾을 수 있습니다.
-{% endalert %}
-
-{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
@@ -85,17 +84,9 @@ platform:
 {% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-unity-sdk/master/CHANGELOG.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% alert tip %}
-[언리얼 엔진 브레이즈 SDK 변경 로그는 GitHub에서도](https://github.com/braze-inc/braze-unreal-sdk/blob/master/CHANGELOG.md) 확인할 수 있습니다.
-{% endalert %}
-
-{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-unreal-sdk/master/CHANGELOG.md %}
-{% endsdktab %}
-
-{% sdktab xamarin %}
-{% alert tip %}
-[GitHub에서 Xamarin Braze SDK 변경 로그](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md) 사본을 찾을 수도 있습니다.
+[GitHub에서 .NET MAUI Braze 소프트웨어 개발 키트 체인지로그](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md) 사본을 찾을 수도 있습니다.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-xamarin-sdk/master/CHANGELOG.md %}

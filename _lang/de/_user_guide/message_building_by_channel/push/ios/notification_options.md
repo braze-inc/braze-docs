@@ -74,7 +74,7 @@ Geben Sie dann die Zusammenfassungskategorie-ID ein, die Sie in Ihrer App festge
 
 Apple bietet Marken die Möglichkeit, stille Push-Benachrichtigungen an die Notification Center ihrer Nutzer zu senden, bevor diese sich offiziell und explizit dafür entscheiden. So haben Sie die Chance, den Wert Ihrer Nachrichten frühzeitig zu demonstrieren. Alles, was Sie tun müssen, ist, [vorläufige Push-Benachrichtigungen](#set-up-provisional-push-notifications) in Ihrer App [einzurichten](#set-up-provisional-push-notifications). Dann erhält jeder Benutzer, der ein vorläufiges Push-Token hat, Ihre Nachrichten.
 
-Im Gegensatz zu einem herkömmlichen iOS Push-Token fungiert ein provisorischer Push-Token als "Testpass", der es Marken erlaubt, neue Nutzer:innen zu erreichen, bevor sie Apples native Opt-in-Anfrage gesehen und angeklickt haben. Mit dieser Funktion wird Ihre Push-Benachrichtigung direkt an die Benachrichtigungsleiste Ihres neuen Benutzers übermittelt, mit der Option, zukünftige Benachrichtigungen zu behalten oder auszuschalten. Anstatt eine „Opt-in“-Journey zu machen, werden die Nutzer:innen eher eine „Opt-out“-Journey machen.
+Im Gegensatz zu einem herkömmlichen iOS Push-Token fungiert ein provisorischer Push-Token als "Schnupperpass", der es Marken erlaubt, neue Nutzer:innen zu erreichen, bevor sie Apples native Opt-in-Anfrage gesehen und angeklickt haben. Mit dieser Funktion wird Ihre Push-Benachrichtigung direkt an die Benachrichtigungsleiste Ihres neuen Benutzers übermittelt, mit der Option, zukünftige Benachrichtigungen zu behalten oder auszuschalten. Anstatt eine „Opt-in“-Journey zu machen, werden die Nutzer:innen eher eine „Opt-out“-Journey machen.
 
 {% alert tip %}
 Die vorläufige Autorisierung hat das Potenzial, Ihre Opt-in-Rate drastisch zu erhöhen, aber nur, wenn die Nutzer:innen einen Nutzen in Ihren Nachrichten sehen. Nutzen Sie unsere Funktionen zur [Benutzersegmentierung]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), [Standortbestimmung]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/) und [Personalisierung]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/), um sicherzustellen, dass die richtigen Benutzer diese "Test"-Benachrichtigungen zur richtigen Zeit erhalten. Dann können Sie die Nutzer dazu ermutigen, sich für Ihre Push-Benachrichtigungen zu entscheiden, denn Sie wissen, dass diese einen Mehrwert für die Nutzer Ihrer App darstellen.
@@ -82,7 +82,7 @@ Die vorläufige Autorisierung hat das Potenzial, Ihre Opt-in-Rate drastisch zu e
 
 Je nachdem, für welche Option sich der Benutzer entscheidet, wird der entsprechende Token- oder [Abonnementstatus]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) zu seinen [Kontakteinstellungen]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) auf der Registerkarte **Engagement** in seinem Benutzerprofil hinzugefügt.
 
-![Kontakteinstellungen mit einem Push-abonnierten Status.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![Kontakteinstellungen mit einem Push-Abonnement-Status.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
 Mit unseren [Segmentierungsfiltern]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) können Sie Ihre Benutzer gezielt ansprechen, je nachdem, ob sie vorläufig autorisiert sind oder nicht.
 
@@ -93,7 +93,7 @@ Wenn Nutzer:innen sich dafür entscheiden, den vorläufigen Push von Ihnen zu de
 {% endalert %}
 
 {% alert important %}
-Wenn Sie zusätzliche Push-Prompts oder [In-App-Push-Primer](https://www.braze.com/resources/glossary/priming-for-push/) (eine In-App-Nachricht, die Benutzer dazu ermutigt, sich für Push-Benachrichtigungen zu entscheiden) verwenden, wenden Sie sich an Ihren Braze-Vertreter, um weitere Unterstützung zu erhalten.
+Wenn Sie zusätzliche Push-Anfragen oder [In-App-Push-Primer](https://www.braze.com/resources/glossary/priming-for-push/) (eine In-App-Nachricht, die Nutzer:innen zum Opt-in für Push-Benachrichtigungen auffordert) verwenden, wenden Sie sich bitte an Ihre Vertretung von Braze, um weitere Informationen zu erhalten.
 {% endalert %}
 
 #### Vorläufige Push-Benachrichtigungen einrichten
@@ -134,7 +134,7 @@ if (@available(iOS 12.0, *)) {
 
 Mit dem neuen Fokusmodus von iOS 15 haben Sie mehr Kontrolle darüber, wann App-Benachrichtigungen Sie mit einem Ton oder einer Vibration "unterbrechen" können.
 
-Die Seite mit den Einstellungen für iOS-Benachrichtigungen zeigt Benachrichtigungen an, die für die sofortige Zustellung aktiviert sind, sowie zeitabhängige Benachrichtigungen, die aktiviert sind.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
+![Die Seite mit den Einstellungen für iOS-Benachrichtigungen zeigt die Benachrichtigungen an, die für die sofortige Zustellung aktiviert sind und bei denen die zeitabhängigen Benachrichtigungen aktiviert sind.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
 
 Apps können jetzt festlegen, welche Stufe der Unterbrechung eine Benachrichtigung je nach Dringlichkeit enthalten soll.
 

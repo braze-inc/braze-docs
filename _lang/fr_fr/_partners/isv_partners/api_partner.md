@@ -21,7 +21,7 @@ Vous devez inclure un en-tête `User-Agent` qui identifie clairement la source d
 Votre en-tête `User-Agent` doit respecter le format suivant (qui est similaire à la norme [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#page-46) ) :
 
 ```bash
-User-Agent: partner-OrganizationName-ProductName/ProductVersion
+User-Agent: partner-OrganizationName
 ```
 
 Remplacez les éléments suivants :
@@ -29,8 +29,6 @@ Remplacez les éléments suivants :
 | Marque substitutive | Description |
 |-------------|-------------|
 | `OrganizationName` | Le nom de votre organisation formaté en majuscules Pascal. |
-| `ProductName` | Le nom de votre produit formaté en majuscules Pascal. |
-| `ProductVersion` | Le numéro de version de votre produit. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Exemples
@@ -38,7 +36,7 @@ Remplacez les éléments suivants :
 Par exemple, l'agent utilisateur suivant serait correct pour l'ingestion de données dans le nuage de Snowflake :
 
 ```bash
-User-Agent: partner-Snowflake-CloudDataIngestion/179
+User-Agent: partner-Snowflake
 ```
 
 Alors que ce serait incorrect car il n'identifie pas clairement la source du trafic :

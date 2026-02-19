@@ -16,11 +16,18 @@ platform:
 
 > Este artículo analiza el enfoque básico que utilizarás al implementar tarjetas de contenido personalizadas, así como tres casos de uso comunes. Asume que ya has leído los demás artículos de la guía de personalización de la tarjeta de contenido para comprender qué se puede hacer de forma predeterminada y qué requiere código personalizado. Es especialmente útil saber cómo [registrar los análisis]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) de tus tarjetas de contenido personalizadas. 
 
+{% multi_lang_include banners/content_card_alert.md %}
+
 ## Crear una tarjeta
 
 ### Paso 1: Crea una interfaz de usuario personalizada 
 
 {% tabs local %}
+{% tab web %}
+
+En primer lugar, crea tu componente HTML personalizado que se utilizará para representar las tarjetas. 
+
+{% endtab %}
 {% tab android %}
 
 Primero, crea tu propio fragmento personalizado. El [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) predeterminado solo está diseñado para manejar nuestros tipos predeterminados de tarjetas de contenido, pero es un buen punto de partida.
@@ -29,11 +36,6 @@ Primero, crea tu propio fragmento personalizado. El [`ContentCardsFragment`](htt
 {% tab swift %}
 
 Primero, crea tu propio componente de controlador de vista personalizado. El [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) predeterminado solo está diseñado para manejar nuestros tipos predeterminados de tarjetas de contenido, pero es un buen punto de partida.
-
-{% endtab %}
-{% tab Web %}
-
-En primer lugar, crea tu componente HTML personalizado que se utilizará para representar las tarjetas. 
 
 {% endtab %}
 {% endtabs %}
@@ -54,7 +56,7 @@ Para probar tu tarjeta de contenido:
 2. En Braze, ve a **Campañas** y [crea una nueva campaña de tarjeta de contenido]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create).
 3. En tu campaña, selecciona **Prueba** y, a continuación, introduce la dirección `user-id` del usuario de prueba. Cuando estés listo, selecciona **Enviar prueba**. En breve podrás iniciar una tarjeta de contenido en tu dispositivo.
 
-![Una campaña de tarjeta de contenido Braze que muestra que puedes añadir tu propio ID de usuario como destinatario de prueba para probar tu tarjeta de contenido.]({% image_buster /assets/img/react-native/content-card-test.png %} "Prueba de campaña de tarjeta de contenido")
+![Una campaña de tarjeta de contenido Braze que muestra que puedes añadir tu propio ID de usuario como destinatario de prueba para probar tu tarjeta de contenido.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
 
 ## Colocación de tarjetas de contenido
 
@@ -73,19 +75,19 @@ Por ejemplo, puedes querer crear dos tarjetas de mensajes: una llamada a la acci
 Claves como `body`, `title`, y `buttonText` pueden tener simples valores de cadena que tus especialistas en marketing pueden establecer. Claves como `terms` pueden tener valores que proporcionen una pequeña colección de frases aprobadas por tu departamento Jurídico. Claves como `style` y `class_type` tienen valores de cadena que puedes configurar para determinar cómo se muestra tu tarjeta en tu aplicación o sitio web.
 
 {% tabs local %}
-{% tab Recomendaciones de lectura %}
+{% tab Reading recommendations %}
 Pares clave-valor de la tarjeta de recomendación de lectura:
 
 | Clave         | Valor                                                                |
 |------------|----------------------------------------------------------------------|
 | `body`       | Añade tus intereses a tu perfil del Semanario Politer para obtener recomendaciones personales de lectura. |
 | `style`      | información                                                                 |
-| `class_type` | centro_notificaciones                                                 |
+| `class_type` | notification_center                                                 |
 | `card_priority` | 1                                                                 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 
-{% tab Cupón de nuevo suscriptor %}
+{% tab New subscriber coupon %}
 Pares clave-valor para un nuevo cupón de suscriptor:
 
 | Clave         | Valor                                                            |
@@ -94,14 +96,14 @@ Pares clave-valor para un nuevo cupón de suscriptor:
 | `body`       | Especial fin del verano - Disfruta de un 10 % de descuento en los juegos de Politer              |
 | `buttonText` | Suscríbete ahora                                                    |
 | `style`      | promo                                                            |
-| `class_type` | centro_notificaciones                                              |
+| `class_type` | notification_center                                              |
 | `card_priority` | 2                                                              |
-| `terms`      | solo_nuevos_abonados                                             |
+| `terms`      | new_subscribers_only                                             |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 {% endtabs %}
 
-{% details Información adicional para Android %}
+{% details Additional information for Android %}
 
 En el SDK de Android y FireOS, la lógica del centro de mensajería se rige por el valor `class_type` que proporcionan los pares clave-valor de Braze. Con el método [`createContentCardable`]({{site.baseurl}}/developer_guide/content_cards/) puedes filtrar e identificar estos tipos de clases.
 

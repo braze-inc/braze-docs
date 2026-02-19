@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Listar vários detalhes de itens de catálogo"
+nav_title: "OBTER: Listar vários detalhes de itens do catálogo"
 article_title: "OBTER: Listar vários detalhes de itens de catálogo"
 search_tag: Endpoint
 page_order: 3

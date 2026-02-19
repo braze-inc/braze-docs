@@ -50,7 +50,7 @@ Sobald ein Import abgeschlossen ist, wird eine E-Mail-Benachrichtigung an die im
 ### Schritt 4: Erstellen Sie Braze Segmente mit Kubit Kohorten
 Nachdem Sie Kohorten in Braze importiert haben, können Sie diese als Filter verwenden, um Braze-Segmente zu erstellen und sie in Braze-Kampagnen oder Canvas einzubinden. Besuchen Sie unsere Dokumentation zu Segmenten, um mehr darüber zu erfahren, [wie Sie Segmente in Braze erstellen können]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment).
 
-![In der Segmentierung von Braze wird das Nutzer:in-Attribut "Kubit Kohorten" auf "includes_value" gesetzt und zeigt eine Liste der verfügbaren Kohorten an.]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
+![In der Segmentierung von Braze ist das Attribut "Kubit Kohorten" auf "includes_value" gesetzt und zeigt eine Liste der verfügbaren Kohorten an.]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
 
 ## Nutzer:innen-Abgleich
 

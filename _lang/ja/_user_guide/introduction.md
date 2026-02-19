@@ -23,7 +23,7 @@ user_menu_list:
     bg_color: '#FFD4BC'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/users-01-braze-orange-dark.svg
-    description: このガイドでは、カスタマージャーニーの構築の始め方を説明する。
+    description: このガイドでは、カスタマージャーニーの構築の始め方について説明する。
 
 popular_topic_list:
   - name: ユーザーインポート

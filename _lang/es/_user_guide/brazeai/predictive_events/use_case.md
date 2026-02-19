@@ -27,9 +27,9 @@ Jordan empieza definiendo el resultado más importante para su estrategia de act
 3. Como evento de destino, selecciona su evento personalizado: `upgraded_to_pro`.
 4. Jordan establece la ventana de predicción en 7 días, fija un calendario de actualización y crea la predicción.
 
-\![Configuración de la predicción que muestra la definición, la ventana, la audiencia y el calendario de actualización de la predicción.]({% image_buster /assets/img/ai_use_cases/prediction_settings.png %})
+![Configuración de la predicción que muestra la definición, la ventana, la audiencia y el calendario de actualización de la predicción.]({% image_buster /assets/img/ai_use_cases/prediction_settings.png %})
 
-## Paso 2: Segmenta a los usuarios en función de la probabilidad de actualización
+## Paso 2: Segmenta a los usuarios en función de la probabilidad de actualización
 
 Una vez completada la formación, Braze asigna una [Puntuación de Probabilidad de Suceso]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) (0-100) a cada usuario elegible. Jordan utiliza esta puntuación para crear segmentos procesables: uno para los usuarios de alta intención que quizá no necesiten un descuento, y otro para los usuarios que probablemente no se conviertan sin ayuda.
 
@@ -42,22 +42,22 @@ Una vez completada la formación, Braze asigna una [Puntuación de Probabilidad 
 Los filtros de predicción pueden combinarse con cualquier otro atributo o comportamiento del usuario. Jordan planea refinar aún más estos segmentos basándose en los intereses de los usuarios, como dar prioridad a los usuarios que utilizan con frecuencia las características de seguimiento del estado físico. Esto le proporciona cuatro subgrupos a los que dirigirse con mayor precisión, permitiendo que el contenido y la mensajería se ajusten a las necesidades de cada usuario.
 {% endalert %}
 
-\![Creador de segmentos con dos filtros para la Puntuación de Probabilidad de Suceso.]({% image_buster /assets/img/ai_use_cases/event_likelihood_score.png %})
+![Creador de segmentos con dos filtros para la Puntuación de Probabilidad de Suceso.]({% image_buster /assets/img/ai_use_cases/event_likelihood_score.png %})
 
-## Paso 3: Personalización de la mensajería por nivel de intención
+## Paso 3: Personalización de la mensajería por nivel de intención
 
 Ahora que Jordan tiene claras las señales de intención de actualización -y subgrupos refinados basados en el comportamiento de los usuarios- construye una estrategia de mensajería que se adapta a lo que necesita cada usuario. Se acabaron las explosiones únicas para todos.
 
 Elige el correo electrónico como canal principal para esta campaña. ¿Por qué? Porque Jordan quiere explicar el valor de Pro a los usuarios de alta intención y presentar un argumento convincente a los usuarios más indecisos: ambas cosas requieren espacio, elementos visuales y una fuerte CTA. El correo electrónico le da flexibilidad para hacerlo bien sin presionar a los usuarios, y le permite hacer un seguimiento del rendimiento a través del comportamiento de los clics.
 
-Jordan [crea un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) que divide la experiencia en función de los segmentos que acaba de construir. Añade un paso de Rutas de audiencia a la audiencia objetivo:
+Jordan [crea un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) que divide la experiencia en función de los segmentos que acaba de construir. Añade un paso de Rutas de audiencia al objetivo:
 
 - Usuarios de alta intención, centrados en el fitness
 - Gran intención, otros usuarios
 - Usuarios de baja intención, centrados en el fitness
 - Baja intención, otros usuarios
 
-\![Ruta de audiencia de Canvas con cuatro rutas para cada tipo de intención.]({% image_buster /assets/img/ai_use_cases/canvas_paths_by_intent.png %})
+![Ruta de audiencia de Canvas con cuatro rutas para cada tipo de intención.]({% image_buster /assets/img/ai_use_cases/canvas_paths_by_intent.png %})
 
 También establece el evento de conversión Canvas en el evento personalizado `upgraded_to_pro`, para que Braze realice un seguimiento automático de las conversiones de actualización a medida que los usuarios avanzan por el flujo.
 
@@ -111,24 +111,24 @@ Después de que se ejecute la campaña, Jordan revisa el rendimiento en [los an�
 Rendimiento del correo electrónico por ruta:
 
 - **Alta intención, aptitud**
-   - *Tarifa abierta:* 34%
+   - *Tasa de apertura:* 34%
    - *Tasa de clics:* 20%
    - *Tasa de conversión:* 13%
    - Sin descuento
 - **Gran intención, otros**
-   - *Tarifa abierta:* 30%
-   - *Tasa de clics:* 17%
-   - *Tasa de conversión:* 11%
+   - *Tasa de apertura:* 30 %
+   - *Tasa de clics:* 17 %
+   - *Tasa de conversión:* 11 %
    - Sin descuento
 - **Baja intención, aptitud**
-   - *Tarifa abierta:* 27%
-   - *Tasa de clics:* 12%
-   - *Tasa de conversión:* 8%
+   - *Tasa de apertura:* 27 %
+   - *Tasa de clics:* 12 %
+   - *Tasa de conversión:* 8 %
    - Oferta del 50% de descuento incluida
 - **Baja intención, otros**
-   - *Tarifa abierta:* 23%
+   - *Tasa de apertura:* 23 %
    - *Tasa de clics:* 9%
-   - *Tasa de conversión:* 6%
+   - *Tasa de conversión:* 6 %
    - Oferta del 50% de descuento incluida
 
 En comparación con la campaña anterior del equipo, de talla única (en la que un descuento general después de 7 días sólo producía un 5% de conversiones y un exceso de mensajería), el enfoque específico muestra un aumento significativo en todos los grupos, con mayor eficacia y menos descuentos innecesarios.

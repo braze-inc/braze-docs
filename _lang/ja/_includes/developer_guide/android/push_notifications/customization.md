@@ -303,7 +303,7 @@ Braze.configure(this, brazeConfig)
     </tr>
     <tr>
       <td><code>&lt;ul&gt;</code> + <code>&lt;li&gt;</code></td>
-      <td>箇条書きの順序なしリスト</td>
+      <td>箇条書き付き順序なしリスト</td>
     </tr>
     <tr>
       <td>見出し</td>

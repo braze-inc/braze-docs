@@ -46,7 +46,7 @@ Se estiver participando do teste das contas de trabalho do Meta na versão beta,
 2\. No módulo Facebook Audience Export, selecione **Connect Facebook**. <br><br>![Página de parceiros de tecnologia do Facebook na plataforma Braze.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:70%;"}
 
 {: start="3"}
-3\. Na janela de diálogo oAuth do Facebook, autorize o Braze a criar públicos personalizados em suas contas de anúncios do Facebook. <br><br>![A primeira caixa de diálogo do Facebook solicitando "Connect as X" (Conectar-se como X), em que X é seu nome de usuário do Facebook.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![A segunda caixa de diálogo do Facebook solicitando permissão para gerenciar anúncios de suas contas de anúncios.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
+3\. Na janela de diálogo oAuth do Facebook, autorize o Braze a criar públicos personalizados em suas contas de anúncios do Facebook. <br><br>![A primeira caixa de diálogo do Facebook solicitando para "Conectar como X", em que X é seu nome de usuário do Facebook.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![A segunda caixa de diálogo do Facebook solicitando permissão para gerenciar anúncios de suas contas de anúncios.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
 
 {: start="4"}
 4\. Depois que o Braze estiver vinculado à sua conta do Facebook, selecione as contas de anúncios que deseja sincronizar em seu espaço de trabalho do Braze. <br><br>![Uma lista de contas de anúncios disponíveis que você pode conectar ao Facebook.]({% image_buster /assets/img/fb/afb_4.png %}){: style="max-width:70%;"}<br><br> Depois de se conectar, você será levado de volta à página do parceiro, onde poderá ver quais contas estão conectadas e desconectar contas existentes. <br><br> ![Uma versão atualizada da página de parceiros de tecnologia do Facebook mostrando as contas de anúncios conectadas com sucesso.]({% image_buster /assets/img/fb/afb_5.png %}){: style="max-width:70%;"}<br>
@@ -77,7 +77,7 @@ Só é possível selecionar um campo de usuário em uma única exportação. Se 
 
 {: start="4"}
 4\. Depois de selecionar o campo do usuário, selecione **Export Segment (Exportar segmento)**. Assim como as exportações CSV, você receberá um e-mail quando o segmento terminar de ser exportado para o Facebook.
-5\. Visualize o público personalizado no [Gerenciador de anúncios do Facebook](https://www.facebook.com/ads/manager/audiences/manage/).
+5\. Veja o público personalizado no [Gerenciador de Anúncios do Facebook](https://www.facebook.com/ads/manager/audiences/manage/).
 
 {% alert important %}
 Devido a razões de privacidade do usuário, o Facebook não permite que você veja:
@@ -96,10 +96,28 @@ Ao criar públicos do Facebook, talvez seja necessário incluir ou excluir deter
 
 - Se estiver coletando aceitações, recusas, `Do Not Sell Or Share` ou outros atributos personalizados relevantes, inclua-os nos critérios de entrada do canva como um filtro: 
 
-![Um Canva com um público de entrada de "opted_in_marketing" é igual a "true".]({% image_buster /assets/img/tiktok/tiktok13.png %}){: style="max-width:75%;"}
+![Um Canva com um público de entrada de "opted_in_marketing" é igual a "verdadeiro".]({% image_buster /assets/img/tiktok/tiktok13.png %}){: style="max-width:75%;"}
 
 
 #### Públicos semelhantes
 
 Depois de exportar com êxito um segmento como um público do Facebook, você poderá criar grupos adicionais usando o Facebook [Lookalike Audiences](https://www.facebook.com/business/help/164749007013531?id=401668390442328). Esse recurso analisa os dados demográficos, os interesses e outras atribuições do público escolhido e cria um novo público de pessoas com atributos semelhantes.
 
+## Solução de problemas
+
+### Erro ao Validar o Token de Acesso
+
+Ao usar a Exportação do Facebook, o erro `Error Validating Access Token` será exibido se:
+- Você mudou sua senha, o que invalida sua sessão atual
+- O Facebook fez você sair como uma precaução de segurança
+
+Para resolver esse erro, siga estas etapas:
+1. Saia do Facebook e faça login novamente.
+2. No Braze, remova suas credenciais do Facebook e salve. Confirme que as credenciais foram removidas tentando exportar um segmento (o ícone de exportação deve estar desativado).
+3. Readicione e salve suas credenciais do Facebook.
+4. Tente exportar novamente. 
+
+Se a exportação não funcionar, faça o seguinte:
+1. Remova suas credenciais novamente e salve.
+2. Readicione suas credenciais e salve.
+3. Desconecte e reconecte a integração do Facebook na página **Parceiros de Tecnologia**.

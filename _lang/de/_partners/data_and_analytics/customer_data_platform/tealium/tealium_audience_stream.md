@@ -68,7 +68,7 @@ Badges sind spezielle Attribute für Besucher, die wertvolle Verhaltensmuster da
 #### Attribut und Badge Beispiel
 
 {% tabs local %}
-{% tab Attribut %}
+{% tab Attribute %}
 
 Erstellen Sie ein Besucher-Attribut "Lifetime-Order-Value", das den kumulativen Betrag berechnet, den der Kund:in für alle abgeschlossenen Bestellungen (Kauf-Event) ausgegeben hat (`order_total`). Um den Lifetime-Value in Ihrem Tealium-Konto einzurichten, befolgen Sie bitte die folgenden Anweisungen:
 
@@ -144,7 +144,7 @@ Nicht alle angebotenen Felder sind erforderlich.
 {% endalert %}
 
 {% tabs local %}
-{% tab Nutzer:innen verfolgen - Batch und Non-Batch %}
+{% tab Track User - Batch and Non-Batch %}
 
 Mit dieser Aktion können Sie die Attribute von Nutzer:innen, Ereignissen und Käufen in einer einzigen Aktion tracken. Obwohl die Aktion Nutzer:innen tracken sowohl für AudienceStream als auch für EventStream gleich ist, empfiehlt Tealium, die Abbildungen der Attribute der Nutzer:innen mit AudienceStream-Aktionen und die Abbildungen der Ereignisse und Käufe mit EventStream-Aktionen zu verknüpfen.
 
@@ -164,7 +164,7 @@ Mit dieser Aktion können Sie die Attribute von Nutzer:innen, Ereignissen und K�
 ![]({% image_buster /assets/img/tealium/track_user_example2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Nutzer:in löschen - Nicht-Batch %}
+{% tab Delete User - Non-Batch %}
 
 Diese Aktion erlaubt es Ihnen, Nutzer:innen aus dem Braze-Dashboard zu löschen.
 
@@ -176,7 +176,7 @@ Diese Aktion erlaubt es Ihnen, Nutzer:innen aus dem Braze-Dashboard zu löschen.
 ![]({% image_buster /assets/img/tealium/track_user_delete2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Update Benutzer:innen Abo-Gruppe Status - Non-Batch %}
+{% tab Update User Subscription Group Status - Non-Batch %}
 Mit dieser Aktion können Sie Nutzer:innen aus Abo-Gruppen für SMS oder E-Mail hinzufügen oder entfernen.
 
 | Parameter | Beschreibung |

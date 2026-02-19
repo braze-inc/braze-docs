@@ -15,25 +15,27 @@ channel:
 
 Email deliverability is the core of campaign success. Using the Deliverability Center in the Braze dashboard, you can view your domains by **IP Reputation** or **Delivery Errors** to discover and troubleshoot any potential issues with email deliverability. 
 
-To access the Deliverability Center, you'll need "Access Campaigns, Canvases, Cards, Segments, Media Library" and "View Usage Data" [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
+To access the Deliverability Center, you must have "Access Campaigns, Canvases, Cards, Segments, Media Library" and "View Usage Data" [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
 
 ## Setting up your Google Postmaster account
 
-Before connecting to the Deliverability Center, you'll need to set up a Google Postmaster Tools account. You can use a work or personal Gmail account to setup your Google Postmaster. 
+Before connecting to the Deliverability Center, you'll need to set up a Google Postmaster Tools account. You can use a work or personal Gmail account to set up your Google Postmaster. 
 
 1. Go to the [Google Postmaster Tools dashboard](https://postmaster.google.com/managedomains?pli=1).
 2. In the bottom right, select the <i class="fas fa-plus-circle"></i> plus icon.
-3. Enter your root domain or subdomain to authenticate your email. If you're adding and verifying the root domain, this will allow the verification to be applied downstream to subdomains. For example, by verifying `braze.com`, you can later add `demo.braze.com` and other subdomains without having to verify these individually.
-4. Google will generate a TXT record that can be added directly to your domain's DNS. This is generally owned by whoever manages your DNS. For information and guidance on how to update your specific DNS, check out [Verify your domain (host-specific steps)](https://support.google.com/a/topic/1409901).
-5. Select **Next**. <br>![An example domain "demo.braze.com" to authenticate an email.]({% image_buster /assets/img_archive/domain_authentication.png %})
-6. After the TXT record is added to the DNS, return to the Google Postmaster Tools dashboard and select **Verify**. This step confirms you own the domain, so you'll be able to access Gmail deliverability metrics in your Postmaster account. <br> ![A prompt to verify ownership of the domain "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
+3. Enter your root domain or subdomain to authenticate your email. If you're adding and verifying the root domain, this allows the verification to be applied to subdomains. For example, by verifying `braze.com`, you can later add `demo.braze.com` and other subdomains without individually verifying them.
 
-{% alert tip %}
-Be sure the TXT record is tied at the parent domain, not the subdomain you're using through Braze.
+{% alert important %}
+Be sure the TXT record is tied to the parent domain, not the subdomain you're using through Braze.
 {% endalert %}
 
+{: start="4"}
+4. Google generates a TXT record that can be added directly to your domain's DNS. This is generally owned by whoever manages your DNS. For information and guidance on how to update your specific DNS, check out [Verify your domain (host-specific steps)](https://support.google.com/a/topic/1409901).
+5. Select **Next**. <br>![An example domain "demo.braze.com" to authenticate an email.]({% image_buster /assets/img_archive/domain_authentication.png %})
+6. After the TXT record is added to the DNS, return to the Google Postmaster Tools dashboard and select **Verify**. This step confirms you own the domain, so you can access Gmail deliverability metrics in your Postmaster account. <br> ![A prompt to verify ownership of the domain "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
+
 {% alert note %}
-If your subdomains aren't included in the Deliverability Center for Google Postmaster, this can be a result of only adding the parent domain to Google Postmaster. After the parent domains are verified in Google Postmaster, you can add your subdomains, which will be verified automatically. This process allows Google to report back on metrics on the subdomain-level, which can then be pulled into the Braze Deliverability Center.
+If your subdomains aren't included in the Deliverability Center for Google Postmaster, this can be a result of only adding the parent domain to Google Postmaster. After the parent domains are verified in Google Postmaster, you can add your subdomains, which are verified automatically. This process allows Google to report back on metrics on the subdomain-level, which can then be pulled into the Braze Deliverability Center.
 {% endalert %}
 
 ## Integrating Google Postmaster
@@ -47,7 +49,7 @@ Follow these steps to integrate with Google Postmaster and set up your Deliverab
 3. Select **Connect with Google Postmaster**. 
 4. Select your Google Account and then select **Allow** to allow Braze to view email traffic metrics for the domains registered with the Postmaster Tools. 
 
-Your verified domains will display in the Deliverability Center. 
+Your verified domains display in the Deliverability Center. 
 
 ![Two verified domains for Google Postmaster with a medium and low reputation.]({% image_buster /assets/img_archive/deliverability_center2.png %})
 
@@ -64,9 +66,9 @@ To help understand the ratings for IP reputation, refer to this table:
 | Reputation Rating | Definition |
 | ----- | ---------- |
 | High | Has a good track record of generating low spam complaints (such as users clicking the "spam" button). |
-| Medium/Fair | Known to generate positive engagement but occasionally receives spam complaints. Most of the emails from this domain will be sent to the inbox, except when spam complaints increase. |
-| Low | Known to receive elevated rates of spam complaints regularly. Emails from this sender will likely be filtered to the spam folder. |
-| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |
+| Medium/Fair | Known to generate positive engagement but occasionally receives spam complaints. Most of the emails from this domain are sent to the inbox, except when spam complaints increase. |
+| Low | Known to receive elevated rates of spam complaints regularly. Emails from this sender are likely be filtered to the spam folder. |
+| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain are almost always be rejected at connection time or filtered to the spam folder. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Domain reputation 
@@ -75,10 +77,10 @@ Use the following table to help monitor and understand your domain reputation ra
 
 | Reputation Rating | Definition |
 | ----- | ---------- |
-| High | Has a good track record of very low spam complaints. Complies with Gmail’s sender guidelines. Emails are rarely filtered to the spam folder. Has a good track record of a very low spam rate. Complies with [Gmail's sender guidelines](https://developers.google.com/gmail/markup/registering-with-google). |
-| Medium/Fair | Known to generate positive engagement but has occasionally received a low volume of spam complaints. Most of the emails from this domain will reach the inbox (except when there is a notable increase in spam levels). |
-| Low | Known to receive spam complaints regularly. Emails from this sender will likely be filtered to the spam folder. |
-| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain will almost always be rejected at connection time or filtered to the spam folder. |
+| High | Has a good track record of very low spam complaints. Complies with Gmail’s sender guidelines. Emails are rarely filtered into the spam folder. Has a good track record of a very low spam rate. Complies with [Gmail's sender guidelines](https://developers.google.com/gmail/markup/registering-with-google). |
+| Medium/Fair | Known to generate positive engagement, but has occasionally received a low volume of spam complaints. Most of the emails from this domain reach the inbox (except when there is a notable increase in spam levels). |
+| Low | Known to receive spam complaints regularly. Emails from this sender are likely be filtered to the spam folder. |
+| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain are almost always be rejected at connection time or filtered to the spam folder. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Authentication
@@ -146,7 +148,7 @@ To calculate the complaint rate, divide the number of complaints by the number o
 | Result | Definition |
 | ----- | ---------- |
 | Less than 0.3% | The ideal complaint rate. |
-| More than 0.3% | Review your sign-up process, and ensure your unsubscribe link is working. Also, consider whether mail could be better personalized to your audience. |
+| More than 0.3% | Review your sign-up process, and ensure your unsubscribe link is working. Also, consider whether the mail could be better personalized to your audience. |
 | More than 100% | Note that SNDS displays complaints for the day they were reported, not retroactively against the day the complained-about mail was delivered. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -155,7 +157,7 @@ To calculate the complaint rate, divide the number of complaints by the number o
 Spam trap hits are the number of messages sent to "trap accounts," which are accounts maintained by Outlook.com that don't solicit any mail. It's likely that any messages sent to these trap accounts are considered spam, so it's important to monitor this metric to make sure that it's low. Low spam trap hits means the messages aren't sent to these accounts and are being sent to actual accounts instead.
 
 {% alert tip %}
-If you're looking for records related to one of your verified domains in Braze, note the Deliverability Center lists your data from Google Postmaster or Microsoft SNDS, meaning it's likely that either platform doesn't have any data to share with Braze. Alternatively, we suggest maintaining consistent email delivery as this can lead to a higher reputation. 
+If you're looking for records related to one of your verified domains in Braze, note that the Deliverability Center lists your data from Google Postmaster or Microsoft SNDS, meaning it's likely that either platform doesn't have any data to share with Braze. Alternatively, we suggest maintaining consistent email delivery as this can lead to a higher reputation. 
 {% endalert %}
 
 
