@@ -28,6 +28,14 @@ For more information on any of the updates listed on this page, contact your acc
 
 Built on a non-contextual multi-armed bandit optimizer, Content Optimizer sends a single message per user, determining which combination of component variants to deliver based on predictive recommendations. As the step gathers data over time, high-performing variants naturally increase in send allocation while poor-performing variants decrease. Content Optimizer works best with repeated-send Canvases that have consistent daily user volume (at least a few thousand users per day) to enable continuous optimization.
 
+### Data & Reporting
+
+#### eCommerce recommended events
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+To match eCommerce recommended events with the existing purchase event, we added the ["Places Order" conversion event]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/#conversions-report), which is similar to “Makes Purchase".
+
 ### Channels & Touchpoints
 
 #### Translate locales in banners
@@ -70,7 +78,7 @@ Using the [Braze Audience Sync to LinkedIn]({{site.baseurl}}/partners/canvas_aud
 
 [DOTS.ECO]({{site.baseurl}}/partners/docs.eco) lets you reward users with real-world environmental impact through trackable digital certificates. Each certificate can include metadata like a shareable certificate URL and image URL, so users can view (and revisit) their proof of impact.
 
-### Mailizio - Message orchestration
+#### Mailizio - Message orchestration
 
 [Mailizio]({{site.baseurl}}/partners/mailizio/) is an email creation and management platform that makes it easy to design reusable, brand-safe content using an intuitive visual editor. With Mailizio's integration to Braze, you can export your content blocks and email templates, then automatically generate in-app messages from those same assets, enabling fast and fully controlled campaign deployment.
 
@@ -140,12 +148,6 @@ The following SDK updates have been released. Breaking updates are listed below;
 ## January 8, 2026 release
 
 ### Data & Reporting
-
-#### eCommerce recommended events
-
-{% multi_lang_include release_type.md release="Early access" %}
-
-To match eCommerce recommended events with the existing purchase event, we added the ["Places Order" conversion event]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/#conversions-report), which is similar to “Makes Purchase".
 
 #### Updates to Currents events
 
