@@ -2,7 +2,7 @@
 nav_title: Linkrunner
 article_title: Linkrunner
 alias: /partners/linkrunner/
-description: "This reference article outlines the partnership between Braze and Linkrunner, a mobile attribution platform that lets you import attribution data to better understand your user acquisition campaigns."
+description: "This reference article outlines the partnership between Braze and Linkrunner, a mobile attribution and analytics platform that lets you import attribution data to better understand your user acquisition campaigns."
 page_type: partner
 search_tag: Partner
 
@@ -13,6 +13,9 @@ search_tag: Partner
 > [Linkrunner](https://linkrunner.io/) is a mobile attribution and analytics platform that helps you track and analyze your user acquisition campaigns.
 
 _This integration is maintained by Linkrunner._
+
+## About the integration
+
 The Braze and Linkrunner integration lets you import attribution data to better understand which campaigns are driving user acquisition and engagement.
 
 ## Prerequisites
@@ -28,7 +31,7 @@ The following is required before you begin:
 
 ## Integration
 
-### Step 1: Map identifier
+### Step 1: Map user IDs
 
 If you use the Braze SDK `changeUser` function, pass the same user ID in the `userData` parameter of the Linkrunner SDK `signup` function.
 
@@ -84,3 +87,7 @@ For more information, see [Linkrunner's documentation](https://docs.linkrunner.i
 ### Step 4: View user attribution data
 
 Linkrunner sends `lr_campaign` and `lr_ad_network` as custom attributes. View this data in the **Custom Attributes** section of the user profile in the Braze dashboard.
+
+## Facebook and X (formerly Twitter) attribution data
+
+Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
