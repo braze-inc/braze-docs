@@ -111,7 +111,7 @@ Customer may not use webhooks to trigger the sending of messages via the WhatsAp
 
 Customers can connect their direct Whatsapp accounts with Braze using the “BYO Whatsapp Connector.
 
-## 4. LINE Channel Compliance Documentation** {#line-channel-compliance-documentation}
+## 4. LINE Channel Compliance Documentation {#line-channel-compliance-documentation}
 
 The following additional terms apply in relation to Customer’s use of the LINE Channel:
 
@@ -134,7 +134,7 @@ Customer agrees to comply with and be bound by any applicable terms and conditio
 
 Customer acknowledges that Shopify may at any time and at its sole discretion: (i) require that Braze disable or block Customer’s access to the Shopify Integration; or (ii) stop providing, suspend or terminate Customer’s access to the Shopify Integration. Braze shall have no responsibility with regards to Shopify ceasing to provide access to the Shopify Integration to Customer or through the Braze Services generally.
 
-## **6. Audience Sync Compliance Documentation {audience-sync-compliance-documentation}
+## 6. Audience Sync Compliance Documentation {audience-sync-compliance-documentation}
 
 The following additional terms apply to Customer’s use of Audience Sync.
 
