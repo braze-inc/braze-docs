@@ -88,7 +88,7 @@ If Braze makes a new or updated mechanism generally available in the Braze Servi
 
 ### Exceptions to the Webhook Channel Use Terms
 
- See [Mobile Messages Channel](#1.-mobile-messages-channel) and [Whatsapp Channel](#3.-whatsapp-channel-compliance-documentation)
+See [Mobile Messages Channel](#mobile-messages-channel) and [WhatsApp Channel](#whatsapp-channel-compliance-documentation)
 
 ### Disclaimer
 
@@ -150,7 +150,7 @@ Customer acknowledges that the use of Message Archiving and/or Field Level Encry
 
 ## 8. Agent Console Compliance Documentation {#agent-console-compliance-documentation}
 
-### **LLM Providers as Sub-processors or Third Party Providers**
+### LLM Providers as Sub-processors or Third Party Providers
 
 Where Customer uses an integration with a large language model provided by Braze through the Braze Auto option in the Braze Services (“Braze-provided LLM”), the provider of such a Braze-provided LLM will be acting as a Braze Sub-processor, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze.
 
