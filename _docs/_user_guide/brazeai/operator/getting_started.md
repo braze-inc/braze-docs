@@ -1,19 +1,19 @@
 ---
-nav_title: Getting Started
+nav_title: Get started
 article_title: Getting started with BrazeAI Operator<sup>TM</sup>
 page_order: 1
 description: "Learn how to access and use BrazeAI Operator<sup>TM</sup>, Braze's AI assistant built into the dashboard, including its features and best practices."
 ---
 
-# Getting started with BrazeAI Operator<sup>TM</sup>
+# Get started with BrazeAI Operator
 
 > Learn how to access and use BrazeAI Operator<sup>TM</sup>, your AI assistant built into the dashboard, including its features and best practices.
 
-## How to access Operator
+## Access Operator
 
 Open Operator from any page in the Braze dashboard.  
 
-1. Select **BrazeAI Operator<sup>TM</sup>**, next to your user profile.
+1. Select **BrazeAI Operator<sup>TM</sup>** next to your user profile.
 
 ![The BrazeAI Operator icon next to a user profile.]({% image_buster /assets/img/operator/operator_icon.png %})
 
@@ -26,7 +26,7 @@ Open Operator from any page in the Braze dashboard.
 Maximize to expand the panel for easier reading, or minimize to keep Operator available while working.  
 {% endalert %} 
 
-## How to use Operator
+## Use Operator
 
 Describe what you are trying to accomplish using natural language. Prompts can range from simple questions to complex requests:
 
@@ -43,7 +43,7 @@ Treat Operator as a conversation, not a search engine. Short, natural prompts wo
 - **Ask follow-up questions:** If the first response doesn't address your need, ask for clarification or additional details.
 - **Use page-aware context:** Operator understands your location in Braze. Open Operator while viewing the relevant page for the most accurate results.
 
-## Customizing your experience
+## Customize your experience
 
 ### Apply brand guidelines
 
@@ -59,7 +59,7 @@ Operator automatically understands your location in Braze and tailors responses 
 
 This context-awareness means you can ask shorter, more natural questions like "How do I add a delay?" instead of "How do I add a delay step in a Canvas workflow?"
 
-## Working with Operator responses
+## Work with Operator responses
 
 ### Get started with suggested prompts
 
@@ -67,7 +67,7 @@ When you open Operator, suggested prompts appear based on common tasks and your 
 
 ### Understand how Operator thinks
 
-Operator shows its reasoning steps in collapsible sections labeled **Reasoned**. Select the dropdown to expand these sections and see how Operator arrived at an answer. This is helpful when you want to understand the logic behind a suggestion or verify the approach.
+Operator shows its reasoning steps in collapsible sections labeled **Reasoned**. Select the dropdown to expand these sections and see how Operator determined an answer. This is helpful when you want to understand the logic behind a suggestion or verify the approach.
 
 ![The collapsed "Reasoned" dropdown in an Operator response.]({% image_buster /assets/img/operator/operator_reasoning_collapsed.png %}){:style="max-width:40%"}
 
@@ -75,7 +75,7 @@ Operator shows its reasoning steps in collapsible sections labeled **Reasoned**.
 
 Operator can propose and execute changes directly in the Braze dashboard, such as filling in form fields, updating settings, or generating content. Each proposed change is presented as an action card for you to review and approve before it takes effect. For more on how this works, see [Reviewing actions]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/).
 
-## Managing your session
+## Manage your session
 
 ### Stop a response
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Reviewing Actions
+nav_title: Review actions
 article_title: Reviewing BrazeAI Operator<sup>TM</sup> actions
 page_order: 2
 description: "Learn how to review and approve actions when BrazeAI Operator<sup>TM</sup> proposes changes in the dashboard."
@@ -22,7 +22,7 @@ When Operator proposes changes in the dashboard (such as filling in form fields,
 
 If an action fails after approval, Operator will notify with details about the failure.
 
-## Modifying a plan
+## Modify a plan
 
 To change something Operator proposed, describe the modification in the chat using natural language. Operator will refresh the action list with updated items. Previously approved and executed items remain unchanged.
 
