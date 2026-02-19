@@ -18,7 +18,7 @@ The Braze and Canva integration allows you to push assets from Canva directly in
 
 ### Step 1: Install the Braze App in Canva
 
-The Braze app can be found in the [Canva Apps Marketplace](https://www.canva.com/apps/).
+The Braze app can be found in the [Canva Apps Marketplace](https://www.canva.com/your-apps/AAG1cO7kIyc).
 
 After installing the app it will be available within a design, under the Apps menu.
 
