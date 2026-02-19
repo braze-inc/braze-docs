@@ -18,7 +18,7 @@ To prevent this, ensure your integration sends consistent data types across all 
 
 ### If I force a data type change on a custom attribute, will existing data be converted?
 
-No. Forcing a data type change only affects new data coming into Braze. Any data ingested before the type change continues to be stored as the old type and may not be segmentable with the new type's filters. A warning appears on the affected users' profiles.
+No. Forcing a data type change only affects new data coming into Braze. Any data ingested before the type change continues to be stored as the old type and may not be segmentable with the new type's filters. A warning appears on the affected users' profiles. For new incoming data, if a value doesn't match the forced type, Braze may coerce it into the forced type (for example, the string `"100"` to the number `100`); values that can't be coerced are ignored and don't update the attribute.
 
 If you need all existing user data to match the new type, you must re-send the attribute values for those users through the SDK, API, or a CSV import. There is no automatic bulk conversion for existing data.
 
