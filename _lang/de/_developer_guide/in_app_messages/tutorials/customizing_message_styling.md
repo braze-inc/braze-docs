@@ -11,12 +11,82 @@ layout: scrolly
 > Folgen Sie dem Beispielcode in diesem Tutorial, um das Styling Ihrer In-App-Nachricht mit Hilfe von Schlüssel-Wert-Paaren im Braze SDK anzupassen.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} Es ist jedoch keine zusätzliche Einrichtung erforderlich.
+
+## Anpassen des Stils von Nachrichten mit Hilfe von Schlüssel-Wert-Paaren für das Internet
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Customizing Message Styling Web" %}
+
+{% scrolly %}
+
+```js file=index.js
+import * as braze from "@braze/web-sdk";
+// Remove any calls to `braze.automaticallyShowInAppMessages()`
+
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
+
+braze.subscribeToInAppMessage(function (message) {
+  const extras = message.extras;
+  const customTemplateType = extras["custom-template"] || "";
+  const customColor = extras["custom-color"] || "";
+  const customMessageId = extras["message-id"] || "";
+
+  if (customTemplateType) {
+    // add your own custom code to render this message
+  } else {
+    // otherwise, use Braze built-in UI
+    braze.showInAppMessage(message);
+  }
+});
+```
+
+!Schritt
+Zeilen-index.js=2
+
+#### 1\. Entfernen Sie Aufrufe von `automaticallyShowInAppMessages()`
+
+Entfernen Sie alle Aufrufe von [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) da sie jede angepasste Logik, die Sie später implementieren, außer Kraft setzen werden.
+
+!Schritt
+Zeilen-index.js=6
+
+#### 2\. Enablement von Fehlersuchen (optional)
+
+Um die Fehlerbehebung während der Entwicklung zu erleichtern, sollten Sie das Debugging aktivieren.
+
+!Schritt
+Zeilen-index.js=9-21
+
+#### 3\. Abonnieren Sie den Callback Handler für In-App-Nachrichten
+
+Registrieren Sie einen Callback mit [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) um jedes Mal eine Nachricht zu erhalten, wenn eine In-App-Nachricht ausgelöst wird.
+
+!Schritt
+Zeilen-index.js=10-13
+
+#### 4\. Rufen Sie die Eigenschaft `message.extras` auf.
+
+Verwenden Sie `message.extras`, um auf angepasste Typen, Attribute für die Gestaltung oder andere im Dashboard definierte Werte zuzugreifen. Alle Werte werden als Strings zurückgegeben.
+
+!Schritt
+Zeilen-index.js=19
+
+#### 5\. Bedingt aufrufen `showInAppMessage`
+
+Um die Nachricht anzuzeigen, rufen Sie [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Andernfalls verwenden Sie die angepassten Eigenschaften nach Bedarf.
+
+{% endscrolly %}
+{% endsdktab %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/prerequisites/android.md %} Sie müssen auch [In-App-Nachrichten für Android aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} Außerdem müssen Sie [In-App-Nachrichten für Android aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
 ## Anpassen des Stils von Nachrichten mit Schlüssel-Wert-Paaren für Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Customizing Message Styling Android" %}
 
 {% scrolly %}
 
@@ -156,7 +226,7 @@ Implementieren Sie [`IInAppMessageViewFactory`](https://braze-inc.github.io/braz
 
 ## Anpassen des Stils von Nachrichten mit Schlüssel-Wert-Paaren für Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Customizing Message Styling Swift" %}
 
 {% scrolly %}
 
@@ -263,76 +333,6 @@ Zeilen-AppDelegate.swift=38-46
 #### 5\. Update der Styling-Attribute der Nachricht
 
 Verwenden Sie [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) um auf `PresentationContext` zuzugreifen, damit Sie die Attribute für die Gestaltung direkt ändern können. Jede Art von In-App-Nachricht enthält unterschiedliche Attribute.
-
-{% endscrolly %}
-{% endsdktab %}
-{% sdktab web %}
-{% multi_lang_include developer_guide/prerequisites/web.md %} Es ist jedoch keine zusätzliche Einrichtung erforderlich.
-
-## Anpassen des Stils von Nachrichten mit Hilfe von Schlüssel-Wert-Paaren für das Internet
-
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
-
-{% scrolly %}
-
-```js file=index.js
-import * as braze from "@braze/web-sdk";
-// Remove any calls to `braze.automaticallyShowInAppMessages()`
-
-braze.initialize("YOUR-API-KEY", {
-  baseUrl: "YOUR-ENDPOINT",
-  enableLogging: true,
-});
-
-braze.subscribeToInAppMessage(function (message) {
-  const extras = message.extras;
-  const customTemplateType = extras["custom-template"] || "";
-  const customColor = extras["custom-color"] || "";
-  const customMessageId = extras["message-id"] || "";
-
-  if (customTemplateType) {
-    // add your own custom code to render this message
-  } else {
-    // otherwise, use Braze built-in UI
-    braze.showInAppMessage(message);
-  }
-});
-```
-
-!Schritt
-Zeilen-index.js=2
-
-#### 1\. Entfernen Sie Aufrufe von `automaticallyShowInAppMessages()`
-
-Entfernen Sie alle Aufrufe von [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) da sie jede angepasste Logik, die Sie später implementieren, außer Kraft setzen werden.
-
-!Schritt
-Zeilen-index.js=6
-
-#### 2\. Enablement von Fehlersuchen (optional)
-
-Um die Fehlerbehebung während der Entwicklung zu erleichtern, sollten Sie das Debugging aktivieren.
-
-!Schritt
-Zeilen-index.js=9-21
-
-#### 3\. Abonnieren Sie den Callback Handler für In-App-Nachrichten
-
-Registrieren Sie einen Callback mit [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) um jedes Mal eine Nachricht zu erhalten, wenn eine In-App-Nachricht ausgelöst wird.
-
-!Schritt
-Zeilen-index.js=10-13
-
-#### 4\. Rufen Sie die Eigenschaft `message.extras` auf.
-
-Verwenden Sie `message.extras`, um auf angepasste Typen, Attribute für die Gestaltung oder andere im Dashboard definierte Werte zuzugreifen. Alle Werte werden als Strings zurückgegeben.
-
-!Schritt
-Zeilen-index.js=19
-
-#### 5\. Bedingt aufrufen `showInAppMessage`
-
-Um die Nachricht anzuzeigen, rufen Sie [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Andernfalls verwenden Sie die angepassten Eigenschaften nach Bedarf.
 
 {% endscrolly %}
 {% endsdktab %}

@@ -1,7 +1,7 @@
 ---
 nav_title: 生成 AI
 article_title: 生成 AI
-page_order: 20
+page_order: 5
 layout: dev_guide
 guide_top_header: "生成 AI"
 guide_top_text: "BrazeAI<sup>TM</sup> は、効率と創造性を高める様々な自動生成 AI 機能を搭載しています。定型的なコピーライティング作業、コンテンツの改良、画像の作成に費やす時間を削減しつつ、魅力的なクロスチャネルの顧客体験を創造します。"

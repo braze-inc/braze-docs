@@ -53,8 +53,8 @@ The following messages listed are for example purposes and may not exactly match
 
 | Message Type | Potential Message | Description |
 |---|---|---|
-| Soft Bounce | The email address same@example.com soft bounced. | The email address was valid and the email message reached the recipient's mail server, but was rejected for a "temporary" issue. <br><br>Common soft bounce reasons include: {::nomarkdown} <ul> <li> The mailbox was full (the user is over their quota) </li> <li> The server was down </li> <li> The message was too large for the recipient’s inbox </li>  </ul> {:/} If an email has received a soft bounce, we will usually retry within a 72 hour period, but the number of retry attempts varies from receiver to receiver. |
-| Hard Bounce | The email account that you tried to reach does not exist. Try double-checking the recipient's email address for typos or unnecessary spaces. | Your message never reached this person's inbox because there was no inbox to reach. If you want to dig further in, messages like this can sometimes have links in the **View Details** column that will allow you to view the intended recipient's profile.|
+| Soft Bounce | The email address same@example.com soft bounced. | The email address was valid and the email message reached the recipient's mail server, but was rejected for a "temporary" issue. <br><br>Common soft bounce reasons include: {::nomarkdown} <ul> <li> The mailbox was full (the user is over their quota) </li> <li> The server was down </li> <li> The message was too large for the recipient’s inbox </li>  </ul> {:/} If an email has received a soft bounce, we usually retry within a 72 hour period, but the number of retry attempts varies from receiver to receiver. |
+| Hard Bounce | The email account that you tried to reach does not exist. Try double-checking the recipient's email address for typos or unnecessary spaces. | Your message never reached this person's inbox because there was no inbox to reach. If you want to dig further in, messages like this can sometimes have links in the **View Details** column that allow you to view the intended recipient's profile.|
 | Block | Spam message is rejected because of anti-spam policy. | Your message got categorized as spam. This mail error is logged for a user if we’ve received an event from the ESP indicating the email was dropped. It might just might be for that intended recipient, but if you're seeing this message a lot, you might want to re-evaluate your send habits or the content of your message. Also, think back—did you [warm up your IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)? If not, contact Braze for advice on getting this going.|
 | Aborted Message Error | empty-cart_web | If you have an app with a cart or you create a send with an abort message in the Liquid, you can customize what message is returned to you if the send is aborted. In this case, the message returned is empty-cart_web.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -76,8 +76,8 @@ Errors from the last 60 hours are available in the Message Activity Logs. Logs t
 
 ### Number of error logs stored
 
-The number of saved logs is influenced by several conditions. For example, if a scheduled campaign is sent to thousands of users, we would potentially see a sample of the errors in the Message Activity Log instead of all errors. The following is an overview of conditions affecting how many logs will be saved:
-- Up to 20 error logs of the same error type will be saved for the same campaign or Canvas step within one fixed clock hour for the following error types:
+The number of saved logs is influenced by several conditions. For example, if a scheduled campaign is sent to thousands of users, we would potentially see a sample of the errors in the Message Activity Log instead of all errors. The following is an overview of conditions affecting how many logs are saved:
+- Up to 20 error logs of the same error type are saved for the same campaign or Canvas step within one fixed clock hour for the following error types:
     - Connected Content errors
     - Abort Message errors
     - Webhook errors
@@ -85,7 +85,7 @@ The number of saved logs is influenced by several conditions. For example, if a 
     - SMS Delivery Failure errors
     - WhatsApp Failure errors
     - A/B Testing errors
-- Up to 20 push notification error logs of the same error type will be saved for the same campaign or Canvas step and app combination for the following error types:
+- Up to 20 push notification error logs of the same error type are saved for the same campaign or Canvas step and app combination for the following error types:
     - Invalid Push Credential
     - Invalid Push Token
     - No Push Credential
@@ -94,14 +94,26 @@ The number of saved logs is influenced by several conditions. For example, if a 
     - Retries Timed Out
     - Invalid Payload
     - Unexpected Error
-- Up to 100 error logs of the same error type will be saved for the same app within one fixed clock hour for the following error types:
+- Up to 100 error logs of the same error type are saved for the same app within one fixed clock hour for the following error types:
     - Live Activity error (No push credential)
     - Live Activity error (Invalid push credential)
     - Other Live Activity errors
     - APNS Feedback Removed Token errors
-- Up to 100 error logs of the same error type will be saved for the same campaign or Canvas step within one fixed clock hour for the following error types:
+- Up to 100 error logs of the same error type are saved for the same campaign or Canvas step within one fixed clock hour for the following error types:
     - Email Soft Bounce errors
     - Email Hard Bounce errors
     - Email Block errors
-- Up to 100 user aliasing error logs will be saved for the same workspace within one fixed clock hour.
+- Up to 100 user aliasing error logs are saved for the same workspace within one fixed clock hour.
 
+## Test sends
+
+The **Message Activity Log** shows test logs for these messaging channels:
+
+- SMS
+- WhatsApp
+- LINE
+- Webhook
+
+Test send logs are not available for the following channels: email, Content Cards, in-app messages, and push.
+
+Test send logs are prefixed with "[TEST SEND]", but it's not guaranteed that all test send logs have the prefix (for example, Connected Content errors don't have the prefix).

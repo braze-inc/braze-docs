@@ -80,8 +80,8 @@ Après avoir créé une destination, vous devez ensuite ajouter des entrées au 
 #### Onglet Données à envoyer
 L'onglet **Données à envoyer** vous permet de mapper les champs du catalogue Zeotap aux champs Braze qui peuvent être envoyés à Braze. Le mappage peut être effectué de l'une des manières suivantes :
 - **Mappage statique** \- Il y a certains champs que Zeotap mappe automatiquement aux champs Braze pertinents comme les champs de l’e-mail, du téléphone, du prénom, du nom de famille, etc.<br>
-- **Sélection déroulante** \- Mapper les champs pertinents ingérés dans Zeotap aux champs Braze fournis dans le menu déroulant.<br>![Diverses caractéristiques de l'utilisateur définies dans Zeotap, telles que la langue, la ville, la date d'anniversaire, etc.]({% image_buster /assets/img/zeotap/zeotap7.png %}){: style="max-width:70%;"}<br>
-- **Entrée de données personnalisées** \- Ajoutez des données personnalisées mappées au champ Zeotap pertinent et envoyez-les à Braze.<br>![Sélection de "loyalty_points" comme trait d'utilisateur dans Zeotap.]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
+- **Sélection déroulante** \- Mapper les champs pertinents ingérés dans Zeotap aux champs Braze fournis dans le menu déroulant.<br>![Diverses caractéristiques d'utilisateur définies dans Zeotap, telles que la langue, la ville, la date d’anniversaire, et plus encore.]({% image_buster /assets/img/zeotap/zeotap7.png %}){: style="max-width:70%;"}<br>
+- **Entrée de données personnalisées** \- Ajoutez des données personnalisées mappées au champ Zeotap pertinent et envoyez-les à Braze.<br>![Choisir "loyalty_points" comme trait d'utilisateur dans Zeotap.]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
 
 ## Attributs pris en charge
 Vous pouvez trouver les détails de tous les champs Braze dans cette section.

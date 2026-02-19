@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT: Substituir Vários Itens do Catálogo"
+nav_title: "PUT: Substituir vários itens do catálogo"
 article_title: "PUT: Substituir Vários Itens do Catálogo"
 search_tag: Endpoint
 page_order: 4
@@ -15,7 +15,7 @@ description: "Este artigo descreve detalhes sobre o endpoint Braze para substitu
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> Use este endpoint para substituir vários itens em seu catálogo.
+> Use este endpoint para substituir vários itens no seu catálogo.
 
 Se um item de catálogo não existir, esse endpoint criará o item em seu catálogo. Cada solicitação pode suportar até 50 itens de catálogo. Esse ponto de extremidade é assíncrono.
 

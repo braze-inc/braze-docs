@@ -1,6 +1,6 @@
 ---
-nav_title: Configuration des rapports
-article_title: Configuration des rapports
+nav_title: Configurer les rapports
+article_title: Configurer les rapports
 page_order: 1.1
 page_type: reference
 description: "Cette page décrit le rapport d'analyse/analytique généré automatiquement par Braze."
@@ -8,9 +8,9 @@ tool: Reporting
 
 ---
 
-# Configuration des rapports
+# Configurer les rapports
 
-> Braze génère automatiquement un rapport hebdomadaire par e-mail pour vous aider à comprendre les performances de vos apps et de vos campagnes de messages. 
+> Braze génère automatiquement un rapport hebdomadaire sur les e-mails pour vous aider à comprendre les performances de vos applications et de vos campagnes de communication. 
 
 ## S'abonner aux rapports
 

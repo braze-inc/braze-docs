@@ -1,7 +1,7 @@
 ---
 nav_title: ローカライゼーション
 article_title: ローカライゼーション
-page_order: 7
+page_order: 8
 description: "この参照記事では、ローカライズの基本について説明し、キャンペーンとキャンバス間で異なるオーケストレーションアプローチの利点を示し、ユーザがメッセージングでパーソナライゼーションを処理できるさまざまな方法を示します。"
 tool:
     - Campaigns
@@ -141,7 +141,7 @@ Braze の[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_to
 {% subtab API %}
 
 次の API 呼び出しでカタログを作成します。
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -175,7 +175,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs' \
 
 次の API 呼び出しでアイテムを追加します。
 
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs/translations/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Update des Abo-Gruppenstatus eines Nutzers"
+nav_title: "POST: Update der Nutzer:innen Abo-Gruppenstatus"
 article_title: "POST: Update des Abo-Gruppenstatus eines Nutzers"
 search_tag: Endpoint
 page_order: 4
@@ -10,10 +10,10 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Update Nutzer:
 {% api %}
 # Update des Abo-Gruppenstatus des Nutzers:in
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/subscription/status/set
+/abo/status/set
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um das Update des Abo-Status von bis zu 50 Nutzer:innen auf dem Braze-Dashboard im Stapelverfahren durchzuführen. 
+> Verwenden Sie diesen Endpunkt, um das Update des Abo-Status von bis zu 50 Nutzer:innen auf dem Braze-Dashboard im Stapelverfahren durchzuführen.
 
 Sie können auf die `subscription_group_id` einer Abo-Gruppe zugreifen, indem Sie zur Seite **Abo-Gruppe** navigieren.
 
@@ -29,6 +29,10 @@ Wenn Sie Beispiele sehen oder diesen Endpunkt für **SMS und RCS Abo-Gruppen** t
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `subscription.status.set`.
 
+{% alert note %}
+Wenn Sie daran interessiert sind, diesen Endpunkt mit [Abo-Gruppen von LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/) zu verwenden, wenden Sie sich an Ihren Customer-Success-Manager.
+{% endalert %}
+
 ## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
@@ -36,7 +40,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 ## Anfragetext
 
 {% tabs %}
-{% tab SMS und RCS %}
+{% tab SMS and RCS %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -48,13 +52,13 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   // SMS and RCS subscription group - one of external_id or phone is required
+   // SMS and RCS subscription group - you must include one of external_id or phone
  }
 ```
-\* SMS und RCS Abo-Gruppen: Nur `external_id` oder `phone` werden akzeptiert.
+\* SMS und RCS Abo-Gruppen: Braze akzeptiert nur `external_id` oder `phone`.
 
 {% endtab %}
-{% tab E-Mail %}
+{% tab Email %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -66,11 +70,11 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
-   // Email subscription group - one of external_id or email is required
-   // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
+   // Email subscription group - you must include one of external_id or email
+   // Note that sending an email address that is linked to multiple profiles updates all relevant profiles
  }
 ```
-\* Abo-Gruppen per E-Mail: Entweder `email` oder `external_id` ist erforderlich.
+\* Abo-Gruppen per E-Mail: Sie müssen entweder `email` oder `external_id` angeben.
 {% endtab %}
 {% endtabs %}
 
@@ -87,8 +91,8 @@ Wenn Sie neue Nutzer:innen über den Endpunkt [/users/track]({{site.baseurl}}/ap
 | [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | Erforderlich | String | Die `id` Ihrer Abo-Gruppe. |
 | `subscription_state` | Erforderlich | String | Verfügbare Werte sind `unsubscribed` (nicht in Abo-Gruppe) oder `subscribed` (in Abo-Gruppe). |
 | `external_id` | Erforderlich* | String-Array | Die `external_id` des Nutzers oder der Nutzer:innen kann bis zu 50 `id`s umfassen. |
-| `email` | Erforderlich* | String oder String-Array | Die E-Mail Adresse des Nutzers:innen, kann als String-Array übergeben werden. Sie müssen mindestens eine E-Mail Adresse angeben (maximal 50). <br><br>Wenn mehrere Nutzer:innen (`external_id`) im selben Workspace dieselbe E-Mail Adresse haben, werden alle Nutzer:innen mit den Änderungen der Abo-Gruppe aktualisiert. |
-| `phone` | Erforderlich* | String in [E.164](https://en.wikipedia.org/wiki/E.164) Format | Die Telefonnummer des Nutzers:innen, kann als String-Array übergeben werden. Muss mindestens eine Telefonnummer enthalten (bis zu 50). <br><br>Wenn mehrere Nutzer:innen (`external_id`) im selben Workspace dieselbe Telefonnummer haben, werden alle Nutzer:innen mit denselben Änderungen der Abo-Gruppe aktualisiert. |
+| `email` | Erforderlich* | String oder String-Array | Die E-Mail Adresse des Nutzers:innen, kann als String-Array übergeben werden. Sie müssen mindestens eine E-Mail Adresse angeben (maximal 50). <br><br>Wenn mehrere Nutzer:innen (`external_id`) im selben Workspace die gleiche E-Mail Adresse haben, aktualisiert Braze alle Nutzer:innen, die die gleiche E-Mail Adresse haben, mit den Änderungen der Abo-Gruppe. |
+| `phone` | Erforderlich* | String in [E.164](https://en.wikipedia.org/wiki/E.164) Format | Die Telefonnummer des Nutzers:innen, kann als String-Array übergeben werden. Muss mindestens eine Telefonnummer enthalten (bis zu 50). <br><br>Wenn mehrere Nutzer:innen (`external_id`) im selben Workspace dieselbe Telefonnummer haben, aktualisiert Braze alle Nutzer:innen, die dieselbe Telefonnummer haben, mit denselben Änderungen der Abo-Gruppe. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel-Anfragen

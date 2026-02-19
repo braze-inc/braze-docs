@@ -18,7 +18,7 @@ Essas são as versões mínimas do SDK necessárias para começar a usar os sina
 
 Use os feature flags para ativar gradualmente os recursos em uma população de amostra. Por exemplo, você pode lançar um novo recurso para seus usuários VIP primeiro. Essa estratégia ajuda a reduzir os riscos associados ao envio de novos recursos para todos ao mesmo tempo e ajuda a detectar bugs com antecedência.
 
-![Imagem em movimento do controle deslizante de tráfego de lançamento acessando de 0% a 100%.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
+![Imagem em movimento do controle deslizante de tráfego de rolagem indo de 0% a 100%.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
 
 Por exemplo, digamos que decidimos adicionar um novo link "Live Chat Support" ao nosso app para agilizar o atendimento ao cliente. Poderíamos liberar esse recurso para todos os clientes de uma só vez. No entanto, um lançamento amplo traz riscos, como, por exemplo: 
 
@@ -35,7 +35,7 @@ Com os feature flags da Braze, podemos implementar gradualmente o recurso e miti
 
 Para implementar gradualmente esse recurso, podemos [criar um sinalizador de recurso]({{site.baseurl}}/developer_guide/feature_flags/create/) chamado "Live Chat Widget".
 
-![Detalhes do Feature Flag para um exemplo chamado Live Chat Widget. A ID é enable_live_chat. A descrição desse sinalizador de recurso indica que o widget de bate-papo ao vivo será exibido na página de suporte.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
+![Detalhes do Feature Flag para um exemplo chamado Live Chat Widget. A ID é enable_live_chat.. A descrição desse sinalizador de recurso diz que o widget de bate-papo ao vivo será exibido na página de suporte.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
 Em nosso código do app, mostraremos o botão **Start Live Chat** somente quando a bandeira do recurso Braze estiver ativada:
 
@@ -110,7 +110,7 @@ if (liveChatEnabled) {
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 // Get the initial value from the Braze SDK
@@ -201,7 +201,7 @@ liveChatView.promoText = featureFlag?.getStringProperty("text")
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 let featureFlag = braze.featureFlags.featureFlag(id: "navigation_promo_link")
@@ -231,11 +231,11 @@ Digamos que estamos lançando um novo programa de fidelidade para nossos usuári
 
 Para coordenar efetivamente a implementação de recursos e o envio de mensagens, criaremos um novo feature flag chamado `show_loyalty_program`. Em nosso lançamento inicial em fases, deixaremos que o Canva controle quando e para quem o sinalizador de recurso será ativado. Por enquanto, deixaremos a porcentagem de implementação em 0% e não selecionaremos nenhum segmento de direcionamento.
 
-![Uma bandeira de recurso com o nome Loyalty Rewards Program (Programa de fidelidade). O ID é show_loyalty_program, e a descrição é que isso mostra o novo programa de fidelidade na tela inicial e na página de perfil.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
+![Uma bandeira de recurso com o nome Loyalty Rewards Program (Programa de fidelidade). O ID é show_loyalty_program, e a descrição mostra o novo programa de fidelidade de recompensas na tela inicial e na página de perfil.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
 
 Em seguida, no Canva, criaremos uma [etapa do Feature Flag]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) que ativa o sinalizador de recurso `show_loyalty_program` para nosso segmento "Clientes de alto valor":
 
-![Um exemplo de um Canva com uma etapa do Audience Split em que o segmento de clientes de alto valor ativa o sinalizador do recurso show_loyalty_program.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
+![Um exemplo de um Canvas com uma etapa de divisão de público em que o segmento de clientes de alto valor ativa o sinalizador de recurso show_loyalty_program.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 
 Agora, os usuários desse segmento começarão a ver o novo programa de fidelidade e, depois que ele for ativado, um e-mail e uma pesquisa serão enviados automaticamente para ajudar nossa equipe a obter feedback.
 
@@ -293,7 +293,7 @@ if (featureFlag?.enabled == true) {
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 let featureFlag = braze.featureFlags.featureFlag(id: "enable_checkout_v2")
@@ -312,7 +312,7 @@ Configuraremos nosso teste A/B em um [Feature Flag Experiment]({{site.baseurl}}/
 
 Agora, 50% dos usuários verão a experiência antiga, enquanto os outros 50% verão a nova experiência. Em seguida, podemos analisar as duas variantes para determinar qual fluxo de checkout resultou em uma taxa de conversão mais alta. {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
 
-![Um experimento de Feature Flag que divide o tráfego em dois grupos de 50%.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
+![Um experimento de feature flag dividindo o tráfego em dois grupos de 50%.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
 Assim que determinarmos o vencedor, poderemos interromper essa campanha e aumentar a porcentagem de implementação do recurso para 100% para todos os usuários, enquanto nossa equipe de engenharia codifica isso em nossa próxima versão do app.
 

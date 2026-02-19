@@ -22,7 +22,7 @@ Utilisez l'intégration de MyPostcard et de Braze pour envoyer sans effort des m
 | Compte MyPostcard B2B           | L'inscription à MyPostcard est nécessaire pour profiter de cette intégration.                                          |
 | Clé API B2B et informations d'identification        | Vous trouverez votre clé API et les informations d'identification dans l'outil d'administration de MyPostcard B2B.                                         |
 | Approbation de la campagne B2B de MyPostcard | Pour profiter de cette intégration, vous devez implémenter une campagne de publipostage dans l'outil MyPostcard B2B. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Cas d’utilisation
 
@@ -41,7 +41,7 @@ Pour intégrer MyPostcard, [connectez-vous ou inscrivez-vous](https://www.mypost
 Créez un modèle de webhook MyPostcard à utiliser dans de futures campagnes ou Canvases en naviguant vers **Modèles** > **Modèles de webhook à** Braze dans la plateforme Braze.
 
 {% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), allez dans **Engagement** > **Modèles et médias** > **Modèles de webhook.**
+Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), allez dans **Engagement** > **Modèles & Media** > **Modèles de webhook**.
 {% endalert %}
 
 Si vous souhaitez créer une campagne webhook MyPostcard ponctuelle ou utiliser un modèle existant, sélectionnez **Webhook** à Braze lors de la création d'une nouvelle campagne. Remplissez les champs suivants :
@@ -90,7 +90,7 @@ MyPostcard exige qu'une méthode HTTP ainsi que les en-têtes HTTP suivants soie
 
 Copiez le corps de la demande affiché dans l'outil d'administration B2B, puis remplissez les marqueurs substitutifs avec du contenu en utilisant les étiquettes de personnalisation Liquid.
 
-![Onglet Compose montrant le corps JSON et les informations webhook.]({% image_buster /assets/img/mypostcard/mypostcard_compose.jpg %})
+![Onglet Compose affichant le corps JSON et les informations relatives au webhook.]({% image_buster /assets/img/mypostcard/mypostcard_compose.jpg %})
 
 ### Étape 2 : Prévisualiser votre requête
 

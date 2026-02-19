@@ -22,19 +22,19 @@ search_tag: Partner
 
 ## Utiliser l'e-mail avec Braze
 
-### Étape 1 : Exécutez le plugin
+### Étape 1 : Exécutez le plugin
 
 Pour concevoir votre modèle d'e-mail, vous devrez d'abord charger le plugin. Pour des instructions plus détaillées, reportez-vous à la documentation d'Email Love concernant le [téléchargement de votre e-mail vers Braze](https://help.emaillove.com/exporting-an-email-design/6rcR6LPWq6BoYseKZf41nS/uploading-your-email-to-braze-/3ZcmGaGz6a8azeZQxWgKzm).
 
 ### Étape 2 : Créez votre premier cadre
 
-Dans le plugin, sélectionnez le bouton **[+ No Template Selected]** ] pour créer un nouveau cadre pour la conception de votre e-mail.
+Dans le plugin, sélectionnez le bouton **[+ Aucun modèle sélectionné]** pour créer un nouveau cadre pour la conception de votre e-mail.
 
 ### Étape 3 : Créez le modèle à l'aide des composants préconstruits d'Email Love
 
 Sélectionnez le cadre que vous avez créé et commencez à ajouter des composants (en-têtes, blocs de contenu, CTA et pieds de page) à partir de la bibliothèque **Assets** du plugin pour structurer votre e-mail.
 
-![Composants pré-créés de l'e-mail Love.]({% image_buster /assets/img/email_love/emaillove1_content.png %})
+![Les composants pré-créés d'Email Love.]({% image_buster /assets/img/email_love/emaillove1_content.png %})
 
 ### Étape 4 : Personnaliser les composants
 

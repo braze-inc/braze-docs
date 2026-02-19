@@ -60,7 +60,7 @@ AppDelegate.braze?.user.set(firstName: nil)
 
 ## Atributos personalizados do usuário
 
-Além dos atributos de usuário padrão, a Braze também permite que você defina atributos personalizados usando vários tipos de dados diferentes. Para mais informações sobre a opção de segmentação de cada atributo, consulte [Coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics/).
+Além dos atributos de usuário padrão, a Braze também permite que você defina atributos personalizados usando vários tipos de dados diferentes. Para mais informações sobre a opção de segmentação de cada atributo, veja [Coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics/).
 
 {% alert important %}
 Os valores de atributos personalizados têm um comprimento máximo de 255 caracteres; valores mais longos serão truncados. Para mais informações, consulte [`Braze.User`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class).
@@ -87,7 +87,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "yo
 {% endsubtabs %}
 {% endtab %}
 
-{% tab inteiro %}
+{% tab integer %}
 Para definir um atributo personalizado com um valor `integer`:
 
 {% subtabs %}
@@ -105,7 +105,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endsubtabs %}
 {% endtab %}
 
-{% tab pontos flutuantes %}
+{% tab floating-points %}
 Braze trata os valores `float` e `double` da mesma forma em nosso banco de dados. Para definir um atributo personalizado com um valor duplo:
 
 {% subtabs %}
@@ -123,7 +123,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endsubtabs %}
 {% endtab %}
 
-{% tab booleano %}
+{% tab boolean %}
 Para definir um atributo personalizado com um valor `boolean`:
 
 {% subtabs %}
@@ -141,7 +141,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBool
 {% endsubtabs %}
 {% endtab %}
 
-{% tab data %}
+{% tab date %}
 Para definir um atributo personalizado com um valor `date`:
 
 {% subtabs %}

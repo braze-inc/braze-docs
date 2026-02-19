@@ -121,7 +121,7 @@ Display the first question directly in the email's body to start the survey from
 ![paste the code from the Launch tab of your survey to the HTML field]({% image_buster /assets/img/survicate/survicate_11.gif %})
 
 {% alert note %}
-Braze displays in-app messages in an iframe by default while the app's background is blocked. To allow interaction with your app, while Survicate surveys appear, you must:
+Braze displays in-app messages in an iframe by default while the app's background is blocked. To allow interaction with your app, while Survicate surveys appear, you must:<br><br>
 
 - Add `opts.useBrazeIframeClipper = true` to your Survicate-Braze snippet.
 - Install the `@survicate/braze-bridge-npm` [package](https://www.npmjs.com/package/@survicate/braze-bridge-npm) in the file where you initialize Braze and use the `initBrazeBridge` function.

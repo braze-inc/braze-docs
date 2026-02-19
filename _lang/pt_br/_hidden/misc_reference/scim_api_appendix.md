@@ -1,5 +1,5 @@
 ---
-nav_title: "Objetos e Apêndice da API SCIM"
+nav_title: "Objetos e apêndice da API do SCIM"
 article_title: Objetos e Apêndice da API SCIM
 page_order: 8
 page_type: reference
@@ -31,7 +31,8 @@ Um objeto de permissões válido é um objeto JSON com os seguintes pares de cha
 
 | Chave | Obrigatória | Tipo de dados | Descrição |
 | --- | --- | --- | --- |
-| `companyPermissions` | Opcional | Vetor | Matriz de strings de permissão no nível da empresa da tabela [Company permission strings](#company), na qual a presença da string corresponde ao usuário que tem a permissão correspondente. |
+| `companyPermissions` | Opcional | Vetor | Matriz de strings de permissão no nível da empresa da tabela de [strings de permissão da empresa](#company), na qual a presença da string corresponde ao usuário que tem a permissão correspondente. |
+| `roles` | Opcional | Vetor | Vetor de [objetos de função](#role-object). |
 | `appGroup` | Obrigatória | Vetor | Vetor de [objetos de permissão do espaço de trabalho](#workspace-permission-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -69,6 +70,16 @@ Um objeto de permissão de equipe válido é um objeto JSON com os seguintes par
 | `teamPermissions` | Obrigatória | Vetor | Matriz de strings de permissão em nível de equipe da tabela de [strings de permissão de equipes](#team), na qual a presença da string corresponde ao usuário que tem a permissão correspondente para a equipe especificada. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
+## Objeto de função
+
+Um objeto de função válido é um objeto JSON com os seguintes pares de valores-chave:
+
+| Chave | Obrigatória | Tipo de dados | Descrição |
+| --- | --- | --- | --- |
+| `roleName` | Opcional | String | Nome da função que está sendo atribuída ao usuário. |
+| `roleId` | Obrigatório se `roleName` estiver ausente | String | ID da função, servindo como um método alternativo de especificação da função. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
 ## Apêndice
 
 ### Strings de permissão da empresa {#company}
@@ -86,6 +97,7 @@ Um objeto de permissão de equipe válido é um objeto JSON com os seguintes par
 | --- | --- |
 | Administrador | `admin` |
 | Campanhas de acesso, canvas, cartões, segmentos, biblioteca de mídia | `basic_access` |
+| Aprovar e rejeitar canvas | `approve_deny_campaigns` |
 | Enviar campanhas, canvas | `send_campaigns_canvases` |
 | Publicar cartões | `publish_cards` |
 | Editar segmentos | `edit_segments` |
@@ -116,6 +128,7 @@ Um objeto de permissão de equipe válido é um objeto JSON com os seguintes par
 | --- | --- |
 | Administrador | `admin` |
 | Campanhas de acesso, canvas, cartões, segmentos, biblioteca de mídia | `basic_access` |
+| Aprovar e rejeitar canvas | `approve_deny_campaigns` |
 | Enviar campanhas, canvas | `send_campaigns_canvases` |
 | Publicar cartões | `publish_cards` |
 | Editar segmentos | `edit_segments` |

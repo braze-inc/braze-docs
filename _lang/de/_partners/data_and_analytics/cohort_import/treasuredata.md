@@ -35,22 +35,22 @@ Navigieren Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und
 
 Bevor Sie Ihre Datenverbindung in Treasure Data erstellen, müssen Sie sich authentifizieren. Wählen Sie zunächst **Integrations Hub** und dann **Catalog**.
 
-![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
+![Treasure Data Datenintegrationen Hub-Katalog]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
 
 Suchen Sie im **Katalog** nach der Braze Integration, bewegen Sie dann den Mauszeiger über das Symbol und wählen Sie **Authentifizierung erstellen**. Geben Sie Ihre Zugangsdaten ein, geben Sie Ihrer Authentifizierung einen Namen und wählen Sie dann **Fertig**.
 
-![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
+![Treasure Data Datenintegrationen Hub-Katalog]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
 
 ### Schritt 3: Definieren Sie Ihre Kohorte Zielgruppe
 
 Synchronisieren Sie Ihre Kohorten mit Braze durch eine Aktivierung im **Audience Studio** oder durch Ausführen einer Abfrage in der **Data Workbench**.
 
 {% alert important %}
-Nur Nutzer:innen, die bereits in Braze existieren, werden einer Kohorte hinzugefügt oder aus ihr entfernt. Kohortenimport wird keine neuen Nutzer:innen in Braze erstellen.
+Es werden nur Nutzer:innen aus einer Kohorte hinzugefügt oder entfernt, die bereits in Braze existieren. Kohortenimport wird keine neuen Nutzer:innen in Braze erstellen.
 {% endalert %}
 
 {% tabs local %}
-{% tab Daten-Workbench %}
+{% tab Data Workbench %}
 #### Schritt 3.1: Definieren Sie Ihre Anfrage
 
 {% alert note %}
@@ -61,7 +61,7 @@ Abfragespalten müssen mit den genauen Spaltennamen und dem Datentyp angegeben w
 2. Wählen Sie **Neue Abfrage**.
 3. Führen Sie die Abfrage aus, um die Ergebnismenge zu überprüfen.
 
-![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
+![Treasure Data Datenintegrationen Hub-Katalog]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
 
 ##### Anwendungsfälle: Kohorten nach Bezeichner synchronisieren
 
@@ -69,7 +69,7 @@ Abfragespalten müssen mit den genauen Spaltennamen und dem Datentyp angegeben w
 {% subtab Syncing External IDs %}
 Hier sehen Sie eine Beispieltabelle in Treasure Data:
 
-| external_id |	E-Mail	| geräte_ids |
+| external_id |	E-Mail	| device_ids |
 | ----------- | ----------- | ----------- |
 | `TDCohort1`	| `TDCohort1@gmail.com`	| `1a2b3c` |
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
@@ -100,7 +100,7 @@ Nach Ausführung der Abfrage werden diese Nutzer:innen der Kohorte in Braze hinz
 {% subtab Syncing User Aliases %}
 Hier sehen Sie eine Beispieltabelle in Treasure Data:
 
-| external_id |	E-Mail	| geräte_ids |
+| external_id |	E-Mail	| device_ids |
 | ----------- | ----------- | ----------- |
 | `TDCohort1`	| `TDCohort1@gmail.com`	| `1a2b3c` |
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
@@ -127,7 +127,7 @@ Nach Ausführung der Abfrage werden diese Nutzer:innen der Kohorte in Braze hinz
 {% subtab Syncing Device IDs %}
 Hier sehen Sie eine Beispieltabelle in Treasure Data:
 
-| external_id |	E-Mail	| geräte_ids |
+| external_id |	E-Mail	| device_ids |
 | ----------- | ----------- | ----------- |
 | `TDCohort1`	| `TDCohort1@gmail.com`	| `1a2b3c` |
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
@@ -160,7 +160,7 @@ Nach Ausführung der Abfrage werden diese Geräte IDs der Kohorte in Braze hinzu
 
 Sobald die Abfrage erstellt wurde, wählen Sie **Ergebnisse exportieren**. Sie können eine vorhandene Authentifizierung auswählen, z.B. die in den letzten Schritten erstellte, oder eine neue Authentifizierung erstellen, die für die Ausgabe verwendet werden soll. 
 
-![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
+![Treasure Data Datenintegrationen Hub-Katalog]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
 
 
 | Ergebnis exportieren Abbildung |	Beschreibung	| 
@@ -178,7 +178,7 @@ Folgen Sie den [Schritten von Treasure Data](https://docs.treasuredata.com/artic
 Speichern Sie die Abfrage unter einem Namen und führen Sie sie aus, oder führen Sie die Abfrage einfach aus. Nach erfolgreichem Abschluss der Abfrage wird das Abfrageergebnis automatisch nach Braze exportiert.
 
 {% endtab %}
-{% tab Zielgruppe Studio %}
+{% tab Audience Studio %}
 #### Schritt 3.1: Eine Aktivierung erstellen
 
 Erstellen Sie ein neues Segment oder wählen Sie ein bestehendes Segment, um es als Kohorte mit Braze zu synchronisieren. Wählen Sie innerhalb des Segments **Aktivierung erstellen**.
@@ -200,7 +200,7 @@ Erstellen Sie ein neues Segment oder wählen Sie ein bestehendes Segment, um es 
 
 #### Schritt 3.3: Abbildung der Ausgabe einrichten
 
-![Treasure Data Integrations Aktivierung Output Mapping]({% image_buster /assets/img/treasure_data/cohort/cohort6.png %}) 
+![Treasure Data Integrationen Aktivierung Ausgabe Abbildung]({% image_buster /assets/img/treasure_data/cohort/cohort6.png %}) 
 
 | Aktivierung Ausgabe Abbildung |	Beschreibung	| 
 | ----------- | ----------- |
@@ -219,7 +219,7 @@ Alle nicht relevanten oder falsch benannten Spaltennamen werden ignoriert. Sie k
 
 Definieren Sie den gewünschten Zeitplan für die Synchronisierung und speichern Sie Ihre Aktivierung.
 
-![Treasure Data Integrations Zeitplan für die Aktivierung]({% image_buster /assets/img/treasure_data/cohort/cohort8.png %})
+![Zeitplan für die Aktivierung von Treasure Data Integrationen]({% image_buster /assets/img/treasure_data/cohort/cohort8.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -227,7 +227,7 @@ Definieren Sie den gewünschten Zeitplan für die Synchronisierung und speichern
 
 Navigieren Sie in Braze zu **Segmente**, erstellen Sie ein neues Segment, und wählen Sie **Treasure Data Kohorten** als Filter. Von hier aus können Sie wählen, welche Treasure Data Kohorte Sie einbeziehen möchten. Nachdem Sie Ihr Treasure Data Kohorten-Segment erstellt haben, können Sie es als Zielgruppen-Filter auswählen, wenn Sie eine Kampagne oder ein Canvas erstellen.
 
-![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
+![Treasure Data Datenintegrationen Hub-Katalog]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
 
 ## Nutzer:innen-Abgleich
 

@@ -38,7 +38,7 @@ In the Braze destination, provide the app key, Braze REST API key, data cluster,
 
 ![]({% image_buster /assets/img/RudderStack/braze_settings.png %}){: style="max-width:70%;margin-bottom:15px;border:none;"}
 
-### Step 3: Choose the type of integration
+### 3단계: Choose the type of integration
 
 You can choose to integrate RudderStack's web and native client-side libraries with Braze using one the following approaches:
 
@@ -59,7 +59,7 @@ Set up the mappings to the RudderStack SDK for your platform on the Braze GitHub
 - [Android](https://github.com/rudderlabs/rudder-integration-braze-android)
 - [iOS](https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master)
 - [Swift](https://github.com/rudderlabs/rudder-integration-braze-swift)
-- [Web](https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze)
+- [Web](https://github.com/rudderlabs/rudder-sdk-js/tree/develop/packages/analytics-js-integrations/src/integrations/Braze)
 - [React Native](https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native)
 - [Flutter](https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter)
 

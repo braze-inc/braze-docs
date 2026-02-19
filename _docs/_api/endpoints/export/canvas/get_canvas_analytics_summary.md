@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Export Canvas data summary analytics Braze endpoint."
+description: "This article describes the Export Canvas data summary analytics Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines details about the Export Canvas data summary
 /canvas/data_summary
 {% endapimethod %}
 
-> Use this endpoint allows to export rollups of time series data for a Canvas, providing a concise summary of Canvas results.
+> Use this endpoint to export rollups of time series data for a Canvas, providing a concise summary of Canvas results.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 
@@ -31,13 +31,17 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Required | String | See [Canvas API identifier]({{site.baseurl}}/api/identifier_types/). |
-| `ending_at` | Required | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data export should end. Defaults to time of the request. |
-| `starting_at` | Optional* | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data export should begin. <br><br>* Either `length` or `starting_at` is required. |
-| `length` | Optional* | String | Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive). <br><br>* Either `length` or `starting_at` is required. |
-| `include_variant_breakdown` | Optional | Boolean | Whether or not to include variant statistics (defaults to `false`).  |
-| `include_step_breakdown` | Optional | Boolean | Whether or not to include step statistics (defaults to `false`). |
-| `include_deleted_step_data` | Optional | Boolean | Whether or not to include step statistics for deleted steps (defaults to `false`). |
+| `ending_at` | Required | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | End date for the data export. Defaults to the time of the request. |
+| `starting_at` | Optional* | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Start date for the data export. <br><br>* Either `length` or `starting_at` is required. |
+| `length` | Optional* | String | Maximum number of days before `ending_at` included in the returned series. Must be between 1 and 14 (inclusive). <br><br>* Either `length` or `starting_at` is required. |
+| `include_variant_breakdown` | Optional | Boolean | Whether to include variant statistics (defaults to `false`).  |
+| `include_step_breakdown` | Optional | Boolean | Whether to include step statistics (defaults to `false`). |
+| `include_deleted_step_data` | Optional | Boolean | Whether to include step statistics for deleted steps (defaults to `false`). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+{% alert important %}
+**Time zone alignment:** Braze Dashboard analytics are aggregated daily in your company's configured time zone in the dashboard. Make sure your timestamps align with your company's time zone so that your stats match the dashboard. For example, if your company time is UTC+2, then the timestamp should be 12AM UTC+2.
+{% endalert %}
 
 ## Example request
 {% raw %}
@@ -61,7 +65,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
     },
     "variant_stats": (optional) {
       "00000000-0000-0000-0000-0000000000000": (string) the API identifier for the variant {
-        "name": (string) the name of variant,
+        "name": (string) the name of the variant,
         "revenue": (float) the number of dollars of revenue (USD),
         "conversions": (int) the number of conversions,
         "entries": (int) the number of entries
@@ -70,7 +74,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
     },
     "step_stats": (optional) {
       "00000000-0000-0000-0000-0000000000000": (string) the API identifier for the step {
-        "name": (string) the name of step,
+        "name": (string) the name of the step,
         "revenue": (float) the number of dollars of revenue (USD),
         "conversions": (int) the number of conversions,
         "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
@@ -79,7 +83,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
             {
               "sent": (int) the number of sends,
               "opens": (int) the number of opens,
-              "influenced_opens": (int) the number of influenced opens,
+              "influenced_opens": (int) the total number of opens (includes both direct opens and influenced opens),
               "bounces": (int) the number of bounces
               ... (more stats for channel)
             }
@@ -90,9 +94,13 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
       ... (more steps)
     }
   },
-  "message": (required, string) the status of the export, returns 'success' when completed without errors
+  "message": (required, string) the status of the export, returns 'success' on successful completion
 }
 ```
+
+{% alert important %}
+**`influenced_opens` field:** In the API response, the `influenced_opens` field represents the total number of opens (both direct and influenced opens combined). In the Braze dashboard, 'influenced opens' refers only to influenced opens, excluding direct opens. This is due to a legacy naming convention in the API.
+{% endalert %}
 
 {% alert tip %}
 For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).

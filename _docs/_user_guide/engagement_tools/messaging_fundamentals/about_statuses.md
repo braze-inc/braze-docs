@@ -1,7 +1,7 @@
 ---
 nav_title: Statuses
 article_title: Campaign and Canvas statuses
-page_order: 1
+page_order: 11
 description: "Learn about statuses for campaigns and Canvases and how to use them in the dashboard."
 tool:
     - Campaigns

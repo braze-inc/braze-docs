@@ -1,3 +1,22 @@
+{% if include.section == "Prerequisites" %}
+## 필수 조건
+
+[다국어 지원]({{site.baseurl}}/multi_language_support/)을 편집하고 관리하려면 "다국어 설정 관리" 사용자 권한이 있어야 합니다. 메시지에 로캘을 추가하려면 캠페인을 편집할 수 있는 권한이 필요합니다.
+
+{% alert important %}
+다국어 지원은 현재 초기 액세스 단계에 있습니다. Contact your Braze account manager if you’re interested in participating in this early access.
+{% endalert %}
+
+{% endif %}
+
+{% if include.section == "Preview" %}
+
+## 로캘 미리보기
+
+**테스트** 탭의 **사용자로 메시지 미리보기** 드롭다운에서 **사용자 지정 사용자를** 선택하고 다른 언어를 입력하여 메시지가 예상대로 번역되는지 미리 확인합니다.
+
+{% endif %}
+
 {% if include.section == "Frequently Asked Questions" %}
 
 ## Frequently asked questions

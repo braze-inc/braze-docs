@@ -88,7 +88,7 @@ channel:
 
 ## リンクテンプレートを管理する
 
-リンクテンプレートを[複製する]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)こともできる。テンプレートとクリエイティブ・コンテンツの作成とマネージャーについては、[テンプレート& メディアで]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)学習しよう。
+リンクテンプレートを[複製する]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)こともできる。[ テンプレート & メディア]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/) で、テンプレートとクリエイティブコンテンツの作成と管理について詳しく説明します。
 
 {% alert important %}
 テンプレートのアーカイブは、現在リンクテンプレートでは利用できません。

@@ -41,7 +41,7 @@ noindex: true
 
 ---
 
-# [Nome do artigo de ajuda]
+# [Nome do artigo de ajuda].
 
 > Bem-vindo ao modelo de artigo de ajuda! Aqui, você encontrará tudo o que precisa para criar seu próprio artigo de ajuda. Nesta primeira seção, você deve descrever o tópico do seu artigo em apenas algumas frases. Talvez algo como "este artigo irá guiá-lo na solução de problemas sobre por que suas mensagens não estão sendo enviadas para todo o seu público".
 
@@ -118,6 +118,5 @@ Se você quiser saber mais sobre os assuntos discutidos no artigo, dê uma olhad
 
 ### Ainda está perdido?
 
-Se este artigo não ajudou, deixe seus comentários ou abra um [ticket de suporte][support]!
+Se este artigo não ajudou, deixe seus comentários ou abra um [ticket de suporte]({{site.baseurl}}/braze_support/)!
 
-[support]: {{site.baseurl}}/braze_support/

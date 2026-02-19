@@ -43,7 +43,7 @@ Um auf das Content-Cards-Datenmodell zuzugreifen, abonnieren Sie die Update-Even
 }
 ```
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 ```swift
 // Subscribe to content card updates
 // Note: you should remove the observer where appropriate
@@ -147,7 +147,7 @@ contentCards.disableUnreadIndicator = YES;
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 let contentCards = ABKContentCardsTableViewController()
@@ -178,7 +178,7 @@ contentCards.contentCardsViewController.disableUnreadIndicator = YES;
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 let contentCards = ABKContentCardsViewController()

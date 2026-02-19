@@ -10,16 +10,16 @@ Push-Benachrichtigungen sind Rate-Limits, also haben Sie keine Angst davor, so v
 
 ### Schritt 2: Aktivieren Sie Push-Funktionen
 
-Gehen Sie in Xcode zum Abschnitt **Signing & Capabilities** des Hauptziel der App und fügen Sie die Fähigkeit für Push-Benachrichtigungen hinzu.
+Gehen Sie in Xcode zum Abschnitt **Signing & Capabilities** des Haupt-Targetings der App und fügen Sie die Funktion für Push-Benachrichtigungen hinzu.
 
-![Der Abschnitt "Signing & Capabilities" in einem Xcode-Projekt.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![Der Abschnitt 'Signieren & Fähigkeiten' in einem Xcode-Projekt.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ### Schritt 3: Einrichten der Push-Bearbeitung
 
 Sie können das Swift SDK verwenden, um die Verarbeitung der von Braze empfangenen Fernbenachrichtigungen zu automatisieren. Dies ist die einfachste Art, Push-Benachrichtigungen zu handhaben und die empfohlene Bearbeitungsmethode.
 
 {% tabs local %}
-{% tab Automatisch %}
+{% tab Automatic %}
 #### Schritt 3.1: Enablement der Automatisierung in der Push-Eigenschaft
 
 Um die automatische Push Integration zu aktivieren, setzen Sie die Eigenschaft `automation` in der Konfiguration von `push` auf `true`:
@@ -360,6 +360,41 @@ Wenn Sie die automatische Push-Integration verwenden, ist `subscribeToUpdates(_:
 Erstellen Sie Ihr Abo für Push-Benachrichtigungen in `application(_:didFinishLaunchingWithOptions:)`, um sicherzustellen, dass Ihr Abo ausgelöst wird, wenn ein Endnutzer:in auf eine Benachrichtigung tippt, während sich Ihre App in einem beendeten Zustand befindet.
 {% endalert %}
 
+## Umgang mit Benachrichtigungen im Vordergrund
+
+Standardmäßig wird eine Push-Benachrichtigung, die eintrifft, während Ihre App im Vordergrund ist, von iOS nicht automatisch angezeigt. Um Push-Benachrichtigungen im Vordergrund anzuzeigen und sie mit Braze Analytics zu tracken, rufen Sie die Methode `handleForegroundNotification(notification:)` innerhalb Ihrer `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)` Implementierung auf.
+
+### Funktionsweise
+
+Wenn Sie `handleForegroundNotification(notification:)` aufrufen, verarbeitet Braze die Nutzdaten der Benachrichtigung, um Analytics zu protokollieren und alle Deeplinks oder Button-Aktionen zu verarbeiten. Das tatsächliche Anzeigeverhalten wird durch die `UNNotificationPresentationOptions` gesteuert, die Sie an den Completion Handler übergeben.
+
+```swift
+import BrazeKit
+import UserNotifications
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+  func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+  ) {
+    // Let Braze process the notification payload
+    if let braze = AppDelegate.braze {
+      braze.notifications.handleForegroundNotification(notification: notification)
+    }
+    
+    // Control how the notification appears in the foreground
+    if #available(iOS 14.0, *) {
+      completionHandler([.banner, .list, .sound])
+    } else {
+      completionHandler([.alert, .sound])
+    }
+  }
+}
+```
+
+Ein vollständiges Beispiel finden Sie in dem [Beispiel für die manuelle Integration von Push-Benachrichtigungen](https://github.com/braze-inc/braze-swift-sdk/blob/e31907eaa0dbd151dc2e6826de66cc494242ba60/Examples/Swift/Sources/PushNotifications-Manual/AppDelegate.swift#L1-L120) im Braze Swift SDK Repository.
+
 ## Push-Primer {#push-primers}
 
 Push-Benachrichtigungskampagnen ermutigen Ihre Nutzer:innen, Push-Benachrichtigungen auf ihrem Gerät für Ihre App zu aktivieren. Dies kann ohne SDK-Anpassung mit unserem [No Code Push Primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) geschehen.
@@ -370,7 +405,7 @@ Die dynamische Verwaltung des Apple Push Notification Service (APNs) Gateways ve
 
 Mit der dynamischen APNs-Gateway-Verwaltung haben Sie:
 
-- **Verbesserte Zuverlässigkeit:** Benachrichtigungen werden immer an die richtige APN-Umgebung zugestellt, wodurch die Zahl der fehlgeschlagenen Zustellungen reduziert wird.
+- **Verbesserte Zuverlässigkeit:** Benachrichtigungen werden immer der richtigen APN-Umgebung zugestellt, so dass weniger Zustellungen fehlschlagen.
 - **Vereinfachte Konfiguration:** Sie müssen die APN-Gateway-Einstellungen nicht mehr manuell verwalten.
 - **Fehlerresistenz:** Ungültige oder fehlende Gateway-Werte werden zuverlässig behandelt, so dass der Dienst nicht unterbrochen wird.
 

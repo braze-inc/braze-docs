@@ -27,11 +27,11 @@ With the Braze and Extole integration, you can pull customer events and attribut
 | Braze API URL | Your Braze API URL is specific to your [Braze instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Use cases
+## 사용 사례
 
-The following use cases showcase a few ways to leverage Extole’s integration with Braze. Work with your Extole implementation and customer success managers to develop an option that fits your company’s specific needs.
+다음 사용 사례는 Extole과 Braze의 통합을 사용하는 몇 가지 방법을 보여줍니다. Work with your Extole implementation and customer success managers to develop an option that fits your company’s specific needs.
 
-- Leverage custom events from your referral and engagement programs to trigger a Braze campaign or Canvas
+- 추천 및 고객 참여 프로그램의 커스텀 이벤트를 사용하여 Braze 캠페인 또는 캔버스를 트리거하세요.
 - Create custom segments, dashboards, and reporting using data from your Extole-powered programs
 - Automatically unsubscribe or subscribe users to your marketing list in Braze
 
@@ -52,7 +52,7 @@ Complete the following steps to quickly get your integration up and running. You
 
 ### Extole program events
 
-Below are the default events, event properties, and user attributes Extole will send to Braze. Reach out to your Extole implementation or customer success managers to identify and add additional Extole events to your integration.
+Below are the default events, event properties, and user attributes Extole will send to Braze. 엑스톨 구현 또는 고객 성공 매니저에게 문의하여 통합에 추가할 엑스톨 이벤트를 식별하고 추가하세요.
 
 | Event | Description | Event Properties | User Attributes |
 | ----------- | ----------- | ----------- | ----------- |

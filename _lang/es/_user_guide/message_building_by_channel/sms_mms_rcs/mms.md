@@ -1,8 +1,8 @@
 ---
 nav_title: "MMS"
 article_title: Acerca de MMS
-page_order: 15
-description: "Este artículo de referencia explica qué son los mensajes MMS y los casos de uso general del canal MMS."
+page_order: 16
+description: "Este artículo de referencia explica qué son los mensajes MMS y los casos generales de uso del canal MMS."
 page_type: reference
 alias: /about_mms/
 channel:
@@ -10,23 +10,23 @@ channel:
 search_rank: 2  
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"} Acerca de los mensajes MMS
+# [![Curso de Braze](https://learning.braze.com/messaging-channels-sms) Learning []({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"} Acerca de los mensajes MMS
 
-> El MMS, también conocido como Servicio de Mensajes Multimedia, se utiliza para enviar mensajes que contienen activos multimedia (JPEG, GIF, PNG) a teléfonos móviles.<br><br>Al igual que los SMS, los MMS son un canal de mensajería de alta urgencia que te permite comunicarte con los clientes inmediatamente de una forma que no puedes hacer con ningún otro canal. Sin embargo, los MMS amplían las posibilidades de los SMS, ya que te permiten añadir contenido multimedia a los SMS que, de otro modo, serían sólo de texto.
+> El MMS, también conocido como servicio de mensajes multimedia, se utiliza para enviar mensajes que contienen activos multimedia (JPEG, GIF, PNG) a teléfonos móviles.<br><br>Al igual que el SMS, el MMS es un canal de mensajería de alta urgencia que le permite comunicarse con los clientes de forma inmediata de una manera que no puede con ningún otro canal. Sin embargo, los MMS amplían las posibilidades de los SMS, ya que permiten añadir contenido multimedia a mensajes que, de otro modo, serían sólo de texto.
 
-## Casos de uso potenciales
+## Posibles casos de uso
 
-| Casos de uso | Explicación |
+| Caso de uso | Explicación |
 | --- | --- |
 | Promociones | Llega a los usuarios con campañas de SMS de gran visibilidad, pero aprovecha también el aspecto mediático de los MMS para atraer a los compradores con lo que ofreces. | 
-| Campañas de reactivación de la interacción | Reactivación de la interacción con los clientes que optaron por recibir SMS cuando todos los demás canales no consiguen que vuelvan. |
+| Campañas de reactivación de la interacción | Vuelva a captar a los clientes que optaron por recibir SMS cuando todos los demás canales no consigan atraerlos. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Conoce el MMS
 
 ### Disponibilidad de MMS
 
-La mayoría de los operadores estadounidenses y canadienses admiten la recepción y visualización de activos multimedia en los teléfonos de sus clientes. Para los operadores internacionales, Braze convertirá automáticamente los mensajes MMS enviados desde un número de teléfono admitido en EE.UU. o Canadá, y sólo a destinos que no admitan MMS. Para estos mensajes, Braze sustituirá los medios adjuntos por una URL corta añadida al cuerpo del mensaje que enlaza con el archivo.
+La mayoría de las operadoras estadounidenses y canadienses admiten la recepción y visualización de contenidos multimedia en los teléfonos de sus clientes. En el caso de las operadoras internacionales, Braze convertirá automáticamente los mensajes MMS enviados desde un número de teléfono compatible con EE.UU. o Canadá, y sólo a destinos que no admitan MMS. Para estos mensajes, Braze sustituirá los medios adjuntos por una URL corta añadida al cuerpo del mensaje que enlaza con el archivo.
 
 ### Grupos de suscripción
 
@@ -49,7 +49,7 @@ El rendimiento del MMS es de un segmento por segundo a través de un código lar
 
 ### MMS entrantes
 
-Cuando un usuario envíe un mensaje entrante que contenga un elemento multimedia, Braze expondrá la URL del elemento multimedia tanto en Currents como en Liquid a través de la etiqueta de Liquid {%raw%}`{{sms.${inbound_media_url}}}`{%endraw%}
+Cuando un usuario envíe un mensaje entrante que contenga un elemento multimedia, Braze expondrá la URL del elemento multimedia en Currents y en Liquid a través de la etiqueta Liquid {%raw%}`{{sms.${inbound_media_url}}}`{%endraw%}
 
 ### Tipos de archivo aceptados
 

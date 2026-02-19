@@ -19,6 +19,7 @@ alias: /api/api_key/
 | [Cloud Data Ingestion]({{site.baseurl}}/api/endpoints/cdi/)                | Manage your data warehouse integrations and syncs.                                    |
 | [Email lists and addresses]({{site.baseurl}}/api/endpoints/email/)         | Set up and manage bi-directional sync between Braze and your email systems.           |
 | [Export]({{site.baseurl}}/api/endpoints/export/)                           | Access and export various details of your campaigns, Canvases, KPIs, and more.        |
+| [Media Library]({{site.baseurl}}/api/endpoints/media_library/)             | Manage assets within Braze.                                                           |
 | [Messages]({{site.baseurl}}/api/endpoints/messaging/)                      | Schedule, send, and manage your campaigns and Canvases.                               |
 | [Preference center]({{site.baseurl}}/api/endpoints/preference_center/)     | Build your preference center and update the styling of it.                            |
 | [SCIM]({{site.baseurl}}/api/endpoints/scim/)                               | Manage user identities in cloud-based applications and services.                      |
@@ -35,6 +36,12 @@ The following is an overview of terms you may see in the Braze REST API document
 ### Endpoints
 
 Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned, you log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket]({{site.baseurl}}/braze_support/) or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
+
+To find your REST endpoint in Braze:
+
+1. Log in to Braze and go to **Settings** > **APIs and Identifiers** > **API Keys**.
+2. Select an existing API key, or select **Create API Key** to make a new key.
+3. Copy the REST endpoint shown on this tab and use that endpoint for your API requests.
 
 {% alert important %}
 When using endpoints for API calls, use the REST endpoint.

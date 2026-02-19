@@ -2,11 +2,11 @@
 nav_title: Connecting Multiple Stores
 article_title: Shopify Multiple Store Support
 alias: /shopify_connecting_multiple_stores/
-page_order: 5
+page_order: 6
 description: "This reference article covers how to connect and configure multiple Shopify stores to a single workspace."
 ---
 
-# Connecting multiple Shopify stores
+# 여러 Shopify 스토어 연결
 
 > Connect multiple Shopify store domains to a single workspace to have a holistic view of your customers across all markets. Build and launch automation programs and journeys in a single workspace without duplicating efforts across regional stores.  
 
@@ -14,7 +14,7 @@ description: "This reference article covers how to connect and configure multipl
 This feature doesn't support Shopify Markets or Markets Pro. If you would like to request support for these, submit a [product request]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 {% endalert %}
 
-## Requirements
+## 요구 사항
 
 | Requirement | Description |
 | ----------- | ----------- |
@@ -26,15 +26,15 @@ This feature doesn't support Shopify Markets or Markets Pro. If you would like t
 ## Connecting an additional store
 After you install the Braze app to your Shopify store and install your first store, select **\+ Connect New Store**.
 
-![The "+ Connect New Store" button on the Shopify integration page.]({% image_buster /assets/img/Shopify/begin_setup_button.png %}){: style="max-width:80%;"}
+![Shopify 통합 페이지의 "+ 새 스토어 연결" 버튼을 클릭합니다.]({% image_buster /assets/img/Shopify/begin_setup_button.png %}){: style="max-width:80%;"}
 
 For your additional Shopify regional store, select **Begin setup**.
 
-![The "Integration settings" section with a button to "Begin setup".]({% image_buster /assets/img/Shopify/multiple_stores.png %}){: style="max-width:80%;"}
+!["설정 시작" 버튼이 있는 "통합 설정" 섹션입니다.]({% image_buster /assets/img/Shopify/multiple_stores.png %}){: style="max-width:80%;"}
 
 Like your first Shopify store integration, you can choose either between a standard or custom setup.
 
-!["Enable the Braze SDKs" section with options to implement the Braze Web SDK with the standard or custom setup.]({% image_buster /assets/img/Shopify/standard_or_custom.png %}){: style="max-width:80%;"}
+![표준 또는 커스텀 설정으로 Braze 웹 SDK를 구현할 수 있는 옵션이 있는 "Braze SDK 활성화" 섹션을 클릭합니다.]({% image_buster /assets/img/Shopify/standard_or_custom.png %}){: style="max-width:80%;"}
 
 Choose the option that best fits your needs:
 
@@ -42,7 +42,7 @@ Choose the option that best fits your needs:
 
 To view each store integration and configure advanced settings, select a store in the dropdown menu.
 
-!["Integration settings" with a dropdown menu to select a Shopify store.]({% image_buster /assets/img/Shopify/store_dropdown_menu.png %})
+![드롭다운 메뉴가 있는 "통합 설정"에서 Shopify 스토어를 선택합니다.]({% image_buster /assets/img/Shopify/store_dropdown_menu.png %})
 
 ## Syncing users across stores
 
@@ -69,7 +69,7 @@ When a user profile is synced, the following fields will be merged. For full det
 - Custom event and purchase data
 - Custom event properties for segmentation (for example, “X times in Y days” where X ≤ 50 and Y ≤ 30)
 - Event count (combined from both profiles)
-- Dates of first and last events (Braze selects the earliest and latest dates)
+- 첫 번째 및 마지막 이벤트 날짜(Braze는 가장 빠른 날짜와 가장 최근 날짜를 선택)
 - Campaign interaction data (most recent date fields)
 - Workflow summaries (most recent date fields)
 - Message and engagement history
@@ -123,7 +123,7 @@ When you connect more than one store, the following attributes will be synced wi
 
 When you connect multiple stores, incoming eCommerce recommended events will include a source event property. This property identifies which storefront URL the event originated from, allowing you to use this information for segmentation or triggering specific use cases.
 
-![An action-based Canvas with a trigger to enter users who perform the `ecommerce.order_placed` custom event.]({% image_buster /assets/img/Shopify/ecommerce_order_placed.png %}){: style="max-width:80%;"}
+![`ecommerce.order_placed` 커스텀 이벤트를 수행하는 사용자를 입력하는 트리거가 있는 액션 기반 캔버스입니다.]({% image_buster /assets/img/Shopify/ecommerce_order_placed.png %}){: style="max-width:80%;"}
 
 The supported eCommerce recommended events within the Shopify integration are:
 
@@ -138,7 +138,7 @@ The supported eCommerce recommended events within the Shopify integration are:
 
 Incoming Shopify custom events include an event property called `shopify_storefront`. This property indicates which storefront URL the event came from, allowing you to leverage it for segmentation or triggering use cases.
 
-![An action-based Canvas with a trigger to enter users who perform the `shopify_paid_order` custom event.]({% image_buster /assets/img/Shopify/shopify_paid_order.png %}){: style="max-width:80%;"}
+![`shopify_paid_order` 커스텀 이벤트를 수행하는 사용자를 입력하는 트리거가 있는 액션 기반 캔버스입니다.]({% image_buster /assets/img/Shopify/shopify_paid_order.png %}){: style="max-width:80%;"}
 
 Supported Shopify custom events include:
 
@@ -153,7 +153,7 @@ For a complete overview of all event payloads, refer to [Shopify data features](
 
 When you connect and configure each Shopify store in Braze, you can optionally enable the Shopify product sync as part of the integration.
 
-If you activate the product sync for each store, Braze will include the name of your Shopify store in the catalog name. This helps you distinguish products from different stores.
+각 스토어에 대해 제품 동기화를 활성화하는 경우 Braze는 카탈로그 이름에 Shopify 스토어 이름을 포함합니다. 이렇게 하면 다른 스토어와 제품을 구분할 수 있습니다.
 
-![Shopify catalogs with their Shopify store in their name.]({% image_buster /assets/img/Shopify/catalog_store_name.png %})
+![Shopify 스토어 이름으로 카탈로그를 생성합니다.]({% image_buster /assets/img/Shopify/catalog_store_name.png %})
 

@@ -9,7 +9,7 @@ Grâce à l'interface JavaScript de Braze, vous pouvez exploiter Braze à l'int�
 
 ## Ajouter l'interface à une WebView
 
-L’utilisation de la fonctionnalité de Braze à partir d’une WebView dans votre application peut être effectuée en ajoutant l’interface JavaScript de Braze à votre WebView. Après l'ajout de l'interface, la même API est disponible pour [User Guide : Les messages in-app HTML]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) seront disponibles dans votre WebView personnalisé.
+L’utilisation de la fonctionnalité de Braze à partir d’une WebView dans votre application peut être effectuée en ajoutant l’interface JavaScript de Braze à votre WebView. Après l'ajout de l'interface, la même API est disponible pour [User Guide : Les messages in-app au format HTML]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) seront disponibles dans votre WebView personnalisé.
 
 {% tabs %}
 {% tab JAVA %}
@@ -53,3 +53,19 @@ Voici un exemple de vidéo YouTube intégrée dans un extrait de code HTML :
     </div>
 </body>
 ```
+
+## Utilisation de liens profonds
+
+Lors de la création de liens profonds ou de liens externes dans les messages in-app d'Android HTML, **n'** appelez **pas** `brazeBridge.closeMessage()` dans votre JavaScript. La logique interne du SDK ferme automatiquement le message in-app lorsqu'il redirige vers un lien. L'appel à `brazeBridge.closeMessage()` interfère avec ce processus et peut entraîner l'absence de réponse du message lorsque les utilisateurs reviennent à votre application. 
+
+Voici un exemple de lien profond dans un extrait de code :
+
+{% raw %}
+```javascript
+<script>
+document.querySelectorAll('[data-button-id]').forEach(function (node)
+Unknown macro: { node.addEventListener('click', function () { brazeBridge.logClick(node.dataset.buttonId); brazeBridge.closeMessage(); }); }
+);
+</script>
+```
+{% endraw %}

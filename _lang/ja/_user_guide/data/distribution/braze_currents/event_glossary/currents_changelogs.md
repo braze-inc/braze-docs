@@ -7,6 +7,28 @@ tool: Currents
 
 # Currents変更ログ
 
+## バージョン5 の変更点(リリース日2026-02-04)
+
+* 新しいイベントタイプ`agentconsole.AgentExecuted`を追加しました。
+
+* 新しいイベントタイプ`agentconsole.ToolInvocation`を追加しました。
+
+* 新しいイベントタイプ`users.messages.email.Retry`を追加しました。
+
+* 新しいイベントタイプ`users.messages.line.Retry`を追加しました。
+
+* 新しいイベントタイプ`users.messages.pushnotification.Retry`を追加しました。
+
+* 新しいイベントタイプ`users.messages.sms.Retry`を追加しました。
+
+* 新しいイベントタイプ`users.messages.webhook.Retry`を追加しました。
+
+* 新しいイベントタイプ`users.messages.whatsapp.Retry`を追加しました。
+
+* フィールドがイベントタイプ`users.behaviors.pushnotification.TokenStateChange` に変更されました。
+    * 新しい`long` フィールド `time_ms` を追加しました。事象hのアプリが終了した時刻(ミリ秒)
+
+
 ## バージョン4 の変更点(リリース日2026-01-08)
 
 * フィールドがイベントタイプ`users.behaviors.pushnotification.TokenStateChange` に変更されました。

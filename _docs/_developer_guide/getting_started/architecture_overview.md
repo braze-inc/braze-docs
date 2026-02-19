@@ -34,7 +34,7 @@ This all works together to create successful interactions between your user base
 
 ## Data ingestion {#ingestion}
 
-Braze is built on a streaming data architecture leveraging Snowflake, Kafka, MongoDB, and Redis. Data from many sources can be loaded into Braze via SDK and API. The platform can handle any data in real time, regardless of how it’s nested or structured. Data in Braze is stored on the user profile. 
+Braze is built on a streaming data architecture leveraging Snowflake, Kafka, MongoDB, and Redis. Data from many sources can be loaded into Braze through SDK and API. The platform can handle any data in real time, regardless of how it’s nested or structured. Data in Braze is stored on the user profile. 
 
 {% alert tip %}
 Braze can track data for a user throughout their journey with you, from the time that they're anonymous to the time they're logged in to your app and known. User IDs, called `external_id`s in Braze, should be set for each of your users. These should be unchanging and accessible when a user opens the app, allowing you to track your users across devices and platforms. See the [User lifecycle article]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) for best practices.
@@ -46,16 +46,38 @@ Braze can track data for a user throughout their journey with you, from the time
 This person-centric user profile database allows for real-time, interactive speed. Braze pre-computes values when data arrives and stores the results in our lightweight document format for fast retrieval. And because the platform was designed this way from the ground up, it is ideal for most messaging use cases—especially combined with other data concepts like Connected Content, product catalogs, and nested attributes. 
 {% endalert %}
 
-### Backend data sources via the Braze API
+### Data source breakdown
+
+Braze uses different data storage systems for various features. Understanding which features use which data sources is important for data management and troubleshooting.
+
+#### MongoDB-powered features
+- Custom events (tracked by SDK and API)
+- Custom attributes
+- User profiles
+- Purchase events
+- Most segmentation and targeting features
+
+#### Snowflake-powered features
+- [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)
+- [Prediction Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)
+- [Personalized Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/) and [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
+- [AI Personalized Item Recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)
+- [Estimated Real Open Rate]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (does not use custom events)
+
+{% alert important %}
+**Data removal considerations:** Custom events are stored in MongoDB and are separate from Snowflake data. If you need to remove erroneous custom event data, you must address it in MongoDB. Snowflake-powered features (like SQL Segment Extensions and other Snowflake-powered features) use data from Snowflake, which is handled separately. Removing data from one system does not automatically remove it from the other.
+{% endalert %}
+
+### Backend data sources through the Braze API
 Braze can pull data from user databases, offline transactions, and data warehouses through our [REST API]({{site.baseurl}}/api/endpoints/user_data). 
 
-### Frontend data sources via Braze SDK
+### Frontend data sources through Braze SDK
 Braze automatically captures first-party data from frontend data sources, such as users' devices, by way of the [Braze SDK]({{site.baseurl}}/user_guide/getting_started/web_sdk/). The SDK handles new (anonymous) users and manages data on their user profile throughout their lifecycle. 
 
 ### Partner integrations
 Braze has over 150 technology partners, which we call "Alloys." You can supplement your data feeds through a meaningfully robust network of [interoperable technologies and data APIs.]({{site.baseurl}}/partners/home) 
 
-### Direct warehouse connection via Braze Cloud Data Ingestion
+### Direct warehouse connection through Braze Cloud Data Ingestion
 You can stream customer data from your data warehouse into the platform through [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) in just a few minutes, allowing you to sync relevant user attributes, events, and purchases. The Cloud Data Ingestion integration supports complex data structures including nested JSON and arrays of objects.
 
 Cloud Data Ingestion can sync data from Snowflake, Amazon Redshift, Databricks, and Google BigQuery.
@@ -83,7 +105,7 @@ API-triggered campaigns are ideal for more advanced transactional use-cases. The
 Braze allows you to remotely enable or disable functionality for a selection of users through [feature flags]({{site.baseurl}}/developer_guide/feature_flags/). This lets your marketers target the correct segment of your user base with messaging for features you haven't yet rolled out to your entire audience. But more than that, feature flags can be used to turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence.
 
 ## Personalization {#personalization}
-The personalization layer represents the ability to deliver dynamic content in your messages. By using Liquid, a widely-used personalization language, your team can dynamically pull in existing data to display the message tailored to each recipient. Additionally, you can insert any information accessible on your webserver or via API directly into the messages you're sending, such as push notifications or emails, by using [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Connected Content builds on top of Liquid and uses familiar syntax.
+The personalization layer represents the ability to deliver dynamic content in your messages. By using Liquid, a widely-used personalization language, your team can dynamically pull in existing data to display the message tailored to each recipient. Additionally, you can insert any information accessible on your webserver or through API directly into the messages you're sending, such as push notifications or emails, by using [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Connected Content builds on top of Liquid and uses familiar syntax.
 
 And because this dynamic content is programmable, marketers can include computed values, responses from other calls, or product catalog items. After you've set these systems up during implementation, your marketing team can do this with little to no support from technical teams. 
 

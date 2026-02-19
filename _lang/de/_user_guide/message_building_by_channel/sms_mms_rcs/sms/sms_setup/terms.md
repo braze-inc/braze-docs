@@ -5,8 +5,8 @@ article_title: SMS-Begriffe zum Kennenlernen
 alias: /sms_terms_to_know/
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "SMS–everyone has it and knows what it is. What they don't know is the nuance. Check out the following terms to learn more about SMS ecosystems, technologies, and processes."
+glossary_top_header: "Begriffe zum Kennenlernen"
+glossary_top_text: "SMS - jeder hat sie und weiß, was sie ist. Was sie nicht wissen, sind die Nuancen. Lesen Sie die folgenden Begriffe, um mehr über SMS-Ökosysteme, Technologien und Prozesse zu erfahren."
 page_type: glossary
 description: "Dieses Glossar definiert verschiedene SMS-Begriffe, die Sie kennen sollten."
 channel: SMS 
@@ -31,11 +31,11 @@ glossaries:
   - name: Messaging-Dienst
     description: "Eine Sammlung von langen Codes, kurzen Codes und alphanumerischen IDs, die für den Versand Ihrer SMS mit Braze verwendet werden."
   - name: Schlüsselwort
-    description: "Ein kurzes Wort, das an einen kurzen oder langen Code gesendet wird, um mit einem vordefinierten SMS-Programm zu interagieren oder um das OPT-OUT eines bestimmten Programms oder aller Programme eines Codes zu verlangen. Zum Beispiel, <code>STOP</code>. Schlüsselwörter sollten <br> - alphanumerisch sein <br> - keine Leerzeichen haben <br> - weniger als 10 Zeichen sein. <br> <br> Eine bestimmte Kombination aus Schlüsselwort und Kurzcode kann jeweils nur für ein aktives Programm verwendet werden. Wenn Sie ein Schlüsselwort eingeben, das bereits von einem anderen Programm verwendet wird, erscheint ein Validierungsfehler. <br> <br> Es gibt zwei verpflichtende Schlüsselwortkategorien, die alle Anbieter von SMS-Inhalten einhalten müssen: <code>STOPP</code> und <code>HILFE</code>."
+    description: "Ein kurzes Wort, das an einen kurzen oder langen Code gesendet wird, um mit einem vordefinierten SMS-Programm zu interagieren oder um das OPT-OUT eines bestimmten Programms oder aller Programme eines Codes zu verlangen. Zum Beispiel, <code>STOP</code>. Schlüsselwörter sollten <br> - alphanumerisch sein <br> - keine Leerzeichen haben <br> - weniger als 10 Zeichen sein. <br> <br> Eine bestimmte Kombination aus Schlüsselwort und Kurzcode kann jeweils nur für ein aktives Programm verwendet werden. Wenn Sie ein Schlüsselwort eingeben, das bereits von einem anderen Programm verwendet wird, erscheint ein Validierungsfehler. <br> <br> Es gibt zwei verpflichtende Schlüsselwortkategorien, die alle Anbieter von SMS-Inhalten einhalten müssen: <code>STOP</code> und <code>HELP</code>."
   - name: Pflichtfeld Schlüsselwort HELP
     description: "Für jedes Programm, das in der SMS Campaign Manager-Plattform erstellt wird, muss der Inhalt für dieses Schlüsselwort bereitgestellt werden. Er muss den Best Practices und der Konformität mit dem Netzbetreiber für das Land oder die Region entsprechen, in dem der SMS-Verkehr gesendet und empfangen wird. In den meisten Fällen sollte dieser Inhalt eine kurze Erläuterung des SMS-Programms und die Möglichkeit zum OPT-OUT enthalten."
   - name: Global STOP Schlüsselwörter
-    description: "Variationen sind <code>STOP</code>, <code>END</code>, <code>QUIT</code>, <code>UNSUBSCRIBE</code>, <code>CANCEL</code>, <code>STOPALL</code>. Diese werden als <code>Global-Stop-Keywords</code> bezeichnet. Wenn eines dieser Schlüsselwörter in einen Kurz- oder Langcode eingegeben wird, führt dies dazu, dass die Handynummer (die Nummer des Absenders) von allen aktiven SMS-Programmen, die mit diesem Code verbunden sind, abgemeldet wird."
+    description: "Variationen umfassen <code>STOP</code>, <code>END</code>, <code>QUIT</code>, <code>UNSUBSCRIBE</code>, <code>CANCEL</code>, <code>STOPALL</code>. Diese werden bezeichnet als <code>Global-Stop-Keywords</code>. Wenn eines dieser Schlüsselwörter in einen Kurz- oder Langcode eingegeben wird, führt dies dazu, dass die Handynummer (die Nummer des Absenders) von allen aktiven SMS-Programmen, die mit diesem Code verbunden sind, abgemeldet wird."
   - name: Vanity Code
     description: "Eine Vanity-Kurznummer ist eine 5-6-stellige Telefonnummer, die speziell von einer Marke ausgewählt wird. Vanity-Kurznummern sind gebrandet und für die Verbraucher leichter zu merken."
   - name: Gemeinsamer Shortcode

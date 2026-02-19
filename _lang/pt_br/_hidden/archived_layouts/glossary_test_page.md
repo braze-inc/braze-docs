@@ -3,8 +3,8 @@ page_order: 2
 
 nav_title: Glossário
 layout: glossary_page
-glossary_top_header: "Glossary Template"
-glossary_top_text: "This is a test Glossary Page."
+glossary_top_header: "Modelo de Glossário"
+glossary_top_text: "Esta é uma página de Glossário de teste."
 
 #Required
 description: "Esta é a descrição da Pesquisa Google. Caracteres com mais de 160 caracteres são truncados, portanto, seja breve."

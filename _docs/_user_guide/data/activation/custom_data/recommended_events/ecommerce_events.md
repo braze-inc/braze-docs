@@ -140,7 +140,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
           "color": "ORANGE",
           "size": "6",
           "brand": "Braze"
-        }
+        },
         "type": [
           "price_drop",
           "back_in_stock"
@@ -188,7 +188,7 @@ If there are two carts, add both to the merged user. Re-enqueue the Canvas if it
 
 | Property name | Required | Data type | Description | 
 |---|---|---|---|
-| `cart_id` | Yes | String | Unique identifier for the cart. If no value is passed, we'll determine a default value (shared across cart, checkout, and order events) for the user cart mapping. |
+| `cart_id` | Yes | String | If you are not using a third-party platform that provides a `cart_id`, you can use the [Braze session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
 | `total_value` | Yes | Float | Total monetary value of the cart. | 
 | `currency` | Yes | String | The currency in which the product price is listed (such as "USD" or "EUR") in [ISO 4217 format](https://www.iso.org/iso-4217-currency-codes.html). |
 | `products` | Yes | Array |  |
@@ -364,7 +364,7 @@ Similar to the `ecommerce.cart_updated` event, this event allows you to leverage
 | Property name | Required | Data type | Description | 
 |---|---|---|---|
 | `checkout_id` | Yes | String | Unique identifier for the checkout. |
-| `cart_id` | No | String | Unique identifier for the cart. If no value is passed, we'll determine a default value (shared across cart, checkout, and order events) for the user cart mapping.. | 
+| `cart_id` | No | String | If you are not using a third-party platform that provides a `cart_id`, you can use the [Braze session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). | 
 | `total_value` | Yes | Float | Total monetary value of the cart. |
 | `currency` | Yes | String | Currency in which the cart is valued. |
 | `products` | Yes | Array of objects |  |
@@ -530,7 +530,7 @@ You can use the order placed event to trigger when a customer successfully compl
 | Property name | Required | Data type | Description | 
 |---|---|---|---|
 | `order_id` | Yes | String | Unique identifier for the order placed. |
-| `cart_id` | No | String | Unique identifier for the cart. If no value is passed, we'll determine a default value (shared across cart, checkout, and order events) for the user cart mapping. |
+| `cart_id` | No | String | If you are not using a third-party platform that provides a `cart_id`, you can use the [Braze session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
 | `total_value` | Yes | Float | Total monetary value of the cart. | 
 | `currency` | Yes | String | Currency in which the cart is valued. |
 | `total_discounts` | No | Float | Total amount of discounts applied to the order. | 
@@ -546,7 +546,6 @@ You can use the order placed event to trigger when a customer successfully compl
 | `metadata` | No | Object | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. <br> This will have a limit based on our general event properties limit of 50kb. |
 | `sku` | No | String | (Shopify only) Shopify SKU. This can be configured as the catalog ID field. |
 | `source` | Yes | String | Source the event is derived from. (For Shopify, this is storefront). |
-| `metadata` | No | Object |  |
 | `order_status_url` | No | String | URL to view the status of the order. |
 | `order_number` | No | String | (Shopify only) Unique order number for the order placed. |
 | `tags` | No | Array | (Shopify only) Order tags
@@ -1174,4 +1173,4 @@ We use standardized user field calculations for the following fields:
 
 These user field calculations are also included on the **Transactions** tab of user profiles.
 
-![The "Transactions" tab with user calculated fields.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+![The "Transactions" tab with user calculated fields.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:70%;"}

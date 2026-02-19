@@ -14,14 +14,14 @@
 사용자가 식별되는 즉시(일반적으로 로그인 후) 다음 호출을 수행하여 사용자 ID를 설정해야 합니다.
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 Braze.getInstance(context).changeUser(YOUR_USER_ID_STRING);
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).changeUser(YOUR_USER_ID_STRING)

@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Peak
 
-> [Peak](https://platform.peak.ai/), eine Plattform für Entscheidungsintelligenz, ist ein End-to-Outcome-System, bei dem Entscheidungsintelligenz die kommerzielle Anwendung von KI ist, um die Entscheidungsfindung in Unternehmen zu verbessern und Umsätze und Gewinne zu steigern.
+> [Peak](https://peak.ai/), eine Plattform für Entscheidungsintelligenz, ist ein End-to-Outcome-System, bei dem Entscheidungsintelligenz die kommerzielle Anwendung von KI ist, um die Entscheidungsfindung in Unternehmen zu verbessern und Umsätze und Gewinne zu steigern.
 
 _Diese Integration wird von Peak gepflegt._
 

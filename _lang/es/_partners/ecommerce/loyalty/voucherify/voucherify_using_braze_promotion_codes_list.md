@@ -34,7 +34,7 @@ A continuación, añada el fragmento de código que hace referencia a los códig
 
 También puede establecer atributos para los códigos, como la caducidad de la lista y las alertas de umbral; sin embargo, tenga en cuenta que Voucherify gestiona la lógica detrás de sus códigos independientemente de la configuración de la lista.
 
-![Caducidad de la lista]({% image_buster /assets/img/voucherify/voucherify_promotion_list_expiration.png %})
+![Vencimiento de la lista]({% image_buster /assets/img/voucherify/voucherify_promotion_list_expiration.png %})
 
 ## Paso 3: Cargar archivo CSV
 

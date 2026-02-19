@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Exporter les détails de la campagne"
+nav_title: "GET : Exporter les informations relatives à la campagne"
 article_title: "GET : Exporter les détails de la campagne"
 search_tag: Endpoint
 page_order: 4
@@ -47,8 +47,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ## Réponses
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) the date created as ISO 8601 date,
@@ -89,7 +87,9 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,
-    "action": (string) action link from click
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
 }
 ```
 
@@ -219,7 +219,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 
 ### Comportements de conversion
 
-Le tableau `conversion_behaviors` contiendra des informations sur chaque comportement relatif aux événements de conversion défini pour la campagne. Ces comportements sont dans l’ordre défini par la campagne. Par exemple, l’événement de conversion A sera le premier élément du tableau, l’événement de conversion B sera le deuxième, etc. Les listes suivantes présentent des exemples de comportement relatif aux événements de conversion :
+Le tableau `conversion_behaviors` contient des informations sur chaque événement de conversion défini pour la campagne. Ces comportements sont dans l’ordre défini par la campagne. Par exemple, l'événement de conversion A est le premier élément du tableau, l'événement de conversion B est le deuxième, et ainsi de suite. Les listes suivantes présentent des exemples de comportement relatif aux événements de conversion :
 
 #### Clique sur l’e-mail
 

@@ -53,3 +53,19 @@ A continuación se muestra un ejemplo de un video de YouTube incrustado en un fr
     </div>
 </body>
 ```
+
+## Utilizar vínculos en profundidad
+
+Cuando utilices vínculos profundos o vínculos externos en mensajes dentro de la aplicación HTML de Android, **no** llames a `brazeBridge.closeMessage()` en tu JavaScript. La lógica interna del SDK cierra automáticamente el mensaje dentro de la aplicación cuando redirige a un enlace. Llamar a `brazeBridge.closeMessage()` interfiere con este proceso y puede hacer que el mensaje no responda cuando los usuarios vuelvan a tu aplicación. 
+
+El siguiente es un ejemplo de vínculo profundo en un fragmento de código:
+
+{% raw %}
+```javascript
+<script>
+document.querySelectorAll('[data-button-id]').forEach(function (node)
+Unknown macro: { node.addEventListener('click', function () { brazeBridge.logClick(node.dataset.buttonId); brazeBridge.closeMessage(); }); }
+);
+</script>
+```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-nav_title: 사용자 속성 설정
-article_title: Braze SDK를 통해 사용자 속성 설정하기
-page_order: 1.1
+nav_title: Set user attributes
+article_title: Braze 소프트웨어 개발 키트를 통해 사용자 속성 설정하기
+page_order: 1.2
 description: "Braze SDK를 통해 사용자 속성을 설정하는 방법을 알아보세요."
 ---
 
-# 사용자 속성 설정
+# Set user attributes
 
 > Braze SDK를 통해 사용자 속성을 설정하는 방법을 알아보세요.
 
@@ -14,6 +14,10 @@ description: "Braze SDK를 통해 사용자 속성을 설정하는 방법을 알
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/analytics/setting_user_attributes.md %}
 {% endsdktab %}
@@ -22,15 +26,16 @@ description: "Braze SDK를 통해 사용자 속성을 설정하는 방법을 알
 {% multi_lang_include developer_guide/swift/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
+{% sdktab flutter %}
+{% multi_lang_include developer_guide/flutter/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
+{% sdktab roku %}
+{% multi_lang_include developer_guide/roku/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/analytics/setting_user_attributes.md %}
-{% endsdktab %}
 {% endsdktabs %}

@@ -3219,4 +3219,23 @@ validurls['/docs/user_guide/message_building_by_channel/banners/creating_campaig
 validurls['/docs/user_guide/brazeai/predictive_events/prediction_analytics/#prediction_quality'] = '/docs/user_guide/brazeai/predictive_events/analytics/#prediction_quality';
 validurls['/docs/user_guide/brazeai/predictive_events/prediction_analytics/#purchase_score'] = '/docs/user_guide/brazeai/predictive_events/analytics/#purchase_score';
 
+validurls['/docs/user_guide/data/unification/user_data/delete_users/'] = '/docs/delete_users/';
+
+validurls['/docs/user_guide/administrative/access_braze/navigation/'] = '/docs/user_guide/administrative/access_braze/braze_dashboard/';
+validurls['/docs/user_guide/administrative/access_braze/global_search/'] = '/docs/user_guide/administrative/access_braze/braze_dashboard/';
+
+validurls['/docs/user_guide/brazeai/decisioning_studio/building_agents'] = '/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/design_your_agent/';
+validurls['/docs/user_guide/brazeai/decisioning_studio/go'] = '/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/';
+validurls['/docs/user_guide/brazeai/decisioning_studio/go/configuring_braze'] = '/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/';
+validurls['/docs/user_guide/brazeai/decisioning_studio/go/configuring_klaviyo'] = '/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/';
+validurls['/docs/user_guide/brazeai/decisioning_studio/go/configuring_sfmc'] = '/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/';
+validurls['/docs/user_guide/brazeai/decisioning_studio/go/report_bau_campaign'] = '/docs/user_guide/brazeai/decisioning_studio/reporting/';
+validurls['/docs/user_guide/brazeai/decisioning_studio/integration'] = '/docs/user_guide/brazeai/decisioning_studio/getting_started/';
+
+validurls['/docs/partners/tinyclues/'] = '/docs/partners/splio/';
+validurls['/docs/partners/data_and_analytics/cohort_import/tinyclues'] = '/docs/partners/splio/';
+
+validurls['/docs/user_guide/administrative/access_billing/billing/'] = '/docs/user_guide/administrative/app_settings/subscription_and_usage/';
+validurls['/docs/api/objects_filters/canvas_entry_properties_object/'] = '/docs/api/objects_filters/context_object/';
+
 // validurls['OLD'] = 'NEW';

@@ -36,7 +36,7 @@ Xcode sollte ein neues Ziel generieren und automatisch folgende Dateien für Sie
 - `MainInterface.storyboard`
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 - `NotificationViewController.swift`
 - `MainInterface.storyboard`
@@ -63,11 +63,11 @@ Wenn Sie Ihre App nicht zu einer App-Gruppe hinzufügen, kann es sein, dass Ihre
 ## Schritt 4: Hinzufügen des Push Story Frameworks zu Ihrer App
 
 {% tabs local %}
-{% tab Swift-Paketmanager %}
+{% tab Swift Package Manager %}
 
 Nachdem Sie den [Leitfaden für die Integration von Swift-Paketmanager]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/) befolgt haben, fügen Sie `AppboyPushStory` zur `Notification Content Extension` hinzu:
 
-![Wählen Sie in Xcode unter "Frameworks and Libraries" das Pluszeichen (+) aus, um ein Framework hinzuzufügen.]({% image_buster /assets/img/ios/push_story/spm1.png %})
+![Wählen Sie in Xcode unter Frameworks und Bibliotheken das Symbol "+" aus, um ein Framework hinzuzufügen.]({% image_buster /assets/img/ios/push_story/spm1.png %})
 
 ![]({% image_buster /assets/img/ios/push_story/spm2.png %})
 
@@ -85,7 +85,7 @@ end
 Navigieren Sie nach der Aktualisierung des Podfile in Ihrem Terminal zum Verzeichnis Ihres Xcode-App-Projekts und führen Sie `pod install` aus.
 
 {% endtab %}
-{% tab Manuell %}
+{% tab Manual %}
 
 Laden Sie die neueste Version der `AppboyPushStory.zip` von der [GitHub-Release-Seite](https://github.com/Appboy/appboy-ios-sdk/releases) herunter, extrahieren Sie sie und fügen Sie der `Notification Content Extension` Ihres Projekts die folgenden Dateien hinzu:
 - `Resources/ABKPageView.nib`
@@ -144,7 +144,7 @@ Entfernen Sie in Ihrem `NotificationViewController.m` die Standardimplementierun
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 Fügen Sie in `NotificationViewController.swift` die folgende Zeile hinzu, um die Header-Dateien zu importieren:
 
@@ -222,7 +222,7 @@ appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR-APP-GROUP-IDENTIFIER";
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [

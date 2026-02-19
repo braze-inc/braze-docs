@@ -3,6 +3,10 @@
 Eine Sitzung referenziert den Zeitraum, in dem das Braze SDK die Aktivitäten der Nutzer:in Ihrer App nach deren Start verfolgt. Sie können auch eine neue Sitzung erzwingen, indem [Sie die Methode `changeUser()` aufrufen]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/#setting-a-user-id).
 
 {% tabs %}
+{% tab web %}
+Standardmäßig beginnt eine Sitzung, wenn Sie `braze.openSession()` zum ersten Mal aufrufen. Die Sitzung bleibt bis zu `30` Minuten der Inaktivität aktiv (es sei denn, Sie [ändern den Standard-Timeout für die Sitzung]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web#change-session-timeout) oder der Nutzer:innen schließt die App.
+{% endtab %}
+
 {% tab android %}
 {% alert note %}
 Wenn Sie den [activity lifecycle callback]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android) für Android eingerichtet haben, ruft Braze automatisch [`openSession()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/open-session.html) und [`closeSession()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/close-session.html) für jede Aktivität in Ihrer App auf.
@@ -13,13 +17,9 @@ Standardmäßig wird eine Sitzung gestartet, wenn `openSession()` zum ersten Mal
 Wenn Sie `closeSession()` aufrufen, wird die Sitzung nicht sofort beendet. Stattdessen wird die Sitzung nach 10 Sekunden beendet, wenn `openSession()` nicht erneut vom Nutzer:innen aufgerufen wird, der eine andere Aktivität startet.
 {% endtab %}
 
-{% tab schnell %}
+{% tab swift %}
 Standardmäßig beginnt eine Sitzung, wenn Sie `Braze.init(configuration:)` aufrufen. Dies geschieht, wenn die Benachrichtigung `UIApplicationWillEnterForegroundNotification` getriggert wird, was bedeutet, dass die App in den Vordergrund getreten ist.
 
 Wenn Ihre App in den Hintergrund geht, wird `UIApplicationDidEnterBackgroundNotification` getriggert. Wenn Ihre App in den Vordergrund zurückkehrt, prüft das SDK, ob seit dem Start der Sitzung mehr als 10 Sekunden vergangen sind (es sei denn, Sie [ändern den Standard-Timeout der Sitzung]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift#change-session-timeout)). Wenn ja, wird eine neue Sitzung beginnen.
-{% endtab %}
-
-{% tab Internet %}
-Standardmäßig beginnt eine Sitzung, wenn Sie `braze.openSession()` zum ersten Mal aufrufen. Die Sitzung bleibt bis zu `30` Minuten der Inaktivität aktiv (es sei denn, Sie [ändern den Standard-Timeout für die Sitzung]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web#change-session-timeout) oder der Nutzer:innen schließt die App.
 {% endtab %}
 {% endtabs %}

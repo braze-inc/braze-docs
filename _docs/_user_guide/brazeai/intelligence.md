@@ -1,7 +1,7 @@
 ---
 nav_title: Intelligence Suite
 article_title: About the Braze Intelligence Suite
-page_order: 1
+page_order: 6
 search_rank: 12
 description: "The Braze Intelligence Suite automates decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale."
 tool:

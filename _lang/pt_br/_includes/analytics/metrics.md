@@ -55,7 +55,7 @@ Os <i>cliques no corpo da mensagem</i> ocorrem quando um usuário clica em uma m
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}
-<i>Taxa de Clique para Abertura</i> é a porcentagem de e-mails abertos que foram clicados por um único usuário ou máquina pelo menos uma vez, e está disponível apenas no <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Construtor de Relatórios</a>.
+A <i>taxa de cliques para abertura</i> é a porcentagem de e-mails abertos que foram clicados por um único usuário ou máquina pelo menos uma vez, e só está disponível no <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>.
 {% endif %}
 
 {% if include.metric == "Close Message" %}
@@ -107,7 +107,7 @@ As <i>falhas de entrega</i> ocorrem quando o SMS não pode ser enviado devido ao
 {% endif %}
 
 {% if include.metric == "Delivery Failures RCS" %}
-<i>Falhas de Entrega</i> ocorrem quando o RCS não pôde ser enviado devido a filas transbordando (enviando RCS a uma taxa maior do que seu remetente verificado pode suportar).
+<i>As falhas de entrega</i> ocorrem quando o RCS não pode ser enviado devido ao transbordamento das filas (envio de RCS em uma taxa maior do que o remetente verificado pelo RCS pode suportar).
 {% endif %}
 
 {% if include.metric == "Failed Delivery Rate" %}
@@ -167,7 +167,7 @@ As <i>aberturas</i> são instâncias que incluem <i>aberturas diretas</i> e <i>a
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
-<i>Opt-Out</i> é quando um usuário respondeu à sua mensagem com uma <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">palavra-chave de opt-out</a> e foi cancelado de seu programa de SMS ou RCS.
+<i>Opt-Out</i> é quando um usuário respondeu à sua mensagem com uma <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">palavra-chave de aceitação</a> e cancelou a inscrição no seu programa de SMS ou RCS.
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
@@ -179,7 +179,7 @@ As <i>aberturas</i> são instâncias que incluem <i>aberturas diretas</i> e <i>a
 {% endif %}
 
 {% if include.metric == "Reads" %}
-<i>Leituras</i> é quando o usuário lê a mensagem. Os recibos de leitura do usuário devem estar "Ativados" para que a Braze rastreie as leituras.
+<i>Reads</i> é quando o usuário lê a mensagem. Os recibos de leitura do usuário devem estar "Ativados" para que a Braze rastreie as leituras.
 {% endif %}
 
 {% if include.metric == "Read Rate" %}
@@ -191,7 +191,7 @@ O <i>recebimento</i> é definido de forma diferente por canal e pode ser quando 
 {% endif %}
 
 {% if include.metric == "Rejections" %}
-<i>Rejeições</i> são quando o SMS ou RCS foi rejeitado pela operadora. Isso pode ocorrer por vários motivos, inclusive filtragem de conteúdo da operadora, disponibilidade do dispositivo de destino, o número de telefone não está mais em serviço e outros semelhantes.
+<i>As rejeições</i> ocorrem quando o SMS ou RCS foi rejeitado pela operadora. Isso pode ocorrer por vários motivos, inclusive filtragem de conteúdo da operadora, disponibilidade do dispositivo de destino, o número de telefone não está mais em serviço e outros semelhantes.
 {% endif %}
 
 {% if include.metric == "Revenue" %}
@@ -203,7 +203,7 @@ O <i>recebimento</i> é definido de forma diferente por canal e pode ser quando 
 {% endif %}
 
 {% if include.metric == "Sent" %}
-<i>Enviado</i> é toda vez que uma campanha ou etapa do canva foi lançada ou acionada, e um SMS ou RCS foi enviado do Braze. É possível que o SMS ou RCS não tenha chegado ao dispositivo de um usuário devido a erros.
+<i>Enviado</i> é toda vez que uma campanha ou etapa do Canva foi lançada ou disparada e um SMS ou RCS foi enviado pelo Braze. É possível que o SMS ou RCS não tenha chegado ao dispositivo do usuário devido a erros.
 {% endif %}
 
 {% if include.metric == "Sends" %}
@@ -219,7 +219,7 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Spam" %}
-<i>Spam</i> é o número total de e-mails entregues que foram marcados como "spam" pelo destinatário. Embora o Braze não mude o estado de inscrição desses usuários, esses usuários serão automaticamente excluídos em e-mails futuros, a menos que você esteja enviando um e-mail de transação, que está configurado para "enviar para todos os usuários, incluindo cancelados".
+<i>Spam</i> é o número total de e-mails entregues que foram marcados como "spam" pelo destinatário. Embora o Braze não altere o estado da inscrição desses usuários, eles serão automaticamente excluídos em e-mails futuros, a menos que você esteja enviando um e-mail de transação, que está configurado para "enviar a todos os usuários, inclusive cancelar inscrição".
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}
@@ -231,7 +231,7 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>Total de Cliques</i> é o número de destinatários únicos que clicaram em um link na mensagem entregue.
+<i>Total de cliques</i> é o número de destinatários únicos que clicaram em um link na mensagem entregue.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
@@ -239,7 +239,7 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
-<i>Total de Impressões</i> é o número de vezes que uma mensagem é visualizada. O Braze registra uma impressão apenas quando a mensagem se torna visível para o usuário na tela dele. Por exemplo, se uma mensagem estiver colocada na parte inferior de uma página, a impressão não é registrada até que o usuário role para baixo e a mensagem entre em vista. Se um usuário for mostrado a mesma mensagem duas vezes, contará como duas impressões.
+<i>Total de impressões</i> é o número de vezes que uma mensagem é visualizada. O Braze registra uma impressão somente quando a mensagem se torna visível para o usuário em sua tela. Por exemplo, se uma mensagem for colocada na parte inferior de uma página, a impressão não será registrada até que o usuário role a página para baixo e a mensagem seja exibida. Se a mesma mensagem for mostrada a um usuário duas vezes, isso contará como duas impressões.
 {% endif %}
 
 {% if include.metric == "Total Opens" %}
@@ -261,11 +261,11 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-<i>Impressões Únicas</i> é o número total de usuários que visualizaram uma mensagem de uma campanha específica. Uma impressão é registrada apenas quando a mensagem se torna visível na tela de um usuário.
+<i>Impressões únicas</i> é o número total de usuários que visualizaram uma mensagem de uma determinada campanha. Uma impressão é registrada somente quando a mensagem se torna visível na tela do usuário.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>Destinatários Únicos</i> é o número de destinatários diários únicos, ou usuários que receberam uma nova mensagem em um dia. Para que essa contagem aumente para um usuário mais de uma vez, o usuário deve receber uma nova mensagem em um dia diferente.
+<i>Unique Recipients (Destinatários únicos</i> ) é o número de destinatários diários únicos, ou usuários que receberam uma nova mensagem em um dia. Para que essa contagem seja incrementada para um usuário mais de uma vez, o usuário deve receber uma nova mensagem em um dia diferente.
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}

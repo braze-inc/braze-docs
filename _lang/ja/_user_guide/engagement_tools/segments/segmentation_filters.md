@@ -4,7 +4,7 @@ nav_title: セグメンテーションフィルター
 article_title: セグメンテーションフィルター
 layout: glossary_page
 glossary_top_header: "セグメンテーションフィルター"
-glossary_top_text: "Braze SDK には、特定の機能と属性に基づいてユーザーをSegmentし、ターゲットにするための強力なフィルターが備わっています。フィルターカテゴリごとに、これらのフィルターs を検索または絞り込むことができます。<br><br>s のカスタム属性データタイプについては、<a href=\"/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types\"> カスタム属性データタイプ</a> をSegment ユーザーしてください。"
+glossary_top_text: "Braze SDK には、特定の機能と属性に基づいてユーザーをSegmentし、ターゲットにするための強力なフィルターが備わっています。フィルターカテゴリごとに、これらのフィルター を検索または絞り込むことができます。<br><br>s のカスタム属性データタイプについては、<a href=\"/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types\"> カスタム属性データタイプ</a> をSegment ユーザーしてください。"
 
 page_type: glossary
 tool: Segments
@@ -128,23 +128,23 @@ glossaries:
     tags:
       - Sessions
   - name: キャンペーンから受信したメッセージ
-    description: "指定したキャンペーンを受信したかどうかによってユーザーをセグメント化します。このフィルターは、メッセージを明示的に送信したユーザーのみをキャプチャし、重複メッセージを受信した同じメールまたは電話番号を持つ他のユーザーはキャプチャしません。重複するユーザーs をキャプチャするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">Campaign またはCanvas with Tag</a> から受信したメッセージを使用します。<br><br> コンテンツカード、バナー、アプリ内メッセージについては、カードやアプリ内メッセージが送信されたときではなく、ユーザーがインプレッションを記録したときである。<br><br>プッシュおよびwebhookの場合、これはメッセージがユーザーに送信されるときです。<br><br> WhatsAppの場合、これは、メッセージがユーザーの機器に配信されるときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されるときです。<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。<br><br>SMSの場合、これは最後のメッセージがSMSプロバイダーに配信されたときです。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。"
+    description: "指定したキャンペーンを受信したかどうかによってユーザーをセグメント化します。このフィルターは、メッセージを明示的に送信したユーザーのみをキャプチャし、重複メッセージを受信した同じメールまたは電話番号を持つ他のユーザーはキャプチャしません。重複するユーザー をキャプチャするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">Campaign またはCanvas with Tag</a> から受信したメッセージを使用します。<br><br> コンテンツカード、バナー、アプリ内メッセージについては、カードやアプリ内メッセージが送信されたときではなく、ユーザーがインプレッションを記録したときである。<br><br>プッシュおよびwebhookの場合、これはメッセージがユーザーに送信されるときです。<br><br> WhatsAppの場合、これは、メッセージがユーザーの機器に配信されるときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されるときです。<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。<br><br>SMSの場合、これは最後のメッセージがSMSプロバイダーに配信されたときです。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。"
     tags:
       - Retargeting
   - name: キャンペーンバリアントを受信
-    description: "受信した多変量キャンペーンのバリアントによってユーザーをセグメント化します。このフィルターは、メッセージを明示的に送信したユーザーのみをキャプチャし、重複メッセージを受信した同じメールまたは電話番号を持つ他のユーザーはキャプチャしません。重複するユーザーs をキャプチャするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">Campaign またはCanvas with Tag</a> から受信したメッセージを使用します。<br><br> コンテンツカード、バナー、アプリ内メッセージについては、カードやアプリ内メッセージが送信されたときではなく、ユーザーがインプレッションを記録したときである。<br><br>プッシュおよびwebhookの場合、これはメッセージがユーザーに送信されるときです。<br><br> WhatsAppの場合、これは、メッセージがユーザーの機器に配信されるときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されるときです。<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。<br><br>SMSの場合、これは最後のメッセージがSMSプロバイダーに配信されたときです。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。"
+    description: "受信した多変量キャンペーンのバリアントによってユーザーをセグメント化します。このフィルターは、メッセージを明示的に送信したユーザーのみをキャプチャし、重複メッセージを受信した同じメールまたは電話番号を持つ他のユーザーはキャプチャしません。重複するユーザー をキャプチャするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">Campaign またはCanvas with Tag</a> から受信したメッセージを使用します。<br><br> コンテンツカード、バナー、アプリ内メッセージについては、カードやアプリ内メッセージが送信されたときではなく、ユーザーがインプレッションを記録したときである。<br><br>プッシュおよびwebhookの場合、これはメッセージがユーザーに送信されるときです。<br><br> WhatsAppの場合、これは、メッセージがユーザーの機器に配信されるときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されるときです。<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。<br><br>SMSの場合、これは最後のメッセージがSMSプロバイダーに配信されたときです。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。"
     tags:
       - Retargeting
   - name: キャンバスステップからメッセージを受信
-    description: "特定のキャンバスコンポーネントを受信したかどうかによってユーザーをセグメント化します。このフィルターは、メッセージを明示的に送信したユーザーのみをキャプチャし、重複メッセージを受信した同じメールまたは電話番号を持つ他のユーザーはキャプチャしません。重複するユーザーs をキャプチャするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">Campaign またはCanvas with Tag</a> から受信したメッセージを使用します。<br><br> コンテンツカードおよびアプリ内メッセージの場合、カードまたはアプリ内メッセージが送信されたときではなく、ユーザーがインプレッションを記録するときです。<br><br>プッシュおよびwebhookの場合、これはメッセージがユーザーに送信されるときです。<br><br> WhatsAppの場合、これは、メッセージがユーザーの機器に配信されるときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されるときです。<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。<br><br>SMSの場合、これは最後のメッセージがSMSプロバイダーに配信されたときです。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。"
+    description: "特定のキャンバスコンポーネントを受信したかどうかによってユーザーをセグメント化します。このフィルターは、メッセージを明示的に送信したユーザーのみをキャプチャし、重複メッセージを受信した同じメールまたは電話番号を持つ他のユーザーはキャプチャしません。重複するユーザー をキャプチャするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">Campaign またはCanvas with Tag</a> から受信したメッセージを使用します。<br><br> コンテンツカードおよびアプリ内メッセージの場合、カードまたはアプリ内メッセージが送信されたときではなく、ユーザーがインプレッションを記録するときです。<br><br>プッシュおよびwebhookの場合、これはメッセージがユーザーに送信されるときです。<br><br> WhatsAppの場合、これは、メッセージがユーザーの機器に配信されるときではなく、最後のメッセージAPIリクエストがWhatsAppに送信されるときです。<br><br>メールの場合、メールリクエストが (実際に配信されたかどうかに関係なく) メールサービスプロバイダーに送信されるときです。<br><br>SMSの場合、これは最後のメッセージがSMSプロバイダーに配信されたときです。これは、メッセージがユーザーの機器に配信されたことを保証するものではありません。"
     tags:
       - Retargeting
   - name: 特定のキャンバスステップから最後に受信したメッセージ
-    description: "特定のキャンバスコンポーネントを受信した日時によってユーザーをセグメント化します。このフィルターは、メッセージを明示的に送信したユーザーのみをキャプチャし、重複メッセージを受信した同じメールまたは電話番号の他のユーザーはキャプチャしません。重複したユーザーs をキャプチャするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">CampaignまたはCanvasからの受信メッセージをタグ付きで使用します</a>。このフィルターでは、ユーザーが他のキャンバスコンポーネントをいつ受信したかは考慮されません。"
+    description: "特定のキャンバスコンポーネントを受信した日時によってユーザーをセグメント化します。このフィルターは、メッセージを明示的に送信したユーザーのみをキャプチャし、重複メッセージを受信した同じメールまたは電話番号の他のユーザーはキャプチャしません。重複したユーザー をキャプチャするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">CampaignまたはCanvasからの受信メッセージをタグ付きで使用します</a>。このフィルターでは、ユーザーが他のキャンバスコンポーネントをいつ受信したかは考慮されません。"
     tags:
       - Retargeting
   - name: 特定のキャンペーンから最後に受信したメッセージ
-    description: "指定したキャンペーンを受信したかどうかによってユーザーをセグメント化します。このフィルターは、メッセージを明示的に送信したユーザーのみをキャプチャし、重複メッセージを受信した同じメールまたは電話番号の他のユーザーはキャプチャしません。重複したユーザーs をキャプチャするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">CampaignまたはCanvasからの受信メッセージをタグ付きで使用します</a>。このフィルターは、ユーザーがいつ他のキャンペーンを受けたかを考慮しない。"
+    description: "指定したキャンペーンを受信したかどうかによってユーザーをセグメント化します。このフィルターは、メッセージを明示的に送信したユーザーのみをキャプチャし、重複メッセージを受信した同じメールまたは電話番号の他のユーザーはキャプチャしません。重複したユーザー をキャプチャするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">CampaignまたはCanvasからの受信メッセージをタグ付きで使用します</a>。このフィルターは、ユーザーがいつ他のキャンペーンを受けたかを考慮しない。"
     tags:
       - Retargeting
   - name: キャンペーンまたはキャンバスからタグ付きで受信したメッセージ
@@ -276,7 +276,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: 利用可能なメール
-    description: "有効なEメールアドレスを持っているかどうか、Eメールを購読しているかどうか、またはオプトインしているかどうかでユーザーをセグメンテーションする。このフィルターは、ユーザーがメールの配信停止をしているか、Brazeがハードバウンスを受け取っているか、メールがスパムとしてマークされているかの3つの条件をチェックする。これらの基準のいずれかが満たされている場合、またはメールがユーザーに存在しない場合、ユーザーは含まれません。<br><br>トランザクショナル・メッセージを送信する場合、「使用可能なEメール」が次のようになっているユーザーは、トランザクショナル・メッセージを送信することができない。 <code>false</code> はオーディエンス計算に含まれないが、メッセージを受け取る可能性はある。ただし、オーディエンスの算出には、サブスクライブ済みまたはオプトインユーザーのみが含まれます。<br><br>オプトインのステータスが重要なメールには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">メールアドレス</a>フィルターではなく、「利用可能なメール」フィルターを使用することをお勧めします。追加の条件を使用することで、実際にメッセージを希望しているユーザーをターゲットにできます。"
+    description: "ユーザーは、有効なメールアドレスを持っているかどうか、また、サブスクライブされているか、メールに選択されているかどうかによってセグメント化されます。このフィルターは、ユーザーがメールの配信停止をしているか、Brazeがハードバウンスを受け取っているか、メールがスパムとしてマークされているかの3つの条件をチェックする。これらの基準のいずれかが満たされている場合、またはユーザーにメールが存在しない場合、ユーザーは含まれません。<br><br>Eメールが利用可能なユーザー <code>false</code> キャンペーン オーディエンスから除外され、メールを受信しません。送信設定s がすべてのユーザー(配信停止d ユーザー を含む)に送信するように設定されている場合でも同様です。<br><br>メール s でオプトインステータスが重要な場合は、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">メールアドレス</a> の代わりにメール Available を使用します。追加の基準は、メールを受ける資格のあるユーザーを対象にするのに役立ちます。"
     tags:
       - Channel subscription behavior
   - name: メールオプトイン日
@@ -372,7 +372,7 @@ glossaries:
     tags:
       - eCommerce
   - name: 総キャンセル受注数(過去730日間)
-    description: "発注の<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">eCommerceの推奨イベント</a>に基づいて、過去2年間にユーザー キャンセルした注文の総数でユーザーsをセグメント化します(ワークスペースはeCommerceイベントにこのフィルターのデータがありません)。ユーザは、このフィルターに対して1 日に1 回評価されます。<br><br>このフィルターはベータ版である。このフィルターを使用する場合は、Braze アカウントマネージャーにお問い合わせください。"
+    description: "発注の<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">eCommerceの推奨イベント</a>に基づいて、過去2年間にユーザー キャンセルした注文の総数でユーザーをセグメント化します(ワークスペースはeCommerceイベントにこのフィルターのデータがありません)。ユーザは、このフィルターに対して1 日に1 回評価されます。<br><br>このフィルターはベータ版である。このフィルターを使用する場合は、Braze アカウントマネージャーにお問い合わせください。"
     tags:
       - eCommerce
   - name: 顧客の生涯価値 (過去 730 日間)
@@ -396,7 +396,7 @@ glossaries:
     tags:
       - eCommerce
   - name: 平均注文額 (直近 730 日間)
-    description: "発注の<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">eCommerce推奨イベント</a>に基づいて、過去2年間のユーザーの注文の平均(平均)値でユーザーsをセグメント化します(ワークスペース s not \"トラッキング eCommerceイベントにはこのフィルターのデータがありません)。ユーザは、このフィルターに対して1 日に1 回評価されます。<br><br>このフィルターはベータ版である。このフィルターを使用する場合は、Braze アカウントマネージャーにお問い合わせください。"
+    description: "発注の<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">eCommerce推奨イベント</a>に基づいて、過去2年間のユーザーの注文の平均(平均)値でユーザーをセグメント化します(ワークスペース s not \"トラッキング eCommerceイベントにはこのフィルターのデータがありません)。ユーザは、このフィルターに対して1 日に1 回評価されます。<br><br>このフィルターはベータ版である。このフィルターを使用する場合は、Braze アカウントマネージャーにお問い合わせください。"
     tags:
       - eCommerce
   - name: 国
@@ -464,7 +464,11 @@ glossaries:
     tags:
       - Devices
   - name: デバイス OS
-    description: 指定のオペレーティングシステムを持つ 1 台以上のデバイスを持つユーザーをセグメント化します。
+    description: "指定のオペレーティングシステムを持つ 1 台以上のデバイスを持つユーザーをセグメント化します。s をさまざまなオペレーティングシステムでSegment ユーザーするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#device-os-version-number\">Device OS Version Number</a>フィルターを使用します。"
+    tags:
+      - Devices
+  - name: デバイスの OS バージョン番号
+    description: 指定したレンジ内にあるオペレーティングシステム版を持つ1 つ以上のデバイスを持つユーザーをセグメント化します。たとえば、iOS オペレーティングシステムが26.0 以上のユーザーを対象にすることができます。
     tags:
       - Devices
   - name: 最新のデバイスロケール
@@ -584,7 +588,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: メッセージ開封の可能性
-    description: 指定したチャネルに0 ～100% の範囲で開封する可能性に基づいてユーザーをフィルタリングします。チャネルの可能性を測定するのに十分なデータがないユーザーは、「空白である」を使用して選択できます。<br><br>メールの場合、マシン開封は尤度計算から除外されます。
+    description: "<a href=\"/docs/user_guide/brazeai/intelligence/intelligent_channel/#individual-channels\">尤度に基づいて、指定されたチャネル</a> に0 ～100% のスケールで開封するようにユーザーをフィルタリングします。チャネルの可能性を測定するのに十分なデータがないユーザーは、「空白である」を使用して選択できます。<br><br>メールの場合、マシン開封は尤度計算から除外されます。"
     tags:
       - Intelligence and predictive
   - name: アプリを使用している Facebook の友達の人数

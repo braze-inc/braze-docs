@@ -1,7 +1,7 @@
 ---
 nav_title: Item recommendations
 article_title: Item recommendations in Braze
-page_order: 15
+page_order: 7
 search_rank: 1
 description: "Learn all about item recommendation engines in Braze."
 ---
@@ -383,3 +383,7 @@ Note that recommendations operate independently and don’t have any knowledge o
 ### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
 
 Yes, but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.
+
+### How can I make all recommendations that last multiple days expire at once?
+
+If you want to expire all multiday recommendations on a specific date (so all such active recommendations receive new predictions at once), contact Braze Support or your customer success manager for assistance. Braze AI experts perform this manually to ensure maximum model performance.

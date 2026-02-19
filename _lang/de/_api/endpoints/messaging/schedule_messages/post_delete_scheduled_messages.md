@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Löschen geplanter 
 {% api %}
 # Geplante Nachrichten löschen
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/messages/schedule/delete
+/nachrichten/zeitplan/loeschen
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um eine Nachricht abzubrechen, die Sie zuvor im Zeitplan vorgesehen haben, bevor sie gesendet wurde.

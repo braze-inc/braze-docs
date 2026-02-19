@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Consulta la lista de direcciones de correo electrónico no suscritas"
+nav_title: "GET: Consultar lista de direcciones de correo electrónico dadas de baja"
 article_title: "GET: Consulta la lista de direcciones de correo electrónico no suscritas"
 search_tag: Endpoint
 page_order: 3
@@ -32,10 +32,10 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | ----------|-----------| ---------|------ |
-| `start_date` | Opcional <br>(ver nota) | Cadena en formato AAAA-MM-DD| Fecha de inicio del intervalo para recuperar las bajas, debe ser anterior a end_date. La API lo considera medianoche en hora UTC. |
+| `start_date` | Opcional <br>(ver nota) | Cadena en formato AAAA-MM-DD| Fecha de inicio del intervalo para recuperar las cancelaciones de suscripción, debe ser anterior a end_date. La API la trata como medianoche en hora UTC. |
 | `end_date` | Opcional <br>(ver nota) | Cadena en formato AAAA-MM-DD | Fecha de finalización del intervalo para recuperar las bajas. La API lo considera medianoche en hora UTC. |
 | `limit` | Opcional | Entero | Campo opcional para limitar el número de resultados devueltos. De forma predeterminada, 100, el máximo es 500. |
-| `offset` | Opcional | Entero | Punto de inicio opcional de la lista a recuperar. |
+| `offset` | Opcional | Entero | Punto de inicio opcional de la lista desde el que recuperar. |
 | `sort_direction` | Opcional | Cadena | Introduce el valor `asc` para ordenar las bajas de la más antigua a la más reciente. Introduce `desc` para ordenar de más reciente a más antiguo. Si no se incluye `sort_direction`, el orden predeterminado es de más reciente a más antiguo. |
 | `email` | Opcional <br>(ver nota) | Cadena | Si se proporciona, devolveremos si el usuario se ha dado de baja o no. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -57,8 +57,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?
 Las entradas aparecen en orden descendente.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

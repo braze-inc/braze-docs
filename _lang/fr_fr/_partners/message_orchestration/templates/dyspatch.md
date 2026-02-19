@@ -36,15 +36,15 @@ Dans le portail d'administration de Dyspatch, ouvrez le menu déroulant de votre
 
 Dans le champ **Rechercher les exports par**, vous pouvez choisir la manière dont vous souhaitez gérer la localisation. Ce champ vous permet de [localiser vos modèles d'e-mails et de](https://docs.dyspatch.io/localization/localizing_a_template/) les exporter vers Braze pour envoyer facilement des e-mails personnalisés par langue ou par région. 
 
-![Modèle d'exportation Dyspatch] ({% image_buster /assets/img/dyspatch/dyspatch_integration_create.png %}){: style="max-width:50%;"}
+![Modèle d'exportation Dyspatch]({% image_buster /assets/img/dyspatch/dyspatch_integration_create.png %}){: style="max-width:50%;"}
 
 ### Étape 2 : Modèle d'exportation vers Braze
 
 Pour envoyer le modèle d’e-mail que vous avez créé dans Dyspatch à Braze, affichez le modèle d'e-mail publié et cliquez sur **Télécharger/Exporter**, puis sur **Exporter vers l'intégration**.
 
-Si vous souhaitez télécharger votre modèle manuellement, consultez le modèle d'e-mail publié et cliquez sur **Télécharger/Exporter**, puis sur **Télécharger le code HTML**. Ensuite, dans la section **Modèles et médias > Modèles d'e-mails** de votre compte Braze, sélectionnez **À partir du fichier** pour télécharger votre modèle.
+Si vous souhaitez télécharger votre modèle manuellement, consultez le modèle d'e-mail publié et cliquez sur **Télécharger/Exporter**, puis sur **Télécharger le code HTML**. Ensuite, dans la section **Modèles & Media > Modèles d'e-mail de** votre compte Braze, sélectionnez **À partir d'un fichier** pour télécharger votre modèle.
 
-![Modèle d'exportation Dyspatch] ({% image_buster /assets/img/dyspatch/dyspatch_export.gif %})
+![Modèle d’exportation de Dyspatch]({% image_buster /assets/img/dyspatch/dyspatch_export.gif %})
 
 {% alert important %}
 Ne sélectionnez pas le **CSS en ligne** dans la section **Informations d'envoi** pour aucun modèle d'e-mail Dyspatch dans Braze. Dyspatch s'en charge en s'assurant que vos e-mails sont robustes, réactifs et prêts à être envoyés.
@@ -52,6 +52,6 @@ Ne sélectionnez pas le **CSS en ligne** dans la section **Informations d'envoi*
 
 ### Utilisation
 
-Trouvez le modèle Dyspatch que vous avez téléchargé dans la section **Modèles et médias > Modèles** d'e-mails de votre compte Braze. Vous pouvez désormais utiliser ce modèle d'e-mail pour commencer à envoyer des e-mails attrayants à vos clients !
+Retrouvez le modèle Dyspatch que vous avez téléchargé dans la section **Modèles & Media > Modèles d'e-mail de** votre compte Braze. Vous pouvez désormais utiliser ce modèle d'e-mail pour commencer à envoyer des e-mails attrayants à vos clients !
 
 

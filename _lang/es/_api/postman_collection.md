@@ -13,7 +13,7 @@ page_type: reference
 
 ## ¿Qué es Postman?
 
-Postman es una herramienta de edición visual gratuita para crear y probar solicitudes API. A diferencia de otros métodos para interactuar con API (por ejemplo, usando cURL), Postman te permite editar fácilmente las solicitudes API, ver la información de cabecera, y mucho más. Postman tiene la capacidad de guardar colecciones o bibliotecas de ejemplos de solicitudes API prefabricadas. Para facilitar a nuestros clientes la puesta en marcha de nuestra API REST, hemos creado una colección con ejemplos prefabricados para todos nuestros puntos finales de API.
+Postman es una herramienta gratuita de edición visual para construir y probar peticiones API. Comparado con otros métodos (por ejemplo, usando cURL), Postman te permite editar solicitudes API, ver información de cabecera y mucho más. Puedes guardar colecciones (bibliotecas de muestras de solicitudes de API prefabricadas). Para acelerar la configuración con nuestra API REST, proporcionamos una colección con ejemplos prefabricados para todos los puntos finales.
 
 Vea o descargue nuestra Postman Collection haciendo clic en **Ejecutar en Postman** en nuestra [documentación de Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro) para empezar.
 
@@ -38,7 +38,7 @@ Para configurar tu propio entorno, realiza los siguientes pasos:
 En los cuerpos de solicitud de `POST`, `api_key` debe ir entre comillas: `"MY-API-KEY-EXAMPLE"`. En las URL de `GET`, no debería serlo. Ya te hemos proporcionado este formato en los cuerpos de solicitud de esta documentación `POST`, las URL de `GET` y la plantilla de entorno para `YOUR-API-KEY-HERE`.
 {% endalert %}
 
-![Añadir variables para la clave de API y la URL de instancia al entorno de la API REST de Braze en Postman.]({% image_buster /assets/img_archive/postman_variable.png %})
+![Añadir variables para la clave API y la URL de instancia al entorno Braze REST API en Postman.]({% image_buster /assets/img_archive/postman_variable.png %})
 
 ### Utilizar las solicitudes preconstruidas de la colección
 
@@ -50,13 +50,13 @@ En general, los puntos finales de la API de Braze aceptan dos tipos de solicitud
 
 Para editar una solicitud `POST`, abra la solicitud y vaya a la sección **Cuerpo** del editor de solicitudes. Para facilitar la lectura, seleccione el botón de opción **sin formato** para dar formato al cuerpo de la solicitud `JSON`.
 
-![Pestaña del cuerpo al editar una solicitud POST de seguimiento de usuario en Postman]({% image_buster /assets/img_archive/postman_post.png %})
+![Pestaña del cuerpo al editar una petición POST User Track en Postman]({% image_buster /assets/img_archive/postman_post.png %})
 
 #### Editar una solicitud GET
 
 Al editar una solicitud `GET`, edite los parámetros pasados en la URL de la solicitud. Para ello, seleccione la pestaña **Parámetros** y edite los pares clave-valor en los campos que aparecen.
 
-![Pestaña de parámetros al editar una consulta GET Lista de direcciones de correo electrónico no suscritas en Postman.]({% image_buster /assets/img_archive/postman_get.png %})
+![Pestaña Params al editar una solicitud GET Query List of Unsubscribed Email Addresses en Postman.]({% image_buster /assets/img_archive/postman_get.png %})
 
 ### Envía tu solicitud
 

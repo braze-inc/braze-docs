@@ -12,7 +12,7 @@ search_tag: Partner
 
 ## Intégration de l'importation de données
 
-Toute intégration que vous mettez en place sera prise en compte dans le volume de points données de votre compte.
+Toute intégration que vous mettez en place permet d'enregistrer des points de données. Si vous avez des questions sur les nuances des points de données de Braze, votre gestionnaire de compte Braze peut y répondre.
 
 {% alert important %}
 Conformément à la politique de conservation des données de Mixpanel, les événements envoyés avant le 1er janvier 2010 seront supprimés lors de l'importation.
@@ -44,7 +44,7 @@ Seuls les utilisateurs qui existent déjà dans Braze pourront être ajoutés ou
 
 Dans Braze, pour créer un segment de ces utilisateurs, allez dans **Audience** > **Segments**, nommez votre segment et sélectionnez **Mixpanel_Cohorts** comme filtre. Ensuite, utilisez l'option "inclut" et choisissez la cohorte que vous avez créée dans Mixpanel. 
 
-![Dans le générateur de segments Braze, le filtre d'attributs d’utilisateur "cohortes Mixpanel" est défini sur "inclut" et "cohorte Braze".]({% image_buster /assets/img_archive/mixpanel1.png %})
+![Dans le générateur de segments de Braze, le filtre des attributs utilisateur « Cohortes Mixpanel » est défini sur « includes » et « cohorte de Braze ».]({% image_buster /assets/img_archive/mixpanel1.png %})
 
 Après l'avoir enregistré, vous pouvez faire référence à ce segment lors de la création d'un canvas ou d'une campagne à l'étape du ciblage des utilisateurs.
 

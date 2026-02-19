@@ -62,7 +62,7 @@ braze.setDoubleCustomUserAttribute("custom double attribute key", double);
 ```
 
 {% endtab %}
-{% tab Boolesch %}
+{% tab Boolean %}
 So legen Sie ein angepasstes Attribut mit einem `boolean` Wert fest:
 
 ```dart
@@ -70,7 +70,7 @@ braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
 ```
 {% endtab %}
 
-{% tab Datum %}
+{% tab Date %}
 So legen Sie ein angepasstes Attribut mit einem `date` Wert fest:
 
 ```dart

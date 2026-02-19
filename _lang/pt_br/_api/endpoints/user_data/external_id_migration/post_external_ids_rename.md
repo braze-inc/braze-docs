@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Renomear IDs externos"
+nav_title: "POST: Renomear ID externo"
 article_title: "POST: Renomear IDs externos"
 search_tag: Endpoint
 page_order: 1
@@ -14,11 +14,11 @@ description: "Este artigo descreve detalhes sobre o endpoint \"Renomear IDs exte
 /users/external_ids/rename
 {% endapimethod %}
 
-> Use esse ponto de extremidade para renomear as IDs externas dos seus usuários. 
+> Use esse ponto de extremidade para renomear as IDs externas dos seus usuários.
 
-Você pode enviar até 50 objetos de renomeação por solicitação. 
+Você pode enviar até 50 objetos de renomeação por solicitação.
 
-Esse ponto de extremidade define um novo `external_id` (primário) para o usuário e substitui o `external_id` existente. Isso significa que o usuário pode ser identificado por `external_id` até que o obsoleto seja removido. Ter vários IDs externos permite um período de migração para que as versões mais antigas de seus apps que usam o esquema de nomenclatura de ID externo anterior não sejam interrompidas. 
+Esse ponto de extremidade define um novo `external_id` (primário) para o usuário e substitui o `external_id` existente. Isso significa que o usuário pode ser identificado por `external_id` até que o obsoleto seja removido. Ter vários IDs externos permite um período de migração para que as versões legadas de seus apps que usam o esquema de nomenclatura de ID externo anterior não sejam interrompidas.
 
 Depois que o esquema de nomenclatura antigo não estiver mais em uso, é altamente recomendável remover IDs externas obsoletas usando o [ponto de extremidade`/users/external_ids/remove` ]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove).
 
@@ -99,16 +99,16 @@ O campo `message` retornará `success` para qualquer solicitação válida. Erro
 ## Perguntas frequentes
 
 ### Isso afeta o MAU?
-Não, como o número de usuários permanecerá o mesmo, eles terão apenas um novo `external_id`.
+Não, porque o número de usuários permanece o mesmo, eles têm um novo `external_id`.
 
 ### O comportamento do usuário muda historicamente?
-Não, pois o usuário ainda é o mesmo, e todo o seu comportamento histórico ainda está conectado a ele.
+Não, porque o usuário ainda é o mesmo, e todo o seu comportamento histórico ainda está conectado a ele.
 
 ### Ele pode ser executado em espaços de trabalho de desenvolvimento ou de preparação?
 Sim. Na verdade, é altamente recomendável executar uma migração de teste em um espaço de trabalho de preparação ou desenvolvimento e garantir que tudo corra bem antes de executar nos dados de produção.
 
-### Isso consome pontos de dados?
-Esse recurso não custa pontos de dados.
+### Isso registra pontos de dados?
+Esse recurso não registra pontos de dados.
 
 ### Qual é o período de depreciação recomendado?
 Não temos um limite rígido de quanto tempo você pode manter IDs externas obsoletas, mas é altamente recomendável removê-las quando não houver mais necessidade de fazer referência aos usuários pela ID obsoleta.

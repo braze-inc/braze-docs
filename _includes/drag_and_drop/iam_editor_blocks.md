@@ -58,6 +58,8 @@ Details for each editor block's properties are provided in the following tables.
 
 ### Image
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 | Property | Description |
 | --- | --- |
 | URL | The hosted address for the image |

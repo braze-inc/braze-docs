@@ -9,11 +9,9 @@ tool:
     - Canvas
 ---
 
-# Schedule your message
+# Delivery and entry types
 
 > In Braze, there are three different ways you can schedule your message: scheduled, action-based, and API-triggered. Choosing how and when your message gets delivered is crucial in developing an effective message. 
-
-## Delivery and entry types
 
 For campaigns, the delivery type determines when your users will enter your campaign and when it will be sent. Since a Canvas is built as an ongoing user journey, the messaging concept of a scheduling is referred to as an entry type.
 
@@ -24,7 +22,7 @@ For campaigns, the delivery type determines when your users will enter your camp
 | **API-Triggered**   | API-triggered messages allow you to manage message copy, multivariate testing, and re-eligibility rules in the Braze dashboard while triggering the delivery of that content from your own servers and systems. <br><br>The API request to trigger the message can also include additional data to be templated into the message in real-time. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Time-based options
+## Time-based options
 
 {% tabs %}
 {% tab campaign %}
@@ -38,13 +36,13 @@ You can choose from the following options when using scheduled delivery:
 {% tab canvas %}
 With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a campaign. You can enroll users in a Canvas as soon as it's launched or at a designated time.
 
-#### Designated times
+### Designated times
 
 You can choose to send your Canvas at a specific entry frequency, including just once, daily, weekly, or monthly. For Canvases with a recurring scheduled delivery, you can set the recurrence to allow users to enter the Canvas up to 30 designated times.
 {% endtab %}
 {% endtabs %}
 
-### Action-based options
+## Action-based options
 
 {% tabs %}
 {% tab campaign %}
@@ -58,13 +56,13 @@ The action-based options determine what actions (or triggers) a user needs to pe
 - Adding an email address
 - Entering a location
 
-#### Entry window
+### Entry window
 
 The entry window of your Canvas determines which users can enter the Canvas at the designated start time (and optional end time). Similar to action-based campaigns, you can choose to enter users in their local time zone.
 {% endtab %}
 {% endtabs %}
 
-### API trigger options
+## API trigger options
 
 {% tabs %}
 {% tab campaign %}

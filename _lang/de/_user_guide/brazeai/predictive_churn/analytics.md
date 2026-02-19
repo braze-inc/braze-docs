@@ -12,7 +12,7 @@ page_order: 1.5
 
 ## Über voraussichtliche Abwanderung Analytics
 
-Sobald das Training der Vorhersage abgeschlossen und diese Seite gefüllt ist, können Sie einfach [Filter]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) in Segmenten oder Kampagnen verwenden, um die Ergebnisse des Modells zu nutzen. Wenn Sie jedoch Hilfe bei der Entscheidung benötigen, wen Sie ansprechen und warum, kann Ihnen diese Seite auf der Grundlage der historischen Genauigkeit des Modells und Ihrer eigenen Geschäftsziele helfen. 
+Sobald das Training der Vorhersage abgeschlossen und diese Seite gefüllt ist, können Sie einfach [Filter]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) in Segmenten oder Kampagnen verwenden, um die Ergebnisse des Modells zu nutzen. Wenn Sie jedoch Hilfe bei der Entscheidung benötigen, wen Sie ansprechen und warum, kann Ihnen diese Seite auf der Grundlage der historischen Genauigkeit des Modells und Ihrer eigenen Geschäftsziele helfen. 
 
 Dies sind die Komponenten, aus denen sich die voraussichtliche Abwanderung in Analytics zusammensetzt:
 

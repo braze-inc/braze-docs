@@ -113,7 +113,7 @@ Après avoir configuré le SDK d'achat RevenueCat et le SDK Braze pour qu'ils ai
 3. Saisissez les noms d'événements que RevenueCat enverra ou choisissez les noms d'événements par défaut. Vous trouverez plus de détails sur les événements disponibles à l'[étape 3.](#configure-event-names)
 4. Spécifiez si vous voulez que RevenueCat génère le rapport des recettes (après la commission de la boutique d’applications) ou le chiffre d'affaires (ventes brutes).
 
-![Paramètres de Braze dans RevenueCat avec des champs pour l'instance de Braze, l'identifiant de la clé API et l'identifiant du bac à sable.]({% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %})
+![Paramètres Braze dans RevenueCat avec des champs pour l'instance de Braze, l'identifiant de la clé API et l'identifiant de l’environnement de test.]({% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %})
 
 ### Étape 3 : Configurer les noms des événements {#configure-event-names}
 

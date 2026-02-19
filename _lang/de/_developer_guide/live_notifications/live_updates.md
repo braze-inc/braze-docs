@@ -6,6 +6,7 @@ description: "Erfahren Sie, wie Sie Live Updates für das Android Braze SDK einr
 platform: 
   - Android
   - FireOS
+hidden: true
 ---
 
 # Live Updates für Android

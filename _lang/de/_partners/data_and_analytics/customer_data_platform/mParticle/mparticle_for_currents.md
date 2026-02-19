@@ -53,10 +53,10 @@ Bei der Erstellung jeder Eingabe stellt mParticle Ihnen einen Schlüssel und ein
 
 Navigieren Sie in Braze zu **Currents > + Create Current > Create mParticle Export**. Geben Sie einen Namen für die Integration, eine E-Mail und den mParticle API-Schlüssel und den geheimen mParticle-Schlüssel für jede Plattform an. Als nächstes wählen Sie die Ereignisse aus, die Sie tracken möchten; eine Liste der verfügbaren Ereignisse wird angezeigt. Klicken Sie abschließend auf **Launch Current**
 
-![Die mParticle-Currents Seite in Braze. Hier finden Sie Felder für den Integrationsnamen, die Kontakt-E-Mail, den API-Schlüssel und den geheimen Schlüssel.]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
+![Die mParticle-Currents Seite in Braze. Hier finden Sie Felder für den Namen der Integration, die E-Mail des Kontakts, den API-Schlüssel und den geheimen Schlüssel.]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
 {% alert important %}
-Es ist wichtig, dass Sie Ihren mParticle API-Schlüssel und Ihren mParticle-Geheimschlüssel immer auf dem neuesten Stand halten. Wenn die Zugangsdaten Ihres Konnektors ablaufen, wird der Konnektor keine Ereignisse mehr senden. Wenn dieser Zustand länger als **48 Stunden** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
+Es ist wichtig, dass Sie Ihren mParticle API-Schlüssel und Ihren mParticle-Geheimschlüssel immer auf dem neuesten Stand halten. Wenn die Zugangsdaten Ihres Konnektors ablaufen, wird der Konnektor keine Ereignisse mehr senden. Wenn dieser Zustand länger als **5 Tage** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
 {% endalert %}
 
 Alle Ereignisse, die an mParticle gesendet werden, enthalten die `external_user_id` des Nutzers:innen als `customerid`. Zur Zeit sendet Braze keine Ereignisdaten für Nutzer:innen, die ihre `external_user_id` nicht eingestellt haben. Wenn Sie die `external_user_id` einer anderen ID in mParticle zuordnen möchten, die nicht dem Standard `customerid` entspricht, wenden Sie sich bitte an Ihren CSM von Braze. 

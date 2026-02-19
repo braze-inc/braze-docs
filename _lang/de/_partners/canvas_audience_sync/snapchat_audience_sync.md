@@ -43,6 +43,10 @@ Sie müssen sicherstellen, dass die folgenden Artikel erstellt, vervollständigt
 
 ### Schritt 1: Mit Snapchat verbinden
 
+{% alert important %}
+Sie müssen die [ Berechtigung "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) haben, um Snapchat mit Ihrem Braze-Konto zu verbinden.
+{% endalert %}
+
 Gehen Sie auf dem Braze-Dashboard zu **Partnerintegrationen** > **Technologiepartner** und wählen Sie **Snapchat** aus. Wählen Sie unter Snapchat Audience Sync die Option **Snapchat verbinden** aus.
 
 ![Snapchat-Technologie-Seite in Braze, die eine Übersicht und einen Abschnitt Snapchat Audience Sync mit dem Button Connected Snapchat enthält.]({% image_buster /assets/img/snapchat/snapchat1.png %}){: style="max-width:80%;"}
@@ -76,21 +80,21 @@ Wählen Sie **TikTok** als den gewünschten Audience Sync Partner aus.
 Wählen Sie dann Ihr gewünschtes Snapchat-Anzeigenkonto aus. Geben Sie in der Dropdown-Liste **Neue oder bestehende Zielgruppe auswählen** den Namen einer neuen oder bestehenden Zielgruppe ein.
 
 {% tabs %}
-{% tab Eine neue Zielgruppe erstellen %}
+{% tab Create a New Audience %}
 
 **Eine neue Zielgruppe erstellen**<br>
 Geben Sie einen Namen für die neue Zielgruppe ein, wählen Sie **Nutzer:innen zur Zielgruppe hinzufügen** und wählen Sie aus, welche Felder Sie mit Snapchat synchronisieren möchten. Als nächstes speichern Sie Ihre Zielgruppe, indem Sie unten im Schritteditor auf den Button **Zielgruppe erstellen** klicken.
 
-![Erweiterte Ansicht des Custom Audience Canvas-Schrittes. Hier wird das gewünschte Anzeigenkonto ausgewählt, und eine neue Zielgruppe wird erstellt.]({% image_buster /assets/img/audience_sync/snapchat3.png %})
+![Erweiterte Ansicht des Custom Audience Canvas-Schrittes. Hier wird das gewünschte Anzeigenkonto ausgewählt und eine neue Zielgruppe erstellt.]({% image_buster /assets/img/audience_sync/snapchat3.png %})
 
-Nutzer:innen werden im oberen Bereich des Schritteditors benachrichtigt, wenn die Zielgruppe erfolgreich erstellt wurde oder wenn dabei Fehler auftreten. Nutzer:innen können diese Zielgruppe auch referenzieren, um sie später in Canvas zu entfernen, da die Zielgruppe im Entwurfsmodus erstellt wurde.
+Braze zeigt am oberen Rand des Schritteditors eine Benachrichtigung an, wenn die Zielgruppe erfolgreich erstellt wurde oder wenn Fehler auftreten. Nutzer:innen können diese Zielgruppe referenzieren, um sie später in Canvas zu entfernen, da die Zielgruppe im Entwurfsmodus erstellt wurde.
 
-![Eine Meldung, die erscheint, nachdem eine neue Zielgruppe in der Canvas-Komponente erstellt wurde.]({% image_buster /assets/img/audience_sync/snapchat2.png %})
+![Eine Warnung, die erscheint, nachdem eine neue Zielgruppe in der Komponente Canvas erstellt wurde.]({% image_buster /assets/img/audience_sync/snapchat2.png %})
 
 Wenn Sie ein Canvas mit einer neuen Zielgruppe starten, synchronisiert Braze die Nutzer:innen nahezu in Realtime, sobald sie die Audience Sync Komponente betreten.
 
 {% endtab %}
-{% tab Mit einer bestehenden Zielgruppe synchronisieren %}
+{% tab Sync with an Existing Audience %}
 **Mit einer bestehenden Zielgruppe synchronisieren**<br>
 Braze bietet auch die Möglichkeit, Nutzer:innen zu bestehenden Snapchat Zielgruppen hinzuzufügen, um sicherzustellen, dass diese Zielgruppen auf dem neuesten Stand sind. Um mit einer bestehenden Zielgruppe zu synchronisieren, geben Sie den Namen der bestehenden Zielgruppe in das Dropdown-Menü ein und **fügen Sie sie hinzu**. Braze fügt dann Nutzer:innen nahezu in Realtime hinzu, sobald sie die Audience Sync-Komponente betreten.
 
@@ -109,9 +113,9 @@ Sie können die Zielgruppen in Snapchat einsehen, indem Sie Ihr Ads Manager:in-K
 
 ## Überlegungen zur Synchronisierung von Nutzer:innen und Rate-Limits
 
-Wenn Nutzer:innen den Audience Sync-Schritt erreichen, synchronisiert Braze diese Nutzer:innen nahezu in Realtime und respektiert dabei die Rate-Limits der Snapchat API. In der Praxis wird Braze versuchen, alle 5 Sekunden so viele Nutzer:innen wie möglich zu verarbeiten, bevor diese Nutzer:innen an Snapchat weitergeleitet werden.
+Wenn Nutzer:innen den Audience Sync-Schritt erreichen, synchronisiert Braze sie nahezu in Realtime und respektiert dabei die Rate-Limits der Snapchat API. Braze stapelt und verarbeitet alle 5 Sekunden so viele Nutzer:innen wie möglich, bevor es sie an Snapchat sendet.
 
-Das Rate-Limits der API von Snapchat besagt, dass nicht mehr als zehn Abfragen pro Sekunde und 100.000 Nutzer:innen pro Anfrage möglich sind. Erreicht eine Braze-Kund:in dieses Rate-Limit, wird Braze-Canvas die Synchronisierung für bis zu ~13 Stunden wiederholen. Wenn die Synchronisierung nicht möglich ist, werden diese Nutzer:innen unter der Metriken Users Errored aufgeführt.
+Das Rate-Limits der API von Snapchat erlaubt nicht mehr als zehn Abfragen pro Sekunde und 100.000 Nutzer:innen pro Anfrage. Erreicht eine Kund:in dieses Limit, wiederholt Braze die Synchronisierung für bis zu ~13 Stunden. Wenn die Synchronisierung immer noch nicht möglich ist, listet Braze diese Nutzer:innen in der Metrik Fehlerhafte Nutzer:innen auf.
 
 ### Analytics verstehen
 

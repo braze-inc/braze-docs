@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/) {: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
+# [![Braze cours d'apprentissage]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"} Snowflake
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) est un entrepôt de données SQL cloud fourni sous forme de logiciel en tant que service (SaaS). Snowflake fournit un entrepôt de données plus rapide, plus facile à utiliser et bien plus flexible que les offres d'entrepôt de données traditionnelles. Grâce à l'architecture unique et brevetée de Snowflake, il est facile de rassembler toutes vos données, d’effectuer des analyses rapides et d'obtenir des informations basées sur les données pour tous vos utilisateurs.
 
@@ -57,7 +57,7 @@ Pour Snowflake, le partage des données se fait entre un [fournisseur](https://d
 
 ### Étape 2 : Créez la base de données dans Snowflake
 
-1. Après quelques minutes, vous devriez recevoir le partage de données entrant dans votre compte Snowflake.
+1. Après quelques minutes, vous devriez recevoir le datashare entrant dans votre compte Snowflake.
 2. En utilisant le partage de données entrant, créez une base de données pour visualiser et interroger les tableaux. Par exemple :
     ```sql
     CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>
@@ -66,6 +66,7 @@ Pour Snowflake, le partage des données se fait entre un [fournisseur](https://d
 
 {% alert warning %}
 Si vous supprimez et recréez un partage dans le tableau de bord de Braze, vous devez supprimer la base de données créée précédemment et la recréer à l'aide de `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` pour interroger le partage entrant.
+Si vous avez plusieurs espaces de travail partageant des données avec le même compte Snowflake, consultez les [FAQ sur le partage des données Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/) pour obtenir des conseils sur la gestion des configurations multi-espaces de travail.
 {% endalert %}
 
 ## Utilisation et visualisation
@@ -115,11 +116,11 @@ Dans la mesure du possible, les changements disruptifs seront précédés d'une 
 
 ### Régions Snowflake
 
-Braze héberge actuellement toutes les données au niveau des utilisateurs dans les régions Snowflake AWS US East-1 et EU-Central (Francfort). Pour les utilisateurs situés en dehors de ces régions, Braze peut fournir un partage de données à des clients communs qui hébergent leur infrastructure Snowflake dans n'importe quelle région AWS, Azure ou GCP.
+Braze héberge actuellement toutes les données des utilisateurs dans les régions AWS US East-1, EU-Central (Francfort), AP-Southeast-2 (Sydney) et AP-Southeast-3 (Jakarta). Pour les utilisateurs situés en dehors de ces régions, Braze peut fournir un partage de données à des clients communs qui hébergent leur infrastructure Snowflake dans n'importe quelle région AWS, Azure ou GCP.
 
 ### Conservation des données
 
-#### Politique de rétention
+#### Politique de conservation
 
 Toutes les données datant de plus de deux ans seront archivées et transférées vers un stockage à long terme. Dans le cadre du processus d'archivage, tous les événements sont anonymisés et tous les champs contenant des informations personnelles identifiables (PII) sont supprimés (notamment des champs d’informations personnelles identifiables, tels que `properties`). Les données archivées contiennent encore le champ `user_id`, qui permet une analyse par utilisateur sur toutes les données d'événements.
 
@@ -131,7 +132,7 @@ Les archives des données d'événements historiques dans Snowflake remontent à
 
 ### Conformité au règlement général sur la protection des données (RGPD)
 
-Presque tous les enregistrements d'événements que Braze stocke incluent quelques champs représentant les informations personnelles identifiables (PII) des utilisateurs. Certains événements peuvent inclure l'adresse e-mail, le numéro de téléphone, l'ID de l'appareil, la langue, le sexe et les informations d'emplacement/localisation. Si la requête d'oubli d'un utilisateur est soumise à Braze, nous annulerons ces champs PII pour tout événement appartenant à ces utilisateurs. De cette façon, nous ne supprimons pas l'historique de l'événement, mais celui-ci ne peut plus jamais être lié à une personne en particulier.
+{% include partners/snowflake_pii_gdpr.md %}
 
 ### Rapidité, performance, coût des requêtes
 

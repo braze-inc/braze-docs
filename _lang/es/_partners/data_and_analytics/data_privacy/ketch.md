@@ -46,7 +46,7 @@ La integración de Braze y Ketch permite controlar las preferencias de comunicac
 4. Seleccione la conexión Braze que desea utilizar para orquestar las señales de inclusión y exclusión.
 5. Introduzca la dirección Braze `subscription_group_id` para el grupo de suscripción al que desea enviar las preferencias de usuario de Ketch.
 
-![ID del grupo de suscripción Braze.]({% image_buster /assets/img/ketch/ketch1.png %})
+![ID de grupo de suscripción Braze.]({% image_buster /assets/img/ketch/ketch1.png %})
 
 {% alert note %}
 Para recoger y orquestar las señales de opt-in y opt-out de los usuarios, las identidades deben estar correctamente configuradas. Ketch recomienda configurar el correo electrónico como identificador para orquestar las señales de preferencia del usuario para esta integración.
@@ -55,7 +55,7 @@ Para recoger y orquestar las señales de opt-in y opt-out de los usuarios, las i
 
 ### Paso 3: Configurar identidades
 
-Un usuario sólo puede ver el centro de preferencias de marketing cuando Ketch puede confirmar la identidad de preferencias de marketing de ese usuario. Si Ketch no puede capturar correctamente la identidad del usuario, la página de preferencias de marketing no se mostrará a dicho usuario, ya que Ketch no podrá gestionar sus preferencias de usuario.
+Un usuario sólo puede ver el centro de preferencias de marketing cuando Ketch puede confirmar la identidad de preferencias de marketing de ese usuario. Si Ketch no puede capturar la identidad del usuario correctamente, entonces la página de preferencias de marketing no aparece para ese usuario porque Ketch no puede gestionar sus preferencias de usuario.
 
 1. Para configurar la identidad de preferencias de marketing, vaya a la página **Configuración** en Ketch y haga clic en **Espacio de identidad**. Deberá crear un nuevo espacio de identidad o editar un espacio de identidad existente para asignar ese espacio de identidad como identidad de preferencia de marketing. Compruebe que la etiqueta Ketch desplegada en la propiedad captura correctamente ese espacio de identidad.
 2. Vaya a **Experience Server** > **Propiedades**, y edite la propiedad deseada. En la capa de datos de esa propiedad, asegúrese de activar el espacio de identidad personalizado. A continuación, configure cómo se captura la identidad de preferencia de marketing en este sitio.

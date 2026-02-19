@@ -297,7 +297,7 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>description</code></td>
-            <td>アイテムの説明。</td>
+            <td>商品の説明。</td>
             <td>はい</td>
             <td></td>
             <td>string</td>

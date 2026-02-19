@@ -28,7 +28,7 @@ A integração entre a Braze e a Personalize.AI permite exportar dados da Person
 * Forneça recomendações personalizadas para itens e ofertas, incluindo tratamento, tempo e conteúdo
 * Identifique objetivos prioritários e direcione seu público ideal através do Braze
 * Identificar oportunidades para reengajar usuários inativos
-* Aproveite os dados de geolocalização para encontrar o público certo para os novos locais abertos
+* Use dados de geolocalização para encontrar o público certo para locais recém-abertos.
 * Use a modelagem de sósias para construir com base nos dados limitados disponíveis para novos usuários, combinando-os com as recomendações mais relevantes
 * Identifique as maneiras corretas de engajar os clientes ao longo de seu ciclo de vida 
 * Avalie proativamente os clientes quanto à probabilidade de churn e atribua uma pontuação de risco para encontrar indicadores precoces de churn
@@ -64,7 +64,7 @@ Por exemplo, aqui está um conjunto de atributos de clientes conforme eles se re
 | `Target_Objective` |  "Churn_Mitigation" |
 | `C4_Target_Date` | 01/03/2023 |
 | `C4_Target_Variant` | Tratamento |
-| `C4_Treatment` | P.IA_Model |
+| `C4_Treatment` | "P.AI_Model" |
 | `C4_Offer_Value` | R$ 8 |
 | `C4_Item_Recom` | Salada caesar |
 | `C4_Subject_Line` | Sentimos sua falta |

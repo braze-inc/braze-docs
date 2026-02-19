@@ -36,9 +36,7 @@ After you have created a custom event or product, select **Manage Properties** f
 
 To make these added custom attributes, events, products, or event properties traceable, you must ask your development team to create them in the SDK using the exact name you used to add them earlier. Or, you can use the Braze [API]({{site.baseurl}}/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other will be actionable and applied to your users.
 
-{% alert note %}
-All user profile data (custom events, custom attributes, custom data) is stored as long as those profiles are active.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Manage custom data storage' %}
 
 ## Blocklisting custom data
 

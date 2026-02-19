@@ -1,5 +1,5 @@
 ---
-nav_title: Divulgação de Software de Código Aberto
+nav_title: Divulgação de software de código aberto
 article_title: Divulgação de Software de Código Aberto
 page_order: 1
 page_type: reference

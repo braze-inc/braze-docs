@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Alpaco
 
-> [A Alpaco](https://alpaco.email/) é uma ferramenta de gestão criativa on-line que oferece um editor de arrastar e soltar para criar conteúdo reutilizável e seguro para a marca no Braze. A integração da Alpaco e do Braze permite exportar blocos de conteúdo, modelos de e-mail e modelos de mensagens no app.
+> [A Alpaco](https://alpaco.email/) é uma ferramenta de gestão criativa on-line que oferece um editor de arrastar e soltar para criar conteúdo reutilizável e seguro para a marca no Braze. A integração do Alpaco e do Braze permite exportar blocos de conteúdo, modelos de e-mail e modelos de mensagens no app.
 
 _Essa integração é mantida pela Alpaco._
 
@@ -54,7 +54,7 @@ Na Alpaco, crie um modelo que expresse a identidade de sua marca. Quando estiver
 
 Em seguida, acesse o lobby da Alpaco e use seu modelo para criar um e-mail, uma mensagem no app ou um bloco de conteúdo. Para verificar novamente sua mensagem antes de exportar, selecione **Review (Revisar**).
 
-![Criação de e-mail na Alpaco]({% image_buster /assets/img/alpaco/alpaco_2.png %})
+![Alpaco Criar e-mail]({% image_buster /assets/img/alpaco/alpaco_2.png %})
 
 ### Etapa 3: Exportar sua mensagem para o Braze
 
@@ -62,13 +62,13 @@ Selecione **Exportar** e, em seguida, escolha a integração do Braze e especifi
 
 Se você fizer alterações após a exportação, poderá reexportar o conteúdo do Alpaco para atualizá-lo no Braze.
 
-![Exportar e-mail na Alpaco]({% image_buster /assets/img/alpaco/alpaco_3.png %})
+![E-mail da Alpaco Export]({% image_buster /assets/img/alpaco/alpaco_3.png %})
 
 ## Uso de modelos e blocos Alpaco no Braze
 
 Dependendo do tipo de conteúdo exportado, o modelo aparecerá em uma das seguintes seções:
 
-- **Modelos e mídias > Modelos de e-mail**
-- **Modelos e mídias > Blocos de conteúdo**
+- **Modelos & Media > Modelos de e-mail**
+- **Modelos & Mídia > Blocos de conteúdo**
 
 Os modelos da Alpaco são ideais para organizações que desejam gerenciar de forma centralizada a consistência da marca. Eles também suportam as tags incorporadas da Braze para facilitar a categorização e o gerenciamento de conteúdo.

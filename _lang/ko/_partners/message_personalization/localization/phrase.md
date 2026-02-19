@@ -20,14 +20,14 @@ Phrase와 Braze 통합을 사용하면 Braze 인터페이스에서 나가지 않
 
 ## 전제 조건
 
-| 요구 사항 | 설명 |
+| Requirement | 설명 |
 | --- | --- |
 | Phrase TMS 계정 | 이 파트너십을 이용하려면 Phrase TMS Ultimate 또는 Enterprise 계정이 필요합니다. |
-| Braze REST API 키 | 모든 권한이 있는 Braze REST API 키입니다. <br><br> Braze 대시보드의 **설정** > **API 키**에서 생성할 수 있습니다. |
-| Braze REST 엔드포인트 | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). 사용자의 엔드포인트는 인스턴스를 위한 Braze URL에 따라 달라집니다. |
+| Braze REST API 키 | A Braze REST API key with all permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## 통합
+## Integration
 
 ## 1단계: Phrase TMS 설정
 

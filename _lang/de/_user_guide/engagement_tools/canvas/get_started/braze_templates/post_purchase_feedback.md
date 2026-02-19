@@ -63,7 +63,7 @@ Unsere Targeting-Zielgruppe für das Feedback sind Nutzer:innen, die Proxy War 3
 1. Wählen Sie unser Targeting-Segment "Gekaufter Proxy War 3" aus, das aus Nutzer:innen besteht, die das Spiel gekauft haben.
 2. Wählen Sie einen Filter, um Benutzer einzuschließen, die "Proxy War 3" mehr als "0" Mal gekauft haben.
 
-![Ein Segment namens "Gekaufter Proxy War 3", das Nutzer:innen segmentiert, die das Spiel gekauft haben.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/entry_window_segment.png %}){: style="max-width:90%;"}
+![Ein Segment namens "Gekaufter Proxy War 3", das die Nutzer:innen segmentiert, die das Spiel gekauft haben.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/entry_window_segment.png %}){: style="max-width:90%;"}
 
 {: start="3"}
 3\. Aktualisieren Sie die Eingangskontrollen, damit Nutzer:innen nach Ablauf der maximalen Dauer des Canvas nicht mehr in das Canvas eintreten können.
@@ -74,7 +74,7 @@ Wir behalten die Standardeinstellungen für das Abonnement bei, d.h. wir senden 
 
 Da wir mit dem Versenden achtsam sein wollen, wählen wir die Option **Ruhige Zeiten aktivieren**, um zu vermeiden, dass wir zwischen 23 und 10 Uhr in der Zeitzone unserer Nutzer um Feedback bitten, und senden erst zur nächsten verfügbaren Zeit.
 
-!["Sendeeinstellungen" Schritt Targeting von Nutzern:in, die Abonnent:in sind oder sich angemeldet haben. Die Ruhezeiten sind eingeschaltet.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/send_settings_with_quiet_hours.png %}){: style="max-width:90%;"}
+![Der Schritt „Sendeeinstellungen“ stellt das Targeting von Nutzern:in zusammen, die Abonnent:in sind oder sich angemeldet haben. Die Ruhezeiten sind eingeschaltet.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/send_settings_with_quiet_hours.png %}){: style="max-width:90%;"}
 
 Für unser Beispiel überspringen wir die anderen Einstellungen (Frequenzkappung und Seed-Gruppen).
 
@@ -103,7 +103,7 @@ Als Nächstes müssen wir die Details für die Variante **In-App-Nachricht** aus
 4. Wählen Sie für jede der drei Umfragen das Attribut **Experience Feedback** als unser angepasstes Attribut aus. 
 5. Wir behalten die Attributwerte im Benutzerprofil unverändert bei, da diese Werte mit unserem benutzerdefinierten Attribut übereinstimmen.
 
-![Eine Umfrage, die den Nutzer:innen die Frage stellt, ob sie mit dem Kauf von Proxy War 3 zufrieden waren: "Ich habe es geliebt", "Es war OK" und "Nichts für mich".]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
+![Eine Umfrage mit drei Optionen, in der Sie gefragt werden, ob Ihnen der Kauf von Proxy War 3 gefallen hat: "Ich habe es geliebt", "Es war OK" und "Nichts für mich".]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
 
 #### Aktionspfad weiterentwickeln
 
@@ -121,7 +121,7 @@ Als Nächstes richten wir den Webhook ein, um potenzielle Supportfälle auszulö
 
 Für den Schritt Nachricht mit dem Namen **Erstellung von Supportfällen** aktualisieren wir die Vorlage, um einen Webhook für Benutzer zu erstellen, die mit ihrem Kauf unzufrieden sind und eine Rückerstattung wünschen.
 
-![Ein Webhook, der Support-Fälle für Kund:in erstellt, die eine negative Stimmung haben und eine Rückerstattung für ihren Kauf von Proxy War 3 wünschen.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
+![Ein Webhook, der Support-Fälle für Kund:innen erstellt, die eine negative Meinung haben und eine Rückerstattung für ihren Kauf von Proxy War 3 wünschen.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
 
 ### Schritt 6: Testen und starten Sie den Canvas
 

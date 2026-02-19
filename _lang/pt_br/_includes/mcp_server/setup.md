@@ -1,6 +1,6 @@
-# Configurando o servidor MCP do Braze
+# Configuração do servidor Braze MCP
 
-> Aprenda como configurar o servidor MCP do Braze, para que você possa interagir com seus dados do Braze através de linguagem natural usando ferramentas como Claude e Cursor. Para mais informações gerais, veja [servidor MCP do Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> Saiba como configurar o servidor Braze MCP para que você possa interagir com seus dados Braze por meio de linguagem natural usando ferramentas como Claude e Cursor. Para saber mais sobre informações gerais, consulte [Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -10,26 +10,26 @@ Antes de começar, você precisará do seguinte:
 
 | Pré-requisito | Descrição |
 |--------------|-------------|
-| Chave de API do Braze | Uma chave de API do Braze com as permissões necessárias. Você criará uma nova chave quando [configurar seu servidor MCP do Braze](#create-api-key). |
-| Cliente MCP | Atualmente, apenas [Claude](https://claude.ai/) e [Cursor](https://cursor.com/) são oficialmente suportados. Você precisará de uma conta para um desses clientes para usar o servidor MCP do Braze. |
-| Terminal | Um aplicativo de terminal para que você possa executar comandos e instalar ferramentas. Use seu aplicativo de terminal preferido ou o que já está pré-instalado em seu computador. |
+| Chave de API do Braze | Uma chave de API do Braze com as permissões necessárias. Você criará uma nova chave ao [configurar seu servidor Braze MCP](#create-api-key). |
+| Cliente MCP | [Claude](https://claude.ai/), [Cursor](https://cursor.com/) e [Google Gemini CLI](https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli) são oficialmente compatíveis. Você deve ter uma conta em um desses clientes para usar o servidor Braze MCP. |
+| Terminal | Um app de terminal para que você possa executar comandos e instalar ferramentas. Use seu app de terminal preferido ou o que está pré-instalado em seu computador. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Configurando o servidor MCP do Braze
+## Configuração do servidor Braze MCP
 
 ### Etapa 1: Instalar `uv`
 
-Primeiro, instale `uv`—uma [ferramenta de linha de comando da Astral](https://docs.astral.sh/uv/getting-started/installation/) para gerenciamento de dependências e manipulação de pacotes Python.
+Primeiro, instale o `uv`, uma [ferramenta de linha de comando da Astral](https://docs.astral.sh/uv/getting-started/installation/) para gerenciamento de dependências e manipulação de pacotes Python.
 
 {% tabs local %}
-{% tab MacOS e Linux %}
+{% tab MacOS and Linux %}
 Abra seu aplicativo de terminal, cole o seguinte comando e pressione <kbd>Enter</kbd>.
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-A saída será semelhante ao seguinte:
+A saída é semelhante à seguinte:
 
 ```bash
 $ curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -50,7 +50,7 @@ everything's installed!
 irm https://astral.sh/uv/install.ps1 | iex
 ```
 
-A saída será semelhante ao seguinte:
+A saída é semelhante à seguinte:
 
 ```powershell
 PS C:\Users\YourUser> irm https://astral.sh/uv/install.ps1 | iex
@@ -65,14 +65,14 @@ everything's installed!
 {% endtab %}
 {% endtabs %}
 
-### Etapa 2: Crie uma chave de API {#create-api-key}
+### Etapa 2: Criar uma chave de API {#create-api-key}
 
-O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dados dos perfis de usuários do Braze. Acesse **Configurações** > **APIs e Identificadores** > **Chaves de API** e crie uma nova chave com algumas ou todas as seguintes permissões.
+O servidor MCP da Braze suporta 38 pontos de extremidade somente leitura que não retornam dados de perfis de usuários da Braze. Acesse **Settings** > **APIs and Identifiers** > **API Keys** e crie uma nova chave com algumas ou todas as permissões a seguir.
 
-{% details Lista de permissões somente leitura, não-PII %}
+{% details List of read-only, non-PII permissions %}
 #### Campanhas
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/campaigns/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics) | `campaigns.data_series` |
 | [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details) | `campaigns.details` |
@@ -82,7 +82,7 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 
 #### Canva
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/canvas/data_series`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics) | `canvas.data_series` |
 | [`/canvas/data_summary`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary) | `canvas.data_summary` |
@@ -92,7 +92,7 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 
 #### Catálogos
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs) | `catalogs.get` |
 | [`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk) | `catalogs.get_items` |
@@ -101,7 +101,7 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 
 #### Ingestão de dados na nuvem
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/cdi/integrations`]({{site.baseurl}}/api/endpoints/cdi/get_integration_list) | `cdi.integration_list` |
 | [`/cdi/integrations/{integration_id}/job_sync_status`]({{site.baseurl}}/api/endpoints/cdi/get_job_sync_status) | `cdi.integration_job_status` |
@@ -109,7 +109,7 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 
 #### Blocos de conteúdo
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/content_blocks/list`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks) | `content_blocks.list` |
 | [`/content_blocks/info`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information) | `content_blocks.info` |
@@ -117,14 +117,14 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 
 #### Atributos personalizados
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/custom_attributes`]({{site.baseurl}}/api/endpoints/export/custom_attributes/get_custom_attributes) | `custom_attributes.get` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 #### Eventos
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/events/list`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events) | `events.list` |
 | [`/events/data_series`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events_analytics) | `events.data_series` |
@@ -133,7 +133,7 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 
 #### KPIs
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/kpi/new_users/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_daily_new_users_date) | `kpi.new_users.data_series` |
 | [`/kpi/dau/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_dau_date) | `kpi.dau.data_series` |
@@ -143,14 +143,14 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 
 #### Mensagens
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled) | `messages.schedule_broadcasts` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 #### Central de Preferências
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/preference_center/v1/list`]({{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center) | `preference_center.list` |
 | [`/preference_center/v1/{preferenceCenterExternalID}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center) | `preference_center.get` |
@@ -158,7 +158,7 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 
 #### Compras
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/purchases/product_list`]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id) | `purchases.product_list` |
 | [`/purchases/revenue_series`]({{site.baseurl}}/api/endpoints/export/purchases/get_revenue_series) | `purchases.revenue_series` |
@@ -167,7 +167,7 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 
 #### Segmentos
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment) | `segments.list` |
 | [`/segments/data_series`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_analytics) | `segments.data_series` |
@@ -176,28 +176,28 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 
 #### Envios
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/sends/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_send_analytics) | `sends.data_series` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 #### Sessões
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/sessions/data_series`]({{site.baseurl}}/api/endpoints/export/sessions/get_sessions_analytics) | `sessions.data_series` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 #### Chaves de autenticação do SDK
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys) | `sdk_authentication.keys` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 #### Inscrição
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/subscription/status/get`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status) | `subscription.status.get` |
 | [`/subscription/user/status`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups) | `subscription.groups.get` |
@@ -205,7 +205,7 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 
 #### Modelos
 
-| Endpoint | Permissão Necessária |
+| Endpoint | Permissão necessária |
 |----------|---------------------|
 | [`/templates/email/list`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates) | `templates.email.list` |
 | [`/templates/email/info`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information) | `templates.email.info` |
@@ -213,60 +213,31 @@ O servidor Braze MCP suporta 38 endpoints somente leitura que não retornam dado
 {% enddetails %}
 
 {% alert warning %}
-Não reutilize uma chave de API existente—crie uma especificamente para seu cliente MCP. Além disso, atribua apenas permissões somente leitura, não-PII, pois os agentes podem tentar gravar ou excluir dados no Braze.
+Não reutilize uma chave de API existente - crie uma especificamente para seu cliente MCP. Além disso, atribua apenas permissões somente de leitura e sem IPI, pois os agentes podem tentar gravar ou excluir dados no Braze.
 {% endalert %}
 
-### Etapa 3: Obtenha seu identificador e endpoint
+### Etapa 3: Obtenha seu identificador e ponto de extremidade
 
-Quando você configurar seu cliente MCP, precisará do identificador da sua chave de API e do endpoint REST do seu espaço de trabalho. Para obter esses detalhes, volte para a página **Chaves de API** no dashboard—mantenha esta página aberta, para que você possa consultá-la durante [a próxima etapa](#configure-client).
+Ao configurar seu cliente MCP, você precisará do identificador da chave de API e do endpoint REST do seu espaço de trabalho. Para obter esses detalhes, volte à página **Chaves de API** no dashboard - mantenha essa página aberta para que você possa consultá-la na [próxima etapa](#configure-client).
 
-![As 'Chaves de API' no Braze mostrando uma chave de API recém-criada e o endpoint REST do usuário.]({% image_buster /assets/img/mcp_server/get_indentifer_and_endpoint.png %}){: style="max-width:85%;"}
+![As "Chaves de API" no Braze mostram uma chave de API recém-criada e o endpoint REST do usuário.]({% image_buster /assets/img/mcp_server/get_indentifer_and_endpoint.png %}){: style="max-width:85%;"}
 
 ### Etapa 4: Configure seu cliente MCP {#configure-client}
 
-Configure seu cliente MCP usando nosso arquivo de configuração pré-fornecido.
+Configure seu cliente MCP usando o arquivo de configuração fornecido previamente.
 
 {% tabs %}
 {% tab Claude %}
-No [Claude Desktop](https://claude.ai/download), acesse **Configurações** > **Desenvolvedor** > **Editar Config**, em seguida, adicione o seguinte trecho:
+Configure seu servidor MCP usando o diretório do conector do [Claude Desktop](https://claude.ai/download). 
 
-```json
-{
-  "mcpServers": {
-    "braze": {
-      "command": "uvx",
-      "args": ["--native-tls", "braze-mcp-server@latest"],
-      "env": {
-        "BRAZE_API_KEY": "key-identifier",
-        "BRAZE_BASE_URL": "rest-endpoint"
-      }
-    }
-  }
-}
-```
+1. No Claude Desktop, acesse **Configurações** > **Conectores** > **Procurar conectores** > **Extensões de desktop** > **Braze MCP Server** > **Instalar**.
+2. Digite sua chave de API e o URL de base.
+3. Salve a configuração e reinicie o Claude Desktop.
 
-Substitua `key-identifier` e `rest-endpoint` pelos valores correspondentes da página **Chaves de API** no Braze. Sua configuração deve ser semelhante ao seguinte:
-
-```json
-{
-  "mcpServers": {
-    "braze": {
-      "command": "uvx",
-      "args": ["--native-tls", "braze-mcp-server@latest"],
-      "env": {
-        "BRAZE_API_KEY": "2e8b-3c6c-d12e-bd75-4f0e2a8e5c71",
-        "BRAZE_BASE_URL": "https://torchie.braze.com"
-      }
-    }
-  }
-}
-```
-
-Quando terminar, salve a configuração e reinicie o Claude Desktop.
 {% endtab %}
 
 {% tab Cursor %}
-No [Cursor](https://cursor.com/), acesse **Configurações** > **Ferramentas e Integrações** > **Ferramentas MCP** > **Adicionar MCP Personalizado**, em seguida, adicione o seguinte trecho:
+No [Cursor](https://cursor.com/), acesse **Configurações** > **Ferramentas e integrações** > **Ferramentas MCP** > **Adicionar MCP personalizado** e, em seguida, adicione o seguinte snippet:
 
 ```json
 {
@@ -283,7 +254,7 @@ No [Cursor](https://cursor.com/), acesse **Configurações** > **Ferramentas e I
 }
 ```
 
-Substitua `key-identifier` e `rest-endpoint` pelos valores correspondentes da página **Chaves de API** no Braze. Sua configuração deve ser semelhante ao seguinte:
+Substitua `key-identifier` e `rest-endpoint` pelos valores correspondentes da página **Chaves de API** no Braze. Sua configuração deve ser semelhante à seguinte:
 
 ```json
 {
@@ -300,31 +271,74 @@ Substitua `key-identifier` e `rest-endpoint` pelos valores correspondentes da p�
 }
 ```
 
-Quando você terminar, salve a configuração e reinicie o Cursor.
+Quando terminar, salve a configuração e reinicie o Cursor.
+{% endtab %}
+{% tab Gemini CLI %}
+A CLI do Gemini lê as configurações do usuário em `~/.gemini/settings.json`. Se ele não existir, você poderá criá-lo executando o seguinte no terminal:
+
+```powershell
+mkdir -p ~/.gemini
+nano ~/.gemini/settings.json
+```
+
+Em seguida, substitua `yourname` pela string exata antes de `@BZXXXXXXXX` no prompt do terminal. Em seguida, substitua `key-identifier` e `rest-endpoint` pelos valores correspondentes da página de **chaves de API** no Braze. 
+
+Sua configuração deve ser semelhante à seguinte:
+
+```json
+{
+  "mcpServers": {
+    "braze": {
+      "command": "/Users/yourname/.local/bin/uvx",
+      "args": ["--native-tls", "braze-mcp-server@latest"],
+      "env": {
+        "BRAZE_API_KEY": "2e8b-3c6c-d12e-bd75-4f0e2a8e5c71",
+        "BRAZE_BASE_URL": "https://torchie.braze.com"
+      }
+    }
+  }
+}
+```
+
+Quando terminar, salve a configuração e reinicie a CLI do Gemini. Em seguida, no Gemini, execute os seguintes comandos para verificar se o servidor Braze MCP está listado e se as ferramentas e o esquema estão disponíveis para uso:
+
+```powershell
+gemini
+/mcp
+/mcp desc
+/mcp schema
+```
+
+Você deverá ver o servidor `braze` listado com as ferramentas e o esquema disponíveis para uso.
+
 {% endtab %}
 {% endtabs %}
 
-### Etapa 5: Envie um prompt de teste
+### Etapa 5: Enviar um prompt de teste
 
-Agora que você configurou o servidor Braze MCP, tente enviar um prompt de teste para o seu cliente MCP. Para outros exemplos e melhores práticas, veja [Usando o servidor Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+Depois de configurar o servidor Braze MCP, tente enviar um prompt de teste para seu cliente MCP. Para obter outros exemplos e práticas recomendadas, consulte [Usando o servidor Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}
-!['Quais são minhas funções Braze disponíveis?' sendo perguntado e respondido no Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
+!["Quais são as minhas funções disponíveis no Braze?" sendo perguntado e respondido em Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-!['Quais são minhas funções Braze disponíveis' sendo perguntado e respondido no Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+!["Quais são minhas funções Braze disponíveis" sendo perguntadas e respondidas no Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+{% endtab %}
+
+{% tab Gemini CLI %}
+![Quais são as minhas funções Braze disponíveis? que estão sendo perguntadas e respondidas na CLI do Gemini.]({% image_buster /assets/img/mcp_server/gemini_cli/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 
 ## Solução de problemas
 
-### Erros de terminal
+### Erros no terminal
 
 #### `uvx` comando não encontrado
 
-Se você receber um erro que `uvx` comando não encontrado, reinstale `uv` e reinicie seu terminal.
+Se você receber um erro informando que o comando `uvx` não foi encontrado, reinstale o `uv` e reinicie o terminal.
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -332,7 +346,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 #### `spawn uvx ENOENT` erro
 
-Se você receber um `spawn uvx ENOENT` erros, pode ser necessário atualizar o caminho no arquivo de configuração do seu cliente. Primeiro, abra seu terminal e execute o seguinte comando:
+Se você receber um erro `spawn uvx ENOENT`, talvez seja necessário atualizar o caminho do arquivo no arquivo de configuração do seu cliente. Primeiro, abra seu terminal e execute o seguinte comando:
 
 ```bash
 which uvx
@@ -344,15 +358,15 @@ O comando deve retornar uma mensagem semelhante à seguinte:
 /Users/alex-lee/.local/bin/uvx
 ```
 
-Copie a mensagem para sua área de transferência e abra [o arquivo de configuração do seu cliente](#configure-client). Substitua `"command": "uvx"` pelo caminho que você copiou, e então reinicie seu cliente. Por exemplo:
+Copie a mensagem para a área de transferência e abra [o arquivo de configuração do seu cliente](#configure-client). Substitua `"command": "uvx"` pela jornada que você copiou e reinicie o cliente. Por exemplo:
 
 ```json
 "command": "/Users/alex-lee/.local/bin/uvx"
 ```
 
-#### A instalação do pacote falha
+#### Falha na instalação do pacote
 
-Se a instalação do seu pacote falhar, tente instalar uma versão específica do Python.
+Se a instalação do pacote falhar, tente instalar uma versão específica do Python.
 
 ```bash
 uvx --python 3.12 braze-mcp-server@latest
@@ -362,20 +376,20 @@ uvx --python 3.12 braze-mcp-server@latest
 
 #### O cliente MCP não consegue encontrar o servidor Braze
 
-1. Verifique se a sintaxe da configuração do seu cliente MCP está correta.
-2. Reinicie seu cliente MCP após as alterações de configuração.
-3. Verifique se `uvx` está no seu sistema `PATH`.
+1. Verifique se a sintaxe da configuração do cliente MCP está correta.
+2. Reinicie o cliente MCP após as alterações de configuração.
+3. Verifique se `uvx` está em seu sistema `PATH`.
 
 #### Erros de autenticação
 
-1. Verifique se seu `BRAZE_API_KEY` está correto e ativo.
-2. Certifique-se de que seu `BRAZE_BASE_URL` corresponde à sua instância Braze.
+1. Verifique se o endereço `BRAZE_API_KEY` está correto e ativo.
+2. Verifique se o endereço `BRAZE_BASE_URL` corresponde à sua instância do Braze.
 3. Verifique se sua chave de API tem as [permissões corretas](#create-api-key).
 
-#### Timeouts de conexão ou erros de rede
+#### Tempo limite de conexão ou erros de rede
 
-1. Verifique se seu `BRAZE_BASE_URL` está correto para sua instância.
-2. Verifique sua conexão de rede e configurações de firewall.
-3. Certifique-se de que está usando HTTPS em sua URL base.
+1. Verifique se o endereço `BRAZE_BASE_URL` está correto para sua instância.
+2. Verifique sua conexão de rede e as configurações de firewall.
+3. Verifique se você está usando HTTPS em seu URL de base.
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}

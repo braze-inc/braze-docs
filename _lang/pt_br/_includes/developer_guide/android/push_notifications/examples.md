@@ -12,7 +12,7 @@ Você pode usar a interface [`IBrazeNotificationFactory`](https://braze-inc.gith
 
 Nesta seção, você fará parceria com a Superb Owl, a apresentadora de um novo game show em que equipes de resgate de animais selvagens competem para ver quem consegue salvar mais corujas. Eles querem aproveitar as notificações de atualização ao vivo em seu app para Android, para que possam exibir o status de uma partida em andamento e fazer atualizações dinâmicas na notificação em tempo real.
 
-![A atualização ao vivo que a Superb Owl quer mostrar exibe uma partida em andamento entre "Wild Bird Fund" e "Owl Rescue". No momento, estamos no quarto período e o placar está 2 a 4, com a OWL na liderança.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
+![A atualização ao vivo que a Superb Owl quer mostrar exibe uma partida em andamento entre "Wild Bird Fund" e "Owl Rescue". No momento, estamos no quarto período e o placar está em 2 a 4, com a OWL na liderança.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
 
 ### Etapa 1: Adicionar um layout personalizado
 
@@ -30,7 +30,7 @@ Você pode adicionar um ou mais layouts RemoteView de notificação personalizad
 Em cada arquivo XML, crie um layout personalizado. A Superb Owl criou os seguintes layouts para seus layouts RemoteView recolhidos e expandidos:
 
 {% tabs local %}
-{% tab  Exemplo: Layout recolhido %}
+{% tab  Example: Collapsed layout %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -48,8 +48,8 @@ Em cada arquivo XML, crie um layout personalizado. A Superb Owl criou os seguint
 ```
 {% endtab %}
 
-{% tab Exemplo: Layout expandido %}
-{% details Mostrar o código de amostra %}
+{% tab Example: Expanded layout %}
+{% details Show the sample code %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -139,7 +139,7 @@ Em seu aplicativo, crie um novo arquivo chamado `MyCustomNotificationFactory.kt`
 
 No exemplo a seguir, o Superb Owl criou uma fábrica de notificações personalizada para exibir um layout RemoteView para partidas em andamento. Na [próxima etapa](#android_step-3-map-custom-data), eles criarão um novo método chamado `getTeamInfo` para mapear os dados de uma equipe para a atividade.
 
-{% details Mostrar o código de amostra %}
+{% details Show the sample code %}
 ```kotlin
 import android.app.Notification
 import android.widget.RemoteViews
@@ -293,7 +293,7 @@ Embora os comandos curl sejam úteis para testes, recomendamos lidar com essa ch
 | `messages.android_push.title` | O título da mensagem. Por padrão, isso não é usado para as notificações ao vivo da fábrica de notificações personalizadas, mas pode ser usado como fallback.                                                                                                    |
 | `messages.android_push.alert` | O corpo da mensagem. Por padrão, isso não é usado para as notificações ao vivo da fábrica de notificações personalizadas, mas pode ser usado como fallback.                                                                                                     |
 | `messages.extra`              | Pares de valores-chave que a fábrica de notificações personalizadas usa para notificações ao vivo. Você pode atribuir qualquer string a esse valor; no entanto, no exemplo acima, `live_updates` é usado para determinar se é uma notificação por push padrão ou ao vivo.  |
-| `ASSIGNED_NOTIFICATION_ID`    | O ID de notificação que deseja atribuir à notificação ao vivo do usuário escolhido. A ID deve ser exclusiva para esse jogo e deve ser usada para [atualizar a notificação existente](#android_step-4-update-data-with-the-braze-rest-api) posteriormente. |
+| `ASSIGNED_NOTIFICATION_ID`    | O ID de notificação que deseja atribuir à notificação ao vivo do usuário escolhido. O ID deve ser exclusivo para esse jogo e deve ser usado para [atualizar a notificação existente](#android_step-4-update-data-with-the-braze-rest-api) posteriormente. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### Etapa 6: Atualizar a atividade

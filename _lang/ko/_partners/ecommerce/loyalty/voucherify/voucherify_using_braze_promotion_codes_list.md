@@ -20,7 +20,7 @@ In Voucherify, navigate to your Voucherify campaign. Next, select **Export to CS
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_export_codes.png %}){: style="margin-top:15px;"}
 
-## Step 2: Create a promotion codes list
+## 2단계: Create a promotion codes list
 
 Go to **Data Settings** > **Promotion Codes** and click **Create Promotion Code List**.
 
@@ -34,9 +34,9 @@ Next, add the code snippet that refers to the codes from the list; it will be po
 
 You can also set attributes for codes such as List Expiration and Threshold Alerts; however, note that Voucherify manages the logic behind your codes regardless of list settings.
 
-![List expiration]({% image_buster /assets/img/voucherify/voucherify_promotion_list_expiration.png %})
+목록 만료
 
-## Step 3: Upload CSV file
+## 3단계: Upload CSV file
 
 Upload the CSV file with Voucherify codes.
 
@@ -46,7 +46,7 @@ Confirm that the list only contains codes (not column header) and click **Start 
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_upload_csv.png %}){: style="max-width:50%;"}
 
-## Step 4: Use Code Snippet in Braze campaigns
+## 4단계: Use Code Snippet in Braze campaigns
 
 To use codes from the list in a Braze campaign, Copy Snippet and add it to the email body.
 

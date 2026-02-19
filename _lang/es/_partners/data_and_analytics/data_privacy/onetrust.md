@@ -48,15 +48,15 @@ Siga las instrucciones de la pantalla **Introducir detalles de credenciales** y 
 #### Paso 1: Crear un flujo de trabajo
 
 {% tabs %}
-{% tab Actualización del consentimiento del usuario %}
-1. En el menú de integraciones de OneTrust, vaya a **Galería** > **Braze** > **Añadir** para crear un nuevo flujo de trabajo.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+{% tab User Consent Update %}
+1. En el menú de integraciones de OneTrust, ve a **Galería** > **Braze** > **Añadir** para crear un nuevo flujo de trabajo.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. Proporcione un nombre y un correo electrónico de notificación en el modal del flujo de trabajo. Haga clic en el botón **Crear**. Al crearlo, accederá al Generador de flujos de trabajo. Su flujo de trabajo Braze se sembrará con llamadas a la API y acciones que pueden utilizarse para procesar solicitudes de eliminación. <br><br>
 3. En el Generador de flujos de trabajo, seleccione la acción que desea activar en el flujo de trabajo.<br>![]({% image_buster /assets/img/onetrust/onetrust2.png %})
 
 {% endtab %}
-{% tab Eliminación de usuarios %}
+{% tab User Deletion %}
 
-1. En el menú de integraciones de OneTrust, vaya a **Galería** > **Braze** > **Añadir** para crear un nuevo flujo de trabajo.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+1. En el menú de integraciones de OneTrust, ve a **Galería** > **Braze** > **Añadir** para crear un nuevo flujo de trabajo.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. Proporcione un nombre y un correo electrónico de notificación en el modal del flujo de trabajo. Haga clic en el botón **Crear**. Al crearlo, accederá al Generador de flujos de trabajo. Su flujo de trabajo Braze se sembrará con llamadas a la API y acciones que pueden utilizarse para procesar solicitudes de eliminación. <br><br>
 3. En el Generador de flujos de trabajo, seleccione la acción que desea activar en el flujo de trabajo.<br>![]({% image_buster /assets/img/onetrust/onetrust8.png %})
 {% endtab %}
@@ -64,7 +64,7 @@ Siga las instrucciones de la pantalla **Introducir detalles de credenciales** y 
 
 #### Paso 2: Seleccionar acción
 {% tabs %}
-{% tab Actualización del consentimiento del usuario %}
+{% tab User Consent Update %}
 
 1. Cuando haya terminado, haga clic en **Listo** y seleccione **Añadir acción**. Tenga en cuenta que la acción que elija dependerá del tipo de preferencia que se esté actualizando y de su punto final preferido.
 - Para actualizar las preferencias globales de suscripción de un usuario, seleccione la acción **POST Seguimiento de usuario - atributos**.
@@ -72,7 +72,7 @@ Siga las instrucciones de la pantalla **Introducir detalles de credenciales** y 
 2. Elija la Acción deseada, seleccione sus credenciales Braze previamente creadas y haga clic en **Siguiente**.<br>![]({% image_buster /assets/img/onetrust/onetrust5.png %})
 
 {% endtab %}
-{% tab Eliminación de usuarios %}
+{% tab User Deletion %}
 
 1. Cuando haya terminado, haga clic en **Listo** y seleccione **Añadir acción**.
 - Para eliminar un usuario de Braze, seleccione la acción **POST User Delete Action**.
@@ -83,7 +83,7 @@ Siga las instrucciones de la pantalla **Introducir detalles de credenciales** y 
 {% endtabs %}
 #### Paso 3: Actualizar el cuerpo de la solicitud
 {% tabs %}
-{% tab Actualización del consentimiento del usuario %}
+{% tab User Consent Update %}
 
 1. Actualice el cuerpo para incluir los valores dinámicos necesarios. Asegúrate de que el cuerpo de la acción coincide con el [punto final`/users/track` ](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) y con el [punto final`/subscription/status/set` ](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
 2. Personalice el flujo de trabajo con parámetros adicionales o lógica condicional para satisfacer las necesidades de su organización.
@@ -96,7 +96,7 @@ Al utilizar los flujos de trabajo de OneTrust para actualizar las preferencias d
 ![]({% image_buster /assets/img/onetrust/onetrust6.png %})
 
 {% endtab %}
-{% tab Eliminación de usuarios %}
+{% tab User Deletion %}
 
 1. Actualice el cuerpo para incluir los valores dinámicos necesarios. Asegúrese de que el cuerpo de la acción coincide con el [punto final`/users/delete` ]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/).
 2. Cuando termine de editar, seleccione **Finalizar** y luego **Activar** para habilitar el flujo de trabajo.

@@ -13,8 +13,8 @@ repositories {
 A continuación, añade Braze a tus dependencias.
 
 {% tabs local %}
-{% tab sólo base %}
-Si no piensas utilizar componentes de interfaz de usuario Braze, añade el siguiente código a tu página `build.gradle`. Sustituye `SDK_VERSION` por la versión actual de tu SDK Braze para Android. Para ver la lista completa de versiones, consulta [el Registro de cambios]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+{% tab base only %}
+Si no piensas utilizar componentes Braze UI, añade el siguiente código a tu página `build.gradle`. Sustituye `SDK_VERSION` por la versión actual de tu SDK Braze para Android. Para ver la lista completa de versiones, consulta [el Registro de cambios]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
 dependencies {
@@ -24,8 +24,8 @@ dependencies {
 ```
 {% endtab %}
 
-{% tab con componentes ui %}
-Si piensas utilizar componentes de interfaz de usuario Braze más adelante, añade el siguiente código a tu sitio `build.gradle`.  Sustituye `SDK_VERSION` por la versión actual de tu SDK Braze para Android. Para ver la lista completa de versiones, consulta [el Registro de cambios]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+{% tab with ui components %}
+Si piensas utilizar componentes Braze UI más adelante, añade el siguiente código a tu página `build.gradle`.  Sustituye `SDK_VERSION` por la versión actual de tu SDK Braze para Android. Para ver la lista completa de versiones, consulta [el Registro de cambios]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
 dependencies {
@@ -82,7 +82,7 @@ Mientras está habilitada la inicialización retardada, se cancelan todas las co
 La inicialización retardada está desactivada por predeterminado. Para habilitarlo, utiliza una de las siguientes opciones:
 
 {% tabs %}
-{% tab Archivo XML Braze %}
+{% tab Braze XML file %}
 En el archivo `braze.xml` de tu proyecto, establece `com_braze_enable_delayed_initialization` en `true`.
 
 ```xml
@@ -90,7 +90,7 @@ En el archivo `braze.xml` de tu proyecto, establece `com_braze_enable_delayed_in
 ```
 {% endtab %}
 
-{% tab En tiempo de ejecución %}
+{% tab At runtime %}
 Para habilitar la inicialización retardada en tiempo de ejecución, utiliza el siguiente método.
 
 {% subtabs %}
@@ -112,6 +112,10 @@ Braze.enableDelayedInitialization(context)
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
+Cuando se habilita la inicialización retardada y una notificación push contiene una acción de vínculo profundo, el vínculo profundo no se resuelve.
+{% endalert %}
+
 #### Paso 4.2: Configurar análisis push (opcional)
 
 Cuando se habilita la inicialización retardada, los análisis push se ponen en cola de forma predeterminada. Sin embargo, puedes optar por [poner explícitamente en cola](#explicitly-queue-push-analytics) o [eliminar](#drop-push-analytics) los análisis push.
@@ -121,7 +125,7 @@ Cuando se habilita la inicialización retardada, los análisis push se ponen en 
 Para poner en cola explícitamente los análisis push, elige una de las siguientes opciones:
 
 {% tabs %}
-{% tab Archivo XML Braze %}
+{% tab Braze XML file %}
 En tu archivo `braze.xml`, establece `com_braze_delayed_initialization_analytics_behavior` en `QUEUE`:
 
 ```xml
@@ -129,7 +133,7 @@ En tu archivo `braze.xml`, establece `com_braze_delayed_initialization_analytics
 ```
 {% endtab %}
 
-{% tab En tiempo de ejecución %}
+{% tab At runtime %}
 Añade `QUEUE` a tu [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) método:
 
 {% subtabs %}
@@ -156,7 +160,7 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 Para abandonar los análisis push, elige una de las siguientes opciones:
 
 {% tabs %}
-{% tab Archivo XML Braze %}
+{% tab Braze XML file %}
 En tu archivo `braze.xml`, establece `com_braze_delayed_initialization_analytics_behavior` en `DROP`: 
 
 ```xml
@@ -164,7 +168,7 @@ En tu archivo `braze.xml`, establece `com_braze_delayed_initialization_analytics
 ```
 {% endtab %}
 
-{% tab En tiempo de ejecución %}
+{% tab At runtime %}
 Añade `DROP` al [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) método:
 
 {% subtabs %}
@@ -255,7 +259,7 @@ Si tienes problemas durante las pruebas, habilita el [registro detallado](#andro
     ![La página "Resumen" en Braze, con el campo "Mostrar datos para" ajustado a "Hoy".]({% image_buster /assets/img_archive/android_sessions.png %})
 2. Abre tu aplicación y actualiza el panel de Braze. Comprueba que tus métricas han aumentado en 1.
 3. Navega por tu aplicación y comprueba que sólo se ha registrado una sesión en Braze.
-4. Envía la aplicación a un segundo plano durante al menos 10 segundos, y luego tráela al primer plano. Comprueba que se ha registrado una nueva sesión.
+4. Envía la aplicación a segundo plano durante al menos 10 segundos, y luego tráela a primer plano. Comprueba que se ha registrado una nueva sesión.
 
 ## Configuraciones opcionales
 
@@ -297,7 +301,7 @@ Braze.configure(this, brazeConfig)
 {% endtabs %}
 
 {% alert tip %}
-¿Buscas otro ejemplo? Consulta nuestra [aplicación de ejemplo Hello Braze](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java).
+¿Buscas otro ejemplo? Consulta nuestro [ejemplo de aplicación Hello Braze](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java).
 {% endalert %}
 
 ### ID de publicidad de Google
@@ -380,7 +384,7 @@ Habilita los registros detallados antes de cualquier otra llamada en `Applicatio
 {% endalert %}
 
 {% tabs local %}
-{% tab Aplicación %}
+{% tab Application %}
 Para habilitar los registros directamente en tu aplicación, añade lo siguiente al método `onCreate()` de tu aplicación antes de cualquier otro método.
 
 {% subtabs local %}

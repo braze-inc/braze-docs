@@ -54,7 +54,7 @@ Navigieren Sie in Braze zu **Einstellungen** > **API-Schlüssel**. Wählen Sie *
 
 ### Schritt 2: Stellen Sie dem Team von actionable.me Informationen zur Verfügung.
 
-Um die Integration abzuschließen, müssen Sie Ihren REST API-Schlüssel und die [URL des REST-Endpunkts]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) an Ihr actionable.me Team weitergeben. actionable.me wird dann die Verbindung herstellen und sich nach Abschluss der Einrichtung mit Ihnen in Verbindung setzen, um mit dem Austausch von Insights zu beginnen.
+Um die Integration abzuschließen, müssen Sie Ihrem Team von actionable.me Ihren REST API-Schlüssel und die [URL des REST-Endpunkts]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) mitteilen. actionable.me wird dann die Verbindung herstellen und sich nach Abschluss der Einrichtung mit Ihnen in Verbindung setzen, um mit dem Austausch von Insights zu beginnen.
 
 ![Die Seite actionable.me "Plattform hinzufügen", die das Team von actionable.me konfigurieren wird.]({% image_buster /assets/img/actionableme/image2.png %})
 

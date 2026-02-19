@@ -1,6 +1,6 @@
 ---
-nav_title: Exportieren von Braze Daten
-article_title: Exportieren von Braze-Daten
+nav_title: Braze Daten exportieren
+article_title: Braze Daten exportieren
 page_order: 6
 layout: dev_guide
 guide_top_header: "Exportieren von Braze-Daten"

@@ -96,7 +96,7 @@ Denken Sie daran, Ihr Template zu speichern, bevor Sie die Seite verlassen! <br>
 Mit [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview) können Sie Webhooks zur Automatisierung des Datenflusses von externen Plattformen in Braze erstellen und verwalten. Jede Transformation erhält einen eindeutigen Endpunkt, den andere Plattformen als Ziel für ihren Webhook verwenden können.
 
 {% alert important %}
-Das Template für Datentransformation von Lob sendet Ereignisse über Ihren [`/users/track` Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track), der Datenpunkte in Braze konsumiert. Wir empfehlen Ihnen, in Ihren Lob Webhook-Einstellungen ein Rate-Limits festzulegen, damit Sie nicht zu viele Daten verbrauchen.
+Lob's Data Transformation Template sendet Ereignisse über Ihren [`/users/track` Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track), der Datenpunkte protokolliert. Wir empfehlen Ihnen, in Ihren Lob Webhook-Einstellungen ein Rate-Limits festzulegen, um zu vermeiden, dass zu viele Daten aufgezeichnet werden.
 {% endalert %}
 
 ### Schritt 1: Erstellen Sie eine Transformation in Braze

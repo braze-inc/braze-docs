@@ -49,7 +49,7 @@ Hightouch permite sincronizar tanto objetos de usuario como eventos.
 | Eventos | Sincroniza los registros como eventos con tu destino; esto suele hacerse en forma de llamada de seguimiento. | Seguimiento de eventos o seguimiento de compras |
 
 {% alert note %}
-Consulte [Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption) para obtener más información sobre cómo afectan las sincronizaciones al consumo de puntos de datos Braze.
+Consulta [Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption) para obtener más información sobre cómo afectan las sincronizaciones al registro de los puntos de datos.
 {% endalert %}
 
 #### Sincronización de objetos Braze

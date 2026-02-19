@@ -13,3 +13,4 @@ channel:
 ---
 
 {% multi_lang_include archive/short_and_long_codes.md %}
+<!-- TEMP_REGENERATE_TRIGGER -->

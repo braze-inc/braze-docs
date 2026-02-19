@@ -10,7 +10,7 @@ Braze Vega SDKを使用すると、ユーザーに対して分析を収集した
 
 {% tabs local %}
 {% tab npm %}
-プロジェクトでNPMを使用している場合は、Braze Vega SDKを依存関係として追加できる。
+プロジェクトがNPMを使用している場合は、Braze Vega SDKを依存関係として追加できる。
 
 ```bash
 npm install @braze/vega-sdk --save

@@ -14,7 +14,7 @@ search_tag: Partner
 
 _Cette intégration est maintenue par Amperity._
 
-{% multi_lang_include video.html ID="06G0lxaSjgk" align="right" %}
+{% multi_lang_include video.html id="06G0lxaSjgk" align="right" %}
 
 L'intégration de Braze et Amperity offre une vue unifiée de vos clients sur les deux plateformes. Cette intégration vous permet de :
 - **Synchroniser les profils clients**: Mapper les données utilisateur et les attributs personnalisés d'Amperity à Braze. 
@@ -64,7 +64,7 @@ Les attributs personnalisés ne seront mis à jour que pour les utilisateurs aya
 
 Les audiences synchronisées d'Amperity à Braze seront enregistrées dans les profils utilisateurs en tant qu'attributs personnalisés. Ils peuvent ensuite être utilisés pour cibler ces utilisateurs dans Braze.
 
-![Liste déroulante de filtres avec attributs personnalisés s'affichant dans la catégorie Données personnalisées.]({% image_buster /assets/img/amperity/custom_attributes_filters.png %}){: style="max-width:60%;"}
+![Liste déroulante de filtres avec des attributs personnalisés affichés dans la catégorie de données personnalisées.]({% image_buster /assets/img/amperity/custom_attributes_filters.png %}){: style="max-width:60%;"}
 
 ![Liste déroulante d'attributs personnalisés tels que "l12m_frequency" et "l12m_monetary".]({% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}){: style="max-width:40%;"}
 
@@ -112,7 +112,7 @@ Nommez la table "Braze Customer Attributes" et enregistrez-la. Vérifiez que la 
 
 Dans la plateforme Amperity, accédez à l'onglet **Destinations**. Cherchez l'option pour ajouter une nouvelle destination. Parmi les options disponibles, sélectionnez **Braze**.
 
-![La section Nouvelle destination dont le nom est "API Braze", la description "Envoyer les attributs de l'audience à Braze" et le plugin "Braze".]({% image_buster /assets/img/amperity/destination_name.png %}){: style="max-width:60%;"}
+![La section Nouvelle destination avec un nom d’"API Braze", une description "Envoyer les attributs de l'audience à Braze." et un plugin de "Braze".]({% image_buster /assets/img/amperity/destination_name.png %}){: style="max-width:60%;"}
 
 #### Étape 2d : Configurer les détails de la destination
 
@@ -120,7 +120,7 @@ Sous les **Paramètres Braze**, fournissez les identifiants Braze et les paramè
 - `braze_id`: Un identifiant Braze attribué automatiquement qui est immuable et associé à un utilisateur particulier lorsqu'il est créé dans Braze.
 - `external_id`: Un identifiant attribué par le client, généralement un UUID. 
 
-![La section Paramètres de Braze avec une instance de "US-03", un identifiant utilisateur de "external_id", un nom de segment vide, un compartiment S3 de "amperity-training-abc123" et un dossier S3 de "braze-attributes".]({% image_buster /assets/img/amperity/braze_settings.png %}){: style="max-width:60%;"}
+![La section Paramètres de Braze avec une instance de "US-03", l'identifiant utilisateur de "external_id", blank segment name, le compartiment S3 de "amperity-training-abc123" et le dossier S3 de "braze-attributes".]({% image_buster /assets/img/amperity/braze_settings.png %}){: style="max-width:60%;"}
 
 #### Étape 2e : Ajouter un modèle de donnée
 
@@ -128,7 +128,7 @@ Dans l'**Destinations** onglet, ouvrez le menu pour la destination Braze et sél
 
 Si des paramètres requis n'ont pas été configurés dans le cadre de la destination, configurez-les dans le cadre du modèle de données. Enregistrer le modèle de données.
 
-![La section Nom du modèle de données avec le nom "Attributs d'audience de Braze" et la description "Envoyer les attributs d'audience à Braze".]({% image_buster /assets/img/amperity/data_template_name.png %}){: style="max-width:60%;"}
+![La section Nom du modèle de données avec le nom "Attributs d’audience Braze" et la description "Envoyer les attributs de l'audience à Braze."]({% image_buster /assets/img/amperity/data_template_name.png %}){: style="max-width:60%;"}
 
 #### Étape 2f: enregistrer la configuration 
 
@@ -176,8 +176,8 @@ Consultez la documentation d'Amperity pour des exemples de différents types de 
 
 1. Allez à la section **campagne** et cliquez sur l'option pour créer une nouvelle campagne.
 2. Donnez à votre campagne un nom descriptif et unique qui vous aidera à l'identifier plus tard, surtout si vous avez plusieurs campagnes.
-3. Sélectionnez le segment de clients que vous souhaitez cibler avec cette campagne. Cela devrait être le segment que vous avez créé plus tôt. <br>![Champ déroulant des segments à exclure du ciblage.]({% image_buster /assets/img/amperity/select_segments.png %}){: style="max-width:50%;"}<br><br>
-4. Choisissez les données que vous souhaitez envoyer dans le cadre de la campagne. Cela peut inclure une gamme d'attributs de client. ![La fenêtre modale/boîte de dialogue de la campagne permet de sélectionner une destination et des attributs personnalisés. ]({% image_buster /assets/img/amperity/edit_campaign_attributes.png %}){: style="max-width:90%;"}<br><br>
+3. Sélectionnez le segment de clients que vous souhaitez cibler avec cette campagne. Cela devrait être le segment que vous avez créé plus tôt. <br>![Le champ déroulant pour les segments à exclure du ciblage.]({% image_buster /assets/img/amperity/select_segments.png %}){: style="max-width:50%;"}<br><br>
+4. Choisissez les données que vous souhaitez envoyer dans le cadre de la campagne. Cela peut inclure une gamme d'attributs de client. ![La fenêtre modale Modifier les attributs de la campagne permet de sélectionner une destination et des attributs de client. ]({% image_buster /assets/img/amperity/edit_campaign_attributes.png %}){: style="max-width:90%;"}<br><br>
 5. Sélectionnez **Braze** comme destination où les données de la campagne seront envoyées.
 6. Choisissez quand et à quelle fréquence vous souhaitez que la campagne se déroule. Cela peut être un événement unique ou une planification récurrente.
 7. Enregistrer votre campagne et exécuter un test pour vous assurer qu'elle fonctionne comme prévu.

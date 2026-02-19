@@ -1,12 +1,12 @@
 ---
-nav_title: Définir des ID Utilisateur
-article_title: Définition des ID utilisateurs via le SDK de Braze
-page_order: 1.2
+nav_title: Définir les ID des utilisateurs
+article_title: Définir les ID des utilisateurs via le SDK de Braze
+page_order: 1.1
 description: "Découvrez comment définir des ID d'utilisateur via le SDK de Braze."
 
 ---
 
-# Définir des ID utilisateur
+# Définir les ID des utilisateurs
 
 > Découvrez comment définir des ID d'utilisateur via le SDK de Braze. Il s'agit d'identifiants uniques qui vous permettent de suivre les utilisateurs à travers les appareils et les plateformes, d'importer leurs données via l'[API de données utilisateur]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) et d'envoyer des messages ciblés via l'[API de messages.]({{site.baseurl}}/api/endpoints/messaging/) Si vous n'attribuez pas d'ID unique à un utilisateur, Braze lui attribuera un ID anonyme à la place. Toutefois, vous ne pourrez pas utiliser ces fonctionnalités tant que vous ne l'aurez pas fait.
 
@@ -25,6 +25,20 @@ Pour définir un ID utilisateur, appelez la méthode `changeUser()` après la pr
 Si vous hachurez plutôt un identifiant unique, veillez à normaliser l'entrée de votre fonction de hachage. Par exemple, lors du hachage d'une adresse e-mail, supprimez les espaces de début et de fin et tenez compte de la localisation.
 
 {% tabs local %}
+{% tab WEB %}
+Pour une implémentation standard du SDK Web, vous pouvez utiliser la méthode suivante :
+
+```javascript
+braze.changeUser(YOUR_USER_ID_STRING);
+```
+
+Si vous souhaitez utiliser Google Tag Manager à la place, vous pouvez utiliser le type d'étiquette **Change User** pour appeler la [méthode`changeUser` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). Utilisez-le chaque fois qu'un utilisateur se connecte ou est identifié d'une autre manière avec son identifiant unique `external_id`.
+
+Veillez à saisir l'ID unique de l'utilisateur actuel dans le champ **ID externe**, généralement rempli à l'aide d'une variable de couche de données envoyée par votre site web.
+
+![Une boîte de dialogue affichant les paramètres de configuration de la balise d’action de Braze. Les paramètres inclus sont « type de balise » et « ID externe de l’utilisateur ».]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
+{% endtab %}
+
 {% tab ANDROID %}
 {% subtabs %}
 {% subtab JAVA %}
@@ -55,20 +69,6 @@ AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 {% endsubtabs %}
 {% endtab %}
 
-{% tab WEB %}
-Pour une implémentation standard du SDK Web, vous pouvez utiliser la méthode suivante :
-
-```javascript
-braze.changeUser(YOUR_USER_ID_STRING);
-```
-
-Si vous souhaitez utiliser Google Tag Manager à la place, vous pouvez utiliser le type d'étiquette **Change User** pour appeler la [méthode`changeUser` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). Utilisez-le chaque fois qu'un utilisateur se connecte ou est identifié d'une autre manière avec son identifiant unique `external_id`.
-
-Veillez à saisir l'ID unique de l'utilisateur actuel dans le champ **ID externe**, généralement rempli à l'aide d'une variable de couche de données envoyée par votre site web.
-
-![Une boîte de dialogue affichant les paramètres de configuration de la balise d’action de Braze. Les paramètres inclus sont le "type d'étiquette" et l'"ID externe".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
-{% endtab %}
-
 {% tab CORDOVA %}
 ```javascript
 BrazePlugin.changeUser("YOUR_USER_ID");
@@ -86,16 +86,10 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
-
-{% tab ENGINE UNREAL %}
-```cpp
-UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
-```
-{% endtab %}
 {% endtabs %}
 
 {% alert warning %}
-**N'attribuez pas d'ID statique par défaut ou d'appel `changeUser()` lorsqu'un utilisateur se déconnecte.** En procédant ainsi, vous ne pourrez pas réengager les utilisateurs précédemment connectés sur les appareils partagés. Au lieu de cela, gardez une trace de tous les ID d'utilisateurs séparément et assurez-vous que le processus de déconnexion de votre application permet de revenir à un utilisateur précédemment connecté. Lorsqu'une nouvelle session commence, Braze actualise automatiquement les données pour le profil nouvellement actif.
+**N'attribuez pas d'ID par défaut statique ou d'appel `changeUser()` lorsqu'un utilisateur se déconnecte.** En procédant ainsi, vous ne pourrez pas réengager les utilisateurs précédemment connectés sur les appareils partagés. Au lieu de cela, gardez une trace de tous les ID d'utilisateurs séparément et assurez-vous que le processus de déconnexion de votre application permet de revenir à un utilisateur précédemment connecté. Lorsqu'une nouvelle session commence, Braze actualise automatiquement les données pour le profil nouvellement actif.
 {% endalert %}
 
 ## Alias utilisateurs
@@ -109,6 +103,12 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 Un alias d'utilisateur se compose de deux parties : un nom et un libellé. Le nom fait référence à l'identifiant lui-même, tandis que l'étiquette fait référence au type d'identifiant auquel il appartient. Par exemple, si vous avez un utilisateur dans une plateforme de support client tierce avec l'ID externe `987654`, vous pouvez lui attribuer un alias dans Braze avec le nom `987654` et le libellé d'alias `support_id`, afin de pouvoir le suivre à travers les plateformes.
 
 {% tabs local %}
+{% tab web %}
+```javascript
+braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+```
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -141,13 +141,7 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% endsubtabs %}
 {% endtab %}
 
-{% tab web %}
-```javascript
-braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
-```
-{% endtab %}
-
-{% tab API REST %}
+{% tab rest api %}
 ```json
 {
   "alias_name" : (required, string),

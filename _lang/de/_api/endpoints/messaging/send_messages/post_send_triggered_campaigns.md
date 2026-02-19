@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Kampagnen mit API-getriggerter Zustellung versenden"
+nav_title: "POST: Versenden Sie Kampagnen mit einer API-getriggerten Zustellung"
 article_title: "POST: Kampagnen mit API-getriggerter Zustellung versenden"
 search_tag: Endpoint
 page_order: 4
@@ -11,7 +11,7 @@ description: "In diesem Artikel finden Sie Einzelheiten über den Endpunkt Kampa
 {% api %}
 # Versenden Sie Kampagnen-Nachrichten mit einer API-getriggerten Zustellung
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/campaigns/trigger/send
+/kampagnen/triggern/senden
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um sofortige, einmalige Nachrichten an bestimmte Nutzer:innen mit Hilfe der API-getriggerten Zustellung zu senden.
@@ -26,11 +26,11 @@ Wenn Sie ein Segment Targeting betreiben, wird ein Datensatz Ihrer Anfrage in de
 
 Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berechtigung `campaigns.trigger.send` erstellen.
 
-## Rate-Limits
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='send messages endpoints' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -41,11 +41,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "campaign_id": (required, string) see campaign identifier,
   "send_id": (optional, string) see send identifier,
-  "trigger_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "trigger_properties": (optional, object) personalization key-value pairs that apply to all users in this request,
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
   "audience": (optional, connected audience object) see connected audience,
-  // Including 'audience' will only send to users in the audience
-  "recipients": (optional, array; if not provided and broadcast is not set to `false`, message will send to the entire segment targeted by the campaign)
+  // Including 'audience' sends to only users in the audience
+  "recipients": (optional, array; if not provided and broadcast is not set to `false`, message sends to the entire segment targeted by the campaign)
     [
       {
       // Either "external_user_id" or "user_alias" or "email" is required. Requests must specify only one.
@@ -53,16 +53,16 @@ Authorization: Bearer YOUR-REST-API-KEY
       "external_user_id": (optional, string) external identifier of user to receive message,
       "email": (optional, string) email address of user to receive message,
       "prioritization": (optional, array) prioritization array; required when using email,
-      "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent trigger_properties),
+      "trigger_properties": (optional, object) personalization key-value pairs that apply to this user (these key-value pairs override any keys that conflict with the parent trigger_properties),
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases; if set to `false`, an attributes object must also be included,
-      "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
+      "attributes": (optional, object) fields in the attributes object create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values are overwritten
     }
   ],
   "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
     [
-      {  
+      {
        "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (for example, ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
-       "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension will be detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
+       "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension is detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
       }
     ]
 }
@@ -82,8 +82,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 - Das Empfänger:innen-Array kann bis zu 50 Objekte enthalten, wobei jedes Objekt einen einzelnen `external_user_id` String und ein `trigger_properties` Objekt enthält.
-- Wenn `send_to_existing_only` auf `true` steht, sendet Braze die Nachricht nur an bestehende Nutzer:innen. Dieses Flag kann jedoch nicht mit Nutzer:innen verwendet werden.
-- Wenn `send_to_existing_only` `false` ist, muss ein Attribut angegeben werden. Braze erstellt einen Nutzer:innen mit der `id` und den Attributen, bevor die Nachricht gesendet wird.
+- Wenn `send_to_existing_only` auf `true` eingestellt ist (der Standard), sendet Braze die Nachricht nur an bestehende Nutzer:innen. Bei der Einstellung `false` und der Angabe eines Attributs-Objekts erstellt Braze einen neuen Nutzer:in, wenn noch keiner existiert. Beachten Sie, dass die Einstellung `send_to_existing_only` auf `false` für Nutzer:innen-Alias nicht unterstützt wird - neue Nutzer:innen-Alias können über diesen Endpunkt nicht erstellt werden. Um an einen reinen Alias-Nutzer zu senden, muss der Nutzer:innen bereits in Braze existieren.
 
 Der Abo-Gruppenstatus eines Nutzers kann über den Parameter `subscription_groups` innerhalb des `attributes` Objekts aktualisiert werden. Weitere Einzelheiten finden Sie unter [Objekt Nutzer:innen Attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
@@ -175,7 +174,7 @@ Wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, finden Sie unter [Fe
 
 ## Attribute Objekt für Kampagnen
 
-Braze verfügt über ein Messaging-Objekt namens `attributes`, mit dem Sie Attribute und Werte für einen Nutzer:innen hinzufügen, erstellen oder aktualisieren können, bevor Sie ihm eine API-getriggerte Kampagne schicken. Wenn Sie den Endpunkt `campaign/trigger/send` verwenden, wird bei diesem API-Aufruf das Objekt Nutzer:in verarbeitet, bevor die Kampagne verarbeitet und gesendet wird. Dadurch wird das Risiko von Problemen, die durch [Race-Conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/) verursacht werden, minimiert.
+Braze verfügt über ein Messaging-Objekt namens `attributes`, mit dem Sie Attribute und Werte für einen Nutzer hinzufügen, erstellen oder aktualisieren können, bevor Sie ihm eine API-getriggerte Kampagne schicken. Wenn Sie den Endpunkt `campaign/trigger/send` verwenden, verarbeitet dieser API-Aufruf das Objekt Nutzer:innen Attribute, bevor er die Kampagne verarbeitet und sendet. Dadurch wird das Risiko von Problemen, die durch [Race-Conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/) verursacht werden, minimiert.
 
 {% alert tip %}
 Sie suchen die Canvas-Version dieses Endpunkts? Informieren Sie sich über das [Versenden von Canvas Nachrichten mit Hilfe einer API-getriggerten Zustellung]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).

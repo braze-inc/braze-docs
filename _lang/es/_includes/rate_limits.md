@@ -1,4 +1,3 @@
-
 <!---DEFAULT RATE LIMIT-->
 
 {% if include.endpoint == "default" %}
@@ -33,11 +32,11 @@ Aplicamos un límite de velocidad de 1000 solicitudes por minuto a este punto fi
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-A partir del 28 de octubre de 2024, aplicamos un límite de velocidad base de 3.000 solicitudes cada tres segundos a este punto final para todos los clientes. Cada solicitud `/users/track` puede contener hasta 75 objetos de evento, 75 objetos de atributo y 75 objetos de compra. Cada objeto (evento, atributo y matrices de compra) puede actualizar un usuario cada uno. En total, esto significa que se puede actualizar a un máximo de 225 usuarios en una sola llamada. Además, el mismo perfil de usuario puede ser actualizado por varios objetos.
+A partir del 28 de octubre de 2024, aplicamos un límite de velocidad base de 3.000 solicitudes cada tres segundos a este punto final para todos los clientes. Cada solicitud `/users/track` puede contener hasta 75 objetos de evento, 75 objetos de atributo y 75 objetos de compra. Cada objeto (evento, atributo y matrices de compra) puede actualizar un usuario cada uno. En total, esto significa que puedes actualizar hasta 225 usuarios en una sola llamada. Además, puedes actualizar un único perfil de usuario con varios objetos.
 
-Se aplican límites diferentes a los clientes que han comprado **Usuarios activos al mes - CY 24-25**. Para más detalles sobre estos límites, consulta [Usuarios activos al mes - Límites CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
+Se aplican límites diferentes a los clientes que han comprado **Usuarios activos al mes - CY 24-25**. Para más detalles sobre estos límites, consulta [Usuarios activos al mes - Límites CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau).
 
-Consulta nuestra página sobre [los límites de velocidad de la API]({{site.baseurl}}/api/api_limits/) para obtener más detalles, y ponte en contacto con tu responsable de satisfacción de los clientes si necesitas aumentar tu límite.
+Consulta nuestra página sobre [los límites de velocidad de la API]({{site.baseurl}}/api/api_limits/) para obtener más detalles, y ponte en contacto con tu administrador del éxito del cliente si necesitas aumentar tu límite.
 
 <!---/users/export/ids-->
 
@@ -103,17 +102,22 @@ Aplicamos un límite de velocidad compartido de 1.000 peticiones por hora a este
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-Al especificar un segmento o Audiencia Conectada en tu solicitud, aplicamos un límite de velocidad de 250 solicitudes por minuto a este punto final. De lo contrario, si se especifica un `external_id`, este punto final tiene un límite de velocidad predeterminado de 250 000 solicitudes por hora compartido entre `/messages/send`, `/campaigns/trigger/send` y `/canvas/trigger/send`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+Al utilizar filtros de audiencia conectada en tu solicitud, aplicamos un límite de velocidad de 250 solicitudes por minuto a este punto final. De lo contrario, si se especifica un `external_id`, este punto final tiene un límite de velocidad predeterminado de 250 000 solicitudes por hora compartido entre `/messages/send`, `/campaigns/trigger/send` y `/canvas/trigger/send`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+
+Los puntos finales Braze admiten solicitudes de API por lotes. Una única solicitud a los puntos finales de mensajería puede llegar a cualquiera de los siguientes elementos:
+
+- Hasta 50 `external_ids` específicos, cada uno con parámetros de mensaje individuales
+- Un segmento de audiencia de cualquier tamaño, definido en la solicitud como un objeto Audiencia Conectada
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-Los correos electrónicos transaccionales Braze no están sujetos a ningún límite de velocidad. Dependiendo del paquete que hayas elegido, el SLA cubre un número determinado de correos electrónicos transaccionales por hora. Las solicitudes que superen esa tasa seguirán enviándose, pero no estarán cubiertas por el SLA. El 99,9 % de los correos electrónicos se enviarán en menos de un minuto.
+El punto final `/transactional/v1/campaigns/{campaign_id}/send` es un punto final de pago en unidades por hora (por ejemplo, 50.000 por hora según tu paquete). No hay límite de velocidad por punto final: puedes enviar más allá del volumen asignado, pero sólo el volumen asignado está cubierto por el SLA. Las peticiones a este punto final cuentan para tu [límite de velocidad global de la API externa]({{site.baseurl}}/api/api_limits/). Si superas ese límite (por ejemplo, 250.000 solicitudes por hora en todos los puntos finales), Braze devuelve 429 y las solicitudes se estrangulan. El recuento del volumen de transacciones se reinicia cada hora, por lo que después de una hora, hay otra asignación disponible. Dentro del volumen cubierto por el SLA, el 99,9% de los correos electrónicos se enviarán en menos de un minuto.
 
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-El número máximo diario de identificadores de envío personalizados que pueden crearse a través de este punto final es de 100 para un espacio de trabajo determinado. Cada combinación de `send_id` y `campaign_id` que crees contará para tu límite diario. Los encabezados de respuesta de cualquier solicitud válida incluyen el estado actual del límite de velocidad; para más detalles, consulta [los límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+Puedes crear hasta 100 identificadores de envío personalizados al día utilizando este punto final para un espacio de trabajo determinado. Cada combinación de `send_id` y `campaign_id` que crees contará para tu límite diario. Los encabezados de respuesta de cualquier solicitud válida incluyen el estado actual del límite de velocidad. Para más detalles, consulta [los límites de velocidad API]({{site.baseurl}}/api/api_limits/).
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}
@@ -137,7 +141,7 @@ Este punto final tiene un límite de velocidad de 100 peticiones por minuto.
 
 <!---Additional if statement for Messaging endpoints-->
 
-{% if include.category == "message endpoints" %}
+{% if include.category == "puntos finales de mensajería" %}
 
 Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseurl}}/api/api_limits/#batching-api-requests). Una única solicitud a los puntos finales de mensajería puede llegar a cualquiera de los siguientes elementos:
 
@@ -147,7 +151,7 @@ Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseur
 
 {% endif %}
 
-{% if include.category == "send messages endpoints" %}
+{% if include.category == "enviar mensajes puntos finales" %}
 
 Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseurl}}/api/api_limits/#batching-api-requests). Una única solicitud a los puntos finales de mensajería puede llegar a cualquiera de los siguientes elementos:
 
@@ -158,7 +162,7 @@ Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseur
 
 <!---Additional if statement for Translation endpoints-->
 
-{% if include.endpoint == "translation endpoints" %}
+{% if include.endpoint == "puntos finales de traducción" %}
 
 Este punto final tiene un límite de velocidad de 250.000 peticiones por minuto.
 
@@ -166,7 +170,7 @@ Este punto final tiene un límite de velocidad de 250.000 peticiones por minuto.
 
 <!---Additional if statement for /messages/send endpoint-->
 
-{% if include.category == "message send endpoint" %}
+{% if include.category == "punto final de envío de mensajes" %}
 
 Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseurl}}/api/api_limits/#batching-api-requests). Una única solicitud a los puntos finales de mensajería puede llegar a cualquiera de los siguientes elementos:
 
@@ -205,4 +209,3 @@ Este punto final tiene un límite de velocidad compartido de 50 peticiones por m
 Este punto final tiene un límite de velocidad de 50 000 peticiones por minuto.
 
 {% endif %}
-

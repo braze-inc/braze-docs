@@ -58,7 +58,7 @@ You can find your list of custom attributes in Braze under **Data Settings** > *
 {% endalert %}
 
 {:start="4"}
-4. To add additional field pairings, repeat steps 1–3.
+4. To add additional field pairings, repeat steps 1-3.
 5. To remove a field from the list of synchronized data, click <i class="fa-solid fa-rectangle-xmark" title="Delete"></i> at the end of the row.
 6. Click **Save**.
 

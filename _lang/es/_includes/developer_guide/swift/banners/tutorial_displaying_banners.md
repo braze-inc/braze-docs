@@ -6,7 +6,7 @@ Antes de empezar este tutorial, comprueba que tu SDK de Braze cumple los requisi
 
 ## Visualización de banners para el SDK de Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Visualización de banners Swift" %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Displaying Banners Swift" %}
 
 {% tabs %}
 {% tab UIKit %}
@@ -150,7 +150,7 @@ líneas-BannerViewController.swift=43-58
 
 #### 5\. Anclar contenido y establecer restricciones de altura
 
-Ancla tu contenido principal a la parte superior utilizando el diseño automático, y coloca la vista de banner justo debajo. Fija los bordes inicial, final e inferior del Banner a la zona segura, y establece una restricción de altura inicial de `0` que se actualizará cuando se cargue el contenido.
+Ancla tu contenido principal a la parte superior utilizando el diseño automático, y coloca la vista Banner justo debajo. Fija los bordes inicial, final e inferior del Banner a la zona segura, y establece una restricción de altura inicial de `0` que se actualizará cuando se cargue el contenido.
 
 {% endscrolly %}
 {% endtab %}

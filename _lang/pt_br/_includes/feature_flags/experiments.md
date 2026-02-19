@@ -74,13 +74,13 @@ Para testar o impacto de sua funcionalidade, use variantes para dividir o tráfe
 
 Para editar, adicionar ou remover propriedades padrão adicionais, edite o próprio feature flag em **envio de mensagens** > **Feature Flags**. Quando uma variante estiver desativada, o SDK retornará um objeto de propriedades vazio para o sinalizador de recurso fornecido.
 
-![A seção "Variantes do experimento" com a chave da variável "link" foi substituída por "/sales".]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
+![A seção "Experiment Variants" com a chave da variável "link" foi substituída por "/sales".]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
 
 ### Etapa 4: Escolha os usuários a serem direcionados
 
 Use um de seus segmentos ou filtros para escolher seus [usuários-alvo]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Por exemplo, é possível usar o filtro **Variante de Feature Flag Recebida** para redirecionar os usuários que já receberam um teste A/B.
 
-![A página "Target" (Alvo) em um experimento de feature flag com "Received Feature Flag Variant" (Variante de Feature Flag Recebida) destacada na barra de pesquisa do grupo de filtros.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
+![A página "Target" em um experimento de feature flag com "Received Feature Flag Variant" destacada na barra de pesquisa do grupo de filtros.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
 {% alert note %}
 A associação de segmento é calculada quando os flags de recursos são atualizados para um determinado usuário. As alterações são disponibilizadas após a atualização dos recursos de sinalização do seu app, ou quando uma nova sessão é iniciada.

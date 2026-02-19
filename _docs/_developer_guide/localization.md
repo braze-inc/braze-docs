@@ -11,7 +11,7 @@ platform:
 
 # Localization
 
-> Learn about localization and supported languages for the Braze SDK, so you can connect with your users across the globe.
+> Learn about localization and supported languages for the Braze SDK, so you can connect with your users across the globe. For guidance on setting up localized messages, refer to [Localization]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/) in our Messaging fundamentals section.
 
 ## About localization
 

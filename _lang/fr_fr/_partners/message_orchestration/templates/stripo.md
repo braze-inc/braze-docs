@@ -2,7 +2,7 @@
 nav_title: Stripo
 article_title: Stripo
 alias: /partners/stripo
-description: "Cet article de référence présente le partenariat entre Braze et Stripo, un générateur de modèles d'e-mails par glisser-déposer qui vous permet de créer facilement des e-mails sophistiqués avec des éléments interactifs."
+description: "Cet article de référence présente le partenariat entre Braze et Stripo, un générateur de modèles d'e-mails par glisser-déposer permettant de créer des e-mails sophistiqués avec des éléments interactifs."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stripo
 
-> [Stripo](https://stripo.email/) est un générateur de modèles d'e-mails par glisser-déposer qui vous aide à créer et à concevoir des e-mails responsives avec des éléments interactifs. Les utilisateurs de Stripo peuvent également modifier en HTML et décider des éléments à afficher ou à masquer sur différents appareils grâce à l'éditeur de Stripo.
+> [Stripo](https://stripo.email/) est un générateur de modèles d'e-mails par glisser-déposer pour concevoir des e-mails réactifs avec des éléments interactifs. Les utilisateurs de Stripo peuvent également modifier en HTML et décider des éléments à afficher ou à masquer sur différents appareils grâce à l'éditeur de Stripo.
 
 _Cette intégration est maintenue par Stripo._
 
@@ -33,7 +33,7 @@ L'intégration de Braze et Stripo vous permet d'exporter vos e-mails Stripo pers
 
 Créez un e-mail Stripo dans la plateforme Stripo et cliquez sur **Exporter.** 
 
-![Stripo Export]({% image_buster /assets/img_archive/stripo_export.png %})
+![Exportation de Stripo]({% image_buster /assets/img_archive/stripo_export.png %})
 
 ### Étape 2 : Exporter le modèle vers Braze
 
@@ -41,7 +41,7 @@ Dans la boîte de dialogue qui s'affiche, sélectionnez **Braze** comme méthode
 
 Ensuite, entrez votre **nom de compte** (tel que le nom de l'espace de travail), votre **clé API** et votre **instance de cluster**.
 
-![Stripo Form]({% image_buster /assets/img_archive/stripo_form.png %})
+![Formulaire Stripo]({% image_buster /assets/img_archive/stripo_form.png %})
 
 {% alert important %}
 Il s'agit d'une configuration unique, et toutes les prochaines exportations utiliseront automatiquement cette clé API.
@@ -49,6 +49,6 @@ Il s'agit d'une configuration unique, et toutes les prochaines exportations util
 
 ## Utilisation
 
-Recherchez le modèle Stripo qui a été chargé dans la section **Modèles et médias > Modèles d'e-mail** dans votre compte Braze. Vous pouvez maintenant utiliser ce modèle d'e-mail pour commencer à envoyer des messages engageants à vos clients !
+Vous trouverez le modèle Stripo que vous avez téléchargé dans la section **Modèles & Media > Modèles d'e-mail de** votre compte Braze. Vous pouvez désormais utiliser ce modèle d'e-mail pour commencer à envoyer des e-mails attrayants à vos clients !
 
 

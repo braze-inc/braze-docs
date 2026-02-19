@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Geplante API-getriggerte Kampagnen aktualisieren"
+nav_title: "POST: Aktualisieren Sie geplante, durch APIs getriggerte Kampagnen"
 article_title: "POST: Geplante API-getriggerte Kampagnen aktualisieren"
 search_tag: Endpoint
 page_order: 4
@@ -10,18 +10,18 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Update geplant
 {% api %}
 # Aktualisieren Sie geplante, durch APIs getriggerte Kampagnen
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/campaigns/trigger/schedule/update
+/kampagnen/ausloesen/zeitplan/update
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um geplante Kampagnen mit API-Auslösung zu aktualisieren, die im Dashboard erstellt wurden. So können Sie entscheiden, welche Aktion den Versand der Nachricht triggern soll.
 
-Sie können `trigger_properties` übergeben, das als Template in die Nachricht selbst eingefügt wird.
+Sie können `trigger_properties`, die Braze Templates in die Nachricht selbst einfügen.
 
 Beachten Sie, dass Sie zum Versenden von Nachrichten mit diesem Endpunkt eine ID für die Kampagne benötigen, die Sie beim Erstellen einer [API-getriggerten Kampagne]({{site.baseurl}}/api/api_campaigns/) erstellt haben.
 
-Jeder Zeitplan überschreibt den Zeitplan, den Sie in der Anfrage zum Erstellen des Zeitplans oder in früheren Anfragen zum Update des Zeitplans angegeben haben, vollständig. Wenn Sie den Zeitplan beispielsweise ursprünglich auf `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` eingestellt haben und ihn später auf `"schedule" : {"time" : "2015-02-20T14:14:47"}` aktualisieren, wird die Nachricht nun zur angegebenen Zeit in UTC und nicht in der Ortszeit des Nutzers:in gesendet.
+Jeder Zeitplan überschreibt vollständig den Zeitplan, den Sie in der Anfrage zum Erstellen des Zeitplans oder in früheren Anfragen zum Update des Zeitplans angegeben haben. Wenn Sie den Zeitplan beispielsweise ursprünglich auf `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` eingestellt haben und ihn später auf `"schedule" : {"time" : "2015-02-20T14:14:47"}` aktualisieren, sendet Braze die Nachricht zur angegebenen Zeit in UTC, nicht in der Ortszeit des Nutzers:in.
 
-Geplante Trigger, die kurz vor oder während der Zeit, zu der sie gesendet werden sollten, aktualisiert werden, werden nach bestem Wissen und Gewissen aktualisiert, so dass Änderungen in letzter Sekunde auf alle, einige oder keinen Ihrer Nutzer:innen angewendet werden können. Updates werden nicht übernommen, wenn der ursprüngliche Zeitplan die Ortszeit verwendete und die ursprüngliche Zeit in einer beliebigen Zeitzone bereits vergangen ist.
+Geplante Trigger, die kurz vor oder während der Zeit, zu der sie gesendet werden sollten, aktualisiert werden, werden nach bestem Wissen und Gewissen aktualisiert, so dass Braze Änderungen in letzter Sekunde auf alle, einige oder keinen Ihrer Targeting Nutzer:innen anwenden kann. Updates werden nicht übernommen, wenn der ursprüngliche Zeitplan die Ortszeit verwendete und die ursprüngliche Zeit in einer beliebigen Zeitzone bereits vergangen ist.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
 
@@ -29,7 +29,7 @@ Geplante Trigger, die kurz vor oder während der Zeit, zu der sie gesendet werde
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `campaigns.trigger.schedule.update`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 

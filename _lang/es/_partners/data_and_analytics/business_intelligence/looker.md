@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"} Looker
 
 > [Looker](https://looker.com/), una plataforma de análisis de inteligencia empresarial y big data, te permite explorar, analizar y compartir análisis empresariales en tiempo real fácilmente.
 
@@ -70,14 +70,14 @@ Solo se marcarán los usuarios existentes. No puedes utilizar Looks pivotados al
 
 Configura una acción de Looker de Braze con tu clave de API REST de Braze y tu punto final REST.
 
-![La página de configuración de Looker Braze. Aquí puedes encontrar campos para la clave de API de Braze y el punto final de API REST de Braze.]({% image_buster /assets/img/braze-looker-action.png %})
+![La página de configuración de Looker Braze. Aquí puedes encontrar campos para la clave de API Braze y el punto final de API REST Braze.]({% image_buster /assets/img/braze-looker-action.png %})
 
 #### Paso 2: Configurar Looker Develop
 
 Dentro de Looker Develop, selecciona las vistas adecuadas. Añade `braze_id` a la etiqueta de dimensiones y confirma los cambios.
 Esta etiqueta `braze_id` se utiliza para determinar qué campo es la clave única.
 
-```json
+```lookml
 dimension: external_id {
     type: string
     primary_key: yes
@@ -143,9 +143,9 @@ Authorization: Bearer [API_KEY]
 
 ### Segmentar usuarios en Braze {#segment-users}
 
-En Braze, para crear un segmento de estos usuarios marcados, navega a **Segmentos** en **Interacción**, asigna un nombre a tu segmento y selecciona **Looker_Export** como filtro. A continuación, utiliza la opción "incluye valor" y proporciona la bandera del atributo personalizado que asignaste en Looker.
+En Braze, para crear un segmento de estos usuarios marcados, ve a **Segmentos** en **Interacción**, asigna un nombre a tu segmento y selecciona **Looker_Export** como filtro. A continuación, utiliza la opción "incluye valor" y proporciona la bandera del atributo personalizado que asignaste en Looker.
 
-![En el constructor de segmentos Braze, el filtro "looker_export" se establece en "includes_value" y "Looker".]({% image_buster /assets/img/braze_segments.png %})
+![En el constructor de segmentos Braze, el filtro "looker_export" está configurado en "includes_value" y "Looker".]({% image_buster /assets/img/braze_segments.png %})
 
 Una vez guardado, puede hacer referencia a este segmento durante la creación de Canvas o campañas en el paso de segmentación de usuarios.
 

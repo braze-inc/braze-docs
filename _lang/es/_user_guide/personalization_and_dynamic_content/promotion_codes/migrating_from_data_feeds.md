@@ -1,23 +1,23 @@
 ---
-nav_title: Migración de fuentes de datos a códigos promocionales
-article_title: Migración de fuentes de datos a códigos promocionales
-page_order: 0
-description: "Este artículo de referencia proporciona orientación sobre la migración de fuentes de datos a códigos promocionales."
+nav_title: Migrar desde fuentes de datos
+article_title: Migrar de fuentes de datos a códigos promocionales
+page_order: 10
+description: "Este artículo de referencia ofrece orientación sobre la migración de fuentes de datos a códigos promocionales."
 ---
 
-# Migración de fuentes de datos a códigos promocionales
+# Migrar de fuentes de datos a códigos promocionales
 
 {% alert note %}
-Las fuentes de datos están en desuso. Braze recomienda a los clientes que utilicen fuentes de datos que se pasen a las listas de códigos promocionales.
+Las Fuentes de datos están obsoletas. Braze recomienda a los clientes que utilizan Data Feeds que se pasen a las listas de códigos promocionales.
 {% endalert %}
 
 > Esta página te guía en la migración de fuentes de datos a códigos promocionales. Se trata de un proceso sencillo que implica crear manualmente listas de códigos promocionales con la información de tus fuentes de datos y actualizar las referencias de tus mensajes en consecuencia.
 
-## Características y funcionalidad
+## Características y funciones
 
-Hay algunas diferencias entre las listas de códigos promocionales y las fuentes de datos.
+Existen algunas diferencias entre las listas de códigos promocionales y los feeds de datos.
 
-| Característica          | Códigos promocionales | Fuentes de datos   |
+| Característica          | Códigos de promoción | Fuentes de datos   |
 |------------------|-----------------|--------------|
 | Descripciones     | Sí             | No           |
 | Fechas de caducidad | Sí             | No           |
@@ -26,8 +26,8 @@ Hay algunas diferencias entre las listas de códigos promocionales y las fuentes
 
 ## Cómo migrar
 
-Para sustituir una Fuente de datos por una lista de códigos promocionales, haz lo siguiente: 
+Para sustituir una fuente de datos por una lista de códigos de promoción, haga lo siguiente: 
 
-1. Ve a **Configuración de datos** y selecciona **Crear lista de códigos promocionales**.
-2. [Configura tu lista de códigos promocionales]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes).
-3. Navega hasta tus mensajes que anteriormente hacían referencia a la Fuente de datos y actualízalos para utilizar la lista de códigos promocionales.
+1. Vaya a **Configuración de datos** y seleccione **Crear lista de códigos promocionales**.
+2. [Configure su lista de códigos promocionales]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes).
+3. Vaya a los mensajes que anteriormente hacían referencia a la fuente de datos y actualícelos para utilizar la lista de códigos promocionales.

@@ -38,7 +38,7 @@ O Eagle Eye Connect é uma integração bidirecional entre o Braze e o AIR que c
 As tabelas a seguir descrevem os dois tipos de integrações suportadas entre o Braze e o Eagle Eye AIR. O Eagle Eye Connect é o middleware que ativa a troca de dados entre o AIR e os sistemas de parceiros, como o Braze. Para saber mais, consulte a [documentação sobre Braze da Eagle Eye](https://developer.eagleeye.com/docs/braze).
 
 {% tabs local %}
-{% tab de saída %}
+{% tab outbound %}
 <table>
   <thead>
     <tr>
@@ -55,7 +55,7 @@ As tabelas a seguir descrevem os dois tipos de integrações suportadas entre o 
       <td>Olho de águia</td>
       <td>Para Braze API</td>
       <td>
-        Envie dados de fidelidade para os perfis de usuário do Braze como atributos personalizados por meio de eventos personalizados. No Braze, os dados ingeridos podem ser usados para:
+        Envie dados de fidelidade para os perfis de usuários do Braze como atributos personalizados por meio de eventos personalizados. No Braze, os dados ingeridos podem ser usados para:
         <ul>
           <li>segmentar usuários, disparar campanhas</li>
           <li>personalizar envios de mensagens</li>
@@ -73,7 +73,7 @@ As tabelas a seguir descrevem os dois tipos de integrações suportadas entre o 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation"}
 {% endtab %}
 
-{% tab de entrada %}
+{% tab inbound %}
 <table>
   <thead>
     <tr>
@@ -123,7 +123,7 @@ Primeiro, você fornecerá os seguintes detalhes à sua equipe Eagle Eye:
 
 | O usuário fornece            | Descrição |
 |------------------------|-------------|
-| Credenciais da API do Braze  | Compartilhe o endpoint Braze REST, o identificador do app e a chave de API com segurança com o seu contato Eagle Eye. |
+| Credenciais da API do Braze  | Compartilhe seu endpoint Braze REST, identificador de aplicativo e chave de API com segurança com seu contato Eagle Eye. |
 | Correspondência de identificadores    | Determine e compartilhe o identificador de usuário principal para atualizações de perfil que é comum no AIR e no Braze, como ID externo ou e-mail. |
 | Chave de autenticação               | Determine e compartilhe uma chave de autenticação secreta para cada conector de entrada e saída. |
 | Código da moeda          | Compartilhe o código de moeda de 3 dígitos para exibir valores monetários de compra (e.g., USD). |
@@ -131,7 +131,7 @@ Primeiro, você fornecerá os seguintes detalhes à sua equipe Eagle Eye:
 
 ### Etapa 2: Configurar o Eagle Eye Connect 
 
-A equipe do Eagle Eye configurará o Eagle Eye Connect usando os detalhes fornecidos, juntamente com as credenciais exclusivas do AIR API e os eventos de saída para os conectores.
+Sua equipe Eagle Eye configurará o Eagle Eye Connect usando os detalhes fornecidos, juntamente com as credenciais exclusivas do AIR API e os eventos de saída para os conectores.
 
 ### Etapa 3: Configurar ações de comportamento social no AIR
 
@@ -146,7 +146,7 @@ No Braze, você concluirá o seguinte:
 
 ### Etapa 5: Teste sua integração
 
-Faça chamadas API no AIR e observe o fluxo de dados do evento em seu Braze workspace.Validate dados recebidos do AIR e confirme se as atribuições estão sendo atualizadas conforme o esperado.  
+Faça chamadas de API no AIR e observe o fluxo de dados do evento em seu Braze workspace.Validate dados recebidos do AIR e confirme se as atribuições estão sendo atualizadas conforme o esperado.  
 
 Além disso, adicione usuários aos públicos e confirme se as recompensas são emitidas no AIR.
 
@@ -154,7 +154,7 @@ Além disso, adicione usuários aos públicos e confirme se as recompensas são 
 
 Depois que o teste for bem-sucedido, a integração poderá entrar em operação para enviar dados continuamente ao Braze. As mesmas etapas de configuração são necessárias para ambientes de produção no AIR e no Braze
 
-Entre em contato com o seu gerente de sucesso do cliente Eagle Eye para que um recurso seja atribuído a você, para configurar o EE Connect.
+Entre em contato com o seu Gerente de Sucesso do Cliente da Eagle Eye para que um recurso seja atribuído a você, para configurar o EE Connect.
 
 ## Suporte
 

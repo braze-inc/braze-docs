@@ -1,7 +1,7 @@
 ---
 nav_title: Localization
 article_title: Localization
-page_order: 7
+page_order: 8
 description: "This reference article covers the basics of localization, lists the benefits of different orchestration approaches across campaigns and Canvases, and lists different ways users can handle personalization in their messaging."
 tool:
     - Campaigns
@@ -141,7 +141,7 @@ Content Blocks can also be utilized as a translation management process where co
 {% subtab API %}
 
 Create a catalog via the following API call:
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -175,7 +175,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs' \
 
 Add items via the following API call:
 
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs/translations/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \

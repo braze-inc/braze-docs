@@ -18,15 +18,26 @@ Cada espacio de trabajo puede soportar hasta 200 campañas de Banner activas. Si
 
 ## Para las campañas que comparten un emplazamiento, ¿qué Banner se muestra primero?
 
-Si un usuario cumple los requisitos para varias campañas de Banner que comparten la misma ubicación, se mostrará el Banner con la prioridad más alta. Para más información, consulta [Prioridad de los banners]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "desarrollador" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %}).
+Si un usuario cumple los requisitos para varias campañas de Banner que comparten la misma ubicación, se mostrará el Banner con la prioridad más alta. Para más información, consulta [Prioridad del Banner]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %}).
 
 ## ¿Puedo utilizar banners en mi fuente existente de tarjetas de contenido?
 
 Los banners son diferentes de las tarjetas de contenido, lo que significa que no puedes utilizar banners y tarjetas de contenido en la misma fuente. Para sustituir las fuentes existentes de tarjetas de contenido por banners, tendrás que [crear ubicaciones en tu aplicación o sitio web]({{site.baseurl}}/developer_guide/banners/placements/).
 
+## ¿Puedo desencadenar un banner en función de las acciones de los usuarios?
+
+Aunque los banners no admiten [la entrega basada en acciones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery), puedes dirigirte a los usuarios en función de sus acciones anteriores utilizando la segmentación y la prioridad.
+
+Por ejemplo, para mostrar un Banner especial sólo a los usuarios que hayan completado un evento de `purchase`:
+1. **Orientación:** En tu campaña, dirígete a un segmento de usuarios que hayan realizado el evento personalizado `purchase` al menos una vez.
+2. **Prioridad:** Si tienes un Banner general para todos los usuarios y este Banner específico para los compradores que se dirigen a la misma ubicación, establece la prioridad del Banner específico en **Alta** y la del Banner general en **Media** o **Baja**.
+
+Cuando el usuario inicia una nueva sesión o actualiza Banners después de realizar la acción, Braze evalúa su elegibilidad. Si coinciden con el segmento "Compra", se mostrará el Banner de alta prioridad.
+
+
 ## ¿Pueden los usuarios descartar manualmente un Banner?
 
-No. Los usuarios no pueden descartar manualmente las Banners. Sin embargo, puedes controlar la visibilidad del Banner administrando la elegibilidad de los segmentos de usuarios. Cuando un usuario ya no cumpla los criterios de segmentación de una campaña de Banner, no volverá a verla en su próxima sesión.
+No. Los usuarios no pueden rechazar manualmente los Banners. Sin embargo, puedes controlar la visibilidad del Banner gestionando la elegibilidad de los segmentos de usuarios. Cuando un usuario ya no cumpla los criterios de segmentación de una campaña de Banner, no volverá a verla en su próxima sesión.
 
 Por ejemplo, si muestras un Banner promocional hasta que un usuario realice una compra, el registro de un evento como `purchase_completed` puede eliminar a ese usuario del segmento objetivo, ocultando de forma efectiva el Banner en sesiones posteriores.
 
@@ -36,7 +47,7 @@ Sí. Puedes utilizar el [endpoint`/campaigns/data_series` ]({{site.baseurl}}/api
 
 ## ¿Cuándo se segmenta a los usuarios?
 
-Los usuarios se segmentan al principio de la sesión. Si los segmentos segmentados de una campaña dependen de atributos personalizados, eventos personalizados u otros atributos de segmentación, deben estar presentes en el usuario al inicio de la sesión.
+Los usuarios se segmentan al inicio de la sesión. Si los segmentos segmentados de una campaña dependen de atributos personalizados, eventos personalizados u otros atributos de segmentación, deben estar presentes en el usuario al inicio de la sesión.
 
 ## ¿Cómo puedo componer Banners para garantizar la menor latencia?
 
@@ -48,4 +59,10 @@ No. Sin embargo, la mayoría de las etiquetas de Liquid son compatibles con los 
 
 ## ¿Puedo capturar eventos de clic?
 
-Los eventos de clic sólo se capturan si se establece una acción al hacer clic en un elemento `logClick` y se llama utilizando el [puente JS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge).
+Sí. Cómo se capturan los eventos de clic depende de cómo se representa tu Banner:
+
+- **Componentes estándar del editor:** Si tu Banner utiliza componentes estándar del editor (imágenes, botones, texto), los clics se siguen automáticamente al utilizar los métodos de inserción del SDK.
+- **Bloques de código personalizados:** Si tu Banner utiliza el bloque de editor de código personalizado, debes llamar a `brazeBridge.logClick()` desde dentro de tu HTML personalizado para hacer un seguimiento de los clics. Esto se aplica incluso cuando se utilizan los métodos del SDK para insertar y renderizar el Banner. Funciona igual que el [puente JavaScript]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) para mensajes HTML dentro de la aplicación.
+- **IU personalizada (headless):** Si estás construyendo una interfaz de usuario totalmente personalizada utilizando las propiedades personalizadas del Banner en lugar de renderizar el HTML del Banner, llama a `logClick()` en el objeto Banner desde el código de tu aplicación.
+
+Para más información, consulta [Registrar clics]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks).

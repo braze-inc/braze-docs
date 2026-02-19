@@ -70,7 +70,7 @@ Sobald Sie sicher sind, dass Sie PSIDs erhalten, koordinieren Sie dies mit Ihren
 
 ### Schritt 3: Richten Sie Ihr Webhook Template ein
 
-Gehen Sie unter **Templates und Medien** zu **Webhook Templates** und wählen Sie das **Facebook Messenger Webhook Template**.
+Gehen Sie unter **Templates & Medien** zu **Webhook Templates** und wählen Sie das **Facebook Messenger Webhook Template**.
 
 1. Geben Sie einen Template-Namen an und fügen Sie Teams und Tags hinzu, falls erforderlich.
 2. Geben Sie Ihre Nachricht ein oder wählen Sie ein Template aus den [von Facebook zur Verfügung gestellten](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages) Nachrichten. Sie können auch die [Art](https://developers.facebook.com/docs/messenger-platform/send-messages#message_types) Ihrer Nachricht oder Ihren [Tag](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags) auswählen.
@@ -89,7 +89,7 @@ Wenn Sie die Nachricht erfolgreich empfangen haben, können Sie die Einstellunge
 
 Sobald Sie diese Integration eingerichtet haben, können Sie Nutzer:innen des Facebook Messenger als Targeting nutzen. Wenn Sie Nachrichten nicht über die Telefonnummern der Nutzer versenden und planen, Messenger-Nachrichten wiederholt zu versenden, sollten Sie für alle Nutzer:innen [ein Segment erstellen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment), für die die Messenger ID als angepasstes Attribut existiert, und das [Analytics Tracking]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) aktivieren, um Ihre Messenger-Abonnementraten im Laufe der Zeit zu verfolgen. 
 
-![Segment Filter "messenger_id" auf "ist nicht leer" gesetzt.]({% image_buster /assets/img_archive/fbm-segmentation.png %})
+![Segmente Filter "messenger_id" auf "ist nicht leer" gesetzt.]({% image_buster /assets/img_archive/fbm-segmentation.png %})
 
 Wenn Sie sich dafür entscheiden, kein spezielles Segment für Messenger Abonnenten zu erstellen, stellen Sie sicher, dass Sie einen Filter für die vorhandene Messenger ID einfügen, um Fehler zu vermeiden.
 

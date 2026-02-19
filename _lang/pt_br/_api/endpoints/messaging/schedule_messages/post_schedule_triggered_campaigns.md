@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Agendar campanhas disparadas por API"
+nav_title: "POST: Agende campanhas disparadas pela API"
 article_title: "POST: Agendar campanhas disparadas por API"
 search_tag: Endpoint
 page_order: 4
@@ -28,7 +28,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## Corpo da solicitação
 
@@ -147,8 +147,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ### Exemplo de resposta bem-sucedida
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-API-KEY-HERE
 {
 {
     "dispatch_id": "dispatch_identifier",

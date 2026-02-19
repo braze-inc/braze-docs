@@ -15,7 +15,7 @@ Sie können einen {% raw %}`{% landing_page_url %}`{% endraw %} Liquid-Tag zu je
 
 {% raw %}
 ```html
-<a href=" {% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
+<a href="{% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
 ```
 {% endraw %}
 

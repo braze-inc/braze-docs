@@ -51,10 +51,10 @@ Vous pouvez déployer une campagne de notifications push ou un canvas qui agira 
 
 Dans Braze, mettez en place une campagne basée sur des actions qui enverra des messages en fonction d'un emplacement défini. Pour votre déclencheur, utilisez un événement personnalisé de `bluedot_entry` ou `bluedot_exit` comme indiqué dans la capture d'écran suivante :
 
-![Une campagne basée sur les actions dans l'étape de distribution. Ici, vous disposez de deux options de planification qui enverront la campagne si un utilisateur effectue un événement personnalisé `bluedot_entry` ou `bluedot_exit`.]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
+![Une campagne basée sur les actions dans l'étape de distribution. Ici, vous disposez de deux options de planification qui enverront la campagne si un utilisateur effectue une action personnalisée `bluedot_entry` ou `bluedot_exit` event.]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
 
 #### Ciblage des utilisateurs
 
 Veillez à cibler **Tous les utilisateurs** pour votre espace de travail.
-![Une campagne basée sur l'action avec l'étape des utilisateurs cibles vous encourageant à sélectionner "Tous les utilisateurs" comme segmentation souhaitée.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
+![Une campagne basée sur l'action avec l'étape des utilisateurs cibles vous encourageant à sélectionner "Tous les utilisateurs" comme le ciblage souhaité segment.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
 

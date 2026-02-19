@@ -21,7 +21,7 @@ Una vez que tengas tus Infillion Beacons configurados e integrados en tu aplicac
 Para registrar un evento personalizado cuando un usuario entra en un lugar, introduce este código en el método `didBeginVisit`:
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance] logCustomEvent:@"Entered %@", visit.place.name];

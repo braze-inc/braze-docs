@@ -1,6 +1,6 @@
 ---
 nav_title: API-ausgelöste und aktionsbasierte Kampagnen
-article_title: Testen von API-getriggerten und aktionsbasierten Kampagnen
+article_title: Testen Sie API-getriggerte und aktionsbasierte Kampagnen
 page_order: 2
 page_type: reference
 description: "Dieser Referenzartikel erklärt, wie Sie API-getriggerte und aktionsbasierte Kampagnen testen können."

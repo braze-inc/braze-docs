@@ -13,7 +13,7 @@ search_tag: Partner
 
 _This integration is maintained by Punchh._
 
-## About the integration
+## 통합 정보
 
 Using the Punchh coupon framework and Braze, you can achieve the following scenarios:
 
@@ -29,9 +29,9 @@ Using the Punchh coupon framework and Braze, you can achieve the following scena
     - Dynamic coupon generation token: This is a system-generated security token for encryption.
     - Dynamic coupon generation URL: This URL will be embedded in the email as a link or image, as required by the business.
 
-![The form for creating a coupon campaign in Punchh.]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
+![Punchh에서 쿠폰 캠페인을 생성하기 위한 양식입니다.]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
 
-### Step 2: Generate signature and construct URL
+### 2단계: Generate signature and construct URL
 
 The JWT.IO library decodes, verifies, and generates JSON web tokens, an open, industry-standard RFC 7519 method for representing claims securely between two parties. 
 
@@ -96,7 +96,7 @@ https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX?sign
 
 When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web page, where their generated coupon will be displayed.
 
-![Example confirmation message after a user successfully generates a coupon code.]({% image_buster /assets/img/punchh/punchh7.png %})
+![사용자가 쿠폰 코드를 성공적으로 생성한 후의 예시 확인 메시지입니다.]({% image_buster /assets/img/punchh/punchh7.png %})
 
 #### Extracting code via JSON as plain text
 
@@ -135,7 +135,7 @@ To link the coupon code inside an image:
 {% endtab %}
 
 {% tab example output %}
-![Rendered output of the coupon code image tag.]({% image_buster /assets/img/punchh/punchh9.png %})
+![쿠폰 코드 이미지 태그의 렌더링된 출력입니다.]({% image_buster /assets/img/punchh/punchh9.png %})
 {% endtab %}
 {% endtabs %}
 

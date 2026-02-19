@@ -13,7 +13,7 @@ search_tag: Partner
 
 _This integration is maintained by Dynamics 365 Customer Insights._
 
-## About the integration
+## 통합 정보
 
 The Braze and Dynamics 365 Customer Insights integration allows you to export customer segments to Braze to use in campaigns or Canvases.
 
@@ -46,7 +46,7 @@ In Customer Insights, navigate to **Admin > Connections**. Next, select **Add co
 2. Create a segment of the users you want Microsoft to update through Dynamics 365 Customer Insights.
 3. Capture the segment's **API Identifier**
 
-### Step 3: Configure an export
+### 3단계: Configure an export
 
 You can configure this export if you have access to a connection of this type. For more information, refer to [Exports overview](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-destinations#set-up-a-new-export).
 
@@ -63,7 +63,7 @@ Note that saving an export does not run the export immediately. This export will
 
 ### Using this integration
 
-After your segments are successfully exported to Braze, you can find them as custom attributes on user profiles. The custom attribute will be named with the Braze segment API identifier that was entered while configuring the export connection. For example, `"Segment_API_Identifier": "0000-0000-0000"`
+After your segments are successfully exported to Braze, you can find them as custom attributes on user profiles. The custom attribute will be named with the Braze segment API identifier that was entered while configuring the export connection. 예: `"Segment_API_Identifier": "0000-0000-0000"`
 
 To create a segment of these users in Braze, navigate to **Segments**, create a new segment, and select **Custom Attributes** as your filter. From here, you can choose the Dynamics 365 synced custom attribute. After the segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 

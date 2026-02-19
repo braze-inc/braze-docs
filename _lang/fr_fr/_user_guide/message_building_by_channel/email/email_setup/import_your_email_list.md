@@ -1,26 +1,26 @@
 ---
-nav_title: "Importation de votre liste d'e-mails"
-article_title: "Importer votre liste d'e-mails dans Braze"
+nav_title: "Importez votre liste d'e-mails"
+article_title: "Importez votre liste d'e-mails dans Braze"
 page_order: 4
 page_type: reference
-description: "Cet article de référence couvre les meilleures pratiques pour l'importation de votre liste d'e-mails dans Braze."
+description: "Le présent article de référence couvre les bonnes pratiques d’importation de votre liste d’e-mails dans Braze."
 channel: email
 
 ---
 
-# Importer votre liste d'e-mails dans Braze {#importing-email-lists}
+# Importez votre liste d'e-mails dans Braze {#importing-email-lists}
 
-> Une étape importante pour devenir un expéditeur d'e-mails performant consiste à s'assurer que vous disposez d'une liste d'e-mails de grande qualité. Une bonne gestion des listes d'e-mails peut améliorer votre livrabilité et vous permettre d'obtenir des résultats de campagne plus précis et plus nets.
+> Une étape importante pour vous définir comme un expéditeur de courrier électronique à succès est de vous assurer que vous avez une liste de courriels de haute qualité. Une gestion appropriée de la liste des courriels peut améliorer votre capacité de livrabilité et vous donner des résultats de campagne plus précis et plus propres.
 
-## Points à prendre en compte avant d'importer
+## Considérations à prendre en compte avant l’importation
 
 {% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
-### Validez vos listes d'e-mails
+### Validez vos listes d’e-mails
 
-Avant d'importer votre liste d'e-mails dans Braze, vérifiez qu'elle ne contient que des adresses e-mail authentiques. Un taux de rebond élevé peut nuire à la réputation de votre expéditeur d'e-mails. 
+Avant d’importer votre liste d’e-mails dans Braze, vérifiez qu’elle comprend uniquement des adresses e-mail authentiques. Un taux de rebond élevé peut endommager votre réputation d’expéditeur de courrier électronique. 
 
-Les services de nettoyage de listes d'e-mails peuvent le faire pour vous en déterminant si l'adresse e-mail suit la syntaxe correcte et possède les propriétés physiques d'une adresse e-mail, en vérifiant le domaine de l'e-mail et en se connectant au serveur d'e-mail pour authentifier l'existence de l'adresse e-mail.
+Les services de nettoyage des listes d’e-mails peuvent faire cela pour vous en déterminant si l’adresse e-mail respecte la syntaxe correcte et possède les propriétés physiques d’une adresse e-mail, en vérifiant le domaine de messagerie et en se connectant au serveur de messagerie pour s’authentifier si l’adresse e-mail existe.
 
 ### Vérifier si une adresse e-mail est déjà associée à un utilisateur
 
@@ -30,17 +30,17 @@ Nous vous recommandons vivement de rechercher des adresses e-mail uniques lors d
 
 Par exemple, supposons que vous ayez des profils en double, mais que certains événements et attributs personnalisés ne se trouvent que sur un seul profil. Lorsque vous essayez de déclencher des campagnes ou des Canvases avec plusieurs critères, Braze ne peut pas identifier l'utilisateur comme éligible parce qu'il y a deux profils utilisateur. Par ailleurs, si une campagne cible une adresse e-mail partagée par deux utilisateurs, la page **Recherche d'utilisateurs** indiquera que les deux profils utilisateurs ont reçu la campagne.
 
-### Identifiez vos utilisateurs engagés
+### Identifier vos utilisateurs engagés
 
-Afin d'identifier les utilisateurs les plus engagés, commencez par supprimer les utilisateurs les plus inactifs. La meilleure pratique consiste à ne pas envoyer d'e-mail aux utilisateurs qui n'ont pas répondu à un e-mail depuis plus de six mois, car cela peut nuire à votre réputation d'expéditeur d'e-mails. Lors de l'importation de votre liste d'e-mails, veillez à n'inclure que les utilisateurs qui ont ouvert un e-mail de votre part au cours des six derniers mois.
+Afin d’identifier vos utilisateurs les plus engagés, supprimez d’abord les utilisateurs inactifs depuis longtemps. Il est recommandé de ne pas envoyer de courrier électronique à des utilisateurs qui n’ont pas fait l’objet d’un e-mail dans plus de six mois, car cela peut endommager votre réputation d’expéditeur de courrier électronique. Lors de l'importation de votre liste d'e-mails, veillez à n'inclure que les utilisateurs qui ont ouvert un e-mail de votre part au cours des six derniers mois.
 
 À long terme, vous devriez également envisager de mettre en œuvre une [politique de temporisation]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
 
-### Évitez les listes de suppression
+### Éviter les listes de suppression
 
-Si vous quittez un fournisseur d'e-mail existant, veillez à ne pas importer d'utilisateurs à partir d'une liste de suppression. Les listes de suppression ont pour fonctionnalité de répertorier les adresses e-mail qui se sont désabonnées, qui ont marqué vos e-mails comme spam ou qui ont fait l'objet d'un échec d'envoi définitif.
+Si vous mettez en transition un fournisseur d’e-mails existant, assurez-vous de ne pas importer les utilisateurs à partir d’une liste de suppression. Les listes de suppression contiennent des adresses e-mail qui se sont désabonnées, qui ont traité vos e-mails comme des courriers indésirables ou qui ont généré un échec d'envoi définitif.
 
-## Méthodes d'importation
+## Méthodes d’importation
 
-Une fois votre liste d'e-mails préparée, il existe plusieurs façons d'importer des utilisateurs dans Braze, notamment via l'API REST de Braze ou des fichiers CSV. Pour en savoir plus, consultez notre article consacré à l ['importation d'utilisateurs]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).
+Une fois que vous avez préparé votre liste d’e-mails, il existe plusieurs façons d’importer des utilisateurs dans Braze, par exemple via l’API REST de Braze ou des fichiers CSV. Pour en savoir plus, consultez notre article consacré à l ['importation d'utilisateurs]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).
 

@@ -7,14 +7,14 @@
 Braze SDK에서 네트워크 오프라인 모드를 활성화하려면 다음 예제를 참조하세요.
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 Braze.setOutboundNetworkRequestsOffline(true);
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 Braze.setOutboundNetworkRequestsOffline(true)

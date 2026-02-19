@@ -1,5 +1,5 @@
 ---
-nav_title: PA multisection avec icônes d’immobilisations
+nav_title: MS LP avec icônes FA
 layout: dev_guide
 
 page_order: 1.3

@@ -8,7 +8,7 @@ search_rank: 2
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Using Liquid
 
-> This article will show how you can use a variety of user attributes to dynamically insert personal information into your messaging.
+> This article shows how you can use a variety of user attributes to dynamically insert personal information into your messaging.
 
 Liquid is an open-source template language developed by Shopify and written in Ruby. You can use it in Braze to pull user profile data into your messages and customize that data. For example, you can use Liquid tags to create conditional messages, such as sending different offers based on a user's subscription anniversary date. Additionally, filters can manipulate data, like formatting a user's registration date from a timestamp into a more readable format, such as "January 15, 2022." For further details on Liquid syntax and its capabilities, refer to [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
@@ -35,6 +35,10 @@ Or...
 ```
 Hi Valued User, thanks for using the App!
 ```
+
+{% alert important %}
+HTML comments (`<!-- -->`) are removed before any Liquid is read, so Liquid tags within HTML comments **do not** render in your message. For proper rendering, make sure all the Liquid tags you want to use are outside of HTML comments.
+{% endalert %}
 
 ## Supported values to substitute
 
