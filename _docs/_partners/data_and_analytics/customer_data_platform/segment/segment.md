@@ -66,7 +66,7 @@ When using Segment's device-mode, you do not need to integrate the Braze SDK dir
 {% endalert %}
 
 {% alert important %}
-For device-mode integrations on mobile, you must add the Braze destination plugin to your app in addition to configuring the destination in the Segment dashboard. The Segment SDK does not include the Braze plugin by default — without it, the Segment SDK cannot forward data or mapped method calls to Braze, and features like push, in-app messages, and Content Cards won't work. See the platform-specific tabs below for installation instructions.
+For device-mode integrations on mobile, you must add the Braze destination plugin to your app in addition to configuring the destination in the Segment dashboard. The Segment SDK does not include the Braze plugin by default—without it, the Segment SDK cannot forward data or mapped method calls to Braze, and features like push, in-app messages, and Content Cards won't work. See the platform-specific tabs below for installation instructions.
 {% endalert %}
 
 When using a device-mode connection, similar to integrating the Braze SDK natively, the Braze SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
@@ -117,7 +117,7 @@ The Braze SDK you use will depend on which Segment SDK you use:
 
 To set up Braze as a device-mode destination for your iOS source, choose **Actions** as the **Destination framework**, then select **Save**. 
 
-To complete the side-by-side integration, you must add the [Braze Swift destination plugin](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/) to your iOS app. This plugin bridges the Segment SDK and the Braze SDK, allowing device-mode data to flow to Braze. Follow the Segment installation instructions to add the plugin dependency (via Swift Package Manager or CocoaPods) and initialize it with your Segment analytics instance.
+To complete the side-by-side integration, you must add the [Braze Swift destination plugin](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/) to your iOS app. This plugin bridges the Segment SDK and the Braze SDK, allowing device-mode data to flow to Braze. Follow the Segment installation instructions to add the plugin dependency (through Swift Package Manager or CocoaPods) and initialize it with your Segment analytics instance.
 
 The source code for the [iOS device mode](https://github.com/braze-inc/braze-segment-swift) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
