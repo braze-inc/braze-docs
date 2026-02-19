@@ -283,7 +283,7 @@ The following keys are reserved and cannot be used as purchase properties:
 
 ## Supported currencies
 
-Braze supports the following ISO 4217 Alphabetic Currency Codes. Any other currency symbol you provide will log a warning and the purchase will not be logged to Braze.
+Braze supports the following currency symbols. Any other currency symbol you provide will log a warning and the purchase will not be logged to Braze.
 
 - `AED`, `AFN`, `ALL`, `AMD`, `ANG`, `AOA`, `ARS`, `AUD`, `AWG`, `AZN`
 - `BAM`, `BBD`, `BDT`, `BGN`, `BHD`, `BIF`, `BMD`, `BND`, `BOB`, `BRL`
