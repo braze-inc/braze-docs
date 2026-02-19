@@ -12,7 +12,7 @@ tool: Currents
 
 > [Amazon Redshift](https://aws.amazon.com/redshift/) is a popular data warehouse that runs on Amazon Web Services alongside Amazon S3. Braze data from Currents is structured for direct transfer to Redshift.
 
-The following walks you through how to transfer data from Amazon S3 to Redshift through an Extract, Transform, Load (ETL) process. For the full source code, refer to the Currents examples [GitHub repository](https://github.com/Appboy/currents-examples).
+The following describes how to transfer data from Amazon S3 to Redshift through an Extract, Transform, Load (ETL) process. For the full source code, refer to the Currents examples [GitHub repository](https://github.com/Appboy/currents-examples).
 
 {% alert important %}
 This is only one of many options you can choose from when it comes to transferring your data to places that would be most advantageous to you.
@@ -47,9 +47,9 @@ If you have not done so, follow the [AWS documentation](http://docs.aws.amazon.c
 
 If your Redshift cluster is in a VPC, you must configure the VPC to allow connections from the server that you are running the S3 Loader on. Go into your Redshift Cluster and select the VPC Security Groups entry that you want the loader to connect to. Then, add a new inbound rule: **Type** = Redshift, **Protocol** = TCP, **Port** = the port for your cluster, **Source** = the IP of the server running the loader (or "Anywhere" for testing).
 
-### IAM user with S3 full access
+### Identity and Access Management (IAM) user with S3 full access
 
-The S3 loader requires read access to the files containing your Currents data, and full access to the location for the manifest files that it generates for the Redshift `COPY` commands. Create a new IAM user with the `AmazonS3FullAccess` permission from the [IAM console](https://console.aws.amazon.com/iam/home#/users). Save the credentials, as you'll need to pass them to the loader.
+The S3 loader requires read access to the files containing your Currents data, and full access to the location for the manifest files that it generates for the Redshift `COPY` commands. Create a new Identity and Access Management (IAM) user with the `AmazonS3FullAccess` permission from the [IAM console](https://console.aws.amazon.com/iam/home#/users). Save the credentials, as you'll need to pass them to the loader.
 
 You can pass the access credentials to the loader through environment variables, the shared credential file (`~/.aws/credentials`), or the [AWS config file](http://boto3.readthedocs.io/en/latest/guide/configuration.html#configuring-credentials). Alternatively, you may include them directly in the loader by assigning them to the `aws_access_key_id` and the `aws_secret_access_key` fields within an `S3LoadJob` object, but we do not recommend hard coding credentials within your source code.
 
@@ -112,7 +112,7 @@ if __name__ == '__main__':
 
 ### Credentials
 
-In order to run the loader, you must first provide the `host`, `port`, and `database` of your Redshift cluster as well as the `user` and `password` of a Redshift user that can run `COPY` queries. Additionally, you must provide the ARN of the Redshift role with S3 read access that you created in a previous section.
+To run the loader, you must first provide the `host`, `port`, and `database` of your Redshift cluster as well as the `user` and `password` of a Redshift user that can run `COPY` queries. Additionally, you must provide the ARN of the Redshift role with S3 read access that you created in a previous section.
 
 ```
 host = '{YOUR_CLUSTER}.redshift.amazonaws.com'
