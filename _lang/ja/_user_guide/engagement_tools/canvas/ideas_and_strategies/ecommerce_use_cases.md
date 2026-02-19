@@ -61,7 +61,7 @@ e コマースイベントは、[推奨イベント]({{site.baseurl}}/recommende
 
 **Ecommerce Source** および**Total Revenue** などのeCommerce フィルタを使用して、セグメンテータ内の**Ecommerce** セクションに移動して、ユーザをeCommerce フィルタでセグメント化します。 
 
-eコマースフィルターsとその定義の一覧については、[セグメントフィルターs]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)を参照し、"eCommerce"検索カテゴリを選択してください。
+eコマースフィルターとその定義の一覧については、[セグメントフィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)を参照し、"eCommerce"検索カテゴリを選択してください。
 
 ![セグメントフィルターは"Ecommerce"フィルター sでドロップダウンします。]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:50%"}
 

@@ -8,11 +8,11 @@
 
 テストSegmentを設定したら、それを使用してBraze メッセージング チャネルs をテストできます。正しく設定されている場合、これは1 回だけ行う必要があります。
 
-試験Segmentを設定するには、**Segment s** に移動し、新しいSegmentを作成します。**フィルターを追加**を選択し、試験フィルターsのいずれかを選択します。
+試験Segmentを設定するには、**Segment s** に移動し、新しいSegmentを作成します。**フィルターを追加**を選択し、試験フィルターのいずれかを選択します。
 
 ![ターゲットステップで使用可能なフィルターを表示するBraze試験キャンペーン。]({% image_buster /assets/img_archive/testmessages1.png %})
 
-テストフィルターs では、指定したメールアドレスまたは[外部ユーザー ID]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids) を持つユーザーs のみがテストメッセージを送信するようにできます。
+テストフィルター では、指定したメールアドレスまたは[外部ユーザー ID]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids) を持つユーザー のみがテストメッセージを送信するようにできます。
 
 ![「テスト」という項目の下にいくつかのフィルターがリストされたドロップダウンメニュー]({% image_buster /assets/img_archive/testmessages2.png %})
 
@@ -22,17 +22,17 @@
 |------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | `equals`      | これにより、指定したメールまたはユーザー IDと完全に一致するものが検索されます。これは、1 つのメールまたはユーザー ID に関連付けられたデバイスにのみテストキャンペーンを送信する場合に使用します。 |
 | `does not equal` | 特定のメールまたはユーザー IDを試験キャンペーンsから除外する場合に使用します。 |
-| `matches`     | これにより、指定した検索語句の一部と一致するメールの住所またはユーザー IDs を持つユーザーs が検索されます。これを使用して、`@yourcompany.com` アドレスを持つユーザーs のみを検索できます。これにより、自分のチームの全員にメッセージを送信できます。 |
+| `matches`     | これにより、指定した検索語句の一部と一致するメールの住所またはユーザー IDs を持つユーザー が検索されます。これを使用して、`@yourcompany.com` アドレスを持つユーザー のみを検索できます。これにより、自分のチームの全員にメッセージを送信できます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 "`matches`"オプションを使用し、メールの住所を| 文字で区切ることで、複数のメールを選択できます。例: "`matches`" "`email1@braze.com` | `email2@braze.com`"複数の演算子を組み合わせることもできます。たとえば、テストSegmentには、"`matches`" "`@braze.com`" および" `does not equal`" " `sales@braze.com`" という別のフィルターを含めることができます。 
 
-テストフィルターs をテストSegmentに追加した後、**プレビュー** を選択するか、**設定** > **CSV エクスポートすべてのユーザーデータ** を選択して、そのSegmentのユーザーデータをCSVファイルにエクスポートすることで、動作していることを確認できます。
+テストフィルター をテストSegmentに追加した後、**プレビュー** を選択するか、**設定** > **CSV エクスポートすべてのユーザーデータ** を選択して、そのSegmentのユーザーデータをCSVファイルにエクスポートすることで、動作していることを確認できます。
 
 ![「セグメントの詳細」というタイトルの Braze キャンペーンのセクション]({% image_buster /assets/img_archive/testmessages3.png %})
 
 {% alert note %}
-SegmentのユーザーデータをCSVファイルにエクスポートすることは、ユーザーsのサンプルのみがプレビューに表示され、すべてのユーザーsが含まれているわけではないため、最もACキュレートな確認方法です。
+SegmentのユーザーデータをCSVファイルにエクスポートすることは、ユーザーのサンプルのみがプレビューに表示され、すべてのユーザーが含まれているわけではないため、最もACキュレートな確認方法です。
 {% endalert %}
 
 ### ステップ 2:メッセージを送信する
@@ -126,7 +126,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {BRAZ
 | placeholder         | 説明                                               |
 |---------------------|-----------------------------------------------------------|
 | `BRAZE_API_KEY`      | 認証に使用するBraze API キー。Braze で、**Settings** > **API Keys** に移動してキーを見つけます。 |
-| `EXTERNAL_USER_ID` | 指定したユーザーにメールを送信するために使用する外部ユーザー ID。Brazeで、**Audience**> **検索ユーザーs**に移動し、ユーザーを検索します。 |
+| `EXTERNAL_USER_ID` | 指定したユーザーにメールを送信するために使用する外部ユーザー ID。Brazeで、**Audience**> **検索ユーザー**に移動し、ユーザーを検索します。 |
 | `CUSTOM_KEY`         | (オプション) 追加データ用のカスタムキー。              |
 | `CUSTOM_VALUE`       | (オプション) カスタムキーに割り当てられたカスタム値。    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
