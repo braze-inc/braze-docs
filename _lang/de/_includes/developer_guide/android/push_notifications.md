@@ -557,6 +557,74 @@ Braze.configure(this, brazeConfig)
 
 Wenn Sie Deeplinks anpassen möchten, müssen Sie einen Push-Callback erstellen, der auf empfangene Push-Nachrichten und geöffnete Absichten von Braze wartet. Weitere Informationen finden Sie unter [Verwendung eines Callbacks für Push-Ereignisse]({{site.baseurl}}/developer_guide/push_notifications/customization#android_using-a-callback-for-push-events).
 
+## Umgang mit Benachrichtigungen im Vordergrund
+
+Wenn eine Push-Benachrichtigung eintrifft, während Ihre App auf Android im Vordergrund ist, wird sie standardmäßig automatisch angezeigt. Damit Braze die Nutzdaten der Push-Benachrichtigung (für Analytics Tracking, Deeplinks und angepasste Verarbeitung) verarbeiten kann, leiten Sie die eingehenden Push-Daten innerhalb Ihrer `FirebaseMessagingService.onMessageReceived` Methode an Braze weiter.
+
+### Funktionsweise
+
+Wenn Sie `BrazeFirebaseMessagingService.handleBrazeRemoteMessage` aufrufen, stellt Braze fest, ob es sich bei der Nutzlast um eine Push-Benachrichtigung von Braze handelt, und wenn ja, wird die Benachrichtigung mit der Methode `NotificationManagerCompat` erstellt und angezeigt. Im Gegensatz zu iOS zeigt Android Benachrichtigungen unabhängig davon an, ob sich die App im Vorder- oder Hintergrund befindet.
+
+{% tabs %}
+{% tab JAVA %}
+```java
+package com.example.push;
+
+import com.braze.push.BrazeFirebaseMessagingService;
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+
+public class MyFirebaseMessagingService extends FirebaseMessagingService {
+    @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        super.onMessageReceived(remoteMessage);
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+package com.example.push
+
+import com.braze.push.BrazeFirebaseMessagingService
+import com.google.firebase.messaging.FirebaseMessagingService
+import com.google.firebase.messaging.RemoteMessage
+
+class MyFirebaseMessagingService : FirebaseMessagingService() {
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        super.onMessageReceived(remoteMessage)
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+Weitere Informationen finden Sie im [Beispiel für die Integration von Firebase](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseMessagingService.kt) im Braze Android SDK Repository.
+
+### Anpassen des Verhaltens im Vordergrund
+
+Wenn Sie ein angepasstes Verhalten im Vordergrund wünschen, z. B. die Unterdrückung der Systembenachrichtigung oder die Anzeige einer In-App UI, können Sie dies tun:
+
+- Verwenden Sie `subscribeToPushNotificationEvents`, um auf Push-Ereignisse zu reagieren und Deeplinks mit der Methode `BrazeNotificationUtils.routeUserWithNotificationOpenedIntent` zu behandeln. Weitere Informationen finden Sie im [Firebase Push-Beispiel](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt).
+- Erstellen und versenden Sie Ihre eigene Benachrichtigung mit einem angepassten `IBrazeNotificationFactory`, oder unterdrücken Sie die Benachrichtigung, indem Sie `notificationManager.notify` nicht in Ihrem Bearbeitungspfad aufrufen.
+
+Weitere Informationen zum Anpassen von Benachrichtigungen finden Sie unter [Benutzerdefinierte Benachrichtigungsfabrik]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#custom-notification-factory).
+
 #### Erstellenvon angepassten Deeplinks
 
 Befolgen Sie die Anweisungen in der [Dokumentation für Android-Entwickler](http://developer.android.com/training/app-indexing/deep-linking.html):in zum Thema Deeplinks setzen, wenn Sie Ihrer App noch keine Deeplinks hinzugefügt haben. Weitere Informationen zu Deeplinks finden Sie in unserem [FAQ-Artikel]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
@@ -565,7 +633,7 @@ Befolgen Sie die Anweisungen in der [Dokumentation für Android-Entwickler](http
 
 Das Braze-Dashboard unterstützt das Setzen von Deeplinks oder Internet-URLs in Push-Benachrichtigungs-Kampagnen und Canvase, die geöffnet werden, wenn die Benachrichtigung angeklickt wird.
 
-![Die Einstellung 'On Click Behavior' im Braze-Dashboard mit 'Deeplinks in die Anwendung' aus dem Dropdown ausgewählt.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
+![Die Einstellung 'On Click Behavior' im Braze-Dashboard mit 'Deeplinks in die Anwendung' aus dem Dropdown-Menü ausgewählt.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
 
 #### Anpassen des Back-Stack-Verhaltens
 

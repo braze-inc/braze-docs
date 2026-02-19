@@ -23,7 +23,11 @@ Plongez-vous dans le quoi, le qui et le pourquoi !
 Débloquez de nouvelles combinaisons de parcours utilisateurs grâce aux [composants Canvas.]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)
 - Divisez vos utilisateurs avec [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) et créez des flux de travail différents.
 - Échelonnez vos parcours utilisateurs avec une étape [Délai]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/).
-- Ajoutez des [messages autonomes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) où vous le souhaitez dans votre flux Canvas. 
+- Ajoutez des [messages autonomes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) où vous le souhaitez dans votre flux Canvas.
+
+{% alert note %}
+Les étapes du canvas ne peuvent faire avancer les utilisateurs que dans le flux. Vous ne pouvez pas configurer un canvas pour qu'il relie une étape à une étape précédente, car cela renverrait les utilisateurs en arrière. Cette validation garantit que les utilisateurs progressent dans une seule direction à travers votre Canvas.
+{% endalert %}
 
 ## Créer des messages enrichis
 

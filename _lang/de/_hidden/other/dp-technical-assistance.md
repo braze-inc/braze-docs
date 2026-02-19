@@ -40,7 +40,7 @@ Die meisten Datenschutzgesetze unterscheiden drei Hauptakteure, die an der Verar
 
 In Bezug auf die Braze Dienste:
 
-- Die betroffenen Personen sind z.B. die Endnutzer Ihrer Kundenanwendung (e.g., Ihre Kunden/Klienten) oder Ihre Mitarbeiter, die Dashboard-Nutzer in Ihrer Instanz der Braze Dienste sind.
+- Bei den betroffenen Personen handelt es sich beispielsweise um die Endnutzer Ihrer Kundenanwendung (e.g., Ihre Nutzer:innen) oder um Ihre Mitarbeiter, die Unternehmensnutzer in Ihrer Instanz der Braze-Dienste sind.
 - Sie, der Braze-Kunde, sind der für die Datenverarbeitung Verantwortliche, der entscheidet, wie und warum die persönlichen Daten der betroffenen Personen im Rahmen der Braze Serviceleistungen; Dienste; Dienste erhoben und verarbeitet werden.
 - Braze ist ein Datenverarbeiter, der in Ihrem Auftrag und gemäß den Anweisungen, die wir von Ihnen erhalten, personenbezogene Daten in den Braze Diensten verarbeitet.
 

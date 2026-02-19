@@ -25,7 +25,7 @@ Votre tableau de bord affichera une erreur lorsqu'une campagne, un Canvas ou un 
 - Si votre audience fait référence à plusieurs segments, assurez-vous que les segments ne sont pas redondants, par exemple que les mêmes filtres apparaissent dans plusieurs segments.
 - Assurez-vous que vous ne faites pas référence à des données obsolètes dans les filtres de segmentation. Par exemple, un filtre obsolète peut rechercher les utilisateurs qui n'ont pas reçu une certaine étape du canvas au cours de la semaine écoulée, même si le canvas a été arrêté depuis des mois.
 - Les segments qui ne sont que des listes d'ID d'utilisateurs ou d'e-mails (qui utilisent souvent un filtre expression régulière) peuvent être convertis en une [importation]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) CSV et être simplifiés en un seul filtre CSV.
-- Si vous disposez d'un système CDI, vous pouvez créer un segment CDI qui extrait le groupe directement de votre entrepôt de données.
+- Si vous disposez de CDI, vous pouvez créer un segment CDI qui extrait le groupe directement de votre entrepôt de données.
 
 Vous pouvez également [contacter le service d'assistance]({{site.baseurl}}/braze_support/) pour obtenir de l'aide sur l'optimisation des filtres.
 
@@ -106,6 +106,7 @@ Le premier scénario est le suivant : le champ `app_id` est rempli lors de l'uti
 Le deuxième scénario est le suivant : le champ `app_id` est rempli lors de l'utilisation de l'endpoint `/users/track` pour migrer des tickets push, comme dans cet exemple : 
 
 ```json
+{
 "app_group_id": "{YOUR_APP_GROUP_ID}",
 "attributes": [
 {
@@ -119,4 +120,5 @@ Le deuxième scénario est le suivant : le champ `app_id` est rempli lors de l'u
       ]
   }
 ]
+}
 ```

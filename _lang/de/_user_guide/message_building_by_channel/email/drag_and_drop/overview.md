@@ -169,7 +169,7 @@ Sie können auch **Vorschau-Link** auswählen, um einen Vorschau-Link zu erstell
 
 Beachten Sie, dass Änderungen an einer E-Mail-Vorlage sich nicht in einem zuvor erstellten Link widerspiegeln. Sie müssen eine neue Vorschau des Links erstellen, um die Änderungen zu sehen.
 
-![E-Mail Vorschau mit einem Button "Vorschau-Link kopieren" und kopieren Sie den generierten Link.]({% image_buster /assets/img/dnd_email_link_preview.png %})
+![E-Mail Vorschau mit einem Button "Vorschaulink kopieren" und kopieren Sie den generierten Link.]({% image_buster /assets/img/dnd_email_link_preview.png %})
 
 #### Verwenden Sie Inbox Vision
 
@@ -244,7 +244,11 @@ Die Flüssigpersonalisierung wird für Bildblöcke und Felder vom Typ Schaltflä
 
 #### Dynamische Bilder
 
-Sie können dynamische Bilder in Ihr E-Mail-Messaging aufnehmen, indem Sie Liquid in das Bildquellattribut aufnehmen. Anstelle eines statischen Bildes können Sie zum Beispiel {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} als Bild-URL einfügen, um den Vornamen eines Nutzers:innen in das Bild einzubinden. So können Sie Ihre E-Mails für jeden Benutzer personalisieren.
+Sie können dynamische Bilder in Ihr E-Mail Messaging aufnehmen, indem Sie [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) oder [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in Ihr Attribut für die Bildquelle aufnehmen. Anstelle eines statischen Bildes können Sie zum Beispiel {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} als Bild-URL einfügen, um den Vornamen eines Nutzers:innen in das Bild einzubinden. So können Sie Ihre E-Mails für jeden Benutzer personalisieren.
+
+{% alert important %}
+Die URL Ihres Bildes muss mit `https://` beginnen. Die Verwendung von `http://` bringt Ihre App zum Absturz.
+{% endalert %}
 
 ### Textrichtung
 
@@ -290,7 +294,7 @@ Alles, was außerhalb der Tags von `<head>` hinzugefügt wird, wird in Ihrer E-M
 | --- | --- | --- |
 | `base` | Gibt die Basis-URL für alle relativen URLs in der Nachricht an. | `<base href="https://example.com" target="_blank">` |
 | `link`| Definiert die Beziehungen zwischen der Nachricht und externen Ressourcen. | `<link href="styles.css" rel="stylesheet" type="text/css">` |
-| `meta` | Liefert Metadaten wie Seitenbeschreibung oder Schlüsselwörter. | `<meta name="description" content="Free Web tutorials">` |
+| `meta` | Liefert Metadaten wie Seitenbeschreibungen oder Schlüsselwörter. | `<meta name="description" content="Free Web tutorials">` |
 | `style` | Bettet interne CSS-Stile ein. | `<style type="text/css" media="screen">body { font-size: 16px; }</style>` |
 | `title` | Legt den Titel des Dokuments fest, der in den Tabs des Browsers angezeigt wird. | `<title>StyleRyde</title>` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -303,13 +307,13 @@ Alles, was außerhalb der Tags von `<head>` hinzugefügt wird, wird in Ihrer E-M
 | `link` | `rel` | Definiert die Beziehungen zwischen der aktuellen und der verknüpften Nachricht. | ```<link rel="stylesheet">``` |
 | `link` | `type` | Typ der verknüpften Ressource. | ```<link type="text/css">``` |
 | `link` | `sizes` | Legt die Größe der Symbole fest. | ```<link rel="icon" sizes="32x32" href="favicon-32.png">``` |
-| `link` | `media` | Gibt das Medium oder Gerät an, für das die Stile gelten. | ```<link rel="stylesheet" media="screen" href="style.css">``` |
+| `link` | `media` | Gibt das Medium oder Gerät an, für das Stile gelten. | ```<link rel="stylesheet" media="screen" href="style.css">``` |
 | `meta` | `name` | Legt den Titel des Dokuments fest, der in den Tabs des Browsers angezeigt wird. | ```<meta name="viewport" content="width=device-width, initial-scale=1">``` |
 | `meta` | `content` | Legt den Titel des Dokuments fest, der in den Tabs des Browsers angezeigt wird. | ```<meta name="description" content="Page about our newest products">``` |
 | `meta` | `charset` | Deklariert die Zeichenkodierung. | ```<meta charset="UTF-8">``` |
 | `meta` | `property` | Legt den Titel des Dokuments fest, der in den Tabs des Browsers angezeigt wird. | ```<meta property="og:title" content="Website title">``` |
 | `style` | `type` | MIME-Typ des Inhalts des Stils. | {% raw %}```<style type="text/css">p { color: red; }</style>```{% endraw %} |
-| `style` | `media` | Gibt das Medium oder Gerät an, für das die Stile gelten. | ```<style media="print">body { font-size: 12pt; }</style>``` |
+| `style` | `media` | Gibt das Medium oder Gerät an, für das Stile gelten. | ```<style media="print">body { font-size: 12pt; }</style>``` |
 | `title` | Keine Attribute | Der Tag `title` akzeptiert keine Attribute. | ```<title>Kitchenerie</title>``` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 

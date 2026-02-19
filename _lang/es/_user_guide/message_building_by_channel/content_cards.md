@@ -62,6 +62,8 @@ Ahora pongámonos un poco técnicos. Entre bastidores, hay tres partes principal
 
 Para una implementación predeterminada, añades el contenido de la tarjeta -el modelo- desde el panel o a través de API, y la vista y el controlador se gestionan mediante lo que se denomina un controlador de vista. Un controlador de vista es el "pegamento" entre la aplicación global y la pantalla.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## Ejemplos
 
 Consulta esta sección para conocer algunos casos de uso habituales de las tarjetas de contenido.

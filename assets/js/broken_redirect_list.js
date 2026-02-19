@@ -3232,8 +3232,10 @@ validurls['/docs/user_guide/brazeai/decisioning_studio/go/configuring_sfmc'] = '
 validurls['/docs/user_guide/brazeai/decisioning_studio/go/report_bau_campaign'] = '/docs/user_guide/brazeai/decisioning_studio/reporting/';
 validurls['/docs/user_guide/brazeai/decisioning_studio/integration'] = '/docs/user_guide/brazeai/decisioning_studio/getting_started/';
 
-validurls['/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/#automated-ip-warming'] = '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/automated_ip_warming/';
 validurls['/docs/partners/tinyclues/'] = '/docs/partners/splio/';
 validurls['/docs/partners/data_and_analytics/cohort_import/tinyclues'] = '/docs/partners/splio/';
+
+validurls['/docs/user_guide/administrative/access_billing/billing/'] = '/docs/user_guide/administrative/app_settings/subscription_and_usage/';
+validurls['/docs/api/objects_filters/canvas_entry_properties_object/'] = '/docs/api/objects_filters/context_object/';
 
 // validurls['OLD'] = 'NEW';

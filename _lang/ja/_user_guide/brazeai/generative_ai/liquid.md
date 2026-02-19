@@ -6,7 +6,7 @@ page_type: reference
 page_order: 0.0
 ---
 
-# BrazeAI<sup>TMで</sup>Liquidコードを生成する
+# <sup>BrazeAITMで</sup>Liquidコードを生成する
 
 > BrazeAI<sup>TM</sup> Liquid アシスタントは BrazeAI<sup>TM</sup> を搭載したチャットアシスタントであり、メッセージコンテンツをパーソナライズするために必要な Liquid を生成する場合に役立ちます。
 

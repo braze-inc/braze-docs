@@ -80,9 +80,7 @@ Cuando estos objetos se incluyen con el desencadenante, los atributos se procesa
 
 Utiliza el [punto final`/users/track/sync/` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) para registrar eventos personalizados y compras y actualizar los atributos del perfil de usuario de forma sincrónica. Utilizar este punto final para actualizar los perfiles de usuario al mismo tiempo y en una sola llamada puede ayudar a evitar posibles condiciones de carrera.
 
-{% alert important %}
-Este punto final está actualmente en fase beta. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en la beta.
-{% endalert %}
+{% include early_access_beta_alert.md feature='This endpoint' type='beta' %}
 
 ## Escenario 3: Combinación de desencadenantes basados en acciones y filtros de audiencia
 

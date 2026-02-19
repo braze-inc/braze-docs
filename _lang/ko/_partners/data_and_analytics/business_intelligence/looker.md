@@ -77,7 +77,7 @@ Set up a Braze Looker Action with your Braze REST API key and REST endpoint.
 Within Looker Develop, select the appropriate views. Add `braze_id` to the dimensions tag and commit the changes.
 This `braze_id` tag is use to determine which field is the unique key.
 
-```json
+```lookml
 dimension: external_id {
     type: string
     primary_key: yes

@@ -127,7 +127,7 @@ El archivo AASA contiene un objeto JSON con una lista de aplicaciones y las ruta
     "apps": [],
     "details": [
       {
-        "appID": “JHGFJHHYX.com.facebook.ios",
+        "appID": "JHGFJHHYX.com.facebook.ios",
         "paths": [
           "*"
         ]

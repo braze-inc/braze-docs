@@ -49,7 +49,7 @@ Sie können die Tabelle der Synchronisierungsprotokolle filtern, um bestimmte L�
 
 * **Datum des Arbeitsbeginns:** Wählen Sie einen vordefinierten Bereich (wie "Letzte 30 Tage") oder einen angepassten Datumsbereich.  
 * **Status:** Filtern Sie nach einem oder mehreren Sync-Status (z.B. nur **Fehler-** und **Teilerfolgsstatus** anzeigen).  
-* **Sync-Name:** Suchen Sie nach einer bestimmten Synchronisierung anhand ihres Namens.
+* **Sync-Name:** Suchen Sie nach einer bestimmten Synchronisation anhand ihres Namens.
 
 Um eine bestimmte Synchronisierung zu untersuchen, wählen Sie die entsprechende **Run ID** aus der Tabelle Sync Logs aus. Auf der Seite **Ausführungsdetails** finden Sie ein detailliertes, zeilenweises Protokoll der Synchronisierung.
 
@@ -82,9 +82,7 @@ Wählen Sie **Zeilen exportieren**, um die Protokolle auf Zeilenebene für einen
 * **Zeilen mit Fehlern:** Lädt eine Datei herunter, die nur die Zeilen enthält, die einen **Fehlerstatus** hatten.
 * **Alle Zeilen:** Lädt eine Datei herunter, die alle in diesem Lauf verarbeiteten Zeilen enthält.
 
-{% alert important %}
-Das Exportieren von Synchronisierungsprotokollen für alle Zeilen befindet sich derzeit in einer frühen Phase. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Exporting sync logs for all rows' %}
 
 Protokolle können nicht direkt aus dem Dashboard exportiert werden. Nachdem der Export erstellt wurde, erhalten Sie eine E-Mail mit einem Link zum Herunterladen der Protokoll-Exportdatei. 
 

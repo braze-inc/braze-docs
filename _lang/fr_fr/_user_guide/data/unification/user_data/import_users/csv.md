@@ -117,7 +117,7 @@ Lorsque vous êtes prêt à créer votre fichier CSV, reportez-vous aux informat
 {% tab user attributes %}
 #### Identifiants requis {#required-identifiers-attributes}
 
-Bien que `external_id` ne soit pas obligatoire, vous **devez** inclure l'**un** des identifiants suivants dans l'en-tête de votre fichier CSV. Pour en savoir plus sur chacun d'entre eux, consultez la rubrique [Choisir un identifiant](#choose-an-identifier).
+Bien que `external_id` ne soit pas obligatoire, vous **devez** inclure l'**un** des identifiants suivants dans l'en-tête de votre fichier CSV. Pour plus d'informations sur chacun d'entre eux, consultez la rubrique [Choisir un identifiant](#choose-an-identifier).
 
 - `external_id`
 - `braze_id`
@@ -196,7 +196,7 @@ Un seul `subscription_group_id` peut être défini par ligne dans User Import (I
 {% tab custom events %}
 #### Identifiants requis {#required-identifiers-custom-events}
 
-Bien que `external_id` ne soit pas obligatoire, vous **devez** inclure l'**un** des identifiants suivants dans l'en-tête de votre fichier CSV. Pour en savoir plus sur chacun d'entre eux, consultez la rubrique [Choisir un identifiant](#choose-an-identifier).
+Bien que `external_id` ne soit pas obligatoire, vous **devez** inclure l'**un** des identifiants suivants dans l'en-tête de votre fichier CSV. Pour plus d'informations sur chacun d'entre eux, consultez la rubrique [Choisir un identifiant](#choose-an-identifier).
 
 - `external_id`
 - `braze_id`
@@ -327,7 +327,7 @@ Si une donnée utilisateur par défaut (telle que `email` ou `first_name`) est i
 
 Braze s’attend à ce que toutes les valeurs d’une colonne soient du même type de données. Les valeurs qui ne correspondent pas au type de données de leur attribut entraîneront des erreurs de segmentation.
 
-En outre, le fait de commencer un attribut de nombre par zéro posera des problèmes, car les nombres commençant par des zéros sont considérés comme des chaînes de caractères. Lorsque Braze convertit cette chaîne de caractères, elle peut être traitée comme une valeur octale (qui utilise les chiffres de zéro à sept), ce qui signifie qu'elle sera convertie en sa valeur décimale correspondante. Par exemple, si la valeur du fichier CSV est 0130, le profil Braze indiquera 88. Pour éviter ce problème, utilisez des attributs avec des chaînes de caractères. Toutefois, ce type de données n'est pas disponible dans la comparaison des numéros de segmentation.
+En outre, le fait de commencer un attribut de nombre par zéro posera des problèmes, car les nombres commençant par des zéros sont considérés comme des chaînes de caractères. Lorsque Braze convertit cette chaîne de caractères, elle peut être traitée comme une valeur octale (qui utilise les chiffres de zéro à sept), ce qui signifie qu'elle sera convertie en sa valeur décimale correspondante. Par exemple, si la valeur du fichier CSV est 0130, le profil Braze affichera 88. Pour éviter ce problème, utilisez des attributs avec des chaînes de caractères. Toutefois, ce type de données n'est pas disponible dans la comparaison des numéros de segmentation.
 
 #### Types d'attribut par défaut
 

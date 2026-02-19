@@ -2,7 +2,7 @@
 
 ## 内蔵機能
 
-以下の機能がBraze Android SDKに組み込まれている。その他のプッシュ通知機能を使うには、アプリに[プッシュ通知を設定する](#android_setting-up-push-notifications)必要がある。
+以下の機能がBraze Android SDKに組み込まれている。その他のプッシュ通知機能を使うには、アプリの[プッシュ通知を設定する](#android_setting-up-push-notifications)必要がある。
 
 |機能|説明|
 |-------|-----------|
@@ -556,6 +556,74 @@ Braze.configure(this, brazeConfig)
 {% endtabs %}
 
 ディープリンクをカスタムで処理する場合は、Braze からのプッシュ受信およびオープンインテントをリッスンするプッシュコールバックを作成する必要があります。詳しくは、[プッシュ・イベントにコールバックを使うを]({{site.baseurl}}/developer_guide/push_notifications/customization#android_using-a-callback-for-push-events)参照のこと。
+
+## フォアグラウンド通知を処理する
+
+デフォルトでは、Androidでアプリがフォアグラウンドにあるときにプッシュ通知が届くと、システムは自動的にそれを表示する。Brazeにプッシュ通知ペイロードを処理させるには（分析追跡、ディープリンク処理、カスタム処理のため）、`FirebaseMessagingService.onMessageReceived` メソッド内部で、受信プッシュデータをBrazeにルーティングする。
+
+### 仕組み
+
+`BrazeFirebaseMessagingService.handleBrazeRemoteMessage` を呼び出すと、BrazeはペイロードがBrazeプッシュ通知かどうかを判断し、プッシュ通知であれば、`NotificationManagerCompat` メソッドで通知を作成して表示する。iOSとは異なり、Androidではアプリがフォアグラウンドかバックグラウンドかに関係なく通知が表示される。
+
+{% tabs %}
+{% tab JAVA %}
+```java
+package com.example.push;
+
+import com.braze.push.BrazeFirebaseMessagingService;
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+
+public class MyFirebaseMessagingService extends FirebaseMessagingService {
+    @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        super.onMessageReceived(remoteMessage);
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+package com.example.push
+
+import com.braze.push.BrazeFirebaseMessagingService
+import com.google.firebase.messaging.FirebaseMessagingService
+import com.google.firebase.messaging.RemoteMessage
+
+class MyFirebaseMessagingService : FirebaseMessagingService() {
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        super.onMessageReceived(remoteMessage)
+        
+        // Let Braze process the payload and display the notification
+        if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+            // Braze successfully handled the push notification
+        } else {
+            // Handle non-Braze messages
+        }
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+詳細については、Braze Android SDKリポジトリの[Firebase統合サンプルを](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseMessagingService.kt)参照。
+
+### フォアグラウンドの行動をカスタマイズする
+
+システム通知を抑制したり、代わりにアプリ内UIを表示したりするなど、フォアグラウンドでの顧客行動をカスタマイズしたい場合は、可能だ：
+
+- `subscribeToPushNotificationEvents` を使ってプッシュ・イベントに反応し、`BrazeNotificationUtils.routeUserWithNotificationOpenedIntent` メソッドでディープリンクを処理する。詳しくは、[Firebaseプッシュ・サンプルを](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt)参照のこと。
+- カスタム`IBrazeNotificationFactory` を使用して独自の通知をビルドしてポストするか、ハンドリングパスで`notificationManager.notify` を呼び出さないことによって通知を抑制する。
+
+通知のカスタマイズの詳細については、[カスタム通知ファクトリーを]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#custom-notification-factory)参照のこと。
 
 #### カスタムディープリンクの作成
 

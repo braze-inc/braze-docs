@@ -79,7 +79,7 @@ Sur la page de confirmation, vérifiez les informations de votre campagne multiv
 Si l'envoi de votre expérience a déjà commencé et que vous modifiez le message, l'expérience est invalidée et tous les résultats de l'expérience sont supprimés.
 
 - Pour éviter toute interférence avec le comportement attendu de l'expérience, nous vous recommandons d'éviter de modifier les messages dans l'heure qui suit le lancement de la campagne de communication.
-- Si votre expérience est terminée et que vous modifiez le message après l'envoi, les résultats de l'expérience restent disponibles dans votre tableau de bord analytique. Toutefois, si vous relancez la campagne, les résultats de l'expérience sont supprimés.
+- Si votre expérience est terminée et que vous modifiez le message après son envoi, les résultats de l'expérience restent disponibles dans votre tableau de bord analytique. Toutefois, si vous relancez la campagne, les résultats de l'expérience sont supprimés.
 
 ### Conseils pour différents canaux {#tips-different-channels}
 

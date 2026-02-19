@@ -27,7 +27,7 @@ Kameleoon envoie des événements personnalisés à Braze pour identifier les ut
 
 ## Intégration de Kameleoon
 
-Cette intégration fonctionne comme un tracker JavaScript via le site engine.js de Kameleoon. Il peut être activé rapidement à partir de la plateforme Kameleoon.
+Cette intégration fonctionne comme un tracker JavaScript à travers le site engine.js de Kameleoon. Il peut être activé rapidement à partir de la plateforme Kameleoon.
 
 ### Étape 1 : Accédez à la page Intégrations de Kameleoon
 

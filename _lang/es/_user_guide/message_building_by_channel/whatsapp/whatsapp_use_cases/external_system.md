@@ -15,7 +15,7 @@ channel:
 
 ## Cómo funciona
 
-La integración entre Braze y la IA externa o el sistema de comunicación funciona como una vía de doble sentido, en la que Braze es el canal de mensajería y el sistema externo es la "inteligencia" que procesa los mensajes y formula las respuestas.
+La integración entre Braze y la IA externa o el sistema de comunicación funciona como una calle de doble sentido, en la que Braze es el canal de mensajería y el sistema externo es la "inteligencia" que procesa los mensajes y formula las respuestas.
 
 El flujo de trabajo de integración puede dividirse en dos flujos clave:
 **Flujo entrante:** El mensaje de un usuario llega a Braze y se reenvía a tu sistema externo para que lo procese.
@@ -86,12 +86,12 @@ A continuación, crea una campaña desencadenada por la API para establecer una 
 
 Por último, configura tu sistema externo para que llame a Braze y envíe la respuesta.
 
-1. En el código de tu sistema externo, tras procesar el mensaje recibido y generar la respuesta, haz una petición POST al punto final Braze `/messages/send`.
+1. En el código de tu sistema externo, tras procesar el mensaje recibido y generar la respuesta, haz una solicitud POST al punto final Braze `/messages/send`.
 2. En el cuerpo de la solicitud `/messages/send`, incluye el `campaign_id` del [Paso 2](#step-2), el `external_id` del usuario y el contenido de la respuesta del sistema externo.
 3. Utiliza la propiedad desencadenar API del [paso 2](#step-2) para insertar la respuesta del sistema externo, y no olvides incluir tu clave de API en el encabezado de solicitud para la autenticación, como en este ejemplo de cURL:
 
 {% raw %}
-```json
+```bash
 curl -X POST \
   -H 'Content-Type:application/json' \
   -H 'Authorization: Bearer a valid rest API key' \

@@ -21,9 +21,7 @@ Using the Braze Audience Sync to LinkedIn, brands can add user data from their B
 
 This feature allows brands to control what specific first-party data is shared with LinkedIn. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
-{% alert important %}
-Audience Sync to LinkedIn is currently in beta. Contact your Braze account manager if you want to participate in the beta.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Audience Sync to LinkedIn' type='beta' %}
 
 ## Prerequisites
 

@@ -126,7 +126,7 @@ Vous pouvez partager un lien vers le tableau de bord du rapport en sélectionnan
 
 ![Le menu déroulant "Partager un lien" contient un lien vers le rapport.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
 
-- **Envoyez ou planifiez un e-mail :** Envoyez un e-mail immédiatement ou à une heure donnée contenant un lien de téléchargement qui expire au bout d'une heure. Vous pouvez sélectionner les destinataires parmi les utilisateurs du tableau de bord répertoriés dans le menu déroulant **Destinataires de l'e-mail** ou saisir toute autre adresse e-mail.
+- **Envoyez ou planifiez un e-mail :** Envoyez un e-mail immédiatement ou à une heure donnée contenant un lien de téléchargement qui expire au bout d'une heure. Vous pouvez sélectionner les destinataires parmi les utilisateurs de l'entreprise répertoriés dans le menu déroulant **Destinataires de l'e-mail** ou saisir toute autre adresse e-mail.
 
 ![Fenêtre "Planifier un e-mail" avec des champs permettant de choisir le format du rapport, le destinataire et la date d'envoi.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
 

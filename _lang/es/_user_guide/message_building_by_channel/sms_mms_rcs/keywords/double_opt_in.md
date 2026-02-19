@@ -16,7 +16,7 @@ channel:
 
 Cuando está activada la doble adhesión voluntaria, se envía a los usuarios un mensaje en el que se les pide su consentimiento explícito antes de que puedan recibir mensajes de tus campañas o Lienzos. 
 
-Aunque no es un requisito explícito de la Ley de Protección del Consumidor Telefónico de 1991 (TCPA), Braze recomienda que configures la doble adhesión voluntaria para confirmar que los usuarios son conscientes y consienten en formar parte de tu programa de SMS, MMS o RCS. Para más información sobre el cumplimiento, consulta [Leyes, normativas y prevención de abusos para SMS, MMS y RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/).
+Aunque no es un requisito explícito de la Ley de Protección del Consumidor Telefónico de 1991 (TCPA), Braze recomienda que configures la doble adhesión voluntaria para confirmar que los usuarios son conscientes y consienten formar parte de tu programa de SMS, MMS o RCS. Para más información sobre el cumplimiento, consulta [Leyes, normativas y prevención de abusos para SMS, MMS y RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/).
 
 ## Flujos de trabajo de doble adhesión voluntaria
 
@@ -56,13 +56,13 @@ Cuando un usuario recibe un mensaje de adhesión voluntaria, dispone de 30 días
 
 ## Estado del grupo de suscripción
 
-Sólo después de que el usuario complete el flujo de trabajo de la doble adhesión, su [estado del grupo de suscripción]({{site.baseurl}}/sms_rcs_subscription_groups/) se actualizará a `Subscribed`. Si el usuario comienza el flujo de trabajo pero no lo completa, permanece en `Unsubscribed` y no se le pueden enviar mensajes desde ese grupo de suscripción.
+Sólo después de que el usuario complete el flujo de trabajo de doble adhesión, su [estado del grupo de suscripción]({{site.baseurl}}/sms_rcs_subscription_groups/) se actualiza a `Subscribed`. Si el usuario comienza el flujo de trabajo pero no lo completa, permanece en `Unsubscribed` y no se le pueden enviar mensajes desde ese grupo de suscripción.
 
 Los usuarios también pueden entrar en el flujo de trabajo de adhesión voluntaria doble si están [suscritos desde otras fuentes]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group#how-users-sms-subscription-groups-get-set) (por ejemplo, API REST, SDK).
 
 ## Fuentes de suscripción {#subscription-sources}
 
-Los usuarios también pueden entrar en el flujo de trabajo de la doble adhesión voluntaria mediante actualizaciones de la suscripción que se producen fuera de los mensajes de entrada. Estas fuentes incluyen actualizaciones de la API REST, el SDK y el centro de preferencias. Cuando un usuario entra en el flujo de trabajo de adhesión voluntaria doble a través de estas fuentes, recibirá el **mensaje de respuesta a la solicitud de adhesión voluntaria**.
+Los usuarios también pueden entrar en el flujo de trabajo de la doble adhesión voluntaria a través de las actualizaciones de suscripción que se producen fuera de los mensajes entrantes. Estas fuentes incluyen actualizaciones de la API REST, el SDK y el centro de preferencias. Cuando un usuario entra en el flujo de trabajo de adhesión voluntaria doble a través de estas fuentes, recibirá el **mensaje de respuesta a la solicitud de adhesión voluntaria**.
 
 Cada fuente de suscripción tiene un comportamiento de inscripción diferente, como se describe en la siguiente tabla.
 

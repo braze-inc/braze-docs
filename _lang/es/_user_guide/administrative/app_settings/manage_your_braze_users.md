@@ -1,12 +1,12 @@
 ---
-nav_title: Usuarios de Braze
-article_title: Administrar usuarios Braze
+nav_title: Usuarios de la empresa
+article_title: Administrar los usuarios de la empresa
 page_order: 23
 page_type: reference
-description: "Esta página cubre la gestión de tus usuarios Braze, como añadir y eliminar usuarios, establecer permisos de usuario, crear Equipos y administrar la configuración de la empresa."
+description: "Esta página cubre la gestión de los usuarios de tu empresa, como añadir y eliminar usuarios, establecer permisos de usuario, crear Equipos y administrar la configuración de la empresa."
 ---
 
-# Administrar usuarios Braze
+# Administrar los usuarios de la empresa
 
 > Aprenda a gestionar usuarios en su cuenta de empresa, incluyendo añadir, suspender y eliminar usuarios.
 
@@ -14,7 +14,7 @@ description: "Esta página cubre la gestión de tus usuarios Braze, como añadir
 Varias secciones de esta página remiten a la página **Usuarios de la empresa**. Si utiliza la [navegación más antigua]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), **Usuarios de la empresa** se llama **Gestionar usuarios** y se encuentra debajo del icono de su cuenta.
 {% endalert %}
 
-## Añadir usuarios Braze
+## Añadir usuarios de la empresa
 
 Debes tener permisos de administrador para añadir usuarios a tu cuenta Braze. 
 
@@ -50,9 +50,9 @@ Por razones de seguridad, los usuarios no pueden cambiar la dirección de correo
 
 {% multi_lang_include permissions.md content="Differences" %}
 
-## Suspender a los usuarios de Braze
+## Suspender usuarios de la empresa
 
-Al suspender a un usuario, su cuenta pasa a un estado inactivo, en el que el usuario ya no puede iniciar sesión, pero se conservan los datos asociados a su cuenta. Sólo los administradores pueden suspender o anular la suspensión de los usuarios de Braze.
+Al suspender a un usuario, su cuenta pasa a un estado inactivo, en el que el usuario ya no puede iniciar sesión, pero se conservan los datos asociados a su cuenta. Sólo los administradores pueden suspender o anular la suspensión de los usuarios de la empresa.
 
 Para suspender a un usuario, ve a **Configuración** > **Usuarios de la empresa**, busca su nombre de usuario y selecciona <i class="fa-solid fa-user-lock"></i> **Suspender**.
 
@@ -62,7 +62,7 @@ Los administradores también pueden suspender a un usuario seleccionando su nomb
 
 ![Suspender a un usuario al editar los detalles del usuario.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
-## Eliminar usuarios de Braze
+## Eliminar usuarios de la empresa
 
 Para eliminar un usuario, vaya a **Configuración** > **Usuarios de la empresa**, busque su nombre de usuario y seleccione <i class="fa fa-trash-can"></i> **Eliminar usuario**.
 

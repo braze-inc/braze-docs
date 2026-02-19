@@ -188,7 +188,7 @@ Nosso tamanho médio de pegada de dados HTML exportados foi reduzido, levando a 
 
 A renderização de HTML foi aprimorada com base nas seguintes atualizações que minimizam o número de comentários condicionais e consultas de mídia CSS. Como resultado, os arquivos HTML são menores e codificados com mais eficiência.
 - Migração de um design baseado em elementos do site `<div>` para uma base de código formatada padrão do site `<table>` 
-- [Blocos do Editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) foram recodificados para concisão
+- [Blocos do editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) foram recodificados para concisão
 - O código HTML final é comprimido para remover espaços em branco entre as tags
 - Divisores transparentes são automaticamente convertidos em preenchimento de conteúdo
 {% enddetails %}
@@ -244,7 +244,11 @@ A personalização Liquid não é compatível com blocos de imagens e campos do 
 
 #### Imagens dinâmicas
 
-Você pode optar por incluir imagens dinâmicas em seu envio de mensagens por e-mail, incluindo Liquid no atributo de origem da imagem. Por exemplo, em vez de uma imagem estática, é possível inserir {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} como URL da imagem para incluir o nome de um usuário na imagem. Isso ajuda a personalizar seus e-mails para cada usuário.
+Você pode optar por incluir imagens dinâmicas em sua mensagem de e-mail incluindo [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) ou [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) no atributo de origem da sua imagem. Por exemplo, em vez de uma imagem estática, é possível inserir {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} como URL da imagem para incluir o nome de um usuário na imagem. Isso ajuda a personalizar seus e-mails para cada usuário.
+
+{% alert important %}
+A URL da sua imagem deve começar com `https://`. Usar `http://` trava seu app.
+{% endalert %}
 
 ### Direção do texto
 
@@ -310,7 +314,7 @@ Qualquer coisa adicionada fora das tags `<head>` será adicionada após a tag `<
 | `meta` | `property` | Define o título do documento exibido nas abas do navegador. | ```<meta property="og:title" content="Website title">``` |
 | `style` | `type` | Tipo MIME do conteúdo de estilo. | {% raw %}```<style type="text/css">p { color: red; }</style>```{% endraw %} |
 | `style` | `media` | Especifica a mídia ou dispositivo para o qual os estilos se aplicam. | ```<style media="print">body { font-size: 12pt; }</style>``` |
-| `title` | Sem atributos | A tag `title` não aceita nenhum atributo. | ```<title>Kitchenerie</title>``` |
+| `title` | Sem atributos | A tag `title` não aceita atributos. | ```<title>Kitchenerie</title>``` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}

@@ -75,7 +75,7 @@ Estos usuarios ya son activos y tienen una gran interacción con las caracterís
 
 {% endtab %}
 {% tab High intent, other %}
-Estos usuarios muestran fuertes señales de interacción, como navegar por las características Pro o una actividad frecuente en la aplicación, pero no se centran específicamente en el seguimiento del estado físico. El mensaje destaca las ventajas más amplias de Pro, como la formación y la personalización, para animarles a que se pasen de la raya.
+Estos usuarios muestran fuertes señales de interacción, como navegar por las características Pro o una actividad frecuente en la aplicación, pero no se centran específicamente en el seguimiento del estado físico. El mensaje destaca las ventajas más amplias de Pro, como la formación y la personalización, para animarles a superar la línea.
 
 - **Línea del asunto:** Ya casi has llegado-Pro está listo cuando tú lo estés
 - **Cabecera:** Desbloquea más formas de moverte
@@ -121,7 +121,7 @@ Rendimiento del correo electrónico por ruta:
    - *Tasa de conversión:* 11 %
    - Sin descuento
 - **Baja intención, aptitud**
-   - *Tasa de apertura:* 27%
+   - *Tasa de apertura:* 27 %
    - *Tasa de clics:* 12 %
    - *Tasa de conversión:* 8 %
    - Oferta del 50% de descuento incluida
@@ -131,7 +131,7 @@ Rendimiento del correo electrónico por ruta:
    - *Tasa de conversión:* 6 %
    - Oferta del 50% de descuento incluida
 
-En comparación con la campaña anterior del equipo, de talla única (en la que un descuento general después de 7 días sólo generaba un 5% de conversiones y un exceso de mensajería), el enfoque específico muestra un aumento significativo en todos los grupos, con mayor eficacia y menos descuentos innecesarios.
+En comparación con la campaña anterior del equipo, de talla única (en la que un descuento general después de 7 días sólo producía un 5% de conversiones y un exceso de mensajería), el enfoque específico muestra un aumento significativo en todos los grupos, con mayor eficacia y menos descuentos innecesarios.
 
 El [informe de embudo]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) también muestra una clara reducción del abandono en los pasos clave, sobre todo para los usuarios de baja intención que recibieron mensajería personalizada. Más usuarios abren, hacen clic y actualizan, lo que demuestra el valor de la orientación basada en la intención.
 

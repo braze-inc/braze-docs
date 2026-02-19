@@ -71,6 +71,8 @@ channel:
 
 ブロックと行をキャンバス領域にドラッグアンドドロップして、メッセージの作成を開始できます。
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 メッセージの背景プロパティ、ボーダー設定などをカスタマイズするには、**Styles** を選択します。特定のブロックまたは行のスタイルのみをカスタマイズする場合は、それを選択して変更します。
 
 ![バナー作成画面の [スタイル] パネル。]({% image_buster /assets/img/banners/banner_card_styles.png %})()
@@ -129,7 +131,7 @@ channel:
 
 #### オーディエンスを選択する
 
-1. **目標オーディエンスs**で、オーディエンスを狭めるにはSegmentsまたはフィルターsを選択します。アプリの近接Segment集団のプレビューが自動的に受信されます。正確なSegmentメンバーシップが計算されてから、メッセージが送信されます。
+1. **目標オーディエンスs**で、オーディエンスを狭めるにはSegmentsまたはフィルターを選択します。アプリの近接Segment集団のプレビューが自動的に受信されます。正確なSegmentメンバーシップが計算されてから、メッセージが送信されます。
 
 {% multi_lang_include target_audiences.md %}
 
@@ -140,7 +142,7 @@ channel:
 
 #### コンバージョンイベントを選択する
 
-Braze では、キャンペーンを受信した後、ユーザーs が具体的なアクションs を実行する頻度である[コンバージョンイベントs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) を追跡できます。ユーザーが指定されたアクションをとった場合にコンバージョンがカウントされる最大30 日間のウィンドウを許可することもできます。
+Braze では、キャンペーンを受信した後、ユーザー が具体的なアクションs を実行する頻度である[コンバージョンイベントs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) を追跡できます。ユーザーが指定されたアクションをとった場合にコンバージョンがカウントされる最大30 日間のウィンドウを許可することもできます。
 
 {% endtab %}
 
