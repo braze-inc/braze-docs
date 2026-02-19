@@ -157,16 +157,19 @@ We recommend that you create user IDs using the [Universally Unique Identifier (
 
 Alternatively, you can hash an existing unique identifier (such as a name or email address) to generate your user IDs instead. If you do so, be sure to implement [SDK authentication]({{site.baseurl}}/developer_guide/authentication/), so you can prevent user impersonation.
 
+{% alert warning %}
+Do not use a guessable value or incrementing number for your user ID. This may expose your organization to malicious attacks or data exfiltration.
+{% endalert %}
+
 While it's essential that you correctly name your user IDs from the start, you can always rename them in the future using the [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) endpoint.
 
-| Recommended | Not Recommended |
+| ID types not recommended | Example not recommended |
 | ------------ | ----------- |
-| 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
-| 8c0b3728-7fa7-4c68-a32e-12de1d3ed2d5 | Anna@email.com |
-| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | CompanyName-1-2-19 |
-| 2d9e96a1-8f15-4eaf-bf7b-eb8c34e25962 | jon-doe-1-2-19 |
+| User's visible profile ID or username | JonDoe829525552 |
+| Email Address | Anna@email.com |
+| Auto-incrementing user ID | 123 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
-Avoid sharing details about how you create user IDs, as this may expose your organization to malicious attacks or data removal.
+Avoid sharing details about how you create user IDs, as this may expose your organization to malicious attacks or data exfiltration.
 {% endalert %}
