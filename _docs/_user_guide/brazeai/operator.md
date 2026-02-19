@@ -1,7 +1,7 @@
 ---
 nav_title: Operator
 article_title: BrazeAI Operator
-page_order: 8
+page_order: 7
 layout: dev_guide
 alias: /operator/
 guide_top_header: "BrazeAI Operator"
