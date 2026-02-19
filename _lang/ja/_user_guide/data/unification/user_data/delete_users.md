@@ -37,7 +37,7 @@ hidden: true
 
 ### 個人を削除する {#delete-individual}
 
-個々のユーザーをBrazeから削除するには、**Audience**> **検索ユーザーs**に移動し、ユーザーを検索して選択します。重複するユーザープロファイルを削除する場合は、正しいものを選択したことを確認します。
+個々のユーザーをBrazeから削除するには、**Audience**> **検索ユーザー**に移動し、ユーザーを検索して選択します。重複するユーザープロファイルを削除する場合は、正しいものを選択したことを確認します。
 
 ![Brazeの「ユーザの検索」ページ。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
 
@@ -68,7 +68,7 @@ Brazeで、**Audience**> **Audience**を管理し、**Delete Users**タブを選
 このSegmentのユーザーはすぐには削除されません。代わりに、次の7 日間は削除保留としてマークされます。この後、削除され、お知らせするようにメールさせていただきます。
 
 {% alert tip %}
-これらの厳密なユーザーs がSegmentの変更に関係なく削除されるように、**Pending Deletion** というSegment フィルターが自動的に作成されます。[このフィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters)を使用して、保留中の削除のステータスを確認できます。
+これらの厳密なユーザー がSegmentの変更に関係なく削除されるように、**Pending Deletion** というSegment フィルターが自動的に作成されます。[このフィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters)を使用して、保留中の削除のステータスを確認できます。
 {% endalert %}
 
 ## Segment削除の確認
@@ -99,7 +99,7 @@ Brazeは、削除保留中のプロファイルの件数を示す確認メール
 
 ## 削除ステータスの確認 {#status}
 
-削除のステータスは、[Segment フィルターs](#segment-filters)、[管理オーディエンス](#manage-audience)ページ、または[セキュリティイベントレポートs](#security-event-report)を使用して確認できます。
+削除のステータスは、[Segment フィルター](#segment-filters)、[管理オーディエンス](#manage-audience)ページ、または[セキュリティイベントレポートs](#security-event-report)を使用して確認できます。
 
 ### セグメントフィルター
 
@@ -157,7 +157,7 @@ Brazeは、削除保留中のプロファイルの件数を示す確認メール
 
 ### h ユーザー s に送信され、削除が保留されているデータへのアプリは?
 
-外部システムまたはSDK s から送信されたデータはまだ受け入れられますが、ユーザーs はアクティビティーに関係なくスケジュールされたとして削除されます。
+外部システムまたはSDK s から送信されたデータはまだ受け入れられますが、ユーザー はアクティビティーに関係なくスケジュールされたとして削除されます。
 
 ### キャンバスとキャンペーン s がユーザー s の削除をトリガーしますか?
 

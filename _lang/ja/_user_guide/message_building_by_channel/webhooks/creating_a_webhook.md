@@ -172,7 +172,7 @@ Webhook は、スケジュールされた時刻、アクション、または AP
 
 #### ターゲットとするユーザーを選択する
 
-次に、Segment s またはフィルター s を選択してオーディエンスを絞り込むことで、[target ユーザー s]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) を選択する必要があります。このステップでは、Segments からより大きなオーディエンスを選択し、フィルターs を選択した場合はそのSegmentをさらに絞り込みます。そのアプリの近接Segment集団がどのように見えるかのプレビューを自動的に受け取ります。メッセージが送信されるまでは、必ずSegmentメンバーシップが計算されることに注意してください。
+次に、Segment s またはフィルター s を選択してオーディエンスを絞り込むことで、[target ユーザー s]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) を選択する必要があります。このステップでは、Segments からより大きなオーディエンスを選択し、フィルター を選択した場合はそのSegmentをさらに絞り込みます。そのアプリの近接Segment集団がどのように見えるかのプレビューを自動的に受け取ります。メッセージが送信されるまでは、必ずSegmentメンバーシップが計算されることに注意してください。
 
 {% multi_lang_include target_audiences.md %}
 
