@@ -188,10 +188,6 @@ Give the role a name and a description, and select **Create Role**.
 
 ## Setting up Cloud Data Ingestion in Braze
 
-{% alert important %}
-New customers may have early access to a new CDI UI, where sources and syncs are configured separately. In this new UI, create a S3 source first with your credentials, bucket, and region. Then, create a sync with your SQS URL and folder path (optional).
-{% endalert %}
-
 1. To create a new integration, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import** from the file sources section. 
 2. Input the information from the AWS setup process to create a new sync. Specify the following:
    - Role ARN
