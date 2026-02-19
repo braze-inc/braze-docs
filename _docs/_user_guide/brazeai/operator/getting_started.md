@@ -71,9 +71,9 @@ Operator shows its reasoning steps in collapsible sections labeled **Reasoned**.
 
 ![The collapsed "Reasoned" dropdown in an Operator response.]({% image_buster /assets/img/operator/operator_reasoning_collapsed.png %}){:style="max-width:30%"}
 
-### Take suggested actions
+### Take action with Operator
 
-In some cases, Operator recommends next steps and provides direct links to relevant pages in the Braze dashboard. For example, if you ask about email bounce rates, Operator may link directly to the **Deliverability Center** page, saving you navigation time.
+Operator can propose and execute changes directly in the Braze dashboard, such as filling in form fields, updating settings, or generating content. Each proposed change is presented as an action card for you to review and approve before it takes effect. For more on how this works, see [Reviewing actions]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/).
 
 ## Managing your session
 
