@@ -55,17 +55,6 @@ If you haven't done so already, connect a cloud storage bucket to Braze. For ste
 You don't need to set up Currents for message archiving, so you can skip that prerequisite in the partner documentation.
 {% endalert %}
 
-#### What you need to do in AWS (for S3)
-
-Message archiving uses the **Dashboard Data Export** integration method. When following the [Amazon S3 integration guide]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), complete these steps:
-
-1. Create a dedicated S3 bucket for Braze (or use an existing one).
-2. Choose an authentication method—either AWS secret access key or AWS role ARN. Both methods work for message archiving.
-3. Follow all steps for your chosen method under the **Dashboard Data Export** tabs (not the **Braze Currents** tabs).
-4. Configure the integration in Braze at **Partner Integrations** > **Technology Partners** > **Amazon S3**.
-
-After completing the S3 integration, return here to enable message archiving for specific channels. For detailed setup instructions, see [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/).
-
 ### Step 2: Select channels for message archiving
 
 The **Message Archiving** settings page controls which channels will save a copy of sent messages to your cloud storage bucket.
