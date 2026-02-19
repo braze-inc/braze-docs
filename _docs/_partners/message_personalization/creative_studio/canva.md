@@ -18,15 +18,15 @@ The Braze and Canva integration allows you to push assets from Canva directly in
 
 ### Step 1: Install the Braze App in Canva
 
-The Braze app can be found in the [Canva Apps Marketplace](https://www.canva.com/your-apps/AAG1cO7kIyc).
+You can find the Braze App in the [Canva Apps Marketplace](https://www.canva.com/your-apps/AAG1cO7kIyc).
 
-After installing the app it will be available within a design, under the Apps menu.
+After installing the app, it's available within a design, under the Apps menu.
 
 ![Braze app in the Canva Apps menu]({% image_buster /assets/img/canva_integration/braze-canva-app.png %})
 
 ### Step 2: Authorize your Braze account
 
-Launch the Braze app, and click Connect to begin the authorization flow. This will grant Canva access to list the Braze workspaces you have access to, as well as permission to create new Media Library assets on your behalf.
+Launch the Braze app, and click **Connect** to begin the authorization flow. This grants Canva access to list the Braze workspaces you have access to, as well as permission to create new Media Library assets on your behalf.
 
 ![Connect button and authorization flow for linking Canva to Braze]({% image_buster /assets/img/canva_integration/canva-oauth.jpg %})
 
@@ -38,6 +38,4 @@ When you're ready to export your Canva design to Braze, choose your desired dest
 
 ### Step 4: Result
 
-Once your export completes, your new asset will be available in the Media Library, with a source of "Canva".
-
-![Braze Media Library asset with source set to Canva]({% image_buster /assets/img/canva_integration/media-library-source.jpg %})
+When your export completes, your new asset is available in the Media Library, with a source of "Canva".
