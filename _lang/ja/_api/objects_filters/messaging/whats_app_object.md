@@ -42,7 +42,7 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
 ```
 
 {% alert important %}
-**メディア送信の制限:**メディア送信(ドキュメント、動画、および他のメディアタイプ) は、`messages/send` API ではサポートされていません。API を介して送信されるテンプレート メッセージでは、TEXT およびIMAGE ヘッダータイプのみがサポートされます。WhatsApp テンプレートがドキュメント、ビデオ、または他のメディアタイプのヘッダーを使用している場合、`messages/send` API を使用して送信することはできません。[Campaigns Triggered API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)またはBraze ダッシュボードを使用して、メディアヘッダーsでテンプレートsを送信します。
+**メディア送信の制限:**メディア送信(ドキュメント、動画、および他のメディアタイプ) は、`messages/send` API ではサポートされていません。API を介して送信されるテンプレート メッセージでは、TEXT およびIMAGE ヘッダータイプのみがサポートされます。WhatsApp テンプレートがドキュメント、ビデオ、または他のメディアタイプのヘッダーを使用している場合、`messages/send` API を使用して送信することはできません。[Campaigns Triggered API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)またはBraze ダッシュボードを使用して、メディアヘッダーでテンプレートsを送信します。
 {% endalert %}
 
 ##### ヘッダー変数オブジェクト
@@ -50,7 +50,7 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
 `header_variables` オブジェクトを使用すると、WhatsApp テンプレートのヘッダー変数の値を指定することができる。各キーは、指定された値で置換するWhatsAppテンプレート変数のインデックス（ゼロインデックス）である。
 
 {% alert note %}
-**ヘッダタイプの要件:**`header_variables` は、TEXT 型のヘッダーs を持つテンプレートs でのみ使用できます。IMAGE ヘッダー s の場合は、代わりに`header_image_uri` を使用します。`messages/send` API では、ドキュメント、ビデオなどのメディアヘッダータイプはサポートされていません。
+**ヘッダタイプの要件:**`header_variables` は、TEXT 型のヘッダー を持つテンプレートs でのみ使用できます。IMAGE ヘッダー s の場合は、代わりに`header_image_uri` を使用します。`messages/send` API では、ドキュメント、ビデオなどのメディアヘッダータイプはサポートされていません。
 {% endalert %}
 
 ```json

@@ -67,7 +67,7 @@ tool: Canvas
 
 デフォルトのサブスクリプション設定を維持します。これにより、サイレント時間をオンにした状態でサブスクリプション登録したユーザーおよびメッセージまたは通知の受信を選択したユーザーのみに送信されるようになります。その他の設定 (フリークエンシーキャップ、シードグループ) は省略します。
 
-!["設定 のS" を送信します。午前12 時から午後8 時の間にQuiet Hours が有効になっている、購読または選択されているユーザーs のサブスクリプション 設定がs であるセクションです。]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
+!["設定 のS" を送信します。午前12 時から午後8 時の間にQuiet Hours が有効になっている、購読または選択されているユーザー のサブスクリプション 設定がs であるセクションです。]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
 
 ### ステップ 6: キャンバスをカスタマイズする
 
