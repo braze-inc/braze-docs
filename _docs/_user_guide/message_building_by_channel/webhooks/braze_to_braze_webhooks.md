@@ -55,7 +55,7 @@ In this use case, you create two Canvases and use a Braze-to-Braze webhook to tr
 
 1. Start by creating your second Canvas—the Canvas that should be triggered by your initial Canvas.
 2. For the Canvas **Entry Schedule**, select **API-Triggered**.
-3. Make note of your **Canvas ID**. You'll need this in a later step.
+3. Make note of your **Canvas ID**. You need this in a later step.
 4. Continue building out the steps of your second Canvas, then save the Canvas.
 5. Finally, create your first Canvas. Find the step where you want to trigger the second Canvas and create a new step with a webhook.
 
