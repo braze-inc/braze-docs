@@ -12,6 +12,7 @@ search_tag: Partner
 
 > [Linkrunner](https://linkrunner.io/) is a mobile attribution and analytics platform that helps you track and analyze your user acquisition campaigns.
 
+_This integration is maintained by Linkrunner._
 The Braze and Linkrunner integration lets you import attribution data to better understand which campaigns are driving user acquisition and engagement.
 
 ## Prerequisites
