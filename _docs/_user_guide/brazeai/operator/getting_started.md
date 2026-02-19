@@ -20,7 +20,7 @@ Open Operator from any page in the Braze dashboard.
 {:start="2"}
 2. The Operator chat panel will open on the right-hand side of the screen.
 
-![The Operator chat panel.]({% image_buster /assets/img/operator/operator_panel.png %})
+![The Operator chat panel.]({% image_buster /assets/img/operator/operator_chat_panel.png %})
 
 {% alert tip %}
 Maximize to expand the panel for easier reading, or minimize to keep Operator available while working.  
@@ -33,7 +33,7 @@ Describe what you are trying to accomplish using natural language. Prompts can r
 - **Simple:** Why isn't my Liquid rendering?
 - **Complex:** How can I make the `abort_message` tag of my message include the user attribute that caused the abort?
 
-Operator can provide step-by-step instructions, links to Braze documentation, and plain-language explanations. Clear and specific questions lead to more helpful responses. Operator uses [GPT-5.2](https://platform.openai.com/docs/models/gpt-5.2), which offers the strongest reasoning and is best suited for complex, multi-step tasks. 
+Operator can provide step-by-step instructions, links to Braze documentation, and plain-language explanations. Clear and specific questions lead to more helpful responses. Operator uses [GPT-5.2](https://platform.openai.com/docs/models/gpt-5.2), which offers strong reasoning and is suited for complex, multi-step tasks. 
 
 ## Best practices
 
@@ -69,7 +69,7 @@ When you open Operator, suggested prompts appear based on common tasks and your 
 
 Operator shows its reasoning steps in collapsible sections labeled **Reasoned**. Select the dropdown to expand these sections and see how Operator arrived at an answer. This is helpful when you want to understand the logic behind a suggestion or verify the approach.
 
-![The collapsed "Reasoned" dropdown in an Operator response.]({% image_buster /assets/img/operator/operator_reasoning_collapsed.png %}){:style="max-width:30%"}
+![The collapsed "Reasoned" dropdown in an Operator response.]({% image_buster /assets/img/operator/operator_reasoning_collapsed.png %}){:style="max-width:40%"}
 
 ### Take action with Operator
 
