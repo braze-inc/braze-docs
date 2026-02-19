@@ -22,6 +22,8 @@ When Operator proposes changes in the dashboard (such as filling in form fields,
 If an action fails after approval, Operator will notify with details about the failure.
 {% endalert %}
 
+![Operator presenting suggested action cards for review.]({% image_buster /assets/img/operator/suggested_actions.png %}){: style="max-width:40%; float:right; margin-left:15px;"}
+
 ## Modifying a plan
 
 To change something Operator proposed, describe the modification in the chat using natural language. Operator will refresh the action list with updated items. Previously approved and executed items remain unchanged.
@@ -43,4 +45,4 @@ Auto-approve resets when you refresh the page, open a new tab, or log out and ba
 
 When auto-approve is enabled, a confirmation modal appears to verify your choice.
 
-> Add image for auto-approve toggle and confirmation modal.
+![The auto-approve toggle and confirmation modal in the Operator chat panel.]({% image_buster /assets/img/operator/auto-approval_toggle.png %}){: style="max-width:40%;"}
