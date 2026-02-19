@@ -437,7 +437,7 @@ Depending on the configuration of your Microsoft Fabric account, you may need to
 ### Step 2: Create a new integration in the Braze dashboard
 
 {% alert important %}
-Customers onboarding in February 2026 or later may have early access to the CDI UI with separate Sources and Syncs. In this UI, create a source before creating syncs for that source. Multiple syncs can use the same source.
+New customers onboarding in February 2026 or later may have early access to our new CDI UI, where sources and syncs are configured separately. In this new UI, create a source before creating syncs for that source. Multiple syncs can use the same source.
 {% endalert %}
 
 {% tabs %}
