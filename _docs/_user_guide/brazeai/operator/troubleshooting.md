@@ -21,5 +21,5 @@ description: "Common issues and solutions for BrazeAI Operator<sup>TM</sup>."
 
 ## Limitations
 
-- **Data access:** Operator can see the contents of the active page. It can also look up some company-specific data, such as past campaigns, catalogs, and custom attributes. However, it cannot currently generate new reports or run reporting queries.
+- **Data access:** Operator can use the context of the active page, but it cannot query or return company-specific data stored in Braze, such as campaign lists, segment performance, or Canvas analytics.
 - **Usage limits:** Operator has a company-wide daily usage limit that resets every 24 hours. If the limit is reached, a "Daily usage limit exceeded" banner will appear in the chat, and no further requests can be made until the limit resets.
