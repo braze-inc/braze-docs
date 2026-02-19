@@ -51,7 +51,7 @@ tool:
 ## プッシュ
 
 #### 確認事項
-- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/):ユーザーが Braze からプッシュメッセージを受信するには、サブスクリプションステータスがオプトイン済み (iOS) またはサブスクリプション登録済み (Android) および `Push Enabled = True` になっている必要があります。Android 13では、ユーザーsがプッシュ通知sを送信するアプリsを管理する方法に大きな変更を導入していることに注意してください。Braze [Android 13 SDK アップグレードガイド]({{site.baseurl}}/developer_guide/platforms/android/android_13/) は、新しい Android 13 ベータ版がリリースされるたびに更新され続けます。
+- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/):ユーザーが Braze からプッシュメッセージを受信するには、サブスクリプションステータスがオプトイン済み (iOS) またはサブスクリプション登録済み (Android) および `Push Enabled = True` になっている必要があります。Android 13では、ユーザーがプッシュ通知sを送信するアプリsを管理する方法に大きな変更を導入していることに注意してください。Braze [Android 13 SDK アップグレードガイド]({{site.baseurl}}/developer_guide/platforms/android/android_13/) は、新しい Android 13 ベータ版がリリースされるたびに更新され続けます。
 
 #### 知っておくべきこと
 - **Web プッシュ**:Braze [Web SDK のセットアップ]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) がある場合は、ユーザーを引き付けるために Web プッシュを利用することを検討してください。Web プッシュは、スマートフォンでのアプリのプッシュ通知と同様に機能します。Web プッシュの作成に関する詳細については、[プッシュ通知の作成]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)をチェックしてください。

@@ -212,5 +212,4 @@ As of April 2024, to create or update promotion code lists, company users need t
 |Workspace|Edit Custom AI Agents|Allows users to edit custom AI agents. This feature is currently in beta.|
 | Workspace | View WhatsApp Message Templates | Allows users to view [WhatsApp message templates]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/?tab=template%20messages#step-2-compose-your-whatsapp-message). |
 | Workspace | Edit WhatsApp Message Templates | Allows users to create WhatsApp message templates in the template builder. This feature is currently in early access. |
-| Workspace | Delete Whatsapp Message Templates | Allows users to delete WhatsApp message templates in the template builder. This feature is currently in early access. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
