@@ -42,6 +42,10 @@ Features for Braze Agents include:
 
 Agents are configured with instructions (system prompts) that define how they behave. When an agent runs, it uses your instructions along with any data you pass in to generate a response. 
 
+{% alert note %}
+Agents are dependent on [Canvas context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables).
+{% endalert %}
+
 ### Key concepts
 
 | Term | Definition |
