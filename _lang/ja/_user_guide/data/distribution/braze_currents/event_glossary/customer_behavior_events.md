@@ -299,7 +299,7 @@ search_rank: 7
 ## ロケーション・イベント {#location-events}
 
 {% apitags %}
-ロケーション
+位置情報
 {% endapitags %}
 
 このイベントは、ユーザーが特定のロケーションに移動したときにトリガーされます。これを使用して、アプリ内でロケーションイベントをトリガーするユーザーを追跡します。
@@ -922,7 +922,7 @@ search_rank: 7
 ## ライブ・アクティビティ・プッシュ・トゥ・スタート・トークン・チェンジ・イベント {#live-activity-push-to-start-token-change-events}
 
 {% apitags %}
-ライブアクティビティ、プッシュから開始トークン
+ライブアクティビティ, プッシュ開始トークン
 {% endapitags %}
 
 このイベントは、BrazeがLive Activityのプッシュトークンを開始するトークンをユーザーと同期するときに発生する。
@@ -1031,7 +1031,7 @@ search_rank: 7
 ## ライブ・アクティビティ更新トークン変更イベント {#live-activity-update-token-change-events}
 
 {% apitags %}
-ライブアクティビティ、更新トークン
+ライブアクティビティ, トークン更新
 {% endapitags %}
 
 このイベントは、Braze がライブアクティビティ更新トークンをユーザと同期するときに発生します
@@ -1140,7 +1140,7 @@ search_rank: 7
 ## プッシュ通知トークン状態変更イベント {#push-notification-token-state-change-events}
 
 {% apitags %}
-プッシュ、トークン状態変更
+プッシュ, トークン状態変更
 {% endapitags %}
 
 このイベントは、プッシュトークンが挿入、更新、削除されたときに発生する。プッシュトークンの状態を追跡するために使用します。
