@@ -89,7 +89,7 @@ To gain insights into the trends related to orders placed from your launched Can
 
 After you launch a campaign or Canvas using the "Places Order" conversion event, you can create a corresponding [conversion report]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#setting-up-your-report) to track performance.
 
-![Conversions Details table with with campaigns and Canvases, and the associated conversion statistics.]({% image_buster /assets/img_archive/conversion_details_table.png %})
+![Conversions Details table with campaigns and Canvases, and the associated conversion statistics.]({% image_buster /assets/img_archive/conversion_details_table.png %})
 
 #### eCommerce revenue dashboard
 
