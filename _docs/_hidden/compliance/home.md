@@ -30,16 +30,16 @@ Below is the list of our products, channels, features, functionalities and servi
 
 Without limiting any Customer obligations under the Agreement, and for the avoidance of doubt, Customer shall be solely responsible for obtaining all necessary rights, consents, and authorizations and providing legally adequate privacy notices in connection with its use and obtaining all legally required consents and authorizations for the use of the Channels and Features listed below.
 
-### Channels and features
+## Channels and Features
 
-1. Mobile Messages Channel
-2. Webhooks Channel
-3. WhatsApp Channel Compliance Documentation
-4. LINE Channel Compliance Documentation
-5. Shopify Integration Compliance Documentation
-6. Audience Sync Compliance Documentation
-7. Message Archiving and Field Level Encryption Compliance Documentation
-8. Agent Console Compliance Documentation
+1. [Mobile Messages Channel](#mobile-messages-channel)
+2. [Webhooks Channel](#webhooks-channel)
+3. [WhatsApp Channel Compliance Documentation](#hatsapp-channel-compliance-documentation)
+4. [LINE Channel Compliance Documentation](#line-channel-compliance-documentation)
+5. [Shopify Integration Compliance Documentation](#shopify-integration-compliance-documentation)
+6. [Audience Sync Compliance Documentation](#audience-sync-compliance-documentation)
+7. [Message Archiving and Field Level Encryption Compliance Documentation](#message-archiving-and-field-level-encryption-compliance-documentation)
+8. [Agent Console Compliance Documentation](#agent-console-compliance-documentation)
 
 ## 1. Mobile Messages Channel {#mobile-messages-channel}
 
