@@ -3,6 +3,7 @@ nav_title: Compliance documentation
 article_title: Compliance Documentation
 page_order: 1
 permalink: /compliance_documentation/
+toc_headers: h2
 noindex: true
 ---
 
