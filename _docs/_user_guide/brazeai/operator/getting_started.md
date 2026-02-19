@@ -17,9 +17,10 @@ Open Operator from any page in the Braze dashboard.
 
 ![The BrazeAI Operator icon next to a user profile.]({% image_buster /assets/img/operator/operator_icon.png %})
 
+{:start="2"}
 2. The Operator chat panel will open on the right-hand side of the screen.
 
-![The Operator chat panel.]({% image_buster /assets/img/operator/operator_chat_panel.png %})
+![The Operator chat panel.]({% image_buster /assets/img/operator/operator_panel.png %})
 
 {% alert tip %}
 Maximize to expand the panel for easier reading, or minimize to keep Operator available while working.  
@@ -32,7 +33,7 @@ Describe what you are trying to accomplish using natural language. Prompts can r
 - **Simple:** Why isn't my Liquid rendering?
 - **Complex:** How can I make the `abort_message` tag of my message include the user attribute that caused the abort?
 
-Operator can provide step-by-step instructions, links to Braze documentation, and plain-language explanations. Clear and specific questions lead to more helpful responses. 
+Operator can provide step-by-step instructions, links to Braze documentation, and plain-language explanations. Clear and specific questions lead to more helpful responses. Operator uses [GPT-5.2](https://platform.openai.com/docs/models/gpt-5.2), which offers the strongest reasoning and is best suited for complex, multi-step tasks. 
 
 ## Best practices
 
@@ -43,23 +44,6 @@ Treat Operator as a conversation, not a search engine. Short, natural prompts wo
 - **Use page-aware context:** Operator understands your location in Braze. Open Operator while viewing the relevant page for the most accurate results.
 
 ## Customizing your experience
-
-### Choose the right model
-
-Operator uses [GPT-5.2](https://platform.openai.com/docs/models/gpt-5.2) by default, which offers the strongest reasoning and is best suited for complex, multi-step tasks. Lighter models are also available and consume fewer resources against your daily usage limit, making them a good choice for straightforward questions.
-
-<!-- TODO: Replace with confirmed model list once engineering finalizes the set. -->
-| Model | Best for | Resource usage |
-| --- | --- | --- |
-| [GPT-5.2](https://platform.openai.com/docs/models/gpt-5.2) (default) | Complex troubleshooting, multi-step workflows, advanced reasoning | Highest |
-| _Additional models TBD_ | _Simpler queries, routine questions_ | _Lower_ |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-> Add image for GPT model dropdown.
-
-{% alert tip %}
-Use a lighter model for straightforward questions to conserve your daily usage. Reserve GPT-5.2 for complex troubleshooting or multi-step tasks.
-{% endalert %}
 
 ### Apply brand guidelines
 
@@ -85,9 +69,7 @@ When you open Operator, suggested prompts appear based on common tasks and your 
 
 Operator shows its reasoning steps in collapsible sections labeled **Reasoned**. Select the dropdown to expand these sections and see how Operator arrived at an answer. This is helpful when you want to understand the logic behind a suggestion or verify the approach.
 
-![The collapsed "Reasoned" dropdown in an Operator response.]({% image_buster /assets/img/operator/operator_reasoning_collapsed.png %}){:style="max-width:50%"}
-
-![The expanded "Reasoned" dropdown showing how Operator arrived at an answer.]({% image_buster /assets/img/operator/operator_reasoning_expanded.png %}){:style="max-width:50%"}
+![The collapsed "Reasoned" dropdown in an Operator response.]({% image_buster /assets/img/operator/operator_reasoning_collapsed.png %}){:style="max-width:30%"}
 
 ### Take suggested actions
 
@@ -109,4 +91,5 @@ At the bottom of each response, use the thumbs up or thumbs down buttons to prov
 
 ## Next steps
 
+- [Reviewing actions]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/) - Learn how to review and approve Operator's proposed changes
 - [Troubleshooting]({{site.baseurl}}/user_guide/brazeai/operator/troubleshooting/) - Common issues and solutions
