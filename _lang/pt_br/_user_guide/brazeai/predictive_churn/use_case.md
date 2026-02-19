@@ -38,7 +38,7 @@ Camila começa modelando o resultado que deseja evitar: usuários que se tornam 
 6\. Ela define o cronograma de atualização da previsão como semanal para que as pontuações permaneçam atualizadas.
 7\. Ela seleciona **Create prediction (Criar previsão**).
 
-Em seguida, o modelo começa a ser treinado, analisando comportamentos como sessões recentes, frequência de visualização e interações de conteúdo para revelar padrões que preveem o abandono. Uma hora depois, Camila recebe um e-mail informando que sua previsão terminou o treinamento, então ela o abre no Braze e verifica a pontuação [de qualidade da previsão]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#prediction_quality). Ele é rotulado como "Bom", o que significa que as previsões do modelo provavelmente serão precisas e confiáveis. Confiante na performance do modelo, ela segue em frente.
+Em seguida, o modelo começa a ser treinado, analisando comportamentos como sessões recentes, frequência de visualização e interações com o conteúdo para revelar padrões que preveem o abandono. Uma hora depois, Camila recebe um e-mail informando que sua previsão terminou o treinamento, então ela o abre no Braze e verifica a pontuação [de qualidade da previsão]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#prediction_quality). Ele é rotulado como "Bom", o que significa que as previsões do modelo provavelmente serão precisas e confiáveis. Confiante na performance do modelo, ela segue em frente.
 
 ## Etapa 2: Segmentar usuários por risco de churn
 
@@ -52,7 +52,7 @@ Para determinar um limite inicial para o direcionamento, Camila usa o controle d
 
 ![Filtragem de segmentos para usuários com uma pontuação de risco de churn superior a 70.]({% image_buster /assets/img/ai_use_cases/churn_risk_score.png %})
 
-## Etapa 3: Direcionamento para usuários em risco com conteúdo recorrente de reengajamento
+## Etapa 3: Direcionamento a usuários em risco com conteúdo recorrente de reengajamento
 
 Com a previsão e o segmento prontos, Camila configura uma campanha recorrente que atinge automaticamente os usuários em risco a cada semana.
 

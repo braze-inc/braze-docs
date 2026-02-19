@@ -55,12 +55,12 @@ O Braze pesquisará sua configuração de DNS aproximadamente a cada 30 minutos 
 ![Seção "Registro DNS" com 3 etapas a serem concluídas para finalizar a configuração do seu domínio.]({% image_buster /assets/img/dns_record.png %})
 
 {% alert note %}
-O progresso de seu domínio é salvo automaticamente. Se precisar sair no meio do fluxo, você poderá retomá-lo mais tarde selecionando a entrada de domínio pendente na página **Domínios de SMS/RCS e de aplicativos de envio de mensagens**.
+O progresso de seu domínio é salvo automaticamente. Se precisar sair no meio do fluxo, você poderá retomá-lo mais tarde selecionando a entrada do domínio pendente na página **Domínios de SMS/RCS e de aplicativos de envio de mensagens**.
 {% endalert %}
 
 ### Gerenciamento e uso contínuos
 
-Depois que seu domínio for verificado, seus domínios personalizados aparecerão na tabela da página **SMS/RCS and Messaging Apps Domains** com indicadores de status. Você pode usar imediatamente os domínios conectados em vários grupos de inscrições, espaços de trabalho e canais de SMS, RCS e WhatsApp.
+Depois que seu domínio for verificado, seus domínios personalizados aparecerão na tabela da página **SMS/RCS and Messaging Apps Domains** com indicadores de status. Você pode usar imediatamente os domínios conectados em vários grupos de inscrições, espaços de trabalho e em canais SMS, RCS e WhatsApp.
 
 ![Lista de domínios e status personalizados.]({% image_buster /assets/img/custom_domain_statuses.png %}){: style="max-width:60%;"}
 
@@ -70,7 +70,7 @@ O monitoramento ao vivo o alertará no dashboard do Braze se algum dos seus dom�
 
 Depois de configurados, os domínios personalizados podem ser atribuídos a um ou vários grupos de inscrições de SMS, RCS e WhatsApp.
 
-1. Acesse **Público** > **Gerenciamento de grupos de inscrições**.
+1. Acesse **Público** > **Gerenciamento do grupo de inscrições**.
 2. Encontre e selecione seu grupo de inscrições na lista.
 3. Em **Detalhes do grupo de inscrições**, selecione seu domínio personalizado como o **domínio de encurtamento de links**.
 

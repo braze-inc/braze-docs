@@ -16,7 +16,7 @@ _Diese Integration wird von Survicate gepflegt._
 
 ## Über die Integration
 
-Verwenden Sie die native Integration von Survicate und Braze, um Antworten auf E-Mail-, In-App-, Mobil- oder Web-Umfragen mit Kundenprofilen von Braze zu synchronisieren. Umfragen werden automatisch mit Braze Nutzerprofilen als angepasste Attribute oder Events synchronisiert. Insights zu Echtzeit-Feedback erleichtern das Tracking und die Analyse von Feedback zusammen mit Kundendaten sowie die Erstellung von Targeting-Follow-ups und hyper-personalisierten Segmenten. 
+Nutzen Sie die native Integration von Survicate und Braze, um Antworten auf E-Mail-, In-App-, Mobil- oder Web-Umfragen mit Kundenprofilen von Braze zu synchronisieren. Umfragen werden automatisch mit Braze Nutzerprofilen als angepasste Attribute oder Events synchronisiert. Insights zu Echtzeit-Feedback erleichtern das Tracking und die Analyse von Feedback zusammen mit Kundendaten sowie die Erstellung von Targeting-Follow-ups und hyper-personalisierten Segmenten. 
 
 ## Anwendungsfälle
 

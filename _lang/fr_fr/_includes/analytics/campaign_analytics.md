@@ -129,7 +129,7 @@ Le panneau de **performance des messages in-app** présente l'efficacité de vot
 
 Le panneau " **Push Performance"** donne un aperçu de la performance de votre message en fonction de différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
 
-![Analyse/analytique de l'envoi de messages (si utilisé)]({% image_buster /assets/img_archive/push_message_performance.png %})
+![Analyse/analytique de l'envoi des messages (si utilisés)]({% image_buster /assets/img_archive/push_message_performance.png %})
 
 {% elsif include.channel == "SMS" %}
 ### Performances des SMS/MMS/RCS
@@ -412,6 +412,8 @@ Notez que les _requêtes SQL_ ne sont actuellement disponibles qu'en utilisant l
 Cette statistique utilise un modèle analytique propriétaire créé par Braze pour reconstruire une estimation du taux d'ouverture unique de la campagne comme si les ouvertures automatiques n'existaient pas. Bien que les expéditeurs d'e-mails nous attribuent la mention " *ouverture machine"* pour certains événements d'ouverture (voir ci-dessus), ces mentions peuvent souvent étiqueter les ouvertures réelles comme étant des ouvertures machine. En d'autres termes, les *autres ouvertures* sont probablement une sous-estimation des ouvertures réelles (par des utilisateurs réels). Au lieu de cela, Braze utilise les données de clics de chaque campagne pour déduire le taux d'ouverture du message par des humains réels. Cela permet de compenser les divers mécanismes d'ouverture des machines, y compris la protection de confidentialité dans Mail d'Apple.
 
 Le _taux d'ouverture réel estimé_ est calculé 36 heures après le début de l'envoi de l'e-mail et est ensuite recalculé toutes les 24 heures. Si une campagne se répète, l'estimation est recalculée 36 heures après un nouvel envoi.
+
+Comme cet indicateur est recalculé en permanence, la valeur du _taux d'ouverture réel estimé_ peut changer au fil du temps, à mesure que de nouveaux indicateurs d'engagement (tels que les ouvertures et les clics) sont reçus et incorporés dans le modèle. Dans la pratique, le _taux d'ouverture réel estimé_ peut continuer à être mis à jour quotidiennement tant qu'une campagne reste active.
 
 En règle générale, il faut environ 10 000 e-mails délivrés pour que la statistique soit calculée avec succès, bien que ce nombre puisse varier en fonction du taux de clics. Si la statistique ne peut pas être calculée, la colonne affiche "--".
 

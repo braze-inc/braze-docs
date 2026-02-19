@@ -2,7 +2,7 @@
 nav_title: Rutas de acción
 article_title: Rutas de acción 
 alias: /action_paths/
-page_order: 0.1
+page_order: 1
 page_type: reference
 description: "En este artículo de referencia se explica cómo utilizar Rutas de acción, un componente que permite ordenar a los usuarios en función de sus acciones."
 tool: Canvas
@@ -33,7 +33,7 @@ En **la Configuración de la acción**, también puede activar el orden de clasi
 
 Por defecto, **la clasificación** está desactivada. Cuando un usuario entra en la ruta de acción y realiza el evento desencadenante asociado a cualquier grupo de acción, avanza inmediatamente por el grupo de acción correspondiente. Si un usuario no realiza un evento desencadenante, avanza por el grupo predeterminado **Todos los demás** al final del periodo de evaluación.
 
-Cuando se activa **Usuarios avanzados según orden de clasificación**, significa que **la Clasificación** está activada. Así, todos los usuarios son retenidos hasta el final de la ventana de evaluación. Al final del periodo de evaluación, los usuarios avanzan por el grupo de acción de mayor prioridad para el que son elegibles al final de la ventana de evaluación. Los usuarios que no realizan ninguna de las acciones durante la ventana de evaluación avanzan a través del grupo predeterminado **Todos los demás**.
+Cuando se activa **Usuarios avanzados según orden de clasificación**, significa que **la Clasificación** está activada. Así, todos los usuarios son retenidos hasta el final de la ventana de evaluación. Al final del periodo de evaluación, los usuarios avanzan por el grupo de acción de mayor prioridad para el que sean elegibles al final de la ventana de evaluación. Los usuarios que no realizan ninguna de las acciones durante la ventana de evaluación avanzan a través del grupo predeterminado **Todos los demás**.
 
 Ten en cuenta que puedes desencadenar una ruta de acción cuando cambie un objeto atributo personalizado anidado, pero no para matrices de atributos personalizados anidados o cambios en los tipos de datos de matrices de objetos.
 

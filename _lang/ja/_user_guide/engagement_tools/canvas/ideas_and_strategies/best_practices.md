@@ -23,7 +23,11 @@ tool: Canvas
 [キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)で、ユーザージャーニーの新たな組み合わせを実現しましょう。
 - [条件分岐]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/)でユーザーを分割し、異なるワークフローを作成します。
 - [遅延]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/)ステップでユーザージャーニーの間隔を空けます。
-- キャンバスフローの好きな場所に[スタンドアロンメッセージを]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)追加できる。 
+- キャンバスフローの好きな場所に[スタンドアロンメッセージを]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)追加できる。
+
+{% alert note %}
+キャンバスステップは、ユーザーをキャンバスフローの前方にのみ移動させることができる。キャンバスでステップを前のステップにリンクさせることはできない。この検証により、ユーザーはキャンバス内を単一方向に進むことができる。
+{% endalert %}
 
 ## より充実したメッセージを作成する
 

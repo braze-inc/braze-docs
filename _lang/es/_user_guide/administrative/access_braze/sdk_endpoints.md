@@ -1,7 +1,7 @@
 ---
 nav_title: API y puntos finales SDK
 article_title: API y puntos finales SDK
-page_order: 2.4
+page_order: 4
 page_type: reference
 description: "Este artículo de referencia enumera las URL del panel, los puntos finales API y los puntos finales SDK para las instancias de Braze disponibles."
 

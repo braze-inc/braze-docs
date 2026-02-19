@@ -35,7 +35,7 @@ Empezamos a limitar el número de caracteres en abril de 2025. Las campañas y l
 
 ### X campañas o Lienzos activos o parados superan el umbral de complejidad de la audiencia
 
-Este banner se muestra en la parte superior de la lista de una campaña o Canvas siempre que las campañas o Canvas activos o parados tengan audiencias que superen el umbral de complejidad de audiencia. Selecciona el banner para filtrar la lista sólo a las campañas o Lienzos que superen el umbral y, a continuación, sigue los pasos de solución de problemas en [La audiencia objetivo es demasiado compleja para lanzarla](#target-audience-is-too-complex-to-launch).
+Este banner se muestra en la parte superior de la lista de una campaña o Canvas siempre que las campañas o Canvas activos o parados tengan audiencias que superen el umbral de complejidad de audiencia. Selecciona el banner para filtrar la lista sólo a las campañas o Lienzos que superen el umbral y, a continuación, sigue los pasos de solución de problemas de [La audiencia objetivo es demasiado compleja para lanzarla](#target-audience-is-too-complex-to-launch).
 
 ![Banner de error que dice que 4 Lienzos activos o parados superan el umbral de complejidad de audiencia.]({% image_buster /assets/img/segment/audience_complexity_threshold_banner.png %})
 
@@ -106,6 +106,7 @@ El primer escenario es si el campo `app_id` se rellena cuando se utiliza el punt
 El segundo escenario es si el campo `app_id` se rellena al utilizar el endpoint `/users/track` para migrar tickets push, como en este ejemplo: 
 
 ```json
+{
 "app_group_id": "{YOUR_APP_GROUP_ID}",
 "attributes": [
 {
@@ -119,4 +120,5 @@ El segundo escenario es si el campo `app_id` se rellena al utilizar el endpoint 
       ]
   }
 ]
+}
 ```

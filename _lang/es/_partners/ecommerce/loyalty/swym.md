@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Swym
 
-> [Swym](https://getswym.com/) ayuda a las marcas de comercio electrónico a captar la intención de compra con listas de deseos, guardar para más tarde, registro de regalos y alertas de reposición de existencias. Utilizando datos ricos y basados en permisos, puedes crear campañas hiperdirigidas y entregar experiencias de compra personalizadas que impulsen la interacción, aumenten las conversiones e incrementen la fidelización.
+> [Swym](https://getswym.com/) ayuda a las marcas de comercio electrónico a captar la intención de compra con listas de deseos, guardar para más tarde, registro de regalos y alertas de existencias. Utilizando datos ricos y basados en permisos, puedes crear campañas hiperdirigidas y entregar experiencias de compra personalizadas que impulsen la interacción, aumenten las conversiones e incrementen la fidelización.
 
 *Esta integración está mantenida por Swym.*
 
@@ -43,7 +43,7 @@ Actualmente, la integración de Braze con Swym es una integración gestionada y 
 ![Generar una clave de API en Braze.]({% image_buster /assets/img/swym/braze-api-key.png %})
 
 {% alert important %}
-Para proteger tus claves de API, Swym recomienda que compartas las credenciales de forma segura utilizando una herramienta de enlace única y autodestructiva (por ejemplo, [OneTimeSecret](https://onetimesecret.com/)).
+Para proteger tus claves de API, Swym recomienda que compartas las credenciales de forma segura utilizando una herramienta de enlace único y autodestructivo (por ejemplo, [OneTimeSecret](https://onetimesecret.com/)).
 {% endalert %}
 
 {: start="2"}

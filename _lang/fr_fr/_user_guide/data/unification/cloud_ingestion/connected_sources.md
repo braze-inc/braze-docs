@@ -13,7 +13,7 @@ page_type: reference
 
 Après avoir ajouté une source connectée à votre espace de travail Braze, vous pouvez créer un segment CDI dans Segment Extensions. Les CDI Segment Extensions vous permettent d'écrire un langage SQL qui interroge directement votre entrepôt de données (en utilisant les données mises à disposition par votre CDI Connected Source), et de créer et maintenir un groupe d'utilisateurs pouvant être ciblés au sein de Braze. 
 
-Pour plus d'informations sur la création d'un segment avec cette source, reportez-vous à la section [Extensions de segments CDI.]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)
+Pour plus d'informations sur la création d'un segment avec cette source, reportez-vous à [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert warning %}
 Étant donné que les sources connectées s'exécutent directement sur votre entrepôt de données, vous prenez en charge tous les coûts liés à l'exécution de ces requêtes dans votre entrepôt de données. Les sources connectées n'enregistrent pas les points de données et les CDI Segment Extensions ne consomment pas de crédits de segmentation SQL.
@@ -98,7 +98,7 @@ Vous pouvez choisir d'accorder l'accès à toutes les tables d'un schéma ou d'a
 
 L'autorisation `create table` est nécessaire pour que Braze puisse créer une table avec les résultats de votre requête CDI Segment Extension avant de mettre à jour le segment dans Braze. Braze créera une table temporaire par segment, et la table ne persistera que pendant que Braze met à jour le segment.
 
-```json
+```sql
 CREATE ROLE BRAZE_INGESTION_ROLE;
 
 GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -116,7 +116,7 @@ GRANT SELECT ON TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC TO 
 
 #### Étape 2.2 : Définir l’entrepôt et donner accès au rôle Braze
 
-```json
+```sql
 CREATE WAREHOUSE BRAZE_INGESTION_WAREHOUSE;
 
 GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
@@ -127,7 +127,7 @@ L'indicateur de **reprise automatique** doit être activé dans l'entrepôt. Si 
 {% endalert %}
 
 #### Étape 2.3 : Configurer l’utilisateur
-```json
+```sql
 CREATE USER BRAZE_INGESTION_USER;
 
 GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
@@ -149,7 +149,7 @@ Selon la configuration de votre compte Snowflake, vous pourrez avoir à autorise
 {% tab Redshift %}
 #### Étape 2.1 : Créer un utilisateur et lui accorder des autorisations 
 
-```json
+```sql
 CREATE USER braze_user PASSWORD '{password}';
 GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT CREATE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
@@ -436,7 +436,7 @@ Si vous souhaitez effectuer une rotation des clés à un moment donné, vous pou
 
 ![Gestion de l'accès aux données pour les justificatifs d'accès aux données de Snowflake, avec un bouton pour générer une nouvelle clé.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
 
-```json
+```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
 ```
 

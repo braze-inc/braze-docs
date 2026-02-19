@@ -45,7 +45,7 @@ page_order: 4
 
 Liquidでは、特定のビジターと匿名のビジターの両方のランディングページエクスペリエンスをカスタマイズできます。
 
-- **識別されるユーザーs:**Brazeからランディングページにリンクし、[ランディングページリキッドタグ]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/#using-landing-page-liquid-tags)を含めます。これにより、ユーザーがBraze プロファイルに関連付けられ、ページエクスペリエンスがカスタマイズされます。
+- **識別されるユーザー:**Brazeからランディングページにリンクし、[ランディングページリキッドタグ]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/#using-landing-page-liquid-tags)を含めます。これにより、ユーザーがBraze プロファイルに関連付けられ、ページエクスペリエンスがカスタマイズされます。
 - **匿名ビジター:**乱数や時刻グリーティングなど、プロファイルベースではない文脈に応じた or 状況に即したコンテンツにはリキッドを使用します。
 
 ## フォールバックページ

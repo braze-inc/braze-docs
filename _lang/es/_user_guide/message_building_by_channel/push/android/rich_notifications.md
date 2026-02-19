@@ -20,8 +20,7 @@ tool:
 
 Antes de crear una notificación push enriquecidas para Android, ten en cuenta los siguientes detalles:
 
-- Las notificaciones enriquecidas de Android no están disponibles al crear una campaña push rápida.
-- Las imágenes de las notificaciones ampliadas de Android deben tener una proporción de 2:1, pero no tienen límite de tamaño.
+- Las imágenes de notificación extendida de Android deben tener una proporción de 2:1, pero no tienen límite de tamaño.
 - Android también permite establecer una imagen independiente para la vista de notificaciones estándar. Estas son las imágenes de tamaño recomendado: 
   - **Pequeño:** 512x256
   - **Medio:** 1024x512 
@@ -42,19 +41,18 @@ Sigue los pasos para [crear una campaña]({{site.baseurl}}/user_guide/message_bu
 
 ### Paso 2: Añadir subtítulos
 
-Añade el **texto de resumen/título de imagen** que deseas mostrar antes de la imagen en la notificación.
+Añade el **Texto de resumen** que quieres que aparezca antes de la imagen en la notificación.
 
-![La sección Imagen de notificación ampliada, donde puedes añadir una imagen o introducir una URL de imagen.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
+![Una notificación push enriquecida de una aplicación de comida para mascotas llamada Dog que indica que es hora de pedir más comida para spot con texto resumido.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### Paso 3: Añadir medios
 
-Añade tu imagen en el campo **Imagen de notificación expandida** del redactor del mensaje. Las imágenes pueden cargarse directamente a través del panel de control o especificando una URL de contenido alojada en otro lugar.
+Añade tu imagen en el campo **Imagen de notificación de Android** en el compositor del mensaje. Las imágenes pueden cargarse directamente a través del panel de control o especificando una URL de contenido alojada en otro lugar.
 
 Para más detalles sobre las imágenes compatibles, consulta [Especificaciones de imagen]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push).
 
-![Un usuario recibe una notificación push para iOS con "Hola" como título y "¡Gracias por unirte a nuestro programa de fidelización!" como texto.]({% image_buster /assets/img_archive/android_rich_image.png %})
+![La sección de imágenes de notificación de Android, donde puedes añadir una imagen o introducir una URL de imagen.]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### Paso 4: Sigue creando tu campaña
 
 Una vez cargado el contenido de tu notificación enriquecida en el panel, puedes continuar [programando tu campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
-

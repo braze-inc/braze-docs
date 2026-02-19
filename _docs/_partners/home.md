@@ -111,6 +111,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/localization/crowdin/
 - name: Accuweather
   url: /docs/partners/message_personalization/location/accuweather/
+- name: Flybuy
+  url: /docs/partners/message_personalization/location/flybuy/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/
 - name: Infillion
@@ -379,7 +381,6 @@ valid_partner_list:
   url: /docs/partners/optimizely/
 - name: OtherLevels
   url: /docs/partners/otherlevels/
-  url: /docs/partners/crowdtwist
 - name: Fullstory
   url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
 - name: Open Loyalty

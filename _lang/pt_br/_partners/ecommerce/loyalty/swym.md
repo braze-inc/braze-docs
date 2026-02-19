@@ -30,7 +30,7 @@ Antes de começar, você precisará do seguinte:
 
 ## Casos de uso
 
-Ao conectar os apps Wishlist Plus e Back in Stock Alerts da Swym com o Braze, você pode enviar automaticamente eventos de atividade do comprador, como adições à lista de desejos, inscrições em estoque, alertas de queda de preço e lembretes, para o Braze como eventos personalizados. Esses eventos podem então ser usados para disparar mensagens automatizadas no Braze, facilitando uma comunicação oportuna, relevante e engajada que leve os compradores a voltar para fazer uma compra.
+Ao conectar os apps Wishlist Plus e Back in Stock Alerts da Swym com o Braze, você pode enviar automaticamente eventos de atividade do comprador, como adições à lista de desejos, inscrições em estoque, alertas de queda de preço e lembretes, para o Braze como eventos personalizados. Esses eventos podem ser usados para disparar mensagens automatizadas no Braze, facilitando a comunicação oportuna, relevante e engajada que leva os compradores a voltar para fazer uma compra.
 
 ## Integração do Swym
 
@@ -87,7 +87,7 @@ No app do Wishlist Plus, acesse a guia **Marketing** e encontre a seção **Auto
 
 ### Etapa 3: Criar uma campanha ou uma tela do Braze
 
-Para automatizar o envio de mensagens personalizadas para seus compradores, é necessário criar uma campanha ou Canvas separado no Braze para cada evento em que você se inscreveu. Cada campanha ou Canva deve ser configurada para disparar com base em um evento específico e usar as propriedades do evento correspondente para preencher o conteúdo dinâmico em suas mensagens. Para obter orientações passo a passo, consulte [Getting Started: Campanhas e telas]({{site.baseurl}}/user_guide/getting_started/campaigns_canvases/).
+Para automatizar o envio de mensagens personalizadas para seus clientes, é necessário criar uma campanha ou Canvas separado no Braze para cada evento em que você se inscreveu. Cada campanha ou Canva deve ser configurada para disparar com base em um evento específico e usar as propriedades do evento correspondente para preencher o conteúdo dinâmico em suas mensagens. Para obter orientações passo a passo, consulte [Getting Started: Campanhas e telas]({{site.baseurl}}/user_guide/getting_started/campaigns_canvases/).
 
 ![Um evento baseado em ações.]({% image_buster /assets/img/swym/braze-canvas-setup.png %})
 

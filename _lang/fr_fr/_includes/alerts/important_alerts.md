@@ -6,6 +6,30 @@ Une [nouvelle version de l'intégration Shopify]({{site.baseurl}}/partners/shopi
 
 {% endif %}
 
+{% if include.alert == 'Web push private browsing' %}
+
+{% alert important %}
+Les fenêtres de navigation privée ne prennent pas en charge le push web.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'BCC address billable emails' %}
+
+{% alert important %}
+L'ajout d'une adresse CCI à votre campagne ou Canvas a pour effet de doubler le nombre d'e-mails facturables pour la campagne ou le composant Canvas, puisque Braze envoie un message à votre utilisateur et un autre à votre adresse CCI.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Android notification priority' %}
+
+{% alert important %}
+Le paramètre Priorité d'affichage des notifications n'est plus utilisé sur les appareils fonctionnant sous Android O ou une version ultérieure. Sur ces appareils, définissez la priorité par le biais de la [configuration du canal de notification.](https://developer.android.com/training/notify-user/channels#importance)
+{% endalert %}
+
+{% endif %}
+
 {% if include.alert == "Email via SMS" %}
 
 {% alert important %}
@@ -37,7 +61,7 @@ Certains navigateurs, comme les applications Naver Android et iOS, ne prennent p
 {% if include.alert == 'Purchase event deprecation' %}
 
 {% alert important %}
-Les plans de suppression progressive de l'événement d'achat seront annoncés en 2026. L'événement d'achat sera finalement remplacé par de nouveaux [événements recommandés pour le commerce électronique]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), qui s'accompagneront de fonctionnalités améliorées en matière de segmentation, de rapports, d'analyse/analyse, etc. Cependant, les nouveaux événements eCommerce ne prendront pas en charge les fonctionnalités existantes liées à l'événement d'achat, telles que la valeur à vie (LTV) ou les rapports sur les chiffres d'affaires dans les Canvases ou les campagnes. Pour obtenir une liste complète des fonctionnalités liées aux événements d'achat, reportez-vous à la section [Enregistrement des événements d'achat]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+Les plans de suppression progressive de l'événement d'achat seront annoncés en 2026. L'événement d'achat sera finalement remplacé par de nouveaux [événements recommandés pour le commerce électronique]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), qui s'accompagneront de fonctionnalités améliorées en matière de segmentation, de rapports, d'analyse/analyse, etc. Cependant, les nouveaux événements eCommerce ne prendront pas en charge les fonctionnalités existantes liées à l'événement d'achat, telles que la valeur à vie (LTV) ou les rapports sur les chiffres d'affaires dans les Canvases ou les campagnes. Pour une liste complète des fonctionnalités liées aux événements d'achat, reportez-vous à la section [Enregistrement des événements d'achat.]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events)
 {% endalert %}
 
 {% endif %}
@@ -70,6 +94,21 @@ L'intégration de Shopify prend en charge les webhooks de création et de mise �
 
 {% alert important %}
 Si vous participez à l'accès anticipé à Canvas Context, les propriétés d'entrée de Canvas font partie des variables de contexte de Canvas. Cela signifie que `canvas_entry_properties` est maintenant référencé comme `context`. Chaque variable de contexte comprend un nom, un type de données et une valeur qui peut inclure Liquid. Actuellement, `canvas_entry_properties` est toujours rétrocompatible. Pour plus de détails, reportez-vous à la section [Objet des propriétés d'entrée du]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) [contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) et du [canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'time filter types' %}
+
+{% alert important %}
+**Choix entre les types de filtres "Jour de l'année" et "Heure" :** Lorsque vous filtrez des variables contextuelles contenant des dates, choisissez le type de comparaison approprié selon que la date se répète ou non chaque année :
+
+- **Utilisez "Jour de l'année"** lorsque la date se répète chaque année (par exemple, les anniversaires, les fêtes comme Noël). Ce type de comparaison calcule sur la base du jour de l'année (1-365/366), sans tenir compte de l'année.
+- **Utilisez "Heure"** lorsque la date est une date absolue qui ne se répète pas (par exemple, les dates de fin de contrat, les dates de rendez-vous ou les dates de renouvellement d'abonnement). Ce type de comparaison calcule sur la base de l'horodatage complet, y compris l'année.
+
+L'utilisation de "Jour de l'année" pour les dates absolues peut produire des résultats incorrects ou inattendus, car le calcul ne tient pas compte de l'année. Par exemple, si vous comparez la date de fin d'un contrat futur en avril pour déterminer si elle se situe dans les 63 jours, l'utilisation de "Jour de l'année" risque de ne pas correspondre aux dates car elle ne compare que les nombres de jours (119 contre 359) sans tenir compte du fait que le mois d'avril est en réalité dans 188 jours.
+
+**Ligne directrice générale**: La date se répète-t-elle chaque année ? **Oui** → Utilisez "Jour de l'année". **Non** → Utilisez "Temps".
 {% endalert %}
 
 {% endif %}
