@@ -106,7 +106,7 @@ The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
 
 ### Handling the custom behavior
 
-The following [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) delegate method is called when an in-app message is clicked. For clicks on in-app message buttons and HTML in-app message buttons (links), a button ID is provided as an optional parameter.
+The following [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) delegate method is called when a user clicks an in-app message. This callback is triggered for user-initiated clicks on in-app message buttons and HTML in-app message buttons (links), and a button ID is provided as an optional parameter for these interactions. This callback is not invoked for programmatic clicks triggered through `brazeBridge.logClick()`.
 
 {% tabs %}
 {% tab swift %}
