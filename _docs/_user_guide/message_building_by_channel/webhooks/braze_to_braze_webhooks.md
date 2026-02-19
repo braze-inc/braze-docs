@@ -51,7 +51,7 @@ The general workflow for creating a Braze-to-Braze webhook follows these steps:
 
 ## Trigger a second Canvas from an initial Canvas
 
-In this use case, you'll create two Canvases and use a Braze-to-Braze webhook to trigger the second Canvas from the first. This acts like an entry trigger for when a user reaches a certain point in another Canvas.
+In this use case, you create two Canvases and use a Braze-to-Braze webhook to trigger the second Canvas from the first. This acts like an entry trigger for when a user reaches a certain point in another Canvas.
 
 1. Start by creating your second Canvas—the Canvas that should be triggered by your initial Canvas.
 2. For the Canvas **Entry Schedule**, select **API-Triggered**.
