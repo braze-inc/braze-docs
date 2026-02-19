@@ -71,7 +71,7 @@ In your Braze dashboard, go to **Settings** > **Setup and Testing** > **APIs and
 3. Save the API key.
 4. Copy the API key and REST endpoint.
 
-![The Braze API Keys page showing where to create and manage API keys.]({% image_buster /assets/img/attribution/linkrunner/1.png %})
+![This image shows the API Keys page in Braze where you can create and manage API keys, including the data import key and REST endpoint needed for the Linkrunner integration.]({% image_buster /assets/img/attribution/linkrunner/1.png %})
 
 ### Step 3: Configure Braze in Linkrunner's dashboard
 
