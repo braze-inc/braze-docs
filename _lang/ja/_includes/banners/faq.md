@@ -2,7 +2,7 @@
 
 > これらは、Braze のBanners に関するよくある質問に対する回答です。一般的な情報については、[バナーについて]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %})] を参照してください。
 
-## バナー・更新がアプリの耳元をユーザーsにするのはいつ？
+## バナー・更新がアプリの耳元をユーザーにするのはいつ？
 
 バナーは、最新表示メソッドを呼び出すたびに最新のデータで更新されます。バナーキャンペーンを再送信または更新する必要はありません。
 
@@ -26,7 +26,7 @@
 
 ## ユーザー アクション s に基づいてバナーをトリガーできますか?
 
-バナーは[アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery)に対応していませんが、これまでのアクションsに基づいてユーザーsをセグメンテーションとプライオリティでターゲットできます。
+バナーは[アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery)に対応していませんが、これまでのアクションsに基づいてユーザーをセグメンテーションとプライオリティでターゲットできます。
 
 たとえば、`purchase` イベントを完了したユーザーにのみ特殊なバナーを表示するには、次のようにします。
 1. **ターゲット設定:**キャンペーンで、カスタムイベント`purchase` を少なくとも1 回実行したユーザーのSegmentを対象にします。

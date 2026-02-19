@@ -234,7 +234,7 @@ APIトリガーキャンペーンの場合、トリガーアクションが**Int
 
 #### ターゲットとするユーザーを選択する
 
-次に、[ターゲットユーザーs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)をSegmentsまたはフィルターsを選択します。Brazeは、メールを介して到達可能なユーザー数を含む、Segment集団のライブプレビューを示します。正確なSegmentメンバーシップは送信直前に計算されます。
+次に、[ターゲットユーザー]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)をSegmentsまたはフィルターを選択します。Brazeは、メールを介して到達可能なユーザー数を含む、Segment集団のライブプレビューを示します。正確なSegmentメンバーシップは送信直前に計算されます。
 
 {% multi_lang_include target_audiences.md %}
 
