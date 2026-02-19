@@ -380,7 +380,7 @@ valid_partner_list:
 - name: Google BigQuery
   url: /docs/cloud_ingestion/
 - name: Google Postmaster
-  url: /docs/deliverability_center
+  url: /docs/deliverability_center/
 - name: Microsoft SNDS
-  url: /docs/deliverability_center
+  url: /docs/deliverability_center/
 ---
