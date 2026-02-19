@@ -37,7 +37,7 @@ For user updates inside Canvas, the recommended method is to use [User Update]({
 
 ## Prerequisites
 
-To create a Braze-to-Braze webhook, you'll need an [API key]({{site.baseurl}}/api/api_key/) with permissions for the endpoint you want to reach. For example, to trigger an API-triggered Canvas, you'll need an API key with the `canvas.trigger.send` permission.
+To create a Braze-to-Braze webhook, you need an [API key]({{site.baseurl}}/api/api_key/) with permissions for the endpoint you want to reach. For example, to trigger an API-triggered Canvas, you need an API key with the `canvas.trigger.send` permission.
 
 ## Setting up your Braze-to-Braze webhook
 
