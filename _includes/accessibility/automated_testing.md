@@ -10,4 +10,4 @@ For extra support, our [Accessibility at Braze]({{site.baseurl}}/help/accessibil
 - [Color contrast]({{site.baseurl}}/help/accessibility/#color-contrast)
 - [Touch targets]({{site.baseurl}}/help/accessibility/#touch-targets)
 
-When you combine automated testing with thoughtful manual review, you’ll catch more issues—and create a better experience for all your users.
+When you combine automated testing with thoughtful manual review, you’ll catch more issues—and create a better experience for all your users. test
