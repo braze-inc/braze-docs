@@ -258,6 +258,8 @@ If there's no issues, the status will update to **Complete** and the number of r
 You can import more than one CSV at the same time. CSV imports run concurrently, so the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, wait until a CSV import has finished before uploading a second one.
 {% endalert %}
 
+Previously uploaded CSV files are available to download from the **Import Users** page for 14 days after the upload date. After 14 days, the file is permanently deleted and can no longer be accessed.
+
 ## Data point considerations
 
 Each piece of customer data imported from a CSV file will overwrite the existing value on user profiles and log a data point, except for external IDs and blank values. If you have any questions about the nuances of Braze data points, your Braze account manager can answer them.
