@@ -79,7 +79,7 @@ In your Braze dashboard, go to **Settings** > **Setup and Testing** > **APIs and
 ### Step 3: Configure Braze in Linkrunner's dashboard
 
 1. In Linkrunner, go to **Integrations** in the left-hand panel.
-2. Under **Analytics**, click **Configure** for Braze.
+2. Under **Analytics**, select **Configure** for Braze.
 3. Enter the API key and REST endpoint you copied in Step 2.
 
 For more information, see [Linkrunner's documentation](https://docs.linkrunner.io/analytics-integrations/braze).
