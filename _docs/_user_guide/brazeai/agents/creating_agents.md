@@ -111,7 +111,7 @@ If you want to format responses to a simple feedback survey to determine how lik
 | Field name | Value
 | --- | --- |
 | **likelihood_score** | Number |
-| **explanation** | Text |
+| **explanation** | String |
 | **confidence_score** | Number |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
