@@ -67,7 +67,7 @@ try await LinkrunnerSDK.shared.signup(userData: userData)
 
 In your Braze dashboard, go to **Settings** > **Setup and Testing** > **APIs and Identifiers** > **API Keys**.
 
-1. Click **Create API Key**.
+1. Select **Create API Key**.
 2. Under **User Data**, select the following permissions:
    - `users.track`
    - `users.export.ids`
