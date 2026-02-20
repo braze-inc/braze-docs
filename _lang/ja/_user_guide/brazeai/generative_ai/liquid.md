@@ -6,7 +6,7 @@ page_type: reference
 page_order: 0.0
 ---
 
-# BrazeAI<sup>TMで</sup>Liquidコードを生成する
+# <sup>BrazeAITMで</sup>Liquidコードを生成する
 
 > BrazeAI<sup>TM</sup> Liquid アシスタントは BrazeAI<sup>TM</sup> を搭載したチャットアシスタントであり、メッセージコンテンツをパーソナライズするために必要な Liquid を生成する場合に役立ちます。
 
@@ -14,11 +14,11 @@ page_order: 0.0
 
 BrazeAI<sup>TM</sup> Liquid アシスタントは、お客様のマーケティングニーズに合わせた効果的な Liquid コードの作成を支援するように設計されています。当社の AI は、Liquid の構文、およびマーケターによるメッセージでの Liquid の活用法についてトレーニングされているので、パーソナライズされたコンテンツの作成における微妙な違いを理解しています。
 
-さらに、BrazeAI<sup>TM</sup>Liquid Assistantにカスタム属性名(“favourite_color”) など)やデータ型(booleanやstringなど)を提供することで、<sup>BrazeAITM</sup>Liquid Assistantは、あなたのメッセージが正確にターゲット化され、目標に沿ったものであることを保証する。さらに、ブランドガイドラインを作成する場合、BrazeAI<sup>TM</sup> Liquid アシスタントはブランドガイドラインを使用して、生成された出力をより適切にカスタマイズたり、コンテンツを自社のブランドボイスにカスタマイズしたりできます。お客様が作成したブランドガイドラインは、お客様自身が使用してコンテンツをパーソナライズするためにのみ使用されます。
+さらに、BrazeAI<sup>TM</sup>Liquid アシスタントにカスタム属性名(“favourite_color”) など)やデータ型(booleanやstringなど)を提供することで、<sup>BrazeAITM</sup>Liquid アシスタントは、あなたのメッセージが正確にターゲット化され、目標に沿ったものであることを保証する。さらに、ブランドガイドラインを作成する場合、BrazeAI<sup>TM</sup> Liquid アシスタントはブランドガイドラインを使用して、生成された出力をより適切にカスタマイズたり、コンテンツを自社のブランドボイスにカスタマイズしたりできます。お客様が作成したブランドガイドラインは、お客様自身が使用してコンテンツをパーソナライズするためにのみ使用されます。
 
 ## サポートされているチャンネル
 
-BrazeAI<sup>TM</sup> Liquid Assistant を使用して以下を作成できます。 
+BrazeAI<sup>TM</sup> Liquid アシスタントを使用して以下を作成できます。 
 - SMS
 - プッシュ通知
 - HTMLメールメッセージ

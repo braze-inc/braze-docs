@@ -1,6 +1,6 @@
 
 {% tab android %}
-O Braze oferece vários tipos de mensagens no app padrão, cada um personalizável com mensagens, imagens, ícones [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2), ações de clique, análises de dados, esquemas de cores e muito mais.
+O Braze oferece vários tipos de mensagens no app padrão, cada uma personalizável com mensagens, imagens, ícones [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2), ações de clique, análises de dados, esquemas de cores e muito mais.
 
 Seu comportamento básico e suas características são definidos pela [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) em uma subclasse chamada [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html). `IInAppMessage` também inclui uma subinterface, [`IInAppMessageImmersive`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html)que permite adicionar [botões](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) de fechar, de ação de clique e de análise de dados ao seu app.
 

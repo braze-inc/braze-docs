@@ -32,7 +32,7 @@ Para añadir un mensaje dentro de la aplicación a tu Canvas, haz lo siguiente:
 
 Puedes seleccionar un desencadenante para que tus mensajes dentro de la aplicación se desencadenen al iniciar la sesión, o por eventos personalizados y compras.
 
-Una vez transcurridos los retrasos y comprobadas las opciones de audiencia, los mensajes dentro de la aplicación se activan en vivo cuando un usuario llega al paso Mensaje. Si un usuario inicia una sesión y realiza el evento desencadenante del mensaje dentro de la aplicación, el usuario verá el mensaje dentro de la aplicación. 
+Una vez transcurridos los retrasos y comprobadas las opciones de audiencia, los mensajes dentro de la aplicación se activan en vivo cuando un usuario llega al paso Mensajes. Si un usuario inicia una sesión y realiza el evento desencadenante del mensaje dentro de la aplicación, el usuario verá el mensaje dentro de la aplicación. 
 
 En el caso de los pasos del lienzo con entrada activada por acción, los usuarios pueden entrar en el lienzo en mitad de la sesión. Los mensajes dentro de la aplicación no están configurados para estar en vivo hasta que se inicia una sesión, por lo que si un usuario está en medio de una sesión cuando llega al paso Mensaje, no recibirá el mensaje dentro de la aplicación hasta que inicie otra sesión y realice el desencadenamiento correspondiente.
 
@@ -233,11 +233,11 @@ Las siguientes características de Canvas no están disponibles con los mensajes
 
 ## Propiedades de eventos personalizados en un Canvas
 
-Se admiten propiedades del evento personalizadas en los mensajes dentro de la aplicación para Canvas. Sin embargo, estas propiedades son del evento personalizado o de la compra que desencadena el mensaje dentro de la aplicación, que se encuentra en el paso Mensaje, no en la ruta de acción anterior.
+Se admiten propiedades del evento personalizadas en mensajes dentro de la aplicación para Canvas. Sin embargo, estas propiedades son del evento personalizado o de la compra que desencadena el mensaje dentro de la aplicación, que se encuentra en el paso Mensaje, no en la ruta de acción anterior.
 
 ## Consideraciones
 
-Estas son algunas consideraciones a tener en cuenta al enviar mensajes dentro de la aplicación en un Canvas.
+He aquí algunas consideraciones a tener en cuenta al enviar mensajes dentro de la aplicación en un Canvas.
 
 - Si el usuario nunca reinicia la aplicación o nunca inicia una sesión, la aplicación no podrá averiguar si el usuario es elegible para el mensaje dentro de la aplicación, lo que significa que no se enviará un mensaje dentro de la aplicación.
 - Cuando se produce el primer clic y hay una variable de contexto Canvas (propiedades de la entrada Canvas), y un usuario vuelve a entrar en un Canvas cinco veces, Braze tomará la quinta entrada y utilizará esa variable de contexto en el mensaje dentro de la aplicación.

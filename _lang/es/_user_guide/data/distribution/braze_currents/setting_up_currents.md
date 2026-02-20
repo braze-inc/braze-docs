@@ -93,10 +93,10 @@ Para probar tu integración, puedes seleccionar **Enviar Eventos de Prueba** par
 
 Los conectores Test Currents son versiones gratuitas de nuestros conectores existentes que pueden utilizarse para probar y ensayar diferentes destinos. Las corrientes de prueba tienen:
 
-- No hay límite en el número de conectores Test Currents que puedes construir.
-- Un máximo agregado de 10 000 eventos por período móvil de siete días. Este total de eventos se actualiza cada hora en el panel.
+- Hasta 10 conectores de Test Currents por espacio de trabajo.
+- Un máximo agregado de 1.500 eventos por periodo fijo de 24 horas, que se reinicia a medianoche UTC. Este total de eventos se actualiza cada hora en el panel.
 
-Después de que sus conectores Test Currents alcancen el límite de envío, su conector no enviará eventos hasta el siguiente periodo de siete días.
+Cuando tus conectores de Test Currents alcancen el límite de envío, tu conector no enviará eventos hasta el día siguiente (a medianoche UTC).
 
 Para actualizar tu conector de Test Currents, edita la integración en el panel y selecciona **Actualizar integración de Test**.
 

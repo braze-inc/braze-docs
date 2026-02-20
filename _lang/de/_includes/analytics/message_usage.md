@@ -64,5 +64,18 @@ Sie können Ihre Daten filtern nach:
 Die im Dashboard **Nachrichtenverwendung** angezeigten Daten beziehen sich auf die Vertragsebene und sind nicht auf ein einzelnes Dashboard-Unternehmen oder einen Arbeitsbereich beschränkt. Diese Daten spiegeln die Nutzung aller Arbeitsbereiche innerhalb Ihres Dashboards wider und möglicherweise auch aller Dashboards (wenn Sie mehrere haben).
 {% endalert %}
 
-- Die zugrundeliegenden Daten werden täglich zur Verfügung gestellt, wobei die Datentabellen um 3 Uhr, 9 Uhr, 12 Uhr und 18 Uhr EST aktualisiert werden. Die Aktualisierung des Dashboards **zur Nutzung von Nachrichten** kann nach Änderungen länger als 48 Stunden dauern, damit die Daten synchronisiert werden können.
+- Die zugrundeliegenden Daten werden täglich zur Verfügung gestellt, wobei die Datentabellen um 3 Uhr, 9 Uhr, 12 Uhr und 18 Uhr EST aktualisiert werden. Das Update des Dashboards **zur Nutzung von Nachrichten** kann länger als 24 Stunden dauern.
 - Braze folgt der üblichen Rundungsmethodik: Zahlen werden auf das nächste Zehntel aufgerundet.
+
+### Auswahl des Datumsbereichs
+
+Das Dashboard **Nachrichtenverwendung** schließt das Enddatum des ausgewählten Bereichs von den Ergebnissen aus. Wenn Sie zum Beispiel Oktober 1-31 auswählen, werden die Nutzungsstatistiken für den 31\. Oktober ausgeschlossen. Um den letzten Tag des gewünschten Zeitraums einzubeziehen, erweitern Sie den Bereich um einen Tag. Um zum Beispiel den gesamten Oktober einzuschließen, wählen Sie 1\. Oktober - 1\. November aus.
+
+### Vergleiche mit Drittanbietern
+
+Wenn Sie die Daten über die Nutzung von Nachrichten von Braze mit denen von Drittanbietern (z.B. Infobip) vergleichen, sollten Sie dies nicht vergessen:
+
+- **Nachrichten-Segmente vs. Nachrichten**: Braze zählt SMS Nachrichten nach Segmenten. Eine einzelne SMS Nachricht, die in mehrere Segmente aufgeteilt ist (z.B. aufgrund ihrer Länge), wird in Braze als mehrere Segmente gezählt. Weitere Informationen finden Sie unter [Rechnungsrechner für SMS und RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
+- **Nachrichten auf Kreditbasis versus Nachrichten ohne Kreditbasis**: Das Dashboard enthält sowohl kreditbasierte als auch nicht kreditbasierte Nachrichten. Drittanbieter zählen möglicherweise nur Nachrichten auf Guthabenbasis, was zu Diskrepanzen in den Gesamtzahlen führen kann.
+- **Eingehend vs. Ausgehend**: Stellen Sie sicher, dass Sie dieselben Nachrichtentypen vergleichen. Einige Dashboards von Drittanbietern beziehen sowohl eingehende als auch ausgehende Nachrichten in ihre Gesamtwerte ein, während Braze es Ihnen erlaubt, nach der Richtung zu filtern.
+- **Ausrichtung des Datumsbereichs**: Da das Dashboard das Enddatum ausklammert, können Vergleiche von Tag zu Tag genauer ausfallen als bei längeren Datumsbereichen. Wenn Sie Daten für einen bestimmten Zeitraum vergleichen, erweitern Sie den Datumsbereich von Braze um einen Tag, um den letzten Tag Ihres Vergleichszeitraums einzubeziehen.

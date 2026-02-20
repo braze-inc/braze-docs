@@ -260,7 +260,7 @@ Sie können mehr als eine CSV-Datei gleichzeitig importieren. CSV-Importe erfolg
 
 ## Überlegungen zu Datenpunkten
 
-Jede aus einer CSV-Datei importierte Kundendaten überschreibt den vorhandenen Wert in den Nutzerprofilen und protokolliert einen Datenpunkt, außer bei externen IDs und leeren Werten. Wenn Sie Fragen zu den Datenpunkten von Braze haben, kann Ihr Braze-Konto Manager:in diese Fragen beantworten.
+Jede aus einer CSV-Datei importierte Kundendaten überschreibt den bestehenden Wert in den Nutzerprofilen und protokolliert einen Datenpunkt, außer bei externen IDs und leeren Werten. Wenn Sie Fragen zu den Datenpunkten von Braze haben, kann Ihr Braze-Konto Manager:in diese Fragen beantworten.
 
 | Betrachtung | Details |
 |---|---|

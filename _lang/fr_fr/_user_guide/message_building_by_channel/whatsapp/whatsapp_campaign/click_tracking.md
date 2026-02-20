@@ -63,6 +63,12 @@ L'URL de destination devra être fournie pour tout lien dont l'URL de base corre
 
 ![Section "Boutons" avec des champs pour le nom du bouton, l'URL du site web et l'URL de suivi des clics.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
+{% alert important %}
+**Envoi de messages types via l'API**: Le suivi des clics sur WhatsApp (à l'aide de `brz.ai` ou d'un domaine de suivi personnalisé et du champ **URL de suivi des clics** dans le compositeur de messages) n'est pas pris en charge lors de l'envoi de messages WhatsApp par l'intermédiaire de l' [endpoint`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/).
+
+Si vous envoyez un message modèle via l'API, vous pouvez renseigner des variables d'URL CTA (à l'aide de `button_variables`), mais Braze ne génère pas d'URL de suivi des clics ni de lien de redirection dans le flux de requêtes de l'API. Pour utiliser le suivi des clics, envoyez le modèle depuis le tableau de bord de Braze ou via un déclencheur de campagne de Braze.
+{% endalert %}
+
 {% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
 ## La personnalisation liquide dans les URL

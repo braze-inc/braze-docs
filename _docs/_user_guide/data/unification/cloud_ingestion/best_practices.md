@@ -51,37 +51,220 @@ Each time a sync runs, Braze looks for rows that have not previously been synced
 
 In your data warehouse, add the following users and attributes to your table, setting the `UPDATED_AT` time to the time you add this data:
 
-| UPDATED_AT | EXTERNAL_ID | PAYLOAD |
-| --- | --- | --- |
-| `2022-07-17 08:30:00` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_a":"example_value_1",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_b":"example_value_1"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
-| `2022-07-18 11:59:23` | `customer_3456` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing"<br>} |
-| `2022-07-19 09:07:23` | `customer_5678` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":true,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+<table role="presentation">
+  <thead>
+    <tr>
+      <th>UPDATED_AT</th>
+      <th>EXTERNAL_ID</th>
+      <th>PAYLOAD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2022-07-17 08:30:00</code></td>
+      <td><code>customer_1234</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2": {
+        "attribute_a":"example_value_1",
+        "attribute_b":"example_value_1"
+    },
+    "attribute_3":"2019-07-16T19:20:30+1:00"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-18 11:59:23</code></td>
+      <td><code>customer_3456</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2":42,
+    "attribute_3":"2019-07-16T19:20:30+1:00",
+    "attribute_5":"testing"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-19 09:07:23</code></td>
+      <td><code>customer_5678</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_4":true,
+    "attribute_5":"testing_123"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 During the next scheduled sync, Braze syncs all rows with a `UPDATED_AT` timestamp equal to or later than the most recent timestamp to user profiles. Braze updates or adds fields, so you do not need to sync the full user profile each time. After the sync, user profiles reflect the new updates:
 
 **Recurring sync, second run on July 20, 2022 at 12 pm**
 
-| UPDATED_AT | EXTERNAL_ID | PAYLOAD |
-| --- | --- | --- |
-| `2022-07-17 08:30:00` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_a":"example_value_2",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_b":"example_value_2"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
-| `2022-07-18 11:59:23` | `customer_3456` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing"<br>} |
-| `2022-07-19 09:07:23` | `customer_5678` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":true,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
-| `2022-07-16 00:25:30` | `customer_9012` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":false,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+<table role="presentation">
+  <thead>
+    <tr>
+      <th>UPDATED_AT</th>
+      <th>EXTERNAL_ID</th>
+      <th>PAYLOAD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2022-07-17 08:30:00</code></td>
+      <td><code>customer_1234</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2": {
+        "attribute_a":"example_value_2",
+        "attribute_b":"example_value_2"
+    },
+    "attribute_3":"2019-07-16T19:20:30+1:00"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-18 11:59:23</code></td>
+      <td><code>customer_3456</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2":42,
+    "attribute_3":"2019-07-16T19:20:30+1:00",
+    "attribute_5":"testing"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-19 09:07:23</code></td>
+      <td><code>customer_5678</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_4":true,
+    "attribute_5":"testing_123"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-16 00:25:30</code></td>
+      <td><code>customer_9012</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_4":false,
+    "attribute_5":"testing_123"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 A row was added, but the `UPDATED_AT` value is earlier than `2022-07-19 09:07:23` (stored from the first run). As a result, none of these rows will be synced in this run. The last `UPDATED_AT` for the sync is unchanged by this run, and remains as  `2022-07-19 09:07:23`.
 
 **Recurring sync, third run on July 21, 2022 at 12 pm**
 
-| UPDATED_AT | EXTERNAL_ID | PAYLOAD |
-| --- | --- | --- |
-| `2022-07-17 08:30:00` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_a":"example_value_1",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_b":"example_value_1"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
-| `2022-07-18 11:59:23` | `customer_3456` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing"<br>} |
-| `2022-07-19 09:07:23` | `customer_5678` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":true,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
-| `2022-07-16 00:25:30` | `customer_9012` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"xyz",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":false,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
-| `2022-07-21 08:30:00` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_a":"example_value_2",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_b":"example_value_2"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3”:”2019-07-20T19:20:30+1:00"<br>} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+<table role="presentation">
+  <thead>
+    <tr>
+      <th>UPDATED_AT</th>
+      <th>EXTERNAL_ID</th>
+      <th>PAYLOAD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2022-07-17 08:30:00</code></td>
+      <td><code>customer_1234</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2": {
+        "attribute_a":"example_value_1",
+        "attribute_b":"example_value_1"
+    },
+    "attribute_3":"2019-07-16T19:20:30+1:00"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-18 11:59:23</code></td>
+      <td><code>customer_3456</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2":42,
+    "attribute_3":"2019-07-16T19:20:30+1:00",
+    "attribute_5":"testing"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-19 09:07:23</code></td>
+      <td><code>customer_5678</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_4":true,
+    "attribute_5":"testing_123"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-16 00:25:30</code></td>
+      <td><code>customer_9012</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"xyz",
+    "attribute_4":false,
+    "attribute_5":"testing_123"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-21 08:30:00</code></td>
+      <td><code>customer_1234</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2": {
+        "attribute_a":"example_value_2",
+        "attribute_b":"example_value_2"
+    },
+    "attribute_3":"2019-07-20T19:20:30+1:00"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 In this third run, another new row was added. Now, one row has an `UPDATED_AT` value later than `2022-07-19 09:07:23`, which means only one row will sync. The last `UPDATED_AT` is now set as `2022-07-21 08:30:00`.
 
@@ -181,14 +364,42 @@ FROM EXAMPLE_DATA;
 
 None of this has synced to Braze before, so add all of it to the source table for CDI:
 
-| UPDATED_AT          | EXTERNAL_ID | PAYLOAD                                                                                   |
-| :------------------ | ----------- | ----------------------------------------------------------------------------------------- |
-| 2023-03-16 15:00:00 | 12345       | { "ATTRIBUTE_1": "823", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"380", "ATTRIBUTE_4":"FALSE"} |
-| 2023-03-16 15:00:00 | 23456       | { "ATTRIBUTE_1": "28", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"823", "ATTRIBUTE_4":"TRUE"}   |
-| 2023-03-16 15:00:00 | 34567       | { "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}  |
-| 2023-03-16 15:00:00 | 45678       | { "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}   |
-| 2023-03-16 15:00:00 | 56789       | { "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+<table role="presentation">
+  <thead>
+    <tr>
+      <th>UPDATED_AT</th>
+      <th>EXTERNAL_ID</th>
+      <th>PAYLOAD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>12345</td>
+      <td><code>{ "ATTRIBUTE_1": "823", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"380", "ATTRIBUTE_4":"FALSE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>23456</td>
+      <td><code>{ "ATTRIBUTE_1": "28", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"823", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>34567</td>
+      <td><code>{ "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>45678</td>
+      <td><code>{ "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>56789</td>
+      <td><code>{ "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"}</code></td>
+    </tr>
+  </tbody>
+</table>
 
 A sync runs, and Braze records that you synced all available data up until “2023-03-16 15:00:00”. Then, on the morning of day 2, you have an ETL that runs and some fields in your users table are updated (highlighted):
 
@@ -243,19 +454,67 @@ A sync runs, and Braze records that you synced all available data up until “20
 
 Now you need to add only the changed values into the CDI source table. These rows can be appended rather than updating the old rows. That table now looks like this:
 
-| UPDATED_AT          | EXTERNAL_ID | PAYLOAD                                                                                   |
-| :------------------ | ----------- | ----------------------------------------------------------------------------------------- |
-| 2023-03-16 15:00:00 | 12345       | { "ATTRIBUTE_1": "823", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"380", "ATTRIBUTE_4":"FALSE"} |
-| 2023-03-16 15:00:00 | 23456       | { "ATTRIBUTE_1": "28", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"823", "ATTRIBUTE_4":"TRUE"}   |
-| 2023-03-16 15:00:00 | 34567       | { "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}  |
-| 2023-03-16 15:00:00 | 45678       | { "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}   |
-| 2023-03-16 15:00:00 | 56789       | { "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"} |
-| 2023-03-17 09:30:00 | 12345       | { "ATTRIBUTE_1": "145", "ATTRIBUTE_2":"red", "ATTRIBUTE_4":"TRUE"} |
-| 2023-03-17 09:30:00 | 23456       | { "ATTRIBUTE_1": "15"} |
-| 2023-03-17 09:30:00 | 34567       | { "ATTRIBUTE_3":"495", "ATTRIBUTE_4":"FALSE"} |
-| 2023-03-17 09:30:00 | 45678       | { "ATTRIBUTE_2":"green"} |
-| 2023-03-17 09:30:00 | 56789       | { "ATTRIBUTE_3":"693"} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+<table role="presentation">
+  <thead>
+    <tr>
+      <th>UPDATED_AT</th>
+      <th>EXTERNAL_ID</th>
+      <th>PAYLOAD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>12345</td>
+      <td><code>{ "ATTRIBUTE_1": "823", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"380", "ATTRIBUTE_4":"FALSE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>23456</td>
+      <td><code>{ "ATTRIBUTE_1": "28", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"823", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>34567</td>
+      <td><code>{ "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>45678</td>
+      <td><code>{ "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>56789</td>
+      <td><code>{ "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-17 09:30:00</td>
+      <td>12345</td>
+      <td><code>{ "ATTRIBUTE_1": "145", "ATTRIBUTE_2":"red", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-17 09:30:00</td>
+      <td>23456</td>
+      <td><code>{ "ATTRIBUTE_1": "15"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-17 09:30:00</td>
+      <td>34567</td>
+      <td><code>{ "ATTRIBUTE_3":"495", "ATTRIBUTE_4":"FALSE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-17 09:30:00</td>
+      <td>45678</td>
+      <td><code>{ "ATTRIBUTE_2":"green"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-17 09:30:00</td>
+      <td>56789</td>
+      <td><code>{ "ATTRIBUTE_3":"693"}</code></td>
+    </tr>
+  </tbody>
+</table>
 
 CDI will only sync the new rows, so the next sync that runs will only sync the last five rows.
 
@@ -279,23 +538,14 @@ You can set it to `null` if you want to omit an attribute from a user's profile.
 
 Make incremental updates to your data so you can prevent unintentional overwrites when simultaneous updates are made.
 
-In the following example, a user has two attributes:
-- Color: "Green"
-- Size: "Large"
+{% alert important %}
+* **Updates to different attributes:** In the vast majority of cases, if two updates don't impact the same attributes on a user, they have entirely independent results. For example, if you update a user's `Color` attribute and separately update their `Size` attribute, both updates should be applied correctly, even if they occur within seconds of each other.
+* **Updates to the same attribute:** Race conditions can occur when multiple updates target the same attribute within a single sync run. In these rare cases, one update may overwrite another. The best way to prevent this behavior is to ensure that the source data for your CDI sync reflects only the latest state of each user, or that all updates for a given user or user+attribute pairing are contained in a single row.
+* **Object array operators:** The only exceptions to independent updates are with the `$add`, `$remove`, and `$update` operators for object arrays, where updates to the same array may interact with each other.
+* **Events:** Race conditions don't affect events because each event is unique and has a timestamp associated with it.
+{% endalert %}
 
-Then Braze receives the following two updates to that user simultaneously:
-- Request 1: Change color to "Red"
-- Request 2: Change size to "Medium"
-
-Because Request 1 occurs first, the user's attributes are updated to the following:
-- Color: "Red"
-- Size: "Large"
-
-However, when Request 2 occurs, Braze starts with the original attribute values ("Green" and "Large"), then updates the user's attributes to the following:
-- Color: "Green"
-- Size: "Medium"
-
-When the requests are finished, Request 2 will overwrite the update from Request 1, so it's best to stagger your updates so you can prevent requests from being overwritten.
+The best way to prevent this behavior is to ensure that the source data for your CDI sync reflects only the latest state of each user, or that all updates for a given user or user+attribute pairing are contained in a single row.
 
 ### Create a JSON string from another table
 

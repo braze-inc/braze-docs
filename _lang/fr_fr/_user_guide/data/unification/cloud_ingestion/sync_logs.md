@@ -28,7 +28,7 @@ Les journaux de synchronisation fournissent également les détails suivants pou
 
 * **Nom de la synchronisation :** Le nom de la configuration de synchronisation.  
 * **Run ID :** Un identifiant unique pour une exécution spécifique de la synchronisation. Sélectionnez cet ID pour obtenir plus de détails. Ceci peut également être utilisé dans les [endpoints de l'API CDI]({{site.baseurl}}/api/endpoints/cdi), ou pour référencer une synchronisation exécutée avec Braze Support.   
-* **État :** L'état de l'exécution (succès, succès partiel, erreur, en cours).  
+* **État :** Le statut de l'exécution (succès, succès partiel, erreur, en cours).  
 * **Nouvelles lignes lues à partir de la source :** Le nombre de nouvelles lignes extraites de votre entrepôt de données pour cette exécution.  
 * **Résultats :** Ventilation du nombre de lignes qui ont réussi ou échoué au cours de l'exécution.  
 * **Last "UPDATED_AT":** Horodatage de l'enregistrement le plus récent traité dans ce cycle de synchronisation.  
@@ -39,7 +39,7 @@ Les journaux de synchronisation fournissent également les détails suivants pou
 
 ### Conservation des données
 
-Les données du journal de synchronisation, y compris toutes les charges utiles au niveau des lignes et les détails des erreurs, sont conservées pendant **30 jours** maximum. Les journaux datant de plus de 30 jours seront automatiquement purgés.
+Les données du journal de synchronisation, y compris toutes les données utiles au niveau des lignes et les détails des erreurs, sont conservées pendant **30 jours** maximum. Les journaux datant de plus de 30 jours seront automatiquement purgés.
 
 Les métadonnées d'exécution de la synchronisation, telles que le nombre de lignes traitées, sont conservées pendant au moins 12 mois.
 
@@ -82,9 +82,7 @@ Sélectionnez **Exporter les lignes** pour exporter les journaux au niveau des l
 * **Lignes comportant des erreurs :** Télécharge un fichier contenant uniquement les lignes ayant un statut d'**erreur.** 
 * **Tous les rangs :** Télécharge un fichier contenant toutes les lignes traitées au cours de l'exécution.
 
-{% alert important %}
-L'exportation des journaux de synchronisation pour toutes les lignes est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Exporting sync logs for all rows' %}
 
 Les journaux ne peuvent pas être exportés directement à partir du tableau de bord. Une fois l'exportation générée, vous recevrez un e-mail contenant un lien pour télécharger le fichier d'exportation du journal. 
 

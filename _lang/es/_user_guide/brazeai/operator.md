@@ -1,14 +1,14 @@
 ---
 nav_title: Operador
 article_title: Operador BrazeAI
-page_order: 0.7
+page_order: 8
 alias: /operator/
 description: "Este artículo de referencia trata sobre BrazeAI Operator, un asistente potenciado por IA integrado en el panel de Braze."
 ---
 
 # Operador <sup>BrazeAITM</sup> 
 
-> <sup>BrazeAITM</sup> Operator es un asistente basado en IA integrado en el panel de Braze. El operador proporciona respuestas, orientación para la solución de problemas y mejores prácticas dentro de tu flujo de trabajo.
+> <sup>BrazeAITM</sup> Operator es un asistente basado en IA integrado en el panel de Braze. El operador proporciona respuestas, orientación para la solución de problemas y las mejores prácticas dentro de tu flujo de trabajo.
 
 {% alert important %}
 El Operador <sup>BrazeAITM</sup> está en beta privada con funcionalidad limitada. Si necesitas ayuda para empezar, ponte en contacto con tu administrador del éxito del cliente.
@@ -99,7 +99,7 @@ El Operador muestra sus pasos de razonamiento en secciones plegables etiquetadas
 
 ### Acciones sugeridas
 
-En algunos casos, el Operador recomendará los siguientes pasos y proporcionará enlaces directos a las páginas pertinentes en tu panel de Braze. Por ejemplo, si preguntas por las tasas de rebote del correo electrónico, Operator puede enlazarte a la página de tu **Centro de capacidad de entrega**. Estos atajos te ayudan a actuar más rápidamente sin necesidad de navegar manualmente.
+En algunos casos, el Operador te recomendará los siguientes pasos y te proporcionará enlaces directos a las páginas pertinentes de tu panel Braze. Por ejemplo, si preguntas por las tasas de rebote del correo electrónico, Operator puede enlazarte a la página de tu **Centro de capacidad de entrega**. Estos atajos te ayudan a actuar más rápidamente sin necesidad de navegar manualmente.
 
 ### Detener la generación
 
@@ -121,7 +121,7 @@ En la parte inferior de cada respuesta, utiliza los botones de pulgar hacia arri
 
 | Problema | Solución de problemas |
 | --- | --- |
-| Sin respuesta | Intenta actualizar la página y volver a abrir el panel del Operador. |
+| Sin respuesta | Prueba a actualizar la página y a volver a abrir el panel del Operador. |
 | Respuestas fuera de tema | Reformula tu pregunta de forma más específica. Menciona la característica o el flujo de trabajo sobre el que preguntas. |
 | Mensajes de error | Si Operator no puede transmitirte contenidos, es posible que aparezca el mensaje "Inténtalo de nuevo". Puede que el operador no esté disponible temporalmente o que se haya interrumpido tu conexión. Vuelve a intentarlo pasados unos minutos. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

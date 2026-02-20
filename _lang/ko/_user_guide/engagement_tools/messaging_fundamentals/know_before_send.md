@@ -83,13 +83,13 @@ tool:
 - **우선순위:** 여러 배너를 출시하는 경우 각 배너가 표시되는 우선순위를 수동으로 설정할 수 있습니다.
 
 #### 알아두어야 할 사항
-- **액체 개인화:** Liquid 개인화는 모든 새로고침 요청마다 새로 고쳐집니다.
-- **배치 및 배너 비율:** 각 배너 배치는 작업 공간에서 최대 10개의 캠페인에 사용할 수 있습니다.  
+- **액체 개인화:** Liquid 개인화는 모든 새로고침 요청마다 새로고침됩니다.
+- **배치 및 배너 비율:** 각 배너 배치는 작업 공간에서 최대 25개의 메시지에 사용할 수 있습니다.  
 - **클릭 및 노출:** 배너의 클릭 및 노출은 SDK를 통해 자동으로 추적됩니다.
-- **제한 사항:**  현재 다음 기능은 지원되지 않습니다: 캔버스 통합, API 트리거 및 작업 기반 캠페인, 연결된 콘텐츠, 프로모션 코드, 사용자 제어 해제 및 `catalog_items` [태그]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid) 사용.
+- **제한 사항:**  현재 다음 기능은 지원되지 않습니다: 캔버스 통합, API 트리거 및 작업 기반 캠페인, 연결된 콘텐츠, 프로모션 코드, 사용자 제어 해제 및 `catalog_items` [`:rerender` 태그]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid) 사용.
 - **테스트:** 테스트 배너를 표시하려면 사용 중인 기기가 포그라운드 푸시 알림을 받을 수 있어야 합니다.
 - **사용자 정의 HTML:** 사용자 정의 HTML을 사용하여 클릭 작업(링크 및 버튼 등)을 정의할 때 클릭을 기록하기 위해 [JS 브리지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge)를 활용하세요. 클릭 작업은 드래그 앤 드롭 편집기에서 미리 구축된 구성 요소를 사용할 때만 자동으로 기록됩니다.
-- **배치 요청:** 단일 새로 고침 요청에서 최대 10개의 배치가 SDK에 반환될 수 있습니다. 각 배치는 사용자가 자격이 있는 가장 높은 우선 순위의 배너를 포함합니다.
+- **배치 요청:** 단일 새로고침 요청에서 최대 10개의 배치를 SDK에 반환할 수 있습니다. 각 배치는 사용자가 자격이 있는 가장 높은 우선 순위의 배너를 포함합니다.
 
 ## 콘텐츠 카드
 
@@ -104,7 +104,7 @@ tool:
 - **캐싱 콘텐츠 카드**: 콘텐츠 카드 캐싱 옵션은 저희 [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) 및 [웹](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards) 문서에서 찾을 수 있습니다. 
 - **최대 게재빈도 설정**: 최대 게재빈도 설정은 콘텐츠 카드에 적용되지 않습니다.
 - **노출 횟수**: 노출 횟수는 일반적으로 카드가 보일 때 기록됩니다. 예를 들어, 받은편지함에 콘텐츠 카드가 가득 차 있는 경우 사용자가 특정 콘텐츠 카드로 스크롤할 때까지 노출 횟수가 기록되지 않습니다. 웹, Android 및 iOS 플랫폼 간에는 몇 가지 미묘한 차이가 있습니다.
-- **SDK 세션 및 카드 생성**: 사용자가 SDK 세션이 없는 경우 콘텐츠 카드는 생성되지 않으며, 해당 사용자가 세그먼트 기준을 충족하더라도 마찬가지입니다. 그러나 사용자가 이미 Android 세션을 가지고 있는 경우, iOS 전용 클릭 작업이 있는 콘텐츠 카드는 여전히 생성되며, 사용자는 iOS에서 세션을 갖게 되면 해당 콘텐츠 카드를 볼 수 있습니다. 카드가 생성되는 시점에 대한 자세한 내용은 [카드 생성]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/)를 참조하세요.  
+- **SDK 세션 및 카드 생성**: SDK 세션이 없는 사용자에게는 콘텐츠 카드가 생성되지 않으며, 해당 사용자가 세그먼트 기준을 충족하더라도 마찬가지입니다. 그러나 사용자가 이미 Android 세션을 가지고 있는 경우, iOS 전용 클릭 작업이 있는 콘텐츠 카드가 여전히 생성되며, 사용자는 iOS에서 세션이 있을 때 해당 콘텐츠 카드를 볼 수 있습니다. 카드 생성에 대한 자세한 내용은 [카드 생성]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/)을 참조하세요.  
 
 ## 인앱 메시지
 

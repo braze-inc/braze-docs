@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Kickboxen
 
-> [Kickbox](https://kickbox.com/) ist eine All-in-One-Plattform zur E-Mail-Überprüfung, die mit den Features, Integrationen und Sicherheitsfunktionen ausgestattet ist, die Sie benötigen, um Ihre E-Mail-Daten sauber und zustellbar zu halten. Die Integration von Kickbox verbessert die Zustellbarkeit Ihrer Kampagnen bei Braze, indem die E-Mail-Verifizierung von Kickbox verwendet wird, um unzustellbare und minderwertige E-Mail-Adressen zu identifizieren, bevor Sie auf Senden drücken.
+> [Kickbox](https://kickbox.com/) ist eine All-in-One-Plattform zur E-Mail-Überprüfung, die mit den Features, Integrationen und Sicherheitsfunktionen ausgestattet ist, die Sie benötigen, um Ihre E-Mail-Daten sauber und zustellbar zu halten. Die Integration von Kickbox verbessert die Zustellbarkeit Ihrer Kampagnen bei Braze, indem die E-Mail-Verifizierung von Kickbox verwendet wird, um unzustellbare und minderwertige E-Mail-Adressen zu identifizieren, bevor Sie auf Senden klicken.
 
 Mit Kickbox können Sie die Qualität der E-Mail-Adressen Ihrer Nutzer:innen überprüfen, sobald ein Nutzerprofil in Braze aktualisiert wird. Dies wird durch einen speziellen Canvas- oder Kampagnen-Workflow erreicht, der durch die Belegung des Feldes `email` eines Profils getriggert wird.
 
@@ -88,6 +88,6 @@ Das bedeutet, dass Sie Segmente von Zielgruppen mit überprüften E-Mail-Adresse
 Gehen Sie dazu folgendermaßen vor:
 
 1. Gehen Sie in Braze zu **Zielgruppe** > Segmente > **Segmente** erstellen **.** 
-2. Fügen Sie im Bereich **Filtergruppe** den Filter **Angepasstes Attribut** hinzu und wählen Sie in der Dropdown-Liste "Ergebnis". 
+2. Fügen Sie im Abschnitt **Filtergruppe** den Filter **Angepasstes Attribut** hinzu und wählen Sie in der Dropdown-Liste "Ergebnis". 
 
 Je nach Anwendungsfall kann es sinnvoll sein, ein Segment zu erstellen, in dem das angepasste Attribut "Ergebnis" in einem Nutzerprofil vorhanden ist oder dessen Wert gleich "Zustellbarkeit" ist. Dieser Filter kann für sich allein verwendet werden, um ein Segment zu erstellen, oder er kann zu einem Teil aller zukünftigen Segmente gemacht werden, um alle Nutzer:innen zu überprüfen. 

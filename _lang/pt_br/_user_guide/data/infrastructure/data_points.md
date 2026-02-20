@@ -161,7 +161,7 @@ table td {
 | Atribuição de coorte Mixpanel | Todas as atribuições | |
 | Atribuição de coorte Hightouch | Todas as atribuições | |
 | Atribuição de coorte do Appsflyer | Todas as atribuições | |
-| Local mais recente | Todos os locais mais recentes | A entrada ou saída de geofences não registra pontos de dados porque os dados de geofences não são armazenados no perfil do usuário. As geofences são monitoradas pelos serviços locais da Apple e do Google; o Braze só é notificado quando um usuário dispara uma geofence. |
+| Local mais recente | Todos os locais mais recentes | Entrar ou sair de geofences não registra pontos de dados porque os dados de geofences não são armazenados no perfil do usuário. As geofences são monitoradas pelos serviços locais da Apple e do Google; o Braze só é notificado quando um usuário dispara uma geofence. |
 | X (antigo Twitter) | Nome de usuário | |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

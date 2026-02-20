@@ -17,7 +17,7 @@ channel:
 | Anforderung | Beschreibung |
 | --- | --- |
 | Infobip-Konto | Für die Verwendung des BYO WhatsApp Konnektors ist ein Infobip-Konto erforderlich.
-| Messaging-Guthaben | Sie verbrauchen Messaging-Credits von Braze, wenn Sie WhatsApp-Nachrichten versenden. |
+| Messaging Kredite | Sie verbrauchen Messaging-Credits von Braze, wenn Sie WhatsApp-Nachrichten versenden. |
 | WhatsApp-Anforderungen | Erfüllen Sie alle [WhatsApp-Anforderungen]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#prerequisites). |
 | Telefonnummer | Der Einfachheit halber empfehlen wir Ihnen, [eine Telefonnummer über Infobip zu erwerben](https://www.infobip.com/docs/numbers/getting-started). |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }

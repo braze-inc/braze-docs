@@ -20,9 +20,15 @@ Quando um token por push é reatribuído, a alteração é refletida no Push Cha
 
 ![O "Push Changelog" na seção "Contact Settings" (Configurações de contato).]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
+### O que significa "Error sending push because the payload was invalid" (Erro ao enviar push porque a carga útil era inválida)?
+
+Essa mensagem indica que os APNs rejeitaram a solicitação push devido a uma carga útil inválida (por exemplo, uma carga vazia ou uma carga muito grande).
+
+Para obter detalhes e as próximas etapas, consulte [Envio de mensagens de erro push comuns]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
+
 ### Por que um usuário com aceitação não tem um token por push?
 
-Isso pode acontecer se o token por push do usuário foi reatribuído a outra pessoa que usou o mesmo dispositivo.
+Isso pode acontecer se o token por push do usuário tiver sido reatribuído a outra pessoa que usou o mesmo dispositivo.
 
 1. Acesse o **changelog do push** na guia **Engajamento** do perfil do usuário afetado.
 2. Procure uma mensagem que diga que o token por push foi movido para outro usuário.

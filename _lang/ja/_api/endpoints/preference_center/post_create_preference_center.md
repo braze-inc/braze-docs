@@ -14,7 +14,7 @@ description: "この記事では、「ユーザー設定センターの作成」
 /preference_center/v1
 {% endapimethod %}
 
-> このエンドポイントを使用してユーザー設定センターを作成し、ユーザーs がメール キャンペーンs の通知設定を管理できるようにします。API で生成されるユーザー設定センターの構築方法のステップについては、[API を使用したユーザー設定センターの作成]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#creating-a-preference-center-with-api)を参照してください。
+> このエンドポイントを使用してユーザー設定センターを作成し、ユーザー がメール キャンペーンs の通知設定を管理できるようにします。API で生成されるユーザー設定センターの構築方法のステップについては、[API を使用したユーザー設定センターの作成]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#creating-a-preference-center-with-api)を参照してください。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
 

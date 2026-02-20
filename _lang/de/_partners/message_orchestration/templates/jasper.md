@@ -1,7 +1,7 @@
 ---
 nav_title: Jaspis
 article_title: Jaspis
-description: "Dieser referenzierte Artikel beschreibt die Integration zwischen Braze und Jasper."
+description: "In diesem referenzierten Artikel wird die Integration zwischen Braze und Jasper beschrieben."
 alias: /partners/jasper/
 page_type: partner
 search_tag: Partner
@@ -20,7 +20,7 @@ Die Integration von Jasper und Braze ermöglicht es Ihnen, die Erstellung von In
 Die Vorteile dieser Integration sind unter anderem:
 
 - **Schnelle Durchführung von Kampagnen:** Starten Sie Kampagnen in Minuten, nicht in Wochen.
-- **Konsistente Markensprache:** Verwenden Sie Jasper Templates, um sicherzustellen, dass die erstellten Texte den Markenrichtlinien entsprechen.
+- **Konsistente Markensprache:** Verwenden Sie Jasper Templates, um sicherzustellen, dass die erstellten Texte den Markenrichtlinien genau entsprechen.
 - **Gezielte Generierung von Inhalten:** Erstellen Sie hochgradig angepasstes Messaging mit Segmenten der Zielgruppe, Style Guides und proprietären Artikeln.
 - **Dynamische Personalisierung:** Verwenden Sie Liquid Platzhalter, wie {% raw %}```{{${first_name}}}```{% endraw %}, für eine skalierbare Personalisierung innerhalb von Braze.
 - **Fehlerreduzierung:** Automatisierte Arbeitsabläufe minimieren Copy-Paste-Fehler und reduzieren manuelle Schritte.
@@ -81,7 +81,7 @@ Diese Methode ist ideal für die programmgesteuerte Erstellung und Aktualisierun
 ### Anfrage für Muster
 
 {% raw %}
-```json
+```bash
 curl --location 'https://api.jasper.ai/v1/templates/skl_BC53D8AC5B4B47E8BE557EBB706E9B47/run?toneId=ton_811696974b3c4db4b3ac0041685c3b7c&knowledgeIds=kno_0a62fc17529e4fe69a71f30b6f0e88a7&audienceId=aud_0199117a690a7cc98481f8700916e2a6' \
 --header 'Content-Type: application/json' \
 --header 'x-api-key: ••••••' \
@@ -122,7 +122,7 @@ Verwenden Sie die von Jasper in Schritt 1 generierten `subject`, `preheader` und
 
 ### Beispiel für eine Anfrage der Braze API zur Erstellung einer E-Mail-Vorlage
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \
@@ -138,7 +138,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/cr
 
 ## Methode: Erstellen Sie eine angepasste App für Braze mit Jasper Studio
 
-Jasper Studio ist eine No-Code-Plattform innerhalb von Jasper, die es Ihnen erlaubt, maßgeschneiderte KI-Apps zu erstellen, ohne dass Sie IT-Unterstützung benötigen. Sie können eine angepasste App entwerfen, die speziell für die Braze API formatierte JSON-Strukturen erzeugt, oder Inhalte generieren, die manuell zu Ihren Braze Nachrichten hinzugefügt werden können.
+Jasper Studio ist eine No-Code-Plattform innerhalb von Jasper, die es Ihnen erlaubt, maßgeschneiderte KI-Apps zu erstellen, ohne dass Sie IT-Unterstützung benötigen. Sie können eine angepasste App entwerfen, die JSON-Strukturen erzeugt, die speziell für die Braze API formatiert sind, oder Inhalte generieren, die manuell zu Ihren Braze Nachrichten hinzugefügt werden können.
 
 1. Wählen Sie auf Ihrem Jasper-Startbildschirm **App erstellen** aus.
 2. Geben Sie die App an, die Sie erstellen möchten, z. B. **Braze HTML E-Mail Template** oder **Content-Block Template**.
@@ -176,7 +176,7 @@ Jasper Studio ist eine No-Code-Plattform innerhalb von Jasper, die es Ihnen erla
 ## Beispiel einer Braze API-Anfrage (mit angepasster App-Ausgabe)
 
 {% raw %}
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \

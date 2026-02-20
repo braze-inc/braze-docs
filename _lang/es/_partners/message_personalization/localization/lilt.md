@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [LILT](https://lilt.com/) es la solución completa de IA para la traducción y la creación de contenidos empresariales. LILT habilita a las organizaciones globales para escalar y optimizar sus contenidos, productos, comunicaciones y operaciones de soporte, con agentes de IA y flujos de trabajo totalmente automatizados.
 
-_Esta integración la mantiene LILT._
+_Esta integración está mantenida por LILT._
 
 ## Acerca de esta integración
 

@@ -5,7 +5,6 @@ page_order: 1
 page_type: reference
 description: "This reference article covers automated IP warming and how to monitor your IP warming."
 channel: email
-
 ---
 
 # Automated IP warming

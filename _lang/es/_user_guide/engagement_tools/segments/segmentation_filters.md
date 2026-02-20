@@ -276,7 +276,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Correo electrónico disponible
-    description: "Segmenta a tus usuarios según si tienen una dirección de correo electrónico válida, y si están suscritos o han optado por la adhesión voluntaria al correo electrónico. Este filtro comprueba tres criterios: si el usuario se ha dado de baja de los correos electrónicos, si Braze ha recibido un rebote duro y si el correo se marcó como correo no deseado. Si se cumple alguno de estos criterios, o si no existe un correo electrónico para un usuario, éste no se incluye.<br><br>Ten en cuenta que si envías un mensaje transaccional, los usuarios cuyo \"Correo electrónico disponible\" sea <code>false</code> no se incluirán en el cálculo de audiencia, pero podrían recibir un mensaje. Sin embargo, el cálculo de la audiencia sólo incluye a los usuarios suscritos o con adhesión voluntaria. <br><br>Para los correos electrónicos en los que el estado de adhesión voluntaria es importante, te sugerimos que utilices el filtro \"Correo electrónico disponible\" en lugar del filtro <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">Dirección de correo electrónico</a>; los criterios adicionales pueden ayudarte a dirigirte a los usuarios que realmente quieren ver tus mensajes."
+    description: "Segmenta a tus usuarios en función de si tienen una dirección de correo electrónico válida y de si están suscritos o han optado por la adhesión voluntaria al correo electrónico. Este filtro comprueba tres criterios: si el usuario se ha dado de baja de los correos electrónicos, si Braze ha recibido un rebote duro y si el correo se marcó como correo no deseado. Si se cumple alguno de estos criterios, o si no existe un correo electrónico para un usuario, éste no se incluye.<br><br>Usuarios cuyo correo electrónico disponible es <code>false</code> quedan excluidos de la audiencia de la campaña y no reciben el correo electrónico, aunque tu configuración de envío esté configurada para enviar a todos los usuarios (incluidos los usuarios dados de baja).<br><br>Para los correos electrónicos en los que el estado de adhesión voluntaria sea importante, utiliza Correo electrónico disponible en lugar de <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">Dirección de correo electrónico</a>. Los criterios adicionales te ayudan a dirigirte a los usuarios elegibles para recibir correo electrónico."
     tags:
       - Channel subscription behavior
   - name: Fecha de adhesión voluntaria por correo electrónico
@@ -360,7 +360,7 @@ glossaries:
     tags:
       - Purchase behavior
   - name: Último pedido realizado (últimos 730 días)
-    description: "Segmenta a tus usuarios según la última vez que hicieron un pedido, que se basa en el <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">evento recomendado</a> de <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">eCommerce</a> para el pedido realizado (los espacios de trabajo que no hacen seguimiento de los eventos de eCommerce no tienen datos para este filtro). Los usuarios son evaluados para este filtro una vez al día, y la ventana máxima de retrospectiva es de los últimos 2 años.<br><br>Este filtro está en fase beta. Ponte en contacto con tu director de cuentas Braze si estás interesado en utilizar este filtro."
+    description: "Segmenta a tus usuarios según la última vez que hicieron un pedido, que se basa en el <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">evento recomendado</a> de <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">eCommerce</a> para el pedido realizado (los espacios de trabajo que no hacen seguimiento de los eventos de eCommerce no tienen datos para este filtro). Los usuarios son evaluados para este filtro una vez al día, y la ventana máxima de revisión retrospectiva es de los últimos 2 años.<br><br>Este filtro está en fase beta. Ponte en contacto con tu director de cuentas Braze si estás interesado en utilizar este filtro."
     tags:
       - eCommerce
   - name: Recuento total de pedidos (últimos 730 días)
@@ -588,7 +588,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: Probabilidad de mensaje abierto
-    description: "Filtra a tus usuarios en función de su probabilidad de abrir un mensaje en un canal específico en una escala del 0 al 100%. Los usuarios sin datos suficientes para medir la probabilidad de un canal pueden seleccionarse mediante \"está en blanco\".<br><br>Para el correo electrónico, las aperturas por máquina se excluyen del cálculo de probabilidad."
+    description: "Filtra a tus usuarios en función de su <a href=\"/docs/user_guide/brazeai/intelligence/intelligent_channel/#individual-channels\">probabilidad de abrir un mensaje en un canal especificado</a> en una escala de 0-100%. Los usuarios sin datos suficientes para medir la probabilidad de un canal pueden seleccionarse mediante \"está en blanco\".<br><br>Para el correo electrónico, las aperturas por máquina se excluyen del cálculo de probabilidad."
     tags:
       - Intelligence and predictive
   - name: Cantidad de amigos de Facebook que usan la aplicación

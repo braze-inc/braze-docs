@@ -1,6 +1,7 @@
 ---
 nav_title: Data warehouse integrations
 article_title: Data Warehouse Integrations
+alias: /partners/databricks/
 description: "This page covers how to use Braze Cloud Data Ingestion to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration."
 page_order: 2
 page_type: reference
@@ -435,6 +436,10 @@ Depending on the configuration of your Microsoft Fabric account, you may need to
 {% endtabs %}
 
 ### Step 2: Create a new integration in the Braze dashboard
+
+{% alert important %}
+Customers onboarding in February 2026 or later may have early access to the CDI UI with separate Sources and Syncs. In this UI, create a source before creating syncs for that source. Multiple syncs can use the same source.
+{% endalert %}
 
 {% tabs %}
 {% tab Snowflake %}

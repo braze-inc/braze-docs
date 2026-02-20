@@ -141,7 +141,7 @@ Content-Blöcke können auch als Übersetzungsverwaltungsprozess verwendet werde
 {% subtab API %}
 
 Erstellen Sie einen Katalog über den folgenden API-Aufruf:
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -175,7 +175,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs' \
 
 Fügen Sie Artikel über den folgenden API-Aufruf hinzu:
 
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs/translations/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \

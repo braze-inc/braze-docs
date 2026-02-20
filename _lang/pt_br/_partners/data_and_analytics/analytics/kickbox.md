@@ -32,7 +32,7 @@ Para integrar com a Kickbox, siga os passos em [Integrando com a Braze](https://
 
 ### Verificação em massa
 
-Você também pode optar por verificar toda a sua lista a cada poucos meses ou trimestralmente, para se proteger contra e-mails que churn ou listas que se degradam ao longo do tempo e lentamente reduzem sua entregabilidade.
+Você também pode optar por verificar toda a sua lista a cada poucos meses ou trimestralmente, para se proteger de e-mails que churn ou listas que se degradam ao longo do tempo e lentamente diminuem sua entregabilidade.
 
 Para fazer isso, você precisará alterar as configurações de **Configurações de Entrada** do fluxo de trabalho, conforme descrito pela Kickbox. Em vez de selecionar **Entrega Baseada em Ação**, selecione **Agendado**. Então escolha um horário agendado para que sua lista seja verificada de uma só vez.
 

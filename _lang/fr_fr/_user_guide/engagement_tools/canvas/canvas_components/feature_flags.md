@@ -27,6 +27,8 @@ Lorsqu'un Canvas est arrêté, archivé ou qu'une étape est supprimée, tout ut
 
 Les propriétés d'une étape de canvas peuvent être modifiées après le lancement, et même après qu'un utilisateur a franchi l'étape. Les utilisateurs recevront toujours une version dynamique et en temps réel de l'indicateur de fonctionnalité, au lieu de l'ancienne version enregistrée.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## Écrasement des propriétés
 
 Lors de la création d'un indicateur de fonctionnalité, vous spécifiez des propriétés par défaut. Lors de la configuration d'une étape Canvas avec indicateur de fonctionnalité, vous pouvez soit conserver les valeurs par défaut, soit écraser les valeurs pour les utilisateurs qui entrent dans cette étape.
@@ -40,4 +42,3 @@ Allez dans **Messagerie** > **Indicateurs de fonctionnalité** pour modifier, aj
 Le canvas et le déploiement d'un drapeau de fonctionnalité (en faisant glisser le curseur) peuvent fonctionner indépendamment l'un de l'autre. Attention : l'entrée dans une étape du canvas écrase toute configuration de déploiement par défaut. Cela signifie que si un utilisateur ne remplit pas les conditions requises pour bénéficier d'un indicateur de fonctionnalité, une étape du canvas peut activer la fonctionnalité pour cet utilisateur.
 
 De même, si un utilisateur se qualifie pour le déploiement d'un indicateur de fonctionnalité avec certaines propriétés, s'il entre également dans l'étape du canvas, il recevra toutes les valeurs écrasées de cette étape du canvas.
-
