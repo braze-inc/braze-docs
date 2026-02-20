@@ -165,7 +165,7 @@ If something feels off, update the agent’s configuration and test again. Run a
 
 Your agent is now ready to use! For details, refer to [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
 
-In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location. You can also monitor daily invocation limit errors at the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log).
+In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location. You can also monitor daily invocation limit errors at the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
 
 ![Logs for an agent Random Number Generator, which include when and where the agent has been called.]({% image_buster /assets/img/ai_agent/agent_activity_logs.png %})
 
