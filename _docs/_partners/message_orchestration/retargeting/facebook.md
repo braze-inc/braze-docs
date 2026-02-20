@@ -32,7 +32,7 @@ If you are participating in testing Meta Work Accounts in beta, ensure you disco
 | Requirement | Description |
 | ----------- | ----------- |
 | [Facebook Business Manager](https://www.facebook.com/business/help/113163272211510?id=180505742745347) | A centralized tool to manage your brand's Facebook assets (for example, ad accounts, pages, apps). |
-| [Facebook ad account](https://www.facebook.com/business/help/910137316041095?id=420299598837059) | An active Facebook ad account tied to your brand's business manager that you want to use with Braze custom audiences.<br><br>Ensure that your Facebook business manager administrator has granted you administrator permissions to the Facebook ad accounts you plan to use with Braze, and that you have accepted your ad account terms and conditions. Otherwise, you will not be able to access any Facebook ad accounts within Braze. |
+| [Facebook ad account](https://www.facebook.com/business/help/910137316041095?id=420299598837059) | An active Facebook ad account tied to your brand's business manager that you want to use with Braze custom audiences.<br><br>Ensure that your Facebook business manager administrator has granted you administrator permissions to the Facebook ad accounts you plan to use with Braze, and that you have accepted your ad account terms and conditions. Otherwise, you cannot access any Facebook ad accounts within Braze. |
 | [Facebook Custom Audiences Terms](https://www.facebook.com/ads/manage/customaudiences/tos.php)| You must accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
