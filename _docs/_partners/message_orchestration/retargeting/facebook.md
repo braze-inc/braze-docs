@@ -55,7 +55,7 @@ If you are participating in testing Meta Work Accounts in beta, ensure you disco
 {% alert important %}
 For customers that have previously undergone the Facebook app review process for [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) and [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), your system user token is still valid for the Facebook audience step. You cannot edit or revoke the Facebook system user token through the Facebook partner page. Instead, you can connect your Facebook account to replace your Facebook system user token within your Braze workspace. 
 
-<br><br>The new Facebook oAuth configuration will also apply to [Facebook exports via segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
+<br><br>The new Facebook oAuth configuration also applies to [Facebook exports via segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
 {% endalert %}
 
 ### Step 2: Export your users into Facebook
