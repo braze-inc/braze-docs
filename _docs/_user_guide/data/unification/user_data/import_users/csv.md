@@ -323,6 +323,10 @@ If your upload completed with errors, there may be one or more invalid encrypted
 
 If a piece of default user data (such as `email` or `first_name`) is imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the "first name" field on a user's profile.
 
+#### Changing a custom attribute's data type
+
+If you need to change the data type of an existing custom attribute (for example, from string to boolean), update the data type on the [**Custom Attributes**]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) page in the dashboard before importing your CSV. If the data type in your CSV doesn't match the attribute's currently defined data type, the import fails with an error.
+
 #### Multiple data types
 
 Braze expects each value in a column to be of the same data type. Values that don't match their attribute's data type will cause errors in segmenting.
