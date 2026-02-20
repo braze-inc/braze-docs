@@ -2,7 +2,7 @@
 
 ## Plan-specific AI features
 
-The following table describes the differences between the free and pro version of the AI Personalized, Popular, and Trending recommendation types:
+The following table describes the differences between the free and pro version of the AI Personalized, Most Popular, Most Recent, and Trending recommendation types:
 
 | Area                   | Free version                          | Pro version            |
 | :---------------------- | ------------------------------------- | :--------------------------------------- |
@@ -11,7 +11,7 @@ The following table describes the differences between the free and pro version o
 | Maximum recommendation models | 1 model per type<sup>2</sup> | 100 models per type<sup>2</sup> |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-<sup>1. This is the frequency at which user-specific item recommendations are updated (all models except Most Popular items, which updates when the model retrains). For example, if a user purchases an item recommended based on AI item recommendations, their recommended items will be updated according to this frequency</sup><br>
+<sup>1. This is the frequency at which user-specific item recommendations are updated (AI Personalized and Most Recent only). Most Popular and Trending are global recommendations that update when the model retrains. For example, if a user purchases an item recommended based on AI item recommendations, their recommended items are updated according to this frequency.</sup><br>
 <sup>2. Available recommendation types are AI Personalized, Most recent, Most popular, and Trending.</sup>
 
 {% endif %}
