@@ -31,6 +31,8 @@ valid_partner_list:
   url: /docs/partners/pypestream/
 - name: Sendbird
   url: /docs/partners/sendbird/
+- name: Shopgate
+  url: /docs/partners/shopgate/
 - name: Zendesk
   url: /docs/partners/zendesk/
 - name: PassKit
