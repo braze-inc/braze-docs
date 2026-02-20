@@ -10,7 +10,7 @@ La disponibilidad de las pancartas depende de tu paquete Braze. Ponte en contact
 
 ## ¿Por qué utilizar Banners?
 
-Los banners permiten a los equipos de marketing y producto personalizar el contenido de la aplicación o del sitio web de forma dinámica, reflejando en tiempo real la elegibilidad y el comportamiento del usuario. Muestran mensajes en línea de forma persistente, proporcionando experiencias no intrusivas y contextualmente relevantes que se actualizan automáticamente al inicio de cada sesión de usuario.
+Los banners permiten a los equipos de marketing y de producto personalizar el contenido de la aplicación o del sitio web de forma dinámica, reflejando en tiempo real la elegibilidad y el comportamiento del usuario. Muestran mensajes en línea de forma persistente, proporcionando experiencias no intrusivas y contextualmente relevantes que se actualizan automáticamente al inicio de cada sesión de usuario.
 
 Una vez integrados los banners en una aplicación o sitio web, los especialistas en marketing pueden diseñarlos y lanzarlos con un sencillo editor de arrastrar y soltar, lo que elimina la necesidad de asistencia continua de los desarrolladores, reduce la complejidad y mejora la eficacia.
 
@@ -29,7 +29,7 @@ Entre las características de las Banderas se incluyen:
 - **Fácil creación de contenidos:** Crea y previsualiza tu Banner utilizando un editor visual de arrastrar y soltar con soporte para imágenes, texto, botones, formularios de captura de correo electrónico, código personalizado y mucho más.
 - **Colocaciones flexibles:** Define múltiples ubicaciones dentro de tu aplicación o sitio web en las que puedan aparecer las Banners, habilitando una orientación precisa a contextos específicos o experiencias de usuario.
 - **Personalización dinámica:** Los banners se actualizan dinámicamente con cada nueva sesión de usuario, garantizando que el contenido se mantenga actualizado y personalizado mediante las herramientas de personalización integradas de Braze y la lógica de Liquid.
-- **Priorización nativa:** Establece la prioridad de visualización cuando varias Banners se dirijan a la misma ubicación, garantizando que el mensaje correcto llegue a los usuarios en el momento adecuado.
+- **Priorización nativa:** Establece la prioridad de visualización para cuando varios banners se dirijan a la misma ubicación, garantizando que el mensaje correcto llegue a los usuarios en el momento adecuado.
 - **Soporte HTML personalizado:** Incorpora bloques HTML personalizados para una personalización avanzada o una integración perfecta con tus estilos web existentes.
 
 ## Acerca de las pancartas {#about-banners}
@@ -40,7 +40,7 @@ Las ubicaciones de banners son ubicaciones específicas en tu aplicación o siti
 
 Las ubicaciones más comunes son la parte superior de tu página de inicio, las páginas de detalles del producto y los flujos de pago. Una vez creadas las ubicaciones, los banners se pueden [asignar en tu campaña de banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/).
 
-No hay un límite fijo en el número de colocaciones que puedes crear por espacio de trabajo, y puedes crear tantos ID de colocación como requiera tu experiencia. Cada colocación debe ser única dentro de un espacio de trabajo. Un único ID de colocación puede ser referenciado por hasta 10 campañas activas al mismo tiempo.
+No hay un límite fijo en el número de colocaciones que puedes crear por espacio de trabajo, y puedes crear tantos ID de colocación como requiera tu experiencia. Cada colocación debe ser única dentro de un espacio de trabajo. Un único ID de colocación puede ser referenciado por hasta 25 mensajes activos al mismo tiempo.
 
 {% alert important %}
 Evita modificar los ID de ubicación después de lanzar una campaña de Banner.
@@ -62,6 +62,8 @@ Los mensajes de banner se entregan a tu aplicación o sitio web como contenido H
 
 Los iframes permiten actualizaciones de contenido dinámicas y personalizadas que no requieren cambios en tu código base. Cada iframe recupera y muestra el HTML de cada sesión de usuario utilizando la lógica de segmentación y personalización de campañas.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ### Dimensiones y tamaño
 
 Esto es lo que debes saber sobre las dimensiones y el tamaño de los estandartes:
@@ -72,7 +74,7 @@ Esto es lo que debes saber sobre las dimensiones y el tamaño de los estandartes
 
 ## Limitaciones
 
-Cada espacio de trabajo puede albergar hasta 200 campañas de Banner activas. Si se alcanza este límite, tendrás que [archivar o desactivar]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) una campaña existente antes de crear una nueva.
+Cada espacio de trabajo puede soportar hasta 200 campañas de Banner activas. Si se alcanza este límite, tendrás que [archivar o desactivar]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) una campaña existente antes de crear una nueva.
 
 Además, los mensajes de Banner no admiten las siguientes características:
 

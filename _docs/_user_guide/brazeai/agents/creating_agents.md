@@ -8,7 +8,7 @@ alias: /creating-agents/
 
 # Create custom agents
 
-> Learn how to create custom agents, what to prepare before you start, and how to put them to work across messaging, decisioning, and data management. For more general information, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents). 
+> Learn how to create custom agents, what to prepare before you start, and how to put them to work across messaging, decisioning, and data management. For more general information, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents).
 
 {% alert important %}
 Braze Agents are currently in beta. For help getting started, contact your customer success manager.
@@ -19,7 +19,7 @@ Braze Agents are currently in beta. For help getting started, contact your custo
 Before you start, you'll need the following:
 
 - Access to the **Agent Console** in your workspace. Check with your Braze admins if you don’t see this option.  
-- Permission to create and edit custom AI Agents. 
+- Permission to create and edit custom AI Agents.
 - An idea of what you want the agent to accomplish. Braze Agents can support the following actions:  
    - **Messaging:** Generate subject lines, headlines, in-product copy, or other content.  
    - **Decisioning:** Route users in Canvas based on behavior, preferences, or custom attributes.  
@@ -49,7 +49,7 @@ To create your custom agent:
 3. Enter a name and description to help your team understand its purpose.
 4. (optional) Add tags to filter your agent.
 5. Select the interaction site, which is the location where the agent is deployed. Note that the interaction site can't be updated after an agent is created.
-6. Choose the [model]({{site.baseurl}}/docs/user_guide/brazeai/agents/reference/#models) your agent will use.
+6. Choose the [model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) your agent will use.
 
 ![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:85%;"}
 
@@ -68,7 +68,7 @@ Select **Add context** to choose what your agent can reference. This includes:
 - [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Provide catalog fields for the agent to reference.
 - [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Consider a user's membership in a segment when personalizing messages. You can select up to three segments.
 - [Brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
-- [Canvas Context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analyze all Canvas Context variables for a user when this agent is invoked.
+- [All Canvas Context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analyze all Canvas Context variables for a user when this agent is invoked, including any that are not referenced in the **Instructions** section.
 
 #### Step 2.2: Add optional settings
 
@@ -96,7 +96,7 @@ Arrays are only available for Canvas agents, not catalog agents.
 
 Advanced schema options include manually structuring fields or using JSON.
 
-- **Fields:** A no-code way to enforce an agent output that you can use consistently. 
+- **Fields:** A no-code way to enforce an agent output that you can use consistently.
 - **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema.
 
 {% tabs %}

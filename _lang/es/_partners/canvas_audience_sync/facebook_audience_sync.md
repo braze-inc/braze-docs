@@ -38,7 +38,7 @@ Tendrás que confirmar que tienes los siguientes elementos creados y completados
 | Requisito | Origin | Descripción |
 | ----------- | ------ | ----------- |
 | Facebook Business Manager | [Facebook](https://www.facebook.com/business/help/113163272211510) | Una herramienta centralizada para administrar los activos de Facebook de tu marca (por ejemplo, cuentas de anuncios, páginas y aplicaciones). |
-| Cuenta publicitaria de Facebook | [Facebook](https://www.facebook.com/business/help/910137316041095) | Una cuenta de anuncios de Facebook activa vinculada al administrador de la empresa de tu marca.<br><br>Asegúrate de que el administrador de tu empresa de Facebook te ha concedido permisos de "Gestionar campañas" o "Gestionar cuentas de anuncios" para las cuentas de anuncios de Facebook que piensas utilizar con Braze. Asegúrate también de que has aceptado los términos y condiciones de tu cuenta publicitaria. |
+| Cuenta publicitaria de Facebook | [Facebook](https://www.facebook.com/business/help/910137316041095) | Una cuenta de anuncios de Facebook activa vinculada al administrador de la empresa de tu marca.<br><br>Asegúrate de que el administrador de tu empresa en Facebook te ha concedido permisos de "Gestionar campañas" o "Gestionar cuentas de anuncios" para las cuentas de anuncios de Facebook que piensas utilizar con Braze. Asegúrate también de que has aceptado los términos y condiciones de tu cuenta publicitaria. |
 | Términos de los públicos personalizados de Facebook | [Facebook](https://www.facebook.com/ads/manage/customaudiences/tos.php) | Acepta las Condiciones de públicos personalizados de Facebook para las cuentas de anuncios de Facebook que piensas utilizar con Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -207,7 +207,7 @@ En este momento, Braze no admite audiencias personalizadas similares basadas en 
 Para utilizar la Sincronización de audiencias con Facebook, debes aceptar estas condiciones de servicio. 
 
 - Si tu cuenta publicitaria está directamente asociada a tu cuenta personal de Facebook, puedes aceptar las condiciones del servicio desde tu cuenta personal aquí: `https://www.facebook.com/ads/manage/customaudiences/tos.php?act=<ACCOUNT_ID>`.
-- Si tu cuenta publicitaria está vinculada a la cuenta del administrador de empresas de tu empresa, debes aceptar las condiciones del servicio de tu cuenta del administrador de empresas de Facebook aquí: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
+- Si tu cuenta publicitaria está vinculada a la cuenta del administrador de empresas de tu empresa, debes aceptar las condiciones del servicio en tu cuenta del administrador de empresas de Facebook aquí: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
 
 Después de aceptar las condiciones de servicio de tu audiencia personalizada de Facebook, haz lo siguiente:
 
@@ -289,7 +289,7 @@ Si experimentas problemas adicionales con tu integración, consulta las siguient
 #### Revisar los permisos de la cuenta
 
 1. Revisa [la documentación de Facebook](https://www.facebook.com/business/help/186007118118684?id=829106167281625) sobre cómo gestionar estos permisos en su plataforma. Para el Administrador de empresas de Facebook, necesitas al menos una función de **administrador** o de **empleado** administrador de empresas con acceso a las cuentas de anuncios necesarias.
-2. Como **empleado**, confirma que el administrador te concede todos los permisos de **Gestionar cuenta de publicidad** para cada cuenta de publicidad para crear una audiencia o sincronizar usuarios con la audiencia. 
+2. Como **empleado**, confirma que el administrador te concede todos los permisos de **Gestionar cuenta de anuncios** para cada cuenta de anuncios para crear una audiencia o sincronizar usuarios con la audiencia. 
 3. Una vez concedido, deberás desconectar y volver a conectar tu cuenta.
 
 #### Acepta las condiciones del servicio {#terms}
@@ -326,14 +326,14 @@ Para encontrar tu cuenta y tu ID de empresa, sigue estos pasos:
 
 Comprueba si tienes alguna tarea pendiente con Facebook que pudiera estar bloqueándote el uso de los servicios de Facebook Ads:
 
-1. [Accede al administrador de anuncios de Facebook](https://adsmanager.facebook.com/).
+1. [Entra en el administrador de anuncios de Facebook](https://adsmanager.facebook.com/).
 2. Selecciona la cuenta publicitaria con la que tienes problemas.
 3. En la navegación, selecciona el **resumen de** tu **cuenta**. <br> ![La navegación con el resumen de cuenta seleccionado.]({% image_buster /assets/img/fb_audience_sync/ads_manager_accouint_overview.png %})
 4. Comprueba si hay alguna alerta que deba ser atendida. <br> ![Una cuenta con una tarjeta de crédito caducada.]({% image_buster /assets/img/fb_audience_sync/resolve_alerts.png %})
 
 {:start="5"}
 
-5. Comprueba si hay alguna tarea de configuración que debas completar. <br> ![Una cuenta con una configuración de cuenta parcialmente completada.]({% image_buster /assets/img/fb_audience_sync/confirm_tasks.png %})
+5. Comprueba si hay alguna tarea de configuración que deba completarse. <br> ![Una cuenta con una configuración de cuenta parcialmente completada.]({% image_buster /assets/img/fb_audience_sync/confirm_tasks.png %})
 
 #### Conectar con otro usuario
 

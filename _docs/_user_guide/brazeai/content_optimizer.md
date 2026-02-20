@@ -4,7 +4,7 @@ article_title: Content Optimizer
 alias: "/content_optimizer/"
 description: "Content Optimizer is an agent that helps you test and optimize message content at scale, using AI to generate and evaluate high volumes of content variants automatically."
 page_type: reference
-page_order: 4
+page_order: 3
 ---
 
 # Content Optimizer

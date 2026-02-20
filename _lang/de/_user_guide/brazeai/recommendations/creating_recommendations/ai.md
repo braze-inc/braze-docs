@@ -75,7 +75,7 @@ Falls noch nicht ausgefüllt, wählen Sie den [Katalog]({{site.baseurl}}/user_gu
 
 Wenn Sie mehr Kontrolle über Ihre Empfehlung wünschen, wählen Sie eine [Auswahl]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/), um benutzerdefinierte Filter anzuwenden. Mit Auswahlen können Empfehlungen nach bestimmten Spalten im Katalog wie Marke, Größe oder Standort gefiltert werden. Auswahlen, die Liquid enthalten, können nicht in Ihrer Empfehlung verwendet werden.
 
-![Ein Beispiel für die für die Empfehlung ausgewählte "vorrätige" Auswahl.]({% image_buster /assets/img/item_recs_2-2.png %})
+![Ein Beispiel für die Auswahl "vorrätig", die für die Empfehlung ausgewählt wurde.]({% image_buster /assets/img/item_recs_2-2.png %})
 
 {% alert tip %}
 Wenn Sie keine Auswahl finden können, vergewissern Sie sich zunächst, dass sie im Katalog eingerichtet ist.

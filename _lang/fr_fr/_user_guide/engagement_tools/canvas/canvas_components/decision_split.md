@@ -2,7 +2,7 @@
 nav_title: Arbre décisionnel
 article_title: Arbre décisionnel 
 alias: /decision_split/
-page_order: 2
+page_order: 7
 page_type: reference
 description: "Cet article de référence explique comment créer et utiliser des arbres décisionnels dans votre Canvas."
 tool: Canvas
@@ -11,7 +11,7 @@ tool: Canvas
 
 # Arbre décisionnel 
 
-> Le composant de décision de séparation dans Canvas vous permet de fournir des expériences personnalisées, en temps réel à vos utilisateurs.
+> Le composant d'arbre décisionnel de Canvas vous permet d'offrir des expériences personnalisées et en temps réel à vos utilisateurs.
 
 ![Une étape de l'arbre décisionnel nommée "Push enabled ?" pour les utilisateurs qui ne sont pas push enabled et les utilisateurs qui sont push enabled.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 

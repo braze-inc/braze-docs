@@ -45,21 +45,17 @@ No dashboard da Segment, selecione sua fonte da Segment. Em seguida, acesse **Se
 
 ### Etapa 3: Exportar eventos de engajamento com mensagens
 
-Em seguida, selecione os eventos de engajamento com mensagens que você gostaria de exportar. Consulte a tabela de eventos e propriedades de exportação listada a seguir. Todos os eventos enviados para o Segment incluirão o `external_user_id` do usuário como o `userId` e o `braze_id` do usuário como o `anonymousId`.
+Em seguida, selecione os eventos de engajamento com mensagens que você gostaria de exportar. Consulte a tabela de eventos e propriedades de exportação listada a seguir. Todos os eventos enviados para o Segment incluirão o `external_user_id` do usuário como `userId` e o `braze_id` do usuário como `anonymousId`.
 
-Tenha em mente que o Braze só envia dados de eventos para usuários sem um `external_user_id` se **Incluir eventos de usuários anônimos** estiver marcado.
+Lembre-se, o Braze só envia dados de eventos para usuários sem um `external_user_id` se **Incluir eventos de usuários anônimos** estiver marcado.
 
-{% alert important %}
-A exportação de usuários anônimos está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Anonymous user export' %}
 
 ![Lista de todos os eventos de engajamento com mensagens disponíveis na página Segment Currents na Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
 
 Por fim, selecione **Abrir Current**.
 
-{% alert warning %}
-Se você pretende criar mais de um dos mesmos conectores Currents (por exemplo, dois conectores de eventos de engajamento com mensagens), eles devem estar em espaços de trabalho diferentes. Como a integração do Braze Segment Currents não pode isolar eventos de diferentes apps em um único espaço de trabalho, se isso não for feito, haverá desduplicação de dados desnecessários e perda de dados.
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Segment Currents multiple connectors' %}
 
 Para saber mais, visite a [documentação](https://segment.com/docs/connections/sources/catalog/cloud-apps/braze/) da Segment.
 

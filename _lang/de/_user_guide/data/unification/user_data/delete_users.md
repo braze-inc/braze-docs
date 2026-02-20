@@ -71,6 +71,14 @@ Die Nutzer:innen in diesem Segment werden nicht sofort gelöscht. Stattdessen we
 Um sicherzustellen, dass genau diese Nutzer:innen unabhängig von Segmentänderungen gelöscht werden, wird automatisch ein Filter mit dem Namen **Ausstehende Löschung** erstellt. Sie können [diesen Filter verwenden]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters), um den Status ausstehender Löschungen zu überprüfen.
 {% endalert %}
 
+## Bestätigen von Segmentierungen
+
+Braze sendet eine E-Mail mit der Anzahl der zur Löschung anstehenden Profile.
+
+Um mit der Löschung fortzufahren, melden Sie sich bei Braze an und bestätigen Sie die Anfrage zur Löschung.
+
+Wenn Sie nicht innerhalb des in der E-Mail angegebenen Zeitraums bestätigen, verfällt die Anfrage und wird nicht weiter bearbeitet.
+
 ## Löschen von Segmenten abbrechen {#cancel}
 
 Sie haben 7 Tage Zeit, um anstehende Segmentierungen zu stornieren. Um den Vorgang abzubrechen, gehen Sie zu **Zielgruppe** > **Zielgruppe verwalten** und wählen Sie dann den Tab **Nutzer:innen löschen**.
@@ -117,7 +125,7 @@ Auf dieser Seite finden Sie die folgenden allgemeinen Informationen zu allen lau
 |-------|-------------|
 | Datum der Anfrage | Das Datum, an dem die Anfrage ursprünglich gestellt wurde. Verwenden Sie ihn zusammen mit dem Filter **Ausstehende Löschung**, um die Liste der Profile zu erhalten, die zur Löschung anstehen. |
 | Angefragt von | Der Nutzer:innen, der die Anfrage zur Löschung initiiert hat. |
-| Segmentname | Der Name des Segments, das zum Auswählen der Nutzer:innen verwendet wird, die zur Löschung anstehen. |
+| Segmentname | Der Name des Segments, mit dem die Nutzer:innen ausgewählt werden, die zur Löschung anstehen. |
 | Status | Zeigt an, ob die Anfrage zur Löschung ausstehend, in Bearbeitung oder abgeschlossen ist. |  
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
@@ -135,11 +143,19 @@ Sie können auch den Status früherer Löschungen überprüfen, indem Sie einen 
 
 Nein. Sie können keine Segmente mit mehr als 100 Millionen Nutzer:innen löschen. Wenn Sie Hilfe beim Löschen eines Segments dieser Größe benötigen, wenden Sie sich an [support@braze.com](mailto:support@braze.com).
 
-### Hat die automatisierte Zusammenführung von Nutzer:innen Auswirkungen auf die Löschung von Nutzern?
+### Es sieht so aus, als ob ich nicht in der Lage bin, 100 Millionen Nutzer:innen zu löschen. Ich kann nur 10 Millionen löschen. Ist dies ein Fehler?
+
+Nein, dies ist kein Fehler. Bestimmte Kund:innen sind in der Anzahl der Nutzer:innen, die sie im Rahmen des Early-Access-Programms (EA) löschen können, beschränkt.
+
+Mit dem Fortschreiten des EA-Programms soll diese Kapazität steigen, bis alle Kund:innen bis zu 100 Millionen Nutzer:innen löschen können.
+
+Wenn Sie diese Kapazität erhöhen möchten, wenden Sie sich an Ihren Braze-Konto Manager:in. Anfragen werden nach dem Ermessen des Teams für das Produkt bewilligt.
+
+### Hat die automatische Zusammenführung von Nutzer:innen Auswirkungen auf die Löschung von Nutzern?
 
 Wenn ein Zeitplan für die Zusammenführung Nutzer:innen-Profile enthält, die zur Löschung anstehen, überspringt Braze diese Profile und führt sie nicht zusammen. Um diese Profile zusammenzuführen, müssen Sie sie vom Löschvorgang ausschließen.
 
-### Was geschieht mit Daten, die an Nutzer:innen gesendet werden, bis sie gelöscht werden?
+### Was geschieht mit Daten, die an Nutzer:innen gesendet werden, die auf ihre Löschung warten?
 
 Daten, die von externen Systemen oder SDKs gesendet werden, werden weiterhin akzeptiert, aber die Nutzer:innen werden unabhängig von ihrer Aktivität wie geplant gelöscht.
 

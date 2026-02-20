@@ -37,15 +37,15 @@ En outre, notez les détails suivants, spécifiques à la plate-forme :
 ### Informations générales
 
 - L'invite "push" ne peut être affichée qu'une seule fois par installation, ce qui est imposé par le système d'exploitation.
-- L'invite ne s'affichera pas si le paramètre de notification de l'application est explicitement activé ou désactivé, elle ne s'affichera que pour les utilisateurs avec [autorisation provisoire](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications#3544375).
-  - **Le paramètre "push" de l'application est activé :** Braze n'affichera pas le message in-app, car l'utilisateur a déjà opté pour l'abonnement.
-  - **Le paramètre de poussée de l'application est désactivé :** Vous devrez rediriger l'utilisateur vers les paramètres de notification push de votre application dans les paramètres de l'appareil.
+- L'invite ne s'affiche pas si le paramètre "push" de l'application est explicitement activé ou désactivé. Elle ne s'affiche que pour les utilisateurs disposant d'une [autorisation provisoire](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications#3544375).
+  - **Le paramètre "push" de l'application est activé :** Braze n'affiche pas le message in-app, car l'utilisateur a déjà opté pour l'abonnement.
+  - **Le paramètre de poussée de l'application est désactivé :** Vous devez rediriger l'utilisateur vers les paramètres de notification push de votre application dans les paramètres de l'appareil.
 
 ### Enlever manuellement le code
 
-Le message in-app que vous configurez à l’aide de ce tutoriel appellera automatiquement le code d’invite push natif lorsqu’un utilisateur clique sur le bouton du message in-app. Pour éviter de demander une autorisation de notification push deux fois ou au mauvais moment, les développeurs doivent modifier toute intégration de notification push existante qu’ils ont mise en œuvre afin de s’assurer que votre message in-app est la première amorce de notification push que vos utilisateurs verront.
+Le message in-app que vous avez configuré à l'aide de ce tutoriel appelle automatiquement le code d'invite push natif lorsqu'un utilisateur clique sur le bouton du message in-app. Pour éviter de demander une autorisation de notification push deux fois ou au mauvais moment, les développeurs doivent modifier toute intégration de notification push existante qu’ils ont mise en œuvre afin de s’assurer que votre message in-app est la première amorce de notification push que vos utilisateurs verront.
 
-Votre équipe de développement doit examiner votre mise en œuvre des notifications push pour votre app ou votre site et supprimer manuellement tout code qui demanderait une autorisation push. Par exemple, vous pouvez supprimer les références au code suivant :
+Votre équipe de développement doit examiner votre mise en œuvre des notifications push pour votre app ou votre site et supprimer manuellement tout code qui demande une autorisation push. Par exemple, supprimez les références au code suivant :
 
 {% subtabs %}
 {% subtab OBJECTIVE-C %}
@@ -100,7 +100,7 @@ Pour connaître les meilleures pratiques et obtenir des ressources supplémentai
 
 ## Étape 3 : Spécifier le comportement du bouton {#button-actions}
 
-Pour ajouter des boutons à votre message in-app, faites glisser deux blocs **Bouton** dans votre message, qui feront office de boutons principal et secondaire dans votre message in-app. Vous pouvez également faire glisser une rangée dans votre message, puis faire glisser les boutons dans la rangée, de manière à ce que les boutons se trouvent sur la même rangée horizontale (et non pas empilés les uns sur les autres). Nous recommandons d’activer les boutons « Allow notifications » (Autoriser les notifications) et « Not now » (Pas maintenant) comme boutons d’amorce, mais il existe de nombreuses invites de bouton différentes que vous pouvez attribuer.
+Pour ajouter des boutons à votre message in-app, faites glisser deux blocs **Bouton** dans votre message, qui font office de boutons principal et secondaire dans votre message in-app. Vous pouvez également faire glisser une rangée dans votre message, puis faire glisser les boutons dans la rangée, de manière à ce que les boutons se trouvent sur la même rangée horizontale (et non pas empilés les uns sur les autres). Nous vous recommandons d'utiliser les boutons "Autoriser les notifications" et "Pas maintenant" comme boutons de démarrage, mais vous pouvez assigner de nombreuses invites différentes aux boutons.
 
 Après avoir ajouté la copie du bouton, spécifiez le comportement en cas de clic pour chaque bouton :
 
@@ -119,15 +119,102 @@ Bien que le moment idéal puisse varier, Braze suggère d'attendre qu'un utilisa
 
 ## Étape 5 : Utilisateurs cibles
 
-L'objectif d'une campagne d'amorçage push est d'inviter les utilisateurs sur tout appareil sur lequel ils n'ont pas encore accordé de permissions push. Il peut s'agir de nouveaux utilisateurs ou d'utilisateurs existants qui obtiennent un nouvel appareil ou réinstallent votre application. Pour cibler correctement votre campagne de push primer, ajoutez un filtre où `Foreground Push Enabled For App is false`. Ce filtre identifie les installations d'apps individuelles qui n'ont pas encore opté pour les notifications push au premier plan.
+L'objectif d'une campagne d'amorçage push est d'inviter les utilisateurs sur tout appareil sur lequel ils n'ont pas encore accordé de permissions push. Il peut s'agir de nouveaux utilisateurs ou d'utilisateurs existants qui obtiennent un nouvel appareil ou réinstallent votre application.
 
 {% alert important %}
-L'utilisation d'un filtre au niveau de l'utilisateur comme `Push Subscription Status is not Opted In` exclura les utilisateurs qui sont déjà abonnés sur un autre appareil, ce qui les empêchera de recevoir la demande d'abonnement sur leur nouvel appareil.
+**Suppression automatique avec amorce de poussée sans code :** Si vous utilisez l'amorce de push sans code (l'action du bouton "Request Push Permission"), vous n'avez pas besoin d'ajouter des filtres d'abonnement au push à votre segmentation. Le SDK supprime automatiquement le message in-app sur les appareils qui ont déjà un jeton push actif, quel que soit le statut push de l'utilisateur sur les autres appareils. Pour plus d'informations sur le ciblage des utilisateurs disposant de plusieurs appareils, voir [Ciblage des utilisateurs disposant de plusieurs appareils](#targeting-users-with-multiple-devices).
+{% endalert %}
+
+Si vous n'utilisez pas l'amorce de poussée sans code, ajoutez un filtre à l'endroit où `Foreground Push Enabled For App is false`. Ce filtre identifie les installations d'apps individuelles qui n'ont pas encore opté pour les notifications push au premier plan.
+
+{% alert important %}
+L'utilisation d'un filtre au niveau de l'utilisateur tel que `Push Subscription Status is not Opted In` exclut les utilisateurs qui sont déjà abonnés sur un autre appareil, ce qui les empêche de recevoir la demande d'abonnement sur leur nouvel appareil.
 {% endalert %}
 
 Au-delà de cela, vous pouvez décider des segments supplémentaires qui vous semblent les plus appropriés. Par exemple, vous pouvez cibler les utilisateurs qui ont effectué un deuxième achat, les utilisateurs qui viennent de créer un compte pour devenir membre ou même ceux qui visitent votre application plus de deux fois par semaine. Cibler les utilisateurs pour ces segments essentiels augmente la probabilité que les utilisateurs s’abonnent et activent les notifications push.
 
+### Ciblage des utilisateurs avec plusieurs appareils
+
+Comme Braze saisit les données des utilisateurs au niveau du profil et non de l'appareil, le ciblage des utilisateurs qui possèdent plusieurs appareils peut s'avérer difficile. Les filtres d'abonnement en mode push dans la segmentation incluent ou excluent les utilisateurs en fonction de l'état de l'abonnement d'un seul appareil plutôt que de l'état de l'abonnement de l'appareil spécifique ciblé. En outre, les états provisoires sur iOS ajoutent de la complexité, car ces appareils disposent techniquement de jetons de poussée au premier plan, mais les utilisateurs ne sont pas explicitement abonnés.
+
+#### Le problème des filtres d'abonnement push
+
+Lorsqu'un utilisateur possède plusieurs appareils avec différents états d'abonnement push, les filtres d'abonnement push de votre segmentation peuvent ne pas cibler certains appareils. Envisagez les scénarios suivants :
+
+{% details Scenario 1: User has two devices on different platforms %}
+
+**L'utilisateur dispose de deux appareils :**
+- Appareil A : Android, a opté pour le push
+- Appareil B : iOS, pas d'abonnement au push
+
+**Segmenter les filtres qui ne fonctionnent pas :**
+- `Push enabled = false` - L'utilisateur a activé la fonction push sur son appareil Android, il n'entre donc pas dans le segment. Le segment ne comprend pas l'appareil iOS.
+- `Push subscription status is not opted in` - L'utilisateur a activé la fonction push sur son appareil Android, il n'entre donc pas dans le segment. Le segment ne comprend pas l'appareil iOS.
+
+**Des filtres de segmentation qui fonctionnent :**
+- `Push enabled for iOS = false` - L'utilisateur a activé le push sur son appareil Android, mais nous ne ciblons que les appareils iOS, donc l'utilisateur tombe dans le segmentation. Le segment comprend l'appareil iOS.
+
+{% enddetails %}
+
+{% details Scenario 2: User has two iOS devices with different states %}
+
+**L'utilisateur possède deux appareils iOS :**
+- Appareil A : Abonné à la poussée
+- Appareil B : Autorisé provisoirement mais non abonné
+
+**Segmenter les filtres qui ne fonctionnent pas :**
+- `Push enabled = false` - L'appareil A est abonné à la poussée, de sorte que l'utilisateur ne tombe pas dans le segment. Le segment n'inclut pas l'appareil B.
+- `Provisionally opted in = true` - L'appareil A est pleinement abonné, ce qui signifie qu'il n'est pas dans un état provisoire. L'utilisateur ne tombe pas dans le segmentation. Le segment n'inclut pas l'appareil B.
+- `Push enabled for app > iOS = false` - L'appareil A fait l'objet d'un abonnement au push sur iOS, de sorte que l'utilisateur ne tombe pas dans le segment. Le segment n'inclut pas l'appareil B.
+- `Push subscription status is not opted in` - L'appareil A est abonné à la poussée, de sorte que l'utilisateur ne tombe pas dans le segment. Le segment n'inclut pas l'appareil B.
+
+**Résultat :** L'utilisation de n'importe quelle combinaison de ces filtres push a pour effet d'exclure au moins un appareil du segment.
+
+{% enddetails %}
+
+{% details Scenario 3: User has three or more devices on the same OS %}
+
+**L'utilisateur dispose de trois appareils :**
+- Appareil A : Abonné à la poussée
+- Appareil B : Pas d'abonnement à la poussée
+- Appareil C : Pas d'abonnement à la poussée
+
+**Segmenter les filtres qui ne fonctionnent pas :**
+- `Push enabled = false` - L'appareil A est abonné à la poussée, de sorte que l'utilisateur ne tombe pas dans le segment. Le segment ne comprend pas les appareils B et C.
+- `Push enabled for app > X = false` - L'appareil A fait l'objet d'un abonnement pour pousser sur l'application spécifiée, de sorte que l'utilisateur ne tombe pas dans le segment. Le segment ne comprend pas les appareils B et C.
+- `Push subscription status is not opted in` - L'appareil A est abonné à la poussée, de sorte que l'utilisateur ne tombe pas dans le segment. Le segment ne comprend pas les appareils B et C.
+
+**Résultat :** L'utilisation de n'importe quelle combinaison de ces filtres push laisse au moins un appareil non ciblé.
+
+{% enddetails %}
+
+#### Solution : Utilisez l'amorce de poussée sans code
+
+La solution recommandée est d'utiliser l'amorce de push sans code (l'action du bouton d'appel "Request Push Permission") sans filtre supplémentaire de segmentation de l'état du push.
+
+{% alert important %}
+**Suppression automatique**: L'amorce de push sans code est automatiquement supprimée sur les appareils qui ont déjà un jeton de push actif. Le SDK vérifie si un utilisateur sur son appareil spécifique dispose déjà d'un jeton push. Si le SDK constate que l'utilisateur a déjà opté pour l'abonnement (par exemple, à partir d'une demande précédente ou via les paramètres de l'appareil), il supprime automatiquement le message in-app sans qu'il soit nécessaire d'utiliser des filtres de segmentation supplémentaires. L'amorce apparaît dans tous les autres scénarios, y compris si un utilisateur est provisoirement abonné à Push.
+{% endalert %}
+
+L'avantage de l'utilisation de l'amorce de poussée sans code est que la fonctionnalité est prise en charge par le SDK de Braze. Comme le SDK peut détecter l'état du jeton push sur l'appareil spécifique qui affiche le message, vous n'avez pas besoin de vous appuyer sur des filtres de segmentation au niveau du profil qui risquent d'exclure les utilisateurs possédant plusieurs appareils.
+
+#### Considérations
+
+**Aucune amorce de code n'est nécessaire :** Vous devez utiliser l'amorce de poussée sans code pour que la suppression automatique fonctionne. Si vous mettez en place une logique personnalisée ou des liens profonds au lieu d'utiliser l'action du bouton "Request Push Permission", le SDK ne peut pas identifier que vous essayez d'afficher un bouton d'action push. Le message s'affiche alors quel que soit l'état de l'abonnement de l'appareil.
+
+**Suppression pour les utilisateurs qui se sont abonnés**: Vous pouvez vouloir supprimer le message in-app pour les utilisateurs qui ont explicitement refusé le push (par exemple, à partir de la demande native ou des paramètres de l'appareil) et recibler ces utilisateurs avec une campagne de maturation distincte. Pour ce faire, utilisez la logique liquide suivante en combinaison avec l'amorce d'absence de code :
+
+{% raw %}
+```liquid
+{% if targeted_device.${foreground_push_enabled} == false %} 
+{% abort_message('user turned off push notifications') %} 
+{% endif %}
+- message goes here -
+```
+{% endraw %}
+
+Le filtre `targeted_device` Liquid ne tient compte que de l'appareil sur lequel le message est affiché, et non du profil utilisateur. Sur cet appareil, `foreground_push_enabled` est défini sur `true` lorsqu'il y a un jeton push actif au premier plan et défini sur `false` lorsque le système d'exploitation signale que les notifications push ont été désactivées (par exemple, l'utilisateur les a explicitement désactivées). Pour les appareils entièrement nouveaux qui n'ont pas encore répondu à un état d'autorisation push, `foreground_push_enabled` n'est pas défini et n'a aucune valeur. Parce que la condition Liquid vérifie spécifiquement `{% raw %}``false`{% endraw %}, elle supprime l'amorce uniquement pour les appareils ayant un abonnement explicite, tandis que les appareils dans cet état inconnu sont toujours admissibles et peuvent recevoir l'amorce de poussée.
+
 ## Étape 6 : Événements de conversion
 
 Braze suggère des paramètres par défaut pour les conversions, mais vous voudrez peut-être configurer des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) autour des amorces push.
-

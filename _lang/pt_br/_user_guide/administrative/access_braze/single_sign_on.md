@@ -1,7 +1,7 @@
 ---
 nav_title: "SAML e logon único"
 article_title: SAML e logon único
-page_order: 5
+page_order: 2
 layout: dev_guide
 guide_top_header: "SAML e logon único"
 guide_top_text: "O logon único (SSO) oferece às empresas uma maneira segura e centralizada de controlar o acesso ao dashboard do Braze. Em resumo, um único conjunto de credenciais pode ser usado para acessar diferentes aplicativos, inclusive a Braze. <br> <br> O Braze oferece suporte ao SAML SSO, que suporta os mais recentes padrões do setor Security Assertion Markup Language (SAML 2.0), e também oferece suporte ao Microsoft Entra ID (antigo Azure Active Directory), Okta e OneLogin."

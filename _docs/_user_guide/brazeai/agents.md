@@ -15,7 +15,7 @@ Braze Agents are currently in beta. For help getting started, contact your custo
 
 ## Why use Braze Agents?
 
-Braze Agents help your team deliver smarter, more personalized experiences—without adding extra work. They act as intelligent assistants that don’t just respond to prompts, but understand context, make decisions, and take action toward a goal.
+Braze Agents help your team deliver smarter, more personalized experiences—without adding extra work. They act as autonomous agents that don’t just respond to prompts, but understand context, make decisions, and take action toward a goal.
 
 In practice, agents can automatically create message copy—like subject lines or in-product text—so every customer gets communication that feels tailored to them. They can also adapt in real time, routing people through different Canvas paths based on preferences, behaviors, or other data.
 
@@ -33,14 +33,14 @@ In contrast, other BrazeAI tools are designed to maximize the metrics that they 
 
 Features for Braze Agents include:
 
-- **Flexible setup:** Use a Braze-provided LLM or connect your own model provider (such as OpenAI, Anthropic, Google Gemini, or AWS Bedrock).
+- **Flexible setup:** Use a Braze-provided LLM or connect your own [AI model providers]({{site.baseurl}}/partners/ai_model_providers) (such as OpenAI, Anthropic, or Google Gemini).
 - **Seamless integration:** Deploy agents directly in Canvas steps or catalog fields.
 - **Testing and logging tools:** Preview your agent's output by testing with sample inputs before you launch. View logs for each time the agent runs, including the input and output for that run.
 - **Usage controls:** Daily limits help manage performance and costs.
 
 ## About Braze Agents
 
-Agents are configured with instructions (system prompts) that define how they behave. When an agent runs, it uses your instructions along with any data you pass in to generate a response. 
+Agents are configured with instructions (system prompts) that define how they behave. When an agent runs, it uses your instructions along with any data you pass in to generate a response.
 
 ### Key concepts
 

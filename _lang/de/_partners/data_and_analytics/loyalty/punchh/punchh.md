@@ -79,7 +79,7 @@ Update `external_source_id` für bestehende Nutzer:innen von Punchh. Punchh erla
 {% tab User sign-up API example %}
 Dieses Beispiel ermöglicht es Ihnen, bei der Registrierung externe Bezeichner mit einem Nutzerprofil zu senden. Dies geschieht, indem Sie `external_source` als "customer_id" und `external_source_id` als "111111111111111111" als String-Datentyp senden.
 
-```json
+```bash
 curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'x-pch-digest: SIGNATURE' \
@@ -106,7 +106,7 @@ curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mo
 {% tab User update API example %}
 Dieses Beispiel ermöglicht es Ihnen, externe Bezeichner mit einem Nutzerprofil zu aktualisieren. Dies geschieht, indem Sie `external_source` als "customer_id" und `external_source_id` als "111111111111111111" als String-Datentyp senden.
 
-```json
+```bash
 curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
@@ -182,7 +182,7 @@ Wenn Sie einen Trigger hinzufügen, wird die Liste der in Braze erstellten Ereig
 
 ![]({% image_buster /assets/img/punchh/update5.png %})
 
-Sie können Eigenschaftsfilter hinzufügen, um das auslösende Ereignis weiter zu filtern. Die Nachricht sollte beispielsweise nur dann ausgelöst werden, wenn ein Kund:in das Ereignis "checkins_gift" triggert, bei dem die Eigenschaft des genehmigten Ereignisses `true` lautet. Dies ist ein optionales Feature, das möglicherweise nicht auf alle Anwendungsfälle anwendbar ist. 
+Sie können Eigenschaftsfilter hinzufügen, um das auslösende Ereignis weiter zu filtern. Beispielsweise sollte die Nachricht nur dann ausgelöst werden, wenn ein Kund:in das Ereignis "checkins_gift" triggert, bei dem die Eigenschaft genehmigt `true` lautet. Dies ist ein optionales Feature, das möglicherweise nicht auf alle Anwendungsfälle anwendbar ist. 
 
 #### Segmentierung
 
@@ -292,7 +292,7 @@ Punchh-Konfigurationen erforderlich:
 
 Zum Beispiel wird eine Kampagne für eine überraschende und erfreuliche Braze an ein Segment gesendet, das in Punchh verfügbar ist. Die Kampagne bedankt sich bei den Gästen für ihren Besuch und belohnt sie mit $2 Rabatt auf ihren nächsten Besuch.
 
-![Innerhalb von Punchh kann ein Segment für qualifizierte Nutzer:innen konfiguriert werden. Ein qualifizierter Nutzer:innen checkt ein und erhält über eine Punchh-Kampagne nach dem Einchecken ein Geschenk. Danach wird ein Reward-Ereignis getriggert und die Rückrufnachricht wird gesendet, um die Gäste über die von Braze gesendete Reward zu informieren.]({% image_buster /assets/img/punchh/usecase2.png %})
+![Innerhalb von Punchh kann ein Segment für qualifizierte Nutzer:innen konfiguriert werden. Ein qualifizierter Nutzer:innen checkt ein und erhält über eine Punchh-Kampagne nach dem Einchecken ein Geschenk. Danach wird ein Reward-Ereignis getriggert und die Rückrufnachricht gesendet, die die Gäste über die von Braze gesendete Belohnung informiert.]({% image_buster /assets/img/punchh/usecase2.png %})
 
 {% endtab %}
 {% tab Anniversary %}
@@ -309,7 +309,7 @@ Punchh-Konfigurationen erforderlich:
 - Gültigkeitsdauer (Wie lange ist die Geburtstagsbelohnung gültig?)
 - Wiederkehrende Kampagnen, Zeitplan erforderlich 
 
-![Ein optionales Segment kann innerhalb von Punchh erstellt werden, und ein qualifizierter Nutzer:innen erhält eine Belohnung durch eine Punchh-Jubiläumskampagne. Danach wird ein Reward-Ereignis getriggert und die Rückrufnachricht wird gesendet, um die Gäste über die von Braze gesendete Reward zu informieren.]({% image_buster /assets/img/punchh/usecase1.png %})
+![Ein optionales Segment kann innerhalb von Punchh erstellt werden, und ein qualifizierter Nutzer:innen erhält eine Belohnung durch eine Punchh-Jubiläumskampagne. Danach wird ein Reward-Ereignis getriggert und die Rückrufnachricht gesendet, die die Gäste über die von Braze gesendete Belohnung informiert.]({% image_buster /assets/img/punchh/usecase1.png %})
 
 {% endtab %}
 {% tab Recall %}

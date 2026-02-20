@@ -79,7 +79,7 @@ Update `external_source_id` for existing Punchh users. Punchh allows external id
 {% tab User sign-up API example %}
 This example allows you to send external identifiers with a user profile at sign-up time. 이는 문자열 데이터 유형으로 `external_source` 을 "customer_id" 으로, `external_source_id` 을 "111111111111111111"으로 보내면 됩니다.
 
-```json
+```bash
 curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'x-pch-digest: SIGNATURE' \
@@ -106,7 +106,7 @@ curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mo
 {% tab User update API example %}
 This example allows you to update external identifiers with a user profile. 이는 문자열 데이터 유형으로 `external_source` 을 "customer_id" 으로, `external_source_id` 을 "111111111111111111"으로 보내면 됩니다.
 
-```json
+```bash
 curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
@@ -292,7 +292,7 @@ Punchh configurations required:
 
 For example, a surprise and delight Braze campaign is sent to a segment available in Punchh, thanking guests for visiting and rewarding them with $2 off their next visit.
 
-![An qualifying user segment can be configured within Punchh, and a qualifying user checks in and receives a gift through a Punchh post-check-in campaign. 그 후 리워드 이벤트가 트리거되고 리콜 메시지가 게스트에게 Braze에서 보낸 리워드를 알리는 메시지로 전송됩니다.]({% image_buster /assets/img/punchh/usecase2.png %})
+![An qualifying user segment can be configured within Punchh, and a qualifying user checks in and receives a gift through a Punchh post-check-in campaign. 그 후 리워드 이벤트가 트리거되고 리콜 메시지가 게스트에게 전송되어 Braze에서 보낸 리워드에 대해 알립니다.]({% image_buster /assets/img/punchh/usecase2.png %})
 
 {% endtab %}
 {% tab Anniversary %}
@@ -309,7 +309,7 @@ Considerations:
 - Lifespan duration (How long is the birthday reward valid?)
 - Recurring campaigns, schedule required 
 
-![An optional segment can be created within Punchh, and a qualifying user receives a reward through a Punchh anniversary campaign. 그 후 리워드 이벤트가 트리거되고 리콜 메시지가 게스트에게 Braze에서 보낸 리워드를 알리는 메시지로 전송됩니다.]({% image_buster /assets/img/punchh/usecase1.png %})
+![An optional segment can be created within Punchh, and a qualifying user receives a reward through a Punchh anniversary campaign. 그 후 리워드 이벤트가 트리거되고 리콜 메시지가 게스트에게 전송되어 Braze에서 보낸 리워드에 대해 알립니다.]({% image_buster /assets/img/punchh/usecase1.png %})
 
 {% endtab %}
 {% tab Recall %}

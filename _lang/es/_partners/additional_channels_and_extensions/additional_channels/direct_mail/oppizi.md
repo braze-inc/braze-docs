@@ -54,7 +54,7 @@ En tu plantilla webhook, rellena los siguientes campos:
 - **URL del webhook:** ```https://webhooks.oppizi.com/events```
 - **Cuerpo de la solicitud:** **Texto sin procesar**
 
-Para el método de solicitud y las cabeceras, Oppizi requiere que se incluya en la plantilla un método HTTP junto con las siguientes cabeceras HTTP. Rellena los siguientes campos:
+Para el método de solicitud y los encabezados, Oppizi requiere que se incluya en la plantilla un método HTTP junto con los siguientes encabezados HTTP. Rellena los siguientes campos:
 
 - **Método HTTP:** POST
 - **Encabezados de solicitud:**
@@ -102,7 +102,7 @@ A continuación se muestra un ejemplo de cuerpo de solicitud:
 
 ### Paso 4: Vista previa y prueba de tu solicitud en Braze
 
-Después de añadir el cuerpo de tu solicitud con el ID del flujo de trabajo de Oppizi, realiza una prueba para confirmar que tu configuración funciona como esperabas.
+Después de añadir el cuerpo de tu solicitud con el ID de flujo de trabajo de Oppizi, realiza una prueba para confirmar que tu configuración funciona como esperabas.
 
 Para ejecutar la prueba, actualiza `requestType` de `live` a `test` en el cuerpo de la solicitud. Ten en cuenta que este paso es crucial para evitar añadir destinatarios de prueba a tu audiencia de correo directo.
 

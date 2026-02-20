@@ -21,9 +21,7 @@ Grâce à la synchronisation de l’audience Braze avec LinkedIn, les marques pe
 
 Cette fonctionnalité permet aux marques de contrôler quelles données first-party spécifiques sont partagées avec LinkedIn. Chez Braze, les intégrations avec lesquelles vous pouvez et ne pouvez pas partager vos données first-party sont considérées avec le plus grand sérieux. Pour plus d'informations, consultez notre [politique de confidentialité](https://www.braze.com/privacy).
 
-{% alert important %}
-La synchronisation de l’audience avec LinkedIn est actuellement en version bêta. Si vous souhaitez participer à la version bêta, contactez votre gestionnaire de compte Braze.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Audience Sync to LinkedIn' type='beta' %}
 
 ## Conditions préalables
 

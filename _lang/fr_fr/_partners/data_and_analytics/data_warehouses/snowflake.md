@@ -66,6 +66,7 @@ Pour Snowflake, le partage des données se fait entre un [fournisseur](https://d
 
 {% alert warning %}
 Si vous supprimez et recréez un partage dans le tableau de bord de Braze, vous devez supprimer la base de données créée précédemment et la recréer à l'aide de `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` pour interroger le partage entrant.
+Si vous avez plusieurs espaces de travail partageant des données avec le même compte Snowflake, consultez les [FAQ sur le partage des données Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/) pour obtenir des conseils sur la gestion des configurations multi-espaces de travail.
 {% endalert %}
 
 ## Utilisation et visualisation
@@ -131,7 +132,7 @@ Les archives des données d'événements historiques dans Snowflake remontent à
 
 ### Conformité au règlement général sur la protection des données (RGPD)
 
-Presque tous les enregistrements d'événements que Braze stocke incluent quelques champs représentant les informations personnelles identifiables (PII) des utilisateurs. Certains événements peuvent inclure l'adresse e-mail, le numéro de téléphone, l'ID de l'appareil, la langue, le sexe et les informations d'emplacement/localisation. Si la requête d'oubli d'un utilisateur est soumise à Braze, nous annulerons ces champs PII pour tout événement appartenant à ces utilisateurs. De cette façon, nous ne supprimons pas l'historique de l'événement, mais celui-ci ne peut plus jamais être lié à une personne en particulier.
+{% include partners/snowflake_pii_gdpr.md %}
 
 ### Rapidité, performance, coût des requêtes
 

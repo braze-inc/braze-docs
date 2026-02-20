@@ -106,7 +106,7 @@ Bei diesem Ansatz sind keine in die URL eingebetteten Abfrage-String-Wert-Paare 
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 

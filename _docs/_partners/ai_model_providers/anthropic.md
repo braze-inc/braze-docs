@@ -12,6 +12,8 @@ search_tag: Partner
 
 > [Anthropic](https://www.anthropic.com/) is an AI safety and research company developing Claude, a next-generation AI assistant built to be helpful, honest, and safe for a wide range of language tasks.
 
+{% multi_lang_include alerts/important_alerts.md alert='Braze Agents beta' %}
+
 _This integration is maintained by Anthropic._
 
 ## About the integration

@@ -28,7 +28,7 @@ A exclusão de usuários permite que você gerencie seu banco de dados removendo
 |---------------|---------|
 | Tamanho máximo | É possível excluir até 100 milhões de perfis de usuário ao excluir um segmento. |
 | Período de espera | Todas as exclusões de segmentos exigem um período de espera de 7 dias mais o tempo necessário para processar as exclusões. |
-| Limites de trabalho | Somente um segmento pode ser excluído de cada vez, o que inclui o período de espera de 7 dias. |
+| Limites de trabalho | Apenas um segmento pode ser excluído de cada vez, o que inclui o período de espera de 7 dias. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Exclusão de usuários
@@ -68,8 +68,16 @@ Digite **DELETE** para confirmar a solicitação e selecione **Delete users (Exc
 Os usuários desse segmento não serão excluídos imediatamente. Em vez disso, eles serão marcados como pendentes de exclusão pelos próximos 7 dias. Após esse período, eles serão excluídos e nós lhe enviaremos um e-mail para informá-lo.
 
 {% alert tip %}
-Para garantir que esses usuários exatos sejam excluídos independentemente das alterações no segmento, um filtro de segmento chamado **Pending Deletion (Exclusão pendente** ) é criado automaticamente. Você pode [usar esse filtro]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) para verificar o status das exclusões pendentes.
+Para garantir que esses usuários exatos sejam excluídos independentemente das alterações de segmento, um filtro de segmento chamado **Pending Deletion (Exclusão pendente** ) é criado automaticamente. Você pode [usar esse filtro]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) para verificar o status das exclusões pendentes.
 {% endalert %}
+
+## Confirmação de exclusões de segmentos
+
+O Braze envia um e-mail de confirmação com o número de perfis pendentes de exclusão.
+
+Para continuar com a exclusão, registre-se no Braze e confirme a solicitação de exclusão.
+
+Se você não confirmar dentro do prazo mostrado no e-mail, a solicitação de exclusão expirará e não prosseguirá.
 
 ## Cancelamento de exclusões de segmentos {#cancel}
 
@@ -86,7 +94,7 @@ Nos detalhes do registro de exclusão, selecione **Cancelar exclusão**.
 ![A janela "Detalhes do registro de exclusão" na guia "Excluir usuários".]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
 
 {% alert tip %}
-Quando a exclusão de usuários em massa está em andamento, é possível cancelá-la a qualquer momento. No entanto, os usuários já excluídos antes do cancelamento não poderão ser restaurados.
+Quando a exclusão de usuários em massa está em andamento, é possível cancelá-la a qualquer momento. No entanto, os usuários já excluídos antes do cancelamento não podem ser restaurados.
 {% endalert %}
 
 ## Verificação do status da exclusão {#status}
@@ -111,7 +119,7 @@ Acesse **Audience** > **Manage Audience** e selecione a guia **Delete Users (Exc
 
 ![A guia "Delete Users" (Excluir usuários) na seção "Manage Audience" (Gerenciar público) do dashboard do Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
-Nesta página, você pode encontrar as seguintes informações gerais para todas as exclusões atuais e pendentes:
+Nesta página, você pode encontrar as seguintes informações gerais sobre todas as exclusões atuais e pendentes:
 
 | Campo | Descrição |
 |-------|-------------|
@@ -135,6 +143,14 @@ Você também pode verificar o status de exclusões anteriores baixando um relat
 
 Não. Não é possível excluir segmentos com mais de 100 milhões de usuários. Se precisar de ajuda para excluir um segmento desse tamanho, entre em contato com [o suporte@braze.com](mailto:support@braze.com).
 
+### Parece que não consigo excluir 100 milhões de usuários e estou limitado a excluir apenas 10 milhões. Isso é um bug?
+
+Não, isso não é um bug. Alguns clientes estão limitados no número de usuários que podem excluir durante o programa de acesso antecipado (EA).
+
+À medida que o programa EA progride, essa capacidade é projetada para aumentar até que todos os clientes possam excluir até 100 milhões de usuários.
+
+Se quiser aumentar essa capacidade, entre em contato com seu gerente de conta Braze. As solicitações são concedidas a critério da equipe de produtos.
+
 ### A fusão automatizada de usuários afeta a exclusão de usuários?
 
 Se uma mesclagem agendada incluir perfis de usuários pendentes de exclusão, o Braze ignorará esses perfis e não os mesclará. Para mesclar esses perfis, você deve removê-los da exclusão.
@@ -151,4 +167,4 @@ Sim. No entanto, você pode adicionar um filtro de inclusão de segmento para ex
 
 A exclusão de usuários individuais é permanente.
 
-Você pode [cancelar as exclusões de segmentos](#cancel) nos primeiros 7 dias após. No entanto, os usuários já excluídos antes do cancelamento não poderão ser restaurados.
+Você pode [cancelar as exclusões de segmentos](#cancel) nos primeiros 7 dias após. No entanto, os usuários já excluídos antes do cancelamento não podem ser restaurados.

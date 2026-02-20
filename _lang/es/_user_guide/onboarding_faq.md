@@ -572,7 +572,7 @@ Para programar un informe de compromiso recurrente, haga lo siguiente:
 3. Añada las [campañas y los mensajes Canvas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individualmente o [por etiqueta]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) que desee compilar en su informe.
 4. [Añade estadísticas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) a tu informe.
 5. Seleccione la compresión y el eliminador para su informe.
-6. Introduzca las direcciones de correo electrónico de los usuarios de Braze que deben recibir este informe.
+6. Introduce las direcciones de correo electrónico de los usuarios de la empresa que deben recibir este informe.
 7. Seleccione el [intervalo de tiempo]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) a partir del cual desea que su informe ejecute los datos.
 8. Seleccione los [intervalos (diario, semanal, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display) en los que desea ver el desglose de sus datos.
 9. Programe su informe para que [se envíe inmediatamente]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) o en un [momento futuro especificado]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).

@@ -66,6 +66,7 @@ En Snowflake, los datos se comparten entre un [proveedor](https://docs.snowflake
 
 {% alert warning %}
 Si eliminas y vuelves a crear un recurso compartido en el panel de Braze, debes eliminar la base de datos creada anteriormente y volver a crearla utilizando `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` para consultar el recurso compartido entrante.
+Si tienes varios espacios de trabajo que comparten datos con la misma cuenta de Snowflake, consulta [las preguntas frecuentes sobre el uso compartido de datos de Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/) para obtener orientación sobre la gestión de las configuraciones de varios espacios de trabajo.
 {% endalert %}
 
 ## Utilización y visualización
@@ -131,7 +132,7 @@ El archivo de datos históricos de eventos en Snowflake se remonta a abril de 20
 
 ### Cumplimiento del Reglamento General de Protección de Datos (RGPD)
 
-Casi todos los registros de eventos que almacena Braze incluyen algunos campos que representan la información personal identificadora (PII) de los usuarios. Algunos eventos pueden incluir la dirección de correo electrónico, el número de teléfono, el ID del dispositivo, el idioma, el sexo y la información sobre la ubicación. Si se envía a Braze la solicitud de olvido de un usuario, anularemos esos campos de PII para cualquier evento que pertenezca a esos usuarios. De este modo, no eliminamos el registro histórico del acontecimiento, pero ahora el acontecimiento nunca podrá vincularse a un individuo concreto.
+{% include partners/snowflake_pii_gdpr.md %}
 
 ### Velocidad, rendimiento, coste de las consultas
 
