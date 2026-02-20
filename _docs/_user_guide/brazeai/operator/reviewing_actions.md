@@ -28,9 +28,9 @@ To modify Operator's plan, first approve or reject the pending actions. Then des
 
 Approved actions can't be undone through Operator. Describe the new change to Operator or make changes manually in the dashboard.
 
-## Auto-approve all actions
+## Auto-approve actions
 
-The **Auto-approve all actions** toggle is located in the Operator chat panel.
+The **Auto-approve actions** toggle is located in the Operator chat panel.
 
 - **On:** Operator's suggested actions execute immediately without requiring manual approval. Some actions still require explicit approval for safety, such as generating images or making modifications to workspace-level settings.
 - **Off (default):** All proposed actions follow the manual review process described.
