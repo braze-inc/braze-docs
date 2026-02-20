@@ -80,7 +80,7 @@ Catalog agents are limited to processing input values up to 25 KB per row.
 
 #### Define response fields
 
-If your agent uses [fields]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#fields) as the output format, you can select the corresponding field from the agent for **Response Field** to use in the catalog field. 
+If your agent uses [fields]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/?tab=fields) as the output format, you can select the corresponding field from the agent for **Response Field** to use in the catalog field. 
 
 Let's say you have an agent that adds product descriptions to a catalog with the following fields to structure the output format:
 
@@ -104,4 +104,4 @@ You can also manually override the agent-generated cell by selecting **Edit Item
 
 ## Related articles  
 
-- [Reference for agents]({{site.baseurl}}/user_guide/brazeai/agents/reference/)  
+- [Reference for agents]({{site.baseurl}}/user_guide/brazeai/agents/reference/)
