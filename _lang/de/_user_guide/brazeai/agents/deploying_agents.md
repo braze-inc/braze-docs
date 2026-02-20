@@ -3,11 +3,12 @@ nav_title: Agenten bereitstellen
 article_title: Angepasste Agenten bereitstellen
 description: "Lernen Sie, wie Sie angepasste Agenten in Braze einsetzen können, nachdem Sie sie erstellt haben."
 alias: /deploying-agents/
+page_order: 2
 ---
 
 # Angepasste Agenten bereitstellen
 
-> Erfahren Sie, wie Sie angepasste Agenten in Canvas-Schritten oder Katalogfeldern verwenden können, nachdem Sie sie erstellt haben. Eine Einführung finden Sie unter [Braze-Agenten]({{site.baseurl}}/user_guide/brazeai/agents/). 
+> Lernen Sie, wie Sie angepasste Agenten in Canvas-Schritten oder Katalogfeldern verwenden können, nachdem Sie sie erstellt haben. Eine Einführung finden Sie unter [Braze-Agenten]({{site.baseurl}}/user_guide/brazeai/agents/). 
 
 {% alert important %}
 Braze-Agenten befinden sich derzeit in der Beta-Phase. Wenn Sie Hilfe benötigen, wenden Sie sich an Ihren Customer-Success-Manager:in.
@@ -17,11 +18,11 @@ Braze-Agenten befinden sich derzeit in der Beta-Phase. Wenn Sie Hilfe benötigen
 
 Im Abschnitt **Agentennutzung** Ihres Agenten können Sie referenzieren und navigieren, wo der Agent in Katalogen und Canvase aktiv verwendet wird.
 
-![Abschnitt Agentennutzung, der zwei aktive Agenten und einen inaktiven Agenten für Canvase anzeigt.]( {% image_buster /assets/img/ai_agent/agent_usage.png %} )
+![Abschnitt Agentennutzung, der zwei aktive Agenten und einen inaktiven Agenten für Canvase anzeigt.]({% image_buster /assets/img/ai_agent/agent_usage.png %})
 
 ## Agenten in Canvas  
 
-Sie können Agenten als Schritte auf einer Reise einsetzen, um Nachrichten zu personalisieren oder Entscheidungen in Echtzeit zu treffen. Detaillierte Einrichtungsschritte finden Sie unter [Agent Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
+Sie können Agenten als Schritte auf einer Reise einsetzen, um Nachrichten zu personalisieren oder Entscheidungen in Echtzeit zu treffen. Detaillierte Einrichtungsschritte finden Sie unter [Schritt Agent]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
 
 ### Anwendungsfälle
 
@@ -95,7 +96,7 @@ Nehmen wir an, Sie haben einen Agenten, der einem Katalog Produktbeschreibungen 
 
 Sie können ein Feld namens **product_description** zu einem Katalog hinzufügen und **Beschreibung** als **Antwortfeld** auswählen, um die Spalte mit den Beschreibungen des Agenten zu füllen.
 
-![Ein Feld "product_description", auf das der Agent "Descriptor" angewendet wurde. Die Ausgabe "Beschreibung" ist als Antwortfeld ausgewählt.]({% image_buster /assets/img/ai_agent/response_field.png %}){: style="max-width:80%;"}
+![Ein Feld "product_description", auf das der Agent "Descriptor" angewendet wird. Die Ausgabe "Beschreibung" ist als Antwortfeld ausgewählt.]({% image_buster /assets/img/ai_agent/response_field.png %}){: style="max-width:80%;"}
 
 Sie können die vom Agenten erstellte Zelle auch manuell überschreiben, indem Sie **Artikel bearbeiten** auswählen und die vom Agenten erstellte Beschreibung mit Ihren Änderungen aktualisieren. Um Ihre Bearbeitungen wieder auf die vom Agenten generierte Beschreibung zurückzusetzen, wählen Sie das Aktualisierungssymbol in der Zelle aus.
 

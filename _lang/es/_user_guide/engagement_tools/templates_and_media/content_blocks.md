@@ -120,7 +120,7 @@ Cuando hayas terminado de utilizar un bloque de contenido, puedes archivarlo des
 
 - Si el bloque sólo se utiliza en unos pocos mensajes de correo electrónico, recomendamos archivar el bloque obsoleto y actualizar los mensajes en directo con un bloque más reciente que no se haya archivado.
 - Cuando tu bloque solo tiene una errata o necesita un cambio menor, no recomendamos archivarlo. En lugar de eso, ¡actualiza el bloque y empieza a enviar!
-- Cuando tu bloque se utiliza en más mensajes de los que puedes gestionar razonablemente con la primera sugerencia de esta lista, te recomendamos eliminar todo el contenido del bloque y archivarlo. Esto garantizará que no se incluya información obsoleta en los nuevos correos electrónicos enviados.
+- Cuando tu bloque se utilice en más mensajes de los que puedes gestionar razonablemente con la primera sugerencia de esta lista, te recomendamos que elimines todo el contenido del bloque. Esto evita que se incluya información obsoleta en los mensajes.
 - Si accidentalmente archivas un bloque de contenido, puedes desarchivarlo.
 
 ![Panel de bloques de contenido guardados en el que el menú desplegable de configuración de "Test_32" se amplía para mostrar tres opciones: Desarchivar, duplicar y copiar en el espacio de trabajo]({% image_buster /assets/img/unarchive-content-block.png %})

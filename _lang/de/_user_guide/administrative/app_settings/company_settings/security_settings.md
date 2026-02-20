@@ -52,7 +52,7 @@ Verwenden Sie das angezeigte Feld, um bestimmte IP-Adressen und Subnetze aufzuli
 
 ## Zwei-Faktor-Authentifizierung (2FA)
 
-Die Zwei-Faktor-Authentifizierung ist für alle Braze-Benutzer erforderlich. Es fügt eine zweite Ebene der Identitätsüberprüfung zu einem Kontoprotokoll hinzu und macht es damit sicherer als nur einen Benutzernamen und ein Passwort. Wenn Ihr Dashboard keine Zwei-Faktor-Authentifizierung unterstützt, wenden Sie sich an Ihren Customer-Success-Manager. 
+Für alle Nutzer:innen des Unternehmens ist eine Zwei-Faktor-Authentifizierung erforderlich. Es fügt eine zweite Ebene der Identitätsüberprüfung zu einem Kontoprotokoll hinzu und macht es damit sicherer als nur einen Benutzernamen und ein Passwort. Wenn Ihr Dashboard keine Zwei-Faktor-Authentifizierung unterstützt, wenden Sie sich an Ihren Customer-Success-Manager. 
 
 Wenn die Zwei-Faktor-Authentifizierung aktiviert ist:
 
@@ -85,7 +85,7 @@ Ein Reset kann gängige Authentifizierungsprobleme lösen, wie z. B. Probleme mi
 
 ### Anforderungen für 2FA auf Unternehmensebene
 
-Überprüfen Sie zunächst, ob 2FA für Ihr Dashboard aktiviert ist, indem Sie zu **Unternehmenseinstellungen** > **Sicherheitseinstellungen** > **Zwei-Faktor-Authentifizierung** gehen. Wenn das Kästchen grau umgeschaltet ist, wurde 2FA in Ihrem Unternehmen nicht aktiviert und ist nicht für alle Nutzer:innen des Dashboards Pflichtfeld.
+Überprüfen Sie zunächst, ob 2FA für Ihr Dashboard aktiviert ist, indem Sie zu **Unternehmenseinstellungen** > **Sicherheitseinstellungen** > **Zwei-Faktor-Authentifizierung** gehen. Wenn das Kästchen grau ist, wurde 2FA für Ihr Unternehmen nicht aktiviert und ist nicht für alle Nutzer:innen des Unternehmens Pflichtfeld.
 
 #### Nutzer:innen Optionen, wenn 2FA nicht Pflichtfeld ist
 
@@ -96,7 +96,7 @@ Wenn 2FA nicht auf Unternehmensebene durchgesetzt wird, können einzelne Nutzer:
 Wenn 2FA auf Unternehmensebene erzwungen wird, werden Nutzer:innen, die es bei der Anmeldung nicht für ihr eigenes Konto einrichten, vom Dashboard ausgesperrt. Nutzer:innen müssen die 2FA-Einrichtung abschließen, um den Zugang zu erhalten.
 
 {% alert important %}
-2FA ist für alle Braze Nutzer:innen nur erforderlich, wenn Single Sign-on (SSO) nicht aktiviert ist. Wenn SSO im Einsatz ist, muss 2FA nicht auf Unternehmensebene erzwungen werden.
+2FA ist für alle Nutzer:innen des Unternehmens nur erforderlich, wenn Single Sign-on (SSO) nicht aktiviert ist. Wenn SSO im Einsatz ist, muss 2FA nicht auf Unternehmensebene erzwungen werden.
 {% endalert %}
 
 ## Zwei-Faktor-Authentifizierung (2FA) einrichten
@@ -111,7 +111,7 @@ Wenn 2FA auf Unternehmensebene erzwungen wird, werden Nutzer:innen, die es bei d
 
 Wenn Sie während des Einrichtungsvorgangs auf Probleme stoßen und auf die Homepage von Braze oder den Anmeldebildschirm umgeleitet werden, versuchen Sie Folgendes:
 
-- Verwenden Sie den Inkognito-Modus oder den privaten Browsing-Modus: Versuchen Sie die Einrichtung erneut in einem Inkognito-Fenster oder einem privaten Fenster. Damit können Sie Probleme umgehen, die durch Browser-Erweiterungen oder Plugins verursacht werden.
+- Verwenden Sie den Inkognito-Modus oder den privaten Browsing-Modus: Versuchen Sie die Einrichtung erneut in einem Inkognito-Fenster oder einem Fenster für privates Surfen. Damit können Sie Probleme umgehen, die durch Browser-Erweiterungen oder Plugins verursacht werden.
 - Versuchen Sie ein anderes Browser-Profil: Wenn das Problem weiterhin besteht, sollten Sie ein anderes Browser-Profil verwenden, um Konflikte mit installierten Plugins zu vermeiden.
 
 ### 2FA einrichten, wenn sie nicht erzwungen wird
@@ -223,7 +223,7 @@ Canvas
 - Angepasste Domain Gelöscht
 - Enablement der globalen Kontrollgruppe
 - Deaktivierte globale Kontrollgruppe
-- Aktualisierte Ausschlüsse der globalen Kontrolle
+- Aktualisierte Ausschlüsse der Globalen Kontrolle
 - Update Abo-Gruppe SMS Zulässig Liste
 
 ### E-Mail-Vorlage
@@ -262,7 +262,7 @@ Entfernte Push-Zugangsdaten
 
 ## Anzeige von persönlich identifizierbaren Informationen (PII) {#view-pii}
 
-Die Berechtigung **PII anzeigen** ist nur für einige ausgewählte Braze-Benutzer zugänglich. Standardmäßig haben alle Administratoren die Berechtigung **PII anzeigen** in den Nutzer:innen-Berechtigungen aktiviert. Das bedeutet, dass sie alle standardmäßigen und angepassten Attribute, die Ihr Unternehmen als PII definiert hat, im gesamten Dashboard sehen können. Wenn diese Berechtigung für Nutzer:innen deaktiviert ist, können diese Nutzer:innen keines dieser Attribute sehen.
+Die Berechtigung **PII anzeigen** ist nur für einige ausgewählte Nutzer:innen des Unternehmens zugänglich. Standardmäßig haben alle Administratoren die Berechtigung **PII anzeigen** in den Nutzer:innen-Berechtigungen aktiviert. Das bedeutet, dass sie alle standardmäßigen und angepassten Attribute, die Ihr Unternehmen als PII definiert hat, im gesamten Dashboard sehen können. Wenn diese Berechtigung für Nutzer:innen deaktiviert ist, können diese Nutzer:innen keines dieser Attribute sehen.
 
 {% alert note %}
 Sie benötigen die Berechtigung **View PII**, um den [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/) zu verwenden, da er direkten Zugriff auf einige Kundendaten ermöglicht.
@@ -278,7 +278,7 @@ Das Auswählen und Definieren bestimmter Felder als PII-Felder wirkt sich nur da
 
 Sie können die Felder, die Ihr Unternehmen als PII bezeichnet, im Dashboard auswählen. Gehen Sie dazu zu **Unternehmenseinstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen**.
 
-Die folgenden Attribute können als PII gekennzeichnet und vor Nutzer:innen ausgeblendet werden, die nicht über die Berechtigung zum **Anzeigen von PII** verfügen.
+Die folgenden Attribute können als PII gekennzeichnet und vor Nutzern:innen des Unternehmens ausgeblendet werden, die keine Berechtigung zum **Anzeigen von PII** haben.
 
 #### PII-Attribute
 
@@ -289,7 +289,7 @@ Die folgenden Attribute können als PII gekennzeichnet und vor Nutzer:innen ausg
 
 ### Begrenzte Gebiete
 
-Im Folgenden wird davon ausgegangen, dass alle Felder als PII eingestuft sind und dass es sich bei den genannten Nutzer:innen um diejenigen handelt, die die Braze-Plattform nutzen. Außerdem referenzieren "vorangehende" Attribute auf die Attribute in der Tabelle [PII-Attribute](#potential-pii-attributes). Wenn Sie einem Nutzer:innen die PII-Berechtigungen entziehen, kann dies die Benutzerfreundlichkeit über die genannten Bereiche hinaus beeinträchtigen.
+Im Folgenden wird davon ausgegangen, dass alle Felder als PII eingestuft sind und dass es sich bei den genannten Nutzer:innen um Unternehmen handelt, die die Braze-Plattform verwenden. Außerdem referenzieren "vorangehende" Attribute auf die Attribute in der Tabelle [PII-Attribute](#potential-pii-attributes). Wenn Sie einem Nutzer:innen die PII-Berechtigungen entziehen, kann dies die Benutzerfreundlichkeit über die genannten Bereiche hinaus beeinträchtigen.
 
 | Dashboard-Navigation | Ergebnis | Anmerkungen |
 | -------------------- | ------ | ----- |

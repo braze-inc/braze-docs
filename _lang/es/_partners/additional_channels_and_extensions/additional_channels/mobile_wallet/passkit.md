@@ -224,7 +224,7 @@ Antes de empezar, aquí están los parámetros de carga útil JSON comunes que p
 
 ### Paso 1: Cree su plantilla de webhook Braze
 
-Para crear una plantilla de webhook PassKit y utilizarla en futuras campañas o Lienzos, navega a la sección **Plantillas & Medios** en el panel de Braze. Si desea crear una campaña única de webhook PassKit o utilizar una plantilla existente, seleccione **Webhook** en Braze al crear una nueva campaña.
+Para crear una plantilla de webhook PassKit y utilizarla en futuras campañas o Lienzos, navega hasta la sección **Plantillas & Medios** en el panel de Braze. Si desea crear una campaña única de webhook PassKit o utilizar una plantilla existente, seleccione **Webhook** en Braze al crear una nueva campaña.
 
 Una vez que haya seleccionado la plantilla de webhook PassKit, debería ver lo siguiente:
 - **URL del webhook**: `https://api-pub1.passkit.io/coupon/singleUse/coupon`

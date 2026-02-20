@@ -2,7 +2,7 @@
 nav_title: Demora 
 article_title: Demora 
 alias: "/delay_step/"
-page_order: 3
+page_order: 8
 page_type: reference
 description: "Este artículo de referencia cubre cómo añadir un retraso a tu Canvas sin necesidad de añadir un mensaje asociado."
 tool: Canvas
@@ -104,9 +104,7 @@ Si añades un componente de Retraso a tu Canvas y no hay pasos posteriores, cual
 
 ### Retrasos personalizados
 
-{% alert important %}
-Los retrasos personalizados y los retrasos ampliados están en acceso temprano. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The personalized delays and extended delays feature' %}
 
 Selecciona el alternador **Personalizar retraso** para establecer un retraso personalizado para tus usuarios. Puedes utilizarlo con un [paso Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) para seleccionar la variable contextual por la que retrasar. Esto anulará la hora del día establecida en el atributo o propiedad seleccionados. Esto es útil cuando aplicas un desfase en días o semanas, y quieres que los usuarios avancen en un momento concreto. La zona horaria procede del atributo o propiedad, o utiliza la alternativa si no hay ninguna disponible. 
 
@@ -114,7 +112,7 @@ Selecciona el alternador **Personalizar retraso** para establecer un retraso per
 
 Al configurar los retrasos personalizados con la opción **a una hora determinada**, el comportamiento de la zona horaria depende del tipo de datos de tu atributo o variable contextual:
 
-- **Tipo de datos de cadena con zona horaria:** Si el atributo o la variable de contexto es un tipo de dato de cadena que incluye información sobre la zona horaria, se ajusta a la zona horaria especificada en la cadena. Por ejemplo, `2025-06-10T10:00:00-08:00` utiliza UTC-8.
+- **Tipo de datos de cadena con zona horaria:** Si el atributo o la variable de contexto es un tipo de datos de cadena que incluye información sobre la zona horaria, se ajusta a la zona horaria especificada en la cadena. Por ejemplo, `2025-06-10T10:00:00-08:00` utiliza UTC-8.
 - **Tipo de datos de cadena sin zona horaria:** Si el atributo o la variable de contexto es un tipo de datos de cadena sin información sobre la zona horaria, se ajusta a la zona horaria alternativa. Por ejemplo, `2025-06-10` utiliza la zona horaria alternativa.
 - **Tipo de datos de tiempo:** Si el atributo o variable contextual es un tipo de dato temporal, se ajusta a UTC. Esto se debe a que el tipo de datos de hora siempre se convierte a UTC cuando se guarda en la base de datos, por lo que "a una hora determinada" siempre hará referencia a UTC cuando la variable esté configurada con el tipo de datos de hora. Por ejemplo, `2025-06-10T10:00:00-08:00` utiliza UTC+0.
 

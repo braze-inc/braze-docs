@@ -31,7 +31,7 @@ Esto significa que, junto con la entrada programada, las tarjetas estarán dispo
 
 ## Recuerda que la entrada en Canvas es un requisito previo para recibir tarjetas
 
-Cuando utilices Canvas, recuerda que un usuario debe entrar primero en el Canvas según tus criterios de entrada configurados, y *luego* debe pasar por el paso de mensajes de tu tarjeta de contenido. Sólo entonces la tarjeta estará disponible para tu aplicación o sitio web. Recuerda que existe una latencia incorporada para que se cree la tarjeta una vez que el usuario pasa por el paso y puede retrasarse cuando la tarjeta esté disponible.
+Cuando utilices Canvas, recuerda que un usuario debe entrar primero en el Canvas basándose en tus criterios de entrada configurados, y *luego* debe pasar por el paso de mensajes de tu tarjeta de contenido. Sólo entonces la tarjeta estará disponible para tu aplicación o sitio web. Recuerda que existe una latencia incorporada para que se cree la tarjeta una vez que el usuario pasa por el paso y puede retrasarse cuando la tarjeta esté disponible.
 
 ## No refresques excesivamente las tarjetas
 

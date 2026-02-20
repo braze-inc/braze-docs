@@ -29,12 +29,12 @@ Para personalizar ainda mais sua cópia, você pode:
 
 - **Aplique as diretrizes da marca:** Depois de [gerar as diretrizes da marca com o <sup>BrazeAITM</sup>]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines), você pode usá-las para ajudar a gerar seu texto.
 - **Escolha um tom:** Cada tom gerará uma cópia em um estilo diferente. Escolha o tom que melhor corresponda à voz de sua marca.
-- **Consulte os dados de campanhas anteriores**: Quando ativada, as notificações por push para celular anteriores enviadas por meio de suas campanhas ou etapas do Canva são usadas como referência estilística para gerar sua nova cópia. Para saber mais, consulte [Uso de dados de campanhas anteriores](#past-campaign-data).
+- **Consulte os dados de campanhas anteriores**: Quando ativada, as notificações por push móveis anteriores enviadas por meio de suas campanhas ou etapas do Canva são usadas como referência estilística para gerar sua nova cópia. Para saber mais, consulte [Uso de dados de campanhas anteriores](#past-campaign-data).
 - **Tradução automática de cópia:** Você pode escolher um idioma de saída diferente para sua cópia. O conteúdo gerado será enviado para esse idioma.
 
 ### Etapa 4: Gerar sua cópia
 
-Quando terminar, selecione **Generate (Gerar**). Usaremos as informações que você fornecer para solicitar à GPT que escreva um texto para você. A resposta será obtida da OpenAI e fornecida a você. Para saber mais, consulte [Como meus dados são usados e enviados para a OpenAI?](#ai-policy)
+Quando terminar, selecione **Generate (Gerar**). Usaremos as informações que você fornecer para solicitar que a GPT escreva um texto para você. A resposta será obtida da OpenAI e fornecida a você. Para saber mais, consulte [Como meus dados são usados e enviados para a OpenAI?](#ai-policy)
 
 ![Modal do Assistente de Copywriting de IA mostrando vários recursos disponíveis"]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
 

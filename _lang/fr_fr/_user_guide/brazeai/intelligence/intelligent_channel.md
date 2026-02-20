@@ -34,7 +34,7 @@ Si les utilisateurs n’ont pas reçu suffisamment de messages sur les différen
 
 Supposons par exemple que vous souhaitiez que les utilisateurs qui préfèrent des messages de notification push en reçoivent et que les utilisateurs qui ne disposent pas de données suffisantes reçoivent le même message de notification push. Dans ce cas, vous pourriez définir le filtre du canal intelligent sur **Mobile push** et utiliser **OR** pour ajouter un second filtre du canal intelligent défini sur **Not Enough Data.** Une campagne séparée avec le filtre de canal intelligent réglé sur l’envoi par e-mail peut traiter les utilisateurs qui préfèrent recevoir un e-mail.
 
-![Filtres de canal intelligents pour le push mobile ou les données insuffisantes.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
+![Filtres de canaux intelligents pour le push mobile ou les données insuffisantes.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
 
 {% alert note %}
 Les campagnes et les étapes du canvas qui ignorent la [limite de fréquence]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) ne seront pas prises en compte par le canal intelligent et ne pourront pas contribuer aux exigences en matière de données.
@@ -46,9 +46,11 @@ La notification push mobile intègre Android, iOS, Kindle ainsi que les autres c
 
 Par exemple, si un utilisateur dispose de plusieurs appareils mobiles, son taux d’engagement mobile serait représenté par le taux le plus élevé affiché parmi les appareils. Cependant, il n’est pas possible de forcer l’utilisateur à recevoir des notifications push exclusivement sur cet appareil. Ce taux est uniquement utilisé lors de la comparaison des taux entre e-mail et notification push Web.
 
-## Canaux individuels
+## Message Open Likelihood filter for individual channels (Filtre de vraisemblance pour les canaux individuels) {#individual-channels}
 
-Plutôt que de laisser Braze choisir le meilleur canal pour un utilisateur, vous pouvez aussi vous contenter de filtrer les utilisateurs en fonction de leur probabilité d'ouvrir un message sur un canal spécifique que vous aurez choisi. Pour cela, vous pouvez utiliser le filtre Probabilité d’ouverture des messages dans les [filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood).
+Plutôt que de laisser Braze choisir le meilleur canal pour un utilisateur, vous pouvez utiliser le [ filtre de segmentation "Probabilité d'ouverture du message"]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood) pour filtrer les utilisateurs en fonction de leur probabilité d'ouvrir un message sur un canal spécifique que vous aurez choisi. Ce filtre est calculé par le pourcentage d'interactions divisé par le total des messages reçus pour les 100 derniers messages envoyés par canal.
+
+Notez qu'un utilisateur doit avoir reçu au moins trois messages sur un canal spécifique avant de pouvoir obtenir un score de probabilité pour ce canal. Les utilisateurs sans données suffisantes pour mesurer une probabilité pour une chaîne peuvent être sélectionnés en utilisant "est vide."
 
 ## Bonnes pratiques et stratégie d’utilisation efficace
 

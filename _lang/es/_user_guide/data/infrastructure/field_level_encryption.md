@@ -9,7 +9,7 @@ page_type: reference
 
 # Cifrado a nivel de campo del identificador
 
-> Mediante el cifrado a nivel de campo identificador, puedes cifrar fácilmente las direcciones de correo electrónico con el servicio de administración de claves (KMS) de AWS para minimizar la información de identificación personal (PII) compartida en Braze. La encriptación sustituye los datos sensibles por texto cifrado, que es información encriptada ilegible.
+{% include field_level_encryption_pii_description.md %}
 
 {% alert important %}
 La encriptación a nivel de campo identificador está disponible como característica adicional. Para empezar con el cifrado a nivel de campo identificador, ponte en contacto con tu director de cuentas Braze.

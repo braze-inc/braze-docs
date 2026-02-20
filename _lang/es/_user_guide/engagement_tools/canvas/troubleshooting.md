@@ -23,7 +23,7 @@ Si aparece el evento personalizado, soluciona el problema haciendo lo siguiente:
 - Si hay un retraso programado, comprueba si el evento personalizado del usuario se desencadenó antes del retraso. Si el evento se hubiera desencadenado antes del retraso, no habrían recibido el paso en Canvas.
 
 {% alert note %}
-Los mensajes dentro de la aplicación sólo pueden ser desencadenados por eventos enviados a través del SDK, no de la API REST.
+Los mensajes dentro de la aplicación sólo pueden desencadenarse por eventos enviados a través del SDK, no de la API REST.
 {% endalert %}
 
 ## ¿Por qué mi Canvas no se envía como esperaba?
@@ -54,13 +54,13 @@ Considera las siguientes preguntas para tu audiencia objetivo:
 
 ## ¿Por qué mi audiencia no se dividió por igual entre el grupo de control y el grupo de variantes?
 
-Al crear tu Canvas, puede que esperaras que tu audiencia se dividiera por igual entre tu grupo de control y tu grupo de variantes, como en el siguiente [caso de uso](#use-case). Hablemos de por qué y de cómo solucionarlo.
+Al crear tu Canvas, puede que esperases que tu audiencia se dividiera a partes iguales entre tu grupo de control y tu grupo de variantes, como en el siguiente [caso de uso](#use-case). Hablemos de por qué y de cómo solucionarlo.
 
 El grupo al que se une un usuario depende de su configuración. Puede ser el grupo de control o el grupo variante. Un usuario entrará en un Canvas cuando cumpla todos los criterios definidos en el [Paso en]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=entry%20schedule#step-12-determine-your-canvas-entry-schedule) Canvas. Al configurar tu Canvas, define qué porcentaje de usuarios entrará en cada variante y el grupo de control.
 
 Si tu grupo de control es grande en comparación con tu grupo de variantes (y ésta no es tu intención), te recomendamos lo siguiente:
 1. Establece que el filtro de audiencia de entrada **sea Push en primer plano habilitado**.
-2. Establece el filtro de audiencia de entrada para el **estado de suscripción push**, el **estado de suscripción por correo electrónico**, o ambos, en **Adherido** o **Suscrito**.
+2. Establece el filtro de audiencia de entrada para el **estado de suscripción push**, el **estado de suscripción por correo electrónico**, o ambos, como **Adherido** o **Suscrito**.
 
 Al crear un Canvas con un grupo de control, confirma que todos los usuarios de la audiencia de entrada pueden recibir mensajes dentro del Canvas (como que el Canvas contiene mensajes push y por correo electrónico).
 

@@ -106,7 +106,7 @@ Cette approche ne nécessite pas de paires de valeur de chaîne de requête inco
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 

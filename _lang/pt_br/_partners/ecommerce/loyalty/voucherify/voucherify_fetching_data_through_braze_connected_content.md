@@ -24,7 +24,7 @@ O esquema básico do script é o seguinte:
   :method post
   :headers {
     "X-App-Id": "Voucherify-API-key",
-    "X-App-Token": "Voucherify-Secret-key",
+    "X-App-Token": "Voucherify-Secret-key"
   }
   :content_type application/json
   :retry

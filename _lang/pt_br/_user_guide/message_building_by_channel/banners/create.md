@@ -52,7 +52,7 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 3. Selecione **Banner** como seu canal de envio de mensagens.
 4. Selecione um local para o banner.
 5. Definir a prioridade do banner. [A prioridade do banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority) determina a ordem em que os banners são exibidos se eles compartilharem o mesmo posicionamento.
-6. Defina uma expiração para o Banner. Isso pode ser feito após um período de tempo depois que a etapa estiver disponível ou em uma data e hora específicas.
+6. Defina uma expiração para o Banner. Isso pode ocorrer após um período de tempo depois que a etapa estiver disponível ou em uma data e hora específicas.
 
 {% endtab %}
 {% endtabs %}
@@ -70,6 +70,8 @@ Para criar seu banner, você pode optar por:
 #### Etapa 3.1: Estilo do banner
 
 Você pode arrastar e soltar blocos e linhas na área da tela para começar a criar sua mensagem.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 Para personalizar as propriedades do plano de fundo da mensagem, as configurações de borda e muito mais, selecione **Styles (Estilos**). Se você quiser personalizar apenas o estilo de um bloco ou linha específica, selecione-o para fazer alterações.
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Permissions
-article_title: Braze permissions
+article_title: Company user permissions
 page_order: 2
 page_type: reference
 description: "This reference article covers how user permissions work at Braze. Here, you can learn how to edit and set user permissions, choosing who can access your apps in the dashboard."
@@ -8,13 +8,13 @@ tool: Dashboard
 
 ---
 
-# Braze permissions
+# Company user permissions
 
 > Learn how to create permission sets, create roles, edit user permissions, and export user permissions, so you can ensure your users only access the workspaces and features they need most.
 
 ## Creating a permission set
 
-Use permission sets to bundle permissions related to specific subject areas or actions. They can be applied to dashboard users who need the same access across different workspaces. To create a permission set, go to **Settings** > **Permission Settings**, then select **Create permission set**. For a description of each permission, see [List of permissions](#list-of-permissions).
+Use permission sets to bundle permissions related to specific subject areas or actions. They can be applied to company users who need the same access across different workspaces. To create a permission set, go to **Settings** > **Permission Settings**, then select **Create permission set**. For a description of each permission, see [List of permissions](#list-of-permissions).
 
 {% tabs local %}
 {% tab example permission sets %}
@@ -29,7 +29,7 @@ Use permission sets to bundle permissions related to specific subject areas or a
 
 ## Creating a role
 
-Roles allow for more structure by bundling together your individual custom permissions with workspace access controls. This is especially useful if you have many brands or regional workspaces in one dashboard. With roles, you can add dashboard users to the right workspaces and directly grant them the associated permissions. For a description of each permission, see [List of permissions](#list-of-permissions).
+Roles allow for more structure by bundling together your individual custom permissions with workspace access controls. This is especially useful if you have many brands or regional workspaces in one dashboard. With roles, you can add company users to the right workspaces and directly grant them the associated permissions. For a description of each permission, see [List of permissions](#list-of-permissions).
 
 {% tabs local %}
 {% tab example roles %}
@@ -65,8 +65,8 @@ Limited users have specific permissions that allow them to manage certain aspect
 
 | Limited user type | Description |
 | --- | --- |
-| App group admin | App Group Admins have permissions specific to managing app groups but do not have the same authority as Company Admins. Limited Users can inherit permissions similar to those of App Group Admins if they have the necessary permissions checked. |
-| Company admin | Company Admins have broader permissions, including the ability to delete dashboard users. However, they cannot delete their own accounts and must contact another Company Admin for that action. |
+| App group admin | App Group Admins have permissions specific to managing app groups but do not have the same authority as Company Admins. Limited users can inherit permissions similar to those of App Group Admins if they have the necessary permissions checked. |
+| Company admin | Company Admins have broader permissions, including the ability to delete company users. However, they cannot delete their own accounts and must contact another Company Admin for that action. |
 | Basic read-only permission | To access certain parts of the dashboard, such as the Technology Partners page, users must have a basic read-only permission. This includes having "Manage External Integrations" enabled, along with permissions for Access Campaigns, Canvases, Cards, Segments, and Media Library. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -75,7 +75,7 @@ Limited users have specific permissions that allow them to manage certain aspect
 Users may encounter messages like "Limited Access. You do not have permissions to access this Page." In such cases, the account admin should check if they can resolve the issue by disabling and re-enabling the user's permissions.
 
 {% alert note %}
-It isn't possible to merge or import user permissions from one dashboard user to another.
+It isn't possible to merge or import user permissions from one company user to another.
 {% endalert %}
 
 ## Editing a user's permissions
@@ -92,8 +92,8 @@ To edit a user's current admin, company, or workspace permissions, go to **Setti
 Admins have access to all features and the ability to modify any company setting. They can:
 
 - Change [approval settings]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)
-- Add, edit, delete, suspend, or unsuspend other [Braze users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
-- Export Braze users as a CSV
+- Add, edit, delete, suspend, or unsuspend other [company users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- Export company users as a CSV
 
 To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
 
@@ -150,14 +150,14 @@ When you're finished, select **Update user**.
 
 ## Exporting user permissions
 
-To download a list of your users and their permissions, go to **Settings** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
+To download a list of your company users and their permissions, go to **Settings** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
 
 ![The "Company Users" page in Braze with the "Export Users" option in focus.]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
 
 ## List of permissions
 
 {% alert important %}
-As of April 2024, to create or update promotion code lists, Braze users need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission.
+As of April 2024, to create or update promotion code lists, company users need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission.
 {% endalert %}
 
 |Level|Name|Definition|
@@ -165,7 +165,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Admin|Admin|Allows users to access all available features. This is the default setting for all new users. Can update company settings (company name and time zone), which limited users cannot do.|
 |Company|Create and delete workspaces|Allows users to create and delete workspaces.|
 |Company|Manage company settings|Allows users to modify any company setting.|
-|Workspace|Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers|Allows users to view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of segments, templates and media, create templates, upload media, create or update promotion code lists, view engagement reports, and view global message settings in the dashboard. However, users with this permission cannot pause or edit existing live content.|
+|Workspace|Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers|Allows users to view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of segments, templates and media, create templates, upload media, create or update promotion code lists, view engagement reports, and view global message settings in the dashboard. However, users with this permission cannot pause or edit existing live content. <br><br>When combined with the "Send Campaigns, Canvases" permission, allows users to create, update, and delete frequency capping rules.|
 |Workspace|Access Dev Console|Allows full access to the following settings and logs:{::nomarkdown}<ul><li><a href='/docs/user_guide/administrative/app_settings/api_settings_tab/'>API Keys</a></li><li><a href='/docs/user_guide/administrative/app_settings/internal_groups_tab/'>Internal Groups</a></li><li><a href='/docs/user_guide/administrative/app_settings/message_activity_log_tab/'>Message Activity Log</a></li><li><a href='/docs/user_guide/administrative/app_settings/event_user_log_tab/'>Event User Log</a></li></ul>{:/}|
 |Workspace|Approve and Deny Campaigns|Allows users to approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you're interested in participating in the early access.|
 |Workspace|Approve and Deny Canvases|Allows users to approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply.|
@@ -177,7 +177,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Launch Preference Centers|Allows users to launch [preference centers]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Workspace|Manage Apps|Allows users to edit **App Settings**.|
 |Workspace|Manage Catalogs Dashboard Permission|Allows users to create and manage catalogs.|
-|Workspace|Manage Dashboard Users| Allows non-admins the ability to view, edit, and manage the **Company Users** page, and manage the dashboard users in their workspace by modifying the permissions of any user, including themselves. Users with this permission can’t delete users (only administrators can delete users).<br><br>This corresponds to the legacy permission `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
+|Workspace|Manage Dashboard Users| Allows non-admins the ability to view, edit, and manage the **Company Users** page, and manage the company users in their workspace by modifying the permissions of any user, including themselves. Users with this permission can’t delete users (only administrators can delete users).<br><br>This corresponds to the legacy permission `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
 |Workspace|Manage Email Settings|Allows users to save email configuration changes (**Settings** > **Email Preferences**).|
 |Workspace|Manage Events, Attributes, Purchases|Allows users to edit custom attributes (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**.|
 |Workspace|Manage External Integrations|Allows access to all tabs under **Technology Partners**, ability to sync Braze with other platforms, and access to manage [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/).|
@@ -187,7 +187,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Manage Tags|Allows users to edit or delete tags (under **Tag Management**). You do not need this permission to add tags to campaigns or segments.|
 |Workspace|Manage Teams|Allows users to manage **Internal Teams**. The ability to select this permission depends on your contract with Braze.<br><br>This corresponds to the legacy permission `MANAGE_TERRITORIES`.|
 |Workspace|Manage Transformations|Allows users to create and manage Data Transformations.|
-|Workspace|Send Campaigns, Canvases|Allows users to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. |
+|Workspace|Send Campaigns, Canvases|Allows users to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases.<br><br>When combined with the "Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers" permission, this permission allows users to create, update, and delete frequency capping rules.|
 |Workspace|View Billing Details|Allows users to view subscriptions and billing.|
 |Workspace|View Currents Integration|Allows users to view all information about a Currents connection, excluding credentials. By default, users assigned the "Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers" permission are also assigned this permission.|
 |Workspace|View Custom Attributes Marked as PII|Allows non-admin users to view custom attributes that contain sensitive information and are marked as personally identifiable information (PII).|

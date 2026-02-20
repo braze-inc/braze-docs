@@ -64,7 +64,7 @@ Es gibt zwei Möglichkeiten, Ihr Template beim Erstellen eines Canvas zu verwend
 
 ### Verfügbare Lötvorlagen
 
-Eine Liste der verfügbaren Canvas Templates finden Sie unter [Canvas Templates]({{site.baseurl}}/canvas_templates/templates/). Einzelheiten zur Verwendung von E-Commerce Canvas-Templates finden Sie unter [Empfohlene Ereignisse im E-Commerce verwenden]({{site.baseurl}}/ecommerce_use_cases/).
+Eine Liste der verfügbaren Canvas-Templates finden Sie unter [Canvas-Templates]({{site.baseurl}}/canvas_templates/templates/). Einzelheiten zur Verwendung von E-Commerce Canvas-Templates finden Sie unter [Empfohlene Ereignisse im E-Commerce verwenden]({{site.baseurl}}/ecommerce_use_cases/).
 
 ## Canvas-Vorlagen verwalten
 
