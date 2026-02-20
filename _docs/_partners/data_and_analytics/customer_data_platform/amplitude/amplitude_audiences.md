@@ -112,11 +112,11 @@ Lastly, define the frequency of your sync.
 
 If you see this error when [importing an Amplitude cohort]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_cohort_import/) into Braze, try the following:
 
-1. **Confirm user ID alignment** — The User ID in Amplitude (not the Amplitude ID) must match the External User ID in Braze (not the Braze/BSON ID) exactly, 1:1. For example, User ID in Amplitude `12345` should equal External User ID in Braze `12345`. A mismatch is a common cause of sync failures and is a good first place to check.
+1. **Confirm user ID alignment** - The User ID in Amplitude (not the Amplitude ID) must match the External User ID in Braze (not the Braze/BSON ID) exactly, 1:1. For example, User ID in Amplitude `12345` should equal External User ID in Braze `12345`. A mismatch is a common cause of sync failures and is a good first place to check.
 
-2. **Regenerate your Braze API key** — In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** > **Amplitude** and select **Generate New Key**. Then retry the Amplitude cohort sync using the new API key.
+2. **Regenerate your Braze API key** - In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** > **Amplitude** and select **Generate New Key**. Then retry the Amplitude cohort sync using the new API key.
 
-3. **Confirm the cohort synced in Amplitude** — Reach out to [Amplitude support](https://help.amplitude.com/) to confirm that the cohort was successfully synced on Amplitude's side before troubleshooting further in Braze.
+3. **Confirm the cohort synced in Amplitude** - Contact [Amplitude support](https://help.amplitude.com/) to confirm that the cohort was successfully synced on Amplitude's side before troubleshooting further in Braze.
 
 ## Amplitude user profile API endpoints
 
