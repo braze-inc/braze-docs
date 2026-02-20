@@ -129,6 +129,8 @@ For each ticket, determine if docs action is needed:
 
 Pay attention to `<status>` — tickets marked `Done` may already be resolved. Prioritize `Backlog` and `In Progress` tickets.
 
+> **Never document workarounds or bugs.** Documentation must describe how the product works — or is intended to work — not temporary workarounds for issues that will be (or should be) fixed. If a ticket or SF article's resolution relies on a workaround for a product defect, skip it. Workaround content creates maintenance burden and misleads customers once the underlying issue is resolved.
+
 ---
 
 ## Step 3: Per-Ticket Analysis
