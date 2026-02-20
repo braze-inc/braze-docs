@@ -40,3 +40,11 @@ If you want the push token reassigned to the original user:
 1. Have the original user log into the profile with the missing push token.
 2. Trigger a new push send. This will move the token back to the account if they still have push enabled on the device level.
 
+### What is the difference between "Send to Production" and "Send to Development" for iOS push certificates?
+
+When adding an Apple Push Certificate in Braze, the **Send to Production** and **Send to Development** options determine which APNs (Apple Push Notification service) gateway Braze uses to deliver push notifications:
+
+- **Send to Development:** Select this if the app was built in development mode in Xcode and signed with a development provisioning profile. Push notifications are routed through Apple's development (sandbox) gateway.
+- **Send to Production:** Select this if the app is distributed via Apple's TestFlight, App Store, or enterprise distribution. Push notifications are routed through Apple's production gateway.
+
+If the wrong option is selected, push notifications will silently fail because the push token type won't match the gateway. When in doubt, apps distributed through TestFlight or the App Store should use **Send to Production**.
