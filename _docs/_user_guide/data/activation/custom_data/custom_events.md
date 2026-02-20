@@ -133,6 +133,8 @@ Each custom event or purchase can have up to 256 distinct custom event propertie
 
 The property values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs (`$`).
 
+The following keys are reserved and cannot be used as event property names for custom events: `time` and `event_name`. For purchase events, the reserved keys are: `time`, `product_id`, `quantity`, `event_name`, `price`, and `currency`. Using a reserved key in the `properties` object will return the error `Invalid 'properties' field`.
+
 Property values can be any of the following data types:
 
 | Data Type | Description |
