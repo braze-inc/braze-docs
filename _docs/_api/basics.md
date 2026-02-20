@@ -351,6 +351,18 @@ Given that REST API keys allow access to potentially sensitive REST API endpoint
 
 If you accidentally expose a key, you can delete it from the Developer Console. For help with this process, open a [support ticket]({{site.baseurl}}/braze_support/).
 
+### REST API keys vs. SDK API keys
+
+Braze uses two types of API keys, and each has a different security profile:
+
+| | REST API keys | SDK API keys |
+|---|---|---|
+| **Purpose** | Server-side authentication for the REST API (sending messages, exporting data, managing users) | Client-side identification for the Braze SDK (data ingestion, in-app messages, Content Cards) |
+| **Visibility** | Must remain **private**. Never expose in client-side code, public repositories, or front-end applications. | Designed to be **public**. Bundled inside your app binary or visible in browser JavaScript, similar to a Google Analytics tracking ID. |
+| **If exposed** | Immediately revoke the key from **Settings** > **APIs and Identifiers** and create a replacement. An exposed REST API key can be used to send messages, export user data, or modify account settings. | No action required. An SDK API key can only ingest data and retrieve client-side messaging (such as in-app messages and Content Cards). It cannot export user data, send messages on your behalf, or modify campaigns. |
+| **Mitigations** | Use [IP allowlisting](#api-ip-allowlisting) and grant only the minimum required [permissions](#rest-api-key-permissions). | Enable [SDK Authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) to require a server-signed JWT for logged-in users, preventing spoofed SDK requests. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 ### API IP allowlisting
 
 For additional security, you can specify a list of IP addresses and subnets which are allowed to make REST API requests for a given REST API key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API key:
