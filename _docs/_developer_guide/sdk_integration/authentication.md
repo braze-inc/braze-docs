@@ -819,4 +819,13 @@ Requests will retry periodically using an exponential backoff approach. After 50
 
 #### Can you use SDK authentication for anonymous users? {#faq-anonymous-users}
 
-No. SDK authentication will no-op for anonymous users.
+No. SDK authentication only applies to identified users — it is enforced after `changeUser` is called. Before a user is identified (for example, while browsing anonymously before signing up), the SDK can still send data to Braze without a JWT. Once `changeUser` is called and the user is identified, the JWT requirement takes effect.
+
+This means a typical user journey might look like:
+
+1. A user visits your site or opens your app anonymously. Braze collects data without authentication.
+2. The user signs up or logs in, and your app calls `changeUser`. From this point on, Braze enforces SDK authentication for that user's requests.
+
+#### Does SDK authentication work with user aliases? {#faq-aliases}
+
+No. SDK authentication requires an `external_id`. It cannot be set up when only a `braze_id` or user alias is available. If your integration relies on alias-only profiles (without an `external_id`), SDK authentication cannot be enforced for those users.
