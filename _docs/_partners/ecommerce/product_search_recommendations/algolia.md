@@ -70,7 +70,7 @@ Retrieve additional fields using `attributesToRetrieve` to enhance personalizati
 #### Example Recommend API request
 
 ```
-GET https://{ALGOLIA_APP_ID}.algolia.net/1/indexes/*/recommendations
+POST https://{ALGOLIA_APP_ID}.algolia.net/1/indexes/*/recommendations
 Content-Type: application/json
 X-Algolia-API-Key: {ALGOLIA_API_KEY}
 X-Algolia-Application-Id: {ALGOLIA_APP_ID}
