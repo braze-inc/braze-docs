@@ -1,11 +1,11 @@
 ---
 nav_title: Reference
-article_title: Agents reference
+article_title: Reference for agents
 description: "Reference key details about Braze Agents."
 page_order: 3
 ---
 
-# Agents reference
+# Reference for agents
 
 > As you create custom agents, refer to this article for more information on key settings, such as instructions and output schemas. For an introduction, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/).
 

@@ -102,6 +102,15 @@ You can also manually override the agent-generated cell by selecting **Edit Item
 - If the API call to the foundational model provider returns any error, such as an invalid API key error or a rate limit error, the field value does not update.
 - You can review the agent's logs for details on failed runs.
 
+## Currents
+
+You can also use these Currents events to access the Kafka record schemas:
+
+- Agent executed events
+- Tool invocation events
+
+Refer to the [Message engagement events glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) for more details.
+
 ## Related articles  
 
 - [Reference for agents]({{site.baseurl}}/user_guide/brazeai/agents/reference/)
