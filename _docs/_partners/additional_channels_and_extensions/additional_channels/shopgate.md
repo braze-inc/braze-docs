@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Shopgate
 
-> [Shopgate](https://www.shopgate.com/) is a leading mobile commerce and omnichannel provider that enables merchants to create beautiful apps and improve the efficiency of brick-and-mortar stores through intelligent fulfillment methods and clienteling options.
+> [Shopgate](https://www.shopgate.com/) is a mobile commerce and omnichannel platform that helps merchants create shopping apps and improve the efficiency of brick-and-mortar stores through fulfillment tools and clienteling, meaning personalized in-store customer support based on customer data.
 
 _This integration is maintained by Shopgate._
 
