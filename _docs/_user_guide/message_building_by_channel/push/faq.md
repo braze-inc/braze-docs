@@ -20,6 +20,12 @@ When a push token is reassigned, the change is reflected in the user profile's *
 
 ![The "Push Changelog" in the "Contact Settings" section.]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
+### When I send a test push, does it go to all of my devices?
+
+Yes. The test push is sent to every push-enabled device associated with the selected user profile. If you have multiple phones or tablets logged in with the same user, each device with a valid push token will receive the notification. This is the same behavior as a production push send — Braze targets all push-enabled devices for the user.
+
+To send the test push to only one device, you can remove push tokens for the other devices from the user profile before testing, or use the [`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) with a specific `push_token` in the `audience` object.
+
 ### What does “Error sending push because the payload was invalid” mean?
 
 This message indicates that APNs rejected the push request due to an invalid payload (for example, an empty payload or a payload that’s too large).
