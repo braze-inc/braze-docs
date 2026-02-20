@@ -175,6 +175,16 @@ body {
     font-family: $braze-regular-oblique;
   }
 }
+
+:focus-visible {
+  outline: 2px solid $braze-purple;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .row img {
   max-width: 100%;
 }

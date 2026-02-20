@@ -208,8 +208,10 @@ $nav-active-bg: $grey-athens;
 		justify-content: space-between;
 		width: 100%;
 		min-width: 0;
-		padding: 4px 8px;
-		border-radius: 4px;
+		padding: 6px 12px;
+		border-radius: 6px;
+		min-height: 32px;
+		box-sizing: border-box;
 		position: relative;
 		@media (prefers-reduced-motion: no-preference) {
 			transition: background-color 0.2s ease;
@@ -519,10 +521,16 @@ $nav-active-bg: $grey-athens;
 		font-family: $braze-regular;
 		font-size: 11px;
 		a {
+			display: block;
 			text-decoration: none;
 
 			&:hover {
 				color: inherit;
+			}
+			&:focus-visible {
+				outline: 2px solid $braze-purple;
+				outline-offset: -2px;
+				border-radius: 4px;
 			}
 		}
 		#status-indicator {
