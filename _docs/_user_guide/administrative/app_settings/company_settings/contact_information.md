@@ -23,4 +23,4 @@ If you choose to switch your time zone, you may experience a variety of conseque
 
 - While campaigns scheduled for specific times in specific locations (such as 9 pm Eastern Time) will run properly on schedule until edited, both campaign analytics and future campaign schedules will be affected by the change.
 - Any card scheduling that is not assigned to local time may be affected, with active cards potentially appearing as finished or the other way around.
-- Segmentation filters of the form "Has done X before/after `Date`" will have the time adjusted because the initial date will now be localized in Pacific Time.
+- Segmentation filters of the form "Has done X before/after `Date`" will have the time adjusted because the initial date will now be localized in your workspace's default time zone (for example, Pacific Time).
