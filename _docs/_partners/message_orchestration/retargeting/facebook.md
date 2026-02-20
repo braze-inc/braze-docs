@@ -72,7 +72,7 @@ In Braze, Facebook audience export is accessible through the **Segments** page.
 - Email
 
 {% alert note %}
-You can only select one user field within a single export. If you choose more than one data type, Braze will create a separate custom audience for each.
+You can select only one user field within a single export. If you choose more than one data type, Braze creates a separate custom audience for each.
 {% endalert %}
 
 {: start="4"}
