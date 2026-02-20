@@ -115,7 +115,7 @@ Use Braze's Connected Content feature to make API calls to Algolia endpoints and
 {
   "query": "",
   "hitsPerPage": 4,
-  "filters": "category_page_id:'ukens tilbud'",
+  "filters": "category_page_id:'this week's offers'",
   "attributesToRetrieve": ["name", "price", "image", "url"]
 }
 {% endcapture %}
