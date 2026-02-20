@@ -165,7 +165,30 @@ Use Braze's Connected Content feature to make API calls to Algolia endpoints and
 
 After fetching results from Algolia, use Liquid to parse the API response and dynamically render the results within your message.
 
-#### Example Liquid email template
+{% tabs local %}
+{% tab Search API %}
+
+#### Example Liquid email template for Search API
+
+{% raw %}
+```liquid
+{% for item in algolia_search.hits %}
+  <div style="margin-bottom: 10px;">
+    <img src="{{ item.image }}" alt="{{ item.name }}" width="100"/>
+    <p><strong>{{ item.name }}</strong></p>
+    <p>Price: ${{ item.price }}</p>
+    <a href="{{ item.url }}">View Product</a>
+  </div>
+{% endfor %}
+```
+{% endraw %}
+
+This generates a list of products from the Search API results inside the message body. Each product link directs users to a product detail page (PDP) or a campaign-specific landing page.
+
+{% endtab %}
+{% tab Recommend API %}
+
+#### Example Liquid email template for Recommend API
 
 {% raw %}
 ```liquid
@@ -180,7 +203,10 @@ After fetching results from Algolia, use Liquid to parse the API response and dy
 ```
 {% endraw %}
 
-This generates a list of products inside the message body. Each product link directs users to a product detail page (PDP) or a campaign-specific landing page.
+This generates a list of recommended products from the Recommend API results inside the message body. Each product link directs users to a product detail page (PDP) or a campaign-specific landing page.
+
+{% endtab %}
+{% endtabs %}
 
 ## Considerations
 
