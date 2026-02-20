@@ -54,6 +54,10 @@ When you call SDK methods, generally the SDK caches those events locally and flu
 
 If you're looking for events to arrive as fast as possible, try calling the `requestImmediateDataFlush()` function.
 
+### In-app message impression failures
+
+If an in-app message fails to display, you can find the reason in the Event User Log by expanding the raw JSON data for the relevant SDK request. Look for the `error_code` field in the response — this code identifies the specific reason the impression failed (for example, an invalid color value or a rendering issue). Share this error code with Braze support if further investigation is needed.
+
 ### Session end and session start have similar timestamps (iOS)
 
 The Event User Log shows the timestamp of when Braze was notified the session ended, which will be milliseconds before the next session starts. Braze is unable to know the session has ended before the app is re-opened because iOS is aggressive about stopping the execution of threads when the app is in the background—so no data can be flushed to Braze until the app is reopened.
