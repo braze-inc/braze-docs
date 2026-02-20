@@ -380,6 +380,10 @@ This happens under a few specific conditions:
 
 Note that recommendations operate independently and don’t have any knowledge of what the other models are recommending. This means each section can have duplicate items already displayed in other AI recommendation sections in the same email.
 
+### How do I prevent duplicate items across multiple recommendation sections?
+
+Because each recommendation operates independently, the same item can appear in more than one section of the same message. To remove duplicates, use Liquid to track which item IDs you’ve already displayed and skip them in subsequent sections.
+
 ### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
 
 Yes, but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.

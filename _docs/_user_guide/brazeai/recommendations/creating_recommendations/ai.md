@@ -55,6 +55,8 @@ Select a recommendation type. Each type uses the last six months of item interac
 
 {% alert tip %}
 When using **Most recent** or **AI Personalized**, users with insufficient data to create individualized recommendations will receive **Most popular** items as a fallback. The proportion of users receiving the **Most popular** fallback is displayed on the **Analytics** page.
+
+The **Most popular** fallback only returns items that exist in the linked catalog. Items that appear in purchase or interaction data but aren't registered in the catalog are excluded. If none of the catalog items have associated interaction data, the recommendation list may be shorter than expected or empty.
 {% endalert %}
 
 #### Step 3.1: Exclude prior purchases or interactions (optional)
