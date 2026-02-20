@@ -76,7 +76,7 @@ You can select only one user field within a single export. If you choose more th
 {% endalert %}
 
 {: start="4"}
-4. After you select the user field, select **Export Segment**. Like CSV exports, you will receive an email when the segment has finished exporting into Facebook.
+4. After you select the user field, select **Export Segment**. Like CSV exports, you receive an email when the segment has finished exporting into Facebook.
 5. View the custom audience on the [Facebook Ads Manager](https://www.facebook.com/ads/manager/audiences/manage/).
 
 {% alert important %}
