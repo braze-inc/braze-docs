@@ -94,6 +94,8 @@ Stage and Commit all changes in `_docs` with a meaningful message derived from t
 Create each PR with the naming conventin: `[SA] update summary`
 Example: `[SA] Add FAQ entry about machine opens vs other opens`
 
+Always add the label `support analyzer` to the PR by including `--label "support analyzer"` in the `gh pr create` command.
+
 Cursor fills out the PR automatically:
 
 ```text
