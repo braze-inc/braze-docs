@@ -56,9 +56,16 @@ module Jekyll
       def render(context)
         unless ImageBuster.config(context)['dev']
           filename = @markup =~ /^\// ? @markup[1..-1].strip : @markup
-          md5 = Digest::MD5.file(filename).hexdigest
           baseurl = context.registers[:site].baseurl
-          final_markup = "#{baseurl}#{@markup}?#{md5}"
+
+          if File.exist?(filename)
+            md5 = Digest::MD5.file(filename).hexdigest
+            final_markup = "#{baseurl}#{@markup}?#{md5}"
+          else
+            page_path = context.registers[:page]['path'] || 'unknown'
+            Jekyll.logger.warn "image_buster:", "File not found: #{filename} (referenced in #{page_path})"
+            final_markup = "#{baseurl}#{@markup}"
+          end
         end
         final_markup
       end

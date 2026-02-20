@@ -35,6 +35,8 @@ valid_partner_list:
   url: /docs/partners/facebook_via_zapier/
 - name: Kochava
   url: /docs/partners/kochava/
+- name: Linkrunner
+  url: /docs/partners/linkrunner/
 - name: Singular
   url: /docs/partners/singular/
 - name: Vizbee
