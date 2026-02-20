@@ -132,7 +132,7 @@ To monitor geofences in the background, enable the **Location updates** backgrou
 ```xml
 <key>UIBackgroundModes</key>
 <array>
-	<string>location</string>
+  <string>location</string>
 </array>
 ```
 
