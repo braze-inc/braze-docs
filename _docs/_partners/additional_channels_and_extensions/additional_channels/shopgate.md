@@ -38,14 +38,7 @@ Before you start, you need the following:
 
 ## Integration
 
-To learn how to integrate Shopgate with Braze, see the [Shopgate integration guide](https://support.shopgate.com/en/knowledge/braze-integration). After integrating, you can use the following Shopgate features in Braze:
-
-- Custom app onboarding including permission management
-- Push campaigns
-- In-app messages
-- Dynamic content using Braze banners and Content Cards
-- App inbox
-
+To learn how to integrate Shopgate with Braze, see the [Shopgate integration guide](https://support.shopgate.com/en/knowledge/braze-integration). After integrating, you can use the Shopgate features in Braze described in [Use cases](#use-cases).
 {% alert note %}
 For further questions, contact Shopgate support at support@shopgate.com.
 {% endalert %}
