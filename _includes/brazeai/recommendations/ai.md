@@ -12,6 +12,6 @@ The following table describes the differences between the free and pro version o
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <sup>1. This is the frequency at which user-specific item recommendations are updated (AI Personalized and Most Recent only). Most Popular and Trending are global recommendations that update when the model retrains. For example, if a user purchases an item recommended based on AI item recommendations, their recommended items are updated according to this frequency.</sup><br>
-<sup>2. Available recommendation types are AI Personalized, Most recent, Most popular, and Trending.</sup>
+<sup>2. Available recommendation types are AI Personalized, Most Recent, Most Popular, and Trending.</sup>
 
 {% endif %}
