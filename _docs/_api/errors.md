@@ -96,6 +96,7 @@ All of the following error codes indicate that no messages are sent.
 | `403 Forbidden` | The rate plan doesn't support, or the account is otherwise inactivated.|
 | `403 Access Denied` | The REST API key you are using does not have sufficient permissions, check the API key permissions under the **Settings** page.|
 | `404 Not Found` | Invalid URL. |
+| `415 Unsupported Media Type` | The `Content-Type` header is missing or incorrect. Most Braze API endpoints expect `Content-Type: application/json`. This error commonly occurs when sending a Braze-to-Braze webhook without specifying the `Content-Type` request header. In the webhook's **Settings** > **Request Headers**, add `Content-Type` with a value of `application/json`. |
 | `429 Rate Limited` | Over rate limit. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
