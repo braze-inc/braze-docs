@@ -125,3 +125,4 @@ You can choose to either pass the entirety of Canvas context into the agent as c
 - [Braze Agents overview]({{site.baseurl}}/user_guide/brazeai/agents/)  
 - [Create custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)  
 - [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)  
+- [Reference for agents]({{site.baseurl}}/user_guide/brazeai/agents/reference/)  
