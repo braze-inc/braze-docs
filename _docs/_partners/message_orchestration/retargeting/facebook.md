@@ -107,7 +107,7 @@ Once you've successfully exported a segment as a Facebook Audience, you can crea
 
 ### Error Validating Access Token
 
-When using Facebook Export, the `Error Validating Access Token` error will display if:
+When using Facebook Export, the `Error Validating Access Token` error appears if:
 - You changed your password, which invalidates your current session
 - Facebook logged you out as a security precaution
 
