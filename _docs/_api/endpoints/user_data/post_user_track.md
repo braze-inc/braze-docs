@@ -275,6 +275,30 @@ For status codes and associated error messages that Braze returns if your reques
 
 If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user." For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).
 
+### Endpoint-specific errors
+
+The following errors are specific to the `/users/track` endpoint and are returned in the `errors` array of the response. Use these to troubleshoot issues with individual objects in a request.
+
+| Error | Description |
+|---|---|
+| `BAD_DEVICE_ID` | The `device_id` for a token import must be between 8 and 255 bytes. |
+| `BAD_EMAIL_SUBSCRIPTION_STATE` | `email_subscribe` must be `subscribed`, `unsubscribed`, or `opted_in`. |
+| `BAD_LOCATION_UPDATE` | `current_location` must be an object containing `longitude` and `latitude`. |
+| `BAD_PUSH_SUBSCRIPTION_STATE` | `push_subscribe` must be `subscribed`, `unsubscribed`, or `opted_in`. |
+| `BAD_PUSH_TOKEN_APP_ID` | The `app_id` in a token import must be a valid app identifier from the current workspace. |
+| `BAD_PUSH_TOKEN_IMPORT` | Token imports must include tokens and exclude `external_id` and `braze_id`. |
+| `BAD_PUSH_TOKEN_STRING` | The `token` value in a token import must be a string. |
+| `BAD_PUSH_TOKEN_VALUE` | `push_tokens` must be an array of objects. |
+| `BAD_SUBSCRIPTION_GROUP_ARRAY` | `subscription_groups` must be an array. |
+| `BAD_SUBSCRIPTION_GROUP_HASH` | Each item in the `subscription_groups` array must be a JSON object with `subscription_group_id` and `subscription_state` keys. |
+| `BAD_SUBSCRIPTION_GROUP_ID` | `subscription_group_id` must be a valid subscription group UUID. |
+| `BAD_SUBSCRIPTION_GROUP_STATE` | `subscription_state` for a subscription group must be `subscribed` or `unsubscribed`. |
+| `BLACKLISTED_EXTERNAL_USER_ID` | The provided `external_id` is blocklisted and disallowed. |
+| `EMAIL_BAD_FORMAT` | The value provided for `email` is not a valid email address. |
+| `EXTERNAL_USER_ID_TOO_LARGE` | The `external_id` exceeds the maximum allowed length of 1,000 bytes. |
+| `INVALID_ATTRIBUTE_EMAIL_SUBSCRIPTION_INFO` | `email_subscription_info` is not a valid attribute. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ## Frequently asked questions
 
 {% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
