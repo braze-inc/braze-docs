@@ -90,4 +90,4 @@ Linkrunner sends `lr_campaign` and `lr_ad_network` as custom attributes. View th
 
 ## Facebook and X (formerly Twitter) attribution data
 
-Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
+Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties, and, therefore, our partners cannot send that data to Braze.
