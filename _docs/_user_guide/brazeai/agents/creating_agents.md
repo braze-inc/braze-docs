@@ -172,3 +172,7 @@ In the **Logs** tab of your agent, you can monitor actual agent calls that occur
 Select **View** for a specific agent call to see the input, output, and user ID. You can also select **Export CSV** to export the logs shown on the current page only.
 
 ![Logs for an agent Random Sports Assignment. The details panel shows the input prompt, output response, and an associated user ID.]({% image_buster /assets/img/ai_agent/agent_logs.png %})
+
+## Related articles  
+
+- [Reference for agents]({{site.baseurl}}/user_guide/brazeai/agents/reference/)
