@@ -82,6 +82,12 @@ In addition to the minimum integration data, the following attributes are automa
 | User agent              | Web               | [User agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | This attribute is used to only send messages to compatible devices. It can also be used within segmentation.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
+The **Language** attribute is derived from the device locale, which reflects the language set in the device's operating system. For example, if a user's device OS language is set to English in the United States, their device locale is `en_US` and their language is set to `en` (English). If the same device has its OS language set to Spanish, the locale becomes `es_US` and their language is set to `es` (Spanish). On iOS 13 and later, a user's preferred app language may also be used if they've configured one in their device settings.
+
+{% alert important %}
+Setting `language` on a user profile through the [REST API]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [CSV import]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) will prevent Braze from automatically capturing language through the SDK going forward. To resume automatic capture, remove the manually-set value using the REST API by setting `language` to `null`.
+{% endalert %}
+
 To learn more about tracking device-level properties (such as device wireless carrier, time zone, resolution, and others), see the platform-specific documentation: [Android]({{site.baseurl}}/developer_guide/storage/?tab=android), [iOS]({{site.baseurl}}/developer_guide/storage/?tab=swift), [Web]({{site.baseurl}}/developer_guide/storage/#cookies).
 
 ## Data not collected by default
