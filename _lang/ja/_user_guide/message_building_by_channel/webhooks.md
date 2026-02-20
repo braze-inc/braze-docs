@@ -81,7 +81,7 @@ Braze では、Webhook を、Webhook キャンペーン、API キャンペーン
 1. Braze ダッシュボードの [**キャンペーン**] に移動します。
 2. [**キャンペーンを作成**] をクリックし、[**Webhook**] を選択します。
 
-詳細については、[Webhook の作成]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)を参照してください。
+詳しくは[Webhookを作成するを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)参照のこと。
 
 {% endtab %}
 {% tab API Campaign %}
@@ -91,7 +91,7 @@ Braze では、Webhook を、Webhook キャンペーン、API キャンペーン
 3. [**メッセージを追加**] をクリックし、[**Webhook**] を選択します。
 4. [Webhookオブジェクト]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/)を含むように API 呼び出しをフォーマットします。
 
-詳細については、[「Webhook の作成」]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)を参照してください。
+詳しくは[Webhookを作成するを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)参照のこと。
 
 {% endtab %}
 {% tab Canvas Component %}
@@ -99,7 +99,7 @@ Braze では、Webhook を、Webhook キャンペーン、API キャンペーン
 1. キャンバスで、新しいコンポーネントを作成します。
 2. コンポーネントの [**メッセージ**] セクションで、[**Webhook**] を選択します。
 
-詳細については、[「Webhook の作成」]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)を参照してください。
+詳しくは[Webhookを作成するを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)参照のこと。
 
 {% endtab %}
 {% endtabs %}

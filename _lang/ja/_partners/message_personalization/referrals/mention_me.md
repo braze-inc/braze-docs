@@ -1,6 +1,6 @@
 ---
 nav_title: Mention Me
-article_title: Mention Me と Braze との統合
+article_title: メンション・ミーとBrazeを統合する
 description: Mention Me 統合設定ガイド
 alias: /partners/mention_me/
 page_type: partner

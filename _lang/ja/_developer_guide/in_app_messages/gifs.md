@@ -1,12 +1,12 @@
 ---
 page_order: 2
-nav_title: GIF の埋め込み
-article_title: Braze SDK のアプリ内メッセージへのGIF の埋め込み
+nav_title: GIFを埋め込む
+article_title: Braze SDKのアプリ内メッセージにGIFを埋め込む
 channel:
   - push notifications
 ---
 
-# アプリ内メッセージへのGIF の埋め込み
+# アプリ内メッセージにGIFを埋め込む
 
 > Braze SDK のアプリ内メッセージにGIF を埋め込む方法について説明します。
 

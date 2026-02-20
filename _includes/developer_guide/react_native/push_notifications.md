@@ -261,7 +261,67 @@ For an example integration, reference our sample app [here](https://github.com/b
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Send a test push notification
+### Step 4: Handle foreground notifications
+
+Foreground notification handling works differently depending on your platform and setup. Choose the approach that matches your integration:
+
+{% tabs local %}
+{% tab iOS %}
+For iOS, foreground notification handling is the same as the native Swift integration. Call `handleForegroundNotification(notification:)` inside your `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)` implementation.
+
+For complete details and code examples, see [Handling foreground notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#handling-foreground-notifications) in the Swift push notifications documentation.
+{% endtab %}
+
+{% tab Android %}
+For Android, foreground notification handling is the same as the native Android integration. Call `BrazeFirebaseMessagingService.handleBrazeRemoteMessage` inside your `FirebaseMessagingService.onMessageReceived` method.
+
+For complete details and code examples, see [Handling foreground notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) in the Android push notifications documentation.
+{% endtab %}
+
+{% tab Expo %}
+In Expo-managed workflow, you don't call native notification handlers directly. Instead, use the Expo Notifications API to control foreground presentation, while the Braze Expo Plugin handles native processing automatically.
+
+```javascript
+import * as Notifications from 'expo-notifications';
+import Braze from '@braze/react-native-sdk';
+
+// Control foreground presentation in Expo
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,    // Show alert while in foreground
+    shouldPlaySound: false,
+    shouldSetBadge: false,
+  }),
+});
+
+// React to Braze push events
+const subscription = Braze.addListener('pushNotificationEvent', (event) => {
+  console.log('Braze push event', {
+    type: event.payload_type,   // "push_received" | "push_opened"
+    title: event.title,
+    url: event.url,
+    is_silent: event.is_silent,
+  });
+  // Handle deep links, custom behavior, etc.
+});
+
+// Handle initial payload when app launches via push
+Braze.getInitialPushPayload((payload) => {
+  if (payload) {
+    console.log('Initial push payload', payload);
+  }
+});
+```
+
+{% alert note %}
+In Expo-managed workflow, the Braze Expo Plugin handles native push processing automatically. You control foreground UI via the Expo Notifications presentation options shown above.
+{% endalert %}
+
+For bare workflow integrations, follow the native iOS and Android approaches instead.
+{% endtab %}
+{% endtabs %}
+
+### Step 5: Send a test push notification
 
 At this point, you should be able to send notifications to the devices. Adhere to the following steps to test your push integration.
 

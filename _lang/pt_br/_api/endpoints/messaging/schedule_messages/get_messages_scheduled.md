@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Listar as próximas campanhas e telas programadas"
+nav_title: "OBTER: Liste as próximas campanhas e telas programadas"
 article_title: "OBTER: Listar as próximas campanhas e telas programadas"
 search_tag: Endpoint
 page_order: 0
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 ## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "scheduled_broadcasts": [
     {

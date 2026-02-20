@@ -106,11 +106,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 リクエストごとに `aliases_to_identify`、`emails_to_identify`、または`phone_numbers_to_identify` のいずれかが必要です。例えば、`emails_to_identify` をリクエストに使うことで、このエンドポイントを使ってメールによってユーザーを識別することができます。
 {% endalert %}
 
-| パラメーター                   | required | データ型                           | 説明                                                                                                                                                                 |
+| パラメーター                   | 必須かどうか | データ型                           | 説明                                                                                                                                                                 |
 |-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `aliases_to_identify`       | 必須 | オブジェクトを識別するためのエイリアスの配列 | [エイリアスを参照してオブジェクトを識別する]({{site.baseurl}}/api/objects_filters/aliases_to_identify/)および[ユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)を参照してください。 |
-| `emails_to_identify`        | 必須 | オブジェクトを識別するためのエイリアスの配列 | 識別子として `email` が指定されている場合は必須。ユーザーを識別するためのメールアドレス。[メールによるユーザーの識別](#identifying-users-by-email)を参照してください。                                                                                                              |
-| `phone_numbers_to_identify` | 必須 | オブジェクトを識別するためのエイリアスの配列 | ユーザーを識別するための電話番号。                                                                                                                                            |
+| `aliases_to_identify`       | 必須かどうか | オブジェクトを識別するためのエイリアスの配列 | [エイリアスを参照してオブジェクトを識別する]({{site.baseurl}}/api/objects_filters/aliases_to_identify/)および[ユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)を参照してください。 |
+| `emails_to_identify`        | 必須かどうか | オブジェクトを識別するためのエイリアスの配列 | 識別子として `email` が指定されている場合は必須。ユーザーを識別するためのメールアドレス。[メールによるユーザーの識別](#identifying-users-by-email)を参照してください。                                                                                                              |
+| `phone_numbers_to_identify` | 必須かどうか | オブジェクトを識別するためのエイリアスの配列 | ユーザーを識別するための電話番号。                                                                                                                                            |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### メールアドレスと電話番号によるユーザーの識別

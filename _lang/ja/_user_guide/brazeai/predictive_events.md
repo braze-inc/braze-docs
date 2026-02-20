@@ -2,7 +2,7 @@
 nav_title: 予測イベント
 article_title: 予測イベント
 description: "この記事では、マーケターがイベントを実行する可能性に基づいてユーザーを識別し、メッセージを送る機能を提供する、Braze Predictive SuiteのツールであるPredictive Events（旧Predictive Purchases）を取り上げる。"
-page_order: 2.1
+page_order: 10
 alias: /predictive_purchases/
 search_rank: 1
 ---
@@ -13,7 +13,7 @@ search_rank: 1
 
 ## 予測イベントについて
 
-予測が作成されると、ユーザーには、選択したイベントを実行する可能性を示す、0 から 100 までの [尤度スコア]({{site.baseurl}}/user_guide/brazeai/predictive_events/prediction_analytics/#purchase_score) が割り当てられます。スコアが高いほど、ユーザーはそのイベントを実行する可能性が高くなります。また、ユーザは低、中、高の尤度カテゴリ別にソートされます。
+予測が作成されると、ユーザーには、選択したイベントを実行する可能性を示す、0 から 100 までの [尤度スコア]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) が割り当てられます。スコアが高いほど、ユーザーはそのイベントを実行する可能性が高くなります。また、ユーザは低、中、高の尤度カテゴリ別にソートされます。
 
 予測イベントの本当の価値は、予測結果を使ってセグメンテーションやキャンペーンを行うことにある。マーケターは、**Prediction** ページで直接ターゲットを絞ったキャンペーンを構築して、すぐに収益を上げる結果を得たり、将来のキャンペーンやキャンバスのセグメントを保存したりできます。最初にどのユーザーをターゲットに設定すべきかがわからない場合は、[戦略的考慮事項]({{site.baseurl}}/user_guide/brazeai/predictive_events/messaging_users/#strategy)を読み、可能性スコアに基づくユーザーのメッセージングについて学んでください。
 
@@ -21,8 +21,8 @@ search_rank: 1
 
 ## 予測イベントへのアクセス
 
-[**予測**] ページは [**分析**] セクションにあります。フルアクセスが必要な場合、アカウントマネージャーにお問い合わせください。
+{% include brazeai/predictions_page_access.md %}
 
 この機能は、購入前にプレビューモードで使用できます。これにより、合成データを使用してデモ予測を表示したり、一度に1 つのプレビュー予測モデルを作成したりできます。この予測は、実際のユーザーデータに基づいて作成されますが、ユーザーの可能性スコアに従ってメッセージングのターゲットを設定することはできません。また、作成後も定期的に更新されません。
 
-プレビューでは、この1 つの予測を編集して再構築したり、アーカイブしたりして、期待される[予測品質]({{site.baseurl}}/user_guide/brazeai/predictive_events/prediction_analytics/#prediction_quality) of [異なるオーディエンス]({{site.baseurl}}/user_guide/brazeai/predictive_events/creating_an_event_prediction/#audience) をテストし、アナリティクスに精通するように他のユーザを作成することもできます。
+プレビューでは、この1 つの予測を編集して再構築したり、アーカイブしたりして、期待される[予測品質]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#prediction_quality) of [異なるオーディエンス]({{site.baseurl}}/user_guide/brazeai/predictive_events/creating_an_event_prediction/#audience) をテストし、アナリティクスに精通するように他のユーザを作成することもできます。

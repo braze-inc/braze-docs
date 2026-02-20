@@ -2,14 +2,14 @@
 nav_title: WhatsAppと外部システム
 article_title: BrazeとWhatsAppを外部システムと統合する
 page_order: 2
-description: "この参考記事では、BrazeとWhatsAppを外部のAIやコミュニケーションシステムと統合するためのステップバイステップのガイドを提供する。"
+description: "この参考記事では、BrazeとWhatsAppを外部のAIやコミュニケーションシステムと統合するためのステップバイステップガイドを提供する。"
 page_type: reference
 alias: /whatsapp_external_system_integration/
 channel:
   - WhatsApp
 ---
 
-# BrazeとWhatsAppを外部のAIやコミュニケーションシステムと連携させる
+# BrazeとWhatsAppを外部のAIやコミュニケーションシステムと統合する
 
 > WhatsAppチャネルでAIチャットボットとライブエージェントハンドオフのパワーを活用し、顧客サポート業務を効率化しよう。定型的な問い合わせをオートメーション化し、必要に応じて人間のエージェントにシームレスに移行することで、レスポンスタイムを大幅に改善し、カスタマーエクスペリエンス全体を向上させることができる。
 
@@ -62,7 +62,7 @@ Brazeと外部のAIやコミュニケーションシステムとの統合は、B
 ![WhatsApp受信メッセージの送信をトリガーとしたアクションベースの配信。]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
 
 {: start="6"}
-6. キャンペーンの作成が完了したら、保存してキャンペーンを開始する。これで、メッセージを受信するたびに、Brazeは外部システムにWebhookを送信する。
+6. キャンペーンの作成が完了したら、保存してキャンペーンを開始する。キャンペーンを開始すると、メッセージを受信するたびにBrazeから外部システムにWebhookが送信される。
 
 ### ステップ 2:アウトバウンドメッセージ用のAPIトリガーキャンペーンを作成する {#step-2}
 
@@ -91,7 +91,7 @@ Brazeと外部のAIやコミュニケーションシステムとの統合は、B
 3. [ステップ](#step-2)2のAPIトリガープロパティを使って外部システムのレスポンスを挿入し、このcURLの例のように、認証のためにリクエストヘッダーにAPIキーを含めることを忘れないこと：
 
 {% raw %}
-```json
+```bash
 curl -X POST \
   -H 'Content-Type:application/json' \
   -H 'Authorization: Bearer a valid rest API key' \

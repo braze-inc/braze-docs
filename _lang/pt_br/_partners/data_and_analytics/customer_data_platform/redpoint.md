@@ -85,7 +85,7 @@ Crie um segundo modelo de exportação para operações somente de acréscimo, d
 
 Você definirá apenas duas atribuições para esse modelo. Para o **PID**, defina o **valor da linha do cabeçalho** como `external_id`. Em **Output Name**, defina o **Header Row** como `output_name`.
 
-![Um modelo de exportação de amostra com os atributos `external_id` e nome de saída.]({% image_buster /assets/img/redpoint/rpi_to_braze_append_export_format.png %}){: style="max-width:75%;"}
+![Um modelo de exportação de amostra com `external_id` e os atributos do nome de saída.]({% image_buster /assets/img/redpoint/rpi_to_braze_append_export_format.png %}){: style="max-width:75%;"}
 
 #### Etapa 1c: Definir formato de data
 
@@ -131,7 +131,7 @@ O arquivo que contém os artefatos do Redpoint Data Management (RPDM) para supor
 
 #### Etapa 4a: atualize a automação RPI para Braze com seu endpoint REST da Braze e o diretório de saída RPI de base 
 
-Depois de importar os artefatos relacionados à Braze para o Redpoint Data Management, abra a automação denominada **AUTO_Process_RPI_to_Braze** e atualize as duas variáveis de automação a seguir com os valores de seu ambiente:
+Depois de importar os artefatos relacionados ao Braze para o Redpoint Data Management, abra a automação denominada **AUTO_Process_RPI_to_Braze** e atualize as duas variáveis de automação a seguir com os valores de seu ambiente:
 
 * **BRAZE_API_URL**: O ponto de extremidade Braze REST
 * **BASE_OUTPUT_DIRECTORY**: o diretório de saída compartilhado entre o Redpoint Interaction e o Redpoint Data Management
@@ -140,7 +140,7 @@ Depois de importar os artefatos relacionados à Braze para o Redpoint Data Manag
 
 #### Etapa 4b: Atualizar o projeto de anexação do RPI ao Braze 
 
-O projeto de gerenciamento de dados do Redpoint chamado **PROJ_RPI_to_Braze_Append** contém o esquema de arquivo de exportação de entrega e mapeamentos para o objeto de atributo personalizado `rpi_cdp_attributes` na Braze. 
+O projeto do Redpoint Data Management chamado **PROJ_RPI_to_Braze_Append** contém o esquema de arquivo de exportação de entrega e os mapeamentos para o objeto de atributo personalizado `rpi_cdp_attributes` no Braze. 
 
 Atualize o esquema de entrada de arquivos e a ferramenta de injeção de documentos denominada **RPI para Braze Document Injector** com quaisquer atributos personalizados adicionais de CDP definidos em seu modelo de arquivo de exportação. Esse exemplo mostra o mapeamento adicional de educação, renda e estado civil:
 

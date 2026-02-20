@@ -24,12 +24,12 @@ Para ver um exemplo, consulte o uso em [`NotificationService`](https://github.co
 
 #### Adição da estrutura rich push ao seu aplicativo
 
-{% tabs localização %}
+{% tabs local %}
 {% tab Swift Package Manager %}
 
 Depois de seguir o [guia de integração do Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/), adicione `BrazeNotificationService` ao seu site `Notification Service Extension` fazendo o seguinte:
 
-1. No Xcode, em frameworks e bibliotecas, selecione o ícone <i class="fas fa-plus"></i> de adicionar para adicionar um framework. <br><br>![O ícone de adicionar está localizado em estruturas e bibliotecas no Xcode.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
+1. No Xcode, em frameworks e bibliotecas, selecione o ícone <i class="fas fa-plus"></i> de adicionar para adicionar um framework. <br><br>![O ícone de adição está localizado em estruturas e bibliotecas no Xcode.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
 
 2. Selecione a estrutura "BrazeNotificationService". <br><br>![A estrutura "BrazeNotificationService" pode ser selecionada no modal que se abre.]({% image_buster /assets/img_archive/rich_notification2.png %})
 

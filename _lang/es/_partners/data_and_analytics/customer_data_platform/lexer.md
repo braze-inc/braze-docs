@@ -34,7 +34,7 @@ En Lexer, vaya a **Gestionar > Integración**, seleccione el mosaico **Braze** y
 - **Clave REST API de Braze**
 - **Credenciales de AWS**
   - **Nombre de contenedor de AWS S3**
-  - **[Región del contenedor de](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html) S3 de AWS**
+  - **[Región del contenedor de](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html) AWS S3**
   - **Ruta del contenedor de AWS S3**: Esta ruta debe coincidir con la que especificaste al [conectar tu contenedor de S3 a Braze]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/). Debe estar en blanco si no ha especificado nada a Braze.
   - **Clave secreta de acceso a AWS S3**: Visita Amazon para obtener información sobre cómo [crear una clave de acceso](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/).
 - **ID de segmento de exportación de Braze**: El ID del segmento que ha creado en Braze que contiene todos los usuarios que desea exportar a Lexer. Si hay usuarios que no desea exportar a Lexer, puede excluirlos del segmento que creó en Braze. Para encontrar su identificador de segmento, haga clic en el segmento deseado en Braze y localice el **Identificador API de segmento**.

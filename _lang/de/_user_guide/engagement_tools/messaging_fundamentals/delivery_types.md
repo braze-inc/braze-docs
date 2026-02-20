@@ -9,11 +9,9 @@ tool:
     - Canvas
 ---
 
-# Zeitplan für Ihre Nachricht
+# Zustellung und Eingangstypen
 
 > In Braze können Sie Ihre Nachrichten auf drei verschiedene Arten planen: geplant, aktionsbasiert und API-getriggert. Die Entscheidung, wie und wann Ihre Nachricht zugestellt wird, ist entscheidend für die Entwicklung einer wirksamen Nachricht. 
-
-## Zustellung und Eingangstypen
 
 Bei Kampagnen bestimmt die Art der Zustellung, wann Ihre Nutzer:innen Ihre Kampagne betreten und wann sie versendet wird. Da ein Canvas als eine fortlaufende Nutzer:innen-Reise aufgebaut ist, wird das Messaging-Konzept einer Zeitplanung als Eingangstyp bezeichnet.
 
@@ -24,7 +22,7 @@ Bei Kampagnen bestimmt die Art der Zustellung, wann Ihre Nutzer:innen Ihre Kampa
 | **API-getriggert**   | Mit API-getriggerten Nachrichten können Sie im Braze-Dashboard Nachrichtenkopien, multivariate Tests und Wiederzulassungsregeln verwalten und gleichzeitig die Zustellung dieser Inhalte von Ihren eigenen Servern und Systemen triggern. <br><br>Die API-Anfrage zum Triggern der Nachricht kann auch zusätzliche Daten enthalten, die in Echtzeit in die Nachricht eingefügt werden. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Zeitbasierte Optionen
+## Zeitbasierte Optionen
 
 {% tabs %}
 {% tab campaign %}
@@ -38,13 +36,13 @@ Bei der geplanten Zustellung haben Sie die Wahl zwischen den folgenden Optionen:
 {% tab canvas %}
 Bei der zeitgesteuerten Zustellung geben die Nutzer:innen einen Zeitplan ein, ähnlich wie Sie eine Kampagne planen würden. Sie können Nutzer:innen in ein Canvas einschreiben, sobald es gestartet wird oder zu einem bestimmten Zeitpunkt.
 
-#### Bezeichnete Zeiten
+### Bezeichnete Zeiten
 
 Sie können wählen, ob Sie Ihr Canvas mit einer bestimmten Häufigkeit des Eingangs versenden möchten, z. B. nur einmal, täglich, wöchentlich oder monatlich. Für Canvase mit wiederkehrender Zustellung nach Zeitplan können Sie die Wiederholung so einstellen, dass Nutzer:innen das Canvas bis zu 30 Mal betreten können.
 {% endtab %}
 {% endtabs %}
 
-### Aktionsbasierte Optionen
+## Aktionsbasierte Optionen
 
 {% tabs %}
 {% tab campaign %}
@@ -58,13 +56,13 @@ Die aktionsbasierten Optionen legen fest, welche Aktionen (oder Trigger) ein Nut
 - Hinzufügen einer E-Mail-Adresse
 - Einen Standort eingeben
 
-#### Eingang Fenster
+### Eingang Fenster
 
 Das Eingangsfenster Ihres Canvas bestimmt, welche Nutzer:innen das Canvas zur festgelegten Startzeit (und optionalen Endzeit) betreten können. Ähnlich wie bei aktionsbasierten Kampagnen können Sie die Nutzer:innen in ihrer Ortszeit erfassen.
 {% endtab %}
 {% endtabs %}
 
-### API triggern Optionen
+## API triggern Optionen
 
 {% tabs %}
 {% tab campaign %}

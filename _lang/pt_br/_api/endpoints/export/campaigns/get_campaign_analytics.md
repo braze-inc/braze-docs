@@ -14,7 +14,7 @@ description: "Este artigo descreve informações sobre o endpoint da Braze Expor
 /campaigns/data_series
 {% endapimethod %}
 
-> Use esse ponto de extremidade para recuperar uma série diária de várias estatísticas de uma campanha ao longo do tempo. 
+> Use esse ponto de extremidade para recuperar uma série diária de várias estatísticas de uma campanha ao longo do tempo.
 
 Os dados retornados incluem quantas mensagens foram enviadas, abertas, clicadas ou convertidas por canal de envio de mensagens.
 
@@ -26,7 +26,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='exportar análise de dados da campanha' %}
+{% multi_lang_include rate_limits.md endpoint='export campaign analytics' %}
 
 ## Parâmetros de solicitação
 
@@ -37,7 +37,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | `ending_at` | Opcional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Data em que a série de dados deve terminar. O padrão é a hora da solicitação. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Exemplo de solicitação 
+## Exemplo de solicitação
 
 {% raw %}
 ```
@@ -51,8 +51,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 ### Resposta multicanal
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -126,21 +124,21 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "whats_app": [
                     {
                       "variation_api_id": (string) the variation API identifier,
-                      "sent": (int) the number of sends, 
+                      "sent": (int) the number of sends,
                       "delivered": (int) the number of delivered messages,
                       "failed": (int) the number of failed deliveries,
                       "read": (int) the number of opened messages
                     },
                 ],
                 "content_cards" : [
-                  { 
-                    "variation_api_id": (string) the variation API identifier, 
-                    "sent": (int) the number of sends, 
-                    "total_clicks": (int) the number of total clicks, 
-                    "total_dismissals": (int) the number of total dismissals, 
-                    "total_impressions": (int) the number of total impressions, 
-                    "unique_clicks": (int) the number of unique clicks, 
-                    "unique_dismissals": (int) the number of unique dismissals, 
+                  {
+                    "variation_api_id": (string) the variation API identifier,
+                    "sent": (int) the number of sends,
+                    "total_clicks": (int) the number of total clicks,
+                    "total_dismissals": (int) the number of total dismissals,
+                    "total_impressions": (int) the number of total impressions,
+                    "unique_clicks": (int) the number of unique clicks,
+                    "unique_dismissals": (int) the number of unique dismissals,
                     "unique_impressions": (int) the number of unique impressions
                   }
                 ],
@@ -154,8 +152,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 ### Resposta multivariante
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "data" : [
         {

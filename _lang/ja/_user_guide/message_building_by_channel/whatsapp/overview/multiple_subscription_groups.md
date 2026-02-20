@@ -1,7 +1,7 @@
 ---
 nav_title: 複数のビジネスアカウント
 article_title: 複数のWhatsAppビジネスアカウントと電話番号
-page_order: 2
+page_order: 3
 description: "この参考記事ではWhatsApp Businessアカウントと電話番号を追加する手順を説明する。"
 page_type: reference
 channel:

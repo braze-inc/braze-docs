@@ -13,7 +13,7 @@ description: "Essa landing page lista os objetos e filtros da Braze API usados e
 ## Objetos e filtros
 
 - [Objeto de propriedades de entrada da tela]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
-- [Filtro e objeto do público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [Filtro de público conectado & objeto]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Objeto de evento]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/)
 - [Objeto destinatários]({{site.baseurl}}/api/objects_filters/recipient_object/)

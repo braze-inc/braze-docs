@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Exportation d'analyses d'événements personnalisés (si utilisés comme adjectifs)"
+nav_title: "GET : Exporter l’analyse d’événements personnalisés"
 article_title: "GET : Exportation d'analyses/analytiques d'événements personnalisés (si utilisés)"
 search_tag: Endpoint
 page_order: 4
@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/events/data_seri
 ## Réponse
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -66,7 +64,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Codes de réponse des erreurs fatales {#fatal-export}
 
-Pour les codes d'état et les messages d'erreur associés qui seront renvoyés si votre demande rencontre une erreur fatale, consultez [Erreurs fatales et réponses]({{site.baseurl}}/api/errors/#fatal-errors).
+Pour connaître les codes d'état et les messages d'erreur associés qui seront renvoyés si votre demande rencontre une erreur fatale, reportez-vous à la rubrique [Erreurs fatales & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% alert tip %}
 Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).

@@ -1,7 +1,7 @@
 ---
 nav_title: Language settings
 article_title: Language Settings
-page_order: 2.5
+page_order: 3
 page_type: reference
 description: "This article describes how to change the language the Braze dashboard appears in."
 

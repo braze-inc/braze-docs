@@ -92,3 +92,9 @@ Users that have integrated a cloud data storage solution, and are trying to expo
 
 - All API exports will not return a download URL in the response body and must be retrieved through data storage.
 - All dashboard reports and CSV reports will be sent to the user's email for download (no storage permissions required) and backed up on data storage.
+
+{% alert important %}
+**JSON format requirement**: For JSON exports, Braze uses JSONL (newline-delimited JSON) format, where each line contains a separate JSON object. This format differs from standard JSON, which is a single JSON array or object. Each line in the exported file is a valid JSON object, but the file as a whole is not a single valid JSON document. When processing these files, parse each line individually as a separate JSON object rather than attempting to parse the entire file as a single JSON document.
+
+Currents exports use Apache Avro format (`.avro` files), not JSON. This JSON format requirement applies to dashboard data exports and API exports that use JSON format.
+{% endalert %}

@@ -3,6 +3,7 @@ nav_title: Deploy agents
 article_title: Deploy custom agents
 description: "Learn how to put custom agents to use in Braze after you create them."
 alias: /deploying-agents/
+page_order: 2
 ---
 
 # Deploy custom agents
@@ -17,17 +18,17 @@ Braze Agents are currently in beta. For help getting started, contact your custo
 
 In the **Agent Usage** section of your agent, you can reference and navigate to where the agent is being actively used in catalogs and Canvases.
 
-![Agent Usage section that shows two active agents and one inactive agent for Canvases.]( {% image_buster /assets/img/ai_agent/agent_usage.png %} )
+![Agent Usage section that shows two active agents and one inactive agent for Canvases.]({% image_buster /assets/img/ai_agent/agent_usage.png %})
 
 ## Agents in Canvas  
 
-You can use agents as steps in a journey to personalize messages or guide decisioning in real time. For detailed setup steps, refer to [Agent Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
+You can use agents as steps in a journey to personalize messages or guide decisioning in real time. For detailed setup steps, refer to [Agent step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
 
 ### Use cases
 
 | Use case | Description |
 | --- | --- |
-| Lead scoring and qualification | Use an Agent step to evaluate incoming leads on a scale (for example, 1–10). Route users with a score above a threshold into nurture paths, while disqualifying low-fit leads. |
+| Lead scoring and qualification | Use an Agent step to evaluate incoming leads on a scale (for example, 1-10). Route users with a score above a threshold into nurture paths, while disqualifying low-fit leads. |
 | Dynamic message personalization | Have an agent generate subject lines, product recommendations, or message copy based on user attributes or recent behaviors. The response can be inserted directly into a Message step. |
 | Customer feedback handling | Pass customer comments to an agent to analyze sentiment and generate empathetic follow-up messages. For high-value users, the agent might escalate the response or include perks. |
 | Intelligent routing | Use agent outputs (boolean or numeric) to split users into different Canvas paths. For example, classify users as “at risk” or “healthy” and adjust messaging cadence accordingly. |
@@ -69,6 +70,11 @@ To add an agent to your catalog field:
 After launching, the agent runs and evaluates each row, taking the selected columns into its context to produce an output. Agents run on all new rows added after you deploy the agent. If you selected **Recalculate when catalog rows update**, all values for this field update if existing source fields change.
 
 You can refresh and edit the fields in your catalog that use agents. To remove an agent from a column, unselect **Apply AI agent**. This reverts the column to a non-agentic column, and the fields retain the latest values the agent applied the last time it ran on the catalog.
+
+Circular references in catalogs aren't supported, meaning the following scenario can't occur:
+
+- Agentic Column 1 uses Agentic Column 2 as an input
+- Agentic Column 2 uses Agentic Column 1 as an input
 
 ![The option to select "Apply AI agent" for a catalog field.]({% image_buster /assets/img/ai_agent/edit_agent_column.png %}){: style="max-width:80%;"}
 

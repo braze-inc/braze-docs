@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Lista Grupos de suscripción de usuarios"
+nav_title: "GET: Lista de grupos de suscripción de usuarios"
 article_title: "GET: Lista Grupos de suscripción de usuarios"
 search_tag: Endpoint
 page_order: 4
@@ -14,9 +14,9 @@ description: "En este artículo se describen los detalles del punto final Braze 
 /subscription/user/status
 {% endapimethod %}
 
-> Utiliza este punto final para listar y obtener los grupos de suscripción de un determinado usuario.
+> Utiliza este punto final para listar y obtener los grupos de suscripción con el historial de un determinado usuario.
 
-Si quieres ver ejemplos o probar este punto final para **Grupos de suscripción por correo electrónico**:
+Si desea ver ejemplos o probar este punto final para **Grupos de suscripción por correo electrónico**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d1c3b617-22f1-47bf-9ee8-499526824470 {% endapiref %}
 
@@ -51,15 +51,15 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 Si hay varios usuarios (varios `external_ids`) que comparten la misma dirección de correo electrónico, todos los usuarios serán devueltos como usuarios separados (aunque tengan la misma dirección de correo electrónico o grupo de suscripción).
 {% endalert %}
 
-## Ejemplo de solicitud 
+## Ejemplo de solicitud
 
 {% tabs %}
-{% tab Múltiples usuarios %}
+{% tab Multiple Users %}
 {% raw %}
 `https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`
 {% endraw %}
 {% endtab %}
-{% tab SMS y WhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&limit=100&offset=1&phone=+11112223333' \
@@ -67,7 +67,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 ```
 {% endraw %}
 {% endtab %}
-{% tab Correo electrónico %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&email=example@braze.com&limit=100&offset=0' \
@@ -79,19 +79,51 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 
 ## Ejemplo de respuesta
 
+Sólo se incluirán en una respuesta correcta los grupos de suscripción que hayan tenido una actualización del estado de suscripción en el historial de un usuario. Esto significa que los grupos de suscripción recién creados no aparecerán en la lista.
+
 ```json
 {
-  "success": true,
-  "subscription_groups": [
-    {
-      "subscription_group_id": "group_id_1",
-      "subscription_status": "subscribed"
-    },
-    {
-      "subscription_group_id": "group_id_2",
-      "subscription_status": "unsubscribed"
-    }
-  ]
+    "users": [
+        {
+            "email": "test@example.com",
+            "phone": "50505050",
+            "external_id": "20500",
+            "subscription_groups": [
+                {
+                  "id": "ec2fcc919fca",
+                  "name": "ActivationGroup",
+                  "channel": "email",
+                  "status": "Subscribed"
+                },
+                {
+                  "id": "7d7af9dd5556",
+                  "name": "ReactivationGroup",
+                  "channel": "email",
+                  "status": "Subscribed"
+                },
+                {
+                  "id": "a5e84fd16220",
+                  "name": "MarketingGroup",
+                  "channel": "sms",
+                  "status": "Unsubscribed"
+                },
+                {
+                  "id": "64d8cad9176c",
+                  "name": "TransactionalGroup",
+                  "channel": "sms",
+                  "status": "Unsubscribed"
+                },
+                {
+                  "id": "b2134cd63942",
+                  "name": "BankerMarketingGroup",
+                  "channel": "sms",
+                  "status": "Subscribed"
+                }
+            ]
+        }
+    ],
+    "total_count": 1,
+    "message": "success"
 }
 ```
 

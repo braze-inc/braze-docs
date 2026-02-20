@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Eliminar estado de suscripción por dirección de correo electrónico o número de teléfono"
+nav_title: "DELETE: Eliminar el estado de suscripción por dirección de correo electrónico o número de teléfono"
 article_title: "DELETE: Eliminar estado de suscripción por dirección de correo electrónico o número de teléfono"
 search_tag: Endpoint
 page_order: 0

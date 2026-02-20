@@ -14,7 +14,7 @@ search_tag: Partner
 
 _This integration is maintained by actionable.me._
 
-## About the integration
+## 통합 정보
 
 The Braze and actionable.me integration allows you to deploy a service to monitor your progress in the utilization of Braze. Through a combination of tools and processes, they will rapidly benchmark your CRM performance, identify new opportunities and provide recommendations on how to perform better.
 
@@ -54,11 +54,11 @@ In Braze, navigate to **Settings** > **API Keys**. Select **Create New API Key**
 
 ### Step 2: Provide information to the actionable.me team
 
-To complete the integration, you must provide your REST API key and [REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) to your actionable.me operations team. actionable.me will then establish the connection and reach out to you after the setup is complete and be in touch to start sharing insights.
+통합을 완료하려면 REST API 키와 [REST 엔드포인트 URL을]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) actionable.me 운영팀에 제공해야 합니다. 그러면 actionable.me 에서 연결을 설정하고 설정이 완료된 후 연락하여 인사이트 공유를 시작할 수 있도록 안내합니다.
 
-![The actionable.me "add platform" page that the actionable.me operations team will configure.]({% image_buster /assets/img/actionableme/image2.png %})
+![actionable.me 운영팀에서 구성할 actionable.me "플랫폼 추가" 페이지입니다.]({% image_buster /assets/img/actionableme/image2.png %})
 
-## Troubleshooting
+## 문제 해결
 
 Contact the actionable.me or Massive Rocket team for additional support: [info@massiverocket.com](mailto:info@massiverocket.com)
 

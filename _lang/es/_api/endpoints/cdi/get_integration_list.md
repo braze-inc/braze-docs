@@ -90,13 +90,13 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
+La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
 
 | Error | Solución de problemas |
 | --- | --- |
 | `400 Invalid cursor` | Compruebe que su `cursor` es válido. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para obtener más códigos de estado y mensajes de error asociados, consulta [Errores fatales y respuestas.]({{site.baseurl}}/api/errors/#fatal-errors)
+Para obtener más códigos de estado y mensajes de error asociados, consulta [Errores fatales & respuestas]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

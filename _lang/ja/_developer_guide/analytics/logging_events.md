@@ -1,12 +1,12 @@
 ---
-nav_title: カスタムイベントのログ記録
-article_title: Braze SDKによるカスタムイベントのログ記録
+nav_title: カスタムイベントをログに記録する
+article_title: Braze SDKを介したカスタムイベントの記録
 page_order: 3.1
 description: "Braze SDKを通してカスタムイベントを記録する方法を学習する。"
 
 ---
 
-# カスタムイベントのログ記録
+# カスタムイベントをログに記録する
 
 > Braze SDKを通してカスタムイベントを記録する方法を学習する。
 

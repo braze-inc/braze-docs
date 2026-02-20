@@ -1,0 +1,38 @@
+<div class="gitedit_div">
+    <a href="{{site.github_baseurl}}{{page.relative_path }}" class="extignore" target="_blank"> <img src="{{site.baseurl}}/assets/img/{{site.github_icon}}" alt="깃허브" /> {{ site.data.i18n[site.language]['edit_github'] | 기본값: "GitHub에서 이 페이지 편집" }} </a>
+</div>
+
+<div id="feedback">
+    {%- if include.title -%}
+    <div id="feedback_title">{{ include.title | 대문자 }} </div>
+    {%- else -%}
+    <div id="feedback_title"> {{ site.data.i18n[site.language]['helpful'] | 기본값: "이 페이지가 얼마나 도움이 되었나요?" }} </div>
+    {%- endif -%}
+
+    <div id="feedback_answer">
+      <ul class="list-inline rating-list">
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Helpful" title="매우 유용함"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Helpful" title="유용한 정보"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Somewhat Helpful" title="다소 도움됨"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Unhelpful" title="도움이 되지 않음"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Unhelpful" title="매우 도움이 되지 않음"></i></li>
+      </ul>
+    </div>
+    <div id="feedback_comment_div">
+        <div>
+            <textarea id="feedback_comment" placeholder="이 페이지를 개선하려면 어떻게 해야 하나요?"></textarea>
+        </div>
+        <button type="submit" name="submit_feedback" value="피드백 제출" class="btn btn-black" id="feedback_submit_button" role="button"> 피드백 제출 </button>
+
+    </div>
+    <div id="feedback_msg">
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    var feedback_site = '{{site.baseurl}}{{page.url}}';
+    var feedback_article_title = '{{page.article_title}}';
+    var feedback_nav_title = '{{page.nav_title}}';
+</script>

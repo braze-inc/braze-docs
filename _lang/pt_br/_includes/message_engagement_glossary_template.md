@@ -14,7 +14,7 @@ Os esquemas de armazenamento se aplicam aos dados de eventos de arquivo simples 
 
 Entre em contato com o gerente da sua conta ou abra um [ticket de suporte]({{site.baseurl}}/braze_support/) se precisar de acesso a direitos de eventos adicionais. Se não encontrar o que precisa neste artigo, consulte nossa [Biblioteca de eventos de comportamento do cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) ou nossos [exemplos de dados de amostra Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
-{% details Explicação da estrutura do evento de engajamento com mensagens e dos valores da plataforma %}
+{% details Explanation of message engagement event structure and platform values %}
 
 ### Estrutura do evento
 
@@ -63,13 +63,13 @@ Os objetos relacionados ao Canvas Flow têm IDs que podem ser usados para agrupa
 {% alert note %}
 Alguns campos podem levar mais tempo para exibir seu estado mais recente após a atualização de uma campanha ou do Canva. Esses campos são:
 <ul>
-  <li>"campaign_name" (nome da campanha)</li>
+  <li>"campaign_name"</li>
   <li>"canvas_name"</li>
   <li>"canvas_step_name"</li>
-  <li>"conversion_behavior" (comportamento de conversão)</li>
-  <li>"canvas_variation_name" (nome da variação da tela)</li>
+  <li>"conversion_behavior"</li>
+  <li>"canvas_variation_name"</li>
   <li>"experiment_split_name"</li>
-  <li>"message_variation_name" (nome da variação da mensagem)</li>
+  <li>"message_variation_name"</li>
 </ul>
 Se for necessária uma consistência completa, recomendamos aguardar uma hora a partir da última atualização desses campos antes de enviar as mensagens aos usuários.
 {% endalert %}

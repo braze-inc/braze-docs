@@ -102,10 +102,10 @@ For information on when you should use a custom event versus a custom attribute,
 This array of objects allows you to create segments based on specific criteria within the stays, and personalize your messages using the data from each stay with Liquid templates.
 
 ```json
-"hotel_stays": [
+{"hotel_stays": [
   { "hotel_name": "Ocean View Resort", "check_in_date": "2023-06-15", "nights_stayed": 5 },
   { "hotel_name": "Mountain Lodge", "check_in_date": "2023-09-10", "nights_stayed": 3 }
-  ]
+]}
 ```
 
 #### Braze user profile fields {#braze-user-profile-fields}
@@ -150,7 +150,7 @@ Language values that are explicitly set through this API take precedence over th
 
 This example contains four user attribute objects, out of a total of 75 allowed attribute objects per API call.
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -226,7 +226,7 @@ For identified users, set the `push_token_import` flag to `false` (or omit the p
 
 For example:
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
@@ -252,7 +252,7 @@ When importing push tokens from other systems, an `external_id` is not always av
 
 For example:
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \

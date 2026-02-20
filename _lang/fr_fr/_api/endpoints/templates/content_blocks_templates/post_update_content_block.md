@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Mettre à jour le bloc de contenu"
+nav_title: "POST : Mise à jour du bloc de contenu"
 article_title: "POST : Mettre à jour le bloc de contenu"
 search_tag: Endpoint
 page_order: 4
@@ -73,8 +73,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 ## Réponse
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": (string) Your newly generated block id,
   "liquid_tag": (string) The generated block tag from the Content Block name,
@@ -92,7 +90,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `Content cannot be blank` |
 | `Content must be a string` | Assurez-vous que votre contenu est compris entre des guillemets (`""`). |
 | `Content must be smaller than 50kb` | Le contenu de votre bloc de contenu doit être inférieur à 50 Ko au total. |
-| `Content contains malformed liquid` | Le langage Liquid fourni n’est pas valide ou pas analysable. Réessayez avec un langage Liquid valide ou contactez-nous pour obtenir de l’aide. |
+| `Content contains malformed liquid` | Le langage Liquid fourni n’est pas valide ou pas analysable. Réessayez avec un Liquid valide ou contactez le support. |
 | `Content Block cannot be referenced within itself` |
 | `Content Block description cannot be blank` |
 | `Content Block description must be a string` | Assurez-vous que la description de votre bloc de contenu est comprise entre des guillemets (`""`). |

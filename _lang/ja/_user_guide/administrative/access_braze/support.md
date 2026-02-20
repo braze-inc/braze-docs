@@ -1,6 +1,7 @@
 ---
 nav_title: Brazeサポート
 article_title: サポート
+page_order: 7
 description: "このページでは、Braze製品のフィードバックを提出するためのBrazeサポートポータルを見つけるのに役立つ。このページは Braze のお客様のみがアクセスできます。"
 alias: /braze_support/
 page_type: reference
@@ -13,7 +14,7 @@ search_rank: 7
 
 Brazeサポートチームに連絡するには、Brazeダッシュボードに移動する。ダッシュボードで [**サポート**] > [**問い合わせ**] を選択します。
 
-![Support "のドロップダウンには、ヘルプを得るためのオプションがある。]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
+![Support "ドロップダウンにヘルプを得るためのオプションがある。]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
 お客様のBraze権限と指定サポート連絡先かどうかに応じて、ケースの提出と追跡ができるBrazeサポートポータルか、標準サポートフォームのいずれかに誘導される。自分がBrazeのサポート窓口かどうかわからない場合は、御社のBraze管理者、Brazeサクセスマネージャー、またはアカウントマネージャーに連絡する。
 

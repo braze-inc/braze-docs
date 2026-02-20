@@ -11,10 +11,10 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Nutzer:innen A
 {% api %}
 # Abo-Gruppen des Nutzers:innen auflisten
 {% apimethod get %}
-/subscription/user/status
+/abonnement/benutzer/status
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um die Abo-Gruppen eines bestimmten Nutzers aufzulisten und abzurufen.
+> Verwenden Sie diesen Endpunkt, um die Abo-Gruppen mit dem Verlauf eines bestimmten Nutzers aufzulisten und abzurufen.
 
 Wenn Sie Beispiele sehen oder diesen Endpunkt für **E-Mail Abo-Gruppen** testen möchten:
 
@@ -32,7 +32,7 @@ Wenn Sie Beispiele sehen oder diesen Endpunkt für **WhatsApp-Gruppen** testen m
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `subscription.groups.get`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -51,15 +51,15 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 Wenn es mehrere Nutzer:innen (mehrere `external_ids`) gibt, die dieselbe E-Mail Adresse haben, werden alle Nutzer:innen als separate Nutzer:innen angezeigt (auch wenn sie dieselbe E-Mail Adresse oder Abo-Gruppe haben).
 {% endalert %}
 
-## Beispiel Anfrage 
+## Beispiel Anfrage
 
 {% tabs %}
-{% tab Mehrere Nutzer:innen %}
+{% tab Multiple Users %}
 {% raw %}
 `https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`
 {% endraw %}
 {% endtab %}
-{% tab SMS und WhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&limit=100&offset=1&phone=+11112223333' \
@@ -67,7 +67,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 ```
 {% endraw %}
 {% endtab %}
-{% tab E-Mail %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&email=example@braze.com&limit=100&offset=0' \
@@ -79,19 +79,51 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 
 ## Beispielhafte Antwort
 
+Nur Abo-Gruppen, für die im Verlauf eines Nutzers:in ein Update des Abo-Status erfolgt ist, werden in einer erfolgreichen Antwort berücksichtigt. Das bedeutet, dass neu erstellte Abo-Gruppen nicht aufgelistet werden.
+
 ```json
 {
-  "success": true,
-  "subscription_groups": [
-    {
-      "subscription_group_id": "group_id_1",
-      "subscription_status": "subscribed"
-    },
-    {
-      "subscription_group_id": "group_id_2",
-      "subscription_status": "unsubscribed"
-    }
-  ]
+    "users": [
+        {
+            "email": "test@example.com",
+            "phone": "50505050",
+            "external_id": "20500",
+            "subscription_groups": [
+                {
+                  "id": "ec2fcc919fca",
+                  "name": "ActivationGroup",
+                  "channel": "email",
+                  "status": "Subscribed"
+                },
+                {
+                  "id": "7d7af9dd5556",
+                  "name": "ReactivationGroup",
+                  "channel": "email",
+                  "status": "Subscribed"
+                },
+                {
+                  "id": "a5e84fd16220",
+                  "name": "MarketingGroup",
+                  "channel": "sms",
+                  "status": "Unsubscribed"
+                },
+                {
+                  "id": "64d8cad9176c",
+                  "name": "TransactionalGroup",
+                  "channel": "sms",
+                  "status": "Unsubscribed"
+                },
+                {
+                  "id": "b2134cd63942",
+                  "name": "BankerMarketingGroup",
+                  "channel": "sms",
+                  "status": "Subscribed"
+                }
+            ]
+        }
+    ],
+    "total_count": 1,
+    "message": "success"
 }
 ```
 

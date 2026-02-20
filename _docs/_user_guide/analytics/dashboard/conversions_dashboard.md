@@ -49,6 +49,20 @@ To calculate conversions of an event that wasn't set up as a conversion event on
 If you select a custom event, you won't see the **Conversion Event** dropdown on the page and will have to re-run to report to view conversions for different custom events.
 {% endalert %}
 
+### Considerations
+
+For a user to be counted in the report, they must meet the following criteria within the selected date range:
+1. Enter the Canvas or campaign.
+2. Log an [attribution method]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods).
+3. Perform the conversion event.
+
+For example, let's say a user does the following:
+1. Enters the Canvas on September 30.
+2. Logs an attribution method on October 1.
+3. Performs the conversion event on October 2.
+
+This user **will not** appear in a report with a date range of October 1 to October 7. This is because the user entered the Canvas before the reporting period, even though the conversion event occurred within the defined date range. For the user to appear in a report, the date range must include September 30.
+
 ## Understanding your report
 
 Your report is split into three sections:

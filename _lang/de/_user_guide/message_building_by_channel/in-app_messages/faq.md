@@ -45,23 +45,6 @@ Die Anspruchsberechtigung für eine In-App-Nachricht wird zum Zeitpunkt der Zust
 
 Sobald die In-App-Nachricht angezeigt wird, hängt die Anspruchsberechtigung davon ab, wann die In-App-Nachricht heruntergeladen und ausgelöst wird.
 
-### Was sind vorgefertigte In-App-Nachrichten?
-
-In-App-Nachrichten werden als Schablonen-In-App-Nachrichten zugestellt, wenn die Option **Kampagneneignung vor der Anzeige neu bewerten** ausgewählt wurde oder wenn eines der folgenden Liquid-Tags in der Nachricht vorhanden ist:
-
-- `canvas_entry_properties`
-- `connected_content`
-- SMS-Variablen wie z.B. {% raw %}`{sms.${*}}`{% endraw %}
-- `catalog_items`
-- `catalog_selection_items`
-- `event_properties`
-
-Das bedeutet, dass das Gerät beim Start der Sitzung den Trigger dieser In-App-Nachricht anstelle der gesamten Nachricht empfängt. Wenn die:der Nutzer:in die In-App-Nachricht triggert, wird ihr:sein Gerät eine Anfrage an das Netzwerk stellen, um die eigentliche Nachricht abzurufen.
-
-{% alert note %}
-Die Nachricht wird nicht zugestellt, wenn das Gerät keinen Zugang zum Internet hat. Die Nachricht wird möglicherweise nicht zugestellt, wenn die Liquid-Logik zu lange braucht, um sie aufzulösen.
-{% endalert %}
-
 ### Warum liefert meine archivierte Messaging-Kampagne immer noch Impressionen von In-App-Nachrichten?
 
 Dies kann bei Nutzer:innen vorkommen, die die Segmentierungskriterien erfüllt haben, als die In-App-Nachricht-Kampagne aktiv war.

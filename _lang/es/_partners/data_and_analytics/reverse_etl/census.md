@@ -42,8 +42,8 @@ Para sincronizar clientes con Braze, debe crear una sincronización. Aquí defin
 2. En el compositor, seleccione el modelo de datos fuente de su almacén de datos.<br><br>
 3. Configure dónde se sincronizará el modelo. Seleccione **Braze** como destino y el [tipo de objeto compatible](#supported-objects) que desea sincronizar.<br>![En la pregunta "Selecciona un destino", se selecciona "Braze" como conexión y se enumeran varios objetos.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
 4. Seleccione qué regla de sincronización desea aplicar**(Actualizar o Crear** es la opción más común, pero puede elegir reglas más avanzadas para gestionar la eliminación de datos, por ejemplo).<br><br>
-5. A continuación, para la coincidencia de registros, elija una clave de sincronización para [asignar](#supported-objects) su objeto Braze a un campo del modelo.<br>![En la pregunta "Selecciona una clave de sincronización", "ID usuario externo" de Braze coincide con "user_id" en la fuente.]({% image_buster /assets/img/census/census_1.png %}){: style="max-width:80%;"}<br><br>
-6. Por último, asigne los campos de datos del censo a los campos Braze equivalentes.<br>![Censo mapeado]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
+5. A continuación, para la coincidencia de registros, elija una clave de sincronización para [asignar](#supported-objects) su objeto Braze a un campo del modelo.<br>![En la pregunta "Selecciona una clave de sincronización", el "ID de usuario externo" de Braze coincide con "user_id" en la fuente.]({% image_buster /assets/img/census/census_1.png %}){: style="max-width:80%;"}<br><br>
+6. Por último, asigne los campos de datos del censo a los campos Braze equivalentes.<br>![Mapeado de Census]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
 7. Confirma los detalles y crea la sincronización. 
 
 Una vez ejecutada la sincronización, encontrarás los datos del usuario en Braze. Ahora puede crear y añadir un segmento Braze a futuras campañas Braze y Canvases para dirigirse a estos usuarios. 

@@ -3,8 +3,8 @@ page_order: 0
 nav_title: Início
 article_title: Guia da API do Braze
 layout: api_glossary
-glossary_top_header: "Braze API Guide"
-glossary_top_text: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more. This page lists available Braze API endpoints and their uses."
+glossary_top_header: "Guia da API do Braze"
+glossary_top_text: "A Braze oferece uma API REST de alta performance para que você possa rastrear usuários, enviar mensagens, exportar dados e muito mais. Esta página lista os endpoints da Braze API disponíveis e seus usos."
 page_type: glossary
 description: "Esta landing page lista os endpoints da API Braze disponíveis e seus usos."
 glossary_tag_name: Endpoint Type
@@ -109,7 +109,7 @@ glossaries:
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_create_send_ids/'>/sends/id/create</a>"
-    description: "Crie IDs de envio que possam ser usados para enviar mensagens e rastrear o desempenho das mensagens de forma programática, sem a criação de campanhas para cada envio."
+    description: "Crie IDs de envio para usar no envio de mensagens e no rastreamento do desempenho das mensagens de forma programática, sem a criação de campanhas para cada envio."
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{CAMPAIGN_ID}/send</a>"
@@ -149,7 +149,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canva/trigger/schedule/update</a>"
-    description: Atualize os canvas programadas disparados pela API que foram criados no dashboard.
+    description: Atualize as telas programadas disparadas pela API que você criou no dashboard.
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/'>/messages/scheduled_broadcasts</a>"
@@ -225,7 +225,7 @@ glossaries:
     tags:
       - Campaigns
   - name: "<a href='/docs/api/endpoints/export/campaigns/get_campaigns/'>/campaigns/list</a>"
-    description: "Exporte uma lista de campanhas, cada uma das quais incluirá seu nome, o identificador da API da campanha, se é uma campanha de API e as tags associadas à campanha."
+    description: "Exporte uma lista de campanhas, cada uma das quais inclui o nome, o identificador da API da campanha, se é uma campanha de API e as tags associadas à campanha."
     tags:
       - Campaigns
   - name: "<a href='/docs/api/endpoints/export/campaigns/get_send_analytics/'>/sends/data_series</a>"
@@ -257,7 +257,11 @@ glossaries:
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/segments/get_segment/'>/segments/list</a>"
-    description: "Exporte uma lista de segmentos, cada um dos quais incluirá seu nome, o identificador da API do segmento e se tem a análise de dados ativada."
+    description: "Exporte uma lista de segmentos, cada um dos quais inclui seu nome, identificador da API do segmento e se tem a análise de dados ativada."
+    tags:
+      - Segments
+  - name: "<a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/segment/cancel</a>"
+    description: Cancela as exportações para o ID de segmento fornecido.
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/sessions/get_sessions_analytics/'>/sessions/data_series</a>"
@@ -277,7 +281,7 @@ glossaries:
     tags:
       - Custom Events
   - name: "<a href='/docs/api/endpoints/export/custom_events/get_custom_events/'>/events/list</a>"
-    description: Exporte uma lista de nomes de eventos personalizados que foram registrados para o seu aplicativo.
+    description: Exporte uma lista de nomes de eventos personalizados registrados para o seu app.
     tags:
       - Custom Events
   - name: "<a href='/docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/'>/content_blocks/create</a>"
@@ -313,11 +317,11 @@ glossaries:
     tags:
       - KPI
   - name: "<a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>"
-    description: "Remover números de telefone \"inválidos\" da lista de inválidos no Braze. Isso pode ser usado para revalidar números de telefone depois de terem sido marcados como inválidos."
+    description: "Remover números de telefone \"inválidos\" da lista de inválidos no Braze. Use essa opção para revalidar números telefônicos depois que o Braze os marcar como inválidos."
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/sms/get_query_invalid_numbers/'>/sms/invalid_phone_numbers</a>"
-    description: "Obtenha uma lista de números de telefone que foram considerados \"inválidos\" em um determinado período de tempo."
+    description: "Obter uma lista de números telefônicos que o Braze marcou como \"inválidos\" em um determinado período de tempo."
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/export/purchases/get_list_product_id/'>/purchases/product_list</a>"
@@ -331,7 +335,7 @@ glossaries:
   - name: "<a href='/docs/api/endpoints/export/purchases/get_revenue_series/'>/purchases/revenue_series</a>"
     description: Retorna o total de dinheiro gasto em seu app em um intervalo de tempo.
     tags:
-      - Purchases    
+      - Purchases
   - name: "<a href='/docs/api/endpoints/preference_center/get_create_url_preference_center'>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</a>"
     description: Crie um URL para uma Central de Preferências.
     tags:
@@ -341,7 +345,7 @@ glossaries:
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>"
-    description: "Veja os detalhes de suas Centrais de Preferências, inclusive quando foram criadas e atualizadas."
+    description: "Veja os detalhes de sua Central de Preferências, inclusive quando foi criada e atualizada."
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/post_create_preference_center'>/preference_center/v1</a>"
@@ -467,5 +471,5 @@ glossaries:
   - name: "<a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_authentication/delete</a>"
     description: Exclua uma chave de autenticação do SDK para seu app.
     tags:
-      - SDK Authentication  
+      - SDK Authentication
 ---

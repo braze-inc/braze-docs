@@ -4,12 +4,16 @@ The Web Braze SDK lets you collect analytics and display rich in-app messages, p
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-## Integrating the Web SDK
+## Integrate the Web SDK
 
 You can integrate the Web Braze SDK using the following methods. For additional options, see [other integration methods](#web_other-integration-methods).
 
-- **Code-Based Integration:** Integrate the Web Braze SDK directly in your codebase using your preferred package manager or the Braze CDN. This will give you full control over how the SDK is loaded and configured.
-- **Google Tag Manager:** A no-code solution that let's you integrate the Web Braze SDK without modifying your site’s code. For more information, see [Google Tag Manager with the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/google_tag_manager/).
+- **Code-based integration:** Integrate the Web Braze SDK directly in your codebase using your preferred package manager or the Braze CDN. This gives you full control over how the SDK is loaded and configured.
+- **Google Tag Manager:** A no-code solution that lets you integrate the Web Braze SDK without modifying your site's code. For more information, see [Google Tag Manager with the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/google_tag_manager/).
+
+{% alert important %}
+We recommend using the [NPM integration method]({{site.baseurl}}/developer_guide/sdk_integration/?subtab=package%20manager&sdktab=web). Benefits include storing SDK libraries locally on your website, providing immunity from ad-blocker extensions, and contributing to faster load times as part of bundler support.
+{% endalert %}
 
 {% tabs local %}
 {% tab code-based integration %}
@@ -18,7 +22,7 @@ You can integrate the Web Braze SDK using the following methods. For additional 
 You can install the Braze library using one of the following methods. However, if your website uses a `Content-Security-Policy`, review the [Content Security Policy]({{site.baseurl}}/developer_guide/platforms/web/content_security_policy/) before continuing.
 
 {% alert important %}
-While most ad blockers will not block the Braze Web SDK, some more-restrictive ad blockers are known to cause issues.
+While most ad blockers do not block the Braze Web SDK, some more-restrictive ad blockers are known to cause issues.
 {% endalert %}
 
 {% subtabs %}
@@ -46,12 +50,21 @@ const braze = require("@braze/web-sdk");
 Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script, which loads the library asynchronously.
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+
+{% alert important %}
+The default **Prevent Cross-Site Tracking** setting in Safari can prevent in-app message types like Banners and Content Cards from displaying when you use the CDN integration method. To avoid this issue, use the NPM integration method so that Safari does not classify these messages as cross-site traffic and your web users can see them in all supported browsers.
+{% endalert %}
+
 {% endsubtab %}
 {% endsubtabs %}
 
 ### Step 2: Initialize the SDK
 
 After the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard. For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see [Braze JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
+
+{% alert note %}
+**Custom domains for Web SDK requests are not supported**: The Web SDK `baseUrl` must be a Braze SDK endpoint (for example, `sdk.iad-05.braze.com`). Braze does not support routing Web SDK traffic through a customer-owned domain via CNAME records. If you need Web SDK requests to originate from your own domain, contact Braze support.
+{% endalert %}
 
 ```javascript
 // initialize the SDK
@@ -61,7 +74,8 @@ braze.initialize('YOUR-API-KEY-HERE', {
     allowUserSuppliedJavascript: false, // set to `true` to support custom HTML messages
 });
 
-// optionally show all in-app messages without custom handling
+// Enable automatic display of in-app messages
+// Required if you want in-app messages to display automatically when triggered
 braze.automaticallyShowInAppMessages();
 
 // if you use Content Cards
@@ -78,6 +92,10 @@ if (isLoggedIn){
 // `openSession` should be called last - after `changeUser` and `automaticallyShowInAppMessages`
 braze.openSession();
 ```
+
+{% alert important %}
+**In-App Message Display**: To display in-app messages automatically when they're triggered, you must call `braze.automaticallyShowInAppMessages()`. Without this call, in-app messages don't display automatically. If you want to manage message display manually, remove this call and use `braze.subscribeToInAppMessage()` instead. For more information, see [In-app message delivery]({{site.baseurl}}/developer_guide/in_app_messages/delivery/).
+{% endalert %}
 
 {% alert important %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
@@ -156,9 +174,9 @@ braze.openSession();
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in the above examples) automatically when they refresh your site.
+When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (as recommended by our default integration instructions), your users receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in the above examples) automatically when they refresh your site.
 
-However, when we release major changes, we require you to upgrade the Braze Web SDK manually to ensure that breaking changes do not impact your integration. Additionally, if you download our SDK and host it yourself, you won't receive any version updates automatically and should upgrade manually to receive the latest features and bug fixes.
+However, when we release major changes, we require you to upgrade the Braze Web SDK manually to ensure that breaking changes do not impact your integration. Additionally, if you download our SDK and host it yourself, you don't receive any version updates automatically and should upgrade manually to receive the latest features and bug fixes.
 
 You can keep up-to-date with our latest release [following our release feed](https://github.com/braze-inc/braze-web-sdk/tags.atom) with the RSS Reader or service of your choice, and see [our changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) for a full accounting of our Web SDK release history. To upgrade the Braze Web SDK:
 
@@ -197,7 +215,7 @@ Add a widget to the body of your HTML that allows users to subscribe and unsubsc
 
 #### Step 3: Add `helper-iframe` and `permission-dialog`
 
-The AMP Web Push component creates a popup to handle push subscriptions, so you'll need to add the following helper files to your project to enable this feature:
+The AMP Web Push component creates a popup to handle push subscriptions, so you must add the following helper files to your project to enable this feature:
 
 - [`helper-iframe.html`](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html)
 - [`permission-dialog.html`](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html)
@@ -238,6 +256,7 @@ If you use RequireJS or other AMD module-loaders we recommend self-hosting a cop
 ```javascript
 require(['path/to/braze.min.js'], function(braze) {
   braze.initialize('YOUR-API-KEY-HERE', { baseUrl: 'YOUR-SDK-ENDPOINT' });
+  // Required if you want in-app messages to display automatically
   braze.automaticallyShowInAppMessages();
   braze.openSession();
 });

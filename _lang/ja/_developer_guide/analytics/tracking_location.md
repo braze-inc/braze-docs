@@ -1,12 +1,12 @@
 ---
-nav_title: トラッキング位置
-article_title: Braze SDK による位置の追跡
+nav_title: トラッキング位置情報の追跡
+article_title: Braze SDKによる位置情報の追跡
 page_order: 3.4
 description: "Braze SDK で位置を追跡する方法について説明します。"
 
 ---
 
-# トラッキング位置
+# トラッキング位置情報の追跡
 
 > Braze SDK で位置を追跡する方法について説明します。
 

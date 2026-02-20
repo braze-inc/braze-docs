@@ -1,5 +1,5 @@
 ---
-nav_title: Página de Parceiro com Vídeo
+nav_title: Página do parceiro com vídeo
 
 page_order: 4
 
@@ -38,7 +38,7 @@ noindex: true
 
 ---
 
-# [Nome do parceiro]
+# [Nome do Parceiro]
 
 {% multi_lang_include video.html id="XY5uXoKIvFY" align="right" %}
 
@@ -60,9 +60,9 @@ Os requisitos a seguir são requisitos típicos que você pode precisar do Braze
 |Ponto de extremidade da API do Braze | Plataforma Braze | Confira nossos [endpoints listados]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) ou abra um [ticket de suporte]({{site.baseurl}}/braze_support/). | Descrição pendente. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## [Tipo de integração] Integração
+## Integração [Tipo de Integração]
 
-É aqui que você divide a integração em etapas. Não escreva apenas parágrafos intermináveis - esses são documentos técnicos que serão usados por profissionais de marketing e desenvolvedores para colocar a integração em funcionamento. Seu único objetivo nesta seção é escrever uma documentação descritiva que ajude o usuário do Braze a realizar o trabalho. Por "Tipo de integração" no título da seção, queremos indicar se é ou não uma integração lado a lado, de servidor para servidor ou fora da caixa. Isso permite que você tenha várias seções de integração se houver mais de uma maneira de integrar com este parceiro.
+É aqui que você divide a integração em etapas. Não escreva apenas parágrafos intermináveis - esses são documentos técnicos que serão usados por profissionais de marketing e desenvolvedores para colocar a integração em funcionamento. Seu único objetivo nesta seção é escrever uma documentação descritiva que ajude o usuário do Braze a realizar o trabalho. Por 'Tipo de Integração' no título da seção, queremos indicar se isso é uma integração lado a lado, servidor a servidor ou padrão. Isso permite que você tenha várias seções de integração se houver mais de uma maneira de integrar com este parceiro.
 
 Se essa for uma integração do Currents, essa página deverá estar localizada na seção Currents e deverá ser criada uma página de navegação correspondente que redirecione para esse local no Currents.
 

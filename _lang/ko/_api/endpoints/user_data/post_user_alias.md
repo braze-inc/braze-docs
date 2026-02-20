@@ -24,7 +24,7 @@ description: "이 문서에서는 새 사용자 별칭 Braze 엔드포인트 만
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `users.alias.new` 권한이 있는 [API 키]({{site.baseurl}}/api/api_key/)가 필요합니다.
 
@@ -81,8 +81,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 ## 응답
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"

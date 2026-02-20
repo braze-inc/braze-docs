@@ -35,4 +35,4 @@ En tant qu'utilisateur de Braze, la nouvelle fonctionnalité la plus importante 
 
 En raison de la manière dont ces résumés sont générés, vous n'aurez aucun contrôle sur leur comportement spécifique ou sur le texte généré. Toutefois, cela n'aura pas d'incidence sur les fonctionnalités d'analyse/analytique (telles que le suivi des clics).
 
-![Capture d'écran d'un résumé de l'aperçu d'une notification push.]({% image_buster /assets/img/apple/apple_intelligence/notification_preview_summary.png %})
+![Un exemple de capture d'écran d'un résumé de l'aperçu d'une notification push.]({% image_buster /assets/img/apple/apple_intelligence/notification_preview_summary.png %})

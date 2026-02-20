@@ -15,7 +15,7 @@ description: "この記事では、「キャンペーン内の翻訳を更新」
 /campaigns/translations
 {% endapimethod %}
 
-> キャンペーンの複数の翻訳を更新するには、このエンドポイントを使用する。
+> キャンペーンの複数の翻訳を更新するには、このエンドポイントを使用する。翻訳機能の詳細については、[メッセージのローカライゼーションを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照のこと。
 
 キャンペーンを開始した後に翻訳を更新したい場合は、まず[メッセージを下書きとして保存]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/)する必要があります。
 

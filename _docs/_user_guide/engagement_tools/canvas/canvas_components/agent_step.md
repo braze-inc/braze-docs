@@ -2,7 +2,7 @@
 nav_title: Agent
 article_title: Agent Step
 alias: /agent_step/
-page_order: 0.2
+page_order: 2
 page_type: reference
 description: "This reference article covers how to use the Agent step in Canvas to generate content or make intelligent decisions in real time."
 tool: Canvas
@@ -23,6 +23,10 @@ You can then use this variable in two main ways:
 
 - **Decisioning:** Route users down different Canvas paths based on the agent’s response. For example, a lead scoring agent might return a number between 1 and 10. You can use this score to decide whether to continue messaging a user or drop them from the journey.
 - **Personalization:** Insert the agent’s response directly into a message. For example, an agent could analyze customer feedback and generate an empathetic follow-up email that references the customer’s comment and suggests a resolution.
+
+## Prerequisite
+
+Agent steps use [Canvas context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables) to ingest relevant context and output a variable that can be leveraged in the Canvas.
 
 ## Creating an Agent step
 
@@ -67,7 +71,7 @@ You must decide what data the agent should receive at runtime. The following opt
 - **Provide values:** Pass only selected properties, such as a user’s first name or favorite color. Choose this option to only give the agent access to the values you assign here. For each **Key**, enter the [Liquid tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags) that defines the specific user profile field or context variable.  
 
 {% alert note %}
-Braze will only pass the first 10 KB of content to the agent. Providing values that have a total value of more than 10 KB will result in truncation. To help save costs, Braze Agents in Canvas use short-lived caches for LLM responses for identical inputs. Including all Canvas Context increases the likelihood that cached results cannot be used, which might increase your LLM costs.
+Braze passes the first 10 KB of content to the agent. Providing values that have a total value exceeding 10 KB results in truncation.
 {% endalert %}
 
 ### Step 5: Test the agent
@@ -77,8 +81,10 @@ After setting up your Agent step, you can test and preview the output of this st
 ## Error handling  
 
 - If the connected model returns a rate limit error, Braze retries up to five times with exponential backoff.  
-- If the agent fails for any other reason (such as invalid API key), the output variable is set to `null`.  
-- Responses are cached for identical inputs to reduce repeated invocations.  
+- If the agent fails for any other reason (such as invalid API key), the output variable is set to `null`.
+    - If an agent reaches its daily invocation limit, the output variable is set to `null`. If you're using an agent's output in a Message step, consider using Liquid abort logic.
+- Responses are cached for identical inputs and may be reused for repeated identical invocations within a few minutes.
+    - Responses that use cached values do still count towards total and daily invocations.
 
 ## Analytics  
 

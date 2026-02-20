@@ -47,9 +47,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `external_ids` | 必須 | 文字列の配列 | ユーザーが削除する外部識別子。 |
+| `external_ids` | 必須かどうか | 文字列の配列 | ユーザーが削除する外部識別子。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## リクエスト例

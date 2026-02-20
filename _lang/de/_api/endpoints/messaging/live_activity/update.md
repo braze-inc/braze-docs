@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Live-Aktivität aktualisieren"
+nav_title: "POST: Update der Live-Aktivität"
 article_title: "POST: Live-Aktivität aktualisieren"
 search_tag: Endpoint
 page_order: 1
@@ -18,6 +18,8 @@ description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Update Live Acti
 > Verwenden Sie diesen Endpunkt, um die von Ihrer iOS App angezeigten [Live-Aktivitäten]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift) zu aktualisieren und zu beenden. Dieser Endpunkt erfordert eine zusätzliche Einrichtung.
 
 Nachdem Sie eine Live-Aktivität registriert haben, können Sie eine JSON-Nutzlast übergeben, um Ihren Apple Push-Benachrichtigungsdienst (APNs) zu aktualisieren. Weitere Informationen finden Sie in der Dokumentation von Apple zum [Update Ihrer Live-Aktivitäten mit Push-Benachrichtigungen](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications).
+
+Wenn `content-available` nicht eingestellt ist, hat der Apple Push-Benachrichtigungsdienst (APNs) standardmäßig die Priorität 10. Wenn `content-available` eingestellt ist, ist diese Priorität 5. Weitere Informationen finden Sie unter [Apple Push-Objekt]({{site.baseurl}}/api/objects_filters/messaging/apple_object).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
@@ -104,7 +106,7 @@ Ein `201` Status Code wird zurückgegeben, wenn die Anfrage korrekt formatiert w
 
 Die Klasse `4XX` des Status Codes zeigt einen Client-Fehler an. Weitere Informationen zu Fehlern, die auftreten können, finden Sie im [Artikel API-Fehler und Antworten]({{site.baseurl}}/api/errors/).
 
-Der Status Code `400` könnte den folgenden Antwortkörper zurückgeben. 
+Der Status Code `400` könnte den folgenden Antwortkörper zurückgeben.
 
 ```json
 {

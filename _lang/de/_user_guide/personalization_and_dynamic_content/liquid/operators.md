@@ -10,7 +10,7 @@ description: "Auf dieser Referenzseite finden Sie die von Liquid unterstützten 
 
 > Liquid unterstützt viele [Operatoren](https://docs.shopify.com/themes/liquid/basics/operators), die Sie in Ihren bedingten Anweisungen verwenden können. Auf dieser Seite finden Sie die von Liquid unterstützten Operatoren und Anwendungsbeispiele, wie Sie sie in Ihren Nachrichten verwenden können.
 
-Diese Tabelle enthält die unterstützten Operatoren. Beachten Sie, dass Klammern in Liquid ungültig sind und verhindern, dass Tags funktionieren.
+Diese Tabelle enthält die unterstützten Operatoren. Beachten Sie, dass Klammern in Liquid ungültige Zeichen sind und verhindern, dass Ihre Tags funktionieren.
 
 |   Syntax| Beschreibung|
 |---------|-----------|
@@ -29,7 +29,7 @@ Diese Tabelle enthält die unterstützten Operatoren. Beachten Sie, dass Klammer
 
 Gehen wir ein paar Tutorials durch, um zu lernen, wie Sie diese Operatoren für Ihre Kampagnen nutzen können:
 
-### Nachricht mit einem ganzzahligen benutzerdefinierten Attribut auswählen
+### Wählen Sie eine Nachricht mit einem ganzzahligen angepassten Attribut
 
 Lassen Sie sich Push-Benachrichtigungen mit personalisierten Aktionen an Nutzer:innen schicken, die eingekauft haben oder nicht. Die Push-Benachrichtigung verwendet ein ganzzahliges angepasstes Attribut namens `total_spend`, um die Gesamtausgaben eines Nutzers:innen zu überprüfen.
 
@@ -61,7 +61,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-Ein Push-Benachrichtigung Composer mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
+![Ein Composer für Push-Benachrichtigungen mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
 {% details Full Liquid code %}
 {% raw %}
@@ -86,7 +86,7 @@ Wenn das angepasste Attribut "Gesamtausgaben" eines Nutzers nicht existiert oder
 Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
-### Nachricht mit einem benutzerdefinierten String-Attribut auswählen
+### Wählen Sie eine Nachricht mit einem String angepassten Attribut
 
 Senden Sie Push-Benachrichtigungen an Nutzer:innen und personalisieren Sie die Nachricht auf der Grundlage des zuletzt gespielten Spiels des jeweiligen Nutzers. Hier wird ein angepasstes String Attribut namens `recent_game` verwendet, um zu überprüfen, welches Spiel ein Nutzer:in zuletzt gespielt hat.
 
@@ -110,11 +110,11 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3\. Verwenden Sie den Tag `elsif` mit den Operatoren "does not equal" (`!=`) und "and" (`&&`), um zu überprüfen, ob der Nutzer:in ein aktuelles Spiel hat (d.h. der Wert ist nicht leer) und ob es sich bei dem Spiel nicht um *Awkward Dinner Party* oder *Proxy War 3 handelt: Krieg des Durstes*. Dann erstellen Sie eine Nachricht, die Sie an diese Nutzer:innen senden.
+3\. Verwenden Sie den Tag `elsif` mit den Operatoren "ist nicht gleich" (`!=`) und "und" (`and`), um zu überprüfen, ob der Nutzer:innen ein aktuelles Spiel hat (d.h. der Wert ist nicht leer) und ob es sich bei dem Spiel nicht um *Awkward Dinner Party* oder *Proxy War 3 handelt: Krieg des Durstes*. Dann erstellen Sie eine Nachricht, die Sie an diese Nutzer:innen senden.
 
 {% raw %}
 ```liquid
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 ```
 {% endraw %}
@@ -145,7 +145,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 {% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
 Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 {% else %}
 Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-Ein Push-Benachrichtigung Composer mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
+![Ein Composer für Push-Benachrichtigungen mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 Wenn ein Nutzer:innen zuletzt *Awkward Dinner Party* gespielt hat, erhält er jetzt diese Nachricht:
 
@@ -216,7 +216,7 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-Ein Push-Benachrichtigung Composer mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/abort-if.png %})
+![Ein Composer für Push-Benachrichtigungen mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/abort-if.png %})
 
 Sie können Nachrichten auch auf Grundlage verbundener Inhalte [abbrechen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/).
 

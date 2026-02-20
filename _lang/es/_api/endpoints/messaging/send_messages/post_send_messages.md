@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Envía mensajes inmediatamente utilizando sólo la API"
-article_title: "POST: Envía mensajes inmediatamente utilizando sólo la API"
+nav_title: "PUBLICAR: Envía mensajes inmediatamente utilizando sólo la API"
+article_title: "PUBLICAR: Envía mensajes inmediatamente utilizando sólo la API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -77,10 +77,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`broadcast`| Opcional | Booleano | Debes establecer `broadcast` en verdadero cuando envíes un mensaje a un segmento completo al que se dirige una campaña o Canvas. Este parámetro está predeterminado como falso (a 31 de agosto de 2017). <br><br> Si `broadcast` tiene el valor true, no se puede incluir una lista `recipients`. Sin embargo, ten cuidado al configurar `broadcast: true`, ya que si lo haces involuntariamente puede que envíes tu mensaje a una audiencia mayor de la esperada. |
 |`external_user_ids` | Opcional | Matriz de cadenas | Ver [ID de usuario externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 |`user_aliases`| Opcional | Matriz de objetos alias de usuario| Ver [objeto alias de usuario]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-|`segment_id `| Opcional | Cadena | Ver [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
+|`segment_id `| Opcional | Cadena | Ver [identificador de segmento]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`audience`| Opcional | Objeto de audiencia conectado | Ver [audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Opcional\*. | Cadena | Consulte [el identificador de campaña]({{site.baseurl}}/api/identifier_types/) para obtener más información. <br><br>\*Requerido si desea realizar un seguimiento de las estadísticas de la campaña (por ejemplo, envíos, clics, rebotes, etc.) en el panel Braze. |
-|`send_id`| Opcional | Cadena | Ver [identificador de envío]({{site.baseurl}}/api/identifier_types/) |
+|`campaign_id`| Opcional\*. | Cadena | Consulte [el identificador de campaña]({{site.baseurl}}/api/identifier_types/#campaign-identifier/) para obtener más información. <br><br>\*Requerido si deseas hacer un seguimiento de las métricas de la campaña (como _Envíos_, _Clics_ o _Rebotes_) en el panel de Braze. |
+|`send_id`| Opcional | Cadena | Ver [identificador de envío]({{site.baseurl}}/api/identifier_types/#send-identifier). |
 |`override_frequency_capping`| Opcional | Booleano | Ignore `frequency_capping` para las campañas, por defecto `false`. |
 |`recipient_subscription_state`| Opcional | Cadena | Utiliza esta opción para enviar mensajes solo a los usuarios que se hayan adherido voluntariamente (`opted_in`), solo a los usuarios que se hayan suscrito o estén adheridos voluntariamente (`subscribed`) o a todos los usuarios, incluidos los que hayan cancelado la suscripción (`all`). <br><br>El uso de `all` usuarios es útil para la mensajería transaccional por correo electrónico. De forma predeterminada, `subscribed`. |
 |`messages`| Opcional | Objetos de mensajería | Consulte [los objetos de mensajería disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |

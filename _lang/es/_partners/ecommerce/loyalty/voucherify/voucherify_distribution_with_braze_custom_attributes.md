@@ -52,7 +52,7 @@ Tanto en modo manual como automático, Voucherify envía códigos únicos con su
 ![Mapea campos a atributos personalizados]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_fields_mapping.png %})
 
 {% tabs %}
-{% tab Distribución manual %}
+{% tab Manual distribution %}
 
 El modo manual es una acción única que asigna códigos a una audiencia elegida. Ve a **Distribuciones** en tu panel de control, ejecuta el administrador de distribuciones con el signo más y elige **Mensaje manual**.
 
@@ -77,7 +77,7 @@ El modo manual es una acción única que asigna códigos a una audiencia elegida
 _Recuerda que todas las distribuciones manuales se envían con un retraso de 10 minutos._
 
 {% endtab %}
-{% tab Flujo de trabajo automático %}
+{% tab Automatic Workflow %}
 
 Voucherify puede enviar códigos a Braze automáticamente en respuesta a los siguientes desencadenantes:
 

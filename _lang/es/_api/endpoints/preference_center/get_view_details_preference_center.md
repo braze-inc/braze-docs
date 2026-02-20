@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Ver detalles de Centro de Preferencia"
+nav_title: "GET: Ver detalles del centro de preferencias"
 article_title: "GET: Ver detalles de Centro de Preferencia"
 search_tag: Endpoint
 page_order: 3

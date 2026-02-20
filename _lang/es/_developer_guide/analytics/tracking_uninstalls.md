@@ -1,6 +1,6 @@
 ---
-nav_title: Seguimiento Desinstalaciones
-article_title: Seguimiento de las desinstalaciones a través del SDK de Braze
+nav_title: Seguimiento de desinstalaciones
+article_title: Seguimiento de las desinstalaciones a través del SDK Braze
 page_order: 3.5
 description: "Aprende a hacer un seguimiento de las desinstalaciones a través del SDK de Braze."
 

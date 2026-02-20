@@ -1,5 +1,5 @@
 ---
-nav_title: Cabeceras de la Política de Seguridad de Contenidos
+nav_title: Cabeceras de la política de seguridad de contenidos
 article_title: Cabeceras de Política de Seguridad de Contenidos para la Web
 platform: Web
 page_order: 21

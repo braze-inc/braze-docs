@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze-Lernkurs] ({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude für Currents
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Amplitude für Currents
 
 > [Amplitude](https://amplitude.com/) ist eine Plattform für Produkt-Analytik und Business-Intelligence.
 
@@ -59,9 +59,9 @@ Navigieren Sie in Braze zu **Currents > + Create Current > Create Amplitude Expo
 Ereignisse, die von Braze-Currents an Amplitude gesendet werden, werden auf Ihr Amplitude-Ereignisvolumen angerechnet.
 {% endalert %}
 
-![Die Seite Braze Amplitude Currents. Diese Seite enthält Felder für den Namen der Integration, die E-Mail des Kontakts, den API-Schlüssel und die US-Region. In der unteren Hälfte der Currents-Seite werden die verfügbaren Currents-Ereignisse aufgelistet, die Sie senden können.]({% image_buster /assets/img/amplitude4.png %})
+![Die Seite Braze Amplitude Currents. Diese Seite enthält Felder für den Namen der Integration, die E-Mail des Kontakts, den API-Schlüssel und die US-Region. In der unteren Hälfte der Currents-Seite finden Sie eine Liste der Currents-Ereignisse, die Sie senden können.]({% image_buster /assets/img/amplitude4.png %})
 
-{% tab Notiz %}
+{% tab note %}
 Lesen Sie die [Dokumente zur Integration](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) von Amplitude, um mehr zu erfahren.
 {% endtab %}
 

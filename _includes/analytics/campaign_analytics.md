@@ -275,7 +275,7 @@ For the full definitions of all Banners metrics, refer to the [Report Metrics Gl
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Total Impressions</a></td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} For Banners, impressions are logged once per user session. If the same Banner is viewed multiple times within the same session, only one impression is logged.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Unique Impressions</a></td>
@@ -412,6 +412,8 @@ Note that _Deferrals_ are currently only available using Currents or Braze Snowf
 This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's unique open rate as if machine opens did not exist. While we receive labels of *Machine Opens* on some open events from email senders (see above), these labels can often label actual opens as machine opens. In other words, the *Other Opens* are likely an underestimate of real opens (by actual users). Instead, Braze uses click data from each campaign to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP.
 
 _Estimated Real Open Rate_ is calculated 36 hours after email sending has begun and is recalculated every 24 hours thereafter. If a campaign recurs, the estimate is recalculated 36 hours after another send occurs.
+
+Because this metric is recalculated on an ongoing cadence, the _Estimated Real Open Rate_ value can change over time as new engagement signals (such as opens and clicks) are received and incorporated into the model. In practice, the _Estimated Real Open Rate_ can continue to update daily while a campaign remains active.
 
 Typically around 10,000 delivered emails are required for the statistic to be computed successfully, though that number can vary depending on click rate. If the statistic can't be computed, then the column displays "--".
 

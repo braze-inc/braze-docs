@@ -13,7 +13,7 @@ page_type: tutorial
 
 カミラの目標は、視聴者が何かを見終わった後もエンゲージメントを保ち続けることだ。これまでMovieCanonの "You might also like "メッセージは、大まかなジャンルのマッチングに基づいており、セッションの数時間後や数日後といった任意のタイミングで送信されていた。エンゲージメントは低く、彼女のチームはもっとうまくやれるとわかっていた。
 
-カミラは、[AIアイテム・レコメンデーションを使って]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)、ユーザーが映画やエピソードを見終わった直後に、各視聴者の視聴履歴に基づいて新しい作品を自動的に推薦するシステムを設定している。ユーザーが次に実際に見たくなるコンテンツを発見し、プラットフォームとのエンゲージメントを維持するための、よりスマートでパーソナライズされた方法だ。
+カミラは、[AIアイテム・レコメンデーションを]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)使い、各視聴者の視聴履歴に基づいて新しい作品を自動的に推薦するシステムを設定し、ユーザーが映画やエピソードを見終わった直後に配信する。ユーザーが次に実際に見たくなるコンテンツを発見し、プラットフォームとのエンゲージメントを維持するための、よりスマートでパーソナライズされた方法だ。
 
 ![アプリ内メッセージに「次はあなたのために」とある。画像、タイトル名、説明文、「今すぐ見る」または「スキップ」して次のレコメンデーションを表示するCTAがある。]({% image_buster /assets/img/ai_use_cases/recommendation_rendered.png %})
 
@@ -46,7 +46,7 @@ page_type: tutorial
 
 {: start="4"}
 
-4. メッセージ本文で、カミラは[パーソナライゼーションの追加モーダルを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#inserting-pre-formatted-variables)使い、カタログからダイナミックなコンテンツを入力するLiquidを使って、おすすめタイトルの名前、説明、サムネイルなどの変数を追加する。彼女は`Last Watched Movie` のカスタム属性をテンプレート化し、このレコメンデーションがユーザーの視聴履歴に基づいていることをユーザーに知らせた。 
+4. メッセージ本文で、カミラは[パーソナライゼーションの追加モーダルを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#inserting-pre-formatted-variables)使い、カタログからダイナミックなコンテンツを入力するLiquidを使って、おすすめタイトルの名前、説明、サムネイルのような変数を追加する。彼女は`Last Watched Movie` のカスタム属性をテンプレート化し、このレコメンデーションがユーザーの視聴履歴に基づいていることをユーザーに知らせた。 
 
 ![アプリ内メッセージエディターで、レコメンデーションのカタログ項目から特定のフィールドをテンプレート化する生のリキッドを使用できる。]({% image_buster /assets/img/ai_use_cases/recommendation_liquid.png %})
 

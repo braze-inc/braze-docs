@@ -11,7 +11,7 @@ channel:
 
 # Push-Action-Buttons
 
-![Eine iOS Push-Benachrichtigung mit zwei Push-Action-Buttons: Akzeptieren und Ablehnen.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Eine iOS-Push-Benachrichtigung mit zwei Schaltflächen für Push-Aktionen: Akzeptieren und Ablehnen.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > Mit Push-Aktionsschaltflächen können Sie Inhalte und Aktionen für Schaltflächen festlegen, wenn Sie Braze iOS- und Android-Push-Benachrichtigungen verwenden. Mit Aktionsschaltflächen können Ihre Nutzer direkt von einer Benachrichtigung aus mit Ihrer App interagieren, ohne dass sie in eine App-Erfahrung klicken müssen.
 

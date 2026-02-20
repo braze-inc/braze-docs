@@ -2,7 +2,7 @@
 
 Sie können Analytics in Realtime protokollieren, indem Sie den [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) anrufen. Um Analytics zu protokollieren, senden Sie den Wert `braze_id` aus dem Braze-Dashboard, um das zu aktualisierende Nutzerprofil zu identifizieren.
 
-![Personalisiertes Push Dashboard Beispiel]({% image_buster /assets/img/push_implementation_guide/android_braze_id_configuration.png %}){: style="max-width:79%;"}
+![Personalisiertes Push-Dashboard Beispiel]({% image_buster /assets/img/push_implementation_guide/android_braze_id_configuration.png %}){: style="max-width:79%;"}
 
 ## Manuelles Aufzeichnen von Daten
 

@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Actualizar mensajes programados"
-article_title: "POST: Actualizar mensajes programados"
+nav_title: "PUBLICAR: Actualizar mensajes programados"
+article_title: "PUBLICAR: Actualizar mensajes programados"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -74,7 +74,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
       "title": "Updated title!",
       "alert": "Updated message!"
     },
-    "sms": {  
+    "sms": {
       "subscription_group_id": "subscription_group_identifier",
       "message_variation_id": "message_variation_identifier",
       "body": "This is my SMS body.",

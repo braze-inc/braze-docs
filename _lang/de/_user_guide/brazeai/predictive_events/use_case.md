@@ -9,7 +9,7 @@ page_type: tutorial
 
 > Dieses Beispiel zeigt, wie eine fiktive Marke Braze Predictive Events verwendet, um die Ergebnisse zu definieren, die für ihr Unternehmen wichtig sind - wie das Upgraden auf eine Profi-Mitgliedschaft - und gezielte Strategien zu entwickeln, die die Ergebnisse verbessern. 
 
-Nehmen wir an, Jordan ist ein Strateg:in bei Steppington, einer App für Gesundheit und Fitness mit kostenlosen und kostenpflichtigen Angeboten. Das Team von Jordan hat sich zum Ziel gesetzt, die Upgrades für den Pro-Tarif zu erhöhen, ohne die gesamte kostenlose Nutzer:innen-Basis mit Nachrichten über Rabatte zu bombardieren. Gegenwärtig erhalten alle Nutzer:innen der kostenlosen Version nach sieben Tagen ein Angebot mit dem Titel "Try Pro for 50% off". Das führt zwar zu einigen Konversionen (ca. 5 % in 7 Tagen), aber auch zu übermäßiger Reichweite - einschließlich Rabatten für Nutzer:innen, die wahrscheinlich ohnehin upgraden würden.
+Nehmen wir an, Jordan ist ein Strateg:in bei Steppington, einer App für Gesundheit und Fitness mit kostenlosen und kostenpflichtigen Angeboten. Das Team von Jordan hat sich zum Ziel gesetzt, die Upgrades für den Pro-Tarif zu erhöhen, ohne die gesamte kostenlose Nutzer:innen-Basis mit Nachrichten über Rabatte zu bombardieren. Gegenwärtig erhalten alle Nutzer:innen der kostenlosen Version nach sieben Tagen eine Promo-Aktion mit dem Titel "Try Pro for 50% off". Das führt zwar zu einigen Konversionen (ca. 5 % in 7 Tagen), aber auch zu übermäßiger Reichweite - einschließlich Rabatten für Nutzer:innen, die wahrscheinlich ohnehin upgraden würden.
 
 Um das Targeting zu verbessern und die Ermüdung durch Messaging zu verringern, verwendet Jordan Predictive Events, um die Wahrscheinlichkeit zu modellieren, dass ein Nutzer:innen innerhalb der nächsten 7 Tage auf Pro upgraden wird. Er definiert ein angepasstes Event: `upgraded_to_pro` Er trainiert damit ein Prognosemodell und segmentiert die Nutzer:innen in intelligente, handlungsorientierte Gruppen. 
 
@@ -27,11 +27,11 @@ Jordan beginnt mit der Definition des Ergebnisses, das für seine upgraden Strat
 3. Als Targeting Event wählt er sein angepasstes Event: `upgraded_to_pro`.
 4. Jordan setzt das Prognosefenster auf 7 Tage, legt einen Zeitplan für das Update fest und erstellt die Prognose.
 
-![Prognose-Einstellungen mit Definition, Fenster, Zielgruppe und Zeitplan für das Update der Prognose.]({% image_buster /assets/img/ai_use_cases/prediction_settings.png %})
+![Einstellungen für Prognosen, die die Definition, das Fenster, die Zielgruppe und den Zeitplan für das Update der Prognose anzeigen.]({% image_buster /assets/img/ai_use_cases/prediction_settings.png %})
 
 ## Schritt 2: Segmentierung der Nutzer:innen auf der Grundlage der Wahrscheinlichkeit eines Upgrades
 
-Nachdem das Training abgeschlossen ist, vergibt Braze für jede in Frage kommende Nutzer:innen einen [Event Likelihood Score]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) (0-100). Jordan verwendet diese Bewertung, um Segmente zu erstellen - eines für Nutzer:innen mit hoher Absicht, die keinen Rabatt benötigen, und ein weiteres für Nutzer:innen, die ohne Unterstützung wahrscheinlich nicht konvertieren werden.
+Nachdem das Training abgeschlossen ist, vergibt Braze für jede in Frage kommende Nutzer:innen einen [Event Likelihood Score]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) (0-100). Jordan verwendet diese Bewertung, um Segmente zu erstellen - eines für Nutzer:innen mit hoher Absicht, die keinen Rabatt benötigen, und ein anderes für Nutzer:innen, die ohne Unterstützung wahrscheinlich nicht konvertieren werden.
 
 1. Jordan navigiert zu Segmente in Braze.
 2. Er erstellt zwei [Segmente]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) unter Verwendung des [Event Likelihood Score Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) und wählt die von ihm erstellte Prognose aus. Die beiden Segmente sind:
@@ -42,7 +42,7 @@ Nachdem das Training abgeschlossen ist, vergibt Braze für jede in Frage kommend
 Prognostische Filter können mit beliebigen anderen Nutzer:innen-Attributen oder Verhaltensweisen kombiniert werden. Jordan plant, diese Segmente auf der Grundlage von Nutzerinteressen weiter zu verfeinern, z.B. indem er Nutzern:innen, die häufig Fitness Tracking Features verwenden, Priorität einräumt. Damit hat er vier Untergruppen, die er genauer ansprechen kann, was es zulässig macht, Inhalte und Nachrichten auf die Bedürfnisse der einzelnen Nutzer:innen abzustimmen.
 {% endalert %}
 
-![Segmentierung mit zwei Filtern für die Ereigniswahrscheinlichkeitsbewertung.]({% image_buster /assets/img/ai_use_cases/event_likelihood_score.png %})
+![Segmenterstellung mit zwei Filtern für die Ereigniswahrscheinlichkeitsbewertung.]({% image_buster /assets/img/ai_use_cases/event_likelihood_score.png %})
 
 ## Schritt 3: Personalisieren Sie Messaging nach Absicht
 
@@ -57,7 +57,7 @@ Jordan [erstellt ein Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas
 - Nutzer:innen mit geringer Absicht, die sich auf Fitness konzentrieren
 - Geringe Absicht, andere Nutzer:innen
 
-![Canvas Zielgruppen-Pfad mit vier Pfaden für jede Absichtsart.]({% image_buster /assets/img/ai_use_cases/canvas_paths_by_intent.png %})
+![Canvas Zielgruppen-Pfade mit vier Pfaden für jede Absichtsart.]({% image_buster /assets/img/ai_use_cases/canvas_paths_by_intent.png %})
 
 Außerdem setzt er das Canvas-Konversions-Event auf das angepasste Event `upgraded_to_pro`, so dass Braze die upgraden Konversionen automatisch verfolgt, wenn die Nutzer:innen den Fluss durchlaufen.
 
@@ -94,7 +94,7 @@ Diese Nutzer:innen beschäftigen sich mit den Fitness Features, haben aber noch 
 {% endtab %}
 {% tab Low intent, other %}
 
-Diese Nutzer:innen zeigen insgesamt wenig Engagement. Es ist unwahrscheinlich, dass sie ohne einen überzeugenden Anreiz upgraden. Daher verfolgt die Nachricht einen einfachen Ansatz, bei dem die Vorteile im Vordergrund stehen, mit einem Rabatt und einer sanften Sprache, die zur Erkundung ohne Druck einlädt.
+Diese Nutzer:innen zeigen insgesamt wenig Engagement. Es ist unwahrscheinlich, dass sie ohne einen überzeugenden Anreiz upgraden. Daher verfolgt die Nachricht einen einfachen Ansatz, bei dem die Vorteile im Vordergrund stehen, mit einem Preisnachlass und einer sanften Sprache, die zur Erkundung ohne Druck einlädt.
 
 - **Betreffzeile:** 50% Rabatt auf Pro-just für dieses Wochenende
 - **Überschrift:** Bereit, wenn Sie es sind

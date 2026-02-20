@@ -1,6 +1,6 @@
 ---
-nav_title: Erstellen einer LINE Nachricht
-article_title: Erstellen einer LINE-Nachricht
+nav_title: Erstellen Sie eine LINE Nachricht
+article_title: Erstellen Sie eine LINE-Nachricht
 page_order: 1
 description: "Dieser Artikel beschreibt, wie Sie eine LINE Nachrichten-Kampagne oder ein Canvas erstellen."
 page_type: reference
@@ -11,7 +11,7 @@ channel:
 alias: /line/create/
 ---
 
-# Erstellen einer LINE Nachricht
+# Erstellen Sie eine LINE Nachricht
 
 > Mit LINE-Kampagnen können Sie Ihre Kunden direkt erreichen und programmgesteuert mit ihnen chatten. Sie können Liquid und andere dynamische Inhalte verwenden, um ein persönliches Erlebnis mit Ihren Nutzern zu schaffen und eine Umgebung zu schaffen, die ein unaufdringliches Nutzererlebnis mit Ihrer Marke fördert und verbessert.
 
@@ -27,7 +27,7 @@ Wenn Sie LINE-Nachrichten von Braze aus versenden, wird das Nachrichtenguthaben 
 
 ## Schritt 1: Wählen Sie, wo Sie Ihre Botschaft aufbauen möchten
 
-Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich eher für einzelne einfache Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
+Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich besser für einzelne, gezielte Messaging-Kampagnen, während Canvase besser für mehrstufige Nutzer:innen geeignet sind.
 
 {% tabs %}
 {% tab Campaign %}
@@ -64,13 +64,15 @@ Wenn alle Nachrichten in Ihrer Kampagne ähnlich sind oder den gleichen Inhalt h
 
 Schreiben Sie Ihre Nachricht nach Bedarf mit Personalisierung (z. B. Liquid oder Connected-Content). LINE lässt bis zu fünf Sprechblasen pro Nachricht zu, die in einem der verfügbaren Nachrichten-Layouts erscheinen können: Text, Bild, Rich oder Card-based.
 
-![LINE-Editor mit einer Nachricht, die in der Vorschau angezeigt wird.]({% image_buster /assets/img/line/line_composer.png %})
+![LINE composer mit einer in der Vorschau angezeigten Nachricht.]({% image_buster /assets/img/line/line_composer.png %})
 
 ### Tipps
 
 #### Liquid verwenden
 
 Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardwert für Ihre Personalisierung angeben. Dadurch wird verhindert, dass Empfänger mit unvollständigen Benutzerprofilen einen leeren Platzhalter erhalten. Zum Beispiel könnte ein:e Nutzer:in statt der Nachricht "Hallo!" die Nachricht "Hallo, neue:r Abonnent:in!" erhalten.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 #### Erstellen von Nachrichten von rechts nach links
 
@@ -99,7 +101,7 @@ Sie können die Zustellung steuern, z. B. indem Sie Nutzer:innen erlauben, [sic
 
 [Stellen Sie Nutzer:innen durch die Auswahl von Segmenten oder Filtern gezielt zusammen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/), um Ihre Zielgruppe einzugrenzen. Sie sollten bereits die Abonnementgruppe ausgewählt haben, die die Nutzer nach der Ebene oder Kategorie der Kommunikation mit Ihnen eingrenzt. 
 
-Wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen Sie dieses Segment optional mit unseren [Filtern]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) weiter ein. Sie erhalten automatisch einen Überblick über die ungefähre Zusammensetzung dieses Segments. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer erst kurz vor dem Versand der Nachricht berechnet wird.
+Wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen Sie dieses Segment optional mit unseren [Filtern]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) weiter ein. Sie erhalten automatisch einen Schnappschuss davon, wie diese ungefähre Segmentpopulation aussieht. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer berechnet wird, bevor die Nachricht gesendet wird.
 
 ### Wählen Sie Konversions-Events aus
 

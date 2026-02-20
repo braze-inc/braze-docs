@@ -41,15 +41,13 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 --header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
-## Resposta 
+## Resposta
 
 {% alert important %}
 Os modelos criados usando o editor de arrastar e soltar para e-mail não são fornecidos nesta resposta.
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": the number of templates returned
   "templates": [template with the following properties]:

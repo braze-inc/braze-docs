@@ -1,6 +1,6 @@
 ---
 nav_title: 제거 추적
-article_title: Braze SDK를 통한 추적 제거
+article_title: Braze 소프트웨어 개발 키트를 통한 제거 추적
 page_order: 3.5
 description: "Braze SDK를 통해 제거를 추적하는 방법을 알아보세요."
 

@@ -15,7 +15,7 @@ channel: content cards
 
 Wie bei anderen Canvas-Messaging-Kanälen werden Content Cards an das Gerät eines Nutzers gesendet, wenn dieser die für die jeweilige Stufe festgelegten Zielgruppen- und Targeting-Kriterien erfüllt. Nachdem die Content Card versendet wurde, ist sie im Feed jedes berechtigten Nutzers verfügbar, wenn dessen Karten-Feed das nächste Mal aktualisiert wird.
 
-![Content-Cards als Messaging-Kanal für einen Nachrichten-Schritt ausgewählt.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
+![Content-Cards, die als Messaging-Kanal für einen Nachrichten-Schritt ausgewählt wurden.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
 
 Zwei Optionen, die die Interaktion des Content-Card-Schrittes mit Canvas verändern, sind sein [Ablauf](#content-card-expiration) und seine [Entfernung](#removal).
 
@@ -57,7 +57,7 @@ Content-Cards können entfernt werden, wenn Nutzer:innen einen Kauf abschließen
 
 Nachdem Sie einen Content-Cards-Schritt in Canvas gestartet haben, können Sie damit beginnen, verschiedene Metriken für diesen Schritt zu analysieren. Zu diesen Metriken gehören die Anzahl der versendeten Nachrichten, eindeutige Empfänger, Konversionsraten, Gesamtumsatz und mehr.
 
-![Analytics für einen Nachrichtenschritt mit der Content-Card Nachricht Performance.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
+![Analytics für einen Message-Schritt mit der Content-Card Nachricht Performance.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
 Weitere Informationen über die verfügbaren Metriken und ihre Definitionen finden Sie in unserem [Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data/report_metrics/).
 

@@ -7,7 +7,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Conexión de LiveRamp, Snowflake y Braze
+# Conecta LiveRamp, Snowflake y Braze
 
 > Aprenda a conectar LiveRamp, Snowflake y Braze para crear campañas de marketing altamente personalizadas y relevantes reduciendo el tiempo de obtención de información, eliminando los silos de datos y optimizando la interacción con los clientes. Esta integración mejora el marketing basado en datos al proporcionar información procesable basada en las personas y consolidar los puntos de contacto con el consumidor para una mejor segmentación de la audiencia y campañas oportunas. También aprovecha los puntos de referencia de Snowflake para ayudarle a perfeccionar sus estrategias de marketing comparándolas con los estándares del sector.
 
@@ -27,14 +27,14 @@ El [intercambio seguro de datos](https://docs.snowflake.com/en/user-guide/data-s
 | Requisito previo       | Descripción                                                                                                                                                                                     |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Cuenta Snowflake | Necesita una cuenta Snowflake con permisos de nivel de administrador.                                                                                                                                      |
-| Cuenta LiveRamp  | Póngase en contacto con el equipo de su cuenta LiveRamp o con [snowflake@liveramp.com](mailto:snowflake@liveramp.com) para hablar de las aplicaciones LiveRamp necesarias dentro de Snowflake.                              |
+| Cuenta LiveRamp  | Ponte en contacto con tu equipo de cuentas LiveRamp o con [snowflake@liveramp.com](mailto:snowflake@liveramp.com) para hablar de las aplicaciones LiveRamp necesarias dentro de Snowflake.                              |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## Configuración de la integración
 
 ### Paso 1: Solicitar un intercambio de datos a Braze
 
-En primer lugar, ponte en contacto con tu director de cuentas Braze o tu administrador del éxito de los clientes para adquirir un conector Snowflake Data Share para tu cuenta Braze. Cuando solicite un uso compartido de datos, Braze aprovisionará el uso compartido desde el espacio o espacios de trabajo en los que se adquirió el uso compartido. Una vez aprovisionado el recurso compartido, se puede acceder inmediatamente a todos los datos desde su instancia de Snowflake en forma de recurso compartido de datos entrantes. Una vez que el recurso compartido sea visible en su instancia, cree una base de datos a partir del recurso compartido para poder ver y consultar las tablas.
+En primer lugar, ponte en contacto con tu director de cuentas Braze o tu administrador del éxito del cliente para adquirir un conector Snowflake Data Share para tu cuenta Braze. Cuando solicite un uso compartido de datos, Braze aprovisionará el uso compartido desde el espacio o espacios de trabajo en los que se adquirió el uso compartido. Una vez aprovisionado el recurso compartido, se puede acceder inmediatamente a todos los datos desde su instancia de Snowflake en forma de recurso compartido de datos entrantes. Una vez que el recurso compartido sea visible en su instancia, cree una base de datos a partir del recurso compartido para poder ver y consultar las tablas.
 
 Para obtener un tutorial completo, consulte la [guía de integración de Snowflake con Braze]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/).
 
@@ -89,7 +89,7 @@ Ahora que sus variables están configuradas, cree la tabla de metadatos para la 
 Por último, realice la operación de resolución de identidad. Para un recorrido completo, consulta [LiveRamp: Realice la operación de resolución de identidad](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#perform-the-identity-resolution-operation).
 
 {% tabs local %}
-{% tab ejemplo de entrada %}
+{% tab example input %}
 ```sql
 call lr_resolution_and_transcoding(
 $customer_input_table_name,
@@ -101,7 +101,7 @@ $customer_metrics_table_name
 ```
 {% endtab %}
 
-{% tab ejemplo de salida %}
+{% tab example output %}
 ```sql
 call check_for_output(
 $output_table_name
@@ -112,12 +112,12 @@ $output_table_name
 
 ### Próximos pasos
 
-Con sus datos ahora seudonimizados a su codificación dedicada de RampID, usted tiene la capacidad de compartir las tablas basadas en RampID a la Aplicación de Activación Gestionada de LiveRamp para el cumplimiento racionalizado a sus socios clave de la plataforma de publicidad. La aplicación de activación incluye una interfaz de usuario empresarial fácil de usar para la segmentación adicional y la selección/configuración de socios de destino descendentes. Para más detalles sobre la aplicación, ponte en contacto con tu equipo de cuentas LiveRamp o con [Snowflake@liveramp.com](mailto:snowflake@liveramp.com).
+Con sus datos ahora seudonimizados a su codificación dedicada de RampID, usted tiene la capacidad de compartir las tablas basadas en RampID a la Aplicación de Activación Gestionada de LiveRamp para el cumplimiento racionalizado a sus socios clave de la plataforma de publicidad. La aplicación de activación incluye una interfaz de usuario empresarial fácil de usar para la segmentación adicional y la selección/configuración de socios de destino descendentes. Para más detalles sobre la aplicación, ponte en contacto con el equipo de tu cuenta LiveRamp o con [Snowflake@liveramp.com](mailto:snowflake@liveramp.com).
 
 ## Solución de problemas
 
 {% alert note %}
-Si tienes dudas o preguntas más concretas, ponte en contacto con [martech@liveramp.com](mailto:martech@liveramp.com).
+Si tienes cuestiones o preguntas más específicas, ponte en contacto con [martech@liveramp.com](mailto:martech@liveramp.com).
 {% endalert %}
 
 ### Regiones Snowflake
@@ -128,7 +128,7 @@ Actualmente, esta aplicación sólo está disponible para las siguientes regione
   - aws-us-oeste-2: FAA28932
   - azure-east-us-2: BL60425
 
-### Privacidad y valores de columna
+### Privacidad & Valores de columna
 
 El proceso evalúa la combinación de todos los valores de columna por fila en busca de valores únicos. Si una determinada combinación de valores de columna aparece 3 o menos veces, las filas que contengan esos valores de columna no serán coincidentes y no se devolverán en la tabla de salida. Asimismo, para garantizar la privacidad, el servicio LiveRamp evalúa la unicidad de las combinaciones de valores de columna, garantizando que si más del 5% de las filas del archivo resultan incomparables debido a combinaciones raras, el trabajo fallará.
 

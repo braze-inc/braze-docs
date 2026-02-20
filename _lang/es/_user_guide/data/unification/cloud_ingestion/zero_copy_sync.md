@@ -10,9 +10,7 @@ description: "Esta página ofrece un resumen de cómo desencadenar Lienzos Braze
 
 > Aprende a desencadenar Canvas utilizando CDI para una personalización sin copia. Esta característica accede a información específica del usuario desde tu solución de almacenamiento de datos y la pasa a un Canvas de destino. Los pasos en Canvas pueden incluir opcionalmente campos de personalización que no persisten en los perfiles de usuario Braze.
 
-{% alert important %}
-Los desencadenantes del CDI Canvas están actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='CDI Canvas triggers' %}
 
 ## Sincronizar desencadenadores de Canvas
 
@@ -28,14 +26,14 @@ Para empezar, selecciona el tipo de datos **Desencadenadores de Canvas** al crea
 
 ### Utilizar desencadenadores de Canvas 
 
-#### Paso 1: Configurar el origen de datos para desencadenar Canvas
+#### Paso 1: Configurar origen de datos para desencadenar Canvas
 
 {% tabs %}
 {% tab Snowflake %}
 
 ##### Paso 1.1: Configura tu tabla de fuentes en Snowflake
 
-Puedes utilizar los nombres del siguiente ejemplo o elegir tus propios nombres de base de datos, esquema y tabla. También puedes utilizar una vista o una vista materializada en lugar de una tabla.  
+Puede utilizar los nombres del siguiente ejemplo o elegir sus propios nombres de base de datos, esquema y tabla. También puede utilizar una vista o una vista materializada en lugar de una tabla.  
 
 ```sql
 CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
@@ -55,8 +53,8 @@ Puedes nombrar la base de datos, el esquema y la tabla como quieras, pero los no
 
 * `UPDATED_AT`: La hora a la que se actualizó o añadió esta fila a la tabla. Sólo se sincronizarán las filas añadidas o actualizadas desde la última sincronización.  
 * O `external_id` o `alias_name` y `alias_label` como columna identificadora del usuario. Identifican a los usuarios para los que quieres desencadenar la mensajería de Canvas.  
-  * `EXTERNAL_ID`: Identifica al usuario para entrar en el Canvas. Debe coincidir con el valor `external_id` utilizado en Braze.  
-  * `ALIAS_NAME` y `ALIAS_LABEL`: Estas columnas crean un objeto alias de usuario. `alias_name` debe ser un identificador único, y `alias_label` especifica el tipo de alias. Los usuarios pueden tener varios alias con diferentes etiquetas, pero sólo un alias_name por `alias_label`.  
+  * `EXTERNAL_ID`: Identifica al usuario para entrar en el Canvas. Esto debería coincidir con el valor `external_id` utilizado en Braze.  
+  * `ALIAS_NAME` y `ALIAS_LABEL`: Estas columnas crean un objeto alias de usuario. `alias_name` debe ser un identificador único, y `alias_label` especifica el tipo de alias. Los usuarios pueden tener varios alias con etiquetas diferentes, pero sólo un alias_name por `alias_label`.  
 * `PROPERTIES`: Una cadena JSON de campos para que estén disponibles como propiedades de personalización en tu Canvas. Debe contener información específica del usuario.
 
 {% alert note %}
@@ -92,7 +90,7 @@ Si tu cuenta tiene políticas de red, habilita las IP de Braze para habilitar la
 
 ##### Paso 1.1: Configura tu tabla de origen en Redshift
 
-Puedes utilizar los nombres del siguiente ejemplo o elegir tus propios nombres de base de datos, esquema y tabla. También puedes utilizar una vista o una vista materializada en lugar de una tabla.
+Puede utilizar los nombres del siguiente ejemplo o elegir sus propios nombres de base de datos, esquema y tabla. También puede utilizar una vista o una vista materializada en lugar de una tabla.
 
 ```sql
 CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
@@ -112,8 +110,8 @@ Puedes nombrar la base de datos, el esquema y la tabla como quieras, pero los no
 
 * `UPDATED_AT`: La hora a la que se actualizó o añadió esta fila a la tabla. Sólo se sincronizarán las filas añadidas o actualizadas desde la última sincronización.  
 * O `external_id` o `alias_name` y `alias_label` como columna identificadora del usuario. Identifican a los usuarios para los que quieres desencadenar la mensajería de Canvas.  
-  * `EXTERNAL_ID`: Identifica al usuario para entrar en el Canvas. Debe coincidir con el valor `external_id` utilizado en Braze.  
-  * `ALIAS_NAME` y `ALIAS_LABEL`: Estas columnas crean un objeto alias de usuario. `alias_name` debe ser un identificador único, y alias_label especifica el tipo de alias. Los usuarios pueden tener varios alias con diferentes etiquetas, pero sólo un `alias_name` por `alias_label`.  
+  * `EXTERNAL_ID`: Identifica al usuario para entrar en el Canvas. Esto debería coincidir con el valor `external_id` utilizado en Braze.  
+  * `ALIAS_NAME` y `ALIAS_LABEL`: Estas columnas crean un objeto alias de usuario. `alias_name` debe ser un identificador único, y alias_label especifica el tipo de alias. Los usuarios pueden tener varios alias con etiquetas diferentes, pero sólo un `alias_name` por `alias_label`.  
 * `PROPERTIES`: Una cadena JSON de campos para que estén disponibles como propiedades de personalización en tu Canvas. Debe contener información específica del usuario.
 
 {% alert note %}
@@ -202,7 +200,7 @@ CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 
 Consulta lo siguiente cuando crees tu tabla de origen:
 
-| Nombre del campo | Tipo | Necesario |
+| Nombre del campo | Tipo | Obligatoria |
 | :---- | :---- | :---- |
 | `UPDATED_AT` | Marca de tiempo | Sí |
 | `PROPERTIES` | JSON | Sí |
@@ -215,8 +213,8 @@ Puedes nombrar el esquema y la tabla como quieras, pero los nombres de las colum
 
 * `UPDATED_AT`: La hora a la que se actualizó o añadió esta fila a la tabla. Sólo se sincronizarán las filas añadidas o actualizadas desde la última sincronización.  
 * O `external_id` o `alias_name` y `alias_label` como columna identificadora del usuario. Identifican a los usuarios para los que quieres desencadenar la mensajería de Canvas.  
-  * `EXTERNAL_ID`: Identifica al usuario para entrar en el Canvas. Debe coincidir con el valor `external_id` utilizado en Braze.  
-  * `ALIAS_NAME` y `ALIAS_LABEL`: Estas columnas crean un objeto alias de usuario. `alias_name` debe ser un identificador único, y `alias_label` especifica el tipo de alias. Los usuarios pueden tener varios alias con diferentes etiquetas, pero sólo un alias_name por `alias_label`.  
+  * `EXTERNAL_ID`: Identifica al usuario para entrar en el Canvas. Esto debería coincidir con el valor `external_id` utilizado en Braze.  
+  * `ALIAS_NAME` y `ALIAS_LABEL`: Estas columnas crean un objeto alias de usuario. `alias_name` debe ser un identificador único, y `alias_label` especifica el tipo de alias. Los usuarios pueden tener varios alias con etiquetas diferentes, pero sólo un alias_name por `alias_label`.  
 * `PROPERTIES`: Una cadena o estructura de campos para que estén disponibles como propiedades de personalización en tu Canvas. Debe contener información específica del usuario.
 
 {% alert note %}
@@ -282,9 +280,9 @@ Si tu cuenta tiene políticas de red, habilita las IP de Braze para habilitar la
 
 Para sincronizar los desencadenantes de Canvas desde el almacenamiento de archivos, crea un archivo fuente con los siguientes campos.
 
-| Campo | Necesario | Descripción |
+| Campo | Obligatoria | Descripción |
 | :---- | :---- | :---- |
-| `EXTERNAL_ID` | Sí, uno de `external_id` o `alias_name`, y `alias_label` | Esto identifica al usuario que quieres actualizar. Debe coincidir con el valor `external_id` utilizado en Braze. |
+| `EXTERNAL_ID` | Sí, uno de `external_id` o `alias_name`, y `alias_label` | Esto identifica al usuario que quieres actualizar. Esto debería coincidir con el valor `external_id` utilizado en Braze. |
 | `ALIAS_NAME` y `ALIAS_LABEL` | Sí, uno de `external_id` o `alias_name` y `alias_label` | Estas dos columnas crean un objeto alias de usuario. `alias_name` debe ser un identificador único, y `alias_label` especifica el tipo de alias. Los usuarios pueden tener varios alias con etiquetas diferentes, pero sólo un `alias_name` por `alias_label`. |
 | `PROPERTIES` | Sí | Cadena JSON de campos para que estén disponibles como propiedades de personalización en tu Canvas. Debe contener información específica del usuario. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -296,7 +294,7 @@ Los nombres de los archivos deben seguir las normas de AWS y ser únicos. Añade
 {% endtab %}
 {% endtabs %}
 
-#### Paso 2: Configura tu Canvas de destino
+#### Paso 2: Configura tu Canvas de destino
 
 1. Configura tu Canvas de destino para desencadenar Canvas. Crea un Canvas nuevo o selecciona uno ya existente desencadenado por la API. Consulta [Tipos de horario]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#entry-schedule-types) de [entrada]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#entry-schedule-types) para obtener instrucciones sobre cómo crear un Canvas con un tipo de horario de entrega desencadenado por la API.
 2. Tras seleccionar el tipo de programa de entrega desencadenado por la API, continúa con la configuración del Canvas y construye tu Canvas. Los lienzos pueden ir desde simples envíos de un solo mensaje hasta complejos flujos de trabajo de clientes con múltiples pasos.
@@ -304,7 +302,7 @@ Los nombres de los archivos deben seguir las normas de AWS y ser únicos. Añade
   * Por ejemplo, si en el Paso 1 has instrumentado un campo de propiedades para `account_balance`, utilizarías la siguiente plantilla Liquid para personalizar tu mensajería: `\{\{canvas_entry_properties.\$\{account_balance\}\}\}`.
 5. Después de construir tu Canvas, lánzalo y procede al [Paso 3](#step-3-create-your-zero-copy-sync).
 
-#### Paso 3: Crea tu copia cero de sincronización
+#### Paso 3: Crea tu copia cero de sincronización
 
 Con tu configuración de origen completa y el Canvas de destino iniciado, crea una nueva sincronización de datos:
 
@@ -334,4 +332,4 @@ Aunque los desencadenantes del CDI Canvas están en acceso temprano, ten en cuen
 * Cada ejecución de sincronización introducirá usuarios en su respectivo Canvas de destino a una tasa máxima de aproximadamente 3,75 millones de usuarios por hora.  
   * Prepárate para tiempos de entrada de la fuente al Canvas más largos cuando:  
     * Sincronización de más de 3,75M de usuarios por ejecución de sincronización.  
-    * Utiliza los desencadenantes del CDI Canvas cuando ya estés saturando el límite de velocidad de tu API REST para [ `/canvas/trigger/send`.]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#rate-limit)
+    * Utiliza los desencadenantes de CDI Canvas cuando ya estés saturando el límite de velocidad de tu API REST para [ `/canvas/trigger/send`.]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#rate-limit)

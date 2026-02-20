@@ -41,17 +41,21 @@ Sie müssen sicherstellen, dass Sie die folgenden Artikel erstellt und/oder verv
 
 ### Schritt 1: Mit Criteo verbinden
 
+{% alert important %}
+Sie müssen über die [ Berechtigung "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) verfügen, um Criteo mit Ihrem Braze-Konto zu verbinden.
+{% endalert %}
+
 Gehen Sie im Braze-Dashboard zu **Partnerintegrationen** > **Technologiepartner** und wählen Sie **Criteo** aus. Wählen Sie unter Criteo Zielgruppen-Export die Option **Criteo verbinden** aus.
 
 ![Criteo Technologieseite in Braze, die eine Übersicht und einen Criteo Bereich mit dem Connected Criteo Button enthält.]({% image_buster /assets/img/criteo/criteo5.png %}){: style="max-width:80%;"}
 
-Es wird eine Criteo oAuth-Seite angezeigt, auf der Sie Braze für die Berechtigungen im Zusammenhang mit Ihrer Audience Sync Integration autorisieren können.
+Es erscheint eine Criteo oAuth-Seite, um Braze für die Berechtigungen im Zusammenhang mit Ihrer Audience Sync Integration zu autorisieren.
 
 Nachdem Sie bestätigt haben, werden Sie zurück nach Braze geleitet, um die Criteo-Anzeigenkonten auszuwählen, mit denen Sie synchronisieren möchten. 
 
 ![Eine Liste der verfügbaren Anzeigenkonten, die Sie mit Criteo verbinden können.]({% image_buster /assets/img/criteo/criteo7.png %}){: style="max-width:80%;"}
 
-Nach erfolgreicher Verbindung gelangen Sie zurück zur Partnerseite, wo Sie sehen können, welche Konten verbunden sind und bestehende Konten trennen können.
+Nachdem Sie die Verbindung erfolgreich hergestellt haben, gelangen Sie zurück zur Partnerseite, wo Sie sehen können, welche Konten verbunden sind und bestehende Konten trennen können.
 
 ![Eine aktualisierte Version der Technologie-Partnerseite von Criteo, auf der die erfolgreich verbundenen Werbekonten angezeigt werden.]({% image_buster /assets/img/criteo/criteo4.png %}){: style="max-width:80%;"}
 
@@ -75,7 +79,7 @@ Wenn Sie mehr darüber erfahren möchten, wie Sie diese Datenschutzgesetze inner
 
 Fügen Sie eine Komponente in Ihrem Canvas hinzu und wählen Sie **Audience Sync**.
 
-![Workflow der vorherigen Schritte zum Hinzufügen einer Criteo Zielgruppen-Komponente in Canvas Flow.]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![Workflow der vorherigen Schritte zum Hinzufügen einer Criteo Zielgruppen-Komponente in Canvas Flow.]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
+![Arbeitsablauf der vorherigen Schritte zum Hinzufügen einer Criteo Audience-Komponente in Canvas.]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![Arbeitsablauf der vorherigen Schritte zum Hinzufügen einer Criteo Audience-Komponente in Canvas.]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
 
 ### Schritt 4: Sync-Einrichtung
 
@@ -88,19 +92,19 @@ Wählen Sie **Criteo** als den gewünschten Audience Sync Partner aus.
 Wählen Sie dann Ihr gewünschtes Criteo-Anzeigenkonto aus. Geben Sie in der Dropdown-Liste **Neue oder bestehende Zielgruppe auswählen** den Namen einer neuen oder bestehenden Zielgruppe ein.
 
 {% tabs %}
-{% tab Eine neue Zielgruppe erstellen %}
+{% tab Create a New Audience %}
 **Eine neue Zielgruppe erstellen**<br>
 Geben Sie einen Namen für die neue Zielgruppe ein, wählen Sie **Nutzer:innen hinzufügen**, und wählen Sie aus, welche Felder Sie mit Criteo synchronisieren möchten. Als nächstes speichern Sie Ihre Zielgruppe, indem Sie unten im Schritteditor auf den Button **Zielgruppe erstellen** klicken.
 
-![Erweiterte Ansicht des Custom Audience Canvas-Schrittes. Hier wird das gewünschte Anzeigenkonto ausgewählt, und eine neue Zielgruppe wird erstellt.]({% image_buster /assets/img/criteo/criteo3.png %})
+![Erweiterte Ansicht des Custom Audience Canvas-Schrittes. Hier wird das gewünschte Anzeigenkonto ausgewählt und eine neue Zielgruppe erstellt.]({% image_buster /assets/img/criteo/criteo3.png %})
 
-Nutzer:innen werden im oberen Bereich des Schritteditors benachrichtigt, wenn die Zielgruppe erfolgreich erstellt wurde oder wenn dabei Fehler auftreten. Nutzer:innen können diese Zielgruppe auch referenzieren, um sie später in Canvas zu entfernen, da die Zielgruppe im Entwurfsmodus erstellt wurde.
+Braze zeigt am oberen Rand des Schritteditors eine Benachrichtigung an, wenn die Zielgruppe erfolgreich erstellt wurde oder wenn Fehler auftreten. Nutzer:innen können diese Zielgruppe referenzieren, um sie später in Canvas zu entfernen, da die Zielgruppe im Entwurfsmodus erstellt wurde.
 
-![Eine Meldung, die erscheint, nachdem eine neue Zielgruppe in der Canvas-Komponente erstellt wurde.]({% image_buster /assets/img/criteo/criteo1.png %})
+![Eine Warnung, die erscheint, nachdem eine neue Zielgruppe in der Komponente Canvas erstellt wurde.]({% image_buster /assets/img/criteo/criteo1.png %})
 
 Wenn Sie ein Canvas mit einer neuen Zielgruppe starten, synchronisiert Braze die Nutzer:innen nahezu in Realtime, sobald sie die Audience Sync Komponente betreten.
 {% endtab %}
-{% tab Mit einer bestehenden Zielgruppe synchronisieren %}
+{% tab Sync with an Existing Audience %}
 **Mit einer bestehenden Zielgruppe synchronisieren**<br>
 Braze bietet auch die Möglichkeit, Nutzer:innen zu bestehenden Zielgruppen von Criteo hinzuzufügen, um sicherzustellen, dass diese Zielgruppen auf dem neuesten Stand sind. Um mit einer bestehenden Zielgruppe zu synchronisieren, geben Sie den Namen der bestehenden Zielgruppe in das Dropdown-Menü ein und **fügen Sie sie hinzu**. Braze fügt dann Nutzer:innen nahezu in Realtime hinzu, sobald sie die Audience Sync-Komponente betreten.
 
@@ -119,9 +123,9 @@ Sie können sich die Zielgruppe in Criteo ansehen, indem Sie in Ihr Ads Manager-
 
 ## Überlegungen zur Synchronisierung von Nutzer:innen und Rate-Limits
 
-Wenn Nutzer:innen den Schritt Audience Sync erreichen, wird Braze diese Nutzer:innen nahezu in Realtime synchronisieren und dabei die Rate-Limits der Criteo APIs respektieren. In der Praxis bedeutet dies, dass Braze versuchen wird, alle 5 Sekunden so viele Nutzer:innen wie möglich zu verarbeiten, bevor diese Nutzer:innen an Criteo weitergeleitet werden.
+Wenn Nutzer:innen den Schritt Audience Sync erreichen, synchronisiert Braze sie nahezu in Realtime und respektiert dabei die Rate-Limits der API von Criteo. Braze verarbeitet alle fünf Sekunden so viele Nutzer:innen wie möglich, bevor es sie an Criteo weiterleitet.
 
-Das Rate-Limits für die API von Criteo besagt, dass nicht mehr als 250 Anfragen pro Minute gestellt werden dürfen. Erreicht eine Braze-Kund:in dieses Rate-Limit, wird Braze-Canvas die Synchronisierung für bis zu ~13 Stunden wiederholen. Wenn die Synchronisierung nicht möglich ist, werden diese Nutzer:innen unter der Metriken Users Errored aufgeführt. 
+Das Rate-Limits für die API von Criteo erlaubt nicht mehr als 250 Anfragen pro Minute. Erreicht eine Kund:in dieses Limit, wiederholt Braze die Synchronisierung für bis zu ~13 Stunden. Wenn die Synchronisierung immer noch nicht möglich ist, listet Braze diese Nutzer:innen in der Metrik Fehlerhafte Nutzer:innen auf. 
 
 ## Analytics verstehen
 

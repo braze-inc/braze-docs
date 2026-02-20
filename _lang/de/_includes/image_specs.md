@@ -28,10 +28,10 @@ Modale In-App-Nachrichten sind so konzipiert, dass sie sich bestmöglich und mit
 
 Es gibt zwar keine Beschränkungen für die Anzahl der Textzeichen, die Sie in einer In-App-Nachricht (sowie in Buttons, in der Überschrift, im Hauptteil und in anderen Teilen) verwenden können, aber wir begrenzen die Anzahl der Textzeichen, die Sie verwenden. Zu viel Text führt dazu, dass die Nutzer die Nachricht erweitern und scrollen müssen.
 
-Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maximale Bildgröße von 5 MB und unterstützen die Dateitypen PNG, JPEG und GIF.
+Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maximale Bildgröße von 5 MB und unterstützen die Dateitypen PNG, JPEG und GIF. WebP-Bilder werden nicht von allen Geräten oder Browsern unterstützt. Wir empfehlen, WebP-Bilder in PNG oder JPEG zu konvertieren, bevor Sie sie zu In-App-Nachrichten hinzufügen.
 
 {% tabs %}
-{% tab Porträt %}
+{% tab Portrait %}
 
 | Typ | Seitenverhältnis | Bildqualität | Anmerkungen |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maxim
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% endtab %}
-{% tab Landschaft %}
+{% tab Landscape %}
 
 | Typ | Seitenverhältnis | Bildqualität | Anmerkungen |
 | --- | --- | --- | --- |
@@ -152,7 +152,7 @@ table td {
 | --- | --- | 
 | Größe | 5 MB |
 | Breite | Überschrift: 600 px<br>Text: 480 px |
-| Dateitypen | PNG, JPEG, GIF |
+| Dateitypen | PNG, JPEG, GIF<br><br> Die Unterstützung von WebP-Bildern variiert je nach E-Mail Client. Für ein zuverlässiges Rendering konvertieren Sie WebP-Bilder in PNG oder JPEG, bevor Sie sie zu Nachrichten per E-Mail hinzufügen. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Text Spezifikationen | Empfohlene maximale Eigenschaften |

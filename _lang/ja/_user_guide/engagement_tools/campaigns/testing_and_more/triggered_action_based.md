@@ -1,6 +1,6 @@
 ---
 nav_title: API トリガーキャンペーンとアクションベースのキャンペーン
-article_title: API トリガーキャンペーンとアクションベースのキャンペーンのテスト
+article_title: APIトリガーとアクションベースのキャンペーンをテストする
 page_order: 2
 page_type: reference
 description: "この記事では、API トリガーキャンペーンとアクションベースのキャンペーンをテストする方法について説明します。"

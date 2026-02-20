@@ -28,7 +28,7 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 
 While there are no limits to how many text characters you can include in an in-app message (as well as buttons, headline, main body, and others), we moderate how many text characters you use. Too much text will require users to expand and scroll the message.
 
-All in-app messages have a recommended image size of 500 KB, maximum image size of 5 MB, and support PNG, JPEG, and GIF file types.
+All in-app messages have a recommended image size of 500 KB, maximum image size of 5 MB, and support PNG, JPEG, and GIF file types. WebP images aren't supported across all devices or browsers; we suggest converting WebP images to PNG or JPEG before adding them to in-app messages.
 
 {% tabs %}
 {% tab Portrait %}
@@ -152,7 +152,7 @@ table td {
 | --- | --- | 
 | Size | 5 MB |
 | Width | Header: 600 px<br>Body: 480 px |
-| File types | PNG, JPEG, GIF |
+| File types | PNG, JPEG, GIF<br><br> WebP image support varies across email clients. For reliable rendering, convert WebP images to PNG or JPEG before adding them to email messages. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Text specifications | Recommended maximum properties |

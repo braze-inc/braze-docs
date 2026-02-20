@@ -1,4 +1,4 @@
-## Prerequisites
+## 필수 조건
 
 콘텐츠 카드를 사용하려면 먼저 [Braze Swift SDK를]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) 앱에 통합해야 합니다. 그런 다음 tvOS 앱 설정 단계를 완료해야 합니다.
 

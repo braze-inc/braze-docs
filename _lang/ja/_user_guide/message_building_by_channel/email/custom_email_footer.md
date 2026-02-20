@@ -10,7 +10,7 @@ channel:
 
 # メールのカスタムフッター
 
-> Liquid 属性 {% raw %}`{{${email_footer}}}`{% endraw %} を使用して個々のメールにテンプレート化できるカスタムメールフッターを、ワークスペース全体で設定できます。
+> ワークスペース全体のカスタムメールフッタを設定できます。これは、{% raw %}`{{${email_footer}}}`{% endraw %}リキッド属性を使用して、すべてのメールにテンプレートできます。
 
 カスタムメールフッターを使うことで、メールテンプレートやメールキャンペーンごとに新しいフッターを作成する必要がなくなる。新規および既存のすべてのメール キャンペーンには、カスタムフッタに加えた変更が反映されます。[CAN-SPAM法（2003年）を](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business)遵守するためには、Eメールにあなたの会社の物理的な住所と配信停止リンクを含める必要があることを覚えておいてほしい。
 
@@ -33,7 +33,7 @@ channel:
 デフォルトのフッターでは、属性 {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} と物理的な住所を使用しています。このデフォルトを使用する場合は、必ず**<other>**を**Protocol**に選択してください。
 
 {% alert important %}
-CAN-SPAM規制に準拠するため、カスタムフッターには{% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} を含める必要がある。この属性がないと、カスタムフッターを保存することができない。
+CAN-OMOBAM 規定に準拠するには、カスタムフッタに配信停止リンクを含める必要があります。このリキッド属性{% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} または独自の配信停止 URL を使用できます。配信停止リンクなしでは、カスタムフッタを保存できません。
 {% endalert %}
 
 ![カスタムフッターに必要なプロトコルとURLの値。]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}

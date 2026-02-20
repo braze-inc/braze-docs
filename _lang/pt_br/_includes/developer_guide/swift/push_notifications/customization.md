@@ -28,7 +28,7 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:BRZNotifications.categories];
@@ -53,7 +53,7 @@ AppDelegate.braze?.notifications.handleUserNotification(response: response, with
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [AppDelegate.braze.notifications handleUserNotificationWithResponse:response
@@ -94,7 +94,7 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 NSMutableSet<UNNotificationCategory *> *categories = [BRZNotifications.categories mutableCopy];
@@ -163,7 +163,7 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // For iOS 16.0+
@@ -217,7 +217,7 @@ Você deve especificar um URL de protocolo que direcione para o local do arquivo
 * Use o parâmetro `sound` do [objeto Apple push]({{site.baseurl}}/api/objects_filters/messaging/apple_object#apple-push-object) para passar o URL para o Braze.
 * Especifique o URL no dashboard. No [criador do push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#step-3-select-notification-type-ios-and-android), selecione **Configurações** e insira o URL do protocolo no campo **Som**. 
 
-![O criador do push no dashboard do Braze]({% image_buster /assets/img_archive/sound_push_ios.png %})
+![O criador do push no dashboard da Braze]({% image_buster /assets/img_archive/sound_push_ios.png %})
 
 Se o arquivo de som especificado não existir ou se a palavra-chave “default” for inserida, a Braze usará o som de alerta padrão do dispositivo. Além de nosso dashboard, o som também pode ser configurado por meio de nossa [API de envio de mensagens][12].
 

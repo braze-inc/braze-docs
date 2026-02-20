@@ -50,7 +50,7 @@ Una vez finalizada la importación, se enviará una notificación por correo ele
 ### Paso 4: Crear segmentos Braze con cohortes Kubit
 Después de importar cohortes a Braze, puede utilizarlas como filtros para crear segmentos Braze e incluirlos en campañas Braze o Canvas. Visite nuestra documentación de segmentos para obtener más información sobre [cómo crear segmentos Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment).
 
-![En el constructor de segmentos Braze, el atributo de usuario "Kubit cohorts" se establece en "includes_value" y muestra una lista de las cohortes disponibles.]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
+![En el creador de segmentos Braze, el atributo de usuario "Cohortes Kubit" está configurado en "includes_value" y muestra una lista de las cohortes disponibles.]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
 
 ## Coincidencia de usuarios
 

@@ -81,7 +81,7 @@ th:nth-child(6), td:nth-child(6) {
         <tr>
             <th>パラメーター</th>
             <th>説明</th>
-            <th>required</th>
+            <th>必須かどうか</th>
             <th>デフォルト（指定がない場合）</th>
             <th>タイプ</th>
             <th>例</th>
@@ -170,7 +170,7 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>workout_info_center_icon</code></td>
-            <td>アクティブなワークアウト画面のセンターカードに使用されるアイコンである。</td>
+            <td>アクティブなワークアウト画面のセンターカードで使用するアイコンである。</td>
             <td>いいえ</td>
             <td></td>
             <td>string</td>
@@ -186,7 +186,7 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>workout_info_right_icon</code></td>
-            <td>アクティブなワークアウト画面の右カードで使用するアイコンである。</td>
+            <td>アクティブなワークアウト画面の右カードに使用されるアイコンである。</td>
             <td>いいえ</td>
             <td></td>
             <td>string</td>
@@ -264,7 +264,7 @@ th:nth-child(6), td:nth-child(6) {
         <tr>
             <th>パラメーター</th>
             <th>説明</th>
-            <th>required</th>
+            <th>必須かどうか</th>
             <th>デフォルト（指定がない場合）</th>
             <th>タイプ</th>
             <th>例</th>
@@ -372,7 +372,7 @@ th:nth-child(6), td:nth-child(6) {
 
 #### 許容されるパラメーター
 
-| パラメーター | 説明 | required | タイプ | 例 |
+| パラメーター | 説明 | 必須かどうか | タイプ | 例 |
 | --- | --- | --- | --- | --- |
 | `id` | 映画のIDだ。 | はい | 数値 | 1 |
 | `title` | 映画のタイトルだ。 | はい | string | ジョーズ |

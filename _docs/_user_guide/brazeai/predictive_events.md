@@ -2,7 +2,7 @@
 nav_title: Predictive Events
 article_title: Predictive Events
 description: "This article covers Predictive Events (previously Predictive Purchases), a tool in the Braze Predictive Suite that gives marketers the ability to identify and message users based on their likelihood to perform an event."
-page_order: 2.1
+page_order: 9
 alias: /predictive_purchases/
 search_rank: 1
 ---
@@ -13,7 +13,7 @@ search_rank: 1
 
 ## About Predictive Events
 
-After a prediction is built, users are assigned a [likelihood score]({{site.baseurl}}/user_guide/brazeai/predictive_events/prediction_analytics/#purchase_score) between 0 and 100 denoting how likely they are to perform your selected event. The higher the score, the more likely a user is to perform that event. Users are also sorted by low, medium, and high likelihood categories.
+After a prediction is built, users are assigned a [likelihood score]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) between 0 and 100 denoting how likely they are to perform your selected event. The higher the score, the more likely a user is to perform that event. Users are also sorted by low, medium, and high likelihood categories.
 
 The real value of Predictive Events lies in using prediction results to create a segment or campaign. Marketers can build targeted campaigns directly on the **Prediction** page for immediate revenue-boosting results or save a segment for a future campaign or Canvas. Not sure who to target first? Read our [strategic considerations]({{site.baseurl}}/user_guide/brazeai/predictive_events/messaging_users/#strategy) for messaging users based on their likelihood score.
 
@@ -21,8 +21,8 @@ The real value of Predictive Events lies in using prediction results to create a
 
 ## Accessing Predictive Events
 
-The **Predictions** page is located in the **Analytics** section. For full access, contact your account manager.
+{% include brazeai/predictions_page_access.md %}
 
 Prior to purchasing this feature, it is available in preview mode. This will allow you to see a demo prediction with synthetic data as well as create one preview prediction model at a time. This prediction will be created based on your actual user data, but it will not allow you to target users for messaging according to their likelihood score. It will also not update regularly after creation.
 
-With the Preview, you can also edit and rebuild this one prediction or archive it and create others to test the expected [prediction quality]({{site.baseurl}}/user_guide/brazeai/predictive_events/prediction_analytics/#prediction_quality) of [different audiences]({{site.baseurl}}/user_guide/brazeai/predictive_events/creating_an_event_prediction/#audience) and become familiar with the analytics.
+With the Preview, you can also edit and rebuild this one prediction or archive it and create others to test the expected [prediction quality]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#prediction_quality) of [different audiences]({{site.baseurl}}/user_guide/brazeai/predictive_events/creating_an_event_prediction/#audience) and become familiar with the analytics.

@@ -50,7 +50,7 @@ excerpt_separator: ""
 Post,Envio de e-mail,Criar,Modelo,REST,API
 {% endapitags %}
 
-Use as APIs REST de e-mail para gerenciar programaticamente os modelos de e-mail que você armazenou nos dashboards do Braze, na página Modelos e mídias. A Braze oferece dois endpoints para criar e atualizar seus modelos de e-mail.
+Use as APIs REST de e-mail para gerenciar programaticamente os modelos de e-mail que você armazenou nos dashboards do Braze, na página Modelos & Media. A Braze oferece dois endpoints para criar e atualizar seus modelos de e-mail.
 
 A resposta desse endpoint inclui um campo para `email_template_id`, que pode ser usado para atualizar o modelo em chamadas subsequentes à API.
 
@@ -147,7 +147,7 @@ GET https://YOUR_REST_API_URL/templates/email/list
 
 {% api %}
 ## 3 Campanhas disparam o envio
-{% apimethod post %}campaigns/trigger/send{% endapimethod %}
+{% apimethod post %}campanhas/trigger/send{% endapimethod %}
 {% apitags %}Postar, campanhas, disparar, enviar{% endapitags %}
 
 O envio disparado por API permite que você abrigue o conteúdo da mensagem dentro do dashboard da Braze e, ao mesmo tempo, determine quando a mensagem será enviada e para quem por meio de sua API. 
@@ -265,24 +265,24 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Campo de perfil do usuário | Especificação do tipo de dados |
 | ---| --- |
-| country | (string) Exigimos que os códigos de país sejam transmitidos à Braze no [padrão ISO-3166-1 alfa-2][17]. |
-| current_location | (objeto) Da forma {"longitude": -73.991443, "latitude": 40.753824} |
-| data_da_primeira_sessão | (data em que o usuário usou o app pela primeira vez) String no formato ISO 8601 ou no formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
-| data_da_última_sessão | (data em que o usuário usou o app pela última vez) String no formato ISO 8601 ou no formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
+| country | (string) Exigimos que os códigos de país sejam transmitidos ao Braze no [padrão ISO-3166-1 alfa-2][17]. |
+| current_location | (objeto) Com o formato {"longitude": -73.991443, "latitude": 40.753824} |
+| date_of_first_session | (data em que o usuário usou o app pela primeira vez) String no formato ISO 8601 ou no formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
+| date_of_last_session | (data em que o usuário usou o app pela última vez) String no formato ISO 8601 ou no formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
 | dob | (data de nascimento) String no formato "AAAA-MM-DD", por exemplo, 1980-12-21. |
 | e-mail | (string) |
-| email_subscribe | (string) Os valores disponíveis são "opted_in" (explicitamente registrado para receber mensagens de e-mail), "unsubscribed" (explicitamente cancelado inscrição para receber mensagens de e-mail) e "subscribed" (nem optado nem cancelado).  |
-| id_externo | (string) Do identificador exclusivo do usuário. |
+| email_subscribe | (string) Os valores disponíveis são "opted_in" (explicitamente registrado para receber mensagens de e-mail), "unsubscribed" (explicitamente cancelado inscrição para receber mensagens de e-mail) e "subscribed" (nem opt-in nem out).  |
+| external_id | (string) Do identificador exclusivo do usuário. |
 | Facebook | hash contendo qualquer um dos seguintes itens: `id` (string), `likes` (vetor de strings), `num_friends` (inteiro). |
 | first_name | (string) |
 | gender | (string) "M", "F", "O" (outro), "N" (não aplicável), "P" (prefere não dizer) ou nil (desconhecido). |
 | home_city | (string) |
 | image_url | (string) URL da imagem a ser associada ao perfil do usuário. |
-| language | (string), exigimos que o idioma seja passado para a Braze no [padrão ISO-639-1][24]. <br>[Lista de idiomas aceitos][1]|
+| language | (string), exigimos que o idioma seja passado para o Braze no [padrão ISO-639-1][24]. <br>[Lista de idiomas aceitos](/docs/user_guide/data_and_analytics/user_data_collection/language_codes/)|
 | last_name | (string) |
 |marked_email_as_spam_at| (string) Data em que o e-mail do usuário foi marcado como spam. Aparece no formato ISO 8601 ou no formato aaaa-MM-dd'T'HH:mm:ss:SSSZ.|
 | telefone | (string) |
-| push_subscribe | (string) Os valores disponíveis são "opted_in" (explicitamente registrado para receber mensagens push), "unsubscribed" (explicitamente optado por não receber mensagens push) e "subscribed" (nem nem optou por receber, nem por não receber).  |
+| push_subscribe | (string) Os valores disponíveis são "opted_in" (explicitamente registrado para receber mensagens push), "unsubscribed" (explicitamente cancelado a aceitação de mensagens push) e "subscribed" (nem aceito nem recusado).  |
 | push_tokens | Vetor de objetos com `app_id` e `token` string. Como opção, você pode fornecer um `device_id` para o dispositivo ao qual esse token está associado, por exemplo, `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. Se o endereço `device_id` não for fornecido, um será gerado aleatoriamente. |
 | time_zone | (string) Nome do fuso horário do [banco de dados de fuso horário da IANA][26] (por exemplo, "America/New_York" ou "Eastern Time (US & Canada)"). Somente os valores válidos de fuso horário serão definidos. |
 | twitter | Hash contendo qualquer um dos seguintes itens: `id` (inteiro), `screen_name` (string, identificador do X (antigo Twitter)), `followers_count` (inteiro), `friends_count` (inteiro), `statuses_count` (inteiro). |

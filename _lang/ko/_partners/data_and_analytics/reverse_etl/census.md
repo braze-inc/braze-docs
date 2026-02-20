@@ -34,17 +34,17 @@ In the prompt that appears, name this connection, and provide your Braze endpoin
 
 ![]({% image_buster /assets/img/census/add_service.png %}){: style="max-width:60%;"}
 
-### Step 2: Create a Census sync
+### 2단계: Create a Census sync
 
 To sync customers to Braze, you must build a sync. Here, you will define where to sync data and how you would like fields mapped across the two platforms.
 
 1. Navigate to the **Syncs** tab and select **New Sync**.<br><br> 
 2. In the composer, select the source data model from your data warehouse.<br><br>
-3. Configure where the model will be synced to. Select **Braze** as the destination and the [supported object type](#supported-objects) to sync.<br>![In the "Select a Destination" prompt, "Braze" is selected as the connection, and various objects are listed.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
-4. Select what synchronization rule you want to apply (**Update or Create** is the most common choice, but you can choose more advanced rules to handle deleting data, for example).<br><br>
-5. Next, for record matching purposes, choose a sync key to [map](#supported-objects) your Braze object to a model field.<br>![In the "Select a Sync Key" prompt, "External User ID" from Braze is matched to "user_id" in the source.]({% image_buster /assets/img/census/census_1.png %}){: style="max-width:80%;"}<br><br>
-6. Lastly, map the Census data fields to the equivalent Braze fields.<br>![Census mapping]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
-7. Confirm details and create the sync. 
+3. Configure where the model will be synced to. 대상으로 **Braze**를 선택하고 동기화할 [지원되는 오브젝트 유형](#supported-objects)을 선택합니다.<br>!['대상 선택' 프롬프트에서 'Braze'가 연결로 선택되고 다양한 오브젝트가 나열됩니다.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
+4. 적용할 동기화 규칙을 선택합니다. **업데이트 또는 생성**이 가장 일반적인 선택이지만, 데이터 삭제 등을 처리하기 위해 고급 규칙을 선택할 수도 있습니다.<br><br>
+5. Next, for record matching purposes, choose a sync key to [map](#supported-objects) your Braze object to a model field.<br>!["동기화 키 선택" 프롬프트에서 Braze의 "외부 사용자 ID"가 소스의 "user_id"와 일치합니다.]({% image_buster /assets/img/census/census_1.png %}){: style="max-width:80%;"}<br><br>
+6. Lastly, map the Census data fields to the equivalent Braze fields.<br>![인구조사 매핑]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
+7. 세부 정보를 확인하고 동기화를 생성합니다. 
 
 After the sync runs, you will find the user data in Braze. You can now create and add a Braze segment to future Braze campaigns and Canvases to target these users. 
 

@@ -16,6 +16,9 @@ guide_featured_list:
 - name: "WhatsApp設定"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
   image: /assets/img/braze_icons/whatsapp.svg
+- name: "WhatsApp コネクタを持ち込む"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/
+  image: /assets/img/braze_icons/whatsapp.svg
 - name: "WhatsAppサブスクリプショングループ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
   image: /assets/img/braze_icons/table.svg

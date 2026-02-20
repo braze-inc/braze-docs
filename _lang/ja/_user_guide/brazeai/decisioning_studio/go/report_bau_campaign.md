@@ -26,7 +26,7 @@ BAUレポートを設定する前に、まず、BAU治療グループ、BrazeAI 
 リンゴ対リンゴ」の実験デザインがなければ、BAUレポートは混乱したり誤解を招いたりする可能性がある。
 
 実験デザインを検証した後、BAUレポートを設定するには以下の詳細が必要である：
-- 統合アクティベーションプラットフォーム（Braze、Salesforce Marketing Cloud、Klaviyo）のキャンペーンID（1つまたは複数）。
+- 統合アクティベーションプラットフォーム（Braze、Salesforce Marketing Cloud、またはKlaviyo）の1つまたは複数のキャンペーンIDで、キャンペーン内のすべてのコミュニケーションがBAUコミュニケーションである。
     - Brazeでは、キャンペーンとキャンバスを受け付けている。
     - Salesforce Marketing Cloudでは、ジャーニーのみを受け付ける
     - Klaviyoの場合、Flowsのみが受け入れられる

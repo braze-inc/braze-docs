@@ -10,7 +10,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Amplitude
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
@@ -38,7 +38,7 @@ Amplitude and Braze offer two different integration methods. Read through the fo
 | Requirement | Description |
 | ----------- | ----------- |
 | Braze REST API key | A Braze REST API key with the all permissions.<br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [REST 엔드포인트 URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 | Braze app identifier | The identifier for the app that will receive Amplitude events. This can be found within the **Braze Dashboard > Developer Console > Settings**. |
 
 ### Amplitude Setup
@@ -86,7 +86,7 @@ Next, select a destination to sync your user property to.
 
 Lastly, define the frequency of your sync.
 
-![Define your cadence as a one-time sync or scheduled sync.]({% image_buster /assets/img/amplitude9.png %})
+![케이던스를 일회성 동기화 또는 예약 동기화로 정의합니다.]({% image_buster /assets/img/amplitude9.png %})
 
 {% endtab %}
 {% tab Syncing computation %}
@@ -101,7 +101,7 @@ Next, select a destination to sync your computation to.
 
 Lastly, define the frequency of your sync.
 
-![Define your cadence as a one-time sync or scheduled sync.]({% image_buster /assets/img/amplitude9.png %})
+![케이던스를 일회성 동기화 또는 예약 동기화로 정의합니다.]({% image_buster /assets/img/amplitude9.png %})
 
 {% endtab %}
 {% endtabs %}

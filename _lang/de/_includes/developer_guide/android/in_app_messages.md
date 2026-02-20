@@ -13,11 +13,11 @@
 Die Anzeige von In-App-Nachrichten wird von der Klasse [`BrazeInAppMessageManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html) verwaltet. Jede Aktivität in Ihrer App muss bei `BrazeInAppMessageManager` registriert sein, damit sie In-App-Nachricht-Ansichten zur Ansichtshierarchie hinzufügen kann. Es gibt zwei Möglichkeiten, dies zu erreichen:
 
 {% tabs local %}
-{% tab automatisch %}
+{% tab automatically %}
 Die [Callback-Integration für den Aktivitätslebenszyklus]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) verarbeitet die Registrierung von In-App-Nachrichten automatisch; eine zusätzliche Integration ist nicht erforderlich. Dies ist die empfohlene Methode für die Registrierung von In-App-Nachrichten.
 {% endtab %}
 
-{% tab manuell %}
+{% tab manually %}
 {% alert warning %}
 Wenn Sie den Activity Lifecycle Callback für die automatische Registrierung verwenden, brauchen Sie diesen Schritt nicht auszuführen.
 {% endalert %}

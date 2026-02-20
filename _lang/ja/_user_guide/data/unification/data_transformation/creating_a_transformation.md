@@ -1,6 +1,6 @@
 ---
 nav_title: 変換の作成
-article_title: 変換の作成
+article_title: トランスフォーメーションの作成
 page_order: 1
 page_type: reference
 description: "このリファレンス記事では、Braze Data Transformation を使用して変換を作成するステップについて説明します。"

@@ -1,6 +1,6 @@
 ---
-nav_title: "POST:ユーザーを追跡する（同期）"
-article_title: "POST:ユーザーを追跡する（同期）"
+nav_title: "POST:ユーザーの作成と更新（同期式）"
+article_title: "POST:ユーザーの作成と更新（同期式）"
 alias: /post_user_track_synchronous/
 layout: api_page
 page_order: 4.5
@@ -9,15 +9,15 @@ description: "この記事では、「ユーザー同期追跡」Braze エンド
 
 ---
 {% api %}
-# ユーザーを追跡する（同期）
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}
+# ユーザーの作成と更新（同期式）
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /ユーザー/トラッキング/同期
 {% endapimethod %}
 
 > このエンドポイントを使用して、カスタムイベントと購入を記録し、ユーザープロファイル属性を同期的に更新します。このエンドポイントは、ユーザープロファイルを非同期に更新する [`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track)と同様に機能します。
 
 {% alert important %}
-このエンドポイントは現在ベータ版である。このベータ版への参加に興味がある場合は、Brazeのアカウントマネージャーに連絡すること。
+このエンドポイントは現在**限定ベータ版**である。現在、ベータ版への新規顧客の追加は行っていないが、この機能がBrazeとの統合に役立つと思われる場合は、Brazeアカウントマネージャーに知らせてほしい。
 {% endalert %}
 
 ## 同期APIコールと非同期APIコール
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 以下の表に列挙されている各リクエストコンポーネントに対して、`external_id` 、`user_alias` 、`braze_id` 、`email` 、`phone` のいずれかを含める必要がある。
 {% endalert %}
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 | `attributes` | オプション | つの属性オブジェクト | 「[ユーザー属性オブジェクト]({{site.baseurl}}/api/objects_filters/user_attributes_object/)」を参照 |
 | `events` | オプション | イベントオブジェクト | [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)を参照してください |

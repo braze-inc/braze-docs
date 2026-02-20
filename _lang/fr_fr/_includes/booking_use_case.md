@@ -6,16 +6,16 @@ Ce cas d'utilisation montre comment vous pouvez utiliser les fonctionnalités de
 
 La création de ce service présente d'autres avantages :
 - Les messages envoyés feront l'objet d'un suivi et d'un rapport complets.
-- Le contenu des messages peut être mis à jour par des utilisateurs non techniques de Braze.
+- Les utilisateurs non techniques de Braze peuvent mettre à jour le contenu des messages.
 - Les messages obéissent aux statuts "opt-in" et "opt-out" sur les profils utilisateurs par configuration de la campagne.
-- Les données de réservation et les données d'interaction avec les messages peuvent être utilisées pour segmenter et cibler les utilisateurs en vue d'un envoi de messages supplémentaires. Par exemple, vous pouvez recibler les personnes qui n'ont pas ouvert le message de rappel initial en leur envoyant un rappel supplémentaire avant leur rendez-vous.
+- Vous pouvez utiliser à la fois les données de réservation et les données d'interaction avec les messages pour segmenter et cibler les utilisateurs en vue d'un envoi de messages supplémentaires. Par exemple, vous pouvez recibler les personnes qui n'ont pas ouvert le message de rappel initial en leur envoyant un rappel supplémentaire avant leur rendez-vous.
 
 Suivez les étapes suivantes pour réaliser ce cas d'utilisation :
 1. [Inscrire les données relatives aux réservations à venir dans un profil utilisateur Braze](#step-1)
 2. [Configurer et lancer un message de rappel de réservation](#step-2)
 3. [Traiter les réservations et les annulations mises à jour](#step-3)
 
-## Étape 1 : Inscrire les données relatives aux réservations à venir dans un profil utilisateur Braze {#step-1}
+## Étape 1 : Inscrire les données relatives aux réservations à venir dans un profil utilisateur Braze {#step-1}
 
 Utilisez le point de terminaison Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) pour écrire un [attribut personnalisé imbriqué]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) dans le profil d'un utilisateur à chaque fois qu'une réservation est effectuée. Assurez-vous que l'attribut personnalisé imbriqué contient toutes les informations nécessaires à l'envoi et à la personnalisation du message de rappel. Dans ce cas d'utilisation, nous nommerons l'attribut personnalisé imbriqué "voyages".
 
@@ -42,7 +42,7 @@ Lorsqu'un utilisateur crée une réservation, utilisez la structure suivante pou
 
 L'attribut personnalisé imbriqué "voyages" s'affichera dans le profil utilisateur de la manière suivante.
 
-![Deux attributs personnalisés imbriqués pour un voyage à Londres et un voyage à Sydney.][1]{: style="max-width:70%;"}
+![Deux attributs personnalisés imbriqués pour un voyage à Londres et un voyage à Sydney.]({% image_buster /assets/img/use_cases/2_nested_attributes.png %}){: style="max-width:70%;"}
 
 ### Mise à jour des réservations
 Lorsqu'un utilisateur met à jour une réservation, utilisez la structure suivante pour le tableau d'objets afin d'envoyer les données à Braze via l'endpoint `/users/track`.
@@ -99,7 +99,7 @@ Lorsqu'un utilisateur supprime une réservation, utilisez la structure suivante 
 {% endraw %}
 {% endtab %}
 {% tab SDK %}
-#### Inscrire des attributs imbriqués dans les profils utilisateurs via le SDK
+#### Écrire des attributs imbriqués dans les profils utilisateurs via le SDK
 
 Si vous collectez des prises de rendez-vous avec votre appli, votre site web ou les deux et que vous souhaitez écrire ces données directement dans un profil utilisateur, vous pouvez utiliser le SDK de Braze pour transmettre ces données. Voici un exemple utilisant le SDK Web :
 
@@ -120,7 +120,7 @@ braze.getUser().setCustomUserAttribute("trips", json);
 {% endtab %}
 {% endtabs %}
 
-La réservation spécifiée sera supprimée de l'attribut personnalisé imbriqué dans le profil utilisateur et affichera toutes les réservations restantes.
+Braze supprime la réservation spécifiée de l'attribut personnalisé imbriqué dans le profil utilisateur et affiche toutes les réservations restantes.
 
 ![Un attribut personnalisé imbriqué pour un voyage à Londres.]({% image_buster /assets/img/use_cases/1_nested_attribute.png %}){: style="max-width:70%;"}
 
@@ -132,7 +132,7 @@ Créez une audience cible pour recevoir des rappels à l'aide d'une segmentation
 - Une date de début **dans plus d'un jour** et
 - Une date de début **dans moins de 2 jours** 
 
-![Un attribut personnalisé imbriqué "voyages" avec des critères pour une date de début supérieure à un jour et inférieure à deux jours.][3]
+![Un attribut personnalisé imbriqué "voyages" avec des critères pour une date de début supérieure à un jour et inférieure à deux jours.]({% image_buster /assets/img/use_cases/custom_nested_attribute.png %})
 
 ### Étape 2b : Créez votre message
 
@@ -155,7 +155,7 @@ You have the following booked in 2 days! Check the information below:
 
 ### Étape 2c : Lancez votre campagne
 
-Lancez la campagne pour l'envoi du message e-mail de rappel. Désormais, chaque fois que Braze recevra l'attribut personnalisé "voyages", un message sera planifié en fonction des données incluses dans l'objet de la réservation concernée.
+Lancez la campagne pour l'envoi du message e-mail de rappel. Désormais, chaque fois que Braze reçoit l'attribut personnalisé "voyages", Braze planifie un message en fonction des données incluses dans l'objet de la réservation concernée.
 
 ## Étape 3 : Traiter les mises à jour des réservations et les annulations {#step-3}
 
@@ -193,7 +193,7 @@ Supposons que dans ce cas d'utilisation, un utilisateur ait mis à jour la date 
 {% endtab %}
 {% tab SDK %}
 
-#### Inscrire des attributs imbriqués dans les profils utilisateurs via le SDK
+#### Écrire des attributs imbriqués dans les profils utilisateurs via le SDK
 
 Envoyez des événements personnalisés au profil utilisateur via le SDK. Par exemple, si vous utilisez le SDK web, vous pouvez envoyer :
 
@@ -256,7 +256,7 @@ Si l'utilisateur de ce cas d'utilisation mettait à jour son voyage à Sydney, v
 
 #### Réservation annulée
 
-Si l'utilisateur de ce cas d'utilisation annule son voyage Syndey, vous enverrez l'appel suivant à l'endpoint `/users/track`:
+Si l'utilisateur de ce cas d'utilisation a annulé son voyage à Sydney, vous enverrez l'appel suivant à l'endpoint `/users/track`:
 
 {% raw %}
 ```json
@@ -280,5 +280,3 @@ Si l'utilisateur de ce cas d'utilisation annule son voyage Syndey, vous enverrez
 
 Après l'envoi de ces appels et la mise à jour du profil utilisateur, les messages de rappel de réservation refléteront les données les plus récentes concernant les dates de réservation de l'utilisateur.
 
-[1]: {% image_buster /assets/img/use_cases/2_nested_attributes.png %}
-[3]: {% image_buster /assets/img/use_cases/custom_nested_attribute.png %}

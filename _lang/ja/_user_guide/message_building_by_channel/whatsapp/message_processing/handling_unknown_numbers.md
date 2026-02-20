@@ -1,6 +1,6 @@
 ---
-nav_title: 知らない電話番号への対応
-article_title: 不明な電話番号への対応
+nav_title: 知らない電話番号を扱う
+article_title: 不明な電話番号を扱う
 description: "この参考記事では、BrazeがWhatsAppユーザーの不明な電話番号をどのように処理するかについて説明する。"
 page_type: reference
 channel:
@@ -8,7 +8,7 @@ channel:
 page_order: 50
 ---
 
-# 知らない電話番号への対応
+# 知らない電話番号を扱う
 
 > BrazeでWhatsAppを立ち上げると、見知らぬユーザーからメッセージが届くことがある。以下のステップでは、未確認のユーザーと番号がどのように処理されるかを説明する。
 

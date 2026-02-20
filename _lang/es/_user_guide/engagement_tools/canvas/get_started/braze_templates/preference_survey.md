@@ -34,40 +34,40 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 
 1. Selecciona **Editar** junto al nombre de la plantilla.
 
-\![El título actual y la descripción del Canvas.]({% image_buster /assets/img/canvas_templates/preference_survey1.png %}){: style="max-width:50%;"}
+![El título actual y la descripción del Canvas.]({% image_buster /assets/img/canvas_templates/preference_survey1.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\. Actualiza el nombre del Canvas para especificar que es para dirigirse a nuevos usuarios cuando utilizan la aplicación por primera vez.
 3\. Actualiza la descripción para explicar que este Canvas contiene mensajería personalizada.
 4\. Añade la etiqueta **Incorporación** para que podamos filtrarla en la página de inicio de Canvas.
 
-\![El nuevo nombre, descripción y etiqueta del Canvas.]({% image_buster /assets/img/canvas_templates/preference_survey2.png %}){: style="max-width:90%;"}
+![El nuevo nombre, descripción y etiqueta del Canvas.]({% image_buster /assets/img/canvas_templates/preference_survey2.png %}){: style="max-width:90%;"}
 
-### Paso 2: Asignar eventos de conversión
+### Paso 2: Asignar eventos de conversión
 
 Actualiza el **evento de conversión primaria - A** para **realizar un evento personalizado**. A continuación, selecciona **Última aplicación utilizada** para el evento personalizado.
 
-\![Última aplicación utilizada como nombre del evento personalizado seleccionado para el evento de conversión.]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
+![Última aplicación utilizada como nombre del evento personalizado seleccionado para el evento de conversión.]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
 
-### Paso 3: Adapta el horario de entrada
+### Paso 3: Adapta el horario de entrada
 
 Mantengamos el horario de entrada como **Basado en acciones** para que los usuarios entren en nuestro Canvas cuando inicien una sesión en la aplicación. De este modo, podemos empezar a establecer relaciones con una interacción oportuna.
 
 Haremos una actualización en esta sección ajustando la **Ventana de Entrada** a la fecha y hora que deseemos.
 
-\!["Ventana de entrada" sección con la hora de inicio 30 de enero de 2025 a las 12 pm.]({% image_buster /assets/img/canvas_templates/preference_survey4.png %}){: style="max-width:90%;"}
+![Sección "Ventana de entrada" con hora de inicio el 30 de enero de 2025 a las 12 pm.]({% image_buster /assets/img/canvas_templates/preference_survey4.png %}){: style="max-width:90%;"}
 
 ### Paso 4: Selecciona la audiencia objetivo
 
 Mantendremos la audiencia objetivo tal cual para dirigirnos a nuestros usuarios que utilizaron por primera vez la aplicación StyleRyde hace menos de un día.
 
-\![El filtro "Utilizó por primera vez estas aplicaciones hace menos de 1 día" seleccionado para dirigirse a la audiencia de entrada.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
+![El filtro "Utilizó estas aplicaciones por primera vez hace menos de 1 día" se seleccionó para dirigirse a la audiencia de entrada.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
 
 ### Paso 5: Selecciona tu configuración de envío
 
 Mantendremos la configuración predeterminada de la suscripción, de modo que sólo enviemos a los usuarios que se hayan suscrito o hayan optado por recibir mensajes o notificaciones con las horas tranquilas activadas, y omitiremos las demás configuraciones (limitación de frecuencia y grupos de semilla).
 
-\!["Configuración de envío" sección con la configuración de suscripción para usuarios suscritos o con adhesión voluntaria con las horas tranquilas activadas entre las 12 de la mañana y las 8 de la tarde.]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
+![Sección "Configuración de envío" con la configuración de suscripción para los usuarios suscritos o con adhesión voluntaria con las horas tranquilas activadas entre las 12 de la mañana y las 8 de la tarde.]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
 
 ### Paso 6: Personaliza tu Canvas
 
@@ -79,7 +79,7 @@ Ahora, construiremos nuestro Canvas personalizando el contenido que se enviará 
 - Usuarios que han iniciado una sesión o han hecho clic en el correo electrónico de incorporación
 - Usuarios que no han iniciado sesión o no han hecho clic en el correo electrónico de incorporación
 
-\![Un paso de Ruta de acción dividido en dos rutas, una para los usuarios que han iniciado una sesión y otra para todos los demás.]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
+![Un paso de Ruta de acción dividido en dos rutas, una para los usuarios que han iniciado una sesión y otra para todos los demás.]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
 
 A partir de aquí, orientaremos a nuestros usuarios y la mensajería en función de los grupos mencionados.
 
@@ -91,7 +91,7 @@ Cuando un usuario haya completado su incorporación, saldrá del Canvas.
 
 A continuación, actualiza el paso Mensaje de **la encuesta de preferencias de contenido** para incluir nuestro cuestionario de preferencias que pide a nuestros usuarios que seleccionen los temas sobre los que están interesados en recibir información en el futuro.
 
-\![Una vista previa del cuestionario de preferencias que pide a los usuarios que seleccionen todos los intereses que correspondan.]({% image_buster /assets/img/canvas_templates/preference_survey7.png %}){: style="max-width:90%;"}
+![Una vista previa del cuestionario de preferencias que pide a los usuarios que seleccionen todos los intereses que correspondan.]({% image_buster /assets/img/canvas_templates/preference_survey7.png %}){: style="max-width:90%;"}
 
 #### Dar un codazo a los usuarios que no han empezado la incorporación 
 

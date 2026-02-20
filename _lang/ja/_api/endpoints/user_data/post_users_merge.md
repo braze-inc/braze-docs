@@ -43,9 +43,9 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
-| `merge_updates` | required | 配列 | オブジェクトの配列。各オブジェクトには `identifier_to_merge` オブジェクトと `identifier_to_keep` オブジェクトが含まれている必要があり、それぞれが `external_id`、`user_alias`、`phone`、または `email` のいずれかでユーザーを参照する必要があります。 |
+| `merge_updates` | 必須かどうか | 配列 | オブジェクトの配列。各オブジェクトには `identifier_to_merge` オブジェクトと `identifier_to_keep` オブジェクトが含まれている必要があり、それぞれが `external_id`、`user_alias`、`phone`、または `email` のいずれかでユーザーを参照する必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### マージ動作
@@ -100,7 +100,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ### 電子メールまたは電話番号でユーザーをマージする
 
-`email`または`phone`が識別子として指定されている場合は、追加の`prioritization`値を識別子に含める必要があります。`prioritization` は、複数のユーザーs が見つかった場合にマージするユーザーを指定する順序付けされた配列である必要があります。つまり、優先順位付けから複数のユーザーが一致した場合、マージは行われません。
+`email`または`phone`が識別子として指定されている場合は、追加の`prioritization`値を識別子に含める必要があります。`prioritization` は、複数のユーザー が見つかった場合にマージするユーザーを指定する順序付けされた配列である必要があります。つまり、優先順位付けから複数のユーザーが一致した場合、マージは行われません。
 
 配列に指定できる値は次のとおりです。
 
@@ -216,7 +216,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### most_recently_updated 優先順位を指定せずに、識別されていないユーザーをマージする
 
-メールアドレス`john.smith@braze.com`を持つ2つの不明なユーザーsがある場合、このリクエストは、そのメールアドレスを持つ2つの不明なユーザーsがあるため、ユーザーsをマージしません。このリクエストは、メール address `john.smith@braze.com` を持つ識別できないユーザーが1 つしかない場合にのみ機能します。
+メールアドレス`john.smith@braze.com`を持つ2つの不明なユーザーがある場合、このリクエストは、そのメールアドレスを持つ2つの不明なユーザーがあるため、ユーザーをマージしません。このリクエストは、メール address `john.smith@braze.com` を持つ識別できないユーザーが1 つしかない場合にのみ機能します。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \

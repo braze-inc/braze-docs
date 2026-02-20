@@ -1,7 +1,7 @@
 ---
 nav_title: Embedded signup
 article_title: WhatsApp Embedded Signup
-page_order: 0
+page_order: 1
 description: "This reference article provides a step-by-step walkthrough for the WhatsApp embedded signup workflow in Braze."
 page_type: reference
 channel:

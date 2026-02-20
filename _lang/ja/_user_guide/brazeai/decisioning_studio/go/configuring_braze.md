@@ -1,11 +1,11 @@
 ---
-nav_title: Braze での設定
-article_title: Braze での設定
+nav_title: Brazeでの設定
+article_title: Brazeでの設定
 page_order: 1
 description: "BrazeAI Decisioning Studio<sup>TM</sup>Go into Brazeの設定と統合方法について説明します。"
 ---
 
-# Braze での設定
+# Brazeでの設定
 
 > BrazeAI Decisioning Studio™Go用に設計されたBrazeでAPI キャンペーンを作成します。
 

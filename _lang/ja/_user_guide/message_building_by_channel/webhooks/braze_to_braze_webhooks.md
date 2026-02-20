@@ -1,6 +1,6 @@
 ---
-nav_title: Braze-to-Braze Webhook の作成
-article_title: Braze-to-Braze Webhook の作成
+nav_title: Braze to Braze Webhookの作成
+article_title: BrazeからBraze Webへのフックの作成
 page_order: 3
 channel:
   - webhooks
@@ -8,7 +8,7 @@ description: "この記事では、主なユースケースのために Braze-to
 
 ---
 
-# Braze-to-Braze Webhook の作成
+# Braze to Braze Webhookの作成
 
 > Webhook を使用して、Braze [REST API]({{site.baseurl}}/api/basics/) と通信できます。基本的には、Braze の API でできるすべての操作を実行できます。弊社では、このように Braze から Braze へ通信する Webhook のことを Braze-to-Braze Webhook と呼んでいます。このページのユースケースは、[Webhook の仕組み]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)と [Braze で Webhook を作成する方法]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)をすでに理解していることを前提としています。
 
@@ -59,7 +59,7 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 
 `YOUR_API_KEY` を、`users.track` 権限を持つ Braze API キーに置き換えます。APIキーは、Brazeダッシュボードの**「設定」**>「**APIキー**」で作成できる。
 
-![Webhookのリクエストヘッダーs。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
+![Webhookのリクエストヘッダー。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### Request body
 
@@ -111,7 +111,7 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 
 `YOUR_API_KEY` を、`canvas.trigger.send` 権限を持つ Braze API キーに置き換えます。APIキーは、Brazeダッシュボードの**「設定」**>「**APIキー**」で作成できる。
 
-![Webhookのリクエストヘッダーs。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
+![Webhookのリクエストヘッダー。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### Request body
 

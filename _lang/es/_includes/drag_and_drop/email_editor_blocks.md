@@ -22,8 +22,8 @@ La siguiente tabla describe cómo los usuarios pueden utilizar cada tipo de bloq
 |Espaciador| Añade espacio, o "relleno", entre otros bloques. |
 |Imagen| Inserta una imagen de la [biblioteca multimedia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). | 
 |Video| Crea un enlace al contenido del vídeo. |
-|Social| Inserta el icono de la plataforma de medios sociales. Se pueden cargar imágenes personalizadas para iconos específicos de la marca. |
-|Iconos| Inserta un icono. Se pueden cargar imágenes personalizadas. Se utilizará un icono de gran tamaño hasta que se cargue una imagen. |
+|Social| Inserta el icono de la plataforma de medios sociales. Puedes subir imágenes personalizadas para iconos específicos de la marca. |
+|Iconos| Inserta un icono. Puedes subir imágenes personalizadas. Braze utiliza un icono de marcador de posición de gran tamaño hasta que subas una imagen. |
 |HTML| Inserta HTML sin formato. Recomendado para [Liquid]({{site.baseurl}}/liquid/), como Contenido conectado o declaraciones condicionales. | 
 |Menú| Crea un menú flexible para el mensaje que estás diseñando. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
@@ -112,7 +112,9 @@ Consulte la tabla siguiente para obtener información detallada sobre el bloque 
 
 ### Imagen
 
-Consulte la tabla siguiente para obtener información detallada sobre el bloque editor `Image`. Para las imágenes dinámicas (imágenes con Liquid), debe establecer una imagen de reserva para utilizar la configuración de anchura automática. Para las especificaciones de imagen, consulta nuestras [especificaciones de imagen para correo electrónico]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+Consulte la tabla siguiente para obtener información detallada sobre el bloque editor `Image`. Para las imágenes dinámicas (imágenes con contenido líquido o conectado), debes establecer una imagen alternativa para utilizar la configuración de ancho automático. Para las especificaciones de imagen, consulta nuestras [especificaciones de imagen para correo electrónico]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 | Propiedades | Descripción |
 |---|---|

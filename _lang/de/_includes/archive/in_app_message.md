@@ -1,24 +1,24 @@
 ### Slideup In-App Nachrichten
 
-[`Slideup`]{% if include.platform == "iOS" %}[in_app_message_1]{% elsif include.platform == "Android" %}[in_app_message_2]{% endif %} In-App-Nachrichten werden so genannt, weil sie vom oberen oder unteren Bildschirmrand nach oben oder nach unten rutschen.  Sie bedecken nur einen kleinen Teil des Bildschirms und bieten eine effektive und unaufdringliche Möglichkeit zur Nachrichtenübermittlung.
+[\`Slideup\`]{% if include.platform == "iOS" %}[in_app_message_1]{% elsif include.platform == "Android" %}[in_app_message_2]{% endif %} In-App-Nachrichten werden so genannt, weil sie vom oberen oder unteren Bildschirmrand nach oben oder unten "rutschen".  Sie bedecken nur einen kleinen Teil des Bildschirms und bieten eine effektive und unaufdringliche Möglichkeit zur Nachrichtenübermittlung.
 
 ![Slideup Beispiel]({% image_buster /assets/img_archive/In-App_Slideup.png %})
 
 ### Modale In-App-Nachrichten
 
-[`Modal`]{% if include.platform == "iOS" %}[in_app_message_3]{% elsif include.platform == "Android" %}[in_app_message_4]{% endif %} In-App-Nachrichten erscheinen in der Mitte des Bildschirms und werden von einem durchsichtigen Panel eingerahmt. Sie können mit bis zu zwei Schaltflächen mit Klickfunktion und Analysefunktion ausgestattet werden und sind für kritische Nachrichten nützlich.
+[Modal]{% if include.platform == "iOS" %}[in_app_message_3]{% elsif include.platform == "Android" %}[in_app_message_4]{% endif %} In-App-Nachrichten erscheinen in der Mitte des Bildschirms und werden von einem durchsichtigen Panel eingerahmt. Sie können mit bis zu zwei Schaltflächen mit Klickfunktion und Analysefunktion ausgestattet werden und sind für kritische Nachrichten nützlich.
 
 ![Modal Beispiel]({% image_buster /assets/img_archive/In-App_Modal.png %})
 
 ### Vollständige In-App-Nachrichten
 
-[`Full`]{% if include.platform == "iOS" %}[in_app_message_5]{% elsif include.platform == "Android" %}[in_app_message_6]{% endif %} In-App-Nachrichten sind nützlich, um den Inhalt und die Wirkung Ihrer Benutzerkommunikation zu maximieren.  Die obere Hälfte einer `full` In-App-Nachricht enthält ein Bild und die untere Hälfte zeigt Text sowie bis zu zwei Buttons für Klick-Aktionen und Analytics an.
+[\`Full\`]{% if include.platform == "iOS" %}[in_app_message_5]{% elsif include.platform == "Android" %}[in_app_message_6]{% endif %} In-App-Nachrichten sind nützlich, um den Inhalt und die Wirkung Ihrer Nutzer:innen-Kommunikation zu maximieren.  Die obere Hälfte einer `full` In-App-Nachricht enthält ein Bild und die untere Hälfte zeigt Text sowie bis zu zwei Buttons für Klick-Aktionen und Analytics an.
 
 ![Vollständiges Beispiel]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 ### Vollständige HTML In-App Nachrichten
 
-[`HTML Full`]{% if include.platform == "iOS" %}[in_app_message_7]{% elsif include.platform == "Android" %}[in_app_message_8]{% endif %} In-App-Nachrichten sind nützlich, um vollständig angepasste Benutzerinhalte zu erstellen. Benutzerdefiniertes HTML Der gesamte Inhalt der In-App-Nachrichten wird auf {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} angezeigt und kann optional weitere Inhalte wie Bilder und Schriftarten enthalten, so dass Sie das Aussehen und die Funktionalität der Nachrichten vollständig steuern können.
+[\`HTML Full\`]{% if include.platform == "iOS" %}[in_app_message_7]{% elsif include.platform == "Android" %}[in_app_message_8]{% endif %} In-App-Nachrichten sind nützlich, um vollständig angepasste Nutzer:inhalte zu erstellen. Benutzerdefiniertes HTML Der gesamte Inhalt der In-App-Nachrichten wird auf {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} angezeigt und kann optional weitere Inhalte wie Bilder und Schriftarten enthalten, so dass Sie das Aussehen und die Funktionalität der Nachrichten vollständig steuern können.
 
  {% if include.platform == "iOS" %}
 Das folgende Beispiel zeigt eine paginierte HTML Full In-App Nachricht:
@@ -40,19 +40,19 @@ Die folgende Dokumentation bezieht sich auf das Produkt Braze `In-App Messaging`
 
 ![In-App Messaging Composer]({% image_buster /assets/img_archive/trigger-iam-composer.png %})
 
-Sie können auch auf die Dokumentation für unser veraltetes [`Original In-App Messaging`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages) Produkt referenzieren.
+Sie können sich auch auf die Dokumentation für unser veraltetes Produkt [\`Original In-App Messaging\`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages) beziehen.
 
 #### Auslöser-Typen
 
 Mit unserem Produkt für In-App-Nachrichten können Sie die Anzeige von In-App-Nachrichten als Folge verschiedener Ereignistypen auslösen: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Außerdem können `Specific Purchase`- und `Custom Event`\- Trigger robuste Eigenschaftsfilter enthalten.
 
 {% alert note %}
-Ausgelöste In-App-Nachrichten funktionieren nur bei angepassten Events, die über das Braze SDK protokolliert werden. In-App-Nachrichten können nicht über die API oder durch API-Event (wie Kauf-Events) getriggert werden. Wenn Sie mit Android arbeiten, sehen Sie sich an, wie man [angepasste Events unter Android protokolliert]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events). Wenn Sie mit iOS arbeiten, sehen Sie sich an, wie man [angepasste Events unter iOS protokolliert]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
+Ausgelöste In-App-Nachrichten funktionieren nur bei angepassten Events, die über das Braze SDK protokolliert werden. In-App-Nachrichten können nicht über die API oder durch API-Event (wie Kauf-Events) getriggert werden. Wenn Sie mit Android arbeiten, sehen Sie sich an, wie Sie [angepasste Events unter Android protokollieren]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events). Wenn Sie mit iOS arbeiten, sehen Sie sich an, wie Sie [angepasste Events unter iOS protokollieren]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
 {% endalert %}
 
 #### Semantik der Zustellung
 
-Alle In-App-Nachrichten, für die ein Nutzer berechtigt ist, werden zu Beginn der Sitzung an das Gerät des Nutzers gesendet. Weitere Informationen über die Semantik des Sitzungsstarts im SDK finden Sie in unserer [session lifecycle documentation]{% if include.platform == "iOS" %}[in_app_message_15a]{% elsif include.platform == "Android" %}[in_app_message_15b]{% endif %}. Bei der Zustellung holt das SDK die Assets vorab, so dass sie zum Zeitpunkt des Triggerns sofort verfügbar sind und die Anzeige-Latenzzeit minimiert wird.
+Alle In-App-Nachrichten, für die ein Nutzer berechtigt ist, werden zu Beginn der Sitzung an das Gerät des Nutzers gesendet. Weitere Informationen zur Semantik des Sitzungsstarts im SDK finden Sie in unserer [Dokumentation des Sitzungslebenszyklus]{% if include.platform == "iOS" %}[in_app_message_15a]{% elsif include.platform == "Android" %}[in_app_message_15b]{% endif %}. Bei der Zustellung holt das SDK die Assets vorab, so dass sie zum Zeitpunkt des Triggerns sofort verfügbar sind und die Anzeige-Latenzzeit minimiert wird.
 
 Wenn ein Trigger-Event mit mehr als einer in Frage kommenden In-App-Nachricht verbunden ist, wird nur die In-App-Nachricht mit der höchsten Priorität zugestellt.
 

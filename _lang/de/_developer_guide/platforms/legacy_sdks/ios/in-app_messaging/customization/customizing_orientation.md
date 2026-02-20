@@ -1,5 +1,5 @@
 ---
-nav_title: Anpassen der Orientierung
+nav_title: Ausrichtung anpassen
 article_title: Anpassen der Ausrichtung von In-App-Nachrichten für iOS
 platform: iOS
 page_order: 3
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Anpassen der Ausrichtung
+# Ausrichtung anpassen
 
 ## Ausrichtung für alle In-App-Nachrichten einstellen
 
@@ -29,7 +29,7 @@ id<ABKInAppMessageUIControlling> inAppMessageUIController = [Appboy sharedInstan
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 // Set fixed in-app message orientation to portrait
@@ -60,7 +60,7 @@ inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift    
   // Set inAppMessage orientation to portrait

@@ -33,12 +33,14 @@ Instructions for creating a data source can be found on the [Tealium](https://do
 
 ### Step 2: Create Current
 
-In Braze, navigate to **Currents > + Create Current > Tealium Export**. Provide an integration name, contact email, and your Tealium URL. Next, select what you want to track from the list of available events. Lastly, click **Launch Current**
+Braze에서 **커런츠** > **\+ 전류 생성** > **Tealium 내보내기로** 이동합니다. Provide an integration name, contact email, and your Tealium URL. 
 
-All events sent to Tealium will include the user's `external_user_id`. At this time, Braze does not send event data to Tealium for users who do not have their `external_user_id` set.
+Next, select what you want to track from the list of available events. 기본적으로 모든 이벤트는 사용자의 `external_user_id` 으로 전송됩니다. 그러나 **익명 사용자의 이벤트 포함** 확인란을 선택하면 `external_user_id` 이메일 주소가 없는 이벤트도 Tealium으로 보낼 수 있습니다.
+
+통합을 설정한 후 **현재 시작을** 선택합니다.
 
 {% alert important %}
-It's important to keep your Tealium URL up to date. If your connector's URL is incorrect, Braze will be unable to send events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+It's important to keep your Tealium URL up to date. If your connector's URL is incorrect, Braze will be unable to send events. 이 상태가 **5일** 이상 지속되면 커넥터의 이벤트가 삭제되고 데이터가 영구적으로 손실됩니다.
 {% endalert %}
 
 ## Integration details

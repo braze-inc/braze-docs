@@ -13,7 +13,7 @@ description: "Auf dieser Seite finden Sie Filter zur Neuformatierung statischer 
 Mit Filtern können Sie die Ausgabe von Zahlen, Strings, Variablen und Objekten in Liquid verändern. Sie können Filter verwenden, um statischen oder dynamischen Text umzuformatieren, also z.B. einen String von Kleinbuchstaben in Großbuchstaben umzuwandeln oder mathematische Berechnungen wie Addition oder Division durchzuführen.
 
 {% alert important %}
-Braze unterstützt nicht alle Liquid-Filter von Shopify. Auf dieser Seite werden die von Braze getesteten Liquid Filter aufgelistet. Die Liste ist allerdings nicht vollständig. Testen Sie Ihr Liquid immer, bevor Sie eine Nachricht verschicken. <br><br>Wenn Sie Fragen zu einem Filter haben, der hier nicht aufgeführt ist, wenden Sie sich bitte an Ihren Customer Success Manager.
+Braze unterstützt nicht alle Liquid-Filter von Shopify. Auf dieser Seite werden die von Braze getesteten Liquid Filter aufgelistet. Die Liste ist allerdings nicht vollständig. Testen Sie Ihr Liquid immer, bevor Sie eine Nachricht verschicken. <br><br>Wenn Sie Fragen zu einem Filter haben, der hier nicht aufgeführt ist, wenden Sie sich an Ihren Customer-Success-Manager:in.
 {% endalert %}
 
 ## Filtersyntax
@@ -79,6 +79,7 @@ Array-Filter werden verwendet, um die Ausgabe von Arrays zu verändern.
 | [map](https://shopify.dev/api/liquid/filters/map)           | Akzeptiert das Attribut eines Array-Elements als Parameter und erstellt ein Array aus den Werten der einzelnen Array-Elemente.        | ✅ Ja   |
 | [reverse](https://shopify.dev/api/liquid/filters/reverse)       | Kehrt die Reihenfolge der Elemente in einem Array um.                                                                       | ✅ Ja   |
 | [size](https://shopify.dev/api/liquid/filters/size)          | Gibt die Größe einer Zeichenkette (die Anzahl der Zeichen) oder eines Arrays (die Anzahl der Elemente) zurück.                      | ✅ Ja   |
+| [slice](https://shopify.dev/api/liquid/filters/slice)        | Gibt eine Teilzeichenkette eines Strings oder eine Teilmenge eines Arrays zurück, beginnend mit dem angegebenen Index.                          | ✅ Ja   |
 | [sort](https://shopify.dev/api/liquid/filters/sort)         | Sortiert die Elemente eines Arrays nach einem bestimmten Attribut eines Elements im Array.                                    | ✅ Ja   |
 | [sort_natural](https://shopify.dev/api/liquid/sort_natural) | Sortiert die Elemente in einem Array unabhängig von der Groß-/Kleinschreibung in alphabetischer Reihenfolge.                                                | ✅ Ja   |
 | [uniq](https://shopify.dev/api/liquid/filters/uniq)         | Entfernt alle doppelten Instanzen von Elementen in einem Array.                                                           | ✅ Ja   |

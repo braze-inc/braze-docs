@@ -44,11 +44,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
-| `name` | 必須 | 文字列 | コンテンツブロックの名前。100 文字未満でなければなりません。 |
+| `name` | 必須かどうか | 文字列 | コンテンツブロックの名前。100 文字未満でなければなりません。 |
 | `description` | オプション | 文字列 | コンテンツブロックの説明。250 文字未満でなければなりません。 |
-| `content` | 必須 | 文字列 | コンテンツブロック内のHTMLまたはテキストコンテンツ。 |
+| `content` | 必須かどうか | 文字列 | コンテンツブロック内のHTMLまたはテキストコンテンツ。 |
 | `state` | オプション | 文字列 | `active` または`draft` を選択する。指定がない場合のデフォルトは`active` である。 |
 | `tags` | オプション | 文字列の配列 | [タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)はすでに存している必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

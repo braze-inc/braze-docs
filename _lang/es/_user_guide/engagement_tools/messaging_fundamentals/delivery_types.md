@@ -9,22 +9,20 @@ tool:
     - Canvas
 ---
 
-# Programar tu mensaje
+# Tipos de entrega y entrada
 
 > En Braze, hay tres formas diferentes de programar tu mensaje: programado, basado en acciones y desencadenado por API. Elegir cómo y cuándo se entrega tu mensaje es crucial para desarrollar un mensaje eficaz. 
-
-## Tipos de entrega y entrada
 
 Para las campañas, el tipo de entrega determina cuándo entrarán tus usuarios en tu campaña y cuándo se enviará. Puesto que un Canvas se construye como un viaje continuo del usuario, el concepto de mensajería de una programación se denomina tipo de entrada.
 
 | Entrega<nobr> y tipos de entrada | Descripción                                                                                                                                                                                                                                                                                                                                      |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Programado**       | Este tipo de programación está diseñado para mensajes puntuales que deseas enviar inmediatamente, como campañas sobre un acontecimiento actual. <br><br>Cuando envíes mensajes de prueba dirigidos sólo a ti o a tu equipo, esta opción te permite entregarlos inmediatamente.                                                                                   |
-| **Basado en la acción**    | Los mensajes de entrega basada en acciones, o las campañas desencadenadas por eventos y las Lonas, son muy eficaces para los mensajes transaccionales o basados en logros. Puedes desencadenarlos para que se envíen después de que un usuario complete un determinado evento, en lugar de enviar tu mensaje en determinados días.                                                                                           |
+| **Planificada**       | Este tipo de programación está diseñado para mensajes puntuales que deseas enviar inmediatamente, como campañas sobre un acontecimiento actual. <br><br>Cuando envíes mensajes de prueba dirigidos sólo a ti o a tu equipo, esta opción te permite entregarlos inmediatamente.                                                                                   |
+| **Basado en acciones**    | Los mensajes de entrega basada en acciones, o las campañas desencadenadas por eventos y las Lonas, son muy eficaces para los mensajes transaccionales o basados en logros. Puedes desencadenarlos para que se envíen después de que un usuario complete un determinado evento, en lugar de enviar tu mensaje en determinados días.                                                                                           |
 | **Desencadenado por API**   | Los mensajes desencadenados por API te permiten gestionar la copia de mensajes, las pruebas multivariantes y las reglas de reelegibilidad en el panel de Braze, al tiempo que desencadenan la entrega de ese contenido desde tus propios servidores y sistemas. <br><br>La solicitud de la API para desencadenar el mensaje también puede incluir datos adicionales que se incorporarán al mensaje en tiempo real. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Opciones temporales
+## Opciones temporales
 
 {% tabs %}
 {% tab campaign %}
@@ -36,15 +34,15 @@ Puedes elegir entre las siguientes opciones cuando utilices la entrega programad
 {% endtab %}
 
 {% tab canvas %}
-Con la entrega programada, los usuarios entrarán en un horario, de forma similar a como programarías una campaña. Puedes inscribir usuarios en un Canvas tan pronto como se lance o en un momento determinado.
+Con la entrega programada, los usuarios entrarán en un horario, de forma similar a como se programaría una campaña. Puedes inscribir usuarios en un Canvas tan pronto como se lance o en un momento determinado.
 
-#### Horarios designados
+### Horarios designados
 
 Puedes elegir enviar tu Canvas con una frecuencia de entrada específica, incluyendo sólo una vez, diaria, semanal o mensualmente. Para los Canvas con una entrega programada recurrente, puedes configurar la recurrencia para permitir a los usuarios entrar en el Canvas hasta 30 veces designadas.
 {% endtab %}
 {% endtabs %}
 
-### Opciones basadas en la acción
+## Opciones basadas en la acción
 
 {% tabs %}
 {% tab campaign %}
@@ -58,13 +56,13 @@ Las opciones basadas en la acción determinan qué acciones (o desencadenantes) 
 - Añadir una dirección de correo electrónico
 - Introducir una ubicación
 
-#### Ventana de entrada
+### Ventana de entrada
 
 La ventana de entrada de tu Canvas determina qué usuarios pueden entrar en el Canvas a la hora de inicio designada (y a la hora de finalización opcional). De forma similar a las campañas basadas en acciones, puedes elegir introducir a los usuarios en su zona horaria local.
 {% endtab %}
 {% endtabs %}
 
-### Opciones para desencadenar la API
+## Opciones para desencadenar la API
 
 {% tabs %}
 {% tab campaign %}

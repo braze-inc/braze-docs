@@ -103,7 +103,7 @@ Supongamos que tienes una aplicación de comida sana y quieres crear una campañ
 
 Una vez cargado el catálogo en Braze, comprueba la vista previa de un número selecto de elementos del catálogo para confirmar que la información importada es correcta. Los elementos pueden ser aleatorios en la vista previa, pero esto no afectará al resultado de la herramienta de recomendaciones.
 
-\![Ejemplo de catálogo en Braze.]({% image_buster /assets/img/recs/catalog_items.png %})
+![Ejemplo de catálogo en Braze.]({% image_buster /assets/img/recs/catalog_items.png %})
 
 Crea una campaña de tarjeta de contenido. En el compositor, introduce la lógica Liquid para determinar qué usuarios deben recibir la campaña, y qué receta e imagen deben mostrarse. En este caso de uso, Braze obtendrá el `start_date` (o fecha de registro) del usuario y lo comparará con la fecha actual. La diferencia de días determinará qué tarjeta de contenido se envía.
 
@@ -154,7 +154,7 @@ Crea una campaña de tarjeta de contenido. En el compositor, introduce la lógic
 
 Por ejemplo:
 
-\![Un ejemplo de creador de mensajes de una campaña de tarjeta de contenido.]({% image_buster /assets/img/recs/content_card_preview.png %})
+![Un ejemplo de creador de mensajes de una campaña de tarjeta de contenido.]({% image_buster /assets/img/recs/content_card_preview.png %})
 
 En la sección **Comportamiento al hacer clic**, introduce la lógica Liquid para saber a dónde deben ser redirigidos los usuarios cuando hacen clic en la tarjeta de contenido en dispositivos iOS, Android y Web. 
 
@@ -171,11 +171,11 @@ En la sección **Comportamiento al hacer clic**, introduce la lógica Liquid par
 
 Por ejemplo:
 
-\![Un ejemplo de bloque de comportamiento al hacer clic en el compositor.]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
+![Un ejemplo de bloque de comportamiento al hacer clic en el compositor.]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
 
 Ve a la pestaña de **Prueba** y selecciona **Usuario personalizado** en **Vista previa del mensaje como usuario**. Introduce una fecha en el campo **Atributo personalizado** para obtener una vista previa de la tarjeta de contenido que se enviaría a un usuario que se hubiera registrado en esa fecha. <br><br>
 
-\![Un ejemplo de atributo personalizado llamado 'start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
+![Un ejemplo de atributo personalizado llamado 'start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 {% endtab %}
 
 {% tab using Connected Content %}
@@ -284,9 +284,9 @@ Así sería la convocatoria final:
 {% for list in restaurants %}
 {% if {{list.restaurant.user_rating.rating_text}} == `Excellent` %}
 {% assign excellent_restaurants = excellent_restaurants | append: list.restaurant.name | append: `*` %}
-{% elseif {{list.restaurant.user_rating.rating_text}} == `Very Good` %}
+{% elsif {{list.restaurant.user_rating.rating_text}} == `Very Good` %}
 {% assign very_good_restaurants = very_good_restaurants | append: list.restaurant.name | append: `*` %}
-{% elseif {{list.restaurant.user_rating.rating_text}} == `Good` %}
+{% elsif {{list.restaurant.user_rating.rating_text}} == `Good` %}
 {% assign good_restaurants = good_restaurants | append: list.restaurant.name | append: `*` %}
 {% endif %}
 {% endfor %}
@@ -328,6 +328,6 @@ Good places
 
 Mira la siguiente captura de pantalla para ver un ejemplo de cómo se muestra la respuesta en el dispositivo de un usuario.
 
-Representación de una lista de restaurantes generada por la llamada final del ejemplo.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
+![Representación de una lista de restaurantes generada por la llamada final del ejemplo.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
 {% endtab %}
 {% endtabs %}

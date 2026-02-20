@@ -112,7 +112,9 @@ Refer to the following table for details on the `Spacer` editor block.
 
 ### Image
 
-Refer to the following table for details on the `Image` editor block. For dynamic images (images with Liquid), you must set a fallback image to use the auto-width settings. For image specifications, refer to our [email image specifications]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+Refer to the following table for details on the `Image` editor block. For dynamic images (images with Liquid or Connected Content), you must set a fallback image to use the auto-width settings. For image specifications, refer to our [email image specifications]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 | Properties | Description |
 |---|---|

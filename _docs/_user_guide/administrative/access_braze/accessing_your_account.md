@@ -1,7 +1,7 @@
 ---
 nav_title: Access your account
 article_title: Access Your Account
-page_order: 2
+page_order: 0
 page_type: reference
 description: "This article covers how to get your Braze account, how to log in after granted access, and how to go about resetting your Braze password."
 
@@ -96,7 +96,7 @@ If clearing your browser cache and cookies doesn't resolve your issues, contact 
 
 ### Accessing the drag-and-drop editor
 
-For most Braze users, the drag-and-drop editor should load. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that `*.bz-rndr.com` is allowlisted.
+For most company users, the drag-and-drop editor should load. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that `*.bz-rndr.com` is allowlisted.
 
 The editor may experience loading issues due to the following:
 

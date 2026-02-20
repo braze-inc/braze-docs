@@ -13,7 +13,7 @@ search_tag: Partner
 > [Amazon S3](https://aws.amazon.com/s3/) ist ein hoch skalierbares Speichersystem, das von Amazon Serviceleistungen; Dienste angeboten wird.
 
 {% alert important %}
-Wenn Sie zwischen Cloud-Speicheranbietern wechseln, wenden Sie sich an Ihren Customer-Success-Manager von Braze, um weitere Unterstützung bei der Einrichtung und Validierung Ihrer neuen Integration zu erhalten.
+Wenn Sie zwischen Cloud-Speicheranbietern wechseln, wenden Sie sich an Ihren Customer-Success-Manager:in von Braze, um weitere Unterstützung bei der Einrichtung und Validierung Ihrer neuen Integration zu erhalten.
 {% endalert %}
 
 Die Integration von Braze und Amazon S3 bietet zwei Strategien für die Integration:
@@ -25,9 +25,9 @@ Die Integration von Braze und Amazon S3 bietet zwei Strategien für die Integrat
 
 | Anforderung | Beschreibung |
 | ----------- | ----------- |
-| Amazon S3-Konto | Um die Vorteile dieser Partnerschaft zu nutzen, benötigen Sie ein Amazon S3-Konto. |
+| Amazon S3-Konto | Sie benötigen ein Amazon S3-Konto, um die Vorteile dieser Partnerschaft zu nutzen. |
 | Dediziertes S3-Bucket | Vor der Integration mit Amazon S3 müssen Sie ein S3-Bucket für Ihre App erstellen.<br><br>Wenn Sie bereits ein S3-Bucket haben, empfehlen wir Ihnen dennoch, ein neues Bucket speziell für Braze zu erstellen, damit Sie die Berechtigungen einschränken können. In der folgenden Anleitung erfahren Sie, wie Sie einen neuen Bucket erstellen. |
-| Currents | Um Daten zurück in Amazon S3 exportieren zu können, müssen Sie [Braze-Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) für Ihr Konto eingerichtet haben. |
+| Currents | Um Daten zurück in Amazon S3 zu exportieren, müssen Sie [Braze-Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) für Ihr Konto einrichten lassen. Currents ist nicht erforderlich, wenn Sie nur die Archivierung von Nachrichten einrichten möchten. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Erstellen eines neuen S3-Buckets
@@ -35,9 +35,9 @@ Die Integration von Braze und Amazon S3 bietet zwei Strategien für die Integrat
 Um einen Bucket für Ihre App zu erstellen, gehen Sie wie folgt vor:
 
 1. Öffnen Sie die [Amazon S3-Konsole](https://console.aws.amazon.com/s3/) und folgen Sie den Anweisungen, um **sich anzumelden** oder **ein Konto bei AWS zu erstellen**. 
-2. Nachdem Sie sich angemeldet haben, wählen Sie **S3** aus der Kategorie **Speicherung & Zustellung von Inhalten**. 
+2. Nachdem Sie sich angemeldet haben, wählen Sie **S3** aus der Kategorie **Speicher & Zustellung von Inhalten**. 
 3. Wählen Sie auf dem nächsten Bildschirm **Bucket erstellen** aus. 
-4. Sie werden aufgefordert, Ihr Bucket zu erstellen und eine Region auszuwählen.
+4. Sie werden aufgefordert, Ihren Bucket zu erstellen und eine Region auszuwählen.
 
 {% alert note %}
 Currents unterstützt keine Buckets mit konfigurierter [Objektsperre](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html).
@@ -56,7 +56,11 @@ Diese Authentifizierungsmethode generiert einen geheimen Schlüssel und eine Zug
 
 ### Schritt 1: Nutzer:in erstellen {#secret-key-1}
 
-Um Ihre ID und den geheimen Zugriffsschlüssel abzurufen, müssen Sie [in AWS eine IAM Nutzer:in und eine Administratorengruppe anlegen](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
+{% alert note %}
+Wenn Sie nur die Archivierung von Nachrichten einrichten möchten, folgen Sie den Schritten auf dem **Dashboard** Tab **Datenexport**.
+{% endalert %}
+
+Um die ID und den geheimen Zugriffsschlüssel abzurufen, [erstellen Sie eine IAM Nutzer:in und eine Administratorengruppe in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
 
 ### Schritt 2: Zugangsdaten abrufen {#secret-key-2}
 
@@ -66,7 +70,7 @@ Nachdem Sie einen neuen Nutzer:innen angelegt haben, wählen Sie **Zugangsdaten 
 
 ### Schritt 3: Richtlinie erstellen {#secret-key-3}
 
-Navigieren Sie zu **Richtlinien** > **Erste Schritte** > **Richtlinie erstellen**, um Berechtigungen für Ihre Nutzer:innen hinzuzufügen. Wählen Sie anschließend **Eigene Richtlinie erstellen** aus. Dadurch erhalten Sie eingeschränkte Berechtigungen, so dass Braze nur auf die angegebenen Buckets zugreifen kann. 
+Navigieren Sie zu **Richtlinien** > **Erste Schritte** > **Richtlinie erstellen**, um Berechtigungen für Ihre Nutzer:innen hinzuzufügen. Wählen Sie anschließend **Eigene Richtlinie erstellen** aus. Damit erhalten Sie eingeschränkte Berechtigungen, so dass Braze nur auf die angegebenen Buckets zugreifen kann. 
 
 ![]({% image_buster /assets/img_archive/S3_CreatePolicy.png %})
 
@@ -76,8 +80,12 @@ Für den Export von Currents- und Dashboard-Daten sind unterschiedliche Richtlin
 
 Geben Sie den Namen einer Richtlinie Ihrer Wahl an und fügen Sie den folgenden Code-Snippet in den Abschnitt **Richtliniendokument** ein. Ersetzen Sie `INSERTBUCKETNAME` durch Ihren Bucket-Namen. Ohne diese Berechtigungen schlägt die Integration bei der Prüfung der Zugangsdaten fehl und kann nicht erstellt werden.
 
+{% alert note %}
+Wenn Sie nur die Archivierung von Nachrichten einrichten möchten, verwenden Sie den Code-Snippet auf dem **Dashboard** Tab **Datenexport**.
+{% endalert %}
+
 {% tabs %}
-{% tab Braze-Currents %}
+{% tab Braze Currents %}
 ```json
 {
     "Version": "2012-10-17",
@@ -96,7 +104,7 @@ Geben Sie den Namen einer Richtlinie Ihrer Wahl an und fügen Sie den folgenden 
 }
 ```
 {% endtab %}
-{% tab Dashboard Daten Export %}
+{% tab Dashboard Data Export %}
 ```json
 {
     "Version": "2012-10-17",
@@ -125,8 +133,12 @@ Nachdem Sie eine neue Richtlinie erstellt haben, gehen Sie zu **Nutzer:innen** u
 
 ### Schritt 5: Verknüpfung von Braze mit AWS {#secret-key-5}
 
+{% alert note %}
+Wenn Sie nur die Archivierung von Nachrichten einrichten möchten, folgen Sie den Schritten auf dem **Dashboard** Tab **Datenexport**.
+{% endalert %}
+
 {% tabs %}
-{% tab Braze-Currents %}
+{% tab Braze Currents %}
 
 Gehen Sie in Braze zu **Partnerintegrationen** > **Datenexport**.
 
@@ -137,20 +149,20 @@ Nennen Sie Ihren Current. Vergewissern Sie sich, dass im Abschnitt **Zugangsdate
 ![]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
 {% alert warning %}
-Halten Sie Ihre AWS Access Key ID und Ihren geheimen Zugangsschlüssel auf dem neuesten Stand. Wenn die Zugangsdaten Ihres Konnektors ablaufen, wird der Konnektor keine Ereignisse mehr senden. Wenn dieser Zustand länger als **48 Stunden** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
+Halten Sie Ihre AWS Access Key ID und Ihren geheimen Zugangsschlüssel auf dem neuesten Stand. Wenn die Zugangsdaten Ihres Konnektors ablaufen, sendet der Konnektor keine Ereignisse mehr. Wenn dieser Zustand länger als **5 Tage** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
 {% endalert %}
 
 Sie können auch die folgenden Anpassungen nach Ihren Bedürfnissen vornehmen:
 
-- **Ordner Pfad:** Standardmäßig ist `currents` eingestellt. Wenn dieser Ordner nicht vorhanden ist, erstellt Braze ihn automatisch für Sie. 
+- **Ordner Pfad:** Standardmäßig ist `currents` eingestellt. Wenn dieser Ordner nicht vorhanden ist, erstellt Braze automatisch einen für Sie. 
 - **Serverseitige AES-256-Verschlüsselung im Ruhezustand:** Standardmäßig ist diese Option ausgeschaltet und enthält die Kopfzeile `x-amz-server-side-encryption`.
 
 Wählen Sie **Launch Current**, um fortzufahren.
 
-Eine Benachrichtigung informiert Sie darüber, ob Ihre Zugangsdaten erfolgreich validiert wurden. AWS S3 sollte nun für Braze-Currents eingerichtet sein.
+Eine Benachrichtigung informiert Sie darüber, ob Ihre Zugangsdaten erfolgreich validiert wurden. AWS S3 ist jetzt für Braze-Currents eingerichtet.
 
 {% endtab %}
-{% tab Dashboard Daten Export %}
+{% tab Dashboard Data Export %}
 
 Gehen Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und wählen Sie **Amazon S3**.
 
@@ -162,7 +174,7 @@ Vergewissern Sie sich auf der Seite **AWS-Zugangsdaten**, dass der **geheime AWS
 Sie können jederzeit neue Zugangsdaten abrufen, indem Sie zu Ihrem Nutzer:innen navigieren und in der AWS-Konsole auf dem Tab **Security Credentials** den Punkt **Create Access Key** auswählen.
 {% endalert %}
 
-Eine Benachrichtigung informiert Sie darüber, ob Ihre Zugangsdaten erfolgreich validiert wurden. AWS S3 sollte nun in Ihr Braze-Konto integriert sein.
+Eine Benachrichtigung informiert Sie darüber, ob Ihre Zugangsdaten erfolgreich validiert wurden. AWS S3 ist jetzt in Ihr Braze-Konto integriert.
 
 {% endtab %}
 {% endtabs %}
@@ -183,8 +195,12 @@ Für den Export von Currents- und Dashboard-Daten sind unterschiedliche Richtlin
 
 Öffnen Sie den Tab **JSON** und geben Sie den folgenden Code-Snippet in den Abschnitt **Richtliniendokument** ein. Ersetzen Sie `INSERTBUCKETNAME` durch Ihren Bucket-Namen. Wählen Sie **Richtlinie überprüfen**, wenn Sie fertig sind.
 
+{% alert note %}
+Wenn Sie nur die Archivierung von Nachrichten einrichten möchten, verwenden Sie den Code-Snippet auf dem **Dashboard** Tab **Datenexport**.
+{% endalert %}
+
 {% tabs %}
-{% tab Braze-Currents %}
+{% tab Braze Currents %}
 
 ```json
 {
@@ -205,7 +221,7 @@ Für den Export von Currents- und Dashboard-Daten sind unterschiedliche Richtlin
 ```
 
 {% endtab %}
-{% tab Dashboard Daten Export %}
+{% tab Dashboard Data Export %}
 
 ```json
 {
@@ -242,7 +258,7 @@ Wählen Sie in demselben IAM-Bereich der Konsole **Rollen** > **Rolle erstellen*
 
 Rufen Sie die ID Ihres Braze-Kontos und Ihre externe ID von Ihrem Braze-Konto ab:
 - **Currents**: Gehen Sie in Braze zu **Partnerintegrationen** > **Datenexport**. Wählen Sie dann **Create Current** und anschließend **Amazon S3 Data Export**. Hier finden Sie die Bezeichner, die Sie zur Erstellung Ihrer Rolle benötigen.
-- **Dashboard Daten exportieren**: Gehen Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und wählen Sie **Amazon S3**. Hier finden Sie die Bezeichner, die Sie zur Erstellung Ihrer Rolle benötigen.
+- **Dashboard Daten exportieren**: Gehen Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und wählen Sie **Amazon S3**. Hier finden Sie die Bezeichner, die Sie zur Erstellung Ihrer Rolle benötigen. (Legen Sie hier Ihre Rollen an, wenn Sie nur die Archivierung von Nachrichten einrichten möchten).
 
 Wählen Sie in der AWS-Konsole **ein anderes AWS-Konto** als SELEKTOR-Typ für die vertrauenswürdige Entität aus. Geben Sie Ihre Braze-Konto ID an, markieren Sie das Feld **Externe ID erforderlich** und geben Sie die externe ID von Braze ein. Wählen Sie nach Abschluss **Weiter** aus.
 
@@ -258,7 +274,7 @@ Geben Sie der Rolle einen Namen und eine Beschreibung, und wählen Sie **Rolle e
 
 ![Rollen-ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)
 
-Sie sollten nun Ihre neu erstellte Rolle in der Liste sehen.
+Sie sehen nun Ihre neu erstellte Rolle in der Liste.
 
 ### Schritt 4: Link zu Braze AWS {#role-arn-4}
 
@@ -272,8 +288,12 @@ Achten Sie auf den **ARN der Rolle** oben auf der Seite mit der Rollenübersicht
 
 Kehren Sie zu Ihrem Braze-Konto zurück und kopieren Sie die Rollen-ARN in das dafür vorgesehene Feld.
 
+{% alert note %}
+Wenn Sie nur die Archivierung von Nachrichten einrichten möchten, folgen Sie den Schritten auf dem **Dashboard** Tab **Datenexport**.
+{% endalert %}
+
 {% tabs %}
-{% tab Braze-Currents %}
+{% tab Braze Currents %}
 
 Gehen Sie in Braze auf die Seite **Currents** unter **Integrationen**. Wählen Sie dann **Create Current** und wählen Sie **Amazon S3 Data Export**
 
@@ -286,14 +306,14 @@ Sie können auch die folgenden Anpassungen nach Ihren Bedürfnissen vornehmen:
 - Ordnerpfad (Standard: `currents`)
 - Serverseitige AES-256-Verschlüsselung im Ruhezustand (Standard: AUS) - Enthält den `x-amz-server-side-encryption` Header
 
-Wählen Sie **Launch Current**, um fortzufahren. Sie erhalten eine Benachrichtigung, wenn Ihre Zugangsdaten erfolgreich validiert wurden. AWS S3 sollte nun für Braze-Currents eingerichtet sein.
+Wählen Sie **Launch Current**, um fortzufahren. Eine Benachrichtigung zeigt an, ob Ihre Zugangsdaten erfolgreich validiert wurden. AWS S3 ist jetzt für Braze-Currents eingerichtet.
 
 {% alert important %}
 Wenn Sie die Fehlermeldung "S3-Anmeldedaten sind ungültig" erhalten, kann dies daran liegen, dass Sie die Integration nach der Erstellung einer Rolle in AWS zu schnell durchgeführt haben. Warten Sie und versuchen Sie es erneut.
 {% endalert %}
 
 {% endtab %}
-{% tab Dashboard Daten Export %}
+{% tab Dashboard Data Export %}
 
 Gehen Sie in Braze auf die **Technologie-Partnerseite** unter **Integrationen** und wählen Sie **Amazon S3**.
 
@@ -305,21 +325,27 @@ Vergewissern Sie sich auf der Seite **AWS-Zugangsdaten**, dass der Button **AWS 
 Sie können jederzeit neue Zugangsdaten abrufen, indem Sie zu Ihrem Nutzer:innen navigieren und auf dem Tab **Sicherheitszugangsdaten** in der AWS-Konsole **Zugriffsschlüssel erstellen** auswählen.
 {% endalert %}
 
-Eine Benachrichtigung informiert Sie darüber, ob Ihre Zugangsdaten erfolgreich validiert wurden. AWS S3 sollte nun in Ihr Braze-Konto integriert sein.
+Eine Benachrichtigung informiert Sie darüber, ob Ihre Zugangsdaten erfolgreich validiert wurden. AWS S3 ist jetzt in Ihr Braze-Konto integriert.
 
 {% endtab %}
 {% endtabs %}
 
 ## Verhalten beim Exportieren
 
-Nutzer:innen, die eine Lösung zur Speicherung von Daten in der Cloud integriert haben und versuchen, APIs, Dashboard-Berichte oder CSV-Berichte zu exportieren, werden folgende Probleme haben:
+Nutzer:innen, die eine Lösung zur Speicherung von Daten in der Cloud integriert haben und APIs, Dashboard-Berichte oder CSV-Berichte exportieren, erleben Folgendes:
 
 - Alle API-Exporte geben keine Download-URL im Antwortkörper zurück und müssen über den Datenspeicher abgerufen werden.
-- Alle Dashboard-Berichte und CSV-Berichte werden zum Download an die E-Mail des Nutzers:innen gesendet (keine Speicherberechtigung erforderlich) und auf dem Datenspeicher gesichert. 
+- Alle Dashboard-Berichte und CSV-Berichte werden zum Herunterladen an die E-Mail des Nutzers:innen gesendet (keine Speicherberechtigungen erforderlich) und auf dem Datenspeicher gesichert.
+
+{% alert important %}
+**JSON-Format erforderlich**: Für JSON-Exporte verwendet Braze das JSONL-Format (newline-delimited JSON), bei dem jede Zeile ein eigenes JSON-Objekt enthält. Dieses Format unterscheidet sich vom Standard-JSON, das ein einzelnes JSON-Array oder -Objekt ist. Jede Zeile in der exportierten Datei ist ein gültiges JSON-Objekt, aber die Datei als Ganzes ist kein einzelnes gültiges JSON-Dokument. Wenn Sie diese Dateien verarbeiten, parsen Sie jede Zeile einzeln als separates JSON-Objekt, anstatt zu versuchen, die gesamte Datei als ein einziges JSON-Dokument zu parsen.
+
+Currents exportiert im Apache Avro-Format (`.avro` Dateien), nicht in JSON. Diese Anforderung an das JSON-Format gilt für Dashboard-Datenexporte und API-Exporte.
+{% endalert %}
 
 ## Mehrere Konnektoren
 
-Wenn Sie mehr als einen Currents Konnektor erstellen möchten, um ihn an Ihr S3-Bucket zu senden, können Sie die gleichen Zugangsdaten verwenden, müssen aber für jeden einen anderen Ordnerpfad angeben. Diese können in demselben Workspace erstellt werden oder aufgeteilt und in mehreren Workspaces erstellt werden. Sie haben auch die Möglichkeit, für jede Integration eine eigene Richtlinie zu erstellen, oder eine Richtlinie zu erstellen, die beide Integrationen abdeckt. 
+Wenn Sie mehr als einen Currents Konnektor erstellen möchten, um ihn an Ihr S3-Bucket zu senden, können Sie dieselben Zugangsdaten verwenden, müssen aber für jeden einen anderen Ordnerpfad angeben. Sie können diese in demselben Workspace erstellen, oder sie aufteilen und in mehreren Workspaces erstellen. Sie haben auch die Möglichkeit, eine einzelne Richtlinie für jede Integration zu erstellen oder eine Richtlinie zu erstellen, die beide Integrationen abdeckt. 
 
 Wenn Sie dasselbe S3-Bucket sowohl für Currents als auch für Datenexporte verwenden möchten, müssen Sie zwei separate Richtlinien erstellen, da jede Integration unterschiedliche Berechtigungen erfordert.
 

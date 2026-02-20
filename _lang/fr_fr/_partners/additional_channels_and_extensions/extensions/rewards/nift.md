@@ -41,9 +41,9 @@ Vous pouvez modifier le nom du paramètre ID du client dans le lien de recommand
 
 Cliquez sur **Lier le compte**.
 
-![" Page d'intégration du service Nift demandant à l'utilisateur la clé API de Braze et l'URL du tableau de bord de Braze ".]({% image_buster /assets/img/nift/link_your_braze_account.png %}).
+![Page d'intégration du service Nift demandant à l'utilisateur la clé API de Braze et l'URL du tableau de bord de Braze.]({% image_buster /assets/img/nift/link_your_braze_account.png %})
 
-## Utilisation de l'intégration
+## En utilisant l'intégration
 
 Pour utiliser l'intégration, distribuez le lien de recommandation dans vos messages. Lorsque votre client utilise le lien de recommandation et sélectionne un cadeau de l'une de nos marques, Nift le marque comme traité dans Braze.
 

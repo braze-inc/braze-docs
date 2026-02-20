@@ -13,7 +13,7 @@ channel:
 
 # Angepasste Domains zur Selbstbedienung
 
-> Auf dieser Seite erfahren Sie, wie Sie Ihre eigenen angepassten Domains im Braze-Dashboard einrichten können. Mit angepassten Domains können Sie anstelle eines generischen verkürzten Links oder der Braze-Domain (`brz.ai`) einen markenspezifischen verkürzten Link verwenden, der die Identität Ihrer Marke widerspiegelt - und damit das Vertrauen der Nutzer:innen und das Engagement der Kampagnen mit SMS-Links verbessert.
+> Auf dieser Seite erfahren Sie, wie Sie Ihre eigenen angepassten Domains im Braze-Dashboard einrichten können. Mit angepassten Domains können Sie anstelle eines generischen verkürzten Links oder der Braze-Domain (`brz.ai`) einen markenbezogenen verkürzten Link verwenden, der die Identität Ihrer Marke widerspiegelt - und damit das Vertrauen der Nutzer:innen und das Engagement der Kampagnen mit SMS-Links verbessert.
 
 Mit angepassten Domains zur Selbstbedienung können Sie Ihre eigenen angepassten Domains für SMS, RCS und WhatsApp konfigurieren und verwalten - direkt von Ihrem Braze-Dashboard aus. Sie können ganz einfach bis zu 10 angepasste Domains an einem Ort hinzufügen, überwachen und verwalten.
 
@@ -52,7 +52,7 @@ Wir verlangen von Ihnen, dass Sie Ihre angepasste Domain an Braze delegieren, da
 
 Braze fragt Ihre DNS-Konfiguration etwa alle 30 Minuten ab, um nach Updates zu suchen.
 
-!["DNS-Eintrag" mit 3 Schritten, die Sie ausführen müssen, um die Einrichtung Ihrer Domain abzuschließen.]({% image_buster /assets/img/dns_record.png %})
+![Abschnitt "DNS-Eintrag" mit 3 Schritten, die Sie ausführen müssen, um die Einrichtung Ihrer Domain abzuschließen.]({% image_buster /assets/img/dns_record.png %})
 
 {% alert note %}
 Der Fortschritt Ihrer Domains wird automatisch gespeichert. Wenn Sie den Vorgang abbrechen müssen, können Sie ihn später wieder aufnehmen, indem Sie auf der Seite **Domains für SMS/RCS- und Messaging-Apps** den Eintrag für die ausstehende Domain auswählen.
@@ -66,15 +66,19 @@ Nachdem Ihre Domain überprüft wurde, erscheinen Ihre angepassten Domains in de
 
 Die Live-Überwachung alarmiert Sie im Braze-Dashboard, wenn auf einer Ihrer aktiven Domains ein Problem auftritt, so dass Ihre angepassten Links nutzbar bleiben. Wenn Sie Probleme haben, sehen Sie sich die Fehlerdetails in der App an oder wenden Sie sich an den Braze [Support]({{site.baseurl}}/braze_support/), um Hilfe zu erhalten.
 
-## Angepasste Domains verwenden
+## Zuweisung angepasster Domains zu Abo-Gruppen
 
-Nach der Konfiguration können angepasste Domains einer oder mehreren SMS-, RCS- und WhatsApp Abo-Gruppen zugewiesen werden.
+Nach ihrer Konfiguration können angepasste Domains einer oder mehreren SMS-, RCS- und WhatsApp-Abo-Gruppen zugewiesen werden.
 
-![Abo-Gruppen Einstellungen, die es Ihnen erlauben, eine Link-Shortening Domain auszuwählen.]({% image_buster /assets/img/custom_domain.png %})
+1. Gehen Sie zu **Zielgruppe**:in > Abo-Gruppen-Management **.**
+2. Suchen Sie Ihre Abo-Gruppe in der Liste und wählen Sie sie aus.
+3. Wählen Sie unter **Abo-Gruppe Details** Ihre angepasste Domain als **Linkverkürzungs-Domain** aus.
+
+![Abogruppeneinstellungen ermöglichen die Auswahl einer Link-Shorting-Domain.]({% image_buster /assets/img/custom_domain.png %})
 
 Kampagnen, die mit aktivierter Linkverkürzung versendet werden, verwenden die zugewiesene Domain, die mit Ihrer SMS-, RCS- oder WhatsApp Abo-Gruppe verbunden ist.
 
-![SMS Nachrichten-Editor Vorschau mit einer verkürzten Link Domain, die sich von der Domain im Feld "Nachricht" unterscheidet.]({% image_buster /assets/img/custom_domain2.png %})
+![Vorschau des SMS-Editors mit einer verkürzten Link-Domain, die sich von der Domain im Feld "Nachricht" unterscheidet.]({% image_buster /assets/img/custom_domain2.png %})
 
 ## Häufig gestellte Fragen
 

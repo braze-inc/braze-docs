@@ -20,7 +20,7 @@ Erforderliche Felder:
 
 - `YOUR-API-KEY-HERE` - verfügbar unter **Einstellungen** > **API-Schlüssel**. Stellen Sie sicher, dass der Schlüssel berechtigt ist, Nachrichten über den REST API-Endpunkt `/messages/send` zu versenden. 
 - `EXTERNAL_USER_ID` - verfügbar auf der Seite **Benutzer suchen**.
-- `REST_API_ENDPOINT_URL` - in Braze [Instanzen]({{site.baseurl}}/api/basics/#endpoints. Stellen Sie sicher, dass Sie den Endpunkt verwenden, der der Braze-Instanz entspricht, in der sich Ihr Workspace befindet.
+- `REST_API_ENDPOINT_URL` - die auf der Braze [Instanzen]({{site.baseurl}}/api/basics/#endpoints. Stellen Sie sicher, dass der Endpunkt der Braze-Instanz entspricht, auf der sich Ihr Workspace befindet.
 
 Optionale Felder:
 - `YOUR_KEY1` (optional)

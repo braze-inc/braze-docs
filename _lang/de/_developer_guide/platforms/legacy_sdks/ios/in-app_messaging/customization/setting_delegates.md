@@ -1,6 +1,6 @@
 ---
-nav_title: Delegaten festlegen
-article_title: In-App-Nachricht Delegierte für iOS einstellen
+nav_title: Delegierte festlegen
+article_title: In-App-Nachricht Delegierte für iOS festlegen
 platform: iOS
 page_order: 2
 description: "Dieser Artikel referenziert die Einstellung von In-App-Nachrichtendelegierten für Ihre iOS-Anwendung."
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Delegierte einstellen
+# Delegierte festlegen
 
 Die Anzeige und Zustellung von In-App-Nachrichten kann im Code angepasst werden, indem Sie unsere optionalen Delegaten festlegen.
 
@@ -30,7 +30,7 @@ Setzen Sie Ihr `ABKInAppMessageUIDelegate`-Delegatenobjekt auf die Braze-Instanz
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController?.setInAppMessageUIDelegate?(self)
@@ -55,7 +55,7 @@ Setzen Sie Ihr `ABKInAppMessageControllerDelegate`-Delegatenobjekt auf die Braze
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.inAppMessageController.delegate = self
@@ -76,7 +76,7 @@ Sie können alternativ Ihren zentralen In-App-Nachricht-Delegaten zur Initialisi
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",

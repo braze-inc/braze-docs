@@ -29,18 +29,18 @@ El núcleo de Braze Pilot es su biblioteca de simulaciones de aplicaciones. Cada
 
 ### Steppington
 
-Steppington es una aplicación de fitness con entrenamientos, objetivos de ejercicio y un servicio premium Steppington+. Ofrece varios lugares para mostrar [tarjetas de contenido]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), una sección que puede revelarse con [banderas de características]({{site.baseurl}}/developer_guide/feature_flags), y una sólida biblioteca de registro de eventos personalizados que hacen posible ilustrar muchos recorridos del cliente para este sector.
+Steppington es una aplicación de fitness con entrenamientos, objetivos de ejercicio y un servicio premium Steppington+. Ofrece varios lugares para mostrar [tarjetas de contenido]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), una sección que puede revelarse con [banderas de características]({{site.baseurl}}/developer_guide/feature_flags) y una sólida biblioteca de registro de eventos personalizados que permiten ilustrar muchos recorridos del cliente para este sector.
 
-Página de inicio de Steppington con iconos de entrenamiento para maratón, yoga, ciclismo y pesas.]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
+![La página de inicio de Steppington con iconos de entrenamiento para maratón, yoga, ciclismo y pesas.]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% tab eCommerce %}
 
-### PantalonesLaberinto
+### PantsLabyrinth
 
 PantsLabyrinth es una aplicación de comercio electrónico que vende (lo has adivinado) ¡pantalones! La aplicación PantsLabyrinth incluye una experiencia completa de pago con carrito de la compra, una característica opcional de lista de deseos que puede habilitarse con una bandera de característica, y muchas oportunidades de bromas socarronas con amigos del Reino Unido.
 
-Página de producto de PantsLabyrinth con opciones para añadir vaqueros a la cesta.]({% image_buster /assets/img/braze_pilot/pantslabyrinth_app.png %}){:style="max-width:50%"}
+![Una página de producto para PantalonesLaberinto con opciones para añadir vaqueros a la cesta.]({% image_buster /assets/img/braze_pilot/pantslabyrinth_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% tab Streaming %}
@@ -49,7 +49,7 @@ Página de producto de PantsLabyrinth con opciones para añadir vaqueros a la ce
 
 MovieCanon es un servicio de streaming perfectamente diseñado para ilustrar casos de uso comunes de Braze en torno a la interacción con los contenidos. 
 
-La aplicación MovieCanon con diferentes películas de suspense para ver.]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
+![La aplicación MovieCanon con diferentes películas de suspense para ver.]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% endtabs %}
@@ -58,7 +58,7 @@ La aplicación MovieCanon con diferentes películas de suspense para ver.]({% im
 
 El SDK de Braze es un paquete de código que recopila datos de tus usuarios una vez integrado en tu aplicación o sitio web. Cuando conectas Pilot a tu panel, inicializas esta conexión entre la aplicación Pilot de tu teléfono y el SDK de Braze, y estableces una conexión única con tu instancia de Braze dando a Pilot tu identificador de clave de API para tu panel.
 
-El primer paso para configurar Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
+![El primer paso de la configuración de Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
 
 Después de que Pilot se conecte a tu panel de Braze, el SDK de Braze funcionará en la aplicación igual que lo hará cuando integres el SDK con tu propia aplicación o sitio web. Esto significa que Braze lo hará:
 
@@ -68,7 +68,7 @@ Después de que Pilot se conecte a tu panel de Braze, el SDK de Braze funcionar�
 
 Para más información sobre el SDK de Braze, consulta [Integración]({{site.baseurl}}/user_guide/getting_started/integration).
 
-La pila de interacción con los clientes Braze, que incluye integraciones, API, SDK para la ingesta de datos, clasificación, orquestación, personalización y acción con canales de mensajería para un bucle de retroalimentación interactivo con tus clientes.]({% image_buster /assets/img/braze_pilot/braze_sdk_diagram.png %}){:style="max-width:70%"}
+![La pila de interacción con los clientes Braze, que incluye integraciones, API, SDK para la ingesta de datos, clasificación, orquestación, personalización y acción con canales de mensajería para un bucle de retroalimentación interactivo con tus clientes.]({% image_buster /assets/img/braze_pilot/braze_sdk_diagram.png %}){:style="max-width:70%"}
 
 ## Perfiles de usuario en Braze
 
@@ -82,7 +82,7 @@ Este estado de conexión representa la experiencia de un invitado de tu aplicaci
 
 Este estado de conexión significa que Braze reconoce tu perfil de usuario a través de un identificador único que se te ha asignado, conocido como identificador externo. Puedes buscar este identificador externo en la página **de Búsqueda de usuarios** de tu panel para localizar tu perfil de usuario, que almacenará todos los atributos de usuario y eventos registrados desde Pilot en función de tu actividad en la aplicación.
 
-\![Un ejemplo de perfil de usuario Braze para el usuario "torchie-208117".]({% image_buster /assets/img/braze_pilot/user_profile.png %})
+![Un ejemplo de perfil de usuario Braze para el usuario "torchie-208117".]({% image_buster /assets/img/braze_pilot/user_profile.png %})
 
 ### Tipo de conexión
 
@@ -127,15 +127,15 @@ Si estás registrando datos como usuario identificado, aparecerá un icono de us
 {% endtab %}
 {% endtabs %}
 
-## Campañas y Lonas
+## Campañas y Canvas
 
-Las campañas y los lienzos son la forma de enviar mensajes a tus usuarios. 
+Las campañas y los lienzos son la forma de enviar mensajes a los usuarios. 
 
 - Las campañas son mejores para mensajes únicos enviados a un segmento de audiencia específico a través de varios canales. 
-- Los lienzos son flujos de trabajo de campaña avanzados que te permiten automatizar y orquestar recorridos del cliente personalizados a través de múltiples canales. Dentro de un Canvas, puedes configurar la lógica de ramificación, los retrasos, los puntos de decisión y los eventos de conversión para guiar a los clientes a través de una serie de interacciones. Los lienzos ayudan a garantizar una comunicación coherente y sin fisuras en los distintos puntos de contacto, aumentando las posibilidades de interacción con los clientes y la conversión.
+- Los lienzos son flujos de trabajo de campaña avanzados que le permiten automatizar y orquestar recorridos personalizados de los clientes a través de múltiples canales. Dentro de un Canvas, puede configurar lógica de ramificación, retrasos, puntos de decisión y eventos de conversión para guiar a los clientes a través de una serie de interacciones. Los lienzos ayudan a garantizar una comunicación coherente y sin fisuras en los distintos puntos de contacto, aumentando las posibilidades de interacción con los clientes y la conversión.
 
 ## Canales de mensajería compatibles
 
 Braze Pilot actualmente admite [mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about), que aparecen en tu aplicación, entregando mensajería oportuna mientras el usuario está interactuando activamente.
 
-Mensaje dentro de la aplicación MovieCanon "¿Disfrutas de MovieCanon? Recomienda a tus amigos!" con la opción de introducir tu dirección de correo electrónico para enviar referidos.]({% image_buster /assets/img/braze_pilot/moviecanon_iam.png %}){:style="max-width:40%"}
+![Un mensaje dentro de la aplicación MovieCanon "¿Disfrutas de MovieCanon? Recomienda a tus amigos!" con la opción de introducir tu dirección de correo electrónico para enviar referidos.]({% image_buster /assets/img/braze_pilot/moviecanon_iam.png %}){:style="max-width:40%"}

@@ -138,7 +138,7 @@ API は、`https://personalization.{region}.hightouch.com` でアクセスでき
             "deadmau5",
             "Marsh",
             "Enamour"
-        ],
+        ]
     },
     "recommendations": {
         "concerts": [
@@ -159,7 +159,7 @@ API は、`https://personalization.{region}.hightouch.com` でアクセスでき
             "label": "Anjunadeep",
             "release_date": "2023-04-28"
         }
-    },
+    }
 }
 ```
 

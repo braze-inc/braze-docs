@@ -15,7 +15,7 @@ description: "この記事では、「メールテンプレートの特定の翻
 /テンプレート/翻訳/メール
 {% endapimethod %}
 
-> [メールテンプレートの]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)特定の翻訳とローカライゼーションを表示するには、このエンドポイントを使用する。
+> [メールテンプレートの]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)特定の翻訳とローカライゼーションを表示するには、このエンドポイントを使用する。翻訳機能の詳細については、[メッセージのローカライゼーションを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照のこと。
 
 {% alert important %}
 このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。

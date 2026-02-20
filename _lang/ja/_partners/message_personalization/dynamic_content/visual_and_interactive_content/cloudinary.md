@@ -9,7 +9,7 @@ search_tag: Partner
 
 # クラウディナリ
 
-> [Cloudinary](https://www.cloudinary.com?utm_source=braze_partner_page) は、"画像の管理、編集、最適化、および配信に使用される動画 プラットフォームで、s および動画をチャネルs およびカスタマージャーニーs のすべてのキャンペーンにスケールで提供します。統合され有効になっている場合、Cloudinaryのメディアマネジメントは、Braze キャンペーンおよびキャンバスのダイナミックな、文脈に応じた or 状況に即した、およびパーソナライズされたのアセット配信に役立ちます。 
+> [Cloudinary](https://www.cloudinary.com?utm_source=braze_partner_page) は、"画像の管理、編集、最適化、および配信に使用される動画 プラットフォームで、s および動画をチャネルs およびカスタマージャーニー のすべてのキャンペーンにスケールで提供します。統合され有効になっている場合、Cloudinaryのメディアマネジメントは、Braze キャンペーンおよびキャンバスのダイナミックな、文脈に応じた or 状況に即した、およびパーソナライズされたのアセット配信に役立ちます。 
 
 ## この統合について
 
@@ -28,7 +28,7 @@ search_tag: Partner
 | クラウディナリーアカウント  | この提携の事前タグを行うには、[クラウディナリアカウント](https://cloudinary.com/users/register_free?utm_source=braze+docs+page)が必要です  |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation”}
 
-## 統合方法
+## 連携方法
 
 {% alert tip %}
 これらの統合方法の一部では、`f_auto` および`q_auto` Cloudinary Transformations を使用します。これにより、["画像](https://cloudinary.com/documentation/image_transformations#banner) および[動画](https://cloudinary.com/documentation/video_manipulation_and_delivery#banner) アセットのビヘイビアとアプリの稼働率をより詳細にカスタマイズできます。Transformations を含めるようにCloudinary アセットリンクを変更する方法の詳細については、[Transformation URL 構造](https://cloudinary.com/documentation/image_transformations#transformation_url_structure) を参照してください。
@@ -147,11 +147,11 @@ Liquid タグ s をBraze キャンペーン メッセージ内のクラウディ
 
 ##### 出力URL
 
-- オーディエンス`internal`およびロケール`en`を持つユーザーsのアウトプットURL: 
+- オーディエンス`internal`およびロケール`en`を持つユーザーのアウトプットURL: 
 ```
 https://papish.cloudinary.us/image/list/f_auto,q_auto/$locale_!en!/$audience_!Internal!/fn_select:js:v1700000000:segmentedBanner.js/v1690000000/samples.json
 ```
-- オーディエンス`external`およびロケール`es`を持つユーザーsのアウトプットURL: 
+- オーディエンス`external`およびロケール`es`を持つユーザーのアウトプットURL: 
 ```
 https://papish.cloudinary.us/image/list/$locale_!es!/$audience_!External!/fn_select:js:v1700000000:segmentedBanner.js/v1690000000/samples.json
 ```

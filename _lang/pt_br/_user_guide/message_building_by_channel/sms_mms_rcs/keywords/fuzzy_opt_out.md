@@ -1,7 +1,7 @@
 ---
-nav_title: Cancelamento difuso
-article_title: Opção de exclusão difusa
-description: "Este artigo de referência aborda como configurar o opt-out difuso, uma configuração que tenta reconhecer quando uma mensagem de entrada não corresponde a uma palavra-chave de opt-out."
+nav_title: Desativação imprecisa
+article_title: Cancelamento de inscrição impreciso
+description: "Este artigo de referência cobre como configurar a exclusão fuzzy, uma configuração que tenta reconhecer quando uma mensagem recebida não corresponde a uma palavra-chave de exclusão."
 page_type: reference
 channel:
   - SMS
@@ -11,54 +11,54 @@ page_order: 1
 
 ---
 
-# Cancelamento difuso
+# Desativação imprecisa
 
-\![bate-papo de mensagem do iOS que mostra mensagens de opt-out de saída em resposta ao opt-out difuso de entrada "Please stopppp".]({% image_buster /assets/img/sms/fuzzy1.jpg %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![chat de mensagens iOS que mostra mensagens de opt-out de saída em resposta à mensagem de opt-out difusa recebida "Por favor, pareee".]({% image_buster /assets/img/sms/fuzzy1.jpg %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
-> Os usuários que enviam SMS, MMS e RCS com o Braze devem aderir às leis, aos regulamentos e aos padrões do setor aplicáveis que forem definidos. Para a exclusão, as leis determinam que, quando um usuário envia a mensagem "STOP", todas as mensagens subsequentes relacionadas a esse programa de mensagens serão interrompidas. A Braze processa automaticamente essas mensagens e cancela a inscrição do usuário.<br><br>O opt-out difuso tenta reconhecer quando uma mensagem de entrada não corresponde a uma [palavra-chave de opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), mas indica a intenção de opt-out. Se o opt-out difuso estiver ativado e uma resposta de palavra-chave de entrada for considerada "difusa", o Braze responderá automaticamente com uma mensagem de resposta que instrui os usuários a optarem pelo opt-out.
+> Os usuários que enviam SMS, MMS e RCS com Braze devem aderir às leis, regulamentos e padrões da indústria aplicáveis que estão definidos. Para cancelar, as leis determinam que quando um usuário envia uma mensagem de texto com a palavra "STOP", todas as mensagens subsequentes relacionadas a esse programa de envio de mensagens serão interrompidas. Braze processa automaticamente essas mensagens e cancela a inscrição do usuário.<br><br>O cancelamento de inscrição impreciso em SMS tenta reconhecer quando uma mensagem SMS de entrada não corresponde [a uma palavra-chave de cancelamento de inscrição]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), mas indica a intenção de cancelamento. Se o opt-out difuso estiver habilitado e uma resposta de palavra-chave recebida for considerada "difusa", o Braze responderá automaticamente com uma mensagem de resposta que instrui os usuários a optarem por sair.
 
-Atualmente, somente as palavras-chave de exclusão criadas usando o inglês como [idioma local]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#multi-language-support) são suportadas.
+Atualmente, apenas palavras-chave de exclusão criadas usando o inglês como [idioma local]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#multi-language-support) são suportadas.
 
-## O que é considerado difuso?
+## O que é considerado impreciso?
 
-Os critérios para que uma resposta de entrada seja considerada "difusa" são os seguintes:
-- Se a troca de uma letra com a letra um à esquerda ou à direita dela em uma palavra-chave QWERTY gerar uma palavra-chave opt-out correspondente.
+Os critérios para que uma resposta de entrada seja considerada "imprecisa" são os seguintes:
+- Se trocar uma letra pela letra à esquerda ou à direita dela em um teclado QWERTY resultar em uma palavra-chave de exclusão correspondente.
 - Uma substring da mensagem corresponde a uma palavra-chave de exclusão.
 
-Por exemplo, "Stpo" ou "Please stopppp" serão considerados difusos, e uma resposta difusa de recusa será enviada. Se o usuário responder com uma palavra-chave de cancelamento, um evento de cancelamento de assinatura será acionado.
+Por exemplo, "Stpo" ou "Por favor, pareee" serão considerados imprecisos, e uma resposta de exclusão imprecisa será enviada. Se o usuário então responder com uma palavra-chave de opt-out, um evento de cancelamento de inscrição será disparado.
 
-## Configurar o opt-out difuso
+## Configurar exclusão fuzzy
 
-Para configurar o opt-out difuso, navegue até a página de gerenciamento de palavras-chave do grupo de assinaturas.
+Para configurar a exclusão aproximada, navegue até a página de gerenciamento de palavras-chave do grupo de inscrições.
 
-1. Vá para **Audience** > **Subscription Group Management (** **Público** > **Gerenciamento de grupos de** assinatura) e selecione um grupo de assinatura de **SMS/MMS/RCS**.
-2. Em **Global Keywords**, localize a categoria **opt-out** e selecione o ícone de lápis.
-3. Habilite **o Fuzzy Opt-Out** ativando-o.
-4. Modifique a resposta fuzzy opt-out conforme desejado. 
+1. Acesse **público** > **Gerenciamento de Grupo de Inscrições** e selecione um **grupo de inscrições SMS/MMS/RCS**.
+2. Em **Palavras-chave Globais**, encontre a categoria **opt-out** e selecione o ícone de lápis.
+3. Ativar **Cancelamento de inscrição impreciso** no botão.
+4. Modifique a resposta conforme desejar. 
 
-\![Seção para editar palavras-chave de exclusão.]({% image_buster /assets/img/sms/fuzzy2.png %})
+![Seção para editar palavras-chave de opt-out.]({% image_buster /assets/img/sms/fuzzy2.png %})
 
-## Práticas recomendadas para mensagens de opt-out difusas
+## Melhores práticas para mensagens de opt-out difusas
 
-Para garantir uma experiência clara, compatível e positiva para seus assinantes, é fundamental configurar cuidadosamente sua mensagem de opt-out difusa. O principal objetivo da mensagem de opt-out difusa é **orientar os usuários que enviam uma mensagem semelhante, mas não exatamente, à sua palavra-chave de opt-out designada**. A mensagem solicita que os usuários saibam como cancelar a assinatura com êxito.
+Para garantir uma experiência clara, em conformidade e positiva para seus assinantes, é crucial configurar sua mensagem de opt-out difusa de forma cuidadosa. O principal objetivo da mensagem de opt-out difusa é **guiar os usuários que enviam uma mensagem semelhante, mas não exatamente, à sua palavra-chave de opt-out designada**. A mensagem orienta os usuários sobre como cancelar a inscrição com sucesso.
 
 ### Considerações críticas
 
 {% alert warning %}
-**NÃO** configure sua mensagem de opt-out difusa para confirmar o cancelamento da assinatura. Sua mensagem de opt-out difusa não deve conter linguagem que implique que o usuário já cancelou a assinatura com sucesso. Por exemplo, **não** use "Sua inscrição foi cancelada", "Você não receberá mais mensagens deste número" ou "Você está excluído".
+**NÃO** configure sua mensagem de opt-out difusa para confirmar um cancelamento de inscrição. Sua mensagem de opt-out difusa não deve conter linguagem que implique que um usuário já cancelou a inscrição com sucesso. Por exemplo, **não** use "Você foi cancelado", "Você não receberá mais mensagens deste número" ou "Você agora está optado por sair".
 {% endalert %}
 
-A mensagem fuzzy opt-out é enviada antes que o usuário tenha feito o opt-out com sucesso. O uso da linguagem de confirmação induz o assinante a acreditar que cancelou a assinatura quando não o fez, levando à continuidade de mensagens indesejadas, à frustração do assinante e a riscos significativos de conformidade.
+A mensagem de opt-out difusa é enviada antes que o usuário tenha cancelado a inscrição com sucesso. Usar linguagem de confirmação engana o assinante, fazendo-o acreditar que está cancelado quando não está, levando a mensagens indesejadas contínuas, frustração do assinante e riscos significativos de conformidade.
 
 {% alert warning %}
-**NÃO** configure sua mensagem de opt-out difusa para ser idêntica ou semelhante à sua palavra-chave exata de opt-out.
+**NÃO** configure sua mensagem de opt-out difusa para ser idêntica ou semelhante à sua palavra-chave de opt-out exata.
 {% endalert %}
 
-Se a sua mensagem difusa for igual ou muito próxima da palavra-chave exata de cancelamento (por exemplo, se "STOP" for a palavra-chave exata e a mensagem difusa for "Text STOP to unsubscribe"), isso pode gerar confusão sobre se a mensagem inicial do usuário realmente resultou em um cancelamento de assinatura ou se ele precisa realizar outra ação. A mensagem difusa deve sempre esclarecer a ação que o usuário precisa realizar.
+Se sua mensagem difusa for a mesma ou muito próxima da sua palavra-chave de opt-out exata (por exemplo, se "PARAR" for sua palavra-chave exata e sua mensagem difusa for "Envie PARAR para cancelar a inscrição"), isso pode criar confusão sobre se a mensagem inicial do usuário realmente resultou em um cancelamento de inscrição ou se eles precisam tomar outra ação. A mensagem difusa deve sempre esclarecer qual ação o usuário precisa tomar.
 
 ### Exemplos de mensagens de opt-out difusas
 
-Concentre-se em orientar os usuários. Por exemplo, se sua palavra-chave de opt-out for "STOP", esses são exemplos bons e ruins de mensagens de opt-out difusas que você poderia criar:
+Concentre-se em guiar os usuários. Por exemplo, se sua palavra-chave de opt-out for "PARAR", estes são bons e maus exemplos de mensagens de opt-out difusas que você poderia criar:
 
 <table role="presentation" class="reset-td-br-1 reset-td-br-2">
   <thead>
@@ -67,22 +67,22 @@ Concentre-se em orientar os usuários. Por exemplo, se sua palavra-chave de opt-
         Bons exemplos <span aria-hidden="true">✅</span>
       </th>
       <th style="width: 50%">
-        Exemplos ruins <span aria-hidden="true">🚫</span>
+        Maus exemplos <span aria-hidden="true">🚫</span>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>"Para cancelar a assinatura de todas as mensagens, responda com a palavra STOP."</td>
-      <td>"Sua inscrição foi cancelada com sucesso. Você não receberá mais mensagens desse número. Reply START to resubscribe." (Essa é uma confirmação direta do cancelamento da assinatura, o que é enganoso em um cenário de opt-out difuso).</td>
+      <td>"Para cancelar a inscrição de todas as mensagens, por favor, responda com a palavra PARAR."</td>
+      <td>"Você foi cancelado com sucesso." Você não receberá mais mensagens deste número. Responda INICIAR para se reinscrever." (Esta é uma confirmação direta de cancelamento, o que é enganoso em um cenário de opt-out difuso.)</td>
     </tr>
     <tr>
-      <td>"Recebemos sua mensagem. Se você quiser parar de receber mensagens de texto, envie uma mensagem de texto para STOP."</td>
-      <td>"STOP." (Essa é apenas a palavra-chave exata em si, que não orienta o usuário).</td>
+      <td>"Recebemos sua mensagem. Se você gostaria de parar de receber mensagens, por favor, envie PARAR."</td>
+      <td>"PARAR." (Esta é apenas a palavra-chave exata, que não orienta o usuário.)</td>
     </tr>
     <tr>
-      <td>"Você queria cancelar a assinatura? Responda STOP para cancelar o recebimento de todas as mensagens futuras."</td>
-      <td>"(Se "STOP" também for sua palavra-chave exata, isso é redundante e não esclarece a ação se a mensagem inicial for confusa).</td>
+      <td>"Você quis cancelar a inscrição? Responda PARAR para optar por não receber mais mensagens."</td>
+      <td>"Envie PARAR para cancelar a inscrição." (Se "PARAR" também for sua palavra-chave exata, isso é redundante e não esclarece a ação se a mensagem inicial foi difusa.)</td>
     </tr>
   </tbody>
 </table>

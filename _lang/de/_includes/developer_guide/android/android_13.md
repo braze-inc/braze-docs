@@ -14,7 +14,7 @@ Um sich auf Android 13 vorzubereiten, upgraden Sie bitte Ihr Braze SDK auf die [
 
 Mit Android 13 [ändert sich die](https://developer.android.com/about/versions/13/changes/notification-permission) Art und Weise, wie Nutzer:innen Apps verwalten, die Push-Benachrichtigungen senden, [erheblich](https://developer.android.com/about/versions/13/changes/notification-permission). In Android 13 müssen Apps eine Genehmigung einholen, bevor Push-Benachrichtigungen angezeigt werden können. 
 
-![Eine Android Push-Nachricht mit der Frage "Erlauben Sie Kitchenerie, Ihnen Benachrichtigungen zu senden?" mit zwei Buttons "Zulassen" und "Nicht zulassen" am unteren Rand der Nachricht.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
+![Eine Android Push-Nachricht mit der Frage "Darf Kitchenerie Ihnen Benachrichtigungen senden?" mit zwei Buttons "Zulassen" und "Nicht zulassen" am unteren Rand der Nachricht.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
 
 Diese neue Berechtigung folgt einem ähnlichen Muster wie bei iOS und Web-Push, wo Sie nur einen Versuch haben, die Berechtigung zu erhalten. Wenn ein Nutzer `Don't Allow` wählt oder die Aufforderung ablehnt, kann Ihre App nicht erneut um Erlaubnis bitten.
 

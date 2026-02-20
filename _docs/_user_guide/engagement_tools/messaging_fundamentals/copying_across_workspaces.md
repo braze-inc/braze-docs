@@ -1,7 +1,7 @@
 ---
 nav_title: Copy across workspaces
 article_title: Copy Across Workspaces
-page_order: 4.5
+page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
 description: "This reference article provides an overview of how to copy campaigns and Canvases to different workspaces."
@@ -68,8 +68,8 @@ Note that the following is not a comprehensive list of what is copied across wor
 | Conversion behaviors (nested) | Approvals | 
 | Quiet time configurations | Trigger schedule | 
 | Frequency capping configurations | Campaign summaries | 
-| Recipient subscription state |  | 
-| Reoccurring schedule |  | 
+| Recipient subscription state | Filters | 
+| Recurring schedule |  | 
 | Is Transactional |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -84,8 +84,8 @@ Note that the following is not a comprehensive list of what is copied across wor
 | Conversion behaviors (nested) | Approvals | 
 | Quiet time configurations | Trigger schedule | 
 | Frequency capping configurations | Canvas summaries | 
-| Recipient subscription state |  | 
-| Reoccurring schedule |  | 
+| Recipient subscription state | Filters | 
+| Recurring schedule |  | 
 | Is Transactional |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

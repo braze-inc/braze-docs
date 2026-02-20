@@ -110,7 +110,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Ganze Zahlen %}
+{% tab Integers %}
 So passen Sie ein angepasstes Attribut mit einem `int` Wert an:
 
 {% subtabs global %}
@@ -169,7 +169,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Gleitkommazahlen %}
+{% tab Floating-points %}
 So legen Sie ein angepasstes Attribut mit einem `float` Wert fest:
 
 {% subtabs global %}
@@ -223,7 +223,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Boolesch %}
+{% tab Boolean %}
 So legen Sie ein angepasstes Attribut mit einem `boolean` Wert fest:
 
 {% subtabs global %}
@@ -251,7 +251,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Datum %}
+{% tab Date %}
 {% subtabs global %}
 {% subtab JAVA %}
 

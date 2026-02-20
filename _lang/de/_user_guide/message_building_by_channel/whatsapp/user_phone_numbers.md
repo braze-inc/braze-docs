@@ -29,7 +29,7 @@ Alle U.S.-Nummern müssen gültige, 10-stellige Telefonnummern mit einer gültig
 
 Alle internationalen Nummern beginnen mit einem `+`, gefolgt von der Landesvorwahl und der Telefonnummer. (e.g `+442071838750`)
 
-\![]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
+![]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 Um jedoch die Genauigkeit zu gewährleisten, wenn Sie in mehrere Regionen mit unterschiedlichen Länder- oder Ortsvorwahlen senden, wird empfohlen, das Format `E.164` zu verwenden, auch für Telefonnummern mit U.S.
 

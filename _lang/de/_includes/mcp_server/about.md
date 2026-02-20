@@ -9,7 +9,7 @@
 ​Das Model Context Protocol (MCP) ist ein Standard, mit dem KI-Agenten eine Verbindung zu Daten einer anderen Plattform herstellen und mit diesen arbeiten können. Sie besteht aus zwei Hauptteilen:
 
 - **MCP Client:** Die Anwendung, in der der KI-Agent läuft, z. B. Cursor oder Claude.
-- **MCP Server:** Ein Dienst, der von einer anderen Plattform wie Braze bereitgestellt wird und definiert, welche Tools die KI verwenden kann und auf welche Daten sie zugreifen kann.
+- **MCP Server:** Ein Dienst, der von einer anderen Plattform wie Braze bereitgestellt wird und der definiert, welche Tools die KI verwenden kann und auf welche Daten sie zugreifen kann.
 
 ## Über den Braze MCP Server
 
@@ -27,15 +27,15 @@ Weisen Sie Ihrem API-Schlüssel keine Berechtigungen zu, die **nicht** schreibge
 
 ## Beispiel für die Verwendung
 
-Sie können mit Braze über natürliche Sprache interagieren, indem Sie Tools wie Claude oder Cursor verwenden. Weitere Beispiele und bewährte Verfahren finden Sie unter [Verwendung des Braze MCP Servers]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "Entwickler:in" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+Sie können mit Braze über natürliche Sprache interagieren, indem Sie Tools wie Claude oder Cursor verwenden. Weitere Beispiele und bewährte Verfahren finden Sie unter [Verwendung des Braze MCP Servers]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}
-![Die Frage 'Welche Braze-Funktionen stehen mir zur Verfügung?' wird in Claude gestellt und beantwortet.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
+!['Was sind meine verfügbaren Braze-Funktionen?' wird in Claude gefragt und beantwortet.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-![Die Frage 'Welche Funktionen sind in Braze verfügbar?' wird in Cursor gestellt und beantwortet.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+![Die Frage 'Welche Funktionen stehen mir in Braze zur Verfügung?' wird in Cursor beantwortet.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -43,7 +43,7 @@ Sie können mit Braze über natürliche Sprache interagieren, indem Sie Tools wi
 
 ### Welche MCP-Clients werden unterstützt?
 
-Derzeit werden nur [Claude](https://claude.ai/) und [Cursor](https://cursor.com/) offiziell unterstützt. Sie benötigen ein Konto für einen dieser Clients, um den Braze MCP Server zu verwenden.
+Nur [Claude](https://claude.ai/) und [Cursor](https://cursor.com/) werden offiziell unterstützt. Sie müssen über ein Konto für einen dieser Clients verfügen, um den Braze MCP Server nutzen zu können.
 
 ### Auf welche Daten von Braze kann mein MCP Client zugreifen?
 
@@ -59,7 +59,7 @@ Die Verwendung eines MCP-Servers eines Drittanbieters für Braze-Daten wird nich
 
 ### Warum bietet der Braze MCP Server keinen PII- oder Schreibzugriff?
 
-Um Daten zu schützen und gleichzeitig Innovationen zu ermöglichen, haben wir den Server so konzipiert, dass er auf Endpunkte beschränkt ist, die nur lesen können und normalerweise keine PII zurückgeben. Dies reduziert das Risiko und unterstützt gleichzeitig wertvolle Anwendungsfälle.
+Um Daten zu schützen und gleichzeitig Innovationen zu ermöglichen, ist der Server auf Endpunkte beschränkt, die nur Lesezugriff haben und in der Regel keine PII zurückgeben. Dies reduziert das Risiko und unterstützt gleichzeitig wertvolle Anwendungsfälle.
 
 ### Kann ich meine API-Schlüssel wiederverwenden?
 
@@ -67,7 +67,7 @@ Nein. Sie müssen einen neuen API-Schlüssel für Ihren MCP Client erstellen. De
 
 ### Wird der Braze MCP Server lokal oder aus der Ferne gehostet?
 
-Derzeit wird der Braze MCP Server lokal gehostet.
+Der Braze MCP Server wird lokal gehostet.
 
 ### Warum listet Cursor nur Funktionen auf?
 
@@ -75,7 +75,7 @@ Prüfen Sie, ob Sie sich im Fragemodus oder im Agentenmodus befinden. Um den MCP
 
 ### Was mache ich, wenn der Agent eine falsche Antwort gibt?
 
-Wenn Sie mit Werkzeugen wie Cursor arbeiten, können Sie versuchen, das verwendete Modell zu ändern. Wenn Sie z.B. die Einstellung Auto gewählt haben, versuchen Sie, ein bestimmtes Modell zu wählen und experimentieren Sie, um herauszufinden, welches Modell für Ihren Anwendungsfall am besten geeignet ist. Sie können auch versuchen, einen neuen Chat zu starten und die Aufforderung erneut zu versuchen. 
+Wenn Sie mit Werkzeugen wie Cursor arbeiten, können Sie versuchen, das verwendete Modell zu ändern. Wenn Sie z.B. automatisch eingestellt haben, versuchen Sie, ein bestimmtes Modell zu wählen und experimentieren Sie, um herauszufinden, welches Modell für Ihren Anwendungsfall am besten geeignet ist. Sie können auch versuchen, einen neuen Chat zu starten und die Aufforderung erneut zu versuchen. 
 
 Sollten die Probleme persistent sein, können Sie uns eine E-Mail an [mcp-product@braze.com](mailto:mcp-product@braze.com) schicken. Wenn möglich, fügen Sie ein Video ein und erweitern Sie die Anruffunktionen, damit wir sehen können, welche Anrufe der Agent versucht hat.
 

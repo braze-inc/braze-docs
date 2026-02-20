@@ -20,7 +20,7 @@ guide_featured_list:
 - name: プッシュ有効化とサブスクリプション
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   image: /assets/img/braze_icons/users-01.svg
-- name: プッシュメッセージの作成
+- name: プッシュメッセージを作成する
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/
   image: /assets/img/braze_icons/edit-05.svg
 

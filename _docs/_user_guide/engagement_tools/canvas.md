@@ -4,7 +4,7 @@ article_title: Canvas
 layout: dev_guide
 page_order: 3
 guide_top_header: "Canvas"
-guide_top_text: "Marketing is a science that needs an artist's touch and specialized tools. With Canvas, you can mix rigor and artistry to create meaningful, relevant, and engaging experiences for each customer. <br> <br> Canvas is a unified interface where marketers craft campaigns with multiple messages. It's a bit like a visual programming tool, letting you build a cohesive user journey out of a series of steps.<br> <br> The following articles will walk you through setting up a Canvas, empowering you to build outstanding customer experiences. You can also check out our <a href='https://learning.braze.com/canvas-course'>Canvas Braze Learning course</a>!<br><br>**Canvas is only available to customers on annual contracts. If you are not on contract, <a href='https://www.braze.com/contact/'>contact Braze</a> to learn how to get Canvas.**"
+guide_top_text: "Marketing is a science that needs an artist's touch and specialized tools. With Canvas, you can mix rigor and artistry to create meaningful, relevant, and engaging experiences for each customer. <br> <br> Canvas is a unified interface where marketers craft campaigns with multiple messages. It's a bit like a visual programming tool, letting you build a cohesive user journey out of a series of steps.<br> <br> The following articles will walk you through setting up a Canvas, empowering you to build outstanding customer experiences. You can also check out our <a href='https://learning.braze.com/canvas-course'>Canvas Braze Learning course</a>!"
 search_rank: 3
 page_type: landing
 tool: Canvas

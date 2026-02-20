@@ -38,13 +38,13 @@ Nous vous demandons de déléguer votre domaine personnalisé à Braze afin que 
 ## Ajouter un domaine personnalisé
 
 1. Dans Braze, allez dans **Company Settings** > **SMS/RCS and Messaging Apps Domains**.
-!page "Domaines des SMS/RCS et des envois in-app" avec plusieurs domaines répertoriés.]({% image_buster /assets/img/main_page.png %})
+![La page "Domaines des SMS/RCS et des envois in-app" contient une liste de plusieurs domaines.]({% image_buster /assets/img/main_page.png %})
 
 {: start="2"}
 2\. Sélectionnez **Ajouter un domaine** pour commencer la configuration d'un nouveau domaine personnalisé.
 3\. Entrez le domaine personnalisé que vous avez acheté dans notre entrée in-app, qui utilise notre logique de validation existante pour un formatage correct, puis sélectionnez **Suivant** et **Soumettre**.
 
-! bouton "Ajouter un domaine" sur la page "Domaines SMS/RCS et envois in-app".]({% image_buster /assets/img/custom_domain_button.png %}){: style="max-width:70%;"}
+![Bouton "Ajouter un domaine" sur la page "Domaines SMS/RCS et envois in-app".]({% image_buster /assets/img/custom_domain_button.png %}){: style="max-width:70%;"}
 
 {: start="4"}
 4\. Demandez à votre équipe technique (comme l'ingénierie ou l'informatique) de mettre à jour votre configuration DNS avec les détails de l'enregistrement DNS Cloudflare qui s'affichent. Votre équipe technique doit mettre à jour vos enregistrements DNS avec ces détails dans un délai de 45 jours.
@@ -52,7 +52,7 @@ Nous vous demandons de déléguer votre domaine personnalisé à Braze afin que 
 
 Braze interroge votre configuration DNS toutes les 30 minutes environ pour vérifier les mises à jour.
 
-!section "enregistrement DNS" avec 3 étapes à compléter pour terminer la configuration de votre domaine.]({% image_buster /assets/img/dns_record.png %})
+![La section "enregistrement DNS" avec 3 étapes à compléter pour terminer la configuration de votre domaine.]({% image_buster /assets/img/dns_record.png %})
 
 {% alert note %}
 La progression de votre domaine est enregistrée automatiquement. Si vous devez quitter le flux en cours de route, vous pouvez le reprendre plus tard en sélectionnant l'entrée du domaine en attente sur la page **Domaines SMS/RCS et envois de messages.** 
@@ -62,25 +62,29 @@ La progression de votre domaine est enregistrée automatiquement. Si vous devez 
 
 Une fois votre domaine vérifié, vos domaines personnalisés apparaîtront dans le tableau de la page **Domaines SMS/RCS et Messaging Apps** avec des indicateurs d'état. Vous pouvez immédiatement utiliser les domaines connectés dans plusieurs groupes d'abonnement, espaces de travail et sur les canaux SMS, RCS et WhatsApp.
 
-\![Liste des domaines et statuts personnalisés.]({% image_buster /assets/img/custom_domain_statuses.png %}){: style="max-width:60%;"}
+![Liste des domaines et statuts personnalisés.]({% image_buster /assets/img/custom_domain_statuses.png %}){: style="max-width:60%;"}
 
 La surveillance en direct vous alertera dans le tableau de bord de Braze si l'un de vos domaines actifs présente un problème, de sorte que vos liens personnalisés restent utilisables. Si vous rencontrez des problèmes, reportez-vous aux détails de l'erreur in-app ou contactez l'[assistance de]({{site.baseurl}}/braze_support/) Braze pour obtenir de l'aide.
 
-## Utiliser des domaines personnalisés
+## Attribution de domaines personnalisés à des groupes d'abonnement
 
 Une fois configurés, les domaines personnalisés peuvent être affectés à un ou plusieurs groupes d'abonnement SMS, RCS et WhatsApp.
 
-!Les groupes d'abonnement vous permettent de sélectionner un domaine de raccourcissement des liens.]({% image_buster /assets/img/custom_domain.png %})
+1. Allez dans **Audience** > Gestion des groupes d'abonnements **.**
+2. Recherchez et sélectionnez votre groupe d'abonnement dans la liste.
+3. Sous **Détails du groupe d'abonnement**, sélectionnez votre domaine personnalisé comme **domaine de raccourcissement de lien.**
+
+![Paramètres des groupes d’abonnement vous permettant de sélectionner un domaine de raccourcissement de lien.]({% image_buster /assets/img/custom_domain.png %})
 
 Les campagnes envoyées avec le raccourcissement de lien activé utiliseront le domaine attribué associé à votre groupe d'abonnement SMS, RCS ou WhatsApp.
 
-!aperçu du compositeur du message SMS avec un domaine de lien raccourci qui est différent du domaine dans la boîte "Message".]({% image_buster /assets/img/custom_domain2.png %})
+![Aperçu du compositeur de messages SMS avec un domaine de lien raccourci qui est différent du domaine dans la boîte "Message".]({% image_buster /assets/img/custom_domain2.png %})
 
-## Questions fréquemment posées
+## Foire aux questions
 
-### Les domaines délégués peuvent-ils être partagés entre plusieurs groupes d'abonnement ?
+### Les domaines délégués peuvent-ils être partagés entre plusieurs groupes d’abonnement ?
 
-Oui. Un seul domaine peut être utilisé avec plusieurs groupes d'abonnement. Pour ce faire, sélectionnez pour chaque groupe d'abonnement le domaine auquel il doit être associé.
+Oui. Un seul domaine peut être utilisé avec plusieurs groupes d'abonnement. Pour ce faire, sélectionnez le domaine de chaque groupe d’abonnement auquel il doit être associé.
 
 ### Les domaines délégués peuvent-ils être partagés entre plusieurs espaces de travail ?
 

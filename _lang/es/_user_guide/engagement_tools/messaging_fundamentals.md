@@ -1,9 +1,9 @@
 ---
 nav_title: Fundamentos de la mensajería
-article_title: Fundamentos de la mensajería
+article_title: Fundamentos de la mensajería (Messaging Fundamentals)
 layout: dev_guide
 page_order: 0
-guide_top_header: "Fundamentos de la mensajería"
+guide_top_header: "Fundamentos de la mensajería (Messaging Fundamentals)"
 guide_top_text: "> En Braze, puedes redactar, enviar y gestionar tus mensajes utilizando <a href='/docs/user_guide/getting_started/campaigns_canvases'>una campaña o un Canvas</a>. Para estos dos métodos de mensajería, hay algunos fundamentos de mensajería compartidos para la composición (configuración de tu mensaje) y la gestión (manejo administrativo de tu mensaje)."
 page_type: landing
 tool: 
@@ -30,7 +30,7 @@ guide_featured_list:
   - name: Tipos de entrega
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
-  - name: Bloques de editor
+  - name: Bloques de edición
     link: /docs/dnd/editor_blocks/
     image: /assets/img/braze_icons/align-left.svg
   - name: Localización

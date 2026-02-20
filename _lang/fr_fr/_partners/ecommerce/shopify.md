@@ -15,6 +15,9 @@ guide_featured_list:
 - name: "Configuration de l'intégration standard de Shopify"
   link: /docs/shopify_standard_integration/
   image: /assets/img/braze_icons/shopping-cart-03.svg
+- name: Intégration standard de Shopify avec tags tiers
+  link: /docs/shopify_standard_integration_third_party_tagging/
+  image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: "Configuration de l'intégration personnalisée de Shopify"
   link: /docs/shopify_custom_integration/
   image: /assets/img/braze_icons/shopping-cart-03.svg
@@ -37,16 +40,3 @@ guide_menu_list:
   link: /docs/ecommerce_use_cases/
   image: /assets/img/braze_icons/users-01.svg
 ---
-<br><br>
-
-## Nouvelle intégration de Shopify
-
-Il s'agit d'une nouvelle version de l'intégration Shopify qui sera publiée par phases à partir d'avril 2025. Les phases seront basées sur le type de boutique Shopify et l'ID externe utilisé pour configurer l'intégration initiale. 
-
-**L'ancienne version de l'intégration sera obsolète le 28 août 2025. Vous devez mettre à jour la version la plus récente de l'intégration avant le 28 août 2025.**
-
-**Nouveaux clients de Braze :** À partir d'avril 2025, Braze déploiera progressivement le nouveau connecteur Shopify pour les nouveaux onboardings et la mise à niveau des clients existants. Pour en savoir plus sur la nouvelle intégration standard, consultez l'[intégration standard de Shopify]({{site.baseurl}}/shopify_standard_integration/).
-
-**Clients actuels de Braze :** À partir de février 2025, nous vous contacterons avec un guide de mise à niveau pour vous aider à faire la transition vers l'intégration Shopify plus récente.  Nous organiserons les clients en groupes (cohortes) en fonction de votre boutique Shopify et de la façon dont vous utilisez les ID externes de Braze pour faciliter une expérience de mise à niveau fluide et personnalisée. Vous serez informé lorsque votre cohorte sera prête à être mise à niveau.
-
-**La mise à jour vers cette nouvelle version entraînera des changements radicaux.** Vous serez guidé à travers un processus de révision sur le tableau de bord de Braze pour vous aider, vous et votre équipe de développement, à traiter ces changements avant la mise à niveau.

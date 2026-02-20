@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Export von Pro
 {% api %}
 # Produkt IDs exportieren
 {% apimethod get %}
-/Einkäufe/Produkt_liste
+/purchases/product_list
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um eine paginierte Liste von Produkt IDs zurückzugeben.
@@ -44,8 +44,6 @@ https://rest.iad-01.braze.com/purchases/product_list?page=1
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "products": [
     "product_name" (string), the name of the product

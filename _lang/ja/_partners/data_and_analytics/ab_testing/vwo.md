@@ -1,6 +1,6 @@
 ---
 nav_title: VWO
-article_title: VWOとBrazeの統合
+article_title: Brazeとの統合
 description: "VWO と Braze を統合する方法について説明します。"
 alias: /partners/vwo/
 page_type: partner

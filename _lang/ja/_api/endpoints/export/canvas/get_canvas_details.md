@@ -28,9 +28,9 @@ description: "この記事では、「キャンバスの詳細のエクスポー
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | 必須 | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください |
+| `canvas_id` | 必須かどうか | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください |
 | `post_launch_draft_version` | オプション | ブール値 | 開始後の下書きがあるキャンバスの場合、これを`true` に設定すると、利用可能な下書きの変更が表示されます。デフォルトは `false` です |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

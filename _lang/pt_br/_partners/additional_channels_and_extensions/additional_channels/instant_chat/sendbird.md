@@ -12,12 +12,12 @@ search_tag: Partner
 
 > O [Sendbird](https://sendbird.com/) Notifications oferece aos profissionais de marketing e gerentes de produtos um novo e poderoso canal de envio de mensagens persistentes e interativas no app para se comunicar com seus clientes. Essas mensagens podem ser usadas para qualquer comunicação e são mais comumente usadas para fins promocionais e transacionais.
 
-_Esta integração é mantida pela Sendbird._
+_Essa integração é mantida pela Sendbird._
 
 ## Sobre a integração
 
 A integração do Braze e do Sendbird permite que os usuários do Braze:
-* Utilize as capacidades de segmentação e disparo do Braze para iniciar notificações personalizadas dentro do app.
+* Utilize os recursos de segmentação e disparo do Braze para iniciar notificações personalizadas no app.
 * Crie notificações personalizadas no aplicativo na plataforma Sendbird Notifications, que são então entregues no ambiente do app, aumentando o engajamento do usuário.
 
 Ao aproveitar os recursos conjuntos da Braze e do Sendbird Notifications, as empresas podem elevar o engajamento do cliente e aumentar as taxas de conversão por meio de estratégias eficazes de notificação no aplicativo.
@@ -71,7 +71,7 @@ Um ID de usuário Sendbird deve ser adicionado a um perfil de usuário Braze com
 
 ### Etapa 5: Configure seu modelo de webhook
 
-Na Braze, em **Modelos e mídia**, acesse **Modelos de webhook** e escolha **Modelo de webhook do Sendbird**. Observe que esse modelo só ficará disponível se você tiver instalado a extensão Sendbird Notification Builder.
+No Braze, em **Modelos & mídias**, acesse **Modelos de Webhook** e escolha o **modelo Sendbird Webhook**. Observe que esse modelo só ficará disponível se você tiver instalado a extensão Sendbird Notification Builder.
 
 {% raw %}
 1. Forneça um nome de modelo e adicione equipes e tags conforme necessário.

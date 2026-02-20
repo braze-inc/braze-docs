@@ -23,7 +23,7 @@ With the Braze and Yotpo integration, you can dynamically pull and display star 
 | ----------- | ----------- |
 | Yotpo account | A Yotpo account is required to take advantage of this partnership. |
 | Yotpo reviews API key | This API will be implemented within the Connected Content code snippet.<br><br>For more information, refer to [finding your Yotpo app key and secret key](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key). |
-| Yotpo loyalty API key | This API key and GUID will be implemented within the Connected Content code snippet.<br><br>For more information, refer to [finding your loyalty & referrals API key and GUID](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
+| Yotpo loyalty API key | 이 API 키와 글로벌 고유 식별자(GUID)는 연결된 콘텐츠 코드 스니펫 내에서 구현됩니다.<br><br>자세한 내용은 [로열티 찾기 & 추천 API 키 및 GUID를](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid) 참조하세요.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Before continuing, confirm that the Yotpo product ID is the same as the `product_id` that will be pulled dynamically from Braze. This is mandatory for the integration to work. 
@@ -33,11 +33,11 @@ To find your Yotpo product ID, perform the following steps:
 1. Go to your store website.
 2. Open the product page.
 3. Right-click and select **Inspect**.
-4. Press <kbd>Control</kbd> + <kbd>F</kbd> and search for `yotpo-main` in the code. The `data-product ID` variable and its value appear in the Yotpo div.
+4. Press <kbd>Control</kbd> + <kbd>F</kbd> and search for `yotpo-main` in the code. `data-product ID` 변수와 해당 값은 Yotpo div에 표시됩니다.
 
-![Inspect and search for yotpo-main to find the data-product ID variable]({% image_buster /assets/img/yotpo/image1.png %})
+![yotpo-main을 검사하고 검색하여 데이터 제품 ID 변수 찾기]({% image_buster /assets/img/yotpo/image1.png %})
 
-## Integration
+## 통합
 
 To integrate Yotpo and Braze, perform the following steps:
 
@@ -71,9 +71,9 @@ The average rating for this product is:
 
 Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will be pulled dynamically from Braze. For the integration to work, the `product_id` in Braze must match the product ID in Yotpo (typically the eCommerce parent product ID).
 
-![Replace YOTPO-API-KEY with your Yotpo Reviews API key]({% image_buster /assets/img/yotpo/image2.png %})
+![YOTPO-API-KEY를 Yotpo 리뷰 API 키로 교체합니다.]({% image_buster /assets/img/yotpo/image2.png %})
 
-### Display a recent 5-star review for a product {#five-star-review}
+### 제품의 최근 5점 별점 리뷰 표시 {#five-star-review}
 
 Use this snippet to provide a top (published) review for a specific product that is included in the email:
 
@@ -96,9 +96,9 @@ Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will
 
 Here's what the snippet in your email editor will look like:
 
-![Example of email editor showing snippet for recent 5-star reviews]({% image_buster /assets/img/yotpo/image3.png %})
+![최근 별 5개 리뷰에 대한 스니펫을 표시하는 이메일 편집기 예시]({% image_buster /assets/img/yotpo/image3.png %})
 
-### Display visual UGC by product {#visual-ugc}
+### 제품별 시각적 UGC 표시 {#visual-ugc}
 
 Use this snippet to retrieve tagged and published Yotpo images and add them to your emails instead of the stock image or as an additional gallery:
 
@@ -125,9 +125,9 @@ Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will
 
 The snippet will look something like this:
 
-![Example of email editor showing a snippet of images published in Yotpo]({% image_buster /assets/img/yotpo/image4.png %})
+![Yotpo에 게시된 이미지 스니펫을 보여주는 이메일 편집기 예제]({% image_buster /assets/img/yotpo/image4.png %})
 
-### Display a customer's loyalty balance in an email {#loyalty-balance}
+### 이메일에 고객 로열티 잔액 표시하기 {#loyalty-balance}
 
 Use this snippet to retrieve a customer's loyalty point balance and use it in your email messaging:
 
@@ -153,21 +153,21 @@ Only {{publication.vip_tier_upgrade_requirements.points_needed}} more points to 
 
 Replace `<YOTPO-LOYALTY-GUID>` and `<YOTPO-LOYALTY-API-KEY>` with your Yotpo loyalty credentials. The `email_address` is pulled dynamically from Braze. For the integration to work, the email must be the email address of the customer receiving the email.
 
-The snippet will look something like this:
+스니펫은 다음과 비슷합니다.
 
-![Example of email editor showing a snippet of customer loyalty balance]({% image_buster /assets/img/yotpo/image5.png %})
+![고객 로열티 잔액 스니펫을 보여주는 이메일 편집기 예제]({% image_buster /assets/img/yotpo/image5.png %})
 
-## Frequently asked questions {#faq}
+## 자주 묻는 질문 {#faq}
 
-#### What if I don't have a 5-star review?
+### What if I don't have a 5-star review?
 
 If you don't have any 5-star reviews (such as if the endpoint response returns NULL for the 5-star review), then no content will be displayed.
 
-#### What if I don't have an image published for a product?
+### What if I don't have an image published for a product?
 
 If you don't have any images for a product (such as if the endpoint response returns NULL for the product image), then no content will be displayed.
 
-#### Can I customize the look and feel, or pull other data fields from Yotpo?
+### Can I customize the look and feel, or pull other data fields from Yotpo?
 
 Yes! To discover other data points and customization options available, refer to [Making an API call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). You may need some assistance from a front-end developer to do so.
 

@@ -44,17 +44,17 @@ Il s'agit d'une configuration unique et toutes les exportations futures utiliser
 
 ## Exportation des messages d'Alpaco vers Braze
 
-### Étape 1 : Créer un modèle dans Alpaco
+### Étape 1 : Créer un modèle dans Alpaco
 
 Dans Alpaco, créez un modèle qui exprime l'identité de votre marque. Lorsque vous êtes prêt, sélectionnez **Enregistrer.**
 
-![Modèle Créer Alpaco]({% image_buster /assets/img/alpaco/alpaco_1.png %})
+![Alpaco Créer un modèle]({% image_buster /assets/img/alpaco/alpaco_1.png %})
 
 ### Étape 2 : Rédiger un message en utilisant le modèle
 
 Ensuite, rendez-vous dans le lobby d'Alpaco et utilisez votre modèle pour créer un e-mail, un message in-app ou un bloc de contenu. Pour vérifier votre message avant de l'exporter, sélectionnez **Réviser.**
 
-![Créer un e-mail Alpaco]({% image_buster /assets/img/alpaco/alpaco_2.png %})
+![Alpaco Créer un e-mail]({% image_buster /assets/img/alpaco/alpaco_2.png %})
 
 ### Étape 3 : Exporter votre message à Braze
 
@@ -62,13 +62,13 @@ Sélectionnez **Exporter**, puis choisissez l'intégration Braze et indiquez si 
 
 Si vous apportez des modifications après l'exportation, vous pouvez réexporter le contenu depuis Alpaco pour le mettre à jour dans Braze.
 
-![Exporter e-mail Alpaco]({% image_buster /assets/img/alpaco/alpaco_3.png %})
+![Alpaco Export e-mail]({% image_buster /assets/img/alpaco/alpaco_3.png %})
 
 ## Utilisation des gabarits et des blocs Alpaco dans Braze
 
 Selon le type de contenu que vous exportez, votre modèle apparaîtra dans l'une des sections suivantes :
 
-- **Modèles et médias > Modèles d'e-mail**
-- **Modèles et médias > Blocs de contenu**
+- **Modèles & Media > Modèles d'e-mail**
+- **Modèles & Media > Blocs de contenu**
 
 Les modèles d'Alpaco sont idéaux pour les gestionnaires qui souhaitent gérer la cohérence de leur marque de manière centralisée. Ils prennent également en charge les tags intégrés de Braze pour faciliter la catégorisation et la gestion du contenu.

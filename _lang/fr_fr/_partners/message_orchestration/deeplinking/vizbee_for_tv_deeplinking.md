@@ -9,7 +9,7 @@ search_tag: Partner
 ---
 # Vizbee {#vizbee}
 
-> [Vizbee](https://vizbee.tv/) permet à tous les téléphones portables et téléviseurs intelligents de votre maison de fonctionner conjointement comme un seul appareil pour des expériences utilisateur fluides. Vizbee vous permet de tirer parti de tous les canaux de marketing mobile existants, tels que les notifications, les liens profonds et les e-mails pour acquérir et engager de façon fluide le public sur tous les appareils de télévision connectés (CTV) (comme Roku, FireTV, Samsung TV, LG TV, etc.).
+> [Vizbee](https://vizbee.tv/) permet à tous les téléphones portables et téléviseurs intelligents de votre maison de fonctionner conjointement comme un seul appareil pour des expériences utilisateur fluides. Vizbee vous aide à utiliser les canaux de marketing mobile existants tels que les notifications, les liens profonds et les e-mails pour acquérir et engager de façon fluide les téléspectateurs sur tous les appareils de télévision connectée (CTV) (comme Roku, FireTV, Samsung TV, LG TV, etc.).
 
 _Cette intégration est maintenue par Vizbee._
 

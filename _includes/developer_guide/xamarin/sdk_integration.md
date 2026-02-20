@@ -18,10 +18,14 @@ A .NET MAUI binding is a way to use native libraries in .NET MAUI apps. The impl
 {% subtabs local %}
 {% subtab NuGet %}
 The simplest integration method involves getting the Braze SDK from the [NuGet.org](https://www.nuget.org/) central repository. In the Visual Studio sidebar, right click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`BrazePlatform.BrazeAndroidBinding`](https://www.nuget.org/packages/BrazePlatform.BrazeAndroidBinding/) package into your project.
+
+To use Braze location services and geofences, also install the [`BrazePlatform.BrazeAndroidLocationBinding`](https://www.nuget.org/packages/BrazePlatform.BrazeAndroidLocationBinding/) package.
 {% endsubtab %}
 
 {% subtab Source %}
 The second integration method is to include the [binding source](https://github.com/braze-inc/braze-xamarin-sdk). Under [`appboy-component/src/androidnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidNet6Binding) you will find our binding source code; adding a project reference to the ```BrazeAndroidBinding.csproj``` in your .NET MAUI application will cause the binding to be built with your project and provide you access to the Braze Android SDK.
+
+To use Braze location services and geofences, also add a project reference to the ```BrazeAndroidLocationBinding.csproj``` found under [`appboy-component/src/androidnet6/BrazeAndroidLocationBinding`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidLocationBinding).
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}

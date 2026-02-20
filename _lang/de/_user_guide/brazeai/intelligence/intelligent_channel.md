@@ -12,11 +12,11 @@ search_rank: 11
 
 ## Über den Kanal Filter
 
-![Der Filter für intelligente Kanäle mit einem Dropdown-Menü für die verschiedenen Kanäle, die Sie auswählen können.]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
+![Der intelligente Kanalfilter mit einem Dropdown-Menü für die verschiedenen Kanäle, die ausgewählt werden können.]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
 
 In diesem Fall bedeutet "am besten" den Kanal, der angesichts des Verlaufs der Nutzerin oder des Nutzers die höchste Wahrscheinlichkeit für ein Engagement aufweist. Sie können E-Mail, SMS, WhatsApp, Web-Push oder Mobile-Push (einschließlich aller verfügbaren mobilen Betriebssysteme oder Geräte) als Kanal auswählen.
 
-Der Intelligente Kanal berechnet die Engagement-Rate für jeden Nutzer für jeden der drei Kanäle, indem er das Verhältnis von Nachrichteninteraktionen (Öffnungen oder Klicks) zur Anzahl der erhaltenen Nachrichten über die letzten sechs Monate der Aktivität nimmt. Die verfügbaren Kanäle werden nach ihrem jeweiligen Engagement-Verhältnis geordnet, und der Kanal mit dem höchsten Verhältnis ist der "Engagierteste" für diesen Nutzer. 
+Der Intelligente Kanal berechnet die Engagement-Rate für jeden Nutzer:in für jeden der verfügbaren Kanäle, indem er das Verhältnis von Nachrichteninteraktionen (Öffnungen oder Klicks) zur Anzahl der erhaltenen Nachrichten in den letzten sechs Monaten der Aktivität ermittelt. Die verfügbaren Kanäle werden nach ihrem jeweiligen Engagement-Verhältnis geordnet, und der Kanal mit dem höchsten Verhältnis ist der "Engagierteste" für diesen Nutzer. 
 
 Jedes Mal, wenn eine Nachricht an einen Benutzer gesendet wird oder ein Benutzer mit einer Nachricht interagiert, wird das Engagement-Verhältnis innerhalb von Sekunden neu berechnet. Ein:e Nutzer:in kann nur einmal als mit einer Nachricht interagierend gezählt werden (z. B. wird eine Öffnung und ein Klick auf dieselbe E-Mail als einmaliges Engagement gewertet, nicht zweimal). 
 
@@ -34,7 +34,7 @@ Wenn Benutzer nicht genügend Nachrichten über die Kanäle erhalten haben, fall
 
 Nehmen wir an, Sie möchten, dass Benutzer, die Push-Nachrichten bevorzugen, eine Push-Nachricht erhalten und Benutzer, die nicht über genügend Daten verfügen, dieselbe Push-Nachricht erhalten. In diesem Fall könnten Sie den Intelligenten Kanalfilter auf **Mobile Push** einstellen und mit **ODER** einen zweiten Intelligenten Kanalfilter hinzufügen, der auf **Nicht genügend Daten** eingestellt ist. Mit einer separaten Kampagne, bei der der Filter für den intelligenten Kanal auf E-Mail eingestellt ist, können Sie Nutzer ansprechen, die E-Mail bevorzugen.
 
-![Intelligenter Kanal Filter für mobilen Push oder nicht genügend Daten.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
+![Intelligente Kanäle filtern für mobilen Push oder nicht genügend Daten.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
 
 {% alert note %}
 Kampagnen und Canvas-Schritte, die die [Frequenzbegrenzung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) ignorieren, werden von Intelligent Channel nicht berücksichtigt und können nicht zu den Datenanforderungen beitragen.
@@ -46,9 +46,11 @@ Mobile Push umfasst Android, iOS, Kindle und andere Kanäle für mobile Geräte,
 
 Wenn ein:e Nutzer:in zum Beispiel mehrere mobile Geräte besitzt, wird seine Engagement-Rate durch die höchste Rate auf allen Geräten repräsentiert. Dies würde den Benutzer jedoch nicht dazu zwingen, Push-Benachrichtigungen ausschließlich auf diesem Gerät zu empfangen. Diese Rate wird nur beim Vergleich mit E-Mail und Web-Push verwendet.
 
-## Einzelne Kanäle
+## Filter für die Öffnung der Nachrichtenwahrscheinlichkeit für einzelne Kanäle {#individual-channels}
 
-Anstatt Braze den besten Kanal für einen Benutzer auswählen zu lassen, können Sie die Benutzer auch einfach danach filtern, ob sie eine Nachricht auf einem bestimmten von Ihnen ausgewählten Kanal öffnen werden oder nicht. Dazu können Sie den Filter Offene Wahrscheinlichkeit der Nachricht in den [Segmentierungsfiltern]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood) verwenden.
+Anstatt Braze den besten Kanal für einen Nutzer auswählen zu lassen, können Sie den [ Segmentierungsfilter "Wahrscheinlichkeit, dass eine Nachricht geöffnet wird"]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood) verwenden, um Nutzer:innen danach zu filtern, ob sie eine Nachricht auf einem bestimmten von Ihnen gewählten Kanal öffnen werden oder nicht. Dieser Filter errechnet sich aus dem Prozentsatz der Interaktionen, geteilt durch die Gesamtzahl der empfangenen Nachrichten für die letzten 100 Nachrichten pro Kanal.
+
+Beachten Sie, dass ein Nutzer:innen mindestens drei Nachrichten auf einem bestimmten Kanal erhalten haben muss, bevor er einen Likelihood-Wert für diesen Kanal erhalten kann. Benutzer ohne ausreichende Daten, um eine Wahrscheinlichkeit für einen Kanal zu messen, können mit "ist leer" ausgewählt werden.
 
 ## Bewährte Praktiken und effektive Nutzungsstrategie
 

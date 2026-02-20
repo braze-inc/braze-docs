@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Worthy
 
-> Die Integration von [Worthy](https://worthy.ai/) und Braze erlaubt es Ihnen, mit dem Drag-and-Drop-Editor von Worthy auf einfache Weise personalisierte, reichhaltige In-App-Erlebnisse zu erstellen und diese über Braze zuzustellen. Außerdem wird Worthy automatisch Folgendes tun:
+> Mit der Integration von [Worthy](https://worthy.ai/) und Braze können Sie personalisierte, reichhaltige In-App-Erlebnisse mit dem Drag-and-Drop-Editor von Worthy erstellen und diese über Braze zustellen. Außerdem führt Worthy automatisch die folgenden Aktionen aus:
 
 _Diese Integration wird von Worthy gepflegt._
 

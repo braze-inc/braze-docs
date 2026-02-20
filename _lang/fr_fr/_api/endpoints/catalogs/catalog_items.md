@@ -1,5 +1,5 @@
 ---
-nav_title: Produits du catalogue
+nav_title: Articles de catalogue
 config_only: true
 noindex: true
 page_order: 2
