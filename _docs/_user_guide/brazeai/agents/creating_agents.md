@@ -167,8 +167,8 @@ Your agent is now ready to use! For details, refer to [Deploy agents]({{site.bas
 
 In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location. You can also monitor daily invocation limit errors at the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log).
 
-![Logs for an agent Story Teller, which include when and where the agent has been called.]({% image_buster /assets/img/ai_agent/agent_activity_logs.png %})
+![Logs for an agent Random Number Generator, which include when and where the agent has been called.]({% image_buster /assets/img/ai_agent/agent_activity_logs.png %})
 
-Select **View** for a specific agent call to see the input, output, and user ID.
+Select **View** for a specific agent call to see the input, output, and user ID. You can also select **Export CSV** to export the logs shown on the current page only.
 
-![Logs for an agent Story Teller. The details panel shows the input prompt, output response, and an associated user ID.]({% image_buster /assets/img/ai_agent/agent_logs.png %})
+![Logs for an agent Random Sports Assignment. The details panel shows the input prompt, output response, and an associated user ID.]({% image_buster /assets/img/ai_agent/agent_logs.png %})
