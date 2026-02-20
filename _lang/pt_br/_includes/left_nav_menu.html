@@ -1,4 +1,4 @@
-{%-assign hide_nav_filter = page.hide_nav_filter -%} {%-assign nav_level = page.nav_level -%} {%-unless hide_nav_filter -%} {%-assign hide_nav_filter = layout.hide_nav_filter -%} {%-endunless -%} {%-unless nav_level -%} {%-assign nav_level = layout.nav_level -%} {%-endunless -%} {%-unless nav_level -%} {%-assign nav_level = 2 -%} {%-endunless -%} <div class="sidebar-toggle-row"><button type="button" id="sidebar_toggle" class="btn btn-info d-print-none" tabindex="0" aria-label="{{ site.data.i18n[site.language]['minimize_menu'] | default: 'Minimize menu' }}" title="{{ site.data.i18n[site.language]['minimize_menu'] | default: 'Minimize menu' }}" data-toggle="tooltip" data-placement="right" aria-expanded="true"> <i class="fas fa-angle-double-left" aria-hidden="true"></i> </button></div> {%- unless hide_nav_filter -%}
+{%-assign hide_nav_filter = page.hide_nav_filter -%} {%-assign nav_level = page.nav_level -%} {%-unless hide_nav_filter -%} {%-assign hide_nav_filter = layout.hide_nav_filter -%} {%-endunless -%} {%-unless nav_level -%} {%-assign nav_level = layout.nav_level -%} {%-endunless -%} {%-unless nav_level -%} {%-assign nav_level = 2 -%} {%-endunless -%} {%- unless hide_nav_filter -%}
 <div id="nav_filter" class="flex-column flex-nowrap   ">
   <form id="filter-form"   >
     <div class="input-group">
@@ -27,6 +27,7 @@
       <div class="color-dot"></div><div class="color-description">{{ site.data.i18n[site.language]['braze_status_check'] || default: "Verificando Status" }}</div>
   </div></a>
 </div>
+<div class="sidebar-toggle-row"><button type="button" id="sidebar_toggle" class="btn btn-info d-print-none" tabindex="0" aria-label="{{ site.data.i18n[site.language]['minimize_menu'] | default: 'Minimize menu' }}" title="{{ site.data.i18n[site.language]['minimize_menu'] | default: 'Minimize menu' }}" data-toggle="tooltip" data-placement="right" aria-expanded="true"> <i class="fas fa-angle-double-left" aria-hidden="true"></i> </button></div>
 
 <script type="text/javascript">
   function loadStatusPage() {

@@ -43,14 +43,7 @@ $nav-active-bg: $grey-athens;
 			.sidebar-toggle-row {
 				display: flex;
 				flex-shrink: 0;
-				order: 3;
 				padding: 0;
-			}
-			#left_navmenu {
-				order: 1;
-			}
-			#nav_bottom {
-				order: 2;
 			}
 			#sidebar_toggle {
 				display: flex;
@@ -136,7 +129,6 @@ $nav-active-bg: $grey-athens;
 				position: relative;
 				z-index: 1;
 				pointer-events: auto;
-				order: 1;
 			}
 			#sidebar_toggle {
 				width: 100%;
