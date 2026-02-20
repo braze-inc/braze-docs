@@ -9,24 +9,14 @@ description: "This reference article covers important information for admins on 
 
 # Contact information
 
-<style>
-.fa-crown {
-  color: gold;
-}
-</style>
+> As an admin, you can use the **Contact Information** page to manage your company's contact information and time zone in Braze.
 
-> This page covers important information for admins on managing your company's contact information and time zone in Braze.
-
-To access this page, go to **Settings** > **Admin Settings** > **Contact Information**.
-
-This page is where you can manage your company's contact information and time zone. Make sure to select **Save** before you leave the page!
+To access this page, go to **Settings** > **Admin Settings** > **Contact Information**. Make sure to select **Save** to apply any changes before you leave the page.
 
 ## Consequences of switching your time zone
 
 {% alert warning %}
-
-Switching time zones can cause some data discrepancies around the point when the time zone was changed. If someone switches their time zone, we make a good faith effort to convert things over accurately, but it is not always a perfect conversion. You may notice a discontinuity in your data, where it may switch between time zones.
-
+Switching time zones can cause data discrepancies around the period when the time zone was changed. If you switch your time zone, Braze makes a good-faith effort to convert things over accurately, but does not guarantee a perfect conversion. You may notice a discontinuity in your data, where it may switch between time zones.
 {% endalert %}
 
 If you choose to switch your time zone, you may experience a variety of consequences, including:
