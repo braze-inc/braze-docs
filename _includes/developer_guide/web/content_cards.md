@@ -218,6 +218,16 @@ This will help identify what values are being sent from your web page's data lay
 
 ![The Braze Initialization Tag summary page provides an overview of the tag, including information on which tags were triggered.]({% image_buster /assets/img/web-gtm/gtm-debug-mode.png %})
 
+#### Verify tag sequencing for custom events {#tag-sequencing}
+
+If custom events or other actions aren't logging in Braze, a common cause is a race condition where an action tag (such as **Custom Event** or **Purchase**) fires before the **Braze Initialization** tag has completed. To fix this, configure [tag sequencing](https://support.google.com/tagmanager/answer/6238868) in GTM:
+
+1. Open the action tag that isn't logging correctly.
+2. Under **Advanced Settings** > **Tag Sequencing**, select **A tag that fires before \[this tag\]**.
+3. Choose your **Braze Initialization** tag as the setup tag.
+
+This ensures the SDK is fully initialized before any action tags attempt to send data to Braze.
+
 #### Enable verbose logging
 
 To allow Braze technical support to access logs while testing, you can enable verbose logging on your Google Tag Manager integration. These logs will appear in the **Console** tab of your browser's [developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
