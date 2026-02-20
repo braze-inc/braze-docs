@@ -24,6 +24,10 @@ You can then use this variable in two main ways:
 - **Decisioning:** Route users down different Canvas paths based on the agent’s response. For example, a lead scoring agent might return a number between 1 and 10. You can use this score to decide whether to continue messaging a user or drop them from the journey.
 - **Personalization:** Insert the agent’s response directly into a message. For example, an agent could analyze customer feedback and generate an empathetic follow-up email that references the customer’s comment and suggests a resolution.
 
+## Prerequisite
+
+Agent steps use [Canvas context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables) to ingest relevant context and output a variable that can be leveraged in the Canvas.
+
 ## Creating an Agent step
 
 ### Step 1: Add a step
