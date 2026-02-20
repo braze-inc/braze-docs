@@ -28,7 +28,7 @@ valid_partner_list:
 - name: Pypestream
   url: /docs/partners/pypestream/
 - name: Regal
-  url: /docs/partners/pypestream/
+  url: /docs/partners/regal/
 - name: Sendbird
   url: /docs/partners/sendbird/
 - name: Shopgate
