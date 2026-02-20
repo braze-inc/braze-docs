@@ -24,7 +24,7 @@ If an action fails after approval, Operator will notify with details about the f
 
 ## Modify a plan
 
-To change something Operator proposed, describe the modification in the chat using natural language. Operator will refresh the action list with updated items. Previously approved and executed items remain unchanged.
+To modify Operator's plan, first approve or reject the pending actions. Then describe the desired change in a new chat message.
 
 Approved actions can't be undone through Operator. Describe the new change to Operator or make changes manually in the dashboard.
 
