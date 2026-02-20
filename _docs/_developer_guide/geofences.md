@@ -25,7 +25,7 @@ Tool:
 {% multi_lang_include developer_guide/swift/geofences.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% multi_lang_include developer_guide/xamarin/geofences.md %}
 {% endsdktab %}
 {% endsdktabs %}

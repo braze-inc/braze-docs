@@ -127,7 +127,16 @@ var braze = new Braze(configuration);
 
 ### Step 5: Enable background location updates (optional)
 
-To monitor geofences in the background, enable the **Location updates** background mode in your Xcode project and set:
+To monitor geofences in the background, enable the **Location updates** background mode by adding the following configuration to your `Info.plist`:
+
+```xml
+<key>UIBackgroundModes</key>
+<array>
+	<string>location</string>
+</array>
+```
+
+Then, in your Braze configuration, set:
 
 ```csharp
 configuration.Location.AllowBackgroundGeofenceUpdates = true;
@@ -143,6 +152,8 @@ Set `DistanceFilter` to a value that meets your app's needs to avoid battery dra
 Request either `When In Use` or `Always` authorization from the user:
 
 ```csharp
+using CoreLocation;
+
 var locationManager = new CLLocationManager();
 locationManager.RequestWhenInUseAuthorization();
 // or
