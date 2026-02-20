@@ -12,7 +12,7 @@ channel: email
 
 {% multi_lang_include video.html id="zP1N_wN0SsQ" align="right" %}
 
-> Ein Secure Socket Layer (SSL) verschlüsselt eine URL mit HTTPS anstelle von HTTP. HTTPS zeigt an, dass ein gültiges und vertrauenswürdiges SSL- oder TLS-Zertifikat existiert und dass der Besuch der Website sicher ist.
+> Ein Secure Socket Layer (SSL) verschlüsselt eine URL mit HTTPS anstelle von HTTP. HTTPS zeigt an, dass ein gültiges und vertrauenswürdiges SSL- oder TLS-Zertifikat vorhanden ist und dass der Besuch der Website sicher ist.
 
 ## Warum ist SSL wichtig?
 
@@ -56,7 +56,7 @@ Die CDN-Konfiguration erfolgt immer nach der Validierung Ihrer DNS-Einträge dur
 Für das Tracking von Klicks und Öffnungen transformieren die Partner der Zustellung die Links unter Verwendung einer gebrandeten Subdomain und das CDN wendet das SSL-Zertifikat auf diese transformierten Links an. Partner müssen dem Browser des Empfängers häufig gültige Zertifikate vorlegen, damit Links und Bilder korrekt angezeigt werden. Da Braze keine Zertifikate anfordert oder verwaltet, müssen Sie dies über ein CDN einrichten. 
 
 {% alert note %}
-Wenn Sie die aufgelisteten CDNs für das SSL Tracking von Klicks und Öffnungen nicht verwenden können oder wollen, können Sie eine angepasste SSL-Konfiguration einrichten. Alternative CDNs oder angepasste Proxies können zu einer komplexeren Einrichtung führen. Lesen Sie die Dokumentation von [SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) und [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/).
+Wenn Sie die aufgelisteten CDNs für das SSL Tracking von Klicks und Öffnungen nicht verwenden können oder wollen, können Sie eine angepasste SSL-Konfiguration einrichten. Alternative CDNs oder angepasste Proxies können zu einer komplexeren Einrichtung führen. Lesen Sie die Dokumentation zu [SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) und [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/).
 {% endalert %}
 
 #### Zusätzliche Ressourcen
@@ -87,7 +87,7 @@ Während Sie sich um CDN-Konfiguration, Zertifikate und Proxy-Probleme mit Ihrem
 
 ##### Probleme mit der Domainregistrierung
 
-Führen Sie einen dig-Befehl aus, um zu bestätigen, dass Sie das Link Tracking auf das CDN richten. Führen Sie in Ihrem Terminal `dig CNAME link_tracking_subdomain` aus. Unter `ANSWER SECTION` wird aufgeführt, wohin Ihr CNAME verweist. Wenn er auf den Anbieter des E-Mail-Dienstes (SendGrid oder SparkPost) und nicht auf Ihr CDN verweist, konfigurieren Sie Ihre Domain-Registrierung so um, dass sie auf Ihr CDN zeigt.
+Führen Sie einen dig-Befehl aus, um zu bestätigen, dass Sie das Link Tracking auf das CDN richten. Führen Sie in Ihrem Terminal `dig CNAME link_tracking_subdomain` aus. Unter `ANSWER SECTION` wird aufgelistet, wohin Ihr CNAME zeigt. Wenn er auf den Anbieter des E-Mail-Dienstes (SendGrid oder SparkPost) und nicht auf Ihr CDN verweist, konfigurieren Sie Ihre Domain-Registrierung so um, dass sie auf Ihr CDN zeigt.
 
 ##### CDN-Probleme
 

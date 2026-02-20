@@ -8,17 +8,18 @@ description: "This article provides an overview of Intelligent Timing (previousl
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Timing
 
-> Use Intelligent Timing to deliver your message to each user when Braze determines that user is most likely to engage (open or click), referred to as their optimal send time. This makes it easier for you to check that you're messaging your users at their preferred time, which can lead to higher engagement.
+> Use Intelligent Timing to deliver your message to each user when Braze determines a user's optimal send time, which is when a user is most likely to engage (open or click). This makes it easier for you to check that you are messaging your users at their preferred time and can lead to higher engagement.
 
 ## About Intelligent Timing
 
-Braze calculates the optimal send time based on a statistical analysis of your user's past interactions with your app, and their interactions with each messaging channel. The following interaction data is used: 
+Braze calculates the optimal send time based on a statistical analysis of your users' past interactions with your app and their interactions with each messaging channel. The following interaction data is used: 
 
 - Session times
 - Push Direct Opens
 - Push Influenced Opens
 - Email Clicks
 - Email Opens (excluding [Machine Opens]({{site.baseurl}}/user_guide/data/report_metrics/#machine-opens))
+- SMS Clicks (only if [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/) and advanced tracking are enabled)
 
 For example, Sam might open your emails in the morning regularly, but she opens your app and interacts with notifications in the evening. That means Sam would receive an email campaign with Intelligent Timing in the morning, while she would receive campaigns with push notifications in the evening, when she's more likely to engage.
 
@@ -43,13 +44,13 @@ This section describes how to configure Intelligent Timing for your campaigns an
 3. Under **Time-Based Scheduling Options**, select **Intelligent Timing**.
 4. Set the entry frequency. For one-time sends, select **Once** and select a send date. For recurring sends, select **Daily**, **Weekly**, or **Monthly** and configure the recurrence options. See [limitations](#limitations) for more guidance.
 5. Optionally, configure [Quiet Hours](#quiet-hours).
-6. Specify a [fallback time](#campaign-fallback). This is when the message will send if a user's profile doesn't have any relevant events to calculate an optimal time.
+6. Specify a [fallback time](#campaign-fallback). This is when the message is sent if a user's profile doesn't have any relevant events to calculate an optimal time.
 
 ![Campaign scheduling screen showing Intelligent Timing with fallback time and Quiet Hours settings]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
 
 #### Quiet Hours {#quiet-hours}
 
-Use Quiet Hours to prevent messages from sending during specific hours. This is helpful when you want to avoid sending messages during early morning hours or overnight, while still allowing Intelligent Timing to determine the best delivery window.
+Use Quiet Hours to prevent messages from being sent during specific hours. This is helpful when you want to avoid sending messages during early morning hours or overnight, while still allowing Intelligent Timing to determine the best delivery window.
 
 {% alert note %}
 Quiet Hours has replaced the **Only send within specific hours** setting. Instead of choosing when messages can be sent, you now choose when they shouldn’t be sent. For example, to send messages between 4 pm and 6 pm, set Quiet Hours from 6 pm to 4 pm the next day.
@@ -76,11 +77,11 @@ To see an estimate of how many users will receive the message in each hour of th
 
 ### Step 2: Choose a send date
 
-Next, select a send date for your campaign. Keep the following in mind, when scheduling campaigns with Intelligent Timing:
+Next, select a send date for your campaign. Keep the following in mind when scheduling campaigns with Intelligent Timing:
 
 #### Launch campaign 48 hours in advance
 
-Launch your campaign at least 48 hours before the scheduled send date. This is because of variations in time zones. Braze calculates the optimal time at midnight in Samoa time (UTC+13), one of the first time zones in the world. A single day spans about 48 hours across the globe, which means that if you launch a campaign within that 48-hour buffer, it's possible that a user's optimal time has already passed in their time zone, and the message won't send.
+Launch your campaign at least 48 hours before the scheduled send date. This is because of variations in time zones. Braze calculates the optimal time at midnight in Samoa time (UTC+13), one of the first time zones in the world. A single day spans about 48 hours across the globe, which means that if you launch a campaign within that 48-hour buffer, it's possible that a user's optimal time has already passed in their time zone, and the message won't be sent.
 
 {% alert important %}
 If a campaign is launched and a user's optimal time is less than an hour in the past, the message goes out immediately. If the optimal time is more than an hour in the past, the message is not sent at all.
@@ -96,7 +97,7 @@ This is also because of time zones—selecting a period of less than 3 days may 
 
 For more information, refer to [FAQ: Intelligent Timing](#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters).
 
-#### Schedule wining variants 2 days after A/B test
+#### Schedule winning variants 2 days after A/B test
 
 If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/), such as automatically sending the **Winning Variant** or using a **Personalized Variant**, Intelligent Timing may affect the duration and timing of your campaign.
 
@@ -156,7 +157,7 @@ Choose a fallback time for the message to send to users in your audience who don
 
 Unlike with campaigns, you don't need to launch your Canvas 48 hours before the send date because Intelligent Timing is set on the step level, not the Canvas level.
 
-Instead, add a [Delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) of at least a two calendar days between the user entering the Canvas and when they receive the Intelligent Timing step.
+Instead, add a [Delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) of at least two calendar days between the user entering the Canvas and when they receive the Intelligent Timing step.
 
 #### Calendar vs. 24-hour days
 
@@ -165,7 +166,7 @@ When using Intelligent Timing after a Delay step, the delivery date may vary dep
 - **Days:** 1 day is 24 hours, calculated from the time the user enters the Delay step.
 - **Calendar days:** 1 day is the period from when the user enters the Delay step to midnight in their time zone. This means 1 calendar day could be as short as a few minutes.
 
-When using Intelligent Timing, we recommend that you use calendar days for your delays instead of 24-hour days. This is because with calendar days, the message will send on the last day of the delay, at the optimal time. With a 24-hour day, there's a chance the user's optimal time is before they entered the step, which means there will be an extra day added to their delay.
+When using Intelligent Timing, we recommend using calendar days for delays rather than 24-hour days. This is because with calendar days, the message will be sent on the last day of the delay, at the optimal time. With a 24-hour day, there's a chance the user's optimal time is before they enter the step, which means an extra day will be added to their delay.
 
 For example, say Luka's optimal time is 2:00 pm. He enters the Delay step at 2:01 pm on March 1, and the delay is set to 2 days.
 
@@ -174,13 +175,13 @@ For example, say Luka's optimal time is 2:00 pm. He enters the Delay step at 2:0
 
 However, Intelligent Timing is set to deliver at 2 pm, which has already passed. So Luka won't receive the message until the following day: March 4 at 2:00 pm.
 
-![Graphic depicting the difference between days and calendar days where if a user's optimal time is 2 pm but they enter the delay step at 2:01 pm and the delay is set to 2 days. Days delivers the message 3 days later because the user entered the step after their optimal time, whereas calendar days delivers the message 2 days later, on the last day of the delay.]({% image_buster /assets/img/intelligent_timing_daysvcalendardays.png %}){: style="border:none;"}
+![Graphic depicting the difference between days and calendar days, where if a user's optimal time is 2 pm, but they enter the delay step at 2:01 pm, and the delay is set to 2 days. Days delivers the message 3 days later because the user entered the step after their optimal time, whereas calendar days delivers the message 2 days later, on the last day of the delay.]({% image_buster /assets/img/intelligent_timing_daysvcalendardays.png %}){: style="border:none;"}
 {% endtab %}
 {% endtabs %}
 
 ## Limitations
 
-- In-app messages, Content Cards, and webhooks are delivered immediately and not given optimal times.
+- In-app messages and webhooks are delivered immediately and not given optimal times.
 - Intelligent Timing is not available for action-based or API-triggered campaigns.
 - Intelligent Timing should not be used in the following scenarios:
     - **Rate limiting:** If both rate limiting and Intelligent Timing are used, there is no guarantee about when the message will be delivered. Daily recurring campaigns with Intelligent Timing do not accurately support a total message send cap.
@@ -267,7 +268,7 @@ Braze performs two checks when a campaign is launched:
 1. **Initial check:** At midnight in the first timezone on the day of send.
 2. **Scheduled time check:** Just before sending at the time Intelligent Timing selected for the user.
 
-Be careful when filtering based on other campaign sends to avoid targeting ineligible segments. For example, if you were to send out two campaigns on the same day for different times, and add a filter that only allows users to receive the second campaign if they’ve received the first, users won’t receive the second campaign. This is because no one was eligible when the campaign was first created and segments were formed.
+Be careful when filtering based on other campaign sends to avoid targeting ineligible segments. For example, if you were to send out two campaigns on the same day for different times, and add a filter that only allows users to receive the second campaign if they’ve received the first, users won’t receive the second campaign. This is because no one was eligible when the campaign was first created, and segments were formed.
 
 #### Can I use Quiet Hours in my Intelligent Timing campaign?
 

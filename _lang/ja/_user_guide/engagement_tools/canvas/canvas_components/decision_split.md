@@ -2,7 +2,7 @@
 nav_title: 条件分岐
 article_title: 条件分岐 
 alias: /decision_split/
-page_order: 2
+page_order: 7
 page_type: reference
 description: "この記事では、キャンバスで条件分岐を作成して使用する方法について説明します。"
 tool: Canvas
@@ -11,7 +11,7 @@ tool: Canvas
 
 # 条件分岐 
 
-> キャンバスの条件分岐コンポーネントを使用すると、パーソナライズされたリアルタイムのエクスペリエンスをユーザーに提供できます。
+> キャンバスの条件分岐コンポーネントによって、パーソナライズされたリアルタイム体験をユーザーに提供することができる。
 
 ![プッシュが有効でないユーザーとプッシュが有効なユーザーに対する「プッシュが有効かどうか」という条件分岐ステップ。]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 

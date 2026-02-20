@@ -187,11 +187,13 @@ Le contenu de l'onglet **Composer** varie en fonction des options de message que
 
 ### Langue
 
-Sélectionnez **Ajouter des langues** et sélectionnez les langues souhaitées dans la liste proposée. Cela permettra d'insérer [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Consultez la [liste complète des langues disponibles]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
+Sélectionnez **Ajouter des langues** et sélectionnez les langues de votre choix dans la liste proposée. Cela permettra d'insérer [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Consultez la [liste complète des langues disponibles]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 ### Image
 
-Selon le type de message, vous pouvez **télécharger une image**, **choisir un badge** ou utiliser **Font Awesome.** Pour télécharger une image, cliquez sur **Ajouter une image** ou indiquez l'URL de l'image. En cliquant sur **Ajouter une image**, vous ouvrez la **bibliothèque multimédia**, où vous pouvez sélectionner une image déjà téléchargée ou en ajouter une nouvelle. Chaque type de message et plateforme peut avoir ses propres proportions suggérées et ses conditions, donc vérifiez-les avant de les mettre en œuvre ou de créer une image à partir de zéro !
+Selon le type de message, vous pouvez **télécharger une image**, **choisir un badge** ou utiliser **Font Awesome.** Pour télécharger une image, sélectionnez **Ajouter une image** ou indiquez l'URL de l'image. En sélectionnant **Ajouter une image**, vous ouvrez la **bibliothèque multimédia**, où vous pouvez sélectionner une image déjà téléchargée ou en ajouter une nouvelle. Chaque type de message et de plateforme peut avoir ses propres proportions et exigences - assurez-vous de les vérifier avant de commander ou de créer une image à partir de zéro.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 ### En-tête et corps
 
@@ -420,4 +422,4 @@ Les campagnes de messages in-app sont généralement envoyées à l'appareil de 
 #### Considérations
 
 - Si un utilisateur déclenche un événement (tel qu'un appui sur un bouton) peu après l'envoi du message in-app, il se peut que le message n'apparaisse pas avant l'actualisation suivante de la session, à condition que tous les critères d'éligibilité soient toujours remplis.
-- Comme pour les autres types de canaux, les campagnes de messages in-app doivent idéalement être lancées 24 à 48 heures à l'avance. Ce tampon donne aux utilisateurs suffisamment de temps pour remplir les conditions d'admissibilité et lancer une session pour que le message soit évalué et affiché.
+- À l'instar des autres types de canaux, les campagnes de messages in-app doivent idéalement être lancées 24 à 48 heures à l'avance. Ce tampon donne aux utilisateurs suffisamment de temps pour remplir les conditions d'éligibilité et lancer une session pour que le message soit évalué et affiché.

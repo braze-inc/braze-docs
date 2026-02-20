@@ -36,7 +36,7 @@ Recuerda que no tienes que explicar qué comportamientos pueden preceder al aban
 
 La ventana de abandono es el periodo en el que la actividad de un usuario cumple los criterios de abandono. Puedes configurarlo hasta 60 días, dependiendo de los datos disponibles. Esta ventana se utiliza para extraer datos históricos para entrenar tu predicción. Una vez construida la predicción, verás si había suficientes datos para obtener resultados precisos.
 
-Después de que se construya la predicción y los usuarios reciban las puntuaciones, la _Puntuación de riesgo de abandono_ muestra la probabilidad de que un usuario abandone dentro del plazo que hayas establecido en la ventana de abandono. 
+Después de que se construya la predicción y los usuarios reciban las puntuaciones, la _Puntuación de riesgo de abandono_ muestra la probabilidad de que un usuario abandone dentro del plazo de tiempo que hayas establecido en la ventana de abandono. 
 
 He aquí un ejemplo de definición simple basada en las sesiones de lapso de los últimos 7 días.
 

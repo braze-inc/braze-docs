@@ -58,6 +58,8 @@
 
 ### 画像
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 | プロパティ | 説明 |
 | --- | --- |
 | URL | 画像のホストアドレス |

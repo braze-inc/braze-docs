@@ -72,6 +72,8 @@ Rédigez votre message en utilisant la personnalisation (comme le contenu Liquid
 
 Si vous prévoyez d'utiliser Liquid, assurez-vous d'inclure une valeur par défaut pour votre personnalisation. Cela empêchera les destinataires ayant des profils utilisateur incomplets de recevoir un espace réservé vide. Par exemple, au lieu de recevoir le message « Salut ! », l’utilisateur pourrait recevoir le message « Salut, nouvel abonné ! ».
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Création d'envois de messages de droite à gauche
 
 L'aspect final des messages de droite à gauche dépend largement de la manière dont les fournisseurs de services les restituent. Pour connaître les meilleures pratiques en matière d'élaboration de messages de droite à gauche qui s'affichent le plus précisément possible, reportez-vous à la section [Création de messages de droite à gauche.]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)

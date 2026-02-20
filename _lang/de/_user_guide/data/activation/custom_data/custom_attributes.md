@@ -158,9 +158,7 @@ Beachten Sie, dass Braze bei der Eingabe von Werten, die Leerzeichen zwischen, v
 | Prüfen Sie, ob das Attribut string **nicht teilweise mit einem** der eingegebenen Strings **übereinstimmt**. | **ENTHÄLT KEINE DER** | **STRING**<br>Groß-/Kleinschreibung beachten; mehrere Strings zulässig (maximal 256) | Wenn dieser Filter `gold` angibt und ein Nutzerprofil in keinem String `gold` enthält, wird der Nutzer:in diesem Filter berücksichtigt.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-Ein Datums-String wie "12-1-2021" oder "12/1/2021" wird in ein Datetime-Objekt umgewandelt und als [Attribut für die Zeit]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) behandelt.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 Wenn Sie mit dem Filter **DOES NOT MATCH REGEX** segmentieren, müssen Sie bereits ein angepasstes Attribut mit einem Wert in diesem Nutzerprofil zugewiesen haben. Braze schlägt vor, mit "OR"-Logik zu prüfen, ob ein angepasstes Attribut leer ist, um sicherzustellen, dass die Nutzer:innen richtig targetiert werden.

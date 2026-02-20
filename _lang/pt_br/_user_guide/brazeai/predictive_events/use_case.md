@@ -9,7 +9,7 @@ page_type: tutorial
 
 > Este exemplo mostra como uma marca fictícia usa o Braze Predictive Events para definir os resultados que importam para seus negócios - como fazer upgrade para uma associação profissional - e criar estratégias direcionadas que melhoram os resultados. 
 
-Digamos que Jordan seja um estrategista de ciclo de vida na Steppington, um app de integridade e condicionamento físico com níveis gratuitos e pagos. A equipe de Jordan tem o objetivo de aumentar os upgrades do plano Pro sem bombardear toda a base de usuários gratuitos com envios de mensagens de desconto. Atualmente, eles enviam uma promoção "Try Pro for 50% off" para todos os usuários de nível gratuito após sete dias. Embora isso gere algumas conversões (cerca de 5% em 7 dias), também resulta em alcance excessivo - incluindo desconto para usuários que provavelmente fariam upgrade de qualquer forma.
+Digamos que Jordan seja um estrategista de ciclo de vida da Steppington, um app de integridade e condicionamento físico com níveis gratuitos e pagos. A equipe de Jordan tem o objetivo de aumentar os upgrades do plano Pro sem bombardear toda a base de usuários gratuitos com envios de mensagens de desconto. Atualmente, eles enviam uma promoção "Try Pro for 50% off" para todos os usuários de nível gratuito após sete dias. Embora isso gere algumas conversões (cerca de 5% em 7 dias), também resulta em alcance excessivo - incluindo desconto para usuários que provavelmente fariam upgrade de qualquer forma.
 
 Para melhorar o direcionamento e reduzir a fadiga do envio de mensagens, Jordan usa o Predictive Events para modelar a probabilidade de um usuário fazer upgrade para o Pro nos próximos 7 dias. Ele define um evento personalizado: `upgraded_to_pro` e usa isso para treinar um modelo de previsão e segmentar os usuários em grupos inteligentes e orientados para a ação. 
 
@@ -27,7 +27,7 @@ Jordan começa definindo o resultado mais importante para sua estratégia de faz
 3. Como evento de direcionamento, ele seleciona seu evento personalizado: `upgraded_to_pro`.
 4. Jordan define a janela de previsão para 7 dias, define uma programação de atualização e cria a previsão.
 
-![Configurações de previsão mostrando a definição, a janela, o público e o cronograma de atualização da previsão.]({% image_buster /assets/img/ai_use_cases/prediction_settings.png %})
+![Configurações de previsão que mostram a definição, a janela, o público e o cronograma de atualização da previsão.]({% image_buster /assets/img/ai_use_cases/prediction_settings.png %})
 
 ## Etapa 2: Segmentar usuários com base na probabilidade de fazer upgrade
 
@@ -54,7 +54,7 @@ Jordan [cria um Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/crea
 
 - Usuários com alta intenção e foco em condicionamento físico
 - Alta intenção, outros usuários
-- Usuários de baixa intenção e focados em condicionamento físico
+- Usuários com pouca intenção e focados em condicionamento físico
 - Baixa intenção, outros usuários
 
 ![Jornada do público do Canva com quatro jornadas para cada tipo de intenção.]({% image_buster /assets/img/ai_use_cases/canvas_paths_by_intent.png %})
@@ -133,7 +133,7 @@ Performance de e-mail por jornada:
 
 Em comparação com a campanha anterior de tamanho único da equipe (em que um desconto geral após 7 dias levou a apenas 5% de conversões e ao envio excessivo de mensagens), a abordagem direcionada mostra um aumento significativo em todos os grupos, com maior eficiência e menos descontos desnecessários.
 
-O [relatório do funil]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) também mostra uma clara redução no abandono das etapas principais, especialmente para usuários de baixa intenção que receberam envio de mensagens personalizadas. Mais usuários estão abrindo, clicando e fazendo upgrade - o que comprova o valor do direcionamento baseado em intenção.
+O [relatório do funil]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) também mostra uma clara redução no abandono das principais etapas, especialmente para usuários de baixa intenção que receberam envio de mensagens personalizadas. Mais usuários estão abrindo, clicando e fazendo upgrade - o que comprova o valor do direcionamento baseado em intenção.
 
 Jordan usa esses insights para:
 

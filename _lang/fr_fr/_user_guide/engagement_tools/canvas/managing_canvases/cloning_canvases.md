@@ -13,7 +13,7 @@ tool: Canvas
 Vous ne pouvez plus créer ou dupliquer des toiles en utilisant l'expérience Canvas originale. Braze recommande aux clients qui utilisent l'expérience Canvas originale de passer à Canvas Flow, l'expérience Canvas actuelle.
 {% endalert %}
 
-> Si vous disposez d’un Canvas de l’éditeur d’origine, vous pouvez le cloner pour créer une copie dans Canvas Flow. En adoptant le flux de travail Canvas actuel, vous avez accès à des [composants Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) légers, à des [propriétés d'entrées persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) et à des [modifications après le lancement]({{site.baseurl}}/post-launch_edits). Votre Canvas d’origine ne sera ni altéré ni supprimé.
+> Si vous disposez d’un Canvas de l’éditeur d’origine, vous pouvez le cloner pour créer une copie dans Canvas Flow. En passant au flux de travail Canvas actuel, vous avez accès à des [composants Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) légers, à des [propriétés d'entrées persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) et à la [modification après le lancement]({{site.baseurl}}/post-launch_edits). Votre Canvas d’origine ne sera ni altéré ni supprimé.
 
 Pour cloner votre Canvas, procédez comme suit :
 

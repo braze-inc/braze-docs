@@ -144,6 +144,10 @@ Adicione um componente em seu Canva e selecione **Audience Sync**.
 - **Informações de contato do cliente**: Contém os números de e-mail ou de telefone de seus usuários, ou ambos, se existirem no Braze. O Google exige que esse seja um único campo a ser sincronizado, em vez de identificadores separados. Você ainda pode usar esse campo único se tiver apenas um dos identificadores.
 - **ID de anunciante móvel**: Selecione iOS IDFA ou Android GAID. Devido aos requisitos de correspondência de clientes do Google, você não pode ter os dois IDs de anunciante móvel nas mesmas listas de clientes.
 
+{% alert note %}
+**Sobre o artigo "Missing Mobile Ad IDs? Vamos consertar isso", diz o banner:** Quando você sincroniza com um público usando o IDFA do iOS ou o GAID do Android como campo de correspondência, essa mensagem pode aparecer no editor de etapas. É **informativo, não um erro**. Ele o lembra de confirmar que o campo de ID do anúncio móvel que está sendo correspondido existe nos dados do público (por exemplo, que os usuários na jornada do público têm o identificador correspondente coletado). Você pode descartá-la depois de verificar seus dados.
+{% endalert %}
+
 {: start="4"}
 4\. Em seguida, salve seu público selecionando o botão **Create Audience (Criar público** ) na parte inferior do editor de etapas.
 

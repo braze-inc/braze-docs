@@ -12,6 +12,8 @@ search_tag: Partner
 
 > [Google Gemini](https://deepmind.google/technologies/gemini/) is Google's family of AI models that combines advanced reasoning across text, code, and images to help brands deliver smarter, more personalized experiences.
 
+{% multi_lang_include alerts/important_alerts.md alert='Braze Agents beta' %}
+
 _This integration is maintained by Google._
 
 ## About the integration

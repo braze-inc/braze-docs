@@ -214,7 +214,7 @@ Ausführlichere Anweisungen finden Sie unter [Airbridge](https://help.airbridge.
 
 Nachdem Braze Attribution-Daten von Airbridge erhalten hat, ändert sich der Verbindungsstatus auf der Technologie-Partnerseite von Airbridge in Braze von "Nicht verbunden" zu "Verbunden" und enthält einen Zeitstempel der letzten erfolgreichen Anfrage.
 
-Dieser Status ändert sich erst, wenn Braze Daten über eine attributierte Installation erhält. Braze ignoriert organische Installationen (schließt sie aus dem Airbridge-Postback aus) und zählt sie nicht bei der Feststellung, ob die Verbindung erfolgreich war.
+Dieser Status ändert sich erst, wenn Braze Daten über eine attributierte Installation erhält. Braze ignoriert organische Installationen (schließt sie aus dem Airbridge-Postback aus) und zählt sie nicht, wenn es darum geht, ob die Verbindung erfolgreich ist.
 
 ## Verfügbare Datenfelder
 

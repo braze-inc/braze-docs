@@ -119,7 +119,7 @@ Braze empfiehlt, die Kartenerstellung nach dem Kampagnenstart nicht mehr zu änd
 
 ### Mögliche Bearbeitungszeit
 
-Für große Zielgruppen wählen Sie die Option, Karten bei der ersten Impression zu erstellen, damit die Karten schnell nach dem Start verfügbar sind. Kampagnen, die bei Sitzungsbeginn getriggert werden, können auch davon profitieren, dass sie bei der ersten Impression erstellt werden (verfügbar durch geplante Zustellung), um die Performance zu verbessern.
+Wählen Sie für große Zielgruppen die Option, Karten bei der ersten Impression zu erstellen, damit die Karten schnell nach dem Start verfügbar sind. Kampagnen, die bei Sitzungsbeginn getriggert werden, können auch davon profitieren, dass sie bei der ersten Impression erstellt werden (verfügbar durch geplante Zustellung), um die Performance zu verbessern.
 
 Wenn Karten bei der ersten Impression erstellt werden, kann es 1-2 Sekunden dauern, bis die Karten verarbeitet sind. Die Bearbeitungsdauer hängt von verschiedenen Faktoren wie der Kartengröße und der Komplexität der Template-Erstellung ab. Die Bearbeitungsdauer von Karten mit Connected-Content ist zum Beispiel mindestens so lang wie die Reaktionszeit bei Connected-Content.
 

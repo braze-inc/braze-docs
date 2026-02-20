@@ -22,7 +22,7 @@ description: "この参照ページでは、コンテンツ・カレンダーの
 
 特定の日にカーソルを合わせると、その日のメッセージング分析をレポートで見ることができる。
 
-![メッセージング・アナリティクスの「今後のメッセージの種類」と「送信されたメッセージ」のグラフ。]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
+![メッセージングアナリティクスの「近日送信予定のメッセージタイプ」と「送信済みメッセージ」のグラフ。]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
 
 データのコピーをダウンロードするには、<i class="fa-solid fa-bars" style="color: #2e7487;"></i>[**チャートコンテキストメニュー**] を選択し、希望のファイル形式を選択します。
 

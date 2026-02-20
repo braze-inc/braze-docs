@@ -140,7 +140,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
           "color": "ORANGE",
           "size": "6",
           "brand": "Braze"
-        }
+        },
         "type": [
           "price_drop",
           "back_in_stock"
@@ -188,7 +188,7 @@ Si hay dos carros, añade ambos al usuario fusionado. Vuelve a poner en cola el 
 
 | Nombre de la propiedad | Obligatoria | Tipo de datos | Descripción | 
 |---|---|---|---|
-| `cart_id` | Sí | Cadena | Si no utilizas una plataforma de terceros que proporcione un `cart_id`, puedes utilizar el [ID de sesión de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
+| `cart_id` | Sí | Cadena | Si no utilizas una plataforma de terceros que proporcione un `cart_id`, puedes utilizar [el ID de sesión de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
 | `total_value` | Sí | Flotante | Valor monetario total del carro. | 
 | `currency` | Sí | Cadena | La moneda en la que se indica el precio del producto (como "USD" o "EUR") en [formato ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
 | `products` | Sí | Matriz |  |
@@ -347,7 +347,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.cart_updated", properties: pr
 {% endtab %}
 {% tab ecommerce.checkout_started %}
 
-Puedes utilizar el evento de pago iniciado para reorientar a los clientes que han iniciado el proceso de pago pero no han realizado el pedido.
+Puedes utilizar el evento de pago iniciado para reorientar a los clientes que han iniciado el proceso de pago pero no han realizado un pedido.
 
 Similar al evento `ecommerce.cart_updated`, este evento te permite aprovechar la etiqueta de Liquid del carrito de la compra para acceder a todos los productos de su carrito para los mensajes de pago abandonado:
 
@@ -364,7 +364,7 @@ Similar al evento `ecommerce.cart_updated`, este evento te permite aprovechar la
 | Nombre de la propiedad | Obligatoria | Tipo de datos | Descripción | 
 |---|---|---|---|
 | `checkout_id` | Sí | Cadena | Identificador único de la caja. |
-| `cart_id` | No | Cadena | Si no utilizas una plataforma de terceros que proporcione un `cart_id`, puedes utilizar el [ID de sesión de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). | 
+| `cart_id` | No | Cadena | Si no utilizas una plataforma de terceros que proporcione un `cart_id`, puedes utilizar [el ID de sesión de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). | 
 | `total_value` | Sí | Flotante | Valor monetario total del carro. |
 | `currency` | Sí | Cadena | Moneda en la que se valora el carro. |
 | `products` | Sí | Conjunto de objetos |  |
@@ -530,7 +530,7 @@ Puedes utilizar el evento pedido realizado para desencadenar el evento cuando un
 | Nombre de la propiedad | Obligatoria | Tipo de datos | Descripción | 
 |---|---|---|---|
 | `order_id` | Sí | Cadena | Identificador único del pedido realizado. |
-| `cart_id` | No | Cadena | Si no utilizas una plataforma de terceros que proporcione un `cart_id`, puedes utilizar el [ID de sesión de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
+| `cart_id` | No | Cadena | Si no utilizas una plataforma de terceros que proporcione un `cart_id`, puedes utilizar [el ID de sesión de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
 | `total_value` | Sí | Flotante | Valor monetario total del carro. | 
 | `currency` | Sí | Cadena | Moneda en la que se valora el carro. |
 | `total_discounts` | No | Flotante | Importe total de los descuentos aplicados al pedido. | 
@@ -1173,4 +1173,4 @@ Utilizamos cálculos estandarizados de campos de usuario para los siguientes cam
 
 Estos cálculos de campo de usuario también se incluyen en la pestaña **Transacciones** de los perfiles de usuario.
 
-![La pestaña "Transacciones" con campos calculados por el usuario.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+![La pestaña "Transacciones" con campos calculados por el usuario.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:70%;"}

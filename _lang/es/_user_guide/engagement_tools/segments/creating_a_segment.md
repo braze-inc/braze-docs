@@ -39,9 +39,7 @@ Por ejemplo, si quieres enviar un mensaje dentro de la aplicación solo a dispos
 
 Añade al menos un filtro a tu segmento. Puede combinar tantos filtros como desee para que su segmentación sea más específica. 
 
-{% alert note %}
-Braze no genera perfiles para los usuarios hasta que han utilizado la aplicación por primera vez, por lo que no puedes dirigirte a usuarios que aún no han abierto tu aplicación.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Segment profiles first app use' %}
 
 #### Filtrar grupos
 
