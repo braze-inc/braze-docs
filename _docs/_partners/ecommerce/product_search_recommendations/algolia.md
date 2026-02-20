@@ -39,7 +39,7 @@ For more information about request formats, response structures, and usage, refe
 #### Example Search API request
 
 ```
-GET https://{ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/{INDEX_NAME}/query
+POST https://{ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/{INDEX_NAME}/query
 Content-Type: application/json
 X-Algolia-API-Key: {ALGOLIA_API_KEY}
 X-Algolia-Application-Id: {ALGOLIA_APP_ID}
