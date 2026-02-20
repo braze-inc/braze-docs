@@ -191,5 +191,17 @@ Your push permissions are now reset. Open a new tab to your site and try it out.
 {% endtab %}
 {% endtabs %}
 
+### Safari push registration issues
+
+If users are unable to register for push on Safari specifically, check the following:
+
+1. **Safari Website Push ID:** Confirm you supplied the correct `safariWebsitePushId` when initializing the Braze Web SDK. You can find this value in **Settings** > **App Settings** > select your web app > **Configure Safari Push**.
+2. **Allowed domains:** Confirm the site requesting push is listed in the **Allowed Domains** field (also under **Configure Safari Push**). Domains must not end in a trailing slash (`/`).
+3. **HTTPS required:** Your site must be served over HTTPS. Safari (like all modern browsers) will not allow push registration on insecure origins.
+4. **Browser preferences:** In Safari, go to **Safari** > **Settings** > **Websites** > **Notifications** and verify the **Allow websites to ask for permission to send notifications** checkbox is enabled.
+5. **Certificate errors:** If you see an error like `Authentication Error: pkcs12: error reading P12 data`, your Safari push certificate may be corrupted or in the wrong format. Re-export the certificate from Keychain Access in `.p12` format and re-upload it in the Braze dashboard.
+
+If these steps don't resolve the issue, enable [verbose logging]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) in the Web SDK, reproduce the problem, and include the logs when opening a [support ticket]({{site.baseurl}}/braze_support/).
+
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
