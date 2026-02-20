@@ -1,0 +1,347 @@
+---
+alwaysApply: false
+---
+
+# Drafting docs updates from Jira SF migration tickets
+
+Analyze Jira RSS/XML exports of Salesforce Knowledge Base migration tickets to identify documentation gaps and draft docs updates.
+
+## XML file location
+
+The XML file is located at: `_data/sf_migration_tasks.xml`
+
+## XML Schema
+
+The file is a Jira RSS export (`<rss version="0.92">`) containing `<item>` elements inside `<channel>`. Each `<item>` represents one migration ticket.
+
+### Core fields
+
+| XML Element | Description |
+|-------------|-------------|
+| `<key>` | Jira ticket ID (e.g., `BD-4670`) |
+| `<title>` | Ticket key + summary (e.g., `[BD-4670] How to edit Currents settings...`) |
+| `<link>` | Jira URL for the ticket |
+| `<summary>` | Title without the key prefix |
+| `<status>` | Workflow status (e.g., `Backlog`, `In Progress`, `Done`) |
+| `<priority>` | Priority level (e.g., `P1`, `P2`, `P3`) |
+| `<assignee>` | Assigned team member (or `Unassigned`) |
+| `<reporter>` | Person who filed the ticket |
+| `<created>` | Creation timestamp |
+| `<updated>` | Last update timestamp |
+| `<component>` | Component tag (e.g., `PQ`) |
+| `<comments>` | Contains `<comment>` elements with follow-up context |
+| `<parent>` | Parent epic ticket ID |
+
+### Jira assignee → GitHub username mapping
+
+Use this table to resolve PR reviewers from the Jira `<assignee>` field:
+
+| Jira Assignee | GitHub Username |
+|---------------|-----------------|
+| `Lydia Xie` | `lydia-xie` |
+| `Rachel Feinberg` | `rachel-feinberg` |
+| `Zair Kelley Ortiz` | `zairro` |
+
+If the assignee is `Unassigned` default to `rachel-feinberg`.
+
+### Custom fields (inside `<customfields>`)
+
+| Custom Field Name | Description |
+|-------------------|-------------|
+| `Epic Link` | Parent epic name (e.g., `Migrate Salesforce Knowledge Base: Articles`) |
+| `Team` | Assigned Braze team (e.g., `Currents`, `Email`) |
+| `URL` | Link to the original Salesforce Knowledge article (inside `CDATA`) |
+| `Number of Linked Issues` | Count of related support cases — higher = more customer impact |
+| `Sprint` | Sprint assignment (if any) |
+
+### Description field structure
+
+The `<description>` field contains **HTML-encoded** content. You must decode HTML entities (`&lt;` → `<`, `&amp;` → `&`, `&apos;` → `'`, `&#160;` → non-breaking space, etc.) before parsing.
+
+After decoding, the description follows a structured format with bolded section headers:
+
+| Section | What it contains |
+|---------|------------------|
+| **Migration request** | What the ticket is asking to add or change in docs |
+| **Knowledge gap** | What's missing or unclear in current public docs |
+| **Recommended actions** | Specific steps to take (the most actionable field) |
+| **Explanations for actions** | Additional context for why the change matters |
+| **Flag sensitive information** | Content that should NOT be made public |
+| **Related PQ** | Related product questions or linked tickets |
+| **Recommended Braze Docs page** | Target URL(s) where the change should go |
+
+Not every ticket uses all sections. Some tickets use a simpler format with just a paragraph of context. Adapt parsing accordingly.
+
+---
+
+## SF Knowledge Base article CSV
+
+The file `_data/sf_kb_articles.csv` contains the full content of Salesforce Knowledge Base articles exported as CSV. This is the primary source of article content for Phase 2.
+
+### CSV schema
+
+| Column | Description |
+|--------|-------------|
+| `Title` | Article title — **used to match to Jira tickets** |
+| `Summary` | Short article summary (may be empty) |
+| `Environment` | Product area (e.g., "Dashboard", "SDK and Segmentation") |
+| `Resolution` | **The main article content** — contains the customer-facing answer, steps, examples, and internal notes |
+| `URL Name` | URL-friendly slug of the title |
+| `Visible to Customer` | `1` if visible to customers |
+| `Knowledge ID` | Salesforce record ID (different format from the Jira `sf_url` ID) |
+
+### Matching tickets to articles
+
+Match Jira tickets to CSV articles by comparing the ticket `summary` field (case-insensitive) against the CSV `Title` column. This produces an ~81% exact match rate. For unmatched tickets, try substring matching. If no match is found, the user must provide the article content manually.
+
+**Important:** The CSV uses `latin-1` encoding (not UTF-8) due to non-breaking spaces and special characters. Always open with `encoding='latin-1'`.
+
+### Reading article content
+
+The `Resolution` column contains the article's answer. It may be multi-line and contain embedded newlines, HTML fragments, and special characters. The CSV is large (~48K rows with many duplicates across article versions), so when looking up an article by title, use the **first matching row** with a non-empty `Resolution` field.
+
+---
+
+## Two-phase workflow
+
+Jira tickets contain **triage metadata** (what the gap is, where it should go, why it matters) but generally do NOT contain the **source content** needed to draft the docs update. The actual content lives in the linked Salesforce Knowledge Base articles, which are now available locally in the CSV.
+
+- **Phase 1 (XML only):** Parse, triage, categorize, prioritize, and produce a ranked backlog. This can be fully automated.
+- **Phase 2 (CSV auto-lookup + drafting):** Draft the actual docs updates. For each ticket, automatically look up the article content from the CSV by title match. If no CSV match exists, prompt the user to provide the article content manually.
+
+Always complete Phase 1 first. For Phase 2, use the CSV to auto-retrieve article content whenever possible.
+
+---
+
+# Phase 1: Triage & Prioritize
+
+## Step 1: Parse the XML
+
+1. Parse the RSS XML, iterating over each `<item>` element.
+2. For each item, extract the core fields listed above.
+3. Decode the HTML-encoded `<description>` and extract the structured sections.
+4. Extract any `<comment>` elements — these often contain critical follow-up context, related article links, and refinements to the original request.
+5. Extract the `URL` custom field to find the source Salesforce Knowledge article link.
+6. Extract `Number of Linked Issues` to gauge customer impact.
+7. Extract the `<assignee>` field and resolve it to a GitHub username using the **Jira assignee → GitHub username mapping** table. Store the GitHub username for use when creating the PR.
+
+---
+
+## Step 2: Triage & Categorize
+
+For each ticket, determine if docs action is needed:
+
+| Category | Criteria | Action |
+|----------|----------|--------|
+| **Docs Gap** | Knowledge gap identified; answer exists but is missing or unclear in docs | Update existing docs |
+| **New Content** | Topic not covered anywhere in public docs; recommended actions describe new page/section | Draft new section or page |
+| **Edge Case** | Unusual but valid use case; FAQ-worthy | Add FAQ or troubleshooting entry |
+| **Already Addressed** | Docs have been updated since ticket was filed | Skip (verify and close) |
+| **Support-Only** | Account-specific, requires Braze internal access, or one-off config | Skip (no docs change) |
+| **Sensitive** | "Flag sensitive information" section indicates content should remain internal | Skip (do not publish) |
+
+Pay attention to `<status>` — tickets marked `Done` may already be resolved. Prioritize `Backlog` and `In Progress` tickets.
+
+> **Never document workarounds or bugs.** Documentation must describe how the product works — or is intended to work — not temporary workarounds for issues that will be (or should be) fixed. If a ticket or SF article's resolution relies on a workaround for a product defect, skip it. Workaround content creates maintenance burden and misleads customers once the underlying issue is resolved.
+
+---
+
+## Step 3: Per-Ticket Analysis
+
+For each **actionable** ticket:
+
+1. **Extract the request** — Read the "Migration request" and "Recommended actions" sections
+2. **Check for sensitive content** — Review the "Flag sensitive information" section; omit anything flagged
+3. **Read comments** — Comments often refine, expand, or link related tickets
+4. **Identify target doc** — Use the "Recommended Braze Docs page" URLs to find the target file in the repo. Map URLs like `https://www.braze.com/docs/user_guide/...` to local paths `_docs/_user_guide/...`. **If the recommended target is under `_docs/_help/help_articles/`**, do not use it; search for related content elsewhere (e.g., same product area in `_user_guide/`, FAQ, or related topic) and record that **alternative location** as the target doc for the update.
+5. **Verify against existing docs** — Read the target file to check if the gap still exists
+6. **Assess drafting readiness** — Determine whether the ticket description contains enough detail to draft the update, or whether the SF article content is required
+
+### Output Format Per Ticket (to output.md and chat console)
+
+```markdown
+### Ticket: [BD-XXXX] Title
+- **Category**: [Docs Gap | New Content | Edge Case]
+- **Priority**: [P1 | P2 | P3]
+- **Linked Cases**: [Number of Linked Issues value — indicates customer impact]
+- **Knowledge Gap**: [Summary from description]
+- **Recommended Action**: [What to add/update, from description]
+- **Target Doc**: `_docs/_user_guide/path/to/file.md` (or "NEW: suggested_location")
+- **SF Knowledge Article**: [URL from custom field, if present]
+- **Ready to Draft**: [Yes — ticket has enough detail | No — needs SF article content]
+- **Suggested Change**: [Specific content to add/update, or summary of what the SF article would need to provide]
+```
+
+---
+
+## Step 4: Consolidate & Prioritize
+
+After processing all tickets:
+
+1. **Merge related tickets** — Group tickets targeting the same doc page or topic (check comments for cross-references like `Similar to ticket BD-XXXX`)
+2. **Prioritize** by:
+   - **Number of Linked Issues** (higher = more customers affected)
+   - **Priority field** (P1 > P2 > P3)
+   - **Impact** (blocks core functionality vs. nice-to-have)
+   - **Effort** (quick FAQ entry vs. new guide)
+3. **Batch by Doc** — Group changes targeting the same file
+4. **Maintain sources** — Keep a list of which BD-XXXX ticket IDs inform each update
+5. **Present the backlog** — Output the prioritized list and prompt the user to provide SF article content for the top items
+
+### Backlog prompt to the user
+
+After Phase 1 is complete, present a summary like:
+
+```markdown
+## Phase 1 Complete — Prioritized Backlog
+
+| Rank | Ticket | Summary | Target Doc | CSV Match? | Linked Issues |
+|------|--------|---------|------------|------------|---------------|
+| 1 | BD-XXXX | ... | `_docs/...` | Yes | 274 |
+| 2 | BD-YYYY | ... | `_docs/...` | No | 235 |
+
+**X of Y tickets have CSV matches and can be auto-drafted.**
+To proceed, say: "Run Phase 2 for the top N tickets" or "Run Phase 2 for BD-XXXX".
+For tickets without CSV matches, paste the article content manually.
+```
+
+---
+
+# Phase 2: Draft Updates
+
+## Do not edit `_docs/_help/help_articles/`
+
+**Do not make updates to any files under `_docs/_help/help_articles/`.** If a ticket's recommended Braze Docs page or target file is under that path, do not use it as the target. Instead, look for related content elsewhere in the docs (e.g., the same product area in `_docs/_user_guide/`, relevant FAQ, or a closely related topic) and **recommend that better location** as the place to make the update. Draft and commit changes only to that alternative location.
+
+## Step 5: Retrieve article content
+
+For each ticket being processed:
+
+1. **Auto-lookup from CSV:** Use Python to read `_data/sf_kb_articles.csv` (with `encoding='latin-1'`) and find the first row where the `Title` column matches the Jira ticket's `summary` (case-insensitive). Extract the `Resolution` column as the article content.
+2. **If no CSV match:** Prompt the user to paste the article content manually before proceeding.
+3. **If the `Resolution` field is empty:** The CSV row exists but has no useful content. Prompt the user.
+
+Example Python lookup:
+```python
+import csv
+def lookup_article(ticket_summary):
+    with open('_data/sf_kb_articles.csv', 'r', encoding='latin-1') as f:
+        for row in csv.DictReader(f):
+            if row['Title'].strip().lower() == ticket_summary.strip().lower():
+                if row['Resolution'].strip():
+                    return row['Resolution'].strip()
+    return None  # No match — ask user
+```
+
+## Step 6: Draft Updates
+
+For each ticket where article content is available (from CSV or user):
+
+1. **Evaluate the full doc site, not just the ticket URL** — The "Recommended Braze Docs page" URL is the most likely target, but search the broader doc site for other pages that cover the same topic or product area. Related content may live in guides, reference pages, or FAQs elsewhere.
+2. **Prefer refining existing content over adding new elements** — After identifying the relevant file(s), read the surrounding content carefully. Look for opportunities to clarify, restructure, or expand language that's already there. Adjusting existing prose is almost always better than appending a new alert, callout, or FAQ entry.
+3. **Separate public from internal content** — The SF article may contain:
+   - **Internal notes** (e.g., "Support should escalate to #team-channel") — omit these
+   - **Internal workflows** (e.g., "CSM needs to confirm pricing") — generalize to "contact your customer success manager"
+   - **Customer-facing content** (resolution steps, UI instructions, error explanations) — include this
+4. Draft changes following conventions in the codebase based on the style guides in `_docs/_contributing/style_guide/*`
+5. Keep additions concise and scannable (bullets, tables, code blocks)
+6. **Use alerts and FAQ entries as a last resort** — Only add a new alert, callout, or FAQ entry when the information genuinely cannot be worked into existing prose. These elements contribute to doc bloat and should be reserved for content that doesn't fit naturally elsewhere.
+7. Do NOT include any content flagged as sensitive in the ticket or marked as internal in the SF article
+8. **Do not edit files under `_docs/_help/help_articles/`** — if the ticket pointed there, apply the update to the alternative location you identified (related user guide, FAQ, or topic) instead
+9. **Cross-reference source code** — Verify technical accuracy against the main product at `../platform` when possible
+
+## Batch processing
+
+When the user requests batch processing (e.g., "run Phase 2 on all matched tickets" or "run Phase 2 on the next 5"), process tickets **one at a time sequentially**, completing the full cycle (draft → branch → commit → push → PR) for each ticket before moving to the next. This ensures each PR is isolated and reviewable.
+
+**Recommended batch size:** 3-5 tickets per conversation to stay within context limits. After completing a batch, summarize what was done and offer to continue with the next batch.
+
+**Batch processing flow:**
+1. Identify all tickets in the requested scope (e.g., "all matched", "top 10 by linked issues", "all Email team tickets")
+2. Filter to only those with a CSV match (or user-provided content)
+3. Sort by priority (linked issues desc, then priority field)
+4. For each ticket in order: retrieve article → draft → branch → commit → push → PR
+5. After each ticket, briefly confirm completion before moving to the next
+6. After the batch, output a summary table of all PRs created
+
+---
+
+## Step 7: Create a Properly Named Branch
+**Always branch off `develop`**, not `main`. Before creating the branch, run:
+```bash
+git checkout develop && git pull origin develop
+```
+Then create the branch with the naming convention: `sf-cursor-<ticket number>`  
+Example: `sf-cursor-bd-4040`  
+
+---
+
+## Step 8: Commit and Push Changes
+Stage and Commit all changes in `_docs` with a meaningful message derived from the summary
+
+---
+
+## Step 9: Generate the PR for each branch
+Create each PR **targeting `develop`** as the base branch (use `--base develop`).
+Use the naming convention: `[Jira ticket number](SF) update summary`
+Example: `[BD-4040](SF) Add Currents FAQ entry about editing integration settings`
+Always add the label `salesforce migration` to the PR by including `--label "salesforce migration"` in the `gh pr create` command.
+Always request **Copilot** as a reviewer by including `--reviewer "copilot"` in the `gh pr create` command.
+Additionally, if the ticket's Jira assignee maps to a GitHub username (see **Jira assignee → GitHub username mapping**), add that user as a reviewer with an additional `--reviewer "<github_username>"` flag.
+
+Cursor fills out the PR automatically:
+
+```text
+# Changes
+* [Cursor analyzes code changes and lists them]
+* List of changes to help the reviewer understand the scope
+* List the Jira ticket IDs that were addressed in the update in a bullet list of URLs with the format `https://jira.atl.braze.com/browse/<ticket key>`
+* If the ticket has a linked SF Knowledge article URL, include it for reference
+```
+
+## Source Code References
+
+| Resource | Path |
+|----------|------|
+| Docs repo | (current repo) |
+| Main product | `../platform` |
+| Jira XML export | `_data/sf_migration_tasks.xml` |
+| Jira parsed JSON | `_data/sf_migration_parsed.json` |
+| SF KB articles CSV | `_data/sf_kb_articles.csv` |
+
+
+## Example Prompts
+
+### Phase 1: Triage and prioritize
+
+```
+@salesforce-analyzer.mdc Run Phase 1 on the Jira XML export.
+Focus on [specific product area or priority level] if applicable.
+```
+
+```
+@salesforce-analyzer.mdc Run Phase 1 on only P1 tickets from the Jira XML.
+```
+
+```
+@salesforce-analyzer.mdc Run Phase 1 on tickets assigned to the Currents team.
+```
+
+### Phase 2: Draft updates (auto-lookup from CSV)
+
+```
+@salesforce-analyzer.mdc Run Phase 2 for BD-4670.
+```
+
+```
+@salesforce-analyzer.mdc Run Phase 2 for the top 5 tickets by linked issues.
+```
+
+```
+@salesforce-analyzer.mdc Run Phase 2 for all matched Email team tickets.
+```
+
+```
+@salesforce-analyzer.mdc Run Phase 2 for BD-4670. The CSV didn't have a match, so here is the SF article content:
+[paste article content here]
+```

@@ -1,0 +1,1672 @@
+[
+  {
+    "key": "BD-4660",
+    "summary": "Why Are React Native Deep Links Not Working?",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Our docs do not mention what is mentioned in the \"Resolution\" section of the KA.",
+    "recommended_actions": "In the KA, at the very end there is a line \"if that does not solve the issue, further troubleshooting will be required\" which might come off as a little vague, and maybe they should instead write in to Support",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/push_notifications/?tab=ios%20native&sdktab=react%20native",
+        "local": "_docs/_developer_guide/push_notifications/.md (NOT FOUND)",
+        "exists": false
+      },
+      {
+        "url": "https://www.braze.com/docs/developer_guide/push_notifications/?tab=ios%20native",
+        "local": "_docs/_developer_guide/push_notifications/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000Lo1pYAC/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4651",
+    "summary": "Maximum Recipient Limit is not Respected for a Campaign",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "it helps customers know possible scenario for misalignment between send data and max recipient.",
+    "recommended_actions": "Add an additional FAQ to the docs outlining that making changes to max recipient to an active Campaign may cause misalignment with send analytics . If the maximum recipient limit was added post-launch, the campaign may have been respecting the rule at the time of the send. If the recipient limit is ",
+    "sensitive_flag": "none { }",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/engagement_tools/campaigns/faq/#how-do-i-create-a-multichannel-campaign",
+        "local": "_docs/_user_guide/engagement_tools/campaigns/faq/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000Dp9ZYAS/view",
+    "csv_match": false,
+    "ready_to_draft": "Partial \u2014 ticket has detail but no CSV match",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4611",
+    "summary": "iOS Push Notification 'TopicDisallowed'",
+    "category": "New Content",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Our docs do not mention anything about `TopicDisallowed` push error",
+    "recommended_actions": "Add new section to \"Common push error messages\" and add `TopicDisallowed`.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/push/push_error_codes/?tab=ios",
+        "local": "_docs/_user_guide/message_building_by_channel/push/push_error_codes/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000LOovYAG/view",
+    "csv_match": false,
+    "ready_to_draft": "Partial \u2014 ticket has detail but no CSV match",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4604",
+    "summary": "iOS Universal Links Not Working When ABKURLDelegate Returns True",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "this information is not in the docs in case a customer runs into this issue",
+    "recommended_actions": "Add this information for customers to be aware of",
+    "sensitive_flag": "n/",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/brazeai/intelligence/intelligent_timing/#preview-chart-showing-few-users-with-optimal-times",
+        "local": "_docs/_user_guide/brazeai/intelligence/intelligent_timing/.md (NOT FOUND)",
+        "exists": false
+      },
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/email/universal_links#universal-links-and-app-links",
+        "local": "_docs/_user_guide/message_building_by_channel/email/universal_links.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4597",
+    "summary": "How to Log a Custom Event Using GTM (Google Tag Manager)",
+    "category": "New Content",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Our public docs don\u2019t provide clear instructions / examples for how to log a Custom Event with GTM. Our docs say that our customers can use the Braze Action tag to log analytics, but clicking \"logging analytics\" links out to a broken page (404). This makes it difficult for our customers to see any s",
+    "recommended_actions": "Add a section (or a new page) that outlines how to log a Custom Event with GTM, including an example. The Knowledge Article includes the steps",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web&redirected=2#web_google-tag-manager",
+        "local": "_docs/_developer_guide/sdk_integration/.md (NOT FOUND)",
+        "exists": false
+      },
+      {
+        "url": "https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web",
+        "local": "_docs/_developer_guide/sdk_integration/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4595",
+    "summary": "Content Card Image Not Rendering / Is Broken Due To Bad URL",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "Provide customers with additional troubleshooting context for content card images that are not loading properly when accessed via URL.",
+    "recommended_actions": "Supplement the braze docs with all content from the knowledge article. As a suggestion: Add contents to the 'Test checklist' subsection",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards/testing/#preview-message-as-user",
+        "local": "_docs/_user_guide/message_building_by_channel/content_cards/testing/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000LQQvYAO/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4593",
+    "summary": "When Does Braze Log Sends for Content Card Deliveries?",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "additional context for customers to be aware of",
+    "recommended_actions": "add the entire contents of the article to the 'know before you send - content cards' section of our Braze docs",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/help/help_articles/campaigns_and_canvas/know_before_send/#content-cards",
+        "local": "_docs/_help/help_articles/campaigns_and_canvas/know_before_send/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000L4WrYAK/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4591",
+    "summary": "How To Prevent Tracking Anonymous Users",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Provides tips for preventing tracking of anon users if this is required to fulfill the customer's use case",
+    "recommended_actions": "Add the entirety of this article's content to our docs page",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users",
+        "local": "_docs/_user_guide/data/unification/user_data/user_profile_lifecycle/anonymous_users.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000LU37YAG/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4579",
+    "summary": "Adding how to log session on anonymous users on web",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Request from Rory Prutton(rory.prutton@braze.com) Request_Type standard Description This KA helps describe how we can make sure to get session data on anonymous users, which could be worthwhile to customers https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000KCGLYA4/view Request_",
+    "recommended_actions": "",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web&redirected=3#step-2-initialize-braze",
+        "local": "_docs/_developer_guide/sdk_integration.md",
+        "exists": true
+      },
+      {
+        "url": "https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web",
+        "local": "_docs/_developer_guide/sdk_integration.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "",
+    "csv_match": false,
+    "ready_to_draft": "No \u2014 needs SF article content",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4576",
+    "summary": "Add Line Breaks Reason to Liquid FAQs",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Composition Infrastructure",
+    "linked_issues": 0,
+    "knowledge_gap": "Request from Rory Prutton(rory.prutton@braze.com) Request_Type standard Description We can mention about how line breaks can appear in Liquid as per this KA: https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000GCmoYAG/view Request_Url https://www.braze.com/docs/user_guide/persona",
+    "recommended_actions": "",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/faq/#what-is-abort-logic-and-how-can-i-use-it",
+        "local": "_docs/_user_guide/personalization_and_dynamic_content/liquid/faq/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "",
+    "csv_match": false,
+    "ready_to_draft": "No \u2014 needs SF article content",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4569",
+    "summary": "When do we evaluate the abort logic of an IAM?",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Composition Infrastructure",
+    "linked_issues": 0,
+    "knowledge_gap": "I could not find this information under our IAM or Liquid abort docs.",
+    "recommended_actions": "I would suggest we add it to our Liquid abort docs. Maybe consider expanding it to include when it is evaluated for other messaging mediums.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages",
+        "local": "_docs/_user_guide/personalization_and_dynamic_content/liquid/aborting_messages.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000Eln3YAC/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4541",
+    "summary": "Catalogs use cases Vs Catalogs Selections use cases",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Core Objects",
+    "linked_issues": 0,
+    "knowledge_gap": "The current documentation does not provide clear guidance on how to effectively structure Catalog data for various use cases, nor does it explain the differences between using standard Catalog calls and Catalog Selections.",
+    "recommended_actions": "Update the documentation to include: Structuring Your Catalog Data in Braze : When planning how to structure your Catalog data in Braze, it's important to think backwards from your end use case. Each row in the Catalog refers to an \u201citem\u201d (with a unique ID). The columns in the Catalog should contain",
+    "sensitive_flag": "no sensitive information identified.",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/catalogs",
+        "local": "_docs/_api/endpoints/catalogs.md",
+        "exists": true
+      },
+      {
+        "url": "https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/catalogs/selections/#use-case",
+        "local": "_docs/_user_guide/personalization_and_dynamic_content/catalogs/selections/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000Ku2rYAC/view",
+    "csv_match": false,
+    "ready_to_draft": "Partial \u2014 ticket has detail but no CSV match",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4535",
+    "summary": "Submitting a \u201cRequest Timed Out\u201d Support Ticket",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "Onboarding",
+    "linked_issues": 0,
+    "knowledge_gap": "The current documentation does not provide detailed guidance on how to effectively report \"Request Timed Out\" errors to Braze Support, which can hinder timely resolution of issues.",
+    "recommended_actions": "Update the documentation to include: Information to Include When Raising a Ticket for \"Request Timed Out\" Errors : Screen Recording : Provide a screen recording of the steps taken before seeing the error message. This helps Braze Support reproduce the error on their end. Step-by-Step Summary : Inclu",
+    "sensitive_flag": "no sensitive information identified.",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/engagement_tools/campaigns/faq/#what-is-the-difference-between-action-based-and-api-triggered-campaigns",
+        "local": "_docs/_user_guide/engagement_tools/campaigns/faq/.md (NOT FOUND)",
+        "exists": false
+      },
+      {
+        "url": "https://www.braze.com/docs/user_guide/engagement_tools/canvas/faqs",
+        "local": "_docs/_user_guide/engagement_tools/canvas/faqs.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000EhczYAC/view",
+    "csv_match": false,
+    "ready_to_draft": "Partial \u2014 ticket has detail but no CSV match",
+    "comments_summary": [
+      "[63c9a720b1262586707aefec] <p><a href=\"https://jira.atl.braze.com/secure/ViewProfile.jspa?accountId=712020%3Ab901bd0c-d883-4f9a-9cd9-878e34f895b1\" class=\"user-hover\" rel=\"712020:b901bd0c-d883-4f9a-9cd9-878e34f895b1\" data-accoun"
+    ]
+  },
+  {
+    "key": "BD-4514",
+    "summary": "Testing Nested Custom Attributes and Nested Objects for Custom Event Properties",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Core Objects",
+    "linked_issues": 0,
+    "knowledge_gap": "Our docs explain what Nested Custom Attributes are, and how to import them to Braze. But they don't explain how to test messaging that references a Nested Custom Attribute or Nested Objects for Custom Event Properties via liquid. Our Preview & Test tool doesn't support adding mock data for this. We ",
+    "recommended_actions": "Add a section called \"Testing Nested Custom Attributes\" and \"Testing Nested Objects\" to the relevant feature pages. This could be written step-by-step or a video walk-through \"Testing Nested Custom Attributes\" Prerequisites: campaign that references Nested Custom Attributes via liquid import the nes",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "(none in ticket)",
+        "local": "NEEDS MANUAL TARGET",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000KpUbYAK/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4511",
+    "summary": "Common Safari Web Push Issues",
+    "category": "Docs Gap",
+    "priority": "P4",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "These steps are available in our knowledge base, but I am unable to find them in our docs. There is a push troubleshooting section in our docs, but nothing specific to safari. The standard web troubleshooting steps do not appear to contain this info.",
+    "recommended_actions": "Add a safari section in Push Notification troubleshooting that includes this information.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting/?sdktab=web",
+        "local": "_docs/_developer_guide/push_notifications/troubleshooting/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000F9hJYAS/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4504",
+    "summary": "Liquid Error Occurs On The Dashboard When Previewing Some Data Types",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Composition Infrastructure",
+    "linked_issues": 0,
+    "knowledge_gap": "from what I saw in our docs, we don't have any information concerning an error message being shown when previewing a message where liquid filters or operations are applied to some persistent entry properties, event properties, or purchase objects.",
+    "recommended_actions": "I believe including all of the KA would be beneficial to the customer in this instance",
+    "sensitive_flag": "there doesn't seem to be any sensitive data in this ka",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/faq",
+        "local": "_docs/_user_guide/personalization_and_dynamic_content/liquid/faq.md",
+        "exists": true
+      },
+      {
+        "url": "https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/operators",
+        "local": "_docs/_user_guide/personalization_and_dynamic_content/liquid/operators.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000JENRYA4/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4502",
+    "summary": "Push Notification Titles Appear Correctly on Android but not iOS",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "I'm not seeing this information about formatting push titles differently for Android vs iOS in our docs currently, and this feels like an important callout.",
+    "recommended_actions": "Issue When using Liquid to send a customised push campaign, the push displays correctly and in full for Android. However, for iOS, the title seems to be cut off as soon as any Liquid variable is reached.For example: a customised title reading \" Regarding your flight from Italy to France \", where Ita",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/push/troubleshooting",
+        "local": "_docs/_user_guide/message_building_by_channel/push/troubleshooting.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000FYe5YAG/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4480",
+    "summary": "How to Set Up SDK Authentication to Prevent Unwanted Requests? + FAQs",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "The KA mentions some nuances in the FAQ that can be incorporated into the docs.",
+    "recommended_actions": "The docs have an FAQ section of their own but some things like SDK authentication only being available for external ids is not noted.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/sdk_integration/authentication?redirected=2",
+        "local": "_docs/_developer_guide/sdk_integration/authentication.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4476",
+    "summary": "What does the InvalidProviderToken Error mean? iOS Push Error Message",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "color: Color value is invalid : Our public docs don't outline the meaning of the Error InvalidProviderToken",
+    "recommended_actions": "Using the content from the Knowledge Article, add a section on the meaning of the color: Color value is invalid InvalidProviderToken",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "(none in ticket)",
+        "local": "NEEDS MANUAL TARGET",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://www.braze.com/docs/user_guide/message_building_by_channel/push/push_error_codes/?tab=ios",
+    "csv_match": false,
+    "ready_to_draft": "Partial \u2014 ticket has detail but no CSV match",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4473",
+    "summary": "Troubleshoot uploading .p12 Certificate to Braze",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Our public docs don't outline the Warning when trying to upload the .p12 Certificate to Braze. \"Warning: The legacy .p12 and .pem certificate file types are deprecated in favor of .p8 files. Unlike .p8 files, the legacy file types expire annually and require error -prone manual updating. See https:/",
+    "recommended_actions": "Using the content from the Knowledge Article, add the warning message and what it may mean: \"As mentioned in the warning, .p12 files require error-prone manual updating and our customers should be aware of this before proceeding further. \"",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/push_notifications/integration",
+        "local": "_docs/_developer_guide/platforms/legacy_sdks/ios/push_notifications/integration.md",
+        "exists": true
+      },
+      {
+        "url": "https://www.braze.com/docs/support_contact",
+        "local": "_docs/_hidden/other/support_contact.md",
+        "exists": true
+      },
+      {
+        "url": "https://www.braze.com/docs/developer_guide/push_notifications",
+        "local": "_docs/_developer_guide/push_notifications.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000Dc13YAC/view",
+    "csv_match": false,
+    "ready_to_draft": "Partial \u2014 ticket has detail but no CSV match",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4472",
+    "summary": "Security Risks Associated with API Key Exposure",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "The docs do note discuss how REST API keys should remain private while SDK keys don't have to. This may be obvious to most devs but an article denoting this may help increase security for our customers.",
+    "recommended_actions": "This could be part of our API Keys article or a separate one.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/#api-keys-1",
+        "local": "_docs/_user_guide/administrative/app_settings/api_settings_tab/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4460",
+    "summary": "The Difference Between \"Send to Production\" and \"Send to Development\" When Adding an Apple Push Certificate",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "\"Currently, Braze Docs may not clearly explain the distinction between sending push notifications through Apple's development gateway versus the production gateway. This information is essential for users to correctly configure push notifications for different app environments, ensuring that notific",
+    "recommended_actions": "\"Add a section that details the purpose of the 'Send to Production' and 'Send to Development' options when configuring Apple Push Certificates. Explain that 'Send to Development' is used for apps built in development mode, which require push notifications to be sent through Apple's development gatew",
+    "sensitive_flag": "\"no sensitive information identified in the provided content.\"",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/push/ios_push_notifications/",
+        "local": "_docs/_user_guide/message_building_by_channel/push/ios_push_notifications.md (NOT FOUND)",
+        "exists": false
+      },
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/push/faq/#what-happens-when-multiple-users-log-into-a-single-device",
+        "local": "_docs/_user_guide/message_building_by_channel/push/faq/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000K9C1YAK/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4451",
+    "summary": "\"Open Web URL Inside App\" Behaviour - draft mode",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "Our docs do not mention how this behavior is expected to work when in draft mode { }",
+    "recommended_actions": "Add a blurb within the below documentation link explaining the behavior for the Open Web Url inside App functions within draft mode of a canvas or campaign",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/help/help_articles/push/push_clicks_unexpectedly_open_in_app#verify-on-click-behavior",
+        "local": "_docs/_help/help_articles/push/push_clicks_unexpectedly_open_in_app.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000KFfdYAG/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4424",
+    "summary": "Using Liquid If Statements with Catalog Items",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Core Objects",
+    "linked_issues": 0,
+    "knowledge_gap": "The current documentation does not address how to effectively use Liquid if statements with catalog items and selections, which is essential for users looking to implement conditional logic in their messaging.",
+    "recommended_actions": "Update the documentation to include: Using Liquid If Statements with Catalog Items : To be able to use catalog items as a variable with liquid, you would need to first declare the catalog list before you are able to retrieve the variable to use with if statements: Catalog Items {% catalog_items Test",
+    "sensitive_flag": "no sensitive information identified.",
+    "targets": [
+      {
+        "url": "(none in ticket)",
+        "local": "NEEDS MANUAL TARGET",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000J3i9YAC/view",
+    "csv_match": false,
+    "ready_to_draft": "Partial \u2014 ticket has detail but no CSV match",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4415",
+    "summary": "Add Existing Users to a Subscription Group",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "I believe this support article was created because if you use the article title as search terms on the public docs, this endpoint article does not come up as a suggestion. We could benefit by making this use case much more straightforward.",
+    "recommended_actions": "Include language on the endpoint doc that explicitly mentions how this endpoint can be used when you want to update existing users. I know we already have language about how for new users, they should use /users/track.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status#prerequisites",
+        "local": "_docs/_api/endpoints/subscription_groups/post_update_user_subscription_group_status.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000E1nRYAS/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4413",
+    "summary": "Correctly Sized GIF not Uploading to the Media Library",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Composition Infrastructure",
+    "linked_issues": 0,
+    "knowledge_gap": "The only known 'limitations' for adding a gif or media to the Media library is file size. However, there are instances when certain gif files fail to upload and customers do not know why.",
+    "recommended_actions": "Include all information from the knowledge article",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/engagement_tools/templates_and_media/faqs",
+        "local": "_docs/_user_guide/engagement_tools/templates_and_media/faqs.md",
+        "exists": true
+      },
+      {
+        "url": "https://www.braze.com/docs/user_guide/engagement_tools/templates_and_media/media_library",
+        "local": "_docs/_user_guide/engagement_tools/templates_and_media/media_library.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000IKgDYAW/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4411",
+    "summary": "What Could be the Reason for Large Number of Uninstalls of an Application",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "Educate the client on very common reasons that their app may experience spikes in uninstall rates.",
+    "recommended_actions": "include all information from the knowledge article. explain how to check for a specific message that may have lead to uninstalls explain how the presence of the push notification error 'BadDeviceToken' can indicate users are uninstalling the app. If they see this error in bulk around the same timefr",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/analytics/tracking/uninstall_tracking/#why-am-i-suddenly-seeing-a-spike-in-uninstalls",
+        "local": "_docs/_user_guide/analytics/tracking/uninstall_tracking/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP0000008wGXYAY/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4385",
+    "summary": "When is a user's account flagged as having uninstalled the app? When are they considered to have installed the app?",
+    "category": "Docs Gap",
+    "priority": "P4",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "This article explains how/ when a user uninstalls and reinstalls an app. \"Uninstall tracking \"tags\" users who have uninstalled the app. In the case a client uses the \"has not uninstalled\" filter for a campaign, these tagged users will not receive the campaign. If a user reinstalls the app and then s",
+    "recommended_actions": "",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "(none in ticket)",
+        "local": "NEEDS MANUAL TARGET",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP0000005PIjYAM/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match available)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4370",
+    "summary": "Content block inclusion count",
+    "category": "New Content",
+    "priority": "P4",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Composition Infrastructure",
+    "linked_issues": 0,
+    "knowledge_gap": "Describes that the Inclusion Count column in the Content Block Library represents the number of messages or Content Blocks in which the Content Block is used. This information is not covered in the documentation.",
+    "recommended_actions": "",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "(none in ticket)",
+        "local": "NEEDS MANUAL TARGET",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000FsphYAC/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match available)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4369",
+    "summary": "How can I be notified of SDK updates?",
+    "category": "Docs Gap",
+    "priority": "P4",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "The documentation could be updated to advise clients how they can monitor the various GITHUB SDK update pages and be automatically notified of new updates. KA contains the detail on how to do this by altering the github settings.",
+    "recommended_actions": "",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "(none in ticket)",
+        "local": "NEEDS MANUAL TARGET",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000H5HqYAK/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match available)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4352",
+    "summary": "Braze to Braze Webhook > Error: 415 Unsupported Media Type",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "Our docs don\u2019t mention an error 415 Unsupported Media Type",
+    "recommended_actions": "Add a section that warn users of an error 415 when a webhook campaign calls REST API endpoint { }",
+    "sensitive_flag": "n/a { }",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-choose-where-to-build-your-message",
+        "local": "_docs/_user_guide/message_building_by_channel/webhooks/creating_a_webhook/.md (NOT FOUND)",
+        "exists": false
+      },
+      {
+        "url": "https://www.braze.com/docs/api/errors/#fatal-errors",
+        "local": "_docs/_api/errors/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000FoXZYA0/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4350",
+    "summary": "Identify Endpoint: User Alias not associated successfully with external ID after 201 response",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "Our docs don\u2019t mention unexpected results when User Alias not associated successfully with external ID after 201 response using Braze REST endpoint /users/identify. The user alias is case-sensitive and the alias_name field must match the capitalization of the alias. If not, the request will return a",
+    "recommended_actions": "Add a section provide information on unexpected results when User Alias not associated successfully with external ID after 201 response using Braze REST endpoint /users/identify. For example: A user with no external ID has an assigned user alias \"JimJones@example.com\" with the label set to \"email\". ",
+    "sensitive_flag": "there is sensitive information in the ka as one of our support reps used their email as an example. { }",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/api/endpoints/user_data/post_user_identify/#how-it-works",
+        "local": "_docs/_api/endpoints/user_data/post_user_identify/.md (NOT FOUND)",
+        "exists": false
+      },
+      {
+        "url": "https://www.braze.com/docs/api/endpoints/user_data/post_user_identify/",
+        "local": "_docs/_api/endpoints/user_data/post_user_identify.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4349",
+    "summary": "Push Issues Within mParticle Kit Integration (iOS)",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "{ }Our docs don't mention steps to resolve push Issues Within mParticle Kit Integration (iOS)",
+    "recommended_actions": "Add a section that mentions steps to resolve push Issues Within mParticle Kit Integration (iOS)",
+    "sensitive_flag": "n/a { }",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/sdk_integration",
+        "local": "_docs/_developer_guide/sdk_integration.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000Hx5JYAS/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4348",
+    "summary": "How To Find App's SDK Version",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Our docs already state one way to find a customer's app sdk version, however there is another way on how to retrieve it.",
+    "recommended_actions": "{ }Add the other way that customer's can determine their app's SDK version which is listed in the KA, which is: If the SDK versions are not located in the dashboard in this section you can search your Braze email for the following subject lines. Please note that these are sent out on a weekly basis:",
+    "sensitive_flag": "n/a { }",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/getting_started/sdk_overview/#blocking-data-collection",
+        "local": "_docs/_developer_guide/getting_started/sdk_overview/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000ELNxYAO/view",
+    "csv_match": false,
+    "ready_to_draft": "Partial \u2014 ticket has detail but no CSV match",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4338",
+    "summary": "All possible errors for the User Track endpoint",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "color: Color value is invalid : From what I could find we do not have possible errors listed out for clients to perform minor troubleshooting with the users/track endpoint.",
+    "recommended_actions": "Add the below table to our docs: Error Details BAD_DEVICE_ID \"token import with 'device_id' must have a device_id less than 255 bytes and at least 8 bytes\" BAD_EMAIL_SUBSCRIPTION_STATE \"'email_subscribe' must be 'subscribed', 'unsubscribed', or 'opted_in'\" BAD_SUBSCRIPTION_GROUP_ARRAY \"'subscription",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25",
+        "local": "_docs/_api/endpoints/user_data/post_user_track/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000Hex7YAC/view",
+    "csv_match": false,
+    "ready_to_draft": "Partial \u2014 ticket has detail but no CSV match",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4334",
+    "summary": "Are GIF's Supported in Android?",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Making it easy for customers to know this isn't a Braze issue is important. We should publicly call that out.",
+    "recommended_actions": "Add a callout on our Push doc page.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/push/best_practices/message_format/#ios-and-android-push",
+        "local": "_docs/_user_guide/message_building_by_channel/push/best_practices/message_format/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000HUphYAG/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4321",
+    "summary": "User Import - CSV File Download Window",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "It shares with clients how long after they can download a csv upload.",
+    "recommended_actions": "Adding a section sharing that: CSV user imports are available to download from the dashboard for 14 days (after the time of upload).",
+    "sensitive_flag": "no info is sensitive but i don't think it is needed to add \"this file also gets deleted from where it is stored after this period. therefore, there is no way to access these files after 14 days.\" to o",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/data/user_data_collection/user_import/#default-attribute-types",
+        "local": "_docs/_user_guide/data/user_data_collection/user_import/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000IA8zYAG/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4318",
+    "summary": "How to Integrate a Web App With GTM (Google Tag Manager) and Initialize Braze",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "The lack of readable step-by-step instructions in the KA article do not persist in the documentation",
+    "recommended_actions": "Include the screenshots or the code of where the code snippets should go in a customer's GTM project, and also the ways they can test the integration",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/platforms/web/google_tag_manager/#updated-google-eu-user-consent-policy",
+        "local": "_docs/_developer_guide/platforms/web/google_tag_manager/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000JluTYAS/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4307",
+    "summary": "Slowness in Displaying Action-Based Content Cards",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "Action Based content delivery for campaigns is not instant and its expected.",
+    "recommended_actions": "From the KA: For action-based delivery campaigns(like session start), it is expected that there will be a short but indeterminate delay between the event and the card being available. For better understanding, the backend process for content cards triggered by session start is: The campaign gets tri",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards/create/?tab=campaign#step-6-review-and-deploy",
+        "local": "_docs/_user_guide/message_building_by_channel/content_cards/create/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000HsDhYAK/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4304",
+    "summary": "API Success Message Received But No Message Delivered",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "We mention in our docs that a success message from a messaging endpoint just means the call was received for processing and why this doesn't guarantee delivery of messages. What we don't mention is that for endpoints like /users/identify, the success message just means that the call was formatted co",
+    "recommended_actions": "Add the following context to the docs at the link below: For example, for /users/identify, if the request synax and format is correct, it will return a success message. This means that Braze has received the request for processing. However, after processing, if there is no match for the alias, it wi",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/api/errors/#server-responses",
+        "local": "_docs/_api/errors/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000HLEXYA4/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4299",
+    "summary": "Multiple IAMs Display In The Same Session if They Are Both Triggered by 'Session Start'?",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Our docs don't mention that multiple IAMs won't display for the user in the same session. We state that we display based on priority, but we should clarify that this requires the user to log a new session to get the next IAM in the priority list.",
+    "recommended_actions": "Answer this question: Can two or more IAMs display in the same session if they both trigger off of 'Session Start'? Which is \"no\", one IAM per session. Further explain how priority and recency of the IAM being created will play into the order of the IAMs being displayed for the user. In other words,",
+    "sensitive_flag": "related pq:",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/#step-7-build-the-remainder-of-your-campaign-or-canvas",
+        "local": "_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/create/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000Ixo1YAC/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4290",
+    "summary": "How are Currency Exchange Rates Calculated for the Braze Dashboard",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "{ }Our documentation does not have any information on how Currency Exchange Rates Calculated for the Braze Dashboard",
+    "recommended_actions": "Suggest additional content that should be included. This could be a brief summary or draft of the content, or specific examples that will complement the user\u2019s understanding. For example, \u201cAdd a section that warns users of unexpected results when adding A/B testing to launched campaigns. For this sc",
+    "sensitive_flag": "n/a { }",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/data/custom_data/purchase_events/#canvas-entry-properties-and-event-properties",
+        "local": "_docs/_user_guide/data/custom_data/purchase_events/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000IBhlYAG/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4282",
+    "summary": "API rate Limit - Rolling Hour or Hourly Basis",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "{ }Looked in the docs and there's no information on this.",
+    "recommended_actions": "{ }Add a section that let users know that API rate limit is based on a hourly basis.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/api/basics#rest-api-key-permissions",
+        "local": "_docs/_api/basics.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP0000009cm1YAA/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4281",
+    "summary": "How to find an anonymous user in the Web SDK",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Our docs do not mention how to find anonymous user in the Web SDK.",
+    "recommended_actions": "Add a section that show customers how to find an anonymous user in the Web SDK. In a web browser go to In a web browser's developer tools. For example, in Google Chrome, go to View > Developer > Developer tools or use short-cut Command + Option + J on a Mac or Ctrl + Shift + I or press F12 on Window",
+    "sensitive_flag": "in the screenshots of the ka, there is no sensitive information. { }",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/home",
+        "local": "_docs/_developer_guide/home.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000Jj6HYAS/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4280",
+    "summary": "In-App Message Impression Failure Error in Event User Logs",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "color: Color value is invalid : Our docs do not mention any error codes to look for in the raw logs in the event user logs.",
+    "recommended_actions": "Add a section that has information of an error code \"tf\" in the raw data of an SDK request",
+    "sensitive_flag": "in the screenshot there is no sensitive information, but i do not think it's necessary to include the screenshot.",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/administrative/app_settings/event_user_log_tab?redirected=1#event-user-log",
+        "local": "_docs/_user_guide/administrative/app_settings/event_user_log_tab.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000Fu0HYAS/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4278",
+    "summary": "Limitations for Catalog",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Core Objects",
+    "linked_issues": 0,
+    "knowledge_gap": "Here is what the KA has and what should be moved over and added to a table. CSV file size Up to 100 MB for all CSV files combined across your company Up to 2 GB for a single CSV file Characters limit for item value Up to 5,000 characters in one value. For example, if you had a field labeled descript",
+    "recommended_actions": "Add this to the following Docs section: Unable to render embedded object: File (Screenshot 2025-03-13 at 5.41.01 PM.png) not found. * https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/#preparing-your-csv-file*",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/#preparing-your-csv-file*",
+        "local": "_docs/_user_guide/personalization_and_dynamic_content/catalogs/catalog/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000JpzhYAC/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4269",
+    "summary": "Most Recently Used Device Feature For Push Messaging",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "The public docs mention this feature and how it works. But, the Knowledge Article has an additional point that is missing from our public docs - which device will Braze target? Is \"most recently used device\" defined by sessions, or the timestamp when the push token was imported?",
+    "recommended_actions": "Update the public docs to include this information from the Knowledge Article: \" Enabling this feature will target push delivery for only one device, based on which device has the most recently updated Push token. It does not target the device with the most recently recorded session. For example, if",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "(none in ticket)",
+        "local": "NEEDS MANUAL TARGET",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000IloTYAS/view",
+    "csv_match": false,
+    "ready_to_draft": "Partial \u2014 ticket has detail but no CSV match",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4263",
+    "summary": "None of the selected users have matching push tokens for iOS/Android Push",
+    "category": "Docs Gap",
+    "priority": "P4",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "The documentation correctly outlines push registration process and common push error messages. However, it doesn't outline explanation for typical error ` None of the selected users have matching push tokens for Android/iOS Push`",
+    "recommended_actions": "Add a warning that user will see an error if their user is not registered for push notifications",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/?tab=push#step-1-identify-your-test-users",
+        "local": "_docs/_user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000JbBxYAK/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4259",
+    "summary": "Invalid API Key",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "Our docs don't give specific examples of real-life errors the way the KA does. It also provides different reasons for why it might be happening and how to solve them.",
+    "recommended_actions": "Please make sure to include the images and steps shown in the KA",
+    "sensitive_flag": "it doesn't look like this ka has any information that can't be shared",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/api/errors",
+        "local": "_docs/_api/errors.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000JdqTYAS/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": [
+      "[5f86c5b6ecee350069f9759d] <p>Hi <a href=\"https://jira.atl.braze.com/secure/ViewProfile.jspa?accountId=712020%3A4086c852-034c-409c-a41c-f18fb31de9f7\" class=\"user-hover\" rel=\"712020:4086c852-034c-409c-a41c-f18fb31de9f7\" data-acc"
+    ]
+  },
+  {
+    "key": "BD-4234",
+    "summary": "How do I use the spacer.gif resource?",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "the use of the spacer.gif in webhooks for a canvas step is not mentioned in our docs.",
+    "recommended_actions": "Add the following into the Canvas documentation for a webhook step : \"We have a hack of our webhooks by calling a resource we host called spacer.gif. The spacer.gif image will not be sent or displayed to any users, but the webhook call will be successfully sent. This acts as a \"dummy\" step in canvas",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/?tab=canvas#step-1-choose-where-to-build-your-message",
+        "local": "_docs/_user_guide/message_building_by_channel/webhooks/creating_a_webhook/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000FxqzYAC/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": [
+      "[5f86c5b6ecee350069f9759d] <p>Would love to get Product's pov on this , if we should make it public. Seem like we have 39 case where this was a solution consideration? Is this something we actively suggest during onboarding (or"
+    ]
+  },
+  {
+    "key": "BD-4201",
+    "summary": "Clicking on Push Notification Doesn't Open the App",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Our docs does have an faq or section that addresses this",
+    "recommended_actions": "Add a section that shows steps on how to resolve this issue in iOS and Android SDK which is stated in the resolution part of the KA.",
+    "sensitive_flag": "no sensitive information",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/help/help_articles/push",
+        "local": "_docs/_user_guide/message_building_by_channel/push.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000JYCTYA4/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4174",
+    "summary": "How is a Content Card's Expiration (Time In Feed) Calculated?",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Lydia Xie",
+    "github_user": "lydia-xie",
+    "team": "Content Cards",
+    "linked_issues": 0,
+    "knowledge_gap": "Braze docs mentions expiration time for content cards, but does not explain how it is calculated.",
+    "recommended_actions": "Add a paragraph at the bottom of the \"Overview\" section for the campaign tab: \"Regardless of selected option, the Expiration (Time In Feed) is calculated from its Send Time. For a scheduled send , it will be the time after the campaign is launched. For action-based campaigns , it will be the time af",
+    "sensitive_flag": "n.a.",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#overview:~:text=Regardless%20of%20your%20selected%20option%2C%20the%20Content%20Card%20expiration%20date%20countdown%20will%20begin%20when%20the%20campaign%20launches.",
+        "local": "_docs/_user_guide/message_building_by_channel/content_cards/create/card_creation/.md (NOT FOUND)",
+        "exists": false
+      },
+      {
+        "url": "https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#overview:~:text=Regardless%20of%20your%20selected%20option%2C%20the%20Content%20Card%20expiration%20date%20countdown%20will%20begin%20when%20the%20campaign%20launches",
+        "local": "_docs/_user_guide/message_building_by_channel/content_cards/create/card_creation/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000JOppYAG/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4171",
+    "summary": "How do I update Custom Attribute data types via CSV?",
+    "category": "New Content",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "The article outlines the procedure in updating the data type which is not covered in the user import page.",
+    "recommended_actions": "The article only really points out that data types must be changed in the 'Custom Attribute' page first so this only requires a brief sentence explaining that the data type needs to be changed first and then the CSV import can be uploaded with the new data types.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/data/user_data_collection/user_import/#rest-api",
+        "local": "_docs/_user_guide/data/user_data_collection/user_import/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4144",
+    "summary": "Delete Anonymous Users via /users/delete Endpoint",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Core Objects",
+    "linked_issues": 0,
+    "knowledge_gap": "Customers do ask support to delete anonymous users on their behalf and if they have the knowledge to do it themselves it would make things go by faster for them",
+    "recommended_actions": "Include a section in the documentation that informs the customer on how to delete anonymous users",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/data/user_data_collection/anonymous_users#capture-checkout-data-from-an-anonymous-user",
+        "local": "_docs/_user_guide/data/unification/user_data/user_profile_lifecycle/anonymous_users.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000HgCXYA0/view",
+    "csv_match": false,
+    "ready_to_draft": "Partial \u2014 ticket has detail but no CSV match",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4138",
+    "summary": "When might a user have 0 sessions recorded against their profile?",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "We do not have this in our docs currently and I think it could be beneficial to include these reasons why users show 0 sessions.",
+    "recommended_actions": "Add content from KA article to docs.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "(none in ticket)",
+        "local": "NEEDS MANUAL TARGET",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000CV6TYAW/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4099",
+    "summary": "Custom Event Not Logging in Braze via Google Tag Manager (GTM)",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "We have a troubleshooting steps section but the info in this KA is not included in our Docs.",
+    "recommended_actions": "I suggest adding this KA as a troubleshooting step as Google Tag manager cases do come up fairly often.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/platforms/web/google_tag_manager/#upgrading*",
+        "local": "_docs/_developer_guide/platforms/web/google_tag_manager/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000IerpYAC/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4080",
+    "summary": "Formatting for DateTime datatype?",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Core Objects",
+    "linked_issues": 0,
+    "knowledge_gap": "We don't have all the information within the article in our docs.",
+    "recommended_actions": "This is what is missing: Keep in mind that if not setting a timezone, or setting timezone incorrectly, we will always default to UTC. Time will always appear in company timezone on the dashboard. So if you wanted to set the time for October 31, 2019 6pm EST it would look as follows: 2019-10-31T18:00",
+    "sensitive_flag": "not sensitive, but the screenshot should not be migrated.",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/api/objects_filters/user_attributes_object",
+        "local": "_docs/_api/objects_filters/user_attributes_object.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/articles/Knowledge/DateTime-Format",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4078",
+    "summary": "What is the minimum time interval between triggers for IAMs?",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "This information is missing and can improve their SDK integration.",
+    "recommended_actions": "In production apps, we do not recommend making this value any smaller than 10, to avoid spamming the user with notifications. In our sample apps, we have reduced that time to 5 seconds . Are there any downsides to setting the minimal time interval between triggers to 0? You can reduce the interval b",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/platforms/android/in_app_messages/delivery?redirected=2#minimum-time-interval-between-triggers",
+        "local": "_docs/_developer_guide/platforms/android/in_app_messages/delivery.md (NOT FOUND)",
+        "exists": false
+      },
+      {
+        "url": "https://www.braze.com/docs/developer_guide/platforms/web/in_app_messages/delivery?redirected=2#minimum-time-interval-between-triggers",
+        "local": "_docs/_developer_guide/platforms/web/in_app_messages/delivery.md (NOT FOUND)",
+        "exists": false
+      },
+      {
+        "url": "https://www.braze.com/docs/developer_guide/platforms/swift/in_app_messages/message_delivery/#delivery-semantics",
+        "local": "_docs/_developer_guide/platforms/swift/in_app_messages/message_delivery/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/articles/Knowledge/InApp-Messages-Minimum-Time-Interval-Between-Triggers",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4075",
+    "summary": "ChangeUser() SDK method FAQ",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "We do not have a concise place explaining about these behaviour and warning customers about what might happen if they do not use it right.",
+    "recommended_actions": "Add in our public docs, in the begining of their SDK integration, the details below.",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "(none in ticket)",
+        "local": "NEEDS MANUAL TARGET",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/articles/Knowledge/changeUser-method-FAQ",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4068",
+    "summary": "User Profile Attribute \"Language\"",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Core Objects",
+    "linked_issues": 0,
+    "knowledge_gap": "Braze docs currently does not have this information",
+    "recommended_actions": "Add a small section with the following information: \"A user's profile language is based on Device Locale, which takes into account the language of the operating system on the device. For example, if a user lived in the U.S. and their device OS language was set to English, their device locale would b",
+    "sensitive_flag": "n.a.",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/data/user_data_collection/sdk_data_collection/#optional-data-collected-by-default",
+        "local": "_docs/_user_guide/data/user_data_collection/sdk_data_collection/.md (NOT FOUND)",
+        "exists": false
+      },
+      {
+        "url": "https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/#overview-tab",
+        "local": "_docs/_user_guide/engagement_tools/segments/user_profiles/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000IlBlYAK/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": []
+  },
+  {
+    "key": "BD-4036",
+    "summary": "Users Not Logging Sessions",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "",
+    "recommended_actions": "Add the reason why some users might be logging sessions and others not: \"This may coincide with changes made to an app, specifically how the SDK is initialized. For example, if there is conditional logic applied before triggering the SDK, this may prevent the SDK from starting in some scenarios and ",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "(none in ticket)",
+        "local": "NEEDS MANUAL TARGET",
+        "exists": false
+      }
+    ],
+    "sf_url": "https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000HHIzYAO/view",
+    "csv_match": true,
+    "ready_to_draft": "Yes (CSV match + detailed ticket)",
+    "comments_summary": [
+      "[5f86c5b6ecee350069f9759d] <p><a href=\"https://jira.atl.braze.com/secure/ViewProfile.jspa?accountId=712020%3A8e897d8e-2a14-4cf0-b8d3-d5227546b472\" class=\"user-hover\" rel=\"712020:8e897d8e-2a14-4cf0-b8d3-d5227546b472\" data-accoun",
+      "[5f86c5b6ecee350069f9759d] <p><a href=\"https://jira.atl.braze.com/secure/ViewProfile.jspa?accountId=712020%3Ac02a883d-7dfa-4c66-9ba6-13805ec95642\" class=\"user-hover\" rel=\"712020:c02a883d-7dfa-4c66-9ba6-13805ec95642\" data-accoun"
+    ]
+  },
+  {
+    "key": "BD-3994",
+    "summary": "Adding common troubleshooting steps for Logging Custom Events",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Request from Rory Prutton(rory.prutton@braze.com) Request_Type standard Description There isn't any information which we can give the customer for generic troubleshooting which is ambiguous of the specific SDK (as they all generally follow the same rules) I.e. 1. Custom event logging was not set up ",
+    "recommended_actions": "",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/help/home",
+        "local": "_docs/_help/home.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "",
+    "csv_match": false,
+    "ready_to_draft": "No \u2014 needs SF article content",
+    "comments_summary": [
+      "[712020:6d31060b-0599-4afd-b814-c66a0f8f2952] <p>KA link -<a href=\"https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000I1YjYAK/view\" class=\"external-link\" rel=\"nofollow noreferrer\">https://braze.lightning.force.com/lightning/r",
+      "[712020:c02a883d-7dfa-4c66-9ba6-13805ec95642] <p>Hi <a href=\"https://jira.atl.braze.com/secure/ViewProfile.jspa?accountId=712020%3A6d31060b-0599-4afd-b814-c66a0f8f2952\" class=\"user-hover\" rel=\"712020:6d31060b-0599-4afd-b814-c66a0f8f2952\" data-acc",
+      "[5f86c5b6ecee350069f9759d] <p><a href=\"https://jira.atl.braze.com/secure/ViewProfile.jspa?accountId=712020%3A6d31060b-0599-4afd-b814-c66a0f8f2952\" class=\"user-hover\" rel=\"712020:6d31060b-0599-4afd-b814-c66a0f8f2952\" data-accoun"
+    ]
+  },
+  {
+    "key": "BD-3985",
+    "summary": "Adding more information on syntax for boolean",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Composition Infrastructure",
+    "linked_issues": 0,
+    "knowledge_gap": "Request from Alan Zaki(alan.zaki@braze.com) Request_Type standard Description I wonder if we can add a section where we specify that the data type of the custom attribute being called in the Liquid matches the data type of the attribute in the dashboard with the example below: Let's say the followin",
+    "recommended_actions": "",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/#managing-custom-attributes",
+        "local": "_docs/_user_guide/data/custom_data/custom_attributes/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "",
+    "csv_match": false,
+    "ready_to_draft": "No \u2014 needs SF article content",
+    "comments_summary": [
+      "[5f86c5b6ecee350069f9759d] <p>KA - <a href=\"https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000I1vJYAS/view\" class=\"external-link\" rel=\"nofollow noreferrer\">https://braze.lightning.force.com/lightning/r/Kno",
+      "[712020:960e958a-0a42-4846-9423-6dca8c9571a4] <p>imo it would not hurt to have this information and example added in the link provided but happy for to live in other sections of the docs for sure - I guess as long as it is there it will help our ",
+      "[5f86c5b6ecee350069f9759d] <p><a href=\"https://jira.atl.braze.com/secure/ViewProfile.jspa?accountId=712020%3A960e958a-0a42-4846-9423-6dca8c9571a4\" class=\"user-hover\" rel=\"712020:960e958a-0a42-4846-9423-6dca8c9571a4\" data-accoun"
+    ]
+  },
+  {
+    "key": "BD-3978",
+    "summary": "Adding content card testing for web in our docs",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Zair Kelley Ortiz",
+    "github_user": "zairro",
+    "team": "SDKs",
+    "linked_issues": 0,
+    "knowledge_gap": "Request from Alan Zaki(alan.zaki@braze.com) Request_Type standard Description While integrating the Web SDK, is it possible to test the content card integration? Yes. Using the browser developer tools (Chrome Console) you can test the content cards. Follow these steps: Create a content card campaign",
+    "recommended_actions": "",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/developer_guide/platforms/web/content_cards/#prerequisites",
+        "local": "_docs/_developer_guide/platforms/web/content_cards/.md (NOT FOUND)",
+        "exists": false
+      }
+    ],
+    "sf_url": "",
+    "csv_match": false,
+    "ready_to_draft": "No \u2014 needs SF article content",
+    "comments_summary": [
+      "[5f86c5b6ecee350069f9759d] <p>KA - <a href=\"https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000IJSQYA4/view\" class=\"external-link\" rel=\"nofollow noreferrer\">https://braze.lightning.force.com/lightning/r/Kno",
+      "[5f86c5b6ecee350069f9759d] <p>Could this be included in a Troubleshooting section?\u00a0</p>",
+      "[712020:960e958a-0a42-4846-9423-6dca8c9571a4] <p><a href=\"https://jira.atl.braze.com/secure/ViewProfile.jspa?accountId=5f86c5b6ecee350069f9759d\" class=\"user-hover\" rel=\"5f86c5b6ecee350069f9759d\" data-account-id=\"5f86c5b6ecee350069f9759d\" accounti"
+    ]
+  },
+  {
+    "key": "BD-3965",
+    "summary": "adding more information on example for data consumption",
+    "category": "Docs Gap",
+    "priority": "P2",
+    "assignee": "Rachel Feinberg",
+    "github_user": "rachel-feinberg",
+    "team": "Ingestion",
+    "linked_issues": 0,
+    "knowledge_gap": "Request from Alan Zaki(alan.zaki@braze.com) Request_Type standard Description could we add additional information to the note maybe with an example: Updating a custom attribute object to null also consumes a data point. ADD: assuming I've got an array: array_attribute: [\"value1\", \"value2\"] array_att",
+    "recommended_actions": "",
+    "sensitive_flag": "",
+    "targets": [
+      {
+        "url": "https://www.braze.com/docs/user_guide/data/data_points?redirected=2#consumption-count",
+        "local": "_docs/_user_guide/data/infrastructure/data_points.md",
+        "exists": true
+      }
+    ],
+    "sf_url": "",
+    "csv_match": false,
+    "ready_to_draft": "No \u2014 needs SF article content",
+    "comments_summary": [
+      "[5f86c5b6ecee350069f9759d] <p>KA - <a href=\"https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka0VP000000HImvYAG/view\" class=\"external-link\" rel=\"nofollow noreferrer\">https://braze.lightning.force.com/lightning/r/Kno",
+      "[5f86c5b6ecee350069f9759d] <p><a href=\"https://jira.atl.braze.com/secure/ViewProfile.jspa?accountId=712020%3A960e958a-0a42-4846-9423-6dca8c9571a4\" class=\"user-hover\" rel=\"712020:960e958a-0a42-4846-9423-6dca8c9571a4\" data-accoun",
+      "[712020:960e958a-0a42-4846-9423-6dca8c9571a4] <p><a href=\"https://jira.atl.braze.com/secure/ViewProfile.jspa?accountId=5f86c5b6ecee350069f9759d\" class=\"user-hover\" rel=\"5f86c5b6ecee350069f9759d\" data-account-id=\"5f86c5b6ecee350069f9759d\" accounti"
+    ]
+  }
+]
