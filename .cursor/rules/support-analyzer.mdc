@@ -31,6 +31,8 @@ For each unique Case ID, determine if docs action is needed:
 | **Support-Only** | Account-specific, requires Braze internal access, or one-off config | Skip (no docs change) |
 | **Bug/Product** | Issue requiring code fix, not docs | Skip (escalate to eng) |
 
+> **Never document workarounds or bugs.** Documentation must describe how the product works — or is intended to work — not temporary workarounds for issues that will be (or should be) fixed. If a ticket's resolution relies on a workaround for a product defect, categorize it as **Bug/Product** and skip it. Workaround content creates maintenance burden and misleads customers once the underlying issue is resolved.
+
 ---
 
 ## Step 2: Per-Ticket Analysis
