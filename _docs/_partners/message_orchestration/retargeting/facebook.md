@@ -126,13 +126,13 @@ If the export doesn't work, do the following:
 
 If you receive an error when exporting a segment as a Facebook Audience, Facebook's developer documentation notes two common causes:
 
-1. **The access token is from a user who isn't an admin of the app and ad account** — The Facebook user whose credentials are connected to Braze must have the right permissions.
-2. **The ad account you're exporting to isn't associated with your app** — The Facebook ad account must be linked to your app in Facebook's settings.
+1. **The access token is from a user who isn't an admin of the app and ad account** - The Facebook user whose credentials are connected to Braze must have the right permissions.
+2. **The ad account you're exporting to isn't associated with your app** - The Facebook ad account must be linked to your app in Facebook's settings.
 
 Use the following checks to verify your setup:
 
-- **Check that you're an admin of the app** — Go to [developers.facebook.com](https://developers.facebook.com/), open **My Apps** and select your company's app. If you don't see the app, you may need to be added by your development team. In the app's dashboard, go to **Roles** in the left-hand menu to confirm your role (Admin, Developer, Tester, or Analytics User).
-- **Check that your ad account is associated with your app** — In the Facebook App Dashboard, go to **Settings** > **Advanced**, scroll to **Advertising Accounts**, and add the Facebook ad account ID you want to use for Braze audience exports if it isn't already listed.
-- **Check that you're an admin of the ad account** — Go to [business.facebook.com](https://business.facebook.com/), select **Business Settings** from the top-left dropdown, then go to **Accounts** > **Ad accounts** and select the ad account. Confirm your access and that you have the permissions needed to create Custom Audiences.
+- **Check that you're an admin of the app** - Go to [developers.facebook.com](https://developers.facebook.com/), open **My Apps** and select your company's app. If you don't see the app, you may need to be added by your development team. In the app's dashboard, go to **Roles** in the left-hand menu to confirm your role (Admin, Developer, Tester, or Analytics User).
+- **Check that your ad account is associated with your app** - In the Facebook App Dashboard, go to **Settings** > **Advanced**, scroll to **Advertising Accounts**, and add the Facebook ad account ID you want to use for Braze audience exports if it isn't already listed.
+- **Check that you're an admin of the ad account** - Go to [business.facebook.com](https://business.facebook.com/), select **Business Settings** from the top-left dropdown, then go to **Accounts** > **Ad accounts** and select the ad account. Confirm your access and that you have the permissions needed to create Custom Audiences.
 
-For more details, see [Facebook (Meta) Developers documentation](https://developers.facebook.com/docs/) and [Facebook Business Help](https://www.facebook.com/business/help).
+For more details, see [Facebook's Custom Audience API documentation](https://developers.facebook.com/docs/) and [Facebook's Business Help Center guide on Custom Audiences](https://www.facebook.com/business/help).
