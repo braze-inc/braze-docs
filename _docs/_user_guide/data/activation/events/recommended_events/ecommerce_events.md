@@ -1185,7 +1185,7 @@ Unlike legacy purchase events, eCommerce recommended events store product detail
 
 ### How do I segment users by a specific product?
 
-The standard Segment Builder allows you to filter by the number of times a user performed an eCommerce event. To filter by specific product properties (such as `product_id` or `product_name`), use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), which support nested event property filtering. For example, you can find all users who purchased product "SKU-123" in the last 90 days.
+The segmenter allows you to filter by the number of times a user performed an eCommerce event. To filter by specific product properties (such as `product_id` or `product_name`), use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), which support nested event property filtering. For example, you can find all users who purchased product "SKU-123" in the last 90 days.
 
 ### What's the difference between legacy purchase events and eCommerce recommended events?
 
