@@ -1201,7 +1201,7 @@ eCommerce recommended events have a defined schema with required and optional fi
 
 It depends on how you're sending the events:
 
-- **Via the SDK**: No. The SDK logs events against the currently identified user (set via the `changeUser` method). You don't need to include an explicit user identifier with each event call.
+- **Via the SDK**: No. When you use a Braze SDK, events are automatically associated with the SDK's current user context (anonymous or identified). You don't need to pass a user identifier with each event call; instead, you can identify the user for that context using methods such as `changeUser`.
 - **Via the REST API** (`/users/track`): Yes. Each API request must include a user identifier, such as `external_id`, `braze_id`, `user_alias`, `email`, or `phone`, because the API has no "current user" context.
 
 ### Why don't nested product properties appear in the AI Recommendations setup dropdown?
