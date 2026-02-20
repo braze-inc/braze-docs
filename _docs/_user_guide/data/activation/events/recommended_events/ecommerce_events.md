@@ -1206,7 +1206,7 @@ It depends on how you're sending the events:
 
 ### Why don't nested product properties appear in the AI Recommendations setup dropdown?
 
-When configuring [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/), the property name dropdown only displays top-level event properties (such as `order_id`, `total_value`, and `currency`). Nested properties within the `products` array are not surfaced in this dropdown. To map product-level data for AI Recommendations, use a [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) with item IDs that match your `product_id` or `variant_id` values.
+When configuring [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/), the **Property name** dropdown only lists top-level event properties (such as `order_id`, `total_value`, and `currency`). Nested properties within the `products` array (for example, `products.product_id` or `products.variant_id`) may not appear in this list, but you can type them manually using dot notation in the field. For most eCommerce implementations, Braze recommends using `products.product_id` as the item identifier and pairing it with a [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) whose item IDs match your `product_id` or `variant_id` values.
 
 ### Why are some of my eCommerce events not appearing in Braze?
 
