@@ -324,7 +324,7 @@ module Jekyll
                   else
                     expand_label = "Expand section: #{page_title}"
                     collapse_label = "Collapse section: #{page_title}"
-                    items << "<div class='#{ @nav_active_page_class } nav_item_row'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><span class='#{@nav_title_class}'>#{page_title}</span><button type='button' class='#{@nav_toggle_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{ariaexpanded ? collapse_label : expand_label}'><i class='#{@fa_class} fa-chevron-#{ariaexpanded ? "down" : "right"}' aria-hidden='true'></i></button></div>"
+                    items << "<div class='#{ @nav_active_page_class } nav_item_row'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><span class='#{@nav_title_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' role='button' tabindex='0'>#{page_title}</span><button type='button' class='#{@nav_toggle_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{ariaexpanded ? collapse_label : expand_label}'><i class='#{@fa_class} fa-chevron-#{ariaexpanded ? "down" : "right"}' aria-hidden='true'></i></button></div>"
                     items << "</div>\n"
                   end
                 end

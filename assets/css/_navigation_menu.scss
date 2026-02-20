@@ -221,6 +221,9 @@ $nav-active-bg: $grey-athens;
 			min-width: 0;
 			flex: 1 1 auto;
 		}
+		.nav_title[data-toggle="collapse"] {
+			cursor: pointer;
+		}
 		&:hover {
 			background-color: $nav-hover-bg;
 		}
