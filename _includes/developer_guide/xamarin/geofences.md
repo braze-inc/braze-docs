@@ -14,6 +14,8 @@ This is the minimum SDK versions needed to start using geofences:
 
 ---
 
+Next, follow the platform-specific instructions below for either Android or iOS:
+
 {% tabs %}
 {% tab Android %}
 
@@ -56,19 +58,19 @@ using AndroidX.Core.Content;
 
 private void RequestLocationPermission()
 {
-	// ...existing code for checking and requesting permissions...
+  // ...existing code for checking and requesting permissions...
 }
 
 public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
 {
-	// ...existing code for handling permission result...
+  // ...existing code for handling permission result...
 }
 ```
 
 After permissions are granted, initialize Braze location collection:
 
 ```csharp
-Braze.GetInstance(context).RequestLocationInitialization();
+Braze.GetInstance(this).RequestLocationInitialization();
 ```
 
 ### Step 6: Manually request geofence updates (optional)
@@ -76,7 +78,7 @@ Braze.GetInstance(context).RequestLocationInitialization();
 To manually request geofences for a specific location:
 
 ```csharp
-Braze.GetInstance(context).RequestGeofences(latitude, longitude);
+Braze.GetInstance(this).RequestGeofences(latitude, longitude);
 ```
 
 {% alert important %}
