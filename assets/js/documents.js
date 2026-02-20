@@ -447,13 +447,13 @@ $(document).ready(function() {
     var curstate = nav_bar.hasClass('hide_sidebar');
     if (curstate) {
       nav_bar.removeClass('hide_sidebar');
-      nav_icon.removeClass('fa-chevron-right');
-      nav_icon.addClass('fa-chevron-left');
+      nav_icon.removeClass('fa-angle-double-right');
+      nav_icon.addClass('fa-angle-double-left');
       Cookies.set('ln', '', { expires: 365 });
     } else {
       nav_bar.addClass('hide_sidebar');
-      nav_icon.removeClass('fa-chevron-left');
-      nav_icon.addClass('fa-chevron-right');
+      nav_icon.removeClass('fa-angle-double-left');
+      nav_icon.addClass('fa-angle-double-right');
       Cookies.set('ln','1',  { expires: 365 });
     }
     updateSidebarToggleAccessibility();

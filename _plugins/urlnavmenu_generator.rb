@@ -302,11 +302,11 @@ module Jekyll
                     items << "<button type='button' class='#{@nav_toggle_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{ariaexpanded ? collapse_label : expand_label}'><i class='#{@fa_class} fa-chevron-#{ariaexpanded ? "down" : "right"}' aria-hidden='true'></i></button>"
                     items << "</div>\n"
                   else
-                    items << "<div class='#{ @nav_active_basic_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><div class='#{ @nav_title_block}'> "
+                    items << "<div class='#{ @nav_active_basic_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><div class='#{ @nav_title_block}'>"
                     if is_active
-                      items << "<div class='#{@nav_title_class}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'>#{page_title} </div>"
+                      items << "<div class='#{@nav_title_class}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'>#{page_title}</div>"
                     else
-                      items << "<a href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title}'> <div class='#{@nav_title_class}'>#{page_title}</div></a>"
+                      items << "<a href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title}'><div class='#{@nav_title_class}'>#{page_title}</div></a>"
                     end
                     items << "</div></div>\n"
                   end
