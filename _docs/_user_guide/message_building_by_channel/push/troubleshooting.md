@@ -78,6 +78,24 @@ Check that you're using the correct type of push notification. For example, if y
 
 When testing push sends with internal users, make sure that the user who you want to receive the push notification is currently logged into the relevant app. This can lead to the user either not receiving a push or receiving a push you believe they aren't segmented for.
 
+## Clicking a push notification doesn't open the app
+
+If clicking a push notification doesn't open your app, check the following based on your platform.
+
+### Android
+
+1. **Verify on-click behavior:** Confirm that the campaign is configured to open the app when clicked.
+2. **Check deep link handling:** In your `braze.xml` file, check whether `com_braze_handle_push_deep_links_automatically` is set to `true` or `false`.
+   - If set to `true`, the Braze SDK handles deep links directly and the app should open as expected.
+   - If set to `false`, your app needs a broadcast receiver to listen for and handle push received and opened intents. Verify that this receiver is implemented correctly.
+3. **Collect verbose logs:** [Enable verbose logging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#android-verbose-logging), reproduce the issue, and provide the logs along with your `braze.xml` and `AndroidManifest.xml` to support.
+
+### iOS
+
+1. **Verify on-click behavior:** Confirm that the campaign is configured to open the app when clicked.
+2. **Check push integration:** Deep linking from a push into the app is automatically handled by the Braze [standard push integration]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift). Confirm that the integration is implemented correctly, including any custom delegate handling.
+3. **Collect verbose logs:** [Enable verbose logging]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/#update-your-app-delegate), reproduce the issue, and provide the logs to support.
+
 ## Push clicks unexpectedly open in app
 
 If you're experiencing issues with links in push notifications unexpectedly opening in your app instead of your web browser, there may be an issue with your campaign configuration or SDK implementation. Refer to these steps for help.
