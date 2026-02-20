@@ -43,9 +43,9 @@ Select the agent that will process data in this step. Choose an existing agent, 
 Agent outputs are called "output variables" and are stored in a [context variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#context-variable-types) for easy access. To define the output variable:
 
 1. Give the variable a name.
-2. Select a data type. 
+2. (optional) Add additional context for the agent to reference. This can include any Liquid that wasn't included in the agent's instructions.
 
-Agent outputs can be saved as strings, numbers, booleans, or objects. This makes them flexible for both text personalization and conditional logic in your Canvas. Here are some common uses for each type:
+Note that the output variable's data type is set from the [Agent Console]({{site.baseurl}}/user_guide/brazeai/agents). Agent outputs can be saved as strings, numbers, booleans, or objects. This makes them flexible for both text personalization and conditional logic in your Canvas. Here are some common uses for each type:
 
 | Data type | Common uses |
 | --- | --- |
@@ -55,13 +55,13 @@ Agent outputs can be saved as strings, numbers, booleans, or objects. This makes
 | Object | Leverage one or more of the above data types with a single LLM call in a predictable data structure |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-When defined, you can use an output variable throughout the Canvas by using the same template syntax as you would with a context variable. Either use the **Context Variable** segment filter, or template agent responses directly using Liquid: {% raw %}`{{context.${response_variable_name}}}` {% endraw %}.
+You can use an output variable throughout the Canvas by using the same template syntax as you would with a context variable. Either use the **Context Variable** segment filter, or template agent responses directly using Liquid: {% raw %}`{{context.${response_variable_name}}}` {% endraw %}.
 
 To use a specific property from an object output variable, use dot notation to access that property using Liquid: {% raw %}`{{context.${response_variable_name}.field_name}}`{% endraw %}
 
 ![Agent step for Body HTML Writer with an object data type output for the variable "agent_output".]({% image_buster /assets/img/ai_agent/test_agent_step.png %}){: style="max-width:80%;"}
 
-Use the Liquid syntax patterns shown above to reference particular fields from the agent output in future Canvas steps.
+Use the Liquid syntax patterns to reference particular fields from the agent output in future Canvas steps.
 
 ### Step 4: Decide what context to provide the agent  
 

@@ -8,11 +8,7 @@ page_order: 2
 
 # Deploy custom agents
 
-> Learn how to put custom agents to use in Canvas steps or catalog fields after you create them. For an introduction, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/). 
-
-{% alert important %}
-Braze Agents are currently in beta. For help getting started, contact your customer success manager.
-{% endalert %}
+> Learn how to put custom agents to use in Canvas steps or catalog fields after you create them. For an introduction, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/).
 
 ## Agent usage
 
@@ -79,7 +75,7 @@ Circular references in catalogs aren't supported, meaning the following scenario
 ![The option to select "Apply AI agent" for a catalog field.]({% image_buster /assets/img/ai_agent/edit_agent_column.png %}){: style="max-width:80%;"}
 
 {% alert note %}
-During the beta period, catalog agents are limited to processing input values up to 25 KB per row.
+Catalog agents are limited to processing input values up to 25 KB per row.
 {% endalert %}
 
 #### Define response fields

@@ -10,10 +10,6 @@ alias: /creating-agents/
 
 > Learn how to create custom agents, what to prepare before you start, and how to put them to work across messaging, decisioning, and data management. For more general information, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents).
 
-{% alert important %}
-Braze Agents are currently in beta. For help getting started, contact your customer success manager.
-{% endalert %}
-
 ## Prerequisites
 
 Before you start, you'll need the following:
@@ -40,28 +36,36 @@ The following use cases showcase a few ways to leverage custom agents.
 
 ## Create an agent
 
-### Step 1: Set up details
+### Step 1: Choose an agent type
 
 To create your custom agent:
 
 1. Go to **Agent Console** > **Agent Management** in the Braze dashboard.  
 2. Select **Create agent**.
-3. Enter a name and description to help your team understand its purpose.
-4. (optional) Add tags to filter your agent.
-5. Select the interaction site, which is the location where the agent is deployed. Note that the interaction site can't be updated after an agent is created.
-6. Choose the [model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) your agent will use.
+3. Choose to create a Canvas agent or catalog agent.
 
-![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:85%;"}
+### Step 2: Set up details
 
-### Step 2: Write the instructions
+Next, set up the details for your agent:
 
-Give the agent instructions. Refer to the [Agents reference]({{site.baseurl}}/user_guide/brazeai/agents/reference/) for guidance.
+1. Enter a name and description to help your team understand its purpose.
+2. (optional) Add tags to filter your agent.
+3. Choose the [model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) your agent will use.
+4. Select the model's thinking level. This ranges from minimal, low, medium, and high. We recommend selecting **Minimal** and testing your agent's responses and adjusting this as needed.
+
+![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
+
+### Step 3: Write the instructions
+
+Give the agent instructions. We recommend including a default as a catch-all response if the agent receives a response that can't be parsed. This error handling allows the agent to inform you of an unknown outcome variable. For example, rather than asking the agent for only "positive" or "negative" sentiment values, ask it to return "unsure" if it can't decide.
+
+Refer to the [Writing instructions]({{site.baseurl}}/user_guide/brazeai/agents/reference/#writing-instructions) for best practices and [Examples]({{site.baseurl}}/user_guide/brazeai/agents/reference/#examples) for inspiration on how to prompt your agent.
 
 {% alert tip %}
 You can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes.
 {% endalert %}
 
-#### Step 2.1: Add context
+#### Step 3.1: Add context
 
 Select **Add context** to choose what your agent can reference. This includes:
 
@@ -70,13 +74,13 @@ Select **Add context** to choose what your agent can reference. This includes:
 - [Brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
 - [All Canvas Context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analyze all Canvas Context variables for a user when this agent is invoked, including any that are not referenced in the **Instructions** section.
 
-#### Step 2.2: Add optional settings
+#### Step 3.2: Add optional settings
 
 In the **Optional settings**, you can adjust the [temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) of the agent-generated copy. A higher temperature allows the agent to use the information provided to be more creative.
 
-You can also set the daily execution limit for your agent. By default, this value is set to 50,000, but can be raised to 100,000. If you're interested in increasing the limit above 100,000, contact your customer success manager to learn more.
+You can also set the daily execution limit for your agent. By default, this value is set to 250,000, but can be raised to 1,000,000. If you're interested in increasing the limit above 1,000,000, contact your customer success manager to learn more.
 
-### Step 3: Select the output
+### Step 4: Select the output
 
 In the **Output** section, you can organize and define the agent's output by basic schemas or advanced schemas.
 
@@ -84,7 +88,7 @@ In the **Output** section, you can organize and define the agent's output by bas
 
 Basic schemas are a simple output that an agent returns. This can be a string, a number, a boolean, an array of strings, or array of numbers.
 
-Let's say you want to collect user sentiment scores from a simple feedback survey to determine how satisfied your customers are after receiving a product. You can select **Number** as a basic schema to structure the output format.
+For example, if you want to collect user sentiment scores from a simple feedback survey to determine how satisfied your customers are after receiving a product, you can select **Number** as a basic schema to structure the output format.
 
 {% alert important %}
 Arrays are only available for Canvas agents, not catalog agents.
@@ -102,7 +106,7 @@ Advanced schema options include manually structuring fields or using JSON.
 {% tabs %}
 {% tab Fields %}
 
-Let's say you want to format responses to a simple feedback survey to determine how likely respondents are to recommend your restaurant's newest ice cream flavor. You can set up the following fields to structure the output format:
+If you want to format responses to a simple feedback survey to determine how likely respondents are to recommend your restaurant's newest ice cream flavor, you can set up the following fields to structure the output format:
 
 | Field name | Value
 | --- | --- |
@@ -116,7 +120,7 @@ Let's say you want to format responses to a simple feedback survey to determine 
 {% endtab %}
 {% tab JSON schema %}
 
-Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You could select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
+If you want to collect user feedback for their most recent dining experience at your restaurant chain, you can select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
 
 ```json
 {
@@ -139,7 +143,7 @@ Let's say you want to collect user feedback for their most recent dining experie
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Test and create the agent
+### Step 5: Test and create the agent
 
 The **Preview** pane is an instance of the agent that shows up as a side-by-side panel within the configuration experience. You can use it to test the agent while you're creating or making updates to it to experience it in a similar way to end users. This step helps you confirm that it’s behaving the way you expect, and gives you a chance to fine-tune before it goes live.
 
@@ -157,11 +161,11 @@ Review the output with a critical eye. Consider the following questions:
 
 If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
 
-### Step 5: Use and monitor your agent
+### Step 6: Use and monitor your agent
 
 Your agent is now ready to use! For details, refer to [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
 
-In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location.
+In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location. You can also monitor daily invocation limit errors at the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log).
 
 ![Logs for an agent Story Teller, which include when and where the agent has been called.]({% image_buster /assets/img/ai_agent/agent_activity_logs.png %})
 

@@ -9,10 +9,6 @@ description: "Braze Agents can generate content, make intelligent decisions, and
 
 > Braze Agents are AI-powered helpers you can create inside Braze. Agents can generate content, make intelligent decisions, and enrich your data so you can deliver more personalized customer experiences.
 
-{% alert important %}
-Braze Agents are currently in beta. For help getting started, contact your customer success manager.
-{% endalert %}
-
 ## Why use Braze Agents?
 
 Braze Agents help your team deliver smarter, more personalized experiences—without adding extra work. They act as autonomous agents that don’t just respond to prompts, but understand context, make decisions, and take action toward a goal.
@@ -57,9 +53,9 @@ Agents are configured with instructions (system prompts) that define how they be
 
 ## Limitations
 
-During the beta period, the following limitations apply:
+The following limitations apply:
 
-- Each agent has a default daily execution limit of 50,000 runs, which can be increased up to a maximum of 100,000 runs per day.
+- Each agent has a default daily execution limit of 250,000 runs, which can be increased up to a maximum of 1,000,000 runs per day. Contact your customer success manager if you're interested in increasing this limit.
 - By default, each run must complete within 15 seconds. After 15 seconds, the agent returns a `null` response where it is used.
     - If your agents consistently time out, contact your Braze account manager to increase this limit.
 - Input data is limited to 25 KB per request. Longer inputs are truncated.
@@ -70,15 +66,3 @@ Now that you know about Braze Agents, you’re ready for the next steps:
 
 - [Create custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)
 - [Deploy custom agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)
-
-## Model Providers as Sub-processors or Third Party Providers
-
-Where Customer uses an integration with models provided by Braze through the Braze Services (“Braze-provided LLM”), the providers of such Braze-provided LLMs will be acting as a Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. 
-
-If Customer chooses to bring their own API key to integrate with Braze AI functionality, the provider of Customer’s own LLM subscription will be considered a Third Party Provider, as defined in the contract between Customer and Braze. 
-
-### How is my data used and sent to Braze-provided LLMs?
-
-In order to generate AI output through Braze AI features that Braze identifies as leveraging Braze-provided LLMs (“Output”), Braze will send your system prompt or any other input, as applicable (“Input”) to Braze-provided LLM. Data sent to the applicable Braze-provided LLM is not used to train or improve the Braze-provided LLM. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.
-
-The Braze-provided LLM for Braze Agents, identified as “Auto”, uses Google Gemini models. Google retains Inputs and Outputs submitted through Braze for 55 days, after which the data is deleted.
