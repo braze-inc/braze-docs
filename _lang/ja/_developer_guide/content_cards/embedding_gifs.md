@@ -1,6 +1,6 @@
 ---
-nav_title: GIF の埋め込み
-article_title: コンテンツカードへのGIF の埋め込み
+nav_title: GIFを埋め込む
+article_title: コンテンツカードにGIFを埋め込む
 page_order: 5
 description: "Braze SDK を使用してGIF をコンテンツカードに埋め込む方法について説明します。"
 channel:
@@ -12,7 +12,7 @@ platform:
   - FireOS
 ---
 
-# コンテンツカードへのGIF の埋め込み
+# コンテンツカードにGIFを埋め込む
 
 > Braze SDK を使用してGIF をコンテンツカードに埋め込む方法について説明します。
 
@@ -21,15 +21,15 @@ platform:
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+GIF のサポートは、Web SDK 統合にデフォルトで含まれています。
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/_global/gifs.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/gifs.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-現時点では、Web Braze SDK ではコンテンツカードGIF はサポートされていません。
 {% endsdktab %}
 {% endsdktabs %}

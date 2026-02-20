@@ -15,7 +15,7 @@ toc_headers: h2
 
 Eine Variante, die anscheinend besser abschneidet als andere, wird an mehr Nutzer gesendet, während Varianten, die weniger gut abschneiden, an weniger Nutzer gesendet werden. Jede Anpassung erfolgt mithilfe eines [statistischen Algorithmus](https://en.wikipedia.org/wiki/Multi-armed_bandit), der sicherstellt, dass Braze echte Performance-Unterschiede ausgleicht und nicht nur zufällig ist.
 
-![A/B-Tests Abschnitt einer Kampagne mit aktivierter intelligenter Auswahl.]({% image_buster /assets/img/intelligent_selection1.png %})
+![Abschnitt A/B-Tests einer Kampagne mit aktivierter Intelligenter Auswahl.]({% image_buster /assets/img/intelligent_selection1.png %})
 
 Intelligente Auswahl wird:
 - Schauen Sie sich immer wieder die Performance-Daten an und verlagern Sie den Kampagnen-Traffic allmählich auf die Winning-Varianten.
@@ -60,7 +60,7 @@ Die intelligente Auswahl kann nicht in Kampagnen mit einer Wiederzulassungsfrist
 {% tab Canvas %}
 Fügen Sie mindestens ein Konversions-Event und zwei Varianten zu Ihrem Canvas hinzu. Wählen Sie dann im Schritt Erstellen eine der prozentualen Varianten aus. 
 
-![Ein Canvas mit zwei Varianten, die jeweils auf eine 50%ige Variantenverteilung eingestellt sind und die Aktivierung der intelligenten Auswahl zulassen.]({% image_buster /assets/img/intelligent_selection.png %})
+![Ein Canvas mit zwei Varianten, die jeweils auf 50% Variantenverteilung eingestellt sind und die Aktivierung der Intelligenten Auswahl ermöglichen.]({% image_buster /assets/img/intelligent_selection.png %})
 
 Damit können Sie die Variantenverteilung bearbeiten und die Intelligente Auswahl einschalten. 
 

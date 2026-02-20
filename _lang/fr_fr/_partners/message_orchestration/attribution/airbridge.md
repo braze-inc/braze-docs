@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Airbridge
 
-> [Airbridge](https://www.airbridge.io/) est une plateforme de mesure mobile unifiée qui vous aide à découvrir les véritables sources de croissance grâce à l'attribution mobile, à la mesure incrémentielle et à la modélisation du mix marketing.
+> [Airbridge](https://www.airbridge.io/) est une plateforme de mesure mobile unifiée permettant de découvrir les sources de croissance grâce à l'attribution mobile, la mesure incrémentale et la modélisation du marketing mix.
 
 _Cette intégration est maintenue par Airbridge._
 
@@ -131,7 +131,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {% endtab %}
 {% endtabs %}
 
-#### React native
+#### React Native
 
 {% tabs %}
 {% tab TypeScript %}
@@ -194,7 +194,7 @@ AirbridgeUnity.StartTracking()
 
 Dans Braze, accédez à **Intégrations de partenaires** > **Partenaires technologiques** et sélectionnez **Airbridge**.
 
-Vous y trouverez l'endpoint REST et générerez votre clé d'importation des données Braze. Après la génération de la clé, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l'endpoint REST sont utilisés à l'étape suivante lors de la configuration d'un système automatisé de communication dans le tableau de bord d'Airbridge.
+Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l'endpoint REST sont utilisés à l'étape suivante lors de la configuration d'un système automatisé de communication dans le tableau de bord d'Airbridge.
 
 ![]({% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %})
 
@@ -202,7 +202,7 @@ Vous y trouverez l'endpoint REST et générerez votre clé d'importation des don
 
 1. Dans Airbridge, accédez à **Intégrations > Intégrations tierces** dans la barre latérale gauche et sélectionnez **Braze**.
 2. Indiquez la clé d'importation des données et le point de terminaison REST que vous avez trouvés dans le tableau de bord de Braze.
-3. Sélectionnez le type d'événement (Événement d'installation ou Événement d'installation et d'ouverture de lien profond) et enregistrer.
+3. Sélectionnez le type d'événement (Install Event ou Install & Deeplink Open Event) et enregistrez.
 
 {% alert note %}
 Les données d'attribution pour les campagnes qui ont conduit à des événements d'ouverture de lien profond sont mises à jour au niveau de l'appareil. Par exemple, si deux utilisateurs utilisent un seul appareil et qu'un utilisateur effectue un événement d'ouverture de lien profond, les données d'attribution de cet événement sont également reflétées dans les données de l'autre utilisateur.
@@ -210,11 +210,11 @@ Les données d'attribution pour les campagnes qui ont conduit à des événement
 
 Pour des instructions plus détaillées, visitez [Airbridge](https://help.airbridge.io/en/guides/braze).
 
-### Étape 4 : Confirmer l'intégration
+### Étape 4 : Confirmez l'intégration
 
-Une fois que Braze reçoit les données d'attribution d'Airbridge, l'indicateur d’état de la connexion sur la page des partenaires technologiques d'Airbridge dans Braze passera de "Non connecté" à "Connecté". Un horodatage de la dernière requête réussie sera également inclus.
+Une fois que Braze a reçu les données d'attribution d'Airbridge, l'indicateur de connexion d'état sur la page des partenaires technologiques d'Airbridge dans Braze passe de "Non connecté" à "Connecté" et inclut un horodatage de la dernière demande réussie.
 
-Notez que cela ne se produira pas tant que nous n'aurons pas reçu de données concernant une installation attribuée. Les installations organiques, qui doivent être exclues du système de communication automatisé Airbridge, sont ignorées par notre API et ne sont pas prises en compte lors de la détermination de l'établissement d'une connexion réussie.
+Ce statut ne change que lorsque Braze reçoit des données sur une attribution d'installation. Braze ignore les installations organiques (il les exclut du postback d'Airbridge) et ne les comptabilise pas lorsqu'il détermine si la connexion est réussie.
 
 ## Champs de données disponibles
 
@@ -239,13 +239,13 @@ Les données d'attribution pour les campagnes Meta Business ne sont pas disponib
 
 ## URLs de suivi des clics Airbridge dans Braze (optionnel)
 
-L'utilisation de liens de suivi des clics dans vos campagnes Braze vous permettra de voir facilement quelles campagnes génèrent des installations d'applications et du réengagement. En conséquence, vous serez en mesure de mesurer plus efficacement vos efforts marketing et de prendre des décisions basées sur les données concernant l'endroit où investir plus de ressources pour un ROI maximal.
+L'utilisation de liens de suivi des clics dans vos campagnes Braze montre quelles campagnes favorisent les installations d'apps et le réengagement. Utilisez les résultats pour mesurer les performances du marketing et décider où investir les ressources pour un meilleur ROI.
 
 Pour commencer avec les liens de suivi des clics Airbridge, visitez [Airbridge](https://help.airbridge.io/en/guides/creating-a-new-tracking-link). Après avoir terminé la configuration, vous pouvez directement insérer les liens de suivi des clics Airbridge dans vos campagnes Braze. Airbridge utilisera ensuite ses [méthodologies d'attribution probabiliste](https://help.airbridge.io/en/guides/identity-matching) pour attribuer l'utilisateur qui a cliqué sur le lien. Nous recommandons d'ajouter vos liens de suivi Airbridge avec un identifiant d'appareil pour améliorer la précision des attributions de vos campagnes Braze. Cela attribuera de manière déterministe l'utilisateur qui a cliqué sur le lien.
 
 {% tabs %}
 {% tab Android %}
-Pour Android, Braze permet aux clients de s'abonner à la [collecte de l'ID publicitaire de Google (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). Le GAID est également collecté nativement via l'intégration du SDK Airbridge. Vous pouvez inclure le GAID dans vos liens de suivi de clics Airbridge en utilisant la logique Liquid suivante :
+Pour Android, Braze permet aux clients de s'abonner à la [collecte d'identifiants publicitaires de Google (GAID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)). Le GAID est également collecté nativement via l'intégration du SDK Airbridge. Vous pouvez inclure le GAID dans vos liens de suivi de clics Airbridge en utilisant la logique Liquid suivante :
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}

@@ -19,14 +19,14 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
   "app_id": (required, string) see App Identifier,
   "subscription_group_id": (required, string) the ID of your subscription group,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
-  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message),
+  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message | flow_response_message),
   "message": (required, object) The message object that must include the required fields based on the selected `message_type`. Below are the specific message structures for each type. Refer to the relevant message type for the required fields and their format.
 }
 ```
 
 - [アプリ識別子]({{site.baseurl}}/api/identifier_types/)
 
-### メッセージの種類
+### メッセージタイプ
 
 #### template_message
 
@@ -37,13 +37,21 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
   "header_variables": (optional, header variables object) an object to specify header variable values for specified template_name, required if the header has variables; see object specification below,
   "body_variables": (optional, body variable object) an object to specify body variable values for specified template_name, required if the body has variables; see object specification below,
   "button_variables": (optional, button variables object) an object to specify button variable values for specified template_name, required if buttons have variables; see object specification below,
-  "header_image_uri" :(optional, string) URI to the header image, if the header is of type IMAGE in specified template_name
+  "header_image_uri": (optional, string) URI to the header image, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API.
 }
 ```
+
+{% alert important %}
+**メディア送信の制限:**メディア送信(ドキュメント、動画、および他のメディアタイプ) は、`messages/send` API ではサポートされていません。API を介して送信されるテンプレート メッセージでは、TEXT およびIMAGE ヘッダータイプのみがサポートされます。WhatsApp テンプレートがドキュメント、ビデオ、または他のメディアタイプのヘッダーを使用している場合、`messages/send` API を使用して送信することはできません。[Campaigns Triggered API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)またはBraze ダッシュボードを使用して、メディアヘッダーでテンプレートsを送信します。
+{% endalert %}
 
 ##### ヘッダー変数オブジェクト
 
 `header_variables` オブジェクトを使用すると、WhatsApp テンプレートのヘッダー変数の値を指定することができる。各キーは、指定された値で置換するWhatsAppテンプレート変数のインデックス（ゼロインデックス）である。
+
+{% alert note %}
+**ヘッダタイプの要件:**`header_variables` は、TEXT 型のヘッダー を持つテンプレートs でのみ使用できます。IMAGE ヘッダー s の場合は、代わりに`header_image_uri` を使用します。`messages/send` API では、ドキュメント、ビデオなどのメディアヘッダータイプはサポートされていません。
+{% endalert %}
 
 ```json
 {
@@ -209,9 +217,9 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
 
 ##### 制約
 
-- **list_sections**: 少なくとも 1 つのセクションが必要です。
-- **list_rows**: すべてのセクションで最大 10 行まで含めることができます。
-- **row_description**: 各列のオプション。
+- **list_sections**:少なくとも 1 つのセクションが必要です。
+- **list_rows**:すべてのセクションで最大 10 行まで含めることができます。
+- **row_description**:各列のオプション。
 
 ##### 例
 
@@ -249,5 +257,49 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
       }
     ]
   }
+}
+```
+
+#### flow_response_message
+
+`flow_response_message` 型では、フローベースのメッセージをWhatsAppで送信できます。このメッセージタイプには、受信者が完了できる対話式フローが含まれています。
+
+```json
+{
+  "header_text": (optional, string) the header text of the message to send,
+  "body": (required, string) the body of the message to send,
+  "footer": (optional, string) the footer of the message to send,
+  "flow_button": (required, object) the flow button object that contains:
+    "caption": (required, string) the text that will appear on the flow button,
+    "flow_id": (required, string) the unique identifier of the WhatsApp Flow,
+  "generate_custom_attribute": (optional, boolean) whether to save flow response on the user profile and generate a custom attribute upon responding to this flow message
+}
+```
+
+##### フローボタンオブジェクト
+
+```json
+{
+  "caption": (required, string) The text displayed on the button,
+  "flow_id": (required, string) The ID of the flow
+}
+```
+
+##### 制約
+
+- **flow_button**:caption と`flow_id` の両方を含める必要があります。
+- **キャプション**:最大20 文字。
+- **flow_id**:発行済みの有効なフローID である必要があります。
+
+##### 例
+
+```json
+{
+  "body": "Please complete your order details",
+  "flow_button": {
+    "caption": "Start Order",
+    "flow_id": "594425479261596"
+  },
+  "generate_custom_attribute": true
 }
 ```

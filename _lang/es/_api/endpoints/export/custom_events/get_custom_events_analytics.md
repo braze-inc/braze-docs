@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/events/data_seri
 ## Respuesta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -66,7 +64,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Códigos de respuesta de error fatal {#fatal-export}
 
-Para conocer los códigos de estado y los mensajes de error asociados que se devolverán si tu solicitud encuentra un error fatal, consulta [Errores fatales y respuestas.]({{site.baseurl}}/api/errors/#fatal-errors)
+Para conocer los códigos de estado y los mensajes de error asociados que se devolverán si tu solicitud encuentra un error fatal, consulta [Errores fatales & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% alert tip %}
 Para obtener ayuda con las exportaciones CSV y API, visita [Solución de problemas de exportación]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).

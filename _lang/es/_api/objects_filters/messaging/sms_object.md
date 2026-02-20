@@ -19,9 +19,9 @@ description: "Este artículo de referencia explica los distintos componentes del
     "app_id": (required, string) see App Identifier,
     "media_items" :(optional, array) use this field to pass an image URL in an MMS to send an image with your message,
     "link_shortening_enabled": (optional, boolean) use this field to turn on link shortening and campaign-level click tracking,
-    "user_click_tracking_enabled": (optional, boolean) if link_shortening_enabled is true, use this field to turn on link shortening, and campaign-level and user-level click tracking.     
+    "user_click_tracking_enabled": (optional, boolean) if link_shortening_enabled is true, use this field to turn on link shortening, and campaign-level and user-level click tracking.
 }
 ```
 
 - [Identificador de la aplicación]({{site.baseurl}}/api/identifier_types/)
-  - Cualquier `app_id` válido de una aplicación configurada en tu espacio de trabajo funcionará para todos los usuarios de tu espacio de trabajo, independientemente de si el usuario tiene la aplicación específica en su perfil o no.
+  - Cualquier `app_id` válido de una aplicación configurada en tu espacio de trabajo funciona para todos los usuarios de tu espacio de trabajo, independientemente de si el usuario tiene la aplicación específica en su perfil o no.

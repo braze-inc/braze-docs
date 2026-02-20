@@ -27,9 +27,9 @@ description: "この記事では、コンテンツブロック情報を見るBra
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
-| `content_block_id`  | 必須 | 文字列 | コンテンツブロックの識別子。<br><br>これは、API コールでコンテンツブロックの情報をリストアップするか、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)のページに行き、一番下までスクロールしてコンテンツブロックの API 識別子を検索することで見つけることができます。|
+| `content_block_id`  | 必須かどうか | 文字列 | コンテンツブロックの識別子。<br><br>これは、API コールでコンテンツブロックの情報をリストアップするか、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)のページに行き、一番下までスクロールしてコンテンツブロックの API 識別子を検索することで見つけることができます。|
 | `include_inclusion_data`  | オプション | ブール値 | `true` に設定された場合、API はこのコンテンツブロックが含まれるキャンペーンとキャンバスのメッセージバリエーション API 識別子を返し、以降の呼び出しで使用できるようにします。 結果は、アーカイブまたは削除されたキャンペーンやキャンバスを除外する。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -44,8 +44,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/i
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": (string) the Content Block identifier,
   "name": (string) the name of the Content Block,

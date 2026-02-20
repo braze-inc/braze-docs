@@ -250,7 +250,7 @@ Mit dem Feature [Datentransformation]({{site.baseurl}}/data_transformation) von 
 ## Anwendungsfälle
 
 {% tabs %}
-{% tab Eine E-Mail triggern %}
+{% tab Trigger an email %}
 
 **Triggern Sie eine E-Mail von Braze basierend auf einer Anrufdisposition in Regal**
 
@@ -348,7 +348,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Update der Attribute des Profils %}
+{% tab Update profile attributes %}
 
 **Update der Profil Attribute in Braze basierend auf `contact.attribute.edited` Ereignissen von Regal**
 
@@ -359,7 +359,7 @@ Nachfolgend sehen Sie ein Beispiel für ein `contact.attribute.edited` Ereignis 
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.attribute.edited",
   "properties": {
@@ -412,7 +412,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Halten Sie Ihre Experimente auf dem Laufenden %}
+{% tab Keep your experiments in sync %}
 
 **Halten Sie Ihre Experimente in Braze und Regal mit Hilfe von `contact.experiment.assigned` Ereignissen synchronisiert.**
 
@@ -423,7 +423,7 @@ Nachfolgend sehen Sie ein Beispiel für ein `contact.experiment.assigned` Ereign
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.experiment.assigned",
   "properties": {
@@ -475,7 +475,7 @@ return brazecall;
 
 ```
 {% endtab %}
-{% tab Einen Kontakt abmelden %}
+{% tab Unsubscribe a contact %}
 
 **Abmelden eines Kontakts in Braze basierend auf einer `contact.unsubscribed` von Regal**
 

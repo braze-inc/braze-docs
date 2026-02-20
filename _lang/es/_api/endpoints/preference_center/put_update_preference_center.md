@@ -1,5 +1,5 @@
 ---
-nav_title: "COLOCAR: Actualizar el Centro de Preferencias"
+nav_title: "COLOCAR: Actualizar el centro de preferencias"
 article_title: "COLOCAR: Actualizar el Centro de Preferencias"
 search_tag: Endpoint
 page_order: 5
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## Parámetros de la solicitud

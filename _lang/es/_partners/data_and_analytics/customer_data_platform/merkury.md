@@ -15,7 +15,7 @@ _Esta integración está mantenida por Merkury._
 
 ## Sobre la integración
 
-La integración de Braze y Merkury permite aprovechar `MerkuryID` para aumentar las tasas de reconocimiento de los visitantes del sitio para los clientes de Braze. Al reconocer a los visitantes que son suscriptores de correo electrónico de la marca, Merkury actualizará el perfil de Braze para incluir la dirección de correo electrónico del suscriptor. La mayor capacidad de reconocimiento de `MerkuryID` mejora el compromiso y las oportunidades de personalización y aumenta inmediatamente las cantidades de envíos de correo electrónico por abandono del sitio y los ingresos asociados. 
+La integración de Braze y Merkury permite aprovechar `MerkuryID` para aumentar las tasas de reconocimiento de los visitantes del sitio para los clientes de Braze. Al reconocer a los visitantes que son suscriptores de correo electrónico de la marca, Merkury actualiza el perfil Braze para incluir la dirección de correo electrónico del suscriptor. La mayor capacidad de reconocimiento de `MerkuryID` mejora el compromiso y las oportunidades de personalización y aumenta inmediatamente las cantidades de envíos de correo electrónico por abandono del sitio y los ingresos asociados. 
 
 ## Requisitos previos
 
@@ -29,7 +29,7 @@ La integración de Braze y Merkury permite aprovechar `MerkuryID` para aumentar 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
-Las solicitudes del conector de identidad Merkury a Braze operan dentro de las especificaciones de límite de velocidad de Braze API. Ponte en contacto con Braze o con tu director de cuentas de Merkle si tienes alguna pregunta.<br><br>Merkury enviará al menos una solicitud al final de una sesión cualificada.
+Las solicitudes del conector de identidad Merkury a Braze operan dentro de las especificaciones de límite de velocidad de Braze API. Ponte en contacto con Braze o con tu director de cuentas de Merkle si tienes alguna pregunta.<br><br>Merkury envía al menos una petición al final de una sesión cualificada.
 {% endalert %}
 
 ## Integración en paralelo de SDK
@@ -42,11 +42,11 @@ Debes tener el [SDK de Braze Web]({{site.baseurl}}/developer_guide/platform_inte
 
 ### Paso 2: Despliega la etiqueta Merkle de Merkury
 
-Despliega la etiqueta Merkury en tu sitio web. Esto hará que el conector de identidad Merkury esté disponible en tu sitio web. El director de cuentas de Merkle te proporcionará una guía detallada con instrucciones.
+Despliega la etiqueta Merkury en tu sitio web para que el conector de identidad Merkury esté disponible en tu sitio web. Tu director de cuentas de Merkle te proporcionará una guía detallada con instrucciones.
 
 ### Paso 3: Crear atributos personalizados
 
-Los siguientes campos serán rellenados por el conector de identidad Merkury y necesitan ser creados en Braze como [atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes).
+El conector de identidad Merkury rellena los siguientes campos, que debes crear en Braze como [atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes).
 
 | Nombre del atributo | Tipo de datos | Descripción |
 | --- | --- | --- |

@@ -1,11 +1,11 @@
 ---
 nav_title: AI recommendations
-article_title: Creating AI Item Recommendations
+article_title: Create AI Item Recommendations
 description: "This reference article covers how to create an AI item recommendation for items in a catalog."
 page_order: 1
 ---
 
-# Creating AI item recommendations
+# Create AI item recommendations
 
 > Learn how to create an AI recommendation engine from items in your catalog.
 
@@ -94,6 +94,10 @@ You can optimize for:
 If you choose **Custom Event**, select your event from the list.
 
 ![The "Completed Purchase" custom event selected as how events are currently tracked.]({% image_buster /assets/img/item_recs_3.png %})
+
+{% alert note %}
+Custom events must have sufficient data before they appear in the event list. If your custom event doesn’t appear, it may be because the Braze backend hasn’t yet processed it or it lacks enough data for model training. AI recommendations rely on historical data to generate insights, so newly created or rarely triggered events won’t be available until more data is collected.
+{% endalert %}
 
 ### Step 5: Choose the corresponding property name {#property-name}
 

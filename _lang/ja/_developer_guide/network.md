@@ -2,7 +2,7 @@
 nav_title: ネットワーク設定
 article_title: Braze SDKのネットワーク設定
 page_order: 4.0
-description: "Braze SDKのネットワーク設定の学習。"
+description: "Braze SDK のネットワーク設定を設定する方法について説明します。"
 platform: 
   - Android
   - FireOS
@@ -11,7 +11,7 @@ platform:
 
 # ネットワーク設定
 
-> Braze SDKのネットワーク設定の学習。
+> Braze SDK のネットワーク設定を設定する方法について説明します。
 
 {% sdktabs %}
 {% sdktab android %}

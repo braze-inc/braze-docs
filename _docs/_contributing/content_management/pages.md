@@ -1,12 +1,12 @@
 ---
 nav_title: Pages
-article_title: Managing Pages
+article_title: Manage pages
 description: "Learn how to create, modify, and remove pages on Braze Docs."
 page_order: 0
 noindex: true
 ---
 
-# Managing pages
+# Manage pages
 
 > Learn how to create, modify, and remove pages on Braze Docs. To create or reorder a section instead, see [Sections]({{site.baseurl}}/contributing/content_management/sections/). For general information about pages, see [About content management]({{site.baseurl}}/contributing/content_management/#pages).
 

@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Front の統合により、各プラットフォームから Braze Data Transformation および Webhook を活用して双方向の会話型 SMS パイプラインを設定できます。
 
-Front からの受信 Webhook には、ライブエージェントが送信したメッセージを含むペイロードが含まれています。リクエストは、Braze のエンドポイントで受け入れられる前に再フォーマットする必要があります。Front Data Transformation テンプレートによりペイロードが再フォーマットされ、カスタムイベントが、イベントプロパティとして渡されるメッセージ本文とともに **Outbound SMS Sent** というタイトルのユーザープロファイルに書き込まれます。
+Front からの受信 Webhook には、ライブエージェントが送信したメッセージを含むペイロードが含まれています。リクエストは、Braze のエンドポイントで受け入れられるようにするため、事前に再フォーマットしておく必要があります。Front Data Transformation テンプレートによりペイロードが再フォーマットされ、カスタムイベントが、イベントプロパティとして渡されるメッセージ本文とともに **Outbound SMS Sent** というタイトルのユーザープロファイルに書き込まれます。
 
 Braze で新し変換を設定する前に、[データ変換]({{site.baseurl}}/user_guide/data/data_transformation/overview/)ドキュメントの各ティアのサポートマトリックスを確認することをお勧めします。私たちの無料およびプロのティアは、月ごとのアクティブな変換と受信リクエストの数が異なります。現在のプランがあなたのユースケースをサポートできるか確認してください。
 
@@ -96,13 +96,13 @@ Braze で新し変換を設定する前に、[データ変換]({{site.baseurl}}/
 
 メッセージは次のようになります。
 
-![Liquidコードを使用した例のメッセージです。]({% image_buster /assets/img/front/sms_to_braze.png %}){: style="max-width:80%;"}
+![Liquidコードを使ったメッセージの例。]({% image_buster /assets/img/front/sms_to_braze.png %}){: style="max-width:80%;"}
 
 #### 2.2 配信をスケジュールする
 
 配信タイプには**アクションベースの配信**を選択し、カスタムイベントトリガーには**送信済みSMS**を選択します。
 
-![[Schedule Delivery] ページ。]({% image_buster /assets/img/front/custom_event_trigger.png %})
+![スケジュール配信」ページ。]({% image_buster /assets/img/front/custom_event_trigger.png %})
 
 {% alert note %}
 このカスタムイベントは、ユーザーのプロファイルに書き込むデータ変換です。エージェントメッセージはこのイベントのイベントプロパティとして保存されます。
@@ -110,21 +110,21 @@ Braze で新し変換を設定する前に、[データ変換]({{site.baseurl}}/
 
 最後に、[**配信コントロール**] で再適格性を有効にします。
 
-![[配信コントロール] で有効になっている再適格性。]({% image_buster /assets/img/front/braze_reeligibility.png %})
+![[配信コントロール] で再適格性が有効になっている。]({% image_buster /assets/img/front/braze_reeligibility.png %})
 
-### ステップ3:カスタムチャネルを作成する
+### ステップ 3:カスタムチャネルを作成する
 
 Frontのダッシュボードで、**設定** > **チャネル** > **チャネルを追加** に移動し、**カスタムチャネル** を選択して、新しいBrazeチャネルの名前を入力します。
 
-![Front ダッシュボードの Braze 用カスタムチャネル]({% image_buster /assets/img/front/front_custom_channel.png %})
+![フロントダッシュボードのBraze用カスタムチャネル。]({% image_buster /assets/img/front/front_custom_channel.png %})
 
-### ステップ4:設定を構成する
+### ステップ 4: 設定を構成する
 
 アウトバウンド API エンドポイントフィールドに、[以前に作成した](#step-1-set-up-a-data-transformation-in-braze) Data Transformation Webhook URL を入力します。すべてのライブエージェントからの新しいBrazeチャネルの送信メッセージはここに送信されます。このチャネルは、SMSメッセージを転送するためのエンドポイントURLも提供します。Brazeはこれを**受信URL**フィールドに転送します。
 
 このURLをメモしておいてください。後で必要になります。
 
-![Frontで新しく作成されたBrazeチャネルのチャネル設定]({% image_buster /assets/img/front/front_custom_channel2.png %}){: style="max-width:65%;"}
+![Frontに新しく作成されたBrazeチャンネルのチャンネル設定。]({% image_buster /assets/img/front/front_custom_channel2.png %}){: style="max-width:65%;"}
 
 ### ステップ 5: インバウンドSMS転送の設定
 
@@ -144,16 +144,16 @@ Brazeのダッシュボードで、**オーディエンス**に移動し、**SMS
 |---|---|
 |キーワードカテゴリ|キーワードカテゴリの名前、例えば`FrontSMS1`。|
 |キーワード|あなたのカスタムキーワード、例えば`TIMETOMOW`。一般的な言葉を避けて、誤ってトリガーされないようにしてください。念頭に置いてください、キーワードは大文字と小文字を区別しないので、`lawn`は`LAWN`と一致します。|
-|返信メッセージ|キーワードが検出されたときに送信されるメッセージ。たとえば「A landscaper will reach out to you shortly」などです。|
+|返信メッセージ|キーワードが検出されたときに送信されるメッセージ。"A landscaper will contact you shortly"（造園業者からまもなく連絡があります）など。|
 {: .reset-td-br-1 .reset-td-br-2 }
 
-![Brazeの例としてのSMSキーワードカテゴリ]({% image_buster /assets/img/front/front_keyword.png %}){: style="max-width:65%;"}
+![BrazeのSMSキーワードカテゴリーの例。]({% image_buster /assets/img/front/front_keyword.png %}){: style="max-width:65%;"}
 
 #### ステップ 5.2:最初のWebhookキャンペーンを作成する
 
 Brazeのダッシュボードで、以前に作成したURL[を使用して最初のWebhookキャンペーンを作成します](#step-3-configure-the-settings-for-your-new-custom-braze-channel)。
 
-![Braze で作成する最初の Webhook キャンペーンの例。]({% image_buster /assets/img/front/sms_to_front.png %}){: style="max-width:65%;"}
+![Brazeで最初に作成すべきWebhookキャンペーンの例。]({% image_buster /assets/img/front/sms_to_front.png %}){: style="max-width:65%;"}
 
 次の内容をリクエストボディに追加してください:
 
@@ -178,33 +178,33 @@ Brazeのダッシュボードで、以前に作成したURL[を使用して最�
 
 設定タブで、`Authorization`、`content-type`、および`accept`のリクエストヘッダーを構成します。
 
-![3つの必須ヘッダーを含むリクエストの例。]({% image_buster /assets/img/front/webhook_settings.png %}){: style="max-width:65%;"}
+![3つの必須ヘッダーを持つリクエスト例。]({% image_buster /assets/img/front/webhook_settings.png %}){: style="max-width:65%;"}
 
 #### ステップ 5.3:最初の配達をスケジュールする
 
 **スケジュール配信**のために、**アクションベースの配信**を選択し、次にトリガータイプとして**SMS受信メッセージの送信**を選択します。また、[以前に設定した](#step-51-create-an-sms-keyword-category) SMS サブスクリプショングループとキーワードカテゴリを追加します。
 
-![最初のWebhookキャンペーンの「スケジュール配信」ページ。]({% image_buster /assets/img/front/front_actionbased_keyword.png %})
+![最初のWebhookキャンペーンの「配信スケジュール」ページ。]({% image_buster /assets/img/front/front_actionbased_keyword.png %})
 
 [**配信コントロール**] で再適格性を有効にします。
 
-![最初の Webhook キャンペーンの [配信コントロール]で再適格性が選択されている。]({% image_buster /assets/img/front/braze_reeligibility.png %})
+![最初の Webhook キャンペーンの [配信コントロール] で再適格性が選択されている。]({% image_buster /assets/img/front/braze_reeligibility.png %})
 
 #### ステップ 5.4:2番目のWebhookキャンペーンを作成する
 
-2番目のWebhookキャンペーンが最初のものと一致するため、[最初のものを複製して名前を変更することができます]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns)。これは今すぐ実行できます。
+2つ目のWebhookキャンペーンは1つ目のキャンペーンと一致するので、[1つ目のキャンペーンを複製し、名前を変更する]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns)ことができる。
 
 #### ステップ 5.5:2 回目の配信をスケジュールする
 
 **スケジュール配信**のために、**アクションベースのトリガー**と**SMSサブスクリプショングループ**を[最初の配信](#step-53-schedule-the-first-delivery)と同じに設定します。しかし、**キーワードカテゴリ**の場合は、**その他**を選択してください。
 
-![2番目のWebhookキャンペーンの「スケジュールされた配信」ページで、「その他」がキーワードカテゴリとして選択されています。]({% image_buster /assets/img/front/front_actionbased_other_keyword.png %})
+![2つ目のWebhookキャンペーンの「スケジュールされた配信」ページ。キーワードカテゴリーとして「その他」が選択されている。]({% image_buster /assets/img/front/front_actionbased_other_keyword.png %})
 
 #### ステップ 5.6:オーディエンスフィルターを追加
 
 これで、Webhook キャンペーンが顧客からのインバウンド SMS応答を転送できるようになりました。ライブチャット用のメッセージのみが転送されるようにSMSの応答をフィルタリングするには、**特定のキャンペーンからの最後に受信したメッセージ**セグメンテーションフィルターを**ターゲットオーディエンスステップ**に追加します。
 
-![特定のキャンペーンから最後に受信したメッセージが選択されたオーディエンスフィルター。]({% image_buster /assets/img/front/front_segment_last_received_message.png %}){: style="max-width:65%;"}
+![特定のキャンペーンから最後に受信したメッセージ」を選択したオーディエンスフィルター。]({% image_buster /assets/img/front/front_segment_last_received_message.png %}){: style="max-width:65%;"}
 
 次に、フィルターを設定します：
 
@@ -221,9 +221,9 @@ Brazeのダッシュボードで、以前に作成したURL[を使用して最�
 - BrazeでのSMSメッセージはメッセージSegmentごとに課金されます。何がセグメントを定義し、どのようにメッセージが分割されるかを理解することは、メッセージの請求方法を理解するうえで重要です。詳細については、当社の[ドキュメント]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/)をご覧ください。
 - エージェントの応答が長いと、請求対象セグメントの消費が増加します。
 
-### データポイントの消費
+### データポイントを記録する
 
-現在、この統合では、ライブエージェントが Front から SMS を送信するたびに、ユーザープロファイルにカスタムイベントを書き込む必要があります。これは数回のメッセージで終わるような短いやり取りに適しているかもしれませんが、会話が長くなるにつれてデータポイントの影響も大きくなります。データポイントは、Braze に記録された各カスタムイベントごとに消費されます。
+現在、この統合では、ライブエージェントが Front から SMS を送信するたびに、ユーザープロファイルにカスタムイベントを書き込む必要があります。これは、2、3メッセージで終わるような素早いやりとりには適しているかもしれないが、会話が長くなればなるほど、データポイントの意味合いも大きくなる。Brazeのデータポイントのニュアンスについてご質問があれば、Brazeアカウントマネージャーがお答えします。
 
 ### SMSメッセージにリンクを含める
 

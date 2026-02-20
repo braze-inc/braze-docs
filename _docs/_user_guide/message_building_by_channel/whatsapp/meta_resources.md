@@ -1,7 +1,7 @@
 ---
 nav_title: Meta resources
 article_title: Meta Resources
-page_order: 11
+page_order: 12
 description: "This article provides helpful Meta documentation, information, and resources to improve your understanding of the WhatsApp integration."
 page_type: reference
 channel:

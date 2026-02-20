@@ -11,7 +11,7 @@ alias: /data_transformation/
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: 変換の作成
+  - name: 変身を遂げる
     link: /docs/user_guide/data/unification/data_transformation/creating_a_transformation/
     image: /assets/img/braze_icons/flip-forward.svg
   - name: ユースケース

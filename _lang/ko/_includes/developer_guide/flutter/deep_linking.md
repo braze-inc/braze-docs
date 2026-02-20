@@ -1,4 +1,4 @@
-## Prerequisites
+## 필수 조건
 
 Flutter 앱에 딥링킹을 구현하려면 먼저 기본 [Android]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=android) 또는 [iOS]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift) 레이어에서 딥링킹을 설정해야 합니다.
 
@@ -13,7 +13,7 @@ Flutter 앱에 딥링킹을 구현하려면 먼저 기본 [Android]({{site.baseu
 3. 키를 `FlutterDeepLinkingEnabled` 로 설정합니다.
 4. 유형을 `Boolean`로 설정합니다.
 5. 값을 `YES` 으로 설정합니다.
-    ![키-값 쌍이 추가된 예제 프로젝트의 `Info.plist` 파일]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode 프로젝트 Info.plist 파일")
+    ![키-값 페어가 추가된 예제 프로젝트의 \`Info.plist\` 파일.]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File")
 {% endtab %}
 
 {% tab Android %}

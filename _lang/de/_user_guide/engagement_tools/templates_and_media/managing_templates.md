@@ -1,6 +1,6 @@
 ---
-nav_title: Vorlagen verwalten
-article_title: Vorlagen verwalten
+nav_title: Templates verwalten
+article_title: Templates verwalten
 page_order: 3
 
 page_type: reference
@@ -11,7 +11,7 @@ tool:
 
 ---
 
-# Vorlagen verwalten
+# Templates verwalten
 
 > Das Archivieren oder Duplizieren von Templates kann helfen, diese besser zu organisieren und zu verwalten. Dieser Referenzartikel beschreibt, wie Sie Vorlagen im Bereich **Vorlagen** des Braze-Dashboards archivieren und duplizieren können.
 
@@ -19,7 +19,7 @@ tool:
 
 ### Individuelle Vorlage
 
-![Dropdown-Menü mit duplizierter Option.]({% image_buster /assets/img/template_duplicate_cog.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
+![Dropdown-Menü mit Duplikat-Option.]({% image_buster /assets/img/template_duplicate_cog.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 Um eine einzelne Vorlage zu duplizieren, klicken Sie auf das Zahnradsymbol <i class="fas fa-cog"></i> für die einzelne Vorlage und wählen Sie aus dem Dropdown-Menü **Duplizieren**.
 <br><br>
@@ -38,7 +38,7 @@ Doppelte Vorlagen können Sie finden, indem Sie die Spalte **Letzte Bearbeitung*
 
 {% endraw %}
 
-![Drei Templates, sortiert nach dem Zeitpunkt, an dem die Templates zuletzt bearbeitet wurden, wobei eine kopierte Template ganz oben in der Liste steht.]({% image_buster /assets/img/duplicate_multiple_template.gif %})
+![Drei Templates, sortiert nach dem Zeitpunkt der letzten Bearbeitung der Templates, wobei ein kopiertes Template ganz oben in der Liste steht.]({% image_buster /assets/img/duplicate_multiple_template.gif %})
 
 ## Vorlagen archivieren
 
@@ -52,7 +52,7 @@ Um eine einzelne Vorlage zu archivieren, klicken Sie auf das Einstellungssymbol 
 
 Um mehrere Vorlagen zu archivieren, aktivieren Sie das Kontrollkästchen neben jeder Vorlage, die Sie archivieren möchten. Nachdem Sie mehrere Templates ausgewählt haben, wählen Sie **Archiv**. Sie finden Ihre archivierten Vorlagen, indem Sie in der Vorlagentabelle unter **Anzeigen** die Option **Archiviert** wählen.
 
-![Saved Drop & Drop E-Mail Templates Abschnitt, der zwei ausgewählte Templates und die Symbolleiste mit der Option zum Archivieren anzeigt.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
+![Gespeicherte Drop & Drop-E-Mail-Vorlagen, die zwei ausgewählte Templates und die Symbolleiste mit der Option zum Archivieren anzeigen.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
 
 {% alert important %}
 Die Archivierung ist derzeit für [Linkvorlagen]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates) nicht verfügbar.

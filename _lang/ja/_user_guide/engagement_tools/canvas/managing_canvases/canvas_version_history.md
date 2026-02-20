@@ -32,7 +32,7 @@ tool: Canvas
 
 バージョン履歴の数が増えたら、サイドバーで各バージョンの名前を変更して整理することもできます。デフォルトでは、バージョン名は以前に作成されたバージョンの数に基づく番号として生成されます。アクティブでなくなったバージョンの名前を変更すると、キャンバスの変更ログには表示されますが、バージョン履歴ビュー内のバージョンの変更ログには表示されません。
 
-![Canvas changelog の例。2 つの新しいバージョンが作成されたことを示しています。]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
+![キャンバスの変更ログの例では、2 つの新しいキャンバスバージョンが作成されています。]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
 ### バージョンを破棄する
 

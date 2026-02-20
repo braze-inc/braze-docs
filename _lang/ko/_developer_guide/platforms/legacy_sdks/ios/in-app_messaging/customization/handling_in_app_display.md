@@ -1,6 +1,6 @@
 ---
 nav_title: 커스텀 디스플레이 처리
-article_title: iOS용 인앱 메시지 표시 처리 사용자 지정
+article_title: iOS용 인앱 메시지 디스플레이 처리 사용자 정의
 platform: iOS
 page_order: 4
 description: "이 참조 문서에서는 iOS 애플리케이션의 인앱 메시징 커스텀 표시 처리를 다룹니다."

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:スパムリストからメールアドレスを削除"
+nav_title: "POST:スパムリストからメールアドレスを削除する"
 article_title: "POST:スパムリストからメールアドレスを削除"
 search_tag: Endpoint
 page_order: 7

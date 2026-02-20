@@ -46,22 +46,22 @@ NSDictionary *brazeInfo = @{
 
 Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**AppsFlyer** を選択します。 
 
-ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとREST エンドポイントは、AppsFlyerのダッシュボードでポストバックアップを設定するときに次回のステップで使用されます。<br><br>![AppsFlyer テクノロジーページの「コホートインポートを使用したデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されます。]({% image_buster /assets/img/appsflyer_audiences/appsflyer_data_import_key.png %}){: style="max-width:90%;"}
+ここでRESTエンドポイントを見つけ、Brazeデータインポートキーを生成する。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとREST エンドポイントは、AppsFlyerのダッシュボードでポストバックアップを設定するときに次回のステップで使用されます。<br><br>![AppsFlyer テクノロジーページの「コホートインポートを使用したデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。]({% image_buster /assets/img/appsflyer_audiences/appsflyer_data_import_key.png %}){: style="max-width:90%;"}
 
-### ステップ 3: AppsFlyer オーディエンスでのBraze コネクションの設定
+### ステップ3:AppsFlyer オーディエンスでのBraze コネクションの設定
 
 1. [AppsFlyer Audiences](https://support.appsflyer.com/hc/en-us/articles/115002689186-Audiences-guide#managing-connections)で、**Connections**タブに移動し、**Add partner connection**をクリックします。
 2. パートナーとしてBraze を選択し、コネクションに名前を付けます。
 3. データインポートキーとBraze REST エンドポイントを入力します。
 4. 接続を保存します。保存した接続は、新しいオーディエンスまたは既存のオーディエンスにリンクできます。
 
-![AppsFlyer Audiences プラットフォームのパートナー接続設定ページ。画像下部で Braze external ID ボックスがオンになっていることが示されています。]{% image_buster /assets/img/appsflyer_audiences/appsflyer_braze_connection.png %}{: style="max-width:80%;"}
+![AppsFlyer Audiences プラットフォームのパートナー接続設定ページ。画像下部で「Braze external ID」ボックスがオンになっている。]({% image_buster /assets/img/appsflyer_audiences/appsflyer_braze_connection.png %}){: style="max-width:80%;"}
 
-### ステップ 4: Braze でのAppsFlyer オーディエンスコホートの使用
+### ステップ4:Braze でのAppsFlyer オーディエンスコホートの使用
 
 AppsFlyer オーディエンスがアップロードされてBrazeされると、**AppsFlyer Cohorts**フィルターを選択して、BrazeでSegmentsを定義するときにフィルターとして使用できます。
 
-![ユーザー属性フィルター「AppsFlyer Cohorts」が選択されています。]{% image_buster /assets/img/appsflyer_audiences/appsflyer_cohorts_as_filter.png %}
+![ユーザー属性フィルター「AppsFlyer Cohorts」アが選択されている。]({% image_buster /assets/img/appsflyer_audiences/appsflyer_cohorts_as_filter.png %})
 
 {% alert important %}
 Braze内に既に存在するユーザーのみがコホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。

@@ -212,7 +212,7 @@ To create a Data Transformation:
 
 ![]({% image_buster /assets/img/regal/copy_webhook_url.png %})
 
-### Step 2: Enable reporting webhooks in Regal
+### 2단계: Enable reporting webhooks in Regal
 
 To set up reporting webhooks:
 1. Go to the Regal app and open the **Setting** page.
@@ -247,7 +247,7 @@ The Braze [Data Transformation]({{site.baseurl}}/data_transformation) feature al
 - Braze does not support phone numbers as an identifier. To use this as an identifier, the phone number can be set as a [user alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) in Braze.
 - When using Braze Data Transformation email address can be used as an identifier. If the email address exists as a profile within Braze, the existing profile will be updated. If the email address does not yet exist within Braze, an email-only profile will be created.
 
-## Use cases
+## 사용 사례
 
 {% tabs %}
 {% tab Trigger an email %}
@@ -359,7 +359,7 @@ Below is a sample payload for a `contact.attribute.edited` event in Regal. This 
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.attribute.edited",
   "properties": {
@@ -423,7 +423,7 @@ Below is a sample payload for a `contact.experiment.assigned` event in Regal.
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.experiment.assigned",
   "properties": {

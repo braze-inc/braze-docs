@@ -36,7 +36,7 @@ Pour synchroniser les attributs des utilisateurs de Justuno vers Braze, vous dev
 
 Pour ajouter l'appli Braze à votre compte Justuno, allez dans **Paramètres du compte** > **Apps**, puis recherchez et sélectionnez l'appli Braze.
 
-![La page "Connect Apps" de Justuno avec l'application Braze dans la liste des résultats de recherche.]({% image_buster /assets/img/justuno/search-for-braze.png %})
+![La page "Connect Apps" dans Justuno avec l'application Braze affichée dans la liste des résultats de recherche.]({% image_buster /assets/img/justuno/search-for-braze.png %})
 
 Saisissez la clé API et l'URL de base [que vous avez créées précédemment](#prerequisites), puis sélectionnez **Connecter**.
 
@@ -46,13 +46,13 @@ Saisissez la clé API et l'URL de base [que vous avez créées précédemment](#
 
 Pour ajouter l'application Braze à votre [flux de travail Justuno](https://hub.justuno.com/knowledge/workflows-overview), glissez-déposez l'action **Sync to App** dans votre flux de travail, puis choisissez **Select App** > **Braze**.
 
-![L'option "Select App" est située sur l'action "Sync to App".]({% image_buster /assets/img/justuno/select-app.png %}){: style="max-width:45%;"}
+![L'option "Select App" située sur l'action "Sync to App".]({% image_buster /assets/img/justuno/select-app.png %}){: style="max-width:45%;"}
 
 ### Étape 3 : Connectez vos groupes d'abonnement Braze
 
 Pour envoyer des données de profil depuis Justuno vers un e-mail ou un groupe d'abonnement SMS spécifique de Braze, vous devez ajouter leur ID à l'application Braze dans votre flux de travail Justuno.
 
-| Type d'ID                          | Requis ? | Description                                                                                                   |
+| Type d'ID                          | Requise ? | Description                                                                                                   |
 |----------------------------------|-----------|---------------------------------------------------------------------------------------------------------------|
 | ID du groupe d'abonnement SMS de Braze  | Oui       | Cet ID est utilisé pour recueillir le consentement à l'envoi de SMS à partir des profils utilisateurs. Si aucun ID n'est saisi dans Justuno, les profils n'auront pas de consentement lorsque Justuno transmettra ce profil à Braze. |
 | ID du groupe d'abonnement e-mail de Braze | Non        | Si cet ID n'est pas saisi dans Justuno, Justuno enverra les données du profil à Braze en tant qu'utilisateur sans groupe d'abonnement associé. |
@@ -69,7 +69,7 @@ Pour localiser ces ID dans le tableau de bord de Braze :
 
 Dans votre flux de travail Justuno, ouvrez l'appli Braze, puis introduisez les ID de chaque groupe d'applications.
 
-![L'application Braze s'est ouverte dans un flux de travail Justuno avec la possibilité d'ajouter des groupes d'abonnement ID e-mail et SMS.]({% image_buster /assets/img/justuno/enter-subscription-groups.png %}){: style="max-width:55%;"}
+![L'application Braze s'est ouverte dans un flux de travail Justuno avec la possibilité d'ajouter des ID de groupes d'abonnements par e-mail et par SMS.]({% image_buster /assets/img/justuno/enter-subscription-groups.png %}){: style="max-width:55%;"}
 
 ### Étape 4 : Configurez vos attributs
 
@@ -86,11 +86,11 @@ Les attributs suivants sont automatiquement synchronisés entre Justuno et Braze
 Pour synchroniser des attributs supplémentaires :
 
 1. Dans l'application Braze au sein de votre flux de travail, sélectionnez **Synchroniser une autre propriété.**
-    ![L'application Braze s'est ouverte dans un flux de travail Justuno et montre l'option "Synchroniser un autre bien".]({% image_buster /assets/img/justuno/sync-another-property.png %}){: style="max-width:55%;"}
+    ![L'application Braze s'est ouverte dans un flux de travail Justuno en affichant l'option "Synchroniser un autre bien".]({% image_buster /assets/img/justuno/sync-another-property.png %}){: style="max-width:55%;"}
 2. Choisissez les attributs de Braze que vous souhaitez synchroniser.
 3. Faites correspondre les propriétés dans Justuno avec leurs équivalents dans Braze (tels que les poignées sociales, l'anniversaire, les préférences d'achat, les réponses aux enquêtes, et similaires). Gardez à l'esprit que ces propriétés sont considérées comme des données 0 party ou 1st party. Pour en savoir plus, consultez le site [Justuno : Collecte de données sur les visiteurs](https://www.justuno.com/guides/zero-first-party-data/).
 4. Dans le générateur de flux de travail, choisissez d'**enregistrer**, de **prévisualiser** ou de **publier** votre flux de travail.
-    ![Le menu "Publier" s'est ouvert avec des options permettant d'enregistrer, de prévisualiser ou d'afficher l'historique des versions.]({% image_buster /assets/img/justuno/publish-workflow.png %}){: style="max-width:45%;"}
+    ![Le menu "Publier" s'est ouvert avec les options d'enregistrer, de prévisualiser ou d'afficher l'historique des versions.]({% image_buster /assets/img/justuno/publish-workflow.png %}){: style="max-width:45%;"}
 
 ## Choses à savoir
 

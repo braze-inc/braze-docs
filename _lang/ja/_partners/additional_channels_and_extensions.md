@@ -1,5 +1,5 @@
 ---
-nav_title: "追加チャネル &amp; エクステンション"
+nav_title: "追加チャネルとエクステンション"
 article_title: 追加チャネル &amp; エクステンション
 page_order: 11
 
@@ -35,8 +35,6 @@ valid_partner_list:
   url: /docs/partners/zendesk/
 - name: PassKit
   url: /docs/partners/passkit/
-- name: Rokt Calendar
-  url: /docs/partners/rokt/
 - name: Future Anthem
   url: /docs/partners/future_anthem/
 - name: Komo
@@ -61,4 +59,8 @@ valid_partner_list:
   url: /docs/partners/survicate/
 - name: Typeform
   url: /docs/partners/typeform/
+- name: オッピジー
+  url: /docs/partners/oppizi/
+- name: スタックアダプト
+  url: /docs/partners/stackadapt/
 ---

@@ -3,7 +3,7 @@ nav_title: Eventos
 article_title: Eventos
 page_order: 0
 page_type: reference
-description: "Este artículo describe los diferentes eventos en Braze -eventos estándar, eventos de compra y eventos personalizados- y su finalidad."
+description: "Este artículo describe los distintos eventos de Braze -eventos estándar, eventos de compra y eventos personalizados- y su finalidad."
 ---
 
 # Eventos 
@@ -12,50 +12,50 @@ description: "Este artículo describe los diferentes eventos en Braze -eventos e
 
 Braze utiliza algunos tipos de eventos diferentes para proporcionar una comprensión exhaustiva del comportamiento y la interacción de los usuarios con tu marca. Cada tipo de acto tiene una finalidad única:
 
-- [Eventos estándar](#standard-events): Proporciona una comprensión básica de la interacción del usuario con tu aplicación o sitio web.
-- [Compra eventos](#purchase-events): Crucial para comprender el comportamiento de compra del usuario y para el seguimiento de los ingresos. 
-- [Eventos personalizados](#custom-events): Proporciona información más profunda sobre los comportamientos de los usuarios que son únicos para tu aplicación o negocio.
+- [Eventos estándar](#standard-events): Proporcionar una comprensión básica del compromiso del usuario con su aplicación o sitio.
+- [Eventos de compra](#purchase-events): Crucial para comprender el comportamiento de compra de los usuarios y hacer un seguimiento de los ingresos. 
+- [Eventos personalizados](#custom-events): Proporcione una visión más profunda de los comportamientos de los usuarios que son exclusivos de su aplicación o negocio.
 
 Mediante el seguimiento de estos diferentes tipos de eventos, puedes obtener un conocimiento más profundo de tus usuarios, lo que puede informar tus estrategias de marketing, ayudarte a optimizar tu aplicación y permitirte ofrecer una experiencia de usuario más personalizada. ¡Vamos a sumergirnos!
 
 ## Eventos estándar
 
-En Braze, los eventos estándar son acciones predefinidas que los usuarios pueden realizar dentro de tu aplicación y que Braze sigue automáticamente tras integrar el SDK de Braze. He aquí algunos ejemplos de actos estándar:
+En Braze, los eventos estándar son acciones predefinidas que los usuarios pueden realizar dentro de su aplicación y que Braze rastrea automáticamente después de integrar el SDK de Braze. He aquí algunos ejemplos de eventos estándar:
 
 - Lanzamiento de la aplicación
-- [Comprar](#purchase-events)
+- [Compra](#purchase-events)
 - Inicio de la sesión
-- Fin de sesión
-- Notificación push con un clic
+- Fin de la sesión
+- Notificación push pulsada
 - Correo electrónico abierto
 
-Como especialista en marketing, puedes utilizar estos eventos estándar para comprender el comportamiento del usuario y su interacción con tu aplicación. Por ejemplo, puedes ver con qué frecuencia los usuarios lanzan tu aplicación o cuántas compras se realizan. Esta información puede ser muy valiosa a la hora de crear campañas de marketing específicas.
+Como vendedor, puede utilizar estos eventos estándar para comprender el comportamiento del usuario y el compromiso con su aplicación. Por ejemplo, puedes ver con qué frecuencia los usuarios inician tu aplicación o cuántas compras se realizan. Esta información puede ser muy valiosa a la hora de crear campañas de marketing específicas.
 
-Es importante tener en cuenta que, aunque Braze hace un seguimiento automático de los eventos estándar, los eventos de compra, los eventos personalizados y los atributos personalizados deben ser configurados por tu equipo de desarrolladores en función de tus necesidades y objetivos específicos.
+Es importante tener en cuenta que, si bien Braze realiza un seguimiento automático de los eventos estándar, los eventos de compra, los eventos personalizados y los atributos personalizados deben ser configurados por su equipo de desarrollo en función de sus necesidades y objetivos específicos.
 
 ## Eventos de compra
 
-Los eventos de compra son una forma de registrar y hacer un seguimiento de las compras realizadas por tus usuarios. Son un tipo de evento estándar que está disponible por defecto después de integrar el SDK de Braze. Por ello, cuando utilizas eventos de compra para hacer un seguimiento de las compras, puedes controlar tus ingresos a lo largo del tiempo y a través de diferentes fuentes de ingresos directamente desde Braze.
+Los eventos de compra son una forma de registrar y realizar un seguimiento de las compras realizadas por sus usuarios. Son un tipo de evento estándar que está disponible por defecto tras integrar el SDK de Braze. Por ello, cuando utiliza eventos de compra para realizar un seguimiento de las compras, puede supervisar sus ingresos a lo largo del tiempo y a través de diferentes fuentes de ingresos directamente desde Braze.
 
 Los eventos de compra registran la siguiente información clave sobre una compra:
 
 - ID del producto (normalmente el nombre o la categoría del producto)
-- Moneda
+- Divisa
 - Precio
 - Cantidad
 
-A continuación, puedes utilizar estos datos para segmentar a tus usuarios en función de su valor de duración, frecuencia de compra, compras específicas, etc.
+A continuación, puede utilizar estos datos para segmentar a sus usuarios en función de su valor de vida, frecuencia de compra, compras específicas, etc.
 
-Braze también admite compras en varias divisas. Si se informa de una compra en una moneda distinta del USD, se mostrará en el panel de Braze en USD, según la tasa de cambio en la fecha en que se informó de la compra.
+Braze también admite compras en varias divisas. Si una compra se notifica en una moneda distinta del USD, se mostrará en el panel de control de Braze en USD, según el tipo de cambio vigente en la fecha en que se notificó la compra.
 
-Para saber más, visita nuestro artículo dedicado a [los actos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/).
+Para saber más, visite nuestro artículo dedicado a [los eventos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/).
 
 {% details Example implementation %}
 
-Ten en cuenta que la implementación real de los eventos de compra requerirá algunos conocimientos técnicos, ya que implica la integración del SDK de Braze con tu aplicación. Tu administrador del éxito del cliente guiará a tu equipo a través de este proceso como parte de tu incorporación, pero los pasos generales son los siguientes:
+Ten en cuenta que la implementación real de los eventos de compra requerirá algunos conocimientos técnicos, ya que implica la integración del SDK de Braze con tu aplicación. Su gestor de éxito de clientes guiará a su equipo a través de este proceso como parte de su incorporación, pero los pasos generales son los siguientes:
 
-1. **Integra el SDK de Braze:** Antes de registrar cualquier evento, tienes que integrar el SDK de Braze en tu aplicación.
-2. **Registra el evento de compra:** Una vez integrado el SDK, puedes registrar un evento de compra cada vez que un usuario realice una compra en tu aplicación. Esto suele hacerse en la función o método al que se llama cuando se completa una compra.
+1. **Integrar el SDK Braze:** Antes de registrar cualquier evento, tienes que integrar el SDK de Braze en tu aplicación.
+2. **Registrar el evento de compra:** Una vez integrado el SDK, podrá registrar un evento de compra cada vez que un usuario realice una compra en su aplicación. Esto se hace normalmente en la función o método llamado cuando se completa una compra.
 
 Aquí tienes un ejemplo de cómo registrar un evento de compra en una aplicación iOS utilizando Swift:
 
@@ -66,15 +66,15 @@ Appboy.sharedInstance()?.logPurchase("product_name", inCurrency: "USD", atPrice:
 En este ejemplo, "product_name" es el nombre del producto que se compró, "USD" es la moneda de la compra, "1,99" es el precio del producto y "1" es la cantidad comprada.
 
 {:start="3"}
-3\. **Visualiza el evento de compra en el panel de Braze:** Una vez registrado el evento de compra, puedes verlo en el panel de Braze. Puedes utilizar estos datos para analizar tus ingresos, segmentar a tus usuarios y mucho más.
+3\. **Ver el evento de compra en el panel de Braze:** Una vez registrado el evento de compra, puede verlo en el panel de control de Braze. Puede utilizar estos datos para analizar sus ingresos, segmentar a sus usuarios y mucho más.
 
-Recuerda que la implementación exacta puede variar en función de la plataforma (iOS, Android, Web) y de los requisitos específicos de tu aplicación. 
+Recuerde que la implementación exacta puede variar en función de la plataforma (iOS, Android, Web) y de los requisitos específicos de su aplicación. 
 
 {% enddetails %}
 
 ## Eventos personalizados
 
-Los eventos personalizados son eventos que defines en función de las acciones específicas que quieres seguir dentro de tu aplicación o sitio web. Braze no los sigue automáticamente: debes configurar manualmente estos eventos en tu implementación del SDK de Braze. Los eventos personalizados pueden ser cualquier cosa, desde que un usuario complete un nivel en un juego hasta que actualice la información de su perfil.
+Los eventos personalizados son eventos que usted define en función de las acciones específicas que desea rastrear dentro de su aplicación o sitio. Braze no los sigue automáticamente: debes configurar manualmente estos eventos en tu implementación del SDK de Braze. Los eventos personalizados pueden ser cualquier cosa, desde que un usuario complete un nivel en un juego hasta que actualice la información de su perfil.
 
 Aquí tienes un ejemplo de cómo registrar un evento personalizado en una aplicación iOS utilizando Swift:
 
@@ -82,17 +82,17 @@ Aquí tienes un ejemplo de cómo registrar un evento personalizado en una aplica
 Appboy.sharedInstance()?.logCustomEvent("completed_level")
 ```
 
-En este ejemplo, "completed_level" es el nombre del evento personalizado que se registra cuando un usuario completa un nivel en un juego. Ese evento personalizado se registra entonces en su perfil de usuario en Braze, que puedes utilizar para desencadenar campañas y personalizar la mensajería.
+En este ejemplo, "completed_level" es el nombre del evento personalizado que se registra cuando un usuario completa un nivel en un juego. Ese evento personalizado se registra entonces en su perfil de usuario en Braze, que puede utilizar para activar campañas y personalizar los mensajes.
 
-Para saber más, visita nuestro artículo dedicado a [los eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
+Para más información, visite nuestro artículo dedicado a [los eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
 
 {% details Example implementation %}
 
-Al igual que los eventos de compra, los eventos personalizados requieren una configuración adicional. He aquí un proceso general para implementar eventos personalizados en Braze:
+Al igual que los eventos de compra, los eventos personalizados requieren una configuración adicional. Este es un proceso general para implementar eventos personalizados en Braze:
 
-1. **Integra el SDK de Braze:** Antes de poder registrar cualquier evento, tienes que integrar el SDK de Braze en tu aplicación.
-2. **Define tu evento personalizado:** Decide qué acción de tu aplicación quieres seguir como evento personalizado. Puede ser cualquier cosa significativa para tu aplicación, como un usuario que completa un nivel en un juego, un usuario que actualiza su perfil o un usuario que realiza un tipo específico de compra.
-3. **Registra el evento personalizado:** Después de definir tu evento personalizado, puedes registrarlo en el código de tu aplicación. Esto suele hacerse en la función o método al que se llama cuando se produce la acción.
+1. **Integrar el SDK Braze:** Antes de poder registrar cualquier evento, tienes que integrar el SDK de Braze en tu aplicación.
+2. **Definir tu evento personalizado:** Decida qué acción de su aplicación desea seguir como evento personalizado. Puede tratarse de cualquier cosa que sea significativa para su aplicación, como que un usuario complete un nivel en un juego, que actualice su perfil o que realice un tipo específico de compra.
+3. **Registra el evento personalizado:** Una vez definido el evento personalizado, puedes registrarlo en el código de tu aplicación. Esto se hace normalmente en la función o método que se llama cuando se produce la acción.
 
 Aquí tienes un ejemplo de cómo registrar un evento personalizado en una aplicación iOS utilizando Swift:
 
@@ -103,19 +103,19 @@ Appboy.sharedInstance()?.logCustomEvent("updated_profile")
 En este ejemplo, "updated_profile" es el nombre del evento personalizado que se registra cuando un usuario actualiza su perfil.
 
 {:start="4"}
-4\. **Añade propiedades a tu evento personalizado (opcional):** Si quieres capturar detalles adicionales sobre el evento personalizado, puedes añadirle propiedades. Esto se hace pasando un diccionario de propiedades cuando registras el evento.
+4\. **Añada propiedades a su evento personalizado (opcional):** Si desea capturar detalles adicionales sobre el evento personalizado, puede añadirle propiedades. Esto se hace pasando un diccionario de propiedades cuando se registra el evento.
 
-He aquí un ejemplo de cómo registrar un evento personalizado con propiedades en una aplicación iOS utilizando Swift:
+Aquí tienes un ejemplo de cómo registrar un evento personalizado con propiedades en una app iOS usando Swift:
 
 ```swift
 let properties: [AnyHashable: Any] = ["Property Name": "Property Value"]
 Appboy.sharedInstance()?.logCustomEvent("updated_profile", withProperties: properties)
 ```
 
-En este ejemplo, el evento personalizado tiene una propiedad llamada "Nombre de propiedad" con un valor de "Valor de propiedad".
+En este ejemplo, el evento personalizado tiene una propiedad llamada "Nombre de la propiedad" con un valor de "Valor de la propiedad".
 
 {:start="5"}
-5\. **Ver el evento personalizado en el panel de Braze:** Una vez registrado el evento personalizado, puedes verlo en el panel de Braze. Puedes utilizar estos datos para analizar el comportamiento de los usuarios, segmentar a tus usuarios y mucho más.
+5\. **Ver el evento personalizado en el panel de Braze:** Una vez registrado el evento personalizado, puede verlo en el panel Braze. Puede utilizar estos datos para analizar el comportamiento de los usuarios, segmentarlos y mucho más.
 
 {% enddetails %}
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Catálogos de listas"
+nav_title: "OBTER: Listar catálogos"
 article_title: "OBTER: Catálogos de listas"
 search_tag: Endpoint
 page_order: 2

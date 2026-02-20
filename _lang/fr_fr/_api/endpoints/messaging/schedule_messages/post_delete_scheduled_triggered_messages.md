@@ -16,7 +16,7 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 
 > Utilisez cet endpoint pour annuler un message Canvas que vous avez déjà planifié dans des campagnes déclenchées par API avant qu’il ne soit envoyé.
 
-Les messages ou déclencheurs planifiés qui sont supprimés peu de temps avant ou pendant l’heure où ils sont censés être envoyés seront mis à jour dans les meilleurs délais, de sorte que les suppressions de dernière minute pourraient être appliquées à tous, certains ou aucun de vos utilisateurs ciblés.
+Les messages planifiés ou les déclencheurs qui sont supprimés à proximité ou pendant la période où ils étaient censés être envoyés sont mis à jour au mieux, de sorte que Braze peut appliquer des suppressions de dernière seconde à tous, à certains ou à aucun de vos utilisateurs ciblés.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 

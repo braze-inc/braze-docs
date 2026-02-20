@@ -9,7 +9,7 @@ description: "この記事では、オブジェクトの仕様を識別するた
 
 # オブジェクトを識別するためのエイリアス
 
-属性オブジェクト内の任意のフィールドを含むAPIリクエストは、指定されたユーザープロファイルに対して、指定された値でその名前の属性を作成または更新します。 
+属性 s オブジェクトにフィールドs が含まれるAPI リクエストは、指定されたユーザープロファイルに指定された値で、その名前の属性を作成または更新します。
 
 Brazeユーザープロファイルフィールド名（以下にリストされているもの、または[Brazeユーザープロファイルフィールド]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)のセクションにリストされているもの）を使用して、ダッシュボードのユーザープロファイル上のそれらの特別な値を更新するか、独自のカスタム属性データをユーザーに追加します。
 
@@ -21,7 +21,7 @@ Brazeユーザープロファイルフィールド名（以下にリストされ
   [
     {
       "external_id" : (required, string) see External user ID,
-      // external_ids for users that do not exist will return a non-fatal error.
+      // external_ids for users that do not exist return a non-fatal error.
       // See server responses for details.
       "user_alias" : {
         "alias_name" : (required, string) see User aliases,

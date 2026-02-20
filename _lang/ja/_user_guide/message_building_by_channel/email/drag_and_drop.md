@@ -12,7 +12,7 @@ tool: Media
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: ドラッグ＆ドロップでメールを作成する
+- name: ドラッグアンドドロップメールの作成
   link: /docs/dnd/overview/
   image: /assets/img/braze_icons/brush-02.svg
 - name: メールテンプレートの作成

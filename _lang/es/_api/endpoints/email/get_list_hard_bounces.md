@@ -33,7 +33,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | `start_date` | Opcional\*. | Cadena en formato AAAA-MM-DD| \*Se requiere uno de `start_date` o `email`. Es la fecha de inicio del intervalo para recuperar rebotes duros y debe ser anterior a `end_date`. La API lo considera medianoche en hora UTC. |
 | `end_date` | Obligatoria | Cadena en formato AAAA-MM-DD | Fecha de finalización del intervalo para recuperar rebotes duros. La API lo considera medianoche en hora UTC. |
 | `limit` | Opcional | Entero | Campo opcional para limitar el número de resultados devueltos. De forma predeterminada, 100, el máximo es 500. |
-| `offset` | Opcional | Entero | Punto de inicio opcional de la lista a recuperar. |
+| `offset` | Opcional | Entero | Punto de inicio opcional de la lista desde el que recuperar. |
 | `email` | Opcional\*. | Cadena | \*Se requiere uno de `start_date` o `email`. Si se proporciona, devolveremos si el usuario ha rebotado duro o no. Comprueba que las cadenas de correo electrónico tienen el formato adecuado. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -53,8 +53,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?
 Las entradas aparecen en orden descendente.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

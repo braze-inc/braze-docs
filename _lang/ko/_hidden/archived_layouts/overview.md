@@ -8,7 +8,7 @@ noindex: true
 
 > 개요 레이아웃은 사용자가 버튼을 클릭하여 페이지의 특정 부분 또는 완전히 다른 페이지로 이동할 수 있도록 페이지 상단에 특정 탐색 옵션을 만드는 데 유용합니다.
 
-셀렉터 레이아웃의 대표적인 예로는 [SDK 체인지로그](https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_changelogs/) 페이지 또는 [인앱 메시지 크리에이티브 세부 정보 페이지](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/)가 있습니다.
+셀렉터 레이아웃의 대표적인 예로는 [SDK 체인지로그](https://www.braze.com/docs/developer_guide/changelogs) 페이지 또는 [인앱 메시지 크리에이티브 세부 정보 페이지](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/)가 있습니다.
 
 ## 필수 구성 요소
 

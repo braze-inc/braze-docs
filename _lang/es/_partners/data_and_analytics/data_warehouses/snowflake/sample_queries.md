@@ -13,7 +13,7 @@ search_tag: Partner
 > Esta página asociada ofrece algunos ejemplos de posibles casos de uso que puede consultar al configurar sus consultas.
 
 {% tabs %}
-{% tab Filtrar por tiempo%}
+{% tab Filter By Time%}
 
 Una consulta habitual podría ser filtrar los eventos por tiempo.
 
@@ -38,7 +38,7 @@ El valor de `sf_created_at` sólo es fiable para los eventos que persistieron de
 {% endalert %}
 {% endtab %}
 
-{% tab Consulta de registros de cambios%}
+{% tab Querying Changelogs%}
   
 Los nombres de las campañas y de los lienzos no están presentes en los propios eventos. En su lugar, se publican en una tabla de registro de cambios. 
 
@@ -73,7 +73,7 @@ LEFT JOIN CHANGELOGS_CANVAS_SHARED AS Canvas ON canvas.id = campaign_join.canvas
 qualify row_number() over (partition by campaign_join.event_id ORDER BY canvas.time DESC) = 1;
 ```
 {% endtab %}
-{% tab Embudo Push %}
+{% tab Push Funnel %}
 
 Puedes utilizar esta consulta de embudo push para agregar datos de eventos en bruto de envíos push, datos de eventos en bruto de entregas y datos de eventos en bruto de aperturas. Esta consulta muestra cómo deben unirse todas las tablas, ya que cada evento bruto suele tener una tabla independiente:
 
@@ -102,7 +102,7 @@ LIMIT 500;
 ```
 
 {% endtab %}
-{% tab Correo electrónico Cadence %}
+{% tab Email Cadence %}
 Puede utilizar esta consulta de cadencia diaria de mensajes de correo electrónico para analizar el tiempo transcurrido entre los correos electrónicos que recibe un usuario.
 
 Por ejemplo, si un usuario recibe dos correos electrónicos en un día, entraría en `0 "days since last received"`. Si recibió un correo electrónico el lunes y otro el martes, entraría en la cohorte `1 "days since last received"`.
@@ -145,7 +145,7 @@ ORDER BY 1
 LIMIT 500;
 ```
 {% endtab %}
-{% tab Clics únicos en el correo electrónico %}
+{% tab Unique Email Clicks %}
 
 Puede utilizar esta consulta de clics únicos de correo electrónico para analizar los clics únicos de correo electrónico en una ventana de tiempo determinada. El algoritmo para calcularlo es el siguiente:
   1. Particionar los eventos por la clave (`app_group_id`, `message_variation_id`, `dispatch_id`, `email_address`).

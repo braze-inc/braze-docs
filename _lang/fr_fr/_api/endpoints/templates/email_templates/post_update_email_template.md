@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Mettre à jour le modèle d’e-mail"
+nav_title: "POST : Mise à jour du modèle d'e-mail"
 article_title: "POST : Mettre à jour les modèles d’e-mail"
 search_tag: Endpoint
 page_order: 4
@@ -16,7 +16,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 
 > Utilisez cet endpoint pour mettre à jour des modèles d’e-mail sur le tableau de bord de Braze.
 
-Vous pouvez accéder au site `email_template_id` d'un modèle d'e-mail en naviguant jusqu'à lui sur la page **Modèles et médias.**  L’[endpoint Créer un modèle d’e-mail]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) renvoie également une référence `email_template_id`.
+Vous pouvez accéder au site `email_template_id` d'un modèle d'e-mail en naviguant jusqu'à lui sur la page **Modèles et médias & **. L’[endpoint Créer un modèle d’e-mail]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) renvoie également une référence `email_template_id`.
 
 Tous les champs autres que l’`email_template_id` sont facultatifs, mais vous devez spécifier au moins un champ à mettre à jour.
 

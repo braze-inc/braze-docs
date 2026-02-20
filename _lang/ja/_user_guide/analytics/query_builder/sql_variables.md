@@ -57,7 +57,7 @@ WHERE campaign_id = '{{campaign.${Campaign}}}'
 
 以下の例では、2025年6月の月初日と月末日の値とともに、「Summer Feature Launch」キャンペーンが値として割り当てられます。
 
-Query Builderの!["Variable"タブに、指定した例が表示されます。]({% image_buster /assets/img/query_builder_example.png %})
+![Query Builderの"Variable"タブに、指定した例が表示されます。]({% image_buster /assets/img/query_builder_example.png %})
 
 ## 一般的な変数タイプ {#variable-types}
 
@@ -145,7 +145,7 @@ is_multi_select: 'true'
 {% endtab %}
 {% endtabs %}
 
-\![Brazeでレンダリングされた複数選択リストの例。]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
+![Brazeでレンダリングされる複数選択リストの例。]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
 
 #### options 
 
@@ -372,7 +372,6 @@ WHERE product_id IN ({{products.${Games with DLC}}});
 SELECT event_name
 FROM CUSTOM_EVENTS_TABLE
 WHERE event_name IN ({{custom_events.${Purchased Game}}}); 
-WHERE event_name IN ({{custom_events.${Purchased Game}}}); 
 ```
 {% endraw %}
 {% endsubtab %}
@@ -410,11 +409,11 @@ workspace_id = '{{workspace.${app_group_id}}}'
 
 ### カタログ
 
-リストから1つまたは複数のカタログまたはカタログフィールドを選択します。
+一覧から1つ以上のカタログsまたはカタログ フィールドsを選択します。
 
 {% tabs local %}
-{% tab catologs %}
-`catalogs` は、Braze ダッシュボードから1つまたは複数のカタログを選択するために使用されます。
+{% tab catalogs %}
+`catalogs` Braze ダッシュボードから1つ以上のカタログを選択するために使用します。
 
 {% subtabs %}
 {% subtab usage %}
@@ -427,7 +426,7 @@ catalog_id = '{{catalogs.${catalog}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab catolog fields %}
+{% tab catalog fields %}
 `catalog_fields` は、現在選択されているカタログから1つ以上のフィールドを設定するために使用されます。設定されている `catalogs` 変数が必要です。
 
 {% subtabs %}

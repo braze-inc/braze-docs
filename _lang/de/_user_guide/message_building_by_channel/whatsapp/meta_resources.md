@@ -1,7 +1,7 @@
 ---
 nav_title: Meta-Ressourcen
 article_title: Meta-Ressourcen
-page_order: 11
+page_order: 12
 description: "In diesem Artikel finden Sie hilfreiche Informationen von Meta zur WhatsApp-Integration."
 page_type: reference
 channel:
@@ -156,7 +156,7 @@ Beachten Sie, dass WhatsApp bei der Bewertung der Template-Qualität dasselbe Sy
 
 Letztendlich bietet Ihnen dieses Update eine schnellere Feedbackschleife (30 Minuten gegenüber Stunden oder Tagen mit Vorlagenpausen), so dass Sie Ihre Vorlagen anpassen und ein besseres Kundenerlebnis bieten können.
 
-**Falls Sie Fragen zu dem Update haben, wenden Sie sich bitte an Ihren Meta-Partner.**
+**Wenn Sie weitere Fragen zu diesem Update haben, wenden Sie sich an die Vertretung Ihres Meta Partners.**
 
 ### Juni 2023: Versuchsphase 
 *Zuletzt aktualisiert im Juni 2023*

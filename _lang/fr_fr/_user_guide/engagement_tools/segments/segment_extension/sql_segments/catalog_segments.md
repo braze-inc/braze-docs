@@ -1,51 +1,51 @@
 ---
-nav_title: "Segmentation du catalogue"
+nav_title: "Segments de catalogue"
 article_title: Segments du catalogue
-page_order: 1
+page_order: 0
 page_type: reference
 alias: "/catalog_segments/"
-description: "Cet article explique comment créer des segments de catalogue, qui utilisent les données de catalogue dans SQL Segment Extensions pour créer des audiences d'utilisateurs."
+description: "Cet article décrit comment créer des segments de catalogue, qui utilisent les données de catalogue dans les extensions de segment SQL pour constituer des audiences d'utilisateurs."
 tool: Segments
 ---
 
-# Segmentation du catalogue
+# Segments de catalogue
 
-> Les segments de catalogue sont un type d'extension de segment SQL qui est créé en combinant des données de catalogue avec des données provenant d'événements personnalisés ou d'achats. Ils peuvent être référencés dans un segment et ensuite ciblés par des campagnes et des Canevas. 
+> Les segments de catalogue sont un type d'extension de segment SQL qui est créé en combinant des données de catalogue avec des données provenant d'événements personnalisés ou d'achats. Ils peuvent être référencés dans un segment, puis ciblés par des campagnes et des canvas. 
 
 {% alert important %}
-Les segments du catalogue sont actuellement en accès anticipé. Contactez votre gestionnaire satisfaction client si vous souhaitez participer à cet accès anticipé.
+Les segments de catalogue sont actuellement en accès anticipé. Si vous souhaitez participer à cet accès anticipé, contactez votre gestionnaire de la satisfaction client.
 {% endalert %}
 
-Les segments de catalogue utilisent SQL pour joindre les données des catalogues et les données des événements personnalisés ou des achats. Pour ce faire, vous devez disposer d'un champ d'identification commun à l'ensemble de vos catalogues et de vos événements personnalisés ou achats. Par exemple, la valeur d'un ID d'article dans un catalogue doit correspondre à la valeur d'une propriété dans un événement personnalisé.
+Les segments de catalogue utilisent SQL pour joindre les données des catalogues et les données des événements personnalisés ou des achats. Pour ce faire, vous devez avoir un champ d'identifiant commun dans vos catalogues et vos événements personnalisés ou achats. Par exemple, la valeur d'un identifiant d'article dans un catalogue doit correspondre à la valeur d'une propriété dans un événement personnalisé.
 
 ## Création d'un segment de catalogue
 
-1. Allez dans **Extensions de segments** > **Créer une nouvelle extension** > **Commencer par un modèle** et sélectionnez un modèle. <br>\![Fenêtre modale/boîte de dialogue, etc. avec la possibilité de créer un segment de catalogue pour des événements ou des achats.]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
+1. Allez dans **Extensions de segments** > **Créer une nouvelle extension** > **Commencer par un modèle** et sélectionnez un modèle. <br>![Fenêtre modale offrant la possibilité de créer un segment de catalogue pour les événements, les achats ou les segments RFM.]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
 
 {: start="2"}
-2\. L'éditeur SQL s'enrichit automatiquement d'un modèle. <br>\![Editeur SQL avec un modèle pré-généré.]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>Ce modèle associe les données des événements utilisateurs aux données du catalogue afin de segmenter les utilisateurs qui ont acheté certains articles du catalogue.
+2\. L'éditeur SQL se remplit automatiquement avec un modèle. <br>![Éditeur SQL avec un modèle pré-généré.]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>Ce modèle combine les données d'événements utilisateur avec les données du catalogue pour segmenter les utilisateurs qui ont interagi avec certains articles du catalogue.
 
-3. Utilisez l'onglet **Variables** pour fournir les champs nécessaires à votre modèle avant de générer votre segmentation. <br>Pour que Braze identifie les utilisateurs en fonction de leur engagement avec les éléments du catalogue, vous devez procéder comme suit : <br> \- Sélectionnez un catalogue qui contient un champ de catalogue <br> \- Sélectionnez un événement personnalisé qui contient une propriété d'événement <br> \- Faites correspondre les valeurs des propriétés des champs et des événements de votre catalogue.
+3. Utilisez l'onglet **Variables** pour fournir les champs nécessaires à votre modèle avant de générer votre segment. <br>Pour que Braze identifie les utilisateurs en fonction de leur engagement avec les articles du catalogue, vous devez faire ce qui suit : <br> \- Sélectionnez un catalogue contenant un champ de catalogue <br> \- Sélectionnez un événement personnalisé contenant une propriété d'événement <br> Faites correspondre votre champ de catalogue et les valeurs de propriété de l'événement
 
-Voici quelques conseils pour sélectionner les variables :
+Voici des directives pour sélectionner les variables :
 
-| Champ variable | Description |
+| Champ de variable | Description |
 | --- | --- |
-| `Catalog` | Le nom du catalogue que vous utilisez pour le ciblage des utilisateurs. |
-| `Catalog field`| Le champ de votre catalogue qui contient les mêmes valeurs que votre `Custom event property`. Il s'agit souvent d'un type d'ID. Dans le cas du commerce électronique, il s'agit de `shopify_id`. |
-| `Custom event` | Le nom de votre événement personnalisé, qui est le même événement qui contient une propriété dont les valeurs correspondent à votre `Catalog field`. Dans le cas du commerce électronique, il s'agit de `Made Order`. |
-| `Custom event property` | Le nom de votre propriété d'événement personnalisé, qui fait correspondre les valeurs avec votre `Catalog field`. Dans l'exemple d'utilisation du commerce électronique, il s'agirait de `Shopify_ID.`|
+| `Catalog` | Le nom du catalogue que vous utilisez pour cibler les utilisateurs. |
+| `Catalog field`| Le champ de votre catalogue qui contient les mêmes valeurs que votre `Custom event property`. Il s’agit souvent d’un type d'identifiant. Dans le cas du commerce électronique, il s'agit de `shopify_id`. |
+| `Custom event` | Le nom de votre événement personnalisé, qui est le même événement contenant une propriété avec des valeurs correspondant à votre `Catalog field`. Dans le cas du commerce électronique, il s'agit de `Made Order`. |
+| `Custom event property` | Le nom de votre propriété d'événement personnalisée, qui correspond aux valeurs de votre `Catalog field`. Dans l'exemple d'utilisation du commerce électronique, il s'agirait de `Shopify_ID.`|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {: start="4"}
-4\. Si nécessaire, remplissez des champs facultatifs supplémentaires pour votre cas d'utilisation afin de segmenter par une valeur de champ particulière dans votre catalogue :
-- `Catalog field`: Un champ particulier (nom de colonne) dans ce catalogue
-- `Value`: Une valeur spécifique dans ce champ ou cette colonne <br><br> Si l'on prend l'exemple de l'application santé, disons que dans le catalogue de chaque médecin que vous pouvez consulter, il y a un champ appelé `specialty` qui contient une valeur telle que `vision` ou `dental`. Pour segmenter les utilisateurs qui ont consulté un médecin avec la valeur `dental`, vous pouvez sélectionner `specialty` comme `Catalog field`, et sélectionner `dental` comme `Value`.
+4\. Si nécessaire, remplissez les champs optionnels supplémentaires pour votre cas d'utilisation afin de segmenter par une valeur de champ particulière dans votre catalogue :
+- `Catalog field` : Un champ particulier (nom de colonne) dans ce catalogue
+- `Value` : Une valeur spécifique dans ce champ ou cette colonne <br><br> En utilisant l'application de santé comme exemple, disons que dans le catalogue de chaque médecin que vous pourriez réserver, il y a un champ appelé `specialty` qui contient une valeur telle que `vision` ou `dental`. Pour segmenter les utilisateurs qui ont visité des médecins avec la valeur `dental`, vous pouvez sélectionner `specialty` comme `Catalog field`, et sélectionner `dental` comme `Value`.
 
-5. Après avoir créé un segment SQL, nous vous recommandons de cliquer sur **Exécuter l'aperçu** pour voir si votre requête renvoie des utilisateurs ou s'il y a des erreurs. Pour plus d'informations sur la [prévisualisation des résultats des requêtes]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results), la gestion des [extensions de segments SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions), etc., consultez le site [Extensions de segments SQL.]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) 
+5. Après avoir créé un segment SQL, nous vous recommandons de cliquer sur **Exécuter l'aperçu** pour voir si votre requête renvoie des utilisateurs ou s'il y a des erreurs. Pour plus d'informations sur [l'aperçu des résultats de la requête]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results), la gestion des [extensions de segment SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions), et plus encore, consultez les [extensions de segment SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
 {% alert note %}
-Si vous créez un segment SQL qui utilise la table `CATALOGS_ITEMS_SHARED`, vous devez spécifier un ID de catalogue. Par exemple :
+Si vous créez un segment SQL qui utilise la table `CATALOGS_ITEMS_SHARED`, vous devez spécifier un ID de catalogue. Par exemple :
 
 ```sql
 SELECT * FROM CATALOGS_ITEMS_SHARED
@@ -60,13 +60,13 @@ Bien qu'il ne soit pas possible de requêter directement les utilisateurs dont l
 
 Par exemple, pour cibler les utilisateurs qui ont effectué moins de trois achats, écrivez d'abord une requête pour sélectionner les utilisateurs qui ont effectué trois achats ou plus. Ensuite, sélectionnez **Inverser le SQL** pour cibler les utilisateurs ayant effectué moins de trois achats (y compris ceux ayant effectué zéro achat).
 
-!Extension de segment nommée "A cliqué sur 1 à 4 e-mails au cours des 30 derniers jours" avec l'option d'inversion de SQL sélectionnée.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:70%;"}
+![Extension de segments nommée "A cliqué sur 1 à 4 e-mails au cours des 30 derniers jours" avec l'option d'inversion de SQL sélectionnée.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:70%;"}
 
 {% alert important %}
 À moins que vous ne visiez spécifiquement à cibler les utilisateurs n'ayant aucun événement, vous n'aurez pas besoin d'inverser SQL. Si l'option **Inverser SQL** est sélectionnée, confirmez que la fonctionnalité est nécessaire et que la segmentation correspond à l'audience souhaitée. Par exemple, si une requête cible les utilisateurs ayant au moins un événement, elle ne ciblera que les utilisateurs ayant zéro événement lorsqu'elle est inversée.
 {% endalert %}
 
-## Actualiser la composition des segments
+## Actualiser l’effectif du segment
 
 Pour actualiser la composition d'un segment de catalogue, ouvrez ce segment et sélectionnez **Actions** > **Actualiser** > **Oui, actualiser**.
 
@@ -83,45 +83,45 @@ Si vous avez créé un segment dans lequel vous vous attendez à ce que les util
 {% tabs local %}
 {% tab Health %}
 
-### Application santé
+### Application de santé
 
-Imaginons que vous ayez une appli de santé et que vous souhaitiez segmenter les utilisateurs qui ont réservé une visite chez le dentiste. Vous disposez également des éléments suivants :
+Disons que vous avez une application de santé et que vous souhaitez segmenter les utilisateurs qui ont réservé une visite chez le dentiste. Vous avez également ce qui suit :
 
-- Un catalogue `Doctors` qui contient les différents médecins qu'un patient peut réserver, chacun d'entre eux étant associé à un `doctor ID`
-- Un événement personnalisé `Booked Visit` avec une propriété `doctor ID` qui partage les mêmes valeurs que le champ `doctor ID` de votre catalogue.
-- Un champ `speciality` dans votre catalogue qui contient la valeur `dental` 
+- Un catalogue `Doctors` qui contient les différents médecins qu'un patient peut réserver, chacun assigné avec un `doctor ID`
+- Un événement personnalisé `Booked Visit` avec une propriété `doctor ID` qui partage les mêmes valeurs que le champ `doctor ID` dans votre catalogue
+- Un champ `speciality` dans votre catalogue qui contient la valeur `dental`
 
-Vous pouvez configurer un segment de catalogue en utilisant les variables suivantes :
+Vous établiriez un segment de catalogue en utilisant les variables suivantes :
 
 | Variable | Propriété |
 | --- | --- |
 | `Catalog`| Médecins |
-| `Catalog field` | ID du médecin |
+| `Catalog field` | identifiant du médecin |
 | `Custom event`| Visite réservée|
-| `Custom event property` | ID du médecin |
+| `Custom event property` | identifiant du médecin |
 | `(Under Filter SQL Results) Catalog field` | Spécialité |
-| `(Under Filter SQL Results) Value`| Soins dentaires |
+| `(Under Filter SQL Results) Value`| Dentaire |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% tab SaaS %}
 
-### Plate-forme SaaS
+### plateforme SaaS
 
-Supposons que vous ayez une plateforme SaaS B2B et que vous souhaitiez segmenter les utilisateurs qui sont des employés d'un client existant. Vous disposez également des éléments suivants :
+Disons que vous avez une plateforme SaaS B2B et que vous souhaitez segmenter les utilisateurs qui sont des employés d'un client existant. Vous avez également ce qui suit :
 
-- Un catalogue `Accounts` qui contient les différents comptes qui utilisent actuellement votre plateforme SaaS, chacun étant affecté d'un `account ID`
-- Un événement personnalisé `Event Attendance` avec une propriété "account ID" qui partage les mêmes valeurs que le champ "account ID" de votre catalogue.
-- Un champ `Classification` dans votre catalogue qui contient la valeur `enterprise` 
+- Un catalogue `Accounts` qui contient les différents comptes qui utilisent actuellement votre plateforme SaaS, chacun étant assigné avec un `account ID`
+- Un événement personnalisé `Event Attendance` avec une propriété "ID de compte" qui partage les mêmes valeurs que le champ "ID de compte" dans votre catalogue
+- Un champ `Classification` dans votre catalogue qui contient la valeur `enterprise`
 
-Vous pouvez configurer un segment de catalogue en utilisant les variables suivantes :
+Vous établiriez un segment de catalogue en utilisant les variables suivantes :
 
 | Variable | Propriété |
 | --- | --- |
 | `Catalog` | Comptes |
-| `Catalog field `| ID du compte |
-| `Custom event` | Participation à l'événement |
-| `Custom event property` | ID du compte |
+| `Catalog field `| ID de compte |
+| `Custom event` | Participation aux événements |
+| `Custom event property` | ID de compte |
 | `(Under Filter SQL Results) Catalog field` | Classification |
 | `(Under Filter SQL Results) Value` | Entreprise |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -129,17 +129,17 @@ Vous pouvez configurer un segment de catalogue en utilisant les variables suivan
 {% endtab %}
 {% endtabs %}
 
-## Questions fréquemment posées
+## Foire aux questions
 
-### L'exécution d'un segment de catalogue consomme-t-elle des crédits d'extension de segments SQL ?
+### L'exécution d'un segment de catalogue consomme-t-elle des crédits d'extension de segment SQL ?
 
-Oui, les segments de catalogue sont alimentés par SQL et consomment des crédits SQL Segment Extension. Pour en savoir plus, consultez l'[utilisation des segments SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments#monitoring-your-sql-segments-usage).
+Oui, les segments de catalogue sont alimentés par SQL et consomment des crédits d'extension de segment SQL. Pour en savoir plus, consultez la section [Utilisation des segments SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments#monitoring-your-sql-segments-usage).
 
-### La création d'un segment de catalogue consomme-t-elle des allocations d'extensions de segments SQL ?
+### La création d'un segment de catalogue consomme-t-elle des quotas d'extension de segment SQL ?
 
-Oui. De la même manière que les extensions de segments SQL sont prises en compte dans votre quota d'extensions de segments, les segments de catalogues sont également pris en compte dans ce quota.
+Oui. De la même manière que les extensions de segment SQL comptent pour votre quota d'extension de segment, les segments de catalogue comptent également pour ce quota.
 
-### J'ai un cas d'utilisation de segmentation de catalogue que le modèle actuel ne permet pas de réaliser. Comment dois-je procéder ?
+### J'ai un cas d'utilisation de segment de catalogue que le modèle actuel ne sert pas. Comment devrais-je configurer cela ?
 
 Contactez votre gestionnaire d'assistance à la clientèle ou le [service d'assistance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) pour obtenir des conseils supplémentaires.
 

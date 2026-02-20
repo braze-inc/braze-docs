@@ -379,7 +379,7 @@ hide_toc: true
         } else if (selectedValue === 'feature') {
             $('#disclosure-warning').hide();
             $('#resource_urls').show();
-            $('#doc_verify_div').hide();
+            $('#doc_verify_div').show();
             $('#doc_release_notes_group').show();
         } else {
             $('#doc_release_notes_group').hide();
@@ -518,15 +518,7 @@ hide_toc: true
                 <span></span> I have verified this information with the respective product team
               </label>
               </div>
-              </div>
-              <div class="form-group" id="doc_release_notes_group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Y" id="doc_release_notes" name="ReleaseNotes">
-                <label class="form-check-label" for="doc_release_notes" id="doc_release_notes_label">
-                  <span></span> Include in release notes
-                </label>
-              </div>
-              </div>              
+              </div>          
               <div class="inline_text">
               Please wait up to ten seconds after submitting for your request to process.
               </div>

@@ -14,11 +14,11 @@ Brazeダッシュボードから送信されるFireOSプッシュ通知には、
 
 要約テキストを使用すると、拡張通知ビューに追加のテキストを設定できます。画像付きの通知のキャプションとしても機能します。
 
-![タイトルが「This is the title for the notification.」、要約テキストが「This is the summary text for the notification.」の Android メッセージ。]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
+![タイトルは "This is the title for the notification. "で、要約テキストは "This is the summary text for the notification. "である。]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
 要約テキストは、展開されたビューのメッセージ本文の下に表示されます。 
 
-![タイトルが「This is the title for the notification.」、要約テキストが「This is the summary text for the notification.」の Android メッセージ。]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+![タイトルは "This is the title for the notification. "で、要約テキストは "This is the summary text for the notification. "である。]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 画像を含むプッシュ通知の場合、折りたたまれたビューにはメッセージテキストが表示され、通知が展開されると、要約テキストが画像のキャプションとして表示されます。 
 

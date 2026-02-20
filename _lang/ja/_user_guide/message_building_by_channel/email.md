@@ -11,7 +11,7 @@ channel:
 search_rank: 2
 guide_featured_title: "よく読まれている記事"
 guide_featured_list:
-- name: ユーザー購読の管理
+- name: ユーザーサブスクリプションを管理する
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   image: /assets/img/braze_icons/users-01.svg
 - name: リンクのエイリアシング
@@ -76,7 +76,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} メールをカスタマイズする
+## [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} カスタマイズメール
 
 メールメッセージは、以下のようなさまざまな方法でカスタマイズできる：
 

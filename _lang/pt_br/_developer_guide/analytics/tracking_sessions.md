@@ -1,17 +1,17 @@
 ---
-nav_title: Sessões de rastreamento
-article_title: Rastreamento de sessões por meio do SDK do Braze
+nav_title: Rastrear sessões
+article_title: Rastrear sessões através do SDK Braze
 page_order: 3.3
-description: "Saiba como rastrear sessões por meio do SDK do Braze."
+description: "Aprenda como rastrear sessões através do SDK Braze."
 
 ---
 
-# Sessões de rastreamento
+# Rastrear sessões
 
-> Saiba como rastrear sessões por meio do SDK do Braze.
+> Aprenda como rastrear sessões através do SDK Braze.
 
 {% alert note %}
-Para SDKs de wrapper não listados, use o método nativo relevante do Android ou Swift.
+Para SDKs wrapper não listados, use o método nativo Android ou Swift relevante.
 {% endalert %}
 
 {% multi_lang_include developer_guide/_shared/about_session_lifecycle.md %}
@@ -20,10 +20,14 @@ Para SDKs de wrapper não listados, use o método nativo relevante do Android ou
 
 ### Etapa 1: Inscrever-se para receber atualizações
 
-Para assinar as atualizações da sessão, use o método `subscribeToSessionUpdates()`.
+Para se inscrever em atualizações de sessão, use o método `subscribeToSessionUpdates()`.
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+Neste momento, a inscrição em atualizações de sessão não é suportada para o SDK Web Braze.
+{% endtab %}
+
+{% tab android %}
 {% subtabs %}
 {% subtab java %}
 
@@ -54,7 +58,7 @@ Braze.getInstance(this).subscribeToSessionUpdates { message ->
 {% endtab %}
 
 {% tab swift %}
-Se você registrar um retorno de chamada de ponta a ponta da sessão, ele será acionado quando o app retornar ao primeiro plano. A duração da sessão é medida a partir do momento em que o app é aberto, ou em primeiro plano, até o momento em que é fechado, ou em segundo plano.
+Se você registrar um retorno de chamada de fim de sessão, ele será acionado quando o app retornar ao primeiro plano. A duração da sessão é medida desde que o app é aberto ou colocado em primeiro plano, até que ele seja fechado ou colocado em segundo plano.
 
 {% subtabs %}
 {% subtab swift %}
@@ -72,7 +76,7 @@ let cancellable = AppDelegate.braze?.subscribeToSessionUpdates { event in
 }
 ```
 
-Para assinar um fluxo assíncrono, você pode usar [`sessionUpdatesStream`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/sessionupdatesstream) em vez disso.
+Para se inscrever em um fluxo assíncrono, você pode usar [`sessionUpdatesStream`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/sessionupdatesstream) em vez disso.
 
 ```swift
 for await event in braze.sessionUpdatesStream {
@@ -107,29 +111,34 @@ BRZCancellable *cancellable = [AppDelegate.braze subscribeToSessionUpdates:^(BRZ
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-
-{% tab web %}
-No momento, a assinatura de atualizações de sessão não é compatível com o SDK do Braze.
-{% endtab %}
 {% endtabs %}
 
-### Etapa 2: Rastreamento de sessões de teste (opcional)
+### Etapa 2: Testar rastreamento de sessão (opcional)
 
-Para testar o rastreamento de sessão, inicie uma sessão em seu dispositivo, abra o dashboard do Braze e pesquise o usuário relevante. No perfil do usuário, selecione **Sessions Overview (Visão geral das sessões**). Se as métricas forem atualizadas conforme o esperado, o rastreamento de sessão está funcionando corretamente.
+Para testar o rastreamento de sessão, inicie uma sessão em seu dispositivo, depois abra o dashboard do Braze e procure o usuário relevante. No perfil do usuário, selecione **Visão Geral das Sessões**. Se as métricas forem atualizadas como esperado, o rastreamento de sessão está funcionando corretamente.
 
-![A seção de visão geral das sessões de um perfil de usuário mostrando o número de sessões, a data da última utilização e a data da primeira utilização.]({% image_buster /assets/img_archive/test_session.png %}){: style="max-width:50%;"}
+![A seção de visão geral das sessões de um perfil de usuário mostrando o número de sessões, data da última utilização e data da primeira utilização.]({% image_buster /assets/img_archive/test_session.png %}){: style="max-width:50%;"}
 
 {% alert note %}
-Os detalhes específicos do aplicativo são mostrados apenas para usuários que usaram mais de um aplicativo.
+Detalhes específicos do app são mostrados apenas para usuários que usaram mais de um app.
 {% endalert %}
 
-## Alteração do tempo limite padrão da sessão {#change-session-timeout}
+## Alterando o tempo limite padrão da sessão {#change-session-timeout}
 
-Você pode alterar o período de tempo decorrido antes que uma sessão seja automaticamente encerrada.
+Você pode alterar a duração do tempo que passa antes que uma sessão expire automaticamente.
 
 {% tabs %}
-{% tab Android %}
-Por padrão, o tempo limite da sessão é definido como `10` segundos. Para alterar isso, abra seu arquivo `braze.xml` e adicione o parâmetro `com_braze_session_timeout`. Ele pode ser definido como qualquer número inteiro maior ou igual a `1`.
+{% tab web %}
+Por padrão, o tempo limite da sessão é definido para `30` minutos. Para mudar isso, passe a opção `sessionTimeoutInSeconds` para sua função [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize). Pode ser definido para qualquer inteiro maior ou igual a `1`. 
+
+```js
+// Sets the session timeout to 15 minutes instead of the default 30
+braze.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
+```
+{% endtab %}
+
+{% tab android %}
+Por padrão, o tempo limite da sessão é definido para `10` segundos. Para mudar isso, abra seu arquivo `braze.xml` e adicione o parâmetro `com_braze_session_timeout`. Ele pode ser definido como qualquer inteiro maior ou igual a `1`.
 
 ```xml
 <!-- Sets the session timeout to 60 seconds. -->
@@ -138,7 +147,7 @@ Por padrão, o tempo limite da sessão é definido como `10` segundos. Para alte
 {% endtab %}
 
 {% tab swift %}
-Por padrão, o tempo limite da sessão é definido como `10` segundos. Para alterar isso, defina `sessionTimeout` no objeto `configuration` que é passado para [`init(configuration)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class). Ele pode ser definido como qualquer número inteiro maior ou igual a `1`.
+Por padrão, o tempo limite da sessão é definido para `10` segundos. Para mudar isso, defina `sessionTimeout` no objeto `configuration` que é passado para [`init(configuration)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class). Pode ser definido para qualquer inteiro maior ou igual a `1`.
 
 {% subtabs %}
 {% subtab swift %}
@@ -168,17 +177,8 @@ AppDelegate.braze = braze;
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-
-{% tab web %}
-Por padrão, o tempo limite da sessão é definido como `30` minutos. Para alterar isso, passe a opção `sessionTimeoutInSeconds` para sua função [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) função. Ele pode ser definido como qualquer número inteiro maior ou igual a `1`. 
-
-```js
-// Sets the session timeout to 15 minutes instead of the default 30
-braze.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
-```
-{% endtab %}
 {% endtabs %}
 
 {% alert note %}
-Se você definir um tempo limite da sessão, toda a semântica da sessão será automaticamente estendida até o tempo limite definido.
+Se você definir um tempo limite de sessão, toda a semântica da sessão será automaticamente estendida para o tempo limite definido.
 {% endalert %}

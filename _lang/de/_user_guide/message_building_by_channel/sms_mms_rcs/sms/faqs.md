@@ -81,7 +81,7 @@ Dieser Ansatz hat auch einige Nachteile:
 
 ### Wie kann man URLs für SMS zulassen?
 
-Bevor Sie SMS-Nachrichten mit URLs an Benutzer in bestimmten Ländern (z. B. Schweden oder Skandinavien) senden, müssen Sie diese URLs bei Ihrem Netzbetreiber registrieren lassen. Wenden Sie sich an Ihren Braze-Kundendienstleiter. Dieser Vorgang wird etwa fünf Tage dauern.  
+Bevor Sie SMS-Nachrichten mit URLs an Benutzer in bestimmten Ländern (z. B. Schweden oder Skandinavien) senden, müssen Sie diese URLs bei Ihrem Netzbetreiber registrieren lassen. Wenden Sie sich an Ihren Braze Manager:in für den Dienst. Dieser Vorgang wird etwa fünf Tage dauern.  
 
 ### Was passiert, wenn mehrere Benutzer die gleiche Telefonnummer haben?
 
@@ -102,6 +102,8 @@ Wenn Sie ein "START"- oder "STOP"-Schlüsselwort von der gemeinsamen Telefonnumm
 Wenn Sie Ihre Benutzer in einem Canvas gestaffelt haben und für jede Canvas-Komponente unterschiedliche Zeitpläne haben, können Sie einem Benutzer mit derselben E-Mail oder demselben Telefon doppelte Nachrichten schicken.
 {% endalert %}
 
+Um unnötig große Updates zu vermeiden, aktualisiert Braze bei einem Update eines Abos maximal 100 Nutzerprofile, die einen Bezeichner gemeinsam haben. Wenn mehr als 100 Nutzerprofile dieselbe Rufnummer haben, werden nicht alle Profile aktualisiert.
+
 ### Werden SMS-Ereigniseigenschaften Schlüsselwörter in einem Satz erfassen?
 
 Damit ein Schlüsselwort innerhalb eines Satzes erkannt wird (z. B. "Bitte hören Sie auf, mir eine SMS zu schreiben"), müssen Sie eine Liquid-Anweisung in der Nachricht verwenden, um das spezifische Wort zu erkennen. Event-Eigenschaften haben eine Zeichenbegrenzung von 256, ansonsten gibt es keine Zeichenbegrenzung.
@@ -118,7 +120,7 @@ Sie können Ihre `app_id` finden, indem Sie zu **Einstellungen** > **App-Einstel
 
 ### Wie werden mir die SMS in Rechnung gestellt?
 
-Neben den Gebühren für Kurz- und Langcodes bietet Braze ein Kontingent an SMS-Nachrichten für verschiedene Länder. Das heißt, wir arbeiten mit Ihnen zusammen, um eine bestimmte Anzahl von Nachrichtensegmenten für verschiedene Länder festzulegen, die Sie für den Versand von SMS-Kampagnen verwenden. Die Abrechnung erfolgt nach der Anzahl der gesendeten Nachrichtensegmente pro Land. Weitere Informationen über die Berechnung von Nachrichtensegmenten finden Sie in unserem Leitfaden [Nachrichtensegmente und Kopierlimits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown). Ihr Kundenbetreuer wird Sie informieren, wenn Sie Ihr Maximum fast erreicht haben, und Ihnen entsprechende Berichte zur Verfügung stellen, damit Sie auf dem Laufenden bleiben. Bei weiteren Fragen zu Überschreitungen wenden Sie sich bitte an Ihren Braze-Vertreter.
+Neben den Gebühren für Kurz- und Langcodes bietet Braze ein Kontingent an SMS-Nachrichten für verschiedene Länder. Das heißt, wir arbeiten mit Ihnen zusammen, um eine bestimmte Anzahl von Nachrichtensegmenten für verschiedene Länder festzulegen, die Sie für den Versand von SMS-Kampagnen verwenden. Die Abrechnung erfolgt nach der Anzahl der gesendeten Nachrichtensegmente pro Land. Weitere Informationen über die Berechnung von Nachrichtensegmenten finden Sie in unserem Leitfaden [Nachrichtensegmente und Kopierlimits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown). Ihr Account Manager:in wird Sie informieren, wenn Sie Ihr Maximum fast erreicht haben, und Ihnen entsprechende Berichte zur Verfügung stellen, damit Sie auf dem Laufenden bleiben. Wenn Sie weitere Fragen zu Mehrkosten haben, wenden Sie sich an Ihre Vertretung von Braze.
 
 ### Wird eine Nachricht, die an ein Festnetztelefon gesendet wird, trotzdem auf die Anzahl der gesendeten SMS angerechnet?
 
@@ -131,4 +133,4 @@ In anderen Ländern:
 
 ### Wenn ein Benutzer abgemeldet ist und ein Schlüsselwort an unseren kurzen und langen Code sendet, erhält er dann die Antwort, die wir für dieses Schlüsselwort in Braze konfiguriert haben?
 
-Wenn ein Benutzer sich abgemeldet hat und ein Schlüsselwort aus einer der [Standard-Schlüsselwortkategorien]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/) sendet, erhält er die Antwort für dieses Schlüsselwort. Wenn ein Benutzer abgemeldet ist und ein [benutzerdefiniertes Schlüsselwort]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/) sendet, erhält er keine Antwort für dieses Schlüsselwort. 
+Wenn ein Benutzer sich abgemeldet hat und ein Schlüsselwort aus einer der [Standard-Schlüsselwortkategorien]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/) sendet, erhält er die Antwort für dieses Schlüsselwort. Wenn ein Benutzer abgemeldet ist und ein [benutzerdefiniertes Schlüsselwort]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/) sendet, erhält er keine Antwort für dieses Schlüsselwort.

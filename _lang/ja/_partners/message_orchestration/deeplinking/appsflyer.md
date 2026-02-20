@@ -4,7 +4,7 @@ noindex: true
 layout: dev_guide
 guide_top_header: "AppsFlyer"
 guide_top_text: "AppsFlyerはモバイルマーケティング分析とアトリビューションプラットフォームで、マーケティング分析、モバイルアトリビューション、ディープリンクを通じてアプリの分析と最適化を支援する。"
-description: "このランディングページでは、統合手順やAppsFlyerオーディエンスの活用方法など、AppsFlyerに関するあらゆることを紹介している。"
+description: "このランディングページでは、統合手順やAppsFlyerオーディエンスの使用方法など、AppsFlyerに関するあらゆる情報を提供する。"
 
 guide_featured_list:
 - name: AppsFlyer

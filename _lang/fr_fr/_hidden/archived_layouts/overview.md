@@ -8,7 +8,7 @@ noindex: true
 
 > La mise en page d'aperçu permet de créer une option de navigation spécifique en haut d'une page qui permet aux utilisateurs de cliquer sur un bouton pour se rendre à une partie spécifique d'une page ou à une page complètement différente.
 
-La page des [modifications du SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_changelogs/) ou la [page des détails créatifs des messages in-app](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/) sont des exemples classiques de la mise en page du sélecteur.
+La page des [modifications du SDK](https://www.braze.com/docs/developer_guide/changelogs) ou la [page des détails créatifs des messages in-app](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/) sont des exemples classiques de la mise en page du sélecteur.
 
 ## Composants requis
 

@@ -18,7 +18,7 @@ channel: email
 
 This method confirms that your Braze email-sending IP address is authorized to send mail on your behalf. SPF is your basic authentication and is accomplished by publishing the text records in DNS settings. The receiving server will check the DNS records and determine whether they are authentic. This method is designed to validate the email sender.
 
-Your SPF record will be set up when Braze configures your IPs and domains - beyond adding the DNS records we give you, no further action is required.
+Braze sets up your SPF record when we configure your IPs and domains. Beyond adding the DNS records we provide, you don't need to take further action.
 
 ### Domain Keys Identified Mail (DKIM)
 
@@ -26,13 +26,13 @@ This method confirms that your Braze email-sending domain is authorized to send 
 
 Braze signs the mail with your secret private key. The ISPs verify the signature against your public key, which is stored in your custom DNS record. No two signatures are exactly alike, and only your public key can successfully verify your private key signature.
 
-Your DKIM record will be set up when Braze configures your IPs and domains-beyond adding the DNS records we give you, no further action is required.
+Braze sets up your DKIM record when we configure your IPs and domains. Beyond adding the DNS records we provide, you don't need to take further action.
 
 ### Domain-based Message Authentication, Reporting, and Conformance (DMARC)
 
 [Domain-based Message Authentication, Reporting & Conformance (DMARC)](https://dmarc.org/) is an email authentication protocol for email senders to prove the legitimacy of their mail, which enables mailbox receiver confidence and encourages mail acceptance. DMARC allows email senders to specify how to handle emails that were not authenticated using Sender Policy Framework (SPF) or Domain Keys Identified Mail (DKIM). This is achieved by verifying that both SPF and DKIM checks are passed. 
 
-Senders can instruct mailbox providers on how they should handle mail that failed their signature or authentication checks. Failures could indicate that others are trying to imitate you or your email. Senders can tell mailbox providers to reject or quarantine mail and even send automated reports about mail that fails checks. By doing so, mailbox providers can better identify spammers and prevent malicious email from invading inboxes while minimizing false positives and providing better authentication reporting for greater transparency in the marketplace.
+Senders instruct mailbox providers how to handle mail that fails signature or authentication checks. Failures can indicate spoofing. You can tell providers to reject or quarantine failing mail and to send automated reports. This helps providers identify spammers, block malicious email, minimize false positives, and improve authentication reporting transparency.
 
 #### How it works
 
@@ -40,7 +40,7 @@ To deploy DMARC, you need to publish a DMARC Record to your Domain Naming System
 
 A DMARC record also tells email servers to send XML reports back to the reporting email address listed in the DMARC record. These reports provide insight into how your email is moving through the ecosystem and allow you to identify everything that is attempting to use your email domain to send email communications.
 
-The policy you have in your DMARC record will tell the participating recipient email server what to do with mail that doesn’t pass SPF and DKIM but claims to be from your domain. Braze recommends setting a DMARC policy on the root domain, which will be applied to all subdomains. This means no additional setup will be necessary on any current and new subdomains in the future. There are three types of policies you can set:
+Set a DMARC policy on the root domain so it applies to all subdomains. This avoids additional setup on current and future subdomains. You can set one of the following policies:
 
 | Policy | Impact |
 | --- | --- |

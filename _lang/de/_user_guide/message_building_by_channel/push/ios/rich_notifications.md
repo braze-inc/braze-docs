@@ -1,5 +1,5 @@
 ---
-nav_title: "Rich-Benachrichtigungen erstellen"
+nav_title: Rich-Benachrichtigungen erstellen
 article_title: "Erstellen umfangreicher Push-Benachrichtigungen für iOS"
 page_order: 3
 page_type: tutorial
@@ -13,7 +13,7 @@ tool:
 
 ---
 
-# Erstellen umfangreicher Push-Benachrichtigungen für iOS
+# Erstellen Sie Rich-Push-Benachrichtigungen für iOS
 
 > Mit Rich Notifications können Sie Ihre Push-Benachrichtigungen noch individueller gestalten, indem Sie über den Text hinaus zusätzliche Inhalte hinzufügen. Android-Benachrichtigungen enthalten schon seit einiger Zeit Bilder in Push-Benachrichtigungen, die als "Erweitertes Benachrichtigungsbild" angezeigt werden. Ab iOS 10 können Ihre Kunden iOS-Push-Benachrichtigungen erhalten, die GIFs, Bilder, Videos oder Audio enthalten.
 
@@ -74,13 +74,13 @@ Beachten Sie bei der Erstellung von Inhalten die folgenden Szenarien, die sich d
 
 Je nachdem, wann ein:e Nutzer:in eine Push-Benachrichtigung öffnet, kann der Zeitstempel den Titeltext verkürzen.
 
-![Beispiel einer Push-Benachrichtigung mit dem Zeitstempel "jetzt" und der Anzahl der Zeichen im Titel von 35.]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
+![Beispiel für eine Push-Benachrichtigung mit dem Zeitstempel "jetzt" und einer Zeichenanzahl von 35 im Titel.]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
 <br>Anzahl der Zeichen im Titel: **35**
 
-![Beispiel einer Push-Benachrichtigung mit einem Zeitstempel von "vor 3 Stunden" und einer Anzahl von 33 Zeichen im Titel.]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
+![Beispiel für eine Push-Benachrichtigung mit dem Zeitstempel "vor 3 Stunden" und einer Zeichenanzahl von 33 im Titel.]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
 <br>Anzahl der Zeichen im Titel: **33**
 
-![Beispiel einer Push-Benachrichtigung mit einem Zeitstempel von "Gestern, 8:37 AM" und einer Anzahl von 22 Zeichen im Titel.]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
+![Beispiel einer Push-Benachrichtigung mit dem Zeitstempel "Gestern, 8:37 AM" und der Anzahl der Zeichen im Titel von 22.]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
 <br>Anzahl der Zeichen im Titel: **22**
 
 {% endtab %}
@@ -91,7 +91,7 @@ Der Text wird um etwa 10 Zeichen pro Zeile gekürzt, wenn ein Bild vorhanden ist
 ![Beispiel einer Push-Benachrichtigung ohne Bild und mit 179 Zeichen im Text.]({% image_buster/assets/img_archive/push_ios_images_179.png %})
 <br>Anzahl der Zeichen im Text: **179**
 
-![Beispiel einer Push-Benachrichtigung mit einem Bild und einer Zeichenanzahl von 154 im Text.]({% image_buster/assets/img_archive/push_ios_images_154.png %})
+![Beispiel einer Push-Benachrichtigung mit einem Bild und einer Zeichenanzahl von 154.]({% image_buster/assets/img_archive/push_ios_images_154.png %})
 <br>Anzahl der Zeichen im Text: **154**
 
 {% endtab %}
@@ -99,10 +99,10 @@ Der Text wird um etwa 10 Zeichen pro Zeile gekürzt, wenn ein Bild vorhanden ist
 
 In iOS 15 wird bei den Bezeichnungen "Zeitkritisch" und "Kritisch" der Titel in eine neue Zeile ohne den Zeitstempel verschoben, so dass er etwas mehr Platz erhält.
 
-![Beispiel für eine Push-Benachrichtigung, die weder als zeitkritisch noch als kritisch bezeichnet wird und deren Titel 35 Zeichen enthält.]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
+![Beispiel für eine Push-Benachrichtigung ohne die Bezeichnung "Time Sensitive" oder "Critical" und mit einer Anzahl von 35 Zeichen im Titel.]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
 <br>Anzahl der Zeichen im Titel: **35**
 
-![Beispiel für eine Push-Benachrichtigung mit der Bezeichnung Time Sensitive und einer Zeichenanzahl von 39 im Titel.]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
+![Beispiel für eine Push-Benachrichtigung mit der Bezeichnung "Time Sensitive" und einer Anzahl von 39 Zeichen im Titel.]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
 <br>Anzahl der Zeichen im Titel: **39**
 
 {% endtab %}
@@ -127,11 +127,11 @@ Folgen Sie den [Schritten]({{site.baseurl}}/user_guide/message_building_by_chann
 
 Fügen Sie Ihre Bild-, GIF-, Audio- oder Videodatei in das Feld **Rich Notification Media** im Composer der Nachricht ein. Lesen Sie in den [Anforderungen nach](#requirements), wie Sie Ihre Inhaltsdateien hinzufügen können.
 
-![Ein Beispiel für einen zusammenfassenden Text für eine Push-Benachrichtigung.]({% image_buster /assets/img_archive/rich_notification_add_image.png %}){: style="max-width:70%;" }
+![Ein Beispiel für einen Zusammenfassungstext für eine Push-Benachrichtigung.]({% image_buster /assets/img_archive/rich_notification_add_image.png %}){: style="max-width:70%;" }
 
 Sie können diese Nachricht auch so einschränken, dass sie nur an Benutzer gesendet wird, die ein Gerät mit iOS 10 besitzen. Für Benutzer, die nicht auf iOS 10 aktualisiert haben, erscheinen die Benachrichtigungen als reiner Text ohne Rich Content, wenn Sie die Option **Nur an Geräte mit Rich Notification-Unterstützung senden** nicht aktivieren.
 
-![Der Bereich Erweitertes Benachrichtigungsbild, wo Sie ein Bild hinzufügen oder eine Bild-URL eingeben können.]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
+![Der Abschnitt „Erweitertes Benachrichtigungsbild“, in dem Sie ein Bild hinzufügen oder eine Bild-URL eingeben können.]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
 
 ### Schritt 3: Fahren Sie mit der Erstellung Ihrer Kampagne fort
 
@@ -139,5 +139,5 @@ Sobald Ihre Rich-Benachrichtigung auf das Dashboard hochgeladen ist, können Sie
 
 Wenn ein:e Nutzer:in die Push-Benachrichtigung erhält, kann er oder sie auf die Push-Nachricht drücken, um das Bild zu vergrößern.
 
-Ein Nutzer:innen erhält eine Push-Benachrichtigung und drückt die Nachricht, um ein erweitertes Bild mit dem Text "Hallo!" anzuzeigen.]({% image_buster /assets/img_archive/rich_notification_ios.gif %}){: style="max-width:50%;" }
+![Ein:e Nutzer:in erhält eine Push-Benachrichtigung und drückt auf die Nachricht, um ein erweitertes Bild mit der Aufschrift „Hallo!“ anzuzeigen.]({% image_buster /assets/img_archive/rich_notification_ios.gif %}){: style="max-width:50%;" }
 

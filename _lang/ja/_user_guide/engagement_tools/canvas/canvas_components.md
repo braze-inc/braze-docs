@@ -13,33 +13,42 @@ tool: Canvas
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: メッセージ ステップ
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
-    image: /assets/img/braze_icons/message-square-02.svg
-  - name: 遅延 ステップ
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
-    image: /assets/img/braze_icons/clock-stopwatch.svg
-  - name: 条件分岐ステップ
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
-    image: /assets/img/braze_icons/dataflow-04.svg
-  - name: オーディエンス パス ステップ
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
-    image: /assets/img/braze_icons/users-01.svg 
   - name: アクション パス ステップ  
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
     image: /assets/img/braze_icons/zap.svg
+  - name: エージェントステップ
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/agent_step/
+    image: /assets/img/braze_icons/briefcase-01.svg
+  - name: オーディエンス パス ステップ
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
+    image: /assets/img/braze_icons/users-01.svg 
+  - name: オーディエンスの同期ステップ
+    link: /docs/partners/canvas_audience_sync/
+    image: /assets/img/braze_icons/refresh-ccw-02.svg
+  - name: コンテンツオプティマイザーステップ
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step/
+    image: /assets/img/braze_icons/target-04.svg
+  - name: コンテキストのステップ
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/context/
+    image: /assets/img/braze_icons/file-search-02.svg
+  - name: 条件分岐ステップ
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
+    image: /assets/img/braze_icons/dataflow-04.svg
+  - name: 遅延 ステップ
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
+    image: /assets/img/braze_icons/clock-stopwatch.svg
   - name: 実験パスステップ
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: ユーザー 更新 ステップ
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
-    image: /assets/img/braze_icons/user-check-01.svg
   - name: キャンバスのフィーチャーフラグ
     link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
-  - name: キャンバスオーディエンスの同期
-    link: /docs/partners/canvas_audience_sync/
-    image: /assets/img/braze_icons/refresh-ccw-02.svg
+  - name: メッセージ ステップ
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
+    image: /assets/img/braze_icons/message-square-02.svg
+  - name: ユーザー 更新 ステップ
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
+    image: /assets/img/braze_icons/user-check-01.svg
 ---
 
 ## キャンバスコンポーネントについて
@@ -48,7 +57,7 @@ guide_featured_list:
 
 ### ユーザージャーニーのカスタマイズ
 
-![ディシジョン分割ステップに続いて遅延ステップs とメッセージステップs を持つキャンバスユーザーの行程の例。]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![デシジョン分割ステップの後に遅延ステップs とメッセージステップs が続くキャンバスユーザーのジャーニーの例。]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 [アクションパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths)を使用すると、アクションや購入などのエンゲージメントイベントに基づいてユーザージャーニーを分岐させることができます。オーディエンスをフィルタリングしでターゲティングしたい場合、[オーディエンスパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths)を利用すると、オーディエンスの条件に基づいてユーザーをさまざまなキャンバスパスに誘導できるため、ユーザーのターゲット設定が簡単になります。
 
@@ -63,4 +72,3 @@ guide_featured_list:
 ### 統合
 
 貴社ブランドのファーストパーティユーザーデータとの同期をご希望の場合には、[Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) と [Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) で利用できるオーディエンス同期オプションをご活用ください。
-

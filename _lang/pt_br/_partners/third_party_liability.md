@@ -1,5 +1,5 @@
 ---
-nav_title: Responsabilidade Civil de Terceiros
+nav_title: Responsabilidade civil de terceiros
 article_title: Responsabilidade Civil de Terceiros
 page_order: 12
 page_type: reference

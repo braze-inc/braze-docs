@@ -47,7 +47,7 @@ Los identificadores que aparecen están disponibles en el segmento y son compati
 
 Tras crear, enviar y procesar correctamente un segmento en Zeotap, los usuarios de Zeotap aparecerán en el panel de control de Braze. Puede buscar usuarios por ID de usuario en el panel de control de Braze. 
 
-![Un perfil de usuario de Braze que muestra los segmentos del uno al cuatro como "verdadero" en "Atributos personalizados".]({% image_buster /assets/img/zeotap/zeotap4.png %})
+![Un perfil de usuario Braze que muestra los segmentos uno a cuatro como "verdadero" en "Atributos personalizados".]({% image_buster /assets/img/zeotap/zeotap4.png %})
 
 Si un usuario forma parte del segmento Zeotap, el nombre del segmento aparece como atributo personalizado en su perfil de usuario con el valor booleano `true`. Anote el nombre del atributo personalizado, ya que lo necesitará al crear un segmento Braze. 
 
@@ -56,7 +56,7 @@ A continuación, debe crear y definir este segmento en Braze:
 2. A continuación, asigne un nombre a su segmento y seleccione el segmento de atributos personalizados creado en Zeotap.
 3. Guarda los cambios. 
 
-![En el constructor de segmentos Braze, puedes encontrar los segmentos importados configurados como atributos personalizados.]({% image_buster /assets/img/zeotap/zeotap3.png %})
+![En el constructor de segmentos Braze, puede encontrar los segmentos importados establecidos como atributos personalizados.]({% image_buster /assets/img/zeotap/zeotap3.png %})
 
 Ahora puede añadir este segmento recién creado a futuras campañas y lienzos Braze para dirigirse a estos usuarios finales. 
 

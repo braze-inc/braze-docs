@@ -1,17 +1,17 @@
 ---
 nav_title: Recomendações baseadas em regras
-article_title: Criação de recomendações de itens baseadas em regras
-description: "Este artigo de referência aborda como criar uma recomendação de item de IA para itens em um catálogo."
+article_title: Criar recomendações de itens com base em regras
+description: "Este artigo de referência aborda como criar uma recomendação de item IA para itens em um catálogo."
 page_order: 2
 ---
 
-# Criação de recomendações de itens baseadas em regras
+# Criar recomendações de itens baseadas em regras
 
 > Saiba como criar um mecanismo de recomendação baseado em regras a partir de itens em seu catálogo.
 
 ## Sobre recomendações de itens baseadas em regras
 
-Um mecanismo de recomendação baseado em regras usa dados do usuário e informações do produto para sugerir itens relevantes aos usuários nas mensagens. Ele usa [o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) e [os catálogos]({{site.baseurl}}/user_guide/data/activation/catalogs/) Braze ou [o Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) para personalizar dinamicamente o conteúdo com base no comportamento e nos atributos do usuário.
+Um mecanismo de recomendação baseado em regras usa dados de usuários e informações de produtos para sugerir itens relevantes aos usuários dentro das mensagens. Ele usa [o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) e [os catálogos]({{site.baseurl}}/user_guide/data/activation/catalogs/) do Braze ou [o Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) para personalizar dinamicamente o conteúdo com base no comportamento e nas atribuições do usuário.
 
 {% alert important %}
 As recomendações baseadas em regras são baseadas em uma lógica fixa que você deve definir manualmente. Isso significa que suas recomendações não se ajustarão ao histórico de compras e aos gostos do usuário, a menos que você atualize a lógica.<br><br>Para criar recomendações personalizadas de IA que se ajustam automaticamente ao histórico de um usuário, confira [as recomendações de itens de IA]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
@@ -27,9 +27,9 @@ Ao decidir qual mecanismo de recomendação se adequa aos seus recursos disponí
       <th>Mecanismo de recomendação</th>
       <th>Nenhum ponto de dados registrado</th>
       <th>Solução sem código</th>
-      <th>Nenhum líquido avançado</th>
+      <th>Nenhum Liquid avançado</th>
       <th>Atualiza automaticamente o feed de produtos</th>
-      <th>Gerado com o Braze UI</th>
+      <th>Gerado com a interface do usuário do Braze</th>
       <th>Sem hospedagem de dados ou solução de problemas</th>
     </tr>
   </thead>
@@ -37,7 +37,7 @@ Ao decidir qual mecanismo de recomendação se adequa aos seus recursos disponí
     <tr>
       <td><strong>Catálogos CSV</strong></td>
       <td>✔</td>
-      <td>Sim, se estiver usando o Liquid pré-gerado.</td>
+      <td>Sim, se estiver usando Liquid pré-gerado.</td>
       <td>✔</td>
       <td>Sim, se as recomendações <strong>não</strong> forem atualizadas com frequência.</td>
       <td>✔</td>
@@ -62,7 +62,7 @@ Ao decidir qual mecanismo de recomendação se adequa aos seus recursos disponí
       <td></td>
     </tr>
     <tr>
-      <td><strong>Líquido</strong></td>
+      <td><strong>Liquid</strong></td>
       <td></td>
       <td></td>
       <td></td>
@@ -90,22 +90,22 @@ Para criar seu mecanismo de recomendação usando um catálogo:
 
 ### Exemplo
 
-Digamos que você tenha um aplicativo de alimentos saudáveis e queira criar uma campanha de cartão de conteúdo que envie receitas diferentes com base no tempo em que o usuário se inscreveu no aplicativo. Primeiro, crie e carregue um catálogo por meio de um arquivo CSV que inclua as seguintes informações:
+Digamos que você tenha um aplicativo de alimentos saudáveis e queira criar uma campanha de cartão de conteúdo que envie receitas diferentes com base no tempo em que o usuário inscreveu-se em seu app. Primeiro, crie e faça upload de um catálogo por meio de um arquivo CSV que inclua as seguintes informações:
 
 |Campo|Descrição|
 |-----|-----------|
-| **id** | Um número exclusivo que se correlaciona com o número de dias desde que o usuário se inscreveu no seu aplicativo. Por exemplo, `3` está correlacionado a três dias. |
+| **id** | Um número exclusivo que se correlaciona com o número de dias desde que o usuário inscreveu-se no seu app. Por exemplo, `3` está correlacionado a três dias. |
 | **tipo** | A categoria da receita, como `comfort`, `fresh`, e outras. |
-| **título** | O título do cartão de conteúdo que será enviado para cada ID, como "Prepare-se para o almoço desta semana" ou "Vamos fazer um taco sobre isso". |
+| **título** | O título do cartão de conteúdo que será enviado para cada ID, como "Prepare-se para o almoço desta semana" ou "Vamos almoçar tacos". |
 | **link** | O link para o artigo da receita. |
 | **image_url** | A imagem que corresponde à receita. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Depois que o catálogo for carregado no Braze, verifique a visualização de um número selecionado de itens do catálogo para confirmar se as informações foram importadas com precisão. Os itens podem ser randomizados na visualização, mas isso não afetará o resultado do mecanismo de recomendação.
+Depois que for feito o upload do catálogo para a Braze, verifique a prévia de um número selecionado de itens do catálogo para confirmar se as informações foram importadas com precisão. Os itens podem ser randomizados na prévia, mas isso não afetará o resultado do mecanismo de recomendação.
 
-\![Exemplo de catálogo em Braze.]({% image_buster /assets/img/recs/catalog_items.png %})
+![Exemplo de catálogo em Braze.]({% image_buster /assets/img/recs/catalog_items.png %})
 
-Crie uma campanha de cartão de conteúdo. No compositor, insira a lógica Liquid para determinar quais usuários devem receber a campanha e qual receita e imagem devem ser exibidas. Nesse caso de uso, o Braze extrairá o endereço `start_date` do usuário (ou data de inscrição) e o comparará com a data atual. A diferença de dias determinará qual Content Card será enviado.
+Crie uma campanha de cartão de conteúdo. No criador, insira a lógica Liquid para determinar quais usuários devem receber a campanha e qual receita e imagem devem ser exibidas. Nesse caso de uso, o Braze extrairá o endereço `start_date` do usuário (ou data de inscrição) e o comparará com a data atual. A diferença de dias determinará qual cartão de conteúdo será enviado.
 
 {% subtabs local %}
 {% subtab title %}
@@ -154,9 +154,9 @@ Crie uma campanha de cartão de conteúdo. No compositor, insira a lógica Liqui
 
 Por exemplo:
 
-\![Um exemplo de compositor de mensagem de uma campanha de Content Card.]({% image_buster /assets/img/recs/content_card_preview.png %})
+![Um exemplo de criador de mensagens de uma campanha de cartão de conteúdo.]({% image_buster /assets/img/recs/content_card_preview.png %})
 
-Na seção **On click behavior (Comportamento ao clicar** ), insira a lógica Liquid para onde os usuários devem ser redirecionados quando clicarem no Content Card em dispositivos iOS, Android e Web. 
+Na seção **Comportamento ao clicar**, insira a lógica Liquid para onde os usuários devem ser redirecionados quando clicarem no Content Card em dispositivos iOS, Android e Web. 
 
 {% raw %}
 ```liquid
@@ -171,11 +171,11 @@ Na seção **On click behavior (Comportamento ao clicar** ), insira a lógica Li
 
 Por exemplo:
 
-\![Um exemplo de bloco de comportamento ao clicar no compositor.]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
+![Um exemplo de bloco de comportamento ao clicar no criador.]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
 
-Vá para a guia **Teste** e selecione **Usuário personalizado** em **Visualizar mensagem como usuário**. Insira uma data no campo **Atributo personalizado** para visualizar o Content Card que seria enviado a um usuário que se inscreveu nessa data. <br><br>
+Acesse a guia **Teste** e selecione **Usuário personalizado** em **Pré-visualizar mensagem como usuário**. Insira uma data no campo **Atributo personalizado** para prévia do cartão de conteúdo que seria enviado a um usuário que inscreveu-se nessa data. <br><br>
 
-\![Um exemplo de atributo personalizado chamado 'start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
+![Um exemplo de atributo personalizado chamado 'start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 {% endtab %}
 
 {% tab using Connected Content %}
@@ -183,12 +183,12 @@ Para criar seu mecanismo de recomendação usando o Connected Content, primeiro 
 
 |Opção|Descrição|
 |------|-----------|
-|**Converter uma planilha**|Converta uma planilha em um endpoint de API JSON usando um serviço como o SheetDP e anote o URL da API gerado.|
+|**Converter uma planilha**|Converta uma planilha em um ponto de extremidade da API JSON usando um serviço como o SheetDP e anote o URL da API que isso gera.|
 |**Criar um ponto de extremidade personalizado**|Crie, hospede e mantenha um endpoint interno personalizado.|
-|**Use um mecanismo de terceiros** |Usar um mecanismo de recomendação de terceiros, como um de nossos [parceiros do Alloy]({{site.baseurl}}/partners/message_personalization/), incluindo [Amazon Personalise]({{site.baseurl}}/partners/amazon_personalize/), [Certona]({{site.baseurl}}/partners/message_personalization/dynamic_content/personalized_recommendations/certona/), [Dynamic Yield]({{site.baseurl}}/partners/dynamic_yield/) e outros.|
+|**Use um mecanismo de terceiros** |Usar um mecanismo de recomendação de terceiros, como um de nossos [parceiros da Alloys]({{site.baseurl}}/partners/message_personalization/), incluindo [Amazon Personalise]({{site.baseurl}}/partners/amazon_personalize/), [Certona]({{site.baseurl}}/partners/message_personalization/dynamic_content/personalized_recommendations/certona/), [Dynamic Yield]({{site.baseurl}}/partners/dynamic_yield/) e outros.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Em seguida, use o Liquid na mensagem que chama o endpoint para fazer a correspondência de um valor de atributo personalizado com o perfil de um usuário e obter a recomendação correspondente.
+Em seguida, use o Liquid em sua mensagem que chama o endpoint para fazer a correspondência de um valor de atributo personalizado com o perfil de um usuário e extrair a recomendação correspondente.
 
 {% raw %}
 ```liquid
@@ -208,8 +208,8 @@ Substitua o seguinte:
 | Atributo | Substituição |
 | --- | --- |
 |`YOUR_API_URL` | Substitua pelo URL real de sua API. |
-|`RECOMMENDED_ITEM_IDS` | Substitua pelo nome real de seu atributo personalizado que contém os IDs dos itens recomendados. Espera-se que esse atributo seja uma cadeia de IDs separada por ponto e vírgula. |
-|`ITEM_ID` | Substitua pelo nome real do atributo em sua resposta de API que corresponde à ID do item. |
+|`RECOMMENDED_ITEM_IDS` | Substitua pelo nome real de seu atributo personalizado que contém os IDs dos itens recomendados. Espera-se que esse atributo seja uma string de IDs separados por ponto e vírgula. |
+|`ITEM_ID` | Substitua pelo nome real da atribuição em sua resposta da API que corresponde à ID do item. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -229,9 +229,9 @@ Digamos que você queira extrair recomendações de restaurantes do banco de dad
 ```
 {% endraw %}
 
-Em seguida, digamos que você queira obter recomendações de restaurantes com base na cidade e no tipo de comida de um usuário. Você pode fazer isso inserindo dinamicamente os atributos personalizados da cidade e do tipo de alimento do usuário no início da chamada e, em seguida, atribuindo o valor de `restaurants` à variável `city_food.restaurants`.
+Em seguida, digamos que você queira obter recomendações de restaurantes com base na cidade e no tipo de comida de um usuário. Isso pode ser feito inserindo dinamicamente os atributos personalizados da cidade e do tipo de alimento do usuário no início da chamada e atribuindo o valor de `restaurants` à variável `city_food.restaurants`.
 
-A chamada do Connected Content teria a seguinte aparência:
+A chamada do Connected Content seria semelhante a esta:
 
 {% raw %}
 ```liquid
@@ -246,7 +246,7 @@ A chamada do Connected Content teria a seguinte aparência:
 ```
 {% endraw %}
 
-Se você quiser personalizar a resposta para obter apenas o nome e a classificação do restaurante, poderá adicionar filtros ao final da chamada, da seguinte forma:
+Se quiser personalizar a resposta para recuperar apenas o nome e a classificação do restaurante, você pode adicionar filtros à ponta da chamada, da seguinte forma:
 
 {% raw %}
 ```liquid
@@ -265,9 +265,9 @@ Por fim, digamos que você queira agrupar as recomendações de restaurantes por
 
 1. Use `assign` para criar matrizes em branco para categorias de classificação de "excelente", "muito bom" e "bom".
 2. Adicione um loop `for` que examine a classificação de cada restaurante da lista. 
-- Se uma classificação for "Excelente", acrescente o nome do restaurante à cadeia de caracteres `excellent_restaurants` e, em seguida, adicione um caractere * no final para separar cada nome de restaurante. 
-- Se uma classificação for "Muito bom", acrescente o nome do restaurante à cadeia de caracteres `very_good_restaurants` e, em seguida, adicione um caractere * no final.
-- Se uma classificação for "Boa", acrescente o nome do restaurante à cadeia de caracteres `good_restaurants` e, em seguida, adicione um caractere * no final.
+- Se uma classificação for "Excelente", acrescente o nome do restaurante à string `excellent_restaurants` e, em seguida, adicione um caractere * no final para separar cada nome de restaurante. 
+- Se uma classificação for "Muito bom", acrescente o nome do restaurante à string `very_good_restaurants` e, em seguida, adicione um caractere * no final.
+- Se uma classificação for "Boa", acrescente o nome do restaurante à string `good_restaurants` e, em seguida, adicione um caractere * no final.
 3. Limite o número de recomendações de restaurantes retornadas a quatro por categoria.
 
 Esta é a aparência da chamada final:
@@ -284,9 +284,9 @@ Esta é a aparência da chamada final:
 {% for list in restaurants %}
 {% if {{list.restaurant.user_rating.rating_text}} == `Excellent` %}
 {% assign excellent_restaurants = excellent_restaurants | append: list.restaurant.name | append: `*` %}
-{% elseif {{list.restaurant.user_rating.rating_text}} == `Very Good` %}
+{% elsif {{list.restaurant.user_rating.rating_text}} == `Very Good` %}
 {% assign very_good_restaurants = very_good_restaurants | append: list.restaurant.name | append: `*` %}
-{% elseif {{list.restaurant.user_rating.rating_text}} == `Good` %}
+{% elsif {{list.restaurant.user_rating.rating_text}} == `Good` %}
 {% assign good_restaurants = good_restaurants | append: list.restaurant.name | append: `*` %}
 {% endif %}
 {% endfor %}
@@ -328,6 +328,6 @@ Good places
 
 Veja na captura de tela abaixo um exemplo de como a resposta é exibida no dispositivo de um usuário.
 
-\![Renderização de uma lista de restaurantes gerada pela chamada final de exemplo.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
+![Renderização de uma lista de restaurantes gerada pela chamada final do exemplo.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
 {% endtab %}
 {% endtabs %}

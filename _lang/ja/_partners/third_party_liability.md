@@ -1,5 +1,5 @@
 ---
-nav_title: 第三者責任
+nav_title: 第三者の責任
 article_title: 第三者責任
 page_order: 12
 page_type: reference

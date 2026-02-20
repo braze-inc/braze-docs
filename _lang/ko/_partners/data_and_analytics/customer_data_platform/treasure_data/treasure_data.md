@@ -40,7 +40,7 @@ In the **New Authentication** prompt that shows up, name your connection and pro
 
 ![]({% image_buster /assets/img/treasure_data/braze_authentication.png %}){: style="max-width:80%;"}
 
-### Step 2: Define your query
+### 2단계: Define your query
 
 In Treasure Data, navigate to **Queries** under your **Data Workbench** and select a query for which you would like to export data. Run this query to validate the result set.
 
@@ -54,9 +54,9 @@ Next, select **Export Results** and select an existing integration authenticatio
 
 Define additional export results parameters as outlined in the following [customization section](#customization). In your export integration content, review the integration parameters.
 
-![The "Export Results" page. On this page are fields for "mode", "track record type", and "pre-formatted fields". For this example, "User-Track" and "Custom Events" are set to these fields, respectively.]({% image_buster /assets/img/treasure_data/braze_export_configuration.png %}){: style="max-width:80%;"}
+![The "Export Results" page. 이 페이지에는 '모드', '추적 레코드 유형' 및 '미리 서식 지정된 필드'에 대한 필드가 있습니다. 이 예제에서는 '사용자 추적' 및 '커스텀 이벤트'가 각각 이 필드에 설정되어 있습니다.]({% image_buster /assets/img/treasure_data/braze_export_configuration.png %}){: style="max-width:80%;"}
 
-Finally, select **Done**, run your query, and validate that your data moved to Braze.
+마지막으로, **완료**를 선택하고 쿼리를 실행한 다음, 데이터가 Braze로 이동했는지 확인합니다.
 
 ### Customization
 

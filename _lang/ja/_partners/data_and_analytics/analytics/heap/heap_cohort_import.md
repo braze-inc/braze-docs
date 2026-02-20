@@ -21,7 +21,7 @@ Braze と Heap の統合により、[Heap データをBraze にインポート](
 | Heap アカウント | このパートナーシップを利用するには、[Heap](https://heap.io/about)アカウントが必要です。 |
 | Braze データインポートキー | これは、Braze ダッシュボードの [**パートナー連携**] > [**テクノロジーパートナー**] からキャプチャされます。その後 [**Heap**] を選択します。 |
 | Braze REST エンドポイント | [あなたのRESTエンドポイントURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
-| Braze Currents | BrazeからHeapにデータをエクスポートするには、アカウントで[Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents)を有効にする必要があります。 |
+| Braze Currents | BrazeからHeapにデータをエクスポートするには、アカウントで[Braze Currentsを]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents)イネーブルメントにする必要がある。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
@@ -41,7 +41,7 @@ Brazeで [**パートナー連携**] >[**テクノロジーパートナー**] �
 
 ![]({% image_buster /assets/img/heap/heap2.png %}){: style="max-width:90%;"}
 
-### ステップ2: Brazeでインポートされたユーザーをセグメント化する
+### ステップ 2:Brazeでインポートされたユーザーをセグメント化する
 
 Braze で [**セグメント**] に移動し、Heap コホートセグメントに名前を付け、フィルターとして [**セグメントコホート**] を選択します。ここから、どの Heap コホートを含めるかを選択できます。Heap のコホートセグメントを作成したら、キャンペーンまたはキャンバスを作成するときにこのセグメントをオーディエンスフィルターとして選択できます。
 

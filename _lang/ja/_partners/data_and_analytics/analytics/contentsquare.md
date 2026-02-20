@@ -24,7 +24,7 @@ BrazeとContentsquareの統合により、Brazeのカスタムイベントとし
 | ----------- | ----------- |
 | Contentsquare アカウント | このパートナーシップを活用するには、Contentsquare アカウントが必要です。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。Braze ダッシュボードで新しいキーを作成するには、[**設定**] > [**API キー**] に移動します。 |
-| Braze RESTエンドポイント | [RESTエンドポイントのURL]({% image_buster /assets/img/contentsquare_custom_events.png %})。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+| Braze RESTエンドポイント | [REST エンドポイント URL]({% image_buster /assets/img/contentsquare_custom_events.png %})。エンドポイントは、インスタンスのBraze URLに依存する。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
@@ -41,7 +41,7 @@ Contentsquare を Braze に統合するには、Contentsquare 統合カタログ
 
 1. Contentsquare で [**Settings**] メニューの [**Console**] をクリックします。これにより、現在取り組んでいるプロジェクトにリダイレクトされる。 
 2. **Projects**ページで、**Integrations**タブに行き、**\+ Add integration**ボタンをクリックする。
-3. 統合カタログで **Live Signals** 統合を見つけ、[**Add**] をクリックします。その後 Contentsquare チームが、ライブシグナルを Braze に送信するようにコードスニペットを設定することを依頼します。
+3. 統合カタログで **Live Signals** 統合を見つけ、[**Add**] をクリックします。その後、コンテンツスクエアチームは、ライブシグナルをBrazeに送信するようにコードの断片を設定するために、あなたに連絡します。
 4. Contentsquare により統合が処理されます。インジケーターのテキストは、統合完了後に更新される。
 
 詳細については、「[Contentsquareの統合をリクエストする](https://uxanalyser.zendesk.com/hc/en-gb/articles/4405613239186)」を参照のこと。

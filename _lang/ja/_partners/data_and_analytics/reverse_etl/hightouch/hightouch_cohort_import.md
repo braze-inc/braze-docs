@@ -17,10 +17,10 @@ Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**H
 
 ここで、RESTエンドポイントを見つけて、Brazeデータインポートキーを生成します。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。<br><br>![]({% image_buster /assets/img/hightouch/data_import_key.png %}){: style="max-width:90%;"} 
 
-### ステップ2: Hightouch で Braze コホートを宛先として追加する
+### ステップ 2:Hightouch で Braze コホートを宛先として追加する
 Hightouch ワークスペースの**Destination**ページに移動し、**Brazeコホート**を検索し、**Continue**をクリックします。そこから、REST エンドポイントとデータインポートキーを取り出し、**Continue**をクリックします。<br><br>![]({% image_buster /assets/img/hightouch/cohort1.png %}){: style="max-width:90%;"}
 
-### ステップ 3: モデル(またはオーディエンス)をBrazeコホートに同期する
+### ステップ 3:モデル(またはオーディエンス)をBrazeコホートに同期する
 Hightouch では、作成した[モデル](https://hightouch.io/docs/getting-started/create-your-first-sync/#create-a-model) または[オーディエンス](https://hightouch.io/docs/audiences/usage/) を使用して、新しい同期を作成します。次に、前のステップで作成した Braze コホート宛先を選択します。最後に Braze コホート宛先設定で、照合する識別子を選択し、Hightouch で新しい Braze コホートを作成するか、既存のコホートを更新するかを決定します。<br><br>![]({% image_buster /assets/img/hightouch/cohort2.png %}){: style="max-width:90%;"}
 
 {% alert important %}

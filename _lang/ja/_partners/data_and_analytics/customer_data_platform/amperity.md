@@ -66,7 +66,7 @@ AmperityからBrazeに同期されたオーディエンスは、カスタム属�
 
 ![カスタムデータカテゴリに表示されるカスタム属性を持つフィルタのドロップダウンリスト。]({% image_buster /assets/img/amperity/custom_attributes_filters.png %}){: style="max-width:60%;"}
 
-![l12m_frequency" や "l12m_monetary" などのカスタム属性のドロップダウンリスト。]({% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}){: style="max-width:40%;"}
+!["l12m_frequency" や"l12m_monetary".]({% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}などのカスタム属性のドロップダウンリスト){: style="max-width:40%;"}
 
 ### データ型
 
@@ -120,7 +120,7 @@ Amperity プラットフォームで [**Destinations**] タブに移動します
 - `braze_id`:自動的に割り当てられるBrazeの識別子で、Brazeで作成されたときに特定のユーザーに関連付けられ、変更できない。
 - `external_id`:顧客が割り当てた識別子で、通常はUUIDである。 
 
-![インスタンスが「US-03」、ユーザー ID が「external_id」、セグメント名が空白、S3 バケットが「amperity-training-abc123」、S3 フォルダーが「braze-attributes」である「Braze Settings」セクション。]({% image_buster /assets/img/amperity/braze_settings.png %}){: style="max-width:60%;"}
+![Braze設定セクションのインスタンスは "US-03"、ユーザー識別子は"external_id", 、セグメント名は空白、S3バケットは "amperity-training-abc123"、S3フォルダは "braze-attributes "である。]({% image_buster /assets/img/amperity/braze_settings.png %}){: style="max-width:60%;"}
 
 #### ステップ2e:データ・テンプレートを追加する
 

@@ -1,5 +1,5 @@
 ---
-nav_title: クラウドデータ取り込み
+nav_title: クラウドデータの取り込み
 article_title: クラウドデータ取り込みエンドポイント
 search_tag: Endpoint
 page_order: 0.5

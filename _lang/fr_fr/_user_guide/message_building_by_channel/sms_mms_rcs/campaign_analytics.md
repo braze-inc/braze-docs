@@ -1,5 +1,5 @@
 ---
-nav_title: "Rapports"
+nav_title: "Reporting"
 article_title: "Rapports pour les SMS, MMS et RCS"
 page_order: 12
 description: "Cet article de référence couvre les indicateurs SMS, MMS et RCS utilisés chez Braze, ainsi que la manière de les visualiser dans vos campagnes SMS, MMS et RCS."

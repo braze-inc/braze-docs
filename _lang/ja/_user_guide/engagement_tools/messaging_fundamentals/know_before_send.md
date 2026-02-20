@@ -3,7 +3,7 @@ nav_title: 送る前に知っておこう
 article_title: 送る前に知っておこう
 description: "私たちのプレローンチガイドを訪問した後、コンテンツカード、メール、アプリ内メッセージ、プッシュ、SMSについては、この最終的なチェックリストまたは「gotcha」を参照してください。"
 alias: /know_before_send/
-page_order: 10.2
+page_order: 7
 tool:
     - Campaigns
     - Canvas
@@ -20,7 +20,7 @@ tool:
 ## 全般的な質問
 
 #### 確認事項
-- [**API レート制限**](https://braze.com/resources/articles/whats-rate-limiting): ワークスペースでエラーが発生しないように、Braze API [レート制限]({{site.baseurl}}/api/api_limits/) を確認してください。レート制限の引き上げを検討している （すでにリクエストをバッチ処理している) 場合は、カスタマーサクセスマネージャーにお問い合わせください。このプロセスにはリードタイムが必要であることを念頭に置いて、計画を立ててください。
+- [**API レート制限**](https://braze.com/resources/articles/whats-rate-limiting): ワークスペースでエラーが発生しないように、Braze API [レート制限]({{site.baseurl}}/api/api_limits/) を確認してください。レート制限を増やしたい（すでにバッチ処理をしている）場合は、カスタマー・サクセス・マネージャーに連絡する。このプロセスにはリードタイムが必要であることを念頭に置いて、計画を立ててください。
 - [**必要なフリークエンシーキャップの無効化**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping): いくつかのキャンペーン、例えばトランザクションメッセージなどは、たとえ頻度制限に達していても、常にユーザーに届くようにしたいものです（例えば、配達通知）。特定のキャンペーンでフリークエンシーキャップルールを無効にしたい場合は、フリークエンシーキャップをオフに切り替えて、そのキャンペーンの配信をスケジュールするときに Braze ダッシュボードで設定できます。
 
 #### 知っておくべきこと
@@ -46,12 +46,12 @@ tool:
 - **送信ボリュームの決定要素**: IP に対応する送信ボリュームを決定する要素には、次のものがあります。
   - メールボックス:大手のメールプロバイダーは、単一のIPから1日に数百万通を処理できる可能性がありますが、地域の小規模なメールボックスプロバイダーやインフラが小規模なプロバイダーは、その量を処理できないかもしれません。
   - 送信者レピュテーション: 送信者が送信ボリュームを増やし、送信先の各メールボックスまたはドメインでの送信者のレピュテーションが十分に高い場合は、単一 IP からの1日あたりの送信ボリュームを増やせる可能性があります。
-- **ベストプラクティス**: Braze の[メールのベストプラクティス]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices)を確認し、配信サービスについて詳しく知りたい場合は Braze アカウントチームにお問い合わせください。
+- **ベストプラクティス**: Braze[メールのベストプラクティスを]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices)学習し、配信サービスについて詳しく知りたい場合は、Brazeアカウントチームに連絡する。
 
 ## プッシュ
 
 #### 確認事項
-- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/):ユーザーが Braze からプッシュメッセージを受信するには、サブスクリプションステータスがオプトイン済み (iOS) またはサブスクリプション登録済み (Android) および `Push Enabled = True` になっている必要があります。Android 13では、ユーザーsがプッシュ通知sを送信するアプリsを管理する方法に大きな変更を導入していることに注意してください。Braze [Android 13 SDK アップグレードガイド]({{site.baseurl}}/developer_guide/platforms/android/android_13/) は、新しい Android 13 ベータ版がリリースされるたびに更新され続けます。
+- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/):ユーザーが Braze からプッシュメッセージを受信するには、サブスクリプションステータスがオプトイン済み (iOS) またはサブスクリプション登録済み (Android) および `Push Enabled = True` になっている必要があります。Android 13では、ユーザーがプッシュ通知sを送信するアプリsを管理する方法に大きな変更を導入していることに注意してください。Braze [Android 13 SDK アップグレードガイド]({{site.baseurl}}/developer_guide/platforms/android/android_13/) は、新しい Android 13 ベータ版がリリースされるたびに更新され続けます。
 
 #### 知っておくべきこと
 - **Web プッシュ**:Braze [Web SDK のセットアップ]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) がある場合は、ユーザーを引き付けるために Web プッシュを利用することを検討してください。Web プッシュは、スマートフォンでのアプリのプッシュ通知と同様に機能します。Web プッシュの作成に関する詳細については、[プッシュ通知の作成]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)をチェックしてください。
@@ -84,7 +84,7 @@ tool:
 
 #### 知っておくべきこと
 - **Liquid のパーソナライゼーション:**リキッドパーソナライゼーションは、リフレッシュリクエストごとにリフレッシュされる。
-- **配置とバナーの比率:**各バナーの配置は、ワークスペース内の最大10件のキャンペーンで使用できます。  
+- **配置とバナーの比率:**各バナーの配置は、ワークスペース内で最大25メッセージまで使用できる。  
 - **クリック数とインプレッション数:**バナーのクリック数とインプレッション数は SDK で自動的に追跡されます。
 - **制限事項:** 現在サポートされていない機能はキャンバスとの統合、APIトリガーおよびアクションベースのキャンペーン、コネクテッドコンテンツ、プロモーションコード、ユーザーコントロールによる解除、[`:rerender` タグを]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)使用した`catalog_items` 。
 - **テスト:**テストバナーを表示するには、使用しているデバイスがフォアグラウンドプッシュ通知を受信できる必要があります。
@@ -103,7 +103,8 @@ tool:
 - **コンテンツカードの更新**: デフォルトでは、Braze は、セッション開始時、フィードダウンスワイプ時 (モバイル)、および最後の更新が1分以上前の場合はカードビューが開かれたときに、コンテンツ カードリクエストを同期して更新します。
 - **コンテンツカードのキャッシュ**: コンテンツカードのキャッシュオプションは、当社の[Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android)および[Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards)のドキュメントにあります。 
 - **フリークエンシーキャップ**:フリークエンシーキャップは、コンテンツカードには適用されません。
-- **インプレッション**: 印象は一般的にカードが見られたときに記録されます。例えば、受信トレイがコンテンツカードでいっぱいの場合、ユーザーが特定のコンテンツカードまでスクロールするまでインプレッションは記録されません。Web、Android、iOS の各プラットフォームには若干の違いがあります。  
+- **インプレッション**: 印象は一般的にカードが見られたときに記録されます。例えば、受信トレイがコンテンツカードでいっぱいの場合、ユーザーが特定のコンテンツカードまでスクロールするまでインプレッションは記録されません。Web、Android、iOS の各プラットフォームには若干の違いがあります。
+- **SDKセッションとカード作成**：SDKセッションを持たないユーザーがセグメンテーション条件を満たしていても、コンテンツカードは作成されない。しかし、ユーザーがすでにAndroidセッションを持っている場合、iOS固有のクリックアクションを持つコンテンツカードは引き続き作成され、ユーザーがiOSでセッションを持てば、iOSでそれらのコンテンツカードを見ることができる。カードが作成されるタイミングについては、[カード作成を]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/)参照のこと。  
 
 ## アプリ内メッセージ
 

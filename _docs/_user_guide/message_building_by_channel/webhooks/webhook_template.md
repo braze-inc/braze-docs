@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a webhook template
-article_title: Creating a Webhook Template
+nav_title: Create a webhook template
+article_title: Create a Webhook Template
 page_order: 2
 tool:
   - Templates
@@ -10,7 +10,7 @@ description: "This reference article covers how to create and customize webhook 
 
 ---
 
-# Creating a webhook template
+# Create a webhook template
 
 > As you build and customize your webhooks, you can create and leverage webhook templates for later use within the Braze platform. This way, you can consistently build a variety of webhooks across your different campaigns.
 

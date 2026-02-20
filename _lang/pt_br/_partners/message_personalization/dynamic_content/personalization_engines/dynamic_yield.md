@@ -1,7 +1,7 @@
 ---
 nav_title: Rendimento dinâmico
 article_title: Rendimento dinâmico
-description: "Esse artigo de referência descreve a parceria entre a Braze e a Dynamic Yield. Essa parceria permite que você aproveite o mecanismo de recomendação e segmentação da Dynamic Yield para criar blocos de experiência que podem ser incorporados às mensagens do Braze."
+description: "Esse artigo de referência descreve a parceria entre a Braze e a Dynamic Yield. Essa parceria permite que você use o mecanismo de recomendação e segmentação da Dynamic Yield para criar blocos de experiência que podem ser incorporados às mensagens do Braze."
 alias: /partners/dynamic_yield/
 page_type: partner
 search_tag: Partner
@@ -16,7 +16,7 @@ _Essa integração é mantida pela Dynamic Yield._
 
 ## Sobre a integração
 
-A parceria entre o Braze e a Dynamic Yield permite que você aproveite o mecanismo de recomendação e segmentação da Dynamic Yield para criar blocos de experiência que podem ser incorporados às mensagens do Braze. Os blocos de experiência podem ser compostos por:
+A parceria entre o Braze e a Dynamic Yield permite que você use o mecanismo de recomendação e segmentação da Dynamic Yield para criar blocos de experiência que podem ser incorporados às mensagens do Braze. Os blocos de experiência podem ser compostos por:
 - **Blocos de recomendações**: Defina algoritmos e filtros para obter o conteúdo personalizado dos usuários que se propaga quando o e-mail é aberto. 
 - **Blocos de conteúdo dinâmico**: Direcione diferentes promoções e mensagens para diferentes usuários. O direcionamento pode se basear em afinidade ou público. O Dynamic Yield determina qual experiência personalizada será oferecida quando o e-mail for aberto. 
 
@@ -70,7 +70,7 @@ Use o Dynamic Content para direcionar promoções e mensagens diferentes para us
 5. Defina as prioridades de suas variações usando as setas para cima e para baixo. <br><br> 
 6. As prioridades determinam qual variação é atendida quando um usuário é elegível para mais de uma experiência.
 
-### Etapa 3: integre seu e-mail com a Braze
+### Etapa 3: Integre seu e-mail com o Braze
 
 Essa integração permite adicionar widgets de recomendação personalizados e conteúdo dinâmico com a tecnologia Dynamic Yield em suas campanhas de e-mail do Braze. A incorporação dessas campanhas nas campanhas do Braze é feita com um código de incorporação simples que você cola no editor de e-mail do Braze.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:カスタムイベントのエクスポート"
+nav_title: "取得:カスタムイベントをエクスポート"
 article_title: "取得:カスタムイベントのエクスポート"
 search_tag: Endpoint
 page_order: 4
@@ -28,7 +28,7 @@ description: "この記事では、エクスポートカスタムイベントBra
 
 このエンドポイントへの各呼び出しは50のイベントを返すことに注意してください。50を超えるイベントについては、次の応答の例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
 | `cursor` | オプション | 文字列 | カスタムイベントのページネーションを決定します。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -54,8 +54,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/events?cursor=c2tpc
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [

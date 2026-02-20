@@ -21,7 +21,7 @@
 デフォルトユーザー属性を設定するには、共有`Braze.User` オブジェクトの該当フィールドを設定する。以下は名属性の設定例です。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(firstName: "Alex")
@@ -42,7 +42,7 @@ AppDelegate.braze?.user.set(firstName: "Alex")
 デフォルトのユーザー属性を解除するには、関連するメソッドに`nil` 。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(firstName: nil)
@@ -69,7 +69,7 @@ AppDelegate.braze?.user.set(firstName: nil)
 ### カスタム属性の設定
 
 {% tabs local %}
-{% tab ストリング %}
+{% tab string %}
 `string` 、カスタム属性を設定する：
 
 {% subtabs %}
@@ -87,7 +87,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "yo
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 整数 %}
+{% tab integer %}
 `integer` 、カスタム属性を設定する：
 
 {% subtabs %}
@@ -105,7 +105,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 浮動小数点 %}
+{% tab floating-points %}
 Braze では、データベース内での `float` 値と `double` 値の扱いが同じです。カスタム属性に2倍の値を設定する：
 
 {% subtabs %}
@@ -123,7 +123,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endsubtabs %}
 {% endtab %}
 
-{% tab ブーリアン %}
+{% tab boolean %}
 `boolean` 、カスタム属性を設定する：
 
 {% subtabs %}
@@ -141,7 +141,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBool
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 日付 %}
+{% tab date %}
 `date` 、カスタム属性を設定する：
 
 {% subtabs %}
@@ -159,8 +159,8 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 配列 %}
-[カスタム属性配列]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)内の要素の最大数は、デフォルトで 25 に設定されています。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。個々の配列の最大数は、100 まで増やすことができます。この最大数を増やす必要がある場合は、カスタマーサービスマネージャーに連絡してください。
+{% tab array %}
+[カスタム属性配列]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)内の要素の最大数は、デフォルトで 25 に設定されています。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。個々の配列の最大数は、100 まで増やすことができます。この上限を引き上げたい場合は、顧客サービスマネージャーに連絡すること。
 
 `array` 、カスタム属性を設定する：
 
@@ -197,7 +197,7 @@ AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value:
 このコードは、カスタム属性のインクリメントの例です。カスタム属性の値は、`integer` または`long` ：
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", by: incrementIntegerValue)
@@ -239,7 +239,7 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 また、カスタム属性の中にプロパティを入れ子にすることもできる。以下の例では、階層化プロパティを持つ`favorite_book` オブジェクトが、ユーザープロファイルのカスタム属性として設定されている。詳しくは、[階層化カスタム]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)属性を参照のこと。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 ```swift
 let favoriteBook: [String: Any?] = [
   "title": "The Hobbit",
@@ -286,7 +286,7 @@ NSDictionary *favoriteBook = @{
 ### メールサブスクリプションの設定
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(emailSubscriptionState: Braze.User.SubscriptionState)
@@ -305,7 +305,7 @@ AppDelegate.braze?.user.set(emailSubscriptionState: Braze.User.SubscriptionState
 ### プッシュ通知サブスクリプションの設定
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(pushNotificationSubscriptionState: Braze.User.SubscriptionState)

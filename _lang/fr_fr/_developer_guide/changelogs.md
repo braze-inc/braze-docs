@@ -12,8 +12,7 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Journaux de modifications SDK Braze
@@ -21,6 +20,14 @@ platform:
 > Cette page de référence comprend les journaux des modifications pour chaque SDK Braze et un lien vers le journal des modifications dans leur dépôt GitHub public. Pour obtenir la liste complète des ressources, consultez les [références, les référentiels et les exemples d'applications.]({{site.baseurl}}/developer_guide/references/)
 
 {% sdktabs %}
+{% sdktab web %}
+{% alert tip %}
+Vous pouvez également trouver une copie du [journal des modifications du SDK Braze sur GitHub](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md).
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% alert tip %}
 Vous pouvez également trouver une copie du [journal des modifications du SDK Android Braze sur GitHub](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md).
@@ -35,14 +42,6 @@ Vous pouvez également trouver une copie du [journal des modifications du SDK Br
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-swift-sdk/main/CHANGELOG.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% alert tip %}
-Vous pouvez également trouver une copie du [journal des modifications du SDK Braze sur GitHub](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md).
-{% endalert %}
-
-{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
@@ -85,17 +84,9 @@ Vous pouvez également trouver une copie du [journal des modifications du SDK d'
 {% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-unity-sdk/master/CHANGELOG.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% alert tip %}
-Vous pouvez également trouver une copie du [journal des modifications du SDK Braze d'Unreal Engine sur GitHub](https://github.com/braze-inc/braze-unreal-sdk/blob/master/CHANGELOG.md).
-{% endalert %}
-
-{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-unreal-sdk/master/CHANGELOG.md %}
-{% endsdktab %}
-
-{% sdktab xamarin %}
-{% alert tip %}
-Vous pouvez également trouver une copie du [journal des modifications du SDK Xamarin Braze sur GitHub](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md).
+Vous pouvez également trouver une copie du [ journal des modifications du SDK .NET MAUI Braze sur GitHub](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md).
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-xamarin-sdk/master/CHANGELOG.md %}

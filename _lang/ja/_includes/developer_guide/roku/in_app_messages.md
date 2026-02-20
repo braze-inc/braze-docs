@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/roku.md %} さらに、アプリ内メッセージs は、サポートされている最低SDKバージョンを実行しているRoku デバイスにのみ送信されます。
+{% multi_lang_include developer_guide/prerequisites/roku.md %} また、アプリ内メッセージは、最低限サポートされているSDKバージョンを実行しているRokuデバイスにのみ送信される：
 
 {% sdk_min_versions roku:0.1.2 %}
 
@@ -19,7 +19,7 @@
 m.BrazeTask.observeField("BrazeInAppMessage", "onInAppMessageReceived")
 ```
 
-### ステップ 2:接続トリガーメッセージs
+### ステップ 2:トリガーメッセージにアクセスする
 
 次に、ハンドラ内で、キャンペーンでトリガーされた最上位のアプリ内メッセージにアクセスできます。
 
@@ -30,9 +30,9 @@ sub onInAppMessageReceived()
 end sub
 ```
 
-## メールフィールド設定
+## メッセージフィールド
 
-### 取扱い
+### ハンドリング
 
 以下は、アプリ内メッセージを処理するために必要なフィールドのリストです。
 

@@ -11,7 +11,7 @@ channel:
 
 # プッシュアクションボタン
 
-![2つのプッシュアクションボタンを持つiOSのプッシュ通知：受諾と拒否]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![2つのプッシュアクションボタンを備えたiOSのプッシュ通知：受諾と拒否]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > プッシュアクションボタンを使用すると、BrazeのiOSおよびAndroidプッシュ通知を使用する際に、ボタンのコンテンツとアクションを設定できる。アクションボタンを使用すると、ユーザーはアプリエクスペリエンスをクリックすることなく、通知からアプリと直接対話できます。
 
@@ -36,7 +36,7 @@ iOSのプッシュ・メッセージでアクション・ボタンを使うに�
  - もっと見る
  - 事前登録されたカスタムiOSカテゴリー
 
-![iOS通知カテゴリのドロップダウンメニュー。]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
+![iOS 通知カテゴリドロップダウンメニュー。]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
 iOS でのボタンの処理に起因して、プッシュアクションボタンを設定するときには追加の連携手順を実行する必要があります。これらの手順は、当社の[開発者ドキュメント]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories)で概説しています。特に、iOSカテゴリーを設定するか、特定のデフォルトボタンオプションから選択する必要がある。Android との連携の場合、これらのボタンは自動的に機能します。
@@ -53,7 +53,7 @@ Androidのプッシュ・メッセージでアクション・ボタンを使う�
   - ウェブURLにリダイレクトする
   - [アプリケーションへのディープリンク]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/)
 
-![通知ボタンのクリック時の動作として「アプリ開封」を選択する。]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
+!["Open App"を通知ボタンのオンクリック動作として選択します。]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
 
 プッシュのボタンは3つまで追加できる。
 
@@ -61,7 +61,7 @@ Androidのプッシュ・メッセージでアクション・ボタンを使う�
 
 重ねて表示されるiOSのボタンとは異なり、Androidのボタンは横一列に並んで表示される。つまり、追加するボタンが増えるほど (最大 3 つ)、ボタンの説明のスペースは少なくなります。 
 
-![Androidのプッシュアクションボタンが文字化けしている。]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
+![切り捨てられた文字を含むAndroid プッシュアクションボタン。]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
 
 次の表に、ボタンのテキストが切り詰められるまでに追加できる文字数を、ボタンの数に応じて示します。
 

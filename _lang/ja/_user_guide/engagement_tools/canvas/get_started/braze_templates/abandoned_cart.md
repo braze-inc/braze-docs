@@ -34,24 +34,16 @@ tool: Canvas
 
 1. テンプレート名の横にある**編集**を選択します。
 
-<<<<<<< HEAD
 ![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
-=======
-\![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
->>>>>>> main
 
 {:start="2"}
 2\.キャンバス名を更新し、カートを放棄したユーザーをターゲットとするキャンバスであることを示すようにします。
 3\.説明を更新し、ユーザーに最新の季節のキッチン用品の購入を促すことを目的としているキャンバスであることを明記します。
 4. **Abandon Cart** というタグを追加し、キャンバスのホームページでフィルターできるようにします。
 
-<<<<<<< HEAD
 ![キャンバスの新しい名前、説明、およびタグ。]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
-=======
-\![キャンバスの新しい名前、説明、およびタグ。]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
->>>>>>> main
 
-### ステップ 2: コンバージョンイベントを割り当てる
+### ステップ 2:コンバージョンイベントを割り当てる
 
 次に、コンバージョンイベントを割り当てよう。ここでは「Enormous Paper Plate」製品を中心に扱うため、**1次コンバージョンイベント A**について次の作業を行います。
 
@@ -59,11 +51,7 @@ tool: Canvas
 2. [**特定の購入**] を選択します。これにより、特定の製品名を選択できるようになります。
 3. [**Enormous Paper Plate**] を選択します。
 
-<<<<<<< HEAD
-![プライマリコンバージョンイベント - コンバージョン種別 & quot; Purchase" 製品名 & quot; 膨大なペーパープレート & quot; を使用します。コンバージョンの期限は3日間である。]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
-=======
-\![プライマリコンバージョンイベント - コンバージョン種別 & quot; Purchase" 製品名 & quot; 膨大なペーパープレート & quot; を使用します。コンバージョンの期限は3日間である。]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
->>>>>>> main
+![「1次コンバージョンイベント - A」でコンバージョンタイプとして「購入」、製品名として「Enormous Paper Plate」が選択されている。コンバージョンの期限は3日間である。]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
 
 ### ステップ 3:エントリスケジュールを設定する
 
@@ -74,31 +62,19 @@ tool: Canvas
 3. エントリ期間の開始日時を選択します。
 4. ユーザーがローカルタイムゾーンでエントリできるようにするオプションを選択します。最適なタイミングでメッセージを送ることで、メッセージングの関連性を保ち、エンゲージメントを高めることができる。
 
-<<<<<<< HEAD
-![カートを捨てたユーザーを対象にしたアクション系キャンバス。2024年10月15日午後3時20分、ユーザーのローカルタイムゾーンのエントリ窓口。]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
-=======
-\![カートを捨てたユーザーを対象にしたアクション系キャンバス。2024年10月15日午後3時20分、ユーザーのローカルタイムゾーンのエントリ窓口。]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
->>>>>>> main
+![カートを放棄したユーザーをターゲットにするアクションベースのキャンバス。エントリ期間には、ユーザーのローカルタイムゾーンで2024年10月15日午後3時20分が設定されている。]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
 
-### ステップ 4: キャンバスにエントリするユーザーを決定する
+### ステップ 4:キャンバスにエントリするユーザーを決定する
 
 次に、ターゲット・オーディエンスを、過去90日以内に当社でオンラインショッピングをしたことがあるユーザーと定義しよう。これにより、当社の製品にエンゲージメントがあるとわかっているユーザーにオーディエンスを絞り込むことができる。 
 
-<<<<<<< HEAD
-!["Online Shoppers Segment - 90 Days"は、このキャンバスの対象となるユーザーのSegmentです。]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
-=======
-\!["Online Shoppers Segment - 90 Days"は、このキャンバスの対象となるユーザーのSegmentです。]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
->>>>>>> main
+![このキャンバスのターゲットとするユーザーのセグメントとして「Online Shoppers Segment - 90 Days」が設定されている。]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
 
 エントリのコントロールは変更しません。このためユーザーはこのキャンバスに再度エントリできません。このキャンバスにエントリできるユーザーの数に制限はありません。
 
 終了条件として、ユーザーは「Enormous Paper Plate」を購入した場合にキャンバスを離脱します。これにより、すでに購入した商品に関するメッセージを今後受け取ることがなくなります。
 
-<<<<<<< HEAD
-![巨大なペーパープレートのために、特定の購買を行うユーザーを決定する終了基準は、キャンバスを終了します。]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
-=======
-\![巨大なペーパープレートのために、特定の購買を行うユーザーを決定する終了基準は、キャンバスを終了します。]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
->>>>>>> main
+![Enormous Paper Plate を購入したユーザーがキャンバスから離脱することを指定する終了条件。]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
 
 ### ステップ 5: 送信設定を選択する
 
@@ -111,22 +87,14 @@ tool: Canvas
 1. アクションパスのステップを選択し、**Made purchase**アクショングループ名を選択する。
 2. ［**購入**] で ［**特定の購入**] を選択し、製品として ［**Enormous Paper Plate**] を選択します。終了基準と同様に、この商品を購入したユーザーはキャンバスから退出する。
 
-<<<<<<< HEAD
-!["made purchase"ユーザーが膨大なペーパープレートを買うとキャンバスを終了するアクション群。]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
-=======
-\!["made purchase"ユーザーが膨大なペーパープレートを買うとキャンバスを終了するアクション群。]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
->>>>>>> main
+![ユーザーが Enormous Paper plate を購入するとキャンバスを離脱する「購入しました」アクショングループ。]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
 
 {: start="3"}
 3\.メッセージステップで [**メッセージを編集**] を選択し、ユーザーに送信するメールをカスタマイズして、放棄カートに商品があることを通知する内容にします。
 4. 遅延ステップはそのままにしておきます。
 5. オーディエンスパスのステップに続くメッセージのステップでは、ユーザーが受け取るメールとSMSメッセージをカスタマイズする。そこで、パーソナライズされたメッセージングでユーザーに商品の購入を促したい。
 
-<<<<<<< HEAD
-![ユーザー s が受信するSMS のプレビュー:"こんにちは、巨大な紙皿をカートに置き忘れたね！今すぐ購入手続きを完了して、おもてなしをレベルアップしましょう。会計時にコード「MYPLATE」を使用すると、注文が20％オフになる！"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
-=======
-\![ユーザー s が受信するSMS のプレビュー:"こんにちは、巨大な紙皿をカートに置き忘れたね！今すぐ購入手続きを完了して、おもてなしをレベルアップしましょう。会計時にコード「MYPLATE」を使用すると、注文が20％オフになる！"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
->>>>>>> main
+![ユーザーが受け取るSMSメッセージのプレビュー："こんにちは、巨大な紙皿をカートに置き忘れたね！今すぐ購入手続きを完了して、おもてなしをレベルアップしましょう。会計時にコード「MYPLATE」を使用すると、注文が20％オフになる！"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
 
 {: start="6"}
 6. 次のアクションパスステップで、[**購入済み**] アクショングループを選択します。［**特定の購入**] を選択し、製品として ［**Enormous Paper Plate**] を選択します。このステップでは、製品を購入したユーザーを退出させ、これらのユーザーが今後メッセージを受け取らないようにすることで、最初のアクションパスステップをミラーリングします。

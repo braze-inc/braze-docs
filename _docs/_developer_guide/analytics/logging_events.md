@@ -1,12 +1,12 @@
 ---
-nav_title: Logging custom events
-article_title: Logging custom events through the Braze SDK
+nav_title: Log custom events
+article_title: Log custom events through the Braze SDK
 page_order: 3.1
 description: "Learn how to log custom events through the Braze SDK."
 
 ---
 
-# Logging custom events
+# Log custom events
 
 > Learn how to log custom events through the Braze SDK.
 
@@ -108,12 +108,6 @@ m.Braze.logEvent("YOUR_EVENT_NAME")
 {% tab unity %}
 ```csharp
 AppboyBinding.LogCustomEvent("YOUR_EVENT_NAME");
-```
-{% endtab %}
-
-{% tab unreal engine %}
-```cpp
-UBraze->LogCustomEvent(TEXT("YOUR_EVENT_NAME"));
 ```
 {% endtab %}
 {% endtabs %}
@@ -251,20 +245,6 @@ m.Braze.logEvent("YOUR_EVENT_NAME", {"stringPropKey" : "stringPropValue", "intPr
 {% tab unity %}
 ```csharp
 AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>));
-```
-{% endtab %}
-
-{% tab unreal engine %}
-```cpp
-TMap<FString, FString> Properties;
-Properties.Add(TEXT("you"), TEXT("can"));
-Properties.Add(TEXT("pass"), TEXT("false"));
-Properties.Add(TEXT("orNumbers"), FString::FromInt(42));
-Properties.Add(TEXT("orDates"), FDateTime::Now().ToString());
-Properties.Add(TEXT("or"), TEXT("any,array,here")); // Arrays are stored as comma-separated strings
-Properties.Add(TEXT("andEven"), TEXT("deeply:nested,json"));
-
-UBraze->LogCustomEventWithProperties(TEXT("YOUR_EVENT_NAME"), Properties);
 ```
 {% endtab %}
 {% endtabs %}

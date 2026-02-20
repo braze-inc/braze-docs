@@ -9,7 +9,7 @@ hidden: true
 이 페이지는 일반 토큰, 메타 시퀀스, 일반 토큰, 그룹 상수 등을 포함한 정규표현식에 대한 빠른 참조 가이드 역할을 합니다.
 
 {% tabs %}
-{% tab 공통 토큰 %}
+{% tab Common tokens %}
 
 | 공통 토큰 |
 | ------------- |
@@ -38,7 +38,7 @@ hidden: true
 | 단어가 없는 경계 | `\B` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab 메타 시퀀스 %}
+{% tab Meta sequence %}
 
 | 메타 시퀀스 |
 | ------------- |
@@ -77,7 +77,7 @@ hidden: true
 | 모든 문자를 리터럴로 만듭니다. | `\` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab 일반 토큰 %}
+{% tab General tokens %}
 
 | 일반 토큰 |
 | -------------- |
@@ -88,7 +88,7 @@ hidden: true
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 문자 클래스 수정자 %}
+{% tab Character class modifiers %}
 
 | 문자 클래스 수정자 |
 | ------------------------- |
@@ -109,7 +109,7 @@ hidden: true
 | 단어 문자 | `[:>:]` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab 그룹 상수 %}
+{% tab Group constants %}
 
 | 그룹 상수 |
 | --------------- |
@@ -166,7 +166,7 @@ hidden: true
 | 정규식 엔진 수정자 | `(*NO_START_OPT)` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab 수량화 %}
+{% tab Quantifiers %}
 
 | 수량화 |
 | ----------- |
@@ -181,7 +181,7 @@ hidden: true
 | 퍼제시브 수량화 | `a*+` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab 앵커 %}
+{% tab Anchors %}
 
 | 앵커 |
 | ------- |
@@ -196,7 +196,7 @@ hidden: true
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab 플래그 및 수정자 %}
+{% tab Flags and modifiers %}
 
 | 플래그 및 수정자 |
 | ------------------- | 
@@ -213,7 +213,7 @@ hidden: true
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 대체 %}
+{% tab Substitution %}
 
 | 대체 |
 | ------------ |

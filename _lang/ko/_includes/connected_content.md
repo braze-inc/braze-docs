@@ -19,7 +19,7 @@
 연결된 콘텐츠는 기본적으로 POST 호출도 캐시하지 않습니다. 이 동작은 연결된 콘텐츠 POST 호출에 `:cache_max_age` 을 추가하여 업데이트할 수 있습니다.
 
 {% tabs %}
-{% tab 기본값 콘텐츠 유형 %}
+{% tab Default content-type %}
 
 {% raw %}
 ```js
@@ -28,7 +28,7 @@
 {% endraw %}
 
 {% endtab %}
-{% tab 애플리케이션/JSON 콘텐츠 유형 %}
+{% tab Application/JSON Content-Type %}
 
 {% raw %}
 ```js

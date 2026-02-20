@@ -11,13 +11,13 @@ search_rank: 7
 
 その他のイベントの種類にアクセスする必要がある場合は、Braze の担当者に問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。このページで必要なものが見つからない場合は、[メッセージ・エンゲージメント・イベント・ライブラリーや]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) [Currentsのサンプルデータ例を](https://github.com/Appboy/currents-examples/tree/master/sample-data)ご覧いただきたい。
 
-{% details 顧客行動とユーザーイベント構造およびプラットフォームの価値の説明 %}
+{% details Explanation of customer behavior and user event structure and platform values %}
 
 ### イベントの構造
 
 この顧客行動とユーザーイベントの内訳は、一般的に顧客行動やユーザーイベントに含まれる情報のタイプを示します。開発者とビジネスインテリジェンス戦略チームは、情報の構成要素をしっかり理解したうえで、受信した Currents イベントデータを使用して、データドリブン型のレポートやグラフを作成したり、その他の貴重なデータ指標を活用したりすることができます。
 
-![ユーザーイベントの内訳で、ユーザー固有のプロパティ、行動固有のプロパティ、およびデバイス固有のプロパティでグループ化されたリストされたプロパティを持つ購入イベントを示しています]({% image_buster /assets/img/customer_engagement_event.png %})
+![一覧表示されたプロパティをユーザー固有のプロパティ、動作固有のプロパティ、およびデバイス固有のプロパティでグループ化した、購買イベントを示すユーザーイベントの内訳]({% image_buster /assets/img/customer_engagement_event.png %})
 
 顧客行動およびユーザーイベントは、**ユーザー固有**のプロパティ、**行動固有**のプロパティ、および**デバイス固有**のプロパティで構成されます。
 

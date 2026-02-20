@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Friendbuy
 
-> FriendbuyとBrazeの統合により、EメールやSMSの機能を拡張し、紹介やロイヤルティプログラムのコミュニケーションを簡単に自動化することができる。Braze では、Friendbuy 経由で収集されたすべてのオプトイン電話番号の顧客プロファイルが生成されます。
+> [Friendbuyと](https://www.friendbuy.com/)Brazeを統合することで、メールやSMSの機能を拡張し、紹介やロイヤルティプログラムのコミュニケーションを簡単に自動化することができる。Braze では、Friendbuy 経由で収集されたすべてのオプトイン電話番号の顧客プロファイルが生成されます。
 
 _この統合は Friendbuy によって管理されます。_
 
@@ -29,11 +29,11 @@ _この統合は Friendbuy によって管理されます。_
 
 [Friendbuy](https://retailer.friendbuy.io/) で [**Developer Center**] > [**Integrations**] に移動し、Braze 統合カードで [**Add integration**] を選択します。
 
-![The Braze integration card in Friendbuy.]({% image_buster /assets/img/friendbuy/choosing_braze.png %}){: style="max-width:75%;"}
+![Friendbuy の Braze 統合カード。]({% image_buster /assets/img/friendbuy/choosing_braze.png %}){: style="max-width:75%;"}
 
 フォームに REST エンドポイントと API キーを入力し、[**Install Integration**] を選択します。
 
-![The Friendbuy integration form.]({% image_buster /assets/img/friendbuy/install_form.png %}){: style="max-width:55%;"}
+![Friendbuy 統合フォーム。]({% image_buster /assets/img/friendbuy/install_form.png %}){: style="max-width:55%;"}
 
 [Friendbuy アカウント](https://retailer.friendbuy.io/)に戻り、ページを更新します。統合が成功すれば、以下のようなメッセージが表示される：
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:収益データのエクスポート"
+nav_title: "取得:輸出収入データ"
 article_title: "取得:収益データのエクスポート"
 search_tag: Endpoint
 page_order: 2
@@ -16,7 +16,7 @@ description: "本稿では、輸出売上データBraze エンドポイントに
 
 > このエンドポイントを使用して、ある期間にわたってアプリに費やされた総金額を返します。
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f6e05f9a-13c0-4d66-8caa-4a376d25749f{% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f6e05f9a-13c0-4d66-8caa-4a376d25749f{% endapiref %}とする。
 
 ## 前提条件
 
@@ -28,10 +28,10 @@ description: "本稿では、輸出売上データBraze エンドポイントに
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
 | `ending_at` | オプション | 日時 ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列) | データエクスポートを終了する日付。リクエストの時刻にデフォルト設定されます。 |
-| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
+| `length` | 必須かどうか | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
 | `unit` | オプション | 文字列 | データポイント間の時間の単位。日または時間にすることができ、デフォルトは日です。 |
 | `app_id` | オプション | 文字列 | [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。除外された場合、ワークスペース内のすべてのアプリの結果が返されます。 |
 | `product` | オプション | 文字列 | 応答をフィルターする製品の名前。除外された場合、すべてのアプリの結果が返されます。 |
@@ -47,8 +47,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/purchases/revenue_s
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": (required, string) the status of the export, returns 'success' when completed without errors,
   "data" : [

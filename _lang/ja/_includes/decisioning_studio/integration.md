@@ -20,8 +20,8 @@ Braze で、**[設定]** > **[API キー]** の順で進み、以下の権限を
 
 {% multi_lang_include decisioning_studio/api_key_permissions.md %}
 
-### ステップ 3:BrazeAI Decisioning Studio™ カスタマーサクセスマネージャーへの連絡
+### ステップ 3: BrazeAI Decisioning Studio™ カスタマーサクセスマネージャーへの連絡
 
-BrazeAI Decisioning Studio™ カスタマーサクセスマネージャーに連絡し、BrazeAI Decisioning Studio™ を有効にするよう依頼します。Braze API キーとエンドポイント URL を使用して、連携の設定を完了します。
+BrazeAI Decisioning Studio™カスタマーサクセスマネージャーに連絡し、BrazeAI Decisioning Studio™をイネーブルメントするよう依頼する。Braze API キーとエンドポイント URL を使用して、連携の設定を完了します。
 
 それが完了したら、AI エキスパートサービスチームと一緒に、[製品のエージェント構築を開始]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/building_agents)します。各エージェントは特定のビジネス目標に合わせてパーソナライズするため、最適な導入を一緒に設計していきます。

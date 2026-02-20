@@ -1,12 +1,12 @@
 ---
-nav_title: Logging purchases
-article_title: Logging purchases through the Braze SDK
+nav_title: Log purchases
+article_title: Log purchases through the Braze SDK
 page_order: 3.2
 description: "Learn how to log purchases through the Braze SDK."
 
 ---
 
-# Logging purchases
+# Log purchases
 
 > Learn how to log in-app purchases through the Braze SDK, so you can determine your revenue over-time and across sources. This will let you segment users [based on their lifetime value]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking) using custom events, custom attributes, and purchase events.
 
@@ -124,14 +124,6 @@ m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantit
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));
-```
-
-{% endtab %}
-
-{% tab unreal engine %}
-
-```cpp
-UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
 ```
 
 {% endtab %}
@@ -264,17 +256,6 @@ AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), purchase
 ```
 
 {% endtab %}
-
-{% tab unreal engine %}
-
-```cpp
-TMap<FString, FString> PurchaseProperties;
-PurchaseProperties.Add(TEXT("key"), TEXT("value"));
-
-UBraze->LogPurchaseWithProperties(TEXT("product_id"), TEXT("USD"), price, quantity, PurchaseProperties);
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Adding quantity
@@ -302,28 +283,32 @@ The following keys are reserved and cannot be used as purchase properties:
 
 ## Supported currencies
 
-These are the supported currency symbols. Any other currency symbol you provide will log a warning and the purchase will not be logged to Braze.
+Braze supports the following currency symbols. Any other currency symbol you provide logs a warning and the purchase is not logged to Braze.
 
-- `USD`
-- `CAD`
-- `EUR`
-- `GBP`
-- `JPY`
-- `AUD`
-- `CHF`
-- `NOK`
-- `MXN`
-- `NZD`
-- `CNY`
-- `RUB`
-- `TRY`
-- `INR`
-- `IDR`
-- `ILS`
-- `SAR`
-- `ZAR`
-- `AED`
-- `SEK`
-- `HKD`
-- `SPD`
-- `DKK`
+- `AED`, `AFN`, `ALL`, `AMD`, `ANG`, `AOA`, `ARS`, `AUD`, `AWG`, `AZN`
+- `BAM`, `BBD`, `BDT`, `BGN`, `BHD`, `BIF`, `BMD`, `BND`, `BOB`, `BRL`
+- `BSD`, `BTC`, `BTN`, `BWP`, `BYR`, `BZD`
+- `CAD`, `CDF`, `CHF`, `CLF`, `CLP`, `CNY`, `COP`, `CRC`, `CUC`, `CUP`, `CVE`, `CZK`
+- `DJF`, `DKK`, `DOP`, `DZD`
+- `EEK`, `EGP`, `ERN`, `ETB`, `EUR`
+- `FJD`, `FKP`
+- `GBP`, `GEL`, `GGP`, `GHS`, `GIP`, `GMD`, `GNF`, `GTQ`, `GYD`
+- `HKD`, `HNL`, `HRK`, `HTG`, `HUF`
+- `IDR`, `ILS`, `IMP`, `INR`, `IQD`, `IRR`, `ISK`
+- `JEP`, `JMD`, `JOD`, `JPY`
+- `KES`, `KGS`, `KHR`, `KMF`, `KPW`, `KRW`, `KWD`, `KYD`, `KZT`
+- `LAK`, `LBP`, `LKR`, `LRD`, `LSL`, `LTL`, `LVL`, `LYD`
+- `MAD`, `MDL`, `MGA`, `MKD`, `MMK`, `MNT`, `MOP`, `MRO`, `MTL`, `MUR`, `MVR`, `MWK`, `MXN`, `MYR`, `MZN`
+- `NAD`, `NGN`, `NIO`, `NOK`, `NPR`, `NZD`
+- `OMR`
+- `PAB`, `PEN`, `PGK`, `PHP`, `PKR`, `PLN`, `PYG`
+- `QAR`
+- `RON`, `RSD`, `RUB`, `RWF`
+- `SAR`, `SBD`, `SCR`, `SDG`, `SEK`, `SGD`, `SHP`, `SLL`, `SOS`, `SRD`, `STD`, `SVC`, `SYP`, `SZL`
+- `THB`, `TJS`, `TMT`, `TND`, `TOP`, `TRY`, `TTD`, `TWD`, `TZS`
+- `UAH`, `UGX`, `USD`, `UYU`, `UZS`
+- `VEF`, `VND`, `VUV`
+- `WST`
+- `XAF`, `XAG`, `XAU`, `XCD`, `XDR`, `XOF`, `XPD`, `XPF`, `XPT`
+- `YER`
+- `ZAR`, `ZMK`, `ZMW`, `ZWL`

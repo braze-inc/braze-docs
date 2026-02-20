@@ -16,7 +16,7 @@ layout: bare
       {%- assign hide_url = col_info.hidden -%}
     {%- endif -%}
   {%- endif -%}
-  {% unless hide_url or page.layout == 'redirect' or page.layout == 'blank_config' or page.noindex == true %}
+  {% unless hide_url or page.layout == 'redirect' or page.layout == 'blank_config' or page.noindex == true or page.config_only == true %}
   {%- assign lastmod_date = sitemap_modified[page.path] | default: "now" -%}
   <url>
     <loc>{{site.homeurl}}{{site.baseurl}}{{ page.url }}</loc>

@@ -25,7 +25,7 @@ Primero, ve a la Consola Firebase, abre tu proyecto y selecciona <i class="fa-so
 
 Selecciona **Mensajería en la nube** y, a continuación, en **API de mensajería en la nube de Firebase (V1)**, copia el **ID del remitente** en el portapapeles.
 
-![La página "Cloud Messaging" del proyecto Firebase con el "Sender ID" resaltado.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
+![La página "Mensajería en la nube" del proyecto Firebase con el "ID del remitente" resaltado.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
 A continuación, abre el archivo `app.json` de tu proyecto y establece la propiedad `firebaseCloudMessagingSenderId` en el ID del remitente de tu portapapeles. Por ejemplo:
 
@@ -63,11 +63,11 @@ En el archivo `app.json` de tu proyecto, añade la ruta a tu archivo `google-ser
 Ten en cuenta que tendrás que utilizar esta configuración en lugar de las instrucciones de configuración nativas si dependes de bibliotecas de notificaciones push adicionales como [Expo Notifications](https://docs.expo.dev/versions/latest/sdk/notifications/).
 {% endtab %}
 
-{% tab Android nativo %}
+{% tab Android Native %}
 Si no utilizas el complemento Braze Expo, o en su lugar deseas configurar estos ajustes de forma nativa, regístrate para push consultando la [guía de integración push nativa de Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
 {% endtab %}
 
-{% tab iOS nativo %}
+{% tab iOS Native %}
 Si no utilizas el complemento Braze Expo, o en su lugar deseas configurar estos ajustes de forma nativa, regístrate para push siguiendo los siguientes pasos de la [guía de integración push nativa de iOS]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift):
 
 #### Paso 1.1: Solicitud de permisos push
@@ -141,13 +141,13 @@ Para habilitar Braze para que gestione los vínculos profundos dentro de los com
 Para saber más sobre qué son los vínculos profundos, consulta nuestro [artículo de Preguntas frecuentes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
 {% tabs local %}
-{% tab Android nativo %}
+{% tab Android Native %}
 Si utilizas el [complemento Braze Expo]({{site.baseurl}}/developer_guide/platforms/react_native/sdk_integration/?tab=expo#step-2-choose-a-setup-option), puedes gestionar automáticamente los vínculos profundos de las notificaciones push configurando `androidHandlePushDeepLinksAutomatically` en `true` en tu `app.json`.
 
 Para gestionar manualmente los vínculos profundos, consulta la documentación nativa de Android: [Añadir vínculos en profundidad]({{site.baseurl}}/developer_guide/push_notifications/deep_linking).
 
 {% endtab %}
-{% tab iOS nativo %}
+{% tab iOS Native %}
 #### Paso 3.1: Almacena la carga útil de la notificación push al iniciar la aplicación
 {% alert note %}
 Omite el paso 3.1 si utilizas el complemento Braze Expo, ya que esta función se gestiona automáticamente.
@@ -261,7 +261,67 @@ Para ver un ejemplo de integración, consulta nuestra aplicación de muestra [aq
 {% endtab %}
 {% endtabs %}
 
-### Paso 4: Enviar una notificación push de prueba
+### Paso 4: Gestionar notificaciones en primer plano
+
+La gestión de las notificaciones en primer plano funciona de forma diferente según tu plataforma y configuración. Elige el enfoque que se adapte a tu integración:
+
+{% tabs local %}
+{% tab iOS %}
+Para iOS, la gestión de notificaciones en primer plano es la misma que la integración nativa de Swift. Llama a `handleForegroundNotification(notification:)` dentro de tu implementación de `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)`.
+
+Para obtener detalles completos y ejemplos de código, consulta [Manejo de notificaciones en primer plano]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#handling-foreground-notifications) en la documentación de notificaciones push de Swift.
+{% endtab %}
+
+{% tab Android %}
+Para Android, la gestión de las notificaciones en primer plano es la misma que la integración nativa de Android. Llama a `BrazeFirebaseMessagingService.handleBrazeRemoteMessage` dentro de tu método `FirebaseMessagingService.onMessageReceived`.
+
+Para obtener detalles completos y ejemplos de código, consulta [Manejar notificaciones en primer plano]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) en la documentación sobre notificaciones push de Android.
+{% endtab %}
+
+{% tab Expo %}
+En el flujo de trabajo gestionado por Expo, no llamas directamente a los controladores de notificación nativos. En su lugar, utiliza la API de Notificaciones Expo para controlar la presentación en primer plano, mientras que el Plugin Braze Expo se encarga automáticamente del procesamiento nativo.
+
+```javascript
+import * as Notifications from 'expo-notifications';
+import Braze from '@braze/react-native-sdk';
+
+// Control foreground presentation in Expo
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,    // Show alert while in foreground
+    shouldPlaySound: false,
+    shouldSetBadge: false,
+  }),
+});
+
+// React to Braze push events
+const subscription = Braze.addListener('pushNotificationEvent', (event) => {
+  console.log('Braze push event', {
+    type: event.payload_type,   // "push_received" | "push_opened"
+    title: event.title,
+    url: event.url,
+    is_silent: event.is_silent,
+  });
+  // Handle deep links, custom behavior, etc.
+});
+
+// Handle initial payload when app launches via push
+Braze.getInitialPushPayload((payload) => {
+  if (payload) {
+    console.log('Initial push payload', payload);
+  }
+});
+```
+
+{% alert note %}
+En el flujo de trabajo gestionado por Expo, el complemento Braze Expo se encarga automáticamente del procesamiento push nativo. Puedes controlar la interfaz de usuario en primer plano mediante las opciones de presentación de las Notificaciones Expo que se muestran arriba.
+{% endalert %}
+
+Para las integraciones de flujo de trabajo desnudo, sigue en su lugar los enfoques nativos de iOS y Android.
+{% endtab %}
+{% endtabs %}
+
+### Paso 5: Enviar una notificación push de prueba
 
 En este punto, deberías poder enviar notificaciones a los dispositivos. Sigue los pasos siguientes para probar tu integración push.
 
@@ -273,7 +333,7 @@ A partir de macOS 13, en determinados dispositivos, puedes probar las notificaci
 2. Ve a **Campañas** y crea una nueva campaña de notificación push. Elige las plataformas que deseas probar.
 3. Redacta tu notificación de prueba y dirígete a la pestaña **Prueba**. Añade el mismo `user-id` que el usuario de prueba y haz clic en **Enviar prueba**. En breve recibirás la notificación en tu dispositivo.
 
-![Una campaña push de Braze en la que puedes añadir tu propio ID de usuario como destinatario de prueba para probar tu notificación push.]({% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test")
+![Una campaña push de Braze que muestra que puedes añadir tu propio ID de usuario como destinatario de prueba para probar tu notificación push.]({% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test")
 
 ## Utilizar el plugin Expo
 

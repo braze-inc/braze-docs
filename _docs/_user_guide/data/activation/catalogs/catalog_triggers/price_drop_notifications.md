@@ -96,15 +96,18 @@ Now, your customers will be notified when an item's price drops.
 
 ### Using Liquid
 
-To template in details about the catalog item that has dropped in price, you can use the `canvas_entry_properties` Liquid tag to access the `item_id`. 
+To template in details about the catalog item that has dropped in price, you can use the `context` Liquid tag to access the `item_id`. 
 
-Using {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} will return the ID of the item that dropped in price. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} will return the price value of the item before the update, and {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} will return the new price value after the update. 
+Using {%raw%}``{{context.${catalog_update}.item_id}}``{%endraw%} will return the ID of the item that dropped in price. {%raw%}``{{context.${catalog_update}.previous_value}}``{%endraw%} will return the price value of the item before the update, and {%raw%}``{{context.${catalog_update}.new_value}}``{%endraw%} will return the new price value after the update. 
 
-Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} at the top of your message, then use {%raw%}`{{items[0].<field_name>}}`{%endraw%} to access data about that item throughout the message.
+Use the Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}``{%endraw%} at the top of your message, then use {%raw%}`{{items[0].<field_name>}}`{%endraw%} to access data about that item throughout the message.
+
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
+
+{% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
 
 ## Considerations
 
 - Users are subscribed for 90 days. If an item does not drop in price in 90 days, the user is removed from the subscription.
 - When using the **Notify all subscribed users** notification rule, Braze will notify 100,000 users over 10 minutes.
-- Braze will process 10 requests to update catalog items per minute. Update endpoints allow for 50 item updates per request, supporting up to 500 item updates per minute that can trigger back-in-stock notifications
-
+- Braze will process 10 requests to update catalog items per minute. Update endpoints allow for 50 item updates per request, supporting up to 500 item updates per minute that can trigger back-in-stock notifications.

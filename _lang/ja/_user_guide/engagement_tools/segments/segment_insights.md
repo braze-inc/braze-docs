@@ -1,5 +1,5 @@
 ---
-nav_title: 事業インサイト
+nav_title: セグメンテーション
 article_title: セグメントインサイト
 page_order: 8
 page_type: tutorial
@@ -9,7 +9,7 @@ tool:
 description: "この操作方法に関する記事では、セグメントインサイトを使用、解釈、および共有する方法について説明します。"
 ---
 
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}セグメントインサイト
+# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} セグメントインサイト
 
 > セグメントインサイトの使用、解釈、共有の方法を学びましょう。 
 
@@ -19,7 +19,7 @@ description: "この操作方法に関する記事では、セグメントイン
 
 ダッシュボードの「**分析」の**下にある**「セグメントのインサイト」**ページにアクセスし、基準値と比較した最大10種類のセグメントを表示する。
 
-![Segment インサイトダッシュボードは、3 つのSegmentを比較します。" 英国 Users" " FR Users" および" CA Users" をベースラインSegmentと比較します。" All Users" を比較します。]({% image_buster /assets/img_archive/segment_insights.png %})
+![セグメントインサイトのダッシュボードで、「英国ユーザー」、「フランスユーザー」、「カリフォルニアユーザー」の3つのセグメントをベースラインの「全ユーザー」と比較している。]({% image_buster /assets/img_archive/segment_insights.png %})
 
 ベースラインセグメントは、選択した特定のセグメントでも、すべてのユーザーを含むセグメントでもかまいません。セグメントインサイトを使用して次の統計を比較できます。
 
@@ -35,7 +35,7 @@ description: "この操作方法に関する記事では、セグメントイン
 
 また、各セグメンテーションの横にある目のアイコンを選択すると、そのセグメンテーションに関する詳細情報を見ることができる。これらの比較は、ワークスペースを切り替えるとリセットされます。
 
-!["Premium Users (iOS VideoApp)" Segmentには、履歴メンバーシップを表示するグラフと、さまざまなメッセージング チャネルの推定サイズを分類するグラフが表示されます。]({% image_buster /assets/img_archive/Segment_Insights_Info.png %}){: style="max-width:50%;"}
+![プレミアムユーザー（iOS VideoApp）」セグメントの詳細。過去の会員数を示すグラフと、様々なメッセージングチャネルの推定規模を示すグラフがある。]({% image_buster /assets/img_archive/Segment_Insights_Info.png %}){: style="max-width:50%;"}
 
 ## セグメント詳細ページ
 
@@ -56,7 +56,7 @@ description: "この操作方法に関する記事では、セグメントイン
 
 セグメントインサイトは、ユーザー層間の違いを明らかにするのに役立ちます。次の例は、アプリのユーザーベースを言語別に比較したもので、英語を話す人が他の言語を話す人よりも LTV とアクティビティレベルが高い傾向を示しています。
 
-![Segmentインサイト:英語、ドイツ語、フランス語、スペイン語のSegmentsの内訳。]({% image_buster /assets/img_archive/Segment_Language_Insights.png %})
+![英語、ドイツ語、フランス語、スペイン語のセグメントインサイト。]({% image_buster /assets/img_archive/Segment_Language_Insights.png %})
 
 この例では、ドイツ語話者は平均してかなり以前に登録しており、それが彼らが今ではそれほどアクティブではない理由かもしれません。これにはさまざまな要因が考えられます。たとえば、アプリが最初にヨーロッパでリリースされたが、現在ではほとんどの人が英語またはスペイン語を話す米国で人気が高まっているとします。より確かな結果を得るには、ユーザー層全体の KPI を分析するときに、人口統計に関する一般的な調査 (たとえば、言語がすべてのユーザーの LTV に影響するかどうか) の結果を、より小規模で類似している母集団を見て、その結果が持続するかどうかを確認するのが賢明です。
 
@@ -66,7 +66,7 @@ description: "この操作方法に関する記事では、セグメントイン
 
 ユーザーを購買者に転換させるのは難しい場合があり、新規ユーザー、非アクティブなユーザー、またはエンゲージメントの低いユーザーを直接購入に誘導しようとすると、ユーザーはアプリをアンインストールする可能性があります。セグメンテーションインサイトは、例えばニュースレターのサブスクライバー、ソーシャルメディアでのシェア、プロモーションメッセージの登録など、まだ購入しなくてもユーザーを購買ファネルのさらに下に導くアクションを発見するのに役立つ。たとえば、e コマースアプリ内のさまざまな購入行動への影響をグラフ化できます。
 
-![ソーシャルメディアで共有し、プロモーションに登録し、ニュースレターに登録したユーザーのセグメントインサイトの内訳。]({% image_buster /assets/img_archive/Segment_Insights_Events1.png %})
+![ソーシャルメディアでシェアしたユーザー、プロモーションに登録したユーザー、ニュースレターに登録したユーザーのセグメンテーション内訳。]({% image_buster /assets/img_archive/Segment_Insights_Events1.png %})
 
 この場合、現在プロモーションメッセージに登録しているユーザーは比較的少なく、それほどアクティブではありませんが、このようなユーザーは高い生涯収益を創出しています。収益を増やすには、プロモーションメッセージ登録への招待をオンボーディングキャンペーンに含める案が良いかもしれません。離脱ユーザーを呼び戻すには、一般的な[離脱ユーザーキャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users)を送信し、次に[コンバージョンに至ったユーザー]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#converted-from-campaign-filter)をターゲットにしてニュースレターに登録するキャンペーンを行うとよいでしょう。
 

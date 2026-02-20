@@ -1,6 +1,6 @@
 ---
-nav_title: Searching for campaigns
-article_title: Searching for Campaigns
+nav_title: Search for campaigns
+article_title: Search for Campaigns
 page_order: 10
 page_type: reference
 description: "This article describes the various ways you can search for campaigns on the campaign list page."
@@ -9,7 +9,7 @@ tool:
 
 ---
 
-# Searching for campaigns
+# Search for campaigns
 
 > As you build more campaigns in your workspace, you can adjust the filters and columns in the campaign list to sort and organize these campaigns. Using a combination of these search methods can help to narrow down your results, especially as your list of campaigns grows.
 

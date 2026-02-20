@@ -13,6 +13,37 @@
 
 
 {% tabs %}
+{% tab web %}
+
+カードが更新されたときに更新を購読するコールバック関数を登録します。
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.subscribeToContentCardsUpdates((updates) => {
+  const cards = updates.cards;
+// For example:
+  cards.forEach(card => {
+    if (card.isControl) {
+      // Do not display the control card, but remember to call `logContentCardImpressions([card])`
+    }
+    else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
+      // Use `card.title`, `card.imageUrl`, etc.
+    }
+    else if (card instanceof braze.ImageOnly) {
+      // Use `card.imageUrl`, etc.
+    }
+  })
+});
+
+braze.openSession();
+```
+
+{% alert note %}
+コンテンツカードは、`openSession()`の前にサブスクライブリクエストが呼び出された場合にのみ、セッション開始時に更新されます。[フィードを手動で更新]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/)することもいつでも選択できます。
+{% endalert %}
+
+{% endtab %}
 {% tab android %}
 {% subtabs local %}
 {% subtab Java %}
@@ -144,37 +175,6 @@ BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSAr
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-カードが更新されたときに更新を購読するコールバック関数を登録します。
-
-```javascript
-import * as braze from "@braze/web-sdk";
-
-braze.subscribeToContentCardsUpdates((updates) => {
-  const cards = updates.cards;
-// For example:
-  cards.forEach(card => {
-    if (card.isControl) {
-      // Do not display the control card, but remember to call `logContentCardImpressions([card])`
-    }
-    else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
-      // Use `card.title`, `card.imageUrl`, etc.
-    }
-    else if (card instanceof braze.ImageOnly) {
-      // Use `card.imageUrl`, etc.
-    }
-  })
-});
-
-braze.openSession();
-```
-
-{% alert note %}
-コンテンツカードは、`openSession()`の前にサブスクライブリクエストが呼び出された場合にのみ、セッション開始時に更新されます。[フィードを手動で更新]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/)することもいつでも選択できます。
-{% endalert %}
-
-{% endtab %}
 {% endtabs %}
 
 ## イベントのロギング
@@ -182,6 +182,25 @@ braze.openSession();
 インプレッション、クリック、離脱などの貴重な指標を素早く簡単に記録できます。これらの分析を手動で処理するようにカスタムクリックリスナーを設定します。
 
 {% tabs %}
+{% tab web %}
+
+[`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions)以下を使用して、ユーザーがカードを閲覧したときのインプレッションイベントをログに記録します。
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.logContentCardImpressions([card1, card2, card3]);
+```
+
+[`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick)を使用して、ユーザーがカードを操作したときのカードクリックイベントをログに記録します。
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.logContentCardClick(card);
+```
+
+{% endtab %}
 {% tab android %}
 
 を参照できる。 [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt)は、コンテンツカードオブジェクト配列リストのようなBraze SDKの依存関係を参照して、Brazeロギングメソッドを呼び出すことができる。 [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html)Brazeロギングメソッドを呼び出す。`ContentCardable`基本クラスを使用すると、`BrazeManager`へのデータの参照や提供が容易になります。 
@@ -235,6 +254,7 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 カスタム UI でコントロールバリアントコンテンツカードを処理するには、[`com.braze.models.cards.Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) を渡した後、他のコンテンツカードタイプと同様に `logImpression` メソッドを呼び出します。オブジェクトはコントロールインプレッションを暗黙的にログに記録して、ユーザーがいつコントロールカードを表示したかを分析に通知します。{% endalert %}
 
 {% endtab %}
+
 {% tab swift %}
 
 [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate)プロトコルを実装し、デリゲートオブジェクトを`BrazeContentCardUI.ViewController`の`delegate`プロパティとして設定します。このデリゲートは、カスタムオブジェクトのデータを Braze に渡してログに記録するように処理します。例については、[コンテンツカードUIチュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/)を参照してください。
@@ -278,25 +298,5 @@ contentCardsController.delegate = delegate;
 {% alert important %}
 カスタム UI でコントロールバリアントコンテンツカードを処理するには、[`Braze.ContentCard.Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control(_:)) を渡した後、他のコンテンツカードタイプと同様に `logImpression` メソッドを呼び出します。オブジェクトはコントロールインプレッションを暗黙的にログに記録して、ユーザーがいつコントロールカードを表示したかを分析に通知します。
 {% endalert %}
-{% endtab %}
-
-{% tab web %}
-
-[`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions)以下を使用して、ユーザーがカードを閲覧したときのインプレッションイベントをログに記録します。
-
-```javascript
-import * as braze from "@braze/web-sdk";
-
-braze.logContentCardImpressions([card1, card2, card3]);
-```
-
-[`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick)を使用して、ユーザーがカードを操作したときのカードクリックイベントをログに記録します。
-
-```javascript
-import * as braze from "@braze/web-sdk";
-
-braze.logContentCardClick(card);
-```
-
 {% endtab %}
 {% endtabs %}

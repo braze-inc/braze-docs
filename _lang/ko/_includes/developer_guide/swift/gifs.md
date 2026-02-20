@@ -2,7 +2,7 @@
 
 ## 사용자 지정 이미지 라이브러리 통합
 
-### 1단계: SD웹이미지 통합
+### 1단계: SDWebImage 통합
 
 [SDWebImage 저장소를](https://github.com/SDWebImage/SDWebImage) Xcode 프로젝트에 통합합니다.
 

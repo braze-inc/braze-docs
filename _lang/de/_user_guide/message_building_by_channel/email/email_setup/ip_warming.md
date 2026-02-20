@@ -5,7 +5,8 @@ page_order: 1
 page_type: reference
 description: "Dieser Referenzartikel behandelt das Thema IP-Warming und Best Practices."
 channel: email
-
+local_redirect:
+  automated-ip-warming: '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/automated_ip_warming/'
 ---
 
 # IP-Warming
@@ -20,13 +21,13 @@ IP-Warming soll Ihnen helfen, einen positiven Ruf bei Internet-Dienstanbieter (I
 
 ISPs drosseln die E-Mail-Zustellung, wenn der Verdacht auf Spam aufkommt, damit sie ihre Benutzer schützen können. Wenn Sie z. B. an 100.000 Nutzer:innen senden, kann es sein, dass der ISP die E-Mail in der ersten Stunde nur an 5.000 dieser Nutzer:innen zustellt. Dann überwacht der ISP Maßnahmen wie Öffnungsraten, Klickraten, Abmeldungen und Spam-Berichte. Wenn also eine beträchtliche Anzahl von Spam-Meldungen auftritt, kann es sein, dass sie den Rest der Sendung in den Spam-Ordner verschieben, anstatt sie an den Posteingang des Benutzers zu senden. 
 
-Wenn das Engagement mäßig ist, kann es sein, dass sie Ihre E-Mail weiter drosseln, um mehr Daten über das Engagement zu sammeln und mit größerer Sicherheit feststellen zu können, ob es sich bei der E-Mail um Spam handelt oder nicht. Wenn die E-Mail sehr hohe Engagement-Metriken aufweist, werden sie diese E-Mail möglicherweise nicht mehr drosseln. Sie verwenden diese Daten, um eine E-Mail-Reputation zu erstellen, die letztendlich bestimmt, ob Ihre E-Mails automatisch als Spam gefiltert werden oder nicht.
+Wenn das Engagement mäßig ist, kann es sein, dass sie Ihre E-Mail weiter drosseln, um mehr Daten über das Engagement zu sammeln, damit sie mit größerer Sicherheit feststellen können, ob es sich bei der E-Mail um Spam handelt oder nicht. Wenn die E-Mail sehr hohe Engagement-Metriken aufweist, werden sie diese E-Mail möglicherweise nicht mehr drosseln. Sie verwenden diese Daten, um eine E-Mail-Reputation zu erstellen, die letztendlich bestimmt, ob Ihre E-Mails automatisch als Spam gefiltert werden oder nicht.
 
 Wenn Ihre Domain oder IP von einem ISP blockiert wird, finden Sie in den [Nachrichtenprotokollen]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) Informationen darüber, welche Websites Sie besuchen sollten, um diese ISPs anzusprechen und von diesen Listen zu entfernen.
 
 ## Zeitplan für das IP-Warming
 
-Wir empfehlen dringend, diesen Zeitplan für das IP-Warming strikt einzuhalten, um die Zustellbarkeit zu unterstützen. Es ist auch wichtig, dass Sie keine Tage auslassen, denn eine konsequente Skalierung verbessert die Zustellungsmetriken.
+Wir empfehlen dringend, diesen Zeitplan für das IP-Warming strikt einzuhalten, um die Zustellbarkeit zu unterstützen. Es ist auch wichtig, dass Sie keine Tage auslassen, denn eine konsequente Skalierung verbessert die Metriken für die Zustellung.
 
 Tag | Anzahl der zu sendenden Emails
 ----|--------------------------|
@@ -51,7 +52,7 @@ Tag | Anzahl der zu sendenden Emails
 
 Zum Erreichen Ihrer Höchstleistung empfehlen wir Ihnen, ein Warming durchzuführen. Das heißt, wenn Sie normalerweise 2 Millionen E-Mails pro Tag senden, aber planen, in einer bestimmten Saison 7 Millionen zu senden, sollten Sie sich auf diesen „Spitzenwert“ vorbereiten.
 
-Sobald das Warming abgeschlossen ist und Sie Ihr gewünschtes tägliches Volumen erreicht haben, sollten Sie versuchen, dieses Volumen täglich beizubehalten. Eine gewisse Fluktuation ist zu erwarten, aber wenn Sie das gewünschte Volumen erreichen und dann nur einmal pro Woche einen Massenversand durchführen, kann sich das negativ auf Ihre Zustellungskennzahlen und Ihren Ruf als Absender auswirken. 
+Nachdem das IP-Warming abgeschlossen ist und Sie Ihr gewünschtes Tagesvolumen erreicht haben, sollten Sie versuchen, dieses Volumen täglich beizubehalten. Eine gewisse Fluktuation ist zu erwarten, aber wenn Sie das gewünschte Volumen erreichen und dann nur einmal pro Woche einen Massenversand durchführen, kann sich dies negativ auf Ihre Metriken für die Zustellung und die Absender-Reputation auswirken. 
 
 {% alert important %}
 Die meisten ISPs speichern Reputationsdaten nur für 30 Tage. Wenn Sie einen Monat lang keine Nachrichten senden, müssen Sie das IP-Warming wiederholen.
@@ -65,7 +66,7 @@ Unsere integrierte Funktion zur Nutzereinschränkung ist ein nützliches Hilfsmi
 
 ## Segmentierung von Subdomains
 
-Viele ISPs und E-Mail-Zugangsanbieter filtern nicht mehr nur nach der Reputation der IP-Adresse. Diese Filtertechnologien berücksichtigen jetzt auch die Domain-basierte Reputation. Das bedeutet, dass die Filter alle mit der Domain des Absenders oder der Absenderin verbundenen Daten prüfen und nicht nur die IP-Adresse herausfiltern. Aus diesem Grund empfehlen wir Ihnen, nicht nur Ihre E-Mail-IP aufzuwärmen, sondern auch separate Domänen oder Subdomänen für Marketing-, Transaktions- und Unternehmensmails zu verwenden. 
+Viele ISPs und E-Mail-Zugangsanbieter filtern nicht mehr nach der Reputation der IP-Adresse. Diese Filtertechnologien berücksichtigen jetzt auch die Domain-basierte Reputation. Das bedeutet, dass die Filter alle mit der Domain des Absenders oder der Absenderin verbundenen Daten prüfen und nicht nur die IP-Adresse herausfiltern. Aus diesem Grund empfehlen wir Ihnen, nicht nur Ihre E-Mail-IP aufzuwärmen, sondern auch separate Domänen oder Subdomänen für Marketing-, Transaktions- und Unternehmensmails zu verwenden. 
 
 {% alert important %}
 Die Segmentierung von Subdomains ist besonders wichtig für Absender:innen mit großem Volumen. Diese Absender:innen sollten bei der Einrichtung ihres Kontos mit einem Vertreter von Braze zusammenarbeiten, um zu bestätigen, dass sie sich an diese Vorgaben halten.
@@ -75,7 +76,7 @@ Wir empfehlen Ihnen, Ihre Domains so zu segmentieren, dass Unternehmensmails üb
 
 ## Bewährte Praktiken
 
-Alle Folgen eines fehlenden IP-Warmings können vermieden werden, wenn Sie die folgenden Best Practices zum IP-Warming befolgen.
+Sie können alle Folgen von nicht vorhandenem IP-Warming vermeiden, wenn Sie diese bewährten Verfahren befolgen:
 
 ### Beginnen Sie mit einem kleinen E-Mail-Aufkommen
 

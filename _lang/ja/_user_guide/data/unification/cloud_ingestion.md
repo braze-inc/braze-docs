@@ -3,38 +3,96 @@ nav_title: クラウドデータ取り込み
 article_title: Braze のクラウドデータ取り込み
 alias: /cloud_ingestion/
 description: "このリファレンス記事では、Braze のクラウドデータ取り込みのソースとデータ設定の推奨事項について説明します。"
-layout: dev_guide
 page_order: 0.1
-page_type: landing
-
-guide_top_header: "Braze のクラウドデータ取り込み"
-guide_top_text: "<h2>内容</h2>Braze Cloud Data Ingestion (CDI) を使用すると、データストレージソリューションから直接接続をセットアップして、関連するユーザーまたはカタログデータを同期し、ユーザーを削除することができます。Braze に同期すると、このデータをパーソナライゼーションやセグメンテーションなどのユースケースに活用できます。Cloud Data Ingestion の柔軟な統合は、ネストされたJSON やオブジェクトの配列などの複雑なデータ構造をサポートします。<br><br>:**Braze のクラウドデータ取り込みの機能:**<br> - お使いのデータウェアハウスやファイルストレージソリューションから Braze へのシンプルな連携を直接構築できます。所要時間はわずか数分です。<br>- 属性、イベント、購入などのユーザーデータを、データウェアハウスから Braze に安全に同期します。<br>- クラウドデータ取り込みを Currents または Snowflake のデータ共有と組み合わせることで、Braze でデータループを閉じます。<br><br>:**クラウドデータ取り込みは、以下からのデータを同期できます。**<br> - アマゾン・レッドシフト<br> - Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - スノーフレーク"
-
-guide_featured_title: "セクションの記事"
-guide_featured_list:
-  - name: 概要とベストプラクティス
-    link: /docs/user_guide/data/unification/cloud_ingestion/overview/
-    image: /assets/img/braze_icons/users-01.svg
-  - name: 接続されたソース
-    link: /docs/user_guide/data/unification/cloud_ingestion/connected_sources/
-    image: /assets/img/braze_icons/server-01.svg
-  - name: データウェアハウスの連携
-    link: /docs/user_guide/data/unification/cloud_ingestion/integrations/
-    image: /assets/img/braze_icons/cloud-blank-01.svg
-  - name: ファイルストレージの連携
-    link: /docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations/
-    image: /assets/img/braze_icons/folder.svg 
-  - name: ゼロコピー・パーソナライゼーション
-    link: /docs/user_guide/data/unification/cloud_ingestion/zero_copy_sync/
-    image: /assets/img/braze_icons/tag-01.svg
-  - name: カタログ・データの同期
-    link: /docs/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/
-    image: /assets/img/braze_icons/refresh-ccw-02.svg
-  - name: CDI によるユーザーの削除
-    link: /docs/user_guide/data/unification/cloud_ingestion/delete_users/
-    image: /assets/img/braze_icons/trash-01.svg
-  - name: よくある質問
-    link: /docs/user_guide/data/unification/cloud_ingestion/faqs/
-    image: /assets/img/braze_icons/annotation-question.svg
+toc_headers: h2
 ---
 
+# Braze のクラウドデータ取り込み
+
+> Braze Cloud Data Ingestion (CDI)では、データストレージソリューションからの直接接続を設定し、関連するユーザーデータやその他の非ユーザーデータをBrazeに同期させることができる。このデータをパーソナライゼーションやセグメンテーションに利用することで、マーケティングのユースケースを強化することができる。Cloud Data Ingestionの柔軟な統合は、ネストしたJSONやオブジェクトの配列など、複雑なデータ構造をサポートしている。
+
+## 仕組み
+
+Braze のクラウドデータ取り込み (CDI) では、データウェアハウスのインスタンスと Braze ワークスペースとの連携を設定して、定期的にデータを同期します。この同期は設定したスケジュールで実行され、連携ごとに異なるスケジュールを設定できます。同期は最大頻度で 15 分ごと、最小頻度で月に 1 回実行できます。同期を15 分以上頻繁に実行する必要がある場合は、カスタマーサクセスマネージャーに連絡するか、リアルタイムデータ取り込みにREST API コールを使用することを検討してください。
+
+同期が実行されると、Braze はデータウェアハウスインスタンスに直接接続し、指定されたテーブルからすべての新しいデータを取得し、Braze ダッシュボードの対応するデータを更新します。同期が実行されるたびに、更新されたデータがBrazeに反映される。
+
+### 統合IDを見つける
+
+Brazeダッシュボードでインテグレーションを表示すると、URLでインテグレーションIDを確認できる。**Data Settings**>**Cloud Data Ingestionに**移動し、インテグレーションを選択する。統合IDは、`https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]` という形式でURLに表示される。例えば、URLが`https://dashboard-01.braze.com/integrations/cloud_data_ingestion/abc123xyz` の場合、統合IDは`abc123xyz` となる。このIDは、シンクのトリガーやシンクステータスを確認するためのAPIコールを行う際に使用できる。
+
+## ユースケース
+
+Brazeのクラウドデータインジェスト機能を使えば、次のことができる：
+
+- お使いのデータウェアハウスやファイルストレージソリューションから Braze へのシンプルな直接統合を構築できます。所要時間はわずか数分です。
+- 属性、イベント、購入などのユーザーデータをデータウェアハウスからBrazeに安全に同期。
+- Brazeは、Cloud Data IngestionとCurrentsまたはSnowflake Data Sharingを組み合わせることで、データループを閉じることができる。
+
+さらに、[コネクテッド・ソースは]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/connected_sources)ゼロコピーの代替手段でもある。Brazeに基礎データをコピーすることなく、データウェアハウスやファイルストレージソリューションに直接クエリーしてCDIセグメンテーションを構築することができる。
+
+## サポートされるデータソース
+
+クラウド・データ・インジェステーションは、データを同期することができる：
+
+   - Amazon Redshift
+   - Databricks 
+   - Google BigQuery
+   - Microsoft Fabric
+   - Snowflake
+   - Amazon S3
+
+## サポートされるデータ型 
+
+クラウドデータ取り込みは、次のデータ型をサポートします。
+
+### ユーザーデータ
+- ユーザー属性、含む：
+   - 階層化カスタム属性
+   - オブジェクト配列
+   - サブスクリプションステータス
+- カスタムイベント
+- 購入イベント
+- ユーザー削除要求
+
+### ユーザー以外のオブジェクト
+- カタログ項目
+
+### ゼロコピーのメッセージング
+- 接続されたソース
+
+## データ取り込みのためのユーザー識別子
+
+Cloud Data Ingestionを通じてユーザーデータを同期する場合、以下の識別子タイプを1つ以上使用してユーザーを識別することができる。ソース・テーブルの各行は、一度に1つの識別子タイプの値のみを含むべきであるが、テーブルには1つ、2つ、3つ、4つ、または5つすべての識別子タイプの列を含めることができる。
+
+| 識別子 | 説明 |
+|------------|-------------|
+| `EXTERNAL_ID` | 作成または更新するユーザープロファイルを識別する外部 ID。これは Braze で使用されている `external_id` 値と一致しなければなりません。 |
+| `ALIAS_NAME` と `ALIAS_LABEL` | これら2つの列は、ユーザーエイリアスオブジェクトを作成する。`alias_name` は一意の識別子でなければならず、`alias_label` はエイリアスのタイプを指定する。ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、`alias_label` ごとに `alias_name` を 1 つしか持つことができません。 |
+| `BRAZE_ID` | Braze SDKによって生成されたBrazeユーザー識別子。クラウドデータインジェストでBraze IDを使用して新規ユーザーを作成することはできない。新規ユーザーを作成するには、外部ユーザー ID またはユーザーエイリアスを指定します。 |
+| `EMAIL` | ユーザーのEメールアドレス。同じメールアドレスを持つ複数のプロファイルが存在する場合、最も最近更新されたプロファイルが優先的に更新される。メールと電話の両方を含む場合は、メールが主要識別子として使用される。 |
+| `PHONE` | ユーザーの電話番号。同じ電話番号を持つプロファイルが複数存在する場合、最も新しく更新されたプロファイルが優先的に更新される。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+これらの識別子を持つテーブルの設定の詳細については、[データウェアハウスの統合]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/)ドキュメントを参照のこと。
+
+## データポイント使用量
+
+データポイントベースの課金を利用している顧客にとって、クラウドデータインジェストに対するデータポイント課金は、[`/users/track` エンドポイントを]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track)通じた更新に対する課金と同等である。詳細については、「[データポイント]({{site.baseurl}}/user_guide/data/data_points/)」を参照してください。 
+
+{% alert important %}
+Braze のクラウドデータ取り込みは利用可能なレート制限で考慮されるため、別の方法でデータを送信する場合、レート制限は Braze API とクラウドデータ取り込みの和になります。
+{% endalert %}
+
+## 製品の制限事項
+
+| 制限            | 説明                                                                                                                                                                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 統合の数 | 設定できる統合の数に制限はありません。ただし、1つのテーブルまたはビューにつき、1つの統合しか設定できない。                                             |
+| 行数         | デフォルトでは、1回の実行で5億行まで同期できます。新しい行が5億行を超えるシンクは停止される。これよりも高い制限が必要な場合は、Braze カスタマーサクセスマネージャーまたはBraze サポートにお問い合わせください。 |
+| 行ごとの属性     | 各行には単一のユーザー ID と最大 250 の属性を持つ JSON オブジェクトが含まれている必要があります。JSONオブジェクトの各キーは1つの属性としてカウントされます（つまり、配列は1つの属性としてカウントされます）。 |
+| ペイロードサイズ           | 各行に最大 1 MB のペイロードを含めることができます。1MBを超えるペイロードは拒否され、"Payload was greater than 1MB "というエラーが、関連する外部IDと切り捨てられたペイロードとともに同期ログに記録される。 |
+| データタイプ              | クラウドデータ取り込みを通じて、ユーザー属性、イベント、および購入を同期できます。                                                                                                  |
+| Braze リージョン           | この商品はすべての Braze リージョンで利用可能です。任意の Braze リージョンを任意のソースデータリージョンに接続できます。                                                                              |
+| ソースリージョン       | Brazeは、どの地域やクラウドプロバイダーでも、データウェアハウスやクラウド環境に接続できる。                                                                                        |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

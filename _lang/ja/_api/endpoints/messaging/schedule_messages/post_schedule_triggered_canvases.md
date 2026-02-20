@@ -10,7 +10,7 @@ description: "この記事では、「API トリガーキャンバスのスケ�
 ---
 {% api %}
 # APIトリガーのキャンバスをスケジュールする
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
@@ -28,7 +28,7 @@ description: "この記事では、「API トリガーキャンバスのスケ�
 
 ## レート制限
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## 要求本文:
 

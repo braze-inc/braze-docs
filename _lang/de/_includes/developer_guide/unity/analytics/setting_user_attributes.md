@@ -4,7 +4,7 @@
 
 ### Vordefinierte Methoden
 
-Braze bietet vordefinierte Methoden, um die folgenden Nutzer:innen-Attribute mit Hilfe des `BrazeBinding` Objekts einzustellen. Weitere Informationen finden Sie in der [Braze Unity Deklarationsdatei](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs).
+Braze bietet vordefinierte Methoden zum Einstellen der folgenden Nutzer:innen-Attribute unter Verwendung des `BrazeBinding` Objekts. Weitere Informationen finden Sie in der [Braze Unity Deklarationsdatei](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs).
 
 - Vorname
 - Nachname
@@ -22,52 +22,52 @@ Braze bietet vordefinierte Methoden, um die folgenden Nutzer:innen-Attribute mit
 Um ein Standardattribut festzulegen, rufen Sie die entsprechende Methode für das Objekt `BrazeBinding` auf.
 
 {% tabs local %}
-{% tab Vorname %}
+{% tab First name %}
 ```csharp
 BrazeBinding.SetUserFirstName("first name");
 ```
 {% endtab %}
-{% tab Nachname %}
+{% tab Last name %}
 ```csharp
 BrazeBinding.SetUserLastName("last name");
 ```
 {% endtab %}
-{% tab E-Mail %}
+{% tab Email %}
 ```csharp
 BrazeBinding.SetUserEmail("email@email.com");
 ```
 {% endtab %}
-{% tab Geschlecht %}
+{% tab Gender %}
 ```csharp
 BrazeBinding.SetUserGender(Appboy.Models.Gender);
 ```
 {% endtab %}
-{% tab Geburtsdatum %}
+{% tab Birth date %}
 ```csharp
 BrazeBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
 ```
 {% endtab %}
-{% tab Land %}
+{% tab Country %}
 ```csharp
 BrazeBinding.SetUserCountry("country name");
 ```
 {% endtab %}
-{% tab Heimatstadt %}
+{% tab Home city %}
 ```csharp
 BrazeBinding.SetUserHomeCity("city name");
 ```
 {% endtab %}
-{% tab Abo per E-Mail %}
+{% tab Email subscription %}
 ```csharp
 BrazeBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab Push-Abonnement %}
+{% tab Push subscription %}
 ```csharp
 BrazeBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab Rufnummer %}
+{% tab Phone number %}
 ```csharp
 BrazeBinding.SetUserPhoneNumber("phone number");
 ```
@@ -117,14 +117,14 @@ AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double valu
 
 {% endtab %}
 
-{% tab Boolesch %}
+{% tab Boolean %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
 ```
 {% endtab %}
 
-{% tab Datum %}
+{% tab Date %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");

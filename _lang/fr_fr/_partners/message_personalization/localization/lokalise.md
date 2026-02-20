@@ -16,7 +16,7 @@ _Cette intégration est maintenue par Lokalise._
 
 ## À propos de l'intégration
 
-L'intégration entre Braze et Lokalise s'appuie sur le contenu connecté pour vous permettre d'insérer facilement du contenu traduit dans vos campagnes Braze en fonction des paramètres linguistiques de l'utilisateur.
+L'intégration entre Braze et Lokalise utilise le contenu connecté pour vous permettre d'insérer facilement du contenu traduit dans vos campagnes Braze en fonction des paramètres linguistiques de l'utilisateur.
 
 ## Conditions préalables
 
@@ -81,7 +81,7 @@ Pour tester cette URL, copiez-la et remplacez {% raw %}`{{${language}}}`{% endra
 
 ![]({% image_buster /assets/img/lokalise/4_testing_json_lokalise.png %})
 
-### Étape 4 : Utilisation des traductions dans la campagne Braze
+### Étape 4 : Utilisation des traductions dans la campagne Braze
 
 #### Insérer un appel à contenu connecté
 
@@ -112,18 +112,22 @@ Par exemple, pour afficher la clé `description`, utilisez`{{ translations.descr
 
 Enfin, enregistrez le modèle d'e-mail et prévisualisez-le. Vous devriez voir votre traduction s'afficher.
 
-## Questions fréquemment posées
+## Foire aux questions
 
-**Que se passe-t-il si je supprime accidentellement une clé de Lokalise ?**<br>
+### Que se passe-t-il si je supprime accidentellement une clé de Lokalise ?
+
 La chaîne de caractères correspondante sur Braze n'aura plus de traduction.
 
-**Si j'ai un paramètre local défini sur `en` mais que je le remplace par `en-US` dans Lokalise, Braze pourra-t-il le fichier en tant que `en-US` ?**<br>
+### Si j'ai une locale `en` mais que je la remplace par `en-US` dans Lokalise, Braze la lira-t-elle comme `en-US`?
+
 Non, les codes ISO locaux doivent correspondre sur Braze et Lokalise.
 
-**Peut-on utiliser l’indicateur `:rerender` pour connecter du contenu Lokalise ?**<br>
+### Peut-on utiliser le drapeau `:rerender` pour connecter un contenu connecté ?
+
 Oui, bien sûr. Vous pouvez consulter la documentation de Braze pour savoir comment ajouter ce drapeau.
 
-**Après avoir actualisé le fichier de traduction sur Lokalise, pourquoi ne vois-je pas de changements dans le contenu traduit sur Braze ?**<br>
+### Après avoir actualisé le fichier de traduction sur Lokalise, pourquoi ne vois-je pas de changements dans le contenu traduit sur Braze ?
+
 Braze met en cache le contenu traduit et son actualisation peut prendre quelques minutes. Si vous testez vos campagnes et avez besoin de voir les résultats des traductions immédiatement, vous pouvez utiliser le paramètre `:cache_max_age` comme expliqué dans cet article de référence.
 
 

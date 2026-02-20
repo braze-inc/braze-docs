@@ -1,5 +1,5 @@
 ---
-nav_title: Postman et demandes d’échantillons
+nav_title: Postman et demandes d’exemples
 article_title: Postman et demandes d’échantillons
 page_order: 3
 description: "Cet article de référence couvre la collection Braze Postman, ce qu’elle est, comment la configurer et l’utiliser, ainsi que la façon de modifier et d’envoyer des demandes."
@@ -13,7 +13,7 @@ page_type: reference
 
 ## Qu’est-ce que Postman ?
 
-Postman est un outil d’édition visuelle gratuit pour la création et l’analyse des demandes API. Contrairement à d'autres méthodes d'interaction avec les API (par exemple, l'utilisation de cURL), Postman vous permet de modifier facilement les demandes d'API, d'afficher les informations d'en-tête, et bien plus encore. Postman a la possibilité d’enregistrer les collections ou bibliothèques d’échantillons de demandes API prédéfinis. Afin de faciliter la mise en service et l’exécution de nos API REST pour nos clients, nous avons créé une collection avec des exemples prédéfinis pour tous nos endpoints d’API.
+Postman est un outil de modification visuelle gratuit permettant de créer et de tester des demandes d'API. Par rapport à d'autres méthodes (par exemple, l'utilisation de cURL), Postman vous permet de modifier les demandes d'API, d'afficher les informations d'en-tête, etc. Vous pouvez enregistrer des collections (bibliothèques d'exemples de demandes d'API préétablies). Pour accélérer la configuration de notre API REST, nous fournissons une collection d'exemples préétablis pour tous les endpoints.
 
 Consultez ou téléchargez notre collection Postman en cliquant sur **Exécuter dans Postman** dans notre [documentation Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro) pour commencer.
 
@@ -38,7 +38,7 @@ Pour créer votre propre environnement, procédez comme suit :
 Dans les corps de requête `POST`, la `api_key` doit être comprise entre des guillemets : `"MY-API-KEY-EXAMPLE"`. Dans les URL `GET`, elle ne doit pas l’être. Nous vous avons déjà fourni ce formatage pour les corps de demande `POST`, les URL `GET` et le modèle d’environnement de `YOUR-API-KEY-HERE` dans cette documentation.
 {% endalert %}
 
-![Ajout de variables pour la clé API et l'URL d'instance à l'environnement de l'API REST de Braze dans Postman.]({% image_buster /assets/img_archive/postman_variable.png %})
+![Ajout de variables pour la clé API et l’URL d’instance à l’environnement API REST de Braze dans Postman.]({% image_buster /assets/img_archive/postman_variable.png %})
 
 ### Utiliser les demandes prédéfinies de la collection
 
@@ -50,17 +50,17 @@ En général, il existe deux types de requêtes que les endpoints API de Braze a
 
 Lorsque vous modifiez une demande `POST`, ouvrez la demande et accédez à la section **Corps** dans l'éditeur de demande. Pour des raisons de lisibilité, sélectionnez le bouton radio **raw** pour formater le corps de la requête `JSON`.
 
-![Onglet "Body" lors de la modification d'une requête POST User Track dans Postman]({% image_buster /assets/img_archive/postman_post.png %})
+![Onglet Corps lors de la modification d’une demande POST Suivi de l’utilisateur dans Postman]({% image_buster /assets/img_archive/postman_post.png %})
 
 #### Modifier une demande GET
 
 Lors de la modification d’une demande `GET`, changez les paramètres transmis dans l’URL de demande. Pour ce faire, sélectionnez l'onglet **Params** et modifiez les paires clé-valeur dans les champs qui apparaissent.
 
-![Onglet Params lors de la modification d'une requête GET Query List of Unsubscribed Email Addresses dans Postman.]({% image_buster /assets/img_archive/postman_get.png %})
+![Onglet Paramètres lors de la modification d’une demande GET Demander la liste des adresses e-mail désinscrites dans Postman.]({% image_buster /assets/img_archive/postman_get.png %})
 
 ### Envoyer votre demande
 
 Lorsque votre demande d'API est prête, cliquez sur **Envoyer.** La demande est envoyée et les données de réponse s’affichent dans une section sous l’éditeur de demande. À partir de là, vous pouvez afficher les données brutes renvoyées par l'API de Braze, le code de réponse HTTP, le temps de traitement de la demande et les informations d'en-tête.
 
-![Exemple de données de réponse du corps d'une requête POST avec un statut de 201 Created et un temps de réponse de 269 millisecondes.]({% image_buster /assets/img_archive/postman_response.png %})
+![Exemples de données de réponse de corps d’une demande POST avec un statut de 201 Créés et un temps de réponse de 269 millisecondes.]({% image_buster /assets/img_archive/postman_response.png %})
 

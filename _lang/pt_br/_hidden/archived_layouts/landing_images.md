@@ -1,5 +1,5 @@
 ---
-nav_title: SS LP com imagens
+nav_title: Ss lp com imagens
 layout: dev_guide
 
 page_order: 1.1

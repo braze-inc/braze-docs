@@ -14,7 +14,7 @@ sequenceDiagram
   participant BrazeAPI as Braze Server
   participant Firebase as Google Firebase
   Note over Device, Firebase: Register Option 1<br/>Register Automatically using `com_braze_firebase_cloud_messaging_registration_enabled` in braze.xml
-  App ->> Braze: App intializes Braze with the first Braze call<br>This could be automatic session handling
+  App ->> Braze: App initializes Braze with the first Braze call<br>This could be automatic session handling
   BrazeSDK ->> App: Get push token from Firebase Manager
   BrazeSDK ->> BrazeAPI: Send push token to Braze Server
   Note right of BrazeAPI: Braze will remove push token from any<br>other user who may have previously<br> been logged in on the same device.
@@ -33,7 +33,7 @@ sequenceDiagram
   Firebase ->> Device: Push message sent
   Device ->> App: Android will send the push to the App.<br>This could be blocked to Do Not Disturb, Power Saving Mode, etc.
   App ->> BrazeSDK: Message is sent to BrazeFirebaseMessagingService
-  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notfication and displayed.
+  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notification and displayed.
 
 ```
 
@@ -172,7 +172,7 @@ Wi-Fi 経由でプッシュをテストしている場合は、FCM がメッセ�
 
 Braze ダッシュボードで提供された Firebase Cloud Messaging サーバーキーが無効です。提供された送信者 ID は、アプリの `braze.xml` ファイルで参照されている送信者 ID と一致する必要があります。サーバーキーと送信者 ID は、Firebase コンソールの次の場所にあります。
 
-![Firebase プラットフォームの [設定]、[クラウドメッセージング] にサーバー ID とサーバーキーが表示されます。]({% image_buster /assets/img_archive/finding_firebase_server_key.png %}「FirebaseServerKey」)
+![Firebase プラットフォームの [設定]、[クラウドメッセージング] にサーバー ID とサーバーキーが表示されます。]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey")
 
 ### プッシュクリックが記録されない
 

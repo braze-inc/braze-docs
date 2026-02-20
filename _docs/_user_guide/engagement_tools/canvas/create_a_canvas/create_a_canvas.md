@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a Canvas
-article_title: Creating a Canvas
+nav_title: Create a Canvas
+article_title: Create a Canvas
 page_order: 0
 page_type: reference
 description: "This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas."
@@ -8,7 +8,7 @@ tool: Canvas
 search_rank: 1
 ---
 
-# Creating a Canvas
+# Create a Canvas
 
 > This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup).
 
@@ -110,7 +110,7 @@ You can choose one of three ways in which users can enter your Canvas.
 
   {% endtab %}
   {% tab API-Triggered Delivery %}
-    With API-triggered delivery, users will enter your Canvas and begin receiving messages after they have been added using the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via the API. In the dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). 
+    With API-triggered delivery, users will enter your Canvas and begin receiving messages after they have been added using the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via the API. In the dashboard, you can find an example cURL request that does this as well as assign optional [`context`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [context object]({{site.baseurl}}/api/objects_filters/context_object/). 
 
     ![An example of API-triggered delivery with a Canvas ID and an example of a cURL request.]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
 
@@ -136,15 +136,13 @@ Only the users who match your defined criteria can enter the journey in the **Ta
 
 In **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based and action-based Canvases, this limit occurs at every UTC hour. 
 
-{% alert important %}
-Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). A [race condition]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Canvas race condition audience trigger' %}
 
 ##### Testing your audience
 
 After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
-![The "User Lookup" field, which allows you to search by external user ID or Braze ID.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
+![The "User Lookup" field, which allows you to search by external user ID or Braze ID.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
 
 ##### Selecting entry controls
 
@@ -223,7 +221,7 @@ By default, the Canvas variant assignment is locked in when users enter the Canv
 {% details Expand for steps %}
 
 1. Create a custom attribute to store your random number. Name it something easy to locate, like "lottery_number" or "random_assignment". You can create the attribute either [in your dashboard]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/), or through API calls to our [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
-2. Create a webhook campaign at the beginning of your Canvas. This campaign will be the medium in which you create your random number and store it as a custom attribute. Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) for more. Set the URL to our `/users/track` endpoint.<br><br>
+2. Create a webhook campaign at the beginning of your Canvas. This campaign will be the medium in which you create your random number and store it as a custom attribute. Refer to [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) for more. Set the URL to our `/users/track` endpoint.<br><br>
 3. Create the random number generator. You can do so with the code [ outlined here](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), which takes advantage of each user's unique time of entry to create a random number. Set the resulting number as a Liquid variable within your webhook campaign.<br><br>
 4. Format the `/users/track` call on your webhook campaign so that it sets the custom attribute you created in step 1 to the random number you've generated on your current user's profile. When this step runs, you will have successfully made a random number that changes each time a user enters your campaign.<br><br>
 5. Adjust the branches of your Canvas so that, instead of being divided by randomly chosen variants, they are divided based on audience rules. In the audience rules of each branch, set the audience filter according to your custom attribute. <br><br>For example, one branch may have "lottery_number is less than 3" as an audience filter, while another branch may have "lottery_number is more than 3 and less than 6" as an audience filter.
@@ -281,12 +279,12 @@ Select **Done** after you've finished configuring your Canvas component.
 {% tabs local %}
 {% tab Canvas Entry Properties %}
 
-The `canvas_entry_properties` are configured in the Entry Schedule step of creating a Canvas and indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object can be up to 50 KB. 
+The [`context` object]({{site.baseurl}}/api/objects_filters/context_object) is configured in the **Entry Schedule** step of creating a Canvas and indicates the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object can be up to 50 KB. 
 
-Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties.${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
+Use the following Liquid when referencing these properties created upon entering the Canvas: {% raw %} ``context.${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
 
 {% raw %}
-For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with this Liquid ``{{canvas_entry_properties.${product_name}}}``.
+For example, consider the following request: `\"context\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with this Liquid ``{{context.${product_name}}}``.
 {% endraw %}
 
 {% endtab %}

@@ -1,5 +1,5 @@
 ---
-nav_title: "パッチ:カタログアイテムの編集"
+nav_title: "パッチ:カタログアイテムを編集"
 article_title: "パッチ:カタログアイテムの編集"
 search_tag: Endpoint
 page_order: 4

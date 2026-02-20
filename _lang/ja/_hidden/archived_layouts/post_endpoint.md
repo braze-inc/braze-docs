@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: [エンドポイント名］"
+nav_title: "POSTする：[エンドポイント名]。"
 article_title: "レイアウト例：POST:ユーザートラック"
 search_tag: Endpoint
 page_order: 4
@@ -13,7 +13,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
-# [エンドポイント名]
+# [エンドポイント名]。
 
 {% apimethod post %}
 /sms/invalid_phone_numbers/remove
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <!--This is a place for you to describe additional details for the parameters in the request body.-->
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | ----------|-----------| ---------|------ |
 | `phone_number` | required | e.164 形式の文字列の配列 | 変更する最大 50 個の電話番号の配列。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

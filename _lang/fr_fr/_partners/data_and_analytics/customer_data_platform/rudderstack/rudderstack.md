@@ -59,7 +59,7 @@ Configurez les mappages vers le SDK de Rudderstack pour votre plateforme sur le 
 - [Android](https://github.com/rudderlabs/rudder-integration-braze-android)
 - [iOS](https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master)
 - [Swift](https://github.com/rudderlabs/rudder-integration-braze-swift)
-- [Web](https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze)
+- [Web](https://github.com/rudderlabs/rudder-sdk-js/tree/develop/packages/analytics-js-integrations/src/integrations/Braze)
 - [React Native](https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native)
 - [Flutter](https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter)
 
@@ -112,7 +112,7 @@ Les paramètres suivants ne s'appliquent que si vous envoyez des événements à
 Braze prend en charge les méthodes Rudderstack identify, track, screen, page, group et alias.
 
 {% tabs %}
-{% tab Identifier %}
+{% tab Identify %}
 
 La méthode Rudderstack [`identify`](https://rudderstack.com/docs/destinations/marketing/braze/#identify) associe les utilisateurs à leurs actions. RuddStack enregistre un ID unique et des données facultatives associées à l'utilisateur, telles que le nom, l'e-mail, l'adresse IP, etc.
 
@@ -123,7 +123,7 @@ Si vous envoyez des événements à Braze via le mode appareil, vous pouvez réd
 Vous pouvez supprimer un utilisateur dans Braze à l'aide de la [règle Suppression avec Supprimer](https://www.rudderstack.com/docs/api/data-regulation-api/#adding-a-suppression-with-delete-regulation) [ de l'API de réglementation des données](https://www.rudderstack.com/docs/api/data-regulation-api/) de Rudderstack.
 
 {% endtab %}
-{% tab Suivre %}
+{% tab Track %}
 
 La [méthode`track` ](https://rudderstack.com/docs/destinations/marketing/braze/#track) de Rudderstack capture toutes les activités de l'utilisateur et les propriétés associées à ces activités.
 
@@ -131,7 +131,7 @@ La [méthode`track` ](https://rudderstack.com/docs/destinations/marketing/braze/
 En utilisant l'[API eCommerce de RudderStack](https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/) pour appeler la méthode de suivi d'un événement portant le nom `Order Completed`, RudderStack envoie les produits listés dans cet événement à Braze en tant que [`purchases`]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
 {% endtab %}
-{% tab Écran %}
+{% tab Screen %}
 
 La [méthode`screen` de](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#screen) Rudderstack vous permet d'enregistrer les vues d'écran mobiles de vos utilisateurs avec toute information supplémentaire sur l'écran visualisé.
 
@@ -141,7 +141,7 @@ La [méthode`screen` de](https://www.rudderstack.com/docs/destinations/streaming
 La méthode [`page`](https://rudderstack.com/docs/destinations/marketing/braze/#page) de Rudderstack vous permet d'enregistrer les pages consultées de votre site web. Il saisit également toute autre information pertinente concernant cette page.
 
 {% endtab %}
-{% tab Groupe %}
+{% tab Group %}
 
 La méthode [`group`](https://rudderstack.com/docs/destinations/marketing/braze/#group) de Rudderstack vous permet d'associer un utilisateur à un groupe.
 

@@ -16,7 +16,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les u
 
 > Utilisez cet endpoint pour exporter des données à partir de n’importe quel profil utilisateur en spécifiant un identifiant utilisateur.
 
-Vous pouvez inclure jusqu’à 50 `external_ids` ou `user_aliases` dans une seule requête. Si vous souhaitez spécifier un `device_id`, une `email_address` ou un `phone`, un seul de ces identifiants peut être inclus par requête.
+Vous pouvez inclure jusqu’à 50 `external_ids` ou `user_aliases` dans une seule requête. Si vous souhaitez spécifier `device_id`, `email_address`, ou `phone`, un seul de ces identifiants peut être inclus par demande.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "braze_id": (optional, string) Braze identifier for a particular user,
   "email_address": (optional, string) Email address of user,
   "phone": (optional, string) Phone number of user,
-  "fields_to_export": (required, array of strings) Name of user data fields to export
+  "fields_to_export": (optional, array of strings) Name of user data fields to export
 }
 ```
 
@@ -61,8 +61,10 @@ Pour les clients ayant onboardé avec Braze le 22 août 2024 ou après, le param
 | `braze_id`         | Facultatif | Chaîne de caractères                                                        | Identifiant Braze d’un utilisateur particulier.                                                      |
 | `email_address`    | Facultatif | Chaîne de caractères                                                        | Adresse e-mail de l’utilisateur.                                                                       |
 | `phone`            | Facultatif | Chaîne de caractères dans [E.164](https://en.wikipedia.org/wiki/E.164) format | Numéro de téléphone de l’utilisateur.                                                                        |
-| `fields_to_export` | Requis | Tableau de chaînes de caractères                                              | Nom des champs de données utilisateur à exporter.                                                          |
+| `fields_to_export` | En option* | Tableau de chaînes de caractères                                              | Nom des champs de données utilisateur à exporter.<br><br>\*Ce champ est obligatoire pour utiliser la limite de débit plus rapide de 40 requêtes par seconde. Si elle est omise, la limite de débit par défaut de 250 requêtes par minute sera utilisée à la place. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+\*Nécessaire pour les clients ayant onboardé avec Braze à partir du 22 août 2024.
 
 ## Exemple de demande
 ```
@@ -130,8 +132,6 @@ En fonction des données demandées, cet endpoint API peut ne pas suffire à ré
 ## Réponse
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "users" : (array of object) the data for each of the exported users, may be empty if no users are found,
@@ -146,7 +146,7 @@ L'exemple suivant illustre les données accessibles via cet endpoint.
 Objet d'exportation de l'utilisateur (nous inclurons le moins de données possible - si un champ est absent de l'objet, il doit être considéré comme nul ou vide) :
 
 {% tabs %}
-{% tab Tous les domaines %}
+{% tab All fields %}
 
 ```json
 {
@@ -288,7 +288,7 @@ Objet d'exportation de l'utilisateur (nous inclurons le moins de données possib
 ```
 
 {% endtab %}
-{% tab Exemple de sortie %}
+{% tab Sample output %}
 
 ```json
 {
@@ -416,7 +416,7 @@ Objet d'exportation de l'utilisateur (nous inclurons le moins de données possib
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"

@@ -1,12 +1,12 @@
 ---
-nav_title: 同意の管理
-article_title: 同意の管理
+nav_title: 同意のマネージャー
+article_title: 同意のマネージャー
 page_order: 10
 page_type: reference
 description: "このリファレンス記事には、Braze を使用して同意を管理する方法のヒントがあります。"
 ---
 
-# 同意の管理
+# 同意のマネージャー
 
 > このリファレンス記事には、Braze を使用してユーザーからの同意を管理する方法のヒントがあります。
 

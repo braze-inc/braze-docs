@@ -1,5 +1,5 @@
 ---
-nav_title: "コネクテッド・オーディエンス フィルター＆オブジェクト"
+nav_title: "接続オーディエンスフィルターとオブジェクト"
 article_title: API接続オーディエンス・オブジェクト
 page_order: 3
 page_type: reference
@@ -9,7 +9,7 @@ description: "この記事では、接続オーディエンスオブジェクト
 
 # 接続されたオーディエンスオブジェクト
 
-> 接続されたオーディエンス・オブジェクトは、メッセージを送信するオーディエンスを特定するセレクタである。 
+> 接続されたオーディエンス・オブジェクトは、あなたのメッセージのオーディエンスを識別する。例えば、カスタム属性配列を使ってユーザーがお気に入りしたすべてのカテゴリーとテレビ番組をトラッキングすれば、コネクテッドオーディエンスを使用して、新しいエピソードがリリースされるたびに、その番組をお気に入りした人にプッシュ通知やメールを自動的に送ることができる。
 
 このオブジェクトは、`AND` または `OR` 演算子を使用した論理式で、1つの接続オーディエンスフィルター、または複数の接続オーディエンスフィルターで構成されます。
 
@@ -34,7 +34,7 @@ description: "この記事では、接続オーディエンスオブジェクト
 
 ## 接続オーディエンスフィルター
 
-複数のカスタム属性フィルターを組み合わせると、接続オーディエンスフィルターが作成され、`AND` および `OR` 演算子と組み合わせると、接続オーディエンスフィルターが作成されます。
+複数のカスタム属性フィルターを`AND` および`OR` 演算子と組み合わせることで、接続されたオーディエンスフィルターが作成される。
 
 ### カスタム属性フィルター
 
@@ -61,7 +61,7 @@ description: "この記事では、接続オーディエンスオブジェクト
 | 配列 | `includes_value``does_not_include_value`,`exists` 、 `does_not_exist` |
 | 数値 | `equals``not_equal`,`greater_than`,`greater_than_or_equal_to`,`less_than`,`less_than_or_equal_to`,`exists` 、 `does_not_exist` |
 | ブール値 | `equals``does_not_equal`,`exists` 、 `does_not_exist` |
-| 時刻 | `less_than_x_days_ago``greater_than_x_days_ago`,`less_than_x_days_in_the_future`,`greater_than_x_days_in_the_future`,`after`,`before`,`exists` 、 `does_not_exist` | 
+| 時刻 | `less_than_x_days_ago``greater_than_x_days_ago`,`less_than_x_days_in_the_future`,`greater_than_x_days_in_the_future`,`after`,`before`,`exists` 、 `does_not_exist` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### 属性比較の注意点
@@ -142,7 +142,7 @@ description: "この記事では、接続オーディエンスオブジェクト
 
 ### 最後に使用したアプリフィルター
 
-このフィルターにより、ユーザーが最後にアプリを利用したのはいつなのかに基づいてセグメントすることができる。これらのフィルターには2つのフィールドがある：
+このフィルターにより、ユーザーが最後にアプリを使用した時期に基づいてセグメンテーションすることができる。これらのフィルターには2つのフィールドがある：
 
 #### フィルター本文
 ```json
@@ -160,4 +160,4 @@ description: "この記事では、接続オーディエンスオブジェクト
 
 ### 考慮事項
 
-接続オーディエンスは、デフォルト属性、カスタムイベント、セグメント、またはメッセージエンゲージメントイベントによってユーザーをフィルターすることはできません。これらのフィルターを使用するには、それらをオーディエンスセグメントに組み込み、そのセグメントを [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters) に指定することをお勧めします。
+接続オーディエンスは、デフォルト属性、カスタムイベント、セグメント、またはメッセージエンゲージメントイベントによってユーザーをフィルターすることはできません。これらのフィルターを使用するには、それらをオーディエンスセグメントに組み込み、[`/messages/send` エンド]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters)ポイントの`segment_id` パラメーターでそのセグメントを指定することを推奨する。他のエンドポイントを使用する場合は、まずBrazeダッシュボードでAPIトリガーキャンペーンまたはキャンバスにセグメンテーションを追加する必要がある。

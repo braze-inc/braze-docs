@@ -1,7 +1,7 @@
 ---
 nav_title: "MMS"
 article_title: MMSについて
-page_order: 15
+page_order: 16
 description: "この参考記事では、MMSメッセージとは何か、MMSチャンネルの一般的な使用例について説明する。"
 page_type: reference
 alias: /about_mms/

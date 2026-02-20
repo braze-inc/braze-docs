@@ -6,7 +6,7 @@ page_type: reference
 description: "Everything you do in the Braze platform happens within a workspace. This article describes how they work and what important considerations to keep in mind when planning your workspaces in Braze."
 ---
 
-# Getting Started: Workspaces
+# Get started: Workspaces
 
 Everything you do in the Braze platform happens within a workspace. Workspaces act as separate silos of data, and allow you to keep different brands or activities separate. Multiple versions of your website or mobile app can send data to the same workspace. We refer to the different sites and apps that are collected within a workspace as "app instances."
 
@@ -66,7 +66,7 @@ The following are all key elements that are configured within a workspace:
 
 - [App instances](#app-instances)
 - [Teams](#teams)
-- [Braze user permissions](#braze-user-permissions) (but not Braze users)
+- [Company user permissions](#company-user-permissions) (but not company users)
 - [Currents connectors](#currents-connectors)
 - [User profiles](#user-profiles) and the associated user data
 - [Segments, campaigns, and Canvases](#segments-campaigns-and-canvases)
@@ -79,7 +79,7 @@ You must create separate app instances for each version of your app on each plat
 
 [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) can be set up across customer base location, language, and custom attributes so that team members and non-team members have different access to messaging features and customer data.
 
-#### Braze user permissions
+#### Company user permissions
 
 Workspaces have independent access and user permission definitions. [User permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) allow you to create granular controls regarding what an individual dashboard user or team has access to within a single workspace.
 
@@ -195,7 +195,7 @@ The following table describes the benefits and drawbacks of these two approaches
         <td>A user profile's subscription statuses are combined across app instances.<br><br><b>Tip:</b> You could use <a href='/docs/user_guide/data/custom_data/custom_attributes'>custom attributes</a> to manage your users' subscriptions instead.</td>
     </tr>
     <tr>
-        <td>Braze user permissions</td>
+        <td>Company user permissions</td>
         <td>N/A</td>
         <td>Updating <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>user permissions</a> for a dashboard user must be done separately for each workspace the user needs access to.</td>
         <td><a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>User permissions</a> can be set once for a dashboard user, and they will have the same permissions for all app instances in the workspace.</td>
@@ -205,7 +205,7 @@ The following table describes the benefits and drawbacks of these two approaches
         <td>Duplicating content</td>
         <td>N/A</td>
         <td>Cannot duplicate segments, push or Content Card campaigns, or Canvases across workspaces.</td>
-        <td>Can [duplicate campaigns across workspaces]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. <br><br>Can duplicate segments, campaigns, and Canvases to reuse content from one app instance to another.</td>
+        <td>Can <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>duplicate campaigns across workspaces</a> for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. <br><br>Can duplicate segments, campaigns, and Canvases to reuse content from one app instance to another.</td>
         <td>N/A</td>
     </tr>
     <tr>
@@ -240,5 +240,5 @@ You should have more than one Braze user with admin permissions for a single wor
 
 ## Next steps
 
-After you've determined your workspace plan, it's time to create your workspace and add app instances. For steps, check out [Creating and managing workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
+After you've determined your workspace plan, it's time to create your workspace and add app instances. For steps, check out [Create and manage workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 

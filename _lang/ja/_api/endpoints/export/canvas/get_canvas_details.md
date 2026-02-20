@@ -28,9 +28,9 @@ description: "この記事では、「キャンバスの詳細のエクスポー
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | 必須 | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください |
+| `canvas_id` | 必須かどうか | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください |
 | `post_launch_draft_version` | オプション | ブール値 | 開始後の下書きがあるキャンバスの場合、これを`true` に設定すると、利用可能な下書きの変更が表示されます。デフォルトは `false` です |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -46,12 +46,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## 回答
 
 {% alert note %}
-すべてのキャンバスステップには、`{name, next_step_id}` データの配列である `next_paths` フィールドがあります。フルステップとメッセージステップの場合、`next_step_ids` フィールドは存在するが、他のキャンバスフローのステップのデータは含まれない。
+すべてのキャンバスステップには、`{name, next_step_id}` データの配列である `next_paths` フィールドがあります。メッセージステップの場合、`next_step_ids` フィールドは存在するが、他のキャンバスステップのデータは含まれない。
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "created_at": (string) the date created as ISO 8601 date,
   "updated_at": (string) the date updated as ISO 8601 date,

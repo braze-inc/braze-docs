@@ -1,6 +1,6 @@
 ---
 nav_title: Tapcart
-article_title: Integrating Tapcart with Braze
+article_title: Integrate Tapcart with Braze
 description: "Learn about Tapcart's integration with Braze."
 alias: /partners/tapcart/
 page_type: partner

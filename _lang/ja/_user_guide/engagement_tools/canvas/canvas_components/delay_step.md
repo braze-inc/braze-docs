@@ -2,7 +2,7 @@
 nav_title: 遅延 
 article_title: 遅延 
 alias: "/delay_step/"
-page_order: 3
+page_order: 8
 page_type: reference
 description: "この記事では、関連するメッセージを追加することなく、キャンバスに遅延を追加する方法について説明します。"
 tool: Canvas
@@ -13,11 +13,7 @@ tool: Canvas
 
 > 遅延コンポーネントを使用して、キャンバスにスタンドアロンの遅延を追加できます。関連するメッセージを追加しなくても、キャンバスに遅延を追加することができます。 
 
-<<<<<<< HEAD
-遅延によって、すっきりと整理されたキャンバスを作成できます。このコンポーネントを使えば、正確な日付まで、特定の日まで、あるいは特定の曜日まで、別のステップを遅らせることもできます。<br> ![キャンバスの最初のステップを1日遅れのディレイステップとする。]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
-=======
-遅延によって、すっきりと整理されたキャンバスを作成できます。このコンポーネントを使えば、正確な日付まで、特定の日まで、あるいは特定の曜日まで、別のステップを遅らせることもできます。<br> \![キャンバスの最初のステップを1日遅れのディレイステップとする。]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
->>>>>>> main
+遅延によって、すっきりと整理されたキャンバスを作成できます。このコンポーネントを使えば、正確な日付まで、特定の日まで、あるいは特定の曜日まで、別のステップを遅らせることもできます。<br> ![キャンバスの最初のステップとして1日遅れのディレイステップがある。]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ## 遅延の作成
 
@@ -108,9 +104,7 @@ tool: Canvas
 
 ### パーソナライズされた遅延
 
-{% alert important %}
-パーソナライズされた遅延と拡張された遅延は、早期アクセス中です。この初期のアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
-{% endalert %}
+{% include early_access_beta_alert.md feature='The personalized delays and extended delays feature' %}
 
 **パーソナライズされた遅延**トグルを選択して、ユーザーのパーソナライズされた遅延を設定します。これは、[コンテキストステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context)で使用して、遅延するコンテキスト変数を選択できます。これは、選択された属性またはプロパティで設定された時間帯を上書きする。これは、オフセットを日単位や週単位で適用し、ユーザーを特定の時間に前進させたい場合に便利である。タイムゾーンは属性またはプロパティから取得するか、利用可能なものがない場合はフォールバックを使用する。 
 
@@ -123,7 +117,7 @@ tool: Canvas
 - **時間データ型：**アトリビューションまたはコンテキスト変数が時間データ型の場合、それはUTCに準拠する。これは、データベースに保存される際、timeデータ型は常にUTCに変換されるためで、変数がtimeデータ型に設定されている場合、"at specific time "は常にUTCを参照することになる。例えば、`2025-06-10T10:00:00-08:00` はUTC+0を使用している。
 
 {% alert note %}
-カスタム属性やコンテキスト変数が文字列データ型であれば、特定の時刻やタイムゾーンを持たないことも可能だ。時間データ型の場合は、時間とタイムゾーンを指定する必要がある。しかし、カスタム属性やコンテキスト変数が「無関係な」文字列（たとえば"product_name"), ）である場合、ユーザーはキャンバスから退出する。
+カスタム属性やコンテキスト変数が文字列データ型であれば、特定の時刻やタイムゾーンを持たないことも可能だ。時間データ型の場合は、時間とタイムゾーンを指定する必要がある。しかし、カスタム属性やコンテキスト変数が「無関係な」文字列（たとえば"product_name"), ）である場合、ユーザーはキャンバスから退出してしまう。
 {% endalert %}
 
 #### ユースケース
@@ -134,11 +128,7 @@ tool: Canvas
 - **データタイプ:**時刻
 - **値:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
 
-<<<<<<< HEAD
-"product_reminder_interval" ![、その価値は？]({% image_buster /assets/img/context_step1.png %})
-=======
-"product_reminder_interval" \![、その価値は？]({% image_buster /assets/img/context_step1.png %})
->>>>>>> main
+!["product_reminder_interval" とその価値。]({% image_buster /assets/img/context_step1.png %})
 
 次に、30日後に顧客に注意を促すため、遅延オプションとして [**特定の日まで**] を選択し、[**遅延のカスタマイズ**] を選択してコンテキストステップの情報を使用します。つまり、ユーザーは選択したコンテキスト変数まで遅延します。
 

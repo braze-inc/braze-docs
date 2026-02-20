@@ -7,19 +7,19 @@ page_type: partner
 search_tag: Partner
 ---
 
-# SimonAI
+# Simon AI
 
-> The [SimonAI][1] Agentic Marketing Platform helps marketing teams achieve true one-to-one personalization. It combines a composable CDP with AI agents that operate directly in the Snowflake AI Data Cloud to act as a marketer's data and execution team.
+> The [Simon AI][1] Agentic Marketing Platform helps marketing teams achieve true one-to-one personalization. It combines a composable CDP with AI agents that operate directly in the Snowflake AI Data Cloud to act as a marketer's data and execution team.
 
-Use the Braze and SimonAI integration to build and sync advanced audiences to Braze for real-time, no-code orchestration. With this integration, you can tap into SimonAI’s identity resolution, customer data unification, and AI-driven segmentation to power more personalized and impactful Braze campaigns downstream.
+Use the Braze and Simon AI integration to build and sync advanced audiences to Braze for real-time, no-code orchestration. With this integration, you can tap into Simon AI’s identity resolution, customer data unification, and AI-driven segmentation to power more personalized and impactful Braze campaigns downstream.
 
 ## Prerequisites
 
-To get started, you need to authenticate your Braze account within your SimonAI account.
+To get started, you need to authenticate your Braze account within your Simon AI account.
 
 | Requirement         | Description                                                                                                                                                               |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SimonAI          | You must have an existing SimonAI account to leverage the Braze integration from within SimonAI.                                                                    |
+| Simon AI          | You must have an existing Simon AI account to leverage the Braze integration from within Simon AI.                                                                    |
 | Braze REST API key  | A Braze REST API key with `users.track`, `campaigns.trigger.schedule.create`, and `campaigns.trigger.send` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze Dashboard URL | [Your REST endpoint URL][3]. Your endpoint will depend on the Braze URL for your instance.                                                                                |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -36,7 +36,7 @@ When using the Simon and Braze integration, Simon only sends deltas on each sync
 
 ## Integration
 
-### Authenticate your Braze account in SimonAI
+### Authenticate your Braze account in Simon AI
 
 To use the Braze integration, first authenticate your Braze account in Simon:
 
@@ -46,11 +46,11 @@ To use the Braze integration, first authenticate your Braze account in Simon:
 
 A successful connection displays **Connected** in the window.
 
-![Integration screen in SimonAI][8]{: style="max-width:70%"}
+![Integration screen in Simon AI][8]{: style="max-width:70%"}
 
-### Add Braze actions to Flows or Journeys in SimonAI
+### Add Braze actions to Flows or Journeys in Simon AI
 
-After you've authenticated your Braze account in SimonAI you can add Braze actions to [Flows][4] and [Journeys][5].
+After you've authenticated your Braze account in Simon AI you can add Braze actions to [Flows][4] and [Journeys][5].
 
 Three actions are available:
 
@@ -58,7 +58,7 @@ Three actions are available:
 - **Trigger a Braze Canvas**: Trigger a Braze Canvas that leverages your Simon segment data.
 - **Send a Braze campaign**: Launch an entire Braze campaign from Simon.
 
-![Dropdown showing list of available Braze actions in SimonAI.][9]{: style="max-width:60%"}
+![Dropdown showing list of available Braze actions in Simon AI.][9]{: style="max-width:60%"}
 
 Some actions are only available for specific Flow types or Journeys alone. Learn more at [docs.simondata.com][6].
 
@@ -79,7 +79,7 @@ After Contact Traits is activated by your account manager:
    2. Edit the **Downstream name** if you want the field names to appear differently when they arrive in Braze.
    3. If this is your first time integrating with Braze from Simon, click **Backfill all contacts**. Backfilling sends all the data points to Braze the first time you use an action in a flow or journey to be sure all your data is fully in sync. Then on subsequent syncs, only the traits you choose in this screen are sent to Braze. This helps to make sure you're only charged for the data you need.
 
-![Selecting sync traits in SimonAI.][10]
+![Selecting sync traits in Simon AI.][10]
 
 [1]: https://www.simondata.com
 

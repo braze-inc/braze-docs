@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Nexla
 
-> [Nexla](https://www.nexla.com) は統合データ運用分野のリーダーであり、2021年の Gartner Cool Vender に選出されています。Nexla プラットフォームでは、誰でも簡単にスケーラブルなデータフローを作成でき、ビジネスチームとデータチームにフリクションのない制御されたデータ運用、コラボレーションの向上、アジリティをもたらします。データを扱うチームは、ノーコード / ローコードの統一されたエクスペリエンスで、あらゆるユースケースのデータを統合、変換、プロビジョニング、監視することができます。 
+> [Nexla](https://www.nexla.com) は統合データ運用分野のリーダーであり、2021年の Gartner Cool Vender に選出されています。Nexlaプラットフォームは、スケーラブルなデータフローを作成するためのツールを提供し、ビジネスチームとデータチームにガバナンスの効いたデータオペレーション、コラボレーション、アジリティを提供する。データを扱うチームは、ノーコード / ローコードの統一されたエクスペリエンスで、あらゆるユースケースのデータを統合、変換、プロビジョニング、監視することができます。 
 
 Braze と Nexla の統合により、[Currents]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) を利用しているお客様は、Nexla を活用してデータレイクデータを抽出、変換し、カスタムフォーマットで他の場所に読み込むことができ、エコシステム全体でデータに簡単にアクセスできるようになります。
 
@@ -25,7 +25,7 @@ Braze と Nexla の統合により、[Currents]({{site.baseurl}}/user_guide/data
 
 ## ユースケース
 
-Nexla の Data as a Product (製品としてのデータ) である [Nexset](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information) により、メタデータを気にすることなく、あらゆるフォーマットのデータを簡単に扱うことができます。Brazeとの間のデータフローをNexlaで設定する場合、コード不要のツールで簡単に数分で利用できる。データフローが宛先に設定された後で、Nexla はフローを監視し、任意のデータ量にスケーリングします。
+Nexlaのデータ・アズ・ア・プロダクトである[Nexsetsは](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information)、メタデータを管理することなく、あらゆるフォーマットのデータを扱うことを可能にする。BrazeとのデータフローをNexlaで設定すると、コード不要のツールが数分で利用できる。データフローが送信先に設定されると、Nexlaはフローを監視し、任意のデータ量にスケーリングする。
 
 ## 統合
 
@@ -41,7 +41,7 @@ Nexla の Data as a Product (製品としてのデータ) である [Nexset](htt
 3. [**Add a New Credential**] を選択し、認証情報に名前を付け、Braze API キーと REST エンドポイントを追加して、[**Save**] をクリックします。
 4. 最後にデータを選択して [**Save**] をクリックします。 
 
-Nexla はソースでデータを検索し、変換または宛先への送信のために [Nexset](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information) を生成します。
+Nexlaはデータソースから利用可能なデータを検索し、変換または送信先に送信するための[Nexsetを](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information)生成する。
 
 #### Braze が宛先の場合
 

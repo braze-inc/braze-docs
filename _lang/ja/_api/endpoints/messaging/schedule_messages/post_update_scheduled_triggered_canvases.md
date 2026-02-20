@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:スケジュールされたAPIトリガー・キャンバスを更新する"
+nav_title: "POST:スケジュールされたAPIトリガーキャンバスを更新する"
 article_title: "POST:スケジュールされたAPIトリガー・キャンバスを更新する"
 search_tag: Endpoint
 page_order: 4
@@ -10,19 +10,19 @@ description: "この記事では、「スケジュールされた API トリガ�
 ---
 {% api %}
 # スケジュールされたAPIトリガーキャンバスを更新する
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /canvas/trigger/schedule/update
 {% endapimethod %}
 
 > このエンドポイントを使用して、ダッシュボードで作成されたスケジュール済みAPIトリガーキャンバスを更新する。
 
-これにより、メッセージ送信をトリガーするアクションを決定できます。メッセージ自体にテンプレート化される `trigger_properties` を渡すことができます。
+これにより、どのアクションがメッセージ送信のトリガーになるかを決めることができる。Brazeがテンプレート化した`trigger_properties` をメッセージ自体に渡すことができる。
 
 このエンドポイントを使用してメッセージを送信するには、[キャンバスを]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier)構築するときに作成されたキャンバスIDが必要であることに注意してほしい。
 
 どのスケジュールも、スケジュール作成リクエストや以前のスケジュール更新リクエストで提供したものを完全に上書きする。
-  - 例えば、最初に`"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` を指定し、更新時に`"schedule" : {"time" : "2015-02-20T14:14:47"}` を指定した場合、メッセージはユーザーのローカル時間ではなく、UTCで指定された時間に送信されるようになる。
-  - 送信予定時刻に非常に近いか、送信予定時刻に更新されたスケジュールされたトリガーは、ベストエフォートで更新されます。このため、直前の変更は、ターゲットユーザーの全員または一部に適用されるか、あるいはまったく適用されない可能性があります。
+  - 例えば、最初に`"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` を指定し、更新で`"schedule" : {"time" : "2015-02-20T14:14:47"}` を指定した場合、Brazeはユーザーのローカライゼーション時間ではなく、UTCで指定した時間にメッセージを送信する。
+  - スケジュールされたトリガーは、送信予定時刻に近いか、送信予定時刻中に更新されるため、Brazeは、ターゲットユーザーのすべて、一部、または全員に、直前の変更を適用する可能性がある。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8fdf158b-ce20-41d8-80e4-a9300a6706d4 {% endapiref %}
 

@@ -1,13 +1,13 @@
 ---
-nav_title: 式の作成
-article_title: 式の作成
+nav_title: 計算式を作成する
+article_title: 数式を作成する
 page_order: 1.2
 page_type: reference
 description: "このリファレンス記事では、式の作成と管理について説明します。式は、データ内に存在する複雑な関係を簡単に把握するうえで役立ちます。"
 tool: Reports
 
 ---
-# 式の作成
+# 計算式を作成する
 
 > Braze で分析を確認する場合、複数のデータポイントを組み合わせてユーザーデータに関する貴重なインサイトを得ることができます。これらは式と呼ばれます。数式を使用して、月次アクティブユーザー(MAU)と日次アクティブユーザー(DAU)の総数に基づいて時系列データを正規化します。 
 
@@ -27,7 +27,7 @@ tool: Reports
 
 式には、ダッシュボードの [[ホーム]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/)]、[[収益レポート]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/)]、[[カスタムイベントレポート]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)] の各ページにある統計パネルからアクセスできます。このパネルを表示するには、**Performance Over Time** チャートに移動し、**Statistics For** ドロップダウンを**KPI Formulas** に変更してから、少なくとも1 つのKPI 数式を選択してチャートに入力します。
 
-![BrazeダッシュボードでKPI計算式の統計を見る]({% image_buster /assets/img_archive/kpi_forms.png %})
+![Braze ダッシュボードでのKPI 数式の統計の表示]({% image_buster /assets/img_archive/kpi_forms.png %})
 
 新規の式を作成するには、次の手順に従います。
 

@@ -41,7 +41,7 @@ BrazeとSegmentを統合するには、[選択した統合タイプ](#integratio
 
 Segment で、[**送信先**] > [**Braze**] > [**Braze 設定**] > [**ソースを選択**] > [**設定**] と移動します。
 
-![ソースの設定ページ。このページでは、宛先フレームワークを [アクション] または [クラシック] のいずれかに設定し、接続モードを [クラウドモード] または [デバイスモード] に設定します。]({% image_buster /assets/img/segment/setup.png %})
+![ソースの設定ページ。このページでは、宛先フレームワークを [Actions] または [Classic] のいずれかに設定し、接続モードを [Cloud mode] または [Device mode] のいずれかに設定します。]({% image_buster /assets/img/segment/setup.png %})
 
 Segment のWeb ソース (Analytics.js) およびネイティブクライアントサイドライブラリは、サイドバイサイド (デバイスモード) 統合またはサーバー間 (クラウドモード) 統合のいずれかを使用して、Braze と統合できます。
 
@@ -67,7 +67,7 @@ Segment のデバイスモードを使用する場合、Braze SDK を直接統�
 
 デバイスモード接続を使用する場合、Braze SDK をネイティブに統合する場合と同様に、Braze SDK はすべてのユーザーに `device_id` とバックエンド識別子 `braze_id` を割り当てます。これにより Braze は、`userId` の代わりにこれらの識別子を照合することで、デバイスからの匿名アクティビティを取得できます。 
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab Android %}
 
 {% alert important %}
@@ -76,10 +76,10 @@ Androidデバイスモード統合のソースコードは、Brazeによって�
 <br>
 使用する Braze SDKは、使用する Segment SDK によって異なります。
 
-| | Segment SDK | Braze SDK |
+| | セグメンテーションSDK | Braze SDK |
 | - | ----------- | --------- |
-| 優先 | [Analytics-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
-| レガシー｜[Analytics-Android](https://github.com/segmentio/analytics-android)｜[Braze Segment Android](https://github.com/braze-inc/braze-segment-android)｜
+| 好ましい | [分析-Kotlin](https://github.com/segmentio/analytics-kotlin) | [セグメンテーション Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
+| レガシー | [分析-Android](https://github.com/segmentio/analytics-android) | [セグメンテーション Android](https://github.com/braze-inc/braze-segment-android) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
@@ -100,10 +100,10 @@ iOSデバイスモード統合のソースコードは、Brazeによって保守
 <br>
 使用する Braze SDKは、使用する Segment SDK によって異なります。
 
-| | Segment SDK | Braze SDK |
+| | セグメンテーションSDK | Braze SDK |
 | - | ----------- | --------- |
-| 優先 | [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Braze Segment Swift](https://github.com/braze-inc/braze-segment-swift) |
-| レガシー｜[Analytics-iOS](https://github.com/segmentio/analytics-ios)｜[Braze Segment iOS](https://github.com/Appboy/appboy-segment-ios)｜
+| 好ましい | [分析-SWIFT](https://github.com/segmentio/analytics-swift) | [SWIFTセグメンテーション・スイフト](https://github.com/braze-inc/braze-segment-swift) |
+| レガシー | [分析-iOS](https://github.com/segmentio/analytics-ios) | [Braze セグメンテーション iOS](https://github.com/Appboy/appboy-segment-ios) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endalert %}
 
@@ -114,7 +114,7 @@ Braze を iOS ソースのデバイスモード送信先として設定するに
 [iOSデバイスモード](https://github.com/braze-inc/braze-segment-swift)統合のソースコードは、Brazeによって保守されており、新しいBraze SDKのリリースを反映して定期的に更新される。
 
 {% endtab %}
-{% tab ウェブまたはJavaScript %}
+{% tab Web or JavaScript %}
 
 Web ソースのデバイスモード送信先として Braze を設定する場合は、Segment の Braze Web モード (アクション) フレームワークが推奨されます。 
 
@@ -155,7 +155,7 @@ Braze を各ソースのデバイスモード送信先として設定するに�
 
 宛先の設定を定義します。すべての設定がすべての宛先タイプに適用されるわけではありません。
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab Mobile Device-Mode %}
 
 | セッティング | 説明 |
@@ -197,7 +197,7 @@ Braze を各ソースのデバイスモード送信先として設定するに�
 | すべてのページを追跡する | **Classic Destination Web Device-Mode (メンテナンス) のみ**<br><br>Segment は、この設定を Web Actions フレームワーク宛先に移行することを推奨しています。Web Actions フレームワーク宛先では、この設定を[マッピングによって有効にできます](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping)。<br><br>これにより、すべての[ページ呼び出し](https://segment.com/docs/spec/page/)が "Loaded/Viewed a Page "イベントとして Braze に送信されます。 |
 | 指定されたページのみを追跡する | **Classic Destination Web Device-Mode (メンテナンス) のみ**<br><br>Segment は、この設定を Web Actions フレームワーク宛先に移行することを推奨しています。Web Actions フレームワーク宛先では、この設定を[マッピングによって有効にできます](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping)。<br><br>これにより、ページ呼び出しとそれに関連付けられている名前のみが Braze に送信されます。 |
 | Log purchase when revenue is present | **Classic Destination Web Device-Mode (メンテナンス) のみ**<br><br>Segment は、この設定を Web Actions フレームワーク宛先に移行することを推奨しています。Web Actions フレームワーク宛先では、この設定を[マッピングによって有効にできます](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping)。<br><br>このオプションを有効にすると、収益プロパティを持つすべてのTrackコールが購入イベントをトリガーする。 | 
-| 既知のユーザーのみを追跡する | **Classic Destination Web Device-Mode (メンテナンス) のみ**<br><br>Segment は、この設定を Web Actions フレームワーク宛先に移行することを推奨しています。Web Actions フレームワーク宛先では、この設定をマッピングによって有効にできます。<br><br>有効にすると、この新しい設定により、有効な`userId` が存在するまで `window.appboy.initialize` の呼び出しが遅延します。 | 
+| 既知のユーザーのみを追跡する | **Classic Destination Web Device-Mode (メンテナンス) のみ**<br><br>Segment は、この設定を Web Actions フレームワーク宛先に移行することを推奨しています。Web Actions フレームワーク宛先では、この設定をマッピングによって有効にできます。<br><br>有効にすると、この新しい設定により、有効な`userId` が存在するまで `window.braze.initialize` の呼び出しが遅延します。 | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -238,7 +238,7 @@ Braze に送信される宛先データは、Cloud Mode Actions 内でバッチ�
 [Braze Destination] > [**Mappings**] に移動して、アクションのバッチ処理をオンにできます。そこから、マッピングの右側にある3つのドットのアイコンをクリックし、[**Edit Mapping**] を選択します。**Select mappings**セクションの一番下までスクロールし、**Batch Data to Brazeが** **Yesに**設定されていることを確認する。
 
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab Identify %}
 #### 特定する
 
@@ -349,13 +349,13 @@ analytics.identify(
 [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile) 宛先と [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) 宛先では、Update User Profile Action を使用して前述のマッピングを設定できます。
 
 {% alert important %}
-ユーザー属性データを渡すときは、前回の更新以降に変更された属性の値のみを渡すようにする。こうすることで、データポイントを不必要に消費することがなくなります。クライアントサイドのソースについては、Segment のオープンソース [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) ツール使用して統合を最適化し、Segment からの重複した `identify()` 呼び出しをデバウンスすることで、データポイント使用量を制限します。 
+ユーザー属性データを渡すときは、前回の更新以降に変更された属性の値のみを渡すようにする。これにより、不必要にデータポイントを記録することがなくなる。クライアントサイドのソースについては、Segment のオープンソース [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) ツール使用して統合を最適化し、Segment からの重複した `identify()` 呼び出しをデバウンスすることで、データポイント使用量を制限します。 
 
 {% endalert %}
 {% endtab %}
 
 {% tab Track %}
-#### Track
+#### 追跡
 
 あなたがイベントを追跡するとき、私たちは提供された名前を使用して[カスタムイベントとして]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events)そのイベントを記録する。 
 
@@ -365,7 +365,7 @@ analytics.identify(
 
 | Segment での方法 | Braze での方法 | 例 |
 |---|---|---|
-| [Track](https://segment.com/docs/spec/track/) | [カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events)として記録される | Segment: `analytics.track("played_game");`<br>Braze: `Braze.logCustomEvent("played_game");`|
+| [追跡](https://segment.com/docs/spec/track/) | [カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events)として記録される | Segment: `analytics.track("played_game");`<br>Braze: `Braze.logCustomEvent("played_game");`|
 | [プロパティを使用した追跡](https://segment.com/docs/spec/track/) | [イベントプロパティ]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties)として記録される | Segment: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});`<br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
 | [製品を使用した追跡](https://segment.com/docs/spec/track/) | [購入イベント]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)として記録される。 | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});`<br>Braze: `Braze.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -378,7 +378,7 @@ Segment の [eCommerce API ](https://segment.com/docs/spec/ecommerce/v2/)で記�
 
 {% endtab %}
 
-{% tab ページ %}
+{% tab Page %}
 #### ページ {#page}
 
 [Page](https://segment.com/docs/spec/page/)コールは、ユーザーがあなたのウェブサイトのページを見るたびに、ページに関するオプションのプロパティとともに記録することができる。
@@ -420,13 +420,13 @@ Cloud Mode Actions 宛先でサポートされているすべての識別子は�
 
 ## ベストプラクティス
 
-{% details データ超過を避けるために使用例を見直す。 %}
+{% details Review use cases to avoid data overages. %}
 
 Segment では、クライアントが送信できるデータエレメントの数は制限**されていません**。セグメントを使えば、すべてのイベントをBrazeに送ることも、どのイベントを送るかを決めることもできる。Segmentを使ってすべてのイベントを送信するのではなく、マーケティングチームや編集チームとユースケースを検討し、データオーバーを避けるためにBrazeに送信するイベントを決定することをお勧めする。
 
 {% enddetails %}
 
-{% details モバイルデバイスモード宛先設定のカスタムAPIエンドポイントとカスタムREST APIエンドポイントの違いを理解する。 %}
+{% details Understand the difference between the custom API endpoint and the custom REST API endpoint in the Mobile Device Mode destination settings. %}
 
 | ブレイズ用語 | Segment で対応する用語 |
 | ----------------- | ------------------ |
@@ -437,7 +437,7 @@ Segment では、クライアントが送信できるデータエレメントの
 Braze API エンドポイント (Segment では「Custom API Ednpoint」と呼ばれます) は、SDK のために Braze により設定される SDK エンドポイントです (例: `sdk.iad-03.braze.com`)。Braze REST API エンドポイント (Segment では「Custom REST API Endpoint」と呼ばれます) は、REST API エンドポイントです (例: `https://rest.iad-03.braze.com`)。
 {% enddetails %}
 
-{% details カスタムAPIエンドポイントがモバイルデバイスモードの宛先設定に正しく入力されていることを確認する。 %}
+{% details Ensure your custom API endpoint is correctly input into the mobile device mode destination settings. %}
 
 | ブレイズ用語 | Segment で対応する用語 |
 | ----------------- | ------------------ |
@@ -449,7 +449,7 @@ Braze SDK のエンドポイントを正しく入力するには、適切な形�
 
 {% enddetails %}
 
-{% details データマッピングのニュアンス %}
+{% details Data mapping nuances. %}
 
 データが期待通りに通過しないシナリオ：
 
@@ -466,7 +466,7 @@ Braze SDK のエンドポイントを正しく入力するには、適切な形�
 
 {% enddetails %}
 
-{% details Brazeの初期化をカスタマイズする。 %}
+{% details Customization of Braze initialization. %}
 
 Brazeのカスタマイズには、プッシュ、アプリ内メッセージ、コンテンツカード、初期化など、いくつかの方法がある。サイドバイサイド統合では、Braze の直接統合と同様に、プッシュ、アプリ内メッセージ、コンテンツカードをカスタマイズできます。
 
@@ -474,9 +474,9 @@ Brazeのカスタマイズには、プッシュ、アプリ内メッセージ、
 
 {% enddetails %}
 
-{% details Braze に差分を送信する。 %}
+{% details Sending deltas to Braze. %}
 
-ユーザー属性データを渡すときは、前回の更新以降に変更された属性の値のみを渡すようにする。こうすることで、データポイントを不必要に消費することがなくなります。クライアントサイドのソースについては、Segment のオープンソース [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) ツール使用して統合を最適化し、Segment からの重複した `identify()` 呼び出しをデバウンスすることで、データポイント使用量を制限します。 
+ユーザー属性データを渡すときは、前回の更新以降に変更された属性の値のみを渡すようにする。これにより、不要なデータポイントのロギングを防ぐことができる。クライアントサイドのソースについては、Segment のオープンソース [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) ツール使用して統合を最適化し、Segment からの重複した `identify()` 呼び出しをデバウンスすることで、データポイント使用量を制限します。
 
 {% enddetails %}
 

@@ -10,8 +10,7 @@ Before you can use this feature, you'll need to [set up the Braze MCP server]{% 
 
 ## Available Braze API Functions
 
-These are the API functions that your MCP client references to interact with The Braze MCP server:
-
+Your MCP client references the following API functions to interact with the Braze MCP server:
 ### General functions
 
 | Function | Description |

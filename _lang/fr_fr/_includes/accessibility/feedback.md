@@ -1,0 +1,1 @@
+Si vous avez des commentaires sur l'accessibilité de Braze ou sur les messages envoyés par Braze, n'hésitez pas à nous en faire part. Ouvrez le menu **Support** dans l'en-tête global et sélectionnez **Partager le retour d'information** pour nous faire part de vos commentaires.

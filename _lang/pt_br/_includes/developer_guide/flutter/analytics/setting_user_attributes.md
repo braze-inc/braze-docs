@@ -43,7 +43,7 @@ braze.setStringCustomUserAttribute("custom string attribute", "string custom att
 ```
 
 {% endtab %}
-{% tab Inteiro %}
+{% tab Integer %}
 Para definir um atributo personalizado com um valor de `integer`:
 
 ```dart
@@ -62,7 +62,7 @@ braze.setDoubleCustomUserAttribute("custom double attribute key", double);
 ```
 
 {% endtab %}
-{% tab Booleano %}
+{% tab Boolean %}
 Para definir um atributo personalizado com um valor de `boolean`:
 
 ```dart
@@ -70,14 +70,14 @@ braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
 ```
 {% endtab %}
 
-{% tab Data %}
+{% tab Date %}
 Para definir um atributo personalizado com um valor de `date`:
 
 ```dart
 braze.setDateCustomUserAttribute("custom date attribute key", date);
 ```
 {% endtab %}
-{% tab Vetor %}
+{% tab Array %}
 Para definir um atributo personalizado com um valor de `array`:
 
 ```dart

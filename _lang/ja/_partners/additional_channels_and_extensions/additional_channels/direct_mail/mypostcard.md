@@ -22,7 +22,7 @@ MyPostcard と Braze の統合を使用すると、印刷物を簡単に顧客�
 | MyPostcard B2B アカウント           | この統合を利用するには、MyPostcardへの登録が必要である。                                          |
 | B2B API キーと認証情報        | API キーと認証情報は、MyPostcard B2B 管理ツールで確認できる。                                         |
 | 承認された MyPostcard B2B キャンペーン | この統合を利用するには、MyPostcard B2Bツールで印刷郵送キャンペーンを設定する必要がある。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
 
@@ -41,7 +41,7 @@ MyPostcard と統合するには、[ログインするかサインアップ](htt
 Brazeプラットフォームの**Templates**>**Webhook Templatesから**、今後のキャンペーンやCanvasで使用するMyPostcard Webhookテンプレートを作成する。
 
 {% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/)使用している場合は、「**Engagement（エンゲージメント）**」＞「**Templates & Media（テンプレート＆メディア**）」＞「**Webhook Templates（ウェブフック・テンプレート**）」と進む。
+[古いナビゲーションを]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/)使用している場合は、**エンゲージメント**>**テンプレート& メディア**>**Webhook テンプレートに**移動する。
 {% endalert %}
 
 単発のMyPostcard Webhookキャンペーンを作成したい場合、または既存のテンプレートを使用したい場合は、新規キャンペーン作成時にBrazeで**Webhookを**選択する。以下のフィールドに入力します。

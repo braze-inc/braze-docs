@@ -42,24 +42,17 @@ Para ver un ejemplo, consulta [main.dart](https://github.com/braze-inc/braze-flu
 
 ### Paso 2: Transmite los datos de la tarjeta de contenido de la capa nativa
 
-Para recibir los datos de la capa Dart del paso 1, añade el siguiente código para reenviar los datos de la tarjeta de contenido desde las capas nativas.
+{% alert note %}
+Este paso es sólo para iOS. Los datos de la tarjeta de contenido se envían automáticamente desde la capa de Android.
+{% endalert %}
 
-{% tabs %}
-{% tab Android %}
-
-Los datos de la tarjeta de contenido se envían automáticamente desde la capa de Android.
-
-{% endtab %}
-{% tab iOS %}
+Para recibir los datos en la capa Dart del paso 1, añade el siguiente código para reenviar los datos de la tarjeta de contenido desde la capa nativa de iOS.
 
 1. Implementa `contentCards.subscribeToUpdates` para suscribirte a las actualizaciones de las tarjetas de contenido como se describe en la documentación [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)).
 
 2. Tu implementación de devolución de llamada a `contentCards.subscribeToUpdates` debe llamar a `BrazePlugin.processContentCards(contentCards)`.
 
 Para ver un ejemplo, consulta [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) en nuestra aplicación de ejemplo.
-
-{% endtab %}
-{% endtabs %}
 
 #### Repetición de la devolución de llamada para tarjetas de contenido
 

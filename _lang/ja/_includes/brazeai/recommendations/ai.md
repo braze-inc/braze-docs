@@ -1,6 +1,6 @@
 {% if include.section == "Plan-specific features" %}
 
-## プラン固有のAI機能
+## プラン固有のAI 機能
 
 次の表に、AI によるパーソナライズ、人気、トレンドの各おすすめタイプの無料版と Pro バージョンの違いを示します。
 

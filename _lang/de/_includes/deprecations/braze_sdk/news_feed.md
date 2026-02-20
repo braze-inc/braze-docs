@@ -1,3 +1,3 @@
 {% alert important %}
-Newsfeed ist veraltet. Wir empfehlen, stattdessen auf unseren Messaging-Kanal Content-Cards zu migrieren - er ist flexibler, anpassbarer und zuverlässiger. Um damit zu beginnen, lesen Sie bitte [Migration von News Feed]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
+Newsfeed und die entsprechenden Tags und Methoden sind veraltet. Verwenden Sie stattdessen unsere Messaging-Kanäle [Banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/) oder [Content-Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/).
 {% endalert %}

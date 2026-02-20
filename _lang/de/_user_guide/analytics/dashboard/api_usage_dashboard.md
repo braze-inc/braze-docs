@@ -1,5 +1,5 @@
 ---
-nav_title: Dashboard zur API-Nutzung
+nav_title: Dashboard für die API-Nutzung
 article_title: Dashboard zur API-Nutzung
 alias: "/api_usage/"
 page_order: 3.5
@@ -16,7 +16,7 @@ Um Ihr Dashboard zur API-Nutzung einzusehen, gehen Sie zu **Einstellungen** > **
 
 Das Standard Dashboard ist eine Ansicht aller eingehenden REST API Anfragen für Ihren Workspace im Laufe des letzten Tages (24 Stunden). Je nach Anwendungsfall können Sie die Steuerelemente des Dashboards anpassen, um den Datenverkehr zu filtern oder zu gruppieren und auch den Zeitbereich des Dashboards zu konfigurieren.
 
-\![API Usage Dashboard mit 130 Anfragen insgesamt, mit einer Erfolgsquote von 70 Prozent und einer Fehlerquote von 30 Prozent.]({% image_buster /assets/img/api_usage_dashboard/api_usage_dashboard.png %})
+![API Usage Dashboard mit 130 Anfragen insgesamt, mit einer Erfolgsquote von 70 Prozent und einer Fehlerquote von 30 Prozent.]({% image_buster /assets/img/api_usage_dashboard/api_usage_dashboard.png %})
 
 ## Verfügbare Metriken
 
@@ -31,7 +31,7 @@ Das Dashboard zur API-Nutzung enthält die folgenden Statistiken:
 
 ## Verwendung des Dashboards
 
-\![Filter, die Sie auf das Dashboard anwenden können, einschließlich: API-Schlüssel, Endpunkt, Antwort-Codes, Gruppendaten und Datum.]({% image_buster /assets/img/api_usage_dashboard/filters.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![Filter, die Sie auf das Dashboard anwenden können, einschließlich: API-Schlüssel, Endpunkt, Antwort-Codes, Gruppendaten und Datum.]({% image_buster /assets/img/api_usage_dashboard/filters.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ### Filter
 
@@ -75,3 +75,8 @@ Die Optionen **Letzte 3 Stunden** und **Letzte 6 Stunden** zeigen den Verkehr na
 Das Dashboard zur API-Nutzung enthält alle REST API-Anfragen, die Braze erhalten hat und für die eine `2XX`, `4XX`, oder `5XX` Antwort zurückgegeben wurde. Dazu gehören die Ausgaben der Datentransformation und die Synchronisierung der Datenaufnahme in der Cloud. SDK-Traffic und Nutzer:innen-Updates sind in diesem Dashboard nicht enthalten.
 
 Die auf dem Dashboard angezeigten Daten können bis zu einer kurzen Verzögerung bei der Anzeige des aktuellen Datenverkehrs aufweisen. In Zeiten hoher Nutzung können Sie das Dashboard bis zu 4 Mal pro Minute aktualisieren. Möglicherweise müssen Sie ein paar Minuten warten, bevor Sie das Dashboard erneut aktualisieren können.
+
+## Ähnliche Artikel
+
+- [Warnungen zur API-Nutzung]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts)
+- [Rate-Limits]({{site.baseurl}}/api/api_limits)

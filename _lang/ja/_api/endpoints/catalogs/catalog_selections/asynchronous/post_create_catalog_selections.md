@@ -29,14 +29,14 @@ description: "この記事では、「カタログセレクションの作成」
 
 | パラメータ      | required | データ型 | 説明          |
 | -------------- | -------- | --------- | -------------------- |
-| `catalog_name` | required | 文字列    | カタログ名。 |
+| `catalog_name` | 必須 | 文字列    | カタログ名。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
-| パラメーター   | 必須 | データ型 | 説明                                                                                                                                                        |
+| パラメーター   | required | データ型 | 説明                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `selection` | required | オブジェクト    | 選択基準を含むオブジェクト。選択オブジェクトには、`name`、`description`、`filters`、`results_limit`、`sort_field`、`sort_order` が含まれる場合があります。 |
+| `selection` | 必須 | オブジェクト    | 選択基準を含むオブジェクト。選択オブジェクトには、`name`、`description`、`filters`、`results_limit`、`sort_field`、`sort_order` が含まれる場合があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエスト例

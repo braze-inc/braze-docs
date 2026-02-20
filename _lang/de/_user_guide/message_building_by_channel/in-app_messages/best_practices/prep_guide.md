@@ -25,7 +25,7 @@ channel: in-app messages
 - Wo möchten Sie, dass Ihre Nutzer Ihre Nachricht sehen? In Ihrer Web-App? In Ihrer mobilen App?
 - Welches Ereignis sollte diese Nachricht auslösen?
 - Verwenden einige Ihrer Benutzer ältere Versionen Ihrer Anwendung? Wenn ja, kann es sein, dass sie einige Elemente Ihrer Nachricht nicht sehen können.
-- Für welche Art von Gerät oder Geräten erstellen Sie diese Nachricht? Denken Sie daran, dass Sie Ihre Nachricht über das Feld **Vorschau** oder die Registerkarte **Test** in der Vorschau anzeigen können. Weitere Informationen finden Sie unter [Testen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/).
+- Für welche Art von Gerät oder Geräten erstellen Sie diese Nachricht? Denken Sie daran, dass Sie Ihre Nachricht über das Feld **Vorschau** oder die Registerkarte **Test** in der Vorschau anzeigen können. Weitere Informationen finden Sie unter [Testen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/).
 
 ## Inhaltliche Überlegungen
 

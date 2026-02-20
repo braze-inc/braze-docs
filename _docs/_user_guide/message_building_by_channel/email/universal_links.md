@@ -55,7 +55,7 @@ For apps to support universal links or App Links, both iOS and Android require a
 
 In addition to this permissions file, there are hard-coded definitions of which link domains the app is allowed to open that are set up within the app:
 
-- **iOS:** Set as “Associated Domains” in Xcode
+- **iOS:** Set as "Associated Domains” in Xcode
 - **Android:** Defined in the app’s `AndroidManifest.xml` file
 
 This two-part domain-app association is required for a universal link or App Link to work and prevents any app from hijacking links from a particular domain or any domain from opening a particular app.
@@ -127,7 +127,7 @@ The AASA file contains a JSON object with a list of apps and the URL paths on th
     "apps": [],
     "details": [
       {
-        "appID": “JHGFJHHYX.com.facebook.ios",
+        "appID": "JHGFJHHYX.com.facebook.ios",
         "paths": [
           "*"
         ]
@@ -138,7 +138,7 @@ The AASA file contains a JSON object with a list of apps and the URL paths on th
 ```
 
 - `appID`: Built by combining your app’s **Team ID** (go to `https://developer.apple.com/account/#/membership/` to get the team ID) and the **Bundle Identifier**. In the example above, "JHGFJHHYX" is the team ID, and "com.facebook.ios" is the bundle ID.
-- `paths`: Array of strings that specify which paths are included or excluded from association. You can use `NOT` before the path to disable paths. In this example, all the links on this path will go to the web instead of opening the app. You can use `*` as a wildcard to enable all paths in a directory and `?` to match a single character (such as /archives/201?/ to match all numbers from 2010–2019).
+- `paths`: Array of strings that specify which paths are included or excluded from association. You can use `NOT` before the path to disable paths. In this example, all the links on this path will go to the web instead of opening the app. You can use `*` as a wildcard to enable all paths in a directory and `?` to match a single character (such as /archives/201?/ to match all numbers from 2010-2019).
 
 {% alert note %}
 These strings are case-sensitive and query strings and fragment identifiers are ignored.

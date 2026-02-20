@@ -35,7 +35,7 @@ braze.setFirstName('Name');
 Además de los atributos de usuario predeterminados, Braze también te permite definir atributos personalizados utilizando distintos tipos de datos:
 
 {% tabs %}
-{% tab Cadena %}
+{% tab String %}
 Para establecer un atributo personalizado con un valor `string`:
 
 ```dart
@@ -43,7 +43,7 @@ braze.setStringCustomUserAttribute("custom string attribute", "string custom att
 ```
 
 {% endtab %}
-{% tab Entero %}
+{% tab Integer %}
 Para establecer un atributo personalizado con un valor `integer`:
 
 ```dart
@@ -54,7 +54,7 @@ braze.incrementCustomUserAttribute("key", integer);
 ```
 
 {% endtab %}
-{% tab Doble %}
+{% tab Double %}
 Para establecer un atributo personalizado con un valor `double`:
 
 ```dart
@@ -62,7 +62,7 @@ braze.setDoubleCustomUserAttribute("custom double attribute key", double);
 ```
 
 {% endtab %}
-{% tab Booleano %}
+{% tab Boolean %}
 Para establecer un atributo personalizado con un valor `boolean`:
 
 ```dart
@@ -70,14 +70,14 @@ braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
 ```
 {% endtab %}
 
-{% tab Fecha %}
+{% tab Date %}
 Para establecer un atributo personalizado con un valor `date`:
 
 ```dart
 braze.setDateCustomUserAttribute("custom date attribute key", date);
 ```
 {% endtab %}
-{% tab Matriz %}
+{% tab Array %}
 Para establecer un atributo personalizado con un valor `array`:
 
 ```dart

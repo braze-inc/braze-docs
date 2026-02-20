@@ -1,39 +1,33 @@
 ---
 nav_title: 多言語設定
-article_title: 多言語設定
+article_title: 翻訳・多言語設定
 alias: "/multi_language_support/"
 page_order: 5.5
 description: "この記事では、Braze ダッシュボードの多言語設定の概要と、メッセージングでロケールを使用する方法について説明します。"
 ---
 
-# 多言語設定
+# 翻訳・多言語設定
 
-> 多言語設定を調整することで、1 通のメールメッセージの中で異なるメッセージを使用して、異なる言語や地域のユーザーをターゲットにすることができます。
+> 多言語機能を使用すると、[translation タグ s]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) を使用して、1 つのメッセージ内のすべての言語および場所でユーザーを対象にすることができます。
 
-## 前提条件
-
-多言語サポートの編集および管理を行うには、「多言語設定を管理」のユーザー権限が必要です。メッセージにロケールを追加するには、キャンペーンの編集権限が必要だ。
-
-{% alert important %}
-現在、多言語サポートは早期アクセス段階です。早期アクセスに参加することに興味がある場合は、Brazeのアカウントマネージャーに連絡してください。
-{% endalert %}
+{% multi_lang_include locales.md section="Prerequisites" %}
 
 ## ロケールを追加する
 
-1. [**設定**] > [**多言語設定**] ([**ワークスペース設定**] の下) に移動します。
-2. [**ロケールを追加**] を選択し、[**デフォルトのロケール**] または [**カスタム属性**] を選択します。<br><br>!["Add locale"ドロップダウンでデフォルトロケールまたはカスタム属性sを選択します。]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
+1. **Settings** > **Localization Settings**に移動します。
+2. [**ロケールを追加**] を選択し、[**デフォルトのロケール**] または [**カスタム属性**] を選択します。<br><br>![デフォルトのロケールまたはカスタム属性を選択するオプションがある [ロケールを追加] ドロップダウン。]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. ロケールの名前を入力する。
 4. 選択したロケールオプションに対応するユーザー属性を選択します。
 
 {% tabs %}
 {% tab Default locale %}
 
-**デフォルトロケール**の場合、ドロップダウンを使用して、追加する言語、およびオプションで言語に関連付ける国を選択します。<br><br>!["Add locale -デフォルト言語とCountry"というウィンドウ。言語と国を指定します。]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
+**デフォルトロケール**の場合、ドロップダウンを使用して、追加する言語、およびオプションで言語に関連付ける国を選択します。<br><br>!["Add locale - Default Language and Country" というウィンドウで、言語と国を指定します。]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% tab Custom attributes %}
 
-**Custom Attributes** の場合、ドロップダウンを使用して関連付けられたカスタム属性を選択し、テキストフィールドに値を入力します。<br><br>!["Add locale - カスタム属性 s" というウィンドウ。カスタム属性と数値を指定します。]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
+**Custom Attributes** の場合、ドロップダウンを使用して関連付けられたカスタム属性を選択し、テキストフィールドに値を入力します。<br><br>!["Add locale - カスタム属性 s" というウィンドウで、カスタム属性と数値を指定します。]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -70,4 +64,3 @@ description: "この記事では、Braze ダッシュボードの多言語設定
 #### ロケール名は特定のパターンやフォーマットに従わなければならないのか？
 
 いいえ、お好きな命名規則を使うことができる。ロケール名はエディターでロケールを選択するときに使用され、翻訳 ID とともにダウンロードしたファイルの見出しに記載されます。
-

@@ -35,7 +35,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishwar
 }'
 ```
 
-이 페이로드를 전송한 후 다음 응답을 통해 Kitchenerie의 식기류 카탈로그에서 세 가지 컬렉션의 제거가 완료되었음을 확인할 수 있습니다.
+이 페이로드를 전송한 후 응답을 통해 Braze가 Kitchenerie의 식기류 카탈로그에서 세 가지 컬렉션을 성공적으로 제거했음을 확인했습니다.
 
 ```json
 {
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-이 페이로드를 성공적으로 전송한 후 이 응답은 이메일이 MovieCanon의 스팸 목록에서 제거되었음을 확인합니다.
+이 페이로드를 성공적으로 전송한 후 이 응답은 Braze가 MovieCanon의 스팸 목록에서 해당 이메일을 제거했음을 확인합니다.
 
 ```json
 {
@@ -84,10 +84,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 캔버스를 감사하는 첫 번째 작업의 경우 [`/canvas/list` 엔드포인트를]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) 사용하여 이름과 태그가 포함된 캔버스 목록을 내보냅니다. 다음은 요청 예시입니다:
 
-{% details 시즈 밸리 헬스 마케팅 팀이 받을 수 있는 반응은 다음과 같습니다. %}
+{% details Here’s the response that the Siege Valley Health marketing team would receive. %}
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
@@ -115,7 +113,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 시즈 밸리 헬스의 캔버스 목록에서 첫 번째 캔버스에 대한 분석 요약을 보는 다음 작업으로 넘어가겠습니다. 이를 위해 다음 요청 매개변수와 함께 [`/canvas/data_summary` 엔드포인트를]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) 사용합니다:
 
-* `canvas_id`: "캔버스_식별자_2"
+* `canvas_id`: "canvas_identifier_2"
 * `ending_at`: 2023-07-10T23:59:59
 * `starting_at`: 2020-07-10T23:59:59
 
@@ -128,7 +126,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## 예정된 캠페인 및 캔버스 확인
 
-온라인과 매장에서 의류와 뷰티 제품을 판매하는 소매 브랜드인 Flash & Thread는 연중 가장 바쁜 시기가 빠르게 다가오고 있습니다. 마케팅팀은 2024년 3월 31일 오후 12시 이전에 Braze 대시보드에서 예정된 캠페인과 캔버스를 확인하고자 합니다. 이 작업은 [`/messages/scheduled_broadcasts` 엔드포인트를]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/) 사용하여 수행할 수 있습니다. 
+온라인과 매장에서 의류 및 뷰티 제품을 판매하는 소매 브랜드인 Flash & Thread의 연중 가장 바쁜 시기가 빠르게 다가오고 있습니다. 마케팅팀은 2024년 3월 31일 오후 12시 이전에 Braze 대시보드에서 예정된 캠페인과 캔버스를 확인하고자 합니다. 이 작업은 [`/messages/scheduled_broadcasts` 엔드포인트를]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/) 사용하여 수행할 수 있습니다.
 
 다음은 요청 예시입니다:
 
@@ -137,11 +135,11 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-이 엔드포인트는 예정된 캠페인 및 캔버스 목록을 반환합니다. 여기에서 마케팅 팀은 응답의 캠페인 및 캔버스에 대한 `name` 필드를 참조하여 메시지 목록을 확인할 수 있습니다.
+이 엔드포인트는 예정된 캠페인과 캔버스 목록을 반환합니다. 여기에서 마케팅 팀은 응답의 캠페인 및 캔버스에 대한 `name` 필드를 참조하여 메시지 목록을 확인할 수 있습니다.
 
 ## 이전 환경설정 센터 보기
 
-PoliterWeekly는 이메일을 통해 구독자에게 도달할 수 있는 디지털 매거진입니다. 마케팅 팀은 구독자의 사용자 여정을 더 잘 이해하기 위해 PoliterWeekly의 환경설정 센터에 대한 세부 정보를 검토하여 언제 생성되고 마지막으로 업데이트되었는지 확인하고자 합니다.
+PoliterWeekly는 이메일을 통해 구독자에게 도달할 수 있는 디지털 매거진입니다. 가입자의 사용자 여정을 더 잘 이해하기 위해 마케팅 팀은 PoliterWeekly의 환경설정 센터에 대한 세부 정보를 검토하여 언제 생성되었고 마지막으로 업데이트되었는지 확인하고자 합니다.
 
 마케팅 팀은 [`/preference_center/v1/{preferenceCenterExternalID}` 엔드포인트]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/)를 사용하여 다음과 같이 환경설정 센터 외부 ID를 경로 매개 변수로 삽입하기만 하면 됩니다.
 
@@ -150,7 +148,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-{% details 폴리터위클리 마케팅 팀이 받은 반응은 다음과 같습니다. %}
+{% details Here’s the response the PoliterWeekly marketing team would receive. %}
 
 ```json
 {
@@ -160,7 +158,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
   "updated_at": "2024-08-15T15:00:00",
   "preference_center_title": "Manage Your PoliterWeekly Notification Preferences",
   "preference_center_page_html": "<!DOCTYPE html><html><head><title>Your PoliterWeekly Newsletter Preferences</title><style>body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }.container { max-width: 600px; margin: auto; }h1 { color: #333; }.preference { margin-bottom: 20px; }.preference label { font-size: 16px; }.preference input[type=\"checkbox\"] { margin-right: 10px; }.submit-btn { background-color: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; }</style></head><body><div class=\"container\"><h1>Manage your notification preferences</h1><p>Select the types of updates you wish to receive from us:</p><form id=\"preferencesForm\"><div class=\"preference\"><label><input type=\"checkbox\" name=\"newsUpdates\" checked> News Updates</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"editorialPicks\"> Editorial Picks</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"events\"> Events & Webinars</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"specialOffers\"> Special Offers & Promotions</label></div><button type=\"submit\" class=\"submit-btn\">Save Preferences</button></form></div><script>document.getElementById('preferencesForm').addEventListener('submit', function(e) {e.preventDefault();alert('Your preferences have been saved!');});</script></body></html>",
-  "confirmation_page_html": "<!DOCTYPE html><html><head><title>PoliterWeekly Preferences Updated</title></head><body><h1>You're good to go!</h1><p>Your preferences have been updated successfully.</p></body></html>",
+  "confirmation_page_html": "<!DOCTYPE html><html><head><title>PoliterWeekly Preferences Updated</title></head><body><h1>You're good to go!</h1><p>Braze updated your preferences successfully.</p></body></html>",
   "redirect_page_html": null,
   "preference_center_options": {
     "meta-viewport-content": "width=device-width, initial-scale=1"
@@ -192,7 +190,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-이 페이로드를 전송한 후, 다음 응답을 통해 CashBlastr의 유효하지 않은 전화번호가 Braze 유효하지 않은 목록에서 제거되었음을 확인할 수 있습니다.
+이 페이로드를 전송한 후, 응답을 통해 Braze에서 유효하지 않은 전화번호를 유효하지 않은 목록에서 제거했음을 확인할 수 있습니다.
 
 ```json
 {
@@ -211,7 +209,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 
-이 엔드포인트에는 이메일에 대한 사용자의 구독 그룹 상태도 나열되며 여러 사용자의 구독 그룹 상태를 확인하는 데 사용할 수 있습니다.
+이 엔드포인트에는 사용자의 이메일에 대한 구독 그룹 상태도 나열됩니다. 여러 사용자의 구독 그룹 상태를 확인하려면 이 기능을 사용하세요.
 
 ## 이메일 메시징용 HTML 템플릿 확인
 
@@ -219,11 +217,9 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 
 이 시나리오에서 WorkFriends는 지금까지 기존 브랜딩과 함께 단일 HTML 템플릿을 사용해 왔습니다. 브랜드 아이덴티티를 맞추기 위해 WorkFriends는 새 템플릿으로 전환하기 전에 이 HTML 템플릿에 활용할 수 있는 유용한 정보가 있는지 확인하고자 합니다.
 
-{% details WorkFriends 팀에서 받을 수 있는 답변은 다음과 같습니다. %}
+{% details Here’s the response that the WorkFriends team would receive. %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "WorkFriends_Email_Template_ID",
   "template_name": "Promo template",
@@ -239,4 +235,4 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 {% enddetails %}
 
-이 템플릿 정보를 검토한 후 WorkFriends는 [`/templates/email/update` 엔드포인트를]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) 사용하여 API를 통해 이메일 템플릿을 업데이트할 수도 있습니다. Braze 대시보드의 이메일 템플릿에 이러한 편집 내용이 반영됩니다.
+이 템플릿 정보를 검토한 후 WorkFriends는 [`/templates/email/update` 엔드포인트를]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) 사용하여 API를 통해 이메일 템플릿을 업데이트할 수도 있습니다. Braze 대시보드의 이메일 템플릿에는 이러한 편집 내용이 반영되어 있습니다.

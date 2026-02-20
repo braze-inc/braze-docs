@@ -1,5 +1,5 @@
 ---
-nav_title: セグメントファンネル
+nav_title: セグメントファネル
 permalink: /segment_funnels/
 hidden: true
 page_type: reference
@@ -45,11 +45,11 @@ page_type: reference
 
 アクティブユーザー (または目的の特性を持つユーザー) のセグメントを作成し、メールやプッシュ通知などのさまざまなエンゲージメントチャネルとの相互作用を比較します。たとえば、より多くのロイヤルユーザーがプッシュに登録されている場合、より多くの時間をプッシュ経由でアクティブユーザーキャンペーンを送信することに費やすことができます。ただし、LTV が E メールにサブスクライブされているユーザの方が高いことがわかった場合は、よりアクティブなユーザにE メールにサブスクライブするように促すことができます。
 
-![次のフィルターを持つメール用セグメントファンネルの例。「最終購入日が過去 30 日以内」、「これらのアプリの最終使用日が過去 30 日以内」、「[プッシュ通知が有効] が true」、「[メールの購読のステータス] が [オプトイン済み]」、がすべて該当するユーザー数は 2,799 人に達しました。]({% image_buster /assets/img_archive/Wish_List_Email.png %})
+![次のフィルターを持つメール用セグメントファンネルの例。"Last Made Purchase less 30 days ago" " Last used thes アプリ s less 30 days ago" " &Foreground Push Enabled is true" および" &Email Subscription Status is Opted In&quot]({% image_buster /assets/img_archive/Wish_List_Email.png %})
 
 ### iOS または Android のプッシュオプトイン
 
-このユースケースでは、「アプリのプッシュが有効」フィルターを利用して、プッシュをオプトインした iOS または Android ユーザーをターゲットにします。
+このユースケースでは、"Foreground Push Enabled for App" フィルターを利用して、プッシュを選択したiOS またはAndroid ユーザーを対象にします。
 
 ![]({% image_buster /assets/img/seg_filter_examples/ios.png %})
 
@@ -57,13 +57,13 @@ page_type: reference
 
 ### フルプッシュが有効なオーディエンス
 
-このユースケースでは、「プッシュ有効」フィルターを利用して、プッシュをオプトインしたユーザーをターゲットにします。
+このユースケースでは、"Foreground Push Enabled" フィルターを使用して、プッシュを選択したユーザーを対象にします。
 
 ![]({% image_buster /assets/img/seg_filter_examples/both.png %})
 
 ### プッシュ有効オーディエンスのグローバルコントロールグループ
 
-このユースケースでは、「プッシュ有効」および「ランダムバケット番号」フィルターを使用して、プッシュをオプトインしたグローバルコントロールグループの一部であるユーザーをターゲットにします。
+このユースケースでは、"Foreground Push Enabled"および"Random Bucket #"フィルターを使用して、プッシュを選択したグローバルコントロールグループの一部であるsを対象とします。
 
 ![]({% image_buster /assets/img/seg_filter_examples/global_control.png %})
 

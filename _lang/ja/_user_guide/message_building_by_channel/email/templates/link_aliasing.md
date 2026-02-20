@@ -40,11 +40,7 @@ Brazeは、`lid` （リンク識別子とも呼ばれる）と呼ばれる追加
 
 また、レポーティングやセグメンテーションを行う際に、特定のリンクを参照するためのエイリアスを設定することもできます。 
 
-<<<<<<< HEAD
-![リンク管理ページに4つのリンクエイリアスがあります。]({% image_buster /assets/img/link_aliasing_composer.png %})
-=======
-\![リンク管理ページに4つのリンクエイリアスがあります。]({% image_buster /assets/img/link_aliasing_composer.png %})
->>>>>>> main
+![4つのリンクエイリアスを持つリンクマネージメントページ。]({% image_buster /assets/img/link_aliasing_composer.png %})
 
 {% alert note %}
 リンクのエイリアシングは、クエリーパラメーターを付加しても安全なHTMLアンカータグ内の`href` 属性でのみサポートされている。Brazeが簡単に`lid` の値を追加できるように、リンクの最後にクエスチョンマーク(?)を付けるのがベストプラクティスだ。`lid` 。この値を追加しないと、Brazeはリンクエイリアス用のURLを認識しない。
@@ -63,11 +59,7 @@ Brazeは、`lid` （リンク識別子とも呼ばれる）と呼ばれる追加
 
 ここでは、並べ替え、検索、リンクエイリアスのトラッキング追跡をオフにすることができる。
 
-<<<<<<< HEAD
-![Tracked Link Aliases ページ。"TechPartners"および"Help"という2 つのリンクエイリアスが表示されます。"Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %} という名前のキャンペーンに関連付けられています。]
-=======
-\![Tracked Link Aliases ページ。"TechPartners"および"Help"という2 つのリンクエイリアスが表示されます。"Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %} という名前のキャンペーンに関連付けられています。]
->>>>>>> main
+![さまざまなキャンペーンに関連付けられたアクティブおよび非アクティブのリンクエイリアスを示す、トラッキングリンクエイリアスページ。]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/)および[List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/)エンドポイントを使用して、キャンペーンまたはメール固有のキャンバスコンポーネントの各メッセージバリアントに設定された`alias` を抽出する。
@@ -85,25 +77,25 @@ Brazeは、メール内のリンクを評価し、リンクテンプレートを
 
 **ロジック:**Brazeはクエスチョンマーク(?)を挿入し、最初のクエリーパラメーターをURLに追加する。
 
-| メール本文にリンクを貼る    | エイリアスによるリンク                     |
+| メール本体で連動    | エイリアスのリンク                     |
 |-----------------------|----------------------------------------|
-| https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk |
+| `https://www.braze.com` | `https://www.braze.com?lid=slfdldtqdhdk` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### より多くのクエリーパラメーターを持つリンク
 
 **ロジック:**Braze は他のクエリパラメーターを検出し、URL の末尾に `lid=` を追加します。
 
-| メール本文にリンクを貼る                                            | エイリアスによるリンク                                                             |
+| メール本体で連動                                            | エイリアスのリンク                                                             |
 |---------------------------------------------------------------|--------------------------------------------------------------------------------|
-| https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz |
+| `https://www.braze.com?utm_campaign=retention&utm_source=email` | `https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTMLリンク
 
 **ロジック:**Brazeは、リンクがURLであり、すでにクエスチョンマーク(?)があると認識するため、クエスチョンマークの後に`lid` クエリーパラメータが追加される。
 
-| メール本文にリンクを貼る                                                | エイリアスによるリンク                                                                |
+| メール本体で連動                                                | エイリアスのリンク                                                                |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -112,18 +104,18 @@ Brazeは、メール内のリンクを評価し、リンクテンプレートを
 
 **ロジック:**Brazeは、クエスチョンマーク(?)の後にアンカー(#)がある標準的なURL構造を期待する。Brazeは左から右に読むので、クエスチョンマークと`lid` の値はアンカーの前に付加される。
 
-| メール本文にリンクを貼る                               | エイリアスによるリンク                                                |
+| メール本体で連動                               | エイリアスのリンク                                                |
 |--------------------------------------------------|-------------------------------------------------------------------|
-| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email |
+| `https://www.braze.com#bookmark1?utm_source=email` | `https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### アンカーとキャプチャタグによるリンク
 
-**ロジック:**アンカー(#)を含むURLでリンクエイリアスを使用する場合、Brazeはアンカーがクエリーパラメーターの後に置かれることを期待する。つまり、適切なトラッキングのためにアンカーの前に `lid` 値を付加する必要があります。Braze は URL を左から右の順で読み取るので、疑問符 (?) と `lid`はアンカーの前に配置されている必要があります。
+**ロジック:**アンカー(#)を含むURLでリンクエイリアスを使用する場合、Brazeはアンカーがクエリーパラメーターの後に置かれることを期待する。つまり、`lid` の値は、適切な"トラッキングのためにアンカーの前にアプリ終了した**でなければならず、Braze はURL を左から右に読み取るため、アンカーの前に疑問符(?) と`lid` が来る必要があります。
 
-| メール本文にリンクを貼る                                                                        | エイリアスによるリンク                                                                                           |
+| メール本体で連動                                                                        | エイリアスのリンク                                                                                           |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a>` {%endraw%} |
+| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions?lid={{link_alias}}#special-offer">Check out our special offer!</a>` {%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## トラッキングリンク エイリアス
@@ -136,26 +128,7 @@ Brazeは、メール内のリンクを評価し、リンクテンプレートを
 
 Brazeでは、追跡するリンクを無制限に選択することができるが、ユーザーが開いた直近のリンクに限ってリターゲティングすることができる。ユーザープロファイルには、最近クリックした 100 個のリンクが含まれています。例えば、500のリンクを追跡し、ユーザーが500のリンクをすべてクリックした場合、最近クリックされた100のリンクに基づいてリターゲティングやセグメントを作成することができる。
 
-{% tabs local %}
-{% tab Drag-And-Drop Editor %}
-
-<<<<<<< HEAD
-![ドラッグアンドドロップメールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_dnd.png %})
-=======
-\![ドラッグアンドドロップメールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_dnd.png %})
->>>>>>> main
-
-{% endtab %}
-{% tab HTML editor %}
-
-<<<<<<< HEAD
-![HTML メールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_html.png %})
-=======
-\![HTML メールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_html.png %})
->>>>>>> main
-
-{% endtab %}
-{% endtabs %}
+![リンク管理タブで、2 つのリンクを選択します。]({% image_buster /assets/img/link_management_dnd.png %})
 
 {% alert note %}
 Brazeは、プロフィールレベルで、過去100回クリックされたリンクエイリアスのみを追跡する。
@@ -165,11 +138,7 @@ Brazeは、プロフィールレベルで、過去100回クリックされたリ
  
 あらゆるリンク（トラッキング済み、未トラッキング）をターゲットにアクションベースのメッセージを作成したり、あらゆるメールキャンペーンやキャンバスコンポーネントのエイリアスをクリックしたかどうかに基づいてユーザーをリターゲティングすることができる。
 
-<<<<<<< HEAD
-![アクションベースのオプション] キャンバスコンポーネントで別名をクリックしたか、キャンペーンと対話したユーザーを対象にします。]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
-=======
-\![アクションベースのオプション] キャンバスコンポーネントで別名をクリックしたか、キャンペーンと対話したユーザーを対象にします。]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
->>>>>>> main
+![キャンバスコンポーネントのエイリアスをクリックしたユーザーやキャンペーンに参加したユーザーをターゲットにするアクションベースオプション。]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
 ### セグメンテーションフィルター
 
@@ -187,11 +156,9 @@ Brazeでは、メールにリンクエイリアスを設定し、ユーザーが
 
 アーカイブされたメッセージのリンクは自動的に追跡解除される。しかし、アーカイブされたメッセージがアーカイブされない場合、リンクを再度追跡する必要がある。リンクエイリアスが追跡される場合、リンクレポートはトップレベルドメインや完全なURLではなく、エイリアスによってインデックスされる。
 
-<<<<<<< HEAD
-![Campaign Analytics] タブには、3 つのリンクエイリアスとその総クリック数が表示されます。]({% image_buster /assets/img/link_aliasing_click_table.png %})
-=======
-\![Campaign Analytics] タブには、3 つのリンクエイリアスとその総クリック数が表示されます。]({% image_buster /assets/img/link_aliasing_click_table.png %})
->>>>>>> main
+メール キャンペーン内のすべてのリンクとそれぞれの総クリック数を表示するには、**Message Analytics**> **メールパフォーマンス**> **プレビュー&ヒートマップ**に移動し、**Show Heatmap**トグルを選択します。
+
+![「総クリック数で表をリンク」パネルにリンクエイリアスと総クリック数が表示されます。]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
 
 ### 電子メールのクリック・イベント
 

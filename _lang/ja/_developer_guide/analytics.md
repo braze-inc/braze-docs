@@ -1,6 +1,6 @@
 ---
 nav_title: 分析
-article_title: Braze SDKの分析について
+article_title: Braze SDK の分析について
 page_order: 2.6
 description: "Braze SDKの分析について学習し、Brazeが収集するデータ、カスタムイベントとカスタム属性の違い、分析を管理するためのベストプラクティスについて理解を深める。"
 platform: 
@@ -13,8 +13,7 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # 分析
@@ -22,12 +21,12 @@ platform:
 > Braze SDKの分析について学習し、Brazeが収集するデータ、カスタムイベントとカスタム属性の違い、分析を管理するためのベストプラクティスについて理解を深める。
 
 {% alert tip %}
-Brazeを導入する際には、マーケティング目標についてチームとよく話し合い、Brazeでトラッキングしたいデータとトラッキング方法を決定するようにしよう。例については、このガイドの最後にある[タクシー／ライドシェアアプリの](#example-case)ケーススタディを参照のこと。
+Braze を実装する際には、マーケティング目標についてチームとよく話し合い、Braze でトラッキングしたいデータとトラッキング方法を最適に決定できるようにしてください。例については、このガイドの最後にある[タクシー／ライドシェアアプリの](#example-case)ケーススタディを参照のこと。
 {% endalert %}
 
 ## 自動的に収集されるデータ
 
-最初に使用したアプリ、最後に使用したアプリ、合計セッション数、デバイス OS など、特定のユーザーデータは SDK で自動的に収集されます。統合ガイドに従って SDK を実装すると、この[デフォルトデータ収集]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)を利用できるようになります。このリストを確認することで、ユーザーに関する同じ情報を複数回保存しなくて済みます。セッションの開始と終了を除き、自動的に追跡される他のデータはすべて、データポイントの割り当てを消費しません。
+最初に使用したアプリ、最後に使用したアプリ、合計セッション数、デバイス OS など、特定のユーザーデータは SDK で自動的に収集されます。統合ガイドに従って SDK を実装すると、この[デフォルトデータ収集]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)を利用できるようになります。このリストを確認することで、ユーザーに関する同じ情報を複数回保存しなくて済みます。セッションの始点と終点を除き、他のすべての自動トラッキングデータはデータポイント使用量に含まれません。
 
 特定のデータ項目のデフォルト収集をブロックするプロセスを許可するには、[SDK プライマー]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/)に関する記事を参照してください。
 
@@ -51,7 +50,7 @@ Brazeを導入する際には、マーケティング目標についてチーム
 
 Braze はセグメンテーション用として、これらのイベントが発生した回数と、各ユーザーの最終実行時刻を記録します。**カスタムイベント**の分析ページで、各カスタムイベントが発生する頻度を集約して表示できます。また、より詳細な分析を行うために、経時的にセグメントごとに表示することもできます。これは、キャンペーンがカスタムイベントのアクティビティにどのように影響したかを確認するのに特に役立ちます。Brazeが時系列にオーバーレイする灰色の線を見て、最後にキャンペーンが送信された時を示します。
 
-![]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png") 30日間に渡ってクレジットカードを追加し、検索を行ったユーザーの統計を示すカスタムイベント分析グラフ。
+![クレジットカードを追加して30日間にわたって検索を行ったユーザーに関する統計を示すカスタムイベント分析グラフ。]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 {% alert note %}
 [カスタム属性を増やすと]({{site.baseurl}}/api/endpoints/messaging/)、カスタムイベントと同様にユーザーアクションのカウンターを保持できます。ただし、時系列でカスタム属性データを表示することはできません。ユーザーのアクションは、時系列で分析する必要がない場合、この方法で記録する必要があります。
@@ -74,7 +73,7 @@ Braze はセグメンテーション用として、これらのイベントが�
 {% raw %}
 ```liquid
 {% if {{event_properties.${time_spent}}} < 600 %}
-Congratulations on beating that level so fast! Check out our online portal where you can play against top players fromm around the world!
+Congratulations on beating that level so fast! Check out our online portal where you can play against top players from around the world!
 {% elsif {{event_properties.${time_spent}}} < 1800 %}
 Don't forget to visit the town store between levels to upgrade your tools.
 {% else %}
@@ -83,7 +82,7 @@ Talk to villagers for essential tips on how to beat levels!
 ```
 {% endraw %}
 
-カスタムイベントプロパティは、メッセージングをパーソナライズしたり、アクションベースの詳細な配信キャンペーンを構築したりするのに役立ちます。イベントプロパティの出現頻度や頻度に基づいてセグメンテーションを作成したい場合は、カスタマーサクセスマネージャーまたはサポートチームまでご連絡ください。
+カスタムイベントプロパティは、メッセージングをパーソナライズしたり、アクションベースの詳細な配信キャンペーンを構築したりするのに役立ちます。イベントプロパティの最新性と頻度に基づいてSegments を作成する場合は、顧客のサクセスマネージャーまたはサポートチームにお問い合わせください。
 
 ## カスタム属性
 
@@ -143,7 +142,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pa
 abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
 ```
 
-カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Braze ダッシュボードの [**データ設定**] > [**カスタム属性**] で100まで増やすことができます。この最大数を増やす必要がある場合は、カスタマーサービスマネージャーに連絡してください。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。
+カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Braze ダッシュボードの [**データ設定**] > [**カスタム属性**] で100まで増やすことができます。この上限を引き上げる場合は、顧客保守マネージャーにお問い合わせください。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。
 
 次の表は、配列属性の利用可能なセグメンテーションオプションについて説明しています。
 
@@ -325,11 +324,11 @@ abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta',
 - メールアドレス
 - 別のサードパーティベンダーのユーザー ID
 
-{% multi_lang_include sdk_auth_alert.md %}
+{% multi_lang_include alerts/important_alerts.md alert='SDK auth' %}
 
 #### カスタムイベントと属性に読みやすい名前を付ける
 
-想像してみてください、あなたがBrazeを導入してから1年か2年後に使用を開始するマーケターで、「usr_no_acct」のような名前が並んだドロップダウンリストを文脈なしで読むのは怖いかもしれません。イベントと属性に識別可能で読みやすい名前を付けることで、プラットフォームのすべてのユーザーにとって物事が容易になります。次のベストプラクティスを考慮してください:
+実装後1～2年間Brazeを使い始めたマーケターで、それ以上の文脈を持たずに"usr_no_acct"のような名前の完全なドロップダウンリストを読むと、威圧的になるかもしれないと想像してください。イベントと属性に識別可能で読みやすい名前を付けることで、プラットフォームのすべてのユーザーにとって物事が容易になります。次のベストプラクティスを考慮してください:
 
 - カスタムイベントは数字で始めないでください。ドロップダウンリストはアルファベット順に並べられ、数字で始まるため、選択したフィルターでセグメンテーションするのが難しくなる。
 - 可能な限り難解な略語や専門用語を使用しないようにしてください

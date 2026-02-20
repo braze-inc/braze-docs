@@ -1,5 +1,5 @@
 ---
-nav_title: 画像付きの MS LP
+nav_title: "\"画像付きlp"
 layout: dev_guide
 
 page_order: 1.4

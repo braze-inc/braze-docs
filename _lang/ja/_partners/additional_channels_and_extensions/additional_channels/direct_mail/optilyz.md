@@ -57,7 +57,7 @@ optilyz には、認証用の HTTP ヘッダーと HTTP メソッドが必要で
   - **Authorization**: {% raw %} `{{ '<OPTILYZ_API_KEY>:' | base64_encode }}` {% endraw %}
   - **Content-Type**: application/json
 
-![Braze webhook ビルダーに表示されるリクエストヘッダーと HTTP メソッド。]({% image_buster /assets/img/optilyz/optilyz_settings.png %}){: style="max-width:50%"}
+![Braze webhookビルダーに表示されるリクエストヘッダーとHTTPメソッド。]({% image_buster /assets/img/optilyz/optilyz_settings.png %}){: style="max-width:50%"}
 
 #### Request body
 
@@ -86,11 +86,11 @@ optilyz には、認証用の HTTP ヘッダーと HTTP メソッドが必要で
 
 ![Braze Webhook ビルダー作成タブに表示さているリクエスト本文のコードと Webhook URL の画像。]({% image_buster /assets/img/optilyz/optilyz_compose.png %})
 
-### ステップ2: リクエストをプレビューする
+### ステップ2:リクエストをプレビューする
 
 次に、**Preview**パネルでリクエストをプレビューするか、**Test**タブに移動して、ランダムなユーザー、既存のユーザーを選択するか、ウェブフックをテストするために自分でカスタマイズする。ページを離れる前にテンプレートを保存することを忘れないこと！
 
-![Braze webhook ビルダーのテストタブで利用可能なさまざまなテストフィールド。]({% image_buster /assets/img/optilyz/optilyz_testing.png %})
+![Braze webhookビルダーのテストタブで利用可能なさまざまなテストフィールド。]({% image_buster /assets/img/optilyz/optilyz_testing.png %})
 
 {% alert important %}
 ページを離れる前にテンプレートを保存することを忘れないこと！<br>更新されたWebhookテンプレートは、新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成するときに、**保存されたWebhookテンプレート**リストで見つけることができる。

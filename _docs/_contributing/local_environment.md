@@ -1,12 +1,12 @@
 ---
-nav_title: Setting up environment
-article_title: Setting up your local Braze Docs environment
+nav_title: Set up environment
+article_title: Set up your local Braze Docs environment
 description: "Learn how to set up your local Braze Docs environment, so you can make complex or multi-page changes."
 page_order: 0.1 
 noindex: true
 ---
 
-# Setting up your local environment
+# Set up your local environment
 
 > Learn how to set up your local Braze Docs environment, so you can make complex or multi-page changes.
 
@@ -109,7 +109,7 @@ In your terminal, open your home directory, then clone the Braze Docs repository
 
 ```bash
 cd ~
-git clone git@github.com:braze-inc/braze-docs.git
+git clone git@github.com:YOUR-USERNAME/braze-docs.git
 ```
 
 ### Step 4: Add a remote for `braze-inc/braze-docs`
@@ -125,8 +125,8 @@ To verify that your new `upstream` remote was added successfully, list your remo
 
 ```bash
 $ git remote -v
-origin    git@github.com:internetisaiah/braze-docs.git (fetch)
-origin    git@github.com:internetisaiah/braze-docs.git (push)
+origin    git@github.com:YOUR-USERNAME/braze-docs.git (fetch)
+origin    git@github.com:YOUR-USERNAME/braze-docs.git (push)
 upstream  git@github.com:braze-inc/braze-docs.git (fetch)
 upstream  git@github.com:braze-inc/braze-docs.git (push)
 ```
@@ -154,7 +154,17 @@ If you have multiple versions of Node.js installed, use `asdf` for version manag
 brew install asdf
 ```
 
-Next, install the dependencies for Braze Docs. These are small programs used to generate your local Braze Docs site.
+Next, install the dependencies for Braze Docs. These dependencies are small programs that generate your local Braze Docs site.
+
+- Make sure you have [Bundler 2 or higher](https://bundler.io/guides/bundler_2_upgrade.html).
+- To verify your current Bundler version, run:
+  ```bash
+  bundle --version
+  ```
+- If needed, to upgrade to the latest Bundler version, run:
+  ```bash
+  gem install bundler
+  ```
 
 ```bash
 bundle install && asdf install

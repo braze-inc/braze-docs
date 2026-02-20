@@ -86,7 +86,7 @@ Enter a name for the new audience, select **Add Users to Audience**, and select 
 
 ![]({% image_buster /assets/img/audience_sync/tiktok3.png %})
 
-Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+Braze displays a notification at the top of the step editor if the audience is created successfully or if errors arise. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
 ![]({% image_buster /assets/img/audience_sync/tiktok2.png %})
 
@@ -112,9 +112,9 @@ You can view the audience in TikTok by entering your **Ads Manager Account** and
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync step, Braze will sync these users in near real-time while respecting TikTok's Marketing API rate limits. This means that Braze will try to batch and process as many users every 5 seconds before sending these users to TikTok.
+As users reach the Audience Sync step, Braze syncs them in near real time while respecting TikTok's Marketing API rate limits. Braze batches and processes as many users as possible every 5 seconds before sending them to TikTok.
 
-TikTok's Segment API rate limit states no more than 50 queries per second and 10k users per request. If a Braze customer reaches this rate limit, the Canvas will retry the sync for up to &#126;13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
+TikTok's Segment API rate limit allows no more than 50 queries per second and 10k users per request. If a customer reaches this limit, Braze retries the sync for up to &#126;13 hours. If the sync is still not possible, Braze lists these users under the Users Errored metric.
 
 ## Understanding analytics
 
@@ -163,4 +163,6 @@ This is because in TikTok, one ID may be associated with multiple TikTok users. 
 
 Additionally, TikTok also counts Pangle users as matched users, which in some cases can result in an elevated match rate. However, when you use the audience for ad delivery, the actual deliverable audience size may not be as high as the matched user size as it depends on placement and other influencing factors.
 
+### Why am I receiving an email with the subject "Audience Does Not Exist For Canvas"?
 
+This can occur if the audience you chose to sync to is not a streaming audience (for example, if it's a lookalike audience or a user file audience). Try creating a new audience through the Braze Audience Sync Canvas step.

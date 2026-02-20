@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:環境設定センターの詳細の表示"
+nav_title: "取得:ユーザー設定センターの詳細を表示する"
 article_title: "取得:環境設定センターの詳細の表示"
 search_tag: Endpoint
 page_order: 3

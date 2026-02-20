@@ -34,7 +34,7 @@ A integração Braze e Segment permite que você use [Engage](https://segment.co
 1. No Segment, navegue até a guia **Audiences** (Públicos) no Engage e clique em **New** (Novo).
 2. Crie seu público. Um raio no canto superior da página indicará se o público é atualizado em tempo real.
 3. Em seguida, selecione Braze como seu destino.
-4. Prévia seu público clicando em **Revisar e Criar**. Por padrão, o Segment consulta todos os dados históricos para definir o valor atual do traço calculado e do público. Para omitir esses dados, desmarque **Preenchimento Histórico**.
+4. Prévia do seu público clicando em **Revisar & Criar**. Por padrão, o Segment consulta todos os dados históricos para definir o valor atual do traço calculado e do público. Para omitir esses dados, desmarque **Preenchimento Histórico**.
 
 ### Etapa 2: Capture sua chave de importação de dados da coorte
 
@@ -57,7 +57,7 @@ No Braze, navegue até **Segmentos**, crie um novo segmento e selecione **Cohort
 1. No Segment, navegue até a **Características Computadas** ou **Públicos** guia em **Engajar**, e clique em **Novo**.
 2. Crie seu traço computado ou público. Um raio no canto superior da página indica se a computação está sendo atualizada em tempo real.
 3. Em seguida, selecione **Braze** como seu destino. 
-4. Obtenha uma prévia do seu público clicando em **Revisar e criar**. Por padrão, o Segment consulta todos os dados históricos para definir o valor atual do traço calculado e do público. Para omitir esses dados, desmarque **Preenchimento Histórico**.
+4. Prévia do seu público clicando em **Revisar & Criar**. Por padrão, o Segment consulta todos os dados históricos para definir o valor atual do traço calculado e do público. Para omitir esses dados, desmarque **Preenchimento Histórico**.
 5. Nas configurações de traço ou público calculado, ajuste as configurações de conexão com base em como você gostaria que seus dados fossem enviados para a Braze.
 
 #### Traços e públicos calculados
@@ -69,7 +69,7 @@ No Braze, navegue até **Segmentos**, crie um novo segmento e selecione **Cohort
 Você pode escolher qual método usar (ou escolher usar ambos) quando conectar o traço calculado ao destino Braze.
 
 {% tabs %}
-{% tab Identificar %}
+{% tab Identify %}
 
 Você pode enviar características e públicos calculados para a Braze como `identify` chamadas para criar atributos personalizados na Braze. 
 
@@ -77,10 +77,10 @@ Por exemplo, se você tiver uma característica computada do Engage para "Últim
 
 | Traço Computado | Públicos |
 | -------------- | --------- |
-| ![A seção de atributos personalizados em um perfil de usuário lista "last_product_viewed_item" como "Sweater" (Suéter).]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![A seção de atributos personalizados em um perfil de usuário lista "dormant_shopper" como "true".]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
+| ![A seção de atributo personalizado dentro de um perfil de usuário lista "last_product_viewed_item" como "Suéter".]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![A seção de atributo personalizado dentro de um perfil de usuário lista "dormant_shopper" como "verdadeiro".]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
 
 {% endtab %}
-{% tab Rastrear %}
+{% tab Track %}
 
 Você pode enviar características e públicos calculados para a Braze como `track` chamadas para criar eventos personalizados na Braze. 
 
@@ -88,7 +88,7 @@ Continuando o exemplo anterior, se um usuário tiver uma característica calcula
 
 | Traço Computado | Públicos |
 | -------------- | --------- |
-| ![A seção de eventos personalizados em um perfil de usuário lista "Característica computada" "1" vez, sendo a última vez "20 horas atrás".]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![A seção de atributos personalizados em um perfil de usuário lista "Público entrou" "1" vez, sendo a última vez "9 de março, às 1h45".]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
+| ![A seção de evento personalizado dentro de um perfil de usuário lista "Traço Computado" "1" vez, sendo a última vez "há 20 horas".]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![A seção de atributo personalizado dentro de um perfil de usuário lista "Público Entrou" "1" vez, sendo a última vez "9 de março às 1:45 am".]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
 
 {% endtab %}
 {% endtabs %}

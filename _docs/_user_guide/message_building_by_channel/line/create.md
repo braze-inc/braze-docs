@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a LINE message
-article_title: Creating a LINE Message
+nav_title: Create a LINE message
+article_title: Create a LINE Message
 page_order: 1
 description: "This article covers how to create a LINE message campaign or Canvas."
 page_type: reference
@@ -11,7 +11,7 @@ channel:
 alias: /line/create/
 ---
 
-# Creating a LINE message
+# Create a LINE message
 
 > LINE campaigns can directly reach and programmatically chat with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand.
 
@@ -72,6 +72,8 @@ Write your message using personalization (such as Liquid or Connected Content) a
 
 If you plan to use Liquid, be sure to include a default value for your personalization. This will prevent recipients with incomplete user profiles from receiving a blank placeholder. For example, instead of a user receiving the message "Hi, !", they might receive the message "Hi, new subscriber!".
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Creating right-to-left messages
 
 The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
@@ -99,7 +101,7 @@ You can specify delivery controls, such as allowing users to become [re-eligible
 
 [Target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you. 
 
-Select the larger audience from your segments, and optionally narrow that segment further with our [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Select the larger audience from your segments, and optionally narrow that segment further with our [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). You automatically receive a snapshot of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
 
 ### Choose conversion events
 
@@ -115,7 +117,7 @@ You can also set custom conversion events based on your specific use case. Get c
 {% endtab %}
 {% tab Canvas %}
 
-If you haven’t already, complete the remaining sections of your Canvas. For further details on how to build the rest of your Canvas, use multivariate testing and Intelligent Selection, and more, refer to [Creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+If you haven't already, complete the remaining sections of your Canvas. For further details on how to build the rest of your Canvas, use multivariate testing and Intelligent Selection, and more, refer to [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}

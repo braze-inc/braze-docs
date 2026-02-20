@@ -14,7 +14,7 @@ description: "この記事では、キャンペーン分析のエクスポート
 /campaigns/data_series
 {% endapimethod %}
 
-> このエンドポイントを使用して、一定期間にわたるキャンペーンのさまざまな統計の日次情報を取得します。 
+> このエンドポイントを使用して、一定期間にわたるキャンペーンのさまざまな統計の日次情報を取得します。
 
 返されるデータには、メッセージング・チャネル別に、送信、開封、クリック、変換されたメッセージの数が含まれる。
 
@@ -30,14 +30,14 @@ description: "この記事では、キャンペーン分析のエクスポート
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | 必須 | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> API キャンペーンの `campaign_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページ、またはダッシュボードの**キャンペーンの詳細**ページで確認できます。または、[「キャンペーンをリスト」エンドポイント]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/)を使用することもできます。 |
-| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
+| `campaign_id` | 必須かどうか | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> API キャンペーンの `campaign_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページ、またはダッシュボードの**キャンペーンの詳細**ページで確認できます。または、[「キャンペーンをリスト」エンドポイント]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/)を使用することもできます。 |
+| `length` | 必須かどうか | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
 | `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 例のリクエスト 
+## 例のリクエスト
 
 {% raw %}
 ```
@@ -51,8 +51,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 ### マルチチャンネル対応
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -126,21 +124,21 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "whats_app": [
                     {
                       "variation_api_id": (string) the variation API identifier,
-                      "sent": (int) the number of sends, 
+                      "sent": (int) the number of sends,
                       "delivered": (int) the number of delivered messages,
                       "failed": (int) the number of failed deliveries,
                       "read": (int) the number of opened messages
                     },
                 ],
                 "content_cards" : [
-                  { 
-                    "variation_api_id": (string) the variation API identifier, 
-                    "sent": (int) the number of sends, 
-                    "total_clicks": (int) the number of total clicks, 
-                    "total_dismissals": (int) the number of total dismissals, 
-                    "total_impressions": (int) the number of total impressions, 
-                    "unique_clicks": (int) the number of unique clicks, 
-                    "unique_dismissals": (int) the number of unique dismissals, 
+                  {
+                    "variation_api_id": (string) the variation API identifier,
+                    "sent": (int) the number of sends,
+                    "total_clicks": (int) the number of total clicks,
+                    "total_dismissals": (int) the number of total dismissals,
+                    "total_impressions": (int) the number of total impressions,
+                    "unique_clicks": (int) the number of unique clicks,
+                    "unique_dismissals": (int) the number of unique dismissals,
                     "unique_impressions": (int) the number of unique impressions
                   }
                 ],
@@ -154,8 +152,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 ### 多変量応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "data" : [
         {

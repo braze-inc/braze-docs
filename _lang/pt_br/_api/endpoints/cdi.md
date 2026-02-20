@@ -1,5 +1,5 @@
 ---
-nav_title: Ingestão de dados na nuvem
+nav_title: Ingestão de dados em nuvem
 article_title: Pontos de Ingestão de Dados na Nuvem
 search_tag: Endpoint
 page_order: 0.5

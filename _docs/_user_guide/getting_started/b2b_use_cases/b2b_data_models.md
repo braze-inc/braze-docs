@@ -1,12 +1,12 @@
 ---
 nav_title: Data models
-article_title: Creating a B2B Data Model
+article_title: Create a B2B Data Model
 page_order: 0
 page_type: reference
 description: "Learn how to use Braze data tools to create B2B models."
 ---
 
-# Creating a B2B data model
+# Create a B2B data model
 
 > This use case demonstrates how you can use Braze data tools to create an effective and efficient B2B data model that helps you target, trigger, personalize, and send messages to your business users. 
 

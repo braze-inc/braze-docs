@@ -357,7 +357,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures' %}
 
-<a href="/docs/braze_support/">Braze Support</a>に連絡し、配送失敗の理由を理解するための支援を行ってください。
+配送障害の原因究明については、<a href="/docs/braze_support/">Brazeサポートに</a>問い合わせること。
 
 <span class="calculation-line">計算式: (送信数) - (通信事業者への送信数)</span>
 
@@ -373,7 +373,7 @@ RCS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures RCS' %}
 
-<a href="/docs/braze_support/">Braze Support</a>に連絡し、配送失敗の理由を理解するための支援を行ってください。
+配送障害の原因究明については、<a href="/docs/braze_support/">Brazeサポートに</a>問い合わせること。
 
 <span class="calculation-line">計算式: (送信数) - (通信事業者への送信数)</span>
 
@@ -389,7 +389,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Failed Delivery Rate' %}
 
-<a href="/docs/braze_support/">Braze Support</a>に連絡し、配送失敗の理由を理解するための支援を行ってください。
+配送障害の原因究明については、<a href="/docs/braze_support/">Brazeサポートに</a>問い合わせること。
 
 <span class="calculation-line">計算式: (配信失敗)/(送信)</span>
 

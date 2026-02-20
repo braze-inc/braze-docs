@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT:複数のカタログ項目の置換"
+nav_title: "PUT:複数のカタログ項目を置き換える"
 article_title: "PUT:複数のカタログ項目の置換"
 search_tag: Endpoint
 page_order: 4

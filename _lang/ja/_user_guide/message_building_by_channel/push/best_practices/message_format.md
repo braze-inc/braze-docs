@@ -1,5 +1,5 @@
 ---
-nav_title: メッセージ形式
+nav_title: メッセージフォーマット
 article_title: プッシュメッセージとイメージの形式
 page_order: 5
 page_type: reference
@@ -55,13 +55,13 @@ Android(FCM) | 4 KB
 {% subtabs %}
 {% subtab iOS %}
 
-iOSのプッシュ通知にはこう書かれていた：「こんにちは。これは、画像を含む iOS プッシュ通知です」と絵文字があります。本文の横に小さな画像、写真がある。]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
-iOSのプッシュ通知で、前のメッセージと同じテキストと、テキストの前に拡大画像、写真が表示される。]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
+![読み上げる文字を含むiOSプッシュ通知:「こんにちは。これは、画像を含む iOS プッシュ通知です」と絵文字があります。本文の横に小さな"画像があります。]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
+![iOS は、テキストの前に展開された"画像がある前のメッセージと同じテキストで、ハードプッシュをプッシュ通知します。]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endsubtab %}
 {% subtab Android %}
 
-Androidのプッシュ通知で、メッセージの下に大きな画像が表示される。]({% image_buster /assets/img_archive/android_push_img2.png %})
+![本文の下に大きな"画像があるAndroid プッシュ通知。]({% image_buster /assets/img_archive/android_push_img2.png %})
 
 {% alert note %}
 大画像の通知は、600x300 ピクセル以上の画像を使用すると最も良く表示されます。
@@ -74,11 +74,11 @@ Androidのプッシュ通知で、メッセージの下に大きな画像が表�
 {% subtabs %}
 {% subtab iOS %}
 
-iOSのプッシュ通知にはこう書かれていた：「こんにちは。これはiOSのプッシュだ」。]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
+![読み上げる文字を含むiOSプッシュ通知:「こんにちは。これはiOS のPush" です。]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
 
 {% endsubtab %}
 {% subtab Android %}
-Androidのプッシュ通知がホーム画面に表示された。]({% image_buster /assets/img_archive/Push_Android_2.png %})
+![ホームスクリーンに表示されるAndroid プッシュ通知。]({% image_buster /assets/img_archive/Push_Android_2.png %})
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}

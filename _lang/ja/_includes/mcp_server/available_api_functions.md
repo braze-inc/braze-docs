@@ -1,17 +1,16 @@
 # BrazeのMCPサーバー機能
 
-> Braze MCP サーバーは、特定のBraze REST API エンドポイントにマップする一連の読み取り専用API ファンクションを公開します。クロードやカーソルなどのMCP クライアントは、これらの関数を呼び出して、PIIにアクセスしたりワークスペースを変更したりすることなくデータを取得できます。詳しくは、[Braze MCP サーバー]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){%elsif include.section="開発者" %}({{site.baseurl}}/developer_guide/mcp_server/){%endif %}を参照してください。
+> Braze MCP サーバーは、特定のBraze REST API エンドポイントにマップする一連の読み取り専用API ファンクションを公開します。クロードやカーソルなどのMCP クライアントは、これらの関数を呼び出して、PIIにアクセスしたりワークスペースを変更したりすることなくデータを取得できます。詳しくは、[Braze MCP サーバ]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}を参照してください。
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## 前提条件
 
-この機能を使用するには、[Braze MCP サーバー]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){%elsif include.section="開発者" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){%endif %}を設定する必要があります。
+この機能を使用するには、[Braze MCP サーバーの設定]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %})が必要になります。
 
 ## Braze機能一覧
 
-以下は、MCP クライアントがBraze MCP サーバーと対話するために参照するAPI 機能です。
-
+MCP クライアントは、Braze MCP サーバーと対話するために以下のAPI 機能を参照します。
 ### 一般機能
 
 | 機能 | 説明 |

@@ -32,7 +32,7 @@ Beachten Sie, dass, wenn Sie zwischen dem Starten eines Canvas und dem Erstellen
 
 Wenn die Anzahl der Versionen im Verlauf zunimmt, können Sie jede Version in der Seitenleiste umbenennen, um die Übersicht zu behalten. Standardmäßig werden die Versionsnamen als Zahl generiert, die sich danach richtet, wie viele Versionen zuvor generiert wurden. Wenn Sie eine Version umbenennen, während sie nicht mehr aktiv ist, erscheint dies zwar im Changelog von Canvas, nicht aber im Changelog der Version im Verlauf der Version.
 
-![Changelog-Beispiel für Canvas, das zeigt, dass zwei neue Canvas-Versionen erstellt worden sind.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
+![Canvas Changelog Beispiel, das zeigt, dass zwei neue Canvas-Versionen erstellt wurden.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
 ### Versionen verwerfen
 

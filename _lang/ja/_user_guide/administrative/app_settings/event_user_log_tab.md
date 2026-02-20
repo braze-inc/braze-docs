@@ -1,5 +1,5 @@
 ---
-nav_title: イベントログユーザー
+nav_title: イベントユーザーログ
 article_title: イベントユーザーログ
 page_order: 7
 page_type: reference
@@ -34,11 +34,11 @@ description: "このリファレンス記事では、Braze 連携における問
 
 [**データを展開する**] ボタンを選択すると、その特定のログの生の JSON データが表示されます。
 
-!["特定のログの横にあるデータアイコンとクォートを展開します。]({% image_buster /assets/img_archive/expand_data.png %})
+![特定のログの横にある「データを展開するアイコン」。]({% image_buster /assets/img_archive/expand_data.png %})
 
 イベントユーザーログは、記録後 30 日間ダッシュボードに残ります。
 
-![イベントの未処理ログ]]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
+![イベントの生ログ]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
 
 ## トラブルシューティング
 

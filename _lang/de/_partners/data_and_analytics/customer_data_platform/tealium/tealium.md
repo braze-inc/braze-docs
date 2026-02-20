@@ -190,7 +190,7 @@ Nicht alle angebotenen Felder sind erforderlich.
 {% endalert %}
 
 {% tabs local %}
-{% tab Nutzer:innen verfolgen - Batch und Non-Batch %}
+{% tab Track User - Batch and Non-Batch %}
 
 Mit dieser Aktion können Sie die Attribute von Nutzer:innen, Ereignissen und Käufen in einer einzigen Aktion tracken.
 
@@ -210,7 +210,7 @@ Mit dieser Aktion können Sie die Attribute von Nutzer:innen, Ereignissen und K�
 ![]({% image_buster /assets/img/tealium/track_user_example.png %})
 
 {% endtab %}
-{% tab Nutzer:in löschen - Nicht-Batch %}
+{% tab Delete User - Non-Batch %}
 
 Diese Aktion erlaubt es Ihnen, Nutzer:innen aus dem Braze-Dashboard zu löschen.
 
@@ -252,7 +252,7 @@ Ausführlichere Anweisungen zur Implementierung des Trace-Tools von Tealium find
 
 ## Mögliche Mehrkosten für Datenpunkte
 
-Es gibt drei Möglichkeiten, wie Sie bei der Integration von Braze über Tealium versehentlich auf Mehrkosten bei den Daten stoßen können:
+Bei der Integration von Braze über Tealium gibt es drei Hauptmöglichkeiten, wie Sie versehentlich unnötige Datenpunkte protokollieren können:
 
 #### Doppelte Daten senden - nur Braze-Deltas von Attributen senden
 
@@ -263,7 +263,7 @@ Tealium sendet keine Braze-Deltas von Nutzer:innen-Attributen. Wenn Sie zum Beis
 
 #### Senden von irrelevanten Daten oder unnötiges Überschreiben von Daten
 
-Wenn Sie mehrere EventStreams haben, die auf denselben Event-Feed abzielen, werden **alle für diesen Konnektor aktivierten Aktionen** automatisch ausgelöst, sobald eine einzelne Aktion getriggert wird. \*\*Dies könnte auch dazu führen, dass Daten in Braze überschrieben werden und unnötige Datenpunkte verbrauchen.\\
+Wenn Sie mehrere EventStreams haben, die auf denselben Event-Feed zielen, werden **alle für diesen Konnektor aktivierten Aktionen** automatisch ausgelöst, sobald eine einzelne Aktion getriggert wird. Dies könnte auch dazu führen, dass Daten in Braze überschrieben werden und unnötige Datenpunkte protokolliert werden.
 
 **Lösung**: <br>Richten Sie eine separate Ereignisspezifikation oder einen Feed ein, um jede Aktion zu tracken. <br>**ODER**<br> Deaktivieren Sie Aktionen (oder Konnektoren), die Sie nicht auslösen möchten, mit den Umschaltern im Dashboard von Tealium.
 

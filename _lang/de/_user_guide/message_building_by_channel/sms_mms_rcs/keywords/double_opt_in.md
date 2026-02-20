@@ -12,7 +12,7 @@ channel:
 
 # Doppeltes Opt-in
 
-> Mit dem Double Opt-in Feature können Sie Nutzer:innen auffordern, ihre Opt-in Absicht explizit zu bestätigen, bevor sie SMS-, MMS- oder RCS-Nachrichten erhalten können. Auf diese Weise können Sie sich auf Nutzer:innen konzentrieren, die sich wahrscheinlich auf dem Kanal engagieren oder engagiert sind, und bewährte Verfahren zur Einhaltung von Richtlinien befolgen.
+> Das Double Opt-in Feature verlangt von den Nutzer:innen eine explizite Bestätigung ihrer Opt-in Absicht, bevor sie SMS-, MMS- oder RCS-Nachrichten erhalten können. Dadurch wird das Messaging auf engagierte Nutzer:innen konzentriert und die Einhaltung von Best Practices unterstützt.
 
 Wenn Double Opt-in aktiviert ist, erhalten Nutzer:innen eine Nachricht, in der sie um ihre ausdrückliche Zustimmung gebeten werden, bevor sie von Ihren Kampagnen oder Canvase Nachrichten erhalten können. 
 
@@ -26,19 +26,19 @@ Mit Double Opt-in können Sie durch eingehende und ausgehende Opt-in Kampagnen e
 
 Wenn ein Nutzer:innen seine Telefonnummer angibt, erhält er eine Nachricht, in der er um seine Zustimmung gebeten wird.
 
-![Screenshot einer ausgehenden SMS Nachricht mit dem Markentext "Willkommen bei BRAND text updates! 1 Nachricht pro Woche mit den neuesten Angeboten. Antworten Sie mit „Y“, um sich anzumelden.“, die Benutzer antworten mit ‚Y‘ und die Marke antwortet mit „Danke!“ Sie haben sich jetzt für BRAND-Benachrichtigungen angemeldet. Hier ist ein Aktionscode SMS10 für 10 % Rabatt auf Ihren ersten Einkauf!"]({% image_buster /assets/img/double_opt_in_outbound.png %}){:style="max-width:40%;"}
+![Screenshot einer ausgehenden SMS-Nachricht mit der Marken-SMS „Willkommen bei den Marken-SMS-Updates! 1 Nachricht pro Woche mit den neuesten Angeboten. Antworten Sie mit „Y“, um sich anzumelden.“, die Benutzer antworten mit ‚Y‘ und die Marke antwortet mit „Danke!“ Sie haben sich jetzt für BRAND-Benachrichtigungen angemeldet. Hier ist ein Aktionscode SMS10 für 10 % Rabatt auf Ihren ersten Einkauf!"]({% image_buster /assets/img/double_opt_in_outbound.png %}){:style="max-width:40%;"}
 
 ### Eingehend
 
 Wenn ein Nutzer:innen eine Nachricht sendet, die ein Opt-in-Schlüsselwort enthält, erhält er eine Nachricht, in der er um seine Zustimmung gebeten wird.
 
-![Screenshot einer eingehenden SMS Nachricht, in der ein Nutzer:in "JOIN" sendet und die Antwort "Antworten Sie mit Y, um zu bestätigen, dass Sie an unserem SMS Programm teilnehmen möchten. 3 Nachrichten/Woche, Text. Sie können jederzeit STOPP sagen, um aufzuhören, und dann mit „J“ antworten.]({% image_buster /assets/img/double_opt_in_inbound.png %}){:style="max-width:40%;"}
+![Screenshot einer eingehenden SMS-Nachricht, bei der ein:e Nutzer:in „Antworten Sie mit „J“, um zu bestätigen, dass Sie unserem SMS-Programm BEITRETEN möchten“ erhält. 3 Nachrichten/Woche, Text. Sie können jederzeit STOPP sagen, um aufzuhören, und dann mit „J“ antworten.]({% image_buster /assets/img/double_opt_in_inbound.png %}){:style="max-width:40%;"}
 
 ## Enablement des doppelten Opt-in
 
 Um das Double Opt-in zu aktivieren, gehen Sie zur Tabelle **Globale Schlüsselwörter** in der entsprechenden Abo-Gruppe und klicken Sie in der **Kategorie Opt-in-Schlüsselwort** auf **Bearbeiten**. Wählen Sie dann Ihre Opt-In-Methode**(Opt-In** oder **Double Opt-In**). Wenn Sie **Double Opt-In** wählen, wird die Seite erweitert und zeigt zusätzliche [konfigurierbare Felder](#configurable-fields) an.
 
-![Im Bereich Opt-in-Methode stehen Ihnen zwei Opt-in-Methoden zur Verfügung: Opt-in und Doppeltes Opt-in.]({% image_buster /assets/img/double_opt_in_method.png %}){:style="max-width:50%;"}
+![Im Bereich „Opt-in-Methode“ stehen Ihnen zwei Opt-in-Methoden zur Verfügung: Opt-in und Doppeltes Opt-in.]({% image_buster /assets/img/double_opt_in_method.png %}){:style="max-width:50%;"}
 
 ### Konfigurierbare Felder {#configurable-fields}
 
@@ -52,7 +52,7 @@ Um das Double Opt-in zu aktivieren, gehen Sie zur Tabelle **Globale Schlüsselw�
 
 Wenn ein:e Nutzer:in eine Opt-in-Anfrage erhält, hat er 30 Tage Zeit, seine Opt-in-Absicht zu bestätigen. Wenn ein:e Nutzer:in nach dem 30-Tage-Fenster ein Abonnement abschließen möchte, muss er oder sie ein Opt-in-Keyword eingeben, um den Workflow „Doppeltes Opt-in“ erneut zu starten.
 
-![Die konfigurierbaren Felder haben zwei Abschnitte, Opt-in-Anfrage und doppelte Opt-in-Bestätigung, jeweils mit den Feldern Schlüsselwörter und Antwortnachricht.]({% image_buster /assets/img/double_opt_in_fields.png %})
+![Die konfigurierbaren Felder haben zwei Abschnitte, Opt-in-Anfrage und „Doppeltes Opt-in“-Bestätigung, jeweils mit den Feldern „Keywords“ und „Antwortnachricht“.]({% image_buster /assets/img/double_opt_in_fields.png %})
 
 ## Status der Abonnementgruppe
 

@@ -1,13 +1,13 @@
 ---
-nav_title: iOS へのアップグレード 18
-article_title: iOS へのアップグレード 18
+nav_title: iOS 18 へのアップグレード
+article_title: iOS 18 へのアップグレード
 page_order: 7.1
 platform: 
   - iOS
 description: "この記事では、SDKをシームレスにアップグレードするのに役立つ、iOS 18リリースに関する洞察を紹介する。"
 ---
 
-# iOS へのアップグレード 18
+# iOS 18 へのアップグレード
 
 > Brazeが次のiOSリリースに向けてどのように準備しているか気になりますか？この記事は、iOS 18のリリースに関する我々の洞察をまとめたもので、あなたとあなたのユーザーのシームレスなエクスペリエンス作りに役立つ。
 
@@ -17,7 +17,7 @@ Apple の [WWDC](https://developer.apple.com/wwdc24/) は、2024年6月9日～11
 
 ### Apple Watchでのライブ活動
 
-[Live Activities](https://www.braze.com/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift) は、watchOS 11 でサポートされる予定です。追加のセットアップは必要ありません。ただし、Apple では、ウォッチインターフェイスをカスタマイズするオプションが用意されています。
+[Live Activities](https://www.braze.com/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift) は、watchOS 11 でサポートされる予定です。追加の設定は必要ありません。ただし、Apple では、ウォッチインターフェイスをカスタマイズするオプションが用意されています。
 
 ### Apple Vision Pro
 
@@ -27,7 +27,7 @@ Apple Vision Pro は現在、中国、日本、シンガポール、オースト
 
 アップルの新しい[iPhoneミラーリング](https://www.apple.com/newsroom/2024/06/macos-sequoia-takes-productivity-and-intelligence-on-mac-to-new-heights/)機能により、ユーザーはmacOSデバイスでiPhoneの通知を受け取ることができる。プッシュストーリーの画像やGIFなど、一部のメディアタイプはmacOS通知としてレンダリングできないため、サポートされていないことに留意してほしい。
 
-### アップル・インテリジェンス
+### Apple Intelligence
 
 [Apple Intelligence](https://developer.apple.com/documentation/Updates/Apple-Intelligence) は、iOS 18.1 以降を実行しているデバイスで使用できるようになりました。
 
@@ -35,4 +35,4 @@ Braze ユーザーとして、知っておくべき最も重要な新機能は[�
 
 これらの要約はどのように生成されるかにより、それらの特定の動作や生成されたテキストを制御することはできません。ただし、プッシュクリックトラッキングなどの分析機能やレポート機能には影響しません。
 
-![プッシュ通知プレビューサマリのサンプルスクリーンショット。]({% image_buster /assets/img/apple/apple_intelligence/notification_preview_summary.png %})
+![プッシュ通知のプレビューサマリーのサンプルスクリーンショット。]({% image_buster /assets/img/apple/apple_intelligence/notification_preview_summary.png %})

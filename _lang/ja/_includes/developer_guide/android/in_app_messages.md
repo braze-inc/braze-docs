@@ -13,11 +13,11 @@
 アプリ内メッセージ表示は [`BrazeInAppMessageManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html) クラスによって管理されまｓ。アプリ内のすべてのアクティビティを `BrazeInAppMessageManager` に登録して、アプリ内メッセージビューをビュー階層に追加できるようにする必要があります。これを行うには次の 2 つの方法があります。
 
 {% tabs local %}
-{% tab 自動的に %}
+{% tab automatically %}
 [アクティビティライフサイクルコールバック統合]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking)はアプリ内メッセージ登録を自動的に処理するため、追加の統合は不要です。これはアプリ内メッセージ登録の推奨方法である。
 {% endtab %}
 
-{% tab 手動で %}
+{% tab manually %}
 {% alert warning %}
 自動登録にアクティビティ・ライフサイクル・コールバックを使用している場合は、このステップを完了させないこと。
 {% endalert %}

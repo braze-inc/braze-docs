@@ -1,5 +1,5 @@
 ---
-nav_title: Monitoramento de localização
+nav_title: monitoramento de localização
 article_title: Monitoramento de localização para Windows Universal
 platform: Windows Universal
 page_order: 6

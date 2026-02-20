@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Friendbuy
 
-> Aproveite a integração entre Friendbuy e Braze para expandir suas capacidades de e-mail e SMS enquanto automatiza facilmente suas comunicações de programa de indicação e programa de fidelidade. A Braze gerará perfis de clientes para todos os números de telefone de aceitação coletados via Friendbuy.
+> Use a integração entre [o Friendbuy](https://www.friendbuy.com/) e o Braze para expandir seus recursos de e-mail e SMS e, ao mesmo tempo, automatizar sem esforço as comunicações de seu programa de indicação e fidelidade. A Braze gerará perfis de clientes para todos os números de telefone de aceitação coletados via Friendbuy.
 
 _Essa integração é mantida pela Friendbuy._
 
@@ -60,7 +60,7 @@ Volte à sua [conta da Friendbuy](https://retailer.friendbuy.io/) e atualize a p
 
 Antes que os dados de cliente possam ser enviados para a Braze, os clientes devem dar aceitação através do widget de indicação, marcando uma ou mais das seguintes caixas:
 
-![widget de referência]({% image_buster /assets/img/friendbuy/referral_widget.png %})
+![widget de indicação]({% image_buster /assets/img/friendbuy/referral_widget.png %})
 
 {% alert note %}
 Friendbuy usa o padrão internacional (E.164) para verificar números de telefone reais. Números inválidos, como `555-555-5555`, não serão enviados para a Braze.

@@ -31,17 +31,17 @@ The Braze and ViralSweep integration allows you to hold sweepstakes and contests
 
 ### Step 1 : Connect to Braze within ViralSweep
 
-In ViralSweep, navigate to **Integrations > Email & SMS > Add Service** and select **Braze**. 
+ViralSweep에서 **통합 > 이메일 & SMS > 서비스 추가로** 이동하여 **Braze를** 선택합니다. 
 
 ![]({% image_buster /assets/img/viralsweep/connect.gif %})
 
-### Step 2 : Add Braze Credentials
+### 2단계 : Add Braze Credentials
 
-In the integrations configuration window, provide your Braze REST API key and REST endpoint. Make sure the endpoint you provide does not include `https://`, for example, `dashboard-03.braze.com`. 
+In the integrations configuration window, provide your Braze REST API key and REST endpoint. 제공하는 엔드포인트에 `https://`(예: `dashboard-03.braze.com`)가 포함되지 않았는지 확인합니다. 
 
-![ViralSweep service integration page prompting the user for the Braze API key and Braze dashboard URL.]({% image_buster /assets/img/viralsweep/connect2.png %}){: style="max-width:40%;"}
+![사용자에게 Braze API 키와 Braze 대시보드 URL을 입력하라는 메시지가 표시되는 ViralSweep 서비스 통합 페이지입니다.]({% image_buster /assets/img/viralsweep/connect2.png %}){: style="max-width:40%;"}
 
-Click **Connect**.
+**연결**을 클릭합니다.
 
 ### Step 3 : Add Braze Credentials
 You're connected! The promotion is now connected to Braze, and all entries collected by ViralSweep will be sent into Braze automatically.

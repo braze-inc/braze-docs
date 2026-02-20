@@ -1,6 +1,6 @@
 ---
-nav_title: Canvas Zielgruppe synchronisieren
-page_order: 10
+nav_title: Zielgruppen-Synchronisation
+page_order: 3.5
 noindex: true
 tool: Canvas
 layout: redirect

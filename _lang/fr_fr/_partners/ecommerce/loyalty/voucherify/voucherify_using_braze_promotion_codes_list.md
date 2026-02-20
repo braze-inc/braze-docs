@@ -46,7 +46,7 @@ Confirmez que la liste ne contient que des codes (pas d'en-tête de colonne) et 
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_upload_csv.png %}){: style="max-width:50%;"}
 
-## Étape 4 : Utilisez l'extrait de code dans les campagnes de Braze
+## Étape 4 : Utilisez l'extrait de code dans les campagnes de Braze
 
 Pour utiliser les codes de la liste dans une campagne Braze, copiez l'extrait et ajoutez-le au corps de l'e-mail.
 

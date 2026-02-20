@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Exportar detalhes da tela"
+nav_title: "OBTER: Exportar detalhes do Canvas"
 article_title: "OBTER: Exportar detalhes da tela"
 search_tag: Endpoint
 page_order: 4
@@ -31,7 +31,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Obrigatória | String | Consulte [Identificador da API do Canvas]({{site.baseurl}}/api/identifier_types/) |
-| `post_launch_draft_version` | Opcional | Booleano | Para Canvases que têm um rascunho pós-lançamento, definir isso como `true` mostrará quaisquer alterações de rascunho disponíveis. Padrões para `false` |
+| `post_launch_draft_version` | Opcional | Booleano | Para as telas que têm um rascunho pós-lançamento, definir isso como `true` mostrará todas as alterações de rascunho disponíveis. O padrão é `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -46,12 +46,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Respostas
 
 {% alert note %}
-Todas as etapas do canva têm um campo `next_paths`, que é uma matriz de dados `{name, next_step_id}`. Para etapas completas e etapas de mensagens, o campo `next_step_ids` estará presente, mas não conterá dados para outras etapas do Canvas Flow.
+Todas as etapas do canva têm um campo `next_paths`, que é uma matriz de dados `{name, next_step_id}`. Para as etapas de mensagens, o campo `next_step_ids` estará presente, mas não conterá dados para outras etapas do Canva.
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "created_at": (string) the date created as ISO 8601 date,
   "updated_at": (string) the date updated as ISO 8601 date,

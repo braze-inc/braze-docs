@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:スケジュールされたメッセージを更新"
+nav_title: "POST:スケジュールされたメッセージを更新する"
 article_title: "POST:スケジュールされたメッセージを更新"
 search_tag: Endpoint
 page_order: 4
@@ -10,7 +10,7 @@ description: "この記事では、「スケジュールされたメッセージ
 ---
 {% api %}
 # スケジュールされたメッセージを更新する
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /messages/schedule/update
 {% endapimethod %}
 
@@ -74,7 +74,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
       "title": "Updated title!",
       "alert": "Updated message!"
     },
-    "sms": {  
+    "sms": {
       "subscription_group_id": "subscription_group_identifier",
       "message_variation_id": "message_variation_identifier",
       "body": "This is my SMS body.",

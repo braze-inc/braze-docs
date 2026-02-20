@@ -6,7 +6,7 @@ event_documentation:
     property_details:
       - For Custom Events, the payload will also be populated with any [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties) that are associated with the event.
       - "For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id)."
-      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
+      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
   users.behaviors.Purchase:
     description: This event occurs when a user makes a purchase. Use this data to track when users purchase something in the application.
     alert_tip: Purchases are special custom events and come with a JSON encoded string of custom event properties the same way custom events do.
@@ -15,7 +15,7 @@ event_documentation:
     property_details:
       - For Purchase events, the payload will also be populated with any [purchase event properties]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties) that are associated with the event.
       - "For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id)."
-      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
+      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
   users.behaviors.app.FirstSession:
     description: This event occurs when a user starts their first session in your application. Use this data to track when users start sessions.
     alert_tip: When a user starts their first session, both a `FirstSession` and a `SessionStart` event are fired.
@@ -36,14 +36,14 @@ event_documentation:
       - Locations
     property_details:
       - "For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id)."
-      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
+      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
   users.behaviors.liveactivity.UpdateTokenChange:
     description: This event occurs when Braze syncs Live Activity update token with the user
     api_tags:
       - Live Activity
       - Update Token
   users.behaviors.liveactivity.PushToStartTokenChange:
-    description: This event occurs when Braze syncs Live Activity push to start token with the user
+    description: This event occurs when Braze syncs the Live Activity push to start token with the user.
     api_tags:
       - Live Activity
       - Push To Start Token
@@ -52,7 +52,7 @@ event_documentation:
     api_tags:
       - Attribution
   users.behaviors.pushnotification.TokenStateChange:
-    description: This event occurs when a push token is inserted, updated or removed. Use this to track the states of push tokens.
+    description: This event occurs when a push token is inserted, updated, or removed. Use this to track the states of push tokens.
     api_tags:
       - Push
       - Token State Change
@@ -81,7 +81,7 @@ event_documentation:
       This Currents event is only available for customers that have purchased an "all events connector" and is only available for storage event connectors (such as Amazon S3, Microsoft Azure, and Google Cloud Storage).
       <br><br>To enable this event and schedule the backfill for existing users' random bucket numbers in your workspace, contact your customer success manager.
   users.messages.liveactivity.Send:
-    description: This event occurs when Braze backend makes a request to its provider regarding Live Activity
+    description: This event occurs when the Braze system makes a request to its provider regarding Live Activity.
     api_tags:
       - Live Activity
       - Sends
@@ -100,26 +100,38 @@ event_documentation:
     api_tags:
       - WhatsApp
       - Read
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.whatsapp.Delivery:
     description: This event occurs when an WhatsApp message sent made it successfully to the user's device.
     api_tags:
       - WhatsApp
       - Delivery
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.whatsapp.Failure:
     description: This event occurs when WhatsApp cannot deliver the message to the user. A hard bounce signifies a permanent deliverability failure.
     api_tags:
       - WhatsApp
       - Failure
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.whatsapp.Send:
     description: This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the user.
     api_tags:
       - WhatsApp
       - Sends
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.whatsapp.Abort:
     description: This event occurs if a WhatsApp message was aborted based on Liquid aborts, etc.
     api_tags:
       - WhatsApp
       - Abort
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 WhatsApp messages every 1 week`"
   users.messages.whatsapp.InboundReceive:
     description: This event occurs when one of your users sends a WhatsApp message to a phone number in one of your Braze WhatsApp subscription groups.
     api_tags:
@@ -130,31 +142,52 @@ event_documentation:
     api_tags:
       - Abort
       - Content Cards
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Content Card messages every 1 week`"
   users.messages.email.Abort:
     description: This event occurs if an email message was aborted based on Liquid aborts, etc.
     api_tags:
       - Abort
       - Email
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 email messages every 1 week`"
   users.messages.pushnotification.Abort:
     description: This event occurs if a push notification message was aborted based on Liquid aborts, etc.
     api_tags:
       - Abort
       - Push
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 push messages every 1 week`"
   users.messages.sms.Abort:
     description: This event occurs if an SMS message was aborted based on Liquid aborts, etc.
     api_tags:
       - Abort
       - SMS
+    property_details:
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 SMS messages every 1 week`"
   users.messages.webhook.Abort:
     description: This event occurs if a webhook message was aborted based on Liquid aborts, etc.
     api_tags:
       - Abort
       - Webhooks
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 webhook messages every 1 week`"
   users.messages.webhook.Failure:
     description: This event occurs if a webhook message was delivered but failed with an error response from the endpoint.
     api_tags:
       - Failure
       - Webhooks
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.canvas.exit.PerformedEvent:
     description: This event occurs when a user has exited a Canvas by performing an event.
     api_tags:
@@ -170,7 +203,7 @@ event_documentation:
     api_tags:
       - Canvas
   users.canvas.experimentstep.Conversion:
-    description: This event occurs when a user convert for a Canvas experiment step.
+    description: This event occurs when a user converts for a Canvas experiment step.
     api_tags:
       - Canvas
   users.messages.pushnotification.Send:
@@ -182,8 +215,9 @@ event_documentation:
       - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
       - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
       - "`message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more."
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.pushnotification.Open:
-    description: This event occurs when a user directly clicks on the Push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at the campaign level of "influenced opens" as these are not attributed at the user level.
+    description: This event occurs when a user directly clicks on the push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at the campaign level of "influenced opens" as these are not attributed at the user level.
     api_tags:
       - Push
       - Opens
@@ -194,6 +228,7 @@ event_documentation:
     property_details:
       - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
       - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.pushnotification.IosForeground:
     description: This event is not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) and is now deprecated using our [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
     api_tags:
@@ -203,6 +238,7 @@ event_documentation:
     property_details:
       - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
       - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.pushnotification.Bounce:
     description: This event occurs when an error is received from either Apple Push Notification Service or Fire Cloud Messaging. This means that the push message was bounced, and therefore not delivered to the user's device.
     api_tags:
@@ -210,14 +246,17 @@ event_documentation:
       - Sends
       - Bounce
     property_details:
-      - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+      - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.email.Send:
-    description: This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the user's inbox.
+    description: This event occurs when an email send request was successfully communicated between Braze and SendGrid. However, this does not mean the email was received in the user's inbox. Braze does not log events to user profiles or any Currents destination (such as Snowflake) if the event cannot be matched to both the email and user ID associated with the email event
     api_tags:
       - Email
       - Sends
     property_details:
-      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+      -
+        - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+        - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
       - "`message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more."
   users.messages.email.Delivery:
     description: This event occurs when an email sent made it successfully to the end-users inbox.
@@ -225,7 +264,9 @@ event_documentation:
       - Email
       - Delivery
     property_details:
-      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+    -
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled.
   users.messages.email.Open:
     description: This event occurs when a user opens an email. Multiple events may be generated for the same campaign if a user opens the email multiple times.
     alert_important: It's known behavior that the email open event fields `device_model` and `mailbox_provider` are empty. You can ignore these for now.
@@ -233,50 +274,64 @@ event_documentation:
       - Email
       - Opens
     property_details:
-      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+    -
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled.
   users.messages.email.Click:
     description: This event occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
     api_tags:
       - Email
       - Clicks
     property_details:
-      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+      -
+        - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+        - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
   users.messages.email.Bounce:
     description: This event occurs when an Internet Service Provider returns a hard bounce. A hard bounce signifies a permanent deliverability failure.
     api_tags:
       - Email
       - Bounce
     property_details:
-      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+      -
+        - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+        - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
   users.messages.email.SoftBounce:
     description: This event occurs when an Internet Service Provider returns a soft bounce. A soft bounce signifies that an email could not be delivered because of a temporary deliverability failure.
     api_tags:
       - Email
       - Bounce
     property_details:
-      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+      -
+        - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+        - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
   users.messages.email.Deferral:
     description: This event occurs when an Internet Service Provider does not immediately deliver the email to a non-hard bounced email address and Braze retries the email for up to 72 hours. Typical reasons for deferrals include reputation-based email volume rate-limiting from the inbox provider, temporary connectivity issues, recipient's mailbox is full, or DNS errors.
     api_tags:
       - Email
       - Deferral
     property_details:
-      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+      -
+        - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+        - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled.
   users.messages.email.MarkAsSpam:
     description: This event occurs when the end-user hits the "spam" button on the email. Note that this does not represent the fact the email went into the spam folder as Braze does not track this.
     api_tags:
       - Email
       - Spam
     property_details:
-      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+    -
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled.
   users.messages.email.Unsubscribe:
     description: This event occurs when the end-user has clicked "unsubscribe" from the email.
-    alert_important: The `Unsubscribe` event is actually a specialized click event that is fired when your user clicks on the unsubscribe link in the email (either a normal unsubscribe link within the email body or footer, or using the [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)), not when the user changes state to unsubscribed. If subscription state change is sent through the API, or via custom (non-Braze) unsubscription link, it will not trigger an event on Currents.
+    alert_important: The `Unsubscribe` event is considered a specialized click event that is fired when your user clicks the unsubscribe link in the email (either a normal unsubscribe link within the email body or footer, or using the [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)), not when the user changes state to unsubscribed. If subscription state change is sent through the API, or with a custom (non-Braze) unsubscribe link, it does not trigger an email unsubscribe event on Currents.
     api_tags:
       - Email
       - Subscription
     property_details:
-      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+      -
+        - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+        - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
   users.messages.inappmessage.Impression:
     description: This event occurs when a user views an in-app message.
     alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
@@ -291,8 +346,11 @@ event_documentation:
     api_tags:
       - In-App Messages
       - Abort
+    property_details:
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 in-app messages every 1 week`"
   users.messages.inappmessage.Click:
-    description: This event occurs when a user clicks on an in-app message.
+    description: This event occurs when a user clicks an in-app message.
     alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
     api_tags:
       - In-App Messages
@@ -307,6 +365,7 @@ event_documentation:
       - Sends
     property_details:
       - "`message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language or country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more."
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.contentcard.Send:
     description: This event occurs when a Content Card gets sent to a user.
     alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
@@ -354,27 +413,36 @@ event_documentation:
       - Sends
     property_details:
       - "`message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more."
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.sms.CarrierSend:
     description: This event occurs when an SMS is sent to the carrier.
     alert_important: "`CarrierSend` is supported only for users on legacy infrastructure."
     api_tags:
       - SMS
       - Sends
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.sms.Delivery:
     description: This event occurs when an SMS was successfully delivered to the user's mobile phone.
     api_tags:
       - SMS
       - Delivery
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.sms.Rejection:
-    description: This event occurs when an SMS send gets rejected by the carrier, this can happen for several reasons. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
+    description: This event occurs when an SMS send gets rejected by the carrier. This can happen for several reasons. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
     api_tags:
       - SMS
       - Rejection
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.sms.DeliveryFailure:
     description: This event occurs when an SMS experiences delivery failure. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
     api_tags:
       - SMS
       - Delivery
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.sms.InboundReceive:
     description: |
       This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups.
@@ -387,7 +455,7 @@ event_documentation:
       - Inbound Received
   users.messages.featureflag.Impression:
     description: |
-      This event occures whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
+      This event occurs whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
 
       Feature flag impressions are only logged once per session.
     api_tags:
@@ -424,10 +492,11 @@ event_documentation:
       - Entry
   users.behaviors.subscriptiongroup.StateChange:
     description: This event occurs when the subscription state of a user in a subscription group changes.
-    alert_important: Subscription groups are only available for email, SMS, and WhatsApp channels at this time.
+    alert_important: Subscription groups are only available for email, SMS, RCS, and WhatsApp channels at this time.
     api_tags:
       - Subscription
     property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
       - |
         `state_change_source` will return a string of the full source name. For example, the source CSV import will return the string `CSV Import`. Available sources are listed below:
 
@@ -483,6 +552,9 @@ event_documentation:
     api_tags:
       - Banner
       - Abort
+    property_details:
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Banner messages every 1 week`"
   users.messages.banner.Click:
     description: This event occurs when a user clicks a banner.
     api_tags:
@@ -503,26 +575,38 @@ event_documentation:
     api_tags:
       - LINE
       - Abort
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 LINE messages every 1 week`"
   users.messages.line.Send:
     description: This event occurs when a LINE message is sent to LINE.
     api_tags:
       - LINE
       - Sends
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.line.InboundReceive:
     description: This event occurs when a LINE message is received from a user.
     api_tags:
       - LINE
       - Inbound Received
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.line.Click:
     description: This event occurs when a user clicks a link in a LINE message where the link's domain matches the click tracking domain.
     api_tags:
       - LINE
       - Clicks
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.rcs.Delivery:
     description: This event is created when an RCS message is successfully delivered to a user's mobile device.
     api_tags:
       - RCS
       - Delivery
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.rcs.InboundReceive:
     description: This event is created when Braze receives an RCS message that originates from the user.
     api_tags:
@@ -534,13 +618,56 @@ event_documentation:
       - RCS
       - Read
   users.messages.rcs.Send:
-    description: This event is created when an RCS messages is sent out of Braze to our last-mile delivery partners.
+    description: This event is created when an RCS message is sent out of Braze to our last-mile delivery partners.
     api_tags:
       - RCS
       - Sends
+    property_details:
+      - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.rcs.Abort:
     description: This event is created when an RCS send is interrupted due to an error detected within Braze, and the message is dropped.
     api_tags:
       - RCS
       - Abort
+    property_details:
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 RCS messages every 1 week`"
+  users.messages.email.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - Email
+      - Retry
+  users.messages.line.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - LINE
+      - Retry
+  users.messages.pushnotification.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - Push
+      - Retry
+  users.messages.whatsapp.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - WhatsApp
+      - Retry
+  users.messages.sms.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - SMS
+      - Retry
+  users.messages.webhook.Retry:
+    description: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
+    api_tags:
+      - Webhooks
+      - Retry
+  agentconsole.AgentExecuted:
+    description: This is the Kafka record schema for when an Agent Console agent is executed.
+    api_tags:
+      - Agent
+  agentconsole.ToolInvocation:
+    description: This is the Kafka record schema for when a tool is executed.
+    api_tags:
+      - Agent
 

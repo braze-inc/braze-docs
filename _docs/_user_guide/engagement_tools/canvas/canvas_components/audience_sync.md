@@ -1,6 +1,6 @@
 ---
-nav_title: Canvas audience sync
-page_order: 10
+nav_title: Audience sync
+page_order: 3.5
 noindex: true
 tool: Canvas
 layout: redirect

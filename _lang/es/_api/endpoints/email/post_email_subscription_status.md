@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Cambiar el estado de la suscripción por correo electrónico"
-article_title: "POST: Cambiar el estado de la suscripción por correo electrónico"
+nav_title: "PUBLICAR: Cambiar el estado de la suscripción por correo electrónico"
+article_title: "PUBLICAR: Cambiar el estado de la suscripción por correo electrónico"
 search_tag: Endpoint
 page_order: 5
 layout: api_page
@@ -49,7 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
 | `email` | Obligatoria | Cadena o matriz | Cadena de direcciones de correo electrónico a modificar, o una matriz de hasta 50 direcciones de correo electrónico a modificar. |
-| `subscription_state` | Obligatoria | Cadena | Ya sea "suscrito", "desuscrito" o "opted_in". |
+| `subscription_state` | Obligatoria | Cadena | O bien "suscrito", "dado de baja", o bien "opted_in". |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud

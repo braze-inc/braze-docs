@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Track users (synchronous)"
-article_title: "POST: Track Users (Synchronous)"
+nav_title: "POST: Create and update users (synchronous)"
+article_title: "POST: Create and update users (Synchronous)"
 alias: /post_user_track_synchronous/
 layout: api_page
 page_order: 4.5
@@ -9,7 +9,7 @@ description: "This article outlines details about the synchronous Track user Bra
 
 ---
 {% api %}
-# Track users (synchronous)
+# Create and update users (synchronous)
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track/sync
 {% endapimethod %}
@@ -17,7 +17,7 @@ description: "This article outlines details about the synchronous Track user Bra
 > Use this endpoint to record custom events and purchases and update user profile attributes synchronously. This endpoint functions similarly to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), which updates user profiles asynchronously.
 
 {% alert important %}
-This endpoint is currently in beta. Contact your Braze account manager if you’re interested in participating in this beta.
+This endpoint is currently in **limited beta** . Although we're not adding new customers to the beta right now, let your Braze account manager know if you think this feature could be useful for your Braze integration.
 {% endalert %}
 
 ## Synchronous and asynchronous API calls

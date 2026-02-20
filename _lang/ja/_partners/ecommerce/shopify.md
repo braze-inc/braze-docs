@@ -12,10 +12,13 @@ guide_featured_list:
 - name: Shopifyの概要
   link: /docs/shopify_overview/
   image: /assets/img/braze_icons/shopify.svg
-- name: Shopify 標準統合設定
+- name: Shopify標準統合セットアップ
   link: /docs/shopify_standard_integration/
   image: /assets/img/braze_icons/shopping-cart-03.svg
-- name: Shopifyカスタム統合セットアップ
+- name: Shopify標準統合とサードパーティタギング
+  link: /docs/shopify_standard_integration_third_party_tagging/
+  image: /assets/img/braze_icons/shopping-cart-03.svg
+- name: Shopify カスタム統合設定
   link: /docs/shopify_custom_integration/
   image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Shopify のデータ機能
@@ -33,20 +36,7 @@ guide_featured_list:
 
 guide_menu_title: "Other articles"
 guide_menu_list:
-- name: e コマースのユースケース
+- name: eコマースのユースケース
   link: /docs/ecommerce_use_cases/
   image: /assets/img/braze_icons/users-01.svg
 ---
-<br><br>
-
-## 新Shopify統合
-
-これは、2025年4月から段階的にリリースされるShopify統合の新しいバージョンです。フェーズは、Shopify ストアのタイプと、初期統合のセットアップに使用される外部ID に基づきます。 
-
-**旧バージョンの統合は、2025年8 月28 日に廃止される予定です。2025年8月28日までに新しいバージョンの統合に更新する必要があります。**
-
-**Braze の新規顧客:**2025年4月より、Braze は新規オンボーディングと既存顧客のアップグレードのために、新しい Shopify コネクターを順次展開していきます。新しい標準統合の詳細については、[Shopify標準統合を]({{site.baseurl}}/shopify_standard_integration/)参照のこと。
-
-**Braze の既存顧客:**2025年2月から、新しいShopify統合への移行をお手伝いするアップグレードガイドをご連絡いたします。 お客様のShopifyストアとBraze外部IDの使い方に基づいてお客様をグループ(コホート)に編成し、スムーズでパーソナライズされたアップグレード体験を容易にします。コホートのアップグレード準備が整うと、通知を受け取ります。
-
-**この新しいバージョンにアップグレードは、後方非互換の機能が含まれます。**アップグレード前に、Braze ダッシュボードでプロセスを確認し、貴社と開発チームで変更に対処できるようにしてください。

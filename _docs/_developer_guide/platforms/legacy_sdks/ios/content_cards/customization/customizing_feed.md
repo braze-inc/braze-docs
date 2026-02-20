@@ -1,5 +1,5 @@
 ---
-nav_title: Customizing feed
+nav_title: Customize feed
 article_title: Customizing Content Card Feed for iOS
 platform: iOS
 page_order: 2
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Customizing the Content Cards feed
+# Customize the Content Cards feed
 
 You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. The Content Card cells may also be subclassed and then used programmatically or by introducing a custom storyboard that registers the new classes. Check out the Content Cards [sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for a complete example. 
 

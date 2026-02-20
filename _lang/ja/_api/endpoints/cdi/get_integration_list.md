@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:リスト統合"
+nav_title: "取得:リストの統合"
 article_title: "取得:リスト統合"
 search_tag: Endpoint
 page_order: 1
@@ -97,6 +97,6 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
 | `400 Invalid cursor` | `cursor` が有効であることを確認します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-その他のステータスコードと関連するエラーメッセージについては、[致命的なエラーとレスポンス]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
+その他のステータスコードと関連するエラーメッセージについては、[致命的エラー& レスポンスを]({{site.baseurl}}/api/errors/#fatal-errors)参照のこと。
 
 {% endapi %}

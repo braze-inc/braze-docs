@@ -6,9 +6,9 @@ description: "Dieser Referenzartikel bietet einen Überblick über häufige Anwe
 search_rank: 2
 ---
 
-# [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Using Liquid
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Mit Liquid
 
-> In diesem Artikel erfahren Sie, wie Sie eine Vielzahl von Benutzerattributen verwenden können, um persönliche Informationen dynamisch in Ihre Nachrichten einzufügen.
+> Dieser Artikel zeigt, wie Sie eine Vielzahl von Nutzer:innen-Attributen verwenden können, um persönliche Informationen dynamisch in Ihre Nachrichten einzufügen.
 
 Liquid ist eine quelloffene Template-Sprache, die von Shopify entwickelt und in Ruby geschrieben wurde. Sie können es in Braze verwenden, um Nutzerprofil-Daten in Ihre Nachrichten zu ziehen und diese Daten anzupassen. Sie können beispielsweise Liquid-Tags verwenden, um bedingte Nachrichten zu erstellen, wie z. B. das Versenden verschiedener Angebote basierend auf dem Jahrestag des Abos einer Nutzerin oder eines Nutzers . Darüber hinaus können Filter Daten bearbeiten, z. B. das Registrierungsdatum einer Nutzerin oder eines Nutzers  von einem Zeitstempel in ein besser lesbares Format umwandeln, wie z. B. "15\. Januar 2022". Weitere Einzelheiten zur Liquid-Syntax und ihren Möglichkeiten finden Sie unter [Unterstützte Personalisierungs-Tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
@@ -35,6 +35,10 @@ Oder...
 ```
 Hi Valued User, thanks for using the App!
 ```
+
+{% alert important %}
+HTML-Kommentare (`<!-- -->`) werden entfernt, bevor Liquid gelesen wird. Liquid-Tags in HTML-Kommentaren werden also **nicht** in Ihrer Nachricht angezeigt. Für eine korrekte Darstellung stellen Sie sicher, dass alle Liquid-Tags, die Sie verwenden möchten, außerhalb von HTML-Kommentaren stehen.
+{% endalert %}
 
 ## Unterstützte Werte zum Ersetzen
 
@@ -112,7 +116,7 @@ You can insert pre-formatted variables with defaults through the **Add Personali
 
 The modal will insert Liquid with your specified default value at the point where your cursor was. Die Einfügemarke wird auch durch das Vorschau-Feld angegeben, das den Text vor und nach dem Einfügen enthält. Wenn ein Textblock hervorgehoben ist, wird der hervorgehobene Text ersetzt.
 
-![Ein GIF des Modals Personalisierung hinzufügen, das zeigt, wie der Nutzer:innen "Mitreisender" als Standardwert einfügt und das Modal den hervorgehobenen Text "Name" im Composer durch das Snippet von Liquid ersetzt.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
+![Ein GIF des Modals Personalisierung hinzufügen, das zeigt, wie der Nutzer:innen "Mitreisender" als Standardwert einfügt und das Modal den hervorgehobenen Text "Name" im Composer durch das Liquid Snippet ersetzt.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### Variablen zuweisen
 

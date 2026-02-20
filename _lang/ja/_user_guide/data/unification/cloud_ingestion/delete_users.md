@@ -3,7 +3,7 @@ nav_title: CDIでユーザーを削除する
 article_title: クラウドデータ取り込みによるユーザーの削除
 page_order: 30
 page_type: reference
-description: "このページでは、クラウドデータ取り込みでユーザーを削除するプロセスの概要を説明します。"
+description: "このページでは、Cloud Data Ingestionでユーザーを削除するプロセスの概要を説明する。"
 
 ---
 
@@ -40,7 +40,7 @@ description: "このページでは、クラウドデータ取り込みでユー
 
 {% tabs %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
      UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
      --at least one of external_id, alias_name and alias_label, or braze_id is required  
@@ -54,7 +54,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
    updated_at timestamptz default sysdate,
    --at least one of external_id, alias_name and alias_label, or braze_id is required
@@ -92,7 +92,7 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 | `BRAZE_ID`| 文字列 | NULL 許容 |
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[users_deletes] 
 (
   UPDATED_AT DATETIME2(6) NOT NULL,

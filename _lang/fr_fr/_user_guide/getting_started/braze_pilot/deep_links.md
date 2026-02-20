@@ -3,14 +3,14 @@ nav_title: Liens profonds de navigation
 article_title: Création de liens profonds dans Braze Pilot
 page_order: 4
 page_type: reference
-description: "Cet article de référence couvre brièvement les étapes d'intégration requises de la part de vos ingénieurs ou développeurs."
+description: "Le présent article de référence couvre brièvement les étapes d’intégration dont vos ingénieurs ou développeurs ont besoin."
 ---
 
 # Création de liens profonds dans Braze Pilot
 
 > Braze Pilot prend en charge la création de liens profonds entre les messages Braze et certaines parties de l'application Pilot. Cela vous permet de créer des cas d'utilisation de l'engagement, conduisant les utilisateurs dans différentes parties de l'application Pilot. Vous pouvez également utiliser des paramètres de liens profonds facultatifs pour personnaliser le contenu de certaines pages de l'application pour l'utilisateur. Pour en savoir plus sur les liens profonds, consultez la section [Liens profonds vers le contenu in-app]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
-## Général
+## Généralités
 
 Il s'agit des liens profonds des principales pages de navigation de l'application Pilote. 
 
@@ -79,9 +79,9 @@ th:nth-child(6), td:nth-child(6) {
 <table>
     <thead>
         <tr>
-            <th>Paramètres</th>
+            <th>Paramètre</th>
             <th>Description</th>
-            <th>Exigée</th>
+            <th>Requis</th>
             <th>Défaut (si non spécifié)</th>
             <th>Type</th>
             <th>Exemple</th>
@@ -89,15 +89,15 @@ th:nth-child(6), td:nth-child(6) {
     </thead>
     <tbody>
         <tr>
-            <td><code>titre</code></td>
+            <td><code>title</code></td>
             <td>Titre à utiliser en haut de l'écran.</td>
             <td>Oui</td>
             <td></td>
             <td>Chaîne de caractères</td>
-            <td>La course à pied</td>
+            <td>En cours</td>
         </tr>
         <tr>
-            <td><code>icône</code></td>
+            <td><code>icon</code></td>
             <td>Une chaîne de caractères conseillant l'icône à utiliser.</td>
             <td>Non</td>
             <td><code>RUNNING_HOME</code></td>
@@ -121,8 +121,8 @@ th:nth-child(6), td:nth-child(6) {
             <td>This%20workout%20is%20awesome%21</td>
         </tr>
         <tr>
-            <td><code>entraînement</code></td>
-            <td>Le nom de la séance d'entraînement. Envoyé dans l'événement <code>st_completed_class</code> événement.</td>
+            <td><code>workout</code></td>
+            <td>Le nom de la séance d'entraînement. Envoyé dans le <code>st_completed_class</code> événement.</td>
             <td>Oui</td>
             <td></td>
             <td>Nombre</td>
@@ -130,15 +130,15 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>calories</code></td>
-            <td>Nombre de calories à afficher sur l'écran de la séance d'entraînement active. Envoyé dans l'événement <code>st_completed_class</code> événement.</td>
+            <td>Nombre de calories à afficher sur l'écran de la séance d'entraînement active. Envoyé dans le <code>st_completed_class</code> événement.</td>
             <td>Non</td>
             <td>Nombre aléatoire entre 500 et 1 250</td>
             <td>Nombre</td>
             <td>600</td>
         </tr>
         <tr>
-            <td><code>longueur</code></td>
-            <td>La durée de la séance d'entraînement. Envoyé dans l'événement <code>st_completed_class</code> événement.</td>
+            <td><code>length</code></td>
+            <td>La durée de la séance d'entraînement. Envoyé dans le <code>st_completed_class</code> événement.</td>
             <td>Non</td>
             <td></td>
             <td>Nombre</td>
@@ -199,15 +199,15 @@ th:nth-child(6), td:nth-child(6) {
 
 | Icône | Image |
 | --- | --- |
-| `RUNNING_HOME` | Une icône de chaussure de course.]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}){:style="max-width:30%"} |
-| `HEART_DETAILS` | \![Une icône de cœur.]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}){:style="max-width:30%"} |
-| `TIMER_DETAILS` | \![Une icône de chronomètre.]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}){:style="max-width:30%"} |
-| `YOGA_HOME` | Une icône représentant une personne dans une posture de yoga.]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}){:style="max-width:30%"} |
-| `BICYCLE_HOME` | Une icône de la bicyclette.]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}){:style="max-width:30%"} |
-| `DUMBBELL_HOME` | \![Une icône d'haltère.]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}){:style="max-width:30%"} |
+| `RUNNING_HOME` | ![Une icône de la chaussure de course.]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}){:style="max-width:30%"} |
+| `HEART_DETAILS` | ![Une icône de cœur.]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}){:style="max-width:30%"} |
+| `TIMER_DETAILS` | ![Une icône de chronomètre.]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}){:style="max-width:30%"} |
+| `YOGA_HOME` | ![Une icône représentant une personne dans une pose de yoga.]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}){:style="max-width:30%"} |
+| `BICYCLE_HOME` | ![Une icône de la bicyclette.]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}){:style="max-width:30%"} |
+| `DUMBBELL_HOME` | ![Une icône d'haltère.]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}){:style="max-width:30%"} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## PantalonLabyrinthe
+## PantsLabyrinth
 
 Voici les liens profonds pour l'application de la marque fictive PantsLabyrinth dans Pilote.
 
@@ -262,9 +262,9 @@ th:nth-child(6), td:nth-child(6) {
 <table>
     <thead>
         <tr>
-            <th>Paramètres</th>
+            <th>Paramètre</th>
             <th>Description</th>
-            <th>Exigée</th>
+            <th>Requis</th>
             <th>Défaut (si non spécifié)</th>
             <th>Type</th>
             <th>Exemple</th>
@@ -272,7 +272,7 @@ th:nth-child(6), td:nth-child(6) {
     </thead>
     <tbody>
         <tr>
-            <td><code>nom</code></td>
+            <td><code>name</code></td>
             <td>Le nom de l'élément.</td>
             <td>Oui</td>
             <td></td>
@@ -280,7 +280,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>Jeans</td>
         </tr>
         <tr>
-            <td><code>prix</code></td>
+            <td><code>price</code></td>
             <td>Le prix de l'article.</td>
             <td>Oui</td>
             <td></td>
@@ -304,7 +304,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>This%20item%20is%20awesome%21</td>
         </tr>
         <tr>
-            <td><code>quantité</code></td>
+            <td><code>quantity</code></td>
             <td>La quantité de l'article.</td>
             <td>Non</td>
             <td>1</td>
@@ -312,7 +312,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>2</td>
         </tr>
         <tr>
-            <td><code>taille</code></td>
+            <td><code>size</code></td>
             <td>Une chaîne de caractères conseillant la taille de l'élément.</td>
             <td>Non</td>
             <td>M</td>
@@ -320,7 +320,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>Grandes dimensions</td>
         </tr>
         <tr>
-            <td><code>couleurs</code></td>
+            <td><code>colors</code></td>
             <td>Une liste de couleurs hexagonales séparées par des virgules. Voici les couleurs disponibles pour cet article.</td>
             <td>Non</td>
             <td>%23000000</td>
@@ -372,7 +372,7 @@ Voici les liens profonds pour l'application de la marque fictive Steppington dan
 
 #### Paramètres acceptés
 
-| Paramètres | Description | Exigée | Type | Exemple |
+| Paramètre | Description | Requis | Type | Exemple |
 | --- | --- | --- | --- | --- |
 | `id` | L'ID du film. | Oui | Nombre | 1 |
 | `title` | Le titre du film. | Oui | Chaîne de caractères | Les dents de la mer |

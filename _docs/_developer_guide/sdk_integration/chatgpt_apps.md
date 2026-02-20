@@ -1,13 +1,13 @@
 ---
 page_order: 2.1
 nav_title: ChatGPT apps
-article_title: Integrating Braze with ChatGPT Apps
+article_title: Integrate Braze with ChatGPT Apps
 description: "Learn how to integrate Braze with ChatGPT Apps to enable analytics and event logging within AI-powered applications."
 platform:
   - ChatGPT Apps
 ---
 
-# Integrating Braze with ChatGPT apps
+# Integrate Braze with ChatGPT apps
 
 > This guide covers how to integrate Braze with ChatGPT apps to enable analytics and event logging within AI-powered applications.
 

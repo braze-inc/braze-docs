@@ -1,78 +1,78 @@
 ---
 nav_title: Résolution des problèmes
 article_title: Résolution des problèmes Push
-page_order: 23
+page_order: 24
 page_type: reference
 description: "Cette page contient des étapes de résolution des problèmes pour divers problèmes liés au canal de communication Push."
 channel: push
 ---
 
-# Résolution des problèmes Push
+# Résolution des problèmes
 
-> Cette page vous aide à résoudre les problèmes que vous pouvez rencontrer avec le canal de communication Push.
+> Utilisez cette page pour résoudre les problèmes liés au canal de communication Push.
 
 ## Notifications push manquantes
 
-Vous rencontrez des problèmes de réception/distribution avec les notifications push ? Vous pouvez prendre un certain nombre de mesures pour résoudre ce problème en vérifiant le :
+Vous rencontrez des difficultés de livraison sur vos notifications push ? Il y a un certain nombre d’étapes que vous pouvez suivre pour résoudre ce problème, notamment en vérifiant :
 
-- [Pousser l'état de l'abonnement](#push-subscription-status)
-- [Segmentation](#segment)
-- [Capuchons de notification push](#push-notification-caps)
+- [Statut d’abonnement aux push](#push-subscription-status)
+- [Segment](#segment)
+- [Limites de notification push](#push-notification-caps)
 - [Limites de débit](#rate-limits)
 - [Statut du groupe de contrôle](#control-group-status)
-- [Jeton de poussée valide](#valid-push-token)
-- [Type de notification push](#push-notification-type)
+- [Jeton push valide](#valid-push-token)
+- [Notification push envoyée](#push-notification-type)
 - [Application actuelle](#current-app)
 
-#### Pousser l'état de l'abonnement
+#### Statut d’abonnement aux push
 
-Les pushs ne peuvent être envoyés qu'aux utilisateurs abonnés ou ayant opté pour un abonnement. Vérifiez votre profil utilisateur dans l'onglet [Engagement de]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) la section **Profil utilisateur** pour confirmer si vous êtes activement inscrit à push pour l'espace de travail que vous testez. Si vous êtes inscrit à plusieurs applications, vous les trouverez dans le champ **Poussée inscrite pour :** 
+Les pushs ne peuvent être envoyés qu'aux utilisateurs abonnés ou ayant opté pour un abonnement. Vérifiez votre profil utilisateur dans l'onglet [Engagement de]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) la section **Profil utilisateur** pour confirmer si vous êtes activement inscrit à push pour l'espace de travail que vous testez. Si vous êtes inscrit à plusieurs applications, vous les trouverez dans le champ **Poussée inscrite pour :**
 
-\![Poussée enregistrée pour]({% image_buster /assets/img_archive/trouble1.png %})
+![Push enregistré pour]({% image_buster /assets/img_archive/trouble1.png %})
 
-Vous pouvez également exporter les profils utilisateurs à l'aide des endpoints d'exportation de Braze :
+Vous pouvez également exporter les profils utilisateur à l’aide des endpoints d’exportation de Braze :
 - [Utilisateurs par identifiant]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier)
 - [Utilisateurs par segmentation]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment)
 
-L'un ou l'autre de ces endpoints renverra un objet "jeton de poussée" contenant des informations sur l'activation de la poussée pour chaque appareil.
+Chaque endpoint renvoie un objet de jeton de notification push qui inclut des informations d’activation de notification push par appareil.
 
-#### Segmentation
+#### Segment
 
-Assurez-vous d'appartenir au segment que vous ciblez (s'il s'agit d'une campagne en ligne/en production/instantanée). Dans le **profil utilisateur**, vous verrez une liste des segmentations dans lesquelles l'utilisateur se trouve actuellement. N'oubliez pas qu'il s'agit d'une variable en constante évolution, car la segmentation est mise à jour en temps réel.
+Assurez-vous de tomber dans le segment que vous visez (s’il s’agit d’une campagne réelle et non d’un test). Dans le **Profil de l'utilisateur**, vous verrez une liste de segments dans lesquels l'utilisateur se trouve actuellement. N’oubliez pas qu’il s’agit d’une variable qui évolue constamment, car la segmentation est mise à jour en temps réel.
 
-!Liste des segmentations]({% image_buster /assets/img_archive/trouble2.png %})
+![Liste des segments]({% image_buster /assets/img_archive/trouble2.png %})
 
 Vous pouvez également confirmer que l'utilisateur fait partie de la segmentation en utilisant la **recherche d'utilisateurs** lors de la création d'un segment.
 
-\![Section de recherche d'utilisateurs avec un champ de recherche.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
+![Section de recherche d'utilisateurs avec un champ de recherche.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
 
-#### Capuchons de notification push
+#### Limites de notification push
 
-Vérifiez les limites de fréquence globales. Il est possible que vous n'ayez pas reçu la notification push parce que votre espace de travail a mis en place une limite de fréquence globale et que vous avez déjà atteint votre limite de notification push pour la période spécifiée.
+Vérifiez les limites de fréquence générales. Il est possible que vous n'ayez pas reçu la notification push car votre espace de travail a une limitation de fréquence globale en place et que vous avez déjà atteint votre limite de notifications push pour la période spécifiée.
 
-Vous pouvez le faire en cochant la case ["limite de fréquence globale"]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#freq-cap-feat-over) dans le tableau de bord. Si la campagne est configurée pour respecter les règles de limitation de fréquence, un certain nombre d'utilisateurs seront concernés par ces paramètres.
+Vous pouvez le faire en cochant la case ["limite de fréquence globale"]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#freq-cap-feat-over) dans le tableau de bord. Si la campagne est définie pour suivre des règles de limite de fréquence, un certain nombre d’utilisateurs sont affectés par ces paramètres
 
-!Détails de la campagne]({% image_buster /assets/img_archive/trouble3.png %})
+![Détails de la campagne]({% image_buster /assets/img_archive/trouble3.png %})
 
 #### Limites de débit
 
-Si vous avez défini une limite de débit pour votre campagne ou votre Canvas, il se peut que vous ne receviez plus de messages parce que vous avez dépassé cette limite. Pour plus d'informations, reportez-vous à la section [Limitation du débit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting).
+Si vous avez une limite de fréquence définie pour votre campagne ou Canvas, le taux de réception de vos messages peut être impacté si vous avez dépassé cette limite. Pour plus d'informations, reportez-vous à la section [Limitation du débit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting).
 
 #### Statut du groupe de contrôle
 
-S'il s'agit d'une campagne à canal unique ou d'un Canvas avec un groupe de contrôle, il est possible que vous tombiez dans le groupe de contrôle.
+S’il s’agit d’une campagne à canal unique ou d’un Canvas avec un groupe de contrôle, il est possible que vous tombiez dans le groupe témoin.
 
   1. Vérifiez la [distribution des variantes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#step-5-distribute-users-among-your-variants) pour voir s'il existe un groupe de contrôle.
-  2. Si c'est le cas, créez un segment filtrant pour le [groupe de contrôle de la campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#in-campaign-control-group-filter), [exportez]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/#exporting-to-csv) ensuite [le segment]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/#exporting-to-csv) et vérifiez si votre ID utilisateur figure dans cette liste.
+  2. Si c'est le cas, créez un segment filtrant pour le [groupe de contrôle de la campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#in-campaign-control-group-filter), [exportez ensuite le segment]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/#exporting-to-csv) et vérifiez si votre ID utilisateur figure dans cette liste.
 
-#### Jeton de poussée valide
-Un jeton push est un identifiant que les expéditeurs utilisent pour cibler des appareils spécifiques avec une notification push. Ainsi, si l'appareil ne dispose pas d'un jeton push valide, il n'y a aucun moyen de lui envoyer une notification push. 
+#### Jeton push valide
+Un jeton push est un identifiant qui permet aux expéditeurs de cibler des appareils spécifiques avec une notification push. Ainsi, si l’appareil n’a pas de jeton push valide, il n’y a aucun moyen d’envoyer une notification push. 
 
-#### Type de notification push
+#### Notification push envoyée
 
-Vérifiez que vous utilisez le bon type de notification push. Par exemple, si vous souhaitez cibler une FireTV, vous utiliserez une notification push Kindle, et non une campagne push Android. De même, si vous souhaitez cibler un Android, utilisez une notification push Android et non une campagne push iOS. Consultez les articles suivants pour plus d'informations sur la compréhension du flux de travail de Braze :
+Vérifiez que vous utilisez le type correct de notification push. Par exemple, si vous souhaitez cibler un FireTV, vous devez utiliser une notification push Kindle et pas une campagne Push Android. De même, si vous souhaitez cibler un Android, utilisez une notification push Android et non une campagne push iOS. Consultez les articles suivants pour plus d’informations sur les flux de travail dans Braze pour :
 - [Notification push d'Apple]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=swift)
-- [Envoi de messages dans le nuage Firebase]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android)
+- [Messagerie cloud Firebase]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android)
 
 #### Application actuelle
 
@@ -86,7 +86,7 @@ Si vous rencontrez des problèmes avec les liens dans les notifications push qui
 
 Dans votre campagne ou étape du canvas, vérifiez que l'option **Ouvrir l'URL web dans l'application mobile n** 'est pas sélectionnée. Si c'est le cas, effacez la sélection et relancez. 
 
-\!["Comportement au clic" champ de configuration d'un push set à "Ouvrir l'URL web" avec "Ouvrir l'URL web à l'intérieur de l'application mobile" décoché.]({% image_buster /assets/img/push_on_click.png %})
+![Champ "Comportement au clic" de la configuration d'un push sur "Ouvrir l'URL web" avec "Ouvrir l'URL web à l'intérieur de l'application mobile" non coché.]({% image_buster /assets/img/push_on_click.png %})
 
 L'interaction par défaut pour l'action "Ouvrir une URL web" diffère selon la version du SDK. Pour les versions du SDK iOS 2.29.0 et Android 2.0.0 et plus, cette option est sélectionnée par défaut et les URL web s'ouvriront dans une vue web au sein de l'application. Avant ces versions, cette option est désactivée par défaut et les URL s'ouvrent dans le navigateur web par défaut de l'appareil.
 
@@ -123,7 +123,7 @@ table {
 | OS      | Raccourcis clavier                                                  |
 | ------- | ------------------------------------------------------------------- |
 | Mac      | `Fn` + `F12`<br>`Ctrl` + `Shift` + `I` |
-| Fenêtres | `F12`<br>`Ctrl` + `Shift` + `I` |
+| Windows | `F12`<br>`Ctrl` + `Shift` + `I` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {:start="4"}
@@ -136,16 +136,16 @@ Vos autorisations de push sont maintenant réinitialisées. Ouvrez un nouvel ong
 
 ### Réinitialiser Chrome sur Android
 
-Si une notification de votre site est visible dans le tiroir de notification de votre Android :
+Si une notification de votre site est visible dans le tiroir de notification de votre Android :
 
-1. À partir de la notification push, appuyez sur <i class="fas fa-cog" title="Paramètres"></i> et sélectionnez **Paramètres du site**.
+1. À partir de la notification push, appuyez sur <i class="fas fa-cog" title="Paramètres"></i> et sélectionnez **Paramètres du site.**
 2. Dans les **paramètres du site**, appuyez sur **Effacer & Réinitialiser**.
 
-Si vous n'avez pas reçu de notification de votre site, ouvrez-le :
+Si vous n'avez pas reçu de notification de votre site, ouvrez-le :
 
 1. Ouvrez Chrome sur Android.
 2. Appuyez sur le menu <i class="fas fa-ellipsis-vertical"></i>.
-3. Allez dans **Réglages** > **Réglages du site** > **Notifications**.
+3. Allez dans **Réglages** > **Réglages du site** > **Notifications.**
 4. Vérifiez que les notifications sont définies sur **Demander avant l'envoi (recommandé).**
 5. Trouvez votre site dans la liste.
 6. Sélectionnez l'entrée et appuyez sur **Effacer et réinitialiser**.
@@ -178,7 +178,7 @@ Ces étapes ne concernent que macOS, car Apple ne prend pas en charge Web Push p
 {% endalert %}
 
 1. Ouvrez Safari.
-2. Dans la [barre de menus sur Mac,](https://support.apple.com/guide/mac-help/whats-in-the-menu-bar-mchlp1446/mac) accédez à **Safari** > **Réglages** > **Sites web** > **Notifications**.
+2. Dans la [barre de menus sur Mac,](https://support.apple.com/guide/mac-help/whats-in-the-menu-bar-mchlp1446/mac) accédez à **Safari** > **Réglages** > **Sites web** > **Notifications.**
 3. Sélectionnez votre site dans la liste.
 4. Sélectionnez **Supprimer** pour supprimer les autorisations de notification pour le site.
 5. Ensuite, allez dans **Confidentialité** > **Gérer les données du site web.**
@@ -191,5 +191,5 @@ Vos autorisations de push sont maintenant réinitialisées. Ouvrez un nouvel ong
 {% endtab %}
 {% endtabs %}
 
-Vous avez encore besoin d'aide ? Ouvrez un [ticket d'assistance]({{site.baseurl}}/braze_support/).
+Vous avez toujours besoin d’aide ? Ouvrez un [ticket de support]({{site.baseurl}}/braze_support/).
 

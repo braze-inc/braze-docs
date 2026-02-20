@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE:カタログ選択を削除"
+nav_title: "DELETE:カタログ選択を削除する"
 article_title: "DELETE:カタログ選択を削除"
 search_tag: Endpoint
 page_order: 1
@@ -29,7 +29,7 @@ description: "この記事では、「カタログ選択を削除」Braze エン
 
 | パラメータ        | required | データ型 | 説明                    |
 | ---------------- | -------- | --------- | ------------------------------ |
-| `catalog_name`   | required | 文字列    | カタログ名。           |
+| `catalog_name`   | 必須 | 文字列    | カタログ名。           |
 | `selection_name` | 必須 | 文字列    | カタログセレクションの名前。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 

@@ -35,7 +35,7 @@ YOUBORA ツールスイートアカウントにログインしたら、ドロッ
 Integration(統合)ページにアクセスしたら、スクロールダウンします
 **Braze**インテグレーションオプションを参照してください。これをクリックすると、拡張され、入力するために必要なパラメータがいくつか提供されます。
 
-![NPAW 統合]({% image_buster /assets/img/npaw_integration.png %})
+![NPAWの統合]({% image_buster /assets/img/npaw_integration.png %})
 
 前提条件のセクションで確認した適切な情報を使用して詳細を入力します。
 * [**Connector Name**] は、将来この統合を参照するために使用される**英数字**の文字列です。この値は、文字と数字**のみ**が含まれている限り、任意の値に設定できます。
@@ -51,6 +51,6 @@ Braze との統合の設定が完了したら、**Users** 製品に移動し、*
 
 **Sample Manger** でサンプルを作成した後、右側の3つのドットのアイコンをクリックすると、サンプル内のすべてのユーザーを Braze に送信できます。
 
-![NPAW Sample Manger]({% image_buster /assets/img/npaw_sample_manager.png %})
+![NPAWサンプルマネージャー]({% image_buster /assets/img/npaw_sample_manager.png %})
 
 ユーザーを Braze に送信したら、アクションを実行し、ユーザーセグメントへのキャンペーンに集中して取り組み、非アクティブなユーザーの再獲得、最も忠実なユーザーへのコンタクトなど、あらゆるユーザーセグメントに対するアクションを実行できます。

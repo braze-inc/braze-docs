@@ -2,7 +2,7 @@
 nav_title: Stripo
 article_title: Stripo
 alias: /partners/stripo
-description: "この参考記事では、BrazeとStripoの提携について概説している。Stripoは、ドラッグ＆ドロップでメールテンプレートを作成でき、インタラクティブな要素を含む洗練されたメールを簡単に作成できる。"
+description: "この参考記事では、インタラクティブな要素を含む洗練されたメールを作成するためのドラッグ＆ドロップメールテンプレートビルダーであるStripoとBrazeのパートナーシップについて概説している。"
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stripo
 
-> [Stripoは](https://stripo.email/)ドラッグ＆ドロップで使えるメールテンプレートビルダーで、インタラクティブな要素を盛り込んだレスポンシブメールの作成・デザインを支援する。StripoユーザーはHTMLで編集することもでき、Stripoエディターを通じて、様々なデバイスで表示・非表示する要素を決めることができる。
+> [Stripoは](https://stripo.email/)ドラッグ＆ドロップでインタラクティブな要素を含むレスポンシブメールをデザインできるメールテンプレートビルダーだ。StripoユーザーはHTMLで編集することもでき、Stripoエディターを通じて、様々なデバイスで表示・非表示する要素を決めることができる。
 
 _この統合は Stripo によって管理されます。_
 
@@ -33,15 +33,15 @@ BrazeとStripoの統合により、カスタマイズしたStripoメールをエ
 
 Stripo プラットフォームで Stripo メールを作成し、[**Export**] をクリックします。 
 
-![Stripo エクスポート]({% image_buster /assets/img_archive/stripo_export.png %})
+![Stripo輸出]({% image_buster /assets/img_archive/stripo_export.png %})
 
-### ステップ2:テンプレートをBrazeにエクスポートする
+### ステップ 2:テンプレートをBrazeにエクスポートする
 
 表示されるダイアログで、エクスポート方法として [**Braze**] を選択します。 
 
 次に、**アカウント名** (ワークスペース名など)、**API キー**、**クラスタインスタンス**を入力します。
 
-![Stripo Form]({% image_buster /assets/img_archive/stripo_form.png %})
+![Stripoフォーム]({% image_buster /assets/img_archive/stripo_form.png %})
 
 {% alert important %}
 これは1回限りのセットアップであり、今後のエクスポートは自動的にこのAPIキーを利用することになる。
@@ -49,6 +49,6 @@ Stripo プラットフォームで Stripo メールを作成し、[**Export**] �
 
 ## 使用
 
-アップロードしたStripoテンプレートをBrazeアカウントの**Templates & Media > Email Templates**セクションから探す。これで、このメールテンプレートを使用して、顧客に魅力的なメールメッセージを送信できます。
+アップロードしたStripoテンプレートを、Brazeアカウントの**Templates& Media > Email Templates**セクションで探す。これで、このメールテンプレートを使用して、顧客に魅力的なメールメッセージを送信できます。
 
 

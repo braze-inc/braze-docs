@@ -1,46 +1,46 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} [アプリ内メッセージを設定する必要もあります]({{site.baseurl}}/developer_guide/in_app_messages)。
+{% multi_lang_include developer_guide/prerequisites/android.md %} [アプリ内メッセージの設定も]({{site.baseurl}}/developer_guide/in_app_messages)必要だ。
 
-## 個別マネージャーリスナの設定
+## カスタムマネージャーリスナーの設定
 
 {% tabs %}
-{% tab グローバルリスナー %}
-`BrazeInAppMessageManager` リスナーはアプリ内メッセージの表示とライフサイクルを自動的に処理できますが、メッセージを完全にカスタマイズしたい場合は、カスタムマネージャーリスナーを実装する必要があります。
+{% tab global listener %}
+`BrazeInAppMessageManager` リスナーはアプリ内メッセージの表示とライフサイクルを自動的に処理できるが、メッセージを完全にカスタマイズしたい場合は、カスタム・マネージャー・リスナーを実装する必要がある。
 {% endtab %}
 
-{% tab htmlリスナー %}
+{% tab html listener %}
 Braze SDK にはデフォルトの`DefaultHtmlInAppMessageActionListener`クラスがあり、カスタムリスナーが定義されていない場合に使用され、適切なアクションを自動的に実行します。ユーザーがカスタムの HTML アプリ内メッセージ内のさまざまなボタンを操作する方法をより詳細に制御する必要がある場合は、カスタム`IHtmlInAppMessageActionListener`クラスを実装します。
 {% endtab %}
 {% endtabs %}
 
-### ステップ 1: ユーザ定義マネージャーリスナの実装
+### ステップ 1: カスタムマネージャーリスナーを実装する
 
 {% tabs %}
-{% tab グローバルリスナー %}
+{% tab global listener %}
 #### ステップ1.1：`IInAppMessageManagerListener` を実装する 
 
 [`IInAppMessageManagerListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html)を実装するクラスを作成します。
 
-`IInAppMessageManagerListener` 内のコールバックも、アプリ内メッセージライフサイクルのさまざまな時点で呼び出されます。たとえば、Braze からアプリ内メッセージを受信したときにカスタムマネージャー リスナーを設定すると、[`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) メソッドが呼び出されます。このメソッドの実装により[`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html)が返される場合、それはアプリ内メッセージがホストアプリによって処理され、Braze によって表示されるべきではないことを Braze に知らせます。[`InAppMessageOperation.DISPLAY_NOW`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-p-l-a-y_-n-o-w/index.html) が返された場合、Braze はアプリ内メッセージを表示しようとします。この方法は、アプリ内メッセージをカスタマイズされた方法で表示することを選択した場合に使用する必要があります。
+また、`IInAppMessageManagerListener` のコールバックは、アプリ内メッセージのライフサイクルの様々な時点で呼び出される。例えば、アプリ内メッセージをBrazeから受信したときにカスタムマネージャーリスナーを設定すると、その [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html)メソッドが呼び出される。このメソッドの実装により[`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html)が返される場合、それはアプリ内メッセージがホストアプリによって処理され、Braze によって表示されるべきではないことを Braze に知らせます。もし [`InAppMessageOperation.DISPLAY_NOW`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-p-l-a-y_-n-o-w/index.html)が返された場合、Brazeはアプリ内メッセージの表示を試みる。この方法は、アプリ内メッセージをカスタマイズされた方法で表示することを選択した場合に使用する必要があります。
 
-`IInAppMessageManagerListener` また、メッセージクリックやボタンの代理メソッドも含まれます。これは、ボタンやメッセージがクリックされたときにメッセージを傍受して処理する場合などに使用できます。
+`IInAppMessageManagerListener` これは、ボタンやメッセージがクリックされたときにメッセージをインターセプトしてさらに処理するようなユースケースで使うことができる。
 
-#### ステップ1.2：IAM ビューのライフサイクルメソッドへのフック(オプション)
+#### ステップ1.2：IAMビューのライフサイクルメソッドにフックする（オプション）
 
 [`IInAppMessageManagerListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html)インターフェイスには、アプリ内メッセージビューのライフサイクルの異なるポイントで呼び出されるアプリ内メッセージビューメソッドがあります。これらのメソッドは次の順序で呼び出されます。
 
-1. [`beforeInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-opened.html):アプリ内メッセージがアクティビティのビューに追加される直前に呼び出されます。この時点ではまだアプリ内メッセージはユーザーに表示されません。
-2. [`afterInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-opened.html):アプリ内メッセージがアクティビティのビューに追加された直後に呼び出されます。この時点で、アプリ内のメッセージがユーザーに表示されます。
-3. [`beforeInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-closed.html):アプリ内メッセージがアクティビティーのビューから削除される直前に呼び出されます。この時点でも、アプリ内メッセージはユーザーに表示されます。
-4. [`afterInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-closed.html):アプリ内メッセージがアクティビティーのビューから削除された直後に呼び出されます。この時点では、アプリ内メッセージはユーザーに表示されなくなります。
+1. [`beforeInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-opened.html):アプリ内メッセージがアクティビティのビューに追加される直前にコールされる。この時点ではまだアプリ内メッセージはユーザーに表示されません。
+2. [`afterInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-opened.html):アプリ内メッセージがアクティビティのビューに追加された直後にコールされる。この時点で、アプリ内のメッセージがユーザーに表示されます。
+3. [`beforeInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-closed.html):アプリ内メッセージがアクティビティのビューから削除される直前にコールされる。この時点でも、アプリ内メッセージはユーザーに表示されます。
+4. [`afterInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-closed.html):アプリ内メッセージがアクティビティーのビューから削除された直後にコールされる。この時点では、アプリ内メッセージはユーザーに表示されなくなります。
 
-[`afterInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-opened.html)と[`beforeInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-closed.html)の間の時間は、アプリ内メッセージビューがスクリーンに表示され、ユーザーに表示される時間です。
+と [`afterInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-opened.html)と [`beforeInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-closed.html)との間の時間は、アプリ内メッセージ・ビューが画面上にあり、ユーザーに見えている時間である。
 
 {% alert note %}
-これらのメソッドの実装は必須ではありません。これらは、アプリ内メッセージビューのライフサイクルを追跡および通知するためにのみ提供されます。これらのメソッド実装は空のままにすることができます。
+これらのメソッドの実装は必須ではありません。これらは、アプリ内メッセージ閲覧のライフサイクルをトラッキングし、通知するためにのみ提供される。これらのメソッドの実装は空にしておいても構わない。
 {% endalert %}
 {% endtab %}
 
-{% tab htmlリスナー %}
+{% tab html listener %}
 [`IHtmlInAppMessageActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-html-in-app-message-action-listener/index.html)を実装するクラスを作成します。
 
 `IHtmlInAppMessageActionListener`内のコールバックは、ユーザーが HTML アプリ内メッセージ内で以下のアクションを開始するたびに呼び出されます。
@@ -106,12 +106,12 @@ class CustomHtmlInAppMessageActionListener(private val mContext: Context) : IHtm
 {% endtab %}
 {% endtabs %}
 
-### ステップ 2:カスタムマネージャーリスナを使用するようにBrazeに指示します
+### ステップ 2:Brazeにカスタムマネージャーリスナーを使用するよう指示する。
 
 {% tabs %}
-{% tab グローバルリスナー %}
-`IInAppMessageManagerListener` を作成したら、`BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` を呼び出して指示します `BrazeInAppMessageManager`
-デフォルトのリスナーの代わりにカスタムの`IInAppMessageManagerListener`を使用するよう指示します。これは、[`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) で他のBraze 呼び出しの前に行います。そのため、カスタムリスナーはアプリ内メッセージs が表示される前に設定されます。
+{% tab global listener %}
+`IInAppMessageManagerListener` を作成した後、`BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` を呼び出し、次のように指示する。 `BrazeInAppMessageManager`
+デフォルトのリスナーの代わりにカスタムの`IInAppMessageManagerListener`を使用するよう指示します。これを [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())アプリ内メッセージが表示される前に顧客リスナーが設定されるようにする。
 
 #### 表示前のアプリ内メッセージの変更
 
@@ -160,8 +160,8 @@ Android では、アプリ内メッセージで`logClick`と`logImpression`を�
 {% endalert %}
 {% endtab %}
 
-{% tab htmlリスナー %}
-`IHtmlInAppMessageActionListener` が作成されたら、`BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener()` を呼び出して、`BrazeInAppMessageManager` にデフォルト アクションリスナーの代わりにカスタム`IHtmlInAppMessageActionListener` を使用するように指示します。
+{% tab html listener %}
+`IHtmlInAppMessageActionListener` が作成されたら、`BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener()` をコールして、`BrazeInAppMessageManager` にデフォルトのアクション・リスナーではなく、カスタム・アクション・リスナー`IHtmlInAppMessageActionListener` を使うように指示する。
 
 Braze への他の呼び出しの前に、[`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())に`IHtmlInAppMessageActionListener`を設定することをお勧めします。これにより、アプリ内メッセージが表示される前にカスタムアクションリスナーが設定されます。
 
@@ -180,13 +180,13 @@ BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(C
 {% endtab %}
 {% endtabs %}
 
-## カスタムファクトリーの設定
+## カスタムファクトリを設定する
 
-カスタムファクトリオブジェクトを使用して、いくつかのデフォルトを上書きできます。カスタムファクトリーオブジェクトを必要に応じて Braze SDK に登録して、目的の結果を得ることができます。ただし、ファクトリを上書きする場合は、デフォルトに明示的に遅延するか、Braze デフォルトが提供する機能を再実装する必要があります。次のコードスニペットは、`IInAppMessageViewFactory` および `IInAppMessageViewWrapperFactory` インターフェイスのカスタム実装を提供する方法を示しています。
+カスタムファクトリーオブジェクトによって、多くのデフォルトを上書きすることができる。カスタムファクトリーオブジェクトを必要に応じて Braze SDK に登録して、目的の結果を得ることができます。しかし、ファクトリーをオーバーライドする場合は、明示的にデフォルトに従うか、Brazeのデフォルトが提供する機能を再実装する必要があるだろう。次のコードスニペットは、`IInAppMessageViewFactory` および `IInAppMessageViewWrapperFactory` インターフェイスのカスタム実装を提供する方法を示しています。
 
 {% tabs local %}
 {% tab Kotlin %}
-**アプリ内メッセージのタイプ**<br>
+**アプリ内メッセージの種類**<br>
 
 ```kotlin
 class BrazeDemoApplication : Application(){
@@ -200,7 +200,7 @@ class BrazeDemoApplication : Application(){
 ```
 {% endtab %}
 {% tab Java %}
-**アプリ内メッセージのタイプ**<br> 
+**アプリ内メッセージの種類**<br> 
 
 ```java
 public class BrazeDemoApplication extends Application {
@@ -217,23 +217,23 @@ public class BrazeDemoApplication extends Application {
 {% endtabs %}
 
 {% tabs %}
-{% tab ビュー %}
+{% tab view %}
 Braze のアプリ内メッセージタイプには、ほとんどのカスタムユースケースをカバーする汎用性があります。しかし、デフォルトのタイプを使用する代わりにアプリ内メッセージの視覚的な外観を完全に定義したい場合、Braze ではカスタムビューファクトリを設定することで行うことができます。
 {% endtab %}
 
-{% tab アプリを表示する %}
+{% tab view wrapper %}
 `BrazeInAppMessageManager`は、デフォルトで[`DefaultInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-default-in-app-message-view-wrapper/index.html)を使用して、既存のアクティビティビュー階層へのアプリ内メッセージモデルの配置を自動的に処理します。アプリ内メッセージをビュー階層に配置する方法をカスタマイズする必要がある場合は、カスタムの[`IInAppMessageViewWrapperFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html)を使用する必要があります。
 {% endtab %}
 
-{% tab アニメーション %}
+{% tab animation %}
 アプリ内メッセージにはアニメーションの動作がプリセットされています。`Slideup`メッセージは画面にスライドし、`full`や`modal`メッセージはフェードインおよびフェードアウトします。アプリ内メッセージにカスタムアニメーションの動作を定義する場合、Braze ではカスタムアニメーションファクトリを設定することで行うことができます。
 {% endtab %}
 {% endtabs %}
 
-### ステップ 1: 工場の導入
+### ステップ 1: ファクトリーを実装する
 
 {% tabs %}
-{% tab ビュー %}
+{% tab view %}
 [`IInAppMessageViewFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-factory/index.html)を実装するクラスを作成します。
 
 {% subtabs %}
@@ -282,7 +282,7 @@ class CustomInAppMessageViewFactory : IInAppMessageViewFactory {
 {% endsubtabs %}
 {% endtab %}
 
-{% tab アプリを表示する %}
+{% tab view wrapper %}
 [`IInAppMessageViewWrapperFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html)を実装し、[`IInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper/index.html)を返すクラスを作成します。
 
 このファクトリは、アプリ内メッセージビューが作成された直後に呼び出されます。カスタムの[`IInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper/index.html)を実装する最も簡単な方法は、デフォルトの[`DefaultInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-default-in-app-message-view-wrapper/index.html)を拡張することです。
@@ -351,7 +351,7 @@ class CustomInAppMessageViewWrapper(inAppMessageView: View,
 {% endsubtabs %}
 {% endtab %}
 
-{% tab アニメーション %}
+{% tab animation %}
 [`IInAppMessageAnimationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-animation-factory/index.html)を実装するクラスを作成します。
 
 {% subtabs %}
@@ -400,11 +400,11 @@ class CustomInAppMessageAnimationFactory : IInAppMessageAnimationFactory {
 {% endtab %}
 {% endtabs %}
 
-### ステップ 2:Brazeに使用を指示する
+### ステップ 2:工場で使用するようBrazeに指示する。
 
 {% tabs %}
-{% tab ビュー %}
-`IInAppMessageViewFactory` が作成されたら、`BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()` を呼び出して指示します `BrazeInAppMessageManager`
+{% tab view %}
+`IInAppMessageViewFactory` が作成されたら、`BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()` 。 `BrazeInAppMessageManager`
 デフォルトのビューファクトリの代わりにカスタムの`IInAppMessageViewFactory`を使用するよう指示します。
 
 {% alert tip %}
@@ -418,8 +418,8 @@ Braze への他の呼び出しの前に、`Application.onCreate()`に`IInAppMess
 `IInAppMessageView`を実装すると、カスタムビューの一部をクリック可能と定義できます。[`IInAppMessageImmersiveView`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.views/-i-in-app-message-immersive-view/index.html)を実装すると、メッセージボタンビューと閉じるボタンビューを定義できます。
 {% endtab %}
 
-{% tab アプリを表示する %}
-[`IInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper/index.html) が作成された後、[`BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-custom-in-app-message-view-factory.html) を呼び出して、`BrazeInAppMessageManager` にデフォルトビューwr factory の代わりにカスタム[`IInAppMessageViewWrapperFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html) を使用するよう指示します。
+{% tab view wrapper %}
+あなたの [`IInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper/index.html)が作成されたら [`BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-custom-in-app-message-view-factory.html)を呼び出して、`BrazeInAppMessageManager` 。 [`IInAppMessageViewWrapperFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html)を使うように指示する。
 
 Braze への他の呼び出しの前に、[`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())に[`IInAppMessageViewWrapperFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html)を設定することをお勧めします。これにより、アプリ内メッセージが表示される前にカスタムビューラッパーファクトリが設定されます。
 
@@ -436,7 +436,7 @@ BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(C
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab アニメーション %}
+{% tab animation %}
 `IInAppMessageAnimationFactory`を作成したら、`BrazeInAppMessageManager.getInstance().setCustomInAppMessageAnimationFactory()`を呼び出して`BrazeInAppMessageManager`に対し
 デフォルトのアニメーションの代わりにカスタムの`IInAppMessageAnimationFactory`を使用するよう指示します。
 
@@ -444,11 +444,11 @@ Braze への他の呼び出しの前に、[`Application.onCreate()`](https://dev
 {% endtab %}
 {% endtabs %}
 
-## カスタムスタイル
+## 顧客スタイル
 
 Braze の UI 要素は、Android 標準の UI ガイドラインにマッチしたデフォルトのルックアンドフィールで提供され、シームレスな体験を提供します。このリファレンス記事では、Android または FireOS アプリケーションのアプリ内メッセージングのカスタムスタイリングについて説明します。
 
-### デフォルト形式を設定する
+### デフォルトスタイルの設定
 
 デフォルトのスタイルは、Braze SDK の[`styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml)ファイルで確認できます。
 
@@ -477,9 +477,9 @@ Braze の UI 要素は、Android 標準の UI ガイドラインにマッチし�
 XMLを修正することなく、Brazeキャンペーンでいくつかの色を直接カスタマイズできる。Brazeダッシュボードで設定した色は、他の場所で設定した色よりも優先されることを覚えておいてほしい。
 {% endalert %}
 
-### フォントのカスタマイズ
+### フォントをカスタマイズする
 
-カスタムフォントを設定するには、`res/font` ディレクトリに書体を配置します。使用するには、メッセージテキスト、ヘッダー、ボタンテキストのスタイルをオーバーライドし、`fontFamily`属性を使用して、Braze にカスタムフォントファミリを使用するように指示します。
+`res/font` ディレクトリにある書体を探せば、カスタムフォントを設定できる。使用するには、メッセージテキスト、ヘッダー、ボタンテキストのスタイルをオーバーライドし、`fontFamily`属性を使用して、Braze にカスタムフォントファミリを使用するように指示します。
 
 例えば、アプリ内メッセージボタンテキストのフォントを更新するには、`Braze.InAppMessage.Button`スタイルをオーバーライドし、カスタムフォントファミリを参照します。属性値は、`res/font`ディレクトリのフォントファミリを指す必要があります。
 
@@ -501,9 +501,9 @@ XMLを修正することなく、Brazeキャンペーンでいくつかの色を
 他のカスタムスタイルと同様に、すべての属性が正しく設定されるようにするには、スタイル全体をローカルの`styles.xml`にコピーする必要があります。
 {% endalert %}
 
-## メッセージの解雇
+## メッセージの却下
 
-### バックボタンの消去を無効にする
+### 戻るボタンによる操作を無効にする
 
 デフォルトでは、ハードウェアの [戻る] ボタンにより Braze のアプリ内メッセージは閉じます。この動作は、[`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html)を使用してメッセージごとに無効にできます。 
 
@@ -554,17 +554,17 @@ BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(obje
 この機能が無効になっている場合は、代わりにホストアクティビティのハードウェアの [戻る] ボタンのデフォルト動作が使用されることに注意してください。これにより、[戻る] ボタンで表示されるアプリ内メッセージではなく、アプリケーションが終了することがあります。
 {% endalert %}
 
-### 外部タップ解雇の有効化
+### 外部タップ解雇をイネーブルメントにする
 
-デフォルトでは、外部タップを使用したモーダルの削除は`false` に設定されています。この値を`true`に設定した場合、ユーザーがアプリ内メッセージの外側をタップすると、モーダルアプリ内メッセージが閉じられます。この動作は、以下を呼び出すことで切り替えることができます。
+デフォルトでは、外部タップによるモーダルの解除は`false` に設定されている。この値を`true`に設定した場合、ユーザーがアプリ内メッセージの外側をタップすると、モーダルアプリ内メッセージが閉じられます。この動作は、以下を呼び出すことで切り替えることができます。
 
 ```java
 BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
 ```
 
-## 方向のカスタマイズ
+## 向きをカスタマイズする
 
-アプリ内メッセージに固定方向を設定するには、最初に[カスタムのアプリ内メッセージマネージャーリスナーを設定]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners)します。次に、`beforeInAppMessageDisplayed()` デリゲートメソッドの`IInAppMessage` オブジェクトの向きを更新します。
+アプリ内メッセージに固定方向を設定するには、最初に[カスタムのアプリ内メッセージマネージャーリスナーを設定]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners)します。次に、`beforeInAppMessageDisplayed()` デリゲート・メソッドで、`IInAppMessage` オブジェクトの向きを更新する：
 
 {% tabs %}
 {% tab JAVA %}
@@ -591,7 +591,7 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 
 ## ダークテーマを無効にする {#android-in-app-message-dark-theme-customization}
 
-デフォルトでは、`IInAppMessageManagerListener` の`beforeInAppMessageDisplayed()` はシステム設定を確認し、次のコードを使用してメッセージの暗いテーマスタイルを条件付きで有効にします。
+デフォルトでは、`IInAppMessageManagerListener`'の`beforeInAppMessageDisplayed()` 、システム設定をチェックし、以下のコードでメッセージのダークテーマ・スタイリングを条件付きで有効にする：
 
 {% tabs %}
 {% tab JAVA %}
@@ -617,8 +617,8 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 {% endtab %}
 {% endtabs %}
 
-これを変更するには、事前表示処理の任意のステップで[`enableDarkTheme`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-themeable/enable-dark-theme.html) を呼び出して、独自の条件付きロジックをインプリメントできます。
+これを変更するには [`enableDarkTheme`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-themeable/enable-dark-theme.html)を呼び出し、独自の条件ロジックを実装することができる。
 
-## Google Play レビュープロンプトのカスタマイズ
+## Google Playのレビュープロンプトをカスタマイズする
 
 Google によって設定された制限事項と制約のため、カスタムの Google Play レビュープロンプトは現在 Braze でサポートされていません。これらのプロンプトをうまく統合できたユーザーもいれば、[Google Play のクォータ](https://developer.android.com/guide/playcore/in-app-review#quotas)によって成功率が低いユーザーもいます。ご自身の責任において統合してください。[Google Play アプリ内レビュープロンプト](https://developer.android.com/guide/playcore/in-app-review)のドキュメントを参照してください。

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:SDK 認証キーを作成"
+nav_title: "POST:SDK認証キーを作成する。"
 article_title: "POST:SDK 認証キーを作成"
 search_tag: Endpoint
 page_order: 0
@@ -32,8 +32,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "app_id": "App API identifier",
-  "rsa_public_key_str": "RSA public key string", 
-  "description": "description", 
+  "rsa_public_key_str": "RSA public key string",
+  "description": "description",
   "make_primary": false
 }
 ```
@@ -56,8 +56,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_auth
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "app_id": "01234567-89ab-cdef-0123-456789abcdef",
-  "rsa_public_key_str": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvD+fgA0YuCUd/v35htn...\n-----END PUBLIC KEY-----", 
-  "description": "SDK Authentication Key for iOS App", 
+  "rsa_public_key_str": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvD+fgA0YuCUd/v35htn...\n-----END PUBLIC KEY-----",
+  "description": "SDK Authentication Key for iOS App",
   "make_primary": false
 }'
 ```

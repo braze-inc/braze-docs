@@ -27,7 +27,7 @@ Braze allows clients to replace existing default images with their own custom im
 Because Content Cards have a maximum size of 2 KB for content you enter in the dashboard (including message text, image URLs, links, and all key-value pairs), check the size before sending. Exceeding this amount will prevent the card from sending.
 
 {% alert important %}
-Overriding default images is currently not supported in our Xamarin iOS integration.
+Overriding default images is currently not supported in our .NET MAUI iOS integration.
 {% endalert %}
 
 ## Disabling Dark Mode

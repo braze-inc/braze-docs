@@ -12,7 +12,11 @@ channel:
 
 # 連絡先カード 
 
-> 連絡先カードは vCard または仮想連絡先ファイル (VCF) とも呼ばれ、アドレス帳や連絡先一覧に簡単にインポートできるビジネス情報や連絡先情報を送信するために標準化されたファイル形式です。 
+> 連絡先カード（vCardまたはVirtual Contact Files（VCF）と呼ばれることもある）は、ビジネス情報や連絡先情報を送信するための標準化されたファイル形式で、アドレス帳や連絡帳に簡単にインポートすることができる。 
+
+{% alert note %}
+連絡先カードの送信はMMSとして課金される。連絡先カードを作成する際に、予想されるMMS量とメッセージクレジットの使用量を確認し、[Brazeの課金ページで]({{site.baseurl}}/user_guide/administrative/access_billing/billing/)コストを確認する。
+{% endalert %}
 
 コンタクトカードは、[プログラムで](https://www.twilio.com/blog/send-vcard-twilio-sms)作成し、Braze [メディアライブラリー]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)にアップロードするか、当社の内蔵コンタクトカードジェネレーターで作成することができます。これらのカードには、会社名、電話番号、住所、電子メール、小さな写真などの一般的なプロパティを割り当てることができる。連絡先カードの作成を開始するには、まず、Braze で MMS を使用するように設定してください。
 
@@ -26,7 +30,7 @@ channel:
 
 ![連絡先カード作成タブ。]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
 
-### ステップ 2: 電話番号の割り当て
+### ステップ 2:電話番号の割り当て
 
 利用可能なドロップダウンオプションから、サブスクリプショングループと希望する電話番号を選択します。この番号はお客様の連絡先カードに記載され、保存後に購読グループ側の電話からテキスト送信ができます。
 

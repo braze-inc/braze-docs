@@ -62,7 +62,7 @@ Webhook URL で次の操作を行う必要があります。
 - Android と iOS のアプリの一意のアプリケーション識別子 (Android:「com.example」、iOS:「012345678」など) を Remergeに渡します。
 - キーを定義します。これは Remerge から提供されます。
 
-![Braze Webhook ビルダーに表示される Webhook URL とメッセージプレビュー。]({% image_buster /assets/img_archive/webhook_remerge_preview.png %})
+![Brazeウェブフックビルダーに表示されるウェブフックURLとメッセージプレビュー。]({% image_buster /assets/img_archive/webhook_remerge_preview.png %})
 
 {% alert important %}
 BrazeはデバイスのIDFA/AAIDを自動的に収集しないので、これらの値を自分で保存する必要がある。このデータを収集するには、ユーザーの同意を必要とする場合があることに注意してください。
@@ -76,7 +76,7 @@ RemergeウェブフックはHTTPメソッドとリクエストヘッダを必要
 - **リクエストヘッダー**:
   - **Content-Type**: application/json
 
-![Braze Webhook ビルダーに表示されるリクエストヘッダー、HTTP メソッド、メッセージプレビュー。]({% image_buster /assets/img_archive/httpmethod_remerge.png %})
+![リクエストヘッダ、HTTPメソッド、メッセージプレビューがBraze webhookビルダーに表示される。]({% image_buster /assets/img_archive/httpmethod_remerge.png %})
 
 #### Request body
 

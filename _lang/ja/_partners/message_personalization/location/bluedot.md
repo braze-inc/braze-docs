@@ -51,10 +51,10 @@ Bluedot SDK によって生成されたロケーションイベントから起�
 
 Brazeでアクションベースのキャンペーンを設定し、設定した場所に基づいてメッセージを送信する。トリガーには、以下のスクリーンショットに示すように、`bluedot_entry` または`bluedot_exit` のカスタムイベントを使用する：
 
-![配信ステップでのアクションベースのキャンペーン。ここでは、ユーザーがカスタム`bluedot_entry` または`bluedot_exit` イベントを実行した場合にキャンペーンを送信する2つのスケジュールオプションがある。]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
+![配信ステップでのアクションベースのキャンペーン。ここでは、ユーザーがカスタム`bluedot_entry` または`bluedot_exit` event.]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %} を実行する場合にキャンペーンを送信する2 つのスケジュールオプションがあります。{: style="max-width:80%"}
 
 #### ユーザーへのターゲット設定
 
 ワークスペースのターゲットが**「すべてのユーザー」**であることを確認する。
-![セグメントとして「すべてのユーザー」を選択するように促すターゲットユーザーステップを使用したアクションベースのキャンペーン。]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
+![アクションベースのキャンペーンで、対象のユーザー s ステップを使用して、"すべてのユーザー s" を希望するsegment.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %} として選択することを推奨します。{: style="max-width:80%"}
 

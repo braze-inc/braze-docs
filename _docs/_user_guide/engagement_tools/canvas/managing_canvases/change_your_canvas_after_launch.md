@@ -1,6 +1,6 @@
 ---
-nav_title: Editing Canvases after launch
-article_title: Editing Canvases After Launch
+nav_title: Edit Canvases after launch
+article_title: Edit Canvases After Launch
 page_order: 0
 description: "This reference article covers the different aspects of a Canvas that can be changed after the initial launch."
 alias: "/post-launch_edits/"
@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Editing Canvases after launch
+# Edit Canvases after launch
 
 > This reference article covers what can be changed in a Canvas after the initial launch.
 
@@ -91,9 +91,9 @@ For individual Canvas steps, you can edit the following details after launch:
 * Triggers
 * Audience
 * Exception events
-* Delays
+* Delays (for Delay steps only)
 
-However, the step's schedule type and control percentages are not editable after launch. For Action Paths and Audience Paths steps, the rankings aren't editable after launch.
+However, the step's schedule type and control percentages are not editable after launch. For Action Paths and Audience Paths steps, the rankings and evaluation windows aren't editable after launch.
 
 ### Canvas variant percentages
 
@@ -153,7 +153,7 @@ If your Canvas has an active or in-progress Winning Path or Personalized Path ex
 
 Editing Canvases with time delays can be a bit tricky! So, keep in mind the following details as you make edits to your Canvases.
 
-If you update the delay in a Delay step or evaluation window in the Action Paths step, only new users entering the Canvas and users who haven't been queued for that step will receive the message at the updated time delay.
+If you update the delay in a Delay step, only new users entering the Canvas and users who haven't been queued for that step will receive the message at the updated time delay.
 
 If you delete a step with a time delay (such as Delay or Action Paths) and decide to redirect those users into another Canvas step, the users will only be redirected after the step's time delay has completed. For example, let's say you delete a Delay step with a one-day delay and redirect those users to a Message step. In this case, the users will only be redirected after the one-day delay has been completed.
 
@@ -181,4 +181,4 @@ The following issues are avoidable. If you need to make edits to a Canvas after 
 - The edits do not overwrite Currents data, so you may notice discrepancies between Canvas steps (such as `canvas_step_ids` that don't exist in the Canvas due to deletion)
 - Users can receive the same message twice
 - Users won't receive messages due to the existing rate limit
-  - When users are dispatched into a Canvas, the rate limit applied to the Canvas when a user is dispatched is applied to the user. After the Canvas is sent, the rate limit cannot be edited for that user, so increasing or decreasing the rate limit post-launch won't affect users who are already dispatched.
+  - When you update the rate limit on an active Canvas, the new rate limit takes effect for all future message sends, including users already in the Canvas. However, due to internal caching (up to 30 seconds), there may be a brief delay before the new rate limit is fully applied. Note that Braze enqueues users for the Message step they're currently at so the rate limit in effect when each step's message is actually sent is the one that applies.

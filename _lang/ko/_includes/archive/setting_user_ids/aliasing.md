@@ -10,7 +10,7 @@
 {% if include.platform == "iOS" %}
 
 {% tabs %}
-{% tab 목표-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
  [[Appboy sharedInstance].user addAlias:ALIAS_NAME withLabel:ALIAS_LABEL];
@@ -29,14 +29,14 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% elsif include.platform == "Android" %}
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 Braze.getInstance(context).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)

@@ -15,7 +15,7 @@ search_tag: Partner
 Este documento aborda os casos de uso da extensão, como instalá-la em suas bibliotecas de encaminhamento de eventos e como empregar seus recursos em uma [regra](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) de encaminhamento de eventos.
 
 {% alert note %}
-O envio de atributos à Braze pode aumentar o consumo de pontos de dados da Braze. Consulte seu gerente de conta Braze antes de enviar atribuições. Consulte a documentação da Braze sobre [pontos de dados faturáveis]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points) para saber mais.
+O uso do encaminhamento de eventos da Adobe pode aumentar o uso de pontos de dados do Braze. Para saber mais, consulte a documentação do Braze sobre [pontos de dados]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points).
 {% endalert %}
 
 ## Casos de uso
@@ -62,7 +62,7 @@ Depois de instalar a extensão, crie uma nova [regra](https://experienceleague.a
 ![]({% image_buster /assets/img/efe.png %})
 
 {% tabs local %}
-{% tab Identificação do usuário %}
+{% tab User Identification %}
 
 | Entrada | Descrição |
 | --- | --- |
@@ -76,7 +76,7 @@ Para vincular o evento a um usuário, é necessário preencher o campo `External
 {% endalert %}
 
 {% endtab %}
-{% tab Dados do evento %}
+{% tab Event Data %}
 
 | Entrada | Descrição | Obrigatória |
 | --- | --- | --- |
@@ -91,7 +91,7 @@ A ação **Braze Send Event** requer apenas a especificação de um **Event Name
 {% endalert %}
 
 {% endtab %}
-{% tab Atributo do usuário %}
+{% tab User Attribute %}
 
 As atribuições do usuário podem ser um objeto JSON que contém campos que criarão ou atualizarão um atributo com o nome e o valor fornecidos no perfil de usuário especificado. Há suporte para as seguintes propriedades:
 
@@ -106,13 +106,13 @@ As atribuições do usuário podem ser um objeto JSON que contém campos que cri
 | País | O país do usuário como uma string no formato [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
 | Idioma | O idioma do usuário como uma string no formato [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 | Data de nascimento | Os dados de nascimento dos usuários em string no formato "YYYY-MM-DD" (por exemplo, 1980-12-21). |
-| Fuso horário | Nome do fuso horário do [banco de dados de fuso horário da IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, "America/New_York" ou "Eastern Time (US & Canada)"). |
+| Fuso horário | Nome do fuso horário do banco de dados de fuso [horário da IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, ’America/New_York’ ou "Eastern Time (US & Canada)"). |
 | Facebook | Um hash contendo qualquer um dos seguintes itens: `id` (string), `likes` (vetor de strings), `num_friends` (inteiro). |
 | X (antigo Twitter) | Hash contendo qualquer um dos seguintes itens: id (número inteiro), `screen_name` (string, identificador do X (antigo Twitter)), `followers_count` (número inteiro), `friends_count` (número inteiro), `statuses_count`(número inteiro). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Todas as atribuições adicionadas na configuração serão enviadas toda vez que o evento for enviado ao Braze, independentemente de o valor do atributo ter sido alterado. Ao configurar os dados de usuários, informe-se sobre como isso afetará o consumo de pontos de dados.
+Todas as atribuições adicionadas na configuração serão enviadas toda vez que o evento for enviado ao Braze, independentemente de o valor do atributo ter sido alterado. Ao configurar os dados de usuários, certifique-se de saber como isso afetará o uso dos pontos de dados.
 {% endalert %}
 
 {% endtab %}
@@ -125,7 +125,7 @@ Depois de instalar a extensão, crie uma nova [regra](https://experienceleague.a
 ![]({% image_buster /assets/img/efe2.png %})
 
 {% tabs local %}
-{% tab Identificação do usuário %}
+{% tab User Identification %}
 
 | Entrada | Descrição |
 | --- | --- |
@@ -139,7 +139,7 @@ Para vincular o evento a um usuário, é necessário preencher o campo `External
 {% endalert %}
 
 {% endtab %}
-{% tab Dados de compra %}
+{% tab Purchase Data %}
 
 | Entrada | Descrição | Obrigatória |
 | --- | --- | --- |
@@ -157,7 +157,7 @@ A ação **Enviar evento de compra** requer apenas a especificação de `Product
 {% endalert %}
 
 {% endtab %}
-{% tab Atribuições do usuário %}
+{% tab User Attributes %}
 
 Você pode escolher se deseja enviar atribuições com cada evento na exibição de configuração.
 
@@ -174,13 +174,13 @@ As atribuições do usuário podem ser um objeto JSON que contém campos que cri
 | País | O país do usuário como uma string no formato [ISO-3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
 | Idioma | O idioma do usuário como uma string no formato [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 | Data de nascimento | Os dados de nascimento dos usuários em string no formato "YYYY-MM-DD" (por exemplo, 1980-12-21). |
-| Fuso horário | Nome do fuso horário do [banco de dados de fuso horário da IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, "America/New_York" ou "Eastern Time (US & Canada)"). |
+| Fuso horário | Nome do fuso horário do banco de dados de fuso [horário da IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, ’America/New_York’ ou "Eastern Time (US & Canada)"). |
 | Facebook | Um hash contendo qualquer um dos seguintes itens: `id` (string), `likes` (vetor de strings), `num_friends` (inteiro). |
 | X (antigo Twitter) | Hash contendo qualquer um dos seguintes itens: id (número inteiro), `screen_name` (string, identificador do X (antigo Twitter)), `followers_count` (número inteiro), `friends_count` (número inteiro), `statuses_count`(número inteiro). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Todas as atribuições adicionadas na configuração serão enviadas toda vez que o evento for enviado ao Braze, independentemente de o valor do atributo ter sido alterado. Ao configurar os dados de usuários, informe-se sobre como isso afetará o consumo de pontos de dados.
+Todas as atribuições adicionadas na configuração serão enviadas toda vez que o evento for enviado ao Braze, independentemente de o valor do atributo ter sido alterado. Ao configurar os dados de usuários, certifique-se de saber como isso afetará o uso dos pontos de dados.
 {% endalert %}
 
 {% endtab %}

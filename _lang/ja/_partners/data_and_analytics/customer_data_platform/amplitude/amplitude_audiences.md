@@ -10,7 +10,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude
+# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Amplitude
 
 > [Amplitude](https://amplitude.com/) は製品分析およびビジネスインテリジェンスプラットフォームです。
 
@@ -38,7 +38,7 @@ AmplitudeとBrazeは2つの異なる統合方法を提供している。次の�
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Braze REST API キー | すべての権限を持つBraze REST APIキー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze REST エンドポイント | [REST エンドポイント URL][1]。エンドポイントは、インスタンスのBraze URLに依存する。 |
+| Braze RESTエンドポイント | [あなたのRESTエンドポイントURL][1]。エンドポイントはインスタンスの Braze URL に応じて異なります。 |
 | Brazeアプリの識別子 | Amplitudeイベントを受け取るアプリの識別子。これは、**Braze ダッシュボード > [開発者コンソール] > [設定]** で確認できます。 |
 
 ### 振幅の設定
@@ -74,7 +74,7 @@ Amplitude Audiences で、**[Syncs] > [Create Sync]** を選択します。
 次に、ユーザーのプロパティ、計算、コホート、または推薦を同期することを選択する。 
 
 {% tabs %}
-{% tab ユーザー・プロパティを同期する %}
+{% tab Syncing user property %}
 
 [**User Propertを**] を選択し、同期するユーザープロパティを選択します。
 
@@ -86,10 +86,10 @@ Amplitude Audiences で、**[Syncs] > [Create Sync]** を選択します。
 
 最後に、同期の頻度を決める。
 
-![ケイデンスを One-time Sync または Scheduled Sync として定義する。]({% image_buster /assets/img/amplitude9.png %})
+![ケイデンスを1回限りの同期かスケジュールされた同期かを定義する。]({% image_buster /assets/img/amplitude9.png %})
 
 {% endtab %}
-{% tab 同期計算 %}
+{% tab Syncing computation %}
 
 [**Computetion**] を選択し、同期する計算を選択します。
 
@@ -101,7 +101,7 @@ Amplitude Audiences で、**[Syncs] > [Create Sync]** を選択します。
 
 最後に、同期の頻度を決める。
 
-![ケイデンスを One-time Sync または Scheduled Sync として定義する。]({% image_buster /assets/img/amplitude9.png %})
+![ケイデンスを1回限りの同期かスケジュールされた同期かを定義する。]({% image_buster /assets/img/amplitude9.png %})
 
 {% endtab %}
 {% endtabs %}

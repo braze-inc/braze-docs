@@ -27,7 +27,7 @@ Snowflake の[セキュアデータシェアリング](https://docs.snowflake.co
 | 前提条件       | 説明                                                                                                                                                                                     |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Snowflake アカウント | 管理者レベルの権限を持つSnowflakeアカウントが必要だ。                                                                                                                                      |
-| LiveRamp アカウント  | LiveRamp アカウントチームまたは [snowflake@liveramp.com](mailto:snowflake@liveramp.com) に連絡して、Snowflake 内で必要な LiveRamp アプリケーションについて話し合います。                              |
+| LiveRamp アカウント  | Snowflake内で必要なLiveRampアプリケーションについては、LiveRampアカウントチームまたは[snowflake@liveramp.com](mailto:snowflake@liveramp.com)までお問い合わせください。                              |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## 統合をセットアップする
@@ -88,8 +88,8 @@ LiveRamp のアプリケーション内でクライアントまたはブラン�
 
 最後に、ID解決操作を実行する。完全なウォークスルーは、[LiveRampを参照のこと：ID 解決操作を実行します](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#perform-the-identity-resolution-operation)。
 
-{% tabs ローカル %}
-{% tab 入力例 %}
+{% tabs local %}
+{% tab example input %}
 ```sql
 call lr_resolution_and_transcoding(
 $customer_input_table_name,
@@ -101,7 +101,7 @@ $customer_metrics_table_name
 ```
 {% endtab %}
 
-{% tab 出力例 %}
+{% tab example output %}
 ```sql
 call check_for_output(
 $output_table_name
@@ -112,12 +112,12 @@ $output_table_name
 
 ### 次のステップ
 
-データが RampID の専用エンコードに仮名化されたので、RampID ベースのテーブルを LiveRamp のマネージドアクティベーションアプリケーションと共有して、主要な広告プラットフォームパートナーに対して効率的なフルフィルメントを実現することができます。アクティベーションアプリケーションには、追加のセグメンテーションと、ダウンストリーム宛先パートナーを選択/設定するための、ビジネスユーザーにとって使いやすいインターフェイスが含まれています。このアプリケーションの詳細については、LiveRamp アカウントチームまたは [snowflake@liveramp.com](mailto:snowflake@liveramp.com) までお問い合わせください。
+データが RampID の専用エンコードに仮名化されたので、RampID ベースのテーブルを LiveRamp のマネージドアクティベーションアプリケーションと共有して、主要な広告プラットフォームパートナーに対して効率的なフルフィルメントを実現することができます。アクティベーションアプリケーションには、追加のセグメンテーションと、ダウンストリーム宛先パートナーを選択/設定するための、ビジネスユーザーにとって使いやすいインターフェイスが含まれています。アプリケーションの詳細については、LiveRampのアカウントチームまたは[Snowflake@liveramp.com](mailto:snowflake@liveramp.com) に問い合わせること。
 
 ## トラブルシューティング
 
 {% alert note %}
-より具体的な問題や質問がある場合は、[martech@liveramp.com](mailto:martech@liveramp.com) まで連絡を。
+より具体的な問題や質問がある場合は、[マーテク@liveramp.com](mailto:martech@liveramp.com) まで連絡を。
 {% endalert %}
 
 ### Snowflake のリージョン
@@ -128,7 +128,7 @@ $output_table_name
   - aws-us-west-2：FAA28932
   - azure-east-us-2：BL60425
 
-### プライバシーと列値
+### プライバシー& 列の値
 
 このプロセスでは、一意な値があるかどうか、行ごとにすべての列値の組み合わせを評価する。特定のカラム値の組み合わせが3回以下しか出現しない場合、それらのカラム値を含む行はマッチせず、出力テーブルには返されない。同様に、プライバシーを確保するために、LiveRamp サービスは列値の組み合わせの一意性を評価します。これにより、稀な組み合わせが原因でファイルの行の5 % 以上が照合不可能になった場合にはジョブが失敗するようになります。
 

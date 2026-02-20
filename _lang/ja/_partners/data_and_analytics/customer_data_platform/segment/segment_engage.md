@@ -34,7 +34,7 @@ BrazeとSegmentの統合により、Segmentに組み込まれたオーディエ�
 1. Segment で、Engage の [**Audiences**] タブに移動し、[**New**] をクリックします。
 2. オーディエンスを作成します。ページ上部の稲妻は、オーディエンスがリアルタイムで更新されているかどうかを示します。
 3. 次に、宛先として Braze を選択します。
-4. [**Review & Create**] をクリックしてオーディエンスをプレビューします。デフォルトでは、Segment は計算済み特性とオーディエンスの現在の値を設定するため、すべての履歴データをクエリします。このデータを省略するには、[**Historical Backfill**] をオフにします。
+4. **Review& Createを**クリックして、オーディエンスをプレビューする。デフォルトでは、Segment は計算済み特性とオーディエンスの現在の値を設定するため、すべての履歴データをクエリします。このデータを省略するには、[**Historical Backfill**] をオフにします。
 
 ### ステップ2:コホートデータインポートキーをキャプチャする
 
@@ -57,7 +57,7 @@ Braze で [**セグメント**] に移動し、新しいセグメントを作成
 1. Segmentで、[**Engage**] の [**Computed Traits**] タブまたは [**Audiences**] タブに移動し、[**New**] をクリックします。
 2. 計算済み特性またはオーディエンスを作成します。ページの上隅にある稲妻は、計算がリアルタイムで更新されているかどうかを示す。
 3. 次に、宛先として **Braze** を選択します。 
-4. [**Review & Create**] をクリックしてオーディエンスをプレビューします。デフォルトでは、Segment は計算済み特性とオーディエンスの現在の値を設定するため、すべての履歴データをクエリします。このデータを省略するには、[**Historical Backfill**] をオフにします。
+4. **Review& Createを**クリックして、オーディエンスをプレビューする。デフォルトでは、Segment は計算済み特性とオーディエンスの現在の値を設定するため、すべての履歴データをクエリします。このデータを省略するには、[**Historical Backfill**] をオフにします。
 5. 計算された特性または視聴者設定で、Brazeへのデータ送信方法に基づいて接続設定を調整する。
 
 #### 計算された特徴とオーディエンス
@@ -77,7 +77,7 @@ Braze でカスタム属性を作成するために、計算済み特性とオ�
 
 | 計算済み特性 | オーディエンス |
 | -------------- | --------- |
-| ![ユーザープロファイル内のカスタム属性セクションに、「last_product_viewed_item」 が「Sweater」としてリストされている。]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![ユーザープロファイル内のカスタム属性セクションに、「dormant_shopper」が「tru」としてリストされている。]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
+| ![ユーザープロファイル内のカスタム属性セクションには、"last_product_viewed_item" 「Sweater」と記載されている。]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![ユーザープロファイル内のカスタム属性セクションには、"dormant_shopper" "true "と記載されている。]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
 
 {% endtab %}
 {% tab Track %}
@@ -88,7 +88,7 @@ Braze でカスタムイベントを作成するために、計算済み特性�
 
 | 計算済み特性 | オーディエンス |
 | -------------- | --------- |
-| ![ユーザープロファイル内のカスタムイベントセクションに、「Trait Computed」「1」回、「Last time」として「20 hours ago」が表示されている。]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![ユーザープロファイル内のカスタム属性セクションに、「Audience Entered」、「1」回、Last time」として「March 9 at 1:45 am」が表示されている。]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
+| ![ユーザープロファイルのカスタムイベントセクションには、"Trait Computed "が "1 "回表示され、最終時刻は "20時間前 "となっている。]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![ユーザープロファイル内のカスタム属性セクションには、「オーディエンスが入力した」「1」の時間が表示され、最後の時間は「3月9日午前1時45分」となっている。]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
 
 {% endtab %}
 {% endtabs %}

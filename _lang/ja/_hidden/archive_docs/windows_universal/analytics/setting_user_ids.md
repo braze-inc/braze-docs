@@ -1,13 +1,13 @@
 ---
-nav_title: ユーザー ID の設定
-article_title: Windows UniversalのユーザーIDを設定する
+nav_title: ユーザーIDを設定する
+article_title: WindowsユニバーサルのユーザーIDを設定する
 platform: Windows Universal
 page_order: 1
 description: "このリファレンス記事では、WindowsユニバーサルプラットフォームでユーザーIDを設定する方法について説明する。"
 hidden: true
 ---
 
-# ユーザー ID の設定
+# ユーザーIDを設定する
 {% multi_lang_include archive/windows_deprecation.md %}
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
@@ -32,6 +32,3 @@ Appboy.SharedInstance.ChangeUser(YOUR_USER_ID_STRING);
 
 {% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android 開発者のドキュメント - ローカライゼーション"

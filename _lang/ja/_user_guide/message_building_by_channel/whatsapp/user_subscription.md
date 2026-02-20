@@ -5,7 +5,6 @@ page_order: 1
 description: "この記事では、WhatsAppのサブスクリプショングループの概要、提供されるサブスクリプションの状態、サブスクリプショングループの設定方法について説明する。"
 page_type: reference
 alias: /whatsapp_subscription_groups/
-alias: /whatsapp_subscription_groups/
 channel:
   - WhatsApp
  
@@ -49,8 +48,7 @@ WhatsApp のユーザーには、`subscribed` と `unsubscribed` の 2 つの購
 
 - 次の例のように、REST API を介して購読ステータスを更新する [Braze-to-Braze Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) を作成します。
 
-Webhook作成画面にPOSTメソッドでメッセージを送る。]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
-Webhook作成画面にPOSTメソッドでメッセージを送る。]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
+![Webhook コンポーザーに POST メソッドでメッセージを作成する。]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
 
 競合を回避するため、Webhook の後のフォローアップメッセージングは、最初のキャンバスの結果 (ユーザーがキャンバスのバリエーションに入って、現在 WhatsApp の購読グループに属している、など) によってトリガーされる 2 番目のキャンバスに含める必要があります。
 

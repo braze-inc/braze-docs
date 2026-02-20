@@ -65,24 +65,20 @@ ID プロバイダーでの Braze の設定が完了すると、Braze アカウ�
 -----END CERTIFICATE-----
 ```
 
-\![トグルが選択された SAML SSO 設定。]({% image_buster /assets/img/samlsso.png %})
+![トグルが選択された SAML SSO 設定。]({% image_buster /assets/img/samlsso.png %})
 
-### ステップ 3: Braze へのサインイン
+### ステップ 3:Braze へのサインイン
 
 セキュリティ設定を保存してログアウトします。次に、ID プロバイダーにサインインし直します。
 
-\![SSOを有効にしたダッシュボードのログイン画面]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
+![SSOをイネーブルメントにしたダッシュボードのログイン画面]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
 ## RelayStateの設定
 
 1. Braze で [**設定**] > [**API と識別子**] に移動します。
 2. **API Keys**タブで、**Create API key**ボタンを選択する。
 3. **APIキー名**フィールドに、キーの名前を入力する。
-<<<<<<< HEAD
-4. [**権限**] の下にある [**SSO**] ドロップダウンを展開して [**sso.saml.login**] をオンにします。<br><br>![「権限」セクションで、sso.saml.login にチェックが入っている。]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
-=======
-4. [**権限**] の下にある [**SSO**] ドロップダウンを展開して [**sso.saml.login**] をオンにします。<br><br>\![「権限」セクションで、sso.saml.login にチェックが入っている。]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
->>>>>>> main
+4. [**権限**] の下にある [**SSO**] ドロップダウンを展開して [**sso.saml.login**] をオンにします。<br><br>![sso.saml.login "がチェックされた "権限 "セクション。]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
 5. [**API キーを作成**] を選択します。
 6. **API Keys**タブで、作成したAPIキーの横にある識別子をコピーする。
 7. RelayState API キーを IdP の RelayState に貼り付けます (IdPによっては「Relay State」または「Default Relay State」と表示されることもあります)。
@@ -95,11 +91,7 @@ SSO の利用を選択したメンバーは、以前とは異なり、パスワ�
 
 サインインに Google SSO または SAML SSOのいずれかのみを使用するように、組織のメンバーを制限できます。制限をオンにするには、［**セキュリティ設定**］ に移動し、［**Google SSO のみのログインを強制する**］、または ［**カスタム SAML SSO のみのログインを強制する**］ のいずれかを選択します。
 
-<<<<<<< HEAD
-![パスワードの長さは最低8文字、パスワードの再利用可能回数は3回とする。パスワードは180日後に失効し、ユーザーは1,440分間操作しないとログアウトする。]({% image_buster /assets/img/sso3.png %})
-=======
-\![パスワードの長さは最低8文字、パスワードの再利用可能回数は3回とする。パスワードは180日後に失効し、ユーザーは1,440分間操作しないとログアウトする。]({% image_buster /assets/img/sso3.png %})
->>>>>>> main
+![認証ルール」セクションの設定例。パスワードの長さは最低8文字、パスワードの再利用可能回数は3回とする。パスワードは180日後に失効し、ユーザーは1,440分間操作しないとログアウトする。]({% image_buster /assets/img/sso3.png %})
 
 制限をオンにすると、たとえ以前にパスワードでログインしていたとしても、会社の Braze ユーザーはパスワードを使用したログインができなくなります。
 
@@ -118,25 +110,17 @@ SAMLトレースを実行するには、SAMLトレーサが必要である。以
 
 ブラウザのナビゲーション・バーから SAML トレーサを選択する。「**一時停止**」が選択されていないことを確認します。一時停止を選択すると、SAML トレーサが SAML リクエストで送信された内容をキャプチャできなくなるためです。SAML トレーサを開くと、トレースに入力されるのがわかります。
 
-<<<<<<< HEAD
-![Google Chrome用のSAMLトレーサー。]({% image_buster /assets/img/saml_tracer_example.png %})
-=======
-\![Google Chrome用のSAMLトレーサー。]({% image_buster /assets/img/saml_tracer_example.png %})
->>>>>>> main
+![Google Chrome 用 SAML トレーサー。]({% image_buster /assets/img/saml_tracer_example.png %})
 
-### ステップ 2: SSOを使ってBrazeにサインインする
+### ステップ 2:SSOを使ってBrazeにサインインする
 
 Brazeのダッシュボードに行き、SSOを使ってサインインを試みる。エラーが発生した場合は、SAML トレーサを開いて再試行します。`https://dashboard-XX.braze.com/auth/saml/callback` のような URL の行があり、オレンジ色の SAML タグがあれば、SAML トレースは正常に収集されている。
 
-### ステップ 3: エクスポートしてBrazeに送る
+### ステップ 3:エクスポートしてBrazeに送る
 
 [**エクスポート**] を選択します。**Select Cookie-filter profile "**で "**None "**を選択する。次に [**エクスポート**] を選択します。これでJSONファイルが生成され、Brazeサポートに送信してさらにトラブルシューティングを行うことができる。
 
-<<<<<<< HEAD
-!["SAML-trace環境設定のエクスポート "メニューで "なし "を選択する。]({% image_buster /assets/img/export_saml_trace_preferences.png %})
-=======
-\!["SAML-trace環境設定のエクスポート "メニューで "なし "を選択する。]({% image_buster /assets/img/export_saml_trace_preferences.png %})
->>>>>>> main
+!["Export SAML-trace preferences "メニューで、オプション "None "を選択する。]({% image_buster /assets/img/export_saml_trace_preferences.png %})
 
 ## トラブルシューティング
 

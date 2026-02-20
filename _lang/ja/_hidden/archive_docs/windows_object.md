@@ -28,7 +28,7 @@ hidden: true
 
 ## Windowsユニバーサル・プッシュ・オブジェクト
 
-`push_type` のオプションの詳細については、Windows Universal [トーストテンプレートカタログ][32] を参照してください。
+`push_type` のオプションの詳細については、Windows Universal [トーストテンプレートカタログ](https://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx) を参照してください。
 
 ```json
 {
@@ -42,8 +42,5 @@ hidden: true
 }
 ```
 
-[ディープリンク][38]の `extra_launch_string` パラメーターの使用に関する詳細は、[Windows Universal でのディープリンク][37]を参照してください。
+[ディープリンク]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking)の `extra_launch_string` パラメーターの使用に関する詳細は、[Windows Universal でのディープリンク]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/push_notifications/integration/#step-4-deep-linking-from-push-into-your-app)を参照してください。
 
-[32]: https://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx
-[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/push_notifications/integration/#step-4-deep-linking-from-push-into-your-app
-[38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking

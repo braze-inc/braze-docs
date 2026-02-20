@@ -31,7 +31,7 @@ La integración de Braze y ViralSweep le permite celebrar sorteos y concursos en
 
 ### Paso 1 : Conecta con Braze dentro de ViralSweep
 
-En ViralSweep, vaya a **Integraciones > Correo electrónico y SMS > Añadir servicio** y seleccione **Braze**. 
+En ViralSweep, ve a **Integraciones > Correo electrónico & SMS > Añadir servicio** y selecciona **Braze**. 
 
 ![]({% image_buster /assets/img/viralsweep/connect.gif %})
 

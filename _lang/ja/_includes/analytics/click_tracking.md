@@ -6,7 +6,7 @@ URL にUTM パラメータを追加するには、次の手順を実行します
 
 1. ベースURL から始めます。これは、追跡するページのURL です(`https://www.example.com` など)。
 2. ベースURL の後に疑問符(?) を追加します。
-3. アンパサンド(&) で区切られた各UTM パラメータを追加します。
+3. UTMパラメータをアンパサンドで区切って追加する。 (&).
 
 例は`https://www.example.com?utm_source=newsletter&utm_medium=sms`です。
 

@@ -162,7 +162,7 @@ Ces vues fournissent des mises à jour en temps réel sur les attributs du profi
 * Utile pour les analyses en temps réel et les scénarios nécessitant des données récentes.
 * **Considérations relatives à la performance :**
     * Les requêtes sur les utilisateurs individuels sont plus rapides (moins d'une minute avec un grand entrepôt).
-    * Les requêtes sans filtre USER_ID nécessitent une agrégation pour tous les utilisateurs, ce qui allonge considérablement le temps d'exécution.
+    * Les requêtes sans filtres USER_ID nécessitent une agrégation pour tous les utilisateurs, ce qui allonge considérablement le temps d'exécution.
     * Les requêtes sur un grand ensemble de données (plus de 100 millions d'utilisateurs, par exemple) peuvent prendre plusieurs minutes.
 
 ## Historique des modifications

@@ -34,7 +34,7 @@ We apply a rate limit of 1,000 requests per minute to this endpoint, as document
 {% elsif include.endpoint == "users track" %}
 Starting on October 28th, 2024, we apply a base speed limit of 3,000 requests per three seconds to this endpoint for all customers. Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means you can update up to 225 users in a single call. In addition, you can update a single user profile with multiple objects.
 
-Different limits apply to customers who have purchased **Monthly Active Users - CY 24-25**. For details on these limits, see [Monthly Active Users - CY 24-25 limits]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
+Different limits apply to customers who have purchased **Monthly Active Users - CY 24-25**. For details on these limits, see [Monthly Active Users - CY 24-25 limits]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau).
 
 See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and contact your customer success manager if you need your limit increased.
 
@@ -102,12 +102,17 @@ We apply a shared rate limit of 1,000 requests per hour to this endpoint. This r
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-When specifying a segment or Connected Audience in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour shared between `/messages/send`, `/campaigns/trigger/send`, and `/canvas/trigger/send`, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+When using Connected Audience filters in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour shared between `/messages/send`, `/campaigns/trigger/send`, and `/canvas/trigger/send`, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+Braze endpoints support batching API requests. A single request to the messaging endpoints can reach any of the following:
+
+- Up to 50 specific `external_ids`, each with individual message parameters
+- An audience segment of any size, defined in the request as a Connected Audience object
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-Braze Transactional Emails are not subject to a rate limit. Depending on your chosen package, a set number of transactional emails is covered per hour by SLA. Requests that exceed that rate will still send, but are not covered by SLA. 99.9% of emails will send in less than one minute.
+The `/transactional/v1/campaigns/{campaign_id}/send` endpoint is a paid-for endpoint in units per hour (for example, 50,000 per hour depending on your package). There is no separate per-endpoint rate limit: you can send beyond your allotted volume, but only the allotted volume is covered by SLA. Requests to this endpoint count toward your [overall external API rate limit]({{site.baseurl}}/api/api_limits/). If you exceed that limit (for example, 250,000 requests per hour across all endpoints), Braze returns 429 and requests are throttled. The transactional volume count resets each hour, so after one hour, another allotment is available. Within the SLA-covered volume, 99.9% of emails will send in less than one minute.
 
 <!---/sends/id/create-->
 
@@ -204,4 +209,3 @@ This endpoint has a shared rate limit of 50 requests per minute between all asyn
 This endpoint has a rate limit of 50,000 requests per minute.
 
 {% endif %}
-

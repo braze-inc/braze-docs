@@ -52,4 +52,8 @@ valid_partner_list:
   url: /docs/partners/shopify/
 - name: Stripe
   url: /docs/partners/stripe/
+- name: 桶剣道
+  url: /docs/partners/okendo/
+- name: スウィム
+  url: /docs/partners/swym/
 ---

@@ -1,13 +1,13 @@
 ---
-nav_title: Creating and managing workspaces
-article_title: Creating and Managing Workspaces
+nav_title: Create and manage workspaces
+article_title: Create and Manage Workspaces
 page_order: 0
 page_type: reference
 description: "This article covers how to create, set up, and manage your workspaces."
 
 ---
 
-# Creating and managing workspaces
+# Create and manage workspaces
 
 > This article covers how to create, set up, and manage your workspaces. 
 

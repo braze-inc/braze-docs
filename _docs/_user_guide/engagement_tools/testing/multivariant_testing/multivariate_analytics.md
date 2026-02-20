@@ -91,7 +91,7 @@ These characteristics are:
 - **Frequency:** How often they have sessions
 - **Tenure:** How long they have been a user
 
-For example, the test may find that most users prefer Variant A, but users who had a session about 3–12 days ago, have between 1–12 days between sessions, and were created in the last 67–577 days tend to prefer Variant B. Therefore, users in that subpopulation received Variant B in the second send, while the rest received Variant A.
+For example, the test may find that most users prefer Variant A, but users who had a session about 3-12 days ago, have between 1-12 days between sessions, and were created in the last 67-577 days tend to prefer Variant B. Therefore, users in that subpopulation received Variant B in the second send, while the rest received Variant A.
 
 ![The User Characteristics table, which shows which users are predicted to prefer Variant A and Variant B based on the three buckets they fall in for recency, frequency, and tenure.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 

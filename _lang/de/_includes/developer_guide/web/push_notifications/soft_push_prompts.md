@@ -29,7 +29,7 @@ Suchen Sie in Ihrer Braze SDK-Integration nach Aufrufen von `automaticallyShowIn
 
 ### Schritt 3: Update-Integration
 
-Schließlich ersetzen Sie den entfernten Aufruf durch das folgende Snippet:
+Schließlich ersetzen Sie den entfernten Aufruf durch das folgende Snippet. Rufen Sie `subscribeToInAppMessage()` an, bevor Sie `openSession()` anrufen. Dadurch wird sichergestellt, dass Ihr In-App-Nachricht-Hörer rechtzeitig registriert wird, um die Push-Nachricht zu empfangen.
 
 ```javascript
 import * as braze from "@braze/web-sdk";

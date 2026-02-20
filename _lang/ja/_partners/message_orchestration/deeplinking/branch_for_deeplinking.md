@@ -12,7 +12,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="PwGKqfwV-Ss" align="right" %}
 
-> [Branch](https://branch.io/) はあらゆるデバイス、チャネル、プラットフォームでの獲得、エンゲージメント、測定を支援するモバイルリンクプラットフォームで、すべてのユーザータッチポイントの一元的なビューを提供しています。
+> [Branchは](https://branch.io/)、ユーザーのタッチポイントを全体的に把握することで、デバイス、チャネル、プラットフォームを横断して獲得、エンゲージメント、測定を行うためのモバイルリンクプラットフォームである。
 
 _この統合は Branch によって管理されます。_
 
@@ -29,7 +29,7 @@ Braze とBranch の統合により、ユーザージャーニー開始を適切�
 BrazeからiOSユニバーサルリンクをディープリンクとして送信できるようにする：
 
 1. [ユニバーサルリンク](https://help.branch.io/developers-hub/docs/ios-universal-links)の設定については、Branch のドキュメントの説明に従ってください。
-2. アプリ内から[ユニバーサルリンクをルーティング]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization)するには、Braze SDK 統合に [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate) メソッド [braze(_:shouldOpenURL:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5) を実装します。
+2. を実装する。 [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate)メソッド [braze(_:shouldOpenURL:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5)メソッドを実装し、アプリ内から[ユニバーサルリンクをルーティング]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization)する。
 
 ### 電子メールでのディープリンク
 

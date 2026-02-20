@@ -7,7 +7,7 @@ description: "Dieser Artikel gibt Ihnen einen Überblick über Nutzer und Segmen
 
 ---
 
-# Erste Schritte: Benutzer und Segmente
+# Beginnen Sie: Benutzer und Segmente
 
 Um personalisierte und gezielte Marketingkampagnen zu versenden, ist es wichtig, Ihre Nutzer zu verstehen und sie effektiv anzusprechen. Dieser Artikel gibt Ihnen einen Überblick über Nutzer und Segmente, ihre Bedeutung und wie Sie sie nutzen können, um Ihr Publikum anzusprechen.
 

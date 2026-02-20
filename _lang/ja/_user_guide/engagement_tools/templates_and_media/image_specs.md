@@ -15,9 +15,9 @@ tool:
 
 > 一般的に、小さくて高品質な画像ほど読み込みが速くなるため、希望する出力を達成するために可能な限り小さなアセットを使用することをお勧めします。特定のチャネルで画像を最大限に使用するには、この記事の詳細を参照すること。
 
-常にさまざまなデバイスで[メッセージをプレビューしてテストし]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)、画像とメッセージの最も重要な領域が期待どおりに表示されることを確認する必要があります。
+常にさまざまなデバイスで[メッセージをプレビューしてテストし]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/)、画像とメッセージの最も重要な領域が期待どおりに表示されることを確認する必要があります。
 
-{% alert tip %} 自信を持ってアセットを創造しましょう！当社のアプリ内メッセージ画像テンプレートとセーフゾーンオーバーレイは、あらゆるサイズのデバイスでうまく動作するように設計されている。[デザインテンプレートのダウンロード ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}). {% endalert %}
+{% alert tip %} 自信を持ってアセットを創造しましょう！アプリ内メッセージ "画像 テンプレート sとセーフゾーンオーバーレイは、すべてのサイズの機器でうまく動作するように設計されています。[Down 読み込む デザインテンプレート s ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %})。 {% endalert %}
 
 {% multi_lang_include image_specs.md variable_name='payload size' %}
 

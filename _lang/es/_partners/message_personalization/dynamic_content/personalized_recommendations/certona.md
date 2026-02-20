@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Certona
 
-> La plataforma de Certona aporta personalización a todo el ciclo de vida del cliente. Desde campañas de correo electrónico altamente individualizadas hasta recomendaciones de productos basadas en aprendizaje automático, Certona le garantiza que está aprovechando el poder de la personalización.
+> La plataforma de [Certona](https://www.certona.com/) impulsa la personalización a lo largo del ciclo de vida del cliente. Desde campañas de correo electrónico altamente individualizadas hasta recomendaciones de productos basadas en aprendizaje automático, Certona le garantiza que está aprovechando el poder de la personalización.
 
 _Esta integración está mantenida por Certona._
 
 ## Sobre la integración
 
-La integración de Braze y Certona aprovecha las recomendaciones de productos de aprendizaje automático de Certona en las campañas Braze y Canvases a través de Connected Content.
+La integración de Braze y Certona utiliza las recomendaciones de productos de aprendizaje automático de Certona en campañas Braze y Canvases a través de contenido conectado.
 
 ## Requisitos previos
 
@@ -39,7 +39,7 @@ A continuación, define el contenido que deseas llamar, como texto o imágenes r
 
 {% endraw %}
 
-![Una imagen de una campaña push con Contenido Conectado relacionado con Certona incluido en el cuerpo del mensaje.]({% image_buster /assets/img/certona.png %})
+![Imagen de una campaña push con Contenido Conectado relacionado con Certona incluido en el cuerpo del mensaje.]({% image_buster /assets/img/certona.png %})
 
 Una vez que hayas puesto este mensaje en el cuerpo del compositor, previsualiza tu llamada a Contenido Conectado para asegurarte de que has mostrado la información correcta.
 

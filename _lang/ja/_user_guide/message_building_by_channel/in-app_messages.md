@@ -3,54 +3,19 @@ nav_title: "アプリ内メッセージ"
 article_title: アプリ内メッセージ
 page_order: 2
 alias: /in-app_messages/
-layout: dev_guide
-guide_top_header: "アプリ内メッセージ"
-guide_top_text: "アプリ内メッセージは、プッシュ通知でユーザーの一日を邪魔することなく、コンテンツを届けるのに役立つ。これらのメッセージは、ユーザーのアプリの外に配信されることはなく、ユーザーのホーム画面を邪魔することもないからだ。<br><br>カスタマイズされ調整されたアプリ内メッセージは、ユーザーエクスペリエンスを向上させ、オーディエンスがアプリから最大限の価値を得るのに役立ちます。様々なレイアウトやカスタマイズツールから選べるので、アプリ内メッセージはこれまで以上にユーザーを惹きつけます。これらは、コンテキストがあり、緊急性が低く、ユーザーがアプリ内でアクティブなときに配信される。アプリ内メッセージの例については、<a href='https://www.braze.com/customers'>顧客ストーリーを</a>ご覧いただきたい。"
 description: "このランディングページには、アプリ内メッセージに関するすべての情報がまとめられています。 ここには、アプリ内メッセージの作成方法、ドラッグ＆ドロップエディター、メッセージのカスタマイズ方法、レポートなどに関する記事があります。"
 channel:
   - in-app messages
 search_rank: 5
-guide_featured_title: "よく読まれている記事"
-guide_featured_list:
-- name: "ドラッグアンドドロップエディタ"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/
-  image: /assets/img/braze_icons/phone-02.svg
-- name: "従来のエディタ"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/
-  image: /assets/img/braze_icons/phone-02.svg
-- name: "クリエイティブディテール"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
-  image: /assets/img/braze_icons/brush-02.svg
-
-guide_menu_title: "More articles"
-guide_menu_list:
-- name: "テスト"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
-  image: /assets/img/braze_icons/beaker-02.svg
-- name: "レポート"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
-  image: /assets/img/braze_icons/bar-chart-01.svg
-- name: "ダークモード"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
-  image: /assets/img/braze_icons/phone-02.svg
-- name: "App Store評価プロンプト"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
-  image: /assets/img/braze_icons/star-01.svg
-- name: "シンプルな調査"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
-  image: /assets/img/braze_icons/bar-chart-07.svg
-- name: "メッセージのロケール"
-  link: /docs/locales_in_messages/
-  image: /assets/img/braze_icons/translate-01.svg
-- name: "ベストプラクティス"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
-  image: /assets/img/braze_icons/check-square-broken.svg
-- name: "FAQ"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-  image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} 想定されるユースケース
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} アプリ内メッセージ
+
+> アプリ内メッセージは、プッシュ通知でユーザーの一日を邪魔することなく、コンテンツを届けるのに役立つ。これらのメッセージは、ユーザーのアプリの外に配信されることはなく、ユーザーのホーム画面を邪魔することもないからだ。 
+
+カスタマイズされ調整されたアプリ内メッセージは、ユーザーエクスペリエンスを向上させ、オーディエンスがアプリから最大限の価値を得るのに役立ちます。様々なレイアウトやカスタマイズツールから選べるので、アプリ内メッセージはこれまで以上にユーザーを惹きつけます。これらは、コンテキストがあり、緊急性が低く、ユーザーがアプリ内でアクティブなときに配信される。アプリ内メッセージの例については、[顧客ストーリーを](https://www.braze.com/customers/)ご覧いただきたい。
+
+## ユースケース
 
 アプリ内メッセージは豊富なコンテンツを提供するので、このチャネルをさまざまなユースケースに活用できます。
 
@@ -79,45 +44,93 @@ guide_menu_list:
 
 スライドアップメッセージは通常、アプリ画面の上下に表示されます (メッセージの作成時に設定可能)。これらは、新しい利用規約、Cookie、および他の情報断片についてユーザーに警告するのに適しています。
 
-<<<<<<< HEAD
-![アプリ画面下部から表示されるアプリ内メッセージ。スライドアップにはアイコン画像と簡単なメッセージが含まれる。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
-=======
-\![アプリ画面下部から表示されるアプリ内メッセージ。スライドアップにはアイコン画像と簡単なメッセージが含まれる。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
->>>>>>> main
-
-<br>
+![アプリ画面下部から表示されるアプリ内メッセージのスライドアップ。スライドアップにはアイコン画像と簡単なメッセージが含まれる。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab Modal %}
 
-モーダルは、デバイスの画面の中央に表示され、アプリのバックグラウンドから目立つように画面オーバーレイが表示されます。これらは、ユーザーにセールやプレゼントを利用するようにそれとなく提案するのに最適です。
+モーダルは、デバイスの画面の中央に表示され、アプリのバックグラウンドから目立つように画面オーバーレイが表示されます。モーダルは、ユーザーにセールや特別オファーを活用するように大々的にお勧めする場合に、非常に優れています。
 
-<<<<<<< HEAD
-![アプリやWebサイトの中央にダイアログとして表示されるモーダルなアプリ内メッセージ。モーダルには、画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
-=======
-\![アプリやWebサイトの中央にダイアログとして表示されるモーダルなアプリ内メッセージ。モーダルには、画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
->>>>>>> main
-
-<br>
+![アプリやウェブサイトの中央にダイアログとして表示される、モーダルなアプリ内メッセージ。モーダルには、画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab Fullscreen %}
 
-フルスクリーン・メッセージは、デバイスの画面全体を取り上げるという、まさに期待通りのものです。このメッセージタイプは、必須アプリのアップデートのように、ユーザーの注意が本当に必要な場合に最適だ。
+フルスクリーン・メッセージは、デバイスの画面全体を取り上げるという、まさに期待通りのものです。このメッセージタイプは、必須アプリ 更新s のように、ユーザーのアテンションが本当に必要な場合に適しています。
 
-<<<<<<< HEAD
-![アプリ内メッセージがアプリ画面を占拠している。フルスクリーンのメッセージには、大きな画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
-=======
-\![アプリ内メッセージがアプリ画面を占拠している。フルスクリーンのメッセージには、大きな画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
->>>>>>> main
-
-<br>
+![アプリ内メッセージがフルスクリーンでアプリの画面を占領する。フルスクリーンのメッセージには、大きな画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% endtabs %}
 
-これらのデフォルトのメッセージテンプレートに加えて、カスタム HTML のアプリ内メッセージ、CSS を使用した Web モーダル、または Web のメールキャプチャフォームを使用して、メッセージングをさらにカスタマイズすることもできます。詳細については、[カスタマイズ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/)を参照してください。
+これらのデフォルトメッセージテンプレートに加えて、カスタムHTMLアプリ内メッセージ、CSSによるWebモーダル、またはWebメールキャプチャフォームを使用してメッセージングをさらにカスタマイズすることもできる。詳細については、[カスタマイズ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/)を参照してください。
+
+## テンプレート化されたアプリ内メッセージ
+
+アプリ内メッセージは、**表示前にキャンペーンの適格性を再評価が**選択された場合、またはメッセージ内に以下のLiquidタグが存在する場合、テンプレート化されたアプリ内メッセージとして配信される：
+
+- `canvas_entry_properties`
+- `connected_content`
+- 次のような SMS 変数: {% raw %}`{sms.${*}}`{% endraw %}
+- `catalog_items`
+- `catalog_selection_items`
+- `event_properties`
+
+つまり、セッション開始時に、デバイスはメッセージ全体ではなく、アプリ内メッセージのトリガーを受け取ることになる。ユーザーがアプリ内メッセージをトリガーすると、ユーザーのデバイスは実際のメッセージをフェッチするためにネットワークリクエストを行う。
+
+{% alert note %}
+デバイスがインターネットにアクセスできない場合、メッセージは配信されない。メッセージは、Liquid ロジックの解決に時間がかかりすぎると、配信されないかもしれない。
+{% endalert %}
+
+## 行動を中止する
+
+Brazeでは、ユーザーがメッセージを受け取る資格があるアクションをとったが、Liquidロジックがそのユーザーを不適格とマークしたため、メッセージを受け取らなかった場合に、アボートが発生する。以下に例を示します。
+
+1. サムはメールキャンペーンのトリガーとなるべきアクションを行う。
+2. メールの本文には、カスタム属性のスコアが50未満の場合、このメールを送信しないというLiquidロジックが含まれている。
+3. サムのカスタム属性スコアは20だ。
+4. Brazeは、サムがこのメールを受け取るべきでないことを認識し、メールは中断される。
+5. 中止イベントが記録される。
+
+しかし、アプリ内メッセージはプルチャンネルであるため、アプリの中断は少し異なる動作をする。
+
+### アプリ内メッセージの中止動作
+
+アプリ内メッセージは、セッション開始時にデバイスによって取り込まれ、デバイス上にキャッシュされるため、インターネット接続の品質に関係なく、メッセージを即座にユーザーに届けることができる。例えば、ユーザーがセッション内で5つのアプリ内メッセージを受け取った場合、セッション開始時に5つすべてを受け取ることになる。メッセージはローカルにキャッシュされ、定義されたトリガーイベント(セッションの開始、カスタムイベントをログに記録するボタンの顧客のクリック、その他)が発生したときに表示される。
+
+言い換えれば、アプリ内メッセージを中止すべきかどうかを決定するロジックは、トリガーが発生する**前に**発生する。これを示すために、メールの例のサムがプッシュ通知をサブスクライバーになっているとしよう。
+
+1. サムは携帯電話でBrazeを搭載したアプリを起動してセッションを開始する。
+2. ワークスペース内のアクティブキャンペーンのオーディエンス基準に基づけば、サムは5つの異なるキャンペーンの対象となり得る。5つすべてが携帯電話に取り込まれ、キャッシュされる。
+3. **サムは**これらのメッセージのトリガーとなるようなアクションは行っていないが、セッションでこれらのメッセージを受け取る可能性はある。
+4. アプリ内メッセージのうち2つのリキッドには、サムをメッセージ受信から除外するルールがある（スコアカスタム属性が高くないなど）。
+5. サムは除外される2つのアプリ内メッセージは送られないが、他の3つのメッセージは送られる。
+6. 中止イベントは記録されない。
+
+Brazeはサムの場合、アボートイベントのログを記録していない。サムはメッセージのトリガーとなるようなアクションを実行して**いない**ため、アボートの定義を満たしていないからだ。アプリ内メッセージの場合、Brazeがメッセージを見るべきでないと判断する前に、ユーザーが実際にトリガーを実行することはない。
+
+#### アプリ内メッセージの中止動作のテンプレート化
+
+[テンプレート化されたアプリ内メッセージは](#templated-in-app-messages)、トリガーイベントが発生したときにメッセージを表示すべきかどうかをSDKに再評価させる。これはアボートの動作が異なる。それを示すために、こんな例を考えてみよう：
+
+1. サムは携帯電話でBrazeを搭載したアプリを起動することで、Brazeのセッションを開始する。
+2. アクティブキャンペーンのオーディエンス基準では、サムはアプリ内メッセージのテンプレートが適用される可能性があるため、トリガー情報はメッセージペイロードなしでデバイスに送信される。
+3. サムはカスタムイベントを記録するボタンを選択し、アプリ内メッセージのトリガーとなる。
+4. サムのデバイスは、アプリ内メッセージをフェッチするためにネットワークリクエストを行う。
+5. メッセージのリキッドロジックはアボートにつながるので、Brazeはこれをアボートとし てメッセージングする。サムはこの評価の前にトリガーアクションを実行した。
+
+##### アプリ内メッセージのアボート動作を比較する
+
+この表は、サムが経験したアプリ内メッセージの流れを比較したものである：
+
+| アプリ内メッセージ | 行動を中止する |
+| --- | --- |
+| スタンダード | サムがメッセージをトリガーするようなアクションを行わなかったため、中断イベントは記録されなかった。<br><br>標準的なアプリ内メッセージでは、アボートの定義は "トリガーアクションを実行したにもかかわらずメッセージを見なかった "であるため、アボートのログは記録されない。アプリ内メッセージはトリガーアクションが発生する前にデバイスに配信されるため、トリガーロジックのためにアプリ内メッセージが省略されたと考えるのは意味がない。 |
+| テンプレート | Sam がトリガーアクションを実行し、アプリ内メッセージをトリガーしたが、Liquid のテンプレート化でアボートを受け取ったため、アボートイベントがログに記録された。<br><br>トリガーアクションが実行された後にリキッド評価が発生するため、アプリ内メッセージのテンプレートログがアボートする。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## その他のリソース
 
 独自のアプリ内メッセージキャンペーンを作成したり、アプリ内メッセージをマルチチャネルキャンペーンで使用したりする前に、「[アプリ内メッセージ準備ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/)」を確認することを強くお勧めします。このガイドでは、アプリ内メッセージを作成するときに考慮すべきターゲット設定、コンテンツ、およびコンバージョンに関する疑問について説明しています。
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}

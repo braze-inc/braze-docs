@@ -123,7 +123,7 @@ Si se te da un punto final personalizado preexistente:
 - A partir de la versión 3.0.2 del SDK iOS de Braze, puedes establecer un punto final personalizado utilizando el archivo `Info.plist`. Añade el diccionario `Appboy` a tu archivo Info.plist. Dentro del diccionario `Appboy`, añade la subentrada de cadena `Endpoint` y establece el valor a tu autoridad de URL de punto final personalizada (por ejemplo, `sdk.iad-01.braze.com`, no `https://sdk.iad-01.braze.com`).
 
 #### Configuración del punto final en tiempo de ejecución
-Si se le da un punto final personalizado preexistente:
+Si se te da un punto final personalizado preexistente:
 - A partir de la versión 3.17.0 del SDK iOS de Braze, puedes anular la configuración de tu punto final a través de `ABKEndpointKey` dentro del parámetro `appboyOptions` pasado a `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Establece el valor a tu autoridad de URL de punto final personalizada (por ejemplo, `sdk.iad-01.braze.com`, no `https://sdk.iad-01.braze.com`).
 
 {% alert note %}

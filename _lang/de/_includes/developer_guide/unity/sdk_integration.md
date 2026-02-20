@@ -39,7 +39,7 @@ Das Braze Unity-Paket steht auf der [Seite Braze Unity Releases](https://github.
   - Um `SDWebImage` automatisch zu importieren, müssen Sie das Kästchen neben `Import SDWebImage dependency` in der Unity-UI unter "Braze-Konfiguration" *aktivieren*.
 
 {% alert note %}
-Um zu sehen, ob Sie die [SDWebImage-Abhängigkeit](https://github.com/SDWebImage/SDWebImage) für Ihr iOS-Projekt benötigen, besuchen Sie die [Dokumentation zu iOS In-App-Nachrichten ]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/).
+Um zu sehen, ob Sie die [SDWebImage-Abhängigkeit](https://github.com/SDWebImage/SDWebImage) für Ihr iOS-Projekt benötigen, besuchen Sie die [iOS In-App-Nachricht Dokumentation]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/).
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -214,7 +214,7 @@ Starten Sie zunächst Unity und lassen Sie es im Hintergrund laufen. Führen Sie
 {% endtabs %}
 
 {% alert tip %}
-Wenn nach der Ausführung dieser Befehle Probleme auftreten, lesen Sie bitte [Unity: Befehlszeilenargumente](https://docs.unity3d.com/2017.2/Documentation/Manual/CommandLineArguments.html).
+Wenn Sie nach der Ausführung dieser Befehle Probleme haben, lesen Sie bitte [Unity: Befehlszeilenargumente](https://docs.unity3d.com/2017.2/Documentation/Manual/CommandLineArguments.html).
 {% endalert %}
 
 ### Schritt 3: Paket in Unity importieren

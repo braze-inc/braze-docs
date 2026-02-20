@@ -24,7 +24,7 @@ The following lists methods across various platforms that are used to log purcha
 - [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
-- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
+- [.NET MAUI (formerly Xamarin)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## Viewing purchase data
@@ -187,7 +187,7 @@ Refer to [purchase properties object]({{site.baseurl}}/api/objects_filters/purch
 
 Event property segmentation lets you target users based not only on custom events taken, but also on the properties associated with those events. This adds additional filtering options when segmenting purchase and custom events.
 
-![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
+![Segmentation filters for purchase event properties, displaying options to filter users based on specific purchase event property values, such as filtering for users who purchased a product with a certain property within a set timeframe.]({% image_buster /assets/img/purchase_event_property.png %}){: style="max-width:80%;margin-left:15px;"}
 
 These segmentation filters include:
 - Has done the custom event with property Y with value V X times in the last Y days

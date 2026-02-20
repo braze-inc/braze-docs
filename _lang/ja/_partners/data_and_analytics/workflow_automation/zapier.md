@@ -31,9 +31,9 @@ Zapierの用語を使えば、"ザップ "とはアプリやサービスをつ�
 
 WordPressの例を使って、Zapierプラットフォームで、WordPressの新しい投稿が追加されたときにトリガーされるようにzapを設定し、**Post Statusと** **Post Typeとして** **Publishedと** **Postsを**選択する。 
 
-![Zapierプラットフォームで、zap 内でトリガーとして「new comment」、「any webhook」、「new post」のいずれかを選択する。この例では「new post」が選択されている。] [5]
+![Zapierプラットフォームで、zap 内でトリガーとして「new comment」、「any webhook」、「new post」のいずれかを選択する。この例では、"new post "が選択されている。][5]
 
-![Zapier プラットフォームで、zap 内で目的の post status と post type を選択してトリガーを設定する。この例では「Publishedと「Posts」が選択されている。] [6]
+![Zapier プラットフォームで、zap 内で目的の post status と post type を選択してトリガーを設定する。この例では、"Published "と "Posts "が選択されている。］[6]
 
 ### ステップ2:アクションウェブフックを追加する
 
@@ -43,7 +43,7 @@ WordPressの例を使って、Zapierプラットフォームで、WordPressの�
 
 ![]({% image_buster /assets/img_archive/zapier3.png %})
 
-### ステップ 3: Braze POSTをセットアップする
+### ステップ 3:Braze POSTをセットアップする
 
 Webhook を設定するときに、次の設定を使用して Webhook URL に Braze REST エンドポイントを指定します。完了したら [**Publish**] を選択します。
 

@@ -10,20 +10,20 @@
 
 新しいクエリを作成するには、**Analytics**> **Query Builder**に移動し、**Create SQL Query**を選択します。
 
-!["Query Template"および"SQL Editor"&quot 内にあるオプション;Create SQL Query" dropdown.]({% image_buster /assets/img_archive/create_sql_query_button.png %}){: style="max-width:60%;"}
+!["Query Template"および"SQL Editor"オプションは"SQL Query"ドロップダウン内にあります。]({% image_buster /assets/img_archive/create_sql_query_button.png %}){: style="max-width:60%;"}
 
 インスピレーションが必要な場合、またはクエリーの作成に役立つ場合は、**クエリーテンプレート**を選択し、[事前作成テンプレート]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/)を選択します。空のクエリで開始するには、**SQL Editor** を選択します。
 
 レポートには、現在の日時からなる名前が自動的に付けられます。名前の上にマウスポインタを置き、<i class="fas fa-pencil" alt="Edit"></i> を選択して、SQL クエリに意味のある名前を付けます。
 
-![レポートの名前"Channel エンゲージメント (2025年5 月&quot);.]({% image_buster /assets/img_archive/report_name_example.png %}){: style="max-width:80%;"}
+![たとえば、レポートの名前"Channel エンゲージメント は2025年5 月" です。]({% image_buster /assets/img_archive/report_name_example.png %}){: style="max-width:80%;"}
 
 ### ステップ 2:クエリを作成する
 
 クエリを作成するときに、AI からヘルプを取得するか、独自に作成するかを選択できます。
 
 {% tabs local %}
-{% tab BrazeAIの使用 %}
+{% tab Using BrazeAI %}
 AI クエリビルダーは OpenAI を搭載した [GPT](https://openai.com/gpt-4) を活用して、クエリの SQL を提案します。AI クエリビルダーで SQL を生成するには、次の手順に従います。
 
 1. クエリビルダーでレポートを作成したら、[**AI クエリビルダー**] タブを選択します。
@@ -41,7 +41,7 @@ AI クエリビルダーは OpenAI を搭載した [GPT](https://openai.com/gpt-
 \##{% multi_lang_include brazeai/generative_ai/policy.md %}
 {% endtab %}
 
-{% tab 自分自身で %}
+{% tab On My Own %}
 [ Snowflake構文](https://docs.snowflake.com/en/sql-reference) を使用してSQL クエリーを記述します。クエリ可能なテーブルとカラムの全リストについては、[テーブルのリファレンス]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/)を参照してください。
 
 クエリービルダー内でテーブルの詳細を表示するには次の手順に従います。
@@ -100,7 +100,7 @@ LIMIT 100
 
 CSV レポートを読み込むするには、**エクスポート** を選択します。
 
-![テンプレート化されたクエリ「過去 30 日間のチャネルエンゲージメントと収益」の結果が表示されたクエリビルダー。]({% image_buster /assets/img_archive/query_builder.png %})
+![クエリービルダーは、テンプレートdクエリー&クォートの結果を表示します。過去30日間のチャネルエンゲージメントと収益;。]({% image_buster /assets/img_archive/query_builder.png %})
 
 {% alert important %}
 それぞれのレポートは、1 日に1 回のみ結果を生成できます。1 日に同じレポートを複数回実行すると、それぞれのレポートに同じ結果が表示されます。
@@ -128,6 +128,6 @@ Snowflake クレジットは機能間で共有されません。例えば、SQL 
 
 Braze の SQL エディターでレポートの作成、編集、保存を行う場合、クレジットは使用されません。クレジットは、毎月 1 日午前 12 時 (UTC) に 5 にリセットされます。[クエリビルダー] ページの上部で、月次クレジット使用量を監視できます。
 
-![現在の月に使用されたクレジットの量を示すクエリビルダー。]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%;"}
+![今月のクレジット使用量を表示するクエリビルダー。]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%;"}
 
 クレジット上限に達すると、クエリの実行はできませんが、SQL レポートの作成、編集、および保存はできます。クエリビルダーのクレジットをさらに購入する場合は、アカウントマネージャーにお問い合わせください。

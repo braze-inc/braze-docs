@@ -30,11 +30,11 @@ Braze は送信後14日間、送信分析を保存します。キャンペーン
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | -------- | --------- |------------ |
-| `campaign_id` | 必須 | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-| `send_id` | 必須 | 文字列 | [API 識別子の送信]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
+| `campaign_id` | 必須かどうか | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `send_id` | 必須かどうか | 文字列 | [API 識別子の送信]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `length` | 必須かどうか | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
 | `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_serie
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

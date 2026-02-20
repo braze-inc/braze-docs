@@ -1,7 +1,7 @@
 Sie können Canvas Eingangs-Eigenschaften und Event-Eigenschaften in Ihren Nutzer:innen verwenden.
 
 {% tabs local %}
-{% tab Canvas-Entry-Eigenschaften %}
+{% tab Canvas Entry Properties %}
 
 [Canvas-Entry-Eigenschaften]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) sind Eigenschaften für Canvase, die durch Aktionen oder die API getriggert werden. Beachten Sie, dass das Objekt `canvas_entry_properties` maximal 50 KB groß sein darf.
 
@@ -32,14 +32,14 @@ RetailApp kann auch spezielle Nachrichten für verschiedene Eigenschaften von `p
 ```
 {% endraw %}
 
-{% details Erweitern für Original Canvas Editor %}
+{% details Expand for original Canvas editor %}
 
 Sie können Canvase nicht mehr mit dem Original-Editor erstellen oder duplizieren. Dieser Abschnitt ist nur zum Referenzieren verfügbar. Bei den Canvase, die mit dem Original-Editor erstellt wurden, können die Eingangs-Eigenschaften von Canvase nur im ersten vollständigen Schritt eines Canvas referenziert werden.
 
 {% enddetails %}
 {% endtab %}
 
-{% tab Event-Eigenschaften %}
+{% tab Event Properties %}
 
 Event-Eigenschaften referenzieren auf die Eigenschaften, die Sie für angepasste Events und Käufe festlegen. Diese `event_properties` können in Kampagnen mit aktionsbasierter Lieferung und Canvases verwendet werden.
 
@@ -51,7 +51,7 @@ In Canvas können angepasste Event- und Kauf-Event-Eigenschaften in Liquid in je
 
 Im ersten Schritt der Nachricht, der einem Aktions-Pfad folgt, können Sie Event-Eigenschaften verwenden, die sich auf das in diesem Aktions-Pfad referenzierte Ereignis beziehen. Diese Event-Eigenschaften können jedoch nur verwendet werden, wenn der Nutzer:innen die Aktion tatsächlich durchgeführt hat (und nicht in die Gruppe Alle anderen einsortiert wurde). Zwischen diesem Aktionspfad und dem Nachrichtenschritt können Sie weitere Schritte einfügen (die selbst keine Aktionspfade oder Nachrichtenschritte sind).
 
-{% details Erweitern für Original Canvas Editor %}
+{% details Expand for original Canvas editor %}
 
 Sie können Canvase nicht mehr mit dem Original-Editor erstellen oder duplizieren. Dieser Abschnitt ist nur zum Referenzieren verfügbar. Im Original-Canvas-Editor können Event-Eigenschaften nicht in geplanten vollständigen Schritten verwendet werden. Sie können jedoch Event-Eigenschaften im ersten vollständigen Schritt eines aktionsbasierten Canvas verwenden, auch wenn der vollständige Schritt geplant ist.
 

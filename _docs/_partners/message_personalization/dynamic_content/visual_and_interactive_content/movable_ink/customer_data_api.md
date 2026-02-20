@@ -1,12 +1,12 @@
 ---
 nav_title: Connecting to the Customer Data API
-article_title: Connecting to the Movable Ink Customer Data API
+article_title: Connect to the Movable Ink Customer Data API
 description: "This reference article outlines how to connect to activate customer event data stored in Braze to generate personalized content within Movable Ink using the Customer Data API."
 page_type: partner
 search_tag: Partner
 ---
 
-# Connecting to the Movable Ink Customer Data API
+# Connect to the Movable Ink Customer Data API
 
 > Braze and Movable Ink’s Customer Data API integration allows marketers to activate customer event data stored in Braze to generate personalized content within Movable Ink.
 

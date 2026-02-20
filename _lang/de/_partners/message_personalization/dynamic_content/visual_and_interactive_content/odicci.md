@@ -73,7 +73,7 @@ Bevor Sie beginnen, benötigen Sie Folgendes:
 2. Ordnen Sie die Felder aus Ihrer Odicci-Erfahrung (e.g., `Email`, `Name`) den entsprechenden Feldern in Braze zu.
 3. Speichern Sie Ihre Konfiguration.
 
-   ![Konfiguration der Abbildung von Feldern]({% image_buster /assets/img/odicci/braze_field_mapping.png %})
+   ![Feld Abbildung Konfiguration]({% image_buster /assets/img/odicci/braze_field_mapping.png %})
 
 ### Schritt 5: Testen Sie die Integration
 

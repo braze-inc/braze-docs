@@ -9,10 +9,10 @@ search_tag: Partner
 
 # Future Anthem
 
-> Future Anthem's all-in-one product for the real money gaming industry, Amplifier AI, delivers content personalization, real-time experiences, and dynamic audiences. Amplifier AI works seamlessly across sports, casino, and lottery, allowing customers to enhance Braze player profiles with industry-specific player attributes, such as favorite game, favorite team, engagement score, next bet recommendation, expected next bet, and more.
+> 리얼 머니 게임 업계를 위한 [퓨처 앤섬의](https://www.futureanthem.com/) 올인원 제품인 Amplifier AI는 콘텐츠 개인화, 실시간 경험, 동적 오디언스를 제공합니다. Amplifier AI works seamlessly across sports, casino, and lottery, allowing customers to enhance Braze player profiles with industry-specific player attributes, such as favorite game, favorite team, engagement score, next bet recommendation, expected next bet, and more.
 
 {% alert important %}
-This feature is currently in Early Access. Please reach out to the Future Anthem Customer Success Team to get started.
+This feature is currently in Early Access. 시작하려면 Future Anthem 고객 성공 팀에 문의하세요.
 {% endalert %}
 
 ## Prerequisites
@@ -33,11 +33,11 @@ With this integration, you can:
 
 ## Integration
 
-The Future Anthem Customer Success team will help set up your integration. Reach out to your Customer Success contact and they'll help you identify the most relevant attributes for you to send to Braze.
+The Future Anthem Customer Success team will help set up your integration. 고객 성공 담당자에게 문의하면 가장 관련성이 높은 속성을 식별하여 Braze에 전송할 수 있도록 도와드릴 것입니다.
 
 |Example attributes in Future Anthem|Example attributes in Braze|
 |-----------------------------------|---------------------------|
-|![The attributes on the user's profile.]({% image_buster /assets/img/future_anthem/future_anthem_example_attributes.png %})|![The object attribute.]({% image_buster /assets/img/future_anthem/braze_example_attributes.png %})|
+|![사용자 프로필의 속성입니다.]({% image_buster /assets/img/future_anthem/future_anthem_example_attributes.png %})|![객체 속성입니다.]({% image_buster /assets/img/future_anthem/braze_example_attributes.png %})|
 
 ## Braze custom attributes
 

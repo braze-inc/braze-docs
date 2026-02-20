@@ -39,17 +39,17 @@ Ao analisar o impacto de uma determinada ação do usuário (como adicionar iten
 
 Por exemplo, digamos que você tenha um grupo em que todos os usuários que adicionaram itens a uma lista de desejos também fizeram uma compra. Como apenas uma pequena porcentagem de usuários adicionou itens a uma lista de desejos, esse app pode querer incentivar mais esse comportamento por meio de campanhas de marketing.
 
-![Exemplo de funil de segmento com os seguintes filtros: "Last used these apps less than 30 days ago", "Last Added Item to Waitlist less than 30 days ago" e "Last Made Purchase less than 30 days ago" para alcançar 4.302 usuários.]({% image_buster /assets/img_archive/Wish_List_2.png %})
+![Exemplo de funil de segmento com os seguintes filtros: "Usou o app pela última vez há menos de 30 dias", "Item adicionado à lista de espera há menos de 30 dias" e "Última compra feita há menos de 30 dias" para alcançar 4.302 usuários.]({% image_buster /assets/img_archive/Wish_List_2.png %})
 
 ### Compare os canais de envio de mensagens
 
 Crie um segmento de usuários ativos (ou usuários com as características desejadas) e compare suas interações com diferentes canais de engajamento, como envio de e-mail e notificações por push. Por exemplo, se mais usuários fiéis estiverem inscritos no push, talvez seja melhor dedicar mais tempo ao envio de campanhas de usuários ativos via push. No entanto, se descobrir que o LTV é maior para os assinantes de e-mail, convém solicitar que os usuários mais ativos assinem o e-mail.
 
-![Funil de segmento para exemplo de e-mail com os seguintes filtros: "Last Made Purchase less than 30 days ago", "Last used these apps less than 30 days ago", "Push Enabled is true" e "Email Subscription Status is Opted In" para alcançar 2.799 usuários.]({% image_buster /assets/img_archive/Wish_List_Email.png %})
+![Funil de segmento para exemplo de e-mail com os seguintes filtros: "Last Made Purchase less than 30 days ago", "Last used these apps less than 30 days ago", "Foreground Push Enabled is true" e "Email Subscription Status is Opted In" para alcançar 2.799 usuários.]({% image_buster /assets/img_archive/Wish_List_Email.png %})
 
 ### Aceitações push para iOS ou Android
 
-Esse caso de uso aproveita o filtro "Push Enabled for App" para direcionamento a usuários de iOS ou Android que aceitaram o push.
+Esse caso de uso aproveita o filtro "Foreground Push Enabled for App" para direcionar os usuários de iOS ou Android que aceitaram o push.
 
 ![]({% image_buster /assets/img/seg_filter_examples/ios.png %})
 
@@ -57,13 +57,13 @@ Esse caso de uso aproveita o filtro "Push Enabled for App" para direcionamento a
 
 ### Público totalmente capacitado para push
 
-Esse caso de uso aproveita o filtro "Push Enabled" para direcionar os usuários que aceitaram o push.
+Esse caso de uso aproveita o filtro "Foreground Push Enabled" para direcionar os usuários que aceitaram o push.
 
 ![]({% image_buster /assets/img/seg_filter_examples/both.png %})
 
 ### Grupo de controle global de público ativado por push
 
-Esse caso de uso aproveita o filtro "Push Enabled" e "Random Bucket #" para direcionar os usuários que fazem parte do grupo de controle global que aceitaram o push.
+Esse caso de uso aproveita o filtro "Foreground Push Enabled" e "Random Bucket #" para direcionar os usuários que fazem parte do grupo de controle global que aceitaram o push.
 
 ![]({% image_buster /assets/img/seg_filter_examples/global_control.png %})
 

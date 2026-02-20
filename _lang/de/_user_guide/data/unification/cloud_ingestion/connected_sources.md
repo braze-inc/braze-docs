@@ -98,7 +98,7 @@ Sie können wählen, ob Sie Zugriff auf alle Tabellen in einem Schema gewähren 
 
 Die Berechtigung `create table` ist erforderlich, damit Braze eine Tabelle mit den Abfrageergebnissen Ihrer CDI Segment-Erweiterung erstellen kann, bevor das Segment in Braze aktualisiert wird. Braze erstellt eine temporäre Tabelle pro Segment, die nur persistent ist, solange Braze das Segment aktualisiert.
 
-```json
+```sql
 CREATE ROLE BRAZE_INGESTION_ROLE;
 
 GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -116,7 +116,7 @@ GRANT SELECT ON TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC TO 
 
 #### Schritt 2.2: Richten Sie das Lager ein und geben Sie der Rolle Braze Zugriff
 
-```json
+```sql
 CREATE WAREHOUSE BRAZE_INGESTION_WAREHOUSE;
 
 GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
@@ -127,7 +127,7 @@ Das Lagerhaus muss die Option zur **automatischen Wiederaufnahme** aktiviert hab
 {% endalert %}
 
 #### Schritt 2.3: Einrichten der Nutzer:in
-```json
+```sql
 CREATE USER BRAZE_INGESTION_USER;
 
 GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
@@ -149,7 +149,7 @@ Je nach Konfiguration Ihres Snowflake-Kontos müssen Sie die folgenden IP-Adress
 {% tab Redshift %}
 #### Schritt 2.1: Nutzer:in anlegen und Berechtigungen erteilen 
 
-```json
+```sql
 CREATE USER braze_user PASSWORD '{password}';
 GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT CREATE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
@@ -208,7 +208,7 @@ Wenn Sie über Netzwerkrichtlinien verfügen, müssen Sie Braze Netzwerkzugriff 
 Damit Braze auf Databricks zugreifen kann, muss ein persönliches Token für den Zugriff erstellt werden.
 
 1. Wählen Sie in Ihrem Databricks Workspace Ihren Databricks-Benutzernamen in der oberen Leiste aus und wählen Sie dann **Benutzer:in** aus dem Dropdown-Menü.
-2. Vergewissern Sie sich, dass das Konto des Dienstes über die Rechte `CREATE TABLE` für das Schema verfügt, das für die verbundene Quelle verwendet wird. 
+2. Vergewissern Sie sich, dass das Konto des Dienstes über die Berechtigung `CREATE TABLE` für das Schema verfügt, das für die verbundene Quelle verwendet wird. 
 3. Wählen Sie auf der Registerkarte **Zugriffstoken** die Option **Neues Token generieren**.
 4. Geben Sie einen Kommentar ein, der Ihnen hilft, dieses Token zu identifizieren, z. B. „Braze-CDI“, und ändern Sie die Lebensdauer des Tokens auf „keine Lebensdauer“, indem Sie das Feld „Lebensdauer (Tage)“ leer lassen.
 5. Wählen Sie **Erzeugen**.
@@ -434,9 +434,9 @@ Fügen Sie den Public Key, den Sie im letzten Schritt notiert haben, zu Ihren Nu
 
 Wenn Sie die Schlüssel irgendwann wechseln möchten, können Sie einen neuen öffentlichen Schlüssel erstellen, indem Sie in der **Datenzugriffsverwaltung** von **Cloud Data Ingestion** die Option **Neuen Schlüssel generieren** für das jeweilige Konto wählen.
 
-![Data Access Management für Snowflake Zugangsdaten, mit einem Button zur Generierung eines neuen Schlüssels.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
+![Datenzugriffsverwaltung für Snowflake Zugangsdaten, mit einem Button zur Generierung eines neuen Schlüssels.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
 
-```json
+```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
 ```
 

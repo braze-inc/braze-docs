@@ -1,5 +1,5 @@
 ---
-nav_title: PA multisection avec images
+nav_title: Ms lp avec images
 layout: dev_guide
 
 page_order: 1.4

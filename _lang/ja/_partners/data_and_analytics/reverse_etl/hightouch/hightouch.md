@@ -39,7 +39,7 @@ Braze と Hightouch の統合により、データウェアハウスの最新の
 2. 利用可能な目的地のリストから**Brazeを**選択する。
 3. Braze REST エンドポイント (「https://rest」を除く) と Braze REST API キーを指定します。<br><br>![]({% image_buster /assets/img/hightouch/hightouch_braze_setup.png %})
 
-### ステップ2: オブジェクトとイベントの同期
+### ステップ 2:オブジェクトとイベントの同期
 
 Hightouch では、ユーザーオブジェクトとイベントの両方の同期がサポートされています。
 
@@ -49,7 +49,7 @@ Hightouch では、ユーザーオブジェクトとイベントの両方の同�
 | イベント | レコードをイベントとして宛先に同期します。これは多くの場合、トラックコールの形式です。 | イベントまたは購入の追跡 |
 
 {% alert note %}
-同期が Braze データポイントの消費に与える影響の詳細については、[Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption)を参照してください。
+同期がデータポイントの記録方法にどのように影響するかについては、[Hightouchを](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption)参照のこと。
 {% endalert %}
 
 #### Brazeオブジェクトを同期する

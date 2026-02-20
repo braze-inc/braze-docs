@@ -79,7 +79,7 @@ Update `external_source_id` for existing Punchh users. Punchh allows external id
 {% tab User sign-up API example %}
 This example allows you to send external identifiers with a user profile at sign-up time. This is done by sending `external_source` as "customer_id" and `external_source_id` as "111111111111111111" as a string data type.
 
-```json
+```bash
 curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'x-pch-digest: SIGNATURE' \
@@ -106,7 +106,7 @@ curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mo
 {% tab User update API example %}
 This example allows you to update external identifiers with a user profile. This is done by sending `external_source` as "customer_id" and `external_source_id` as "111111111111111111" as a string data type.
 
-```json
+```bash
 curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
@@ -168,7 +168,7 @@ The `user_id` key within the webhook maps to the Punchh user ID. This identifier
 
 4. After the webhook is saved, it can be used to sync users, as shown below. For example, 136 guests would be added to the Punch custom segment when this Braze webhook campaign is launched.<br><br>![An example of syncing users using the saved webhook due to Braze and Punchh integration.]({% image_buster /assets/img/punchh/punchh6.png %})
 
-For more information on how webhooks are used at Braze, check out [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+For more information on how webhooks are used at Braze, check out [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 
 ## Use case campaigns
 
@@ -208,7 +208,7 @@ Events required:
 - Reward event
 - Guest event
 Considerations:
-- Execution delay, recommend that the guest add a 5–10-minute delay
+- Execution delay, recommend that the guest add a 5-10-minute delay
 
 ![A user segment is configured in punch, and guests sign up for a loyalty program. After this, the guest event, if triggered, and the Braze messaging campaign is triggered. Next, the Punchh sign-up gifting campaign is triggered after 10 minutes, triggering the reward event and optional follow-up message.]({% image_buster /assets/img/punchh/usecase3.png %})
 {% endtab %}

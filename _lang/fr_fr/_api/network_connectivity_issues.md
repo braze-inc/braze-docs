@@ -1,5 +1,5 @@
 ---
-nav_title: Problèmes de connectivité réseau d’API
+nav_title: Problèmes de connectivité réseau de l’API
 article_title: Problèmes de connectivité réseau d’API
 page_order: 4
 description: "Cet article de référence aborde les problèmes de connectivité d’API et comment les résoudre."
@@ -15,7 +15,7 @@ Les endpoints de l'API de Braze utilisent un réseau de diffusion de contenu qui
 
 Nous avons remarqué qu'une poignée de pare-feu tentent de modifier ou de sécuriser le trafic HTTPS/TLS, ce qui interfère avec les connexions aux points d'extrémité de l'API de Braze. Si vos serveurs se trouvent derrière un quelconque pare-feu physique, désactivez toute accélération ou modification HTTPS/TLS effectuée par le pare-feu ou le routeur. En outre, vous pouvez autoriser le trafic sortant vers nos fournisseurs de réseau de diffusion de contenu (Fastly.com) pour voir si cela résout le problème.
 
-Parfois, les configurations d'iptables qui filtrent les paquets SYN/ACK/RST peuvent également causer des problèmes. Si vous utilisez iptables sur votre hôte, vous pouvez également autoriser le trafic sortant vers nos fournisseurs de réseau de diffusion de contenu (Fastly.com) pour voir si cela résout le problème.
+Occasionnellement, les configurations iptables qui filtrent les paquets SYN/ACK/RST peuvent également causer des problèmes, donc si vous utilisez iptables sur votre hôte, vous pouvez également autoriser le trafic sortant vers nos fournisseurs de réseau de diffusion de contenu (Fastly.com) pour voir si cela résout le problème.
 
 Si vous rencontrez toujours des problèmes de réseau lors de la connexion aux endpoints de l'API Braze, fournissez un [test MTR](https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2) et les résultats de [Fastly Debug](http://www.fastly-debug.com/) pendant que vous rencontrez un problème et soumettez-les avec votre demande d'assistance. Notez que les résultats du test doivent être obtenus à partir d'un serveur qui rencontre des problèmes de connexion aux points d'extrémité de l'API Braze, et non à partir d'une machine de développement. Une capture du réseau (fichier tcpdump ou .pcap) sera également utile si elle peut être obtenue.
 

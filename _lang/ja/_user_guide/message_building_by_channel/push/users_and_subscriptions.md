@@ -75,7 +75,7 @@ AppDelegate.braze = braze
 
 ### プッシュ通知のサブスクリプションの状態の確認
 
-![John Doeのユーザープロファイルで、プッシュサブスクリプションの状態がSubscribedに設定されている。]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![John Doeのユーザープロファイルで、プッシュ購読の状態がSubscribedに設定されている。]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Braze でユーザーのプッシュ通知のサブスクリプションの状態を確認するには、3 つの方法があります。
 
@@ -92,9 +92,9 @@ iOS、Web、Android のすべてのプッシュ対応プラットフォームで
 
 |プラットフォーム|スクリーンショット|説明|
 |--|--|--|
-|iOS| ![iOSネイティブのプッシュ通知プロンプトで、"My App would like to send you notifications（私のアプリがあなたに通知を送りたい）"と尋ね、メッセージの下に "Don't Allow（許可しない）"と "Allow（許可する）"の2つのボタンがある。]({% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}){: style="max-width:410px;"} | ただし、[仮のプッシュ](#provisional-push)許可を申請する場合はこの限りではない。|
-|Android| ![Kitchenerieからのプッシュ通知を許可しますか」というAndroidのプッシュメッセージ。]({% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}){: style="max-width:410px;"} | このプッシュ許可は Android 13 で導入されました。Android 13 以前には、プッシュ通知の送信に許可は不要でした。|
-|Web| ![Webブラウザーのネイティブ・プッシュ・プロンプトが「Braze.com 通知を表示したい」と尋ね、メッセージの下に「ブロック」と「許可」の2つのボタンがある。]({% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}){: style="max-width:410px;"} | |
+|iOS| ![iOSネイティブのプッシュ通知プロンプトで、「My App would like to send you notifications（私のアプリがあなたに通知を送りたい）」と尋ね、メッセージの下に「Don't Allow（許可しない）」と「Allow（許可する）」の2つのボタンがある。]({% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}){: style="max-width:410px;"} | ただし、[仮のプッシュ](#provisional-push)許可を申請する場合はこの限りではない。|
+|Android| ![Kitchenerieからのプッシュ通知を許可しますか」というAndroidのプッシュメッセージで、メッセージの下に「許可する」と「許可しない」の2つのボタンがある。]({% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}){: style="max-width:410px;"} | このプッシュ許可は Android 13 で導入されました。Android 13 以前には、プッシュ通知の送信に許可は不要でした。|
+|Web| ![Webブラウザーのネイティブ・プッシュ・プロンプトは、"Braze.com wants to show notification "と尋ね、メッセージの下に "ブロック "と "許可 "の2つのボタンがある。]({% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}){: style="max-width:410px;"} | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Android
@@ -105,7 +105,7 @@ Android 13 以前には、プッシュ通知の送信に許可は不要でした
 
 ### iOS
 
-![システムの通知センターに通知が表示され、下部に "Yachtrアプリからの通知を受け取り続けますか？"というメッセージと、その下に "続ける "または "オフにする "の2つのボタンが表示される。]({% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}){: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
+![システムの通知センターに通知が表示され、下部に "Yachtrアプリからの通知を受信し続けますか？"というメッセージと、その下に "Keep "または "Turn Off "の2つのボタンが表示される。]({% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}){: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
 
 アプリから暫定プッシュまたは承認プッシュを要求できます。 
 
@@ -148,7 +148,7 @@ iOS や Android の場合、アプリからいつでも許可プロンプトを�
 
 アプリや Web サイトは、1 つのデバイスにつき 1 つのプッシュ通知サブスクリプションのみを持つことができます。そのため、ユーザーがデバイスやウェブサイトからログアウトし、新しいユーザーがログインすると、プッシュトークンは新しいユーザーに再割り当てされる。これは、[**エンゲージメント**] タブの [**連絡先の設定**] セクションにあるユーザープロファイルに反映されます。
 
-![ユーザープロファイルの\*\*エンゲージメント**タブにプッシュトークンの変更履歴が表示される。]({% image_buster /assets/img/push_token_changelog.png %})
+![ユーザープロファイルの [エンゲージメント] タブにあるプッシュトークンの変更ログ。プッシュトークンが他のユーザーに移動した時点と、そのトークンがリストされます。]({% image_buster /assets/img/push_token_changelog.png %})
 
 プッシュ・プロバイダ（APN/FCM）には、1つのデバイス上の複数のユーザーを区別する方法がないため、最後にログインしたユーザーにプッシュ・トークンを渡し、デバイス上のどのユーザーをプッシュのターゲットにするかを決定する。
 
@@ -164,7 +164,7 @@ iOS や Android の場合、アプリからいつでも許可プロンプトを�
 - Brazeがプッシュ通知を送信する機能（フォアグラウンド・プッシュ・トークン）
 - どのデバイスでもプッシュを受信したいというユーザーの全体的な希望（プッシュ購読状態）
 
-![ユーザーが "Push Registered for Marketing (iOS) "であることを示すダッシュボードのスクリーンショット。]({% image_buster /assets/img/push_enablement.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![ユーザーが "Push Registered for Marketing（iOS）"であることを示すダッシュボードのスクリーンショット。]({% image_buster /assets/img/push_enablement.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 ユーザーは、ワークスペース内のアプリについてアクティブなフォアグラウンドプッシュトークンを持っている場合に、「プッシュ有効」または「プッシュ登録済み」とみなされます。つまり、プッシュのイネーブルメントステータスはアプリに固有です。 
 
@@ -175,6 +175,18 @@ iOS や Android の場合、アプリからいつでも許可プロンプトを�
 ## その他のプラットフォーム固有のシナリオ
 
 {% tabs %}
+{% tab Web %}
+
+ユーザーがネイティブプッシュ許可のプロンプトを受け入れると、そのサブスクリプションステータスは `opted in` に変更されます。
+
+サブスクリプションを管理するには、ユーザーメソッド [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype)を使用して、自分のサイトに基本設定のページを作成します。その後、ダッシュボードでオプトアウトステータスを使用してユーザーをフィルター処理できます。
+
+ユーザーがブラウザ内で通知を無効にした場合、そのユーザーに次に送信されるプッシュ通知はバウンスされ、Brazeはそれに応じてユーザーのプッシュトークンを更新する。これは、プッシュ有効フィルター (`Background or Foreground Push Enabled`、`Foreground Push Enabled`、`Foreground Push Enabled for App`) の適格性を管理するために使用されます。ユーザープロファイルに設定されたサブスクリプションステータスは、ユーザーレベルの設定であり、プッシュがバウンスしても変化しません。
+
+{% alert note %}
+ウェブ・プラットフォームでは、バックグラウンド・プッシュやサイレント・プッシュはできない。
+{% endalert %}
+{% endtab %}
 {% tab Android %}
 
 フォアグラウンドプッシュを有効にしているユーザーが OS の設定でプッシュを無効にすると、次のセッションの開始時に次の処理が行われます。
@@ -213,18 +225,6 @@ Androidのプッシュ通知を傍受できるのは、アプリがフォアグ�
 iOSでは、プッシュ通知が表示される前にアプリがプッシュ通知を傍受することはできない。つまり、アプリ（とBraze）は通知を表示するか非表示にするかをコントロールできない。ユーザーは端末の設定でアプリのプッシュ通知を拒否することができるが、それはオペレーティングシステムによってコントロールされる。
 {% endalert %}
 
-{% endtab %}
-{% tab Web %}
-
-ユーザーがネイティブプッシュ許可のプロンプトを受け入れると、そのサブスクリプションステータスは `opted in` に変更されます。
-
-サブスクリプションを管理するには、ユーザーメソッド [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype)を使用して、自分のサイトに基本設定のページを作成します。その後、ダッシュボードでオプトアウトステータスを使用してユーザーをフィルター処理できます。
-
-ユーザーがブラウザ内で通知を無効にした場合、そのユーザーに次に送信されるプッシュ通知はバウンスされ、Brazeはそれに応じてユーザーのプッシュトークンを更新する。これは、プッシュ有効フィルター (`Background or Foreground Push Enabled`、`Foreground Push Enabled`、`Foreground Push Enabled for App`) の適格性を管理するために使用されます。ユーザープロファイルに設定されたサブスクリプションステータスは、ユーザーレベルの設定であり、プッシュがバウンスしても変化しません。
-
-{% alert note %}
-ウェブ・プラットフォームでは、バックグラウンド・プッシュやサイレント・プッシュはできない。
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 

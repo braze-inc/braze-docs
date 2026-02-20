@@ -40,9 +40,9 @@ Para sincronizar clientes com o Braze, você deve criar uma sincronização. Aqu
 
 1. Navegue até a guia **Syncs (Sincronizações** ) e selecione **New Sync (Nova sincronização**).<br><br> 
 2. No criador, selecione o modelo de dados de origem do seu data warehouse.<br><br>
-3. Configure o local para onde o modelo será sincronizado. Selecione **Braze** como destinos e o [tipo de objeto compatível](#supported-objects) a ser sincronizado.<br>![No prompt "Select a Destination", "Braze" é selecionado como a conexão e vários objetos são listados.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
+3. Configure o local para onde o modelo será sincronizado. Selecione **Braze** como destinos e o [tipo de objeto compatível](#supported-objects) a ser sincronizado.<br>![No prompt "Select a Destination" (Selecione um destino), "Braze" é selecionada como a conexão, e vários objetos são listados.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
 4. Selecione a regra de sincronização que deseja aplicar**(Atualizar ou Criar** é a opção mais comum, mas você pode escolher regras mais avançadas para lidar com a exclusão de dados, por exemplo).<br><br>
-5. Em seguida, para fins de correspondência de registros, escolha uma chave de sincronização para [mapear](#supported-objects) o objeto do Braze para um campo do modelo.<br>![No prompt "Select a Sync Key" (Selecionar uma chave de sincronização), a "External User ID" (ID de usuário externo) do Braze corresponde a "user_id" na origem.]({% image_buster /assets/img/census/census_1.png %}){: style="max-width:80%;"}<br><br>
+5. Em seguida, para fins de correspondência de registros, escolha uma chave de sincronização para [mapear](#supported-objects) o objeto do Braze para um campo do modelo.<br>![No prompt "Select a Sync Key" (Selecionar uma chave de sincronização), "External User ID" (ID de usuário externo) do Braze corresponde a "user_id" na origem.]({% image_buster /assets/img/census/census_1.png %}){: style="max-width:80%;"}<br><br>
 6. Por fim, mapeie os campos de dados do Census para os campos equivalentes do Braze.<br>![Mapeamento do Census]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
 7. Confirme os detalhes e crie a sincronização. 
 

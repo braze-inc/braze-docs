@@ -1,11 +1,11 @@
 ---
-nav_title: Personalizing landing pages
-article_title: Personalizing landing pages
+nav_title: Personalize landing pages
+article_title: Personalize landing pages
 description: "This article covers how to personalize Braze landing pages with the drag-and-drop editor."
 page_order: 4
 ---
 
-# Personalizing landing pages
+# Personalize landing pages
 
 > Use Liquid personalization in landing pages to dynamically tailor the content with user profile data. For example, you can personalize headlines based on different user attributes without managing multiple static landing pages.
 
@@ -40,6 +40,13 @@ To prevent your page from exceeding size limits or experiencing slow load times,
 
 - Doesn't continuously loops through or references large data sets.
 - Doesn't rely on extensive mathematical or conditional logic within the Liquid block.
+
+### Use Liquid for identified and anonymous users 
+
+Liquid can customize the landing page experience for both identified and anonymous visitors.
+
+- **Identified users:** Link to the landing page from a Braze message and include the [landing page Liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/#using-landing-page-liquid-tags). This associates the user with their Braze profile and personalizes the page experience.
+- **Anonymous visitors:** Use Liquid for contextual, non-profile-based content, such as a random number or a time-of-day greeting.
 
 ## Fallback pages
 

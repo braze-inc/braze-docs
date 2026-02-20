@@ -1,11 +1,11 @@
 ---
 nav_title: Images
-article_title: Generating images with BrazeAI
+article_title: Generate images with BrazeAI
 page_order: 10
 description: "Learn how to generate images for your media library using DALL·E 3, an AI system from OpenAI and a Braze third-party provider."
 ---
 
-# Generating images with BrazeAI<sup>TM</sup>
+# Generate images with BrazeAI<sup>TM</sup>
 
 > {% multi_lang_include brazeai/generative_ai/about_images.md %}
 

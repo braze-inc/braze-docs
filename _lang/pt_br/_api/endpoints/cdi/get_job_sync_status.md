@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Listar status de sincronização do trabalho"
+nav_title: "OBTER: Listar o status de sincronização do trabalho"
 article_title: "OBTER: Listar status de sincronização do trabalho"
 search_tag: Endpoint
 page_order: 1
@@ -108,6 +108,6 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | `400 Invalid integration ID` | Verifique se o site `integration_id` é válido. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para obter códigos de status adicionais e mensagens de erro associadas, consulte [Erros fatais e respostas]({{site.baseurl}}/api/errors/#fatal-errors).
+Para obter códigos de status adicionais e mensagens de erro associadas, consulte [Erros fatais & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

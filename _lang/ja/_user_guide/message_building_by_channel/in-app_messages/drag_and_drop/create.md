@@ -20,7 +20,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 既存のカスタムHTMLテンプレートやサードパーティが作成したテンプレートを使用したい場合は、ドラッグアンドドロップエディタで再作成する必要があります。
 
-アプリ内メッセージはキャンペーンを使用して送信するべきか[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)を使用するべきか分からない場合は？キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。メッセージを作成する場所を選択したら、次のステップに進み、ドラッグ＆ドロップでアプリ内メッセージを作成します。
+アプリ内メッセージはキャンペーンを使用して送信するべきか[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)を使用するべきか分からない場合は？キャンペーン s は単一のターゲットメッセージング キャンペーンに適していますが、キャンバスは複数ステップ ユーザーのジャーニーに適しています。メッセージを作成する場所を選択したら、次のステップに進み、ドラッグ＆ドロップでアプリ内メッセージを作成します。
 
 ## 前提条件
 
@@ -70,7 +70,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 [**メッセージを作成**] を選択して、ドラッグ＆ドロップエディターでアプリ内メッセージのデザインを開始します。
 
-![基本、バックグラウンド "画像、電話番号キャプチャ、または空白のテンプレートを選択できるBraze テンプレート s 欄。]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
+![Braze テンプレート s では、基本、バックグラウンド "画像、電話番号キャプチャ、または空白のテンプレートを選択できます。]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 ダッシュボードの**テンプレート**セクションからすべてのテンプレートにアクセスすることもできます。
 
@@ -188,8 +188,8 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 #### キャンペーンまたはキャンバス内で作成した後、アプリ内メッセージをテンプレートとして保存できますか?
 
-そうです。将来のキャンペーンやキャンバスステップで再利用したいアプリ内メッセージがある場合は、エディタを終了した後に利用可能な**テンプレートとして保存**ボタンを使用してカスタムテンプレートとして保存できます。テンプレートとして保存する前に、まずキャンペーンを開始するか、下書きとして保存する必要があります。
+はい。将来のキャンペーンまたはキャンバスステップで再利用するアプリ内メッセージの場合は、エディタを終了した後に利用できる**テンプレートとして保存**ボタンを使用して、カスタムテンプレートとして保存できます。テンプレートとして保存する前に、まずキャンペーンを開始するか、下書きとして保存する必要があります。
 
-![商品見学のためのアプリ内メッセージのプレビュー。]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![商品見学のアプリ内メッセージのプレビュー。]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 **テンプレート** > **アプリ内メッセージテンプレート** に移動して、アプリ内メッセージテンプレートを作成および保存することもできます。

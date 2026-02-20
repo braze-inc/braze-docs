@@ -2,13 +2,13 @@ En el panel de Braze, ve a **Configuración de Datos** > **Transformación de Da
 
 Selecciona **Crear transformación** para darle un nombre a tu transformación y, a continuación, elige tu experiencia de edición.
 
-![Detalles de la transformación con la opción de elegir "Usar una plantilla" o "Empezar de cero" para tu experiencia de edición.]({% image_buster /assets/img/data_transformation/data_transformation10.png %}){: style="max-width:80%;"}
+![Detalles de transformación con la opción de elegir "Utilizar una plantilla" o "Empezar de cero" para tu experiencia de edición.]({% image_buster /assets/img/data_transformation/data_transformation10.png %}){: style="max-width:80%;"}
 
 Selecciona **Utilizar una plantilla** para examinar una biblioteca de plantillas, incluidos los casos de uso de Transformación de datos. O bien, selecciona **Empezar de cero** para cargar una plantilla de código predeterminada. 
 
 Si empiezas de cero, elige un destino para tu transformación. Todavía puedes insertar una plantilla de código de la biblioteca de plantillas.
 
-{% details Más sobre destinos %}
+{% details More on destinations %}
 * **POST: Seguimiento de usuarios:** Transforma los webhooks de una plataforma de origen en actualizaciones del perfil de usuario, como atributos, eventos o compras.
 * **PUT: Actualiza varios elementos del catálogo:** Transforma los webhooks de una plataforma de origen en actualizaciones de elementos del catálogo.
 * **DELETE: Eliminar varios elementos del catálogo:** Transforma los webhooks de una plataforma de origen en eliminaciones de elementos del catálogo.

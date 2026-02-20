@@ -43,14 +43,14 @@ If you are participating in testing Meta Work Accounts in beta, ensure you disco
 1. In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Facebook**. 
 
 {: start="2"}
-2\. In the Facebook Audience Export module, select **Connect Facebook**. <br><br>![Facebook technology partners page in the Braze platform.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:70%;"}
+2\. Facebook 오디언스 내보내기 모듈에서 **Facebook 연결**을 클릭합니다. <br><br>![Braze 플랫폼의 Facebook 기술 파트너 페이지.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:70%;"}
 
 {: start="3"}
-3\. In the Facebook oAuth dialog window, authorize Braze to create Custom Audiences into your Facebook ad accounts. <br><br>![The first facebook dialog box prompting to "Connect as X", where X is your Facebook username.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![The second Facebook dialog box prompting for permission to manage ads for your ad accounts.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
+3\. Facebook oAuth 대화 상자 창에서 Facebook 광고 계정에 커스텀 오디언스를 생성할 수 있도록 Braze에 권한을 부여합니다. <br><br>!["X로 연결"이라는 메시지가 표시되는 첫 번째 페이스북 대화상자(여기서 X는 페이스북 사용자 아이디)가 나타납니다.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![광고 계정에 대한 광고 관리 권한을 묻는 두 번째 Facebook 대화 상자입니다.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
 
 {: start="4"}
-4\. After Braze is linked to your Facebook account, select which ad accounts you would like to sync within your Braze workspace. <br><br>![A list of available ad accounts you can connect to Facebook.]({% image_buster /assets/img/fb/afb_4.png %}){: style="max-width:70%;"}<br><br> After you connect, you will be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts. <br><br> ![An updated version of the Facebook technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/fb/afb_5.png %}){: style="max-width:70%;"}<br>
-<br> Your Facebook connection is applied at the Braze workspace level. If your Facebook administrator removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook audience steps will show errors, and Braze will not be able to sync users. 
+4\. Braze를 Facebook 계정에 연결한 후, Braze 워크스페이스 내에서 동기화할 광고 계정을 선택합니다. <br><br>![Facebook에 연결할 수 있는 사용 가능한 광고 계정 목록입니다.]({% image_buster /assets/img/fb/afb_4.png %}){: style="max-width:70%;"}<br><br> 연결하면 파트너 페이지로 돌아가서 어떤 계정이 연결되어 있는지 확인하고 기존 계정의 연결을 해제할 수 있습니다. <br><br> ![Facebook 기술 파트너 페이지의 업데이트된 버전으로 광고 계정이 성공적으로 연결되었음을 보여줍니다.]({% image_buster /assets/img/fb/afb_5.png %}){: style="max-width:70%;"}<br>
+<br> Facebook 연결은 Braze 워크스페이스 수준에서 적용됩니다. If your Facebook administrator removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook audience steps will show errors, and Braze will not be able to sync users. 
 
 {% alert important %}
 For customers that have previously undergone the Facebook app review process for [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) and [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), your system user token will still be valid for the Facebook audience step. You will not be able to edit or revoke the Facebook system user token through the Facebook partner page. Instead, you can connect your Facebook account to replace your Facebook system user token within your Braze workspace. 
@@ -63,7 +63,7 @@ For customers that have previously undergone the Facebook app review process for
 In Braze, Facebook audience export is accessible through the **Segments** page. 
 
 1. On the **Segments** page, select the segment you'd like to export.
-2. Select **User Data**, and then select **Export as Facebook Audience**. <br><br>![The "Segment Details" section of a segment with "User Data" selected to display a dropdown of options that include "Export as Facebook Audience".]({% image_buster /assets/img/fb/afb_6.png %})
+2. **사용자 데이터를** 선택한 다음 **Facebook 오디언스로 내보내기를** 선택합니다. <br><br>!['사용자 데이터'가 선택된 세그먼트의 '세그먼트 세부 정보' 섹션에 'Facebook 오디언스로 내보내기'를 포함한 옵션 드롭다운이 표시됩니다.]({% image_buster /assets/img/fb/afb_6.png %})
 
 {: start="3"}
 3\. If you haven't already activated Facebook within Braze, you will be prompted to go to the Facebook Technology Partners page in the dashboard. If you already activated Facebook through **Technology Partners** > **Facebook**, you will be able to select your Facebook ad account and the user fields to export. <br><br> There are three possible user fields you can export:
@@ -96,10 +96,28 @@ When building Facebook audiences, you may wish to include or exclude certain use
 
 - If you are collecting opt ins, opt outs, `Do Not Sell Or Share`, or other relevant custom attributes, you should include these within your Canvas entry criteria as a filter: 
 
-![A Canvas with an entry audience of "opted_in_marketing" equals "true".]({% image_buster /assets/img/tiktok/tiktok13.png %}){: style="max-width:75%;"}
+![엔트리 오디언스가 "opted_in_marketing" 인 캔버스는 "true"와 같습니다.]({% image_buster /assets/img/tiktok/tiktok13.png %}){: style="max-width:75%;"}
 
 
 #### Lookalike Audiences
 
 Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook [Lookalike Audiences](https://www.facebook.com/business/help/164749007013531?id=401668390442328). This feature looks at your chosen audience's demographics, interests, and other attributes and creates a new audience of people with similar attributes.
 
+## 문제 해결
+
+### 액세스 토큰 유효성 검사 중 오류 발생
+
+Facebook 내보내기를 사용할 때 `Error Validating Access Token` 오류가 표시됩니다:
+- 비밀번호를 변경하여 현재 세션이 무효화되었습니다.
+- 보안 예방 조치로 Facebook에서 로그아웃했습니다.
+
+이 오류를 해결하려면 다음 단계를 따르세요:
+1. Facebook에서 로그아웃했다가 다시 로그인합니다.
+2. Braze에서 Facebook 자격 증명을 삭제하고 저장합니다. 세그먼트 내보내기를 시도하여 자격 증명이 제거되었는지 확인합니다(내보내기 아이콘이 비활성화되어 있어야 함).
+3. Facebook 자격 증명을 다시 추가하고 저장합니다.
+4. 내보내기를 다시 시도하세요. 
+
+내보내기가 작동하지 않으면 다음을 수행하세요:
+1. 자격 증명을 다시 제거하고 저장합니다.
+2. 자격 증명을 다시 추가하고 저장합니다.
+3. **기술 파트너** 페이지에서 Facebook **파트너** 통합을 연결 해제했다가 다시 연결합니다.

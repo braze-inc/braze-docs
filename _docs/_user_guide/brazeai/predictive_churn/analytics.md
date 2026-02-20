@@ -12,7 +12,7 @@ page_order: 1.5
 
 ## About predictive churn analytics
 
-As soon as the prediction is done training and this page is populated, you can jump to simply using [filters]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
+As soon as the prediction is done training and this page is populated, you can jump to simply using [filters]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
 
 These are the components that make up predictive churn analytics:
 

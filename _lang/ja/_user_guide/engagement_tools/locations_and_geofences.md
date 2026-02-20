@@ -14,7 +14,7 @@ guide_featured_list:
   - name: 位置情報の追跡
     link: /docs/user_guide/engagement_tools/locations_and_geofences/location_tracking
     image: /assets/img/braze_icons/marker-pin-01.svg
-  - name: ジオフェンスの作成
+  - name: 地理空間の作成
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: モバイル統合

@@ -226,7 +226,7 @@ Finally, check **Allow edits and access to secrets from maintainers**. This will
 
 ### Step 4: Review your work
 
-Create your content by following the [Braze Docs Style Guide]({{sitebase.url}}/contributing/style_guide/) and reviewing your work in a site preview. If you need to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
+Create your content by following the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/) and reviewing your work in a site preview. If you need to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
 
 {% tabs %}
 {% tab github %}

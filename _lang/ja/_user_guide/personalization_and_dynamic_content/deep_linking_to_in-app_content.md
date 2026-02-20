@@ -56,7 +56,7 @@ Analytics SDK が統合および設定された後、UTM タグはBraze キャ�
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
 ```
 
-\![]({% image_buster /assets/img_archive/push_utm_tags.png %})
+![]({% image_buster /assets/img_archive/push_utm_tags.png %})
 
 #### UTM タグによるアプリ内メッセージのクリックのアトリビュート指定
 
@@ -66,5 +66,5 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spr
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link
 ```
 
-\![]({% image_buster /assets/img_archive/iam_utm_tags.png %})
+![]({% image_buster /assets/img_archive/iam_utm_tags.png %})
 

@@ -1,7 +1,7 @@
 ---
 nav_title: よくある質問
 article_title: プッシュ通知の FAQ
-page_order: 80
+page_order: 25
 description: "この記事では、プッシュキャンペーンを設定する際に生じる、よくある質問を取り上げる。"
 page_type: FAQ
 channel:
@@ -18,7 +18,13 @@ channel:
 
 プッシュトークンが再割り当てされると、ユーザープロファイルの**プッシュ通知の変更ログ**に変更が反映されます。これはユーザープロファイルの [**エンゲージメント**] タブで確認できます。
 
-![コンタクト設定 "の "Push Changelog"。]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
+![コンタクト設定」セクションの「プッシュ・チャンネルログ」。]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
+
+### Error sending push because payload was invalid」とはどういう意味か？
+
+このメッセージは、APNが無効なペイロード(例えば、空のペイロードや大きすぎるペイロード)のためにプッシュリクエストを拒否したことを示す。
+
+詳細と次のステップについては、[よくあるプッシュのエラーメッセージを]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/)参照のこと。
 
 ### オプトイン済みのユーザーにプッシュトークンがないのはなぜですか?
 

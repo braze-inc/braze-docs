@@ -9,57 +9,57 @@ hidden: true
 # Integração com o Baidu
 {% multi_lang_include archive/baidu_deprecation.md %}
 
-O Braze pode enviar notificações por push para dispositivos Android usando o [Baidu Cloud Push][14]. Note que o uso do Baidu Cloud Push **não** exige que você distribua seus apps por meio da Baidu App Store.
+O Braze pode enviar notificações por push para dispositivos Android usando o [Baidu Cloud Push]({% image_buster /assets/img_archive/baidu_app_console.png %}). Note que o uso do Baidu Cloud Push **não** exige que você distribua seus apps por meio da Baidu App Store.
 
 ## Etapa 1: Criar uma conta no Baidu
 
-Para criar uma conta no Baidu, visite o [Portal do Baidu][7] e clique em **登录** (Entrar) para abrir uma caixa de diálogo que permitirá o registro ou a criação de uma nova conta.
+Para criar uma conta no Baidu, visite o [Portal do Baidu](https://www.baidu.com/) e clique em **登录** (Entrar) para abrir uma caixa de diálogo que permitirá o registro ou a criação de uma nova conta.
 
-![][33]
+![]({% image_buster /assets/img_archive/baidu_portal.png %})
 
 Para criar uma nova conta, na parte inferior da caixa de diálogo de login, clique em **立即注册** (nova conta).
 
-![][38]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/baidu_login_dialog.png %}){: style="max-width:70%;"}
 
 Digite seu nome de usuário, número de telefone e senha na página de criação de conta. Em seguida, clique no botão Receber código de verificação. Agora você receberá uma mensagem SMS do Baidu com um código de verificação. Por fim, aceite o contrato de licença e clique em **注册** (criar conta) para se registrar. Se essas etapas de configuração falharem, tente se registrar por meio do login do Baidu Cloud, conforme descrito neste [artigo sobre login](https://www.adchina.io/how-to-open-a-baidu-account-outside-china/).
 
-![Página de registro do Baidu][17]{: style="max-width:80%;"}
+![Página de registro do Baidu]({% image_buster /assets/img_archive/baidu_signup.png %}){: style="max-width:80%;"}
 
 ## Etapa 2: Registre-se como desenvolvedor do Baidu
 
-Em seguida, você deve se registrar como desenvolvedor do Baidu. Primeiro, visite o [portal do desenvolvedor do Baidu][36] e escolha **注册** (criar nova conta de desenvolvedor) para iniciar o registro.
+Em seguida, você deve se registrar como desenvolvedor do Baidu. Primeiro, visite o [portal de desenvolvedores do Baidu](http://developer.baidu.com/) e escolha **注册** (criar nova conta de desenvolvedor) para iniciar o registro.
 
-![][37]
+![]({% image_buster /assets/img_archive/baidu_dev_portal.png %})
 
 Na página de registro, escolha o tipo de conta (个人 para pessoal, 公司 para negócios) e o tipo de desenvolvedor (desenvolvedor é pré-selecionado e correto para a maioria dos casos). Digite seu nome, biografia e número de telefone com o código do país entre parênteses (por exemplo, (1)xxxxxxxxxxxx). Clique em **发送验证码** (enviar código de verificação) e digite o código de verificação na linha seguinte. Os próximos dois campos, site do desenvolvedor e logotipo do desenvolvedor, são opcionais. Aceite o contrato de licença e clique em **提交** (Enviar). Agora você tem uma conta de desenvolvedor do Baidu.
 
-![][13]
+![]({% image_buster /assets/img_archive/baidu_dev_reg.png %})
 
 ## Etapa 3: Registre seu aplicativo no Baidu
 
-Para registrar seu aplicativo no Baidu, visite o [portal de projetos do Baidu][11] e clique em **创建工程** (criar projeto).
+Para registrar seu aplicativo no Baidu, visite o [portal de projetos do Baidu](http://developer.baidu.com/console#app/project) e clique em **创建工程** (criar projeto).
 
-![][10]
+![]({% image_buster /assets/img_archive/baidu_project.png %})
 
 Na página seguinte, digite o nome do aplicativo. As duas caixas de seleção a seguir servem para ativar serviços adicionais do Baidu. Na maioria dos casos, elas devem ser deixadas em branco.
 
-![][26]
+![]({% image_buster /assets/img_archive/baidu_app_name.png %})
 
 Ao configurar o seu aplicativo, você será levado a um console que exibe informações sobre o seu app, incluindo a chave de API. Em seguida, navegue até **云推送** (cloud push) na barra lateral. Na página seguinte, clique em **推送设置** (set up push).
 
-![][14]
+![]({% image_buster /assets/img_archive/baidu_app_console.png %})
 
-![][29]
+![]({% image_buster /assets/img_archive/baidu_continue.png %})
 
 Na página seguinte, digite o nome do pacote do app (por exemplo, `com.braze.sample`) e especifique se deseja armazenar as mensagens em cache e, em caso afirmativo, por quanto tempo (em horas). Isso indica ao Baidu quanto tempo deve continuar tentando enviar mensagens para usuários off-line. Clique em **保存设置** (salvar configurações) para salvar.
 
-![][39]
+![]({% image_buster /assets/img_archive/baidu_configure_cloud.png %})
 
 ## Etapa 4: Adicione o Baidu ao seu aplicativo
 
-Acesse o [portal do Baidu push SDK][40] e baixe o Baidu Cloud Push Android SDK mais recente.
+Visite o [portal do Baidu push SDK](http://developer.baidu.com/wiki/index.php?title=docs/cplat/push/sdk/clientsdk) e baixe o Baidu Cloud Push Android SDK mais recente.
 
-![][41]
+![]({% image_buster /assets/img_archive/baidu_sdk.png %})
 
 Dentro do SDK, você encontrará o jar do serviço push e as bibliotecas nativas específicas da plataforma. Integre-os ao seu projeto. Certifique-se de que seu app esteja direcionado para a versão mais alta do SDK atualmente suportada pelo Baidu. Esta documentação é atual para a versão do SDK do Baidu Cloud push para Android `4.6.2.38`.
 
@@ -164,7 +164,7 @@ O Baidu suporta o envio de pares de valores-chave extras com mensagens push no f
   }
   ```
 
-Sempre que `onNotificationClicked` for chamado pelo seu receptor Baidu, o receptor deverá enviar uma [intenção][44] para o seu aplicativo contendo `customContentString`. Seu aplicativo registrará o clique na Braze usando o endereço `customContentString`.
+Sempre que o `onNotificationClicked` for chamado pelo seu receptor Baidu, o receptor deverá enviar uma [Intent](http://developer.android.com/reference/android/content/Intent.html) para o seu aplicativo contendo `customContentString`. Seu aplicativo registrará o clique na Braze usando o endereço `customContentString`.
 
 O código de exemplo a seguir passa o endereço `customContentString` para a Braze e registra um clique:
 
@@ -224,33 +224,13 @@ Você precisa inserir sua chave de API do Baidu e a chave secreta do Baidu no da
 
 Na página **Manage Settings (Gerenciar configurações)**, selecione seu app Android China e insira sua Baidu API Key e Baidu Secret Key na seção de notificações por push.
 
-![][19]{: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/baidu_api_key.png %} "APIKey"){: style="max-width:80%;"}
 
 ## Recursos adicionais
 
-- [Portal do Baidu][7]
-- [Portal do desenvolvedor do Baidu][36]
-- [Portal do projeto Baidu][11]
-- [Portal do SDK de push do Baidu][40]
-- [Documentos de integração do Baidu][43]
+- [Portal do Baidu](https://www.baidu.com/)
+- [Portal do desenvolvedor do Baidu](http://developer.baidu.com/)
+- [Portal de projetos do Baidu](http://developer.baidu.com/console#app/project)
+- [Portal do Baidu push SDK](http://developer.baidu.com/wiki/index.php?title=docs/cplat/push/sdk/clientsdk)
+- [Documentos de integração do Baidu](http://developer.baidu.com/wiki/index.php?title=docs/frontia/guide-android/overview)
 
-[7]: https://www.baidu.com/
-[10]: {% image_buster /assets/img_archive/baidu_project.png %}
-Daqui a [11]: http://developer.baidu.com/console#app/project
-[13]: {% image_buster /assets/img_archive/baidu_dev_reg.png %}
-[14]: {% image_buster /assets/img_archive/baidu_app_console.png %}
-[17]: {% image_buster /assets/img_archive/baidu_signup.png %}
-[19]: {% image_buster /assets/img_archive/baidu_api_key.png %} "APIKey"
-[26]: {% image_buster /assets/img_archive/baidu_app_name.png %}
-[29]: {% image_buster /assets/img_archive/baidu_continue.png %}
-[33]: {% image_buster /assets/img_archive/baidu_portal.png %}
-[34]: {% image_buster /assets/img_archive/baidu_email.png %}
-[35]: {% image_buster /assets/img_archive/baidu_text.png %}
-Daqui a [36]: http://developer.baidu.com/
-[37]: {% image_buster /assets/img_archive/baidu_dev_portal.png %}
-[38]: {% image_buster /assets/img_archive/baidu_login_dialog.png %}
-[39]: {% image_buster /assets/img_archive/baidu_configure_cloud.png %}
-Daqui a [40]: http://developer.baidu.com/wiki/index.php?title=docs/cplat/push/sdk/clientsdk
-[41]: {% image_buster /assets/img_archive/baidu_sdk.png %}
-Daqui a [43]: http://developer.baidu.com/wiki/index.php?title=docs/frontia/guide-android/overview
-Daqui a [44]: http://developer.android.com/reference/android/content/Intent.html
