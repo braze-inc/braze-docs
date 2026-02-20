@@ -65,6 +65,13 @@ You can also have the abort message log something to your Message Activity Log b
 
 You can use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) or your own data warehouse, if it's connected to Braze, to query for specific abort messages that are triggered when Liquid logic causes a message to abort.
 
+## When abort logic is evaluated
+
+The timing of abort logic evaluation depends on the message channel:
+
+- **In-app messages:** Abort logic is evaluated at the time the in-app message is **triggered** (for example, when the user performs the trigger event or starts a session), not when the message is initially sent to the device. In-app messages are delivered to the SDK on session start and cached locally; the Liquid — including any `abort_message()` calls — is executed when the trigger condition is met.
+- **Push, email, SMS, webhooks, and Content Cards:** Abort logic is evaluated at **send time**, when Braze processes the message for delivery.
+
 ## Considerations
 
 The `abort_message()` Liquid message tag prevents messages from sending to users, meaning the message won't display on user profiles, and won't count toward deliveries or frequency capping.
