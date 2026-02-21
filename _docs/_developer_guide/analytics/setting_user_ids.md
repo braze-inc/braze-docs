@@ -155,12 +155,12 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 
 We recommend that you create user IDs using the [Universally Unique Identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier) standard, meaning they are 128-bit strings that are random and well distributed.
 
-Alternatively, you can hash an existing unique identifier (such as a name or email address) to generate your user IDs instead. If you do so, be sure to implement [SDK authentication]({{site.baseurl}}/developer_guide/authentication/), so you can prevent user impersonation.
+Alternatively, you can hash an existing unique identifier (such as a name or email address) to generate your user IDs instead. If you do so, be sure to implement [SDK authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/), so you can prevent user impersonation.
 
 {% alert warning %}
 Do not use a guessable value or incrementing number for your user ID. This may expose your organization to malicious attacks or data exfiltration.
 
-For added security, use [SDK Authentication]({{ site.baseurl }}/docs/developer_guide/sdk_integration/authentication).
+For added security, use [SDK Authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/).
 {% endalert %}
 
 While it's essential that you correctly name your user IDs from the start, you can always rename them in the future using the [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) endpoint.
