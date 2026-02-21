@@ -20,6 +20,6 @@ Calling `closeSession()` will not immediately end the session. Instead, it will 
 {% tab swift %}
 By default, a session starts when you call `Braze.init(configuration:)`. This occurs when the `UIApplicationWillEnterForegroundNotification` notification is triggered, meaning the app has entered the foreground.
 
-If your app goes to the background, `UIApplicationDidEnterBackgroundNotification` will be triggered. The app does not remain in an active session while in the background. When your app returns to the foreground, the SDK checks how long the app has been in the background (unless you [change the default session timeout]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift#change-session-timeout)). If the time spent in the background exceeds the timeout period, a new session will begin.
+If your app goes to the background, `UIApplicationDidEnterBackgroundNotification` will be triggered. The app does not remain in an active session while in the background. When your app returns to the foreground, the SDK compares the time elapsed since the session started against the session timeout (unless you [change the default session timeout]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift#change-session-timeout)). If the time since the session started exceeds the timeout period, a new session will begin.
 {% endtab %}
 {% endtabs %}
