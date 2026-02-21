@@ -69,7 +69,7 @@ You configure these within your Snowflake account.
 
 ### Can I use a different Snowflake account to isolate data from different workspaces?
 
-Yes. If Workspace A shares to Account X and Workspace B shares to Account Y, each account receives an independent share with separate data. Howver, most organizations use a single Snowflake account for all business data. So, this approach may add operational overhead. Consider this tradeoff before choosing it over the logical isolation approaches described in the previous section.
+Yes. If Workspace A shares to Account X and Workspace B shares to Account Y, each account receives an independent share with separate data. However, most organizations use a single Snowflake account for all business data. So, this approach may add operational overhead. Consider this tradeoff before choosing it over the logical isolation approaches described in the previous section.
 
 ### Is workspace data isolation a supported use case for Snowflake Data Sharing?
 
