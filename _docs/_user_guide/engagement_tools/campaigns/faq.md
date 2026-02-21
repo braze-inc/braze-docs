@@ -62,17 +62,17 @@ You can check your company's time zone in your [company settings]({{site.baseurl
 
 ### When does Braze evaluate users for local time zone delivery?
 
-For local time zone delivery, Braze evaluates users for their entry eligibility during these two instances:
+Braze evaluates users for their entry eligibility at:
 
-- At Samoa time (UTC+13) of the scheduled day
-- At local time of the scheduled day
+- Samoa time (UTC+13) or UTC+14 during Daylight Savings Time
+- The local time of the scheduled day
 
 For a user to be eligible for entry, they must be eligible for both checks. For example, if a Canvas is scheduled to launch on August 7, 2021 at 2 pm local time zone, then targeting a user located in New York would require the following checks for eligibility:
 
 - New York on August 6, 2021 at 9 pm
 - New York on August 7, 2021 at 2 pm
 
-Note that the user needs to be in the segment for 24 hours prior to the launch. If the user is not eligible in the first check, then Braze will not attempt the second check.
+Note that the user needs to be in the segment for 24 hours before the launch. If the user is not eligible in the first check, then Braze will not attempt the second check.
 
 For example, if a campaign is scheduled to be delivered at 7 pm UTC, we start queuing the campaign sends as soon as a time zone is identified (such as Samoa). This means we're getting ready to send the message, not sending the campaign. If users don't match any filters when we check eligibility, they won't fall into the target audience.
 
@@ -105,7 +105,7 @@ Local time zone delivery may miss users in this segment based on the delivery ti
 
 ### What changes can I make to scheduled campaigns ahead of launch?
 
-When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can't edit conversion events after it is launched.
+When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can't edit conversion events after launch.
 
 ### I updated my scheduled campaign. Why didn't it launch?
 
@@ -122,7 +122,7 @@ We recommend making changes to messages within the following times:
 
 If you make changes to your message outside of these recommendations, you may not see the updates reflected in the message sent. For example, if you edit the send time three hours before a campaign is scheduled to send at 12 pm local time, the following may occur:
 
-- Braze will not send messages to any users that have missed the send time by more than one hour.
+- Braze will not send messages to any users who have missed the send time by more than one hour.
 - Pre-enqueued messages may still be sent at the originally enqueued time, rather than the adjusted time.
 
 If you need to make changes, we recommend stopping the current campaign (this will cancel any enqueued messages). You can then duplicate the campaign, make the changes as necessary, and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign. Make sure to re-adjust campaign schedule times to allow for time zone sending.
@@ -135,7 +135,7 @@ The number of users entering a campaign may differ from your expected number bec
 For further assistance with campaign troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence, as we only have the last 30 days of diagnostic logs.
 {% endalert %}
 
-### What's the difference between the CSV Export User Data and CSV Export Email Address options on my campaign analytics page?
+### What is the difference between the CSV Export User Data and CSV Export Email Address options on my campaign analytics page?
 
 Selecting the **CSV Export Email Addresses** option will only download data for users with email addresses. For example, if you have a segment of 100,000 users, but only 50,000 of those users have email addresses, and you click **CSV Export Email Addresses**, then you should expect to see only 50,000 rows of data in the CSV file. In comparison, selecting **CSV Export User Data** will export all user data.
 
@@ -145,7 +145,7 @@ Yes, use the filter `api_id:YOUR_API_ID` on the **Campaigns** page to search for
 
 ### Why does whitespace appear differently in input fields versus displayed text? 
 
-Whitespace handling differs between input fields and displayed text components because of CSS styling. In text components with the default `white-space: normal` CSS, multiple consecutive spaces collapse into a single space when displayed. This is standard HTML behavior for rendered text. 
+Whitespace handling differs between input fields and displayed text components because of CSS styling. In-text components with the default `white-space: normal` CSS, multiple consecutive spaces collapse into a single space when displayed. This is standard HTML behavior for rendered text. 
 
 Input fields preserve multiple spaces exactly as you enter them, because you need to see and edit the exact spacing for accurate data entry. This means that text with multiple spaces may appear differently when viewed in an input field (where all spaces are preserved) versus when displayed in other parts of the dashboard (where CSS may collapse multiple spaces). 
 
