@@ -6,7 +6,8 @@
 #   2. Translate each file into 6 languages via Claude API
 #   3. Build each language with Jekyll to verify translations
 #   4. If a build fails, send errors back to Claude for auto-fix (up to 3 attempts)
-#   5. Open a PR targeting develop with the translations
+#   5. Clean up orphaned translation files (translations with no English source)
+#   6. Open a PR targeting develop with the translations
 name: Auto-translate
 
 on:
@@ -103,6 +104,10 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
+      - name: Clean up orphaned translations
+        if: steps.changes.outputs.count != '0'
+        run: python scripts/clean_orphaned_translations.py
+
       - name: Verify builds and fix errors
         if: steps.changes.outputs.count != '0'
         run: python scripts/auto_translate.py verify --max-attempts 3
@@ -127,4 +132,4 @@ jobs:
           commit-message: "chore: auto-translate changed English docs"
           delete-branch: true
           add-paths: |
-            _lang/**/*.md
+            _lang/
