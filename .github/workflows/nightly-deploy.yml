@@ -1,0 +1,90 @@
+name: Nightly Release Deploy
+
+on:
+  schedule:
+    - cron: '0 8 * * 1-5' # 12am PT / 3am ET, Sun-Thu nights (Mon-Fri UTC)
+  workflow_dispatch:
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    outputs:
+      pr_number: ${{ steps.cpr.outputs.pr_number }}
+      skipped: ${{ steps.diff.outputs.skipped }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for diff between develop and main
+        id: diff
+        run: |
+          git fetch origin main develop
+          if git diff --quiet origin/main..origin/develop; then
+            echo "No changes between develop and main. Skipping."
+            echo "skipped=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skipped=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate deploy body text
+        if: steps.diff.outputs.skipped == 'false'
+        id: body
+        run: |
+          export PROJECT_ROOT="$GITHUB_WORKSPACE"
+          export PRIMARY_BRANCH="main"
+          chmod +x "$PROJECT_ROOT/scripts/create_deploy_text.sh"
+          DEPLOY_TEXT=$("$PROJECT_ROOT/scripts/create_deploy_text.sh" || true)
+
+          if [ -z "$DEPLOY_TEXT" ]; then
+            DEPLOY_TEXT="No PR details available."
+          fi
+
+          # Write to a file so we can pass multiline text cleanly
+          echo "$DEPLOY_TEXT" > "$RUNNER_TEMP/deploy_body.txt"
+
+      - name: Create or find Pull Request
+        if: steps.diff.outputs.skipped == 'false'
+        id: cpr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="Nightly Deploy — $(date -u +'%b %d, %Y')"
+          BODY=$(cat "$RUNNER_TEMP/deploy_body.txt")
+          EXISTING=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number')
+
+          if [ -n "$EXISTING" ]; then
+            echo "Reusing existing PR #$EXISTING — updating title and body."
+            gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY"
+            echo "pr_number=$EXISTING" >> "$GITHUB_OUTPUT"
+          else
+            gh pr create \
+              --base main \
+              --head develop \
+              --title "$TITLE" \
+              --body "$BODY" \
+              --label "Deploy"
+
+            NEW=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number')
+            echo "Created PR #$NEW"
+            echo "pr_number=$NEW" >> "$GITHUB_OUTPUT"
+          fi
+
+  approve-and-merge:
+    needs: create-pr
+    if: needs.create-pr.outputs.skipped != 'true'
+    runs-on: ubuntu-latest
+    environment: Production Automation
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Merge PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ needs.create-pr.outputs.pr_number }}
+        run: gh pr merge "$PR_NUMBER" --merge --admin
