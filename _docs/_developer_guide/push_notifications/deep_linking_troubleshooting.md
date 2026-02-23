@@ -56,7 +56,7 @@ You can validate your AASA using [Apple's search validation tool](https://search
 swcutil dl -d yourdomain.com
 ```
 
-### Check the app delegate
+### Check the `AppDelegate`
 
 Verify that `application(_:continue:restorationHandler:)` is implemented in your `AppDelegate` and handles the `NSUserActivity` correctly:
 
