@@ -127,6 +127,14 @@ If you make changes to your message outside of these recommendations, you may no
 
 If you need to make changes, we recommend stopping the current campaign (this will cancel any enqueued messages). You can then duplicate the campaign, make the changes as necessary, and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign. Make sure to re-adjust campaign schedule times to allow for time zone sending.
 
+### Why did no users enter my daily scheduled campaign on Daylight Saving Time day?
+
+On Daylight Saving Time (DST) transition days, daily scheduled campaigns can run up to one hour earlier or later than usual, depending on whether clocks spring forward or fall back. If your segment relies on custom attributes or events with timestamps that fall within one hour of the scheduled send time, those users may not yet qualify when the campaign evaluates eligibility on DST day.
+
+For example, suppose users typically receive a custom attribute update at 3 PM UTC and your campaign runs daily at 3:30 PM UTC. On a spring-forward DST day, the campaign may run at 2:30 PM UTC—before the attribute has been logged. Because the qualifying attribute doesn't exist yet, those users are filtered out. If re-eligibility is turned off, users who entered on previous days can't re-enter, resulting in zero entries for that day.
+
+To avoid this, ensure your custom attribute or event updates occur more than one hour before the campaign's scheduled send time.
+
 ### Why does the number of users entering a campaign not match the expected number?
 
 The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the campaign if they're not initially part of your selected audience before any trigger actions are evaluated.
