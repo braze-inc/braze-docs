@@ -198,7 +198,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 
 {% alert note %}
-For SMS subscription groups, you can include the optional `use_double_opt_in_logic` parameter set to `true` within each subscription group object to enter the user into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow. If this parameter is omitted or set to `false`, users are subscribed without entering the double opt-in workflow.
+For SMS subscription groups, when you set a group's `subscription_state` to `subscribed`, you can include the optional `use_double_opt_in_logic` parameter set to `true` within that subscription group object to enter the user into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow. If this parameter is omitted or set to `false` when `subscription_state` is `subscribed`, the user is subscribed without entering the double opt-in workflow. This parameter is not applied when `subscription_state` is set to other values, such as `unsubscribed`.
 {% endalert %}
 
 ### Example request to create an alias-only user
