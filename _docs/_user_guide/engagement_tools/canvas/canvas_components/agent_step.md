@@ -39,7 +39,7 @@ Drag and drop the **Agent** component from the sidebar, or select the <i class="
 
 Select the agent that will process data in this step. Choose an existing agent. For setup guidance, see [Create custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/).
 
-### Step 3: Set your agent's output {#step-3-define-the-output-variable}
+### Step 3: Set your agent's output {#define-the-output-variable}
 
 Agent outputs are called "output variables" and are stored in a [context variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#context-variable-types) for easy access. To define the output variable, give the variable a name.
 
@@ -81,7 +81,7 @@ After setting up your Agent step, you can test and preview the output of this st
 - If the agent fails for any other reason (such as a timeout error or invalid API key), the output variable is set to `null`.
     - If an agent reaches its daily invocation limit, the output variable is set to `null`. If you're using an agent's output in a Message step, consider using [default Liquid values]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values).
 - Responses are cached for identical inputs and may be reused for repeated identical invocations within a few minutes.
-    - Responses that use cached values do still count towards total and daily invocations.
+    - Responses that use cached values do still count toward total and daily invocations.
 
 ## Analytics  
 

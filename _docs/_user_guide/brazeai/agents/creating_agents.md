@@ -51,7 +51,7 @@ Next, set up the details for your agent:
 1. Enter a name and description to help your team understand its purpose.
 2. (optional) Add tags to filter your agent.
 3. Choose the [model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) for your agent to use.
-4. Select the model's thinking level. This ranges from minimal, low, medium, and high. We recommend starting with **Minimal** and testing your agent's responses and adjusting this as needed.
+4. Select the model's thinking level. This can be set to minimal, low, medium, or high. We recommend starting with **Minimal** and testing your agent's responses and adjusting this as needed.
 
 ![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
 
@@ -62,7 +62,7 @@ Give the agent instructions. We recommend including instructions for what the ag
 Refer to the [Writing instructions]({{site.baseurl}}/user_guide/brazeai/agents/reference/#writing-instructions) for best practices and [Examples]({{site.baseurl}}/user_guide/brazeai/agents/reference/#examples) for inspiration on how to prompt your agent.
 
 {% alert tip %}
-For Canvas agents, you can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes. Any Liquid variable in the agent instructions is automatically passed to the Agent step when a user enters.
+For Canvas agents, you can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes. Any Liquid variable in the agent instructions is automatically passed to the Agent step when a user enters the step.
 {% endalert %}
 
 #### Step 3.1: Add context
@@ -80,7 +80,7 @@ In the **Optional settings**, you can adjust the [temperature]({{site.baseurl}}/
 
 You can also set the daily execution limit for your agent. By default, this value is set to 250,000, but can be raised to 1,000,000. If you're interested in increasing the limit above 1,000,000, contact your customer success manager to learn more.
 
-### Step 4: Select the output
+### Step 4: Select the output {#select-output}
 
 In the **Output** section, you can organize and define the agent's output by basic schemas or advanced schemas.
 
@@ -105,7 +105,7 @@ Advanced schema options include manually structuring fields or using JSON.
 - **Fields:** A no-code way to enforce an agent output that you can use consistently.
 - **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema. Only available for Canvas agents, not catalog agents.
 
-We recommend using advanced schemas when you want the agent to return a data structure with multiple values defined in a structured manner, rather than a single-value output. This allows the output to be better formatted as a consistent context variable. 
+We recommend using advanced schemas when you want the agent to return a data structure with multiple values defined in a structured manner, rather than a single-value output. This allows the output to be better formatted as a consistent context variable.
 
 For example, you may use an output format within an agent that is intended to create a sample travel itinerary for a user based on a form they submitted. The output format allows you to define that every agent response should come back with values for `tripStartDate`, `tripEndDate`, and `destination` values. Each of these values can be extracted from context variables and placed in a Message step for personalization using Liquid.
 
@@ -114,7 +114,7 @@ For example, you may use an output format within an agent that is intended to cr
 
 If you want to format responses to a simple feedback survey to determine how likely respondents are to recommend your restaurant's newest ice cream flavor, you can set up the following fields to structure the output format:
 
-| Field name | Value
+| Field name | Value |
 | --- | --- |
 | **likelihood_score** | Number |
 | **explanation** | String |

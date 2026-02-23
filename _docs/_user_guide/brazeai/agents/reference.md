@@ -14,12 +14,12 @@ page_order: 3
 When you set up an agent, you can choose the model it uses to generate responses. You have two options: using a Braze-powered model or bringing your own API key.
 
 {% alert important %}
-The Braze-powered **Auto** model is optimized for models whose thinking capabilities are sufficient to perform tasks such as catalog search and user segmentation membership. When using other models, we recommend testing to confirm your model works well for your use case. You may need to adjust your [instructions](#writing-instructions) to give different levels of detail or step-by-step thinking to models with different speeds and capabilities.
+The Braze-powered **Auto** model is optimized for models whose thinking capabilities are sufficient to perform tasks such as catalog search and segment membership. When using other models, we recommend testing to confirm your model works well for your use case. You may need to adjust your [instructions](#writing-instructions) to give different levels of detail or step-by-step thinking to models with different speeds and capabilities.
 {% endalert %}
 
 ### Option 1: Use a Braze-powered model
 
-This is the simplest option, with no extra setup required. Braze provides access to large language models (LLM) directly. To use this option, select **Auto**, which uses Gemini models.
+This is the simplest option, with no extra setup required. Braze provides access to large language models (LLMs) directly. To use this option, select **Auto**, which uses Gemini models.
 
 ### Option 2: Bring your own API key
 
@@ -74,7 +74,7 @@ In the **Logs** section of the **Agent Console**, you can review the details for
 
 ### Examples
 
-Let's say you're part of a travel brand, UponVoyage, and your goals are to analyze customer feedback, write personalized messaging, and determine the conversion rate for your free subscribers. Here are examples of different instructions based on defined goals:
+Let's say you're part of a travel brand, UponVoyage, and your goals are to analyze customer feedback, write personalized messages, and determine the conversion rate for your free subscribers. Here are examples of different instructions based on defined goals:
 
 {% tabs %}
 {% tab Personalized message copywriter agent %}

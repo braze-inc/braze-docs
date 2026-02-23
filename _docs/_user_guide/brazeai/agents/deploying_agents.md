@@ -34,7 +34,7 @@ You can apply an agent to catalog fields so it automatically generates or calcul
 
 | Use case | Description |
 | --- | --- |
-| Generate product descriptions | Automatically create short marketing copy for new catalog entries, for example by generating a catchy description from structured product data like name, category, and features. |
+| Generate product descriptions | Automatically create short marketing copy for new catalog entries, for example, by generating a catchy description from structured product data like name, category, and features. |
 | Enrich product attributes | Fill in missing values such as color family, style, or season based on a product name and details. For example, if a product name is “Laguna Polarized Sunglasses,” the agent could assign the style as “sport” and the color family as “blue.” |
 | Calculate derived fields | Use existing fields to generate new data, such as a “fit score” based on attributes or a “popularity tag” from sales and review counts. |
 | Categorize or tag items | Assign tags for recommendation logic so personalization models can segment products more effectively. For example, tag products as “outdoor,” “festival-ready,” or “premium.” |
@@ -88,7 +88,7 @@ You can add a field named **product_description** to a catalog and select **desc
 
 ![A field "product_description" with the "Descriptor" agent applied. The "description" output is selected as the response field.]({% image_buster /assets/img/ai_agent/response_field.png %}){: style="max-width:80%;"}
 
-You can also manually override the agent-generated cell by selecting **Edit Item** and updating the agent-generated description with your edits. To revert your edits back to the agent-generated description, select the refresh symbol in the cell.
+You can also manually override the agent-generated cell by selecting **Edit Item** and updating the agent-generated description with your edits. To revert to the agent-generated description, select the refresh symbol in the cell.
 
 ### Error handling in catalogs  
 
@@ -102,11 +102,15 @@ In the **Usage** section of your agent, you can reference and navigate to where 
 
 ![Agent Usage section that shows two active agents and one inactive agent for Canvases.]({% image_buster /assets/img/ai_agent/agent_usage.png %})
 
-In the **Logs** section of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location. You can also monitor daily invocation limit errors at the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
+In the **Logs** section of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location. You can also select **Export CSV** to export the logs shown on the current page only.
+
+{% alert tip %}
+You can also monitor daily invocation limit errors at the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
+{% endalert %}
 
 ![Logs for an agent AI Sentiment Score.]({% image_buster /assets/img/ai_agent/agent_logs.png %})
 
-Select **View** for a specific agent call to see the input, output, and user ID. You can also select **Export CSV** to export the logs shown on the current page only.
+Select **View** for a specific agent call to see the input, output, and user ID.
 
 ![The details panel for an agent Random Sports Assignment that shows the input prompt, output response, and an associated user ID.]({% image_buster /assets/img/ai_agent/agent_logs_view.png %})
 
