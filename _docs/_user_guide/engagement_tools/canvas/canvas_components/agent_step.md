@@ -78,7 +78,7 @@ After setting up your Agent step, you can test and preview the output of this st
 ## Error handling  
 
 - If the connected model returns a rate limit error, Braze retries up to five times with exponential backoff.  
-- If the agent fails for any other reason (such as a time out error or invalid API key), the output variable is set to `null`.
+- If the agent fails for any other reason (such as a timeout error or invalid API key), the output variable is set to `null`.
     - If an agent reaches its daily invocation limit, the output variable is set to `null`. If you're using an agent's output in a Message step, consider using [default Liquid values]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values).
 - Responses are cached for identical inputs and may be reused for repeated identical invocations within a few minutes.
     - Responses that use cached values do still count towards total and daily invocations.
