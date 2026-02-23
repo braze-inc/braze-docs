@@ -36,7 +36,7 @@ valid_partner_list:
 - name: Kochava
   url: /docs/partners/kochava/
 - name: Linkrunner
-  url: /docs/partners/linkrunner/
+  url: /docs/partners/message_orchestration/attribution/linkrunner/
 - name: Singular
   url: /docs/partners/singular/
 - name: Vizbee
