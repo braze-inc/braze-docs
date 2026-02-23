@@ -113,7 +113,7 @@ If you're experiencing issues logging into Braze Learning and find yourself stuc
 
 1. If you have multiple Braze accounts, logging in with the wrong account twice will send you to the Braze dashboard. Confirm you're logging into the correct account.
 2. If you have an ad blocker, confirm it is turned off. It may block cookies necessary for single sign-on functionality.
-3. Go to Company Settings > Security Settings and verify that single sign-on (SSO) is turned on.
+3. Go to **Company Settings** > **Security Settings** and verify that single sign-on (SSO) is turned on.
 4. Confirm that your dashboard user profile includes both a first and last name. Not having a last name can disrupt the login process.
 5. Access Braze Learning from your dashboard by going to **Support** > **Braze Learning**.
 6. If you continue to experience issues, consider re-creating your account. Users who accessed Braze Learning during the free trial phase may have difficulties accessing it now.

@@ -1,6 +1,6 @@
 ---
 nav_title: Logs and alerts
-article_title: Logs and Alerts
+article_title: Logs and alerts
 page_order: 3
 layout: dev_guide
 guide_top_header: "Logs and alerts"

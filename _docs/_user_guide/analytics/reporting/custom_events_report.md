@@ -1,12 +1,12 @@
 ---
 nav_title: Custom events report
-article_title: Custom Events Report
+article_title: Custom events report
 page_type: reference
 description: "This page describes how to use the Custom Events Report to view occurrences of custom events over time, broken down by segment."
 tool: Reports
 ---
 
-# Custom Events Report
+# Custom events report
 
 > The Custom Events Report lets you view the occurrences of one or more custom events over time. You can break down results by segment, apply KPI formulas, and export the data for further analysis.
 

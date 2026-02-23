@@ -1,6 +1,6 @@
 ---
 nav_title: User management
-article_title: User Management
+article_title: User management
 page_order: 0
 layout: dev_guide
 guide_top_header: "User management"

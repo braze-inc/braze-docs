@@ -37,17 +37,14 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: Export usage analytics
-    link: /docs/user_guide/data/distribution/export_braze_data/exporting_app_usage_data/
+    link: /docs/user_guide/analytics/dashboard/home_dashboard/
     image: /assets/img/braze_icons/target-05.svg
   - name: Export revenue data
-    link: /docs/user_guide/data/distribution/export_braze_data/exporting_revenue_data/
+    link: /docs/user_guide/analytics/reporting/revenue_report/
     image: /assets/img/braze_icons/coins-hand.svg
-  - name: Export custom event data
-    link: /docs/user_guide/data/distribution/export_braze_data/export_custom_event_data/
+  - name: Custom events report
+    link: /docs/user_guide/analytics/reporting/custom_events_report/
     image: /assets/img/braze_icons/settings-01.svg
-  - name: Opening CSV reports in Excel
-    link: /docs/user_guide/data/distribution/export_braze_data/opening_csv_reports_in_excel/
-    image: /assets/img/braze_icons/file-02.svg
 
 guide_menu_title2: Data export with Currents
 guide_menu_description2: "Looking to take advantage of data export with Braze Currents? The Currents tool is a real-time data stream of your engagement events that is the most robust, yet granular export out of the Braze platform. Check out these articles for more."
@@ -59,7 +56,7 @@ guide_menu_list2:
     link: /docs/user_guide/data/distribution/braze_currents/setting_up_currents/
     image: /assets/img/braze_icons/building-01.svg
   - name: How Braze uses Currents
-    link: /docs/user_guide/data/distribution/braze_currents/how_braze_uses_currents/
+    link: /docs/user_guide/data/distribution/braze_currents/use_cases/how_braze_uses_currents/
     image: /assets/img/braze_icons/expand-05.svg
 
 ---
