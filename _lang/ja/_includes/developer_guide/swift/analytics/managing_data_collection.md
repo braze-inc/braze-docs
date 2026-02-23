@@ -145,7 +145,7 @@ Braze Swiftのバージョン7.0.0以降では、SDKと`wipeData()` メソッド
 
 ## IDFVコレクション
 
-Braze iOS SDK の以前のバージョンでは、IDFV (ベンダーの識別子) フィールドがユーザーのデバイス ID として自動的に収集されていました。Swift SDK`v5.7.0` 以降、IDFVフィールドはオプションで無効になり、代わりにBrazeはランダムなUUIDをデバイスIDとして設定するようになった。Swift SDK`v7.0.0` 以降、IDFV フィールドはデフォルトでは収集されず、代わりに UUID がデバイス ID として設定される。
+Braze iOS SDK の以前のバージョンでは、IDFV (ベンダーの識別子) フィールドがユーザーのデバイス ID として自動的に収集されていました。Swift SDK`v5.7.0` 以降、IDFVフィールドはオプションで無効になり、代わりにBrazeはランダムなUUIDをデバイスIDとして設定するようになった。Swift SDK`v7.0.0` から、IDFV フィールドはデフォルトでは収集されず、代わりに UUID がデバイス ID として設定される。
 
 `useUUIDAsDeviceId` 機能により、デバイス ID を UUID として設定するよう [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) が構成されます。従来、iOS SDK では Apple が生成した IDFV 値と同じデバイス ID が割り当てられていました。iOS アプリでこの機能がデフォルトで有効になっている場合、SDK を介して作成されたすべての新規ユーザーに、UUID と同じデバイス ID が割り当てられます。
 

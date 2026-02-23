@@ -1,7 +1,7 @@
 ---
 page_order: 4
 nav_title: Historias push
-article_title: Configuración de historias push para el SDK de Braze
+article_title: Configurar historias push para el SDK de Braze
 channel:
   - push notifications
 ---

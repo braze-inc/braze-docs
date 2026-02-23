@@ -1,28 +1,28 @@
 ---
-nav_title: Matriz de objetos
-article_title: Matriz de objetos
+nav_title: Vetor de objetos
+article_title: Vetor de objetos
 alias: "/array_of_objects/"
 page_order: 0
 page_type: reference
-description: "Este artigo de referência aborda o uso de uma matriz de objetos como um tipo de dados para atributos personalizados, incluindo limitações e exemplos de uso." 
+description: "Este artigo de referência aborda o uso de um vetor de objetos como um tipo de dados para atributos personalizados, incluindo limitações e exemplos de uso." 
 ---
 
-# Matriz de objetos
+# Vetor de objetos
 
-> Esta página aborda como usar uma matriz de objetos para agrupar atributos relacionados. Por exemplo, você pode ter um grupo de objetos de estimação, objetos de música e objetos de conta que pertencem a um usuário. Essas matrizes de objetos podem ser usadas para personalizar suas mensagens com o Liquid ou criar segmentos de público-alvo se algum elemento de um objeto corresponder aos critérios.
+> Esta página aborda como usar um vetor de objetos para agrupar atribuições relacionadas. Por exemplo, você pode ter um grupo de objetos de estimação, objetos de música e objetos de conta que pertencem a um usuário. Esses vetores de objetos podem ser usados para personalizar o envio de mensagens com o Liquid ou criar segmentos de público se algum elemento de um objeto corresponder aos critérios.
 
 {% multi_lang_include nested_attribute_objects/supported_data_types.md %}
 
 ## Limitações
 
-- As matrizes de objetos são destinadas a atributos personalizados enviados por meio da API. Não há suporte para uploads de CSV. Isso ocorre porque as vírgulas no arquivo CSV serão interpretadas como um separador de coluna, e as vírgulas nos valores causarão erros de análise. 
-- As matrizes de objetos não têm limite para o número de itens, mas têm um tamanho máximo de 100 KB.
-- Nem todos os Braze Partners suportam matrizes de objetos. Consulte a [documentação do parceiro]({{site.baseurl}}/partners/home) para confirmar se a integração é compatível com esse recurso.
+- Os vetores de objetos destinam-se a atributos personalizados enviados por meio da API. Não há suporte para fazer upload de CSV. Isso ocorre porque as vírgulas no arquivo CSV serão interpretadas como um separador de coluna, e as vírgulas nos valores causarão erros de análise. 
+- Os vetores de objetos não têm limite para o número de itens, mas têm um tamanho máximo de 100 KB.
+- Nem todos os Braze Partners suportam vetores de objetos. Consulte a [documentação do parceiro]({{site.baseurl}}/partners/home) para confirmar se a integração suporta esse recurso.
 
-A atualização ou remoção de itens em uma matriz requer a identificação do item por chave e valor, portanto, considere incluir um identificador exclusivo para cada item da matriz. A exclusividade tem escopo apenas para a matriz e é útil se você quiser atualizar e remover objetos específicos da matriz. Isso não é aplicado pelo Braze.
+A atualização ou remoção de itens em uma matriz exige a identificação do item por chave e valor, portanto, considere a inclusão de um identificador exclusivo para cada item da matriz. A exclusividade tem escopo apenas para o vetor e é útil se você quiser atualizar e remover objetos específicos do vetor. Isso não é aplicado pela Braze.
 
 {% alert tip %}
-Para obter mais informações sobre o uso de matrizes de objetos para objetos de atributos do usuário, consulte [Objeto de atributos do usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+Para saber mais sobre o uso de vetores de objetos para objetos de atributos do usuário, consulte [Objeto de atributos do usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 {% endalert %}
 
 ## Exemplo de API
@@ -30,7 +30,7 @@ Para obter mais informações sobre o uso de matrizes de objetos para objetos de
 {% tabs local %}
 {% tab Create %}
 
-A seguir, um exemplo de `/users/track` com uma matriz `pets`. Para capturar as propriedades dos animais de estimação, envie uma solicitação de API que liste `pets` como uma matriz de objetos. Observe que cada objeto recebeu um `id` exclusivo que pode ser consultado posteriormente ao fazer atualizações.
+A seguir, um exemplo de `/users/track` com uma matriz `pets`. Para capturar as propriedades dos animais de estimação, envie uma solicitação de API que liste `pets` como um vetor de objetos. Note que foi atribuído a cada objeto um endereço `id` exclusivo que pode ser consultado posteriormente ao fazer atualizações.
 
 ```json
 {
@@ -58,7 +58,7 @@ A seguir, um exemplo de `/users/track` com uma matriz `pets`. Para capturar as p
 {% endtab %}
 {% tab Add %}
 
-Adicione outro item à matriz usando o operador `$add`. O exemplo a seguir mostra a adição de mais três objetos pet à matriz `pets` do usuário.
+Adicione outro item à matriz usando o operador `$add`. O exemplo a seguir mostra a adição de mais três objetos pet ao vetor `pets` do usuário.
 
 ```json
 {
@@ -94,9 +94,9 @@ Adicione outro item à matriz usando o operador `$add`. O exemplo a seguir mostr
 {% endtab %}
 {% tab Update %}
 
-Atualize os valores de objetos específicos em uma matriz usando o parâmetro `_merge_objects` e o operador `$update`. Semelhante às atualizações de objetos [de atributos personalizados aninhados]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) simples, isso executa uma mesclagem profunda.
+Atualize os valores de objetos específicos em um vetor de objetos usando o parâmetro `_merge_objects` e o operador `$update`. Semelhante às atualizações de objetos simples [de atributos personalizados aninhados]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body), essa ação realiza uma mesclagem profunda.
 
-Observe que o site `$update` não pode ser usado para remover uma propriedade aninhada de um objeto dentro de uma matriz. Para fazer isso, você precisará remover todo o item da matriz e, em seguida, adicionar o objeto sem essa chave específica (usando uma combinação de `$remove` e `$add`).
+Observe que o site `$update` não pode ser usado para remover uma propriedade aninhada de um objeto dentro de um vetor de objeto. Para fazer isso, você precisará remover todo o item do vetor e, em seguida, adicionar o objeto sem essa chave específica (usando uma combinação de `$remove` e `$add`).
 
 O exemplo a seguir mostra a atualização da propriedade `breed` para `goldfish` para o objeto com um `id` de `4`. Esse exemplo de solicitação também atualiza o objeto com `id` igual a `5` com um novo `name` de `Annette`. Como o parâmetro `_merge_objects` está definido como `true`, todos os outros campos desses dois objetos permanecem iguais.
 
@@ -136,9 +136,9 @@ Você deve definir `_merge_objects` como verdadeiro, ou seus objetos serão subs
 {% endtab %}
 {% tab Remove %}
 
-Remova objetos de uma matriz usando o operador `$remove` em combinação com uma chave correspondente (`$identifier_key`) e um valor (`$identifier_value`).
+Remova objetos de um vetor usando o operador `$remove` em combinação com uma chave correspondente (`$identifier_key`) e um valor (`$identifier_value`).
 
-O exemplo a seguir mostra a remoção de qualquer objeto da matriz `pets` que tenha um `id` com o valor `1`, um `id` com o valor `2` e um `type` com o valor `dog`. Se houver vários objetos com o valor `type` de `dog`, todos os objetos correspondentes serão removidos.
+O exemplo a seguir mostra a remoção de qualquer objeto do vetor `pets` que tenha um `id` com o valor `1`, um `id` com o valor `2` e um `type` com o valor `dog`. Se houver vários objetos com o valor `type` de `dog`, todos os objetos correspondentes serão removidos.
 
 ```json
 {
@@ -172,7 +172,7 @@ O exemplo a seguir mostra a remoção de qualquer objeto da matriz `pets` que te
 
 ### Carimbos de data/hora
 
-Ao incluir campos como carimbos de data/hora em uma matriz de objetos, use o formato `$time` em vez de strings simples ou inteiros de época do Unix.
+Ao incluir campos como carimbos de data/hora em um vetor de objetos, use o formato `$time` em vez de strings simples ou inteiros de época do Unix.
 
 ```json
 {
@@ -194,7 +194,7 @@ Ao incluir campos como carimbos de data/hora em uma matriz de objetos, use o for
 ```
 
 {% alert tip %}
-Para obter mais informações, consulte [Atributos personalizados aninhados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
+Para saber mais, consulte [Atributos personalizados aninhados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
 {% endalert %}
 
 ## Exemplo de SDK
@@ -505,9 +505,9 @@ braze.getUser().setCustomUserAttribute("pets", json, true);
 {% endtab %}
 {% endtabs %}
 
-## Modelo líquido
+## Modelos Liquid
 
-Você pode usar essa matriz `pets` para personalizar uma mensagem. O exemplo de modelo do Liquid a seguir mostra como fazer referência às propriedades do objeto de atributo personalizado salvas da solicitação de API anterior e usá-las em suas mensagens.
+Você pode usar essa matriz `pets` para personalizar uma mensagem. O exemplo de modelo do Liquid a seguir mostra como fazer referência às propriedades do objeto de atributo personalizado salvas na solicitação anterior da API e usá-las no envio de mensagens.
 
 {% raw %}
 ```liquid
@@ -523,25 +523,25 @@ Nesse cenário, você pode usar o Liquid para percorrer a matriz `pets` e imprim
 
 ## Segmentação
 
-Ao segmentar usuários com base em matrizes de objetos, um usuário se qualificará para o segmento se qualquer objeto da matriz corresponder aos critérios. 
+Ao segmentar usuários com base em vetores de objetos, um usuário se qualificará para o segmento se qualquer objeto do vetor corresponder aos critérios. 
 
-Crie um novo segmento e selecione **Nested Custom Attribute (Atributo personalizado aninhado** ) como seu filtro. Em seguida, procure e selecione o nome de sua matriz de objetos.
+Crie um novo segmento e selecione **Atributo personalizado aninhado** como seu filtro. Em seguida, procure e selecione o nome de seu vetor de objetos.
 
-\![Filtrar por matriz de objetos.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
+![Filtrar por vetor de objetos.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
 
-Use a notação de ponto para especificar qual campo da matriz de objetos você deseja usar. Inicie o campo de texto com um conjunto vazio de colchetes `[]` para informar ao Braze que você está procurando dentro de uma matriz de objetos. Depois disso, adicione um ponto `.`, seguido do nome do campo que você deseja usar.
+Use a notação de ponto para especificar qual campo do vetor de objetos você deseja usar. Inicie o campo de texto com um conjunto vazio de colchetes `[]` para informar ao Braze que você está procurando dentro de um vetor de objetos. Depois disso, adicione um ponto `.`, seguido do nome do campo que você deseja usar.
 
-Por exemplo, se você quiser filtrar a matriz de objetos `pets` com base no campo `type`, digite `[].type` e escolha o tipo de animal de estimação a ser filtrado, como `snake`.
+Por exemplo, se você quiser filtrar o vetor de objetos `pets` com base no campo `type`, digite `[].type` e escolha o tipo de animal de estimação a ser filtrado, como `snake`.
 
-\![Filtrar por tipo de animal de estimação igual a cobra.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
+![Filtrar por tipo de animal de estimação igual a cobra.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
 
 Ou você pode filtrar por animais de estimação que tenham um `type` de `dog`. Aqui, um usuário tem pelo menos um cachorro, portanto, ele se qualifica para o segmento de "qualquer usuário que tenha pelo menos um animal de estimação do tipo cachorro".
 
-\![Filtrar por tipo de animal de estimação igual a cachorro.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
+![Filtrar por tipo de animal de estimação igual a cachorro.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
 ### Níveis de aninhamento
 
-Você pode criar um segmento com até um nível de aninhamento de matriz (matriz dentro de outra matriz). Por exemplo, considerando os atributos a seguir, você pode criar um segmento para `pets[].name` contains `Gus`, mas não pode criar um segmento para `pets[].nicknames[]` contains `Gugu`.
+Você pode criar um segmento com até um nível de aninhamento de matriz (matriz dentro de outra matriz). Por exemplo, dadas as seguintes atribuições, você pode criar um segmento para `pets[].name` contém `Gus`, mas não pode criar um segmento para `pets[].nicknames[]` contém `Gugu`.
 
 {% raw %}
 ```json
@@ -579,12 +579,12 @@ Você pode criar um segmento com até um nível de aninhamento de matriz (matriz
 
 ## Pontos de dados
 
-Os pontos de dados são registrados de forma diferente, dependendo se você cria, atualiza ou remove uma propriedade.
+Os pontos de dados são registrados de forma diferente, dependendo da criação, atualização ou remoção de uma propriedade.
 
 {% tabs local %}
 {% tab Create %}
 
-A criação de uma nova matriz registra um ponto de dados para cada atributo em um objeto. Esse exemplo custa oito pontos de dados - cada objeto pet tem quatro atributos e há dois objetos.
+A criação de um novo vetor registra um ponto de dados para cada atributo em um objeto. Este exemplo custa oito pontos de dados – cada objeto pet tem quatro atribuições e há dois objetos.
 
 ```json
 {
@@ -645,7 +645,7 @@ A atualização de uma matriz existente registra um ponto de dados para cada pro
 {% endtab %}
 {% tab Remove %}
 
-A remoção de um objeto de uma matriz registra um ponto de dados para cada critério de remoção enviado. Esse exemplo custa três pontos de dados, embora você possa estar removendo vários cães com essa declaração.
+A remoção de um objeto de um vetor registra um ponto de dados para cada critério de remoção enviado. Esse exemplo custa três pontos de dados, embora você possa estar removendo vários cães com essa declaração.
 
 ```json
 {

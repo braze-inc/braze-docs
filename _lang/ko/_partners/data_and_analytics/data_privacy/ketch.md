@@ -44,9 +44,9 @@ Looking for guidance on creating subscription groups? Check out our articles for
 2. Click **Create New Subscription** to create a new topic. Each subscription will have a name and a code.
 3. Add the channels for sending your subscription topics. Each channel will show in the marketing preference center for your users. You can also add the details of how you want the Ketch preference center to orchestrate a particular opt-in or opt-out signal.
 4. Select the Braze connection you would like to use to orchestrate the opt-in and opt-out signals.
-5. Enter the Braze `subscription_group_id` for the subscription group to which you want to send the Ketch user preferences.
+5. Ketch 사용자 환경설정을 보낼 구독 그룹에 대한 Braze `subscription_group_id`를 입력합니다.
 
-![Braze Subscription Group ID.]({% image_buster /assets/img/ketch/ketch1.png %})
+![Braze 정기구독 그룹 ID.]({% image_buster /assets/img/ketch/ketch1.png %})
 
 {% alert note %}
 In order to collect and orchestrate user opt-in and opt-out signals, identities must be properly configured. Ketch recommends configuring email as the identifier to orchestrate user preference signals for this integration.
@@ -55,7 +55,7 @@ In order to collect and orchestrate user opt-in and opt-out signals, identities 
 
 ### Step 3: Configure identities
 
-A user can only see the marketing preference center when Ketch can confirm that user's marketing preference identity. If Ketch cannot capture the user's identity properly, then the marketing preferences page will not display to that user since Ketch is be unable to manage their user preferences.
+사용자는 Ketch가 해당 사용자의 마케팅 선호도를 확인할 수 있는 경우에만 마케팅 선호도 센터를 볼 수 있습니다. Ketch가 사용자의 신원을 제대로 파악할 수 없는 경우 Ketch가 사용자 환경설정을 관리할 수 없기 때문에 해당 사용자에게 마케팅 환경설정 페이지가 표시되지 않습니다.
 
 1. To configure the marketing preference identity, go to the **Settings** page in Ketch, and click  **Identity space**. You will need to either create a new identity space or edit an existing identity space to assign that identity space as the marketing preference identity. Check that the Ketch tag deployed on the property properly captures that identity space.
 2. Go to **Experience Server** > **Properties**, and edit the desired property. Under the data layer for that property, make sure to enable the custom identity space. Then, configure how the marketing preference identity is captured on this site.

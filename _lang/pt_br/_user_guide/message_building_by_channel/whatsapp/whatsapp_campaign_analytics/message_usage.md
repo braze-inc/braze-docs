@@ -1,9 +1,9 @@
 ---
 nav_title: Painel de uso de mensagens
-article_title: Painel de uso de mensagens
+article_title: Painel de Uso de Mensagens
 page_order: 0
 page_type: reference
-description: "Este artigo de referência aborda o painel Message Usage (Uso de mensagens), no qual você pode visualizar insights de autoatendimento sobre o uso de crédito do SMS e do WhatsApp."
+description: "Este artigo de referência aborda o dashboard Uso de mensagens, onde é possível visualizar insights de autoatendimento sobre o uso de créditos de SMS e WhatsApp."
 tool: Dashboard
 ---
 

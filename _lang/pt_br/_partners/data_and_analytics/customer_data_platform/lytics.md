@@ -68,7 +68,7 @@ No prompt **Configure Job** (Configurar trabalho), forneça um rótulo e uma des
 Por fim, escolha a opção preferível para a caixa de seleção **Existing Users (Usuários existentes** ). Deixar essa caixa marcada adicionará usuários que já existem no público selecionado do Lytics. Se desmarcada, os usuários só serão exportados para o Braze quando entrarem ou saírem do público após o início do fluxo de trabalho.
 
 {% alert note %}
-Ao marcar essa caixa, todos os usuários existentes no público selecionado serão empurrados para o Braze. Isso resultará na ocorrência de um ponto de dados por usuário e por público para a sincronização inicial.
+Ao marcar essa caixa, todos os usuários existentes no público selecionado serão empurrados para o Braze. Se o preço do Braze incluir pontos de dados, monitore o uso de pontos de dados adequadamente.
 {% endalert %}
 
 Clique em **Complete (Concluir** ) quando terminar para iniciar a exportação e salvar.

@@ -2,7 +2,7 @@ Um die Genauigkeit Ihres Modells zu messen, zeigt Ihnen die Metrik für _die Vor
 
 Die Vorhersage wird alle zwei Wochen erneut trainiert und zusammen mit der Metrik für _die Vorhersagequalität_ aktualisiert, damit Ihre Vorhersagen immer auf dem neuesten Stand des Nutzerverhaltens sind. Außerdem werden jedes Mal die Vorhersagen der letzten zwei Wochen mit den tatsächlichen Nutzerergebnissen verglichen. Die _Vorhersagequalität_ wird dann anhand dieser realen Ergebnisse (und nicht anhand von Schätzungen) berechnet. Dabei handelt es sich um einen automatischen Backtest (d.h. das Testen eines Vorhersagemodells anhand historischer Daten), um sicherzustellen, dass die Vorhersage in realen Szenarien korrekt ist. Das letzte Mal, dass diese Umschulung und das Backtesting stattgefunden haben, wird auf der Seite **Prognosen** und auf der Analyseseite einer einzelnen Prognose angezeigt. Auch bei einer Vorhersage wird dieser Backtest einmal nach der Erstellung durchgeführt. Auf diese Weise können Sie sich der Genauigkeit Ihrer individuellen Vorhersage sicher sein, selbst mit der kostenlosen Version der Funktion.
 
-{% details Beispiel für die Qualität der Prognosen %}
+{% details Prediction quality example %}
 
 Wenn beispielsweise 20 % Ihrer Nutzer:innen im Durchschnitt abwandern und Sie eine zufällige Teilmenge von 20 % Ihrer Nutzer:innen auswählen und diese nach dem Zufallsprinzip als abgewandert bezeichnen (unabhängig davon, ob sie es wirklich sind oder nicht), werden Sie voraussichtlich nur 20 % der tatsächlichen Abgewanderten korrekt identifizieren. Das ist reine Spekulation. Wenn das Modell nur so gut funktionieren würde, wäre der Auftrieb in diesem Fall 1.
 

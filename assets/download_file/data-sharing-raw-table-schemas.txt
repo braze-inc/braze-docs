@@ -98,7 +98,7 @@ USERS_BEHAVIORS_CUSTOMEVENT_SHARED: when a user performs a custom event
 	AD_ID (VARCHAR(16777216)): [PII] Advertising identifier
 	AD_ID_TYPE (VARCHAR(16777216)): One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']
 	AD_TRACKING_ENABLED (BOOLEAN): Whether advertising tracking is enabled for the device
-	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
+	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe (set to TIMESTAMP_NTZ(9) when in the AU region)
 
 USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED: When a user triggers a geofenced area (when they enter or exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real time.
 	ID (VARCHAR(16777216)): Globally unique ID for this event

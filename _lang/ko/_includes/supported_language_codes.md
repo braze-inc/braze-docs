@@ -2,7 +2,7 @@
 
 Braze는 몇 가지 예외를 제외하고 [ISO-639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 표준의 대부분의 언어 코드를 지원합니다. 전체 목록은 다음 표를 참조하세요.
 
-| 언어 | 코드 | 
+| Language | 코드 | 
 | -------- | ---- |
 | 영어 | `en` |
 | 아프리칸스어 | `af` |

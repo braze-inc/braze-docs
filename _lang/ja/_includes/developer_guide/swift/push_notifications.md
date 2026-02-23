@@ -360,6 +360,41 @@ BRZCancellable *cancellable = [notifications subscribeToUpdatesWithPayloadTypes:
 `application(_:didFinishLaunchingWithOptions:)` でプッシュ通知サブスクリプションを作成し、アプリが終了状態にある間にエンドユーザーが通知をタップした後にサブスクリプションがトリガーされるようにします。
 {% endalert %}
 
+## フォアグラウンド通知を処理する
+
+デフォルトでは、アプリがフォアグラウンドにあるときにプッシュ通知が届いても、iOSはそれを自動的に表示しない。プッシュ通知をフォアグラウンドで表示し、Braze分析で追跡するには、`UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)` 実装の内部で`handleForegroundNotification(notification:)` メソッドを呼び出す。
+
+### 仕組み
+
+`handleForegroundNotification(notification:)` を呼び出すと、Brazeは通知ペイロードを処理して分析を記録し、ディープリンクやボタンアクションを処理する。実際の表示動作は、完了ハンドラーに渡す`UNNotificationPresentationOptions` によってコントロールされる。
+
+```swift
+import BrazeKit
+import UserNotifications
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+  func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+  ) {
+    // Let Braze process the notification payload
+    if let braze = AppDelegate.braze {
+      braze.notifications.handleForegroundNotification(notification: notification)
+    }
+    
+    // Control how the notification appears in the foreground
+    if #available(iOS 14.0, *) {
+      completionHandler([.banner, .list, .sound])
+    } else {
+      completionHandler([.alert, .sound])
+    }
+  }
+}
+```
+
+完全な例については、Braze Swift SDKリポジトリの[プッシュ通知手動統合サンプルを](https://github.com/braze-inc/braze-swift-sdk/blob/e31907eaa0dbd151dc2e6826de66cc494242ba60/Examples/Swift/Sources/PushNotifications-Manual/AppDelegate.swift#L1-L120)参照。
+
 ## プッシュプライマー {#push-primers}
 
 プッシュプライマーキャンペーンでは、アプリのデバイスでプッシュ通知を有効にするようにユーザーに促します。これは、[ノーコードプッシュプライマー]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)を使用して、SDK のカスタマイズなしで行うことができます。
@@ -401,6 +436,6 @@ Brazeがプッシュ通知を送るとき：
 
 この機能は、プッシュトークンを常に正しいAPN環境にルーティングすることで、ゲートウェイの設定ミスによる失敗を回避し、配信率を向上させる。
 
-#### この機能を無効にできるか？
+#### この機能を無効にすることはできるか？
 
-ダイナミックなAPNゲートウェイ管理はデフォルトでオンになっており、信頼性を向上させる。ゲートウェイの手動選択が必要な特定のユースケースがある場合は、[Brazeサポートに]({{site.baseurl}}/user_guide/administrative/access_braze/support/)連絡すること。
+ダイナミックなAPNゲートウェイ管理はデフォルトでオンになっており、信頼性を向上させる。ゲートウェイを手動で選択する必要がある特定のユースケースがある場合は、[Brazeサポートに]({{site.baseurl}}/user_guide/administrative/access_braze/support/)連絡すること。

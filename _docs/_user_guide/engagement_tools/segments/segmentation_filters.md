@@ -276,7 +276,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Email Available
-    description: Segments your users by whether they have a valid email address, and if they are subscribed or opted-in to email. This filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't doesn't exist for a user, the user is not included.<br><br>Note that if you send a transactional message, users whose "Email Available" is <code>false</code> won't be included in the audience calculation but could still receive a message. However, the audience calculation includes only subscribed or opted-in users. <br><br>For emails where the opt-in status is important, we suggest using the "Email Available" filter instead of the <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address">Email Address</a> filter; the additional criteria can help you target users who truly want to see your messages.
+    description: Segments your users by whether they have a valid email address and whether they are subscribed or opted in to email. This filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't exist for a user, the user is not included.<br><br>Users whose Email Available is <code>false</code> are excluded from the campaign audience and do not receive the email—even if your send settings are configured to send to all users (including unsubscribed users).<br><br>For emails where opt-in status matters, use Email Available instead of <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address">Email Address</a>. The additional criteria help you target users who are eligible to receive email.
     tags:
       - Channel subscription behavior
   - name: Email Opt In Date
@@ -588,7 +588,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: Message Open Likelihood
-    description: Filters your users based on their likelihood to open a message on a specified channel on a scale of 0-100%. Users without sufficient data to measure a likelihood for a channel can be selected using "is blank."<br><br>For email, machine opens are excluded from the likelihood calculation.
+    description: Filters your users based on their <a href="/docs/user_guide/brazeai/intelligence/intelligent_channel/#individual-channels">likelihood to open a message on a specified channel</a> on a scale of 0-100%. Users without sufficient data to measure a likelihood for a channel can be selected using "is blank."<br><br>For email, machine opens are excluded from the likelihood calculation.
     tags:
       - Intelligence and predictive
   - name: Number of Facebook Friends Using App

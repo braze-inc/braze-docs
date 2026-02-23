@@ -3,7 +3,7 @@ nav_title: Dictionnaire de données
 article_title: Dictionnaire de données pour Braze Pilot
 page_order: 3
 page_type: reference
-description: "Cet article de référence couvre brièvement les étapes d'intégration requises de la part de vos ingénieurs ou développeurs."
+description: "Le présent article de référence couvre brièvement les étapes d’intégration dont vos ingénieurs ou développeurs ont besoin."
 ---
 
 # Dictionnaire de données
@@ -13,7 +13,7 @@ description: "Cet article de référence couvre brièvement les étapes d'intég
 ## L'approche des données
 
 L'appli enregistre les attributs et les événements personnalisés typiques du secteur d'activité représenté par la marque fictive. Vous pouvez utiliser ces attributs pour réaliser des démonstrations dans divers cas d'utilisation courants.
-En général, tous les événements et attributs sont précédés d'un code court qui correspond à la simulation d'application responsable des données. Par exemple :
+En général, tous les événements et attributs sont précédés d'un code court qui correspond à la simulation d'application responsable des données. Par exemple :
 
 - Toutes les données enregistrées par l'application de simulation Steppington sont précédées du préfixe `st_`
 - Toutes les données enregistrées par la simulation de l'application PantsLabyrinth sont précédées du préfixe `pl_`
@@ -21,7 +21,7 @@ En général, tous les événements et attributs sont précédés d'un code cour
 
 ## Liste des événements et attributs enregistrés
 
-Le tableau suivant répertorie les événements et les attributs consignés par Braze Pilot.
+Le tableau suivant répertorie les événements et les attributs enregistrés par Braze Pilot.
 
 <style>
 table td {
@@ -66,49 +66,49 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>mc_watched_movie</code></td>
             <td>MovieCanon</td>
             <td>Événement</td>
-            <td><code>titre : chaîne de caractères</code></td>
+            <td><code>title: string</code></td>
             <td>Lorsque l'utilisateur a fini de regarder une vidéo</td>
         </tr>
         <tr>
             <td><code>mc_viewed_movie_page</code></td>
             <td>MovieCanon</td>
             <td>Événement</td>
-            <td><code>titre : chaîne de caractères</code></td>
+            <td><code>title: string</code></td>
             <td>Lorsque l'utilisateur consulte une page de film</td>
         </tr>
         <tr>
             <td><code>pl_viewed_item</code></td>
-            <td>PantalonLabyrinthe</td>
+            <td>PantsLabyrinth</td>
             <td>Événement</td>
-            <td><code>item_name: chaîne de caractères</code></td>
+            <td><code>item_name: string</code></td>
             <td>Lorsque l'utilisateur consulte une page produit</td>
         </tr>
         <tr>
             <td><code>pl_entered_app</code></td>
-            <td>PantalonLabyrinthe</td>
+            <td>PantsLabyrinth</td>
             <td>Événement</td>
             <td></td>
             <td>Lorsque l'utilisateur entre dans l'application PantsLabyrinth</td>
         </tr>
         <tr>
             <td><code>pl_added_item_to_wishlist</code></td>
-            <td>PantalonLabyrinthe</td>
+            <td>PantsLabyrinth</td>
             <td>Événement</td>
-            <td><code>item_name: chaîne de caractères</code></td>
+            <td><code>item_name: string</code></td>
             <td>Lorsque l'utilisateur ajoute un article à sa liste de souhaits</td>
         </tr>
         <tr>
             <td><code>pl_added_item_to_cart</code></td>
-            <td>PantalonLabyrinthe</td>
+            <td>PantsLabyrinth</td>
             <td>Événement</td>
-            <td><code>item_name: chaîne de caractères</code></td>
+            <td><code>item_name: string</code></td>
             <td>Lorsque l'utilisateur ajoute un article à son panier</td>
         </tr>
         <tr>
-            <td><code>&lt;purchase_event></code></td>
-            <td>PantalonLabyrinthe</td>
+            <td><code>&lt;purchase_event&gt;</code></td>
+            <td>PantsLabyrinth</td>
             <td>Événement</td>
-            <td><code>nom : chaîne de caractères</code><br><code>prix : nombre</code></td>
+            <td><code>name: string</code><br><code>price: number</code></td>
             <td>Lorsque l'utilisateur effectue un achat</td>
         </tr>
         <tr>
@@ -122,49 +122,49 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>st_completed_class</code></td>
             <td>Steppington</td>
             <td>Événement</td>
-            <td><code>class_type: chaîne de caractères</code><br><code>calories_burned: nombre</code><br><code>workout_length: nombre</code></td>
+            <td><code>class_type: string</code><br><code>calories_burned: number</code><br><code>workout_length: number</code></td>
             <td>Lorsque l'utilisateur termine une séance d'entraînement</td>
         </tr>
         <tr>
             <td><code>st_viewed_premium_benefit</code></td>
             <td>Steppington</td>
             <td>Événement</td>
-            <td><code>benefit_type: chaîne de caractères</code></td>
+            <td><code>benefit_type: string</code></td>
             <td>Lorsque l'utilisateur visite l'onglet Steppington+ (s'il est activé avec le drapeau de fonctionnalité)</td>
         </tr>
         <tr>
             <td><code>st_viewed_class</code></td>
             <td>Steppington</td>
             <td>Événement</td>
-            <td><code>class_type: chaîne de caractères</code></td>
+            <td><code>class_type: string</code></td>
             <td>Lorsque l'utilisateur visite une page d'entraînement</td>
         </tr>
         <tr>
             <td><code>st_completed_class</code></td>
             <td>Steppington</td>
             <td>Événement</td>
-            <td><code>class_type: chaîne de caractères</code><br><code>calories_burned: nombre</code><br><code>workout_length: nombre</code></td>
+            <td><code>class_type: string</code><br><code>calories_burned: number</code><br><code>workout_length: number</code></td>
             <td>Lorsque l'utilisateur termine une séance d'entraînement</td>
         </tr>
         <tr>
             <td><code>st_most_recent_completed_class</code></td>
             <td>Steppington</td>
             <td>Attribut</td>
-            <td><code>chaîne de caractères</code></td>
+            <td><code>string</code></td>
             <td>Lorsque l'utilisateur termine une séance d'entraînement</td>
         </tr>
         <tr>
             <td><code>st_favorited_class</code></td>
             <td>Steppington</td>
             <td>Événement</td>
-            <td><code>class_type: chaîne de caractères</code></td>
+            <td><code>class_type: string</code></td>
             <td>Lorsque l'utilisateur privilégie une classe</td>
         </tr>
         <tr>
             <td><code>st_unfavorited_class</code></td>
             <td>Steppington</td>
             <td>Événement</td>
-            <td><code>class_type: chaîne de caractères</code></td>
+            <td><code>class_type: string</code></td>
             <td>Lorsque l'utilisateur désapprouve une classe</td>
         </tr>
         <tr>
@@ -178,7 +178,7 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>st_set_goal</code></td>
             <td>Steppington</td>
             <td>Événement</td>
-            <td><code>goal_name: chaîne de caractères</code><br><code>objectif : nombre</code><br><code>unités : chaîne de caractères</code></td>
+            <td><code>goal_name: string</code><br><code>goal: number</code><br><code>units: string</code></td>
             <td>Lorsque l'utilisateur sélectionne le bouton <strong>Démarrer l'essai gratuit</strong>.</td>
         </tr>
     </tbody>

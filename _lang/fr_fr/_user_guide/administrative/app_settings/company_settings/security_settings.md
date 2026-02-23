@@ -10,7 +10,7 @@ description: "Cet article de référence traite des paramètres génériques de 
 
 # Paramètres de sécurité
 
-> En tant qu'administrateur, la sécurité est l'une de vos principales préoccupations. La page **Paramètres de sécurité** peut vous aider à gérer les paramètres de sécurité génériques et inter-entreprises, notamment les règles d'authentification, la liste des adresses IP autorisées et l'authentification à deux facteurs.
+> En tant qu'administrateur, la sécurité est une priorité sur votre liste de préoccupations. La page **Paramètres de sécurité** peut vous aider à gérer les paramètres de sécurité génériques et interentreprises, notamment les règles d'authentification, la liste des adresses IP autorisées et l'authentification à deux facteurs.
 
 Pour accéder à cette page, allez dans **Paramètres** > **Paramètres d'administration** > **Paramètres de sécurité**.
 
@@ -48,11 +48,11 @@ Pour l'[authentification unique (SSO) SAM]({{site.baseurl}}/user_guide/administr
 
 ## Liste des IP autorisées du tableau de bord
 
-Utilisez le champ affiché pour autoriser des adresses IP spécifiques et des sous-réseaux à partir desquels les utilisateurs peuvent se connecter à votre compte (par exemple, depuis un réseau d'entreprise ou un VPN). Spécifiez les adresses IP et les sous-réseaux CIDR dans une liste séparée par des virgules. Si elle n'est pas spécifiée, les utilisateurs peuvent se connecter à partir de n'importe quelle adresse IP.
+Utilisez le champ affiché pour autoriser des adresses IP spécifiques et des sous-réseaux à partir desquels les utilisateurs peuvent se connecter à votre compte (par exemple, depuis un réseau d'entreprise ou un VPN). Spécifiez les adresses IP et les sous-réseaux CIDR dans une liste séparée par des virgules. S'il n'est pas spécifié, les utilisateurs peuvent se connecter à partir de n'importe quelle adresse IP.
 
 ## Authentification à deux facteurs (2FA)
 
-L'authentification à deux facteurs est requise pour tous les utilisateurs de Braze. Il ajoute un deuxième niveau de vérification d'identité à une connexion de compte, la rendant plus sécurisée qu'un simple nom d'utilisateur et mot de passe. Si votre tableau de bord ne peut pas prendre en charge l'authentification à deux facteurs, contactez votre gestionnaire du succès des clients. 
+L'authentification à deux facteurs est requise pour tous les utilisateurs de l'entreprise. Il ajoute un deuxième niveau de vérification d'identité à une connexion de compte, la rendant plus sécurisée qu'un simple nom d'utilisateur et mot de passe. Si votre tableau de bord ne peut pas prendre en charge l'authentification à deux facteurs, contactez votre gestionnaire du succès des clients. 
 
 Lorsque l'authentification à deux facteurs est activée :
 
@@ -85,7 +85,7 @@ Une réinitialisation peut résoudre des problèmes d'authentification courants 
 
 ### Exigences pour le 2FA au niveau de l'entreprise
 
-Tout d'abord, vérifiez si l'authentification **à deux facteurs** est activée pour votre tableau de bord en vous rendant dans **Paramètres de l'entreprise** > **Paramètres de sécurité** > **Authentification à deux facteurs**. Si le basculeur est gris, l'option 2FA n'a pas été activée pour votre entreprise et n'est pas obligatoire pour tous les utilisateurs du tableau de bord.
+Tout d'abord, vérifiez si l'authentification **à deux facteurs** est activée pour votre tableau de bord en vous rendant dans **Paramètres de l'entreprise** > **Paramètres de sécurité** > **Authentification à deux facteurs**. Si le basculeur est gris, l'option 2FA n'a pas été activée pour votre entreprise et n'est pas obligatoire pour tous les utilisateurs de l'entreprise.
 
 #### Options pour l'utilisateur lorsque le 2FA n'est pas obligatoire
 
@@ -96,7 +96,7 @@ Si le 2FA n'est pas appliqué au niveau de l'entreprise, les utilisateurs indivi
 Si le 2FA est appliqué au niveau de l'entreprise, les utilisateurs qui ne le configurent pas sur leurs propres comptes lors de la connexion seront bloqués hors du tableau de bord. Les utilisateurs doivent terminer la configuration de 2FA pour conserver l'accès.
 
 {% alert important %}
-Le 2FA est requis pour tous les utilisateurs de Braze uniquement si l'authentification unique (SSO) n'est pas activée. Si le SSO est utilisé, il n'est pas nécessaire d'appliquer le 2FA au niveau de l'entreprise.
+Le 2FA est requis pour tous les utilisateurs de l'entreprise uniquement si l'authentification unique (SSO) n'est pas activée. Si le SSO est utilisé, il n'est pas nécessaire d'appliquer le 2FA au niveau de l'entreprise.
 {% endalert %}
 
 ## Mise en place de l'authentification à deux facteurs (2FA)
@@ -141,9 +141,11 @@ Pour télécharger ce rapport, procédez comme suit :
 
 1. Allez dans **Paramètres** > **Paramètres d'administration**.
 2. Sélectionnez l'onglet **Paramètres de sécurité** et accédez à la section **Téléchargement des événements de sécurité**.
-2. Sélectionnez **Télécharger le rapport**. 
+3. Sélectionnez **Télécharger le rapport**. 
 
-Ce rapport contient uniquement les 10 000 événements de sécurité les plus récents pour votre compte. Si vous avez besoin de données d’événements spécifiques, contactez l’assistance technique.
+Ce rapport manuel ne contient que les 10 000 événements de sécurité les plus récents pour votre compte.
+
+Pour exporter des événements de sécurité vers Amazon S3 sans cette limite de lignes, voir [Exportation d'événements de sécurité avec Amazon S3]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/).
 
 {% details Reported security events %}
 ### Identifiant et compte
@@ -204,7 +206,7 @@ Canvas
 - Teams non archivés
 - Groupe d'applications créé Jeu de permissions
 - Groupe d'applications modifié (App Group Permission Set)
-- Suppression des autorisations du groupe d'applications
+- Suppression du jeu de permissions du groupe d'applications
 - Rôle personnalisé créé
 - Mise à jour du rôle personnalisé
 - Rôle personnalisé supprimé
@@ -260,7 +262,7 @@ Suppression de l'identifiant de poussée
 
 ## Affichage des données d'identification {#view-pii}
 
-L'autorisation **Afficher les IIP** n'est accessible qu'à quelques utilisateurs Braze sélectionnés. Par défaut, tous les administrateurs ont l'autorisation de **voir les informations confidentielles** activée dans les permissions de l'utilisateur. Cela signifie qu'ils peuvent voir tous les attributs standard et personnalisés que votre entreprise a définis comme étant des IIP dans l'ensemble du tableau de bord. Lorsque cette autorisation est désactivée pour les utilisateurs, ces derniers ne pourront voir aucun de ces attributs.
+L'autorisation de **consulter les IIP** n'est accessible qu'à quelques utilisateurs sélectionnés de l'entreprise. Par défaut, tous les administrateurs ont l'autorisation de **voir les informations confidentielles** activée dans les permissions de l'utilisateur. Cela signifie qu'ils peuvent voir tous les attributs standard et personnalisés que votre entreprise a définis comme étant des IIP dans l'ensemble du tableau de bord. Lorsque cette autorisation est désactivée pour les utilisateurs, ces derniers ne pourront voir aucun de ces attributs.
 
 {% alert note %}
 Vous avez besoin de l'autorisation **Voir les DPI** pour utiliser le [générateur de requêtes]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/), car il permet d'accéder directement à certaines données des clients.
@@ -271,12 +273,12 @@ Pour connaître les possibilités existantes en matière de droits d'équipe, re
 ### Définition des données d'identification
 
 {% alert important %}
-La sélection et la définition de certains champs en tant que champs PII affectent uniquement ce que les utilisateurs peuvent voir sur le tableau de bord de Braze et n'ont pas d'impact sur la manière dont les données de l'utilisateur final dans ces champs PII sont traitées.<br><br>Consultez votre équipe juridique pour aligner les paramètres de votre tableau de bord sur les réglementations et politiques de confidentialité applicables à votre entreprise, y compris celles relatives à la [conservation des données]({{site.baseurl}}/data_retention/).
+La sélection et la définition de certains champs en tant que champs PII affectent uniquement ce que les utilisateurs peuvent voir sur le tableau de bord de Braze et n'ont aucune incidence sur la manière dont les données de l'utilisateur final dans ces champs PII sont traitées.<br><br>Consultez votre équipe juridique pour aligner les paramètres de votre tableau de bord sur les réglementations et politiques de confidentialité applicables à votre entreprise, y compris celles relatives à la [conservation des données]({{site.baseurl}}/data_retention/).
 {% endalert %}
 
 Vous pouvez sélectionner les champs que votre entreprise désigne comme IIP dans le tableau de bord. Pour ce faire, allez dans **Paramètres de l'entreprise** > **Paramètres administratifs** > **Paramètres de sécurité**.
 
-Les attributs suivants peuvent être désignés comme DPI et cachés aux utilisateurs de Braze qui ne disposent pas des autorisations **Afficher les DPI**.
+Les attributs suivants peuvent être désignés comme IIP et cachés aux utilisateurs de l'entreprise qui n'ont pas l'autorisation d' **afficher les IIP**.
 
 #### Attributs potentiels des IIP
 
@@ -287,7 +289,7 @@ Les attributs suivants peuvent être désignés comme DPI et cachés aux utilisa
 
 ### Zones restreintes
 
-Ce qui suit suppose que tous les champs sont définis comme des IIP et que les utilisateurs mentionnés sont ceux qui utilisent la plateforme de Braze. En outre, les attributs "précédents" sont ceux qui figurent dans le tableau des [attributs des IIP potentielles](#potential-pii-attributes). Le fait de retirer à un utilisateur les autorisations relatives aux IPI peut avoir un impact sur la facilité d'utilisation au-delà des domaines énumérés ci-dessus.
+Ce qui suit suppose que tous les champs sont définis comme des IIP et que les utilisateurs mentionnés sont des utilisateurs de l'entreprise qui utilisent la plateforme Braze. En outre, les attributs "précédents" sont ceux qui figurent dans le tableau des [attributs des IIP potentielles](#potential-pii-attributes). Le fait de retirer à un utilisateur les autorisations relatives aux IPI peut avoir un impact sur la facilité d'utilisation au-delà des domaines énumérés ci-dessus.
 
 | Navigation sur le tableau de bord | Résultat | Remarques |
 | -------------------- | ------ | ----- |
@@ -306,7 +308,7 @@ Lors de la prévisualisation d'un message, l'autorisation **Voir les IIP** n'est
 
 Ce paramètre vous permet de définir des préférences pour que Braze supprime certains champs lors du processus de suppression d'un utilisateur dans le cadre d'un événement. Ces préférences n'ont d'impact que sur les données des utilisateurs que Braze a supprimés. 
 
-Lorsqu'un utilisateur est supprimé, Braze supprime toutes les IPI des données d'événement mais conserve les données anonymes à des fins d'analyse/analytique. Certains champs définis par l'utilisateur peuvent contenir des IIP si vous envoyez des informations sur les utilisateurs finaux à Braze. Si ces champs contiennent des IPI, vous pouvez opter pour la suppression des données lorsque Braze rend anonymes les données d'événement pour les utilisateurs supprimés ; si les champs ne contiennent pas d'IPI, vous pouvez les conserver à des fins d'analyse.
+Lorsqu'un utilisateur est supprimé, Braze supprime toutes les IPI des données d'événement mais conserve les données anonymes à des fins d'analyse/analytique. Certains champs définis par l'utilisateur peuvent contenir des IIP si vous envoyez des informations sur les utilisateurs finaux à Braze. Si ces champs contiennent des IPI, vous pouvez opter pour la suppression des données lorsque Braze anonymise les données d'événement pour les utilisateurs supprimés ; si les champs ne contiennent pas d'IPI, vous pouvez les conserver à des fins d'analyse.
 
 Vous êtes responsable de déterminer les préférences correctes pour votre espace de travail. La meilleure façon de déterminer les paramètres appropriés est de consulter les équipes internes envoyant des données d'événements à Braze et les équipes utilisant des extras de message dans Braze pour confirmer si les champs peuvent contenir des informations personnelles identifiables (PII).  
 
@@ -358,6 +360,6 @@ Si vous rencontrez des problèmes lorsque vous saisissez votre numéro de télé
 
 1. Installez l'application Authy sur votre téléphone et connectez-vous à l'authentificateur Authy.
 2. Entrez votre numéro de téléphone et vérifiez l'application Authy pour tout changement ou notification par SMS.
-3. Si vous ne recevez toujours pas le SMS, essayez d'utiliser une autre connexion réseau, par exemple votre réseau domestique ou un réseau Wi-Fi non professionnel. Les réseaux d'entreprise peuvent avoir des politiques de sécurité qui interfèrent avec la réception/distribution des SMS.
+3. Si vous ne recevez toujours pas le SMS, essayez d'utiliser une autre connexion réseau, comme votre réseau domestique ou un réseau Wi-Fi non professionnel. Les réseaux d'entreprise peuvent avoir des politiques de sécurité qui interfèrent avec la réception/distribution des SMS.
 
 Si les problèmes persistent, supprimez l'ancien profil dans l'appli Authy et scannez à nouveau le code QR pour configurer 2FA. Assurez-vous que vous avez désactivé les bloqueurs de publicité, activé les cookies tiers ou utilisé un autre navigateur avant de tenter à nouveau la configuration.

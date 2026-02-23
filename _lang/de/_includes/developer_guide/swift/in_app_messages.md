@@ -15,7 +15,7 @@ Damit Braze In-App-Nachrichten anzeigen kann, erstellen Sie eine Implementierung
 Beachten Sie, dass Sie die Bibliothek `BrazeUI` importieren müssen, um auf die Klasse `BrazeInAppMessageUI` zuzugreifen.
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.inAppMessagePresenter = BrazeInAppMessageUI()

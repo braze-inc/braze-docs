@@ -2,7 +2,7 @@
 nav_title: Delay 
 article_title: Delay 
 alias: "/delay_step/"
-page_order: 3
+page_order: 8
 page_type: reference
 description: "This reference article covers how to add a delay to your Canvas without needing to add an associated message."
 tool: Canvas
@@ -104,9 +104,7 @@ If you add a Delay component to your Canvas and there are no subsequent steps, a
 
 ### Personalized delays
 
-{% alert important %}
-Personalized delays and extended delays are in early access. Contact your Braze account manager if you're interested in participating in this early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The personalized delays and extended delays feature' %}
 
 Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by. This will override the time of day set in the selected attribute or property. This is useful when applying an offset in days or weeks, and you want users to move forward at a specific time. The time zone comes from the attribute or property, or uses the fallback if none is available. 
 

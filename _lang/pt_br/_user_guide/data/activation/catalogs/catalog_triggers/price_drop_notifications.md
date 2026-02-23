@@ -83,9 +83,9 @@ Aqui está um exemplo de evento personalizado:
 As regras de notificação nestas configurações não substituem as configurações de notificação do canva, como horário de silêncio.
 {% endalert %}
 
-## Usando notificações de queda de preço em um canva
+## Usando notificações de queda de preço em um Canva
 
-Após configurar as notificações de queda de preço em um catálogo, siga estas etapas para usar essas notificações em um canva.
+Após configurar as notificações de queda de preço em um catálogo, siga estas etapas para usar essas notificações para um Canva.
 
 1. Configure uma canva baseada em ação.
 2. Selecione **Executar Evento de Queda de Preço** como o disparar.
@@ -98,7 +98,7 @@ Agora, seus clientes serão notificados quando o preço de um item cair.
 
 Para modelo em detalhes sobre o item do catálogo que teve uma queda de preço, você pode usar a `canvas_entry_properties` Liquid tag para acessar o `item_id`. 
 
-Usar {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} retornará o ID do item que teve a queda de preço. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} retornará o valor do preço do item antes da atualização, e {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} retornará o novo valor do preço após a atualização. 
+Usar {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} retornará o ID do item que teve o preço reduzido. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} retornará o valor do preço do item antes da atualização, e {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} retornará o novo valor do preço após a atualização. 
 
 Use esta Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} no topo da sua mensagem, depois use {%raw%}`{{items[0].<field_name>}}`{%endraw%} para acessar dados sobre esse item ao longo da mensagem.
 

@@ -1,7 +1,7 @@
 ---
 page_order: 2
 nav_title: GIFs einbetten
-article_title: Einbetten von GIFs in In-App-Nachrichten für das Braze SDK
+article_title: GIFs in In-App-Nachrichten für das Braze SDK einbetten
 channel:
   - push notifications
 ---

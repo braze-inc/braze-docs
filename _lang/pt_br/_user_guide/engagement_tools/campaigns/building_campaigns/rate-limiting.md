@@ -27,7 +27,7 @@ A Braze tentará distribuir uniformemente o envio de mensagens ao longo do minut
 
 #### Filtros de segmentos relevantes
 
-A Braze fornece os seguintes filtros para ajudar a limitar a taxa com que seus usuários recebem mensagens:
+A Braze fornece os seguintes filtros para ajudar a limitar a taxa na qual seus usuários recebem mensagens:
 
 - Última interação com mensagem
 - Último recebimento de qualquer mensagem
@@ -39,7 +39,7 @@ A Braze fornece os seguintes filtros para ajudar a limitar a taxa com que seus u
 
 Vamos supor que criamos um segmento chamado "Demonstração de Filtro de Redirecionamento" com um filtro "Último app usado há mais de 7 dias" para segmentar usuários. Esse seria um segmento de reengajamento padrão.
 
-Se você tiver outros segmentos mais direcionados recebendo notificações recentemente, pode não querer que seus usuários sejam segmentados por campanhas mais genéricas direcionadas a esse segmento. Ao adicionar o filtro "Último Push Recebido" a esse segmento, o usuário garantiu que, se tiver recebido outra notificação nas últimas 24 horas, ele sairá desse segmento pelas próximas 24 horas. Se eles ainda atenderem aos outros critérios do segmento 24 horas depois e não tiverem recebido mais notificações, eles voltarão ao segmento.
+Se você tiver outros segmentos mais direcionados recebendo notificações recentemente, pode não querer que seus usuários sejam segmentados por campanhas mais genéricas direcionadas a esse segmento. Ao adicionar o filtro "Último Push Recebido" a este segmento, o usuário garantiu que, se tiver recebido outra notificação nas últimas 24 horas, ele sairá deste segmento pelas próximas 24 horas. Se eles ainda atenderem aos outros critérios do segmento 24 horas depois e não tiverem recebido mais notificações, eles voltarão ao segmento.
 
 ![Um segmento chamado "Demonstração de Filtro de Redirecionamento" com o grupo de filtros "Último app usado há mais de 7 dias".]({% image_buster /assets/img_archive/rate_limit_daily.png %}){: style="max-width:80%;"} 
 
@@ -75,7 +75,7 @@ Ao usar o limite de frequência com um Testes A/B, o limite de frequência não 
 
 ### Limite de frequência da velocidade de entrega
 
-Se você antecipar grandes campanhas gerando um aumento na atividade do usuário e sobrecarregando seus servidores, pode especificar um limite de taxa por minuto para o envio de mensagens, o que significa que a Braze não envia mais do que sua configuração de limite de taxa dentro de um minuto.
+Se você antecipa grandes campanhas gerando um aumento na atividade do usuário e sobrecarregando seus servidores, pode especificar um limite de taxa por minuto para o envio de mensagens, o que significa que a Braze não envia mais do que sua configuração de limite de taxa dentro de um minuto.
 
 Ao direcionar os usuários durante a criação da campanha, é possível navegar até **Públicos-alvo** (para campanhas) ou **Configurações de envio** (para o Canva) para selecionar um limite de frequência (em vários incrementos, de 10 a 500.000 mensagens por minuto).
 
@@ -83,7 +83,7 @@ Observe que as campanhas sem limite de frequência podem exceder esses limites d
 
 #### Exemplo
 
-Se você está tentando enviar 75.000 mensagens com um limite de 10.000 por minuto, a entrega será distribuída ao longo de oito minutos. Sua campanha enviará não mais do que 10.000 mensagens em cada um dos primeiros sete minutos e 5.000 no último minuto.
+Se você está tentando enviar 75.000 mensagens com um limite de frequência de 10.000 por minuto, a entrega será distribuída ao longo de oito minutos. Sua campanha enviará não mais do que 10.000 mensagens em cada um dos primeiros sete minutos e 5.000 no último minuto.
 
 #### Número de envios
 
@@ -99,11 +99,11 @@ Cuidado ao atrasar mensagens sensíveis ao tempo com essa forma de limitação d
 
 Ao definir um limite de velocidade de entrega para uma campanha multicanal ou Canvas, você pode optar por definir um limite de frequência compartilhado ou um limite baseado em canal.
 
-Quando uma campanha multicanal ou Canvas usa um limite de frequência compartilhado, isso significa que o número total de mensagens enviadas por minuto da campanha ou Canvas não excede o limite de frequência. Por exemplo, se seu Canvas tem um limite de 500.000 por minuto e contém etapas de mensagens de e-mail e SMS, a Braze envia um total de 500.000 mensagens por minuto entre e-mail e SMS.
+Quando uma campanha multicanal ou Canvas usa um limite de frequência compartilhado, isso significa que o número total de mensagens enviadas por minuto da campanha ou Canvas não excede o limite de frequência. Por exemplo, se seu Canvas tem um limite de frequência de 500.000 por minuto e contém etapas de mensagens de e-mail e SMS, a Braze envia um total de 500.000 mensagens por minuto entre e-mail e SMS.
 
-![A opção de limitar a taxa na qual a campanha envia, selecionada com 500.000 mensagens por minuto.]({% image_buster /assets/img_archive/multichannel_campaigns_rate_limit.png %}){: style="max-width:50%;"} 
+![A opção de limitar a frequência com que a campanha envia, selecionada com 500.000 mensagens por minuto.]({% image_buster /assets/img_archive/multichannel_campaigns_rate_limit.png %}){: style="max-width:50%;"} 
 
-Quando uma campanha multicanal ou Canvas usa limitação de frequência baseada em canal, o limite de frequência se aplicará a cada um dos canais selecionados. Por exemplo, você pode definir sua campanha ou Canvas para enviar um máximo de 5.000 webhooks e 2.500 mensagens SMS por minuto na campanha ou Canvas.
+Quando uma campanha multicanal ou Canvas usa limitação de frequência baseada em canal, o limite de frequência se aplicará a cada um dos seus canais selecionados. Por exemplo, você pode definir sua campanha ou Canvas para enviar um máximo de 5.000 webhooks e 2.500 mensagens SMS por minuto na campanha ou Canvas.
 
 ![Limites de frequência separados para dois canais, webhook e SMS/MMS/RCS, com 5.000 e 2.500 mensagens por minuto, respectivamente.]({% image_buster /assets/img_archive/channel_rate_limits.png %}){: style="max-width:70%;"}
 
@@ -143,7 +143,7 @@ Algumas notas a serem lembradas ao configurar limites de frequência e qual comp
 
 #### Limite de frequência e novas tentativas do Connected Content
 
-Quando o [Tentativa de Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/) está ativado, a Braze tentará novamente falhas de chamada respeitando o limite de frequência que você definiu para cada reenvio. Vamos considerar o cenário de enviar 75.000 mensagens com um limite de 10.000 por minuto. Imagine que no primeiro minuto, a chamada falha ou é lenta e envia apenas 4.000 mensagens.
+Quando o [retry de Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/) está ativado, o Braze tentará novamente falhas de chamada respeitando o limite de frequência que você definiu para cada reenvio. Vamos considerar o cenário de envio de 75.000 mensagens com um limite de 10.000 por minuto. Imagine que no primeiro minuto, a chamada falha ou é lenta e envia apenas 4.000 mensagens.
 
 Em vez de tentar compensar a postergação e enviar as 6.000 mensagens restantes no segundo minuto ou adicioná-las às 10.000 que já estão programadas para envio, a Braze moverá essas 6.000 mensagens para o "final da fila" e adicionará um minuto, se necessário, ao total de minutos que levaria para enviar sua mensagem.
 
@@ -160,7 +160,15 @@ Em vez de tentar compensar a postergação e enviar as 6.000 mensagens restantes
 | 9      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-As solicitações de Conteúdo Conectado não têm limite de frequência de forma independente e seguirão o limite de frequência do webhook. Isso significa que se houver uma chamada de Conteúdo Conectado para um endpoint único por webhook, você esperaria 5.000 webhooks e também 5.000 chamadas de Conteúdo Conectado por minuto. Note que o cache pode afetar isso e reduzir o número de chamadas de Conteúdo Conectado. Além disso, as tentativas podem aumentar as chamadas de Conteúdo Conectado, então recomendamos verificar se o endpoint de Conteúdo Conectado pode lidar com alguma flutuação aqui.
+As solicitações de Conteúdo Conectado não têm limite de frequência independente e seguirão o limite de frequência do webhook. Isso significa que se houver uma chamada de Conteúdo Conectado para um endpoint único por webhook, você esperaria 5.000 webhooks e também 5.000 chamadas de Conteúdo Conectado por minuto. Note que o cache pode afetar isso e reduzir o número de chamadas de Conteúdo Conectado. Além disso, as tentativas podem aumentar as chamadas de Conteúdo Conectado, então recomendamos verificar se o endpoint de Conteúdo Conectado pode lidar com alguma flutuação aqui.
+
+{% alert note %}
+**Limites de frequência são limites de velocidade e não definem uma velocidade de envio exata.** Geralmente, as mensagens são distribuídas uniformemente dentro de qualquer minuto dado, e na grande maioria dos casos, elas são enviadas na velocidade configurada ou muito próxima dela. Isso nem sempre é o caso—por exemplo, quando as mensagens são muito grandes (como e-mails com muitos Blocos de Conteúdo, tags de Conteúdo Conectado ou tags de itens do Catálogo), ou quando há muitos abortos de Liquid (mensagens abortadas ainda consomem um slot e podem reduzir as taxas de envio efetivas).
+
+Na prática, a taxa de envio sustentada (mensagens concluídas por minuto) pode ser menor do que o limite de taxa configurado devido a tentativas, variabilidade de rede, latência do endpoint downstream e suavização por minuto.
+
+Se você consistentemente vê um rendimento significativamente menor do que o esperado, verifique os tempos de resposta do Conteúdo Conectado, taxas de erro (como `429`) e comportamento de tentativas.
+{% endalert %}
 
 ## Sobre o limite de frequência
 
@@ -178,23 +186,23 @@ Por padrão, o limite de frequência é ativado quando novas campanhas são cria
 
 Esse período de tempo pode ser medido em minutos, dias ou semanas (sete dias), com uma duração máxima de 30 dias.
 
-Cada linha de limites de frequência é conectada usando o operador `AND`, e você pode adicionar até 10 regras por espaço de trabalho. Você pode incluir múltiplos limites para os mesmos tipos de mensagens. Por exemplo, você pode limitar os usuários a não mais do que um push por dia e a não mais do que três pushs por semana. Note que mensagens abortadas não contam para o limite de frequência.
+Cada linha de limites de frequência está conectada usando o operador `AND`, e você pode adicionar até 10 regras por espaço de trabalho. Você pode incluir múltiplos limites para os mesmos tipos de mensagens. Por exemplo, você pode limitar os usuários a não mais do que um push por dia e a não mais do que três pushs por semana. Note que mensagens abortadas não contam para o limite de frequência.
 
-![Seção de limites de frequência com listas de campanhas e Canvases às quais as regras se aplicarão e não se aplicarão.]({% image_buster /assets/img_archive/rate_limiting_overview_2.png %}){: style="max-width:90%;"} 
+![Seção de limite de frequência com listas de campanhas e Canvases às quais as regras se aplicarão e não se aplicarão.]({% image_buster /assets/img_archive/rate_limiting_overview_2.png %}){: style="max-width:90%;"} 
 
-#### Comportamento quando os usuários estão com limite de frequência em uma etapa do Canvas
+#### Comportamento quando os usuários estão com limite de frequência em uma etapa do Canvas.
 
-Se um usuário do Canvas estiver com limite de frequência devido às configurações globais de limite de frequência, então o usuário avançará imediatamente para a próxima etapa do Canvas. O usuário não sairá do Canvas por causa do limite de frequência.
+Se um usuário do Canvas estiver limitado por configurações de limitação de frequência global, o usuário avançará imediatamente para a próxima etapa do Canvas. O usuário não sairá do Canvas por causa do limite de frequência.
 
 ### Regras de entrega
 
-Pode haver algumas campanhas, como mensagens transacionais, que você deseja que sempre cheguem ao usuário, mesmo que ele já tenha atingido seu limite de frequência. Por exemplo, um aplicativo de entrega pode desejar enviar um e-mail ou push quando um item é entregue, independentemente de quantas campanhas o usuário recebeu.
+Pode haver algumas campanhas, como mensagens transacionais, que você deseja que sempre cheguem ao usuário, mesmo que ele já tenha atingido seu limite de frequência. Por exemplo, um aplicativo de entrega pode desejar enviar um e-mail ou push quando um item for entregue, independentemente de quantas campanhas o usuário recebeu.
 
 Se quiser que uma campanha específica substitua as regras de limite de frequência, você poderá configurar isso no dashboard do Braze ao programar a entrega dessa campanha, alternando **o limite de frequência** para **OFF**. 
 
 Depois disso, você será perguntado se ainda deseja que essa campanha conte para o seu limite de frequência. As mensagens que contam para o limite de frequência são incluídas nos cálculos do filtro do Canal inteligente. 
 
-Ao enviar [campanhas de API]({{site.baseurl}}/developer_guide/rest_api/messaging/#messaging), que muitas vezes são transacionais, você terá a capacidade de especificar que uma campanha deve ignorar as regras de limite de frequência definindo `override_frequency_capping` para `true` na solicitação da API.
+Ao enviar [campanhas de API]({{site.baseurl}}/developer_guide/rest_api/messaging/#messaging), que muitas vezes são transacionais, você terá a capacidade de especificar que uma campanha deve ignorar as regras de limitação de frequência definindo `override_frequency_capping` para `true` na solicitação da API.
 
 Por padrão, as novas campanhas e canvas que não obedecerem aos limites de frequência também não contarão para eles. Isso é configurável para cada campanha e Canva.
 
@@ -202,9 +210,9 @@ Por padrão, as novas campanhas e canvas que não obedecerem aos limites de freq
 Esse comportamento altera o comportamento padrão quando você desativa o limite de frequência para uma campanha ou uma tela. As alterações são compatíveis com versões anteriores e não afetam as mensagens que estão ativas no momento.
 {% endalert %}
 
-![Seção de Controles de Entrega com Limite de Frequência ativado.]({% image_buster /assets/img_archive/frequencycappingupdate.png %}){: style="max-width:90%;"} 
+![Seção de Controles de Entrega com Limitação de Frequência ativada.]({% image_buster /assets/img_archive/frequencycappingupdate.png %}){: style="max-width:90%;"} 
 
-Canais diferentes dentro de uma campanha multicanal contam individualmente para o limite de frequência. Por exemplo, se você criar uma campanha multicanal com push e e-mail e tiver o limite de frequência configurado para ambos os canais, então o push conta como uma campanha de push, e a mensagem de e-mail conta como uma campanha de mensagem de e-mail. A campanha também conta como uma "campanha de qualquer tipo." Se os usuários estão limitados a uma campanha de push e uma campanha de e-mail por dia, e um usuário recebe esta campanha multicanal, então eles não estão mais elegíveis para campanhas de push ou e-mail pelo resto do dia (a menos que uma campanha ignore as regras de limite de frequência).
+Canais diferentes dentro de uma campanha multicanal contam individualmente para o limite de frequência. Por exemplo, se você criar uma campanha multicanal com push e e-mail e tiver a limitação de frequência configurada para ambos os canais, então o push conta como uma campanha de push, e a mensagem de e-mail conta como uma campanha de mensagem de e-mail. A campanha também conta como uma "campanha de qualquer tipo." Se os usuários estão limitados a uma campanha de push e uma campanha de e-mail por dia, e um usuário recebe esta campanha multicanal, então eles não estão mais elegíveis para campanhas de push ou e-mail pelo resto do dia (a menos que uma campanha ignore as regras de limitação de frequência).
 
 As mensagens no app e os cartões de conteúdo não são contados como ou para os limites de campanhas ou componentes do Canvas de qualquer tipo.
 
@@ -217,21 +225,21 @@ O limite de frequência global é programado com base no fuso horário do usuár
 {% tabs %}
 {% tab Use case 1 %}
 
-Vamos supor que você defina uma regra de limite de frequência para que seus usuários recebam no máximo três campanhas de notificação por push ou etapas do Canvas por semana de todas as campanhas ou etapas do Canvas.
+Vamos supor que você defina uma regra de limitação de frequência para que seus usuários não recebam mais de três campanhas de notificação por push ou etapas do Canvas por semana de todas as campanhas ou etapas do Canvas.
 
 Se o seu usuário estiver programado para receber três notificações por push, duas mensagens no app e um cartão de conteúdo nesta semana, ele receberá todas essas mensagens.
 
 {% endtab %}
 {% tab Use case 2 %}
 
-Este cenário usa uma regra de limite de frequência para que os usuários recebam no máximo duas campanhas de notificação por push ou etapas do Canvas por semana de todas as campanhas ou etapas do Canvas.
+Este cenário usa uma regra de limitação de frequência para que os usuários não recebam mais de duas campanhas de notificação por push ou etapas do Canvas por semana de todas as campanhas ou etapas do Canvas.
 
 **Quando o seguinte cenário ocorre:**
 
 - Um usuário aciona a mesma campanha `Campaign ABC` três vezes ao longo de uma semana.
 - Esse usuário dispara `Campaign ABC` uma vez na segunda-feira, uma vez na quarta-feira e uma vez na quinta-feira.
 
-![Seção de Limite de Frequência com a regra de enviar no máximo 2 campanhas de notificação por push/etapas do Canvas de todas as campanhas/etapas do Canvas para um usuário a cada 1 semana.]({% image_buster /assets/img/standard_rules_fnfn.png %})
+![Seção de Limitação de Frequência com a regra de enviar não mais do que 2 campanhas de notificação por push/etapas do Canvas de todas as campanhas/etapas do Canvas para um usuário a cada 1 semana.]({% image_buster /assets/img/standard_rules_fnfn.png %})
 
 **Então, o comportamento esperado é esse:**
 
@@ -262,7 +270,7 @@ Os canvas são marcados no nível dos canvas, em vez de serem marcados por compo
 
 #### Regras conflitantes
 
-Quando as regras entram em conflito, a regra de limite de frequência mais restritiva e aplicável é aplicada aos seus usuários. Por exemplo, digamos que você tenha as seguintes regras:
+Quando as regras entram em conflito, a regra de limitação de frequência mais restritiva e aplicável é aplicada aos seus usuários. Por exemplo, digamos que você tenha as seguintes regras:
 
 1. Não mais do que uma campanha de notificação por push ou componente do Canvas por semana de todas as campanhas e componentes do Canvas. <br>**E**
 2. Não mais do que três campanhas de notificação por push ou componentes do Canvas por semana com a tag `promotional`.
@@ -273,7 +281,7 @@ Neste exemplo, seu usuário não receberá mais de uma campanha de notificação
 
 #### Contagem de tags
 
-O limite de frequência por regras de tag é calculado no momento em que uma mensagem é enviada. Isso significa que o limite de frequência por tag só conta as tags que estão atualmente nas campanhas ou Canvas que um usuário recebeu no passado. Não conta as tags que estavam nas campanhas ou Canvases durante o tempo em que foram enviadas, mas que desde então foram removidas. Conta se uma tag for adicionada posteriormente a uma mensagem que um usuário recebeu no passado, mas antes da nova mensagem marcada ser enviada.
+A limitação de frequência pelas regras de tag é calculada no momento em que uma mensagem é enviada. Isso significa que o limite de frequência por tag só conta as tags que estão atualmente nas campanhas ou Canvas que um usuário recebeu no passado. Não conta as tags que estavam nas campanhas ou canvases durante o tempo em que foram enviadas, mas que desde então foram removidas. Conta se uma tag é adicionada posteriormente a uma mensagem que um usuário recebeu no passado, mas antes da nova mensagem marcada ser enviada.
 
 ##### Caso de uso
 
@@ -281,8 +289,8 @@ Considere as seguintes campanhas e o limite de frequência por regra de tag:
 
 **Campanhas**:
 
-- **A campanha A** é uma campanha push com a tag `promotional`. Está programado para ser enviado às 9h na segunda-feira.
-- **A campanha B** é uma campanha push com a tag `promotional`. Está programado para ser enviado às 9h na quarta-feira.
+- **A campanha A** é uma campanha push com a tag `promotional`. Está programado para ser enviado às 9h de segunda-feira.
+- **A campanha B** é uma campanha push com a tag `promotional`. Está programado para ser enviado às 9h de quarta-feira.
 
 **Limite de frequência por regra de tag:**
 
@@ -308,7 +316,7 @@ Como 100 mensagens por canal são mais mensagens do que a maioria das marcas env
 
 Por exemplo, você pode configurar a seguinte regra:
 
-> Não mais do que três campanhas de e-mail ou componentes de canva por semana de todas as campanhas e etapas de canva.
+> Não mais do que três campanhas de e-mail ou componentes de canvas por semana de todas as campanhas e etapas de canvas.
 
-Esta regra determina que nenhum usuário receba mais de 100 e-mails por semana porque, no máximo, os usuários recebem três e-mails por semana de campanhas ou componentes de canva com limitação de frequência ativada.
+Essa regra determina que nenhum usuário receba mais de 100 e-mails por semana porque, no máximo, os usuários recebem três e-mails por semana de campanhas ou componentes de canvas com a limitação de frequência ativada.
 

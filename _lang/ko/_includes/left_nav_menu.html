@@ -11,7 +11,7 @@
 
   </form>
 </div>
-{{%-endunless -%}}
+{%- 끝없는 -%}
 
 <nav class="bd-links navbar navbar-expand-lg navbar-light" id="left_navmenu" aria-label="왼쪽 탐색" title="왼쪽 탐색">
   {%- unless hide_nav_filter -%}
@@ -23,8 +23,8 @@
   <a href="https://learning.braze.com" target="_blank"><div class="nav_bottom_item"><i class="fa fa-flask"></i> Braze Learning </div></a --><a id="status-indicator" href="https://braze.statuspage.io" target="_blank">
     <div class="nav_bottom_item">
 
-      <div class="status-title">{{ site.data.i18n[site.language]['braze_status'] || default: "브레이즈 시스템 상태"}}</div>
-      <div class="color-dot"></div><div class="color-description">{{ site.data.i18n[site.language]['braze_status_check'] || default: "상태 확인 중" }}</div>
+      <div class="status-title">{{ site.data.i18n[site.language]['braze_status'] || 기본값: "BRAZE 시스템 상태"}}</div>
+      <div class="color-dot"></div><div class="color-description">{{ site.data.i18n[site.language]['braze_status_check'] || 기본값: "상태 확인 중" }}</div>
   </div></a>
 </div>
 

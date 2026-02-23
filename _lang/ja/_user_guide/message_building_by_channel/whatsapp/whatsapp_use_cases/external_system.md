@@ -2,7 +2,7 @@
 nav_title: WhatsAppと外部システム
 article_title: BrazeとWhatsAppを外部システムと統合する
 page_order: 2
-description: "この参考記事では、BrazeとWhatsAppを外部のAIやコミュニケーションシステムと統合するためのステップバイステップのガイドを提供する。"
+description: "この参考記事では、BrazeとWhatsAppを外部のAIやコミュニケーションシステムと統合するためのステップバイステップガイドを提供する。"
 page_type: reference
 alias: /whatsapp_external_system_integration/
 channel:
@@ -57,7 +57,7 @@ Brazeと外部のAIやコミュニケーションシステムとの統合は、B
 {% endraw %}
 
 {: start="5"}
-5. キャンペーン作成画面の「**配信スケジュール」**ステップで、配信タイプに**「アクションベース**」を選択し、キャンペーントリガーに「**WhatsApp受信メッセージを送信**」を選択する。
+5. キャンペーン作成画面の**配信スケジュール**ステップで、配信タイプに**「アクションベース**」を選択し、キャンペーントリガーに「**WhatsApp受信メッセージを送信**」を選択する。
 
 ![WhatsApp受信メッセージの送信をトリガーとしたアクションベースの配信。]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
 
@@ -91,7 +91,7 @@ Brazeと外部のAIやコミュニケーションシステムとの統合は、B
 3. [ステップ](#step-2)2のAPIトリガープロパティを使って外部システムのレスポンスを挿入し、このcURLの例のように、認証のためにリクエストヘッダーにAPIキーを含めることを忘れないこと：
 
 {% raw %}
-```json
+```bash
 curl -X POST \
   -H 'Content-Type:application/json' \
   -H 'Authorization: Bearer a valid rest API key' \

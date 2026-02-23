@@ -48,7 +48,7 @@ O Braze rejeita certos caracteres e marca o endereço como inválido. Se um e-ma
 
 Essa validação é uma verificação de sintaxe, não um serviço de validação. Um dos objetivos desse processo é suportar caracteres internacionais (como UTF-8) na parte local do endereço de e-mail.
 
-O Braze valida a sintaxe tanto para a parte local quanto para a parte do host de um endereço de e-mail. A parte local é qualquer coisa antes do asperand (@); a parte do host é qualquer coisa depois. A parte local pode começar e terminar com qualquer caractere permitido, exceto um ponto (.). Esse processo não considera se o domínio tem um servidor MX válido ou se um usuário existe nesse domínio.
+O Braze valida a sintaxe tanto para a parte local quanto para a parte do host de um endereço de e-mail. A parte local é tudo antes do asperand (@); a parte do host é tudo depois. A parte local pode começar e terminar com qualquer caractere permitido, exceto um ponto (.). Esse processo não considera se o domínio tem um servidor MX válido ou se um usuário existe nesse domínio.
 
 {% alert important %}
 Se a parte do domínio contiver caracteres ASCII não padrão, precisará ser [Punycode-encoded](https://www.punycoder.com/) antes de ser fornecida ao Braze.

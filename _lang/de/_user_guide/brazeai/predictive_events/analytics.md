@@ -12,7 +12,7 @@ page_order: 1.3
 
 ## Über prognostische Event-Analytik
 
-Sobald das Training der Vorhersage abgeschlossen und diese Seite gefüllt ist, können Sie mit der Verwendung von [Filtern]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) in Segmenten oder Kampagnen beginnen, um die Ergebnisse des Modells zu nutzen. Wenn Sie Hilfe bei der Entscheidung brauchen, wen Sie ansprechen und warum, kann Ihnen diese Seite auf der Grundlage der historischen Genauigkeit des Modells und Ihrer eigenen Geschäftsziele helfen.
+Sobald das Training der Vorhersage abgeschlossen und diese Seite gefüllt ist, können Sie mit der Verwendung von [Filtern]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) in Segmenten oder Kampagnen beginnen, um die Ergebnisse des Modells zu nutzen. Wenn Sie Hilfe bei der Entscheidung brauchen, wen Sie ansprechen und warum, kann Ihnen diese Seite auf der Grundlage der historischen Genauigkeit des Modells und Ihrer eigenen Geschäftsziele helfen.
 
 Dies sind die Komponenten, aus denen die prognostische Ereignisanalyse besteht:
 
@@ -38,6 +38,19 @@ Im Folgenden sehen Sie, wie ein Benutzer je nach Wahrscheinlichkeitswert eingest
 - **Hoch:** zwischen 75 und 100
 
 Die Punktzahlen und die entsprechenden Kategorien werden entsprechend dem Zeitplan aktualisiert, den Sie auf der Seite **Erstellung der Vorhersage** ausgewählt haben. Die Anzahl der Benutzer mit Wahrscheinlichkeitswerten in jedem der 20 gleichgroßen Bereiche oder in jeder der Wahrscheinlichkeitskategorien wird in der Tabelle oben auf der Seite angezeigt.
+
+### Zugriff auf Nutzer:in-Likelihood-Scores
+
+Um den Wahrscheinlichkeitswert für einen einzelnen Nutzer:innen zu sehen, suchen Sie diesen Nutzer im Dashboard und gehen Sie zu **Engagement** > **Prognosen**, um seinen Wert zu sehen. Wenn Sie auf Bewertungen und Kategorien für viele Nutzer:innen gleichzeitig zugreifen möchten, erstellen Sie ein [Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) mit den Filtern [Ereigniswahrscheinlichkeitsbewertung]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) oder [Ereigniswahrscheinlichkeitskategorie]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-category) und exportieren dann die Nutzer:innen aus diesem Segment. Beim Exportieren können Sie die Wahrscheinlichkeitsbewertungen in die Daten einbeziehen.
+
+{% alert note %}
+Sowohl bei der Prognose von Ereignissen als auch bei der [voraussichtlichen Abwanderung]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) werden Nutzern:innen Punkte zugewiesen, aber es gibt wichtige Unterschiede:<br><br>
+
+- **Voraussagende Ereignisse** (Kauf-Prognosen): Berücksichtigen Sie alle Nutzer:innen in der Zielgruppe für die Prognose, unabhängig davon, ob sie das Zielereignis schon einmal durchgeführt haben. Eine Prognose für den Kauf kann beispielsweise Nutzer:innen identifizieren, die wahrscheinlich ihren ersten Kauf tätigen werden.
+- **Voraussichtliche Abwanderung**: Berücksichtigt nur Nutzer:innen, die das angepasste Event bereits durchgeführt haben. Prognosen zur Abwanderung identifizieren Nutzer:innen, die etwas schon einmal getan haben und wahrscheinlich damit aufhören werden. Ein Nutzer:innen, der sich nie eingeloggt hat, kann nicht als "abgewandert" betrachtet werden, wenn er sich nicht einloggt.
+
+Wenn Sie die Werte für das Abwanderungsrisiko aus einem Segment exportieren, spiegeln diese Werte das Modell für die Abwanderungsprognose wider, das sich von den Modellen für die Prognose von Käufen oder anderen Ereignissen unterscheidet.
+{% endalert %}
 
 ## Geschätzte Genauigkeit {#estimated_results}
 
@@ -74,3 +87,11 @@ Diese Tabelle wird nur aktualisiert, wenn die Vorhersage neu trainiert wird und 
 {% alert note %}
 Die Korrelationsdaten für Vorhersagen werden teilweise ausgeblendet. Um diese Informationen zu erhalten, ist ein Kauf erforderlich. Kontaktieren Sie Ihren Kundenbetreuer für weitere Informationen.
 {% endalert %}
+
+## Fehlersuche
+
+### Keine Prognose erstellen können
+
+Wenn Sie keine Prognose für ein angepasstes Event erstellen können, liegt das möglicherweise an einer zu geringen Stichprobengröße. Braze schätzt die Anzahl der Nutzer:innen, die das Ereignis durchgeführt haben. Wenn nicht genügend Nutzer:innen das Ereignis durchgeführt haben, liefert die Stichprobe möglicherweise nicht genügend Daten, um das Modell zu trainieren. In diesem Fall kann das System auf keine Nutzer:innen extrapolieren und die Erstellung von Prognosen verhindern.
+
+Um eine erfolgreiche Prognose zu erstellen, stellen Sie sicher, dass eine ausreichende Anzahl von Nutzer:innen in Ihrer Zielgruppe das angepasste Event durchgeführt hat. Der genaue Schwellenwert variiert, aber Ereignisse mit sehr geringer Nutzung in Ihrer Nutzer:innen-Basis liefern möglicherweise nicht genügend Daten für ein zuverlässiges Modelltraining.

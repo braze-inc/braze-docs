@@ -10,16 +10,16 @@ As notificações por push são limitadas por taxa, então não tenha medo de en
 
 ### Etapa 2: Ativar push capabilities
 
-No Xcode, acesse a seção **Signing & Capabilities** do direcionamento do app principal e adicione o recurso de notificações por push.
+No Xcode, acesse a seção **Acessando & Capabilities** do direcionamento do aplicativo principal e adicione o recurso de notificações por push.
 
-![A seção "Signing & Capabilities" (Assinatura e recursos) em um projeto Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![A seção "Fazendo login & Capabilities" em um projeto Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ### Etapa 3: Configurar o manuseio do push
 
 Você pode usar o Swift SDK para automatizar o processamento de notificações remotas recebidas do Braze. Essa é a maneira mais simples de lidar com notificações por push e é o método de tratamento recomendado.
 
 {% tabs local %}
-{% tab Automático %}
+{% tab Automatic %}
 #### Etapa 3.1: Ativar a capacitação na propriedade push
 
 Para ativar a integração automática de push, defina a propriedade `automation` da configuração `push` para `true`:
@@ -318,7 +318,7 @@ Para acessar as cargas úteis de notificação por push processadas pela Braze, 
 Você pode usar o parâmetro `payloadTypes` para especificar se deseja se inscrever em notificações envolvendo eventos de push abertos, eventos de push recebidos ou ambos.
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
@@ -335,7 +335,7 @@ Lembre-se de que os eventos recebidos de push só dispararão para notificaçõe
 
 {% endtab %}
 
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 NSInteger filtersValue = BRZNotificationsPayloadTypeFilter.opened.rawValue | BRZNotificationsPayloadTypeFilter.received.rawValue;
@@ -359,6 +359,41 @@ Ao usar a integração automática de push, `subscribeToUpdates(_:)` é a única
 {% alert tip %}
 Crie sua inscrição de notificação por push em `application(_:didFinishLaunchingWithOptions:)` para garantir que sua inscrição seja disparada depois que um usuário final tocar em uma notificação enquanto seu app estiver em um estado finalizado.
 {% endalert %}
+
+## Manipulação de notificações em primeiro plano
+
+Por padrão, quando uma notificação por push chega enquanto seu app está em primeiro plano, o iOS não a exibe automaticamente. Para exibir notificações por push em primeiro plano e rastreá-las com a análise de dados do Braze, chame o método `handleForegroundNotification(notification:)` dentro de sua implementação `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)`.
+
+### Como funciona?
+
+Quando você chama `handleForegroundNotification(notification:)`, o Braze processa a carga útil da notificação para análise de dados e trata de qualquer deep linking ou ação de botão. O comportamento real da exibição é controlado pelo `UNNotificationPresentationOptions` que você passa para o manipulador de conclusão.
+
+```swift
+import BrazeKit
+import UserNotifications
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+  func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+  ) {
+    // Let Braze process the notification payload
+    if let braze = AppDelegate.braze {
+      braze.notifications.handleForegroundNotification(notification: notification)
+    }
+    
+    // Control how the notification appears in the foreground
+    if #available(iOS 14.0, *) {
+      completionHandler([.banner, .list, .sound])
+    } else {
+      completionHandler([.alert, .sound])
+    }
+  }
+}
+```
+
+Para obter um exemplo completo, consulte o [exemplo de integração manual de notificações por push](https://github.com/braze-inc/braze-swift-sdk/blob/e31907eaa0dbd151dc2e6826de66cc494242ba60/Examples/Swift/Sources/PushNotifications-Manual/AppDelegate.swift#L1-L120) no repositório do Braze Swift SDK.
 
 ## Push primers {#push-primers}
 
@@ -403,4 +438,4 @@ Esse recurso melhora as taxas de entrega, sempre encaminhando tokens por push pa
 
 #### Posso desativar esse recurso?
 
-O gerenciamento de gateway de APNs dinâmicos é ativado por padrão e oferece melhorias de confiabilidade. Se tiver casos de uso específicos que exijam a seleção manual do gateway, entre em contato com [o suporte da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
+O gerenciamento de gateway de APNs dinâmicos é ativado por padrão e oferece melhorias de confiabilidade. Se houver casos de uso específicos que exijam a seleção manual do gateway, entre em contato com [o suporte da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/).

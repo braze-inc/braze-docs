@@ -27,7 +27,7 @@ Para sincronizar clientes com o Braze, você deve criar uma sincronização. Aqu
 
 1. Navegue até a guia **Syncs (Sincronizações** ) e selecione **New Sync (Nova sincronização**).<br><br> 
 2. No criador, selecione o modelo de dados de origem do seu data warehouse.<br><br>
-3. Configure o local para onde o modelo será sincronizado. Selecione **Braze** como os destinos e **User & Coorte** como o objeto a ser sincronizado.<br>![No prompt "Select a Destination", "Braze" é selecionado como a conexão e vários objetos são listados.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
+3. Configure o local para onde o modelo será sincronizado. Selecione **Braze** como o destino e **Usuário & Coorte** como o objeto a ser sincronizado.<br>![No prompt "Select a Destination" (Selecione um destino), "Braze" é selecionada como a conexão, e vários objetos são listados.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
 4. Selecione a **coluna de origem** que identifica os usuários a serem adicionados a um coorte e selecione **ID de usuário externo** como o **tipo de identificador**.<br><br>
 5. No menu suspenso **Nome da coorte**, selecione uma coorte, crie uma coorte ou selecione uma Coluna de origem para preencher o nome da coorte.<br><br>
 6. Use o menu suspenso **Quando um registro é removido dos dados de origem** para selecionar o que acontece com os usuários quando eles são removidos do conjunto de dados de origem, como **Não fazer nada** ou **Remover registro correspondente do coorte**.<br><br>

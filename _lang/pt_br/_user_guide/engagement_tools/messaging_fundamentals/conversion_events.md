@@ -15,7 +15,7 @@ tool:
 
 ## Como funciona?
 
-Para uma campanha de férias personalizada direcionada a usuários ativos, um evento de conversão de **Iniciar uma Sessão** dentro de dois ou três dias pode ser apropriado, pois permite que você tenha uma noção do engajamento do usuário ao receber sua mensagem. Você também pode selecionar eventos adicionais como **Fazer Pedido**, **Fazer Upgrade do App**, ou qualquer um de seus eventos personalizados como eventos de conversão.
+Para uma campanha de férias personalizada direcionada a usuários ativos, um evento de conversão de **Iniciar uma Sessão** dentro de dois ou três dias pode ser apropriado, pois permite que você tenha uma noção do engajamento do usuário ao receber sua mensagem. Você também pode selecionar eventos adicionais como **Faz Pedido**, **Fazer Upgrade do App** ou qualquer um dos seus eventos personalizados como eventos de conversão.
 
 {% alert tip %}
 Para mais informações sobre conversões, confira nosso [curso do Braze Learning](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) sobre configuração de campanhas.
@@ -27,9 +27,9 @@ Eventos de conversão atribuem ações do usuário a um ponto de engajamento. Ob
 
 - **Campanhas de canal único**: As conversões ocorrem por usuário, não por dispositivo. Dentro de um único canal, um usuário converte apenas uma vez por evento de conversão, mesmo que uma mensagem seja enviada para vários dispositivos. Por exemplo, se uma campanha tem apenas um evento de conversão definido como "Faz qualquer compra" e um usuário faz duas compras separadas dentro do prazo de conversão, o Braze conta apenas uma conversão.
 - **Campanhas multicanal**: Para campanhas multicanal, cada canal tem sua própria oportunidade de conversão. Um usuário pode converter uma vez por canal após receber uma mensagem nesse canal. Isso significa que se um usuário recebe mensagens em vários canais (por exemplo, tanto e-mail quanto push) e realiza a ação de conversão, o Braze conta uma conversão para cada canal, o que pode resultar em taxas de conversão superiores a 100%.
-- Se um usuário realizar um evento de conversão dentro dos prazos de conversão de duas campanhas ou Canvases separadas que recebeu, a conversão é registrada em ambas.
+- Se um usuário realizar um evento de conversão dentro dos prazos de conversão de duas campanhas ou Canvases separadas que recebeu, a conversão será registrada em ambas.
 - Um usuário conta como convertido se realizou o evento de conversão específico na janela, mesmo que não tenha aberto ou clicado na mensagem.
-- Para Canvases, o rastreamento de conversões funciona com base no prazo final de conversão que começa quando um usuário entra no Canvas, não no tempo de mensagens individuais. O Braze conta conversões mesmo durante períodos de atraso entre mensagens no Canvas.
+- Para Canvases, o rastreamento de conversão funciona com base no prazo final de conversão que começa quando um usuário entra no Canvas, não no tempo de mensagens individuais. O Braze conta conversões mesmo durante períodos de atraso entre mensagens no Canvas.
 
 ### Evento de conversão primária
 
@@ -39,7 +39,7 @@ O evento de conversão primário é o primeiro evento que você adiciona durante
 - Determine a janela em que a receita é calculada para a campanha ou o Canva.
 - Ajustar distribuições de mensagens para campanhas e Canvases usando [Seleção Inteligente]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 
-A contagem de eventos de conversão do evento de conversão primária é o número de eventos de conversão que ocorreram. Para campanhas multicanal, o Braze conta conversões por canal (conforme descrito nas [regras de rastreamento de conversão](#conversion-tracking-rules)), o que significa que a contagem de conversões pode exceder o número de usuários únicos e resultar em taxas de conversão superiores a 100%. O Braze calcula a taxa de evento de conversão primária dividindo essa contagem pelo número de destinatários únicos. O Braze considera um usuário um destinatário quando a mensagem é enviada ou exibida, dependendo do canal. Por exemplo, em push ou e-mail, um usuário se torna um destinatário após o Braze enviar a mensagem. Para mensagens no aplicativo ou Cartões de Conteúdo, o usuário deve visualizar a mensagem para ser considerado um destinatário.
+A contagem de eventos de conversão primária é o número de eventos de conversão que ocorreram. Para campanhas multicanal, o Braze conta conversões por canal (conforme descrito em [regras de rastreamento de conversão](#conversion-tracking-rules)), o que significa que a contagem de conversões pode exceder o número de usuários únicos e resultar em taxas de conversão superiores a 100%. O Braze calcula a taxa de eventos de conversão primária dividindo essa contagem pelo número de destinatários únicos. O Braze considera um usuário um destinatário quando a mensagem é enviada ou exibida, dependendo do canal. Por exemplo, em push ou e-mail, um usuário se torna um destinatário após o Braze enviar a mensagem. Para mensagens no aplicativo ou Cartões de Conteúdo, o usuário deve visualizar a mensagem para ser considerado um destinatário.
 
 {% alert note %}
 Se você abortar mensagens usando a tag Liquid `abort`, o Braze aborta mensagens apenas para usuários que passam por variantes. Mensagens para usuários no grupo de controle não são abortadas, o que pode levar a porcentagens de conversão distorcidas entre variantes e grupos de controle. Como solução alternativa, use [a segmentação]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) para direcionar seus usuários na entrada da campanha e do Canva.

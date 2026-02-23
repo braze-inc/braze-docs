@@ -58,12 +58,12 @@ Enjoy the weather!
 ```
 {% endraw %}
 
-![Un message push de contenu connecté qui dit « Il pleut ! Grab an Umbrella !" sur un appareil Android]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){: style="max-width:40%"}
+![Un message push de contenu connecté qui dit « Il pleut ! Prends un parapluie ! « affiché sur un appareil Android]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){: style="max-width:40%"}
 
 Vous trouverez une ventilation des deux appels relatifs au contenu connecté dans les exemples suivants.
 
 {% tabs %}
-{% tab Localisations %}
+{% tab Locations %}
 #### Exemple d'API de localisation
 
 {% raw %}
@@ -155,7 +155,7 @@ Voici un exemple de ce qu'AccuWeather renverra en tant qu'objet JSON :
 L'ID « Key » est une variable utile car elle est utilisée dans la deuxième requête GET.
 Cet objet JSON peut être stocké dans une variable locale `location_info` en spécifiant `:save location_info` après l'URL.
 {% endtab %}
-{% tab Conditions actuelles %}
+{% tab Current conditions %}
 
 #### Exemple d'API pour les conditions actuelles
 

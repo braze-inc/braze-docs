@@ -1,12 +1,12 @@
-## Sobre os cartões de conteúdo do Xamarin
+## Sobre os cartões de conteúdo .NET MAUI
 
-O SDK do Braze Xamarin inclui um feed de cartão padrão para que você comece a usar os cartões de conteúdo. O feed de cartão padrão incluído com o SDK da Braze lidará com toda a análise de dados, rastreamento, dispensas e renderização para os Cartões de Conteúdo de um usuário.
+O SDK do Braze .NET MAUI (antigo Xamarin) inclui um feed de cartão padrão para que você comece a usar os cartões de conteúdo. O feed de cartão padrão incluído com o SDK da Braze lidará com toda a análise de dados, rastreamento, dispensas e renderização para os Cartões de Conteúdo de um usuário.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## Tipos e propriedades do cartão
 
-O SDK do Braze Xamarin tem três tipos exclusivos de cartões de conteúdo que compartilham um modelo básico: [Banner](#xamarin_banner), [Imagem com legenda](#xamarin_captioned-image) e [Clássico](#xamarin_classic). Cada tipo herda propriedades comuns de um modelo base e possui as seguintes propriedades adicionais.
+O SDK Braze .NET MAUI tem três tipos exclusivos de cartões de conteúdo que compartilham um modelo básico: [Banner](#xamarin_banner), [Imagem com legenda](#xamarin_captioned-image) e [Clássico](#xamarin_classic). Cada tipo herda propriedades comuns de um modelo base e possui as seguintes propriedades adicionais.
 
 ### Modelo de cartão básico
 

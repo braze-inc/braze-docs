@@ -40,11 +40,7 @@ Zu den weiteren Vorteilen der Verwendung von `external_id` gehören folgende:
 
 ### Überlegungen zu externen IDs
 
-{% alert warning %}
-Weisen Sie Benutzerprofilen erst dann eine `external_id` zu, wenn Sie sie eindeutig identifizieren können. Wenn Sie einen Benutzer identifiziert haben, können Sie ihn nicht mehr in die Anonymität zurückversetzen.
-<br><br>
-Ein `external_id` kann über den [Endpunkt`/users/external_ids/rename` ]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/) aktualisiert werden. Wenn Sie jedoch versuchen, während der Sitzung eines Nutzers:in ein anderes `external_id` einzustellen, wird ein neues Nutzerprofil erstellt, das mit dem neuen `external_id` verknüpft ist. Es werden keine Daten zwischen den beiden Profilen ausgetauscht.
-{% endalert %} 
+{% include alerts/warning_alerts.md alert='User profile external_id' %} 
 
 #### Risiko der Verwendung einer E-Mail oder einer gehashten E-Mail als externe ID
 
@@ -80,7 +76,7 @@ Diese funktionieren wie ein Schlüssel-Wert-Paar, das aus zwei Teilen besteht: e
 
 Ein Alias kann mit einem neuen Namen für ein bestimmtes Etikett aktualisiert werden, nachdem es gesetzt wurde, indem Sie entweder unsere [Endpunkte für Nutzerdaten]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) verwenden oder einen neuen Namen über das SDK übergeben. Der Nutzer-Alias wird dann beim Exportieren der Daten des Nutzers:innen sichtbar sein.
 
-![Zwei unterschiedliche Nutzerprofile für verschiedene Nutzer:innen mit demselben Nutzer-Alias-Label, aber unterschiedlichen Alias-Namen]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
+![Zwei Benutzerprofile für verschiedene Benutzer mit demselben Alias-Label aber unterschiedlichen Alias-Namen]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
 
 ### Anonyme Benutzer verschlagworten
 
@@ -96,7 +92,7 @@ Benutzer-Aliase können auch für bekannte Benutzerprofile eingerichtet werden, 
 
 Wie Sie einen Nutzer-Alias einrichten, erfahren Sie in unserer Dokumentation für jede Plattform[(iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users), [Internet]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users)).
 
-![Ein Flow Chart des Nutzerprofil-Lebenszyklus in Braze. Wenn changeUser() für einen anonymen Nutzer:in aufgerufen wird, wird dieser Nutzer zu einem identifizierten Nutzer und die Daten werden in sein identifiziertes Nutzerprofil migriert. Der identifizierte Nutzer:innen hat eine Braze ID und eine externe ID. Wenn zu diesem Zeitpunkt ein zweiter anonymer Benutzer changeUser() aufruft, werden Benutzerdatenfelder, die bei dem erkannten Benutzer noch nicht vorhanden sind, zusammengeführt. Wenn der Identifizierte Nutzer einen Alias zu seinem bestehenden Nutzerprofil hinzugefügt hat, sind keine Daten betroffen, aber er wird zu einem Identifizierten Nutzer mit Alias. Wenn ein dritter anonymer Nutzer mit demselben Alias-Label wie der Identifizierte Nutzer, aber einem anderen Alias-Namen, dann changeUser() aufruft, werden alle Felder, die beim Identifizierten Nutzer nicht vorhanden sind, zusammengeführt und das Alias-Label im Profil des Identifizierten Nutzers bleibt erhalten.]({% image_buster /assets/img_archive/Braze_User_flowchart.png %})
+![Ein Flussdiagramm des Nutzerprofil-Lebenszyklus in Braze. Wenn changeUser() für einen anonymen Nutzer:in aufgerufen wird, wird dieser Nutzer zu einem identifizierten Nutzer und die Daten werden in sein identifiziertes Nutzerprofil migriert. Der identifizierte Nutzer:innen hat eine Braze ID und eine externe ID. Wenn zu diesem Zeitpunkt ein zweiter anonymer Benutzer changeUser() aufruft, werden Benutzerdatenfelder, die bei dem erkannten Benutzer noch nicht vorhanden sind, zusammengeführt. Wenn der Identifizierte Nutzer einen Alias zu seinem bestehenden Nutzerprofil hinzugefügt hat, sind keine Daten betroffen, aber er wird zu einem Identifizierten Nutzer mit Alias. Wenn ein dritter anonymer Nutzer mit demselben Alias-Label wie der Identifizierte Nutzer, aber einem anderen Alias-Namen, dann changeUser() aufruft, werden alle Felder, die beim Identifizierten Nutzer nicht vorhanden sind, zusammengeführt und das Alias-Label im Profil des Identifizierten Nutzers bleibt erhalten.]({% image_buster /assets/img_archive/Braze_User_flowchart.png %})
 
 {% alert tip %}
 Sie fragen sich, wie das bei Ihren Benutzerprofilen aussehen könnte? Unter [Best Practices]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/) finden Sie hilfreiche Tipps zur Erfassung von Benutzerdaten.
@@ -115,5 +111,5 @@ Die Deinstallation und Neuinstallation einer App erzeugt eine neue anonyme `braz
 Um Benutzer zu Testzwecken in Ihrem Dashboard zu finden und zu erkennen, können alle Benutzer-IDs verwendet werden. Um Ihren Nutzer:innen im Braze-Dashboard zu finden, referenzieren Sie auf [Testnutzer:innen hinzufügen]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users).
 
 {% alert important %}
-Braze sperrt bzw. blockiert Benutzer mit mehr als 5.000.000 Sitzungen ("Dummy-Benutzer") und lässt ihre SDK-Ereignisse außer Acht, da sie meist auf Integrationsfehler zurückgehen. Wenn Sie feststellen, dass dies einem rechtmäßigen Nutzer:in passiert ist, wenden Sie sich an Ihren Braze-Konto Manager:in.
+Braze sperrt bzw. blockiert Benutzer mit mehr als 5.000.000 Sitzungen ("Dummy-Benutzer") und lässt ihre SDK-Ereignisse außer Acht, da sie meist auf Integrationsfehler zurückgehen. Wenn Sie feststellen, dass dies einem rechtmäßigen Nutzer:innen passiert ist, wenden Sie sich an Ihren Braze-Konto Manager:in.
 {% endalert %}

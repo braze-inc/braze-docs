@@ -96,7 +96,7 @@ If clearing your browser cache and cookies doesn't resolve your issues, contact 
 
 ### Accessing the drag-and-drop editor
 
-For most Braze users, the drag-and-drop editor should load. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that `*.bz-rndr.com` is allowlisted.
+대부분의 회사 사용자의 경우 드래그 앤 드롭 편집기가 로드되어야 합니다. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that `*.bz-rndr.com` is allowlisted.
 
 The editor may experience loading issues due to the following:
 
@@ -109,7 +109,7 @@ If you're still experiencing issues, [open a support ticket]({{site.baseurl}}/us
 
 ### Braze 학습에 액세스하기
 
-Braze Learning에 로그인하는 데 문제가 있거나 대시보드로 리디렉션되는 루프에 갇혀 있는 경우 다음 단계를 수행하세요:
+Braze 학습에 로그인하는 데 문제가 있거나 대시보드로 리디렉션되는 루프에 갇혀 있는 경우 다음 단계를 수행하세요:
 
 1. 여러 개의 Braze 계정이 있는 경우, 잘못된 계정으로 두 번 로그인하면 Braze 대시보드로 이동합니다. 올바른 계정으로 로그인했는지 확인합니다. 
 2. 광고 차단기가 있는 경우 차단기가 꺼져 있는지 확인하세요. 싱글 사인온 기능에 필요한 쿠키를 차단할 수 있습니다.
@@ -120,7 +120,7 @@ Braze Learning에 로그인하는 데 문제가 있거나 대시보드로 리디
 
 ### 2단계 인증(2FA) 문제
 
-사용자가 2단계 인증(2FA)에 문제가 발생하여 Braze 대시보드에 액세스할 수 없는 경우 몇 가지 이유가 있을 수 있습니다. 가장 흔하게는 등록된 휴대폰 번호 또는 Authy 앱이 설치된 기기에 더 이상 액세스할 수 없는 경우입니다.
+사용자가 2단계 인증(2FA)에 문제가 발생하여 Braze 대시보드에 액세스할 수 없는 경우 몇 가지 이유가 있을 수 있습니다. 가장 흔하게는 등록된 전화번호 또는 Authy 앱이 설치된 기기에 더 이상 액세스할 수 없는 경우입니다.
 
 관리자는 다음을 수행하여 영향을 받는 사용자의 2FA를 재설정해야 합니다: 
 
@@ -130,7 +130,7 @@ Braze Learning에 로그인하는 데 문제가 있거나 대시보드로 리디
 4. 메시지가 표시되면 2FA 재설정을 확인합니다.
 5. 재설정을 해도 문제가 즉시 해결되지 않으면 쿠키와 캐시를 지우세요.
 
-Braze는 보안상의 이유로 사용자를 대신하여 2FA를 재설정할 수 없으므로 관리자가 2FA를 재설정할 수 없는 경우 지원 티켓을 만드세요.
+Braze는 보안상의 이유로 사용자를 대신하여 2FA를 재설정할 수 없으므로 관리자가 2FA를 재설정할 수 없는 경우 지원 티켓을 작성하세요.
 
 #### 고려 사항
 

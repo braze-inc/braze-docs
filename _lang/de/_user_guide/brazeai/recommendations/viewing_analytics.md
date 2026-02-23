@@ -22,7 +22,7 @@ Sie können die Analysen für Ihre Empfehlungen einsehen, um zu sehen, welche Ar
 
 Dies sind Metriken, die sich auf Ihre Zielgruppe beziehen. Dazu gehören Präzision, Reichweite und Art der Empfehlung.
 
-Die Metriken für die Zielgruppe der Empfehlungen zeigen die Genauigkeit (25,3%), die Abdeckung (54,3%) und die Aufteilung der Empfehlungstypen in personalisierte und beliebteste Artikel.]({% image_buster /assets/img/item_recs_analytics_1.png %})
+![Metriken für die Zielgruppe der Empfehlungen zeigen die Genauigkeit (25,3%), die Reichweite (54,3%) und die Empfehlungsarten, die sich in personalisierte und beliebteste Artikel aufteilen.]({% image_buster /assets/img/item_recs_analytics_1.png %})
 
 Weitere Informationen finden Sie in der folgenden Tabelle:
 
@@ -37,7 +37,7 @@ Weitere Informationen finden Sie in der folgenden Tabelle:
 
 Diese Tabelle enthält Metriken zu Ihren personalisierten, neuesten und beliebtesten Artikeln aus Ihrem Katalog.
 
-\![Nebeneinander angeordnete Tabellen mit den den Nutzer:innen zugewiesenen Artikeln, getrennt nach personalisierten Empfehlungen und beliebtesten Empfehlungen.]({% image_buster /assets/img/item_recs_analytics_2.png %})
+![Nebeneinander angeordnete Tabellen mit den den Nutzer:innen zugewiesenen Artikeln, getrennt nach personalisierten Empfehlungen und beliebtesten Empfehlungen.]({% image_buster /assets/img/item_recs_analytics_2.png %})
 
 Weitere Informationen finden Sie in der folgenden Tabelle:
 
@@ -51,4 +51,4 @@ Weitere Informationen finden Sie in der folgenden Tabelle:
 
 Dies ist eine Übersicht über die von Ihnen gewählte Empfehlungskonfiguration, die auch angibt, wann die Empfehlung zuletzt aktualisiert wurde.
 
-\![Übersichtstabelle für Empfehlungen, die den Typ, den Katalog, den Ereignistyp, den Namen des angepassten Events, den Namen der Eigenschaften und das Datum des letzten Updates anzeigt.]({% image_buster /assets/img/item_recs_analytics_3.png %}){: style="max-width:50%" }
+![Übersichtstabelle für Empfehlungen, die den Typ, den Katalog, den Ereignistyp, den Namen des angepassten Events, den Namen der Eigenschaft und das Datum des letzten Updates anzeigt.]({% image_buster /assets/img/item_recs_analytics_3.png %}){: style="max-width:50%" }

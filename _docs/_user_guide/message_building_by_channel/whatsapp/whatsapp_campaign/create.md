@@ -91,7 +91,7 @@ If you're adding copy in a language that is written right-to-left, note that the
 
 #### Variables
 
-If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, you can upload or add images from the media library or by referencing an image URL.
+If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, you can upload or add images from the media library or by referencing an image URL. When possible, we recommend uploading images directly to your media library to ensure consistency and reliability.
 
 Note that disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. If you would like to make updates to the disabled text, you must edit your template and get it reapproved.
 
@@ -106,6 +106,10 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 ### Dynamic links 
 
 Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. Both of these links can be shortened and tracked using [click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/).
+
+### Dynamic images
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 {% endtab %}
 {% tab Response messages %}

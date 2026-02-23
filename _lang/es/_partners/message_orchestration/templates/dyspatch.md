@@ -42,7 +42,7 @@ En el campo **Localizar exportaciones por**, puede elegir cómo desea gestionar 
 
 Después de completar un correo electrónico en Dyspatch, para enviar su plantilla a Braze, vea la plantilla de correo electrónico publicada y haga clic en **Descargar/Exportar** y luego en **Exportar a integración**.
 
-Si desea cargar su plantilla manualmente, vea la plantilla de correo electrónico publicada y haga clic en **Descargar/Exportar** y, a continuación, en **Descargar HTML**. A continuación, en la sección **Plantillas y medios > Plantillas de correo electrónico** de su cuenta Braze, seleccione **Desde archivo** para cargar su plantilla.
+Si desea cargar su plantilla manualmente, vea la plantilla de correo electrónico publicada y haga clic en **Descargar/Exportar** y, a continuación, en **Descargar HTML**. A continuación, en la sección **Plantillas & Medios > Plantillas de correo electrónico** de tu cuenta Braze, selecciona **Desde archivo** para cargar tu plantilla.
 
 ![Plantilla de exportación Dyspatch]({% image_buster /assets/img/dyspatch/dyspatch_export.gif %})
 
@@ -52,6 +52,6 @@ No seleccione **CSS en línea** en la sección **Información de envío** de nin
 
 ### Uso
 
-Busque la plantilla Dyspatch que ha cargado en la sección **Plantillas y medios > Plantillas de correo electrónico** de su cuenta Braze. Ya puede utilizar esta plantilla de correo electrónico para empezar a enviar mensajes atractivos a sus clientes.
+Encuentra tu plantilla Dyspatch cargada en la sección **Plantillas** de tu cuenta Braze ** & Medios > Plantillas de correo electrónico**. Ya puede utilizar esta plantilla de correo electrónico para empezar a enviar mensajes atractivos a sus clientes.
 
 

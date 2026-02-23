@@ -2,7 +2,7 @@
 nav_title: Eventos previstos
 article_title: Eventos previstos
 description: "Este artigo aborda Eventos Preditivos (anteriormente Compras Preditivas), uma ferramenta na Suite Preditiva da Braze que dá aos profissionais de marketing a capacidade de identificar e enviar mensagens para usuários com base na probabilidade de realizarem um evento."
-page_order: 2.1
+page_order: 10
 alias: /predictive_purchases/
 search_rank: 1
 ---
@@ -21,7 +21,7 @@ O valor real dos eventos preditivos está no uso dos resultados da previsão par
 
 ## Acessando Eventos Preditivos
 
-A página **Previsões** está localizada na seção **Análises de dados**. Para obter acesso total, entre em contato com o gerente da sua conta.
+{% include brazeai/predictions_page_access.md %}
 
 Antes de comprar esse recurso, ele está disponível em modo de prévia. Isso lhe permitirá ver uma previsão de demonstração com dados sintéticos, bem como criar um modelo de previsão prévia por vez. Essa previsão será criada com base nos dados reais do usuário, mas não permitirá o direcionamento de mensagens para os usuários de acordo com a pontuação de probabilidade deles. Ele também não será atualizado regularmente após a criação.
 

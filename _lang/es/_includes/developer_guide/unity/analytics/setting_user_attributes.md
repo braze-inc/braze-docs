@@ -22,52 +22,52 @@ Braze proporciona métodos predefinidos para configurar los siguientes atributos
 Para establecer un atributo predeterminado, llama al método correspondiente en el objeto `BrazeBinding`.
 
 {% tabs local %}
-{% tab Nombre %}
+{% tab First name %}
 ```csharp
 BrazeBinding.SetUserFirstName("first name");
 ```
 {% endtab %}
-{% tab Apellidos %}
+{% tab Last name %}
 ```csharp
 BrazeBinding.SetUserLastName("last name");
 ```
 {% endtab %}
-{% tab Correo electrónico %}
+{% tab Email %}
 ```csharp
 BrazeBinding.SetUserEmail("email@email.com");
 ```
 {% endtab %}
-{% tab Género %}
+{% tab Gender %}
 ```csharp
 BrazeBinding.SetUserGender(Appboy.Models.Gender);
 ```
 {% endtab %}
-{% tab Fecha de nacimiento %}
+{% tab Birth date %}
 ```csharp
 BrazeBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
 ```
 {% endtab %}
-{% tab País %}
+{% tab Country %}
 ```csharp
 BrazeBinding.SetUserCountry("country name");
 ```
 {% endtab %}
-{% tab Ciudad de origen %}
+{% tab Home city %}
 ```csharp
 BrazeBinding.SetUserHomeCity("city name");
 ```
 {% endtab %}
-{% tab Suscripción por correo electrónico %}
+{% tab Email subscription %}
 ```csharp
 BrazeBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab Suscripción push %}
+{% tab Push subscription %}
 ```csharp
 BrazeBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab Número de teléfono %}
+{% tab Phone number %}
 ```csharp
 BrazeBinding.SetUserPhoneNumber("phone number");
 ```
@@ -91,7 +91,7 @@ Además de los atributos predeterminados de usuario, Braze también te permite d
 Para establecer un atributo personalizado, utiliza el método correspondiente para el tipo de atributo: 
 
 {% tabs %}
-{% tab Cadena %}
+{% tab String %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string custom attribute");
@@ -99,7 +99,7 @@ AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string cust
 
 {% endtab %}
 
-{% tab Entero %}
+{% tab Integer %}
 
 ```csharp
 // Set Integer Attribute
@@ -109,7 +109,7 @@ AppboyBinding.IncrementCustomUserAttribute("key", increment(int))
 ```
 {% endtab %}
 
-{% tab Doble %}
+{% tab Double %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double value');
@@ -117,14 +117,14 @@ AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double valu
 
 {% endtab %}
 
-{% tab Booleano %}
+{% tab Boolean %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
 ```
 {% endtab %}
 
-{% tab Fecha %}
+{% tab Date %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
@@ -135,12 +135,12 @@ AppboyBinding.SetCustomUserAttributeToSecondsFromEpoch("custom date attribute ke
 ```
 
 {% alert note %}
-Las fechas que se pasen a Braze deben estar en el formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) (como `2013-07-16T19:20:30+01:00`) o en el formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ` (como`2016-12-14T13:32:31.601-0800`).
+Las fechas pasadas a Braze deben estar en el formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) (como `2013-07-16T19:20:30+01:00`) o en el formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ` (como`2016-12-14T13:32:31.601-0800`).
 {% endalert %}
 
 {% endtab %}
 
-{% tab Matriz %}
+{% tab Array %}
 
 ```csharp
 // Setting An Array

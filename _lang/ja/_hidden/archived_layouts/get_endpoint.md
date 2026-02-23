@@ -34,7 +34,7 @@ This is the description of the endpoint. API descriptions usually start with "Us
 
 <!--This is where you can give more information about your endpoint parameters. -->
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | ----------|-----------| ----------|----- |
 | `start_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列| 無効な電話番号を取得する範囲の開始日であり、`end_date` より前である必要があります。これは API によって UTC 時間の真夜中として扱われます。 |
 | `end_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列 | 無効な電話番号を取得する範囲の終了日。これは API によって UTC 時間の真夜中として扱われます。 |

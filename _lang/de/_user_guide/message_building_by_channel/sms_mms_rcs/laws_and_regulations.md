@@ -23,7 +23,7 @@ Dieser Artikel stellt weder eine Rechtsberatung dar, noch darf er als solche ang
 
 Generell empfehlen wir Ihnen, beim Versenden von SMS-, MMS- oder RCS-Nachrichten nach bestem Wissen und Gewissen zu handeln. Braze und unsere sendenden Partner verfügen über Kontrollen, die die meisten SMS-, MMS- und RCS-Missbräuche verhindern.
 
-Das sind die sechs Regeln, die Sie befolgen sollten:
+Verwenden Sie beim Versenden von Nachrichten die folgenden Regeln:
 
 1. **Holen Sie die ausdrückliche Zustimmung der Nutzer:innen ein, bevor Sie ihnen SMS, MMS oder RCS senden.** Wenn Benutzer ihre Zustimmung geben, sind Sie dafür verantwortlich, diese Informationen in einer konformen Benutzerdatenbank zu protokollieren, zu aktualisieren und zu pflegen. Nach den grundlegenden rechtlichen Richtlinien sind die wichtigsten Informationen, die Sie in Bezug auf die Einwilligung aufbewahren müssen, folgende:
   - Uhrzeit und Datum der Zustimmung des Nutzers
@@ -48,7 +48,7 @@ RCS ist ein aufstrebender und sich entwickelnder Bereich. Staaten, Länder und a
 {% endalert %}
 
 - **Verstehen Sie regulatorische Überschneidungen:** Da RCS und SMS viele Gemeinsamkeiten aufweisen, gelten die gleichen Gesetze, Vorschriften und Richtlinien der Betreiber. Dazu gehören die TCPA-Regeln für die Erfassung von Opt-in und die CTIA-Richtlinien (wie SHAFT).
-- **Zustimmende Überweisung:** Die Branche geht davon aus, dass die Zustimmung **für die gleiche Art von Messaging (z.B. für Aktionen oder Transaktionen)** auch auf SMS und RCS übertragen werden kann, wenn der Nutzer:innen bereits ein Opt-in für den Empfang dieser Art von Nachrichten gegeben hat. Umgekehrt sollten Sie, wenn der Nutzer:innen kein Opt-in für den Erhalt von Werbe-SMS gegeben hat, nicht mit dem Versand von Werbe-RCS beginnen, ohne das Opt-in für diese Art von Messaging einzuholen.
+- **Zustimmungen:** Arbeiten Sie mit Ihrem juristischen Team zusammen, um festzustellen, ob Sie zusätzliche Zustimmungen einholen müssen, um RCS an Ihre bestehenden Nutzer:innen zu senden.
 - **Aktualisieren Sie Richtlinien und Haftungsausschlüsse:** Es wird empfohlen, Ihre Nutzungsbedingungen für mobile Dienste & Datenschutzrichtlinien zu aktualisieren, um RCS-Referenzen aufzunehmen. Es wird auch empfohlen, dass Ihre Opt-in Kampagnen zusätzlich zu SMS auch RCS enthalten.
 
 ## Ressourcen
@@ -81,7 +81,7 @@ Braze verwendet [Abonnementgruppen]({{site.baseurl}}/user_guide/message_building
 
 ### Spam und Kadenz
 
-Ähnlich wie bei E-Mails können Ihre Benutzer oder Kunden einen Burnout im Posteingang erleben. Aber das ist nur ein Grund, Ihre Kunden nicht unerbittlich anzusprechen. Sie sollten sich speziell mit [Abschnitt 5 des FTC-Gesetzes](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf) befassen, um die Einhaltung der Vorschriften sicherzustellen (unter U.S).
+Ähnlich wie bei E-Mails können Ihre Nutzer:innen oder Kunden einen Burnout im Posteingang erleben. Aber das ist nur ein Grund, Ihre Kunden nicht unerbittlich anzusprechen. Sie sollten sich speziell mit [Abschnitt 5 des FTC-Gesetzes](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf) befassen, um die Einhaltung der Vorschriften sicherzustellen (unter U.S).
 
 Einige Spam-Erwägungen sind in die SMS-Funktionen im Allgemeinen integriert (Sendebeschränkungen für lange und kurze Codes) sowie in die Tarifbeschränkungen von Braze. Dennoch sollten Sie bei der Planung Ihrer Kampagnen die Einhaltung von Gesetzen berücksichtigen.
 

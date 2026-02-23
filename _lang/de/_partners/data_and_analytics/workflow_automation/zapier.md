@@ -33,7 +33,7 @@ Anhand unseres WordPress-Beispiels richten wir in der Zapier-Plattform unseren Z
 
 ![Wählen Sie in der Zapier-Plattform innerhalb eines Zap einen Auslöser aus, der ein "neuer Kommentar", ein "beliebiger Webhook" oder ein "neuer Beitrag" ist. In diesem Beispiel ist "neuer Beitrag" ausgewählt. ] [5]
 
-![In der Zapier-Plattform konfigurieren Sie den Trigger innerhalb eines Zap, indem Sie den gewünschten Post-Status und Post-Typ auswählen. In diesem Beispiel ist "Veröffentlicht" und "Beiträge" ausgewählt.] [6]
+![In der Zapier-Plattform konfigurieren Sie den Trigger innerhalb eines Zap, indem Sie den gewünschten Post-Status und Post-Typ auswählen. Für dieses Beispiel ist "Veröffentlicht" und "Beiträge" ausgewählt]. [6]
 
 ### Schritt 2: Einen Webhook für eine Aktion hinzufügen
 

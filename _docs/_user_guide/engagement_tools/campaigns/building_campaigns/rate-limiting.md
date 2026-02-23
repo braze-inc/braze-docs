@@ -162,6 +162,14 @@ Instead of trying to make up for the delay and send the remaining 6,000 messages
 
 Connected Content requests are not rate-limited independently and will follow the webhook rate limit. This means if there is one Connected Content call to a unique endpoint per webhook, you would expect 5,000 webhooks and also 5,000 Connected Content calls per minute. Note that caching may affect this and reduce the number of Connected Content calls. Additionally, retries may increase the Connected Content calls, so we recommend checking that the Connected Content endpoint can handle some fluctuation here.
 
+{% alert note %}
+**Rate limits are speed limits and do not define an exact send speed.** Generally, messages are spread out evenly within any given minute, and in the vast majority of cases they are sent at or very close to the configured limit. This is not always the case—for example, when messages are very large (such as emails with many Content Blocks, Connected Content tags, or Catalog item tags), or when there are many Liquid aborts (aborted messages still consume a slot and can reduce effective send rates).
+
+In practice, the sustained send rate (completed messages per minute) may be lower than the configured rate limit due to retries, network variability, downstream endpoint latency, and per-minute smoothing.
+
+If you consistently see significantly lower throughput than expected, check Connected Content response times, error rates (such as `429`), and retry behavior.
+{% endalert %}
+
 ## About frequency capping
 
 As your user base continues to grow and your messaging scales to include lifecycle, triggered, transactional, and conversion campaigns, it's important to prevent your notifications from appearing "spammy" or disruptive. By providing greater control over your users' experience, frequency capping enables you to create the campaigns you desire without overwhelming your audience.
@@ -311,4 +319,18 @@ For example, you might set up the following rule:
 > No more than three email campaigns or Canvas components per week from all campaigns and Canvas steps.
 
 This rule determines that no users receive more than 100 emails per week because, at most, users receive three emails per week from campaigns or Canvas components with frequency capping turned on.
+
+## Frequently asked questions
+
+### If I change a send throttle on an active Canvas, does it affect users already in the Canvas?
+
+Yes, when you increase or decrease a Canvas rate limit, the updated limit will take effect for new messages within approximately 30 seconds of the change due to caching.
+
+### Does frequency capping cause users to exit a Canvas?
+
+No. If a Canvas user is frequency-capped because of global frequency capping settings, the user will immediately advance to the next Canvas step. The user will **not** exit the Canvas because of the frequency cap.
+
+### How can I identify users who were frequency capped in a Canvas?
+
+Users who are frequency capped don't generate a send event for that step. To identify these users, you can use [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) to track message frequency capped events. Alternatively, you can create a [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to analyze users who entered the Canvas but didn't receive the expected message.
 

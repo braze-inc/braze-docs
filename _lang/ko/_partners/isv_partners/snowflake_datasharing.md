@@ -31,23 +31,86 @@ Braze는 현재 모든 사용자 수준 데이터를 Snowflake AWS US East-1 및
 
 ## 파괴적 변경 사항 및 비파괴적 변경 사항
 
-### 비파괴적 변경 사항
+### Non-breaking changes
 
-비파괴적 변경 사항은 언제든지 발생할 수 있으며 일반적으로 추가 기능을 제공합니다. 비파괴적 변경 사항의 예:
-- 새 테이블 또는 뷰 추가
-- 기존 테이블 또는 뷰에 열 추가하기
+Non-breaking changes can happen at any time and generally provide additional functionality. Examples of non-breaking changes:
+- Adding a new table or view
+- Adding a column to an existing table or view
 
 {% alert important %}
 새 열은 비파괴적 변경으로 간주되므로 Braze는 `SELECT *` 쿼리를 사용하는 대신 각 쿼리에서 관심 있는 열을 명시적으로 나열할 것을 적극 권장합니다. 또는 열 이름을 명시적으로 지정하는 보기를 생성한 다음, 테이블을 직접 쿼리하는 대신 해당 보기를 쿼리할 수 있습니다.
 {% endalert %}
 
-### 파괴적 변경 사항
+### Breaking changes
 
-가능한 경우, 파괴적 변경 사항은 공지와 마이그레이션 기간이 선행됩니다. 파괴적 변경 사항의 예:
-- 테이블 또는 뷰 제거
-- 기존 테이블 또는 뷰에서 열 제거하기
+When possible, breaking changes will be preceded by an announcement and a migration period. Examples of breaking changes include:
+- Removing a table or view
+- Removing a column from an existing table or view
 - 기존 열의 유형 또는 무효화 가능성 변경하기
+
+## SNAPSHOTS 및 CHANGELOGS 테이블이 업데이트될 때
+
+SNAPSHOTS 및 CHANGELOGS 테이블은 캠페인과 캔버스의 변경 사항을 추적합니다. 이 테이블이 업데이트되는 시점을 이해하는 것은 가장 최근의 메시지 변형 및 캔버스 구성을 쿼리하는 데 중요합니다.
+
+### CHANGELOGS_CAMPAIGN_SHARED
+
+다음과 같은 경우 `CHANGELOGS_CAMPAIGN_SHARED`에 행이 추가됩니다:
+- 캠페인이 시작되거나,
+- 다음의 스냅샷 가능한 필드 중 하나가 변경됩니다:
+  - Name
+  - 작업(메시지 내용 변경 포함)
+  - 전환 행동
+
+{% alert important %}
+게시 후 초안 저장 또는 업데이트는 자동으로 업데이트를 트리거하지 않습니다. 업데이트는 캠페인을 시작하거나 게시 후 초안 변경 사항을 활성 캠페인에 적용할 때만 트리거됩니다.
+{% endalert %}
+
+### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED
+
+`SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED`은 `CHANGELOGS_CAMPAIGN_SHARED`에서 파생됩니다. 이 테이블은 `CHANGELOGS_CAMPAIGN_SHARED`의 작업 열을 개별 메시지 변형 레코드로 추출하고 평탄화합니다. `CHANGELOGS_CAMPAIGN_SHARED`가 업데이트될 때 accordingly 업데이트됩니다.
+
+### CHANGELOGS_CANVAS_SHARED
+
+다음과 같은 경우 `CHANGELOGS_CANVAS_SHARED`에 행이 추가됩니다:
+- 캔버스가 시작되거나,
+- 다음의 스냅샷 가능한 필드 중 하나가 변경됩니다:
+  - Name
+  - 전환 행동
+  - 변형(비율, 첫 단계 할당, 변형 이름)
+
+{% alert important %}
+게시 후 초안 저장 또는 업데이트는 자동으로 업데이트를 트리거하지 않습니다. 업데이트는 캔버스를 시작하거나 게시 후 초안 변경 사항을 활성 캔버스에 적용할 때만 트리거됩니다.
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_VARIATION_SHARED
+
+`SNAPSHOTS_CANVAS_VARIATION_SHARED`은 `CHANGELOGS_CANVAS_SHARED`에서 파생됩니다. 이 테이블은 `SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED`와 동일한 추출 패턴을 사용하며 `CHANGELOGS_CANVAS_SHARED`가 업데이트될 때 accordingly 업데이트됩니다.
+
+### SNAPSHOTS_CANVAS_STEP_SHARED
+
+다음과 같은 경우 `SNAPSHOTS_CANVAS_STEP_SHARED`에 행이 추가됩니다:
+- 캔버스가 시작되거나,
+- 활성 캔버스가 업데이트됩니다(게시 후 초안 적용), 또는
+- 다음의 스냅샷 가능한 필드 중 하나가 변경됩니다:
+  - Name
+  - 작업(메시지 변형 내 메시지 내용 변경 포함)
+
+{% alert important %}
+게시 후 초안을 저장하는 것은 자동으로 업데이트를 트리거하지 않습니다. 업데이트는 캔버스를 시작하거나 게시 후 초안 변경 사항을 활성 캔버스에 적용할 때만 트리거됩니다.
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_FLOW_STEP_SHARED
+
+다음과 같은 경우 `SNAPSHOTS_CANVAS_FLOW_STEP_SHARED`에 행이 추가됩니다:
+- 캔버스가 시작되거나,
+- 활성 캔버스가 업데이트됩니다(게시 후 초안 적용), 또는
+- 다음의 스냅샷 가능한 필드 중 하나가 변경됩니다:
+  - Name
+
+{% alert important %}
+게시 후 초안을 저장하는 것은 자동으로 업데이트를 트리거하지 않습니다. 업데이트는 캔버스를 시작하거나 게시 후 초안 변경 사항을 활성 캔버스에 적용할 때만 트리거됩니다.
+{% endalert %}
 
 ## 일반 데이터 보호 규정(GDPR) 준수
 
-Braze가 저장하는 거의 모든 이벤트 레코드에는 사용자의 개인 식별 정보(PII)를 나타내는 몇 가지 필드가 포함되어 있습니다. 일부 이벤트에는 이메일 주소, 전화번호, 기기 ID, 언어, 성별 및 위치 정보가 포함될 수 있습니다. 사용자가 Braze에 정보 지우기를 요청하면 해당 사용자에 속하는 이벤트에 대한 PII 필드를 무효화합니다. 이렇게 하면 이벤트의 역사적 기록이 삭제되는 것은 아니지만, 이제 특정 개인과 이벤트가 다시 연결될 수 없습니다.
+{% include partners/snowflake_pii_gdpr.md %}

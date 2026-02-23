@@ -1,9 +1,9 @@
 ---
-nav_title: Kanal Performance Dashboard
+nav_title: Dashboard für die Performance des Kanals
 article_title: Kanal Performance Dashboard
 page_order: 2
 page_type: reference
-description: "Dieser referenzierte Artikel befasst sich mit dem Channel Performance Dashboard, mit dem Sie die Performance-Metriken für ganze Kanäle sowohl für Kampagnen als auch für Canvase anzeigen können."
+description: "Dieser referenzierte Artikel behandelt das Dashboard für die Kanal-Performance, das es Ihnen erlaubt, die Metriken für alle Kanäle, sowohl für Kampagnen als auch für Canvase, einzusehen."
 tool: 
   - Reports
 
@@ -13,7 +13,7 @@ tool:
 
 > Das Dashboard für die Kanal-Performance zeigt die aggregierten Metriken für einen gesamten Kanal, sowohl für Kampagnen als auch für Canvase. Diese Dashboards sind derzeit für E-Mail und SMS verfügbar.
 
-Das Dashboard für die E-Mail Performance zeigt das Engagement des E-Mail Kanals in den letzten dreißig Tagen an.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
+![Das Dashboard für die Performance von E-Mails, das das Engagement der letzten dreißig Tage für den E-Mail Kanal anzeigt.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
 
 Sie können die folgenden Dashboards einsehen:
 - [E-Mail Performance Dashboard](#email-performance-dashboard)
@@ -81,11 +81,11 @@ Der Bericht **"Zeitpunkt des Engagements** " zeigt Daten darüber an, wann Nutze
 
 Der Engagement-Bericht für **den Wochentag** schlüsselt die Öffnungen oder Klicks nach Wochentag auf. 
 
-![Ein Beispiel für einen Engagement-Bericht für den Tag der Woche mit den meisten Klicks am Montag und Mittwoch.]({% image_buster /assets/img_archive/time_engagement.png %})
+![Ein Beispiel für einen Engagement-Bericht für den Wochentag mit den meisten Klicks am Montag und Mittwoch.]({% image_buster /assets/img_archive/time_engagement.png %})
 
 Der Bericht über das Engagement **zur Tageszeit** schlüsselt die Öffnungen oder Klicks nach jeder Stunde in einem 24-Stunden-Zeitfenster auf.
 
-![Ein Beispiel für einen Engagement-Bericht zur Tageszeit mit den Öffnungen oder Klicks von 12 Uhr bis 23 Uhr.]({% image_buster /assets/img_archive/time_engagement_day.png %})
+![Ein Beispiel für einen Engagement-Bericht für die Tageszeit mit den Öffnungen oder Klicks von 12 Uhr bis 23 Uhr.]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
 Weitere Informationen zu Analytics für Ihre E-Mails finden Sie unter [E-Mail-Berichterstattung]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
@@ -95,7 +95,7 @@ Um Ihr SMS Performance Dashboard zu nutzen, gehen Sie zu **Analytics** > **SMS P
 
 ### Wie die Metriken berechnet werden
 
-![Eine beispielhafte SMS Kampagne mit 335.630 Sendungen, mit einem Durchschnitt von 11.187.667 pro Tag.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![Eine beispielhafte SMS Kampagne mit 335.630 Sendungen, mit einem Durchschnitt von 11.187,667 pro Tag.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 Die Berechnungen für die verschiedenen Metriken im SMS Performance Dashboard sind die gleichen wie auf der Ebene der einzelnen Nachrichten (z.B. Analytics für Kampagnen). Auf diesem Dashboard werden die Metriken über alle Kampagnen und Canvase für den von Ihnen ausgewählten Datumsbereich aggregiert. Um mehr über diese Definitionen zu erfahren, referenzieren Sie auf [SMS Metriken]({{site.baseurl}}/sms_mms_rcs_reporting/).
 

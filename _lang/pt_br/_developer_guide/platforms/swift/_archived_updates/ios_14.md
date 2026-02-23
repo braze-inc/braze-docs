@@ -1,5 +1,5 @@
 ---
-nav_title: Guia de atualização do iOS 14
+nav_title: Guia para fazer upgrade do iOS 14
 article_title: Guia de atualização do SDK do iOS 14
 page_order: 7
 platform: iOS
@@ -49,7 +49,7 @@ table td {
 
 ### Permissão de local aproximado
 
-![Localização precisa]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+![Local preciso]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
 #### Visão geral
 

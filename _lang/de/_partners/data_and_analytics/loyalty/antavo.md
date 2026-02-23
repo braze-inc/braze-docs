@@ -67,7 +67,7 @@ Wenn sich ein Wert der konfigurierten Felder in Antavo ändert, wird nicht nur d
 ![Seite Felder synchronisieren in Antavo.]({% image_buster /assets/img/antavo/data_field_mapping.png %})
 
 {% alert important %}
-Um den Verbrauch von Datenpunkten zu minimieren, empfehlen wir, nur die Felder abzubilden, die in Braze bearbeitet werden sollen.
+Um die Datenpunkt-Nutzung zu minimieren, empfehlen wir, nur die Felder abzubilden, die in Braze bearbeitet werden sollen.
 {% endalert %}
 
 #### Unterstützte Datentypen

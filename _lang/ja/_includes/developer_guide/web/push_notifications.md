@@ -4,7 +4,7 @@
 
 ## プッシュ・プロトコル
 
-Web プッシュ通知は、大部分の主要ブラウザーでサポートされている [W3C プッシュ標準](http://www.w3.org/TR/push-api/)を使用します。特定のプッシュ・プロトコルの標準やブラウザのサポートについての詳細は、[アップル社や](https://developer.apple.com/notifications/safari-push-notifications/) [モジラ社](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)、[マイクロソフト](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/)社のリソースを参照されたい。
+Web プッシュ通知は、大部分の主要ブラウザーでサポートされている [W3C プッシュ標準](http://www.w3.org/TR/push-api/)を使用します。特定のプッシュ・プロトコルの標準やブラウザのサポートに関する詳細は、[アップル社や](https://developer.apple.com/notifications/safari-push-notifications/) [モジラ社](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)、[マイクロソフト](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/)社のリソースを参照されたい。
 
 ## プッシュ通知の設定
 
@@ -52,7 +52,7 @@ Web プッシュを統合するには、ドメインが[セキュア](https://w3
 
 ### 考慮事項
 
-Web上の多くの回避策がそうであるように、ブラウザは絶えず進化しており、この方法は将来的に実行不可能になる可能性があることを覚えておいてほしい。続行する前に、以下を確認する：
+Web上の多くの回避策がそうであるように、ブラウザは絶えず進化しており、この方法は将来実行不可能になる可能性があることを覚えておいてほしい。続行する前に、以下を確認する：
 
 - あなたは別のセキュアドメイン（`https://` ）を所有し、そのドメインにサービスワーカーを登録する権限を持つ。
 - ユーザーはWebサイトにログインし、プッシュトークンが正しいプロファイルに一致することを確認する。

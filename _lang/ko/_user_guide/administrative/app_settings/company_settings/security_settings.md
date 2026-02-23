@@ -52,14 +52,14 @@ For [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_si
 
 ## 2단계 인증(2FA)
 
-모든 Braze 사용자에게는 2단계 인증이 필요합니다. 계정 로그에 두 번째 수준의 신원 확인을 추가하여 사용자 이름과 비밀번호보다 더 안전하게 보호합니다. 대시보드에서 2단계 인증을 지원할 수 없는 경우에는 고객 성공 관리자에게 문의하세요. 
+모든 회사 사용자에게는 2단계 인증이 필요합니다. 계정 로그에 두 번째 수준의 신원 확인을 추가하여 사용자 이름과 비밀번호보다 더 안전하게 보호합니다. 대시보드에서 2단계 인증을 지원할 수 없는 경우에는 고객 성공 관리자에게 문의하세요. 
 
 When two-factor authentication is turned on:
 
 - 사용자는 Braze 계정에 로그인할 때 비밀번호를 입력하는 것 외에도 인증 코드를 입력해야 합니다. The code can be sent through an authenticator app, email, or SMS. 
 - The **Remember this account for 30 days** checkbox becomes available to users.
 
-Braze는 2단계 인증을 설정하지 않은 사용자를 Braze 계정에서 차단합니다. 또한, 관리자가 요구하지 않더라도 Braze 계정 사용자는 **계정 설정에서** 직접 2단계 인증을 설정할 수 있습니다.
+2단계 인증을 설정하지 않은 사용자는 Braze 계정에서 차단됩니다. 또한, 관리자가 요구하지 않더라도 Braze 계정 사용자는 **계정 설정에서** 직접 2단계 인증을 설정할 수 있습니다.
 
 페이지에서 나가기 전에 변경 사항을 저장하세요!
 
@@ -85,7 +85,7 @@ If you're having issues logging in with two-factor authentication, contact your 
 
 ### 회사 차원의 2FA 요구 사항
 
-먼저 **회사 설정** > **보안 설정** > **2단계 인증으로** 이동하여 대시보드에 2단계 **인증이** 인에이블되어 있는지 확인합니다. 토글이 회색이면 회사에서 2FA를 설정하지 않았으며 모든 대시보드 사용자에게 의무적으로 사용해야 하는 것은 아닙니다.
+먼저 **회사 설정** > **보안 설정** > **2단계 인증으로** 이동하여 대시보드에 2단계 **인증이** 인에이블되어 있는지 확인합니다. 토글이 회색이면 회사에서 2FA를 설정하지 않았으며 모든 회사 사용자에게 의무적으로 적용되지 않는 것입니다.
 
 #### 2FA가 필수가 아닌 경우의 사용자 옵션
 
@@ -93,10 +93,10 @@ If you're having issues logging in with two-factor authentication, contact your 
 
 #### 2FA가 필수인 경우의 요구 사항
 
-회사 차원에서 2FA를 적용하면 로그인 시 자신의 계정에서 2FA를 설정하지 않은 사용자는 대시보드에서 액세스할 수 없게 됩니다. 사용자는 액세스 권한을 유지하려면 2FA 설정을 완료해야 합니다.
+회사 차원에서 2FA를 적용하는 경우 로그인 시 자신의 계정에서 2FA를 설정하지 않은 사용자는 대시보드에서 액세스할 수 없게 됩니다. 사용자는 액세스 권한을 유지하려면 2FA 설정을 완료해야 합니다.
 
 {% alert important %}
-싱글사인온(SSO)이 인에이블먼트되지 않은 경우에만 모든 Braze 사용자에게 2FA가 필요합니다. SSO를 사용 중인 경우 회사 수준에서 2FA를 적용할 필요가 없습니다.
+모든 회사 사용자에 대해 2FA는 SSO(Single Sign-On)가 인에이블먼트되지 않은 경우에만 필요합니다. SSO를 사용 중인 경우 회사 수준에서 2FA를 적용할 필요가 없습니다.
 {% endalert %}
 
 ## 2단계 인증(2FA) 설정하기
@@ -141,9 +141,11 @@ If you're having issues logging in with two-factor authentication, contact your 
 
 1. **설정** > **관리자 설정으로** 이동합니다.
 2. **보안 설정** 탭을 선택하고 **보안 이벤트 다운로드** 섹션으로 이동합니다.
-2. **보고서 다운로드**를 선택합니다. 
+3. **보고서 다운로드**를 선택합니다. 
 
-이 보고서에는 계정에 대한 가장 최근 10,000건의 보안 이벤트만 포함되어 있습니다. 특정 이벤트 데이터가 필요한 경우 기술 지원팀에 문의하세요.
+이 수동 보고서 다운로드에는 계정에 대한 가장 최근 10,000개의 보안 이벤트만 포함되어 있습니다.
+
+이 행 제한 없이 보안 이벤트를 Amazon S3로 내보내려면 [Amazon S3를 사용하여 보안 이벤트 내보내기를]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/) 참조하세요.
 
 {% details Reported security events %}
 ### 로그인 및 계정
@@ -203,7 +205,7 @@ Canvas
 - 보관된 팀
 - 보관되지 않은 팀
 - 생성된 앱 그룹 권한 세트
-- 편집된 앱 그룹 권한 집합
+- 편집된 앱 그룹 권한 세트
 - 제거된 앱 그룹 권한 세트
 - 커스텀 역할 만들기
 - 업데이트된 커스텀 역할
@@ -260,7 +262,7 @@ Removed Push Credential
 
 ## 개인 식별 정보(PII) 보기 {#view-pii}
 
-**PII 보기** 권한은 엄선된 일부 Braze 사용자만 액세스할 수 있습니다. By default, all admins have their **View PII** permission turned on in user permissions. 즉, 대시보드 전체에서 회사에서 PII로 정의한 모든 표준 및 커스텀 속성을 볼 수 있습니다. 사용자에 대해 이 권한을 해제하면 해당 사용자는 해당 속성을 볼 수 없습니다.
+**PII 보기** 권한은 일부 회사 사용자만 액세스할 수 있습니다. By default, all admins have their **View PII** permission turned on in user permissions. 즉, 대시보드 전체에서 회사에서 PII로 정의한 모든 표준 및 커스텀 속성을 볼 수 있습니다. 사용자에 대해 이 권한을 해제하면 해당 사용자는 해당 속성을 볼 수 없습니다.
 
 {% alert note %}
 일부 고객 데이터에 직접 액세스할 수 있으므로 [쿼리 빌더를]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/) 사용하려면 **PII 보기** 권한이 필요합니다.
@@ -276,7 +278,7 @@ For the existing team permission capabilities, refer to [Setting user permission
 
 대시보드에서 회사에서 PII로 지정한 필드를 선택할 수 있습니다. 이렇게 하려면 **회사 설정** > **관리자 설정** > **보안 설정으로** 이동합니다.
 
-다음 속성을 PII로 지정하여 **PII 보기** 권한이 없는 Braze 사용자로부터 숨길 수 있습니다.
+다음 속성을 PII로 지정하여 **PII 보기** 권한이 없는 회사 사용자로부터 숨길 수 있습니다.
 
 #### 잠재적 PII 속성
 
@@ -287,7 +289,7 @@ For the existing team permission capabilities, refer to [Setting user permission
 
 ### 제한된 영역
 
-The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform. 또한 '선행' 속성은 [잠재적 PII 속성](#potential-pii-attributes) 표에 있는 속성을 참조합니다. 사용자로부터 PII 권한을 제거하면 위에 나열된 영역 외에도 사용성에 영향을 미칠 수 있습니다.
+다음은 모든 필드가 PII로 설정되어 있고 언급된 사용자가 Braze 플랫폼을 사용하는 회사 사용자라고 가정합니다. 또한 '선행' 속성은 [잠재적 PII 속성](#potential-pii-attributes) 표에 있는 속성을 참조합니다. 사용자로부터 PII 권한을 제거하면 위에 나열된 영역 외에도 사용성에 영향을 미칠 수 있습니다.
 
 | 대시보드 탐색 | 결과 | 참고 |
 | -------------------- | ------ | ----- |
@@ -335,7 +337,7 @@ To customize preferences by workspace, you may add preference groups with differ
 
 ### 2단계 인증(2FA) 설정 루프 문제
 
-2단계 인증에 휴대폰 번호를 성공적으로 입력한 후 로그인 페이지로 다시 리디렉션되는 경우, 첫 번째 시도에서 인증에 실패했기 때문일 수 있습니다. 이 문제를 해결하려면 다음 단계를 따르세요:
+2단계 인증을 위해 휴대폰 번호를 성공적으로 입력한 후 로그인 페이지로 다시 리디렉션되는 경우, 첫 번째 시도에서 인증에 실패했기 때문일 수 있습니다. 이 문제를 해결하려면 다음 단계를 따르세요:
 
 1. 광고 차단기를 끄세요.
 2. 브라우저 설정에서 쿠키를 인에이블먼트합니다.
@@ -358,6 +360,6 @@ To customize preferences by workspace, you may add preference groups with differ
 
 1. 휴대폰에 Authy 앱을 설치하고 Authy 인증자에 로그인합니다.
 2. 휴대폰 번호를 입력하고 Authy 앱에서 변경 사항이나 SMS 알림을 확인합니다.
-3. 그래도 SMS를 받지 못하면 홈 네트워크나 회사 와이파이가 아닌 다른 네트워크 연결을 사용해 보세요. 기업 네트워크에 SMS 전달을 방해하는 보안 정책이 있을 수 있습니다.
+3. 그래도 SMS를 받지 못하면 홈 네트워크나 회사 Wi-Fi가 아닌 다른 네트워크 연결을 사용해 보세요. 기업 네트워크에 SMS 전달을 방해하는 보안 정책이 있을 수 있습니다.
 
 문제가 지속되면 인증 앱에서 이전 프로필을 삭제하고 QR 코드를 다시 스캔하여 2FA를 설정하세요. 설정을 다시 시도하기 전에 광고 차단기를 비활성화했거나, 서드파티 쿠키를 인에이블먼트했거나, 다른 브라우저를 사용했는지 확인하세요.

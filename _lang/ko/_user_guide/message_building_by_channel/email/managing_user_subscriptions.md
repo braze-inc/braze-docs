@@ -43,7 +43,7 @@ Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channe
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %}{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} 
 
-이메일 주소가 하드 바운스되면, Braze는 사용자의 구독 상태를 "구독 취소됨"으로 자동 설정하지 않습니다. 주소가 하드 바운스(유효하지 않거나 존재하지 않음)되면, Braze는 이를 유효하지 않다고 표시하고 추가 전송을 시도하지 않습니다. 사용자가 이메일 주소를 변경하면, Braze는 전송을 재개합니다. Braze는 소프트 바운스를 72시간 동안 재시도합니다.
+이메일 주소가 하드 바운스되면, Braze는 자동으로 사용자의 구독 상태를 "구독 취소됨"으로 설정하지 않습니다. 주소가 하드 바운스(유효하지 않거나 존재하지 않음)되면, Braze는 이를 유효하지 않다고 표시하고 추가 전송을 시도하지 않습니다. 사용자가 이메일 주소를 변경하면, Braze는 전송을 재개합니다. Braze는 소프트 바운스를 72시간 동안 재시도합니다.
 
 ### 이메일 구독 상태 업데이트하기
 
@@ -72,7 +72,7 @@ Braze SDK를 사용하여 사용자의 구독 상태를 업데이트하세요.
 
 ![User profile for John Doe with their email subscription state set to Subscribed.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-사용자의 이메일 구독 상태를 확인하는 방법은 다음과 같습니다:
+다음 방법으로 사용자의 이메일 구독 상태를 확인할 수 있습니다:
 
 1. **REST API 내보내기:** Use the [Export users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Export users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints to export individual user profiles in JSON format.
 2. **사용자 프로필:** Find the user's profile on the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page, then select the **Engagement** tab to view and manually update a user's subscription state.
@@ -102,7 +102,7 @@ Use the [Subscription Group endpoints]({{site.baseurl}}/api/endpoints/subscripti
 
 세그먼트를 만들 때 구독 그룹 이름을 필터로 설정합니다. 이렇게 하면 그룹에 옵트인한 사용자가 내 이메일을 받을 수 있습니다. 월간 뉴스레터, 쿠폰, 멤버십 등급 등에 유용하게 사용할 수 있습니다.
 
-![ "주간 이메일" 구독 그룹의 사용자 필터로 "소멸된 사용자" 세그먼트의 사용자를 타겟팅하는 예시입니다.]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
+![ "주간 이메일" 구독 그룹의 사용자에 대한 필터로 "소멸된 사용자" 세그먼트에서 사용자를 타겟팅하는 예시입니다.]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
 
 ### 구독 그룹 아카이브
 
@@ -113,7 +113,7 @@ To archive your group from the **Subscription Groups** page, do the following:
 1. Find your group in the list of subscription groups. 
 2. Select **Archive** from the <i class="fa-solid fa-ellipsis-vertical"></i> dropdown menu.
 
-Braze는 아카이브된 그룹의 사용자 상태 변경을 처리하지 않습니다. 예를 들어, Alex가 구독 중인 구독 그룹 1을 아카이브하면, Alex는 탈퇴 링크를 클릭하더라도 여전히 "구독 중"으로 남아 있습니다. 이것은 중요하지 않습니다. 왜냐하면 구독 그룹 1이 아카이브되어 있고 이를 사용하여 메시지를 보낼 수 없기 때문입니다.
+Braze는 아카이브된 그룹의 사용자 상태 변경을 처리하지 않습니다. 예를 들어, Alex가 구독 중인 구독 그룹 1을 아카이브하면, Alex는 탈퇴 링크를 클릭하더라도 여전히 "구독 중" 상태로 남아 있습니다. 이것은 중요하지 않습니다. 왜냐하면 구독 그룹 1이 아카이브되어 있고 이를 사용하여 메시지를 보낼 수 없기 때문입니다.
 
 #### 구독 그룹 크기 보기
 
@@ -123,7 +123,7 @@ You can reference the **Subscription Group Timeseries** graph in the **Subscript
 
 #### 캠페인 분석에서 구독 그룹 보기
 
-특정 이메일 캠페인에서 구독 상태(구독 또는 탈퇴)를 변경한 사용자 수를 해당 캠페인의 분석 페이지에서 확인할 수 있습니다.
+특정 이메일 캠페인에서 구독 상태(구독 중 또는 탈퇴)를 변경한 사용자 수를 해당 캠페인의 분석 페이지에서 확인할 수 있습니다.
 
 1. From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section.
 2. Select the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
@@ -137,7 +137,7 @@ You can reference the **Subscription Group Timeseries** graph in the **Subscript
 
 ## 이메일 환경설정 센터
 
-이메일 선호 센터를 통해 어떤 사용자가 구독 그룹 뉴스레터를 받을지 관리할 수 있습니다. 대시보드의 **구독 그룹**에서 찾을 수 있습니다. 생성하는 각 구독 그룹은 환경설정 센터 목록에 추가됩니다. 
+이메일 선호 센터를 통해 어떤 사용자가 구독 그룹 뉴스레터를 받을지 관리할 수 있습니다. 대시보드의 **구독 그룹** 아래에서 찾을 수 있습니다. 생성하는 각 구독 그룹은 환경설정 센터 목록에 추가됩니다. 
 
 To learn more about how to add or customize a preference center, refer to [Preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).
 
@@ -149,7 +149,7 @@ To learn more about how to add or customize a preference center, refer to [Prefe
 
 ### 커스텀 바닥글 만들기 {#custom-footer}
 
-기본 바닥글을 사용하고 싶지 않다면, 작업 공간 전체에 맞춤 이메일 바닥글을 만들고 {% raw %}`{{${email_footer}}}`{% endraw %}를 사용하여 모든 이메일에 템플릿화하세요.
+기본 바닥글을 사용하고 싶지 않다면, 작업 공간 전체에 맞춤 이메일 바닥글을 만들고 {% raw %}`{{${email_footer}}}`{% endraw %}를 사용하여 모든 이메일에 템플릿으로 적용하세요.
 
 이렇게 하면 모든 이메일 템플릿이나 이메일 캠페인에 대해 새로운 바닥글을 만들 필요가 없습니다. 단계는 [맞춤 이메일 바닥글]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/)을 참조하세요.
 
@@ -181,7 +181,7 @@ To learn more about how to add or customize a preference center, refer to [Prefe
 사용자는 {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} 태그를 통해 이 페이지에 도달합니다.
 
 {% alert tip %}
-더 나은 아웃리치를 위해 더블 옵트인 프로세스를 사용하세요. Braze는 사용자가 링크를 통해 알림 기본 설정을 확인하는 추가 확인 이메일을 보냅니다. 확인 후 사용자는 옵트인 상태가 됩니다.
+더 나은 아웃리치를 위해 더블 옵트인 프로세스를 사용하세요. Braze는 사용자가 링크를 통해 알림 기본 설정을 확인하는 추가 확인 이메일을 보냅니다. 확인 후 사용자는 옵트인됩니다.
 {% endalert %}
 
 ![메시지 "여전히 저희 소식을 듣고 싶어 하신다니 기쁩니다"가 있는 커스텀 옵트인 이메일입니다.]({% image_buster /assets/img/custom_optin.png %})

@@ -1,7 +1,7 @@
 ---
 nav_title: Spracheinstellungen
 article_title: Spracheinstellungen
-page_order: 2.5
+page_order: 3
 page_type: reference
 description: "Dieser Artikel beschreibt, wie Sie die Sprache ändern, in der das Braze-Dashboard angezeigt wird."
 
@@ -18,7 +18,7 @@ Das Dashboard von Braze ist in [mehreren Sprachen](#supported-languages) verfüg
 1. Wählen Sie in der globalen Kopfzeile <i class="fa-solid fa-globe" aria-label="Wählen Sie Ihre Sprache aus"></i>.
 2. Wählen Sie Ihre Sprache aus der Liste.
 
-![Englisch als Sprache für das Braze-Dashboard ausgewählt.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
+![Als Sprache für das Braze-Dashboard wurde Englisch ausgewählt.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
 
 Es kann ein paar Augenblicke dauern, bis das Dashboard neu geladen wird.
 

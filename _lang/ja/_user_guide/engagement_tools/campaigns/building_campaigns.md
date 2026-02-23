@@ -1,5 +1,5 @@
 ---
-nav_title: ビルドキャンペーン
+nav_title: キャンペーンの構築
 article_title: キャンペーンの構築
 layout: dev_guide
 guide_top_header: "キャンペーンの構築"

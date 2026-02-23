@@ -99,4 +99,4 @@ Pour obtenir des informations sur les revenus attribués à la dernière campagn
 
 ### Chiffre d'affaires 
 
-Pour analyser les données de ces nouveaux événements, accédez au [générateur de tableaux de bord]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) et affichez le [tableau de bord**eCommerce Revenue - Last Touch Attribution**]({{site.baseurl}}/ecommerce_revenue_dashboard/).
+Pour analyser les données de ces nouveaux événements, accédez au [générateur de tableau de bord]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) et affichez le [tableau de bord**eCommerce Revenue - Last Touch Attribution**]({{site.baseurl}}/ecommerce_revenue_dashboard/).

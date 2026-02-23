@@ -40,26 +40,26 @@ Hier sehen Sie zum Beispiel ein angepasstes Bild, das von NiftyImages unter Verw
 
 Wählen Sie in NiftyImages ein Tag für die Zusammenführung aus und geben Sie dann Ihre Standardwerte ein. Wenn Sie fertig sind, wählen Sie **Weiter**.
 
-![alt text]({% image_buster /assets/img/niftyimages/2.png %}){: style="max-width:70%;"}
+![Alt-Text]({% image_buster /assets/img/niftyimages/2.png %}){: style="max-width:70%;"}
 
 Geben Sie optional Ihre Datentypen ein und wählen Sie dann **Weiter**.
 
-![alt text]({% image_buster /assets/img/niftyimages/3.png %})
+![Alt-Text]({% image_buster /assets/img/niftyimages/3.png %})
 {: style="max-width:70%;"}
 
 Optional können Sie Ihre Tags zur späteren Verwendung speichern. Wenn Sie fertig sind, wählen Sie **Speichern**, um Ihren Tag zu erstellen.
 
-![alt text]({% image_buster /assets/img/niftyimages/4.png %}){: style="max-width:70%;"}
+![Alt-Text]({% image_buster /assets/img/niftyimages/4.png %}){: style="max-width:70%;"}
 
 ### Schritt 2: Passen Sie Ihr Bild an
 
 Passen Sie die Schriftart, die Schriftgröße, die Positionierung, die Farbe, die Überlagerung und vieles mehr an Ihr Bild an. Wenn Sie fertig sind, kopieren Sie die URL Ihres Bildes.
 
-![alt text]({% image_buster /assets/img/niftyimages/5.png %})
+![Alt-Text]({% image_buster /assets/img/niftyimages/5.png %})
 
 ### Schritt 3: Fügen Sie die Bild-URL zu Braze hinzu
 
 Öffnen Sie in Braze eine Kampagne oder ein Canvas und fügen Sie die URL Ihres NiftyImage ein. Optional können Sie eine Vorschau Ihrer Änderungen anzeigen, um Ihre Liquid-Tags zu überprüfen.
 
 
-![alt text]({% image_buster /assets/img/niftyimages/6.png %})
+![Alt-Text]({% image_buster /assets/img/niftyimages/6.png %})

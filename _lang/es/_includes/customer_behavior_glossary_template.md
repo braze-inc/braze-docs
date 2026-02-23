@@ -11,13 +11,13 @@ search_rank: 7
 
 Póngase en contacto con su representante de Braze o abra un [ticket de soporte]({{site.baseurl}}/braze_support/) si necesita acceder a derechos de eventos adicionales. Si no encuentras lo que necesitas en esta página, consulta nuestra [Biblioteca de Eventos de Interacción con Mensajes]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) o nuestros [ejemplos de datos de muestra Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
-{% details Explicación del comportamiento del cliente y de la estructura de eventos del usuario y valores de la plataforma %}
+{% details Explanation of customer behavior and user event structure and platform values %}
 
 ### Estructura del evento
 
 Este desglose del comportamiento del cliente y de los eventos del usuario muestra qué tipo de información se incluye generalmente en un comportamiento del cliente o en un evento del usuario. Con una sólida comprensión de sus componentes, tus desarrolladores y el equipo de estrategia de inteligencia empresarial pueden utilizar los datos de eventos Currents entrantes para elaborar informes y gráficos basados en datos, y aprovechar otras valiosas métricas de datos.
 
-![Desglose de un evento de usuario que muestra un evento de compra con las propiedades enumeradas agrupadas por propiedades específicas del usuario, propiedades específicas del comportamiento y propiedades específicas del dispositivo]({% image_buster /assets/img/customer_engagement_event.png %})
+![Desglose de un evento de usuario que muestra un evento de compra con las propiedades enumeradas agrupadas por propiedades específicas del usuario, propiedades específicas del comportamiento y propiedades específicas del dispositivo.]({% image_buster /assets/img/customer_engagement_event.png %})
 
 El comportamiento del cliente y los eventos del usuario se componen de propiedades **específicas del usuario**, propiedades **específicas del comportamiento** y propiedades **específicas del dispositivo**.
 

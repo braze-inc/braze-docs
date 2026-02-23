@@ -2,7 +2,7 @@
 nav_title: Action paths
 article_title: Action Paths 
 alias: /action_paths/
-page_order: 0.1
+page_order: 1
 page_type: reference
 description: "This reference article covers how to use Action Paths, a component that allows you to sort users based on their actions."
 tool: Canvas
@@ -39,7 +39,7 @@ Note that you can trigger an action path when a nested custom attribute object c
 
 #### In-app messages
 
-Note that when the action group trigger is starting a session and the next step is an in-app message, the user must perform two session starts to receive the in-app message. The first session assigns the user to the action group within the action path, and the second session triggers the in-app message.
+Note that when the action group trigger is starting a session, and the next step is an in-app message, the user must perform two session starts to receive the in-app message. The first session assigns the user to the action group within the action path, and the second session triggers the in-app message.
 
 #### Ranking status example
 
@@ -58,7 +58,9 @@ Add a trigger or multiple triggers to define your action groups. Here, you can s
 - Perform a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Perform a conversion event
 - Add an email address
-- Change a custom attribute value (including arrays, but not nested custom attributes). This includes adding a new attribute with a value to a user profile for the first time (when the attribute was not previously present).
+- Change a custom attribute value.
+  - This includes adding a new attribute with a value to a user profile for the first time (when the attribute was not previously present).
+  - Attribute triggers are not available for array attributes.
 - Update their subscription status or subscription group status
 - Interact with a campaign or Content Card
 - Enter a location
@@ -75,7 +77,7 @@ If users enter an action path multiple times and have multiple entries in the ac
 
 | Ranking Status | Action Path Behavior |
 |---|--------------|
-| **Off** | When a relevant action is performed, Braze deduplicates entries and immediately advance the earliest entry through the relevant action group. <br><br/> When a relevant action is not performed, all entries advance at the end of the relevant evaluation window. No deduplication occurs. |
+| **Off** | When a relevant action is performed, Braze deduplicates entries and immediately advances the earliest entry through the relevant action group. <br><br> When a relevant action is not performed, all entries advance at the end of the relevant evaluation window. No deduplication occurs. |
 | **On** | All entries advance at the end of the relevant evaluation window. No deduplication occurs. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

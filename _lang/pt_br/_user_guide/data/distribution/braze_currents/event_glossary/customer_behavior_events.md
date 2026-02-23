@@ -17,7 +17,7 @@ Entre em contato com seu representante Braze ou abra um [ticket de suporte]({{si
 
 Esse detalhamento do comportamento do cliente e dos eventos do usuário mostra que tipo de informação é geralmente incluído em um comportamento do cliente ou evento do usuário. Com uma sólida compreensão de seus componentes, seus desenvolvedores e a equipe de estratégia de business intelligence podem usar os dados de eventos Currents recebidos para criar relatórios e gráficos orientados por dados e tirar proveito de outras métricas de dados valiosas.
 
-![Análise de um evento do usuário mostrando um evento de compra com as propriedades listadas agrupadas por propriedades específicas do usuário, propriedades específicas do comportamento e propriedades específicas do dispositivo]({% image_buster /assets/img/customer_engagement_event.png %})
+![Análise de um evento de usuário mostrando um evento de compra com as propriedades listadas agrupadas por propriedades específicas do usuário, propriedades específicas do comportamento e propriedades específicas do dispositivo]({% image_buster /assets/img/customer_engagement_event.png %})
 
 O comportamento do cliente e os eventos do usuário são compostos por propriedades **específicas do usuário**, propriedades **específicas do comportamento** e propriedades **específicas do dispositivo**.
 
@@ -925,7 +925,7 @@ Quando um usuário inicia sua primeira sessão, são disparados os eventos `Firs
 Atividade ao Vivo, Push para Iniciar Token
 {% endapitags %}
 
-Este evento ocorre quando o Braze sincroniza o token de push para iniciar a Atividade ao Vivo com o usuário.
+Este evento ocorre quando o Braze sincroniza o token de push para iniciar a atividade ao vivo com o usuário.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1031,10 +1031,10 @@ Este evento ocorre quando o Braze sincroniza o token de push para iniciar a Ativ
 ## Eventos de mudança de token de atualização de atividade ao vivo {#live-activity-update-token-change-events}
 
 {% apitags %}
-Atividade ao vivo, Mudança de token de atualização
+Atividade ao vivo, Atualizar token
 {% endapitags %}
 
-Este evento ocorre quando o Braze sincroniza o token de atualização da atividade ao vivo com o usuário
+Este evento ocorre quando o Braze sincroniza o token de atualização de atividade ao vivo com o usuário
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1166,7 +1166,8 @@ Este evento ocorre quando um token por push é inserido, atualizado ou removido.
   "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "time_ms" : "(optional, long) Time in millisecond when the event happened",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
   "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
   "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1191,6 +1192,7 @@ Este evento ocorre quando um token por push é inserido, atualizado ou removido.
     "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
     "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1226,6 +1228,7 @@ Este evento ocorre quando um token por push é inserido, atualizado ou removido.
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
     "time" : "(required, int) UNIX timestamp at which the event happened",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
@@ -1240,7 +1243,7 @@ Este evento ocorre quando um token por push é inserido, atualizado ou removido.
 // Push Notification Token State Changed (users.behaviors.pushnotification.TokenStateChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1258,6 +1261,7 @@ Este evento ocorre quando um token por push é inserido, atualizado ou removido.
     "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
     "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
     "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
+    "time_ms" : "(optional, long) Time in millisecond when the event happened",
     "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
     "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
     "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
@@ -1278,10 +1282,13 @@ Este evento ocorre quando um token por push é inserido, atualizado ou removido.
   - Se a permissão de push for desconhecida, isso ficará vazio. Por padrão, o Braze tentará enviar notificações por push em primeiro plano para o token.
 - O campo `push_token_provisionally_opted_in` se aplica apenas a tokens por push do iOS.
   - Se você tiver [Autorização Provisória]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) configurada, os tokens provisórios terão este campo definido como `true`. Todos os outros tokens por push serão `false`.
+- O campo `sdk_version` só será preenchido se a mudança de estado do token for iniciada pelo SDK.
+  - Se houver um evento SDK `changeUser` que aciona o token a ser movido de um usuário para outro, o campo `sdk_version` será preenchido.
+  - Se houver um bounce de push (por exemplo, devido à desinstalação), o campo `sdk_version` ficará em branco.
 - Sempre que um token por push entra no Braze, seus eventos de ciclo de vida são registrados. Existem três tipos de eventos de mudança de token ("adicionar", "atualizar" e "remover") registrados no campo `push_token_state_change_type`. Observe os seguintes detalhes:
-  - Para um novo token que não existia antes, isso registra um evento "adicionar".
-  - Para atualizar o token com a mesma string de token no mesmo usuário (gateway ou `foreground_push_disabled` ou outros campos "secundários" alterados), isso registrará um evento "atualizar" no mesmo token.
-  - Se um token for transferido de um usuário para outro, isso gerará um evento de "remover" para o usuário antigo e um evento de "adicionar" para o novo usuário.
-  - Se o mesmo usuário ou dispositivo gerar um novo token, isso gerará um evento de "remover" para o token antigo e um evento de "adicionar" para o novo token.
-  - Se a Braze estiver removendo um token (por razões como desinstalação ou token inválido), isso gerará um evento de "remover" para o token.
+  - Para um novo token que não existia antes, isso ingere um evento "adicionar".
+  - Para atualizar o token com a mesma string de token no mesmo usuário (gateway ou `foreground_push_disabled` ou outros campos "secundários" alterados), isso irá ingerir um evento "atualizar" no mesmo token.
+  - Se um token foi transferido de um usuário para outro, isso irá ingerir um evento "remover" para o usuário antigo e um evento "adicionar" para o novo usuário.
+  - Se o mesmo usuário ou dispositivo gerar um novo token, isso irá ingerir um evento "remover" para o token antigo e um evento "adicionar" para o novo token.
+  - Se a Braze estiver removendo um token (por razões como desinstalação ou token inválido), isso irá ingerir um evento "remover" para o token.
 {% endapi %}

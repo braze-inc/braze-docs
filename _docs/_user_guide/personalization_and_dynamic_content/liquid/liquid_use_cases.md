@@ -186,7 +186,7 @@ This use case calculates the last time a user opened your app and will display a
 
 {% raw %}
 ```liquid
-{% assign last_used_date = {{${last_used_app_date}} | date: "%s" %}
+{% assign last_used_date = {{${last_used_app_date}}} | date: "%s" %}
 {% assign now = 'now' | date: "%s" %}
 {% assign difference_in_days = {{now}} | minus: {{last_used_date}} | divided_by: 86400 %}
 {% if {{difference_in_days}} < 3 %}
@@ -203,7 +203,7 @@ This use case calculates how long ago a user used your app, and depending on the
 
 {% raw %}
 ```liquid
-{% assign last_used_date = {{${last_used_app_date}} | date: "%s" %}
+{% assign last_used_date = {{${last_used_app_date}}} | date: "%s" %}
 {% assign now = 'now' | date: "%s" %}
 {% assign difference_in_days = {{now}} | minus: {{last_used_date}} | divided_by: 86400 %}
 {% if {{difference_in_days}} < 3 %}
@@ -745,27 +745,27 @@ This use case will display the current date, month, and year, with the month in 
 
 {% if {{month}} == 'January' %}
 {{day}} Januari {{year}}
-{% elsif {{month)) == 'February' %}
+{% elsif {{month}} == 'February' %}
 {{day}} Februari {{year}}
-{% elsif {{month)) == 'March' %}
+{% elsif {{month}} == 'March' %}
 {{day}} Mars {{year}}
-{% elsif {{month)) == 'April' %}
+{% elsif {{month}} == 'April' %}
 {{day}} April {{year}}
-{% elsif {{month)) == 'May' %}
+{% elsif {{month}} == 'May' %}
 {{day}} Maj {{year}}
-{% elsif {{month)) == 'June' %}
+{% elsif {{month}} == 'June' %}
 {{day}} Juni {{year}}
-{% elsif {{month)) == 'July' %}
+{% elsif {{month}} == 'July' %}
 {{day}} Juli {{year}}
-{% elsif {{month)) == 'August' %}
+{% elsif {{month}} == 'August' %}
 {{day}} Augusti {{year}}
-{% elsif {{month)) == 'September' %}
+{% elsif {{month}} == 'September' %}
 {{day}} September {{year}}
-{% elsif {{month)) == 'October' %}
+{% elsif {{month}} == 'October' %}
 {{day}} Oktober {{year}}
-{% elsif {{month)) == 'November' %}
+{% elsif {{month}} == 'November' %}
 {{day}} November {{year}}
-{% elsif {{month)) == 'December' %}
+{% elsif {{month}} == 'December' %}
 {{day}} December {{year}}
 {% endif %}
 ```
@@ -1049,7 +1049,7 @@ The following step checks if the time_to_reminder is less than seven days away b
 Users are scheduled to enter the journey on day 2.
 {% endcomment %}
 
-{% else {{time_to_reminder}} < 604799 and {{time_to_reminder}} > 172860 %}
+{% elsif {{time_to_reminder}} < 604799 and {{time_to_reminder}} > 172860 %}
 {% assign time_to_first_message = reminder_start_date | plus: 172800 %}
 
 {
@@ -1310,7 +1310,7 @@ For push notifications and in-app message channels, you can specify the device c
 
 {% raw %}
 ```liquid
-{% if {targeted_device.${carrier}} contains "verizon" or {targeted_device.${carrier}} contains "Verizon" %}
+{% if {{targeted_device.${carrier}}} contains "verizon" or {{targeted_device.${carrier}}} contains "Verizon" %}
 
 This is a message for Verizon users!
 
@@ -1378,7 +1378,7 @@ This use case displays different messages based on a user's time zone.
 ```liquid
 {% if {{${time_zone}}} == 'xx' %}
 Message for time zone xx.
-{% elsif {{$time_zone}}} == 'yy' %}
+{% elsif {{${time_zone}}} == 'yy' %}
 Message for time zone yy.
 {% else %}
 {% abort_message("Invalid time zone") %}

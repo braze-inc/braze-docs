@@ -27,6 +27,8 @@ When a Canvas is stopped, or archived, or a step is removed, any user who has go
 
 Properties in a Canvas step can be changed after launch, and even after a user goes through the step. Users will always receive a real-time, dynamic version of the feature flag, instead of the older, previously saved version.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## Overwriting properties
 
 When creating a feature flag you specify default properties. When setting up a feature flag Canvas step, you can either keep the default values, or overwrite the values for users who enter this step.
@@ -40,4 +42,3 @@ Go to **Messaging** > **Feature Flags** to edit, add, or remove additional prope
 Canvas and a feature flag rollout (dragging the slider) can work independently of each other. An important caveat is entry to a Canvas step will overwrite any default rollout configuration. This means if a user doesn't qualify for a feature flag, a Canvas step can enable the feature for that user.
 
 Similarly, if a user qualifies for a feature flag rollout with certain properties, if they also enter into the Canvas step, they will receive any overwritten values from that Canvas step.
-

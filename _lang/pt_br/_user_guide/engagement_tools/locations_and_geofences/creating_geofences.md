@@ -43,7 +43,7 @@ Consulte a tabela a seguir para termos comuns de geofences e suas descrições.
 Para criar um geofence, você precisará criar um conjunto de geofences primeiro.
 
 1. Acessar **público** > **Locais** no dashboard da Braze.
-2. Selecione **Criar Conjunto de Geofence**.
+2. Selecione **Criar Conjunto de Geofences**.
 3. Para **Nome do conjunto**, insira um nome para seu conjunto de geofences.
 4. (Opcional) Adicione tags para filtrar seu conjunto.
 
@@ -63,13 +63,13 @@ Recomendamos a criação de geofences com um raio de pelo menos 200 metros para 
 
 ## Upload em massa de geofences {#creating-geofence-sets-via-bulk-upload}
 
-As geofences podem ser feitas upload em massa como um objeto GeoJSON do tipo `FeatureCollection`. Cada geofence é um `Point` tipo de geometria na coleção de recursos. As propriedades para cada recurso requerem uma `radius` chave e uma chave `name` opcional para cada geofence. 
+As geofences podem ser feitas upload em massa como um objeto GeoJSON do tipo `FeatureCollection`. Cada geofence é um `Point` tipo de geometria na coleção de recursos. As propriedades para cada recurso requerem uma `radius` chave e uma `name` chave opcional para cada geofence. 
 
 Para fazer upload do seu GeoJSON, selecione **Mais** > **Fazer upload do GeoJSON**.
 
 Ao criar seus geofences, considere os seguintes detalhes:
 
-- O valor `coordinates` no GeoJSON é formatado como `[Longitude, Latitude]`.
+- O `coordinates` valor no GeoJSON é formatado como `[Longitude, Latitude]`.
 - O raio máximo do geofence que pode ser enviado é de 10.000 metros (cerca de 10 quilômetros ou 6,2 milhas).
 
 ### Exemplo
@@ -171,7 +171,7 @@ Para saber mais sobre a precisão das geofences, consulte a documentação do [A
 
 ### Como o geofences afeta a duração da bateria?
 
-Nossa solução de geofencing usa o serviço de sistema de geofence nativo no iOS e Android e é ajustada para equilibrar inteligentemente precisão e energia, economizando a vida útil da bateria e melhorando o desempenho à medida que o serviço subjacente melhora.
+Nossa solução de geofencing usa o serviço de sistema de geofence nativo no iOS e Android e é ajustada para equilibrar inteligentemente precisão e consumo de energia, economizando a vida útil da bateria e melhorando o desempenho à medida que o serviço subjacente melhora.
 
 ### Quando as geofences estão ativas?
 

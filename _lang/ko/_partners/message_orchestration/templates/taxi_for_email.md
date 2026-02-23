@@ -14,11 +14,11 @@ search_tag: Partner
 
 _This integration is maintained by Taxi for Email._
 
-## About the integration
+## 통합 정보
 
-The Braze and Taxi integration leverages Taxi's simple yet powerful syntax to create and export intelligent email templates to Braze. 
+Braze와 Taxi의 통합은 Taxi의 간단하면서도 강력한 구문을 사용하여 지능형 이메일 템플릿을 생성하고 내보낼 수 있습니다. 
 
-## Prerequisites
+## 필수 조건
 
 | Requirement | Description |
 | ------------| ----------- |
@@ -43,6 +43,6 @@ Your connector field will change colors after details with correct permissions a
 
 ## Usage
 
-Find your uploaded Taxi template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
+Braze 계정의 **템플릿 & 미디어 > 이메일 템플릿** 섹션에서 업로드한 Taxi 템플릿을 찾으세요. You can now use this email template to start sending engaging email messages to your customers!
 
 

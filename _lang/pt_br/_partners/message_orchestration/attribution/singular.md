@@ -10,9 +10,9 @@ search_tag: Partner
 
 # Singular
 
-> Como uma plataforma de análise de dados de marketing unificada, a Singular oferece atribuição, agregação de custos, análise de dados de marketing, relatórios criativos e automação de fluxo de trabalho.
+> [A Singular](https://www.singular.net/) é uma plataforma unificada de análise de dados de marketing que oferece atribuição, agregação de custos, análise de marketing, relatórios criativos e automação de fluxo de trabalho.
 
-_A integração é mantida pela Singular._
+_Essa integração é mantida pela Singular._
 
 ## Sobre a integração
 
@@ -43,7 +43,7 @@ SingularConfig config = new SingularConfig("SDK KEY", "SDK SECRET")
 #### iOS
 
 {% alert important %}
-Antes de fevereiro de 2023, nossa integração de atribuição Singular usava o IDFV como o identificador principal para corresponder aos dados de atribuição do iOS. Não é necessário que os clientes da Braze que usam Objective-C busquem o `device_id` da Braze e o enviem para a Singular na instalação, pois não haverá interrupção do serviço.
+Antes de fevereiro de 2023, nossa integração de atribuição do Singular usava o Identificador de Fornecedor (IDFV) como o identificador principal para corresponder aos dados de atribuição do iOS. Não é necessário que os clientes do Braze que usam Objective C obtenham o Braze `device_id` e o enviem para a Singular após a instalação, pois não há interrupção do serviço.
 {% endalert%}
 
 Para quem usa o SWIFT SDK v5.7.0+, se você deseja continuar usando o IDFV como o identificador mútuo, confirme se o campo `useUUIDAsDeviceId` está definido como `false` para que não haja interrupção da integração. 
@@ -51,7 +51,7 @@ Para quem usa o SWIFT SDK v5.7.0+, se você deseja continuar usando o IDFV como 
 Se estiver definido como `true`, implemente o mapeamento de ID do dispositivo iOS para SWIFT a fim de passar o `device_id` da Braze para a Singular na instalação do app para que a Braze possa corresponder adequadamente as atribuições do iOS.
 
 {% tabs local %}
-{% tab Objective C %}
+{% tab Objective-C %}
 
 ```objc
 SingularConfig* config = [[SingularConfig
@@ -78,15 +78,15 @@ Na Braze, navegue até **Integrações de parceiros** > **Parceiros de tecnologi
 
 Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. 
 
-Você precisará fornecer a chave de importação de dados e o endpoint REST ao gerente de sua conta Singular para concluir a integração.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página da tecnologia Singular. Nesta caixa, você vê a chave de importação de dados e o endpoint REST.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
+Você precisará fornecer a chave de importação de dados e o endpoint REST ao gerente de sua conta Singular para concluir a integração.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página da tecnologia Singular. Essa caixa contém chave de importação de dados e o endpoint REST.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
 
 ### Etapa 3: Confirmar a integração
 
-Quando o Braze receber dados de atribuição da Singular, o indicador de status de conexão na página de parceiros de tecnologia da Singular no Braze mudará de "Não conectado" para "Conectado". Um carimbo de data/hora da última solicitação bem-sucedida também será incluído. 
+Depois que o Braze receber dados de atribuição da Singular, o indicador de status da conexão na página de parceiros de tecnologia da Singular no Braze mudará de "Não conectado" para "Conectado" e incluirá um registro de data e hora da última solicitação bem-sucedida.
 
-Observe que isso não acontecerá até recebermos dados sobre uma instalação atribuída. Instalações orgânicas, que devem ser excluídas do postback da Singular, são ignoradas pela nossa API e não são contadas ao determinar se uma conexão bem-sucedida foi estabelecida.
+Esse status é alterado somente depois que o Braze recebe dados sobre uma atribuição de instalação. O Braze ignora as instalações orgânicas (as exclui do postback do Singular) e não as conta ao determinar se a conexão foi bem-sucedida.
 
-## Dados de atribuição do Facebook e X (anteriormente Twitter)
+## Dados de atribuição do Facebook e do X (antigo Twitter)
 
 Os dados de atribuição para campanhas do Facebook e do X (antigo Twitter) não estão disponíveis por meio de nossos parceiros. Essas fontes de mídia não permitem que seus parceiros compartilhem dados de atribuição com terceiros e, portanto, nossos parceiros não podem enviar esses dados para a Braze.
 

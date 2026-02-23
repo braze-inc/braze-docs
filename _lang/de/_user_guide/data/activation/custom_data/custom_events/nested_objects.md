@@ -23,7 +23,7 @@ Sie können verschachtelte Objekte - Objekte, die sich innerhalb eines anderen O
 
 Die folgenden SDK-Versionen unterstützen verschachtelte Objekte:
 
-{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
+{% sdk_min_versions swift:5.0.0 android:20.0.0 web:3.3.0 %}
 
 ## Schritt 1: Ein Schema generieren
 
@@ -84,14 +84,14 @@ Im Folgenden finden Sie ein `/users/track` Beispiel mit einem angepassten Event 
 {% tab Restaurant Example%}
 
 Im Folgenden finden Sie ein `/users/track` Beispiel mit einem angepassten Event "Bestellt". Nachdem ein Auftrag abgeschlossen wurde, erfassen Sie die Eigenschaften dieses Auftrags, indem Sie ihn senden:
-- Eine API-Anfrage, die "r_details" als Eigenschaft auflistet
+- Eine API-Anfrage, die `r_details` als Eigenschaft auflistet
 - Die verschachtelten Eigenschaften dieser Reihenfolge
 
 ```
 ...
 "properties": {
   "r_details": {
-    "name": "McDonalds",
+    "name": "SandwichEmperor",
     "identifier": "12345678",
     "location" : {
       "city": "Montclair",
@@ -141,7 +141,7 @@ Um diese Eigenschaften zum Triggern einer Kampagne zu verwenden, wählen Sie Ihr
 
 Auslösen einer Kampagne mit verschachtelten Eigenschaften durch das Ereignis "Erstellte Wiedergabeliste":
 
-![Ein Nutzer:in wählt eine verschachtelte Eigenschaft für Eigenschaftsfilter auf einem angepassten Event.]({% image_buster /assets/img/nested_object2.png %})
+![Ein Nutzer:in, der eine verschachtelte Eigenschaft für Eigenschaftsfilter für ein angepasstes Event auswählt.]({% image_buster /assets/img/nested_object2.png %})
 
 Die triggernde Bedingung `songs[].album.yearReleased` "ist" "1968" passt auf ein Ereignis, bei dem einer der Titel ein Album hat, das 1968 veröffentlicht wurde. Wir verwenden die Klammerschreibweise `[]` für das Durchlaufen von Arrays und stimmen überein, wenn **ein** Element in dem durchlaufenen Array mit der Ereigniseigenschaft übereinstimmt.
 
@@ -154,9 +154,9 @@ Der Filter " **Nicht gleich"** passt nur, wenn keine der Eigenschaften in Ihrem 
 
 Auslösen einer Kampagne mit verschachtelten Eigenschaften aus dem Ereignis "Bestellt":
 
-![Ein Nutzer:in, der die Eigenschaft Filter r_details.name hinzufügt, ist McDonalds für ein angepasstes Event.]({% image_buster /assets/img/nested_object1.png %})
+![Ein Nutzer:in, der die Eigenschaft Filter r_details.name hinzufügt, ist SandwichEmperor für ein angepasstes Event.]({% image_buster /assets/img/nested_object1.png %})
 
-`r_details.name`: "Mcdonalds"<br>
+`r_details.name`: "SandwichKaiser"<br>
 `r_details.location.city`: "Montclair"
 {% endtab %}
 {% endtabs %}

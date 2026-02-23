@@ -31,7 +31,7 @@ tool:
 {% tab multiple filters %}
 세그먼트를 추가하지 않고 사용자를 타겟팅하려면 일련의 필터를 사용할 수 있습니다. 이는 메시지 작성 중 즉석 대상이며 일회성 대상에게 보낼 때 세그먼트 생성을 건너뛸 수 있습니다.
 
-![하루 이내에 마지막으로 앱을 열었고, 캠페인이나 캔버스 단계를 받은 적이 없으며, 구매한 지 30일이 지나지 않은 사용자를 타겟팅하는 메시지에 대한 추가 필터를 사용할 수 있습니다.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
+![하루 이내에 마지막으로 앱을 열었고, 캠페인이나 캔버스 단계를 받은 적이 없으며, 30일 이내에 구매한 적이 없는 사용자를 타겟팅하는 메시지에 대한 추가 필터를 사용할 수 있습니다.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
 {% endtab %}
 
 {% tab segments & filters %}

@@ -33,5 +33,5 @@ Tapcart とBraze を統合する方法については、Web サイトで直接[T
 以下の機能は現在サポートされていない：プッシュストーリー、Webプッシュ、アプリ内メッセージのカスタマイズ。
 
 {% alert note %}
-その他ご不明な点があれば、Tapcart 導入スペシャリストまでお問い合わせいただくか、[help@tapcart.co](mailto:help@tapcart.co) までメールにてご連絡いただきたい。
+その他ご不明な点があれば、Tapcart のインプリメンテーションスペシャリストにお問い合わせいただくか、[help@tapcart.co](mailto:help@tapcart.co) までメールをお送りください。
 {% endalert %}

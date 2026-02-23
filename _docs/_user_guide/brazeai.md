@@ -13,41 +13,45 @@ guide_top_text: "BrazeAI<sup>TM</sup> powers a collection of accessible, easy-to
 
 guide_featured_title: "Features"
 guide_featured_list:
-- name: BrazeAI Decisioning Studio<sup>TM</sup>
-  link: /docs/user_guide/brazeai/decisioning_studio/
-- name: Braze Agents
-  link: /docs/user_guide/brazeai/agents/
-  image: /assets/img/braze_icons/star-06.svg
-- name: BrazeAI Operator
-  link: /docs/operator/
-  image: /assets/img/braze_icons/edit-05.svg
-- name: Intelligence Suite
-  link: /docs/user_guide/brazeai/intelligence/
-  image: /assets/img/braze_icons/clock.svg
-- name: Predictive Churn
-  link: /docs/user_guide/brazeai/predictive_churn/
-  image: /assets/img/braze_icons/stars-01.svg
-- name: Predictive Events
-  link: /docs/user_guide/brazeai/predictive_events/
-  image: /assets/img/braze_icons/calendar-check-01.svg
-- name: Recommendations
-  link: /docs/user_guide/brazeai/recommendations/
-  image: /assets/img/braze_icons/hearts.svg
-- name: Generative AI
-  link: /docs/user_guide/brazeai/generative_ai/
-  image: /assets/img/braze_icons/lightbulb-02.svg
-- name: Braze MCP Server
-  link: /docs/mcp/
-  image: /assets/img/braze_icons/dataflow-01.svg
-- name: Winning Variant and Personalized Variant
-  link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
-  image: /assets/img/braze_icons/trophy-01.svg
-- name: Winning Path
-  link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/
-  image: /assets/img/braze_icons/dataflow-03.svg
-- name: Personalized Paths
-  link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
-  image: /assets/img/braze_icons/chevron-up-double.svg
+  - name: Agents
+    link: /docs/user_guide/brazeai/agents/
+    image: /assets/img/braze_icons/star-06.svg
+  - name: Braze MCP Server
+    link: /docs/mcp/
+    image: /assets/img/braze_icons/dataflow-01.svg
+  - name: Content Optimizer
+    link: /docs/user_guide/brazeai/content_optimizer
+    image: /assets/img/braze_icons/image-user-check.svg
+  - name: Decisioning Studio
+    link: /docs/user_guide/brazeai/decisioning_studio/
+    image: /assets/img/braze_icons/stars-03.svg
+  - name: Generative AI
+    link: /docs/user_guide/brazeai/generative_ai/
+    image: /assets/img/braze_icons/lightbulb-02.svg
+  - name: Intelligence Suite
+    link: /docs/user_guide/brazeai/intelligence/
+    image: /assets/img/braze_icons/clock.svg
+  - name: Operator
+    link: /docs/user_guide/brazeai/operator/
+    image: /assets/img/braze_icons/edit-05.svg
+  - name: Personalized Paths
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
+    image: /assets/img/braze_icons/chevron-up-double.svg
+  - name: Predictive Churn
+    link: /docs/user_guide/brazeai/predictive_churn/
+    image: /assets/img/braze_icons/stars-01.svg
+  - name: Predictive Events
+    link: /docs/user_guide/brazeai/predictive_events/
+    image: /assets/img/braze_icons/calendar-check-01.svg
+  - name: Recommendations
+    link: /docs/user_guide/brazeai/recommendations/
+    image: /assets/img/braze_icons/hearts.svg
+  - name: Winning Variant and Personalized Variant
+    link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
+    image: /assets/img/braze_icons/trophy-01.svg
+  - name: Winning Path
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/
+    image: /assets/img/braze_icons/dataflow-03.svg
 ---
 
 <br>

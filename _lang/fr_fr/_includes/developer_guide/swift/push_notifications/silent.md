@@ -6,9 +6,9 @@ Le système d’exploitation iOS peut envoyer des notifications pour certaines f
 
 ## Mise en place de notifications push silencieuses
 
-Pour utiliser les notifications push silencieuses afin de déclencher des travaux en arrière-plan, vous devez configurer votre app de manière à ce qu'elle reçoive des notifications même lorsqu'elle est en arrière-plan. Pour ce faire, ajoutez la capacité Modes d'arrière-plan à l'aide du volet **Signature et capacités** pour la cible d’appli principale dans Xcode. Cochez la case **Notifications à distance.**
+Pour utiliser les notifications push silencieuses afin de déclencher des travaux en arrière-plan, vous devez configurer votre app de manière à ce qu'elle reçoive des notifications même lorsqu'elle est en arrière-plan. Pour ce faire, ajoutez la capacité Modes d'arrière-plan à l'aide du volet **Capacités de signage & ** à la cible de l'app principale dans Xcode. Cochez la case **Notifications à distance.**
 
-![Xcode affiche la case à cocher du mode "notifications à distance" sous "capacités".]({% image_buster /assets/img_archive/background_mode.png %} "background mode enabled")
+![Xcode affichant la case à cocher du mode « Notifications à distance » dans « Capacités ».]({% image_buster /assets/img_archive/background_mode.png %} "background mode enabled")
 
 Même avec le mode arrière-plan des notifications à distance activé, le système ne lance pas votre application en arrière-plan si l’utilisateur a quitté l’application de manière forcée. L’utilisateur doit explicitement lancer l’application ou redémarrer l’appareil avant que l’application ne puisse être automatiquement lancée dans l’arrière-plan par le système.
 
@@ -28,7 +28,7 @@ Le drapeau `content-available` peut être défini dans le tableau de bord de Bra
 Il n'est pas recommandé d'attacher un titre et un corps `content-available=1`, car cela peut entraîner un comportement non défini. Pour qu'une notification soit vraiment silencieuse, excluez à la fois le titre et le corps lorsque vous définissez l'indicateur `content-available` sur `1.`. Pour plus de détails, reportez-vous à la [documentation Apple officielle sur les mises à jour en arrière-plan](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app).
 {% endalert %}
 
-![Le tableau de bord de Braze montre la case à cocher "content-available" qui se trouve dans l'onglet "settings" du compositeur de push.]({% image_buster /assets/img_archive/remote_notification.png %} "content available")
+![Le tableau de bord de Braze affichant la case Contenu disponible dans l’onglet Paramètres du compositeur.]({% image_buster /assets/img_archive/remote_notification.png %} "content available")
 
 Lors de l’envoi d’une notification push silencieuse, vous pouvez également inclure certaines données dans la charge utile de la notification, afin que votre application puisse référencer l’événement. Cela pourrait vous éviter quelques requêtes réseau et augmenter la réactivité de votre application.
 
@@ -38,7 +38,7 @@ Braze utilise des notifications push silencieuses pour gérer en interne certain
 
 Par exemple, si votre logique appelle vos serveurs pour obtenir du nouveau contenu à chaque poussée en arrière-plan ou lancement d'application, vous voudrez peut-être empêcher le déclenchement des poussées internes de Braze afin d'éviter un trafic réseau inutile. Étant donné que Braze envoie certains types d'appels internes à tous les utilisateurs à peu près en même temps, une charge importante du serveur peut se produire si les appels réseau au lancement provenant d'appels internes ne sont pas gérés.
 
-### Étape 1 : Vérifiez que votre application ne contient pas d'actions automatiques
+### Étape 1 : Vérifiez que votre application ne contient pas d'actions automatiques
 
 Vérifiez que votre application ne contient pas d'actions automatiques aux endroits suivants et mettez à jour votre code pour ignorer les poussées internes de Braze :
 
@@ -66,7 +66,7 @@ func application(_ application: UIApplication,
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 
 ```objc

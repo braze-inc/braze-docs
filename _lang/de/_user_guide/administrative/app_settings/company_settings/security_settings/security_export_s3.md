@@ -10,6 +10,10 @@ description: "Dieser referenzierte Artikel beschreibt, wie Sie jeden Tag um Mitt
 
 > Sie können Sicherheitsereignisse mit einem täglichen Job, der um Mitternacht UTC ausgeführt wird, automatisch zu Amazon S3, einem Cloud-Speicheranbieter, exportieren. Nach der Einrichtung müssen Sie die Sicherheitsereignisse nicht mehr manuell aus dem Dashboard exportieren. Der Auftrag exportiert die Sicherheitsereignisse der letzten 24 Stunden im CSV-Format in Ihren konfigurierten S3-Speicher. Die CSV-Datei hat die gleiche Struktur wie ein manuell exportierter Bericht.
 
+{% alert note %}
+Die Grenze von 10.000 Zeilen gilt nur für den manuellen CSV-Berichtsdownload vom Dashboard. Der Export von Sicherheitsereignissen in S3 unterliegt nicht diesem Zeilenlimit.
+{% endalert %}
+
 Braze unterstützt zwei verschiedene S3-Authentifizierungs- und Autorisierungsmethoden für die Einrichtung des Amazon S3-Exports:
 
 - AWS geheime Zugriffsschlüsselmethode
@@ -165,7 +169,7 @@ Ihre neu erstellte Rolle wird in der Liste erscheinen!
 {: start="2"}
 2\. Gehen Sie in Braze zu **Einstellungen** > **Unternehmenseinstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen** und blättern Sie zum Abschnitt **Sicherheitsereignis-Download**.
 
-!["Sicherheitsereignis-Download" mit einem umgeschalteten Schalter für "Export in AWS S3".]({% image_buster /assets/img/security_export/security_event_download3.png %})
+!["Download von Sicherheitsereignissen" mit einem umgeschalteten Schalter für "Export zu AWS S3".]({% image_buster /assets/img/security_export/security_event_download3.png %})
 
 {: start="3"}
 3\. Vergewissern Sie sich, dass die **AWS-Rolle ARN** ausgewählt ist, und geben Sie dann Ihren Rollen-ARN und den AWS S3 Bucket-Namen in die entsprechenden Felder ein.

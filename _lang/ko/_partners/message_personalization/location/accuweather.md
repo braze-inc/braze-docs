@@ -16,7 +16,7 @@ _This integration is maintained by AccuWeather._
 
 ## 필수 조건
 
-| 요구 사항 | 설명 |
+| Requirement | 설명 |
 |---|---|
 | Accuweather API 키 | 요청 URL에서 사용할 호환 API 키에 대해 Accuweather 계정 매니저에게 문의하세요.<br><br>Further instructions can be found on the [AccuWeather Enterprise API](https://apidev.accuweather.com/developers/) page. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -58,12 +58,12 @@ Enjoy the weather!
 ```
 {% endraw %}
 
-![연결된 콘텐츠 푸시 메시지 "비가 오고 있어요!" Grab an Umbrella!" shown on an Android device]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){: style="max-width:40%"}
+![연결된 콘텐츠 푸시 메시지 "비가 오고 있어요!" 우산을 챙기세요!"가 Android 기기에 표시됨]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){: style="max-width:40%"}
 
 다음 예제에서 두 개의 연결된 콘텐츠 호출에 대한 분석을 확인할 수 있습니다.
 
 {% tabs %}
-{% tab 위치 %}
+{% tab Locations %}
 #### 위치 API 예시
 
 {% raw %}
@@ -155,7 +155,7 @@ Enjoy the weather!
 '키' ID는 두 번째 GET 요청에서 사용되므로 유용한 변수입니다.
 이 JSON 오브젝트는 URL 뒤에 `:save location_info`를 지정하여 로컬 변수 `location_info`에 저장할 수 있습니다.
 {% endtab %}
-{% tab 현재 조건 %}
+{% tab Current conditions %}
 
 #### 현재 조건 API 예시
 

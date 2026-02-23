@@ -7,7 +7,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Integrating Odicci with Braze
+# Odicci와 Braze의 통합
 
 > Learn how to integrate Braze with [Odicci](https://www.odicci.com/), a platform that empowers businesses to acquire, engage and retain customers through loyalty driven omnichannel experiences.
 
@@ -49,7 +49,7 @@ Before you start, you'll need the following:
 2. Navigate to the **Settings > Integrations** section.
 3. Find the **Braze** integration and click **Connect**.
 
-   ![Connect Braze Integration]({% image_buster /assets/img/odicci/braze_connect.png %})
+   ![연결 Braze 통합]({% image_buster /assets/img/odicci/braze_connect.png %})
 
 4. Enter your Braze REST API Key into the provided field.
 5. Save the settings to activate the integration at the account level.
@@ -73,9 +73,9 @@ Before you start, you'll need the following:
 2. Map the fields from your Odicci experience (e.g., `Email`, `Name`) to their corresponding fields in Braze.
 3. Save your configuration.
 
-   ![Field Mapping Configuration]({% image_buster /assets/img/odicci/braze_field_mapping.png %})
+   ![필드 매핑 구성]({% image_buster /assets/img/odicci/braze_field_mapping.png %})
 
-### Step 5: Test the Integration
+### 5단계: Test the Integration
 
 1. Run the experience in Odicci to collect test data.
 2. Verify that the data syncs correctly to Braze by checking the Braze dashboard or data logs.

@@ -25,7 +25,7 @@ You will need to clone the [Retail Demo Store repository](https://github.com/aws
 
 Before setting up Braze to send personalized messages to users, review the relevant components required for a typical eCommerce website, using the Retail Demo Store architecture as an example.
 
-![An image breaking down the Braze personalization architecture noting how the different components interact with one another.]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
+![다양한 구성 요소가 서로 어떻게 상호 작용하는지 보여주는 Braze 개인화 아키텍처를 분석한 이미지입니다.]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
 
 1. Retail Demo Store's web UI uses the AWS Amplify JavaScript library to send training events to Amazon Personalize.
 2. Braze campaign user records are updated from the Global Store User service.
@@ -40,11 +40,11 @@ Braze Connected Content will be able to get these recommendations via a recommen
 
 ## Setting up the reference architecture workshop
 
-### Step 1: Deploy the Retail Demo Store to your AWS account
+### Step 1: AWS 계정에 Retail Demo Store 배포
 
-![An image of the available AWS regions.]({% image_buster /assets/img/amazon_personalize/region.png %}){: style="float:right;max-width:40%;margin-top:15px;margin-bottom:10px;"}
+![사용 가능한 AWS 리전의 이미지입니다.]({% image_buster /assets/img/amazon_personalize/region.png %}){: style="float:right;max-width:40%;margin-top:15px;margin-bottom:10px;"}
 
-In the following table, choose an **AWS Region** and select **Launch Stack**. This list does not represent all the possible regions where you can deploy the project, only the currently configured regions for deployment with the Retail Demo Store.
+다음 표에서 **AWS 리전**을 선택하고 **스택 시작**을 선택합니다. This list does not represent all the possible regions where you can deploy the project, only the currently configured regions for deployment with the Retail Demo Store.
 
 Accept all the default parameter values for the template. The deployment of all the project resources should take 25-30 minutes.
 

@@ -261,7 +261,7 @@ Si se hace clic en la notificación en primer plano, se llamará al delegado pus
 
 iOS 10 actualizó el comportamiento de forma que ya no llama a `application:didReceiveRemoteNotification:fetchCompletionHandler:` cuando se hace clic en un push. Por esta razón, si no actualizas a la construcción en la versión 10 de iOS y posteriores y utilizas el framework `UserNotifications`, tendrás que llamar a Braze desde ambos delegados antiguos, lo que supone una ruptura con nuestra integración anterior.
 
-Para aplicaciones que se construyen con versiones del SDK anteriores a la versión iOS 10, utiliza las siguientes instrucciones:
+Para aplicaciones creadas con SDKs < iOS 10, utiliza las siguientes instrucciones:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

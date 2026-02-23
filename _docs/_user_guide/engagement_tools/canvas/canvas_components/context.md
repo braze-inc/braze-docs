@@ -2,7 +2,7 @@
 nav_title: Context 
 article_title: Context 
 alias: /context/
-page_order: 1.5
+page_order: 6
 page_type: reference
 toc_headers: "h2"
 description: "This reference article covers how to create and use Context steps in your Canvas."
@@ -12,11 +12,7 @@ tool: Canvas
 
 # Context
 
-> Context steps allow you to create and update one or more variables for a user as they move through a Canvas. For example, if you have a Canvas that manages seasonal discounts, you can use a context variable to store a different discount code each time a user enters the Canvas.
-
-{% alert important %}
-Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.<br><br>Note that opting into the Canvas Context step early access updates how timestamps are handled across all your Canvases. To learn more about this, refer to [Time zone consistency standardization](#time-zone-consistency-standardization).
-{% endalert %}
+> Context steps let you create and update one or more variables for a user as they move through a Canvas. For example, if you have a Canvas that manages seasonal discounts, you can use a context variable to store a different discount code each time a user enters the Canvas.
 
 ## How it works
 
@@ -24,7 +20,11 @@ Context steps are currently in early access. Contact your Braze account manager 
 
 Context steps allow you to create and use temporary data during a user's journey through a specific Canvas. This data exists only within that Canvas journey and doesn't persist across different Canvases or outside the session.
 
+Context variables exist only for that specific Canvas journey. They don't change the user's profile permanently and don't appear in other Canvases. This makes them ideal for temporary information that's relevant only to a specific campaign or workflow.
+
+{% alert tip %}
 For a full reference on context variables, including data types, usage, and best practices, see the [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+{% endalert %}
 
 Within a Context step, you can define or update up to 10 context variables. These variables can be used to personalize delays, segment users dynamically, and enrich messaging throughout the Canvas. For example, you could create a context variable for a user's scheduled flight time, then use it to set personalized delays and send reminders.
 
@@ -42,13 +42,10 @@ Each Canvas entry redefines context variables based on the latest entry data and
 Context steps process users in batches to optimize performance. When users enter a Context step, Braze processes them in batches of 1,000 users by default. These batches are processed in parallel, but within each batch, users are processed sequentially.
 
 This means:
-- **Parallel batch processing**: Multiple batches of 1,000 users are processed simultaneously, allowing large audiences to be handled efficiently.
-- **Sequential processing within batches**: Within each batch, users are processed one after another. If your Context step includes [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) calls, each user's Connected Content request must complete before the next user in that batch is processed.
-- **Independent batch progression**: Each batch progresses independently. When a batch completes processing, those users advance to the next step immediately, even if other batches are still processing. This means users from different batches may reach subsequent steps at different times.
 
 **Example**: If 3,500 users enter a Context step with Connected Content that takes 650ms per user:
-- Braze creates approximately 4 batches of users (612, 802, 1,000, 880, and 120 users in this example).
-- Each batch processes users sequentially, so a batch of 1,000 users takes approximately 11 minutes (1,000 × 650ms).
+- Braze creates 4 batches of users (1,000, 1,000, 1,000, and 500 users in this example).
+- Each batch processes users sequentially, so a batch of 1,000 users takes approximately 10.8 minutes (650 seconds; 1,000 × 650ms).
 - Batches complete at different times, so users trickle into the next step as their batch finishes.
 - The first users may reach the next step several minutes before the last users, depending on batch size and Connected Content response times.
 
@@ -80,7 +77,7 @@ You can define up to 10 context variables for each Context step.
 To define a context variable:
 
 1. Give your context variable a **name**.
-2. Select a [data type](#context-variable-types).
+2. Select a [data type]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#data-types).
 3. Write a Liquid expression manually or use **Add Personalization** to create a Liquid snippet from pre-existing attributes.
 4. Select **Preview** to check the value of your context variable.
 5. (Optional) To add additional variables, select **Add Context variable** and repeat steps 1-4.
@@ -88,9 +85,15 @@ To define a context variable:
 
 Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
+{% alert important %}
+When referencing context variables, always use the format {% raw %}`{{context.${variable_name}}}`{% endraw %}.
+{% endalert %}
+
 ### Context variable filters
 
 You can create filters using context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps. For filter setup, comparison logic, and advanced examples, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters).
+
+{% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
 
 ## Previewing user paths
 
@@ -100,7 +103,7 @@ We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guid
 If you're previewing your Canvas in the **Preview & Test Send** section of the editor, the timestamp in the test message preview **does not** standardize to UTC because this panel generates previews as strings. This means if a Canvas is set up to accept a `time` object, the message preview does not accurately preview what occurs when the Canvas is live. To test your Canvas most accurately, we recommend previewing user paths instead.
 {% endalert %}
 
-Be sure to observe any common scenarios that create invalid context variables. When previewing your user path, you can view the outcomes of personalized Delay steps using context variables, and any audience, decision, or Action Path step comparisons that match users to any context variables.
+Be sure to observe any common scenarios that create invalid context variables. When previewing your user path, you can view the outcomes of personalized Delay steps using context variables, and any audience or decision step comparisons that match users to any context variables.
 
 If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn’t created correctly, future steps in your Canvas won’t perform correctly either. For example, if you create a Context step to assign users an appointment time and set the appointment time's value to a past date, the reminder email in your Message step does not send.
 
@@ -114,14 +117,6 @@ When making a [Connected Content call]({{site.baseurl}}/user_guide/personalizati
 {{ product | as_json_string }}
 ```
 {%endraw%}
-
-## Time zone consistency standardization
-
-While most event properties using the timestamp type are already in UTC in Canvas, there are some exceptions. With the addition of Canvas Context, all default timestamp event properties in action-based Canvases are in UTC. This change is part of a broader effort to ensure a more predictable and consistent experience when editing Canvas steps and messages. Note that this change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.
-
-{% alert important %}
-In all circumstances, we strongly recommend using [Liquid time_zone filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps to be represented in the desired time zone. You can reference this [frequently asked question](#faq-example) for an example.
-{% endalert %}
 
 ## Troubleshooting
 
@@ -144,11 +139,13 @@ Refer to [Data types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create
 
 ### Delays in sending with Connected Content
 
-When Connected Content fails in a Context step, successful users advance immediately to the next step, while failed users are retried separately. This means a batch doesn't wait for all users to succeed before progressing—successful users move forward as soon as their Connected Content call completes.
+All users in a batch are processed before any users advance. After batch processing completes, successful users move to the next step while failed users are retried separately—successful users don't wait for retry attempts to succeed before advancing.
 
 **Retry behavior**: Context steps (and all Canvas steps) use Canvas-specific retry mechanisms, not the standard Connected Content retry behavior. If a Connected Content call fails, Braze retries the step approximately 13 times with exponential backoff. If all retries fail, the user exits the Canvas.
 
-**Note**: The `:retry` tag used in standard Connected Content doesn't apply to Connected Content calls made within Canvas steps. Canvas steps have their own retry logic optimized for Canvas workflows.
+{% alert note %}
+The `:retry` tag used in standard Connected Content doesn't apply to Connected Content calls made within Canvas steps. Canvas steps have their own retry logic optimized for Canvas workflows.
+{% endalert %}
 
 **Processing time**: The time it takes to process all users through a Context step depends on:
 - The number of users entering the step
@@ -157,31 +154,34 @@ When Connected Content fails in a Context step, successful users advance immedia
 
 If your Connected Content endpoint has rate limits, consider that Context steps process users sequentially within each batch, which helps respect rate limits naturally. However, multiple batches process in parallel, so ensure your endpoint can handle concurrent requests from multiple batches.
 
+## Time zone consistency standardization
+
+While most event properties using the timestamp type are already in UTC in Canvas, there are some exceptions. With the addition of Canvas Context, all default timestamp event properties in action-based Canvases are in UTC. This change is part of a broader effort to ensure a more predictable and consistent experience when editing Canvas steps and messages. Note that this change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.
+
+{% alert important %}
+In all circumstances, we strongly recommend using [Liquid time_zone filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps to be represented in the desired time zone. You can reference this [frequently asked question](#faq-example) for an example.
+{% endalert %}
+
 ## Frequently asked questions
 
-### What changes when Canvas Context becomes generally available?
+### What has changed since Canvas Context became generally available?
 
-When Canvas Context becomes generally available, the following details apply:
+Now that Canvas Context is generally available, the following details apply:
 
-- All timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases are in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
+- All timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases are in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
 - This change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.
 
 #### What is the reason for this change?
 
 This change is part of a broader effort to create a more predictable and consistent experience when editing Canvas steps and messages.
 
-#### When is this change taking effect?
-
-- If you're participating in the Canvas Context early access, this change has already been applied. 
-- If you're not participating in the Canvas Context early access, this change applies when you join the early access or when Canvas Context becomes generally available.
-
 #### Are API-triggered or scheduled Canvases impacted by this change?
 
 No.
 
-#### Will this change impact Canvas entry properties?
+#### Does this change impact Canvas entry properties?
 
-Yes, this impacts `canvas_entry_properties` if the `canvas_entry_property` is being used in an action-based Canvas and the property type is `time`. In all circumstances, we recommend using Liquid `time_zone` filters for timestamps to be represented in the desired timezone.
+Yes, this impacts `canvas_entry_properties` if the `canvas_entry_property` is being used in an action-based Canvas and the property type is `time`. In all circumstances, we recommend using Liquid `time_zone` filters for timestamps to be represented in the desired time zone.
 
 Here's an example of how to do this:
 
@@ -237,7 +237,7 @@ The preferred time zone can also be sent in the event properties payload and use
 
 ### How do context variables differ from Canvas entry properties?
 
-If you’re participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
+Canvas entry properties are included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
 
 ### Can variables reference each other in a singular Context step?
 
@@ -247,10 +247,11 @@ Yes. All variables in a Context step are evaluated in a sequence, meaning you co
 |---|---|---|
 |`favorite_cuisine`| {% raw %}`{{custom_attribute.${Favorite Cuisine}}}`{% endraw %} | A user's favorite type of cuisine. |
 |`promo_code`| {% raw %}`EATFRESH`{% endraw %} | The available discount code for a user. |
-|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{context.promo_code}} "on delivery from your favorite" {{context.favorite_cuisine}} restaurants!"`{% endraw %} | A personalized message that combines the previous variables. In a Message step, you could use the Liquid snippet {% raw %}`{{context.${personalized_message}}}`{% endraw %} to reference the context variable to deliver a personalized message to each user. You could also use a Context step to save the [promo code]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) value and template it in other steps throughout a Canvas. |
+|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{context.${promo_code}}} "on delivery from your favorite" {{context.${favorite_cuisine}}} restaurants!"`{% endraw %} | A personalized message that combines the previous variables. In a Message step, you could use the Liquid snippet {% raw %}`{{context.${personalized_message}}}`{% endraw %} to reference the context variable to deliver a personalized message to each user. You could also use a Context step to save the [promo code]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) value and template it in other steps throughout a Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 This also applies across multiple Context steps. For example, imagine this sequence:
+
 1. An initial Context step creates a variable called `JobInfo` with the value `job_title`.
 2. A Message step references {% raw %}`{{context.${JobInfo}}}`{% endraw %} and displays `job_title` to the user.
 3. Later, a Context step updates the context variable, changing the value of `JobInfo` to `job_description`.

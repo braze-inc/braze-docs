@@ -1,6 +1,7 @@
 ---
 nav_title: Data warehouse integrations
 article_title: Data Warehouse Integrations
+alias: /partners/databricks/
 description: "This page covers how to use Braze Cloud Data Ingestion to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration."
 page_order: 2
 page_type: reference
@@ -64,7 +65,7 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 
 #### Step 1.1: Set up the table
 
-```json
+```sql
 CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
 CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
 CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
@@ -96,7 +97,7 @@ You can name the database, schema, and table as you'd like, but the column names
 
 #### Step 1.2: Set up the role and database permissions
 
-```json
+```sql
 CREATE ROLE BRAZE_INGESTION_ROLE;
 
 GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -108,7 +109,7 @@ Update the names as needed, but the permissions should match the preceding examp
 
 #### Step 1.3: Set up the warehouse and give access to Braze role
 
-```json
+```sql
 CREATE WAREHOUSE BRAZE_INGESTION_WAREHOUSE;
 
 GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
@@ -120,7 +121,7 @@ The warehouse needs to have the **auto-resume** flag on. If not, you will need t
 
 #### Step 1.4: Set up the user
 
-```json
+```sql
 CREATE USER BRAZE_INGESTION_USER;
 
 GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
@@ -144,12 +145,12 @@ Depending on the configuration of your Snowflake account, you may need to allow 
 #### Step 1.1: Set up the table 
 
 Optionally, set up a new Database and Schema to hold your source table
-```json
+```sql
 CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
 CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
 ```
 Create a table (or view) to use for your CDI integration
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
    updated_at timestamptz default sysdate,
    --at least one of external_id, alias_name and alias_label, or braze_id is required
@@ -179,7 +180,7 @@ You can name the database, schema, and table as you'd like, but the column names
  
 #### Step 1.2: Create user and grant permissions
 
-```json
+```sql
 CREATE USER braze_user PASSWORD '{password}';
 GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
@@ -208,13 +209,13 @@ Allow access from the following IPs corresponding to your Braze dashboard’s re
 
 Optionally, set up a new project or dataset to hold your source table.
 
-```json
+```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
 Create one or more tables to use for your CDI integration with the following fields:
 
-```json
+```sql
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 (
   updated_at TIMESTAMP DEFAULT current_timestamp,
@@ -254,8 +255,16 @@ You can name the project, dataset, and table as you'd like, but the column names
     - `PHONE` - The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile is prioritized for updates.
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
-{% alert tip %}
-Braze queries your BigQuery tables in your own project (using the predefined schema) with predicates on `UPDATED_AT`. Partitioning large tables by `UPDATED_AT` with an appropriate granularity (for example, daily granularity) lets BigQuery prune partitions so only relevant data is scanned. This may help improve performance and lower cost. Refer to [BigQuery partitioning documentation](https://docs.cloud.google.com/bigquery/docs/partitioned-tables) for more information.
+{% alert important %}
+**BigQuery partitioning**
+
+CDI supports partitions for BigQuery. If you partition by a function of `UPDATED_AT` (for example, at the granularity of a day, week, or hour, depending on the size of your dataset), BigQuery can prune the data it needs to scan. This improves performance and efficiency for very large tables.
+
+Don't partition by any other fields. Test different configurations to find the best setup for your specific data.
+
+All CDI queries filter by `UPDATED_AT`, but this behavior could change. Design your table schema to _not_ require that queries include this clause.
+
+For more information, refer to the [BigQuery partitioning documentation](https://docs.cloud.google.com/bigquery/docs/partitioned-tables).
 {% endalert %}
 
 #### Step 1.2: Create a Service Account and grant permissions 
@@ -282,14 +291,14 @@ If you have network policies in place, you must give Braze network access to you
 
 Optionally, set up a new Catalog or Schema to hold your source table.
 
-```json
+```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
 Create one or more tables to use for your CDI integration with the following fields:
 
 
-```json
+```sql
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 (
   updated_at TIMESTAMP DEFAULT current_timestamp(),
@@ -379,7 +388,7 @@ You will provide access for Braze to connect to your Fabric instance. In your Fa
 #### Step 1.3: Set up the table
 Braze supports both tables and views in Fabric Warehouses. If you need to create a new warehouse, go to **Create > Data Warehouse > Warehouse** in the Fabric console. 
 
-```json
+```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
 (
   UPDATED_AT DATETIME2(6) NOT NULL,
@@ -428,6 +437,10 @@ Depending on the configuration of your Microsoft Fabric account, you may need to
 
 ### Step 2: Create a new integration in the Braze dashboard
 
+{% alert important %}
+Customers onboarding in February 2026 or later may have early access to the CDI UI with separate Sources and Syncs. In this UI, create a source before creating syncs for that source. Multiple syncs can use the same source.
+{% endalert %}
+
 {% tabs %}
 {% tab Snowflake %}
 
@@ -460,7 +473,7 @@ At this point, you must go back to Snowflake to complete the setup. Add the publ
 
 For additional information on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). If you want to rotate the keys at any point, we can generate a new key pair and provide you with the new public key.
 
-```json
+```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 ```
 {% endtab %}

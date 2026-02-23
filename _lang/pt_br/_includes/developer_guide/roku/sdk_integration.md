@@ -1,4 +1,4 @@
-## Integrando o Roku SDK
+## Integração do SDK do Roku
 
 ### Etapa 1: Adicionar arquivos
 

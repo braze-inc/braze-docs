@@ -68,8 +68,8 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Comportamentos de conversão (aninhados) | Aprovações | 
 | Configurações de tempo de silêncio | Cronograma de disparo | 
 | Configurações de limitação de frequência | Resumos de campanhas | 
-| Estado de inscrição do destinatário |  | 
-| Agenda recorrente |  | 
+| Estado de inscrição do destinatário | Filtros | 
+| Cronograma recorrente |  | 
 | É Transacional |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -84,8 +84,8 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Comportamentos de conversão (aninhados) | Aprovações | 
 | Configurações de tempo de silêncio | Cronograma de disparo | 
 | Configurações de limitação de frequência | Resumos de Canvas | 
-| Estado de inscrição do destinatário |  | 
-| Agenda recorrente |  | 
+| Estado de inscrição do destinatário | Filtros | 
+| Cronograma recorrente |  | 
 | É Transacional |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -336,7 +336,7 @@ Mantenha o controle das seguintes referências Liquid com dependências ao copia
 
 Para copiar uma campanha de feature flag e um Canvas com uma etapa de Feature Flag entre espaços de trabalho, certifique-se de que o espaço de trabalho de destino tenha um [experimento de feature flag]({{site.baseurl}}/developer_guide/feature_flags/experiments) configurado com um ID que corresponda ao feature flag referenciado na campanha original ou à etapa de Feature Flag referenciada no Canvas original.
 
-Se você copiar uma campanha ou Canvas que tem uma etapa de Feature Flag com um ID de feature flag que não existe no espaço de trabalho de destino, a etapa de Feature Flag será copiada, mas seu conteúdo não será.
+Se você copiar uma campanha ou Canvas que tenha uma etapa de Feature Flag com um ID de feature flag que não existe no espaço de trabalho de destino, a etapa de Feature Flag será copiada, mas seu conteúdo não será.
 
 ## Copiando mensagens com Blocos de Conteúdo
 

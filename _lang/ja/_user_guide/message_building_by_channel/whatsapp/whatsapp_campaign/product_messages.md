@@ -45,7 +45,7 @@ channel:
 
 カタログメッセージには、製品カタログ全体が対話形式で表示されます。[テンプレートとレスポンスメッセージ](#building-a-product-message)として利用できます。
 
-[setup](#setting-up-product-messages) 中にBrazeするカタログ権限を有効にした場合、ユーザーs に表示するサムネールを選択できます。 
+[setup](#setting-up-product-messages) 中にBrazeするカタログ権限を有効にした場合、ユーザー に表示するサムネールを選択できます。 
 
 {% alert note %}
 カタログ接続は Meta によって管理され、製品カタログに継承されるため、Braze で追加の製品選択を行う必要はありません。

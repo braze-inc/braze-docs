@@ -53,7 +53,7 @@ Si l ['APN](https://developer.apple.com/library/content/documentation/Networking
 
 Braze fournit un journal des erreurs de notification push dans le **journal d'activité des messages.** Ce journal d’erreurs fournit de nombreux avertissements qui peuvent être très utiles pour identifier les raisons pour lesquelles vos campagnes ne fonctionnent pas comme prévu. Cliquer sur un message d’erreur vous redirigera vers la documentation pertinente pour vous aider à résoudre un incident particulier.
 
-![Les journaux d'erreurs en mode push affichent l'heure à laquelle l'erreur s'est produite, le nom de l'application, le canal, le type d'erreur et le message d'erreur.]({% image_buster /assets/img_archive/message_activity_log.png %})
+![Les journaux d’erreur Push affichent l’heure à laquelle l’erreur s’est produite, le nom de l’application, le canal, le type d’erreur et le message d’erreur.]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 Les erreurs courantes que vous pouvez voir ici comprennent des notifications spécifiques à l'utilisateur, telles que ["Received Unregistered Sending to Push Token".](#received-unregistered-sending)
 
@@ -116,7 +116,7 @@ Vérifiez le profil utilisateur de l’utilisateur auquel vous essayez d’envoy
 
 Ce qui suit indiquerait un problème avec l’inscription aux notifications push ou que le jeton de l’utilisateur a été renvoyé à Braze comme invalide par les APN après avoir été envoyé :
 
-![Profil utilisateur affichant les paramètres de contact d’un utilisateur. Ici, vous pouvez voir pour quelles applications push est enregistré.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
+![Profil utilisateur affichant les paramètres de contact d’un utilisateur. Vous pouvez voir ici les applications pour lesquelles les notifications push sont enregistrées.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
 ## Les messages push ne sont pas envoyés
 

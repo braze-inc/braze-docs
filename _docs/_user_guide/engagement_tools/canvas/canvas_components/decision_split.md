@@ -1,17 +1,17 @@
 ---
-nav_title: Decision Split
-article_title: Decision Split 
+nav_title: Decision split
+article_title: Decision split 
 alias: /decision_split/
-page_order: 2
+page_order: 7
 page_type: reference
 description: "This reference article covers how to create and use decision splits in your Canvas."
 tool: Canvas
 
 ---
 
-# Decision Split 
+# Decision split 
 
-> The Decision Split component in Canvas allows you to deliver personalized, real-time experiences for your users.
+> The decision split component in Canvas allows you to deliver personalized, real-time experiences for your users.
 
 ![A Decision Split step named "Push enabled?" for users who aren't push enabled and users who are push enabled.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 

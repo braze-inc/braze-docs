@@ -6,27 +6,27 @@
 
 [Google 태그 관리자에서](https://tagmanager.google.com/) 작업 공간을 선택한 다음 **템플릿을** 선택합니다. **태그 템플릿** 창에서 **갤러리 검색을** 선택합니다.
 
-![Google Tag Manager의 예제 워크스페이스에 대한 템플릿 페이지]({% image_buster /assets/img/web-gtm/search_tag_template_gallery.png %}){: style="max-width:95%;"}
+![Google Tag Manager의 예제 작업 공간에 대한 템플릿 페이지입니다.]({% image_buster /assets/img/web-gtm/search_tag_template_gallery.png %}){: style="max-width:95%;"}
 
 ### 2단계: 초기화 태그 템플릿 추가하기
 
 템플릿 갤러리에서 `braze-inc` 를 검색한 다음 **Braze 초기화 태그를** 선택합니다.
 
-![다양한 'Braze-inc' 템플릿을 보여주는 템플릿 갤러리.]({% image_buster /assets/img/web-gtm/template_gallery_results.png %}){: style="max-width:80%;"}
+![다양한 'Braze-inc' 템플릿을 보여주는 템플릿 갤러리입니다.]({% image_buster /assets/img/web-gtm/template_gallery_results.png %}){: style="max-width:80%;"}
 
 **작업 공간에** **추가**> **추가를** 선택합니다.
 
-![Google Tag Manager의 'Braze 초기화 태그' 페이지]({% image_buster /assets/img/web-gtm/add_to_workspace.png %}){: style="max-width:70%;"}
+![Google Tag Manager의 'Braze 초기화 태그' 페이지.]({% image_buster /assets/img/web-gtm/add_to_workspace.png %}){: style="max-width:70%;"}
 
 ### 3단계: 태그 구성
 
 **템플릿** 섹션에서 새로 추가한 템플릿을 선택합니다.
 
-![Braze 초기화 태그 템플릿이 표시된 Google Tag Manager의 "템플릿" 페이지]({% image_buster /assets/img/web-gtm/select_tag_template.png %}){: style="max-width:95%;"}
+![Braze 초기화 태그 템플릿이 표시된 Google Tag Manager의 "템플릿" 페이지.]({% image_buster /assets/img/web-gtm/select_tag_template.png %}){: style="max-width:95%;"}
 
 연필 아이콘을 선택하여 **태그 구성** 드롭다운을 엽니다.
 
-!['연필' 아이콘이 표시된 태그 구성 타일]({% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %})
+!['연필' 아이콘이 표시된 태그 구성 타일이 표시됩니다.]({% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %})
 
 최소한의 필수 정보를 입력합니다:
 
@@ -39,7 +39,7 @@
 
 추가 초기화 설정을 하려면 **Braze 초기화 옵션을** 선택하고 필요한 옵션을 선택합니다.
 
-!['태그 구성' 아래의 Braze 초기화 옵션 목록]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %}){: style="max-width:65%;"}
+!['태그 구성' 아래의 Braze 초기화 옵션 목록입니다.]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %}){: style="max-width:65%;"}
 
 ### 4단계: *모든 페이지에서* 트리거하도록 설정
 

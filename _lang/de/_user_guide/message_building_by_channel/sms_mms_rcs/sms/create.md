@@ -1,6 +1,6 @@
 ---
-nav_title: Erstellen einer SMS-Nachricht
-article_title: Erstellen einer SMS-Nachricht
+nav_title: Erstellen Sie eine SMS Nachricht
+article_title: Erstellen Sie eine SMS Nachricht
 page_order: 5
 description: "In diesem Referenzartikel werden die einzelnen Schritte zur Erstellung einer SMS-Nachricht beschrieben."
 page_type: reference
@@ -12,13 +12,13 @@ channel:
 search_rank: 1
 ---
 
-# Erstellen einer SMS-Nachricht
+# Erstellen Sie eine SMS Nachricht
 
 > SMS-Kampagnen eignen sich hervorragend, um Ihre Kunden direkt zu erreichen und programmgesteuert mit ihnen zu kommunizieren. Sie können Liquid und andere dynamische Inhalte verwenden, um ein persönliches Erlebnis mit Ihren Nutzern zu schaffen und eine Umgebung zu schaffen, die ein unaufdringliches Nutzererlebnis mit Ihrer Marke fördert und verbessert. 
 
 ## Schritt 1: Wählen Sie, wo Sie Ihre Botschaft aufbauen möchten
 
-Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich eher für einzelne einfache Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
+Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich besser für einzelne, gezielte Messaging-Kampagnen, während Canvase besser für mehrstufige Nutzer:innen geeignet sind.
 
 {% tabs %}
 {% tab Campaign %}
@@ -60,11 +60,11 @@ Schreiben Sie Ihre Nachricht in der gewünschten Sprache und mit der gewünschte
 Bevor Sie fortfahren, lesen Sie unsere Richtlinien für [SMS-Nachrichtensegmente und Kopier-Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/). SMS-Nachrichtensegmente sind die Zeichenpakete, die die Telefongesellschaften zur Messung von Textnachrichten verwenden. Nachrichten werden pro Nachrichtensegment abgerechnet. Es ist also eine gute Idee, die Feinheiten der Aufteilung von Nachrichten zu verstehen.
 {% endalert %}
 
-![SMS-Komponist in Braze mit der Nachricht "Hallo first_name, wir schätzen Ihre Unterstützung! Warum kommen Sie nicht in eine unserer Filialen und zeigen diese SMS vor, um einen exklusiven Rabatt zu erhalten? Antworten Sie STOP, um keine Nachrichten mehr von uns zu erhalten."]({% image_buster /assets/img/sms_campaign_compose.png %})
+![SMS-Editor in Braze mit der Nachricht "Hallo first_name, wir schätzen Ihre Unterstützung! Warum kommen Sie nicht in eine unserer Filialen und zeigen diese SMS vor, um einen exklusiven Rabatt zu erhalten? Antworten Sie STOP, um keine Nachrichten mehr von uns zu erhalten."]({% image_buster /assets/img/sms_campaign_compose.png %})
 
 ### Hinzufügen einer Kontaktkarte
 
-Sie können Ihrer SMS Nachricht eine Kontaktkarte hinzufügen, damit Ihre Kund:innen Ihr Unternehmen und Ihre Kontaktinformationen einfach zu ihren Kontakten hinzufügen können. Sie können diesen Karten allgemeine Eigenschaften zuweisen, z. B. den Namen Ihres Unternehmens, Telefonnummer, Adresse, E-Mail und ein kleines Foto. Weitere Informationen finden Sie unter [Kontaktkarten]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/).
+Sie können Ihrer SMS Nachricht eine Kontaktkarte hinzufügen, damit Kund:innen Ihr Unternehmen und Ihre Kontaktinformationen zu ihren Gerätekontakten hinzufügen können. Sie können Eigenschaften wie Firmenname, Telefonnummer, Adresse, E-Mail und ein kleines Foto zuweisen. Einzelheiten finden Sie unter [Kontaktkarten]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/).
 
 ### Tipps
 
@@ -78,7 +78,7 @@ Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardw
 
 Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
-![KI Copywriter Button starten, der sich im Nachrichten-Feld des SMS-Editors befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
+![Starten Sie den KI Copywriter Button, der sich im Nachrichten-Feld des SMS-Editors befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
 #### Erstellen von Nachrichten von rechts nach links
 
@@ -88,7 +88,7 @@ Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend d
 
 Braze empfiehlt immer, Ihre Nachricht vor dem Versand in der Vorschau zu prüfen. Wechseln Sie auf die Registerkarte **Test**, um eine Test-SMS an [Inhaltstestgruppen]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) oder einzelne Benutzer zu senden, oder um eine Vorschau der Nachricht als Benutzer direkt in Braze anzuzeigen.
 
-Vorschau der SMS-Kopie auf dem Tab Test des Composers. Im Profilbereich ist das Feld „Vorname“ auf „James“ eingestellt. In der Vorschau lautet die SMS jetzt "Hallo James, wir wissen Ihre Unterstützung zu schätzen!"]({% image_buster /assets/img/sms_campaign_test.png %})
+![Vorschau der SMS-Kopie auf dem Tab „Testen“ des Editors. Im Profilbereich ist das Feld „Vorname“ auf „James“ eingestellt. In der Vorschau lautet die SMS nun "Hallo James, wir wissen Ihre Unterstützung zu schätzen!"]({% image_buster /assets/img/sms_campaign_test.png %})
 
 {% alert tip %}
 Wenn Sie testen möchten, in wie viele Segmente Ihre SMS aufgeteilt werden kann, testen Sie die Länge Ihres Textes mit unserem [SMS-Segment-Rechner]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
@@ -115,7 +115,7 @@ Als Nächstes müssen Sie mithilfe von Segmenten oder Filtern eine [Zielgruppe e
 
 {% multi_lang_include target_audiences.md %}
 
-In diesem Schritt wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen dieses Segment mit unseren Filtern weiter ein, wenn Sie möchten. Sie erhalten automatisch eine Vorschau darauf, wie die ungefähre Anzahl der Segmente im Moment aussieht. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer erst kurz vor dem Versand der Nachricht berechnet wird.
+In diesem Schritt wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen dieses Segment mit unseren Filtern weiter ein, wenn Sie möchten. Sie erhalten automatisch eine Vorschau darauf, wie diese ungefähre Segmentpopulation aussieht. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer berechnet wird, bevor die Nachricht gesendet wird.
 
 {% alert tip %}
 Interessieren Sie sich für SMS-Retargeting? Besuchen Sie unseren [Artikel über SMS-Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/), um mehr zu erfahren.

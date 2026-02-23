@@ -1,5 +1,5 @@
 ---
-nav_title: Personalizar el estilo de los mensajes
+nav_title: Personaliza el estilo de los mensajes
 article_title: "Tutorial: Personalización del estilo mediante pares clave-valor"
 description: ""
 page_order: 1
@@ -11,12 +11,82 @@ layout: scrolly
 > Sigue el código de ejemplo de este tutorial para personalizar el estilo de tu mensaje dentro de la aplicación utilizando pares clave-valor en el SDK de Braze.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} Sin embargo, no es necesaria ninguna configuración adicional.
+
+## Personalización del estilo de los mensajes mediante pares clave-valor para Web
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Customizing Message Styling Web" %}
+
+{% scrolly %}
+
+```js file=index.js
+import * as braze from "@braze/web-sdk";
+// Remove any calls to `braze.automaticallyShowInAppMessages()`
+
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
+
+braze.subscribeToInAppMessage(function (message) {
+  const extras = message.extras;
+  const customTemplateType = extras["custom-template"] || "";
+  const customColor = extras["custom-color"] || "";
+  const customMessageId = extras["message-id"] || "";
+
+  if (customTemplateType) {
+    // add your own custom code to render this message
+  } else {
+    // otherwise, use Braze built-in UI
+    braze.showInAppMessage(message);
+  }
+});
+```
+
+Paso
+líneas-index.js=2
+
+#### 1\. Eliminar las llamadas a `automaticallyShowInAppMessages()`
+
+Elimina las llamadas a [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) ya que anularán cualquier lógica personalizada que implementes más adelante.
+
+Paso
+líneas-index.js=6
+
+#### 2\. Habilitar la depuración (opcional)
+
+Para facilitar la solución de problemas durante el desarrollo, considera la posibilidad de habilitar la depuración.
+
+Paso
+líneas-index.js=9-21
+
+#### 3\. Suscribirse al controlador de devolución de llamada de mensajes dentro de la aplicación
+
+Registra una devolución de llamada con [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) para recibir un mensaje cada vez que se desencadene un mensaje dentro de la aplicación.
+
+Paso
+líneas-index.js=10-13
+
+#### 4\. Accede a la propiedad `message.extras` 
+
+Utiliza `message.extras` para acceder a los tipos de personalización, atributos de estilo o cualquier otro valor definido en el panel. Todos los valores se devuelven como cadenas.
+
+Paso
+líneas-index.js=19
+
+#### 5\. Llama condicionalmente `showInAppMessage`
+
+Para mostrar el mensaje, llama a [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Si no, utiliza las propiedades personalizadas que necesites.
+
+{% endscrolly %}
+{% endsdktab %}
 {% sdktab android %}
 {% multi_lang_include developer_guide/prerequisites/android.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
 ## Personalización del estilo de los mensajes mediante pares clave-valor para Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Customizing Message Styling Android" %}
 
 {% scrolly %}
 
@@ -119,7 +189,7 @@ líneas-MainApplication.kt=28-30
 
 #### 2\. Registra las devoluciones de llamada del ciclo de vida de la actividad
 
-Registra la escucha predeterminada de Braze para gestionar el ciclo de vida de los mensajes dentro de la aplicación.
+Registra el receptor predeterminado de Braze para gestionar el ciclo de vida de los mensajes dentro de la aplicación.
 
 Paso
 líneas-CustomInAppMessageViewFactory.kt=8
@@ -156,7 +226,7 @@ Implementa [`IInAppMessageViewFactory`](https://braze-inc.github.io/braze-androi
 
 ## Personalización del estilo de los mensajes mediante pares clave-valor para Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Customizing Message Styling Swift" %}
 
 {% scrolly %}
 
@@ -263,76 +333,6 @@ líneas-AppDelegate.swift=38-46
 #### 5\. Actualiza los atributos de estilo del mensaje
 
 Utiliza [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) para acceder a `PresentationContext` y poder modificar directamente los atributos de estilo. Cada tipo de mensaje dentro de la aplicación expone diferentes atributos.
-
-{% endscrolly %}
-{% endsdktab %}
-{% sdktab web %}
-{% multi_lang_include developer_guide/prerequisites/web.md %} Sin embargo, no es necesaria ninguna configuración adicional.
-
-## Personalización del estilo de los mensajes mediante pares clave-valor para Web
-
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
-
-{% scrolly %}
-
-```js file=index.js
-import * as braze from "@braze/web-sdk";
-// Remove any calls to `braze.automaticallyShowInAppMessages()`
-
-braze.initialize("YOUR-API-KEY", {
-  baseUrl: "YOUR-ENDPOINT",
-  enableLogging: true,
-});
-
-braze.subscribeToInAppMessage(function (message) {
-  const extras = message.extras;
-  const customTemplateType = extras["custom-template"] || "";
-  const customColor = extras["custom-color"] || "";
-  const customMessageId = extras["message-id"] || "";
-
-  if (customTemplateType) {
-    // add your own custom code to render this message
-  } else {
-    // otherwise, use Braze built-in UI
-    braze.showInAppMessage(message);
-  }
-});
-```
-
-Paso
-líneas-index.js=2
-
-#### 1\. Eliminar las llamadas a `automaticallyShowInAppMessages()`
-
-Elimina las llamadas a [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) ya que anularán cualquier lógica personalizada que implementes más adelante.
-
-Paso
-líneas-index.js=6
-
-#### 2\. Habilitar la depuración (opcional)
-
-Para facilitar la solución de problemas durante el desarrollo, considera la posibilidad de habilitar la depuración.
-
-Paso
-líneas-index.js=9-21
-
-#### 3\. Suscribirse al controlador de devolución de llamada de mensajes dentro de la aplicación
-
-Registra una devolución de llamada con [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) para recibir un mensaje cada vez que se desencadene un mensaje dentro de la aplicación.
-
-Paso
-líneas-index.js=10-13
-
-#### 4\. Accede a la propiedad `message.extras` 
-
-Utiliza `message.extras` para acceder a los tipos de personalización, atributos de estilo o cualquier otro valor definido en el panel. Todos los valores se devuelven como cadenas.
-
-Paso
-líneas-index.js=19
-
-#### 5\. Llama condicionalmente `showInAppMessage`
-
-Para visualizar el mensaje, llama a [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Si no, utiliza las propiedades personalizadas que necesites.
 
 {% endscrolly %}
 {% endsdktab %}

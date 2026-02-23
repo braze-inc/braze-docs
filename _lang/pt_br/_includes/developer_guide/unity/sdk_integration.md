@@ -26,7 +26,7 @@ A partir do Unity 2.6.0, o artefato agrupado do Braze Android SDK requer depend�
 {% endalert %}
 {% endtab %}
 
-{% tab Rápido %}
+{% tab Swift %}
 O [`.unitypackage`](https://docs.unity3d.com/Manual/AssetPackages.html) da Braze agrupa associações nativas para as plataformas Android e iOS, juntamente com uma interface C#.
 
 O pacote Braze Unity está disponível para download na [página de lançamentos do Braze Unity](https://github.com/Appboy/appboy-unity-sdk/releases) com duas opções de integração:
@@ -57,7 +57,7 @@ Para importar apenas o plug-in para iOS ou Android, desmarque o subdiretório `P
 {% endalert %}
 {% endtab %}
 
-{% tab Rápido %}
+{% tab Swift %}
 No Unity Editor, importe o pacote em seu projeto Unity navegando até **Assets > Import Package > Custom Package** (Ativos > Importar pacote > Pacote personalizado). Em seguida, clique em **Importar**.
 
 Como alternativa, siga as instruções de [importação de pacotes de ativos do Unity](https://docs.unity3d.com/Manual/AssetPackages.html) para obter mais detalhes sobre a importação de pacotes personalizados do Unity. 
@@ -158,7 +158,7 @@ Essa integração automática não deve ser usada com um arquivo `braze.xml` cri
 {% endalert %}
 {% endtab %}
 
-{% tab Rápido %}
+{% tab Swift %}
 #### Etapa 3.1: Defina sua chave de API
 
 A Braze oferece uma solução nativa do Unity para automatizar a integração do Unity com o iOS. Essa solução modifica o projeto do Xcode usando o [`PostProcessBuildAttribute`](http://docs.unity3d.com/ScriptReference/Callbacks.PostProcessBuildAttribute.html) e as subclasses `UnityAppController` do Unity que utilizam a macro `IMPL_APP_CONTROLLER_SUBCLASS`.

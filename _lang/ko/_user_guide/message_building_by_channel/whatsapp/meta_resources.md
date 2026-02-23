@@ -37,7 +37,7 @@ channel:
 
 한 가지 예외는, 사용자가 마케팅 메시지에 응답하면 24시간 고객 서비스 창이 시작된다는 것입니다. 이 창 내에 전송된 마케팅 메시지는 사용자의 한도에 포함되지 않습니다.
 
-특정 한도는 사용자의 참여 수준에 따라 다릅니다. WhatsApp의 사용자별 마케팅 템플릿 메시지 한도에 대해 더 알아보려면 [여기](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates#per-user-marketing-template-message-limits)를 클릭하세요. 
+특정 한도는 사용자의 참여 수준에 따라 다릅니다. WhatsApp의 사용자별 마케팅 템플릿 메시지 한도에 대해 자세히 알아보려면 [여기](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates#per-user-marketing-template-message-limits)를 클릭하세요. 
 
 ### 2025년 1월: 4월 1일부터 미국 사용자에게 마케팅 메시지 전송을 일시 중지하는 WhatsApp
 *마지막 업데이트 2025년 1월*

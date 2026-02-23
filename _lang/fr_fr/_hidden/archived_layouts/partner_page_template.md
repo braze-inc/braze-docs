@@ -1,5 +1,5 @@
 ---
-nav_title: Page Partenaire
+nav_title: Page partenaire
 
 page_order: 4
 
@@ -60,7 +60,7 @@ Les exigences suivantes sont des exigences générales dont vous pourriez avoir 
 
 ## [Type d'intégration] Intégration
 
-C’est là que vous divisez l’intégration en étapes. N’écrivez pas de paragraphes sans fin. Il s’agit de documents techniques qui seront utilisés par des spécialistes du marketing et des développeurs à des fins d’intégration et d’exécution. Dans cette section, votre seul objectif est d’écrire une documentation descriptive qui aide l’utilisateur Braze à faire son travail. Dans le titre de la section, le « type d’intégration » permet d’indiquer s’il s’agit d’une intégration côte à côte, serveur à serveur ou prête à l’emploi. Cela vous permet d’avoir plusieurs sections d’intégration, s’il existe plus d’une méthode d’intégration pour ce partenaire.
+C’est là que vous divisez l’intégration en étapes. N’écrivez pas de paragraphes sans fin. Il s’agit de documents techniques qui seront utilisés par des spécialistes du marketing et des développeurs à des fins d’intégration et d’exécution. Dans cette section, votre seul objectif est d’écrire une documentation descriptive qui aide l’utilisateur Braze à faire son travail. Par "Type d'intégration" dans le titre de la section, nous entendons indiquer s'il s'agit ou non d'une intégration côte à côte, serveur à serveur, ou par défaut. Cela vous permet d’avoir plusieurs sections d’intégration, s’il existe plus d’une méthode d’intégration pour ce partenaire.
 
 S’il s’agit d’une intégration Currents, cette page doit se trouver dans la section Currents et vous devrez créer une page de navigation qui redirige vers cet emplacement dans Currents.
 

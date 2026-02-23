@@ -11,11 +11,11 @@ hidden: true
 # 푸시 알림 통합
 {% multi_lang_include archive/windows_deprecation.md %}
 
-![Windows 유니버설 푸시 예제입니다.][10]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Windows 유니버설 푸시 예제입니다.]({% image_buster /assets/img_archive/windows_uni_push_sample.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 푸시 알림은 중요한 업데이트가 발생하면 사용자 화면에 표시되는 앱 외 알림입니다. 푸시 알림은 사용자에게 시의적절하고 관련성 높은 콘텐츠를 제공하거나 앱에 다시 참여하도록 유도할 수 있는 유용한 방법입니다.
 
-추가 모범 사례는 [설명서][9]를 참조하세요.
+추가 모범 사례는 [설명서를]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) 참조하세요.
 
 ## 1단계: 푸시를 위한 애플리케이션 구성
 
@@ -25,8 +25,8 @@ hidden: true
 
 ## 2단계: Braze 대시보드 구성
 
-1. [SID 및 클라이언트 비밀 찾기][4]
-2. Braze 대시보드의 **설정** 페이지에서 설정에 SID와 클라이언트 비밀번호를 추가합니다.<br>![][6]
+1. [SID 및 클라이언트 비밀 찾기](http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx)
+2. Braze 대시보드의 **설정** 페이지에서 설정에 SID와 클라이언트 비밀번호를 추가합니다.<br>![]({% image_buster /assets/img_archive/windows_sid.png %} "Windows SID dashboard")
 
 ## 3단계: 백그라운드 오픈 로깅 업데이트
 
@@ -66,15 +66,9 @@ WNS 딥링크 지원은 사용자를 전송할 위치에 대한 데이터와 함
 
 푸시 알림 설정의 '추가 실행 문자열 구성' 필드에서 실행 문자열에 추가할 문자열을 지정합니다.
 
-![][15]
+![]({% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Deep Link Click Action")
 
 ### 3부: REST API를 통한 딥링킹
 
-Braze는 REST API를 통한 딥링크 전송도 허용합니다. [Windows 유니버설 푸시 객체][13]는 선택 사항 `extra_launch_string` 매개변수를 허용합니다.
+Braze에서는 REST API를 통해 딥링킹을 전송할 수도 있습니다. [Windows 유니버설 푸시 개체는]({{site.baseurl}}/api/objects_filters/) `extra_launch_string` 매개변수(선택 사항)를 허용합니다.
 
-[4]: http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx
-[6]: {% image_buster /assets/img_archive/windows_sid.png %} "Windows SID 대시보드"
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %}
-[13]: {{site.baseurl}}/api/objects_filters/messaging/windows_objects/
-[15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "딥링크 클릭 액션"

@@ -14,7 +14,7 @@ search_tag: Partner
 
 _This integration is maintained by Pypestream._
 
-## About the integration
+## 통합 정보
 
 The Braze and Pypestream integration allows you to seamlessly orchestrate the end-to-end customer lifecycle from initial outreach, routed into a conversational experience, and through to omnichannel follow-up(s) via intelligent retargeting. 
 
@@ -31,7 +31,7 @@ The Braze and Pypestream integration allows you to seamlessly orchestrate the en
 
 The Braze and Pypestream partnership can be used in your Canvases to achieve common use cases like:
 * **Intelligent retargeting**: Retarget users with Braze Canvas after their conversational engagement with your brand by leveraging all the rich data points collected via Pypestream.
-* **Dynamic targeting**: Reach out to existing and prospective customers based on their specific cohorts and segments, serving them with tailored conversational experiences via Pypestream.
+* **Dynamic targeting**: 특정 코호트 및 세그먼트를 기반으로 기존 고객과 잠재 고객에게 연락하여 Pypestream을 통해 맞춤형 대화 경험을 제공하세요.
 * **Contextual customer insights**: After an end-user (existing or prospective customer) engages on your website, combine webpage tags ingested from the Pypestream Event Listener with customer data stored within Braze to provide a fully-personalized and contextual conversational interaction.
 
 ## Integration
@@ -280,5 +280,5 @@ class BrazeExample:
 
 ### Step 3: Update solution flows to redirect upon success/failure of action node
 
-Lastly, in each solution's design, you can route users to nodes based on if the action node API call was successful. If the action node receives an error message, the end-user should be handled with care. 
+Lastly, in each solution's design, you can route users to nodes based on if the action node API call was successful. If the action node receives an error message, the end-user should be handled with care.
 

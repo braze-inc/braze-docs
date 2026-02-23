@@ -18,7 +18,7 @@ Mit der Integration von Zeotap und Braze können Sie den Umfang und die Reichwei
 | --- | --- |
 |Zeotap-Konto | Um diese Partnerschaft zu nutzen, benötigen Sie ein [Zeotap-Konto](https://zeotap.com/). |
 | Braze REST API-Schlüssel | Ein Braze REST API-Schlüssel mit `users.track` Berechtigungen. <br><br> Dieser kann im Braze-Dashboard unter **Einstellungen** > **API-Schlüssel** erstellt werden. |
-| Braze REST Endpunkt  | Ihre URL für den REST-Endpunkt. Ihr Endpunkt hängt von der [Braze-URL für Ihre Instanz] ab ({% image_buster /assets/img/zeotap/zeotap1.png %}). |
+| Braze REST Endpunkt  | Ihre URL für den REST-Endpunkt. Ihr Endpunkt hängt von der [Braze URL für Ihre Instanz]({% image_buster /assets/img/zeotap/zeotap1.png %}) ab. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Integration

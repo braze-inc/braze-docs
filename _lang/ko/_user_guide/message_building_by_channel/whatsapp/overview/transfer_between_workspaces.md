@@ -19,15 +19,15 @@ channel:
 
 ## 전화번호 및 구독 그룹 전송
 
-### 1단계: 구독 그룹 보관
+### 1단계: 구독 그룹 아카이브
 
-WhatsApp 구독 그룹을 보관하려면 다음 단계를 따르십시오:
+WhatsApp 구독 그룹을 아카이브하려면 다음 단계를 따르십시오:
 
 1. 구독 그룹이 현재 존재하는 작업 공간으로 이동합니다.
 2. **오디언스** > **구독 그룹 관리**로 이동하여 이동하려는 WhatsApp 전화번호와 관련된 구독 그룹을 찾습니다.
-3. 구독 그룹의 상태 위에 마우스를 올리고 <i class="fa-solid fa-box-archive"></i> **보관**를 선택하면 구독 그룹이 비활성으로 표시되지만 삭제되지는 않습니다.
+3. 구독 그룹의 상태 위에 마우스를 올리고 <i class="fa-solid fa-box-archive"></i> **아카이브**를 선택하면 구독 그룹이 비활성으로 표시되지만 삭제되지는 않습니다.
 
-!["보관" 버튼이 구독 그룹의 "활성" 상태 위에 마우스를 올릴 때 나타납니다.]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
+!["아카이브" 버튼이 구독 그룹의 "활성" 상태 위에 마우스를 올릴 때 나타납니다.]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
 
 ### 2단계: WhatsApp 전화번호를 새 작업 공간에 통합
 

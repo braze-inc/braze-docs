@@ -10,13 +10,13 @@ Les événements personnalisés sont enregistrés avec `actionType` réglé sur 
 
 Pour commencer, créez un déclencheur qui recherche un « nom de l’événement » qui équivaut à `played song`
 
-![Un événement personnalisé dans Google Tag Manager qui se déclenche pour certains événements lorsque "nom de l'événement" est égal à "chanson jouée".]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
+![Dans Google Tag Manager, un déclencheur personnalisé est défini pour déclencher certains événements lorsque « nom de l’événement » est égal à « chanson jouée ».]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
 
 Ensuite, créez une nouvelle étiquette (également appelée "appel de fonction") et entrez le chemin de classe de votre [fournisseur d'étiquettes personnalisé](#adding-android-google-tag-provider) décrit plus loin dans cet article. Cette étiquette sera déclenchée lorsque vous enregistrerez l'événement `played song`.
 
 Dans les paramètres personnalisés de l'étiquette (également connus sous le nom de paire clé-valeur), définissez `eventName` comme `played song`. Il s'agit du nom de l'événement personnalisé enregistré dans Braze.
 
-![Une balise dans Google Tag Manager avec des champs de chemin de classe et de paires clé-valeur. Cette étiquette est définie pour se déclencher avec le déclencheur "chanson jouée" créé précédemment.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
+![Une balise dans Google Tag Manager avec des champs de chemin de classe et de paires clé-valeur. Cette balise est définie pour répondre au déclencheur créé précédemment « chanson jouée ».]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
 {% alert important %}
 Lors de l'envoi d'un événement personnalisé, veillez à définir `actionType` sur `logEvent` et à attribuer une valeur à `eventName` afin que Braze reçoive le nom d'événement correct et l'action à entreprendre.

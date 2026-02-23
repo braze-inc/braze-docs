@@ -45,7 +45,7 @@ Antes de configurar o conector WhatsApp BYO, confirme que o envio anterior da su
 3\. Dê à chave um nome significativo, como “Braze - Meu Nome de Espaço de Trabalho - Meu Nome de WABA”.
 4\. Adicione uma data de vencimento que esteja longe no futuro para evitar problemas com a expiração do token.
     \- Faça uma nota para gerar uma nova chave de API e reconectar seu WABA antes da data de vencimento.
-5\. Selecione esses escopos:
+5\. Selecione estes escopos:
 - `Message:send`
 - `Whatsapp:manage`
 - `Whatsapp:message:send`
@@ -62,7 +62,7 @@ Antes de configurar o conector WhatsApp BYO, confirme que o envio anterior da su
 
 ![Página "chaves de API" com uma URL base da API destacada.]({% image_buster /assets/img/whatsapp/byo_connector/api_base_url.png %})
 
-## Etapa 2: Inicie o cadastro incorporado
+## Etapa 2: Inicie o cadastro embutido
 
 1. No Braze, acesse **Integrações de Parceiros** > **Parceiros de Tecnologia** > **WhatsApp**
 2. Selecione a guia **Conector BYO - Infobip**.
@@ -72,9 +72,9 @@ Antes de configurar o conector WhatsApp BYO, confirme que o envio anterior da su
 {: start="3"}
 3\. Insira a chave de API e a URL base de [Etapa 1](#step-1).
 4\. Selecione **Conectar**.
-5\. Prossiga pelo [fluxo de trabalho de Cadastro Incorporado]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/#whatsapp-embedded-signup-workflow) com estas considerações:
+5\. Prossiga pelo [fluxo de trabalho de Cadastro Embutido]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/#whatsapp-embedded-signup-workflow) com estas considerações:
 - Você não pode selecionar o mesmo portfólio de negócios que é usado por um provedor de soluções de negócios diferente.
-- Você não pode selecionar um número de telefone que está sendo usado por outro Provedor de Soluções Empresariais.
+- Você não pode selecionar um número de telefone que está sendo usado por outro Provedor de Solução Empresarial.
 - Você deve criar um novo WABA, não selecionar um existente.
 
 {% alert note %}

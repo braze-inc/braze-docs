@@ -38,7 +38,7 @@ channel:
 
 ### 2단계: 전화번호 구성
 
-Twilio의 지침에 따라 [Twilio Voice Only](https://www.twilio.com/docs/whatsapp/self-sign-up#verify-your-whatsapp-sender)를 사용하여 이메일을 통해 인증 코드를 수신하도록 Twilio 전화번호를 설정하세요. **다른 단계의 지침을 따르지 마세요. 그렇게 하면 Twilio가 아닌 Braze에 전화번호가 연결됩니다.**
+Twilio의 지침에 따라 [Twilio Voice Only](https://www.twilio.com/docs/whatsapp/self-sign-up#verify-your-whatsapp-sender)를 사용하여 이메일을 통해 인증 코드를 받을 수 있도록 Twilio 전화번호를 설정하세요. **다른 단계의 지침을 따르지 마세요. 그렇게 하면 Twilio가 아닌 Braze에 전화번호가 연결됩니다.**
 
 {% alert warning %}
 **Twilio의 지침만 따라 인증 코드를 받으세요.**

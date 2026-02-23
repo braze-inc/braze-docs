@@ -52,7 +52,7 @@ Utilice el campo mostrado para permitir direcciones IP y subredes específicas d
 
 ## Autenticación de dos factores (2FA)
 
-La autenticación de dos factores es obligatoria para todos los usuarios de Braze. Añade un segundo nivel de verificación de identidad al registro de una cuenta, haciéndolo más seguro que un simple nombre de usuario y contraseña. Si tu panel de control no admite la autenticación de dos factores, ponte en contacto con tu gestor de éxito de clientes. 
+La autenticación de dos factores es necesaria para todos los usuarios de la empresa. Añade un segundo nivel de verificación de identidad al registro de una cuenta, haciéndolo más seguro que un simple nombre de usuario y contraseña. Si tu panel de control no admite la autenticación de dos factores, ponte en contacto con tu gestor de éxito de clientes. 
 
 Cuando se activa la autenticación de dos factores:
 
@@ -85,7 +85,7 @@ Un restablecimiento puede resolver problemas comunes de autenticación, como pro
 
 ### Requisitos para la 2FA a nivel de empresa
 
-En primer lugar, comprueba si el 2FA está habilitado para tu panel yendo a **Configuración de la empresa** > **Configuración de seguridad** > **Autenticación de dos factores**. Si el botón alternativo está en gris, 2FA no se ha activado para tu empresa y no es obligatorio para todos los usuarios del panel.
+En primer lugar, comprueba si el 2FA está habilitado para tu panel yendo a **Configuración de la empresa** > **Configuración de seguridad** > **Autenticación de dos factores**. Si el botón alternar está en gris, 2FA no se ha activado para tu empresa y no es obligatorio para todos los usuarios de la empresa.
 
 #### Opciones del usuario cuando 2FA no es obligatorio
 
@@ -96,7 +96,7 @@ Si la 2FA no se aplica a nivel de empresa, los usuarios individuales pueden conf
 Si la 2FA se aplica a nivel de empresa, los usuarios que no la configuren en sus propias cuentas al iniciar sesión quedarán bloqueados en el panel. Los usuarios deben completar la configuración 2FA para mantener el acceso.
 
 {% alert important %}
-La 2FA es necesaria para todos los usuarios de Braze sólo si el inicio de sesión único (SSO) no está habilitado. Si se utiliza SSO, no es necesario aplicar 2FA a nivel de empresa.
+La 2FA es necesaria para todos los usuarios de la empresa sólo si el inicio de sesión único (SSO) no está habilitado. Si se utiliza SSO, no es necesario aplicar 2FA a nivel de empresa.
 {% endalert %}
 
 ## Configuración de la autenticación de dos factores (2FA)
@@ -141,9 +141,11 @@ Para descargar este informe, haga lo siguiente:
 
 1. Vaya a **Configuración** > **Configuración del administrador**.
 2. Seleccione la pestaña **Configuración de seguridad** y vaya a la sección **Descarga de eventos de seguridad**.
-2. Seleccione **Descargar informe**. 
+3. Seleccione **Descargar informe**. 
 
-Este informe sólo contiene los 10.000 eventos de seguridad más recientes de su cuenta. Si necesita datos de eventos específicos, póngase en contacto con el servicio de asistencia técnica.
+Esta descarga manual de informes sólo contiene los 10.000 eventos de seguridad más recientes de tu cuenta.
+
+Para exportar eventos de seguridad a Amazon S3 sin este límite de filas, consulta [Exportación de eventos de seguridad con Amazon S3]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/).
 
 {% details Reported security events %}
 ### Iniciar sesión y cuenta
@@ -203,7 +205,7 @@ Canvas
 - Equipo archivado
 - Equipo no archivado
 - Conjunto de permisos del grupo de aplicaciones creado
-- Grupo de aplicaciones editadas Conjunto de permisos
+- Conjunto de permisos del grupo de aplicaciones editadas
 - Eliminado el conjunto de permisos del grupo de aplicaciones
 - Rol personalizado creado
 - Rol personalizado actualizado
@@ -260,7 +262,7 @@ Credenciales push eliminadas
 
 ## Ver información personal identificable (PII) {#view-pii}
 
-El permiso **Ver PII** sólo es accesible para unos pocos usuarios seleccionados de Braze. Por defecto, todos los administradores tienen activado el permiso **Ver PII** en los permisos de usuario. Esto significa que pueden ver todos los atributos estándar y personalizados que tu empresa haya definido como PII en todo el panel. Cuando este permiso esté desactivado para los usuarios, éstos no podrán ver ninguno de esos atributos.
+El permiso **Ver PII** sólo es accesible para unos pocos usuarios selectos de la empresa. Por defecto, todos los administradores tienen activado el permiso **Ver PII** en los permisos de usuario. Esto significa que pueden ver todos los atributos estándar y personalizados que tu empresa haya definido como PII en todo el panel. Cuando este permiso esté desactivado para los usuarios, éstos no podrán ver ninguno de esos atributos.
 
 {% alert note %}
 Necesitas el permiso **Ver PII** para utilizar [el Generador de consultas]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/), porque permite acceder directamente a algunos datos de clientes.
@@ -271,12 +273,12 @@ Para conocer las capacidades de permisos de equipo existentes, consulta [Configu
 ### Definir la PII
 
 {% alert important %}
-Seleccionar y definir determinados campos como campos PII sólo afecta a lo que los Usuarios pueden ver en el panel Braze y no afecta a cómo se gestionan los datos del Usuario final en dichos campos PII.<br><br>Consulta a tu equipo jurídico para alinear la configuración de tu panel con las normativas y políticas de privacidad aplicables a tu empresa, incluidas las relacionadas con la [retención de datos]({{site.baseurl}}/data_retention/).
+Seleccionar y definir determinados campos como campos PII sólo afecta a lo que los usuarios pueden ver en el panel Braze y no afecta a cómo se gestionan los datos del usuario final en dichos campos PII.<br><br>Consulta a tu equipo jurídico para alinear la configuración de tu panel con las normativas y políticas de privacidad aplicables a tu empresa, incluidas las relacionadas con la [retención de datos]({{site.baseurl}}/data_retention/).
 {% endalert %}
 
 Puedes seleccionar los campos que tu empresa designe como PII en el panel. Para ello, ve a **Configuración de la empresa** > **Configuración de administrador** > **Configuración de seguridad**.
 
-Los siguientes atributos pueden designarse como PII y ocultarse a los usuarios de Braze que no tengan permisos de **Ver PII**.
+Los siguientes atributos pueden designarse como PII y ocultarse a los usuarios de la empresa que no tengan permisos de **Ver PII**.
 
 #### Posibles atributos PII
 
@@ -287,7 +289,7 @@ Los siguientes atributos pueden designarse como PII y ocultarse a los usuarios d
 
 ### Zonas limitadas
 
-A continuación se asume que todos los campos están configurados como PII, y que los usuarios mencionados son los que utilizan la plataforma Braze. Además, los atributos "precedentes" se refieren a los de la tabla [Atributos PII potenciales](#potential-pii-attributes). Eliminar los permisos de PII de un usuario puede afectar a la usabilidad más allá de estas áreas enumeradas.
+A continuación se asume que todos los campos están configurados como PII, y que los usuarios mencionados son usuarios de la empresa que utilizan la plataforma Braze. Además, los atributos "precedentes" se refieren a los de la tabla [Atributos PII potenciales](#potential-pii-attributes). Eliminar los permisos de PII de un usuario puede afectar a la usabilidad más allá de estas áreas enumeradas.
 
 | Navegación por el panel | Resultado | Notas |
 | -------------------- | ------ | ----- |
@@ -316,7 +318,7 @@ Usted es responsable de determinar las preferencias correctas para su espacio de
 | -------------------- | ------ | ----- |
 | Evento personalizado | Propiedades |  |
 | Evento de compra | Propiedades |  |
-| Envío de mensajes | message_extras | Varios tipos de eventos contienen un campo `message_extras`. La preferencia se aplica a todos los tipos de eventos de envío de mensajes compatibles con `message_extras`, incluidos los tipos de eventos que se añadan en el futuro. |
+| Envío de mensajes | message_extras | Varios tipos de eventos contienen un campo `message_extras`. La preferencia se aplica a todos los tipos de eventos de envío de mensajes que admiten `message_extras`, incluidos los tipos de eventos que se añadan en el futuro. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert warning %}

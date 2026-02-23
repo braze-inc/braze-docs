@@ -1,24 +1,24 @@
 ---
-nav_title: Envie mensagens in-app do primer de push
-article_title: Mensagens In-App do Primer de Push
+nav_title: Mensagens no app com cartilha push
+article_title: Mensagens no app do Push Primer
 page_order: 1
 page_type: reference
-description: "Este artigo cobre os pré-requisitos para mensagens in-app do primer de push e como configurá-las."
+description: "Este artigo aborda os pré-requisitos para o envio de mensagens no app e como configurá-las."
 channel: push
 
 ---
 
-# Envie mensagens in-app do primer de push
+# Mensagens no app com cartilha push
 
-\![Mensagem in-app do primer de push para aplicativo de streaming. A notificação diz "Receber notificações push do Movie Cannon? As notificações podem incluir novos filmes, programas de TV ou outros avisos e podem ser desativadas a qualquer momento."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Envio de mensagens no app para aplicativos de streaming. A notificação diz: "Receber notificações por push do Movie Cannon? As notificações podem incluir novos filmes, programas de TV ou outros avisos e podem ser desativadas a qualquer momento."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
-> Você só tem uma chance de pedir permissão de push aos usuários, então otimizar seu registro de push é crucial para maximizar o alcance de suas mensagens de push. Para ajudar a alcançar isso, você pode usar mensagens in-app para explicar que tipo de mensagens seus usuários podem esperar receber se optarem por participar, antes de mostrar a eles o prompt nativo de push. Isso é chamado de primer de push.
+> Você só tem uma chance de pedir permissão aos usuários por push, portanto, otimizar o registro de push é crucial para maximizar o alcance das suas mensagens push. Para ajudar a conseguir isso, você pode usar mensagens no app para explicar que tipo de mensagens seus usuários podem esperar receber se optarem pela aceitação, antes de mostrar a eles o pedido de aceitação push nativo. Isso é chamado de push primer.
 
-Para criar uma mensagem in-app do primer de push no Braze, você pode usar o comportamento de clique no botão "Solicitar Permissão de Push" ao criar uma mensagem in-app para iOS, Android ou Web.
+Para criar uma mensagem no app com push primer na Braze, você pode usar o comportamento ao clicar no botão "Solicitar permissão de push" ao criar uma mensagem no app para iOS, Android ou Web.
 
 ## Pré-requisitos
 
-Este recurso requer [comportamento de clique no botão](#button-actions), que é suportado nas seguintes versões mínimas ou posteriores:
+Esse recurso requer [o comportamento ao clicar em um botão](#button-actions), que é compatível com as seguintes versões mínimas ou posteriores:
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
@@ -26,26 +26,26 @@ Além disso, observe os seguintes detalhes específicos da plataforma:
 
 {% tabs local %}
 {% tab android %}
-|Versão do SO|Informações adicionais|
+|Versão do sistema operacional|Informações adicionais|
 \|----------|----------------------|
-| **Android 12 e anteriores** | Implementar primers de push não é recomendado porque o push é optado por padrão. |
-| **Android 13+** | Se um usuário negar seu prompt de permissão de push duas vezes, o Android bloqueia novos prompts—incluindo mensagens do primer de push do Braze. Para conceder permissão após isso, os usuários devem habilitar manualmente o push para seu aplicativo nas configurações do dispositivo. |
+| **Android 12 e versões anteriores** A implementação de primers push não é recomendada porque o push é aceito por padrão. |
+| **Android 13+** | Se um usuário negar duas vezes a solicitação de permissão de envio de mensagens, o Android bloqueará outras solicitações, inclusive as mensagens de push do Braze. Para conceder permissão depois disso, os usuários devem ativar manualmente o push para o seu app nas configurações do dispositivo. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 
 {% tab swift %}
 ### Informações gerais
 
-- O prompt de push pode ser exibido apenas uma vez por instalação, conforme imposto pelo sistema operacional.
-- O prompt não será exibido se a configuração de push do aplicativo estiver explicitamente ativada ou desativada, ele será exibido apenas para usuários com [autorização provisória](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications#3544375).
-  - **A configuração de push do aplicativo está ativada:** A Braze não mostrará a mensagem no aplicativo, pois o usuário já optou por participar.
-  - **A configuração de push do aplicativo está desativada:** Você precisará redirecionar o usuário para as configurações de notificações push do seu aplicativo dentro das configurações do dispositivo.
+- O prompt push pode ser exibido apenas uma vez por instalação, o que é imposto pelo sistema operacional.
+- O prompt não será exibido se a configuração push do app estiver explicitamente ativada ou desativada. Ele só é exibido para usuários com [autorização provisória](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications#3544375).
+  - **A configuração push do app está ativada:** O Braze não mostra a mensagem no app, pois o usuário já fez a aceitação.
+  - **A configuração push do app está desativada:** É necessário redirecionar o usuário para as configurações de notificação por push do seu app nas configurações do dispositivo.
 
-### Remoção manual de código
+### Remoção manual do código
 
-A mensagem no aplicativo que você configurou usando este tutorial chamará automaticamente o código nativo do prompt de push quando um usuário clicar no botão da mensagem no aplicativo. Para evitar solicitar permissão para notificações push duas vezes, ou no momento errado, um desenvolvedor deve modificar qualquer integração existente de notificações push que implementou para garantir que sua mensagem no aplicativo seja o primeiro primer de notificação push que seus usuários veem.
+A mensagem no app que você configurou usando este tutorial chama o código de prompt push nativo automaticamente quando um usuário clica no botão de mensagem no app. Para evitar a solicitação de permissão de notificação por push duas vezes ou no momento errado, o desenvolvedor deve modificar qualquer integração de notificação por push existente que tenha implementado para garantir que a mensagem no app seja o primeiro primer de notificação por push que os usuários vejam.
 
-Sua equipe de desenvolvimento deve revisar sua implementação de notificações push para seu aplicativo ou site e remover manualmente qualquer código que solicite permissão para push. Por exemplo, você removeria referências ao seguinte código:
+Sua equipe de desenvolvimento deve revisar a implementação de notificações por push para seu app ou site e remover manualmente qualquer código que solicite permissão por push. Por exemplo, remova as referências ao código a seguir:
 
 {% subtabs %}
 {% subtab OBJECTIVE-C %}
@@ -74,60 +74,147 @@ android.permission.POST_NOTIFICATIONS
 {% endtab %}
 {% endtabs %}
 
-## Passo 1: Crie uma mensagem no aplicativo
+## Etapa 1: Crie uma mensagem no app
 
-Primeiro, [crie uma mensagem no aplicativo]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), depois selecione o tipo e o layout da sua mensagem.
+Primeiro, [crie uma mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) e, em seguida, selecione o tipo e o layout da mensagem.
 
-Para garantir que você tenha espaço suficiente para sua mensagem e botões, use um layout de mensagem em tela cheia ou modal. Se você escolher a tela cheia, observe que uma imagem é necessária.
+Para garantir que haja espaço suficiente para a mensagem e os botões, use um layout de tela cheia ou de mensagem modal. Se escolher tela cheia, note que é necessária uma imagem.
 
-## Passo 2: Construa sua mensagem
+## Etapa 2: Crie sua mensagem
 
-Agora é hora de adicionar seu texto! Lembre-se de que um primer de push deve preparar o usuário para ativar as notificações push. No corpo da sua mensagem, sugerimos destacar as razões pelas quais seus usuários devem ter as notificações push ativadas. Seja específico sobre que tipo de notificações você deseja enviar e qual valor elas podem fornecer.
+Agora é hora de adicionar sua cópia! Lembre-se de que um push primer deve preparar o usuário para ativar as notificações por push. No corpo da mensagem, sugerimos destacar os motivos pelos quais os usuários devem ativar as notificações por push. Seja específico quanto ao tipo de notificações que você deseja enviar e o valor que elas podem oferecer.
 
-Por exemplo, um aplicativo de notícias pode usar o seguinte primer de push:
+Por exemplo, um app de notícias pode usar o seguinte push primer:
 
 ```plaintext
 Breaking news on the go! Enable push notifications to get alerts for major stories and topics that matter to you.
 ```
 
-Enquanto um aplicativo de streaming pode usar o seguinte:
+Enquanto um app de streaming pode usar o seguinte:
 
 ```plaintext
 Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time.
 ```
 
-Para melhores práticas e recursos adicionais, consulte [Criando prompts de opt-in personalizados]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+Para obter práticas recomendadas e recursos adicionais, consulte [Criação de pedidos de aceitação personalizados]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
-## Passo 3: Especifique o comportamento do botão {#button-actions}
+## Etapa 3: Especificar o comportamento do botão {#button-actions}
 
-Para adicionar botões à sua mensagem no aplicativo, arraste dois blocos de **Botão** para sua mensagem, que atuarão como os botões primário e secundário na sua mensagem no aplicativo. Você também pode arrastar uma linha para sua mensagem e, em seguida, arrastar os botões para a linha, para que os botões fiquem na mesma linha horizontal (em vez de empilhados um em cima do outro). Recomendamos "Permitir notificações" e "Agora não" como botões iniciais, mas existem muitos outros prompts de botão que você pode atribuir.
+Para adicionar botões à sua mensagem no app, arraste dois blocos de **botões** para a mensagem, que funcionam como os botões primário e secundário da mensagem no app. Também é possível arrastar uma linha para a mensagem e, em seguida, arrastar os botões para a linha, de modo que os botões fiquem na mesma linha horizontal (em vez de empilhados uns sobre os outros). Recomendamos "Allow notifications" (Permitir notificações) e "Not now" (Agora não) como botões iniciais, mas há muitos avisos de botões diferentes que você pode atribuir.
 
-Depois de adicionar o texto do botão, especifique o comportamento ao clicar para cada botão:
+Depois de adicionar o texto do botão, especifique o comportamento ao clicar em cada botão:
 
-- **Botão 1:** Defina isso como "Fechar Mensagem". Este é seu botão secundário, ou a opção "Agora não".
-- **Botão 2:** Defina isso como "Solicitar Permissão para Envio de Notificações". Este é o seu botão principal, ou a opção "Permitir notificações".
+- **Botão 1:** Defina essa opção como "Fechar mensagem". Esse é seu botão secundário ou a opção "Not now" (Agora não).
+- **Botão 2:** Defina essa opção como "Request Push Permission" (Solicitar permissão de push). Esse é o botão principal ou a opção "Permitir notificações".
 
-\![Compositor de mensagem no aplicativo com dois botões: "Permitir notificações" e "Agora não".]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
+![Criador de mensagens no app com dois botões: "Permitir notificações" e "Agora não".]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
 
-## Passo 4: Agendar entrega
+## Etapa 4: Programação de entrega
 
-Para definir seu primer de push para enviar em um momento relevante, você deve agendar sua mensagem no aplicativo como uma mensagem baseada em ação com **Executar Evento Personalizado** como a ação de gatilho.
+Para definir o envio do push primer em um momento relevante, é necessário programar a mensagem no app como uma mensagem baseada em ação com **Perform Custom Event** como a ação-gatilho.
 
-Embora o momento ideal varie, a Braze sugere esperar até que um usuário complete algum tipo de [ação de alto valor](https://www.braze.com/resources/videos/mapping-high-value-actions), indicando que ele está começando a ver valor em seu aplicativo ou site, ou quando há uma necessidade convincente que as notificações push podem atender (como após fazer um pedido e você deseja oferecer informações de rastreamento de envio). Dessa forma, o aviso é benéfico para o cliente, em vez de apenas para sua marca.
+Embora o momento ideal varie, o Braze sugere esperar até que um usuário conclua algum tipo de [ação de alto valor](https://www.braze.com/resources/videos/mapping-high-value-actions), indicando que ele está começando a ver valor em seu app ou site, ou quando houver uma necessidade convincente que as notificações por push possam atender (por exemplo, depois que ele fizer um pedido e você quiser oferecer a ele informações de rastreamento de envio). Dessa forma, a solicitação é benéfica para o cliente e não apenas para sua marca.
 
-\![Configurações de entrega baseadas em ação para enviar a usuários que realizaram o evento personalizado "Adicionar à Lista de Desejos".]({% image_buster /assets/img_archive/push_primer_trigger.png %})
+![Configurações de entrega baseada em ação para enviar aos usuários que realizaram o evento personalizado de "Adicionar à lista de observação".]({% image_buster /assets/img_archive/push_primer_trigger.png %})
 
-## Passo 5: Segmentar usuários
+## Etapa 5: Usuários-alvo
 
-O objetivo de uma campanha de primer de push é solicitar usuários em qualquer dispositivo onde eles ainda não concederam permissões de push. Isso pode incluir usuários de primeira viagem ou usuários existentes que obtêm um novo dispositivo ou reinstalam seu aplicativo. Para segmentar corretamente sua campanha de primer de push, adicione um filtro onde `Foreground Push Enabled For App is false`. Esse filtro identifica instalações individuais do aplicativo que ainda não optaram por notificações push em primeiro plano.
+O objetivo de uma campanha de push primer é avisar os usuários em qualquer dispositivo em que eles ainda não tenham concedido permissões de push. Isso pode incluir usuários de primeira viagem ou usuários existentes que adquirem um novo dispositivo ou reinstalam seu aplicativo.
 
 {% alert important %}
-Usar um filtro em nível de usuário como `Push Subscription Status is not Opted In` excluirá usuários que já optaram por outro dispositivo, impedindo que eles recebam o aviso em seu novo dispositivo.
+**Supressão automática com push primer sem código**: Se você usar a cartilha push sem código (a ação do botão "Request Push Permission"), não precisará adicionar filtros de inscrição push à sua segmentação. O SDK suprime automaticamente a mensagem no app em dispositivos que já têm um token por push ativo, independentemente do status de push do usuário em outros dispositivos. Para saber mais sobre o direcionamento de usuários com vários dispositivos, consulte [Direcionamento de usuários com vários dispositivos](#targeting-users-with-multiple-devices).
 {% endalert %}
 
-Além disso, você pode decidir quais segmentos adicionais considera mais apropriados. Por exemplo, você pode segmentar usuários que completaram uma segunda compra, usuários que acabaram de criar uma conta para se tornarem membros, ou até mesmo usuários que visitam seu aplicativo mais de duas vezes por semana. Segmentar usuários para esses segmentos cruciais aumenta a probabilidade de os usuários optarem por participar e se tornarem habilitados para push.
+Se não estiver usando o push primer sem código, adicione um filtro onde `Foreground Push Enabled For App is false`. Esse filtro identifica instalações de aplicativos individuais que ainda não têm aceitação de notificações por push em primeiro plano.
+
+{% alert important %}
+O uso de um filtro no nível do usuário, como `Push Subscription Status is not Opted In`, exclui os usuários que já têm pedido de aceitação em outro dispositivo, impedindo-os de receber o prompt em seu novo dispositivo.
+{% endalert %}
+
+Além disso, você pode decidir quais segmentos adicionais considera mais apropriados. Por exemplo, você pode direcionar usuários que concluíram uma segunda compra, usuários que acabaram de criar uma conta para se tornarem membros ou até mesmo usuários que visitam seu app mais de duas vezes por semana. O direcionamento de usuários para esses segmentos cruciais aumenta a probabilidade de aceitação e capacitação de usuários por push.
+
+### Direcionamento de usuários com vários dispositivos
+
+Como o Braze captura os dados de usuários no nível do perfil e não do dispositivo, o direcionamento para usuários que possuem vários dispositivos pode ser um desafio. Os filtros de inscrição push na segmentação incluem ou excluem usuários com base no estado de inscrição de um único dispositivo, em vez do estado de inscrição do dispositivo direcionado específico. Além disso, os estados provisórios no iOS aumentam a complexidade, pois esses dispositivos tecnicamente têm tokens por push em primeiro plano, mas os usuários não têm aceitação explícita.
+
+#### O problema com os filtros de inscrição push
+
+Quando um usuário tem vários dispositivos com diferentes estados de inscrição push, os filtros de inscrição push na sua segmentação podem não conseguir direcionar alguns dispositivos. Considere estes cenários:
+
+{% details Scenario 1: User has two devices on different platforms %}
+
+**O usuário tem dois dispositivos:**
+- Dispositivo A: Android, aceitação para push
+- Dispositivo B: iOS, sem aceitação do push
+
+**Filtros de segmento que não funcionam:**
+- `Push enabled = false` - O usuário tem a capacitação push ativada em seu dispositivo Android, portanto, não se enquadra no segmento. O segmento não inclui o dispositivo iOS.
+- `Push subscription status is not opted in` - O usuário tem a capacitação push ativada em seu dispositivo Android, portanto, não se enquadra no segmento. O segmento não inclui o dispositivo iOS.
+
+**Filtros de segmento que funcionam:**
+- `Push enabled for iOS = false` - O usuário está ativado para push em seu dispositivo Android, mas estamos direcionando apenas para dispositivos iOS, portanto, o usuário se enquadra no segmento. O segmento inclui o dispositivo iOS.
+
+{% enddetails %}
+
+{% details Scenario 2: User has two iOS devices with different states %}
+
+**O usuário tem dois dispositivos iOS:**
+- Dispositivo A: Aceitação para push
+- Dispositivo B: Capacitação provisória, mas sem aceitação
+
+**Filtros de segmento que não funcionam:**
+- `Push enabled = false` - O dispositivo A tem aceitação para push, para que o usuário não caia no segmento. O segmento não inclui o dispositivo B.
+- `Provisionally opted in = true` - O dispositivo A está totalmente aceito, o que significa que não está em um estado provisório. O usuário não se enquadra no segmento. O segmento não inclui o dispositivo B.
+- `Push enabled for app > iOS = false` - O dispositivo A tem aceitação para push no iOS, portanto, o usuário não se enquadra no segmento. O segmento não inclui o dispositivo B.
+- `Push subscription status is not opted in` - O dispositivo A tem aceitação para push, para que o usuário não caia no segmento. O segmento não inclui o dispositivo B.
+
+**Resultado:** O uso de qualquer combinação desses filtros push faz com que o segmento exclua pelo menos um dispositivo.
+
+{% enddetails %}
+
+{% details Scenario 3: User has three or more devices on the same OS %}
+
+**O usuário tem três dispositivos:**
+- Dispositivo A: Aceitação para push
+- Dispositivo B: Sem aceitação para push
+- Dispositivo C: Sem aceitação para push
+
+**Filtros de segmento que não funcionam:**
+- `Push enabled = false` - O dispositivo A tem aceitação para push, para que o usuário não caia no segmento. O segmento não inclui os dispositivos B e C.
+- `Push enabled for app > X = false` - O dispositivo A tem aceitação para push no app especificado, para que o usuário não caia no segmento. O segmento não inclui os dispositivos B e C.
+- `Push subscription status is not opted in` - O dispositivo A tem aceitação para push, para que o usuário não caia no segmento. O segmento não inclui os dispositivos B e C.
+
+**Resultado:** O uso de qualquer combinação desses filtros push deixa pelo menos um dispositivo sem alvo.
+
+{% enddetails %}
+
+#### Solução: Use o push primer sem código
+
+A solução recomendada é usar o iniciador de push sem código (o botão de ação "Request Push Permission") sem filtros adicionais de segmentação de status de push.
+
+{% alert important %}
+**Supressão automática**: O primer no-code push é suprimido automaticamente em dispositivos que já têm um token por push ativo. O SDK verifica se um usuário em seu dispositivo específico já tem um token por push. Se o SDK constatar que o usuário já fez a aceitação (por exemplo, a partir de uma solicitação anterior ou por meio das configurações do dispositivo), o SDK suprimirá automaticamente a mensagem no app sem a necessidade de filtros de segmentação adicionais. O primer é exibido em todos os outros cenários, inclusive se um usuário tiver aceitação provisória do push.
+{% endalert %}
+
+A vantagem de usar o push primer sem código é que a funcionalidade é suportada pelo SDK da Braze. Como o SDK pode detectar o status do token por push no dispositivo específico que exibe a mensagem, não é necessário depender de filtros de segmentação no nível do perfil que podem excluir usuários com vários dispositivos.
+
+#### Considerações
+
+**Não é necessário um push primer com código**: Você deve usar o push primer sem código para que a supressão automática funcione. Se você configurar lógica personalizada ou deep linking em vez de usar a ação do botão "Request Push Permission", o SDK não poderá identificar que você está tentando exibir um push primer. Isso resulta na exibição da mensagem independentemente do estado de inscrição do dispositivo.
+
+**Supressão para usuários que fizeram a aceitação**: Talvez você queira suprimir a mensagem no app para usuários que tenham explicitamente optado pela não aceitação do push (por exemplo, na solicitação nativa ou nas configurações do dispositivo) e redirecionar esses usuários com uma campanha de mensagens separada. Para fazer isso, use a seguinte lógica Liquid em combinação com o primer sem código:
+
+{% raw %}
+```liquid
+{% if targeted_device.${foreground_push_enabled} == false %} 
+{% abort_message('user turned off push notifications') %} 
+{% endif %}
+- message goes here -
+```
+{% endraw %}
+
+O filtro `targeted_device` Liquid analisa apenas o dispositivo em que a mensagem está sendo exibida, e não o perfil do usuário. Nesse dispositivo, `foreground_push_enabled` é definido como `true` quando há um token por push ativo em primeiro plano e definido como `false` quando o sistema operacional informa que as notificações por push foram desativadas (por exemplo, o usuário as desativou explicitamente). Para dispositivos completamente novos que ainda não responderam a um estado de permissão push, `foreground_push_enabled` não está definido e não tem valor. Como a condição Liquid verifica especificamente `{% raw %}``false`{% endraw %}, ela suprime o primer somente para dispositivos com uma aceitação explícita, enquanto os dispositivos nesse estado desconhecido ainda se qualificam e podem receber o primer push.
 
 ## Etapa 6: Eventos de conversão
 
-A Braze sugere configurações padrão para conversões, mas você pode querer configurar [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) em torno de iniciadores de push.
-
+O Braze sugere configurações padrão para conversões, mas você pode querer configurar [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) em torno de primers push.

@@ -33,12 +33,14 @@ Eine Anleitung zur Erstellung einer Datenquelle finden Sie auf der [Tealium-Webs
 
 ### Schritt 2: Currents erzeugen
 
-Navigieren Sie in Braze zu **Currents > + Create Current > Tealium Export**. Geben Sie einen Namen für die Integration, eine E-Mail an Ihren Ansprechpartner und Ihre Tealium URL an. Wählen Sie dann aus der Liste der verfügbaren Ereignisse aus, was Sie tracken möchten. Klicken Sie abschließend auf **Launch Current**
+Navigieren Sie in Braze zu **Currents** > **\+ Create Current** > **Tealium Export**. Geben Sie einen Namen für die Integration, eine E-Mail an Ihren Ansprechpartner und Ihre Tealium URL an. 
 
-Alle Ereignisse, die an Tealium gesendet werden, enthalten die `external_user_id` des Nutzers:innen. Zur Zeit sendet Braze keine Ereignisdaten an Tealium für Nutzer:innen, die ihre `external_user_id` nicht eingestellt haben.
+Wählen Sie dann aus der Liste der verfügbaren Ereignisse aus, was Sie tracken möchten. Standardmäßig enthalten alle an Tealium gesendeten Ereignisse die `external_user_id` des Nutzers:innen. Sie können jedoch das Kontrollkästchen **Ereignisse von anonymen Nutzer:innen** auswählen, um auch Ereignisse an Tealium zu senden, für die es keine `external_user_id` gibt.
+
+Nachdem Sie Ihre Integration eingerichtet haben, wählen Sie **Current starten**.
 
 {% alert important %}
-Es ist wichtig, dass Sie Ihre Tealium URL auf dem neuesten Stand halten. Wenn die URL Ihres Konnektors falsch ist, kann Braze keine Ereignisse senden. Wenn dieser Zustand länger als **48 Stunden** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
+Es ist wichtig, dass Sie Ihre Tealium URL auf dem neuesten Stand halten. Wenn die URL Ihres Konnektors falsch ist, kann Braze keine Ereignisse senden. Wenn dieser Zustand länger als **5 Tage** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
 {% endalert %}
 
 ## Details zur Integration

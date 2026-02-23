@@ -16,14 +16,14 @@ Voici les types de messages in-app disponibles dans Braze et ce à quoi ils ress
 
 Les messages in-app de type [`Modal`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/modal-swift.struct) apparaissent au centre de l'écran et sont encadrés par un panneau transparent. Utiles pour les communications plus critiques, ils peuvent être équipés d'un maximum de deux boutons dotés d'une fonction d'analyse.
 
-![Un message in-app modal au centre de l'écran d'un téléphone.]({% image_buster /assets/img/modal-header-text.png %}){: style="max-width:35%;border:none;"}
+![Une fenêtre modale/boîte de dialogue in-app au centre de l'écran d'un téléphone.]({% image_buster /assets/img/modal-header-text.png %}){: style="max-width:35%;border:none;"}
 
 {% endsubtab %}
 {% subtab Modal Image %}
 
 Les messages in-app de type [`Modal Image`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/modalimage-swift.struct) apparaissent au centre de l'écran et sont encadrés par un panneau transparent. Ces messages sont similaires au type `Modal`, mais sans en-tête ni texte de message. Utiles pour les communications plus critiques, ils peuvent être équipés d'un maximum de deux boutons dotés d'une fonction d'analyse.
 
-![Un message in-app dans une image modale au centre de l'écran d'un téléphone.]({% image_buster /assets/img/modal-full-image.png %}){: style="max-width:35%;border:none;"}
+![Une fenêtre modale/boîte de dialogue message in-app au centre de l'écran d'un téléphone.]({% image_buster /assets/img/modal-full-image.png %}){: style="max-width:35%;border:none;"}
 
 {% endsubtab %}
 {% subtab Fullscreen %}
@@ -37,7 +37,7 @@ Les messages in-app de type [`Modal Image`](https://braze-inc.github.io/braze-sw
 
 [Les messages in-app `Full Image`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/fullimage-swift.struct) sont similaires aux messages in-app `Full`, sauf qu'ils ne comportent pas d'en-tête ni de texte de message. Ce type de message est utile pour maximiser le contenu et l'impact de votre communication avec les utilisateurs. Un message in-app `Full Image` contient une image qui s'étend sur tout l'écran, avec la possibilité d'afficher jusqu'à deux boutons compatibles avec l'analyse.
 
-![Un message in-app en image plein écran qui s'affiche sur tout l'écran d’un téléphone.]({% image_buster /assets/img/full-screen-image.png %}){: style="max-width:35%;border:none;"}
+![Un message in-app en plein écran qui s'affiche sur tout l'écran du téléphone.]({% image_buster /assets/img/full-screen-image.png %}){: style="max-width:35%;border:none;"}
 
 {% endsubtab %}
 {% subtab Custom HTML %}
@@ -46,7 +46,7 @@ Les messages in-app [`HTML`](https://braze-inc.github.io/braze-swift-sdk/documen
 
 L’exemple suivant montre la mise en page d’un message in-app HTML complet :
 
-![Un message in-app en HTML avec un carrousel de contenu et des boutons interactifs.]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
+![Un message in-app HTML avec un ensemble de contenus et des boutons interactifs.]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
 Notez que nous ne prenons actuellement pas en charge l’affichage de messages in-app HTML personnalisés dans un iFrame sur les plateformes iOS et Android.
 

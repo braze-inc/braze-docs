@@ -31,22 +31,22 @@ O conector HTTP personalizado está atualmente em beta. Se você estiver interes
 
 1. No Zeotap, acessar **Fontes** em **Integrar**.
 2. Selecione **Criar fonte**.
-3. Selecione **Canais de Engajamento do Cliente** como a categoria.<br><br>![Uma janela "Create Source" (Criar fonte) listando diferentes categorias, incluindo "Customer Engagement Channels" (Canais de engajamento do cliente).]({% image_buster /assets/img/zeotap/cec.png %}){: style="max-width:70%;"}<br><br>
+3. Selecione **Canais de Engajamento do Cliente** como a categoria.<br><br>![Uma janela "Criar Fonte" listando diferentes categorias, incluindo "Canais de Engajamento do Cliente".]({% image_buster /assets/img/zeotap/cec.png %}){: style="max-width:70%;"}<br><br>
 4. Selecione **Braze** como a fonte de dados.
 5. Digite um nome de fonte.
 6. Selecione sua região.<br><br>![Janela com opções para selecionar sua região e entidade de dados.]({% image_buster /assets/img/zeotap/select_region.png %}){: style="max-width:70%;"}<br><br>
 7. Selecione **Criar fonte**.
-8. Acessar a guia **Implementation Details** e anote a **API URL** e a **Write Key**.<br><br>![Detalhes da implementação do Braze Currents que contém o URL da API e a chave de gravação.]({% image_buster /assets/img/zeotap/implementation_details.png %})
+8. Acessar a guia **Implementation Details** e anote a **API URL** e a **Write Key**.<br><br>![Detalhes de implementação para Braze Currents que contém a URL da API e a Chave de Escrita.]({% image_buster /assets/img/zeotap/implementation_details.png %})
 
 ### Etapa 2: Configure a transmissão de dados no Currents
 
 1. No Braze, acesse **Integrações de Parceiros** > **Exportação de Dados**.
-2. Selecione **Create New Current (Criar New Current)** e **Custom Currents Export (Exportar Currents Export)**.<br><br>![O botão "Create New Current" (Criar nova corrente) com um menu suspenso que contém "Custom Currents Export" (Exportação de correntes personalizadas).]({% image_buster /assets/img/zeotap/custom_currents_export.png %}){: style="max-width:60%;"}<br><br>
+2. Selecione **Create New Current (Criar New Current)** e **Custom Currents Export (Exportar Currents Export)**.<br><br>![O botão "Criar Novo Corrente" com um menu suspenso que contém "Exportação de Correntes Personalizadas".]({% image_buster /assets/img/zeotap/custom_currents_export.png %}){: style="max-width:60%;"}<br><br>
 3. Insira um nome de integração e e-mail para ser contatado se ocorrerem erros com a integração.
 4. Sob **Credenciais**, insira as seguintes informações que você anotou de [etapa 1](#step-1-create-a-currents-source):
 - A URL da API como o **Endpoint**
-- A Chave de Escrita como o **Token de Portador**<br><br>![Seções para inserir detalhes e credenciais de integração.]({% image_buster /assets/img/zeotap/credentials.png %})<br><br>
-5. Selecione os eventos de engajamento com mensagens que você deseja enviar para o Zeotap.<br><br>![A guia "General Settings" (Configurações gerais) com uma seção para selecionar eventos de engajamento com mensagens.]({% image_buster /assets/img/zeotap/message_engagement_events.png %})
+- A Chave de Escrita como o **Token de Portador**<br><br>![Seções para inserir detalhes de integração e credenciais.]({% image_buster /assets/img/zeotap/credentials.png %})<br><br>
+5. Selecione os eventos de engajamento com mensagem que você deseja enviar para a Zeotap.<br><br>![A guia "Configurações Gerais" com uma seção para selecionar eventos de engajamento com mensagem.]({% image_buster /assets/img/zeotap/message_engagement_events.png %})
 6. Selecione **Launch Current (Iniciar atual)** para salvar as alterações e começar a enviar eventos para o Zeotap.
 
 {% alert important %}

@@ -1,4 +1,3 @@
-
 # SMS und RCS Absender
 
 > In diesem Artikel erfahren Sie mehr über die wichtigsten Konzepte für das Senden von Telefonnummern mit Braze.
@@ -6,7 +5,7 @@
 ## Arten von SMS- und RCS-Sendern
 
 {% tabs %}
-{% tab RCS-überprüfter Sender %}
+{% tab RCS-Verified Sender %}
 
 #### RCS-verifizierter Sender
 
@@ -33,7 +32,7 @@ Ein RCS-verifizierter Sender ist eine visuelle Darstellung Ihrer Marke, die eine
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab SMS Shortcodes %}
+{% tab SMS Short Codes %}
 
 #### SMS Shortcodes
 
@@ -59,7 +58,7 @@ Ein Kurzcode ist eine einprägsame 5- bis 6-stellige Sequenz, die es Absendern e
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab SMS Langcodes %}
+{% tab SMS Long Codes %}
 
 #### SMS-Langcodes
 
@@ -76,7 +75,7 @@ Eine lange Vorwahl ist eine Standardtelefonnummer, die zum Senden und Empfangen 
 
 | Profis |
 | ---- |
-| **Kann sofort zum Versenden von Nachrichten verwendet werden (für bestimmte Länder)**<br>Lange Codes sorgen für ein lokalisiertes und persönliches Kundenerlebnis, wenn Sie Nachrichten von Person zu Person versenden. Im Gegensatz zu SMS-Kurzcodes ist der Erwerb eines langen Codes in einigen Ländern ein recht schneller Prozess. (Für andere Länder dauert es genauso lange oder länger als ein Kurzcode.). Lange Codes können auch als Ausweichnummer festgelegt werden, wenn ein kurzer Code nicht funktioniert.<br><br>**Größere Verfügbarkeit weltweit**<br>Lange Codes sind in über 100 wichtigen Ländern weltweit verfügbar. Bitte wenden Sie sich an Ihren Customer Success Manager oder den [Braze-Support]({{site.baseurl}}/braze_support/), um eine Liste der verfügbaren Länder zu erhalten.<br><br>**MMS für bestimmte Länder aktiviert**<br>Unterstützt MMS, auch bekannt als Multimedia Message Service, so dass Sie Nachrichten mit Multimedia-Inhalten (JPEG, GIF, PNG) an Mobiltelefone senden können. Weitere Informationen über MMS bei Braze finden Sie in unserer Dokumentation [hier]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/).|
+| **Kann sofort zum Versenden von Nachrichten verwendet werden (für bestimmte Länder)**<br>Lange Codes sorgen für ein lokalisiertes und persönliches Kundenerlebnis, wenn Sie Nachrichten von Person zu Person versenden. Im Gegensatz zu SMS-Kurzcodes ist der Erwerb eines langen Codes in einigen Ländern ein recht schneller Prozess. (Für andere Länder dauert es genauso lange oder länger als ein Kurzcode.). Lange Codes können auch als Ausweichnummer festgelegt werden, wenn ein kurzer Code nicht funktioniert.<br><br>**Größere Verfügbarkeit weltweit**<br>Lange Codes sind in über 100 wichtigen Ländern weltweit verfügbar. Wenden Sie sich an Ihren Customer-Success-Manager oder den [Braze-Support]({{site.baseurl}}/braze_support/), um eine Liste der verfügbaren Länder zu erhalten.<br><br>**MMS für bestimmte Länder aktiviert**<br>Unterstützt MMS, auch bekannt als Multimedia Message Service, so dass Sie Nachrichten mit Multimedia-Inhalten (JPEG, GIF, PNG) an Mobiltelefone senden können. Weitere Informationen über MMS bei Braze finden Sie in unserer Dokumentation [hier]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/).|
 {: .reset-td-br-1}
 
 | Nachteile |
@@ -85,7 +84,7 @@ Eine lange Vorwahl ist eine Standardtelefonnummer, die zum Senden und Empfangen 
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab SMS Vanity Shortcode %}
+{% tab SMS Vanity Short Code %}
 
 #### SMS Vanity Shortcodes
 
@@ -114,7 +113,7 @@ Eine Vanity-Kurznummer ist eine 5-6-stellige Telefonnummer, die speziell von ein
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab SMS Alphanumerische Sender ID %}
+{% tab SMS Alphanumeric Sender ID %}
 
 #### SMS alphanumerische ID des Absenders
 
@@ -136,9 +135,9 @@ Mit alphanumerischen Absender-IDs können Sie Ihren Firmennamen oder Ihre Marke 
 | {::nomarkdown} <ul> <li> Keine zusätzlichen Kosten für die Implementierung </li> <li> Verbessert das Markenbewusstsein </li> <li> Erhöht die Öffnungsrate von SMS </li> <li> Passt die Sendegeschwindigkeit von Telefonnummern innerhalb der Abonnementgruppe an </li> <li> Sofort verfügbar, wenn keine Vorregistrierung erforderlich ist </li> </ul> {:/} | {::nomarkdown} <ul> <li> <a href='/docs/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses/'>Zwei-Wege-Nachrichten</a> werden nicht unterstützt </li> <li> Nicht alle Länder unterstützen diese Funktion </li> <li> Einige Länder verlangen ein zusätzliches Genehmigungsverfahren </li> <li> MMS ist nicht aktiviert </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Für weitere Informationen zur alphanumerischen Absender-ID wenden Sie sich bitte an Ihren Customer-Success-Manager.
+Weitere Informationen zur alphanumerischen Sender ID erhalten Sie von Ihrem Customer-Success-Manager.
 {% endtab %}
-{% tab SMS-Gebührenfreie Nummer %}
+{% tab SMS Toll-Free Number %}
 
 #### SMS-fähige gebührenfreie Nummer
 
@@ -155,7 +154,7 @@ Eine gebührenfreie Telefonnummer ist eine Telefonnummer, bei der alle ankommend
 
 | Profis | Nachteile |
 | ---- | ---- | 
-| {::nomarkdown} <ul> <li> Muss vor dem Versand registriert werden. </li> </ul> {:/} | {::nomarkdown} <ul> <li> Gebührenfreie Nummern sind nur für die USA und Kanada </li><li> MMS ist nicht aktiviert </li> </ul> {:/} |
+| {::nomarkdown} <ul> <li> Muss vor dem Versand registriert werden. </li> </ul> {:/} | {::nomarkdown} <ul> <li> Gebührenfreie Nummern werden nur in den USA und Kanada unterstützt. </li><li> MMS wird in den USA und Kanada unterstützt  </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 {% endtab %}
@@ -177,11 +176,11 @@ Kurz- und Langvorwahlen sind die Telefonnummern, von denen aus Sie Nachrichten a
 
 ## Wie erhalte ich einen SMS Shortcode?
 
-Die Beantragung eines Kurzcodes kann ein langwieriger Prozess sein. Aber es kann sich lohnen! Wenn Sie einen Kurzcode wünschen, wenden Sie sich an Ihren Onboarding-Manager oder einen anderen Braze-Mitarbeiter und lassen Sie es ihn wissen. Nachdem Sie das getan haben, wird man einen Antrag für Sie stellen - man wird Sie nach einigen grundlegenden Informationen fragen, die Ihnen helfen, sich zu qualifizieren. Dann brauchen Sie nur noch zu warten!
+Die Beantragung eines Kurzcodes kann ein langwieriger Prozess sein. Aber es kann sich lohnen! Wenn Sie einen Shortcode wünschen, wenden Sie sich an Ihren Onboarding Manager oder eine andere Vertretung von Braze und teilen Sie ihm dies mit. Nachdem Sie das getan haben, wird man einen Antrag für Sie stellen - man wird Sie nach einigen grundlegenden Informationen fragen, die Ihnen helfen, sich zu qualifizieren. Dann brauchen Sie nur noch zu warten!
 
 ### Kurzcode-Anwendung
 
-Braze ist zwar für die eigentliche Beantragung des Kurzcodes verantwortlich, aber wir benötigen einige Informationen von Ihnen. Wir empfehlen Ihnen, diese Fragen durchzugehen, bevor Sie sich an Braze wenden. 
+Braze ist zwar für die eigentliche Beantragung des Kurzcodes verantwortlich, aber wir benötigen einige Informationen von Ihnen. Wir empfehlen Ihnen, diese Fragen zu prüfen, bevor Sie Braze kontaktieren. 
 
 Die Vorschriften verlangen, dass es Antworten auf alle Opt-In-, Opt-Out- und Hilfe/Info-Schlüsselwortantworten gibt. Sie müssen uns die spezifischen Nachrichtenflüsse (die Antworten, die Sie an Benutzer senden möchten, nachdem sie ein [Schlüsselwort]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/) gesendet haben) mitteilen, die Sie für die folgenden Situationen wünschen.
 
@@ -198,7 +197,7 @@ Je nach Ihrer Situation müssen Sie mehr oder weniger Bewegungen wie die in der 
 Außerdem müssen Sie uns unabhängig von der von Ihnen verwendeten Nummer mitteilen, wie viele Nachrichten Sie pro Monat versenden möchten.
 
 {% alert important %}
-Wenn Sie einen eigenen Kurzcode haben, wenden Sie sich während des Einführungsprozesses an Ihren Customer Success Manager, um die Migration oder Übertragung Ihres Kurzcodes zu besprechen. Die Kurzcodes müssen von Ihrem Customer Success Manager eingerichtet werden.
+Wenn Sie über einen eigenen Shortcode verfügen, wenden Sie sich während des Onboarding-Prozesses an Ihren Customer-Success-Manager:in, um die Migration oder Übertragung Ihres Shortcodes zu besprechen. Die Kurzcodes müssen von Ihrem Customer Success Manager eingerichtet werden.
 {% endalert %}
 
 ## SMS Application-to-Person 10-Digit Long Codes (A2P 10DLC)

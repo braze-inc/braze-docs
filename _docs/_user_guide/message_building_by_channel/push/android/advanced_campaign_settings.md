@@ -90,9 +90,7 @@ The **Custom URI** feature allows you to specify a Web URL or an Android resourc
 
 ## Notification display priority
 
-{% alert important %}
-The Notification Display Priority setting is no longer used on devices running Android O or newer. For newer devices, set the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance).
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='Android notification priority' %}
 
 The priority level of a push notification affects how your notification is displayed in the notification tray relative to other notifications. It can also affect the speed and manner of delivery, as normal and lower priority messages may be sent with slightly higher latency or batched to preserve battery life, whereas high priority messages are always sent immediately.
 

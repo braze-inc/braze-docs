@@ -1,5 +1,5 @@
 ---
-nav_title: Standorte und Geofences
+nav_title: Standorte &amp; Geoofences
 article_title: Standort &amp; Geofences für iOS
 platform: iOS
 page_order: 6
@@ -44,7 +44,7 @@ Sie können Geofences auch beim Start der App aktivieren, indem Sie die [`startW
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",
@@ -80,7 +80,7 @@ CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 var locationManager = CLLocationManager()
@@ -98,11 +98,11 @@ Damit die Ortung korrekt funktioniert, sollten Sie außerdem sicherstellen, dass
 
 ### Aktivieren Sie Geofences auf der Seite Standorte:
 
-![Geofence-Optionen auf der Seite "Standorte".]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+![Die Geofence-Optionen auf der Seite Standorte von Braze.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
 ### Aktivieren Sie Geofences auf der Einstellungsseite:
 
-![Geofence-Kontrollkästchen auf den Braze-Einstellungsseiten.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+![Das Geofence-Kontrollkästchen auf den Braze-Einstellungsseiten.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
 ## Deaktivieren von automatischen Geofence-Anfragen
 
@@ -121,7 +121,7 @@ Ab iOS SDK Version 3.21.3 können Sie automatische Geofences-Anfragen deaktivier
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",
@@ -150,7 +150,7 @@ Um den Standort zu kontrollieren, den das SDK für den Empfang der relevantesten
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.requestGeofences(withLongitude: longitude, latitude: latitude)

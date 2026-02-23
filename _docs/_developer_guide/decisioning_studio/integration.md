@@ -1,5 +1,5 @@
 ---
-nav_title: Integrate decisioning studio
+nav_title: Integrate Decisioning Studio
 article_title: Integrate BrazeAI Decisioning Studio™
 page_order: 1
 description: "Learn how to integrate BrazeAI Decisioning Studio™ into Braze and partner with the AI Expert Services team to build agents that apply AI for 1:1 decision-making to improve your key business metrics."

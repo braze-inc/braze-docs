@@ -38,7 +38,7 @@ table td {
 | [Facebook o Instagram]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) | Hasta 24 horas | 190.000 cuentas de anuncios por hora | Sí | {::nomarkdown}<ul><li>Facebook admite hasta 500 audiencias de anuncios.</li><li>Facebook requiere audiencias de al menos 1.000 usuarios.</li></ul>{:/} |
 | [Google Ads o YouTube]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) | Entre 6 y 12 horas | Por lotes cada 5 segundos con un auto-reintento basado en la respuesta de Google | No | {::nomarkdown}<ul><li><b>A juego con el cliente:</b> Utiliza el anuncio del móvil, la dirección de correo electrónico o el número de teléfono.</li><li>Google Audience requiere al menos 5.000 usuarios para empezar a publicar anuncios.</li><li>El tamaño de la audiencia se mostrará como cero hasta que haya al menos 1.000 usuarios.</li></ul>{:/} |
 | [LinkedIn]({{site.baseurl}}/partners/canvas_audience_sync/linkedin_audience_sync/) | 48 horas | LinkedIn procesa 10 consultas por segundo y 100.000 usuarios por solicitud. Braze agrupa a los usuarios cada 5 segundos. | Audiencias predictivas con IA | {::nomarkdown}<ul><li>El tamaño mínimo de la audiencia es de 300 miembros, teniendo en cuenta la ubicación.</li><li>LinkedIn muestra la tasa en el panel de Braze.</li></ul>{:/} |
-| [Pinterest]({{site.baseurl}}/partners/canvas_audience_sync/pinterest_audience_sync/) | Entre 24 y 48 horas | Pinterest procesa 7 consultas por segundo y 100.000 usuarios por solicitud. Braze agrupa a los usuarios cada 5 segundos. | Sí | Las audiencias de Pinterest requieren al menos 100 usuarios. |
+| [Pinterest]({{site.baseurl}}/partners/canvas_audience_sync/pinterest_audience_sync/) | Entre 24 y 48 horas | Pinterest procesa 7 consultas por segundo y 1.900 usuarios por solicitud. Braze agrupa a los usuarios cada 5 segundos. | Sí | Las audiencias de Pinterest requieren al menos 100 usuarios. |
 | [Snapchat]({{site.baseurl}}/partners/canvas_audience_sync/snapchat_audience_sync/) | N/A | Snapchat procesa 10 consultas por segundo y 100.000 usuarios por solicitud. Braze agrupa a los usuarios cada 5 segundos. | Sí | Snapchat admite hasta 1.000 audiencias de anuncios. |
 | [TikTok]({{site.baseurl}}/partners/canvas_audience_sync/tiktok_audience_sync/) | Entre 24 y 48 horas | TikTok procesa 50 consultas por segundo y 10.000 usuarios por solicitud. Braze agrupa a los usuarios cada 5 segundos. | Sí | {::nomarkdown}<ul><li>TikTok admite hasta 400 audiencias de anuncios.</li><li>Las audiencias de TikTok requieren al menos 1.000 usuarios para empezar a mostrar anuncios.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
@@ -50,9 +50,9 @@ Para utilizar Audience Sync con Google o Facebook, conecta tu cuenta de anuncios
 
 ![Socio tecnológico de Facebook.]({% image_buster /assets/img/audience_sync/facebook_partner.png %}){: style="max-width:35%;"} ![Socio tecnológico de Google Ads.]({% image_buster /assets/img/audience_sync/google_ads_partner.png %}){: style="max-width:35%;"}
 
-Después de conectar tu cuenta de publicidad, puedes crear un Canvas con un paso en Canvas de Sincronización de audiencia.
+Después de conectar tu cuenta publicitaria, puedes crear un Canvas con un paso en Canvas de Sincronización de audiencia.
 
-![Menú del componente Canvas para añadir el paso Sincronización de la audiencia al recorrido del usuario.]({% image_buster /assets/img/audience_sync/audience_sync7.png %}){: style="max-width:75%;"}
+![Menú del componente Canvas para añadir el paso Sincronizar audiencia al recorrido del usuario.]({% image_buster /assets/img/audience_sync/audience_sync7.png %}){: style="max-width:75%;"}
 
 A continuación, selecciona el socio para sincronizar audiencias.
 
@@ -83,7 +83,7 @@ Después de seleccionar tus destinos de Audience Sync Pro, conecta la cuenta de 
 
 ![Un ejemplo de Snapchat y TikTok seleccionados como socios para Audience Sync.]({% image_buster /assets/img/audience_sync/audience_sync_pro3a.png %}){: style="max-width:70%;"}
 
-![Audiencia de Snapchat Sincroniza la configuración con el mensaje: "Has conectado con éxito 1 cuenta de Snapchat".]({% image_buster /assets/img/audience_sync/audience_sync_pro4.png %}){: style="max-width:70%;"}
+![Audiencia de Snapchat Sincroniza la configuración con el mensaje: "Has conectado correctamente 1 cuenta de Snapchat".]({% image_buster /assets/img/audience_sync/audience_sync_pro4.png %}){: style="max-width:70%;"}
 
 Por último, crea tu paso en Canvas para la Sincronización de Audiencias utilizando este destino de Audience Sync Pro.
 
@@ -109,11 +109,11 @@ Si has recogido el [IDFA de iOS a través del SDK de Braze]({{site.baseurl}}/dev
 
 Si estás recopilando `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, o cualquier otro atributo personalizado relevante, debes incluirlos dentro de tus criterios de entrada en Canvas como filtro:
 
-![Un Canvas con una audiencia de entrada de "opted_in_marketing igual a true".]({% image_buster /assets/img/audience_sync/audience_sync.png %})
+![Un Canvas con una audiencia de entrada de "opted_in_marketing es igual a verdadero".]({% image_buster /assets/img/audience_sync/audience_sync.png %})
 
 Para saber más sobre cómo cumplir estas leyes de Protección de Datos dentro de la plataforma Braze, consulta la [Asistencia Técnica sobre Protección de Datos]({{site.baseurl}}/dp-technical-assistance/).
 
-## Gestión del consentimiento para la orientación publicitaria
+## Gestión del consentimiento para la segmentación publicitaria
 
 Como anunciante, es tu responsabilidad gestionar el consentimiento para el seguimiento de anuncios o la segmentación de tus usuarios.
 

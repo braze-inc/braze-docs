@@ -61,7 +61,7 @@ Em seguida, na etapa **Authentication (Autenticação)**, insira seus detalhes d
 ![]({% image_buster /assets/img/adobe/braze-destination-authentication.png %}){: style="max-width:60%;"}
 
 ### Etapa 4: Criar destino
-clique em **Create destination** (Criar destino). Seu destino foi criado. Você pode selecionar **Save & Exit** para ativar os segmentos mais tarde ou **Next** para continuar o fluxo de trabalho e selecionar os segmentos a serem ativados. 
+clique em **Create destination** (Criar destino). Seu destino foi criado. Você pode selecionar **Salvar & Sair** para ativar segmentos mais tarde ou **Próximo** para continuar o fluxo de trabalho e selecionar segmentos para ativar. 
 
 ### Etapa 5: Ativar segmentos
 Ative os dados que você tem na CDP em tempo real da Adobe mapeando segmentos para o destino da Braze.
@@ -98,7 +98,7 @@ Vamos supor que seu esquema de perfil XDM e sua instância do Braze contenham os
 
 O mapeamento correto ficaria assim:
 
-![Mapeamentos de destino: IdentityMap:IDFA mapeado para IdentityMap:external_id, IdentityMap:GAID mapeado para IdentityMap:external_id, IdentityMap:E-mail mapeado para IdentityMap:external_id, xdm:mobilePhone.number mapeado para CustomAttribute:PhoneNumber, xdm:person.name.lastName mapeado para CustomAtrribute:LastName, xdm:person.name.firstName mapeado para CustomAttribute:FirstName]({% image_buster /assets/img/adobe/braze-destination-mapping-example.png %})
+![Mapeamentos de destino: IdentityMap:IDFA mapeado para IdentityMap:external_id, IdentityMap:GAID mapeado para IdentityMap:external_id, IdentityMap:e-mail mapeado para IdentityMap:external_id, xdm:mobilePhone.number mapeado para CustomAttribute:PhoneNumber, xdm:person.name.lastName mapeado para CustomAtrribute:LastName, xdm:person.name.firstName mapeado para CustomAttribute:FirstName]({% image_buster /assets/img/adobe/braze-destination-mapping-example.png %})
 
 ## Dados exportados
 Para verificar se os dados foram exportados com sucesso para a Braze, verifique sua conta da Braze. Os segmentos da Adobe Experience Platform são exportados para a Braze sob o atributo `AdobeExperiencePlatformSegments`.

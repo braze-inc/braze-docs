@@ -46,7 +46,7 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 - **Envio de fatores de volume**: Alguns fatores que determinam os volumes de envio capazes para um IP incluem:
   - Caixas de correio: Os grandes provedores de e-mail provavelmente podem lidar com milhões por dia a partir de um único IP, enquanto um provedor de caixa de e-mail regional menor ou com uma infraestrutura menor talvez não consiga lidar com essa quantidade.
   - Reputação do remetente: Talvez seja possível enviar um volume maior por dia a partir de um único IP se o remetente estiver preparado para esse volume e se a reputação do remetente for forte o suficiente em cada caixa de correio ou domínio para o qual está enviando.
-- **Práticas recomendadas**: Revise as [práticas recomendadas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) da Braze e entre em contato com sua equipe de contas da Braze se você gostaria de saber mais sobre os serviços de entregabilidade.
+- **Práticas recomendadas**: Revise as [melhores práticas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) da Braze e entre em contato com sua equipe de contas da Braze se você quiser saber mais sobre os serviços de entregabilidade.
 
 ## Push
 
@@ -84,10 +84,10 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 
 #### Coisas para saber
 - **Personalização Liquid:** A personalização Liquid é atualizada a cada solicitação de atualização.
-- **Colocação e proporção de banners:** Cada colocação de banner pode ser usada em até 10 campanhas em um espaço de trabalho.  
+- **Colocação e proporção de banners:** Cada colocação de banner pode ser usada em até 25 mensagens em um espaço de trabalho.  
 - **Cliques e impressões:** Cliques e impressões para banners são rastreados automaticamente com o SDK.
 - **Limitações:**  Atualmente, os seguintes recursos não são suportados: Integração de Canvas, campanhas acionadas por API e baseadas em ações, Conteúdo Conectado, códigos de promoção, dispensas controladas pelo usuário e `catalog_items` usando a [tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
-- **Teste:** Para exibir o banner de teste, o dispositivo que você está usando deve ser capaz de receber notificações push em primeiro plano.
+- **Teste:** Para exibir o banner de teste, o dispositivo que você está usando deve ser capaz de receber notificações por push em primeiro plano.
 - **HTML personalizado:** Aproveite o [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) para registrar cliques ao usar HTML personalizado para definir ações de clique, como links e botões. As ações de clique são registradas automaticamente apenas ao usar os componentes pré-construídos no editor de arrastar e soltar.
 - **Solicitando Colocações:** Até 10 colocações podem ser retornadas ao SDK em uma única solicitação de atualização. Cada colocação incluirá o Banner de maior prioridade para o qual um usuário é elegível.
 
@@ -113,4 +113,4 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 - **Enviadas versus impressões**: Para mensagens no app, o conceito de "enviado" é diferente dos outros canais disponíveis. Para ver uma mensagem no app, o usuário precisa iniciar uma sessão, estar no público elegível e disparar a mensagem. Por isso, rastreamos as "impressões", pois elas são mais claras.
 - **Disparando**: Por padrão, as mensagens no app são disparadas por eventos registrados pelo SDK. Se quiser disparar mensagens no app por meio de eventos enviados pelo servidor, você também pode fazer isso por meio destes guias para [iOS]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=swift) e [Android]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android).
 - [Mensagens in-app do canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): Essas mensagens aparecem na primeira vez em que o usuário abre o app (disparado pela sessão inicial) depois que a mensagem programada no componente Canva foi enviada a ele.
-- **Chamadas de Conteúdo Conectado**: Usar Conteúdo Conectado permite que você envie conteúdo dinâmico em mensagens. Quando você envia mensagens através de um canal como mensagens in-app, isso pode criar mais conexões simultâneas com os dispositivos dos seus usuários (as mensagens são enviadas uma a uma, em vez de em lotes). Para gerenciar isso, recomendamos [limitação de taxa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting) de suas mensagens.
+- **Chamadas de Conteúdo Conectado**: Usar Conteúdo Conectado permite que você envie conteúdo dinâmico em mensagens. Quando você envia mensagens através de um canal como mensagens in-app, isso pode criar mais conexões simultâneas com os dispositivos dos seus usuários (as mensagens são enviadas uma a uma, em vez de em lotes). Para gerenciar isso, recomendamos [limitação de taxa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting) para suas mensagens.

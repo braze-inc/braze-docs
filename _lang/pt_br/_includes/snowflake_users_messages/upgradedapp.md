@@ -1,3 +1,5 @@
+## Tabelas de relacionamento
+
 ### `SHARED`
 
 ```json
@@ -28,4 +30,3 @@
     }
 }
 ```
-

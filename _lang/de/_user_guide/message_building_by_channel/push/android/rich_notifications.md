@@ -1,5 +1,5 @@
 ---
-nav_title: "Rich-Benachrichtigungen erstellen"
+nav_title: Rich-Benachrichtigungen erstellen
 article_title: "Erstellen umfangreicher Push-Benachrichtigungen für Android"
 page_order: 3
 page_layout: tutorial
@@ -12,7 +12,7 @@ tool:
   
 ---
 
-# Erstellen umfangreicher Push-Benachrichtigungen für Android
+# Erstellen Sie Rich-Push-Benachrichtigungen für Android
 
 > Mit Rich Notifications können Sie Ihre Push-Benachrichtigungen noch individueller gestalten, indem Sie zusätzliche Inhalte hinzufügen, die über den reinen Text hinausgehen. Android-Benachrichtigungen enthalten schon seit einiger Zeit Bilder in Push-Benachrichtigungen, die als "erweitertes Benachrichtigungsbild" bezeichnet werden.
 
@@ -20,8 +20,7 @@ tool:
 
 Bevor Sie eine Rich-Push-Benachrichtigung für Android erstellen, sollten Sie die folgenden Details beachten:
 
-- Rich-Push-Benachrichtigungen für Android sind nicht verfügbar, wenn Sie eine Quick-Push-Kampagne erstellen.
-- Android Extended Notification-Bilder müssen im Verhältnis 2:1 sein, haben aber keine Größenbeschränkung.
+- Erweiterte Android-Benachrichtigungsbilder müssen im Verhältnis 2:1 sein, haben aber keine Größenbeschränkung.
 - Android erlaubt auch die Einstellung eines separaten Bildes für die Standard-Benachrichtigungsansicht. Dies sind die empfohlenen Bildgrößen: 
   - **Klein:** 512x256
   - **Medium:** 1024x512 
@@ -42,19 +41,18 @@ Folgen Sie den Schritten zum [Erstellen einer Kampagne]({{site.baseurl}}/user_gu
 
 ### Schritt 2: Untertitel hinzufügen
 
-Fügen Sie den **Zusammenfassungstext/Bildunterschrift** hinzu, den Sie vor dem Bild in der Benachrichtigung anzeigen möchten.
+Fügen Sie den **Zusammenfassungstext** hinzu, den Sie in der Benachrichtigung vor dem Bild anzeigen möchten.
 
-![Der Bereich Erweitertes Benachrichtigungsbild, wo Sie ein Bild hinzufügen oder eine Bild-URL eingeben können.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
+![Eine Rich-Push-Benachrichtigung von einer App für Tierfutter namens Dog, die darauf hinweist, dass es an der Zeit ist, mehr Futter für Spot zu bestellen, mit einem zusammenfassenden Text.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### Schritt 3: Medien hinzufügen
 
-Fügen Sie Ihr Bild in das Feld **Erweitertes Benachrichtigungsbild** im Composer der Nachricht ein. Bilder können direkt über das Dashboard hochgeladen werden oder indem Sie eine URL angeben, die anderswo gehostet wird.
+Fügen Sie Ihr Bild in das Feld **Android Notification Image** im Composer der Nachricht ein. Bilder können direkt über das Dashboard hochgeladen werden oder indem Sie eine URL angeben, die anderswo gehostet wird.
 
 Details zu den unterstützten Bildern finden Sie unter [Bildspezifikationen]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push).
 
-![Ein Nutzer:innen erhält eine Push-Benachrichtigung für iOS mit dem Titel "Hallo" und dem Text "Danke, dass Sie an unserem Kundenbindungs-Programm teilnehmen!]({% image_buster /assets/img_archive/android_rich_image.png %})
+![Der Bereich Android-Benachrichtigungsbild, in dem Sie ein Bild hinzufügen oder eine Bild-URL eingeben können.]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### Schritt 4: Fahren Sie mit der Erstellung Ihrer Kampagne fort
 
 Nachdem der Inhalt Ihrer Rich Notification in das Dashboard hochgeladen wurde, können Sie mit der [Planung Ihrer Kampagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) fortfahren.
-

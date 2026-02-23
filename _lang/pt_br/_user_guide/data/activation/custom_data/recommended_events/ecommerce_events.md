@@ -21,7 +21,7 @@ A Braze reconhece que o planejamento de dados leva tempo. Incentivamos nossos cl
 
 {% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
 
-Qualquer moeda que não seja USD relatada será exibida na Braze em USD com base na taxa de câmbio na data em que foi relatada. Para evitar conversão de moeda, defina a moeda como USD.
+Qualquer moeda que não seja USD reportada será exibida na Braze em USD com base na taxa de câmbio na data em que foi reportada. Para evitar conversão de moeda, defina a moeda como USD.
 
 {% tabs %}
 {% tab ecommerce.product_viewed %}
@@ -39,7 +39,7 @@ Você pode usar o evento de produto visualizado para disparar quando um cliente 
 | `product_url` | Não | String | URL para a página do produto para mais detalhes. |
 | `price` | Sim | Float | O preço unitário da variante do produto no momento da visualização. |
 | `currency` | Sim | String | A moeda na qual o preço do produto está listado (como "USD" ou "EUR") no [formato ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
-| `source` | Sim | String | Fonte da qual o evento é derivado. (Para Shopify, isso é a vitrine). |
+| `source` | Sim | String | Fonte da qual o evento é derivado. (Para Shopify, isso é loja virtual). |
 | `metadata` | Não | Objeto | |
 | `type` | Não | Objeto | Funciona com [notificações de volta ao estoque]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications) e [notificações de queda de preço]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications). |
 | `sku` | Não | String | (Apenas Shopify) SKU do Shopify. Isso pode ser configurado como o campo de ID do catálogo. |
@@ -140,7 +140,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
           "color": "ORANGE",
           "size": "6",
           "brand": "Braze"
-        }
+        },
         "type": [
           "price_drop",
           "back_in_stock"
@@ -199,10 +199,10 @@ Se houver dois carrinhos, adicione ambos ao usuário mesclado. Reenfileire o can
 | `product_url` | Não | String | URL para a página do produto para mais detalhes. |
 | `quantity` | Sim | Inteiro | Número de unidades do produto no carrinho. |
 | `price` | Sim | Float | O preço unitário da variante do produto no momento da visualização. |
-| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
 | `sku` | Não | String | (Apenas Shopify) SKU do Shopify. Isso pode ser configurado como o campo de ID do catálogo. |
-| `source` | Sim | String | Fonte da qual o evento é derivado. (Para Shopify, isso é a vitrine). |
-| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
+| `source` | Sim | String | Fonte da qual o evento é derivado. (Para Shopify, isso é loja virtual). |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Objetos de exemplo
@@ -375,9 +375,9 @@ Semelhante ao evento `ecommerce.cart_updated`, este evento permite que você apr
 | `product_url` | Não | String | URL para a página do produto para mais detalhes. |
 | `quantity` | Sim | Inteiro | Número de unidades do produto no carrinho. |
 | `price` | Sim | Float | O preço unitário da variante do produto no momento da visualização. |
-| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
 | `sku` | Não | String | (Apenas Shopify) SKU do Shopify. Isso pode ser configurado como o campo de ID do catálogo. |
-| `source` | Sim | String | Fonte da qual o evento é derivado. (Para Shopify, isso é a vitrine). |
+| `source` | Sim | String | Fonte da qual o evento é derivado. (Para Shopify, isso é loja virtual). |
 | `metadata` | Não | Objeto |  |
 | `checkout_url` | Não | String | URL para a página de checkout. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -543,9 +543,9 @@ Você pode usar o evento de pedido realizado para disparar quando um cliente com
 | `product_url` | Não | String | URL para a página do produto para mais detalhes. |
 | `quantity` | Sim | Inteiro | Número de unidades do produto no carrinho. |
 | `price` | Sim | Float | O preço unitário da variante do produto no momento da visualização. |
-| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
 | `sku` | Não | String | (Apenas Shopify) SKU do Shopify. Isso pode ser configurado como o campo de ID do catálogo. |
-| `source` | Sim | String | Fonte da qual o evento é derivado. (Para Shopify, isso é a vitrine). |
+| `source` | Sim | String | Fonte da qual o evento é derivado. (Para Shopify, isso é loja virtual). |
 | `order_status_url` | Não | String | URL para visualizar o status do pedido. |
 | `order_number` | Não | String | (Apenas Shopify) Número de pedido único para o pedido realizado. |
 | `tags` | Não | Vetor | (Apenas Shopify) Etiquetas do pedido
@@ -759,9 +759,9 @@ Você pode usar o evento de pedido reembolsado para disparar quando um pedido é
 | `product_url`      | Não       | String    | URL para a página do produto para mais detalhes.  |
 | `quantity`         | Sim      | Inteiro   | Número de unidades do produto no carrinho.   |
 | `price`            | Sim      | Float     | O preço unitário da variante do produto no momento da visualização.  |
-| `metadata`         | Não       | Objeto    | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos o SKU. Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
+| `metadata`         | Não       | Objeto    | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos SKU. Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
 | `sku`            | Não       | String    | (Apenas Shopify) SKU do Shopify. Isso pode ser configurado como o campo de ID do catálogo.  |
-| `source`              | Sim      | String    | Fonte da qual o evento é derivado. (Para Shopify, isso é a vitrine).    |
+| `source`              | Sim      | String    | Fonte da qual o evento é derivado. (Para Shopify, isso é loja virtual).    |
 | `metadata`            | Não       | Objeto    |                |
 | `order_status_url`  | Não       | String    | URL para visualizar o status do pedido.     |
 | `order_note`       | Não       | String    | (Apenas Shopify) Nota anexada ao pedido pelo comerciante.    |
@@ -1168,9 +1168,9 @@ Confira nossos [casos de uso de eCommerce]({{site.baseurl}}/user_guide/engagemen
 Usamos cálculos de campos de usuário padronizados para os seguintes campos: 
 
 - **Receita Total** = soma do valor total dos pedidos realizados - soma do valor total dos pedidos reembolsados
-- **Contagem Total de Pedidos** = contagem de eventos de pedidos distintos realizados - contagem de eventos de cancelamentos de pedidos distintos
+- **Contagem Total de Pedidos** = contagem de eventos distintos de pedidos realizados - contagem de eventos distintos de cancelamentos de pedidos
 - **Valor Total de Reembolso** = soma do valor total dos pedidos reembolsados 
 
 Esses cálculos de campos de usuário também estão incluídos na aba **Transações** dos perfis de usuário.
 
-![A aba "Transações" com campos calculados pelo usuário.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+![A aba "Transações" com campos calculados pelo usuário.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:70%;"}

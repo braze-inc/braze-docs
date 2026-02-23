@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Worthy
 
-> L'intégration de [Worthy](https://worthy.ai/) et Braze vous permet de créer facilement des expériences sur-app personnalisées et riches en utilisant l'éditeur par glisser-déposer de Worthy et de les diffuser via Braze. En outre, Worthy effectuera automatiquement les opérations suivantes :
+> L'intégration de [Worthy](https://worthy.ai/) et Braze vous permet de créer des expériences sur-app personnalisées et riches en utilisant l'éditeur glisser-déposer de Worthy et de les diffuser via Braze. En outre, Worthy effectue automatiquement les opérations suivantes :
 
 _Cette intégration est maintenue par Worthy._
 

@@ -30,9 +30,9 @@ noindex: true
 
 # Integração push
 
-## Etapa 1: Faça upload de seu token de APNs
+## Etapa 1: Fazer upload do seu token APNs
 
- %} developer_guide/swift/apns_token.md
+{% multi_lang_include developer_guide/swift/apns_token.md %}
 
 ## Etapa 2: Ativar os recursos de push
 
@@ -42,7 +42,7 @@ Nas configurações do projeto, certifique-se de que, na guia **Recursos**, o re
 
 Se tiver certificados push de desenvolvimento e produção separados, desmarque a caixa **Gerenciar automaticamente o login** na guia **Geral**. Isso permitirá que você escolha diferentes perfis de provisionamento para cada configuração de compilação, pois o recurso de assinatura automática de código do Xcode só faz a assinatura de desenvolvimento.
 
-![Configurações do projeto do Xcode mostrando a guia "General" (Geral). Nessa guia, a opção "Gerenciar assinatura automaticamente" está desmarcada.]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
+![Configurações do projeto do Xcode mostrando a guia "General" (Geral). Nessa guia, a opção "Automatically manage signing" (Gerenciar automaticamente a assinatura) está desmarcada.]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
 
 ## Etapa 3: Registre-se para receber notificações por push
 
@@ -63,7 +63,7 @@ O seguinte exemplo de código inclui integração para autenticação push provi
 {% endalert %}
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max) {
@@ -121,7 +121,7 @@ Você deve atribuir seu objeto delegado usando `center.delegate = self` de forma
 Se não estiver usando o framework `UserNotifications`, adicione o seguinte código ao método `application:didFinishLaunchingWithOptions:` do delegado do seu app:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];
@@ -148,7 +148,7 @@ UIApplication.shared.registerForRemoteNotifications()
 Quando o registro de APNs estiver concluído, o método a seguir deverá ser alterado para passar o `deviceToken` resultante para o Braze, de modo que o usuário fique capacitado para notificações por push:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 Adicione o seguinte código ao seu método `application:didRegisterForRemoteNotificationsWithDeviceToken:`:
 
@@ -181,7 +181,7 @@ O código a seguir passa as notificações por push recebidas para o Braze e é 
 Ao desenvolver para iOS 10 ou posteriores, recomendamos integrar o framework `UserNotifications` e fazer o seguinte:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 Adicione o seguinte código ao método `application:didReceiveRemoteNotification:fetchCompletionHandler:` do seu aplicativo:
 
@@ -261,10 +261,10 @@ Se a notificação em primeiro plano for clicada, o delegado de push do iOS 10 `
 
 O iOS 10 atualizou o comportamento de modo que não chama mais `application:didReceiveRemoteNotification:fetchCompletionHandler:` quando um push é clicado. Por isso, se você não atualizar o desenvolvimento para o iOS 10 e posteriores e usar o framework `UserNotifications`, terá que chamar a Braze a partir de ambos os delegados de estilo antigo, que é uma ruptura com a nossa integração anterior.
 
-Para apps desenvolvidos com SDKs anteriores ao iOS 10, use as seguintes instruções:
+Para aplicativos que utilizam SDKs < iOS 10, use as seguintes instruções:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 Para ativar o rastreamento de abertura nas notificações por push, adicione o seguinte código ao método `application:didReceiveRemoteNotification:fetchCompletionHandler:` do seu app:
 

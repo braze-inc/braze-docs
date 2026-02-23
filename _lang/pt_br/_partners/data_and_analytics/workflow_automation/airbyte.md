@@ -12,7 +12,7 @@ search_tag: Airbyte
 
 > O [Airbyte](https://airbyte.com/) é um mecanismo de integração de dados de código aberto que ajuda a consolidar os dados em data warehouses, lakes e bancos de dados.
 
-_Essa integração é mantida pela Airbyte._
+_Esta integração é mantida pela Airbyte._
 
 ## Sobre a integração
 

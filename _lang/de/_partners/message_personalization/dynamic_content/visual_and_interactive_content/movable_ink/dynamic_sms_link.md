@@ -63,7 +63,7 @@ Nachdem Nutzer:innen die Vorschau des Links geladen haben, wird ein personalisie
 
 Android Nutzer:innen müssen Ihre Marke nicht als Kontakt speichern, um dynamische SMS-Link-Vorschauen zu erhalten. Es ist aber dennoch empfehlenswert, damit das Gerät die Link-Vorschauen automatisch laden kann.
 
-![5 ]{: style="max-width:30%;"}
+![5]{: style="max-width:30%;"}
 
 Nutzer:innen, die Ihre Marke nicht als Kontakt gespeichert und die automatische Vorschau aktiviert haben, müssen **Vorschau auswählen**, um das Vorschaubild zu laden.
 
