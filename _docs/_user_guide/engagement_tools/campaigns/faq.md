@@ -145,7 +145,7 @@ Yes, use the filter `api_id:YOUR_API_ID` on the **Campaigns** page to search for
 
 ### Why does whitespace appear differently in input fields versus displayed text? 
 
-Whitespace handling differs between input fields and displayed text components because of CSS styling. In-text components with the default `white-space: normal` CSS, multiple consecutive spaces collapse into a single space when displayed. This is standard HTML behavior for rendered text. 
+Whitespace handling differs between input fields and displayed text components because of CSS styling. In text components with the default `white-space: normal` CSS, multiple consecutive spaces collapse into a single space when displayed. This is standard HTML behavior for rendered text. 
 
 Input fields preserve multiple spaces exactly as you enter them, because you need to see and edit the exact spacing for accurate data entry. This means that text with multiple spaces may appear differently when viewed in an input field (where all spaces are preserved) versus when displayed in other parts of the dashboard (where CSS may collapse multiple spaces). 
 
