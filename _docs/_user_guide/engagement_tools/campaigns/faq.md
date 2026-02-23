@@ -131,7 +131,7 @@ If you need to make changes, we recommend stopping the current campaign (this wi
 
 On Daylight Saving Time (DST) transition days, daily scheduled campaigns can run up to one hour earlier or later than usual, depending on whether clocks spring forward or fall back. If your segment relies on custom attributes or events with timestamps that fall within one hour of the scheduled send time, those users may not yet qualify when the campaign evaluates eligibility on DST day.
 
-For example, suppose users typically receive a custom attribute update at 3 PM UTC and your campaign runs daily at 3:30 PM UTC. On a spring-forward DST day, the campaign may run at 2:30 PM UTC—before the attribute has been logged. Because the qualifying attribute doesn't exist yet, those users are filtered out. If re-eligibility is turned off, users who entered on previous days can't re-enter, resulting in zero entries for that day.
+For example, suppose users typically receive a custom attribute update at 3 pm UTC and your campaign runs daily at 3:30 pm UTC. On a spring-forward DST day, the campaign may run at 2:30 pm UTC—before the attribute has been logged. Because the qualifying attribute doesn't exist yet, those users are filtered out. If re-eligibility is turned off, users who entered on previous days can't re-enter, resulting in zero entries for that day.
 
 To avoid this, ensure your custom attribute or event updates occur more than one hour before the campaign's scheduled send time.
 
