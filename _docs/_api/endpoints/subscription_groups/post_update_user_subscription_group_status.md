@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   "use_double_opt_in_logic": (optional, boolean) defaults to false if omitted. Set to true to enter the user into the SMS double opt-in workflow.
+   "use_double_opt_in_logic": (optional, boolean) defaults to `false`; when `subscription_state` is "subscribed", set to `true` to enter the user into the SMS double opt-in workflow,
    // SMS and RCS subscription group - you must include one of external_id or phone
  }
 ```
