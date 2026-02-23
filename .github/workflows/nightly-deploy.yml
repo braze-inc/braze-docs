@@ -54,13 +54,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TITLE="Nightly Deploy — $(date -u +'%b %d, %Y')"
+          TITLE="Nightly Deploy — $(date -u +'%B %d, %Y')"
           BODY=$(cat "$RUNNER_TEMP/deploy_body.txt")
           EXISTING=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number')
 
           if [ -n "$EXISTING" ]; then
             echo "Reusing existing PR #$EXISTING — updating title, body, and label."
-            gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY" --add-label "Deploy"
+            gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY" --add-label "Deploy" --add-reviewer braze-inc/braze-docs
             echo "pr_number=$EXISTING" >> "$GITHUB_OUTPUT"
           else
             gh pr create \
@@ -68,7 +68,8 @@ jobs:
               --head develop \
               --title "$TITLE" \
               --body "$BODY" \
-              --label "Deploy"
+              --label "Deploy" \
+              --reviewer braze-inc/braze-docs
 
             NEW=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number')
             echo "Created PR #$NEW"
