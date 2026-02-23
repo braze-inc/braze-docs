@@ -18,6 +18,6 @@ Bevor Sie Banner-Nachrichten in Braze testen können, müssen Sie eine [Banner-K
 
 Um einen Test entweder an [Inhaltstestgruppen]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) oder an einzelne Benutzer zu senden, muss Push auf Ihren Testgeräten aktiviert sein und es müssen gültige Push-Token für den Testbenutzer registriert sein, bevor Sie den Test senden.
 
-## Testen eines Banners
+## Testen Sie ein Banner
 
 {% multi_lang_include banners/testing.md page="testing" %}

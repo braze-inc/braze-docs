@@ -44,9 +44,8 @@ Verificaremos sua configuração e validaremos todas as informações em nossos 
 
 Esse método configurará um domínio de envio, um domínio de rastreamento e um IP no total para uma empresa. Se estiver planejando configurar mais, consulte a equipe de integração da Braze (método 1).
 
-{% alert important %}
-Esse recurso de configuração de e-mail por autoatendimento está atualmente na versão beta. Entre em contato com o gerente da sua conta Braze se estiver interessado em participar da versão beta.<br>Se estiver usando o recurso de configuração de e-mail de autoatendimento, não deixe de consultar também a equipe de integração do Braze.
-{% endalert %}
+{% include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
+<br>Se estiver usando o recurso de configuração de e-mail de autoatendimento, não deixe de consultar também a equipe de integração do Braze.
 
 ### Pré-requisitos
 

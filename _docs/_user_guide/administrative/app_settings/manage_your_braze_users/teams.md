@@ -9,7 +9,7 @@ description: "This reference article covers how to use Braze Teams in the dashbo
 
 # Teams
 
-> As a Braze admin, you can group your dashboard users into Teams with varying user roles and permissions. This allows you to have multiple, unrelated groups of dashboard users working together in one workspace by separating the types of content that can be edited.
+> As a Braze admin, you can group your company users into Teams with varying user roles and permissions. This allows you to have multiple, unrelated groups of company users working together in one workspace by separating the types of content that can be edited.
 
 Teams can be set up across customer base location, language, and custom attributes so that Team members and non-Team members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools. There is no limit on how many teams you can create in your workspace.
 
@@ -31,7 +31,7 @@ If a Team is defined by a custom attribute, language, or country, you can then u
 
 ## Assign users to Teams
 
-Braze administrators and limited users with the company-level permission "Can Manage Company Settings" can assign Team-level permissions to a dashboard user with limited access. When assigned to a Team, dashboard users are limited to only read or write data available to their particular Teams, such as user language, location, or custom attribute, as defined when the Team was created.
+Braze administrators and limited users with the company-level permission "Can Manage Company Settings" can assign Team-level permissions to a company user with limited access. When assigned to a Team, company users are limited to only read or write data available to their particular Teams, such as user language, location, or custom attribute, as defined when the Team was created.
 
 To assign a user to a Team, navigate to **Settings** > **Company Users** and select a user you'd like to add to your Team.
 

@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Snowflake Daten Bindung
 
-> Braze anonymisiert alle in Snowflake gespeicherten Daten zu Ereignissen, die älter als zwei Jahre sind, und entfernt die personenbezogenen Daten (PII). Wenn Sie die gemeinsame Nutzung von Snowflake-Daten verwenden, können Sie die vollständigen Daten der Ereignisse in Ihrer Umgebung aufbewahren, indem Sie eine Kopie in Ihrem Snowflake-Konto speichern, bevor die Richtlinie zur Bindung angewendet wird.
+> Braze anonymisiert (entfernt persönlich identifizierbare Informationen oder PII) aus den meisten in Snowflake gespeicherten Daten zu Ereignissen, die mehr als zwei Jahre alt sind. Bestimmte Ereignisse werden aufbewahrt, bis ein Nutzer:innen gelöscht wird, wie weiter unten auf dieser Seite beschrieben. Wenn Sie die gemeinsame Nutzung von Snowflake-Daten verwenden, können Sie die vollständigen Daten der Ereignisse in Ihrer Umgebung aufbewahren, indem Sie eine Kopie in Ihrem Snowflake-Konto speichern, bevor die Richtlinie zur Bindung angewendet wird.
 
 Auf dieser Seite werden zwei Möglichkeiten vorgestellt, wie Sie nicht-anonymisierte Daten aufbewahren können: 
 
@@ -19,6 +19,15 @@ Auf dieser Seite werden zwei Möglichkeiten vorgestellt, wie Sie nicht-anonymisi
 {% alert warning %}
 Braze anonymisiert automatisch die Daten von Nutzern:in, die von Braze gelöscht werden, wie in der [Technischen Unterstützung zum Datenschutz]({{site.baseurl}}/dp-technical-assistance/) beschrieben. Alle Daten, die außerhalb der gemeinsamen Datenbank kopiert werden, werden bei diesem Vorgang nicht berücksichtigt, da Braze sie nicht mehr verwaltet.
 {% endalert %}
+
+## Ereignisse, die von der Richtlinie über die zweijährige Bindung ausgenommen sind
+Braze speichert Ereignisse im Zusammenhang mit dem Lebenszyklus eines Nutzers, dem Abo-Status und eingehenden Nachrichten, bis ein Nutzer:innen gelöscht wird. Die folgenden Ereignisse sind von der Standardrichtlinie zur zweijährigen Bindung ausgenommen:
+- `users.UserOrphan`
+- `users.UserDeleteRequest`
+- `users.behaviors.subscription.GlobalStateChange`
+- `users.behaviors.subscriptiongroup.StateChange`
+- `users.messages.sms.InboundReceive`
+- `users.messages.whatsapp.InboundReceive`
 
 ## Kopieren aller Daten in eine andere Snowflake Datenbank
 

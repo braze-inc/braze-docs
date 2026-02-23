@@ -167,7 +167,7 @@ Crie um [modelo do OneLink](https://support.appsflyer.com/hc/en-us/articles/2070
 {%endalert%}
 
 ## Etapa 3 - Configure sua integração com o Braze na Appsflyer
-Agora é hora de configurar sua integração com o Braze na AppsFlyer. Essa etapa e a seguinte ("Configure your app") podem ser configuradas ao mesmo tempo.
+Agora é hora de definir sua integração com o Braze na AppsFlyer. Essa etapa e a seguinte ("Configure your app") podem ser configuradas ao mesmo tempo.
 Para definir sua integração com o Braze na Appsflyer:
 
 ### 1\. Na AppsFlyer, no menu lateral, selecione Engajamento > Integração ESP.
@@ -246,7 +246,7 @@ aifa={{most_recently_used_device.${google_ad_id}}}
 {% endtab %}
 
 {% tab iOS %}
-Para iOS, tanto a Braze quanto a AppsFlyer coletam de modo automático o IDFV nativamente através das nossas integrações de SDK. Você pode usar o IDFC como identificador do dispositivo. Você pode incluir o IDFV em seus links de rastreamento de cliques da AppsFlyer usando a seguinte lógica Liquid:
+Para iOS, tanto a Braze quanto a AppsFlyer coletam de modo automático o IDFV nativamente através das nossas integrações de SDK. Você pode usar o IDFC como identificador do dispositivo. É possível incluir o IDFV em seus links de rastreamento de cliques da AppsFlyer usando a seguinte lógica Liquid:
 
 {% raw %}
 ```

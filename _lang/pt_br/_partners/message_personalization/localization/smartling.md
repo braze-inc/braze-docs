@@ -33,7 +33,7 @@ Dependendo de seu caso de uso, gerencie traduções para blocos de conteúdo usa
 
 No fluxo de trabalho atualizado, usando o suporte multilíngue da Braze e as localizações nas mensagens, as tags de tradução são adicionadas ao bloco de conteúdo. No entanto, o Smartling executa traduções no nível da mensagem. O conteúdo é traduzido somente quando o conteúdo é incluído em uma campanha ou canva e o direcionamento é definido. Para saber mais, consulte [Gerenciamento de traduções para blocos de conteúdo](#managing-translations-for-content-blocks).
 
-Para modelos de e-mail, somente o fluxo de trabalho legado é suportado. Para saber mais, consulte [Gerenciamento de traduções usando o fluxo de trabalho herdado](#managing-translations-using-the-legacy-workflow).
+Para modelos de e-mail, somente o fluxo de trabalho legado é suportado. Para saber mais, consulte [Gerenciamento de traduções usando o fluxo de trabalho legado](#managing-translations-using-the-legacy-workflow).
 
 ## Pré-requisitos
 
@@ -64,7 +64,7 @@ Consulte a [documentação da Smartling](https://help.smartling.com/hc/en-us/art
 
 {: start="2"}
 2\. Nesse projeto, selecione **Configurações** > **Configurações do Braze** > **Conectar ao Braze**.
-3\. Preencha os campos obrigatórios, como URL da API e chave da API. Se o teste de conexão for bem-sucedido, salve a conexão. Se o teste não for bem-sucedido, confirme se você inseriu o URL da API e a chave de API corretos.
+3\. Preencha os campos obrigatórios, como URL da API e chave da API. Se a conexão de teste for bem-sucedida, salve a conexão. Se o teste não for bem-sucedido, confirme se você inseriu o URL da API e a chave de API corretos.
 
 ![Conexão Braze nas configurações da API Smartling.]({% image_buster /assets/img/smartling/image2_API.png %})
 
@@ -148,7 +148,7 @@ As tags de tradução pertencem ao bloco de conteúdo. No entanto, o Smartling e
 
 ## Gerenciamento de traduções usando o fluxo de trabalho legado
 
-Se preferir gerenciar as traduções diretamente em um bloco de conteúdo ou modelo de e-mail, consulte as instruções herdadas na [documentação da Smartling](https://help.smartling.com/hc/en-us/articles/13248577069979-Translating-with-the-Braze-Connector). Esse método usa uma atribuição de idioma e a lógica if/else do Liquid para exibir o texto em diferentes idiomas.
+Se preferir gerenciar as traduções diretamente em um bloco de conteúdo ou modelo de e-mail, consulte as instruções herdadas na [documentação da Smartling](https://help.smartling.com/hc/en-us/articles/13248577069979-Translating-with-the-Braze-Connector). Esse método usa uma atribuição de idioma e a lógica if/else do Liquid para exibir texto em diferentes idiomas.
 
 ## Perguntas frequentes
 

@@ -69,9 +69,9 @@ Por ejemplo, si vas a enviar un mensaje a un usuario el día antes de su cumplea
 
 ## Utilizar variables de contexto
 
-Puedes utilizar variables contextuales en cualquier lugar en el que utilices Liquid en un Canvas, como en los pasos de [actualización de]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update) [mensajes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) y usuarios, seleccionando **Añadir personalización**.
+Puedes utilizar variables contextuales en cualquier lugar en el que utilices Liquid en un Canvas, como en los pasos de [Actualización de]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update) [mensajes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) y [usuarios]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update), seleccionando **Añadir personalización**.
 
-Por ejemplo, supongamos que quieres notificar a los pasajeros su acceso a la sala VIP antes de su próximo vuelo. Este mensaje sólo debe enviarse a los pasajeros que hayan comprado un billete de primera clase. Una variable de contexto es una forma flexible de hacer un seguimiento de esta información.
+Por ejemplo, supongamos que quieres notificar a los pasajeros su acceso a una sala VIP antes de su próximo vuelo. Este mensaje sólo debe enviarse a los pasajeros que hayan comprado un billete de primera clase. Una variable de contexto es una forma flexible de hacer un seguimiento de esta información.
 
 Los usuarios entrarán en el Canvas cuando compren un billete de avión. Para determinar la elegibilidad para el acceso al salón, crearemos una variable de contexto llamada `lounge_access_granted` en un paso de Contexto, y luego haremos referencia a esa variable de contexto en los pasos posteriores del recorrido del usuario.
 
@@ -162,6 +162,8 @@ Al igual que las variables de contexto de Canvas tienen tipos predefinidos, las 
 {% alert note %}
 Utiliza el mismo tipo de datos para tu variable contextual y para la comparación. Por ejemplo, si tu variable de contexto es un tipo de dato temporal, utiliza comparaciones temporales (como "antes" o "después"). Utilizar tipos de datos no coincidentes (como comparaciones de cadenas con una variable de contexto temporal) puede provocar un comportamiento inesperado.
 {% endalert %}
+
+{% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
 
 He aquí un ejemplo de filtro de variables de contexto que compara la variable de contexto `product_name` con la regex `/braze/`.
 

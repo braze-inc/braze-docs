@@ -133,8 +133,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
 - name: Hightouch
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
-- name: Tinyclues
-  url: /docs/partners/data_and_infrastructure_agility/cohort_import/tinyclues/
+- name: 스플리오
+  url: /docs/partners/splio/
 - name: Transcend
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
 - name: RevenueCat
@@ -144,7 +144,9 @@ valid_partner_list:
 - name: BlueConic
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
 - name: LINE
-  url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+  url: /docs/partners/message_orchestration/additional_channels/messaging/line/
+- name: LinkedIn Audience Sync
+  url: /docs/partners/canvas_audience_sync/linkedin_audience_sync/
 - name: Judo
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/
 - name: Shopify
@@ -361,7 +363,7 @@ valid_partner_list:
   url: /docs/partners/stackadapt/
 - name: 오피지
   url: /docs/partners/oppizi/
-- name: 클라우디너리
+- name: 클라우드나리
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/cloudinary/
 - name: 릴트
   url: /docs/partners/lilt/
@@ -375,7 +377,7 @@ valid_partner_list:
   url: /docs/google_audience_sync/ 
 - name: Optimizely
   url: /docs/partners/optimizely/
-- name: 다른레벨
+- name: 아더레벨스
   url: /docs/partners/otherlevels/
   url: /docs/partners/crowdtwist
 - name: 풀스토리
@@ -384,4 +386,12 @@ valid_partner_list:
   url: /docs/partners/openloyalty/
 - name: 닷츠.에코
   url: /docs/partners/dots.eco/
+- name: 메일리지오
+  url: /docs/partners/mailizio/
+- name: 오픈AI
+  url: /docs/partners/openai/
+- name: 구글 제미니
+  url: /docs/partners/gemini/
+- name: 인류학적
+  url: /docs/partners/anthropic/
 ---

@@ -1,7 +1,7 @@
 ---
 nav_title: Intelligence Suite
 article_title: Braze Intelligence Suite について
-page_order: 1
+page_order: 6
 search_rank: 12
 description: "Braze Intelligence Suiteは、データに基づくインサイトで意思決定をオートメーションする。配信時間から多変量テストまで、ブランドはこれらのツールと機能を使用して、大規模に最適化されるダイナミックなクロスチャネルのエクスペリエンスを構築できます。"
 tool:

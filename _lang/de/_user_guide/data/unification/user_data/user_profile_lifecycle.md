@@ -40,11 +40,7 @@ Zu den weiteren Vorteilen der Verwendung von `external_id` gehören folgende:
 
 ### Überlegungen zu externen IDs
 
-{% alert warning %}
-Weisen Sie Benutzerprofilen erst dann eine `external_id` zu, wenn Sie sie eindeutig identifizieren können. Wenn Sie einen Benutzer identifiziert haben, können Sie ihn nicht mehr in die Anonymität zurückversetzen.
-<br><br>
-Ein `external_id` kann über den [Endpunkt`/users/external_ids/rename` ]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/) aktualisiert werden. Wenn Sie jedoch versuchen, während der Sitzung eines Nutzers:in ein anderes `external_id` einzustellen, wird ein neues Nutzerprofil erstellt, das mit dem neuen `external_id` verknüpft ist. Es werden keine Daten zwischen den beiden Profilen ausgetauscht.
-{% endalert %} 
+{% include alerts/warning_alerts.md alert='User profile external_id' %} 
 
 #### Risiko der Verwendung einer E-Mail oder einer gehashten E-Mail als externe ID
 

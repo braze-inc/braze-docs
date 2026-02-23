@@ -1,7 +1,7 @@
 ---
 nav_title: オペレータ
 article_title: BrazeAI Operator
-page_order: 0.7
+page_order: 8
 alias: /operator/
 description: "このリファレンス記事では、Braze ダッシュボードに組み込まれているAI を搭載したアシスタントであるBrazeAI Operatorについて説明します。"
 ---

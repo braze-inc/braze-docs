@@ -2,23 +2,20 @@
 nav_title: Create agents
 article_title: Create custom agents
 description: "Learn how to create agents, what to prepare before you start, and how to put them to work across messaging, decisioning, and data management."
+page_order: 1
 alias: /creating-agents/
 ---
 
 # Create custom agents
 
-> Learn how to create custom agents, what to prepare before you start, and how to put them to work across messaging, decisioning, and data management. For more general information, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents). 
-
-{% alert important %}
-Braze Agents are currently in beta. For help getting started, contact your customer success manager.
-{% endalert %}
+> Learn how to create custom agents, what to prepare before you start, and how to put them to work across messaging, decisioning, and data management. For more general information, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents).
 
 ## Prerequisites
 
 Before you start, you'll need the following:
 
-- Access to the **Agent Console** in your workspace. Check with your Braze admins if you don’t see this option.  
-- Permission to create and edit custom AI Agents. 
+- [Permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) to access the **Agent Console** in your workspace. Check with your Braze admins if you don’t see this option.  
+- Permission to create and edit custom AI Agents.
 - An idea of what you want the agent to accomplish. Braze Agents can support the following actions:  
    - **Messaging:** Generate subject lines, headlines, in-product copy, or other content.  
    - **Decisioning:** Route users in Canvas based on behavior, preferences, or custom attributes.  
@@ -39,148 +36,97 @@ The following use cases showcase a few ways to leverage custom agents.
 
 ## Create an agent
 
-To create your custom agent:  
+### Step 1: Choose an agent type
+
+To create your custom agent:
 
 1. Go to **Agent Console** > **Agent Management** in the Braze dashboard.  
-2. Select **Create agent**.  
-3. Enter a name and description to help your team understand its purpose.
-4. Choose the [model](#models) your agent will use.  
+2. Select **Create agent**.
+3. Choose to create a Canvas agent or catalog agent.
 
-![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:85%;"}
+### Step 2: Set up details
 
-{:start="5"}
-5. Give the agent instructions. Refer to [Writing instructions](#writing-instructions) for guidance.
-6. [Test the agent](#testing-your-agent) output and adjust the instructions as needed.
-7. When you’re ready, select **Create Agent** to activate the agent. 
+Next, set up the details for your agent:
 
-Your agent is now ready to use! For details, see [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
+1. Enter a name and description to help your team understand its purpose.
+2. (optional) Add tags to filter your agent.
+3. Choose the [model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) for your agent to use.
+4. Select the model's thinking level. You can choose from minimal, low, medium, or high. We recommend starting with **Minimal** and testing your agent's responses and adjusting this as needed.
 
-## Models
+![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
 
-When you set up an agent, you can choose the model it uses to generate responses. You have two options: using a Braze-powered model or bringing your own API key.
+### Step 3: Write the instructions {#agent-instructions}
 
-{% alert important %}
-When using the Braze-powered **Auto** model, we have optimized for models whose thinking capabilities is sufficient to perform tasks such as catalog search and user segmentation membership. When using other models, we recommend testing to confirm your model works well for your use case. You may need to adjust your [instructions](#writing-instructions) to give different levels of detail or step-by-step thinking to models with different speeds and capabilities.
+Give the agent instructions. We recommend including instructions for what the agent should do in unexpected or ambiguous scenarios. This minimizes the risk that agent confusion leads to errors. For example, rather than asking the agent for only "positive" or "negative" sentiment values, ask it to return "unsure" if it can't decide.
+
+Refer to the [Writing instructions]({{site.baseurl}}/user_guide/brazeai/agents/reference/#writing-instructions) for best practices and [Examples]({{site.baseurl}}/user_guide/brazeai/agents/reference/#examples) for inspiration on how to prompt your agent.
+
+{% alert tip %}
+For Canvas agents, you can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes. Any Liquid variable in the agent instructions is automatically passed to the Agent step when a user enters the step.
 {% endalert %}
 
-### Option 1: Use a Braze-powered model
+#### Step 3.1: Add context
 
-This is the simplest option, with no extra setup required. Braze provides access to large language models (LLM) directly. To use this option, select **Auto**, which uses Gemini models.
+Select **Add context** to choose what your agent can reference. This includes:
 
-### Option 2: Bring your own API key
+- [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Give the agent access to your catalog data for more accurate responses.
+- [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Let the agent personalize responses based on which segments a user belongs to. You can select up to three segments.
+- [Brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
+- [All Canvas Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analyze all Canvas context data for a user when this agent is invoked, including any variables that are not referenced in the **Instructions** section.
 
-With this option, you can connect your Braze account with providers like OpenAI, Anthropic, AWS Bedrock, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not from Braze.
+#### Step 3.2: Add optional settings
+
+In the **Optional settings**, you can adjust the [temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) of the agent-generated copy. A higher temperature allows the agent to use the information provided to be more creative.
+
+You can also set the daily execution limit for your agent. By default, this value is set to 250,000, but can be raised to 1,000,000. If you're interested in increasing the limit above 1,000,000, contact your customer success manager to learn more.
+
+### Step 4: Select the output {#select-output}
+
+In the **Output** section, you can organize and define the agent's output by basic schemas or advanced schemas.
+
+For best results, make sure that what you specify in the **Output** section matches any agent instructions you entered in [Step 3](#agent-instructions). For example, if you mentioned in the agent instructions that you want an object with two strings, make sure you specify an object with two strings in the **Output** section. If your agent instructions don't align with your specified output, the agent may get confused, time out, or generate undesired outputs.
+
+#### Basic schemas
+
+Basic schemas are a simple output that an agent returns. This can be a string, a number, a boolean, an array of strings, or array of numbers.
+
+For example, if you want to collect user sentiment scores from a simple feedback survey to determine how satisfied your customers are after receiving a product, you can select **Number** as a basic schema to structure the output format.
 
 {% alert important %}
-We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months.
+Arrays are only available for Canvas agents, not catalog agents.
 {% endalert %}
 
-To set this up:
+![Agent Console with number selected as a basic schema.]({% image_buster /assets/img/ai_agent/basic_schema.png %}){: style="max-width:85%;"}
 
-1. Go to **Partner Integrations** > **Technology Partners** and find your provider.
-2. Enter your API key from the provider.
-3. Select **Save**.
+#### Advanced schemas
 
-Then, you can return to your agent and select your model.
+Advanced schema options include manually structuring fields or using JSON.
 
-{% alert important %}
-When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.  
-{% endalert %}
+- **Fields:** A no-code way to enforce an agent output that you can use consistently.
+- **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema. Only available for Canvas agents, not catalog agents.
 
-## Writing instructions
+We recommend using advanced schemas when you want the agent to return a data structure with multiple values defined in a structured manner, rather than a single-value output. This allows the output to be better formatted as a consistent context variable.
 
-Instructions are the rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. System instructions can be up to 25 KB.
+For example, you may use an output format within an agent that is intended to create a sample travel itinerary for a user based on a form they submitted. The output format allows you to define that every agent response should come back with values for `tripStartDate`, `tripEndDate`, and `destination` values. Each of these values can be extracted from context variables and placed in a Message step for personalization using Liquid.
 
-Here are some general best practices to get you started with prompting:
+{% tabs %}
+{% tab Fields %}
 
-1. Start with the end in mind. State the goal first.
-2. Give the model a role or persona ("You are a ...").
-3. Set clear context and constraints (audience, length, tone, format).
-4. Ask for structure ("Return JSON/bullet list/table...").
-5. Show, don't tell. Include a few high-quality examples.
-6. Break complex tasks into ordered steps ("Step 1... Step 2...").
-7. Encourage reasoning ("Think aloud, then answer").
-8. Pilot, inspect, and iterate. Small tweaks can lead to big quality gains.
-9. Handle the edge cases, add guardrails, and add refusal instructions.
-10. Measure and document what works internally for reuse and scaling.
+If you want to format responses to a simple feedback survey to determine how likely respondents are to recommend your restaurant's newest ice cream flavor, you can set up the following fields to structure the output format:
 
-We recommend also including a default as a catch-all response if the agent receives a response that can't be parsed. This error handling allows the agent to inform you of an unknown outcome variable. For example, rather than asking the agent for only "positive" or "negative" sentiment values, ask it to return "unsure" if it can't decide.
-
-### Simple prompt
-
-This example prompt takes a survey input and outputs a simple sentiment analysis:
-
-```
-From the survey text, classify overall sentiment toward product quality, delivery, and price as Positive, Neutral, or Negative
-Always output a single string with just one label.
-If any category is missing or unclear, treat it as Neutral.
-If sentiment across categories is mixed, return Neutral.
-
-Example Input: “The product works great, but shipping took forever and the cost felt too high.”
-Example Output: Neutral
-```
-
-### Complex prompt 
-
-This example prompt takes a survey input from a user and classifies it into a single sentiment label. The result can then be used to route users down different Canvas paths (such as positive versus negative feedback) or store the sentiment as a custom attribute on their profile for future targeting.
-
-{% raw %}
-```
-You are a customer research AI for a retail brand.  
-Input: one open-text survey response from a user.  
-Output: A single structured JSON object with:  
-- sentiment (Positive, Neutral, Negative)  
-- topic (Product, Delivery, Price, Other)  
-- action_recommendation (Route: High-priority follow-up | Low-priority follow-up | No action)  
-
-Rules:  
-- Always return valid JSON.  
-- If the topic is unclear, default to Other.  
-- If sentiment is mixed, default to Neutral.  
-- If sentiment is Negative and topic = Product or Delivery → action_recommendation = High-priority follow-up.  
-- Otherwise, action_recommendation = Low-priority follow-up.  
-
-Example Input:  
-"The product works great, but shipping took forever and the cost felt too high."  
-
-Example Output:  
-{  
-  "sentiment": "Neutral",  
-  "topic": "Delivery",  
-  "action_recommendation": "High-priority follow-up"  
-}  
-```
-{% endraw %}
-
-For more details on prompting best practices, refer to guides from the following model providers:
-
-- [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
-- [Anthropic](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
-- [Gemini](https://support.google.com/a/users/answer/14200040?hl=en)
-
-### Output format
-
-Use the **Output Format** field to organize and define the agent's output by manually structuring fields or using JSON. 
-
-- **Fields:** A no-code way to enforce an agent output that you can use consistently. 
-- **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema.
-
-#### Fields
-
-Let's say you want to format responses to a simple feedback survey to determine how likely respondents are to recommend your restaurant's newest ice cream flavor. You can set up the following fields to structure the output format:
-
-| Field name | Value
+| Field name | Value |
 | --- | --- |
 | **likelihood_score** | Number |
-| **explanation** | Text |
+| **explanation** | String |
 | **confidence_score** | Number |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Agent Console showing three output fields for likelihood score, explanation, and confidence score.]( {% image_buster /assets/img/ai_agent/output_format_fields.png %} )
+![Agent Console showing three output fields for likelihood score, explanation, and confidence score.]({% image_buster /assets/img/ai_agent/output_format_fields.png %}){: style="max-width:85%;"}
 
-### JSON schema
+{% endtab %}
+{% tab JSON schema %}
 
-Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You could select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
+If you want to collect user feedback for their most recent dining experience at your restaurant chain, you can select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
 
 ```json
 {
@@ -200,61 +146,31 @@ Let's say you want to collect user feedback for their most recent dining experie
 }
 ```
 
-If you try to use an agent with a JSON output in a catalog, it will not follow your schema. Instead, consider using the [defined output fields](#fields).
+{% endtab %}
+{% endtabs %}
 
-{% alert important %}
-Output formats aren't currently supported by Claude AI. If you're using an Anthropic key, we recommend manually adding the structure to the agent prompt.
-{% endalert %}
+### Step 5: Test and create the agent
 
-## Optional settings
+The **Preview** pane is an instance of the agent that shows up as a side-by-side panel within the configuration experience. You can use it to test the agent while you're creating or making updates to it to experience it in a similar way to end users. This step helps you confirm that it’s behaving the way you expect, and gives you a chance to fine-tune before it goes live.
 
-### Brand guidelines
+1. In the **Test your agent** field, enter example customer data or customer responses—anything that reflects real scenarios your agent will handle.
+2. Preview the agent's response for a random user, existing user, or custom user.
+3. Select **Simulate response**. The agent will execute based on your configuration and display its response. Test runs count toward your daily execution limit.
 
-You can select [brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines) for your agent to adhere to in its responses. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
-
-### Catalogs
-
-Choose specific catalogs for an agent to reference and to give your agent the context it needs to understand your products and other non-user data when relevant.
-
-![The "restaurants" catalog and "Loyalty_Program" column selected for the agent to search.]({% image_buster /assets/img/ai_agent/search_catalog.png %}){: style="max-width:85%;"}
-
-### Segment membership context
-
-You can select up to three segments for the agent to cross-reference each user's segment membership against when the agent is used in a Canvas. Let's say your agent has segment membership selected for a "Loyalty Users" segment, and the agent is used in a Canvas. When users enter an Agent step, the agent can cross-reference if each user is a member of each segment you specified in the agent console, and use each user's membership (or non-membership) as context for the LLM.
-
-![The "Loyalty Users" segment selected for agent membership access.]({% image_buster /assets/img/ai_agent/segment_membership_context.png %}){: style="max-width:85%;"}
-
-### Temperature
-
-If your goal is to use an agent to generate copy to encourage users to log into your mobile app, you can set a higher temperature for your agent to be more creative and use the nuances of the context variables. If you're using an agent to generate sentiment scores, it may be ideal to set a lower temperature to avoid any agent speculation on negative survey responses. We recommend testing this setting and reviewing the agent's generated output to fit your scenario.
-
-{% alert note %}
-Temperatures aren't currently supported for use with OpenAI.
-{% endalert %}
-
-## Test your agent
-
-The **Live preview** pane is an instance of the agent that shows up as a side-by-side panel within the configuration experience. You can use it to test the agent while you're creating or making updates to it to experience it in a similar way to end users. This step helps you confirm that it’s behaving the way you expect, and gives you a chance to fine-tune before it goes live.
-
-![Agent Console showing the Live preview pane for testing a custom agent. The interface displays a Sample inputs field with example customer data, a Run test button, and a response area where the agent output appears.]( {% image_buster /assets/img/ai_agent/custom_agent_test.png %} )
-
-1. In the **Sample inputs** field, enter example customer data or customer responses—anything that reflects real scenarios your agent will handle. 
-2. Select **Run test**. The agent will execute based on your configuration and display its response. Test runs count toward your daily execution limit.
+![Agent Console showing the Preview pane for testing a custom agent. The interface displays a Sample inputs field with example customer data, a Run test button, and a response area where the agent output appears.]({% image_buster /assets/img/ai_agent/custom_agent_test.png %})
 
 Review the output with a critical eye. Consider the following questions:
 
-- Does the copy feel on brand? 
-- Does the decision logic route customers as intended? 
-- Are the calculated values accurate? 
+- Does the copy feel on brand?
+- Does the decision logic route customers as intended?
+- Are the calculated values accurate?
 
 If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
 
-### Monitor your agent
+### Step 6: Use your agent
 
-In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location.
+Your agent is now ready to use! For details, refer to [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
 
-![Logs for an agent Random Sport Assignment, which include when and where the agent has been called.]( {% image_buster /assets/img/ai_agent/agent_activity_logs.png %} )
+## Related articles  
 
-Select **View** for a specific agent call to see the input, output, and user ID.
-
-![Logs for an agent City Trends and Recommendation Booking. The details panel shows the input prompt, output response, and an associated user ID.]( {% image_buster /assets/img/ai_agent/agent_logs.png %} )
+- [Reference for agents]({{site.baseurl}}/user_guide/brazeai/agents/reference/)

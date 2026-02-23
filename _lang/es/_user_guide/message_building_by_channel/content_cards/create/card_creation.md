@@ -121,7 +121,7 @@ Braze recomienda no cambiar la forma de crear las tarjetas una vez lanzada la ca
 
 Para audiencias grandes, selecciona la opción de crear tarjetas en la primera impresión para que las tarjetas estén disponibles rápidamente tras el lanzamiento. Las campañas desencadenadas al inicio de la sesión también pueden beneficiarse de pasar a crear en la primera impresión (disponible a través de la entrega programada) para mejorar el rendimiento.
 
-Cuando las tarjetas se crean en la primera impresión, puede tardar 1-2 segundos en procesarse. La duración de este tiempo de procesamiento depende de varios factores, como el tamaño de la tarjeta y la complejidad de las opciones de plantillas de mensajes. Por ejemplo, el tiempo de procesamiento de las tarjetas que utilizan Contenidos Conectados será al menos tan largo como el tiempo de respuesta de Contenidos Conectados.
+Cuando las tarjetas se crean en la primera impresión, pueden tardar 1-2 segundos en procesarse. La duración de este tiempo de procesamiento depende de varios factores, como el tamaño de la tarjeta y la complejidad de las opciones de plantillas de mensajes. Por ejemplo, el tiempo de procesamiento de las tarjetas que utilizan Contenidos Conectados será al menos tan largo como el tiempo de respuesta de Contenidos Conectados.
 
 ### Versiones anteriores del SDK
 

@@ -87,7 +87,7 @@ Seed emails will have `[SEED]` appended to the start of the email subject line. 
 
 #### Subscription behavior
 
-Seed sends are designed for internal QA and review, so they intentionally bypass subscription checks for the seeded dashboard users. This means users with valid email addresses who are part of a Seed Group receive the message even if they are not subscribed. However, the message must be configured to send seed copies to that group.
+Seed sends are designed for internal QA and review, so they intentionally bypass subscription checks for the seeded company users. This means users with valid email addresses who are part of a Seed Group receive the message even if they are not subscribed. However, the message must be configured to send seed copies to that group.
 
 {% alert tip %}
 If your Seed Group members report not seeing the message in their inbox, check that they're listed in the internal group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their spam folders.

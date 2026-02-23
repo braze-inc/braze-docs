@@ -150,7 +150,7 @@ Alguns campos podem estar ausentes na guia **Histórico de mensagens** de um usu
 - Quando um evento não tem dados para **Mensagem enviada**, isso indica que a campanha não tem nenhuma variação de mensagem.
 - Quando um evento está sem dados para **Campanha/Canva** e **Mensagem Enviada**, isso indica que essa mensagem foi enviada de uma campanha de mensagens API (não campanhas disparadas por API) que não especificou os endereços `campaign_id` e `message_variation_id`. Esses campos são opcionais e podem ser deixados de fora do corpo da solicitação. Quando esses campos são especificados, essas informações são preenchidas nos registros do histórico de mensagens.
    - Se uma determinada mensagem estiver totalmente ausente do histórico de mensagens, mas aparecer no registro **Campaigns Received (Campanhas recebidas** ), é provável que o usuário tenha recebido a campanha antes de ser identificado como o usuário atual. Se um perfil existente for órfão, o registro **Campaigns Received (Campanhas recebidas** ) será transferido, mas o histórico de mensagens não. 
-- Quando faltam dados para **Campaign/Canva**, pode ter sido enviado um teste manual. Os testes manuais são registrados na guia **Histórico de mensagens**, mas a campanha ou o Canva que foi enviado não será registrado.
+- Quando faltam dados para o **Campaign/Canva**, pode ter sido enviado um teste manual. Os testes manuais são registrados na guia **Histórico de mensagens**, mas a campanha ou o Canva que foi enviado não será registrado.
 
 ## Artigos relacionados
 

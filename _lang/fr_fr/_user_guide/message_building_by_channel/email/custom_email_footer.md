@@ -25,7 +25,7 @@ Pour créer ou modifier votre pied de page personnalisé, procédez comme suit :
 1. Allez dans **Paramètres** > **Préférences e-mail** > **Pages et pieds de page d'abonnement**.
 2. Allez dans la section **Pied de page personnalisé** et activez les pieds de page personnalisés.
 3. Sélectionnez **Modifier** puis modifiez votre pied de page dans la section **Composer**.
-4. Sélectionnez **Aperçu** pour voir comment votre pied de page d'e-mail s'affichera dans la boîte de réception d'un client. Vous pouvez éventuellement sélectionner **Copier le lien de prévisualisation** pour générer et copier un lien de prévisualisation partageable qui montre à quoi ressemblera l'e-mail pour un utilisateur aléatoire. Le lien durera sept jours avant de devoir être régénéré.
+4. Sélectionnez **Aperçu** pour voir comment votre pied de page d'e-mail apparaîtra dans la boîte de réception d'un client. Vous pouvez éventuellement sélectionner **Copier le lien de prévisualisation** pour générer et copier un lien de prévisualisation partageable qui montre à quoi ressemblera l'e-mail pour un utilisateur aléatoire. Le lien durera sept jours avant de devoir être régénéré.
 5. Envoyez un message test. 
 
 ![Un exemple de pied de page personnalisé.]({% image_buster /assets/img_archive/custom_footer.png %})

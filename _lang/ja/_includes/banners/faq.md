@@ -2,7 +2,7 @@
 
 > これらは、Braze のBanners に関するよくある質問に対する回答です。一般的な情報については、[バナーについて]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %})] を参照してください。
 
-## バナー・更新がアプリの耳元をユーザーsにするのはいつ？
+## バナー・更新がアプリの耳元をユーザーにするのはいつ？
 
 バナーは、最新表示メソッドを呼び出すたびに最新のデータで更新されます。バナーキャンペーンを再送信または更新する必要はありません。
 
@@ -26,7 +26,7 @@
 
 ## ユーザー アクション s に基づいてバナーをトリガーできますか?
 
-バナーは[アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery)に対応していませんが、これまでのアクションsに基づいてユーザーsをセグメンテーションとプライオリティでターゲットできます。
+バナーは[アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery)に対応していませんが、これまでのアクションsに基づいてユーザーをセグメンテーションとプライオリティでターゲットできます。
 
 たとえば、`purchase` イベントを完了したユーザーにのみ特殊なバナーを表示するには、次のようにします。
 1. **ターゲット設定:**キャンペーンで、カスタムイベント`purchase` を少なくとも1 回実行したユーザーのSegmentを対象にします。
@@ -59,4 +59,10 @@
 
 ## クリックイベントをキャプチャできますか?
 
-クリックイベントは、クリックアクションが`logClick` 要素に設定され、[JS ブリッジ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) を使用して呼び出された場合にのみキャプチャされます。
+はい。クリックイベントのキャプチャ方法は、バナーのレンダリング方法によって異なります。
+
+- **標準エディタコンポーネント:**バナーで標準のエディターコンポーネント("画像s、ボタン、テキスト)を使用している場合、SDKのインサート方法を使用すると、クリックが自動的にトラックされます。
+- **カスタムコードブロック:**バナーでカスタムコードエディタブロックを使用する場合は、カスタムHTML内から`brazeBridge.logClick()` を呼び出してクリックを追跡する必要があります。このアプリは、SDK メソッドを使用してバナーを挿入およびレンダリングする場合でも発生します。これは、HTML アプリ内メッセージs の[JavaScript ブリッジ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) と同じように機能します。
+- **カスタムUI (ヘッドレス):**バナーHTMLをレンダリングする代わりにバナーのカスタムプロパティを使用して完全にカスタムUI を構築する場合は、アプリのライケーションコードからバナーオブジェクトの`logClick()` を呼び出します。
+
+詳細については、[ロギングクリック]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks)を参照してください。

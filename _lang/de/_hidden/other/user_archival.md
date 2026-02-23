@@ -95,7 +95,7 @@ So können Sie:
 1. Targeting von Nutzer:innen, die den Archivierungskriterien Ihrer Marke entsprechen und die Sie behalten möchten. Sie könnten zum Beispiel Nutzer:innen behalten, die:
     - Sie haben zuletzt vor mehr als 23 Wochen eine Nachricht erhalten oder haben noch nie eine Nachricht erhalten<br>UND<br>
     - Ihre App zuletzt vor mehr als 23 Wochen genutzt haben oder keine Sitzungen in Ihrer App hatten<br><br>
-      ![Targeting Nutzer:innen, die zuletzt vor mehr als 23 Wochen eine Nachricht erhalten haben, noch nie eine Nachricht aus einer Kampagne oder einem Canvas-Schritt erhalten haben, diese Apps zuletzt vor mehr als 23 Wochen genutzt haben und diese Apps genau null Mal verwendet haben.][2]<br><br>
+      ![Targeting Nutzer:innen, die zuletzt vor mehr als 23 Wochen eine Nachricht erhalten haben, noch nie eine Nachricht aus einer Kampagne oder einem Canvas-Schritt erhalten haben, diese Apps zuletzt vor mehr als 23 Wochen verwendet haben und diese Apps genau null Mal verwendet haben][2].<br><br>
 2. Die Neuqualifizierung bei etwas unter sechs Monaten ansetzen<br><br>
       ![Eingangskontrollen mit aktivierter Wiederwählbarkeit und einem Wiederwählbarkeitsfenster von 23 Wochen][3].<br><br>
 3. Konfigurieren Sie den Schritt Nutzeraktualisierung, um jedem Profil ein Ereignis hinzuzufügen.<br><br>

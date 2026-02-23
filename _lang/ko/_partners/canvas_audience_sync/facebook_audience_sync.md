@@ -207,7 +207,7 @@ At this time, value-based lookalike custom audiences are not supported by Braze.
 Facebook 오디언스 동기화 기능을 사용하려면 본 서비스 약관에 동의해야 합니다. 
 
 - If your ad account is directly associated with your personal Facebook account, you can accept the terms of service from in your personal account here: `https://www.facebook.com/ads/manage/customaudiences/tos.php?act=<ACCOUNT_ID>`.
-- 광고 계정이 회사의 비즈니스 매니저 계정에 연결되어 있는 경우, Facebook 비즈니스 매니저 계정에서 서비스 약관에 동의해야 합니다: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
+- 광고 계정이 회사의 비즈니스 매니저 계정에 연결된 경우, Facebook 비즈니스 매니저 계정에서 서비스 약관에 동의해야 합니다: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
 
 After you have accepted your Facebook custom audience terms of service, do the following:
 

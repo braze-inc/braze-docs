@@ -572,7 +572,7 @@ Para agendar um relatório de engajamento recorrente, faça o seguinte:
 3. Adicione as [campanhas e mensagens de canva]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individualmente ou [por tag]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) que você gostaria de compilar em seu relatório.
 4. [Adicione estatísticas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) ao seu relatório.
 5. Selecione a compressão e o delimitador para o seu relatório.
-6. Insira os endereços de e-mail dos usuários da Braze que devem receber este relatório.
+6. Insira os endereços de e-mail dos usuários da empresa que devem receber esse relatório.
 7. Selecione o [período de tempo]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) a partir do qual você gostaria que seu relatório executasse os dados.
 8. Selecione os [intervalos (diários, semanais, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display) nos quais gostaria de ver a divisão dos seus dados.
 9. Agende seu relatório para [enviar imediatamente]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) ou em um [momento futuro especificado]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
