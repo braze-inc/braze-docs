@@ -30,7 +30,8 @@ In Braze, standard events are predefined actions that Braze recognizes across it
 **Tracked after additional setup:**
 
 - [Purchase events](#purchase-events): Your development team logs these using the SDK's purchase methods. For more information, see the Purchase events section.
-- Messaging engagement events (such as email opens and push notification clicks): Tracked by Braze when you configure the corresponding messaging channels. These don't depend on SDK integration.
+- Email engagement events (such as email opens and link clicks): Tracked by Braze when you configure Braze email and enable email tracking.
+- Push engagement events (such as push notification opens and clicks): Tracked after you configure push in Braze and integrate push handling with the Braze SDK in your app.
 
 As a marketer, you can use standard events to understand user behavior and engagement. For example, session data shows how often users open your app, while purchase events help you track revenue over time.
 
