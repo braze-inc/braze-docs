@@ -22,12 +22,12 @@ By tracking these different types of events, you can gain a deeper understanding
 
 In Braze, standard events are predefined actions that Braze recognizes across its platform. Unlike [custom events](#custom-events), you don't need to create or name standard events—they're built in. However, not all standard events are tracked the same way.
 
-**Automatically tracked after SDK integration:**
+**The following events are automatically tracked after SDK integration:**
 
 - Session start
 - Session end
 
-**Tracked after additional setup:**
+**The following events are tracked after additional setup:**
 
 - [Purchase events](#purchase-events): Your development team logs these using the SDK's purchase methods. For more information, see the Purchase events section.
 - Email engagement events (such as email opens and link clicks): Tracked by Braze when you configure Braze email and enable email tracking.
