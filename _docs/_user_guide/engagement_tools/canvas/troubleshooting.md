@@ -56,7 +56,7 @@ Consider the following questions for your target audience:
 
 On Daylight Saving Time (DST) transition days, daily scheduled Canvases can run up to one hour earlier or later than usual. If your entry criteria relies on custom attributes or events with timestamps that fall within one hour of the scheduled entry time, users may not yet qualify on DST day because the attribute or event hasn't been logged.
 
-For example, suppose users typically receive a custom attribute update at 3 pm UTC and your Canvas runs daily at 3:30 pm UTC. On a spring-forward DST day, the Canvas may run at 2:30 pm UTC—before the attribute has been logged. If re-eligibility is turned off, users who entered on previous days can't re-enter, resulting in zero entries for that day.
+For example, suppose users typically receive a custom attribute update at 3:00 p.m. in your Canvas's time zone and your Canvas runs daily at 3:30 p.m. in that same time zone. On a spring-forward DST day, the Canvas may evaluate users up to one hour earlier than usual relative to that attribute update—before the attribute has been logged. If re-eligibility is turned off, users who entered on previous days can't re-enter, resulting in zero entries for that day.
 
 To avoid this, ensure your custom attribute or event updates occur more than one hour before the Canvas's scheduled entry time.
 
