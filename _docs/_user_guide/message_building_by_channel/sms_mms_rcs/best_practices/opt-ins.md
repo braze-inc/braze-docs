@@ -41,7 +41,8 @@ POST 'https://rest.iad-03.braze.com/subscription/status/set' \
   "subscription_group_id": "xyz-abcd-1234567",
   "subscription_state": "subscribed",
   "external_id": "external_identifier",
-  "phone": "+12223334444"
+  "phone": "+12223334444",
+  "use_double_opt_in_logic": true
 }
 '
 ```
@@ -60,3 +61,6 @@ Unknown macro: { "external_id" }
 }
 ```
 
+{% alert tip %}
+To enter users into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow when subscribing them through the REST API, include the `use_double_opt_in_logic` parameter set to `true` in your request. If this parameter is omitted, users are subscribed without receiving a double opt-in confirmation. This parameter is supported by the [`/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/), [`/v2/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), and [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoints.
+{% endalert %}

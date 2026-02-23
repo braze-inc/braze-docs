@@ -52,6 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
+   "use_double_opt_in_logic": (optional, boolean) defaults to false if omitted. Set to true to enter the user into the SMS double opt-in workflow.
    // SMS and RCS subscription group - you must include one of external_id or phone
  }
 ```
@@ -93,6 +94,7 @@ When creating new users using the [/users/track]({{site.baseurl}}/api/endpoints/
 | `external_id` | Required* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |
 | `email` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same workspace share the same email address, then Braze updates all users that share the email address with the subscription group changes. |
 | `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (up to 50). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then Braze updates all users that share the phone number with the same subscription group changes. |
+| `use_double_opt_in_logic` | Optional | Boolean | Defaults to `false` if omitted. Set to `true` to enter the user into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow when their subscription status is set to `subscribed`. If this parameter is omitted or set to `false`, users are subscribed without entering the double opt-in workflow. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example requests
