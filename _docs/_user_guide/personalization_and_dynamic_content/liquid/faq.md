@@ -87,7 +87,7 @@ For example, let's say you have a catalog called "Games" that has a selection ca
 
 Once the set conditions are met, your message can proceed. Using this logic is a helpful way to save time, instead of repeating Liquid blocks for different conditions.
 
-### Extra spacing in Content Block messages
+### Why is there extra spacing in messages that use Content Blocks?
 
 If you notice extra spacing in sent messages that use Content Blocks with Liquid, you may have unnecessary paragraph or line breaks within your conditional statements. Write your conditional statements on a single line rather than across multiple lines.
 
