@@ -59,7 +59,7 @@ To use this endpoint, you'll need to complete the following:
 
 | Parameter | Required | Data Type| Description  |
 |-----------|----------|----------|--------------|
-| `app_id` | Required | String | App [API identifier]({{site.baseurl}}/api/identifier_types/#the-app-identifier) retrieved from the [API Keys]({{site.baseurl}}/user_guide/administer/global/workspace_settings/apis_and_identifiers/) page.  |
+| `app_id` | Required | String | App [API identifier]({{site.baseurl}}/api/identifier_types/#the-app-identifier) retrieved from the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page.  |
 | `activity_id` | Required | String  | Define a custom string as your `activity_id`. You will use this ID when you wish to send update or end events to your Live Activity.  |
 | `activity_attributes_type`  | Required | String | The activity attributes type you define within `liveActivities.registerPushToStart` in your app.  |
 | `activity_attributes` | Required | Object  | The static attribute values for the activity type (such as the sports team names, which don't change). |

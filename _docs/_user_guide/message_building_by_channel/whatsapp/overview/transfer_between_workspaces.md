@@ -14,8 +14,8 @@ channel:
 
 ## Prerequisites
 
-- Confirm you have the [user permission]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/#list-of-permissions) "Manage Subscription Groups" in both the original and new workspaces.
-- The WABA can't cross multiple [Braze clusters]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints). This is unlikely to happen if you’re working within one company. 
+- Confirm you have the [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) "Manage Subscription Groups" in both the original and new workspaces.
+- The WABA can't cross multiple [Braze clusters]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints). This is unlikely to happen if you’re working within one company. 
 
 ## Transferring a phone number and subscription group
 

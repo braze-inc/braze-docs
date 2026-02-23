@@ -34,13 +34,13 @@ The SDK requests in-app messages from Braze servers on session start. To check i
 
 #### Check if messages are requested and returned
 
-1. Add yourself as a [test user]({{ site.baseurl }}/user_guide/administer/global/workspace_settings/developer_console/internal_groups_tab/#adding-test-users) on the dashboard.
+1. Add yourself as a [test user]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) on the dashboard.
 2. Set up an in-app message campaign targeted at your user.
 3. Ensure that a new session occurs in your application.
-4. Use the [event user logs]({{ site.baseurl }}/user_guide/administer/global/workspace_settings/developer_console/event_user_log_tab/#event-user-log-tab) to check that your device is requesting in-app messages on session start. Find the SDK Request associated with your test user's session start event.
+4. Use the [event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) to check that your device is requesting in-app messages on session start. Find the SDK Request associated with your test user's session start event.
   - If your app was meant to request triggered in-app messages, you should see `trigger` in the **Requested Responses** field under **Response Data**.
   - If your app was meant to request original in-app messages, you should see  `in_app` in the **Requested Responses** field under **Response Data**.
-5. Use the [event user logs]({{ site.baseurl }}/user_guide/administer/global/workspace_settings/developer_console/event_user_log_tab/#event-user-log-tab) to check if the correct in-app messages are being returned in the response data.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
+5. Use the [event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) to check if the correct in-app messages are being returned in the response data.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 #### Troubleshoot messages not being requested
 

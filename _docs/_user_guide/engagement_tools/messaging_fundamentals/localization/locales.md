@@ -17,7 +17,7 @@ description: "This article provides steps on how to use locales in your messages
 
 ### Step 1: Set up locales in your workspace {#workspace-setup}
 
-Before you can use locales and translation tags, you must first [add locales to your workspace]({{site.baseurl}}/user_guide/administer/global/workspace_settings/multi_language_settings).
+Before you can use locales and translation tags, you must first [add locales to your workspace]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings).
 
 ### Step 2: Add translation liquid tags to your message {#add-translation-tags}
 

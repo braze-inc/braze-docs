@@ -2128,7 +2128,7 @@ Use one of the following formats when writing links:
 </thead>
 <tbody>
 <tr><td style="width: 50%;">Get started with the Braze <a href="{{site.baseurl}}/user_guide/getting_started/web_sdk/">Web SDK</a>.</td><td style="width: 50%;">To find out your specific cluster or endpoint, <a href="{{site.baseurl}}/braze_support/">contact Support</a>.</td></tr>
-<tr><td style="width: 50%;">For more information, see <a href="{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/">Aborting Liquid Messages</a>.</td><td style="width: 50%;">When in doubt, you can always <a href="{{site.baseurl}}/user_guide/administer/personal/accessing_your_account/#resetting-your-password">reset your password</a>.</td></tr>
+<tr><td style="width: 50%;">For more information, see <a href="{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/">Aborting Liquid Messages</a>.</td><td style="width: 50%;">When in doubt, you can always <a href="{{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account/#resetting-your-password">reset your password</a>.</td></tr>
 </tbody>
 </table>
 {:/}

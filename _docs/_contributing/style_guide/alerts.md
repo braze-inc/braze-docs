@@ -86,7 +86,7 @@ Refer to the following examples for how and why each alert type is used in our d
 
 {% include alerts/important_alerts.md alert='BCC address billable emails' %}
 
-* **Article:** [Email Settings]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences/)
+* **Article:** [Email Settings]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/)
 * **Use case:**
   - Provides important feature caveat about the possibility of doubling billable emails
   - Redirects reader to contact their customer success manager as needed

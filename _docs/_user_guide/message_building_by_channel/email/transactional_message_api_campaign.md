@@ -61,7 +61,7 @@ To configure your transactional email campaign, follow these steps:
 4. Click **Save Campaign**, and you're set to begin your API campaign!
 
 {% alert note %}
-The one-click list-unsubscribe setting for transactional email campaigns defaults to **Use workspace default**, similar to other email campaigns. Since this is intended for transactional messaging, Braze doesn't add one-click unsubscribe. To add a one-click unsubscribe to this campaign type, [edit this setting]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences/#message-level-one-click-list-unsubscribe) under **Sending Info**.
+The one-click list-unsubscribe setting for transactional email campaigns defaults to **Use workspace default**, similar to other email campaigns. Since this is intended for transactional messaging, Braze doesn't add one-click unsubscribe. To add a one-click unsubscribe to this campaign type, [edit this setting]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#message-level-one-click-list-unsubscribe) under **Sending Info**.
 {% endalert %}
 
 ### Disallowed tags in transactional emails

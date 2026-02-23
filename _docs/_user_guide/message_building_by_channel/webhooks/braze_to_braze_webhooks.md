@@ -61,7 +61,7 @@ In this use case, you create two Canvases and use a Braze-to-Braze webhook to tr
 
 Refer to the following when configuring your webhook:
 
-- **Webhook URL:** Your [REST endpoint URL]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints/) followed by `/canvas/trigger/send`. For example, for the `US-06` instance, the URL would be `https://rest.iad-06.braze.com/canvas/trigger/send`.
+- **Webhook URL:** Your [REST endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) followed by `/canvas/trigger/send`. For example, for the `US-06` instance, the URL would be `https://rest.iad-06.braze.com/canvas/trigger/send`.
 - **Request Body:** Raw Text
 
 #### Request headers and method
@@ -103,6 +103,6 @@ When a user reaches this webhook step in the first Canvas, Braze triggers the se
 - Updates to the user profile incur [Data points]({{site.baseurl}}/user_guide/data/data_points/) that count toward your overall consumption, while triggering another message through the messaging endpoints does not.
 - To target [Anonymous users]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles), use `braze_id` instead of `external_id` in the request body of your webhook.
 - You can save your Braze-to-Braze webhook as a [Webhook template]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) for reuse.
-- You can check the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/) to view and troubleshoot webhook failures.
+- You can check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) to view and troubleshoot webhook failures.
 
 

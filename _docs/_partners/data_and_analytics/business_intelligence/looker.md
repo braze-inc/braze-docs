@@ -150,7 +150,7 @@ In Braze, to create a segment of these flagged users, navigate to **Segments** u
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
 ## Troubleshooting
-If you're having issues with the Looker Action, add a test user to [internal groups]({{site.baseurl}}/user_guide/administer/global/workspace_settings/developer_console/internal_groups_tab/) and check that the following:
+If you're having issues with the Looker Action, add a test user to [internal groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) and check that the following:
 
 * The API key has the `users.track` permissions.
 * The correct REST endpoint is entered, such as `https://rest.iad-01.braze.com`.

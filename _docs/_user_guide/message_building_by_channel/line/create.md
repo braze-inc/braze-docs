@@ -37,7 +37,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 2. Select **LINE**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [Tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of.
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 

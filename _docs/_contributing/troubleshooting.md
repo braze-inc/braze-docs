@@ -103,7 +103,7 @@ If a [cross-reference link]({{site.baseurl}}/contributing/content_management/cro
 A URL containing this string will be similar to the following:
 
 ```plaintext
-https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/%7B%7Bsite.baseurl%7D%7D/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log
+https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/%7B%7Bsite.baseurl%7D%7D/user_guide/administrative/app_settings/message_activity_log_tab
 ```
 
 If you find this string in the URL, one or more of your cross-reference links are surrounded in [Liquid raw tags](https://shopify.dev/docs/api/liquid/tags/raw).

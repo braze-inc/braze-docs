@@ -371,7 +371,7 @@ Live Activity update tokens expire after eight hours.
 
 #### How do I know if Live Activities has errors?
 
-Any Live Activity errors will be logged in the Braze dashboard in the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/), where you can filter by "LiveActivity Errors".
+Any Live Activity errors will be logged in the Braze dashboard in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/), where you can filter by "LiveActivity Errors".
 
 #### After sending a push-to-start notification, why haven't I received my Live Activity?
 

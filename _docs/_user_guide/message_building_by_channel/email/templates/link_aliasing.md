@@ -54,7 +54,7 @@ To view all of your tracked link aliases, do the following:
 2. Select the **Link Aliasing Settings** tab.
 
 {% alert important %}
-If you are using the [older navigation]({{site.baseurl}}/user_guide/administer/personal/the_braze_dashboard/), these settings are under **Manage Settings**.
+If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), these settings are under **Manage Settings**.
 {% endalert %}
 
 Here, you can sort, search, and turn off tracking for link aliases.

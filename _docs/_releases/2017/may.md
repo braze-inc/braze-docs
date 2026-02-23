@@ -10,11 +10,11 @@ description: "This article contains release notes for May 2017."
 
 ## Update to Internal Groups
 
-We've added new functionality to Internal Groups for Seed groups, making it easy for you to test your email. Now, you can add a bulk upload of users, send test emails in real-time with personalized user data, and use message templates. Learn more about Internal Groups [here]({{site.baseurl}}/user_guide/administer/global/workspace_settings/developer_console/#content-test-groups).
+We've added new functionality to Internal Groups for Seed groups, making it easy for you to test your email. Now, you can add a bulk upload of users, send test emails in real-time with personalized user data, and use message templates. Learn more about Internal Groups [here]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/#content-test-groups).
 
 ## Update to tags
 
-You can now nest your Segment Tags to help better organize your dashboard. Learn more about [Segment Tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/#campaign-segment-and-news-feed-card-tags).
+You can now nest your Segment Tags to help better organize your dashboard. Learn more about [Segment Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#campaign-segment-and-news-feed-card-tags).
 
 ## Update to in-app messages configuration
 

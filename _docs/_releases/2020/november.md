@@ -14,7 +14,7 @@ description: "This article contains release notes for November 2020."
 
 ## Braze Product Portal
 
-The [Braze Product Portal]({{site.baseurl}}/user_guide/administer/personal/product_portal/#product-portal-) contains the Braze product roadmap and opportunity for users to submit ideas. You can also see which features have been recently released. The product portal can be found in the Braze dashboard under **Resources**.
+The [Braze Product Portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/#product-portal-) contains the Braze product roadmap and opportunity for users to submit ideas. You can also see which features have been recently released. The product portal can be found in the Braze dashboard under **Resources**.
 
 ## iOS Content Card implementation guide
 

@@ -38,7 +38,7 @@ Create a file called `AppboyConfiguration.xml` in the root directory of your pro
     </AppboyConfig>
 ```
 
->  Be sure to update `YOUR_API_KEY_HERE` with your API key which can be found on the [API Keys]({{site.baseurl}}/user_guide/administer/global/workspace_settings/apis_and_identifiers/) page.
+>  Be sure to update `YOUR_API_KEY_HERE` with your API key which can be found on the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page.
 
 Once you've added that snippet, be sure to modify the following file properties for `AppboyConfiguration.xml`
 

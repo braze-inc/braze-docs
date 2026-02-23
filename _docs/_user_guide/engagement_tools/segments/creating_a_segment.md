@@ -22,8 +22,8 @@ Select **Create Segment** to begin building your segment. Name your segment by d
 
 Optionally, you can do the following:
 - Add a description to the segment to provide more details about the intention of this audience and leave notes for other team members to refer back to.
-- Add a [team]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) to your segment.
-- Add [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) to your segment for further organization.
+- Add a [team]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) to your segment.
+- Add [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) to your segment for further organization.
 
 ![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
 

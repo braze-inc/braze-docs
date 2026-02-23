@@ -75,7 +75,7 @@ Replace the following:
 
 | Placeholder     | Description      |
 |---------------------|---------------------|
-| `BRAZE_API_ENDPOINT`    | The Braze REST endpoint URL of your current Braze instance. For more information, see [Rest API keys]({{site.baseurl}}/user_guide/administer/global/workspace_settings/apis_and_identifiers/#rest-api-keys). |
+| `BRAZE_API_ENDPOINT`    | The Braze REST endpoint URL of your current Braze instance. For more information, see [Rest API keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys). |
 | `BRAZE_API_KEY`         | Your Braze REST API key with the `users.track` permission. |                                                                                                                                    | `HOSTNAME`                  | The hostname of your current PARTNER_NAME instance.  |                                                                                                                         
 | `PARTNER_NAME_API_TOKEN`       | Your PARTNER_NAME API token.  |                                                                                                                                        {: .reset-td-br-1 .reset-td-br-2 role=“presentation”}
 

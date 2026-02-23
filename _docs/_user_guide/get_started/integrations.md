@@ -26,7 +26,7 @@ So, what are they doing when they integrate Braze with your app or site? Glad yo
 The Braze SDK (Software Development Kit) is how we send and get information to and from your app or site. Your engineers are, essentially, tying our apps together. To do this, they need a few pieces of key information:
 
 * Your [API keys]({{site.baseurl}}/api/api_key/)
-* Your [SDK endpoint]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints/)
+* Your [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
   * Braze no longer gives out custom endpoints so use the predefined SDK endpoints. If you have been given a pre-existing custom endpoint, Here, you can find the setup steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
 
 You can either give this information to them directly, or you can give them access to Braze by creating an account for them. 
@@ -64,7 +64,7 @@ So, what do you need to do to get them this information?
 1. Work with your marketing team to define campaigns, goals, attributes, and events you need to track. Define those use cases and share them with your teams.
 2. Define your custom data requirements ([custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/), [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/), etc.).
 3. From there, discuss how that data should be tracked (triggered through the SDK, etc.).
-4. Define how many [workspaces]({{site.baseurl}}/user_guide/administer/global/create_and_manage_workspaces/) you need. Your engineers will need to know how to [test and configure]({{site.baseurl}}/user_guide/getting_started/workspaces/) these workspaces.
+4. Define how many [workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/) you need. Your engineers will need to know how to [test and configure]({{site.baseurl}}/user_guide/getting_started/workspaces/) these workspaces.
 
 Once you discover all of this information, share it with your engineer. They'll take that information and implement your [custom data]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/). You might even need to [import some users]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/). You should also be aware of [event naming conventions]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
 

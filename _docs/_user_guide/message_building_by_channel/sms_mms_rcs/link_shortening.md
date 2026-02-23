@@ -90,7 +90,7 @@ For a full list of request parameters, go to [request parameters]({{site.baseurl
 
 ## Testing
 
-Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS or RCS message to [content test groups]({{site.baseurl}}/user_guide/administer/global/workspace_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. 
+Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS or RCS message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. 
 
 This preview updates with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/) also update to reflect the rendered personalization and the shortened URL.
 

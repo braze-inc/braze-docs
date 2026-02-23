@@ -74,7 +74,7 @@ At a workspace level, you can update user permissions to allow or limit the acce
 
 ### Permissions for teams and workspaces
 
-To only allow certain users to access and use specific Canvas templates, [add a team]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) to the templates, then assign team-level "Access Campaigns, Canvases, Content Cards, Content Blocks, Feature Flags, Segments, Media Library, and Preference Center" permissions.
+To only allow certain users to access and use specific Canvas templates, [add a team]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) to the templates, then assign team-level "Access Campaigns, Canvases, Content Cards, Content Blocks, Feature Flags, Segments, Media Library, and Preference Center" permissions.
 
 If you assign any of the following permissions at a team level, but not a workspace level, you can only do the following assigned to your team:
 

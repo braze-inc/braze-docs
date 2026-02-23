@@ -87,7 +87,7 @@ Your team administrator should add you (and all other team members who need acce
 
 ### Workspaces and API keys
 
-Your team administrator will also create different [workspaces]({{site.baseurl}}/user_guide/administer/global/create_and_manage_workspaces/). Workspaces group your data—users, segments, API keys—into one location. As a best practice, we suggest only putting different versions of the same or very similar apps together under one workspace. 
+Your team administrator will also create different [workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/). Workspaces group your data—users, segments, API keys—into one location. As a best practice, we suggest only putting different versions of the same or very similar apps together under one workspace. 
 
 Importantly, workspaces provide API keys for multiple platforms (such as iOS and Android). You'll use the correlated API keys to associate SDK data with a particular workspace. Navigate to your workspaces to access the API key for each of your apps. Make sure each API key has the correct permissions to perform the work you've scoped. See the [API provisioning article]({{site.baseurl}}/api/basics/#rest-api-key) for details.
 

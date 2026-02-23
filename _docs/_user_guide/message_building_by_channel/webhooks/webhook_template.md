@@ -30,7 +30,7 @@ For example, if you're using [LINE]({{site.baseurl}}/user_guide/message_building
 
 1. Give your webhook template a unique name.
 2. (Optional) Add a template description to explain how this template is intended to be used.
-3. Add [teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed to help find and filter for your template.
+3. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed to help find and filter for your template.
 
 ## Step 4: Build your template
 

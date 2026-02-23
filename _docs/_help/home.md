@@ -23,7 +23,7 @@ resources_list:
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
     image: /assets/img/braze_icons/youtube.svg
   - name: Braze Support
-    link: /docs/user_guide/administer/personal/braze_support/
+    link: /docs/user_guide/administrative/access_braze/support/
     image: /assets/img/braze_icons/mail-01.svg
 
 popular_topic_list:

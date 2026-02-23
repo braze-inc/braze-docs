@@ -268,7 +268,7 @@ Campaigns
 
 Braze will automatically determine a user's time zone from their device. This is designed to support time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company's time zone as their default time zone until they are recognized in your app by the SDK.
 
-You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administer/global/company_settings/).
+You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/).
 
 {% endapi %}
 {% api %}

@@ -67,7 +67,7 @@ This won't work if you add your segment in the **Additional Filters** section th
 {% endtabs %}
 
 {% alert tip %}
-For email campaigns, you can target Seed Groups under the **Seed Groups** section. Note that Seed Groups aren't available for API campaigns, although you can include Seed Groups via an API-triggered entry in a campaign. For more information, see [Seed Groups]({{site.baseurl}}/user_guide/administer/global/user_management/internal_groups/#seed-groups).
+For email campaigns, you can target Seed Groups under the **Seed Groups** section. Note that Seed Groups aren't available for API campaigns, although you can include Seed Groups via an API-triggered entry in a campaign. For more information, see [Seed Groups]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#seed-groups).
 {% endalert %}
 
 ### Step 2: Test your audience

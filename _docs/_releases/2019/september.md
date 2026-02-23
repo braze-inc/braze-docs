@@ -10,7 +10,7 @@ description: "This article contains release notes for September 2019."
 
 ## Braze app within OneLogin
 
-Customers will be able to simply search and select Braze within [OneLogin]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/onelogin/) for SP or IdP Initiated login. This means that customers will not have to add a custom application within OneLogin. As a result, this should pre-populate certain settings like attributes which we have seen come up since launching SAML SSO.
+Customers will be able to simply search and select Braze within [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/) for SP or IdP Initiated login. This means that customers will not have to add a custom application within OneLogin. As a result, this should pre-populate certain settings like attributes which we have seen come up since launching SAML SSO.
 
 ## Rokt calendar partnership
 

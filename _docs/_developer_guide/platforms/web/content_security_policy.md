@@ -36,12 +36,12 @@ braze.initialize(apiKey, {
 ### `connect-src` {#connect-src}
 
 {% alert warning %}
-Your URL must match the [API SDK endpoint]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints/) of your chosen `baseUrl` initialization option.
+Your URL must match the [API SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) of your chosen `baseUrl` initialization option.
 {% endalert %}
 
 |URL|Information|
 |---|-----------|
-|`connect-src https://sdk.iad-01.braze.com`|Allows the SDK to communicate with Braze APIs. Change this URL to match the [API SDK endpoint]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints/) for your chosen `baseUrl` initialization option.|
+|`connect-src https://sdk.iad-01.braze.com`|Allows the SDK to communicate with Braze APIs. Change this URL to match the [API SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) for your chosen `baseUrl` initialization option.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### `script-src` {#script-src}

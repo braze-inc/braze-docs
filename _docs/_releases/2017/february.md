@@ -22,6 +22,6 @@ For more personalized user targeting, you can now use "Last Received In-App Mess
 
 ## Event user log upgrade
 
-It's now easier for you to see what is happening in your SDK integration with our upgraded [event user logs]({{site.baseurl}}/user_guide/administer/global/workspace_settings/developer_console/event_user_log_tab/#event-user-log-tab).
+It's now easier for you to see what is happening in your SDK integration with our upgraded [event user logs]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab).
 
 

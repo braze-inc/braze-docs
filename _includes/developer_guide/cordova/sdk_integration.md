@@ -58,7 +58,7 @@ Replace the following:
 
 | Value                 | Description                                                                                                                      |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `BRAZE_API_KEY`       | Your [Braze REST API key]({{site.baseurl}}/user_guide/administer/global/workspace_settings/apis_and_identifiers/#rest-api-keys).              |
+| `BRAZE_API_KEY`       | Your [Braze REST API key]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys).              |
 | `CUSTOM_API_ENDPOINT` | A custom API endpoint. This endpoint is used to route your Braze instance data to the correct App Group in your Braze dashboard. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 

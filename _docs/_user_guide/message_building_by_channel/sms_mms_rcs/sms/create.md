@@ -28,7 +28,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 2. Select **SMS**, or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
-4. Add [teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed.
+4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 6. Select a [subscription group]({{site.baseurl}}/sms_rcs_subscription_groups/) to ensure you're sending your message to the proper users. When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign. Only long codes and short codes that belong to that subscription group will be used to send SMS to target users.
@@ -86,7 +86,7 @@ The final appearance of right-to-left messages depends largely on how service pr
 
 ## Step 3: Preview and test your message
 
-Braze always recommends previewing and testing your message before sending. Switch to the **Test** tab to send a test SMS to [content test groups]({{site.baseurl}}/user_guide/administer/global/workspace_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
+Braze always recommends previewing and testing your message before sending. Switch to the **Test** tab to send a test SMS to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
 ![Previewing SMS copy from the Test tab of the composer. In the profile section, the First Name field is set to "James". In the preview section, the SMS now reads "Hi James, we appreciate your support!"]({% image_buster /assets/img/sms_campaign_test.png %})
 

@@ -1674,7 +1674,7 @@ var ticket_lookuptable = {
             'SAML and Single Sign On' : {
               'ShowSubmit': true,
               'LinksTitle': ['SAML and Single Sign On'],
-              'Links' : ['{{site.baseurl}}/user_guide/administer/global/saml__single_sign_on']
+              'Links' : ['{{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on']
             },
             'Other' : {
               'ShowSubmit': true,
@@ -1765,7 +1765,7 @@ var ticket_lookuptable = {
         'Billing' : {
           'ShowSubmit': true,
           'LinksTitle': ['Billing'],
-          'Links': ['{{site.baseurl}}/user_guide/administer/global/billing/']
+          'Links': ['{{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/']
         },
         'Other' :{
           'ShowSubmit': true,

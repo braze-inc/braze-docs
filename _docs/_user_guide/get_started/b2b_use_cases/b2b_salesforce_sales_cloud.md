@@ -185,7 +185,7 @@ Now your Canvas flow will update users who’ve crossed your MQL threshold!
 
 ## Troubleshooting
 
-These workflows have limited debugging capability within Salesforce, so we recommend referring to the Braze [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log#message-activity-log) to find out why a Webhook failed and if any errors occurred.
+These workflows have limited debugging capability within Salesforce, so we recommend referring to the Braze [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab#message-activity-log) to find out why a Webhook failed and if any errors occurred.
 
 For example, an error caused by an invalid URL used for oAuth token retrieval would display as `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL`.
 

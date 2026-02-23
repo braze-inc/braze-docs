@@ -40,7 +40,7 @@ import { initialize, changeUser, openSession } from "@braze/vega-sdk";
 
 ### Step 2: Initialize the SDK
 
-After the Braze Vega SDK is added to your project, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard.
+After the Braze Vega SDK is added to your project, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard.
 
 {% alert important %}
 You must await or resolve the `changeUser` promise before calling other Braze methods, or events and attributes may be set on the incorrect user.

@@ -88,7 +88,7 @@ After Contact Traits is activated by your account manager:
 
 [1]: https://www.simondata.com
 [2]: {{site.baseurl}}/api/basics/#creating-and-managing-rest-api-keys
-[3]: {{site.baseurl}}/user_guide/administer/personal/sdk_endpoints
+[3]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
 [4]: https://docs.simondata.com/docs/campaigns-flows
 [5]: https://docs.simondata.com/docs/campaigns-journeys-two
 [6]: https://docs.simondata.com

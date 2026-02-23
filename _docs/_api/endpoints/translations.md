@@ -56,11 +56,11 @@ guide_menu_list2:
 
 ## How our translation endpoints work
 
-Our translation endpoints work with [multi-language composition]({{site.baseurl}}/user_guide/administer/global/workspace_settings/multi_language_settings/), where a message can have different versions that can be rendered depending on the user receiving the message.
+Our translation endpoints work with [multi-language composition]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/), where a message can have different versions that can be rendered depending on the user receiving the message.
 
 ### Prerequisites
 
-Before using these endpoints, you must [add your locales]({{site.baseurl}}/user_guide/administer/global/workspace_settings/multi_language_settings/#add-a-locale).
+Before using these endpoints, you must [add your locales]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/#add-a-locale).
 
 ### How to test your translations
 
@@ -71,7 +71,7 @@ There are two ways you can validate translation support using the API and the Br
 
 Before testing updating translations, you must:
 
-1. [Add your locales]({{site.baseurl}}/user_guide/administer/global/workspace_settings/multi_language_settings/#add-a-locale).
+1. [Add your locales]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/#add-a-locale).
 2. Create a message and use translation tags where appropriate.
 3. Save the message.
 4. Select the locales to be included.

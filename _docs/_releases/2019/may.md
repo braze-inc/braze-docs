@@ -39,7 +39,7 @@ You can now [retrieve data from Roku devices]({{site.baseurl}}/developer_guide/s
 
 ## Notification preferences for Canvas or campaign updates
 
-This [new notification]({{site.baseurl}}/user_guide/administer/global/company_settings/notification_preferences/#notification-preferences) will alert you via email when a campaign or Canvas is activated, updated, reactivated, or deactivated. Activate this in **Notification Preferences** in your Braze account.
+This [new notification]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences) will alert you via email when a campaign or Canvas is activated, updated, reactivated, or deactivated. Activate this in **Notification Preferences** in your Braze account.
 
 ## Jampp technology partner documentation
 

@@ -12,7 +12,7 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 
 ### Braze permissions
 
-To manage feature flags in the dashboard, you'll either need to be an Administrator, or have the following [permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/):
+To manage feature flags in the dashboard, you'll either need to be an Administrator, or have the following [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/):
 
 | Permission                                                                    | What you can do                           |
 |-------------------------------------------------------------------------------|-------------------------------------------|
