@@ -72,7 +72,7 @@ For a user to be eligible for entry, they must be eligible for both checks. For 
 - New York on August 6, 2021 at 9 pm
 - New York on August 7, 2021 at 2 pm
 
-Note that the user needs to be in the segment for 24 hours before the launch. If the user is not eligible in the first check, then Braze will not attempt the second check.
+The user must be in the segment for 24 hours before the launch. If the user is not eligible in the first check, then Braze does not attempt the second check.
 
 For example, if a campaign is scheduled to be delivered at 7 pm UTC, we start queuing the campaign sends as soon as a time zone is identified (such as Samoa). This means we're getting ready to send the message, not sending the campaign. If users don't match any filters when we check eligibility, they won't fall into the target audience.
 
@@ -105,7 +105,7 @@ Local time zone delivery may miss users in this segment based on the delivery ti
 
 ### What changes can I make to scheduled campaigns ahead of launch?
 
-When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can't edit conversion events after launch.
+When the campaign is scheduled, you must make edits to anything other than the message composition before we enqueue the messages to send. As per all campaigns, you can't edit conversion events after launch.
 
 ### I updated my scheduled campaign. Why didn't it launch?
 
@@ -122,10 +122,10 @@ We recommend making changes to messages within the following times:
 
 If you make changes to your message outside of these recommendations, you may not see the updates reflected in the message sent. For example, if you edit the send time three hours before a campaign is scheduled to send at 12 pm local time, the following may occur:
 
-- Braze will not send messages to any users who have missed the send time by more than one hour.
+- Braze does not send messages to any users who have missed the send time by more than one hour.
 - Pre-enqueued messages may still be sent at the originally enqueued time, rather than the adjusted time.
 
-If you need to make changes, we recommend stopping the current campaign (this will cancel any enqueued messages). You can then duplicate the campaign, make the changes as necessary, and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign. Make sure to re-adjust campaign schedule times to allow for time zone sending.
+If you need to make changes, we recommend stopping the current campaign (this cancels any enqueued messages). You can then duplicate the campaign, make the changes as necessary, and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign. Make sure to re-adjust campaign schedule times to allow for time zone sending.
 
 ### Why does the number of users entering a campaign not match the expected number?
 
@@ -137,7 +137,7 @@ For further assistance with campaign troubleshooting, be sure to contact Braze S
 
 ### What is the difference between the CSV Export User Data and CSV Export Email Address options on my campaign analytics page?
 
-Selecting the **CSV Export Email Addresses** option will only download data for users with email addresses. For example, if you have a segment of 100,000 users, but only 50,000 of those users have email addresses, and you click **CSV Export Email Addresses**, then you should expect to see only 50,000 rows of data in the CSV file. In comparison, selecting **CSV Export User Data** will export all user data.
+Selecting the **CSV Export Email Addresses** option downloads data for only users with email addresses. For example, if you have a segment of 100,000 users, but only 50,000 of those users have email addresses, and you click **CSV Export Email Addresses**, the export contains only 50,000 rows of data. In comparison, selecting **CSV Export User Data** exports all user data.
 
 ### Can I search for a campaign by its API identifier?
 
