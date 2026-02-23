@@ -1,5 +1,5 @@
 ---
-nav_title: Braze overview
+nav_title: Get started
 article_title: Getting Started&#58; Braze Overview
 page_order: 1
 page_type: reference
