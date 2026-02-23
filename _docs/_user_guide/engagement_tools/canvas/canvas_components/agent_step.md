@@ -23,7 +23,7 @@ You can then use this variable in three main ways:
 
 - **Decisioning:** Route users down different Canvas paths based on the agent’s response. For example, a lead scoring agent might return a number between 1 and 10. You can use this score to decide whether to continue messaging a user or drop them from the journey.
 - **Personalization:** Insert the agent’s response directly into a message. For example, an agent could analyze customer feedback and generate an empathetic follow-up email that references the customer’s comment and suggests a resolution.
-- **Processing user data**: Analyze and standardize your user data, then store it on the user profile or send it using a webhook.
+- **Processing user data**: Analyze and standardize your user data, then store it on the user profile or send it using a webhook. For example, an agent could return a sentiment score or product affinity assignment. You can store that data to a user profile for future usage.
 
 ## Prerequisite
 
