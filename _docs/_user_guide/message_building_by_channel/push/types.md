@@ -66,7 +66,7 @@ glossaries:
       - iOS
       - Android
   - name: "Background Push Notifications (Silent Push)"
-    description: "A push notification that is not visible to the end user. Background push and silent push refer to the same concept: a non-visible notification typically used internally to handle features like uninstall tracking, geofences, and data syncing. A background-enabled push token is required. For more information, see <a href=\"/docs/developer_guide/push_notifications/silent\">Silent push notifications</a>."
+    description: "A push notification that is not visible to the end user, typically used internally to handle features like uninstall tracking, geofences, and data syncing. Background push and silent push refer to the same concept. A background-enabled push token is required. For more information, see <a href=\"/docs/developer_guide/push_notifications/silent\">Silent push notifications</a>."
     tags:
       - Web
       - Android
