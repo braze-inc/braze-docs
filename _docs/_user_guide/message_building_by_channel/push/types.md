@@ -53,7 +53,7 @@ glossaries:
       - iOS
       - Android
   - name: "Provisional Push Notifications for iOS"
-    description: "Introduced by Apple in iOS 12, provisional authorization automatically occurs on install for iOS apps, allowing brands to send silent notifications without displaying a push prompt to users. When the silent push is sent and viewed in the device's notification tray, users will be given the option to allow or discontinue push notifications."
+    description: "Introduced by Apple in iOS 12, provisional authorization automatically occurs on install for iOS apps, allowing brands to send notifications without displaying a push prompt to users. These notifications are delivered quietly to the notification center, where users can choose to allow or discontinue push notifications."
     tags:
       - iOS
   - name: "HTML Push Notifications"
@@ -65,8 +65,8 @@ glossaries:
     tags:
       - iOS
       - Android
-  - name: "Background or Silent Push Notifications"
-    description: "Push notifications that are not rendered on the device. Usually used to send packets of information down to the app for background processes and uninstall tracking. A background-enabled push token is required for a background or silent push to be sent."
+  - name: "Background Push Notifications (Silent Push)"
+    description: "A push notification that is not visible to the end user. Background push and silent push refer to the same concept: a non-visible notification typically used internally to handle features like uninstall tracking, geofences, and data syncing. A background-enabled push token is required. For more information, see <a href=\"/docs/developer_guide/push_notifications/silent\">Silent push notifications</a>."
     tags:
       - Web
       - Android
