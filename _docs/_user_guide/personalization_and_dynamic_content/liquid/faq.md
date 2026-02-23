@@ -86,3 +86,15 @@ For example, let's say you have a catalog called "Games" that has a selection ca
 {% endraw %}
 
 Once the set conditions are met, your message can proceed. Using this logic is a helpful way to save time, instead of repeating Liquid blocks for different conditions.
+
+### Extra spacing in Content Block messages
+
+If you notice extra spacing in sent messages that use Content Blocks with Liquid, you may have unnecessary paragraph or line breaks within your conditional statements. Write your conditional statements on a single line rather than across multiple lines.
+
+#### Example
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${has_discount}}} == true %} Discounted Item {% elsif {{custom_attribute.${is_new_arrival}}} == true %}New Arrival{% else %} Regular Item {% endif %}
+```
+{% endraw %}
