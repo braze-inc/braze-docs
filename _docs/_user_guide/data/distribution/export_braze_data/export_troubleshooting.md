@@ -20,7 +20,7 @@ When you don't have a storage partner marked as your default export destination,
 ## CSV exports  
 When you export a CSV from the dashboard, Braze emails a download link to the logged-in user. That link points to a ZIP file hosted in Braze's S3 bucket. Inside the ZIP are multiple smaller files that together make up your export.  
 
-You need to be logged into the Braze dashboard to use the link, and the file will only be available for four hours. After that, the link no longer works and the data is deleted. If you run into repeated failures with very large exports (over 500,000 users), the export may fail. In that case, try splitting your export into smaller groups or fields, or consider setting up a storage partner.  
+You must be logged in to the Braze dashboard to use the link, and the file is available for only four hours. After that, the link no longer works and the data is deleted. If you run into repeated failures with very large exports (over 500,000 users), the export may fail. In that case, try splitting your export into smaller groups or fields, or consider setting up a storage partner.  
 
 ### Common errors
 
