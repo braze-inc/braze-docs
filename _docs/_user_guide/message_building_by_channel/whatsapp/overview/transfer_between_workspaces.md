@@ -1,7 +1,7 @@
 ---
 nav_title: Transfer between workspaces
 article_title: Transfer phone numbers and subscription groups between workspaces
-page_order: 4
+page_order: 5
 description: "This reference article covers how to transfer your WhatsApp phone number and subscription groups between workspaces."
 page_type: reference
 channel:

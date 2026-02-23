@@ -12,10 +12,10 @@ description: "이 문서에서는 캔버스 엔드포인트의 보기 번역에 
 {% api %}
 # 캔버스에 대한 번역 보기
 {% apimethod get %}
-/canvas/translations/?locale_id={locale_id}
+/canvas/translations
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 캔버스에 대한 번역된 메시지를 미리 볼 수 있습니다.
+> 이 엔드포인트를 사용하여 캔버스에 대한 번역된 메시지를 미리 볼 수 있습니다. 번역 기능에 대한 자세한 내용은 [메시지의 로케일]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)을(를) 참조하십시오.
 
 {% alert important %}
 이 엔드포인트는 현재 얼리 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
@@ -33,18 +33,21 @@ description: "이 문서에서는 캔버스 엔드포인트의 보기 번역에 
 
 | 매개변수              | 필수 | 데이터 유형 | 설명                        |
 |------------------------|----------|-----------|------------------------------------|
-| `workflow_id`          | 필수 | 문자열    | 캔버스의 ID입니다.              |
-| `step_id`              | 필수 | 문자열    | 캔버스 단계의 ID입니다.        |
-| `message_variation_id` | 필수 | 문자열    | 메시지 변형을 위한 ID입니다. |
-| `locale_id`            | 필수 | 문자열    | 로캘의 ID입니다.              |
+| `workflow_id`          | Required | 문자열    | 캔버스의 ID입니다.              |
+| `step_id`              | Required | 문자열    | 캔버스 단계의 ID입니다.        |
+|`message_variation_id`| Required | 문자열 | 메시지 변형의 ID입니다. |
+| `locale_id`            | Optional | 문자열    | 로케일의 ID (UUID)입니다.       |
+| `post_launch_draft_version`| 선택 사항 | 부울 | `true`이(가) 최신 라이브 게시 버전 대신 최신 초안 버전을 반환할 때입니다. 기본적으로 `false`는 최신 라이브 버전을 반환합니다.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-모든 번역 ID는 **다국어 지원** 설정이나 요청 응답에서 찾을 수 있는 UUID(범용 고유 식별자)로 간주된다는 점에 유의하세요.
+{% alert note %}
+모든 번역 ID는 보편적 고유 식별자 (UUID)로 간주되며, GET 엔드포인트의 응답에서 찾을 수 있습니다.
+{% endalert %}
 
 ## 예시 요청
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/?locale_id={locale_uuid}' \
+curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/?workflow_id={workflow_id}&step_id={step_id}&message_variation_id={message_variation_id}&locale_id={locale_uuid}&post_launch_draft_version=true' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -58,8 +61,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations
 `200` 상태 코드는 다음과 같은 응답 헤더와 본문을 반환할 수 있습니다.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": [
         {
@@ -93,21 +94,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 	]
 }
 ```
-
-## 문제 해결
-
-다음 표에는 반환될 수 있는 오류와 관련 문제 해결 단계가 나와 있습니다.
-
-| 오류 메시지                           | 문제 해결                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_CAMPAIGN_ID`                   | 캠페인 ID가 번역 중인 캠페인과 일치하는지 확인합니다.                   |
-| `INVALID_LOCALE_ID`                     | 메시지 번역에 로캘 ID가 있는지 확인합니다.                         |
-| `INVALID_MESSAGE_VARIATION_ID`          | 메시지 ID가 올바른지 확인합니다.                                                |
-| `MESSAGE_NOT_FOUND`                     | 번역할 메시지를 확인합니다.                                           |
-| `LOCALE_NOT_FOUND`                      | 다국어 설정에 로캘이 있는지 확인합니다.                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | 작업 공간에 대한 다국어 설정이 켜져 있지 않습니다.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | 이메일, 푸시 및 인앱 메시지 캠페인 또는 이메일이 포함된 캔버스 메시지만 번역할 수 있습니다.             |
-| `UNSUPPORTED_CHANNEL`                   | 이메일, 푸시 또는 인앱 메시지 캠페인 또는 캔버스 메시지만 번역할 수 있습니다. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

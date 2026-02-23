@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: Email FAQ
-page_order: 14
+page_order: 15
 description: "This page provides answers to frequently asked questions about email messaging."
 channel: email
 
@@ -81,4 +81,30 @@ Braze tracks unsubscribe links if the following Liquid is used within emails: {%
 No, Braze does not offer this functionality. This is because an increasing majority of email is opened on mobile devices and modern email clients, which render images and content without any problems.
 
 **Workaround:** To achieve this same result, you can host the content of your email on an external landing page (such as your website), which can then be linked to from the email campaign you are building using the **Link** tool when editing the email body.
+
+### Why are my users being auto-unsubscribed by email security software?
+
+Some corporate email security tools (such as Barracuda, Proofpoint, and similar services) pre-fetch or scan all URLs in incoming emails, including unsubscribe links. This can cause unintended unsubscribes when the security tool follows the one-click list-unsubscribe link.
+
+To mitigate this:
+
+- **Recommend recipients allowlist your sending domain:** Work with the affected recipients' IT teams to add your sending domain and Braze tracking domains to their email security allow list.
+- **Use a preference center:** Instead of a direct unsubscribe link, use a [preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) that requires user interaction to confirm the unsubscribe action. Security scanners typically won't complete multi-step forms.
+- **Review unsubscribe logs:** Check the `User-Agent` header and IP address in your Currents unsubscribe event data to identify patterns consistent with automated scanning (such as consistent `User-Agent` headers across multiple unsubscribes).
+
+For more details on how server-side scanning can affect email metrics, refer to [Handling increases in click rates]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#handling-increases-in-click-rates).
+
+### Why has my machine open rate changed unexpectedly?
+
+[Machine opens]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#machine-opens) are triggered by email security features such as Apple Mail Privacy Protection (MPP), which pre-loads email content (including the tracking pixel) without the user physically opening the email. Machine open rates can fluctuate based on:
+
+- Changes in the proportion of your audience using Apple Mail or other privacy-enabled email clients.
+- Updates to email provider privacy features or bot detection behaviors.
+- Changes in your audience segmentation or targeting.
+
+Machine open percentages are not a reliable measure of actual engagement. For a more accurate view of email performance, focus on *Other Opens* (non-machine opens) and *Unique Clicks*. You can also compare these metrics over time using the [Email Performance Dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard/).
+
+### Does the *Unique Opens* metric include machine opens?
+
+No. *Unique Opens* count only [Other Opens]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#other-opens), which excludes emails identified as machine opens. *Machine Opens* are tracked separately. In the **Campaign Analytics** view and **Report Builder**, you can view both metrics independently.
 

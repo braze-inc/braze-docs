@@ -1,6 +1,6 @@
 ---
-nav_title: Apple Private Relayにメールを送信する
-article_title: Apple Private Relay へのメール送信
+nav_title: Apple Private Relayにメールを送る
+article_title: Apple Private Relayにメールを送る
 alias: /email_relay/
 page_order: 0
 description: "この記事では、Apple Private Relayにメールを送信する手順について説明する。"
@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# Apple Private Relayにメールを送信する
+# Apple Private Relayにメールを送る
 
 > Apple のシングルサインオン (SSO) 機能は、ユーザーがメールアドレスを共有したり (`example@icloud.com`)、個人のメールアドレスではなくブランドに提供されるものをマスキングしてメールアドレスを隠したり (`tq1234snin@privaterelay.appleid.com`) することを可能にします。アップルは、リレーアドレスに送信されたメッセージをユーザの実際のメールアドレスに転送します。 
 

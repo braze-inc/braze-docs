@@ -24,7 +24,7 @@ The Braze and Contentsquare integration allows you to send Live Signals (fraud, 
 | ----------- | ----------- |
 | Contentsquare account | A Contentsquare account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. To create a new key in the Braze dashboard, go to **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL]({% image_buster /assets/img/contentsquare_custom_events.png %}). Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({% image_buster /assets/img/contentsquare_custom_events.png %}). 엔드포인트는 인스턴스의 Braze URL에 따라 달라집니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
@@ -41,7 +41,7 @@ To integrate Contentsquare into Braze, you must request the installation of a "L
 
 1. In Contentsquare, click **Console** in the **Settings** menu. This will redirect you to the project you are currently working on. 
 2. On the **Projects** page, go to the **Integrations** tab and click the  **\+ Add integration** button.
-3. In the integrations catalog, locate the **Live Signals** integration and click **Add**. The Contentsquare team will then reach out to configure the code snippet to send live signals to Braze.
+3. In the integrations catalog, locate the **Live Signals** integration and click **Add**. 그러면 콘텐츠스퀘어 팀에서 연락하여 Braze에 실시간 신호를 전송하기 위한 코드 스니펫을 구성할 것입니다.
 4. Contentsquare will now process your integration. The indicator text will update after the integration has been completed.
 
 For more information, refer to [Request a Contentsquare integration](https://uxanalyser.zendesk.com/hc/en-gb/articles/4405613239186).
@@ -50,6 +50,6 @@ For more information, refer to [Request a Contentsquare integration](https://uxa
 
 Once the integration is complete, Contentsquare custom events will be available to use in your campaigns and Canvases. You can check which events are being sent to Braze from **Data Settings** > **Custom Events**.
 
-![Contentsquare Live Signals data in Braze Custom Events tab]({% image_buster /assets/img/contentsquare_custom_events.png %})
+![Braze 커스텀 이벤트 탭의 Contentsquare 실시간 신호 데이터]({% image_buster /assets/img/contentsquare_custom_events.png %})
 
 

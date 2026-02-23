@@ -1,6 +1,6 @@
 ---
 nav_title: "Messaging Nutzer:innen"
-article_title: "Targeting von Nutzer:innen für prognostizierte Events"
+article_title: "Targeting Nutzer:innen für Prognosen"
 description: "Dieser Referenzartikel behandelt mögliche nächste Schritte, nachdem Sie eine Event-Prognose erstellt haben, wie z. B. die Implementierung von Filtern und strategische Überlegungen."
 page_order: 1.2
 
@@ -20,7 +20,7 @@ Auf der Seite mit den individuellen **Vorhersagen** können Sie, nachdem Sie ent
 
 Sie können auch die Filter "Ereigniswahrscheinlichkeitsscore" und "Ereigniswahrscheinlichkeitskategorie" in Kampagnen, Canvas oder Segmenten verwenden, um Nutzer:innen nach ihrem Wahrscheinlichkeitsscore oder ihrer Kategorie zusammenzustellen, so wie Sie es mit jedem anderen Filter in Braze tun.
 
-\![Bei der Definition einer Zielgruppe verfügbare Filter: Wahrscheinlichkeitskategorie und Wahrscheinlichkeitswert.]({% image_buster /assets/img_archive/predictive_event_filters.png %})
+![Bei der Definition einer Zielgruppe können Sie unter anderem nach der Wahrscheinlichkeitskategorie und dem Wahrscheinlichkeitsscore filtern.]({% image_buster /assets/img_archive/predictive_event_filters.png %})
 
 ## Strategische Überlegungen {#strategy}
 

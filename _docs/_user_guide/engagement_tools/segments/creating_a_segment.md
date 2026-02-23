@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a segment
-article_title: Creating a Segment
+nav_title: Create a segment
+article_title: Create a Segment
 page_order: 0
 page_type: tutorial
 description: "This how-to article will walk you through how to set up and create a segment using Braze."
@@ -8,7 +8,7 @@ tool: Segments
 search_rank: 3
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Creating a segment
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Create a segment
 
 > Segmentation allows you to target users based upon their demographic, behavioral, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
@@ -39,9 +39,7 @@ For example, if you'd like to send an in-app message to only iOS devices, select
 
 Add at least one filter to your segment. You can combine as many filters as you want to make your segmentation more specific. 
 
-{% alert note %}
-Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Segment profiles first app use' %}
 
 #### Filter groups
 

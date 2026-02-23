@@ -21,18 +21,18 @@ In the prompt that appears, name this connection, and provide your Braze endpoin
 
 ![]({% image_buster /assets/img/census/add_service.png %}){: style="max-width:60%;"}
 
-### Step 2: Create a Census sync
+### 2단계: Create a Census sync
 
 To sync customers to Braze, you must build a sync. Here, you will define where to sync data and how you would like fields mapped across the two platforms.
 
 1. Navigate to the **Syncs** tab and select **New Sync**.<br><br> 
 2. In the composer, select the source data model from your data warehouse.<br><br>
-3. Configure where the model will be synced to. Select **Braze** as the destination and **User & Cohort** as the object to sync.<br>![In the "Select a Destination" prompt, "Braze" is selected as the connection, and various objects are listed.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
-4. Select the **Source Column** that identifies the users to add to a cohort, and select **External User ID** as the **Identifier Type**.<br><br>
+3. Configure where the model will be synced to. 동기화할 대상으로 **Braze를** 선택하고 **사용자 & 코호트를** 선택합니다.<br>!['대상 선택' 프롬프트에서 'Braze'가 연결로 선택되고 다양한 오브젝트가 나열됩니다.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
+4. **소스 열**을(를) 선택하여 코호트에 추가할 사용자를 식별하고, **외부 사용자 ID**를 **식별자 유형**으로 선택합니다.<br><br>
 5. In the **Cohort Name** dropdown, select a cohort, create a cohort, or select a Source Column to populate the cohort name.<br><br>
 6. Use the **When a record is removed from source data** dropdown to select what happens to users when they're removed from the source dataset, such as **Do nothing** or **Remove matching record from cohort**.<br><br>
-7. Lastly, map the Census data fields to the equivalent Braze fields.<br>![Census mapping]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
-8. Confirm details and create the sync. 
+7. 마지막으로, Census 데이터 필드를 해당하는 Braze 필드에 매핑합니다.<br>![인구조사 매핑]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
+8. 세부 사항을 확인하고 동기화를 만드십시오. 
 
 Now you can run your sync!
 

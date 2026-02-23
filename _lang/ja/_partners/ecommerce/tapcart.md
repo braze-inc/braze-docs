@@ -1,6 +1,6 @@
 ---
 nav_title: Tapcart
-article_title: Tapcart と Braze の統合
+article_title: タップカートとBrazeを統合する
 description: "Tapcart と Braze の統合について説明します。"
 alias: /partners/tapcart/
 page_type: partner
@@ -33,5 +33,5 @@ Tapcart とBraze を統合する方法については、Web サイトで直接[T
 以下の機能は現在サポートされていない：プッシュストーリー、Webプッシュ、アプリ内メッセージのカスタマイズ。
 
 {% alert note %}
-その他ご不明な点があれば、Tapcart 導入スペシャリストまでお問い合わせいただくか、[help@tapcart.co](mailto:help@tapcart.co) までメールにてご連絡いただきたい。
+その他ご不明な点があれば、Tapcart のインプリメンテーションスペシャリストにお問い合わせいただくか、[help@tapcart.co](mailto:help@tapcart.co) までメールをお送りください。
 {% endalert %}

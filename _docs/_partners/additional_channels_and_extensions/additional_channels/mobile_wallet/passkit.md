@@ -66,7 +66,7 @@ There are many different components you can include in your payload, but here as
 
 | Component | Required | Type | Description |
 | --------- | -------- | ---- | ----------- |
-|`person.externalId` | Required | String | Set as the Braze external ID, this is crucial for the callbacks from PassKit back to Braze to work, allowing Braze users to have coupons for multiple offers in one campaign. Not enforced as unique. |
+|`person.externalId` | Required | String | Set as the Braze external ID, this is crucial for the callbacks from PassKit back to Braze to work, allowing company users to have coupons for multiple offers in one campaign. Not enforced as unique. |
 | `members.member.externalId` | Optional | String | Set as the Braze external ID, you may use your external ID to update the membership pass. Setting this field enforces the user as unique within the membership program.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 

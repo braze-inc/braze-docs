@@ -62,13 +62,13 @@ Wählen Sie **Exportieren**, wählen Sie dann die Braze Integration und geben Si
 
 Wenn Sie nach dem Export Änderungen vornehmen, können Sie den Inhalt aus Alpaco erneut exportieren, um ihn in Braze zu aktualisieren.
 
-![Alpaco Export email]({% image_buster /assets/img/alpaco/alpaco_3.png %})
+![Alpaco Export E-Mail]({% image_buster /assets/img/alpaco/alpaco_3.png %})
 
 ## Verwendung von Alpaco-Templates und Blöcken in Braze
 
 Je nach Art des Inhalts, den Sie exportieren, wird Ihr Template in einem der folgenden Abschnitte angezeigt:
 
-- **Templates und Medien > E-Mail Templates**
-- **Templates und Medien > Content-Blöcke**
+- **Templates & Medien > E-Mail Templates**
+- **Templates & Medien > Content-Blöcke**
 
 Die Templates von Alpaco sind ideal für Unternehmen, die die Markenkonsistenz zentral verwalten möchten. Sie unterstützen auch die in Braze integrierten Tags zur einfachen Kategorisierung und Verwaltung von Inhalten.

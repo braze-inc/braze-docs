@@ -14,13 +14,13 @@ guide_featured_list:
   - name: Getting Started
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: Building Campaigns
+  - name: Build Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
     image: /assets/img/braze_icons/list.svg
-  - name: Managing Campaigns
+  - name: Manage Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Testing Campaigns
+  - name: Test Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
     image: /assets/img/braze_icons/beaker-02.svg
   - name: Ideas and Strategies

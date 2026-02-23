@@ -58,7 +58,7 @@ Seu `AndroidManifest.xml` deve ser semelhante ao seguinte:
 É possível desativar o rastreamento contínuo em tempo de compilação ou em tempo de execução.
 
 {% tabs local %}
-{% tab tempo de compilação %}
+{% tab compile time %}
 
 Para desativar o monitoramento contínuo de localização em tempo de compilação, defina `com_braze_enable_location_collection` como `false` em `braze.xml`:
 
@@ -67,7 +67,7 @@ Para desativar o monitoramento contínuo de localização em tempo de compilaç�
 ```
 
 {% endtab %}
-{% tab tempo de execução %}
+{% tab runtime %}
 
 Para desativar seletivamente o monitoramento contínuo de localização em tempo de execução, use [`BrazeConfig`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration):
 

@@ -96,7 +96,7 @@ En el cuadro de texto **Mensaje**, añade el siguiente código Liquid, junto con
 
 Tu mensaje debe ser similar al siguiente:
 
-![Un mensaje de ejemplo utilizando código Liquid.]({% image_buster /assets/img/front/sms_to_braze.png %}){: style="max-width:80%;"}
+![Un mensaje de ejemplo utilizando el código Liquid.]({% image_buster /assets/img/front/sms_to_braze.png %}){: style="max-width:80%;"}
 
 #### 2.2 Programar la entrega
 
@@ -110,13 +110,13 @@ Este evento personalizado es la Transformación de Datos que escribe en el perfi
 
 Por último, en **Controles de entrega**, habilita la posibilidad de volver a ser elegible.
 
-![Re-elegibilidad habilitada en "Controles de entrega".]({% image_buster /assets/img/front/braze_reeligibility.png %})
+![Rehabilitación habilitada en "Controles de entrega".]({% image_buster /assets/img/front/braze_reeligibility.png %})
 
 ### Paso 3: Crear un canal personalizado
 
 En el panel frontal, ve a **Configuración** > **Canales** > **Añadir canales** y, a continuación, selecciona **Canal personalizado** e introduce un nombre para tu nuevo canal Braze.
 
-![Un canal personalizado para Braze en el panel frontal.]({% image_buster /assets/img/front/front_custom_channel.png %})
+![Un canal personalizado para Braze en el panel Frontal.]({% image_buster /assets/img/front/front_custom_channel.png %})
 
 ### Paso 4: Configura los ajustes
 
@@ -124,7 +124,7 @@ En el campo del punto final de la API de salida, introduce la URL del webhook de
 
 Toma nota de esta URL, la necesitarás más adelante.
 
-![La configuración del canal para el canal Braze recién creado en Front.]({% image_buster /assets/img/front/front_custom_channel2.png %}){: style="max-width:65%;"}
+![La configuración del canal para el canal Braze recién creado en Frente.]({% image_buster /assets/img/front/front_custom_channel2.png %}){: style="max-width:65%;"}
 
 ### Paso 5: Configurar el reenvío de SMS entrantes
 
@@ -192,7 +192,7 @@ En **Controles de entrega**, habilita la posibilidad de volver a ser elegible.
 
 #### Paso 5.4: Crea tu segunda campaña webhook
 
-Como tu segunda campaña webhook coincidirá con la primera, puedes [duplicar la primera y cambiarle el nombre]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns). Puedes hacerlo ahora.
+Como tu segunda campaña webhook coincide con la primera, puedes [duplicar la primera y cambiarle el nombre]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns).
 
 #### Paso 5.5: Programar la segunda entrega
 
@@ -221,11 +221,11 @@ Después configura tu filtro:
 - Los mensajes SMS en Braze se cobran por segmento del mensaje. Entender qué define un segmento y cómo se dividirán estos mensajes es clave para comprender cómo se te facturarán los mensajes. Consulta más información en nuestra [documentación]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
 - Las respuestas largas de los agentes consumirán más segmentos facturables.
 
-### Consumo de puntos de datos
+### Registro de puntos de datos
 
-Actualmente, esta integración requiere que se escriba un evento personalizado en un perfil de usuario cada vez que un agente en vivo envía un SMS desde Front. Esto puede ser adecuado para intercambios rápidos que solo duren un par de mensajes, pero a medida que las conversaciones se alargan también lo hacen las implicaciones de los puntos de datos. Se consume un punto de datos por cada evento personalizado registrado en Braze.
+Actualmente, esta integración requiere que se escriba un evento personalizado en un perfil de usuario cada vez que un agente en vivo envía un SMS desde Front. Esto puede ser adecuado para intercambios rápidos que sólo duren un par de mensajes, pero a medida que las conversaciones se alargan también lo hacen las implicaciones de los puntos de datos. Si tienes preguntas sobre los matices de los puntos de datos Braze, tu administrador de cuentas Braze puede responderlas.
 
-### Incluir enlaces en mensajes SMS
+### Incluir enlaces en los mensajes SMS
 
 El envío de un enlace desde el chat en vivo de Front se mostrará con etiquetas HTML adicionales.
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Importieren Ihrer E-Mail-Liste
-article_title: Importieren Ihrer E-Mail-Liste in Braze
+nav_title: Importieren Sie Ihre E-Mail-Liste
+article_title: Importieren Sie Ihre E-Mail-Liste in Braze
 page_order: 4
 page_type: reference
 description: "In diesem Referenzartikel erfahren Sie bewährte Praktiken zum Importieren Ihrer E-Mail-Liste in Braze."
@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# Importieren Ihrer E-Mail-Liste in Braze {#importing-email-lists}
+# Importieren Sie Ihre E-Mail-Liste in Braze {#importing-email-lists}
 
 > Ein wichtiger Schritt, um ein erfolgreicher E-Mail Sender zu werden, ist die Sicherstellung einer hochwertigen E-Mail-Liste. Die richtige Verwaltung von E-Mail-Listen kann Ihre Zustellbarkeit verbessern und Ihnen präzisere und saubere Kampagnenergebnisse liefern.
 

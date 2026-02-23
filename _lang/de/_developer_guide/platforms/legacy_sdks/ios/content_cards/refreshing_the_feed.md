@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Aktualisieren des Feeds
+# Aktualisieren Sie den Feed
 
 ## Aktualisieren von Inhaltskarten
 
@@ -25,7 +25,7 @@ Sie können Braze manuell anfragen, die Content-Cards des Nutzers mit der Method
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.requestContentCardsRefresh()

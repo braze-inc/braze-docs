@@ -27,7 +27,7 @@ Um Kund:innen mit Braze zu synchronisieren, müssen Sie eine Synchronisierung er
 
 1. Navigieren Sie zum Tab **Synchronisierungen** und wählen Sie **Neue Synchronisierung**.<br><br> 
 2. Wählen Sie im Composer das Quelldatenmodell aus Ihrem Data Warehouse aus.<br><br>
-3. Legen Sie fest, wohin das Modell synchronisiert werden soll. Wählen Sie **Braze** als Ziel und **Nutzer:in und Kohorte** als zu synchronisierendes Objekt aus.<br>![In der Eingabeaufforderung "Ziel auswählen" wird "Braze" als Verbindung ausgewählt, und es werden verschiedene Objekte aufgelistet.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
+3. Legen Sie fest, wohin das Modell synchronisiert werden soll. Wählen Sie **Braze** als Ziel und **Nutzer:innen & Kohorte** als zu synchronisierendes Objekt aus.<br>![In der Eingabeaufforderung "Ziel auswählen" wird "Braze" als Verbindung ausgewählt, und es werden verschiedene Objekte aufgelistet.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
 4. Wählen Sie die **Quellenspalte** aus, die die Nutzer:innen identifiziert, die einer Kohorte hinzugefügt werden sollen, und wählen Sie als **Bezeichnertyp** **Externe ID**.<br><br>
 5. Wählen Sie in der Dropdown-Liste **Kohortenname** eine Kohorte aus, erstellen Sie eine Kohorte oder wählen Sie eine Quellenspalte, um den Kohortennamen zu füllen.<br><br>
 6. Verwenden Sie das Dropdown-Menü **Wenn ein Datensatz aus den Quelldaten entfernt wird**, um auszuwählen, was mit Nutzern:innen geschieht, wenn sie aus dem Quelldatensatz entfernt werden, z.B. **Nichts tun** oder **Übereinstimmenden Datensatz aus Kohorte entfernen**.<br><br>

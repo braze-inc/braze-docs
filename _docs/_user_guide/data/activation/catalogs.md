@@ -11,7 +11,7 @@ description: "This landing page is home to catalogs. Use catalogs and filtered s
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Creating a Catalog
+- name: Create a Catalog
   link: /docs/user_guide/data/activation/catalogs/create/
   image: /assets/img/braze_icons/users-01.svg
 - name: Using Catalogs

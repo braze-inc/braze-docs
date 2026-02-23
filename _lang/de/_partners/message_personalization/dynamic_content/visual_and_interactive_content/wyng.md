@@ -1,7 +1,7 @@
 ---
 nav_title: Wyng
 article_title: Wyng
-description: "Dieser Artikel referenziert die Partnerschaft zwischen Braze und Wyng, einer Zero-Party-Datenplattform, die die Erfassung, Nutzung und Integration von Kundenpräferenzen und Attributen über Micro-Experiences, Kundenpräferenzportale und eine API-Plattform erleichtert."
+description: "Dieser Artikel referenziert die Partnerschaft zwischen Braze und Wyng, einer Zero-Party-Datenplattform zur Erfassung, Nutzung und Integration von Kundenpräferenzen und Attributen über Micro-Experiences, Kundenpräferenzportale und eine API-Plattform."
 alias: /partners/wyng/
 page_type: partner
 search_tag: Partner
@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Wyng
 
-> [Wyng](https://wyng.com/) macht es Ihnen leicht, interaktive digitale Erlebnisse (d.h. Quiz, Präferenzzentren, Aktionen) zu erstellen, die Verbraucher:in den richtigen Momenten einbinden, Präferenzen und andere Zero-Party-Daten erfassen und in Realtime personalisieren.
+> [Wyng](https://wyng.com/) bietet Tools zum Aufbau interaktiver digitaler Erlebnisse (Quiz, Präferenzzentren, Aktionen), die Verbraucher:in Schlüsselmomenten einbinden, Präferenzen und andere Zero-Party-Daten erfassen und in Realtime personalisieren.
 
 _Diese Integration wird von Wyng gepflegt._
 
@@ -75,6 +75,6 @@ Im Bereich **Fehler anzeigen** werden der Fehlercode und einige zusätzliche Inf
 
 ![Ein Beispiel für ein Fehlerprotokoll auf der Wyng Plattform.]({% image_buster /assets/img/wyng/16.jpg %}){: style="max-width:80%;"}
 
-Sollten Sie weitere Fragen haben, wenden Sie sich bitte an den Wyng-Support ([support@wyng.com](mailto:contact@wyng.com)), um Hilfe zu erhalten.
+Wenn Sie weitere Fragen haben, wenden Sie sich bitte an den Wyng-Support[(support@wyng.com](mailto:contact@wyng.com)), um Hilfe zu erhalten.
 
 

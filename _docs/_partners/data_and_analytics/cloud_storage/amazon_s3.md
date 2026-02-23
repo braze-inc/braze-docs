@@ -25,7 +25,7 @@ The Braze and Amazon S3 integration features two integration strategies:
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Amazon S3 account | An Amazon S3 account is required to take advantage of this partnership. |
+| Amazon S3 account | You need an Amazon S3 account to take advantage of this partnership. |
 | Dedicated S3 bucket | Before integrating with Amazon S3, you must create an S3 bucket for your app.<br><br>If you already have an S3 bucket, we still recommend creating a new bucket specifically for Braze so you can limit permissions. Refer to the following instructions on how to create a new bucket. |
 | Currents | To export data back into Amazon S3, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. Currents isn't required if you're only setting up message archiving. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -37,7 +37,7 @@ To create a bucket for your app, do the following:
 1. Open the [Amazon S3 console](https://console.aws.amazon.com/s3/) and follow the instructions to **Sign in** or **Create an Account with AWS**. 
 2. After signing in, select **S3** from the **Storage & Content Delivery** category. 
 3. Select **Create Bucket** on the next screen. 
-4. You'll be prompted to create your bucket and select a region.
+4. You're prompted to create your bucket and select a region.
 
 {% alert note %}
 Currents does not support buckets with [Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html) configured.
@@ -60,17 +60,17 @@ This authentication method generates a secret key and an access key ID that enab
 If you're only setting up message archiving, follow the steps in the **Dashboard Data Export** tab. 
 {% endalert %}
 
-To retrieve your access key ID and secret access key, you'll need to [create an IAM user and administrators group in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
+To retrieve your access key ID and secret access key, [create an IAM user and administrators group in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
 
 ### Step 2: Get credentials {#secret-key-2}
 
-After creating a new user, select **Show User Security Credentials** to reveal your access key ID and secret access key. Next, note these credentials somewhere or select the **Download Credentials** button, as you will need to input these into the Braze dashboard later on.
+After creating a new user, select **Show User Security Credentials** to reveal your access key ID and secret access key. Next, note these credentials somewhere or select the **Download Credentials** button, as you need to input these into the Braze dashboard later.
 
 ![]({% image_buster /assets/img_archive/S3_Credentials.png %})
 
 ### Step 3: Create policy {#secret-key-3}
 
-Navigate to **Policies** > **Get Started** > **Create Policy** to add permissions for your user. Next, select **Create Your Own Policy**. This will give limited permissions, so Braze can only access the specified buckets. 
+Navigate to **Policies** > **Get Started** > **Create Policy** to add permissions for your user. Next, select **Create Your Own Policy**. This gives limited permissions, so Braze can only access the specified buckets. 
 
 ![]({% image_buster /assets/img_archive/S3_CreatePolicy.png %})
 
@@ -78,7 +78,7 @@ Navigate to **Policies** > **Get Started** > **Create Policy** to add permission
 Different policies are required for Currents and Dashboard Data Export. `s3:GetObject` is required to allow the Braze backend to perform error handling.
 {% endalert %}
 
-Specify a policy name of your choice, and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. Without these permissions the integration will fail a credentials check and not be created.
+Specify a policy name of your choice, and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. Without these permissions, the integration fails the credentials check and won't be created.
 
 {% alert note %}
 If you're only setting up message archiving, use the code snippet in the **Dashboard Data Export** tab. 
@@ -149,17 +149,17 @@ Name your Current. In the **Credentials** section, make sure **AWS Secret Access
 ![]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
 {% alert warning %}
-Keep your AWS access key ID and secret access key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.
+Keep your AWS access key ID and secret access key up to date. If your connector's credentials expire, the connector stops sending events. If this persists for more than **5 days**, the connector's events are dropped, and data is permanently lost.
 {% endalert %}
 
 You can also add the following customization based on your needs:
 
-- **Folder Path:** Defaults to `currents`. If this folder does not exist, Braze will automatically create one for you. 
+- **Folder Path:** Defaults to `currents`. If this folder does not exist, Braze automatically creates one for you. 
 - **Server-Side, At-Rest AES-256 Encryption:** Defaults to OFF and includes the `x-amz-server-side-encryption` header.
 
 Select **Launch Current** to continue.
 
-A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be set up for Braze Currents.
+A notification informs you whether your credentials have been successfully validated. AWS S3 is now set up for Braze Currents.
 
 {% endtab %}
 {% tab Dashboard Data Export %}
@@ -174,7 +174,7 @@ On the **AWS Credentials** page, make sure **AWS Secret Access Key** is selected
 You can always retrieve new credentials by navigating to your user, and selecting **Create Access Key** in the **Security Credentials** tab within the AWS Console.
 {% endalert %}
 
-A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be integrated into your Braze account.
+A notification informs you whether your credentials have been successfully validated. AWS S3 is now integrated into your Braze account.
 
 {% endtab %}
 {% endtabs %}
@@ -257,7 +257,7 @@ Within the same IAM section of the console, select **Roles** > **Create Role**.
 ![]({{site.baseurl}}/assets/img/create_role_1_list.png)
 
 Retrieve your Braze account ID and external ID from your Braze account:
-- **Currents**: In Braze, go to **Partner Integrations** > **Data Export**. Next, select **Create Current** then **Amazon S3 Data Export**. Here you will find the identifiers needed to create your role.
+- **Currents**: In Braze, go to **Partner Integrations** > **Data Export**. Next, select **Create Current** then **Amazon S3 Data Export**. Here you'll find the identifiers needed to create your role.
 - **Dashboard data export**: In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role. (Create your roles here if you're only setting up message archiving.)
 
 Back on the AWS Console, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, check the **Require external ID** box, and enter the Braze external ID. Select **Next** when complete.
@@ -274,7 +274,7 @@ Give the role a name and a description, and select **Create Role**.
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)
 
-You should now see your newly created Role on the list.
+You'll now see your newly created Role on the list.
 
 ### Step 4: Link to Braze AWS {#role-arn-4}
 
@@ -306,7 +306,7 @@ You can also add the following customization based on your needs:
 - Folder Path (defaults to `currents`)
 - Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the `x-amz-server-side-encryption` header
 
-Select **Launch Current** to continue. A notification will indicate if your credentials have been successfully validated. AWS S3 should now be set up for Braze Currents.
+Select **Launch Current** to continue. A notification indicates if your credentials have been successfully validated. AWS S3 is now set up for Braze Currents.
 
 {% alert important %}
 If you receive an "S3 credentials are invalid" error, this may be due to integrating too quickly after creating a role in AWS. Wait and try again. 
@@ -325,22 +325,28 @@ On the **AWS Credentials** page, make sure the **AWS Role ARN** radio button is 
 You can always retrieve new credentials by navigating to your user, and selecting **Create Access Key** on the **Security Credentials** tab within the AWS Console.
 {% endalert %}
 
-A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be integrated into your Braze account.
+A notification informs you whether your credentials have been successfully validated. AWS S3 is now integrated into your Braze account.
 
 {% endtab %}
 {% endtabs %}
 
 ## Export behavior
 
-Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
+Users who have integrated a cloud data storage solution and export APIs, dashboard reports, or CSV reports experience the following:
 
-- All API exports will not return a download URL in the response body and must be retrieved through data storage.
-- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage.
+- All API exports do not return a download URL in the response body and must be retrieved through data storage.
+- All dashboard reports and CSV reports are sent to the user's email for download (no storage permissions required) and backed up on Data Storage.
+
+{% alert important %}
+**JSON format requirement**: For JSON exports, Braze uses JSONL (newline-delimited JSON) format, where each line contains a separate JSON object. This format differs from standard JSON, which is a single JSON array or object. Each line in the exported file is a valid JSON object, but the file as a whole is not a single valid JSON document. When processing these files, parse each line individually as a separate JSON object rather than attempting to parse the entire file as a single JSON document.
+
+Currents exports use Apache Avro format (`.avro` files), not JSON. This JSON format requirement applies to dashboard data exports and API exports.
+{% endalert %}
 
 ## Multiple connectors
 
-If you intend to create more than one Currents connector to send to your S3 bucket, you will be able to use the same credentials, but must specify a different folder path for each. These can be created in the same workspace, or split and created within multiple workspaces. You also have the option of creating a single policy for each integration, or create one policy that covers both integrations. 
+If you intend to create more than one Currents connector to send to your S3 bucket, you can use the same credentials, but must specify a different folder path for each. You can create these in the same workspace, or split and create them within multiple workspaces. You also have the option of creating a single policy for each integration, or creating one policy that covers both integrations. 
 
-If you plan on using the same S3 bucket for both Currents and data exports, you will need to create two separate policies as each integration requires different permissions.
+If you plan on using the same S3 bucket for both Currents and data exports, you need to create two separate policies as each integration requires different permissions.
 
 

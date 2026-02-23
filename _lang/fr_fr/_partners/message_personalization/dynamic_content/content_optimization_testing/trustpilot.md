@@ -28,7 +28,7 @@ Avant de commencer, vous avez besoin des éléments suivants :
 
 ## Intégration
 
-### Étape 1 : Obtenez vos identifiants API Trustpilot
+### Étape 1 : Obtenez vos identifiants API Trustpilot
 
 1. [Connectez-vous à Trustpilot](https://app.contentful.com/login) avec vos identifiants.  
 2. Créez ou récupérez la clé et le secret de l'API dans le tableau de bord de Trustpilot en allant dans **Intégrations** > **Développeurs** > **API.** Si vous n'avez pas encore de clé API, créez-en une nouvelle :  
@@ -37,7 +37,7 @@ Avant de commencer, vous avez besoin des éléments suivants :
 
 ## Envoi d'invitations à effectuer un examen sur Trustpilot
 
-### Étape 1 : Implanter une campagne webhook Braze 
+### Étape 1 : Implanter une campagne webhook Braze 
 
 Configurez une campagne webhook Braze à Braze basée sur des actions pour déclencher les API Trustpilot afin d'envoyer des invitations d'examen par e-mail aux utilisateurs. Par exemple, vous pouvez envoyer une invitation à passer un examen après qu'un utilisateur a passé une commande avec les détails du webhook suivants :
    * [URL de webhook](https://developers.trustpilot.com/invitation-api?_gl=1*1hxojlc*_ga*MjEzMDkzNjQ5NS4xNzMxNjgxOTQ0*_ga_3TEL80JZSG*MTczNjU0MzY0Ny45LjAuMTczNjU0MzY0Ny4wLjAuMA..#create-invitation(s)) : `https://invitations-api.trustpilot.com/v1/private/business-units/{businessUnitId}/email-invitations`  
@@ -47,7 +47,7 @@ Configurez une campagne webhook Braze à Braze basée sur des actions pour décl
 ### Étape 2 : Récupérer le jeton d’accès
 
 1. Utilisez le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) pour faire une demande au [endpoint d'authentification de Trustpilot](https://documentation-apidocumentation.trustpilot.com/authentication?_gl=1*1hxojlc*_ga*MjEzMDkzNjQ5NS4xNzMxNjgxOTQ0*_ga_3TEL80JZSG*MTczNjU0MzY0Ny45LjAuMTczNjU0MzY0Ny4wLjAuMA..) afin de récupérer le jeton d'accès.
-2. Utilisez le type de subvention **client_credentials** et saisissez votre clé API et votre secret dans une étiquette de contenu connecté pour récupérer un jeton. La demande de contenu connecté peut être saisie dans l'en-tête de la demande. Le contenu connecté peut se présenter comme suit :
+2. Utilisez le type de subvention **client_credentials** et entrez votre clé API et votre secret dans une étiquette de contenu connecté pour récupérer un jeton. La demande de contenu connecté peut être saisie dans l'en-tête de la demande. Le contenu connecté peut se présenter comme suit :
   
 {% raw %}
 
@@ -87,7 +87,7 @@ Dans votre campagne Braze, effectuez un appel de contenu connecté pour demander
 ```
 {% endraw %}
 
-![Contenu connecté dans l'e-mail utilisant Liquid pour attirer l'information.]({% image_buster /assets/img/trustpilot_connected_content_example.png %}){:style="max-width:38%;"}
+![Contenu connecté dans l'e-mail à l'aide de Liquid pour attirer l'information.]({% image_buster /assets/img/trustpilot_connected_content_example.png %}){:style="max-width:38%;"}
 
 La demande de contenu connecté renverra les avis sur les produits.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: MS LP con íconos FA
+nav_title: MS LP con iconos FA
 layout: dev_guide
 
 page_order: 1.3

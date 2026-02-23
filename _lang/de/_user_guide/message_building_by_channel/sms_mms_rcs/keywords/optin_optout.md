@@ -20,11 +20,11 @@ channel:
 
 Braze verarbeitet die folgenden Schlüsselwörter automatisch und aktualisiert den Status der Abonnementgruppe für die Rufnummer bei allen eingehenden Anfragen. Beachten Sie, dass diese Standardschlüsselwörter und -antworten auch angepasst werden können. 
 
-| Typ | Schlüsselwort | Ändern |
-\|-|-------|---|
-|Opt-In| `START`<br> `YES`<br> `UNSTOP` | Jede eingehende Anfrage mit einem dieser `Opt-In` Schlüsselwörter führt zu einer Änderung des Abonnementgruppenstatus auf `subscribed`. Außerdem kann der Pool der Absender, die mit dieser Abo-Gruppe verbunden sind, nun eine SMS, MMS oder RCS Nachricht an diese Kund:in senden (je nachdem, welche Art von Messaging die Absender unterstützen). <br><br>Der Benutzer erhält die von Ihnen definierte automatische Opt-In-Antwort.  |
-|Opt-Out| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Jede eingehende Anfrage mit einem dieser `Opt-Out` Schlüsselwörter führt zu einer Änderung des Abonnementgruppenstatus auf `unsubscribed`. Außerdem kann der Nummernpool, der mit dieser Abo-Gruppe verbunden ist, keine Nachrichten mehr an diese Kund:in senden.<br><br>Der Benutzer erhält die von Ihnen definierte automatische Opt-Out-Antwort. |
-| Hilfe | `HELP`<br> `INFO` | Der Benutzer erhält die von Ihnen definierte automatische Hilfeantwort. |
+| Typ | Schlüsselwort | Änderung |
+|-|-------|---|
+|Opt-in| `START`<br> `YES`<br> `UNSTOP` | Jede eingehende Anfrage mit einem dieser `Opt-In` Schlüsselwörter führt zu einer Änderung des Status der Abo-Gruppe auf `subscribed`. Außerdem kann der Pool der Absender, die mit dieser Abo-Gruppe verbunden sind, nun eine SMS, MMS oder RCS Nachricht an diese Kund:in senden (je nachdem, welche Art von Messaging die Absender unterstützen). <br><br>Nutzer:innen erhalten die von Ihnen definierte automatische Opt-in-Antwort.  |
+|Opt-in| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Jede eingehende Anfrage mit einem dieser `Opt-Out` Schlüsselwörter führt zu einer Änderung des Status der Abo-Gruppe auf `unsubscribed`. Außerdem kann der Nummernpool, der mit dieser Abo-Gruppe verbunden ist, keine Nachrichten mehr an diese Kund:in senden.<br><br>Nutzer:innen erhalten die von Ihnen definierte automatische Opt-Out-Antwort. |
+| Hilfe | `HELP`<br> `INFO` | Nutzer:innen erhalten die von Ihnen definierte automatische Hilfe-Antwort. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Es wird nur die **exakte Ein-Wort-Nachricht** verarbeitet (Groß- und Kleinschreibung wird nicht berücksichtigt). Schlüsselwörter wie `STOP PLEASE` werden ignoriert, es sei denn, [Fuzzy Opt-Out]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/fuzzy_opt_out/) ist aktiviert.

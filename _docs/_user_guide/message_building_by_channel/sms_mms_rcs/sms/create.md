@@ -1,6 +1,6 @@
 ---
-nav_title: Creating an SMS message
-article_title: Creating an SMS message
+nav_title: Create an SMS message
+article_title: Create an SMS message
 page_order: 5
 description: "This reference article covers the steps involved in building out and creating an SMS message."
 page_type: reference
@@ -12,7 +12,7 @@ channel:
 search_rank: 1
 ---
 
-# Creating an SMS message
+# Create an SMS message
 
 > SMS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand. 
 
@@ -115,7 +115,7 @@ Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/me
 
 {% multi_lang_include target_audiences.md %}
 
-In this step, you will select the larger audience from your segments, and narrow that segment further with our filters, if you choose. You'll automatically be given a preview of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+In this step, you select the larger audience from your segments, and narrow that segment further with our filters, if you choose. You automatically receive a preview of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
 
 {% alert tip %}
 Interesting in SMS retargeting? Visit our SMS [retargeting article]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) to learn more. 

@@ -16,7 +16,7 @@ _Cette intégration est maintenue par B.Layer._
 
 ## À propos de l'intégration
 
-L'intégration de Braze et de B.Layer vous permet de tirer parti du générateur de messages in-app B.Layer pour vous aider à créer des messages in-app conformes à votre marque et pouvant être exportés sous forme de fichier zip ou de code HTML en ligne vers Braze. Cette intégration ne nécessite pas de ressources de développement supplémentaires, ce qui vous permet d'économiser du temps et de l'argent.
+L'intégration de Braze et de B.Layer vous permet d'utiliser le générateur de messages in-app B.Layer pour vous aider à créer des messages in-app à votre image qui peuvent être exportés sous forme de fichier zip ou de HTML en ligne vers Braze. Cette intégration ne nécessite pas de ressources de développement supplémentaires, ce qui vous permet d'économiser du temps et de l'argent.
 
 ![]({% image_buster /assets/img/blayer/blayer2.png %})
 

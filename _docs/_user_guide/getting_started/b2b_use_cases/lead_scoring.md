@@ -1,12 +1,12 @@
 ---
 nav_title: Lead scoring
-article_title: Creating a Lead-Scoring Workflow
+article_title: Create a Lead-Scoring Workflow
 page_order: 1
 page_type: reference
 description: "Learn how to use Braze to do simple lead scoring, external lead scoring, and lead handoffs."
 ---
 
-# Creating a lead-scoring workflow
+# Create a lead-scoring workflow
 
 > This use case demonstrates how you can use Braze to update user lead scores in real time and automatically hand off leads to your Sales teams.
 
@@ -159,7 +159,7 @@ To update the lead record in Salesforce with the lead status from Braze, we reco
 
 1. Give your webhook campaign a name, such as “Salesforce > Update lead to MQL”.
 
-2. Enter your webhook URL in the format of {% raw %}`https://YOUR_SALESFORCE_INSTANCE.my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`{% endraw %}. The Braze user ID of {% raw %}`{{$user_id}}}`{% endraw %} should match your Salesforce contact ID. If not, use an alias instead of {% raw %}`{{$user_id}}}`{% endraw %}.
+2. Enter your webhook URL in the format of {% raw %}`https://YOUR_SALESFORCE_INSTANCE.my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`{% endraw %}. The Braze user ID of {% raw %}`{{${user_id}}}`{% endraw %} should match your Salesforce contact ID. If not, use an alias instead of {% raw %}`{{${user_id}}}`{% endraw %}.
 
 3. Update the **HTTP Method** to **PATCH**.
 

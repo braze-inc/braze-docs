@@ -1,19 +1,19 @@
 ---
-nav_title: Troubleshooting webhook and connected content requests
-article_title: Troubleshooting Webhook and Connected Content Requests
+nav_title: Troubleshooting webhook and Connected Content requests
+article_title: Troubleshoot Webhook and Connected Content Requests
 page_order: 3
 channel:
   - webhooks
 description: "This article covers how to troubleshoot webhook and Connected Content error codes, including what the errors are and steps to resolve them."
 ---
 
-# Troubleshooting webhook and Connected Content requests
+# Troubleshoot webhook and Connected Content requests
 
 > This article covers how to troubleshoot common error codes for webhooks and Connected Content, and provides further explanations on how these errors can occur in your requests.
 
 ## 4XX errors
 
-`4XX` errors indicate that there's an issue with the request sent to the endpoint. These errors are typically caused by erroneous requests, including malformed parameters, missing authentication headers, or incorrect URLs.
+`4XX` errors indicate that there's an issue with the request sent to the endpoint. These errors are typically caused by erroneous requests, including malformed parameters, missing authentication headers, or incorrect URLs. Note that these errors also apply to the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder).
 
 Refer to the following table for error code details and steps to resolve:
 

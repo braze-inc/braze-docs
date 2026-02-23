@@ -1,12 +1,12 @@
 ---
-nav_title: Creating a transformation
-article_title: Creating a Transformation
+nav_title: Create a transformation
+article_title: Create a Transformation
 page_order: 1
 page_type: reference
 description: "This reference article provides steps to create a transformation using Braze Data Transformation."
 ---
 
-# Creating a transformation
+# Create a transformation
 
 > Braze Data Transformation enables you to build and manage webhook integrations to automate data flow from external platforms into Braze. These webhook integrations can then power even more sophisticated marketing use cases. You can build your Data Transformation from default code, or by using our dedicated template library to help you get started with certain external platforms.
 

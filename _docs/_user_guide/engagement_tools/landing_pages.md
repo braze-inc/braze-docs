@@ -23,11 +23,21 @@ Landing page and custom domain availability depends on your Braze package. Conta
 
 Before you can access, create, and publish landing pages, you either need administrator [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) or all the following permissions:
 
-- Access Landing Pages
-- Create Landing Page Drafts
+- View Landing Pages
+- Edit Landing Page Drafts
 - Publish Landing Pages
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
+
+## Plan tiers
+
+The number of published landing pages and custom domains you can use depends on your plan type: free or paid (incremental).
+
+| Feature                                                                                                   | Free tier     | Paid tier (incremental)     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| Published landing pages                                                                 | Five per company | 20 additional |
+| Custom domains          | One per company | Five additional |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Adding Google Tag Manager to a landing page
 

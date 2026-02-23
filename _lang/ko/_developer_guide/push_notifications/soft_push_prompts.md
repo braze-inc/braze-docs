@@ -1,7 +1,7 @@
 ---
 page_order: 6
 nav_title: 소프트 푸시 프롬프트
-article_title: Braze SDK용 소프트 푸시 프롬프트 설정하기
+article_title: Braze 소프트웨어 개발 키트에 대한 소프트 푸시 프롬프트 설정하기
 channel:
   - push notifications
 ---

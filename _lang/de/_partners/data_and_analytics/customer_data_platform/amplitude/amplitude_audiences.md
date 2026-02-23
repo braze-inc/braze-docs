@@ -10,7 +10,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze-Lernkurs] ({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude
+# [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Amplitude
 
 > [Amplitude](https://amplitude.com/) ist eine Plattform für Produkt-Analytik und Business-Intelligence.
 
@@ -74,7 +74,7 @@ Wählen Sie in Amplitude Zielgruppen **> Sync erstellen**.
 Wählen Sie als nächstes, ob Sie eine Nutzer:in, eine Berechnung, eine Kohorte oder eine Empfehlung synchronisieren möchten. 
 
 {% tabs %}
-{% tab Synchronisierung der Nutzer:in-Eigenschaften %}
+{% tab Syncing user property %}
 
 Wählen Sie **Benutzer:innen** und dann die zu synchronisierende Eigenschaft des Nutzers aus.
 
@@ -89,7 +89,7 @@ Legen Sie schließlich die Häufigkeit Ihrer Synchronisierung fest.
 ![Definieren Sie Ihre Kadenz als einmalige oder geplante Synchronisierung.]({% image_buster /assets/img/amplitude9.png %})
 
 {% endtab %}
-{% tab Synchronisierung der Berechnungen %}
+{% tab Syncing computation %}
 
 Wählen Sie **Berechnung** und dann die gewünschte zu synchronisierende Berechnung aus
 

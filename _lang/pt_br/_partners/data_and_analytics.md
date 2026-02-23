@@ -1,6 +1,6 @@
 ---
-nav_title: "Dados e análises"
-article_title: Parceiros de dados e análises
+nav_title: "dados e análises"
+article_title: parceiros de dados e análises
 page_order: 5
 
 page_type: landing
@@ -53,17 +53,17 @@ valid_partner_list:
   url: /docs/partners/mozart_data/
 - name: SalesWings
   url: /docs/partners/saleswings/
-- name: Mergulho
-  url: /docs/partners/scuba/
 - name: Monstro da Caixa de Entrada
   url: /docs/partners/inbox_monster/
+- name: Kickbox
+  url: /docs/partners/kickbox/
 - name: Amazon S3
   url: /docs/partners/amazon_s3/
 - name: Google Cloud Storage
   url: /docs/partners/google_cloud_storage_for_currents/
 - name: Armazenamento de Blob do Microsoft Azure
   url: /docs/partners/microsoft_azure_blob_storage_for_currents/
-- name: Pequenas pistas
+- name: Tiny Clues
   url: /docs/partners/tinyclues/
 - name: Treasure Data
   url: /docs/partners/treasure_data/
@@ -159,8 +159,10 @@ valid_partner_list:
   url: /docs/partners/metarouter/
 - name: Nexla
   url: /docs/partners/nexla/
-- name: Olho de águia
+- name: Eagle Eye
   url: /docs/partners/eagle_eye/
 - name: Eppo
   url: /docs/partners/eppo/
+- name: Lemnisk
+  url: /docs/partners/lemnisk/
 ---

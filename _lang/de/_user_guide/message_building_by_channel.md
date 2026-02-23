@@ -52,10 +52,10 @@ Wenn Sie entscheiden, welcher Nachrichtenkanal für Ihre Kampagnen und Canvases 
 - **Inhalt** bedeutet, wie visuell ansprechend Ihre Botschaft ist. Sie können Ihren Texten Multimedia- und andere Elemente hinzufügen, um Ihren Inhalt zu bereichern.
 - Die **Dringlichkeit** ist ein Maß dafür, wie schnell eine Nachricht Ihren Nutzer benachrichtigen und seine Aufmerksamkeit erregen kann. Benachrichtigungen, die der Benutzer sofort sehen kann, haben eine hohe Dringlichkeit, während Nachrichten, für die sich der Benutzer bei Ihrer App anmelden muss, eine geringe Dringlichkeit haben.
 
-Die folgende Matrix veranschaulicht die Stärken und Schwächen der wichtigsten Messaging-Kanäle in Bezug auf Inhalt und Dringlichkeit. Überlegen Sie immer, wie dringend und inhaltsreich Ihre Nachricht sein sollte, und wählen Sie dann den richtigen Kanal für Ihre Kampagne.
+Die Braze Messaging-Matrix vereinfacht die Auswahl der Kanäle durch Abbildung der **Komplexität der Inhalte** auf die **Dringlichkeit der Zustellung**. Indem Sie diese beiden Faktoren ausbalancieren, können Sie dafür sorgen, dass Ihre Nachricht ankommt und nicht unterbricht.
 
-![Mobile/Web-Push sind einfache Inhalte, hohe Dringlichkeit; E-Mails sind reichhaltige Inhalte, hohe Dringlichkeit; In-App/Browser-Nachrichten sind einfache Inhalte, niedrige Dringlichkeit; Content Cards sind niedrige Dringlichkeit, reichhaltige Inhalte]({% image_buster /assets/img_archive/messaging_matrix.png %})
+![Mobile/Web-Push sind einfache Inhalte, hohe Dringlichkeit; E-Mails sind reichhaltige Nachrichten, hohe Dringlichkeit; In-App/Browser-Nachrichten sind einfache Inhalte, niedrige Dringlichkeit; Content Cards sind niedrige Dringlichkeit, reichhaltige Inhalte]({% image_buster /assets/img_archive/messaging_matrix.png %})
 
-Wenn Sie mehr darüber erfahren möchten, wie Sie diese Matrix nutzen können, sehen Sie sich unseren Braze Learning-Kurs zum Thema " [Understanding the Messaging Matrix"](https://learning.braze.com/understand-the-messaging-matrix) an.
+Die Matrix hebt zwar die wichtigsten Kanäle hervor, ist aber dennoch anpassungsfähig: SMS und WhatsApp zum Beispiel sind Tools mit hoher Dringlichkeit, die sich durch die Verwendung von Multimedia-Formaten zu umfangreichen Inhalten entwickeln. Wenn Sie mehr darüber erfahren möchten, wie Sie diese Matrix nutzen können, sehen Sie sich unseren Braze-Lernkurs über [kanalübergreifendes Messaging](https://learning.braze.com/cross-channel-messaging) an.
 
 <br><br>

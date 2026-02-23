@@ -66,9 +66,9 @@ http://tracking.jampp.com/event?kind={{event_name}}&rnd={{rnd}}&app={% if {{most
 In the webhook URL, you must:
 - Set the event name. This name will appear in your Jampp dashboard.
 - Pass your app's unique application identifier for Android (such as "com.example") and iOS (such as "012345678").
-- Insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid) for the appropriate custom attribute you're tracking as the Google advertising ID. Note that the Google advertising ID is listed as `aaid` in this example, but you will need to replace it with the custom attribute name your developers set.
+- Insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid) for the appropriate custom attribute you're tracking as the Google advertising ID. Google 광고 ID는 이 예제에서 `aaid`로 나열되지만, 개발자가 설정한 커스텀 속성 이름으로 바꿔야 합니다.
 
-![The webhook URL and message preview shown in the Braze webhook builder.]({% image_buster /assets/img/jampp_webhook.png %})
+![Braze 웹훅 빌더에 표시된 웹훅 URL 및 메시지 미리보기.]({% image_buster /assets/img/jampp_webhook.png %})
 
 {% alert important %}
 Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Be aware that you may require user consent to collect this data.
@@ -82,9 +82,9 @@ The Jampp webhook requires an HTTP method and request header.
 - **Request Headers**:
   - **Content-Type**: application/json
 
-![The request headers, HTTP method, and message preview shown in the Braze webhook builder.]({% image_buster /assets/img/jampp_method.png %})
+![Braze 웹훅 빌더에 표시되는 요청 헤더, HTTP 메서드 및 메시지 미리보기.]({% image_buster /assets/img/jampp_method.png %})
 
-#### Request body
+#### 요청 본문
 
 You do not have to define a request body for this webhook.
 

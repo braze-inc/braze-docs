@@ -1,6 +1,6 @@
 ---
-nav_title: "Creating a push message"
-article_title: Creating a Push Campaign
+nav_title: Create a push message
+article_title: Create a Push Campaign
 page_order: 4
 page_type: tutorial
 description: "This tutorial page covers the different components involved in creating a Push Message, including configuration, sending, targeting, and more."
@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# Creating a push message
+# Create a push message
 
 > Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your app. To see examples of push notifications, check out our [case studies](https://www.braze.com/customers).
 
@@ -150,6 +150,8 @@ For additional guidance on using images in your push notifications, refer to the
 - [Create rich notifications for iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
 - [Create rich notifications for Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### On-click behavior
 
 Specify what happens when a user selects the body of a push notification with **On-Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
@@ -192,7 +194,7 @@ This step is also where you can specify delivery controls, such as allowing user
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a preview of what that approximate segment population looks like right now. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, select **Show Additional Stats**.
+Next, you must [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow your audience. You automatically receive a preview of what that approximate segment population looks like. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, select **Show Additional Stats**.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -204,7 +206,7 @@ When you view the Total Reachable Users for your filtered audience, you may noti
 
 ![Table of detailed audience statistics for Reachable Users.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
-Keep in mind that exact segment membership is always calculated just before the message is sent.
+Keep in mind that exact segment membership is always calculated before the message is sent.
 
 You can also choose to only send your campaign to users who have a specific [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), such as those who are subscribed and opted in to push.
 

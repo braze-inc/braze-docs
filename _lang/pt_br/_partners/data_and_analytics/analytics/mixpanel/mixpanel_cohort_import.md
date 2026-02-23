@@ -12,7 +12,7 @@ search_tag: Partner
 
 ## Integração de importação de dados
 
-Qualquer integração que você configurar será contabilizada no volume de pontos de dados da sua conta.
+Qualquer integração configurada registrará pontos de dados. Se você tiver alguma dúvida sobre as nuances dos pontos de dados Braze, seu gerente de conta Braze poderá respondê-la.
 
 {% alert important %}
 Em conformidade com as políticas de retenção de dados do Mixpanel, os eventos enviados antes de 1º de janeiro de 2010 serão removidos durante a importação.
@@ -44,7 +44,7 @@ Somente os usuários que já existem no Braze serão adicionados ou removidos de
 
 No Braze, para criar um segmento desses usuários, acesse **Público** > **Segmentos**, nomeie seu segmento e selecione **Mixpanel_Cohorts** como o filtro. Em seguida, use a opção "includes" (inclui) e escolha a coorte que você criou no Mixpanel. 
 
-![No criador de segmentos da Braze, o filtro de atribuições do usuário "Coortes do Mixpanel" está definido como "inclui" e "Coorte da Braze".]({% image_buster /assets/img_archive/mixpanel1.png %})
+![No criador de segmentos do Braze, o filtro de atribuições do usuário "Mixpanel cohorts" é definido como "includes" e "Braze cohort".]({% image_buster /assets/img_archive/mixpanel1.png %})
 
 Depois de salvar, você pode fazer referência a esse segmento durante a criação do Canva ou da campanha na etapa de direcionamento de usuários.
 

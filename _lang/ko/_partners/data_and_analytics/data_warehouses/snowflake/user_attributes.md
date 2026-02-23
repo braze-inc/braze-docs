@@ -162,7 +162,7 @@ These views provides near real-time updates on user profile attributes, with dat
 * Useful for real-time analysis and scenarios where recent data is required.
 * **Performance considerations:**
     * Queries on individual users are faster (under a minute using a large warehouse).
-    * Queries without USER_ID filters require aggregation across all users, leading to significantly longer execution times.
+    * 모든 사용자에 대한 집계를 요구하는 USER_ID 필터가 없는 쿼리는 실행 시간이 크게 길어집니다.
     * Queries on a large dataset (such as over 100 million users) may take many minutes.
 
 ## Historical change logs

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Disparar Sync"
+nav_title: "POST: Sincronização do disparador"
 article_title: "POST: Disparar Sync"
 search_tag: Endpoint
 page_order: 2
@@ -18,7 +18,7 @@ description: "Este artigo descreve detalhes sobre o endpoint da Braze \"Disparar
 > Use este endpoint para disparar uma sincronização para uma determinada integração.
 
 {% alert note %}
-Para usar esse endpoint, você precisará gerar uma chave de API com a permissão `cdi.integration_sync`.
+Para usar esse endpoint, você deve gerar uma chave de API com a permissão `cdi.integration_sync`.
 {% endalert %}
 
 ## Limite de taxa
@@ -29,7 +29,7 @@ Para usar esse endpoint, você precisará gerar uma chave de API com a permissã
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 |---|---|---|---|
-| `integration_id` | Obrigatória | String | ID de integração. |
+| `integration_id` | Obrigatória | String | ID de integração. Isso é encontrado no URL ao visualizar uma integração no dashboard do Braze. O formato do URL é `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -63,6 +63,6 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | `429 Another job is in progress` | Há uma sincronização em execução para esta integração. Tente novamente após a sincronização ser concluída. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para obter códigos de status adicionais e mensagens de erro associadas, consulte [Erros fatais e respostas]({{site.baseurl}}/api/errors/#fatal-errors).
+Para obter códigos de status adicionais e mensagens de erro associadas, consulte [Erros fatais & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

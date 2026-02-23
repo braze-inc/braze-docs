@@ -1,6 +1,6 @@
 ## À propos de Google Tag Manager pour le Web {#google-tag-manager}
 
-Google Tag Manager (GTM) vous permet d'ajouter, de supprimer et de modifier à distance des tags sur votre site web sans nécessiter de code de production ni de ressources d'ingénierie. Braze propose les modèles suivants pour le SDK Web :
+Google Tag Manager (GTM) vous permet d'ajouter, de supprimer et de modifier à distance des tags sur votre site web, sans nécessiter de code de production ni de ressources techniques. Braze propose les modèles suivants pour le SDK Web :
 
 |Type d'étiquette|Cas d’utilisation|
 |--------|--------|

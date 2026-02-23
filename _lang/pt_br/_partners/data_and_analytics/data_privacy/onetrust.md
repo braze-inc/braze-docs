@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [OneTrust](https://www.onetrust.com/) é um provedor de software de privacidade e segurança que fornece a visibilidade necessária para entender melhor seu cenário de confiança, ações para aproveitar insights poderosos e automação para manter sua empresa à frente da concorrência. 
 
-_Essa integração é mantida pela OneTrust._
+_Esta integração é mantida pela OneTrust._
 
 ## Sobre a integração
 
@@ -48,15 +48,15 @@ Siga as instruções na tela **Insira os Detalhes das Credenciais** e forneça a
 #### Etapa 1: Criar um fluxo de trabalho
 
 {% tabs %}
-{% tab Atualização de Consentimento do Usuário %}
-1. No menu de integrações do OneTrust, navegue para **Galeria** > **Braze** > **Adicionar** para criar um novo fluxo de trabalho.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+{% tab User Consent Update %}
+1. No menu de integrações da OneTrust, navegue até **Galeria** > **Braze** > **Adicionar** para criar um novo fluxo de trabalho.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. Forneça um nome e um e-mail de notificação no modal de fluxo de trabalho. Clique no botão **Create** (Criar). Na criação, você verá o construtor de fluxo de trabalho. Seu fluxo de trabalho Braze será preenchido com chamadas e ações de API que podem ser usadas para processar solicitações de exclusão. <br><br>
 3. No construtor de fluxo de trabalho, escolha a ação que você deseja disparar no fluxo de trabalho.<br>![]({% image_buster /assets/img/onetrust/onetrust2.png %})
 
 {% endtab %}
-{% tab Exclusão de Usuário %}
+{% tab User Deletion %}
 
-1. No menu de integrações do OneTrust, navegue para **Galeria** > **Braze** > **Adicionar** para criar um novo fluxo de trabalho.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+1. No menu de integrações da OneTrust, navegue até **Galeria** > **Braze** > **Adicionar** para criar um novo fluxo de trabalho.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. Forneça um nome e um e-mail de notificação no modal de fluxo de trabalho. Clique no botão **Create** (Criar). Na criação, você verá o construtor de fluxo de trabalho. Seu fluxo de trabalho Braze será preenchido com chamadas e ações de API que podem ser usadas para processar solicitações de exclusão. <br><br>
 3. No construtor de fluxo de trabalho, escolha a ação que você deseja disparar no fluxo de trabalho.<br>![]({% image_buster /assets/img/onetrust/onetrust8.png %})
 {% endtab %}
@@ -64,7 +64,7 @@ Siga as instruções na tela **Insira os Detalhes das Credenciais** e forneça a
 
 #### Etapa 2: Selecionar ação
 {% tabs %}
-{% tab Atualização de Consentimento do Usuário %}
+{% tab User Consent Update %}
 
 1. Quando terminar, clique em **Done** (Concluído) e escolha **Add Action** (Adicionar ação). Nota que a ação que você escolher dependerá do tipo de preferência que está sendo atualizada e do seu endpoint preferido.
 - Para atualizar as preferências globais de inscrição de um usuário, escolha a ação **POST User track - attributes** (POST monitoramento de usuários – atributos).
@@ -72,7 +72,7 @@ Siga as instruções na tela **Insira os Detalhes das Credenciais** e forneça a
 2. Escolha a ação desejada, selecione suas credenciais da Braze pré-criadas e clique em **Next** (Avançar).<br>![]({% image_buster /assets/img/onetrust/onetrust5.png %})
 
 {% endtab %}
-{% tab Exclusão de Usuário %}
+{% tab User Deletion %}
 
 1. Quando terminar, clique em **Done** (Concluído) e escolha **Add Action** (Adicionar ação).
 - Para excluir um usuário da Braze, escolha a ação **POST User Delete Action** (POST ação de exclusão de usuário).
@@ -83,7 +83,7 @@ Siga as instruções na tela **Insira os Detalhes das Credenciais** e forneça a
 {% endtabs %}
 #### Etapa 3: atualize o corpo da solicitação
 {% tabs %}
-{% tab Atualização de Consentimento do Usuário %}
+{% tab User Consent Update %}
 
 1. Atualize o corpo para incluir quaisquer valores dinâmicos necessários. Confira se o corpo da ação corresponde ao [endpoint `/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) e ao [endpoint `/subscription/status/set`](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
 2. Personalize o fluxo de trabalho com parâmetros adicionais ou lógica condicional para atender às necessidades da sua organização.
@@ -96,7 +96,7 @@ Ao usar os fluxos de trabalho do OneTrust para atualizar as preferências do gru
 ![]({% image_buster /assets/img/onetrust/onetrust6.png %})
 
 {% endtab %}
-{% tab Exclusão de Usuário %}
+{% tab User Deletion %}
 
 1. Atualize o corpo para incluir quaisquer valores dinâmicos necessários. Confira se o corpo da ação corresponde ao [endpoint `/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/).
 2. Quando terminar de editar, selecione **Concluir** e depois **Ativar** para ativar o fluxo de trabalho.

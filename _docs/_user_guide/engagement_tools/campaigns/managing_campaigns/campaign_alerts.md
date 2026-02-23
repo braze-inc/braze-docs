@@ -30,7 +30,7 @@ Navigate to the analytics page of your campaign to start setting up your alert. 
 
 For a scheduled recurring campaign, you can set upper and lower thresholds for the messages sent each time the campaign sends. For a triggered campaign, you can set upper and lower thresholds for the number of messages sent hourly and daily.
 
-You can set up an email alert, a webhook alert or both. Webhook alerts can be very useful, as they allow you to send an alert to a Slack channel. For more information on integrating campaign alerts with Slack, see our [documentation]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration).
+You can set up an email alert, a webhook alert or both. Webhook alerts can be very useful, as they allow you to send an alert to a Slack channel. For more information on integrating campaign alerts with Slack, refer to Slack's documentation for [Sending messages using incoming webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/).
 
 {% alert note %}
 When setting campaign alerts for future campaigns, you may receive updates before the campaign starts and after it ends. This is because campaign alerts will continue to send until the campaign has been manually stopped.

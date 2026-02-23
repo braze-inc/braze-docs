@@ -1,7 +1,7 @@
 ---
 nav_title: 製品ブロック
 article_title: ドラッグアンドドロッププロダクトブロック
-page_order: 7.5
+page_order: 9
 description: "このリファレンス記事では、ドラッグアンドドロップ製品ブロックについて説明します。これにより、ユーザーはカタログアイテムの動的または静的なショーケースをすばやく追加および構成できます。"
 tool:
     - Campaigns
@@ -108,7 +108,7 @@ alias: /dnd_product_blocks/
 
 必要なフィールドを含むこの[サンプル製品カタログ]({{site.baseurl}}/assets/download_file/ecommerce_product_catalog_sample.csv)を使用して、作業をすぐに開始します。 
 
-![必須フィールドに加え、その他のフィールドを含むCSVファイルのサンプル。]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+![必須フィールドに加えてその他のフィールドを含むCSVファイルのサンプル。]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
 
 #### カタログフィールドへのマッピング
 

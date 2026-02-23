@@ -89,7 +89,7 @@ Wenn Sie eine Kampagne oder ein Canvas erstellen, können Sie die Nutzer, die Si
 
 Die Analytik wird dem aktuellen Analysebereich für Push-Benachrichtigungen sehr ähnlich sein. Für die Analyse von Push Stories können Sie die Metrik **Direkte Öffnungen** öffnen, um die Klicks pro Seite zu sehen.
 
-![iOS Push Performance-Tabelle mit Beispiel-Analytics und erweiterten Details für die Metrik Direkte Öffnungen.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
+![iOS Push Performance-Tabelle mit Beispielanalysen und erweiterten Details für die Metrik „Direkte Öffnungen“.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## Fehlersuche
 

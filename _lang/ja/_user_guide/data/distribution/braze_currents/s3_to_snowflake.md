@@ -1,6 +1,6 @@
 ---
-nav_title: Amazon S3 から Snowflake へのデータ転送
-article_title: Amazon S3 から Snowflake へのデータ転送
+nav_title: Amazon S3からSnowflakeにデータを転送する
+article_title: Amazon S3からSnowflakeにデータを転送する
 page_order: 7
 page_type: tutorial
 description: "このハウツー記事では、ETL（Extract, Transform, Load）プロセスを使用して、クラウドストレージ（Amazon S3など）からデータウェアハウス（Snowflakeなど）にデータを転送する手順を説明する。"
@@ -8,7 +8,7 @@ tool: Currents
 
 ---
 
-# Amazon S3 から Snowflake へのデータ転送
+# Amazon S3からSnowflakeにデータを転送する
 
 > 現在データが Amazon S3 にある場合は、抽出、読み込み、変換 (ELT) プロセスを使用して、Snowflake や他のリレーショナルデータウェアハウスに転送できます。このページではその方法を説明する。
 

@@ -1,11 +1,11 @@
 ---
 nav_title: Tracking users
-article_title: Tracking users through a form
+article_title: Track users through a form
 description: "Learn how to identify users who submit a form through your landing page by adding a Liquid tag to your messages."
 page_order: 2
 ---
 
-# Tracking users through a form
+# Track users through a form
 
 > Learn how to track users who submit a form through your landing page by adding a landing page Liquid tag to your  messages. This Liquid tag is supported across all Braze messaging channels, including email, SMS, in-app messages, and more. To learn more about tracking data, see [About landing page tracking data]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/about_tracking_data).
 

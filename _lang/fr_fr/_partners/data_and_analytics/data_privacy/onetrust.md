@@ -48,13 +48,13 @@ Suivez les invites de l'écran **Enter Credential Details** et fournissez les in
 #### Étape 1 : Créer un flux de travail
 
 {% tabs %}
-{% tab Mise à jour du consentement de l'utilisateur %}
+{% tab User Consent Update %}
 1. Dans le menu des intégrations OneTrust, naviguez vers **Galerie** > **Braze** > **Ajouter** pour créer un nouveau flux de travail.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. Indiquez un nom et un e-mail de notification dans la boîte de dialogue. Cliquez sur le bouton **Créer**. Lors de la création, vous accéderez au générateur de flux de travail. Votre flux de travail Braze sera initié avec des appels d'API et des actions qui peuvent être utilisés pour traiter les requêtes de suppression. <br><br>
 3. Dans le générateur de flux de travail, choisissez l'action que vous souhaitez déclencher dans le flux de travail.<br>![]({% image_buster /assets/img/onetrust/onetrust2.png %})
 
 {% endtab %}
-{% tab Suppression d'un utilisateur %}
+{% tab User Deletion %}
 
 1. Dans le menu des intégrations OneTrust, naviguez vers **Galerie** > **Braze** > **Ajouter** pour créer un nouveau flux de travail.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. Indiquez un nom et un e-mail de notification dans la boîte de dialogue. Cliquez sur le bouton **Créer**. Lors de la création, vous accéderez au générateur de flux de travail. Votre flux de travail Braze sera initié avec des appels d'API et des actions qui peuvent être utilisés pour traiter les requêtes de suppression. <br><br>
@@ -64,7 +64,7 @@ Suivez les invites de l'écran **Enter Credential Details** et fournissez les in
 
 #### Étape 2 : Sélectionnez une action
 {% tabs %}
-{% tab Mise à jour du consentement de l'utilisateur %}
+{% tab User Consent Update %}
 
 1. Lorsque vous avez terminé, cliquez sur **Terminé** et choisissez **Ajouter une action**. Notez que l'action que vous choisissez dépend du type de préférence mis à jour et de votre endpoint préféré.
 - Pour mettre à jour les préférences d'abonnement globales d'un utilisateur, sélectionnez l'action **POST Suivi des utilisateurs - Attributs.** 
@@ -72,7 +72,7 @@ Suivez les invites de l'écran **Enter Credential Details** et fournissez les in
 2. Choisissez l'action souhaitée, sélectionnez vos informations d'identification Braze créées précédemment et cliquez sur **Suivant**.<br>![]({% image_buster /assets/img/onetrust/onetrust5.png %})
 
 {% endtab %}
-{% tab Suppression d'un utilisateur %}
+{% tab User Deletion %}
 
 1. Lorsque vous avez terminé, cliquez sur **Terminé** et choisissez **Ajouter une action**.
 - Pour supprimer un utilisateur de Braze, sélectionnez l'action **POST Suppression de l’utilisateur**.
@@ -83,7 +83,7 @@ Suivez les invites de l'écran **Enter Credential Details** et fournissez les in
 {% endtabs %}
 #### Étape 3 : Mettre à jour le corps de la requête
 {% tabs %}
-{% tab Mise à jour du consentement de l'utilisateur %}
+{% tab User Consent Update %}
 
 1. Mettez à jour le corps du texte pour y inclure toutes les valeurs dynamiques nécessaires. Assurez-vous que le corps de l'action correspond aux [endpoints `/users/track` ](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) et [`/subscription/status/set`](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
 2. Personnalisez le flux de travail avec des paramètres supplémentaires ou une logique conditionnelle pour répondre aux besoins de votre organisation.
@@ -96,7 +96,7 @@ Lorsque vous utilisez les workflows OneTrust pour mettre à jour les préférenc
 ![]({% image_buster /assets/img/onetrust/onetrust6.png %})
 
 {% endtab %}
-{% tab Suppression d'un utilisateur %}
+{% tab User Deletion %}
 
 1. Mettez à jour le corps du texte pour y inclure toutes les valeurs dynamiques nécessaires. Assurez-vous que le corps de l'action correspond à l'[endpoint`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/).
 2. Une fois la modification terminée, sélectionnez **Terminer** puis **Activer** pour activer le flux de travail.

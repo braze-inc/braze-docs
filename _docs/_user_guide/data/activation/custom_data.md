@@ -26,7 +26,7 @@ guide_featured_list:
   - name: Event Naming Conventions
     link: /docs/user_guide/data/activation/custom_data/event_naming_conventions/
     image: /assets/img/braze_icons/list.svg
-  - name: Managing Custom Data
+  - name: Manage Custom Data
     link: /docs/user_guide/data/activation/custom_data/managing_custom_data/
     image: /assets/img/braze_icons/check-square-broken.svg
   - name: Recommended Events

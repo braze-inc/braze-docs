@@ -24,7 +24,7 @@ HTML in-app messages allow for greater control over the look and feel of a messa
 Custom HTML messages can use the [JavaScript Bridge](#javascript-bridge) methods to log events, set custom attributes, close the message, and more! Check out our [GitHub repository](https://github.com/braze-inc/in-app-message-templates) that contains detailed instructions on how to use and customize HTML in-app messages for your needs, and for a set of HTML5 in-app messages templates to help you get started.
 
 {% alert note %}
-To enable HTML in-app messages through the Web SDK, you must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
+To enable HTML in-app messages through the Web SDK, you must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 {% endalert %}
 
 ## JavaScript bridge {#javascript-bridge}
@@ -32,7 +32,7 @@ To enable HTML in-app messages through the Web SDK, you must supply the `allowUs
 HTML in-app messages for Web, Android, iOS, and Swift SDKs support a JavaScript "bridge" to interface with Braze SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `brazeBridge` or `appboyBridge` variable.
 
 {% alert important %}
-Braze recommends that you use the global `brazeBridge` variable. The global `appboyBridge` variable is deprecated but will continue to function for existing users. If you are using `appboyBridge`, we suggest you migrate to `brazeBridge`. <br><br> `appboyBridge` was deprecated in the following SDK versions:
+Braze recommends that you use the global `brazeBridge` variable. The global `appboyBridge` variable is deprecated but will continue to function for existing users. If you are using `appboyBridge`, we suggest you migrate to `brazeBridge`. <br><br> `appboyBridge` was deprecated in the following SDK versions:<br><br>
 - Web: [3.3.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#330)
 - Android: [14.0.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#1400)
 - iOS: [4.2.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/#420)
@@ -150,7 +150,7 @@ To use the HTML preview for in-app messages, you must upgrade to the following m
 {% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
 {% alert warning %}
-Because this message type can only be received by certain later SDK versions, users that are on unsupported SDK versions will not receive the message. Consider adopting this message type after a significant portion of your user base is reachable, or target only those users whose app version is later than the requirements. Learn more about [filtering by most recent app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
+Because this message type can only be received by certain later SDK versions, users who are on unsupported SDK versions will not receive the message. Consider adopting this message type after a significant portion of your user base is reachable, or target only those users whose app version is later than the requirements. Learn more about [filtering by most recent app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
 {% endalert %}
 
 ### Creating a campaign {#instructions}
@@ -173,7 +173,7 @@ The following file types are supported for upload:
 
 Braze recommends uploading assets to the media library for two reasons:
 
-1. Assets added to a campaign via the media library allow your messages to be displayed even while the user is offline, or has a poor internet connection.
+1. Assets added to a campaign via the media library allow your messages to be displayed even while the user is offline or has a poor internet connection.
 2. Assets uploaded to Braze can be reused across campaigns.
 
 ##### Adding asset files
@@ -184,10 +184,9 @@ To add new assets to your campaign, use the drag-and-drop section to upload a fi
 
 After your assets are added, they will appear in the **Assets for this campaign** section. 
 
-If an asset's filename matches that of a local HTML asset it will be replaced automatically (for example, `cat.png` is uploaded and `<img src="cat.png" />` exists). 
+If an asset's filename matches that of a local HTML asset, it is replaced automatically (for example, `cat.png` is uploaded and `<img src="cat.png" />` exists). 
 
 Otherwise, hover over an asset from the list and select <i class="fas fa-copy"></i> **Copy** to copy the file's URL to your clipboard. Then paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
-
 
 ### HTML editor
 
@@ -234,10 +233,7 @@ When using JavaScript methods inside an `onclick` attribute, wrap string values 
 ### Backward incompatible changes {#backward-incompatible-changes}
 
 1. The most notable incompatible change with this new message type is the SDK requirements. Users whose app SDK does not meet the minimum [SDK version requirements](#supported-sdk-versions) will not be shown the message.
-<br>
-
 2. The `braze://close` deeplink, which was previously supported on mobile apps, has been removed in favor of the JavaScript `brazeBridge.closeMessage()`. This allows for cross-platform HTML messages, since the web does not support deeplinks.
-
 3. Automatic click tracking, which used `?abButtonId=0` for button IDs, and "body click" tracking on close buttons have been removed. The following code examples show how to change your HTML to use our new click tracking JavaScript methods:
 
    | Before | After |

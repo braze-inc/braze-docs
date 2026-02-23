@@ -33,9 +33,9 @@ scim/v2/Users?filter=userName%20eq%20 "user%40test.com"
 
 ## パスパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
-| `userName@example.com` | 必須 | 文字列 | ユーザーのEメール。 |
+| `userName@example.com` | 必須かどうか | 文字列 | ユーザーのEメール。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター

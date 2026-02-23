@@ -12,7 +12,11 @@ channel:
 
 # Kontaktkarten 
 
-> Kontaktkarten (manchmal auch als vCard oder Virtual Contact Files (VCF) bezeichnet) sind ein standardisiertes Dateiformat zum Versenden von Geschäfts- und Kontaktinformationen, die leicht in Adress- oder Kontaktbücher importiert werden können. 
+> Kontaktkarten (manchmal auch als vCard oder Virtual Contact Files (VCF) bezeichnet) sind ein standardisiertes Dateiformat zum Versenden von Geschäfts- und Kontaktinformationen, die Sie einfach in Adress- oder Kontaktbücher importieren können. 
+
+{% alert note %}
+Das Versenden einer Kontaktkarte wird als MMS berechnet. Überprüfen Sie Ihr erwartetes MMS-Volumen und die Nutzung Ihres Nachrichtenguthabens, wenn Sie Kontaktkarten erstellen, und bestätigen Sie die Kosten auf Ihrer Braze [Abrechnungsseite]({{site.baseurl}}/user_guide/administrative/access_billing/billing/).
+{% endalert %}
 
 Kontaktkarten können [programmgesteuert](https://www.twilio.com/blog/send-vcard-twilio-sms) erstellt und in die [Braze-Mediathek]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) hochgeladen oder über unseren integrierten Kontaktkartengenerator erstellt werden. Diese Karten können mit allgemeinen Eigenschaften wie dem Namen Ihres Unternehmens, Ihrer Telefonnummer, Ihrer Adresse, Ihrer E-Mail und einem kleinen Foto versehen werden. Um mit der Erstellung von Kontaktkarten zu beginnen, vergewissern Sie sich zunächst, dass Sie in Braze für die Verwendung von MMS eingerichtet sind.
 
@@ -24,7 +28,7 @@ Kontaktkarten können mit dem SMS- und MMS-Composer erstellt werden. Wählen Sie
 
 Als Nächstes werden Sie aufgefordert, Ihren Firmennamen oder Spitznamen einzugeben. Dies ist der Name, den Ihre Benutzer sehen werden, wenn sie die Karte speichern. Ein Limit von 20 Zeichen wird durchgesetzt, um sicherzustellen, dass die Nutzer:innen in ihren Kontakten und in ihrer Messaging-App Ihren gesamten Firmennamen oder Alias sehen können. 
 
-\![Der Tab des Kontaktkartengenerators.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
+![Der Tab Kontaktkartengenerator.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
 
 ### Schritt 2: Rufnummer zuweisen
 
@@ -34,7 +38,7 @@ Beachten Sie, dass alphanumerische Codes nicht mit Zwei-Wege-Messaging kompatibe
 
 ### Schritt 3: Optionale Felder
 
-\![Optionale Felder für den Kontaktkartengenerator.]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![Optionale Felder für den Kontaktkartengenerator.]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 #### Kontaktkarte Kontaktfoto hochladen
 

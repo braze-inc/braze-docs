@@ -1,13 +1,13 @@
 ---
-nav_title: Braze のナビゲーション
-article_title: Braze のナビゲーション
+nav_title: Brazeをナビゲートする
+article_title: Brazeをナビゲートする
 alias: /navigating_braze/
 page_order: 0
 page_type: reference
 description: "このガイドでは、更新されたナビゲーションの使用方法について説明します。"
 ---
 
-# Braze のナビゲーション
+# Brazeをナビゲートする
 
 Braze のナビゲーションは、デバイスを問わず機能やコンテンツに効率的にアクセスできるように設計されています。それを最大限に活用する方法を探ってみましょう。
 

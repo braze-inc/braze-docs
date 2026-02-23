@@ -16,24 +16,26 @@ platform:
 
 > Dieser Artikel beschreibt den grundlegenden Ansatz, den Sie bei der Implementierung angepasster Content-Cards verwenden, sowie drei häufige Anwendungsfälle. Es wird davon ausgegangen, dass Sie bereits die anderen Artikel der Anleitung zur Anpassung von Content-Cards gelesen haben, um zu verstehen, was standardmäßig möglich ist und was angepassten Code erfordert. Es ist besonders hilfreich zu verstehen, wie Sie [Analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) für Ihre angepassten Content-Cards [protokollieren]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) können. 
 
+{% multi_lang_include banners/content_card_alert.md %}
+
 ## Eine Karte erstellen
 
 ### Schritt 1: Erstellen Sie ein angepasstes UI 
 
 {% tabs local %}
+{% tab web %}
+
+Erstellen Sie zunächst Ihre angepasste HTML-Komponente, die zum Rendern der Karten verwendet werden soll. 
+
+{% endtab %}
 {% tab android %}
 
 Erstellen Sie zunächst Ihr eigenes angepasstes Fragment. Das standardmäßige [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) ist nur für unsere Standard-Content-Card-Typen gedacht, ist aber ein guter Ausgangspunkt.
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 Erstellen Sie zunächst Ihre eigene angepasste View-Controller-Komponente. Das standardmäßige [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) ist nur für unsere Standard-Content-Card-Typen gedacht, ist aber ein guter Ausgangspunkt.
-
-{% endtab %}
-{% tab Internet %}
-
-Erstellen Sie zunächst Ihre angepasste HTML-Komponente, die zum Rendern der Karten verwendet werden soll. 
 
 {% endtab %}
 {% endtabs %}
@@ -54,7 +56,7 @@ So testen Sie Ihre Content-Card:
 2. Gehen Sie in Braze zu **Kampagnen**, und [erstellen Sie eine neue Content-Card-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create).
 3. Wählen Sie in Ihrer Kampagne " **Test"** aus und geben Sie dann die `user-id` des Testnutzers:in ein. Wenn Sie bereit sind, wählen Sie **Test senden**. Sie werden in Kürze eine Content-Card auf Ihrem Gerät starten können.
 
-![Eine Braze Content Card Kampagne, bei der Sie Ihre eigene Benutzer-ID als Testempfänger hinzufügen können, um Ihre Content Card zu testen.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
+![Eine Braze Content-Card-Kampagne, bei der Sie Ihre eigene Nutzer:in als Testempfänger hinzufügen können, um Ihre Content-Card zu testen.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
 
 ## Platzierung von Inhaltskarten
 
@@ -73,19 +75,19 @@ Sie möchten beispielsweise zwei Messaging-Karten erstellen: einen Call-to-Actio
 Schlüssel wie `body`, `title` und `buttonText` können einfache String-Werte haben, die Ihre Marketer festlegen können. Schlüssel wie `terms` können Werte haben, die eine kleine Sammlung von Phrasen enthalten, die von Ihrer Rechtsabteilung genehmigt wurden. Schlüssel wie `style` und `class_type` haben String-Werte, die Sie einstellen können, um zu bestimmen, wie Ihre Karte in Ihrer App oder Website dargestellt wird.
 
 {% tabs local %}
-{% tab Empfehlungen zum Lesen %}
+{% tab Reading recommendations %}
 Schlüssel-Wert-Paare für die Leseempfehlungskarte:
 
 | Schlüssel         | Wert                                                                |
 |------------|----------------------------------------------------------------------|
 | `body`       | Fügen Sie Ihre Interessen zu Ihrem Politer Weekly Profil hinzu, um persönliche Leseempfehlungen zu erhalten. |
 | `style`      | Infos                                                                 |
-| `class_type` | benachrichtigung_zentrale                                                 |
+| `class_type` | notification_center                                                 |
 | `card_priority` | (1 %)                                                                 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 
-{% tab Coupon für neue Abonnent:innen %}
+{% tab New subscriber coupon %}
 Schlüssel-Wert-Paare für einen neuen Abonnent:in-Gutschein:
 
 | Schlüssel         | Wert                                                            |
@@ -94,20 +96,20 @@ Schlüssel-Wert-Paare für einen neuen Abonnent:in-Gutschein:
 | `body`       | End of Summer Special – Hol dir 10 % Rabatt auf Politer-Spiele              |
 | `buttonText` | Jetzt abonnieren                                                    |
 | `style`      | Promo                                                            |
-| `class_type` | benachrichtigung_zentrale                                              |
+| `class_type` | notification_center                                              |
 | `card_priority` | (2 %)                                                              |
-| `terms`      | neue_Abonnenten_ausschließlich                                             |
+| `terms`      | new_subscribers_only                                             |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 {% endtabs %}
 
-{% details Zusätzliche Informationen für Android %}
+{% details Additional information for Android %}
 
 Im Android und FireOS SDK wird die Logik der Nachrichtenzentrale durch den Wert `class_type` gesteuert, der durch die Schlüssel-Wert-Paare von Braze bereitgestellt wird. Mit der Methode [`createContentCardable`]({{site.baseurl}}/developer_guide/content_cards/) können Sie diese Klassentypen filtern und identifizieren.
 
 {% tabs local %}
 {% tab Kotlin %}
-**Verwendung von `class_type` für das Verhalten beim Klicken**<br>
+**Verwendung von `class_type` für On-Click-Verhalten**<br>
 Wenn wir die Content-Card-Daten in unsere angepassten Klassen aufblasen, verwenden wir die Eigenschaft `ContentCardClass` der Daten, um zu bestimmen, welche konkrete Unterklasse zum Speichern der Daten verwendet werden soll.
 
 ```kotlin
@@ -155,7 +157,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 ```
 {% endtab %}
 {% tab Java %}
-**Verwendung von `class_type` für das Verhalten beim Klicken**<br>
+**Verwendung von `class_type` für On-Click-Verhalten**<br>
 Wenn wir die Content-Card-Daten in unsere angepassten Klassen aufblasen, verwenden wir die Eigenschaft `ContentCardClass` der Daten, um zu bestimmen, welche konkrete Unterklasse zum Speichern der Daten verwendet werden soll.
 
 ```java

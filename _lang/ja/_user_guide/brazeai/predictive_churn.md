@@ -2,14 +2,14 @@
 nav_title: 解約予測
 article_title: 解約予測
 description: "このランディングページでは、Braze Predictive SuiteのツールであるPredictive Churn（解約予測）について説明している。"
-page_order: 2.0
+page_order: 9
 alias: /predictive_churn/
 search_rank: 2
 ---
 
 # 解約予測
 
-> Braze Predictive SuiteのツールであるPredictive Churnを使えば、ビジネスにとっての解約予測を定義し、維持したいユーザーを特定することができる。予測を作成すると、Braze は解約したユーザーと解約しなかったユーザーの両方の過去の行動のパターンを分析してリスクのあるユーザーを認識するように、[勾配ブースティング決定木](https://en.wikipedia.org/wiki/Gradient_boosting)を使用して機械学習モデルをトレーニングします。
+> Predictive Predictive SuiteのツールであるPredictive Churnを使えば、ビジネスにとっての解約予測を定義し、維持したいユーザーを特定することができる。予測を作成すると、Braze は解約したユーザーと解約しなかったユーザーの両方の過去の行動のパターンを分析してリスクのあるユーザーを認識するように、[勾配ブースティング決定木](https://en.wikipedia.org/wiki/Gradient_boosting)を使用して機械学習モデルをトレーニングします。
 
 {% alert tip %}
 詳細については、「[解約の定義]({{site.baseurl}}/user_guide/brazeai/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)」と「[予測対象ユーザー]({{site.baseurl}}/user_guide/brazeai/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)」を参照してください。
@@ -25,7 +25,7 @@ search_rank: 2
 
 ## 解約予測へのアクセス
 
-[**予測**] ページは [**分析**] セクションにあります。フルアクセスが必要な場合、アカウントマネージャーにお問い合わせください。
+{% include brazeai/predictions_page_access.md %}
 
 この機能は、購入前にプレビューモードで使用できます。これにより、合成データを使用した解約予測のデモを見ることができ、お客様のユーザーデータに基づいて、解約予測モデルを一度に 1 つ作成できます。このプレビューでは、解約リスクに応じてユーザーをメッセージングのターゲットにすることはできず、作成後に定期的に更新されることもありません。
 

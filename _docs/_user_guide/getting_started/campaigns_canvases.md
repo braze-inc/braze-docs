@@ -7,7 +7,7 @@ description: "This article provides an overview of the different ways you can se
 
 ---
 
-# Getting Started: Campaigns and Canvases
+# Get started: Campaigns and Canvases
 
 In Braze, you can send messages either through a [campaign](#campaigns) or a [Canvas](#canvas).
 

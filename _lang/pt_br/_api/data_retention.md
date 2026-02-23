@@ -22,8 +22,8 @@ Warning! Don't make any changes to this document without approval from the legal
 
 A Braze capacita seus clientes a excluir perfis de usuário e dados de atributos inteiros de seu espaço de trabalho.
 
-Isso significa que você pode: 
-- Excluir perfis de usuário usando o [endpoint da API]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) Braze [Excluir usuário]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
+Isso significa que você pode:
+- Excluir perfis de usuário usando o [endpoint da API]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) Braze [Excluir usuário]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 - Excluir (nulo) ou alterar atribuições em perfis de usuário usando o endpoint da Braze [API de rastrear usuários]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 
 Os eventos comportamentais não podem ser excluídos de um perfil de usuário (eventos personalizados, sessões, campanhas, compras). Para remover esses eventos, é necessário excluir todo o perfil de usuário.
@@ -44,7 +44,7 @@ A cada semana, a Braze executa um processo para remover usuários inativos dos S
 Os clientes têm controle total sobre se um usuário está inativo ou inativo e podem impedir o arquivamento de perfis de usuários registrando um ponto de dados em intervalos regulares. Os canvas da Braze oferecem a capacidade de fazer isso automaticamente, o que permite desativar efetivamente essa funcionalidade para alguns ou todos os seus usuários inativos ou inativos.
 {% endalert %}
 
-#### Dados de campanha e interações do Canva 
+#### Dados de campanha e interações do Canva
 
 Os dados de interação de mensagens referem-se a como um usuário interage com uma campanha ou com a variante de campanha que recebeu (por exemplo, quando um usuário abre a campanha A ou recebe a variante A). Esses dados são usados para redirecionamento. Você pode ler mais sobre a disponibilidade de dados de interação de envio de mensagens em [Sobre a disponibilidade de dados de interação de envio de mensagens]({{site.baseurl}}/messaging_interaction_data/).
 

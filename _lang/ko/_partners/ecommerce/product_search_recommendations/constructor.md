@@ -53,7 +53,7 @@ You can use Constructor's Offsite Discovery API URL to render product images and
 
 | Parameters | Description |
 |-------------|-------------|
-| `position` | Refers to the ranking of the specific recommended item within the suggested list (for example, `position = 2`). <br>![Position ranking of item.]({% image_buster /assets/img/constructor/constructor_position.png %}) |
+| `position` | Refers to the ranking of the specific recommended item within the suggested list (for example, `position = 2`). <br>![아이템의 위치 순위.]({% image_buster /assets/img/constructor/constructor_position.png %}) |
 | `ui` | Represents the user's identifier, crucial for personalizing recommendation results. Set the `ui` parameter as the customer’s `external_id` in Braze. If omitted, Constructor will return general recommendations instead of user-specific ones. |
 | `pod_id` | Identifier for the pod containing strategy and searchandising rules for recommendations (for example, a pod with a bestseller strategy generates personalized bestseller). |
 | `key` | The Constructor index key for this customer. |

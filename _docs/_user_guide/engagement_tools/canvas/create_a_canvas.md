@@ -1,6 +1,6 @@
 ---
-nav_title: Building Canvases
-article_title: Building Canvases
+nav_title: Build Canvases
+article_title: Build Canvases
 page_order: 1
 layout: dev_guide
 guide_top_header: "Building Canvases"
@@ -12,13 +12,13 @@ tool: Canvas
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Creating a Canvas
+  - name: Create a Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/palette.svg
   - name: Commenting in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments/
     image: /assets/img/braze_icons/message-circle-01.svg
-  - name: Creating a Canvas Template
+  - name: Create a Canvas Template
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Rate Limiting

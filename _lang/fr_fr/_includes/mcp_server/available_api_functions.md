@@ -1,6 +1,6 @@
 # Fonctions du serveur MCP de Braze
 
-> Le serveur MCP de Braze expose un ensemble de fonctions API en lecture seule qui se mappent à des endpoints spécifiques de l'API REST de Braze. Les clients MCP tels que Claude et Cursor peuvent appeler ces fonctions pour récupérer des données sans accéder aux informations personnelles ni modifier votre espace de travail. Pour des informations plus générales, voir [Serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> Le serveur MCP de Braze expose un ensemble de fonctions API en lecture seule qui se mappent à des endpoints spécifiques de l'API REST de Braze. Les clients MCP tels que Claude et Cursor peuvent appeler ces fonctions pour récupérer des données sans accéder aux informations personnelles ni modifier votre espace de travail. Pour plus d'informations générales, voir [Serveur MCP de Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -10,8 +10,7 @@ Avant de pouvoir utiliser cette fonctionnalité, vous devez [configurer le serve
 
 ## Fonctions API de Braze disponibles
 
-Il s'agit des fonctions API auxquelles votre client MCP fait référence pour interagir avec le serveur MCP de Braze :
-
+Votre client MCP fait référence aux fonctions API suivantes pour interagir avec le serveur MCP de Braze :
 ### Fonctions générales
 
 | Fonction | Description |
@@ -36,7 +35,7 @@ Il s'agit des fonctions API auxquelles votre client MCP fait référence pour in
 | `get_canvas_list` | [`/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases) | Exportez une liste de toiles avec des métadonnées. |
 | `get_canvas_details` | [`/canvas/details`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details) | Obtenez des informations détaillées sur des toiles spécifiques. |
 | `get_canvas_data_summary` | [`/canvas/data_summary`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary) | Obtenez des analyses/analytiques sommaires des performances de Canvas (si utilisé comme adjectif). |
-| `get_canvas_data_series` | [`/canvas/data_series`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics) | Récupérez les données d'analyse/analytique de séries temporelles pour Canvases. |
+| `get_canvas_data_series` | [`/canvas/data_series`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics) | Récupérer des données d'analyse/analytique de séries temporelles pour Canvases (si utilisées comme adjectifs anjectifs). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ### Catalogues

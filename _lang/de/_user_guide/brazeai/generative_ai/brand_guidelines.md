@@ -5,7 +5,7 @@ page_order: 2.2
 description: "Dieser Referenzartikel behandelt die Markenrichtlinien für den KI-Texter-Assistenten, eine Funktion, mit der Sie den Stil der vom KI-Texter-Assistenten generierten Texte an die Stimme und den Stil Ihrer Marke anpassen können."
 ---
 
-# Erstellen von Markenrichtlinien mit <sup>BrazeAITM</sup>
+# Erstellen Sie Markenrichtlinien mit <sup>BrazeAITM</sup>
 
 > Passen Sie den Stil Ihrer KI-generierten Texte mit Hilfe von individuellen Markenrichtlinien an die Stimme und Persönlichkeit Ihrer Marke an.
 
@@ -18,7 +18,7 @@ Folgen Sie diesen Schritten, um Markenrichtlinien im KI-Texterstellungsassistent
 1. Suchen Sie in Ihrem Nachrichten-Editor und wählen Sie <i class="fa-solid fa-wand-magic-sparkles" title="KI Werbetexter"></i> um [den KI-Texter-Assistenten zu öffnen]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/#access).
 2. Wählen Sie **Markenrichtlinien anwenden** und dann **Markenrichtlinien erstellen**.
 
-![Dropdown für "Markenrichtlinien anwenden" erweitert mit dem Button "Eine Markenrichtlinie erstellen" im Fokus.]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
+![Das Dropdown-Menü für "Markenrichtlinien anwenden" wurde erweitert und der Button "Markenrichtlinien erstellen" in den Mittelpunkt gestellt.]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
 
 {: start="3"}
 
@@ -50,7 +50,7 @@ Listen Sie unter **Ausschlüsse** alle Sprachen oder Stile auf, die nicht mit Ih
 
 Testen Sie Ihre Richtlinien, um zu sehen, wie sie funktionieren. Erweitern Sie **Richtlinien testen**, um Beispieltexte zu erstellen und bei Bedarf anzupassen.
 
-![Testen von Markenrichtlinien mit einer Aktion über einen Frühlingsausverkauf für E-Mail Betreffzeilen.]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %})
+![Testen von Markenrichtlinien mit einer Aktion über einen Frühjahrsausverkauf für E-Mail Betreffzeilen.]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %})
 
 ### Schritt 5: Speichern Sie Ihre Richtlinien
 

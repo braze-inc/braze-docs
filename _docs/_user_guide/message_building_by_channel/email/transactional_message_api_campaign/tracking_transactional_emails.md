@@ -1,6 +1,6 @@
 ---
-nav_title: Tracking transactional emails
-article_title: Tracking Transactional Emails
+nav_title: Track transactional emails
+article_title: Track Transactional Emails
 page_order: 1
 description: "This reference article covers how to set up real-time tracking for transactional email campaigns."
 page_type: reference
@@ -10,7 +10,7 @@ channel: email
 
 ---
 
-# Tracking transactional emails
+# Track transactional emails
 
 > This page describes how to set up real-time tracking for [transactional email campaigns]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/). For more information about the endpoint itself, refer to [Send transactional emails using API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/).
 

@@ -3,13 +3,13 @@ nav_title: Aprovisionamiento SAML Just-in-Time
 article_title: Aprovisionamiento justo a tiempo SAML
 page_order: 1
 page_type: tutorial
-description: "Este artículo te explicará cómo configurar el aprovisionamiento justo a tiempo SAML para que los nuevos usuarios del panel puedan crear una cuenta Braze en su primer inicio de sesión." 
+description: "Este artículo te explicará cómo configurar el aprovisionamiento justo a tiempo SAML para permitir a los nuevos usuarios de la empresa crear una cuenta Braze en su primer inicio de sesión." 
 
 ---
 
 # Aprovisionamiento justo a tiempo SAML 
 
-> El aprovisionamiento justo a tiempo funciona con [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/) para permitir a los nuevos usuarios del panel crear una cuenta Braze en su primer inicio de sesión. Esto elimina la necesidad de que los administradores creen manualmente una cuenta para un nuevo usuario del panel, elijan sus permisos, le asignen un espacio de trabajo y esperen a que active su cuenta.
+> El aprovisionamiento justo a tiempo funciona con [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/) para permitir a los nuevos usuarios de la empresa crear una cuenta Braze en su primer inicio de sesión. Esto elimina la necesidad de que los administradores creen manualmente una cuenta para un nuevo usuario de la empresa, elijan sus permisos, le asignen un espacio de trabajo y esperen a que active su cuenta.
 
 Como medida de seguridad, el aprovisionamiento justo a tiempo (JITP) de SAML sólo funciona para usuarios con dominios de correo electrónico que ya existan en tu empresa. La JITP sólo es posible para dominios en los que ya haya al menos un desarrollador confirmado, no suplantación de identidad, en la empresa. 
 
@@ -26,12 +26,12 @@ SAML JITP requiere que SAML SSO esté configurado e integrado. No es compatible 
 Haz que un administrador de Braze haga lo siguiente:
 
 1. Ve a **Configuración** > **Configuración de administración** > **Configuración de seguridad**.
-2. En la sección **SAML SSO**, alterna la opción **Aprovisionamiento automático de usuarios**.
-3. Selecciona un espacio de trabajo predeterminado para añadir un nuevo usuario al panel.
-4. Selecciona el conjunto de permisos predeterminado para asignar a ese nuevo usuario del panel. Para saber cómo crear un conjunto de permisos, consulta [Configurar los permisos de usuario]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
-6. Selecciona **Guardar cambios** en la parte inferior de la página
-7. En la configuración de tu proveedor de SSO, añade todos los usuarios que necesiten acceso a Braze al directorio de tu proveedor de SSO.
-8. Ahora los usuarios pueden registrarse o iniciar sesión.
+2. En la sección **SAML SSO**, active la opción **Aprovisionamiento automático de usuarios**.
+3. Selecciona un espacio de trabajo predeterminado para añadir un nuevo usuario de la empresa.
+4. Selecciona el conjunto de permisos predeterminado para asignar a ese nuevo usuario de la empresa. Para saber cómo crear un conjunto de permisos, consulte [Configuración de permisos de usuario]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
+6. Seleccione **Guardar cambios** en la parte inferior de la página
+7. En la configuración de su proveedor de SSO, añada todos los usuarios que necesiten acceso Braze al directorio de su proveedor de SSO.
+8. Indica a los usuarios que accedan a Braze a través de tu portal IdP para iniciar sesión por primera vez. Después de esto, se muestra el botón de inicio de sesión único SAML para futuras sesiones.
 
 ## Preguntas más frecuentes
 

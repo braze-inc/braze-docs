@@ -7,7 +7,7 @@ description: "This reference article covers how to export segment data to CSV."
 
 ---
 
-# Exporting segment data to CSV
+# Export segment data to CSV
 
 > This page covers how to request a CSV export of user data from a segment, and the data included in the export.
 

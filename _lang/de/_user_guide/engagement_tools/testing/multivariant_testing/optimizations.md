@@ -1,16 +1,16 @@
 ---
 nav_title: Optimierungen
-article_title: Optimieren von A/B-Tests mit Gewinnervarianten oder personalisierten Varianten
+article_title: Optimieren Sie A/B-Tests mit Winning-Varianten oder personalisierten Varianten
 page_order: 1
 page_type: reference
 description: "Erfahren Sie, wie Sie die Varianten „Gewinnvariante“ oder „Personalisierte Variante“ bei der Erstellung von multivariaten und A/B-Tests verwenden können."
 ---
 
-# Optimierung von A/B-Tests mit Winning Variant oder personalisierten Varianten
+# Optimieren Sie A/B-Tests mit Winning-Varianten oder personalisierten Varianten
 
 Bei der [Erstellung eines A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) für E-Mail-, Push-, Webhook-, SMS- und WhatsApp-Kampagnen, die für einen einmaligen Versand geplant sind, können Sie eine Optimierung auswählen. Es gibt zwei Optimierungsmöglichkeiten: **Gewinnende Variante** und **personalisierte Variante**.
 
-\![Optimierungsoptionen, die im Abschnitt A/B-Tests aufgeführt sind, wenn Sie Ihre Zielgruppe auswählen. Es werden drei Optionen aufgeführt: Keine Optimierung, Gewinnende Variante und Personalisierte Variante. Personalisierte Variante ist ausgewählt.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
+![Optimierungsoptionen, die im Abschnitt „A/B-Tests“ aufgeführt sind, wenn Sie Ihre Zielgruppe auswählen. Es werden drei Optionen aufgeführt: Keine Optimierung, Gewinnende Variante und Personalisierte Variante. Personalisierte Variante ist ausgewählt.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
 Beide Optionen funktionieren, indem Sie einen ersten Test an einen Prozentsatz Ihres Zielsegments senden. Nach Beendigung des Tests wird den verbleibenden Nutzern Ihrer Zielgruppe entweder die Variante mit der besten Leistung (Gewinnvariante) oder die Variante, mit der sie sich am ehesten beschäftigen werden (personalisierte Variante), zugesandt.
 

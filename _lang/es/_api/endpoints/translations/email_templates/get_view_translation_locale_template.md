@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Ver traducción específica y localización para plantilla de correo electrónico"
+nav_title: "GET: Ver traducción y localización específicas para plantilla de correo electrónico"
 article_title: "GET: Ver traducción específica y localización para plantilla de correo electrónico"
 search_tag: Endpoint
 page_order: 2
@@ -12,10 +12,10 @@ description: "En este artículo se describen los detalles sobre la traducción e
 {% api %}
 # Ver una traducción y localización específicas para el punto final de la plantilla de correo electrónico
 {% apimethod get %}
-/templates/translations/email?locale_id={locale_uuid}&template_id={template_id}
+/plantillas/traducciones/correo electrónico
 {% endapimethod %}
 
-> Utiliza este punto final para ver una traducción y localización específicas para la plantilla de correo electrónico de una [plantilla]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates).
+> Utiliza este punto final para ver una traducción y localización específicas para una [plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de traducción.
 
 {% alert important %}
 Este punto final se encuentra actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
@@ -34,15 +34,17 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | Parámetro     | Obligatoria | Tipo de datos | Descripción                     |
 |---------------|----------|-----------|---------------------------------|
 | `template_id` | Obligatoria | Cadena    | El ID de tu plantilla de correo electrónico. |
-| `locale_id`   | Obligatoria | Cadena    | El ID de la configuración regional.           |
+| `locale_id`   | Opcional | Cadena    | El ID (UUID) de la localización.           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Ten en cuenta que todos los ID de traducción se consideran identificadores únicos universales (UUID), que se pueden encontrar en la configuración **del soporte multilingüe** o en la respuesta a la solicitud.
+{% alert note %}
+Todos los ID de traducción se consideran identificadores únicos universales (UUID), que pueden encontrarse en la respuesta del punto final GET.
+{% endalert %}
 
 ## Ejemplo de solicitud
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/templates/translations/email?locale_id={locale_uuid}&template_id={template_id}/' \
+curl --location --request GET 'https://rest.iad-03.braze.com/templates/translations/email?locale_id={locale_uuid}&template_id={template_id}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -56,8 +58,6 @@ Hay cuatro respuestas de código de estado para este punto final: `200`, `400`, 
 El código de estado `200` podría devolver la siguiente cabecera y cuerpo de respuesta.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": [
         {
@@ -91,17 +91,5 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
     ]
 }
 ```
-
-## Solución de problemas
-
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
-
-| Mensaje de error                           | Solución de problemas                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_LOCALE_ID`                     | Confirma que tu ID de configuración regional existe en la traducción de tu mensaje.                         |
-| `LOCALE_NOT_FOUND`                      | Confirma que la configuración regional existe en tu configuración multilingüe.                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | La configuración multilingüe no está activada para tu espacio de trabajo.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Sólo se pueden traducir las plantillas de correo electrónico y las campañas de mensajería por correo electrónico, push y dentro de la aplicación, o los mensajes de Canvas con correos electrónicos.             |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

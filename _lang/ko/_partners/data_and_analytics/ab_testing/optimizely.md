@@ -79,7 +79,7 @@ You can also delete any data field mappings that aren't required. Do the followi
 
 ![Optimizely Braze Segment Delete Field Maps]({% image_buster /assets/img/optimizely/image5_deletephonefield.png %})
 
-### Step 3: Sync data from Optimizely Data Platform (ODP) to Braze
+### 3단계: Sync data from Optimizely Data Platform (ODP) to Braze
 
 After you configure the integration, you can set up an activation in ODP to sync your ODP customer data to Braze.
 

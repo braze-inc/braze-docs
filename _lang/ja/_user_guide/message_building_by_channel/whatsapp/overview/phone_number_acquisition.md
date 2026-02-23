@@ -1,7 +1,7 @@
 ---
 nav_title: 電話番号の取得
 article_title: 電話番号取得
-page_order: 3
+page_order: 4
 description: "この記事では、Twilio と Infobip から電話番号を取得する方法について説明します。"
 page_type: reference
 channel:

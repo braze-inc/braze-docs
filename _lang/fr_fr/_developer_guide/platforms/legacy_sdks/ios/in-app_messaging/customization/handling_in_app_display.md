@@ -1,6 +1,6 @@
 ---
-nav_title: Gestion des affichages personnalisés
-article_title: Personnalisation de la gestion des affichages de messages in-app pour iOS
+nav_title: "Gestion personnalisée de l'affichage"
+article_title: "Personnaliser l'envoi des messages in-app pour iOS"
 platform: iOS
 page_order: 4
 description: "Cet article de référence couvre la gestion de l’affichage personnalisé de la messagerie dans l’application pour votre application iOS."
@@ -17,7 +17,7 @@ noindex: true
 Lorsque l'option [`ABKInAppMessageControllerDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h) est définie, la méthode de délégation suivante sera appelée avant l'affichage des messages in-app :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (ABKInAppMessageDisplayChoice) beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage;
@@ -36,7 +36,7 @@ func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!) -> ABKInAppMess
 Si vous n'avez implémenté que [`ABKInAppMessageUIDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h)la méthode suivante du délégué de l'interface utilisateur sera appelée à la place :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (ABKInAppMessageDisplayChoice) beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage withKeyboardIsUp:(BOOL)keyboardIsUp;
@@ -76,7 +76,7 @@ Si la campagne de messages in-app ne s’affiche pas lorsque la session a été 
 Pour empêcher les messages in-app d'adopter le style du mode sombre lorsque l'appareil de l'utilisateur a activé le mode sombre, utilisez la propriété [`ABKInAppMessage.enableDarkTheme`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message.html#ae89df6090bed623099ab0ecc0a74ad5d). Depuis la méthode `ABKInAppMessageControllerDelegate.beforeInAppMessageDisplayed:` ou la méthode `ABKInAppMessageUIDelegate.beforeInAppMessageDisplayed:`, définissez la propriété `enableDarkTheme` du paramètre `inAppMessage` de la méthode sur `NO`.
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // ABKInAppMessageControllerDelegate
@@ -130,7 +130,7 @@ Pour les messages `Full` et `HTML` dans l’application, le SDK tentera par déf
 L’enregistrement des impressions et des clics de messages in-app n’est pas automatique lorsque vous implémentez une gestion entièrement personnalisée (c.-à-d. que vous contournez l’affichage des messages in-app de Braze en renvoyant `ABKDiscardInAppMessage` dans votre `beforeInAppMessageDisplayed:`). Si vous choisissez de déployer votre propre interface utilisateur à l’aide de nos modèles de messages in-app, vous devez enregistrer les analyses à l'aide des méthodes suivantes sur la classe `ABKInAppMessage` :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Registers that a user has viewed an in-app message with the Braze server.
@@ -155,7 +155,7 @@ func logInAppMessageClicked()
 De plus, vous devriez enregistrer les clics sur les boutons des sous-classes de `ABKInAppMessageImmersive` (*i.e*., messages in-app `Modal` et `Full`) :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Logs button click analytics

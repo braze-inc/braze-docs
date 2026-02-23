@@ -1258,9 +1258,10 @@ a:hover {
 
 
 </div>
-<script type="text/javascript" src="https://d3afgxkm1vz2tp.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
+<script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
 
 <script type="text/javascript">
+
 
    let citationClicked = false;
    const steps = document.querySelectorAll('.step');
@@ -1299,12 +1300,13 @@ nextButton.addEventListener('keypress', function(e) {
         if (parts.length === 2) return parts.pop().split(';').shift();
         return null;
       }
+
        const sid = getCookie('_gz_sid');  
        const taid = getCookie('_gz_taid');
 
 
 
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     
 function support_doc_submit(){
   window.location = base_url + '/search/?query=' + encodeURIComponent($('#support-search-form .aa-Form .aa-Input').val());
@@ -1531,7 +1533,7 @@ var ticket_lookuptable = {
             },
             'Email Templates' : {
               'ShowSubmit': true,
-              'LinksTitle': ['Creating an Email Template','Email Template Frequently Asked Questions'],
+              'LinksTitle': ['Create an Email Template','Email Template Frequently Asked Questions'],
               'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template#step-3-customize-your-template','{{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/']
             },
             'Liquid' : {
@@ -1616,12 +1618,12 @@ var ticket_lookuptable = {
               'SelectOption' : {
                 'Email' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Creating an Email Campaign with the Drag-And-Drop Editor','Creating an Email Campaign with the HTML Editor'],
+                  'LinksTitle': ['Create an Email Campaign with the Drag-And-Drop Editor','Create an Email Campaign with the HTML Editor'],
                   'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/','{{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/']
                 },
                 'Push' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Creating a Push Campaign','Braze Learning Course: Push'],
+                  'LinksTitle': ['Create a Push Campaign','Braze Learning Course: Push'],
                   'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#creating-a-push-message','https://learning.braze.com/messaging-channels-push']
                 },
                 'In-App Messages' : {
@@ -1631,17 +1633,17 @@ var ticket_lookuptable = {
                 },
                 'Content Cards' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Creating a Content Card Campaign','Braze Learning Course: Content Cards'],
+                  'LinksTitle': ['Create a Content Card Campaign','Braze Learning Course: Content Cards'],
                   'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/','https://learning.braze.com/messaging-channels-content-cards']
                 },
                 'Webhooks' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Creating a Webhook Campaign'],
+                  'LinksTitle': ['Create a Webhook Campaign'],
                   'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/']
                 },
                 'SMS and MMS' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Create an SMS Campaign','Creating as MMS Campaign'],
+                  'LinksTitle': ['Create an SMS Campaign','Create an MMS Campaign'],
                   'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/','{{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/']
                 },
                 'WhatsApp' : {
@@ -2384,10 +2386,12 @@ async function getSearchResultByPost(subject, sid , language) {
         withOneOrMore: "",
         withoutTheWords: "",
         pageSize: 10,
+        pageNo: 1,
+        pageNum: 1,
         sid: sid,
         language: "en",
         mergeSources: false,
-        versionResults: false,
+        versionResults: true,
         suCaseCreate: false,
         visitedtitle: "",
         paginationClicked: false,
@@ -2415,18 +2419,18 @@ async function getSearchResultByPost(subject, sid , language) {
         if (!response.ok) throw new Error(`Search API error: ${response.status}`);
         const data = await response.json();
         const results = data.result?.hits || data.hits || data.results || [];
-        console.log('resss==>', results);
+        // console.log('resss==>', results);
 
         return {
             llmContextId: data.llmContextId || data.context?.llmContextId || data.response?.llmContextId || "fallback-llm-context",
             results: results
         };
 
-    } catch (err) {
-        console.error("Error fetching searchResultByPost:", err);
-        return { llmContextId: "fallback-llm-context", results: [] };
+        } catch (err) {
+            console.error("Error fetching searchResultByPost:", err);
+            return { llmContextId: "fallback-llm-context", results: [] };
+        }
     }
-}
 
 document.getElementById('toStep2').addEventListener('click', async function () {
     const subject = document.getElementById('subject').value.trim();
@@ -2445,7 +2449,6 @@ document.getElementById('toStep2').addEventListener('click', async function () {
     const susResponse = await getSearchResultByPost(subject, sid);
     const llmContextId = susResponse.llmContextId;
     const results = susResponse.results;
-
     // --- Build a map of article metadata for hover tooltip ---
     const articleMetaMap = {};
     results.forEach(result => {
@@ -2457,7 +2460,8 @@ document.getElementById('toStep2').addEventListener('click', async function () {
                      "No summary available"
         };
     });
-
+    
+    let gptAnalyticsSent = false;
     // --- Streaming / GPT Suggestions ---
     try {
         const requestBody = {
@@ -2489,8 +2493,8 @@ document.getElementById('toStep2').addEventListener('click', async function () {
             headers: {
                 "accept": "*/*",
                 "content-type": "application/json",
-                "origin": "https://d3afgxkm1vz2tp.cloudfront.net",
-                "referer": "https://d3afgxkm1vz2tp.cloudfront.net/",
+                "origin": "https://d1qc2gcokjmuap.cloudfront.net",
+                "referer": "https://d1qc2gcokjmuap.cloudfront.net/",
                 "search-client-type": "6",
                 "search-id": "22d6676b-80b1-4145-af19-6a422417e5d0",
                 "sid-session": sid,
@@ -2502,7 +2506,7 @@ document.getElementById('toStep2').addEventListener('click', async function () {
         });
 
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
+        
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
         let fullResponse = '';
@@ -2525,8 +2529,9 @@ document.getElementById('toStep2').addEventListener('click', async function () {
             try {
               const validJson = partialAccumulator + jsonString;
               const data = JSON.parse(validJson);
+              
 
-              partialAccumulator = '';
+              partialAccumulator = ''; 
 
               if (data.data?.choices?.[0]?.delta?.content) {
                 fullResponse += data.data.choices[0].delta.content;
@@ -2566,6 +2571,67 @@ document.getElementById('toStep2').addEventListener('click', async function () {
           }
         }
 
+        const finalHTML = suggestionsBox.innerHTML;
+        const firstCitationBtn = suggestionsBox.querySelector('.su_citation');
+        const analyticsID = window._gza_analytics_id || (window._gza_analytics_id = crypto.randomUUID());
+            const searchPayload = {
+            event: "search",
+            id: crypto.randomUUID(),
+            searchString: subject,
+            result_count: 1,        
+            page_no: 1,
+            uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
+            filter: {},
+            sid_session: sid || "",
+            taid_device: taid || "",
+            analyticsId: analyticsID,
+            referrer: document.referrer || "",
+            url: window.location.href
+          };
+
+          navigator.sendBeacon(
+            "https://bz072508p.searchunify.com/analytics/suanlytics.png",
+            new Blob([JSON.stringify(searchPayload)], { type: "application/json" })
+          );
+      
+        if (!gptAnalyticsSent && firstCitationBtn) {
+            const citationUrl = firstCitationBtn.getAttribute('data-url')?.split('_doc_doc_').pop() || '';
+            const meta = articleMetaMap[citationUrl] || {};
+           
+
+            const citationPayload = {
+                event: "conversion",
+                id: crypto.randomUUID(),
+                convUrl: citationUrl,
+                convSub: meta.title ? meta.title.replace(/<[^>]+>/g, '').trim() : "",
+                index: "1_12_doc",
+                type: "doc",
+                relevance_score: "7.0017533",
+                searchString: subject,
+                rank: 1,
+                analyticsId:analyticsID,
+                url: window.location.href,
+                referrer: document.referrer,
+                uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
+                sid_session: sid || "",
+                taid_device: taid || ""
+            };
+
+            try {
+                const payload = JSON.stringify(citationPayload);
+                navigator.sendBeacon(
+                    "https://bz072508p.searchunify.com/analytics/suanlytics.png",
+                    new Blob([payload], { type: "application/json" })
+                );
+            } catch (error) {
+                console.error("Failed to send first citation conversion", error);
+            }
+
+            gptAnalyticsSent = true;
+        }
+        
+        
+
         if (fullResponse === '' && articles.length > 0) {
             suggestionsBox.innerHTML = "<p>Here are some articles that might help:</p>";
         } else if (fullResponse === '') {
@@ -2604,35 +2670,6 @@ document.getElementById('toStep2').addEventListener('click', async function () {
             button.addEventListener('click', function () {
                 const url = this.getAttribute('data-url')?.split('_doc_doc_').pop() || '';
                 citationClicked = true;
-
-                 if (!window.searchEventSent) {
-                    const searchPayload = {
-                      event: "search",
-                      id: crypto.randomUUID(),
-                      searchString: subject,
-                      result_count: 0,
-                      page_no: 1,
-                      uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
-                      filter: {},
-                      sid_session: sid || "",
-                      taid_device: taid || "",
-                      analyticsId: window._gza_analytics_id || crypto.randomUUID(),
-                      referrer: document.referrer || "",
-                      url: window.location.href
-                    };
-
-                    try {
-                      navigator.sendBeacon(
-                        "https://bz072508p.searchunify.com/analytics/suanlytics.png",
-                        new Blob([JSON.stringify(searchPayload)], { type: "application/json" })
-                      );
-                      console.log("[Analytics] Search event sent on citation click");
-                      window.searchEventSent = true; 
-                    } catch (err) {
-                      console.error("[Analytics] Error sending search event:", err);
-                    }
-                  }
-
                 // Conversion analytics (once per citation)
                 if (!trackedCitations.has(url)) {
                     const citationPayload = {
@@ -2680,6 +2717,8 @@ document.getElementById('toStep2').addEventListener('click', async function () {
             });
         });
 
+
+
     } catch (err) {
         suggestionsBox.innerHTML = `<p>Error: ${err.message}</p>`;
         console.error(err);
@@ -2695,6 +2734,9 @@ document.getElementById('toStep2').addEventListener('click', async function () {
         steps[0].classList.add('active');
         document.getElementById('suggestionsBox').innerHTML = "";
         window.searchEventSent = false;
+        gptAnalyticsSent = false;
+        citationClicked = false;
+        delete window._gza_analytics_id;
     });
     
 // Optional: Add a back button to return to the 3-step form
@@ -2788,11 +2830,18 @@ function initCaseForm() {
                 document.cookie = `_gz_sid=${sid}; path=/; SameSite=None; Secure`;
                 sendSearchEvent(subject, sid); 
             }
-
-            if (!citationClicked) {
-            const subject = document.getElementById('subject').value;
-           sendSearchEvent(subject, sid);
+            
+           const firstCitationBtn1 = suggestionsBox.querySelector('.su_citation');
+           const step1Subject = document.getElementById('subject')?.value?.trim() || "";
+           const step3Subject = document.getElementById('ticket_subject')?.value?.trim() || "";
+           let finalSearchSubject = step1Subject;
+           if (step3Subject && step3Subject !== step1Subject) {
+               finalSearchSubject = step3Subject;
            }
+           if (finalSearchSubject !== step1Subject) {
+               sendSearchEvent(finalSearchSubject, sid);
+           }
+
 
             fetch('https://bz072508p.searchunify.com/analytics/suanlytics.png', {
                 method: 'POST',

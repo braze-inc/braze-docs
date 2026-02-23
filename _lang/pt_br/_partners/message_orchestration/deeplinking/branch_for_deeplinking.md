@@ -12,7 +12,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="PwGKqfwV-Ss" align="right" %}
 
-> A [Branch](https://branch.io/) é uma plataforma de deeplinking móvel que ajuda a adquirir, engajar e medir em todos os dispositivos, canais e plataformas por meio de uma visão holística de todos os pontos de contato dos usuários.
+> [A Branch](https://branch.io/) é uma plataforma de vinculação móvel usada para adquirir, engajar e medir em dispositivos, canais e plataformas, fornecendo uma visão holística dos pontos de contato do usuário.
 
 _Essa integração é mantida pela Branch._
 
@@ -29,7 +29,7 @@ Siga as instruções do [guia de integração de SDKs da Branch](https://help.br
 Para obter suporte ao envio de links universais do iOS como deep links na Braze:
 
 1. Siga a documentação da Branch para configurar [links universais](https://help.branch.io/developers-hub/docs/ios-universal-links).
-2. Implemente o método [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate)[braze(_:shouldOpenURL:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5) em sua integração do SDK do Braze para [rotear links universais]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization) de dentro do seu app.
+2. Implemente o método [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate) method [braze(_:shouldOpenURL:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5) em sua integração de SDK do Braze para [rotear links universais]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization) de dentro de seu app.
 
 ### Deep linking em e-mails
 

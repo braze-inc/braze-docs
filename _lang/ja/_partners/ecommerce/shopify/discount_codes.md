@@ -1,6 +1,6 @@
 ---
 nav_title: 固有の割引コード 
-article_title: 固有の割引コードを送信する
+article_title: ユニークな割引コードを送る
 alias: /shopify_discount_codes/
 page_order: 7
 description: "この参考記事では、Shopify の一括割引コードボットで Brazeプロモーションコードを使用し、キャンペーンやCanvasesを通じて独自の割引コードを送信する、コミュニティから投稿されたユースケースを取り上げる。"

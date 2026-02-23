@@ -4,7 +4,7 @@ Braze propose plusieurs types de messages in-app par défaut, chacun personnalis
 Leur comportement de base et leurs caractéristiques sont définis par l'interface [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) dans une sous-classe appelée [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html). `IInAppMessage` comprend également une sous-interface, [`IInAppMessageImmersive`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html)qui vous permet d'ajouter des [boutons de](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) fermeture, de clic-action et d'analyse/analytique à votre application.
 
 {% alert important %}
-N'oubliez pas que les messages in-app contenant des boutons incluront le message `clickAction` dans la charge utile finale si l'action de clic est ajoutée avant l'ajout du texte du bouton.
+Gardez à l'esprit que les messages in-app contenant des boutons incluront le message `clickAction` dans la charge utile finale si l'action de clic est ajoutée avant l'ajout du texte du bouton.
 {% endalert %}
 
 {% subtabs local %}
@@ -13,7 +13,7 @@ N'oubliez pas que les messages in-app contenant des boutons incluront le message
 
 L'objet de message in-app `slideup` étend [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html).
 
-![Un message in-app surgissant du bas d’un écran de téléphone et affichant « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, le même message in-app est affiché dans l’angle inférieur droit d'une page web.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Un message in-app surgissant du bas d’un écran de téléphone et affichant « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan se trouve le même message in-app affiché dans le coin inférieur droit d'une page web.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endsubtab %}
 {% subtab Modal %}
@@ -21,7 +21,7 @@ Les messages in-app de type [`modal`](https://braze-inc.github.io/braze-android-
 
 Ce type de message est une sous-classe de [`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html)une classe abstraite qui implémente `IInAppMessageImmersive`, ce qui vous permet d'ajouter des fonctionnalités personnalisées à vos messages in-app générés localement.
 
-![Un message in-app modal au centre d’un écran de téléphone affichant « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, le même message in-app est affiché au centre d'une page Web.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Un message in-app modal au centre d’un écran de téléphone affichant « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan se trouve le même message in-app affiché au centre d'une page web.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 {% endsubtab %}
 {% subtab Full Screen %}
@@ -29,7 +29,7 @@ Ce type de message est une sous-classe de [`InAppMessageImmersiveBase`](https://
 
 Ce type de message s'étend à [`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html)vous permettant d'ajouter des fonctionnalités personnalisées à vos messages in-app générés localement.
 
-![Un message in-app plein écran s’affiche sur l’ensemble de l’écran du téléphone et affiche : « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, le même message in-app est affiché en grand au centre d'une page web.]({% image_buster /assets/img_archive/In-App_Full.png %})
+![Un message in-app plein écran s’affiche sur l’ensemble de l’écran du téléphone et affiche : « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, le message in-app est affiché en grand au centre d’une page Web.]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 {% endsubtab %}
 {% subtab Custom HTML %}

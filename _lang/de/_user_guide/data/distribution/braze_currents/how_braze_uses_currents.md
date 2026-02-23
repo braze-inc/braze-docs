@@ -10,9 +10,9 @@ tool: Currents
 
 # Wie Braze Currents verwendet
 
-> Braze verwendet Currents! Das stimmt, wir mögen unser eigenes Produkt so sehr, dass wir es in Verbindung mit einigen [unserer Partner]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) verwenden.
+> Braze verwendet Currents intern mit ausgewählten [Partnern]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/).
 
-Wir filtern unsere Daten aus unseren E-Mail- und Push-Kampagnen in ein Business Insights-Tool, Looker, aber der Weg dorthin ist interessant. Wir verwenden eine leicht umgekehrte Version der ETL-Methode (Extract, Transform, Load) – wir ändern lediglich die Reihenfolge in ELT (Extract, Load, Transform)!
+Wir filtern unsere Daten aus E-Mails und Push Kampagnen in ein Business Insights Tool, Looker, aber der Weg dorthin ist etwas anders. Wir verwenden eine umgekehrte Version der Extract, Transform, Load (ETL)-Methode - wir ändern die Reihenfolge in Extract, Load, Transform (ELT).
 
 ## Schritt 1: Event-Daten eingeben und aggregieren
 
@@ -22,7 +22,7 @@ Nachdem wir Kampagnen mit einem unserer Engagement-Tools (wie Kampagnen oder Can
 
 Wir haben Currents eingerichtet, um Braze-Ereignisdaten zur Speicherung und Extraktion an Amazon S3 zu senden. Wir wissen, dass Sie [Athena](https://aws.amazon.com/athena/) verwenden können, um auf S3 aufzusetzen und Abfragen durchzuführen. Das ist eine großartige kurzfristige Lösung. Aber wir wollten eine langfristige Lösung mit einer relationalen Datenbank und einem Business-Intelligence/Analytics-Tool. (Das empfehlen wir auch für Sie.)
 
-Wir betrachten S3 als unseren Schlüssel zum Schloss! Dadurch eröffnen sich so viele Möglichkeiten, unsere Daten zu verschieben, zu drehen und zu analysieren, indem wir sie dorthin übertragen, wo wir sie benötigen. Wir achten jedoch darauf, unsere Daten in S3 nicht zu transformieren, da wir eine ganz bestimmte Struktur dafür haben.
+S3 bietet flexible Speicher- und Routing-Optionen zum Verschieben, Pivotisieren und Analysieren von Daten. Wir transformieren die Daten in S3 nicht, da wir eine bestimmte Struktur für sie beibehalten.
 
 ## Schritt 3: Transformation von Ereignisdaten mit einer relationalen Datenbank
 

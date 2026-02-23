@@ -1,11 +1,11 @@
 ---
 nav_title: Aborting Connected Content
-article_title: Aborting Connected Content
+article_title: Abort Connected Content
 page_order: 2
 description: "This reference article covers some message aborting best practices for Connected Content."
 ---
 
-# Aborting Connected Content {#aborting-connected-content}
+# Abort Connected Content {#aborting-connected-content}
 
 > When you use Liquid templating, you have the option to abort messages with conditional logic. This page covers best practices when doing so.
 

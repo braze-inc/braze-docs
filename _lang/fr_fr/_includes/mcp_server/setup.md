@@ -1,6 +1,6 @@
 # Configuration du serveur MCP de Braze
 
-> Apprenez à configurer le serveur MCP de Braze, afin de pouvoir interagir avec vos données Braze en langage naturel à l'aide d'outils tels que Claude et Cursor. Pour des informations plus générales, voir [Serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> Apprenez à configurer le serveur MCP de Braze, afin de pouvoir interagir avec vos données Braze en langage naturel à l'aide d'outils tels que Claude et Cursor. Pour plus d'informations générales, voir [Serveur MCP de Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -11,7 +11,7 @@ Avant de commencer, vous avez besoin des éléments suivants :
 | Prérequis | Description |
 |--------------|-------------|
 | Clé API de Braze | Une clé API de Braze avec les autorisations requises. Vous créerez une nouvelle clé lors de la [configuration de votre serveur Braze MCP](#create-api-key). |
-| MCP Client | Actuellement, seuls [Claude](https://claude.ai/) et [Cursor](https://cursor.com/) sont officiellement pris en charge. Vous devez disposer d'un compte pour l'un de ces clients afin d'utiliser le serveur MCP de Braze. |
+| Client MCP | [Claude](https://claude.ai/), [Cursor](https://cursor.com/) et [Google Gemini CLI](https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli) sont officiellement pris en charge. Vous devez disposer d'un compte pour l'un de ces clients afin d'utiliser le serveur MCP de Braze. |
 | Terminal | Une application de terminal vous permettant d'exécuter des commandes et d'installer des outils. Utilisez votre application de terminal préférée ou celle qui est préinstallée sur votre ordinateur. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
@@ -22,14 +22,14 @@ Avant de commencer, vous avez besoin des éléments suivants :
 Tout d'abord, installez `uv`- un [outil en ligne de commande d'Astral](https://docs.astral.sh/uv/getting-started/installation/) pour la gestion des dépendances et des paquets Python.
 
 {% tabs local %}
-{% tab MacOS et Linux %}
+{% tab MacOS and Linux %}
 Ouvrez votre application de terminal, collez la commande suivante, puis appuyez sur <kbd>Entrée.</kbd>
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Le résultat sera similaire à ce qui suit :
+Le résultat est similaire à ce qui suit :
 
 ```bash
 $ curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -43,14 +43,14 @@ everything's installed!
 ```
 {% endtab %}
 
-{% tab Fenêtres %}
+{% tab Windows %}
  Ouvrez Windows PowerShell, collez la commande suivante, puis appuyez sur <kbd>Entrée.</kbd>
 
 ```powershell
 irm https://astral.sh/uv/install.ps1 | iex
 ```
 
-Le résultat sera similaire à ce qui suit :
+Le résultat est similaire à ce qui suit :
 
 ```powershell
 PS C:\Users\YourUser> irm https://astral.sh/uv/install.ps1 | iex
@@ -69,7 +69,7 @@ everything's installed!
 
 Le serveur MCP de Braze prend en charge 38 endpoints en lecture seule qui ne renvoient pas les données des profils utilisateurs de Braze. Allez dans **Paramètres** > **API et identifiants** > **Clés API** et créez une nouvelle clé avec certaines ou toutes les autorisations suivantes.
 
-{% details Liste des autorisations en lecture seule, non PII %}
+{% details List of read-only, non-PII permissions %}
 #### Campagnes
 
 | Endpoint | Autorisation requise |
@@ -224,48 +224,19 @@ Lorsque vous configurez votre client MCP, vous avez besoin de l'identifiant de v
 
 ### Étape 4 : Configurez votre client MCP {#configure-client}
 
-Configurez votre client MCP à l'aide de notre fichier de configuration fourni au préalable.
+Configurez votre client MCP à l'aide du fichier de configuration fourni.
 
 {% tabs %}
 {% tab Claude %}
-Dans [Claude Desktop](https://claude.ai/download), allez dans **Paramètres** > **Développeur** > **Modifier la configuration**, puis ajoutez l'extrait de code suivant :
+Configurez votre serveur MCP en utilisant le répertoire de connecteurs de [Claude Desktop](https://claude.ai/download). 
 
-```json
-{
-  "mcpServers": {
-    "braze": {
-      "command": "uvx",
-      "args": ["--native-tls", "braze-mcp-server@latest"],
-      "env": {
-        "BRAZE_API_KEY": "key-identifier",
-        "BRAZE_BASE_URL": "rest-endpoint"
-      }
-    }
-  }
-}
-```
+1. Dans Claude Desktop, allez dans **Paramètres** > **Connecteurs** > **Parcourir les connecteurs** > **Desktop Extensions** > **Braze MCP Server** > **Installer**.
+2. Saisissez votre clé API et l'URL de base.
+3. Enregistrez la configuration et redémarrez Claude Desktop.
 
-Remplacez `key-identifier` et `rest-endpoint` par les valeurs correspondantes de la page des **clés API** dans Braze. Votre configuration devrait ressembler à ce qui suit :
-
-```json
-{
-  "mcpServers": {
-    "braze": {
-      "command": "uvx",
-      "args": ["--native-tls", "braze-mcp-server@latest"],
-      "env": {
-        "BRAZE_API_KEY": "2e8b-3c6c-d12e-bd75-4f0e2a8e5c71",
-        "BRAZE_BASE_URL": "https://torchie.braze.com"
-      }
-    }
-  }
-}
-```
-
-Lorsque vous avez terminé, enregistrez la configuration et redémarrez Claude Desktop.
 {% endtab %}
 
-{% tab Curseur %}
+{% tab Cursor %}
 Dans [Cursor](https://cursor.com/), allez dans **Paramètres** > **Outils et intégrations** > **Outils MCP** > **Ajouter un MCP personnalisé**, puis ajoutez l'extrait de code suivant :
 
 ```json
@@ -302,19 +273,62 @@ Remplacez `key-identifier` et `rest-endpoint` par les valeurs correspondantes de
 
 Lorsque vous avez terminé, enregistrez la configuration et redémarrez Cursor.
 {% endtab %}
+{% tab Gemini CLI %}
+Gemini CLI lit les paramètres de l'utilisateur à partir de `~/.gemini/settings.json`. S'il n'existe pas, vous pouvez le créer en exécutant la commande suivante dans votre terminal :
+
+```powershell
+mkdir -p ~/.gemini
+nano ~/.gemini/settings.json
+```
+
+Ensuite, remplacez `yourname` par la chaîne de caractères qui précède `@BZXXXXXXXX` dans l'invite de votre terminal. Remplacez ensuite `key-identifier` et `rest-endpoint` par les valeurs correspondantes de la page des **clés API** dans Braze. 
+
+Votre configuration devrait ressembler à ce qui suit :
+
+```json
+{
+  "mcpServers": {
+    "braze": {
+      "command": "/Users/yourname/.local/bin/uvx",
+      "args": ["--native-tls", "braze-mcp-server@latest"],
+      "env": {
+        "BRAZE_API_KEY": "2e8b-3c6c-d12e-bd75-4f0e2a8e5c71",
+        "BRAZE_BASE_URL": "https://torchie.braze.com"
+      }
+    }
+  }
+}
+```
+
+Lorsque vous avez terminé, enregistrez la configuration et redémarrez Gemini CLI. Ensuite, dans Gemini, exécutez les commandes suivantes pour vérifier que le serveur MCP de Braze est répertorié et que les outils et le schéma sont disponibles :
+
+```powershell
+gemini
+/mcp
+/mcp desc
+/mcp schema
+```
+
+Vous devriez voir le serveur `braze` répertorié avec les outils et le schéma disponibles.
+
+{% endtab %}
 {% endtabs %}
 
 ### Étape 5 : Envoyer une invite de test
 
-Maintenant que vous avez configuré le serveur MCP de Braze, essayez d'envoyer une invite de test à votre client MCP. Pour d'autres exemples et bonnes pratiques, consultez [Using the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+Après avoir configuré le serveur MCP de Braze, essayez d'envoyer une invite de test à votre client MCP. Pour d'autres exemples et bonnes pratiques, consultez [Utilisation du serveur MCP de Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}
-![La question "Quelles sont les fonctions de Braze disponibles ?" est posée à Claude, qui y répond.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
+![La question "Quelles sont les fonctions de Braze dont je dispose ?" a été posée et a reçu une réponse de la part de Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
 {% endtab %}
 
-{% tab Curseur %}
-![La question "Quelles sont les fonctions de Braze disponibles ?" est posée et trouve une réponse dans Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+{% tab Cursor %}
+![La question "Quelles sont les fonctions de Braze disponibles ?" est posée et traitée dans le curseur.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+{% endtab %}
+
+{% tab Gemini CLI %}
+![Quelles sont les fonctions de Braze dont je dispose ?" est une question qui trouve sa réponse dans l'interface de programmation Gemini.]({% image_buster /assets/img/mcp_server/gemini_cli/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 

@@ -1,6 +1,6 @@
 ---
-nav_title: メッセージのトリガー
-article_title: Braze SDKを使ったアプリ内メッセージのトリガー
+nav_title: トリガーメッセージ
+article_title: Braze SDKを通じたアプリ内メッセージのトリガー
 page_order: 0.2
 description: "Braze SDKを通してアプリ内メッセージをトリガーする方法を学習。"
 platform: 
@@ -10,7 +10,7 @@ platform:
   - Web
 ---
 
-# アプリ内メッセージのトリガー
+# アプリ内メッセージをトリガーする
 
 > Braze SDKを通してアプリ内メッセージをトリガーする方法を学習。
 

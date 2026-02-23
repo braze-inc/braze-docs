@@ -7,7 +7,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Integrating Odicci with Braze
+# Integrate Odicci with Braze
 
 > Learn how to integrate Braze with [Odicci](https://www.odicci.com/), a platform that empowers businesses to acquire, engage and retain customers through loyalty driven omnichannel experiences.
 

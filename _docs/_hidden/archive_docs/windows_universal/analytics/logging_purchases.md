@@ -1,13 +1,13 @@
 ---
-nav_title: Logging purchases
-article_title: Logging Purchases for Windows Universal
+nav_title: Log purchases
+article_title: Log Purchases for Windows Universal
 platform: Windows Universal
 page_order: 4
 description: "This reference article covers how to log purchases on the Windows Universal platform."
 hidden: true
 ---
  
-# Logging purchases
+# Log purchases
 {% multi_lang_include archive/windows_deprecation.md %}
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.

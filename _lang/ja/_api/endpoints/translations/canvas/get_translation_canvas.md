@@ -15,7 +15,7 @@ description: "この記事では、「キャンバスの翻訳を表示する」
 /canvas/translations
 {% endapimethod %}
 
-> このエンドポイントを使用して、キャンバスの翻訳されたメッセージをプレビューします。
+> このエンドポイントを使用して、キャンバスの翻訳されたメッセージをプレビューします。翻訳機能の詳細については、[メッセージのローカライゼーションを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照のこと。
 
 {% alert important %}
 このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。

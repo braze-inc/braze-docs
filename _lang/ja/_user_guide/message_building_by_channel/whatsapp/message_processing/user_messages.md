@@ -1,6 +1,6 @@
 ---
-nav_title: メッセージング・ユーザー
-article_title: ユーザーへのメッセージング
+nav_title: ユーザーへのメッセージング
+article_title: メッセージユーザー
 description: "この参考記事では、Brazeがユーザーメッセージをどのように扱うかについて説明している。"
 page_type: reference
 channel:

@@ -67,7 +67,7 @@ CloudFront を CDN として使用する場合は、ユーザーの ユーザー
 
 メールの開封については、Braze は Google Image Proxy、Apple Image Proxy、Yahoo Mail Proxy を分けて扱います。これらのサービスは、受信者に配信される前に、メールに埋め込まれたすべての画像をキャッシュし、読み込む。その結果、受信者のサーバーではなく、メールボックス・プロバイダーのサーバーからメールが開封されることになり、メールの開封数が膨れ上がる可能性がある。これらのサービスは、画像を読み込む際のプライバシー、セキュリティ、パフォーマンス、効率を高めることを目的としています。これらのプロキシ・サービスはユーザー・エージェントをマスクするため、受信者からの実際の開封も含まれる可能性があり、ユーザー・エージェントを使用してプロキシ・データを分類している。
 
-![モバイル、デスクトップ、タブレット、Apple Privacy Proxy、Google Image Proxy、Yahoo Mail Proxy、その他でのクリック数を示すデバイス別エンゲージメントレポート。開封数が最も多いのはモバイル端末である。]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
+![モバイル、デスクトップ、タブレット、Apple Privacy Proxy、Google Image Proxy、Yahoo Mail Proxy、その他のクリック数を表示するデバイス別エンゲージメントレポート。開封数が最も多いのはモバイル端末である。]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
 
 ### メールボックスプロバイダーによるエンゲージメント
 

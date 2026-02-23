@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Planifier des campagnes déclenchées par l'API"
+nav_title: "POST : Planifier des campagnes déclenchées par API"
 article_title: "POST : Planifier des campagnes déclenchées par l'API"
 search_tag: Endpoint
 page_order: 4
@@ -28,7 +28,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Limite de débit
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## Corps de la demande
 
@@ -147,8 +147,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ### Exemple de réponse réussie
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-API-KEY-HERE
 {
 {
     "dispatch_id": "dispatch_identifier",

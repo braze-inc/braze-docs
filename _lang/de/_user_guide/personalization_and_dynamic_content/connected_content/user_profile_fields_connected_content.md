@@ -1,12 +1,12 @@
 ---
 nav_title: Abrufen von Nutzerprofildaten
-article_title: Abrufen von Benutzerprofildaten bei Aufrufen von Connected Content
+article_title: "Nutzer:in-Daten in Connected-Content-Aufrufen ziehen"
 page_order: 3
 description: "In diesem Artikel erfahren Sie, wie Sie Benutzerprofile in Ihre Connected Content-Aufrufe einbinden können und wie Sie am besten mit Liquid Templates arbeiten."
 toc_headers: h2
 ---
 
-# Abrufen von Nutzerprofildaten
+# Nutzerprofil-Daten abrufen
 
 > Auf dieser Seite erfahren Sie, wie Sie Nutzerprofile in Ihre Connected-Content-Aufrufe einbinden und wie Sie am besten mit Liquid-Templates arbeiten. 
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Documentation Feedback
+nav_title: "Retour d'information sur la documentation"
 permalink: /feedback/
 hide_toc: true
 ---
@@ -10,38 +10,49 @@ hide_toc: true
     <div id="feedback_section">
     Vous avez des idées pour améliorer notre documentation ou vous avez remarqué une erreur ? N'hésitez pas à nous contacter ! Notre équipe examine chaque soumission pour continuer à améliorer les choses.<br /><br />
 
-    <b>Quelle est l'utilité moyenne de la documentation de Braze ?</b><br />
+    <b>How useful do you find Braze docs, on average?</b><br />
 
     <div id="feedback_answer_star">
       <div class="rating-list">
         <div class="feedback-star">
-          <input type="radio" id="rating_1" name="feedback_rating" value="Very Unhelpful" tabindex="-1"> <label for="rating_1" class="star-label" tabindex="0" aria-label="Très peu utile"> <i class="fas fa-star" data-value="Very Unhelpful" title="Très peu utile"></i><br />1<br />Inutile</label>
+          <input type="radio" id="rating_1" name="feedback_rating" value="Very Unhelpful" tabindex="-1">
+          <label for="rating_1" class="star-label" tabindex="0" aria-label="Very Unhelpful">
+            <i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i><br />1<br />Not Useful</label>
         </div>
         <div class="feedback-star">
-          <input type="radio" id="rating_2" name="feedback_rating" value="Unhelpful" tabindex="-1"> <label for="rating_2" class="star-label" tabindex="0" aria-label="Inutile"> <i class="fas fa-star" data-value="Unhelpful" title="Inutile"></i><br />2<br />
+          <input type="radio" id="rating_2" name="feedback_rating" value="Unhelpful" tabindex="-1">
+          <label for="rating_2" class="star-label" tabindex="0" aria-label="Unhelpful">
+            <i class="fas fa-star" data-value="Unhelpful" title="Unhelpful"></i><br />2<br />
           </label>
         </div>
         <div class="feedback-star">
-          <input type="radio" id="rating_3" name="feedback_rating" value="Somewhat Helpful" tabindex="-1"> <label for="rating_3" class="star-label" tabindex="0" aria-label="Plutôt utile"> <i class="fas fa-star" data-value="Somewhat Helpful" title="Plutôt utile"></i><br />3<br />Assez utile</label>
+          <input type="radio" id="rating_3" name="feedback_rating" value="Somewhat Helpful" tabindex="-1">
+          <label for="rating_3" class="star-label" tabindex="0" aria-label="Somewhat helpful">
+            <i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i><br />3<br />Somewhat Useful</label>
         </div>
 
         <div class="feedback-star">
-          <input type="radio" id="rating_4" name="feedback_rating" value="Helpful" tabindex="-1"> <label for="rating_4" class="star-label" tabindex="0" aria-label="Utile"> <i class="fas fa-star" data-value="Helpful" title="Utile"></i><br />4<br />
+          <input type="radio" id="rating_4" name="feedback_rating" value="Helpful" tabindex="-1">
+          <label for="rating_4" class="star-label" tabindex="0" aria-label="Helpful">
+            <i class="fas fa-star" data-value="Helpful" title="Helpful"></i><br />4<br />
           </label>
         </div>
 
         <div class="feedback-star">
-          <input type="radio" id="rating_5" name="feedback_rating" value="Very Helpful" tabindex="-1"> <label for="rating_5" class="star-label" tabindex="0" aria-label="Très utile"> <i class="fas fa-star" data-value="Very Helpful" title="Très utile"></i><br />5<br />Très utile </label>
+          <input type="radio" id="rating_5" name="feedback_rating" value="Very Helpful" tabindex="-1">
+          <label for="rating_5" class="star-label" tabindex="0" aria-label="Very Helpful">
+            <i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i><br />5<br />Very Useful
+          </label>
         </div>
 
       </div>
     </div>
     <div style="margin-top: 15px;">
-      <b>Faites-nous part de vos commentaires</b> <br />
-      <textarea id="feedback_comment" placeholder="&quot;Je n&apos;ai pas trouvé d&apos;informations sur ce message d&apos;erreur&quot;"></textarea><br />
-        Vous avez des questions ? Contactez notre équipe d’assistance pour obtenir de l’aide.
+      <b>Share your feedback</b> <br />
+      <textarea id="feedback_comment" placeholder="&quot;I couldn’t find any information about this error message&quot;"></textarea><br />
+        Have questions? Contact our support team for assistance.
     </div>
-    <button type="submit" name="submit_feedback" value="Soumettre un commentaire" class="btn btn-black" id="feedback_submit" role="button" style="margin-top:15px;"> Soumettre un commentaire </button>
+    <button type="submit" name="submit_feedback" value="Submit feedback" class="btn btn-black" id="feedback_submit" role="button" style="margin-top:15px;"> Submit feedback </button>
   </div>
   <div id="feedback_msg">
   </div>

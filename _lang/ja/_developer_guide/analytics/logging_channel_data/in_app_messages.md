@@ -1,12 +1,12 @@
 ---
 nav_title: アプリ内メッセージ
-article_title: Braze SDKによるアプリ内メッセージデータのロギング
+article_title: Braze SDKによるアプリ内メッセージの記録
 page_order: 7.1
 description: "Braze SDK を使用してアプリメッセージ(IAM) データにログインする方法について説明します。"
 noindex: true
 ---
 
-# アプリ内メッセージデータのロギング
+# 履歴アプリ内メッセージ情報
 
 > Braze SDK を使用してアプリメッセージ(IAM) データにログインする方法について説明します。
 

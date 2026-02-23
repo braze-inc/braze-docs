@@ -1,151 +1,156 @@
 ---
 nav_title: Lokalisierungen in Nachrichten
-article_title: Lokalisierungen in Nachrichten
+article_title: Lokalisierung übersetzen
 alias: /locales_in_messages/
 page_order: 0
 page_type: reference
 description: "In diesem Artikel erfahren Sie, wie Sie in Ihren Nachrichten Gebietsschemata verwenden können."
 ---
 
-# Lokalisierungen in Nachrichten
+# Lokalisierung übersetzen
 
-> Nachdem Sie Ihrem Workspace Gebietsschemata hinzugefügt haben, können Sie Nutzer:innen mit einer einzigen Push-, E-Mail- oder In-App-Nachricht in verschiedenen Sprachen zusammenstellen.
+> Nachdem Sie Ihrem Workspace Lokalisierungen hinzugefügt haben, können Sie Nutzer:innen in verschiedenen Sprachen mit einer einzigen Push-, E-Mail-, Banner- oder In-App-Nachricht zusammenstellen.
 
 {% multi_lang_include locales.md section="Prerequisites" %}
 
-{% alert important %}
-Die Unterstützung mehrerer Sprachen und Lokalisierungen in Nachrichten sind derzeit in der frühen Phase. Wenden Sie sich an Ihren Braze Account Manager, wenn Sie an der Early-Access-Phase teilnehmen möchten.
-{% endalert %}
-
 ## Verwendung von Gebietsschemata
 
+### Schritt 1: Lokalisierung in Ihrem Workspace einrichten {#workspace-setup}
+
+Bevor Sie Lokalisierungen und Tags für die Übersetzung verwenden können, müssen Sie [Ihrem Workspace]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings) zunächst [Lokalisierungen hinzufügen]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings).
+
+### Schritt 2: Fügen Sie Ihrer Nachricht Liquid-Tags für die Übersetzung hinzu {#add-translation-tags}
+
+Fügen Sie die Übersetzungstags {% raw %}`{% translation your_id_here %}` und `{% endtranslation %}`{% endraw %} hinzu, um alle Text-, Bild- oder Link-URLs, die Sie übersetzen werden, zu umschließen.
+
+Jede Übersetzung sollte eine eindeutige `id` haben. Wenn Sie zum Beispiel eine einfache Begrüßung übersetzen, können Sie die ID "Begrüßung" nennen:
+
+{% raw %}`{% translation greeting %}Hello!{% endtranslation}`{% endraw %}
+
+#### Lokalisierung von HTML-Blöcken
+
+Ein komplizierterer Absatz kann mehrere Übersetzungstags haben ("offer_text" und "offer_amount"):
+
+{% raw %}
+```
+{% translation offer_text %}Sign up now to save{% endtranslation %}
+<b>{% translation offer_amount %}50% Off{% endtranslation %}</b>
+```
+{% endraw %}
+
+{% alert important %}
+Wenn Sie große HTML-Blöcke in Übersetzungstags einpacken, kann dies zu Problemen mit Stylesheets oder Styling führen. Bringen Sie die kleinstmöglichen Textabschnitte unter.
+{% endalert %}
+
+#### Lokalisierung von Links
+
+Achten Sie bei der Lokalisierung von Anker-Tag-Links darauf, dass Sie **nur die sprachspezifischen Teile** und nicht das gesamte Attribut `href` URL einschließen. Wenn Sie die gesamte URL umbrechen, funktioniert das Link-Template möglicherweise nicht richtig.
+
+##### Korrekte Verwendung
+
+{% raw %}
+```
+<a href="https://www.braze.com/{% translation link_href %}en{% endtranslation %}/page"></a>
+```
+{% endraw %}
+
+##### Falsche Verwendung
+
+{% raw %}
+```
+<a href="{% translation link_href %}https://www.braze.com/en/page{% endtranslation %}"></a>
+```
+{% endraw %}
+
+### Schritt 3: Wählen Sie die Lokalisierung für Nachrichten {#choose-locales}
+
+Nachdem Sie Ihre Tags in die Nachricht eingefügt haben, wählen Sie in den Einstellungen für die Mehrsprachigkeit der Nachricht eine oder mehrere Lokalisierungen aus, die für diese Nachricht übersetzt werden sollen.
+
+![Mehrsprachige Einstellungen mit einem Dropdown-Feld zum Auswählen von Lokalisierungen.]({% image_buster /assets/img/multi-language_support/manage_language_dropdown.png %}){: style="max-width:80%;"}
+
 {% tabs %}
-{% tab In-app message %}
-
-Um Lokalisierungen in Ihren Messaging-Nachrichten zu verwenden, erstellen Sie eine In-App-Nachricht-Kampagne oder ein Canvas. Wählen Sie entweder den Drag-and-Drop-Editor oder den traditionellen Editor aus und folgen Sie dann den Schritten, die für Ihren Editor gelten.
-
-{% subtabs %}
-{% subtab traditional editor %}
-
-1. Fügen Sie die Übersetzungs-Tags {% raw %}`{% translation %}` und `{% endtranslation %}`{% endraw %} hinzu, um alle zu übersetzenden Texte, Bilder und Links einzufassen. 
-2. Fügen Sie zu jedem Übersetzungs-Tag ein ID-Tag hinzu. Ein Beispiel ist: {% raw %}`{% translation id_1 %}`{% endraw %}
-
-![Traditioneller Editor mit Übersetzungs-IDs.]({% image_buster /assets/img/multi-language_support/html_iam_editor_translation_tags.png %}){: style="max-width:60%;"}
-
-{: start="3"}
-3\. Wenn Sie die Tags hinzugefügt haben, speichern Sie Ihre Nachricht als Entwurf.
-4\. Wählen Sie **Sprachen verwalten** und fügen Sie über das Dropdown-Menü Ihre Lokalisierungen für die Nachricht hinzu.
-
-!["Sprachen verwalten"-Modal mit einer ausgewählten Lokalisierung.]({% image_buster /assets/img/multi-language_support/manage_languages_modal.png %})
-
-{: start="5"}
-5\. Gehen Sie auf **Template herunterladen**, um die Übersetzungsvorlage als CSV-Datei herunterzuladen. Tragen Sie dann die Übersetzungen in die CSV-Datei ein.
-
-![Ein Beispiel für eine CSV-Datei zur Übersetzung.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
-
-{: start="6"}
-6\. Wählen Sie **Übersetzungen hochladen**, um die CSV-Datei mit den fertigen Übersetzungen hochzuladen.
-
-{% endsubtab %}
-{% subtab Drag-and-drop editor %}
-
-1. Fügen Sie die Übersetzungs-Tags {% raw %}`{% translation %}` und `{% endtranslation %}`{% endraw %} hinzu, um alle zu übersetzenden Texte, Bilder und Links einzufassen. 
-2. Fügen Sie zu jedem Übersetzungs-Tag ein ID-Tag hinzu. Ein Beispiel ist: {% raw %}`{% translation id_1 %}`{% endraw %} 
-
-![Drag-and-Drop-Editor mit zwei Übersetzungs-IDs.]({% image_buster /assets/img/multi-language_support/dnd_iam_editor_translation_tags.png %}){: style="max-width:70%;"}
-
-{: start="3"}
-3\. Nachdem Sie die Tags hinzugefügt haben, speichern Sie Ihre Nachricht als Entwurf, und öffnen Sie den Editor erneut.
-4\. Wählen Sie im Panel **Aufbauen** die Option **Mehrsprachig** aus und fügen Sie über das Dropdown-Menü Ihre Lokalisierungen für die Nachricht hinzu.
-5\. Gehen Sie auf **Template herunterladen**, um die Übersetzungsvorlage als CSV-Datei herunterzuladen. 
-
-!["Mehrsprachiges" Panel mit Button zum Herunterladen des Templates.]({% image_buster /assets/img/multi-language_support/dnd_iam_download_template.png %}){: style="max-width:40%;"}
-
-{: start="6"}
-6\. Füllen Sie die Übersetzungen in der CSV-Datei aus. Wenn Sie die Übersetzungstags direkt aus Schritt 1 kopiert und eingefügt haben, müssen Sie eventuell `<code>` aus der Spalte **Übersetzungstags** der CSV-Datei entfernen.
-7\. Wählen Sie **Übersetzungen hochladen**, um die CSV-Datei mit den fertigen Übersetzungen hochzuladen.
-
-!["Mehrsprachiges" Panel mit Buttons zum Herunterladen des Templates und Hochladen von Übersetzungen.]({% image_buster /assets/img/multi-language_support/dnd_iam_upload_translations.png %}){: style="max-width:40%;"}
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
 {% tab Email %}
+Wählen Sie bei der Bearbeitung Ihrer Nachricht im Menü Contentful die Option **Multi-Language** aus.
 
-Um Gebietsschemata in Ihren Nachrichten zu verwenden, erstellen Sie eine E-Mail-Kampagne oder ein Canvas. Wählen Sie entweder den HTML-Editor oder den Drag-and-Drop-Editor und folgen Sie dann den Schritten, die für Ihren Editor gelten.
+![Mehrsprachige Einstellungen für E-Mails.]({% image_buster /assets/img/multi-language_support/email_multi_language.png %}){: style="max-width:45%;"}
 
+{% endtab %}
+
+{% tab Push %}
+Wählen Sie **Sprachen verwalten**, wenn Sie Ihre Nachricht bearbeiten.
+
+![Mehrsprachige Einstellungen für Push.]({% image_buster /assets/img/multi-language_support/push_manage_languages.png %})
+
+{% endtab %}
+
+{% tab In-app message %}
 {% subtabs %}
-{% subtab HTML editor %}
+{% subtab Drag-and-Drop Editor %}
+Wählen Sie **Sprachen verwalten** am Ende des Abschnitts **Build**.
 
-1. Markieren Sie den Text, den Sie übersetzen möchten. Wählen Sie **Übersetzungs-Tag einfügen**. Nun wird Ihr Text mit Übersetzungs-Tags eingefasst. <br>![HTML-Editor mit einer ausgewählten Lokalisierung.]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
-2. Speichern Sie die Nachricht als Entwurf.
-3. Wählen Sie **Mehrsprachig** und fügen Sie über das Dropdown-Menü Ihre Gebietsschemata für die Nachricht hinzu.
-4. Gehen Sie auf **Template herunterladen**, um die Übersetzungsvorlage als CSV-Datei herunterzuladen. Tragen Sie dann die Übersetzungen in die CSV-Datei ein. <br>![Ein Beispiel für eine CSV-Datei zur Übersetzung.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
-5. Wählen Sie **Übersetzungen hochladen**, um die CSV-Datei mit den fertigen Übersetzungen hochzuladen.
+![Mehrsprachige Einstellungen für In-App-Nachrichten per Drag-and-Drop.]({% image_buster /assets/img/multi-language_support/iam_dnd_manage_languages.png %}){: style="max-width:45%;"}
 
 {% endsubtab %}
-{% subtab Drag-and-drop editor %}
+{% subtab Traditional editor %}
 
-1. Fügen Sie die Übersetzungs-Tags {% raw %}`{% translation %}` und `{% endtranslation %}`{% endraw %} hinzu, um alle zu übersetzenden Texte, Bilder und Links einzufassen. 
-2. Fügen Sie zu jedem Übersetzungs-Tag ein ID-Tag hinzu. Ein Beispiel ist: {% raw %}`{% translation id_1 %}`{% endraw %} <br>![Drag-and-Drop-Editor mit zwei Übersetzungs-IDs.]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
-3. Wenn Sie die Tags hinzugefügt haben, speichern Sie Ihre Nachricht als Entwurf.
-4. Wählen Sie **Mehrsprachig** und fügen Sie über das Dropdown-Menü Ihre Gebietsschemata für die Nachricht hinzu.
-5. Gehen Sie auf **Template herunterladen**, um die Übersetzungsvorlage als CSV-Datei herunterzuladen. 
-6. Füllen Sie die Übersetzungen in der CSV-Datei aus. Wenn Sie die Übersetzungstags direkt aus Schritt 1 kopiert und eingefügt haben, müssen Sie eventuell `<code>` aus der Spalte **Übersetzungstags** der CSV-Datei entfernen.
-7. Wählen Sie **Übersetzungen hochladen**, um die CSV-Datei mit den fertigen Übersetzungen hochzuladen.
+Wählen Sie **Sprachen verwalten**, wenn Sie Ihre Nachricht bearbeiten.
+
+![Mehrsprachige Einstellungen für In-App-Nachrichten im HTML-Format.]({% image_buster /assets/img/multi-language_support/iam_html_manage_languages.png %})
 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Push %}
 
-Um Lokalisierungen in Ihren Messaging-Nachrichten zu verwenden, erstellen Sie eine Push-Kampagne oder ein Canvas und führen dann die folgenden Schritte aus:
+{% tab Banner %}
+Wählen Sie **Sprachen verwalten**, wenn Sie Ihre Nachricht bearbeiten.
 
-1. Fügen Sie die Übersetzungstags {% raw %}`{% translation id1%}` und `{% endtranslation %}`{% endraw %} hinzu, um alle zu übersetzenden Text-, Bild- oder Link-URLs einzuschließen. Jede Übersetzungs-ID (`id1`) muss eindeutig sein.
-
-![Push-Benachrichtigung-Editor mit Übersetzungs-Tags in den Feldern für Titel und Nachrichten.]({% image_buster /assets/img/multi-language_support/push_translation_tags.png %})
-
-{: start="2"}
-2\. Speichern Sie Ihre Nachricht als Entwurf.
-3\. Wählen Sie **Sprache verwalten** und fügen Sie über das Dropdown-Menü Ihre Lokalisierungen für die Nachricht hinzu.
-4\. Wählen Sie **Template herunterladen** aus und geben Sie die Übersetzungen in das CSV Template ein.
-
-![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
-
-{: start="5"}
-5\. Um die fertige CSV-Vorlage hochzuladen, wählen Sie **Übersetzungen hochladen**. 
-
-![Das Fenster "Mehrsprachige Nachrichten" mit zwei ausgewählten Lokalisierungen und Buttons zum Herunterladen eines Templates oder Hochladen von Übersetzungen.]({% image_buster /assets/img/multi-language_support/upload_translation.png %})
+![Mehrsprachige Einstellungen für Werbebanner.]({% image_buster /assets/img/multi-language_support/banner_manage_languages.png %})
 
 {% endtab %}
 {% endtabs %}
 
+### Schritt 4: CSV-Vorlage herunterladen {#download-csv}
+
+Nachdem Sie Ihre Lokalisierungen ausgewählt haben, wählen Sie **Vorlage herunterladen**, um eine CSV-Vorlage mit einer Matrix Ihrer ausgewählten Übersetzungs-IDs und Lokalisierungen herunterzuladen.
+
+![Beispiel-CSV für die Lokalisierungen en, fr, und es.]({% image_buster /assets/img/multi-language_support/example_translation_csv.png %}){: style="max-width:70%;"}
+
+### Schritt 5: Eine ausgefüllte CSV hochladen {#upload-csv}
+
+{% alert important %}
 Alle Änderungen an den IDs oder Lokalisierungen in der CSV-Datei werden nicht automatisch in Ihrer Nachricht aktualisiert. Um die Übersetzungen zu aktualisieren, aktualisieren Sie die CSV-Datei und laden Sie die Datei erneut hoch.
+{% endalert %}
+
+Hier ist das Format für ein Beispiel für eine ausgefüllte CSV-Datei:
+
+```
+Variant1,,,,
+,Translation tags,en,es,fr
+title,We noticed you've left something behind,We noticed you've left something behind,Notamos que has dejado algo atrás,Nous avons remarqué que vous avez oublié quelque chose derrière vous
+offer_text,Check out now and receive,Check out now and receive,Paga ahora y recibe,Payez maintenant et recevez
+offer_amount,10% Off,10% Off,10% de Descuento,10 % de réduction
+cta,CHECK OUT NOW,CHECK OUT NOW,VERIFICAR AHORA,VÉRIFIER MAINTENANT
+```
+
+### Schritt 6: Vorschau der Lokalisierungen {#preview-locales}
+
+Wählen Sie bei der Vorschau Ihrer Nachricht die Option **Mehrsprachiger Nutzer:innen** aus dem Dropdown-Menü **Vorschau als Nutzer**:innen. Damit können Sie zwischen verschiedenen Lokalisierungen wechseln, um eine Vorschau auf alle Übersetzungen Ihrer Nachricht zu erhalten.
+
+![Lokalisierungs-Vorschauen]({% image_buster /assets/img/multi-language_support/multi_language_user_preview.png %})
 
 {% alert tip %}
 Sehen Sie sich unsere [Translation API]({{site.baseurl}}/api/endpoints/translations) an, um Übersetzungen in Ihren Kampagnen und Canvase zu verwalten und zu aktualisieren.
 {% endalert %}
 
-## Vorschau auf Gebietsschemata
+## Nachrichten von rechts nach links
 
-{% tabs %}
-{% tab In-app message %}
+Wenn Sie die Übersetzungsdatei für Sprachen ausfüllen, die von rechts nach links geschrieben werden (wie Arabisch), umschließen Sie die Übersetzung mit `span`, damit sie richtig formatiert ist:
 
-Wählen Sie im Dropdown-Menü **Vorschau der Nachricht als Nutzer:** in auf dem Tab **Test** die Option **Benutzer:innen** aus und geben Sie verschiedene Sprachen ein, um eine Vorschau der Nachricht anzuzeigen und zu prüfen, ob Ihre Nachricht wie erwartet übersetzt wird.
-
-
-{% endtab %}
-{% tab Email %}
-
-Wählen Sie im Bereich **Vorschau & Test** **mehrsprachige Nutzer:innen** aus, um zu prüfen, ob Ihre Nachricht wie erwartet übersetzt wird.
-
-{% endtab %}
-{% tab Push %}
-
-Wählen Sie im Dropdown-Menü **Vorschau der Nachricht als Nutzer:** in auf dem Tab **Test** die Option **Benutzer:innen** aus und geben Sie verschiedene Sprachen ein, um eine Vorschau der Nachricht anzuzeigen und zu prüfen, ob Ihre Nachricht wie erwartet übersetzt wird.
-
-{% endtab %}
-{% endtabs %}
+{% raw %}
+```
+{% translation your_id_here %}<span dir='rtl'>default text</span>{% endtranslation %}
+```
+{% endraw %}
 
 ## Übersetzungen verwalten
 
@@ -153,26 +158,19 @@ Wählen Sie im Dropdown-Menü **Vorschau der Nachricht als Nutzer:** in auf dem 
 
 Nachdem eine Kampagne oder ein Canvas gestartet wurde, können Sie auch im Entwurfsmodus noch Übersetzungen ändern. Dies gilt unabhängig davon, ob Sie die Übersetzungen direkt im Composer, per CSV-Upload oder über die API bearbeiten. 
 
-Bevor Sie ein Update der Übersetzung vornehmen, müssen Sie die Kampagne oder das Canvas zunächst als Entwurf speichern.
-
-1. Wählen Sie **Kampagne/Canvas bearbeiten** und nehmen Sie dann Ihre Änderungen im Composer vor.
-2. Wählen Sie **Als Entwurf speichern** und wählen Sie dann im Modal **Ja**.
-3. Gehen Sie zum Schritt **Review Summary** und wählen Sie **Update campaign/Canvas**.
-4. Wählen Sie im Modal **Kampagne/Canvas aktualisieren** aus.
-
 Weitere Einzelheiten zur Verwaltung von Kampagnen und Canvase nach dem Einführen finden Sie unter [Bearbeiten von gestarteten Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) und [Canvas-Entwürfen und Bearbeiten nach dem Einführen]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/).
 
 ### Duplizieren von Canvas-Schritten oder Kampagnen und Übersetzungen
 
-Wenn Sie einen Canvas-Schritt oder eine Kampagne duplizieren, egal ob im Entwurfsmodus nach dem Start oder während der ursprünglichen Erstellung, werden die mit diesem Schritt verbundenen Übersetzungen nicht übernommen. Alle notwendigen Übersetzungen müssen dem neuen Schritt oder der Kampagne hinzugefügt werden. Achten Sie darauf, die Übersetzungen zu überprüfen und entsprechend zu aktualisieren, wenn Sie Änderungen an Ihrem Canvas oder Ihrer Kampagne vornehmen.
+Übersetzungen werden zusammen mit einem Canvas-Schritt, einer Kampagne oder einer Kampagnenvariante kopiert. Dies gilt auch für das Kopieren zwischen Workspaces, sofern die Lokalisierungen in dem Ziel-Workspace definiert sind. Achten Sie darauf, die Übersetzungen zu überprüfen und entsprechend zu aktualisieren, wenn Sie Änderungen an Ihrem Canvas oder Ihrer Kampagne vornehmen.
 
-### Verwendung der mehrsprachigen API mit Canvase
+### Verwendung der Multi-Language API mit Canvase
 
-Um die [mehrsprachige API mit Canvase]({{site.baseurl}}/api/endpoints/translations/) zu verwenden, müssen Sie die Parameter `workflow_id`, `step_id` und `message_variation_id` in die Parameterliste aufnehmen.
+Um die [Multi-Language API mit Canvase]({{site.baseurl}}/api/endpoints/translations/) zu verwenden, müssen Sie die `workflow_id`, `step_id` und `message_variation_id` in die Parameterliste aufnehmen.
 
 #### Canvas-Schritte zu Entwürfen nach der Markteinführung hinzugefügt
 
-Wenn Sie die mehrsprachige API mit Canvas-Schritten verwenden, die nach dem Start des Canvas erstellt wurden, ist die `message_variation_id`, die Sie an die API übergeben, leer oder leer.
+Wenn Sie die Multi-Language API mit Canvas-Schritten verwenden, die nach dem Start des Canvas erstellt wurden, ist die `message_variation_id`, die Sie an die API übergeben, leer oder leer.
 
 ## Häufig gestellte Fragen
 
@@ -182,8 +180,11 @@ Ja Nehmen Sie zunächst die Bearbeitung in der CSV-Datei vor und laden Sie die D
 #### Lassen sich Übersetzungs-Tags verschachteln?
 Nein.
 
-#### Können Übersetzungs-Tags mit HTML-Designs versehen werden?
+#### Unterstützen die Übersetzungen HTML für das Styling?
 Ja, aber achten Sie darauf, dass das HTML-Styling nicht mit dem Inhalt übersetzt wird.
+
+#### Kann ich ganze HTML-Nachrichten in einen Tag zur Übersetzung einpacken?
+Nein, Ihre Tags zur Übersetzung sollten so klein wie möglich sein, um Performance- oder Größenbeschränkungen zu vermeiden.
 
 #### Welche Validierungen oder zusätzlichen Prüfungen führt Braze durch?
 

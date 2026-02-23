@@ -46,7 +46,7 @@ Im Braze SDK können Sie die ID des Braze-Benutzers so einstellen, dass sie mit 
 Konfigurieren Sie das Braze SDK mit der gleichen App Nutzer:in ID wie RevenueCat oder verwenden Sie die Braze SDK `.changeUser()` Methode.
 
 {% tabs local %}
-{% tab schnell %}
+{% tab swift %}
 ```swift
 // Configure Purchases SDK
 Purchases.configure(withAPIKey: "public_sdk_key", appUserID: "my_app_user_id")
@@ -59,7 +59,7 @@ Purchases.shared.setAttributes(["$brazeAliasName" : "name",
                              "$brazeAliasLabel" : "label"])
 ```
 {% endtab %}
-{% tab objektiv-c %}
+{% tab objective-c %}
 ```objc
 // Configure Purchases SDK
 [RCPurchases configureWithAPIKey:@"public_sdk_key" appUserID:@"my_app_user_id"];
@@ -138,7 +138,7 @@ Bei Ereignissen, die Einnahmen beinhalten, zeichnet RevenueCat diesen Betrag aut
 
 Nachdem Sie die Braze-Einstellungen in RevenueCat konfiguriert haben, werden die Ereignisse automatisch von RevenueCat zu Braze fließen, ohne dass Sie etwas tun müssen.
 
-## Anpassung
+## Customization
 
 ### Fügen Sie einen API-Schlüssel für die Sandbox zum Testen hinzu
 

@@ -20,7 +20,7 @@ Im Feld „Von“ sollte klar ersichtlich sein, wer der oder die Absender:in ist
 
 ### Adressen, auf die keine Antwort erfolgt
 
-E-Mail-Adressen, auf die keine Antwort erfolgt, sind aus mehreren Gründen nicht zu empfehlen, da sie Ihre Leser aus dem Konzept bringen. Viele Empfänger antworten auf die E-Mail, um sich abzumelden. Wenn sie das nicht dürfen, ist die nächste Maßnahme meist die Kennzeichnung der E-Mail als Spam.
+E-Mail-Adressen ohne Antwort sind in der Regel aus mehreren Gründen nicht zu empfehlen, da sie Ihre Leser abschrecken. Viele Empfänger antworten auf die E-Mail, um sich abzumelden. Wenn sie das nicht dürfen, ist die nächste Maßnahme meist die Kennzeichnung der E-Mail als Spam.
 
 Abwesenheitsantworten können tatsächlich wertvolle Informationen liefern, die Öffnungsrate erhöhen und Spam-Meldungen verringern (indem diejenigen entfernt werden, die keine E-Mails erhalten möchten). Auf einer persönlichen Ebene kann eine Nicht-Antwort auf die Empfänger unpersönlich wirken und sie davon abhalten, weitere E-Mails von Ihrem Unternehmen zu erhalten.
 
@@ -28,9 +28,13 @@ Abwesenheitsantworten können tatsächlich wertvolle Informationen liefern, die 
 
 Der Text in der Kopfzeile einer E-Mail vermittelt auf effiziente Weise das Hauptthema der Nachricht, um das Interesse des Lesers zu wecken und ihn zum Öffnen der Nachricht zu bewegen. Preheader-Text wird auch häufig von Marketern für E-Mails verwendet, um zusätzliche Informationen über den Content einer E-Mail bereitzustellen. Ein Preheader ist der Vorschautext, der unmittelbar nach einem E-Mail-Betreff angezeigt wird. Im folgenden Beispiel lautet der Preheader `- Brand. New. Lounge Shorts`.
 
-![Preheader-Text in einem Posteingang von Google Mail mit dem Text "Marke. Neu. Lounge Shorts“.]({% image_buster /assets/img_archive/preheader_example.png %})
+![Preheader-Text in einem Posteingang von Google Mail mit dem Text „Marke. Neu. Lounge Shorts“.]({% image_buster /assets/img_archive/preheader_example.png %})
 
 Die Länge des sichtbaren Textes in der Kopfzeile hängt vom E-Mail-Client des Benutzers und von der Länge der Betreffzeile der E-Mail ab. Im Allgemeinen empfehlen wir, dass E-Mail-Preheader zwischen 50 und 100 Zeichen lang sind.
+
+{% alert note %}
+Der Preheader kann Liquid im Text der E-Mail referenzieren, und der Text der E-Mail kann Liquid im Preheader referenzieren. Das liegt daran, dass der Preheader-Text Teil des Textes der E-Mail ist, wenn Sie Nachrichten an Empfänger:innen senden.
+{% endalert %}
 
 Im Folgenden finden Sie einige Best Practices, die Sie beim Schreiben Ihrer Preheader beachten sollten:
 
@@ -39,7 +43,7 @@ Im Folgenden finden Sie einige Best Practices, die Sie beim Schreiben Ihrer Preh
   - Verwenden Sie starke Worte, damit der Leser genau weiß, worum Sie ihn bitten. Achten Sie jedoch darauf, dass der Text die Stimme der Marke Ihres Unternehmens widerspiegelt und dass jeder Aufruf zum Handeln einen gewissen Nutzen für den Verbraucher hat.
   - Der Preheader sollte nicht länger als 85 Zeichen sein und eine Art beschreibende Aufforderung zum Handeln enthalten, die die Betreffzeile unterstützt.
 
-2. E-Mails und Landing Sites, auf die Sie Ihre Nutzer leiten, sollten für Mobilgeräte optimiert sein:
+2. E-Mails und Landing Sites, auf die Sie Ihre Nutzer:innen leiten, sollten für Mobilgeräte optimiert sein:
   - Keine Zwischenablagefelder
   - Große Form-Felder
   - Einfache Navigation
@@ -85,6 +89,10 @@ Achten Sie darauf, die Größe Ihrer E-Mails zu begrenzen. E-Mails, die größer
 |:-------------:|:----------------:|:------------------:|
 | Maximal 25 KB |   Maximal 60 KB   | Maximal 600 Pixel |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% alert note %}
+Um Ihre Kampagne oder Ihr Template zu speichern, stellen Sie sicher, dass Ihr E-Mail-Text 400 KB nicht überschreitet.
+{% endalert %}
 
 ## Textlänge
 

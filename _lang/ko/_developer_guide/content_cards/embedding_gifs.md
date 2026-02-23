@@ -1,5 +1,5 @@
 ---
-nav_title: GIF 삽입하기
+nav_title: GIF 삽입
 article_title: 콘텐츠 카드에 GIF 삽입하기
 page_order: 5
 description: "Braze SDK를 사용하여 콘텐츠 카드에 GIF를 삽입하는 방법을 알아보세요."
@@ -21,15 +21,15 @@ platform:
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+GIF 지원은 웹 SDK 통합에 기본적으로 포함되어 있습니다.
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/_global/gifs.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/gifs.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-현재 웹브레이즈 SDK에서는 콘텐츠 카드 GIF가 지원되지 않습니다.
 {% endsdktab %}
 {% endsdktabs %}

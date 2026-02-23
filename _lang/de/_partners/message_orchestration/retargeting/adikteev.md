@@ -30,15 +30,15 @@ Die Integration von Braze und Adikteev erlaubt es Ihnen, die Bindung von Nutzern
 ## Anwendungsfälle
 
 {% tabs %}
-{% tab Filtern der Zielgruppe %}
+{% tab Audience filtering %}
 Verfeinerung der Segmente Ihrer Zielgruppe auf der Grundlage des Abwanderungsrisikos.<br> Die Namen und Werte der angepassten Attribute, die von Adikteev gesendet werden, sind konfigurierbar.
 
-![Ein Screenshot zeigt ein Beispiel für die Verwendung eines angepassten Attributs, das von Adikteev als Segmentierungs-Filter für die Zielgruppe gesendet wurde.]({% image_buster /assets/img/adikteev/audience.png %})
+![Ein Screenshot zeigt ein Beispiel für die Verwendung eines angepassten Attributs, das von Adikteev als Zielgruppen-Filter für Segmente gesendet wurde.]({% image_buster /assets/img/adikteev/audience.png %})
 {% endtab %}
-{% tab Messaging-Targeting %}
+{% tab Message targeting %}
 Anpassung Ihrer Messaging-Kampagnen von Braze auf der Grundlage des Abwanderungsrisikos der Empfänger:innen.
 
-![Ein Screenshot zeigt ein Beispiel für die Verwendung eines von Adikteev gesendeten angepassten Attributs als Filter für das Targeting einer Kampagne.]({% image_buster /assets/img/adikteev/campaign.png %})
+![Ein Screenshot zeigt ein Beispiel für die Verwendung eines angepassten Attributs, das von Adikteev als Filter für das Targeting einer Kampagne gesendet wurde.]({% image_buster /assets/img/adikteev/campaign.png %})
 {% endtab %}
 {% endtabs %}
 

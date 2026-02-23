@@ -81,7 +81,7 @@ Nachdem Sie ein Ziel erstellt haben, müssen Sie als Nächstes Eingaben auf Work
 Auf dem Tab **Zu sendende Daten** können Sie die Zeotap-Katalogfelder den Braze-Feldern zuordnen, die an Braze gesendet werden können. Die Abbildung kann auf eine der folgenden Arten erfolgen:
 - **Statische Abbildung** \- Es gibt bestimmte Felder, die Zeotap automatisch den entsprechenden Feldern von Braze zuordnet, z.B. E-Mail, Telefon, Vorname, Nachname und so weiter.<br>
 - **Dropdown-Auswahl** \- Ordnen Sie die relevanten, in Zeotap aufgenommenen Felder den im Dropdown-Menü bereitgestellten Braze-Feldern zu.<br>![Verschiedene Nutzer:innen, die in Zeotap eingestellt sind, wie Sprache, Ort, Geburtstag und mehr.]({% image_buster /assets/img/zeotap/zeotap7.png %}){: style="max-width:70%;"}<br>
-- **Eingabe angepasster Daten** \- Fügen Sie angepasste Daten hinzu, die dem entsprechenden Zeotap-Feld zugeordnet sind, und senden Sie diese an Braze.<br>![Auswählen von "loyalty_points" als Nutzer:innen-Eigenschaft in Zeotap.]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
+- **Eingabe angepasster Daten** \- Fügen Sie angepasste Daten hinzu, die dem entsprechenden Zeotap-Feld zugeordnet sind, und senden Sie diese an Braze.<br>![Auswählen von "loyalty_points" als Nutzer:innen in Zeotap.]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
 
 ## Unterstützte Attribute
 In diesem Abschnitt finden Sie Details zu allen Braze-Feldern.

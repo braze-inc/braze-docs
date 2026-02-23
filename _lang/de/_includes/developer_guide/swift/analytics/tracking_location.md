@@ -9,7 +9,7 @@ Wenn Sie die Braze-Features für Standorte verwenden, muss Ihre App die Erlaubni
 Um das Standort-Tracking zu aktivieren, öffnen Sie Ihr Xcode-Projekt und wählen Sie Ihre App aus. Auf dem Tab **Allgemein** fügen Sie das Modul `BrazeLocation` hinzu.
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 Importieren Sie in Ihrer Datei `AppDelegate.swift` das Modul `BrazeLocation`, das sich am Anfang der Datei befindet. Fügen Sie der Braze-Konfiguration eine Instanz von `BrazeLocationProvider` hinzu. Stellen Sie sicher, dass alle Änderungen an der Konfiguration vor dem Aufruf von `Braze(configuration:)` vorgenommen werden. Die verfügbaren Konfigurationen finden Sie unter `Braze.Configuration.Location`.
 
@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 
 {% endtab %}
-{% tab objektiv-c %}
+{% tab objective-c %}
 
 Importieren Sie in Ihrer Datei `AppDelegate.m` das Modul `BrazeLocation`, das sich am Anfang der Datei befindet. Fügen Sie der Braze-Konfiguration eine Instanz von `BrazeLocationProvider` hinzu. Stellen Sie sicher, dass alle Änderungen an der Konfiguration vor dem Aufruf von `Braze(configuration:)` vorgenommen werden. Die verfügbaren Konfigurationen finden Sie unter `BRZConfigurationLocation`.
 
@@ -100,7 +100,7 @@ static Braze *_braze = nil;
 Als nächstes protokollieren Sie den letzten bekannten Standort des Nutzers:innen in Braze. Die folgenden Beispiele gehen davon aus, dass Sie die Braze-Instanz als Variable in Ihrem `AppDelegate` zugewiesen haben.
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
@@ -116,7 +116,7 @@ AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
 ```
 
 {% endtab %}
-{% tab objektiv-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user setLastKnownLocationWithLatitude:latitude

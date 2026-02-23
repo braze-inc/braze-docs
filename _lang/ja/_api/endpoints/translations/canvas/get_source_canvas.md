@@ -15,7 +15,7 @@ description: "この記事では、キャンバス翻訳ソースエンドポイ
 /キャンバス/翻訳/ソース
 {% endapimethod %}
 
-> キャンバスの翻訳タグのデフォルトの翻訳ソースをすべて表示するには、このエンドポイントを使用する。を持つ値である。 {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}
+> キャンバスの翻訳タグのデフォルトの翻訳ソースをすべて表示するには、このエンドポイントを使用する。これらは、{% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %} の値である。翻訳機能の詳細については、[メッセージのローカライゼーションを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照のこと。
 
 {% alert important %}
 このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
@@ -31,11 +31,11 @@ description: "この記事では、キャンバス翻訳ソースエンドポイ
 
 ## クエリーパラメーター
 
-| パラメータ              | required | データ型 | 説明                        |
+| パラメータ              | 必須かどうか | データ型 | 説明                        |
 |------------------------|----------|-----------|------------------------------------|
-| `workflow_id`          | 必須 | string    | キャンバスの ID。              |
-| `step_id`              | 必須 | 文字列    | キャンバスのステップのID。        |
-|`message_variation_id`| 必須 | string | メッセージバリエーションの ID。 |
+| `workflow_id`          | 必須かどうか | string    | キャンバスの ID。              |
+| `step_id`              | 必須かどうか | 文字列    | キャンバスのステップのID。        |
+|`message_variation_id`| 必須かどうか | string | メッセージバリエーションの ID。 |
 | `locale_id`            | オプション | string    | ロケールのID（UUID）。              |
 | `post_launch_draft_version`| オプション | ブール値 | `true` 、最新のライブ公開バージョンではなく、最新の下書きバージョンが返される。デフォルトは`false` 、最新のライブバージョンを返す。
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

@@ -26,23 +26,23 @@ Após [configurar o servidor Braze MCP]{% if include.section == "user" %}({{site
 
 {% tabs %}
 {% tab Claude %}
-!["Quais são as minhas funções de Braze disponíveis?" sendo perguntadas e respondidas no Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
+!["Quais são as minhas funções disponíveis no Braze?" sendo perguntado e respondido em Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-!['Quais são minhas funções Braze disponíveis' sendo perguntadas e respondidas no Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+!["Quais são minhas funções Braze disponíveis" sendo perguntadas e respondidas no Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 
-### Obter detalhes sobre uma ID de tela
+### Obter detalhes sobre uma ID do Canva
 
 {% tabs %}
 {% tab Claude %}
-!['Get details about a canva ID' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/get_details_about_a_canvas_id.png %}){: style="max-width:85%;"}
+!['Get details about a canva ID' sendo perguntado e respondido no Claude.]({% image_buster /assets/img/mcp_server/claude/get_details_about_a_canvas_id.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-!['Get details about a canva ID' sendo perguntado e respondido no Cursor.]({% image_buster /assets/img/mcp_server/cursor/get_details_about_a_canvas_id.png %})
+!['Obter detalhes sobre um ID de tela' sendo perguntado e respondido no Cursor.]({% image_buster /assets/img/mcp_server/cursor/get_details_about_a_canvas_id.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -50,7 +50,7 @@ Após [configurar o servidor Braze MCP]{% if include.section == "user" %}({{site
 
 {% tabs %}
 {% tab Claude %}
-!['Show my recent canvas' sendo perguntado e respondido em Claude.]({% image_buster /assets/img/mcp_server/claude/show_my_recent_canvases.png %}){: style="max-width:85%;"}
+!['Mostre minhas telas recentes' sendo perguntado e respondido em Claude.]({% image_buster /assets/img/mcp_server/claude/show_my_recent_canvases.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}

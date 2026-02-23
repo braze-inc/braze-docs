@@ -52,9 +52,7 @@ guide_menu_list2:
 
 ---
 
-{% alert important %}
-The Braze translation endpoints are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Access to the Braze translation endpoints' %}
 
 ## How our translation endpoints work
 

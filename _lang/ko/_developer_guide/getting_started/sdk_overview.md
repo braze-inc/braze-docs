@@ -5,7 +5,7 @@ description: "이 온보딩 참조 문서에서는 Braze SDK 개발자를 위한
 page_order: 0
 ---
 
-# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}개발자용 SDK 개요
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} 개발자를 위한 소프트웨어 개발 키트 개요
 
 > Braze SDK 통합을 시작하기 전에 정확히 무엇을 빌드하고 통합해야 하는지 알고 싶을 수 있습니다. 요구 사항에 맞게 SDK를 사용자 지정하는 방법도 궁금할 수 있습니다. 이 문서는 모든 SDK 관련 질문에 대한 답을 찾는 데 도움을 줄 수 있습니다. 
 
@@ -25,11 +25,11 @@ Braze SDK는 설치에 필요한 공간이 매우 작습니다. 네트워크를 
 
 ## SDK 호환성
 
-Braze SDK는 앱에 있는 다른 SDK를 방해하지 않으면서 매우 원활하게 작동하도록 설계되었습니다. 다른 SDK와의 호환성 문제로 인한 것으로 생각되는 문제가 발생하면 Braze 지원팀에 문의하세요.
+Braze SDK는 앱에 있는 다른 SDK를 방해하지 않으면서 매우 원활하게 작동하도록 설계되었습니다. 다른 소프트웨어 개발 키트와의 비호환성으로 인한 것으로 생각되는 문제가 발생하면 Braze 지원팀에 문의하세요.
 
 ## 기본 분석 및 세션 처리
 
-특정 사용자 데이터(예: 처음 사용한 앱, 마지막으로 사용한 앱, 총 세션 수, 기기 OS 등)는 SDK에서 자동으로 수집됩니다. 통합 가이드에 따라 SDK를 구현하면 이 [기본 데이터 수집]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/) 기능을 활용할 수 있습니다. 이 목록을 확인하면 사용자에 대한 동일한 정보를 두 번 이상 저장하지 않도록 하는 데 도움이 됩니다. 세션 시작과 세션 종료를 제외한 다른 모든 자동 추적 데이터는 데이터 포인트 할당에 포함되지 않습니다.
+특정 사용자 데이터(예: 처음 사용한 앱, 마지막으로 사용한 앱, 총 세션 수, 기기 OS 등)는 SDK에서 자동으로 수집됩니다. 통합 가이드에 따라 SDK를 구현하면 이 [기본 데이터 수집]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/) 기능을 활용할 수 있습니다. 이 목록을 확인하면 사용자에 대한 동일한 정보를 두 번 이상 저장하지 않도록 하는 데 도움이 됩니다. 세션 시작과 세션 종료를 제외한 다른 모든 자동 추적 데이터는 데이터 포인트 사용량에 포함되지 않습니다.
 
 {% alert note %}
 모든 기능이 구성 가능하지만 기본 데이터 수집 모델을 완전히 구현하는 것이 좋습니다.
@@ -65,7 +65,7 @@ SDK 통합에서 특정 데이터의 자동 수집을 차단하거나 이를 수
 제품의 기능을 최대한 활용하려면 SDK를 완전히 통합할 것을 적극 권장합니다.
 
 {% tabs %}
-{% tab 웹 SDK %}
+{% tab Web SDK %}
 
 SDK의 특정 부분을 통합하지 않거나 사용자 측에서 [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk)를 사용할 수 있습니다. 이 메서드는 `disableSDK()` 호출 이전에 기록된 데이터를 동기화하며, 이 페이지 및 향후 페이지 로드에서 이후 모든 Braze 웹 SDK 호출을 무시합니다. 나중에 데이터 수집을 재개하려면 향후 [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) 메서드를 사용하여 데이터 수집을 재개할 수 있습니다. 이에 대한 자세한 내용은 [웹 추적 비활성화]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=web) 문서에서 확인할 수 있습니다.
 

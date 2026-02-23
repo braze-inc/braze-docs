@@ -22,7 +22,7 @@ Una vez generada, puede crear una nueva clave o invalidar una existente. La clav
 
 ### Paso 2: Configurar la integración Braze en Amplitude
 
-En Amplitude, ve a **Fuentes y destinos** > **[nombre del proyecto]** > **Destinos** > **Braze**. En el mensaje que aparece, proporciona la clave de importación de datos Braze y el punto final REST, y haz clic en **Guardar**.
+En Amplitude, ve a **Fuentes & Destinos** > **[nombre del proyecto]** > **Destinos** > Braze. En el mensaje que aparece, proporciona la clave de importación de datos Braze y el punto final REST, y haz clic en **Guardar**.
 
 ![]({% image_buster /assets/img/amplitude.png %})
 
@@ -33,7 +33,7 @@ En primer lugar, para exportar usuarios de Amplitude a Braze, crea una [cohorte]
 - ID del dispositivo
 - ID de usuario (ID externo)
 
-Puedes configurar varias conexiones Braze en tu cuenta de Amplitude. Esto te permite configurar una conexión para sincronizar ID de usuario para usuarios conocidos y otra para sincronizar ID de dispositivo para usuarios anónimos.
+Amplitude admite varias propiedades de mapeado de identificadores por orden de prioridad. Puedes configurar un mapeado de identificador primario, secundario y terciario. Durante la sincronización, si a un usuario le falta el primario, Amplitude utiliza el siguiente disponible. Esto mejora la cobertura de la sincronización, reduce los usuarios descartados e incluye más usuarios anónimos y parcialmente identificados en tu sincronización. 
 
 Una vez que hayas creado una cohorte, haz clic en **Sincronizar con...** para exportar estos usuarios a Braze.
 
@@ -43,13 +43,15 @@ Sólo se añadirán o eliminarán de una cohorte los usuarios que ya existan en 
 
 #### Definir la cadencia de sincronización
 
-Las sincronizaciones de cohortes pueden configurarse para que se realicen una sola vez, programarse como diarias o cada hora, o incluso en tiempo real, que se actualiza cada minuto. Asegúrate de seleccionar una opción que tenga sentido para las necesidades de tu empresa, teniendo en cuenta al mismo tiempo el consumo de [puntos de datos]({{site.baseurl}}/user_guide/data/data_points/).
+Las sincronizaciones de cohortes pueden configurarse para que se realicen una sola vez, programarse como diarias o cada hora, o incluso en tiempo real, que se actualiza cada minuto. 
+
+Cualquier integración que configures registrará puntos de datos. Si tienes alguna pregunta sobre los matices de los puntos de datos Braze, tu administrador de cuentas Braze puede responderte.
 
 ### Paso 4: Segmentar usuarios en Braze
 
 En Braze, para crear un segmento de estos usuarios, navega a **Segmentos** en **Interacción**, asigna un nombre a tu segmento y selecciona **Cohortes de Amplitude** como filtro. A continuación, utiliza la opción "includes" y elige la cohorte que creaste en Amplitude. 
 
-![En el constructor de segmentos Braze, el filtro "amplitude_cohorts" se establece en "includes_value" y "Amplitude cohort test".]({% image_buster /assets/img/amplitude2.png %})
+![En el constructor de segmentos Braze, el filtro "amplitude_cohorts" está configurado en "includes_value" y "Prueba de cohorte de Amplitude".]({% image_buster /assets/img/amplitude2.png %})
 
 Después de guardarlo, puede hacer referencia a este segmento durante la creación de Canvas o campañas en el paso de segmentación de usuarios.
 

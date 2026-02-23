@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Anzahl der K채ufe"
+nav_title: "GET: Anzahl der K채ufe exportieren"
 article_title: "GET: Export Anzahl der K채ufe"
 search_tag: Endpoint
 page_order: 3
@@ -11,7 +11,7 @@ description: "Dieser Artikel enth채lt Einzelheiten 체ber die Exportnummer von K�
 {% api %}
 # Anzahl der K채ufe exportieren
 {% apimethod get %}
-/Eink채ufe/Menge_series
+/purchases/quantity_series
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um die Gesamtzahl der K채ufe in Ihrer App 체ber einen bestimmten Zeitraum zu ermitteln.
@@ -47,8 +47,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/purchases/quantity_
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": (required, string) the status of the export, returns 'success' when completed without errors,
   "data" : [

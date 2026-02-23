@@ -1,6 +1,6 @@
 ---
 nav_title: Testing a message
-article_title: Sending Test Messages
+article_title: Send Test Messages
 page_order: 10.0
 description: "Learn how to send a test message for the Braze SDK."
 ---

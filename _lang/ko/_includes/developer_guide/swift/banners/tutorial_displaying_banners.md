@@ -6,7 +6,7 @@
 
 ## Swift 소프트웨어 개발 키트 배너 표시하기
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md 튜토리얼="배너 신속하게 표시하기" %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Displaying Banners Swift" %}
 
 {% tabs %}
 {% tab UIKit %}
@@ -260,7 +260,7 @@ lines-AppDelegate.swift=19
 
 #### 2\. 게재 위치 새로고침하기
 
-Braze 소프트웨어 개발 키트를 초기화한 후 각 세션이 시작될 때마다 `requestBannersRefresh(placementIds: ["PLACEMENT_ID"])` 으로 전화하여 배너 콘텐츠를 새로고침합니다.
+Braze 소프트웨어 개발 키트를 초기화한 후, 각 세션이 시작될 때마다 `requestBannersRefresh(placementIds: ["PLACEMENT_ID"])` 으로 전화하여 배너 콘텐츠를 새로고침합니다.
 
 !!단계
 라인-BannerSwiftUIView.swift=1-46
@@ -281,7 +281,7 @@ Braze 소프트웨어 개발 키트를 초기화한 후 각 세션이 시작될 
 
 #### 5\. 로드된 후에만 `BannerView` 표시
 
-UI의 공백을 방지하려면 배너가 있고 소프트웨어 개발 키트가 초기화된 경우에만 `BrazeBannerUI.BannerView` 을 표시하세요.
+UI의 공백을 피하려면 배너가 있고 소프트웨어 개발 키트가 초기화된 경우에만 `BrazeBannerUI.BannerView` 을 표시하세요.
 
 !!단계
 lines-BannerSwiftUIView.swift=23-32

@@ -10,9 +10,9 @@ channel:
 
 # Themen für den dunklen Modus
 
-> Der dunkle Modus bietet Nutzern die Möglichkeit, eine systemweite Farbpräferenz einzustellen (eingeführt in [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) und [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). Die "dunklen" Themen sollen die Akkulaufzeit schonen und die Augen der Benutzer entlasten. Gleichzeitig bieten sie App-Entwicklern eine einfachere Möglichkeit, die von den Benutzern bevorzugten dunklen Farbthemen zu implementieren.
+> Der dunkle Modus bietet Nutzern die Möglichkeit, eine systemweite Farbpräferenz einzustellen (eingeführt in [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) und [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). "Dunkle" Themes sollen den Akku schonen und die Augen der Nutzer:innen entlasten und gleichzeitig den Entwicklern:innen von Apps eine Möglichkeit bieten, dunkle Themes zu implementieren.
 
-In-App-Nachrichten von Braze unterstützen das Hinzufügen eines alternativen dunklen Themas, um Ihren Nutzer:innen je nach Vorliebe die richtige Nachricht in der richtigen Farbe zuzustellen und die Konsistenz mit dem Design Ihrer App zu gewährleisten.
+In-App-Nachrichten von Braze unterstützen das Hinzufügen eines alternativen dunklen Themas, um Ihren Nutzern:innen je nach Vorliebe die richtige Nachricht in der richtigen Farbe zuzustellen und die Konsistenz mit dem Design Ihrer App zu wahren.
 
 ## So funktioniert der Dunkle Modus
 
@@ -22,11 +22,11 @@ Wenn der dunkle Modus aktiviert ist, werden die Menüs und Bildschirme des Gerä
 
 ## Einstellen eines Themas für den dunklen Modus
 
-Mit der neuen Option Dunkler Modus, die Sie auf der Registerkarte Stil finden, wenn Sie [eine In-App-Nachricht erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), können Sie ganz einfach ein alternatives Farbthema für Benutzer hinzufügen, die sich auf ihrem Gerät im dunklen Modus befinden.
+Mit dem Dark Mode, der sich auf dem Tab **Design** befindet, wenn Sie [eine In-App-Nachricht erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), können Sie ein alternatives Farbthema für Nutzer:innen hinzufügen, die sich auf ihrem Gerät im Dark Mode befinden.
 
-![Nutzer:in schaltet beim Erstellen einer In-App-Nachricht auf dem Tab Stil zwischen den Stilen Heller Modus und Dunkler Modus um.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
+![Nutzer:innen wechseln im Tab Stil beim Erstellen einer In-App-Nachricht zwischen den Stilen Heller Modus und Dunkler Modus.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 
-Wenn diese Option aktiviert ist, können Sie mit der Farbauswahl dunkle Themenfarben für Ihre In-App-Nachrichten wählen oder vorhandene [Farbprofile]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) auswählen, um vorhandene dunkle oder helle Themen wiederzuverwenden.
+Wenn diese Option aktiviert ist, können Sie dunkle Farben für Ihre In-App-Nachricht mit dem Farbwähler auswählen oder bestehende [Farbprofile]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) auswählen, um die vorhandenen dunklen oder hellen Themen wiederzuverwenden.
 
 {% alert note %}
 Sie können dieses Feature auch dann nutzen, wenn Ihre App kein eigenes dunkles Thema anbietet. Geräte, die den Dark Mode nicht unterstützen, zeigen jedoch standardmäßig das Light-Thema an. Wenn Sie das Design Ihres Geräts unter Android ändern, während eine In-App-Nachricht angezeigt wird, ändert sich das für diese In-App-Nachricht verwendete Design nicht.

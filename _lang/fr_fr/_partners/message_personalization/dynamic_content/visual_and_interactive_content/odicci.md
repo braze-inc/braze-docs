@@ -7,7 +7,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Intégration d'Odicci à Braze
+# Intégrer Odicci à Braze
 
 > Découvrez comment intégrer Braze à [Odicci](https://www.odicci.com/), une plateforme qui donne aux entreprises les moyens d'acquérir, d'engager et de fidéliser leurs clients grâce à des expériences omnicanales axées sur la fidélisation.
 
@@ -43,13 +43,13 @@ Avant de commencer, vous avez besoin des éléments suivants :
 
 ## Intégration d'Odicci
 
-### Étape 1 : Activez l'intégration dans Odicci
+### Étape 1 : Activez l'intégration dans Odicci
 
 1. Connectez-vous à votre compte Odicci.
 2. Accédez à la section **Paramètres > Intégrations**.
 3. Recherchez l'intégration **Braze** et cliquez sur **Connecter**.
 
-   ![Connect Braze Integration]({% image_buster /assets/img/odicci/braze_connect.png %})
+   ![Connecter l'intégration de Braze]({% image_buster /assets/img/odicci/braze_connect.png %})
 
 4. Saisissez votre clé API REST Braze dans le champ prévu à cet effet.
 5. Enregistrez les paramètres pour activer l'intégration au niveau du compte.

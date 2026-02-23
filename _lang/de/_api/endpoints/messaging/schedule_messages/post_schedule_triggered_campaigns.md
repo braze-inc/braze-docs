@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Zeitplan API-getrig
 {% api %}
 # Zeitplan für API-getriggerte Kampagnen
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/campaigns/trigger/schedule/create
+/kampagnen/triggern/zeitplan/erstellen
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um vom Dashboard erstellte Kampagnen-Nachrichten über eine API-getriggerte Zustellung zu versenden. Dabei ist es zulässig, dass Sie entscheiden, welche Aktion den Versand der Nachricht auslösen soll.
@@ -28,7 +28,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## Anfragetext
 
@@ -147,8 +147,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ### Beispiel für eine erfolgreiche Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-API-KEY-HERE
 {
 {
     "dispatch_id": "dispatch_identifier",

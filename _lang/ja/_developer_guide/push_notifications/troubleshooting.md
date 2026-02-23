@@ -1,7 +1,7 @@
 ---
 page_order: 10.9
 nav_title: トラブルシューティング
-article_title: Braze SDKのプッシュ通知のトラブルシューティング
+article_title: Braze SDKのプッシュ通知のトラブルシュート
 channel:
   - push notifications
 ---

@@ -2,7 +2,7 @@
 nav_title: Delay 
 article_title: Delay 
 alias: "/delay_step/"
-page_order: 3
+page_order: 8
 page_type: reference
 description: "In diesem Referenzartikel erfahren Sie, wie Sie eine Verzögerung zu Ihrem Canvas hinzufügen können, ohne eine zugehörige Nachricht hinzufügen zu müssen."
 tool: Canvas
@@ -13,7 +13,7 @@ tool: Canvas
 
 > Mit Delay-Komponenten können Sie einem Canvas eine eigenständige Verzögerung hinzufügen. Sie können eine Verzögerung zu Ihrem Canvas hinzufügen, ohne dass Sie eine zugehörige Nachricht hinzufügen müssen. 
 
-Verzögerungen können Ihr Canvas sauberer aussehen lassen. Sie können diese Komponente auch verwenden, um einen anderen Schritt bis zu einem genauen Datum, bis zu einem bestimmten Tag oder bis zu einem bestimmten Wochentag zu verschieben. <br> ![Ein Verzögerungsschritt mit einer 1-tägigen Verzögerung als erster Schritt eines Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+Verzögerungen können Ihr Canvas sauberer aussehen lassen. Sie können diese Komponente auch verwenden, um einen anderen Schritt bis zu einem genauen Datum, bis zu einem bestimmten Tag oder bis zu einem bestimmten Wochentag zu verschieben. <br> ![Ein Delay-Schritt mit einer Verzögerung von 1 Tag als erster Schritt eines Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ## Erstellen einer Verzögerung
 
@@ -39,8 +39,8 @@ Wenn Sie **Dauer** auswählen, können Sie Nutzer:innen für eine bestimmte Anza
   
 Beachten Sie den Unterschied zwischen der Berechnung von „Tagen“ und „Kalendertagen“.
   
-- Ein "Tag" umfasst 24 Stunden und wird ab dem Zeitpunkt berechnet, an dem der Nutzer:innen den Schritt Verzögerung eingibt. 
-- Ein "Kalendertag" definiert die Wartezeit bis zur nächsten angegebenen Zeit, die weniger als 24 Stunden betragen kann. Sie können wählen, ob die Verzögerung zur Unternehmenszeit oder zur Ortszeit des Nutzers:innen erfolgen soll. Wenn keine Zeit angegeben wird, wird der Nutzer:in bis Mitternacht des nächsten Tages in Firmenzeit verschoben.
+- Ein "Tag" ist 24 Stunden und wird ab dem Zeitpunkt berechnet, an dem der Nutzer:innen den Schritt Verzögerung eingibt. 
+- Ein "Kalendertag" definiert die Wartezeit bis zur nächsten angegebenen Zeit, die weniger als 24 Stunden betragen kann. Sie können wählen, ob die Verzögerung zur Firmenzeit oder zur Ortszeit des Nutzers:innen erfolgen soll. Wenn keine Zeit angegeben wird, wird der Nutzer:in bis Mitternacht des nächsten Tages in Firmenzeit verschoben.
 
 Sie können auch **Zu einem bestimmten Zeitpunkt** auswählen, um festzulegen, wann die Nutzer:innen im Canvas zum nächsten Schritt übergehen. Diese Option berücksichtigt den Zeitpunkt, zu dem der oder die Nutzer:in zum Schritt „Delay“ übergegangen ist. Wenn diese Zeit über die in den Einstellungen konfigurierte Zeit hinausgeht, fügen wir dem Delay weitere Stunden hinzu. 
 
@@ -104,11 +104,9 @@ Wenn Sie Ihrem Canvas eine Verzögerungskomponente hinzufügen und es keine weit
 
 ### Personalisierte Verzögerungen
 
-{% alert important %}
-Personalisierte Verzögerungen und erweiterte Verzögerungen sind bereits verfügbar. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an der Teilnahme an diesem frühen Zugang interessiert sind.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The personalized delays and extended delays feature' %}
 
-Wählen Sie die Option **Verzögerung personalisieren** aus, um eine personalisierte Verzögerung für Ihre Nutzer:innen einzurichten. Sie können dies mit einem [Kontextschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) verwenden, um die Kontextvariable auszuwählen, um die Sie verzögern möchten. Dadurch wird die in dem ausgewählten Attribut oder der Eigenschaft eingestellte Tageszeit außer Kraft gesetzt. Dies ist nützlich, wenn Sie einen Versatz in Tagen oder Wochen anwenden und die Nutzer:innen zu einem bestimmten Zeitpunkt nach vorne gehen sollen. Die Zeitzone stammt aus dem Attribut oder der Eigenschaft oder verwendet den Fallback, wenn keiner verfügbar ist. 
+Wählen Sie die Option **Verzögerung personalisieren** aus, um eine personalisierte Verzögerung für Ihre Nutzer:innen einzurichten. Sie können dies mit einem [Kontextschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) verwenden, um die Kontextvariable auszuwählen, um die Sie verzögern möchten. Dadurch wird die in dem ausgewählten Attribut oder der ausgewählten Eigenschaft eingestellte Tageszeit außer Kraft gesetzt. Dies ist nützlich, wenn Sie einen Offset in Tagen oder Wochen anwenden und die Nutzer:innen zu einem bestimmten Zeitpunkt vorrücken sollen. Die Zeitzone stammt aus dem Attribut oder der Eigenschaft oder verwendet den Fallback, wenn keiner verfügbar ist. 
 
 #### Zeitzonenverhalten für "zu einer bestimmten Zeit"
 
@@ -119,7 +117,7 @@ Wenn Sie personalisierte Verzögerungen mit der Option **zu einer bestimmten Zei
 - **Typ der Zeitdaten:** Wenn es sich bei dem Attribut oder der Kontextvariablen um einen Zeitdatentyp handelt, entspricht er der UTC. Das liegt daran, dass der Datentyp "Zeit" immer in UTC konvertiert wird, wenn er in der Datenbank gespeichert wird. Daher referenziert "zu einer bestimmten Zeit" immer UTC, wenn die Variable auf den Datentyp "Zeit" gesetzt ist. Zum Beispiel verwendet `2025-06-10T10:00:00-08:00` UTC+0.
 
 {% alert note %}
-Es ist möglich, dass ein angepasstes Attribut oder eine Kontextvariable weder eine bestimmte Zeit noch eine Zeitzone hat, wenn es sich um einen String-Datentyp handelt. Wenn es sich um einen Datentyp mit Zeitangaben handelt, müssen Sie die Uhrzeit und die Zeitzone angeben. Handelt es sich bei dem angepassten Attribut oder der Kontextvariablen jedoch um einen "irrelevanten" String (wie "product_name"), ), verlässt der Nutzer:innen den Canvas.
+Es ist möglich, dass ein angepasstes Attribut oder eine Kontextvariable weder eine bestimmte Zeit noch eine Zeitzone hat, wenn es sich um einen String-Datentyp handelt. Wenn es sich um einen Datentyp mit Zeitangaben handelt, müssen Sie die Zeit und die Zeitzone angeben. Handelt es sich bei dem angepassten Attribut oder der Kontextvariablen jedoch um einen "irrelevanten" String (wie "product_name"), ), verlässt der Nutzer:innen den Canvas.
 {% endalert %}
 
 #### Anwendungsfall

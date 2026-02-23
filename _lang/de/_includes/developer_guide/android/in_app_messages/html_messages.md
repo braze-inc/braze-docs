@@ -53,3 +53,19 @@ Im Folgenden sehen Sie ein Beispiel für ein eingebettetes YouTube-Video in eine
     </div>
 </body>
 ```
+
+## Deeplinks setzen
+
+Wenn Sie Deeplinks oder externe Links in Android HTML In-App-Nachrichten verwenden, rufen Sie in Ihrem JavaScript **nicht** `brazeBridge.closeMessage()` auf. Die interne Logik des SDK schließt die In-App-Nachricht automatisch, wenn sie auf einen Link umleitet. Der Aufruf von `brazeBridge.closeMessage()` stört diesen Prozess und kann dazu führen, dass die Nachricht nicht mehr reagiert, wenn die Nutzer:innen zu Ihrer App zurückkehren. 
+
+Im Folgenden sehen Sie ein Beispiel für einen Deeplink in einem Code Snippet:
+
+{% raw %}
+```javascript
+<script>
+document.querySelectorAll('[data-button-id]').forEach(function (node)
+Unknown macro: { node.addEventListener('click', function () { brazeBridge.logClick(node.dataset.buttonId); brazeBridge.closeMessage(); }); }
+);
+</script>
+```
+{% endraw %}

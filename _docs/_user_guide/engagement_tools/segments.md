@@ -13,10 +13,10 @@ description: "This landing page covers articles on Segmentation within dashboard
 
 guide_featured_title: "Popular articles"
 guide_featured_list:
-  - name: Creating a Segment
+  - name: Create a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
     image: /assets/img/braze_icons/pie-chart-01.svg
-  - name: Managing Segments
+  - name: Manage Segments
     link: /docs/user_guide/engagement_tools/segments/managing_segments/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Segmentation Filters

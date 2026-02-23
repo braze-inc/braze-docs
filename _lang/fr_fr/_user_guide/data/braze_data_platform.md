@@ -1,5 +1,5 @@
 ---
-nav_title: Plate-forme de données de Braze
+nav_title: Plateforme de données Braze
 article_title: Aperçu de la plate-forme de données de Braze
 page_order: 0
 page_type: reference
@@ -14,7 +14,7 @@ En utilisant une combinaison de fonctionnalités de la plateforme de données Br
 
 ## Unifier vos données 
 
-Collectez et consolidez des données first-party provenant de n'importe quelle source, à l'aide d'[API] et de [SDK]. Vous pouvez également tirer parti de nos outils d'ingestion intégrés, comme [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion), pour créer une intégration simple directement depuis votre entrepôt de données ou votre solution de stockage de fichiers vers Braze, ou utiliser [Data Transformation]({{site.baseurl}}/user_guide/data/unification/data_transformation) pour créer et gérer des intégrations webhook afin de collecter vos données pour les transférer dans Braze.
+Collectez et consolidez des données first-party provenant de n'importe quelle source à l'aide d'[API]({{site.baseurl}}/api/home) et de [SDK]({{site.baseurl}}/developer_guide/sdk_integration). Vous pouvez également utiliser des outils d'ingestion intégrés comme [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion) pour créer une intégration directe depuis votre entrepôt de données ou votre solution de stockage de fichiers vers Braze, ou utiliser [Data Transformation]({{site.baseurl}}/user_guide/data/unification/data_transformation) pour créer et gérer des intégrations webhook pour le transfert de données vers Braze.
 
 ## Activez vos données
 

@@ -23,7 +23,7 @@ guide_featured_list:
   - name: キャンバステンプレート
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates
     image: /assets/img/braze_icons/palette.svg
-  - name: テンプレートを管理する
+  - name: テンプレートの管理
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     image: /assets/img/braze_icons/archive.svg
   - name: よくある質問

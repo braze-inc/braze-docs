@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Exportar Detalhes da Campanha"
+nav_title: "OBTER: Exportar detalhes da campanha"
 article_title: "OBTER: Exportar Detalhes da Campanha"
 search_tag: Endpoint
 page_order: 4
@@ -33,7 +33,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | Obrigatória | String | Veja [identificador da API da campanha]({{site.baseurl}}/api/identifier_types/).<br><br> O `campaign_id` para campanhas de API pode ser encontrado na página [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) e na página **Informações da campanha** dentro do seu dashboard; ou você pode usar o [endpoint "Exportar lista de campanhas"](#campaign-list-endpoint). |
-| `post_launch_draft_version` | Opcional | Booleano | Para mensagens que têm um rascunho pós-lançamento, definir isso como `true` mostrará quaisquer alterações de rascunho disponíveis. Padrão para `false` |
+| `post_launch_draft_version` | Opcional | Booleano | Para mensagens que têm um rascunho pós-lançamento, definir isso como `true` mostrará todas as alterações de rascunho disponíveis. O padrão é `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -47,8 +47,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ## Respostas
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) the date created as ISO 8601 date,
@@ -89,7 +87,9 @@ A `messages` resposta conterá informações sobre cada mensagem. O seguinte inc
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,
-    "action": (string) action link from click
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
 }
 ```
 
@@ -219,7 +219,7 @@ A `messages` resposta conterá informações sobre cada mensagem. O seguinte inc
 
 ### Comportamentos de conversão
 
-A matriz `conversion_behaviors` conterá informações sobre cada comportamento de evento de conversão definido para a campanha. Esses comportamentos estão em ordem conforme estabelecido pela campanha. Por exemplo, o Evento de Conversão A será o primeiro item na matriz, o Evento de Conversão B será o segundo, etc. Abaixo, você verá uma lista de respostas de comportamento para eventos de conversão de exemplo:
+A matriz `conversion_behaviors` contém informações sobre cada comportamento de evento de conversão definido para a campanha. Esses comportamentos estão em ordem conforme estabelecido pela campanha. Por exemplo, o Evento de Conversão A é o primeiro item da matriz, o Evento de Conversão B é o segundo, e assim por diante. Abaixo, você verá uma lista de respostas de comportamento para eventos de conversão de exemplo:
 
 #### Clica no e-mail
 

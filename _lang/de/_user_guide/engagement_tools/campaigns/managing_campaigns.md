@@ -1,6 +1,6 @@
 ---
-nav_title: Kampagnen verwalten
-article_title: Kampagnen verwalten
+nav_title: Verwalten Sie Kampagnen
+article_title: Kampagnen managen
 layout: dev_guide
 guide_top_header: "Kampagnen verwalten"
 guide_top_text: "Sobald Sie Ihre Kampagne gestartet haben, können Sie sich zurücklehnen und die Daten abwarten, die Sie erhalten. Wenn Sie Änderungen an Ihrer Kampagne vornehmen, Warnmeldungen einrichten oder Ihre Kampagne archivieren müssen, finden Sie in den folgenden Artikeln Hilfe."

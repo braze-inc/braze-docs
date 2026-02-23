@@ -1,12 +1,12 @@
 ---
-nav_title: Logging custom events
-article_title: Logging custom events through the Braze SDK
+nav_title: Log custom events
+article_title: Log custom events through the Braze SDK
 page_order: 3.1
 description: "Learn how to log custom events through the Braze SDK."
 
 ---
 
-# Logging custom events
+# Log custom events
 
 > Learn how to log custom events through the Braze SDK.
 
@@ -71,6 +71,27 @@ AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 ```dart
 braze.logCustomEvent('YOUR_EVENT_NAME');
 ```
+{% endtab %}
+
+{% tab cordova %}
+Use the Braze Cordova plugin method:
+
+```javascript
+BrazePlugin.logCustomEvent("YOUR_EVENT_NAME");
+```
+
+The `logCustomEvent` API accepts:
+- `eventName` (required string): Use up to 255 characters. Do not start the name with `$`. Use alphanumeric characters and punctuation.
+- `eventProperties` (optional object): Add key-value pairs for event metadata. Use keys up to 255 characters, and do not start keys with `$`.
+
+For property values, use `string` (up to 255 characters), `numeric`, `boolean`, arrays, or nested JSON objects.
+
+For implementation details, see the Braze Cordova SDK source:
+- [`www/BrazePlugin.js` `logCustomEvent` method (lines 138-140)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/www/BrazePlugin.js#L138-L140)
+- [`www/BrazePlugin.js` JSDoc (lines 128-140)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/www/BrazePlugin.js#L128-L140)
+- [Android handler in `src/android/BrazePlugin.kt` (lines 108-115)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/android/BrazePlugin.kt#L108-L115)
+- [iOS handler in `src/ios/BrazePlugin.m` (lines 308-313)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/ios/BrazePlugin.m#L308-L313)
+- [iOS method declaration in `src/ios/BrazePlugin.h` (line 24)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/ios/BrazePlugin.h#L24)
 {% endtab %}
 
 {% tab infillion %}
@@ -224,6 +245,61 @@ braze.logCustomEvent('custom_event_with_properties', properties: {
     'key3': false,
 });
 ```
+{% endtab %}
+
+{% tab cordova %}
+Log custom events with a properties object:
+
+```javascript
+var properties = {};
+properties["key1"] = "value1";
+properties["key2"] = ["value2", "value3"];
+properties["key3"] = false;
+BrazePlugin.logCustomEvent("YOUR-EVENT-NAME", properties);
+```
+
+You can also pass properties inline:
+
+```javascript
+BrazePlugin.logCustomEvent("YOUR-EVENT-NAME", {
+  "key": "value",
+  "amount": 42,
+});
+```
+
+The official Cordova sample app includes string, numeric, boolean, array, and nested object properties:
+- [`sample-project/www/js/index.js` (lines 230-251)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/sample-project/www/js/index.js#L230-L251)
+
+Sample project excerpt:
+
+```javascript
+var properties = {};
+properties["One"] = "That's the Way of the World";
+properties["Two"] = "After the Love Has Gone";
+properties["Three"] = "Can't Hide Love";
+BrazePlugin.logCustomEvent("cordovaCustomEventWithProperties", properties);
+BrazePlugin.logCustomEvent("cordovaCustomEventWithoutProperties");
+BrazePlugin.logCustomEvent("cordovaCustomEventWithFloatProperties", {
+  "Cart Value": 4.95,
+  "Cart Item Name": "Spicy Chicken Bites 5 pack"
+});
+BrazePlugin.logCustomEvent("cordovaCustomEventWithNestedProperties", {
+  "array key": [1, "2", false],
+  "object key": {
+    "k1": "1",
+    "k2": 2,
+    "k3": false,
+  },
+  "deep key": {
+    "key": [1, "2", true]
+  }
+});
+```
+
+For API and native bridge details, see:
+- [`www/BrazePlugin.js` JSDoc (lines 128-140)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/www/BrazePlugin.js#L128-L140)
+- [Android handler in `src/android/BrazePlugin.kt` (lines 108-115)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/android/BrazePlugin.kt#L108-L115)
+- [iOS handler in `src/ios/BrazePlugin.m` (lines 308-313)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/ios/BrazePlugin.m#L308-L313)
 {% endtab %}
 
 {% tab react native %}

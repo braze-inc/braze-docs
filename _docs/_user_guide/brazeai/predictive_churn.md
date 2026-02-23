@@ -2,7 +2,7 @@
 nav_title: Predictive Churn
 article_title: Predictive Churn
 description: "This landing page covers Predictive Churn, a tool in the Braze Predictive Suite that allows you to define what churn means for your business as well as the users you'd like to prevent from churning."
-page_order: 2.0
+page_order: 8
 alias: /predictive_churn/
 search_rank: 2
 ---
@@ -25,7 +25,7 @@ Updating the risk scores of the prediction audience can be done at a [frequency 
 
 ## Accessing Predictive Churn
 
-The **Predictions** page is located in the **Analytics** section. For full access, contact your account manager.
+{% include brazeai/predictions_page_access.md %}
 
 Prior to purchasing this feature, it is available in preview mode. This will allow you to see a demo churn prediction with synthetic data and create one churn prediction model based on your user data at a time. This preview will not allow you to target users for messaging according to churn risk and will not regularly update after creation.
 

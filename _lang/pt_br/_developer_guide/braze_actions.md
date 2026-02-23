@@ -1,5 +1,5 @@
 ---
-nav_title: Deep links de ação da Braze
+nav_title: Ações de Braze deeplinks
 article_title: Deep links de ação da Braze
 page_order: 100
 description: "Este artigo de referência aborda como usar os deep links de ação da Braze para executar ações do SDK nos botões do canal de envio de mensagens."

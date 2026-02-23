@@ -1,5 +1,5 @@
 ---
-nav_title: "SMSメッセージ送信"
+nav_title: SMSメッセージを送信する
 article_title: SMSメッセージ送信の概要
 page_order: 4
 alias: /sms_message_sending/

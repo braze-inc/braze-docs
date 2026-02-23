@@ -1,6 +1,6 @@
 ---
 nav_title: Fetching data through Connected Content
-article_title: Fetching data through Connected Content with Voucherify
+article_title: Fetch data through Connected Content with Voucherify
 page_order: 2
 alias: /partners/voucherify/connected_content/
 description: "This reference article outlines how you can fetch data from Voucherify API through Braze Connected Content and send messages to specific Braze segments."
@@ -8,7 +8,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Fetching data through Connected Content
+# Fetch data through Connected Content
 
 > With Braze Connected Content, you can fetch data from the Voucherify API and send messages to specific Braze segments. This reference article will show you how to set up Connected Content scripts to publish Voucherify coupons, invite new referrers, retrieve loyalty cards balance, and more.
 
@@ -24,7 +24,7 @@ The basic schema of the script looks as follows:
   :method post
   :headers {
     "X-App-Id": "Voucherify-API-key",
-    "X-App-Token": "Voucherify-Secret-key",
+    "X-App-Token": "Voucherify-Secret-key"
   }
   :content_type application/json
   :retry
@@ -177,7 +177,7 @@ In this use case, the Connected Content script calls Voucherify API to publish a
 
 ### Invite new referrers
 
-If you want a customer to join a referral program, you need to assign a referral code to that person. The Connected Content remains the same as in the preceding example. This Connected Content script enables you to publish and send unique referral codes to selected Braze users. Each user receives only one referral code to share with other users and gain new referrals. 
+If you want a customer to join a referral program, you need to assign a referral code to that person. The Connected Content remains the same as in the preceding example. This Connected Content script enables you to publish and send unique referral codes to selected company users. Each user receives only one referral code to share with other users and gain new referrals. 
 
 {% raw %}
 

@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Quikly
 
-> [A Quikly](https://www.quikly.com), uma plataforma de marketing de urgência, utiliza a psicologia para motivar os consumidores, de modo que as marcas possam aumentar imediatamente a resposta em torno de suas principais iniciativas de marketing.
+> [A Quikly](https://www.quikly.com), uma plataforma de marketing de urgência, usa a psicologia para motivar os consumidores, para que as marcas possam aumentar imediatamente a resposta em torno de suas principais iniciativas de marketing.
 
 _Essa integração é mantida pela Quikly._
 
@@ -43,7 +43,7 @@ Por exemplo:
 Abaixo estão descritas quatro integrações diferentes: aquisição de e-mail, aquisição de SMS, atributos personalizados e webhooks. A integração escolhida dependerá de sua ativação do Quikly e do caso de uso.
 
 {% tabs %}
-{% tab Aquisição de e-mail %}
+{% tab Email Acquisition %}
 
 ### Aquisição de e-mail
 
@@ -84,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% enddetails %}
 
 {% endtab %}
-{% tab Aquisição de SMS %}
+{% tab SMS Acquisition %}
 
 ### Inscrições para SMS
 
@@ -103,7 +103,7 @@ Para dar suporte aos fluxos de trabalho de inscrição por SMS de aceitação du
 O Braze aconselha que, ao criar novos usuários por meio do endpoint `/users/track`, deve haver uma postergação de cerca de 2 minutos antes de adicionar usuários ao grupo de inscrições relevante para dar tempo ao Braze de criar completamente o perfil do usuário.
 {% endalert %}
 
-{% details Solicitação detalhada /subscription/status/set  %}
+{% details Detailed /subscription/status/set request %}
 #### Cabeçalhos da solicitação
 ```
 Content-Type: application/json
@@ -123,7 +123,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% enddetails %}
 
 {% endtab %}
-{% tab Atributos personalizados %}
+{% tab Custom Attributes %}
 ### Atributos personalizados
 
 Dependendo da sua implementação da Braze, você pode querer que os eventos dentro da ativação da Quikly passem em cascata pela Braze para processamento adicional. Por exemplo, você pode querer aplicar um atributo personalizado de usuário com base no nível ou incentivo alcançado na ativação do Quikly, permitindo que você exiba o cartão de conteúdo relevante quando eles abrirem o app ou registrarem o site. A Quikly trabalhará diretamente com você para implementar essas integrações.
@@ -149,7 +149,7 @@ O Quikly exige um `HTTP Header` para autorização.
 
 - **Método HTTP**: POST
 - **Cabeçalho da solicitação**:
-  - **Autorização**: Portador [PARTNER_AUTHORIZATION_HEADER]
+  - **Autorização**: portador [PARTNER_AUTHORIZATION_HEADER]
   - **Content-Type**: application/json
 
 #### Corpo da solicitação
@@ -175,6 +175,6 @@ Lembre-se de salvar seu modelo antes de sair da página! <br>Os modelos de webho
 {% endtabs %}
 
 ## Suporte
-Entre em contato com o gerente de sucesso do cliente da Quikly se tiver alguma dúvida.
+Entre em contato com o gerente de sucesso do cliente da Quikly em caso de dúvidas.
 
 

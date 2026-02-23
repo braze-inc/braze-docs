@@ -5,7 +5,7 @@ alias: "/dnd/editor_blocks/"
 channel: 
 - email
 - in-app messages
-page_order: 1
+page_order: 6
 description: "이 참고 문서에서는 이메일 및 인앱 메시지를 위해 드래그 앤 드롭 편집기에서 제공되는 다양한 편집기 블록에 대해 설명합니다."
 tool: Media
 ---

@@ -15,8 +15,8 @@ guide_featured_list:
   - name: Exibir condicionalmente
     link: /docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages
     image: /assets/img/braze_icons/zap-off.svg
-  - name: Adiar e restaurar uma mensagem no app disparada
-    link: /docs/developer_guide/in_app_messages/tutorials/defer_triggered_messages
+  - name: Adiar e restaurar envios de mensagens disparadas
+    link: /docs/developer_guide/in_app_messages/tutorials/deferring_triggered_messages
     image: /assets/img/braze_icons/watch-circle.svg
 ---
 

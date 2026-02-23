@@ -1,12 +1,12 @@
 ---
-nav_title: Setting user IDs
-article_title: Setting user IDs through the Braze SDK
+nav_title: Set user IDs
+article_title: Set user IDs through the Braze SDK
 page_order: 1.1
 description: "Learn how to set user IDs through the Braze SDK."
 
 ---
 
-# Setting user IDs
+# Set user IDs
 
 > Learn how to set user IDs through the Braze SDK. These are unique identifiers that let you track users across devices and platforms, import their data through the [user data API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data), and send targeted messages through the [messaging API]({{site.baseurl}}/api/endpoints/messaging/). If you don't assign a unique ID to a user, Braze will assign them an anonymous ID instead&#8212;however, you won't be able to use these features until you do.
 
@@ -155,18 +155,23 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 
 We recommend that you create user IDs using the [Universally Unique Identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier) standard, meaning they are 128-bit strings that are random and well distributed.
 
-Alternatively, you can hash an existing unique identifier (such as a name or email address) to generate your user IDs instead. If you do so, be sure to implement [SDK authentication]({{site.baseurl}}/developer_guide/authentication/), so you can prevent user impersonation.
+Alternatively, you can hash an existing unique identifier (such as a name or email address) to generate your user IDs instead. If you do so, be sure to implement [SDK authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/), so you can prevent user impersonation.
+
+{% alert warning %}
+Do not use a guessable value or incrementing number for your user ID. This may expose your organization to malicious attacks or data exfiltration.
+
+For added security, use [SDK Authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/).
+{% endalert %}
 
 While it's essential that you correctly name your user IDs from the start, you can always rename them in the future using the [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) endpoint.
 
-| Recommended | Not Recommended |
+| ID types not recommended | Example not recommended |
 | ------------ | ----------- |
-| 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
-| 8c0b3728-7fa7-4c68-a32e-12de1d3ed2d5 | Anna@email.com |
-| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | CompanyName-1-2-19 |
-| 2d9e96a1-8f15-4eaf-bf7b-eb8c34e25962 | jon-doe-1-2-19 |
+| User's visible profile ID or username | JonDoe829525552 |
+| Email Address | Anna@email.com |
+| Auto-incrementing user ID | 123 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
-Avoid sharing details about how you create user IDs, as this may expose your organization to malicious attacks or data removal.
+Avoid sharing details about how you create user IDs, as this may expose your organization to malicious attacks or data exfiltration.
 {% endalert %}

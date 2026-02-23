@@ -14,7 +14,7 @@ guide_top_text: "Understanding the impact of your engagement strategy is critica
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: "Setting Up Currents"
+- name: "Set Up Currents"
   link: /docs/user_guide/data/braze_currents/setting_up_currents/
   image: /assets/img/braze_icons/building-01.svg
 - name: "Available Partners"

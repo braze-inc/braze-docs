@@ -1,12 +1,12 @@
 ---
 nav_title: Aborting messages
-article_title: Aborting Liquid Messages
+article_title: Abort Liquid Messages
 page_order: 7
 description: "This reference article covers aborting Liquid messages and some example use cases."
 
 ---
 
-# Aborting messages
+# Abort messages
 
 > Optionally, you can use the `abort_message("optional reason for aborting")` Liquid message tag within conditionals to prevent sending a message to a user. This reference article lists some examples of how this feature can be used in marketing campaigns.
 

@@ -11,12 +11,12 @@ platform:
 
 # Localization
 
-> Learn about localization and supported languages for the Braze SDK, so you can connect with your users across the globe.
+> Learn about localization and supported languages for the Braze SDK, so you can connect with your users across the globe. For guidance on setting up localized messages, refer to [Localization]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/) in our Messaging fundamentals section.
 
 ## About localization
 
-In addition to English, Braze supports several languages for our built-in SDK messages displayed in your app.
+In addition to English, Braze supports several languages for SDK messages displayed in your app. 
 
-When a user's phone language is set to one of the supported languages, built-in SDK messages will be translated to that language. For example, if your app displays a message for connectivity issues it will be translated to their chosen language.
+When a user's phone language is set to one of the supported languages, SDK messages that are included by default for the messaging channel will be translated to that language. For example, if your app displays a message for connectivity issues, it will be translated to user's chosen language.
 
 {% multi_lang_include supported_language_codes.md %}

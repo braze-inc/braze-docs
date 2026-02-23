@@ -49,10 +49,10 @@ Vous pouvez distribuer des codes à Braze en utilisant deux modes :
 
 Dans les modes manuel et automatique, Voucherify envoie des codes uniques avec leurs attributs et les assigne aux attributs personnalisés de Braze dans les profils des utilisateurs.
 
-![Mapper les champs aux attributs personnalisés]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_fields_mapping.png %})
+![Mapper des champs à des attributs personnalisés]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_fields_mapping.png %})
 
 {% tabs %}
-{% tab Distribution manuelle %}
+{% tab Manual distribution %}
 
 Le mode manuel est une action unique qui attribue des codes à une audience choisie. Allez dans les **Distributions** de votre tableau de bord, exécutez le gestionnaire de distribution avec le plus, et choisissez **Message manuel**.
 
@@ -77,7 +77,7 @@ Le mode manuel est une action unique qui attribue des codes à une audience choi
 _Notez que toutes les distributions manuelles sont envoyées avec un délai de 10 minutes._
 
 {% endtab %}
-{% tab Flux de travail automatique %}
+{% tab Automatic Workflow %}
 
 Voucherify peut envoyer des codes à Braze automatiquement en réponse aux déclencheurs suivants :
 

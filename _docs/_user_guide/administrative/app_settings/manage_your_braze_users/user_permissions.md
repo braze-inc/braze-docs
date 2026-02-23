@@ -1,6 +1,6 @@
 ---
 nav_title: Permissions
-article_title: Braze permissions
+article_title: Company user permissions
 page_order: 2
 page_type: reference
 alias: /braze_permissions/

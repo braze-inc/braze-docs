@@ -1,7 +1,7 @@
 ---
 nav_title: SalesWings
 article_title: SalesWings
-description: "この参考記事では、BrazeとSalesWingsのパートナーシップについて概説している。SalesWingsは、Braze向けの営業・マーケティング業務ソリューションで、リードや属性の絞り込みを支援し、SalesforceなどのCRM内の営業インサイトやアラート、B2Bアトリビューションレポートを提供する。Brazeの興味やエンゲージメントを活用して、キャンバスでのパーソナライゼーションやセグメンテーションを行うことができる。セールスウィングスもまた、Digiohと同様にWebサイトからリードを生成する方法を提供している。"
+description: "この参考記事では、BrazeとSalesWingsのパートナーシップについて概説している。SalesWingsは、Brazeのセールス＆マーケティング・オペレーション・ソリューションで、リードやアカウントのクオリフィケーションを支援し、SalesforceなどのCRM内でセールスインサイトやアラート、B2Bアトリビューションレポートを提供する。Brazeの興味やエンゲージメントを活用して、キャンバスでのパーソナライゼーションやセグメンテーションを行うことができる。セールスウィングスもまた、Digiohと同様にWebサイトからリードを生成する方法を提供している。"
 alias: /partners/saleswings/
 page_type: partner
 search_tag: Partner

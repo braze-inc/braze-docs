@@ -18,7 +18,7 @@ Ensuite, créez une nouvelle étiquette (également appelée "appel de fonction"
 Lors de l'envoi d'un événement personnalisé, définissez `actionType` sur `logEvent`, et définissez une valeur pour `eventName` afin que Braze reçoive le nom d'événement correct et l'action à entreprendre.
 {% endalert %}
 
-![Une balise dans Google Tag Manager avec des champs de chemin de classe et de paires clé-valeur. Cette étiquette est définie pour se déclencher avec le déclencheur "chanson jouée" créé précédemment.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
+![Une balise dans Google Tag Manager avec des champs de chemin de classe et de paires clé-valeur. Cette balise est définie pour répondre au déclencheur créé précédemment « chanson jouée ».]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
 Vous pouvez également inclure des arguments de paires clé-valeur supplémentaires à la balise, qui seront envoyés en tant que propriétés d’événement personnalisé à Braze. `eventName` et `actionType` ne seront pas ignorés pour les propriétés d’événement personnalisé. Dans l'exemple de balise suivant, transmettez `genre`, qui a été défini à l'aide d'une variable de balise dans Google Tag Manager et qui provient de l'événement personnalisé enregistré dans l'application.
 
@@ -38,7 +38,7 @@ Analytics.logEvent("played song", parameters: parameters)
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```obj-c
 NSDictionary *parameters = @{@"genre" : @"pop",
@@ -61,7 +61,7 @@ let parameters: [String: Any] = ["customAttributeKey": "favoriteSong",
 FIRAnalytics.logEvent(withName:"customAttribute", parameters: parameters)
 ```
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```obj-c
 NSDictionary *parameters = @{@"customAttributeKey" : @"favoriteSong",
@@ -84,7 +84,7 @@ let parameters: [String: Any] = ["externalUserId": "favorite userId"]
 Analytics.logEvent(withName:"changeUser", parameters: parameters)
 ```
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```obj-c
 NSDictionary *parameters = @{@"externalUserId" : userId};
@@ -182,7 +182,7 @@ final class BrazeGTMTagManager : NSObject, TAGCustomFunction {
 }
 ```
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 Ajoutez le code suivant à votre fichier `BrazeGTMTagManager.h` :
 
 ```obj-c

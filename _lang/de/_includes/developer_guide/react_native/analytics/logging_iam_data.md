@@ -23,7 +23,7 @@ Außerdem können Sie auf die Daten der In-App-Nachricht im JavaScript-Layer zug
 Um die Behandlung von Nachrichten-Daten anzupassen, sehen Sie sich die folgenden Implementierungsbeispiele an:
 
 {% tabs local %}
-{% tab grundlegend %}
+{% tab basic %}
 Um das Standard-Verhalten zu verbessern oder wenn Sie keinen Zugang zur Anpassung des nativen iOS- oder Android-Codes haben, empfehlen wir Ihnen, das Standard UI zu deaktivieren, während Sie weiterhin In-App Nachrichten-Events von Braze erhalten. Um die Standard-UI zu deaktivieren, übergeben Sie `false` an die Methode `Braze.subscribeToInAppMessage` und verwenden Sie die Daten der In-App-Nachricht, um Ihre eigene Nachricht in JavaScript zu erstellen. Beachten Sie, dass Sie Analytics für Ihre Nachrichten manuell protokollieren müssen, wenn Sie das Standard UI deaktivieren möchten.
 
 ```javascript
@@ -47,7 +47,7 @@ Braze.subscribeToInAppMessage(false, (event) => {
 ```
 {% endtab %}
 
-{% tab vorangebracht %}
+{% tab advanced %}
 Um eine fortschrittlichere Logik einzubauen, die bestimmt, ob eine In-App-Nachricht über die integrierte UI angezeigt wird oder nicht, implementieren Sie In-App-Nachrichten über den nativen Layer.
 
 {% alert warning %}

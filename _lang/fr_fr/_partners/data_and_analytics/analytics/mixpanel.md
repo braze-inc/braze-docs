@@ -9,7 +9,7 @@ tool: Currents
 
 ---
  
-# [![Cours Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel
+# [![Braze cours d'apprentissage]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"} Mixpanel
 
 > [Mixpanel](https://mixpanel.com/) est une plateforme d'analyse commerciale qui vous permet d'exporter des événements de Mixpanel vers d'autres plateformes afin d'effectuer des analyses plus approfondies. Les données collectées peuvent ensuite être utilisées pour créer des rapports personnalisés et mesurer l'engagement et la rétention des utilisateurs.
 
@@ -39,7 +39,7 @@ Dans votre tableau de bord Mixpanel, cliquez sur les **paramètres du projet**, 
 
 Dans Braze, naviguez vers \*\*Currents > **\+ Créer un flux Currents** > **Créer un export Mixpanel.** Indiquez le nom de l'intégration, l'e-mail du contact, le secret de l'API Mixpanel et le jeton Mixpanel dans les champs répertoriés. Ensuite, sélectionnez les événements que vous souhaitez suivre ; une liste des événements disponibles est fournie. Enfin, cliquez sur **Lancer le flux Currents**.
 
-![La page Braze Mixpanel Currents. Cette page comprend des champs pour spécifier le nom de l'intégration, l'e-mail du contact, le secret de l’API et le jeton d'exportation Mixpanel. La moitié inférieure de la page Currents énumère les événements Currents disponibles que vous pouvez envoyer.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
+![La page Braze Mixpanel Currents. Cette page comprend des champs pour spécifier le nom de l'intégration, l'e-mail du contact, le secret de l’API et le jeton d'exportation Mixpanel. La moitié inférieure de la page Courants répertorie les événements Courants disponibles que vous pouvez envoyer.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
 {% tab note %}
 Consultez la [documentation sur l'intégration de](https://help.mixpanel.com/hc/en-us/articles/360001243663) Mixpanel pour en savoir plus.

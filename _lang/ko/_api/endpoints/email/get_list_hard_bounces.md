@@ -18,7 +18,7 @@ description: "이 문서에서는 하드 반송된 이메일 주소를 쿼리하
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `email.hard_bounces` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -30,7 +30,7 @@ description: "이 문서에서는 하드 반송된 이메일 주소를 쿼리하
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | ----------|-----------| ----------|----- |
-| `start_date` | 선택 사항* | YYYY-MM-DD 형식의 문자열| * `start_date` 또는 `email` 중 하나가 필요합니다. 하드 바운스를 검색할 범위의 시작 날짜이며 `end_date` 보다 이전이어야 합니다. API에 의해 이것은 UTC 시간으로 자정으로 처리됩니다. |
+| `start_date` | 선택 사항* | YYYY-MM-DD 형식의 문자열| * `start_date` 또는 `email` 중 하나가 필요합니다. 하드 바운스를 검색할 범위의 시작 날짜이며 `end_date` 보다 이전이어야 합니다. 이는 API에서 UTC 시간 기준 자정으로 처리됩니다. |
 | `end_date` | 필수 | YYYY-MM-DD 형식의 문자열 | 범위를 검색할 종료 날짜를 하드 바운스합니다. API에 의해 이것은 UTC 시간으로 자정으로 처리됩니다. |
 | `limit` | 선택 사항 | 정수 | 반환되는 결과 수를 제한하는 선택적 필드입니다. 기본값은 100, 최대값은 500입니다. |
 | `offset` | 선택 사항 | 정수 | 검색할 목록의 시작점(선택 사항)입니다. |
@@ -53,8 +53,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?
 항목은 내림차순으로 나열됩니다.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

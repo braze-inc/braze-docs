@@ -34,7 +34,7 @@ Voici un aperçu des termes que vous pouvez rencontrer dans la documentation de 
 
 ### Endpoints
 
-Braze gère un certain nombre d'instances différentes pour notre tableau de bord et nos endpoints REST. Une fois votre compte provisionné ; vous vous connecterez à l’une des URL suivantes. Utilisez le bon Endpoint REST en vous basant sur l’instance qui vous a été provisionnée. En cas de doute, ouvrez un [ticket d'assistance]({{site.baseurl}}/braze_support/) ou utilisez le tableau suivant pour faire correspondre l'URL du tableau de bord que vous utilisez au bon endpoint REST.
+Braze gère un certain nombre d'instances différentes pour notre tableau de bord et nos endpoints REST. Lorsque votre compte est approvisionné, vous vous connectez à l'une des URL suivantes. Utilisez le bon Endpoint REST en vous basant sur l’instance qui vous a été provisionnée. En cas de doute, ouvrez un [ticket d'assistance]({{site.baseurl}}/braze_support/) ou utilisez le tableau suivant pour faire correspondre l'URL du tableau de bord que vous utilisez au bon endpoint REST.
 
 {% alert important %}
 Lorsque vous utilisez des endpoints pour les appels API, utilisez l'endpoint REST.
@@ -46,22 +46,22 @@ Pour l’intégration SDK, utilisez l’[endpoint SDK]({{site.baseurl}}/user_gui
 
 ### Limites de l’API
 
-Pour la plupart des API, la limite de débit par défaut définie par Braze est de 250 000 requêtes par heure. Cependant, certains types de requêtes ont leur propre limite de débit pour une meilleure gestion des grands volumes de données de notre base client. Consultez les []({{site.baseurl}}/api/api_limits/)limites de débit de l’API]({{site.baseurl}}/api/api_limits/) pour plus d’informations
+Pour la plupart des API, la limite de débit par défaut définie par Braze est de 250 000 requêtes par heure. Toutefois, certains types de demandes se voient appliquer leur propre limite de débit afin de mieux gérer les gros volumes de données de la base de clients. Consultez les []({{site.baseurl}}/api/api_limits/)limites de débit de l’API]({{site.baseurl}}/api/api_limits/) pour plus d’informations
 
 ### ID utilisateur
 
 - **ID externe**: Le `external_id` sert d’identifiant utilisateur unique pour lequel vous soumettez des données. Cet identifiant doit être identique à celui que vous avez défini dans le SDK Braze afin d’éviter de créer plusieurs profils pour le même utilisateur.
-- **ID de l'utilisateur de Braze**: `braze_id` sert d'identifiant unique de l'utilisateur, défini par Braze. Cet identifiant peut être utilisé pour supprimer des utilisateurs via l'API REST, en plus des external_ids.
+- **Braze user ID**: `braze_id` sert d'identifiant unique de l'utilisateur défini par Braze. Vous pouvez utiliser cet identifiant pour supprimer des utilisateurs par le biais de l'API REST en plus de external_ids.
 
 Pour plus d'informations, consultez les articles suivants en fonction de votre plateforme : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) et [Web.]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/)
 
 ## À propos des clés API REST
 
-Une clé d’interface de programmation d’application REST (clé API REST) est un code unique qui est passé dans une API pour authentifier l’appel API et identifier l’application ou l’utilisateur d’appel. L’accès API s’effectue à l’aide des requêtes Web HTTPS dans l’endpoint de l’API REST de votre entreprise.  Chez Braze, nous utilisons conjointement les clés API REST et nos clés d’identification App pour accéder aux données, et les suivre, les envoyer, les exporter et les analyser afin de vous assurer que tout fonctionne bien de votre côté et du nôtre.
+Une clé d'interface de programmation d'applications REST (REST API key) est un code unique que vous transmettez à une API pour authentifier l'appel à l'API et identifier l'application ou l'utilisateur appelant. Vous accédez à l'API à l'aide de requêtes web HTTPS vers l'endpoint de l'API REST de votre entreprise. Les clés API REST fonctionnent en tandem avec les clés App Identifier pour suivre, accéder, envoyer, exporter et analyser les données afin de s'assurer que tout se passe bien.
 
 Chez Braze, les espaces de travail et les clés API vont de pair. Les espaces de travail sont conçus pour héberger des versions de la même application sur plusieurs plateformes. De nombreux clients utilisent également des espaces de travail pour contenir des versions gratuites et premium de leurs applications sur la même plateforme. Comme vous pouvez le constater, ces espaces de travail utilisent également l’API REST et possèdent leurs propres clés API REST. Ces clés peuvent être personnalisées individuellement pour inclure l’accès à des endpoints spécifiques sur l’API. Chaque appel à l’API doit inclure une clé ayant accès à l’endpoint.
 
-Nous faisons référence à la clé API REST et à la clé API de l’espace de travail en tant que `api_key`. Le `api_key` est inclus dans chaque requête en tant qu'en-tête de requête et agit comme une clé d'authentification qui vous permet d'utiliser nos API REST. Ces API REST sont utilisées pour suivre les utilisateurs, envoyer des messages, exporter des données utilisateur, etc. Quand vous créez une nouvelle clé API REST, vous devez lui accorder l’accès à des endpoints spécifiques. En affectant des autorisations spécifiques à une clé API, vous pouvez limiter de façon précise les appels qu’une clé API peut authentifier.
+Nous faisons référence à la clé API REST et à la clé API de l’espace de travail en tant que `api_key`. Le `api_key` est inclus dans chaque requête en tant qu'en-tête de requête et agit comme une clé d'authentification qui vous permet d'utiliser nos API REST. Ces API REST sont utilisées pour suivre les utilisateurs, envoyer des messages, exporter des données utilisateur, etc. Lorsque vous créez une nouvelle clé API REST, vous devez lui donner accès à des endpoints spécifiques. En affectant des autorisations spécifiques à une clé API, vous pouvez limiter de façon précise les appels qu’une clé API peut authentifier.
 
 ![Panneau des clés API REST dans l'onglet Clés API.]({% image_buster /assets/img_archive/rest-api-key.png %})
 
@@ -88,7 +88,7 @@ N'oubliez pas qu'après avoir créé une nouvelle clé API, vous ne pouvez pas m
 Les autorisations de clés API sont des autorisations que vous pouvez affecter à un utilisateur ou un groupe pour limiter leur accès à certains appels API. Pour afficher la liste des autorisations de votre clé API, allez dans **Paramètres** > **API et identifiants**, et sélectionnez votre clé API.
 
 {% tabs %}
-{% tab Données de l'utilisateur %}
+{% tab User Data %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -106,7 +106,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
  {% endtab %}
- {% tab E-mail %}
+ {% tab Email %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -132,12 +132,12 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Campagnes %}
+{% tab Campaigns %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
 | `campaigns.trigger.send` | [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) | Déclencher l’envoi d’une campagne existante. |
-| `campaigns.trigger.schedule.create` | [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/) | Planifier le futur envoi d’une campagne avec une livraison déclenchée par API. |
+| `campaigns.trigger.schedule.create` | [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/) | Planifiez l'envoi d'une campagne avec réception/distribution déclenchée par l'API. |
 | `campaigns.trigger.schedule.update` | [`/campaigns/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/) | Mettre à jour une campagne planifiée avec une livraison déclenchée par API. |
 | `campaigns.trigger.schedule.delete` | [`/campaigns/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/) |Supprimez une campagne planifiée avec une réception/distribution déclenchée par l'API. |
 | `campaigns.list` | [`/campaigns/list`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) | Extraire la liste des campagnes. |
@@ -147,7 +147,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 | `sends.id.create` | [`/sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) | Créez un ID d'envoi pour le suivi de l'envoi des messages. |
 | `campaigns.url_info.details` | [`/campaigns/url_info/details`]({{site.baseurl}}) | Extraire les données des URL d’une variation de message donnée dans une campagne. |
 | `transactional.send` | [`/transactional/v1/campaigns/{campaign_id}/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) | Permet d'envoyer des messages transactionnels à l'aide de l'endpoint de messagerie transactionnelle. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
 {% tab Canvas %}
@@ -155,7 +155,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 | Autorisation | Endpoint | Description |
 |---|---|---|
 | `canvas.trigger.send` | [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) | Déclencher l’envoi d’un canvas existant. |
-| `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Planifier le futur envoi d’un canvas avec un envoi déclenché par API. |
+| `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Planifiez l'envoi d'un canvas avec réception/distribution déclenchée par l'API. |
 | `canvas.trigger.schedule.update` | [`/canvas/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/) | Mettre à jour un canvas planifié avec un envoi déclenché par API. |
 | `canvas.trigger.schedule.delete` | [`/canvas/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/)| Supprimer un canvas programmé avec un envoi déclenché par API. |
 | `canvas.list` | [`/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) |  Extraire la liste des Canvas. |
@@ -166,7 +166,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Segmentations %}
+{% tab Segments %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -176,7 +176,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Achats %}
+{% tab Purchases %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -186,7 +186,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Evénements %}
+{% tab Events %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -203,7 +203,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab ICP %}
+{% tab KPIs %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -214,7 +214,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Modèles %}
+{% tab Templates %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -233,7 +233,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Blocs de contenu %}
+{% tab Content Blocks %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -244,7 +244,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Centre de préférences %}
+{% tab Preference Center %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -255,7 +255,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Abonnement %}
+{% tab Subscription %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -274,7 +274,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Catalogues %}
+{% tab Catalogs %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -294,7 +294,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Authentification SDK %}
+{% tab SDK Authentication %}
 
 | Autorisation | Endpoint | Description |
 |---|---|---|
@@ -309,7 +309,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 
 ### Gestion des clés API REST
 
-Vous pouvez afficher les détails des clés API REST existantes ou les supprimer à partir de **Paramètres** > **API et identifiants** > onglet **Clés API**. Notez que les clés API REST ne peuvent pas être modifiées après leur création.
+Vous pouvez afficher les détails des clés API REST existantes ou les supprimer à partir de **Paramètres** > **API et identifiants** > onglet **Clés API**. Notez que vous ne pouvez pas modifier les clés API REST après les avoir créées.
 
 L'onglet **Clés API** contient les informations suivantes pour chaque clé :
 
@@ -317,16 +317,16 @@ L'onglet **Clés API** contient les informations suivantes pour chaque clé :
 | ------------ | :------------------------------------------------------------------------------------------------------------------ |
 | Nom de clé API | Nom donné à la clé lors de sa création.                                                                            |
 | Identifiant   | La clé API.                                                                                                        |
-| Créé par   | L'adresse e-mail de l'utilisateur qui a créé la clé. Ce champ indiquera "N/A" pour les clés créées avant juin 2023. |
+| Créé par   | L'adresse e-mail de l'utilisateur qui a créé la clé. Ce champ indique "N/A" pour les clés créées avant juin 2023. |
 | Date de création | Date de création de cette clé.                                                                                      |
-| Vu pour la dernière fois    | Date de la dernière utilisation de cette clé. Ce champ indiquera "N/A" pour les clés qui n'ont jamais été utilisées.                  |
+| Vu pour la dernière fois    | Date de la dernière utilisation de cette clé. Ce champ affiche "N/A" pour les clés qui n'ont jamais été utilisées.                  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Pour afficher les détails d'une clé API, passez la souris sur la clé et sélectionnez <i class="fa-solid fa-eye" alt="View"></i> **View.** Cela comprend toutes les autorisations dont dispose cette clé, les adresses IP inscrites sur la liste blanche (le cas échéant) et si cette clé est inscrite sur la liste blanche des adresses IP de Braze.
 
-![La liste des autorisations des clés API dans le tableau de bord de Braze.]({% image_buster /assets/img_archive/view-api-key.png %})
+![La liste des autorisations de la clé API dans le tableau de bord de Braze.]({% image_buster /assets/img_archive/view-api-key.png %})
 
-Notez que lors de la [suppression d'un utilisateur]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), les clés API associées qu'il a créées ne seront pas supprimées. Pour supprimer une clé, survolez-la et sélectionnez <i class="fa-solid fa-trash-can" alt="Delete"></i> **Supprimer**.
+Notez que lors de la [suppression d'un utilisateur]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/), Braze ne supprime pas les clés API associées que l'utilisateur a créées. Pour supprimer une clé, survolez-la et sélectionnez <i class="fa-solid fa-trash-can" alt="Delete"></i> **Supprimer**.
 
 ![Une clé API nommée "Last Seen" avec l'icône de la corbeille en surbrillance, indiquant "Delete".]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
@@ -342,29 +342,29 @@ Une bonne pratique de sécurité est d’accorder à un utilisateur uniquement l
 Étant donné que les clés d'API REST permettent d'accéder à des endpoints d'API REST potentiellement sensibles, assurez-vous qu'elles sont stockées et utilisées en toute sécurité. Par exemple, n’utilisez pas cette clé pour faire des appels AJAX depuis votre site Web ou pour l’exposer autrement de façon publique.
 {% endalert %}
 
-En cas d’exposition accidentelle d’une clé, elle pourra être supprimée à partir de la console de développement. Pour obtenir de l'aide sur ce processus, ouvrez un [ticket d'assistance.]({{site.baseurl}}/braze_support/)
+Si vous exposez accidentellement une clé, vous pouvez la supprimer à partir de la console de développement. Pour obtenir de l'aide sur ce processus, ouvrez un [ticket d'assistance.]({{site.baseurl}}/braze_support/)
 
 ### Liste d’adresses IP autorisées
 
 Pour renforcer la sécurité, vous pouvez établir une liste des adresses IP et sous-réseaux qui sont exclusivement autorisés à envoyer des requêtes à l’API REST pour une clé API REST donnée. Vous définissez pour cela une liste d’autorisations, également appelée « Liste blanche ». Pour autoriser des adresses IP ou des sous-réseaux spécifiques, indiquez-les dans la section **Liste blanche d’adresses IP (Whitelist IPs) **lors de la création d’une nouvelle clé API REST :
 
-![Option permettant d'autoriser une liste d'adresses IP lors de la création d'une clé API.]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
+![Option permettant d'autoriser une liste d'IP lors de la création d'une clé API.]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 Si vous n’en spécifiez aucune, les requêtes pourront être envoyées depuis n’importe quelle adresse IP.
 
 {% alert tip %}
-Vous créez un Webhook Braze à Braze en utilisant une liste blanche ? Consultez notre liste d'[adresses IP à mettre sur liste blanche.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting)
+Si vous créez un webhook Braze à Braze et que vous utilisez le allowlisting, consultez la liste des [IP à mettre sur liste blanche.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting)
 {% endalert %}
 
 ## Ressources complémentaires
 
 ### Bibliothèque client Ruby
 
-Si vous utilisez Ruby pour implémenter Braze, vous pouvez utiliser notre [Bibliothèque Client Ruby](https://github.com/braze-inc/braze-api-client-ruby) pour réduire le temps d’importation des données. Une bibliothèque cliente est une collection de code spécifique à un langage de programmation (dans ce cas, Ruby) qui facilite l’utilisation d’une API.
+Si vous implémentez Braze à l'aide de Ruby, vous pouvez utiliser la [bibliothèque client Ruby](https://github.com/braze-inc/braze-api-client-ruby) pour réduire le temps d'importation des données. Une bibliothèque cliente est une collection de code spécifique à un langage de programmation (dans ce cas, Ruby) qui facilite l’utilisation d’une API.
 
 La bibliothèque client Ruby prend en charge les [endpoints utilisateur]({{site.baseurl}}/api/endpoints/user_data).
 
 {% alert important %}
-Cette bibliothèque cliente est actuellement en version bêta. Voulez-vous nous aider à améliorer cette bibliothèque ? Envoyez-nous vos commentaires à [smb-product@braze.com](mailto:smb-product@braze.com).
+Cette bibliothèque client est en version bêta. Pour contribuer à l'amélioration de cette bibliothèque, envoyez vos commentaires à [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 

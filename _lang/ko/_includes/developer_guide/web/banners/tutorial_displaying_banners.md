@@ -6,7 +6,7 @@
 
 ## 웹 소프트웨어 개발 키트용 배너 표시하기
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md 튜토리얼="배너 웹 표시하기" %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Displaying Banners Web" %}
 
 {% scrolly %}
 

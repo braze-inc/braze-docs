@@ -79,7 +79,7 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_au
 
 | Parâmetro | Tipo de dados | Descrição |
 | --------- | --------- | ----------- |
-| `keys` | Vetor | Array de objetos de chave de autenticação do SDK restantes. |
+| `keys` | Vetor | Array de objetos de chaves de autenticação do SDK restantes. |
 | `keys[].id` | String | O ID da chave de autenticação do SDK. |
 | `keys[].rsa_public_key` | String | A string da chave pública RSA. |
 | `keys[].description` | String | Descrição da chave de autenticação do SDK. |

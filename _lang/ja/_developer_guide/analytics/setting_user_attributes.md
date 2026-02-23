@@ -1,11 +1,11 @@
 ---
-nav_title: ユーザー属性の設定
-article_title: Braze SDKによるユーザー属性の設定
+nav_title: ユーザー属性を設定する
+article_title: Braze SDKを通してユーザー属性を設定する。
 page_order: 1.2
 description: "Braze SDKを通してユーザー属性を設定する方法を学習する。"
 ---
 
-# ユーザー属性の設定
+# ユーザー属性を設定する
 
 > Braze SDKを通してユーザー属性を設定する方法を学習する。
 
@@ -37,4 +37,5 @@ description: "Braze SDKを通してユーザー属性を設定する方法を学
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}
+
 {% endsdktabs %}

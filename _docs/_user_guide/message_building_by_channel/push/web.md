@@ -24,7 +24,7 @@ Web push notifications deliver urgent, actionable updates that drive quick conve
 - Drive people back to your website with clear call-to-action buttons
 - Personalize your push with product and customer information to make your message relevant
 
-Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
+Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Create a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
 
 ![Web push example with the same push message displayed on a laptop and phone.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
@@ -54,7 +54,9 @@ Consider using an in-browser message to prime users to opt in for web push, also
 
 ## Supported browsers
 
-The following browsers support web push notifications. However, private browsing windows do not currently support web push.
+The following browsers support web push notifications.
+
+{% multi_lang_include alerts/important_alerts.md alert='Web push private browsing' %}
 
 - Chrome (and Chrome for Android mobile)
 - Safari

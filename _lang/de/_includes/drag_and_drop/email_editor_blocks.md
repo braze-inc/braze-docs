@@ -22,8 +22,8 @@ In der folgenden Tabelle wird beschrieben, wie Nutzer:innen die einzelnen Editor
 |Spacer| Fügt Leerzeichen oder „Padding“ zwischen anderen Blöcken hinzu. |
 |Bild| Fügt ein Bild aus der [Mediathek]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) ein. | 
 |Video| Erzeugt einen Link zum Videoinhalt. |
-|Social| Fügt das Symbol einer sozialen Medienplattform ein. Für markenspezifische Icons können Sie eigene Bilder hochladen. |
-|Ikonen| Fügt ein Symbol ein. Benutzerdefinierte Bilder können hochgeladen werden. Es wird ein übergroßes Platzhaltersymbol verwendet, bis ein Bild hochgeladen wird. |
+|Social| Fügt das Symbol einer sozialen Medienplattform ein. Sie können angepasste Bilder für markenspezifische Icons hochladen. |
+|Ikonen| Fügt ein Symbol ein. Sie können angepasste Bilder hochladen. Braze verwendet ein übergroßes Platzhalter-Symbol, bis Sie ein Bild hochladen. |
 |HTML| Fügt rohes HTML ein. Empfohlen für [Liquid]({{site.baseurl}}/liquid/), wie Connected-Content oder bedingte Anweisungen. | 
 |Menü| Erzeugt ein flexibles Menü für die Nachricht, die Sie entwerfen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
@@ -112,7 +112,9 @@ In der folgenden Tabelle finden Sie Einzelheiten zum Editor-Block `Spacer`.
 
 ### Bild
 
-In der folgenden Tabelle finden Sie Einzelheiten zum Editor-Block `Image`. Für dynamische Bilder (Bilder mit Liquid) müssen Sie ein Fallback-Bild festlegen, um die Einstellungen für die automatische Breite zu verwenden. Die Spezifikationen für Bilder finden Sie in unseren [Spezifikationen für E-Mail-Bilder]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+In der folgenden Tabelle finden Sie Einzelheiten zum Editor-Block `Image`. Für dynamische Bilder (Bilder mit Liquid oder Connected-Content) müssen Sie ein Fallback-Bild festlegen, um die Einstellungen für die automatische Breite zu verwenden. Die Spezifikationen für Bilder finden Sie in unseren [Spezifikationen für E-Mail-Bilder]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 | Eigenschaften | Beschreibung |
 |---|---|

@@ -1,6 +1,6 @@
 ---
-nav_title: Teste de uma mensagem 
-article_title: Enviando mensagens de teste
+nav_title: Teste de uma mensagem
+article_title: Envio de mensagens de teste
 page_order: 10.0
 description: "Saiba como enviar uma mensagem de teste para o Braze SDK."
 ---

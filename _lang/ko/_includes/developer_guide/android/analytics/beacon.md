@@ -4,12 +4,12 @@
 
 ## 인필리온 비콘
 
-인필리온 비콘을 설정하고 앱에 통합한 후, 방문 시작 또는 종료와 같은 것들, 또는 비콘이 감지된 것에 대한 커스텀 이벤트를 기록할 수 있습니다. 장소 이름이나 체류 시간과 같은 이벤트의 속성을 기록할 수도 있습니다.
+인필리온 비콘을 설정하고 앱에 통합한 후에는 방문 시작 또는 종료, 비콘 목격 등의 커스텀 이벤트를 기록할 수 있습니다. 장소 이름이나 체류 시간과 같은 이벤트의 속성을 기록할 수도 있습니다.
 
 사용자가 장소에 입장할 때 사용자 지정 이벤트를 기록하려면 `onVisitStart` 메서드에 이 코드를 포함하세요:
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
@@ -17,7 +17,7 @@ Braze.getInstance(context).requestImmediateDataFlush();
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace())

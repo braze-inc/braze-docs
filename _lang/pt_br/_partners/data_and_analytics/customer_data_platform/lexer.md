@@ -9,9 +9,9 @@ search_tag: Partner
 
 # Lexer
 
-> [A Lexer](https://lexer.io/), uma plataforma de dados do cliente criada para o varejo, ajuda as marcas a aumentar as vendas por meio de experiências aprimoradas do cliente, combinando o enriquecimento robusto de dados com as ferramentas mais intuitivas e a consultoria especializada.
+> [Lexer](https://lexer.io/), uma plataforma de dados do cliente construída para o varejo, ajuda as marcas a impulsionar vendas incrementais por meio de experiências de cliente aprimoradas, combinando enriquecimento de dados robusto com as ferramentas mais intuitivas e consultoria especializada.
 
-_Essa integração é mantida pela Lexer._
+_Esta integração é mantida pela Lexer._
 
 ## Sobre a integração
 
@@ -34,9 +34,9 @@ No Lexer, navegue até **Manage > Integration (Gerenciar > Integração**), sele
 - **chave da API REST Braze**
 - **Credenciais da AWS**
   - **Nome do bucket S3 do AWS**
-  - **[Região do bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html) S3 da AWS**
-  - **Caminho do bucket S3 da AWS**: Essa jornada deve corresponder à jornada que você especificou ao [conectar seu bucket S3 ao Braze]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/). Isso deve estar em branco se você não especificou nada para o Braze.
-  - **Chave de acesso secreto do AWS S3**: Visite a Amazon para obter informações sobre como [criar uma chave de acesso](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/).
+  - **AWS S3 [bucket S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html)**
+  - **Caminho do bucket S3 da AWS**: Este jornada deve corresponder à jornada que você especificou ao [conectar seu bucket S3 ao Braze]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/). Isso deve estar em branco se você não especificou nada para o Braze.
+  - **Chave de acesso secreto do AWS S3**: Visite a Amazon para informações sobre [criar uma chave de acesso](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/).
 - **ID do segmento de exportação do Braze**: O ID do segmento que você criou no Braze contendo todos os usuários que deseja exportar para o Lexer. Se houver usuários que não deseja exportar para o Lexer, você poderá excluí-los do segmento criado no Braze. Para encontrar seu identificador de segmento, clique no segmento desejado no Braze e localize o **Segment API Identifier**.
 
 ![]({% image_buster /assets/img/lexer/braze_integrate_screen.png %})

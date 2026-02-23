@@ -3,7 +3,7 @@ nav_title: Jacquard
 article_title: Jacquard
 alias: /partners/jacquard/
 page_order: 1
-description: "Esse artigo de referência descreve a parceria entre o Braze e a Jacquard Dynamic Optimisation que utiliza o Braze Currents e o Connected Content para coletar informações de rastreamento de cliques de seus assinantes por meio de webhooks. Em seguida, a Jacquard vincula esses eventos às suas variantes de idioma para otimização do idioma em tempo real."
+description: "Este artigo de referência descreve a parceria entre a Braze e a Jacquard Dynamic Optimisation que utiliza Braze Currents e Connected Content para coletar informações de rastreamento de cliques de seus assinantes através de webhooks. Em seguida, a Jacquard vincula esses eventos às suas variantes de idioma para otimização do idioma em tempo real."
 page_type: partner
 search_tag: Partner
 ---
@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [A Jacquard](https://www.jacquard.com/) reúne inteligência artificial, linguística computacional e um espírito de centralização no cliente para ajudar a implementar a linguagem da marca, em escala, em canais personalizados de acordo com a voz da sua marca.
 
-A otimização dinâmica, com tecnologia Jacquard X, aproveita o Braze Currents e o Connected Content para coletar informações de rastreamento de cliques de seus assinantes por meio de webhooks. Em seguida, a Jacquard vincula esses eventos às suas variantes de idioma para otimização do idioma em tempo real. 
+A Dynamic Optimisation, alimentada pela Jacquard X, utiliza Braze Currents e Connected Content para coletar informações de rastreamento de cliques de seus assinantes através de webhooks. Em seguida, a Jacquard vincula esses eventos às suas variantes de idioma para otimização do idioma em tempo real. 
 
 ## Pré-requisitos
 
@@ -27,7 +27,7 @@ A otimização dinâmica, com tecnologia Jacquard X, aproveita o Braze Currents 
 
 ### Etapa 1: Solicitar credenciais do Jacquard Amazon S3
 
-Você precisará do Jacquard para configurar um bucket S3 dedicado da Amazon para receber os eventos de rastreamento de cliques do Braze. Entre em contato com seu gerente de sucesso do cliente da Jacquard para iniciar o processo. Quando o bucket for criado, você receberá credenciais exclusivas para criar seu Current. 
+Você precisará do Jacquard para configurar um bucket S3 dedicado da Amazon para receber os eventos de rastreamento de cliques do Braze. Entre em contato com seu gerente de sucesso do cliente da Jacquard para iniciar este processo. Quando o bucket for criado, você receberá credenciais exclusivas para criar seu Current. 
 
 ### Etapa 2: crie um Current
 
@@ -40,14 +40,14 @@ Você precisará do Jacquard para configurar um bucket S3 dedicado da Amazon par
 
 ### Etapa 3: Solicitação de remoção de informações de identificação pessoal (IPI).
 
-Em seguida, entre em contato com a equipe da sua conta da Braze para garantir que nenhuma informação pessoal identificável seja transmitida à Jacquard.
+Em seguida, entre em contato com sua equipe de contas da Braze para garantir que nenhuma informação pessoal identificável seja transmitida para a Jacquard.
 
 Por padrão, o Current incluirá determinadas atribuições de IPI, como e-mail e endereço. A Jacquard não pode e não receberá IPI, portanto, é fundamental que você solicite à equipe da sua conta Braze que desative essa opção para todos os dados de eventos transmitidos à Jacquard.
 
 ### Etapa 4: snippets de código do Jacquard X 
 
-Entre em contato com a equipe da sua conta da Jacquard para obter os snippets de código necessários.
+Entre em contato com sua equipe de contas da Jacquard para os trechos de código necessários.
 
-Esses snippets usam o [conteúdo conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) e, depois de serem colocados nos seus e-mails, extrairão dinamicamente o idioma e um pixel de rastreamento para que a Jacquard possa otimizar sua linguagem em tempo real usando o Jacquard X.
+Esses trechos usam [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) e, depois de serem colocados em seus e-mails, puxarão dinamicamente o idioma e um pixel de rastreamento para que a Jacquard possa otimizar seu idioma em tempo real usando a Jacquard X.
 
 

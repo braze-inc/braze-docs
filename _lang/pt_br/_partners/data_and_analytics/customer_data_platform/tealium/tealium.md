@@ -13,7 +13,7 @@ search_tag: Partner
 
 > A [Tealium](https://tealium.com/) é um hub de dados universal e uma plataforma de dados do cliente criada com EventStream, AudienceStream e iQ Tag Management que permite conectar dados móveis, da Web e de outros tipos de fontes de terceiros. A conexão do Tealium com o Braze permite um fluxo de dados de eventos personalizados, atributos de usuários e compras que o capacita a agir sobre seus dados em tempo real.
 
-![Um gráfico de visão geral da Tealium mostrando como os diferentes produtos da Tealium e a plataforma Braze se encaixam para ativar campanhas entre canais em tempo real.]({% image_buster /assets/img/tealium/tealium_overview.png %}){: style="border:0;"}
+![Um gráfico de visão geral da Tealium que mostra como os diferentes produtos da Tealium e a plataforma da Braze se encaixam para ativar campanhas entre canais em tempo real.]({% image_buster /assets/img/tealium/tealium_overview.png %}){: style="border:0;"}
 
 A integração do Braze e do Tealium permite rastrear seus usuários e encaminhar dados para vários provedores de análise de usuários. A Tealium permite que você:
 - Sincronize o público do Tealium com o [AudienceStream]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium_audience_stream/) para o Braze para uso na personalização de campanhas e telas do Braze ou na criação de segmentos.
@@ -190,14 +190,14 @@ Nem todos os campos oferecidos são obrigatórios.
 {% endalert %}
 
 {% tabs local %}
-{% tab Rastreamento de usuário - lote e não lote %}
+{% tab Track User - Batch and Non-Batch %}
 
 Essa ação permite rastrear atributos de usuário, evento e compra, tudo em uma única ação.
 
 | Parâmetros | Descrição |
 | ---------- | ----------- |
 | ID de usuário | Use esse campo para mapear o campo de ID do usuário do Tealium para seu equivalente no Braze. Mapeie uma ou mais atribuições de ID de usuário. Quando várias IDs são especificadas, o primeiro valor não em branco é escolhido com base na seguinte ordem de prioridade: ID externo, ID da Braze, nome do alias e etiqueta do alias.<br><br>\- A ID externa e a ID Braze não devem ser especificadas se estiver importando tokens por push.<br>\- Se estiver especificando um alias de usuário, o nome do alias e o rótulo do alias devem ser definidos. <br><br>Para saber mais, confira o [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) da Braze. |
-| Atributos do usuário | Use os nomes de campo existentes do perfil de usuário do Braze para atualizar os valores do perfil de usuário no dashboard do Braze ou adicione seus próprios dados [de atributos]({{site.baseurl}}/api/objects_filters/user_attributes_object/) personalizados [de usuários]({{site.baseurl}}/api/objects_filters/user_attributes_object/) aos perfis de usuários.<br><br>\- Por padrão, novos usuários serão criados se não houver nenhum.<br>\- Ao definir **Update Existing Only** como `true`, somente os usuários existentes serão atualizados, e nenhum novo usuário será criado.<br>\- Se um atributo da Tealium estiver vazio, ele será convertido em nulo e removido do perfil de usuário da Braze. Os enriquecimentos devem ser usados se os valores nulos não devem ser enviados ao Braze para remover uma atribuição de usuário. |
+| Atributos do usuário | Use os nomes de campo de perfil de usuário existentes no Braze para atualizar os valores de perfil de usuário no dashboard do Braze ou adicione seus próprios dados [de atributos]({{site.baseurl}}/api/objects_filters/user_attributes_object/) personalizados [de usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object/) aos perfis de usuário.<br><br>\- Por padrão, novos usuários serão criados se não houver nenhum.<br>\- Ao definir **Update Existing Only** como `true`, somente os usuários existentes serão atualizados, e nenhum novo usuário será criado.<br>\- Se um atributo da Tealium estiver vazio, ele será convertido em nulo e removido do perfil de usuário da Braze. Os enriquecimentos devem ser usados se os valores nulos não devem ser enviados ao Braze para remover uma atribuição de usuário. |
 | Modificar atributos do usuário | Use esse campo para incrementar ou decrementar certas atribuições do usuário<br><br>\- As atribuições de números inteiros podem ser incrementadas por números inteiros positivos ou negativos.<br>\- As atribuições das matrizes podem ser modificadas adicionando ou removendo valores das matrizes existentes. |
 | Evento | Um evento representa uma única ocorrência de um evento personalizado por um usuário específico em um registro de data e hora. Use esse campo para rastrear e mapear atribuições de eventos como as do [objeto de evento]({{site.baseurl}}/api/objects_filters/event_object/) Braze. <br><br>\- O atributo de evento `Name` é necessário para cada evento mapeado.<br>\- O atributo de evento `Time` é automaticamente definido para a hora atual, a menos que seja explicitamente mapeado. <br>\- Por padrão, novos eventos serão criados se não houver nenhum. Ao definir `Update Existing Only` como `true`, somente os eventos existentes serão atualizados, e nenhum novo evento será criado.<br>\- Atribuições do tipo matriz de mapas para adicionar vários eventos. As atribuições do tipo matriz devem ter o mesmo comprimento.<br>\- Atributos de valor único podem ser usados e aplicados a cada evento. |
 | Modelo de evento | Fornecer modelos de eventos a serem referenciados nos dados do corpo. Os modelos podem ser usados para transformar os dados antes de enviá-los ao Braze. Consulte o [Guia de modelos](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/) da Tealium para saber mais. |
@@ -210,7 +210,7 @@ Essa ação permite rastrear atributos de usuário, evento e compra, tudo em uma
 ![]({% image_buster /assets/img/tealium/track_user_example.png %})
 
 {% endtab %}
-{% tab Excluir usuário - Não lote %}
+{% tab Delete User - Non-Batch %}
 
 Essa ação permite excluir usuários do dashboard do Braze.
 
@@ -252,7 +252,7 @@ Consulte a [documentação de rastreamento](https://docs.tealium.com/server-side
 
 ## Potenciais excedentes de pontos de dados
 
-Há três maneiras principais que podem fazer você atingir acidentalmente o excedente de dados ao integrar a Braze pela Tealium:
+Há três maneiras principais de registrar acidentalmente pontos de dados desnecessários ao integrar o Braze por meio do Tealium:
 
 #### Envio de dados duplicados - envie apenas deltas Braze de atribuições
 
@@ -263,7 +263,7 @@ O Tealium não envia deltas Braze de atribuições do usuário. Por exemplo, se 
 
 #### Envio de dados irrelevantes ou substituição desnecessária de dados
 
-Se você tiver vários EventStream que direcionam o mesmo feed de eventos, **todas as ações ativadas para esse conector** serão disparadas automaticamente sempre que uma única ação for disparada, \*\*isso também pode resultar na substituição de dados no Braze e no consumo de pontos de dados desnecessários.
+Se você tiver vários EventStream que direcionam o mesmo feed de eventos, **todas as ações ativadas para esse conector** serão disparadas automaticamente sempre que uma única ação for disparada. Isso também pode fazer com que os dados sejam sobrescritos no Braze e registrar pontos de dados desnecessários.
 
 **Solução**: <br>Configure uma especificação de evento ou feed separado para rastrear cada ação. <br>**OU**<br> Desative as ações (ou conectores) que você não deseja disparar usando os botões de alternância no dashboard do Tealium.
 

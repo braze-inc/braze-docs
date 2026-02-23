@@ -1,6 +1,6 @@
 ---
-nav_title: Hochladen einer HTML-E-Mail-Vorlage
-article_title: Hochladen einer HTML-E-Mail-Vorlage
+nav_title: Hochladen eines HTML Templates für E-Mails
+article_title: Hochladen eines HTML E-Mail Templates
 page_order: 2
 description: "Dieser Referenzartikel beschreibt, wie Sie eine HTML-E-Mail-Template mit dem Braze-Dashboard erstellen, verwalten und Fehler beheben."
 tool:
@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Hochladen einer HTML-E-Mail-Vorlage
+# Hochladen eines HTML Templates für E-Mails
 
 > Über das Braze-Dashboard können Sie Ihre eigenen HTML-E-Mail-Templates hochladen und zur späteren Verwendung in Kampagnen speichern. Sie können auch [eine E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) mit unserem Editor [erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/).
 

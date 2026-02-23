@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: Push FAQs
-page_order: 80
+page_order: 25
 description: "This article addresses some of the most frequently asked questions that arise when setting up push campaigns."
 page_type: FAQ
 channel:
@@ -19,6 +19,12 @@ When a user logs out of a device or website, they will remain reachable by push 
 When a push token is reassigned, the change is reflected in the user profile's **Push Changelog**. You can find this by going to the **Engagement** tab in the user profile.
 
 ![The "Push Changelog" in the "Contact Settings" section.]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
+
+### What does “Error sending push because the payload was invalid” mean?
+
+This message indicates that APNs rejected the push request due to an invalid payload (for example, an empty payload or a payload that’s too large).
+
+For details and next steps, see [Common Push Error Messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
 
 ### Why doesn't an opted-in user have a push token?
 
