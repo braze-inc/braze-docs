@@ -62,5 +62,10 @@ Unknown macro: { "external_id" }
 ```
 
 {% alert tip %}
-To enter users into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow when subscribing them through the REST API, include the `use_double_opt_in_logic` parameter set to `true` in your request. If this parameter is omitted, users are subscribed without receiving a double opt-in confirmation. This parameter is supported by the [`/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/), [`/v2/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), and [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoints.
+To enter users into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow when subscribing them through the REST API, set the `use_double_opt_in_logic` parameter to `true` in your request. If you omit this parameter, users are subscribed without receiving a double opt-in confirmation.
+
+This parameter is supported by the following endpoints:
+- [`/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)
+- [`/v2/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/)
+- [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 {% endalert %}
