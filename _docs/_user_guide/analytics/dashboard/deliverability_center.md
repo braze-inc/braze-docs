@@ -15,7 +15,7 @@ channel:
 
 Email deliverability is the core of campaign success. Using the Deliverability Center in the Braze dashboard, you can view your domains by **IP Reputation** or **Delivery Errors** to discover and troubleshoot any potential issues with email deliverability. 
 
-To access the Deliverability Center, you must have "Access Campaigns, Canvases, Cards, Segments, Media Library" and "View Usage Data" [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
+To access the Deliverability Center, you must have "Access Campaigns, Canvases, Cards, Segments, Media Library" and "View Usage Data" [user permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/).
 
 ## Setting up your Google Postmaster account
 
@@ -111,7 +111,7 @@ For more ideas on improving deliverability, read [Deliverability pitfalls and sp
 If Microsoft is your main mailbox provider, you can use this integration to access and view your Microsoft reputation data. This way, you can monitor the health of your IPs to help determine how your emails are being received.
 
 {% alert important %}
-If you don't see your data in the Deliverability Center, contact [Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) with a list of your IP addresses.
+If you don't see your data in the Deliverability Center, contact [Support]({{site.baseurl}}/user_guide/administer/personal/braze_support/) with a list of your IP addresses.
 {% endalert %}
 
 ![An example of results from Microsoft SNDS, including sample IPs, recipients, RCPT commands, data commands, filter result, complaint rate, trap message period start and end, and spam trap hits.]({% image_buster /assets/img_archive/deliverability_center_msnds.png %})

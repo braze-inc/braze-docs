@@ -23,7 +23,7 @@ Before testing your messaging campaign, it's important to identify your test use
 
 ### Optional: Create a Content Test Group
 
-A convenient way to organize your test users is by creating a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), which includes a group of users that will receive test messages from campaigns. You can add this test group to the **Add Content Test Groups** field under **Test Recipients** in your campaign, and launch your tests without creating or adding individual test users.
+A convenient way to organize your test users is by creating a [Content Test Group]({{site.baseurl}}/user_guide/administer/global/user_management/internal_groups/), which includes a group of users that will receive test messages from campaigns. You can add this test group to the **Add Content Test Groups** field under **Test Recipients** in your campaign, and launch your tests without creating or adding individual test users.
 
 ## Step 2: Send channel-specific test messages
 
@@ -62,7 +62,7 @@ Keep in mind, your preview may not be identical to the final render on a user's 
 {% tab Content Card %}
 
 {% alert warning %}
-To send a test to either [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices with valid push tokens registered for the test user before sending. For iOS users, you must tap the push notification sent by Braze in order to view the test Content Card. This behavior only applies to test Content Cards.
+To send a test to either [content test groups]({{site.baseurl}}/user_guide/administer/global/workspace_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices with valid push tokens registered for the test user before sending. For iOS users, you must tap the push notification sent by Braze in order to view the test Content Card. This behavior only applies to test Content Cards.
 {% endalert %}
 
 After creating your Content Card, you can send a test Content Card to your app to see what it will look like in real-time.
@@ -90,7 +90,7 @@ In the **Preview** tab of your composer, the view of your message might not be i
 
 ### Debug
 
-After your Content Cards are sent, you can break down or debug any issues from the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) in the Developer Console. 
+After your Content Cards are sent, you can break down or debug any issues from the [Event User Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/event_user_log/) in the Developer Console. 
 
 A common use case is trying to debug why a user can't see a particular Content Card. To do so, you can look in the **Event User Logs** for the Content Cards delivered to the SDK on session start, but prior to an impression, and trace those back to a specific campaign:
 
@@ -143,7 +143,7 @@ From there, you can review your message settings and content to drill down and d
 {% tab In-app message %}
 
 {% alert warning %}
-To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending. For example, you must have push enabled on your iOS device in order to tap the notification before the test message displays. {% endalert %}
+To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/administer/global/workspace_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending. For example, you must have push enabled on your iOS device in order to tap the notification before the test message displays. {% endalert %}
 
 If you have push notifications set up within your app and on your test device, you can send test in-app messages to your app to see what it looks like in real-time. 
 

@@ -30,9 +30,9 @@ We've added "Influenced Opens" to our list of standard campaign and Canvas stati
 
 ## Upgrade to internal groups
 
-You can now create multiple Internal Groups and assign properties indicating whether the group will be used for SDK logging, REST API logging, or message content testing. Learn more about [event user logs]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab).
+You can now create multiple Internal Groups and assign properties indicating whether the group will be used for SDK logging, REST API logging, or message content testing. Learn more about [event user logs]({{site.baseurl}}/user_guide/administer/global/workspace_settings/developer_console/event_user_log_tab/#event-user-log-tab).
 
-> Update: Internal Groups can also be used to [send seed emails]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/#seed-groups).
+> Update: Internal Groups can also be used to [send seed emails]({{site.baseurl}}/user_guide/administer/global/workspace_settings/developer_console/#seed-groups).
 
 ## New options for web URLs
 

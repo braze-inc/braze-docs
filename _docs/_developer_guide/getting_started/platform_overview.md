@@ -50,7 +50,7 @@ In brief, when fully integrated, the SDK:
 
 The dashboard is the UI that controls all of the data and interactions at the heart of the Braze platform. Marketers will use the dashboard to do their job and create content. Developers use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
 
-If you're just getting started, your team administrator should add you (and all other team members who need access to Braze) as [users on your dashboard]({{site.baseurl}}/user_guide/administrative/access_braze).
+If you're just getting started, your team administrator should add you (and all other team members who need access to Braze) as [users on your dashboard]({{site.baseurl}}/user_guide/administer/personal).
 
 ### REST API
 

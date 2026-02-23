@@ -23,7 +23,7 @@ ISPs throttle email delivery when suspicion of spam arises so that they can prot
 
 If engagement is moderate, they may continue to throttle your email to collect more engagement data to determine whether or not the email is spam with more certainty. If the email has very high engagement metrics, they may cease to throttle this email entirely. They use that data to create an email reputation that will eventually determine whether or not your emails are filtered to spam automatically.
 
-If your domain or IP is blocked by an ISP, the message logs in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) will contain information about what websites to visit to appeal to these ISPs and to get off those lists.
+If your domain or IP is blocked by an ISP, the message logs in the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/) will contain information about what websites to visit to appeal to these ISPs and to get off those lists.
 
 ## IP warming schedules
 
@@ -94,7 +94,7 @@ Refer to our [IP warming schedule](#ip-warming-schedules) to spread your send ac
 
 ### Clean your email lists
 
-Confirm that your email list is clean and doesn't have old or unverified emails. Ensuring that you're both [CASL- and CAN-SPAM-compliant]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/) is ideal.
+Confirm that your email list is clean and doesn't have old or unverified emails. Ensuring that you're both [CASL- and CAN-SPAM-compliant]({{site.baseurl}}/user_guide/administer/global/privacy/spam_regulations/) is ideal.
 
 ### Monitor your sender reputation
 

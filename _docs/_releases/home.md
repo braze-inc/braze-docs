@@ -11,7 +11,7 @@ page_type: reference
 # What's new in Braze
 
 {% alert tip %}
-For more information on any of the updates listed on this page, contact your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Check out our [SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) for more information about our monthly SDK releases, improvements, and breaking changes.
+For more information on any of the updates listed on this page, contact your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administer/personal/braze_support/). Check out our [SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) for more information about our monthly SDK releases, improvements, and breaking changes.
 {% endalert %}
 
 {% details February 5, 2026 %}
@@ -194,7 +194,7 @@ Select **Banners** as a messaging channel in a [Message step]({{site.baseurl}}/u
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-With [dynamic BCC]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=bcc%20address#dynamic-bcc), use Liquid in your BCC address. Note that this feature is only available in **Email Preferences** and can’t be set on the campaign itself. Only one BCC address per email recipient is allowed.
+With [dynamic BCC]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences/?tab=bcc%20address#dynamic-bcc), use Liquid in your BCC address. Note that this feature is only available in **Email Preferences** and can’t be set on the campaign itself. Only one BCC address per email recipient is allowed.
 
 #### Channel-based rate limits
 
@@ -319,7 +319,7 @@ You can [add a background row image]({{site.baseurl}}/user_guide/message_buildin
 
 #### Copy preview link
 
-Use **Copy preview link** in your [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#step-5-test-your-message-optional), [email custom footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#creating-your-custom-footer), and [email opt-in and unsubscribe pages]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=custom%20footer#subscription-pages-and-footers) to generate a shareable link that shows how your content will look like for a random user.
+Use **Copy preview link** in your [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#step-5-test-your-message-optional), [email custom footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#creating-your-custom-footer), and [email opt-in and unsubscribe pages]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences/?tab=custom%20footer#subscription-pages-and-footers) to generate a shareable link that shows how your content will look like for a random user.
 
 #### WhatsApp messages with optimized delivery
 
@@ -355,7 +355,7 @@ You can now set up your integration with [BrazeAI Decisioning Studio™ Go]({{si
 
 You can now customize your [Braze Agent]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents) by:
 
-- Applying [brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines) for your agent to adhere to in its response. 
+- Applying [brand guidelines]({{site.baseurl}}/user_guide/administer/global/workspace_settings/brand_guidelines) for your agent to adhere to in its response. 
 - Referencing a catalog to further personalize your message.
 - Structuring an agent's output by providing the [output format]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#output-format).
 - Adjusting the [temperature]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#temperature) for the level of deviation for your agent's output.
@@ -666,7 +666,7 @@ The `messages` response for push notifications now includes two new fields:
 
 #### Defining PII fields
 
-Selecting and [defining certain fields as PII fields]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings#view-pii) only affects what Users can view on the Braze dashboard and does not impact how the End User data in such PII fields is handled.
+Selecting and [defining certain fields as PII fields]({{site.baseurl}}/user_guide/administer/global/company_settings/security_settings#view-pii) only affects what Users can view on the Braze dashboard and does not impact how the End User data in such PII fields is handled.
 
 Consult your legal team to align your dashboard’s settings with any privacy regulations and policies applicable to your company, including those related to [data retention]({{site.baseurl}}/api/data_retention/).
 
@@ -751,7 +751,7 @@ The following SDK updates have been released. Breaking updates are listed below;
 
 ### Security events export with Amazon S3
 
-You can automatically [export Security Events to Amazon S3]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/), a cloud storage provider, with a daily job that runs at midnight UTC. Once set up, you don't need to manually export Security Events from the dashboard.
+You can automatically [export Security Events to Amazon S3]({{site.baseurl}}/user_guide/administer/global/company_settings/security_settings/security_export_s3/), a cloud storage provider, with a daily job that runs at midnight UTC. Once set up, you don't need to manually export Security Events from the dashboard.
 
 ### Data flexibility
 
@@ -821,7 +821,7 @@ You can make your landing page [responsive to the size of a user's device]({{sit
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-Set up bot filtering in your [Email Preferences]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings) to exclude all suspected machine or bot clicks. A "bot click" in email refers to a click on hyperlinks within an email that's generated by an automated program. By filtering these bot clicks, you can intentionally trigger and deliver messages to recipients who are engaged.
+Set up bot filtering in your [Email Preferences]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences) to exclude all suspected machine or bot clicks. A "bot click" in email refers to a click on hyperlinks within an email that's generated by an automated program. By filtering these bot clicks, you can intentionally trigger and deliver messages to recipients who are engaged.
 
 #### Drag-and-drop product blocks
 
@@ -893,7 +893,7 @@ Each Braze SDK tutorial offers step-by-step instructions along with full sample 
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-Use [SAML just-in-time provisioning]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/saml_jit) to allow new company users to create a Braze account on their first sign in. This eliminates the need for administrators to manually create an account for a new company user, choose their permissions, assign them to a workspace, and wait for them to activate their account.
+Use [SAML just-in-time provisioning]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/saml_jit) to allow new company users to create a Braze account on their first sign in. This eliminates the need for administrators to manually create an account for a new company user, choose their permissions, assign them to a workspace, and wait for them to activate their account.
 
 #### Filters per selection
 

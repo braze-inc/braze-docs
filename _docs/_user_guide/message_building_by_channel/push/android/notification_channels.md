@@ -71,7 +71,7 @@ To better understand the expected behavior for channels, refer to the following 
 
 1. Open any campaign or Canvas that includes an Android push and click **Edit Campaign**.
 2. Navigate to the Android push message composer.
-3. Click **Manage Notification Channels**. Any channels added here will be available globally for all campaigns and Canvases. You must have "Manage Apps" [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for your workspace to manage channels.
+3. Click **Manage Notification Channels**. Any channels added here will be available globally for all campaigns and Canvases. You must have "Manage Apps" [permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/#limited-and-team-role-permissions) for your workspace to manage channels.
 
 When you apply a notification channel to a specific campaign or Canvas step, your **Reachable Users** tally (located in the Target Audience step) for Android Push will not appear to change. However, only users subscribed to the selected notification channel will see the message, and your campaign analytics (like clicks) will be measured based on this audience.
 

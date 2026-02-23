@@ -47,7 +47,7 @@ You'll need to confirm that you have the following items created and completed b
 ### Step 1: Connect to Facebook
 
 {% alert important %}
-You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect Facebook to your Braze account.
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/#admin) to connect Facebook to your Braze account.
 {% endalert %}
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Facebook**. Under Facebook Audience Export, select **Connect Facebook**.
@@ -176,7 +176,7 @@ Facebook doesn't provide this information for privacy reasons.
 
 ### Does Braze support value-based custom audiences?
 
-At this time, value-based custom audiences aren't supported by Braze. If you're interested in syncing these types of custom audiences, submit [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+At this time, value-based custom audiences aren't supported by Braze. If you're interested in syncing these types of custom audiences, submit [product feedback]({{site.baseurl}}/user_guide/administer/personal/product_portal/).
 
 ### Does Braze hash data before sending it to Audience Sync partners?
 

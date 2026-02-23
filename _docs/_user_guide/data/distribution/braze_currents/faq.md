@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: Currents FAQ
-page_order: 9
+page_order: 4
 page_type: reference
 description: "This article addresses some of the most frequently asked questions that arise when setting up Braze Currents."
 tool: Currents
@@ -13,7 +13,7 @@ tool: Currents
 
 ### How do I get historical data?
 
-Currents is a real-time, live data stream, which means that events can't be replayed. However, you can store Currents data in a data warehouse such as [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/) or [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/), so you can act on past events as you see fit. Data is retained for 30 days, but for more historical data, you can query [Snowflake]({{site.baseurl}}/user_guide/data/braze_currents/s3_to_snowflake/).
+Currents is a real-time, live data stream, which means that events can't be replayed. However, you can store Currents data in a data warehouse such as [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/) or [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/), so you can act on past events as you see fit. Data is retained for 30 days, but for more historical data, you can query [Snowflake]({{site.baseurl}}/user_guide/data/distribution/braze_currents/s3_to_snowflake/).
 
 ### Why does Currents output data in the Avro format, not JSON?
 

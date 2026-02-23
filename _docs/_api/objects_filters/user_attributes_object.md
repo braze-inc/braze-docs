@@ -209,7 +209,7 @@ Manual push token migration is the process of importing these previously-created
 
 Programmatically migrate iOS (APNs) and Android (FCM) tokens to your platform by using the [`users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). You can migrate both identified users (users with an associated external ID) and anonymous users (users without an external ID).
 
-Specify your app's `app_id` during push token migration to associate the appropriate push token with the appropriate app. Each app (iOS, Android, etc.) has its own `app_id`, which can be found in the **Identification** section of the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page. Be sure to use the correct platform's `app_id`.
+Specify your app's `app_id` during push token migration to associate the appropriate push token with the appropriate app. Each app (iOS, Android, etc.) has its own `app_id`, which can be found in the **Identification** section of the [API Keys]({{site.baseurl}}/user_guide/administer/global/workspace_settings/apis_and_identifiers/) page. Be sure to use the correct platform's `app_id`.
 
 {% alert important %}
 It is not possible to migrate web push tokens through the API. This is because web push tokens do not conform to the same schema as other platforms.

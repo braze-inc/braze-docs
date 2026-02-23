@@ -1,7 +1,7 @@
 ---
-nav_title: Export troubleshooting
+nav_title: Troubleshooting
 article_title: Export Troubleshooting
-page_order: 10
+page_order: 6
 page_type: reference
 description: "This reference article covers some common troubleshooting scenarios for API and CSV exports."
 

@@ -2,7 +2,7 @@
 nav_title: Message engagement events
 layout: message_engagement_events_glossary
 alias: /message_events_glossary/
-page_order: 5
+page_order: 2
 excerpt_separator: ""
 page_type: glossary
 description: "This glossary lists the various Message Engagement Events that Braze can track and send to chosen Data Warehouses using Currents."
@@ -6131,7 +6131,7 @@ Email, Subscription
 This event occurs when the end-user has clicked "unsubscribe" from the email.
 
 {% alert important %}
-The `Unsubscribe` event is considered a specialized click event that is fired when your user clicks the unsubscribe link in the email (either a normal unsubscribe link within the email body or footer, or using the [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)), not when the user changes state to unsubscribed. If subscription state change is sent through the API, or with a custom (non-Braze) unsubscribe link, it does not trigger an email unsubscribe event on Currents.
+The `Unsubscribe` event is considered a specialized click event that is fired when your user clicks the unsubscribe link in the email (either a normal unsubscribe link within the email body or footer, or using the [list-unsubscribe header]({{site.baseurl}}/user_guide/administer/global/workspace_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)), not when the user changes state to unsubscribed. If subscription state change is sent through the API, or with a custom (non-Braze) unsubscribe link, it does not trigger an email unsubscribe event on Currents.
 {% endalert %}
 
 {% tabs %}

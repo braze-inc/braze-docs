@@ -5,49 +5,48 @@ page_order: 3
 layout: dev_guide
 
 guide_top_header: "Data"
-guide_top_text: "Data plays a crucial role in enhancing your customer engagement strategy by enabling you to create personalized experiences, understand customer behavior, and optimize messaging strategies. At Braze, we build all data capabilities with three core things in mind: <br><br>**1.** <a href='/docs/user_guide/data/#making-customer-data-work-harder/'>Make customer data work harder.</a><br> **2.** <a href='/docs/user_guide/data/#enhancing-data-agility-to-drive-performance/'>Enhance data agility to drive performance.</a><br>**3.** <a href='/docs/user_guide/data/#keeping-brands-data-secure-safe-and-compliant/'>Keep brands’ data secure, safe, and compliant.</a>" 
-
-guide_featured_title: "Braze Data Platform"
-guide_featured_list:
-  - name: Data Unification
-    link: /docs/user_guide/data/unification/
-    image: /assets/img/braze_icons/upload-cloud-01.svg
-  - name: Data Activation
-    link: /docs/user_guide/data/activation/
-    image: /assets/img/braze_icons/zap.svg
-  - name: Data Distribution
-    link: /docs/user_guide/data/distribution/
-    image: /assets/img/braze_icons/users-01.svg
-  - name: Technology Partners
-    link: /docs/partners/data_and_analytics/
-    image: /assets/img/braze_icons/settings-02.svg
-
-guide_menu_title2: "Data Infrastructure"
-guide_menu_list2:
-  - name: Data Centers
-    link: /docs/user_guide/data/infrastructure/data_centers/
-    image: /assets/img/braze_icons/database-02.svg
-  - name: Field-Level Encryption
-    link: /docs/user_guide/data/infrastructure/field_level_encryption/
-    image: /assets/img/braze_icons/book-closed.svg
-  - name: Data Points
-    link: /docs/user_guide/data/infrastructure/data_points/
-    image: /assets/img/braze_icons/check-square-broken.svg
+guide_top_text: ""
 ---
 
-### Making customer data work harder
+## Braze Data Platform
 
-- **Flexible and component-based:** Our overarching goal is to help brands utilize their data more effectively and fully. Built with a composable architecture, brands can leverage the technologies they need to make their data work harder, without unnecessary middleware. 
+The Braze Data Platform is a comprehensive, composable set of data capabilities and partner integrations that empowers you to create personalized experiences for your customers. At Braze, we think about data in terms of three data-related jobs to be done: [Unification]({{site.baseurl}}/user_guide/data/unification), [Activation]({{site.baseurl}}/user_guide/data/activation), and [Distribution]({{site.baseurl}}/user_guide/data/distribution).
+
+By using a combination of features in the Braze Data Platform, you can leverage your data to create meaningful, targeted messages that respond to what your customers do in real-time.
+
+### Unify your data
+
+User data flows into Braze through many entry points. Collect and consolidate first-party data from any source using [APIs]({{site.baseurl}}/api/home) and [SDKs]({{site.baseurl}}/developer_guide/sdk_integration). You can also use built-in ingestion tools like [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion) to create a direct integration from your data warehouse or file storage solution to Braze, or use [Data Transformation]({{site.baseurl}}/user_guide/data/unification/data_transformation) to build and manage webhook integrations for transferring data into Braze.
+
+### Activate your data
+
+Clean, organize, and prepare your data for use. This involves understanding your customers' behaviors and preferences in real-time with user profiles and segments. Reference the [Reports metric glossary]({{site.baseurl}}/user_guide/data/activation/report_metrics) as you create targeted messages, and use [catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/) to enrich your messages with product or content data. Identify how your customers are responding to these personalized experiences.
+
+### Distribute your data
+
+Stream and export your data to external systems for next-step insights and decisions. Use [Braze Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents) to stream Braze event data into a data warehouse to power business intelligence tools.
+
+## Braze data infrastructure
+
+Braze data infrastructure includes [data centers]({{site.baseurl}}/user_guide/data/infrastructure/data_centers) that help minimize latency—the time it takes for data to travel between the server and the user. This geographic distribution allows our services to be reliable and scalable. We also offer [field-level encryption]({{site.baseurl}}/user_guide/data/infrastructure/field_level_encryption) to help protect sensitive data and minimize personally identifiable information (PII) shared in Braze. For more on usage and billing, see [Data points]({{site.baseurl}}/user_guide/data/infrastructure/data_points).
+
+## Data capabilities core tenets
+
+Data plays a crucial role in enhancing your customer engagement strategy by enabling you to create personalized experiences, understand customer behavior, and optimize messaging strategies. At Braze, we build all data capabilities with three core things in mind:
+
+{% details Making your data work harder %}
+- **Flexible and component-based:** Our overarching goal is to help you utilize your data more effectively and fully. Built with a composable architecture, you can leverage the technologies you need to make your data work harder, without unnecessary middleware.
 - **Partner integrations:** We prioritize integrations with best of breed ecosystem technologies (and offer APIs) that make real-time, bi-directional data sharing easy.
-- **Stream-processing architecture:** Customers can trigger actions on any data point ingested into Braze for segmentation, orchestration, and personalization.
+- **Stream-processing architecture:** You can trigger actions on any data point ingested into Braze for segmentation, orchestration, and personalization.
+{% enddetails %}
 
-### Enhancing data agility to drive performance 
-
-- **Easy audience construction:** Reduce reliance on technical teams to create audiences and deliver personalized customer engagement at scale. 
+{% details Enhancing data agility to drive performance %}
+- **Easy audience construction:** Reduce reliance on technical teams to create audiences and deliver personalized customer engagement at scale.
 - **Speed and performance:** Engagement data and insights are delivered in real-time, which supports iterative, effective customer engagement, as well as broader business decision-making.
+{% enddetails %}
 
-### Keeping brands’ data secure, safe, and compliant
-
-- **Industry leading security practices:** Conduct regular third-party audits, including SOC 2 Type 2 and ISO 27001, to comply with the highest industry standards. Maintain a public bug bounty program to proactively address potential vulnerabilities and have a dedicated security team committed to safeguarding customer data.
-- **Industry compliance:** Provide tools that promote adherence to data protection regulations, including GDPR and CCPA.
-- **Data privacy:** Enable customers to manage end-user consent, process requests, and action consumer rights.
+{% details Keeping your data secure, safe, and compliant %}
+- **Industry leading security practices:** We conduct regular third-party audits, including SOC 2 Type 2 and ISO 27001, to comply with the highest industry standards. We maintain a public bug bounty program to proactively address potential vulnerabilities and have a dedicated security team committed to safeguarding your data.
+- **Industry compliance:** We provide tools that promote adherence to data protection regulations, including GDPR and CCPA.
+- **Data privacy:** You can manage end-user consent, process requests, and action consumer rights.
+{% enddetails %}

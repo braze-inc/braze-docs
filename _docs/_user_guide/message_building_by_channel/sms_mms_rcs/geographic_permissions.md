@@ -48,7 +48,7 @@ Limit the countries on your allowlist to only those required to support your bus
 
 ## Visibility of blocked sends
 
-Attempted sends to countries that aren't on your allowlist will be aborted. Aborted messages will be logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) and within the [SMS abort message engagement event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). 
+Attempted sends to countries that aren't on your allowlist will be aborted. Aborted messages will be logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/) and within the [SMS abort message engagement event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). 
 
 Aborted messages caused by blocked sends show as **Aborted Message Errors** and have the message "The recipient's phone number is in a blocked country".
 

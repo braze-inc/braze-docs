@@ -1,7 +1,7 @@
 ---
 nav_title: Customer behavior and user events
 layout: customer_behavior_events_glossary
-page_order: 4
+page_order: 1
 excerpt_separator: ""
 page_type: glossary
 description: "This glossary lists the various Customer Behavior and User Events that Braze can track and send to chosen Data Warehouses using Currents."

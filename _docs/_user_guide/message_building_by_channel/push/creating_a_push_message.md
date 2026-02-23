@@ -25,7 +25,7 @@ Not sure whether to use a campaign or a Canvas? Campaigns are better for single,
 1. Go to **Messaging** > **Campaigns**, then select **Create campaign**.
 2. For campaigns targeting multiple channels, select **Multichannel**. Otherwise, select **Push notification**. If you're still not sure, refer to **Deciding between regular or multichannel push campaign** below.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed. 
+4. Add [Teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [Tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed. 
 
 {% alert tip %} 
 Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.

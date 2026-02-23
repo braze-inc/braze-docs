@@ -26,7 +26,7 @@ Use campaigns for single, simple messaging (such as informing users about a prod
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 2. Select **Content Cards** or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
-4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+4. Add [teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by the relevant tags.
 5. Add and name as many variants as you like for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 

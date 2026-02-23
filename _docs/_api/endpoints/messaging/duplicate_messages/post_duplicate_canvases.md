@@ -57,6 +57,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 This endpoint will return a `202` status code, and the Canvas creation will occur asynchronously. You can use the [Security event download][2] to see records of when Canvases were duplicated and by which API key.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/duplicating
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings
+[2]: {{site.baseurl}}/user_guide/administer/global/company_settings/security_settings
 
 {% endapi %}

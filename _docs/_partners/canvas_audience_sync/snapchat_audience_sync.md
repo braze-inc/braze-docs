@@ -44,7 +44,7 @@ You must ensure the following items are created, completed and/or accepted befor
 ### Step 1: Connect to Snapchat
 
 {% alert important %}
-You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect Snapchat to your Braze account.
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/#admin) to connect Snapchat to your Braze account.
 {% endalert %}
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Snapchat**. Under Snapchat Audience Sync, select **Connect Snapchat**.

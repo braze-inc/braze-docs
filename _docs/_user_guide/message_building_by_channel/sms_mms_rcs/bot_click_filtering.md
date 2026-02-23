@@ -12,7 +12,7 @@ channel:
 
 # SMS and RCS bot click filtering
 
-> SMS and RCS bot click filtering enhances campaign analytics and workflows by excluding suspected bot clicks. A “bot click” refers to automated clicks on shortened links in SMS and RCS messages, such as those from web crawlers, Android and iOS link previews, or CPaaS security software. This feature facilitates accurate reporting, segmentation, and orchestration to engage real users. <br><br> For email campaign bot click filtering, refer to [Bot filtering for emails]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/bot_filtering/).
+> SMS and RCS bot click filtering enhances campaign analytics and workflows by excluding suspected bot clicks. A “bot click” refers to automated clicks on shortened links in SMS and RCS messages, such as those from web crawlers, Android and iOS link previews, or CPaaS security software. This feature facilitates accurate reporting, segmentation, and orchestration to engage real users. <br><br> For email campaign bot click filtering, refer to [Bot filtering for emails]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences/bot_filtering/).
 
 ## How it works
 
@@ -33,7 +33,7 @@ The following Braze metrics and workflows are impacted by bot clicks:
     - **Experiment steps:** Excludes bot clicks for reliable experiment outcomes.
     - **Currents data exports:** Includes `is_suspected_bot_click` and `suspected_bot_click_reason` fields to help analyze human versus bot clicks. These fields are available in [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/), [Snowflake Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/), and [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/).
 
-Unsubscribes from suspected bot clicks are unaffected. Braze processes all unsubscribe requests as usual. To block these unsubscribes, [submit product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+Unsubscribes from suspected bot clicks are unaffected. Braze processes all unsubscribe requests as usual. To block these unsubscribes, [submit product feedback]({{site.baseurl}}/user_guide/administer/personal/product_portal/).
 
 ## Currents fields in SMS click events
 

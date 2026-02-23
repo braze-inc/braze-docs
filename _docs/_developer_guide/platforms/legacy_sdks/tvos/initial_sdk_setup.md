@@ -116,7 +116,7 @@ Be sure to initialize Braze in your application's main thread. Initializing asyn
 As of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
 {% endalert %}
 
-Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
+Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administer/personal/sdk_endpoints/).
 
 #### Compile-time endpoint configuration (recommended)
 If given a pre-existing custom endpoint:

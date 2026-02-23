@@ -60,7 +60,7 @@ If you're only testing email messages, you do not necessarily have to set up a t
 ![A Braze campaign with the Test Send tab selected]({% image_buster /assets/img_archive/testmessages45.png %})
 
 {% alert tip %} 
-You can also enable or disable [TEST (or SEED)]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#append-email-subject-lines) being appended on your test messages.
+You can also enable or disable [TEST (or SEED)]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences/#append-email-subject-lines) being appended on your test messages.
 {% endalert %}
 {% endsubtab %}
 {% endsubtabs %}

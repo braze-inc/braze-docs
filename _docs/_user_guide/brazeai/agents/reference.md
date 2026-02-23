@@ -243,7 +243,7 @@ You can select up to three segments for the agent to cross-reference each user's
 
 ## Brand guidelines
 
-You can select [brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines) for your agent to adhere to in its responses. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
+You can select [brand guidelines]({{site.baseurl}}/user_guide/administer/global/workspace_settings/brand_guidelines) for your agent to adhere to in its responses. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
 
 ## Temperature
 

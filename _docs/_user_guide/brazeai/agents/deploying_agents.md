@@ -105,7 +105,7 @@ In the **Usage** section of your agent, you can reference and navigate to where 
 In the **Logs** section of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location. You can also select **Export CSV** to export the logs shown on the current page only.
 
 {% alert tip %}
-You can also monitor daily invocation limit errors at the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
+You can also monitor daily invocation limit errors at the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/).
 {% endalert %}
 
 ![Logs for an agent AI Sentiment Score.]({% image_buster /assets/img/ai_agent/agent_logs.png %})

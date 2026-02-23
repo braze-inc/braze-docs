@@ -1,7 +1,7 @@
 ---
 nav_title: Create a formula
 article_title: Create a Formula
-page_order: 1.2
+page_order: 3
 page_type: reference
 description: "This reference article covers creating and managing formulas, which help you easily understand complex relationships that exist in your data."
 tool: Reports
@@ -25,7 +25,7 @@ The following are some examples of the kinds of behavior patterns that can be de
 
 ## Creating formulas
 
-Formulas can be accessed in the statistics panels on the [Home]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/), [Revenue Report]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/), and [Custom Events Report]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) pages in the dashboard. To view this panel, go to the **Performance Over Time** chart, change the **Statistics For** dropdown to **KPI Formulas**, and then select at least one KPI formula to populate the chart.
+Formulas can be accessed in the statistics panels on the [Home]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/), [Revenue Report]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/exporting_revenue_data/), and [Custom Events Report]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/) pages in the dashboard. To view this panel, go to the **Performance Over Time** chart, change the **Statistics For** dropdown to **KPI Formulas**, and then select at least one KPI formula to populate the chart.
 
 ![View statistics for KPI formulas in the Braze dashboard]({% image_buster /assets/img_archive/kpi_forms.png %})
 

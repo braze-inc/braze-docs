@@ -27,7 +27,7 @@ glossaries:
   - name: Braze Engagement Tools
     description: Braze offers many <a href="https://www.braze.com/docs/user_guide/engagement_tools/">engagement tools</a> to reach your customers and users with our campaigns, Canvas tools, and you can optimize for consistency (and upload images and other content) using our Templates & Media tools. From there, you can create segments and geofences to target your audience by location or other attributes.
   - name: Braze Teams
-    description: Braze admins can divide a subset of dashboard users into <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/teams/">Teams</a> with varying user roles and permissions. This allows Braze admins to limit access to certain features by group membership.
+    description: Braze admins can divide a subset of dashboard users into <a href="https://www.braze.com/docs/user_guide/administer/global/user_management/teams/">Teams</a> with varying user roles and permissions. This allows Braze admins to limit access to certain features by group membership.
   - name: Campaigns
     description: Campaigns are customizable messaging methods to deliver personalized response to your customers. You can <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/">build campaigns</a> using different messaging channels to send your unique messages. 
   - name: Canvas
@@ -83,13 +83,13 @@ glossaries:
   - name: Push Token
     description: A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. <a href="https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens">Push token migration</a> is the importing of those already-generated keys into Braze.
   - name: Push Time to Live
-    description: Also known as <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/">Push TTL</a>, time to live refers to the period that campaigns will continue to attempt to be delivered to an offline user.
+    description: Also known as <a href="https://www.braze.com/docs/user_guide/administer/global/workspace_settings/push_settings/">Push TTL</a>, time to live refers to the period that campaigns will continue to attempt to be delivered to an offline user.
   - name: Race Condition
     description: A <a href="http://www.braze.com/docs/user_guide/engagement_tools/testing/race_conditions/">race condition</a> is a software engineering concept that describes some undesirable situation that occurs when a system tries to perform several operations simultaneously, but because of the nature of the system, the operations must be done in the correct sequence to be done correctly. <br><br>In the Braze platform, segmenting a triggered campaign on user data recorded at the time of the event may cause a race condition. This happens when a change in the user attribute on which the campaign is segmented hasn't yet been processed for the user at the time segment membership is determined and the campaign is sent and can lead to the user not receiving the campaign.
   - name: Rate Limiting
     description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/">Rate limiting</a> is the process of restricting the number of messages sent during a period of time to avoid overloading your audience.  
   - name: Tags
-    description: <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/tags/">Tags</a> are a tool that help you categorize, organize, and sort your engagement across one or multiple campaigns.
+    description: <a href="https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags/">Tags</a> are a tool that help you categorize, organize, and sort your engagement across one or multiple campaigns.
   - name: Segmentation
     description: Dashboard <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">segmentation</a> allows you to create groups or extensions of users based on powerful filters of their in-app behavior, demographic data, and more.
   - name: Software Development Kit (SDK)

@@ -141,7 +141,7 @@ Users in your Global Control Group are withheld from receiving any messages othe
 
 #### Global Control Group segments on the Developer Console
 
-You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
+You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the [API Keys]({{site.baseurl}}/user_guide/administer/global/workspace_settings/apis_and_identifiers/) page. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
 
 Only one of these segments is active and can be queried using the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/), or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
 

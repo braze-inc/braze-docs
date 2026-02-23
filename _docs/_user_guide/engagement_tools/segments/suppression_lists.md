@@ -36,7 +36,7 @@ Suppression lists are applied to API campaigns that are created in the Braze das
 ## Setting up suppression lists {#setup}
 
 {% alert note %}
-All users can view suppression lists, but only users with [admin permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?tab=admin#list-of-permissions) can create and manage suppression lists.
+All users can view suppression lists, but only users with [admin permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/?tab=admin#list-of-permissions) can create and manage suppression lists.
 {% endalert %}
 
 1. Go to **Audience** > **Suppression Lists**.<br><br>![The "Suppression Lists" page with a list of three suppression lists.]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>

@@ -1,7 +1,7 @@
 ---
 nav_title: Zero-copy personalization
 article_title: Zero-copy personalization using CDI
-page_order: 4
+page_order: 7
 page_type: reference
 description: "This page provides an overview of how to trigger Braze Canvases using CDI."
 ---

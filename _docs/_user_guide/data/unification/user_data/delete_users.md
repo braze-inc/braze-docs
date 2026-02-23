@@ -1,7 +1,7 @@
 ---
 nav_title: Delete users
 article_title: Delete users
-page_order: 4.2
+page_order: 6
 toc_headers: h2
 description: "Learn how to delete an individual user or a segment of users directly through the Braze dashboard."
 alias: /delete_users/
@@ -135,7 +135,7 @@ For more details about a specific request, select <i class="fa-solid fa-eye"></i
 
 ### Security event report
 
-You can also check the status of previous deletions by downloading a security event report. For more information, see [Security settings]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#security-event-report).
+You can also check the status of previous deletions by downloading a security event report. For more information, see [Security settings]({{site.baseurl}}/user_guide/administer/global/admin_settings/security_settings/#security-event-report).
 
 ## Frequently asked questions {#faq}
 

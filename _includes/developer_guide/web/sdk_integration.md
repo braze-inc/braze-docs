@@ -60,7 +60,7 @@ The default **Prevent Cross-Site Tracking** setting in Safari can prevent in-app
 
 ### Step 2: Initialize the SDK
 
-After the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard. For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see [Braze JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
+After the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard. For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see [Braze JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
 
 {% alert note %}
 **Custom domains for Web SDK requests are not supported**: The Web SDK `baseUrl` must be a Braze SDK endpoint (for example, `sdk.iad-05.braze.com`). Braze does not support routing Web SDK traffic through a customer-owned domain via CNAME records. If you need Web SDK requests to originate from your own domain, contact Braze support.

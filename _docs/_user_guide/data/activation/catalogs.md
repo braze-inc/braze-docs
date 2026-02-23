@@ -1,7 +1,7 @@
 ---
 nav_title: Catalogs
 article_title: Catalogs
-page_order: 6
+page_order: 3
 layout: dev_guide
 
 guide_top_header: "Catalogs"

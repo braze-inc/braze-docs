@@ -29,7 +29,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) wi
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `content_block_id`  | Required | String | The Content Block identifier. <br><br>You can find this by either listing Content Block information through an API call or going to the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page, then scrolling to the bottom and searching for your Content Block API identifier.|
+| `content_block_id`  | Required | String | The Content Block identifier. <br><br>You can find this by either listing Content Block information through an API call or going to the [API Keys]({{site.baseurl}}/user_guide/administer/global/workspace_settings/apis_and_identifiers/) page, then scrolling to the bottom and searching for your Content Block API identifier.|
 | `include_inclusion_data`  | Optional | Boolean | When set to `true`, the API returns back the Message Variation API identifier of campaigns and Canvases where this Content Block is included, to be used in subsequent calls.  The results exclude archived or deleted campaigns or Canvases. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

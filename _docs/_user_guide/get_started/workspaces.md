@@ -77,11 +77,11 @@ You must create separate app instances for each version of your app on each plat
 
 #### Teams
 
-[Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) can be set up across customer base location, language, and custom attributes so that team members and non-team members have different access to messaging features and customer data.
+[Teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) can be set up across customer base location, language, and custom attributes so that team members and non-team members have different access to messaging features and customer data.
 
 #### Company user permissions
 
-Workspaces have independent access and user permission definitions. [User permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) allow you to create granular controls regarding what an individual dashboard user or team has access to within a single workspace.
+Workspaces have independent access and user permission definitions. [User permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/) allow you to create granular controls regarding what an individual dashboard user or team has access to within a single workspace.
 
 #### Currents connectors
 
@@ -197,8 +197,8 @@ The following table describes the benefits and drawbacks of these two approaches
     <tr>
         <td>Company user permissions</td>
         <td>N/A</td>
-        <td>Updating <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>user permissions</a> for a dashboard user must be done separately for each workspace the user needs access to.</td>
-        <td><a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>User permissions</a> can be set once for a dashboard user, and they will have the same permissions for all app instances in the workspace.</td>
+        <td>Updating <a href='/docs/user_guide/administer/global/user_management/permissions/'>user permissions</a> for a dashboard user must be done separately for each workspace the user needs access to.</td>
+        <td><a href='/docs/user_guide/administer/global/user_management/permissions/'>User permissions</a> can be set once for a dashboard user, and they will have the same permissions for all app instances in the workspace.</td>
         <td>N/A</td>
     </tr>
     <tr>
@@ -240,5 +240,5 @@ You should have more than one Braze user with admin permissions for a single wor
 
 ## Next steps
 
-After you've determined your workspace plan, it's time to create your workspace and add app instances. For steps, check out [Create and manage workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
+After you've determined your workspace plan, it's time to create your workspace and add app instances. For steps, check out [Create and manage workspaces]({{site.baseurl}}/user_guide/administer/global/create_and_manage_workspaces/).
 

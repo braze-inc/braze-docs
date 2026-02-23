@@ -31,7 +31,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 2. Select **Webhook**, or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
 4. (Optional) Add a description to describe how this campaign will be used.
-4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+4. Add [teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. You can choose different webhook templates for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -202,7 +202,7 @@ Webhooks rely on Braze servers making requests to an external endpoint, and erro
 - Test your webhook for syntax errors
 - Ensure personalized variables have default values
 
-If your webhook fails to send, an error message gets logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/), and includes details like the error timestamp, app name, and details about the error.
+If your webhook fails to send, an error message gets logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/), and includes details like the error timestamp, app name, and details about the error.
 
 ![Webhook error with the message "An active access token must be used to query information about the current user".]({% image_buster /assets/img_archive/webhook-error.png %})
 

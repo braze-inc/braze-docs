@@ -23,7 +23,7 @@ These parameters include:
 
 ## Anonymous user profiles
 
-Any user without a designated `external_id` is called an [anonymous user]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/). For example, these could be users who visited your website but didn't sign up, or users who downloaded your mobile app but didn't create a profile.
+Any user without a designated `external_id` is called an [anonymous user]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/anonymous_users/). For example, these could be users who visited your website but didn't sign up, or users who downloaded your mobile app but didn't create a profile.
 
 Initially, when a user is recognized by the SDK, an anonymous user profile is created with an associated `braze_id`: a unique identifier that is automatically assigned by Braze, cannot be edited, and is device-specific. This identifier can be used to update the user profile through the [API]({{site.baseurl}}/api/endpoints/user_data/).
 
@@ -95,7 +95,7 @@ For information on how to set a user alias, see our documentation for each platf
 ![A flow chart of a user profile's lifecycle in Braze. When changeUser() is called for an anonymous user, that user becomes an Identified User and data is migrated to their identified user profile. The Identified User has a Braze ID and external ID. At this point, if a second anonymous user has changeUser() called, user data fields that do not already exist on the Identified User will be merged. If the Identified User has an alias added to their existing user profile, no data will be affected but they will become an Identified User with alias. If a third anonymous user with the same alias label as the Identified User but a different alias name then has changeUser() called, any fields that do not exist on the Identified User will be merged and the alias label on the Identified User profile is maintained.]({% image_buster /assets/img_archive/Braze_User_flowchart.png %})
 
 {% alert tip %}
-Having trouble picturing how this may look for the user profile lifecycle of your customers? Visit [Best practices]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/) to view user data collection best practices.
+Having trouble picturing how this may look for the user profile lifecycle of your customers? Visit [Best practices]({{site.baseurl}}/user_guide/data/unification/user_data/best_practices/) to view user data collection best practices.
 {% endalert %}
 
 ## Advanced use case
@@ -108,7 +108,7 @@ Uninstalling and reinstalling an app will generate a new anonymous `braze_id` fo
 
 ### Troubleshooting with user IDs
 
-All user IDs can be used to find and identify users within your dashboard for testing. To find your user in the Braze dashboard, refer to [Adding Test Users]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users).
+All user IDs can be used to find and identify users within your dashboard for testing. To find your user in the Braze dashboard, refer to [Adding Test Users]({{site.baseurl}}/user_guide/administer/global/workspace_settings/developer_console/internal_groups_tab/#adding-test-users).
 
 {% alert important %}
 Braze will ban or block users with over 5,000,000 sessions ("dummy users") and will no longer ingest their SDK events, as these users are generally the result of misintegration. If you find that this has happened to a legitimate user, contact your Braze account manager.

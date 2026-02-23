@@ -35,7 +35,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 2. Select **Banner**.
 3. Name your campaign something clear and meaningful.
-4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed. Tags make your campaigns easier to find and build reports out of. For example, when using the Report Builder, you can filter by the relevant tags.
+4. Add [teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed. Tags make your campaigns easier to find and build reports out of. For example, when using the Report Builder, you can filter by the relevant tags.
 5. Select the placement you previously created to associate it with your campaign.
 6. Add variants as needed. You can choose a different message type and layout for each one. For more information on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing).
 7. Choose a start date and time for your Banner campaign. By default, Banners last indefinitely. You can change this by selecting **End Time** and specifying an end date and time.

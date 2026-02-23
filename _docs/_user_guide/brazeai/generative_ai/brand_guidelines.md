@@ -11,7 +11,7 @@ description: "This reference article covers the brand guidelines for AI copywrit
 
 ## Generating brand guidelines {#steps}
 
-Follow these steps to create brand guidelines in the AI copywriting assistant. You can also create brand guidelines on the [Brand Guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/) settings page.
+Follow these steps to create brand guidelines in the AI copywriting assistant. You can also create brand guidelines on the [Brand Guidelines]({{site.baseurl}}/user_guide/administer/global/workspace_settings/brand_guidelines/) settings page.
 
 ### Step 1: Create a brand guideline
 

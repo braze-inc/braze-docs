@@ -186,7 +186,7 @@ To sign up to receive these emails, do the following:
 
 ### Message Activity Log entries
 
-If a failure occurs, there will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) related to it. If the request is retried and eventually succeeds, those details will be available in Currents and Snowflake Data Share. Note that even if a request eventually succeeds after a retry, the errors can still trigger the automated email.
+If a failure occurs, there will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log) related to it. If the request is retried and eventually succeeds, those details will be available in Currents and Snowflake Data Share. Note that even if a request eventually succeeds after a retry, the errors can still trigger the automated email.
 
 ### Additional failure insights in Braze Currents
 

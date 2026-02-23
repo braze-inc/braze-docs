@@ -15,7 +15,7 @@ channel:
 > Contact cards (sometimes known as vCard or Virtual Contact Files (VCF)) are a standardized file format for sending business and contact information that you can easily import into address books or contact books. 
 
 {% alert note %}
-Sending a contact card is charged as an MMS. Review your expected MMS volume and message credit usage when you create contact cards, and confirm costs in your Braze [Billing page]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/).
+Sending a contact card is charged as an MMS. Review your expected MMS volume and message credit usage when you create contact cards, and confirm costs in your Braze [Billing page]({{site.baseurl}}/user_guide/administer/global/billing/).
 {% endalert %}
 
 Contact cards can be created [programmatically](https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) or created through our built-in contact card generator. These cards can be assigned common properties such as your company's name, phone number, address, email, and a small photo. To start making contact cards, first make sure you're set up to use MMS in Braze.

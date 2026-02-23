@@ -160,7 +160,7 @@ When importing default attributes, the column headers you use must exactly match
 | `dob` | String | Must be passed in the format “YYYY-MM-DD” (for example, `1980-12-21`). This will import your user’s Date of Birth and enable you to target users whose birthday is “today”. | No |
 | `gender` | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say), or nil (unknown). | No |
 | `home_city` | String | The home city of your users as they have indicated (for example, `London`). | No |
-| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (for example, `en`). Refer to our [list of accepted languages]({{site.baseurl}}/user_guide/data/user_data_collection/language_codes/). | No |
+| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (for example, `en`). Refer to our [list of accepted languages]({{site.baseurl}}/user_guide/data/unification/user_data/language_codes/). | No |
 | `phone` | String | A telephone number as indicated by your users, in `E.164` format (for example, `+442071838750`). Refer to [User Phone Numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/) for formatting guidance. | No |
 | `email_open_tracking_disabled` | Boolean | true or false accepted. Set to true to disable the open tracking pixel from being added to all future emails sent to this user. Available for SparkPost and SendGrid only. | No |
 | `email_click_tracking_disabled` | Boolean | true or false accepted. Set to true to disable the click tracking for all links within a future email, sent to this user. Available for SparkPost and SendGrid only. | No |
@@ -331,7 +331,7 @@ Additionally, beginning a number attribute with zero will cause issues because n
 
 #### Default attribute types
 
-Some default attributes may only accept certain values as valid for user updates. For guidance, refer to [Constructing your CSV]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/#constructing-your-csv).
+Some default attributes may only accept certain values as valid for user updates. For guidance, refer to [Constructing your CSV]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/#constructing-your-csv).
 
 Trailing spaces and differences in capitalization can cause a value to be interpreted as invalid. For example, in the following CSV file, only the user in the first row (`brazetest1`) will have their email and push statuses updated successfully because the accepted values are `unsubscribed`, `subscribed`, and `opted_in`. 
 

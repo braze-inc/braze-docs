@@ -11,7 +11,7 @@ alias: /query_builder/
 
 > The Query Builder generates reports using Braze data in Snowflake. The Query Builder comes with pre-built SQL [query templates]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/) to get you started, or you can write your own custom SQL queries to unlock even more insights.
 
-Because the Query Builder allows direct access to some customer data, you can only access the Query Builder if you have the "View PII" [permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
+Because the Query Builder allows direct access to some customer data, you can only access the Query Builder if you have the "View PII" [permission]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/).
 
 ## Running reports in the Query Builder
 

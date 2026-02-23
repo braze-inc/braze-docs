@@ -405,7 +405,7 @@ Deferred or deferral is when an email was not immediately delivered, but Braze w
 
 _Deferrals_ differ from _Soft Bounces_. If no email was successfully delivered during this retry period, Braze will send one soft bounce event per attempted campaign sent. Before February 25, 2025, these retries were counted as multiple soft bounces for 1 campaign send.
 
-Note that _Deferrals_ are currently only available using Currents or Braze Snowflake features (such as Query Builder, SQL Segment, Snowflake Data Sharing). If you’d like to include this in campaign or Canvas analytics, please [submit product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal).
+Note that _Deferrals_ are currently only available using Currents or Braze Snowflake features (such as Query Builder, SQL Segment, Snowflake Data Sharing). If you’d like to include this in campaign or Canvas analytics, please [submit product feedback]({{site.baseurl}}/user_guide/administer/personal/product_portal).
 
 ##### Estimated real open rate {#estimated-real-open-rate}
 

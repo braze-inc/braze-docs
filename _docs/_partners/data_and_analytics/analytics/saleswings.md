@@ -98,7 +98,7 @@ Go to the [**SalesWings Integrations** page](https://helium.saleswings.pro/integ
 
 Copy the value of the **Identifier** column for the newly created key and paste it into the **Braze API key** field of the SalesWings **Braze Integration** section.
 
-Add your Braze API endpoint as described in [API and SDK endpoints article]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints), and enter it in the **Braze API endpoint** field. Copy the value of the **REST Endpoint** column and enter it in the **Braze API endpoint** field in the SalesWings **Braze Integration** section.
+Add your Braze API endpoint as described in [API and SDK endpoints article]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints), and enter it in the **Braze API endpoint** field. Copy the value of the **REST Endpoint** column and enter it in the **Braze API endpoint** field in the SalesWings **Braze Integration** section.
 
 Then, select **Save**.
 

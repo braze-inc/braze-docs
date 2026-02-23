@@ -1,7 +1,7 @@
 ---
 nav_title: Sync and delete catalog data
 article_title: Sync and Delete Catalog Data
-page_order: 4
+page_order: 6
 page_type: reference
 description: "This page provides an overview of how to sync catalog data."
 

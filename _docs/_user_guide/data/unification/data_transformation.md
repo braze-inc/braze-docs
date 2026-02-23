@@ -1,7 +1,7 @@
 ---
 nav_title: Data Transformation
 article_title: Data Transformation
-page_order: 0.3
+page_order: 2
 layout: dev_guide
 guide_top_header: "Data Transformation"
 guide_top_text: "Braze Data Transformation allows you to build and manage webhook integrations to automate data flow from external platforms into Braze. This newly integrated user data can then power even more sophisticated marketing use cases. Braze Data Transformation can expedite your data integration, even if you have very little coding experience, and can help replace your team's dependency on manual API calls, third-party integration tools, or even customer data platforms."

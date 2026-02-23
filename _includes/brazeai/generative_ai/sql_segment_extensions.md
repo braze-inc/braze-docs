@@ -42,7 +42,7 @@ To create an incremental refresh SQL Segment Extension:
 1. Go to **Audience** > **Segment Extensions**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
+If you are using the [older navigation]({{site.baseurl}}/user_guide/administer/personal/the_braze_dashboard/), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
 {% endalert %}
 
 {:start="2"}

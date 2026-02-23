@@ -9,7 +9,7 @@ description: "This reference article covers how to implement open pixel and clic
 
 # Email open pixel and click tracking
 
-> [Open pixel tracking]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#changing-location-of-tracking-pixel) and click tracking can be turned on or off for each user profile. This flexibility helps you follow regional privacy laws, where an individual user profile might indicate they no longer want to be tracked.
+> [Open pixel tracking]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences/#changing-location-of-tracking-pixel) and click tracking can be turned on or off for each user profile. This flexibility helps you follow regional privacy laws, where an individual user profile might indicate they no longer want to be tracked.
 
 ## Turning on open pixel or click tracking
 

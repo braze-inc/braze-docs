@@ -51,7 +51,7 @@ This option gives you the freedom to choose whichever campaigns or Canvases you 
 
 #### Automatically select campaigns or Canvases
 
-This option lets you automatically include all messages that include a specific [tag]({{site.baseurl}}/user_guide/administrative/app_settings/tags/). You can target messages that have any one or all of the tags listed. This option is useful if you are setting up recurring reports and you regularly tag your engagement messages.
+This option lets you automatically include all messages that include a specific [tag]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/). You can target messages that have any one or all of the tags listed. This option is useful if you are setting up recurring reports and you regularly tag your engagement messages.
 
 ### Step 3: Add statistics {#add-statistics-to-your-reports}
 

@@ -57,7 +57,7 @@ Next steps:
 
 The `BadToken` error may occur for several reasons:
 - The push token isn't being sent to us correctly in `[[Appboy sharedInstance] registerPushToken:]`
-	- Check the token in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). It should generally look like a long string of letters and numbers (such as `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). If it doesn't, check the code involved in sending Braze push token errors.<br><br>
+	- Check the token in the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/). It should generally look like a long string of letters and numbers (such as `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). If it doesn't, check the code involved in sending Braze push token errors.<br><br>
 - Mismatched provisioning environment:
 	- If you register with a development certificate and try to send with a production one, you can see this error.  
 	- Braze only supports universal certificates for production environments. Testing push on development environments with a universal certificate will not work. 

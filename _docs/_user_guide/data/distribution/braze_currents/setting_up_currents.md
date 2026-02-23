@@ -1,7 +1,7 @@
 ---
 nav_title: Set up Currents
 article_title: Set Up Currents
-page_order: 0
+page_order: 1
 page_type: tutorial
 description: "This how-to article walks you through the process for integrating and configuring Braze Currents."
 tool: Currents

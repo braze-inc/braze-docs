@@ -1,7 +1,7 @@
 ---
 nav_title: Import users
 article_title: Import users
-page_order: 4.1
+page_order: 5
 description: "Learn about Braze's various user import options, like CSV import, REST API, Cloud Data Ingestion, and more."
 
 ---
@@ -38,7 +38,7 @@ Have you read Ulysses?
 
 ### Braze CSV import
 
-You can use CSV import to record and update the following user attributes and custom events. To get started, see [CSV Import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/csv_import).
+You can use CSV import to record and update the following user attributes and custom events. To get started, see [CSV Import]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/).
 
 |Type|Definition|Example|Maximum file size|
 |---|---|---|---|
