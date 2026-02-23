@@ -1,6 +1,6 @@
 ---
-nav_title: Getting started
-article_title: Getting Started with Braze Pilot
+nav_title: Get started
+article_title: Get Started with Braze Pilot
 page_order: 2
 page_type: reference
 description: "This reference article briefly covers the integration steps required from your engineers or developers."
