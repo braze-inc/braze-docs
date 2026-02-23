@@ -39,7 +39,7 @@ Drag and drop the **Agent** component from the sidebar, or select the <i class="
 
 Select the agent that will process data in this step. Choose an existing agent. For setup guidance, see [Create custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/).
 
-### Step 3: Set your agent's output
+### Step 3: Set your agent's output {#step-3-define-the-output-variable}
 
 Agent outputs are called "output variables" and are stored in a [context variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#context-variable-types) for easy access. To define the output variable, give the variable a name.
 
