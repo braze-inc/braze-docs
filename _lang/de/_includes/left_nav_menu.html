@@ -1,10 +1,10 @@
-{%-assign hide_nav_filter = page.hide_nav_filter -%} {%-assign nav_level = page.nav_level -%} {%-ohne hide_nav_filter -%} {%-assign hide_nav_filter = layout.hide_nav_filter -%} {%-endunless -%} {%-unless nav_level -%} {%-assign nav_level = layout.nav_level -%} {%-endunless -%} {%-unless nav_level -%} {%-assign nav_level = 2 -%} {%-endunless -%} <button id="sidebar_toggle" class="btn btn-info d-print-none" href="#" aria-label="Seitennavigation umschalten" title="Seitennavigation umschalten"> <i class="fas fa-chevron-left"></i> </button> {%- unless hide_nav_filter -%}
+{%-assign hide_nav_filter = page.hide_nav_filter -%} {%-assign nav_level = page.nav_level -%} {%-ohne hide_nav_filter -%} {%-assign hide_nav_filter = layout.hide_nav_filter -%} {%-endunless -%} {%-unless nav_level -%} {%-assign nav_level = layout.nav_level -%} {%-endunless -%} {%-unless nav_level -%} {%-assign nav_level = 2 -%} {%-endunless -%} {%- unless hide_nav_filter -%}
 <div id="nav_filter" class="flex-column flex-nowrap   ">
   <form id="filter-form"   >
     <div class="input-group">
-      <input type="text" class="form-control has-clear " name="nav_filter_input" id="nav_filter_input" placeholder="Themen filtern..." aria-label="Filtern" />
+      <input type="text" class="form-control has-clear " name="nav_filter_input" id="nav_filter_input" placeholder="Themen filtern..." aria-label="{{ site.data.i18n[site.language]['filter_navigation_topics'] | default: 'Filter navigation topics' }}" />
       <div class="input-group-append">
-      <i id="filter-action" class="fa"></i>
+      <button type="button" id="filter-action" aria-label="{{ site.data.i18n[site.language]['clear_filter'] | default: 'Clear filter' }}"><i class="fa" aria-hidden="true"></i></button>
       </div>
 
     </div>
@@ -13,20 +13,21 @@
 </div>
 {%- endunless -%}
 
-<nav class="bd-links navbar navbar-expand-lg navbar-light" id="left_navmenu" aria-label="Linke Navigation" title="Linke Navigation">
+<nav class="bd-links navbar navbar-expand-lg navbar-light" id="left_navmenu" aria-label="{{ site.data.i18n[site.language]['documentation_nav'] | default: 'Documentation' }}">
   {%- unless hide_nav_filter -%}
     <div id="filter-msg"  class="flex-column flex-nowrap d-none"></div>
   {%- endunless -%} {%- assign collection = page.collection -%} {%- if page.custom_collection -%} {%- assign collection = page.custom_collection -%} {%- endif -%} {%-UrlNavMenu {{nav_level}}|{{collection}} -%}
 </nav>
-<div id="nav_bottom" style="">
+<div id="nav_bottom">
   <!-- a href="https://www.braze.com/terms/" target="_blank"><div class="nav_bottom_item"><i class="fa fa-balance-scale"></i> LEGAL</div></a>
-  <a href="https://learning.braze.com" target="_blank"><div class="nav_bottom_item"><i class="fa fa-flask"></i> Braze Learning </div></a --> <a id="status-indicator" href="https://braze.statuspage.io" target="_blank">
+  <a href="https://learning.braze.com" target="_blank"><div class="nav_bottom_item"><i class="fa fa-flask"></i> Braze Learning </div></a --> <a id="status-indicator" href="https://braze.statuspage.io" target="_blank" rel="noopener noreferrer">
     <div class="nav_bottom_item">
 
       <div class="status-title">{{ site.data.i18n[site.language]['braze_status'] || Standard: "BRAZE SYSTEM STATUS"}}</div>
       <div class="color-dot"></div><div class="color-description">{{ site.data.i18n[site.language]['braze_status_check'] || Standard: "Überprüfungsstatus" }}</div>
   </div></a>
 </div>
+<div class="sidebar-toggle-row"><button type="button" id="sidebar_toggle" class="btn btn-info d-print-none" tabindex="0" aria-label="{{ site.data.i18n[site.language]['minimize_menu'] | default: 'Minimize menu' }}" title="{{ site.data.i18n[site.language]['minimize_menu'] | default: 'Minimize menu' }}" data-toggle="tooltip" data-placement="right" aria-expanded="true"> <i class="fas fa-angle-double-left" aria-hidden="true"></i> </button></div>
 
 <script type="text/javascript">
   function loadStatusPage() {

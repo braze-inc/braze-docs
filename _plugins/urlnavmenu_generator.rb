@@ -289,31 +289,44 @@ module Jekyll
                   end
 
                   items << "<div class='#{@nav_item_class}  #{curclass}' id='parent_#{@nav_prefix}_#{parent_page_key}' data-parent='parent_#{@nav_prefix}_#{parent_key}'>"
-                  # If last item, doesn't need to be collapsible
+                  # If has children: GitLab-style row = link/title on left, caret button on right
                   unless item.empty?
-                    items << "<div class='#{ @nav_active_page_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><a tabindex='-1' href='##{@nav_prefix}_#{parent_page_key}' aria-label='#{page_title}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' class='#{@nav_toggle_class} '  aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}'><i class='#{@fa_class}'></i><div class='#{ @nav_title_block}'> "
+                    items << "<div class='#{ @nav_active_page_class } nav_item_row'  data-parent='parent_#{@nav_prefix}_#{parent_key}'>"
+                    if is_active
+                      items << "<span class='#{@nav_title_class}'>#{page_title}</span>"
+                    else
+                      items << "<a href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title}'>#{page_title}</a>"
+                    end
+                    expand_label = "Expand section: #{page_title}"
+                    collapse_label = "Collapse section: #{page_title}"
+                    items << "<button type='button' class='#{@nav_toggle_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{ariaexpanded ? collapse_label : expand_label}'><i class='#{@fa_class} fa-chevron-#{ariaexpanded ? "down" : "right"}' aria-hidden='true'></i></button>"
+                    items << "</div>\n"
                   else
-                    items << "<div class='#{ @nav_active_basic_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><div class='#{ @nav_title_block}'> "
+                    items << "<div class='#{ @nav_active_basic_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><div class='#{ @nav_title_block}'>"
+                    if is_active
+                      items << "<div class='#{@nav_title_class}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'>#{page_title}</div>"
+                    else
+                      items << "<a href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title}'><div class='#{@nav_title_class}'>#{page_title}</div></a>"
+                    end
+                    items << "</div></div>\n"
                   end
-                  if is_active
-                    items << "<div class='#{@nav_title_class}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'>#{page_title} </div>"
-                  else
-                    items << "<a tabindex='-1' href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title}'> <div class='#{@nav_title_class}'>#{page_title}</div></a>"
-                  end
-                  items << "</div></div>\n</div>\n"
+                  items << "</div>\n"
 
                 # Last item on the so just display it as a list
                 else
                   items << "<div class='#{@nav_item_class}  #{curclass}' id='parent_#{@nav_prefix}_#{parent_page_key}' data-parent='parent_#{@nav_prefix}_#{parent_key}'> "
 
-                  # Last item, doesn't need to be collapsible
+                  # Last item (section with no page): row with title + caret button if has children
                   if item.empty?
                     items << " <div class='#{ @nav_title_block}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><div class='#{ @nav_active_basic_class } #{@nav_title_class}'>"
                     items << "#{page_title}"
+                    items << "</div></div></div>\n"
                   else
-                    items << "<div class='#{ @nav_active_page_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><a tabindex='-1' href='##{@nav_prefix}_#{parent_page_key}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' class='#{@nav_toggle_class} ' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title}'><i class='#{@fa_class}'></i><div class='#{ @nav_title_block}'><div class='#{@nav_title_class}'>#{page_title}</div></a>"
+                    expand_label = "Expand section: #{page_title}"
+                    collapse_label = "Collapse section: #{page_title}"
+                    items << "<div class='#{ @nav_active_page_class } nav_item_row'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><span class='#{@nav_title_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' role='button' tabindex='0'>#{page_title}</span><button type='button' class='#{@nav_toggle_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{ariaexpanded ? collapse_label : expand_label}'><i class='#{@fa_class} fa-chevron-#{ariaexpanded ? "down" : "right"}' aria-hidden='true'></i></button></div>"
+                    items << "</div>\n"
                   end
-                  items << "</div></div></div>\n"
                 end
                 # Append new items to previous list
                 unless item.empty?

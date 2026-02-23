@@ -9,7 +9,7 @@ $(document).ready(function(){
   var nav_input = $('#nav_filter_input');
   filter_action.click(function(e){
     nav_input.val('');
-    filter_action.removeClass('fa-times');
+    filter_action.find('i').removeClass('fa-times');
     nav_input.focus();
     nav_input.trigger('keyup');
   })
@@ -28,14 +28,14 @@ $(document).ready(function(){
         left_div.removeClass('filtered')
         left_div.removeClass('showall');
 
-        filter_action.removeClass('fa-times');
+        filter_action.find('i').removeClass('fa-times');
         left_nav.show();
       break;
       case 2:
         filter_msg.removeClass('d-none');
 
         left_navmenu_div.addClass('showall');
-        filter_action.addClass('fa-times');
+        filter_action.find('i').addClass('fa-times');
       default:
       left_navmenu_div.addClass("filtered");
       var cur_found = $('#left_navmenu div.nav-item:containsIN("' + cur_input.val() + '")');
@@ -45,7 +45,7 @@ $(document).ready(function(){
         left_nav.show();
       }
       else {
-        var resultmsg = '<div>Oops! We didn\'t find anything for that.</div><div><a href="/docs/search/?query=' + cur_input.val() + '">Try an Advanced Search instead!</a></div>';
+        var resultmsg = '<div>Oops! We didn\'t find anything for that.</div><div><a href="/docs/search/?query=' + encodeURIComponent(cur_input.val()) + '">Try an Advanced Search instead!</a></div>';
         filter_msg.html(resultmsg).show();
         left_nav.hide();
       }
@@ -57,14 +57,14 @@ $(document).ready(function(){
         var data_parent = $("#" + cur_item.attr("data-parent"));
         data_parent.removeClass("filtered");
         data_parent.addClass("showall");
-        $("#" + cur_item.attr("data-parent")).find("div > a").each(function (e,d){
+        $("#" + cur_item.attr("data-parent")).find("[data-target]").each(function (e,d){
             $($(this).attr("data-target")).removeClass("filtered");
             $($(this).attr("data-target")).addClass("showall");
         });
 
         $("#" + data_parent.attr("data-parent")).removeClass("filtered");
         $("#" + data_parent.attr("data-parent")).addClass("showall");
-        $("#" + data_parent.attr("data-parent")).find("div > a").each(function (e,d){
+        $("#" + data_parent.attr("data-parent")).find("[data-target]").each(function (e,d){
             $($(this).attr("data-target")).removeClass("filtered");
             $($(this).attr("data-target")).addClass("showall");
         });
@@ -73,7 +73,7 @@ $(document).ready(function(){
         data_parent.addClass("showall");
         $("#" + data_parent.attr("data-parent")).removeClass("filtered");
         $("#" + data_parent.attr("data-parent")).addClass("showall");
-        $("#" + data_parent.attr("data-parent")).find("div > a").each(function (e,d){
+        $("#" + data_parent.attr("data-parent")).find("[data-target]").each(function (e,d){
             $($(this).attr("data-target")).removeClass("filtered");
             $($(this).attr("data-target")).addClass("showall");
         });
@@ -84,14 +84,14 @@ $(document).ready(function(){
         data_parent.addClass("showall");
         $("#" + data_parent.attr("data-parent")).removeClass("filtered");
         $("#" + data_parent.attr("data-parent")).addClass("showall");
-        $("#" + data_parent.attr("data-parent")).find("div > a").each(function (e,d){
+        $("#" + data_parent.attr("data-parent")).find("[data-target]").each(function (e,d){
             $($(this).attr("data-target")).removeClass("filtered");
             $($(this).attr("data-target")).addClass("showall");
         });
 
       });
       /* if a nav menu item, then show all child elements */
-      cur_found.find("div > a").each(function(e, d) {
+      cur_found.find("[data-target]").each(function(e, d) {
         var cur_item= $(this);
         $(cur_item.attr("data-target") ).addClass("showall");
         $(cur_item.attr("data-target") ).removeClass("filtered");

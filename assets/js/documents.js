@@ -425,25 +425,69 @@ $(document).ready(function() {
   // link image fix for underline
   $('#article-main a:has(> img)').css('display','inline-block');
 
+  function updateSidebarToggleAccessibility() {
+    var nav_bar = $('#nav_bar');
+    var btn = $('#sidebar_toggle');
+    var isCollapsed = nav_bar.hasClass('hide_sidebar');
+    var minimizeLabel = (typeof site_i18n !== 'undefined' && site_i18n['minimize_menu']) ? site_i18n['minimize_menu'] : 'Minimize menu';
+    var expandLabel = (typeof site_i18n !== 'undefined' && site_i18n['expand_menu']) ? site_i18n['expand_menu'] : 'Expand menu';
+    var label = isCollapsed ? expandLabel : minimizeLabel;
+    btn.attr('aria-label', label);
+    btn.attr('title', label);
+    btn.attr('aria-expanded', !isCollapsed);
+    if (btn.data('bs.tooltip')) {
+      btn.tooltip('dispose');
+      btn.tooltip({ placement: 'right', trigger: 'hover focus' });
+    }
+  }
+
   $('#sidebar_toggle').click(function(e){
     var nav_bar = $('#nav_bar');
     var nav_icon = $('#sidebar_toggle i');
     var curstate = nav_bar.hasClass('hide_sidebar');
     if (curstate) {
       nav_bar.removeClass('hide_sidebar');
-      nav_icon.removeClass('fa-bars');
-      nav_icon.addClass('fa-chevron-left');
+      nav_icon.removeClass('fa-angle-double-right');
+      nav_icon.addClass('fa-angle-double-left');
       Cookies.set('ln', '', { expires: 365 });
     } else {
       nav_bar.addClass('hide_sidebar');
-      nav_icon.removeClass('fa-chevron-left');
-      nav_icon.addClass('fa-bars');
+      nav_icon.removeClass('fa-angle-double-left');
+      nav_icon.addClass('fa-angle-double-right');
       Cookies.set('ln','1',  { expires: 365 });
     }
+    updateSidebarToggleAccessibility();
   });
   if (Cookies.get('ln')) {
     $('#sidebar_toggle').trigger('click');
   }
+  updateSidebarToggleAccessibility();
+  if ($('#sidebar_toggle').length && typeof $.fn.tooltip !== 'undefined') {
+    $('#sidebar_toggle').tooltip({ placement: 'right', trigger: 'hover focus' });
+  }
+
+  // Keep collapse containers out of tab order; section caret buttons stay focusable (GitLab-style)
+  function setNavCollapseTabindex() {
+    $('#left_navmenu .collapse').attr('tabindex', '-1');
+  }
+  setNavCollapseTabindex();
+  $(document).on('shown.bs.collapse', '#left_navmenu .collapse', setNavCollapseTabindex);
+
+  // Update nav section caret icon and aria-label when expand/collapse (GitLab-style)
+  $(document).on('shown.bs.collapse', '#left_navmenu .collapse', function() {
+    var id = $(this).attr('id');
+    var $btn = $('#left_navmenu button.nav_toggle[data-target="#' + id + '"]');
+    $btn.attr('aria-expanded', 'true');
+    $btn.attr('aria-label', $btn.attr('aria-label').replace(/^Expand/, 'Collapse'));
+    $btn.find('i.fas').removeClass('fa-chevron-right').addClass('fa-chevron-down');
+  });
+  $(document).on('hidden.bs.collapse', '#left_navmenu .collapse', function() {
+    var id = $(this).attr('id');
+    var $btn = $('#left_navmenu button.nav_toggle[data-target="#' + id + '"]');
+    $btn.attr('aria-expanded', 'false');
+    $btn.attr('aria-label', $btn.attr('aria-label').replace(/^Collapse/, 'Expand'));
+    $btn.find('i.fas').removeClass('fa-chevron-down').addClass('fa-chevron-right');
+  });
 
   function setPanZoom(mermaid_charts){
     setTimeout(function() {
