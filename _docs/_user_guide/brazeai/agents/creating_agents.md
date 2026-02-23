@@ -14,7 +14,7 @@ alias: /creating-agents/
 
 Before you start, you'll need the following:
 
-- Access to the **Agent Console** in your workspace. Check with your Braze admins if you don’t see this option.  
+- [Permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) to access the **Agent Console** in your workspace. Check with your Braze admins if you don’t see this option.  
 - Permission to create and edit custom AI Agents.
 - An idea of what you want the agent to accomplish. Braze Agents can support the following actions:  
    - **Messaging:** Generate subject lines, headlines, in-product copy, or other content.  
@@ -55,24 +55,24 @@ Next, set up the details for your agent:
 
 ![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
 
-### Step 3: Write the instructions
+### Step 3: Write the instructions {#agent-instructions}
 
-Give the agent instructions. We recommend including a default as a catch-all response if the agent receives a response that can't be parsed. This error handling allows the agent to inform you of an unknown outcome variable. For example, rather than asking the agent for only "positive" or "negative" sentiment values, ask it to return "unsure" if it can't decide.
+Give the agent instructions. We recommend including instructions for what the agent should do in unexpected or ambiguous scenarios. This minimizes the risk that agent confusion leads to errors. For example, rather than asking the agent for only "positive" or "negative" sentiment values, ask it to return "unsure" if it can't decide.
 
 Refer to the [Writing instructions]({{site.baseurl}}/user_guide/brazeai/agents/reference/#writing-instructions) for best practices and [Examples]({{site.baseurl}}/user_guide/brazeai/agents/reference/#examples) for inspiration on how to prompt your agent.
 
 {% alert tip %}
-You can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes.
+For Canvas agents, you can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes. Any Liquid variable in the agent instructions is automatically passed to the Agent step when a user enters.
 {% endalert %}
 
 #### Step 3.1: Add context
 
 Select **Add context** to choose what your agent can reference. This includes:
 
-- [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Provide catalog fields for the agent to reference.
-- [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Consider a user's membership in a segment when personalizing messages. You can select up to three segments.
+- [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Give the agent access to your catalog data for more accurate responses.
+- [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Let the agent personalize responses based on which segments a user belongs to. You can select up to three segments.
 - [Brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
-- [All Canvas Context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analyze all Canvas Context variables for a user when this agent is invoked, including any that are not referenced in the **Instructions** section.
+- [All Canvas Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analyze all Canvas context data for a user when this agent is invoked, including any variables that are not referenced in the **Instructions** section.
 
 #### Step 3.2: Add optional settings
 
@@ -83,6 +83,8 @@ You can also set the daily execution limit for your agent. By default, this valu
 ### Step 4: Select the output
 
 In the **Output** section, you can organize and define the agent's output by basic schemas or advanced schemas.
+
+For best results, make sure that what you specify in the **Output** section matches any agent instructions you entered in [Step 3](#agent-instructions). For example, if you mentioned in the agent instructions that you want an object with two strings, make sure you specify an object with two strings in the **Output** section. If your agent instructions don't align with your specified output, the agent may get confused, time out, or generate undesired outputs.
 
 #### Basic schemas
 
@@ -101,7 +103,11 @@ Arrays are only available for Canvas agents, not catalog agents.
 Advanced schema options include manually structuring fields or using JSON.
 
 - **Fields:** A no-code way to enforce an agent output that you can use consistently.
-- **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema.
+- **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema. Only available for Canvas agents, not catalog agents.
+
+We recommend using advanced schemas when you want the agent to return a data structure with multiple values defined in a structured manner, rather than a single-value output. This allows the output to be better formatted as a consistent context variable. 
+
+For example, you may use an output format within an agent that is intended to create a sample travel itinerary for a user based on a form they submitted. The output format allows you to define that every agent response should come back with values for `tripStartDate`, `tripEndDate`, and `destination` values. Each of these values can be extracted from context variables and placed in a Message step for personalization using Liquid.
 
 {% tabs %}
 {% tab Fields %}
@@ -161,17 +167,9 @@ Review the output with a critical eye. Consider the following questions:
 
 If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
 
-### Step 6: Use and monitor your agent
+### Step 6: Use your agent
 
 Your agent is now ready to use! For details, refer to [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
-
-In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location. You can also monitor daily invocation limit errors at the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
-
-![Logs for an agent Random Number Generator, which include when and where the agent has been called.]({% image_buster /assets/img/ai_agent/agent_activity_logs.png %})
-
-Select **View** for a specific agent call to see the input, output, and user ID. You can also select **Export CSV** to export the logs shown on the current page only.
-
-![Logs for an agent Random Sports Assignment. The details panel shows the input prompt, output response, and an associated user ID.]({% image_buster /assets/img/ai_agent/agent_logs.png %})
 
 ## Related articles  
 

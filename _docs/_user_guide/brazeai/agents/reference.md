@@ -198,11 +198,13 @@ High: "Push Annual Plan Upgrade"
 Medium: "Educate on Premium Benefits" (Show them what they are missing)
 Low/Cold: "Re-engagement Offer" (Deep discount or extension)
 - Data Safety: Do not generate numerical probability scores (e.g., "85%"). Stick to the defined labels.
+
 Final Output Specification:
 You must return an object containing exactly three keys: "segment_label", "primary_barrier", and "retention_strategy".
 - segment_label: String (High, Medium, Low, Cold)
 - primary_barrier: String (Price_Sensitivity, Feature_Unawareness, Low_Intent, None)
 - retention_strategy: String (Push_Annual_Plan, Educate_Benefits, Re_engagement_Offer)
+
 Input & Output Example:
 <input_example>
 {{custom_attribute.${days_since_trial_start}}}: 20 
@@ -253,7 +255,7 @@ Temperatures aren't currently supported for use with OpenAI.
 
 ## Duplicate agents
 
-To test the effectiveness of an agent, you could duplicate an agent then apply changes to compare to the original. You can also treat duplicating agents as version control to track variations in the agent's details and any impacts on your messaging. To duplicate an agent:
+To test improvements or iterations of an agent, you could duplicate an agent then apply changes to compare to the original. You can also treat duplicating agents as version control to track variations in the agent's details and any impacts on your messaging. To duplicate an agent:
 
 1. Hover over the agent's row and select the <i class="fas fa-ellipsis-vertical"></i> menu.
 2. Select **Duplicate**.

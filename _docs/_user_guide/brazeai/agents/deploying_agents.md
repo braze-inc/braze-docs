@@ -10,12 +10,6 @@ page_order: 2
 
 > Learn how to put custom agents to use in Canvas steps or catalog fields after you create them. For an introduction, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/).
 
-## Agent usage
-
-In the **Usage** section of your agent, you can reference and navigate to where the agent is being actively used in catalogs and Canvases.
-
-![Agent Usage section that shows two active agents and one inactive agent for Canvases.]({% image_buster /assets/img/ai_agent/agent_usage.png %})
-
 ## Agents in Canvas  
 
 You can use agents as steps in a journey to personalize messages or guide decisioning in real time. For detailed setup steps, refer to [Agent step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
@@ -102,7 +96,21 @@ You can also manually override the agent-generated cell by selecting **Edit Item
 - If the API call to the foundational model provider returns any error, such as an invalid API key error or a rate limit error, the field value does not update.
 - You can review the agent's logs for details on failed runs.
 
-## Currents
+## Monitor your agent
+
+In the **Usage** section of your agent, you can reference and navigate to where the agent is being actively used in catalogs and Canvases.
+
+![Agent Usage section that shows two active agents and one inactive agent for Canvases.]({% image_buster /assets/img/ai_agent/agent_usage.png %})
+
+In the **Logs** section of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location. You can also monitor daily invocation limit errors at the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
+
+![Logs for an agent AI Sentiment Score.]({% image_buster /assets/img/ai_agent/agent_logs.png %})
+
+Select **View** for a specific agent call to see the input, output, and user ID. You can also select **Export CSV** to export the logs shown on the current page only.
+
+![The details panel for an agent Random Sports Assignment that shows the input prompt, output response, and an associated user ID.]({% image_buster /assets/img/ai_agent/agent_logs_view.png %})
+
+### Use Currents
 
 You can also use these Currents events to access the Kafka record schemas:
 

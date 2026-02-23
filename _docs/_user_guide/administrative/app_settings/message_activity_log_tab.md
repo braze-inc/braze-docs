@@ -36,7 +36,7 @@ You can filter by the following content logged in the **Message Activity Log**:
 - WhatsApp errors
 - Live Activity errors
 - Bad user trigger errors
-- Daily invocation limit errors
+- Braze Agent [daily invocation limit]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/#monitor-your-agent) errors
 
 These messages can come from our own system, your apps or platforms, or our third-party partners. This can result in an infinite number of messages that can appear in this log.
 
