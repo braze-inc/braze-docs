@@ -1,5 +1,5 @@
 {% alert important %}
-Braze is introducing [granular permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=granular%20permissions), a more flexible way to manage user access. Refer to [Migrating to granular permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/granular_permissions_migration/) to learn about the migration process, including how legacy permissions map to granular permissions.
+Braze is introducing [granular permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=granular%20permissions), a more flexible way to manage user access. Refer to [Migrating to granular permissions]({{site.baseurl}}/granular_permissions_migration/) to learn about the migration process, including how legacy permissions map to granular permissions.
 {% endalert %}
 
 ## Creating a permission set

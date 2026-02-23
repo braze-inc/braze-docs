@@ -82,71 +82,158 @@ A valid role object is a JSON object with the following key value pairs:
 
 ## Appendix
 
-### Company permission strings {#company}
-
-| As displayed in UI | SCIM API string |
-| --- | --- |
-| Administrator | `admin` |
-| Can Manage Company Settings | `manage_company_settings` |
-| Can Add/Remove Workspaces| `add_remove_app_groups` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
 ### Workspace permission strings {#workspace-strings}
 
 | Permission name | SCIM API string |
 | --- | --- |
-| Admin | `admin` |
-| Access Campaigns, Canvases, Cards, Segments, Media Library | `basic_access` |
-| Approve and Deny Canvases | `approve_deny_campaigns` |
-| Send Campaigns, Canvases | `send_campaigns_canvases` |
-| Publish Cards | `publish_cards` |
-| Edit Segments | `edit_segments` |
-| Export User Data | `export_user_data` |
-| View PII | `view_pii` |
-| View User Profiles PII Compliant | `view_user_profile` |
-| Manage Dashboard Users | `manage_dashboard_users` |
-| Manage Media Library Assets | `manage_media_library` |
-| View Usage Data | `view_usage_data` |
-| Import and Update User Data | `import_update_user_data` |
-| View Billing Details | `view_billing_details` |
-| Access Dev Console | `dev_console` |
+| View Campaigns | `view_campaigns` |
+| Edit Campaigns | `edit_campaigns` |
+| Archive Campaigns | `archive_campaigns` |
+| View Canvases | `view_canvases` |
+| Edit Canvases | `edit_canvases` |
+| Archive Canvases | `archive_canvases` |
+| View Frequency Capping Rules | `view_frequency_caps` |
+| Edit Frequency Capping Rules | `edit_frequency_caps` |
+| View Message Prioritization | `view_message_prioritization` |
+| Edit Message Prioritization | `edit_message_prioritization` |
+| View Content Blocks | `view_content_blocks` |
+| View Feature Flags | `view_feature_flags` |
+| Edit Feature Flags | edit_feature_flags |
+| Archive Feature Flags | archive_feature_flags |
+| View Segments | view_segments |
+| Edit Segments | edit_segments |
+| Edit Global Control Group | edit_global_control_group |
+| View IAM Templates | view_iam_templates |
+| Edit IAM Templates | edit_iam_templates |
+| Archive IAM Templates | archive_iam_templates |
+| View Email Templates | view_email_templates |
+| Edit Email Templates | edit_email_templates |
+| Archive Email Templates | archive_email_templates |
+| View Webhook Templates | view_webhook_templates |
+| Edit Webhook Templates | edit_webhook_templates |
+| Archive Webhook Templates | archive_webhook_templates |
+| View Link Templates | view_link_templates |
+| Edit Link Templates | edit_link_templates |
+| View Media Library Assets | view_media_library_assets |
+| View Locations | view_locations |
+| Edit Locations | edit_locations |
+| Archive Locations | archive_locations |
+| View Promotion Codes | view_promotion_codes |
+| Edit Promotion Codes | edit_promotion_codes |
+| Export Promotion Codes | export_promotion_codes |
+| View Preference Centers | view_preference_centers |
+| Edit Preference Centers | edit_preference_centers |
+| Edit Reports | edit_reports |
+| View Banner Templates | view_banner_templates |
+| View Multi Language Settings | view_multi_language_settings |
+| Use Operator | use_operator |
+| View Decisioning Studio Agents | view_decisioning_studio_agents |
+| View Decisioning Studio Conversion Event | view_decisioning_studio_conversion_event |
+| Launch Campaigns | `launch_campaigns` |
+| Launch Canvases | `launch_canvases` |
+| Edit Dashboard Users | `edit_dashboard_users` |
+| Edit Media Library Assets | `edit_media_library_assets` |
+| Delete Media Library Assets | `delete_media_library_asset` |
+| View Import Users | `view_import_users` |
+| Import Users	| `import_users` |
+| Edit User Data | `edit_user_data` |
+| View API Keys | `view_api_keys` |
+| Edit API Keys | `edit_api_keys` |
+| View Internal Groups | `view_internal_user_groups` |
+| Edit Internal Groups | `edit_internal_user_groups` |
+| View Message Activity Log | `view_message_activity_log` |
+| View Event User Log | `view_event_user_log` |
+| View API Identifiers | `view_api_identifiers` |
+| View API Usage Dashboard | `view_api_usage_dashboard` |
+| View API Limits | `view_api_limits` |
+| View API Usage Alerts | `view_api_usage_alerts` |
+| Edit API Usage Alerts | `edit_api_usage_alerts` |
+| View SDK Debugger | `view_sdk_debugger` |
+| Edit SDK Debugger | `edit_sdk_debugger` |
 | Launch Content Blocks | `launch_content_blocks` |
-| Manage External Integrations | `manage_external_integrations` |
-| Manage Apps | `manage_apps` |
-| Manage Teams | `manage_teams` |
-| Manage Events, Attributes, Purchases | `manage_events_attributes_purchases` |
-| Manage Tags | `manage_tags` |
-| Manage Email Settings | `manage_email_settings` |
-| Manage Subscription Groups | `manage_subscription_groups` |
-| Manage Approval Settings | `manage_approval_settings` |
-| Manage Catalogs Dashboard Permission | `manage_catalogs_dashboard_permission` |
+| Edit Cloud Data Ingestion | `edit_cloud_data_ingestion` |
+| Edit App Settings | `edit_app_settings` |
+| View Push Settings | `view_push_settings` |
+| Edit Push Settings | `edit_push_settings` |
+| View Teams | `view_teams` |
+| Edit Teams | `edit_teams` |
+| Archive Teams | `archive_teams` |
+| View Custom Attributes | `view_custom_attributes` |
+| Edit Custom Attributes | `edit_custom_attributes` |
+| Blocklist Custom Attributes | `blocklist_custom_attributes` |
+| Delete Custom Attributes | `delete_custom_attributes` |
+| Export Custom Attributes | `export_custom_attributes` |
+| View Custom Events	 | `view_custom_events` |
+| Edit Custom Events | `edit_custom_events` |
+| Blocklist Custom Events | `blocklist_custom_events` |
+| Delete Custom Events | `delete_custom_events` |
+| Export Custom Events | `export_custom_events` |
+| Edit Custom Event Property Segmentation | `edit_custom_event_property_segmentation` |
+| View Products | `view_products` |
+| Edit Products	 | `edit_products` |
+| Blocklist Products | `blocklist_products` |
+| Edit Purchase Property Segmentation | `edit_purchase_property_segmentation` |
+| View Tags | `view_tags` |
+| Edit Tags | `edit_tags` |
+| Delete Tags | `delete_tags` |
+| View Email Settings	| `view_email_settings` |
+| Edit Email Settings | `edit_email_settings` |
+| View Catalogs | `view_catalogs` |
+| Edit Catalogs	 | `edit_catalogs` |
+| Export Catalogs | `export_catalogs` |
+| Delete Catalogs | `delete_catalogs` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Team permission strings {#team}
 
 | Permission name | SCIM API string |
 | --- | --- |
-| Admin | `admin` |
-| Access Campaigns, Canvases, Cards, Segments, Media Library | `basic_access` |
-| Approve and Deny Canvases | `approve_deny_campaigns` |
-| Send Campaigns, Canvases | `send_campaigns_canvases` |
-| Publish Cards | `publish_cards` |
-| Edit Segments | `edit_segments` |
-| Export User Data | `export_user_data` |
-| View User Profile | `view_user_profile` |
-| Manage Dashboard Users | `manage_dashboard_users` |
-| Manage Media Library Assets | `manage_media_library` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-### Department strings
-
-| As displayed in UI | SCIM API string |
-| --- | --- |
-| Agency / Third Party | `agency` |
-| BI / Analytics | `bi` |
-| C-Suite | `c_suite` |
-| Engineering | `engineering` |
-| Finance | `finance` |
-| Marketing / Editorial | `marketing` |
-| Product Management | `pm` |
+| View Campaigns | `view_campaigns` |
+| Edit Campaigns | `edit_campaigns` |
+| Archive Campaigns | `archive_campaigns` |
+| View Canvases | `view_canvases` |
+| Edit Canvases | `edit_canvases` |
+| Archive Canvases | `archive_canvases` |
+| View Frequency Capping Rules | `view_frequency_caps` |
+| Edit Frequency Capping Rules | `edit_frequency_caps` |
+| View Message Prioritization | `view_message_prioritization` |
+| Edit Message Prioritization | `edit_message_prioritization` |
+| View Content Blocks | `view_content_blocks` |
+| View Feature Flags | `view_feature_flags` |
+| Edit Feature Flags | `edit_feature_flags` |
+| Archive Feature Flags | archive_feature_flags |
+| View Segments | view_segments |
+| Edit Segments | edit_segments |
+| Edit Global Control Group | edit_global_control_group |
+| View IAM Templates | view_iam_templates |
+| Edit IAM Templates | edit_iam_templates |
+| Archive IAM Templates | archive_iam_templates |
+| View Email Templates | view_email_templates |
+| Edit Email Templates | edit_email_templates |
+| Archive Email Templates | archive_email_templates |
+| View Webhook Templates | view_webhook_templates |
+| Edit Webhook Templates | edit_webhook_templates |
+| Archive Webhook Templates | archive_webhook_templates |
+| View Link Templates | view_link_templates |
+| Edit Link Templates | edit_link_templates |
+| View Media Library Assets | view_media_library_assets |
+| View Locations | view_locations |
+| Edit Locations | edit_locations |
+| Archive Locations | archive_locations |
+| View Promotion Codes | view_promotion_codes |
+| Edit Promotion Codes | edit_promotion_codes |
+| Export Promotion Codes | export_promotion_codes |
+| View Preference Centers | view_preference_centers |
+| Edit Preference Centers | edit_preference_centers |
+| View Reports | view_reports |
+| Create Reports | create_reports |
+| Edit Reports | edit_reports |
+| View Banner Templates | view_banner_templates |
+| View Multi Language Settings | view_multi_language_settings |
+| Use Operator | use_operator |
+| View Decisioning Studio Agents | view_decisioning_studio_agents |
+| View Decisioning Studio Conversion Event | view_decisioning_studio_conversion_event |
+| Launch Campaigns | `launch_campaigns` |
+| Launch Canvases | `launch_canvases` |
+| Edit Dashboard Users | `edit_dashboard_users` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

@@ -14,19 +14,20 @@ tool: Dashboard
 
 The migration includes these benefits:
 
-**More precise control:** Granular permissions offer more control, better security, and clearer oversight. Users only get the access they need.
-**Automatic mapping:** All current permissions are mapped automatically to their [granular equivalents](#legacy-to-granular-permissions-mapping). Your users keep the same access level unless you change it.
+- **More precise control:** Granular permissions offer more control, better security, and clearer oversight. Users only get the access they need.
+- **Automatic mapping:** All current permissions are mapped automatically to their [granular equivalents](#legacy-to-granular-permissions-mapping). Your users keep the same access level unless you change it.
 
 ## What to review
 
-When migration is available for your company, your Braze admins will receive emails and in-dashboard banners notifying them of the granular permission migration. To prepare for the migration, we recommend that a Braze admin do the following. 
-Identify users, roles, or permission sets that may need to be updated for more tailored access after you migrate to the new permission framework. 
-If your company has automated user provisioning using SCIM or compliance tools that rely on permission strings, update them to match the new granular structure. 
-Inform your Braze users of any upcoming changes to prevent confusion.
-At the scheduled migration date and time, your company will automatically migrate to granular permissions. No further action is required from company admins.
+When migration is planned for your company, your Braze admins will receive emails and in-dashboard banners notifying them of the granular permission migration. To prepare for the migration, we recommend that a Braze admin do the following.
+
+1. Identify users, roles, or permission sets that may need to be updated for more tailored access after you migrate to the new permission framework. 
+2. If your company has automated user provisioning using SCIM or compliance tools that rely on permission strings, update them to match the new granular structure. 
+3. Inform your Braze users of any upcoming changes to prevent confusion.
+4. At the scheduled migration date and time, your company will automatically migrate to granular permissions. No further action is required from company admins.
 
 {% alert important %}
-Permission updates will lock within 15 minutes of the scheduled migration time. This means you can’t change any permissions until the migration is over.
+Permission updates will lock within 15 minutes of the scheduled migration time. This means you can’t change any permissions until the migration is over, which we anticipate taking up to 15 minutes.
 {% endalert %}
 
 ## Legacy to granular permissions mapping
@@ -48,7 +49,7 @@ Permission updates will lock within 15 minutes of the scheduled migration time. 
 | Workspace | Launch and Manage Content Blocks | Edit Content Blocks<br>Archive Content Blocks<br>Launch Content Blocks |
 | Workspace | Manage Media Library | Edit Media Library Assets<br>Delete Media Library Assets |
 | Workspace | Launch Preference Centers | Launch Preference Centers |
-| Workspace | Manage Apps | View App Settings<br>Edit App Settings<br>View Push TTL<br>Edit Push TTL<br>Edit Banner Templates<br>Archive Banner Templates |
+| Workspace | Manage Apps | View App Settings<br>Edit App Settings<br>View Push Settings<br>Edit Push Settings<br>Edit Banner Templates<br>Archive Banner Templates |
 | Workspace | Manage Catalogs Dashboard Permission | View Catalogs<br>Edit Catalogs<br>Export Catalogs<br>Delete Catalogs |
 | Workspace | Manage Dashboard Users | Edit Dashboard Users |
 | Workspace | Manage Email Settings | View Email Settings<br>Edit Email Settings |
@@ -89,4 +90,17 @@ Permission updates will lock within 15 minutes of the scheduled migration time. 
 | Workspace | New | View Merge Users |
 | Workspace | New | View User Deletion Records |
 | Workspace | New | Delete Users From Dashboard |
+| Workspace | New | View Banner Templates |
+| Workspace | New | Edit Banner Templates |
+| Workspace | New | Archive Banner Templates |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+## Frequently asked questions
+
+### Can I opt out of or revert the migration?
+
+Braze does not support reverting the migration. We will support you through the migration and monitor the migration closely to quickly address any issues.
+
+### Will existing users lose access to Braze during the migration?
+
+No, there will be no downtime to Braze during the migration. However, updates to permissions will be locked during the migration. We anticipate the migration taking up to 15 minutes for completion.

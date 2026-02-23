@@ -51,9 +51,9 @@ Limited users have specific permissions that allow them to manage certain aspect
 
 | Limited user type | Description |
 | --- | --- |
-| Workspace Admin | Workspace Admins have permissions specific to managing Workspaces but do not have the same authority as Admins. Limited Users can inherit permissions similar to those of Workspace Admins if they have the necessary permissions checked. |
-| Admin | Admins have broader permissions, including the ability to delete dashboard users. However, they cannot delete their own accounts and must contact another Admin for that action. |
-| View-only access | To access parts of the dashboard, such as the **Campaigns** page, users must have view permissions assigned to them.
+| Workspace Admin | Workspace Admins have permissions specific to managing Workspaces but do not have the same authority as Company Admins. Limited Users can inherit permissions similar to those of Workspace Admins if they have the necessary permissions checked. |
+| Admin (Company Admin) | Company Admins have broader permissions, including the ability to delete dashboard users. However, they cannot delete their own accounts and must contact another Company Admin for that action. |
+| View-only access | To access parts of the dashboard, such as the Campaigns page, users must have view permissions assigned to them.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Limited access error
@@ -134,7 +134,7 @@ Under **Workspaces**, choose one or more workspaces from the dropdown. Then, und
 
 When you're finished, select **Update user**.
 
-![Workspace-level permissions being assigned through a role in Braze.]
+![Workspace-level permissions being assigned through a role in Braze.]({% image_buster /assets/img/braze_permissions/workspace_level_role.png %})
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -149,163 +149,142 @@ To download a list of your users and their permissions, go to **Settings** > **C
 
 ## List of permissions
 
-| Permission                                      | Definition                                                                                                                                                                                                 |
-|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| View Billing Details                            | View billing details                                                                                                                                                                 |
-| View Custom Attributes Marked as PII            | View custom attributes marked as PII                                                                                                                                               |
-| View PII                                        | View PII                                                                                                                                                                             |
-| View User Profiles PII Compliant                | Access user search and view user profiles with redacted PII                                                                                                                                                    |
-| View Usage Data                                 | View usage data                                                                                                                                                                      |
-| Merge Duplicate Users                           | Combine duplicate users into one user. Duplicates are removed after merging.                                                                                                                               |
-| Preview Duplicate Users                         | Preview which user profiles are duplicates                                                                                                                                                                 |
-| View Canvas Templates                           | View Canvas templates                                                                                                                                                                |
-| Archive Canvas Templates                        | Move Canvas templates to archive                                                                                                                                                                           |
-| Launch Content Blocks                           | Launch Content Blocks                                                                                                                                                                                      |
-| Launch Preference Centers                       | Launch preference centers                                                                                                                                                                                  |
-| Export User Data                                | Download users from the dashboard                                                                                                                                                                          |
-| Edit Currents Integrations                      | Create, update, and delete Currents integrations                                                                                                                                                           |
-| View Currents Integration                       | View Currents integrations                                                                                                                                                           |
-| View Campaigns                                  | View campaigns                                                                                                                                                                       |
-| Edit Campaigns                                  | Create and update campaigns                                                                                                                                                                                |
-| Archive Campaigns                               | Move campaigns to archive                                                                                                                                                                                  |
-| Send Campaigns                                | Start, stop, pause, or resume campaigns
-| 
-| Send Canvases permissions              | Start, stop, pause, or resume Canvases
-|
-| View Frequency Capping Rules         | View Frequency Capping Rules 
-|
-| Edit Frequency Capping Rules          | Create and update Frequency Capping Rules
-|
-| View Canvases                                   | View Canvases                                                                                                                                                                        |
-| Edit Canvases                                   | Create and update Canvases                                                                                                                                                                                 |
-| Archive Canvases                                | Move Canvases to archive                                                                                                                                                                                   |
-| View Content Blocks                             | View Content Blocks                                                                                                                                                                  |
-| Edit Content Blocks                             | Create and update Content Blocks                                                                                                                                                                           |
-| Archive Content Blocks                          | Move Content Blocks to archive                                                                                                                                                                             |
-| View Feature Flags                              | View feature flags                                                                                                                                                                  |
-| Edit Feature Flags                              | Create and update feature flags                                                                                                                                                                           |
-| Archive Feature Flags                           | Move feature flags to archive                                                                                                                                                                            |
-| View Segments                                   | View segments . Users must have the “View Segments” permission to have the “Edit Segments” or “Archive Segments” permission.                                                                                                                                                                       |
-| Archive Segments                                   | Archive and un-archive segments. Users with the “Archive Segments” permission must also be granted the “View Segments” permission.
-|
-| Edit Segments                                   | Create and update Segments. Users with the “Edit Segments” permission must also be granted the “View Segments permission”.                                                                                                                                                                                |
-| Edit Global Control Group                 | Create and save changes to the Global Control Group. Users with the “Edit Global Control Group” permission must also be granted permissions for “Edit Campaigns” and “Edit Canvases”.
-|
-| View Banner Templates                           | View banner templates                                                                                                                                                                |
-| Edit Banner Templates                           | Create and update banner templates   
-|
-| Archive Banner Templates 		| Move banner templates to archive                                                                                                                                                                      |
-| View Email Templates                            | View email templates                                                                                                                                                                 |
-| Edit Email Templates                            | Create and update email templates             
-|
-| Archive Email Templates                      | Move email templates to archive
-|
-| View Link Templates   	                | View link templates 
-|
-| Edit Link Templates	                            | Create and update link templates                                                                                                                                          |
-| Publish Landing Pages                      | Make a draft landing page active
-|
-| Edit Landing Page Drafts                    | Create and save landing page drafts
-|
-| View Landing Pages			| View landing pages
-|
-| Edit Landing Page Templates	|  Create and update landing page templates
-|
-| View Landing Page Templates	| View landing page templates
-|
-| Archive Landing Page Template 	| Move landing page templates to archive
-|
-| View Media Library Assets                       | View media library assets                                                                                                                                                            |
-| Edit Media Library Assets                       | Create and update media library assets                                                                                                                                                                     |
-| Delete Media Library Assets                     | Permanently delete media library assets                                                                                                                                                                    |
-| View Locations                                  | View locations                                                                                                                                                                      |
-| Edit Locations                                  | Create and edit locations                                                                                                                                                                                 |
-| Archive Locations                               | Move locations to archive                                                                                                                                                                                 |
-| View Promotion Codes                            | View promo codes                                                                                                                                                                     |
-| Edit Promotion Codes                            | Create and update promo codes                                                                                                                                                                              |
-| Export Promotion Codes                          | Download a list of promo codes from the dashboard                                                                                                                                                          |
-| View Preference Centers                      | View preference centers                                                                                                                                                              |
-| Edit Preference Centers                        | Create and update preference centers            
-
-Launch Preference Centers	                 | Make a draft Preference Center active or update an existing one                                                                                                                                                           |
-| View API Keys                                   | View API keys                                                                                                                                                                        |
-| Edit API Keys                                   | Create and update API keys                                                                                                                                                                                 |
-| View Internal Groups                            | View internal groups                                                                                                                                                                 |
-| Edit Internal Groups                            | Create and update internal groups                                                                                                                                                                          |
-| View Message Activity Log                       | View message activity logs                                                                                                                                                                                 |
-| View Event User Log                             | View event user logs                                                                                                                                                                                       |
-| View API identifiers                            | View API identifiers and other identifiers                                                                                                                                                                 |
-| View API Usage Dashboard                        | View the API usage dashboard                                                                                                                                                                               |
-| View API Limits                                 | View API rate limits                                                                                                                                                                                       |
-| View API Usage Alerts                           | View API usage alerts                                                                                                                                                                |
-| Edit API Usage Alerts                           | Create and update API usage alerts                                                                                                                                                                         |
-| Edit SDK Debugger                               | Create and download SDK Debugger sessions.                                                                                                                                                                 |
-| View SDK Debugger                               | View SDK Debugger  or debugging sessions.                                                                                                                                            |
-| View App Settings                               | View App Settings page                                                                                                                                                              |
-| Edit App Settings                               | Create, edit, and update apps within app settings.                                                                                                                                                                             |
-| View Catalogs                                   | View catalogs and selections                                                                                                                                                                      |
-| Edit Catalogs                                   | Create and update catalogs and selections                                                                                                                                                                                |
-| Export Catalogs                                 | Download catalogs from the dashboard                                                                                                                                                                       |
-| Delete Catalogs                                 | Permanently delete catalogs                                                                                                                                                                                |
-| View Dashboard Users                            | View Company Users                                                                                                                                                                  |
-| Edit Dashboard Users                            | Create and update company users                                                                                                                                                                            |
-| View Email Settings                             | View Email Preferences                                                                                                                                                                |
-| Edit Email Settings                             | Enable and update Email Preferences                                                                                                                                                             
-| 
-Edit Identifier Field-Level Encryption          | Enable and update Field-Level Encryption settings                                                                                                                                                        |
-| View Custom Attributes                          | View custom attributes and usage report                                                                                                                                                              |
-| Edit Custom Attributes                          | Create and update custom attributes                                                                                                                                                                        |
-| Blocklist Custom Attributes                     | Add custom attributes to a blocklist that restricts use in the dashboard                                                                                                                                   |
-| Delete Custom Attributes                        | Permanently delete custom attributes                                                                                                                                                                       |
-| Export Custom Attributes                        | Download custom attributes from the dashboard                                                                                                                                                              |
-| View Custom Events                              | View custom events and usage report, and add custom events to the daily analytics report email                                                                                                                                                                  |
-| Edit Custom Events                              | Create and update custom events                                                                                                                                                                            |
-| Blocklist Custom Events                         | Add custom events to a blocklist that restricts use in the dashboard                                                                                                                                       |
-| Delete Custom Events                            | Permanently delete custom events                                                                                                                                                                           |
-| Export Custom Events                            | Download custom events from the dashboard                                                                                                                                                                  |
-| Edit Custom Event Property Segmentation         | Enable and disable segmentation for custom event properties                                                                                                                                                                            |
-| View Products                                   | View products                                                                                                                                                                       |
-| Edit Products                                   | Create and update products                                                                                                                                                                                 |
-| Blocklist Products                              | Add products to a blocklist that restricts use in the dashboard                                                                                                                                            |
-| Edit Purchase Property Segmentation             | Enable and disable segmentation for purchase event properties                                                                                                                                                               |
-| Edit Technology Partners                        | Create and update technology partners                                                                                                                                                                      |
-| Edit Cloud Data Ingestion                       | Create, update, and delete sources and syncs                                                                                                                                                               |
-| View Multi Language Settings                    | View multi-language settings                                                                                                                                                        |
-| Create Multi Language Locale Settings           | Create and update multi-language locale settings                                                                                                                                                           |
-| Delete Multi Language Locale Settings           | Permanently delete multi-language locale settings                                                                                                                                                          |
-| Edit Subscriptions                              | Create and update subscription groups                                                                                                                                                            |
-| View Tags                                       | View tags                                                                                                                                                                           |
-| Edit Tags                                       | Create and update tags                                                                                                                                                                                     |
-| Delete Tags                                     | Permanently delete tags                                                                                                                                                                                    |
-| View Teams                                      | View Teams                                                                                                                                                                          |
-| Edit Teams                                      | Create and update teams                                                                                                                                                                                    |
-| Archive Teams                                   | Move teams to archive                                                                                                                                                                                      |
-| View Data Transformation                        | View data transformations                                                                                                                                                           |
-| Edit Data Transformation                        | Create and update data transformations                                                                                                                                                                     |
-| Launch Campaigns                                  | Start, stop, pause, or resume existing campaigns                                                                                                                                                                                   |
-| Launch Canvases                                   | Start, stop, pause, or resume existing Canvases                                                                                                                                                                                 |
-| Edit Canvas Templates                           | Create and update Canvas templates                                                                                                                                                                         |
+| Permission | Definition |
+|-------------------------------------------------|---------------------|
+| View Billing Details                            | View billing details |
+| View Custom Attributes Marked as PII            | View custom attributes marked as PII |
+| View PII                                        | View PII |
+| View User Profiles PII Compliant                | Access user search and view user profiles with redacted PII |
+| View Usage Data                                 | View usage data |
+| Merge Duplicate Users                           | Combine duplicate users into one user. Duplicates are removed after merging. |
+| Preview Duplicate Users                         | Preview which user profiles are duplicates |
+| View Canvas Templates                           | View Canvas templates |
+| Archive Canvas Templates                        | Move Canvas templates to archive |
+| Launch Content Blocks                           | Launch Content Blocks |
+| Launch Preference Centers                       | Launch preference centers |
+| Export User Data                                | Download users from the dashboard |
+| Edit Currents Integrations                      | Create, update, and delete Currents integrations |
+| View Currents Integration                       | View Currents integrations |
+| View Campaigns                                  | View campaigns |
+| Edit Campaigns                                  | Create and update campaigns |
+| Archive Campaigns                               | Move campaigns to archive |
+| Send Campaigns                                  | Start, stop, pause, or resume campaigns | 
+| Send Canvases                         		  | Start, stop, pause, or resume Canvases |
+| View Frequency Capping Rules                    | View Frequency Capping Rules |
+| Edit Frequency Capping Rules                    | Create and update Frequency Capping Rules |
+| View Canvases                                   | View Canvases |
+| Edit Canvases                                   | Create and update Canvases |
+| Archive Canvases                                | Move Canvases to archive |
+| View Content Blocks                             | View Content Blocks |
+| Edit Content Blocks                             | Create and update Content Blocks |
+| Archive Content Blocks                          | Move Content Blocks to archive |
+| View Feature Flags                              | View feature flags |
+| Edit Feature Flags                              | Create and update feature flags |
+| Archive Feature Flags                           | Move feature flags to archive |
+|  View WhatsApp Message Templates                | Allows users to view [WhatsApp message templates]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/?tab=template%20messages#step-2-compose-your-whatsapp-message). |
+| Edit WhatsApp Message Templates | Allows users to create WhatsApp message templates in the template builder. This feature is currently in early access. |
+| View Segments                                   | View segments . Users must have the “View Segments” permission to have the “Edit Segments” or “Archive Segments” permission. |
+| Archive Segments                                | Archive and un-archive segments. Users with the “Archive Segments” permission must also be granted the “View Segments” permission. |
+| Edit Segments                                   | Create and update Segments. Users with the “Edit Segments” permission must also be granted the “View Segments permission”. |
+| View Global Control Group                       | View Global Control Group setup page |
+| Edit Global Control Group                       | Create and save changes to the Global Control Group. Users with the “Edit Global Control Group” permission must also be granted permissions for “Edit Campaigns” and “Edit Canvases”. Users with the “Edit Global Control Group” permission are also granted the “View Global Control Group” permission. |
+| View Banner Templates                           | View banner templates |
+| Edit Banner Templates                           | Create and update banner templates |
+| Archive Banner Templates                   	  | Move banner templates to archive |
+| View Email Templates                            | View email templates |
+| Edit Email Templates                            | Create and update email templates |
+| Archive Email Templates                         | Move email templates to archive |
+| View Link Templates   	                      | View link templates |
+| Edit Link Templates	                          | Create and update link templates |
+| Publish Landing Pages                           | Make a draft landing page active |
+| Edit Landing Page Drafts                        | Create and save landing page drafts |
+| View Landing Pages			                  | View landing pages |
+| Edit Landing Page Templates	                  |  Create and update landing page templates |
+| View Landing Page Templates	                  | View landing page templates |
+| Archive Landing Page Template 	              | Move landing page templates to archive |
+| View Media Library Assets                       | View media library assets |
+| Edit Media Library Assets                       | Create and update media library assets |
+| Delete Media Library Assets                     | Permanently delete media library assets |
+| View Locations                                  | View locations |
+| Edit Locations                                  | Create and edit locations |
+| Archive Locations                               | Move locations to archive |
+| View Promotion Codes                            | View promo codes |
+| Edit Promotion Codes                            | Create and update promo codes |
+| Export Promotion Codes                          | Download a list of promo codes from the dashboard |
+| View Preference Centers                         | View preference centers  |
+| Edit Preference Centers                         | Create and update preference centers |
+| Launch Preference Centers	                      | Make a draft Preference Center active or update an existing one |
+| View API Keys                                   | View API keys |
+| Edit API Keys                                   | Create and update API keys |
+| View Internal Groups                            | View internal groups |
+| Edit Internal Groups                            | Create and update internal groups |
+| View Message Activity Log                       | View message activity logs |
+| View Event User Log                             | View event user logs |
+| View API identifiers                            | View API identifiers and other identifiers |
+| View API Usage Dashboard                        | View the API usage dashboard |
+| View API Limits                                 | View API rate limits |
+| View API Usage Alerts                           | View API usage alerts |
+| Edit API Usage Alerts                           | Create and update API usage alerts |
+| Edit SDK Debugger                               | Create and download SDK Debugger sessions |
+| View SDK Debugger                               | View SDK Debugger  or debugging sessions |
+| View App Settings                               | View App Settings page |
+| Edit App Settings                               | Create, edit, and update apps within app settings |
+| View Catalogs                                   | View catalogs and selections |
+| Edit Catalogs                                   | Create and update catalogs and selections |
+| Export Catalogs                                 | Download catalogs from the dashboard |
+| Delete Catalogs                                 | Permanently delete catalogs |
+| View Dashboard Users                            | View Company Users |
+| Edit Dashboard Users                            | Create and update company users 
+| View Email Settings                             | View Email Preferences |
+| Edit Email Settings                             | Enable and update Email Preferences | 
+Edit Identifier Field-Level Encryption            | Enable and update Field-Level Encryption settings |
+| View Custom Attributes                          | View custom attributes and usage report |
+| Edit Custom Attributes                          | Create and update custom attributes |
+| Blocklist Custom Attributes                     | Add custom attributes to a blocklist that restricts use in the dashboard |
+| Delete Custom Attributes                        | Permanently delete custom attributes |
+| Export Custom Attributes                        | Download custom attributes from the dashboard |
+| View Custom Events                              | View custom events and usage report, and add custom events to the daily analytics report email |
+| Edit Custom Events                              | Create and update custom events |
+| Blocklist Custom Events                         | Add custom events to a blocklist that restricts use in the dashboard |
+| Delete Custom Events                            | Permanently delete custom events |
+| Export Custom Events                            | Download custom events from the dashboard |
+| Edit Custom Event Property Segmentation         | Enable and disable segmentation for custom event properties |
+| View Products                                   | View products |
+| Edit Products                                   | Create and update products |
+| Blocklist Products                              | Add products to a blocklist that restricts use in the dashboard |
+| Edit Purchase Property Segmentation             | Enable and disable segmentation for purchase event properties |
+| Edit Technology Partners                        | Create and update technology partners |
+| Edit Cloud Data Ingestion                       | Create, update, and delete sources and syncs |
+| View Multi Language Settings                    | View multi-language settings |
+| Create Multi Language Locale Settings           | Create and update multi-language locale settings |
+| Delete Multi Language Locale Settings           | Permanently delete multi-language locale settings |
+| Edit Subscriptions                              | Create and update subscription groups |
+| View Tags                                       | View tags |
+| Edit Tags                                       | Create and update tags |
+| Delete Tags                                     | Permanently delete tags |
+| View Teams                                      | View Teams |
+| Edit Teams                                      | Create and update teams |
+| Archive Teams                                   | Move teams to archive |
+| View Data Transformation                        | View data transformations |
+| Edit Data Transformation                        | Create and update data transformations |
+| Launch Campaigns                                | Start, stop, pause, or resume existing campaigns |
+| Launch Canvases                                 | Start, stop, pause, or resume existing Canvases |
+| Edit Canvas Templates                           | Create and update Canvas templates |
 | Approve Campaigns                               | Approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you’re interested in participating in the early access. |
-| Approve Canvases                                | Approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you’re interested in participating in the early access.   |
-| View Placements                                 | View placement                                                                                                                                                                       |
-| Edit Placements                                 | Create and update placement                                                                                                                                                                                |
-| Archive Placements                              | Archive and un-archive placements                                                                                                                                                                                  |
-| View Push Settings                                   | View Push settings                                                                                                                                                                  |
-| Edit Push Settings                                   | Create and update Push settings                                                                                                                                                                            |
-| Edit Reports                                      | Create and update reports
-|
-| View Import Users                             | View CSV user imports                                                                                                                                                                |
-| Import Users                                    | Upload users to the dashboard                                                                                                                                                                              |
-| Edit User Data                                  | Create and update user data                                                                                                                                                                                |
-| View Merge Users                                | View a list of user merge records                                                                                                                                                                      |
-| View User Deletion Records			| View user deletion records
-|
-| Delete Users From Dashboard	| Permanently delete users from the dashboard individually or in bulk
-|      
-| View Custom AI Agents                                | Allows users to view custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. 
-|
-| Create Custom AI Agents                                | Allows users to create custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. 
-|
-| Edit Custom AI Agents                                | Allows users to edit custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. 
-|
+| Approve Canvases                                | Approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you’re interested in participating in the early access. |
+| View Placements                                 | View Banner placement |
+| Edit Placements                                 | View Banner placements without making changes |
+| Archive Placements                              | Move Banner placements to archive |
+| View Push Settings                              | View Push settings |
+| Edit Push Settings                              | Create and update Push settings |
+| Edit Reports                                    | Create and update reports |
+| View Import Users                               | View CSV user imports |
+| Import Users                                    | Upload users to the dashboard |
+| Edit User Data                                  | Create and update user data |
+| View Merge Users                                | View a list of user merge records |
+| View User Deletion Records	            	  | View user deletion records |
+| Delete Users From Dashboard	                  | Permanently delete users from the dashboard individually or in bulk. |      
+| View Custom AI Agents                           | Allows users to view custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. |
+| Create Custom AI Agents                         | Allows users to create custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. |
+| Edit Custom AI Agents                           | Allows users to edit custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
