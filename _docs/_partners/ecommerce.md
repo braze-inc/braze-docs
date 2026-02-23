@@ -59,5 +59,6 @@ valid_partner_list:
 - name: Algolia
   url: /docs/partners/algolia/
 - name: Tapcart
+- name: Tapcart
   url: /docs/partners/tapcart/
 ---
