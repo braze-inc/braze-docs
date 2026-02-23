@@ -231,7 +231,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>Total Clicks</i> is the number of unique recipients who clicked on a link in the delivered message.
+<i>Total Clicks</i> is the total number of times a delivered message was clicked. This count can include multiple clicks from the same user.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
@@ -251,12 +251,12 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>Unique Clicks</i>  is the distinct number of recipients who have clicked a link within a message at least once and is measured by <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+<i>Unique Clicks</i> is the distinct number of recipients who have clicked within a message at least once, regardless of how many times they clicked. This is measured by <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 {% if include.metric == "Unique Clicks No Dispatch ID" %}
-<i>Unique Clicks</i> is the distinct number of recipients who have clicked a link within a message at least once.
+<i>Unique Clicks</i> is the distinct number of recipients who have clicked within a message at least once, regardless of how many times they clicked.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}

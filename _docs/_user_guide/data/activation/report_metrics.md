@@ -898,7 +898,7 @@ Email, Content Cards, SMS/MMS, LINE
 |Channel|Additional information|
 |-------|-------|
 |LINE|Tracked after a minimum threshold of 20 messages per day has been reached. AMP emails include clicks recorded in both HTML and plaintext versions. This number may be artificially inflated by anti-spam tools.|
-|Banners|The total number (and percentage) of users who clicked within the delivered message, regardless of whether the same user clicks multiple times.|
+|Banners|The total number of times the message was clicked, including multiple clicks from the same user.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
@@ -906,7 +906,8 @@ Email, Content Cards, SMS/MMS, LINE
     Calculation:
     <ul>
         <li><b>Email:</b> (Total Clicks) / (Deliveries)</li>
-        <li><b>Content Cards:</b> (Total Clicks) / (Total Impressions)</li>
+        <li><b>Content Cards</b> <i>Total Clicks %</i>: (Total Clicks) / (Total Impressions). Of all the times the message was viewed, how many times it was clicked.</li>
+        <li><b>Banners</b> <i>Total Clicks %</i>: (Total Clicks) / (Total Impressions). Of all the times the message was viewed, how many times it was clicked.</li>
         <li><b>SMS:</b> (Click Opens) / (Deliveries)</li>
     </ul>
 </span>
@@ -1023,7 +1024,8 @@ This includes clicks on Braze-provided unsubscribe links.
     Calculation:
     <ul>
         <li><i>Unique Clicks</i>: Count</li>
-        <li><b>Content Cards</b> <i>Unique Clicks %</i> or <i>Unique Clicks Rate</i>: (Unique Clicks) / (Unique Impressions)</li>
+        <li><b>Content Cards</b> <i>Unique Clicks %</i> or <i>Unique Clicks Rate</i>: (Unique Clicks) / (Unique Impressions). Of the users who saw the message, the percentage who clicked it.</li>
+        <li><b>Banners</b> <i>Unique Clicks %</i> or <i>Unique Clicks Rate</i>: (Unique Clicks) / (Unique Impressions). Of the users who saw the message, the percentage who clicked it.</li>
         <li><b>Email</b> <i>Unique Clicks %</i> or <i>Unique Clicks Rate</i>: (Unique Clicks) / (Deliveries)</li>
     </ul>
 </span>

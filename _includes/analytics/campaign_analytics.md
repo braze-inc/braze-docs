@@ -224,7 +224,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-clicks">Unique Clicks</a></td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} This includes clicks on Braze-provided unsubscribe links.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} The click rate is calculated as unique clicks divided by unique impressions, representing the percentage of users who saw the message and clicked it. This includes clicks on Braze-provided unsubscribe links.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-dismissals">Unique Dismissals</a></td>
@@ -283,11 +283,11 @@ For the full definitions of all Banners metrics, refer to the [Report Metrics Gl
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">Total Clicks</a></td>
-            <td class="no-split"><i>Total Clicks</i> is the total number (and percentage) of users who clicked within the delivered message, regardless of whether the same user clicks multiple times.</td>
+            <td class="no-split"><i>Total Clicks</i> is the total number of times the message was clicked, including multiple clicks from the same user. The click rate is calculated as total clicks divided by total impressions, representing how often the message was clicked out of all the times it was viewed.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Unique Clicks</a></td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks No Dispatch ID' %} Each user is only counted once.</td>
+            <td class="no-split"><i>Unique Clicks</i> is the distinct number of users who clicked the message at least once. The click rate is calculated as unique clicks divided by unique impressions, representing the percentage of users who saw the message and clicked it. Each user is counted only once.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#primary-conversions">Primary Conversions</a></td>
