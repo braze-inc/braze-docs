@@ -1349,8 +1349,4 @@ WHERE rn = 1
   AND PUSH_TOKEN_STATE_CHANGE_TYPE != 'remove';
 ```
 
-{% alert important %}
-If you use the same FCM project or APNs bundle across multiple Braze workspaces, the same token may appear active on users in separate workspaces. This is because OS push providers (FCM and APNs) issue tokens based on FCM project or APNs bundle configuration, not per Braze workspace. Token movement between users only operates within a single workspace and will not remove a token from a user in another workspace. Contact your Braze representative if you plan to use multiple workspaces with the same FCM or APNs configuration.
-{% endalert %}
-
 {% endapi %}
