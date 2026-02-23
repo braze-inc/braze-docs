@@ -37,6 +37,7 @@ jobs:
         run: |
           export PROJECT_ROOT="$GITHUB_WORKSPACE"
           export PRIMARY_BRANCH="main"
+          mkdir -p "$PROJECT_ROOT/scripts/temp"
           chmod +x "$PROJECT_ROOT/scripts/create_deploy_text.sh"
           DEPLOY_TEXT=$("$PROJECT_ROOT/scripts/create_deploy_text.sh" || true)
 
@@ -58,8 +59,8 @@ jobs:
           EXISTING=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number')
 
           if [ -n "$EXISTING" ]; then
-            echo "Reusing existing PR #$EXISTING — updating title and body."
-            gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY"
+            echo "Reusing existing PR #$EXISTING — updating title, body, and label."
+            gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY" --add-label "Deploy"
             echo "pr_number=$EXISTING" >> "$GITHUB_OUTPUT"
           else
             gh pr create \
@@ -84,7 +85,9 @@ jobs:
       pull-requests: write
     steps:
       - name: Merge PR
+        # --admin bypasses branch protection (e.g. required reviews) because approval
+        # is already enforced by the Production Automation environment gate above.
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ needs.create-pr.outputs.pr_number }}
-        run: gh pr merge "$PR_NUMBER" --merge --admin
+        run: gh pr merge "$PR_NUMBER" --repo ${{ github.repository }} --merge --admin
