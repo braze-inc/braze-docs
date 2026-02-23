@@ -113,6 +113,10 @@ This section describes the main differences between card creation at campaign la
 
 ## Considerations
 
+### Rate limiting
+
+For Content Cards, whether rate-limiting options are available depends solely on the card creation setting, not the target audience size. Rate limiting is supported when card creation is set to at campaign launch but not when set to at first impression. For more information, refer to [Rate Limiting and Frequency Capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/).
+
 ### Changing card creation after launch
 
 Braze recommends not changing how cards are created after a campaign has launched. Due to the differences in how Messages Sent is calculated between the two card creation types, changing how cards are created after the campaign has launched can affect the accuracy of your send volume.

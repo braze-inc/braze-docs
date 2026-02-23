@@ -141,6 +141,10 @@ Some notes to keep in mind when configuring rate limits and what behavior you sh
     - Feature flags
     - Banners
 
+{% alert note %}
+For Content Cards, the only criterion that determines whether rate limiting is available is the [card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) setting. Content Cards created at campaign launch support rate limiting, while Content Cards created at first impression do not. The target audience size does not affect whether rate-limiting options appear.
+{% endalert %}
+
 #### Rate limiting and Connected Content retries
 
 When the [Connected Content retry]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/) is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of sending 75,000 messages with a 10,000 per minute rate limit. Imagine that in the first minute, the call fails or is slow and only sends 4,000 messages.
