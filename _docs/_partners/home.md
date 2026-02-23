@@ -401,4 +401,6 @@ valid_partner_list:
   url: /docs/partners/gemini/
 - name: Anthropic
   url: /docs/partners/anthropic/
+- name: Algolia
+  url: /docs/partners/algolia/
 ---
