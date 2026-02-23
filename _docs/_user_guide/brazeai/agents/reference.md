@@ -115,7 +115,7 @@ Input & Output Example:
 <input_example> 
 {{${first_name}}}: John Doe
 {{${language}}}: en
-{{custom_attribute.${loyalty status}}}: Gold Tier
+{{custom_attribute.${loyalty_status}}}: Gold Tier
 {{context.${city_searched}}}: Tokyo
 {{context.${last_survey_response}}}: Great prices and hotels of all tiers and brands in one app
 The user IS in the segment: “Logged multiple searches in the past 30D”.
