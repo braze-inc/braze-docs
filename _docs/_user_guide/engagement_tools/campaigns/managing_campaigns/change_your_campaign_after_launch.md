@@ -40,11 +40,12 @@ Any message content changes (including titles, bodies, and images) take effect i
 
 If you edit your campaign's scheduled send time or its audience, those changes are reflected in the actual campaign immediately.
 
-{% alert important %}
-If your campaign uses Intelligent Timing or Local Time Zone delivery, edits to the scheduled send time will not be reflected if the edit is made within 24 hours of the original send time. This is because:
-- **Intelligent Timing:** Braze begins calculating the optimal send time at midnight Samoa time. If this time has already passed, the message will have begun processing. For more information, see [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/).
-- **Local Time Zone delivery:** Editing a local time zone campaign that is scheduled less than 24 hours in advance will not alter the message's schedule. For more information, see [FAQs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign).
-{% endalert %}
+#### Considerations
+
+If your campaign uses Intelligent Timing or local time zone delivery, edits to the scheduled send time will not be reflected if the edit is made within 24 hours of the original send time. This is because:
+
+- **Intelligent Timing:** Braze begins calculating the optimal send time at midnight Samoa time. If this time has already passed, the message will have begun processing. For more information, refer to [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/).
+- **Local time zone delivery:** Editing a local time zone campaign that is scheduled less than 24 hours in advance will not alter the message's schedule. For more information, refer to the [How do I schedule a local time zone campaign?]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign)
 
 ### Send rate
 
