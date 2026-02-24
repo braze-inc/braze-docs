@@ -22,7 +22,7 @@ The Braze-powered **Auto** model is optimized for models whose thinking capabili
 This is the simplest option, with no extra setup required. Braze provides access to large language models (LLMs) directly. To use this option, select **Auto**, which uses Gemini models.
 
 {% alert important %}
-If you don't see **Braze Auto** as an option in the **Model** dropdown when creating an agent, contact your customer success manager to learn how to become eligible to use Braze Auto model.
+If you don't see **Braze Auto** as an option in the **Model** dropdown when creating an agent, contact your customer success manager to learn how to become eligible to use the Braze Auto model.
 {% endalert %}
 
 ### Option 2: Bring your own API key
