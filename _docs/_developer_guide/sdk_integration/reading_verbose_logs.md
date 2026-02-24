@@ -50,7 +50,7 @@ Completed the openSession call
 Opened session with activity: <ACTIVITY_NAME>
 ```
 
-A network request to the `/api/v3/data` endpoint follows with a session start (`ss`) event.
+Filter network requests for your configured Braze endpoint (for example, sdk.iad-01.braze.com) to see the session start (`ss`) event.
 
 **Session end:**
 
@@ -87,7 +87,7 @@ Updated push notification authorization:
 Received remote notifications device token: <PUSH_TOKEN>
 ```
 
-The push token is sent to Braze in the next `/api/v3/data` request. Look for `push_token` in the request body attributes:
+Filter for requests to your configured Braze endpoint (for example, sdk.iad-01.braze.com) and look for `push_token` in the request body attributes:
 
 ```
 "attributes": [
@@ -202,12 +202,7 @@ When a user starts a session and is eligible for an in-app message, the SDK rece
 {% tabs %}
 {% tab Swift %}
 
-Look for a response from the `/api/v3/template` endpoint containing the in-app message data:
-
-```
-[http] response 201
-<ENDPOINT>/api/v3/template
-```
+Filter for responses from your configured Braze endpoint (for example, sdk.iad-01.braze.com) containing the in-app message data.
 
 The response body contains the message payload, including:
 
@@ -292,7 +287,7 @@ This is expected behavior when no additional in-app messages are configured for 
 {% endtab %}
 {% tab Android %}
 
-Button clicks and dismissals are logged in the request body sent to the `/api/v3/data` endpoint. Look for events with the name `sbc` (button click) or `si` (impression).
+Filter for requests to your configured Braze endpoint (for example, sdk.iad-01.braze.com) and look for events with the name `sbc` (button click) or `si` (impression) in the request body.
 
 {% endtab %}
 {% endtabs %}
@@ -300,7 +295,7 @@ Button clicks and dismissals are logged in the request body sent to the `/api/v3
 ### What to check
 
 - If the in-app message doesn't display, verify that a session start is logged first.
-- Check the `/api/v3/template` response to confirm the message payload was delivered.
+- Filter for responses from your configured Braze endpoint to confirm the message payload was delivered.
 - If impressions aren't logging, verify you haven't implemented a custom `inAppMessageDisplay` delegate that suppresses logging.
 - If "No matching trigger for event" appears, this is normal and indicates that no additional in-app messages are configured for that event.
 
@@ -315,12 +310,7 @@ Content Cards sync on session start and when a manual refresh is requested. If n
 {% tabs %}
 {% tab Swift %}
 
-Look for a response from the `/api/v3/content_cards/sync` endpoint:
-
-```
-[http] response 201
-<ENDPOINT>/api/v3/content_cards/sync
-```
+Filter for responses from your configured Braze endpoint (for example, sdk.iad-01.braze.com) containing the card data.
 
 The response body contains the card data, including:
 
@@ -351,7 +341,7 @@ Key fields:
 Requesting content cards sync.
 ```
 
-Followed by a POST request to the `content_cards/sync` endpoint containing user and device information.
+Followed by a POST request to your configured Braze endpoint (for example, sdk.iad-01.braze.com) containing user and device information.
 
 {% endtab %}
 {% endtabs %}
@@ -399,7 +389,7 @@ Logged event:
 {% endtab %}
 {% tab Android %}
 
-Impressions, clicks, and dismissals are sent in the request body to `/api/v3/data`. Look for event names:
+Filter for requests to your configured Braze endpoint (for example, sdk.iad-01.braze.com) and look for event names in the request body:
 - `cci` — Content Card impression
 - `ccc` — Content Card click
 - `ccd` — Content Card dismissed
@@ -473,7 +463,7 @@ Key things to know:
 {% endtab %}
 {% tab Swift %}
 
-Look for user identification in the `/api/v3/data` request body:
+Filter for requests to your configured Braze endpoint (for example, sdk.iad-01.braze.com) and look for user identification in the request body:
 
 ```
 "user_id": "<EXTERNAL_ID>"
@@ -488,11 +478,13 @@ Verbose logs include full HTTP request and response details for SDK communicatio
 
 ### Request structure
 
+Filter for requests to your configured Braze endpoint (for example, sdk.iad-01.braze.com). The request structure includes:
+
 {% tabs %}
 {% tab Swift %}
 
 ```
-[http] request POST: <ENDPOINT>/api/v3/data
+[http] request POST: <YOUR_BRAZE_ENDPOINT>
 - Headers:
   - Content-Type: application/json
   - X-Braze-Api-Key: <REDACTED>
@@ -505,7 +497,7 @@ Verbose logs include full HTTP request and response details for SDK communicatio
 {% tab Android %}
 
 ```
-Making request(id = <REQUEST_ID>) to <ENDPOINT>/api/v3/data
+Making request(id = <REQUEST_ID>) to <YOUR_BRAZE_ENDPOINT>
 ```
 
 {% endtab %}
