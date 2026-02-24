@@ -12,7 +12,7 @@ description: "This reference article covers how to manage tags in the Braze dash
 
 For information on adding and using tags on campaigns, Canvases, segments, and custom data, see [Tags]({{site.baseurl}}/user_guide/data/activation/tags/).
 
-## Managing tags
+## Nesting tags
 
 ![Tags tab on the Manage Settings page.]({% image_buster /assets/img_archive/tags_view.png %})
 

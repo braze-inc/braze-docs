@@ -20,7 +20,7 @@ User data flows into Braze through many entry points. Collect and consolidate fi
 
 ### Activate your data
 
-Clean, organize, and prepare your data for use. This involves understanding your customers' behaviors and preferences in real-time with user profiles and segments. Reference the [Reports metric glossary]({{site.baseurl}}/user_guide/data/activation/report_metrics) as you create targeted messages, and use [catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/) to enrich your messages with product or content data. Identify how your customers are responding to these personalized experiences.
+Clean, organize, and prepare your data for use. This involves understanding your customers' behaviors and preferences in real-time with user profiles and segments. Reference the [Reports metric glossary]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/) as you create targeted messages, and use [catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/) to enrich your messages with product or content data. Identify how your customers are responding to these personalized experiences.
 
 ### Distribute your data
 
@@ -36,12 +36,12 @@ Data plays a crucial role in enhancing your customer engagement strategy by enab
 
 {% details Making your data work harder %}
 - **Flexible and component-based:** Our overarching goal is to help you utilize your data more effectively and fully. Built with a composable architecture, you can leverage the technologies you need to make your data work harder, without unnecessary middleware.
-- **Partner integrations:** We prioritize integrations with best of breed ecosystem technologies (and offer APIs) that make real-time, bi-directional data sharing easy.
+- **Partner integrations:** Braze prioritizes integrations with best-of-breed ecosystem technologies (and offers APIs) that make real-time, bi-directional data sharing straightforward.
 - **Stream-processing architecture:** You can trigger actions on any data point ingested into Braze for segmentation, orchestration, and personalization.
 {% enddetails %}
 
 {% details Enhancing data agility to drive performance %}
-- **Easy audience construction:** Reduce reliance on technical teams to create audiences and deliver personalized customer engagement at scale.
+- **Flexible audience construction:** Reduce reliance on technical teams to create audiences and deliver personalized customer engagement at scale.
 - **Speed and performance:** Engagement data and insights are delivered in real-time, which supports iterative, effective customer engagement, as well as broader business decision-making.
 {% enddetails %}
 

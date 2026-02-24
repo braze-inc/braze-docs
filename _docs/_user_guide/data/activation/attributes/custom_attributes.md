@@ -11,7 +11,7 @@ search_rank: 1
 
 > This page covers custom attributes, which are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. 
 
-When stored in Braze, custom attributes can be used to build out audience segments and personalize messaging using Liquid. Keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based on them like you can for custom events.
+When stored in Braze, custom attributes can be used to build out audience segments and personalize messaging using Liquid. Keep in mind that Braze doesn't store time-series information for custom attributes, so you can't get any graphs based on them like you can for custom events.
 
 ## Managing custom attributes
 
@@ -29,11 +29,13 @@ From this page, you can view, manage, create, or blocklist existing custom attri
 
 ### Blocklisting
 
-Custom attributes can be blocklisted individually in the actions menu, or up to 100 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters or graphs. Additionally, if the attribute is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
+Custom attributes can be blocklisted individually in the actions menu, or up to 100 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data is collected regarding that attribute, existing data is unavailable unless reactivated, and blocklisted attributes don't show up in filters or graphs. Additionally, if the attribute is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal appears explaining that all instances of the filters or triggers that reference it are removed and archived.
+
+For more details on blocklisting and deleting custom data, see [Blocklist custom data]({{site.baseurl}}/user_guide/data/activation/blocklist_custom_data/).
 
 ### Marking as personally identifiable information (PII)
 
-Administrators can also create custom attributes and mark them as PII from this page. These attributes will only be visible to admins and dashboard users with the "View Custom Attributes Marked as PII" permission.
+Administrators can also create custom attributes and mark them as PII from this page. These attributes are only visible to admins and dashboard users with the "View Custom Attributes Marked as PII" permission.
 
 ### Adding descriptions
 
@@ -52,7 +54,7 @@ There are two ways you can remove custom attributes from user profiles:
 
 ### Exporting data
 
-To export the list of custom attributes as a CSV file, select **Export all** at the top of the page. The CSV file will be generated, and a download link will be emailed to you.
+To export the list of custom attributes as a CSV file, select **Export all** at the top of the page. The CSV file is generated, and a download link is emailed to you.
 
 ## Viewing usage reports
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Workspace settings
-article_title: Workspace Settings
+article_title: Workspace settings
 page_order: 3
 layout: dev_guide
 guide_top_header: "Workspace settings"
