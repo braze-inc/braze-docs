@@ -116,11 +116,11 @@ For **docs templates** (layouts, includes):
 
 1. **Group by issue** — Batch all fixes for the same issue (same Rule Id or problem type) into a single PR, even when they span multiple files.
 2. **Exception: same file, multiple issues** — If a single file has multiple different issues, batch all of those fixes into one PR. In the PR description, note: "This file contained multiple issue types: [list Rule Ids or problem types]."
-4. **Branch naming**: `[ADA]-Cursor-<issue-summary>-<ddmmyyyy>`
+3. **Branch naming**: `[ADA]-Cursor-<issue-summary>-<ddmmyyyy>`
    - Example: `[ADA]-Cursor-input-label-exists-02242026`
-5. **PR naming**: `[ADA] <issue summary>`
+4. **PR naming**: `[ADA] <issue summary>`
    - Example: `[ADA] Fix input_label_exists (form control labels) across docs`
-6. **Label**: Add `--label "ada"` (or equivalent) when creating the PR.
+5. **Label**: Add `--label "ada"` (or equivalent) when creating the PR.
 
 ---
 
