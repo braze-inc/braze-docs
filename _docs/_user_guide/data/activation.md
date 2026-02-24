@@ -4,8 +4,7 @@ article_title: Data Activation
 page_order: 2
 layout: dev_guide
 guide_top_header: "Data Activation"
-guide_top_text: "> After unifying your data in Braze, it's time to use it. Activate your data by creating targeted messages, personalizing experiences, and setting up customer journeys that respond to what your customers do in real-time."
-guide_top_text2: "Custom data includes the unique traits (attributes) and actions (events) you send to Braze to power your engagement strategy. You can further enrich your messaging by referencing non-user data, such as product inventories, through catalogs, while using tags to organize and filter your data for better dashboard management. <br><br>Together, these tools allow you to personalize experiences and analyze performance across your entire customer lifecycle."
+guide_top_text: "> After unifying your data in Braze, it's time to use it. Activate your data by creating targeted messages, personalizing experiences, and setting up customer journeys that respond to what your customers do in real-time. <br><br>Custom data includes the unique traits (attributes) and actions (events) you send to Braze to power your engagement strategy. You can further enrich your messaging by referencing non-user data, such as product inventories, through catalogs, while using tags to organize and filter your data for better dashboard management. <br><br>Together, these tools allow you to personalize experiences and analyze performance across your entire customer lifecycle."
 page_type: landing
 description: "This section includes articles related to data activation for the Braze Data Platform."
 
