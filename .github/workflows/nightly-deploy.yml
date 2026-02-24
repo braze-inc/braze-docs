@@ -61,13 +61,6 @@ jobs:
           if [ -n "$EXISTING" ]; then
             echo "Reusing existing PR #$EXISTING — updating title, body, and label."
             gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY" --add-label "Deploy"
-
-            # Add reviewer only if not already requested (idempotent for nightly re-runs)
-            REQUESTED=$(gh api repos/${{ github.repository }}/pulls/$EXISTING -q '.requested_teams[].slug' 2>/dev/null || true)
-            if [[ "$REQUESTED" != *"braze-docs"* ]]; then
-              gh pr edit "$EXISTING" --add-reviewer braze-inc/braze-docs
-            fi
-
             echo "pr_number=$EXISTING" >> "$GITHUB_OUTPUT"
           else
             gh pr create \
@@ -75,8 +68,7 @@ jobs:
               --head develop \
               --title "$TITLE" \
               --body "$BODY" \
-              --label "Deploy" \
-              --reviewer braze-inc/braze-docs
+              --label "Deploy"
 
             NEW=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number')
             echo "Created PR #$NEW"
