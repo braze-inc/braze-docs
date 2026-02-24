@@ -9,7 +9,7 @@ description: "This article provides steps on how to use locales in your messages
 
 # Translating locales
 
-> After adding locales to your workspace, you can target users in different languages all within a single push, email, banner, or in-app message.
+> After adding locales to your workspace, you can target users in different languages all within a single push, email, banner, in-app message, or Content Block.
 
 {% multi_lang_include locales.md section="Prerequisites" %}
 
@@ -105,6 +105,13 @@ Select **Manage Languages** when editing your message.
 Select **Manage Languages** when editing your message.
 
 ![Multi-language settings for banners.]({% image_buster /assets/img/multi-language_support/banner_manage_languages.png %})
+
+{% endtab %}
+
+{% tab Content Block %}
+Select **Manage Languages** when editing your Content Block.
+
+![Multi-language settings for Content Blocks.]({% image_buster /assets/img/multi-language_support/content_block_manage_languages.png %}){: style="max-width:45%;"}
 
 {% endtab %}
 {% endtabs %}
