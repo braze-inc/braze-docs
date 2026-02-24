@@ -9,7 +9,7 @@ tool: Canvas
 
 # Context and event properties
 
-> This reference article covers information about `context` and `event_properties`, including when to use each property and the differences in behavior. <br><br> For information about custom event properties in general, check out [Custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/).
+> This reference article covers information about `context` and `event_properties`, including when to use each property and the differences in behavior. <br><br> For information about custom event properties in general, check out [Custom events properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
@@ -56,7 +56,7 @@ Audience eligibility is evaluated once at Canvas entry. If a user is merged duri
 
 ### Timestamps for triggers
 
-If you're using timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/#expected-format) from events that trigger action-based Canvases, which are referenced using [context]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties), timestamps are normalized to UTC.
+If you're using timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from events that trigger action-based Canvases, which are referenced using [context]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties), timestamps are normalized to UTC.
 
 Given this behavior, Braze strongly recommends you use a Liquid timezone filter like the following example to guarantee that your messages are sent with your [preferred timezone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter).
 

@@ -298,7 +298,7 @@ You can edit individual fields from a random or existing user to help test dynam
 
 ### Testing campaigns personalized with custom event properties
 
-Testing campaigns personalized with [custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/) differs slightly from testing other types of campaigns outlined. 
+Testing campaigns personalized with [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) differs slightly from testing other types of campaigns outlined. 
 
 {% tabs local %}
 {% tab Trigger manually %}
