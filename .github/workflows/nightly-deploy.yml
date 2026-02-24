@@ -55,7 +55,7 @@ jobs:
         run: |
           TITLE="Nightly Deploy — $(date -u +'%B %d, %Y')"
           BODY=$(cat "$RUNNER_TEMP/deploy_body.txt")
-          EXISTING=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number')
+          EXISTING=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number // empty')
 
           if [ -n "$EXISTING" ]; then
             echo "Reusing existing PR #$EXISTING — updating title, body, and label."
