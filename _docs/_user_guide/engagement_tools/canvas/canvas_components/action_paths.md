@@ -31,12 +31,12 @@ Within the **Action Settings**, you can also turn on the ranked order for your c
 
 ![The Action Settings with an evaluation window of 1 day.]({% image_buster /assets/img/actionpath_settings.png %})
 
-By default, **Ranking** is off. When a user enters the action path and performs the trigger event attached to any action group, they immediately advance through the relevant action group based on the **first qualifying action** they perform after entering the step. If a user performs a second action that matches a different action group, they do not switch paths — the first action determines their route. If a user doesn't perform a trigger event, then they advance through the default **Everyone Else** group at the end of the evaluation period.
+By default, **Ranking** is off. When a user enters the action path and performs the trigger event attached to any action group, they immediately advance through the relevant action group based on the **first qualifying action** they perform after entering the step. If a user performs a second action that matches a different action group, they do not switch paths—the first action determines their route. If a user doesn't perform a trigger event, then they advance through the default **Everyone Else** group at the end of the evaluation period.
 
 When **Advance users based on ranked order** is turned on, this means **Ranking** is on. So, all users are held until the end of the evaluation window. At the end of the evaluation period, users advance through the highest priority action group that they are eligible for at the end of the evaluation window. Users who do not perform any of the actions during the evaluation window advance through the default **Everyone Else** group.
 
 {% alert tip %}
-If you want to route users based on their current attributes or segment membership rather than actions they perform, use [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) instead.
+To route users based on their current attributes or segment membership rather than actions they perform, use [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) instead.
 {% endalert %}
 
 Note that you can trigger an action path when a nested custom attribute object changes, but not for arrays of nested custom attributes or changes to object array data types.
