@@ -1,7 +1,7 @@
 AGENTCONSOLE_AGENTEXECUTED_SHARED: Kafka record schema for when an Agent Console agent is executed
 	ID VARCHAR(16777216): Globally unique ID for this event
-	INVOCATION_ID VARCHAR(16777216): globally unique id for this message
-	REQUEST_ID VARCHAR(16777216): unique id for this overall LLM request and complete execution
+	INVOCATION_ID VARCHAR(16777216): Globally unique ID for this message
+	REQUEST_ID VARCHAR(16777216): unique ID for this overall LLM request and complete execution
 	DURATION NUMBER(38,0): Duration of the session in seconds
 	PROMPT_TOKENS NUMBER(38,0): how many prompt tokens this request used
 	COMPLETION_TOKENS NUMBER(38,0): how many completion tokens this request used
@@ -30,7 +30,7 @@ AGENTCONSOLE_AGENTEXECUTED_SHARED: Kafka record schema for when an Agent Console
 
 AGENTCONSOLE_TOOLINVOCATION_SHARED: Kafka record schema for when a tool is executed
 	ID VARCHAR(16777216): Globally unique ID for this event
-	TOOL_CALL_ID VARCHAR(16777216): globally unique id for this tool call
+	TOOL_CALL_ID VARCHAR(16777216): Globally unique ID for this tool call
 	DURATION NUMBER(38,0): Duration of the session in seconds
 	TIME NUMBER(38,0): UNIX timestamp at which the event happened
 	APP_GROUP_ID VARCHAR(16777216): BSON ID of the app group this user belongs to
@@ -289,7 +289,7 @@ USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE_SHARED: Push Notification Toke
 	PUSH_TOKEN_STATE_CHANGE_TYPE (VARCHAR(16777216)): A description of the push token state change type
 	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
 	APP_API_ID (VARCHAR(16777216)): API ID of the app on which this event occurred
-	TIME_MS	NUMBER(38,0): Time in millisecond when the event happened
+	TIME_MS	NUMBER(38,0): Time in milliseconds when the event happened
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED: when a user is subscribed or unsubscribed globally from a channel such as email
@@ -1084,7 +1084,7 @@ USERS_MESSAGES_EMAIL_RETRY_SHARED: This event occurs when a message is depriorit
 	RETRY_LOG VARCHAR(16777216): Log message describing retry details
 	SEND_ID VARCHAR(16777216): Message send ID this message belongs to
 	DISPATCH_ID VARCHAR(16777216): ID of the dispatch this message belongs to
-	CAMPAIGN_ID VARCHAR(16777216) BSON ID of the campaign this event belongs to
+	CAMPAIGN_ID VARCHAR(16777216): BSON ID of the campaign this event belongs to
 	CAMPAIGN_API_ID VARCHAR(16777216): API ID of the campaign this event belongs to
 	MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the message variation this user received
 	CANVAS_ID VARCHAR(16777216): BSON ID of the Canvas this event belongs to
