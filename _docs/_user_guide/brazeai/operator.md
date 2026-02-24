@@ -24,9 +24,9 @@ guide_featured_list:
 
 ## Data privacy and security
 
-### HIPAA Compliance 
+### HIPAA compliance
 
-AI Operator utilizes multi-turn conversation technology that is currently ineligible for OpenAI’s Zero Data Retention policy. AI Operator uses OpenAI's Modified Abuse Monitoring data retention policy, but AI Operator is not covered by the Business Associate Agreement (BAA) between Braze and OpenAI. Users should not prompt AI Operator to access Protected Health Information (PHI) stored in Braze or otherwise submit PHI to this feature.
+AI Operator utilizes multi-turn conversation technology that is currently ineligible for OpenAI's Zero Data Retention policy. AI Operator uses OpenAI's Modified Abuse Monitoring data retention policy, but AI Operator is not covered by the Business Associate Agreement (BAA) between Braze and OpenAI. Users should not prompt AI Operator to access Protected Health Information (PHI) stored in Braze or otherwise submit PHI to this feature.
 
 ### Model providers as sub-processors or third-party providers
 
