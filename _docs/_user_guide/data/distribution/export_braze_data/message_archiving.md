@@ -161,10 +161,13 @@ The `extras` field contains the key-value pairs configured in the **Email Extras
 }
 ```
 
-{% alert important %}
-**Push payload structure variations**: The top-level `payload` field in push notification archives contains the entire provider payload as sent to the device. Within this JSON, keys such as `aps` (for APNs) or `notification` and `data` (for FCM) can vary significantly depending on the message type, platform, and configuration.
+### Push payload structure variations
 
-Note that message archiving captures the message payload itself, but does not include delivery metadata that is sent to FCM or APNs. Delivery metadata includes:
+{% alert important %}
+The top-level `payload` field in push notification archives contains the entire provider payload as sent to the device. Within this JSON, keys such as `aps` (for APNs) or `notification` and `data` (for FCM) can vary significantly depending on the message type, platform, and configuration.
+{% endalert %}
+
+Message archiving captures the message payload itself, but does not include delivery metadata that is sent to FCM or APNs. Delivery metadata includes:
 
 - Device tokens
 - Priority settings
@@ -184,7 +187,6 @@ For example:
 Additionally, test sends from the dashboard may produce different payload structures than production messages.
 
 The JSON payload format can vary between messages and may change over time. When parsing archived push payloads, don't assume a fixed structure or expect the same fields to always be present. Implement flexible parsing logic that handles various payload formats.
-{% endalert %}
 
 {% endtab %}
 {% endtabs %}
