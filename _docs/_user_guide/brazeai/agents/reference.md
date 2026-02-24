@@ -21,6 +21,10 @@ The Braze-powered **Auto** model is optimized for models whose thinking capabili
 
 This is the simplest option, with no extra setup required. Braze provides access to large language models (LLMs) directly. To use this option, select **Auto**, which uses Gemini models.
 
+{% alert note %}
+If you don't see **Braze Auto** as an option in the **Model** dropdown when creating an agent, ask your customer success manager how to become eligible to use Braze Auto model.
+{% endalert %}
+
 ### Option 2: Bring your own API key
 
 With this option, you can connect your Braze account with providers like OpenAI, Anthropic, AWS Bedrock, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
