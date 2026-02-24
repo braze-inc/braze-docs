@@ -19,10 +19,10 @@ Some common custom event use cases include:
 
 - Triggering a campaign or Canvas based on a custom event using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)
 - Segmenting users by how many times they performed a custom event, when the last time the event occurred, and similar
-- Using dashboard [custom event analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) to view an aggregate of how often each event occurred
-- Finding additional analytics using [funnel]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) reports
-- Leveraging [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps
-- Generating more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
+- Using dashboard [custom event analytics](#analytics) to view an aggregate of how often each event occurred
+- Finding additional analytics using [funnel]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) reports
+- Leveraging [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps
+- Generating more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/)
 - Setting up [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) to define when users should exit your Canvas
 
 ## Managing custom events
