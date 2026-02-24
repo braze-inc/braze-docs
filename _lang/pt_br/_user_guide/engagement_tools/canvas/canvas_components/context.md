@@ -172,7 +172,7 @@ Em todas as circunstâncias, recomendamos enfaticamente o uso dos [filtros Liqui
 
 Quando o Canva Context estiver disponível de forma geral, os seguintes detalhes se aplicam:
 
-- Todos os registros de [data e]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) hora com um [tipo de data e hora]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) das [propriedades de eventos de gatilho]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) em Canvas baseados em ação estão em [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
+- Todos os registros de [data e]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) hora com um [tipo de data e hora]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) das [propriedades de eventos de gatilho]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) em Canvas baseados em ação estão em [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
 - Essa alteração afeta todos os Canvas baseados em ações, independentemente de o Canvas específico estar usando uma etapa do Context ou não.
 
 #### Qual é o motivo dessa mudança?

@@ -298,7 +298,7 @@ Puedes editar campos individuales de un usuario aleatorio o existente para ayuda
 
 ### Probar campañas personalizadas con propiedades de eventos personalizadas
 
-Probar campañas personalizadas con [propiedades del evento personalizadas]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) difiere ligeramente de probar otros tipos de campañas esbozadas. 
+Probar campañas personalizadas con [propiedades del evento personalizadas]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/) difiere ligeramente de probar otros tipos de campañas esbozadas. 
 
 {% tabs local %}
 {% tab Trigger manually %}

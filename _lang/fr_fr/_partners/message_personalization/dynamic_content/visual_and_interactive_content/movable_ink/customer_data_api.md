@@ -135,7 +135,7 @@ Vous pouvez générer une charge utile d'événement dans Braze en utilisant n'i
 
 Partagez cet exemple de charge utile avec votre équipe Expérience Client Movable Ink. Assurez-vous qu'il n'y a pas d'informations personnelles sensibles identifiables dans l'exemple de charge utile (telles que l'adresse e-mail, le numéro de téléphone ou les dates de naissance complètes). 
 
-Pour en savoir plus sur les propriétés des événements personnalisés et le format attendu des données contenues dans les propriétés, consultez [Propriétés des événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+Pour en savoir plus sur les propriétés des événements personnalisés et le format attendu des données contenues dans les propriétés, consultez [Propriétés des événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/).
 
 ### Utilisateurs connus contre utilisateurs anonymes
 

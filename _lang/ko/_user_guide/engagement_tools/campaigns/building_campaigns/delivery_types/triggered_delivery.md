@@ -154,7 +154,7 @@ You can also further filter trigger events through Braze [custom event propertie
 
 예를 들어 방금 등록한 남성 사용자에게 이벤트 트리거 캠페인을 보내고 싶다고 가정해 보겠습니다. 사용자가 등록하면 커스텀 이벤트 `registration`을 기록하는 동시에 사용자의 `gender` 속성을 설정합니다. Braze가 사용자의 성별을 처리하기 전에 이벤트가 트리거되어 캠페인을 받지 못할 수도 있습니다.
 
-모범 사례로, 이벤트 전에 캠페인이 세분화되는 속성이 Braze 서버로 플러시되는지 확인하세요. If this isn't possible, the best way to guarantee delivery is to use [custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. 예를 들어, 커스텀 이벤트 `registration`에 `gender` 속성정보를 추가하면 캠페인이 트리거될 때 필요한 데이터를 Braze가 확보할 수 있습니다.
+모범 사례로, 이벤트 전에 캠페인이 세분화되는 속성이 Braze 서버로 플러시되는지 확인하세요. If this isn't possible, the best way to guarantee delivery is to use [custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/) to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. 예를 들어, 커스텀 이벤트 `registration`에 `gender` 속성정보를 추가하면 캠페인이 트리거될 때 필요한 데이터를 Braze가 확보할 수 있습니다.
 
 또한 캠페인이 액션 기반이고 지연이 있는 경우, **전송 시 세그먼트 멤버십 재평가** 옵션을 선택하여 메시지를 전송할 때 사용자가 여전히 타겟 오디언스에 속해 있는지 확인할 수 있습니다.
 

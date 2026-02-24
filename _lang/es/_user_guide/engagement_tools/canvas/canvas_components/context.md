@@ -172,7 +172,7 @@ En cualquier caso, recomendamos encarecidamente utilizar [filtros Liquid time_zo
 
 Cuando el Contexto Canvas esté disponible de forma general, se aplicarán los siguientes detalles:
 
-- Todas las marcas de tiempo con un [tipo de fecha/hora]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) de [las propiedades del evento desencadenante]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) en los Lienzos basados en acciones están en [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
+- Todas las marcas de tiempo con un [tipo de fecha/hora]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) de [las propiedades del evento desencadenante]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) en los Lienzos basados en acciones están en [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
 - Este cambio afecta a todos los Canvas basados en acciones, tanto si el Canvas específico utiliza un paso en Canvas de Contexto como si no.
 
 #### ¿Cuál es la razón de este cambio?

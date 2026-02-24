@@ -135,7 +135,7 @@ Sie können in Braze eine Event-Nutzlast mit beliebigen Event-Eigenschaften erze
 
 Teilen Sie diese Beispiel-Nutzlast mit Ihrem Movable Ink Client Experience Team. Vergewissern Sie sich, dass keine sensiblen persönlichen Bezeichner (wie z.B. E-Mail Adresse, Telefonnummer oder vollständige Geburtsdaten) in der Nutzlast der Probe enthalten sind. 
 
-Wenn Sie mehr über angepasste Event-Eigenschaften und das erwartete Format der in den Eigenschaften enthaltenen Daten erfahren möchten, referenzieren Sie auf [Angepasste Event-Eigenschaften]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+Wenn Sie mehr über angepasste Event-Eigenschaften und das erwartete Format der in den Eigenschaften enthaltenen Daten erfahren möchten, referenzieren Sie auf [Angepasste Event-Eigenschaften]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/).
 
 ### Bekannte versus anonyme Nutzer:innen
 

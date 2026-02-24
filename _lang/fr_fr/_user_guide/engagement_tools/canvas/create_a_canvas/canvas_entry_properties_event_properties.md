@@ -9,7 +9,7 @@ tool: Canvas
 
 # Propriétés d’entrée et propriétés de l’événement Canvas
 
-> Cet article de référence fournit des informations au sujet de `canvas_entry_properties` et `event_properties`, y compris les moments dans lesquels il faut utiliser chaque propriété, y compris les différences entre leurs comportements. <br><br> Pour plus d'informations sur les propriétés d'événements personnalisés en général, consultez la rubrique [Propriétés d'événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+> Cet article de référence fournit des informations au sujet de `canvas_entry_properties` et `event_properties`, y compris les moments dans lesquels il faut utiliser chaque propriété, y compris les différences entre leurs comportements. <br><br> Pour plus d'informations sur les propriétés d'événements personnalisés en général, consultez la rubrique [Propriétés d'événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/).
 
 {% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
@@ -56,7 +56,7 @@ L'éligibilité de l'audience est évaluée une fois à l'entrée du canvas. Si 
 
 ### Horodatage des propriétés d'événement
 
-Si vous utilisez des horodatages de [type datetime]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) à partir de [propriétés d'événements déclencheurs]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) dans des toiles basées sur des actions, les horodatages sont normalisés en UTC. Certaines exceptions sont détaillées ci-dessous.
+Si vous utilisez des horodatages de [type datetime]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) à partir de [propriétés d'événements déclencheurs]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) dans des toiles basées sur des actions, les horodatages sont normalisés en UTC. Certaines exceptions sont détaillées ci-dessous.
 
 Compte tenu de ce comportement, Braze vous recommande vivement d'utiliser un filtre de fuseau horaire liquide tel que l'exemple suivant pour garantir l'envoi de vos messages avec votre [fuseau horaire préféré]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter).
 

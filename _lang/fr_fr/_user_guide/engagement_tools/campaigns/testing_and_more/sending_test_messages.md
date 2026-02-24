@@ -298,7 +298,7 @@ Vous pouvez modifier des champs individuels d'un utilisateur aléatoire ou exist
 
 ### Campagnes de test personnalisées avec des propriétés d'événement personnalisées
 
-Le test des campagnes personnalisées avec des [propriétés d'événement personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) diffère légèrement du test des autres types de campagnes décrites. 
+Le test des campagnes personnalisées avec des [propriétés d'événement personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/) diffère légèrement du test des autres types de campagnes décrites. 
 
 {% tabs local %}
 {% tab Trigger manually %}

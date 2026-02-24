@@ -49,7 +49,7 @@ description: "이 참조 문서는 Braze 캔버스에서 컨텍스트 변수의 
 이 단계에서 생성되거나 업데이트되는 컨텍스트 변수에는 다음과 같은 데이터 유형을 할당할 수 있습니다.
 
 {% alert note %}
-Context 변수는 [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format)와 동일한 데이터 유형의 예상 형식을 가집니다. <br><br>배열 유형을 사용할 때, Braze는 값을 JSON으로 구문 분석하려고 시도하며, 이는 객체 배열이 성공적으로 생성될 수 있도록 합니다. 배열 내의 객체가 유효한 JSON이 아닌 경우, 결과는 단순한 문자열 배열이 됩니다. <br><br>중첩된 객체 및 객체 배열의 경우, [`as_json_string` Liquid 필터](#converting-connected-content-strings-to-json)를 사용하십시오. Context 단계에서 동일한 객체를 생성하는 경우, `as_json_string`을 사용하여 객체를 렌더링해야 하며, 예를 들어 {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}과 같습니다.
+Context 변수는 [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format)와 동일한 데이터 유형의 예상 형식을 가집니다. <br><br>배열 유형을 사용할 때, Braze는 값을 JSON으로 구문 분석하려고 시도하며, 이는 객체 배열이 성공적으로 생성될 수 있도록 합니다. 배열 내의 객체가 유효한 JSON이 아닌 경우, 결과는 단순한 문자열 배열이 됩니다. <br><br>중첩된 객체 및 객체 배열의 경우, [`as_json_string` Liquid 필터](#converting-connected-content-strings-to-json)를 사용하십시오. Context 단계에서 동일한 객체를 생성하는 경우, `as_json_string`을 사용하여 객체를 렌더링해야 하며, 예를 들어 {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}과 같습니다.
 {% endalert %}
 
 | 데이터 유형 | 변수 이름 예시 | 예제 값 |

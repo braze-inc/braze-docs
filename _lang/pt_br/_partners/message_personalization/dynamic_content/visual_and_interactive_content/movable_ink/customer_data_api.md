@@ -135,7 +135,7 @@ Você pode gerar uma carga útil de evento no Braze usando qualquer propriedade 
 
 Compartilhe essa carga útil de amostra com a equipe de experiência do cliente da Movable Ink. Verifique se não há informações confidenciais de identificação pessoal na carga útil da amostra (como endereço de e-mail, número de telefone ou datas de nascimento completas). 
 
-Para saber mais sobre as propriedades de eventos personalizados e o formato esperado dos dados contidos nas propriedades, consulte [Propriedades de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+Para saber mais sobre as propriedades de eventos personalizados e o formato esperado dos dados contidos nas propriedades, consulte [Propriedades de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/).
 
 ### Usuários conhecidos versus anônimos
 
