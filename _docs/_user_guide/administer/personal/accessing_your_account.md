@@ -11,17 +11,17 @@ description: "This article covers how to get your Braze account, how to log in a
 
 > This article covers how to get your Braze account, how to log in after being granted access, and how to troubleshoot your dashboard access and dashboard performance.
 
-If you are your company's first Braze user and logging in for the first time, you will receive a welcome email from `@alerts.braze.com` asking you to confirm your email and log in on the first day of your contract.
+If you are your company's first Braze user and logging in for the first time, you receive a welcome email from `@alerts.braze.com` asking you to confirm your email and log in on the first day of your contract.
 
-After confirming your account, you can add additional users from the [Company Users]({{site.baseurl}}/user_guide/administer/global/user_management/manage_braze_users/) page of your dashboard. All users will receive an email asking them to confirm their account after they have been added.
+After confirming your account, you can add additional users from the [Company Users]({{site.baseurl}}/user_guide/administer/global/user_management/manage_braze_users/) page of your dashboard. All users receive an email asking them to confirm their account after they've been added.
 
-If you aren't the first user on your company's Braze account, contact your company's Braze account administrator and ask them to create your account. You will then receive a welcome email from `@alerts.braze.com` asking you to confirm your email and log in.
+If you aren't the first user on your company's Braze account, contact your company's Braze account administrator and ask them to create your account. You then receive a welcome email from `@alerts.braze.com` asking you to confirm your email and log in.
 
 ## Logging in
 
-Let's talk about how to log in, whether it's the first time or the millionth! If you are your company's first user, follow the guidance in the preceding section. If not, you can log in after your company's Braze admin creates your account.
+Whether it's your first time logging in or your hundredth, here's how to access your dashboard. If you are your company's first user, follow the guidance in the preceding section. Otherwise, you can log in after your company's Braze admin creates your account.
 
-You can either log in from the [Braze.com](https://www.braze.com) home site, or just use your dashboard URL that corresponds to your specific [Braze instance]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints/). For your convenience, Braze has several single sign-on (SSO) options such as:
+You can either log in from the [Braze.com](https://www.braze.com) home site, or use your dashboard URL that corresponds to your specific [Braze instance]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints/). For your convenience, Braze has several single sign-on (SSO) options such as:
 
 * [SAML SSO]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/saml_sso_setup/)
     * [SAML just-in-time provisioning]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/saml_just_in_time_provisioning/)
@@ -53,7 +53,7 @@ If your email provider is Gmail, you can create aliases by adding a `+` sign fol
 - **Original email:** `rocky@gmail.com`
 - **Alias email:** `rocky+1@gmail.com`
 
-Both email addresses will direct emails to the same inbox, but Braze will recognize them as separate accounts when you log in.
+Both email addresses direct emails to the same inbox, but Braze recognizes them as separate accounts when you log in.
 
 ### Create separate aliases with other providers
 
@@ -84,7 +84,7 @@ To reset your password, select the **Forgot your password?** link on the dashboa
 If you're having issues with dashboard performance, such as your dashboard or segment performance list not loading, try clearing your browser cache and cookies by following the steps for your respective browser.
 
 {% alert important %}
-Clearing cookies will log you out, so unsaved work will be lost.
+Clearing cookies logs you out, so unsaved work is lost.
 {% endalert %}
 
 - [Clear cache & cookies in Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
@@ -111,7 +111,7 @@ If you're still experiencing issues, [open a support ticket]({{site.baseurl}}/us
 
 If you're experiencing issues logging into Braze Learning and find yourself stuck in a loop that redirects you to the dashboard, do the following steps:
 
-1. If you have multiple Braze accounts, logging in with the wrong account twice will send you to the Braze dashboard. Confirm you're logging into the correct account.
+1. If you have multiple Braze accounts, logging in with the wrong account twice sends you to the Braze dashboard. Confirm you're logging into the correct account.
 2. If you have an ad blocker, confirm it is turned off. It may block cookies necessary for single sign-on functionality.
 3. Go to **Company Settings** > **Security Settings** and verify that single sign-on (SSO) is turned on.
 4. Confirm that your dashboard user profile includes both a first and last name. Not having a last name can disrupt the login process.
@@ -135,7 +135,7 @@ Braze cannot reset 2FA on behalf of users for security reasons, so if the admin 
 #### Considerations
 
 - If 2FA is enforced at the company level: After the reset, Braze prompts the user to set up their 2FA again the next time they log in.
-- If 2FA is not enforced at the company level: The user will log into the dashboard without needing to set up 2FA again. If they wish to enable 2FA, they can do so in Account Settings.
+- If 2FA is not enforced at the company level: The user logs into the dashboard without needing to set up 2FA again. If they want to enable 2FA, they can do so in Account Settings.
 
 {% alert note %}
 This reset process also applies to users who have been locked out of their account due to requesting too many tokens within the last hour.
@@ -143,7 +143,7 @@ This reset process also applies to users who have been locked out of their accou
 
 ### Locked out of account
 
-So you're locked out of your Braze Account—no worries! We can help you get back in.
+If you're locked out of your Braze account, you can get back in by following the steps below.
 
 You can tell what kind of lock out you're experiencing by the error message you receive:
 
@@ -155,7 +155,7 @@ You can tell what kind of lock out you're experiencing by the error message you 
 
 Your account security is important to us, so passwords are required to log into your Braze account.
 - Check that you are logging into the correct [Braze dashboard instance]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints/). Check with your account administrator or Braze account manager to be sure.
-- Your password may have expired, so you'll need to [reset it](#resetting-your-password).
+- Your password may have expired, so you need to [reset it](#resetting-your-password).
 - If you use a [single sign-on]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/saml_sso_setup/) service, check with your account administrator that the set up has been completed properly.
 - If your company is on several instances of Braze, you may be using the incorrect email to log in.
 
@@ -163,18 +163,18 @@ When in doubt, you can always [reset your password](#resetting-your-password).
 
 #### Instance error
 
-If you are using the same machine you usually do to log in, Braze should automatically detect the correct instance. However, in the event that it doesn't or you're logging in for the first time, we recommend that you consider the following:
+If you are using the same machine you usually do to log in, Braze should automatically detect the correct instance. However, if it doesn't or you're logging in for the first time, consider the following:
 
 - Check that you are logging into the correct [Braze dashboard instance]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints/). Check with your account administrator or Braze account manager to be sure.
 - If your company is on several instances of Braze, you may be using the incorrect email to log in.
 
 #### Account suspension
 
-This doesn't happen very often, but we take account suspension and deletions very seriously. If you encounter this error, we recommend reaching out to your company's Braze administrator, Braze account manager, or [Support][support].
+This doesn't happen very often, but Braze takes account suspension and deletions very seriously. If you encounter this error, reach out to your company's Braze administrator, Braze account manager, or [Support][support].
 
 ### Braze dashboard won't load or work as expected
 
-First, test if the dashboard will load in a different browser. If the issue doesn't persist in a different browser, try the following:
+First, test if the dashboard loads in a different browser. If the issue doesn't persist in a different browser, try the following:
 
 - **Re-launch the dashboard:** Log out, quit your browser, then try to log into your dashboard.
 - **Refresh your local browser:** [Clear your cookies and browser cache](#clearing-your-browser-cache-and-cookies), then try to log into your dashboard again.

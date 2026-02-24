@@ -27,7 +27,7 @@ You can also add tags to multiple campaigns, Canvases, or segments by selecting 
 ![Adding tags to multiple campaigns at the same time.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
 
 {% alert important %}
-When you use bulk tagging to apply a new tag to multiple campaigns that already have different tags, each selected campaign will receive the new tag, and any tags present on a campaign will be applied to all other selected campaigns, even if those tags were not originally associated with them.
+When you use bulk tagging to apply a new tag to multiple campaigns that already have different tags, each selected campaign receives the new tag, and any tags present on a campaign are applied to all other selected campaigns, even if those tags were not originally associated with them.
 {% endalert %}
 
 ### Viewing tags

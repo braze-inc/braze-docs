@@ -36,12 +36,12 @@ Data plays a crucial role in enhancing your customer engagement strategy by enab
 
 {% details Making your data work harder %}
 - **Flexible and component-based:** Our overarching goal is to help you utilize your data more effectively and fully. Built with a composable architecture, you can leverage the technologies you need to make your data work harder, without unnecessary middleware.
-- **Partner integrations:** We prioritize integrations with best of breed ecosystem technologies (and offer APIs) that make real-time, bi-directional data sharing easy.
+- **Partner integrations:** Braze prioritizes integrations with best-of-breed ecosystem technologies (and offers APIs) that make real-time, bi-directional data sharing straightforward.
 - **Stream-processing architecture:** You can trigger actions on any data point ingested into Braze for segmentation, orchestration, and personalization.
 {% enddetails %}
 
 {% details Enhancing data agility to drive performance %}
-- **Easy audience construction:** Reduce reliance on technical teams to create audiences and deliver personalized customer engagement at scale.
+- **Flexible audience construction:** Reduce reliance on technical teams to create audiences and deliver personalized customer engagement at scale.
 - **Speed and performance:** Engagement data and insights are delivered in real-time, which supports iterative, effective customer engagement, as well as broader business decision-making.
 {% enddetails %}
 

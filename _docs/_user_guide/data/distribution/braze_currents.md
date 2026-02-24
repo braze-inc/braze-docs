@@ -35,7 +35,7 @@ Currents allow you to:
 * Stream Braze event data continuously to power business intelligence tools, machine learning algorithms, and more.
 * Route Braze event data to a variety of other systems using [Tealium]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium/), [Segment]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/) or [mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mparticle/mparticle_for_currents/).
 
-There's so much more you can do with event data, accessed by Currents. Trust us—[Braze uses Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/use_cases/how_braze_uses_currents/) too!
+There's so much more you can do with event data, accessed by Currents. [Braze uses Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/use_cases/how_braze_uses_currents/) too!
 
 ## How to access Currents
 
