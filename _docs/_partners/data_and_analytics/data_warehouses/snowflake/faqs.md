@@ -59,10 +59,10 @@ The number of Connectors you need depends on your specific configuration and ent
 
 ### What options exist for isolating data from different workspaces within the same Snowflake account?
 
-You can achieve isolation logically using the `app_group_id` column, which identifies which workspace each row of data belongs to. The most common approaches are:
+You can isolate logically using the `app_group_id` column, which identifies what workspace each row of data belongs to. The most common approaches are:
 
 - **Views (recommended):** Create a view for each workspace filtered by `app_group_id`. This avoids duplicating data while still giving each team or use case a clean, scoped view of their workspace data.
-- **Local table copies:** Copy data into separate tables filtered by `app_group_id`. This approach duplicates data, so the view-based approach is generally preferred.
+- **Local table copies:** Copy data into separate tables filtered by `app_group_id`. This duplicates data, so the views approach is generally preferred.
 - **Row access policies and roles:** Use Snowflake-native row access policies combined with roles to restrict which rows each role can query. This keeps data in a single table while enforcing access at query time.
 
 You configure these within your Snowflake account.
