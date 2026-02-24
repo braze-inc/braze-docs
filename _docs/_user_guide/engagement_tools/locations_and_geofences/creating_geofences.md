@@ -74,7 +74,7 @@ When creating your geofences, consider the following details:
 
 ### Example
 
-The following example represents the correct GeoJSON format we accept for specifying two geofences: one for Braze headquarters in NYC, and one for the Statue of Liberty south of Manhattan.
+The following example shows the correct GeoJSON format for specifying two geofences: one for Braze headquarters in NYC, and one for the Statue of Liberty south of Manhattan.
 
 ```
 {
