@@ -3219,8 +3219,6 @@ validurls['/docs/user_guide/message_building_by_channel/banners/creating_campaig
 validurls['/docs/user_guide/brazeai/predictive_events/prediction_analytics/#prediction_quality'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/analytics/#prediction_quality';
 validurls['/docs/user_guide/brazeai/predictive_events/prediction_analytics/#purchase_score'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/analytics/#purchase_score';
 
-validurls['/docs/user_guide/data/unification/user_data/delete_users/'] = '/docs/delete_users/';
-
 validurls['/docs/user_guide/administrative/access_braze/navigation/'] = '/docs/user_guide/administrative/access_braze/braze_dashboard/';
 validurls['/docs/user_guide/administrative/access_braze/global_search/'] = '/docs/user_guide/administrative/access_braze/braze_dashboard/';
 
