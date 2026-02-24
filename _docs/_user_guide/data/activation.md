@@ -5,7 +5,7 @@ page_order: 2
 layout: dev_guide
 guide_top_header: "Data Activation"
 guide_top_text: "> After unifying your data in Braze, it's time to use it. Activate your data by creating targeted messages, personalizing experiences, and setting up customer journeys that respond to what your customers do in real-time."
-guide_top_text2: "In Braze, custom data refers to the events and attributes you define and send from your app or site. Custom events capture actions your users take, such as completing a purchase or adding an item to their cart. Custom attributes capture traits about your users, such as their subscription tier or favorite category. Together, this data powers segmentation, personalization, and analytics across your campaigns and Canvases."
+guide_top_text2: "Custom data includes the unique traits (attributes) and actions (events) you send to Braze to power your engagement strategy. You can further enrich your messaging by referencing non-user data, such as product inventories, through catalogs, while using tags to organize and filter your data for better dashboard management. <br><br>Together, these tools allow you to personalize experiences and analyze performance across your entire customer lifecycle."
 page_type: landing
 description: "This section includes articles related to data activation for the Braze Data Platform."
 
