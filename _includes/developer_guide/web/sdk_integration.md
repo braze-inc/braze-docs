@@ -167,7 +167,7 @@ if (!isLikelyBot()) {
 
 ### Logging
 
-To quickly enable logging, you can add `?brazeLogging=true` as a parameter to your website URL. Alternatively, you can enable [basic](#web_basic-logging) or [custom](#web_custom-logging) logging.
+To quickly enable logging, you can add `?brazeLogging=true` as a parameter to your website URL. Alternatively, you can enable [basic](#web_basic-logging) or [custom](#web_custom-logging) logging. For a centralized overview across all platforms, see [Verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging).
 
 #### Basic logging
 
