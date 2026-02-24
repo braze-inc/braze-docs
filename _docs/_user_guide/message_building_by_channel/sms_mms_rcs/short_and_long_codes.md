@@ -12,5 +12,5 @@ channel:
   - RCS
 ---
 
-{% multi_lang_include archive/short_and_long_codes.md %}
+{% multi_lang_include short_and_long_codes.md %}
 <!-- TEMP_REGENERATE_TRIGGER -->
