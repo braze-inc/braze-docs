@@ -290,7 +290,7 @@ $(document).ready(function() {
     </div>
     <fieldset id="glossary_filter">
         <legend class="glossary_text">  {{ page.glossary_mid_text }} </legend>
-        <label for="glossary_search" id="glossary_label">&#8205;<input id="glossary_search" type="search" placeholder="Search" aria-label="Search glossary" /></label>
+        <label for="glossary_search" id="glossary_label"><span class="sr-only">Search glossary</span><input id="glossary_search" type="search" placeholder="Search" /></label>
         <div id="glossary_filter_titlev2">{{ page.glossary_filter_text }}</div>
         {%- for tag in page.glossary_tags -%}
         <div class="glossary_filter_div">
