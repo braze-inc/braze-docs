@@ -1,11 +1,7 @@
 # Nightly Release Deploy
 #
-# Required secret: DEPLOY_MERGE_TOKEN
-#   A Personal Access Token (classic or fine-grained) from a user with write access
-#   who can bypass branch protection on main. Create at:
-#   https://github.com/settings/tokens (classic) or
-#   https://github.com/settings/tokens?type=beta (fine-grained)
-#   Add as repo secret: Settings → Secrets and variables → Actions → New repository secret
+# Creates a deploy PR (develop → main) on a schedule. Approval and merge are
+# done manually on the PR to satisfy branch protection rules.
 #
 name: Nightly Release Deploy
 
@@ -20,9 +16,6 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    outputs:
-      pr_number: ${{ steps.cpr.outputs.pr_number }}
-      skipped: ${{ steps.diff.outputs.skipped }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -41,8 +34,7 @@ jobs:
           fi
 
       - name: Generate deploy body text
-        if: steps.diff.outputs.skipped == 'false'
-        id: body
+        if: steps.diff.outputs.skipped != 'true'
         run: |
           export PROJECT_ROOT="$GITHUB_WORKSPACE"
           export PRIMARY_BRANCH="main"
@@ -54,12 +46,10 @@ jobs:
             DEPLOY_TEXT="No PR details available."
           fi
 
-          # Write to a file so we can pass multiline text cleanly
           echo "$DEPLOY_TEXT" > "$RUNNER_TEMP/deploy_body.txt"
 
       - name: Create or find Pull Request
-        if: steps.diff.outputs.skipped == 'false'
-        id: cpr
+        if: steps.diff.outputs.skipped != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -70,7 +60,6 @@ jobs:
           if [ -n "$EXISTING" ]; then
             echo "Reusing existing PR #$EXISTING — updating title, body, and label."
             gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY" --add-label "Deploy"
-            echo "pr_number=$EXISTING" >> "$GITHUB_OUTPUT"
           else
             gh pr create \
               --base main \
@@ -78,32 +67,4 @@ jobs:
               --title "$TITLE" \
               --body "$BODY" \
               --label "Deploy"
-
-            NEW=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number')
-            echo "Created PR #$NEW"
-            echo "pr_number=$NEW" >> "$GITHUB_OUTPUT"
           fi
-
-  approve-and-merge:
-    needs: create-pr
-    if: needs.create-pr.outputs.skipped != 'true'
-    runs-on: ubuntu-latest
-    environment: Production Automation
-    permissions:
-      contents: write
-      pull-requests: write
-    steps:
-      - name: Check for merge token
-        run: |
-          if [ -z "${{ secrets.DEPLOY_MERGE_TOKEN }}" ]; then
-            echo "::error::DEPLOY_MERGE_TOKEN secret is not set. Add a PAT at Settings → Secrets → Actions."
-            exit 1
-          fi
-      - name: Merge PR
-        # Uses DEPLOY_MERGE_TOKEN (PAT) because GITHUB_TOKEN cannot bypass branch
-        # protection (required reviews, status checks). The PAT must be from a user
-        # with write access who can bypass protection, or an org admin.
-        env:
-          GH_TOKEN: ${{ secrets.DEPLOY_MERGE_TOKEN }}
-          PR_NUMBER: ${{ needs.create-pr.outputs.pr_number }}
-        run: gh pr merge "$PR_NUMBER" --repo ${{ github.repository }} --merge --admin
