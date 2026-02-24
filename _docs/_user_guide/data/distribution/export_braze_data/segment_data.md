@@ -1,6 +1,6 @@
 ---
 nav_title: Segment data
-article_title: View and Understand Segment Data
+article_title: Segment Data
 page_order: 4
 page_type: reference
 description: "This page explains the segments section of your Braze dashboard, and includes a summary of the statistics provided."

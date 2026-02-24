@@ -1,6 +1,6 @@
 ---
-nav_title: Your reports
-article_title: Your Reports
+nav_title: Reports
+article_title: Reports
 page_order: 7
 layout: dev_guide
 guide_top_header: "Your reports"

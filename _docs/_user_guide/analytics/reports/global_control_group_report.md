@@ -1,6 +1,6 @@
 ---
-nav_title: Global Control Group
-article_title: Global Control Group
+nav_title: Global control group report
+article_title: Global Control Group Report
 alias: /global_control_group/
 page_order: 0
 
