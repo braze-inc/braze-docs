@@ -18,7 +18,7 @@ tool: Canvas
 
 When using this component in your Canvas, updates don't count toward your `/users/track` requests per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component doesn't log [data points]({{site.baseurl}}/user_guide/data/data_points/) when being used to update non-billable data points (such as subscription groups).
 
-When users enter the User Update step, and it completes processing, they advance to the next step. This means any subsequent messaging that relies on these user updates is up-to-date when the next step is run.
+After users enter the User Update step and it completes processing, they advance to the next step. This means any subsequent messaging that relies on these user updates is up-to-date when the next step is run.
 
 ## Creating a user update
 
