@@ -3,30 +3,32 @@ nav_title: Managing tags
 article_title: Managing tags
 page_order: 6
 page_type: reference
-description: "This reference article covers how to manage tags in the Braze dashboard—renaming, nesting, and organizing tags across campaigns, Canvases, and segments."
+description: "This reference article covers how to manage tags in the Braze dashboard, including nesting, renaming, and organizing tags across campaigns, Canvases, and segments."
 ---
 
 # Managing tags
 
-> Use the same tags across campaigns, Canvases, and segments. To efficiently rename, remove, or add tags across your dashboard, go to **Settings** > **Tag Management**.
+> You can manage the tags you use across campaigns, Canvases, and segments from a central location. To rename, remove, or add tags, go to **Settings** > **Tag Management**.
 
-For information on adding and using tags on campaigns, Canvases, segments, and custom data, see [Tags]({{site.baseurl}}/user_guide/data/activation/tags/).
+To learn how to add tags to campaigns, Canvases, segments, and custom data, see [Tags]({{site.baseurl}}/user_guide/data/activation/tags/).
 
 ## Nesting tags
 
-![Tags tab on the Manage Settings page.]({% image_buster /assets/img_archive/tags_view.png %})
+To further organize your tags, you can nest them under a parent tag. For example, you can keep all holiday tags nested under a parent `Holidays` tag, or all tags related to a stage of your marketing funnel under a parent `Funnel` tag.
 
-To further organize your tags, nest your tags under a parent tag. For example, you can keep all holiday tags nested under a parent `Holidays` tag, or all tags related to a stage of your marketing funnel under a parent `Funnel` tag. 
+![The Tag Management page showing a list of tags organized by nested groups.]({% image_buster /assets/img_archive/tags_view.png %})
 
-To do so, create a new tag, select **Nest Tag Under**, and choose which existing tag to nest your new tag under. You can also nest existing tags from the **Tag Management** page. On this page, hover over a row with your tag and click **<i class="fas fa-pencil-alt"></i>Edit**. Then, follow the same steps as before.
+To nest a new tag, create a tag, select **Nest Tag Under**, and choose which existing tag to nest your new tag under.
 
-![Create a nested tag.]({% image_buster /assets/img_archive/tag_nested.png %}){: style="max-width:70%;" }
+To nest an existing tag, go to the **Tag Management** page, hover over a row with your tag, and select **<i class="fas fa-pencil-alt"></i>Edit**. Then, select **Nest Tag Under** and choose the parent tag.
+
+![The new tag dialog with the Nest Tag Under option selected.]({% image_buster /assets/img_archive/tag_nested.png %}){: style="max-width:70%;" }
 
 ## Best practices {#tags-best-practices}
 
-Tags can be a useful organizational tool for keeping track of engagement tactics. You can link segments and campaigns to business objectives, funnel stages, and the like.
+Use tags to organize your campaigns, Canvases, and segments by business objectives, funnel stages, regions, and more.
 
-The following is an example of tags an eCommerce app might find useful:
+The following table shows example tags that an eCommerce app might find useful:
 
 <style>
 table td {
@@ -60,7 +62,7 @@ table td {
 
 ## Use cases
 
-Looking for inspiration on how to leverage tags to manage your messaging lifecycle? Here are some common use cases.
+The following are common use cases for using tags to manage your messaging lifecycle.
 
 {% tabs %}
 {% tab Throttling %}
