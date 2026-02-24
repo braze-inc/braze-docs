@@ -17,7 +17,7 @@ Deleting users is currently in early access. Contact your customer success manag
 
 ## Prerequisites
 
-To delete users, you'll need to be an admin or have **Delete User** permissions.
+To delete users, you must be an admin or have **Delete User** permissions.
 
 ## About user deletion
 
@@ -111,7 +111,7 @@ When you request a segment of users to be deleted, a [segment filter]({{site.bas
 ### Manage audience
 
 {% alert note %}
-To get the list of exact users that will be deleted, use the [Pending Deletion segment filter](#segment-filters) instead.
+To get the list of exact users who will be deleted, use the [Pending Deletion segment filter](#segment-filters) instead.
 {% endalert %}
 
 Go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
@@ -158,7 +158,7 @@ If a scheduled merge includes user profiles pending deletion, Braze skips those 
 
 Data sent from external systems or SDKs is still accepted, but the users will be deleted as scheduled regardless of activity.
 
-### Will Canvases and campaigns trigger for users pending deletion?
+### Do Canvases and campaigns trigger for users pending deletion?
 
 Yes. However, you can add a segment inclusion filter to exclude all users with the **Pending Deletion** [segment filter](#segment-filters).
 
