@@ -9,7 +9,7 @@ tool: Canvas
 
 # Propriedades de entrada da tela e propriedades de evento
 
-> Este artigo de referência aborda informações sobre `canvas_entry_properties` e `event_properties`, incluindo quando usar cada propriedade e as diferenças de comportamento. <br><br> Para saber mais sobre propriedades de eventos personalizados em geral, consulte [Propriedades de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/).
+> Este artigo de referência aborda informações sobre `canvas_entry_properties` e `event_properties`, incluindo quando usar cada propriedade e as diferenças de comportamento. <br><br> Para saber mais sobre propriedades de eventos personalizados em geral, consulte [Propriedades de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
@@ -56,7 +56,7 @@ A elegibilidade do público é avaliada uma vez na entrada do Canva. Se um usuá
 
 ### Carimbos de data e hora para propriedades de eventos
 
-Se estiver usando carimbos de [data]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) e hora com um [tipo de data e hora]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) das [propriedades de eventos de gatilho]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) em Canvas baseados em ação, os carimbos de data e hora serão normalizados para UTC. Algumas exceções estão detalhadas abaixo.
+Se estiver usando carimbos de [data]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) e hora com um [tipo de data e hora]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) das [propriedades de eventos de gatilho]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) em Canvas baseados em ação, os carimbos de data e hora serão normalizados para UTC. Algumas exceções estão detalhadas abaixo.
 
 Devido a esse comportamento, a Braze recomenda enfaticamente o uso de um filtro de fuso horário Liquid, como o exemplo a seguir, para garantir que suas mensagens sejam enviadas com o fuso [horário de]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter) sua [preferência]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter).
 

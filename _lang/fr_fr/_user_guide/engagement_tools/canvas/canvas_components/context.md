@@ -172,7 +172,7 @@ En toutes circonstances, nous vous recommandons vivement d'utiliser les [filtres
 
 Lorsque le contexte Canvas devient généralement disponible, les détails suivants s'appliquent :
 
-- Tous les horodatages de [type datetime]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) provenant des [propriétés des événements déclencheurs]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) dans les canevas basés sur l'action sont en [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
+- Tous les horodatages de [type datetime]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) provenant des [propriétés des événements déclencheurs]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) dans les canevas basés sur l'action sont en [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
 - Cette modification concerne toutes les toiles basées sur des actions, que la toile en question utilise ou non une étape contextuelle.
 
 #### Quelle est la raison de ce changement ?

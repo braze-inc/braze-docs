@@ -298,7 +298,7 @@ Sie können einzelne Felder eines zufälligen oder bestehenden Nutzers bearbeite
 
 ### Personalisierte Kampagnen mit benutzerdefinierten Ereigniseigenschaften testen
 
-Das Testen von Kampagnen, die mit [angepassten Event-Eigenschaften]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/) personalisiert sind, unterscheidet sich geringfügig vom Testen anderer Arten von Kampagnen, die hier beschrieben werden. 
+Das Testen von Kampagnen, die mit [angepassten Event-Eigenschaften]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) personalisiert sind, unterscheidet sich geringfügig vom Testen anderer Arten von Kampagnen, die hier beschrieben werden. 
 
 {% tabs local %}
 {% tab Trigger manually %}

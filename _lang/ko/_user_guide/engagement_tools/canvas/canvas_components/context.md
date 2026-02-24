@@ -172,7 +172,7 @@ tool: Canvas
 
 캔버스 컨텍스트가 일반적으로 사용 가능해지면 다음과 같은 세부 사항이 적용됩니다:
 
-- 액션 기반 캔버스의 [트리거 이벤트 속성정보에서]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) [날짜/시간 유형이]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) [UTC인](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) 모든 타임스탬프는 [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) 기준입니다. 
+- 액션 기반 캔버스의 [트리거 이벤트 속성정보에서]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) [날짜/시간 유형이]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) [UTC인](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) 모든 타임스탬프는 [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) 기준입니다. 
 - 이 변경 사항은 특정 캔버스가 컨텍스트 단계를 사용하고 있는지 여부에 관계없이 모든 액션 기반 캔버스에 영향을 줍니다.
 
 #### 이러한 변경의 이유는 무엇인가요?

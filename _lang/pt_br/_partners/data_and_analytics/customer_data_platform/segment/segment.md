@@ -359,14 +359,14 @@ Ao passar os dados de usuários, verifique se só passa valores para atributos q
 
 Quando rastrear um evento, registraremos esse evento como um [evento personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) usando o nome fornecido. 
 
-Os metadados enviados dentro do objeto de propriedades da chamada de rastreamento serão registrados no Braze como as propriedades de evento personalizado para o evento associado. Todos os [tipos de dados de propriedades de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/) são compatíveis.
+Os metadados enviados dentro do objeto de propriedades da chamada de rastreamento serão registrados no Braze como as propriedades de evento personalizado para o evento associado. Todos os [tipos de dados de propriedades de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) são compatíveis.
 
 Nos destinos [Ações do modo Web](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-event) e [Ações do modo Nuvem](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-event), os mapeamentos acima podem ser definidos usando a Ação de rastreamento de eventos.
 
 | Método de segmento | Método Braze | Exemplo |
 |---|---|---|
 | [Rastreamento](https://segment.com/docs/spec/track/) | Registrado como um [evento personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events). | Segmento: `analytics.track("played_game");` <br>Braze: `Braze.logCustomEvent("played_game");`|
-| [Rastreamento com propriedades](https://segment.com/docs/spec/track/) | Registrado como [propriedade de evento]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/). | Segmento: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` <br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
+| [Rastreamento com propriedades](https://segment.com/docs/spec/track/) | Registrado como [propriedade de evento]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties). | Segmento: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` <br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
 | [Rastreamento com o produto](https://segment.com/docs/spec/track/) | Registrado como um [evento de compra]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web). | Segmento: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});` <br>Braze: `Braze.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

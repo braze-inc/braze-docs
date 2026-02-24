@@ -9,7 +9,7 @@ tool: Canvas
 
 # Propiedades de entrada en el lienzo y propiedades de eventos
 
-> Este artículo de referencia cubre información sobre `canvas_entry_properties` y `event_properties`, incluyendo cuándo utilizar cada propiedad y las diferencias de comportamiento. <br><br> Para obtener información sobre las propiedades de eventos personalizados en general, consulte [Propiedades de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/).
+> Este artículo de referencia cubre información sobre `canvas_entry_properties` y `event_properties`, incluyendo cuándo utilizar cada propiedad y las diferencias de comportamiento. <br><br> Para obtener información sobre las propiedades de eventos personalizados en general, consulte [Propiedades de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
@@ -56,7 +56,7 @@ La elegibilidad de la audiencia se evalúa una vez a la entrada en Canvas. Si un
 
 ### Marcas de tiempo para propiedades del evento
 
-Si utilizas marcas de tiempo con un [tipo de fecha/hora]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) de las [propiedades del evento desencadenante]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) en los Lienzos basados en acciones, las marcas de tiempo se normalizan a UTC. A continuación se detallan algunas excepciones.
+Si utilizas marcas de tiempo con un [tipo de fecha/hora]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) de las [propiedades del evento desencadenante]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) en los Lienzos basados en acciones, las marcas de tiempo se normalizan a UTC. A continuación se detallan algunas excepciones.
 
 Dado este comportamiento, Braze te recomienda encarecidamente que utilices un filtro de zona horaria Liquid como el del ejemplo siguiente para garantizar que tus mensajes se envían con tu [zona horaria preferida]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter).
 

@@ -298,7 +298,7 @@ Webhook を作成した後、テスト送信を実行して Webhook の応答を
 
 ### カスタムイベントプロパティでパーソナライズされたキャンペーンのテスト
 
-[カスタムイベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/)でパーソナライズされたキャンペーンのテストは、ここで説明する他のタイプのキャンペーンのテストとは少し異なります。 
+[カスタムイベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties)でパーソナライズされたキャンペーンのテストは、ここで説明する他のタイプのキャンペーンのテストとは少し異なります。 
 
 {% tabs local %}
 {% tab Trigger manually %}

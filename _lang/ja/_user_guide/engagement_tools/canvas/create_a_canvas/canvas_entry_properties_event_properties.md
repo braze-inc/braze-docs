@@ -9,7 +9,7 @@ tool: Canvas
 
 # キャンバスエントリのプロパティとイベントのプロパティ
 
-> この記事では、`canvas_entry_properties` と `event_properties` について、それぞれのプロパティを使用するタイミングや動作の違いなどを説明します。<br><br> カスタムイベントプロパティ全般については、[「カスタムイベントプロパティ」]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/)を参照してください。
+> この記事では、`canvas_entry_properties` と `event_properties` について、それぞれのプロパティを使用するタイミングや動作の違いなどを説明します。<br><br> カスタムイベントプロパティ全般については、[「カスタムイベントプロパティ」]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties)を参照してください。
 
 {% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
@@ -56,7 +56,7 @@ tool: Canvas
 
 ### イベントプロパティのタイムスタンプ
 
-アクション ベースのキャンバスで[ datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) from [ トリガー event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) のタイムスタンプを使用している場合、タイムスタンプはUTC に正規化されます。いくつかの例外については、以下で詳しく説明します。
+アクション ベースのキャンバスで[ datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [ トリガー event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) のタイムスタンプを使用している場合、タイムスタンプはUTC に正規化されます。いくつかの例外については、以下で詳しく説明します。
 
 この動作を考慮して、Braze は、メッセージが [ preferred timezone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter) とともに送信されることを保証するために、次の例のような Liquid タイムゾーンフィルタを使用することを強くお勧めします。
 

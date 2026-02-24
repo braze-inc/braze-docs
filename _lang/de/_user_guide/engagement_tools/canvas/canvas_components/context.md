@@ -172,7 +172,7 @@ In jedem Fall empfehlen wir dringend die Verwendung von [Liquid time_zone Filter
 
 Wenn Canvas Context allgemein verfügbar wird, gelten die folgenden Details:
 
-- Alle Zeitstempel vom [Typ datetime]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) aus [Event-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in aktionsbasierten Canvase sind in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
+- Alle Zeitstempel vom [Typ datetime]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) aus [Event-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in aktionsbasierten Canvase sind in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
 - Diese Änderung wirkt sich auf alle aktionsbasierten Canvase aus, unabhängig davon, ob der jeweilige Canvas einen Kontext-Schritt verwendet oder nicht.
 
 #### Was ist der Grund für diese Änderung?

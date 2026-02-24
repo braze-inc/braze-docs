@@ -359,14 +359,14 @@ analytics.identify(
 
 あなたがイベントを追跡するとき、私たちは提供された名前を使用して[カスタムイベントとして]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events)そのイベントを記録する。 
 
-トラックコールのプロパティオブジェクト内で送信されたメタデータは、関連イベントのカスタムイベントプロパティとしてBrazeに記録される。すべての[カスタムイベントプロパティデータタイプが]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/)サポートされている。
+トラックコールのプロパティオブジェクト内で送信されたメタデータは、関連イベントのカスタムイベントプロパティとしてBrazeに記録される。すべての[カスタムイベントプロパティデータタイプが]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties)サポートされている。
 
 [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-event) 宛先と [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-event) 宛先では、Track Event Action を使用して前述のマッピングを設定できます。
 
 | Segment での方法 | Braze での方法 | 例 |
 |---|---|---|
 | [追跡](https://segment.com/docs/spec/track/) | [カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events)として記録される | Segment: `analytics.track("played_game");`<br>Braze: `Braze.logCustomEvent("played_game");`|
-| [プロパティを使用した追跡](https://segment.com/docs/spec/track/) | [イベントプロパティ]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/)として記録される | Segment: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});`<br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
+| [プロパティを使用した追跡](https://segment.com/docs/spec/track/) | [イベントプロパティ]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties)として記録される | Segment: `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});`<br>Braze: `Braze.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
 | [製品を使用した追跡](https://segment.com/docs/spec/track/) | [購入イベント]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)として記録される。 | Segment: `analytics.track("Order Completed", {products: [product_id: "ab12", price: 19]});`<br>Braze: `Braze.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

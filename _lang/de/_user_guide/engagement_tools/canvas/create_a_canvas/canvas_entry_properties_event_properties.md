@@ -9,7 +9,7 @@ tool: Canvas
 
 # Eigenschaften der Leinwandeinträge und Ereigniseigenschaften
 
-> Dieser Referenzartikel enthält Informationen zu `canvas_entry_properties` und `event_properties`, einschließlich der Frage, wann Sie welche Eigenschaft verwenden sollten und welche Unterschiede im Verhalten bestehen. <br><br> Informationen über benutzerdefinierte Ereigniseigenschaften im Allgemeinen finden Sie unter [Benutzerdefinierte Ereigniseigenschaften]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/custom_event_properties/).
+> Dieser Referenzartikel enthält Informationen zu `canvas_entry_properties` und `event_properties`, einschließlich der Frage, wann Sie welche Eigenschaft verwenden sollten und welche Unterschiede im Verhalten bestehen. <br><br> Informationen über benutzerdefinierte Ereigniseigenschaften im Allgemeinen finden Sie unter [Benutzerdefinierte Ereigniseigenschaften]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
@@ -56,7 +56,7 @@ Die Eignung der Zielgruppe wird einmal beim Eingang in Canvas bewertet. Wenn ein
 
 ### Zeitstempel für Event-Eigenschaften
 
-Wenn Sie in aktionsbasierten Canvase Zeitstempel mit dem [Typ datetime]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/#expected-format) aus den [Event-Eigenschaften von Triggern]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) verwenden, werden die Zeitstempel auf UTC normalisiert. Einige Ausnahmen sind im Folgenden aufgeführt.
+Wenn Sie in aktionsbasierten Canvase Zeitstempel mit dem [Typ datetime]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) aus den [Event-Eigenschaften von Triggern]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) verwenden, werden die Zeitstempel auf UTC normalisiert. Einige Ausnahmen sind im Folgenden aufgeführt.
 
 Angesichts dieses Verhaltens empfiehlt Braze dringend die Verwendung eines Liquid Zeitzonen-Filters wie dem folgenden Beispiel, um zu gewährleisten, dass Ihre Nachrichten in der von Ihnen [bevorzugten Zeitzone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter) gesendet werden.
 

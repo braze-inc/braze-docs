@@ -298,7 +298,7 @@ Se a prévia for feita como um usuário personalizado, insira o texto de vários
 
 ### Teste de campanhas personalizadas com propriedades de eventos personalizados
 
-O teste de campanhas personalizadas com [propriedades de eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/custom_event_properties/) é um pouco diferente do teste de outros tipos de campanhas descritas. 
+O teste de campanhas personalizadas com [propriedades de eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) é um pouco diferente do teste de outros tipos de campanhas descritas. 
 
 {% tabs local %}
 {% tab Trigger manually %}
