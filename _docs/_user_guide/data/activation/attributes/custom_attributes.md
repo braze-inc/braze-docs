@@ -19,7 +19,7 @@ Some common custom attribute use cases include:
 
 - Targeting and suppressing audiences by segmenting users based on traits like loyalty tier, subscription status, preferred language, or plan type
 - Personalizing messages with [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) by referencing attributes such as a user's first name, rewards points, or favorite category
-- Tracking lifecycle stages and user states, such as onboarding stage, account status, or trial end date, that represent user traits rather than time-series data
+- Tracking lifecycle stages and user states, such as onboarding stage, account status, or trial end date
 - Counting low-value actions with [numeric attributes]({{site.baseurl}}/user_guide/data/activation/attributes/data_types/#numbers), such as incrementing a `feature_views_count` attribute each time a user views a feature
 - Recording when low-value actions last occurred using [time attributes]({{site.baseurl}}/user_guide/data/activation/attributes/data_types/#time), such as `last_support_ticket_at` or `last_password_reset_at`
 - Storing user interests and history as [arrays]({{site.baseurl}}/user_guide/data/activation/attributes/data_types/#arrays), such as favorite genres or recently viewed content, for interest-based targeting
