@@ -10,10 +10,6 @@ description: "This page covers managing your company users, such as adding and d
 
 > Learn how to manage users in your company account, including adding, suspending, and deleting users.
 
-{% alert note %}
-Several sections on this page refer to the **Company Users** page. If you are using the [older navigation]({{site.baseurl}}/user_guide/administer/personal/the_braze_dashboard/), **Company Users** is called **Manage Users** and is located under your account icon.
-{% endalert %}
-
 ## Adding company users
 
 You must have administrator permissions to add users to your Braze account. 

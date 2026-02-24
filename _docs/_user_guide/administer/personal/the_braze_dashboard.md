@@ -166,7 +166,7 @@ Want to tell us what you think? You can share feedback about navigation, accessi
 ### Administrative tasks
 
 - [Create and manage workspaces]({{site.baseurl}}/user_guide/administer/global/create_and_manage_workspaces/)
-- [Manage Braze users]({{site.baseurl}}/user_guide/administer/global/user_management/manage_braze_users/)
+- [Manage Braze users]({{site.baseurl}}/user_guide/administer/global/user_management/manage_company_users/)
 - [User permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/)
 - [Teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/)
 

@@ -12,7 +12,7 @@ description: "This section covers managing Braze dashboard users, permissions, t
 guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Company users
-  link: /docs/user_guide/administer/global/user_management/manage_braze_users/
+  link: /docs/user_guide/administer/global/user_management/manage_company_users/
   image: /assets/img/braze_icons/users-01.svg
 - name: Permissions
   link: /docs/user_guide/administer/global/user_management/permissions/

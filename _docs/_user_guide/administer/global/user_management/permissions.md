@@ -92,7 +92,7 @@ To edit a user's current admin, company, or workspace permissions, go to **Setti
 Admins have access to all features and the ability to modify any company setting. They can:
 
 - Change [approval settings]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)
-- Add, edit, delete, suspend, or unsuspend other [company users]({{site.baseurl}}/user_guide/administer/global/user_management/manage_braze_users/)
+- Add, edit, delete, suspend, or unsuspend other [company users]({{site.baseurl}}/user_guide/administer/global/user_management/manage_company_users/)
 - Export company users as a CSV
 
 To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
