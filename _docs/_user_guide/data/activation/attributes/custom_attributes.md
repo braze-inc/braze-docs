@@ -13,6 +13,19 @@ search_rank: 1
 
 When stored in Braze, custom attributes can be used to build out audience segments and personalize messaging using Liquid. Keep in mind that Braze doesn't store time-series information for custom attributes, so you can't get any graphs based on them like you can for custom events.
 
+## Use cases
+
+Some common custom attribute use cases include:
+
+- Targeting and suppressing audiences by segmenting users based on traits like loyalty tier, subscription status, preferred language, or plan type
+- Personalizing messages with [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) by referencing attributes such as a user's first name, rewards points, or favorite category
+- Tracking lifecycle stages and user states, such as onboarding stage, account status, or trial end date, that represent user traits rather than time-series data
+- Counting low-value actions with [numeric attributes]({{site.baseurl}}/user_guide/data/activation/attributes/data_types/#numbers), such as incrementing a `feature_views_count` attribute each time a user views a feature
+- Recording when low-value actions last occurred using [time attributes]({{site.baseurl}}/user_guide/data/activation/attributes/data_types/#time), such as `last_support_ticket_at` or `last_password_reset_at`
+- Storing user interests and history as [arrays]({{site.baseurl}}/user_guide/data/activation/attributes/data_types/#arrays), such as favorite genres or recently viewed content, for interest-based targeting
+- Storing richer profile data as [objects]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support/) or [arrays of objects]({{site.baseurl}}/user_guide/data/activation/attributes/array_of_objects/), such as structured preferences or multiple saved addresses
+- Triggering action-based messages when an attribute value changes using [attribute triggers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/), such as sending a tier-up notification when a user's `rewards_tier` changes
+
 ## Managing custom attributes
 
 To create and manage custom attributes in the dashboard, go to **Data Settings** > **Custom Attributes**. 
