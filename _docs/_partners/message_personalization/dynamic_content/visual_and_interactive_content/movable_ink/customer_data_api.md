@@ -135,7 +135,7 @@ You can generate an event payload within Braze using any event properties. Gener
 
 Share this sample payload with your Movable Ink Client Experience team. Make sure that there is no sensitive personally identifiable information in the sample payload (such as email address, phone number, or full birth dates). 
 
-To learn more about custom event properties and the expected format of data contained within properties, refer to [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+To learn more about custom event properties and the expected format of data contained within properties, refer to [Custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/).
 
 ### Known versus anonymous users
 

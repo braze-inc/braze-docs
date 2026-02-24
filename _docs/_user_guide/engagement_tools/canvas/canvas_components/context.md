@@ -168,7 +168,7 @@ In all circumstances, we strongly recommend using [Liquid time_zone filters]({{s
 
 Now that Canvas Context is generally available, the following details apply:
 
-- All timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases are in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+- All timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/#expected-format) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases are in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
 - This change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.
 
 #### What is the reason for this change?

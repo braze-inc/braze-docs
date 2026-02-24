@@ -49,7 +49,7 @@ Variable 3 will not be evaluated or stored because the sum of the previous varia
 Context variables that are created or updated in the step can be assigned the following data types.
 
 {% alert note %}
-Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>When using the array type, Braze tries to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects within your arrays are not valid JSON, the result will be a simple array of strings. <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
+Context variables have the same expected formats for data types as [custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/#expected-format). <br><br>When using the array type, Braze tries to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects within your arrays are not valid JSON, the result will be a simple array of strings. <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
 {% endalert %}
 
 | Data type | Example variable name | Example value |
