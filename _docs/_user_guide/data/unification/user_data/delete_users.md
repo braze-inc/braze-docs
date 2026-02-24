@@ -12,7 +12,7 @@ alias: /delete_users/
 > Learn how to delete an individual user or a segment of users directly through the Braze dashboard.
 
 {% alert important %}
-This feature is currently in early access. Contact your customer success manager if you're interested in participating.
+Deleting users is currently in early access. Contact your customer success manager if you're interested in participating.
 {% endalert %}
 
 ## Prerequisites
