@@ -1,5 +1,5 @@
 ---
-page_order: 2
+page_order: 3
 nav_title: Segmentation filters
 article_title: Segmentation Filters
 layout: glossary_page

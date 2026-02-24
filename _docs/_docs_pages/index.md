@@ -18,7 +18,7 @@ doc_menu_list:
   - name: User Guide
     bg_color: '#3accdd'
     image: /assets/img/braze_icons/users-01.svg
-    link: /docs/user_guide/introduction/
+    link: /docs/user_guide/home/
     description: "Learn how to use the Braze platform to foster a more impactful customer experience."
   - name: Developer Guide
     bg_color: '#f7918e'

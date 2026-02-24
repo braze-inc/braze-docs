@@ -2,7 +2,7 @@
 nav_title: eCommerce revenue dashboard
 article_title: eCommerce revenue dashboard
 alias: "/ecommerce_revenue_dashboard/"
-page_order: 6
+page_order: 1
 description: "This article provides an overview of the eCommerce Revenue - Last Touch Attribution dashboard."
 ---
 

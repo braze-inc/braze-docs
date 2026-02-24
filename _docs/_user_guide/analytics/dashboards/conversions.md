@@ -3,7 +3,7 @@ nav_title: Conversions
 article_title: Conversions Dashboard
 alias: "/conversions_dashboard_v2/"
 description: "The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods."
-page_order: 3
+page_order: 4
 page_type: reference
 tool: 
   - Reports

@@ -1,7 +1,7 @@
 ---
 nav_title: Retention reports
 article_title: Retention Reports for Campaigns and Canvases
-page_order: 5
+page_order: 11
 tool: Reports
 page_type: reference
 description: "This page goes over how to measure user retention for users who performed a selected retention event in a specific campaign or Canvas."

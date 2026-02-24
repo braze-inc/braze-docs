@@ -1,7 +1,7 @@
 ---
 nav_title: Dashboards
 article_title: Dashboards
-page_order: 6.5
+page_order: 1
 layout: dev_guide
 guide_top_header: "Your Analytics Dashboards"
 guide_top_text: "This section is home to articles about the analytics dashboards within Braze."

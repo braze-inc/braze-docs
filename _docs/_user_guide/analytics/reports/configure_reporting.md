@@ -1,7 +1,7 @@
 ---
 nav_title: Configure reporting
 article_title: Configure Reporting
-page_order: 1.1
+page_order: 1
 page_type: reference
 description: "This page describes the automatically generated analytics report provided by Braze."
 tool: Reporting

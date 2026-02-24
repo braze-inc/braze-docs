@@ -1,7 +1,7 @@
 ---
 nav_title: Tracking
 article_title: Tracking
-page_order: 5
+page_order: 3
 layout: dev_guide
 guide_top_header: "Tracking"
 guide_top_text: "You can track many user actions on your apps. We recommend viewing the following articles to learn how to implement the tracking that best fits your use case."

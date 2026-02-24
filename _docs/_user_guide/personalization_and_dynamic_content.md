@@ -1,7 +1,7 @@
 ---
 nav_title: "Personalization & dynamic content"
 article_title: "Personalization & Dynamic Content"
-page_order: 6
+page_order: 7
 layout: dev_guide
 
 guide_top_header: "Personalized Messaging"

@@ -2,7 +2,7 @@
 nav_title: API usage
 article_title: API Usage Dashboard
 alias: "/api_usage/"
-page_order: 3.5
+page_order: 2
 description: "This article provides an overview of the API usage dashboard."
 ---
 

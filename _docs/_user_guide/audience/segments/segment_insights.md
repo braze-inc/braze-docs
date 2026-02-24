@@ -1,7 +1,7 @@
 ---
 nav_title: Segment insights
 article_title: Segment Insights
-page_order: 8
+page_order: 6
 page_type: tutorial
 tool: 
   - Segments

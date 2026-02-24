@@ -1,7 +1,7 @@
 ---
 nav_title: Message building by channel
 article_title: Message Building by Channel
-page_order: 5
+page_order: 6
 layout: dev_guide
 
 guide_top_header: "Message Building by Channel"

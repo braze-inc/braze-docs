@@ -1043,7 +1043,7 @@ validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/cu
 validurls['/docs/partners/message_personalization/yotpo/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/';
 validurls['/docs/help/help_article/'] = '/docs/help/help_articles/';
 validurls['/docs/help/help_articles/in-app_messages/in-app_message_impressions_appear_lower_than_expected/'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/#variant-distribution';
-validurls['/docs/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/'] = '/docs/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/';
+validurls['/docs/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/'] = '/docs/user_guide/audience/segments/segment_data/';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/push_notifications/integration/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/integration/';
 validurls['/docs/help/best_practices/email/overview/'] = '/docs/help/help_articles/email/';
 validurls['/docs/user_guide/onboarding_with_braze/overview'] = '/docs/user_guide/getting_started';
@@ -1544,7 +1544,7 @@ validurls['/docs/user_guide/data_and_analytics/reporting/report_builder'] = '/do
 validurls['/docs/user_guide/data_and_analytics/reporting/reports_overview'] = '/docs/user_guide/analytics/reports/reports_overview';
 validurls['/docs/user_guide/data_and_analytics/reporting/retention_reports'] = '/docs/user_guide/analytics/reports/retention_reports';
 validurls['/docs/user_guide/data_and_analytics/reporting/revenue_report'] = '/docs/user_guide/analytics/reports/revenue_report';
-validurls['/docs/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data'] = '/docs/user_guide/analytics/reports/viewing_and_understanding_segment_data';
+validurls['/docs/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data'] = '/docs/user_guide/audience/segments/segment_data';
 validurls['/docs/user_guide/data_and_analytics/tracking'] = '/docs/user_guide/analytics/tracking';
 validurls['/docs/user_guide/data_and_analytics/tracking/email_tracking'] = '/docs/user_guide/analytics/tracking/open_pixel_and_click_tracking';
 validurls['/docs/user_guide/data_and_analytics/tracking/influenced_opens'] = '/docs/user_guide/analytics/tracking/influence_opens';
@@ -1596,7 +1596,7 @@ validurls['/docs/user_guide/data_and_analytics/export_braze_data/faqs'] = '/docs
 validurls['/docs/user_guide/data_and_analytics/export_braze_data/message_archiving'] = '/docs/user_guide/data/export_braze_data/message_archiving';
 validurls['/docs/user_guide/data_and_analytics/export_braze_data/opening_csv_reports_in_excel'] = '/docs/user_guide/data/export_braze_data/opening_csv_reports_in_excel';
 validurls['/docs/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv'] = '/docs/user_guide/data/export_braze_data/segment_data_to_csv';
-validurls['/docs/user_guide/data_and_analytics/report_metrics'] = '/docs/user_guide/data/report_metrics';
+validurls['/docs/user_guide/data_and_analytics/report_metrics'] = '/docs/user_guide/analytics/metrics_glossary/';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection'] = '/docs/user_guide/data/user_data_collection';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/anonymous_users'] = '/docs/user_guide/data/user_data_collection/anonymous_users';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/best_practices'] = '/docs/user_guide/data/user_data_collection/best_practices';
@@ -2686,7 +2686,7 @@ validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_p
 validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/10dlc'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc';
 validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/10dlc_application'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/10dlc_application';
 
-validurls['/docs/user_guide/analytics/reports/viewing_and_understanding_segment_data/'] = '/docs/viewing_and_understanding_segment_data/';
+validurls['/docs/user_guide/analytics/reports/viewing_and_understanding_segment_data/'] = '/docs/user_guide/audience/segments/segment_data/';
 validurls['/docs/partners/message_personalization/dynamic_content/certona'] = '/docs/partners/message_personalization/dynamic_content/personalized_recommendations/certona';
 validurls['/docs/partners/message_personalization/dynamic_content/niftyimages'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/niftyimages';
 validurls['/docs/partners/message_personalization/dynamic_content/movable_ink'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink';
@@ -2780,7 +2780,7 @@ validurls['/docs/auto_advance/'] = '/docs/user_guide/engagement_tools/canvas/man
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases';
 
 validurls['/docs/user_guide/data/data_points'] = '/docs/user_guide/data/infrastructure/data_points';
-validurls['/docs/user_guide/data/report_metrics'] = '/docs/user_guide/analytics/reports/report_metrics/';
+validurls['/docs/user_guide/data/report_metrics'] = '/docs/user_guide/analytics/metrics_glossary/';
 validurls['/docs/user_guide/data/cloud_ingestion'] = '/docs/user_guide/data/unification/cloud_ingestion';
 validurls['/docs/user_guide/data/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
 validurls['/docs/user_guide/data/cloud_ingestion/connected_sources'] = '/docs/user_guide/data/unification/cloud_ingestion/connected_sources';
@@ -2879,7 +2879,7 @@ validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/selections'] = '/docs/user_guide/data/activation/catalogs/selections';
 validurls['/docs/user_guide/analytics/catalogs/'] = '/docs/user_guide/data/activation/catalogs/';
-validurls['/docs/user_guide/data/activation/report_metrics'] = '/docs/user_guide/analytics/reports/report_metrics';
+validurls['/docs/user_guide/data/activation/report_metrics'] = '/docs/user_guide/analytics/metrics_glossary/';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/product_blocks'] = '/docs/user_guide/data/activation/catalogs/product_blocks';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/create';
@@ -3465,18 +3465,26 @@ validurls['/docs/user_guide/engagement_tools/segments/troubleshooting/'] = '/doc
 // Audience > Suppression lists, User profiles, Manage users (extracted from segments)
 validurls['/docs/user_guide/engagement_tools/segments/suppression_lists/'] = '/docs/user_guide/audience/suppression_lists/';
 validurls['/docs/user_guide/engagement_tools/segments/user_profiles/'] = '/docs/user_guide/audience/user_profiles/';
-validurls['/docs/user_guide/engagement_tools/segments/user_profiles/duplicate_users/'] = '/docs/user_guide/audience/manage_users/merge_duplicate_users/';
+validurls['/docs/user_guide/engagement_tools/segments/user_profiles/duplicate_users/'] = '/docs/user_guide/audience/user_profiles/merge_duplicate_users/';
 
 // Audience > Segment data (moved to Data in Day 2)
-validurls['/docs/user_guide/engagement_tools/segments/viewing_and_understanding_segment_data/'] = '/docs/user_guide/data/distribution/export_braze_data/segment_data/';
+validurls['/docs/user_guide/engagement_tools/segments/viewing_and_understanding_segment_data/'] = '/docs/user_guide/audience/segments/segment_data/';
+validurls['/docs/user_guide/data/distribution/export_braze_data/segment_data/'] = '/docs/user_guide/audience/segments/segment_data/';
 
 // Audience > Global control group (from analytics/reporting)
 validurls['/docs/user_guide/analytics/reporting/global_control_group_reporting/'] = '/docs/user_guide/audience/global_control_group/';
 
 // Audience > Manage users (from data/unification)
-validurls['/docs/user_guide/data/unification/user_data/import_users/'] = '/docs/user_guide/audience/manage_users/import_users/';
-validurls['/docs/user_guide/data/unification/user_data/import_users/csv/'] = '/docs/user_guide/audience/manage_users/import_users/csv_import/';
-validurls['/docs/user_guide/data/unification/user_data/delete_users/'] = '/docs/user_guide/audience/manage_users/delete_users/';
+validurls['/docs/user_guide/data/unification/user_data/import_users/'] = '/docs/user_guide/audience/user_profiles/import_users/';
+validurls['/docs/user_guide/data/unification/user_data/import_users/csv/'] = '/docs/user_guide/audience/user_profiles/import_users/csv_import/';
+validurls['/docs/user_guide/data/unification/user_data/delete_users/'] = '/docs/user_guide/audience/user_profiles/delete_users/';
+
+// Audience > User profiles (from manage_users)
+validurls['/docs/user_guide/audience/manage_users/'] = '/docs/user_guide/audience/user_profiles/';
+validurls['/docs/user_guide/audience/manage_users/import_users/'] = '/docs/user_guide/audience/user_profiles/import_users/';
+validurls['/docs/user_guide/audience/manage_users/import_users/csv_import/'] = '/docs/user_guide/audience/user_profiles/import_users/csv_import/';
+validurls['/docs/user_guide/audience/manage_users/merge_duplicate_users/'] = '/docs/user_guide/audience/user_profiles/merge_duplicate_users/';
+validurls['/docs/user_guide/audience/manage_users/delete_users/'] = '/docs/user_guide/audience/user_profiles/delete_users/';
 
 // Audience > Subscription preferences > Preference center (from email)
 validurls['/docs/user_guide/message_building_by_channel/email/preference_center/'] = '/docs/user_guide/audience/subscription_preferences/preference_center/';
@@ -3495,7 +3503,8 @@ validurls['/docs/user_guide/analytics/dashboard/api_usage_dashboard/'] = '/docs/
 validurls['/docs/user_guide/analytics/dashboard/email_performance_dashboard/'] = '/docs/user_guide/analytics/dashboards/channel_performance/';
 validurls['/docs/user_guide/analytics/dashboard/conversions_dashboard/'] = '/docs/user_guide/analytics/dashboards/conversions/';
 validurls['/docs/user_guide/analytics/dashboard/deliverability_center/'] = '/docs/user_guide/analytics/dashboards/deliverability_center/';
-validurls['/docs/user_guide/analytics/dashboard/ecommerce_revenue_dashboard/'] = '/docs/user_guide/analytics/dashboards/ecommerce_revenue_dashboard/';
+validurls['/docs/user_guide/analytics/dashboard/ecommerce_revenue_dashboard/'] = '/docs/user_guide/analytics/dashboards/dashboard_builder/ecommerce_revenue_dashboard/';
+validurls['/docs/user_guide/analytics/dashboards/ecommerce_revenue_dashboard/'] = '/docs/user_guide/analytics/dashboards/dashboard_builder/ecommerce_revenue_dashboard/';
 
 // Analytics > Reports (renamed from reporting)
 validurls['/docs/user_guide/analytics/reporting/'] = '/docs/user_guide/analytics/reports/';
@@ -3508,7 +3517,8 @@ validurls['/docs/user_guide/analytics/reporting/engagement_reports/'] = '/docs/u
 validurls['/docs/user_guide/analytics/reporting/funnel_reports/'] = '/docs/user_guide/analytics/reports/funnel_reports/';
 validurls['/docs/user_guide/analytics/reporting/report_builder/'] = '/docs/user_guide/analytics/reports/report_builder/';
 validurls['/docs/user_guide/analytics/reporting/report_builder/report_builder_legacy/'] = '/docs/user_guide/analytics/reports/report_builder/report_builder_legacy/';
-validurls['/docs/user_guide/analytics/reporting/report_metrics/'] = '/docs/user_guide/analytics/reports/report_metrics/';
+validurls['/docs/user_guide/analytics/reporting/report_metrics/'] = '/docs/user_guide/analytics/metrics_glossary/';
+validurls['/docs/user_guide/analytics/reports/report_metrics/'] = '/docs/user_guide/analytics/metrics_glossary/';
 validurls['/docs/user_guide/analytics/reporting/retention_reports/'] = '/docs/user_guide/analytics/reports/retention_reports/';
 validurls['/docs/user_guide/analytics/reporting/revenue_report/'] = '/docs/user_guide/analytics/reports/revenue_report/';
 validurls['/docs/user_guide/analytics/reporting/dashboard_builder/'] = '/docs/user_guide/analytics/dashboards/dashboard_builder/';

@@ -1,7 +1,7 @@
 ---
 nav_title: Locations and geofences
 article_title: Locations and Geofences
-page_order: 6
+page_order: 3
 layout: dev_guide
 guide_top_header: "Locations and Geofences"
 guide_top_text: "The ubiquity and flexibility of mobile technology allows marketers, product managers, and growth teams to reach their users everywhere, blurring the lines between digital and real-world experiences. Refer to the articles in this section to learn more about location tracking, creating geofences, mobile integrations, and more."

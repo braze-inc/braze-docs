@@ -1,7 +1,7 @@
 ---
 nav_title: User profiles
 article_title: User Profiles
-page_order: 9
+page_order: 1
 page_type: reference
 tool: 
   - Dashboard
@@ -24,7 +24,7 @@ To access a user's profile, go to the **Search Users** page and search for a use
 - Push token
 - User alias with the format "[user_alias]:[alias_name]", such as "amplitude_id:user_123"
 
-If a match is found, you can view the information you've recorded for this user with the Braze SDK. Otherwise, if your search returns multiple user profiles, you can merge each profile individually or perform a bulk user merge. For a full walkthrough, see [Duplicate Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
+If a match is found, you can view the information you've recorded for this user with the Braze SDK. Otherwise, if your search returns multiple user profiles, you can merge each profile individually or perform a bulk user merge. For a full walkthrough, see [Merge duplicate users]({{site.baseurl}}/user_guide/audience/user_profiles/merge_duplicate_users/).
 
 {% alert important %}
 When a phone number is used in the search, it is changed into [`E.164`](https://en.wikipedia.org/wiki/e.164) format. Users whose phone numbers cannot be changed into `E.164` format (for example, because the phone number has an invalid country code or area code) cannot be searched by phone number.

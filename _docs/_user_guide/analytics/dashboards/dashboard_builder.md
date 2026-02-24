@@ -6,7 +6,7 @@ description: "This reference article covers how to use Dashboard Builder to crea
 page_type: reference
 tool:
     - Reports
-page_order: 6.1
+page_order: 5
 ---
 
 # Dashboard Builder

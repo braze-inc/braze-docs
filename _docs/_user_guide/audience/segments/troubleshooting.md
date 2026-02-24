@@ -1,7 +1,7 @@
 ---
 nav_title: Troubleshooting
 article_title: Troubleshoot Segments
-page_order: 12
+page_order: 9
 page_type: reference
 tool: 
   - Segments

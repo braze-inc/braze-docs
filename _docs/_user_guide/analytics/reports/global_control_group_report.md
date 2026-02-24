@@ -2,7 +2,7 @@
 nav_title: Global control group report
 article_title: Global Control Group Report
 alias: /global_control_group/
-page_order: 0
+page_order: 7
 
 description: "This article covers how to set up and properly use the Global Control Group. It also covers how to view reports and metrics brought on by the use of these groups."
 page_type: reference

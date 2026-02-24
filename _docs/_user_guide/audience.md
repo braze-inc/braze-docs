@@ -11,15 +11,15 @@ description: "This section covers audience management in Braze—segments, user 
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Segments
-    link: /docs/user_guide/audience/segments/
-    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: User profiles
     link: /docs/user_guide/audience/user_profiles/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Manage users
-    link: /docs/user_guide/audience/manage_users/
-    image: /assets/img/braze_icons/user-plus-01.svg
+  - name: Segments
+    link: /docs/user_guide/audience/segments/
+    image: /assets/img/braze_icons/pie-chart-01.svg
+  - name: Locations and geofences
+    link: /docs/user_guide/audience/locations_and_geofences/
+    image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Subscription preferences
     link: /docs/user_guide/audience/subscription_preferences/
     image: /assets/img/braze_icons/mail-01.svg
@@ -29,9 +29,6 @@ guide_featured_list:
   - name: Suppression lists
     link: /docs/user_guide/audience/suppression_lists/
     image: /assets/img/braze_icons/list.svg
-  - name: Locations and geofences
-    link: /docs/user_guide/audience/locations_and_geofences/
-    image: /assets/img/braze_icons/marker-pin-01.svg
 ---
 
 <br>

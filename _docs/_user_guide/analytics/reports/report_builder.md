@@ -6,7 +6,7 @@ page_type: reference
 description: "This reference article describes the Report Builder feature."
 tool:
     - Reports
-page_order: 6.2
+page_order: 10
 ---
 
 # Report Builder

@@ -1,7 +1,7 @@
 ---
 nav_title: Channel performance
 article_title: Channel Performance Dashboard
-page_order: 2
+page_order: 3
 page_type: reference
 description: "This reference article covers the channel performance dashboard, which allows you to view performance metrics for entire channels across both campaigns and Canvases."
 tool: 
