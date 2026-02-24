@@ -18,7 +18,7 @@ tool: Canvas
 
 When using this component in your Canvas, updates don't count toward your `/users/track` requests per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component doesn't log [data points]({{site.baseurl}}/user_guide/data/data_points/) when being used to update non-billable data points (such as subscription groups).
 
-Users will only advance to the next Canvas steps after the relevant user updates have been completed. This means any subsequent messaging that relies on these user updates will be up-to-date when the next step is run.
+After users enter the User Update step and it completes processing, they advance to the next step. This means any subsequent messaging that relies on these user updates is up-to-date when the next step is run.
 
 ## Creating a user update
 
@@ -54,13 +54,13 @@ By incrementing a custom attribute that tracks an event, you can track the numbe
 
 ### Updating an array of objects
 
-An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) is a custom attribute stored on a user's profile that is data rich. This allows you to create a history of the user's interactions with your brand. This allows you to create segments based on a custom attribute that is calculated field, such as purchase history or total lifetime value.
+An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) is a custom attribute stored on a user's profile that is data rich. This allows you to create a history of the user's interactions with your brand. This allows you to create segments based on a custom attribute that is a calculated field, such as purchase history or total lifetime value.
 
 The User Update step can add or remove attributes to this array of objects. To update an array, select the array attribute name from your list of attributes and enter the key value.
 
 #### Use case: Updating a user's wishlist
 
-Adding or removing an item to an array updates the user's wishlist.
+Adding or removing an item from an array updates the user's wishlist.
 
 ![User Update step that adds an item "sunblock" to the attribute "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
 
@@ -68,7 +68,7 @@ Adding or removing an item to an array updates the user's wishlist.
 
 Track when a user has items in their shopping cart, when they add new items or remove items, and what the total shopping cart value is. 
 
-1. Create custom array of objects called `shopping_cart`. The following example shows what this attribute may look like. Each item has a unique `product_id` that has more complex data in its own nested array of objects, including `price`.
+1. Create a custom array of objects called `shopping_cart`. The following example shows what this attribute may look like. Each item has a unique `product_id` that has more complex data in its own nested array of objects, including `price`.
 
 {% raw %}
 ```javascript
@@ -94,7 +94,7 @@ Track when a user has items in their shopping cart, when they add new items or r
 
 {:start="2"}
 2. Create a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) named `add_item_to_cart` that is logged when a user adds an item to the basket. 
-3. Create a Canvas with a target audience of users with this custom event. Now, when a user adds an item to their cart, this Canvas is triggered. You can then target messaging directly to that user, offering coupon codes when they've reached a certain spend, abandoned their cart for a certain amount of time, or anything else that aligns with your use case. 
+3. Create a Canvas that targets users who perform this custom event. Now, when a user adds an item to their cart, this Canvas is triggered. You can then target messaging directly to that user, offering coupon codes when they've reached a certain spend, abandoned their cart for a certain amount of time, or anything else that aligns with your use case. 
 
 The `shopping_cart` attribute carries the total of many custom events: the total cost of all the items, the total number of items in the cart, if the shopping cart contains a gift, and so on. This can look something like the following:
 
@@ -151,7 +151,7 @@ Using the advanced composer, you can also preview and test that the user profile
 
 ### Considerations
 
-You don't need to include sensitive data like your API key while using the JSON composer as this is automatically provided by the platform. As such, the following fields are unneeded and should not be used in the JSON composer:
+You don't need to include sensitive data like your API key while using the JSON composer, as this is automatically provided by the platform. As such, the following fields are unneeded and should not be used in the JSON composer:
 * External user ID
 * API key
 * Braze cluster URL
@@ -164,7 +164,7 @@ Canvas properties (such as the `canvas_id`, `canvas_name`, and `canvas_variant_n
 {% raw %}
 ### Log custom events
 
-Using the JSON composer, you can also log custom events. Note that this requires timestamp in ISO format, so assigning a time and date with Liquid at the beginning is needed. Consider this example that logs an event with a time.
+Using the JSON composer, you can also log custom events. Note that this requires a timestamp in ISO format, so assigning a time and date with Liquid at the beginning is needed. Consider this example that logs an event with a time.
 
 ```
 {% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
