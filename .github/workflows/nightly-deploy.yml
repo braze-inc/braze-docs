@@ -1,3 +1,12 @@
+# Nightly Release Deploy
+#
+# Required secret: DEPLOY_MERGE_TOKEN
+#   A Personal Access Token (classic or fine-grained) from a user with write access
+#   who can bypass branch protection on main. Create at:
+#   https://github.com/settings/tokens (classic) or
+#   https://github.com/settings/tokens?type=beta (fine-grained)
+#   Add as repo secret: Settings → Secrets and variables → Actions → New repository secret
+#
 name: Nightly Release Deploy
 
 on:
@@ -84,10 +93,17 @@ jobs:
       contents: write
       pull-requests: write
     steps:
+      - name: Check for merge token
+        run: |
+          if [ -z "${{ secrets.DEPLOY_MERGE_TOKEN }}" ]; then
+            echo "::error::DEPLOY_MERGE_TOKEN secret is not set. Add a PAT at Settings → Secrets → Actions."
+            exit 1
+          fi
       - name: Merge PR
-        # --admin bypasses branch protection (e.g. required reviews) because approval
-        # is already enforced by the Production Automation environment gate above.
+        # Uses DEPLOY_MERGE_TOKEN (PAT) because GITHUB_TOKEN cannot bypass branch
+        # protection (required reviews, status checks). The PAT must be from a user
+        # with write access who can bypass protection, or an org admin.
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.DEPLOY_MERGE_TOKEN }}
           PR_NUMBER: ${{ needs.create-pr.outputs.pr_number }}
         run: gh pr merge "$PR_NUMBER" --repo ${{ github.repository }} --merge --admin
