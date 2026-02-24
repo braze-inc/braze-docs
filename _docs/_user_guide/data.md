@@ -2,17 +2,18 @@
 nav_title: Data 
 article_title: Data 
 page_order: 3
-layout: dev_guide
-
-guide_top_header: "Data"
-guide_top_text: ""
+description: "Learn about the Braze Data Platform, including how to unify, activate, and distribute your data."
 ---
 
-## Braze Data Platform
+# Braze Data Platform
 
-The Braze Data Platform is a comprehensive, composable set of data capabilities and partner integrations that empowers you to create personalized experiences for your customers. At Braze, we think about data in terms of three data-related jobs to be done: [Unification]({{site.baseurl}}/user_guide/data/unification), [Activation]({{site.baseurl}}/user_guide/data/activation), and [Distribution]({{site.baseurl}}/user_guide/data/distribution).
+> Learn about the Braze Data Platform, including how to unify, activate, and distribute your data.
+
+The Braze Data Platform (BDP) is a comprehensive, composable set of data capabilities and partner integrations that empowers you to create personalized experiences for your customers. At Braze, we think about data in terms of three data-related jobs to be done: [Unification]({{site.baseurl}}/user_guide/data/unification), [Activation]({{site.baseurl}}/user_guide/data/activation), and [Distribution]({{site.baseurl}}/user_guide/data/distribution).
 
 By using a combination of features in the Braze Data Platform, you can leverage your data to create meaningful, targeted messages that respond to what your customers do in real-time.
+
+## How it works
 
 ### Unify your data
 
@@ -24,15 +25,15 @@ Clean, organize, and prepare your data for use. This involves understanding your
 
 ### Distribute your data
 
-Stream and export your data to external systems for next-step insights and decisions. Use [Braze Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents) to stream Braze event data into a data warehouse to power business intelligence tools.
+Stream and [export your data]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/) to external systems for next-step insights and decisions. Use [Braze Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents) to stream Braze event data into a data warehouse to power business intelligence tools.
 
-## Braze data infrastructure
+## Data infrastructure
 
 Braze data infrastructure includes [data centers]({{site.baseurl}}/user_guide/data/infrastructure/data_centers) that help minimize latency—the time it takes for data to travel between the server and the user. This geographic distribution allows our services to be reliable and scalable. We also offer [field-level encryption]({{site.baseurl}}/user_guide/data/infrastructure/field_level_encryption) to help protect sensitive data and minimize personally identifiable information (PII) shared in Braze. For more on usage and billing, see [Data points]({{site.baseurl}}/user_guide/data/infrastructure/data_points).
 
-## Data capabilities core tenets
+## Core principles
 
-Data plays a crucial role in enhancing your customer engagement strategy by enabling you to create personalized experiences, understand customer behavior, and optimize messaging strategies. At Braze, we build all data capabilities with three core things in mind:
+Data plays a crucial role in enhancing your customer engagement strategy by enabling you to create personalized experiences, understand customer behavior, and optimize messaging strategies. At Braze, we build all data capabilities with three core principles in mind:
 
 {% details Making your data work harder %}
 - **Flexible and component-based:** Our overarching goal is to help you utilize your data more effectively and fully. Built with a composable architecture, you can leverage the technologies you need to make your data work harder, without unnecessary middleware.
