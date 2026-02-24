@@ -336,14 +336,9 @@ Place a `## Prerequisites` section near the top, before the first task heading. 
 
 ## Key glossary
 
-| Term | Rule |
-|---|---|
-| Canvas | Always capitalized. Plural: Canvases. |
-| workspace | Not "app group" (deprecated). |
-| capacity | Use instead of "limit" for custom data constraints. |
-| eCommerce | Not "ecommerce" or "e-commerce". |
-| customers | Brands that use Braze. Never "clients". |
-| consumers | End users of those brands. |
-| company users | People who use the Braze platform. |
-
-Avoid: "via" (use "through"), "e.g." (use "for example"), "i.e." (use "that is"), "simple"/"simply"/"just"/"easy" in instructions, "out-of-the-box" (use "default"), "whitelist" (use "allowlist"), "blacklist" (use "blocklist").
+- **Canvas** — Always capitalized. Plural: Canvases.
+- **workspace** — Not "app group" (deprecated term).
+- **capacity** — Use instead of "limit" for custom data constraints.
+- **eCommerce** — Not "ecommerce" or "e-commerce".
+- Avoid: "via" (use "through"), "e.g." (use "for example"), "i.e." (use "that is").
+- Avoid: "out-of-the-box" (use "default"), "whitelist" (use "allowlist"), "blacklist" (use "blocklist").
