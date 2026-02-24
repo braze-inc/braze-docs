@@ -24,7 +24,7 @@ guide_featured_list:
     link: /docs/user_guide/data/unification/user_data/collection_use_case/
     image: /assets/img/braze_icons/data.svg
   - name: Import Users
-    link: /docs/user_guide/data/unification/user_data/user_import/
+    link: /docs/user_guide/data/unification/user_data/import_users/
     image: /assets/img/braze_icons/users-01.svg
   - name: Delete Users
     link: /docs/user_guide/data/unification/user_data/delete_users/
