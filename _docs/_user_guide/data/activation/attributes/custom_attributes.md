@@ -29,7 +29,15 @@ From this page, you can view, manage, create, or blocklist existing custom attri
 
 ### Blocklisting
 
-Custom attributes can be blocklisted individually in the actions menu, or up to 100 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data is collected regarding that attribute, existing data is unavailable unless reactivated, and blocklisted attributes don't show up in filters or graphs. Additionally, if the attribute is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal appears explaining that all instances of the filters or triggers that reference it are removed and archived.
+You can blocklist individual custom attributes through the actions menu, or select and blocklist up to 100 attributes in bulk.
+
+When you block a custom attribute:
+
+- Future data won't be collected for that attribute.
+- Existing data won't be available unless that attribute is unblocked.
+- That attribute won't show up in filters or graphs.
+
+Additionally, if a blocked custom attribute is currently referenced by filters or triggers in other areas of Braze, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
 For more details on blocklisting and deleting custom data, see [Blocklist custom data]({{site.baseurl}}/user_guide/data/activation/blocklist_custom_data/).
 
@@ -39,7 +47,7 @@ Administrators can also create custom attributes and mark them as PII from this 
 
 ### Adding descriptions
 
-You can add a description to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/). Edit the custom attribute and input whatever you like, such as a note for your team.
+You can add a description to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/). Select **Edit description** for the custom attribute and input whatever you like, such as a note for your team.
 
 ### Adding tags
 
