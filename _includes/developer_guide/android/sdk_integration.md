@@ -375,7 +375,7 @@ By default, the Braze Android SDK log level is set to `INFO`. You can [suppress 
 
 #### Enabling logs
 
-To help troubleshoot issues in your app, or reduce turnaround times with Braze Support, you'll want to enable verbose logs for the SDK. When you send verbose logs to Braze Support, ensure they begin as soon as you launch your application and end far after your issue occurs.
+To help troubleshoot issues in your app, or reduce turnaround times with Braze Support, you can enable verbose logs for the SDK. When you send verbose logs to Braze Support, ensure they begin as soon as you launch your application and end far after your issue occurs. For a centralized overview, see [Verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging). To learn how to interpret log output, see [Reading verbose logs]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs).
 
 Keep in mind, verbose logs are only intended for your development environment, so you'll want to disable them before releasing your app.
 
