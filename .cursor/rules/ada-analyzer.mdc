@@ -1,0 +1,200 @@
+---
+alwaysApply: false
+---
+
+# Applying ADA accessibility fixes from scan exports
+
+This rule analyzes Level Access scan results for the Braze Docs site. The Web ADA Compliance Committee provides a monthly report; use this file to triage findings and apply fixes.
+
+> **Scope: Critical issues only.** Filter the "equal-access Accessibility" sheet to rows where **Severity** = `critical`. Ignore high, low, and info findings.
+
+## Export format
+
+The scan produces an Excel file (`.xlsx`) with two sheets:
+
+### Sheet: Summary
+
+| Column   | Description                          |
+|----------|--------------------------------------|
+| URL      | Page URL (e.g., `https://www.braze.com/docs/...`) |
+| Page Title | Document title                     |
+| Errors   | Count of errors on the page          |
+| Warnings | Count of warnings                   |
+| Passed   | Count of passed checks               |
+| Duration | Scan duration                       |
+
+### Sheet: equal-access Accessibility
+
+| Column           | Description                                      |
+|------------------|--------------------------------------------------|
+| URL              | Page URL where the issue was found               |
+| Page Title/Affected | Page or element affected                     |
+| Standard         | WCAG                                             |
+| Level            | A, AA, AAA                                       |
+| Errors           | Count                                            |
+| Severity         | critical, high, low, info                         |
+| Guideline/Summary | WCAG guideline (e.g., 4.1.2 Name, Role, Value) |
+| Rule Title       | Short rule name                                  |
+| Description      | Rule description                                 |
+| Rule Id          | Rule identifier (e.g., `input_label_exists`)     |
+| Finding URL      | Link to detailed finding (Essentia11y)            |
+| Code Snippet     | HTML/element with the issue                      |
+| Selector/Xpath   | DOM path to the element                          |
+| What is the problem | Plain-language problem description            |
+| Why it matters   | Impact for users                                 |
+| What to do       | Remediation guidance                             |
+
+---
+
+## Step 1: Filter to critical only
+
+In the "equal-access Accessibility" sheet, include only rows where **Severity** = `critical`. Exclude high, low, and info.
+
+## Step 2: Triage by ownership
+
+Not all findings can be fixed in the docs repo. Categorize each **critical** finding:
+
+| Category        | Criteria | Where to fix | Action |
+|-----------------|----------|--------------|--------|
+| **Docs content** | Alt text, heading structure, image descriptions in article body | `_docs/**/*.md`, `_includes/**/*.md` | Update markdown in this repo |
+| **Docs templates** | Layouts, shared includes (header, nav, search, forms) | `_includes/`, `_layouts/`, `assets/` | Update HTML/Liquid in this repo |
+| **_lang/ content** | Localized pages under `_lang/<locale>/` | `_lang/**/*.md` | **Do not edit.** Add to Issues report only |
+| **Platform/site** | Third-party widgets, cookie banner, site chrome not in docs repo | Docs site platform (separate repo) | Add to Issues report; escalate |
+| **Third-party**   | Search (Algolia), analytics, etc. | External service | Add to Issues report; document for vendor |
+
+**How to tell:** Inspect the **Code Snippet** and **Selector/Xpath**. If it references `su__` (search), `nav`, `header`, `form` in shared layout, or elements outside article content, it may be template/platform. If it references `img` with missing alt, `div` used as heading, or content inside the main article area, it's likely docs content.
+
+---
+
+## Step 3: Map URL to file path
+
+Convert scan URLs to docs repo paths:
+
+- Base: `https://www.braze.com/docs` → `_docs/`
+- Path: `/user_guide/administrative/access_braze/single_sign_on` → `_docs/_user_guide/administrative/access_braze/single_sign_on.md` (or index in `single_sign_on/`)
+
+### Do not edit `_lang/` files
+
+**Never update files under `_lang/`.** Localized content mirrors `_docs/` structure (e.g., `_lang/de/`, `_lang/fr_fr/`). When a finding maps to a path under `_lang/`, do not edit it. Instead, add the issue to the **Issues report** (see below). Fix the corresponding source file in `_docs/` when applicable; the localization team can sync translations separately.
+
+---
+
+## Step 4: Prioritize critical findings
+
+1. **By fixability**: Docs content fixes first (direct edits); template fixes may affect many pages
+2. **By rule type** (common critical rules):
+   - `input_label_exists`, `aria_accessiblename_exists` → Often template/layout
+   - `text_block_heading` → Content: use proper `##` / `###` in markdown
+   - `image_alt` / alt text issues → Content: add or improve `alt` in `{% image_buster %}` or `<img>`
+   - `label_name_visible` → Mix of content and template
+
+---
+
+## Step 5: Apply content fixes
+
+For **docs content** findings (in `_docs/` or `_includes/` only — skip `_lang/`):
+
+1. **Alt text**: Ensure every image has descriptive `alt` text. See `_docs/_contributing/style_guide/image_style_guide.md`.
+2. **Headings**: Use proper heading levels (`##`, `###`) instead of bold or styled divs.
+3. **Links**: Use descriptive link text; avoid "click here" or "learn more."
+4. **Plain language**: Follow accessibility guidance in `braze-docs-style-guide.mdc` (≤20 words/sentence, inverted pyramid).
+
+---
+
+## Step 6: Apply template fixes
+
+For **docs templates** (layouts, includes):
+
+1. Add `aria-label` or `aria-labelledby` to form controls, buttons, and landmarks.
+2. Ensure `target="_blank"` links include accessible indication (e.g., "opens in new tab" in `aria-label` or visible text).
+3. Remove redundant ARIA roles where the implicit role is sufficient.
+4. Ensure unique `id` values if used for `aria-labelledby` or `aria-describedby`.
+
+---
+
+## Step 7: Batch and branch
+
+1. **Group by issue** — Batch all fixes for the same issue (same Rule Id or problem type) into a single PR, even when they span multiple files.
+2. **Exception: same file, multiple issues** — If a single file has multiple different issues, batch all of those fixes into one PR. In the PR description, note: "This file contained multiple issue types: [list Rule Ids or problem types]."
+4. **Branch naming**: `[ADA]-Cursor-<issue-summary>-<ddmmyyyy>`
+   - Example: `[ADA]-Cursor-input-label-exists-02242026`
+5. **PR naming**: `[ADA] <issue summary>`
+   - Example: `[ADA] Fix input_label_exists (form control labels) across docs`
+6. **Label**: Add `--label "ada"` (or equivalent) when creating the PR.
+
+---
+
+## Issues report output
+
+Produce an **Issues report** and write it to `_data/ada/ada-issues-report-YYYYMMDD.md`. Include:
+
+1. **Findings in `_lang/`** — Every critical finding that maps to a file under `_lang/`. Do not edit these files; list them for the localization team.
+2. **Platform/site findings** — Issues that require fixes in the docs site platform (separate repo).
+3. **Third-party findings** — Issues in external services (search, analytics, etc.).
+
+### Report format
+
+```markdown
+# ADA Issues Report — YYYYMMDD
+
+## _lang/ findings (do not edit)
+
+| URL | Page Title | Target Path | Rule Id | Problem | Suggested Fix |
+|-----|------------|-------------|---------|---------|---------------|
+| ... | ... | _lang/de/_user_guide/... | input_label_exists | ... | ... |
+
+## Platform/site findings
+
+| URL | Rule Id | Problem | Escalate to |
+|-----|---------|---------|-------------|
+| ... | ... | ... | Platform team |
+
+## Third-party findings
+
+| URL | Rule Id | Problem | Notes |
+|-----|---------|---------|-------|
+| ... | ... | ... | ... |
+```
+
+Output the report to the chat and to `_data/ada/ada-issues-report-YYYYMMDD.md`.
+
+---
+
+## Repeatable workflow for new exports
+
+When you receive a new export:
+
+1. **Store the export** in `_data/ada/` with a date suffix, e.g. `_data/ada/braze-docs-ada-scan-YYYYMMDD.xlsx`
+2. **Convert to CSV** (optional): Use the "equal-access Accessibility" sheet. Filter to critical only, then export:
+
+   ```bash
+   python3 -c "
+   import pandas as pd
+   df = pd.read_excel('_data/ada/braze-docs-ada-scan-YYYYMMDD.xlsx', sheet_name='equal-access Accessibility')
+   df = df[df['Severity'] == 'critical']
+   df.to_csv('_data/ada/braze-docs-ada-scan-YYYYMMDD-critical.csv', index=False)
+   "
+   ```
+
+3. **Run triage**: Use this rule to analyze the export. Process only **critical** severity findings. Apply fixes to **Docs content** and **Docs templates** only. Do not edit `_lang/` files.
+4. **Generate Issues report**: Output `_data/ada/ada-issues-report-YYYYMMDD.md` with `_lang/`, platform, and third-party findings.
+5. **Compare with prior runs**: If the export format is consistent, you can diff or compare error counts to track progress.
+
+---
+
+## Style guide references
+
+| Topic        | Path |
+|-------------|------|
+| Image/alt   | `_docs/_contributing/style_guide/image_style_guide.md` |
+| Accessibility | `braze-docs-style-guide.mdc` (Accessibility section) |
+| General     | `_docs/_contributing/style_guide.md` |
+
+---
+
+## Example prompt
+
+```
+@ada-analyzer.mdc Analyze the ADA scan export at _data/ada/braze-docs-ada-scan-20260224.xlsx.
+Process only critical severity findings. Apply fixes to _docs/ and templates only; do not edit _lang/. Output the Issues report to _data/ada/ada-issues-report-20260224.md.
+```
