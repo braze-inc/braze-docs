@@ -51,7 +51,7 @@ Address the reader as "you". Avoid first person ("we", "our") except when referr
 
 Use present tense. Avoid "will" or hypothetical "would" for the result of user action.
 
-- Do: "You cannot edit archived groups, and they no longer appear in segment filters."
+- Do: "Archived subscription groups cannot be edited and no longer appear in segment filters."
 - Don't: "Archived groups cannot be edited and will no longer appear in segment filters."
 
 ### Contractions
