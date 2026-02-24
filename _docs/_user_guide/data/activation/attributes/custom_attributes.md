@@ -13,6 +13,19 @@ search_rank: 1
 
 When stored in Braze, custom attributes can be used to build out audience segments and personalize messaging using Liquid. Keep in mind that Braze doesn't store time-series information for custom attributes, so you can't get any graphs based on them like you can for custom events.
 
+## Use cases
+
+Some common custom attribute use cases include:
+
+- Targeting and suppressing audiences by segmenting users based on traits like loyalty tier, subscription status, preferred language, or plan type
+- Personalizing messages with [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) by referencing attributes such as a user's first name, rewards points, or favorite category
+- Tracking lifecycle stages and user states, such as onboarding stage, account status, or trial end date
+- Counting low-value actions with [numeric attributes]({{site.baseurl}}/user_guide/data/activation/attributes/data_types/#numbers), such as incrementing a `feature_views_count` attribute each time a user views a feature
+- Recording when low-value actions last occurred using [time attributes]({{site.baseurl}}/user_guide/data/activation/attributes/data_types/#time), such as `last_support_ticket_at` or `last_password_reset_at`
+- Storing user interests and history as [arrays]({{site.baseurl}}/user_guide/data/activation/attributes/data_types/#arrays), such as favorite genres or recently viewed content, for interest-based targeting
+- Storing richer profile data as [objects]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support/) or [arrays of objects]({{site.baseurl}}/user_guide/data/activation/attributes/array_of_objects/), such as structured preferences or multiple saved addresses
+- Triggering action-based messages when an attribute value changes using [attribute triggers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/), such as sending a tier-up notification when a user's `rewards_tier` changes
+
 ## Managing custom attributes
 
 To create and manage custom attributes in the dashboard, go to **Data Settings** > **Custom Attributes**. 
@@ -29,7 +42,15 @@ From this page, you can view, manage, create, or blocklist existing custom attri
 
 ### Blocklisting
 
-Custom attributes can be blocklisted individually in the actions menu, or up to 100 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data is collected regarding that attribute, existing data is unavailable unless reactivated, and blocklisted attributes don't show up in filters or graphs. Additionally, if the attribute is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal appears explaining that all instances of the filters or triggers that reference it are removed and archived.
+You can blocklist individual custom attributes through the actions menu, or select and blocklist up to 100 attributes in bulk.
+
+When you block a custom attribute:
+
+- Future data won't be collected for that attribute.
+- Existing data won't be available unless that attribute is unblocked.
+- That attribute won't show up in filters or graphs.
+
+Additionally, if a blocked custom attribute is currently referenced by filters or triggers in other areas of Braze, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
 For more details on blocklisting and deleting custom data, see [Blocklist custom data]({{site.baseurl}}/user_guide/data/activation/blocklist_custom_data/).
 
@@ -39,7 +60,7 @@ Administrators can also create custom attributes and mark them as PII from this 
 
 ### Adding descriptions
 
-You can add a description to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/). Edit the custom attribute and input whatever you like, such as a note for your team.
+You can add a description to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/). Select **Edit description** for the custom attribute and input whatever you like, such as a note for your team.
 
 ### Adding tags
 

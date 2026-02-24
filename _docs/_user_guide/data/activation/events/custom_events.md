@@ -19,10 +19,10 @@ Some common custom event use cases include:
 
 - Triggering a campaign or Canvas based on a custom event using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)
 - Segmenting users by how many times they performed a custom event, when the last time the event occurred, and similar
-- Using dashboard [custom event analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) to view an aggregate of how often each event occurred
-- Finding additional analytics using [funnel]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) reports
-- Leveraging [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps
-- Generating more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
+- Using dashboard [custom event analytics](#analytics) to view an aggregate of how often each event occurred
+- Finding additional analytics using [funnel]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) reports
+- Leveraging [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps
+- Generating more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/)
 - Setting up [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) to define when users should exit your Canvas
 
 ## Managing custom events
@@ -43,23 +43,29 @@ When you block a custom event:
 
 Additionally, if a blocked custom event is currently referenced by filters or triggers in other areas of Braze, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
+For more details on blocklisting and deleting custom data, see [Blocklist custom data]({{site.baseurl}}/user_guide/data/activation/blocklist_custom_data/).
+
+### Marking as personally identifiable information (PII)
+
+Administrators can also create custom events and mark them as PII from this page. These events are only visible to admins and dashboard users with the "View Custom Attributes Marked as PII" permission.
+
 ### Adding descriptions
 
 You can add a description to a custom event after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/). Select **Edit description** for the custom event and input whatever you like, such as a note for your team.
 
-## Adding tags
+### Adding tags
 
 You can add tags to a custom event after it's created if you have the "Manage Events, Attributes, Purchases" [user permission]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/). The tags can then be used to filter the list of events.
 
-### Viewing usage reports
+### Exporting data
 
-The usage report lists all the Canvases, campaigns, and segments using a specific custom event. The list doesn't include uses of Liquid. 
+To export the list of custom events as a CSV file, select **Export all** at the top of the page. The CSV file is generated, and a download link is emailed to you.
 
-You can view up to 100 usage reports at a time by selecting the checkboxes for multiple custom events and then selecting **View usage report**.
+## Viewing usage reports
 
-## Exporting data
+The usage report lists all the Canvases, campaigns, and segments using a specific custom event. This list doesn't include uses of Liquid. 
 
-To export the list of custom events as a CSV file, select the **Export all** button at the top of the page. The CSV file will be generated, and a download link will be emailed to you.
+You can view up to 100 usage reports at a time by selecting the checkboxes next to the respective custom events and then selecting **View usage report**.
 
 ## Logging custom events
 
