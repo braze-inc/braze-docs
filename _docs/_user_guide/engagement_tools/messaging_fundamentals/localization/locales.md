@@ -111,6 +111,10 @@ Select **Manage Languages** when editing your message.
 {% tab Content Block %}
 Select **Manage Languages** when editing your Content Block.
 
+{% alert important %}
+Content Blocks that have associated translations uploaded cannot be overwritten by an individual campaign or canvas message.
+{% endalert %}
+
 ![Multi-language settings for Content Blocks.]({% image_buster /assets/img/multi-language_support/content_block_manage_languages.png %}){: style="max-width:45%;"}
 
 {% endtab %}
