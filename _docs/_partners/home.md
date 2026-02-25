@@ -403,4 +403,8 @@ valid_partner_list:
   url: /docs/partners/anthropic/
 - name: Algolia
   url: /docs/partners/algolia/
+- name: Canva
+  url: /docs/partners/canva/
+- name: Figma
+  url: /docs/partners/figma/
 ---
