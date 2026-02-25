@@ -41,33 +41,7 @@ Later when drafting a message in Braze, you can pull in your images from the med
 
 ## Image specifications
 
-All images uploaded to the media library must be less than 5&nbsp;MB. Supported file types are PNG, JPEG, GIF, SVG, and WebP. For specific image recommendations by messaging channel, refer to the following sections.
-
-### Content Cards
-
-{% multi_lang_include image_specs.md variable_name='content cards' %}
-
-### Email
-
-{% multi_lang_include image_specs.md variable_name="email"  %}
-
-### In-app messages
-
-{% multi_lang_include image_specs.md variable_name="in-app messages"  %}
-
-For more information, refer to [In-app message creative details]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
-
-### Push
-
-{% multi_lang_include image_specs.md variable_name="push notifications"  %}
-
-{% alert note %}
-For additional resources, see [Push image and text specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
-{% endalert %}
-
-### Video
-
-Videos that are uploaded to the media library can only be used in WhatsApp messages for now. For more information, refer to [Creating a Whatsapp Message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
+All images uploaded to the media library must be less than 5&nbsp;MB. Supported file types are PNG, JPEG, GIF, SVG, and WebP. For recommended image sizes and specifications by messaging channel, refer to [Image specifications]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library/image_specifications/).
 
 ## Generating images with BrazeAI<sup>TM</sup> {#generate-ai}
 

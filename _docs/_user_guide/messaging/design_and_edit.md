@@ -17,4 +17,7 @@ guide_featured_list:
   - name: Media library
     link: /docs/user_guide/messaging/design_and_edit/media_library/
     image: /assets/img/braze_icons/image-01.svg
+  - name: Image specifications
+    link: /docs/user_guide/messaging/design_and_edit/media_library/image_specifications/
+    image: /assets/img/braze_icons/image-check.svg
 ---

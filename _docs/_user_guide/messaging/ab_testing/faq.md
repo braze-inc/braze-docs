@@ -29,7 +29,7 @@ This is a separate test from the confidence score, which only describes the perf
 
 ### Why isn't the variant distribution even?
 
-{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
+Variant assignment is randomized on each send, so the actual split may not match your configured percentages exactly—especially with smaller sample sizes. For more information, see [Variant distribution]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/variant_distribution/).
 
 ## Running and concluding tests
 
