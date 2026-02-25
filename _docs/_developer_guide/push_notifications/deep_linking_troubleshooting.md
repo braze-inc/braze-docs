@@ -1,8 +1,8 @@
 ---
-page_order: 1.2
-nav_title: Deep Linking Troubleshooting
+nav_title: Deep linking troubleshooting
 article_title: Deep linking troubleshooting
 description: "Common deep linking issues on iOS and how to diagnose them, including custom scheme links, universal links, email links, and third-party providers like Branch."
+page_order: 1.2
 channel:
   - push notifications
   - in-app messages
