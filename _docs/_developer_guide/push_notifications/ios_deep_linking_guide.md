@@ -58,8 +58,8 @@ Universal links (for example, `https://myapp.com/products/123`) are standard HTT
 This option opens a web page inside a modal WebView within your app. It's handled entirely by the Braze SDK using `Braze.WebViewController` — you don't need to write any URL handling code.
 
 **Use "Open Web URL Inside App" when:**
-- You want to display a web page (such as a promotion or article) without leaving your app
-- The URL is a standard HTTPS web page, not a deep link to a specific app screen
+- You want to display a web page (such as a promotion or article) without leaving your app.
+- The URL is a standard HTTPS web page, not a deep link to a specific app screen.
 
 **Don't use "Open Web URL Inside App" when:**
 - You need to navigate to a specific view in your app — use a custom scheme or universal link instead
