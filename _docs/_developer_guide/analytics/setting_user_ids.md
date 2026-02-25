@@ -89,7 +89,7 @@ AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 {% endtabs %}
 
 {% alert note %}
-Calling `changeUser()` triggers a data flush as part of closing the current user's session. The SDK automatically flushes any pending data for the previous user before switching to the new user, so you don't need to manually request a data flush before calling `changeUser()`.
+Calling `changeUser()` automatically triggers an immediate data flush as part of closing the current user's session. The SDK flushes any pending data for the previous user before switching to the new user, so you don't need to call `requestImmediateDataFlush()` when calling `changeUser()`.
 {% endalert %}
 
 {% alert warning %}
