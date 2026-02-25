@@ -156,7 +156,7 @@ For example, if you have an action-based Canvas and select **Limit entrance volu
 
 ![The "Entry Controls" page displaying checkboxes for "Allow users to re-enter Canvas" and "Limit entrance volume". The latter allowing you to set the maximum entries and if you want to limit daily, lifetime of the Canvas, or every time the Canvas is scheduled.]({% image_buster /assets/img_archive/entry_controls.png %})
 
-{% alert note %}
+{% alert tip %}
 Braze does not recommend selecting **Every time the Canvas is scheduled** for IP warming as this may lead to increased send volumes.
 {% endalert %}
 
