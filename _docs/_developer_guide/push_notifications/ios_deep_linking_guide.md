@@ -62,8 +62,8 @@ This option opens a web page inside a modal WebView within your app. It's handle
 - The URL is a standard HTTPS web page, not a deep link to a specific app screen.
 
 **Don't use "Open Web URL Inside App" when:**
-- You need to navigate to a specific view in your app — use a custom scheme or universal link instead
-- The web page requires authentication or has Content Security Policy headers that block embedding
+- You need to navigate to a specific view in your app. Instead, use a custom scheme or universal link.
+- The web page requires authentication or has Content Security Policy headers that block embedding.
 
 ## What you need for each link type
 
