@@ -1,6 +1,6 @@
 ---
-nav_title: "User Profile Attributes"
-article_title: User Attribute Views in Snowflake 
+nav_title: "User profile attributes"
+article_title: User attribute views in Snowflake 
 page_order: 10
 page_type: partner
 search_tag: Partner
@@ -14,7 +14,7 @@ search_tag: Partner
 User profile attributes are currently in beta for Snowflake Data Sharing customers. If you're using Snowflake Data Sharing and would like access to this beta, contact your customer success manager or Braze Support.
 {% endalert %}
 
-# Available views
+## Available views
 
 <table>
   <thead>
@@ -60,11 +60,13 @@ User profile attributes are currently in beta for Snowflake Data Sharing custome
 These views provide periodic snapshots of user profile attributes. The data is delayed by up to 12 hours, making it useful for queries that don't require real-time updates. 
 
  - `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`
- - `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`  
+ - `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`
 
-### `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`
+{% alert note %}
+The `TIME` field represents the time of the user profile update. For backfilled data, the `TIME` is the time of the backfill.
+{% endalert %}
 
-#### Schema
+### `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED` schema
 
 | Column name     | Data type     |
 |-----------------|---------------|
@@ -88,9 +90,7 @@ These views provide periodic snapshots of user profile attributes. The data is d
 {: .reset-td-br-1 .reset-td-br-2 role="presentation}
 
 
-### `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`
-
-#### Schema
+### `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED` schema
 
 | Column name     | Data type     |
 |-----------------|---------------|
@@ -103,7 +103,7 @@ These views provide periodic snapshots of user profile attributes. The data is d
 | `CUSTOM_ATTRIBUTES` | VARIANT |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation}  
 
-### User profile snapshots - usage notes
+### Usage notes
 
 * Provides a snapshot of user attributes with up to a **12-hour delay**.
 * Performs well for queries that don't require real-time accuracy.
@@ -115,10 +115,13 @@ These views provide periodic snapshots of user profile attributes. The data is d
 These views provides near real-time updates on user profile attributes, with data delayed by up to 10 minutes after an update occurs in Braze.
 
   - `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` 
-  - `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED` 
+  - `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED`
 
-### `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED`
-#### Schema
+{% alert note %}
+The `TIME` field represents the time of the user profile update. For backfilled data, the `TIME` is the time of the backfill.
+{% endalert %}
+
+### `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` schema
 
 | Column name     | Data type     |
 |-----------------|---------------|
@@ -141,8 +144,7 @@ These views provides near real-time updates on user profile attributes, with dat
 | `TIME_ZONE` | VARCHAR |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation}
 
-### `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED`
-#### Schema
+### `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED` schema
 
 | Column name     | Data type     |
 |-----------------|---------------|
@@ -155,8 +157,7 @@ These views provides near real-time updates on user profile attributes, with dat
 | `CUSTOM_ATTRIBUTES` | OBJECT |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation}
 
-
-### Real time user profile views - usage notes
+### Usage notes
 
 * Provides up-to-date user attributes with minimal delay (~10 minutes).
 * Useful for real-time analysis and scenarios where recent data is required.
@@ -172,8 +173,7 @@ These views store historical change logs of user attributes, capturing changes w
 - `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` 
 - `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED` 
 
-### `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED`
-#### Schema
+### `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` schema
 
 | Column name     | Data type     |
 |-----------------|---------------|
@@ -198,8 +198,7 @@ These views store historical change logs of user attributes, capturing changes w
 | `END_DT` | TIMESTAMP_NTZ |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation}
 
-### `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED`
-#### Schema
+### `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED` schema
 
 | Column name     | Data type     |
 |-----------------|---------------|
@@ -220,9 +219,9 @@ These views store historical change logs of user attributes, capturing changes w
 * Data is snapshotted every 12 hours, meaning multiple updates in this window are combined into a single record. Individual changes within this period are not separately retained.
 * `EFF_DT` and `END_DT` mark the start and end of a user’s attribute state.
 
-# Best practices
+## Best practices
 
-## Recommended query usage
+### Recommended query usage
 
 | Use case                                               | Recommended views                                   | Notes                                                                 |
 |--------------------------------------------------------|----------------------------------------------------|-----------------------------------------------------------------------|
@@ -231,7 +230,7 @@ These views store historical change logs of user attributes, capturing changes w
 | **Historical tracking** of attribute changes           | `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` and `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED`      | Stores attribute changes with 12-hour granularity.                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation}
 
-## Performance considerations
+### Performance considerations
 
 * Queries on `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED` or `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED` should return in under 10 seconds for large datasets (~1 billion users) on a large warehouse.
 * Queries on `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` or `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED ` for a single user return in under a minute but scale poorly without `USER_ID` filtering.
