@@ -90,37 +90,37 @@ A valid role object is a JSON object with the following key value pairs:
 | Edit Message Prioritization | `edit_message_prioritization` |
 | View Content Blocks | `view_content_blocks` |
 | View Feature Flags | `view_feature_flags` |
-| Edit Feature Flags | edit_feature_flags |
-| Archive Feature Flags | archive_feature_flags |
-| View Segments | view_segments |
-| Edit Segments | edit_segments |
-| Edit Global Control Group | edit_global_control_group |
-| View IAM Templates | view_iam_templates |
-| Edit IAM Templates | edit_iam_templates |
-| Archive IAM Templates | archive_iam_templates |
-| View Email Templates | view_email_templates |
-| Edit Email Templates | edit_email_templates |
-| Archive Email Templates | archive_email_templates |
-| View Webhook Templates | view_webhook_templates |
-| Edit Webhook Templates | edit_webhook_templates |
-| Archive Webhook Templates | archive_webhook_templates |
-| View Link Templates | view_link_templates |
-| Edit Link Templates | edit_link_templates |
-| View Media Library Assets | view_media_library_assets |
-| View Locations | view_locations |
-| Edit Locations | edit_locations |
-| Archive Locations | archive_locations |
-| View Promotion Codes | view_promotion_codes |
-| Edit Promotion Codes | edit_promotion_codes |
-| Export Promotion Codes | export_promotion_codes |
-| View Preference Centers | view_preference_centers |
-| Edit Preference Centers | edit_preference_centers |
-| Edit Reports | edit_reports |
-| View Banner Templates | view_banner_templates |
-| View Multi Language Settings | view_multi_language_settings |
-| Use Operator | use_operator |
-| View Decisioning Studio Agents | view_decisioning_studio_agents |
-| View Decisioning Studio Conversion Event | view_decisioning_studio_conversion_event |
+| Edit Feature Flags | `edit_feature_flags` |
+| Archive Feature Flags | `archive_feature_flags` |
+| View Segments | `view_segments` |
+| Edit Segments | `edit_segments` |
+| Edit Global Control Group | `edit_global_control_group` |
+| View IAM Templates | `view_iam_templates` |
+| Edit IAM Templates | `edit_iam_templates` |
+| Archive IAM Templates | `archive_iam_templates` |
+| View Email Templates | `view_email_templates` |
+| Edit Email Templates | `edit_email_templates` |
+| Archive Email Templates | `archive_email_templates` |
+| View Webhook Templates | `view_webhook_templates` |
+| Edit Webhook Templates | `edit_webhook_templates` |
+| Archive Webhook Templates | `archive_webhook_templates` |
+| View Link Templates | `view_link_templates` |
+| Edit Link Templates | `edit_link_templates` |
+| View Media Library Assets | `view_media_library_assets` |
+| View Locations | `view_locations` |
+| Edit Locations | `edit_locations` |
+| Archive Locations | `archive_locations` |
+| View Promotion Codes | `view_promotion_codes` |
+| Edit Promotion Codes | `edit_promotion_codes` |
+| Export Promotion Codes | `export_promotion_codes` |
+| View Preference Centers | `view_preference_centers` |
+| Edit Preference Centers | `edit_preference_centers` |
+| Edit Reports | `edit_reports` |
+| View Banner Templates | `view_banner_templates` |
+| View Multi Language Settings | `view_multi_language_settings` |
+| Use Operator | `use_operator` |
+| View Decisioning Studio Agents | `view_decisioning_studio_agents` |
+| View Decisioning Studio Conversion Event | `view_decisioning_studio_conversion_event` |
 | Launch Campaigns | `launch_campaigns` |
 | Launch Canvases | `launch_canvases` |
 | Edit Dashboard Users | `edit_dashboard_users` |
@@ -193,38 +193,38 @@ A valid role object is a JSON object with the following key value pairs:
 | View Content Blocks | `view_content_blocks` |
 | View Feature Flags | `view_feature_flags` |
 | Edit Feature Flags | `edit_feature_flags` |
-| Archive Feature Flags | archive_feature_flags |
-| View Segments | view_segments |
-| Edit Segments | edit_segments |
-| Edit Global Control Group | edit_global_control_group |
-| View IAM Templates | view_iam_templates |
-| Edit IAM Templates | edit_iam_templates |
-| Archive IAM Templates | archive_iam_templates |
-| View Email Templates | view_email_templates |
-| Edit Email Templates | edit_email_templates |
-| Archive Email Templates | archive_email_templates |
-| View Webhook Templates | view_webhook_templates |
-| Edit Webhook Templates | edit_webhook_templates |
-| Archive Webhook Templates | archive_webhook_templates |
-| View Link Templates | view_link_templates |
-| Edit Link Templates | edit_link_templates |
-| View Media Library Assets | view_media_library_assets |
-| View Locations | view_locations |
-| Edit Locations | edit_locations |
-| Archive Locations | archive_locations |
-| View Promotion Codes | view_promotion_codes |
-| Edit Promotion Codes | edit_promotion_codes |
-| Export Promotion Codes | export_promotion_codes |
-| View Preference Centers | view_preference_centers |
-| Edit Preference Centers | edit_preference_centers |
-| View Reports | view_reports |
-| Create Reports | create_reports |
-| Edit Reports | edit_reports |
-| View Banner Templates | view_banner_templates |
-| View Multi Language Settings | view_multi_language_settings |
-| Use Operator | use_operator |
-| View Decisioning Studio Agents | view_decisioning_studio_agents |
-| View Decisioning Studio Conversion Event | view_decisioning_studio_conversion_event |
+| Archive Feature Flags | `archive_feature_flags` |
+| View Segments | `view_segments` |
+| Edit Segments | `edit_segments` |
+| Edit Global Control Group | `edit_global_control_group` |
+| View IAM Templates | `view_iam_templates` |
+| Edit IAM Templates | `edit_iam_templates` |
+| Archive IAM Templates | `archive_iam_templates` |
+| View Email Templates | `view_email_templates` |
+| Edit Email Templates | `edit_email_templates` |
+| Archive Email Templates | `archive_email_templates` |
+| View Webhook Templates | `view_webhook_templates` |
+| Edit Webhook Templates | `edit_webhook_templates` |
+| Archive Webhook Templates | `archive_webhook_templates` |
+| View Link Templates | `view_link_templates` |
+| Edit Link Templates | `edit_link_templates` |
+| View Media Library Assets | `view_media_library_assets` |
+| View Locations | `view_locations` |
+| Edit Locations | `edit_locations` |
+| Archive Locations | `archive_locations` |
+| View Promotion Codes | `view_promotion_codes` |
+| Edit Promotion Codes | `edit_promotion_codes` |
+| Export Promotion Codes | `export_promotion_codes` |
+| View Preference Centers | `view_preference_centers` |
+| Edit Preference Centers | `edit_preference_centers` |
+| View Reports | `view_reports` |
+| Create Reports | `create_reports` |
+| Edit Reports | `edit_reports` |
+| View Banner Templates | `view_banner_templates` |
+| View Multi Language Settings | `view_multi_language_settings` |
+| Use Operator | `use_operator` |
+| View Decisioning Studio Agents | `view_decisioning_studio_agents` |
+| View Decisioning Studio Conversion Event | `view_decisioning_studio_conversion_event` |
 | Launch Campaigns | `launch_campaigns` |
 | Launch Canvases | `launch_canvases` |
 | Edit Dashboard Users | `edit_dashboard_users` |
