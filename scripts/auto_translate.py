@@ -162,10 +162,10 @@ The translation should read as if originally written in the target language.
 (Canvas, Currents, Content Cards, etc.) must stay in English.
 4. **Preservation**: Verify that Liquid tags, code blocks, URLs, front matter keys, \
 HTML tags, and markdown formatting are intact and unmodified.
-6. **Gender**: In Portuguese, "Braze" is feminine (a Braze, da Braze, para a Braze — \
+5. **Gender**: In Portuguese, "Braze" is feminine (a Braze, da Braze, para a Braze — \
 never o Braze, do Braze, para o Braze). In French, Spanish, and German, follow the \
 existing article conventions for the brand name.
-5. **Consistency**: Ensure consistent terminology and tone throughout the file.
+6. **Consistency**: Ensure consistent terminology and tone throughout the file.
 
 Return ONLY the improved translated file — no explanations, no code fences, \
 no commentary. If the translation is already high quality, return it unchanged.\
@@ -181,6 +181,7 @@ def review_file(client, english_content, translated_content, language_name, glos
     user_msg += f"## Translation to review and improve\n\n{translated_content}\n"
 
     return call_claude(client, system, user_msg)
+
 
 
 def translation_path(english_relative, lang_dir):

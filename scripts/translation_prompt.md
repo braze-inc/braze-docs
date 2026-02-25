@@ -70,6 +70,7 @@ In languages with grammatical gender, follow these conventions for the brand nam
 - **Spanish**: Avoid gendered articles directly before "Braze" when possible (prefer "de Braze", "con Braze"). When an article is required, match the gender of the head noun (e.g., "el Braze SDK" because "el SDK").
 - **German**: Omit articles before "Braze" unless grammar requires one. When an article is needed, use the gender of the head noun in the compound (e.g., "das Braze SDK" because "das SDK").
 
+
 ## Formatting rules
 
 - Preserve all blank lines and overall whitespace structure
