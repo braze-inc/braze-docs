@@ -16,12 +16,12 @@ tool: Dashboard
 {% sdktabs %}
 {% sdktab Legacy permissions %}
 
-{% multi_lang_include permissions_temp/legacy_permissions.md %}
+{% multi_lang_include permissions_temp/granular_permissions.md %}
 
 {% endsdktab %}
 {% sdktab Granular permissions %}
 
-{% multi_lang_include permissions_temp/granular_permissions.md %}
+{% multi_lang_include permissions_temp/legacy_permissions.md %}
 
 {% endsdktab %}
 {% endsdktabs %}

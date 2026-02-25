@@ -32,6 +32,8 @@ The ability to update permissions will lock within 15 minutes of the scheduled m
 
 ## Legacy to granular permissions mapping
 
+This table shows how each legacy permission maps to the granular permissions. Refer to this table while updating your permissions. For example, to give a user the same access as the "Manage Email Settings" legacy permission, that user needs to have both the "View Email Settings" and "Edit Email Settings" granular permissions.
+
 | | Legacy permissions | Granular permissions |
 |---------------|---------------|---------------|
 | **Level** | **Name** | **Name** |
