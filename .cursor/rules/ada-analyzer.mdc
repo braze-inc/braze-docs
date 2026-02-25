@@ -62,7 +62,9 @@ Not all findings can be fixed in the docs repo. Categorize each **critical** fin
 | **Platform/site** | Third-party widgets, cookie banner, site chrome not in docs repo | Docs site platform (separate repo) | Add to Issues report; escalate |
 | **Third-party**   | Search (Algolia), analytics, etc. | External service | Add to Issues report; document for vendor |
 
-**How to tell:** Inspect the **Code Snippet** and **Selector/Xpath**. If it references `su__` (search), `nav`, `header`, `form` in shared layout, or elements outside article content, it may be template/platform. If it references `img` with missing alt, `div` used as heading, or content inside the main article area, it's likely docs content.
+**How to tell:** Inspect the **Code Snippet** and **Selector/Xpath**. If it references `su__` (search), `searchForm`, `search-box-autocomplete`, `nav`, `header`, or `form` in shared layout, it may be template/platform or **third-party** — the search widget HTML is injected by external scripts (Swiftype/Algolia) and is not editable in this repo. If it references `img` with missing alt, `div` used as heading, or content inside the main article area, it's likely docs content.
+
+**Docs-repo patterns (fixable here):** `glossary_search`, `api_search`, `partner_search` → `_layouts/api_glossary.html`, `glossary_page.html`, `partner_page.html`, and other glossary/report layouts.
 
 ---
 
@@ -83,7 +85,8 @@ Convert scan URLs to docs repo paths:
 
 1. **By fixability**: Docs content fixes first (direct edits); template fixes may affect many pages
 2. **By rule type** (common critical rules):
-   - `input_label_exists`, `aria_accessiblename_exists` → Often template/layout
+   - `input_label_exists`, `aria_accessiblename_exists` → Often template/layout or third-party
+   - `input_placeholder_label_visible` → Docs templates: use sr-only label or aria-label (see Step 6)
    - `text_block_heading` → Content: use proper `##` / `###` in markdown
    - `image_alt` / alt text issues → Content: add or improve `alt` in `{% image_buster %}` or `<img>`
    - `label_name_visible` → Mix of content and template
@@ -106,9 +109,10 @@ For **docs content** findings (in `_docs/` or `_includes/` only — skip `_lang/
 For **docs templates** (layouts, includes):
 
 1. Add `aria-label` or `aria-labelledby` to form controls, buttons, and landmarks.
-2. Ensure `target="_blank"` links include accessible indication (e.g., "opens in new tab" in `aria-label` or visible text).
-3. Remove redundant ARIA roles where the implicit role is sufficient.
-4. Ensure unique `id` values if used for `aria-labelledby` or `aria-describedby`.
+2. **Form labels** (`input_placeholder_label_visible`): Prefer `<span class="sr-only">Label text</span>` inside the label over empty wrappers or placeholder-only labels. Avoid zero-width characters (`&#8205;`) as the only label content. Use `aria-label` only when a visible or sr-only label is not possible.
+3. Ensure `target="_blank"` links include accessible indication (e.g., "opens in new tab" in `aria-label` or visible text).
+4. Remove redundant ARIA roles where the implicit role is sufficient.
+5. Ensure unique `id` values if used for `aria-labelledby` or `aria-describedby`.
 
 ---
 
@@ -120,43 +124,32 @@ For **docs templates** (layouts, includes):
    - Example: `[ADA]-Cursor-input-label-exists-24022026`
 4. **PR naming**: `[ADA] <issue summary>`
    - Example: `[ADA] Fix input_label_exists (form control labels) across docs`
-5. **Label**: Add `--label "ada"` (or equivalent) when creating the PR.
+5. **Label**: Add `--label "ada"` when creating the PR, if that label exists in the repo.
+6. **Assign reviewers**: Per `CODEOWNERS`; if no owner is found for the changed files, assign to @braze-inc/docs-team.
 
 ---
 
 ## Issues report output
 
-Produce an **Issues report** and write it to `_data/ada/ada-issues-report-YYYYMMDD.md`. Include:
+Produce an **Issues report** as CSV and write it to `_data/ada/ada-issues-report-YYYYMMDD.csv`. Include:
 
 1. **Findings in `_lang/`** — Every critical finding that maps to a file under `_lang/`. Do not edit these files; list them for the localization team.
 2. **Platform/site findings** — Issues that require fixes in the docs site platform (separate repo).
 3. **Third-party findings** — Issues in external services (search, analytics, etc.).
 
-### Report format
+### Report format (CSV)
 
-```markdown
-# ADA Issues Report — YYYYMMDD
+Columns: `Category`, `URL`, `Rule Id`, `Count`, `Problem`, `Escalate to`, `Notes`
 
-## _lang/ findings (do not edit)
+- **Category**: `_lang/ findings`, `Platform/site`, or `Third-party`
+- **URL**: Page URL (for platform/_lang findings)
+- **Rule Id**: Rule identifier
+- **Count**: Occurrence count (for third-party findings)
+- **Problem**: Plain-language problem description
+- **Escalate to**: e.g., Platform team
+- **Notes**: e.g., Search/cookie vendor
 
-| URL | Page Title | Target Path | Rule Id | Problem | Suggested Fix |
-|-----|------------|-------------|---------|---------|---------------|
-| ... | ... | _lang/de/_user_guide/... | input_label_exists | ... | ... |
-
-## Platform/site findings
-
-| URL | Rule Id | Problem | Escalate to |
-|-----|---------|---------|-------------|
-| ... | ... | ... | Platform team |
-
-## Third-party findings
-
-| URL | Rule Id | Problem | Notes |
-|-----|---------|---------|-------|
-| ... | ... | ... | ... |
-```
-
-Output the report to the chat and to `_data/ada/ada-issues-report-YYYYMMDD.md`.
+Output the report to the chat and to `_data/ada/ada-issues-report-YYYYMMDD.csv`.
 
 ---
 
@@ -177,7 +170,7 @@ When you receive a new export:
    ```
 
 3. **Run triage**: Use this rule to analyze the export. Process only **critical** severity findings. Apply fixes to **Docs content** and **Docs templates** only. Do not edit `_lang/` files.
-4. **Generate Issues report**: Output `_data/ada/ada-issues-report-YYYYMMDD.md` with `_lang/`, platform, and third-party findings.
+4. **Generate Issues report**: Output `_data/ada/ada-issues-report-YYYYMMDD.csv` with `_lang/`, platform, and third-party findings.
 5. **Compare with prior runs**: If the export format is consistent, you can diff or compare error counts to track progress.
 
 ---
@@ -196,5 +189,5 @@ When you receive a new export:
 
 ```
 @ada-analyzer.mdc Analyze the ADA scan export at _data/ada/braze-docs-ada-scan-20260224.xlsx.
-Process only critical severity findings. Apply fixes to _docs/ and templates only; do not edit _lang/. Output the Issues report to _data/ada/ada-issues-report-20260224.md.
+Process only critical severity findings. Apply fixes to _docs/ and templates only; do not edit _lang/. Output the Issues report to _data/ada/ada-issues-report-20260224.csv.
 ```
