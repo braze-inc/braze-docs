@@ -35,7 +35,7 @@ There are two ways to add the Content Block to your email: using the editor or u
 
 To add a Content Block in the editor, do the following:
 
-1. Go to the the **Rows** tab in the editor and select **Content Blocks**. 
+1. Go to the **Rows** tab in the editor and select **Content Blocks**. 
 2. Drag and drop your Content Block into the email editor. 
 3. (Optional) Adjust the width of your Content Block by selecting the button in the navigation menu. The default width is 100% when not specified in your email global style settings; otherwise, the global settings will be honored. <br><br>![A double-sided arrow with an option to edit the width.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
 

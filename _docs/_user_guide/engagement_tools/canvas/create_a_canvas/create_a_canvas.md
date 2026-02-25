@@ -12,7 +12,7 @@ search_rank: 1
 
 > This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup).
 
-{% details Original Canvas editor %}
+{% details Expand for original Canvas editor details %}
 You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/) to the most current editor.
 {% enddetails %}
 
@@ -146,14 +146,18 @@ After adding segments and filters to your target audience, you can test if your 
 
 ##### Selecting entry controls
 
-Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas by a selected cadence (daily, lifetime of the Canvas, or every time the Canvas is scheduled). 
+Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas by a selected cadence depending on your entry schedule type:
 
-For example, if you select **Limit entrance volume** and set the **Maximum entries** field to 5,000 users with **Daily** as the limit cadence, then the Canvas will only send to 5,000 users per day.
+- **Scheduled:** Lifetime of the Canvas or every time the Canvas is scheduled
+- **Action-Based:** Hourly, daily, or the lifetime of the Canvas
+- **API-Triggered:** Hourly, daily, or the lifetime of the Canvas
 
-![The "Entry Controls" page displaying checkboxes for "Allow users to re-enter Canvas" and "Limit entrance volume". The latter allowing you to set the maximum entries and whether you'd like to limit daily, lifetime of the Canvas, or every time the Canvas is scheduled.]({% image_buster /assets/img_archive/entry_controls.png %})
+For example, if you have an action-based Canvas and select **Limit entrance volume** and set the **Maximum entries** field to 5,000 users with **Daily** as the limit cadence, then the Canvas only sends to 5,000 users per day.
+
+![The "Entry Controls" page displaying checkboxes for "Allow users to re-enter Canvas" and "Limit entrance volume". The latter allows you to set the maximum entries and choose a cadence that depends on the entry schedule type (for example, lifetime of the Canvas or every time the Canvas is scheduled for scheduled entry, and hourly, daily, or lifetime of the Canvas for action-based and API-triggered entry).]({% image_buster /assets/img_archive/entry_controls.png %})
 
 {% alert tip %}
-Braze doesn't recommend using the **Every time the Canvas is scheduled** feature for IP warming as this may lead to increased send volumes.
+Braze does not recommend selecting **Every time the Canvas is scheduled** for IP warming as this may lead to increased send volumes.
 {% endalert %}
 
 ##### Setting exit criteria
