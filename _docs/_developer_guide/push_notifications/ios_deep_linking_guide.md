@@ -45,10 +45,10 @@ Custom scheme deep links (for example, `myapp://products/123`) open your app dir
 Universal links (for example, `https://myapp.com/products/123`) are standard HTTPS URLs that iOS can route to your app instead of opening in a browser. They require server-side configuration (an AASA file) and app-side setup (Associated Domains entitlement).
 
 **Use universal links when:**
-- Sending emails — your ESP wraps links for click tracking, so links must be HTTPS
-- Sending SMS or other channels where links are wrapped or shortened
-- You need the link to fall back to a web page when the app isn't installed
-- You're using a third-party linking provider like Branch or AppsFlyer
+- Sending emails. Your ESP wraps links for click tracking, so links must be HTTPS.
+- Sending SMS or other channels where links are wrapped or shortened.
+- You need the link to fall back to a web page when the app isn't installed.
+- You're using a third-party linking provider like Branch or AppsFlyer.
 
 **Don't use universal links when:**
 - You only need deep links from push, in-app messages, or Content Cards — custom schemes are simpler
