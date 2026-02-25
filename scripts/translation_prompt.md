@@ -59,6 +59,8 @@ These are Braze product names and features. Keep them in English:
 
 Common UI terms (buttons, menus, navigation labels) may be translated according to the target language's conventions if the Braze product UI is localized for that language. When an existing translation is provided, maintain consistency with its terminology choices.
 
+An "Approved terminology" table may be appended to the end of these instructions with file-specific term translations. When present, use those approved translations. If an English term maps to itself in the table, keep it in English.
+
 ## Formatting rules
 
 - Preserve all blank lines and overall whitespace structure

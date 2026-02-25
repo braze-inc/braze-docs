@@ -37,11 +37,53 @@ MODEL = os.environ.get("TRANSLATION_MODEL", "claude-sonnet-4-20250514")
 MAX_TOKENS = 16384
 REPO_ROOT = Path(os.environ.get("GITHUB_WORKSPACE", Path.cwd()))
 RESULTS_FILE = REPO_ROOT / "translation_results.json"
+GLOSSARY_DIR = REPO_ROOT / "scripts" / "glossaries"
 
 
 def load_prompt():
     """Load the translation system prompt from scripts/translation_prompt.md."""
     return (REPO_ROOT / "scripts" / "translation_prompt.md").read_text()
+
+
+def load_glossary(lang_key):
+    """Load the terminology glossary for a language. Returns {} if not found."""
+    glossary_path = GLOSSARY_DIR / f"{lang_key}.json"
+    if glossary_path.exists():
+        return json.loads(glossary_path.read_text())
+    return {}
+
+
+def filter_glossary(glossary, text, max_terms=200):
+    """Return only glossary entries whose English term appears in the text.
+
+    Case-insensitive matching. Capped at max_terms to keep prompt size
+    reasonable — prioritizes longer (more specific) terms first.
+    """
+    text_lower = text.lower()
+    matches = {
+        en: target
+        for en, target in glossary.items()
+        if en.lower() in text_lower
+    }
+    if len(matches) <= max_terms:
+        return matches
+    sorted_by_specificity = sorted(matches.items(), key=lambda x: -len(x[0]))
+    return dict(sorted_by_specificity[:max_terms])
+
+
+def format_glossary_for_prompt(glossary):
+    """Format filtered glossary as a markdown table for the prompt."""
+    if not glossary:
+        return ""
+    lines = [
+        "\n## Approved terminology for this file\n",
+        "Use these approved translations. If an English term maps to itself, keep it in English.\n",
+        "| English | Translation |",
+        "|---------|-------------|",
+    ]
+    for en, target in sorted(glossary.items(), key=lambda x: x[0].lower()):
+        lines.append(f"| {en} | {target} |")
+    return "\n".join(lines)
 
 
 def strip_code_fences(text):
@@ -71,8 +113,10 @@ def call_claude(client, system_prompt, user_message, retries=3):
                 raise
 
 
-def translate_file(client, prompt, english_content, existing_translation, language_name):
+def translate_file(client, prompt, english_content, existing_translation, language_name, glossary_section=""):
     """Translate a single English file into the target language."""
+    system = prompt + glossary_section
+
     user_msg = f"## Target language\n{language_name}\n\n"
     user_msg += f"## English source (translate this)\n\n{english_content}\n\n"
 
@@ -84,7 +128,7 @@ def translate_file(client, prompt, english_content, existing_translation, langua
     else:
         user_msg += "## Existing translation\nNone — this is a new file. Translate from scratch.\n"
 
-    return call_claude(client, prompt, user_msg)
+    return call_claude(client, system, user_msg)
 
 
 def fix_file(client, prompt, translated_content, build_error, language_name):
@@ -146,6 +190,8 @@ def cmd_translate(args):
     prompt = load_prompt()
     results = load_results()
 
+    glossaries = {lang: load_glossary(lang) for lang in LANGUAGES}
+
     for fpath in md_files:
         relative = str(Path(fpath).relative_to("_docs"))
         english_content = (REPO_ROOT / fpath).read_text()
@@ -155,11 +201,16 @@ def cmd_translate(args):
 
             existing = target.read_text() if target.exists() else None
 
-            print(f"  {relative} → {lang_info['name']}...", end=" ", flush=True)
+            filtered = filter_glossary(glossaries[lang_key], english_content)
+            glossary_section = format_glossary_for_prompt(filtered)
+            term_count = len(filtered)
+
+            print(f"  {relative} → {lang_info['name']} ({term_count} terms)...", end=" ", flush=True)
 
             try:
                 translated = translate_file(
-                    client, prompt, english_content, existing, lang_info["name"]
+                    client, prompt, english_content, existing,
+                    lang_info["name"], glossary_section,
                 )
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(translated)
