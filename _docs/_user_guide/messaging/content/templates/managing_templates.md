@@ -1,7 +1,7 @@
 ---
 nav_title: Manage templates
 article_title: Manage Templates
-page_order: 3
+page_order: 1
 
 page_type: reference
 description: "This reference article describes how to duplicate and archive templates in the Templates & Media section of the Braze dashboard."
@@ -25,7 +25,7 @@ To duplicate an individual template, select the <i class="fas fa-cog"></i> cog i
 <br><br>
 
 {% alert note %}
-For [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) templates, a draft copy is created. For all other templates a new duplicate copy is automatically created.
+For [Content Block]({{site.baseurl}}/user_guide/messaging/content/content_blocks/) templates, a draft copy is created. For all other templates a new duplicate copy is automatically created.
 {% endalert %}
 
 ### Multiple templates

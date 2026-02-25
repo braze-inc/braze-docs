@@ -9,7 +9,7 @@ tool: Canvas
 
 # Send test Canvases
 
-> After [creating your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), there are several checks you may want to perform before launching, depending on details such as your audience size or number of segmentation filters.
+> After [creating your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/), there are several checks you may want to perform before launching, depending on details such as your audience size or number of segmentation filters.
 
 When possible, Braze recommends testing a Canvas before launching. This test will typically take place in your Braze environment. Testing your Canvas can involve duplicating it, taking test users through the user journey, and checking if the user behavior aligns with what you have outlined in your Canvas.
 
@@ -69,7 +69,7 @@ To help run tests more efficiently, we suggest reducing time delays to minutes o
 
 ### Leverage Content Blocks
 
-If any content is going to be repeated in your testing framework (for example, complex Liquid to filter users into different Canvas steps), try saving this repeated content as a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks). Now, you'll be able to include the Content Block throughout the individual Canvas steps.
+If any content is going to be repeated in your testing framework (for example, complex Liquid to filter users into different Canvas steps), try saving this repeated content as a [Content Block]({{site.baseurl}}/user_guide/messaging/content/content_blocks/). Now, you'll be able to include the Content Block throughout the individual Canvas steps.
 
 ### Use Postman and the Track user endpoint
 

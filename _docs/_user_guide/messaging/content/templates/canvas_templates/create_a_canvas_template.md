@@ -2,7 +2,7 @@
 nav_title: Create a Canvas template
 article_title: Create a Canvas Template
 alias: "/canvas_templates/"
-page_order: 0.5
+page_order: 1
 description: "This reference article covers how to create a template for Canvas."
 page_type: reference
 ---
@@ -49,7 +49,7 @@ Select **Create template** and begin setting up your Canvas details. You can sta
 
 ### Step 3: Customize your template
 
-Next, customize your template by [setting up your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas). You can decide when users should enter the Canvas, determine which users can enter this Canvas, adjust your send settings, and build your user journey for the template.
+Next, customize your template by [setting up your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas). You can decide when users should enter the Canvas, determine which users can enter this Canvas, adjust your send settings, and build your user journey for the template.
 
 ### Step 4: Save your template
 

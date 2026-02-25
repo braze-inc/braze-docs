@@ -1,8 +1,7 @@
 ---
 nav_title: Media library
 article_title: Media library
-page_order: 9
-page_order: 0
+page_order: 2
 page_type: reference
 description: "This reference article covers the media library. Here, you can learn how to manage your assets in a single, centralized location, generate image using AI, access media in your message composer."
 tool: Media
@@ -38,7 +37,7 @@ Later when drafting a message in Braze, you can pull in your images from the med
 
 ![Two common ways of accessing the media library depending on the message composer. One shows the email Drag and Drop Editor with the title "Images and GIFs" and a button to "Add from Media Library". The other shows the standard editors, such as push and in-app messages, with the title "Media" and a button to "Add Image".]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
 
-{% alert tip %} For more help with the media library, check out our [Templates & Media FAQ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
+{% alert tip %} For more help with the media library, check out our [Media library FAQ]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library/faq/). {% endalert %}
 
 ## Image specifications
 

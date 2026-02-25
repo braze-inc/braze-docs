@@ -8,13 +8,13 @@ description: "This article explains how to view and interpret the results of a m
 
 # Multivariate and A/B test analytics
 
-> This article explains how to view the results of a multivariate or A/B test. If you haven't set up your test yet, refer to [Creating multivariate and A/B tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) for steps.
+> This article explains how to view the results of a multivariate or A/B test. If you haven't set up your test yet, refer to [Creating multivariate and A/B tests]({{site.baseurl}}/user_guide/messaging/ab_testing/create_tests/) for steps.
 
 After your campaign has launched, you can check how each variant is performing by selecting your campaign from the **Campaigns** section of the dashboard. 
 
 ## Analytics by optimization option
 
-Your analytics view will vary depending on if you selected an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) during your initial setup.
+Your analytics view will vary depending on if you selected an [optimization]({{site.baseurl}}/user_guide/messaging/ab_testing/optimizations/) during your initial setup.
 
 ### No optimization
 
@@ -35,7 +35,7 @@ The **A/B Test Result** is divided into two tabs: **Initial Test** and **Winning
 
 The **Initial Test** tab shows the metrics for each variant from the initial A/B test sent to a portion of your target segment. You can see a summary of how all the variants performed and whether or not there was a winner during the test.
 
-If one variant outperformed all the others with better than 95% [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence), Braze marks that variant with a "Winner" label.
+If one variant outperformed all the others with better than 95% [confidence]({{site.baseurl}}/user_guide/messaging/ab_testing/analytics/#understanding-confidence), Braze marks that variant with a "Winner" label.
 
 If no variant beats all the others with 95% confidence and you chose to send the best performing variant anyway, the best performing variant will still be sent out and indicated with the label "Winner".
 

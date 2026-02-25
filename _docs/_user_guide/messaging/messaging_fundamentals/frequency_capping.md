@@ -332,5 +332,5 @@ No. If a Canvas user is frequency-capped because of global frequency capping set
 
 ### How can I identify users who were frequency capped in a Canvas?
 
-Users who are frequency capped don't generate a send event for that step. To identify these users, you can use [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) to track message frequency capped events. Alternatively, you can create a [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to analyze users who entered the Canvas but didn't receive the expected message.
+Users who are frequency capped don't generate a send event for that step. To identify these users, you can use [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) to track message frequency capped events. Alternatively, you can create a [Segment Extension]({{site.baseurl}}/user_guide/audience/segments/segment_extension/) to analyze users who entered the Canvas but didn't receive the expected message.
 

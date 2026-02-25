@@ -72,13 +72,13 @@ For email campaigns, you can target Seed Groups under the **Seed Groups** sectio
 
 ### Step 2: Test your audience
 
-After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
+After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
 ![The "User Lookup" section with a button "Lookup User".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 #### Audience summary
 
-The **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your audience by setting a maximum user cap or [rate-limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) delivery speed.
+The **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your audience by setting a maximum user cap or [rate-limiting]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/rate_limiting/) delivery speed.
 
 ![The "Audience Summary" section with options to set a maximum user cap or rate limit delivery speed.]({% image_buster /assets/img_archive/audience_summary.png %})
 
@@ -86,13 +86,13 @@ The **Audience Summary** will show an overview of who is in your target audience
 
 In the **A/B Testing** section, you can set up a test to compare users' responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style. The objective is to identify the version of the campaign that best accomplishes your marketing goals. 
 
-For more information and best practices, refer to [Multivariate & A/B Testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
+For more information and best practices, refer to [Multivariate & A/B Testing]({{site.baseurl}}/user_guide/messaging/ab_testing/).
 
 #### Audience statistics
 
-Braze provides detailed audience statistics of the targeted channels in the footer. The larger your user base is, the more likely the **Reachable Users** amount is a rough estimate. The number of reachable users may decrease if you use a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) or set up message eligibility. 
+Braze provides detailed audience statistics of the targeted channels in the footer. The larger your user base is, the more likely the **Reachable Users** amount is a rough estimate. The number of reachable users may decrease if you use a [Global Control Group]({{site.baseurl}}/user_guide/audience/global_control_group/) or set up message eligibility. 
 
-- To determine an accurate number for your reachable users, select [Calculate exact statistics]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics), as this will search through every user in your user base.
+- To determine an accurate number for your reachable users, select [Calculate exact statistics]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/#calculating-exact-statistics), as this will search through every user in your user base.
 - To see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, select **Show Additional Statistics**.
 
 ##### Why the target audience count could differ from the reachable users count

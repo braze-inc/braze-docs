@@ -39,5 +39,5 @@ Braze doesn't automatically merge users based on attributes, such as email or ph
 To merge duplicate user profiles, you can:
 
 - Trigger the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) when a landing page form is submitted to merge the new profile with an existing profile.
-- Schedule [bulk merging]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging) to periodically merge duplicate profiles based on matching identifiers.
+- Schedule [bulk merging]({{site.baseurl}}/user_guide/audience/user_profiles/duplicate_users/#bulk-merging) to periodically merge duplicate profiles based on matching identifiers.
 

@@ -165,7 +165,7 @@ You have ${{custom_attribute.${giftcard_balance} | plus: {{balance}}}} to spend!
 {% alert tip %}
 Find yourself assigning the same variables in every message? Instead of writing out the `assign` tag over and over again, you can save that tag as a Content Block and put it at the top of your message instead.
 
-1. [Create a Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
+1. [Create a Content Block]({{site.baseurl}}/user_guide/messaging/content/content_blocks/#create-a-content-block).
 2. Give your Content Block a name (no spaces or special characters).
 3. Select **Edit** at the bottom of the page.
 4. Enter your `assign` tags.

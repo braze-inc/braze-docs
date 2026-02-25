@@ -11,7 +11,7 @@ page_order: 0
 
 ## Prerequisites
 
-To access the landing page builder, you need [certain permissions]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#prerequisites). If you don’t have access, ask your Braze admin for help.
+To access the landing page builder, you need [certain permissions]({{site.baseurl}}/user_guide/messaging/landing_pages/#prerequisites). If you don’t have access, ask your Braze admin for help.
 
 ## Creating a landing page
 
@@ -40,7 +40,7 @@ We suggest following these best practices:
 | Site title | The title that displays on the browser tab. | Use up to 60 characters. |
 | Meta description | A text snippet that displays in search results. | Use between 140-160 characters.|
 | Favicon | The icon that appears next to the site title on the browser tab. | Use an aspect ratio of 1:1, and a supported file type of PNG, JPEG, or ICO. |
-| Page URL | This is URL path to your landing page. This value is also referenced when using [landing page liquid tags]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) that you can embed in a message to automatically identify when they submit your form.| This value must be unique across your workspace. |
+| Page URL | This is URL path to your landing page. This value is also referenced when using [landing page liquid tags]({{site.baseurl}}/user_guide/messaging/landing_pages/tracking_users/) that you can embed in a message to automatically identify when they submit your form.| This value must be unique across your workspace. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Step 3: Customize the page
@@ -92,7 +92,7 @@ You can use these blocks to create a form that links user-submitted data to thei
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-After creating a landing page with a form, be sure to embed its [landing page Liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
+After creating a landing page with a form, be sure to embed its [landing page Liquid tag]({{site.baseurl}}/user_guide/messaging/landing_pages/tracking_users/) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
 {% endalert %}
 
 {% endtab %}

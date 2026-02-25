@@ -1,12 +1,12 @@
 ---
-nav_title: Create a webhook template
-article_title: Create a Webhook Template
-page_order: 2
+nav_title: Webhook templates
+article_title: Webhook templates
+page_order: 5
 tool:
   - Templates
 channel:
   - webhooks
-description: "This reference article covers how to create and customize webhook templates for later use within the Braze platform."
+description: "Learn how to create and customize webhook templates for later use within the Braze platform."
 
 ---
 
@@ -55,7 +55,5 @@ Edits made to an existing template aren't reflected in campaigns that were creat
 
 ## Managing your templates
 
-You can [duplicate and archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) webhook templates to help better organize and manage your list of templates.
-
-Learn more about creating and managing templates and creative content in [Templates and Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+You can [duplicate and archive]({{site.baseurl}}/user_guide/messaging/content/templates/managing_templates/) webhook templates to help better organize and manage your list of templates.
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Landing pages
 article_title: Landing Pages
-page_order: 31
+page_order: 8
 guide_top_header: "Landing Pages"
 description: "This article contains resources on building and customizing Braze landing pages."
 alias: /landing_pages/

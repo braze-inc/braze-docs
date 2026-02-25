@@ -1,17 +1,17 @@
 ---
 nav_title: Feature flags
 article_title: Feature flags
-page_order: 8
+page_order: 7
 page_type: reference
 description: "This reference article covers how feature flags can be used in Canvas."
 tool: Canvas
 local_redirect:
-  create-a-feature-flag: '/docs/user_guide/engagement_tools/canvas/canvas_components/feature_flags/#creating-a-feature-flag'
+  create-a-feature-flag: '/docs/user_guide/messaging/feature_flags/create_feature_flags/'
 ---
 
 # Feature flags
 
-> Feature flags allow you to experiment and confirm your hypotheses around new features. Marketers can use feature flags to segment your audience in [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) and track the impact of feature rollout on conversions. Moreover, [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths) allow you optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
+> Feature flags allow you to experiment and confirm your hypotheses around new features. Marketers can use feature flags to segment your audience in [Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/) and track the impact of feature rollout on conversions. Moreover, [Experiment Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step#experiment-paths) allow you optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
 
 Looking for more information about feature flags and how they can be used in Braze? Check out our dedicated [Feature flags]({{site.baseurl}}/developer_guide/feature_flags/) articles.
 

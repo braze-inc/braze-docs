@@ -2,7 +2,7 @@
 nav_title: Messaging fundamentals
 article_title: Messaging Fundamentals
 layout: dev_guide
-page_order: 0
+page_order: 1
 guide_top_header: "Messaging Fundamentals"
 guide_top_text: "> In Braze, you can compose, send, and manage your messages by using <a href='/docs/user_guide/getting_started/campaigns_canvases'>a campaign or a Canvas</a>. For both these messaging methods, there are some shared messaging fundamentals for composition (setting up your message) and management (administratively handling your message)."
 page_type: landing
@@ -25,22 +25,22 @@ guide_featured_description: |
   ### Related articles
 guide_featured_list:
   - name: Conversion Events
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/
+    link: /docs/user_guide/messaging/messaging_fundamentals/conversion_events/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Delivery Types
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
+    link: /docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/
     image: /assets/img/braze_icons/beaker-02.svg
   - name: Editor Blocks
-    link: /docs/dnd/editor_blocks/
+    link: /docs/user_guide/messaging/design_and_edit/editor_blocks/
     image: /assets/img/braze_icons/align-left.svg
   - name: Localization
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
+    link: /docs/user_guide/messaging/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg
   - name: Re-eligibility
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/
+    link: /docs/user_guide/messaging/messaging_fundamentals/re_eligibility/
     image: /assets/img/braze_icons/users-01.svg
   - name: Targeting Users
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/
+    link: /docs/user_guide/messaging/messaging_fundamentals/target_users/
     image: /assets/img/braze_icons/target-04.svg
 
 guide_menu_title: "Management"
@@ -55,19 +55,19 @@ guide_menu_description: |
   ### Related articles
 guide_menu_list:
   - name: Approval Workflow
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
+    link: /docs/user_guide/messaging/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Archiving Messages
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
+    link: /docs/user_guide/messaging/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
   - name: Copying Across Workspaces
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    link: /docs/user_guide/messaging/messaging_fundamentals/copy_across_workspaces/
     image: /assets/img/braze_icons/copy-07.svg
   - name: Duplicating Messages
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
+    link: /docs/user_guide/messaging/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
   - name: Messaging Statuses
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
+    link: /docs/user_guide/messaging/messaging_fundamentals/statuses/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Know Before Sending
     link: /docs/know_before_send/

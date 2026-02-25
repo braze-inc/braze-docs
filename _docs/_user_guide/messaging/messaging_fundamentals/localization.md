@@ -41,8 +41,8 @@ In this approach, localization is applied to a single template in Braze using [L
 This approach separates templating into different sending locales. After sending, the dashboard reports sending analytics based on each country separately, and any downstream user-level [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) events will also be tied to a specific campaign.
 
 - Templates benefit from implementing [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) for maintenance and tracking purposes.
-- Campaigns can inherit the configurations from the same [Braze template]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) and [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (such as [email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) that contain Liquid).
-- Pre-existing campaigns and templates can be [duplicated]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/duplicating/) to allow a faster time time-to-value.
+- Campaigns can inherit the configurations from the same [Braze template]({{site.baseurl}}/user_guide/messaging/content/templates/) and [Content Blocks]({{site.baseurl}}/user_guide/messaging/content/content_blocks/) (such as [email templates]({{site.baseurl}}/user_guide/messaging/content/templates/email_templates/) that contain Liquid).
+- Pre-existing campaigns and templates can be [duplicated]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/duplicating/) to allow a faster time time-to-value.
 
 | Advantages | Considerations |
 | --- | --- |
@@ -53,9 +53,9 @@ This approach separates templating into different sending locales. After sending
 {% tab canvas %}
 ### One journey for all
 
-In this approach, localization is handled within [Canvas Journeys]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey) and Liquid to define messaging for each user. 
+In this approach, localization is handled within [Canvas Journeys]({{site.baseurl}}/user_guide/messaging/canvas/get_started/the_basics/#building-the-customer-journey) and Liquid to define messaging for each user. 
 
-After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), whereas the user level engagement can be measured via custom [segment funnels]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/), such as combining [**Country**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) and [**Received Canvas Step**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step) filters.
+After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics]({{site.baseurl}}/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), whereas the user level engagement can be measured via custom [segment funnels]({{site.baseurl}}/user_guide/audience/segments/measuring_segment_size/), such as combining [**Country**]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#country) and [**Received Canvas Step**]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#received-canvas-step) filters.
 
 | Advantages | Considerations |
 | --- | --- |
@@ -64,12 +64,12 @@ After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics]({{s
 
 ### One journey per country
 
-In this approach, the [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). These components can be [duplicated]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/duplicating) at the component and overall journey level.
+In this approach, the [Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas components]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/). These components can be [duplicated]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/duplicating/) at the component and overall journey level.
 
 Localization can be achieved with the following methods:
 
 - Separate Canvases per country, this ensures the complex user journeys are defined at the top of the funnel using audience filters
-- Bespoke user journeys per country, the implementation of [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to intuitively segment users on a large scale for each journey by creating separate message threads for each country in a single Canvas
+- Bespoke user journeys per country, the implementation of [Audience Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/audience_paths/) to intuitively segment users on a large scale for each journey by creating separate message threads for each country in a single Canvas
 
 Once sent, the dashboard provides dynamic analytics per country and within user-level [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) events based on the customer’s current location.
 
@@ -88,7 +88,7 @@ To send personalized messages based on a user's language, locale, or custom attr
 
 Braze supports a {% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} Liquid tag to target users in different languages with a single message. 
 
-For a full walkthrough, refer to the [guide on using translation tags]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
+For a full walkthrough, refer to the [guide on using translation tags]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/).
   
 ### Alternative approaches
 
@@ -122,7 +122,7 @@ We always recommend including a {% raw %}`{% else %}`{% endraw %} statement in y
 {% endtab %}
 
 {% tab Content Blocks %}
-Braze [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) are reusable blocks of content. When a block is changed, all references to that block changes. For example, updates to an email header or footer will be reflected in all emails or to house translations. These blocks can also be [created]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) and [updated]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) using the REST API, and users can programmatically upload translations. 
+Braze [Content Blocks]({{site.baseurl}}/user_guide/messaging/content/content_blocks/) are reusable blocks of content. When a block is changed, all references to that block changes. For example, updates to an email header or footer will be reflected in all emails or to house translations. These blocks can also be [created]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) and [updated]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) using the REST API, and users can programmatically upload translations. 
 
 When building a campaign in the dashboard, Content Blocks can be referenced using tag {% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %}. These blocks could contain all translations housed within conditional logic for each language, as shown in option 1, or a separate block for each language can be used.
 

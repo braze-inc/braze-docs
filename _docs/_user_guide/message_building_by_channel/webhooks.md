@@ -16,7 +16,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
   image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Creating a Webhook Template
-  link: /docs/user_guide/message_building_by_channel/webhooks/webhook_template/
+  link: /docs/user_guide/messaging/content/templates/webhook_templates/
   image: /assets/img/braze_icons/table.svg
 - name: Braze-to-Braze Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/

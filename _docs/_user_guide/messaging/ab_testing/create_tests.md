@@ -6,19 +6,19 @@ page_type: reference
 description: "This article explains how to create multivariate and A/B tests with Braze."
 
 local_redirect: #optimizations
-  optimizations: '/docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/'
+  optimizations: '/docs/user_guide/messaging/ab_testing/optimizations/'
 ---
 
 # Create multivariate and A/B tests {#creating-tests}
 
-> You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) for any campaign that targets a single channel and single device. For example, if you want to use multivariate or A/B testing for a push campaign, you can target only iOS devices or only Android devices—not both device types in the same campaign.
+> You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/messaging/ab_testing/) for any campaign that targets a single channel and single device. For example, if you want to use multivariate or A/B testing for a push campaign, you can target only iOS devices or only Android devices—not both device types in the same campaign.
 
 ![The dropdown from selecting the "Create campaign" button to choose either multichannel or single channel.]({% image_buster /assets/img/ab_create_1.png %}){: style="max-width:25%;float:right;margin-left:15px;" }
 
 ## Step 1: Create your campaign
 
 1. Go to **Messaging** > **Campaigns**.
-2. Select **Create campaign** and a channel for the campaign from the section that allows multivariate and A/B testing. For detailed documentation on each messaging channel, refer to [Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/).
+2. Select **Create campaign** and a channel for the campaign from the section that allows multivariate and A/B testing. For detailed documentation on each messaging channel, refer to [Create a campaign]({{site.baseurl}}/user_guide/messaging/campaigns/creating_campaign/).
 
 ## Step 2: Compose your variants
 
@@ -30,19 +30,19 @@ For some ideas on how to get started differentiating your variants, refer to [Ti
 
 ## Step 3: Schedule your campaign
 
-Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) are available.
+Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/) are available.
 
 After a multivariate test begins, you can't make changes to the campaign. If you change the parameters, such as the subject line or HTML body, Braze considers the experiment compromised and immediately disables the experiment.
 
 {% alert important %}
-To use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for campaigns that repeat or have re-eligibility turned on.
+To use an [optimization]({{site.baseurl}}/user_guide/messaging/ab_testing/optimizations/) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for campaigns that repeat or have re-eligibility turned on.
 {% endalert %}
 
 ## Step 4: Choose a segment and distribute your users across variants
 
 Select segments to target, then distribute the members across your selected variants and the optional [control group](#including-a-control-group). For best practices around choosing a segment to test with, see [Choosing a segment](#choosing-a-segment).
 
-For push, email, and webhook campaigns scheduled to send once, you can also use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/). An optimization reserves a portion of your target audience from the A/B test and holds them for a second optimized send based on the results from the first test.
+For push, email, and webhook campaigns scheduled to send once, you can also use an [optimization]({{site.baseurl}}/user_guide/messaging/ab_testing/optimizations/). An optimization reserves a portion of your target audience from the A/B test and holds them for a second optimized send based on the results from the first test.
 
 ### Control group {#including-a-control-group}
 
@@ -68,11 +68,11 @@ The size of the control group for a campaign with [Intelligent Selection]({{site
 
 Setting a conversion event for a campaign allows you to see how many recipients of that campaign performed a particular action after receiving it.
 
-This only affects the test if you chose **Primary Conversion Rate** in the previous steps. For more information, refer to [Conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/). 
+This only affects the test if you chose **Primary Conversion Rate** in the previous steps. For more information, refer to [Conversion events]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events/). 
 
 ## Step 6: Review and launch
 
-On the confirmation page, review the details of your multivariate campaign and launch the test! Next, learn how to [understand your test results]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/).
+On the confirmation page, review the details of your multivariate campaign and launch the test! Next, learn how to [understand your test results]({{site.baseurl}}/user_guide/messaging/ab_testing/analytics/).
 
 ## Things to know
 
@@ -129,5 +129,5 @@ For example, if you send a push message to a wide audience with a control, the t
 Note that if a control variant doesn't consist of any Canvas steps, exit criteria events aren't logged for users in the control variant.
 
 {% alert note %}
-If you manually use random bucket numbers for control groups, check out [things to watch for]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) in your control groups.
+If you manually use random bucket numbers for control groups, check out [things to watch for]({{site.baseurl}}/user_guide/audience/global_control_group/#things-to-watch-for) in your control groups.
 {% endalert %}

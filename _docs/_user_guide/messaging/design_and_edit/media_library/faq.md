@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: Media Library FAQ
-page_order: 5
+page_order: 2
 page_type: FAQ
 tool: Media
 description: "This article provides answers to frequently asked questions about the media library in Braze."

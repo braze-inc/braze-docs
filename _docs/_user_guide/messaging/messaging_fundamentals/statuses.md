@@ -43,7 +43,7 @@ When a Canvas is stopped, the following occurs:
 
 - **Scheduled messages:** Your scheduled messages won't be sent, regardless of a user's place in the Canvas. This also includes users who were queued because of rate limiting.
 - **Email sends:** Email sends may not stop immediately, as your email service provider (ESP) may continue processing your existing requests.
-- **Delay steps:** Users in a [delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will remain there as normal, but will exit the Canvas when the set period ends.
+- **Delay steps:** Users in a [delay step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/delay_step/) will remain there as normal, but will exit the Canvas when the set period ends.
 - **Draft changes:** Any draft changes to the Canvas will be discarded when the Canvas is stopped.
 
 To resume the Canvas, go to the **Summary** step of the Canvas builder and select **Resume Canvas**. When reactivated, any previously-stopped messages will be sent as scheduled&#8212;as long as the scheduled time hasn't already passed.
