@@ -24,7 +24,7 @@ You can find the Braze App in the [Canva Apps Marketplace](https://www.canva.com
 
 After installing the app, it's available within a design, under the **Apps** menu.
 
-![Braze app in the Canva Apps menu.,]({% image_buster /assets/img/canva_integration/braze-canva-app.png %})
+![Braze app in the Canva Apps menu.]({% image_buster /assets/img/canva_integration/braze-canva-app.png %})
 
 ### Step 2: Authorize your Braze account
 
