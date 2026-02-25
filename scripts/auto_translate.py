@@ -326,6 +326,26 @@ def jekyll_build(lang_config_key):
     return result.returncode == 0, result.stderr + "\n" + result.stdout
 
 
+def extract_error_lines(output):
+    """Extract only error-relevant lines from Jekyll build output.
+
+    Full build output can be huge; we filter to lines containing error
+    indicators or file paths so the auto-fix prompt gets useful context
+    instead of truncated asset-pipeline noise.
+    """
+    error_keywords = re.compile(
+        r"error|Error|ERROR|warning|Liquid|Invalid|SyntaxError|"
+        r"undefined|Could not|not found|YAML|frontmatter|"
+        r"_lang/\S+\.md",
+        re.IGNORECASE,
+    )
+    lines = [line for line in output.splitlines() if error_keywords.search(line)]
+    extracted = "\n".join(lines)
+    if extracted:
+        return extracted[:8000]
+    return output[-3000:]
+
+
 def extract_error_files(error_output, lang_dir):
     """Pull file paths from Jekyll error output that belong to a language dir."""
     pattern = rf"_lang/{re.escape(lang_dir)}/\S+\.md"
@@ -361,10 +381,12 @@ def cmd_verify(args):
 
             print(f"  {lang_info['name']} build failed")
 
+            error_context = extract_error_lines(output)
+
             if attempt == args.max_attempts:
                 build_results["failed"].append({
                     "lang": lang_key,
-                    "error": output[-3000:],
+                    "error": error_context,
                 })
                 print(f"  {lang_info['name']} still failing after {args.max_attempts} attempts")
                 break
@@ -374,7 +396,7 @@ def cmd_verify(args):
                 print("  Could not identify failing file(s) from build output")
                 build_results["failed"].append({
                     "lang": lang_key,
-                    "error": output[-3000:],
+                    "error": error_context,
                 })
                 break
 
@@ -385,7 +407,7 @@ def cmd_verify(args):
                 print(f"  Fixing {efile}...")
                 try:
                     content = epath.read_text()
-                    fixed = fix_file(client, prompt, content, output[-3000:], lang_info["name"])
+                    fixed = fix_file(client, prompt, content, error_context, lang_info["name"])
                     epath.write_text(fixed)
                 except Exception as exc:
                     print(f"  Fix attempt failed: {exc}")
