@@ -1,6 +1,6 @@
 ---
-nav_title: Content Blocks Library
-article_title: Content Blocks Library
+nav_title: Content Block library
+article_title: Content Block library
 page_order: 1
 page_type: reference
 description: "This reference article explains how to use the Content Blocks Library to manage your reusable, cross-channel content in a single, centralized location."

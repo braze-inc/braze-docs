@@ -29,9 +29,15 @@ guide_featured_list:
   - name: "A/B testing"
     link: /docs/user_guide/messaging/ab_testing/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: Templates
+    link: /docs/user_guide/messaging/templates/
+    image: /assets/img/braze_icons/table.svg
   - name: Reusable content
     link: /docs/user_guide/messaging/reusable_content/
     image: /assets/img/braze_icons/copy-04.svg
+  - name: Media library
+    link: /docs/user_guide/messaging/media_library/
+    image: /assets/img/braze_icons/image-01.svg
   - name: Design and edit
     link: /docs/user_guide/messaging/design_and_edit/
     image: /assets/img/braze_icons/brush-02.svg
