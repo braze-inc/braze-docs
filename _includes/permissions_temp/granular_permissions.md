@@ -286,7 +286,7 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | View Merge Users                                | View a list of user merge records |
 | View User Deletion Records	            	  | View user deletion records |
 | Delete Users From Dashboard	                  | Permanently delete users from the dashboard individually or in bulk. |      
-| View Custom AI Agents                           | Allows users to view custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. |
-| Edit Custom AI Agents                           | Allows users to create and update custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. |
-| Archive Custom AI Agents                        | Allows users to archive custom AI agents. This feature is currently in beta. |
+| View Custom AI Agents                           | Allows users to view custom AI agents. |
+| Edit Custom AI Agents                           | Allows users to create and update custom AI agents. |
+| Archive Custom AI Agents                        | Allows users to archive custom AI agents. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
