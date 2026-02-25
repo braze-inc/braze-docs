@@ -6,7 +6,7 @@ search_rank: 2
 excerpt_separator: ""
 page_type: glossary
 layout: liquid_use_case_glossary
-description: "Auf dieser Landing Page finden Sie Beispiele für Liquid-Anwendungen, die nach Kategorien geordnet sind, z. B. Jahrestage, App-Nutzung, Countdowns und mehr."
+description: "Auf dieser Landing Page finden Sie Beispiele für Liquid-Anwendungsfälle, die nach Kategorien geordnet sind, z. B. Jahrestage, App-Nutzung, Countdowns und mehr."
 
 ---
 
@@ -18,14 +18,14 @@ description: "Auf dieser Landing Page finden Sie Beispiele für Liquid-Anwendung
 Jahrestage und Feiertage
 {% endapitags %}
 
-- [Nachrichten basierend auf dem Jubiläumsjahr eines Nutzers bzw. einer Nutzerin personalisieren](#anniversary-year)
-- [Nachrichten basierend auf der Geburtstagswoche eines Nutzers bzw. einer Nutzerin personalisieren](#birthday-week)
+- [Nachrichten basierend auf dem Jubiläumsjahr einer Nutzerin oder eines Nutzers personalisieren](#anniversary-year)
+- [Nachrichten basierend auf der Geburtstagswoche einer Nutzerin oder eines Nutzers personalisieren](#birthday-week)
 - [Kampagnen an Nutzer:innen in deren Geburtstagsmonat senden](#birthday-month)
-- [Vermeiden Sie den Versand von Nachrichten an wichtigen Feiertagen](#holiday-avoid)
+- [Versand von Nachrichten an wichtigen Feiertagen vermeiden](#holiday-avoid)
 
-### Personalisieren Sie Nachrichten basierend auf dem Jubiläumsjahr eines Benutzers {#anniversary-year}
+### Nachrichten basierend auf dem Jubiläumsjahr einer Nutzerin oder eines Nutzers personalisieren {#anniversary-year}
 
-Dieser Anwendungsfall zeigt, wie man das App-Jubiläum eines Benutzers auf der Grundlage seines Erstanmeldedatums berechnet und je nach dem, wie viele Jahre er feiert, unterschiedliche Nachrichten anzeigt.
+Dieser Anwendungsfall zeigt, wie man das App-Jubiläum eines Nutzers bzw. einer Nutzerin auf der Grundlage des Erstanmeldedatums berechnet und je nach Anzahl der gefeierten Jahre unterschiedliche Nachrichten anzeigt.
 
 {% raw %}
 ```liquid
@@ -60,15 +60,15 @@ Exactly three years ago today we met for the first time!
 ```
 {% endraw %}
 
-**Erläuterung:** Hier verwenden wir die reservierte Variable `now`, um das aktuelle Datum und die Uhrzeit im [ISO 8601-Format](http://en.wikipedia.org/wiki/ISO_8601) als Template einzugeben. Die Filter `%B` (Monat wie „Mai“) und `%d` (Tag wie „18“) formatieren den aktuellen Monat und Tag. Anschließend verwenden wir dieselben Datums- und Zeitfilter für die Werte von `signup_date`, um sicherzustellen, dass wir die beiden Werte mithilfe von bedingten Tags und Logik vergleichen können.
+**Erläuterung:** Hier verwenden wir die reservierte Variable `now`, um das aktuelle Datum und die Uhrzeit im [ISO 8601-Format](http://en.wikipedia.org/wiki/ISO_8601) als Template einzufügen. Die Filter `%B` (Monat wie „Mai") und `%d` (Tag wie „18") formatieren den aktuellen Monat und Tag. Anschließend verwenden wir dieselben Datums- und Zeitfilter für die Werte von `signup_date`, um sicherzustellen, dass wir die beiden Werte mithilfe von bedingten Tags und Logik vergleichen können.
 
-Dann wiederholen wir drei weitere Variablenanweisungen, um `%B` und `%d` das `signup_date` zu erhalten, fügen aber auch `%Y` (Jahr wie „2021“) hinzu. Damit wird das Datum und die Uhrzeit von `signup_date` zu einer Jahreszahl. Wenn wir den Tag und den Monat kennen, können wir überprüfen, ob der Benutzer heute seinen Jahrestag hat, und wenn wir das Jahr kennen, wissen wir, wie viele Jahre es her ist - und damit auch, zu wie vielen Jahren wir gratulieren können!
+Dann wiederholen wir drei weitere Variablenanweisungen, um `%B` und `%d` für das `signup_date` zu erhalten, fügen aber auch `%Y` (Jahr wie „2021") hinzu. Damit wird das Datum und die Uhrzeit von `signup_date` auf die Jahreszahl reduziert. Wenn wir den Tag und den Monat kennen, können wir überprüfen, ob der Nutzer bzw. die Nutzerin heute Jubiläum hat, und wenn wir das Jahr kennen, wissen wir, wie viele Jahre es her ist – und damit auch, zu wie vielen Jahren wir gratulieren können!
 
-{% alert tip %} Je nachdem, wie viele Jahre Sie bereits sammeln, können Sie so viele Bedingungen erstellen wie es Anmeldedaten gibt. {% endalert %}  
+{% alert tip %} Je nachdem, wie viele Jahre Sie bereits Registrierungsdaten sammeln, können Sie entsprechend viele Bedingungen erstellen. {% endalert %}  
 
-### Personalisieren Sie Nachrichten basierend auf der Geburtstagswoche eines Benutzers {#birthday-week}
+### Nachrichten basierend auf der Geburtstagswoche einer Nutzerin oder eines Nutzers personalisieren {#birthday-week}
 
-Dieser Anwendungsfall zeigt, wie Sie den Geburtstag eines Benutzers ermitteln, ihn mit dem aktuellen Datum vergleichen und dann spezielle Geburtstagsnachrichten vor, während und nach der Geburtstagswoche anzeigen.
+Dieser Anwendungsfall zeigt, wie Sie den Geburtstag eines Nutzers bzw. einer Nutzerin ermitteln, ihn mit dem aktuellen Datum vergleichen und dann spezielle Geburtstagsnachrichten vor, während und nach der Geburtstagswoche anzeigen.
 
 {% raw %}
 ```liquid
@@ -89,13 +89,13 @@ No birthday for you!
 ```
 {% endraw %}
 
-**Erläuterung:** Ähnlich wie im Anwendungsfall [Jahrestag](#anniversary-year) nehmen wir hier die reservierte Variable `now` und verwenden den Filter `%W` (Woche, z.B. Woche 12 von 52 in einem Jahr), um die Nummer der Woche des Jahres zu erhalten, in die der Geburtstag des Benutzers fällt. Wenn die Geburtstagswoche des Benutzers mit der aktuellen Woche übereinstimmt, schicken wir ihm eine Glückwunschnachricht! 
+**Erläuterung:** Ähnlich wie im Anwendungsfall [Jubiläumsjahr](#anniversary-year) nehmen wir hier die reservierte Variable `now` und verwenden den Filter `%W` (Woche, z. B. Woche 12 von 52 in einem Jahr), um die Kalenderwoche zu ermitteln, in die der Geburtstag des Nutzers bzw. der Nutzerin fällt. Wenn die Geburtstagswoche mit der aktuellen Woche übereinstimmt, senden wir eine Glückwunschnachricht! 
 
 Wir fügen auch Anweisungen für `last_week` und `next_week` hinzu, um Ihr Messaging noch persönlicher zu gestalten.
 
-### Senden Sie Kampagnen an Benutzer in deren Geburtstagsmonat {#birthday-month}
+### Kampagnen an Nutzer:innen in deren Geburtstagsmonat senden {#birthday-month}
 
-Dieser Anwendungsfall zeigt, wie Sie den Geburtstagsmonat eines Nutzers oder einer Nutzerin berechnen, ob sein oder ihr Geburtstag in den aktuellen Monat fällt und wenn ja, eine spezielle Nachricht gesendet wird.
+Dieser Anwendungsfall zeigt, wie Sie den Geburtstagsmonat eines Nutzers bzw. einer Nutzerin berechnen, prüfen, ob der Geburtstag in den aktuellen Monat fällt, und wenn ja, eine spezielle Nachricht senden.
 
 {% raw %}
 ```liquid
@@ -109,11 +109,11 @@ Message body
 ```
 {% endraw %}
 
-**Erläuterung:** Ähnlich wie beim Anwendungsfall [Geburtstagswoche](#birthday-week), nur dass wir hier den Filter `%B` (Monat wie "Mai") verwenden, um zu berechnen, welche Benutzer in diesem Monat Geburtstag haben. Eine mögliche Anwendung könnte darin bestehen, Geburtstagskinder in einer monatlichen E-Mail anzusprechen.
+**Erläuterung:** Ähnlich wie beim Anwendungsfall [Geburtstagswoche](#birthday-week), nur dass wir hier den Filter `%B` (Monat wie „Mai") verwenden, um zu berechnen, welche Nutzer:innen in diesem Monat Geburtstag haben. Eine mögliche Anwendung könnte darin bestehen, Geburtstagskinder in einer monatlichen E-Mail anzusprechen.
 
-### Vermeiden Sie den Versand von Nachrichten an wichtigen Feiertagen {#holiday-avoid}
+### Versand von Nachrichten an wichtigen Feiertagen vermeiden {#holiday-avoid}
 
-Dieser Anwendungsfall zeigt, wie Sie während der Ferienzeit Nachrichten versenden und dabei die Tage der großen Ferien vermeiden können, an denen das Engagement wahrscheinlich gering ist.
+Dieser Anwendungsfall zeigt, wie Sie während der Ferienzeit Nachrichten versenden und dabei die Tage der großen Feiertage vermeiden können, an denen das Engagement wahrscheinlich gering ist.
 
 {% raw %}
 ```liquid
@@ -126,9 +126,9 @@ Message if today isn't one of the provided holidays.
 ```
 {% endraw %}
 
-**Erläuterung:** Hier weisen wir den Term `today` der reservierten Variablen `now` (das aktuelle Datum und die Uhrzeit) zu und verwenden die Filter `%Y` (Jahr wie "2023"), `%m` (Monat wie "12") und `%d` (Tag wie "25"), um das Datum zu formatieren. Wir führen dann unsere bedingte Anweisung aus, die besagt, dass die Nachricht abgebrochen wird, wenn die Variable `today` mit den von Ihnen gewählten Feiertagen übereinstimmt. 
+**Erläuterung:** Hier weisen wir den Term `today` der reservierten Variablen `now` (das aktuelle Datum und die Uhrzeit) zu und verwenden die Filter `%Y` (Jahr wie „2023"), `%m` (Monat wie „12") und `%d` (Tag wie „25"), um das Datum zu formatieren. Anschließend führen wir unsere bedingte Anweisung aus, die besagt, dass die Nachricht abgebrochen wird, wenn die Variable `today` mit den von Ihnen gewählten Feiertagen übereinstimmt. 
 
-Das angegebene Beispiel bezieht sich auf Heiligabend, den ersten Weihnachtsfeiertag und den zweiten Weihnachtsfeiertag (den Tag nach Weihnachten).
+Das angegebene Beispiel bezieht sich auf Heiligabend, den ersten Weihnachtsfeiertag und den zweiten Weihnachtsfeiertag.
 
 {% endapi %}
 
@@ -140,13 +140,13 @@ Das angegebene Beispiel bezieht sich auf Heiligabend, den ersten Weihnachtsfeier
 App-Nutzung
 {% endapitags %}
 
-- [Senden Sie Nachrichten in der Sprache eines Benutzers, wenn dieser eine Sitzung angemeldet hat](#app-session-language)
-- [Personalisieren Sie Nachrichten basierend darauf, wann ein Benutzer die App zuletzt geöffnet hat](#app-last-opened)
-- [Eine andere Nachricht anzeigen, wenn ein Nutzer oder eine Nutzerin die App zuletzt vor weniger als drei Tagen verwendet hat](#app-last-opened-less-than)
+- [Nachrichten in der Sprache eines Nutzers bzw. einer Nutzerin senden, wenn eine Sitzung protokolliert wurde](#app-session-language)
+- [Nachrichten basierend darauf personalisieren, wann ein:e Nutzer:in die App zuletzt geöffnet hat](#app-last-opened)
+- [Eine andere Nachricht anzeigen, wenn ein:e Nutzer:in die App zuletzt vor weniger als drei Tagen verwendet hat](#app-last-opened-less-than)
 
-### Senden Sie Nachrichten in der Sprache eines Benutzers, wenn dieser keine Sitzung angemeldet hat {#app-session-language}
+### Nachrichten in der Sprache eines Nutzers bzw. einer Nutzerin senden, wenn keine Sitzung protokolliert wurde {#app-session-language}
 
-Dieser Anwendungsfall prüft, ob ein Benutzer eine Sitzung protokolliert hat, und falls nicht, enthält er eine Logik zur Anzeige einer Nachricht auf der Grundlage der Sprache, die über ein benutzerdefiniertes Attribut manuell erfasst wurde. Wenn keine Sprachinformationen mit ihrem Konto verknüpft sind, wird die Nachricht in der Standardsprache angezeigt. Wenn ein Nutzer oder eine Nutzerin eine Sitzung angemeldet hat, werden alle mit dem Nutzer oder Nutzerin verbundenen Sprachinformationen abgerufen und die entsprechende Nachricht angezeigt. 
+Dieser Anwendungsfall prüft, ob ein:e Nutzer:in eine Sitzung protokolliert hat, und falls nicht, enthält er eine Logik zur Anzeige einer Nachricht auf der Grundlage der Sprache, die über ein angepasstes Attribut manuell erfasst wurde. Wenn keine Sprachinformationen mit dem Konto verknüpft sind, wird die Nachricht in der Standardsprache angezeigt. Wenn ein:e Nutzer:in eine Sitzung protokolliert hat, werden alle mit dem Nutzer bzw. der Nutzerin verbundenen Sprachinformationen abgerufen und die entsprechende Nachricht angezeigt. 
 
 {% raw %}
 ```liquid
@@ -171,18 +171,18 @@ Has language - Default language
 {% endraw %}
 
 {% raw %}
-**Erläuterung:** Hier verwenden wir zwei gruppierte `if`-Anweisungen, die ineinander verschachtelt sind. Die erste `if`-Anweisung prüft, ob der Nutzer oder die Nutzerin eine Sitzung gestartet hat, indem überprüft wird, ob es sich bei `last_used_app_date` um `nil` handelt. Das liegt daran, dass `{{${language}}}` automatisch vom SDK erfasst wird, wenn ein Nutzer oder eine Nutzerin eine Sitzung anmeldet. Wenn der Benutzer noch keine Sitzung angemeldet hat, kennen wir seine Sprache noch nicht. Daher wird geprüft, ob sprachbezogene benutzerdefinierte Attribute gespeichert wurden, und auf der Grundlage dieser Informationen wird eine Nachricht in dieser Sprache angezeigt, falls möglich.
+**Erläuterung:** Hier verwenden wir zwei gruppierte `if`-Anweisungen, die ineinander verschachtelt sind. Die erste `if`-Anweisung prüft, ob der Nutzer bzw. die Nutzerin eine Sitzung gestartet hat, indem überprüft wird, ob `last_used_app_date` den Wert `nil` hat. Das liegt daran, dass `{{${language}}}` automatisch vom SDK erfasst wird, wenn ein:e Nutzer:in eine Sitzung protokolliert. Wenn noch keine Sitzung protokolliert wurde, kennen wir die Sprache noch nicht. Daher wird geprüft, ob sprachbezogene angepasste Attribute gespeichert wurden, und auf der Grundlage dieser Informationen wird eine Nachricht in dieser Sprache angezeigt, falls möglich.
 {% endraw %}
 
-Die zweite `if`-Anweisung sucht nur nach dem Standardattribut (Standard), da der Nutzer oder die Nutzerin nicht über `nil` für `last_used_app_date` verfügt. Das bedeutet, dass eine Sitzung angemeldet wurde und wir die Sprache des Nutzers oder der Nutzerin kennen.
+Die zweite `if`-Anweisung prüft nur das Standard-Attribut, da der Nutzer bzw. die Nutzerin keinen `nil`-Wert für `last_used_app_date` hat. Das bedeutet, dass eine Sitzung protokolliert wurde und wir die Sprache kennen.
 
 {% alert note %}
-[`Nil`](https://shopify.github.io/liquid/basics/types/#nil) ist eine reservierte Variable, die zurückgegeben wird, wenn Liquid-Code keine Ergebnisse liefert. `Nil` wird wie `false` in einem `if` Block behandelt.
+[`Nil`](https://shopify.github.io/liquid/basics/types/#nil) ist eine reservierte Variable, die zurückgegeben wird, wenn Liquid-Code keine Ergebnisse liefert. `Nil` wird in einem `if`-Block wie `false` behandelt.
 {% endalert %}
 
-### Personalisieren Sie Nachrichten basierend darauf, wann ein Benutzer die App zuletzt geöffnet hat {#app-last-opened}
+### Nachrichten basierend darauf personalisieren, wann ein:e Nutzer:in die App zuletzt geöffnet hat {#app-last-opened}
 
-Dieser Anwendungsfall berechnet, wann ein Benutzer Ihre App das letzte Mal geöffnet hat, und zeigt je nach Zeitdauer eine andere personalisierte Nachricht an.
+Dieser Anwendungsfall berechnet, wann ein:e Nutzer:in Ihre App das letzte Mal geöffnet hat, und zeigt je nach Zeitdauer eine andere personalisierte Nachricht an.
 
 {% raw %}
 ```liquid
@@ -197,9 +197,9 @@ It's been a while; here are some of our latest updates.
 ```
 {% endraw %}
 
-### Eine andere Nachricht anzeigen, wenn ein Nutzer oder eine Nutzerin die App zuletzt vor weniger als drei Tagen verwendet hat {#app-last-opened-less-than}
+### Eine andere Nachricht anzeigen, wenn ein:e Nutzer:in die App zuletzt vor weniger als drei Tagen verwendet hat {#app-last-opened-less-than}
 
-Dieser Anwendungsfall berechnet, wie lange es her ist, dass ein Benutzer Ihre App verwendet hat, und zeigt je nach Zeitdauer eine andere personalisierte Nachricht an.
+Dieser Anwendungsfall berechnet, wie lange es her ist, dass ein:e Nutzer:in Ihre App verwendet hat, und zeigt je nach Zeitdauer eine andere personalisierte Nachricht an.
 
 {% raw %}
 ```liquid
@@ -227,18 +227,18 @@ Countdowns
 - [X Tage zum heutigen Datum hinzufügen](#countdown-add-x-days)
 - [Einen Countdown ab einem bestimmten Zeitpunkt berechnen](#countdown-difference-days)
 - [Einen Countdown für bestimmte Versanddaten und Prioritäten erstellen](#countdown-shipping-options)
-- [Erstellen Sie einen Countdown in Tagen](#countdown-days)
-- [Erstellen Sie einen Countdown von Tagen, Stunden und Minuten](#countdown-dynamic)
+- [Einen Countdown in Tagen erstellen](#countdown-days)
+- [Einen Countdown von Tagen über Stunden bis Minuten erstellen](#countdown-dynamic)
 - [Anzeigen, wie viele Tage bis zu einem bestimmten Datum verbleiben](#countdown-future-date)
-- [Zeigt an, wie viele Tage bis zum Eintreffen eines benutzerdefinierten Datumsattributs verbleiben](#countdown-custom-date-attribute)
+- [Anzeigen, wie viele Tage bis zum Eintreffen eines angepassten Datumsattributs verbleiben](#countdown-custom-date-attribute)
 - [Anzeigen, wie viel Zeit noch verbleibt, und Abbruch der Nachricht, wenn nur noch X Zeit verbleibt](#countdown-abort-window)
-- [In-App-Nachricht, die X Tage vor dem Ende der Mitgliedschaft des Nutzers oder der Nutzerin gesendet wird](#countdown-membership-expiry)
-- [Personalisieren Sie In-App-Nachrichten basierend auf dem Datum und der Sprache des Benutzers](#countdown-personalize-language)
-- [Template für das Datum in 30 Tagen ab jetzt, formatiert als Monat und Tag](#countdown-template-date)
+- [In-App-Nachricht, die X Tage vor dem Ende der Mitgliedschaft gesendet wird](#countdown-membership-expiry)
+- [In-App-Nachrichten basierend auf dem Datum und der Sprache des Nutzers bzw. der Nutzerin personalisieren](#countdown-personalize-language)
+- [Template für das Datum in 30 Tagen, formatiert als Monat und Tag](#countdown-template-date)
 
-### x Tage zum heutigen Datum hinzufügen{#countdown-add-x-days}
+### X Tage zum heutigen Datum hinzufügen {#countdown-add-x-days}
 
-Dieser Anwendungsfall fügt dem aktuellen Datum eine bestimmte Anzahl von Tagen hinzu, um darauf Bezug zu nehmen und Nachrichten hinzuzufügen. So können Sie z.B. eine Nachricht zur Wochenmitte senden, in der Sie auf Veranstaltungen in der Umgebung am Wochenende hinweisen.
+Dieser Anwendungsfall fügt dem aktuellen Datum eine bestimmte Anzahl von Tagen hinzu, um darauf Bezug zu nehmen und in Nachrichten einzufügen. So können Sie z. B. eine Nachricht zur Wochenmitte senden, in der Sie auf Veranstaltungen in der Umgebung am Wochenende hinweisen.
 
 {% raw %}
 ```liquid
@@ -246,15 +246,15 @@ Here are the movies we're showing on {{ "now" | date:'%s' | plus:259200 | date:"
 ```
 {% endraw %}
 
-Der Wert `plus` wird immer in Sekunden angegeben, so dass wir den Filter `%F` verwenden, um die Sekunden in Tage umzurechnen.
+Der Wert `plus` wird immer in Sekunden angegeben, daher verwenden wir am Ende den Filter `%F`, um die Sekunden in Tage umzurechnen.
 
 {% alert important %}
-Sie können in Ihrer Nachricht eine URL oder einen Deeplink zu einer Liste von Events einfügen, damit Sie den Nutzer oder die Nutzerin zu einer Liste von Aktionen weiterleiten können, die in Zukunft stattfinden.
+Sie können in Ihrer Nachricht eine URL oder einen Deeplink zu einer Liste von Events einfügen, damit Sie den Nutzer bzw. die Nutzerin zu einer Liste von Aktionen weiterleiten können, die in Zukunft stattfinden.
 {% endalert %}
 
-### Berechnen eines Countdowns ab einem bestimmten Zeitpunkt {#countdown-difference-days}
+### Einen Countdown ab einem bestimmten Zeitpunkt berechnen {#countdown-difference-days}
 
-In diesem Anwendungsfall wird die Differenz in Tagen zwischen einem bestimmten Datum und dem aktuellen Datum berechnet. Dieser Unterschied kann verwendet werden, um Ihren Benutzern einen Countdown anzuzeigen.
+In diesem Anwendungsfall wird die Differenz in Tagen zwischen einem bestimmten Datum und dem aktuellen Datum berechnet. Diese Differenz kann verwendet werden, um Ihren Nutzer:innen einen Countdown anzuzeigen.
 
 {% raw %}
 ```liquid
@@ -266,9 +266,9 @@ you have {{ difference_days }} days left!
 ```
 {% endraw %}
 
-### Einen Countdown für bestimmte Versanddaten und Prioritäten erstellen
+### Einen Countdown für bestimmte Versanddaten und Prioritäten erstellen {#countdown-shipping-options}
 
-In diesem Anwendungsfall werden verschiedene Versandoptionen erfasst, die Dauer der Zustellung berechnet und Nachrichten angezeigt, die den Benutzer ermutigen, rechtzeitig zu kaufen, um sein Paket bis zu einem bestimmten Datum zu erhalten.
+In diesem Anwendungsfall werden verschiedene Versandoptionen erfasst, die Dauer der Zustellung berechnet und Nachrichten angezeigt, die Nutzer:innen ermutigen, rechtzeitig zu kaufen, um ihr Paket bis zu einem bestimmten Datum zu erhalten.
 
 {% raw %}
 ```liquid
@@ -308,7 +308,7 @@ This is the last day for overnight shipping so your order gets here on time for 
 ```
 {% endraw %}
 
-### Einen Countdown in Tagen erstellten {#countdown-days}
+### Einen Countdown in Tagen erstellen {#countdown-days}
 
 Dieser Anwendungsfall berechnet die verbleibende Zeit zwischen einem bestimmten Ereignis und dem aktuellen Datum und zeigt an, wie viele Tage bis zum Ereignis verbleiben.
 
@@ -323,14 +323,14 @@ Your order will arrive in {{ difference_days }} days!
 {% endraw %}
 
 {% alert important %}
-Sie benötigen ein benutzerdefiniertes Attributfeld mit einem `date` Wert.
+Sie benötigen ein angepasstes Attributfeld mit einem `date`-Wert.
 {% endalert %}
 
-### Erstellen Sie einen Countdown von Tagen, Stunden und Minuten {#countdown-dynamic}
+### Einen Countdown von Tagen über Stunden bis Minuten erstellen {#countdown-dynamic}
 
 In diesem Anwendungsfall wird die verbleibende Zeit zwischen einem bestimmten Ereignis und dem aktuellen Datum berechnet. Je nach verbleibender Zeit bis zum Event ändert sich der Zeitwert (Tage, Stunden, Minuten), um verschiedene personalisierte Nachrichten anzuzeigen.
 
-Wenn beispielsweise die Bestellung eines Kunden oder einer Kundin in zwei Tagen eintrifft, könnten Sie sagen: „Ihre Bestellung trifft in zwei Tagen ein.“ Wenn es hingegen weniger als einen Tag ist, könnten Sie es in "Ihre Bestellung wird in 17 Stunden eintreffen" ändern.
+Wenn beispielsweise die Bestellung einer Kundin oder eines Kunden in zwei Tagen eintrifft, könnten Sie sagen: „Ihre Bestellung trifft in 2 Tagen ein." Wenn es hingegen weniger als einen Tag ist, könnten Sie es in „Ihre Bestellung trifft in 17 Stunden ein" ändern.
 
 {% raw %}
 ```liquid
@@ -351,12 +351,12 @@ You have {{difference_days}} days left till your order arrives!
 {% endraw %}
 
 {% alert important %}
-Sie benötigen ein benutzerdefiniertes Attributfeld mit einem `date` Wert. Sie müssen auch Zeitschwellen festlegen, wann die Zeit in Tagen, Stunden und Minuten angezeigt werden soll.
+Sie benötigen ein angepasstes Attributfeld mit einem `date`-Wert. Sie müssen auch Zeitschwellen festlegen, ab wann die Zeit in Tagen, Stunden und Minuten angezeigt werden soll.
 {% endalert %}
 
 ### Anzeigen, wie viele Tage bis zu einem bestimmten Datum verbleiben {#countdown-future-date}
 
-In diesem Anwendungsfall wird die Differenz zwischen dem aktuellen Datum und dem zukünftigen Ereignisdatum berechnet und eine Meldung angezeigt, die angibt, wie viele Tage es noch bis zum Ereignis sind.
+In diesem Anwendungsfall wird die Differenz zwischen dem aktuellen Datum und einem zukünftigen Ereignisdatum berechnet und eine Nachricht angezeigt, die angibt, wie viele Tage es noch bis zum Ereignis sind.
 
 {% raw %}
 ```liquid
@@ -368,11 +368,11 @@ There are {{difference_days}} days until your birthday!
 ```
 {% endraw %}
 
-### Anzeigen, wie viele Tage noch bis zum Eintreffen eines nutzerdefinierten Datumsattributs verbleiben {#countdown-custom-date-attribute}
+### Anzeigen, wie viele Tage bis zum Eintreffen eines angepassten Datumsattributs verbleiben {#countdown-custom-date-attribute}
 
-Dieser Anwendungsfall berechnet die Differenz in Tagen zwischen dem aktuellen und dem zukünftigen Datum und zeigt eine Meldung an, wenn die Differenz mit einer bestimmten Zahl übereinstimmt.
+Dieser Anwendungsfall berechnet die Differenz in Tagen zwischen dem aktuellen und dem zukünftigen Datum und zeigt eine Nachricht an, wenn die Differenz mit einer bestimmten Zahl übereinstimmt.
 
-In diesem Beispiel erhält ein Benutzer innerhalb von zwei Tagen nach dem benutzerdefinierten Datumsattribut eine Nachricht. Andernfalls wird die Nachricht nicht gesendet.
+In diesem Beispiel erhält ein:e Nutzer:in zwei Tage vor dem angepassten Datumsattribut eine Nachricht. Andernfalls wird die Nachricht nicht gesendet.
 
 {% raw %}
 ```liquid
@@ -390,9 +390,9 @@ Your surgery is in 2 days on {{custom_attribute.${surgery_date}}}
 
 ### Anzeigen, wie viel Zeit noch verbleibt, und Abbruch der Nachricht, wenn nur noch X Zeit verbleibt {#countdown-abort-window}
 
-In diesem Anwendungsfall wird berechnet, wie lange es noch bis zu einem bestimmten Datum dauert, und je nach Länge werden verschiedene personalisierte Nachrichten angezeigt (wobei die Nachrichten übersprungen werden, wenn das Datum zu früh ist). 
+In diesem Anwendungsfall wird berechnet, wie lange es noch bis zu einem bestimmten Datum dauert, und je nach Dauer werden verschiedene personalisierte Nachrichten angezeigt (wobei die Nachricht übersprungen wird, wenn das Datum zu nah ist). 
 
-Zum Beispiel: "Sie haben noch x Stunden Zeit, um Ihr Ticket nach London zu kaufen", aber senden Sie die Nachricht nicht, wenn die Flugzeit nach London weniger als zwei Stunden beträgt.
+Zum Beispiel: „Sie haben noch x Stunden Zeit, um Ihr Ticket nach London zu kaufen" – aber die Nachricht wird nicht gesendet, wenn die Flugzeit nach London weniger als zwei Stunden entfernt ist.
 
 {% raw %}
 ```liquid
@@ -409,11 +409,11 @@ Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book
 ```
 {% endraw %}
 
-{% alert important %} Sie benötigen eine Eigenschaft für ein angepasstes Event. {% endalert %}
+{% alert important %} Sie benötigen eine angepasste Event-Eigenschaft. {% endalert %}
 
-### In-App-Nachricht, die x Tage vor dem Ende der Mitgliedschaft gesendet wird {#countdown-membership-expiry}
+### In-App-Nachricht, die X Tage vor dem Ende der Mitgliedschaft gesendet wird {#countdown-membership-expiry}
 
-Dieser Anwendungsfall erfasst das Ablaufdatum Ihrer Mitgliedschaft, berechnet, wie lange es noch dauert, bis sie abläuft, und zeigt je nachdem, wie lange es noch dauert, verschiedene Nachrichten an.
+Dieser Anwendungsfall erfasst das Ablaufdatum Ihrer Mitgliedschaft, berechnet, wie lange es noch bis zum Ablauf dauert, und zeigt je nach verbleibender Zeit verschiedene Nachrichten an.
 
 {% raw %}
 ```liquid
@@ -437,15 +437,15 @@ You have few days left in your trial. Make sure to upgrade!
 ```
 {% endraw %}
 
-### Personalisieren Sie In-App-Nachrichten basierend auf dem Datum und der Sprache des Benutzers {#countdown-personalize-language}
+### In-App-Nachrichten basierend auf dem Datum und der Sprache des Nutzers bzw. der Nutzerin personalisieren {#countdown-personalize-language}
 
-Dieser Anwendungsfall berechnet einen Countdown bis zu einem Ereignis und zeigt den Countdown auf der Grundlage der Spracheinstellung des Benutzers in dessen Sprache an.
+Dieser Anwendungsfall berechnet einen Countdown bis zu einem Ereignis und zeigt den Countdown basierend auf der Spracheinstellung des Nutzers bzw. der Nutzerin in der jeweiligen Sprache an.
 
-Sie könnten zum Beispiel einmal im Monat eine Reihe von Upsell-Nachrichten an die Nutzer senden, um sie mit vier In-App-Nachrichten darüber zu informieren, wie lange ein Angebot noch gültig ist:
+Sie könnten zum Beispiel einmal im Monat eine Reihe von Upsell-Nachrichten an die Nutzer:innen senden, um sie mit vier In-App-Nachrichten darüber zu informieren, wie lange ein Angebot noch gültig ist:
 
-- Ursprünglich
+- Anfangsnachricht
 - Noch 2 Tage
-- 1 Tag übrig
+- Noch 1 Tag
 - Letzter Tag
 
 {% raw %}
@@ -518,10 +518,10 @@ Hi, the offer is only valid today.
 {% endraw %}
 
 {% alert important %}
-Sie müssen einen `date`-Wert zuweisen und eine Abbruchlogik einbauen, wenn das angegebene Datum außerhalb des Datumsbereichs liegt. Für taggenaue Berechnungen muss das zugewiesene Enddatum 23:59:59 beinhalten.
+Sie müssen einen `date`-Wert zuweisen und eine Abbruchlogik einbauen, falls das angegebene Datum außerhalb des Datumsbereichs liegt. Für taggenaue Berechnungen muss das zugewiesene Enddatum 23:59:59 beinhalten.
 {% endalert %}
 
-### Template für das Datum in 30 Tagen ab jetzt, formatiert als Monat und Tag {#countdown-template-date}
+### Template für das Datum in 30 Tagen, formatiert als Monat und Tag {#countdown-template-date}
 
 In diesem Anwendungsfall wird das Datum in 30 Tagen angezeigt, das Sie in Ihren Nachrichten verwenden können.
 
@@ -542,13 +542,13 @@ In diesem Anwendungsfall wird das Datum in 30 Tagen angezeigt, das Sie in Ihren 
 Angepasstes Attribut
 {% endapitags %}
 
-- [Personalisieren Sie eine Nachricht auf der Grundlage passender benutzerdefinierter Attribute](#attribute-matching)
-- [Subtrahieren Sie zwei benutzerdefinierte Attribute, um die Differenz als Geldwert anzuzeigen](#attribute-monetary-difference)
-- [Den Vornamen eines Nutzers:innen referenzieren, wenn der vollständige Name im Feld first_name gespeichert ist](#attribute-first-name)
+- [Eine Nachricht auf der Grundlage passender angepasster Attribute personalisieren](#attribute-matching)
+- [Zwei angepasste Attribute subtrahieren, um die Differenz als Geldwert anzuzeigen](#attribute-monetary-difference)
+- [Den Vornamen eines Nutzers bzw. einer Nutzerin referenzieren, wenn der vollständige Name im Feld first_name gespeichert ist](#attribute-first-name)
 
-### Personalisieren Sie eine Nachricht auf der Grundlage passender benutzerdefinierter Attribute {#attribute-matching}
+### Eine Nachricht auf der Grundlage passender angepasster Attribute personalisieren {#attribute-matching}
 
-Dieser Anwendungsfall prüft, ob ein Benutzer über bestimmte benutzerdefinierte Attribute verfügt, und wenn ja, werden verschiedene personalisierte Nachrichten angezeigt. 
+Dieser Anwendungsfall prüft, ob ein:e Nutzer:in über bestimmte angepasste Attribute verfügt, und zeigt in diesem Fall verschiedene personalisierte Nachrichten an. 
 
 {% raw %}
 ```liquid
@@ -568,7 +568,7 @@ There is a shovel here.
 
 ### Zwei angepasste Attribute subtrahieren, um die Differenz als Geldwert anzuzeigen {#attribute-monetary-difference}
 
-Dieser Anwendungsfall erfasst zwei benutzerdefinierte monetäre Attribute, berechnet dann die Differenz und zeigt sie an, damit die Benutzer wissen, wie weit sie noch von ihrem Ziel entfernt sind.
+Dieser Anwendungsfall erfasst zwei monetäre angepasste Attribute, berechnet dann die Differenz und zeigt sie an, damit die Nutzer:innen wissen, wie weit sie noch von ihrem Ziel entfernt sind.
 
 {% raw %}
 ```liquid
@@ -579,9 +579,9 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### Den Vornamen eines Nutzers:innen referenzieren, wenn der vollständige Name im Feld first_name gespeichert ist {#attribute-first-name}
+### Den Vornamen eines Nutzers bzw. einer Nutzerin referenzieren, wenn der vollständige Name im Feld first_name gespeichert ist {#attribute-first-name}
 
-Dieser Anwendungsfall erfasst den Vornamen eines Benutzers (wenn sowohl Vor- als auch Nachname in einem einzigen Feld gespeichert sind) und verwendet dann diesen Vornamen, um eine Willkommensnachricht anzuzeigen.
+Dieser Anwendungsfall erfasst den Vornamen eines Nutzers bzw. einer Nutzerin (wenn sowohl Vor- als auch Nachname in einem einzigen Feld gespeichert sind) und verwendet dann diesen Vornamen, um eine Willkommensnachricht anzuzeigen.
 
 {% raw %}
 ```liquid
@@ -590,7 +590,7 @@ Dieser Anwendungsfall erfasst den Vornamen eines Benutzers (wenn sowohl Vor- als
 Hi {{name[0]}}, here's your message!
 ```
 
-**Erläuterung:** Der Filter `split` verwandelt die Zeichenkette in `{{${first_name}}}` in ein Array. Durch die Verwendung von `{{name[0]}}` verweisen wir dann nur auf das erste Element im Array, nämlich den Vornamen des Nutzers oder der Nutzerin. 
+**Erläuterung:** Der Filter `split` verwandelt den in `{{${first_name}}}` gespeicherten String in ein Array. Durch die Verwendung von `{{name[0]}}` verweisen wir dann nur auf das erste Element im Array, also den Vornamen des Nutzers bzw. der Nutzerin. 
 
 {% endraw %}
 {% endapi %}
@@ -603,17 +603,17 @@ Hi {{name[0]}}, here's your message!
 Angepasstes Event
 {% endapitags %}
 
-- [Push-Benachrichtigung abbrechen, wenn ein angepasstes Event innerhalb von zwei Stunden ab jetzt stattfindet](#event-abort-push)
-- [Jedes Mal eine Kampagne senden, wenn ein Nutzer oder eine Nutzerin ein angepasstes Event dreimal ausführt](#event-three-times)
-- [Senden Sie eine Nachricht an Benutzer, die nur in einer Kategorie gekauft haben](#event-purchased-one-category)
+- [Push-Benachrichtigung abbrechen, wenn ein angepasstes Event innerhalb von zwei Stunden stattfindet](#event-abort-push)
+- [Jedes Mal eine Kampagne senden, wenn ein:e Nutzer:in ein angepasstes Event dreimal ausführt](#event-three-times)
+- [Eine Nachricht an Nutzer:innen senden, die nur in einer Kategorie gekauft haben](#event-purchased-one-category)
 - [Verfolgen, wie oft ein angepasstes Event im vergangenen Monat aufgetreten ist](#track)
 
 
-### Abbruch der Push-Benachrichtigung, wenn ein benutzerdefiniertes Ereignis innerhalb der nächsten zwei Stunden eintritt {#event-abort-push}
+### Push-Benachrichtigung abbrechen, wenn ein angepasstes Event innerhalb von zwei Stunden stattfindet {#event-abort-push}
 
-Dieser Anwendungsfall berechnet die Zeit bis zu einem Ereignis und zeigt je nach der verbleibenden Zeit verschiedene personalisierte Nachrichten an.
+Dieser Anwendungsfall berechnet die Zeit bis zu einem Ereignis und zeigt je nach verbleibender Zeit verschiedene personalisierte Nachrichten an.
 
-So können Sie beispielsweise verhindern, dass eine Push-Mitteilung versendet wird, wenn eine benutzerdefinierte Ereigniseigenschaft in den nächsten zwei Stunden abläuft. Dieses Beispiel verwendet das Szenario eines verlassenen Wagens für ein Zugticket.
+So können Sie beispielsweise verhindern, dass eine Push-Benachrichtigung versendet wird, wenn eine angepasste Event-Eigenschaft in den nächsten zwei Stunden abläuft. Dieses Beispiel verwendet das Szenario eines Warenkorb-Abbruchs für ein Zugticket.
 
 {% raw %}
 ```liquid
@@ -630,9 +630,9 @@ Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book
 ```
 {% endraw %}
 
-### Jedes Mal eine Kampagne senden, wenn ein Nutzer oder eine Nutzerin ein angepasstes Event dreimal ausführt
+### Jedes Mal eine Kampagne senden, wenn ein:e Nutzer:in ein angepasstes Event dreimal ausführt {#event-three-times}
 
-Dieser Anwendungsfall prüft, ob ein Benutzer ein benutzerdefiniertes Ereignis dreimal ausgeführt hat, und wenn ja, wird eine Nachricht angezeigt oder eine Kampagne gesendet. 
+Dieser Anwendungsfall prüft, ob ein:e Nutzer:in ein angepasstes Event dreimal ausgeführt hat, und zeigt in diesem Fall eine Nachricht an oder sendet eine Kampagne. 
 
 {% raw %}
 ```liquid
@@ -646,12 +646,12 @@ Did you forget something in your shopping cart?
 ```
 {% endraw %}
 
-{% alert important %} Sie müssen über eine Event-Eigenschaft des Zählers für angepasste Events verfügen oder einen Webhook für Ihren Braze-Endpunkt verwenden. Damit wird ein angepasstes Attribut (`example_event_count`) jedes Mal inkrementiert, wenn der Nutzer oder die Nutzerin das Ereignis ausführt. In diesem Beispiel wird eine Dreierkadenz verwendet (1, 4, 7, 10, usw.). Um die Kadenz bei Null zu beginnen (0, 3, 6, 9, usw.), entfernen Sie `minus: 1`.
+{% alert important %} Sie müssen über eine Event-Eigenschaft des Zählers für angepasste Events verfügen oder einen Webhook an Ihren Braze-Endpunkt verwenden. Damit wird ein angepasstes Attribut (`example_event_count`) jedes Mal inkrementiert, wenn der Nutzer bzw. die Nutzerin das Event ausführt. In diesem Beispiel wird eine Dreierkadenz verwendet (1, 4, 7, 10, usw.). Um die Kadenz bei Null zu beginnen (0, 3, 6, 9, usw.), entfernen Sie `minus: 1`.
 {% endalert %}
 
-### Senden Sie eine Nachricht an Benutzer, die nur in einer Kategorie gekauft haben {#event-purchased-one-category}
+### Eine Nachricht an Nutzer:innen senden, die nur in einer Kategorie gekauft haben {#event-purchased-one-category}
 
-Dieser Anwendungsfall erfasst eine Liste der Kategorien, in denen ein Benutzer eingekauft hat, und wenn nur eine Kaufkategorie vorhanden ist, wird eine Meldung angezeigt.
+Dieser Anwendungsfall erfasst eine Liste der Kategorien, in denen ein:e Nutzer:in eingekauft hat, und zeigt eine Nachricht an, wenn nur eine Kaufkategorie vorhanden ist.
 
 {% raw %}
 ```liquid
@@ -667,7 +667,7 @@ Dieser Anwendungsfall erfasst eine Liste der Kategorien, in denen ein Benutzer e
 
 ### Verfolgen, wie oft ein angepasstes Event im vergangenen Monat aufgetreten ist {#track}
 
-In diesem Anwendungsfall wird berechnet, wie oft ein benutzerdefiniertes Ereignis zwischen dem 1\. des aktuellen Monats und dem Vormonat protokolliert wurde. Sie können dann einen users/track-Aufruf ausführen, um diesen Wert als angepasstes Attribut zu speichern. Beachten Sie, dass diese Kampagne zwei aufeinanderfolgende Monate laufen muss, bevor die monatlichen Daten verwendet werden können.
+In diesem Anwendungsfall wird berechnet, wie oft ein angepasstes Event zwischen dem 1. des aktuellen Monats und dem Vormonat protokolliert wurde. Sie können dann einen users/track-Aufruf ausführen, um diesen Wert als angepasstes Attribut zu speichern. Beachten Sie, dass diese Kampagne zwei aufeinanderfolgende Monate laufen muss, bevor die monatlichen Daten verwendet werden können.
 
 {% raw %}
 ```liquid
@@ -730,8 +730,8 @@ Sprache
 {% endapitags %}
 
 - [Monatsnamen in einer anderen Sprache anzeigen](#language-display-month)
-- [Bild basierend auf der Sprache des Nutzers oder der Nutzerin anzeigen](#language-image-display)
-- [Nachrichten basierend auf dem Wochentag und der Sprache des Nutzers oder der Nutzerin personalisieren](#language-personalize-message)
+- [Ein Bild basierend auf der Sprache des Nutzers bzw. der Nutzerin anzeigen](#language-image-display)
+- [Nachrichten basierend auf dem Wochentag und der Sprache des Nutzers bzw. der Nutzerin personalisieren](#language-personalize-message)
 
 ### Monatsnamen in einer anderen Sprache anzeigen {#language-display-month}
 
@@ -771,9 +771,9 @@ In diesem Anwendungsfall werden das aktuelle Datum, der Monat und das Jahr angez
 ```
 {% endraw %}
 
-### Ein Bild basierend auf der Sprache des Nutzers oder der Nutzerin anzeigen
+### Ein Bild basierend auf der Sprache des Nutzers bzw. der Nutzerin anzeigen {#language-image-display}
 
-In diesem Anwendungsfall wird ein Bild basierend auf der Sprache des Benutzers angezeigt. Beachten Sie, dass dieser Anwendungsfall nur mit Bildern getestet wurde, die in die Braze-Mediathek hochgeladen wurden.
+In diesem Anwendungsfall wird ein Bild basierend auf der Sprache des Nutzers bzw. der Nutzerin angezeigt. Beachten Sie, dass dieser Anwendungsfall nur mit Bildern getestet wurde, die in die Braze-Mediathek hochgeladen wurden.
 
 {% raw %}
 ```liquid
@@ -789,11 +789,11 @@ Fallback image URL
 ```
 {% endraw %}
 
-### Nachrichten basierend auf dem Wochentag und der Sprache des Nutzers oder der Nutzerin personalisieren
+### Nachrichten basierend auf dem Wochentag und der Sprache des Nutzers bzw. der Nutzerin personalisieren {#language-personalize-message}
 
-Dieser Anwendungsfall prüft den aktuellen Wochentag und zeigt auf der Grundlage des Tages, wenn die Sprache des Benutzers auf eine der angebotenen Sprachoptionen eingestellt ist, eine bestimmte Nachricht in seiner Sprache an.
+Dieser Anwendungsfall prüft den aktuellen Wochentag und zeigt – sofern die Sprache des Nutzers bzw. der Nutzerin auf eine der angebotenen Sprachoptionen eingestellt ist – eine bestimmte Nachricht in der jeweiligen Sprache an.
 
-Das Beispiel endet am Dienstag, kann aber für jeden Tag der Woche wiederholt werden.
+Das Beispiel endet am Dienstag, kann aber für jeden Wochentag wiederholt werden.
 
 {% raw %}
 ```liquid
@@ -844,24 +844,24 @@ tuesday default
 Verschiedenes
 {% endapitags %}
 
-- [Vermeiden Sie den Versand von E-Mails an Kunden, die Marketing-E-Mails blockiert haben](#misc-avoid-blocked-emails)
-- [Den Abonnementstatus eines Kunden oder einer Kundin verwenden, um den Inhalt von Nachrichten zu personalisieren](#misc-personalize-content)
-- [Den ersten Buchstaben eines jeden Wortes in einer Zeichenkette groß schreiben](#misc-capitalize-words-string)
-- [Benutzerdefinierte Attributwerte mit einem Array vergleichen](#misc-compare-array)
+- [Versand von E-Mails an Kund:innen vermeiden, die Marketing-E-Mails blockiert haben](#misc-avoid-blocked-emails)
+- [Den Abo-Status von Kund:innen verwenden, um den Inhalt von Nachrichten zu personalisieren](#misc-personalize-content)
+- [Den ersten Buchstaben jedes Wortes in einem String großschreiben](#misc-capitalize-words-string)
+- [Angepasste Attributwerte mit einem Array vergleichen](#misc-compare-array)
 - [Eine Erinnerung an ein bevorstehendes Event erstellen](#misc-event-reminder)
-- [Suche nach einer Zeichenkette innerhalb eines Arrays](#misc-string-in-array)
-- [Finden Sie den größten Wert in einem Array](#misc-largest-value)
-- [Finden Sie den kleinsten Wert in einem Array](#misc-smallest-value)
-- [Abfrage des Endes einer Zeichenkette](#misc-query-end-of-string)
-- [Abfrage von Werten in einem Array aus einem benutzerdefinierten Attribut mit mehreren Kombinationen](#misc-query-array-values)
-- [Eine Zeichenkette in eine Telefonnummer formatieren](#phone-number)
+- [Einen String innerhalb eines Arrays suchen](#misc-string-in-array)
+- [Den größten Wert in einem Array finden](#misc-largest-value)
+- [Den kleinsten Wert in einem Array finden](#misc-smallest-value)
+- [Das Ende eines Strings abfragen](#misc-query-end-of-string)
+- [Werte in einem Array aus einem angepassten Attribut mit mehreren Kombinationen abfragen](#misc-query-array-values)
+- [Einen String als Telefonnummer formatieren](#phone-number)
 
-### Vermeiden Sie den Versand von E-Mails an Kunden, die Marketing-E-Mails blockiert haben {#misc-avoid-blocked-emails}
+### Versand von E-Mails an Kund:innen vermeiden, die Marketing-E-Mails blockiert haben {#misc-avoid-blocked-emails}
 
-In diesem Anwendungsfall wird eine Liste gesperrter Nutzer:innen, die in einem Inhaltsblock gespeichert ist, verwendet, um zu überprüfen, ob diese gesperrten Nutzer:innen in kommenden Kampagnen oder Werbekampagnen nicht angesprochen oder angesprochen werden.
+In diesem Anwendungsfall wird eine Liste gesperrter Nutzer:innen, die in einem Content-Block gespeichert ist, verwendet, um sicherzustellen, dass diese gesperrten Nutzer:innen in kommenden Kampagnen oder Canvasen nicht angesprochen werden.
 
 {% alert important %}
-Um dieses Liquid zu verwenden, speichern Sie zunächst die Liste der blockierten E-Mails in einem Content-Block. Die Liste sollte keine zusätzlichen Leerzeichen oder Zeichen zwischen den E-Mail-Adressen enthalten (z. B. `test@braze.com,abc@braze.com`).
+Um dieses Liquid zu verwenden, speichern Sie zunächst die Liste der blockierten E-Mails in einem Content-Block. Die Liste sollte keine zusätzlichen Leerzeichen oder Zeichen zwischen den E-Mail-Adressen enthalten (z. B. `test@braze.com,abc@braze.com`).
 {% endalert %}
 
 {% raw %}
@@ -877,15 +877,15 @@ Your message here!
 ```
 {% endraw %}
 
-**Erläuterung:** Hier überprüfen wir, ob die E-Mail Ihres potenziellen Empfängers in dieser Liste enthalten ist, indem wir den Inhaltsblock der blockierten E-Mails abfragen. Wenn die E-Mail gefunden wird, wird die Nachricht nicht gesendet.
+**Erläuterung:** Hier überprüfen wir, ob die E-Mail-Adresse des potenziellen Empfängers bzw. der potenziellen Empfängerin in dieser Liste enthalten ist, indem wir den Content-Block der blockierten E-Mails referenzieren. Wenn die E-Mail gefunden wird, wird die Nachricht nicht gesendet.
 
 {% alert note %}
 Content-Blöcke haben eine maximale Größe von 5 MB.
 {% endalert %}
 
-### Abonnementstatus eines Kunden oder einer Kundin verwenden, um den Inhalt von Nachrichten zu personalisieren {#misc-personalize-content}
+### Den Abo-Status von Kund:innen verwenden, um den Inhalt von Nachrichten zu personalisieren {#misc-personalize-content}
 
-Dieser Anwendungsfall verwendet den Abonnementstatus eines Kunden oder einer Kundin, um personalisierte Inhalte zu senden. Kunden oder Kundinnen, die eine bestimmte Abonnementgruppe abonniert haben, erhalten eine exklusive Nachricht für E-Mail-Abonnementgruppen.
+Dieser Anwendungsfall verwendet den Abo-Status von Kund:innen, um personalisierte Inhalte zu senden. Kund:innen, die eine bestimmte Abo-Gruppe abonniert haben, erhalten eine exklusive Nachricht für E-Mail-Abo-Gruppen.
 
 {% raw %}
 ```liquid
@@ -896,9 +896,9 @@ This is an exclusive message for subscribed users!
 ```
 {% endraw %}
 
-### Den ersten Buchstaben eines jeden Wortes in einer Zeichenkette groß schreiben {#misc-capitalize-words-string}
+### Den ersten Buchstaben jedes Wortes in einem String großschreiben {#misc-capitalize-words-string}
 
-In diesem Anwendungsfall wird eine Zeichenkette von Wörtern in ein Array aufgeteilt und der erste Buchstabe jedes Wortes großgeschrieben.
+In diesem Anwendungsfall wird ein String von Wörtern in ein Array aufgeteilt und der erste Buchstabe jedes Wortes großgeschrieben.
 
 {% raw %}
 ```liquid
@@ -909,11 +909,11 @@ In diesem Anwendungsfall wird eine Zeichenkette von Wörtern in ein Array aufget
 ```
 {% endraw %}
 
-**Erläuterung:** Hier haben wir unserem gewählten String-Attribut eine Variable zugewiesen und den Filter `split` verwendet, um den String in ein Array aufzuteilen. Wir haben dann das Tag `for` verwendet, um die Variable `words` jedem der Elemente in unserem neu erstellten Array zuzuweisen, bevor wir diese Wörter mit dem Filter `capitalize` und dem Filter `append` anzeigen, um Leerzeichen zwischen den einzelnen Begriffen hinzuzufügen.
+**Erläuterung:** Hier haben wir unserem gewählten String-Attribut eine Variable zugewiesen und den Filter `split` verwendet, um den String in ein Array aufzuteilen. Anschließend haben wir das Tag `for` verwendet, um die Variable `words` jedem Element in unserem neu erstellten Array zuzuweisen, bevor wir diese Wörter mit dem Filter `capitalize` und dem Filter `append` anzeigen, um Leerzeichen zwischen den einzelnen Begriffen hinzuzufügen.
 
-### Benutzerdefinierte Attributwerte mit einem Array vergleichen {#misc-compare-array}
+### Angepasste Attributwerte mit einem Array vergleichen {#misc-compare-array}
 
-In diesem Anwendungsfall wird eine Liste von Lieblingsgeschäften verwendet. Es wird geprüft, ob sich eines der Lieblingsgeschäfte des Benutzers in dieser Liste befindet, und wenn ja, wird ein Sonderangebot dieser Geschäfte angezeigt.
+In diesem Anwendungsfall wird eine Liste von Lieblingsgeschäften verwendet. Es wird geprüft, ob sich eines der Lieblingsgeschäfte des Nutzers bzw. der Nutzerin in dieser Liste befindet, und wenn ja, wird ein Sonderangebot dieser Geschäfte angezeigt.
 
 {% raw %}
 ```liquid
@@ -931,11 +931,11 @@ Today's offer from {{store}}
 ```
 {% endraw %}
 
-{% alert important %} Diese Sequenz weist ein `break`-Tag in der primären bedingten Anweisung auf. Dadurch wird die Schleife angehalten, wenn eine Übereinstimmung gefunden wird. Wenn Sie viele oder alle Treffer anzeigen möchten, entfernen Sie das Tag `break`. {% endalert %}
+{% alert important %} Diese Sequenz enthält ein `break`-Tag in der primären bedingten Anweisung. Dadurch wird die Schleife angehalten, wenn eine Übereinstimmung gefunden wird. Wenn Sie viele oder alle Treffer anzeigen möchten, entfernen Sie das Tag `break`. {% endalert %}
 
 ### Eine Erinnerung an ein bevorstehendes Event erstellen {#misc-event-reminder}
 
-Mit diesem Anwendungsfall können Benutzer anstehende Erinnerungen auf der Grundlage von benutzerdefinierten Ereignissen einrichten. In dem Beispielszenario kann ein Nutzer oder eine Nutzerin eine Erinnerung für ein Verlängerungsdatum einer Police festlegen, das 26 oder mehr Tage in der Zukunft liegt, wobei Erinnerungen 26, 13, 7 oder 2 Tage vor dem Verlängerungsdatum der Police gesendet werden.
+Mit diesem Anwendungsfall können Nutzer:innen anstehende Erinnerungen auf der Grundlage von angepassten Events einrichten. In dem Beispielszenario kann ein:e Nutzer:in eine Erinnerung für ein Verlängerungsdatum einer Richtlinie festlegen, das 26 oder mehr Tage in der Zukunft liegt, wobei Erinnerungen 26, 13, 7 oder 2 Tage vor dem Verlängerungsdatum gesendet werden.
 
 Bei diesem Anwendungsfall sollte Folgendes in den Text einer [Webhook-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) oder eines Canvas-Schritts aufgenommen werden.
 
@@ -1077,17 +1077,17 @@ Users are scheduled to enter the journey on day 2.
 
 {% alert important %} 
 
-Sie benötigen ein angepasstes Event `reminder_capture`, und die angepassten Event-Eigenschaften müssen Folgendes enthalten:
+Sie benötigen ein angepasstes Event `reminder_capture`, und die angepassten Event-Eigenschaften müssen mindestens Folgendes enthalten:
 
-- `reminder-id`: Kennung des angepassten Events
-- `reminder_date`: Vom Benutzer eingegebenes Datum, an dem die Erinnerung fällig ist
+- `reminder-id`: Bezeichner des angepassten Events
+- `reminder_date`: Vom Nutzer bzw. der Nutzerin eingegebenes Datum, an dem die Erinnerung fällig ist
 - `message_personalisation_X`: Alle Eigenschaften, die zur Personalisierung der Nachricht zum Zeitpunkt des Versands benötigt werden
 
 {% endalert %}
 
-### Suche nach einer Zeichenkette innerhalb eines Arrays {#misc-string-in-array}
+### Einen String innerhalb eines Arrays suchen {#misc-string-in-array}
 
-Dieser Anwendungsfall prüft, ob ein benutzerdefiniertes Attribut-Array eine bestimmte Zeichenfolge enthält, und zeigt, falls vorhanden, eine bestimmte Meldung an.
+Dieser Anwendungsfall prüft, ob ein angepasstes Attribut-Array einen bestimmten String enthält, und zeigt in diesem Fall eine bestimmte Nachricht an.
 
 {% raw %}
 ```liquid
@@ -1097,11 +1097,11 @@ Link your Hertz account to use Hertz Fast Lane.
 ```
 {% endraw %}
 
-### Finden Sie den größten Wert in einem Array {#misc-largest-value}
+### Den größten Wert in einem Array finden {#misc-largest-value}
 
-Dieser Anwendungsfall berechnet den höchsten Wert in einem gegebenen benutzerdefinierten Attribut-Array zur Verwendung in Benutzernachrichten.
+Dieser Anwendungsfall berechnet den höchsten Wert in einem gegebenen angepassten Attribut-Array zur Verwendung in Nachrichten an Nutzer:innen.
 
-Zum Beispiel können Sie einem Benutzer den aktuellen Highscore oder das höchste Gebot für einen Artikel anzeigen.
+Zum Beispiel können Sie einem Nutzer bzw. einer Nutzerin den aktuellen Highscore oder das höchste Gebot für einen Artikel anzeigen.
 
 {% raw %}
 ```liquid
@@ -1119,11 +1119,11 @@ Zum Beispiel können Sie einem Benutzer den aktuellen Highscore oder das höchst
 {% alert important %}
 Sie müssen ein angepasstes Attribut verwenden, das einen ganzzahligen Wert hat und Teil eines Arrays (einer Liste) ist. {% endalert %}
 
-### Finden Sie den kleinsten Wert in einem Array {#misc-smallest-value}
+### Den kleinsten Wert in einem Array finden {#misc-smallest-value}
 
-Dieser Anwendungsfall berechnet den niedrigsten Wert in einem gegebenen benutzerdefinierten Attribut-Array zur Verwendung in Benutzernachrichten.
+Dieser Anwendungsfall berechnet den niedrigsten Wert in einem gegebenen angepassten Attribut-Array zur Verwendung in Nachrichten an Nutzer:innen.
 
-Zum Beispiel können Sie einem Benutzer die niedrigste Punktzahl oder den billigsten Artikel anzeigen.
+Zum Beispiel können Sie einem Nutzer bzw. einer Nutzerin die niedrigste Punktzahl oder den günstigsten Artikel anzeigen.
 
 {% raw %}
 ```liquid
@@ -1140,563 +1140,17 @@ Zum Beispiel können Sie einem Benutzer die niedrigste Punktzahl oder den billig
 
 {% alert important %} Sie müssen ein angepasstes Attribut verwenden, das einen ganzzahligen Wert hat und Teil eines Arrays (einer Liste) ist. {% endalert %}
 
-### Abfrage des Endes einer Zeichenkette {#misc-query-end-of-string}
+### Das Ende eines Strings abfragen {#misc-query-end-of-string}
 
-Dieser Anwendungsfall fragt das Ende einer Zeichenkette für die Verwendung in Nachrichten ab.
+Dieser Anwendungsfall fragt das Ende eines Strings für die Verwendung in Nachrichten ab.
 
 {% raw %}
 ```liquid
-{% assign interest = {{custom_attribute.${Buyer Interest}} | first } %}
-{% assign marketplace = {{{{interest}} | split: "" | reverse | join: "" |  truncate: 4, ""}} %}
+{% assign interest = {{custom_attribute.${Buyer Interest}}} | first %}
+{% assign marketplace = {{interest}} | split: "" | reverse | join: "" |  truncate: 4, "" %}
 {% if {{marketplace}} == '3243' %}
 
-Your last marketplace search was on {{custom_attribute.${Last marketplace buyer interest} | date: '%d.%m.%Y'}}. Check out all of our new offers.
+Your last marketplace search was on {{custom_attribute.${Last marketplace buyer interest}}} | date: '%d.%m.%Y'}}. Check out all of our new offers.
 
 {% else %}
 {% abort_message() %}
-{% endif %}
-```
-{% endraw %}
-
-### Abfrage von Werten in einem Array aus einem benutzerdefinierten Attribut mit mehreren Kombinationen {#misc-query-array-values}
-
-Dieser Anwendungsfall nimmt eine Liste mit bald ablaufenden Sendungen, prüft, ob eine der Lieblingssendungen des Benutzers in dieser Liste enthalten ist, und wenn ja, wird eine Nachricht angezeigt, die den Benutzer darüber informiert, dass sie bald ablaufen werden.
-
-{% raw %} 
-```liquid
-{% assign expired_shows = 'Modern Family,The Rookie,Body of Proof,Felicity' | split: ',' %}
-{% for show in expired_shows %}
-{% if {{custom_attribute.${Favorite Shows}}} contains {{show}} %}
-{% assign new_shows = new_shows | append: {{show}} | append: '*' %}
-{% endif %}
-{% endfor %}
-{% assign new_shows_clean = new_shows | split: '*' %}
-{% if new_shows_clean.size != 0 %}
-
-All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now before they're gone!
-
-{% else %}
-{% abort_message("Not found") %}
-{% endif %}
-```
-{% endraw %}
-
-{% alert important %} Sie müssen zunächst Übereinstimmungen zwischen den Arrays finden und dann am Ende eine Logik erstellen, um die Übereinstimmungen aufzuteilen. {% endalert %}
-
-### Eine Zeichenkette in eine Telefonnummer formatieren {#phone-number}
-
-Dieser Anwendungsfall zeigt Ihnen, wie Sie das Feld des Benutzerprofils `phone_number` (standardmäßig als Ganzzahlenkette formatiert) indizieren und auf der Grundlage Ihrer lokalen Telefonnummernstandards neu formatieren können. Zum Beispiel: 1234567890 an (123)-456-7890.
-
-{% raw %} 
-```liquid
-{% assign phone = {{${phone_number}}} | remove: "-" | split: '' %}
-
-({{ phone[0] }}{{ phone[1] }}{{ phone[2] }})-{{ phone[3] }}{{ phone[4] }}{{ phone[5] }}-{{ phone[6] }}{{ phone[7] }}{{ phone[8] }}{{ phone[9] }}
-```
-{% endraw %}
-
-{% endapi %}
-
-{% api %}
-
-## Plattform-Targeting
-
-{% apitags %}
-Plattform-Targeting
-{% endapitags %}
-
-- [Kopien je nach Betriebssystem des Geräts unterscheiden](#platform-device-os)
-- [Nur eine bestimmte Plattform anvisieren](#platform-target)
-- [Nur iOS-Geräte mit einer bestimmten Betriebssystemversion anvisieren](#platform-target-ios-version)
-- [Nur Webbrowser anvisieren](#platform-target-web)
-- [Einen bestimmten Mobilfunkanbieter anvisieren](#platform-target-carrier)
-
-### Kopien je nach Betriebssystem des Geräts unterscheiden {#platform-device-os}
-
-Dieser Anwendungsfall prüft, auf welcher Plattform sich ein Benutzer befindet, und zeigt je nach Plattform bestimmte Nachrichten an.
-
-So können Sie z. B. mobilen Nutzer:innen kürzere Versionen der Nachricht anzeigen, während anderen Nutzer:innen die normale, längere Version der Nachricht angezeigt wird. Sie könnten mobilen Nutzer:innen auch bestimmte Nachrichten zeigen, die für sie relevant sind, aber für Webnutzer:innen nicht relevant wären. Zum Beispiel könnte in iOS-Nachrichten von Apple Pay die Rede sein, aber in Android-Nachrichten sollte Google Pay erwähnt werden.
-
-{% raw %}
-```liquid
-{% if targeted_device.${platform} == "ios" or targeted_device.${platform} == "android" %}
-This is a shorter copy.
-
-{% else %}
-This is the regular copy and much longer than the short version. 
-{% endif %}
-```
-{% endraw %}
-
-{% alert note %}
-Bei Liquid wird zwischen Groß- und Kleinschreibung unterschieden. `targeted_device.${platform}` gibt den Wert in Kleinbuchstaben zurück.
-{% endalert %}
-
-### Nur eine bestimmte Plattform anvisieren {#platform-target}
-
-Dieser Anwendungsfall erfasst die Geräteplattform des Benutzers und zeigt je nach Plattform eine Meldung an.
-
-Sie möchten zum Beispiel eine Nachricht nur an Android-Nutzer senden. Dies kann als Alternative zur Auswahl einer App im Segmentierungstool verwendet werden.
-
-{% raw %}
-```liquid
-{% if {{targeted_device.${platform}}} == 'android' %} 
-
-This is a message for an Android user! 
-
-{% else %}  
-{% abort_message %} 
-{% endif %}
-```
-{% endraw %}
-
-### Nur Geräte mit einer bestimmten Betriebssystemversion anvisieren {#platform-target-ios-version}
-
-Dieser Anwendungsfall prüft, ob die Betriebssystemversion eines Benutzers in eine bestimmte Gruppe von Versionen fällt, und wenn dies der Fall ist, wird eine bestimmte Meldung angezeigt.
-
-Das verwendete Beispiel sendet eine Warnung an Benutzer mit einem Betriebssystem der Version 10.0 oder früher, dass die Unterstützung für das Betriebssystem des Geräts des Benutzers ausläuft.
-
-{% raw %}
-```liquid
-{% if {{targeted_device.${os}}} == "10.0" or {{targeted_device.${os}}} == "10.0.1" or {{targeted_device.${os}}} == "10.0.2" or {{targeted_device.${os}}} == "10.0.3" or {{targeted_device.${os}}} == "10.1" or {{targeted_device.${os}}} == "10.2" or {{targeted_device.${os}}} == "10.2.1" or {{targeted_device.${os}}} == "10.3" or {{targeted_device.${os}}} == "10.3.1" or {{targeted_device.${os}}} == "10.3.2" or {{targeted_device.${os}}} == "10.3.3" or {{targeted_device.${os}}} == "10.3.4" or {{targeted_device.${os}}} == "9.3.1" or {{targeted_device.${os}}} == "9.3.2" or {{targeted_device.${os}}} == "9.3.3" or {{targeted_device.${os}}} == "9.3.4" or {{targeted_device.${os}}} == "9.3.5" %}
-
-We are phasing out support for your device's operating system. Be sure to update to the latest software for the best app experience.
-
-{% else %}
-{% abort_message %}
-{% endif %}
-```
-{% endraw %}
-
-### Nur Webbrowser anvisieren {#platform-target-web}
-
-Dieser Anwendungsfall prüft, ob das Zielgerät eines Benutzers unter Mac oder Windows läuft, und zeigt in diesem Fall eine bestimmte Meldung an.
-
-{% raw %}
-```liquid
-{% if {{targeted_device.${os}}} == 'Mac' or {{targeted_device.${os}}} == 'Windows' %}
-
-This message will display on your desktop web browser.
-
-{% else %}
-{% abort_message %}
-{% endif %}
-```
-{% endraw %}
-
-Der folgende Anwendungsfall überprüft, ob ein:e Webnutzer:in iOS oder Android verwendet, und zeigt in diesem Fall eine bestimmte Nachricht an.
-
-{% raw %}
-```liquid
-{% if {{targeted_device.${os}}} == 'iOS' and {{targeted_device.${platform}}} == 'web' %}
-
-Content for iOS.
-
-{% elsif {{targeted_device.${os}}} == 'android' and {{targeted_device.${platform}}} == 'web' %}
-
-Content for Android.
-
-{% else %}
-{% abort_message %} 
-{% endif %}
-```
-{% endraw %}
-
-### Einen bestimmten Mobilfunkanbieter anvisieren {#platform-target-carrier}
-
-Dieser Anwendungsfall prüft, ob das Gerät eines Benutzers von Verizon betrieben wird, und wenn ja, wird eine spezielle Nachricht angezeigt.
-
-Für Push-Benachrichtigungen und In-App-Nachrichtenkanäle können Sie mit Liquid den Geräteträger in Ihrem Nachrichtentext angeben. Wenn der Geräteträger des Empfängers oder der Empfängerin nicht übereinstimmt, wird die Nachricht nicht gesendet.
-
-{% raw %}
-```liquid
-{% if {{targeted_device.${carrier}}} contains "verizon" or {{targeted_device.${carrier}}} contains "Verizon" %}
-
-This is a message for Verizon users!
-
-{% else %}
-{% abort_message %}
-{% endif %}
-```
-{% endraw %}
-
-{% endapi %}
-
-{% api %}
-
-## SMS
-
-{% apitags %}
-SMS
-{% endapitags %}
-
-- [Reagieren Sie mit verschiedenen Nachrichten auf eingehende SMS-Schlüsselwörter](#sms-keyword-response)
-
-### Reagieren Sie mit verschiedenen Nachrichten auf eingehende SMS-Schlüsselwörter {#sms-keyword-response}
-
-Dieser Anwendungsfall beinhaltet eine dynamische SMS-Schlüsselwortverarbeitung, um auf bestimmte eingehende Nachrichten mit unterschiedlichen Nachrichtentexten zu reagieren. Sie können zum Beispiel unterschiedliche Antworten senden, wenn jemand "START" oder "JOIN" schreibt.
-
-{% raw %}
-```liquid
-{% assign inbound_message = {{sms.${inbound_message_body}}} | downcase | strip %}
-{% if inbound_message contains 'start' %}
-Thanks for joining our SMS program! Make sure your account is up to date for the best deals!
-
-{% elsif inbound_message contains 'join' %}
-Thanks for joining our SMS program! Create an account to get the best deals!
-
-{% else %}
-Thanks for joining our SMS program!
-
-{% endif %}
-```
-{% endraw %}
-
-{% endapi %}
-
-{% api %}
-
-## Zeitzonen
-
-{% apitags %}
-Zeitzonen
-{% endapitags %}
-
-- [Eine Nachricht abhängig von der Zeitzone eines Nutzers oder einer Nutzerin personalisieren](#personalize-timezone)
-- [Anhängen der CST-Zeitzone an ein benutzerdefiniertes Attribut](#time-append-cst)
-- [Einen Zeitstempel einfügen](#time-insert-timestamp)
-- [Senden Sie einen Canvas-Push nur während eines Zeitfensters in der lokalen Zeitzone eines Benutzers](#time-canvas-window)
-- [Senden Sie eine wiederkehrende In-App-Nachrichtenkampagne innerhalb eines Zeitfensters in der lokalen Zeitzone eines Benutzers.](#time-reocurring-iam-window)
-- [Unterschiedliche Nachrichten an Wochentagen und Wochenenden in der lokalen Zeitzone eines Nutzers oder einer Nutzerin senden](#time-weekdays-vs-weekends)
-- [Unterschiedliche Nachrichten je nach Tageszeit in der lokalen Zeitzone eines Nutzers oder einer Nutzerin senden](#time-of-day)
-
-### Personalisieren Sie eine Nachricht abhängig von der Zeitzone eines Benutzers {#personalize-timezone}
-
-In diesem Anwendungsfall werden je nach Zeitzone des Benutzers unterschiedliche Nachrichten angezeigt.
-
-{% raw %}
-```liquid
-{% if {{${time_zone}}} == 'xx' %}
-Message for time zone xx.
-{% elsif {{${time_zone}}} == 'yy' %}
-Message for time zone yy.
-{% else %}
-{% abort_message("Invalid time zone") %}
-{% endif %}
-```
-{% endraw %}
-
-### Anhängen der CST-Zeitzone an ein benutzerdefiniertes Attribut {#time-append-cst}
-
-Dieser Anwendungsfall zeigt ein benutzerdefiniertes Datumsattribut in einer bestimmten Zeitzone an.
-
-Option 1:
-{% raw %}
-```liquid
-{{custom_attribute.${application_expires_date} | time_zone: -0005 | date: '%B, %d %Y' }}
-```
-{% endraw %}
-
-Option 2:
-{% raw %}
-```liquid
-{{custom_attribute.${application_expires_date} | time_zone: 'America/Chicago' | date: '%B %d %Y %z' }}
-```
-{% endraw %}
-
-### Einen Zeitstempel einfügen {#time-insert-timestamp}
-
-In diesem Anwendungsfall wird eine Nachricht angezeigt, die einen Zeitstempel in ihrer aktuellen Zeitzone enthält.
-
-Im folgenden Beispiel wird das Datum als JJJJ-mm-tt HH:MM:SS angezeigt, z. B. 2021-05-03 10:41:04.
-
-{% raw %}
-```liquid
-{{${user_id} | default: 'You'}} received a campaign, rendered at ({{ "now" | time_zone: ${time_zone} | date: "%Y-%m-%d %H:%M:%S" }})
-```
-{% endraw %}
-
-### Senden Sie einen Canvas-Push nur während eines Zeitfensters in der lokalen Zeitzone eines Benutzers {#time-canvas-window}
-
-Dieser Anwendungsfall prüft die Zeit eines Benutzers in seiner lokalen Zeitzone und zeigt, wenn sie innerhalb einer bestimmten Zeitspanne liegt, eine bestimmte Nachricht an.
-
-{% raw %}
-```liquid
-{% assign time = 'now' | time_zone: ${time_zone} %}
-{% assign hour = time | date: '%H' | plus: 0 %}
-{% if hour > 20 or hour < 8 %}
-{% abort_message("Outside allowed time window") %}
-{% endif %}
-
-Here's a message that will send between 8 am and 8 pm!
-```
-{% endraw %}
-
-### Eine wiederkehrende In-App-Nachrichtenkampagne innerhalb eines Zeitfensters in der lokalen Zeitzone eines Nutzers oder einer Nutzerin senden {#time-reoccurring-iam-window}
-
-In diesem Anwendungsfall wird eine Nachricht angezeigt, wenn die aktuelle Zeit eines Benutzers innerhalb eines festgelegten Zeitfensters liegt.
-
-Das folgende Szenario informiert einen Benutzer zum Beispiel darüber, dass ein Geschäft geschlossen ist.
-
-{% raw %}
-```liquid
-{% assign time = 'now' | time_zone: ${time_zone} %} 
-{% assign hour = time | date: '%H' | plus: 0 %}
-{% if hour > 21 or hour < 10 %}
-
-Store's closed. Come back between 11 am and 9 pm!
-
-{% else %} 
-{% abort_message("Not sent because the store is open") %}
-{% endif %}
-```
-{% endraw %}
-
-### Unterschiedliche Nachrichten an Wochentagen und Wochenenden in der lokalen Zeitzone eines Nutzers oder einer Nutzerin senden {#time-weekdays-vs-weekends}
-
-In diesem Anwendungsfall wird geprüft, ob der aktuelle Wochentag eines Benutzers Samstag oder Sonntag ist, und je nach Tag werden unterschiedliche Nachrichten angezeigt.
-
-{% raw %}
-```liquid
-{% assign today = 'now' | time_zone: ${time_zone} | date: "%A" %}
-{% if {{today}} == 'Saturday' or {{today}} == 'Sunday' %}
-It's {{today}}, why don't you open the app for your transactions?
-
-{% else %}
-It's {{today}}, why don't you visit the store?
-{% endif %}
-```
-{% endraw %}
-
-### Senden Sie unterschiedliche Nachrichten je nach Tageszeit in der lokalen Zeitzone eines Benutzers {#time-of-day}
-
-In diesem Anwendungsfall wird eine Meldung angezeigt, wenn die aktuelle Zeit eines Benutzers außerhalb eines festgelegten Zeitfensters liegt.
-
-Zum Beispiel können Sie einen Nutzer oder eine Nutzerin über eine zeitkritische Gelegenheit informieren, die von der Tageszeit abhängt.
-
-{% raw %}
-```liquid
-{% assign time = 'now' | time_zone: ${time_zone} %}
-{% assign hour = time | date: '%H' | plus: 0 %}
-{% if hour > 20 or hour < 8 %}
-{% abort_message("Outside allowed time window") %}
-{% endif %}
-
-Check out this new bar after work today. HH specials!
-```
-{% endraw %}
-
-{% alert note %} Dies ist das Gegenteil von [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/time_based_campaign/#time-based-functionalities-for-campaigns). {% endalert %}
-
-{% endapi %}
-
-{% api %}
-
-## Woche/Tag/Monat
-
-{% apitags %}
-Woche/Tag/Monat
-{% endapitags %}
-
-- [Den Namen des Vormonats in eine Nachricht ziehen](#month-name)
-- [Am Ende jedes Monats eine Kampagne senden](#month-end)
-- [Eine Kampagne am letzten (Wochentag) des Monats senden](#day-of-month-last)
-- [An jedem Tag des Monats eine andere Nachricht senden](#day-of-month)
-- [An jedem Tag der Woche eine andere Nachricht senden](#day-of-week)
-
-### Den Namen des Vormonats in eine Nachricht ziehen {#month-name}
-
-Dieser Anwendungsfall nimmt den aktuellen Monat und zeigt den Vormonat an, der in den Nachrichten verwendet werden soll.
-
-{% raw %}
-```liquid
-{% assign today = 'now' | date: "%m" %}
-{% assign last_month = {{today}} | minus: 1 %}
-{% if last_month == 1 %}
-{% assign month = "January" %}
-{% elsif last_month == 2 %}
-{% assign month = "February" %}
-{% elsif last_month == 3 %}
-{% assign month = "March" %}
-{% elsif last_month == 4 %}
-{% assign month = "April" %}
-{% elsif last_month == 5 %}
-{% assign month = "May" %}
-{% elsif last_month == 6 %}
-{% assign month = "June" %}
-{% elsif last_month == 7 %}
-{% assign month = "July" %}
-{% elsif last_month == 8 %}
-{% assign month = "August" %}
-{% elsif last_month == 9 %}
-{% assign month = "September" %}
-{% elsif last_month == 10 %}
-{% assign month = "October" %}
-{% elsif last_month == 11 %}
-{% assign month = "November" %}
-{% elsif last_month == 0 %}
-{% assign month = "December" %}
-{% endif %}
-
-Here's an overview of what your spending looked like in {{month}}.
-```
-{% endraw %}
-
-Sie können alternativ auch Folgendes verwenden, um das gleiche Ergebnis zu erzielen.
-
-{% raw %}
-```liquid
-{% assign last_month_name = 'now' | date: "%Y-%m-01" | date: '%s' | minus: 1 | date: "%B" %}
-
-Here's an overview of what your spending looked like in {{month}}.
-```
-{% endraw %}
-
-### Am Ende jedes Monats eine Kampagne senden {#month-end}
-
-In diesem Anwendungsfall wird geprüft, ob das aktuelle Datum in eine Liste von Daten fällt, und je nach Datum wird eine bestimmte Nachricht angezeigt.
-
-{% alert note %} Schaltjahre (29\. Februar) sind dabei nicht berücksichtigt. {% endalert %}
-
-{% raw %}
-```liquid
-{% assign current_date = 'now' | date: '%b %d' %}
-
-{% if current_date == "Jan 31" or current_date == "Feb 28" or current_date == "Mar 31" or current_date == "Apr 30" or current_date == "May 31" or current_date == "Jun 30" or current_date == "Jul 31" or current_date == "Aug 31" or current_date == "Sep 30" or current_date == "Oct 31" or current_date == "Nov 30" or current_date == "Dec 31" %}
-
-The date is correct
-
-{% else %}
-{% abort_message("Date is not listed") %}
-{% endif %}
-```
-{% endraw %}
-
-### Senden Sie eine Kampagne am letzten (Wochentag) des Monats {#day-of-month-last}
-
-Dieser Anwendungsfall erfasst den aktuellen Monat und Tag und berechnet, ob der aktuelle Tag in den letzten Wochentag des Monats fällt.
-
-Sie könnten zum Beispiel am letzten Mittwoch des Monats eine Umfrage an Ihre Benutzer senden und um Produktfeedback bitten.
-
-{% raw %}
-```liquid
-{% comment %}Pull the day, day name, month, and year from today's date.{% endcomment %}
-{% assign current_day = "now" | date: "%d" %}
-{% assign current_day_name = "now" | date: "%a" %}
-{% assign current_month = "now" | date: "%b" %}
-{% assign current_year = "now" | date: "%Y" %}
-
-{% comment %}Assign the correct number of days for the current month.{% endcomment %}
-
-{% if current_month == "Jan" %}
-{% assign last_day_of_month = 31 %}
-{% elsif current_month == "Mar" %}
-{% assign last_day_of_month = 31 %}
-{% elsif current_month == "Apr" %}
-{% assign last_day_of_month = 30 %}
-{% elsif current_month == "May" %}
-{% assign last_day_of_month = 31 %}
-{% elsif current_month == "Jun" %}
-{% assign last_day_of_month = 30 %}
-{% elsif current_month == "Jul" %}
-{% assign last_day_of_month = 31 %}
-{% elsif current_month == "Aug" %}
-{% assign last_day_of_month = 31 %}
-{% elsif current_month == "Sep" %}
-{% assign last_day_of_month = 30 %}
-{% elsif current_month == "Oct" %}
-{% assign last_day_of_month = 31 %}
-{% elsif current_month == "Nov" %}
-{% assign last_day_of_month = 30 %}
-{% elsif current_month == "Dec" %}
-{% assign last_day_of_month = 31 %}
-{% endif %}
-
-{% comment %}Assign the correct number of days if the current month is February, taking into account leap years.{% endcomment %}
-
-{% assign leap_year_remainder = {{current_year | modulo: 4 }} != "0" %}
-{% if leap_year_remainder == 0 and current_month == "Feb" %}
-{% assign last_day_of_month = 29 %}
-{% elsif leap_year_remainder != "0" and current_month == "Feb" %}
-{% assign last_day_of_month = 28 %}
-{% endif %}
-
-{% comment %}Check that today's date is within a week of the last day of the month. If not, abort the message. If so, check that today is Wednesday. If not, abort the message.{% endcomment %}
-
-{% assign diff_in_days = last_day_of_month | minus: current_day | plus: 1%} 
-{% if diff_in_days <= 7 %} 
-{% unless current_day_name == "Wed" %} 
-{% abort_message("Wrong day of the week") %} 
-{% endunless %} 
-{% else %} 
-{% abort_message("Not the last week of the month") %} 
-{% endif %}
-```
-{% endraw %}
-
-### An jedem Tag des Monats eine andere Nachricht senden {#day-of-month}
-
-Dieser Anwendungsfall prüft, ob das aktuelle Datum mit einem Datum in einer Liste übereinstimmt, und zeigt je nach Tag eine bestimmte Nachricht an.
-
-{% raw %}
-```liquid
-{% assign today = 'now' | time_zone: {{${time_zone}}} | date: "%Y-%m-%d" %}
-{% assign day_1 = "2019-12-01" | time_zone: {{${time_zone}}} | date: "%Y-%m-%d" %}
-{% assign day_2 = "2019-12-02" | time_zone: {{${time_zone}}} | date: "%Y-%m-%d" %}
-{% assign day_3 = "2019-12-03" | time_zone: {{${time_zone}}} | date: "%Y-%m-%d" %}
-
-{% if today == day_1 %}
-Message for 2019-12-01
-
-{% elsif today == day_2 %}
-Message for 2019-12-02
-
-{% elsif today == day_3%}
-Message for 2019-12-03
-
-{% else %}
-{% abort_message("Date not listed") %}
-{% endif %}
-```
-{% endraw %}
-
-### An jedem Tag der Woche eine andere Nachricht senden {#day-of-week}
-
-Dieser Anwendungsfall prüft den aktuellen Wochentag und zeigt je nach Tag eine bestimmte Nachricht an.
-
-{% raw %}
-```liquid
-{% assign today = 'now' | date: "%A" %}
-{% case today %}
-{% when 'Monday' %}
-Monday copy
-
-{% when 'Tuesday' %}
-Tuesday copy
-
-{% when 'Wednesday' %}
-Wednesday copy
-
-{% when  'Thursday' %}
-Thursday copy
-
-{% when  'Friday' %}
-Friday copy
-
-{% when 'Saturday' %}
-Saturday copy
-
-{% when 'Sunday' %}
-Sunday copy
-
-{% else %}
-Default copy
-{% endcase %}
-```
-{% endraw %}
-
-{% alert note %}
-Sie können die Zeile „Standardkopie“ durch {% raw %}`{% abort_message() %}`{% endraw %} ersetzen, um zu verhindern, dass die Nachricht gesendet wird, wenn der Wochentag unbekannt ist.
-{% endalert %}
-
-{% endapi %}
