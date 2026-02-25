@@ -119,6 +119,10 @@ jobs:
         if: steps.changes.outputs.count != '0'
         run: python scripts/auto_translate.py summary
 
+      - name: Get current date
+        id: date
+        run: echo "date=$(date -u +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
+
       - name: Create pull request
         if: steps.changes.outputs.count != '0'
         uses: peter-evans/create-pull-request@v6
@@ -126,7 +130,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: auto-translate/${{ github.run_id }}
           base: develop
-          title: "Auto-translations — ${{ github.event.head_commit.message || 'manual run' }}"
+          title: "Auto-translations — ${{ github.event.head_commit.message || 'manual run' }} (${{ steps.date.outputs.date }})"
           body-path: translation_pr_body.md
           labels: auto-translation
           commit-message: "chore: auto-translate changed English docs"
