@@ -237,7 +237,7 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Edit Dashboard Users                            | Create and update company users 
 | View Email Settings                             | View Email Preferences |
 | Edit Email Settings                             | Enable and update Email Preferences | 
-Edit Identifier Field-Level Encryption            | Enable and update Field-Level Encryption settings |
+| Edit Identifier Field-Level Encryption            | Enable and update Field-Level Encryption settings |
 | View Custom Attributes                          | View custom attributes and usage report |
 | Edit Custom Attributes                          | Create and update custom attributes |
 | Blocklist Custom Attributes                     | Add custom attributes to a blocklist that restricts use in the dashboard |

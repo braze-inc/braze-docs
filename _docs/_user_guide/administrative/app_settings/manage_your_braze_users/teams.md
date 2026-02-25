@@ -68,6 +68,7 @@ The following are all available permissions you can assign at the Team level. An
 - View Feature Flags
 - Edit Feature Flags
 - Archive Feature Flags
+- View Global Control Group
 - View Segments
 - Edit Segments
 - View IAM Templates
@@ -104,9 +105,13 @@ The following are all available permissions you can assign at the Team level. An
 - View Canvas Templates
 - Archive Canvas Templates
 - Publish Landing Pages
+- Edit Landing Page Templates
 - Edit Landing Page Drafts
 - View Landing Pages
 - Archive Landing Page Templates
+- View Reports
+- Create Reports
+- Edit Reports
 
 To see descriptions of what each user permission includes and how to use them, check out our [User Permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions) section.
 
