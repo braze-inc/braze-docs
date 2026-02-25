@@ -79,7 +79,7 @@ Once you've successfully set up your zap, you can customize your Braze campaigns
 
 ## Using Zapier with the `/users/track` endpoint
 
-To send data to Braze's [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint (for example, when using a trigger like **New or Updated Spreadsheet Row** in Google Sheets), use **Webhooks by Zapier** with a **Custom Request**—do not use the standard **POST** action. The standard POST action formats the request in a way that is not compatible with the `/users/track` endpoint.
+To send data to the Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint (for example, when using a trigger like **New or Updated Spreadsheet Row** in Google Sheets), use **Webhooks by Zapier** with a **Custom Request**—do not use the standard **POST** action. The standard POST action formats the request in a way that is not compatible with the `/users/track` endpoint.
 
 1. In Zapier, choose your trigger (for example, **New or Updated Spreadsheet Row** in Google Sheets).
 2. For the action, select **Webhooks by Zapier** and choose **Custom Request** (not POST).
