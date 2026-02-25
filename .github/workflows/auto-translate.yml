@@ -30,6 +30,7 @@ permissions:
 jobs:
   auto-translate:
     runs-on: ubuntu-latest
+    timeout-minutes: 720
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
