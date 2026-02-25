@@ -280,7 +280,7 @@ The `conversion_behaviors` array contains information about each conversion even
 ```
 
 {% endtab %}
-{% tab Makes purchase (specific purchase) %}
+{% tab Makes purchase (specific product) %}
 
 ```json
 {
