@@ -2,7 +2,7 @@
 nav_title: Review actions
 article_title: Reviewing BrazeAI Operator<sup>TM</sup> actions
 page_order: 2
-description: "Learn how to review and approve actions when BrazeAI Operator<sup>TM</sup> proposes changes in the dashboard."
+description: "Learn how to review and approve actions when BrazeAI Operator proposes changes in the dashboard."
 ---
 
 # Reviewing BrazeAI Operator actions
