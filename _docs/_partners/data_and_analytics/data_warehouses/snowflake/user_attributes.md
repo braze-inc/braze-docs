@@ -4,6 +4,7 @@ article_title: User attribute views in Snowflake
 page_order: 10
 page_type: partner
 search_tag: Partner
+toc_headers: h2
 ---
 
 # User profile attributes
@@ -62,6 +63,13 @@ These views provide periodic snapshots of user profile attributes. The data is d
  - `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED`
  - `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED`
 
+### Usage
+
+* Provides a snapshot of user attributes with up to a **12-hour delay**.
+* Performs well for queries that don't require real-time accuracy.
+* Faster query execution, particularly when filtering on attributes other than `USER_ID`.
+* **Limitation:** Data is not up to date in real time.
+
 {% alert note %}
 The `TIME` field represents the time of the user profile update. For backfilled data, the `TIME` is the time of the backfill.
 {% endalert %}
@@ -103,19 +111,21 @@ The `TIME` field represents the time of the user profile update. For backfilled 
 | `CUSTOM_ATTRIBUTES` | VARIANT |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation}  
 
-### Usage notes
-
-* Provides a snapshot of user attributes with up to a **12-hour delay**.
-* Performs well for queries that don't require real-time accuracy.
-* Faster query execution, particularly when filtering on attributes other than `USER_ID`.
-* **Limitation:** Data is not up to date in real time.
-
 ## Real time user profile views
 
 These views provides near real-time updates on user profile attributes, with data delayed by up to 10 minutes after an update occurs in Braze.
 
   - `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` 
   - `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED`
+
+### Usage
+
+* Provides up-to-date user attributes with minimal delay (~10 minutes).
+* Useful for real-time analysis and scenarios where recent data is required.
+* **Performance considerations:**
+    * Queries on individual users are faster (under a minute using a large warehouse).
+    * Queries without USER_ID filters require aggregation across all users, leading to significantly longer execution times.
+    * Queries on a large dataset (such as over 100 million users) may take many minutes.
 
 {% alert note %}
 The `TIME` field represents the time of the user profile update. For backfilled data, the `TIME` is the time of the backfill.
@@ -157,21 +167,22 @@ The `TIME` field represents the time of the user profile update. For backfilled 
 | `CUSTOM_ATTRIBUTES` | OBJECT |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation}
 
-### Usage notes
-
-* Provides up-to-date user attributes with minimal delay (~10 minutes).
-* Useful for real-time analysis and scenarios where recent data is required.
-* **Performance considerations:**
-    * Queries on individual users are faster (under a minute using a large warehouse).
-    * Queries without USER_ID filters require aggregation across all users, leading to significantly longer execution times.
-    * Queries on a large dataset (such as over 100 million users) may take many minutes.
-
 ## Historical change logs
 
 These views store historical change logs of user attributes, capturing changes with a 12-hour granularity.
 
 - `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` 
 - `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED` 
+
+### Usage
+
+* Provides a record of historical changes to user attributes.
+* Data is snapshotted every 12 hours, meaning multiple updates in this window are combined into a single record. Individual changes within this period are not separately retained.
+* `EFF_DT` and `END_DT` mark the start and end of a user’s attribute state.
+
+{% alert note %}
+The `TIME` field represents the time of the user profile update. For backfilled data, the `TIME` is the time of the backfill.
+{% endalert %}
 
 ### `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` schema
 
@@ -212,12 +223,6 @@ These views store historical change logs of user attributes, capturing changes w
 | `EFF_DT` | TIMESTAMP_NTZ |
 | `END_DT` | TIMESTAMP_NTZ |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation}
-
-### Historical change logs - usage notes
-
-* Provides a record of historical changes to user attributes.
-* Data is snapshotted every 12 hours, meaning multiple updates in this window are combined into a single record. Individual changes within this period are not separately retained.
-* `EFF_DT` and `END_DT` mark the start and end of a user’s attribute state.
 
 ## Best practices
 
