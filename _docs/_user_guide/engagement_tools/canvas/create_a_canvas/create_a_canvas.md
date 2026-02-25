@@ -149,8 +149,8 @@ After adding segments and filters to your target audience, you can test if your 
 Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas by a selected cadence depending on your entry schedule type:
 
 - **Scheduled:** Lifetime of the Canvas or every time the Canvas is scheduled
-- **Action-based:** Hourly, daily, or the lifetime of the Canvas
-- **API-triggered:** Hourly, daily, or the lifetime of the Canvas
+- **Action-Based:** Hourly, daily, or the lifetime of the Canvas
+- **API-Triggered:** Hourly, daily, or the lifetime of the Canvas
 
 For example, if you have an action-based Canvas and select **Limit entrance volume** and set the **Maximum entries** field to 5,000 users with **Daily** as the limit cadence, then the Canvas only sends to 5,000 users per day.
 
