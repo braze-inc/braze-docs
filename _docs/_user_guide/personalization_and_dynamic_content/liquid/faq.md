@@ -91,8 +91,8 @@ Once the set conditions are met, your message can proceed. Using this logic is a
 
 Both `assign` and `capture` create Liquid variables, but they serve different purposes:
 
-- **`assign`** is for simple variables that store a single value, such as a boolean, number, or simple string. You can also apply a single filter in the same line.
-- **`capture`** is for storing a block of text that may include multiple variables, strings, or complex expressions. Use `capture` when the value is too complex for a single `assign` statement, such as URLs that utilize other Liquid variables or custom attributes as parameters. `capture` is also preferred when implementing Liquid variables in the body of Connected Content calls.
+- `assign` is for simple variables that store a single value, such as a boolean, number, or simple string. You can also apply a single filter in the same line.
+- `capture` is for storing a block of text that may include multiple variables, strings, or complex expressions. Use `capture` when the value is too complex for a single `assign` statement, such as URLs that utilize other Liquid variables or custom attributes as parameters. `capture` is also preferred when implementing Liquid variables in the body of Connected Content calls.
 
 #### Examples
 
