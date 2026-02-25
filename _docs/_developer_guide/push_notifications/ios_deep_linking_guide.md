@@ -1,6 +1,6 @@
 ---
 page_order: 1.1
-nav_title: iOS Deep Linking Guide
+nav_title: iOS deep linking guide
 article_title: iOS deep linking guide
 description: "Learn which type of deep link to use for your iOS app, when you need an AASA file, and which app delegate methods to implement."
 channel:
