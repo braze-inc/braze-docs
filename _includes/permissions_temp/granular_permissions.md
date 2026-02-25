@@ -1,6 +1,6 @@
 ## Creating a permission set
 
-Use permission sets to bundle permissions related to specific subject areas or actions. You can apply permissions sets to dashboard users who need the same access across different workspaces. To create a permission set, go to **Settings** > **Permission Settings**, then select **Create permission set**. For a description of each permission, see [List of permissions](#list-of-permissions).
+Use permission sets to bundle permissions related to specific subject areas or actions. You can apply permissions sets to dashboard users who need the same access across different workspaces. To create a permission set, go to **Settings** > **Permission Settings**, then select **Create permission set**. For a description of each permission, see [List of permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#granularpermissions_list-of-permissions).
 
 {% tabs local %}
 {% tab example permission sets %}
@@ -15,7 +15,7 @@ Use permission sets to bundle permissions related to specific subject areas or a
 
 ## Creating a role
 
-Roles allow for more structure by bundling together your individual custom permissions with workspace access controls. This is especially useful if you have many brands or regional workspaces in one dashboard. With roles, you can add dashboard users to the right workspaces and directly grant them the associated permissions. For a description of each permission, see [List of permissions](#list-of-permissions).
+Roles allow for more structure by bundling together your individual custom permissions with workspace access controls. This is especially useful if you have many brands or regional workspaces in one dashboard. With roles, you can add dashboard users to the right workspaces and directly grant them the associated permissions. For a description of each permission, see [List of permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#granularpermissions_list-of-permissions).
 
 {% tabs local %}
 {% tab example roles %}
@@ -88,7 +88,7 @@ To grant or remove admin privileges, select **This user is an admin**, then sele
 ![The details of the selected user with the admin checkbox in focus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:40%;"}
 
 {% alert warning %}
-If you remove admin privileges from a user, they won't be able to access Braze until you assign them at least one [company-level](#company) or [workspace-level](#workspace) permission.
+If you remove admin privileges from a user, they won't be able to access Braze until you assign them at least one [company-level or workspace-level permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?tab=company&sdktab=granular%20permissions#granularpermissions_editing-a-users-permissions).
 {% endalert %}
 
 {% endtab %}
@@ -109,7 +109,7 @@ To manage the following company-level permissions for a user, check or uncheck t
 
 ### Workspace
 
-You can give a user different permissions for each workspace they belong to in Braze. To manage their workspace-level permissions, select **Select workspaces and permissions**, then choose their permissions manually or assign a [permission set or role](#creating-a-permission-set) you previously created. If you need to give a user different permissions for different workspaces, repeat this process as many times as needed. For a description of each permission, see [List of permissions](#list-of-permissions).
+You can give a user different permissions for each workspace they belong to in Braze. To manage their workspace-level permissions, select **Select workspaces and permissions**, then choose their permissions manually or assign a [permission set or role]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=granular%20permissions#granularpermissions_creating-a-permission-set) you previously created. If you need to give a user different permissions for different workspaces, repeat this process as many times as needed. For a description of each permission, see [List of permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=granular%20permissions#granularpermissions_list-of-permissions).
 
 {% subtabs %}
 {% subtab Select manually %}
