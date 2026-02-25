@@ -33,7 +33,7 @@ LANGUAGES = {
     "de":    {"config": "de",    "dir": "de",    "name": "German"},
 }
 
-MODEL = os.environ.get("TRANSLATION_MODEL", "claude-sonnet-4-20250514")
+MODEL = os.environ.get("TRANSLATION_MODEL", "claude-opus-4-6")
 MAX_TOKENS = 16384
 REPO_ROOT = Path(os.environ.get("GITHUB_WORKSPACE", Path.cwd()))
 RESULTS_FILE = REPO_ROOT / "translation_results.json"
@@ -100,6 +100,7 @@ def call_claude(client, system_prompt, user_message, retries=3):
             response = client.messages.create(
                 model=MODEL,
                 max_tokens=MAX_TOKENS,
+                temperature=0,
                 system=system_prompt,
                 messages=[{"role": "user", "content": user_message}],
             )
@@ -146,6 +147,41 @@ def fix_file(client, prompt, translated_content, build_error, language_name):
     user_msg += f"## Jekyll build error output\n```\n{build_error}\n```\n"
 
     return call_claude(client, system, user_msg)
+
+
+REVIEW_PROMPT = """\
+You are a senior translation reviewer for Braze technical documentation. \
+Your job is to review a machine-translated file and improve its quality.
+
+Compare the translation against the English source and fix any issues:
+
+1. **Accuracy**: Correct any mistranslations or meaning shifts.
+2. **Naturalness**: Rephrase anything that reads as awkward or overly literal. \
+The translation should read as if originally written in the target language.
+3. **Terminology**: Ensure glossary terms are used correctly. Braze product names \
+(Canvas, Currents, Content Cards, etc.) must stay in English.
+4. **Preservation**: Verify that Liquid tags, code blocks, URLs, front matter keys, \
+HTML tags, and markdown formatting are intact and unmodified.
+5. **Gender**: In Portuguese, "Braze" is feminine (a Braze, da Braze, para a Braze — \
+never o Braze, do Braze, para o Braze). In French, Spanish, and German, follow the \
+existing article conventions for the brand name.
+6. **Consistency**: Ensure consistent terminology and tone throughout the file.
+
+Return ONLY the improved translated file — no explanations, no code fences, \
+no commentary. If the translation is already high quality, return it unchanged.\
+"""
+
+
+def review_file(client, english_content, translated_content, language_name, glossary_section=""):
+    """Second-pass review of a translation for quality improvement."""
+    system = REVIEW_PROMPT + glossary_section
+
+    user_msg = f"## Target language\n{language_name}\n\n"
+    user_msg += f"## English source\n\n{english_content}\n\n"
+    user_msg += f"## Translation to review and improve\n\n{translated_content}\n"
+
+    return call_claude(client, system, user_msg)
+
 
 
 def translation_path(english_relative, lang_dir):
@@ -210,6 +246,11 @@ def cmd_translate(args):
             try:
                 translated = translate_file(
                     client, prompt, english_content, existing,
+                    lang_info["name"], glossary_section,
+                )
+                print("reviewing...", end=" ", flush=True)
+                translated = review_file(
+                    client, english_content, translated,
                     lang_info["name"], glossary_section,
                 )
                 target.parent.mkdir(parents=True, exist_ok=True)
