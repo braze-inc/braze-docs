@@ -21,7 +21,7 @@ The Braze and Figma integration allows you to send images and visual assets from
 |---|---|
 | Figma account | A Figma account is required to take advantage of this partnership. |
 | Braze media library access | You must have "Manage Media Library Assets" permission to add, edit, and delete media library assets in Braze. |
-| Braze workspace access | You must have access to the workspaces you're trying to upload these images to in Braze. |
+| Braze workspace access | You must have access to the workspaces you want upload these Figma images and visual assets to in Braze. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
