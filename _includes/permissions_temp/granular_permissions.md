@@ -285,6 +285,6 @@ Edit Identifier Field-Level Encryption            | Enable and update Field-Leve
 | View User Deletion Records	            	  | View user deletion records |
 | Delete Users From Dashboard	                  | Permanently delete users from the dashboard individually or in bulk. |      
 | View Custom AI Agents                           | Allows users to view custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. |
-| Create Custom AI Agents                         | Allows users to create custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. |
-| Edit Custom AI Agents                           | Allows users to edit custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. |
+| Edit Custom AI Agents                           | Allows users to create and update custom AI agents. This feature is currently in beta. Contact your account manager if you’re interested in participating in the beta. |
+| Archive Custom AI Agents                        | Allows users to archive custom AI agents. This feature is currently in beta. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

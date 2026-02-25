@@ -82,8 +82,7 @@ Permission updates will lock within 15 minutes of the scheduled migration time. 
 | Workspace | View Landing Page Templates | View Landing Page Templates |
 | Workspace | Archive Landing Page Templates | Archive Landing Page Templates |
 | Workspace | View Custom AI Agents | View Custom AI Agents |
-| Workspace | Edit Custom AI Agents | Edit Custom AI Agents |
-| Workspace | Archive Custom AI Agents | Archive Custom AI Agents |
+| Workspace | Edit Custom AI Agents | Edit Custom AI Agents<br> Archive Custom AI Agents |
 | Workspace | View Placements | View Placements |
 | Workspace | Edit Placements | Edit Placements |
 | Workspace | Archive Placements | Archive Placements |
