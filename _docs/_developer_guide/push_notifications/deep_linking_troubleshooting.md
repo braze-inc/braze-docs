@@ -180,7 +180,9 @@ To diagnose where the link breaks in the chain:
 
 1. Enable [Braze verbose logging]({{site.baseurl}}/developer_guide/verbose_logging) — look for `Opening '<URL>':` entries to verify the SDK received the link.
 2. Enable [Branch test mode](https://help.branch.io/developers-hub/docs/ios-basic-integration#test-deep-linking) — check the Branch dashboard for link click events.
-3. Compare: If Braze logs the link but Branch doesn't see a click, the `BrazeDelegate` routing logic is the likely issue.
+1. Enable [Braze verbose logging]({{site.baseurl}}/developer_guide/verbose_logging). Look for `Opening '<URL>':` entries to verify the SDK received the link.
+2. Enable [Branch test mode](https://help.branch.io/developers-hub/docs/ios-basic-integration#test-deep-linking). Check the Branch dashboard for link click events.
+3. If Braze logs the link, but Branch doesn't see a click, the `BrazeDelegate` routing logic is the likely issue.
 
 ### Check Branch dashboard configuration
 
