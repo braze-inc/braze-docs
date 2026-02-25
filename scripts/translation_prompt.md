@@ -63,7 +63,7 @@ An "Approved terminology" table may be appended to the end of these instructions
 
 ## Grammatical gender for brand names
 
-In languages with grammatical gender, follow these conventions for the brand name "Braze":
+"Braze" is a company name and must always remain in English — never translate or transliterate it. In languages with grammatical gender, apply the gender of the implied noun (e.g., "the company" / "the platform") when articles or prepositions are required:
 
 - **Portuguese (pt-br)**: "Braze" is **feminine** (the implied noun is "a empresa/plataforma"). Always use feminine articles and contractions: "a Braze", "da Braze", "na Braze", "para a Braze". Never use masculine forms like "o Braze", "do Braze", "no Braze", "para o Braze" when referring to the company or platform.
 - **French**: Avoid gendered articles directly before "Braze" when possible (prefer "de Braze", "avec Braze"). When an article is required in a compound name, match the gender of the head noun (e.g., "la Braze Intelligence Suite" because "la suite", "le Braze SDK" because "le SDK").
