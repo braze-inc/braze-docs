@@ -52,7 +52,7 @@ guide_menu_list2:
 
 guide_menu_title3: "Content Block endpoints"
 guide_menu_list3:
-  - name: "GET: View Translation for a Content Block"
+  - name: "GET: View All Translations for a Content Block"
     link: /docs/api/endpoints/translations/content_blocks/get_translation_content_block/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Update Translation in a Content Block"
