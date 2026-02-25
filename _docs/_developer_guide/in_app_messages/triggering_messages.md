@@ -26,7 +26,7 @@ In-app messages can't be triggered through the API or by API events&#8212;only c
 
 ## Key-value pairs
 
-When you create a campaign in Braze, you can set key-value pairs as `extras`, which the the in-app messaging object can use to send data to your app.
+When you create a campaign in Braze, you can set key-value pairs as `extras`, which the in-app messaging object can use to send data to your app.
 
 {% tabs %}
 {% tab web %}
