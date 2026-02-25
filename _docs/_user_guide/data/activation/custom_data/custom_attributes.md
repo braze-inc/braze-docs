@@ -22,7 +22,7 @@ To create and manage custom attributes in the dashboard, go to **Data Settings**
 The **Last updated** column lists the last time the custom attribute was edited, such as when it was last set to blocklist or active.
 
 {% alert important %}
-For proper message targeting, be sure that your custom attribute data type matches the actual custom attribute. <br><br>For example, if `newsletter_subscribed` is defined as a string, your Liquid syntax should look like {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == 'true' %}```{% endraw %}. If `newsletter_subscribed` is defined as a boolean, the Liquid syntax shouldn't have single-quotation marks: {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == true %}```{% endraw %}.
+For proper message targeting, be sure that your custom attribute data type matches the actual custom attribute. <br><br>For example, if `newsletter_subscribed` is defined as a string, your Liquid syntax should look like {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == 'true' %}```{% endraw %}. If `newsletter_subscribed` is defined as a Boolean, the Liquid syntax shouldn't have single-quotation marks: {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == true %}```{% endraw %}.
 {% endalert %}
 
 From this page, you can view, manage, create, or blocklist existing custom attributes. Select the menu next to a custom attribute for the following actions:
