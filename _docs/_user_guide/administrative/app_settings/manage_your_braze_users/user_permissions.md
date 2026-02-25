@@ -14,12 +14,12 @@ tool: Dashboard
 > Learn how to create permission sets, create roles, edit user permissions, and export user permissions, so you can ensure your users only access the workspaces and features they need most.
 
 {% sdktabs %}
-{% sdktab Legacy permissions %}
+{% sdktab Granular permissions %}
 
 {% multi_lang_include permissions_temp/granular_permissions.md %}
 
 {% endsdktab %}
-{% sdktab Granular permissions %}
+{% sdktab Legacy permissions %}
 
 {% multi_lang_include permissions_temp/legacy_permissions.md %}
 
