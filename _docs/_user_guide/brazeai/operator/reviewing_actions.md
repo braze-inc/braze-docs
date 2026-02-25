@@ -5,7 +5,7 @@ page_order: 2
 description: "Learn how to review and approve actions when BrazeAI Operator<sup>TM</sup> proposes changes in the dashboard."
 ---
 
-# Reviewing BrazeAI Operator<sup>TM</sup> actions
+# Reviewing BrazeAI Operator actions
 
 > Learn how to review and approve actions when BrazeAI Operator<sup>TM</sup> proposes changes in the dashboard.
 
