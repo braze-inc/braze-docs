@@ -87,7 +87,7 @@ To send data to the Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_d
 4. Add the required headers:
    - **Content-Type**: `application/json`
    - **Authorization**: `Bearer YOUR-REST-API-KEY` (use your Braze REST API key with no brackets or quotes)
-5. Test the step and turn on your Zap.
+5. Test the step and turn on your zap.
 
 [5]: {% image_buster /assets/img_archive/zapier1.png %}
 [6]: {% image_buster /assets/img_archive/zapier2.png %}
