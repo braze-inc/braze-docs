@@ -51,7 +51,7 @@ Universal links (for example, `https://myapp.com/products/123`) are standard HTT
 - You're using a third-party linking provider like Branch or AppsFlyer.
 
 **Don't use universal links when:**
-- You only need deep links from push, in-app messages, or Content Cards — custom schemes are simpler
+- You only need deep links from push, in-app messages, or Content Cards. Custom schemes are simpler.
 
 ### "Open Web URL Inside App"
 
