@@ -107,10 +107,10 @@ An Apple App Site Association (AASA) file is only required when you use **univer
 
 You need an AASA file when:
 
-- You send deep links in **email** campaigns (because ESPs wrap links in HTTPS click-tracking URLs)
-- You send deep links in **SMS** campaigns (because links may be shortened to HTTPS URLs)
-- You use **Branch**, **AppsFlyer**, or another linking provider (because they use their own HTTPS domains)
-- You use universal links from **push**, **in-app messages**, or **Content Cards** (less common, but possible with `forwardUniversalLinks = true`)
+- You send deep links in email campaigns (because ESPs wrap links in HTTPS click-tracking URLs).
+- You send deep links in SMS campaigns (because links may be shortened to HTTPS URLs).
+- You use Branch, AppsFlyer, or another linking provider (because they use their own HTTPS domains).
+- You use universal links from push, in-app messages, or Content Cards (less common, but possible with `forwardUniversalLinks = true`).
 
 You don't need an AASA file when:
 
