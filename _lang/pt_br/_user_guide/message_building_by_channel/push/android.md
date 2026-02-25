@@ -1,15 +1,15 @@
 ---
 nav_title: "Opções do Android"
-article_title: Opções de push do Android
+article_title: Opções de Push do Android
 page_order: 7
 layout: dev_guide
 page_type: landing
 channel: push
 platform: android
-description: "Esta landing page lista todas as coisas exclusivamente Android push para Braze."
+description: "Esta landing page lista todas as coisas exclusivamente push do Android para o Braze."
 
-guide_top_header: "Push para Android"
-guide_top_text: "Os seguintes artigos listam todas as coisas exclusivamente push do Android para a Braze."
+guide_top_header: "Push do Android"
+guide_top_text: "Os seguintes artigos listam todas as coisas exclusivamente push do Android para o Braze."
 
 guide_featured_title: "Artigos da seção"
 guide_featured_list:

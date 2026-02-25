@@ -6,12 +6,12 @@ layout: dev_guide
 page_type: landing
 channel: push
 platform: android
-description: "Cette page d’accueil répertorie tout ce qui concerne les notifications push Android pour Braze."
+description: "Cette page d'accueil répertorie tout ce qui concerne les notifications push Android pour Braze."
 
 guide_top_header: "Notification push Android"
 guide_top_text: "Les articles suivants répertorient tout ce qui concerne uniquement les notifications push Android pour Braze."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Articles de section"
 guide_featured_list:
 - name: "Canaux de notification"
   link: /docs/user_guide/message_building_by_channel/push/android/notification_channels/

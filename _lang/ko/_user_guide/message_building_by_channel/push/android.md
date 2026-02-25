@@ -11,7 +11,7 @@ description: "이 랜딩 페이지에는 Braze의 모든 Android 푸시 관련 �
 guide_top_header: "Android 푸시"
 guide_top_text: "다음 문서에는 Braze의 Android 푸시에 관한 모든 것이 나열되어 있습니다."
 
-guide_featured_title: "섹션 기사"
+guide_featured_title: "섹션 문서"
 guide_featured_list:
 - name: "알림 채널"
   link: /docs/user_guide/message_building_by_channel/push/android/notification_channels/
