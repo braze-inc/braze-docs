@@ -103,6 +103,7 @@ def call_claude(client, system_prompt, user_message, retries=3):
                 model=MODEL,
                 max_tokens=MAX_TOKENS,
                 temperature=0,
+                cache_control={"type": "ephemeral"},
                 system=system_prompt,
                 messages=[{"role": "user", "content": user_message}],
             )
