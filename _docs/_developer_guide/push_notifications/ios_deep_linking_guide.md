@@ -114,8 +114,8 @@ You need an AASA file when:
 
 You don't need an AASA file when:
 
-- You only use **custom scheme** deep links (for example, `myapp://`) from push, in-app messages, or Content Cards
-- You use the **"Open Web URL Inside App"** option
+- You only use custom scheme deep links (for example, `myapp://`) from push, in-app messages, or Content Cards.
+- You use the **Open Web URL Inside App** option.
 
 For AASA setup instructions, see [Universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/#setting-up-universal-links-and-app-links).
 
