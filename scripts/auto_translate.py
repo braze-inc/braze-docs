@@ -162,6 +162,9 @@ The translation should read as if originally written in the target language.
 (Canvas, Currents, Content Cards, etc.) must stay in English.
 4. **Preservation**: Verify that Liquid tags, code blocks, URLs, front matter keys, \
 HTML tags, and markdown formatting are intact and unmodified.
+6. **Gender**: In Portuguese, "Braze" is feminine (a Braze, da Braze, para a Braze — \
+never o Braze, do Braze, para o Braze). In French, Spanish, and German, follow the \
+existing article conventions for the brand name.
 5. **Consistency**: Ensure consistent terminology and tone throughout the file.
 
 Return ONLY the improved translated file — no explanations, no code fences, \

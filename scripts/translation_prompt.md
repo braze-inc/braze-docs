@@ -61,6 +61,15 @@ Common UI terms (buttons, menus, navigation labels) may be translated according 
 
 An "Approved terminology" table may be appended to the end of these instructions with file-specific term translations. When present, use those approved translations. If an English term maps to itself in the table, keep it in English.
 
+## Grammatical gender for brand names
+
+In languages with grammatical gender, follow these conventions for the brand name "Braze":
+
+- **Portuguese (pt-br)**: "Braze" is **feminine** (the implied noun is "a empresa/plataforma"). Always use feminine articles and contractions: "a Braze", "da Braze", "na Braze", "para a Braze". Never use masculine forms like "o Braze", "do Braze", "no Braze", "para o Braze" when referring to the company or platform.
+- **French**: Avoid gendered articles directly before "Braze" when possible (prefer "de Braze", "avec Braze"). When an article is required in a compound name, match the gender of the head noun (e.g., "la Braze Intelligence Suite" because "la suite", "le Braze SDK" because "le SDK").
+- **Spanish**: Avoid gendered articles directly before "Braze" when possible (prefer "de Braze", "con Braze"). When an article is required, match the gender of the head noun (e.g., "el Braze SDK" because "el SDK").
+- **German**: Omit articles before "Braze" unless grammar requires one. When an article is needed, use the gender of the head noun in the compound (e.g., "das Braze SDK" because "das SDK").
+
 ## Formatting rules
 
 - Preserve all blank lines and overall whitespace structure
