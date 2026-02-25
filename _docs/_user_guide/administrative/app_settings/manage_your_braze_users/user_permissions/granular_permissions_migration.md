@@ -14,7 +14,7 @@ tool: Dashboard
 
 The migration includes these benefits:
 
-- **More precise control:** Granular permissions offer more control, better security, and clearer oversight. Users only get the access they need.
+- **More precise control:** Granular permissions offer more control, better security, and clearer oversight. Users get only the access they need.
 - **Automatic mapping:** All current permissions are mapped automatically to their [granular equivalents](#legacy-to-granular-permissions-mapping). Your users keep the same access level unless you change it.
 
 ## What to review
@@ -27,7 +27,7 @@ When migration is planned for your company, your Braze admins will receive email
 4. At the scheduled migration date and time, your company will automatically migrate to granular permissions. No further action is required from company admins.
 
 {% alert important %}
-Permission updates will lock within 15 minutes of the scheduled migration time. This means you can’t change any permissions until the migration is over, which we anticipate taking up to 15 minutes.
+The ability to update permissions will lock within 15 minutes of the scheduled migration time. This means you can’t change any permissions until the migration is over, which we anticipate taking up to 15 minutes.
 {% endalert %}
 
 ## Legacy to granular permissions mapping

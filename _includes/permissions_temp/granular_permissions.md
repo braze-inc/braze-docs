@@ -1,6 +1,6 @@
 ## Creating a permission set
 
-Use permission sets to bundle permissions related to specific subject areas or actions. They can be applied to dashboard users who need the same access across different workspaces. To create a permission set, go to **Settings** > **Permission Settings**, then select **Create permission set**. For a description of each permission, see [List of permissions](#list-of-permissions).
+Use permission sets to bundle permissions related to specific subject areas or actions. You can apply permissions sets to dashboard users who need the same access across different workspaces. To create a permission set, go to **Settings** > **Permission Settings**, then select **Create permission set**. For a description of each permission, see [List of permissions](#list-of-permissions).
 
 {% tabs local %}
 {% tab example permission sets %}
@@ -42,6 +42,8 @@ To successfully add a user to a Team while maintaining the same permissions, don
 
 Limited users have specific permissions that allow them to manage certain aspects of the Braze dashboard while having restrictions compared to company admins and workspace admins.
 
+| Scope | Description |
+| --- | --- |
 | Permissions | Limited users can edit the permissions of other limited users if they have the "View Dashboard Users" and "Edit Dashboard Users" permissions. They can also create new limited users and modify their permission sets. However, they can't create or manage company admin accounts. |
 | Role limitations | If a limited user has all permissions except "Workspace Admin", they will still have access to all other permissions typically granted to an workspace admin. |
 | Visibility of permissions | If a limited user has "View Dashboard Users" and "Edit Dashboard Users" permissions for one workspace (such as Dev) but not for another (such as Prod), they won't see the Prod workspace permissions in their dashboard users detail page. |
