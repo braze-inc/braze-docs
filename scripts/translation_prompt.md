@@ -8,7 +8,20 @@ Translate the provided English documentation file into the specified target lang
 
 - Prose and body text (paragraphs, sentences, block quotes)
 - Headings (`#`, `##`, `###`, etc.)
-- These YAML front matter values ONLY: `nav_title`, `article_title`, `description`, `guide_top_header`, `guide_top_text`, `guide_featured_title`, and `name` values inside `guide_featured_list`
+- These YAML front matter values ONLY (translate the values, never the keys):
+  - `title`, `nav_title`, `article_title`
+  - `description`, `descriptions`
+  - `name` (at any nesting level, e.g., inside `guide_featured_list`, `guide_menu_list`, `doc_menu_list`)
+  - `guide_top_header`, `guide_top_text`
+  - `guide_featured_title`
+  - `guide_footer_header`, `guide_footer_text`
+  - `guide_menu_list`, `guide_menu_list2` (translate `name` and `description` values within)
+  - `doc_menu_list` (translate `name` and `description` values within)
+  - `user_top_header`, `user_top_text`
+  - `partner_top_header`, `partner_top_text`, `partners_top_text`
+  - `glossary_top_header`, `glossary_top_text`
+  - `braze_learning`
+  - `search_tag`
 - Alt text inside image syntax `![alt text](...)`
 - Text content inside alert blocks (`{% alert %}...{% endalert %}`), details blocks (`{% details %}...{% enddetails %}`), and tab blocks (`{% tab %}...{% endtab %}`)
 - Table cell content (preserve table formatting/alignment)
@@ -18,7 +31,7 @@ Translate the provided English documentation file into the specified target lang
 Preserve all of the following exactly as they appear in the English source:
 
 - **YAML front matter keys** — only translate the specific values listed above
-- **These YAML values**: `page_order`, `layout`, `page_type`, `channel`, `platform`, `tool`, `link`, `image`, `search_tag`, `permalink`, `hidden`, `noindex`, `config_only`, `search_rank`, `page_layout`
+- **These YAML values**: `page_order`, `layout`, `page_type`, `channel`, `platform`, `tool`, `link`, `image`, `permalink`, `hidden`, `noindex`, `config_only`, `search_rank`, `page_layout`
 - **Liquid tags**: `{% ... %}` and `{{ ... }}` — copy exactly, including all parameters, whitespace, and hyphens
 - **Code blocks** (fenced with ``` or ~~~) — preserve all content inside verbatim
 - **Inline code** (wrapped in backticks) — preserve exactly
@@ -54,6 +67,11 @@ Common UI terms (buttons, menus, navigation labels) may be translated according 
 - If a YAML value is quoted in English (e.g., `nav_title: "Some title"`), keep it quoted in the translation
 - Preserve numbered list continuation markers like `{: start="5"}`
 - Preserve Kramdown table classes like `{: .reset-td-br-1 .reset-td-br-2 role="presentation" }`
+- Do NOT escape `[`, `]`, or `!` characters — use them as-is in markdown syntax
+
+## Special file handling
+
+The file `_includes/rate_limits.md` uses Liquid conditionals with include parameters (e.g., `{% if include.category == "..." %}`, `{% elsif include.endpoint == "..." %}`). These Liquid conditionals and their parameters must be preserved exactly. Only translate the prose content between the conditional blocks.
 
 ## Quality guidelines
 
