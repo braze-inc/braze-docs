@@ -48,6 +48,10 @@ A purchase object is an object that gets passed through the API when a purchase 
 - [ISO 4217 Currency Code Wiki](http://en.wikipedia.org/wiki/ISO_4217)
 - [ISO 8601 Time Code Wiki](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+Some identifiers are mutually exclusive and `email` takes precedence over `phone` when both are provided. For full details, refer to [Identifier resolution]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+{% endalert %}
+
 ## Purchase product ID
 
 Within the purchase object, the `product_id` is an identifier for the purchase (such as `Product Name` or `Product Category`):

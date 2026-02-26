@@ -46,6 +46,10 @@ For steps on how to set up custom events for a specific platform, refer to the P
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
 - [ISO 8601 time code](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+Some identifiers are mutually exclusive and `email` takes precedence over `phone` when both are provided. For full details, refer to [Identifier resolution]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+{% endalert %}
+
 #### Update existing profiles only
 
 To update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the `external_id` does not already exist.
