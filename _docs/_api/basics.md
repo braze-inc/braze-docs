@@ -369,7 +369,7 @@ If you're making a Braze-to-Braze webhook and using allowlisting, see the list o
 
 Braze authenticates REST API requests using the REST API key passed as a Bearer token in the `Authorization` request header. When you send a request, include your API key in the following format:
 
-```
+```bash
 Authorization: Bearer YOUR_REST_API_KEY
 ```
 
