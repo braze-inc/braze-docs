@@ -28,7 +28,9 @@ The Braze and Figma integration allows you to send images and visual assets from
 
 ### Step 1: Install the Figma to Braze Export plugin
 
-In Figma, you can find the Figma to Braze Export plugin in the **Plugins** section. 
+Go to Figma's Community to access the [Braze Export plugin](https://www.figma.com/community/plugin/1606726267245196698/figma-to-braze-export). Select **Open In** to load the plugin into your Figma file.
+
+In Figma, you can also find the Figma to Braze Export plugin in the **Plugins** section. 
 
 ### Step 2: Connect to Braze
 
@@ -38,9 +40,11 @@ Next, select your Braze workspace from the **Braze workspace** dropdown or enter
 
 ### Step 3: Select your Figma assets
 
-Select the images and visual assets to export to Braze. To select multiple assets, you can press <kbd>Shift</kbd> or drag and drop your cursor over the assets.
+Select the images and visual assets to export to Braze. To select multiple assets, you can press <kbd>Shift</kbd> or drag and drop your cursor over the assets. 
+
+The name of the exported image or visual asset uses the name of the selected frame in Figma.
 
 ### Step 4: Export to Braze
 
-Select **Export to Braze**. Your images and visual assets are uploaded into the Braze media library. The asset name in the media library matches the name in the Figma file. All images imported using this integration have their source set to **Figma**.
+Select **Export to Braze**. Your images and visual assets are uploaded into the Braze media library. All images imported using this integration have their source set to **Figma**.
 
