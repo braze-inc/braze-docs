@@ -49,7 +49,7 @@ A purchase object is an object that gets passed through the API when a purchase 
 - [ISO 8601 Time Code Wiki](https://en.wikipedia.org/wiki/ISO_8601)
 
 {% alert note %}
-Some identifiers are mutually exclusive and `email` takes precedence over `phone` when both are provided. For full details, refer to [Identifier resolution]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+Some identifier pairs cannot be used together, and `email` takes precedence over `phone` when both are provided. For full details, refer to [Identifier resolution]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
 {% endalert %}
 
 ## Purchase product ID
