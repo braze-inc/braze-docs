@@ -12,6 +12,10 @@ page_order: 1
 
 > This page walks you through how to integrate Braze with Shopify using our standard integration for users with a Shopify online store. If you use a Shopify headless site or are looking to implement more tailored solutions, refer to [Shopify custom integration setup]({{site.baseurl}}/shopify_custom_integration/).
 
+{% alert note %}
+The standard Shopify integration does not require you to manually create an additional Braze web app. The integration automatically creates a default 'Shopify' app and implements the Braze Web SDK for you during setup. If you're using a Shopify headless site, you will need to manually create a web app—refer to [Shopify custom integration setup]({{site.baseurl}}/shopify_custom_integration/#step-1).
+{% endalert %}
+
 ## Step 1: Connect your Shopify store
 
 1. In Braze, go to **Partner Integrations** > **Technology Partners** and then search for “Shopify”.

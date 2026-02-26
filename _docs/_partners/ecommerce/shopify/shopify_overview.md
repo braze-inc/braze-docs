@@ -26,6 +26,12 @@ The Braze integration with Shopify provides a powerful solution for eCommerce bu
 
 Braze offers two integration options for Shopify merchants that are designed to meet the diverse needs of eCommerce businesses: **Standard integration** and **Custom integration**.
 
+| Integration type | Web app setup | Best for |
+| --- | --- | --- |
+| **Standard integration** | No additional web app required—automatically created during setup | Shopify online stores using standard Shopify themes |
+| **Custom integration** | Requires manually creating a Braze web app | Shopify headless sites or custom storefronts |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 {% multi_lang_include shopify.md section='Integration Tabs' %}
 
 ## How the integration works
