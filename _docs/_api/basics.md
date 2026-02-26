@@ -382,7 +382,7 @@ If authentication fails, the API returns an error response with an HTTP status c
 
 ### Network-level security
 
-REST API requests to Braze are protected by TLS encryption across the full request path. The following table describes the network flow for an API request from your server to Braze:
+REST API requests to Braze are protected by Transport Layer Security (TLS) encryption across the full request path. The following table describes the network flow for an API request from your server to Braze:
 
 | Step | Component | Description |
 | --- | --- | --- |
