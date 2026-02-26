@@ -51,10 +51,11 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 
 {% endtab %}
 {% tab Microsoft Fabric %}
-1. Create a service principal and allow access to the Fabric workspace that will be used for your integration.   
-2. In your Fabric workspace, set up the tables or views you want to sync to Braze.   
-3. Create a new integration in the Braze dashboard.  
-4. Test the integration and start the sync.
+1. Create a service principal and grant access to Fabric APIs.
+2. Set up a shared workspace and grant the service principal access to it.
+3. In your Fabric workspace, set up the tables or views you want to sync to Braze.   
+4. Create a new integration in the Braze dashboard.  
+5. Test the integration and start the sync.
 {% endtab %}
 {% endtabs %}
 
@@ -384,9 +385,24 @@ You will provide access for Braze to connect to your Fabric instance. In your Fa
 * In **Developer settings** enable "Service principals can use Fabric APIs" so Braze can connect using Microsoft Entra ID.
 * In **OneLake settings** enable "Users can access data stored in OneLake with apps external to Fabric" so that the service principal can access data from an external app.
 
+#### Step 1.3: Set up a shared workspace and grant access
 
-#### Step 1.3: Set up the table
-Braze supports both tables and views in Fabric Warehouses. If you need to create a new warehouse, go to **Create > Data Warehouse > Warehouse** in the Fabric console. 
+Any Fabric resources you want to connect to Braze must be placed in a shared workspace. If you've only been using the default "My Workspace", create a new shared workspace:
+
+1. On the navigation menu, select **Workspaces**, then select **+ New workspace**.
+2. Enter a **Name** for the workspace, then select **Apply**.
+
+After you have a shared workspace, grant the service principal access:
+
+1. Select the workspace, then select **Manage Access**.
+2. Select **+ Add people or groups**.
+3. Search for and select the name of the service principal you created in Step 1.1. If it doesn't appear, confirm you've enabled the "Service principals can use Fabric APIs" setting in Step 1.2.
+4. In the role dropdown, select **Contributor**.
+
+The service principal can now access any resource within this workspace using the appropriate SQL endpoint.
+
+#### Step 1.4: Set up the table
+Braze supports both tables and views in Fabric Warehouses. If you need to create a new warehouse, create it within the shared workspace from Step 1.3. Go to **Create > Data Warehouse > Warehouse** in the Fabric console.
 
 ```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
@@ -419,13 +435,13 @@ You can name the warehouse, schema, and table or view as you'd like, but the col
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
 
-#### Step 1.4: Get warehouse connection string
+#### Step 1.5: Get warehouse connection string
 You will need the SQL endpoint for your warehouse in order for Braze to connect. In order to retrieve this, go to the **workspace** in Fabric, and in the list of items, hover over the warehouse name and select **Copy SQL connection string**.
 
 ![The "Fabric Console" page in Microsoft Azure, where users should retrieve the SQL Connection String.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
 
 
-#### Step 1.5: Allow Braze IPs in Firewall (Optional)
+#### Step 1.6: Allow Braze IPs in Firewall (Optional)
 
 Depending on the configuration of your Microsoft Fabric account, you may need to allow the following IP addresses in your firewall to allow traffic from Braze. For more information on enabling this, see the relevant documentation on [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
 
