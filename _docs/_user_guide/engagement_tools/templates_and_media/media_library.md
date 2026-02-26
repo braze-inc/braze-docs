@@ -68,7 +68,7 @@ For best results, refer to the following message length guidelines when crafting
 | Message type | Recommended length (text only) | Recommended length (rich) |
 | --- | --- | --- |
 | iOS lock screen | 160 characters | 130 characters |
-| iOS notification center | 160 characters | 130 characters |
+| iOS Notification Center | 160 characters | 130 characters |
 | iOS banner alert | 80 characters | 65 characters |
 | Android lock screen | 49 characters | N/A |
 | Android notification drawer | 597 characters | N/A |
