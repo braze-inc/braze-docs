@@ -70,7 +70,7 @@ It isn't possible to merge or import user permissions from one dashboard user to
 
 To edit a user's current admin, company, or workspace permissions, go to **Settings** > **Company Users**, then select their name.
 
-![The "Company Users" page in Braze with listed users.]({% image_buster /assets/img/braze_permissions/selecting_a_user.png %})
+![The "Company Users" page in Braze showing a table of dashboard users.]({% image_buster /assets/img/braze_permissions/selecting_a_user.png %})
 
 {% tabs local %}
 {% tab Admin %}
@@ -85,7 +85,7 @@ Admins have access to all features and the ability to modify any company setting
 
 To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
 
-![The details of a user with the admin checkbox in focus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:70%;"}
+![The details of the selected user with the admin checkbox in focus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:70%;"}
 
 {% alert warning %}
 If you remove admin privileges from a user, they won't be able to access Braze until you assign them at least one [company-level or workspace-level permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?tab=company&sdktab=granular%20permissions#granularpermissions_editing-a-users-permissions).
