@@ -22,7 +22,7 @@ After users enter the User Update step and it completes processing, they advance
 
 ## Creating a user update
 
-Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of the variant or step and select **User Update**. 
+Drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of the variant or step and select **User Update**. 
 
 There are three options that allow you to update existing, add new, or remove user profile information. All combined, the User Update steps in a workspace can update up to 200,000 user profiles per minute.
 
@@ -56,19 +56,44 @@ By incrementing a custom attribute that tracks an event, you can track the numbe
 
 An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) is a custom attribute stored on a user's profile that is data rich. This allows you to create a history of the user's interactions with your brand. This allows you to create segments based on a custom attribute that is a calculated field, such as purchase history or total lifetime value.
 
-The User Update step can add or remove attributes to this array of objects. To update an array, select the array attribute name from your list of attributes and enter the key value.
+Using the **Advanced JSON Editor** option, you can insert JSON to add or remove attributes to this array of objects.
 
 #### Use case: Updating a user's wishlist
 
-Adding or removing an item from an array updates the user's wishlist.
+Track a user's wishlist so you can segment or personalize based on their saved items.
 
-![User Update step that adds an item "sunblock" to the attribute "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
+1. Create a custom attribute that is an array of objects, for example `wishlist`. Each object can include fields such as `product_id`, `product_name`, and `added_at`.
+2. In the User Update step, open the **Advanced JSON Editor** and use the `add` operation to append an item or the `remove` operation to remove an item by value.
+
+Example—adding an item to the wishlist:
+
+{% raw %}
+```json
+{
+  "attributes": [
+    {
+      "wishlist": {
+        "add": [
+          {
+            "product_id": "SKU-123",
+            "product_name": "Wireless Headphones",
+            "added_at": "{{$isoTimestamp}}"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+{% endraw %}
+
+To remove an item, use `"wishlist": { "remove": [ { "product_id": "SKU-123", ... } ] }` with the same object structure so Braze can match and remove it.
 
 #### Use case: Calculating the shopping cart total
 
 Track when a user has items in their shopping cart, when they add new items or remove items, and what the total shopping cart value is. 
 
-1. Create a custom array of objects called `shopping_cart`. The following example shows what this attribute may look like. Each item has a unique `product_id` that has more complex data in its own nested array of objects, including `price`.
+1. Create a custom array of objects called `shopping_cart`. The following example shows what this attribute may look like. Each item has a unique `product_id` that has additional data in its own nested array of objects, including `price`.
 
 {% raw %}
 ```javascript
