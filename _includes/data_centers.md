@@ -137,6 +137,12 @@ For instance `ID-01`, these are the relevant IP addresses:
 {% endsubtab %}
 {% subtab Japan (JP) %}
 For instance `JP-01`, these are the relevant IP addresses:
+- `13.159.155.212`
+- `54.199.221.241`
+- `13.192.23.16`
+- `54.250.120.139`
+- `18.181.114.232`
+- `3.114.38.100`
 
 
 {% endsubtab %}
