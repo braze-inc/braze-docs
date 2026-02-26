@@ -30,7 +30,7 @@ Features for Banners include:
 - **Flexible placements:** Define multiple locations within your application or website where Banners can appear, enabling precise targeting to specific contexts or user experiences.
 - **Dynamic personalization:** Banners dynamically refresh with every new user session, ensuring content stays current and personalized using Braze’s built-in personalization tools and Liquid logic.
 - **Native prioritization:** Set the display priority for when multiple Banners target the same placement, ensuring the right message reaches users at the right time.
-- **Custom HTML support:** Incorporate custom HTML blocks for advanced customization or seamless integration with your existing web styles. Banners use the same JavaScript bridge as HTML in-app messages. If you use custom HTML in your design, you must call `brazeBridge.logClick()` from your custom code to log clicks. For more information, see [Custom code and JavaScript bridge for Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/custom_code/#javascript-bridge).
+- **Custom Code editor block:** Use the Custom Code editor block to add custom HTML for advanced customization or seamless integration with your existing web styles. Banners use the same JavaScript bridge as HTML in-app messages. If you use custom HTML in your design, you must call `brazeBridge.logClick()` from your custom code to log clicks. For more information, see [Custom code and JavaScript bridge for Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/custom_code/#javascript-bridge).
 
 ## About Banners {#about-banners}
 
