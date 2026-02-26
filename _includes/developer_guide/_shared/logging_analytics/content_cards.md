@@ -178,15 +178,17 @@ BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSAr
 
 {% tab react native %}
 
-To get the Content Card data, use the `getContentCards` method. To listen for updates, subscribe to `contentCardsUpdated` events.
+To get the Content Card data, use the `getContentCards` method:
 
 ```javascript
 import Braze from "@braze/react-native-sdk";
 
-// Get content cards
 const cards = await Braze.getContentCards();
+```
 
-// Subscribe to content card updates
+To listen for updates, subscribe to Content Card update events:
+
+```javascript
 const subscription = Braze.addListener(Braze.Events.CONTENT_CARDS_UPDATED, (update) => {
   const cards = update.cards;
   cards.forEach(card => {
