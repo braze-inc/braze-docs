@@ -18,13 +18,13 @@ The notification service extension's bundle ID must be distinct from your main a
 
 ### Step 3: Adding an App Group
 
-In Xcode, add the App Groups capability from the **Signing & Capabilities** pane to your main app target as well as the Notification Service Extension target. Then, click the **+** button. Use your app's bundle ID to create the App Group. For example, if your app's bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`.
+In Xcode, add the App Groups capability from the **Signing & Capabilities** pane to your main app target as well as the Notification Service Extension target. Then, click the **+** button. Use your app's bundle ID to create the app group. For example, if your app's bundle ID is `com.company.appname`, you can name your app group `group.com.company.appname.xyz`.
 
 {% alert important %}
 App Groups in this context refer to Apple's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) and not your Braze workspace (previously app group) ID.
 {% endalert %}
 
-You need a shared App Group so your main app and the Notification Service Extension can access shared data. If you do not add your app to an App Group, your app may fail to populate certain fields from the push payload and will not work fully as expected.
+You need a shared App Group so your main app and the Notification Service Extension can access shared data. If you do not add your app to an app group, your app may fail to populate certain fields from the push payload and will not work fully as expected.
 
 ### Step 4: Integrating rich push notifications
 
@@ -109,7 +109,7 @@ class NotificationService: UNNotificationServiceExtension {
 
 ### Step 5: Configuring the App Group in Braze
 
-Before initializing Braze, assign the name of your App Group to your Braze configuration's [`push.appGroup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/appgroup) property.
+Before initializing Braze, assign the name of your app group to your Braze configuration's [`push.appGroup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/appgroup) property.
 
 ```swift
 let configuration = Braze.Configuration(apiKey: "<YOUR-BRAZE-API-KEY>",
