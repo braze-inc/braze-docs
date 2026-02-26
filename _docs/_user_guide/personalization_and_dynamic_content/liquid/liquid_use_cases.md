@@ -1381,14 +1381,14 @@ To assign a variable that reflects the current date and time in the user's local
 
 {% raw %}
 ```liquid
-{% assign local_date_time = 'now' | time_zone:{{${time_zone}}} | date: '%a' %}
+{% assign local_date_time = 'now' | time_zone:{{${time_zone}}} | date: '%B %e, %Y' %}
 {{local_date_time}}
 ```
 {% endraw %}
 
 - `now`: This pulls in the current date and time in UTC.
 - `time_zone`: This retrieves the user's local time zone from the default attribute using the {% raw %}`{{${time_zone}}}`{% endraw %} personalization tag.
-- `date`: This formats the user's local date and time according to your specifications. In the example above, it displays the abbreviated day of the week. For more formatting options, you can refer to strftime.net.
+- `date`: This formats the user's local date and time according to your specifications. In the example above, it displays a string formatted like "February 26, 2026". For more formatting options, you can refer to strftime.net.
 
 #### Apply the user's time zone with custom attributes
 
@@ -1396,7 +1396,7 @@ You can apply the `time_zone` filter to custom attributes, like this:
 
 {% raw %}
 ```liquid
-{{custom_attribute.${date_time_attribute} | time_zone: {{${time_zone}}} | date: '%a, %b %d, %Y'}}
+{{custom_attribute.${date_time_attribute} | time_zone: {{${time_zone}}} | date: '%a, %b %e, %Y'}}
 ```
 {% endraw %}
 
