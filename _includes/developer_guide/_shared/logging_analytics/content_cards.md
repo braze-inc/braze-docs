@@ -187,7 +187,7 @@ import Braze from "@braze/react-native-sdk";
 const cards = await Braze.getContentCards();
 
 // Subscribe to content card updates
-const subscription = Braze.addListener("contentCardsUpdated", (update) => {
+const subscription = Braze.addListener(Braze.Events.CONTENT_CARDS_UPDATED, (update) => {
   const cards = update.cards;
   cards.forEach(card => {
     if (card.isControl) {
