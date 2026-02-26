@@ -61,7 +61,7 @@ Day | # of Emails to Send
 19 | 8,000
 20 | 8,000
 21 | 8,000
-22+ | Double Every 3 Days Until Desired Volume
+22+ | Double every 3 days until desired volume
 
 {% endtab %}
 {% tab Moderate %}
