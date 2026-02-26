@@ -47,7 +47,7 @@ The Braze Initialization Tag exposes the following options. Most of these map di
 
 | GTM option | Web SDK configuration or method | Description |
 | --- | --- | --- |
-| **Allow HTML In-App Messages** | `allowUserSuppliedJavascript` | Enables HTML in-app messages, Banners, and user-supplied JavaScript click actions. Required for [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/) and [Banners]({{site.baseurl}}/developer_guide/banners/placements/?sdktab=web) that use custom HTML. |
+| **Allow HTML In-App Messages** | `allowUserSuppliedJavascript` | Enables HTML in-app messages, Banners, and user-supplied JavaScript click actions. Required for [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/) and [Banners]({{site.baseurl}}/developer_guide/banners/placements/?sdktab=web) that use custom HTML. Only enable this when you trust the HTML and JavaScript content, as it allows user-supplied JavaScript execution. |
 | **Automatically show new in app messages** | `braze.automaticallyShowInAppMessages()` | Automatically displays new in-app messages when they arrive from the server by calling this method after initialization. |
 | **Automatically Open New Session** | `braze.openSession()` | Opens a new session after the SDK is initialized by calling this method for you. |
 | **Open Cards in New Tab** | `openCardsInNewTab` | Opens Content Card links in a new tab when using the default Feed UI. |
