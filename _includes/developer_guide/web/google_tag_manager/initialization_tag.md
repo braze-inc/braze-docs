@@ -41,11 +41,34 @@ For additional initialization settings, select **Braze Initialization Options** 
 
 ![The list of Braze Initialization Options in under 'Tag Configuration'.]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %}){: style="max-width:65%;"}
 
-### Step 4: Set to Trigger on *all pages*
+### Step 4: Choose initialization options
+
+The Braze Initialization Tag exposes the following options, which map to the [Web SDK InitializationOptions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions). Select the options that match your integration needs:
+
+| GTM option | SDK option | Description |
+| --- | --- | --- |
+| **Allow HTML In-App Messages** | `allowUserSuppliedJavascript` | Enables HTML in-app messages, Banners, and user-supplied JavaScript click actions. Required for [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/) and [Banners]({{site.baseurl}}/developer_guide/banners/placements/?sdktab=web) that use custom HTML. |
+| **Automatically show new in app messages** | — | Automatically displays new in-app messages when they arrive from the server. |
+| **Automatically Open New Session** | — | Opens a new session after the SDK is initialized. |
+| **Open Cards in New Tab** | `openCardsInNewTab` | Opens Content Card links in a new tab when using the default Feed UI. |
+| **Disable Automatic Push Token Maintenance** | `disablePushTokenMaintenance` | Stops the SDK from syncing push tokens with the Braze backend on new sessions. |
+| **Disable Font Awesome** | `doNotLoadFontAwesome` | Prevents the SDK from loading Font Awesome from the CDN. Use if your site has its own Font Awesome. |
+| **Enable Web SDK Logging** | `enableLogging` | Enables console logging for debugging. Remove before production. |
+| **Disable Automatic Service Worker Registration** | `manageServiceWorkerExternally` | Use if you register and control the service worker yourself. |
+| **Disable Cookies** | `noCookies` | Uses localStorage instead of cookies for user/session data. Prevents cross-subdomain recognition. |
+| **Enable SDK Authentication** | `enableSdkAuthentication` | Enables [SDK Authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/). |
+| **Minimum Interval Between Triggered Messages** | `minimumIntervalBetweenTriggerActionsInSeconds` | Minimum seconds between trigger actions (default: 30). |
+| **Service Worker Location** | `serviceWorkerLocation` | Custom path for the service worker file (default: `/service-worker.js`). |
+| **Session Timeout (seconds)** | `sessionTimeoutInSeconds` | Session timeout in seconds (default: 1800). |
+| **App Version Number** | `appVersion`, `appVersionNumber` | App version for segmentation (e.g., `1.2.3.4`). |
+
+For options not exposed in the GTM template (such as `contentSecurityNonce`, `localization`, or `devicePropertyAllowlist`), use [runtime initialization]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) instead.
+
+### Step 5: Set to Trigger on *all pages*
 
 The initialization tag should be run on all pages of your site. This allows you to use Braze SDK methods and record web push analytics.
 
-### Step 5: Verify your integration
+### Step 6: Verify your integration
 
 You can verify your integration using either of the following options:
 
