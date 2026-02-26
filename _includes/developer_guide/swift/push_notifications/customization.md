@@ -128,7 +128,7 @@ When you create a `UNNotificationAction`, you can specify a list of action optio
 After you register a category, use the Braze dashboard to send notifications of that type to users.
 
 {% alert tip %}
-You only need to define action buttons on the Braze dashboard for behaviors that can't be created locally in your Swift code, such as deep linking into your app or redirecting to a web URL. These actions need to be configured on the dashboard so they can define what URL or deep link to open. For action buttons that simply dismiss the notification without opening the app, you don't need to configure them on the dashboard — dismissal behavior is handled automatically by iOS. Just register your custom category and its actions in your app code, then enter the matching category name on the dashboard.
+You only need to define action buttons on the Braze dashboard for behaviors that can't be created locally in your Swift code, such as deep linking into your app or redirecting to a web URL. These actions need to be configured on the dashboard so they can define what URL or deep link to open. For action buttons that simply dismiss the notification without opening the app, you don't need to configure them on the dashboard—dismissal behavior is handled automatically by iOS. Just register your custom category and its actions in your app code, then enter the matching category name on the dashboard.
 {% endalert %}
 
 1. In the Braze dashboard, select **Messaging** > **Push Notifications**, then choose your iOS [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message).
@@ -163,7 +163,7 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 {% endtab %}
 {% endtabs %}
 
-Because `MANAGE_IDENTIFIER` deep links into the app, you would set up that action button on the Braze dashboard with the associated deep link URL. However, you don't need to define a button on the dashboard for `KEEP_IDENTIFIER`, since it only dismisses the notification. On the dashboard, you just need to enter the category name (for example, `YOUR_CATEGORY`) to match what you registered in your app code.
+Because `MANAGE_IDENTIFIER` deep links into the app, you would set up that action button on the Braze dashboard with the associated deep link URL. However, you don't need to define a button on the dashboard for `KEEP_IDENTIFIER` because it only dismisses the notification. On the dashboard, you only need to enter the category name (for example, `YOUR_CATEGORY`) to match what you registered in your app code.
 
 ## Customizing badges
 
