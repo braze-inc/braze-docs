@@ -94,7 +94,7 @@ The following data types can be stored as a custom attribute:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-For guidance on when to use a custom event versus a custom attribute, see [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) and [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
+For guidance on when to use a custom event versus a custom attribute, see [Custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) and [Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
 {% endalert %}
 
 ##### Array of objects example
