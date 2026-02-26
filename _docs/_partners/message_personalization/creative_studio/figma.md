@@ -42,5 +42,5 @@ Select the images and visual assets to export to Braze. To select multiple asset
 
 ### Step 4: Export to Braze
 
-Select **Export to Braze**. Your images and visual assets are uploaded into the Braze media library. Note that the asset name in the media library matches the name in the Figma file.
+Select **Export to Braze**. Your images and visual assets are uploaded into the Braze media library. The asset name in the media library matches the name in the Figma file. All images imported using this integration have their source set to **Figma**.
 
