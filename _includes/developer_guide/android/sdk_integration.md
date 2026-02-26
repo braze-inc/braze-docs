@@ -2,37 +2,65 @@
 
 ### Step 1: Update your `build.gradle`
 
-In your `build.gradle`, add [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html) to your list of repositories.
+In your app module's `build.gradle` or `build.gradle.kts` file, add [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html) to your list of repositories.
 
-```kotlin
+```groovy
 repositories {
   mavenCentral()
 }
 ```
 
-Next, add Braze to your dependencies.
+Next, add Braze to your dependencies. In the following examples, replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+
+{% alert note %}
+If your project uses Kotlin DSL (`build.gradle.kts`), use the `implementation("...")` syntax. If your project uses Groovy (`build.gradle`), use the `implementation '...'` syntax.
+{% endalert %}
 
 {% tabs local %}
 {% tab base only %}
-If you don't plan on using Braze UI components, add the following code to your `build.gradle`. Replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+If you don't plan on using Braze UI components, add the following to your dependencies.
 
-```kotlin
+{% subtabs local %}
+{% subtab Groovy %}
+```groovy
 dependencies {
     implementation 'com.braze:android-sdk-base:SDK_VERSION' // (Required) Adds dependencies for the base Braze SDK.
     implementation 'com.braze:android-sdk-location:SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
 }
 ```
+{% endsubtab %}
+{% subtab Kotlin DSL %}
+```kotlin
+dependencies {
+    implementation("com.braze:android-sdk-base:SDK_VERSION") // (Required) Adds dependencies for the base Braze SDK.
+    implementation("com.braze:android-sdk-location:SDK_VERSION") // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 
 {% tab with ui components %}
-If you plan on using Braze UI components later, add the following code to your `build.gradle`.  Replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+If you plan on using Braze UI components, add the following to your dependencies.
 
-```kotlin
+{% subtabs local %}
+{% subtab Groovy %}
+```groovy
 dependencies {
-    implementation 'com.braze:android-sdk-ui:SDK_VERSION' // (Required) Adds dependencies for the Braze SDK and Braze UI components. 
+    implementation 'com.braze:android-sdk-ui:SDK_VERSION' // (Required) Adds dependencies for the Braze SDK and Braze UI components.
     implementation 'com.braze:android-sdk-location:SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
 }
 ```
+{% endsubtab %}
+{% subtab Kotlin DSL %}
+```kotlin
+dependencies {
+    implementation("com.braze:android-sdk-ui:SDK_VERSION") // (Required) Adds dependencies for the Braze SDK and Braze UI components.
+    implementation("com.braze:android-sdk-location:SDK_VERSION") // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
