@@ -242,7 +242,7 @@ For user data syncs (attributes, custom events, purchase events), your source fi
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Unlike with data warehouse sources, the `UPDATED_AT` column is neither required nor supported for file storage syncs. 
+Unlike with data warehouse sources, the `UPDATED_AT` column is neither required nor supported for file storage syncs.
 {% endalert %}
 
 ### Catalog identifiers {#catalog-identifiers}
