@@ -375,7 +375,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 On each request, Braze performs the following server-side validation checks:
 
-1. **Token validity:** Verifies the REST API key exists and is correctly formatted.
+1. **Token validity:** Verifies that the REST API key exists in Braze and is active (for example, not revoked or disabled).
 2. **Token authorization:** Confirms the API key has the required permissions for the requested endpoint.
 
 If authentication fails, the API returns an error response with an HTTP status code. For example, `401 Unauthorized` indicates an invalid or missing key, while `403 Forbidden` indicates the key doesn't have permission for the requested endpoint. For more information, see [API errors]({{site.baseurl}}/api/errors/).
