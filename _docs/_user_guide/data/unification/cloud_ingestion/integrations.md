@@ -382,12 +382,12 @@ Azure doesn't allow unlimited expiry on service principal secrets. Remember to r
 #### Step 1.2: Grant access to Fabric resources 
 You will provide access for Braze to connect to your Fabric instance. In your Fabric admin portal, navigate to **Settings** > **Governance and insights** > **Admin portal** > **Tenant settings**.    
 
-* In **Developer settings** enable "Service principals can use Fabric APIs" so Braze can connect using Microsoft Entra ID.
-* In **OneLake settings** enable "Users can access data stored in OneLake with apps external to Fabric" so that the service principal can access data from an external app.
+* In **Developer settings** enable **Service principals can use Fabric APIs** so Braze can connect using Microsoft Entra ID.
+* In **OneLake settings** enable **Users can access data stored in OneLake with apps external to Fabric** so that the service principal can access data from an external app.
 
 #### Step 1.3: Set up a shared workspace and grant access
 
-Any Fabric resources you want to connect to Braze must be placed in a shared workspace. If you've only been using the default "My Workspace", create a new shared workspace:
+Any Fabric resources you want to connect to Braze must be placed in a shared workspace. If you've only been using the default **My Workspace**, create a new shared workspace:
 
 1. On the navigation menu, select **Workspaces**, then select **+ New workspace**.
 2. Enter a **Name** for the workspace, then select **Apply**.
@@ -396,7 +396,7 @@ After you have a shared workspace, grant the service principal access:
 
 1. Select the workspace, then select **Manage Access**.
 2. Select **+ Add people or groups**.
-3. Search for and select the name of the service principal you created in Step 1.1. If it doesn't appear, confirm you've enabled the "Service principals can use Fabric APIs" setting in Step 1.2.
+3. Search for and select the name of the service principal you created in Step 1.1. If it doesn't appear, confirm you've enabled the **Service principals can use Fabric APIs** setting in Step 1.2.
 4. In the role dropdown, select **Contributor**.
 
 The service principal can now access Fabric warehouse resources in this workspace through their SQL endpoints, including the warehouse you will use for Braze.
