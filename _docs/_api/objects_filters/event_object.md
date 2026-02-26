@@ -47,7 +47,7 @@ For steps on how to set up custom events for a specific platform, refer to the P
 - [ISO 8601 time code](https://en.wikipedia.org/wiki/ISO_8601)
 
 {% alert note %}
-Some identifiers are mutually exclusive and `email` takes precedence over `phone` when both are provided. For full details, refer to [Identifier resolution]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+Some identifier pairs can't be used together in a single request. When both `email` and `phone` are provided, `email` takes precedence over `phone`. For full details, refer to [Identifier resolution]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
 {% endalert %}
 
 #### Update existing profiles only
