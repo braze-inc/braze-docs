@@ -49,6 +49,10 @@ You can update user data by external ID, user alias, Braze ID, email, or phone n
 
 Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Braze selects and imports any rows where `UPDATED_AT` is equal to or later than the last `UPDATED_AT` timestamp from the last successful sync job.
 
+{% alert important %}
+CDI uses an inclusive boundary (`>=`) when comparing `UPDATED_AT` timestamps. This means rows with an `UPDATED_AT` value that exactly matches the last synced timestamp are re-synced on the next run. To avoid duplicate syncs and unnecessary data point consumption, make sure your `UPDATED_AT` values are unique across sync runs. For more information, refer to [Avoid resyncing rows with duplicate timestamps](#avoid-resyncing-rows-with-duplicate-timestamps).
+{% endalert %}
+
 In your data warehouse, add the following users and attributes to your table, setting the `UPDATED_AT` time to the time you add this data:
 
 <table role="presentation">
@@ -276,15 +280,18 @@ In this third run, another new row was added. Now, one row has an `UPDATED_AT` v
 
 The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings time. Prefer UTC-only functions, such as `SYSDATE()` instead of `CURRENT_DATE()` whenever possible.
 
-## Make sure the `UPDATED_AT` time isn’t the same time as your sync
+## Avoid resyncing rows with duplicate timestamps {#avoid-resyncing-rows-with-duplicate-timestamps}
 
-Your CDI sync might have duplicate data if any `UPDATED_AT` fields are at the exact same time as the last `UPDATED_AT` timestamp of the previous successful sync job. This is because CDI will choose an "inclusive boundary" when it identifies any row that is the same time as the previous sync, and will make the rows able to sync. CDI will re-ingest those rows and create duplicate data.
+CDI uses an inclusive boundary (`>=`) when filtering rows by `UPDATED_AT`. This means that during each sync, Braze selects all rows where `UPDATED_AT` is equal to or later than the last synced `UPDATED_AT` value. If any rows share the exact same `UPDATED_AT` timestamp as the last synced value, those rows are re-synced on the next run, which can result in duplicate data and unnecessary data point consumption.
 
-Here are some suggestions to avoid duplicate data:
+For example, if a sync processes rows up to `UPDATED_AT = 2025-04-01 00:00:00`, the next sync selects all rows where `UPDATED_AT >= 2025-04-01 00:00:00`. Any rows with that exact timestamp are synced again.
 
-- If you’re setting up a sync against a `VIEW`, don’t use `CURRENT_TIMESTAMP` as the default value. This will cause all data to sync every time the sync runs because the `UPDATED_AT` field will evaluate to the time our queries are run.
-- If you have very long-running pipelines or queries writing data to your source table, avoid running these concurrently with a sync, or avoid using the same timestamp for every row inserted.
-- Use a transaction to write all rows that have the same timestamp.
+To avoid this:
+
+- If you're setting up a sync against a `VIEW`, don't use `CURRENT_TIMESTAMP` as the default value. This causes all data to sync every time the sync runs because the `UPDATED_AT` field evaluates to the time the query runs.
+- If you have long-running pipelines or queries writing data to your source table, avoid running these concurrently with a sync, or avoid using the same timestamp for every row inserted.
+- Use a transaction to write all rows that share the same timestamp.
+- Use unique, monotonically increasing `UPDATED_AT` values to prevent rows from being re-selected after they've been processed.
 
 ### Example: Managing subsequent updates
 
@@ -663,10 +670,7 @@ FROM [braze].[users] ;
 
 ### Use the `UPDATED_AT` timestamp
 
-We use the `UPDATED_AT` timestamp to track what data has been synced successfully to Braze. If many rows are written with the same timestamp while a sync is running, this may lead to duplicate data being synced to Braze. Some suggestions to avoid duplicate data:
-- If you're setting up a sync against a `VIEW`, don't use `CURRENT_TIMESTAMP` as the default value. This will cause all data to sync every time the sync runs because the `UPDATED_AT` field will evaluate to the time our queries are run. 
-- If you have very long-running pipelines or queries writing data to your source table, avoid running these concurrently with a sync, or avoid using the same timestamp for every row inserted.
-- Use a transaction to write all rows that have the same timestamp.
+Braze uses the `UPDATED_AT` timestamp to track what data has been synced successfully. Because CDI uses an inclusive boundary (`>=`), rows with the same timestamp as the last synced value are re-synced on subsequent runs. If many rows share the same timestamp while a sync is running, this can lead to duplicate data. For more details and tips, refer to [Avoid resyncing rows with duplicate timestamps](#avoid-resyncing-rows-with-duplicate-timestamps).
 
 ### Table configuration
 

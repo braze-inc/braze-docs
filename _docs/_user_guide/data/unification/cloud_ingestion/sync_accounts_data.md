@@ -25,7 +25,7 @@ Only make updates to your account schema when the sync is paused or not schedule
 
 ## How syncing works
 
-- Each sync imports rows where `UPDATED_AT` is later than the last synced timestamp.
+- Each sync imports rows where `UPDATED_AT` is equal to or later than the last synced timestamp. For more information about this inclusive boundary, refer to [Avoid resyncing rows with duplicate timestamps]({{site.baseurl}}/user_guide/data/cloud_ingestion/best_practices/#avoid-resyncing-rows-with-duplicate-timestamps).
 - Data from the integration creates or updates accounts based on the provided `id`.
 - If `DELETED` is `true`, the account is deleted.
 - Syncing doesn’t log data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.

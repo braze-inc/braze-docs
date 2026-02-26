@@ -223,7 +223,7 @@ For setup details, see [File storage integrations]({{site.baseurl}}/user_guide/d
 
 ## How the integration works
 
-Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is equal to or after the last timestamp synced. We recommend creating a view in your data warehouse from your catalog data to set up a source table that will fully refresh each time a sync runs. With views, you won't need to rewrite the query each time.
+Each time the sync runs, Braze pulls in all rows where `UPDATED_AT` is equal to or later than the last synced `UPDATED_AT` value (inclusive boundary). We recommend creating a view in your data warehouse from your catalog data to set up a source table that will fully refresh each time a sync runs. With views, you won't need to rewrite the query each time.
 
 For example, if you have a table of product data (`product_catalog_1`) with `product_id` and three additional attributes, you could sync the below view:
 

@@ -51,7 +51,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC (
 
 You can name the database, schema, and table as you’d like, but the column names should match the preceding definition.
 
-* `UPDATED_AT`: The time this row was updated or added to the table. Only rows added or updated since the last sync will be synced.  
+* `UPDATED_AT`: The time this row was updated or added to the table. Braze syncs any rows where `UPDATED_AT` is equal to or later than the last synced `UPDATED_AT` value (inclusive boundary).  
 * Either `external_id` or `alias_name` and `alias_label` as the user identifier column. These identify the users for whom you want to trigger Canvas messaging.  
   * `EXTERNAL_ID`: Identifies the user to enter into the Canvas. This should match the `external_id` value used in Braze.  
   * `ALIAS_NAME` and `ALIAS_LABEL`: These columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the alias type. Users may have multiple aliases with different labels, but only one alias_name per `alias_label`.  
@@ -108,7 +108,7 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC (
 
 You can name the database, schema, and table as you’d like, but the column names should match the preceding definition.
 
-* `UPDATED_AT`: The time this row was updated or added to the table. Only rows added or updated since the last sync will be synced.  
+* `UPDATED_AT`: The time this row was updated or added to the table. Braze syncs any rows where `UPDATED_AT` is equal to or later than the last synced `UPDATED_AT` value (inclusive boundary).  
 * Either `external_id` or `alias_name` and `alias_label` as the user identifier column. These identify the users for whom you want to trigger Canvas messaging.  
   * `EXTERNAL_ID`: Identifies the user to enter into the Canvas. This should match the `external_id` value used in Braze.  
   * `ALIAS_NAME` and `ALIAS_LABEL`: These columns create a user alias object. `alias_name` should be a unique identifier, and alias_label specifies the alias type. Users may have multiple aliases with different labels, but only one `alias_name` per `alias_label`.  
@@ -211,7 +211,7 @@ Refer to the following when creating your source table:
 
 You can name the schema and table as you’d like, but the column names should match the preceding definition.
 
-* `UPDATED_AT`: The time this row was updated or added to the table. Only rows added or updated since the last sync will be synced.  
+* `UPDATED_AT`: The time this row was updated or added to the table. Braze syncs any rows where `UPDATED_AT` is equal to or later than the last synced `UPDATED_AT` value (inclusive boundary).  
 * Either `external_id` or `alias_name` and `alias_label` as the user identifier column. These identify the users for whom you want to trigger Canvas messaging.  
   * `EXTERNAL_ID`: Identifies the user to enter into the Canvas. This should match the `external_id` value used in Braze.  
   * `ALIAS_NAME` and `ALIAS_LABEL`: These columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the alias type. Users may have multiple aliases with different labels, but only one alias_name per `alias_label`.  

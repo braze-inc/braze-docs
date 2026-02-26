@@ -25,7 +25,7 @@ Source tables for user deletes should include one or more user identifier types 
 
 ### `UPDATED_AT`
 
-Add an `UPDATED_AT` timestamp to your source table. This timestamp indicates the time that this row was updated or added to the table. Braze will only sync rows that have been added or updated since the last sync.
+Add an `UPDATED_AT` timestamp to your source table. This timestamp indicates the time that this row was updated or added to the table. Braze syncs any rows where `UPDATED_AT` is equal to or later than the last synced `UPDATED_AT` value (inclusive boundary).
 
 ### User identifier columns
 

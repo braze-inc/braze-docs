@@ -86,7 +86,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
 
 You can name the database, schema, and table as you'd like, but the column names should match the preceding definition.
 
-- `UPDATED_AT` - The time this row was updated in or added to the table. Only rows that have been added or updated since the last sync are synced.
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs any rows where `UPDATED_AT` is equal to or later than the last synced `UPDATED_AT` value (inclusive boundary).
 - **User identifier columns** - Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, `braze_id`, `email` or `phone`). A source table may have columns for one, two, three, four, or all five identifier types.
     - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
     - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
@@ -169,7 +169,7 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
 
 You can name the database, schema, and table as you'd like, but the column names should match the preceding definition.
 
-- `UPDATED_AT` - The time this row was updated in or added to the table. Only rows that have been added or updated since the last sync are synced.
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs any rows where `UPDATED_AT` is equal to or later than the last synced `UPDATED_AT` value (inclusive boundary).
 - **User identifier columns** - Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, `braze_id`, `email` or `phone`). A source table may have columns for one, two, three, four, or all five identifier types.
     - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
     - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
@@ -246,7 +246,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 
 You can name the project, dataset, and table as you'd like, but the column names should match the preceding definition.
 
-- `UPDATED_AT` - The time this row was updated in or added to the table. Only rows that have been added or updated since the last sync are synced.
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs any rows where `UPDATED_AT` is equal to or later than the last synced `UPDATED_AT` value (inclusive boundary).
 - **User identifier columns** - Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, `braze_id`, `email` or `phone`). A source table may have columns for one, two, three, four, or all five identifier types.
     - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
     - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
@@ -330,7 +330,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 
 You can name the schema and table as you'd like, but the column names should match the preceding definition.
 
-- `UPDATED_AT` - The time this row was updated in or added to the table. Only rows that have been added or updated since the last sync are synced.
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs any rows where `UPDATED_AT` is equal to or later than the last synced `UPDATED_AT` value (inclusive boundary).
 - **User identifier columns** - Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, `braze_id`, `email` or `phone`). A source table may have columns for one, two, three, four, or all five identifier types.
     - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
     - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
@@ -409,7 +409,7 @@ GO
 
 You can name the warehouse, schema, and table or view as you'd like, but the column names should match the preceding definition.
 
-- `UPDATED_AT` - The time this row was updated in or added to the table. Only rows that have been added or updated since the last sync are synced.
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs any rows where `UPDATED_AT` is equal to or later than the last synced `UPDATED_AT` value (inclusive boundary).
 - **User identifier columns** - Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, `braze_id`, `email` or `phone`). A source table may have columns for one, two, three, four, or all five identifier types.
     - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
     - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
