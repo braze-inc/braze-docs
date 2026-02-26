@@ -17,6 +17,7 @@ jobs:
       # Checks out the PR branch with history so diffs can be detected.
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
 
       # Installs CLI tools for image optimization.
@@ -40,7 +41,18 @@ jobs:
           fi
           exit 0
 
-      # Automatically commits any optimized images back into the PR branch.
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "optimize png, jpg, and jpeg files"
+      # Commit and push optimized images. We do this with explicit git commands
+      # instead of git-auto-commit-action to avoid the action's internal
+      # fetch/checkout overwriting our modified image files (which causes
+      # "Your local changes would be overwritten by checkout" on force-pushed branches).
+      - name: Commit and push optimized images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/img/
+          if git diff --staged --quiet; then
+            echo "No image changes to commit."
+          else
+            git commit -m "optimize png, jpg, and jpeg files"
+            git push
+          fi
