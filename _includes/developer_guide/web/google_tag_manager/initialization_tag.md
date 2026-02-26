@@ -60,7 +60,7 @@ The Braze Initialization Tag exposes the following options, which map to the [We
 | **Minimum Interval Between Triggered Messages** | `minimumIntervalBetweenTriggerActionsInSeconds` | Minimum seconds between trigger actions (default: 30). |
 | **Service Worker Location** | `serviceWorkerLocation` | Custom path for the service worker file (default: `/service-worker.js`). |
 | **Session Timeout (seconds)** | `sessionTimeoutInSeconds` | Session timeout in seconds (default: 1800). |
-| **App Version Number** | `appVersion`, `appVersionNumber` | App version for segmentation (e.g., `1.2.3.4`). |
+| **App Version Number** | `appVersion`, `appVersionNumber` | App version for segmentation (for example, `1.2.3.4`). |
 
 For options not exposed in the GTM template (such as `contentSecurityNonce`, `localization`, or `devicePropertyAllowlist`), use [runtime initialization]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) instead.
 
