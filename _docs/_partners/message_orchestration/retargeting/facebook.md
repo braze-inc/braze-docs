@@ -126,8 +126,8 @@ If the export doesn't work, do the following:
 
 If you receive an error when exporting a segment as a Facebook Audience, Facebook's developer documentation notes the following common causes:
 
-1. **The access token is from a user who isn't an admin of the app and ad account** - The Facebook user whose credentials are connected to Braze must have the right permissions.
-2. **The ad account you're exporting to isn't associated with your app** - The Facebook ad account must be linked to your app in Facebook's settings.
+1. **The access token is from a user who isn't an admin of the app and ad account:** The Facebook user whose credentials are connected to Braze must have the right permissions.
+2. **The ad account you're exporting to isn't associated with your app*:* The Facebook ad account must be linked to your app in Facebook's settings.
 
 Use the following checks to verify your setup:
 
