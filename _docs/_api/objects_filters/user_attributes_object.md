@@ -49,7 +49,7 @@ To remove a profile attribute, set it to `null`. Some fields, such as `external_
 
 #### Identifier resolution
 
-Each user attributes object must include at least one identifier: `external_id`, `user_alias`, `braze_id`, `email`, or `phone`. When possible, include only one identifier per object to avoid ambiguity about which user profile is being updated or created.
+Unless you're performing an [anonymous push token import](#push-token-import), each user attributes object must include at least one identifier: `external_id`, `user_alias`, `braze_id`, `email`, or `phone`. When possible, include only one identifier per object to avoid ambiguity about which user profile is being updated or created.
 
 Keep the following in mind when using identifiers:
 
