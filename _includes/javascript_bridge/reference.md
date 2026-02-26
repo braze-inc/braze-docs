@@ -58,17 +58,23 @@ You cannot reference Liquid to insert <code>customAttributes</code> into JavaScr
 
 ### Button click tracking
 
-Use the `brazeBridge.logClick(button_id)` method to track clicks in your custom HTML. This allows you to programmatically track "Button 1", "Button 2", and "Body Clicks" using `brazeBridge.logClick('0')`, `brazeBridge.logClick('1')`, or `brazeBridge.logClick()`, respectively.
+Use the `brazeBridge.logClick(button_id)` method to track clicks in your custom HTML.
 
-| Clicks     | Method                       |
-| ---------- | ---------------------------- |
-| Button 1   | `brazeBridge.logClick('0')` |
-| Button 2   | `brazeBridge.logClick('1')` |
-| Body click | `brazeBridge.logClick()`    |
-| Custom button tracking |`brazeBridge.logClick('your custom name here')`|
+{% alert note %}
+**Banners:** Only `brazeBridge.logClick()` (without arguments) is supported. Button IDs and custom button tracking are supported for in-app messages only.
+{% endalert %}
+
+For in-app messages, you can programmatically track "Button 1", "Button 2", and "Body Clicks" using `brazeBridge.logClick('0')`, `brazeBridge.logClick('1')`, or `brazeBridge.logClick()`, respectively.
+
+| Clicks     | Method                       | Supported |
+| ---------- | ---------------------------- | --------- |
+| Body click | `brazeBridge.logClick()`    | In-app messages and Banners |
+| Button 1   | `brazeBridge.logClick('0')` | In-app messages only |
+| Button 2   | `brazeBridge.logClick('1')` | In-app messages only |
+| Custom button tracking |`brazeBridge.logClick('your custom name here')`| In-app messages only |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-You can track multiple button click events per impression. For example, to close a message and log a Button 2 click:
+For in-app messages, you can track multiple button click events per impression. For example, to close a message and log a Button 2 click:
 
 ```html
 <a href="#" onclick="brazeBridge.logClick('1');brazeBridge.closeMessage()">✖</a>
@@ -80,7 +86,7 @@ You can also track new custom button names—up to 100 unique names per campaign
 When using JavaScript methods inside an `onclick` attribute, wrap string values in single quotes to avoid conflicts with the double-quoted HTML attribute.
 {% endalert %}
 
-#### Limitations
+#### Limitations (in-app messages only)
 
 - You can have up to 100 unique button IDs per campaign.
 - Button IDs can have up to 255 characters each.
