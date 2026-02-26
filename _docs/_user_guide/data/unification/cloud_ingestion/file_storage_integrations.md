@@ -221,13 +221,15 @@ Customers onboarding in February 2026 or later may have early access to a new CD
 
 ## Required file formats
 
-Cloud Data Ingestion supports JSON, CSV, and Parquet files. Each file must contain one or more of the supported identifier columns and a payload column as a JSON string.
+Cloud Data Ingestion supports JSON, CSV, and Parquet files. The required columns depend on the data type: user data (attributes, custom events, purchase events) uses user identifiers and a payload; catalog data uses catalog identifiers.
 
 Braze doesn’t enforce any additional filename requirements beyond what's enforced by AWS. Filenames should be unique. We recommend appending a timestamp for uniqueness.
 
-### User identifiers
+For examples of all supported file types (attributes, custom events, purchases, catalogs, and user deletes), see the sample files in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).
 
-Your source file may contain one or more user identifier columns or keys. Each row should only contain one identifier, but a source file may have multiple identifier types.
+### User identifiers {#user-identifiers}
+
+For user data syncs (attributes, custom events, purchase events), your source file may contain one or more user identifier columns or keys. Each row should only contain one identifier, but a source file may have multiple identifier types.
 
 | Identifier | Description |
 | --- | --- |
@@ -240,8 +242,19 @@ Your source file may contain one or more user identifier columns or keys. Each r
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Unlike with data warehouse sources, the `UPDATED_AT` column is neither required nor supported. 
+Unlike with data warehouse sources, the `UPDATED_AT` column is neither required nor supported for file storage syncs. 
 {% endalert %}
+
+### Catalog identifiers {#catalog-identifiers}
+
+For catalog syncs, your source file must contain the following columns. Catalog files use different identifiers than user data files.
+
+| Column | Required | Description |
+| --- | --- | --- |
+| `ID` | Yes | The unique identifier for the catalog item. Used to create, update, or delete the item in Braze. |
+| `PAYLOAD` | Yes | A JSON string of the catalog fields and values to sync. Must match the schema of your catalog in Braze. |
+| `DELETED` | No | When `true`, the catalog item with the matching `ID` is removed from the catalog in Braze. Omit this column or set to `false` for create or update operations. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% tabs %}
 {% tab JSON Attributes %}
@@ -291,12 +304,10 @@ ID,PAYLOAD,DELETED
 85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
 1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
 ```
-Include an optional **DELETED** column. When `DELETED` is `true`, that catalog item is removed from the catalog in Braze. See [Deleting catalog items](#deleting-catalog-items).
+Include an optional **DELETED** column. When `DELETED` is `true`, that catalog item is removed from the catalog in Braze. For the full list of required columns, see [Catalog identifiers](#catalog-identifiers). For delete behavior, see [Deleting catalog items](#deleting-catalog-items).
 {% endtab %}
 
 {% endtabs %}  
-
-For examples of all supported file types, refer to the sample files in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
 
 ## Deleting data
 
