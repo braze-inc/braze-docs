@@ -119,7 +119,7 @@ Day | # of Emails to Send
 15 | 1,000,000
 16 | 2,000,000
 17 | 4,000,000
-18+ | Double Daily Until Desired Volume
+18+ | Double daily until desired volume
 
 {% endtab %}
 {% endtabs %}
