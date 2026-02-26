@@ -43,13 +43,13 @@ For additional initialization settings, select **Braze Initialization Options** 
 
 ### Step 4: Choose initialization options
 
-The Braze Initialization Tag exposes the following options, which map to the [Web SDK InitializationOptions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions). Select the options that match your integration needs:
+The Braze Initialization Tag exposes the following options. Most of these map directly to the [Web SDK `InitializationOptions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions), and some correspond to Web SDK methods that the tag will call during initialization. Select the options that match your integration needs:
 
-| GTM option | SDK option | Description |
+| GTM option | Web SDK configuration or method | Description |
 | --- | --- | --- |
 | **Allow HTML In-App Messages** | `allowUserSuppliedJavascript` | Enables HTML in-app messages, Banners, and user-supplied JavaScript click actions. Required for [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/) and [Banners]({{site.baseurl}}/developer_guide/banners/placements/?sdktab=web) that use custom HTML. |
-| **Automatically show new in app messages** | — | Automatically displays new in-app messages when they arrive from the server. |
-| **Automatically Open New Session** | — | Opens a new session after the SDK is initialized. |
+| **Automatically show new in app messages** | `braze.automaticallyShowInAppMessages()` | Automatically displays new in-app messages when they arrive from the server by calling this method after initialization. |
+| **Automatically Open New Session** | `braze.openSession()` | Opens a new session after the SDK is initialized by calling this method for you. |
 | **Open Cards in New Tab** | `openCardsInNewTab` | Opens Content Card links in a new tab when using the default Feed UI. |
 | **Disable Automatic Push Token Maintenance** | `disablePushTokenMaintenance` | Stops the SDK from syncing push tokens with the Braze backend on new sessions. |
 | **Disable Font Awesome** | `doNotLoadFontAwesome` | Prevents the SDK from loading Font Awesome from the CDN. Use if your site has its own Font Awesome. |
