@@ -304,7 +304,7 @@ ID,PAYLOAD,DELETED
 85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
 1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
 ```
-Include an optional **DELETED** column. When `DELETED` is `true`, that catalog item is removed from the catalog in Braze. For the full list of required columns, see [Catalog identifiers](#catalog-identifiers). For delete behavior, see [Deleting catalog items](#deleting-catalog-items).
+Include an optional `DELETED` column. When `DELETED` is `true`, that catalog item is removed from the catalog in Braze. For the full list of required columns, see [Catalog identifiers](#catalog-identifiers). For delete behavior, see [Deleting catalog items](#deleting-catalog-items).
 {% endtab %}
 
 {% endtabs %}  
