@@ -322,7 +322,7 @@ For more information, refer to [Location tracking]({{site.baseurl}}/user_guide/e
 
 Braze geofences use a combination of all location providers available to a device to triangulate the user's location, including Wi-Fi, GPS, and cellular towers.
 
-Typical accuracy is in the 20 to 50 meter range, and best-case accuracy is in the 5 to 10 meter range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Create geofences with larger radii in rural locations.
+Typical accuracy is in the 20 meter to 50 meter range, and best-case accuracy is in the 5 meter to 10 meter range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Create geofences with larger radii in rural locations.
 
 Accuracy also depends on whether the user has precise location enabled. With approximate location only, accuracy drops to around 3 square kilometers, making geofences unreliable. For more information, refer to [Precise versus approximate location](#precise-versus-approximate-location).
 
