@@ -13,7 +13,9 @@ repositories {
 Next, add Braze to your dependencies. In the following examples, replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 {% alert note %}
-If your project uses Kotlin DSL (`build.gradle.kts`), use the `implementation("...")` syntax. If your project uses Groovy (`build.gradle`), use the `implementation '...'` syntax. If your project uses [version catalogs](https://developer.android.com/build/migrate-to-catalogs), add entries to your `libs.versions.toml` file and reference them using the generated accessors.
+- For Kotlin DSL (`build.gradle.kts`), use the `implementation("...")` syntax.
+- For Groovy (`build.gradle`), use the `implementation '...'` syntax.
+- For [version catalogs](https://developer.android.com/build/migrate-to-catalogs), add entries to your `gradle/libs.versions.toml` file and reference them using the generated accessors.
 {% endalert %}
 
 {% tabs local %}
