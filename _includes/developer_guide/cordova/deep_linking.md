@@ -1,8 +1,8 @@
 {% multi_lang_include developer_guide/prerequisites/cordova.md %}
 
-## Enabling deep linking
+## Enabling push deep linking
 
-By default, the Braze Cordova SDK doesn't automatically handle deep links from push notifications. To enable this, add the following preferences to the `platform` element in your project's `config.xml` file.
+By default, the Braze Cordova SDK doesn't automatically handle push deep linking from notifications. To enable push deep linking, add the following preferences to the `platform` element in your project's `config.xml` file.
 
 {% tabs %}
 {% tab ios %}
