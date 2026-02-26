@@ -170,6 +170,10 @@ BRZCancellable *cancellable = [AppDelegate.braze subscribeToSessionUpdates:^(BRZ
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
+
+{% tab react native %}
+The React Native SDK does not expose a method for subscribing to session updates directly. Session lifecycle is managed by the underlying native SDK, so to subscribe to updates, use the native platform approach for [Android](#subscribing-to-session-updates) or [Swift](#subscribing-to-session-updates).
+{% endtab %}
 {% endtabs %}
 
 ### Step 2: Test session tracking (optional)
@@ -235,6 +239,13 @@ AppDelegate.braze = braze;
 
 {% endsubtab %}
 {% endsubtabs %}
+{% endtab %}
+
+{% tab react native %}
+The React Native SDK relies on the native SDKs to manage sessions. To change the default session timeout, configure it in the native layer:
+
+- **Android:** Set `com_braze_session_timeout` in your `braze.xml` file. See the [Android](#change-session-timeout) tab for details.
+- **iOS:** Set `sessionTimeout` on your `Braze.Configuration` object. See the [Swift](#change-session-timeout) tab for details.
 {% endtab %}
 {% endtabs %}
 

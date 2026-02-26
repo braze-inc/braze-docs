@@ -175,6 +175,43 @@ BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSAr
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
+
+{% tab react native %}
+
+To get the Content Card data, use the `getContentCards` method. To listen for updates, subscribe to `contentCardsUpdated` events.
+
+```javascript
+import Braze from "@braze/react-native-sdk";
+
+// Get content cards
+const cards = await Braze.getContentCards();
+
+// Subscribe to content card updates
+const subscription = Braze.addListener("contentCardsUpdated", (update) => {
+  const cards = update.cards;
+  cards.forEach(card => {
+    if (card.isControl) {
+      // Do not display the control card, but remember to log an impression
+    } else {
+      // Use card.title, card.cardDescription, card.image, etc.
+    }
+  });
+});
+```
+
+To request a manual refresh of Content Cards from Braze servers:
+
+```javascript
+Braze.requestContentCardsRefresh();
+```
+
+To get cached Content Cards without a network request:
+
+```javascript
+const cachedCards = await Braze.getCachedContentCards();
+```
+
+{% endtab %}
 {% endtabs %}
 
 ## Logging events
@@ -298,5 +335,27 @@ contentCardsController.delegate = delegate;
 {% alert important %}
 To handle control variant Content Cards in your custom UI, pass in your [`Braze.ContentCard.Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control(_:)) object, then call the `logImpression` method as you would with any other Content Card type. The object will implicitly log a control impression to inform our analytics of when a user would have seen the control card.
 {% endalert %}
+{% endtab %}
+
+{% tab react native %}
+
+Log impression events when cards are viewed by users:
+
+```javascript
+Braze.logContentCardImpression(card.id);
+```
+
+Log card click events when users interact with a card:
+
+```javascript
+Braze.logContentCardClicked(card.id);
+```
+
+Log dismissal events when a user dismisses a card:
+
+```javascript
+Braze.logContentCardDismissed(card.id);
+```
+
 {% endtab %}
 {% endtabs %}
