@@ -2,7 +2,7 @@
 
 ### Step 1: Update your `build.gradle`
 
-In your app module's `build.gradle` or `build.gradle.kts` file, add [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html) to your list of repositories.
+In your app module's `build.gradle` or `build.gradle.kts` file, add [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html) to your list of repositories. This syntax is the same for both Groovy and Kotlin DSL.
 
 ```groovy
 repositories {
