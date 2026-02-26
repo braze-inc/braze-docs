@@ -27,10 +27,81 @@ If your domain or IP is blocked by an ISP, the message logs in the [Message Acti
 
 ## IP warming schedules
 
-We strongly recommend adhering to this IP warming schedule strictly to support deliverability. It's also important that you don't skip days, as consistent scaling improves delivery metrics.
+We strongly recommend adhering strictly to an IP warming schedule to support deliverability. It's also important that you don't skip days, as consistent scaling improves delivery metrics. Choose a schedule based on your existing email sending history and deliverability metrics.
 
-Day | # of Emails to be Sent
-----|--------------------------|
+{% alert tip %}
+If you're interested in having a dedicated deliverability resource as part of your account team, contact your Braze account manager for more information.
+{% endalert %}
+
+{% tabs local %}
+{% tab Conservative %}
+
+The conservative schedule is a slower, more cautious approach that helps establish a strong sending reputation from scratch. This is recommended if you're new to email sending, migrating from a shared IP, or have experienced deliverability issues such as throttling or blocklisting by an inbox provider.
+
+Day | # of Emails to Send
+----|---------------------
+1 | 50
+2 | 50
+3 | 50
+4 | 100
+5 | 100
+6 | 100
+7 | 500
+8 | 500
+9 | 500
+10 | 1,000
+11 | 1,000
+12 | 1,000
+13 | 2,000
+14 | 2,000
+15 | 2,000
+16 | 4,000
+17 | 4,000
+18 | 4,000
+19 | 8,000
+20 | 8,000
+21 | 8,000
+22+ | Double Every 3 Days Until Desired Volume
+
+{% endtab %}
+{% tab Moderate %}
+
+The moderate schedule is a balanced approach that ramps up sending volume at a steady pace. This is recommended for most senders, including those with some email sending history who are transitioning to a new IP.
+
+Day | # of Emails to Send
+----|---------------------
+1 | 50
+2 | 100
+3 | 500
+4 | 1,000
+5 | 2,000
+6 | 4,000
+7 | 8,000
+8 | 16,000
+9 | 25,000
+10 | 35,000
+11 | 50,000
+12 | 75,000
+13 | 100,000
+14 | 150,000
+15 | 200,000
+16 | 275,000
+17 | 375,000
+18 | 500,000
+19 | 650,000
+20 | 825,000
+21 | 1,000,000
+22+ | Continue Scaling Until Desired Volume
+
+{% endtab %}
+{% tab Aggressive %}
+
+{% alert important %}
+The aggressive schedule is the fastest approach and is only recommended for senders with an established, positive sending history and deliverability metrics that align with best practices, including high open rates, high click rates, and low bounce rates. Using this schedule without a proven track record can harm your sender reputation.
+{% endalert %}
+
+Day | # of Emails to Send
+----|---------------------
 1 | 50
 2 | 100
 3 | 500
@@ -49,6 +120,9 @@ Day | # of Emails to be Sent
 16 | 2,000,000
 17 | 4,000,000
 18+ | Double Daily Until Desired Volume
+
+{% endtab %}
+{% endtabs %}
 
 We suggest warming up to your peak sending. That is to say, if you normally send 2 million emails a day but plan to send 7 million for a seasonal period, that "peak" sending is what you should warm up to.
 
@@ -80,7 +154,7 @@ You can avoid all the consequences of not IP warming by following these best pra
 
 ### Start with small sending volumes of email
 
-Increase the amount you send each day as gradually as possible. Abrupt, high-volume email campaigns are regarded with the most skepticism by ISPs. Therefore, you should begin by sending small amounts of email and scale gradually toward the volume of email you ultimately intend to send. Regardless of volume, we suggest warming up your IP to be safe. See [IP warming schedule](#ip-warming-schedule).
+Increase the amount you send each day as gradually as possible. Abrupt, high-volume email campaigns are regarded with the most skepticism by ISPs. Therefore, you should begin by sending small amounts of email and scale gradually toward the volume of email you ultimately intend to send. Regardless of volume, we suggest warming up your IP to be safe. See [IP warming schedules](#ip-warming-schedules).
 
 ### Have engaging introductory content
 
