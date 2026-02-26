@@ -4,7 +4,7 @@ article_title: SQL Table Reference
 page_order: 3
 page_type: reference
 toc_headers: h2
-description: "This article contains tables and columns available to be queried in the Query Builder or when generating SQL Segment Extensions."
+description: "This page is a reference of the Snowflake SQL tables and columns used across the Query Builder, SQL Segment Extensions, and Snowflake Data Sharing."
 tool: Segments
 ---
 
@@ -16,13 +16,27 @@ table td {
 
 # SQL table reference
 
-This page is a reference of tables and columns available to be queried in the [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) or when generating [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
+This page is a reference of the Snowflake SQL tables and columns available across the following Braze tools:
+
+- [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/)
+- [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)
+- [Snowflake Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/)
+
+Most tables are available in all three tools. Tables marked **Snowflake Data Sharing only** are exclusive to Snowflake Data Sharing and are not accessible in Query Builder or SQL Segment Extensions.
+
+{% alert tip %}
+These SQL tables correspond to the events documented in the [Currents event glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). For example, the SQL table `USERS_MESSAGES_EMAIL_SEND_SHARED` corresponds to the Currents event `users.messages.email.Send`. If you need JSON event schemas or partner-specific formats (Amplitude, Mixpanel, Segment), refer to the Currents glossary.
+{% endalert %}
 
 ## Table of contents
 
 Table | Description
 ------|------------
+[AGENTCONSOLE_AGENTEXECUTED_SHARED](#AGENTCONSOLE_AGENTEXECUTED_SHARED) | When an Agent Console agent is executed (**Snowflake Data Sharing only**)
+[AGENTCONSOLE_TOOLINVOCATION_SHARED](#AGENTCONSOLE_TOOLINVOCATION_SHARED) | When a tool is executed (**Snowflake Data Sharing only**)
 [CATALOGS_ITEMS_SHARED](#CATALOGS_ITEMS_SHARED) | Non-deleted catalog items
+[CHANGELOGS_CAMPAIGN_SHARED](#CHANGELOGS_CAMPAIGN_SHARED) | When a campaign is changed (**Snowflake Data Sharing only**)
+[CHANGELOGS_CANVAS_SHARED](#CHANGELOGS_CANVAS_SHARED) | When a Canvas is changed (**Snowflake Data Sharing only**)
 [CHANGELOGS_GLOBALCONTROLGROUP_SHARED](#CHANGELOGS_GLOBALCONTROLGROUP_SHARED) | When the Global Control Group is changed
 [USERS_BEHAVIORS_CUSTOMEVENT_SHARED](#USERS_BEHAVIORS_CUSTOMEVENT_SHARED) | When a user performs a custom event
 [USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED](#USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED) | When a user installs an app and we attribute it to a partner
@@ -72,6 +86,7 @@ Table | Description
 [USERS_MESSAGES_EMAIL_SEND_SHARED](#USERS_MESSAGES_EMAIL_SEND_SHARED) | When we send an email to a user
 [USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED](#USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED) | When an email soft bounces
 [USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED](#USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED) | When a user unsubscribes from email
+[USERS_MESSAGES_EMAIL_RETRY_SHARED](#USERS_MESSAGES_EMAIL_RETRY_SHARED) | When an email message is retried after being deprioritized or frequency capped (**Snowflake Data Sharing only**)
 [USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED](#USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED) | When a user views a feature flag
 [USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED](#USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED) | An originally scheduled in-app message was aborted for some reason.
 [USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED](#USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED) | When a user clicks an in-app message
@@ -80,6 +95,7 @@ Table | Description
 [USERS_MESSAGES_LINE_CLICK_SHARED](#USERS_MESSAGES_LINE_CLICK_SHARED) | When a user clicks a link in a LINE message
 [USERS_MESSAGES_LINE_INBOUNDRECEIVE_SHARED](#USERS_MESSAGES_LINE_INBOUNDRECEIVE_SHARED) | When a LINE message is received from a user
 [USERS_MESSAGES_LINE_SEND_SHARED](#USERS_MESSAGES_LINE_SEND_SHARED) | When a LINE message is sent to LINE
+[USERS_MESSAGES_LINE_RETRY_SHARED](#USERS_MESSAGES_LINE_RETRY_SHARED) | When a LINE message is retried after being deprioritized or frequency capped (**Snowflake Data Sharing only**)
 [USERS_MESSAGES_LIVEACTIVITY_OUTCOME_SHARED](#USERS_MESSAGES_LIVEACTIVITY_OUTCOME_SHARED) | When a Live Activity has an outcome event
 [USERS_MESSAGES_LIVEACTIVITY_SEND_SHARED](#USERS_MESSAGES_LIVEACTIVITY_SEND_SHARED) | When a Live Activity message is sent
 [USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED) | An originally scheduled News Feed card message was aborted for some reason
@@ -106,9 +122,11 @@ Table | Description
 [USERS_MESSAGES_SMS_REJECTION_SHARED](#USERS_MESSAGES_SMS_REJECTION_SHARED) | When an SMS message is not delivered to a user
 [USERS_MESSAGES_SMS_SEND_SHARED](#USERS_MESSAGES_SMS_SEND_SHARED) | When an SMS message is sent
 [USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED](#USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED) | When a user clicks a Braze shortened URL included in an SMS message
+[USERS_MESSAGES_SMS_RETRY_SHARED](#USERS_MESSAGES_SMS_RETRY_SHARED) | When an SMS message is retried after being deprioritized or frequency capped (**Snowflake Data Sharing only**)
 [USERS_MESSAGES_WEBHOOK_ABORT_SHARED](#USERS_MESSAGES_WEBHOOK_ABORT_SHARED) | An originally scheduled webhook message was aborted for some reason
 [USERS_MESSAGES_WEBHOOK_FAILURE_SHARED](#USERS_MESSAGES_WEBHOOK_FAILURE_SHARED) | When a webhook message is delivered but fails with an error response from the endpoint
 [USERS_MESSAGES_WEBHOOK_SEND_SHARED](#USERS_MESSAGES_WEBHOOK_SEND_SHARED) | When we send a webhook for a user
+[USERS_MESSAGES_WEBHOOK_RETRY_SHARED](#USERS_MESSAGES_WEBHOOK_RETRY_SHARED) | When a webhook message is retried after being deprioritized or frequency capped (**Snowflake Data Sharing only**)
 [USERS_MESSAGES_WHATSAPP_ABORT_SHARED](#USERS_MESSAGES_WHATSAPP_ABORT_SHARED) | An originally scheduled WhatsApp message was aborted for some reason
 [USERS_MESSAGES_WHATSAPP_CLICK_SHARED](#USERS_MESSAGES_WHATSAPP_CLICK_SHARED) | When a user clicks a link or button in a WhatsApp message
 [USERS_MESSAGES_WHATSAPP_DELIVERY_SHARED](#USERS_MESSAGES_WHATSAPP_DELIVERY_SHARED) |When a WhatsApp message is delivered
@@ -116,10 +134,75 @@ Table | Description
 [USERS_MESSAGES_WHATSAPP_INBOUNDRECEIVE_SHARED](#USERS_MESSAGES_WHATSAPP_INBOUNDRECEIVE_SHARED) | When a WhatsApp message is received from a user
 [USERS_MESSAGES_WHATSAPP_READ_SHARED](#USERS_MESSAGES_WHATSAPP_READ_SHARED) | When a user opens a WhatsApp message
 [USERS_MESSAGES_WHATSAPP_SEND_SHARED](#USERS_MESSAGES_WHATSAPP_SEND_SHARED) | When we send a WhatsApp message for a user
+[USERS_MESSAGES_WHATSAPP_RETRY_SHARED](#USERS_MESSAGES_WHATSAPP_RETRY_SHARED) | When a WhatsApp message is retried after being deprioritized or frequency capped (**Snowflake Data Sharing only**)
 [USERS_RANDOMBUCKETNUMBERUPDATE_SHARED](#USERS_RANDOMBUCKETNUMBERUPDATE_SHARED) | When a user's random bucket number is changed
 [USERS_USERDELETEREQUEST_SHARED](#USERS_USERDELETEREQUEST_SHARED) | When a user is deleted by a customer request
 [USERS_USERORPHAN_SHARED](#USERS_USERORPHAN_SHARED) | When a user is merged with another user's profile and the original profile is orphaned
+[SNAPSHOTS_APP_SHARED](#SNAPSHOTS_APP_SHARED) | App snapshots (**Snowflake Data Sharing only**)
+[SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED](#SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED) | Campaign message variation snapshots (**Snowflake Data Sharing only**)
+[SNAPSHOTS_CANVAS_FLOW_STEP_SHARED](#SNAPSHOTS_CANVAS_FLOW_STEP_SHARED) | Canvas Flow step snapshots (**Snowflake Data Sharing only**)
+[SNAPSHOTS_CANVAS_STEP_SHARED](#SNAPSHOTS_CANVAS_STEP_SHARED) | Canvas step snapshots (**Snowflake Data Sharing only**)
+[SNAPSHOTS_CANVAS_VARIATION_SHARED](#SNAPSHOTS_CANVAS_VARIATION_SHARED) | Canvas variation snapshots (**Snowflake Data Sharing only**)
+[SNAPSHOTS_EXPERIMENT_STEP_SHARED](#SNAPSHOTS_EXPERIMENT_STEP_SHARED) | Experiment step snapshots (**Snowflake Data Sharing only**)
 
+
+## Agent Console {#agent-console}
+
+{% alert note %}
+Agent Console tables are available in Snowflake Data Sharing only.
+{% endalert %}
+
+### AGENTCONSOLE_AGENTEXECUTED_SHARED {#AGENTCONSOLE_AGENTEXECUTED_SHARED}
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`invocation_id` | `string` | Globally unique ID for this message
+`request_id` | `string` | Unique ID for this overall LLM request and complete execution
+`duration` | `int` | Duration of the session in seconds
+`prompt_tokens` | `int` | How many prompt tokens this request used
+`completion_tokens` | `int` | How many completion tokens this request used
+`total_tokens` | `int` | How many total tokens this request used
+`cache_tokens` | `int` | How many cached tokens this request used
+`reasoning_tokens` | `int` | How many reasoning tokens this request used
+`time` | `int` | UNIX timestamp at which the event happened
+`app_group_id` | `string` | BSON ID of the app group this user belongs to
+`agent_id` | `string` | BSON ID of the CustomerDefinedAgent
+`agent_name` | `string` | Name of the CustomerDefinedAgent
+`model_provider` | `string` | Name of the LLM model provider
+`model_name` | `string` | Name of the LLM model used in this request
+`provider_request_id` | `string` | Any request ID given by the model provider for the API call
+`cache_hit` | `boolean` | Whether this request hit the cache to return the response
+`llm_owned_by_customer` | `boolean` | If true, the customer's API key was used; if false, Braze's key was used
+`is_error` | `boolean` | Whether this request errored out
+`canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
+`canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
+`canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
+`user_id` | `string` | [PII] Braze user ID of the user who performed this event
+`external_user_id` | `null,`&nbsp;`string` | [PII] External ID of the user
+`input` | `null,`&nbsp;`string` | [PII] Input to the LLM
+`output` | `null,`&nbsp;`string` | [PII] Response from the LLM
+`invocation_source` | `null,`&nbsp;`string` | Which ruby object invoked the LLM request
+`sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### AGENTCONSOLE_TOOLINVOCATION_SHARED {#AGENTCONSOLE_TOOLINVOCATION_SHARED}
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`tool_call_id` | `string` | Globally unique ID for this tool call
+`duration` | `int` | Duration of the session in seconds
+`time` | `int` | UNIX timestamp at which the event happened
+`app_group_id` | `string` | BSON ID of the app group this user belongs to
+`agent_id` | `string` | BSON ID of the CustomerDefinedAgent
+`agent_name` | `string` | Name of the CustomerDefinedAgent
+`is_error` | `boolean` | Whether this request errored out
+`tool_name` | `string` | Name of the tool
+`tool_arguments` | `null,`&nbsp;`string` | [PII] JSON of the tool arguments
+`invocation_source` | `null,`&nbsp;`string` | Which ruby object invoked the LLM request
+`sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Catalogs
 
@@ -149,6 +232,40 @@ Field | Type | Description
 `global_control_group` | `null, boolean` | With this change, the bucket number is included as global control group
 `previous_global_control_group` | `null, boolean` | Before this change the bucket number was included as global control group but it no longer is
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### CHANGELOGS_CAMPAIGN_SHARED {#CHANGELOGS_CAMPAIGN_SHARED}
+
+{% alert note %}
+This table is available in Snowflake Data Sharing only.
+{% endalert %}
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`time` | `int` | UNIX timestamp at which the event happened
+`app_group_id` | `string` | BSON ID of the app group this user belongs to
+`api_id` | `string` | API ID of the campaign
+`name` | `null,`&nbsp;`string` | Name of the campaign
+`conversion_behaviors` | `null,`&nbsp;`string` | Conversion behaviors for the campaign
+`actions` | `null,`&nbsp;`string` | Actions for the campaign
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### CHANGELOGS_CANVAS_SHARED {#CHANGELOGS_CANVAS_SHARED}
+
+{% alert note %}
+This table is available in Snowflake Data Sharing only.
+{% endalert %}
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`time` | `int` | UNIX timestamp at which the event happened
+`app_group_id` | `string` | BSON ID of the app group this user belongs to
+`api_id` | `string` | API ID of the Canvas
+`name` | `null,`&nbsp;`string` | Name of the Canvas
+`conversion_behaviors` | `null,`&nbsp;`string` | Conversion behaviors for the Canvas
+`variations` | `null,`&nbsp;`string` | Variations for the Canvas
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -1467,6 +1584,43 @@ Field | Type | Description
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+### USERS_MESSAGES_EMAIL_RETRY_SHARED {#USERS_MESSAGES_EMAIL_RETRY_SHARED}
+
+{% alert note %}
+This table is available in Snowflake Data Sharing only.
+{% endalert %}
+
+This event occurs when a message is deprioritized or frequency capped and is retried later within the configured retry window.
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`user_id` | `string` | [PII] Braze user ID of the user who performed this event
+`external_user_id` | `null,`&nbsp;`string` | [PII] External ID of the user
+`app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`time` | `int` | UNIX timestamp at which the event happened
+`retry_type` | `null,`&nbsp;`string` | Type of retry
+`retry_log` | `null,`&nbsp;`string` | Log message describing retry details
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
+`campaign_id` | `null,`&nbsp;`string` | BSON ID of the campaign this event belongs to
+`campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
+`message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
+`canvas_id` | `null,`&nbsp;`string` | BSON ID of the Canvas this event belongs to
+`canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
+`canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
+`canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
+`canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
+`email_address` | `null,`&nbsp;`string` | [PII] Email address of the user
+`ip_pool` | `null,`&nbsp;`string` | IP pool from which the email send was made
+`device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
+`sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED {#USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED}
 
@@ -1758,6 +1912,43 @@ Field | Type | Description
 `subscription_group_api_id` | `string` | Subscription group API ID
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### USERS_MESSAGES_LINE_RETRY_SHARED {#USERS_MESSAGES_LINE_RETRY_SHARED}
+
+{% alert note %}
+This table is available in Snowflake Data Sharing only.
+{% endalert %}
+
+This event occurs when a message is deprioritized or frequency capped and is retried later within the configured retry window.
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`user_id` | `string` | [PII] Braze user ID of the user who performed this event
+`external_user_id` | `null,`&nbsp;`string` | [PII] External ID of the user
+`app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`time` | `int` | UNIX timestamp at which the event happened
+`retry_type` | `null,`&nbsp;`string` | Type of retry
+`retry_log` | `null,`&nbsp;`string` | Log message describing retry details
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
+`campaign_id` | `null,`&nbsp;`string` | BSON ID of the campaign this event belongs to
+`campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
+`message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
+`canvas_id` | `null,`&nbsp;`string` | BSON ID of the Canvas this event belongs to
+`canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
+`canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
+`canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
+`canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
+`device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
+`line_channel_id` | `null,`&nbsp;`string` | The LINE Channel ID the message was sent to or received from
+`line_channel_name` | `null,`&nbsp;`string` | The LINE Channel Name the message was sent to or received from
+`native_line_id` | `null,`&nbsp;`string` | [PII] The user's Line ID from which the message was sent to or received from
+`subscription_group_api_id` | `null,`&nbsp;`string` | Subscription group API ID
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2576,6 +2767,36 @@ Field | Type | Description
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+### USERS_MESSAGES_SMS_RETRY_SHARED {#USERS_MESSAGES_SMS_RETRY_SHARED}
+
+{% alert note %}
+This table is available in Snowflake Data Sharing only.
+{% endalert %}
+
+This event occurs when a message is deprioritized or frequency capped and is retried later within the configured retry window.
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`user_id` | `string` | [PII] Braze user ID of the user who performed this event
+`external_user_id` | `null,`&nbsp;`string` | [PII] External ID of the user
+`app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`time` | `int` | UNIX timestamp at which the event happened
+`campaign_id` | `null,`&nbsp;`string` | BSON ID of the campaign this event belongs to
+`campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
+`message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
+`canvas_id` | `null,`&nbsp;`string` | BSON ID of the Canvas this event belongs to
+`canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
+`canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
+`canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
+`canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
+`subscription_group_api_id` | `null,`&nbsp;`string` | Subscription group API ID
+`retry_type` | `null,`&nbsp;`string` | Type of retry
+`retry_log` | `null,`&nbsp;`string` | Log message describing retry details
+`sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 ### USERS_MESSAGES_WEBHOOK_ABORT_SHARED {#USERS_MESSAGES_WEBHOOK_ABORT_SHARED}
 
 Field | Type | Description
@@ -2667,6 +2888,42 @@ Field | Type | Description
 `app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
 `message_extras` | `null,`&nbsp;`string` | [PII] A JSON string of the tagged key-value pairs during liquid rendering
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### USERS_MESSAGES_WEBHOOK_RETRY_SHARED {#USERS_MESSAGES_WEBHOOK_RETRY_SHARED}
+
+{% alert note %}
+This table is available in Snowflake Data Sharing only.
+{% endalert %}
+
+This event occurs when a message is deprioritized or frequency capped and is retried later within the configured retry window.
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`user_id` | `string` | [PII] Braze user ID of the user who performed this event
+`external_user_id` | `null,`&nbsp;`string` | [PII] External ID of the user
+`app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`time` | `int` | UNIX timestamp at which the event happened
+`device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
+`dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `null,`&nbsp;`string` | BSON ID of the campaign this event belongs to
+`campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
+`message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
+`canvas_id` | `null,`&nbsp;`string` | BSON ID of the Canvas this event belongs to
+`canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
+`canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
+`canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
+`canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
+`retry_type` | `null,`&nbsp;`string` | Type of retry
+`retry_log` | `null,`&nbsp;`string` | Log message describing retry details
+`sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_WHATSAPP_ABORT_SHARED {#USERS_MESSAGES_WHATSAPP_ABORT_SHARED}
@@ -2888,6 +3145,40 @@ Field | Type | Description
 `message_id` | `null,`&nbsp;`string` | The unique ID generated by Meta for this message
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+### USERS_MESSAGES_WHATSAPP_RETRY_SHARED {#USERS_MESSAGES_WHATSAPP_RETRY_SHARED}
+
+{% alert note %}
+This table is available in Snowflake Data Sharing only.
+{% endalert %}
+
+This event occurs when a message is deprioritized or frequency capped and is retried later within the configured retry window.
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`user_id` | `string` | [PII] Braze user ID of the user who performed this event
+`external_user_id` | `null,`&nbsp;`string` | [PII] External ID of the user
+`app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`time` | `int` | UNIX timestamp at which the event happened
+`to_phone_number` | `null,`&nbsp;`string` | [PII] Phone number of the user receiving the message in e.164 format
+`device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`subscription_group_api_id` | `null,`&nbsp;`string` | Subscription group API ID
+`campaign_id` | `null,`&nbsp;`string` | BSON ID of the campaign this event belongs to
+`campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
+`message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
+`canvas_id` | `null,`&nbsp;`string` | BSON ID of the Canvas this event belongs to
+`canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
+`canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
+`canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
+`canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
+`dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
+`retry_type` | `null,`&nbsp;`string` | Type of retry
+`retry_log` | `null,`&nbsp;`string` | Log message describing retry details
+`sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 ## Users
 
 ### USERS_RANDOMBUCKETNUMBERUPDATE_SHARED {#USERS_RANDOMBUCKETNUMBERUPDATE_SHARED}
@@ -2931,4 +3222,83 @@ Field | Type | Description
 | `time`             | `int`,&nbsp;`null`       | Unix timestamp at which the user was orphaned                                 |
 | `orphaned_by_id`   | `string`,&nbsp;`null`    | Braze ID of the user whose profile was merged with the orphaned user's profile |
 | `sf_created_at`    | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                                 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+## Snapshots {#snapshots}
+
+{% alert note %}
+Snapshot tables are available in Snowflake Data Sharing only.
+{% endalert %}
+
+### SNAPSHOTS_APP_SHARED {#SNAPSHOTS_APP_SHARED}
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`time` | `int` | UNIX timestamp at which the event happened
+`app_group_id` | `string` | BSON ID of the app group this user belongs to
+`api_id` | `string` | API ID of the app
+`name` | `null,`&nbsp;`string` | Name of the app
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED {#SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED}
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`time` | `int` | UNIX timestamp at which the event happened
+`app_group_id` | `string` | BSON ID of the app group this user belongs to
+`api_id` | `string` | API ID of the campaign message variation
+`name` | `null,`&nbsp;`string` | Name of the campaign message variation
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### SNAPSHOTS_CANVAS_FLOW_STEP_SHARED {#SNAPSHOTS_CANVAS_FLOW_STEP_SHARED}
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`time` | `int` | UNIX timestamp at which the event happened
+`app_group_id` | `string` | BSON ID of the app group this user belongs to
+`type` | `null,`&nbsp;`string` | Type of the Canvas Flow step
+`api_step_id` | `string` | API ID of the Canvas step
+`experiment_splits` | `null,`&nbsp;`string` | Experiment splits for the step
+`conversion_behaviors` | `null,`&nbsp;`string` | Conversion behaviors for the step
+`name` | `null,`&nbsp;`string` | Name of the Canvas Flow step
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### SNAPSHOTS_CANVAS_STEP_SHARED {#SNAPSHOTS_CANVAS_STEP_SHARED}
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`time` | `int` | UNIX timestamp at which the event happened
+`app_group_id` | `string` | BSON ID of the app group this user belongs to
+`api_id` | `string` | API ID of the Canvas step
+`name` | `null,`&nbsp;`string` | Name of the Canvas step
+`actions` | `null,`&nbsp;`string` | Actions for the Canvas step
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### SNAPSHOTS_CANVAS_VARIATION_SHARED {#SNAPSHOTS_CANVAS_VARIATION_SHARED}
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`time` | `int` | UNIX timestamp at which the event happened
+`app_group_id` | `string` | BSON ID of the app group this user belongs to
+`api_id` | `string` | API ID of the Canvas variation
+`name` | `null,`&nbsp;`string` | Name of the Canvas variation
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### SNAPSHOTS_EXPERIMENT_STEP_SHARED {#SNAPSHOTS_EXPERIMENT_STEP_SHARED}
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`time` | `int` | UNIX timestamp at which the event happened
+`app_group_id` | `string` | BSON ID of the app group this user belongs to
+`type` | `null,`&nbsp;`string` | Type of the Experiment step
+`api_step_id` | `string` | API ID of the Experiment step
+`experiment_splits` | `null,`&nbsp;`string` | Experiment splits for the step
+`conversion_behaviors` | `null,`&nbsp;`string` | Conversion behaviors for the step
+`name` | `null,`&nbsp;`string` | Name of the Experiment step
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
