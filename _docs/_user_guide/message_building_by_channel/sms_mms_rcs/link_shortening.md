@@ -22,8 +22,8 @@ Link shortening and click tracking allow you to automatically shorten URLs conta
 Link shortening and click tracking can be turned on at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 
 
 The length of the URL is determined by the type of tracking that is turned on:
-- **Basic tracking** enables campaign-level click tracking. Static URLs have a length of 20 characters, and personalized URLs have a length of 25 characters.
-- **Advanced tracking** enables campaign-level and user-level click tracking, and enables the use of segmentation and retargeting capabilities that rely on clicks. Clicks also generate an [SMS click event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking have a length of 27–28 characters, allowing you to create segments of users who have clicked on URLs. Personalized URLs have a length of 32–33 characters.
+- **Basic tracking** enables campaign-level click tracking. Static URLs will have a length of 20 characters, and personalized URLs will have a length of 25 characters.
+- **Advanced tracking** enables campaign-level and user-level click tracking, and enables use of segmentation and retargeting capabilities which rely on clicks. Clicks will also generate an [SMS click event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking will have a length of 27-28 characters, allowing you to create segments of users who have clicked on URLs. Personalized URLs will have a length of 32-33 characters.
 
 Links are shortened using our shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/p/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#testing) for more information.
 
@@ -127,10 +127,6 @@ For guidance on retargeting, visit [Retargeting]({{site.baseurl}}/user_guide/mes
 ### Do I know which individual users are clicking on a URL?
 
 Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
-
-{% alert note %}
-At this time, RCS click events are not available through Currents.
-{% endalert %}
 
 ### Does link shortening work with deep links or universal links?
 

@@ -60,9 +60,9 @@ Lob requires an HTTP Header for authorization and an HTTP method. The following 
   - **Authorization**: Basic `{{'<LOB_API_KEY>:' | base64_encode}}`
   - **Content-Type**: application/json
 
-![Request body code and webhook URL shown in the Braze webhook builder compose tab.]({% image_buster /assets/img_archive/lob_full_request.png %})
+![Braze 웹훅 빌더 작성 탭에 표시된 요청 본문 코드와 웹훅 URL.]({% image_buster /assets/img_archive/lob_full_request.png %})
 
-#### Request body
+#### 요청 본문
 
 The following is an example request body for the Lob postcards endpoint. While this request body is provided in the base Lob template in Braze, if you wish to use other endpoints, you must adjust your Liquid fields accordingly.
 
@@ -89,14 +89,14 @@ At this point, your campaign should be ready to test and send. Check the Lob das
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
 {% endalert %}
 
-![A message error log showing the time, app name, channel, and error message. The error message includes the message alert and the status code.]({% image_buster /assets/img_archive/error_log.png %})
+![A message error log showing the time, app name, channel, and error message. 오류 메시지에는 메시지 경고와 상태 코드가 포함됩니다.]({% image_buster /assets/img_archive/error_log.png %})
 
 ## Sharing events using Lob webhooks 
 
 [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview) lets you build and manage webhooks for automating data flow from external platforms into Braze. Each transformation is given a unique endpoint, which other platforms can use for their webhook's destination.
 
 {% alert important %}
-Lob's Data Transformation template sends events using your [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), which consumes data points in Braze. We recommend setting a rate limit in your Lob webhook settings, so you can avoid over-consuming data.
+Lob의 데이터 트랜스포메이션 템플릿은 데이터 포인트를 기록하는 [`/users/track` 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/post_user_track) 사용하여 이벤트를 전송합니다. 과도한 데이터 로깅을 방지하기 위해 Lob 웹훅 설정에서 속도 제한을 설정하는 것이 좋습니다.
 {% endalert %}
 
 ### Step 1: Create a transformation in Braze

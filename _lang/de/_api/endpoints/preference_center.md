@@ -1,5 +1,5 @@
 ---
-nav_title: Präferenz-Center
+nav_title: Präferenzzentrum
 article_title: Präferenz-Center Endpunkte
 search_tag: Endpoint
 page_order: 4

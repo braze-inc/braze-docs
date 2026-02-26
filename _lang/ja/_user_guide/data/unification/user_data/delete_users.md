@@ -4,7 +4,7 @@ article_title: ユーザーを削除する
 page_order: 4.2
 toc_headers: h2
 description: "個々のユーザーまたはユーザーのSegmentをBraze ダッシュボードから直接削除する方法について説明します。"
-alias: /user_guide/data/unification/user_data/delete_users/
+alias: /delete_users/
 hidden: true
 ---
 
@@ -13,7 +13,7 @@ hidden: true
 > 個々のユーザーまたはユーザーのSegmentをBraze ダッシュボードから直接削除する方法について説明します。
 
 {% alert important %}
-この機能は現在早期アクセス段階です。参加したい場合は、顧客のサクセスマネージャーにお問い合わせください。
+この機能の早期アクセスは一時的に終了します。詳しくは、顧客のサクセスマネージャーにお問い合わせください。
 {% endalert %}
 
 ## 前提条件
@@ -37,7 +37,7 @@ hidden: true
 
 ### 個人を削除する {#delete-individual}
 
-個々のユーザーをBrazeから削除するには、**Audience**> **検索ユーザーs**に移動し、ユーザーを検索して選択します。重複するユーザープロファイルを削除する場合は、正しいものを選択したことを確認します。
+個々のユーザーをBrazeから削除するには、**Audience**> **検索ユーザー**に移動し、ユーザーを検索して選択します。重複するユーザープロファイルを削除する場合は、正しいものを選択したことを確認します。
 
 ![Brazeの「ユーザの検索」ページ。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
 
@@ -68,8 +68,16 @@ Brazeで、**Audience**> **Audience**を管理し、**Delete Users**タブを選
 このSegmentのユーザーはすぐには削除されません。代わりに、次の7 日間は削除保留としてマークされます。この後、削除され、お知らせするようにメールさせていただきます。
 
 {% alert tip %}
-これらの厳密なユーザーs がSegmentの変更に関係なく削除されるように、**Pending Deletion** というSegment フィルターが自動的に作成されます。[このフィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters)を使用して、保留中の削除のステータスを確認できます。
+これらの厳密なユーザー がSegmentの変更に関係なく削除されるように、**Pending Deletion** というSegment フィルターが自動的に作成されます。[このフィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters)を使用して、保留中の削除のステータスを確認できます。
 {% endalert %}
+
+## Segment削除の確認
+
+Brazeは、削除保留中のプロファイルの件数を示す確認メールを送信します。
+
+削除を続行するには、Braze にログインして削除リクエストを確認します。
+
+メールに表示されている期間内に確認しないと、削除リクエストは期限切れになり、続行されません。
 
 ## Segment削除のキャンセル {#cancel}
 
@@ -91,7 +99,7 @@ Brazeで、**Audience**> **Audience**を管理し、**Delete Users**タブを選
 
 ## 削除ステータスの確認 {#status}
 
-削除のステータスは、[Segment フィルターs](#segment-filters)、[管理オーディエンス](#manage-audience)ページ、または[セキュリティイベントレポートs](#security-event-report)を使用して確認できます。
+削除のステータスは、[Segment フィルター](#segment-filters)、[管理オーディエンス](#manage-audience)ページ、または[セキュリティイベントレポートs](#security-event-report)を使用して確認できます。
 
 ### セグメントフィルター
 
@@ -135,13 +143,21 @@ Brazeで、**Audience**> **Audience**を管理し、**Delete Users**タブを選
 
 いいえ。1億 ユーザー s を超えるSegment s は消去できません。このサイズのSegmentを削除する際にヘルプが必要な場合は、[support@braze.com](mailto:support@braze.com) までご連絡ください。
 
+### 1億個のユーザーを削除できないようで、削除は1000万個のみに制限されています。これはバグですか?
+
+いいえ、これはバグではありません。一部の顧客では、アーリーアクセス(EA)中に削除できるユーザーの数が制限されています。
+
+この能力は、全顧客s が最大1億 ユーザー s を消去できるようになるまで向上するように設計されています。
+
+この容量を増やす場合は、Braze アカウントマネージャーにお問い合わせください。リクエストは、製品チームの裁量で付与されます。
+
 ### 自動ユーザーマージはユーザーの削除に影響しますか?
 
 スケジュールされたマージにユーザープロファイルsの保留中の削除が含まれている場合、Brazeはそれらのプロファイルsをスキップし、それらをマージしません。これらのプロファイルs を結合するには、削除から削除する必要があります。
 
 ### h ユーザー s に送信され、削除が保留されているデータへのアプリは?
 
-外部システムまたはSDK s から送信されたデータはまだ受け入れられますが、ユーザーs はアクティビティーに関係なくスケジュールされたとして削除されます。
+外部システムまたはSDK s から送信されたデータはまだ受け入れられますが、ユーザー はアクティビティーに関係なくスケジュールされたとして削除されます。
 
 ### キャンバスとキャンペーン s がユーザー s の削除をトリガーしますか?
 

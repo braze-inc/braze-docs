@@ -1,11 +1,11 @@
 ---
 nav_title: "POST: Criar chave de autenticação do SDK"
-article_title: "POST: Criar chave de autenticação do SDK"
+article_title: "POST: Criar Chave de Autenticação do SDK"
 search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o endpoint do Braze Create SDK Authentication key."
+description: "Este artigo descreve detalhes sobre o endpoint Braze da Chave de Autenticação do SDK Criar."
 ---
 
 {% api %}
@@ -14,7 +14,7 @@ description: "Este artigo descreve detalhes sobre o endpoint do Braze Create SDK
 /app_group/sdk_authentication/create
 {% endapimethod %}
 
-> Use esse endpoint para criar uma nova chave de autenticação do SDK para seu app.
+> Use este endpoint para criar uma nova chave de autenticação do SDK para seu app.
 
 ## Pré-requisitos
 
@@ -32,8 +32,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "app_id": "App API identifier",
-  "rsa_public_key_str": "RSA public key string", 
-  "description": "description", 
+  "rsa_public_key_str": "RSA public key string",
+  "description": "description",
   "make_primary": false
 }
 ```
@@ -44,8 +44,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | -------- | --------- | ----------- |
 | `app_id` | Obrigatória | String | O identificador da API do app. |
 | `rsa_public_key_str` | Obrigatória | String | A string da chave pública RSA. Deve ser uma chave pública RSA válida ou retornará um erro. |
-| `description` | Obrigatória | String | Descrição da chave de autenticação do SDK. |
-| `make_primary` | Opcional | Booleano | Se definida como `true`, essa chave se tornará a chave primária de autenticação do SDK quando for criada. |
+| `description` | Obrigatória | String | Descrição para a chave de autenticação do SDK. |
+| `make_primary` | Opcional | Booleano | Se definido como `true`, esta chave será a chave de autenticação do SDK principal quando for criada. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -56,8 +56,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_auth
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "app_id": "01234567-89ab-cdef-0123-456789abcdef",
-  "rsa_public_key_str": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvD+fgA0YuCUd/v35htn...\n-----END PUBLIC KEY-----", 
-  "description": "SDK Authentication Key for iOS App", 
+  "rsa_public_key_str": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvD+fgA0YuCUd/v35htn...\n-----END PUBLIC KEY-----",
+  "description": "SDK Authentication Key for iOS App",
   "make_primary": false
 }'
 ```
@@ -73,16 +73,16 @@ curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_auth
 
 | Parâmetro | Tipo de dados | Descrição |
 | --------- | --------- | ----------- |
-| `id` | String | A ID da chave de autenticação do SDK recém-criada. |
+| `id` | String | O ID da nova chave de autenticação do SDK criada. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Regras de validação
 
-Esse endpoint tem as seguintes regras de validação:
+Este endpoint possui as seguintes regras de validação:
 
 - Você pode ter até 3 chaves de autenticação do SDK por app.
 - A string da chave pública RSA deve ser uma chave pública RSA válida no formato adequado.
-- O endereço `app_id` deve ser um identificador válido da API do app.
+- O `app_id` deve ser um identificador de API de app válido.
 - A descrição não pode estar vazia.
 
 {% endapi %}

@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# Segment
+# 세그먼트
 
 {% multi_lang_include video.html id="RfOHfZ34hYM" align="right" %}
 
@@ -41,9 +41,9 @@ After successfully setting up your sources, you'll need to configure Braze as a 
 
 In Segment, navigate to **Destinations** > **Braze** > **Configure Braze** > **Select your Source** > **Setup**.
 
-![The source setup page. This page includes settings to set the destination framework as either "actions" or "classic" and set the connection mode as either "cloud mode" or "device mode".]({% image_buster /assets/img/segment/setup.png %})
+![The source setup page. 이 페이지에는 대상 프레임워크를 '작업' 또는 '클래식'으로 설정하고 연결 모드를 '클라우드 모드' 또는 '기기 모드'로 설정하는 설정이 포함되어 있습니다.]({% image_buster /assets/img/segment/setup.png %})
 
-You can integrate Segment's web source (Analytics.js) and native client-side libraries with Braze using either a side-by-side (device-mode) integration or a server-to-server (cloud-mode) integration.
+Segment의 웹 소스(Analytics.js)와 기본 클라이언트 측 라이브러리를 나란히(디바이스 모드) 통합하거나 서버 대 서버(클라우드 모드) 통합을 사용하여 Braze와 통합할 수 있습니다.
 
 Your choice of connection mode will be determined by the type of Source the destination is configured for.
 
@@ -76,10 +76,10 @@ The source code for the Android device mode integration is maintained by Braze a
 <br>
 The Braze SDK you use will depend on which Segment SDK you use:
 
-| | Segment SDK | Braze SDK |
+| | 세그먼트 소프트웨어 개발 키트 | Braze SDK |
 | - | ----------- | --------- |
-| Preferred | [Analytics-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
-| Legacy | [Analytics-Android](https://github.com/segmentio/analytics-android) | [Braze Segment Android](https://github.com/braze-inc/braze-segment-android) |
+| 선호 | [분석-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze 세그먼트 Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
+| 레거시 | [분석-Android](https://github.com/segmentio/analytics-android) | [Braze 세그먼트 Android](https://github.com/braze-inc/braze-segment-android) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
@@ -100,10 +100,10 @@ The source code for the iOS device mode integration is maintained by Braze and i
 <br>
 The Braze SDK you use will depend on which Segment SDK you use:
 
-| | Segment SDK | Braze SDK |
+| | 세그먼트 소프트웨어 개발 키트 | Braze SDK |
 | - | ----------- | --------- |
-| Preferred | [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Braze Segment Swift](https://github.com/braze-inc/braze-segment-swift) |
-| Legacy | [Analytics-iOS](https://github.com/segmentio/analytics-ios) | [Braze Segment iOS](https://github.com/Appboy/appboy-segment-ios) |
+| 선호 | [분석-스위프트](https://github.com/segmentio/analytics-swift) | [Braze 세그먼트 스위프트](https://github.com/braze-inc/braze-segment-swift) |
+| 레거시 | [분석-iOS](https://github.com/segmentio/analytics-ios) | [Braze 세그먼트 iOS](https://github.com/Appboy/appboy-segment-ios) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endalert %}
 
@@ -197,7 +197,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Track all pages | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>This will send all [page calls](https://segment.com/docs/spec/page/) to Braze as a "Loaded/Viewed a Page" event. |
 | Track only named pages | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>This will send only page calls to Braze with a name associated with them. |
 | Log purchase when revenue is present | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>When this option is enabled, all Track calls with the revenue property will trigger a purchase event. | 
-| Only track known users | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions Framework destination where this setting can be enabled through mappings.<br><br>If enabled, this new setting delays calling of `window.appboy.initialize` until there is a valid `userId`. | 
+| Only track known users | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions Framework destination where this setting can be enabled through mappings.<br><br>If enabled, this new setting delays calling of `window.braze.initialize` until there is a valid `userId`. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -349,7 +349,7 @@ All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_g
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the above mappings can be set using the Update User Profile Action.
 
 {% alert important %}
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points toward your allotment. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. 이렇게 하면 불필요하게 데이터 포인트를 기록하지 않게 됩니다. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment. 
 
 {% endalert %}
 {% endtab %}
@@ -476,7 +476,7 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 {% details Sending deltas to Braze. %}
 
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points toward your allotment. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit Data Point usage by debouncing duplicate `identify()` calls from Segment. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. 이렇게 하면 불필요한 데이터 포인트가 기록되는 것을 방지할 수 있습니다. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment.
 
 {% enddetails %}
 

@@ -14,7 +14,7 @@ Android 13에 대비하려면 Braze SDK를 [최신 버전(v21.0.0+)](https://git
 
 Android 13에서는 푸시 알림을 보내는 앱을 관리하는 방식에 [주요 변경 사항](https://developer.android.com/about/versions/13/changes/notification-permission)을 도입했습니다. Android 13에서는 푸시 알림을 표시하기 전에 앱이 권한을 얻어야 합니다. 
 
-![메시지 하단에 '허용' 및 '허용 안 함' 버튼이 두 개 있는 'Kitchenerie에서 알림을 보내도록 허용하시겠어요?'라는 Android 푸시 메시지.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
+![메시지 하단에 "허용" 및 "허용 안 함" 버튼이 두 개 있는 "Kitchenerie에서 알림을 보내도록 허용하시겠습니까?"라고 묻는 Android 푸시 메시지입니다.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
 
 이 새로운 권한은 권한을 얻기 위해 한 번만 시도할 수 있는 iOS 및 웹 푸시와 유사한 패턴을 따릅니다. 사용자가 `Don't Allow`를 선택하거나 프롬프트를 무시하면 앱에서 다시 권한을 요청할 수 없습니다.
 

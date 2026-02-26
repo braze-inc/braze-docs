@@ -1,6 +1,6 @@
 ---
-nav_title: Exportar datos del Canvas
-article_title: Exportar datos del Canvas
+nav_title: Exportar datos del lienzo
+article_title: Exportar datos del lienzo
 page_order: 1
 page_type: reference
 description: "Este artículo de referencia explica cómo exportar los análisis de Canvas."
@@ -10,29 +10,29 @@ tool:
 
 ---
 
-# Exportar datos del Canvas
+# Exportar datos del lienzo
 
-> Los datos de usuario se pueden exportar a un CSV. En esta página se explica cómo exportar datos de todo el Canvas o de un componente concreto del mismo.
+> Los datos de los usuarios pueden exportarse a un CSV. En esta página se explica cómo exportar datos de todo el Canvas o de un componente concreto del mismo.
 
-## Exportar datos de un Canvas
+## Exportar datos para un lienzo
 
-Para exportar los datos de un Canvas, haz lo siguiente:
+Para exportar los datos de un lienzo, haga lo siguiente:
 
 1. Ve a **Mensajería** > **Canvas** y selecciona tu Canvas.
-2. Selecciona el desplegable **Datos de usuario** en la sección **Detalles del Canvas**. 
-3. Selecciona una de las siguientes opciones de exportación:
-  - **CSV Exportar datos de usuario** o
-  - **Dirección de correo electrónico de exportación CSV**.
+2. Seleccione el menú desplegable **Datos del usuario** en la sección **Detalles del lienzo**. 
+3. Seleccione una de las siguientes opciones de exportación:
+  - **Exportación de datos de usuario a CSV** o
+  - **Exportación de direcciones de correo electrónico a CSV**.
 
-También puedes exportar los datos de usuario de todos los participantes de un Canvas como archivo CSV.
+También puede exportar los datos de usuario de todos los participantes de un Lienzo como archivo CSV.
 
-## Exportar datos de un componente (sólo flujo de trabajo original)
+## Exportación de datos de un componente (sólo flujo de trabajo original)
 
-Los resultados de Canvas pueden exportarse por componentes individuales para el flujo de trabajo de Canvas original. Para ello, selecciona el componente específico y, a continuación, selecciona el desplegable **Datos de usuario** en la página **Detalles del paso en Canvas**. 
+Los resultados del lienzo se pueden exportar por componentes individuales para el flujo de trabajo original del lienzo. Para ello, seleccione el componente específico y, a continuación, seleccione el desplegable **Datos de usuario** en la página **Detalles del paso del lienzo**. 
 
-Desplegable de Datos de usuario en la página Detalles del Canvas.]({% image_buster /assets/img/canvas_csv_export.png %})
+![Datos del usuario en la página Detalles del lienzo.]({% image_buster /assets/img/canvas_csv_export.png %})
 
 {% alert tip %}
-Para obtener ayuda con las exportaciones CSV y API, visita nuestro artículo [sobre solución de problemas de exportación]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
+Para obtener ayuda con las exportaciones CSV y API, visite nuestro artículo [sobre resolución de problemas de exportación]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 

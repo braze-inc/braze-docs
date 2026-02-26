@@ -33,7 +33,7 @@ Durch die Integration von VWO mit Braze können Sie VWO-Experimentdaten nutzen, 
 4. Wählen Sie die Braze Integration aus, um sie zu aktivieren.
 5. Optional können Sie die Integration von Braze für alle bestehenden Kampagnen aktivieren. Wählen Sie dazu eine Kampagne aus, gehen Sie dann zu **Konfiguration > Integrationen** und aktivieren Sie Braze.
 
-   ![Enablement der Braze Integration]({% image_buster /assets/img/vwo/vwo2_enable_braze.png %})
+   ![Enablement der Braze-Integration]({% image_buster /assets/img/vwo/vwo2_enable_braze.png %})
 
 6. Nachdem Sie die Integration aktiviert haben, beginnt VWO damit, Experimentdaten auf Kampagnen-Ebene an Braze zu senden.
 
@@ -98,7 +98,7 @@ Bevor Sie die Segmentierung der Eigenschaften von Ereignissen verwenden können,
 
 ### Braze Datenpunkte
 
-Das angepasste Event, das von VWO an Braze gesendet wird - einschließlich aller für die Segmentierung aktivierten Event-Eigenschaften - wird Datenpunkte in Ihrer Braze-Instanz verbrauchen.
+Das angepasste Event, das von VWO an Braze gesendet wird - einschließlich aller für die Segmentierung aktivierten Event-Eigenschaften -, protokolliert Datenpunkte in Ihrer Braze-Instanz.
 
 ### Beschränkungen
 

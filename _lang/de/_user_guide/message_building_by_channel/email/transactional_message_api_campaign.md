@@ -17,7 +17,7 @@ alias: "/api/api_campaigns/transactional_campaigns"
 > Braze Transaktions-E-Mails werden versendet, um eine vereinbarte Transaktion zwischen einem Absender und einem Empfänger zu erleichtern. In diesem Referenzartikel erfahren Sie, wie Sie eine transaktionale E-Mail-Kampagne im Braze Dashboard erstellen und eine `campaign_id` generieren, die Sie in Ihre API-Aufrufe für unseren [`/transactional/v1/campaigns/{campaign_id}/send` Endpunkt]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message) einbinden können.
 
 {% alert important %}
-Braze Transactional Email ist nur im Rahmen ausgewählter Braze-Pakete verfügbar. Wenden Sie sich an Ihren Braze Customer Success Manager oder eröffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/) für weitere Informationen.
+Braze Transactional Email ist nur im Rahmen ausgewählter Braze-Pakete verfügbar. Wenden Sie sich an Ihren Customer-Success-Manager:in von Braze oder öffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/) für weitere Informationen.
 {% endalert %}
 
 Die transaktionale E-Mail-Kampagne wurde speziell für den Versand automatisierter, nicht werblicher E-Mail-Nachrichten entwickelt, um eine vereinbarte Transaktion zwischen Ihnen und Ihren Kunden zu erleichtern. Dazu gehören Informationen wie z. B.:
@@ -51,7 +51,7 @@ Daher werden Sie feststellen, dass einige Einstellungen, die Sie vielleicht von 
 - Der Schritt **Targeting Zielgruppen** wurde entfernt. Da Transaktions-E-Mails Ihre gesamte Nutzerbasis als berechtigt registrieren (einschließlich abgemeldeter Nutzer:innen), müssen Sie keine Filter oder Segmente festlegen. Wenn Sie also eine Logik dafür haben, wer diese Nachricht erhalten soll, empfehlen wir Ihnen, diese Logik anzuwenden, bevor Sie entscheiden, ob Sie die API-Anfrage an Braze stellen, um die Nachricht an einen bestimmten Nutzer:innen auszulösen.
 - Der Schritt **Conversions** wurde entfernt. Transaktions-E-Mails unterstützen zur Zeit kein Tracking von Konversions-Events.
 
-![Workflow zum Verfassen, Zustellen und Bestätigen einer Kampagne für Transaktions-E-Mails.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
+![Erstellung, Zustellung und Bestätigung einer Kampagne für Transaktions-E-Mails.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
 
 Um Ihre Transaktions-E-Mail-Kampagne zu konfigurieren, gehen Sie folgendermaßen vor:
 

@@ -42,24 +42,17 @@ Para obter um exemplo, consulte [main.dart](https://github.com/braze-inc/braze-f
 
 ### Etapa 2: Encaminhar dados do cartão de conteúdo da camada nativa
 
-Para receber os dados na camada Dart da etapa 1, adicione o seguinte código para encaminhar os dados do cartão de conteúdo das camadas nativas.
+{% alert note %}
+Esta etapa é apenas para iOS. Os dados do cartão de conteúdo são encaminhados automaticamente da camada do Android.
+{% endalert %}
 
-{% tabs %}
-{% tab Android %}
-
-Os dados do cartão de conteúdo são encaminhados automaticamente da camada do Android.
-
-{% endtab %}
-{% tab iOS %}
+Para receber os dados na camada Dart da etapa 1, adicione o seguinte código para encaminhar os dados do cartão de conteúdo da camada nativa do iOS.
 
 1. Implemente `contentCards.subscribeToUpdates` para assinar atualizações de cartões de conteúdo, conforme descrito na documentação [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)).
 
 2. Sua implementação de retorno de chamada `contentCards.subscribeToUpdates` deve chamar `BrazePlugin.processContentCards(contentCards)`.
 
 Para obter um exemplo, consulte [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) em nosso app de amostra.
-
-{% endtab %}
-{% endtabs %}
 
 #### Reprodução da chamada de retorno para cartões de conteúdo
 

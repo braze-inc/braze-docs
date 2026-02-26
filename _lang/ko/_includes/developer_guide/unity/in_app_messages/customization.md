@@ -1,6 +1,6 @@
-## 표시 동작 사용자 지정
+## 디스플레이 동작 커스텀하기
 
-다음을 통해 런타임에 인앱 메시지의 표시 동작을 변경할 수 있습니다:
+런타임에 인앱 메시지의 표시 동작은 다음을 통해 변경할 수 있습니다:
 
 ```csharp
 // Sets in-app messages to display immediately when triggered.
@@ -13,7 +13,7 @@ Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayA
 Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISCARD);
 ```
 
-## 사용자 지정 리스너 설정
+## 커스텀 리스너 설정하기
 
 사용자가 인앱 메시지와 상호 작용하는 방식을 더 잘 제어해야 하는 경우 `BrazeInAppMessageListener`를 사용하여 `Appboy.AppboyBinding.inAppMessageListener`에 할당합니다. 사용하지 않으려는 위임의 경우 `null`로 남겨두면 됩니다.
 

@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: E-Mail-FAQ
-page_order: 14
+page_order: 15
 description: "Auf dieser Seite finden Sie Antworten auf häufig gestellte Fragen zum Thema E-Mail-Nachrichten."
 channel: email
 

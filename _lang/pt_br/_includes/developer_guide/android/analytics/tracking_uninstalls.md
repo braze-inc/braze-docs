@@ -14,7 +14,7 @@ Como as notificações silenciosas para rastreamento de desinstalação não sã
 
 ### Etapa 3: Remover pings automáticos do servidor
 
-Uma notificação por push silenciosa ativará seu aplicativo e instanciará o componente `Application` se o aplicativo ainda não estiver em execução. Portanto, se você tiver uma subclasse [`Application`](https://developer.android.com/reference/android/app/Application) personalizada, remova qualquer lógica que faça ping automaticamente em seus servidores durante o método [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application#onCreate()) método de ciclo de vida.
+Uma notificação por push silenciosa ativará seu aplicativo e instanciará o componente `Application` se o app ainda não estiver em execução. Portanto, se você tiver uma subclasse [`Application`](https://developer.android.com/reference/android/app/Application) personalizada, remova qualquer lógica que faça ping automaticamente em seus servidores durante o método [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application#onCreate()) método de ciclo de vida.
 
 ### Etapa 4: Ativar o rastreamento de desinstalação
 

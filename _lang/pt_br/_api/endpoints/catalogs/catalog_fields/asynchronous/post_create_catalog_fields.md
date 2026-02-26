@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Criar campos do catálogo"
+nav_title: "POST: Criar campos de catálogo"
 article_title: "POST: Criar campos do catálogo"
 search_tag: Endpoint
 page_order: 2

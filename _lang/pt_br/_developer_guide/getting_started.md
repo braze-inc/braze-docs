@@ -1,6 +1,6 @@
 ---
 page_order: 1
-nav_title: Como começar
+nav_title: Primeiros passos
 article_title: Como começar
 layout: dev_guide
 

@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Kochava
 
-> Kochava propose des fonctionnalités d'attribution et d'analyse mobiles pour vous aider à exploiter vos données pour stimuler votre croissance. La plateforme d'audience de Kochava vous permet de planifier, de cibler, d'activer, de mesurer et d'optimiser vos campagnes d'applications.
+> [Kochava](https://www.kochava.com/) propose l'attribution et l'analyse/analytique mobile (si vous exploitez vos données pour la croissance). La plateforme d'audience de Kochava vous permet de planifier, de cibler, d'activer, de mesurer et d'optimiser vos campagnes d'applications.
 
 _Cette intégration est maintenue par Kochava._
 
@@ -33,7 +33,7 @@ L'intégration de Braze et Kochava contribue à une compréhension plus globale 
 
 #### Android
 
-Le SDK [Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3) génère un GUID en tant que Braze ID au démarrage de la session. Il s'agit de l'identifiant que nous recommandons de transmettre à la méthode `IdentityLink` Kochava car il permet à Braze de réconcilier les données avec le bon profil utilisateur. L’ID Braze peut être récupéré à l'aide de la méthode suivante :
+Le SDK [Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3) génère un identifiant unique global (GUID) en tant qu'ID de Braze au démarrage de la session. Cet identifiant doit être transmis à la méthode Kochava `IdentityLink` afin que Braze puisse réconcilier les données avec le profil utilisateur correct. Récupérez l'ID de Braze à l'aide de la méthode suivante :
 
 ```java
 Apppboy.getInstance(context).getDeviceId();
@@ -42,7 +42,7 @@ Apppboy.getInstance(context).getDeviceId();
 #### iOS
 
 {% alert important %}
-Avant février 2023, notre intégration d'attribution à Kochava utilisait l'IDFV comme identifiant principal pour correspondre aux données d'attribution iOS. Les clients de Braze utilisant Objective-C n'ont pas besoin de récupérer le paramètre `device_id` Braze et de l’envoyer à Kochava lors de l'installation, car il n'y aura aucune interruption de service.
+Avant février 2023, notre intégration d'attribution Kochava utilisait l'identifiant du fournisseur (IDFV) comme identifiant principal pour faire correspondre les données d'attribution iOS. Il n'est pas nécessaire pour les clients de Braze utilisant Objective-C de récupérer le site `device_id` de Braze et de l'envoyer à Kochava lors de l'installation, car il n'y a pas d'interruption de service.
 {% endalert%}
 
 Pour ceux qui utilisent le SDK Swift v5.7.0 et versions ultérieures, si vous souhaitez continuer à utiliser IDFV comme identifiant mutuel, vous devez vous assurer que le champ `useUUIDAsDeviceId` est défini sur `false` afin de ne pas perturber l'intégration. Si ce paramètre est défini sur`true`, vous devez déployer le mappage des ID d'appareils iOS pour Swift afin de transmettre le paramètre `device_id` Braze à Kochava lors de l'installation de l'application afin que Braze corresponde correctement aux attributions iOS.
@@ -64,17 +64,17 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 Dans Braze, accédez à **Intégrations partenaires** > **Partenaires technologiques** et sélectionnez **Kochava**. 
 
-Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l’endpoint REST sont utilisés à l'étape suivante lors de la configuration d'un postback dans le tableau de bord de Kochava.<br><br>![Cette image montre la case « Importation de données pour l'attribution de l'installation » qui se trouve sur la page technologique de Kochava. Dans cette boîte, la clé d'importation des données et l'endpoint REST sont affichés.]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
+Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l’endpoint REST sont utilisés à l'étape suivante lors de la configuration d'un postback dans le tableau de bord de Kochava.<br><br>![Cette image montre la case « Importation de données pour l'attribution de l'installation » qui se trouve sur la page technologique de Kochava. Dans cette zone, vous pouvez voir la clé d'importation des données et l’endpoint REST.]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
 
 ### Étape 3 : Configurer un système de communication automatisé depuis Kochava
 
 [Ajoutez un postback](https://support.kochava.com/campaign-management/create-a-kochava-certified-postback) dans votre tableau de bord de Kochava. Vous serez invité à indiquer la clé d'importation des données et l'endpoint REST que vous avez trouvés dans le tableau de bord de Braze.
 
-### Étape 4 : Confirmez l'intégration
+### Étape 4 : Confirmez l'intégration
 
-Une fois que Braze aura reçu les données d'attribution de Kochava, l'indicateur de statut de connexion sur la page des partenaires technologiques de Kochava dans Braze passera de « Non connecté » à « Connecté ». Un horodatage de la dernière requête réussie sera également inclus. 
+Après que Braze a reçu des données d'attribution de Kochava, l'indicateur de connexion d'état sur la page des partenaires technologiques de Kochava dans Braze passe de "Non connecté" à "Connecté" et inclut un horodatage de la dernière demande réussie.
 
-Notez que cela ne se produira pas tant que nous n'aurons pas reçu les données relatives à une installation attribuée. Les installations organiques, qui devraient être exclues du postback de Kochava, sont ignorées par notre API et ne sont pas prises en compte pour déterminer si une connexion a été établie avec succès.
+Ce statut ne change que lorsque Braze reçoit des données sur une attribution d'installation. Braze ignore les installations organiques (il les exclut du postback de Kochava) et ne les compte pas lorsqu'il détermine si la connexion est réussie.
 
 ## Données d'attribution sur Facebook et X (anciennement Twitter)
 

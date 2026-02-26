@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Renombrar ID externo"
-article_title: "POST: Renombrar ID externo"
+nav_title: "PUBLICAR: Renombrar ID externo"
+article_title: "PUBLICAR: Renombrar ID externo"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
@@ -14,11 +14,11 @@ description: "En este artículo se describen los detalles del punto final Renomb
 /users/external_ids/rename
 {% endapimethod %}
 
-> Utiliza este punto final para renombrar los ID externos de tus usuarios. 
+> Utiliza este punto final para renombrar los ID externos de tus usuarios.
 
-Puedes enviar hasta 50 objetos de renombramiento por solicitud. 
+Puedes enviar hasta 50 objetos de renombramiento por solicitud.
 
-Con este punto final se establece un nuevo (principal) `external_id` para el usuario y se elimina su `external_id` existente. Esto significa que el usuario puede ser identificado por cualquiera de los dos `external_id` hasta que se elimine el obsoleto. Tener varios ID externos permite un periodo de migración para que no se rompan las versiones anteriores de tus aplicaciones que utilicen el esquema de nomenclatura ID externo anterior. 
+Con este punto final se establece un nuevo (principal) `external_id` para el usuario y se elimina su `external_id` existente. Esto significa que el usuario puede ser identificado por cualquiera de los dos `external_id` hasta que se elimine el obsoleto. Tener varios ID externos permite un periodo de migración para que no se rompan las versiones heredadas de tus aplicaciones que utilizan el esquema de nombres de ID externos anterior.
 
 Cuando ya no utilices tu antiguo esquema de nombres, te recomendamos encarecidamente que elimines los ID externos obsoletos utilizando el [punto final`/users/external_ids/remove` ]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove).
 
@@ -99,16 +99,16 @@ El campo `message` devolverá `success` para cualquier solicitud válida. Los er
 ## Preguntas más frecuentes
 
 ### ¿Influye esto en los MAU?
-No, ya que el número de usuarios seguirá siendo el mismo, sólo tendrán un nuevo `external_id`.
+No, porque el número de usuarios sigue siendo el mismo, tienen un nuevo `external_id`.
 
 ### ¿Cambia históricamente el comportamiento de los usuarios?
-No, ya que el usuario sigue siendo el mismo, y todo su comportamiento histórico sigue vinculado a él.
+No, porque el usuario sigue siendo el mismo, y todo su comportamiento histórico sigue vinculado a él.
 
 ### ¿Puede ejecutarse en espacios de trabajo de desarrollador o de puesta en escena?
 Sí. De hecho, recomendamos encarecidamente realizar una migración de prueba en un espacio de trabajo de ensayo o de desarrollador, y asegurarse de que todo ha ido bien antes de ejecutarla en los datos de producción.
 
-### ¿Consume puntos de datos?
-Esta característica no cuesta puntos de datos.
+### ¿Registra puntos de datos?
+Esta característica no registra puntos de datos.
 
 ### ¿Cuál es el periodo de amortización recomendado?
 No tenemos un límite estricto sobre el tiempo que puedes mantener ID externos obsoletos, pero recomendamos encarecidamente eliminarlos cuando ya no sea necesario hacer referencia a los usuarios por el ID obsoleto.

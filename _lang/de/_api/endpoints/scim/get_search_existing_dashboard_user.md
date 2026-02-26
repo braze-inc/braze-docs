@@ -12,10 +12,10 @@ description: "Dieser Artikel beschreibt die Suche nach einem bestehenden Dashboa
 {% api %}
 # Bestehendes Dashboard-Benutzerkonto per E-Mail durchsuchen
 {% apimethod get %}
-scim/v2/Users?filter=userName%20eq%20"user%40test.com"
+scim/v2/Benutzer?filter=Benutzername%20eq%20 "Nutzer:innen%40test.com"
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um ein bestehendes Dashboard-Benutzerkonto zu suchen, indem Sie dessen E-Mail im Filter-Abfrageparameter angeben. 
+> Verwenden Sie diesen Endpunkt, um ein bestehendes Dashboard-Benutzerkonto zu suchen, indem Sie dessen E-Mail im Filter-Abfrageparameter angeben.
 
 Beachten Sie, dass der Abfrageparameter, wenn er URL-kodiert ist, wie folgt aussieht:
 
@@ -79,11 +79,11 @@ curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?fil
                         "team": [
                             {
                                 "teamId": "241adcd25789fabcded",
-                                "teamName": "Test Team",                  
+                                "teamName": "Test Team",
                                 "teamPermissions": ["admin"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         }

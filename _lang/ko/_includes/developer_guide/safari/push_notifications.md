@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/web.md %} 웹 소프트웨어 개발 키트에 대한 [푸시 알림도 설정해야]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) 합니다. [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) 이상을 사용하는 iOS 및 iPadOS 사용자에게만 푸시 알림을 보낼 수 있다는 점에 유의하세요.
+{% multi_lang_include developer_guide/prerequisites/web.md %} 또한 웹 소프트웨어 개발 키트에 대한 [푸시 알림을 설정해야]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) 합니다. [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) 이상을 사용하는 iOS 및 iPadOS 사용자에게만 푸시 알림을 보낼 수 있다는 점에 유의하세요.
 
 ## 모바일용 Safari 푸시 설정하기
 

@@ -19,7 +19,7 @@ Braze proporciona métodos predefinidos para configurar los siguientes atributos
 ### Configuración de atributos predeterminados
 
 {% tabs %}
-{% tab utilizando métodos %}
+{% tab using methods %}
 Para establecer un atributo predeterminado para un usuario, llama al método `getUser()` en tu instancia de Braze para obtener una referencia al usuario actual de tu aplicación. A continuación, puedes llamar a los métodos para establecer un atributo de usuario.
 
 {% subtabs local %}
@@ -41,7 +41,7 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Al utilizar Google Tag Manager, los atributos estándar de usuario (como el nombre de pila de un usuario), deben registrarse del mismo modo que los atributos personalizados de usuario. Asegúrate de que los valores que pasas para los atributos estándar coinciden con el formato esperado especificado en la documentación de [la clase Usuario](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 Por ejemplo, el atributo género puede aceptar cualquiera de los siguientes valores: `"m" | "f" | "o" | "u" | "n" | "p"`. Por lo tanto, para establecer el sexo de un usuario como femenino, crea una etiqueta HTML personalizada con el siguiente contenido:
@@ -59,17 +59,17 @@ window.braze.getUser().setGender("f")
 Para desactivar un atributo predeterminado del usuario, pasa `null` al método correspondiente. Por ejemplo:
 
 {% tabs local %}
-{% tab Nombre %}
+{% tab First name %}
 ```javascript
 braze.getUser().setFirstName(null);
 ```
 {% endtab %}
-{% tab Género %}
+{% tab Gender %}
 ```javascript
 braze.getUser().setGender(null);
 ```
 {% endtab %}
-{% tab Fecha de nacimiento %}
+{% tab Date of birth %}
 ```javascript
 braze.getUser().setDateOfBirth(null, null, null);
 ```
@@ -81,7 +81,7 @@ braze.getUser().setDateOfBirth(null, null, null);
 ### Establecer atributos personalizados
 
 {% tabs %}
-{% tab utilizando métodos %}
+{% tab using methods %}
 Además de los métodos predeterminados de atributos de usuario, también puedes establecer [atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) para tus usuarios. Especificaciones completas del método, consulta [nuestros JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 {% subtabs local %}
@@ -165,7 +165,7 @@ Las claves y valores de los atributos personalizados sólo pueden tener un máxi
 {% endalert %}
 {% endtab %}
 
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Los atributos personalizados de usuario no están disponibles debido a una limitación del lenguaje de programación de Google Tag Manager. Para registrar atributos personalizados, crea una etiqueta HTML personalizada con el siguiente contenido:
 
 ```html

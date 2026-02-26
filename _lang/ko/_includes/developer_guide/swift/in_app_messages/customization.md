@@ -2,8 +2,8 @@
 
 ## UI 델리게이트 설정(필수)
 
-인앱 메시지 표시를 사용자 지정하고 다양한 수명 주기 이벤트에 반응하려면 다음을 설정해야 합니다. [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate). 트리거된 인앱 메시지 페이로드 수신 및 처리, 디스플레이 수명 주기 이벤트 수신, 디스플레이 타이밍 제어에 사용되는 델리게이트 프로토콜입니다. `BrazeInAppMessageUIDelegate` 을 사용하려면 다음을 수행해야 합니다:
-- 기본 [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui) 구현을 `inAppMessagePresenter`. 
+인앱 메시지 표시를 사용자 지정하고 다양한 고객 생애주기 이벤트에 반응하려면 [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate). 트리거된 인앱 메시지 페이로드를 수신 및 처리하고, 디스플레이 수명 주기 이벤트를 수신하고, 디스플레이 타이밍을 제어하는 데 사용되는 델리게이트 프로토콜입니다. `BrazeInAppMessageUIDelegate` 을 사용하려면 다음을 수행해야 합니다:
+- 기본값을 사용하십시오. [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui) 구현을 `inAppMessagePresenter`. 
 - 프로젝트에 `BrazeUI` 라이브러리를 포함하세요.
 
 ### 1단계: `BrazeInAppMessageUIDelegate` 프로토콜 구현 
@@ -33,7 +33,7 @@ extension AppDelegate: BrazeInAppMessageUIDelegate {
 
 ### 2단계: `delegate` 객체 할당 
 
-이 인앱 메시지 UI를 `inAppMessagePresenter` 로 할당하기 전에 `BrazeInAppMessageUI` 인스턴스에 `delegate` 객체를 할당합니다.
+`BrazeInAppMessageUI` 인스턴스에 `delegate` 객체를 할당하기 전에 이 인앱 메시지 UI를 `inAppMessagePresenter` 로 할당합니다.
 
 {% tabs %}
 {% tab swift %}
@@ -60,7 +60,7 @@ AppDelegate.braze.inAppMessagePresenter = inAppMessageUI;
 인앱 메시지 UI 대리자의 단계별 구현에 대해서는 이 [튜토리얼](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui)을 참조하십시오.
 {% endalert %}
 
-## 클릭 시 동작
+## On-click behavior
 
 각 `Braze.InAppMessage` 오브젝트에는 해당 [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/clickaction)이 포함되어 있으며, 이는 클릭 시 동작을 정의합니다. 
 
@@ -71,7 +71,6 @@ AppDelegate.braze.inAppMessagePresenter = inAppMessageUI;
 | `ClickAction` | 클릭 시 동작 |
 | -------------------------- | -------- |
 | `.url(URL, useWebView: Bool)` | 외부 브라우저에서 지정된 URL을 엽니다. `useWebView` 을 `true` 으로 설정하면 웹 보기로 열립니다. |
-| `.newsFeed` | 메시지를 클릭하면 뉴스피드가 표시되고 메시지가 해제됩니다.<br><br>**참고:** 뉴스피드는 더 이상 사용되지 않습니다. 자세한 내용은 [마이그레이션 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) 확인하세요. |
 | `.none` | 클릭하면 메시지가 삭제됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -79,7 +78,7 @@ AppDelegate.braze.inAppMessagePresenter = inAppMessageUI;
 버튼이 포함된 인앱 메시지의 경우 버튼 텍스트를 추가하기 전에 클릭 동작이 추가되면 `clickAction` 메시지도 최종 페이로드에 포함됩니다.
 {% endalert %}
 
-### 클릭 시 동작 사용자 지정
+### 클릭 시 행동 커스텀하기
 
 이 동작을 사용자 지정하려면 다음 샘플을 참조하여 `clickAction` 속성정보를 수정할 수 있습니다.
 
@@ -98,14 +97,14 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab 목표-C %}
+{% tab OBJECTIVE-C %}
 
 `inAppMessage(_:prepareWith:)` 메서드는 Objective-C에서 사용할 수 없습니다.
 
 {% endtab %}
 {% endtabs %}
 
-### 사용자 지정 동작 처리하기
+### 고객 행동 처리하기
 
 다음 [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) 위임 메서드가 인앱 메시지를 클릭할 때 호출됩니다. 인앱 메시지 버튼 및 HTML 인앱 메시지 버튼(링크)을 클릭한 경우 버튼 ID가 선택적 매개변수로 제공됩니다.
 
@@ -201,7 +200,7 @@ func inAppMessage(
 {% endtab %}
 {% endtabs %}
 
-## 모달 해지 사용자 지정
+## 모달 해고 커스텀하기
 
 외부 탭 해제 기능을 활성화하려면 사용자 지정하려는 인앱 메시지 유형의 `Attributes` 구조에서 `dismissOnBackgroundTap` 속성정보를 수정하면 됩니다. 
 
@@ -232,15 +231,15 @@ BrazeInAppMessageUI.ModalImageView.Attributes.defaults.dismissOnBackgroundTap = 
 
 인앱 메시지 사용자 지정에 대한 자세한 내용은 이 [문서](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/in-app-message-customization)를 참조하세요.
 
-## 메시지 방향 사용자 지정
+## 메시지 방향 커스텀하기
 
-인앱 메시지의 방향을 사용자 지정할 수 있습니다. 모든 메시지에 대해 새로운 기본 방향을 설정하거나 단일 메시지에 대해 사용자 지정 방향을 설정할 수 있습니다.
+인앱 메시징의 방향을 커스텀할 수 있습니다. 모든 메시징에 대해 새로운 기본값을 설정하거나 단일 메시징에 대해 커스텀 방향을 설정할 수 있습니다.
 
 {% tabs local %}
-{% tab 모든 메시지 %}
-모든 인앱 메시지의 기본 방향을 선택하려면 다음과 같이 [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) 메서드를 사용하여 `PresentationContext` 에서 `preferredOrientation` 속성을 설정합니다. 
+{% tab all messages %}
+모든 인앱 메시징의 기본값을 선택하려면, 모든 인앱 메시징에 대해 [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) 메서드를 사용하여 `PresentationContext` 에서 `preferredOrientation` 속성을 설정합니다. 
 
-예를 들어 세로 방향을 기본 방향으로 설정합니다:
+예를 들어 세로 방향을 기본값으로 설정합니다:
 
 {% subtabs %}
 {% subtab swift %}
@@ -267,8 +266,8 @@ func inAppMessage(
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 단일 메시지 %}
-단일 메시지의 방향을 설정하려면 `Braze.InAppMessage` 의 `orientation` 속성을 수정합니다:
+{% tab single message %}
+단일 메시징에 대한 방향을 설정하려면 `Braze.InAppMessage` 의 `orientation` 속성을 수정합니다:
 
 {% subtabs %}
 {% subtab swift %}
@@ -303,9 +302,9 @@ inAppMessage.orientation = BRZInAppMessageRawOrientationLandscape;
 {% endtab %}
 {% endtabs %}
 
-인앱 메시지가 표시된 후 메시지가 표시되는 동안 디바이스 방향이 변경되면 메시지가 디바이스와 함께 회전합니다(메시지의 `orientation` 구성에서 지원되는 경우).
+인앱 메시지가 표시된 후 메시지가 표시되는 동안 기기의 방향이 변경되면 메시지가 기기와 함께 회전합니다(메시지의 `orientation` 구성에서 지원되는 경우).
 
-메시지가 표시되려면 인앱 메시지의 `orientation` 속성에서 디바이스 방향도 지원해야 합니다. 또한 `preferredOrientation` 설정은 Xcode에서 대상 설정의 **배포 정보** 섹션 아래 애플리케이션이 지원하는 인터페이스 방향에 포함된 경우에만 적용됩니다.
+메시지가 표시되려면 인앱 메시지의 `orientation` 속성에서 기기 방향도 지원해야 합니다. 또한 `preferredOrientation` 설정은 Xcode에서 대상 설정의 **배포 정보** 섹션 아래 애플리케이션이 지원하는 인터페이스 방향에 포함된 경우에만 적용됩니다.
 
 ![Xcode에서 지원되는 방향.]({% image_buster /assets/img/supported_interface_orientations_xcode.png %})
 
@@ -348,7 +347,7 @@ func inAppMessage(
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-샘플( `InAppMessageUI`)은 [Swift Braze SDK 리포지토리](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI) 및 [Objective-C에서](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI) 확인할 수 있습니다.
+샘플은 `InAppMessageUI`, [Swift Braze 소프트웨어 개발 키트 리포지토리](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI) 및 [Objective-C를](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI) 확인하세요.
 {% endalert %}
 
 ## 상태 표시줄 숨기기
@@ -469,12 +468,12 @@ func inAppMessage(
 {% endtab %}
 {% endtabs %}
 
-## 앱 스토어 리뷰 프롬프트 사용자 지정
+## 앱 스토어 리뷰 프롬프트 커스텀하기
 
 캠페인에서 인앱 메시지를 사용하여 사용자에게 앱 스토어 리뷰를 요청할 수 있습니다.
 
 {% alert note %}
-이 예제 프롬프트는 Braze의 기본 동작을 재정의하기 때문에 구현된 경우 노출 횟수를 자동으로 추적할 수 없습니다. [자체 분석을 기록해야]({{site.baseurl}}/developer_guide/analytics/) 합니다.
+이 예제 프롬프트는 Braze의 기본 동작을 재정의하기 때문에 구현된 경우 노출 횟수를 자동으로 추적할 수 없습니다. [자신의 분석을 기록해야]({{site.baseurl}}/developer_guide/analytics/) 합니다.
 {% endalert %}
 
 ### 1단계: 인앱 메시지 위임자를 설정합니다

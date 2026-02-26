@@ -23,7 +23,7 @@ Grâce à l'intégration de Braze et de Yotpo, vous pouvez tirer et afficher de 
 | ----------- | ----------- |
 | Compte Yotpo | Un compte Yotpo est nécessaire pour bénéficier de ce partenariat. |
 | Clé API des commentaires Yotpo | Cette API sera mise en œuvre dans l'extrait de code Contenu connecté.<br><br>Pour plus d'informations, reportez-vous à la section [Trouver votre clé d'application Yotpo et votre clé secrète](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key). |
-| Clé API de fidélisation Yotpo | Cette clé API et ce GUID seront mis en œuvre dans l'extrait de code du contenu connecté.<br><br>Pour plus d'informations, reportez-vous à la section [Trouver votre clé API et votre GUID pour la fidélisation et les recommandations.](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
+| Clé API de fidélisation Yotpo | Cette clé API et cet identifiant unique au monde (GUID) seront mis en œuvre dans l'extrait de code du contenu connecté.<br><br>Pour plus d'informations, reportez-vous à la [recherche de votre clé API et GUID de référencement &.](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Avant de continuer, confirmez que l'ID du produit Yotpo est le même que le `product_id` qui sera extrait dynamiquement de Braze. Cette étape est obligatoire pour que l'intégration fonctionne. 
@@ -35,7 +35,7 @@ Pour trouver votre ID de produit Yotpo, procédez comme suit :
 3. Cliquez avec le bouton droit de la souris et sélectionnez **Inspecter**.
 4. Appuyez sur <kbd>Control</kbd> + <kbd>F</kbd> et recherchez `yotpo-main` dans le code. La variable `data-product ID` et sa valeur apparaissent dans la div Yotpo.
 
-![Inspectez et recherchez yotpo-main pour trouver la variable ID du produit de données]({% image_buster /assets/img/yotpo/image1.png %}).
+![Inspectez et recherchez la valeur yotpo-main pour trouver la variable data-product ID]({% image_buster /assets/img/yotpo/image1.png %})
 
 ## Intégration
 
@@ -71,7 +71,7 @@ The average rating for this product is:
 
 Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. Le site `product_id` sera tiré dynamiquement de Braze. Pour que l’intégration fonctionne, le `product_id` dans Braze doit correspondre à l’ID du produit dans Yotpo (généralement l’ID du produit parent du commerce en ligne).
 
-![Remplacez YOTPO-API-KEY par votre clé API de Yotpo Reviews]({% image_buster /assets/img/yotpo/image2.png %})
+![Remplacez YOTPO-API-KEY par votre clé API de Yotpo Reviews.]({% image_buster /assets/img/yotpo/image2.png %})
 
 ### Afficher un récent avis 5 étoiles sur un produit {#five-star-review}
 
@@ -96,7 +96,7 @@ Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. L
 
 Voici à quoi ressemblera l'extrait de code dans votre éditeur d'e-mail :
 
-![Exemple d'extrait de code de l'éditeur d'e-mail pour des avis 5 étoiles récents]({% image_buster /assets/img/yotpo/image3.png %})
+![Exemple d'extrait de code dans l'éditeur d'e-mail pour des avis 5 étoiles récents]({% image_buster /assets/img/yotpo/image3.png %})
 
 ### Afficher les CGU visuels par produit {#visual-ugc}
 
@@ -125,7 +125,7 @@ Remplacez `<YOTPO-API-KEY>` par votre clé API pour les commentaires de Yotpo. L
 
 L'extrait de code ressemblera à ceci :
 
-![Exemple d'éditeur d'e-mail montrant un extrait de code d'images publiées sur Yotpo]({% image_buster /assets/img/yotpo/image4.png %})
+![Exemple d'éditeur d'e-mail affichant un extrait de code d'images publiées sur Yotpo.]({% image_buster /assets/img/yotpo/image4.png %})
 
 ### Afficher le solde du programme de fidélité d'un client dans un e-mail {#loyalty-balance}
 
@@ -155,19 +155,19 @@ Remplacez `<YOTPO-LOYALTY-GUID>` et `<YOTPO-LOYALTY-API-KEY>` par vos identifian
 
 L'extrait de code ressemblera à ceci :
 
-![Exemple d'éditeur d'e-mail montrant un extrait de code de fidélité du client]({% image_buster /assets/img/yotpo/image5.png %})
+![Exemple d'éditeur d'e-mail affichant un extrait de code du solde du programme de fidélité du client]({% image_buster /assets/img/yotpo/image5.png %})
 
-## Foire aux Questions {#faq}
+## Questions fréquemment posées {#faq}
 
-#### Que se passe-t-il si je n'ai pas d'avis 5 étoiles ?
+### Que se passe-t-il si je n'ai pas d'avis 5 étoiles ?
 
 Si vous n'avez pas d'avis 5 étoiles (par exemple si la réponse de l'endpoint renvoie NULL pour l'avis 5 étoiles), aucun contenu ne sera affiché.
 
-#### Que faire si je n'ai pas d'image publiée pour un produit ?
+### Que faire si je n'ai pas d'image publiée pour un produit ?
 
 Si vous n'avez pas d'images pour un produit (par exemple si la réponse de l'endpoint renvoie NULL pour l'image du produit), aucun contenu ne sera affiché.
 
-#### Puis-je personnaliser l'apparence, ou extraire d'autres champs de données de Yotpo ?
+### Puis-je personnaliser l'apparence, ou extraire d'autres champs de données de Yotpo ?
 
 Oui ! Pour découvrir les autres points de données et les options de personnalisation disponibles, reportez-vous à la section [Effectuer un appel API]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). Pour ce faire, vous aurez peut-être besoin de l'aide d'un développeur.
 

@@ -41,7 +41,7 @@ Depois de configurar suas fontes com êxito, você precisará configurar a Braze
 
 No Segment, navegue até **Destinos** > **Braze** > **Configurar** **o** **Braze** > **Selecione sua fonte** > **Configuração**.
 
-![A página de configuração da fonte. Essa página inclui configurações para definir a estrutura de destino como "ações" ou "clássica" e definir o modo de conexão como "modo de nuvem" ou "modo de dispositivo".]({% image_buster /assets/img/segment/setup.png %})
+![A página de configuração da fonte. Esta página inclui configurações para definir a estrutura de destino como "ações" ou "clássica" e definir o modo de conexão como "modo de nuvem" ou "modo de dispositivo".]({% image_buster /assets/img/segment/setup.png %})
 
 Você pode integrar o código-fonte da Web da Segment (Analytics.js) e as bibliotecas nativas do lado do cliente com a Braze usando uma integração lado a lado (modo dispositivo) ou uma integração servidor a servidor (modo nuvem).
 
@@ -76,16 +76,16 @@ O código-fonte para a integração do modo de dispositivo Android é mantido pe
 <br>
 O Braze SDK a ser usado depende do Segment SDK que você usa:
 
-| | Segment SDK | Braze SDK |
+| | SDK de segmento | SDK do Braze |
 | - | ----------- | --------- |
-| Preferencialmente | [Análise de dados Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
-| Legacy | [Análise de dados - Android](https://github.com/segmentio/analytics-android) | [Braze Segment Android](https://github.com/braze-inc/braze-segment-android)
+| Preferenciais | [Análise de dados - Kotlin](https://github.com/segmentio/analytics-kotlin) | [Braze Segment Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
+| Legado | [Análise de dados para Android](https://github.com/segmentio/analytics-android) | [Braze Segment Android](https://github.com/braze-inc/braze-segment-android) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
 {% endalert %}
 
-Para configurar o Braze como um destino de modo de dispositivo para sua origem Android, escolha **Actions (Ações** ) como a **estrutura Destination**(Destino) e selecione **Save (Salvar)**. 
+Para configurar o Braze como um destino de modo de dispositivo para sua origem Android, escolha **Actions (Ações** ) como a **estrutura Destination**(Destino) e, em seguida, selecione **Save (Salvar)**. 
 
 Para concluir a integração lado a lado, consulte as instruções detalhadas da Segment para adicionar a dependência de destino do Braze ao seu app para [Android](https://segment.com/docs/connections/sources/catalog/libraries/mobile/kotlin-android/destination-plugins/braze-kotlin-android/).
 
@@ -100,10 +100,10 @@ O código-fonte para a integração do modo de dispositivo iOS é mantido pelo B
 <br>
 O Braze SDK a ser usado depende do Segment SDK que você usa:
 
-| | Segment SDK | Braze SDK |
+| | SDK de segmento | SDK do Braze |
 | - | ----------- | --------- |
-| Preferencial | [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Braze Segment Swift](https://github.com/braze-inc/braze-segment-swift) |
-| Legacy | [Análise de dados iOS](https://github.com/segmentio/analytics-ios) | [Braze Segment iOS](https://github.com/Appboy/appboy-segment-ios) |
+| Preferenciais | [Análise de dados-Swift](https://github.com/segmentio/analytics-swift) | [Segmento de Braze Swift](https://github.com/braze-inc/braze-segment-swift) |
+| Legado | [Análise de dados-iOS](https://github.com/segmentio/analytics-ios) | [Segmento Braze iOS](https://github.com/Appboy/appboy-segment-ios) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endalert %}
 
@@ -114,7 +114,7 @@ Para concluir a integração lado a lado, consulte as instruções detalhadas do
 O código-fonte da integração [do modo de dispositivo iOS](https://github.com/braze-inc/braze-segment-swift) é mantido pela Braze e é atualizado regularmente para refletir as novas versões do Braze SDK.
 
 {% endtab %}
-{% tab Web ou JavaScript %}
+{% tab Web or JavaScript %}
 
 A estrutura do Braze Web Mode (Actions) da Segment é recomendada para configurar o Braze como um destino de modo de dispositivo para sua fonte da Web. 
 
@@ -145,7 +145,7 @@ Para configurar o Braze como um destino de modo de dispositivo para cada origem,
 
 Também chamada de modo de nuvem, essa integração encaminha dados do Segment para as APIs REST do Braze. Use a estrutura [do Braze Cloud Mode (Actions)](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/) do Segment para configurar um destino em modo de nuvem para qualquer uma de suas origens. 
 
-Ao contrário da integração lado a lado, a integração servidor a servidor não oferece suporte aos recursos da interface do usuário do Braze, como envio de mensagens no app, cartões de conteúdo ou registro automático de token por push. Também existem dados [capturados automaticamente]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection) (como usuários anônimos e campos no nível do dispositivo) que não estão disponíveis no modo de nuvem.
+Diferentemente da integração lado a lado, a integração servidor a servidor não oferece suporte aos recursos da interface do usuário do Braze, como envio de mensagens no app, cartões de conteúdo ou registro automático de token por push. Também existem dados [capturados automaticamente]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection) (como usuários anônimos e campos no nível do dispositivo) que não estão disponíveis no modo de nuvem.
 
 Se quiser usar esses dados e recursos, considere adotar a integração lado a lado (modo de dispositivo) do SDK.
 
@@ -156,7 +156,7 @@ O código-fonte do [destino Braze Cloud Mode (Actions)](https://github.com/segme
 Defina as configurações para seu destino. Nem todas as configurações se aplicarão a todos os tipos de destinos.
 
 {% tabs local %}
-{% tab Modo de dispositivo móvel %}
+{% tab Mobile Device-Mode %}
 
 | Configuração | Descrição |
 | ------- | ----------- |
@@ -167,7 +167,7 @@ Defina as configurações para seu destino. Nem todas as configurações se apli
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Modo de dispositivo da Web %}
+{% tab Web Device-Mode %}
 
 | Configuração | Descrição |
 | ------- | ----------- |
@@ -197,11 +197,11 @@ Defina as configurações para seu destino. Nem todas as configurações se apli
 | Rastreamento de todas as páginas | **Somente modo de dispositivo Web de destino clássico (manutenção)**<br><br>A Segment recomenda a migração para o destino da estrutura do Web Actions, onde essa configuração pode ser [ativada por meio de mapeamentos](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>Isso enviará todas as [chamadas de página](https://segment.com/docs/spec/page/) para o Braze como um evento "Loaded/Viewed a Page" (Carregado/Visualizado uma página). |
 | Rastrear apenas páginas nomeadas | **Somente modo de dispositivo Web de destino clássico (manutenção)**<br><br>A Segment recomenda a migração para o destino da estrutura do Web Actions, onde essa configuração pode ser [ativada por meio de mapeamentos](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>Isso enviará apenas chamadas de página para o Braze com um nome associado a elas. |
 | Registre a compra quando a receita estiver presente | **Somente modo de dispositivo Web de destino clássico (manutenção)**<br><br>A Segment recomenda a migração para o destino da estrutura do Web Actions, onde essa configuração pode ser [ativada por meio de mapeamentos](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>Quando essa opção estiver ativada, todas as chamadas de rastreamento com a propriedade de receita dispararão um evento de compra. | 
-| Rastrear apenas usuários conhecidos | **Somente modo de dispositivo Web de destino clássico (manutenção)**<br><br>A Segment recomenda a migração para o destino Web Actions Framework, onde essa configuração pode ser ativada por meio de mapeamentos.<br><br>Se ativada, essa nova configuração posterga a chamada de `window.appboy.initialize` até que haja um `userId` válido. | 
+| Rastrear apenas usuários conhecidos | **Somente modo de dispositivo Web de destino clássico (manutenção)**<br><br>A Segment recomenda a migração para o destino Web Actions Framework, onde essa configuração pode ser ativada por meio de mapeamentos.<br><br>Se ativada, essa nova configuração posterga a chamada de `window.braze.initialize` até que haja um `userId` válido. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Modo de nuvem %}
+{% tab Cloud-Mode %}
 
 | Configuração | Descrição |
 | ------- | ----------- |
@@ -239,7 +239,7 @@ Você pode ativar a criação de lotes para uma ação em Braze Destination > **
 
 
 {% tabs local %}
-{% tab Identificar %}
+{% tab Identify %}
 #### Identificar
 
 A chamada [Identify](https://segment.com/docs/spec/identify/) permite vincular um usuário às suas ações e registrar atribuições sobre ele. 
@@ -349,12 +349,12 @@ Todas as outras características serão registradas como [atributos personalizad
 Nos destinos [Ações do Modo Web](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile) e [Ações do Modo Nuvem](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile), os mapeamentos acima podem ser definidos usando a Ação Atualizar Perfil de Usuário.
 
 {% alert important %}
-Ao passar os dados de usuários, verifique se só passa valores para atributos que foram alterados desde a última atualização. Isso garante que você não consuma desnecessariamente pontos da sua cota de dados. Para fontes do lado do cliente, use a ferramenta [middleware](https://github.com/segmentio/segment-braze-mobile-middleware) de código aberto da Segment para otimizar sua integração e limitar o uso de pontos de dados, eliminando chamadas `identify()` da Segment. 
+Ao passar os dados de usuários, verifique se só passa valores para atributos que foram alterados desde a última atualização. Isso garantirá que não registre pontos de dados desnecessariamente. Para fontes do lado do cliente, use a ferramenta [middleware](https://github.com/segmentio/segment-braze-mobile-middleware) de código aberto da Segment para otimizar sua integração e limitar o uso de pontos de dados, eliminando chamadas `identify()` da Segment. 
 
 {% endalert %}
 {% endtab %}
 
-{% tab Rastrear %}
+{% tab Track %}
 #### Rastreamento
 
 Quando rastrear um evento, registraremos esse evento como um [evento personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) usando o nome fornecido. 
@@ -378,7 +378,7 @@ Nos destinos [Web Mode Actions](https://segment.com/docs/connections/destination
 
 {% endtab %}
 
-{% tab Página %}
+{% tab Page %}
 #### Página {#page}
 
 A chamada [Page](https://segment.com/docs/spec/page/) permite registrar sempre que um usuário vê uma página do seu site, juntamente com quaisquer propriedades opcionais sobre a página.
@@ -418,15 +418,15 @@ O Segment se conectará ao nosso [endpoint`/users/track` ]({{site.baseurl}}/api/
 Todos os identificadores compatíveis com o destino das ações do modo de nuvem são compatíveis como parte das repetições de segmentos.
 {% endalert %}
 
-## Práticas recomendadas
+## Melhores práticas
 
-{% details Analise os casos de uso para evitar excedentes de dados. %}
+{% details Review use cases to avoid data overages. %}
 
 O Segment **não** limita o número de elementos de dados que os clientes enviam para ele. O segmento permite que você envie todos ou decida quais eventos serão enviados ao Braze. Em vez de enviar todos os seus eventos usando o Segment, sugerimos que você analise os casos de uso com suas equipes de marketing e editorial para determinar quais eventos serão enviados ao Braze para evitar excedentes de dados.
 
 {% enddetails %}
 
-{% details Entenda a diferença entre o ponto de extremidade da API personalizada e o ponto de extremidade da API REST personalizada nas configurações de destino do modo de dispositivo móvel. %}
+{% details Understand the difference between the custom API endpoint and the custom REST API endpoint in the Mobile Device Mode destination settings. %}
 
 | Terminologia do Braze | Segmento equivalente |
 | ----------------- | ------------------ |
@@ -437,7 +437,7 @@ O Segment **não** limita o número de elementos de dados que os clientes enviam
 Seu endpoint da Braze API (chamado de "Custom API Endpoint" na Segment) é o endpoint de SDK que a Braze configura para seu SDK (por exemplo, `sdk.iad-03.braze.com`). Seu endpoint da API REST da Braze (chamado de "Custom REST API Endpoint" na Segment) é o endpoint da REST API (por exemplo, `https://rest.iad-03.braze.com`)
 {% enddetails %}
 
-{% details Verifique se o ponto de extremidade da API personalizada foi inserido corretamente nas configurações de destinos do modo dispositivo móvel. %}
+{% details Ensure your custom API endpoint is correctly input into the mobile device mode destination settings. %}
 
 | Terminologia do Braze | Segmento equivalente |
 | ----------------- | ------------------ |
@@ -449,7 +449,7 @@ Seu endpoint da Braze API (chamado de "Custom API Endpoint" na Segment) é o end
 
 {% enddetails %}
 
-{% details Nuances do mapeamento de dados. %}
+{% details Data mapping nuances. %}
 
 Cenários em que os dados não serão transmitidos conforme o esperado:
 
@@ -466,7 +466,7 @@ Cenários em que os dados não serão transmitidos conforme o esperado:
 
 {% enddetails %}
 
-{% details Personalização da inicialização do Braze. %}
+{% details Customization of Braze initialization. %}
 
 Há várias maneiras diferentes de personalizar o Braze: push, mensagens no app, cartões de conteúdo e inicialização. Com uma integração lado a lado, você ainda pode personalizar o push, as mensagens no app e os cartões de conteúdo, como faria com uma integração direta do Braze.
 
@@ -476,7 +476,7 @@ No entanto, personalizar quando o Braze SDK é integrado ou especificar as confi
 
 {% details Sending deltas to Braze. %}
 
-Ao passar os dados de usuários, verifique se só passa valores para atributos que foram alterados desde a última atualização. Isso garante que você não consuma desnecessariamente pontos da sua cota de dados. Para fontes do lado do cliente, use a ferramenta [middleware](https://github.com/segmentio/segment-braze-mobile-middleware) de código aberto da Segment para otimizar sua integração e limitar o uso de pontos de dados, eliminando chamadas `identify()` da Segment. 
+Ao passar os dados de usuários, verifique se só passa valores para atributos que foram alterados desde a última atualização. Isso evitará o registro de pontos de dados desnecessários. Para fontes do lado do cliente, use a ferramenta [middleware](https://github.com/segmentio/segment-braze-mobile-middleware) de código aberto da Segment para otimizar sua integração e limitar o uso de pontos de dados, eliminando chamadas `identify()` da Segment.
 
 {% enddetails %}
 

@@ -14,9 +14,9 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Externe IDs en
 /users/external_ids/remove
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um die alten, veralteten externen IDs Ihrer Nutzer:innen zu entfernen. 
+> Verwenden Sie diesen Endpunkt, um die alten, veralteten externen IDs Ihrer Nutzer:innen zu entfernen.
 
-Sie können bis zu 50 externe IDs pro Anfrage senden. 
+Sie können bis zu 50 externe IDs pro Anfrage senden.
 
 {% alert warning %}
 Dieser Endpunkt löscht die veraltete ID vollständig und kann nicht rückgängig gemacht werden. Wenn Sie diesen Endpunkt verwenden, um veraltete `external_ids` zu entfernen, die noch mit Nutzern:innen in Ihrem System verbunden sind, können Sie die Daten dieser Nutzer:innen nicht mehr finden.

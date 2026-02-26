@@ -16,7 +16,7 @@ search_tag: Partner
 La integración de Braze y Tealium aprovecha los perfiles de visitantes de AudienceStream. Los comportamientos compartidos segmentan estos perfiles para crear conjuntos de visitantes con rasgos comunes, conocidos como audiencias. Estas audiencias pueden ayudar a alimentar tu stack tecnológico de marketing en tiempo real mediante conectores. 
 
 {% alert important %}
-Tealium AudienceStreams y EventStreams ofrecen acciones de conector por lotes y no por lotes. El conector no por lotes debe utilizarse cuando las solicitudes en tiempo real sean importantes para el caso de uso y no haya preocupación por superar las especificaciones del límite de velocidad de la API de Braze. Ponte en contacto con [el soporte de]({{site.baseurl}}/braze_support/) Braze o con tu administrador del éxito del cliente si tienes alguna pregunta.
+Tealium AudienceStreams y EventStreams ofrecen acciones de conector por lotes y no por lotes. El conector no por lotes debe utilizarse cuando las solicitudes en tiempo real sean importantes para el caso de uso y no haya preocupación por incumplir las especificaciones del límite de velocidad de la API de Braze. Ponte en contacto con [el soporte de]({{site.baseurl}}/braze_support/) Braze o con tu administrador del éxito del cliente si tienes alguna pregunta.
 {% endalert %}
 
 ## Requisitos previos
@@ -68,7 +68,7 @@ Las señales son atributos especiales de los visitantes que representan patrones
 #### Ejemplo de atributo y señal
 
 {% tabs local %}
-{% tab Atributo %}
+{% tab Attribute %}
 
 Crea un atributo de visitante "Valor de duración del pedido" que calcule el importe acumulado gastado (`order_total`) por el cliente para todos los pedidos completados (evento de compra). Para configurar el valor de duración del pedido en tu cuenta de Tealium, sigue las siguientes instrucciones:
 
@@ -85,7 +85,7 @@ Crea un atributo de visitante "Valor de duración del pedido" que calcule el imp
 Ahora, todos los clientes tendrán un atributo de valor de duración del pedido vinculado a ellos.
 
 {% endtab %}
-{% tab Señal %}
+{% tab Badge %}
 
 Puedes crear señales que te ayuden a clasificar y dirigirte a tus usuarios por determinados atributos que comparten. En el siguiente ejemplo, creamos una señal VIP para usuarios con un "Valor de pedido de por vida" superior a 500 $.
 
@@ -129,7 +129,7 @@ A continuación, aparecerá un diálogo de **Configuración**. Selecciona **Aña
 
 ![]({% image_buster /assets/img/tealium/create_configuration.png %}){: style="max-width:70%;"}
 
-Si ya has creado antes un conector, puedes utilizar opcionalmente uno existente de la lista de conectores disponibles y modificarlo para adaptarlo a tus necesidades con el icono del lápiz o eliminarlo con el icono de la papelera. 
+Si ya ha creado un conector anteriormente, puede utilizar uno existente de la lista de conectores disponibles y modificarlo para adaptarlo a sus necesidades con el icono del lápiz o eliminarlo con el icono de la papelera. 
 
 Cuando hayas creado o seleccionado un conector para vincular esta audiencia, haz clic en Listo para continuar.
 
@@ -144,7 +144,7 @@ No todos los campos ofrecidos son obligatorios.
 {% endalert %}
 
 {% tabs local %}
-{% tab Usuario de seguimiento - Lote y no lote %}
+{% tab Track User - Batch and Non-Batch %}
 
 Esta acción le permite realizar un seguimiento de los atributos de usuario, evento y compra en una sola acción. Aunque la acción Seguir usuario es la misma para AudienceStream y EventStream, Tealium recomienda configurar los mapeados de atributos de usuario con acciones de AudienceStream y los mapeados de eventos y compras con acciones de EventStream.
 
@@ -164,7 +164,7 @@ Esta acción le permite realizar un seguimiento de los atributos de usuario, eve
 ![]({% image_buster /assets/img/tealium/track_user_example2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Eliminar usuario - No lote %}
+{% tab Delete User - Non-Batch %}
 
 Esta acción te permite eliminar usuarios del panel de Braze.
 
@@ -176,7 +176,7 @@ Esta acción te permite eliminar usuarios del panel de Braze.
 ![]({% image_buster /assets/img/tealium/track_user_delete2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Actualizar estado del grupo de suscripción del usuario - No por lotes %}
+{% tab Update User Subscription Group Status - Non-Batch %}
 Esta acción te permite añadir o eliminar usuarios de los grupos de suscripción por SMS o correo electrónico de Braze.
 
 | Parámetros | Descripción |

@@ -14,11 +14,11 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Externe IDs umbenen
 /users/external_ids/rename
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um die externen IDs Ihrer Nutzer:innen umzubenennen. 
+> Verwenden Sie diesen Endpunkt, um die externen IDs Ihrer Nutzer:innen umzubenennen.
 
-Sie können bis zu 50 Umbenennungsobjekte pro Anfrage senden. 
+Sie können bis zu 50 Umbenennungsobjekte pro Anfrage senden.
 
-Dieser Endpunkt legt eine neue (primäre) `external_id` für den Nutzer:innen fest und veraltet seine bestehende `external_id`. Das bedeutet, dass der Nutzer:innen durch einen der beiden `external_id` identifiziert werden kann, bis der veraltete Bezeichner entfernt wird. Mehrere externe IDs sind für eine Migration zulässig, so dass ältere Versionen Ihrer Apps, die das vorherige Namensschema für externe IDs verwenden, nicht beschädigt werden. 
+Dieser Endpunkt legt eine neue (primäre) `external_id` für den Nutzer:innen fest und veraltet seine bestehende `external_id`. Das bedeutet, dass der Nutzer:innen durch einen der beiden `external_id` identifiziert werden kann, bis der veraltete Bezeichner entfernt wird. Mehrere externe IDs sind für eine Migration zulässig, so dass ältere Versionen Ihrer Apps, die das frühere Namensschema für externe IDs verwenden, nicht beschädigt werden.
 
 Nachdem Ihr altes Namensschema nicht mehr verwendet wird, empfehlen wir dringend, veraltete externe IDs über den [Endpunkt `/users/external_ids/remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) zu entfernen.
 
@@ -99,7 +99,7 @@ Das Feld `message` gibt `success` für jede gültige Anfrage zurück. Spezifisch
 ## Häufig gestellte Fragen
 
 ### Hat dies Auswirkungen auf MAU?
-Nein, da die Anzahl der Nutzer:innen gleich bleibt, werden sie einfach eine neue `external_id` haben.
+Nein, denn die Anzahl der Nutzer:innen bleibt gleich, sie haben eine neue `external_id`.
 
 ### Hat sich das Verhalten der Nutzer:innen im Laufe der Zeit verändert?
 Nein, denn die Nutzer:innen sind immer noch dieselben, und ihr gesamtes historisches Verhalten ist immer noch mit ihnen verbunden.
@@ -107,8 +107,8 @@ Nein, denn die Nutzer:innen sind immer noch dieselben, und ihr gesamtes historis
 ### Kann es in Entwickler:in oder Staging Workspaces ausgeführt werden?
 Ja Wir empfehlen dringend, die Migration in einem Staging- oder Entwicklungs-Workspace zu testen und sicherzustellen, dass alles reibungslos funktioniert, bevor Sie die Migration mit den Produktionsdaten durchführen.
 
-### Werden dabei Datenpunkte verbraucht?
-Dieses Feature kostet keine Datenpunkte.
+### Werden damit Datenpunkte aufgezeichnet?
+Mit diesem Feature werden keine Datenpunkte protokolliert.
 
 ### Welcher Zeitraum wird für die Abschreibung empfohlen?
 Es gibt keine feste Grenze, wie lange Sie veraltete externe IDs beibehalten können, aber wir empfehlen dringend, sie zu entfernen, wenn es nicht mehr notwendig ist, Nutzer:innen mit der veralteten ID zu referenzieren.

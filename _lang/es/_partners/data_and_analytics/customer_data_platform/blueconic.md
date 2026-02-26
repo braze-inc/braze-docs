@@ -58,7 +58,7 @@ Para configurar la conexión entre BlueConic y Braze, debe añadir las credencia
 Una vez completada la autenticación, debe crear al menos un objetivo de importación o exportación, activar la conexión y programar o ejecutar la conexión.
 
 {% tabs %}
-{% tab Importar %}
+{% tab Import %}
 
 1. Seleccione **Importar datos a BlueConic** en el panel izquierdo para abrir la página de configuración de datos Braze.<br><br>
 2. Seleccione la ubicación de los datos en Braze. Aquí puede indicar a BlueConic dónde encontrar los datos a importar seleccionando su público Braze.<br>![La audiencia de BlueConic Braze configurada como "Usuarios de prueba de BlueConic".]({% image_buster /assets/img/blueconic/braze4.png %}){: style="max-width:80%;"}<br><br>
@@ -66,10 +66,10 @@ Una vez completada la autenticación, debe crear al menos un objetivo de importa
 4. A continuación, haga coincidir los campos de datos BlueConic que va a exportar con los campos Braze. Utilice los campos desplegables para seleccionar el identificador de perfil BlueConic o una propiedad de perfil a la izquierda y seleccione el identificador de perfil Braze correspondiente. A continuación, utilice el menú desplegable para especificar cómo debe añadirse el contenido importado a los valores existentes: añadido, sumado, establecido sólo si la propiedad del perfil está vacía o establecido a cero (si el campo Braze está vacío).<br>![]({% image_buster /assets/img/blueconic/braze6.png %}){: style="max-width:80%;"}<br><br>Utilice el botón **Añadir asignación** para crear líneas de asignación adicionales según sea necesario. Puede añadir varias líneas de asignación con la opción **Añadir campos restantes**. BlueConic detecta los campos Braze restantes y los empareja con las propiedades del perfil BlueConic. Puede establecer la estrategia de fusión para las importaciones (set, add, sum, set if empty o clear) y proporcionar un prefijo personalizado a los nombres de las propiedades del perfil BlueConic.<br><br>
 5. Por último, seleccione **Ejecutar la conexión** para iniciar la conexión. Visite [BlueConic](https://support.blueconic.com/hc/en-us/articles/205957522-Scheduling-Connections) para obtener más información sobre la programación y ejecución de conexiones.
 {% endtab %}
-{% tab Exportar %}
+{% tab Export %}
 
 1. Seleccione **Exportar datos a Braze** en el panel izquierdo para configurar su exportación de datos de BlueConic a Braze.<br><br>
-2. Elija un segmento BlueConic para la exportación. Sólo se exportarán los perfiles de este segmento con identificadores coincidentes en Braze.<br>![Un segmento BlueConic de 20 000 perfiles.]({% image_buster /assets/img/blueconic/braze8.png %}){: style="max-width:80%;"}<br><br>
+2. Elija un segmento BlueConic para la exportación. Sólo se exportarán los perfiles de este segmento con identificadores coincidentes en Braze.<br>![Un segmento BlueConic de 20.000 perfiles.]({% image_buster /assets/img/blueconic/braze8.png %}){: style="max-width:80%;"}<br><br>
 3. A continuación, vincule los identificadores entre los perfiles BlueConic y los campos Braze. Opcionalmente, puede dejar que BlueConic cree nuevos registros si no encuentra ninguna coincidencia.<br>![El campo "ID externo" de Braze está mapeado con el campo "ID externo" de BlueConic.]({% image_buster /assets/img/blueconic/braze7.png %}){: style="max-width:80%;"}<br><br>
 4. A continuación, haga coincidir los campos de datos BlueConic que va a exportar con los campos Braze. Utilice el menú desplegable del icono de BlueConic para elegir el tipo de [información](https://support.blueconic.com/hc/en-us/articles/4405501836955-Braze-Connection#creating-export-goals) que desea exportar. La información disponible incluye las propiedades del perfil, los identificadores de perfil de BlueConic, los segmentos asociados, todas las interacciones vistas, los niveles de permiso y un valor de texto estático.<br>![]({% image_buster /assets/img/blueconic/braze6.png %}){: style="max-width:80%;"}<br><br>
 5. Por último, haga clic en **Ejecutar la conexión** para iniciar la conexión. Visite [BlueConic](https://support.blueconic.com/hc/en-us/articles/205957522-Scheduling-Connections) para obtener más información sobre la programación y ejecución de conexiones.

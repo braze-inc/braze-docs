@@ -1,17 +1,16 @@
 # Braze MCP Server-Funktionen
 
-> Der Braze MCP Server stellt eine Reihe von schreibgeschützten API-Funktionen bereit, die auf bestimmte Braze REST API Endpunkte abgebildet werden. MCP-Clients wie Claude und Cursor können diese Funktionen aufrufen, um Daten abzurufen, ohne auf PII zuzugreifen oder Änderungen an Ihrem Workspace vorzunehmen. Weitere allgemeine Informationen finden Sie unter [Braze MCP Server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "Entwickler:in" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> Der Braze MCP Server stellt eine Reihe von schreibgeschützten API-Funktionen bereit, die auf bestimmte Braze REST API Endpunkte abgebildet werden. MCP-Clients wie Claude und Cursor können diese Funktionen aufrufen, um Daten abzurufen, ohne auf PII zuzugreifen oder Änderungen an Ihrem Workspace vorzunehmen. Für weitere allgemeine Informationen siehe [Braze MCP Server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## Voraussetzungen
 
-Bevor Sie dieses Feature nutzen können, müssen Sie [den Braze MCP Server einrichten]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "Entwickler:in" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
+Bevor Sie dieses Feature nutzen können, müssen Sie [den Braze MCP Server einrichten]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
 
 ## Verfügbare Braze API-Funktionen
 
-Dies sind die API-Funktionen, die Ihr MCP Client referenziert, um mit dem Braze MCP Server zu interagieren:
-
+Ihr MCP Client referenziert die folgenden API-Funktionen zur Interaktion mit dem Braze MCP Server:
 ### Allgemeine Funktionen
 
 | Funktion | Beschreibung |
@@ -77,7 +76,7 @@ Dies sind die API-Funktionen, die Ihr MCP Client referenziert, um mit dem Braze 
 |----------|----------|-------------|
 | `get_events_list` | [`/events/list`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events) | Exportieren Sie eine Liste der angepassten Events, die für Ihre App aufgezeichnet wurden. |
 | `get_events_data_series` | [`/events/data_series`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events_analytics) | Rufen Sie Zeitreihendaten für angepasste Events ab. |
-| `get_events` | [`/events`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events_data) | Erhalten Sie detaillierte Daten zu einem Ereignis mit Paginierung. |
+| `get_events` | [`/events`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events_data) | Holen Sie sich detaillierte Daten zu einem Ereignis mit Paginierung. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ### KPIs

@@ -42,24 +42,17 @@ Consultez [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master
 
 ### Étape 2 : Transférer les données de la carte de contenu depuis la couche native
 
-Pour recevoir les données dans la couche Dart à partir de l'étape 1, ajoutez le code suivant pour transférer les données de la carte de contenu des couches natives.
+{% alert note %}
+Cette étape est réservée à iOS. Les données de la carte de contenu sont automatiquement transférées depuis la couche Android.
+{% endalert %}
 
-{% tabs %}
-{% tab Android %}
-
-Les données de la carte de contenu sont automatiquement transférées depuis la couche Android.
-
-{% endtab %}
-{% tab iOS %}
+Pour recevoir les données dans la couche Dart de l'étape 1, ajoutez le code suivant pour transmettre les données de la carte de contenu depuis la couche native iOS.
 
 1. Implémentez `contentCards.subscribeToUpdates` pour vous abonner aux mises à jour des cartes de contenu comme décrit dans la documentation [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)).
 
 2. Votre implémentation de fonction de rappel `contentCards.subscribeToUpdates` doit appeler `BrazePlugin.processContentCards(contentCards)`.
 
 Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) dans notre exemple d'application.
-
-{% endtab %}
-{% endtabs %}
 
 #### Rejouer la fonction de rappel pour les cartes de contenu
 

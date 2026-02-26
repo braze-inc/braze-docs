@@ -11,7 +11,7 @@ platform:
   - React Native
 ---
 
-# Manage banner placements
+# Manage Banner placements
 
 > Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
@@ -19,13 +19,13 @@ platform:
 
 {% multi_lang_include banners/placement_requests.md %}
 
-## Creating a placement
+## Create a placement
 
 ### Prerequisites
 
 These are the minimum SDK versions needed to create Banner placements:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+{% multi_lang_include sdk_versions.md feature='banners' %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
@@ -121,7 +121,7 @@ If you insert Banners using the SDK methods in this guide, all analytics events 
 {% tabs %}
 {% tab Web %}
 {% subtabs %}
-{% subtab Javascript %}
+{% subtab JavaScript %}
 If you're using vanilla JavaScript with the Web Braze SDK, use [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) to listen for placement updates and then call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) to fetch them.
 
 ```javascript
@@ -504,9 +504,35 @@ Before you launch a Banner campaign, you can [send a test Banner]({{site.baseurl
 Test Banners are like any other banners, except they're removed at the next app session.
 {% endalert %}
 
-## Logging impressions
+## Log impressions
 
 Braze automatically logs impressions for Banners that are in view when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually.
+
+## Logging clicks
+
+The method used to log Banner clicks depends on how your Banner is rendered and where your click handler is located.
+
+### Standard Banner content (automatic)
+
+If you're using default, out-of-the-box SDK methods to insert Banners, and your Banner uses standard editor components (images, buttons, text), clicks are tracked automatically. The SDK attaches click listeners to these elements, and no additional code is needed.
+
+### Custom Code Blocks
+
+If your Banner uses the **Custom Code** editor block in the Braze dashboard, you must use `brazeBridge.logClick()` to log clicks from within that custom HTML. This applies even when using SDK methods to render the Banner, because the SDK cannot automatically attach listeners to elements inside your custom code.
+
+```html
+<button onclick="brazeBridge.logClick()">
+  Click me
+</button>
+```
+
+This is similar to the [JavaScript bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) used for HTML in-app messages. The `brazeBridge` provides a communication layer between the Banner's internal HTML and the parent Braze SDK.
+
+### Custom UI implementations (headless)
+
+If you're building a fully custom UI using the Banner's [custom properties](#custom-properties) rather than rendering the Banner HTML, you must manually log clicks (and impressions) from your application code. Because the SDK is not rendering the Banner, it has no way to automatically track interactions with your custom UI elements.
+
+Use the `logClick()` method on the Banner object.
 
 ## Dimensions and sizing
 
@@ -530,7 +556,7 @@ You'll need to [add custom properties]({{site.baseurl}}/user_guide/message_build
 
 {% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 reactnative:17.0.0 flutter:15.1.0 %}
 
-### Accessing custom properties
+### Access custom properties
 
 To access a banner's custom properties, use one of the following methods based on the property's type defined in the dashboard. If the key doesn't match a property of that type or does not exist, the method returns `null`.
 

@@ -47,7 +47,7 @@ Richten Sie eine aktionsbasierte Braze-to-Braze-Webhook-Kampagne ein, um die Tru
 ### Schritt 2: Zugriffstoken abrufen
 
 1. Verwenden Sie [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), um eine Anfrage an den [Authentifizierungs-Endpunkt von Trustpilot](https://documentation-apidocumentation.trustpilot.com/authentication?_gl=1*1hxojlc*_ga*MjEzMDkzNjQ5NS4xNzMxNjgxOTQ0*_ga_3TEL80JZSG*MTczNjU0MzY0Ny45LjAuMTczNjU0MzY0Ny4wLjAuMA..) zu stellen, um das Access Token abzurufen.
-2. Verwenden Sie den Grant-Typ **client_credentials** und geben Sie Ihren API-Schlüssel und Ihr Geheimnis in einen Connected-Content-Tag ein, um ein Token abzurufen. Die Connected-Content-Anfrage kann in den Anfrage-Header eingegeben werden. Der Connected-Content kann wie folgt aussehen:
+2. Verwenden Sie den **client_credentials** und geben Sie Ihren API-Schlüssel und Ihr Geheimnis in einen Tag für Connected-Content ein, um ein Token abzurufen. Die Connected-Content-Anfrage kann in den Anfrage-Header eingegeben werden. Der Connected-Content kann wie folgt aussehen:
   
 {% raw %}
 
@@ -87,7 +87,7 @@ Rufen Sie in Ihrer Braze-Kampagne einen Connected-Content-Aufruf auf, um Daten v
 ```
 {% endraw %}
 
-![Connected-Content in E-Mails unter Verwendung von Liquid zum Einziehen von Informationen.]({% image_buster /assets/img/trustpilot_connected_content_example.png %}){:style="max-width:38%;"}
+![Connected-Content in E-Mails mit Liquid, um Informationen einzuholen.]({% image_buster /assets/img/trustpilot_connected_content_example.png %}){:style="max-width:38%;"}
 
 Die Connected-Content-Anfrage gibt die Produktbewertungen zurück.
 
@@ -117,4 +117,4 @@ Die Connected-Content-Anfrage gibt die Produktbewertungen zurück.
 {: start="2"}
 2\. Verwenden Sie die Liquid-Syntax, um die relevanten Inhalte in Ihre Nachricht zu ziehen. Um zum Beispiel den Inhalt der Produktbewertung einzubinden, verwenden Sie den Liquid-Tag {% raw %}`{{result.productReviews[0].content}}`{% endraw %}.
 
-![Personalisierte E-Mail mit einer Bewertung eines Spielzeug-LKWs, den die Nutzer:innen in ihrem Warenkorb gelassen haben.]({% image_buster /assets/img/trustpilot_personalized_email.png %}){:style="max-width:38%;"}
+![Personalisierte E-Mail mit einer Bewertung eines Spielzeugautos, das die Nutzer:innen in ihrem Warenkorb gelassen haben.]({% image_buster /assets/img/trustpilot_personalized_email.png %}){:style="max-width:38%;"}

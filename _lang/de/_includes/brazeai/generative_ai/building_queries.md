@@ -10,7 +10,7 @@ Sie benötigen die [Berechtigung "PII anzeigen"]({{site.baseurl}}/user_guide/adm
 
 Um eine neue Abfrage zu erstellen, gehen Sie zu **Analytics** > **Query Builder** und wählen Sie dann **SQL-Abfrage erstellen**.
 
-![Die Optionen "Abfrage-Template" und "SQL-Editor", die sich im Dropdown-Menü "SQL-Abfrage erstellen" befinden.]({% image_buster /assets/img_archive/create_sql_query_button.png %}){: style="max-width:60%;"}
+![Die Optionen "Query Template" und "SQL Editor" im Dropdown-Menü "SQL-Abfrage erstellen".]({% image_buster /assets/img_archive/create_sql_query_button.png %}){: style="max-width:60%;"}
 
 Wenn Sie Inspiration oder Hilfe bei der Gestaltung Ihrer Anfrage benötigen, wählen Sie **Abfragevorlage** und wählen Sie eine [vorgefertigte Vorlage]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/) aus. Um mit einer leeren Abfrage zu beginnen, wählen Sie **SQL Editor**.
 
@@ -23,7 +23,7 @@ Ihr Bericht erhält automatisch einen Namen mit dem aktuellen Datum und der Uhrz
 Bei der Erstellung Ihrer Abfrage können Sie sich von der KI helfen lassen oder sie selbst erstellen.
 
 {% tabs local %}
-{% tab BrazeAI verwenden %}
+{% tab Using BrazeAI %}
 Der Abfrage-Builder mit KI nutzt [GPT](https://openai.com/gpt-4) von OpenAI, um SQL für Ihre Abfrage zu empfehlen. So erzeugen Sie SQL per KI im Abfrage-Builder:
 
 1. Wenn Sie einen Bericht im Abfrage-Builder erstellt haben, wählen Sie den Tab **Abfrage-Builder mit KI**.
@@ -41,7 +41,7 @@ Der Abfrage-Builder mit KI nutzt [GPT](https://openai.com/gpt-4) von OpenAI, um 
 \##{% multi_lang_include brazeai/generative_ai/policy.md %}
 {% endtab %}
 
-{% tab Auf eigene Faust %}
+{% tab On My Own %}
 Schreiben Sie Ihre SQL-Abfrage mit der [Snowflake-Syntax](https://docs.snowflake.com/en/sql-reference). In der [Tabellenreferenz]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) finden Sie eine vollständige Liste der Tabellen und Spalten, die abgefragt werden können.
 
 Um Tabellendetails im Query Builder anzuzeigen:
@@ -100,7 +100,7 @@ Wenn Sie mit der Erstellung Ihrer Abfrage fertig sind, wählen Sie **Abfrage aus
 
 Um den CSV-Bericht herunterzuladen, wählen Sie **Exportieren**.
 
-![Der Abfrage-Builder zeigt die Ergebnisse zur Template-Abfrage "Engagement und Umsatz auf diesem Kanal in den letzten 30 Tagen".]({% image_buster /assets/img_archive/query_builder.png %})
+![Query Builder zeigt die Ergebnisse für die Template-Abfrage "Engagement und Umsatz des Kanals in den letzten 30 Tagen".]({% image_buster /assets/img_archive/query_builder.png %})
 
 {% alert important %}
 Jeder Bericht kann nur einmal pro Tag Ergebnisse liefern. Wenn Sie denselben Bericht mehrmals an einem Kalendertag ausführen, sehen Sie in jedem Bericht dieselben Ergebnisse.
@@ -128,6 +128,6 @@ Der Verbrauch hängt von der Laufzeit Ihrer SQL-Anfrage ab. Je länger die Laufz
 
 Credits werden beim Schreiben, Bearbeiten oder Speichern von Berichten im Braze SQL-Editor nicht verwendet. Ihr Guthaben wird am ersten eines jeden Monats um 12 Uhr UTC auf 5 zurückgesetzt. Sie können den Verbrauch Ihres monatlichen Guthabens oben im Abfrage-Builder-Seite kontrollieren.
 
-![Query Builder zeigt die Höhe der im aktuellen Monat verbrauchten Guthaben an.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%;"}
+![Der Abfrage-Builder zeigt das im laufenden Monat verbrauchte Guthaben an.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%;"}
 
 Wenn Sie Ihr Guthaben aufgebraucht haben, können Sie keine Abfragen mehr ausführen, aber weiterhin SQL-Berichte erstellen, bearbeiten und speichern. Wenn Sie weitere Kontingente für den Abfrage-Builder erwerben möchten, wenden Sie sich bitte an Ihren Account Manager.

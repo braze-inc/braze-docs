@@ -5,14 +5,14 @@
 - `dispatch_id`: Braze가 각 메시지에 대해 자동으로 생성하는 고유 ID입니다.
 - `external_send_id`: 업데이트를 내부 시스템과 일치시키기 위해 제공하는 사용자 정의 식별자, 예를 들어 주문 번호와 같은 것입니다.
 
-예를 들어, 주문 확인 이메일을 보낼 때 요청에 `external_send_id: 1234`을 포함하면, 해당 이메일에 대한 모든 후속 이벤트 포스트백—예: `Sent` 또는 `Delivered`—은 `external_send_id: 1234`를 포함합니다. 이렇게 하면 주문 #1234의 고객이 주문 확인 이메일을 받았는지 확인할 수 있습니다.
+예를 들어, 주문 확인 이메일을 보낼 때 요청에 `external_send_id: 1234`을 포함하면, 해당 이메일에 대한 모든 후속 이벤트 포스트백—예: `Sent` 또는 `Delivered`—은 `external_send_id: 1234`를 포함합니다. 이를 통해 주문 #1234의 고객이 주문 확인 이메일을 받았는지 확인할 수 있습니다.
 
 ### 포스트백 설정하기
 
 Braze 대시보드에서:
 
 1. Go to **Settings** > **Email Preferences**.
-2. **거래 이벤트 상태 포스트백** 아래에서, Braze가 거래 이메일의 상태 업데이트를 보낼 URL을 입력합니다.
+2. **거래 이벤트 상태 포스트백** 아래에서, Braze가 거래 이메일에 대한 상태 업데이트를 보낼 URL을 입력합니다.
 3. 포스트백을 테스트합니다.
 
 ![]({% image_buster /assets/img/transactional_webhook_url.png %})

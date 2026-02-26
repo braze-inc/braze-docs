@@ -1,6 +1,6 @@
 ---
 nav_title: Rápido
-article: Quikly
+article_title: Rápido
 layout: redirect
 redirect_to: /docs/partners/quikly/
 ---

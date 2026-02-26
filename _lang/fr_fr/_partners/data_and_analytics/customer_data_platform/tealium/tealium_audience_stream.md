@@ -68,7 +68,7 @@ Les badges sont des attributs spéciaux des visiteurs qui représentent des mod�
 #### Exemple d'attribut et de badge
 
 {% tabs local %}
-{% tab Attribut %}
+{% tab Attribute %}
 
 Créez un attribut visiteur "Lifetime Order Value" qui calcule le montant cumulé dépensé (`order_total`) par le client pour toutes les commandes passées (événement d'achat). Pour définir la valeur vie client dans votre compte Tealium, suivez les instructions ci-dessous :
 
@@ -125,11 +125,11 @@ Dans la boîte de dialogue **Source** qui s'affiche, sélectionnez l'audience qu
 
 #### Configuration
 
-Une boîte de dialogue de **configuration** apparaît ensuite. Sélectionnez **Ajouter un connecteur** en bas de la page. Nommez votre connecteur et indiquez ici l’endpoint de l’API Braze et votre clé API REST Braze.
+Une boîte de dialogue de **configuration** apparaît ensuite. Sélectionnez **Ajouter un connecteur** en bas de la page. Nommez votre connecteur et fournissez votre endpoint API Braze et votre clé API REST Braze ici.
 
 ![]({% image_buster /assets/img/tealium/create_configuration.png %}){: style="max-width:70%;"}
 
-Si vous avez déjà créé un connecteur, vous pouvez utiliser un connecteur existant dans la liste des connecteurs disponibles et le modifier en fonction de vos besoins à l'aide de l'icône du crayon ou le supprimer à l'aide de l'icône de la corbeille. 
+Si vous avez déjà créé un connecteur, vous pouvez éventuellement utiliser un connecteur existant de la liste des connecteurs disponibles et le modifier pour répondre à vos besoins avec l'icône de crayon ou le supprimer avec l'icône de poubelle. 
 
 Après avoir créé ou sélectionné un connecteur pour relier cette audience, cliquez sur Terminé pour continuer.
 
@@ -144,7 +144,7 @@ Tous les champs proposés ne sont pas obligatoires.
 {% endalert %}
 
 {% tabs local %}
-{% tab Suivi des utilisateurs - lots et non-lots %}
+{% tab Track User - Batch and Non-Batch %}
 
 Cette action vous permet de suivre les attributs des utilisateurs, des événements et des achats en une seule action. Bien que l'action Suivre l'utilisateur soit la même pour AudienceStream et EventStream, Tealium recommande de définir des mappages d'attributs utilisateurs avec des actions AudienceStream et des mappages d'événements et d'achats avec les actions EventStream.
 
@@ -164,7 +164,7 @@ Cette action vous permet de suivre les attributs des utilisateurs, des événeme
 ![]({% image_buster /assets/img/tealium/track_user_example2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Suppression d'un utilisateur - hors lot %}
+{% tab Delete User - Non-Batch %}
 
 Cette action vous permet de supprimer des utilisateurs du tableau de bord de Braze.
 
@@ -176,7 +176,7 @@ Cette action vous permet de supprimer des utilisateurs du tableau de bord de Bra
 ![]({% image_buster /assets/img/tealium/track_user_delete2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Mise à jour du statut du groupe d'abonnement d'un utilisateur - Non-Batch %}
+{% tab Update User Subscription Group Status - Non-Batch %}
 Cette action vous permet d'ajouter ou de supprimer des utilisateurs des groupes d'abonnement SMS ou e-mail de Braze.
 
 | Paramètres | Descriptif |

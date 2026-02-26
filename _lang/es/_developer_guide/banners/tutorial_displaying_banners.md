@@ -11,13 +11,13 @@ layout: scrolly
 > Sigue el código de ejemplo de este tutorial para mostrar Banners utilizando su ID de colocación. Para más información general, consulta [Pancartas]({{site.baseurl}}/developer_guide/banners/).
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/banners/tutorial_displaying_banners.md %}
+{% endsdktab %}
 {% sdktab android %}
- developer_guide/android/banners/tutorial_displaying_banners.md %}
+{% multi_lang_include developer_guide/android/banners/tutorial_displaying_banners.md %}
 {% endsdktab %}
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/banners/tutorial_displaying_banners.md %}
-{% endsdktab %}
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/banners/tutorial_displaying_banners.md %}
 {% endsdktab %}
 {% endsdktabs %}

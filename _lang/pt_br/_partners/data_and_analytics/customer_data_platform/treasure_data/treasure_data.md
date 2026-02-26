@@ -23,7 +23,7 @@ A integração entre a Braze e o Treasure Data permite escrever os resultados do
 | --- | --- |
 | Conta do Treasure Data | É necessário ter uma [conta do Treasure Data](https://www.treasuredata.com/custom-demo/) para usar a parceria. |
 | Chave da API REST do Braze | Uma chave da API REST da Braze com as permissões `users.track`, `users.delete`, `users.alias.new` e `users.identify`.<br><br>Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Ponto de extremidade REST do Braze  | Sua URL de endpoint REST. Seu endpoint dependerá da [Braze URL para sua instância]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)). |
+| Ponto de extremidade REST do Braze  | Sua URL de endpoint REST. Seu endpoint dependerá da [Braze URL para sua instância]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Casos de uso
@@ -54,7 +54,7 @@ Em seguida, selecione **Export Results** (Exportar resultados) e selecione uma a
 
 Defina parâmetros adicionais de resultados de exportação, conforme descrito na [seção de personalização](#customization) a seguir. No seu conteúdo de integração de exportação, revise os parâmetros de integração.
 
-![A página "Export Results" (Exportar resultados). Nessa página, há campos para "mode", "track record type" e "pre-formatted fields" ("modo", "tipo de registro de rastreamento" e "campos pré-formatados"). Para este exemplo, "User-Track" e "Custom Events" estão definidos para esses campos, respectivamente.]({% image_buster /assets/img/treasure_data/braze_export_configuration.png %}){: style="max-width:80%;"}
+![A página "Export Results" (Exportar resultados). Nessa página, há campos para "mode", "track record type" e "pre-formatted fields" ("modo", "tipo de registro de rastreamento" e "campos pré-formatados"). Para este exemplo, "User-Track" (Rastreamento de usuário) e "Custom Events" (Eventos personalizados) são definidos para esses campos, respectivamente.]({% image_buster /assets/img/treasure_data/braze_export_configuration.png %}){: style="max-width:80%;"}
 
 Por fim, selecione **Done** (Concluído), execute sua consulta e valide se seus dados foram movidos para a Braze.
 

@@ -4,7 +4,7 @@ nav_title: ホーム
 article_title: Braze API ガイド
 layout: api_glossary
 glossary_top_header: "Braze API ガイド"
-glossary_top_text: "Braze には、ユーザーs の追跡、メッセージの送信、データのエクスポートなどを可能にする高パフォーマンス RESTなAPI が用意されています。ここでは、使用可能なBraze API エンドポイントとその用途について説明します。"
+glossary_top_text: "Braze には、ユーザー の追跡、メッセージの送信、データのエクスポートなどを可能にする高パフォーマンス RESTなAPI が用意されています。ここでは、使用可能なBraze API エンドポイントとその用途について説明します。"
 page_type: glossary
 description: "このランディングページには、利用可能なBraze APIエンドポイントとその用途が掲載されている。"
 glossary_tag_name: Endpoint Type

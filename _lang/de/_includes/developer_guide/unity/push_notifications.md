@@ -35,10 +35,10 @@ Unsere Lösung für automatische Push-Benachrichtigungen nutzt die Funktion Prov
 {% endalert %}
 {% endtab %}
 
-{% tab Amazon Gerät Messaging %}
+{% tab Amazon Device Messaging %}
 #### Schritt 1.1: Enablement von ADM
 
-1. Erstellen Sie ein Konto im [Amazon Apps & Games Entwickler:in Portal](https://developer.amazon.com/public), falls Sie dies noch nicht getan haben.
+1. Erstellen Sie ein Konto im [Amazon Apps & Games Developer Portal](https://developer.amazon.com/public), falls Sie dies noch nicht getan haben.
 2. Holen Sie sich die [OAuth-Zugangsdaten (Client-ID und Client-Geheimnis) und einen ADM-API-Schlüssel](https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials).
 3. Aktivieren Sie **Automatische ADM-Registrierung aktiviert** im Unity Braze-Konfigurationsfenster. 
   - Alternativ können Sie auch die folgende Zeile in Ihre `res/values/braze.xml` Datei einfügen, um die ADM Registrierung zu aktivieren:
@@ -81,7 +81,7 @@ Aktivieren Sie die Option **Push mit Braze integrieren**, um Benutzer automatisc
 
 Markieren Sie **Hintergrund-Push aktivieren**, wenn Sie `background mode` für Push-Benachrichtigungen aktivieren möchten. Dadurch kann das System Ihre Anwendung aus dem Zustand `suspended` aufwecken, wenn eine Push-Benachrichtigung eintrifft, so dass Ihre Anwendung als Reaktion auf die Push-Benachrichtigung Inhalte herunterladen kann. Das Aktivieren dieser Option ist für unsere Funktion zur Nachverfolgung von Deinstallationen erforderlich.
 
-![Der Unity-Editor zeigt die Konfigurationsoptionen von Braze an. In diesem Editor sind die Optionen "Unity iOS-Integration automatisieren", "Push mit Braze integrieren" und "Hintergrund-Push aktivieren" aktiviert.]({% image_buster /assets/img/unity/ios/unity_ios_enable_background.png %})
+![Der Unity-Editor zeigt die Konfigurationsoptionen von Braze an. In diesem Editor sind die Optionen "Unity iOS Integration automatisieren", "Push mit Braze integrieren" und "Push im Hintergrund aktivieren" aktiviert.]({% image_buster /assets/img/unity/ios/unity_ios_enable_background.png %})
 
 #### Schritt 2.4: Automatische Registrierung deaktivieren (optional)
 
@@ -90,10 +90,10 @@ Benutzer, die sich noch nicht für Push-Benachrichtigungen entschieden haben, we
 - Wenn **Vorläufige Autorisierung deaktivieren** unter iOS 12 oder höher nicht aktiviert ist, wird der Benutzer vorläufig (stillschweigend) für den Empfang von Quiet Push autorisiert. Wenn diese Option aktiviert ist, wird dem Nutzer der native Push-Prompt angezeigt.
 - Wenn Sie genau konfigurieren möchten, wann der Prompt zur Laufzeit angezeigt werden soll, deaktivieren Sie die automatische Registrierung im Braze-Konfigurationseditor und verwenden Sie stattdessen `AppboyBinding.PromptUserForPushPermissions()`.
 
-![Der Unity-Editor zeigt die Konfigurationsoptionen von Braze an. In diesem Editor sind die Optionen "Unity iOS-Integration automatisieren", "Push mit Braze integrieren" und "Automatische Push-Registrierung deaktivieren" aktiviert.]({% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %})
+![Der Unity-Editor zeigt die Konfigurationsoptionen von Braze an. In diesem Editor sind die Optionen "Unity iOS Integration automatisieren", "Push mit Braze integrieren" und "Automatische Push-Registrierung deaktivieren" aktiviert.]({% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %})
 {% endtab %}
 
-{% tab Amazon Gerät Messaging %}
+{% tab Amazon Device Messaging %}
 #### Schritt 2.1: `AndroidManifest.xml` aktualisieren
 
 Wenn Ihre App nicht über ein `AndroidManifest.xml` verfügt, können Sie das folgende Template als Vorlage verwenden. Wenn Sie bereits eine `AndroidManifest.xml` haben, stellen Sie sicher, dass die folgenden fehlenden Abschnitte zu Ihrer bestehenden `AndroidManifest.xml` hinzugefügt werden.
@@ -190,7 +190,7 @@ Der Listener für gelöschte Push-Benachrichtigungen wird ausgelöst, wenn ein B
 
 Im folgenden Beispiel wird das Spielobjekt `BrazeCallback` mit einer Callback-Methode namens `PushNotificationReceivedCallback`, `PushNotificationOpenedCallback` bzw. `PushNotificationDeletedCallback` implementiert.
 
-![Die Grafik des Implementierungsbeispiels zeigt die in den vorangegangenen Abschnitten erwähnten Konfigurationsoptionen von Braze sowie ein Code-Snippet in C#.]({% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %} "Beispiel für vollständigen Android-Listener")
+![Diese Beispielgrafik zur Implementierung zeigt die in den vorangegangenen Abschnitten erwähnten Braze-Konfigurationsoptionen und einen C# Code-Snippet.]({% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %} "Android Full Listener Example")
 
 ```csharp
 public class MainMenu : MonoBehaviour {
@@ -232,13 +232,13 @@ public class MainMenu : MonoBehaviour {
 
 Der Listener für Push-Empfang wird ausgelöst, wenn ein Nutzer eine Push-Benachrichtigung empfängt, während er die Anwendung aktiv nutzt (z. B. wenn sich die Anwendung im Vordergrund befindet). Legen Sie den Push-Empfangslistener im Braze-Konfigurationseditor fest. Wenn Sie den Spielobjekt-Listener zur Laufzeit konfigurieren müssen, verwenden Sie `AppboyBinding.ConfigureListener()` und geben Sie `BrazeUnityMessageType.PUSH_RECEIVED` an.
 
-![Der Unity-Editor zeigt die Konfigurationsoptionen von Braze an. In diesem Editor ist die Option "Listener für Push-Empfang einrichten" erweitert und der "Name des Spielobjekts" (AppBoyCallback) sowie der "Name der Callback-Methode" (PushNotificationReceivedCallback) sind angegeben.]({% image_buster /assets/img/unity/ios/unity_ios_push_received.png %})
+![Der Unity-Editor zeigt die Konfigurationsoptionen von Braze an. In diesem Editor wird die Option "Set Push Received Listener" erweitert und der "Name des Spielobjekts" (AppBoyCallback) und der "Name der Callback-Methode" (PushNotificationReceivedCallback) werden angegeben.]({% image_buster /assets/img/unity/ios/unity_ios_push_received.png %})
 
 #### Schritt 3.2: Enablement des Push-Öffnungs-Hörers
 
 Der Listener für Push-Öffnung wird ausgelöst, wenn ein Nutzer die App durch Klicken auf eine Push-Benachrichtigung startet. Um die Push-Nutzlast an Unity zu senden, legen Sie den Namen Ihres Spielobjekts und die Callback-Methode für den Listener für Push-Öffnung unter der Option **Listener für Push-Öffnung einrichten** fest:
 
-![Der Unity-Editor zeigt die Konfigurationsoptionen von Braze an. In diesem Editor ist die Option "Listener für Push-Öffnung einrichten" erweitert und der "Name des Spielobjekts" (AppBoyCallback) sowie der "Name der Callback-Methode" (PushNotificationOpenedCallback) sind angegeben.]({% image_buster /assets/img/unity/ios/unity_ios_push_opened.png %})
+![Der Unity-Editor zeigt die Konfigurationsoptionen von Braze an. In diesem Editor wird die Option "Set Push Received Listener" erweitert und der "Name des Spielobjekts" (AppBoyCallback) und der "Name der Callback-Methode" (PushNotificationOpenedCallback) werden angegeben.]({% image_buster /assets/img/unity/ios/unity_ios_push_opened.png %})
 
 Wenn Sie den Spielobjekt-Listener zur Laufzeit konfigurieren müssen, verwenden Sie `AppboyBinding.ConfigureListener()` und geben Sie `BrazeUnityMessageType.PUSH_OPENED` an.
 
@@ -246,7 +246,7 @@ Wenn Sie den Spielobjekt-Listener zur Laufzeit konfigurieren müssen, verwenden 
 
 Im folgenden Beispiel wird das Spielobjekt `AppboyCallback` mit einer Callback-Methode namens `PushNotificationReceivedCallback` bzw. `PushNotificationOpenedCallback` implementiert.
 
-![Die Grafik des Implementierungsbeispiels zeigt die in den vorangegangenen Abschnitten erwähnten Konfigurationsoptionen von Braze sowie ein Code-Snippet in C#.]({% image_buster /assets/img/unity/ios/unity_ios_appboy_callback.png %})
+![Diese Beispielgrafik zur Implementierung zeigt die in den vorangegangenen Abschnitten erwähnten Braze-Konfigurationsoptionen und einen C# Code-Snippet.]({% image_buster /assets/img/unity/ios/unity_ios_appboy_callback.png %})
 
 ```csharp
 public class MainMenu : MonoBehaviour {
@@ -275,7 +275,7 @@ public class MainMenu : MonoBehaviour {
 ```
 {% endtab %}
 
-{% tab Amazon Gerät Messaging %}
+{% tab Amazon Device Messaging %}
 Durch das Update Ihrer `AndroidManifest.xml` im [vorherigen Schritt](#unity_step-21-update-androidmanifestxml) wurden Push-Listener automatisch eingerichtet, als Sie die folgenden Zeilen hinzugefügt haben. Es ist also keine weitere Einrichtung erforderlich.
 
 ```xml
@@ -310,7 +310,7 @@ Um Ihrem Projekt Push-Symbole hinzuzufügen, erstellen Sie ein AAR-Plugin (Andro
 Um eine Kopie der Braze-Gerätetoken vom Betriebssystem zu erhalten, setzen Sie mit `AppboyBinding.SetPushTokenReceivedFromSystemDelegate()` einen Delegaten.
 {% endtab %}
 
-{% tab Amazon Gerät Messaging %}
+{% tab Amazon Device Messaging %}
 Zur Zeit gibt es keine optionalen Konfigurationen für ADM.
 {% endtab %}
 {% endtabs %}

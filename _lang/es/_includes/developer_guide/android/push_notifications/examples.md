@@ -12,7 +12,7 @@ Puedes utilizar la interfaz [`IBrazeNotificationFactory`](https://braze-inc.gith
 
 En esta sección, te asociarás con Búho Soberbio, el presentador de un nuevo programa de juegos en el que equipos de rescate de animales salvajes compiten para ver quién salva más búhos. Quieren aprovechar las notificaciones actualizadas en vivo en su aplicación Android, para poder mostrar el estado de un partido en curso y realizar actualizaciones dinámicas de la notificación en tiempo real.
 
-![La actualización en vivo que el Búho Soberbio quiere mostrar, muestra un partido en curso entre "Wild Bird Fund" y "Owl Rescue". Estamos en el cuarto cuarto y el marcador es 2-4 con OWL en cabeza.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
+![La actualización en vivo que el Búho Soberbio quiere mostrar, muestra un partido en curso entre "Wild Bird Fund" y "Owl Rescue". Estamos en el último cuarto y el marcador es 2-4, con OWL a la cabeza.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
 
 ### Paso 1: Añadir un diseño personalizado
 
@@ -30,7 +30,7 @@ Puedes añadir uno o varios diseños personalizados de notificación RemoteView 
 En cada archivo XML, crea un diseño personalizado. Superb Owl creó los siguientes diseños para sus diseños colapsados y expandidos de RemoteView:
 
 {% tabs local %}
-{% tab  Ejemplo: Diseño colapsado %}
+{% tab  Example: Collapsed layout %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -48,8 +48,8 @@ En cada archivo XML, crea un diseño personalizado. Superb Owl creó los siguien
 ```
 {% endtab %}
 
-{% tab Ejemplo: Diseño ampliado %}
-{% details Mostrar el código de muestra %}
+{% tab Example: Expanded layout %}
+{% details Show the sample code %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -139,7 +139,7 @@ En tu aplicación, crea un nuevo archivo llamado `MyCustomNotificationFactory.kt
 
 En el siguiente ejemplo, Superb Owl creó una fábrica de notificaciones personalizada para mostrar un diseño RemoteView para los partidos en curso. En el [siguiente paso](#android_step-3-map-custom-data), crearán un nuevo método llamado `getTeamInfo` para mapear los datos de un equipo a la actividad.
 
-{% details Mostrar el código de muestra %}
+{% details Show the sample code %}
 ```kotlin
 import android.app.Notification
 import android.widget.RemoteViews
@@ -302,7 +302,7 @@ Para actualizar la notificación existente de RemoteView con nuevos datos, modif
 
 ## Notificaciones push personalizadas
 
-Las notificaciones push pueden mostrar información específica del usuario dentro de una jerarquía de vistas personalizada. En el siguiente ejemplo, se utiliza un desencadenador API para enviar una notificación push personalizada a un usuario para que pueda realizar un seguimiento de su progreso actual tras completar una tarea específica en la aplicación.
+Las notificaciones push pueden mostrar información específica del usuario dentro de una jerarquía de vistas personalizada. En el siguiente ejemplo, se utiliza un desencadenador API para enviar una notificación push personalizada a un usuario para que pueda comprobar su progreso actual tras completar una tarea específica en la aplicación.
 
 ![Ejemplo de panel push personalizado]({% image_buster /assets/img/push_implementation_guide/android_push_custom_layout.png %}){: style="max-width:65%;border:0"}
 

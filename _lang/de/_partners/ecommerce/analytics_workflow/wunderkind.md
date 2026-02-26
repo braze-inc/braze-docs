@@ -27,7 +27,7 @@ Die Integration von Braze und Wunderkind ermöglicht es Ihnen, den Performance-L
 
 ## Integration
 
-Setzen Sie sich mit Ihrem WunderKind Team in Verbindung, um die Integration einzurichten. Sie werden aufgefordert, Ihre Braze ESP- oder API-Zugangsdaten anzugeben, damit Wunderkind E-Mails und Abo-Status über die API verschicken kann. 
+Kontaktieren Sie Ihr WunderKind Team, um die Integration einzurichten. Sie werden aufgefordert, Ihre Braze ESP- oder API-Zugangsdaten anzugeben, damit Wunderkind E-Mails und Abo-Status über die API verschicken kann. 
 
 Sobald die Verbindung hergestellt ist, wird Wunderkind:
 - Führen Sie erste Tests durch, um eine stabile Verbindung zu bestätigen und sicherzustellen, dass E-Mails von der Wunderkind-Seite an den ESP gesendet werden können. 

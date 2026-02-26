@@ -51,11 +51,11 @@ To set up MetaRouter for your Braze integration:
 
 In Enterprise MetaRouter, select **Integrations** > **New Integration** > **Braze**, then name your integration. Next enter your instance URL and API key, then select **Apply Changes**.
 
-![Adding Braze as an integration in MetaRouter.]({% image_buster /assets/img/metarouter/img1.png %}){: style="max-width:50%;"}
+![MetaRouter에 통합으로 Braze 추가.]({% image_buster /assets/img/metarouter/img1.png %}){: style="max-width:50%;"}
 
-### Step 2: Add event mapping
+### 2단계: Add event mapping
 
 Add event mapping for each identity output, then configure the events you want to send to Braze. When you're finished, select **Save as New Revision**.
 
-![Add event mapping for each of the identity outputs.]({% image_buster /assets/img/metarouter/img2.png %})
+![각 ID 출력에 대한 이벤트 매핑을 추가합니다.]({% image_buster /assets/img/metarouter/img2.png %})
 

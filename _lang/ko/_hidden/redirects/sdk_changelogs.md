@@ -1,6 +1,6 @@
 ---
-nav_title: SDK 변경 로그
+nav_title: 소프트웨어 개발 키트 체인지로그
 permalink: /sdk_changelogs/
 layout: redirect
-redirect_to: /docs/developer_guide/platform_integration_guides/sdk_changelogs/#sdk-changelogs
+redirect_to: /docs/developer_guide/changelogs/
 ---

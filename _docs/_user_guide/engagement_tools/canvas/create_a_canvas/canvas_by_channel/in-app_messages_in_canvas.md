@@ -135,7 +135,7 @@ Your first impression with a user is, perhaps, your most critical one. It can ma
     <td>Initial email that welcomes your users to a project, membership, or other onboarding program. <br><br>This is intended to drive users to your app to begin their onboarding.</td>
   </tr>
   <tr>
-    <td>Day 3–6 in-app message</td>
+    <td>Day 3-6 in-app message</td>
     <td>3 days after the user receives the previous step</td>
     <td>All from entry</td>
     <td>In-app message</td>

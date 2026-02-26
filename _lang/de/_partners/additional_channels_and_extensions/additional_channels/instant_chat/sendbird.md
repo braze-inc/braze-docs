@@ -71,7 +71,7 @@ Eine Sendbird ID muss als [angepasstes Attribut]({{site.baseurl}}/user_guide/dat
 
 ### Schritt 5: Richten Sie Ihr Webhook Template ein
 
-Gehen Sie in Braze unter **Templates und Medien** zu **Webhook-Vorlagen** und wählen Sie die **Sendbird Webhook-Vorlage**. Beachten Sie, dass dieses Template nur verfügbar ist, wenn Sie die Sendbird Notification Builder Erweiterung installiert haben.
+Gehen Sie in Braze unter **Templates & Medien** zu **Webhook-Vorlagen** und wählen Sie die **Sendbird Webhook-Vorlage**. Beachten Sie, dass dieses Template nur verfügbar ist, wenn Sie die Sendbird Notification Builder Erweiterung installiert haben.
 
 {% raw %}
 1. Geben Sie einen Template-Namen an und fügen Sie Teams und Tags nach Bedarf hinzu.
@@ -98,7 +98,7 @@ Gehen Sie in Braze unter **Templates und Medien** zu **Webhook-Vorlagen** und w�
 3. Wählen Sie das Webhook Template aus, das Sie oben erstellt haben. Es wird dringend empfohlen, den Realtime Endpunkt für Canvase zu verwenden.
 4. Passen Sie das Template an, indem Sie seine Variablen auf dem Tab **Verfassen** bearbeiten.
 
-## Anpassung
+## Customization
 
 ### Tracking der Zustellung und des Status der Öffnung
 

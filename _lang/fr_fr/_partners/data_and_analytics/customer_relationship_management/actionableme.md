@@ -56,7 +56,7 @@ Dans Braze, accédez à **Paramètres** > **Clés API**. Sélectionnez **Créer 
 
 Pour terminer l'intégration, vous devez fournir votre clé API REST et l'[URL de l'endpoint REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) à votre équipe d'exploitation actionable.me. actionable.me établira alors la connexion et vous contactera une fois la configuration terminée pour commencer à partager des informations.
 
-![La page actionable.me "ajouter une plate-forme" que l'équipe opérationnelle actionable.me configurera.]({% image_buster /assets/img/actionableme/image2.png %})
+![La page "ajouter une plateforme" actionable.me que l'équipe actionable.me configurera.]({% image_buster /assets/img/actionableme/image2.png %})
 
 ## Résolution des problèmes
 

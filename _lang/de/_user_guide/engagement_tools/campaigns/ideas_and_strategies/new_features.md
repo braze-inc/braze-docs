@@ -20,10 +20,10 @@ Kampagnen zum Feature-Bewusstsein sind eine großartige Möglichkeit, um Nutzer:
 
 Braze SDKs verfolgen automatisch die letzte App-Version eines Benutzers. Diese Versionen können in Filtern und Segmenten verwendet werden, um zu bestimmen, welche Benutzer eine Nachricht oder Kampagne erhalten sollen.
 
-\![Das Panel Targeting-Optionen im Schritt Nutzer:innen anvisieren im Workflow zur Erstellung der Kampagne. Der Abschnitt Zusätzliche Filter enthält den folgenden Filter "Neueste App-Versionsnummer für Android Stopwatch (Android) liegt unter 3.7.0 (134.0.0.0)".]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
+![Das Panel „Targeting-Optionen“ im Schritt „Targeting-Nutzer:innen“ im Workflow zur Kampagnenerstellung. Der Abschnitt Zusätzliche Filter enthält den folgenden Filter "Neueste App-Versionsnummer für Android Stopwatch (Android) liegt unter 3.7.0 (134.0.0.0)".]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
 
 {% alert note %}
-Es kann einige Zeit dauern, bis die aktuellen Versionen der Apps angezeigt werden. Die App-Version im Nutzerprofil wird aktualisiert, wenn die Informationen vom SDK erfasst werden, das sich darauf verlässt, wann Nutzer:innen ihre Apps öffnen. Wenn der Nutzer:innen die App nicht öffnet, wird die aktuelle Version nicht aktualisiert. <br><br> Diese Filter können auch nicht rückwirkend angewendet werden. Es ist gut, "größer als" oder "gleich" für aktuelle und zukünftige Versionen zu verwenden, aber die Verwendung von Filtern für frühere Versionen kann zu unerwartetem Verhalten führen.
+Es kann eine Weile dauern, bis die aktuellen Versionen der Apps angezeigt werden. Die App-Version im Nutzerprofil wird aktualisiert, wenn die Informationen vom SDK erfasst werden, das sich darauf verlässt, wann Nutzer:innen ihre Apps öffnen. Wenn der Nutzer:innen die App nicht öffnet, wird die aktuelle Version nicht aktualisiert. <br><br> Diese Filter können auch nicht rückwirkend angewendet werden. Es ist gut, "größer als" oder "gleich" für aktuelle und zukünftige Versionen zu verwenden, aber die Verwendung von Filtern für frühere Versionen kann zu unerwartetem Verhalten führen.
 {% endalert %}
 
 ### Versionsnummer der App

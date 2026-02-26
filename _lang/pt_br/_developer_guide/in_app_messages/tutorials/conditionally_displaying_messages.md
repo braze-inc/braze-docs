@@ -1,22 +1,89 @@
 ---
-nav_title: Exibindo mensagens condicionalmente
-article_title: "Tutorial: Exibindo mensagens no app condicionalmente"
+nav_title: Exibição condicional de mensagens
+article_title: "Tutorial: Exibição condicional de mensagens no app"
 description: ""
 page_order: 1
 layout: scrolly
 ---
 
-# Tutorial: Exibindo mensagens no app condicionalmente
+# Tutorial: Exibição condicional de mensagens no app
 
-> Siga o código de exemplo neste tutorial para exibir mensagens no app condicionalmente usando o SDK do Braze.
+> Siga o código de exemplo neste tutorial para exibir condicionalmente mensagens no app usando o SDK do Braze.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} No entanto, não é necessária nenhuma configuração adicional.
+
+## Exibição condicional de mensagens no app para a Web
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Web" %}
+
+{% scrolly %}
+
+```js file=index.js
+import * as braze from "@braze/web-sdk";
+// Remove any calls to `braze.automaticallyShowInAppMessages()`
+
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
+
+braze.subscribeToInAppMessage(function (message) {
+  if (
+    location.pathname === "/checkout" ||
+    document.getElementById("#checkout")
+  ) {
+    // do not show the message
+  } else {
+    braze.showInAppMessage(message);
+  }
+});
+```
+
+!!!etapa
+linhas-index.js=2
+
+#### 1\. Remover chamadas para `automaticallyShowInAppMessages()`
+
+Remova todas as chamadas para [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages)pois elas substituirão qualquer lógica personalizada que você implementar posteriormente.
+
+!!!etapa
+linhas-index.js=6
+
+#### 2\. Ativar a depuração (opcional)
+
+Para facilitar a solução de problemas durante o desenvolvimento, considere a possibilidade de ativar a depuração.
+
+!!!etapa
+Linhas -index.js=9-18
+
+#### 3\. Assine as atualizações de mensagens no app
+
+Registre um retorno de chamada com [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) para receber um `message` sempre que uma mensagem no app for disparada.
+
+!!!etapa
+linhas-index.js=10-13
+
+#### 4\. Criar lógica condicional
+
+Crie uma lógica personalizada para controlar quando as mensagens são exibidas. Neste exemplo, a lógica verifica se o URL contém `"checkout"` ou se existe um elemento `#checkout` na página.
+
+!!!etapa
+linhas-index.js=16
+
+#### 5\. Envio de mensagens com `showInAppMessage`
+
+Para exibir a mensagem, ligue para [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Se for omitido, a mensagem será ignorada.
+
+{% endscrolly %}
+{% endsdktab %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/prerequisites/android.md %} Você também precisará [ativar mensagens no app para Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} Você também precisará [ativar as mensagens no app para Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
-## Exibindo mensagens no app condicionalmente para Android
+## Exibição condicional de mensagens no app para Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Android" %}
 
 {% scrolly %}
 
@@ -69,49 +136,49 @@ class MyApplication : Application() {
 }
 ```
 
-!!etapa
+!!!etapa
 linhas-MainApplication.kt=17
 
-#### 1\. Ativar depuração (opcional)
+#### 1\. Ativar a depuração (opcional)
 
-Para facilitar a solução de problemas durante o desenvolvimento, considere ativar a depuração.
+Para facilitar a solução de problemas durante o desenvolvimento, considere a possibilidade de ativar a depuração.
 
-!!etapa
-linhas-MainApplication.kt=26-28
+!!!etapa
+Linhas -MainApplication.kt=26-28
 
 #### 2\. Registrar retornos de chamada do ciclo de vida da atividade
 
-Registre o ouvinte padrão do Braze para gerenciar o ciclo de vida da mensagem no app.
+Registre o ouvinte padrão do Braze para lidar com o ciclo de vida das mensagens no app.
 
-!!etapa
-linhas-MainApplication.kt=30-44
+!!!etapa
+Linhas -MainApplication.kt=30-44
 
-#### 3\. Configure um ouvinte de mensagem no app
+#### 3\. Configure um ouvinte de mensagens no app
 
-Use `BrazeInAppMessageManager` para definir um ouvinte personalizado que intercepta mensagens antes de serem exibidas.
+Use `BrazeInAppMessageManager` para definir um ouvinte personalizado que intercepta as mensagens antes de serem exibidas.
 
-!!etapa
-linhas-MainApplication.kt=34-42
+!!!etapa
+Linhas -MainApplication.kt=34-42
 
-#### 4\. Crie lógica condicional
+#### 4\. Criar lógica condicional
 
-Use lógica personalizada para controlar o tempo de exibição da mensagem. Neste exemplo, a lógica personalizada verifica se o extra `should_display_message` está definido como `"true"`.
+Use a lógica personalizada para controlar o tempo de exibição das mensagens. Neste exemplo, a lógica personalizada verifica se o extra `should_display_message` está definido como `"true"`.
 
-!!etapa
-linhas-MainApplication.kt=38,41
+!!!etapa
+Linhas -MainApplication.kt=38,41
 
-#### 5\. Retorne ou descarte a mensagem
+#### 5\. Retornar ou descartar a mensagem
 
-Retorne um `InAppMessageOperation` com `DISPLAY_NOW` para exibir a mensagem, ou com `DISCARD` para suprimir.
+Retorne um `InAppMessageOperation` com `DISPLAY_NOW` para exibir a mensagem ou com `DISCARD` para suprimi-la.
 
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Você também precisará [ativar mensagens in-app para SWIFT]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Você também precisará [ativar as mensagens no app para o Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
 
-## Exibindo condicionalmente mensagens in-app para SWIFT
+## Exibição condicional de mensagens no app para Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Swift" %}
 
 {% scrolly %}
 
@@ -167,100 +234,33 @@ struct SampleApp: App {
 }
 ```
 
-!!etapa
+!!!etapa
 linhas-AppDelegate.swift=5
 
-#### 1\. Implemente o `BrazeInAppMessageUIDelegate`
+#### 1\. Implementar o `BrazeInAppMessageUIDelegate`
 
-Na sua classe AppDelegate, implemente o [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate) para que você possa substituir seu método `inAppMessage` mais tarde.
+Em sua classe AppDelegate, implemente o método [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate) para que você possa substituir seu método `inAppMessage` posteriormente.
 
-!!etapa
+!!!etapa
 linhas-AppDelegate.swift=12
 
-#### 2\. Ativar depuração (opcional)
+#### 2\. Ativar a depuração (opcional)
 
-Para facilitar a solução de problemas durante o desenvolvimento, considere ativar a depuração.
+Para facilitar a solução de problemas durante o desenvolvimento, considere a possibilidade de ativar a depuração.
 
-!!etapa
-linhas-AppDelegate.swift=19-21
+!!!etapa
+Linhas -AppDelegate.swift=19-21
 
-#### 3\. Configure sua interface Braze e delegado
+#### 3\. Configure sua UI do Braze e delegue
 
-`BrazeInAppMessageUI()` renderiza mensagens in-app por padrão. Ao atribuir `self` como seu delegado, você pode interceptar e manipular mensagens antes que sejam exibidas.
+`BrazeInAppMessageUI()` renderiza mensagens no app por padrão. Ao atribuir o endereço `self` como seu delegado, você pode interceptar e tratar as mensagens antes que elas sejam exibidas.
 
-!!etapa
-linhas-AppDelegate.swift=26-33
+!!!etapa
+Linhas -AppDelegate.swift=26-33
 
-#### 4\. Substitua `DisplayChoice` com lógica condicional
+#### 4\. Substituir o site `DisplayChoice` pela lógica condicional
 
-Substitua [`inAppMessage(_:displayChoiceForMessage:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) para decidir se uma mensagem deve ser exibida. Retorne `.now` para exibir a mensagem ou `.discard` para suprimir.
-
-{% endscrolly %}
-{% endsdktab %}
-{% sdktab web %}
-{% multi_lang_include developer_guide/prerequisites/web.md %} No entanto, nenhuma configuração adicional é necessária.
-
-## Exibindo condicionalmente mensagens in-app para Web
-
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
-
-{% scrolly %}
-
-```js file=index.js
-import * as braze from "@braze/web-sdk";
-// Remove any calls to `braze.automaticallyShowInAppMessages()`
-
-braze.initialize("YOUR-API-KEY", {
-  baseUrl: "YOUR-ENDPOINT",
-  enableLogging: true,
-});
-
-braze.subscribeToInAppMessage(function (message) {
-  if (
-    location.pathname === "/checkout" ||
-    document.getElementById("#checkout")
-  ) {
-    // do not show the message
-  } else {
-    braze.showInAppMessage(message);
-  }
-});
-```
-
-!!etapa
-linhas-index.js=2
-
-#### 1\. Remova chamadas para `automaticallyShowInAppMessages()`
-
-Remova quaisquer chamadas para [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages), pois elas substituirão qualquer lógica personalizada que você implemente mais tarde.
-
-!!etapa
-linhas-index.js=6
-
-#### 2\. Ativar depuração (opcional)
-
-Para facilitar a solução de problemas durante o desenvolvimento, considere ativar a depuração.
-
-!!etapa
-linhas-index.js=9-18
-
-#### 3\. Inscreva-se para atualizações de mensagens no app
-
-Registre um retorno de chamada com [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) para receber um `message` sempre que uma mensagem no app for acionada.
-
-!!etapa
-linhas-index.js=10-13
-
-#### 4\. Crie lógica condicional
-
-Crie lógica personalizada para controlar quando as mensagens são exibidas. Neste exemplo, a lógica verifica se a URL contém `"checkout"` ou se um elemento `#checkout` existe na página.
-
-!!etapa
-linhas-index.js=16
-
-#### 5\. Exiba mensagens com `showInAppMessage`
-
-Para exibir a mensagem, chame [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Se omitido, a mensagem será ignorada.
+Substituir [`inAppMessage(_:displayChoiceForMessage:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) para decidir se uma mensagem deve ser mostrada. Retorne `.now` para exibir a mensagem ou `.discard` para suprimi-la.
 
 {% endscrolly %}
 {% endsdktab %}

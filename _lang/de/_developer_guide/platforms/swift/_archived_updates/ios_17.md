@@ -1,5 +1,5 @@
 ---
-nav_title: Anleitung zum Upgrade für iOS 17
+nav_title: Anleitung zum Upgrade für  iOS 17
 article_title: Anleitung zum Upgrade für iOS 17
 page_order: 7
 platform: 

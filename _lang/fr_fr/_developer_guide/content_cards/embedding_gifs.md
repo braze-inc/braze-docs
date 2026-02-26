@@ -21,15 +21,15 @@ Pour les SDK wrapper non répertoriés, utilisez plutôt la méthode native Andr
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+La prise en charge du format GIF est incluse par défaut dans l'intégration SDK Web.
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/_global/gifs.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/gifs.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-Pour l'instant, les cartes de contenu GIF ne sont pas prises en charge par le SDK de Braze.
 {% endsdktab %}
 {% endsdktabs %}

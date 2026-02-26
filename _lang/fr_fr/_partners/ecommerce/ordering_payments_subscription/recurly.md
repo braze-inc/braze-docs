@@ -28,8 +28,8 @@ Vous trouverez plus de détails sur l'utilisation de Recurly avec Braze dans la 
 | Condition | Description |
 | ----------- | ----------- |
 | Compte Recurly | Un plan d'abonnement Elite [Recurly](https://recurly.com/) avec l’indicateur de fonctionnalité Braze activé est nécessaire pour tirer parti de ce partenariat. L'activation des factures de crédit dans votre plateforme Recurly est également nécessaire.|
-| Clé API REST de Braze | Une clé API Braze REST avec des autorisations `users.track`. <br><br> Celle-ci peut être créée dans le tableau de bord de Braze à partir de **Paramètres** > **Clés API**. Comme Recurly n'utilise que l'endpoint `users.track`, nous vous recommandons de déployer une clé Recurly spécifique avec cette seule autorisation. |
-| Endpoint REST de Braze | [L'URL de votre endpoint REST.]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) Votre endpoint dépendra de l'URL de Braze pour votre instance. |
+| Clé API REST de Braze | Une clé API Braze REST avec des autorisations `users.track`. <br><br> Elle peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. Recurly n'utilisant que l'endpoint `users.track`, nous vous recommandons de provisionner une clé spécifique à Recurly avec cette seule autorisation. |
+| Endpoint REST Braze | [L'URL de votre endpoint REST.]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) Votre endpoint dépendra de l'URL de Braze pour votre instance. |
 
 ## Intégration
 
@@ -82,11 +82,11 @@ Pour un engagement client efficace, vous devez [configurer des événements pers
 
 Comme Recurly utilise l'endpoint `/users/track` de Braze, l'intégration est soumise aux limites de débit standard de Braze, à savoir 50 000 requêtes par minute.
 
-Recurly met en lots certains événements du cycle de vie de l'abonnement sous forme d'appels API uniques à Braze afin de réduire le nombre d'appels effectués.
+Recurly regroupe certains événements du cycle de vie des abonnements en appels API uniques vers Braze afin de réduire le nombre de requêtes.
 
-- La création de plusieurs abonnements en même temps est mise en lots et envoyée à Braze sous la forme d'une requête unique.
-- Lorsque plusieurs abonnements sont renouvelés en même temps pour un compte, chacun de ces renouvellements est regroupé en une seule requête.
-- Les événements du cycle de vie de l'abonnement au même modèle sont envoyés en une seule requête. Par exemple, une facture nouvellement créée avec un paiement enverrait une seule requête API avec les événements personnalisés `Recurly Invoice Created` et `Recurly Successful Payment`.
+- Recurly regroupe et envoie plusieurs abonnements créés en même temps en une seule demande.
+- Recurly regroupe plusieurs renouvellements simultanés d'un compte en une seule demande.
+- Recurly envoie les événements du cycle de vie des abonnements du même modèle en une seule demande. Par exemple, une facture nouvellement créée avec un paiement donne lieu à une demande API contenant les événements personnalisés `Recurly Invoice Created` et `Recurly Successful Payment`.
 
 Les lots sont envoyés à Braze par groupes de 75 événements maximum à la fois. Par exemple, si 100 abonnements sont créés en même temps, Recurly fera deux requêtes d'API à Braze. Pour plus d'informations, reportez-vous à la section [relative à la mise en lot des requêtes de suivi des utilisateurs]({{site.baseurl}}/api/api_limits/#batch-user-track).
 

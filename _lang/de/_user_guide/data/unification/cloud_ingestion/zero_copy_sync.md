@@ -8,11 +8,9 @@ description: "Diese Seite bietet eine Übersicht darüber, wie Sie Braze Canvase
 
 # Personalisierung ohne Kopien mit CDI
 
-> Lernen Sie, wie Sie Canvas-Trigger mit CDI für eine Personalisierung ohne Kopien synchronisieren können. Dieses Feature greift auf benutzerspezifische Daten aus Ihrer Lösung zur Datenspeicherung zu und gibt sie an ein Ziel-Canvas weiter. Canvas-Schritte können optional Personalisierungsfelder enthalten, die nicht auf Braze Nutzerprofilen persistent sind.
+> Lernen Sie, wie Sie Canvas-Trigger mit CDI für eine Personalisierung ohne Kopien synchronisieren können. Dieses Feature greift auf benutzerspezifische Daten aus Ihrer Lösung zur Datenspeicherung zu und gibt sie an ein Ziel-Canvas weiter. Canvas-Schritte können optional Personalisierungsfelder enthalten, die nicht auf Braze-Nutzerprofilen persistent sind.
 
-{% alert important %}
-CDI Canvas Trigger befinden sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
+{% include early_access_beta_alert.md feature='CDI Canvas triggers' %}
 
 ## Synchronisierung von Canvas-Triggern
 
@@ -174,7 +172,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC`
 
 ##### Schritt 1.3: Zugangsdaten einrichten
 
-Erstellen Sie einen Nutzer:in und erteilen Sie Berechtigungen. Wenn Sie bereits über Zugangsdaten aus einer anderen Synchronisierung verfügen, können Sie diese wiederverwenden, solange sie Zugriff auf die Tabelle der Canvas-Trigger haben.
+Erstellen Sie einen Nutzer:in und erteilen Sie Berechtigungen. Wenn Sie bereits über Zugangsdaten von einer anderen Synchronisierung verfügen, können Sie diese wiederverwenden, solange sie Zugriff auf die Tabelle der Canvas-Trigger haben.
 
 | Berechtigung | Zweck |
 | :---- | :---- |
@@ -300,7 +298,7 @@ Dateinamen müssen den AWS Regeln entsprechen und eindeutig sein. Fügen Sie Zei
 
 1. Richten Sie Ihr Ziel Canvas für Canvas-Trigger ein. Erstellen Sie ein neues oder wählen Sie ein bestehendes API-getriggertes Canvas aus. Wie Sie einen Canvas mit einem API-getriggerten Zeitplan für die Zustellung erstellen, erfahren Sie unter [Zeitplanarten für Eingänge]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#entry-schedule-types).
 2. Nachdem Sie den Typ des API-getriggerten Zeitplans für die Zustellung ausgewählt haben, fahren Sie mit der Einrichtung von Canvas fort und erstellen Ihren Canvas. Canvase können von einfachen Nachrichten bis hin zu komplexen Kunden:in-Workflows mit mehreren Schritten reichen.
-3. Verwenden Sie innerhalb Ihrer Canvas-Schritte die [Eingangs-Eigenschaften von Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties), um Nachrichten mit den Eigenschaften zu personalisieren, die Sie aus Ihrer Quelltabelle synchronisieren möchten.
+3. Verwenden Sie innerhalb Ihrer Canvas-Schritte [Canvas-Eingangs-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties), um Nachrichten mit Eigenschaften zu personalisieren, die Sie aus Ihrer Quelltabelle synchronisieren möchten.
   * Wenn Sie beispielsweise in Schritt 1 ein Eigenschaftsfeld für `account_balance` instrumentiert haben, würden Sie die folgende Liquid-Vorlage verwenden, um Ihre Nachricht zu personalisieren: `\{\{canvas_entry_properties.\$\{account_balance\}\}\}`.
 5. Nachdem Sie Ihr Canvas erstellt haben, starten Sie es und fahren Sie mit [Schritt 3](#step-3-create-your-zero-copy-sync) fort.
 
@@ -315,7 +313,7 @@ Wenn die Einrichtung Ihrer Datenquelle abgeschlossen ist und der Ziel-Canvas ges
 4. Wählen Sie Ihr Ziel Canvas (aus [Schritt 2](#step-2-configure-your-destination-canvas)).
 5. Wählen Sie eine Synchronisationsfrequenz.
 6. Richten Sie Benachrichtigungseinstellungen ein.
-7. Wählen Sie **Verbindung testen**, um zu bestätigen, dass alles wie erwartet funktioniert. Wenn Sie eine Verbindung zu Snowflake herstellen, fügen Sie zunächst den öffentlichen Schlüssel, der auf dem Dashboard angezeigt wird, dem Nutzer:innen hinzu, der für Braze erstellt wurde, um eine Verbindung zu Snowflake herzustellen. Um diesen Schritt auszuführen, benötigen Sie in Snowflake den **SECURITYADMIN-Zugang** oder höher. 
+7. Wählen Sie **Verbindung testen**, um zu bestätigen, dass alles wie erwartet funktioniert. Wenn Sie eine Verbindung zu Snowflake herstellen, fügen Sie zunächst den auf dem Dashboard angezeigten Public Key zu dem Nutzer:innen hinzu, den Sie für Braze erstellt haben, um eine Verbindung zu Snowflake herzustellen. Um diesen Schritt auszuführen, benötigen Sie in Snowflake den **SECURITYADMIN-Zugang** oder höher. 
 8. Speichern Sie die Synchronisierung, um mit der Synchronisierung von Canvas-Triggern zu beginnen.
 
 Wenn die Synchronisierung läuft, beginnen die Nutzer:innen in Ihrer Quelltabelle, den Canvas zu betreten. Verwenden Sie Canvas Analytics und die Seite mit den Sync-Protokollen für die Datenaufnahme in der Cloud, um die Performance zu überwachen.
@@ -332,6 +330,6 @@ CDI Canvas Trigger befinden sich zwar noch im Anfangsstadium, aber beachten Sie 
 
 * Bis zu 5 aktive Canvas Trigger-Synchronisationen pro Workspace  
 * Jeder Synchronisierungslauf wird Nutzer:innen mit einer maximalen Rate von ca. 3,75 Millionen Nutzern:innen pro Stunde in das jeweilige Ziel Canvas eintragen.  
-  * Stellen Sie sich auf längere Zeiten für den Eingang in den Canvas ein, wenn:  
+  * Stellen Sie sich auf längere Eingangszeiten von der Quelle zum Canvas ein, wenn:  
     * Synchronisierung von mehr als 3,75 Millionen Nutzer:innen pro Synchronisierungslauf.  
     * Die Verwendung von CDI Canvas triggert, wenn das Rate-Limit Ihrer REST API für [ `/canvas/trigger/send` bereits gesättigt ist.]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#rate-limit)

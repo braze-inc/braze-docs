@@ -62,6 +62,10 @@ The default **Prevent Cross-Site Tracking** setting in Safari can prevent in-app
 
 After the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard. For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see [Braze JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
 
+{% alert note %}
+**Custom domains for Web SDK requests are not supported**: The Web SDK `baseUrl` must be a Braze SDK endpoint (for example, `sdk.iad-05.braze.com`). Braze does not support routing Web SDK traffic through a customer-owned domain via CNAME records. If you need Web SDK requests to originate from your own domain, contact Braze support.
+{% endalert %}
+
 ```javascript
 // initialize the SDK
 braze.initialize('YOUR-API-KEY-HERE', {
@@ -103,11 +107,67 @@ Anonymous users on mobile or web devices may be counted towards your [MAU]({{sit
 {% endtab %}
 {% endtabs %}
 
+## Filtering bot traffic {#bot-filtering}
+
+MAU can include a percentage of bot users, which inflates your monthly active user count. While the Braze Web SDK includes built-in detection for some common web crawlers (such as search engine bots and social media preview bots), it is especially important to stay proactive with robust solutions to detect bots, as SDK updates alone cannot consistently detect every new bot.
+
+### Limitations of SDK-side bot detection
+
+The Web SDK includes basic user-agent-based bot detection that filters out known crawlers. However, this approach has limitations:
+
+- **New bots emerge constantly**: AI companies and other actors regularly create new bots that may disguise themselves to avoid detection.
+- **User-agent spoofing**: Sophisticated bots can mimic legitimate browser user-agents.
+- **Custom bots**: Non-technical users can now easily create bots using large language models (LLMs), making bot behavior unpredictable.
+
+### Implementing bot filtering
+
+{% alert important %}
+The solutions outlined below are general suggestions. Tailor bot filtering logic to your unique environment and traffic patterns.
+{% endalert %}
+
+The most robust solution is to implement your own bot filtering logic before initializing the Braze SDK. Common approaches include:
+
+#### Require user interaction
+
+Consider delaying SDK initialization until a user performs a meaningful interaction, such as accepting a cookie consent banner, scrolling, or clicking. This approach is often easier to implement and can be highly effective at filtering bot traffic.
+
+{% alert important %}
+Delaying SDK initialization until user interaction might cause Banners and Content Cards to also not display until that interaction occurs.
+{% endalert %}
+
+#### Custom bot detection
+
+Implement custom detection based on your specific bot traffic patterns, such as:
+
+- Analyzing user-agent strings for patterns you've identified in your traffic
+- Checking for headless browser indicators
+- Using third-party bot detection services
+- Monitoring behavioral signals specific to your site
+
+**Example of conditional initialization:**
+
+```javascript
+// Only initialize Braze if your custom bot detection determines this is not a bot
+if (!isLikelyBot()) {
+  braze.initialize('YOUR-API-KEY-HERE', {
+    baseUrl: "YOUR-SDK-ENDPOINT-HERE"
+  });
+  braze.automaticallyShowInAppMessages();
+  braze.openSession();
+}
+```
+
+### Best practices
+
+- Regularly analyze your MAU data and web traffic patterns to identify new bot behavior.
+- Test thoroughly to ensure your bot filtering doesn't prevent legitimate users from being tracked.
+- Update your filtering logic based on the bot traffic patterns you observe in your environment.
+
 ## Optional configurations
 
 ### Logging
 
-To quickly enable logging, you can add `?brazeLogging=true` as a parameter to your website URL. Alternatively, you can enable [basic](#web_basic-logging) or [custom](#web_custom-logging) logging.
+To quickly enable logging, you can add `?brazeLogging=true` as a parameter to your website URL. Alternatively, you can enable [basic](#web_basic-logging) or [custom](#web_custom-logging) logging. For a centralized overview across all platforms, see [Verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging).
 
 #### Basic logging
 

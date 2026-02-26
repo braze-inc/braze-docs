@@ -258,7 +258,7 @@ Para segmentar las aplicaciones OTT para mensajería, te recomendamos que crees 
 ## Headless UI {#custom-ui}
 
 {% alert important %}
-Las plataformas que admiten mensajes dentro de la aplicación o tarjetas de contenido a través de la interfaz de usuario sin cabeza **no** incluyen ninguna interfaz de usuario ni vistas predeterminadas, así que asegúrate de implementar tu propia interfaz de usuario personalizada.
+Las plataformas que admiten mensajes dentro de la aplicación o tarjetas de contenido a través de la interfaz de usuario sin cabeza **no** incluyen ninguna interfaz de usuario ni vistas predeterminadas. Construye tu propia interfaz de usuario personalizada (por ejemplo, para mensajes dentro de la aplicación) y luego utiliza los modelos de datos proporcionados por el SDK para rellenar esas interfaces de usuario.
 {% endalert %}
 
 Con Headless UI, Braze entregará un modelo de datos, como JSON, que tu aplicación puede leer y utilizar dentro de una IU que tu aplicación controla. Estos datos contendrán los campos configurados en el panel (título, cuerpo, texto del botón, colores, etc.) que tu aplicación podrá leer y mostrar en consecuencia. Para más información sobre la mensajería personalizada, consulta lo siguiente:

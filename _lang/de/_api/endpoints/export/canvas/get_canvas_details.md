@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Canvas-Details exportieren"
+nav_title: "GET: Canvas Details exportieren"
 article_title: "GET: Canvas-Details exportieren"
 search_tag: Endpoint
 page_order: 4
@@ -22,7 +22,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Export Canvas 
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `canvas.details`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -46,12 +46,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Antworten
 
 {% alert note %}
-Alle Canvas-Schritte verfügen über ein `next_paths` Feld, bei dem es sich um ein Array von `{name, next_step_id}` Daten handelt. Bei vollständigen Schritten und Nachrichten-Schritten ist das Feld `next_step_ids` vorhanden, enthält aber keine Daten für andere Canvas Flow-Schritte.
+Alle Canvas-Schritte verfügen über ein `next_paths` Feld, bei dem es sich um ein Array von `{name, next_step_id}` Daten handelt. Bei Messaging-Schritten ist das Feld `next_step_ids` vorhanden, enthält jedoch keine Daten für andere Canvas-Schritte.
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "created_at": (string) the date created as ISO 8601 date,
   "updated_at": (string) the date updated as ISO 8601 date,

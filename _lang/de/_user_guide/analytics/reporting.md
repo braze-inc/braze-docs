@@ -344,7 +344,7 @@ Weitere Fragen, die Sie mit diesem Bericht beantworten können:
 {% tab Predictive Churn %}
 **Voraussichtliche Abwanderung**
 
-[Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) ist das erste Modell in der [Braze Predictive Suite]({{site.baseurl}}/user_guide/brazeai/). Mit Abwanderungsprognosen können Sie die weitere Abwanderung proaktiv verringern.
+Verwenden Sie [voraussichtliche Abwanderung]({{site.baseurl}}/user_guide/brazeai/predictive_churn/), um Prognosen zu definieren und zu erstellen und so einen proaktiven Ansatz zur Minimierung der zukünftigen Abwanderung zu bieten.
 
 Da jedes Unternehmen Abwanderung und Bindung anders definiert, können Sie Ihre Definitionen einfach in Predictive Churn eingeben, und Braze erledigt den Rest. Sie können auch Kampagnen oder Canvase erstellen, um auf die Prognosen zu reagieren oder Segmente für weitere Analysen zu bilden.
 

@@ -62,6 +62,8 @@ Now let’s get a little technical. Behind the scenes, there are three main part
 
 For a default implementation, you add the card content—the model—either from the dashboard or through APIs, and the view and controller are handled by what is called a view controller. A view controller is the "glue" between the overall application and the screen.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## Use cases
 
 Refer to this section for some common use cases for Content Cards.

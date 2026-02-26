@@ -1,7 +1,7 @@
 ---
 nav_title: Vervielfältigen
 article_title: Vervielfältigen
-page_order: 5
+page_order: 5.5
 page_type: reference
 description: "Dieser referenzierte Artikel beschreibt, wie Sie Ihre Kampagnen und Canvase duplizieren können."
 tool:

@@ -1,5 +1,5 @@
 ---
-nav_title: Livraison de messages in-app
+nav_title: Réception/distribution de messages in-app
 article_title: Livraison de messages in-app pour iOS
 platform: iOS
 page_order: 3
@@ -37,7 +37,7 @@ Par défaut, nous limitons le débit des messages in-app à une fois toutes les 
 Vous pouvez remplacer cette valeur par la clé `ABKMinimumTriggerTimeIntervalKey` dans le paramètre `appboyOptions` transmis à `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Définissez `ABKMinimumTriggerTimeIntervalKey` sur la valeur d’entier souhaitée comme durée minimale en secondes entre les messages in-app :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Sets the minimum trigger time interval to 5 seconds
@@ -108,7 +108,7 @@ Un message in-app déclenché sera écarté dans les situations suivantes :
 Si vous souhaitez afficher un message in-app à d’autres moments dans votre application, vous pouvez afficher manuellement le message in-app le plus haut sur la pile en employant la méthode suivante :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance].inAppMessageController displayNextInAppMessage];
@@ -129,7 +129,7 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 Les messages in-app peuvent également être créés localement dans l’application et affichés via Braze. Ceci est particulièrement utile pour afficher les messages que vous souhaitez déclencher dans l’application en temps réel. Braze ne prend pas en charge les analyses des messages in-app créés localement.
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
   ABKInAppMessageSlideup *customInAppMessage = [[ABKInAppMessageSlideup alloc] init];

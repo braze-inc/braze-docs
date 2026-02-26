@@ -86,9 +86,11 @@ description: "カタログとカスタムイベントを使用して再入荷通
 
 この Liquid タグ {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}``{%endraw%} をメッセージの冒頭で使い、{%raw%}``{{ items[0].<field_name> }}``{%endraw%} をメッセージ全体で使用してそのアイテムに関するデータにアクセスします。
 
+{% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
+
 ## 考慮事項
 
 - ユーザーの購読期間は 90 日間です。アイテムが 90 日以内に再入荷されない場合、ユーザーは購読解除されます。
 - **Notify all subscribed users**通知ルールを使用する場合、Brazeは10分間で10万人のユーザーに通知する。
-- Brazeは、カタログアイテムを毎分更新するために10件のリクエストを処理します。更新エンドポイントでは、リクエストごとに50個のアイテム更新が可能であり、1分あたり最大500個のアイテム更新をサポートします。これにより、在庫調整通知がトリガされます
+- Brazeは毎日最大50,000の更新アイテムをサポートしており、在庫切れ通知のトリガーとなる。各サブスクリプションは、カタログアイテムを見るためにサブスクライブしたユーザープロファイルを表す。
 

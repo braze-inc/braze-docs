@@ -1,52 +1,52 @@
 ---
-nav_title: Exportar solução de problemas
-article_title: Exportar Solução de Problemas
+nav_title: Exportação de solução de problemas
+article_title: Solução de problemas de exportação
 page_order: 10
 page_type: reference
-description: "Este artigo de referência cobre alguns cenários comuns de solução de problemas para exportações de API e CSV."
+description: "Este artigo de referência cobre alguns cenários comuns de solução de problemas para API e exportações CSV."
 
 ---
 
-# Exportar solução de problemas
+# Exportação de solução de problemas
 
-> Esta página lista mensagens de erro que você pode encontrar ao exportar dados através de CSV ou API do Braze.
+> Esta página lista as mensagens de erro que você pode encontrar ao exportar dados por meio de CSV ou API do Braze.
 
 ## Erros comuns
 
-### 'AcessoNegado' 
+### AcessoNegado 
 
 #### Ao usar seu próprio bucket S3
 
-Se você estiver usando **seu próprio bucket S3**, isso pode acontecer porque:
+Se estiver usando **seu próprio bucket S3**, isso pode acontecer porque:
 
 - O objeto esperado não está mais no bucket S3; verifique com seus engenheiros.
-- As credenciais S3 configuradas no painel do Braze não têm as permissões corretas; confirme as credenciais adequadas com sua equipe.
+- As credenciais S3 configuradas no dashboard do Braze não têm as permissões corretas; confirme as credenciais adequadas com sua equipe.
 
-#### Ao usar um bucket S3 do Braze
+#### Ao usar um bucket S3 da Braze
 
-Se você estiver usando um **bucket S3 do Braze**, isso pode acontecer porque:
+Se estiver usando um **bucket S3 do Braze**, isso pode acontecer porque:
 
-- O objeto não está mais lá. Isso pode ocorrer se você clicou em um link para uma exportação que expirou, pois os arquivos são automaticamente excluídos do S3 quando o link de download expira. Salvo indicação em contrário, os arquivos são removidos após quatro horas. Se este for o caso, execute sua exportação novamente.
-- Você selecionou o link de download imediatamente, antes que o S3 estivesse pronto para servir o objeto. Aguarde alguns minutos e tente novamente. Relatórios maiores geralmente levarão mais tempo. 
-- A exportação é muito grande, então nosso servidor ficou sem memória ao tentar criar este arquivo zip. Nós enviaremos automaticamente um e-mail para o usuário que está tentando esta exportação se isso ocorrer. Se você encontrar consistentemente esse problema, recomendamos que você use seus próprios buckets S3 no futuro.
+- O objeto não está mais lá. Isso pode ocorrer se você clicou em um link para uma exportação que expirou, pois os arquivos são automaticamente excluídos do S3 quando o link de download expira. Salvo indicação em contrário, os arquivos são removidos após quatro horas. Se for esse o caso, execute sua exportação novamente.
+- Você selecionou o link para baixar imediatamente, antes que o S3 estivesse pronto para servir o objeto. Aguarde alguns minutos e tente novamente. Relatórios maiores geralmente demoram mais. 
+- A exportação é muito grande, então nosso servidor ficou sem memória ao tentar criar este arquivo zip. Enviaremos automaticamente um e-mail ao usuário que estiver tentando fazer esta exportação, caso isso ocorra. Se o problema persistir, recomendamos que use seus próprios buckets S3.
 
-### 'TokenExpirado'
+### TokenExpirado
 
-Isso acontece se o e-mail foi enviado há tempo suficiente para que o arquivo S3 tenha expirado. Salvo indicação em contrário, os arquivos são removidos após quatro horas. Reexecute a exportação e faça o download antes que o arquivo expire.
+Isso acontece se o e-mail foi enviado há tempo suficiente para que o arquivo S3 tenha expirado. Salvo indicação em contrário, os arquivos são removidos após quatro horas. Execute a exportação novamente e baixe-o antes que o arquivo expire.
 
-Isso também pode ser causado pelo Braze não ter mais acesso ao bucket S3 para o qual você está baixando os dados. Certifique-se de que você atualizou suas credenciais S3 seguindo estas etapas.
+Isso também pode ser causado por que a Braze não tem mais acesso ao bucket S3 para o qual você está baixando os dados. Atualize suas credenciais S3 usando estas etapas.
 
-### "Parece que o arquivo não existe mais, por favor verifique se nada está excluindo objetos do seu bucket"
+### Parece que o arquivo não existe mais, por favor verifique para garantir que nada esteja excluindo objetos do seu bucket
 
-Pode haver um pequeno atraso entre quando o e-mail do Braze com a exportação é enviado e quando o S3 está realmente pronto para servir o objeto. Se você ver este erro, aguarde alguns minutos antes de tentar novamente.
+Pode haver um pequeno atraso entre o momento em que o e-mail da Braze com a exportação é enviado e quando o S3 está realmente pronto para servir o objeto. Caso veja esse erro, aguarde alguns minutos antes de tentar novamente.
 
 ### Apóstrofos adicionados aos campos
 
-O Braze automaticamente adicionará um apóstrofo a um campo na exportação CSV se o campo começar com qualquer um dos seguintes caracteres:
+Braze adicionará automaticamente um apóstrofo a um campo na exportação CSV se o campo começar com qualquer um dos seguintes caracteres:
 
 - -
 - =
 - +
 - @
 
-Por exemplo, o campo "-1943" será exportado como "'-1943". Isso não se aplica a exportações JSON, como aquelas retornadas pelo [`/users/export/segment` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/).
+Por exemplo, o campo "-1943" será exportado como "'-1943". Isso não se aplica a exportações JSON, como as retornadas pelo [endpoint `/users/export/segment` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/).

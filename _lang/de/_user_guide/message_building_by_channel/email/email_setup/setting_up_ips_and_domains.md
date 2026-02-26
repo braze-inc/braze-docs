@@ -1,6 +1,6 @@
 ---
-nav_title: Einrichten von IPs &amp; Domains
-article_title: Einrichten von IPs &amp; Domains
+nav_title: IPs &amp; Domains einrichten
+article_title: IPs &amp; Domains einrichten
 page_order: 0
 page_type: tutorial
 channel: email
@@ -8,7 +8,7 @@ description: "In diesem Artikel erfahren Sie, wie Sie Ihre IPs und Domains für 
 
 ---
 
-# Einrichten von IPs und Domänen
+# IPs und Domains einrichten
 
 {% multi_lang_include video.html id="iTm3yQkJ0UU" align="right"  %}
 
@@ -32,6 +32,10 @@ Nachdem wir Ihre E-Mail erhalten haben, machen wir uns an die Arbeit und konfigu
 
 Nachdem Ihre IPs, Domains, Subdomains und IP-Pools konfiguriert sind, senden wir Ihnen eine Liste der DNS-Einträge. Bitten Sie Ihre Techniker und Entwickler, diese DNS-Einträge bei Bedarf hinzuzufügen, und informieren Sie das Braze Onboarding-Team, nachdem sie hinzugefügt wurden.
 
+{% multi_lang_include dns_records.md %}
+
+Nachdem Braze Ihre DNS-Einträge bereitgestellt hat, fügen Sie sie hinzu, sobald Ihr DNS- oder IT-Team dazu in der Lage ist. Die Überprüfung von Domains ist zeitgebunden. Wenn Einträge zu spät hinzugefügt werden, kann die Überprüfung fehlschlagen, selbst wenn die DNS-Einträge später korrekt aufgelöst werden. Wenn Ihre DNS-Einträge korrekt zu sein scheinen, die Verifizierung jedoch fehlschlägt, wenden Sie sich an das Braze Onboarding- oder Support-Team, um die Verifizierung erneut zu initiieren.
+
 ### Nächste Schritte
 
 Wir überprüfen Ihre Einrichtung und validieren alle Informationen in unseren internen Systemen. Das Braze Onboarding-Team wird Sie informieren, wenn Sie bereit sind oder wenn es Probleme mit Ihren DNS-Einträgen gibt, die Sie mit Ihrem technischen Team klären müssen.
@@ -40,9 +44,8 @@ Wir überprüfen Ihre Einrichtung und validieren alle Informationen in unseren i
 
 Mit dieser Methode wird eine Sende-Domain, eine Tracking-Domain und insgesamt eine IP für ein Unternehmen eingerichtet. Wenn Sie planen, mehr einzurichten, wenden Sie sich bitte an das Braze Onboarding-Team (Methode 1).
 
-{% alert important %}
-Diese Selbstbedienungsfunktion zur Einrichtung von E-Mails befindet sich derzeit in der Beta-Phase. Wenden Sie sich an Ihre:n Braze-Kundenbetreuer:in, wenn Sie an einer Teilnahme an der Beta interessiert sind.<br>Wenn Sie die Self-Service-E-Mail-Einrichtungsfunktion verwenden, sollten Sie sich auch mit dem Braze Onboarding-Team beraten.
-{% endalert %}
+{% include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
+<br>Wenn Sie die Self-Service-E-Mail-Einrichtungsfunktion verwenden, sollten Sie sich auch mit dem Braze Onboarding-Team beraten.
 
 ### Voraussetzungen
 
@@ -64,6 +67,8 @@ Eine Sender-Domain wird in der „Von“-Adresse verwendet, wenn eine E-Mail ges
 Als nächstes fügen Sie die TXT- und CNAME-Einträge unten auf der Seite zu Ihrem DNS-Anbieter hinzu. Kehren Sie dann zum Braze Dashboard zurück und klicken Sie auf **Überprüfen**.
 
 ![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
+
+Wenn die Überprüfung fehlschlägt und Sie der Meinung sind, dass Ihre DNS-Einträge korrekt sind, wenden Sie sich an den Braze Support, um Hilfe zu erhalten.
 
 {% alert important %}
 Die sendende Domain muss einer Domain untergeordnet sein, die Sie besitzen. Wenn Sie z. B. „example.com“ besitzen, könnte eine Subdomain „mail.example.com“ sein, die es Ihnen ermöglicht, die Sendeadresse „@mail.example.com“ zu verwenden.

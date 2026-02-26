@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Eliminar usuarios"
-article_title: "POST: Eliminar usuarios"
+nav_title: "PUBLICAR: Borrar usuarios"
+article_title: "PUBLICAR: Eliminar usuarios"
 search_tag: Endpoint
 page_order: 5
 layout: api_page
@@ -16,12 +16,12 @@ description: "En este artículo se describen los detalles del punto final Elimin
 
 > Utiliza este punto final para eliminar cualquier perfil de usuario especificando un identificador de usuario conocido.
 
-Se pueden incluir hasta 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, o `phone_numbers` en una sola solicitud. Sólo se puede incluir una de las siguientes opciones en una misma solicitud: `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, o `phone_numbers`. 
+Se pueden incluir hasta 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, o `phone_numbers` en una sola solicitud. Sólo se puede incluir una de las siguientes opciones en una misma solicitud: `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, o `phone_numbers`.
 
 Si tienes un caso de uso que no puede resolverse con la eliminación masiva de usuarios a través de la API, ponte en contacto con el [equipo de soporte de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) para obtener ayuda.
 
 {% alert warning %}
-La eliminación de perfiles de usuario no se puede deshacer. Eliminará permanentemente a los usuarios que puedan causar discrepancias en tus datos. Obtén más información sobre lo que ocurre cuando [eliminas un perfil de usuario utilizando la API]({{site.baseurl}}/help/help_articles/api/delete_user/) en nuestra documentación de Ayuda.
+La eliminación de perfiles de usuario no se puede deshacer. Eliminará permanentemente los usuarios que puedan causar discrepancias en sus datos. Obtén más información sobre lo que ocurre cuando [eliminas un perfil de usuario utilizando la API]({{site.baseurl}}/help/help_articles/api/delete_user/) en nuestra documentación de Ayuda.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
@@ -105,8 +105,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 ## Respuesta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "deleted" : (required, integer) number of user IDs queued for deletion
 }

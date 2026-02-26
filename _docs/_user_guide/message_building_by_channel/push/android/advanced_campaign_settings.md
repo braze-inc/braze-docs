@@ -40,8 +40,8 @@ For example, let's say your app hosts a weekly trivia contest. You send a push n
 
 Shorter TTLs make sure users receive timely notifications for events or promotions that quickly lose relevance. For example:
 
-- **Retail:** Sending a push for a flash sale that ends in 2 hours (TTL: 1–2 hours)
-- **Food delivery:** Notifying users when their order is nearby (TTL: 10–15 minutes)
+- **Retail:** Sending a push for a flash sale that ends in 2 hours (TTL: 1-2 hours)
+- **Food delivery:** Notifying users when their order is nearby (TTL: 10-15 minutes)
 - **Transportation apps:** Sharing ride arrival updates (TTL: a few minutes)
 - **Event reminders:** Notifying users when a webinar is starting soon (TTL: under 1 hour)
 
@@ -84,15 +84,13 @@ For push notifications that include images, the message text will be shown in th
 
 ## Custom URIs
 
-The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) or in the **Compose** tab of the the push composer.
+The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) or in the **Compose** tab of the push composer.
 
 ![Custom URI field.]({% image_buster /assets/img_archive/deep_link.png %}){: style="max-width:60%;"}
 
 ## Notification display priority
 
-{% alert important %}
-The Notification Display Priority setting is no longer used on devices running Android O or newer. For newer devices, set the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance).
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='Android notification priority' %}
 
 The priority level of a push notification affects how your notification is displayed in the notification tray relative to other notifications. It can also affect the speed and manner of delivery, as normal and lower priority messages may be sent with slightly higher latency or batched to preserve battery life, whereas high priority messages are always sent immediately.
 

@@ -8,7 +8,7 @@ search_rank: 2
 
 # [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}リキッドを使用
 
-> この記事では、さまざまなユーザー属性を使用して、メッセージングにダイナミックな個人情報を挿入する方法を紹介する。
+> ここでは、さまざまなユーザー 属性を使用して、メッセージングに個人情報をダイナミックな挿入する方法について説明します。
 
 Liquid は、Shopify が開発した Ruby で書かれているオープンソースのテンプレート言語です。Brazeでこれを使えば、ユーザープロファイルのデータをメッセージングに取り込んだり、そのデータをカスタマイズしたりすることができる。例えば、ユーザーのサブスクリプションアニバーサリーの日付に基づいて異なるオファーを送信するなど、条件付きメッセージを作成するためにLiquidタグを使用することができる。さらに、フィルターを使用してデータを操作できます。例えばユーザーの登録日をタイムスタンプから「January 15, 2022」のような読みやすい形式にフォーマットできます。Liquid の構文とその機能の詳細については、「[サポートされているパーソナライゼーションタグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)」を参照してください。
 
@@ -35,6 +35,10 @@ Hi Janet, thanks for using the App!
 ```
 Hi Valued User, thanks for using the App!
 ```
+
+{% alert important %}
+HTML コメント(`<!-- -->`) は、Liquid が読み込まれる前に削除されるため、HTML コメント内のLiquid タグ s **do not** はメッセージ内にレンダリングされます。適切にレンダリングするには、使用するすべてのリキッドタグがHTMLの注釈の範囲外であることを確認します。
+{% endalert %}
 
 ## 代用可能な値
 

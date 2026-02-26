@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Generar URL del Centro de preferencias"
+nav_title: "GET: Generar URL del centro de preferencias"
 article_title: "GET: Generar URL del Centro de preferencias"
 search_tag: Endpoint
 page_order: 1

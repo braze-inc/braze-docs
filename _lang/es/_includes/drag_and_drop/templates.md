@@ -10,7 +10,7 @@ Los mensajes creados con el editor de arrastrar y soltar sólo pueden enviarse a
 
 ### Versiones del SDK para enlaces de texto
 
-Para incluir enlaces de texto que no descarten el mensaje, se requieren las siguientes versiones mínimas del SDK:
+Para incluir enlaces de texto que no descarten el mensaje, se necesitan las siguientes versiones mínimas del SDK:
 
 {% sdk_min_versions swift:6.2.0 android:26.0.0 %}
 
@@ -41,7 +41,7 @@ Las mejores prácticas de entrega a menudo superan los requisitos legales, y nue
 
 {% if include.section == "email validation" %}
 
-Si el usuario introduce una dirección de correo electrónico que incluye caracteres especiales no aceptados, verá un indicador de error genérico y no podrá enviar el formulario. Este mensaje de error no es personalizable. Puede ver el comportamiento del error en la pestaña **Vista previa y prueba** y en su dispositivo de prueba. Más información sobre cómo Braze da formato a las direcciones de correo electrónico en [Validación de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
+Si el usuario introduce una dirección de correo electrónico que incluye caracteres especiales no aceptados, verá un indicador de error genérico y no podrá enviar el formulario. Este mensaje de error no es personalizable. Puedes ver el comportamiento del error en la pestaña de **prueba de la vista previa & ** y en tu dispositivo de prueba. Más información sobre cómo Braze da formato a las direcciones de correo electrónico en [Validación de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
 {% endif %}
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Erstellen eines Braze-to-Braze-Webhooks
-article_title: Erstellen eines Braze-to-Braze-Webhooks
+nav_title: Erstellen Sie einen Braze-to-Braze-Webhook
+article_title: Erstellen Sie einen Braze-to-Braze-Webhook
 page_order: 3
 channel:
   - webhooks
@@ -8,7 +8,7 @@ description: "Dieser Artikel beschreibt, wie Sie einen Braze-to-Braze-Webhook f�
 
 ---
 
-# Erstellen eines Braze-to-Braze-Webhooks
+# Erstellen Sie einen Braze-to-Braze-Webhook
 
 > Sie können Webhooks verwenden, um mit der Braze [REST API]({{site.baseurl}}/api/basics/) zu kommunizieren und im Wesentlichen alles zu tun, was unsere API Ihnen erlaubt. Wir referenzieren dies als Braze-to-Braze-Webhook – ein Webhook, der von Braze zu Braze kommuniziert. Die Anwendungsfälle auf dieser Seite setzen voraus, dass Sie mit der [Funktionsweise von Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) und der [Erstellung eines Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) in Braze vertraut sind.
 

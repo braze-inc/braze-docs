@@ -21,7 +21,7 @@ L'intégration de serveur à serveur de Braze et Zendesk vous permet d'utiliser�
 | Condition | Description |
 |---|---|
 | Compte Zendesk | Un [compte administrateur Zendesk](https://`<your-zendesk-instance>`.zendesk.com/agent/admin) est nécessaire pour profiter de ce partenariat. |
-| Jeton de l’API Zendesk | Un jeton Zendesk [API token](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-) est nécessaire pour envoyer des demandes depuis Braze vers l'endpoint de ticket Zendesk. |
+| Jeton de l’API Zendesk | Un [jeton API] Zendesk (https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-) est nécessaire pour envoyer des demandes depuis Braze vers l'endpoint de ticket Zendesk. |
 | Identifiant commun (recommandé) | Il est recommandé d'utiliser un [identifiant commun](#common-identifier) entre Braze et Zendesk. |
 | Clé API de Braze | Une clé API Braze est nécessaire pour envoyer des requêtes depuis Zendesk vers un endpoint Braze. Assurez-vous que la clé API que vous utilisez dispose des autorisations correctes pour l’endpoint Braze que votre webhook Zendesk utilise. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -43,9 +43,9 @@ D'autres cas d'utilisation peuvent être traités via les [API d'assistance de Z
 
 #### En-tête et méthode de la requête
 
-Zendesk requiert un en-tête HTTP pour l'autorisation et une méthode HTTP. Dans l'onglet **Paramètres**, remplacez le <email_address> par votre e-mail d'administrateur Zendesk et <api_token> par votre jeton API Zendesk.
+Zendesk requiert un en-tête HTTP pour l'autorisation et une méthode HTTP. Dans l'onglet **Paramètres**, remplacez le <email_address> par votre e-mail d'administrateur Zendesk et le <api_token> par votre jeton API Zendesk.
 
-- **Méthode HTTP** : POST
+- **Méthode HTTP**: POST
 - **En-têtes de la requête** :
   - **Autorisation**: De base {% raw %} `{{ '<email_address>/token:<api_token>' | base64_encode }}` {% endraw %}
   - **Content-Type**: application/json
@@ -117,7 +117,7 @@ Notre exemple ci-dessous utilisera un déclencheur pour invoquer le webhook lors
 1. Dans le **Centre d'administration**, cliquez sur **Objets et règles** dans la barre latérale, puis sélectionnez **Règles de gestion > Déclencheurs.**<br><br>
 2. Sélectionnez **Ajouter un déclencheur**.<br><br>
 3. Donnez un nom à votre déclencheur et sélectionnez une catégorie.<br><br>
-4. Sélectionnez **Ajouter une condition** pour définir les conditions qui doivent déclencher le webhook. Par exemple, "La catégorie d'état est passée à fermée" ou "La catégorie d'état est passée à résolue".![]({% image_buster /assets/img_archive/zendesk1.png %}){: style="max-width:70%;"}<br><br>
+4. Sélectionnez **Ajouter une condition** pour définir les conditions qui doivent déclencher le webhook. Par exemple, "Catégorie de statut modifiée en fermée" ou "Catégorie de statut modifiée en résolue".![]({% image_buster /assets/img_archive/zendesk1.png %}){: style="max-width:70%;"}<br><br>
 5. Sélectionnez **Ajouter une action**, choisissez **Notifier le webhook actif** et sélectionnez dans la liste déroulante le webhook créé à l'étape précédente.<br><br>
 6. Définissez le corps JSON pour qu'il soit conforme à votre endpoint Braze, en utilisant des marqueurs substitutifs de variables Zendesk pour remplir dynamiquement les champs pertinents.<br>![]({% image_buster /assets/img_archive/zendesk3.png %}){: style="max-width:70%;"}<br><br>
 7. Sélectionnez **Créer**.<br><br>

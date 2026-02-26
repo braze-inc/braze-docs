@@ -7,10 +7,10 @@ page_order: 2.0
 
 # ![Braze Logo]({% image_buster /assets/Braze_Primary_Icon_BLACK.svg %}){: style="float:right;width:120px;border:0;" class="noimgborder"}Integrate the Braze SDK
 
-> Learn how to integrate the Braze SDK into your mobile app. Each SDK is hosted in its own public GitHub repository, which includes fully-buildable sample apps you can use to test Braze features or implement alongside your own applications. To learn more, see [References, Repositories, and Sample Apps]({{site.baseurl}}/developer_guide/references/). For more general information about the SDK, see [Getting started: Integration overview]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
+> Learn how to integrate the Braze SDK. Each SDK is hosted in its own public GitHub repository, which includes fully-buildable sample apps you can use to test Braze features or implement alongside your own applications. To learn more, see [References, Repositories, and Sample Apps]({{site.baseurl}}/developer_guide/references/). For more general information about the SDK, see [Getting started: Integration overview]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 {% alert tip %}
-
+After integrating the SDK, you can enable [SDK Authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) to add an additional layer of security by preventing unauthorized SDK requests. SDK Authentication is available for Web, Android, Swift, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin), and Expo.
 {% endalert %}
 
 {% sdktabs %}

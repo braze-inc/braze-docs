@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Estado da inscrição na lista com endereço de e-mail ou número de telefone"
+nav_title: "OBTER: Liste o estado da inscrição com endereço de e-mail ou número de telefone"
 article_title: "OBTER: Estado da inscrição na lista com endereço de e-mail ou número de telefone"
 search_tag: Endpoint
 page_order: 2
@@ -36,8 +36,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions
 As entradas são listadas em ordem decrescente.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

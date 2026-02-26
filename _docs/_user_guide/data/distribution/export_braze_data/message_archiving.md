@@ -88,7 +88,7 @@ The following are references to the JSON payload delivered to your cloud storage
   "html_body": HtmlBody,
   "plaintext_body": PlainTextBody,
   "amp_body": AMPEmailBody,
-  "extras": Extra hash—for SendGrid users, this will be passed to SendGrid as Unique Arguments,
+  "extras": Hash of key-value pairs from Email Extras configured in the email editor,
   "headers": HashOfHeaders,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
@@ -106,7 +106,7 @@ The following are references to the JSON payload delivered to your cloud storage
 }
 ```
 
-The `extras` field referred to in this payload is from the key-value pairs added in the **Email Extras** field when composing an email. For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
+The `extras` field contains the key-value pairs configured in the **Email Extras** field when composing an email in the HTML editor. Email extras work for all email service providers (including SendGrid and Sparkpost) and are included in archived messages regardless of which provider is used. For more information on configuring email extras, see [Creating an email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#adding-email-extras). For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
@@ -160,6 +160,33 @@ The `extras` field referred to in this payload is from the key-value pairs added
   "external_id": String
 }
 ```
+
+### Push payload structure variations
+
+{% alert important %}
+The top-level `payload` field in push notification archives contains the entire provider payload as sent to the device. Within this JSON, keys such as `aps` (for APNs) or `notification` and `data` (for FCM) can vary significantly depending on the message type, platform, and configuration.
+{% endalert %}
+
+Message archiving captures the message payload itself, but does not include delivery metadata that is sent to FCM or APNs. Delivery metadata includes:
+
+- Device tokens
+- Priority settings
+- Time-to-live (TTL)
+- Collapse IDs
+- APNs headers
+- Expiration timestamps
+- Other delivery configuration fields
+
+These fields act as delivery instructions to the push provider. They are typically not considered part of the message content.
+
+For example:
+
+- **iOS push notifications** may have different structures for rich notifications (where `aps.alert` is an object containing fields such as `title` and `body`) versus simple notifications (where `aps.alert` is a string).
+- **Android push notifications** (for example, FCM) use data messages with custom keys. The payload structure may include different optional fields depending on the message configuration, such as push buttons, carousels, or additional metadata.
+
+Additionally, test sends from the dashboard may produce different payload structures than production messages.
+
+The JSON payload format can vary between messages and may change over time. When parsing archived push payloads, don't assume a fixed structure or expect the same fields to always be present. Implement flexible parsing logic that handles various payload formats.
 
 {% endtab %}
 {% endtabs %}

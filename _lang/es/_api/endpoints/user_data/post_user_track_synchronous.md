@@ -1,6 +1,6 @@
 ---
-nav_title: "PUBLICAR: Seguimiento de usuarios (sincrónico)"
-article_title: "PUBLICAR: Seguimiento de usuarios (sincrónico)"
+nav_title: "PUBLICAR: Crear y actualizar usuarios (sincrónico)"
+article_title: "PUBLICAR: Crear y actualizar usuarios (Sincrónico)"
 alias: /post_user_track_synchronous/
 layout: api_page
 page_order: 4.5
@@ -9,22 +9,22 @@ description: "En este artículo se describen los detalles del punto final sincr�
 
 ---
 {% api %}
-# Seguimiento de usuarios (sincrónico)
+# Crear y actualizar usuarios (sincrónico)
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/users/track/sync
+/usuarios/seguimiento/sincronización
 {% endapimethod %}
 
 > Utiliza este punto final para registrar eventos personalizados y compras, y actualizar los atributos del perfil de usuario de forma sincrónica. Este punto final funciona de forma similar al [punto final `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track), que actualiza los perfiles de usuario de forma asíncrona.
 
 {% alert important %}
-Este punto final está actualmente en fase beta. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en esta beta.
+Este punto final está actualmente en **beta limitada**. Aunque ahora mismo no estamos añadiendo nuevos clientes a la versión beta, informa a tu director de cuentas de Braze si crees que esta característica podría ser útil para tu integración en Braze.
 {% endalert %}
 
 ## Llamadas a la API síncronas y asíncronas
 
-En una llamada asíncrona, la API devolverá el código de estado `201`, que indica que tu solicitud se ha recibido, comprendido y aceptado correctamente. Sin embargo, esto no significa que tu solicitud se haya completado en su totalidad.
+En una llamada asíncrona, la API devuelve el código de estado `201`, que indica que tu solicitud se ha recibido, comprendido y aceptado correctamente. Sin embargo, esto no significa que tu solicitud se haya completado en su totalidad.
 
-En una llamada sincrónica, la API devolverá un código de estado `201`, que indica que tu solicitud se ha recibido, comprendido, aceptado y completado correctamente. La respuesta a la llamada mostrará campos seleccionados del perfil de usuario como resultado de la operación.
+En una llamada sincrónica, la API devuelve un código de estado `201`, que indica que tu solicitud se ha recibido, comprendido, aceptado y completado correctamente. La respuesta a la llamada muestra campos seleccionados del perfil de usuario como resultado de la operación.
 
 Este punto final tiene un límite de velocidad menor que el punto final `/users/track` (ver [límite de velocidad](#rate-limit) más abajo). Cada solicitud de `/users/track/sync` sólo puede contener un objeto de evento, un objeto de atributo **o** un objeto de compra. Este punto final debe reservarse para las actualizaciones del perfil de usuario en las que se necesite una llamada síncrona. Para una aplicación saludable, te recomendamos que utilices `/users/track/sync` y `/users/track` juntos.
 
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Parámetros de la solicitud
 
 {% alert important %}
-Para cada componente de la solicitud que aparece en la tabla siguiente, se requiere uno de los siguientes: `external_id`, `user_alias`, `braze_id`, `email`, o `phone`.
+Para cada componente de la petición que aparece en la tabla siguiente, debes incluir uno de los siguientes: `external_id`, `user_alias`, `braze_id`, `email` o `phone`.
 {% endalert %}
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
@@ -74,14 +74,14 @@ Al utilizar los [parámetros de solicitud](#request-parameters) de este punto fi
 
 ### Mensaje correcto
 
-Los mensajes con éxito devolverán la siguiente respuesta, que incluye información sobre los datos del perfil de usuario que se actualizaron.
+Los mensajes con éxito devuelven la siguiente respuesta, que incluye información sobre los datos de perfil de usuario que Braze actualizó.
 
 ```json
 {
     "users": (optional, object), the identifier of the user in the request. May be empty if no users are found and _update_existing_only key is set to true,
-        "custom_attributes": (optional, object), the custom attributes as a result of the request. Only custom attributes from the request will be listed,
-        "custom_events": (optional, object), the custom events as a result of the request. Only custom events from the request will be listed,
-        "purchase_events": (optional, object), the purchase events as a result of the request. Only purchase events from the request will be listed,
+        "custom_attributes": (optional, object), the custom attributes as a result of the request. Braze lists only custom attributes from the request,
+        "custom_events": (optional, object), the custom events as a result of the request. Braze lists only custom events from the request,
+        "purchase_events": (optional, object), the purchase events as a result of the request. Braze lists only purchase events from the request,
     },
     "message": "success"
 ```
@@ -146,7 +146,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ### Actualizar un evento personalizado por correo electrónico
@@ -201,7 +201,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ### Actualizar un evento de compra por alias de usuario
@@ -215,8 +215,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 --data-raw '{
   "purchases" : [
     {
-      "user_alias" : { 
-          "alias_name" : "device123", 
+      "user_alias" : {
+          "alias_name" : "device123",
           "alias_label" : "my_device_identifier"
       }
       "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
@@ -225,13 +225,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
       "price" : 219.98,
       "time" : "2022-12-06T19:20:45+01:00",
       "properties" : {
-          "products" : [ 
+          "products" : [
             {
               "name": "Monitor",
               "category": "Gaming",
               "product_amount": 19.99
             },
-            { 
+            {
               "name": "Gaming Keyboard",
               "category": "Gaming ",
               "product_amount": 199.99
@@ -249,8 +249,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 {
     "users": [
         {
-          "user_alias" : { 
-            "alias_name" : "device123", 
+          "user_alias" : {
+            "alias_name" : "device123",
             "alias_label" : "my_device_identifier"
           },
           "purchase_events": [
@@ -264,18 +264,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ## Preguntas más frecuentes
 
 ### ¿Debo utilizar el punto final asíncrono o síncrono?
 
-Para la mayoría de las actualizaciones de perfiles, el punto final `/users/track` funcionará mejor debido a su mayor límite de velocidad y a su flexibilidad para permitirte realizar solicitudes por lotes. Sin embargo, el punto final `/users/track/sync` es útil si experimentas condiciones de carrera debido a solicitudes rápidas y consecutivas para el mismo usuario.
+Para la mayoría de las actualizaciones de perfiles, el punto final `/users/track` funciona mejor por su mayor límite de velocidad y su flexibilidad para permitirte hacer peticiones por lotes. Sin embargo, el punto final `/users/track/sync` es útil si experimentas condiciones de carrera debido a solicitudes rápidas y consecutivas para el mismo usuario.
 
 ### ¿Difiere el tiempo de respuesta del punto final `/users/track`?
 
-Con una llamada sincrónica, la API espera a que se complete la solicitud para devolver una respuesta. Como resultado, las solicitudes sincrónicas tardarán más en promedio que las asíncronas en `/users/track`. Para la mayoría de las solicitudes, puedes esperar una respuesta en cuestión de segundos.
+Con una llamada sincrónica, la API espera a que Braze complete la solicitud para devolver una respuesta. Como resultado, las peticiones síncronas tardan más de media que las asíncronas en `/users/track`. Para la mayoría de las solicitudes, puedes esperar una respuesta en cuestión de segundos.
 
 ### ¿Puedo enviar varias solicitudes al mismo tiempo?
 

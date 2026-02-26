@@ -18,7 +18,7 @@ search_tag: Partner
 | Requisito previo | Descripción |
 |---|---|
 | Una cuenta de Zendesk | Se requiere una cuenta de Zendesk para aprovechar esta asociación.|
-| Un token de autorización básica de Zendesk | Se utilizará un token de autorización básica de Zendesk para realizar una solicitud de webhook saliente de Braze a Zendesk.|
+| Un token de autorización básica de Zendesk | Se utiliza un token de autorización básica de Zendesk para realizar una solicitud de webhook saliente de Braze a Zendesk.|
 | Una clave de API REST Braze  | Una clave de API REST de Braze con permisos `campaigns.trigger.send`. Puede crearse en el panel Braze desde **Configuración** > **Claves API**.|
 
 ## Ejemplos
@@ -31,7 +31,7 @@ Mejora la eficacia de la atención al cliente combinando las capacidades de Braz
 
 1. En la consola para desarrolladores de Zendesk, ve a webhooks: {% raw %}`https://{{url}}.zendesk.com/admin/apps-integrations/webhooks/webhooks`{% endraw %}
 2. En **Crear webhook**, selecciona **Desencadenar o automatización**.
-3. Para **la URL del punto** final, añade el punto final **/campaign/trigger/send**.
+3. Para **la URL del** punto final, añade el punto final **/campaña/desencadenar/enviar**.
 4. En **Autenticación**, selecciona **Token de portador** y añade la clave de API REST de Braze con permisos `campaigns.trigger.send`.
 
 ![Un ejemplo de webhook de Zendesk.]({% image_buster /assets/img/zendesk/instant_chat/chat1.png %}){: style="max-width:70%;"}
@@ -50,7 +50,7 @@ Cuando Zendesk envía el contenido de un mensaje a través de la API, éste tien
 
 Así que tenemos que extraer el detalle que queremos de esta cadena para mostrarlo en el mensaje, o de lo contrario un usuario verá todos los detalles.
 
-![Un SMS de ejemplo sin formato.]({% image_buster /assets/img/zendesk/instant_chat/chat2.png %}){: style="max-width:40%;"}
+![Un SMS de ejemplo sin formatear.]({% image_buster /assets/img/zendesk/instant_chat/chat2.png %}){: style="max-width:40%;"}
 
 En el cuadro de texto **Mensaje**, añade el siguiente código Liquid y cualquier idioma de exclusión u otro contenido estático:
 
@@ -70,13 +70,13 @@ Feel free to respond directly to this number!
 
 #### Paso 2.2: Programar la entrega
 
-Para el tipo de entrega, selecciona **Entrega desencadenada por API** y, a continuación, copia el ID de campaña que se utilizará en los pasos siguientes.
+Para el tipo de entrega, selecciona **Entrega desencadenada por API** y, a continuación, copia el ID de la campaña, que se utilizará en los pasos siguientes.
 
-![Entrega desencadenada por la API]({% image_buster /assets/img/zendesk/instant_chat/chat4.png %}){: style="max-width:70%;"}
+![API Entrega desencadenada]({% image_buster /assets/img/zendesk/instant_chat/chat4.png %}){: style="max-width:70%;"}
 
 Por último, en **Controles de entrega**, activa la reelegibilidad.
 
-![Re-elegibilidad habilitada en "Controles de entrega".]({% image_buster /assets/img/zendesk/instant_chat/chat5.png %})
+![Rehabilitación habilitada en "Controles de entrega".]({% image_buster /assets/img/zendesk/instant_chat/chat5.png %})
 
 ### Paso 3: Crea un desencadenador en Zendesk para reenviar las respuestas de los agentes a Braze
 
@@ -86,13 +86,13 @@ Ve a **Objetos y reglas** > **Reglas de negocio** > **Desencadenantes**.
 2. Crea un nuevo **desencadenante** (por ejemplo, **Responder vía SMS Braze**).
 3. En **Condiciones**, selecciona:
 - **Ticket>Comentario** está **Presente y el solicitante puede ver el comentario** para que el mensaje se desencadene cada vez que se incluya un nuevo comentario público en la actualización de un ticket
-- **Billete>Actualizar** *no es un* **servicio Web (API)** para que cuando un usuario envíe un mensaje desde Braze, no se reenvíe a su teléfono móvil. Sólo se reenviarán los mensajes procedentes de Zendesk.
+- **Billete>Actualizar** *no es un* **servicio Web (API)** para que cuando un usuario envíe un mensaje desde Braze, no se reenvíe a su teléfono móvil. Sólo se reenvían los mensajes procedentes de Zendesk.
 
 ![Responde por SMS Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat6.png %}){: style="max-width:70%;"}
 
 En **Acciones**, selecciona **Notificar por webhook** y elige el punto final que creaste en el paso 1. A continuación, especifica el cuerpo de la llamada a la API. Introduce el `campaign_id` del [paso 2.2](#step-22-schedule-the-delivery) en el cuerpo de la solicitud.
 
-![Responde por SMS Braze JSON body.]({% image_buster /assets/img/zendesk/instant_chat/chat7.png %}){: style="max-width:70%;"}
+![Responde a través del cuerpo JSON de Braze SMS.]({% image_buster /assets/img/zendesk/instant_chat/chat7.png %}){: style="max-width:70%;"}
 
 {% raw %}
 ```liquid
@@ -131,7 +131,7 @@ A continuación, configura un desencadenador para notificar a Braze cuando se ci
 
 En **Acciones**, selecciona **Notificar por webhook** y elige el segundo punto final que acabas de crear. A partir de ahí, tenemos que especificar el cuerpo de la llamada a la API:
 
-![Cuerpo JSON de tickets resuelto.]({% image_buster /assets/img/zendesk/instant_chat/chat10.png %}){: style="max-width:70%;"}
+![Cuerpo JSON de ticket resuelto.]({% image_buster /assets/img/zendesk/instant_chat/chat10.png %}){: style="max-width:70%;"}
 
 {% raw %}
 ```liquid
@@ -175,7 +175,7 @@ En el panel de Braze, ve a **Audiencia**, elige tu **grupo de suscripción a SMS
 |------------------|---------------------------------------------------------------------------------------------------------------------------|
 | Categoría de palabra clave | El nombre de tu categoría de palabras clave, como `ZendeskSMS1`.                                                                 |
 | Palabras claves         | Tus palabras clave personalizadas, como `SUPPORT`.                                                                                  |
-| Mensaje de respuesta    | El mensaje que se enviará cuando se detecte una palabra clave, como "Un representante del servicio de atención al cliente se pondrá en contacto contigo en breve". |
+| Mensaje de respuesta    | El mensaje que se envía cuando se detecta una palabra clave, como "Un representante del servicio de atención al cliente se pondrá en contacto contigo en breve". |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ![Un ejemplo de categoría de palabras clave SMS en Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat11.png %}){: style="max-width:70%;"}
@@ -213,7 +213,7 @@ En el compositor del webhook, rellena los siguientes campos:
 ```
 {% endraw %}
 
-![Un ejemplo de solicitud con las dos cabeceras requeridas.]({% image_buster /assets/img/zendesk/instant_chat/chat12.png %}){: style="max-width:70%;"}
+![Un ejemplo de solicitud con los dos encabezados requeridos.]({% image_buster /assets/img/zendesk/instant_chat/chat12.png %}){: style="max-width:70%;"}
 
 
 #### Paso 6.3: Programar la primera entrega
@@ -262,6 +262,6 @@ Cuerpo de muestra:
 #### Paso 6.5: Completa la configuración de la segunda campaña webhook
 - Configura un desencadenante basado en acciones para los usuarios que envían un mensaje entrante en la categoría "Otros".
 - Configura los criterios de reeligibilidad.
-- Añade las audiencias aplicables (en este caso, el atributo personalizado **zendesk_ticket_open** es **true**).
+- Añade las audiencias aplicables (en este caso, el atributo personalizado **zendesk_ticket_open** es **verdadero**).
 
 [2]: {% image_buster /assets/img/zendesk/instant_chat/chat2.png %}

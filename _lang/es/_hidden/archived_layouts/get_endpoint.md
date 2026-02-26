@@ -12,7 +12,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
-# Consulta o lista [Punto final del elemento "Gets"]
+# Consulta o lista [Punto final del elemento "Obtiene"]
 
 {% apimethod get %}
 /sms/invalid_phone_numbers
@@ -59,8 +59,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 
 <!-- An example response that defines the different variables returned-->
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {

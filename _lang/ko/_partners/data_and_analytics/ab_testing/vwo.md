@@ -1,6 +1,6 @@
 ---
 nav_title: VWO
-article_title: Integrating VWO with Braze
+article_title: VWO와 Braze의 통합
 description: "Learn how to integrate VWO with Braze."
 alias: /partners/vwo/
 page_type: partner
@@ -28,12 +28,12 @@ By integrating VWO with Braze, you can leverage VWO experiment data to create ta
 1. Log in to your VWO account.
 2. In the VWO dashboard, go to **Configurations > Integrations**. Here, you can enable integrations at the workspace level, which applies the integration to all future test campaigns by default.
 
-   ![VWO Integration Configuration]({% image_buster /assets/img/vwo/vwo1_settings.png %})
+   ![VWO 통합 구성]({% image_buster /assets/img/vwo/vwo1_settings.png %})
 
 4. Select the Braze integration to enable it.
 5. Optionally, you can enable the Braze integration for any existing campaigns. To do so, select a campaign, then go to **Configuration > Integrations**, and enable Braze.
 
-   ![Enable Braze Integration]({% image_buster /assets/img/vwo/vwo2_enable_braze.png %})
+   ![Braze 통합 인에이블먼트]({% image_buster /assets/img/vwo/vwo2_enable_braze.png %})
 
 6. After you've enabled the integration, VWO will start sending experiment data to Braze at the campaign level.
 
@@ -46,11 +46,11 @@ By integrating VWO with Braze, you can leverage VWO experiment data to create ta
 7. Select the relevant VWO property and specify the required value.
 8. If needed, configure the number of visits and time frame. When you're finished, select **Save**.
 
-   ![Braze Segment Creation]({% image_buster /assets/img/vwo/vwo3_braze_segment.png %})
+   ![Braze 세그먼트 생성]({% image_buster /assets/img/vwo/vwo3_braze_segment.png %})
 
 9. To view the number of users that match your segment criteria, select **Calculate Exact Statistics**.
 
-   ![Braze Segment Statistics]({% image_buster /assets/img/vwo/vwo4_braze_segment_calculate_size.png %})
+   ![Braze 세그먼트 통계]({% image_buster /assets/img/vwo/vwo4_braze_segment_calculate_size.png %})
 
 ## Data flow
 
@@ -98,7 +98,7 @@ Before you can use event property segmentation, you'll need it enabled in Braze.
 
 ### Braze data points
 
-The custom event sent from VWO to Braze—including any event properties enabled for segmentation—will consume data points in your Braze instance.
+세분화를 위해 인에이블된 이벤트 속성정보를 포함하여 VWO에서 Braze로 전송된 커스텀 이벤트는 Braze 인스턴스에 데이터 포인트를 기록합니다.
 
 ### Limitations
 
@@ -113,8 +113,8 @@ If you're not seeing VWO data in Braze:
 3. The network calls get populated as the page loads. You may reload the page to view the network calls.
 4. Select a network call to view further details.
 5. Go to the **Request Payload** section in the **Payload** tab, where you can find events: that has name: **ce**, indicating Custom Event.
-6. Expand 0: and data: to see n: “VWO” (name of the Custom Event) and p: {vwo_campaign_name: “<your vwo campaign name>”, vwo_variation_name: “<variation name>”}. These indicate that the values are being pushed by VWO to Braze.
+6. Expand 0: and data: to see n: "VWO"(커스텀 이벤트 이름) 및 p: {vwo_campaign_name: "<your vwo campaign name>", vwo_variation_name: "<variation name>"}. These indicate that the values are being pushed by VWO to Braze.
 
- ![Braze Troubleshooting]({% image_buster /assets/img/vwo/vwo5_troubleshooting.png %})
+ ![Braze 문제 해결]({% image_buster /assets/img/vwo/vwo5_troubleshooting.png %})
 
 For additional support, contact your VWO customer success manager.

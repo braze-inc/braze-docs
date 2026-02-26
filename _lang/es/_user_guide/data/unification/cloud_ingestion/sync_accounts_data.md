@@ -12,7 +12,7 @@ description: "Aprende a sincronizar los datos de tu cuenta Braze utilizando CDI.
 > Aprende a sincronizar los datos de tu cuenta Braze utilizando CDI.
 
 {% alert important %}
-[Los objetos de cuenta](https://braze.com/unlisted_docs/account_opportunity_object/) están actualmente en fase beta, lo que es necesario para utilizar esta característica. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en la beta.
+[Los objetos de cuenta](https://braze.com/unlisted_docs/account_opportunity_object/) están en fase beta y son necesarios para utilizar esta característica. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en la beta.
 {% endalert %}
 
 ## Requisitos previos
@@ -30,8 +30,9 @@ Sólo realiza actualizaciones en el esquema de tu cuenta cuando la sincronizaci�
 - Si `DELETED` es `true`, la cuenta se elimina.
 - La sincronización no registra puntos de datos, pero todos los datos sincronizados cuentan para el uso total de tus cuentas, medido por el total de datos almacenados: no hay necesidad de limitarse sólo a los datos modificados.
 - Los campos que no estén en el esquema de tus cuentas se descartan; actualiza el esquema antes de sincronizar nuevos campos.
+- Puedes actualizar, reanudar o pausar una sincronización pasando el ratón por encima del nombre de la sincronización y seleccionando la acción correspondiente.
 
-## Sincronizar los datos de tu cuenta
+## Sincroniza los datos de tu cuenta
 
 Puedes sincronizar los datos de tu cuenta utilizando CDI a través de un almacén de datos o un almacenamiento de archivos.
 
@@ -43,7 +44,7 @@ Para integrar tu origen de datos con tu almacén de datos:
 {% subtab Snowflake %}
 
 1. Crea una tabla de origen en Snowflake. Utiliza los nombres del ejemplo o elige tus propios nombres de base de datos, esquema y tabla. También puedes utilizar una vista o vista materializada en lugar de una tabla.
-  ```json
+  ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC (
@@ -58,8 +59,8 @@ Para integrar tu origen de datos con tu almacén de datos:
          DELETED BOOLEAN
     );
     ```
-2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
-    ```json
+2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
+    ```sql
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
     GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -85,7 +86,7 @@ Para integrar tu origen de datos con tu almacén de datos:
 {% subtab Redshift %}
 
 1. Create a source table in Redshift. Use the names in the example or choose your own database, schema, and table names. You can also use a view or materialized view instead of a table.
-    ```json
+    ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC (
@@ -100,9 +101,9 @@ Para integrar tu origen de datos con tu almacén de datos:
        deleted boolean
     )
     ```
-2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     {% raw %}
-    ```json 
+    ```sql 
     CREATE USER braze_user PASSWORD '{password}';
     GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
     GRANT SELECT ON TABLE ACCOUNTS_SYNC TO braze_user;
@@ -114,12 +115,12 @@ Para integrar tu origen de datos con tu almacén de datos:
 {% subtab BigQuery %}
 
 1. (Optional) Create a new project or dataset for your source table.  
-    ```json
+    ```sql
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
 2. Create the source table for your CDI integration:  
-    ```json
+    ```sql
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
       updated_at TIMESTAMP DEFAULT current_timestamp,
@@ -161,12 +162,12 @@ Para integrar tu origen de datos con tu almacén de datos:
 {% subtab Databricks %}
 
 1. Create a catalog or schema for your source table.  
-    ```json
+    ```sql
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
 2. Create the source table for your CDI integration:  
-    ```json
+    ```sql
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
       updated_at TIMESTAMP DEFAULT current_timestamp(),
@@ -203,7 +204,7 @@ Para integrar tu origen de datos con tu almacén de datos:
 {% subtab Microsoft Fabric %}
 
 1. Create one or more tables for your CDI integration with these fields:
-    ```json
+    ```sql
     CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
     (
       UPDATED_AT DATETIME2(6) NOT NULL,
@@ -216,7 +217,7 @@ Para integrar tu origen de datos con tu almacén de datos:
     ```
 
 {:start="2"}
-2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
 
 {:start="3"}
 3. If you use network policies, allow Braze IPs to access your Microsoft Fabric instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
@@ -245,7 +246,7 @@ The following examples show valid JSON and CSV formats for syncing account data 
 
 {% subtabs %}
 {% subtab JSON Accounts %}
-```json  
+```jsonl  
 {"id":"s3-qa-0","name":"account0","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}"}
 {"id":"s3-qa-1","name":"account1","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":true}
 {"id":"s3-qa-2","name":"account2","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":false}
@@ -282,7 +283,7 @@ Por ejemplo, si tienes una tabla de datos de cuentas llamada `account_details_1`
 
 {% tabs %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE VIEW BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS 
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -300,7 +301,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -318,7 +319,7 @@ SELECT
 ```
 {% endtab %}
 {% tab BigQuery %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     account_id as ID,
@@ -334,7 +335,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Databricks %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     account_id as ID,
@@ -350,7 +351,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE VIEW [BRAZE_CLOUD_PRODUCTION].[INGESTION].[ACCOUNTS_SYNC]
 AS SELECT 
     account_id as ID,

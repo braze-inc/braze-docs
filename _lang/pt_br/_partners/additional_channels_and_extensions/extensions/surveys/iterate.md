@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Iterate
 
-> [A Iterate](https://iteratehq.com) facilita o aprendizado com seus clientes, oferecendo ferramentas de pesquisa inteligentes e fáceis de usar que se parecem com a sua marca.
+> [A Iterate](https://iteratehq.com) fornece ferramentas de pesquisa e feedback para ajudá-lo a aprender com seus clientes, oferecendo experiências de pesquisa fáceis de usar que correspondem à sua marca.
 
 _Essa integração é mantida pela Iterate._
 
@@ -67,7 +67,7 @@ Em seguida, você verá as opções de configuração para enviar respostas à B
 
 Sua pesquisa pode ser compartilhada de duas maneiras: incorporando a primeira pergunta em sua mensagem ou incluindo um link direto para a pesquisa na plataforma Iterate.
 
-![Iterar opções de links]({% image_buster /assets/img/iterate.png %})
+![Opções de link da Iterate]({% image_buster /assets/img/iterate.png %})
 
 - **Incorporar o código**
   - Copie o snippet de código em **Código de incorporação de e-mail** na seção de integração do Braze na guia **Enviar questionário**. Insira o código no HTML de seu e-mail do Braze onde deseja que o início da pesquisa apareça. 

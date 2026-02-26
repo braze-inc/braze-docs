@@ -11,7 +11,7 @@ La siguiente tabla describe cómo puede utilizar cada tipo de bloque editor.
 | Título | Introduce un texto de título en el mensaje. |
 | Párrafo | Introduce un texto de párrafo en el mensaje. |
 | Botón | Añade un botón estándar. Las propiedades de este bloque permiten editar, establecer enlaces y registrar análisis. |
-| Botón de radio | Añade una lista de opciones de las que los usuarios pueden seleccionar una. Cuando se envía, el perfil de usuario registra el atributo personalizado asociado. |
+| Botón de radio | Añade una lista de opciones de las que los usuarios pueden seleccionar una. Cuando se envía, el perfil de usuario registra el atributo personalizado asociado, que debe ser una cadena que se guardará. Los atributos personalizados con otros tipos de datos no se guardan en el perfil de usuario. |
 | Imagen | Inserta una imagen de la [biblioteca multimedia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). |
 | Enlace | Inserta un hipervínculo en el que los usuarios puedan hacer clic para navegar a una URL especificada. Puede incrustarse dentro de un texto o ser independiente. |
 | Espaciador | Añade espacio o relleno entre otros bloques. |
@@ -58,6 +58,8 @@ En las tablas siguientes se detallan las propiedades de cada bloque de edición.
 
 ### Imagen
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 | Propiedad | Descripción |
 | --- | --- |
 | URL | La dirección de alojamiento de la imagen |
@@ -96,7 +98,7 @@ En las tablas siguientes se detallan las propiedades de cada bloque de edición.
 
 | Propiedad | Descripción |
 | --- | --- |
-| Grupo de suscripción | El [grupo de suscripción a]({{site.baseurl}}/whatsapp_subscription_groups/) [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) o WhatsApp al que se suscribirá el usuario recogiendo su número de teléfono, con la opción de recoger números de todos los países. |
+| Grupo de suscripción | El [grupo de suscripción a]({{site.baseurl}}/whatsapp_subscription_groups/) [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) o WhatsApp al que se suscribirá el usuario mediante la recopilación de su número de teléfono, con la opción de recopilar números de todos los países. |
 | Alineación de texto | Mueve el texto para alinearlo a la izquierda, al centro, a la derecha o justificado |
 | Texto del marcador de posición | Un marcador de posición de número de teléfono para mostrar |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

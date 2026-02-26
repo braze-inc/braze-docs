@@ -25,7 +25,7 @@ L'intégration de Braze et Treasure Data vous permet de contrôler de façon flu
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Treasure data enregistre chaque événement par lots. Pour plus d'informations sur la manière d'interroger Treasure Data pour obtenir des comptes d'événements, reportez-vous à [Intégration de l'importation de Braze Currents](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration).
+Treasure data enregistre chaque événement par lots. Pour plus d'informations sur la manière d'interroger les données Treasure data pour obtenir des comptes d'événements, reportez-vous à la section [Interroger les données](https://docs.treasuredata.com/articles/int/braze-currents-import-integration/a/h2__592056238).<br><br>Si vous souhaitez intégrer le nouveau connecteur de flux en continu Braze de Treasure Data, reportez-vous aux étapes de configuration détaillées dans [Intégration de l'importation de flux en continu Braze Currents](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration/q/braze/qid/72364/qp/4). Pour toute question concernant l'intégration ou la configuration dans Braze, contactez votre équipe de compte Braze.
 {% endalert %}
 
 ## Intégration
@@ -47,7 +47,7 @@ Dans Braze, naviguez vers **Currents** > **\+ Create un flux Currents** > **Expo
 Tous les événements envoyés à Treasure data comprendront l'adresse `external_user_id` de l'utilisateur. À l'heure actuelle, Braze n'envoie pas de données d'événement à Treasure Data pour les utilisateurs qui n'ont pas réglé leur `external_user_id`.
 
 {% alert important %}
-Maintenez l'URL de votre Treasure data à jour. Si l'URL de votre connecteur est incorrecte, Braze ne pourra pas envoyer d'événements. Si cette situation persiste pendant plus de 48 heures, les événements du connecteur seront abandonnés et les données seront définitivement perdues.
+Maintenez l'URL de votre Treasure data à jour. Si l'URL de votre connecteur est incorrecte, Braze ne pourra pas envoyer d'événements. Si cette situation persiste pendant plus de **5 jours**, les événements du connecteur seront abandonnés et les données seront définitivement perdues.
 {% endalert %}
 
 #### Exemple de valeur de champ d'événement
@@ -87,4 +87,4 @@ Braze prend en charge l'exportation de toutes les données répertoriées dans l
 La structure des données exportées est la même que celle des connecteurs HTTP personnalisés, qui peut être consultée dans le [référentiel d'exemples de connecteurs HTTP personnalisés](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).
 
 
-[4]: {% image_buster /assets/img/treasure_data/treasure_data_ingested_view.png %}
+[4] : {% image_buster /assets/img/treasure_data/treasure_data_ingested_view.png %}

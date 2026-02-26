@@ -1,5 +1,5 @@
 ---
-nav_title: Erweiterte Anwendungsfälle
+nav_title: Fortgeschrittene Anwendungsfälle
 page_order: 6
 config_only: true
 noindex: true

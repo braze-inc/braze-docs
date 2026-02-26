@@ -1,5 +1,5 @@
 ---
-nav_title: "Content-Card Objekt"
+nav_title: "Inhalt Kartenobjekt"
 article_title: Content-Card Messaging Objekt
 page_order: 4
 page_type: reference

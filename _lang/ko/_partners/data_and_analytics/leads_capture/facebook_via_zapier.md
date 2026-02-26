@@ -139,7 +139,7 @@ This integration allows you to attribute your Facebook leads by email through th
 You can also use a phone number or external ID as part of the request to Braze if those fields are available and the primary identifier you wish to for the integration. To do this, modify your request payload as indicated in the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 {% endalert %}
 
-## Troubleshooting
+## 문제 해결
 
 {% details I tested the Trigger and Action successfully, so why am I unable to publish my Zapier Zap? %}
 To use this integration, you must have a <a href="https://zapier.com/app/pricing/" target="_blank">Zapier plan</a> that supports premium apps.

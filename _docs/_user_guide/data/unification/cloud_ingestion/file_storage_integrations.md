@@ -53,8 +53,9 @@ The default settings are:
 - Block all public access
 - Disable bucket versioning
 - SSE-S3 encryption
+  - SSE-S3 is the only supported server-side encryption type. Amazon KMS encryption is not supported.
 
-Take note of the region you’ve created the bucket in, as you will create an SQS queue in the same region in the next step.
+Take note of the region you've created the bucket in, as you will create an SQS queue in the same region in the next step.
 
 ### Step 2: Create SQS queue
 
@@ -158,28 +159,38 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 
 1. Within the same IAM section of the console where you created the IAM policy, go to **Roles** > **Create Role**. 
 
-<br><br>![The "Create role" button.]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
+![The "Create role" button.]({% image_buster /assets/img/create_role_1_list.png %})
 
 {: start="2"}
 2. Copy the Braze AWS account ID from your Braze dashboard. Go to **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import**.
+3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID. Select the **Require external ID** checkbox.
+4. In Braze, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import** from the file sources section.
+5. Copy the automatically generated **Braze Account ID**. 
 
-3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID. Select the **Require external ID** checkbox, and enter an external ID for Braze to use. This is the generated external ID from creating an S3 Currents connection in the **Credentials** section of your Currents connection in the Braze dashboard. Select **Next** when complete. 
+![Credentials section with the Braze Account ID field.]({% image_buster /assets/img/braze_account_id.png %})
 
-<br><br> ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
+{: start="6"}
+6. In AWS, paste the account ID and then select **Next**.
 
-{: start="4"}
-4. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.
+![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
-<br><br>![Role ARN with the new-policy-name selected.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
+{: start="7"}
+7. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.
+
+![Role ARN with the new-policy-name selected.]({% image_buster /assets/img/create_role_3_attach.png %})
 
 Give the role a name and a description, and select **Create Role**.
 
-<br><br>![An example role named "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
+![An example role named "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})
 
-{: start="5"}
-5. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
+{: start="8"}
+8. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
 
 ## Setting up Cloud Data Ingestion in Braze
+
+{% alert important %}
+Customers onboarding in February 2026 or later may have early access to a new CDI UI, where sources and syncs are configured separately. In this new UI, create an S3 source first with your credentials, bucket, and region. Then, create a sync with your SQS URL and folder path (optional).
+{% endalert %}
 
 1. To create a new integration, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import** from the file sources section. 
 2. Input the information from the AWS setup process to create a new sync. Specify the following:
@@ -196,17 +207,17 @@ Give the role a name and a description, and select **Create Role**.
 {: start="3"}
 3. Name your integration, and select the data type for this integration. 
 
-<br><br>![Setting up sync details for "cdi-s3-as-source-integration" with user attributes as the data type.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
+![Setting up sync details for "cdi-s3-as-source-integration" with user attributes as the data type.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})
 
 {: start="4"}
 4. Add a contact email for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes. 
 
-<br><br> ![Setting up notification preferences for sync error notifications.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
+![Setting up notification preferences for sync error notifications.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})
 
 {: start="5"}
-5. Finally, test the connection and save the sync. 
+5. Finally, select **Test connection** to confirm Braze can access your bucket and list the files available to ingest (not the data inside those files). Then, save the sync. 
 
-<br><br>![An option to test the connection with a data preview.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+![An option to test the connection with a data preview.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
 ## Required file formats
 
@@ -276,15 +287,84 @@ s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age""
 {% endtab %}
 {% tab CSV Catalogs  %}
 ```plaintext  
-ID,PAYLOAD
-85,"{""product_name"": ""Product 85"", ""price"": 85.85}" 
-1,"{""product_name"": ""Product 1"", ""price"": 1.01}" 
+ID,PAYLOAD,DELETED
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
 ```
+Include an optional **DELETED** column. When `DELETED` is `true`, that catalog item is removed from the catalog in Braze. See [Deleting catalog items](#deleting-catalog-items).
 {% endtab %}
 
 {% endtabs %}  
 
 For examples of all supported file types, refer to the sample files in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
+
+## Deleting data
+
+Cloud Data Ingestion for S3 supports deleting users and catalog items through file uploads. Use separate syncs and file formats for each.
+
+- **[Deleting users](#deleting-users)** – Create a sync with data type **Delete Users** and upload files that contain only user identifiers (no payload).
+- **[Deleting catalog items](#deleting-catalog-items)** – Use your existing catalog sync and add a `deleted` (or `DELETED`) column to mark items for removal.
+
+### Deleting users
+
+To delete user profiles in Braze using files in S3:
+
+1. Create a new Cloud Data Ingestion sync (same [AWS and Braze setup](#setting-up-cloud-data-ingestion-in-aws) as for other syncs).
+2. When configuring the sync in Braze, set **Data Type** to **Delete Users**.
+3. Upload files to your S3 bucket that contain only user identifier columns. Do not include a `PAYLOAD` column—the sync fails if payload is present, to avoid accidental deletions.
+
+Each row in the file must identify exactly one user using one of:
+
+| Identifier | Description |
+| --- | --- |
+| `EXTERNAL_ID` | Matches the `external_id` used in Braze. |
+| `ALIAS_NAME` and `ALIAS_LABEL` | Both columns together identify the user by alias. |
+| `BRAZE_ID` | Braze-generated user ID (existing users only). |
+
+{% alert important %}
+Deleting users is permanent and cannot be undone. Include only users you intend to remove. For more details, see [Delete users with Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/delete_users/).
+{% endalert %}
+
+**Example – JSON (user deletes):**
+```jsonl
+{"external_id":"user-to-delete-001"}
+{"external_id":"user-to-delete-002"}
+{"braze_id":"braze-id-from-profile"}
+```
+
+**Example – CSV (user deletes):**
+```plaintext
+external_id
+user-to-delete-001
+user-to-delete-002
+```
+
+When the sync runs, Braze processes new files in the bucket and deletes the corresponding user profiles.
+
+### Deleting catalog items
+
+To remove items from a catalog using file storage:
+
+1. Use the same S3 sync you use to [sync catalog data]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/) (data type **Catalogs**).
+2. In your CSV or JSON files, add an optional **`deleted`** (or **`DELETED`**) column.
+3. Set `deleted` to `true` for any catalog item you want removed from the catalog in Braze.
+
+Each row still needs `ID` and `PAYLOAD`. For rows marked for deletion, the payload can be minimal; Braze removes the item by `ID`.
+
+**Example – JSON (catalog item delete):**
+```jsonl
+{"id":"85","payload":"{\"product_name\": \"Product 85\", \"price\": 85.85}"}
+{"id":"1","payload":"{\"product_name\": \"Product 1\", \"price\": 1.01}","deleted":true}
+```
+
+**Example – CSV (catalog item delete):**
+```plaintext
+ID,PAYLOAD,DELETED
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
+```
+
+When the sync runs, rows with `deleted: true` cause the matching catalog item to be deleted in Braze. For full catalog sync and delete behavior, see [Sync and delete catalog data]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/).
 
 ## Things to know
 
@@ -299,7 +379,7 @@ For examples of all supported file types, refer to the sample files in [braze-ex
 
 CDI will only process files that are added after the sync is created. In this process, Braze looks for new files to be added, which triggers a new message to SQS. This will kick off a new sync to process the new file.
 
-Existing files can be used to validate the data structure in the test connection, but they will not be synced to Braze. Any existing files that should be synced must be reuploaded to S3 to be processed by CDI.
+You can use existing files to validate that Braze can access your bucket and detect files to ingest, but they are not synced to Braze. For the CDI to process them, you must re-upload to S3 any existing files that you want synced. 
 
 ### Handling unexpected file errors
 

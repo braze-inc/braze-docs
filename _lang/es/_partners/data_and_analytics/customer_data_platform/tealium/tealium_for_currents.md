@@ -33,12 +33,14 @@ Las instrucciones para crear una fuente de datos se encuentran en el sitio de [T
 
 ### Paso 2: Crear corriente
 
-En Braze, vaya a **Corrientes > + Crear corriente > Exportación de tealio**. Proporcione un nombre de integración, un correo electrónico de contacto y su URL de Tealium. A continuación, seleccione lo que desea seguir de la lista de eventos disponibles. Por último, haga clic en **Lanzar actual**
+En Braze, ve a **Currents** > **\+ Crear corriente** > **Exportar Tealium**. Proporcione un nombre de integración, un correo electrónico de contacto y su URL de Tealium. 
 
-Todos los eventos enviados a Tealium incluirán la dirección del usuario `external_user_id`. En este momento, Braze no envía datos de eventos a Tealium para los usuarios que no tienen configurado su `external_user_id`.
+A continuación, seleccione lo que desea seguir de la lista de eventos disponibles. Por defecto, todos los eventos enviados a Tealium incluyen la dirección `external_user_id` del usuario. Sin embargo, puedes seleccionar la casilla **Incluir eventos de usuarios anónimos** para enviar también a Tealium los eventos que no tengan un `external_user_id`.
+
+Después de configurar tu integración, selecciona **Lanzar Actual**.
 
 {% alert important %}
-Es importante mantener actualizada la URL de Tealium. Si la URL de su conector es incorrecta, Braze no podrá enviar eventos. Si esto persiste durante más de **48 horas**, los eventos del conector se eliminarán y los datos se perderán permanentemente.
+Es importante mantener actualizada la URL de Tealium. Si la URL de su conector es incorrecta, Braze no podrá enviar eventos. Si esto persiste durante más de **5 días**, los eventos del conector se eliminarán y los datos se perderán permanentemente.
 {% endalert %}
 
 ## Detalles de la integración

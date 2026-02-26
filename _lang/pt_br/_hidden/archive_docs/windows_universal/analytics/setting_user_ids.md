@@ -1,13 +1,13 @@
 ---
-nav_title: Configuração de IDs de usuário
-article_title: Configuração de IDs de usuário para o Windows Universal
+nav_title: Definir IDs de usuário
+article_title: Definir IDs de usuário para Windows Universal
 platform: Windows Universal
 page_order: 1
 description: "Este artigo de referência aborda como configurar IDs de usuário na plataforma Windows Universal."
 hidden: true
 ---
 
-# Configuração de IDs de usuário
+# Definir IDs de usuário
 {% multi_lang_include archive/windows_deprecation.md %}
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
@@ -32,6 +32,3 @@ Além disso, recomendamos não alterar o ID do usuário quando um usuário se de
 
 {% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Documentos para desenvolvedores Android - Localização"

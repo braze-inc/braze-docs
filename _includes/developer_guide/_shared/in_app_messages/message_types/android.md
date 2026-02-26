@@ -38,6 +38,10 @@ This message type extends [`InAppMessageImmersiveBase`](https://braze-inc.github
 
 This message type implements [`IInAppMessageHtml`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-html/index.html), which is a subclass of [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html).
 
+{% alert note %}
+On Android, links configured with `target="_blank"` in custom HTML in-app messages open in the device's default web browser.
+{% endalert %}
+
 Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">JavaScript bridge</a> page for more details.
 
 ![An HTML in-app message with the a carousel of content and interactive buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}

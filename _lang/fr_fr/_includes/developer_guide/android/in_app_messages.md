@@ -13,11 +13,11 @@
 L’affichage des messages in-app est géré par la classe [`BrazeInAppMessageManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html). Chaque activité de votre application doit être enregistrée avec le `BrazeInAppMessageManager` pour lui permettre d’ajouter des vues de messages in-app à la hiérarchie de vues. Il existe deux manières de le faire :
 
 {% tabs local %}
-{% tab automatiquement %}
+{% tab automatically %}
 L'[intégration du rappel du cycle de vie de l'activité]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) gère automatiquement l'enregistrement des messages in-app ; aucune intégration supplémentaire n'est nécessaire. C'est la méthode recommandée pour l'envoi de messages in-app.
 {% endtab %}
 
-{% tab manuellement %}
+{% tab manually %}
 {% alert warning %}
 Si vous utilisez le rappel du cycle de vie de l'activité pour l'enregistrement automatique, ne terminez pas cette étape.
 {% endalert %}

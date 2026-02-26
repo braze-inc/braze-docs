@@ -1,10 +1,10 @@
 ---
-nav_title: 데이터 
-article_title: 데이터 
+nav_title: Data 
+article_title: Data 
 page_order: 3
 layout: dev_guide
 
-guide_top_header: "데이터"
+guide_top_header: "Data"
 guide_top_text: "데이터는 개인화된 경험을 만들고, 고객 행동을 이해하고, 메시징 전략을 최적화함으로써 고객 참여 전략을 강화하는 데 중요한 역할을 합니다. Braze는 세 가지 핵심 사항을 염두에 두고 모든 데이터 기능을 구축합니다: <br><br>**1.** <a href='/docs/user_guide/data/#making-customer-data-work-harder/'>고객 데이터를 더 열심히 활용하세요.</a><br> **2.** <a href='/docs/user_guide/data/#enhancing-data-agility-to-drive-performance/'>데이터 민첩성을 향상하여 성능/성과를 촉진합니다.</a><br>**3.** <a href='/docs/user_guide/data/#keeping-brands-data-secure-safe-and-compliant/'>브랜드의 데이터를 안전하게 보호하고 규정을 준수합니다.</a>" 
 
 guide_featured_title: "Braze 데이터 플랫폼"

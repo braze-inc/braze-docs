@@ -15,7 +15,7 @@ _This integration is maintained by Merkury._
 
 ## About the integration
 
-The Braze and Merkury integration allows you to leverages the `MerkuryID` to increase site visitor recognition rates for Braze customers. Upon recognizing visitors that are brand email subscribers, Merkury will update the Braze profile to include the subscribers email address. The increased recognition capabilities of `MerkuryID` improves engagement and personalization opportunities and immediately increases site abandonment email send quantities and associated revenue. 
+The Braze and Merkury integration allows you to leverages the `MerkuryID` to increase site visitor recognition rates for Braze customers. 브랜드 이메일 가입자인 방문자를 인식하면 Merkury는 가입자의 이메일 주소를 포함하도록 Braze 프로필을 업데이트합니다. The increased recognition capabilities of `MerkuryID` improves engagement and personalization opportunities and immediately increases site abandonment email send quantities and associated revenue. 
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ The Braze and Merkury integration allows you to leverages the `MerkuryID` to inc
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
-The Merkury identity connector requests to Braze operate within Braze API rate limit specifications. Contact Braze or your Merkle account manager if you have any questions.<br><br>Merkury will send at least one request at the end of a qualified session.
+The Merkury identity connector requests to Braze operate within Braze API rate limit specifications. Contact Braze or your Merkle account manager if you have any questions.<br><br>자격을 갖춘 세션이 끝날 때 Merkury는 최소 한 번의 요청을 보냅니다.
 {% endalert %}
 
 ## Side-by-side SDK integration
@@ -42,11 +42,11 @@ You must have the [Braze Web SDK]({{site.baseurl}}/developer_guide/platform_inte
 
 ### Step 2: Deploy Merkle's Merkury tag
 
-Deploy the Merkury tag on your website. This will make the Merkury identity connector available on your website. A detailed guide with instructions will be provided to you by your Merkle account manager.
+웹사이트에 머큐리 태그를 배포하여 웹사이트에서 머큐리 ID 커넥터를 사용할 수 있도록 합니다. Merkle 계정 매니저가 자세한 지침이 담긴 가이드를 제공해 드릴 것입니다.
 
-### Step 3: Create custom attributes
+### 3단계: Create custom attributes
 
-The following fields will be populated by Merkury identity connector and need to be created in Braze as [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes).
+Merkury 아이덴티티 커넥터는 다음 필드를 채우며, 이 필드는 Braze에서 [커스텀 속성으로]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes) 만들어야 합니다.
 
 | Attribute name | Data type | Description |
 | --- | --- | --- |

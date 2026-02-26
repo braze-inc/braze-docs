@@ -1,22 +1,22 @@
 ---
-nav_title: Operario
+nav_title: Operador
 article_title: Operador BrazeAI
-page_order: 0.7
+page_order: 8
 alias: /operator/
 description: "Este artículo de referencia trata sobre BrazeAI Operator, un asistente potenciado por IA integrado en el panel de Braze."
 ---
 
 # Operador <sup>BrazeAITM</sup> 
 
-> <sup>BrazeAITM</sup> Operator es un asistente basado en IA integrado en el panel de Braze. Operator te ayuda a encontrar respuestas, solucionar problemas y aprender las mejores prácticas sin abandonar tu flujo de trabajo.
+> <sup>BrazeAITM</sup> Operator es un asistente basado en IA integrado en el panel de Braze. El operador proporciona respuestas, orientación para la solución de problemas y las mejores prácticas dentro de tu flujo de trabajo.
 
 {% alert important %}
-El Operador <sup>BrazeAITM</sup> está actualmente en una beta privada con funcionalidad limitada. Si necesitas ayuda para empezar, ponte en contacto con tu administrador del éxito del cliente.
+El Operador <sup>BrazeAITM</sup> está en beta privada con funcionalidad limitada. Si necesitas ayuda para empezar, ponte en contacto con tu administrador del éxito del cliente.
 {% endalert %}
 
 ## Acerca del Operador
 
-Operador es tu asistente de IA integrado en el panel de Braze. Te ayuda a avanzar más rápido respondiendo a tus preguntas, sugiriéndote los siguientes pasos y guiándote a través de las tareas, todo ello sin abandonar tu flujo de trabajo.
+Operador es un asistente de IA integrado en el panel de Braze. Responde a tus preguntas, sugiere los siguientes pasos y te guía a través de las tareas, todo dentro de tu flujo de trabajo.
 
 Durante la beta, Operador sólo admite el modo **Preguntar**. Puedes hacerlo:
 
@@ -24,28 +24,38 @@ Durante la beta, Operador sólo admite el modo **Preguntar**. Puedes hacerlo:
 - Solución de problemas utilizando [el contexto consciente de la página](#page-aware-context)
 - Aprende las mejores prácticas y orientaciones para la incorporación
 
+### Proveedores modelo como subprocesadores o proveedores terceros
+
+Cuando el Cliente utilice una integración con un proveedor de LLM proporcionado por Braze a través de los Servicios Braze ("LLM proporcionado por Braze"), los proveedores de dicho LLM proporcionado por Braze actúan como Subprocesadores de Braze, con sujeción a los términos del Anexo de procesamiento de datos (DPA) entre el Cliente y Braze. BrazeAI Operator se integra con OpenAI.
+
+Si el Cliente opta por aportar su propia clave de API para integrarse con el Operador Braze AI, el proveedor de la propia suscripción LLM del Cliente será considerado un Tercero Proveedor, tal y como se define en el contrato entre el Cliente y Braze. 
+
+### ¿Cómo se utilizan y envían mis datos a OpenAI?
+
+Para generar resultados de IA a través de las características de IA de Braze que Braze identifique como que aprovechan OpenAI ("Resultados"), Braze enviará a OpenAI tus indicaciones, el contenido mostrado en el panel y los datos del espacio de trabajo relevantes para tus consultas, según corresponda ("Entradas"). Según [los compromisos de la plataforma API de](https://openai.com/enterprise-privacy/) OpenAI, los datos enviados a la API de OpenAI a través de Braze no se utilizan para entrenar o mejorar los modelos de OpenAI. Entre tú y Braze, la Salida es tu propiedad intelectual. Braze no hará valer ninguna reclamación de propiedad de derechos de autor sobre dicha Salida. Braze no ofrece garantías de ningún tipo con respecto a ningún contenido generado por IA en general, incluida la Salida.
+
 ## Cómo acceder a Operador
 
 Puedes abrir Operador desde cualquier página del panel de Braze.  
 
 1. Selecciona **Operador <sup>BrazeAITM</sup>**, junto a tu perfil de usuario.
 
-\![El icono del Operador BrazeAI junto a un perfil de usuario.]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
+![El icono del Operador BrazeAI junto a un perfil de usuario.]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
 
 {: start="2"}
 2\. Se abrirá el panel de chat del Operador en la parte derecha de la pantalla.
 
-El panel de chat del Operador.]({% image_buster /assets/img/operator/operator_panel.png %})
+![El panel de chat para Operadora.]({% image_buster /assets/img/operator/operator_panel.png %})
 
 {% alert tip %}
 Prueba a maximizar para ampliar el panel y facilitar la lectura, o a minimizarlo para mantener disponible el Operador mientras sigues trabajando.  
-{% endalert %}
+{% endalert %} 
 
 ## Cómo hablar con el Operador
 
 Utiliza indicaciones para comunicarte con el Operador. Lo mejor es hablar con naturalidad, como lo harías con un compañero de trabajo o un amigo. Tus indicaciones pueden ir desde preguntas sencillas a peticiones complejas:
 
-- **Sencillo:** ¿Cómo puedo asegurarme de que los usuarios no reciben correos electrónicos de abandono del carrito mientras todavía están en el sitio comprando?
+- **Sencillo:** ¿Cómo puedo asegurarme de que los usuarios no reciben correos electrónicos de abandono del carrito mientras siguen comprando en el sitio?
 - **Complejo:** ¿Cómo puedo hacer que la etiqueta `abort_message` de mi mensaje incluya el atributo del usuario que provocó el aborto?
 
 El operador puede proporcionar instrucciones paso a paso, enlaces a documentos de Braze y explicaciones en lenguaje sencillo. Cuanto más clara y concreta sea tu pregunta, más útil será la respuesta. 
@@ -62,9 +72,20 @@ Piensa en la Operadora como en una conversación, no como en un motor de búsque
 
 El operador incluye las siguientes características durante la versión beta:
 
+### Modelos GPT
+
+Puedes seleccionar entre estos modelos de GPT para utilizarlos en diferentes tipos de solicitudes con Operador:
+
+- [GPT-5 nano](https://platform.openai.com/docs/models/gpt-5-nano)
+- [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini)
+- [GPT-5](https://platform.openai.com/docs/models/gpt-5)
+- [GPT-5.1](https://platform.openai.com/docs/models/gpt-5.1) (predeterminado)
+
+![Desplegable para elegir diferentes modelos de GPT.]({% image_buster /assets/img/operator/operator_model.png %}){:style="max-width:70%"}
+
 ### Contexto de página
 
-El operador entiende la página en la que estás trabajando en Braze y puede adaptar las respuestas en función de ese contexto. Por ejemplo, si abres Operator mientras construyes un Canvas, puede sugerirte pasos o proporcionarte orientación relevante para Canvas, sin que tengas que explicarle dónde te encuentras. 
+El operador entiende la página en la que estás trabajando en Braze y puede adaptar las respuestas en función de ese contexto. Por ejemplo, si abres Operator mientras construyes un Canvas, puede sugerirte pasos o proporcionarte orientación relevante para Canvas sin que tengas que explicarle dónde te encuentras. 
 
 ### Sugerencias
 
@@ -74,7 +95,7 @@ Cuando abras Operator, verás algunas sugerencias que te ayudarán a empezar. Se
 
 El Operador muestra sus pasos de razonamiento en secciones plegables etiquetadas como **Razonado**. Selecciona el desplegable para ampliar estas secciones y ver cómo el Operador llegó a una respuesta.
 
-\![Desplegable para "Razonado" ampliado con más detalles sobre cómo respondió el Operador.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:60%"}
+![Desplegable para "Razonado" ampliado con más detalles sobre cómo respondió el Operador.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:50%"}
 
 ### Acciones sugeridas
 
@@ -98,7 +119,7 @@ En la parte inferior de cada respuesta, utiliza los botones de pulgar hacia arri
 
 ## Solución de problemas
 
-| Edición | Solución de problemas |
+| Problema | Solución de problemas |
 | --- | --- |
 | Sin respuesta | Prueba a actualizar la página y a volver a abrir el panel del Operador. |
 | Respuestas fuera de tema | Reformula tu pregunta de forma más específica. Menciona la característica o el flujo de trabajo sobre el que preguntas. |
@@ -122,3 +143,7 @@ Aunque Operator tiene acceso al contexto del trabajo que estás haciendo en Braz
 Como beta privada, Operador puede tener errores ocasionales, interrupciones o características incompletas.
 
 Si no estás seguro de si una pregunta es compatible, intenta formularla en términos de cómo Operator puede ayudarte a navegar o realizar acciones dentro del panel Braze, en lugar de recurrir a análisis o datos históricos.
+
+### Número de mensajes enviados
+
+Hay un límite de mensajes que puedes enviar a Operadora. Recomendamos utilizar la GPT-5 mini o la GPT-5 nano predeterminadas para tus consultas y utilizar la GPT-5 con criterio para tareas más complejas.

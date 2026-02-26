@@ -36,9 +36,7 @@ After you have created a custom event or product, select **Manage Properties** f
 
 To make these added custom attributes, events, products, or event properties traceable, you must ask your development team to create them in the SDK using the exact name you used to add them earlier. Or, you can use the Braze [API]({{site.baseurl}}/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other will be actionable and applied to your users.
 
-{% alert note %}
-All user profile data (custom events, custom attributes, custom data) is stored as long as those profiles are active.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Manage custom data storage' %}
 
 ## Blocklisting custom data
 
@@ -46,11 +44,58 @@ You may occasionally identify custom attributes, custom events, or purchase even
 
 To stop this data from being sent to Braze, you can blocklist a custom data object while your engineering team works to remove it from the backend of your app or website. Blocklisting prevents a particular custom data object from being recorded by Braze going forward, meaning it won't show up when searching for a specific user.
 
-{% alert important %}
-To blocklist custom data, you need the [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) to access and edit campaigns, Canvases, and segments.
-{% endalert %}
-
 Blocklisted data will not be sent by the SDK, and the Braze dashboard won't process blocklisted data from other sources (for example, the API). However, blocklisting doesn't remove data from user profiles or retroactively decrease the amount of data points incurred for that custom data object.
+
+### Required user permissions
+
+To blocklist custom data, you need the [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) in the following dropdown for your workspace.
+
+{% details User permissions for blocklisting custom data %}
+
+{% multi_lang_include deprecations/user_permissions.md %}
+
+- View Campaigns
+- Edit Campaigns
+- Archive Campaigns
+- View Canvases
+- Edit Canvases
+- Archive Canvases
+- View Frequency Capping Rules
+- Edit Frequency Capping Rules
+- View Message Prioritization
+- Edit Message Prioritization
+- View Content Blocks
+- View Feature Flags
+- Edit Feature Flags
+- Archive Feature Flags
+- View Segments
+- Edit Segments
+- View IAM Templates
+- Edit IAM Templates
+- Archive IAM Templates
+- View Email Templates
+- Edit Email Templates
+- Archive Email Templates
+- View Webhook Templates
+- Edit Webhook Templates
+- Archive Webhook Templates
+- View Link Templates
+- Edit Link Templates
+- View Media Library Assets
+- Edit Media Library Assets
+- Delete Media Library Assets
+- View Locations
+- Edit Locations
+- Archive Locations
+- View Promotion Codes
+- Edit Promotion Codes
+- Export Promotion Codes
+- View Preference Centers
+- Edit Preference Centers
+- View Reports
+- Edit Reports
+
+{% enddetails %}
 
 ### Blocklisting custom attributes, custom events, and products
 

@@ -1,7 +1,7 @@
 ---
 nav_title: "SMS"
 article_title: Über SMS
-page_order: 13
+page_order: 14
 description: "Dieser Referenzartikel behandelt allgemeine Anwendungsfälle des SMS-Kanals und die Voraussetzungen für die Einrichtung von SMS."
 page_type: reference
 alias: /about_sms/
@@ -10,9 +10,9 @@ channel:
 search_rank: 2
 ---
 
-# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"} Über SMS
+# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"} Über SMS
 
-> In diesem Artikel finden Sie einige häufig vorkommende Anwendungsfälle, Anforderungen und Begriffe, die Ihnen bei der SMS Integration helfen und es Ihnen ermöglichen, effektiv und strategisch mit Ihren Kund:in zu kommunizieren.![SMS Nachricht mit dem Text "Willkommen bei Braze! Wir freuen uns, Sie an Bord zu haben. Sehen Sie sich unsere Dokumentation an, um loszulegen. https://www.braze.com/docs/ Text HELP für Hilfe und STOP zum Beenden."]({% image_buster /assets/img/sms/sms_about.png %}){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
+> In diesem Artikel finden Sie einige häufig vorkommende Anwendungsfälle, Anforderungen und Begriffe, die Ihnen bei der SMS-Integration helfen und es Ihnen ermöglichen, effektiv und strategisch mit Ihren Kunden zu kommunizieren.![SMS-Nachricht mit dem Text "Willkommen bei Braze! Wir freuen uns, Sie an Bord zu haben. Sehen Sie sich unsere Dokumentation an, um loszulegen. https://www.braze.com/docs/ Text HELP für Hilfe und STOP zum Beenden."]({% image_buster /assets/img/sms/sms_about.png %}){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
 
 <br>
 SMS, auch bekannt als Short Message Service, wird verwendet, um Textnachrichten an Mobiltelefone zu senden. Derzeit werden weltweit täglich über 23 Milliarden Textnachrichten verschickt, wobei die SMS der direkteste Weg ist, Nutzer und Kunden zu erreichen. Diese weit verbreitete Nutzung und der bewährte Nutzen haben SMS zu einem effektiven Marketinginstrument für Unternehmen jeder Größe gemacht. 
@@ -23,7 +23,7 @@ SMS, auch bekannt als Short Message Service, wird verwendet, um Textnachrichten 
 |---|---|
 | Allgemeines Marketing | SMS-Nachrichten sind ein direkter, flexibler und effizienter Weg, um Ihre Kunden über bevorstehende Angebote, günstige Verkäufe und aktuelle oder erwartete Produkte zu informieren. |
 | Hinweise | Mit SMS-Nachrichten können Sie Nutzer:innen, die einen Termin für einen Dienst vereinbart haben, effektiv benachrichtigen. Wenn Sie beispielsweise eine SMS-Nachricht senden, die einen Kunden oder eine Kundin am Tag vor einem Arzttermin daran erinnert, dass er oder sie einen Termin verpasst hat, sparen Sie und Ihre Kund:innen Zeit und Geld. |
-| Transaktionsnachrichten | SMS-Nachrichten sind ein effizienter Weg, um Transaktionsbenachrichtigungen wie Auftragsbestätigungen und Versandinformationen zu versenden und ihnen alle benötigten Informationen an einem Ort zur Verfügung zu stellen. Beachten Sie, dass es gesetzliche Richtlinien gibt, die beim Versenden von Nachrichten über Transaktionen beachtet werden müssen. Wenn Sie sich bezüglich dieser Richtlinien unsicher sind, wenden Sie sich an Ihr internes Rechtsteam.|
+| Transaktionsnachrichten | SMS-Nachrichten sind ein effizienter Weg, um Transaktionsbenachrichtigungen wie Auftragsbestätigungen und Versandinformationen zu versenden und ihnen alle benötigten Informationen an einem Ort zur Verfügung zu stellen. Beachten Sie, dass es gesetzliche Richtlinien gibt, die beim Versenden von Nachrichten über Transaktionen beachtet werden müssen. Wenn Sie sich über diese Richtlinien unsicher sind, wenden Sie sich an Ihr internes juristisches Team.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Anforderungen

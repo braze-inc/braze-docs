@@ -20,20 +20,20 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and sel
 
 Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Amplitude's dashboard.<br><br>![]({% image_buster /assets/img/amplitude3.png %})
 
-### Step 2: Set up the Braze integration in Amplitude
+### 2단계: Set up the Braze integration in Amplitude
 
-In Amplitude, navigate to **Sources & Destinations** > **[project name]** > **Destinations** > **Braze**. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Save**.
+Amplitude에서 **Sources & 대상** > **[프로젝트 이름]** > **대상** > Braze로 이동합니다. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Save**.
 
 ![]({% image_buster /assets/img/amplitude.png %})
 
-### Step 3: Export an Amplitude cohort to Braze
+### 3단계: Export an Amplitude cohort to Braze
 
 First, to export users from Amplitude to Braze, create a [cohort](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) of users you wish to export. Amplitude can sync cohorts to Braze using the following identifiers:
 - User Alias
 - Device ID
 - User ID (External ID)
 
-You can set up multiple Braze connections in your Amplitude account. This allows you to configure one connection to sync user IDs for known users and another to sync device IDs for anonymous users.
+Amplitude는 우선순위에 따라 여러 식별자 매핑 속성을 지원합니다. 1차, 2차, 3차 식별자 매핑을 구성할 수 있습니다. 동기화 중 사용자가 기본 계정을 놓친 경우 Amplitude는 다음 사용 가능한 계정을 사용합니다. 이렇게 하면 동기화 범위가 개선되고, 삭제된 사용자가 줄어들며, 더 많은 익명 사용자와 부분 식별자를 동기화에 포함할 수 있습니다. 
 
 Once you have created a cohort, click **Sync to...** to export these users to Braze.
 
@@ -43,13 +43,15 @@ Only users who already exist within Braze will be added or removed from a cohort
 
 #### Defining sync cadence
 
-Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. Make sure to select an option that makes sense for your business needs while also being mindful of consuming [data points]({{site.baseurl}}/user_guide/data/data_points/).
+Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. 
 
-### Step 4: Segment users in Braze
+설정한 모든 통합은 데이터 포인트를 기록합니다. Braze 데이터 포인트의 미묘한 차이에 대해 궁금한 점이 있으면 Braze 계정 매니저가 답변해 드립니다.
+
+### 4단계: Segment users in Braze
 
 In Braze, to create a segment of these users, navigate to **Segments** under **Engagement**, name your segment, and select **Amplitude Cohorts** as the filter. Next, use the "includes" option and choose the cohort you created in Amplitude. 
 
-![In the Braze segment builder, the filter "amplitude_cohorts" is set to "includes_value" and "Amplitude cohort test".]({% image_buster /assets/img/amplitude2.png %})
+![Braze 세그먼트 빌더에서 "amplitude_cohorts" 필터를 "includes_value" 및 "Amplitude 코호트 테스트"로 설정합니다.]({% image_buster /assets/img/amplitude2.png %})
 
 After saving, you can reference this segment during Canvas or campaign creation in the targeting users step.
 

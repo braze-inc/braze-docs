@@ -1,5 +1,5 @@
 ---
-nav_title: 輸出収入&amp;アンプ、総収入データ
+nav_title: 収益および総収益データのエクスポート
 article_title: 収益および総収益データのエクスポート
 page_order: 4
 page_type: reference
@@ -11,7 +11,7 @@ tool:
 
 # 収益および総収益データのエクスポート
 
-> このページでは、ダッシュボードの[Revenue Report]({{site.baseurl}}/user_guide/analytics/reporting/revenue_report/) ページについて説明します。ここでは、特定の期間の収益、特定の製品収益、およびアプリの総収益に関するデータを表示できます。
+> このページでは、ダッシュボードの[収益レポート]({{site.baseurl}}/user_guide/analytics/reporting/revenue_report/) ページについて説明します。ここでは、特定の期間の収益、特定の製品収益、およびアプリの総収益に関するデータを表示できます。
 
 **収益レポート**は [**分析**] の下にあります。
 
@@ -19,11 +19,11 @@ tool:
 収益データを取得する他の方法を探している場合は、[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)として、キャンペーンやキャンバスに (製品購入に加えて) 購入行動を追加してみてください。
 {% endalert %}
 
-収益データをエクスポートするには、**Performance Over Time**グラフの<i class="fas fa-bars" title="チャートコンテキストメニュー"></i>を選択し、エクスポートオプションを選択します。
+収益データをエクスポートするには、**経時的なパフォーマンス**グラフの<i class="fas fa-bars" title="チャートコンテキストメニュー"></i>を選択し、エクスポートオプションを選択します。
 
-## パフォーマンス経時グラフ
+## 経時的なパフォーマンスグラフ
 
-以下のデータは、**Performance Over Time** グラフで表示できます。
+以下のデータは、**経時的なパフォーマンス** グラフで表示できます。
 
 - KPI 式
 - 購入

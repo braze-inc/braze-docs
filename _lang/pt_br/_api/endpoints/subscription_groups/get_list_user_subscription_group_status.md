@@ -54,17 +54,17 @@ Um de `external_id` ou `email` ou `phone` é necessário para cada usuário.
 - Para grupos de inscrição de SMS e WhatsApp, é necessário `external_id` ou `phone`.  Quando ambos são enviados, apenas o `external_id` é usado para consulta e o número de telefone é aplicado a esse usuário.
 - Para grupos de inscrição de e-mail, é necessário `external_id` ou `email`.  Quando ambos são enviados, apenas a `external_id` é usada para a consulta e o endereço de e-mail é aplicado a esse usuário.
 
-## Exemplo de solicitação 
+## Exemplo de solicitação
 
 {% tabs %}
-{% tab Vários Usuários %}
+{% tab Multiple Users %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
 ```
 {% endraw %}
 {% endtab %}
-{% tab SMS e WhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
@@ -72,7 +72,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab e-mail %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
@@ -87,8 +87,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 Todas as respostas bem-sucedidas retornarão `Subscribed`, `Unsubscribed` ou `Unknown` dependendo do status e do histórico do usuário com o grupo de inscrições.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",
@@ -97,5 +95,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   "message": "success"
 }
 ```
+
+{% alert note %}
+Quando um usuário cancela a inscrição globalmente, ele cancela a inscrição de cada grupo de inscrições. Esse ponto de extremidade retorna o último status de inscrição para cada grupo de inscrições. Esse é um comportamento esperado porque, se o usuário decidir fazer uma nova inscrição global, o Braze reverterá cada status de inscrição.
+{% endalert %}
 
 {% endapi %}
