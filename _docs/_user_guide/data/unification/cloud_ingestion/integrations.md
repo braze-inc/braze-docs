@@ -399,7 +399,7 @@ After you have a shared workspace, grant the service principal access:
 3. Search for and select the name of the service principal you created in Step 1.1. If it doesn't appear, confirm you've enabled the "Service principals can use Fabric APIs" setting in Step 1.2.
 4. In the role dropdown, select **Contributor**.
 
-The service principal can now access any resource within this workspace using the appropriate SQL endpoint.
+The service principal can now access Fabric warehouse resources in this workspace via their SQL endpoints, including the warehouse you will use for Braze.
 
 #### Step 1.4: Set up the table
 Braze supports both tables and views in Fabric Warehouses. If you need to create a new warehouse, create it within the shared workspace from Step 1.3. Go to **Create > Data Warehouse > Warehouse** in the Fabric console.
