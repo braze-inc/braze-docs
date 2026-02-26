@@ -96,7 +96,7 @@ On iOS 14 and later, and Android 12 and later, users can choose between **precis
 
 | Setting | Accuracy | Impact on geofencing |
 |---|---|---|
-| **Precise location (on)** | Accuracy in the 5 to 50 meter range, using GPS, Wi-Fi, and cellular triangulation. | Geofences function as expected. Recommended for all geofence-based use cases. |
+| **Precise location (on)** | Accuracy in the 5 meter to 50 meter range, using GPS, Wi-Fi, and cellular triangulation. | Geofences function as expected. Recommended for all geofence-based use cases. |
 | **Approximate location (off)** | Accuracy around 3 square kilometers (approximately 1 square mile). The device returns a general area rather than exact coordinates. | Geofences don't trigger reliably. The device can't accurately determine whether a user is inside or outside a geofence boundary. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
