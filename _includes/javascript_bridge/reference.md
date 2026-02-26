@@ -1,4 +1,4 @@
-In-app messages and Banners support a JavaScript "bridge" to interface with the Braze SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `brazeBridge` or `appboyBridge` variable.
+Custom HTML in-app messages and Banners support a JavaScript "bridge" to interface with the Braze SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `brazeBridge` or `appboyBridge` variable.
 
 {% alert important %}
 Braze recommends that you use the global `brazeBridge` variable. The global `appboyBridge` variable is deprecated but will continue to function for existing users. If you are using `appboyBridge`, we suggest you migrate to `brazeBridge`. <br><br> `appboyBridge` was deprecated in the following SDK versions:<br><br>
