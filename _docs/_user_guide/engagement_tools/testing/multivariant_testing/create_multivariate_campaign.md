@@ -89,7 +89,7 @@ Depending on which channel you select, you can test different components of your
 | ---------------------| --------------- | ------------- |
 | Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (for example, "triple" versus "increase by 200%")  <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
 | Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (for example, "triple" versus "increase by 200%") <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
-| In-app message | Aspects listed for "push" <br> [Message format]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) | Click <br> Conversion Rate |
+| In-app message | Aspects listed for "push" <br> [Message format]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#in-app-messages) | Click <br> Conversion Rate |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
