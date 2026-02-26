@@ -1388,7 +1388,7 @@ To assign a variable that reflects the current date and time in the user's local
 
 - `now`: This pulls in the current date and time in UTC.
 - `time_zone`: This retrieves the user's local time zone from the default attribute using the {% raw %}`{{${time_zone}}}`{% endraw %} personalization tag.
-- `date`: This formats the user's local date and time according to your specifications. In the example above, it displays a string formatted like "February 26, 2026". For more formatting options, you can refer to strftime.net.
+- `date`: This formats the user's local date and time according to your specifications. In the example above, it displays a string formatted like "February 26, 2026". For more formatting options, you can refer to [strftime.net](strftime.net).
 
 #### Apply the user's time zone with custom attributes
 
