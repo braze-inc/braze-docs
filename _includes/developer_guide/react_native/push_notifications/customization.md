@@ -3,9 +3,9 @@
 ## Push customization in React Native
 
 The Braze React Native SDK does not expose push notification customization (action buttons, categories, custom notification factories) through its JavaScript API. These features require native configuration in your iOS and Android projects.
+The following table shows which features require native configuration:
 
 | Feature | iOS | Android |
-| --- | --- | --- |
 | Action buttons | Configure in native Swift/Objective-C | Configure in native Java/Kotlin |
 | Push categories | Configure in native Swift/Objective-C | Configure in native Java/Kotlin |
 | Custom notification factory | N/A | Configure in native Java/Kotlin |
