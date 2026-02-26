@@ -53,7 +53,7 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 {% tab Microsoft Fabric %}
 1. Create a service principal and grant access to Fabric APIs.
 2. Set up a shared workspace and grant the service principal access to it.
-3. In your Fabric workspace, set up the tables or views you want to sync to Braze.   
+3. In the shared Fabric workspace you created in step 2, set up the tables or views you want to sync to Braze.   
 4. Create a new integration in the Braze dashboard.  
 5. Test the integration and start the sync.
 {% endtab %}
