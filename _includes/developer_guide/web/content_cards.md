@@ -200,16 +200,27 @@ import * as braze from "@braze/web-sdk";
 
 function renderCards(cards) {
   const container = document.getElementById("content-cards");
-  container.innerHTML = "";
+  container.textContent = "";
+  const displayedCards = [];
 
   cards.forEach(card => {
     if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
       const cardElement = document.createElement("div");
-      let imageHtml = "";
+
+      const h3 = document.createElement("h3");
+      h3.textContent = card.title || "";
+      cardElement.appendChild(h3);
+
+      const p = document.createElement("p");
+      p.textContent = card.description || "";
+      cardElement.appendChild(p);
+
       if (card.imageUrl) {
-        imageHtml = `<img src="${card.imageUrl}" alt="${card.title}" />`;
+        const img = document.createElement("img");
+        img.src = card.imageUrl;
+        img.alt = card.title || "";
+        cardElement.appendChild(img);
       }
-      cardElement.innerHTML = `<h3>${card.title}</h3><p>${card.description}</p>${imageHtml}`;
 
       if (card.url) {
         cardElement.addEventListener("click", () => {
@@ -219,10 +230,13 @@ function renderCards(cards) {
       }
 
       container.appendChild(cardElement);
+      displayedCards.push(card);
     }
   });
 
-  braze.logContentCardImpressions(cards);
+  if (displayedCards.length > 0) {
+    braze.logContentCardImpressions(displayedCards);
+  }
 }
 
 // Display cached cards immediately
