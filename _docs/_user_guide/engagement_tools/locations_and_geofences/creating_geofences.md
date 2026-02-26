@@ -36,7 +36,7 @@ The following table describes common geofence terms:
 | Term | Description |
 |---|---|
 | Latitude and longitude | The geographic center of the geofence. |
-| Radius | The radius of the geofence in meters, measured from the geographic center. Set a minimum radius of 100 to 150 meters for all geofences. |
+| Radius | The radius of the geofence in meters, measured from the geographic center. Set a minimum radius of 100 meters to 150 meters for all geofences. |
 | Cooldown | Users receive geofence-triggered notifications after performing enter or exit transitions on individual geofences. After a transition occurs, there is a pre-defined period during which that user can't perform the same transition on that individual geofence again. This "cooldown" is pre-defined by Braze and its main purpose is to prevent unnecessary network requests. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
