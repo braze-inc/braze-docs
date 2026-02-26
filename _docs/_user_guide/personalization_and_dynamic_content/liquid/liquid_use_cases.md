@@ -1373,7 +1373,7 @@ Time zones
 
 ### Template in the user's time zone {#users-time-zone}
 
-By default, dates and times in Liquid are rendered in Coordinated Universal Time (UTC). To display dates and times in the user's local time zone, use the `time_zone` filter with the date filter.
+By default, dates and times in Liquid are rendered in Coordinated Universal Time (UTC). To display dates and times in the user's local time zone, use the `time_zone` filter with the `date` filter.
 
 #### Assign local date and time
 
@@ -1386,9 +1386,9 @@ To assign a variable that reflects the current date and time in the user's local
 ```
 {% endraw %}
 
-- 'now': This pulls in the current date and time in UTC.
-- 'time_zone': This retrieves the user's local time zone from the default attribute using the {% raw %}`{{${time_zone}}}`{% endraw %} personalization tag.
-- 'date': This formats the user's local date and time according to your specifications. In the example above, it displays the abbreviated day of the week. For more formatting options, you can refer to strftime.net.
+- `now`: This pulls in the current date and time in UTC.
+- `time_zone`: This retrieves the user's local time zone from the default attribute using the {% raw %}`{{${time_zone}}}`{% endraw %} personalization tag.
+- `date`: This formats the user's local date and time according to your specifications. In the example above, it displays the abbreviated day of the week. For more formatting options, you can refer to strftime.net.
 
 #### Apply the user's time zone with custom attributes
 
