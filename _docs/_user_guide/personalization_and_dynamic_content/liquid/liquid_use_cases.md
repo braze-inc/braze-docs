@@ -1400,7 +1400,7 @@ You can apply the `time_zone` filter to custom attributes, like this:
 ```
 {% endraw %}
 
-This will output the date_time_attribute formatted as the abbreviated day of the week, followed by the abbreviated month, day, and four-digit year.
+This will output the `date_time_attribute` formatted as the abbreviated day of the week, followed by the abbreviated month, day, and four-digit year.
 
 ### Personalize a message depending on a user's time zone {#personalize-timezone}
 
