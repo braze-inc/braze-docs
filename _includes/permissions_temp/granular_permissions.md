@@ -70,7 +70,7 @@ It isn't possible to merge or import user permissions from one dashboard user to
 
 To edit a user's current admin, company, or workspace permissions, go to **Settings** > **Company Users**, then select their name.
 
-![The "Company Users" page in Braze with one user listed in the results.]({% image_buster /assets/img/braze_permissions/selecting_a_user.png %}){: style="max-width:80%;"}
+![The "Company Users" page in Braze with listed users.]({% image_buster /assets/img/braze_permissions/selecting_a_user.png %})
 
 {% tabs local %}
 {% tab Admin %}
@@ -85,7 +85,7 @@ Admins have access to all features and the ability to modify any company setting
 
 To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
 
-![The details of the selected user with the admin checkbox in focus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:40%;"}
+![The details of a user with the admin checkbox in focus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:70%;"}
 
 {% alert warning %}
 If you remove admin privileges from a user, they won't be able to access Braze until you assign them at least one [company-level or workspace-level permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?tab=company&sdktab=granular%20permissions#granularpermissions_editing-a-users-permissions).
@@ -114,7 +114,7 @@ You can give a user different permissions for each workspace they belong to in B
 {% subtabs %}
 {% subtab Select manually %}
 
-Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permissions**, choose one or more permissions from the dropdown. They will be assigned these permissions only for the workspaces you have selected. Optionally, you can select **Enable Admin Access** if you'd like to give them full permissions for this workspace instead.
+Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permissions**, select one or more permissions. They will be assigned these permissions only for the workspaces you have selected. Optionally, you can select **Assign workspace admin access** if you'd like to give them full permissions for this workspace instead.
 
 When you're finished, select **Update user**.
 
