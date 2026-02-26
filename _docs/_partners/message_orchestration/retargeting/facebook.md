@@ -131,8 +131,8 @@ If you receive an error when exporting a segment as a Facebook Audience, Faceboo
 
 Use the following checks to verify your setup:
 
-- **Check that you're an admin of the app** - Go to [developers.facebook.com](https://developers.facebook.com/), open **My Apps** and select your company's app. If you don't see the app, you may need to be added by your development team. In the app's dashboard, go to **Roles** in the left-hand menu to confirm your role (Admin, Developer, Tester, or Analytics User).
-- **Check that your ad account is associated with your app** - In the Facebook App Dashboard, go to **Settings** > **Advanced**, scroll to **Advertising Accounts**, and add the Facebook ad account ID you want to use for Braze audience exports if it isn't already listed.
-- **Check that you're an admin of the ad account** - Go to [business.facebook.com](https://business.facebook.com/), select **Business Settings** from the top-left dropdown, then go to **Accounts** > **Ad accounts** and select the ad account. Confirm your access and that you have the permissions needed to create Custom Audiences.
+- **Check that you're an admin of the app:** Go to [developers.facebook.com](https://developers.facebook.com/), open **My Apps**, and select your company's app. If you don't see the app, your development team may need to add you. In the app's dashboard, go to **Roles** in the left-hand menu to confirm your role (Admin, Developer, Tester, or Analytics User).
+- **Check that your ad account is associated with your app:** In the Facebook App Dashboard, go to **Settings** > **Advanced**, scroll to **Advertising Accounts**, and add the Facebook ad account ID you want to use for Braze audience exports if it isn't already listed.
+- **Check that you're an admin of the ad account:** Go to [business.facebook.com](https://business.facebook.com/) then select **Business Settings** from the top-left dropdown. Next, go to **Accounts** > **Ad accounts**, and select the ad account. Confirm your access and that you have the permissions needed to create Custom Audiences.
 
 For more details, see [Facebook's Custom Audience API documentation](https://developers.facebook.com/docs/) and [Facebook's Business Help Center guide on Custom Audiences](https://www.facebook.com/business/help).
