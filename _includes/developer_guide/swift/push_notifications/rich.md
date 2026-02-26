@@ -16,7 +16,17 @@ A notification service extension is its own binary that is bundled with your app
 
 The notification service extension's bundle ID must be distinct from your main app target's bundle ID. For example, if your app's bundle ID is `com.company.appname`, you can use `com.company.appname.AppNameServiceExtension` for your service extension.
 
-### Step 3: Integrating rich push notifications
+### Step 3: Adding an App Group
+
+In Xcode, add the App Groups capability from the **Signing & Capabilities** pane to your main app target as well as the Notification Service Extension target. Then, click the **+** button. Use your app's bundle ID to create the App Group. For example, if your app's bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`.
+
+{% alert important %}
+App Groups in this context refer to Apple's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) and not your Braze workspace (previously app group) ID.
+{% endalert %}
+
+You need a shared App Group so your main app and the Notification Service Extension can access shared data. If you do not add your app to an App Group, your app may fail to populate certain fields from the push payload and will not work fully as expected.
+
+### Step 4: Integrating rich push notifications
 
 For a step-by-step guide on integrating rich push notifications with `BrazeNotificationService`, refer to our [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications).
 
@@ -97,6 +107,17 @@ class NotificationService: UNNotificationServiceExtension {
 }
 ```
 
-### Step 4: Creating a rich notification in your dashboard
+### Step 5: Configuring the App Group in Braze
 
-Your Marketing team can also create rich notifications from the dashboard. Create a push notification through the push composer and simply attach an image or GIF, or provide a URL that hosts an image, GIF, or video. Note that assets are downloaded on the receipt of push notifications, so you should plan for large, synchronous spikes in requests if you are hosting your content.
+Before initializing Braze, assign the name of your App Group to your Braze configuration's [`push.appGroup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/appgroup) property.
+
+```swift
+let configuration = Braze.Configuration(apiKey: "<YOUR-BRAZE-API-KEY>",
+                                        endpoint: "<YOUR-BRAZE-ENDPOINT>")
+configuration.push.appGroup = "REPLACE_WITH_APPGROUP"
+let braze = Braze(configuration: configuration)
+```
+
+### Step 6: Creating a rich notification in your dashboard
+
+Your marketing team can also create rich notifications from the dashboard. Create a push notification through the push composer and attach an image or GIF, or provide a URL that hosts an image, GIF, or video. Note that assets are downloaded on the receipt of push notifications, so you should plan for large, synchronous spikes in requests if you are hosting your content.
