@@ -2,7 +2,7 @@
 
 ### Step 1: Update your Gradle build configuration
 
-In your app module's `build.gradle` or `build.gradle.kts` file, add [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html) to your list of repositories. This syntax is the same for both Groovy and Kotlin DSL.
+In your project's repository configuration (for example, `settings.gradle`, `settings.gradle.kts`, or top-level `build.gradle`), add [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html) to your list of repositories. This syntax is the same for both Groovy and Kotlin DSL.
 
 ```groovy
 repositories {
@@ -51,9 +51,9 @@ braze-android-sdk-base = { group = "com.braze", name = "android-sdk-base", versi
 braze-android-sdk-location = { group = "com.braze", name = "android-sdk-location", version.ref = "braze" }
 ```
 
-Then in your `build.gradle.kts` file:
+Then in your `build.gradle` or `build.gradle.kts` file. This syntax is the same for both Groovy and Kotlin DSL.
 
-```kotlin
+```groovy
 dependencies {
     implementation(libs.braze.android.sdk.base) // (Required) Adds dependencies for the base Braze SDK.
     implementation(libs.braze.android.sdk.location) // (Optional) Adds dependencies for Braze location services.
@@ -95,9 +95,9 @@ braze-android-sdk-ui = { group = "com.braze", name = "android-sdk-ui", version.r
 braze-android-sdk-location = { group = "com.braze", name = "android-sdk-location", version.ref = "braze" }
 ```
 
-Then in your `build.gradle.kts` file:
+Then in your `build.gradle` or `build.gradle.kts` file. This syntax is the same for both Groovy and Kotlin DSL.
 
-```kotlin
+```groovy
 dependencies {
     implementation(libs.braze.android.sdk.ui) // (Required) Adds dependencies for the Braze SDK and Braze UI components.
     implementation(libs.braze.android.sdk.location) // (Optional) Adds dependencies for Braze location services.
