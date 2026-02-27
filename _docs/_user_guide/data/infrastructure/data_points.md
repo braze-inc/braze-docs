@@ -55,6 +55,8 @@ An array is an ordered collection of items stored within a custom attribute. In 
 For simple arrays, if you set the whole array at once, it will count as a single data point. As such, arrays are a great tool to keep user profiles up-to-date with relevant information and reduce costs. <br><br> Arrays of objects consume a data point for each key that is updated. Reduce unnecessary data point consumption by only passing updates to Braze.
 {% endalert %}
 
+Every array modification request consumes a data point, even if the array doesn't actually change. For example, sending a `remove` operation for a value that doesn't exist in the array still consumes one data point. Similarly, setting a custom attribute to `null` to remove it from the profile consumes a data point.
+
 #### Nested custom attributes
 
 Nested custom attributes refer to an object that defines a set of attributes as a property of another attribute. Every key in the object will count as a data point.
