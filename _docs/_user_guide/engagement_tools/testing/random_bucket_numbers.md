@@ -54,6 +54,10 @@ Depending on how many segments you want and the distribution of users within eac
 
 For each of your random bucket number segments, including the control group, turn on [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/). When evaluating the success of variants relative to the control group, you can go to your [custom events]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/) page and view how often each segment has completed certain custom events.
 
+{% alert tip %}
+When using random bucket number segments in a Canvas (for example, as a filter in a [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) step), make sure your Canvas [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/), audience filters, and upstream steps don't target segments that overlap with one of your bucket ranges. If they do, users in that range may be disproportionately removed before reaching the split, causing uneven distribution between paths.
+{% endalert %}
+
 ### Random audience re-entry using random bucket numbers
 
 Random audience re-entry can be useful for [A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#what-are-multivariate-and-ab-testing) or targeting specific user groups in your campaigns. To perform random audience re-entry with random bucket numbers, do the following:
