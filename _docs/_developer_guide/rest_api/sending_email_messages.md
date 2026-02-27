@@ -55,7 +55,7 @@ Each recipient referenced in `external_user_ids` must already exist in Braze. AP
 ### Example request
 
 ```
-POST YOUR_REST_ENDPOINT/messages/send
+POST https://YOUR_REST_ENDPOINT/messages/send
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 ```
