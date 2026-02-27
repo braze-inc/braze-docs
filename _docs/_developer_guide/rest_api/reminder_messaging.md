@@ -82,6 +82,8 @@ The following example script disables the default button behavior and executes c
     const registerButton = document.getElementById(registerButtonId);
     if (registerButton) {
       registerButton.addEventListener("click", async (event) => {
+        event.preventDefault();
+
         // Identify the user
         await window.lpBridge.changeUser(external_id);
 
