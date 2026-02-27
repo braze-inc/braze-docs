@@ -123,10 +123,10 @@ Before building the in-app message in Braze, coordinate with your development te
 
 ### Step 2: Build the location primer in-app message
 
-Create a custom in-app message campaign that explains the value of location access.
+Create an in-app message campaign that explains the value of location access. All in-app message types support this opt-in, including drag-and-drop.
 
 1. Go to **Messaging** > **Campaigns**, then select **Create Campaign** > **In-App Message**.
-2. Choose a message layout. A **Modal** or **Full** layout gives you space to articulate the benefits.
+2. Choose a message type and layout. A **Modal** or **Full** layout gives you more space to articulate the benefits.
 3. Write messaging that clearly explains why location access benefits the user. For example:
     - "Enable location to get notified about deals near you."
     - "Turn on location so we can let you know when your order is ready for pickup at your nearest store."
@@ -137,7 +137,7 @@ Create a custom in-app message campaign that explains the value of location acce
 
 For best results, show the location primer when users are engaged and likely to see value in sharing their location.
 
-- **Target users who haven't granted location access yet.** Use custom attributes set by your app to track which users haven't been prompted or haven't granted permissions.
+- **Target users who haven't granted location access yet.** Use custom attributes set by your app to track which users haven't been prompted or haven't granted permissions. Keep in mind that custom attributes are stored at the user level, so if a user has multiple devices, the permission status may be out-of-sync across devices. Unlike push primers, there isn't currently a way for the device to automatically suppress the message if location permission is already granted.
 - **Time the primer after a high-value action,** such as completing a purchase, saving a store as a favorite, or browsing nearby events. Users are more likely to opt in when they understand the benefit.
 - **Avoid showing the primer on first launch.** Wait until users have experienced enough value from the app to want a more personalized experience.
 
