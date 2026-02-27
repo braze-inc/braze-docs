@@ -67,6 +67,14 @@ The `BadToken` error may occur for several reasons:
 		- Ensuring that the push certificate being used to send push from the Braze dashboard and the provisioning profile are configured correctly.
 		- Recreating the APNS certification and then recreate the provisioning profile after the APNS certificate is configured to the `app_id`. This can sometimes solve some more visible problems.
 
+### TopicDisallowed
+
+The `TopicDisallowed` error means APNs rejected the push because the topic (bundle ID) in the request isn't allowed for the authentication credentials being used. To resolve this:
+
+1. **Verify the bundle ID.** Confirm the bundle ID configured in your Braze app settings matches the bundle ID of your app exactly. This includes any suffix variations (for example, `.debug`, `.staging`).
+2. **Check your APNs key or certificate scope.** If you're using a `.p8` key, it's universal and supports all apps under your Apple Developer Team. If you're using a `.p12` certificate, it's scoped to a single bundle ID — make sure it matches the app you're sending to.
+3. **Confirm the app environment.** If you have separate App IDs in Braze for development and production builds, verify that each is configured with the correct push credentials and environment.
+
 ### Push bounced: APNS feedback service removed
 
 This generally happens when someone uninstalls. Braze queries the APNS Feedback Service each night to get a list of invalid tokens. For more information, refer to Apple's [Communicating with APNs](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html).
