@@ -167,6 +167,10 @@ Review the output with a critical eye. Consider the following questions:
 
 If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
 
+{% alert tip %}
+Avoid explicitly saying the output or outcome that you don't want, since LLMs may probabilistically fall back on something it sees in the instructions without "reasoning" that it is actually something to avoid.
+{% endalert %}
+
 ### Step 6: Use your agent
 
 Your agent is now ready to use! For details, refer to [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
