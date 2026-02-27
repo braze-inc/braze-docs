@@ -52,7 +52,7 @@ An app or website can only have one push subscription per device. So when a user
 Because there isn't a way for push providers (APNs/FCM) to distinguish between multiple users on one device, we pass the push token to the last user who was logged in to determine which user to target on the device for push.
 
 {% alert tip %}
-If you see an error message in **Contact Settings** > **Push Changelog**, refer to [Common push error messages]({{site.baseurl}}/user_guide/channels/push/push_error_codes/) for explanations and next steps.
+If you see an error message in **Contact Settings** > **Push Changelog**, refer to [Common push error messages]({{site.baseurl}}/user_guide/channels/push/troubleshooting/#push-error-codes) for explanations and next steps.
 {% endalert %}
 
 ## Push token registration
@@ -113,7 +113,7 @@ Check out the following chart for actions that lead to push tokens changes or re
 | Action | Description |
 | ------ | ----------- |
 | `changeUser()` method called | The Braze `changeUser()` method switches the user ID that the SDKs are assigning user behavior data to. This method is usually called when a user logs into an application. When `changeUser()` is called with a different or new user ID on a specific device, that device's push token will be moved to the appropriate Braze profile with corresponding user ID. |
-| Push error occurs | Some common push errors that lead to token removal include `MismatchSenderId`, `InvalidRegistration`, and other types of push bounces. <br><br>Check out our full list of common [push errors]({{site.baseurl}}/help/help_articles/push/push_error_codes/#push-bounced-mismatchsenderid). |
+| Push error occurs | Some common push errors that lead to token removal include `MismatchSenderId`, `InvalidRegistration`, and other types of push bounces. <br><br>Check out our full list of common [push errors]({{site.baseurl}}/user_guide/channels/push/troubleshooting/#push-error-codes). |
 | User uninstalls | When a user uninstalls the application from a device, Braze will remove the user's push token from the profile. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

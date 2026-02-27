@@ -1,7 +1,7 @@
 ---
 nav_title: Product messages
 article_title: Product Messages
-page_order: 2
+page_order: 4
 description: "This page covers how to use WhatsApp product messages to send interactive WhatsApp messages that showcase products from your Meta catalog."
 page_type: reference
 alias: "/whatsapp_product_messages/"

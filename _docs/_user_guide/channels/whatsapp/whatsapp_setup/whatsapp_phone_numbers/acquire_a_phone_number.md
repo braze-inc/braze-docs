@@ -1,6 +1,6 @@
 ---
-nav_title: "Acquire a phone number"
-article_title: "Acquire a phone number"
+nav_title: "Acquire a number"
+article_title: "Acquire a WhatsApp phone number"
 page_order: 1
 description: "This reference article covers how to acquire a phone number from Twilio and Infobip."
 page_type: reference
@@ -8,7 +8,7 @@ channel:
   - WhatsApp
 ---
 
-# Phone number acquisition
+# Acquire a WhatsApp phone number
 
 > To use the WhatsApp messaging channel, you'll need a phone number that meets WhatsApp’s requirements for its [Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers) or [On-Premises API](https://developers.facebook.com/docs/whatsapp/on-premises/phone-numbers).
 

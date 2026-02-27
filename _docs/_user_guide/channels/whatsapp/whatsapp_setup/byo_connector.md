@@ -1,7 +1,7 @@
 ---
 nav_title: BYO WhatsApp connector
 article_title: Bring Your Own WhatsApp connector
-page_order: 0
+page_order: 2
 description: "This reference article provides a step-by-step walkthrough for setting up a Bring Your Own WhatsApp connector, which gives Braze access to your Infobip WhatsApp Business Manager."
 page_type: reference
 channel:

@@ -92,7 +92,7 @@ If you're creating a quick push campaign, the notification type is automatically
 Otherwise, for iOS and Android, select your notification type:
 
 - Standard push
-- [Push stories]({{site.baseurl}}/user_guide/channels/push/advanced_push_options/push_stories/)
+- [Push stories]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/push_stories/)
 - Inline image (Android only)
 
 If you want to include images in your push campaign, refer to the following guides on creating a rich notification for [iOS]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/ios/rich_notifications/) or [Android]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/android/rich_notifications/).

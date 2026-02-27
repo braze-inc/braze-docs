@@ -1,7 +1,7 @@
 ---
 nav_title: Push
 article_title: Push
-page_order: 4
+page_order: 7
 layout: dev_guide
 guide_top_header: "Push"
 guide_top_text: "Push notifications are a tried-and-true way to send time-sensitive calls to action through mobile or web, as well as re-engage users who haven't come into the app in a while. They drive the user directly to content and demonstrate the value of your application. Push notifications are useful for driving users to a specific place, but you should use them wisely. <br><br> Read any of the following articles or check out our [Push Braze Learning course](https://learning.braze.com/messaging-channels-push) to learn who you can send a push to, how to send it, and what advanced push capabilities Braze offers. For examples of push notifications, check out our [customer stories](https://www.braze.com/customers)."
@@ -11,7 +11,7 @@ channel:
 
 guide_featured_title: "Popular articles"
 guide_featured_list:
-- name: Push Types
+- name: Message Types
   link: /docs/user_guide/channels/push/types/
   image: /assets/img/braze_icons/list.svg
 - name: Push Registration
@@ -26,9 +26,6 @@ guide_featured_list:
 
 guide_menu_title: "More articles"
 guide_menu_list:
-- name: Advanced Options
-  link: /docs/user_guide/channels/push/advanced_push_options/
-  image: /assets/img/braze_icons/settings-01.svg
 - name: Push Primers
   link: /docs/user_guide/channels/push/best_practices/push_primer_messages/
   image: /assets/img/braze_icons/phone-02.svg
@@ -50,9 +47,6 @@ guide_menu_list:
 - name: Locales in Messages
   link: /docs/locales_in_messages/
   image: /assets/img/braze_icons/translate-01.svg
-- name: Common Push Error Messages
-  link: /docs/user_guide/channels/push/push_error_codes/
-  image: /assets/img/braze_icons/alert-triangle.svg
 - name: Troubleshooting
   link: /docs/user_guide/channels/push/troubleshooting/
   image: /assets/img/braze_icons/annotation-question.svg
@@ -76,18 +70,6 @@ Push notifications are a great tool for attracting new users and making re-engag
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 For more information on re-engaging lapsed users, see our [Quick Wins]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) page on the topic.
-
-## Prerequisites to use push
-
-Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website or app. For detailed steps, refer to our integration guides for each platform:
-
-- [iOS]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android)
-- [Web]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)
-
-## Push priming
-
-Keep in mind that users need to opt-in to push to receive your messages, which means it's a good idea to use in-app messages to explain to your customers why you want to send them push notifications, and how enabling push will benefit them. This process is called [push priming]({{site.baseurl}}/user_guide/channels/push/best_practices/push_primer_messages/).
 
 ## Push message regulations
 

@@ -1,7 +1,7 @@
 ---
 nav_title: WhatsApp Flows
 article_title: WhatsApp Flows
-page_order: 1
+page_order: 3
 description: "This reference article covers the steps involved in building out and creating a WhatsApp Flows message."
 alias: /whatsapp_flows/
 page_type: reference

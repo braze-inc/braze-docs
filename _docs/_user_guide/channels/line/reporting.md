@@ -1,7 +1,7 @@
 ---
 nav_title: Reporting
 article_title: LINE Reporting
-page_order: 4
+page_order: 5
 description: "This reference article covers LINE metrics used at Braze, as well as how to view them in your LINE campaigns."
 page_type: reference
 channel:

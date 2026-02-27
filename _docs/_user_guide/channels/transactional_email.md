@@ -1,7 +1,7 @@
 ---
 nav_title: Transactional email
 article_title: Transactional email
-page_order: 8
+page_order: 4
 layout: dev_guide
 guide_top_header: "Transactional email"
 guide_top_text: "Send transactional emails for critical, time-sensitive notifications triggered by API calls, such as order confirmations, password resets, and shipping updates."

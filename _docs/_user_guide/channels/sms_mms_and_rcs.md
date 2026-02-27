@@ -1,7 +1,7 @@
 ---
 nav_title: "SMS, MMS, and RCS"
 article_title: "SMS, MMS, and RCS"
-page_order: 4
+page_order: 8
 layout: dev_guide
 channel:
   - SMS

@@ -1,6 +1,6 @@
 ---
-nav_title: "Migrate a phone number"
-article_title: "Migrate a phone number"
+nav_title: "Migrate a number"
+article_title: "Migrate a WhatsApp phone number"
 page_order: 2
 description: "This reference article covers how to migrate your WhatsApp phone number."
 page_type: reference
@@ -8,7 +8,7 @@ channel:
   - WhatsApp
 ---
 
-# WhatsApp phone number migration
+# Migrate a WhatsApp phone number
 
 > Migrate your WhatsApp phone number between WhatsApp Business Accounts by using Meta's Embedded Signup.
 

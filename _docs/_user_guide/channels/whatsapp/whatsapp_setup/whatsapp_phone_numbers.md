@@ -1,7 +1,7 @@
 ---
 nav_title: WhatsApp phone numbers
 article_title: WhatsApp phone numbers
-page_order: 5
+page_order: 6
 layout: dev_guide
 guide_top_header: "WhatsApp phone numbers"
 guide_top_text: "Manage phone numbers for your WhatsApp Business account, including acquiring new numbers, migrating existing numbers, and transferring between workspaces."

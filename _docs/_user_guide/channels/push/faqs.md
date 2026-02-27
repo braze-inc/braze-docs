@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: "FAQs"
-page_order: 9
+page_order: 7
 description: "This article addresses some of the most frequently asked questions that arise when setting up push campaigns."
 page_type: FAQ
 channel:
@@ -24,7 +24,7 @@ When a push token is reassigned, the change is reflected in the user profile's *
 
 This message indicates that APNs rejected the push request due to an invalid payload (for example, an empty payload or a payload that’s too large).
 
-For details and next steps, see [Common Push Error Messages]({{site.baseurl}}/user_guide/channels/push/push_error_codes/).
+For details and next steps, see [Common push error messages]({{site.baseurl}}/user_guide/channels/push/troubleshooting/#push-error-codes).
 
 ### Why doesn't an opted-in user have a push token?
 

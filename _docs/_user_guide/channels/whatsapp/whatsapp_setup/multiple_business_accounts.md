@@ -1,7 +1,7 @@
 ---
 nav_title: "Multiple business accounts"
 article_title: "Multiple business accounts"
-page_order: 3
+page_order: 5
 description: "This reference article covers the steps to add WhatsApp Business accounts and phone numbers."
 page_type: reference
 channel:

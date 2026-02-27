@@ -63,7 +63,7 @@ If you select multiple devices for mobile platforms, such as both iOS and Androi
 
 ### Device-specific settings
 
-You can edit platform-specific settings in the editor. This includes settings like [push action buttons]({{site.baseurl}}/user_guide/channels/push/advanced_push_options/push_action_buttons/), notification channels and groups, TTL, display priority, sounds, and more. 
+You can edit platform-specific settings in the editor. This includes settings like [push action buttons]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/push_action_buttons/), notification channels and groups, TTL, display priority, sounds, and more. 
 
 Note that push action buttons aren't supported when targeting both iOS and Android using quick push campaigns. For more information on device-specific settings, refer to the following article collections:
 

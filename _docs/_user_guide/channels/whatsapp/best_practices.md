@@ -1,7 +1,7 @@
 ---
 nav_title: Best practices
 article_title: "Best practices"
-page_order: 7
+page_order: 8
 description: "This article outlines suggested best practices when using the WhatsApp messaging channel, including how to maintain a high phone quality rating and avoid a high rate of blocks and reports."
 page_type: reference
 channel:

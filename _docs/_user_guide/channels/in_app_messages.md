@@ -1,7 +1,7 @@
 ---
 nav_title: "In-app messages"
 article_title: In-App Messages
-page_order: 2
+page_order: 5
 alias: /in-app_messages/
 description: "This landing page is home to all things in-app message. Here, you can find articles on how to create in-app messages, the drag-and-drop editor, how to customize your messages, reporting, and more."
 channel:

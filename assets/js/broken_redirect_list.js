@@ -437,7 +437,7 @@ validurls['/docs/help/best_practices/in-app_messages/previous_in-app_message_gen
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/previous_in-app_message_generations/'] = '/docs/developer_guide/changelogs';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/generations/'] = '/docs/developer_guide/changelogs';
 
-validurls['/docs/help/best_practices/push/use_cases/'] = '/docs/user_guide/channels/push/types/#potential-use-cases';
+validurls['/docs/help/best_practices/push/use_cases/'] = '/docs/user_guide/channels/push/types/';
 validurls['/docs/help/best_practices/push/'] = '/docs/user_guide/channels/push/best_practices/';
 validurls['/docs/help/best_practices/push/ios/notification_headers'] = '/docs/user_guide/channels/push/create_a_push_message/#step-4-compose-your-push-message';
 validurls['/docs/user_guide/message_building_by_channel/push/ios/notification_payload_examples'] = '/docs/user_guide/channels/push/platform_specific_resources/ios/notification_options/';
@@ -456,8 +456,8 @@ validurls['/docs/help/best_practices/spam_regulations/'] = '/docs/user_guide/adm
 validurls['/docs/user_guide/onboarding_with_braze/spam_regulations/'] = '/docs/user_guide/administrative/privacy/spam_regulations/';
 validurls['/docs/help/best_practices/utilizing_badge_count/'] = '/docs/user_guide/channels/push/platform_specific_resources/ios/utilizing_badge_count/';
 validurls['/docs/help/best_practices/race_conditions/'] = '/docs/user_guide/messaging/ab_testing/concepts/race_conditions/';
-validurls['/docs/help/best_practices/image_and_text_specifications/#web-push-notifications'] = '/docs/user_guide/channels/push/types/#image-and-text-specifications';
-validurls['/docs/help/best_practices/image_and_text_specifications/#native-mobile-push-notifications'] = '/docs/user_guide/channels/push/types/#image-and-text-specifications';
+validurls['/docs/help/best_practices/image_and_text_specifications/#web-push-notifications'] = '/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats/';
+validurls['/docs/help/best_practices/image_and_text_specifications/#native-mobile-push-notifications'] = '/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats/';
 validurls['/docs/help/best_practices/image_and_text_specifications/#in-app-messages'] = '/docs/user_guide/channels/in_app_messages/message_types/';
 validurls['/docs/help/best_practices/image_and_text_specifications/#news-feed-specifications'] = '/docs/user_guide/channels/content_cards/';
 validurls['/docs/help/best_practices/image_and_text_specifications/#mms'] = '/docs/user_guide/channels/sms_mms_and_rcs/create/#image-specifications';
@@ -1362,7 +1362,7 @@ validurls['/docs/help/help_articles/in-app_messages/'] = '/docs/developer_guide/
 validurls['/docs/_help/help_articles/in-app_messages/in-app_message_impressions_appear_lower_than_expected/'] = '/docs/developer_guide/home/';
 validurls['/docs/help/help_articles/in-app_messages/in-app_messages_not_displaying'] = '/docs/developer_guide/home/';
 validurls['/docs/help/help_articles/push/no_push_notification_was_received/'] = '/docs/user_guide/channels/push/troubleshooting/';
-validurls['/docs/help/help_articles/push/push_error_codes/'] = '/docs/user_guide/channels/push/push_error_codes/';
+validurls['/docs/help/help_articles/push/push_error_codes/'] = '/docs/user_guide/channels/push/troubleshooting/#push-error-codes';
 
 validurls['/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/react_native/sdk_integration/';
 
@@ -4116,14 +4116,22 @@ validurls['/docs/user_guide/message_building_by_channel/push/testing'] = '/docs/
 validurls['/docs/user_guide/message_building_by_channel/push/testing/'] = '/docs/user_guide/channels/push/testing/';
 validurls['/docs/user_guide/message_building_by_channel/push/types'] = '/docs/user_guide/channels/push/types';
 validurls['/docs/user_guide/message_building_by_channel/push/types/'] = '/docs/user_guide/channels/push/types/';
-validurls['/docs/user_guide/message_building_by_channel/push/push_error_codes'] = '/docs/user_guide/channels/push/push_error_codes';
-validurls['/docs/user_guide/message_building_by_channel/push/push_error_codes/'] = '/docs/user_guide/channels/push/push_error_codes/';
-validurls['/docs/user_guide/message_building_by_channel/push/advanced_push_options'] = '/docs/user_guide/channels/push/advanced_push_options';
-validurls['/docs/user_guide/message_building_by_channel/push/advanced_push_options/'] = '/docs/user_guide/channels/push/advanced_push_options/';
+validurls['/docs/user_guide/message_building_by_channel/push/push_error_codes'] = '/docs/user_guide/channels/push/troubleshooting/#push-error-codes';
+validurls['/docs/user_guide/message_building_by_channel/push/push_error_codes/'] = '/docs/user_guide/channels/push/troubleshooting/#push-error-codes';
+validurls['/docs/user_guide/message_building_by_channel/push/advanced_push_options'] = '/docs/user_guide/channels/push/create_a_push_message';
+validurls['/docs/user_guide/message_building_by_channel/push/advanced_push_options/'] = '/docs/user_guide/channels/push/create_a_push_message/';
 validurls['/docs/user_guide/message_building_by_channel/push/android'] = '/docs/user_guide/channels/push/platform_specific_resources/android';
 validurls['/docs/user_guide/message_building_by_channel/push/android/'] = '/docs/user_guide/channels/push/platform_specific_resources/android/';
 validurls['/docs/user_guide/message_building_by_channel/push/ios'] = '/docs/user_guide/channels/push/platform_specific_resources/ios';
 validurls['/docs/user_guide/message_building_by_channel/push/ios/'] = '/docs/user_guide/channels/push/platform_specific_resources/ios/';
+validurls['/docs/user_guide/channels/push/push_error_codes'] = '/docs/user_guide/channels/push/troubleshooting/#push-error-codes';
+validurls['/docs/user_guide/channels/push/push_error_codes/'] = '/docs/user_guide/channels/push/troubleshooting/#push-error-codes';
+validurls['/docs/user_guide/channels/push/advanced_push_options'] = '/docs/user_guide/channels/push/create_a_push_message';
+validurls['/docs/user_guide/channels/push/advanced_push_options/'] = '/docs/user_guide/channels/push/create_a_push_message/';
+validurls['/docs/user_guide/channels/push/advanced_push_options/push_action_buttons'] = '/docs/user_guide/channels/push/create_a_push_message/push_action_buttons';
+validurls['/docs/user_guide/channels/push/advanced_push_options/push_action_buttons/'] = '/docs/user_guide/channels/push/create_a_push_message/push_action_buttons/';
+validurls['/docs/user_guide/channels/push/advanced_push_options/push_stories'] = '/docs/user_guide/channels/push/create_a_push_message/push_stories';
+validurls['/docs/user_guide/channels/push/advanced_push_options/push_stories/'] = '/docs/user_guide/channels/push/create_a_push_message/push_stories/';
 
 // --- Email ---
 validurls['/docs/user_guide/message_building_by_channel/email'] = '/docs/user_guide/channels/email';
@@ -4388,8 +4396,10 @@ validurls['/docs/user_guide/message_building_by_channel/whatsapp/message_process
 validurls['/docs/user_guide/message_building_by_channel/whatsapp/message_processing/quality_rating/'] = '/docs/user_guide/channels/whatsapp/message_processing/quality_rating_and_messaging_limits/';
 validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics'] = '/docs/user_guide/channels/whatsapp/reporting';
 validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/'] = '/docs/user_guide/channels/whatsapp/reporting/';
-validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage'] = '/docs/user_guide/channels/whatsapp/reporting/message_usage';
-validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage/'] = '/docs/user_guide/channels/whatsapp/reporting/message_usage/';
+validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage'] = '/docs/user_guide/administer/global/billing/message_usage_dashboard';
+validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage/'] = '/docs/user_guide/administer/global/billing/message_usage_dashboard/';
+validurls['/docs/user_guide/channels/whatsapp/reporting/message_usage'] = '/docs/user_guide/administer/global/billing/message_usage_dashboard';
+validurls['/docs/user_guide/channels/whatsapp/reporting/message_usage/'] = '/docs/user_guide/administer/global/billing/message_usage_dashboard/';
 validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_use_cases'] = '/docs/user_guide/channels/whatsapp/use_cases';
 validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_use_cases/'] = '/docs/user_guide/channels/whatsapp/use_cases/';
 validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_use_cases/ads_that_click'] = '/docs/user_guide/channels/whatsapp/use_cases/ads_that_click_to_whatsapp';
@@ -4404,8 +4414,10 @@ validurls['/docs/user_guide/message_building_by_channel/whatsapp/meta_resources'
 validurls['/docs/user_guide/message_building_by_channel/whatsapp/meta_resources/'] = '/docs/user_guide/channels/whatsapp/meta_resources/';
 validurls['/docs/user_guide/message_building_by_channel/whatsapp/testing'] = '/docs/user_guide/channels/whatsapp/testing';
 validurls['/docs/user_guide/message_building_by_channel/whatsapp/testing/'] = '/docs/user_guide/channels/whatsapp/testing/';
-validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign'] = '/docs/user_guide/channels/whatsapp/whatsapp_campaign';
-validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/'] = '/docs/user_guide/channels/whatsapp/whatsapp_campaign/';
+validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign'] = '/docs/user_guide/channels/whatsapp/create_a_whatsapp_message';
+validurls['/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/'] = '/docs/user_guide/channels/whatsapp/create_a_whatsapp_message/';
+validurls['/docs/user_guide/channels/whatsapp/whatsapp_campaign'] = '/docs/user_guide/channels/whatsapp/create_a_whatsapp_message';
+validurls['/docs/user_guide/channels/whatsapp/whatsapp_campaign/'] = '/docs/user_guide/channels/whatsapp/create_a_whatsapp_message/';
 validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/granular_permissions_migration'] = '/docs/user_guide/administer/global/user_management/granular_permissions_migration';
 validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/granular_permissions_migration/'] = '/docs/user_guide/administer/global/user_management/granular_permissions_migration/';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/sms/create'] = '/docs/user_guide/channels/sms_mms_and_rcs/create';

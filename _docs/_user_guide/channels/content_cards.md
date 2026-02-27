@@ -1,7 +1,7 @@
 ---
 nav_title: Content Cards
 article_title: Content Cards
-page_order: 1
+page_order: 2
 layout: dev_guide
 guide_top_header: "Content Cards"
 guide_top_text: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers within the apps they love without interrupting their experience. <br><br>Content Cards are embedded directly into your app or website, letting you create message inboxes and custom interfaces that extend the reach of other channels such as email or push notifications. Additionally, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, Connected Content, custom card expiration times, card analytics, and easy coordination with push notifications. <br><br>**Content Cards availability depends on your Braze package. Contact your account manager or customer success manager to get started.**"

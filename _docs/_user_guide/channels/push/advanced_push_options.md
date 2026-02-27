@@ -1,24 +1,10 @@
 ---
 nav_title: "Advanced push options"
 article_title: Advanced Push Options
-page_order: 5
-layout: dev_guide
-
-page_type: landing
+page_order: 22
+noindex: true
+layout: redirect
+redirect_to: /docs/user_guide/channels/push/create_a_push_message/
 channel: push
-
 description: "This landing page lists several advanced push options like Push Stories and push action buttons."
-
-guide_top_header: "Advanced Push Options"
-guide_top_text: "This landing page lists several advanced push options like Push Stories and push action buttons."
-
-guide_featured_title: "Section articles"
-guide_featured_list:
-- name: "Push Action Buttons"
-  link: /docs/user_guide/channels/push/advanced_push_options/push_action_buttons/
-  image: /assets/img/braze_icons/target-05.svg
-- name: "Push Stories"
-  link: /docs/user_guide/channels/push/advanced_push_options/push_stories/
-  image: /assets/img/braze_icons/book-closed.svg
 ---
-<br><br>

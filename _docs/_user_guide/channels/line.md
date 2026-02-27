@@ -1,7 +1,7 @@
 ---
 nav_title: LINE
 article_title: LINE
-page_order: 3
+page_order: 6
 layout: dev_guide
 channel:
   - LINE
