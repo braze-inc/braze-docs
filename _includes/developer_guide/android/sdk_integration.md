@@ -95,7 +95,7 @@ braze-android-sdk-ui = { group = "com.braze", name = "android-sdk-ui", version.r
 braze-android-sdk-location = { group = "com.braze", name = "android-sdk-location", version.ref = "braze" }
 ```
 
-Then in your `build.gradle` or `build.gradle.kts` file. This syntax is the same for both Groovy and Kotlin DSL.
+Then, in your `build.gradle` or `build.gradle.kts` file, add the following dependencies. This syntax is the same for both Groovy and Kotlin DSL.
 
 ```groovy
 dependencies {
