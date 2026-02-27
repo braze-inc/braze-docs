@@ -63,7 +63,7 @@ Using the **Advanced JSON Editor** option, you can insert JSON to add items to o
 Track a user's wishlist so you can segment or personalize based on their saved items.
 
 1. Create a custom attribute that is an array of objects, for example `wishlist`. Each object can include fields such as `product_id`, `product_name`, and `added_at`.
-2. In the User Update step, open the **Advanced JSON Editor** and use the `$add` operation to append an item or the `$remove` operation to remove an item by value.
+2. In the User Update step, select **Advanced JSON Editor**. Then, in the **Compose** section, use the `$add` operation to append an item or the `$remove` operation to remove an item by value.
 
 Example—adding an item to the wishlist:
 
