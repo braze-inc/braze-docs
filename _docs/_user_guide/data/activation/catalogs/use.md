@@ -206,6 +206,31 @@ Welcome to our store, Peter!
 Catalog Liquid tags can't be used recursively inside catalogs.
 {% endalert %}
 
+## Structuring your catalog data
+
+When planning how to structure your catalog data, think backwards from your end use case. Each row in the catalog represents an item (with a unique `id`). The columns should contain the attributes for that item, such as URLs, description copy, image URLs, price, rating, size, or color.
+
+### When to use standard catalog calls
+
+With standard catalog calls, you match a value against the `id` column. By inserting a custom attribute or event property (as an ID string) into the catalog Liquid tag, you can pull multiple attributes for a single item into your message. Common use cases include:
+
+- Recent product or service viewed
+- Wishlist items
+- Deals by location
+- Product purchased
+- Lifecycle stage content
+- Last searched product or service
+
+### When to use catalog selections
+
+[Catalog selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) let you filter across any column in your catalog and return up to 10 matching items. By inserting custom attributes or event properties into the selection filters, the results are personalized for each user. Common use cases include:
+
+- Items where category equals a user's preference
+- Items matching a user's preferred brand, cuisine, or size
+- Subscription type or loyalty tier content
+- Products within a user's average order value range
+
+The key difference: standard catalog calls look up a **single known item** by `id`, while catalog selections **query across the catalog** and return multiple items that match your filter criteria.
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
