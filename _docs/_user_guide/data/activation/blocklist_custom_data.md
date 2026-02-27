@@ -16,9 +16,52 @@ You may occasionally identify custom attributes, custom events, or purchase even
 
 To stop this data from being sent to Braze, you can blocklist a custom data object while your engineering team works to remove it from the backend of your app or website. Blocklisting prevents a particular custom data object from being recorded by Braze going forward, meaning it won't show up when searching for a specific user.
 
-{% alert important %}
-To blocklist custom data, you need the [user permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/#list-of-permissions) to access and edit campaigns, Canvases, and segments.
-{% endalert %}
+To blocklist custom data, you need the [user permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/) in the following dropdown for your workspace.
+
+{% details User permissions for blocklisting custom data %}
+
+{% multi_lang_include deprecations/user_permissions.md %}
+
+- View Campaigns
+- Edit Campaigns
+- Archive Campaigns
+- View Canvases
+- Edit Canvases
+- Archive Canvases
+- View Frequency Capping Rules
+- Edit Frequency Capping Rules
+- View Message Prioritization
+- Edit Message Prioritization
+- View Content Blocks
+- View Feature Flags
+- Edit Feature Flags
+- Archive Feature Flags
+- View Segments
+- Edit Segments
+- View IAM Templates
+- Edit IAM Templates
+- Archive IAM Templates
+- View Email Templates
+- Edit Email Templates
+- Archive Email Templates
+- View Webhook Templates
+- Edit Webhook Templates
+- Archive Webhook Templates
+- View Link Templates
+- Edit Link Templates
+- View Media Library Assets
+- Edit Media Library Assets
+- Delete Media Library Assets
+- View Locations
+- Edit Locations
+- Archive Locations
+- View Promotion Codes
+- Edit Promotion Codes
+- Export Promotion Codes
+- View Preference Centers
+- Edit Preference Centers
+
+{% enddetails %}
 
 Blocklisted data is not sent by the SDK, and the Braze dashboard doesn't process blocklisted data from other sources (for example, the API). However, blocklisting doesn't remove data from user profiles or retroactively decrease the amount of data points incurred for that custom data object.
 

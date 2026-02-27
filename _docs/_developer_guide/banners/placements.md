@@ -121,7 +121,7 @@ If you insert Banners using the SDK methods in this guide, all analytics events 
 {% tabs %}
 {% tab Web %}
 {% subtabs %}
-{% subtab Javascript %}
+{% subtab JavaScript %}
 If you're using vanilla JavaScript with the Web Braze SDK, use [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) to listen for placement updates and then call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) to fetch them.
 
 ```javascript
