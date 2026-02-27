@@ -273,7 +273,7 @@ Create each PR **targeting `develop`** as the base branch (use `--base develop`)
 Use the naming convention: `[Jira ticket number](SF) update summary`
 Example: `[BD-4040](SF) Add Currents FAQ entry about editing integration settings`
 Always add the label `salesforce migration` to the PR by including `--label "salesforce migration"` in the `gh pr create` command.
-Always request **Copilot** as a reviewer by including `--reviewer "copilot"` in the `gh pr create` command.
+Let Cursor assign reviewers based on the repo `CODEOWNERS` file; if no specific owner is found, fall back to requesting `@braze-inc/docs-team` as the reviewer, following the same approach as `.cursor/rules/support-analyzer.mdc`.
 
 Cursor fills out the PR automatically:
 
