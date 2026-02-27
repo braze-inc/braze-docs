@@ -131,11 +131,11 @@ Store these preferences using a [nested custom attribute array of objects]({{sit
 
 After collecting custom attributes through the landing page, create campaigns to message users about upcoming events.
 
-### Option A: Shared dates
+### Option A: Shared dates {#step-3-option-a-shared-dates}
 
 If you used boolean custom attributes (Option A in [Step 2](#option-a-shared-dates)), use that attribute as a segment filter to build the audience for your reminder message. Then create a new campaign, scheduled before the event, to target this group with your chosen content.
 
-### Option B: Personal dates
+### Option B: Personal dates {#step-3-option-b-personal-dates}
 
 If you used nested custom attributes (Option B in [Step 2](#option-b-personal-dates)), use the **Nested Custom Attribute** audience filter to select all users who have a reminder date within a specific window — for example, two days from now.
 
