@@ -97,4 +97,6 @@ Let's say we want to target users who haven't made any purchases at our backpack
 
 ![Exit Criteria settings with "Makes Any Purchase" as the exception event, so if a user makes any purchase, then they will exit this Canvas.]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
 
-
+{% alert tip %}
+To set up exit criteria that compare event properties against Canvas entry properties (for example, exiting only when a user purchases the specific item they abandoned), see [Matching exit criteria to entry events]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/matching_entry_and_exit_criteria/).
+{% endalert %}
