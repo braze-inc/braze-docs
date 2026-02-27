@@ -50,6 +50,10 @@ To complete this guide, you need:
 
 Construct a POST request to the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) endpoint. Include the campaign ID, the recipient's external user ID, and the WhatsApp template details in the request payload.
 
+{% alert important %}
+Each recipient referenced in `external_user_ids` must already exist in Braze. API-only sends don't create new user profiles. If you need to create users as part of a send, use [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) first, or use an [API-triggered campaign]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) instead.
+{% endalert %}
+
 ### Example request
 
 {% raw %}
@@ -78,6 +82,10 @@ Authorization: Bearer YOUR_REST_API_KEY
 {% endraw %}
 
 Replace the placeholder values with your actual IDs. For the full list of parameters supported by the WhatsApp messaging object, see [WhatsApp object]({{site.baseurl}}/api/objects_filters/messaging/whats_app_object/).
+
+{% alert note %}
+The `/messages/send` endpoint only supports WhatsApp templates with TEXT or IMAGE headers. If your template uses a DOCUMENT, VIDEO, or other media header type, use the [Campaigns Triggered API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) or the Braze dashboard instead.
+{% endalert %}
 
 After constructing the request, send the POST request from your backend service to the Braze REST API.
 
