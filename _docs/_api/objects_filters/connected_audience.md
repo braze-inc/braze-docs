@@ -77,7 +77,7 @@ The following example uses the [`/campaigns/trigger/send`]({{site.baseurl}}/api/
     "episode_title": "Season 3, Episode 1",
     "deep_link": "https://example.com/shows/example-show/s3e1"
   },
-  "broadcast": true
+  "broadcast": false
 }
 ```
 
