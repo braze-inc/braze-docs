@@ -3,7 +3,7 @@ nav_title: Media library
 article_title: Media library
 page_order: 0
 page_type: reference
-description: "This reference article covers the media library. Here, you can learn how to manage your assets in a single, centralized location, generate image using AI, access media in your message composer."
+description: "This reference article covers the media library. Here, you can learn how to manage your assets in a single, centralized location, generate images using AI, access media in your message composer."
 tool: Media
 
 ---
@@ -33,11 +33,11 @@ Within the media library, you can see the asset type, size, dimensions, URL, the
 
 ![Media Library page that includes an "Upload To Library" section to drag and drop or upload files. There is also a list of uploaded content in the media library.]({% image_buster /assets/img_archive/media_library_main.png %})
 
-Later when drafting a message in Braze, you can pull in your images from the media library.
+Later, when drafting a message in Braze, you can pull in your images from the media library.
 
 ![Two common ways of accessing the media library depending on the message composer. One shows the email Drag and Drop Editor with the title "Images and GIFs" and a button to "Add from Media Library". The other shows the standard editors, such as push and in-app messages, with the title "Media" and a button to "Add Image".]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
 
-{% alert tip %} For more help with the media library, check out our [Templates & Media FAQ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
+{% alert tip %} For more information about the media library, see the [Templates & Media FAQ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
 
 ## Image specifications
 
@@ -67,7 +67,7 @@ For additional resources, see [Push image and text specifications]({{site.baseur
 
 ### Video
 
-Videos that are uploaded to the media library can only be used in WhatsApp messages for now. For more information, refer to [Creating a Whatsapp Message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
+Videos that are uploaded to the media library can only be used in WhatsApp messages for now. For more information, refer to [Creating a WhatsApp message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
 
 ## Generating images with BrazeAI<sup>TM</sup> {#generate-ai}
 
