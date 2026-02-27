@@ -1298,7 +1298,7 @@ An "add" event is ingested when a new token is registered. This happens when a u
 An "update" event is ingested when a property changes on an existing token without the token string itself changing. The token has the same string, same user, and same app, but one or more of the following fields changed: `foreground_push_disabled`, APNs gateway, web push keys, `provisionally_opted_in`, or `device_id`.
 
 {% alert note %}
-**Typical reinstall or backup restore behavior:** In most cases, app reinstall or backup restore results in a new "add" event with a new `push_token` and new `device_id` (because the SDK generates a new `device_id` and the OS provides a new push token string). This creates two separate token/device entries on the user profile, and the older entry is cleaned up later through uninstall tracking or campaign send.
+In most cases, app reinstall or backup restore results in a new "add" event with a new `push_token` and new `device_id` (because the SDK generates a new `device_id` and the OS provides a new push token string). This creates two separate token and device entries on the user profile, and the older entry is cleaned up later through uninstall tracking or campaign send.
 
 **Theoretical edge case:** While theoretically possible, it would be extremely rare for only the `device_id` to change without the `push_token` changing (this would require the OS to return the same token string after reinstall). This edge case has not been observed in practice.
 {% endalert %}
