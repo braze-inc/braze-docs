@@ -1362,6 +1362,7 @@ Thanks for joining our SMS program!
 Time zones
 {% endapitags %}
 
+- [Template in the user's time zone](#users-time-zone)
 - [Personalize a message depending on a user's time zone](#personalize-timezone)
 - [Append the CST time zone to a custom attribute](#time-append-cst)
 - [Insert a timestamp](#time-insert-timestamp)
@@ -1369,6 +1370,37 @@ Time zones
 - [Send a reoccurring in-app message campaign between a window of time in a user's local time zone](#time-reocurring-iam-window)
 - [Send different messages on weekdays versus weekends in a user's local time zone](#time-weekdays-vs-weekends)
 - [Send different messages based on time of day in a user's local time zone](#time-of-day)
+
+### Template in the user's time zone {#users-time-zone}
+
+By default, dates and times in Liquid are rendered in Coordinated Universal Time (UTC). To display dates and times in the user's local time zone, use the `time_zone` filter with the `date` filter.
+
+#### Assign local date and time
+
+To assign a variable that reflects the current date and time in the user's local time zone, use this format:
+
+{% raw %}
+```liquid
+{% assign local_date_time = 'now' | time_zone:{{${time_zone}}} | date: '%B %e, %Y' %}
+{{local_date_time}}
+```
+{% endraw %}
+
+- `now`: This retrieves the current date and time in UTC.
+- `time_zone`: This retrieves the user's local time zone from the default attribute using the {% raw %}`{{${time_zone}}}`{% endraw %} personalization tag.
+- `date`: This formats the user's local date and time according to your specifications. In the previous example, the system displays a string formatted like "February 26, 2026". For more formatting options, see [strftime.net](strftime.net).
+
+#### Apply the user's time zone with custom attributes
+
+You can apply the `time_zone` filter to custom attributes, like this:
+
+{% raw %}
+```liquid
+{{custom_attribute.${date_time_attribute} | time_zone: {{${time_zone}}} | date: '%a, %b %e, %Y'}}
+```
+{% endraw %}
+
+This outputs the `date_time_attribute` formatted as the abbreviated day of the week, followed by the abbreviated month, day, and four-digit year.
 
 ### Personalize a message depending on a user's time zone {#personalize-timezone}
 
