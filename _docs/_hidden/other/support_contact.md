@@ -1643,8 +1643,8 @@ var ticket_lookuptable = {
                 },
                 'SMS and MMS' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Create an SMS Campaign','Create an MMS Campaign'],
-                  'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/','{{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/']
+                  'LinksTitle': ['Create an SMS, MMS, or RCS Message'],
+                  'Links' : ['{{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/create/']
                 },
                 'WhatsApp' : {
                   'ShowSubmit': true,

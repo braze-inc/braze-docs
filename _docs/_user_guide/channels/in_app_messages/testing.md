@@ -1,0 +1,10 @@
+---
+nav_title: Testing
+noindex: true
+layout: redirect
+redirect_to: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/?tab=in-app%20message
+page_order: 6
+channel:
+  - in-app messages
+  
+---
