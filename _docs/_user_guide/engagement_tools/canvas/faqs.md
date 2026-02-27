@@ -202,3 +202,13 @@ For segments and filters, the Message step has delivery validations that allows 
 Exception events are created using Action Paths. Action Paths only support "after an X time window" and not "in X time" or "on the next X time".
 
 {% enddetails %}
+
+### What should I include when submitting a support ticket for a "Request Timed Out" error?
+
+If you encounter a "Request Timed Out" error while editing a Canvas and need to contact [Braze support]({{site.baseurl}}/braze_support/), include the following information to help speed up resolution:
+
+- **Screen recording:** A recording of the steps you took before seeing the error, including any page transitions.
+- **Timestamp and time zone:** The exact time the error occurred and your time zone.
+- **Browser and version:** The browser you're using (for example, Chrome 120, Safari 17) and whether you've tried reproducing the error in a different browser.
+- **Steps to reproduce:** A clear description of the actions that trigger the error, including any specific Canvas steps or configurations involved.
+- **Network logs (optional):** Open your browser developer tools (**Network** tab), reproduce the error, and export the network log as a HAR file. This helps the support team identify which API call is timing out.
