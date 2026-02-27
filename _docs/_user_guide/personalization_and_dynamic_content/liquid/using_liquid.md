@@ -70,6 +70,102 @@ Liquid follows a specific structure, or syntax, that you'll need to keep in mind
 3. **If statements come in pairs:** For every `if`, you need an `endif` to indicate the `if` statement has ended.
 4. **Variable names must use ASCII characters:** Liquid variable names (created with `assign` or `capture`) support only ASCII letters, digits, and underscores. Braze personalization attribute names (inside `custom_attribute.${...}` or `event_properties.${...}`) can include non-ASCII characters.
 
+#### Where to use operators and filters
+
+Operators (such as `==`, `!=`, `>`, `and`, `or`) and filters (such as `| size`, `| plus`) can each be used only in specific Liquid contexts.
+
+| Context | Operators | Filters |
+|-----------|-----------|---------|
+| `assign` | Not supported | Supported |
+| `if`, `elsif`, `unless` | Supported | Not supported |
+| `case`, `when` | Not supported | Not supported |
+| `for` | Not supported | Not supported |
+| Array access (`[ ]`) | Not supported | Not supported |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+When you need a filtered value in a context that doesn't support filters, assign the result to a variable first.
+
+{% raw %}
+
+##### Use a filter result in a conditional
+
+You can't use a filter directly in a conditional statement. This is incorrect:
+
+```liquid
+{% if my_array | size > 3 %}
+You have more than 3 items!
+{% endif %}
+```
+
+Instead, assign the filter result to a variable:
+
+```liquid
+{% assign array_size = my_array | size %}
+{% if array_size > 3 %}
+You have more than 3 items!
+{% endif %}
+```
+
+##### Use a filter result in a for loop
+
+You can't apply a filter to the iterable in a `for` loop. This is incorrect:
+
+```liquid
+{% for item in my_array | reverse %}
+{{ item }}
+{% endfor %}
+```
+
+Instead, assign the filtered value to a variable:
+
+```liquid
+{% assign reversed = my_array | reverse %}
+{% for item in reversed %}
+{{ item }}
+{% endfor %}
+```
+
+##### Use a filter result for array access
+
+You can't use a filter inside square brackets. This is incorrect:
+
+```liquid
+{{ my_array[my_var | minus: 1] }}
+```
+
+Instead, assign the filtered value first:
+
+```liquid
+{% assign adjusted_index = my_var | minus: 1 %}
+{{ my_array[adjusted_index] }}
+```
+
+##### Store a comparison result in a variable
+
+You can't use an operator in an `assign` statement. This is incorrect:
+
+```liquid
+{% assign is_vip = total_spend > 100 %}
+{% if is_vip %}
+Welcome to the VIP lounge!
+{% endif %}
+```
+
+Instead, use a conditional to set the variable:
+
+```liquid
+{% assign is_vip = false %}
+{% if total_spend > 100 %}
+{% assign is_vip = true %}
+{% endif %}
+
+{% if is_vip %}
+Welcome to the VIP lounge!
+{% endif %}
+```
+
+{% endraw %}
+
 #### Default attributes and custom attributes
 
 {% raw %}
@@ -173,100 +269,4 @@ Find yourself assigning the same variables in every message? Instead of writing 
 
 As long as the Content Block is at the top of your message, every time the variable is inserted into your message as an object, it will refer to your chosen custom attribute!
 {% endalert %}
-
-### Where to use operators and filters
-
-Operators (such as `==`, `!=`, `>`, `and`, `or`) and filters (such as `| size`, `| plus`) can each be used only in specific Liquid contexts.
-
-| Context | Operators | Filters |
-|-----------|-----------|---------|
-| `assign` | Not supported | Supported |
-| `if`, `elsif`, `unless` | Supported | Not supported |
-| `case`, `when` | Not supported | Not supported |
-| `for` | Not supported | Not supported |
-| Array access (`[ ]`) | Not supported | Not supported |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-When you need a filtered value in a context that doesn't support filters, assign the result to a variable first.
-
-{% raw %}
-
-#### Use a filter result in a conditional
-
-You can't use a filter directly in a conditional statement. This is incorrect:
-
-```liquid
-{% if my_array | size > 3 %}
-You have more than 3 items!
-{% endif %}
-```
-
-Instead, assign the filter result to a variable:
-
-```liquid
-{% assign array_size = my_array | size %}
-{% if array_size > 3 %}
-You have more than 3 items!
-{% endif %}
-```
-
-#### Use a filter result in a for loop
-
-You can't apply a filter to the iterable in a `for` loop. This is incorrect:
-
-```liquid
-{% for item in my_array | reverse %}
-{{ item }}
-{% endfor %}
-```
-
-Instead, assign the filtered value to a variable:
-
-```liquid
-{% assign reversed = my_array | reverse %}
-{% for item in reversed %}
-{{ item }}
-{% endfor %}
-```
-
-#### Use a filter result for array access
-
-You can't use a filter inside square brackets. This is incorrect:
-
-```liquid
-{{ my_array[my_var | minus: 1] }}
-```
-
-Instead, assign the filtered value first:
-
-```liquid
-{% assign adjusted_index = my_var | minus: 1 %}
-{{ my_array[adjusted_index] }}
-```
-
-#### Store a comparison result in a variable
-
-You can't use an operator in an `assign` statement. This is incorrect:
-
-```liquid
-{% assign is_vip = total_spend > 100 %}
-{% if is_vip %}
-Welcome to the VIP lounge!
-{% endif %}
-```
-
-Instead, use a conditional to set the variable:
-
-```liquid
-{% assign is_vip = false %}
-{% if total_spend > 100 %}
-{% assign is_vip = true %}
-{% endif %}
-
-{% if is_vip %}
-Welcome to the VIP lounge!
-{% endif %}
-```
-
-{% endraw %}
 

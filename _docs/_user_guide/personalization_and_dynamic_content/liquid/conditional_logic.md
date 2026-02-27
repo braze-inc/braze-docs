@@ -40,10 +40,6 @@ Buy now! Would 5% off convince you?
 ```
 {% endraw %}
 
-{% alert note %}
-Conditional tags (`if`, `elsif`, `unless`) support operators but not filters. To evaluate a filtered value in a conditional, assign the filter result to a variable first, then reference that variable. For more details, see [Where to use operators and filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
-{% endalert %}
-
 ## Conditional logic
 
 You can include many types of [intelligent logic within messages](http://docs.shopify.com/themes/liquid-documentation/basics), such as a conditional statement. The following example uses [conditionals](http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags) to internationalize a campaign:
@@ -74,6 +70,10 @@ You have the option to include an `{% else %}` statement in your conditional log
 #### `endif`
 
 The `{% endif %}` tag signals that you've finished your conditional logic. You must include the `{% endif %}` tag in any message with conditional logic. If you don't include an `{% endif %}` tag in your conditional logic, you'll get an error as Braze will be unable to parse your message.
+
+{% alert note %}
+Conditional tags (`if`, `elsif`, `unless`) support operators but not filters. To evaluate a filtered value in a conditional, assign the filter result to a variable first, then reference that variable. For more details, see [Where to use operators and filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
 
 ### Tutorial: Deliver location-based content
 
