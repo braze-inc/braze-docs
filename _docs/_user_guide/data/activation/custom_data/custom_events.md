@@ -147,6 +147,13 @@ Property values can be any of the following data types:
 
 Event property objects that contain array or object values can have an event property payload up to 100&nbsp;KB.
 
+Property value data types are detected and processed similarly to [custom attribute]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) values, with two key differences:
+
+- **String-to-time conversion:** String values that match a recognized time format are automatically converted to a datetime type. This means some string values cannot be stored as-is in event properties.
+- **No type coercion:** There is no automatic type coercion for event properties. If a trigger filter expects a numeric value of `5`, a string value of `"5"` will not match. The same applies to Liquid templating and Currents event data.
+
+These behaviors also apply to [purchase event properties]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#purchase-properties).
+
 You can change the data type of your custom event property, but be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
 
 ### Using custom event properties
