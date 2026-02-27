@@ -22,7 +22,6 @@ Next, add Braze to your dependencies. In the following examples, replace `SDK_VE
 {% tab base only %}
 If you don't plan on using Braze UI components, add the following to your dependencies.
 
-```kotlin
 {% subtabs local %}
 {% subtab Groovy %}
 ```groovy
