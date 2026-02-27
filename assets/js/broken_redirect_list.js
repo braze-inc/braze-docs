@@ -4450,3 +4450,11 @@ validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimi
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keywords/unknown_phone_numbers/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/unknown_phone_numbers/';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keywords/fuzzy_opt_out'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keywords/fuzzy_opt_out/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out/';
+validurls['/docs/user_guide/channels/email/drag_and_drop/dnd_content_blocks'] = '/docs/user_guide/messaging/content/content_blocks';
+validurls['/docs/user_guide/channels/email/drag_and_drop/dnd_content_blocks/'] = '/docs/user_guide/messaging/content/content_blocks/';
+validurls['/docs/user_guide/channels/email/drag_and_drop/dnd_email_style_settings'] = '/docs/user_guide/channels/email/customize/email_global_style_settings';
+validurls['/docs/user_guide/channels/email/drag_and_drop/dnd_email_style_settings/'] = '/docs/user_guide/channels/email/customize/email_global_style_settings/';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/segments'] = '/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/segments/'] = '/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator/';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/short_and_long_codes'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/short_and_long_codes/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/';

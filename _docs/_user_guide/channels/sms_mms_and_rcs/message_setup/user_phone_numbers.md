@@ -13,7 +13,7 @@ channel:
 
 # User phone numbers
 
-> This article will discuss different topics around your users' or customers' phone numbers. If you're looking for information about your own numbers, go to our article on [sending phone numbers]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/short_and_long_codes/).
+> This article will discuss different topics around your users' or customers' phone numbers. If you're looking for information about your own numbers, go to our article on [sending phone numbers]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/).
 
 ## Recommended format
 

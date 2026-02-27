@@ -82,7 +82,7 @@ The compose experience changes depending on which message type you selected. Sel
 Write your message using languages and personalization (Liquid, Connected Content, and emojis) as needed. Be sure to adhere to our message copy limits to reduce your chances of overage charges.
 
 {% alert important %}
-Before proceeding, read the guidelines for [SMS message segments and copy limits]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/segments/). SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so it's a good idea to understand the nuances of how messages will be split.
+Before proceeding, read the guidelines for [SMS message segments and copy limits]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/billing_calculator/). SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so it's a good idea to understand the nuances of how messages will be split.
 {% endalert %}
 
 ![SMS composer in Braze with the message "Hi first_name, we appreciate your support! Why not stop by one of our stores and show them this SMS for an exclusive discount? Reply STOP to stop receiving messages from us."]({% image_buster /assets/img/sms_campaign_compose.png %})

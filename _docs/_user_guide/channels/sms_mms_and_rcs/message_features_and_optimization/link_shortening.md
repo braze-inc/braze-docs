@@ -92,7 +92,7 @@ For a full list of request parameters, go to [request parameters]({{site.baseurl
 
 Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS or RCS message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. 
 
-This preview updates with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/segments/) also update to reflect the rendered personalization and the shortened URL.
+This preview updates with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/billing_calculator/) also update to reflect the rendered personalization and the shortened URL.
 
 Make sure to save the campaign or Canvas before sending a test message to receive a representation of the shortened URL that is dispatched in your message. If the campaign or Canvas isn't saved before a test send, the test send includes a placeholder URL.
 

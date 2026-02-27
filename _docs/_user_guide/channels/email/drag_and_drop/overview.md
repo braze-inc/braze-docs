@@ -65,7 +65,7 @@ Although the drag-and-drop editor simplifies your workflow with these blocks, yo
 
 ### Rows
 
-**Rows** are structural units that define the horizontal composition of a section of the message by using columns. You can either empty rows or [Content Blocks]({{site.baseurl}}/user_guide/channels/email/drag_and_drop/dnd_content_blocks/). Using more than one column allows you to put different content elements side by side. This way, you can add all the structural elements you need to your message, regardless of the template you selected when you started.
+**Rows** are structural units that define the horizontal composition of a section of the message by using columns. You can either empty rows or [Content Blocks]({{site.baseurl}}/user_guide/messaging/content/content_blocks/). Using more than one column allows you to put different content elements side by side. This way, you can add all the structural elements you need to your message, regardless of the template you selected when you started.
 
 #### Cards Style
 
@@ -198,7 +198,7 @@ HTML rendering has improved based on the following updates that minimize the num
 As you continue building drag-and-drop emails, you can further customize each email body by using a combination of these creative details to capture your audience's attention and interest in your message.
 
 {% alert tip %}
-You can create a custom theme for your drag-and-drop editor using [global style settings]({{site.baseurl}}/user_guide/channels/email/drag_and_drop/dnd_email_style_settings/).
+You can create a custom theme for your drag-and-drop editor using [global style settings]({{site.baseurl}}/user_guide/channels/email/customize/email_global_style_settings/).
 {% endalert %}
 
 ### Auto-width images
