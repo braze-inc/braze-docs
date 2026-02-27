@@ -7882,7 +7882,7 @@ This event occurs when a LINE message is received from a user.
 {% endapi %}
 
 {% api %}
-## Line Retry events {#line-retry-events}
+## LINE Retry events {#line-retry-events}
 
 {% apitags %}
 LINE, Retry
