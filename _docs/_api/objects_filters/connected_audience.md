@@ -50,13 +50,9 @@ In each case, a single API-triggered campaign handles all variations. Your back 
 
 ## Example request
 
-The following example targets an API-triggered campaign to users who have favorited a specific show and are opted in to push notifications:
+The following example uses the [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) endpoint to target users who have favorited a specific show and are opted in to push notifications:
 
 ```json
-POST https://rest.iad-01.braze.com/campaigns/trigger/send
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
-
 {
   "campaign_id": "YOUR_CAMPAIGN_ID",
   "audience": {
