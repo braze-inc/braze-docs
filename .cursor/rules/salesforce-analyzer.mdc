@@ -208,6 +208,7 @@ For each ticket being processed:
 2. **If no CSV match:** Prompt the user to paste the article content manually before proceeding.
 3. **If the `Resolution` field is empty:** The CSV row exists but has no useful content. Prompt the user.
 
+Before pasting any Salesforce Knowledge Base content into chats, pull requests, or using it to draft public documentation or commit changes, **redact or remove all PII, customer-identifying details, and internal or sensitive notes**. Only include anonymized, generalized technical information that is appropriate for public Braze Docs.
 Example Python lookup:
 ```python
 import csv
