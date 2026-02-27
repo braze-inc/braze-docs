@@ -249,3 +249,21 @@ You can segment based on the values of event properties in two ways:
 
 Contact your Braze customer success manager for recommendations on the best approach depending on your specific needs.
 
+## Troubleshooting custom events
+
+### Custom event is not appearing in user profiles
+
+If a custom event isn't being logged or isn't showing up where you expect it, check the following:
+
+1. **Verify the logging implementation.** Confirm with your development team that the custom event is being logged correctly using the appropriate Braze SDK method (for example, `braze.logCustomEvent()` on Web, `Braze.getInstance().logCustomEvent()` on Android, or `braze.logCustomEvent()` on Swift). Common pitfalls include using deprecated method names (such as `appboy` instead of `braze`) after an SDK upgrade.
+2. **Confirm the user is performing the right action.** Verify that the in-app action your team expects to trigger the custom event is actually the one firing the SDK call. For example, a user might be tapping a different button than the one wired to the event.
+3. **Check that the user is identified.** If `changeUser()` has not been called before the custom event is logged, the event will be attributed to an anonymous profile rather than the identified user. Call `changeUser()` before logging any custom events to ensure they appear on the correct user profile.
+
+### Submitting a support ticket
+
+If the steps above don't resolve the issue, have your developer gather the following before opening a [support ticket]({{site.baseurl}}/braze_support/):
+
+- **Verbose SDK logs** captured while reproducing the issue. For instructions, see [Enabling verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/).
+- **Code snippets** showing how the custom event is being logged, including any surrounding conditional logic.
+- **The custom event name** exactly as it appears in the SDK call, so support can verify it against the dashboard configuration.
+
