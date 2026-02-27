@@ -168,7 +168,7 @@ Review the output with a critical eye. Consider the following questions:
 If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
 
 {% alert tip %}
-Avoid explicitly saying the output or outcome that you don't want, since LLMs may probabilistically fall back on something it sees in the instructions without "reasoning" that it is actually something to avoid.
+Avoid telling the agent exactly what you do not want it to do. LLMs may still generate that content if you mention it in the instructions.
 {% endalert %}
 
 ### Step 6: Use your agent
