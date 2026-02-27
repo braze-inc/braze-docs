@@ -56,12 +56,13 @@ Each recipient referenced in `external_user_ids` must already exist in Braze. AP
 
 ### Example request
 
-{% raw %}
-```json
+```
 POST https://rest.iad-01.braze.com/messages/send
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
+```
 
+```json
 {
   "campaign_id": "YOUR_CAMPAIGN_ID",
   "external_user_ids": ["user123"],
@@ -79,7 +80,6 @@ Authorization: Bearer YOUR_REST_API_KEY
   }
 }
 ```
-{% endraw %}
 
 Replace the placeholder values with your actual IDs. For the full list of parameters supported by the WhatsApp messaging object, see [WhatsApp object]({{site.baseurl}}/api/objects_filters/messaging/whats_app_object/).
 
