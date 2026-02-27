@@ -270,8 +270,8 @@ Stage and Commit all changes in `_docs` with a meaningful message derived from t
 
 ## Step 9: Generate the PR for each branch
 Create each PR **targeting `develop`** as the base branch (use `--base develop`).
-Use the naming convention: `[Jira ticket number](SF) update summary`
-Example: `[BD-4040](SF) Add Currents FAQ entry about editing integration settings`
+Set the pull request title to **exactly match the linked issue title**, following the rules in `.github/copilot-instructions.md`.
+Do not add or change any prefixes or suffixes in the PR title; rely solely on `issue.title` as the source of truth.
 Always add the label `salesforce migration` to the PR by including `--label "salesforce migration"` in the `gh pr create` command.
 Let Cursor assign reviewers based on the repo `CODEOWNERS` file; if no specific owner is found, fall back to requesting `@braze-inc/docs-team` as the reviewer, following the same approach as `.cursor/rules/support-analyzer.mdc`.
 
