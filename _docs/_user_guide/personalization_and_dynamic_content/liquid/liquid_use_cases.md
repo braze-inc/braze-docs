@@ -1386,9 +1386,9 @@ To assign a variable that reflects the current date and time in the user's local
 ```
 {% endraw %}
 
-- `now`: This pulls in the current date and time in UTC.
+- `now`: This retrieves the current date and time in UTC.
 - `time_zone`: This retrieves the user's local time zone from the default attribute using the {% raw %}`{{${time_zone}}}`{% endraw %} personalization tag.
-- `date`: This formats the user's local date and time according to your specifications. In the example above, it displays a string formatted like "February 26, 2026". For more formatting options, you can refer to [strftime.net](strftime.net).
+- `date`: This formats the user's local date and time according to your specifications. In the previous example, the system displays a string formatted like "February 26, 2026". For more formatting options, see [strftime.net](strftime.net).
 
 #### Apply the user's time zone with custom attributes
 
@@ -1400,7 +1400,7 @@ You can apply the `time_zone` filter to custom attributes, like this:
 ```
 {% endraw %}
 
-This will output the `date_time_attribute` formatted as the abbreviated day of the week, followed by the abbreviated month, day, and four-digit year.
+This outputs the `date_time_attribute` formatted as the abbreviated day of the week, followed by the abbreviated month, day, and four-digit year.
 
 ### Personalize a message depending on a user's time zone {#personalize-timezone}
 
