@@ -1,9 +1,9 @@
 ---
 nav_title: Message types
-article_title: In-App Message Types
+article_title: In-app message types
 page_order: 3
 layout: dev_guide
-guide_top_header: "In-App Message Types"
+guide_top_header: "In-app message types"
 guide_top_text: "Braze offers several in-app message types, each designed for different use cases. Before you get creative, review the guidelines for each type to make sure your message displays well across phones, tablets, and computers. Always <a href='/docs/user_guide/messaging/campaigns/test_campaigns/sending_test_messages/'>test your messages</a> before launching."
 description: "This landing page covers the different types of in-app messages available in Braze, including fullscreen, modal, slideup, custom HTML, email capture forms, and simple surveys."
 

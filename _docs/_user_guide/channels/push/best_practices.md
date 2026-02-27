@@ -11,7 +11,7 @@ channel: push
 Push notifications are powerful tools for engaging with your app's users, but they should be used with care to ensure they deliver timely and relevant messages. Before sending your push message, refer to the following best practices for things you should know and check for.
 
 {% alert important %}
-Your push messages must fall within the guidelines of the Apple App Store and Google's Play Store policies, specifically regarding using push messages as advertisements, spam, promotions, and more. Learn more about [Mobile push regulations]({{site.baseurl}}/user_guide/channels/push/#mobile-push-regulations-for-apps).
+Your push messages must fall within the guidelines of the Apple App Store and Google's Play Store policies, specifically regarding using push messages as advertisements, spam, promotions, and more. On this page, see [Push message regulations](#push-message-regulations).
 {% endalert %}
 
 ## Compose your push message
@@ -121,6 +121,24 @@ When assigning [conversion events]({{site.baseurl}}/user_guide/engagement_tools/
 While all push campaign results break down a message's direct opens and opens (which includes both direct and [influenced opens]({{site.baseurl}}/user_guide/analytics/tracking/influenced_opens/)), conversion tracking will track any type of open, whether direct or influenced.
 
 In addition, by using the conversion event "opens app," you are tracking app opens that occur before that conversion deadline (for instance, three days). This differs from an influenced open in that the time a user has to register an influenced open can vary from person to person, depending on each user's past engagement behavior.
+
+## Push message regulations
+
+Because push messages are an intrusive type of messaging that goes directly to your customer's phone or browser, there are guidelines for sending push messages through apps and sites.
+
+### Mobile push regulations for apps
+
+| Apple App Store Policies |
+| --- |
+| [3.2.2](https://developer.apple.com/app-store/review/guidelines/#unacceptable) Unacceptable: (i) Creating an interface for displaying third-party apps, extensions, or plug-ins similar to the App Store or as a general-interest collection. |
+| [4.5.4](https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services) Push Notifications must not be required for the app to function, and should not be used to send sensitive personal or confidential information. Push Notifications should not be used for promotions or direct marketing purposes unless customers have explicitly opted in to receive them via consent language displayed in your app's UI, and you provide a method in your app for a user to opt out from receiving such messages. |
+| [4.10](https://developer.apple.com/app-store/review/guidelines/#monetizing-built-in-capabilities) You may not monetize built-in capabilities provided by the hardware or operating system, such as Push Notifications, the camera, or the gyroscope; or Apple services and technologies, such as Apple Music access, iCloud storage, or Screen Time APIs. |
+{: .reset-td-br-1 role="presentation" }
+
+| Google Play Store Policy |
+| --- |
+| [Unauthorized Use or Imitation of System Functionality](https://developers.google.com/android/play-protect/mobile-unwanted-software#muws-categories) We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app's integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions. |
+{: .reset-td-br-1 role="presentation" }
 
 ## Related articles
 

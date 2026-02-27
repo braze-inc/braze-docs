@@ -2,11 +2,13 @@
 
 > With Banners, you can create personalized messaging for your users, all while extending the reach of your other channels, such as email or push notifications. You can embed Banners directly in your app or website, which lets you engage with users through an experience that feels natural.
 
-![An example Banner rendered on a device.]({% image_buster /assets/img/banners/sample_banner.png %})
-
 ## Prerequisites
 
 Banners availability depends on your Braze package. Contact your account manager or customer success manager to get started.
+
+Before you start, make sure you have [Banner placements]({{site.baseurl}}/developer_guide/banners/placements/) created in your app or website.
+
+![An example Banner rendered on a device.]({% image_buster /assets/img/banners/sample_banner.png %})
 
 ## Why use Banners?
 
@@ -38,7 +40,7 @@ Features for Banners include:
 
 Banner placements are specific locations in your app or website [you create with the Braze SDK]({{site.baseurl}}/developer_guide/banners/placements/) that designate where Banners can appear.
 
-Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/).
+Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign]({{site.baseurl}}/user_guide/channels/banners/create_a_banner/).
 
 There is no fixed limit on the number of placements you can create per workspace, and you can create as many placement IDs as your experience requires. Each placement must be unique within a workspace. A single placement ID can be referenced by up to 25 active messages at the same time.
 
@@ -48,7 +50,7 @@ Avoid modifying placement IDs after launching a Banner campaign.
 
 ### Banner priority {#priority}
 
-When multiple Banner messages reference the same placement ID, Banners are displayed in order of priority: high, medium, or low. By default, Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#set-priority) when you create or edit your Banner campaign. 
+When multiple Banner messages reference the same placement ID, Banners are displayed in order of priority: high, medium, or low. By default, Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/user_guide/channels/banners/create_a_banner/#set-banner-priority-optional) when you create or edit your Banner campaign. 
 
 If multiple Banners are set to the same priority, the newest Banner that the user is eligible for is displayed first.
 
@@ -74,7 +76,7 @@ Here's what you need to know about Banner dimensions and sizing:
 
 ## Limitations
 
-Each workspace can support up to 200 active Banner campaigns. If this limit is reached, you'll need to [archive or deactivate]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) an existing campaign before creating a new one.
+Each workspace can support up to 200 active Banner campaigns. If this limit is reached, you'll need to [archive or deactivate]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/statuses/#changing-the-status) an existing campaign before creating a new one.
 
 Additionally, Banner messages do not support the following features:
 
@@ -90,8 +92,6 @@ Want to help prioritize what's next? Contact [banners-feedback@braze.com](mailto
 
 ## Next steps
 
-Now that you know about Banners, you're ready for the next steps:
-
-1. [Creating Banner placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/)
-2. [Creating Banner campaigns in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/)
-3. [Tutorial: Displaying a Banner by Placement ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
+- [Create Banner placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/)
+- [Create a Banner campaign in Braze]({{site.baseurl}}/user_guide/channels/banners/create_a_banner/)
+- [Tutorial: Displaying a Banner by Placement ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)

@@ -11,7 +11,7 @@ description: "Create, manage, and optimize messaging across campaigns and Canvas
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Messaging fundamentals
+  - name: Fundamentals
     link: /docs/user_guide/messaging/messaging_fundamentals/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Campaigns

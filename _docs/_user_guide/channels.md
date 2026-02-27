@@ -64,3 +64,12 @@ The Braze Messaging Matrix streamlines channel selection by mapping **Content Co
 ![Mobile/web push are simple content, high urgency; Emails are rich content, high urgency; In-app/browser messages are simple content, low urgency; Content Cards are low urgency, rich content]({% image_buster /assets/img_archive/messaging_matrix.png %})
 
 While the matrix highlights core channels, it is adaptable: SMS and WhatsApp, for instance, are high-urgency tools that scale into rich content when utilizing multimedia formats. To learn more about how you can leverage this matrix, check out our Braze Learning course on [Cross-Channel Messaging](https://learning.braze.com/cross-channel-messaging).
+
+## Accessibility resources
+
+You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation. If you'd like additional guidance, we recommend:
+
+- [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations): Learn fundamental accessibility principles that apply to brand communications in this Braze Learning course.
+- [Building Accessible Messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/accessibility/): Learn how to add alt text and structure your content for assistive technologies directly within Braze.
+
+If you have feedback about the accessibility of Braze or messages sent from Braze, we'd love to hear from you. Open the **Support** menu in the global header and select **Share feedback** to send us your thoughts.

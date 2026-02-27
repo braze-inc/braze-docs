@@ -89,7 +89,15 @@ You can personalize your webhook URLs using [Liquid]({{site.baseurl}}/user_guide
 
 #### HTTP method
 
-The [HTTP method]({{site.baseurl}}/user_guide/channels/webhooks/understanding_webhooks/#methods) that you should use will vary depending on the endpoint to which you are sending information. In most cases, you'll use POST.
+The HTTP method you should use varies depending on the endpoint to which you are sending information. In most cases, you'll use POST.
+
+| HTTP method | Description |
+| ----------- | ----------- |
+| POST | Writes new information on the receiving server. This is the most common method used when sending data. |
+| GET | Retrieves existing information, as opposed to writing new information. By definition, a GET request does not support a request body. |
+| PUT | Updates information on the endpoint, replacing any existing information with what's in the request body. |
+| DELETE | Deletes the resource in the HTTP URL. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Request body
 
