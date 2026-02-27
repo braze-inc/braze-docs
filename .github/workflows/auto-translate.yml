@@ -1,5 +1,6 @@
-# Automatically translates changed English docs into all supported languages
-# when changes land on main (typically via the nightly develop → main deploy).
+# Translates English docs into all supported languages using Claude.
+# Currently manual-only (workflow_dispatch). Re-enable the push trigger
+# below once the workflow is production-ready.
 #
 # Flow:
 #   1. Identify _docs/ markdown files changed in the push
@@ -11,9 +12,9 @@
 name: Auto-translate
 
 on:
-  push:
-    branches: [main]
-    paths: ['_docs/**']
+  # push:
+  #   branches: [main]
+  #   paths: ['_docs/**']
   workflow_dispatch:
     inputs:
       files:

@@ -2521,7 +2521,7 @@ validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks'] = '/doc
 validurls['/docs/partners/message_personalization/dynamic_content/peak'] = '/docs/partners/ecommerce/analytics_workflow/peak';
 validurls['/docs/partners/message_personalization/location/tangerine'] = '/docs/partners/ecommerce/analytics_workflow/tangerine';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/wunderkind'] = '/docs/partners/ecommerce/analytics_workflow/wunderkind';
-validurls['/docs/partners/message_orchestration/channel_extensions/loyalty/talonone'] = '/docs/partners/ecommerce/loyalty/talonone';
+validurls['/docs/partners/message_orchestration/channel_extensions/loyalty/talonone'] = '/docs/partners/talonone';
 validurls['/docs/partners/message_orchestration/channel_extensions/loyalty/voucherify'] = '/docs/partners/ecommerce/loyalty/voucherify';
 validurls['/docs/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify'] = '/docs/partners/ecommerce/loyalty/voucherify/voucherify';
 validurls['/docs/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_distribution_with_braze_custom_attributes'] = '/docs/partners/ecommerce/loyalty/voucherify/voucherify_distribution_with_braze_custom_attributes';
@@ -3365,6 +3365,14 @@ validurls['/docs/partners/data_and_analytics/cohort_import/tinyclues'] = '/docs/
 
 validurls['/docs/user_guide/administrative/access_billing/billing/'] = '/docs/user_guide/administrative/app_settings/subscription_and_usage/';
 validurls['/docs/api/objects_filters/canvas_entry_properties_object/'] = '/docs/api/objects_filters/context_object/';
+
+validurls['/docs/compliance_documentation_audience_sync/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_line/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_message_archiving_field_level_encryption/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_shopify/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_sms/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_webhooks/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_whatsapp/'] = '/docs/compliance_documentation/';
 
 // ============================================================
 // Phase 0 - IA Migration: Foundation moves

@@ -15,6 +15,7 @@ import re
 import subprocess
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 try:
@@ -35,6 +36,7 @@ LANGUAGES = {
 
 MODEL = os.environ.get("TRANSLATION_MODEL", "claude-opus-4-6")
 MAX_TOKENS = 16384
+MAX_WORKERS = int(os.environ.get("TRANSLATION_WORKERS", "6"))
 REPO_ROOT = Path(os.environ.get("GITHUB_WORKSPACE", Path.cwd()))
 RESULTS_FILE = REPO_ROOT / "translation_results.json"
 GLOSSARY_DIR = REPO_ROOT / "scripts" / "glossaries"
@@ -203,6 +205,42 @@ def save_results(results):
 # translate
 # ---------------------------------------------------------------------------
 
+def translate_one(client, prompt, fpath, relative, english_content,
+                  lang_key, lang_info, glossary):
+    """Translate + review a single file into one language. Returns a result dict."""
+    target = translation_path(relative, lang_info["dir"])
+    existing = target.read_text() if target.exists() else None
+
+    filtered = filter_glossary(glossary, english_content)
+    glossary_section = format_glossary_for_prompt(filtered)
+
+    try:
+        translated = translate_file(
+            client, prompt, english_content, existing,
+            lang_info["name"], glossary_section,
+        )
+        translated = review_file(
+            client, english_content, translated,
+            lang_info["name"], glossary_section,
+        )
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(translated)
+        return {
+            "ok": True,
+            "source": fpath,
+            "target": str(target.relative_to(REPO_ROOT)),
+            "lang": lang_key,
+        }
+    except Exception as exc:
+        return {
+            "ok": False,
+            "source": fpath,
+            "target": str(target.relative_to(REPO_ROOT)),
+            "lang": lang_key,
+            "error": str(exc),
+        }
+
+
 def cmd_translate(args):
     """Translate changed English docs into every supported language."""
     changed_path = REPO_ROOT / args.changed_files
@@ -220,55 +258,51 @@ def cmd_translate(args):
         print("No English .md files changed. Nothing to translate.")
         return
 
-    print(f"Translating {len(md_files)} file(s) into {len(LANGUAGES)} language(s)\n")
+    total_tasks = len(md_files) * len(LANGUAGES)
+    print(f"Translating {len(md_files)} file(s) into {len(LANGUAGES)} language(s) "
+          f"({total_tasks} tasks, {MAX_WORKERS} workers)\n")
 
     client = Anthropic()
     prompt = load_prompt()
     results = load_results()
-
     glossaries = {lang: load_glossary(lang) for lang in LANGUAGES}
 
-    for fpath in md_files:
-        relative = str(Path(fpath).relative_to("_docs"))
-        english_content = (REPO_ROOT / fpath).read_text()
+    futures = {}
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
+        for fpath in md_files:
+            relative = str(Path(fpath).relative_to("_docs"))
+            english_content = (REPO_ROOT / fpath).read_text()
 
-        for lang_key, lang_info in LANGUAGES.items():
-            target = translation_path(relative, lang_info["dir"])
-
-            existing = target.read_text() if target.exists() else None
-
-            filtered = filter_glossary(glossaries[lang_key], english_content)
-            glossary_section = format_glossary_for_prompt(filtered)
-            term_count = len(filtered)
-
-            print(f"  {relative} → {lang_info['name']} ({term_count} terms)...", end=" ", flush=True)
-
-            try:
-                translated = translate_file(
-                    client, prompt, english_content, existing,
-                    lang_info["name"], glossary_section,
+            for lang_key, lang_info in LANGUAGES.items():
+                future = pool.submit(
+                    translate_one, client, prompt, fpath, relative,
+                    english_content, lang_key, lang_info,
+                    glossaries[lang_key],
                 )
-                print("reviewing...", end=" ", flush=True)
-                translated = review_file(
-                    client, english_content, translated,
-                    lang_info["name"], glossary_section,
-                )
-                target.parent.mkdir(parents=True, exist_ok=True)
-                target.write_text(translated)
+                futures[future] = (relative, lang_info["name"])
+
+        done_count = 0
+        for future in as_completed(futures):
+            done_count += 1
+            relative, lang_name = futures[future]
+            result = future.result()
+
+            if result["ok"]:
                 results["translated"].append({
-                    "source": fpath,
-                    "target": str(target.relative_to(REPO_ROOT)),
-                    "lang": lang_key,
+                    "source": result["source"],
+                    "target": result["target"],
+                    "lang": result["lang"],
                 })
-                print("done")
-            except Exception as exc:
+                print(f"  [{done_count}/{total_tasks}] {relative} → {lang_name} done")
+            else:
                 results["failed"].append({
-                    "source": fpath,
-                    "target": str(target.relative_to(REPO_ROOT)),
-                    "lang": lang_key,
-                    "error": str(exc),
+                    "source": result["source"],
+                    "target": result["target"],
+                    "lang": result["lang"],
+                    "error": result["error"],
                 })
-                print(f"FAILED ({exc})")
+                print(f"  [{done_count}/{total_tasks}] {relative} → {lang_name} "
+                      f"FAILED ({result['error']})")
 
     save_results(results)
     ok = len(results["translated"])
