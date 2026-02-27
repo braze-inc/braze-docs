@@ -1285,10 +1285,70 @@ This event occurs when a push token is inserted, updated, or removed. Use this t
 - The `sdk_version` field will only populate if the token state change is initiated by SDK.
   - If there is a `changeUser` SDK event that triggers the token to be moved from one user to another, the `sdk_version` field will populate.
   - If there is a push bounce (for example, due to uninstall), the `sdk_version` field will be blank.
-- Whenever a push token enters Braze, its lifecycle events are recorded. There are three types of token change events ("add", "update", and "remove") recorded in the `push_token_state_change_type` field. Note the following details:
-  - For a new token that hasn't existed before, this ingests one "add" event.
-  - For updating the token with the same token string on the same user (gateway or `foreground_push_disabled` or other "secondary" fields changed), this will ingest one "update" event on the same token.
-  - If a token moved from one user to another user, this will ingest one "remove" event for the old user and one "add" event for the new user.
-  - If the same user or device generates a new token, this will ingest one "remove" event for the old token and one "add" event for the new token.
-  - If Braze is removing a token (for reasons like an uninstall or invalid token), this will ingest one "remove" event for the token.
+- Whenever a push token enters Braze, its lifecycle events are recorded. There are three types of token change events ("add", "update", and "remove") recorded in the `push_token_state_change_type` field.
+
+#### Event types
+
+##### Add
+
+An "add" event is ingested when a new token is registered. This happens when a user opens the app on a new device for the first time, or when a token is set through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint with `push_tokens` for a user that didn't previously have one.
+
+##### Update
+
+An "update" event is ingested when a property changes on an existing token without the token string itself changing. The token has the same string, same user, and same app, but one or more of the following fields changed: `foreground_push_disabled`, APNs gateway, web push keys, `provisionally_opted_in`, or `device_id`.
+
+{% alert note %}
+In most cases, app reinstall or backup restore results in a new "add" event with a new `push_token` and new `device_id` (because the SDK generates a new `device_id` and the OS provides a new push token string). This creates two separate token and device entries on the user profile, and the older entry is cleaned up later through uninstall tracking or campaign send.
+
+It would be extremely rare for only the `device_id` to change without the `push_token` changing (this would require the OS to return the same token string after reinstall). 
+{% endalert %}
+
+##### Remove
+
+A standalone "remove" event is ingested when Braze removes a token. This can happen for several reasons:
+
+- Push bounce (APNs, FCM, or HMS reports the token as invalid or expired)
+- Uninstall detection through silent push
+- Token removed through the REST API or APNs feedback service
+
+##### Add and remove pairs
+
+Add and remove pairs fall into two categories:
+
+**Token string refresh (same user):** The OS rotates the token string on the same device (for example, APNs or FCM token rotation). The "add" event (new token) and "remove" event (old token) have the same `user_id`, same `device_id`, different `push_token`, and identical `time_ms`.
+
+**Token moves between users:** A token moves from one user to another. The "add" event (new user) and "remove" event (old user) have different `user_id`, same `device_id`, same `push_token`, and different `time_ms` (typically less than 100 milliseconds apart). This is triggered by any of the following:
+
+- The SDK calls `changeUser` from an anonymous profile to an identified profile. The "remove" event will have an empty `external_user_id`.
+- The SDK calls `changeUser` from one identified profile to another. Both events will have a non-empty `external_user_id`.
+- The [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) endpoint or duplicate user cleanup moves the orphaned user's tokens to the surviving user.
+
+{% alert note %}
+If an anonymous profile is identified through the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint, the `user_id` does not change and no token state change event is emitted.
+{% endalert %}
+
+#### Querying for the latest active token state
+
+To determine the current push token state for each user, partition token state change events by `push_token`, `user_id`, and `app_id`, then order by `time_ms` descending and filter out "remove" events. Internally, a token is keyed by its token string and `app_id` per user. Using `device_id` as a partition key is not recommended because `device_id` is a mutable attribute, and partitioning by it could split a single token's lifecycle across multiple partitions.
+
+The following SQL query returns the latest active token state per user in Snowflake:
+
+```sql
+WITH latest_token_state AS (
+  SELECT *,
+    ROW_NUMBER() OVER (
+      PARTITION BY PUSH_TOKEN, USER_ID, APP_ID
+      ORDER BY COALESCE(TIME_MS, TIME * 1000) DESC
+    ) AS rn
+  FROM USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE
+)
+SELECT
+  PUSH_TOKEN, USER_ID, EXTERNAL_USER_ID, PUSH_TOKEN_DEVICE_ID,
+  PUSH_TOKEN_STATE_CHANGE_TYPE, PUSH_TOKEN_FOREGROUND_PUSH_DISABLED,
+  TIME_MS, PLATFORM, APP_ID
+FROM latest_token_state
+WHERE rn = 1
+  AND PUSH_TOKEN_STATE_CHANGE_TYPE != 'remove';
+```
+
 {% endapi %}
