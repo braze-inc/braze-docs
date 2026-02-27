@@ -108,18 +108,14 @@ For geofencing to work reliably, users must enable precise location. Include thi
 
 A location permission primer is an in-app message that explains the value of sharing location data before the user sees the native OS permission prompt. Because the native location prompt can only be shown once (on iOS) or a limited number of times (on Android), priming users in advance increases opt-in rates.
 
-{% alert note %}
-Braze in-app messages don't include a built-in button action to trigger the native location permission prompt. To create a location permission primer, your development team must set up a [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) that invokes the native location permission dialog on iOS and Android.
-{% endalert %}
-
 ### Step 1: Work with your development team
 
-Before building the in-app message in Braze, coordinate with your development team to set up the following deep links:
+Because Braze in-app messages don't include a built-in button action to invoke the native location permission prompt, your development team needs to handle location permissions on the device side. Before building the in-app message in Braze, coordinate with your development team to set up deep links that your in-app message can call. The specific implementation depends on your app's architecture, but common approaches include:
 
-1. **A deep link that triggers the native location prompt** (for example, `yourapp://request-location-permission`). This invokes the native location permission dialog on iOS and Android from within your app. For more information, refer to [Deep linking to in-app content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
-2. **A deep link that opens the app's location settings page in the OS** (for example, `yourapp://open-location-settings`). This is useful for re-prompting users who previously denied or limited their permissions.
-    - On iOS, this links to the app-specific settings screen using `UIApplication.openSettingsURLString`.
-    - On Android, this links to the app's settings detail page using `android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS`.
+- A deep link that triggers the native location permission prompt from within your app.
+- A deep link that opens the app's location settings page in the device's OS settings, which is useful for re-prompting users who previously denied or limited their permissions.
+
+For more information about deep links, refer to [Deep linking to in-app content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/). For platform-specific guidance on location and geofence integration, refer to [Geofences]({{site.baseurl}}/developer_guide/geofences/) in the developer guide.
 
 ### Step 2: Build the location primer in-app message
 
@@ -130,7 +126,7 @@ Create an in-app message campaign that explains the value of location access. Al
 3. Write messaging that clearly explains why location access benefits the user. For example:
     - "Enable location to get notified about deals near you."
     - "Turn on location so we can let you know when your order is ready for pickup at your nearest store."
-4. Add a primary call-to-action button (such as **Turn On Location**) and set its on-click behavior to **Deep Link into App**, using the custom deep link your development team created (for example, `yourapp://request-location-permission`).
+4. Add a primary call-to-action button (such as **Turn On Location**) and set its on-click behavior to **Deep Link into App**, using the deep link your development team created to trigger the native location prompt.
 5. Add a secondary button (such as **Not Now**) that closes the message.
 
 ### Step 3: Target the right audience
@@ -154,9 +150,10 @@ In both cases, remind users to keep **Precise Location** turned on for the best 
 
 If a user previously denied location access or selected a limited permission, you can't trigger the native prompt again from within the app on most OS versions. Instead, direct them to update their permissions in device settings.
 
-Use a deep link inside a custom [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) to navigate the user to the app's settings page in the OS:
+Use a deep link inside a custom [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) to navigate the user to the app's location settings page in the OS. Your development team can set up a deep link for this as part of your app's location permission handling (refer to [Step 1](#step-1-work-with-your-development-team)).
 
-- **Deep link target:** Use the deep link your development team created that opens the app's location settings page (for example, `yourapp://open-location-settings`).
+When building this in-app message, consider the following:
+
 - **When to show:** Target users who have "While Using the App" permission when you need "Always Allow", or users who previously denied location access.
 - **Messaging example:** "To get the most out of location-based features, update your location settings to 'Always Allow'. Tap below to go to Settings."
 
@@ -172,8 +169,8 @@ A retail app displays a modal in-app message after a user saves a store as a fav
 
 - **Heading:** "Get notified about in-store deals"
 - **Body:** "Turn on location so we can send you exclusive offers when you're near your favorite stores. Your location is only accessed when using the app."
-- **CTA:** **Turn On Location** → deep links to native location permission prompt
-- **Secondary:** **Maybe Later** → closes the message
+- **CTA:** **Turn On Location** → deep links to the native location permission prompt
+- **Dismiss:** **Maybe Later** → closes the message
 
 This approach is effective because the user has already expressed interest in a specific store, creating a natural context for the location permission request.
 
@@ -184,7 +181,7 @@ After a user grants "While Using the App" permission, show a follow-up in-app me
 - **Heading:** "Never miss a nearby deal"
 - **Body:** "Update your location settings to 'Always' so we can notify you about offers even when you're not browsing the app. We'll only send relevant alerts when you're near participating locations."
 - **CTA:** **Update Settings** → deep links to the app's location settings page in the OS
-- **Secondary:** **Keep Current Settings** → closes the message
+- **Dismiss:** **Keep Current Settings** → closes the message
 
 This follow-up gives the user context for why upgrading to "Always Allow" provides additional value beyond the initial permission level.
 
@@ -346,5 +343,5 @@ As a best practice, avoid setting up geofences that overlap with each other, as 
 
 ### What if a user denies location access?
 
-You can use a deep link inside a custom in-app message at any time to direct users to the app's location settings page in the OS, where they can update their permissions. Be selective about when you show this message—target users who are engaged or who have performed a high-value action to increase the chance of an opt-in. For more information, refer to [Redirecting users to OS settings](#redirecting-users-to-os-settings).
+Your development team can set up a deep link that opens the app's location settings page in the OS, where users can update their permissions. You can use this deep link inside a custom in-app message at any point in the user journey. Be selective about when you show this message—target users who are engaged or who have performed a high-value action to increase the chance of an opt-in. For more information, refer to [Redirecting users to OS settings](#redirecting-users-to-os-settings).
 
