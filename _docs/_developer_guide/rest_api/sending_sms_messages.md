@@ -37,7 +37,7 @@ To complete this guide, you need:
 ## Step 1: Create an API campaign
 
 1. In the Braze dashboard, go to **Messaging** > **Campaigns**.
-2. Select **Create Campaign**, then select **API Campaign**.
+2. Select **Create Campaign**, then select **API Campaigns**.
 3. Enter a name and description for your campaign, such as "SMS message notification".
 4. Add relevant tags for identification and tracking.
 5. Select **Add Messaging Channel**, then select **SMS**.
