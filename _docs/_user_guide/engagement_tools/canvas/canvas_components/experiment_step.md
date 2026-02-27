@@ -74,7 +74,7 @@ From the **Canvas Analytics** page, select the Experiment Path to open a [detail
 Each step in each path displays statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. However, keep in mind that individual step analytics and Experiment Path analytics measure conversions differently:
 
 - **Experiment Path analytics** track conversions starting from when the user enters the Experiment Path step. This is the recommended view for comparing performance across paths because all paths share the same starting point.
-- **Individual step analytics** (such as message step analytics) track conversions starting from when the user receives that specific step (for example, when the message sends).
+- **Individual step analytics** (such as Message step analytics) track conversions starting from when the user receives that specific step (for example, when the message sends).
 
 Because these conversion windows have different starting points, they can show different conversion rates for the same path—especially when there are delays between the experiment step and a downstream message. For the most reliable comparison across paths, use the Experiment Path analytics.
 
