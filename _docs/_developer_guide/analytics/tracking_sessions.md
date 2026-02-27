@@ -75,6 +75,19 @@ document.addEventListener('visibilitychange', function() {
 
 For more information on logging custom events, refer to [Log custom events]({{site.baseurl}}/developer_guide/analytics/logging_events/). For details on session lifecycle and timeout configuration, refer to [Changing the default session timeout](#change-session-timeout).
 
+## Sessions for anonymous users on Web
+
+The Braze Web SDK automatically tracks sessions for anonymous users (users who haven't been identified with `changeUser`) as long as the SDK is initialized. To ensure session data is captured for anonymous visitors:
+
+1. **Initialize the SDK on page load.** Call `braze.initialize()` as early as possible in your page lifecycle — don't wait until the user logs in. This ensures anonymous browsing sessions are tracked from the first page view.
+2. **Call `braze.openSession()`.** After initialization, call [`braze.openSession()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#opensession) to start the session. This is required for the Web SDK to begin recording session data and delivering in-app messages and Content Cards.
+
+Once the user logs in and you call `changeUser`, their anonymous profile (including the sessions already tracked) is merged with the identified user profile.
+
+{% alert tip %}
+If you're delaying SDK initialization until a user identifies themselves (for example, to avoid creating anonymous profiles), be aware that you will not capture any session data for anonymous visits. See [Preventing anonymous user tracking]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/#preventing-anonymous-user-tracking) for the trade-offs.
+{% endalert %}
+
 ## Subscribing to session updates
 
 ### Step 1: Subscribe to updates
