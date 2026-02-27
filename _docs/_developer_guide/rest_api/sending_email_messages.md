@@ -43,7 +43,7 @@ To complete this guide, you need:
 3. Enter a name and description for your campaign, such as "Email message notification".
 4. Add relevant tags for identification and tracking.
 5. Select **Add Messaging Channel**, then select **Email**.
-6. Note the **Campaign ID** and **Message Variation ID** displayed on the campaign page. You'll need both values when constructing your API request.
+6. Note the **Campaign ID** displayed on the campaign page. You'll need this value when constructing your API request. Optionally, note the **Message Variation ID** as well — include it in your request if you want to attribute send statistics to a specific message variation.
 
 ## Step 2: Send an email using the API
 
