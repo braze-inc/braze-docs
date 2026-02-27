@@ -1,7 +1,7 @@
 ---
 nav_title: "Simple survey"
 article_title: Simple Survey In-App Message
-page_order: 1.5
+page_order: 6
 page_type: reference
 description: "This reference article covers how to collect user attributes, insights, and preferences to power your campaign strategy using the in-app message surveys."
 channel:
@@ -30,7 +30,7 @@ To enable HTML in-app messages through the Web SDK, you must supply the `allowUs
 
 ## Creating a survey {#create}
 
-When creating an [in-app message]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/create/), select **Simple Survey** for your **Message Type**.
+When creating an [in-app message]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/), select **Simple Survey** for your **Message Type**.
 
 This survey template is supported for both mobile apps and web browsers. Remember to check that your SDKs are on the [minimum SDK versions](#supported-sdk-versions) required for this feature.
 

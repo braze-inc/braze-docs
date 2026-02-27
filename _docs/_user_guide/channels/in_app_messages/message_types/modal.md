@@ -1,7 +1,7 @@
 ---
 nav_title: Modal
 article_title: Modal In-App Messages
-page_order: 1
+page_order: 2
 channel:
   - in-app messages
 tool:

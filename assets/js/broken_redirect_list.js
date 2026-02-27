@@ -147,7 +147,7 @@ validurls['/docs/gdpr_compliance/'] = '/docs/help/gdpr_compliance/';
 validurls['/docs/locations_and_geofences/'] = '/docs/user_guide/audience/locations_and_geofences/';
 validurls['/docs/manage_your_users/'] = '/docs/user_guide/administrative/manage_your_braze_users/adding_users_to_your_dashboard/';
 validurls['/docs/message_building_and_personalization/email/'] = '/docs/user_guide/channels/email/drag_and_drop/overview/';
-validurls['/docs/message_building_and_personalization/in-app_messages/'] = '/docs/user_guide/channels/in_app_messages/traditional/create/';
+validurls['/docs/message_building_and_personalization/in-app_messages/'] = '/docs/user_guide/channels/in_app_messages/traditional/';
 validurls['/docs/message_building_and_personalization/personalization/'] = '/docs/user_guide/messaging/content/personalize/overview/';
 validurls['/docs/message_building_and_personalization/push/'] = '/docs/user_guide/channels/push/create_a_push_message/';
 validurls['/docs/message_building_and_personalization/webhooks/'] = '/docs/user_guide/channels/webhooks/create_a_webhook/';
@@ -458,7 +458,7 @@ validurls['/docs/help/best_practices/utilizing_badge_count/'] = '/docs/user_guid
 validurls['/docs/help/best_practices/race_conditions/'] = '/docs/user_guide/messaging/ab_testing/concepts/race_conditions/';
 validurls['/docs/help/best_practices/image_and_text_specifications/#web-push-notifications'] = '/docs/user_guide/channels/push/types/#image-and-text-specifications';
 validurls['/docs/help/best_practices/image_and_text_specifications/#native-mobile-push-notifications'] = '/docs/user_guide/channels/push/types/#image-and-text-specifications';
-validurls['/docs/help/best_practices/image_and_text_specifications/#in-app-messages'] = '/docs/user_guide/channels/in_app_messages/creative_details/#content-guidelines';
+validurls['/docs/help/best_practices/image_and_text_specifications/#in-app-messages'] = '/docs/user_guide/channels/in_app_messages/message_types/';
 validurls['/docs/help/best_practices/image_and_text_specifications/#news-feed-specifications'] = '/docs/user_guide/channels/content_cards/';
 validurls['/docs/help/best_practices/image_and_text_specifications/#mms'] = '/docs/user_guide/channels/sms_mms_and_rcs/create/#image-specifications';
 validurls['/docs/help/best_practices/image_and_text_specifications/#email'] = '/docs/user_guide/channels/email/best_practices/email_guidelines/#email-size';
@@ -807,7 +807,7 @@ validurls['/docs/developer_guide/platform_integration_guides/swift/live_activiti
 validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities/live_activities/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/swift/live_activities/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
 
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/create/'] = '/docs/user_guide/channels/in_app_messages/traditional/create/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/create/'] = '/docs/user_guide/channels/in_app_messages/traditional/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/customize'] = '/docs/user_guide/channels/in_app_messages/customize/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/'] = '/docs/user_guide/channels/in_app_messages/message_types/custom_html/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in_app_messages/'] = '/docs/user_guide/channels/in_app_messages/message_types/custom_html/';
@@ -2649,7 +2649,7 @@ validurls['/docs/user_guide/data_and_analytics/uninstall_tracking/'] = '/docs/us
 validurls['/docs/user_guide/data_and_analytics/influenced_opens/'] = '/docs/user_guide/analytics/tracking/influence_opens';
 validurls['/docs/user_guide/personalization_and_dynamic_content/personalized_messaging/'] = '/docs/user_guide/messaging/content/personalize/liquid/supported_personalization_tags';
 validurls['/docs/user_guide/administrative/manage_your_users/user_import/'] = '/docs/user_guide/data/user_data_collection/user_import';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/'] = '/docs/user_guide/channels/in_app_messages/traditional/create';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/'] = '/docs/user_guide/channels/in_app_messages/traditional/';
 validurls['/docs/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events/'] = '/docs/developer_guide/analytics/logging_events';
 validurls['/docs/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases';
 validurls['/docs/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/';
@@ -3249,8 +3249,8 @@ validurls['/docs/user_guide/message_building_by_channel/push/ios/rich_notificati
 validurls['/docs/user_guide/message_building_by_channel/push/android/rich_notifications/#creating-rich-push-notifications-for-android'] = '/docs/user_guide/channels/push/platform_specific_resources/android/rich_notifications/#create-rich-push-notifications-for-android';
 validurls['/docs/user_guide/message_building_by_channel/push/troubleshooting/#troubleshooting-push'] = '/docs/user_guide/channels/push/troubleshooting/#troubleshoot-push';
 validurls['/docs/user_guide/message_building_by_channel/banners/creating_campaigns/#creating-banner-campaigns'] = '/docs/user_guide/channels/banners/create_a_banner/#create-banner-campaigns';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/#creating-an-in-app-message'] = '/docs/user_guide/channels/in_app_messages/traditional/create/#create-an-in-app-message';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#creating-an-in-app-message-with-drag-and-drop'] = '/docs/user_guide/channels/in_app_messages/create_an_in_app_message/#create-an-in-app-message-with-drag-and-drop';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/#creating-an-in-app-message'] = '/docs/user_guide/channels/in_app_messages/traditional/#create-an-in-app-message';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#creating-an-in-app-message-with-drag-and-drop'] = '/docs/user_guide/channels/in_app_messages/drag_and_drop/#create-an-in-app-message-with-drag-and-drop';
 
 // User Guide - Engagement Tools
 validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/#managing-campaigns'] = '/docs/user_guide/messaging/campaigns/managing_campaigns/#manage-campaigns';
@@ -3996,8 +3996,8 @@ validurls['/docs/user_guide/message_building_by_channel/line/testing/'] = '/docs
 // --- In-app messages ---
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages'] = '/docs/user_guide/channels/in_app_messages';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/'] = '/docs/user_guide/channels/in_app_messages/';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create'] = '/docs/user_guide/channels/in_app_messages/create_an_in_app_message';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/'] = '/docs/user_guide/channels/in_app_messages/create_an_in_app_message/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create'] = '/docs/user_guide/channels/in_app_messages/drag_and_drop';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/'] = '/docs/user_guide/channels/in_app_messages/drag_and_drop/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen'] = '/docs/user_guide/channels/in_app_messages/message_types/fullscreen';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/'] = '/docs/user_guide/channels/in_app_messages/message_types/fullscreen/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/modal'] = '/docs/user_guide/channels/in_app_messages/message_types/modal';
@@ -4034,18 +4034,32 @@ validurls['/docs/user_guide/message_building_by_channel/in-app_messages/faq'] = 
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/faq/'] = '/docs/user_guide/channels/in_app_messages/faq/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/testing'] = '/docs/user_guide/channels/in_app_messages/testing';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/testing/'] = '/docs/user_guide/channels/in_app_messages/testing/';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt'] = '/docs/user_guide/channels/in_app_messages/ios_app_rating_prompt';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/'] = '/docs/user_guide/channels/in_app_messages/ios_app_rating_prompt/';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/creative_details'] = '/docs/user_guide/channels/in_app_messages/creative_details';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/'] = '/docs/user_guide/channels/in_app_messages/creative_details/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt'] = '/docs/user_guide/channels/in_app_messages/best_practices/ios_app_rating_prompt';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/'] = '/docs/user_guide/channels/in_app_messages/best_practices/ios_app_rating_prompt/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/creative_details'] = '/docs/user_guide/channels/in_app_messages/message_types';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/'] = '/docs/user_guide/channels/in_app_messages/message_types/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop'] = '/docs/user_guide/channels/in_app_messages/drag_and_drop';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/'] = '/docs/user_guide/channels/in_app_messages/drag_and_drop/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks'] = '/docs/user_guide/channels/in_app_messages/drag_and_drop/editor_blocks';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/'] = '/docs/user_guide/channels/in_app_messages/drag_and_drop/editor_blocks/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional'] = '/docs/user_guide/channels/in_app_messages/traditional';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/'] = '/docs/user_guide/channels/in_app_messages/traditional/';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/create'] = '/docs/user_guide/channels/in_app_messages/traditional/create';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/'] = '/docs/user_guide/channels/in_app_messages/traditional/create/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/create'] = '/docs/user_guide/channels/in_app_messages/traditional';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/'] = '/docs/user_guide/channels/in_app_messages/traditional/';
+validurls['/docs/user_guide/channels/in_app_messages/creative_details/fullscreen'] = '/docs/user_guide/channels/in_app_messages/message_types/fullscreen';
+validurls['/docs/user_guide/channels/in_app_messages/creative_details/fullscreen/'] = '/docs/user_guide/channels/in_app_messages/message_types/fullscreen/';
+validurls['/docs/user_guide/channels/in_app_messages/creative_details/modal'] = '/docs/user_guide/channels/in_app_messages/message_types/modal';
+validurls['/docs/user_guide/channels/in_app_messages/creative_details/modal/'] = '/docs/user_guide/channels/in_app_messages/message_types/modal/';
+validurls['/docs/user_guide/channels/in_app_messages/creative_details/slideup'] = '/docs/user_guide/channels/in_app_messages/message_types/slideup';
+validurls['/docs/user_guide/channels/in_app_messages/creative_details/slideup/'] = '/docs/user_guide/channels/in_app_messages/message_types/slideup/';
+validurls['/docs/user_guide/channels/in_app_messages/create_an_in_app_message'] = '/docs/user_guide/channels/in_app_messages/drag_and_drop';
+validurls['/docs/user_guide/channels/in_app_messages/create_an_in_app_message/'] = '/docs/user_guide/channels/in_app_messages/drag_and_drop/';
+validurls['/docs/user_guide/channels/in_app_messages/ios_app_rating_prompt'] = '/docs/user_guide/channels/in_app_messages/best_practices/ios_app_rating_prompt';
+validurls['/docs/user_guide/channels/in_app_messages/ios_app_rating_prompt/'] = '/docs/user_guide/channels/in_app_messages/best_practices/ios_app_rating_prompt/';
+validurls['/docs/user_guide/channels/in_app_messages/traditional/create'] = '/docs/user_guide/channels/in_app_messages/traditional';
+validurls['/docs/user_guide/channels/in_app_messages/traditional/create/'] = '/docs/user_guide/channels/in_app_messages/traditional/';
+validurls['/docs/user_guide/channels/in_app_messages/drag_and_drop/create_an_in_app_message'] = '/docs/user_guide/channels/in_app_messages/drag_and_drop';
+validurls['/docs/user_guide/channels/in_app_messages/drag_and_drop/create_an_in_app_message/'] = '/docs/user_guide/channels/in_app_messages/drag_and_drop/';
 
 // --- Push ---
 validurls['/docs/user_guide/message_building_by_channel/push'] = '/docs/user_guide/channels/push';

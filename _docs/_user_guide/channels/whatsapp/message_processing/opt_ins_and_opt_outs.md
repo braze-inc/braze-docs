@@ -88,7 +88,7 @@ Use [HTML in-app message](https://github.com/braze-inc/in-app-message-templates/
 
 #### Phone number capture form
 
-Use the [phone number capture form]({{site.baseurl}}/user_guide/channels/in_app_messages/drag_and_drop/templates/phone_number_capture/) template in the drag-and-drop editor for in-app messages to collect user phone numbers and grow your WhatsApp subscription groups.
+Use the [phone number capture form]({{site.baseurl}}/user_guide/messaging/content/templates/in_app_message_templates/phone_number_capture/) template in the drag-and-drop editor for in-app messages to collect user phone numbers and grow your WhatsApp subscription groups.
 
 ## Set up opt-outs for your Braze WhatsApp channel
 

@@ -8,9 +8,13 @@ channel:
   - in-app messages
 ---
 
-# Video {#video}
+# Video in custom HTML  in-app messages {#video}
 
-> To play a video in an HTML in-app message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL). You can find other possible `<video>` options on [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video).
+> This article applies to [custom HTML messages]({{site.baseurl}}/user_guide/channels/in_app_messages/message_types/custom_html/) in the [traditional editor]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/). 
+
+## Embed videos
+
+To play a video in an HTML in-app message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL). You can find other possible `<video>` options on [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video).
 
 ```html
 <video class="video" autoplay muted playsinline controls>

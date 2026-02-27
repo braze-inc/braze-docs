@@ -272,6 +272,74 @@ Items 1–3 and 5–9 from the Day 4 deferred list are still open.
 
 ---
 
+## Day 4 follow-up — In-app messages section reorder (Feb 27)
+
+**Status:** Complete — on branch `phase4-channels`
+
+### What happened
+
+**In-app messages nav reorder:** Updated `page_order` frontmatter for 6 top-level pages and 1 customize child page. New order:
+
+1. Drag-and-drop editor (1)
+2. Traditional editor (2)
+3. Message types (3) — new landing page
+4. Customize (4)
+5. Testing (5)
+6. Reporting (6)
+7. Best practices (7)
+8. FAQ (8)
+
+**New "Message types" landing page:** Created `message_types.md` with two tile sections matching the wireframe: "Available in all editors" (Fullscreen, Modal) and "Traditional editor only" (Slideup, Custom HTML, Email capture form, Simple survey). Serves as landing for the existing `message_types/` directory.
+
+**"Creative details" converted to redirect:** Replaced `creative_details.md` content with `layout: redirect` pointing to `message_types/`. Added `hidden: true` to remove from nav.
+
+**File moves:**
+- `create_an_in_app_message.md` → `drag_and_drop/create_an_in_app_message.md` (child of DnD editor)
+- `ios_app_rating_prompt.md` → `best_practices/ios_app_rating_prompt.md` (child of Best practices)
+
+**Landing page updates:**
+- `customize.md`: Updated `guide_featured_list` to show 4 actual child pages (Style settings, Dark mode themes, Color profiles and CSS templates, Video in custom HTML). Removed Custom HTML and Email capture form tiles (now under Message types).
+- `best_practices.md`: Added iOS rating prompt tile.
+- `traditional.md`: Removed broken tiles for `traditional/customize/` and `traditional/dark-mode/` (those pages don't exist); kept only the Create tile.
+
+**Internal link fixes:** Updated 8 stale links across 4 files:
+- `prep_guide.md`: `creative_details/fullscreen/` → `message_types/fullscreen/`
+- `traditional/create.md`: 4 references from `creative_details/` → `message_types/`
+- `custom_html.md`: `creative_details/` → `message_types/`
+- `style_settings.md`: 2 references from `create_an_in_app_message` → `drag_and_drop/create_an_in_app_message`
+- `drag_and_drop.md`: tile link updated for moved create page
+
+**Redirects:** 12 new entries in `broken_redirect_list.js` + 5 existing chain targets collapsed:
+- 6 entries for `creative_details/{fullscreen,modal,slideup}` → `message_types/`
+- 2 entries for `create_an_in_app_message` → `drag_and_drop/create_an_in_app_message`
+- 2 entries for `ios_app_rating_prompt` → `best_practices/ios_app_rating_prompt`
+- Collapsed 3 existing chains (`creative_details` landing, `ios_app_rating_prompt`, DnD `create`) to point to final destinations
+- Updated 1 anchor redirect (`#content-guidelines`) to point to `message_types/`
+
+### Customize child page order
+
+- Style settings (1)
+- Dark mode themes (2)
+- Color profiles and CSS templates (3)
+- Video in custom HTML (4)
+
+### Files changed
+
+- 6 page_order updates (top-level in-app messages pages)
+- 1 page_order update (customize/style_settings.md)
+- 1 new file (message_types.md landing page)
+- 1 file converted to redirect (creative_details.md)
+- 2 files moved (create_an_in_app_message.md, ios_app_rating_prompt.md)
+- 3 landing page updates (customize.md, best_practices.md, traditional.md)
+- 4 files with internal link fixes
+- ~17 redirect entries added or updated in broken_redirect_list.js
+
+### Jira items resolved
+
+- Item #2 from Day 4 deferred list: "Message types landing (IAM) — new tile layout for 'All editors' vs 'Traditional only'"
+
+---
+
 ## Days 5–8 — QA, merge, Jira tickets
 
 **Status:** Not started

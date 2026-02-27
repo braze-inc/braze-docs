@@ -3,7 +3,7 @@ nav_title: "Fullscreen"
 article_title: Fullscreen In-App Messages
 description: "This reference article covers the message and design requirements of fullscreen in-app messages."
 page_type: reference
-page_order: 0
+page_order: 1
 channel:
   - in-app messages
 tool:

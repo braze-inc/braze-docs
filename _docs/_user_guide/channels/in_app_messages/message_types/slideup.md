@@ -1,7 +1,7 @@
 ---
 nav_title: Slideup
 article_title: Slideup In-app Messages
-page_order: 2
+page_order: 3
 channel:
   - in-app messages
 tool:
