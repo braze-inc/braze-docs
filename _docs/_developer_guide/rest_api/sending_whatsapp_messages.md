@@ -57,10 +57,12 @@ Each recipient referenced in `external_user_ids` must already exist in Braze. AP
 ### Example request
 
 ```
-POST https://rest.iad-01.braze.com/messages/send
+POST YOUR_REST_ENDPOINT/messages/send
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 ```
+
+Replace `YOUR_REST_ENDPOINT` with the [REST endpoint URL]({{site.baseurl}}/api/basics/#endpoints) for your workspace.
 
 ```json
 {
