@@ -64,9 +64,12 @@ The following example script disables the default button behavior and executes c
   const successMessage = "You're all set! We'll send your reminder.";
 
   // Retrieve and decode the 'q' parameter from the URL
-  const external_id = atob(
-    new URLSearchParams(window.location.search).get("q")
-  );
+  const qParam = new URLSearchParams(window.location.search).get("q");
+  if (!qParam) {
+    console.error("Missing 'q' parameter in URL. Cannot identify user.");
+    return;
+  }
+  const external_id = atob(qParam);
 
   // Wait for page content to load
   document.addEventListener("DOMContentLoaded", () => {
