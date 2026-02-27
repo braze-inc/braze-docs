@@ -88,6 +88,25 @@ In the **Preview** tab of your composer, the view of your message might not be i
 - Is your copy clear, concise, and correct?
 - Do your links direct the user to where they should go?
 
+### Testing Content Cards on Web with the browser console
+
+If you're integrating Content Cards on the Web SDK, you can verify your integration directly from the browser console. After creating a Content Card campaign that targets your test user:
+
+1. Log in to the website that has the Web SDK integration.
+2. Open the browser console (**Right-click** > **Inspect** > **Console**).
+3. Use the following methods to test:
+
+```javascript
+// Retrieve cached Content Cards
+braze.getCachedContentCards();
+
+// Request a fresh sync from Braze
+braze.requestContentCardsRefresh();
+
+// Toggle the default Content Card feed UI (if using the default UI)
+braze.toggleContentCards();
+```
+
 ### Debug
 
 After your Content Cards are sent, you can break down or debug any issues from the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) in the Developer Console. 
