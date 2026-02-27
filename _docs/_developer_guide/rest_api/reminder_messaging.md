@@ -152,7 +152,7 @@ After completing the setup, verify your integration:
 
 ## Considerations
 
-- For a detailed example of how to send messages based on date-based custom attributes, see the email use case in [Sending email messages using the REST API]({{site.baseurl}}/developer_guide/rest_api/sending_email_messages/).
+- For a detailed example of how to send messages based on date-based custom attributes, see the email use case in the [REST API messaging guide]({{site.baseurl}}/developer_guide/rest_api/messaging/).
 - If you duplicate a landing page or replace any fields, the component IDs change. Update your custom code block to reflect the new IDs.
 - Nested custom attributes consume [data points]({{site.baseurl}}/user_guide/data/data_points/) for each key in the array of objects. Updating a custom attribute object to null also consumes a data point.
 - The code presented in this guide is intended as an illustrative example. Thoroughly test all code and components within your environment before deploying to production.
