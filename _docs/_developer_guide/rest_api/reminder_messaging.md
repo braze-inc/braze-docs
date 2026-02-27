@@ -28,29 +28,30 @@ To complete this guide, you need:
 | Liquid knowledge | Basic familiarity with [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) for templating personalized variables. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Step 1: Create a landing page and associate it with a user profile
+## Step 1: Create a landing page and link to it from a message
 
-First, [create a Braze landing page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/). Then, create an email that shares the landing page link with your users.
-
-To associate landing page activity with a specific user profile, append a query string parameter to the link that identifies the recipient. This lets Braze write the user's responses back to their profile.
+First, [create a Braze landing page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/). Then, create a message (such as an email) that links users to the landing page.
 
 {% raw %}
-For example, include a link in your email that appends the user ID as a Base64-encoded value:
+To automatically associate landing page activity with the recipient's user profile, use the `{% landing_page_url %}` Liquid tag when linking to the page from a Braze message. For example:
 
-```
-https://your-landing-page-url.com?q={{${user_id} | base64_encode}}
+```html
+<a href="{% landing_page_url your-page-url-handle %}">Sign up for reminders</a>
 ```
 {% endraw %}
 
-When a user clicks this link, the landing page can decode the parameter and identify the user, so any preferences they select are written to their Braze profile.
+When a user clicks this link, Braze automatically identifies them, so any preferences they submit are written to their existing profile — no manual URL parameters needed. For a full walkthrough, see [Track users through a form]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/).
+
+{% alert tip %}
+If you're linking to the landing page from an external channel (outside of Braze), you'll need to pass a user identifier in the URL manually and decode it in your custom code block. See the [landing page details]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/) for the unique URL to use.
+{% endalert %}
 
 ## Step 2: Use a custom code block to capture preferences
 
-After creating your landing page, insert a custom code block that identifies users and writes their preferences to Braze. The script should:
+After creating your landing page, insert a custom code block that captures user preferences and writes them to Braze. When users arrive through the {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag, Braze already knows who they are, so your script only needs to:
 
-1. Decode the user identifier from the URL query string.
-2. Listen for the form submission button click.
-3. Use the `lpBridge` API to identify the user, set custom attributes, and flush the data to Braze.
+1. Listen for the form submission button click.
+2. Use the `lpBridge` API to set custom attributes and flush the data to Braze.
 
 ### Example script
 
@@ -62,14 +63,6 @@ The following example script disables the default button behavior and executes c
   const registerButtonId = "YOUR_BUTTON_ID";
   const messageDivId = "YOUR_MESSAGE_DIV_ID";
   const successMessage = "You're all set! We'll send your reminder.";
-
-  // Retrieve and decode the 'q' parameter from the URL
-  const qParam = new URLSearchParams(window.location.search).get("q");
-  if (!qParam) {
-    console.error("Missing 'q' parameter in URL. Cannot identify user.");
-    return;
-  }
-  const external_id = atob(qParam);
 
   // Wait for page content to load
   document.addEventListener("DOMContentLoaded", () => {
@@ -83,9 +76,6 @@ The following example script disables the default button behavior and executes c
     if (registerButton) {
       registerButton.addEventListener("click", async (event) => {
         event.preventDefault();
-
-        // Identify the user
-        await window.lpBridge.changeUser(external_id);
 
         // Set the custom attribute (replace with your actual key/value)
         await window.lpBridge.setCustomUserAttribute("key", "value");
