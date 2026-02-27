@@ -156,6 +156,12 @@ To avoid these behaviors in the future, we recommend using monotonically increas
 
 The processing order is not 100% predictable. For example, if there are multiple rows with the same `EXTERNAL_ID` in the table during a sync, we cannot guarantee which value will end up in the final profile. If you're updating the same `EXTERNAL_ID` with different attributes in the payload column, all changes are reflected when the sync is completed.
 
+## Why are new users not being created from my CDI sync?
+
+If your CDI integration has the **Update existing users only** option enabled, only users that already exist in Braze will be updated — new users will not be created. This means that if a row in your sync table references an `EXTERNAL_ID` that doesn't match any existing Braze user, that row will be skipped.
+
+To create new users through CDI, disable the **Update existing users only** toggle in your integration settings (**Data Settings** > **Cloud Data Ingestion** > select your integration).
+
 ## What are the security measures for CDI?
 
 ### Our measures
