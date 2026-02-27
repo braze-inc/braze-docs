@@ -291,7 +291,7 @@ Highlight items that your users have recently liked with increased frequency. Fo
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose your custom event for tracking likes, along with the corresponding property.
 6. Train the recommendation.
-7. [Use the recommendation in messaging.]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging/)
+7. [Use the recommendation in messaging.]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging)
 {% enddetails %}
 {% endtab %}
 {% endtabs %}
