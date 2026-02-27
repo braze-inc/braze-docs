@@ -3,15 +3,91 @@ nav_title: "Connected audience filter & object"
 article_title: API Connected Audience Object
 page_order: 3
 page_type: reference
-description: "This article explains the different components of the connected audience object and the filters that create it."
+description: "This article explains the connected audience object, including how it works, use cases, and the different filters that create it."
 
 ---
 
 # Connected audience object
 
-> A connected audience object identifies the audience of your message. For example, if you use custom attribute arrays to track every category and TV show that a user has favorited, you can use connected audiences to automatically send a push notification or email to anyone who has favorited a show whenever a new episode is released—without needing to set up a segment for each show.
+> A connected audience is a dynamic audience filter you define inline within your API request, so you can target the right users at send time without creating or managing segments in the Braze dashboard.
 
-This object is composed of either a single connected audience filter or several connected audience filters in a logical expression using either `AND` or `OR` operators.
+Instead of pre-building a segment for every possible audience combination, you pass filter criteria directly in the `audience` parameter of your API call. Braze evaluates each user against those criteria in real time and delivers the message only to users who match. This means a single API-triggered campaign or Canvas can serve an unlimited number of audience variations, driven entirely by your business logic.
+
+## How it works
+
+1. **Create an API-triggered campaign or Canvas** in the Braze dashboard. Define the message content and channel, and use [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) or [Canvas context]({{site.baseurl}}/api/objects_filters/context_object/) for dynamic personalization.
+2. **Call a supported endpoint** and include the `audience` parameter with your filter criteria. You can filter on custom attributes, push subscription status, email subscription status, and last-used-app time.
+3. **Braze evaluates the filters at send time**, delivering the message only to users who match your criteria.
+
+Because the audience is defined per request, your back-end systems can trigger contextually relevant messages in response to any business event (a price change, a weather alert, a live score update) without dashboard intervention.
+
+### Compatible endpoints
+
+You can use the connected audience object with the `audience` parameter on these endpoints:
+
+- [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)
+- [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)
+- [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
+- [`/messages/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/)
+- [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/)
+- [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
+
+## Use cases
+
+Connected audiences are well-suited for scenarios where your back-end systems detect an event and need to notify a dynamically determined set of users, such as the following:
+
+| Category | Example |
+| --- | --- |
+| Weather alerts | A weather data provider detects a severe weather event and sends push notifications to users whose `preferred_city` attribute matches the affected area. |
+| Sports and live events | A sports app sends real-time score updates or match alerts to users whose `favorite_team` attribute matches one of the teams playing. |
+| Content and entertainment | A streaming service notifies users whose `favorite_shows` array includes a series title whenever a new episode is released. |
+| E-commerce | An online retailer sends price-drop or back-in-stock alerts to users whose `wishlisted_products` array includes the relevant product ID. |
+| Travel | A travel app sends flight-delay notifications to users whose `booked_flight` attribute matches the affected flight number. |
+| Financial services | A trading platform alerts users whose `watchlist` array includes a stock ticker that has crossed a price threshold. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+In each case, a single API-triggered campaign handles all variations. Your back end determines the filter values and passes them in the API request, so you don't need to create a separate segment or campaign for each product, show, team, or location.
+
+## Example request
+
+The following example targets an API-triggered campaign to users who have favorited a specific show and are opted in to push notifications:
+
+```json
+POST https://rest.iad-01.braze.com/campaigns/trigger/send
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+
+{
+  "campaign_id": "YOUR_CAMPAIGN_ID",
+  "audience": {
+    "AND": [
+      {
+        "custom_attribute": {
+          "custom_attribute_name": "favorite_shows",
+          "comparison": "includes_value",
+          "value": "Example Show"
+        }
+      },
+      {
+        "push_subscription_status": {
+          "comparison": "is",
+          "value": "opted_in"
+        }
+      }
+    ]
+  },
+  "trigger_properties": {
+    "show_title": "Example Show",
+    "episode_title": "Season 3, Episode 1",
+    "deep_link": "https://example.com/shows/example-show/s3e1"
+  },
+  "broadcast": true
+}
+```
+
+## Object body
+
+The connected audience object is composed of either a single connected audience filter or several connected audience filters combined with `AND` and `OR` operators.
 
 **Multiple filter example:**
 
@@ -34,7 +110,7 @@ This object is composed of either a single connected audience filter or several 
 
 ## Connected audience filters
 
-Combining multiple custom attribute filters with `AND` and `OR` operators creates a connected audience filter.
+Combine multiple filters with `AND` and `OR` operators to create a connected audience filter.
 
 ### Custom attribute filter
 
