@@ -1,7 +1,7 @@
 ---
 nav_title: "Subscriptions"
 article_title: "Subscriptions"
-page_order: 4
+page_order: 5
 description: "This reference article covers the different user subscription states, how to create and manage subscription groups, and how to segment users based on their subscriptions."
 channel:
   - email

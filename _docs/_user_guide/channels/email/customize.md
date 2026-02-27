@@ -1,7 +1,7 @@
 ---
 nav_title: Customize
 article_title: Customize
-page_order: 3
+page_order: 4
 layout: dev_guide
 guide_top_header: "Customize"
 guide_top_text: "Customize the look and behavior of your emails with global style settings, custom footers, AMP support, and universal links."

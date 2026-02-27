@@ -27,7 +27,7 @@ guide_featured_list:
   link: /docs/user_guide/channels/email/templates/
   image: /assets/img/braze_icons/table.svg
 - name: Email Reporting
-  link: /docs/user_guide/channels/email/reporting_and_analytics/email_reporting/
+  link: /docs/user_guide/channels/email/reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg
 
 guide_menu_title: "More articles"
@@ -66,7 +66,7 @@ guide_menu_list:
   link: /docs/user_guide/channels/email/apple_mail/mpp/
   image: /assets/img/braze_icons/apple.svg
 - name: Email Analytics Glossary
-  link: /docs/user_guide/channels/email/reporting_and_analytics/analytics_glossary/
+  link: /docs/user_guide/channels/email/reporting/analytics_glossary/
   image: /assets/img/braze_icons/pie-chart-01.svg
 - name: Best Practices
   link: /docs/user_guide/channels/email/best_practices/
@@ -98,3 +98,23 @@ Here are some great use cases to get you inspired!
 | Newsletters | Conveniently send monthly or weekly newsletters to maintain user engagement. |
 | Transactions | Notify users of recent purchases and deliver important product and shipping information with [transactional emails]({{site.baseurl}}/user_guide/channels/transactional_email/create_a_transactional_email/).
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## Email services {#email-services}
+
+If you need additional support with your email program, Braze offers recurring and one-time services at an additional cost. For more information, contact your Braze account manager.
+
+### Email deliverability services {#email-deliverability-services}
+
+Braze offers two tiers of recurring email support:
+1. Deluxe  
+2. Standard 
+
+These services can include:
+
+- Audit of historical and current email sending practices with a review of targeting, cadence, and messaging strategies
+- Whitelabel configuration and customized IP warming plan created by an email deliverability expert
+  - Regular check-in calls during your first month (three times per week for Deluxe and once per week for Standard)
+- Regular calls with deliverability expert (twice per month for Deluxe and monthly Standard) to provide:
+  - Monitoring of deliverability performance by domain
+  - Recommendations to improve email program performance and results utilizing data and established best practices
+- Mitigate and remediate crisis triage for events that lead to issues like a blocklist for deliverability

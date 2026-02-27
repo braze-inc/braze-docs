@@ -1,7 +1,7 @@
 ---
-nav_title: Email use cases
+nav_title: Use cases
 article_title: Email Use Cases
-page_order: 3
+page_order: 9
 page_type: reference
 description: "This article covers content-specific tips and tricks for various email use cases."
 channel: email

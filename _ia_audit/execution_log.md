@@ -222,6 +222,56 @@ All 6 Jira tickets originally scoped for Administer and Data content work were c
 
 ---
 
+## Day 4 follow-up — Email section reorder + Jira item #4 (Feb 27)
+
+**Status:** Complete — on branch `phase4-channels`
+
+### What happened
+
+**Email nav reorder:** Updated `page_order` frontmatter in 9 of 11 email landing pages (`email_setup.md` and `testing.md` were already correct). New order:
+
+1. Email setup (1)
+2. Drag-and-drop editor (2)
+3. HTML editor (3)
+4. Customize (4)
+5. Subscriptions (5)
+6. Testing (6)
+7. Inbox Vision (7) — will be nested under "Create email" once writers create that article
+8. Reporting (8)
+9. Use cases (9)
+10. Best practices (10)
+11. FAQ (11)
+
+**Jira item #4 — Email FAQ merge (Duplicate emails):**
+- Folded `best_practices/duplicate_emails.md` content into `faq.md`: expanded the existing deduplication FAQ entry with subscription-state propagation details (up to 100 profiles) and time zone triggered-campaign example; added new FAQ entry for subscription state inheritance when email address changes.
+- Deleted `best_practices/duplicate_emails.md`.
+- Removed "Manage Email Subscriptions" tile from `best_practices.md` landing page.
+- Added redirect: `channels/email/best_practices/duplicate_emails/` → `channels/email/faq/`.
+- Collapsed 2 existing redirect chains (`message_building_by_channel/email/best_practices/managing_email_subscriptions/` and `message_building_by_channel/email/best_practices/duplicate_emails/`) to point directly to FAQ.
+
+**Email reporting directory fix:**
+- Moved `reporting_and_analytics/email_reporting.md` and `reporting_and_analytics/analytics_glossary.md` into `reporting/` to match the `reporting.md` landing page (Jekyll requires directory name to match landing page filename).
+- Removed empty `reporting_and_analytics/` directory.
+- Updated 5 internal links in `faq.md`, `email.md`, `mpp.md`, and `creating_an_email_campaign.md`.
+- Updated 10 redirect targets in `broken_redirect_list.js` from `reporting_and_analytics/` to `reporting/`.
+- Added 5 new redirects for old `channels/email/reporting_and_analytics/` paths.
+
+### Files changed
+
+- 9 page_order updates (email landing pages)
+- 1 content merge (`faq.md`)
+- 1 tile removal (`best_practices.md`)
+- 1 file deleted (`duplicate_emails.md`)
+- 2 files moved (`reporting_and_analytics/` → `reporting/`)
+- 5 internal link fixes
+- ~20 redirect entries added or updated in `broken_redirect_list.js`
+
+### Remaining Jira items from Day 4
+
+Items 1–3 and 5–9 from the Day 4 deferred list are still open.
+
+---
+
 ## Days 5–8 — QA, merge, Jira tickets
 
 **Status:** Not started

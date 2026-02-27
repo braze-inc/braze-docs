@@ -1,5 +1,5 @@
 ---
-page_order: 7
+page_order: 10
 nav_title: Best practices
 article_title: Email Best Practices
 layout: dev_guide
@@ -21,12 +21,6 @@ guide_featured_list:
   - name: "Use Cases"
     link: /docs/user_guide/channels/email/best_practices/use_cases/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: "Manage Email Subscriptions"
-    link: /docs/user_guide/channels/email/best_practices/duplicate_emails/
-    image: /assets/img/braze_icons/list.svg
-  - name: "Email Services"
-    link: /docs/user_guide/channels/email/best_practices/email_services/
-    image: /assets/img/braze_icons/mail-01.svg
   - name: "Sunset Policies"
     link: /docs/user_guide/channels/email/best_practices/sunset_policies/
     image: /assets/img/braze_icons/sun-setting-03.svg

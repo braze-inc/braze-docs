@@ -281,5 +281,5 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 The final section summarizes the campaign you designed. Confirm all relevant details and select **Launch Campaign**. 
 
-To learn how you can access the results of your email campaigns, check out [Email reporting]({{site.baseurl}}/user_guide/channels/email/reporting_and_analytics/email_reporting/).
+To learn how you can access the results of your email campaigns, check out [Email reporting]({{site.baseurl}}/user_guide/channels/email/reporting/).
 

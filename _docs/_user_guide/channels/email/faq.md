@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: Email FAQ
-page_order: 8
+page_order: 11
 description: "This page provides answers to frequently asked questions about email messaging."
 channel: email
 
@@ -15,7 +15,11 @@ channel: email
 
 If multiple users with matching emails are all in a segment to receive a campaign, a random user profile with that email address is chosen at the time of send. This way the email is only sent once and is deduplicated, ensuring that the email doesn't hit the same email address multiple times.
 
-Note that this deduplication occurs if the users targeted are included in the same dispatch. Triggered campaigns may result in multiple sends to the same email address (even within a time period where users could be excluded due to re-eligibility) if differing users with matching email addresses log the trigger event at different times. Users are not deduped by email on Canvas entry, so it's possible that users are not deduped beyond the first step of a Canvas if they are progressing at slightly different times due to rate limited entry. When a user tied to a given email address opens or clicks an email, all user profiles that share the email address are marked as opening and clicking the campaign.
+If multiple profiles share an email address and one profile unsubscribes, Braze updates other profiles (up to 100) with that address to the same subscription state. This applies to unsubscribes and other changes such as global subscription state and individual subscription group statuses.
+
+Note that this deduplication occurs if the users targeted are included in the same dispatch. Triggered campaigns (excluding API-triggered campaigns) and Canvases may result in multiple sends to the same email address (even within a time period where users could be excluded due to re-eligibility) if differing users with matching email addresses log the trigger event at different times. For example, if user A and user B share the email `johndoe@example.com` but their profiles are in different time zones, when the campaign trigger event includes sending in a user's time zone, the email `johndoe@example.com` receives two emails.
+
+Users are not deduped by email on Canvas entry, so it's possible that users are not deduped beyond the first step of a Canvas if they are progressing at slightly different times due to rate limited entry. When a user tied to a given email address opens or clicks an email, all user profiles that share the email address are marked as opening and clicking the campaign.
 
 #### Exception: API-triggered campaigns
 
@@ -24,6 +28,14 @@ API-triggered campaigns will deduplicate or send deduplicates depending on where
 - **Scenario 1: Duplicate emails in target segment:** If the same email appears in multiple user profiles that are grouped together in dashboard's audience filters for an API-triggered campaign, only one of the profiles will receive the email.
 - **Scenario 2: Duplicate emails in different `user_ids` within recipients object:** If the same email appears within multiple `External_user_IDs` referenced by the `recipients`` object, the email will be sent twice.
 - **Scenario 3: Duplicate emails due to duplicate user_ids within recipients object:** If you try to add the same user profile twice, only one of the profiles will get the email.
+
+{% alert important %}
+If you send an API campaign through an API call (excluding API-triggered campaigns), and multiple users are specified in the segment audience with the same email address, it sends to that address as many times as listed in the call. This is because API calls are assumed to be purposefully constructed.
+{% endalert %}
+
+### What happens to the subscription state when a user's email address changes to one shared by another user?
+
+If you set or update the email address for user A to another email address that's shared by an existing user B, user A inherits the subscription state that already exists from user B unless the **Resubscribe users when they update their email** setting is turned on.
 
 ### Will updates to my outbound email settings apply retroactively?
 
@@ -92,7 +104,7 @@ To mitigate this:
 - **Use a preference center:** Instead of a direct unsubscribe link, use a [preference center]({{site.baseurl}}/user_guide/channels/email/preference_center/overview/) that requires user interaction to confirm the unsubscribe action. Security scanners typically won't complete multi-step forms.
 - **Review unsubscribe logs:** Check the `User-Agent` header and IP address in your Currents unsubscribe event data to identify patterns consistent with automated scanning (such as consistent `User-Agent` headers across multiple unsubscribes).
 
-For more details on how server-side scanning can affect email metrics, refer to [Handling increases in click rates]({{site.baseurl}}/user_guide/channels/email/reporting_and_analytics/email_reporting/#handling-increases-in-click-rates).
+For more details on how server-side scanning can affect email metrics, refer to [Handling increases in click rates]({{site.baseurl}}/user_guide/channels/email/reporting/#handling-increases-in-click-rates).
 
 ### Why has my machine open rate changed unexpectedly?
 
