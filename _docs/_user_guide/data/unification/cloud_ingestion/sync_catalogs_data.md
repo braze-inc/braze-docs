@@ -194,12 +194,21 @@ GO
 
 {% endtab %}
 {% tab S3 %}
-Set up your source files in S3 by providing JSON or CSV files. Keep in mind:
+Create source files in S3 using JSON or CSV format. Each file must include the following fields:
 
-- Files cannot include an `UPDATED_AT` column
-- You can include an optional `DELETED` field to mark items for removal 
-- Complete S3 setup requires an S3 bucket, Amazon SQS (Simple Queue Service) queue, and AWS Identity and Access Management (IAM) role and policy configuration
-- Braze only processes files uploaded after the sync is created; re-upload existing files you want to ingest
+| Field | Required? | Description |
+| --- | --- | --- |
+| `ID` | Yes | The ID of the catalog item to create or update. |
+| `PAYLOAD` | Yes | A JSON string of the fields to sync to the catalog item in Braze. |
+| `DELETED` | Optional | When set to `true`, the corresponding catalog item is removed from the catalog. |
+| `UPDATED_AT` | *Unsupported* | File storage doesn't support `UPDATED_AT` columns. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+{% alert note %}
+Filenames must follow AWS rules and be unique. Append timestamps to help ensure uniqueness.
+{% endalert %}
+
+The complete S3 setup requires an S3 bucket, an Amazon SQS queue, and an AWS IAM role and policy. Braze only processes files uploaded after the sync is created, so re-upload existing files you want to ingest.
 
 For the full S3 setup flow, see [File storage integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/), especially:
 
@@ -209,29 +218,47 @@ For the full S3 setup flow, see [File storage integrations]({{site.baseurl}}/use
 
 For common AWS-side notification and permission issues, refer to [Granting permissions to publish event notification messages to a destination](https://docs.aws.amazon.com/AmazonS3/latest/userguide/grant-destinations-permissions-to-s3.html).
 
+The following examples show valid JSON and CSV formats for syncing catalog data from file storage.
+
 {% subtabs %}
-{% subtab JSON %}
+{% subtab JSON Catalogs %}
 ```jsonl
 {"id":"85","payload":"{\"product_name\":\"Product 85\",\"price\":85.85}"}
+{"id":"86","payload":"{\"product_name\":\"Product 86\",\"price\":86.86}"}
 {"id":"1","payload":"{\"product_name\":\"Product 1\",\"price\":1.01}","deleted":true}
 ```
-{% endsubtab %}
 
-{% subtab CSV %}
+{% alert important %}
+Each line in your source file must contain valid JSON or the file is skipped.
+{% endalert %}
+{% endsubtab %}
+{% subtab CSV Catalogs with Delete %}
 ```plaintext
 ID,PAYLOAD,DELETED
 85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
+86,"{""product_name"": ""Product 86"", ""price"": 86.86}",false
 1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
+```
+{% endsubtab %}
+{% subtab CSV Catalogs without Delete %}
+```plaintext
+ID,PAYLOAD
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}"
+86,"{""product_name"": ""Product 86"", ""price"": 86.86}"
 ```
 {% endsubtab %}
 {% endsubtabs %}
 
-For setup details and additional file examples, see [File storage integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
+For additional file examples, see [File storage integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
 
 {% endtab %}
 {% endtabs %}
 
 ## How the integration works
+
+{% alert note %}
+The sync views in this section apply to data warehouse integrations only. For S3 file storage, Braze processes new files as they're uploaded to your bucket. See [File storage integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/) for details.
+{% endalert %}
 
 Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is equal to or after the last timestamp synced. We recommend creating a view in your data warehouse from your catalog data to set up a source table that will fully refresh each time a sync runs. With views, you won't need to rewrite the query each time.
 
