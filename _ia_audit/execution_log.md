@@ -153,7 +153,7 @@ All 6 Jira tickets originally scoped for Administer and Data content work were c
 
 ## Day 4 — Channels (Feb 27)
 
-**Status:** Complete — branch `phase4-channels` ready for PR
+**Status:** Complete — PR [#12385](https://github.com/braze-inc/braze-docs/pull/12385) open for review
 
 ### Estimated vs. actual
 
