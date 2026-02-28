@@ -51,7 +51,7 @@ To check a user's subscription group, use one of the following methods:
 To launch an SMS or RCS campaign through Braze, select a subscription group from the **SMS/MMS/RCS Variants** dropdown. After it's selected, an audience filter will be added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected subscription group are in the target audience.
 
 {% alert important %}
-In adherence with international [telecommunication compliance and guidelines]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/laws_and_regulations/), Braze will never send SMS or RCS to users that have not subscribed to the selected subscription group.  
+In adherence with international [telecommunication compliance and guidelines]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/), Braze will never send SMS or RCS to users that have not subscribed to the selected subscription group.  
 {% endalert %}
 
 ![SMS composer with the subscription group dropdown open and "Messaging Service A for SMS" highlighted by the user.]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
