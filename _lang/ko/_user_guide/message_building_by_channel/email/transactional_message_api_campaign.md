@@ -43,7 +43,7 @@ Braze 트랜잭션 이메일은 일부 Braze 패키지의 일부로만 사용할
 
 ## 2단계: 캠페인 구성
 
-거래 이메일 캠페인의 캠페인 생성 흐름은 [표준 이메일 캠페인에]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) 비해 간소화되어 비즈니스에 중요한 거래 이메일이 모든 사용자에게 도달할 수 있도록 합니다.
+거래 이메일 캠페인의 캠페인 생성 흐름은 [표준 이메일 캠페인에]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/) 비해 간소화되어 비즈니스에 중요한 거래 이메일이 모든 사용자에게 도달할 수 있도록 합니다.
 
 따라서 이 캠페인 유형을 설정할 때는 다른 Braze 캠페인 유형에서 익숙한 몇 가지 설정이 필요하지 않습니다.
 

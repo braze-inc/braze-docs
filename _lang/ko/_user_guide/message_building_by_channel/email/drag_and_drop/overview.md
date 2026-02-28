@@ -179,7 +179,7 @@ Note that any edits made to an email template won't reflect in a previously gene
 이메일 메시지의 배경 이미지로 인해 이미지 사이에 흰색 선이나 끊김 현상이 나타날 수 있으므로 이메일 메시지의 세부적인 내용을 테스트하고 확인하는 것이 중요합니다.
 {% endalert %}
 
-After using the drag-and-drop editor to design and create your email message, continue to [build]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) the remainder of your campaign or Canvas.
+After using the drag-and-drop editor to design and create your email message, continue to [build]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas) the remainder of your campaign or Canvas.
 
 {% details About the updated HTML engine %}
 드래그 앤 드롭 편집기에서 HTML을 생성하는 기본 엔진이 최적화 및 업데이트되어 HTML 파일 압축 및 렌더링과 관련된 이점이 있습니다.

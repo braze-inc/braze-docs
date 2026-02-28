@@ -33,7 +33,7 @@ Vorhandene benutzerdefinierte HTML-Vorlagen müssen mit dem Drag-and-Drop-Editor
 
 ## Schritt 3: Passen Sie Ihr Template an
 
-Nachdem Sie Ihr Kundenerlebnis ausgewählt haben, haben Sie nun die Opportunity, Ihre E-Mail-Template kreativ anzupassen. Sie können HTML verwenden, um Ihr Branding im HTML-Editor zu erstellen und zu emulieren, oder eine Vielzahl von [kreativen Details]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details) im Drag-and-Drop-Editor einfügen.
+Nachdem Sie Ihr Kundenerlebnis ausgewählt haben, haben Sie nun die Opportunity, Ihre E-Mail-Template kreativ anzupassen. Sie können HTML verwenden, um Ihr Branding im HTML-Editor zu erstellen und zu emulieren, oder eine Vielzahl von [kreativen Details]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#creative-details) im Drag-and-Drop-Editor einfügen.
 
 ### Einschließlich eines Links zum Abmelden
 

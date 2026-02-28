@@ -59,6 +59,6 @@ IP-Warming ist der **wichtigste Schritt** bei der Einrichtung von E-Mails. Obwoh
 
 Indem Sie mit kleineren Mengen an E-Mails beginnen, bauen Sie ein Vertrauensverhältnis zu Ihrem E-Mail-Anbieter auf und zeigen, dass Sie nur E-Mails an relevante Nutzer:innen senden. Wenn Sie Ihre ersten E-Mails an die Nutzer:innen mit dem größten Engagement senden, können Sie schneller Vertrauen bei Ihrem Anbieter gewinnen.
 
-Nachdem Sie Ihre IP aufgewärmt haben, können Sie [mit dem Erstellen und Versenden von E-Mails beginnen]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)!
+Nachdem Sie Ihre IP aufgewärmt haben, können Sie [mit dem Erstellen und Versenden von E-Mails beginnen]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/)!
 
 <br><br>

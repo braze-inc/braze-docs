@@ -1619,7 +1619,7 @@ var ticket_lookuptable = {
                 'Email' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['Create an Email Campaign with the Drag-And-Drop Editor','Create an Email Campaign with the HTML Editor'],
-                  'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/','{{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/']
+                  'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/','{{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/']
                 },
                 'Push' : {
                   'ShowSubmit': true,

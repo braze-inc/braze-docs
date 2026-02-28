@@ -59,6 +59,6 @@ IP ウォーミングはメール設定のプロセスにおける**最も重要
 
 少量のメールから始めることで、メールプロバイダーとの信頼関係を確立し、関連のあるユーザーにのみメールを送信していることを示します。最もエンゲージメントが高いユーザーに最初のメールを送ることで、プロバイダーからの信頼をより早く得ることができる。
 
-IPのウォームアップが完了したら、[メールの作成と送信を開始できます]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)！
+IPのウォームアップが完了したら、[メールの作成と送信を開始できます]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/)！
 
 <br><br>

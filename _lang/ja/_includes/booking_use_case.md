@@ -136,7 +136,7 @@ Brazeは、ユーザープロファイルの階層化カスタム属性から指
 
 ### ステップ 2b: メッセージを作成する
 
-[カスタム HTML]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) を使用したメール作成のステップに従って、リマインダーメールメッセージを作成します。この例のように、Liquid を使用して、作成したカスタム顧客属性 (「trips」) のデータでメッセージをパーソナライズします。
+[カスタム HTML]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/) を使用したメール作成のステップに従って、リマインダーメールメッセージを作成します。この例のように、Liquid を使用して、作成したカスタム顧客属性 (「trips」) のデータでメッセージをパーソナライズします。
 
 {% raw %}
 ```liquid

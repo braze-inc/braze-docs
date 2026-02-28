@@ -59,6 +59,6 @@ IP 워밍업은 이메일 설정 프로세스에서 **가장 중요한 단계입
 
 소량의 이메일부터 시작하면 이메일 제공업체와 신뢰 관계를 구축하여 관련 사용자에게만 이메일을 보내고 있다는 것을 보여줄 수 있습니다. 가장 참여도가 높은 사용자에게 첫 번째 이메일 배치를 보내면 공급자와의 신뢰를 더 빨리 얻는 데 도움이 될 수 있습니다.
 
-IP 워밍이 완료되면 [이메일 작성 및 전송을 시작할]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) 수 있습니다!
+IP 워밍이 완료되면 [이메일 작성 및 전송을 시작할]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/) 수 있습니다!
 
 <br><br>

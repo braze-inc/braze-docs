@@ -106,7 +106,7 @@ A seguir estão referências à carga útil JSON entregue ao seu bucket de armaz
 }
 ```
 
-O campo `extras` contém os pares chave-valor configurados no campo **Email Extras** ao compor um e-mail no editor de HTML. Os extras de e-mail funcionam para todos os provedores de serviços de e-mail (incluindo SendGrid e Sparkpost) e estão incluídos nas mensagens arquivadas, independentemente de qual provedor é utilizado. Para mais informações sobre como configurar os extras de e-mail, veja [Como criar uma campanha de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#adding-email-extras). Para enviar dados de volta ao Currents, consulte [Extras de mensagens]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
+O campo `extras` contém os pares chave-valor configurados no campo **Email Extras** ao compor um e-mail no editor de HTML. Os extras de e-mail funcionam para todos os provedores de serviços de e-mail (incluindo SendGrid e Sparkpost) e estão incluídos nas mensagens arquivadas, independentemente de qual provedor é utilizado. Para mais informações sobre como configurar os extras de e-mail, veja [Como criar uma campanha de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#adding-email-extras). Para enviar dados de volta ao Currents, consulte [Extras de mensagens]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 

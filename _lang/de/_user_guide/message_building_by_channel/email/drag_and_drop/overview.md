@@ -179,7 +179,7 @@ Mit Inbox Vision können Sie E-Mail Kampagnen aus der Perspektive von E-Mail Cli
 Hintergrundbilder in E-Mail-Nachrichten können manchmal dazu führen, dass weiße Linien oder Unterbrechungen zwischen den Bildern erscheinen. Daher ist es wichtig, die Feinheiten Ihrer E-Mail-Nachricht zu testen und zu überprüfen.
 {% endalert %}
 
-Nachdem Sie den Drag-and-Drop-Editor zum Entwerfen und Erstellen Ihrer E-Mail-Nachricht verwendet haben, können Sie den Rest Ihrer Kampagne oder Ihres Canvas [erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas).
+Nachdem Sie den Drag-and-Drop-Editor zum Entwerfen und Erstellen Ihrer E-Mail-Nachricht verwendet haben, können Sie den Rest Ihrer Kampagne oder Ihres Canvas [erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas).
 
 {% details About the updated HTML engine %}
 Die zugrunde liegende Engine, die HTML aus dem Drag-and-Drop-Editor erzeugt, wurde optimiert und aktualisiert, was zu Vorteilen bei der Komprimierung und dem Rendering von HTML-Dateien führt.

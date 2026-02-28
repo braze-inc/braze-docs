@@ -136,7 +136,7 @@ Erstellen Sie eine Zielgruppe, die Erinnerungen erhalten soll, indem Sie eine Se
 
 ### Schritt 2b: Erstellen Sie Ihre Nachricht
 
-Erstellen Sie die Nachricht für die Erinnerungsmail, indem Sie die Schritte unter [Erstellen einer E-Mail mit angepasstem HTML-Code]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) befolgen. Verwenden Sie Liquid, um die Nachricht mit Daten aus dem angepassten Attribut des Kunden ("Reisen") anzupassen, wie in diesem Beispiel.
+Erstellen Sie die Nachricht für die Erinnerungsmail, indem Sie die Schritte unter [Erstellen einer E-Mail mit angepasstem HTML-Code]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/) befolgen. Verwenden Sie Liquid, um die Nachricht mit Daten aus dem angepassten Attribut des Kunden ("Reisen") anzupassen, wie in diesem Beispiel.
 
 {% raw %}
 ```liquid

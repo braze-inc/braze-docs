@@ -33,7 +33,7 @@ Cualquier plantilla HTML personalizada existente tendrá que volver a crearse ut
 
 ## Paso 3: Personaliza tu plantilla
 
-Después de seleccionar su experiencia como editor, esta es su oportunidad para ser creativo con la personalización de su plantilla de correo electrónico. Puede utilizar HTML para crear y emular su marca en el editor HTML, o incluir una variedad de [detalles creativos]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details) en el editor de arrastrar y soltar.
+Después de seleccionar su experiencia como editor, esta es su oportunidad para ser creativo con la personalización de su plantilla de correo electrónico. Puede utilizar HTML para crear y emular su marca en el editor HTML, o incluir una variedad de [detalles creativos]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#creative-details) en el editor de arrastrar y soltar.
 
 ### Incluir un enlace para darse de baja
 

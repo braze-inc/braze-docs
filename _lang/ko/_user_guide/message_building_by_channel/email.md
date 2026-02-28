@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
   image: /assets/img/braze_icons/link-03.svg
 - name: 이메일 캠페인 만들기
-  link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
+  link: /docs/user_guide/message_building_by_channel/email/html_editor/
   image: /assets/img/braze_icons/mail-01.svg
 - name: 드래그 앤 드롭 편집기
   link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/

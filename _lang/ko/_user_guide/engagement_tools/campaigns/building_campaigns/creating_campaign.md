@@ -15,7 +15,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/content_cards/create/
   image: /assets/img/braze_icons/channel-content-cards.svg
 - name: 이메일 캠페인
-  link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
+  link: /docs/user_guide/message_building_by_channel/email/html_editor/
   image: /assets/img/braze_icons/channel-email.svg
 - name: 인앱 메시지 캠페인
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/

@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
   image: /assets/img/braze_icons/link-03.svg
 - name: Eメールキャンペーンを作成する
-  link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
+  link: /docs/user_guide/message_building_by_channel/email/html_editor/
   image: /assets/img/braze_icons/mail-01.svg
 - name: ドラッグ・アンド・ドロップ・エディター
   link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/

@@ -22,7 +22,7 @@ toc_headers: h2
 
 ### ステップ 1: メールキャンペーンを作成する
 
-まず、[メールキャンペーンを作成]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)し、編集環境として**HTMLコードエディタを**選択する。
+まず、[メールキャンペーンを作成]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/)し、編集環境として**HTMLコードエディタを**選択する。
 
 ### ステップ 2:Gmailプロモーションカードに詳細を追加する
 
@@ -98,7 +98,7 @@ Gmailプロモーションカードに割引オファー、ディールカード
 Gmailプロモーションカードを作成したら、**HTMLコードを生成するを**選択する。スクリプトをコピーして、メールの HTML の `<head>` 要素に貼り付けます。 
 
 {% alert tip %}
-ドラッグ＆ドロップ・エディターの場合は、生成されたHTMLコードを「**送信設定**」の[カスタム・ヘッドタグ]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#custom-head-tags)・セクションにコピー＆ペーストする。
+ドラッグ＆ドロップ・エディターの場合は、生成されたHTMLコードを「**送信設定**」の[カスタム・ヘッドタグ]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#custom-head-tags)・セクションにコピー＆ペーストする。
 {% endalert %}
 
 {% alert warning %}

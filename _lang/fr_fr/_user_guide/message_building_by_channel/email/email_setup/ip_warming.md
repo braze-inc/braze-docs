@@ -60,7 +60,7 @@ La plupart des fournisseurs de services Internet stockent les données de réput
 
 ## Comment limiter les envois pendant le réchauffement
 
-Notre fonctionnalité intégrée de limitation du nombre d'utilisateurs est un outil utile pour vous aider à réchauffer votre adresse IP. Après avoir choisi les segments de messages souhaités lors de la création de la campagne, à l'étape [Utilisateurs ciblés]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas), sélectionnez le menu déroulant **Options avancées** pour limiter vos utilisateurs. Au fur et à mesure que votre planification de réchauffement se poursuit, vous pouvez augmenter progressivement cette limite pour augmenter le volume d’e-mails que vous envoyez.
+Notre fonctionnalité intégrée de limitation du nombre d'utilisateurs est un outil utile pour vous aider à réchauffer votre adresse IP. Après avoir choisi les segments de messages souhaités lors de la création de la campagne, à l'étape [Utilisateurs ciblés]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas), sélectionnez le menu déroulant **Options avancées** pour limiter vos utilisateurs. Au fur et à mesure que votre planification de réchauffement se poursuit, vous pouvez augmenter progressivement cette limite pour augmenter le volume d’e-mails que vous envoyez.
 
 ![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 

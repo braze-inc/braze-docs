@@ -33,7 +33,7 @@ Any existing custom HTML templates will need to be re-created using the drag-and
 
 ## Step 3: Customize your template
 
-After selecting your editor experience, this is your opportunity to get creative with customizing your email template. You can use HTML to create and emulate your branding in the HTML editor, or include a variety of [creative details]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details) in the drag-and-drop editor.
+After selecting your editor experience, this is your opportunity to get creative with customizing your email template. You can use HTML to create and emulate your branding in the HTML editor, or include a variety of [creative details]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#creative-details) in the drag-and-drop editor.
 
 ### Including an unsubscribe link
 

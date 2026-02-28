@@ -106,7 +106,7 @@ Im Folgenden finden Sie Referenzen zu den JSON-Nutzdaten, die Ihrem Cloud Storag
 }
 ```
 
-Das Feld `extras` enthält die Schlüssel-Wert-Paare, die beim Verfassen einer E-Mail im HTML-Editor im Feld **E-Mail-Extras** konfiguriert wurden. E-Mail-Extras funktionieren bei allen Anbietern von Serviceleistungen; Diensten (einschließlich SendGrid und Sparkpost) und sind in archivierten Nachrichten enthalten, unabhängig davon, welcher Anbieter verwendet wird. Weitere Informationen zur Konfiguration von E-Mail-Extras finden Sie unter [Erstellen einer E-Mail-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#adding-email-extras). Wie Sie Daten an Currents zurücksenden, erfahren Sie unter [Extras für Nachrichten]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
+Das Feld `extras` enthält die Schlüssel-Wert-Paare, die beim Verfassen einer E-Mail im HTML-Editor im Feld **E-Mail-Extras** konfiguriert wurden. E-Mail-Extras funktionieren bei allen Anbietern von Serviceleistungen; Diensten (einschließlich SendGrid und Sparkpost) und sind in archivierten Nachrichten enthalten, unabhängig davon, welcher Anbieter verwendet wird. Weitere Informationen zur Konfiguration von E-Mail-Extras finden Sie unter [Erstellen einer E-Mail-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#adding-email-extras). Wie Sie Daten an Currents zurücksenden, erfahren Sie unter [Extras für Nachrichten]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 

@@ -22,7 +22,7 @@ Befolgen Sie diese Anleitung, um eine Gmail-Aktionskarte für eine E-Mail-Kampag
 
 ### Schritt 1: Erstellen Sie eine E-Mail Kampagne
 
-[Erstellen Sie]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) zunächst [Ihre E-Mail Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) und wählen Sie den **HTML Code-Editor** als Bearbeitungsumgebung aus.
+[Erstellen Sie]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/) zunächst [Ihre E-Mail Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/) und wählen Sie den **HTML Code-Editor** als Bearbeitungsumgebung aus.
 
 ### Schritt 2: Details zur Gmail Aktion Karte hinzufügen
 
@@ -98,7 +98,7 @@ Wir empfehlen Ihnen, Ihre Produktbilder in die Bibliothek hochzuladen und dann d
 Nachdem Sie Ihre Gmail Aktionskarte erstellt haben, wählen Sie **HTML-Code generieren**. Kopieren Sie das Skript und fügen Sie es in das `<head>` Element im HTML-Code Ihrer E-Mail ein. 
 
 {% alert tip %}
-Kopieren Sie für den Drag-and-Drop-Editor den generierten HTML-Code und fügen Sie ihn in den Abschnitt [angepasste Head Tags]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#custom-head-tags) unter **Sendeeinstellungen** ein.
+Kopieren Sie für den Drag-and-Drop-Editor den generierten HTML-Code und fügen Sie ihn in den Abschnitt [angepasste Head Tags]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#custom-head-tags) unter **Sendeeinstellungen** ein.
 {% endalert %}
 
 {% alert warning %}

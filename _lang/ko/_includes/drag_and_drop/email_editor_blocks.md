@@ -2,7 +2,7 @@
 
 편집기 블록은 이메일 메시지의 **콘텐츠** 섹션 아래에 있습니다. 편집기 블록을 사용하려면 끌어서 놓기 편집기에서 열 안으로 편집기 블록을 끌어다 놓습니다. 열 너비에 맞게 자동으로 조정됩니다. 각 편집기 블록에는 패딩을 세밀하게 제어하는 등의 고유한 설정이 있습니다.
 
-이메일에서 이러한 편집기 블록을 사용하고 커스텀하는 방법에 대한 자세한 내용은 [기타 사용자 지정을]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#other-customizations) 참조하세요.
+이메일에서 이러한 편집기 블록을 사용하고 커스텀하는 방법에 대한 자세한 내용은 [기타 사용자 지정을]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#other-customizations) 참조하세요.
 
 {% alert tip %}
 `Image`, `Button` 또는 `Text` 편집기 블록 내의 모든 URL에 [커스텀 속성을]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) 추가할 수도 있습니다.

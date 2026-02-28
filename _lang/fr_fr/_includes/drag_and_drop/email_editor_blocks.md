@@ -2,7 +2,7 @@
 
 Les blocs éditeurs sont situés sous la section **Contenu** des messages e-mail. Pour utiliser un bloc éditeur, glissez un bloc éditeur à l'intérieur d'une colonne dans l'éditeur par glisser-déposer. Il s’ajuste automatiquement à la largeur de la colonne. Chaque bloc éditeur possède ses propres paramètres, tels que le contrôle granulaire sur la marge intérieure.
 
-Pour plus d'informations sur l'utilisation et la personnalisation de ces blocs éditeurs dans votre e-mail, consultez la rubrique [Autres personnalisations.]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#other-customizations)
+Pour plus d'informations sur l'utilisation et la personnalisation de ces blocs éditeurs dans votre e-mail, consultez la rubrique [Autres personnalisations.]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#other-customizations)
 
 {% alert tip %}
 Vous pouvez également ajouter des [attributs personnalisés]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) à n'importe quelle URL dans les blocs éditeurs `Image`, `Button`, ou `Text`.

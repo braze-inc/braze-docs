@@ -59,6 +59,6 @@ O aquecimento de IP é a **etapa mais importante** do processo de configuração
 
 Ao começar com volumes menores de envio de e-mail, você estabelece um nível de confiança com seu provedor de e-mail, mostrando que está enviando e-mails apenas para usuários relevantes. O envio do primeiro lote de e-mails para os usuários mais engajados pode ajudá-lo a ganhar confiança mais rapidamente com seu provedor de e-mail.
 
-Depois de fazer o aquecimento de seu IP, você poderá [começar a criar e enviar e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)!
+Depois de fazer o aquecimento de seu IP, você poderá [começar a criar e enviar e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/)!
 
 <br><br>

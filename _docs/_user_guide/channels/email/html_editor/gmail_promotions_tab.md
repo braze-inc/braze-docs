@@ -22,7 +22,7 @@ Follow these steps to build a Gmail promotion card for an email campaign. Note t
 
 ### Step 1: Create an email campaign
 
-First, [create your email campaign]({{site.baseurl}}/user_guide/channels/email/html_editor/creating_an_email_campaign/), and select the **HTML code editor** as your editing experience.
+First, [create your email campaign]({{site.baseurl}}/user_guide/channels/email/html_editor/), and select the **HTML code editor** as your editing experience.
 
 ### Step 2: Add details to Gmail Promotion card
 
@@ -98,7 +98,7 @@ We recommend uploading your product images to the media library, then copying an
 After building your Gmail Promotion card, select **Generate HTML code**. Copy and paste the script into the `<head>` element of your email's HTML. 
 
 {% alert tip %}
-For the drag-and-drop editor, copy and paste the generated HTML code into the [custom head tags]({{site.baseurl}}/user_guide/channels/email/drag_and_drop/overview/#custom-head-tags) section under **Sending Settings**.
+For the drag-and-drop editor, copy and paste the generated HTML code into the [custom head tags]({{site.baseurl}}/user_guide/channels/email/drag_and_drop/#custom-head-tags) section under **Sending Settings**.
 {% endalert %}
 
 {% alert warning %}

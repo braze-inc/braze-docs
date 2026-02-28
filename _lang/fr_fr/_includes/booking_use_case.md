@@ -136,7 +136,7 @@ Créez une audience cible pour recevoir des rappels à l'aide d'une segmentation
 
 ### Étape 2b : Créez votre message
 
-Créez le message de rappel par e-mail en suivant les étapes de la section [Création d'un e-mail avec HTML personnalisé]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/). Utilisez Liquid pour personnaliser le message avec les données de l'attribut personnalisé du client que vous avez créé ("voyages"), comme dans cet exemple.
+Créez le message de rappel par e-mail en suivant les étapes de la section [Création d'un e-mail avec HTML personnalisé]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/). Utilisez Liquid pour personnaliser le message avec les données de l'attribut personnalisé du client que vous avez créé ("voyages"), comme dans cet exemple.
 
 {% raw %}
 ```liquid

@@ -2,7 +2,7 @@
 
 Os blocos do editor estão localizados na seção **Conteúdo** das mensagens de e-mail. Para usar um bloco de editor, arraste um bloco de editor para dentro de uma coluna no editor de arrastar e soltar. Ele se ajustará automaticamente à largura da coluna. Cada bloco do editor tem suas próprias configurações, como o controle granular do preenchimento.
 
-Para saber mais sobre como usar e personalizar esses blocos do editor em seu e-mail, consulte [Outras personalizações]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#other-customizations).
+Para saber mais sobre como usar e personalizar esses blocos do editor em seu e-mail, consulte [Outras personalizações]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#other-customizations).
 
 {% alert tip %}
 Você também pode adicionar [atributos personalizados]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) a qualquer URL nos blocos de editor `Image`, `Button` ou `Text`.

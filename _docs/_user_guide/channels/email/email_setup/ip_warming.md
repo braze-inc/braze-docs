@@ -60,7 +60,7 @@ Most ISPs only store reputation data for 30 days. If you go a month without send
 
 ## How to limit sends during warming
 
-Our built-in user limiting feature serves as a useful tool to help you with warming your IP address. After choosing your desired messaging segments during campaign creation, on the [Target Users]({{site.baseurl}}/user_guide/channels/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) step, select the **Advanced Options** dropdown to limit your users. As your warming schedule continues, you can gradually raise this limit to increase the volume of emails you send.
+Our built-in user limiting feature serves as a useful tool to help you with warming your IP address. After choosing your desired messaging segments during campaign creation, on the [Target Users]({{site.baseurl}}/user_guide/channels/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas) step, select the **Advanced Options** dropdown to limit your users. As your warming schedule continues, you can gradually raise this limit to increase the volume of emails you send.
 
 ![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 

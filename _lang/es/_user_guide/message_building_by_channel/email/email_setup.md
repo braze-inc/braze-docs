@@ -59,6 +59,6 @@ El calentamiento de IP es el **paso más importante** en el proceso de configura
 
 Al empezar con volúmenes más pequeños de correo electrónico, está estableciendo un nivel de confianza con su proveedor de correo electrónico, demostrando que sólo envía correos electrónicos a usuarios relevantes. Enviar tu primer lote de envíos por correo electrónico a tus usuarios más comprometidos puede ayudarte a ganar confianza más rápidamente con tu proveedor.
 
-Cuando hayas terminado de calentar tu IP, podrás [empezar a crear y enviar correos electrónicos]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/).
+Cuando hayas terminado de calentar tu IP, podrás [empezar a crear y enviar correos electrónicos]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/).
 
 <br><br>

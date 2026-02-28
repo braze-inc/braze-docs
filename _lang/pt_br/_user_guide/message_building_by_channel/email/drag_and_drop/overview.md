@@ -179,7 +179,7 @@ O Inbox Vision permite que você visualize suas campanhas de e-mail a partir da 
 As imagens de fundo em envios de mensagens por e-mail podem, às vezes, causar linhas brancas ou desconexões entre as imagens, por isso é importante testar e verificar os detalhes da sua mensagem de e-mail.
 {% endalert %}
 
-Após usar o editor de arrastar e soltar para projetar e criar sua mensagem de e-mail, continue a [construir]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) o restante de sua campanha ou Canvas.
+Após usar o editor de arrastar e soltar para projetar e criar sua mensagem de e-mail, continue a [construir]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas) o restante de sua campanha ou Canvas.
 
 {% details About the updated HTML engine %}
 O mecanismo subjacente que produz HTML a partir do editor de arrastar e soltar foi otimizado e atualizado, resultando em benefícios relacionados à compactação e à renderização de arquivos HTML.
