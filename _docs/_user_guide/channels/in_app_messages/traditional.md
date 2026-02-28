@@ -343,11 +343,16 @@ Finally, after you've selected the action the in-app message will be triggered o
 
 You can choose between the following message priorities:
 
-- Low priority (shown after other messages)
-- Medium priority
 - High priority (shown before other messages)
+- Medium priority (default)
+- Low priority (shown after other messages)
 
-The high, medium, and low options for triggered message priorities are buckets, and as such multiple messages could have the same selected priority. To set priorities within these buckets, click **Set Exact Priority**, and you will be able to drag and drop campaigns to order them with the correct priority.
+The high, medium, and low options for triggered message priorities are buckets, and as such, multiple messages could have the same selected priority. When multiple messages share the same priority, the most recently created or assigned message takes precedence and is shown first:
+
+- **Default priority bucket:** When two campaigns share the same trigger and use the default (medium) priority, the campaign that was created last receives the trigger.
+- **Specific priority bucket:** When multiple campaigns share the same trigger and are assigned to a specific priority bucket, the campaign most recently assigned to that bucket receives the trigger.
+
+To set priorities within these buckets, click **Set Exact Priority**, and you can drag and drop campaigns to order them with the correct priority.
 
 ![An example of how priority is set for an in-app message campaign and Canvas.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 

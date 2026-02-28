@@ -53,6 +53,10 @@ In the **Target Audiences** step of your campaign composer, you can also limit t
 
 By selecting the maximum user limit, you can limit the volume of messages sent on a per-channel basis or globally across all message types.
 
+{% alert note %}
+The maximum user cap limits the number of users dispatched, not the number of messages successfully sent. Because aborted messages count toward this cap, the actual number of messages sent may be lower than the configured limit. For example, if you set a cap of 10,000 and 2,000 messages are aborted due to Liquid logic or other conditions, only 8,000 messages are sent.
+{% endalert %}
+
 ##### Maximum user cap with optimizations
 
 If you're using an optimization like Winning Variant or Personalized Variant, the campaign will consist of two sends: the initial experiment and the final send. 
