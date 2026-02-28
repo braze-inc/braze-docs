@@ -5,7 +5,7 @@ description: "Learn how to find and merge duplicate users in your Braze dashboar
 page_order: 2
 ---
 
-# Duplicate users
+# Merge duplicate users
 
 > Learn how to find and merge duplicate users, so you can maximize the effectiveness of your campaigns and Canvases.
 
