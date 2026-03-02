@@ -80,7 +80,7 @@ After setting up your Agent step, you can test and preview the output of this st
 - If the connected model returns a rate limit error, Braze retries up to five times with exponential backoff.  
 - If the agent fails for any other reason (such as a timeout error or invalid API key), the output variable is set to `null`.
     - If an agent reaches its daily invocation limit, the output variable is set to `null`. 
-- Use [default Liquid values]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values) to buffer against errors. For example, in the **Add Personalization** modal, you can enter a default Liquid value such as {% raw %}`{{context.${push_output}.push_title | default: 'Hello friend!'}}`{% endraw %} or {% raw %}`{{context.${push_output}.push_body | default: 'Open our app to get your prize!'}}`{% endraw %}
+- Use [default Liquid values]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values) to buffer against errors. For example, in the **Add Personalization** modal, you can enter a default Liquid value such as {% raw %}`{{context.${response_variable_name}.push_title | default: 'Hello friend!'}}`{% endraw %} or {% raw %}`{{context.${response_variable_name}.push_body | default: 'Open our app to get your prize!'}}`{% endraw %}.
 - Responses are cached for identical inputs and may be reused for repeated identical invocations within a few minutes.
     - Responses that use cached values do still count toward total and daily invocations.
 - Agent steps may take time to process a large batch of users. If you see users who are still pending in this step, check your logs to verify that invocations are happening.
