@@ -72,7 +72,7 @@ It isn't possible to merge or import user permissions from one dashboard user to
 
 To edit a user's current admin, company, or workspace permissions, go to **Settings** > **Company Users**, then select their name.
 
-![The "Company Users" page in Braze with one user listed in the results.]({% image_buster /assets/img/braze_permissions/selecting_a_user.png %}){: style="max-width:80%;"}
+![The "Company Users" page in Braze with one user listed in the results.]({% image_buster /assets/img/braze_permissions/selecting_a_user.png %})
 
 {% tabs local %}
 {% tab Admin %}
@@ -87,7 +87,7 @@ Admins have access to all features and the ability to modify any company setting
 
 To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
 
-![The details of the selected user with the admin checkbox in focus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:40%;"}
+![The details of the selected user with the admin checkbox in focus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:70%;"}
 
 {% alert warning %}
 If you remove admin privileges from a user, they won't be able to access Braze until you assign them at least one [company-level or workspace-level]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=legacy%20permissions&tab=company#legacypermissions_editing-a-users-permissions) permission.
@@ -122,7 +122,7 @@ Under **Workspaces**, choose one or more workspaces from the dropdown. Then, und
 
 When you're finished, select **Update user**.
 
-![Workspace-level permissions being manually selected in Braze.]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_individual.png %})
+![Workspace-level permissions being manually selected in Braze.]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_individual_legacy.png %})
 
 {% endsubtab %}
 {% subtab Assign permission set %}
@@ -131,7 +131,7 @@ Under **Workspaces**, choose one or more workspaces from the dropdown. Then, und
 
 When you're finished, select **Update user**.
 
-![Workspace-level permissions being assigned through a permission set in Braze.]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_set.png %})
+![Workspace-level permissions being assigned through a permission set in Braze.]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_set_legacy.png %})
 
 {% endsubtab %}
 {% endsubtabs %}
