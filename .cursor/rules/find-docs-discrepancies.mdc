@@ -16,7 +16,7 @@ For the .md file in `_docs/*`:
 3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
 4. **Suggest Changes** - Which changes should be made to the existing doc?
 
-### Output Format Per Ticket to output.md and chat console
+### Output format per page to `output.md` and chat console
 
 ```markdown
 ### Docs Update:
