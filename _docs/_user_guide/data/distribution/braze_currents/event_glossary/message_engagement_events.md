@@ -732,7 +732,7 @@ Subscription groups are only available for email, SMS, RCS, and WhatsApp channel
 {% endtabs %}
 
 #### Property details {#property-details}
-{% include currents/property_details_dispatch_state_source.md %}
+{% multi_lang_include currents/property_details_dispatch_state_source.md %}
 
 {% endapi %}
 
