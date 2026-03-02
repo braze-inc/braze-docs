@@ -3,57 +3,35 @@ nav_title: Send messages
 article_title: Sending messages using the REST API
 page_order: 1
 page_type: reference
-description: "This reference article covers how to send messages programmatically using the Braze REST API and an API campaign."
+description: "This reference article covers the two ways to send messages programmatically using the Braze REST API."
 ---
 
 # Sending messages using the REST API
 
-> Use the Braze REST API to send messages from your backend in real time. This lets you trigger messages programmatically while tracking performance alongside your other campaigns and Canvases in the Braze dashboard.
+> You can send messages from your backend in real time using two different Braze endpoints. Each has a different request shape: one requires the full message content in the request; the other requires a campaign ID and sends content defined in the dashboard.
 
-This approach works with any messaging channel supported by the API, including:
+This approach works with any messaging channel supported by the API (WhatsApp, email, SMS, push, Content Cards, webhooks, and more).
 
-- WhatsApp (template messages)
-- Email
-- SMS/MMS
-- Push notifications (Android, iOS, web)
-- Content Cards
-- Webhooks
+## Two ways to send
 
-For example, you can notify consumers about account activity, send order confirmations, or deliver time-sensitive alerts, all triggered from your backend.
+| | [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) | [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) |
+| --- | --- | --- |
+| **Campaign ID** | Optional. Omit it to send without dashboard campaign tracking, or provide an API campaign ID plus `message_variation_id` in each message to track in the dashboard. | Required. |
+| **Message content** | You must include a `messages` object in the request (for example, `messages.whats_app`, `messages.email`). | Not accepted. Message content is defined in the campaign in the Braze dashboard. |
+| **Use case** | Send a message with content fully specified in the API request. | Trigger a pre-built campaign (content in the dashboard) to specific recipients via the API. |
 
-With this approach, you can:
+For full request and response details, see the [Send messages immediately (API only)]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) and [Send campaigns using API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) endpoint references.
 
-- Trigger messages from your backend in real time.
-- Track analytics alongside all of your marketing-owned campaigns and Canvases.
-- Extend the use case with additional Braze features, such as message delays, follow-up retargeting, and A/B testing.
+---
 
-## Prerequisites
+## Option 1: Send with message content in the request (`/messages/send`)
 
-| Requirement | Description |
-| --- | --- |
-| Braze REST API key | A key with the `messages.send` permission. To create one, go to **Settings** > **API Keys**. |
-| Backend service | A backend service or scripting environment capable of making HTTP POST requests to the Braze REST API. |
-| Messaging channel | At least one messaging channel configured in your workspace (for example, a WhatsApp template, email template, or push notification setup). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+Use this endpoint when you want to specify the full message content in the API request. You **must** include a `messages` object (for example, `messages.whats_app`, `messages.email`, or `messages.sms`). You can omit `campaign_id` to send without campaign tracking, or include an API campaign ID and `message_variation_id` in each message to track sends in the dashboard (see the [endpoint reference]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) for details).
 
-## Step 1: Create an API campaign
-
-1. In the Braze dashboard, go to **Messaging** > **Campaigns**.
-2. Select **Create Campaign**, then select **API Campaign**.
-3. Enter a name and description for your campaign.
-4. Select **Add Messaging Channel**, then select the channels you want to include (such as WhatsApp, email, or SMS).
-5. Note the **Campaign ID** and **Message Variation ID** displayed on the campaign page. You need both values when constructing your API request.
-
-For more details on setting up API campaigns, see [API campaigns]({{site.baseurl}}/api/api_campaigns/).
-
-## Step 2: Send a message using the API
-
-Use the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) endpoint to send a message. Include the campaign ID, the recipients, and a messaging object for your chosen channel in the request payload.
-
-For the full list of request parameters, see the [`/messages/send` endpoint reference]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/).
+**Required:** API key with the `messages.send` permission.
 
 {% alert important %}
-Each recipient referenced in `external_user_ids` must already exist in Braze. If you need to create users as part of a send, use [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) first, or use an [API-triggered campaign]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) instead, which allows you to create a recipient if one doesn't already exist.
+Each recipient in `external_user_ids` must already exist in Braze. To create users as part of a send, use [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) first, or use [Option 2](#option-2-trigger-a-campaign-with-content-in-the-dashboard-campaignstriggersend) (API-triggered campaign) instead.
 {% endalert %}
 
 ### Example: WhatsApp template message
@@ -66,13 +44,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "campaign_id": "YOUR_CAMPAIGN_ID",
   "external_user_ids": ["user123"],
   "messages": {
     "whats_app": {
       "app_id": "YOUR_APP_ID",
       "subscription_group_id": "YOUR_WHATSAPP_SUBSCRIPTION_GROUP_ID",
-      "message_variation_id": "YOUR_MESSAGE_VARIATION_ID",
       "message_type": "template_message",
       "message": {
         "template_name": "new_message_received",
@@ -83,46 +59,80 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-For details on the WhatsApp messaging object, see [WhatsApp object]({{site.baseurl}}/api/objects_filters/messaging/whats_app_object/).
+For the full WhatsApp object specification, see [WhatsApp object]({{site.baseurl}}/api/objects_filters/messaging/whats_app_object/).
 
 {% alert note %}
-The `/messages/send` endpoint only supports WhatsApp templates with TEXT or IMAGE headers. If your template uses a DOCUMENT, VIDEO, or other media header type, use the [API-triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) or the Braze dashboard instead.
+The `/messages/send` endpoint only supports WhatsApp templates with TEXT or IMAGE headers. For DOCUMENT, VIDEO, or other media header types, use the [API-triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) or the Braze dashboard instead.
 {% endalert %}
 
 ### Example: Email
 
 ```json
 {
-  "campaign_id": "YOUR_CAMPAIGN_ID",
   "external_user_ids": ["user123"],
   "messages": {
     "email": {
       "app_id": "YOUR_APP_ID",
       "subject": "Your order has shipped",
       "from": "no-reply@example.com",
-      "body": "<p>Your order #12345 is on its way.</p>",
-      "message_variation_id": "YOUR_MESSAGE_VARIATION_ID"
+      "body": "<p>Your order #12345 is on its way.</p>"
     }
   }
 }
 ```
 
-For details on the email messaging object, see [Email object]({{site.baseurl}}/api/objects_filters/messaging/email_object/).
+For other channels, see [Messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects).
 
-### Other channels
+---
 
-Each channel has its own messaging object. For the full list and their parameters, see [Messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects).
+## Option 2: Trigger a campaign with content in the dashboard (`/campaigns/trigger/send`)
 
-## Step 3: Verify your integration
+Use this endpoint when the message content is built in the Braze dashboard (API-triggered campaign). You send a **required** `campaign_id` and recipients; you do **not** send a `messages` object.
 
-After completing the setup, verify your integration:
+**Required:** API key with the `campaigns.trigger.send` permission.
 
-1. Send an API request as described in [Step 2](#step-2-send-a-message-using-the-api), using your own user ID as the recipient.
+### Step 1: Create an API-triggered campaign
+
+1. In the Braze dashboard, go to **Messaging** > **Campaigns**.
+2. Select **Create Campaign**, then **API-Triggered Campaign** (not "API Campaign").
+3. Add your message channel (WhatsApp, email, SMS, etc.) and build the message content in the dashboard.
+4. Note the **Campaign ID** (and **Send ID** if you use multiple message variants). You'll use these in the API request.
+
+For more on building API-triggered campaigns, see [API-triggered delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
+
+### Step 2: Trigger the campaign via the API
+
+Send a POST request to `/campaigns/trigger/send` with `campaign_id` and `recipients` (or `broadcast`/`audience`). Do not include a `messages` object—content comes from the campaign.
+
+```
+POST YOUR_REST_ENDPOINT/campaigns/trigger/send
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
+
+```json
+{
+  "campaign_id": "YOUR_CAMPAIGN_ID",
+  "recipients": [
+    {
+      "external_user_id": "user123"
+    }
+  ]
+}
+```
+
+For the full request body (including `trigger_properties`, `send_to_existing_only`, `attributes`, etc.), see the [Send campaigns using API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/#request-body) endpoint reference.
+
+---
+
+## Verify your integration
+
+1. Send a request using one of the options above, with your own user ID as the recipient.
 2. Confirm the message is delivered.
-3. In the Braze dashboard, go to the campaign results page and confirm the send is recorded.
+3. If using Option 2, check the campaign in the Braze dashboard to confirm the send is recorded.
 
 ## Considerations
 
-- Use Braze [personalization features]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) to tailor content to individual consumers, including dynamic content and user-specific data.
-- Confirm that your messaging campaigns comply with relevant regulations and include necessary opt-out options and privacy notices.
-- The Braze REST API offers additional [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/) for scheduling messages, triggering campaigns, and more.
+- Use Braze [personalization features]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) to tailor content where supported.
+- Ensure your messaging complies with relevant regulations and includes required opt-out options and privacy notices.
+- For more endpoints (scheduling, Canvas triggers, etc.), see [Messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/).
