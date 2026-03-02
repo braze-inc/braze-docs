@@ -104,9 +104,9 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
-      - name: Clean up orphaned translations
-        if: steps.changes.outputs.count != '0'
-        run: python scripts/clean_orphaned_translations.py
+      # - name: Clean up orphaned translations
+      #   if: steps.changes.outputs.count != '0'
+      #   run: python scripts/clean_orphaned_translations.py
 
       - name: Verify builds and fix errors
         if: steps.changes.outputs.count != '0'
