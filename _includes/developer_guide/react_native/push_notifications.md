@@ -488,7 +488,7 @@ If your issue persists, there may be a separate dependency interfering with your
 If deep links from push notifications stop opening after a migration, check the following:
 
 1. Verify your [React Native Linking](https://reactnative.dev/docs/linking) setup is still valid in your upgraded app.
-2. For iOS native integrations, confirm you implemented `populateInitialPayloadFromLaunchOptions` and `Braze.getInitialPushPayload` so closed-state launches can resolve the deep link URL.
+2. For iOS native integrations, confirm you implemented `populateInitialPayloadFromLaunchOptions` and `Braze.getInitialPushPayload` so that, when the app is launched from a terminated state, it can retrieve the initial push payload and pass its `url` into your deep link handler.
 3. If you're using the Braze Expo plugin, verify `androidHandlePushDeepLinksAutomatically` is set correctly for your implementation.
 4. Review recently added dependencies for overrides to notification handling or app delegate behavior.
 
