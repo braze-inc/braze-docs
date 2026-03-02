@@ -1,0 +1,84 @@
+---
+alwaysApply: false
+---
+
+# Identify and update docs discrepancies against source code
+
+Verify Braze docs against source code to identify discrepancies and propose docs updates.
+
+---
+
+## Step 1: Doc page verification
+
+For the .md file in `_docs/*`:
+1. **Extract Product Behavior** - Distill the page down to a set of product and platform behaviors that need to be verified.
+2. **Verify Product Behavior** - Cross-reference with source code of the Main Product at `../platform`. Do not rely on other documentation to verify. Always cross-reference with source code. If you can verify the resolution against the source code, add a reference to the source file(s). If you cannot verify the resolution, say that you could not verify the resolution against the source code.
+3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
+4. **Suggest Changes** - Which changes should be made to the existing doc?
+
+### Output format per page to `output.md` and chat console
+
+```markdown
+### Docs Update:
+- **Category**: [Docs Gap | Docs Discrepancy]
+- **Product Behavior**: [One-sentence summary]
+- **Verified behavior**: [Complete answer]
+- **Target Doc**: `_docs/_user_guide/path/to/file.md` (or "NEW: suggested_location")
+- **Suggested Change**: [What to add/update]
+```
+---
+
+## Step 2: Draft Updates
+
+For each docs page:
+
+1. Read the target file to understand existing structure
+2. Draft changes following conventions in the codebase based on the style guides in `_docs/_contributing/style_guide/*`
+
+
+## Step 3: Create a Properly Named Branch
+For each file that is changed in `_docs`, create a Branch with the naming convention: `[DD]-Cursor-<pagename>-update-<ddmmyyyy>-`  
+Example: `[DD]-Cursor-liquid_use_cases-02122026`  
+
+---
+
+## Step 4: Commit and Push Changes
+Stage and commit all changes in `_docs` with a meaningful message derived from the summary, then push your branch to the remote repository (for example, `git push -u origin <branch-name>`).
+
+---
+
+## Step 5: Generate the PR for each branch
+Create each PR with the naming convention: `[DD] update summary`
+Example: `[DD] Add FAQ entry about machine opens vs other opens`
+
+Always add the label `docs discrepancy` to the PR by including `--label "docs discrepancy"` in the `gh pr create` command.
+
+Cursor fills out the PR automatically:
+
+```text
+# Changes
+* [If this was related to a Docs discrepancy, make sure to note to tag the Eng owner in the description]
+* [Cursor analyzes code changes and lists them]
+* List of changes to help the reviewer understand the scope
+```
+
+## Step 6: Assign reviewers according to code ownership when possible
+Cursor identifies team members based on the CODEOWNERS file. If no owner is found for that file, assign to @braze-inc/docs-team
+
+
+## Source Code References
+
+| Resource | Path |
+|----------|------|
+| Docs repo | (current repo) |
+| Main product | `../platform` |
+
+
+## Example Prompt
+
+```
+@find-docs-discrepancies.mdc Identify discrepancies for each .md file in `_docs/*`
+
+@find-docs-discrepancies.mdc Identify discrepancies for ai.md
+
+```
