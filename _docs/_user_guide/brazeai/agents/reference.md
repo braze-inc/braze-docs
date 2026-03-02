@@ -29,9 +29,7 @@ If you don't see **Braze Auto** as an option in the **Model** dropdown when crea
 
 With this option, you can connect your Braze account with providers like OpenAI, Anthropic, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
 
-{% alert important %}
 We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months.
-{% endalert %}
 
 To set this up:
 
@@ -41,9 +39,7 @@ To set this up:
 
 Then, you can return to your agent and select your model.
 
-{% alert important %}
-When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.  
-{% endalert %}
+When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.
 
 #### Thinking levels
 
