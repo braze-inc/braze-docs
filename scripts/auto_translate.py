@@ -36,6 +36,7 @@ LANGUAGES = {
 
 MODEL = os.environ.get("TRANSLATION_MODEL", "claude-opus-4-6")
 MAX_TOKENS = int(os.environ.get("TRANSLATION_MAX_TOKENS", "65536"))
+MAX_FILE_KB = int(os.environ.get("TRANSLATION_MAX_FILE_KB", "130"))
 MAX_WORKERS = int(os.environ.get("TRANSLATION_WORKERS", "6"))
 REPO_ROOT = Path(os.environ.get("GITHUB_WORKSPACE", Path.cwd()))
 RESULTS_FILE = REPO_ROOT / "translation_results.json"
@@ -272,19 +273,40 @@ def cmd_translate(args):
         print("No English .md files changed. Nothing to translate.")
         return
 
-    total_tasks = len(md_files) * len(LANGUAGES)
-    print(f"Translating {len(md_files)} file(s) into {len(LANGUAGES)} language(s) "
-          f"({total_tasks} tasks, {MAX_WORKERS} workers)\n")
+    skipped = []
+    translatable = []
+    for fpath in md_files:
+        size_kb = (REPO_ROOT / fpath).stat().st_size / 1024
+        if size_kb > MAX_FILE_KB:
+            skipped.append({"source": fpath, "size_kb": round(size_kb)})
+            print(f"  SKIP: {fpath} ({round(size_kb)} KB exceeds {MAX_FILE_KB} KB limit)")
+        else:
+            translatable.append(fpath)
+
+    if not translatable:
+        print("All changed files exceed the size limit. Nothing to translate.")
+        results = load_results()
+        results["skipped"] = skipped
+        save_results(results)
+        return
+
+    total_tasks = len(translatable) * len(LANGUAGES)
+    print(f"Translating {len(translatable)} file(s) into {len(LANGUAGES)} language(s) "
+          f"({total_tasks} tasks, {MAX_WORKERS} workers)")
+    if skipped:
+        print(f"  ({len(skipped)} file(s) skipped — too large for single-pass translation)")
+    print()
 
     client = Anthropic()
     prompt = load_prompt()
     results = load_results()
+    results["skipped"] = results.get("skipped", []) + skipped
     glossaries = {lang: load_glossary(lang) for lang in LANGUAGES}
     styleguides = {lang: load_styleguide(lang) for lang in LANGUAGES}
 
     futures = {}
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
-        for fpath in md_files:
+        for fpath in translatable:
             relative = str(Path(fpath).relative_to("_docs"))
             english_content = (REPO_ROOT / fpath).read_text()
 
@@ -423,6 +445,7 @@ def cmd_summary(_args):
     results = load_results()
     translated = results.get("translated", [])
     failed = results.get("failed", [])
+    skipped = results.get("skipped", [])
     build = results.get("build_results", {})
 
     lines = ["## Auto-translation summary\n"]
@@ -432,7 +455,17 @@ def cmd_summary(_args):
     lines.append(f"**Translation files created/updated:** {len(translated)}  ")
     if failed:
         lines.append(f"**Translation API failures:** {len(failed)}  ")
+    if skipped:
+        lines.append(f"**Files skipped (too large):** {len(skipped)}  ")
     lines.append("")
+
+    if skipped:
+        lines.append("### Skipped files (exceed size limit)\n")
+        lines.append("These files are too large for single-pass LLM translation and "
+                      "need manual translation or a chunked approach.\n")
+        for item in sorted(skipped, key=lambda x: -x["size_kb"]):
+            lines.append(f"- `{item['source']}` ({item['size_kb']} KB)")
+        lines.append("")
 
     # Build verification table
     if build:
