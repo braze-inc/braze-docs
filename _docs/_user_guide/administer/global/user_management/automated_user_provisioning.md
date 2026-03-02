@@ -12,7 +12,7 @@ alias: /scim/automated_user_provisioning/
 
 > Use SCIM provisioning to automatically create and manage Braze users through API. This article walks you through what information to provide, how to generate your SCIM token, and where to find your SCIM API endpoint.
 
-{% include early_access_beta_alert.md feature='SCIM provisioning' %}
+{% multi_lang_include early_access_beta_alert.md feature='SCIM provisioning' %}
 
 ## Accessing SCIM provisioning settings
 
@@ -27,7 +27,7 @@ alias: /scim/automated_user_provisioning/
 {% tabs %}
 {% tab Okta - Braze app %}
 
-{% include early_access_beta_alert.md feature='The Okta integration' %}
+{% multi_lang_include early_access_beta_alert.md feature='The Okta integration' %}
 
 Use the **Okta - Braze app** option if you set up the Braze app for SAML SSO in Okta. If you set up a custom app for SSO, follow the instructions in the [Okta - Custom app integration]({{site.baseurl}}/user_guide/administer/global/user_management/automated_user_provisioning/?tab=okta%20-%20custom%20app%20integration#step-1-set-up-scim-provisioning) tab.
 
@@ -78,7 +78,7 @@ Select **Test API Credentials**. A verification message appears if the integrati
 {% endtab %}
 {% tab Okta - Custom app integration %}
 
-{% include early_access_beta_alert.md feature='The Okta integration' %}
+{% multi_lang_include early_access_beta_alert.md feature='The Okta integration' %}
 
 Use the **Okta - Custom app integration** option if you set up a custom app for SSO. If you set up the Braze app for SAML SSO in Okta, follow the instructions in the [Okta - Braze app]({{site.baseurl}}/user_guide/administer/global/user_management/automated_user_provisioning/?tab=okta%20-%20braze%20app#step-1-set-up-scim-provisioning) tab.
 
@@ -118,7 +118,7 @@ Use the **Okta - Custom app integration** option if you set up a custom app for 
 {% endtab %}
 {% tab Entra ID %}
 
-{% include early_access_beta_alert.md feature='The Entra ID integration' %}
+{% multi_lang_include early_access_beta_alert.md feature='The Entra ID integration' %}
 
 ## Step 1: Set up SCIM provisioning app
 
