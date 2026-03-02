@@ -22,7 +22,8 @@ When Operator proposes changes in the dashboard (such as filling in form fields,
 
 If an action fails after approval, Operator will notify with details about the failure.
 
-{% alert note %}
+### Availability 
+
 Action cards are supported in the following editors:
 
 - In-app message (traditional editor only)
@@ -33,8 +34,6 @@ Action cards are supported in the following editors:
 - Webhook
 
 On other pages, Operator provides a list of steps to follow in the UI instead of taking action itself. Operator functionality is regularly being improved, and expanded coverage for create tools is expected.
-{% endalert %}
-
 ## Modify a plan
 
 To modify Operator's plan, first approve or reject the pending actions. Then describe the desired change in a new chat message.
