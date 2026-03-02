@@ -33,8 +33,7 @@ For the .md file in `_/docs/*`:
 For each docs page:
 
 1. Read the target file to understand existing structure
-2. Draft changes following conventions in the codebase based on the style 
-guides in `_docs/_contributing/style_guide/*`
+2. Draft changes following the style guides in `_docs/_contributing/style_guide/*` and the conventions established in the codebase
 
 <!--
 
