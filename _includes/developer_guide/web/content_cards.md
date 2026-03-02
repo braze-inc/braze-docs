@@ -58,7 +58,7 @@ You can test your Content Cards integration using your browser's developer tools
 1. Create a Content Card campaign and target your test user.
 2. Log in to the website that has your Web SDK integration.
 3. Open your browser console. For Chrome, right-click the page, select **Inspect**, then select the **Console** tab.
-4. Run the command that matches your integration namespace:
+4. Run these commands in the console:
    - `window.braze.getCachedContentCards()`
    - `window.braze.toggleContentCards()`
 
