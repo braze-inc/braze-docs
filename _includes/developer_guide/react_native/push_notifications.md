@@ -140,6 +140,10 @@ To enable Braze to handle deep links inside React components when a push notific
 
 To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
+{% alert important %}
+If you're migrating an existing React Native push integration, validate deep linking after you upgrade the Braze SDK, React Native, Expo, or related libraries. After migration, deep links can stop opening if your app is missing React Native Linking setup, startup payload handling, or updated delegate methods.
+{% endalert %}
+
 {% tabs local %}
 {% tab Android Native %}
 If you're using the [Braze Expo plugin]({{site.baseurl}}/developer_guide/platforms/react_native/sdk_integration/?tab=expo#step-2-choose-a-setup-option), you can handle push notification deep links automatically by setting `androidHandlePushDeepLinksAutomatically` to `true` in your `app.json`.
@@ -475,3 +479,14 @@ For iOS integrations, you can also reference our [push notification setup tutori
 If your device token won't register with Braze, first review [Push notifications stopped working](#troubleshooting-stopped-working).
 
 If your issue persists, there may be a separate dependency interfering with your Braze push notification configuration. You can try removing it or manually call `Braze.registerPushToken` instead.
+
+#### Deep links from push notifications don't open {#troubleshooting-deep-links}
+
+If deep links from push notifications stop opening after a migration, check the following:
+
+1. Verify your [React Native Linking](https://reactnative.dev/docs/linking) setup is still valid in your upgraded app.
+2. For iOS native integrations, confirm you implemented `populateInitialPayloadFromLaunchOptions` and `Braze.getInitialPushPayload` so closed-state launches can resolve the deep link URL.
+3. If you're using the Braze Expo plugin, verify `androidHandlePushDeepLinksAutomatically` is set correctly for your implementation.
+4. Review recently added dependencies for overrides to notification handling or app delegate behavior.
+
+If you've completed these checks and the issue persists, [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/) and include SDK logs plus reproduction steps.
