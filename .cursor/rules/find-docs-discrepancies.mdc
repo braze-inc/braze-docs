@@ -12,7 +12,7 @@ Verify Braze docs against source code to identify discrepancies and propose docs
 
 For the .md file in `_/docs/*`:
 1. **Extract Product Behavior** - Distill the page down to a set of product and platform behaviors that need to be verified.
-2. **Verify Product Behavior** - Cross-reference with source code of the Main Product at `../platform`. Do not rely other documentation to verify. Always cross-reference with source code. If you can verify the resolution against the source code, add a reference to the source file(s). If you cannot verify the resolution, say that you could not verify the resolution against the source code.
+2. **Verify Product Behavior** - Cross-reference with source code of the Main Product at `../platform`. Do not rely on other documentation to verify. Always cross-reference with source code. If you can verify the resolution against the source code, add a reference to the source file(s). If you cannot verify the resolution, say that you could not verify the resolution against the source code.
 3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
 4. **Suggest Changes** - Which changes should be made to the existing doc?
 
