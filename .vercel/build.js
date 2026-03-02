@@ -20,6 +20,9 @@ if ((vercel_env == 'preview') && (branch_commit != 'develop')) {
 				build_app = 1;
 			}
 		}
+		if (branch_commit.startsWith('auto-translate/')) {
+			build_app = 1;
+		}
 	}
 }
 
