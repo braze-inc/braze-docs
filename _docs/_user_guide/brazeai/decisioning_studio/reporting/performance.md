@@ -39,12 +39,9 @@ These selections determine which days are included, which groups are compared, h
 Changing the aggregation setting (such as 7-day rolling) only affects the chart display. It does not change stored data.
 {% endalert %}
 
-{% alert note %}
-If you can't select a recent date from the date picker, it's likely disabled to reflect a data delay. It typically takes a few days to get data from your CDP into Decisioning Studio reliably.
-{% endalert %}
+If you can't select a recent date from the date picker, that date is likely disabled to reflect a temporary data delay. It typically takes a few days to get data from your CDP into Decisioning Studio reliably.
 
 ## KPI cards
-
 ![Performance report showing the left-side KPI summary cards, including metrics like Incremental LTV / Customer, Conversions / Customer, and Unsubscribes / Customer.]({% image_buster /assets/img/decisioning_studio/reporting_performance_kpi_cards.png %})
 
 The KPI cards on the left side of the report show the key performance indicators configured for your use case, such as:
