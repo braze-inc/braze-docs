@@ -62,7 +62,7 @@ Cursor fills out the PR automatically:
 * List of changes to help the reviewer understand the scope
 ```
 
-## Step 6: Assign Reviewers Based Code Ownership where possible
+## Step 6: Assign Reviewers Based on Code Ownership where possible
 Cursor identifies team members based on the CODEOWNERS file. If no owner is found for that file, assign to @braze-inc/docs-team
 
 
