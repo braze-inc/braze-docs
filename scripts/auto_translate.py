@@ -35,7 +35,7 @@ LANGUAGES = {
 }
 
 MODEL = os.environ.get("TRANSLATION_MODEL", "claude-opus-4-6")
-MAX_TOKENS = 16384
+MAX_TOKENS = int(os.environ.get("TRANSLATION_MAX_TOKENS", "65536"))
 MAX_WORKERS = int(os.environ.get("TRANSLATION_WORKERS", "6"))
 REPO_ROOT = Path(os.environ.get("GITHUB_WORKSPACE", Path.cwd()))
 RESULTS_FILE = REPO_ROOT / "translation_results.json"
@@ -117,6 +117,9 @@ def call_claude(client, system_prompt, user_message, retries=3):
                 system=system_prompt,
                 messages=[{"role": "user", "content": user_message}],
             )
+            if response.stop_reason == "max_tokens":
+                print(f"    WARNING: output truncated (hit {MAX_TOKENS} token limit). "
+                      "Consider increasing TRANSLATION_MAX_TOKENS.")
             return strip_code_fences(response.content[0].text)
         except Exception as exc:
             if attempt < retries - 1:
