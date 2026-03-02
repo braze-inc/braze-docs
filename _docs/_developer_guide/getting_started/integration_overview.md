@@ -249,7 +249,7 @@ For historical usage, go to **Settings** > **APIs and Identifiers** > **API and 
 
 ### Requesting higher rate limits
 
-If you need a higher Braze rate limit, contact your Braze representative and include the following details:
+If you need a higher Braze rate limit, contact Braze Support or your customer success manager and include the following details:
 
 * Whether you need a temporary or permanent increase.
 * Why you need the increase.
