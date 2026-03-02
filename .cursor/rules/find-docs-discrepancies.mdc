@@ -49,7 +49,7 @@ Stage and Commit all changes in `_docs` with a meaningful message derived from t
 ---
 
 ## Step 7: Generate the PR for each branch
-Create each PR with the naming conventin: `[DD] update summary`
+Create each PR with the naming convention: `[DD] update summary`
 Example: `[DD] Add FAQ entry about machine opens vs other opens`
 
 Always add the label `docs discrepancy` to the PR by including `--label "docs discrepancy"` in the `gh pr create` command.
