@@ -86,7 +86,17 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
+
+{% tab REACT NATIVE %}
+```javascript
+Braze.changeUser("YOUR_USER_ID_STRING");
+```
+{% endtab %}
 {% endtabs %}
+
+{% alert note %}
+Calling `changeUser()` triggers a data flush as part of closing the current user's session. The SDK automatically flushes any pending data for the previous user before switching to the new user, so you don't need to manually request a data flush before calling `changeUser()`.
+{% endalert %}
 
 {% alert warning %}
 **Do not assign a static default ID or call `changeUser()` when a user logs out.** Doing so will prevent you from re-engaging any previously logged-in users on shared devices. Instead, keep track of all user IDs separately and ensure your app's logout process allows for switching back to a previously logged-in user. When a new session starts, Braze will automatically refresh the data for the newly-active profile.
@@ -147,6 +157,12 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
   "alias_name" : (required, string),
   "alias_label" : (required, string)
 }
+```
+{% endtab %}
+
+{% tab react native %}
+```javascript
+Braze.addAlias("ALIAS_NAME", "ALIAS_LABEL");
 ```
 {% endtab %}
 {% endtabs %}

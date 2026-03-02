@@ -1,0 +1,10 @@
+{%- if site.language != "en" -%}
+{%- assign i18n = site.data.i18n[site.language] -%}
+{%- if i18n.translation_banner -%}
+<div class="alert alert-note" role="alert">
+  <div class="alert-msg">
+    {{ i18n.translation_banner }} <a href="https://github.com/braze-inc/braze-docs/issues/new?labels=translation&title=Translation+issue:+{{ page.url | url_encode }}">{{ i18n.translation_banner_link }}</a>.
+  </div>
+</div>
+{%- endif -%}
+{%- endif -%}
