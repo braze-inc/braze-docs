@@ -23,7 +23,7 @@ Teams are not available on all Braze contracts. To access this feature, contact 
 
 Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> **Add Team**.
 
-![Window to add a new Team.]({% image_buster /assets/img_archive/adding_a_team.png %}){: style="max-width:70%;"}
+![Window to add a new Team.]({% image_buster /assets/img_archive/adding_a_team.png %})
 
 Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data the Team has access to. For example, a possible use case is to perform [testing with Teams](#test-with-teams) by creating a development Team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on the product.
 
