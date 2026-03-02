@@ -16,6 +16,10 @@ description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Doppelte Kampagn
 
 > Verwenden Sie diesen Endpunkt, um Kampagnen zu duplizieren. Dieser API Endpunkt ist vergleichbar mit dem [Duplizieren von Kampagnen im Braze-Dashboard][1].
 
+{% alert important %}
+Die Duplizierung einer Kampagne mit Hilfe der API befindet sich derzeit in der Early-Access-Phase. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
+{% endalert %}
+
 ## Voraussetzungen
 
 Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berechtigung `campaigns.duplicate` erstellen.
