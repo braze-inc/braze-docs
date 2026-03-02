@@ -26,5 +26,5 @@
 
 # CUSTOM SCRIPTS
 # These scripts share global variables and interdependencies, so changes must be verified to avoid breaking other scripts.
-/bdocs @braze-inc/braze-docs
-/scripts @braze-inc/braze-docs
+/bdocs @braze-inc/docs-team
+/scripts @braze-inc/docs-team
