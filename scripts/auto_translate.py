@@ -108,20 +108,26 @@ def strip_code_fences(text):
 
 
 def call_claude(client, system_prompt, user_message, retries=3):
-    """Call the Claude API with exponential-backoff retry."""
+    """Call the Claude API via streaming with exponential-backoff retry."""
     for attempt in range(retries):
         try:
-            response = client.messages.create(
+            text_chunks = []
+            stop_reason = None
+            with client.messages.stream(
                 model=MODEL,
                 max_tokens=MAX_TOKENS,
                 temperature=0,
                 system=system_prompt,
                 messages=[{"role": "user", "content": user_message}],
-            )
-            if response.stop_reason == "max_tokens":
+            ) as stream:
+                for text in stream.text_stream:
+                    text_chunks.append(text)
+                stop_reason = stream.get_final_message().stop_reason
+            full_text = "".join(text_chunks)
+            if stop_reason == "max_tokens":
                 print(f"    WARNING: output truncated (hit {MAX_TOKENS} token limit). "
                       "Consider increasing TRANSLATION_MAX_TOKENS.")
-            return strip_code_fences(response.content[0].text)
+            return strip_code_fences(full_text)
         except Exception as exc:
             if attempt < retries - 1:
                 wait = 2 ** (attempt + 1)
