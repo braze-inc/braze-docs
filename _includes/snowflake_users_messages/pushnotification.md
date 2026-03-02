@@ -76,120 +76,127 @@ erDiagram
     CAMPAIGN_ENROLLMENT_EVENT {
         string id PK
         string campaign_id FK
-        string campaign_updated_at FK
+        string campaign_api_id FK
         string user_id FK
+        string app_api_id
+        string app_group_api_id
+        string app_group_id
+        string country
+        string device_id
+        string dispatch_id
         string external_user_id
-        string message_variation_id
+        string gender
+        string language
+        string message_variation_api_id
         string send_id
+        string sf_created_at
         string time
         string timezone
     }
     CAMPAIGN_CONVERSION_EVENT {
         string id PK
         string campaign_id FK
-        string campaign_updated_at FK
-        string conversion_behavior_index FK
-        string message_variation_id FK
+        string campaign_api_id FK
+        string message_variation_api_id FK
         string user_id FK
-        string event_type
-        string app_id
+        string app_api_id
+        string app_group_api_id
+        string app_group_id
+        string conversion_behavior_index
+        string country
+        string device_id
+        string dispatch_id
         string external_user_id
+        string gender
+        string language
         string send_id
+        string sf_created_at
         string time
         string timezone
-    }
-
-    CANVAS_VARIATION {
-        string id PK
-        string name PK
-        string canvas_id FK
-        string canvas_updated_at FK
-    }
-    CANVAS_STEP {
-        string id PK
-        string canvas_id FK
-        string canvas_updated_at FK
-        string canvas_step_name
-        string channel_android_push
-        string channel_content_cards
-        string channel_email
-        string channel_ios_push
-        string channel_in_app_message
-        string channel_sms
-        string channel_web_push
-        string channel_webhook
     }
 
     CANVAS_ENTRY_EVENT {
         string id PK
         string canvas_id FK
-        string canvas_updated_at FK
-        string canvas_step_id FK
-        string canvas_step_updated_at FK
-        string canvas_variation_id FK
+        string canvas_api_id FK
+        string canvas_step_api_id FK
+        string canvas_variation_api_id FK
         string user_id FK
-        string event_type
+        string app_group_api_id
+        string app_group_id
+        string country
+        string device_id
         string external_user_id
+        string gender
         string in_control_group
+        string language
+        string sf_created_at
         string time
         string timezone
     }
     CANVAS_EXPERIMENT_STEP_ENTRY_EVENT {
         string id PK
         string canvas_id FK
-        string canvas_updated_at FK
-        string canvas_step_id FK
-        string canvas_step_updated_at FK
-        string canvas_variation_id FK
+        string canvas_api_id FK
+        string canvas_step_api_id FK
+        string canvas_variation_api_id FK
         string user_id FK
-        string event_type
-        string experiment_split_id
-        string experiment_split_name
-        string experiment_step_id
+        string app_group_id
+        string experiment_split_api_id
+        string experiment_step_api_id
         string external_user_id
         string in_control_group
+        string sf_created_at
         string time
     }
     CANVAS_EXIT_EVENT {
         string id PK
         string canvas_id FK
-        string canvas_updated_at FK
-        string canvas_step_id FK
-        string canvas_step_updated_at FK
-        string canvas_variation_id FK
+        string canvas_api_id FK
+        string canvas_step_api_id FK
+        string canvas_variation_api_id FK
         string user_id FK
+        string app_group_api_id
         string app_group_id
-        string event_type
+        string external_user_id
+        string sf_created_at
         string time
     }
 
     CANVAS_EXPERIMENT_STEP_CONVERSION_EVENT {
         string id PK
         string canvas_id FK
-        string canvas_updated_at FK
-        string canvas_step_id FK
-        string canvas_step_updated_at FK
-        string canvas_conversion_behaviour_id FK
-        string canvas_variation_id FK
+        string canvas_api_id FK
+        string canvas_step_api_id FK
+        string canvas_variation_api_id FK
         string user_id FK
-        string app_id
-        string event_type
-        string experiment_step_id
-        string experiment_split_id
-        string experiment_split_name
+        string app_api_id
+        string app_group_id
+        string conversion_behavior_index
+        string experiment_split_api_id
+        string experiment_step_api_id
+        string external_user_id
+        string sf_created_at
         string time
     }
     CANVAS_CONVERSION_EVENT {
         string id PK
         string canvas_id FK
-        string canvas_updated_at FK
-        string canvas_step_id FK
-        string canvas_conversion_behaviour_id FK
-        string canvas_variation_id FK
+        string canvas_api_id FK
+        string canvas_step_api_id FK
+        string canvas_step_message_variation_api_id FK
+        string canvas_variation_api_id FK
         string user_id FK
-        string event_type
-        string app_id
+        string app_api_id
+        string app_group_api_id
+        string app_group_id
+        string conversion_behavior_index
+        string country
+        string device_id
         string external_user_id
+        string gender
+        string language
+        string sf_created_at
         string time
         string timezone
     }
@@ -211,23 +218,18 @@ erDiagram
     CANVAS_EXIT_EVENT ||--o{ GROUP_3 : joins
     GROUP_3 ||--o{ EVENT : joins
 
-    GROUP_4["Canvas Steps"] { }
-    CANVAS_VARIATION ||--o{ GROUP_4 : joins
-    CANVAS_STEP ||--o{ GROUP_4 : joins
+    GROUP_4["Canvas Experiments"] { }
+    CANVAS_EXPERIMENT_STEP_CONVERSION_EVENT ||--o{ GROUP_4 : joins
+    CANVAS_CONVERSION_EVENT ||--o{ GROUP_4 : joins
     GROUP_4 ||--o{ EVENT : joins
 
-    GROUP_5["Canvas Experiments"] { }
-    CANVAS_EXPERIMENT_STEP_CONVERSION_EVENT ||--o{ GROUP_5 : joins
-    CANVAS_CONVERSION_EVENT ||--o{ GROUP_5 : joins
+    GROUP_5["Canvas Snapshots and Log"] { }
+    CHANGELOGS_CANVAS_SHARED ||--o{ GROUP_5 : joins
+    SNAPSHOTS_CANVAS_FLOW_STEP_SHARED ||--o{ GROUP_5 : joins
+    SNAPSHOTS_CANVAS_STEP_SHARED ||--o{ GROUP_5 : joins
+    SNAPSHOTS_CANVAS_VARIATION_SHARED ||--o{ GROUP_5 : joins
+    SNAPSHOTS_EXPERIMENT_STEP_SHARED ||--o{ GROUP_5 : joins
     GROUP_5 ||--o{ EVENT : joins
-
-    GROUP_6["Canvas Snapshots and Log"] { }
-    CHANGELOGS_CANVAS_SHARED ||--o{ GROUP_6 : joins
-    SNAPSHOTS_CANVAS_FLOW_STEP_SHARED ||--o{ GROUP_6 : joins
-    SNAPSHOTS_CANVAS_STEP_SHARED ||--o{ GROUP_6 : joins
-    SNAPSHOTS_CANVAS_VARIATION_SHARED ||--o{ GROUP_6 : joins
-    SNAPSHOTS_EXPERIMENT_STEP_SHARED ||--o{ GROUP_6 : joins
-    GROUP_6 ||--o{ EVENT : joins
 ```
 
 - `PK` = primary key
