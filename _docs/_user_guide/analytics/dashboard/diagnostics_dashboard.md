@@ -60,7 +60,7 @@ At the top of the page, there are key summary tiles for your selected timeframe 
   - **Email, SMS/MMS/RCS, WhatsApp, LINE, and push:** The message was successfully handed off to a sending partner.  
   - **Webhooks:** The webhook request was made successfully, returning a `2xx` response.  
   - **Content Cards:** The card was sent and is eligible for viewing.    
-  - **In-app-messages:** The message was displayed to the user.
+  - **In-app messages:** The message was displayed to the user.
 
 ### Message outcomes over time
 
