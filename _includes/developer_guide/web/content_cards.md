@@ -51,9 +51,9 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 
 [See the SDK reference docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards) for more information on Content Card toggling.
 
-## Testing Content Cards on web
+## Testing Content Cards on the web
 
-You can test your Content Cards integration using your browser developer tools.
+You can test your Content Cards integration using your browser's developer tools.
 
 1. Create a Content Card campaign and target your test user.
 2. Log in to the website that has your Web SDK integration.
