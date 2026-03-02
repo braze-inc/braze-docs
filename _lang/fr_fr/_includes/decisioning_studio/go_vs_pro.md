@@ -8,7 +8,7 @@ Go est idéal pour les équipes qui se lancent dans le décisionnel par intellig
 
 - Configuration créative en libre-service avec un agent décisionnel préconçu
 - Mesure du succès axée sur les indicateurs de clics
-- Compatibilité avec trois plateformes d'engagement client (CEP) : Braze, Salesforce Marketing Cloud et Klaviyo
+- Compatibilité avec deux plateformes d'engagement client (CEP) : Braze et Salesforce Marketing Cloud
 
 ### Decisioning Studio Pro
 

@@ -8,7 +8,7 @@ Go is ideal for teams getting started with AI decisioning. It includes:
 
 - Self-serve creative configuration with a pre-designed decisioning agent
 - Success metric focused on clicks
-- Compatibility with three Customer Engagement Platforms (CEPs): Braze, Salesforce Marketing Cloud, and Klaviyo
+- Compatibility with two Customer Engagement Platforms (CEPs): Braze and Salesforce Marketing Cloud
 
 ### Decisioning Studio Pro
 

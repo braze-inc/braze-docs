@@ -8,7 +8,7 @@ Go ist ideal für Teams, die mit der KI-Entscheidungsfindung beginnen. Es umfass
 
 - Kreative Konfiguration zur Selbstbedienung mit einem vorgefertigten Entscheidungsagenten
 - Erfolgsmetrik mit Fokus auf Klicks
-- Kompatibilität mit drei Customer-Engagement-Plattformen (CEPs): Braze, Salesforce Marketing Cloud und Klaviyo
+- Kompatibilität mit zwei Customer-Engagement-Plattformen (CEPs): Braze und Salesforce Marketing Cloud
 
 ### Decisioning Studio Pro
 

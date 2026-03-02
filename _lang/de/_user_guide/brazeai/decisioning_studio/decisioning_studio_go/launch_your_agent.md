@@ -55,7 +55,6 @@ Nachdem Sie Ihren Versuchsplan validiert haben, sammeln Sie die folgenden Detail
 |-----|---------------|
 | **Braze** | Kampagnen und Canvase |
 | **Salesforce Marketing Cloud** | Nur Fahrten |
-| **Klaviyo** | Nur Ströme |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 **Zielgruppe ID aus Ihrer CEP:**
@@ -64,7 +63,6 @@ Nachdem Sie Ihren Versuchsplan validiert haben, sammeln Sie die folgenden Detail
 |-----|---------------|
 | **Braze** | Nur Segmente |
 | **Salesforce Marketing Cloud** | Nur Daten Erweiterungen |
-| **Klaviyo** | Nur Segmente |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 Wenn Sie keine bestehende Zielgruppe haben, die Ihr BAU-Publikum trackt, müssen Sie eine erstellen.

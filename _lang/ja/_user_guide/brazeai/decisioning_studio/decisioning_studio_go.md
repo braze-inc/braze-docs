@@ -7,13 +7,18 @@ description: "BrazeAI Decisioning<sup>StudioTM</sup>Goを設定し、Brazeに統
 
 # BrazeAI Decisioning Studio™ Go
 
+{% alert important %}
+Note: We are currently building a new version of Decisioning Studio Go that will launch self-serve from the Braze Dashboard.
+
+The following documentation applies to the legacy version, which will be deprecated in 1H2026.
+{% endalert %}
+
 ## Decisioning Studio Goについて
 
-Decisioning Studio Goには、限られたアクションバンク、エンゲージメントベースのカスタマーフィーチャーのみ、クリック数の最適化など、セルフサービスによるクリエイティブ設定が含まれ、以下の3つのカスタマーエンゲージメントプラットフォーム（CEP）のみと互換性がある：
+Decisioning Studio Goには、限られたアクションバンク、エンゲージメントベースのカスタマーフィーチャーのみ、クリック数の最適化など、セルフサービスによるクリエイティブ設定が含まれ、以下の2つのカスタマーエンゲージメントプラットフォーム（CEP）のみと互換性がある：
 
 * Braze
 * セールスフォース・マーケティングクラウド
-* クラビオ
 
 Decisioning Studio GoとDecisioning Studio Proの違いについては、[Decisioning Studio GoとDecisioning Studio Proを]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro)参照のこと。
 

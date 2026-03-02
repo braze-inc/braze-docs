@@ -13,7 +13,7 @@ description: "Découvrez comment BrazeAI Decisioning Studio Go se connecte aux d
 
 Contrairement à Decisioning Studio Pro, qui prend en charge les intégrations de données directes avec diverses sources, Decisioning Studio Go accède aux données clients par l'intermédiaire de votre CEP. Cela signifie que :
 
-- Les **données d'audience** sont tirées directement des segments ou des listes définis dans votre CEP (Braze, Salesforce Marketing Cloud ou Klaviyo) et ne peuvent inclure que certains attributs prédéfinis (pas de données 1P).
+- Les **données d'audience** sont tirées directement des segments ou des listes définis dans votre CEP (Braze ou Salesforce Marketing Cloud) et ne peuvent inclure que certains attributs prédéfinis (pas de données 1P).
 - Les **données d'engagement** (ouvertures, clics, envois) sont capturées par le biais de requêtes automatisées ou d'intégrations natives avec votre CEP.
 - **Aucune configuration supplémentaire du pipeline de données n'** est nécessaire au-delà de ce que vous configurez dans votre CEP.
 
@@ -25,7 +25,6 @@ Decisioning Studio Go prend en charge les CEP suivantes pour l'accès aux donné
 |-----|-----------------|-----------------|
 | **Braze** | Segments | Exportation de Braze Currents |
 | **Salesforce Marketing Cloud** | Extensions de données | Automatisation des requêtes SQL |
-| **Klaviyo** | Segments | Intégration de l'API native |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Données requises par la CEP
@@ -58,17 +57,6 @@ Pour les intégrations à Salesforce Marketing Cloud, Decisioning Studio Go requ
 2. **Suivi de l'accès aux événements**: Tant que le paquet d'applications installées prend en charge la configuration automatisée de bout en bout, aucune configuration supplémentaire n'est nécessaire. 
 
 Les extensions de données et les requêtes SQL sont configurées dans le cadre de la [configuration de l'orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/).
-
-{% endtab %}
-{% tab Klaviyo %}
-
-### Exigences relatives aux données de Klaviyo
-
-Pour les intégrations Klaviyo, Decisioning Studio Go requiert :
-
-1. **Accès au segment**: Votre audience doit être définie comme un segment Klaviyo auquel la clé API peut accéder.
-2. **Données du profil**: La clé API doit avoir un accès complet aux profils pour lire les attributs personnalisés.
-3. **Accès aux indicateurs**: La clé API doit disposer d'un accès complet aux indicateurs et aux événements pour capturer les données d'engagement.
 
 {% endtab %}
 {% endtabs %}

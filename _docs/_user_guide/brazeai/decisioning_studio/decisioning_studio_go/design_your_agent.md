@@ -19,7 +19,7 @@ Decisioning Studio Go is a self-service platform with streamlined capabilities c
 |-----------|----------------------|------------------------|
 | **Success metric** | Clicks only | Any business metric (revenue, conversions, or ARPU) |
 | **Dimensions** | Limited action bank | Unlimited dimensions |
-| **CEPs supported** | Braze, SFMC, Klaviyo | Any CEP (native and custom) |
+| **CEPs supported** | Braze, SFMC | Any CEP (native and custom) |
 | **Customer data** | Engagement only | All 1P Data |
 | **Setup** | Self-service | AI Decisioning Services support |
 | **Experiment groups** | Go + Random Control + optional BAU | Fully customizable |
@@ -53,14 +53,6 @@ Consider creating a dedicated segment for your Decisioning Studio Go experimente
 1. Configure a Data Extension that contains your target audience.
 2. Ensure this Data Extension is refreshed daily with the latest customer data.
 3. Reference this Data Extension in the Decisioning Studio Go portal when configuring your experimenter.
-
-{% endtab %}
-{% tab Klaviyo %}
-
-**Defining audience in Klaviyo:**
-
-1. Create a segment in Klaviyo that defines your target audience.
-2. When configuring your experimenter in the Decisioning Studio Go portal, select this segment.
 
 {% endtab %}
 {% endtabs %}
@@ -102,7 +94,7 @@ When designing your Go agent, keep these limitations in mind:
 
 - **Clicks only**: Go optimizes for click-through rates. If you need to optimize for revenue, conversions, or other business metrics, consider Decisioning Studio Pro.
 - **Limited dimensions**: Go supports a predefined set of dimensions. For custom dimensions or complex personalization, consider Decisioning Studio Pro.
-- **Three CEPs**: Go only integrates with Braze, Salesforce Marketing Cloud, and Klaviyo. For other platforms, consider Decisioning Studio Pro.
+- **Limited CEP support**: Go only integrates with Braze and Salesforce Marketing Cloud. For other platforms, consider Decisioning Studio Pro.
 
 ## Best practices
 

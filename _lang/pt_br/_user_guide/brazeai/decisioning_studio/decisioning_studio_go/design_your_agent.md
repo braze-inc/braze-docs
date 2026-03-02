@@ -19,7 +19,7 @@ O Decisioning Studio Acessar é uma plataforma de autoatendimento com recursos s
 |-----------|----------------------|------------------------|
 | **Métrica de sucesso** | Somente cliques | Qualquer métrica de negócios (receita, conversões ou ARPU) |
 | **Dimensões** | Banco de ações limitado | Dimensões ilimitadas |
-| **CEPs apoiados** | Braze, SFMC, Klaviyo | Qualquer CEP (nativo e personalizado) |
+| **CEPs apoiados** | Braze, SFMC | Qualquer CEP (nativo e personalizado) |
 | **Dados de cliente** | Somente engajamento | Todos os dados 1P |
 | **Configuração** | Autoatendimento | Suporte aos serviços de tomada de decisão por IA |
 | **Grupos de experimentos** | Acessar + controle aleatório + BAU opcional | Totalmente personalizável |
@@ -53,14 +53,6 @@ Considere criar um segmento dedicado para seu experimentador do Decisioning Stud
 1. Configure uma extensão de dados que contenha seu público-alvo.
 2. Certifique-se de que essa extensão de dados seja atualizada diariamente com os dados mais recentes dos clientes.
 3. Faça referência a essa extensão de dados no portal do Decisioning Studio Acessar ao configurar seu experimentador.
-
-{% endtab %}
-{% tab Klaviyo %}
-
-**Definição de público no Klaviyo:**
-
-1. Crie um segmento na Klaviyo que defina seu público-alvo.
-2. Ao configurar seu experimentador no portal do Decisioning Studio Acessar, selecione esse segmento.
 
 {% endtab %}
 {% endtabs %}
@@ -102,7 +94,7 @@ Ao projetar seu agente Acessar, tenha em mente essas limitações:
 
 - **Somente cliques**: O Acessar otimiza as taxas de cliques. Se você precisar otimizar a receita, as conversões ou outras métricas de negócios, considere o Decisioning Studio Pro.
 - **Dimensões limitadas**: O Acessar oferece suporte a um conjunto predefinido de dimensões. Para dimensões personalizadas ou personalização complexa, considere o Decisioning Studio Pro.
-- **Três CEPs**: O Acessar só se integra ao Braze, ao Salesforce Marketing Cloud e ao Klaviyo. Para outras plataformas, considere o Decisioning Studio Pro.
+- **Dois CEPs**: O Acessar só se integra ao Braze e ao Salesforce Marketing Cloud. Para outras plataformas, considere o Decisioning Studio Pro.
 
 ## Melhores práticas
 

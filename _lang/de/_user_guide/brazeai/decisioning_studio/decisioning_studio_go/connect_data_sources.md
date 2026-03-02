@@ -13,7 +13,7 @@ description: "Erfahren Sie, wie BrazeAI Decisioning Studio Go über Ihre Custome
 
 Im Gegensatz zu Decisioning Studio Pro, das direkte Datenintegrationen mit verschiedenen Quellen unterstützt, greift Decisioning Studio Go über Ihr CEP auf Kundendaten zu. Dies bedeutet:
 
-- **Daten zur Zielgruppe** werden direkt aus Segmenten oder Listen gezogen, die in Ihrem CEP (Braze, Salesforce Marketing Cloud oder Klaviyo) definiert sind, und können nur bestimmte vordefinierte Attribute enthalten (keine 1P-Daten).
+- **Daten zur Zielgruppe** werden direkt aus Segmenten oder Listen gezogen, die in Ihrem CEP (Braze oder Salesforce Marketing Cloud) definiert sind, und können nur bestimmte vordefinierte Attribute enthalten (keine 1P-Daten).
 - **Daten zum Engagement** (Öffnungen, Klicks, Sendungen) werden durch automatisierte Abfragen oder native Integrationen mit Ihrem CEP erfasst.
 - **Es ist keine zusätzliche Einrichtung der Daten-Pipeline** erforderlich, die über das hinausgeht, was Sie in Ihrem CEP konfigurieren.
 
@@ -25,7 +25,6 @@ Decisioning Studio Go unterstützt die folgenden CEPs für den Zugriff auf Daten
 |-----|-----------------|-----------------|
 | **Braze** | Segmente | Braze-Currents exportieren |
 | **Salesforce Marketing Cloud** | Daten Erweiterungen | SQL-Abfrage-Automatisierung |
-| **Klaviyo** | Segmente | Native API-Integration |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Datenanforderungen der CEP
@@ -58,17 +57,6 @@ Für Salesforce Marketing Cloud Integrationen benötigt Decisioning Studio Go:
 2. **Tracking Events Zugriff**: Solange das installierte App-Paket die automatisierte End-to-End-Einrichtung unterstützt, ist keine zusätzliche Konfiguration erforderlich. 
 
 Die Datenerweiterungen und SQL-Anfragen werden im Rahmen der [Orchestrierung]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/) konfiguriert.
-
-{% endtab %}
-{% tab Klaviyo %}
-
-### Anforderungen an die Daten von Klaviyo
-
-Für Klaviyo-Integrationen benötigt Decisioning Studio Go:
-
-1. **Segmentieren Sie den Zugang**: Ihre Zielgruppe muss als ein Klaviyo Segment definiert sein, auf das der API-Schlüssel zugreifen kann.
-2. **Daten zum Profil**: Der API-Schlüssel muss Vollzugriff auf Profile haben, um Attribute von Kund:in zu lesen.
-3. **Zugriff auf Metriken**: Der API-Schlüssel muss Vollzugriff auf Metriken und Ereignisse haben, um Daten über das Engagement zu erfassen.
 
 {% endtab %}
 {% endtabs %}

@@ -7,13 +7,18 @@ description: "Saiba como configurar e integrar o BrazeAI Decisioning <sup>Studio
 
 # BrazeAI Decisioning Studio™ Acessar
 
+{% alert important %}
+Note: We are currently building a new version of Decisioning Studio Go that will launch self-serve from the Braze Dashboard.
+
+The following documentation applies to the legacy version, which will be deprecated in 1H2026.
+{% endalert %}
+
 ## Sobre o Decisioning Studio Acessar
 
-O Decisioning Studio Acessar inclui a configuração de criativos de autoatendimento com um banco de ações limitado, apenas recursos de clientes baseados em engajamento, otimização de cliques e é compatível apenas com as três plataformas de engajamento com clientes (CEPs) a seguir:
+O Decisioning Studio Acessar inclui a configuração de criativos de autoatendimento com um banco de ações limitado, apenas recursos de clientes baseados em engajamento, otimização de cliques e é compatível apenas com as duas plataformas de engajamento com clientes (CEPs) a seguir:
 
 * Braze
 * Salesforce Marketing Cloud
-* Klaviyo
 
 Para saber mais sobre as diferenças entre o Decisioning Studio Go e o Decisioning Studio Pro, consulte [Decisioning Studio Go versus Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro).
 

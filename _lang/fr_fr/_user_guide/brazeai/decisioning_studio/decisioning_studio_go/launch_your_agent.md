@@ -55,7 +55,6 @@ Après avoir validé votre plan d'expérience, rassemblez les informations suiva
 |-----|---------------|
 | **Braze** | Campagnes et canvas |
 | **Salesforce Marketing Cloud** | Trajets uniquement |
-| **Klaviyo** | Flux uniquement |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 **ID de l'audience de votre CEP :**
@@ -64,7 +63,6 @@ Après avoir validé votre plan d'expérience, rassemblez les informations suiva
 |-----|---------------|
 | **Braze** | Segments uniquement |
 | **Salesforce Marketing Cloud** | Extensions de données uniquement |
-| **Klaviyo** | Segments uniquement |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 Si vous ne disposez pas d'une audience existante qui suit votre audience BAU, vous devez en créer une.

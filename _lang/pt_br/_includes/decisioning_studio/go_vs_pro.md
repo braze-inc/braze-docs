@@ -8,7 +8,7 @@ O Acessar é ideal para equipes que estão começando a usar a tomada de decisõ
 
 - Configuração criativa de autoatendimento com um agente de decisão pré-projetado
 - Métrica de sucesso focada em cliques
-- Compatibilidade com três plataformas de engajamento com clientes (CEPs): Braze, Salesforce Marketing Cloud e Klaviyo
+- Compatibilidade com duas plataformas de engajamento com clientes (CEPs): Braze e Salesforce Marketing Cloud
 
 ### Decisioning Studio Pro
 

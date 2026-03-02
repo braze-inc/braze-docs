@@ -19,7 +19,7 @@ Decisioning Studio Go est une plateforme en libre-service dont les fonctionnalit
 |-----------|----------------------|------------------------|
 | **Indicateurs de réussite** | Clics uniquement | Toute mesure commerciale (chiffre d'affaires, conversions ou ARPU) |
 | **Dimensions** | Banque d'action limitée | Dimensions illimitées |
-| **PEC soutenus** | Braze, SFMC, Klaviyo | Toute CEP (native et personnalisée) |
+| **PEC soutenus** | Braze, SFMC | Toute CEP (native et personnalisée) |
 | **Données client** | Engagement uniquement | Toutes les données 1P |
 | **Configuration** | Libre service | Soutien aux services d'aide à la décision de l'intelligence artificielle |
 | **Groupes expérimentaux** | Go + contrôle aléatoire + BAU optionnel | Entièrement personnalisable |
@@ -53,14 +53,6 @@ Envisagez de créer un segment dédié à votre expérimentateur Decisioning Stu
 1. Configurez une extension de données contenant votre audience cible.
 2. Veillez à ce que cette extension de données soit actualisée quotidiennement avec les données les plus récentes sur les clients.
 3. Faites référence à cette extension de données dans le portail Decisioning Studio Go lorsque vous configurez votre expérimentateur.
-
-{% endtab %}
-{% tab Klaviyo %}
-
-**Définition de l'audience dans Klaviyo :**
-
-1. Créez dans Klaviyo un segment qui définit votre audience cible.
-2. Lors de la configuration de votre expérimentateur dans le portail Decisioning Studio Go, sélectionnez ce segment.
 
 {% endtab %}
 {% endtabs %}
@@ -102,7 +94,7 @@ Lorsque vous concevez votre agent Go, gardez ces limites à l'esprit :
 
 - **Clics uniquement**: Go optimise le taux de clics. Si vous avez besoin d'optimiser le chiffre d'affaires, les conversions ou d'autres indicateurs commerciaux, envisagez Decisioning Studio Pro.
 - **Dimensions limitées**: Go prend en charge un ensemble prédéfini de dimensions. Pour des dimensions personnalisées ou une personnalisation complexe, envisagez Decisioning Studio Pro.
-- **Trois CEP**: Go ne s'intègre qu'avec Braze, Salesforce Marketing Cloud et Klaviyo. Pour d'autres plateformes, envisagez Decisioning Studio Pro.
+- **Deux CEP**: Go ne s'intègre qu'avec Braze et Salesforce Marketing Cloud. Pour d'autres plateformes, envisagez Decisioning Studio Pro.
 
 ## Bonnes pratiques
 

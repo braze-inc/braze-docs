@@ -8,7 +8,7 @@ Go es ideal para equipos que se inician en la toma de decisiones con IA. Incluye
 
 - Configuración creativa de autoservicio con un agente decisor prediseñado
 - Métrica de éxito centrada en los clics
-- Compatibilidad con tres plataformas de interacción con los clientes (CEP): Braze, Salesforce Marketing Cloud y Klaviyo
+- Compatibilidad con dos plataformas de interacción con los clientes (CEP): Braze y Salesforce Marketing Cloud
 
 ### Estudio de decisiones Pro
 

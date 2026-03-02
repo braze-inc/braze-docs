@@ -13,7 +13,7 @@ description: "Saiba como o BrazeAI Decisioning Studio Acessa os dados de seus cl
 
 Ao contrário do Decisioning Studio Pro, que suporta integrações diretas de dados com várias fontes, o Decisioning Studio Acessa os dados de clientes por meio do CEP. Isso significa que:
 
-- **Os dados do público** são extraídos diretamente de segmentos ou listas definidas em seu CEP (Braze, Salesforce Marketing Cloud ou Klaviyo) e só podem incluir determinadas atribuições predefinidas (não dados 1P)
+- **Os dados do público** são extraídos diretamente de segmentos ou listas definidas em seu CEP (Braze ou Salesforce Marketing Cloud) e só podem incluir determinadas atribuições predefinidas (não dados 1P)
 - **Os dados de engajamento** (aberturas, cliques, envios) são capturados por meio de consultas automatizadas ou integrações nativas com seu CEP
 - **Não** é necessária **nenhuma configuração adicional de pipeline de dados** além do que você configura em seu CEP
 
@@ -25,7 +25,6 @@ O Decisioning Studio Acessa os seguintes CEPs para acesso a dados:
 |-----|-----------------|-----------------|
 | **Braze** | Segmentos | Exportação de Braze Currents |
 | **Salesforce Marketing Cloud** | Extensões de dados | Automação de consultas de SQL |
-| **Klaviyo** | Segmentos | Integração de API nativa |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Requisitos de dados do CEP
@@ -58,17 +57,6 @@ Para integrações com o Salesforce Marketing Cloud, o Decisioning Studio Acessa
 2. **Acesso a eventos de rastreamento**: Desde que o pacote de aplicativos instalado ofereça suporte à configuração automatizada de ponta a ponta, nenhuma configuração adicional será necessária. 
 
 As extensões de dados e as consultas de SQL são configuradas como parte da [configuração da orquestração]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/).
-
-{% endtab %}
-{% tab Klaviyo %}
-
-### Requisitos de dados do Klaviyo
-
-Para integrações com a Klaviyo, o Decisioning Studio Acessar requer:
-
-1. **Acesso ao segmento**: Seu público deve ser definido como um segmento da Klaviyo que a chave de API pode acessar.
-2. **Dados do perfil**: A chave de API deve ter acesso completo aos perfis para ler as atribuições do cliente.
-3. **Acesso às métricas**: A chave de acesso completo à API deve ter acesso total a métricas e eventos para capturar dados de engajamento.
 
 {% endtab %}
 {% endtabs %}

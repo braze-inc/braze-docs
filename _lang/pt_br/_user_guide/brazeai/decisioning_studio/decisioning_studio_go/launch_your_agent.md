@@ -55,7 +55,6 @@ Após validar o design do seu experimento, reúna os seguintes detalhes para con
 |-----|---------------|
 | **Braze** | Campanhas e canvas |
 | **Salesforce Marketing Cloud** | Apenas jornadas |
-| **Klaviyo** | Apenas fluxos |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 **ID do público do seu CEP:**
@@ -64,7 +63,6 @@ Após validar o design do seu experimento, reúna os seguintes detalhes para con
 |-----|---------------|
 | **Braze** | Segmentos apenas |
 | **Salesforce Marketing Cloud** | Extensões de Dados apenas |
-| **Klaviyo** | Segmentos apenas |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 Se você não tiver um público existente que rastreie seu público BAU, deve criar um.

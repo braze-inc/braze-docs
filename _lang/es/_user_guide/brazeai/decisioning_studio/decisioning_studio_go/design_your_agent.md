@@ -19,7 +19,7 @@ Decisioning Studio Go es una plataforma de autoservicio con funciones simplifica
 |-----------|----------------------|------------------------|
 | **Métrica del éxito** | Sólo clics | Cualquier métrica empresarial (ingresos, conversiones o ARPU) |
 | **Dimensiones:** | Banco de acción limitada | Dimensiones ilimitadas |
-| **PEC apoyados** | Braze, SFMC, Klaviyo | Cualquier CEP (nativo y personalizado) |
+| **PEC apoyados** | Braze, SFMC | Cualquier CEP (nativo y personalizado) |
 | **Datos del cliente** | Sólo interacción | Todos los datos 1P |
 | **Configurar** | Autoservicio | Apoyo a los servicios de toma de decisiones AI |
 | **Grupos experimentales** | Ir + Control aleatorio + BAU opcional | Totalmente personalizable |
@@ -53,14 +53,6 @@ Considera la posibilidad de crear un segmento dedicado a tu experimentador de De
 1. Configura una Extensión de Datos que contenga tu audiencia objetivo.
 2. Asegúrate de que esta Extensión de datos se actualiza diariamente con los datos de clientes más recientes.
 3. Haz referencia a esta Extensión de Datos en el portal Decisioning Studio Go cuando configures tu experimentador.
-
-{% endtab %}
-{% tab Klaviyo %}
-
-**Definir la audiencia en Klaviyo:**
-
-1. Crea un segmento en Klaviyo que defina tu audiencia objetivo.
-2. Cuando configures tu experimentador en el portal Decisioning Studio Go, selecciona este segmento.
 
 {% endtab %}
 {% endtabs %}
@@ -102,7 +94,7 @@ Cuando diseñes tu agente Go, ten en cuenta estas limitaciones:
 
 - **Sólo clics**: Go optimiza las tasas de click-through. Si necesitas optimizar los ingresos, las conversiones u otras métricas empresariales, considera Decisioning Studio Pro.
 - **Dimensiones limitadas**: Go admite un conjunto predefinido de dimensiones. Para dimensiones personalizadas o personalizaciones complejas, considera Decisioning Studio Pro.
-- **Tres CEPs**: Go sólo se integra con Braze, Salesforce Marketing Cloud y Klaviyo. Para otras plataformas, considera Decisioning Studio Pro.
+- **Dos CEPs**: Go sólo se integra con Braze y Salesforce Marketing Cloud. Para otras plataformas, considera Decisioning Studio Pro.
 
 ## Buenas prácticas
 

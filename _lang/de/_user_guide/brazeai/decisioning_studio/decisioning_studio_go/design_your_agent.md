@@ -19,7 +19,7 @@ Decisioning Studio Go ist eine Selbstbedienungsplattform mit optimierten Funktio
 |-----------|----------------------|------------------------|
 | **Erfolgsmetrik** | Nur Klicks | Beliebige geschäftliche Metriken (Umsatz, Konversionen oder ARPU) |
 | **Format** | Begrenzte Aktionsbank | Unbegrenzte Dimensionen |
-| **Unterstützte CEPs** | Braze, SFMC, Klaviyo | Jeder CEP (nativ und angepasst) |
+| **Unterstützte CEPs** | Braze, SFMC | Jeder CEP (nativ und angepasst) |
 | **Kundendaten** | Nur Engagement | Alle 1P Daten |
 | **Einrichtung** | Selbstbedienung | KI Entscheidungsfindung; Dienste unterstützen |
 | **Experiment Gruppen** | Go + Zufallssteuerung + optional BAU | Vollständig anpassbar |
@@ -53,14 +53,6 @@ Ziehen Sie in Erwägung, ein eigenes Segment für Ihren Decisioning Studio Go Ex
 1. Konfigurieren Sie eine Datenerweiterung, die Ihre Zielgruppe enthält.
 2. Stellen Sie sicher, dass diese Datenerweiterung täglich mit den neuesten Kundendaten aktualisiert wird.
 3. Referenzieren Sie diese Datenerweiterung im Portal Decisioning Studio Go, wenn Sie Ihren Experimenter konfigurieren.
-
-{% endtab %}
-{% tab Klaviyo %}
-
-**Definition der Zielgruppe in Klaviyo:**
-
-1. Erstellen Sie ein Segment in Klaviyo, das Ihre Zielgruppe definiert.
-2. Wählen Sie dieses Segment aus, wenn Sie Ihren Experimentator im Portal Decisioning Studio Go konfigurieren.
 
 {% endtab %}
 {% endtabs %}
@@ -102,7 +94,7 @@ Wenn Sie Ihren Go-Agenten entwerfen, sollten Sie diese Einschränkungen im Hinte
 
 - **Nur Klicks**: Go optimiert für Click-through-Raten. Wenn Sie Ihre Einnahmen, Konversionen oder andere Metriken optimieren müssen, sollten Sie Decisioning Studio Pro in Betracht ziehen.
 - **Begrenzte Abmessungen**: Go unterstützt einen vordefinierten Satz von Dimensionen. Wenn Sie angepasste Dimensionen oder eine komplexe Personalisierung benötigen, sollten Sie Decisioning Studio Pro in Betracht ziehen.
-- **Drei CEPs**: Go lässt sich nur mit Braze, Salesforce Marketing Cloud und Klaviyo integrieren. Für andere Plattformen empfehlen wir Decisioning Studio Pro.
+- **Begrenzte CEP-Unterstützung**: Go lässt sich nur mit Braze und Salesforce Marketing Cloud integrieren. Für andere Plattformen empfehlen wir Decisioning Studio Pro.
 
 ## Bewährte Praktiken
 
