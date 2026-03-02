@@ -34,6 +34,7 @@ Action cards are supported in the following editors:
 - Webhook
 
 On other pages, Operator provides a list of steps to follow in the UI instead of taking action itself. Operator functionality is regularly being improved, and expanded coverage for create tools is expected.
+
 ## Modify a plan
 
 To modify Operator's plan, first approve or reject the pending actions. Then describe the desired change in a new chat message.
