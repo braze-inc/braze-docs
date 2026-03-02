@@ -23,7 +23,16 @@ When Operator proposes changes in the dashboard (such as filling in form fields,
 If an action fails after approval, Operator will notify with details about the failure.
 
 {% alert note %}
-Action cards are currently available in non-drag-and-drop editors. On other pages, Operator provides a list of steps to follow in the UI instead of taking action itself. Operator functionality is regularly being improved, and expanded coverage for create tools is expected.
+Action cards are supported in the following editors:
+
+- In-app message (traditional editor only)
+- Content Card
+- Email (HTML editor only)
+- Push
+- SMS/MMS/RCS
+- Webhook
+
+On other pages, Operator provides a list of steps to follow in the UI instead of taking action itself. Operator functionality is regularly being improved, and expanded coverage for create tools is expected.
 {% endalert %}
 
 ## Modify a plan
