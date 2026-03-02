@@ -43,7 +43,7 @@ Example: `[DD]-Cursor-liquid_use_cases-02122026`
 ---
 
 ## Step 4: Commit and Push Changes
-Stage and Commit all changes in `_docs` with a meaningful message derived from the summary
+Stage and commit all changes in `_docs` with a meaningful message derived from the summary, then push your branch to the remote repository (for example, `git push -u origin <branch-name>`).
 
 ---
 
