@@ -51,6 +51,17 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 
 [See the SDK reference docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards) for more information on Content Card toggling.
 
+## Testing Content Cards on web
+
+You can test your Content Cards integration using your browser developer tools.
+
+1. Create a Content Card campaign and target your test user.
+2. Log in to the website that has your Web SDK integration.
+3. Open your browser console. For Chrome, right-click the page, select **Inspect**, then select the **Console** tab.
+4. Run the command that matches your integration namespace:
+   - `window.braze.getCachedContentCards()`
+   - `window.braze.toggleContentCards()`
+
 ## Card types and properties
 
 The Content Cards data model is available in the Web SDK and offers the following Content Card types: [ImageOnly](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html), [CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html), and [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html). Each type inherits common properties from a base model [Card](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) and has the following additional properties.
