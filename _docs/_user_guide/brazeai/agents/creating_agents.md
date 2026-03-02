@@ -65,9 +65,9 @@ Refer to the [Writing instructions]({{site.baseurl}}/user_guide/brazeai/agents/r
 For Canvas agents, you can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes. Any Liquid variable in the agent instructions is automatically passed to the Agent step when a user enters the step.
 {% endalert %}
 
-#### Step 3.1: Add context
+#### Step 3.1: Add resources
 
-Select **Add context** to choose what your agent can reference. This includes:
+Select **Add resources** to choose what your agent can reference. This includes:
 
 - [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Give the agent access to your catalog data for more accurate responses.
 - [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Let the agent personalize responses based on which segments a user belongs to. You can select up to three segments.
