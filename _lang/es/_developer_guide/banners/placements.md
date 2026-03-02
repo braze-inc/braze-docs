@@ -1,7 +1,7 @@
 ---
-nav_title: Administrar colocaciones
-article_title: Administrar la colocación de banners para el SDK de Braze
-description: "Aprende a crear y gestionar ubicaciones de banners en el SDK de Braze, incluido el acceso a sus propiedades únicas y el registro de impresiones."
+nav_title: Administrar ubicaciones
+article_title: Administrar ubicaciones de Banner en el SDK de Braze
+description: "Aprende a crear y gestionar ubicaciones de Banner en el SDK de Braze, incluido el acceso a sus propiedades únicas y el registro de impresiones."
 page_order: 2
 platform:
   - iOS
@@ -11,15 +11,15 @@ platform:
   - React Native
 ---
 
-# Gestionar las colocaciones de Banner
+# Gestionar las ubicaciones de Banner
 
-> Aprende a crear y gestionar ubicaciones de banners en el SDK de Braze, incluido el acceso a sus propiedades únicas y el registro de impresiones. Para más información general, consulta [Acerca de los banners]({{site.baseurl}}/developer_guide/banners).
+> Aprende a crear y gestionar ubicaciones de Banner en el SDK de Braze, incluido el acceso a sus propiedades únicas y el registro de impresiones. Para más información general, consulta [Acerca de los Banners]({{site.baseurl}}/developer_guide/banners).
 
-## Sobre las solicitudes de colocación {#requests}
+## Sobre las solicitudes de ubicación {#requests}
 
 {% multi_lang_include banners/placement_requests.md %}
 
-## Crear una colocación
+## Crear una ubicación
 
 ### Requisitos previos
 
@@ -29,9 +29,9 @@ Estas son las versiones mínimas del SDK necesarias para crear ubicaciones de Ba
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
-### Paso 2: Actualiza las ubicaciones en tu aplicación {#requestBannersRefresh}
+### Paso 2: Actualizar las ubicaciones en tu aplicación {#requestBannersRefresh}
 
-Las ubicaciones se pueden actualizar llamando a los métodos de actualización que se describen a continuación. Estas ubicaciones se almacenarán en caché automáticamente cuando caduque la sesión de un usuario o cuando cambies los usuarios identificados utilizando el método `changeUser`.
+Las ubicaciones se pueden actualizar llamando a los métodos de actualización que se describen a continuación. Estas ubicaciones se almacenarán en caché automáticamente cuando caduque la sesión de un usuario o cuando se cambien los usuarios identificados utilizando el método `changeUser`.
 
 {% alert tip %}
 Actualiza las ubicaciones lo antes posible para evitar retrasos en la descarga o visualización de los Banners.
@@ -112,17 +112,17 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Paso 3: Escucha las actualizaciones {#subscribeToBannersUpdates}
+### Paso 3: Escuchar las actualizaciones {#subscribeToBannersUpdates}
 
 {% alert tip %}
-Si insertas banners utilizando los métodos del SDK de esta guía, todos los eventos de análisis (como impresiones y clics) se gestionarán automáticamente, y las impresiones sólo se registrarán cuando el banner esté a la vista.
+Si insertas Banners utilizando los métodos del SDK de esta guía, todos los eventos de análisis (como impresiones y clics) se gestionarán automáticamente, y las impresiones solo se registrarán cuando el Banner esté visible.
 {% endalert %}
 
 {% tabs %}
 {% tab Web %}
 {% subtabs %}
-{% subtab Javascript %}
-Si utilizas JavaScript vainilla con el SDK de Web Braze, utiliza [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) para escuchar las actualizaciones de ubicación y luego llama a [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) para obtenerlas.
+{% subtab JavaScript %}
+Si utilizas JavaScript estándar con el SDK Web de Braze, usa [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) para escuchar las actualizaciones de ubicación y luego llama a [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) para obtenerlas.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -136,7 +136,7 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 {% endsubtab %}
 {% subtab React %}
-Si utilizas React con el SDK de Web Braze, configura [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) dentro de un gancho `useEffect` y llama a [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) después de registrar tu oyente.
+Si utilizas React con el SDK Web de Braze, configura [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) dentro de un hook `useEffect` y llama a [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) después de registrar tu listener.
 
 ```typescript
 import * as braze from "@braze/web-sdk";
@@ -245,10 +245,10 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Paso 4: Insertar utilizando el ID de colocación {#insertBanner}
+### Paso 4: Insertar utilizando el ID de ubicación {#insertBanner}
 
 {% alert tip %}
-Para ver un tutorial completo paso a paso, consulta [Visualizar un Banner por ID de Colocación]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners).
+Para ver un tutorial completo paso a paso, consulta [Mostrar un Banner por ID de ubicación]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners).
 {% endalert %}
 
 {% tabs %}
@@ -262,7 +262,7 @@ Crea un elemento contenedor para el Banner. Asegúrate de configurar su anchura 
 
 {% subtabs local %}
 {% subtab JavaScript %}
-Si utilizas JavaScript vainilla con el SDK de Web Braze, llama al método [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) para sustituir el HTML interno del elemento contenedor.
+Si utilizas JavaScript estándar con el SDK Web de Braze, llama al método [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) para sustituir el HTML interno del elemento contenedor.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -297,7 +297,7 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 {% endsubtab %}
 
 {% subtab React %}
-Si utilizas React con el SDK de Web Braze, llama al método [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) con un `ref` para sustituir el HTML interno del elemento contenedor.
+Si utilizas React con el SDK Web de Braze, llama al método [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) con un `ref` para sustituir el HTML interno del elemento contenedor.
 
 ```tsx
 import { useRef } from 'react';
@@ -380,7 +380,7 @@ if let braze = AppDelegate.braze {
 {% tab Android %}
 {% subtabs %}
 {% subtab Java %}
-Para obtener el Banner en código Java, utiliza
+Para obtener el Banner en código Java, utiliza:
 
 ```java
 Banner globalBanner = Braze.getInstance(context).getBanner("global_banner");
@@ -398,7 +398,7 @@ Puedes crear Banners en el diseño de tus vistas de Android incluyendo este XML:
 {% endsubtab %}
 
 {% subtab Kotlin %}
-Si utilizas Android Views, utiliza este XML:
+Si utilizas Android Views, usa este XML:
 
 ```xml
 <com.braze.ui.banners.BannerView
@@ -414,7 +414,7 @@ Si utilizas Jetpack Compose, puedes usar esto:
 Banner(placementId = "global_banner")
 ```
 
-Para obtener el Banner en Kotlin, utiliza
+Para obtener el Banner en Kotlin, utiliza:
 ```kotlin
 val banner = Braze.getInstance(context).getBanner("global_banner")
 ```
@@ -423,7 +423,7 @@ val banner = Braze.getInstance(context).getBanner("global_banner")
 {% endtab %}
 {% tab React Native %}
 
-Si utilizas [la Nueva Arquitectura de React Native](https://reactnative.dev/architecture/landing-page), tienes que registrar `BrazeBannerView` como componente Fabric en tu sitio `AppDelegate.mm`.
+Si utilizas [la nueva arquitectura de React Native](https://reactnative.dev/architecture/landing-page), debes registrar `BrazeBannerView` como componente Fabric en tu `AppDelegate.mm`.
 
 ```swift
 #ifdef RCT_NEW_ARCH_ENABLED
@@ -435,7 +435,7 @@ Si utilizas [la Nueva Arquitectura de React Native](https://reactnative.dev/arch
 }
 #endif
 ```
-Para la integración más sencilla, añade el siguiente fragmento de código JavaScript XML (JSX) a tu jerarquía de vistas, proporcionando sólo el ID de colocación.
+Para la integración más sencilla, añade el siguiente fragmento de código JavaScript XML (JSX) a tu jerarquía de vistas, proporcionando solo el ID de ubicación.
 
 ```javascript
 <Braze.BrazeBannerView
@@ -443,7 +443,7 @@ Para la integración más sencilla, añade el siguiente fragmento de código Jav
 />
 ```
 
-Para obtener el modelo de datos del Banner en React Native, o para comprobar la presencia de esa colocación en la caché de tu usuario, utiliza:
+Para obtener el modelo de datos del Banner en React Native, o para comprobar la presencia de esa ubicación en la caché del usuario, utiliza:
 
 ```javascript
 const banner = await Braze.getBanner("global_banner");
@@ -465,7 +465,7 @@ This feature is not currently supported on Cordova.
 
 {% endtab %}
 {% tab Flutter %}
-Para la integración más sencilla, añade el siguiente widget a tu jerarquía de vistas, proporcionando sólo el ID de colocación.
+Para la integración más sencilla, añade el siguiente widget a tu jerarquía de vistas, proporcionando solo el ID de ubicación.
 
 ```dart
 BrazeBannerView(
@@ -474,7 +474,7 @@ BrazeBannerView(
 To get the Banner's data model in Flutter, use:
 ```
 
-Puedes utilizar el método `getBanner` para comprobar la presencia de esa ubicación en la caché de tu usuario.
+Puedes utilizar el método `getBanner` para comprobar la presencia de esa ubicación en la caché del usuario.
 
 ```dart
 braze.getBanner("global_banner").then((banner) {
@@ -496,29 +496,29 @@ This feature is not currently supported on Roku.
 {% endtab %}
 {% endtabs %}
 
-### Paso 5: Envía un Banner de prueba (opcional) {#handling-test-cards}
+### Paso 5: Enviar un Banner de prueba (opcional) {#handling-test-cards}
 
-Antes de lanzar una campaña de Banner, puedes [enviar un Banner de prueba]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) para verificar tu integración. Los banners de prueba se almacenarán en una caché en memoria independiente y no persistirán al reiniciar la aplicación. Aunque no se necesita ninguna configuración adicional, tu dispositivo de prueba debe ser capaz de recibir notificaciones push en primer plano para que pueda mostrar la prueba.
+Antes de lanzar una campaña de Banner, puedes [enviar un Banner de prueba]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) para verificar tu integración. Los Banners de prueba se almacenarán en una caché en memoria independiente y no persistirán entre reinicios de la aplicación. Aunque no se necesita ninguna configuración adicional, tu dispositivo de prueba debe ser capaz de recibir notificaciones push en primer plano para poder mostrar la prueba.
 
 {% alert note %}
-Los banners de prueba son como cualquier otro banner, excepto que se eliminan en la siguiente sesión de aplicación.
+Los Banners de prueba son como cualquier otro Banner, excepto que se eliminan en la siguiente sesión de la aplicación.
 {% endalert %}
 
-## Registro de impresiones
+## Registrar impresiones
 
-Braze registra automáticamente las impresiones de los banners que están a la vista cuando utilizas los métodos del SDK para insertar un banner, por lo que no es necesario hacer un seguimiento manual de las impresiones.
+Braze registra automáticamente las impresiones de los Banners que están visibles cuando se utilizan los métodos del SDK para insertar un Banner, por lo que no es necesario hacer un seguimiento manual de las impresiones.
 
-## Registro de clics
+## Registrar clics
 
-El método utilizado para registrar los clics en el banner depende de cómo se muestre el banner y de la ubicación del controlador de clics.
+El método utilizado para registrar los clics en un Banner depende de cómo se renderiza el Banner y de dónde se encuentra el controlador de clics.
 
-### Contenido estándar del banner (automático)
+### Contenido estándar del Banner (automático)
 
-Si utilizas métodos predeterminados y listos para usar del SDK para insertar banners, y tu banner utiliza componentes estándar del editor (imágenes, botones, texto), los clics se siguen automáticamente. El SDK adjunta escuchadores de clics a estos elementos, y no se necesita código adicional.
+Si utilizas los métodos predeterminados del SDK para insertar Banners, y tu Banner utiliza componentes estándar del editor (imágenes, botones, texto), los clics se rastrean automáticamente. El SDK adjunta listeners de clics a estos elementos, y no se necesita código adicional.
 
-### Bloques de código personalizados
+### Bloques de código personalizado
 
-Si tu Banner utiliza el bloque de editor **de código personalizado** en el panel de Braze, debes utilizar `brazeBridge.logClick()` para registrar los clics desde dentro de ese HTML personalizado. Esto se aplica incluso cuando se utilizan métodos del SDK para representar el Banner, porque el SDK no puede adjuntar automáticamente escuchas a elementos dentro de tu código personalizado.
+Si tu Banner utiliza el bloque de editor de **código personalizado** en el panel de Braze, debes utilizar `brazeBridge.logClick()` para registrar los clics desde dentro de ese HTML personalizado. Esto se aplica incluso cuando se utilizan métodos del SDK para renderizar el Banner, porque el SDK no puede adjuntar automáticamente listeners a elementos dentro de tu código personalizado.
 
 ```html
 <button onclick="brazeBridge.logClick()">
@@ -526,39 +526,39 @@ Si tu Banner utiliza el bloque de editor **de código personalizado** en el pane
 </button>
 ```
 
-Es similar al [puente JavaScript]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) utilizado para los mensajes HTML dentro de la aplicación. El `brazeBridge` proporciona una capa de comunicación entre el HTML interno del Banner y el SDK Braze padre.
+Para la referencia completa, consulta [Código personalizado y puente JavaScript para Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/custom_code/#javascript-bridge). `brazeBridge` proporciona una capa de comunicación entre el HTML interno del Banner y el SDK de Braze principal.
 
-### Implementaciones de IU personalizadas (headless)
+### Implementaciones de interfaz de usuario personalizadas (headless)
 
-Si estás creando una interfaz de usuario totalmente personalizada utilizando las [propiedades personalizadas](#custom-properties) del Banner en lugar de renderizar el HTML del Banner, deberás registrar manualmente los clics (y las impresiones) desde el código de tu aplicación. Como el SDK no está renderizando el Banner, no tiene forma de hacer un seguimiento automático de las interacciones con tus elementos de IU personalizados.
+Si estás creando una interfaz de usuario totalmente personalizada utilizando las [propiedades personalizadas](#custom-properties) del Banner en lugar de renderizar el HTML del Banner, deberás registrar manualmente los clics (y las impresiones) desde el código de tu aplicación. Como el SDK no está renderizando el Banner, no tiene forma de hacer un seguimiento automático de las interacciones con tus elementos de interfaz de usuario personalizados.
 
 Utiliza el método `logClick()` en el objeto Banner.
 
 ## Dimensiones y tamaño
 
-Esto es lo que debes saber sobre las dimensiones y el tamaño de los estandartes:
+Esto es lo que debes saber sobre las dimensiones y el tamaño de los Banners:
 
-- Aunque el compositor te permite previsualizar Banners en diferentes dimensiones, esa información no se guarda ni se envía al SDK.
-- El HTML ocupará todo el ancho del contenedor en el que se muestre.
-- Te recomendamos que hagas un elemento de dimensión fija y pruebes esas dimensiones en Compositor.
+- Aunque el compositor permite previsualizar Banners en diferentes dimensiones, esa información no se guarda ni se envía al SDK.
+- El HTML ocupará todo el ancho del contenedor en el que se renderice.
+- Se recomienda crear un elemento de dimensión fija y probar esas dimensiones en el compositor.
 
 ## Propiedades personalizadas {#custom-properties}
 
-Puedes utilizar propiedades personalizadas de tu campaña de Banner para recuperar datos clave-valor a través del SDK y modificar el comportamiento o la apariencia de tu aplicación. Por ejemplo, podrías
+Puedes utilizar propiedades personalizadas de tu campaña de Banner para recuperar datos clave-valor a través del SDK y modificar el comportamiento o la apariencia de tu aplicación. Por ejemplo, podrías:
 
-- Envía metadatos para tus análisis o integraciones de terceros.
-- Utiliza metadatos como un objeto `timestamp` o JSON para desencadenar la lógica condicional.
-- Controla el comportamiento de un banner en función de metadatos incluidos como `ratio` o `format`.
+- Enviar metadatos para tus análisis o integraciones de terceros.
+- Utilizar metadatos como un `timestamp` u objeto JSON para desencadenar lógica condicional.
+- Controlar el comportamiento de un Banner en función de metadatos incluidos como `ratio` o `format`.
 
 ### Requisitos previos
 
-Tendrás que [añadir propiedades personalizadas]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#custom-properties) a tu campaña de Banner. Además, éstas son las versiones mínimas del SDK necesarias para acceder a las propiedades personalizadas:
+Tendrás que [añadir propiedades personalizadas]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#custom-properties) a tu campaña de Banner. Además, estas son las versiones mínimas del SDK necesarias para acceder a las propiedades personalizadas:
 
 {% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 reactnative:17.0.0 flutter:15.1.0 %}
 
 ### Acceder a propiedades personalizadas
 
-Para acceder a las propiedades personalizadas de un banner, utiliza uno de los siguientes métodos basados en el tipo de propiedad definido en el panel. Si la clave no coincide con una propiedad de ese tipo o no existe, el método devuelve `null`.
+Para acceder a las propiedades personalizadas de un Banner, utiliza uno de los siguientes métodos en función del tipo de propiedad definido en el panel. Si la clave no coincide con una propiedad de ese tipo o no existe, el método devuelve `null`.
 
 {% tabs local %}
 {% tab Web %}
