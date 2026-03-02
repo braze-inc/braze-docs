@@ -1,3 +1,8 @@
+# Nightly Release Deploy
+#
+# Creates a deploy PR (develop → main) on a schedule. Approval and merge are
+# done manually on the PR to satisfy branch protection rules.
+#
 name: Nightly Release Deploy
 
 on:
@@ -11,9 +16,6 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    outputs:
-      pr_number: ${{ steps.cpr.outputs.pr_number }}
-      skipped: ${{ steps.diff.outputs.skipped }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -32,8 +34,7 @@ jobs:
           fi
 
       - name: Generate deploy body text
-        if: steps.diff.outputs.skipped == 'false'
-        id: body
+        if: steps.diff.outputs.skipped != 'true'
         run: |
           export PROJECT_ROOT="$GITHUB_WORKSPACE"
           export PRIMARY_BRANCH="main"
@@ -45,57 +46,25 @@ jobs:
             DEPLOY_TEXT="No PR details available."
           fi
 
-          # Write to a file so we can pass multiline text cleanly
           echo "$DEPLOY_TEXT" > "$RUNNER_TEMP/deploy_body.txt"
 
       - name: Create or find Pull Request
-        if: steps.diff.outputs.skipped == 'false'
-        id: cpr
+        if: steps.diff.outputs.skipped != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TITLE="Nightly Deploy — $(date -u +'%B %d, %Y')"
           BODY=$(cat "$RUNNER_TEMP/deploy_body.txt")
-          EXISTING=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number')
+          EXISTING=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number // empty')
 
           if [ -n "$EXISTING" ]; then
             echo "Reusing existing PR #$EXISTING — updating title, body, and label."
             gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY" --add-label "Deploy"
-
-            # Add reviewer only if not already requested (idempotent for nightly re-runs)
-            REQUESTED=$(gh api repos/${{ github.repository }}/pulls/$EXISTING -q '.requested_teams[].slug' 2>/dev/null || true)
-            if [[ "$REQUESTED" != *"braze-docs"* ]]; then
-              gh pr edit "$EXISTING" --add-reviewer braze-inc/braze-docs
-            fi
-
-            echo "pr_number=$EXISTING" >> "$GITHUB_OUTPUT"
           else
             gh pr create \
               --base main \
               --head develop \
               --title "$TITLE" \
               --body "$BODY" \
-              --label "Deploy" \
-              --reviewer braze-inc/braze-docs
-
-            NEW=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number')
-            echo "Created PR #$NEW"
-            echo "pr_number=$NEW" >> "$GITHUB_OUTPUT"
+              --label "Deploy"
           fi
-
-  approve-and-merge:
-    needs: create-pr
-    if: needs.create-pr.outputs.skipped != 'true'
-    runs-on: ubuntu-latest
-    environment: Production Automation
-    permissions:
-      contents: write
-      pull-requests: write
-    steps:
-      - name: Merge PR
-        # --admin bypasses branch protection (e.g. required reviews) because approval
-        # is already enforced by the Production Automation environment gate above.
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ needs.create-pr.outputs.pr_number }}
-        run: gh pr merge "$PR_NUMBER" --repo ${{ github.repository }} --merge --admin
