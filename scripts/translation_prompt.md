@@ -49,7 +49,7 @@ Preserve all of the following exactly as they appear in the English source:
 These are Braze product names and features. Keep them in English:
 
 - Braze, Canvas, Canvases, Currents, Content Cards, Content Blocks
-- News Feed, Feature Flags
+- News Feed
 - Liquid (the templating language)
 - SDK, API, REST API
 - Segment, Segments (when referring to the Braze feature)
