@@ -10,7 +10,7 @@ search_tag: Partner
 > These are the list of entity relationships between Snowflake and Braze for each messaging channel.
 
 {% alert important %}
-The entity relationship diagrams highlight shared fields and relationships across tables and are not full table schemas. For a complete list of fields, refer to the individual table schemas.
+The entity relationship diagrams highlight shared fields and relationships across tables and are not full table schemas. For a complete list of fields, refer to the [individual table schemas]({{site.baseurl}}/assets/download_file/data-sharing-raw-table-schemas.txt).
 {% endalert %}
 
 {% sdktabs %}
