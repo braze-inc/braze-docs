@@ -51,9 +51,9 @@ Select **Show Breakdown** for each row of the performance overview statistics to
 
 ### Performance over time
 
-The **Performance Over Time** graph charts the value of each statistic over the specified date range for the specified apps.
+The **Performance Over Time** graph shows the value of each statistic over the specified date range for the specified apps.
 
-![The Performance Over Time showing the statistics for New Users over 30 days.]({% image_buster /assets/img/dashboards/performance_over_time.png %})
+![The Performance Over Time graph showing statistics for new users over 30 days.]({% image_buster /assets/img/dashboards/performance_over_time.png %})
 
 You can chart statistics for:
 - Banners
@@ -71,7 +71,7 @@ You can chart statistics for:
   - (Optional) Breakdown by segment
 - Sessions
   - (Optional) Breakdown by segment or app version
-- Sesions per Hour
+- Sessions per Hour
 - Sessions per MAU
 - SMS
 - Stickiness
