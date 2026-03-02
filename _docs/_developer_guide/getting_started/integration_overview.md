@@ -259,7 +259,6 @@ If you need a higher Braze rate limit, contact your Braze representative and inc
 
 After you submit your request, Braze reviews it and updates you with the outcome.
 
-
 ### Changes and support
 
 Braze may modify rate limits to protect system stability or allow for increased data throughput on your account. Contact Braze Support or your customer success manager for questions or concerns regarding rate limits and how they impact your business.
