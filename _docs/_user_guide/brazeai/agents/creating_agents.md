@@ -51,7 +51,7 @@ Next, set up the details for your agent:
 1. Enter a name and description to help your team understand its purpose.
 2. (optional) Add tags to filter your agent.
 3. Choose the [model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) for your agent to use.
-4. Select the model's thinking level. You can choose from minimal, low, medium, or high. We recommend starting with **Minimal** and testing your agent's responses and adjusting this as needed.
+4. Select the model's [thinking level]({{site.baseurl}}/user_guide/brazeai/agents/reference/#thinking-levels). You can choose from minimal, low, medium, or high. We recommend starting with **Minimal** and testing your agent's responses and adjusting this as needed.
 
 ![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
 

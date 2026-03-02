@@ -45,6 +45,23 @@ Then, you can return to your agent and select your model.
 When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.  
 {% endalert %}
 
+#### Thinking levels
+
+Some LLM providers may allow you to adjust a selected model's thinking level. **Thinking levels** define the range of thought the model uses before answering—from quick, direct responses to longer chains of reasoning. This affects response quality, latency, and token usage.
+
+| Level | When to use |
+|-------|-------------|
+| **Minimal** | Simple, well-defined tasks (such as catalog lookup, straightforward classification). Fastest responses and lowest cost. |
+| **Low** | Tasks that benefit from a bit more reasoning but don't need deep analysis. |
+| **Medium** | Multi-step or nuanced tasks (such as analyzing several inputs to recommend an action). |
+| **High** | Complex reasoning, edge cases, or when you need the model to work through steps before answering. |
+
+We recommend starting with **Minimal** and testing your agent’s responses. Then, you can adjust the thinking level to **Low** or **Medium** depending on the agent's responses. 
+
+{% alert note %}
+Selecting **High** as the thinking level can result in the highest response time and token costs.
+{% endalert %}
+
 ## Writing instructions
 
 Instructions are the rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. System instructions can be up to 25 KB.
