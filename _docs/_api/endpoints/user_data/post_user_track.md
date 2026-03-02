@@ -62,21 +62,21 @@ For each request component listed in the following table, you must include one o
 
 ### Identifier resolution
 
-When a request object includes multiple identifiers, Braze resolves which user profile to update using the following priority order:
+Each request object must include at least one identifier. The following table describes how Braze determines which identifier to use for user profile lookup.
 
-1. **Unique identifiers:** `external_id`, `user_alias`, `braze_id`
-2. **Non-unique identifiers:** `email`, `phone`
+| Identifier type | Identifiers | Behavior |
+| --------------- | ----------- | -------- |
+| Primary | `external_id`, `user_alias`, `braze_id` | Used for user profile lookup. Only one primary identifier is allowed per request object—including more than one causes the request to be rejected. |
+| Secondary | `email`, `phone` | Used for user profile lookup **only** when no primary identifier is present. If both `email` and `phone` are included without a primary identifier, `email` takes precedence. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-If a unique identifier (such as `external_id`) is present in the request, Braze uses it to look up the user profile regardless of any non-unique identifiers also included. Among non-unique identifiers, `email` takes precedence over `phone`.
+When a primary identifier is present, any `email` or `phone` values in the same request object are treated as profile attributes—not as identifiers for user lookup. For example, if a request includes both an `external_id` and an `email`:
 
-For example, if a request includes both an `external_id` and an `email`:
-
-- Braze resolves the profile by `external_id`.
-- If the `email` in the request differs from the email on the matched profile, Braze updates the profile's email to the new value.
-- No new profile is created, because the `external_id` matched an existing profile.
+- Braze looks up the user profile by `external_id`.
+- The `email` value is set (or updated) as an attribute on the resolved profile.
 
 {% alert important %}
-Including a unique identifier that doesn't match any existing profile can create a duplicate, even if a non-unique identifier in the same request matches an existing profile. For example, if you send a request with a new `external_id` and an `email` that already exists on an email-only profile, Braze creates a new profile with the `external_id` instead of updating the existing email-only profile. To merge duplicate profiles, use the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
+Including a primary identifier that doesn't match any existing profile can create a duplicate, even if an `email` or `phone` value in the same request matches an existing profile. For example, if you send a request with a new `external_id` and an `email` that already exists on an email-only profile, Braze creates a new profile for the `external_id` instead of updating the existing email-only profile. To merge duplicate profiles, use the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
 {% endalert %}
 
 ## Example requests
@@ -311,12 +311,11 @@ The segmentation tool includes these users regardless of whether they have engag
 
 ### How do I avoid creating duplicate user profiles?
 
-Duplicate profiles can occur when a request includes a unique identifier (such as `external_id`) that doesn't match an existing profile, even if a non-unique identifier (such as `email`) in the same request does match one. Because Braze prioritizes unique identifiers for profile resolution, it creates a new profile for the unrecognized `external_id` instead of updating the existing email-only or phone-only profile.
+Duplicate profiles can occur when a request includes a primary identifier (such as `external_id`) that doesn't match any existing profile, alongside an `email` or `phone` value that does match an existing profile. Because primary identifiers are used for user lookup, Braze creates a new profile for the unrecognized `external_id` instead of updating the existing email-only or phone-only profile.
 
 To avoid duplicates:
 
-- Include only one identifier per request object when possible.
-- When transitioning users from email-only or phone-only profiles to identified profiles, use the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) to assign an `external_id` to the existing profile, rather than sending both identifiers to `/users/track`.
+- When transitioning users from email-only or phone-only profiles to identified profiles, use the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) to assign an `external_id` to the existing profile, rather than sending both to `/users/track`.
 - If duplicates already exist, merge them using the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
 
 ### How does `/users/track` handle duplicate events?
