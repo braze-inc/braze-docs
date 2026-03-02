@@ -11,7 +11,7 @@ description: "Learn how to use the Performance report to compare treatment group
 
 ## How the report is built
 
-Your Performance report is built in layers, entirely customized to your use case:
+Your Performance report is built in layers, entirely customized to your use case. Working in collaboration with your team: 
 
 1. Braze defines what counts as an action (such as a send, click, purchase, or conversion).
 2. Braze defines how to measure that action daily (volume, revenue, unique people, and similar).
@@ -75,22 +75,9 @@ Use the KPI card to understand:
 
 They are designed to show different things.
 
-### Why the chart and KPI card can differ
-
-The chart answers: "How did you perform each day?"
-
-The KPI card answers: "How did you perform across the entire period?"
-
-For rate metrics (like conversion rate), this difference matters.
-
-For example:
-
-- Day 1: 10 conversions out of 100 customers = 10%
-- Day 2: 2 conversions out of 10 customers = 20%
-
-The chart shows 10% and 20%. The KPI card recalculates across both days combined: 12 total conversions out of 110 customers = 10.9%. It does not average 10% and 20%.
-
-Different question, different number.
+{% alert note %}
+**Why the chart and KPI card can differ:** The chart shows daily performance ("How did you perform each day?"). The KPI card shows full-period performance ("How did you perform across the entire period?"). For rate metrics, they answer different questions. Example: Day 1 = 10%, Day 2 = 20%. The chart shows both. The card recalculates across both days combined (12 conversions / 110 customers = 10.9%), not an average of 10% and 20%.
+{% endalert %}
 
 ## Uplift chart
 
