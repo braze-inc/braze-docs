@@ -192,4 +192,4 @@ The chart shows 3 on Day 1 and 3 on Day 2. Across both days, you see 3 + 3 = 6. 
 
 This configuration answers: "How many unique customer engagements happened across days?" It does not answer: "How many individual customers engaged at least once across the entire period?"
 
-If your goal is window-level uniqueness (unique individuals across the full campaign or quarter), that is a different modeling approach. Contact your AI Success team for guidance on designing that.
+If your goal is window-level uniqueness (unique individuals across the full campaign or quarter), that is a different modeling approach. Contact your AI Success Manager for guidance on designing that.
