@@ -61,7 +61,7 @@ Cursor fills out the PR automatically:
 * [If this was related to a Docs discrepancy, make sure to note to tag the Eng owner in the description]
 * [Cursor analyzes code changes and lists them]
 * List of changes to help the reviewer understand the scope
-
+```
 
 ## Step 6: Assign Reviewers Based Code Ownership where possible
 Cursor identifies team members based on the CODEOWNERS file. If no owner is found for that file, assign to @braze-inc/docs-team
@@ -78,7 +78,7 @@ Cursor identifies team members based on the CODEOWNERS file. If no owner is foun
 ## Example Prompt
 
 ```
-@find-docs-discrepancies.mdc Identify discrepancies for each .md file in `_/docs/*`
+@find-docs-discrepancies.mdc Identify discrepancies for each .md file in `_docs/*`
 
 @find-docs-discrepancies.mdc Identify discrepancies for ai.md
 
