@@ -148,9 +148,7 @@ The `messages` response will contain information about each message. The followi
 {
     "channel": "in_app_message",
     "name": (string) the name of the variant,
-    "type": (string) the in-app message type, such as "slideup", "modal", or "full",
-    "header": (string, optional) the header text,
-    "body": (string, optional) the body text,
+    "message": (string, optional) the body text,
     "extras": (hash, optional) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
