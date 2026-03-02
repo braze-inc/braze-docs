@@ -76,7 +76,7 @@ When a primary identifier is present, any `email` or `phone` values in the same 
 - The `email` value is set (or updated) as an attribute on the resolved profile.
 
 {% alert important %}
-Including a primary identifier that doesn't match any existing profile can create a duplicate, even if an `email` or `phone` value in the same request matches an existing profile. For example, if you send a request with a new `external_id` and an `email` that already exists on an email-only profile, Braze creates a new profile for the `external_id` instead of updating the existing email-only profile. To merge duplicate profiles, use the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
+Including a primary identifier that doesn't match any existing profile can create a duplicate profile even when `email` or `phone` in the same request match an existing profile. For more information, see [How do I avoid creating duplicate user profiles?](#how-do-i-avoid-creating-duplicate-user-profiles).
 {% endalert %}
 
 ## Example requests
