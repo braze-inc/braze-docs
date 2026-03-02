@@ -361,6 +361,8 @@
   "FB Messenger": "FB Messenger",
   "FCM": "FCM",
   "feature": "característica",
+  "feature flag": "conmutador de características",
+  "feature flags": "conmutadores de características",
   "feed": "fuente",
   "filter": "filtrar",
   "Firebase": "Firebase",
