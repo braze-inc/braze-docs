@@ -47,7 +47,7 @@ When you use a Braze-provided LLM, the providers of such a model will be acting 
 
 #### Thinking levels
 
-Some LLM providers may allow you to adjust a selected model's thinking level. **Thinking levels** define the range of thought the model uses before answering—from quick, direct responses to longer chains of reasoning. This affects response quality, latency, and token usage.
+Some LLM providers may allow you to adjust a selected model's thinking level. Thinking levels define the range of thought the model uses before answering—from quick, direct responses to longer chains of reasoning. This affects response quality, latency, and token usage.
 
 | Level | When to use |
 |-------|-------------|
