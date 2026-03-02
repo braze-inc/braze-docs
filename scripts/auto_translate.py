@@ -40,11 +40,22 @@ MAX_WORKERS = int(os.environ.get("TRANSLATION_WORKERS", "6"))
 REPO_ROOT = Path(os.environ.get("GITHUB_WORKSPACE", Path.cwd()))
 RESULTS_FILE = REPO_ROOT / "translation_results.json"
 GLOSSARY_DIR = REPO_ROOT / "scripts" / "glossaries"
+STYLEGUIDE_DIR = REPO_ROOT / "scripts" / "styleguides"
 
 
 def load_prompt():
     """Load the translation system prompt from scripts/translation_prompt.md."""
     return (REPO_ROOT / "scripts" / "translation_prompt.md").read_text()
+
+
+def load_styleguide(lang_key):
+    """Load the style guide for a language. Returns '' if not found."""
+    sg_path = STYLEGUIDE_DIR / f"{lang_key}.md"
+    if sg_path.exists():
+        content = sg_path.read_text().strip()
+        if content:
+            return f"\n\n## Style guide for this language\n\n{content}"
+    return ""
 
 
 def load_glossary(lang_key):
@@ -116,9 +127,9 @@ def call_claude(client, system_prompt, user_message, retries=3):
                 raise
 
 
-def translate_file(client, prompt, english_content, existing_translation, language_name, glossary_section=""):
+def translate_file(client, prompt, english_content, existing_translation, language_name, extra_context=""):
     """Translate a single English file into the target language."""
-    system = prompt + glossary_section
+    system = prompt + extra_context
 
     user_msg = f"## Target language\n{language_name}\n\n"
     user_msg += f"## English source (translate this)\n\n{english_content}\n\n"
@@ -164,9 +175,8 @@ The translation should read as if originally written in the target language.
 (Canvas, Currents, Content Cards, etc.) must stay in English.
 4. **Preservation**: Verify that Liquid tags, code blocks, URLs, front matter keys, \
 HTML tags, and markdown formatting are intact and unmodified.
-5. **Gender**: In Portuguese, "Braze" is feminine (a Braze, da Braze, para a Braze — \
-never o Braze, do Braze, para o Braze). In French, Spanish, and German, follow the \
-existing article conventions for the brand name.
+5. **Style guide**: Follow all rules in the language-specific style guide appended \
+below (gender conventions, register, terminology preferences, etc.).
 6. **Consistency**: Ensure consistent terminology and tone throughout the file.
 
 Return ONLY the improved translated file — no explanations, no code fences, \
@@ -174,9 +184,9 @@ no commentary. If the translation is already high quality, return it unchanged.\
 """
 
 
-def review_file(client, english_content, translated_content, language_name, glossary_section=""):
+def review_file(client, english_content, translated_content, language_name, extra_context=""):
     """Second-pass review of a translation for quality improvement."""
-    system = REVIEW_PROMPT + glossary_section
+    system = REVIEW_PROMPT + extra_context
 
     user_msg = f"## Target language\n{language_name}\n\n"
     user_msg += f"## English source\n\n{english_content}\n\n"
@@ -206,22 +216,23 @@ def save_results(results):
 # ---------------------------------------------------------------------------
 
 def translate_one(client, prompt, fpath, relative, english_content,
-                  lang_key, lang_info, glossary):
+                  lang_key, lang_info, glossary, styleguide):
     """Translate + review a single file into one language. Returns a result dict."""
     target = translation_path(relative, lang_info["dir"])
     existing = target.read_text() if target.exists() else None
 
     filtered = filter_glossary(glossary, english_content)
     glossary_section = format_glossary_for_prompt(filtered)
+    extra_context = styleguide + glossary_section
 
     try:
         translated = translate_file(
             client, prompt, english_content, existing,
-            lang_info["name"], glossary_section,
+            lang_info["name"], extra_context,
         )
         translated = review_file(
             client, english_content, translated,
-            lang_info["name"], glossary_section,
+            lang_info["name"], extra_context,
         )
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(translated)
@@ -266,6 +277,7 @@ def cmd_translate(args):
     prompt = load_prompt()
     results = load_results()
     glossaries = {lang: load_glossary(lang) for lang in LANGUAGES}
+    styleguides = {lang: load_styleguide(lang) for lang in LANGUAGES}
 
     futures = {}
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
@@ -277,7 +289,7 @@ def cmd_translate(args):
                 future = pool.submit(
                     translate_one, client, prompt, fpath, relative,
                     english_content, lang_key, lang_info,
-                    glossaries[lang_key],
+                    glossaries[lang_key], styleguides[lang_key],
                 )
                 futures[future] = (relative, lang_info["name"])
 
