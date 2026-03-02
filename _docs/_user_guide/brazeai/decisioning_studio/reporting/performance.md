@@ -130,6 +130,10 @@ Segments let you break down performance by defined groups, such as engagement le
 
 Segment membership is configured custom for your use case and calculated daily. This means a customer's past segment reflects who they were on that day. If their behavior changes later, historical days remain unchanged. This preserves historical accuracy and prevents reports from shifting retroactively.
 
+### Does the performance report for Go versus Pro agents differ?
+
+The KPIs for Go use cases are set automatically and standardized, since all Go use cases have the same target metric: unique clicks.
+
 ### Why can't I select certain recent dates?
 
 The date picker may not allow selecting the most recent days. This is intentional. Reports may apply activation delays, data availability delays, or explicitly excluded dates. These guardrails prevent incomplete or unstable data from appearing in your results.
