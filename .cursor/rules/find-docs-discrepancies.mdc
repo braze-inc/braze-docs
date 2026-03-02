@@ -48,7 +48,7 @@ Stage and Commit all changes in `_docs` with a meaningful message derived from t
 
 ---
 
-## Step 7: Generate the PR for each branch
+## Step 5: Generate the PR for each branch
 Create each PR with the naming convention: `[DD] update summary`
 Example: `[DD] Add FAQ entry about machine opens vs other opens`
 
@@ -63,7 +63,7 @@ Cursor fills out the PR automatically:
 * List of changes to help the reviewer understand the scope
 
 
-## Step 8: Assign Reviewers Based Code Ownership where possible
+## Step 6: Assign Reviewers Based Code Ownership where possible
 Cursor identifies team members based on the CODEOWNERS file. If no owner is found for that file, assign to @braze-inc/docs-team
 
 
