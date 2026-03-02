@@ -125,7 +125,7 @@ If a KPI definition changes, charts, cards, uplift, and driver trees all update 
 
 Segments let you break down performance by defined groups, such as engagement levels, customer characteristics, device type, or other configured features.
 
-Segment membership is configured custom for your use case and calculated daily. This means a customer's past segment reflects who they were on that day. If their behavior changes later, historical days remain unchanged. This preserves historical accuracy and prevents reports from shifting retroactively.
+Segment membership is custom-configured for your use case and calculated daily. This means a customer's past segment reflects who they were on that day. If their behavior changes later, historical days remain unchanged. This preserves historical accuracy and prevents reports from shifting retroactively.
 
 ### Does the performance report for Go versus Pro agents differ?
 
