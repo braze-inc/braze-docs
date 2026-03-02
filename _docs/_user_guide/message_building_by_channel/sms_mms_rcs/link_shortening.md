@@ -21,7 +21,7 @@ Link shortening allows you to automatically shorten URLs contained in SMS or RCS
 
 Link shortening can be turned on at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. When link shortening is turned on, clicks will generate an [SMS click event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) sent through Currents.
 
-Links are shortened using our shared short domain (`brz.ai`), and are valid for 9 weeks from the date they were created. An example URL may look something like `https://brz.ai/8jshX2dj`. 
+Links are shortened using our shared short domain (`brz.ai`) or your custom link shortening domain, and are valid for 9 weeks from the date they were created. An example URL may look something like `https://brz.ai/8jshX2dj`. 
 
 ## Using link shortening
 
