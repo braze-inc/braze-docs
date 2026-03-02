@@ -1,5 +1,6 @@
 ---
 alwaysApply: false
+description: Identify and propose updates for discrepancies between Braze docs and source code.
 ---
 
 # Identify and update docs discrepancies against source code
