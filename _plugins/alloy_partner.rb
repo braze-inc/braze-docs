@@ -73,15 +73,15 @@ module Jekyll
       http.use_ssl = (link.scheme == 'https')
       http.open_timeout = 60
       http.read_timeout = 120
-      # When Partner API is enabled (e.g. for preview), skip SSL verify by default to avoid
-      # CRL errors; set SKIP_PARTNER_SSL_VERIFY=false to force verification.
-      skip_verify = (ENV['PARTNER_API'].to_s.downcase == 'true' || ENV['SKIP_PARTNER_SSL_VERIFY'].to_s.downcase == 'true') &&
-                    ENV['SKIP_PARTNER_SSL_VERIFY'].to_s.downcase != 'false'
+      # Verify SSL by default. Set SKIP_PARTNER_SSL_VERIFY=true only to work around local
+      # SSL issues (e.g. CRL verification failures); never skip in production.
+      skip_verify = ENV['SKIP_PARTNER_SSL_VERIFY'].to_s.downcase == 'true' &&
+                    ENV['RACK_ENV'].to_s.downcase != 'production'
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE if skip_verify
       res = http.get(link.request_uri)
       return res
     rescue OpenSSL::SSL::SSLError => e
-      puts 'Warning: Partner API SSL verification failed (' + e.message + '). Using empty partner data. With PARTNER_API=true, SSL verify is skipped by default; set SKIP_PARTNER_SSL_VERIFY=false to force verify.'
+      puts 'Warning: Partner API SSL verification failed (' + e.message + '). Using empty partner data. For local preview only, set SKIP_PARTNER_SSL_VERIFY=true to skip verify (never used in production).'
       return OpenStruct.new(code: '500', body: nil)
     rescue StandardError => e
       puts 'Warning: Partner API request failed (' + e.message + '). Using empty partner data.'
