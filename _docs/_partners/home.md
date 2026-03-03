@@ -29,7 +29,6 @@ valid_partner_list:
 - name: AppsFlyer
   url: /docs/partners/appsflyer/
 - name: Branch
-  title: Deeplinking
   url: /docs/partners/branch_for_deeplinking/
 - name: Facebook Zapier
   url: /docs/partners/facebook_via_zapier/
@@ -146,7 +145,7 @@ valid_partner_list:
 - name: BlueConic
   url: /docs/partners/blueconic/
 - name: LINE
-  url: /docs/partners/line/  
+  url: /docs/line/
 - name: LinkedIn Audience Sync
   url: /docs/partners/canvas_audience_sync/linkedin_audience_sync/
 - name: Judo
@@ -174,7 +173,7 @@ valid_partner_list:
 - name: Wyng
   url: /docs/partners/wyng/
 - name: Peak
-  url: /docs/partners/Peak/
+  url: /docs/partners/peak/
 - name: Personalize.AI
   url: /docs/partners/personalize_ai/
 - name: Knak
@@ -188,7 +187,7 @@ valid_partner_list:
 - name: Microsoft Dynamics 365
   url: /docs/partners/dynamics_365_customer_insights/
 - name: Heap
-  url: /docs/partners/heap/  
+  url: /docs/partners/heap/
 - name: Quikly
   url: /docs/partners/quikly/
 - name: actionable.me
@@ -258,7 +257,7 @@ valid_partner_list:
 - name: Stylitics
   url: /docs/partners/stylitics/
 - name: Redpoint
-  url: /docs/partners/redpoint/  
+  url: /docs/partners/redpoint/
 - name: Simon Data
   url: /docs/partners/simon_data/
 - name: Ketch
@@ -280,13 +279,11 @@ valid_partner_list:
 - name: Friendbuy
   url: /docs/partners/friendbuy/
 - name: Alpaco
-  url: /docs/partners/Alpaco/
+  url: /docs/partners/alpaco/
 - name: NiftyImages
   url: /docs/partners/niftyimages/
 - name: MetaRouter
   url: /docs/partners/metarouter/
-- name: Treasure Data
-  url: /docs/partners/treasure_data/
 - name: Future Anthem
   url: /docs/partners/future_anthem/
 - name: LiveRamp
@@ -376,7 +373,7 @@ valid_partner_list:
 - name: Blings
   url: /docs/partners/blings/
 - name: Google Audience Sync
-  url: /docs/google_audience_sync/ 
+  url: /docs/google_audience_sync/
 - name: Optimizely
   url: /docs/partners/optimizely/
 - name: OtherLevels
@@ -387,8 +384,6 @@ valid_partner_list:
   url: /docs/deliverability_center/
 - name: Microsoft SNDS
   url: /docs/deliverability_center/
-- name: Fullstory
-  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
 - name: Open Loyalty
   url: /docs/partners/openloyalty/
 - name: DOTS.ECO
@@ -403,4 +398,8 @@ valid_partner_list:
   url: /docs/partners/anthropic/
 - name: Algolia
   url: /docs/partners/algolia/
+- name: Canva
+  url: /docs/partners/canva/
+- name: Figma
+  url: /docs/partners/figma/
 ---

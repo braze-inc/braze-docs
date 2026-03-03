@@ -3238,6 +3238,14 @@ validurls['/docs/partners/data_and_analytics/cohort_import/tinyclues'] = '/docs/
 validurls['/docs/user_guide/administrative/access_billing/billing/'] = '/docs/user_guide/administrative/app_settings/subscription_and_usage/';
 validurls['/docs/api/objects_filters/canvas_entry_properties_object/'] = '/docs/api/objects_filters/context_object/';
 
+validurls['/docs/compliance_documentation_audience_sync/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_line/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_message_archiving_field_level_encryption/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_shopify/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_sms/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_webhooks/'] = '/docs/compliance_documentation/';
+validurls['/docs/compliance_documentation_whatsapp/'] = '/docs/compliance_documentation/';
+
 // ============================================================
 // Phase 0 - IA Migration: Foundation moves
 // ============================================================

@@ -237,10 +237,11 @@ $(document).ready(function() {
   $('#glossary_search').on('keyup',function(e){
     generate_glossarys(glossary_hash);
   });
-  if (location.hash && $(location.hash.replace('%20','-').replace('+','-')).offset()) {
+  var location_hash = (location.hash || "").replace('%20','-').replace('+','-').replace(/[^a-zA-Z0-9_-]+/g, '');
+  if (location_hash && $(location_hash).offset()) {
     // Scroll to generated hash
     $('html, body').animate({
-      scrollTop: $(location.hash).offset().top
+      scrollTop: $(location_hash).offset().top
     });
   }
 });
