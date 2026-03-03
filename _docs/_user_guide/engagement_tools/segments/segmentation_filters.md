@@ -55,6 +55,23 @@ glossaries:
     description: Segments users by when their user profile was created. If a user was added by CSV or API, then this filter reflects the date they were added. If the user isn't added by CSV or API and has their first session tracked by the SDK, then this filter reflects the date of that first session.
     tags:
       - Other Filters
+  - name: Created From
+    description: |
+      Segments users by where their user profile was created.<br><br>
+      The following are supported values:<br>
+      - SDK (`sdk`): User profile created through the Braze SDK.<br>
+      - REST API (`rest`): User profile created through the Braze REST API.<br>
+      - Push Token Import (`pti`): User profile created through push token import.<br>
+      - CSV (`csv`): User profile created through CSV import.<br>
+      - Demo (`demo`): User profile created through demo data.<br>
+      - SMS (`sms`): User profile created through SMS.<br>
+      - Shopify (`shopify`): User profile created through Shopify.<br>
+      - WhatsApp (`whats_app`): User profile created through WhatsApp.<br>
+      - Provider Event (`provider_event`): User profile created through a provider event.<br>
+      - Provider Sync (`provider_sync`): User profile created through a provider sync.<br>
+      - Landing Page (`landing_page`): User profile created through a landing page.
+    tags:
+      - Other Filters
   - name: Nested Custom Attributes
     description: Attributes that are the properties of custom attributes.<br><br>When filtering a nested time custom attribute, you can choose to filter based on "Day of Year" or "Time". "Day of Year" checks only the month and day for comparison. "Time" compares the full timestamp, including the year.
     tags:
