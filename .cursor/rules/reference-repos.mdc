@@ -1,0 +1,32 @@
+---
+description: Reference Braze SDK and product repos for verifying docs content
+alwaysApply: true
+---
+
+# Reference repos for content verification
+
+When verifying documentation (SDK behavior, APIs, product behavior), use the following repos in this workspace as source-of-truth. Prefer searching and citing these over docs alone.
+
+| Folder | Use for |
+|--------|--------|
+| `braze-android-sdk` | Android SDK |
+| `braze-swift-sdk` | iOS / Swift SDK |
+| `braze-web-sdk` | Web / JavaScript SDK |
+| `braze-react-native-sdk` | React Native SDK |
+| `braze-flutter-sdk` | Flutter SDK |
+| `braze-unity-sdk` | Unity SDK |
+| `braze-unreal-sdk` | Unreal SDK |
+| `braze-roku-sdk` | Roku SDK |
+| `braze-cordova-sdk` | Cordova SDK |
+| `braze-expo-plugin` | Expo plugin |
+| `braze-xamarin-sdk` | Xamarin SDK |
+| `braze-shopify-app` | Shopify app |
+| `liquid` | Liquid templating |
+| `grapesjs` | Drag-and-drop editor (GrapesJS) |
+| `event-replay` | Event replay |
+| `event-modeling-service` | Event modeling |
+| `platform` | Main Braze platform (backend/product) |
+
+To have these folders available in the workspace, open **`braze-workspace.code-workspace`** (File → Open Workspace from File) instead of opening the braze-docs folder alone.
+
+**Layout:** The workspace uses relative paths. It works for anyone as long as braze-docs and all reference repos are **sibling folders** in the same parent (e.g. `~/Documents/braze-docs`, `~/Documents/platform`, …). The parent folder can be anywhere (Documents, `~/code`, etc.).
