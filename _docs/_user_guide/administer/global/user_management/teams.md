@@ -39,17 +39,22 @@ Then perform the following steps:
 
 1. In the **Workspace-level permissions** section, add the user to the appropriate workspace if they aren't already included.
 
-![A permission set for the "Swifty & Droidboy" workspace.]({% image_buster /assets/img/team_level_permissions.png %})
+![Workspace-level permissions with the Banner Template permission set.]({% image_buster /assets/img/team_level_permissions.png %})
 
 {: start="2"}
 2. Select **+ Add team-level permissions**, then select the **Team** you'd like to add this user to.
-3. Assign specific permissions from the **Team** permissions column.
+3. Assign specific permissions from the **Team** permissions section.
 
-![A section to select permissions for the "Customer Support" team.]({% image_buster /assets/img/teams.png %})
+![Team-level landing page template permissions.]({% image_buster /assets/img/teams.png %})
 
 ### Available Team-level permissions
 
 The following are all available permissions you can assign at the Team level. Any permissions not listed here are only granted on the workspace level, and these permissions will appear as "--" in the **Teams** permissions column.
+
+{% tabs %}
+{% tab Granular permissions %}
+
+{% multi_lang_include alerts/important_alerts.md alert="granular permissions ea" %}
 
 - View Campaigns
 - Edit Campaigns
@@ -112,6 +117,29 @@ The following are all available permissions you can assign at the Team level. An
 - View Reports
 - Create Reports
 - Edit Reports
+
+{% endtab %}
+{% tab Legacy permissions %}
+
+- Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, and Preference Centers
+- Send Campaigns, Canvases
+- Launch and Manage Content Cards
+- Edit Segments
+- Export User Data
+- View User Profiles PII Compliant
+- Manage Dashboard Users
+- Manage Media Library Assets
+- Approve and Deny Campaigns
+- Approve and Deny Canvases
+- Create and Edit Canvas Templates
+- View Canvas Templates
+- Archive Canvas Templates
+- Edit Landing Page Templates
+- View Landing Page Templates
+- Archive Landing Page Templates
+
+{% endtab %}
+{% endtabs %}
 
 To see descriptions of what each user permission includes and how to use them, check out our [User Permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/#editing-user-permissions) section.
 
