@@ -26,7 +26,7 @@ resources_list:
     link: /docs/user_guide/administrative/access_braze/support/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Troubleshoot Logging Custom Events
-    link: /docs/developer_guide/analytics/logging_events/
+    link: /docs/developer_guide/analytics/logging_events/#troubleshooting-custom-events
     image: /assets/img/braze_icons/tool-02.svg
 
 popular_topic_list:
