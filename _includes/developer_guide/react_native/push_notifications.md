@@ -163,9 +163,10 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 #### Step 3.2: Handle deep links from a closed state
 
-Implement the `Braze.getInitialPushPayload` method and retrieve the `url` value to account for deep links from push notifications that open your app when it isn't running. For example:
+In addition to the base scenarios handled by [React Native Linking](https://reactnative.dev/docs/linking), implement the `Braze.getInitialPushPayload` method and retrieve the `url` value to account for deep links from push notifications that open your app when it isn't running. For example:
 
 ```javascript
+// Handles deep links when an app is launched from a hard close via push click.
 Braze.getInitialPushPayload(pushPayload => {
   if (pushPayload) {
     console.log('Braze.getInitialPushPayload is ' + pushPayload);
@@ -174,6 +175,9 @@ Braze.getInitialPushPayload(pushPayload => {
   }
 });
 ```
+{% alert note %}
+This method requires the native setup in Step 3.1 on each platform.
+{% endalert %}
 
 {% endtab %}
 {% tab iOS Native %}
