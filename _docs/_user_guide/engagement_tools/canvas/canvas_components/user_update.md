@@ -65,7 +65,7 @@ Track a user's wishlist so you can segment or personalize based on their saved i
 1. Create a custom attribute that is an array of objects, for example `wishlist`. Each object can include fields such as `product_id`, `product_name`, and `added_at`.
 2. In the User Update step, select **Advanced JSON Editor**. Then, in the **Compose** section, use the `$add` operation to append an item or the `$remove` operation to remove an item by value.
 
-Example—adding an item to the wishlist:
+The following is an example of adding an item to the wishlist:
 
 {% raw %}
 ```json
