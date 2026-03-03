@@ -49,7 +49,7 @@ Additionally, if your image was built in Photoshop (or a similar software) and h
 Beyond the 5 MB file size limit, there are additional dimensions that can cause a GIF upload to fail:
 
 - **Extreme aspect ratios:** GIFs with very elongated shapes (for example, 3000 x 2 pixels) are more likely to be rejected, even if the total file size is small. Try to keep both width and height within a reasonable range.
-- **High frame count:** GIFs typically run at 15–24 frames per second. If your GIF has 300 or more frames, it may be oversampled. Reduce the frame count using a GIF editor or optimization tool before uploading.
+- **High frame count:** GIFs typically run at 15 to 24 frames per second. If your GIF has 300 or more frames, it may be oversampled. Reduce the frame count using a GIF editor or optimization tool before uploading.
 
 If your GIF meets the size limit but still fails, try re-exporting it with a lower frame count and more balanced dimensions.
 
