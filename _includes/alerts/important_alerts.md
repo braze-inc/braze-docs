@@ -123,8 +123,8 @@ Using "Day of year" for absolute dates can produce incorrect or unexpected resul
 
 {% if include.alert == 'granular permissions ea' %}
 
-{% alert note %}
-Granular permissions is in early access. When migration is planned for your company, your Braze admins will receive emails and in-dashboard banners notifying them of the [granular permission migration]({{site.baseurl}}/granular_permissions_migration/).
+{% alert important %}
+Granular permissions are in early access. When migration is planned for your company, your Braze admins will receive emails and in-dashboard banners notifying them of the [granular permission migration]({{site.baseurl}}/granular_permissions_migration/).
 {% endalert %}
 
 {% endif %}
