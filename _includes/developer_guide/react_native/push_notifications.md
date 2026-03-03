@@ -176,7 +176,7 @@ Braze.getInitialPushPayload(pushPayload => {
 });
 ```
 {% alert note %}
-This method requires the native setup in Step 3.1 on each platform.
+This method requires the native setup in Step 3.1 for your platform. If you're using the Braze Expo plugin, this may be handled automatically.
 {% endalert %}
 
 {% endtab %}
@@ -245,7 +245,7 @@ Braze.getInitialPushPayload(pushPayload => {
 });
 ```
 {% alert note %}
-This method requires the native setup in Step 3.1 on each platform.
+This method requires the native setup in Step 3.1 for your platform. If you're using the Braze Expo plugin, this may be handled automatically.
 {% endalert %}
 
 #### Step 3.3: Enable Universal Links (optional)
