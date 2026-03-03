@@ -57,7 +57,7 @@ var alloy_partners = {%- alloy_partner -%};
   {%- endif -%}
 
   {%- capture vp -%}
-    {{vp}}{{alt_vp}}]
+    {{vp}}{% if alt_vp != '' %}{{alt_vp}}]{% endif %}
   {%- endcapture -%}
 
 
