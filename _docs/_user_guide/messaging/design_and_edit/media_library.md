@@ -43,6 +43,10 @@ Later, when drafting a message in Braze, you can pull in your images from the me
 
 All images uploaded to the media library must be less than 5&nbsp;MB. Supported file types are PNG, JPEG, GIF, SVG, and WebP. For recommended image sizes and specifications by messaging channel, refer to [Image specifications]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library/image_specifications/).
 
+{% alert important %}
+GIFs with very elongated shapes (for example, 3000 x 2 pixels) or 300 or more frames may fail to upload, even if the total file size is small.
+{% endalert %}
+
 ## Generating images with BrazeAI<sup>TM</sup> {#generate-ai}
 
 {% multi_lang_include brazeai/generative_ai/about_images.md %}
