@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Push registration
+# Push token lifecycle
 
 > This article covers the process through which a user gets assigned a push token, and how Braze sends push messages to your users.
 
