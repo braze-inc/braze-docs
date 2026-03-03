@@ -1,6 +1,6 @@
 ---
-nav_title: Frequency capping
-article_title: Frequency capping
+nav_title: Rate limiting and frequency capping
+article_title: Rate limiting and frequency capping
 page_order: 6
 tool: Campaigns
 page_type: reference
