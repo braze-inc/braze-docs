@@ -1,3 +1,5 @@
+{% multi_lang_include alerts/important_alerts.md alert="granular permissions ea" %}
+
 ## Creating a permission set
 
 Use permission sets to bundle permissions related to specific subject areas or actions. You can apply permissions sets to dashboard users who need the same access across different workspaces. To create a permission set, go to **Settings** > **Permission Settings**, then select **Create permission set**. For a description of each permission, see [List of permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#granularpermissions_list-of-permissions).
