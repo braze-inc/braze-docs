@@ -25,6 +25,9 @@ resources_list:
   - name: Braze Support
     link: /docs/user_guide/administrative/access_braze/support/
     image: /assets/img/braze_icons/mail-01.svg
+  - name: Troubleshoot Logging Custom Events
+    link: /docs/developer_guide/analytics/logging_events/
+    image: /assets/img/braze_icons/tool-02.svg
 
 popular_topic_list:
   - name: Know Before You Send
