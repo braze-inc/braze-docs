@@ -2,6 +2,8 @@
 # modified to allow variable url
 require 'net/http'
 require 'uri'
+require 'openssl'
+require 'ostruct'
 
 module Jekyll
 
@@ -68,10 +70,21 @@ module Jekyll
     def fetchContent(url)
       link = URI.parse(url.strip)
       http = Net::HTTP.new(link.host, link.port)
+      http.use_ssl = (link.scheme == 'https')
       http.open_timeout = 60
       http.read_timeout = 120
-      res = Net::HTTP.get_response(link)
+      # Avoid build failure when SSL verify fails (e.g. certificate CRL unreachable)
+      if ENV['SKIP_PARTNER_SSL_VERIFY'].to_s.downcase == 'true'
+        http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      end
+      res = http.get(link.request_uri)
       return res
+    rescue OpenSSL::SSL::SSLError => e
+      puts 'Warning: Partner API SSL verification failed (' + e.message + '). Using empty partner data. Set SKIP_PARTNER_SSL_VERIFY=true to skip verify.'
+      return OpenStruct.new(code: '500', body: nil)
+    rescue StandardError => e
+      puts 'Warning: Partner API request failed (' + e.message + '). Using empty partner data.'
+      return OpenStruct.new(code: '500', body: nil)
     end
   end
 end
