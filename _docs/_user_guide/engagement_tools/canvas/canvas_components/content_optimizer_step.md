@@ -110,7 +110,9 @@ Your selected optimization event applies to all content components in this step.
 
 ## Analytics
 
-To review performance, open the step-level analytics panel to see metrics by content variant and overall combination performance. The Content Optimizer step uses the same analytics as the Message step. For details, see [Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#analytics) in Message step.  
+To review performance, open the step-level analytics panel to see metrics by content variant and overall combination performance. The Content Optimizer step uses the same analytics as the Message step. For details, see [Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#analytics) in Message step.
+
+
 
 ## Troubleshooting
 

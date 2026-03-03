@@ -39,10 +39,11 @@ Learn how to create a [Content Optimizer step]({{site.baseurl}}/user_guide/engag
 | Themed content combinations | Discover high-performing combinations | Mix and match themed subject, body, and CTA components to find the best overall combination. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-
 ## How it works
 
-Content Optimizer uses a non-contextual [multi-armed bandit](https://en.wikipedia.org/wiki/Multi-armed_bandit) algorithm to allocate more sends to high-performing variants and reduce allocation to underperforming ones. Over time, this results in continuous improvement of your message content, with minimal manual intervention.
+Content Optimizer uses a non-contextual [multi-armed bandit](https://en.wikipedia.org/wiki/Multi-armed_bandit) algorithm to allocate more sends to high-performing variants and reduce allocation to underperforming ones. Over time, this results in continuous improvement of your message content, with minimal manual intervention. 
+
+Braze's proprietary bandit optimization algorithm is built specifically for the combinatorial nature of Content Optimizer step. Given that each message is comprised of several components, our bandit simultaneously learns about the performance of each component (such as the subject line, body, CTA) as well as their interactions when combined into a message. More concretely, when a given combination is sent, all combinations that share the same components benefit from the data of that send. This allows our bandit to learn much faster on the same amount of data, relative to a standard bandit algorithm.
 
 When the step first launches, Content Optimizer sends variants randomly to collect initial performance data. After this initial exploration period, the algorithm begins shifting traffic toward higher-performing content combinations, gradually reducing allocation to underperforming options. During the exploration period, traffic is generally distributed across available variants to allow the algorithm to learn from their relative performance.
 
@@ -53,7 +54,6 @@ Each user receives one message per entry into the Content Optimizer step. Re-ent
 For best results, use Content Optimizer in Canvases where users enter the step gradually over time, such as in recurring or always-on Canvases with consistent daily volume. If all users enter the step at once, the agent won’t have time to learn from early results. The step will behave more like a static A/B test than a live optimization engine.
 
 This means you can still use Content Optimizer in single-send or short-term Canvases, but only if users are entering the step over a prolonged period (for example, through a delay step, scheduled entry, or API-triggered flow). Make sure the step has enough traffic and time to observe performance differences before reaching most users.
-
 
 ### Key concepts
 
