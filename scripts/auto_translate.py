@@ -4,6 +4,7 @@ Auto-translate English Braze docs into all supported languages using Claude.
 
 Usage:
     python auto_translate.py translate --changed-files changed_files.txt
+    python auto_translate.py qc
     python auto_translate.py verify --max-attempts 3
     python auto_translate.py summary
 """
@@ -15,14 +16,18 @@ import re
 import subprocess
 import sys
 import time
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-try:
-    from anthropic import Anthropic
-except ImportError:
-    print("ERROR: Install the Anthropic SDK: pip install anthropic")
-    sys.exit(1)
+def _get_anthropic_client():
+    """Lazy-import Anthropic so commands like qc/summary work without the SDK."""
+    try:
+        from anthropic import Anthropic
+    except ImportError:
+        print("ERROR: Install the Anthropic SDK: pip install anthropic")
+        sys.exit(1)
+    return Anthropic()
 
 
 LANGUAGES = {
@@ -42,6 +47,23 @@ REPO_ROOT = Path(os.environ.get("GITHUB_WORKSPACE", Path.cwd()))
 RESULTS_FILE = REPO_ROOT / "translation_results.json"
 GLOSSARY_DIR = REPO_ROOT / "scripts" / "glossaries"
 STYLEGUIDE_DIR = REPO_ROOT / "scripts" / "styleguides"
+QC_RESULTS_FILE = REPO_ROOT / "qc_results.json"
+
+NON_TRANSLATABLE_FM_KEYS = frozenset({
+    "page_order", "layout", "page_type", "channel", "platform", "tool",
+    "link", "image", "permalink", "hidden", "noindex", "config_only",
+    "search_rank", "page_layout",
+})
+
+BRAZE_PRODUCT_NAMES = [
+    "Content Cards", "Content Blocks", "Push Stories", "In-App Messages",
+    "REST API", "News Feed", "Canvases", "Canvas", "Currents", "Campaigns",
+    "Campaign", "Segments", "Segment", "Braze", "Liquid", "SDK", "API",
+]
+
+COMPLETENESS_MIN_RATIO = float(os.environ.get("QC_MIN_RATIO", "0.6"))
+COMPLETENESS_MAX_RATIO = float(os.environ.get("QC_MAX_RATIO", "1.6"))
+UNTRANSLATED_BLOCK_THRESHOLD = 200
 
 
 def load_prompt():
@@ -303,7 +325,7 @@ def cmd_translate(args):
         print(f"  ({len(skipped)} file(s) skipped — too large for single-pass translation)")
     print()
 
-    client = Anthropic()
+    client = _get_anthropic_client()
     prompt = load_prompt()
     results = load_results()
     results["skipped"] = results.get("skipped", []) + skipped
@@ -354,6 +376,336 @@ def cmd_translate(args):
 
 
 # ---------------------------------------------------------------------------
+# QC checks and repairs
+# ---------------------------------------------------------------------------
+
+def _extract_front_matter(content):
+    """Extract YAML front matter and body from a markdown file."""
+    match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
+    if match:
+        return match.group(1), content[match.end():]
+    return None, content
+
+
+def _extract_fm_block(fm_str, key):
+    """Extract a full YAML block for a key (key line + indented continuation)."""
+    lines = fm_str.split('\n')
+    block_lines = []
+    in_block = False
+    for line in lines:
+        if not in_block and re.match(rf'^{re.escape(key)}\s*:', line):
+            in_block = True
+            block_lines.append(line)
+        elif in_block:
+            if line and line[0] in (' ', '\t'):
+                block_lines.append(line)
+            else:
+                break
+    return '\n'.join(block_lines) if block_lines else None
+
+
+def repair_front_matter(english_content, translated_content):
+    """Ensure non-translatable front matter values match the English source."""
+    en_fm, _ = _extract_front_matter(english_content)
+    tr_fm, tr_body = _extract_front_matter(translated_content)
+
+    if not en_fm or not tr_fm:
+        return translated_content, []
+
+    repairs = []
+    repaired_fm = tr_fm
+
+    for key in sorted(NON_TRANSLATABLE_FM_KEYS):
+        en_block = _extract_fm_block(en_fm, key)
+        tr_block = _extract_fm_block(repaired_fm, key)
+
+        if en_block and tr_block and en_block != tr_block:
+            repaired_fm = repaired_fm.replace(tr_block, en_block)
+            repairs.append(f"front_matter:{key} — restored from English")
+        elif en_block and not tr_block:
+            repaired_fm = repaired_fm.rstrip() + '\n' + en_block
+            repairs.append(f"front_matter:{key} — re-added missing key")
+
+    if repairs:
+        translated_content = f"---\n{repaired_fm}\n---\n{tr_body}"
+
+    return translated_content, repairs
+
+
+def _extract_code_blocks(content):
+    """Extract fenced code blocks with positions."""
+    pattern = re.compile(r'(^```[^\n]*\n)(.*?)(^```\s*$)', re.MULTILINE | re.DOTALL)
+    return [
+        (m.start(), m.end(), m.group(0), m.group(2))
+        for m in pattern.finditer(content)
+    ]
+
+
+def repair_code_blocks(english_content, translated_content):
+    """Replace translated code block contents with English originals."""
+    en_blocks = _extract_code_blocks(english_content)
+    tr_blocks = _extract_code_blocks(translated_content)
+
+    if not en_blocks:
+        return translated_content, []
+
+    if len(en_blocks) != len(tr_blocks):
+        return translated_content, [
+            f"code_blocks — count mismatch (English: {len(en_blocks)}, "
+            f"translated: {len(tr_blocks)}); skipped auto-repair"
+        ]
+
+    repairs = []
+    repaired = translated_content
+    for i in range(len(en_blocks) - 1, -1, -1):
+        en_full = en_blocks[i][2]
+        tr_full = tr_blocks[i][2]
+        if en_full != tr_full:
+            repaired = (
+                repaired[:tr_blocks[i][0]] + en_full + repaired[tr_blocks[i][1]:]
+            )
+            repairs.append(f"code_block[{i}] — restored English content")
+
+    return repaired, repairs
+
+
+def _extract_md_link_urls(content):
+    """Extract markdown link/image URLs in order."""
+    return re.findall(r'\[(?:[^\]]*)\]\(([^)]+)\)', content)
+
+
+def repair_urls(english_content, translated_content):
+    """Ensure markdown link URLs match the English source."""
+    en_urls = _extract_md_link_urls(english_content)
+    tr_urls = _extract_md_link_urls(translated_content)
+
+    if not en_urls:
+        return translated_content, []
+
+    if len(en_urls) != len(tr_urls):
+        return translated_content, [
+            f"urls — count mismatch (English: {len(en_urls)}, "
+            f"translated: {len(tr_urls)}); skipped auto-repair"
+        ]
+
+    repairs = []
+    repaired = translated_content
+    for i, (en_url, tr_url) in enumerate(zip(en_urls, tr_urls)):
+        if en_url != tr_url:
+            repaired = repaired.replace(f"]({tr_url})", f"]({en_url})", 1)
+            repairs.append(f"url[{i}] — restored '{en_url}'")
+
+    return repaired, repairs
+
+
+def check_liquid_tags(english_content, translated_content):
+    """Check that Liquid tags are preserved between source and translation."""
+    warnings = []
+
+    en_exprs = set(re.findall(r'\{\{.*?\}\}', english_content))
+    tr_exprs = set(re.findall(r'\{\{.*?\}\}', translated_content))
+    for expr in sorted(en_exprs - tr_exprs):
+        warnings.append(f"liquid_expr — missing: {expr}")
+
+    en_tags = re.findall(r'\{%[-\s]*(.*?)[-\s]*%\}', english_content)
+    tr_tags = re.findall(r'\{%[-\s]*(.*?)[-\s]*%\}', translated_content)
+
+    def tag_name(t):
+        return t.strip().split()[0] if t.strip() else ""
+
+    en_counts = Counter(tag_name(t) for t in en_tags)
+    tr_counts = Counter(tag_name(t) for t in tr_tags)
+
+    for tag, count in en_counts.items():
+        tr_count = tr_counts.get(tag, 0)
+        if tr_count < count:
+            warnings.append(
+                f"liquid_tag — '{tag}' appears {count}x in English but "
+                f"{tr_count}x in translation"
+            )
+
+    return warnings
+
+
+def check_glossary_compliance(english_content, translated_content, lang_key):
+    """Check that Braze product names are kept in English."""
+    _, en_body = _extract_front_matter(english_content)
+    _, tr_body = _extract_front_matter(translated_content)
+
+    code_re = re.compile(r'```.*?```', re.DOTALL)
+    en_clean = code_re.sub('', en_body)
+    tr_clean = code_re.sub('', tr_body)
+
+    warnings = []
+    for name in BRAZE_PRODUCT_NAMES:
+        en_count = en_clean.lower().count(name.lower())
+        if en_count < 2:
+            continue
+        tr_count = tr_clean.lower().count(name.lower())
+        if tr_count < en_count * 0.5:
+            warnings.append(
+                f"glossary — '{name}' appears {en_count}x in English but "
+                f"only {tr_count}x in translation"
+            )
+
+    return warnings
+
+
+def check_completeness(english_content, translated_content):
+    """Flag translations whose length deviates significantly from the source."""
+    en_len = len(english_content)
+    if en_len == 0:
+        return []
+
+    ratio = len(translated_content) / en_len
+    if ratio < COMPLETENESS_MIN_RATIO:
+        return [
+            f"completeness — translation is {ratio:.0%} of English length "
+            f"(min threshold: {COMPLETENESS_MIN_RATIO:.0%}); possible truncation"
+        ]
+    if ratio > COMPLETENESS_MAX_RATIO:
+        return [
+            f"completeness — translation is {ratio:.0%} of English length "
+            f"(max threshold: {COMPLETENESS_MAX_RATIO:.0%}); possible hallucination"
+        ]
+    return []
+
+
+def check_untranslated(english_content, translated_content):
+    """Detect large blocks of English prose left verbatim in the translation."""
+    _, en_body = _extract_front_matter(english_content)
+    _, tr_body = _extract_front_matter(translated_content)
+
+    strip_patterns = [
+        (re.compile(r'```.*?```', re.DOTALL), ''),
+        (re.compile(r'\{[%{].*?[%}]\}'), ''),
+        (re.compile(r'`[^`]+`'), ''),
+        (re.compile(r'\]\([^)]+\)'), ''),
+        (re.compile(r'https?://\S+'), ''),
+    ]
+
+    en_clean = en_body
+    tr_clean = tr_body
+    for pattern, repl in strip_patterns:
+        en_clean = pattern.sub(repl, en_clean)
+        tr_clean = pattern.sub(repl, tr_clean)
+
+    warnings = []
+    for para in re.split(r'\n\s*\n', en_clean):
+        text = para.strip()
+        if len(text) < UNTRANSLATED_BLOCK_THRESHOLD:
+            continue
+        if text in tr_clean:
+            preview = text[:80].replace('\n', ' ')
+            warnings.append(
+                f"untranslated — {len(text)}-char English block found verbatim: "
+                f"\"{preview}...\""
+            )
+
+    return warnings
+
+
+def qc_check_file(english_path, translated_path, lang_key):
+    """Run all QC checks on one file pair. Auto-repairs are written back."""
+    english_content = Path(english_path).read_text()
+    translated_content = Path(translated_path).read_text()
+
+    findings = {
+        "file": str(translated_path),
+        "lang": lang_key,
+        "repairs": [],
+        "warnings": [],
+    }
+
+    translated_content, fm_repairs = repair_front_matter(
+        english_content, translated_content
+    )
+    findings["repairs"].extend(fm_repairs)
+
+    translated_content, cb_repairs = repair_code_blocks(
+        english_content, translated_content
+    )
+    findings["repairs"].extend(cb_repairs)
+
+    translated_content, url_repairs = repair_urls(
+        english_content, translated_content
+    )
+    findings["repairs"].extend(url_repairs)
+
+    if findings["repairs"]:
+        Path(translated_path).write_text(translated_content)
+
+    findings["warnings"].extend(
+        check_liquid_tags(english_content, translated_content)
+    )
+    findings["warnings"].extend(
+        check_glossary_compliance(english_content, translated_content, lang_key)
+    )
+    findings["warnings"].extend(
+        check_completeness(english_content, translated_content)
+    )
+    findings["warnings"].extend(
+        check_untranslated(english_content, translated_content)
+    )
+
+    return findings
+
+
+def cmd_qc(_args):
+    """Run deterministic quality checks on all translated files."""
+    results = load_results()
+    translated = results.get("translated", [])
+
+    if not translated:
+        print("No translations to QC.")
+        return
+
+    print(f"Running QC checks on {len(translated)} translated file(s)...\n")
+
+    all_findings = []
+    repair_count = 0
+    warning_count = 0
+
+    for entry in translated:
+        source_path = REPO_ROOT / entry["source"]
+        target_path = REPO_ROOT / entry["target"]
+
+        if not source_path.exists() or not target_path.exists():
+            print(f"  Skipping {entry['target']} — file not found")
+            continue
+
+        findings = qc_check_file(source_path, target_path, entry["lang"])
+
+        n_repairs = len(findings["repairs"])
+        n_warnings = len(findings["warnings"])
+        repair_count += n_repairs
+        warning_count += n_warnings
+
+        if n_repairs or n_warnings:
+            all_findings.append(findings)
+            parts = []
+            if n_repairs:
+                parts.append(f"{n_repairs} repaired")
+            if n_warnings:
+                parts.append(f"{n_warnings} warnings")
+            print(f"  {entry['target']} — {', '.join(parts)}")
+        else:
+            print(f"  {entry['target']} — passed")
+
+    qc_data = {
+        "total_files": len(translated),
+        "files_with_issues": len(all_findings),
+        "total_repairs": repair_count,
+        "total_warnings": warning_count,
+        "findings": all_findings,
+    }
+    QC_RESULTS_FILE.write_text(json.dumps(qc_data, indent=2))
+
+    print(f"\nQC complete: {len(translated)} files checked, "
+          f"{repair_count} auto-repairs, {warning_count} warnings")
+
+
+# ---------------------------------------------------------------------------
 # verify  (build + fix loop)
 # ---------------------------------------------------------------------------
 
@@ -377,7 +729,7 @@ def extract_error_files(error_output, lang_dir):
 
 def cmd_verify(args):
     """Build each translated language; auto-fix errors up to N times."""
-    client = Anthropic()
+    client = _get_anthropic_client()
     prompt = load_prompt()
     results = load_results()
 
@@ -496,6 +848,61 @@ def cmd_summary(_args):
             lines.append(f"```\n{item.get('error', 'No error details available')}\n```\n")
             lines.append("</details>\n")
 
+    # QC checks
+    if QC_RESULTS_FILE.exists():
+        qc = json.loads(QC_RESULTS_FILE.read_text())
+        total_repairs = qc.get("total_repairs", 0)
+        total_warnings = qc.get("total_warnings", 0)
+
+        if total_repairs or total_warnings:
+            lines.append("### Quality checks\n")
+
+            lang_stats = {}
+            for f in qc.get("findings", []):
+                lang = f["lang"]
+                if lang not in lang_stats:
+                    lang_stats[lang] = {"repairs": 0, "warnings": 0, "details": []}
+                lang_stats[lang]["repairs"] += len(f.get("repairs", []))
+                lang_stats[lang]["warnings"] += len(f.get("warnings", []))
+                for r in f.get("repairs", []):
+                    lang_stats[lang]["details"].append(f"[repaired] {r}")
+                for w in f.get("warnings", []):
+                    lang_stats[lang]["details"].append(f"[warning] {w}")
+
+            lines.append("| Language | Repairs | Warnings | Status |")
+            lines.append("|----------|---------|----------|--------|")
+            for lang_key in sorted(LANGUAGES):
+                if lang_key not in lang_stats:
+                    lines.append(
+                        f"| {LANGUAGES[lang_key]['name']} | 0 | 0 | Passed |"
+                    )
+                    continue
+                s = lang_stats[lang_key]
+                if s["warnings"]:
+                    status = "Needs review"
+                elif s["repairs"]:
+                    status = "Auto-repaired"
+                else:
+                    status = "Passed"
+                lines.append(
+                    f"| {LANGUAGES[lang_key]['name']} | {s['repairs']} | "
+                    f"{s['warnings']} | {status} |"
+                )
+            lines.append("")
+
+            for lang_key in sorted(lang_stats):
+                s = lang_stats[lang_key]
+                if not s["details"]:
+                    continue
+                name = LANGUAGES[lang_key]["name"]
+                count = len(s["details"])
+                lines.append(
+                    f"<details><summary>{name} — {count} finding(s)</summary>\n"
+                )
+                for d in s["details"]:
+                    lines.append(f"- {d}")
+                lines.append("\n</details>\n")
+
     # Translated files grouped by source
     if translated:
         lines.append("### Files translated\n")
@@ -535,6 +942,9 @@ def main():
         help="Maximum fix-and-rebuild cycles per language (default: 3)",
     )
     vp.set_defaults(func=cmd_verify)
+
+    qp = sub.add_parser("qc", help="Run deterministic quality checks on translations")
+    qp.set_defaults(func=cmd_qc)
 
     sp = sub.add_parser("summary", help="Generate a PR body from translation results")
     sp.set_defaults(func=cmd_summary)

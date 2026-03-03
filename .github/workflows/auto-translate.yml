@@ -95,6 +95,13 @@ jobs:
         run: python scripts/auto_translate.py translate --changed-files changed_files.txt
 
       # ------------------------------------------------------------------
+      # Quality checks
+      # ------------------------------------------------------------------
+      - name: Run translation QC checks
+        if: steps.changes.outputs.count != '0'
+        run: python scripts/auto_translate.py qc
+
+      # ------------------------------------------------------------------
       # Build verification + auto-fix loop
       # ------------------------------------------------------------------
       - name: Set up Ruby
