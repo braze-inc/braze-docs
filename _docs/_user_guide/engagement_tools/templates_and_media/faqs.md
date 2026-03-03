@@ -44,15 +44,6 @@ This can happen for a variety of reasons, but a common solution is to make sure 
 
 Additionally, if your image was built in Photoshop (or a similar software) and has many layers, merging and reducing the number of layers can also help.
 
-### Why is my GIF failing to upload even though it's under the size limit?
-
-Beyond the 5 MB file size limit, there are additional dimensions that can cause a GIF upload to fail:
-
-- **Extreme aspect ratios:** GIFs with very elongated shapes (for example, 3000 x 2 pixels) are more likely to be rejected, even if the total file size is small. Try to keep both width and height within a reasonable range.
-- **High frame count:** GIFs typically run at 15 to 24 frames per second. If your GIF has 300 or more frames, it may be oversampled. Reduce the frame count using a GIF editor or optimization tool before uploading.
-
-If your GIF meets the size limit but still fails, try re-exporting it with a lower frame count and more balanced dimensions.
-
 ### Why can't I upload any image I want into the push composers?
 
 This is because most composers have restrictions on the image ratio size that is allowed.
