@@ -56,20 +56,7 @@ glossaries:
     tags:
       - Other Filters
   - name: Created From
-    description: |
-      Segments users by where their user profile was created.<br><br>
-      The following are supported values:<br>
-      - SDK (`sdk`): User profile created through the Braze SDK.<br>
-      - REST API (`rest`): User profile created through the Braze REST API.<br>
-      - Push Token Import (`pti`): User profile created through push token import.<br>
-      - CSV (`csv`): User profile created through CSV import.<br>
-      - Demo (`demo`): User profile created through demo data.<br>
-      - SMS (`sms`): User profile created through SMS.<br>
-      - Shopify (`shopify`): User profile created through Shopify.<br>
-      - WhatsApp (`whats_app`): User profile created through WhatsApp.<br>
-      - Provider Event (`provider_event`): User profile created through a provider event.<br>
-      - Provider Sync (`provider_sync`): User profile created through a provider sync.<br>
-      - Landing Page (`landing_page`): User profile created through a landing page.
+    description: Segments users by where their user profile was created.<br><br>The following values are supported:<br>- SDK (`sdk`): User profile created through the Braze SDK.<br>- REST API (`rest`): User profile created through the Braze REST API.<br>- Push Token Import (`pti`): User profile created through push token import.<br>- CSV (`csv`): User profile created through CSV import.<br>- Demo (`demo`): User profile created through demo data.<br>- SMS (`sms`): User profile created through SMS.<br>- Shopify (`shopify`): User profile created through Shopify.<br>- WhatsApp (`whats_app`): User profile created through WhatsApp.<br>- Provider Event (`provider_event`): User profile created through a provider event.<br>- Provider Sync (`provider_sync`): User profile created through a provider sync.<br>- Landing Page (`landing_page`): User profile created through a landing page.
     tags:
       - Other Filters
   - name: Nested Custom Attributes
