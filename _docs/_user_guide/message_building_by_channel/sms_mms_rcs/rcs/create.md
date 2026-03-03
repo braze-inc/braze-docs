@@ -174,15 +174,38 @@ Next, refer to [Reporting for SMS, MMS, and RCS]({{site.baseurl}}/sms_mms_rcs_re
 
 ## Tips
 
-### Using Liquid for message personalization
+### Use Liquid for message personalization
 
 If you plan to use Liquid, be sure to include a default value for your chosen personalization so, if the recipient's user profile is incomplete, they will not receive a blank placeholder `Hi, !` instead of their name or a coherent sentence.
 
-### Generating AI copy
+### Generate AI copy
 
 Need help creating engaging copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Message composer with an icon to open the AI copywriting assistant.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
+
+### Create conversational message workflows
+
+Conversational message workflows let you respond dynamically to users, creating a back-and-forth messaging experience. To build a workflow, create a Canvas, and then combine suggested replies with [Action Paths]({{site.baseurl}}/action_paths/) to direct your workflow based on which reply a user selects.
+
+1. In the Canvas builder, create an RCS message step with multiple suggested replies.
+
+![RCS message composer with suggested replies.]({% image_buster /assets/img/rcs/suggested_replies.png %})
+
+{: start="2"}
+2. Connect that message to an Action Path with an action group for each suggested reply.
+3. For each action group:
+  - Select the trigger **Send an SMS inbound message**.
+  - Set the message body to be the same as the corresponding suggested reply. 
+
+![Action Path step configured with three action groups, one for each suggested reply.]({% image_buster /assets/img/rcs/quick_reply.png %})
+
+{: start="4"}
+4. Connect each action group to an RCS message step, and then add content based on the associated suggested reply.
+5. Continue the conversational workflow by adding suggested replies to any follow-up messages.
+6. Repeat steps 2-4 until the workflow is complete.
+
+![Canvas showing a conversational workflow with two Action Paths.]({% image_buster /assets/img/rcs/full_conversational_workflow.png %})
 
 ## Frequently asked questions
 
