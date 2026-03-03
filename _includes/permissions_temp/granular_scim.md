@@ -1,6 +1,12 @@
+## Granular permissions migration
+
 {% alert important %}
-Granular permissions is in early access. When migration is planned for your company, your Braze admins will receive emails and in-dashboard banners notifying them of the [granular permission migration]({{site.baseurl}}/granular_permissions_migration/). <br><br>Refer to the [Legacy SCIM API]({{site.baseurl}}/scim_api_appendix/?sdktab=legacy%20scim%20api) tab to view the legacy SCIM API objects and appendix.
+Granular permissions is in early access. When migration is planned for your company, your Braze admins will receive emails and in-dashboard banners notifying them of the [granular permission migration]({{site.baseurl}}/granular_permissions_migration/).
 {% endalert %}
+
+Existing SCIM integrations and [legacy SCIM API objects]({{site.baseurl}}/scim_api_appendix/?sdktab=legacy%20scim%20api) will continue to work after the granular permissions migration in late April. 
+
+You aren't required to take any immediate action. However, we encourage you to review your integrations for any permissions that will be granularized. For example, if you are currently sending `basic_access` in the API, we suggest you update your integration after granularization to include the specific permissions (for example, `"appGroupPermissions":["view_campaigns","edit_campaigns"]`). Braze will continue to accept legacy strings, like `basic_access`, after the granular permissions migration so that existing integrations do not break.
 
 ## Permissions object
 
