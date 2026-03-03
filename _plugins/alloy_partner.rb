@@ -31,18 +31,18 @@ module Jekyll
         end
 
         if context['site']['data'].include?(url)
-          puts 'Using cache for: ' + url.split('?')[0]
+          Jekyll.logger.debug "AlloyPartner:", "Using cache for: #{url.split('?')[0]}"
           return context['site']['data'][url]
         else
-          puts 'Fetching content of url: ' + url.split('?')[0]
+          Jekyll.logger.info "AlloyPartner:", "Fetching content of url: #{url.split('?')[0]}"
           if url =~ URI::regexp
             @results = fetchContent(url)
           else
-            puts 'Error fetching: ' + url
+            Jekyll.logger.error "AlloyPartner:", "Error fetching: #{url}"
           end
 
           if @results.code != '200'
-            puts 'Error returning results: ' + url
+            Jekyll.logger.warn "AlloyPartner:", "Error returning results: #{url}"
             context['site']['data'][url] = '{}'
             return '{}'
           else
@@ -57,7 +57,7 @@ module Jekyll
               context['site']['data'][url] = results_hash.to_json
               return context['site']['data'][url]
             else
-              puts 'Empty content from : ' + url
+              Jekyll.logger.warn "AlloyPartner:", "Empty content from: #{url}"
               return '{}'
             end
           end
@@ -81,10 +81,10 @@ module Jekyll
       res = http.get(link.request_uri)
       return res
     rescue OpenSSL::SSL::SSLError => e
-      puts 'Warning: Partner API SSL verification failed (' + e.message + '). Using empty partner data. For local preview only, set SKIP_PARTNER_SSL_VERIFY=true to skip verify (never used in production).'
+      Jekyll.logger.warn "AlloyPartner:", "Partner API SSL verification failed (#{e.message}). Using empty partner data. For local preview only, set SKIP_PARTNER_SSL_VERIFY=true to skip verify (never used in production)."
       return OpenStruct.new(code: '500', body: nil)
     rescue StandardError => e
-      puts 'Warning: Partner API request failed (' + e.message + '). Using empty partner data.'
+      Jekyll.logger.warn "AlloyPartner:", "Partner API request failed (#{e.message}). Using empty partner data."
       return OpenStruct.new(code: '500', body: nil)
     end
   end
