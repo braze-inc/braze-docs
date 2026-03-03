@@ -186,7 +186,7 @@ Need help creating engaging copy? Try using the [AI copywriting assistant]({{sit
 
 ### Create conversational message workflows
 
-Conversational message workflows let you respond dynamically to users, creating a back-and-forth messaging experience. To build a workflow, create a Canvas, and then combine suggested replies with [Action Paths]({{site.baseurl}}/action_paths/) to direct your workflow based on which reply a user selects.
+Conversational message workflows let you respond dynamically to users, creating a back-and-forth messaging experience. To build a workflow, create a Canvas and then combine suggested replies with [Action Paths]({{site.baseurl}}/action_paths/) to direct your workflow based on which reply a user selects.
 
 1. In the Canvas builder, create an RCS message step with multiple suggested replies.
 
@@ -203,7 +203,7 @@ Conversational message workflows let you respond dynamically to users, creating 
 {: start="4"}
 4. Connect each action group to an RCS message step, and then add content based on the associated suggested reply.
 5. Continue the conversational workflow by adding suggested replies to any follow-up messages.
-6. Repeat steps 2-4 until the workflow is complete.
+6. Repeat steps 2–4 until the workflow is complete.
 
 ![Canvas showing a conversational workflow with two Action Paths.]({% image_buster /assets/img/rcs/full_conversational_workflow.png %})
 
