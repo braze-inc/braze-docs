@@ -25,7 +25,7 @@ To duplicate an individual template, select the <i class="fas fa-cog"></i> cog i
 <br><br>
 
 {% alert note %}
-For [Content Block]({{site.baseurl}}/user_guide/messaging/content/content_blocks/) templates, a draft copy is created. For all other templates a new duplicate copy is automatically created.
+For [Content Block]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/) templates, a draft copy is created. For all other templates a new duplicate copy is automatically created.
 {% endalert %}
 
 ### Multiple templates

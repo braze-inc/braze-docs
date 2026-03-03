@@ -55,5 +55,5 @@ Edits made to an existing template aren't reflected in campaigns that were creat
 
 ## Managing your templates
 
-You can [duplicate and archive]({{site.baseurl}}/user_guide/messaging/content/templates/managing_templates/) webhook templates to help better organize and manage your list of templates.
+You can [duplicate and archive]({{site.baseurl}}/user_guide/messaging/templates/managing_templates/) webhook templates to help better organize and manage your list of templates.
 

@@ -10,31 +10,31 @@ description: "Learn about in-app message templates in Braze, including Braze tem
 guide_featured_title: "Braze templates"
 guide_featured_list:
   - name: Onboarding flow
-    link: /docs/user_guide/messaging/content/templates/in_app_message_templates/onboarding/
+    link: /docs/user_guide/messaging/templates/in_app_message_templates/onboarding/
     image: /assets/img/braze_icons/flag-01.svg
   - name: "SMS, RCS, and WhatsApp sign-up form"
-    link: /docs/user_guide/messaging/content/templates/in_app_message_templates/phone_number_capture/
+    link: /docs/user_guide/messaging/templates/in_app_message_templates/phone_number_capture/
     image: /assets/img/braze_icons/phone-02.svg
   - name: Email sign-up form
-    link: /docs/user_guide/messaging/content/templates/in_app_message_templates/email_capture/
+    link: /docs/user_guide/messaging/templates/in_app_message_templates/email_capture/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Email sign-up with discount
-    link: /docs/user_guide/messaging/content/templates/in_app_message_templates/email_discount/
+    link: /docs/user_guide/messaging/templates/in_app_message_templates/email_discount/
     image: /assets/img/braze_icons/sale-03.svg
   - name: Email sign-up with image
-    link: /docs/user_guide/messaging/content/templates/in_app_message_templates/email_image/
+    link: /docs/user_guide/messaging/templates/in_app_message_templates/email_image/
     image: /assets/img/braze_icons/image-01.svg
   - name: Email sign-up with offer
-    link: /docs/user_guide/messaging/content/templates/in_app_message_templates/email_offer/
+    link: /docs/user_guide/messaging/templates/in_app_message_templates/email_offer/
     image: /assets/img/braze_icons/gift-02.svg
   - name: Email sign-up with confirmation
-    link: /docs/user_guide/messaging/content/templates/in_app_message_templates/email_confirmation_page/
+    link: /docs/user_guide/messaging/templates/in_app_message_templates/email_confirmation_page/
     image: /assets/img/braze_icons/check-verified-02.svg
   - name: Product announcement
-    link: /docs/user_guide/messaging/content/templates/in_app_message_templates/product_announcement/
+    link: /docs/user_guide/messaging/templates/in_app_message_templates/product_announcement/
     image: /assets/img/braze_icons/announcement-02.svg
   - name: Seasonal promotion with image
-    link: /docs/user_guide/messaging/content/templates/in_app_message_templates/seasonal_promo/
+    link: /docs/user_guide/messaging/templates/in_app_message_templates/seasonal_promo/
     image: /assets/img/braze_icons/calendar-check-02.svg
 
 guide_menu_title: "Other template types"

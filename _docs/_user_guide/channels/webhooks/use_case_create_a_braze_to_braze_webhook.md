@@ -102,7 +102,7 @@ When a user reaches this webhook step in the first Canvas, Braze triggers the se
 - Braze-to-Braze webhooks are subject to endpoint [Rate limits]({{site.baseurl}}/api/api_limits/).
 - Updates to the user profile incur [Data points]({{site.baseurl}}/user_guide/data/data_points/) that count toward your overall consumption, while triggering another message through the messaging endpoints does not.
 - To target [Anonymous users]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles), use `braze_id` instead of `external_id` in the request body of your webhook.
-- You can save your Braze-to-Braze webhook as a [webhook template]({{site.baseurl}}/user_guide/messaging/content/templates/webhook_templates/) for reuse.
+- You can save your Braze-to-Braze webhook as a [webhook template]({{site.baseurl}}/user_guide/messaging/templates/webhook_templates/) for reuse.
 - You can check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) to view and troubleshoot webhook failures.
 
 

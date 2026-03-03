@@ -57,7 +57,7 @@ To add a custom font, do the following:
 Gmail does not support custom fonts, so your custom font may display as a default system font. For other email platforms, check that your custom font displays correctly prior to sending your email messaging.
 {% endalert %}
 
-To use other custom fonts in your email campaigns, you can create an [email template]({{site.baseurl}}/user_guide/messaging/content/templates/email_templates/email_template/) or [Content Blocks]({{site.baseurl}}/user_guide/messaging/content/content_blocks/) that includes the custom font. For example, you can create a specific email template designed with festive custom fonts tailored to your sale theme. Be sure to check that your font choice is still web-safe and supported on your email platforms.
+To use other custom fonts in your email campaigns, you can create an [email template]({{site.baseurl}}/user_guide/messaging/templates/email_templates/email_template/) or [Content Blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/) that includes the custom font. For example, you can create a specific email template designed with festive custom fonts tailored to your sale theme. Be sure to check that your font choice is still web-safe and supported on your email platforms.
 
 ### Fallback font
 

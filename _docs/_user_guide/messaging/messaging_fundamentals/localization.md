@@ -41,7 +41,7 @@ In this approach, localization is applied to a single template in Braze using [L
 This approach separates templating into different sending locales. After sending, the dashboard reports sending analytics based on each country separately, and any downstream user-level [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) events will also be tied to a specific campaign.
 
 - Templates benefit from implementing [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) for maintenance and tracking purposes.
-- Campaigns can inherit the configurations from the same [Braze template]({{site.baseurl}}/user_guide/messaging/content/templates/) and [Content Blocks]({{site.baseurl}}/user_guide/messaging/content/content_blocks/) (such as [email templates]({{site.baseurl}}/user_guide/messaging/content/templates/email_templates/) that contain Liquid).
+- Campaigns can inherit the configurations from the same [Braze template]({{site.baseurl}}/user_guide/messaging/templates/) and [Content Blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/) (such as [email templates]({{site.baseurl}}/user_guide/messaging/templates/email_templates/) that contain Liquid).
 - Pre-existing campaigns and templates can be [duplicated]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/duplicating/) to allow a faster time time-to-value.
 
 | Advantages | Considerations |
@@ -122,7 +122,7 @@ We always recommend including a {% raw %}`{% else %}`{% endraw %} statement in y
 {% endtab %}
 
 {% tab Content Blocks %}
-Braze [Content Blocks]({{site.baseurl}}/user_guide/messaging/content/content_blocks/) are reusable blocks of content. When a block is changed, all references to that block changes. For example, updates to an email header or footer will be reflected in all emails or to house translations. These blocks can also be [created]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) and [updated]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) using the REST API, and users can programmatically upload translations. 
+Braze [Content Blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/) are reusable blocks of content. When a block is changed, all references to that block changes. For example, updates to an email header or footer will be reflected in all emails or to house translations. These blocks can also be [created]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) and [updated]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) using the REST API, and users can programmatically upload translations. 
 
 When building a campaign in the dashboard, Content Blocks can be referenced using tag {% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %}. These blocks could contain all translations housed within conditional logic for each language, as shown in option 1, or a separate block for each language can be used.
 

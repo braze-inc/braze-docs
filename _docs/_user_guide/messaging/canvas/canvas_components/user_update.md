@@ -130,7 +130,7 @@ You can use the user update step to persist a `canvas_entry_property`. Let’s s
 
 To store the property of the trigger event for a Canvas as an attribute, use the personalization modal to extract and store the Canvas entry property. User Update also supports the following personalization features: 
 * [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
-* [Content Blocks]({{site.baseurl}}/user_guide/messaging/content/content_blocks/)
+* [Content Blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/)
 * [Entry properties]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/)
 * Liquid logic (including [aborting messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Multiple attribute or event updates per object
