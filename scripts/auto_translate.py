@@ -328,7 +328,7 @@ def cmd_translate(args):
     client = _get_anthropic_client()
     prompt = load_prompt()
     results = load_results()
-    results["skipped"] = results.get("skipped", []) + skipped
+    results["skipped"] = skipped
     glossaries = {lang: load_glossary(lang) for lang in LANGUAGES}
     styleguides = {lang: load_styleguide(lang) for lang in LANGUAGES}
 

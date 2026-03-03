@@ -111,6 +111,9 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
+      # Orphaned translation cleanup is temporarily disabled while the
+      # clean_orphaned_translations.py script is validated to avoid
+      # accidental deletions. Re-enable once confirmed safe in production.
       # - name: Clean up orphaned translations
       #   if: steps.changes.outputs.count != '0'
       #   run: python scripts/clean_orphaned_translations.py
