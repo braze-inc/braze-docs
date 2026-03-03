@@ -19,3 +19,6 @@ braze-docs.iml
 # Braze scripts
 scripts/temp
 node_modules
+
+# Glossary audit reports (generated)
+glossary_audit_report.*
