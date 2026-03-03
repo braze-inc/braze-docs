@@ -116,7 +116,7 @@ The **Log Custom Event** and **Log Custom Attribute** options require the follow
 
 ## Step 4: Configure additional settings (optional)
 
-You can use [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds), and customize how cards are sorted.
+You can use [key-value pairs]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs/) to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds), and customize how cards are sorted.
 
 To add key-value pairs to your message, go to the **Settings** tab and select **Add New Pair**.
 

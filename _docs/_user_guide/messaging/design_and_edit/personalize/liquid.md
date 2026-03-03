@@ -1,7 +1,7 @@
 ---
-nav_title: Liquid
-article_title: Liquid
-page_order: 0
+nav_title: Liquid reference
+article_title: Liquid Reference
+page_order: 2
 layout: dev_guide
 alias: /liquid/
 search_rank: 3

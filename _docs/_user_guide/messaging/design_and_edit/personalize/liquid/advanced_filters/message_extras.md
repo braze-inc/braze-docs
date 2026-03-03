@@ -36,7 +36,7 @@ The `message_extras` tag is supported for all message types with a send event, a
 
 {: start="2"}
 
-2. Enter the [key-value pair]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) for each `message_extras` tag. 
+2. Enter the [key-value pair]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs/) for each `message_extras` tag. 
 
 ![An example of key-value pairs for the message extras tag. The title field reads "Your New Favorites." The message reads key-value pairs for the message extras tag and the following sentence: "We're excited to bring you a side selection of fresh and exciting products that are sure to become your new go-to favorites"]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
 

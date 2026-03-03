@@ -297,7 +297,7 @@ Some in-app message types do not have the option for styling beyond uploading cu
 
 ### Key-value pairs
 
-You can add [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) to send extra custom fields to user devices.
+You can add [key-value pairs]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs/) to send extra custom fields to user devices.
 
 ## Step 7: Build the remainder of your campaign or Canvas
 

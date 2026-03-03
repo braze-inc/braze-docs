@@ -27,7 +27,7 @@ You can then use this variable in three main ways:
 
 ## Prerequisite
 
-Agent steps use [Canvas context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables) to ingest relevant context and output a variable that can be leveraged in the Canvas.
+Agent steps use [Canvas context variables]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/context_variables) to ingest relevant context and output a variable that can be leveraged in the Canvas.
 
 ## Creating an Agent step
 

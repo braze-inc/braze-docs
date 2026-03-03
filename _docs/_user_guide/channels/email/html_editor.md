@@ -110,7 +110,7 @@ Under **Sending Settings** > **Advanced**, turn on inline CSS and add personaliz
 
 ##### Email headers
 
-To add email headers, select **Add New Header**. Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically include sender, recipient, authentication protocol, and routing information. Braze automatically adds the RFC-required header information for emails to reach inbox providers.
+To add email headers, select **Add New Header**. Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs/) typically include sender, recipient, authentication protocol, and routing information. Braze automatically adds the RFC-required header information for emails to reach inbox providers.
 
 Braze allows you the flexibility to add additional email headers as needed for advanced use cases. There are a few reserved fields that the Braze platform will overwrite during sending. 
 
