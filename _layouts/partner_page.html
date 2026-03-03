@@ -236,6 +236,7 @@ $(document).ready(function() {
         $('#results_msg').show();
       }
 
+      return result_cnt;
     };
     var partner_hash = {'data':{},'search': {}, 'sorted': []};
     if (alloy_data) {
@@ -253,7 +254,12 @@ $(document).ready(function() {
       partner_hash['sorted'].sort();
       set_filters();
 
-      generate_partners(partner_hash,true);
+      var result_cnt = generate_partners(partner_hash,true);
+      if (result_cnt > 0) {
+        $('#partner_list_fallback').hide();
+      } else {
+        $('#partner_list_fallback').show();
+      }
 
       for (var i = 0 ; i < filter_select.length; i++ ) {
         $('#' + filter_select[i]).on('change',function(e){
@@ -264,7 +270,6 @@ $(document).ready(function() {
       $('#partner_search').on('keyup',function(e){
         generate_partners(partner_hash,false);
       });
-      $('#partner_list_fallback').hide();
     } else {
       $('#partner_list_fallback').show();
     }
