@@ -78,22 +78,19 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 
 The `messages` response will contain information about each message. The following includes example message responses for each channel:
 
-#### Push
+{% tabs %}
+{% tab Content Cards %}
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
-    "name": (string) the name of the variant,
-    "alert": (string) the alert body text,
-    "extras": (hash) any key-value pairs provided,
-    "title": (string) the alert title text,
-    "action": (string) action link from click,
-    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
-    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
+    "channel": "content_cards",
+    "name": (string) the name of variant,
+    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
-#### Email
+{% endtab %}
+{% tab Email %}
 
 ```json
 {
@@ -114,7 +111,10 @@ The `messages` response will contain information about each message. The followi
 }
 ```
 
-#### In-app messages
+{% endtab %}
+{% tab In-app messages %}
+
+#### Surveys
 
 ```json
 {
@@ -142,17 +142,47 @@ The `messages` response will contain information about each message. The followi
 }
 ```
 
-#### Content Cards
+#### Slideup, modal, fullscreen in-app messages
 
 ```json
 {
-    "channel": "content_cards",
-    "name": (string) the name of variant,
-    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
+    "channel": "in_app_message",
+    "name": (string) the name of the variant,
+    "message": (string, optional) the body text,
+    "extras": (hash, optional) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
-#### Webhook
+{% endtab %}
+{% tab Push %}
+
+```json
+{
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
+    "alert": (string) the alert body text,
+    "extras": (hash) any key-value pairs provided,
+    "title": (string) the alert title text,
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
+}
+```
+
+{% endtab %}
+{% tab SMS %}
+
+```json
+{
+  "channel": "sms",
+  "body": (string) the payload body,
+  "from": (string) the list of numbers associated with the subscription group,
+  "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
+}
+```
+
+{% endtab %}
+{% tab Webhook %}
 
 ```json
 {
@@ -165,20 +195,10 @@ The `messages` response will contain information about each message. The followi
 }
 ```
 
-#### SMS
+{% endtab %}
+{% tab WhatsApp %}
 
-```json
-{
-  "channel": "sms",
-  "body": (string) the payload body,
-  "from": (string) the list of numbers associated with the subscription group,
-  "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
-}
-```
-
-#### WhatsApp
-
-##### Template messages
+#### Template messages
 
 ```json
 {
@@ -193,7 +213,7 @@ The `messages` response will contain information about each message. The followi
 }
 ```
 
-##### Response messages
+#### Response messages
 
 ```json
 {
@@ -208,7 +228,8 @@ The `messages` response will contain information about each message. The followi
 }
 ```
 
-#### Control messages
+{% endtab %}
+{% tab Control messages %}
 
 ```json
 {
@@ -217,11 +238,17 @@ The `messages` response will contain information about each message. The followi
 }
 ```
 
+{% endtab %}
+{% endtabs %}
+
+
 ### Conversion behaviors
 
 The `conversion_behaviors` array contains information about each conversion event behavior set for the campaign. These behaviors are in order as set by the campaign. For example, Conversion Event A is the first item in the array, Conversion Event B is the second, and so on. The following lists example conversion event behavior responses:
 
-#### Clicks email
+
+{% tabs %}
+{% tab Clicks email %}
 
 ```json
 {
@@ -230,7 +257,8 @@ The `conversion_behaviors` array contains information about each conversion even
 }
 ```
 
-#### Opens email
+{% endtab %}
+{% tab Opens email %}
 
 ```json
 {
@@ -239,7 +267,8 @@ The `conversion_behaviors` array contains information about each conversion even
 }
 ```
 
-#### Makes purchase (any purchase)
+{% endtab %}
+{% tab Makes purchase (any purchase) %}
 
 ```json
 {
@@ -248,7 +277,8 @@ The `conversion_behaviors` array contains information about each conversion even
 }
 ```
 
-#### Makes purchase (specific product)
+{% endtab %}
+{% tab Makes purchase (specific product) %}
 
 ```json
 {
@@ -258,7 +288,8 @@ The `conversion_behaviors` array contains information about each conversion even
 }
 ```
 
-#### Performs custom event
+{% endtab %}
+{% tab Performs custom event %}
 
 ```json
 {
@@ -268,7 +299,9 @@ The `conversion_behaviors` array contains information about each conversion even
 }
 ```
 
-#### Upgrades app
+
+{% endtab %}
+{% tab Upgrades app %}
 
 ```json
 {
@@ -277,8 +310,8 @@ The `conversion_behaviors` array contains information about each conversion even
     "app_ids": (array or null) array of app ids, such as ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
-
-#### Uses app
+{% endtab %}
+{% tab Uses app %}
 
 ```json
 {
@@ -287,6 +320,9 @@ The `conversion_behaviors` array contains information about each conversion even
     "app_ids": (array or null) array of app ids, such as ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
+
+{% endtab %}
+{% endtabs %}
 
 {% alert tip %}
 For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
