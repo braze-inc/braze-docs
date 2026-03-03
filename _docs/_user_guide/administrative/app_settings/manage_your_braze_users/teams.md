@@ -39,7 +39,7 @@ Then perform the following steps:
 
 1. In the **Workspace-level permissions** section, add the user to the appropriate workspace if they aren't already included.
 
-![A "Banner Template" permission set.]({% image_buster /assets/img/team_level_permissions.png %})
+![Workspace-level permissions with the Banner Template permission set.]({% image_buster /assets/img/team_level_permissions.png %})
 
 {: start="2"}
 2. Select **+ Add team-level permissions**, then select the **Team** you'd like to add this user to.
