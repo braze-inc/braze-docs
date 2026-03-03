@@ -125,10 +125,12 @@ Esta tabla compara los flujos de mensajes dentro de la aplicación que experimen
 
 | Mensaje dentro de la aplicación | Abortar comportamiento |
 | --- | --- |
-| Estándar | No se registró un evento de interrupción porque Sam no realizó ninguna acción que desencadenara un mensaje.<br><br>Los mensajes dentro de la aplicación estándar no registran las cancelaciones porque la definición de una cancelación es "no vi el mensaje a pesar de realizar la acción desencadenante". Dado que los mensajes dentro de la aplicación se entregan al dispositivo antes de que se produzcan las acciones desencadenantes, no tiene sentido considerar omitidos los mensajes dentro de la aplicación debido a la lógica de Liquid. |
+| Estándar | No se registró un evento de interrupción porque Sam no realizó ninguna acción que desencadenara un mensaje.<br><br>Los mensajes dentro de la aplicación estándar no registran las interrupciones porque la definición de interrupción es "no vi el mensaje a pesar de realizar la acción desencadenante". Dado que los mensajes dentro de la aplicación se entregan al dispositivo antes de que se produzcan las acciones desencadenantes, no tiene sentido considerar omitidos los mensajes dentro de la aplicación debido a la lógica de Liquid. |
 | Plantilla | Se registró un evento de interrupción porque Sam realizó la acción desencadenante para activar el mensaje dentro de la aplicación con plantilla, pero recibió una interrupción en la plantilla de Liquid. <br><br>El registro de mensajes dentro de la aplicación se aborta porque la evaluación de Liquid se produce después de que se haya realizado la acción desencadenante. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Más recursos
 
 Antes de empezar a crear sus propias campañas de mensajes para aplicaciones, o de utilizar mensajes para aplicaciones en una campaña multicanal, le recomendamos encarecidamente que consulte nuestra [guía de preparación de mensajes para aplicaciones]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/). Esta guía abarca cuestiones de segmentación, contenido y conversión que debe tener en cuenta a la hora de crear mensajes dentro de la aplicación.
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}

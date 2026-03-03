@@ -52,7 +52,7 @@ Ao determinar qual canal de envio de mensagens é melhor para suas campanhas e C
 - **O conteúdo** é o engajamento visual de sua mensagem. É possível adicionar multimídia e outros ativos ao seu texto para tornar seu conteúdo mais rico.
 - **A urgência** é uma medida da rapidez com que uma mensagem é capaz de notificar o usuário e atrair sua atenção. As notificações que o usuário pode visualizar imediatamente têm uma alta urgência, enquanto as mensagens que precisam que o usuário registre no app têm uma baixa urgência.
 
-A Matriz Braze de Envio de Mensagens simplifica a seleção de canais mapeando **a Complexidade do Conteúdo** em relação à **Urgência de Entrega**. Ao equilibrar esses dois fatores, você pode ajudar sua mensagem a repercutir em vez de interromper.
+A Matriz Braze de Envio de Mensagens simplifica a seleção de canais mapeando **a Complexidade do Conteúdo** em relação à **Urgência de Entrega**. Ao equilibrar esses dois fatores, você pode ajudar sua mensagem a ressoar em vez de interromper.
 
 ![Mensagens no mobile e na web são de conteúdo simples e de alta urgência; e-mails são de conteúdo rico e de alta urgência; mensagens no app e no navegador são de conteúdo simples e de baixa urgência; cartões de conteúdo são de baixa urgência e de conteúdo rico]({% image_buster /assets/img_archive/messaging_matrix.png %})
 

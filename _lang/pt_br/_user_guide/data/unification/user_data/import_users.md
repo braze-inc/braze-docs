@@ -55,7 +55,7 @@ O tempo de execução estimado para um arquivo com 1.000.000 de linhas deve ser 
 
 ### API REST
 
-Use o [ponto de extremidade`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para registrar eventos personalizados, atributos de usuário e compras para usuários.
+Use o [ponto de extremidade`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para registrar eventos personalizados, atributos de usuários e compras para usuários.
 
 ### Ingestão de dados na nuvem
 

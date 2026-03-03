@@ -113,7 +113,7 @@ Vous pouvez afficher l'audience dans Snapchat en entrant dans votre compte gesti
 
 ## Considérations relatives à la synchronisation des utilisateurs et à la limite de débit
 
-Lorsque les utilisateurs atteignent l'étape de synchronisation de l'audience, Braze les synchronise quasiment en temps réel tout en respectant les limites de débit de l'API de Snapchat. Braze met en lot et traite un maximum d'utilisateurs toutes les 5 secondes avant de les envoyer sur Snapchat.
+Lorsque les utilisateurs atteignent l'étape de synchronisation de l'audience, Braze les synchronise quasiment en temps réel tout en respectant les limites de débit de l'API de Snapchat. Braze met en lot et traite autant d'utilisateurs que possible toutes les 5 secondes avant de les envoyer sur Snapchat.
 
 La limite de débit de l'API de Snapchat n'autorise pas plus de dix requêtes par seconde et 100 000 utilisateurs par demande. Si un client atteint cette limite, Braze retente la synchronisation pendant environ 13 heures. Si la synchronisation n'est toujours pas possible, Braze répertorie ces utilisateurs sous l'indicateur Users Errored.
 

@@ -132,7 +132,7 @@ The archive of historical event data in Snowflake goes back to April 2019. In th
 
 ### General Data Protection Regulation (GDPR) compliance
 
-{% include partners/snowflake_pii_gdpr.md %}
+{% multi_lang_include partners/snowflake_pii_gdpr.md %}
 
 ### Speed, performance, cost of queries
 

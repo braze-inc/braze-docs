@@ -83,7 +83,7 @@ Pour utiliser Braze dans le script en l’arrière-plan de votre extension, ajou
         "scripts": [
             "relative/path/to/braze.min.js",
             "background.js"
-        ],
+        ]
     }
 }
 ```

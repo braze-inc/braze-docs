@@ -30,7 +30,7 @@ description: "Este artigo de referência lista filtros avançados, exemplos e co
 | nome do filtro | descrição do filtro | exemplo de entrada | exemplo de saída |
 |---|---|---|---|
 | `url_escape` | Identifica todos os caracteres em uma string que não são permitidos em URLS e substitui os caracteres por suas variantes com escape | `{{'hey<>hi' | url_escape}}` | ei%3C%3Ehi |
-| `url_param_escape` | Substitui todos os caracteres em uma string que não são permitidos em URLs por suas variantes com escape, incluindo o E comercial (&) | `{{'hey<&>hi' | url_param_escape}` | ei%3C%26%3Ehi |
+| `url_param_escape` | Substitui todos os caracteres em uma string que não são permitidos em URLs por suas variantes com escape, incluindo o E comercial (&) | `{{'hey<&>hi' | url_param_escape}}` | ei%3C%26%3Ehi |
 | `url_encode` | Codifica uma string que é compatível com o URL | `{{ 'google search' | url_encode }}` | google+search |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

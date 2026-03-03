@@ -68,7 +68,7 @@ Dieser Rückgabewert muss dem Format des `/users/track` Anfragekörpers von Braz
 
 ## Beispiel für die Webhook-Nutzlast von Typeform
 
-```json
+```http
 Content-Type: application/json
 
 {
@@ -474,7 +474,7 @@ return brazecall;
 
 Sie können Typeform Hidden Fields verwenden, um Daten in der Typeform Webhook-Nutzlast zu übergeben, wie z.B. die ID eines Nutzers:innen, ohne diese Informationen in der Typeform-Antwort weitergeben zu müssen.
 
-In diesem Template-Beispiel verwenden wir ein "user_id" ausgeblendetes Feld und übergeben dieses als `external_id` in die Payload der Anfrage `/users/track`. Obwohl wir "user_id", verwenden, können die Felder an Ihre Bedürfnisse angepasst werden.
+In dieser Beispielvorlage verwenden wir ein "user_id" ausgeblendetes Feld und übergeben dieses als `external_id` in die Nutzdaten der Anfrage `/users/track`. Obwohl wir "user_id", verwenden, können die Felder an Ihre Bedürfnisse angepasst werden.
 
 {% tabs local %}
 {% tab Input %}

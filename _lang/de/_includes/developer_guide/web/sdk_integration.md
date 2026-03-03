@@ -62,6 +62,10 @@ Die Standardeinstellung **Cross-Site Tracking verhindern** in Safari kann verhin
 
 Nachdem das Braze Web SDK zu Ihrer Website hinzugefügt wurde, initialisieren Sie die Bibliothek mit dem API-Schlüssel und der [SDK-Endpunkt-URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints), die Sie in Ihrem Braze-Dashboard unter **Einstellungen** > **App-Einstellungen** finden. Eine vollständige Liste der Optionen für `braze.initialize()` sowie unsere anderen JavaScript-Methoden finden Sie in der [Braze JavaScript Dokumentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
 
+{% alert note %}
+**Angepasste Domains für Internet SDK Anfragen werden nicht unterstützt**: Das Internet SDK `baseUrl` muss ein Braze SDK-Endpunkt sein (z.B. `sdk.iad-05.braze.com`). Braze unterstützt nicht die Weiterleitung des Internet SDK-Verkehrs über eine kundeneigene Domain mittels CNAME-Einträgen. Wenn Sie benötigen, dass Internet SDK-Anfragen von Ihrer eigenen Domain ausgehen, wenden Sie sich an den Braze Support.
+{% endalert %}
+
 ```javascript
 // initialize the SDK
 braze.initialize('YOUR-API-KEY-HERE', {
@@ -320,7 +324,7 @@ useEffect(() => {
 
 Tealium iQ bietet eine einfache, schlüsselfertige Braze-Integration. Um die Integration zu konfigurieren, suchen Sie in der Tealium Tag Management-Schnittstelle nach Braze und geben Sie den API-Schlüssel des Web SDK von Ihrem Dashboard an.
 
-Wenn Sie weitere Einzelheiten oder ausführliche Unterstützung bei der Konfiguration von Tealium benötigen, lesen Sie unsere [Dokumentation zur Integration]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) oder wenden Sie sich an Ihren Tealium Account Manager:in.
+Für weitere Details oder ausführliche Unterstützung bei der Tealium-Konfiguration lesen Sie unsere [Dokumentation zur Integration]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) oder wenden Sie sich an Ihren Tealium Account Manager:in.
 
 ### Vite {#vite}
 

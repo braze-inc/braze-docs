@@ -15,7 +15,7 @@ channel:
 > Avec les modèles de liens, vous pouvez créer des liens dynamiques et réutilisables pour vos campagnes d'e-mail en ajoutant des paramètres ou des URL. Cela permet d'assurer la cohérence des URL dans l'ensemble de vos campagnes et de vos messages. 
 
 {% alert note %}
-Les modèles de liens sont une fonctionnalité facultative. Si l'option **Modèles de liens e-mail** n'apparaît pas dans la section **Modèles**, contactez votre gestionnaire de compte pour activer cette fonctionnalité.
+Les modèles de liens sont une fonctionnalité facultative. Si l'option **Modèles de liens e-mail** ne figure pas dans la section **Modèles**, contactez votre gestionnaire de compte pour activer cette fonctionnalité.
 {% endalert %}
 
 ## Fonctionnement

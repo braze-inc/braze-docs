@@ -25,7 +25,7 @@ dependencies {
 {% endtab %}
 
 {% tab with ui components %}
-Si piensas utilizar componentes de interfaz de usuario Braze más adelante, añade el siguiente código a tu sitio `build.gradle`.  Sustituye `SDK_VERSION` por la versión actual de tu SDK Braze para Android. Para ver la lista completa de versiones, consulta [el Registro de cambios]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+Si piensas utilizar componentes Braze UI más adelante, añade el siguiente código a tu página `build.gradle`.  Sustituye `SDK_VERSION` por la versión actual de tu SDK Braze para Android. Para ver la lista completa de versiones, consulta [el Registro de cambios]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
 dependencies {
@@ -111,6 +111,10 @@ Braze.enableDelayedInitialization(context)
 {% endsubtabs %}
 {% endtab %}
 {% endtabs %}
+
+{% alert note %}
+Cuando se habilita la inicialización retardada y una notificación push contiene una acción de vínculo profundo, el vínculo profundo no se resuelve.
+{% endalert %}
 
 #### Paso 4.2: Configurar análisis push (opcional)
 
@@ -249,13 +253,13 @@ Para ver la lista de parámetros disponibles, consulta [`BrazeActivityLifecycleC
 También puedes utilizar [el Depurador SDK]({{site.baseurl}}/developer_guide/debugging) para diagnosticar problemas del SDK.
 {% endalert %}
 
-Si tienes problemas durante las pruebas, habilita el [registro detallado](#android_enabling-logs) y utiliza logcat para detectar las llamadas a `openSession` y `closeSession` que falten en tus actividades.
+Si tienes problemas durante las pruebas, habilita el [registro detallado](#android_enabling-logs) y utiliza logcat para detectar las llamadas a `openSession` y `closeSession` que faltan en tus actividades.
 
 1. En Braze, ve a **Resumen**, selecciona tu aplicación y, en el desplegable **Mostrar datos para**, elige **Hoy**.
     ![La página "Resumen" en Braze, con el campo "Mostrar datos para" ajustado a "Hoy".]({% image_buster /assets/img_archive/android_sessions.png %})
 2. Abre tu aplicación y actualiza el panel de Braze. Comprueba que tus métricas han aumentado en 1.
 3. Navega por tu aplicación y comprueba que sólo se ha registrado una sesión en Braze.
-4. Envía la aplicación a un segundo plano durante al menos 10 segundos, y luego tráela al primer plano. Comprueba que se ha registrado una nueva sesión.
+4. Envía la aplicación a segundo plano durante al menos 10 segundos, y luego tráela a primer plano. Comprueba que se ha registrado una nueva sesión.
 
 ## Configuraciones opcionales
 
@@ -297,7 +301,7 @@ Braze.configure(this, brazeConfig)
 {% endtabs %}
 
 {% alert tip %}
-¿Buscas otro ejemplo? Consulta nuestra [aplicación de ejemplo Hello Braze](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java).
+¿Buscas otro ejemplo? Consulta nuestro [ejemplo de aplicación Hello Braze](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java).
 {% endalert %}
 
 ### ID de publicidad de Google

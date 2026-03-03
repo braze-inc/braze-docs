@@ -33,5 +33,5 @@ Para saber como integrar o Tapcart ao Braze, consulte [o guia de integração do
 No momento, não há suporte para os seguintes recursos: Push Stories, Web Push, personalização de mensagens no app.
 
 {% alert note %}
-Se tiver outras dúvidas, entre em contato com o especialista em implementação da Tapcart ou envie um e-mail para [help@tapcart.co](mailto:help@tapcart.co).
+Se tiver outras dúvidas, entre em contato com o especialista em implementação do Tapcart ou envie um e-mail para [help@tapcart.co](mailto:help@tapcart.co).
 {% endalert %}

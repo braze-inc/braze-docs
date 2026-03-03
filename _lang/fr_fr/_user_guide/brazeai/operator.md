@@ -1,14 +1,14 @@
 ---
 nav_title: Opérateur
 article_title: Opérateur BrazeAI
-page_order: 0.7
+page_order: 8
 alias: /operator/
 description: "Cet article de référence porte sur BrazeAI Operator, un assistant doté d'une intelligence artificielle créé dans le tableau de bord de Braze."
 ---
 
 # Opérateur <sup>BrazeAITM</sup> 
 
-> <sup>BrazeAITM</sup> Operator est un assistant doté d'une intelligence artificielle créé dans le tableau de bord de Braze. L'opérateur fournit des réponses, des conseils de résolution des problèmes et des meilleures pratiques dans le cadre de votre flux de travail.
+> <sup>BrazeAITM</sup> Operator est un assistant doté d'une intelligence artificielle créé dans le bord du tableau de bord de Braze. L'opérateur fournit des réponses, des conseils de résolution des problèmes et des meilleures pratiques dans le cadre de votre flux de travail.
 
 {% alert important %}
 <sup>BrazeAITM</sup> Operator est en version bêta privée avec des fonctionnalités limitées. Pour obtenir de l'aide, contactez votre gestionnaire satisfaction client.
@@ -21,7 +21,7 @@ Operator est un assistant d'intelligence artificielle intégré au tableau de bo
 Pendant la phase bêta, Operator ne prend en charge que le mode **Ask.**  Vous pouvez le faire :
 
 - Obtenir des réponses de la documentation de Braze
-- Résolution des problèmes à l'aide d'un [contexte adapté à la page](#page-aware-context)
+- Résolution des problèmes à l'aide d'un [contexte tenant compte de la page](#page-aware-context)
 - Apprenez les meilleures pratiques et les conseils en matière d'onboarding.
 
 ### Modéliser les fournisseurs en tant que sous-traitants secondaires ou fournisseurs tiers
@@ -32,7 +32,7 @@ Si les Clients choisissent d'apporter leur propre clé API pour s'intégrer à l
 
 ### Comment mes données sont-elles utilisées et envoyées à OpenAI ?
 
-Afin de générer une sortie d'intelligence artificielle par le biais des fonctionnalités d'intelligence artificielle de Braze que Braze identifie comme exploitant OpenAI (" Sortie "), Braze enverra vos invites, le contenu affiché dans le tableau de bord et les données de l'Espace de travail pertinentes pour vos requêtes, le cas échéant (" Entrée ") à OpenAI. Conformément aux [engagements de la plateforme API d](https://openai.com/enterprise-privacy/)'OpenAI, les données envoyées à l'API d'OpenAI via Braze ne sont pas utilisées pour former ou améliorer les modèles d'OpenAI. Entre vous et Braze, le produit est votre propriété intellectuelle. Braze ne revendiquera pas la propriété des droits d'auteur sur ces sorties. Braze n'offre aucune garantie de quelque nature que ce soit en ce qui concerne le contenu généré par l'intelligence artificielle en général, y compris la sortie.
+Afin de générer une sortie d'intelligence artificielle par le biais des fonctionnalités d'intelligence artificielle de Braze que Braze identifie comme exploitant OpenAI (" Sortie "), Braze enverra vos invites, le contenu affiché dans le tableau de bord et les données de l'Espace de travail pertinentes pour vos requêtes, le cas échéant (" Entrée ") à OpenAI. Conformément aux [engagements de la plateforme API](https://openai.com/enterprise-privacy/) d'OpenAI, les données envoyées à l'API d'OpenAI via Braze ne sont pas utilisées pour former ou améliorer les modèles d'OpenAI. Entre vous et Braze, le produit est votre propriété intellectuelle. Braze ne revendiquera pas la propriété des droits d'auteur sur ces sorties. Braze n'offre aucune garantie de quelque nature que ce soit en ce qui concerne le contenu généré par l'intelligence artificielle en général, y compris la sortie.
 
 ## Comment accéder à l'opérateur
 
@@ -136,7 +136,7 @@ Bien qu'il ait accès au contexte du travail que vous effectuez dans Braze, Oper
 
 - "Donnez-moi une liste de toutes mes campagnes d'e-mail de l'année dernière".
 - "Montrez-moi quels segments ont eu le plus fort taux d'engagement au cours du dernier trimestre".
-- "Analyser les performances de mon Canvas et proposer des améliorations".
+- "Analyser les performances de ma toile et proposer des améliorations".
 
 ### Stabilité bêta
 

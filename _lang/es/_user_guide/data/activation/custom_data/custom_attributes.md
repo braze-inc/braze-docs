@@ -158,9 +158,7 @@ Tenga en cuenta que si introduce valores con espacios entre, antes o después de
 | Comprueba si el atributo string **no coincide parcialmente con ninguna** de las cadenas introducidas | **NO CONTIENE** | **CADENA**<br>Distingue entre mayúsculas y minúsculas; admite varias cadenas (256 como máximo) | Si este filtro especifica `gold` y un perfil de usuario no contiene `gold` en ninguna cadena, el usuario coincidirá con este filtro.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-Una cadena de fecha como "12-1-2021" o "12/1/2021" se convertirá en un objeto datetime y se tratará como un [atributo de hora]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time).
-{% endalert %}
+{% include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 Al segmentar utilizando el filtro **DOES NOT MATCH REGEX**, debe tener ya un atributo personalizado con un valor asignado en ese perfil de usuario. Braze sugiere utilizar la lógica "OR" para comprobar si un atributo personalizado está en blanco para asegurarse de que los usuarios están siendo dirigidos correctamente.

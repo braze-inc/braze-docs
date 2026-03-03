@@ -30,9 +30,9 @@ L'intégration de Lemnisk et de Braze permet aux marques et aux entreprises de l
 
 ## Intégration de Lemnisk
 
-### Étape 1 : Créer une API externe de Braze {#create-a-braze-external-api}
+### Étape 1 : Créer une API externe à Braze {#create-a-braze-external-api}
 
-Dans Lemnisk, accédez au canal API externe. Sélectionnez **Ajouter une nouvelle API externe.** Nous allons maintenant configurer l'endpoint " [Suivi des utilisateurs"]({{site.baseurl}}/api/endpoints/user_data/post_user_track) en tant qu'API externe.
+Dans Lemnisk, accédez au canal API externe. Sélectionnez **Ajouter une nouvelle API externe**. Nous allons maintenant configurer l'endpoint " [Suivi des utilisateurs"]({{site.baseurl}}/api/endpoints/user_data/post_user_track) en tant qu'API externe.
 
 ![Démarrer le processus de création d'une API externe dans Lemnisk]({% image_buster /assets/img/lemnisk/open_external_api.png %})
 

@@ -36,7 +36,7 @@ description: "이 사용법 문서에서는 캠페인 커넥터의 정의와 이
 - 콘텐츠 카드 해제
 
 {% alert important %}
-캠페인 커넥터 트리거는 인앱 메시지 캠페인을 트리거하는 데 사용할 수 없습니다. 인앱 메시지는 커스텀 이벤트나 세션 시작과 같은 SDK 이벤트에 의해서만 트리거될 수 있습니다. 자세한 내용은 [인앱 메시지 만들기]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)를 참조하세요.
+캠페인 커넥터 트리거는 인앱 메시지 캠페인을 트리거하는 데 사용할 수 없습니다. 인앱 메시지는 커스텀 이벤트나 세션 시작과 같은 SDK 이벤트에 의해서만 트리거될 수 있습니다. 자세한 정보는 [인앱 메시지 만들기]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)를 참조하세요.
 {% endalert %}
 
 ### 전달 규칙

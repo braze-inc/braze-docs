@@ -3,6 +3,7 @@ nav_title: Despliega agentes
 article_title: Despliega agentes personalizados
 description: "Aprende a utilizar agentes personalizados en Braze después de crearlos."
 alias: /deploying-agents/
+page_order: 2
 ---
 
 # Despliega agentes personalizados
@@ -17,11 +18,11 @@ Los Agentes Braze están actualmente en fase beta. Si necesitas ayuda para empez
 
 En la sección **Uso del** Agente de tu agente, puedes hacer referencia y navegar hasta donde se está utilizando activamente el agente en catálogos y Lienzos.
 
-![Sección Uso del Agente que muestra dos agentes activos y uno inactivo para los Lienzos.]( {% image_buster /assets/img/ai_agent/agent_usage.png %} )
+![Sección Uso del Agente que muestra dos agentes activos y uno inactivo para los Lienzos.]({% image_buster /assets/img/ai_agent/agent_usage.png %})
 
 ## Agentes en Canvas  
 
-Puedes utilizar agentes como etapas de un recorrido para personalizar mensajes o guiar la toma de decisiones en tiempo real. Para conocer los pasos detallados de configuración, consulta [Paso Agente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
+Puedes utilizar agentes como etapas de un recorrido para personalizar mensajes o guiar la toma de decisiones en tiempo real. Para conocer los pasos detallados de configuración, consulta el [paso Agente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
 
 ### Ejemplos
 
@@ -70,7 +71,7 @@ Tras el lanzamiento, el agente se ejecuta y evalúa cada fila, tomando las colum
 
 Puedes actualizar y editar los campos de tu catálogo que utilizan agentes. Para eliminar un agente de una columna, desmarca **Aplicar agente AI**. Esto convierte la columna en una columna no agéntica, y los campos conservan los últimos valores que el agente aplicó la última vez que se ejecutó en el catálogo.
 
-No se admiten las referencias circulares en los catálogos, lo que significa que no puede darse el siguiente escenario:
+Las referencias circulares en los catálogos no son compatibles, lo que significa que no puede darse el siguiente caso:
 
 - La Columna Agenética 1 utiliza la Columna Agenética 2 como entrada
 - La Columna Agenética 2 utiliza la Columna Agenética 1 como entrada

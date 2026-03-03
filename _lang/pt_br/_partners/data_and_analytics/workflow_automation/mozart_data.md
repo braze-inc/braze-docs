@@ -86,7 +86,7 @@ Nesse ponto, você precisará voltar ao Snowflake para concluir a configuração
 
 Para obter mais informações sobre como fazer isso, consulte a [documentação do Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). Se você quiser alternar as chaves a qualquer momento, a Mozart Data poderá gerar um novo par de chaves e fornecer a você a nova chave pública.
 
-```json
+```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 ```
 
