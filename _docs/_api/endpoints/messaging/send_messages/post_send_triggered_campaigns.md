@@ -103,7 +103,7 @@ When you identify recipients by email, Braze uses `prioritization`. Braze sends 
 - Braze sends after the tie is broken and `prioritization` returns one profile. For example, if profile updates change one user's ordering fields, a later retry may pick one user and send.
 - Braze also does not send when `prioritization` returns no profiles.
 
-#### Retry behavior and `send_to_existing_only`
+#### Retry behavior and send_to_existing_only
 
 Learn what happens when `prioritization` does not return exactly one profile.
 
