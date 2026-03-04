@@ -18,7 +18,7 @@ O rastreamento de desinstalação na Braze fornece os seguintes detalhes:
 2. Estatísticas de desinstalação em nível de campanha em um gráfico de série temporal na página **Detalhes da campanha** de uma campanha específica. Essa estatística especifica o número de destinatários da campanha que desinstalam a cada dia.
 
 {% alert note %}
-Você deve optar por desinstalar o rastreamento no seu painel Braze. Este recurso está disponível para apps no iOS, Android e Fire OS.
+Você deve optar por desinstalar o rastreamento no seu dashboard da Braze. Este recurso está disponível para apps no iOS, Android e Fire OS.
 {% endalert %}
 
 ## Como funciona?
@@ -29,7 +29,7 @@ O Braze coleta automaticamente um nível básico de informações de desinstala�
 
 Você pode ativar o rastreamento de desinstalação na página **Configurações do aplicativo**, em **Configurações**, para cada app que deseja rastrear.
 
-Quando você ativa o rastreamento de desinstalação para um app, o Braze envia uma mensagem push em segundo plano à noite para usuários que não registraram uma sessão ou não receberam um push nas últimas 24 horas.
+Quando você ativa o rastreamento de desinstalação para um app, a Braze envia uma mensagem push em segundo plano à noite para usuários que não registraram uma sessão ou não receberam um push nas últimas 24 horas.
 
 ### Configuração
 
@@ -63,13 +63,13 @@ As estatísticas de desinstalação de campanhas estão localizadas em uma pági
 
 ### Como funciona?
 
-O Braze rastreia as desinstalações observando quando as mensagens push enviadas aos dispositivos dos usuários retornam um sinal do Firebase Cloud Messaging (FCM) ou do serviço de Notificações por Push da Apple (APNs) de que o app não está mais instalado. Se você ativar o Rastreamento Global de Desinstalação para um app, o Braze envia uma mensagem push silenciosa diária para usuários para detectar se eles desinstalaram. O Braze envia este push "silencioso" para todos os usuários (a menos que o usuário tenha desativado os pushes silenciosos nas configurações do app); o push não aparece para os usuários. Se o Braze detectar que um usuário desinstalou, nós:
+O Braze rastreia as desinstalações observando quando as mensagens push enviadas aos dispositivos dos usuários retornam um sinal do Firebase Cloud Messaging (FCM) ou do serviço de Notificações por Push da Apple (APNs) de que o app não está mais instalado. Se você ativar o Rastreamento Global de Desinstalação para um app, a Braze envia uma mensagem push silenciosa diária para os usuários para detectar se eles desinstalaram. A Braze envia este push "silencioso" para todos os usuários (a menos que o usuário tenha desativado os pushes silenciosos nas configurações do app); o push não aparece para os usuários. Se a Braze detectar que um usuário desinstalou, nós:
 
 * Aumenta a contagem total de desinstalações do app em um.
 * Aumenta em um a contagem de desinstalações para cada campanha que o usuário recebeu com êxito nas últimas 24 horas.
 * Se um usuário receber três campanhas em um período de 24 horas e depois desinstalar, incrementamos a contagem de "desinstalações" para todas as três campanhas.
 
-FCM e APNs impõem restrições ao rastreamento de desinstalação. O Braze incrementa apenas a contagem de desinstalação quando FCM ou APNs nos informam que um usuário desinstalou, mas esses sistemas de terceiros podem nos notificar sobre desinstalações a qualquer momento. Use o rastreamento de desinstalação para detectar tendências direcionais em vez de estatísticas precisas.
+FCM e APNs impõem restrições ao rastreamento de desinstalação. A Braze incrementa apenas a contagem de desinstalação quando FCM ou APNs nos informam que um usuário desinstalou, mas esses sistemas de terceiros podem nos notificar sobre desinstalações a qualquer momento. Use o rastreamento de desinstalação para detectar tendências direcionais em vez de estatísticas precisas.
 
 Para mais informações sobre como usar o rastreamento de desinstalação, veja nosso post no blog [Rastreamento de Desinstalação: Uma análise do setor sobre seus pontos fortes e limitações](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 
@@ -80,7 +80,7 @@ Para mais informações sobre como usar o rastreamento de desinstalação, veja 
 Se você observar um aumento nas desinstalações de aplicativos, isso pode ser devido ao envio de mensagens do Firebase Cloud Messaging (FCM) e ao serviço de notificações por Push da Apple (APNS) que revogam tokens antigos em uma frequência diferente.
 
 {% alert note %}
-Por razões de privacidade, os provedores de push do Braze podem revogar tokens em intervalos irregulares, o que significa que as contagens de desinstalação podem às vezes aumentar em um determinado período de tempo.<br><br>Para validar essas mudanças, monitore o rastreamento de desinstalação juntamente com uma métrica de ação do usuário, como a taxa de abertura de push direto. Se as desinstalações aumentarem drasticamente, mas as aberturas de push direto permanecerem estáveis, o aumento provavelmente reflete um parceiro revogando tokens antigos em vez de um comportamento real do usuário.
+Por razões de privacidade, os provedores de push da Braze podem revogar tokens em intervalos irregulares, o que significa que as contagens de desinstalação podem às vezes aumentar em um determinado período de tempo.<br><br>Para validar essas mudanças, monitore o rastreamento de desinstalação juntamente com uma métrica de ação do usuário, como a taxa de abertura de push direto. Se as desinstalações aumentarem drasticamente, mas as aberturas de push direto permanecerem estáveis, o aumento provavelmente reflete um parceiro revogando tokens antigos em vez de um comportamento real do usuário.
 {% endalert %}
 
 ### Por que o número de desinstalações de apps é diferente do que está no APNs?

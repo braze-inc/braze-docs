@@ -1,6 +1,6 @@
 ---
 nav_title: Importe sua lista de e-mails
-article_title: Importe sua lista de e-mails para o Braze
+article_title: Importe sua lista de e-mails para Braze
 page_order: 4
 page_type: reference
 description: "Este artigo de referência aborda as práticas recomendadas para a importação de sua lista de e-mails para o Braze."
@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# Importe sua lista de e-mails para o Braze {#importing-email-lists}
+# Importe sua lista de e-mails para Braze {#importing-email-lists}
 
 > Uma etapa importante para se tornar um remetente de e-mail bem-sucedido é garantir que você tenha uma lista de e-mails de alta qualidade. O gerenciamento adequado da lista de e-mails pode melhorar a entregabilidade e fornecer resultados de campanha mais precisos e limpos.
 
@@ -24,7 +24,7 @@ Os serviços de limpeza de listas de e-mail podem fazer isso para você, determi
 
 ### Verifique se um endereço de e-mail já está associado a um usuário
 
-Antes de criar um usuário através da API ou SDK, chame o endpoint [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) e especifique o `email_address` do usuário. Se retornar um perfil de usuário, esse usuário do Braze já está associado a esse endereço de e-mail.
+Antes de criar um usuário através da API ou SDK, chame o endpoint [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) e especifique o `email_address` do usuário. Se retornar um perfil de usuário, esse usuário Braze já está associado a esse endereço de e-mail.
 
 Recomendamos fortemente que você procure endereços de e-mail únicos quando novos usuários forem criados e evite passar ou importar usuários com o mesmo endereço de e-mail. Caso contrário, você pode ter consequências indesejadas que impactam o envio de mensagens, direcionamento, relatórios e outros recursos.
 

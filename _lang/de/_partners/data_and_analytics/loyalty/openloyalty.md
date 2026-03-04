@@ -129,7 +129,7 @@ Dieser Prozess verwendet Braze-Webhooks, um eine `PATCH` Anfrage an die Open Loy
 
 1.  Erstellen Sie in Braze eine neue **Webhook-Kampagne** (oder verwenden Sie einen Webhook innerhalb eines Canvas).
 2.  Klicken Sie auf **Webhook zusammenstellen**.
-3.  **Webhook URL**: Konstruieren Sie die URL unter Verwendung Ihrer Open Loyalty Instanz, der Tenant ID und der Braze Liquid Variable für die Nutzer:in.
+3.  **Webhook URL**: Konstruieren Sie die URL unter Verwendung Ihrer Open Loyalty Instanz, der Tenant ID und der Braze Liquid-Variable für die Nutzer:innen ID.
     * Format:
       {% raw %}
       `https://<YOUR_OL_INSTANCE>/api/<TENANT_ID>/member/loyaltyCardNumber={{${user_id}}}`

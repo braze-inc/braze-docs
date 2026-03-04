@@ -64,7 +64,7 @@ Avant de continuer, lisez nos directives concernant les [segments de message SMS
 
 ### Ajouter une carte de contact
 
-Vous pouvez ajouter une carte de contact à votre message SMS afin que les clients puissent ajouter votre entreprise et vos coordonnées aux contacts de leur appareil. Vous pouvez attribuer des propriétés telles que le nom de l'entreprise, le numéro de téléphone, l'adresse, l'e-mail et une petite photo. Reportez-vous aux [cartes de contact]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/) pour plus de détails.
+Vous pouvez ajouter une carte de contact à votre message SMS afin que les clients puissent ajouter votre entreprise et vos coordonnées aux contacts de leur appareil. Vous pouvez attribuer des propriétés telles que le nom de l'entreprise, le numéro de téléphone, l'adresse, l'e-mail et une petite photo. Pour plus de détails, reportez-vous à la section [Cartes de contact.]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/) 
 
 ### Conseils
 

@@ -144,6 +144,10 @@ Ajoutez un composant dans votre canvas, puis sélectionnez **Audience Sync.**
 - **Coordonnées du client** : Contient l'e-mail ou le numéro de téléphone de vos utilisateurs, ou les deux, s'ils existent dans Braze. Google exige qu'il s'agisse d'un seul champ à synchroniser et non d'identifiants distincts. Vous pouvez toujours utiliser ce champ unique si vous n'avez qu'un seul des identifiants.
 - **ID de l’annonceur mobile** : Sélectionnez soit IDFA pour iOS, soit GAID pour Android. En raison des exigences de Google en matière de correspondance des clients, vous ne pouvez pas avoir les deux ID d'annonceurs mobiles dans les mêmes listes de clients.
 
+{% alert note %}
+**À propos de "ID de publicité mobile manquants ? Il faut y remédier" :** Lorsque vous vous synchronisez avec une audience en utilisant iOS IDFA ou Android GAID comme champ à faire correspondre, ce message peut apparaître dans l'éditeur d'étape. Il s'agit d'une **information et non d'une erreur**. Il vous rappelle de confirmer que le champ d'ID de la publicité mobile sur lequel vous effectuez la correspondance existe dans vos données d'audience (par exemple, que les utilisateurs du parcours Canvas ont l'identifiant correspondant collecté). Vous pouvez l'écarter après avoir vérifié vos données.
+{% endalert %}
+
 {: start="4"}
 4\. Ensuite, enregistrez votre audience en sélectionnant le bouton **Créer une audience** en bas de l'éditeur d'étape.
 

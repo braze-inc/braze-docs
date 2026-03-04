@@ -54,7 +54,7 @@ Fahrten bestehen aus **Knotenpunkten**, die jeweils eine bestimmte Funktion habe
 - **Bedingter Knoten**: Leitet Nutzer:innen auf der Grundlage von Datenwerten durch verschiedene logische Pfade
 - **Projekt-Knotenpunkt**: Dynamische Personalisierung von Videos anhand der eingehenden Daten
 - **Spieler-Knoten**: Erzeugt eine eindeutige Video-Player-URL
-- **Webhook-Knoten**: Definiert die an Braze zurückgesendete Antwort-Nutzlast
+- **Webhook-Knoten**: Definiert die an Braze zurückgesendete Antwort-Payload
 
 Da Journey-Antworten konfigurierbar sind, stellen Sie sicher, dass die von Seen zurückgegebenen Ausgabefelder den von Ihrer Braze Data Transformation erwarteten Attributen entsprechen.
 

@@ -41,7 +41,7 @@ Plus tard, lorsque vous rédigez un message dans Braze, vous pouvez extraire vos
 
 ## Spécifications des images
 
-Toutes les images chargées dans la bibliothèque multimédia doivent être inférieures à 5 Mo. Les types de fichiers pris en charge sont PNG, JPEG, GIF et SVG. Pour obtenir des recommandations sur les images en fonction du canal de communication, reportez-vous aux sections suivantes.
+Toutes les images chargées dans la bibliothèque multimédia doivent être inférieures à 5 Mo. Les types de fichiers pris en charge sont PNG, JPEG, GIF, SVG et WebP. Pour obtenir des recommandations sur les images en fonction du canal de communication, reportez-vous aux sections suivantes.
 
 ### Cartes de contenu
 

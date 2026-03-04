@@ -9,7 +9,7 @@ alias: /landing_pages/
 
 # Sobre landing pages
 
-> As páginas de destino do Braze são páginas da web autônomas que podem impulsionar sua estratégia de aquisição e engajamento de usuários.
+> As páginas de destino do Braze são páginas da web independentes que podem impulsionar sua estratégia de aquisição e engajamento de usuários.
 
 Use páginas de destino para aumentar seu público, capturar dados de usuários, promover ofertas especiais e apoiar campanhas multicanal.
 
@@ -23,8 +23,8 @@ A disponibilidade de páginas de destino e domínios personalizados depende do s
 
 Antes que você possa acessar, criar e publicar páginas de destino, você precisa de permissões de administrador [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) ou de todas as seguintes permissões:
 
-- Acessar landing page
-- Criar rascunhos de landing page
+- Ver landing pages
+- Editar rascunhos de landing page
 - Publicar landing page
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}

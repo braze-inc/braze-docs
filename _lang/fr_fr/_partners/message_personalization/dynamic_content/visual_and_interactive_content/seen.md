@@ -51,7 +51,7 @@ Un parcours est un flux de travail configurable qui :
 Les voyages sont composés de **nœuds**, chacun ayant une fonction spécifique :
 
 - **Nœud déclencheur**: Définit comment et quand un Journey démarre (pour les intégrations Braze, utilisez un déclencheur `On Create` ).
-- **Nœud conditionnel**: Achemine les utilisateurs vers différents chemins logiques en fonction des valeurs des données.
+- **Nœud conditionnel**: Achemine les utilisateurs vers différents chemins logiques en fonction de la valeur des données.
 - **Nœud du projet**: Applique une personnalisation dynamique de la vidéo en utilisant les données entrantes.
 - **Nœud de joueur**: Génère une URL unique pour le lecteur vidéo
 - **Nœud webhook**: Définit la charge utile de la réponse renvoyée à Braze.
@@ -103,7 +103,7 @@ Configurez le webhook comme suit :
 - Après avoir confirmé que le test fonctionne comme prévu, terminez la configuration du webhook.
 
 
-### Étape 2 : Configurer un parcours dans la plateforme Seen
+### Étape 2 : Configurer un parcours dans la plate-forme Seen
 
 Seen utilise [Journeys](https://docs.seen.io/journey) pour définir comment les données entrantes sont traitées, personnalisées et renvoyées à Braze.  
 Chaque parcours est un flux de travail configurable composé de nœuds qui vous permettent de contrôler à la fois la logique de génération de la vidéo et le contenu de la réponse.
@@ -115,7 +115,7 @@ Pour configurer votre voyage :
    Cela permet de s'assurer que le voyage commence lorsque Braze envoie des données à Seen. Créez et ajoutez toute logique de [segmentation](https://docs.seen.io/segments) dans votre espace de travail si nécessaire.
 3. Créez votre logique en utilisant les nœuds suivants si nécessaire :
    - **Nœud conditionnel**: Acheminer les utilisateurs en fonction des valeurs des attributs (par exemple, le type de régime ou la région).
-   - **Nœud du projet**: Appliquer la personnalisation dynamique des vidéos à l'aide des données entrantes.
+   - **Nœud du projet**: Appliquer la personnalisation dynamique des vidéos en utilisant les données entrantes.
    - **Nœud de joueur**: Générer une URL unique pour le lecteur vidéo
 4. Ajoutez un **nœud webhook** pour définir la réponse renvoyée à Braze.
 

@@ -42,7 +42,7 @@ Antes de empezar, necesitas lo siguiente:
 
 Seen utiliza [Journeys](https://docs.seen.io/journey) para controlar cómo se procesan los datos entrantes y cómo se generan las salidas de video.
 
-Un Viaje es un flujo de trabajo configurable que:
+Una Trayectoria es un flujo de trabajo configurable que:
 - Recibe datos de sistemas externos (como Braze)
 - Aplica reglas lógicas y de personalización
 - Genera un video y activos asociados
@@ -111,7 +111,7 @@ Cada Viaje es un flujo de trabajo configurable compuesto por nodos que te permit
 Para configurar tu Viaje:
 
 1. Crea un nuevo Viaje en la Plataforma Seen
-2. Añade un **nodo Desencadenador** y selecciona el desencadenador `On Create`   
+2. Añade un **nodo Desencadenar** y selecciona el desencadenador `On Create`   
    Esto garantiza que el Viaje se inicie cuando Braze envíe datos a Seen. Crea y añade cualquier lógica de [segmentación](https://docs.seen.io/segments) dentro de tu espacio de trabajo si es necesario.
 3. Construye tu lógica utilizando los siguientes nodos según sea necesario:
    - **Nodo condicional**: Encaminar a los usuarios en función de los valores de los atributos (por ejemplo, tipo de plan o región)

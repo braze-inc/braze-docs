@@ -9,7 +9,7 @@ page_type: reference
 
 # Verschlüsselung des Bezeichners auf Feldebene
 
-> Mit der Verschlüsselung auf Bezeichnerfeld-Ebene können Sie E-Mail-Adressen nahtlos mit dem AWS Key Management Service (KMS) verschlüsseln, um die in Braze freigegebenen personenbezogenen Daten (PII) zu minimieren. Bei der Verschlüsselung werden sensible Daten durch Chiffretext ersetzt, d.h. durch unlesbare verschlüsselte Informationen.
+{% include field_level_encryption_pii_description.md %}
 
 {% alert important %}
 Die Verschlüsselung auf Bezeichner-Feldebene ist als zusätzliches Feature verfügbar. Wenden Sie sich an Ihren Braze-Konto Manager:in, um mit der Verschlüsselung auf Bezeichnerfeld-Ebene zu beginnen.

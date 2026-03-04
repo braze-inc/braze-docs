@@ -332,7 +332,7 @@ E-mail, Web Push, iOS Push, Android Push, WhatsApp
 
 |Canal|Informações adicionais|
 |-------|-----------------------|
-|E-mail|Refere-se ao número total de mensagens (Envios) enviadas e recebidas com sucesso por partes que podem receber e-mails.|
+|E-mail|Refere-se ao número total de mensagens (Envios) enviadas com sucesso para e recebidas por partes que podem receber e-mails.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
@@ -518,7 +518,7 @@ iOS Push, Android Push
 ### Receitas por tempo de vida
 
 {% apitags %}
-Cartões de Conteúdo, E-mail, Mensagem no App, Web Push, Push iOS, Push Android, Webhook, SMS/MMS, LINE
+Cartões de Conteúdo, e-mail, mensagem no app, web push, push iOS, push Android, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}
@@ -530,7 +530,7 @@ Cartões de Conteúdo, E-mail, Mensagem no App, Web Push, Push iOS, Push Android
 ### Valor de tempo de vida por usuário
 
 {% apitags %}
-Cartões de Conteúdo, E-mail, Mensagem no App, Web Push, Push iOS, Push Android, Webhook, SMS/MMS, LINE
+Cartões de Conteúdo, e-mail, mensagem no app, web push, push iOS, push Android, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}
@@ -542,7 +542,7 @@ Cartões de Conteúdo, E-mail, Mensagem no App, Web Push, Push iOS, Push Android
 ### Receita média diária
 
 {% apitags %}
-Cartões de Conteúdo, E-mail, Mensagem no App, Web Push, Push iOS, Push Android, Webhook, SMS/MMS, LINE
+Cartões de Conteúdo, e-mail, mensagem no app, web push, push iOS, push Android, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Average Daily Revenue' %}
@@ -554,7 +554,7 @@ Cartões de Conteúdo, E-mail, Mensagem no App, Web Push, Push iOS, Push Android
 ### Compras diárias
 
 {% apitags %}
-Cartões de Conteúdo, E-mail, Mensagem no App, Web Push, Push iOS, Push Android, Webhook, SMS/MMS, LINE
+Cartões de Conteúdo, e-mail, mensagem no app, web push, push iOS, push Android, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}
@@ -566,7 +566,7 @@ Cartões de Conteúdo, E-mail, Mensagem no App, Web Push, Push iOS, Push Android
 ### Receitas diárias por usuário
 
 {% apitags %}
-Cartões de Conteúdo, E-mail, Mensagem no App, Web Push, Push iOS, Push Android, Webhook, SMS/MMS, LINE
+Cartões de Conteúdo, e-mail, mensagem no app, web push, push iOS, push Android, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}
@@ -581,7 +581,7 @@ Cartões de Conteúdo, E-mail, Mensagem no App, Web Push, Push iOS, Push Android
 E-mail
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Machine Opens' %} Essa métrica é rastreada a partir de 11 de novembro de 2021 para SendGrid e 2 de dezembro de 2021 para SparkPost. Para Amazon SES, a análise aparecerá como _Aberturas_. No entanto, a filtragem de bot para cliques será suportada.
+{% multi_lang_include analytics/metrics.md metric='Machine Opens' %} Essa métrica é rastreada a partir de 11 de novembro de 2021 para SendGrid e 2 de dezembro de 2021 para SparkPost. Para Amazon SES, a análise aparecerá como _Abre_. No entanto, a filtragem de bot para cliques será suportada.
 
 {% endapi %}
 
@@ -692,7 +692,7 @@ WhatsApp
 ### Recebido
 
 {% apitags %}
-E-mail, Cartões de Conteúdo, Mensagem no App, Web Push, Push iOS, Push Android, SMS/MMS, WhatsApp
+e-mail, Cartões de Conteúdo, mensagem no app, web push, push iOS, push Android, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Received' %} 
@@ -829,9 +829,9 @@ SMS/MMS
 E-mail
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} Observe que _Rebotes suaves_ diferem de _Adiantamentos_. Se nenhum e-mail foi entregue com sucesso durante este período de nova tentativa, a Braze enviará um evento de soft bounce por campanha enviada. Antes de 25 de fevereiro de 2025, essas tentativas foram contadas como múltiplos soft bounces para 1 envio de campanha.
+{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} Observe que _Soft Bounces_ diferem de _Deferrals_. Se nenhum e-mail foi entregue com sucesso durante este período de nova tentativa, a Braze enviará um evento de soft bounce por campanha enviada. Antes de 25 de fevereiro de 2025, essas tentativas foram contadas como múltiplos soft bounces para 1 envio de campanha.
 
-Embora os rebotes suaves não sejam rastreados em suas análises de campanha, você pode monitorar os rebotes suaves no [Registro de Atividade da Mensagem]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Você também pode excluir esses usuários do seu envio ou olhar para a quantidade de rebotes suaves dos últimos 30 dias com o [filtro de segmento de Rebote Suave]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). No Registro de Atividade da Mensagem, você também pode ver o motivo dos rebotes suaves e entender possíveis discrepâncias entre os "envios" e "entregas" para suas campanhas de e-mail.
+Embora os soft bounces não sejam rastreados em suas análises de campanha, você pode monitorar os soft bounces no [Registro de Atividade da Mensagem]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Você também pode excluir esses usuários do seu envio ou olhar para a quantidade de soft bounces dos últimos 30 dias com o [filtro de segmento Soft Bounced]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). No Registro de Atividade da Mensagem, você também pode ver o motivo dos soft bounces e entender possíveis discrepâncias entre os "envios" e "entregas" para suas campanhas de e-mail.
 
 {% endapi %}
 
@@ -846,7 +846,7 @@ E-mail
 {% multi_lang_include analytics/metrics.md metric='Spam' %}
 
 {% alert note %}
-As reclamações de spam são tratadas diretamente pelos provedores de serviços de e-mail e, em seguida, retransmitidas para a Braze através de um ciclo de feedback. A maioria dos ciclos de feedback relata apenas uma parte das reclamações reais, então a métrica _Spam_ muitas vezes representa uma fração do total real. Apenas os provedores de serviços de e-mail podem ver o verdadeiro volume de reclamações de spam, o que significa que _Spam_ deve ser visto como uma métrica indicativa, não exaustiva.
+As reclamações de spam são tratadas diretamente pelos provedores de serviços de e-mail e, em seguida, retransmitidas para a Braze através de um feedback loop. A maioria dos feedback loops relata apenas uma parte das reclamações reais, então a métrica _Spam_ muitas vezes representa uma fração do total real. Apenas os provedores de serviços de e-mail podem ver o verdadeiro volume de reclamações de spam, o que significa que _Spam_ deve ser visto como uma métrica indicativa, não exaustiva.
 {% endalert %}
 
 {::nomarkdown}

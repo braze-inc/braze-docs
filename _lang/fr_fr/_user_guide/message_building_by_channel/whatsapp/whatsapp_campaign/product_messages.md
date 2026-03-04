@@ -82,7 +82,7 @@ Vous pouvez sélectionner les produits manuellement à l'aide d'ID ou, si vous a
 
 Veillez à utiliser l'ID du gestionnaire de Braze, `332231937299182`, comme ID de l'entreprise partenaire.
 
-![Fenêtre de partage d'un catalogue avec un partenaire qui contient des champs permettant de saisir l'ID d'entreprise du partenaire et d'attribuer l'autorisation "Gérer le catalogue".]({% image_buster /assets/img/whatsapp/share_meta_catalog.png %}){: style="max-width:70%;"}
+![Fenêtre de partage d'un catalogue avec un partenaire qui contient des champs permettant de saisir un ID d'entreprise partenaire et d'attribuer l'autorisation "Gérer le catalogue".]({% image_buster /assets/img/whatsapp/share_meta_catalog.png %}){: style="max-width:70%;"}
 
 {: start="3"}
 3\. Sélectionnez les paramètres de votre catalogue Meta. Vous devez sélectionner **Afficher l'icône du catalogue dans l'en-tête du chat** pour envoyer les messages du catalogue.

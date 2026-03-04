@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Snowflake データリテンション
 
-> Braze は、Snowflake に保存されている 2 年以上経過したすべてのイベントデータから個人識別情報 (PII) を匿名化して削除します。Snowflake データシェアリングを使用する場合、完全なイベントデータをご使用の環境に保持するには、リテンションポリシーが適用される前に Snowflake アカウントにコピーを保存します。
+> Brazeは、Snowflakeに保存されている2年以上前のほとんどのイベントデータから、パーソナライズされた情報（PII）を削除する。特定のイベントは、このページで後述するように、ユーザーが削除されるまで保持される。Snowflake データシェアリングを使用する場合、完全なイベントデータをご使用の環境に保持するには、リテンションポリシーが適用される前に Snowflake アカウントにコピーを保存します。
 
 このページでは、匿名化されていないデータを保持する2つの方法を紹介する： 
 
@@ -19,6 +19,15 @@ search_tag: Partner
 {% alert warning %}
 「[データ保護技術支援]({{site.baseurl}}/dp-technical-assistance/)」で説明されているように、Braze は、Braze から削除されたユーザーのイベントデータを自動的に匿名化します。共有データベースの外部にコピーされたデータは、Brazeがもはや管理していないため、このプロセスには含まれない。
 {% endalert %}
+
+## 2年間のリテンション・ポリシーが免除されるイベント
+Brazeは、ユーザーが削除されるまで、ユーザーライフサイクル、サブスクリプションステータス、インバウンドメッセージングに関するイベントを保持する。以下の出来事は、標準的な2年間のリテンションポリシーから除外される：
+- `users.UserOrphan`
+- `users.UserDeleteRequest`
+- `users.behaviors.subscription.GlobalStateChange`
+- `users.behaviors.subscriptiongroup.StateChange`
+- `users.messages.sms.InboundReceive`
+- `users.messages.whatsapp.InboundReceive`
 
 ## すべてのデータを別の Snowflakeデータベースにコピーする
 

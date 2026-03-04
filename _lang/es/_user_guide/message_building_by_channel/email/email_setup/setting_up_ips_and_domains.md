@@ -44,9 +44,8 @@ Comprobaremos su configuración y validaremos toda la información en nuestros s
 
 Este método establecerá un dominio de envío, un dominio de seguimiento y una IP en total para una empresa. Si tienes pensado configurar más, consulta con el equipo de incorporación de Braze (método 1).
 
-{% alert important %}
-Esta función de autoservicio para configurar el correo electrónico está actualmente en fase beta. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en la versión beta.<br>Si utiliza la función de configuración de correo electrónico de autoservicio, asegúrese de consultar también con el equipo Braze Onboarding.
-{% endalert %}
+{% include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
+<br>Si utiliza la función de configuración de correo electrónico de autoservicio, asegúrese de consultar también con el equipo Braze Onboarding.
 
 ### Requisitos previos
 

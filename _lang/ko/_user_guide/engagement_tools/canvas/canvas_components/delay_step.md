@@ -2,7 +2,7 @@
 nav_title: 지연 
 article_title: 지연 
 alias: "/delay_step/"
-page_order: 3
+page_order: 8
 page_type: reference
 description: "이 참조 문서에서는 관련 메시지를 추가하지 않고도 캔버스에 지연을 추가하는 방법에 대해 설명합니다."
 tool: Canvas
@@ -40,7 +40,7 @@ You can now extend Delay steps up to two years. For example, if you're onboardin
 '일'과 '달력 일수'를 계산하는 방법의 차이에 유의하세요.
   
 - '하루'는 24시간이며 사용자가 지연 단계에 진입한 시점부터 계산됩니다. 
-- "캘린더 날짜"는 다음 지정된 시간까지 대기해야 하는 시간을 정의하며, 24시간 미만일 수 있습니다. 회사 시간 또는 사용자 현지 시간으로 지연하도록 선택할 수 있습니다. If a time isn't specified, the user will be delayed until midnight the next day in company time.
+- '캘린더 날짜'는 다음 지정된 시간까지 대기해야 하는 시간을 정의하며, 24시간 미만일 수 있습니다. 회사 시간 또는 사용자 현지 시간으로 지연하도록 선택할 수 있습니다. If a time isn't specified, the user will be delayed until midnight the next day in company time.
 
 또한 **특정 시간에를** 선택하여 사용자가 캔버스에서 진행할 시기를 지정할 수도 있습니다. 이 옵션은 사용자가 지연 단계를 입력한 시간을 고려합니다. 이 시간이 설정에 구성된 시간을 초과하는 경우 지연 시간에 시간이 더 추가됩니다. 
 
@@ -104,9 +104,7 @@ If you add a Delay component to your Canvas and there are no subsequent steps, a
 
 ### Personalized delays
 
-{% alert important %}
-Personalized delays and extended delays are in early access. Contact your Braze account manager if you're interested in participating in this early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The personalized delays and extended delays feature' %}
 
 Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by. 이렇게 하면 선택한 속성 또는 속성에 설정된 시간이 재정의됩니다. 이 기능은 며칠 또는 몇 주 단위로 오프셋을 적용하고 사용자가 특정 시간에 앞으로 나아가도록 하려는 경우에 유용합니다. 표준 시간대는 속성 또는 속성에서 가져오거나 사용할 수 없는 경우 대체 시간대를 사용합니다. 
 

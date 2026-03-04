@@ -59,4 +59,10 @@ Nein. Die meisten Liquid-Tags werden jedoch für Banner Nachrichten unterstützt
 
 ## Kann ich Klick-Ereignisse erfassen?
 
-Klick-Ereignisse werden nur erfasst, wenn eine On-Click-Aktion auf einem `logClick`-Element festgelegt ist und über die [JS-Bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) aufgerufen wird.
+Ja Wie Klick-Ereignisse erfasst werden, hängt davon ab, wie Ihr Banner gerendert wird:
+
+- **Standard-Editor-Komponenten:** Wenn Ihr Banner Standard-Editor-Komponenten (Bilder, Buttons, Text) verwendet, werden Klicks automatisch getrackt, wenn Sie die Einfügemethoden des SDK verwenden.
+- **Angepasste Code-Blöcke:** Wenn Ihr Banner den Editor-Block für angepassten Code verwendet, müssen Sie `brazeBridge.logClick()` aus Ihrem angepassten HTML aufrufen, um Klicks zu tracken. Dies gilt auch, wenn Sie die SDK-Methoden zum Einfügen und Rendern des Banners verwenden. Dies funktioniert genauso wie die [JavaScript-Brücke]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) für In-App-Nachrichten im HTML-Format.
+- **Angepasste UI (headless):** Wenn Sie ein vollständig angepasstes UI mit den angepassten Eigenschaften des Banners erstellen, anstatt den HTML-Code des Banners zu rendern, rufen Sie `logClick()` für das Banner-Objekt aus Ihrem Anwendungscode auf.
+
+Weitere Informationen finden Sie unter [Klicks protokollieren]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks).

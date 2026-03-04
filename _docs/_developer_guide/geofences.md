@@ -7,6 +7,7 @@ platform:
   - Android
   - FireOS
   - Swift
+  - Xamarin
 Tool:
   - Location
 ---
@@ -22,5 +23,9 @@ Tool:
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/geofences.md %}
+{% endsdktab %}
+
+{% sdktab .NET MAUI (Xamarin) %}
+{% multi_lang_include developer_guide/xamarin/geofences.md %}
 {% endsdktab %}
 {% endsdktabs %}
