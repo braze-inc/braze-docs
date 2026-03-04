@@ -370,7 +370,9 @@
   "insight": "insight",
   "install attribution": "atribuição da instalação",
   "Integrations": "Integrações",
+  "Intelligence Suite": "Intelligence Suite",
   "Intelligent Timing": "Intelligent Timing",
+  "Operator": "Operator",
   "interstitials": "intersticiais",
   "Invisible open tracking pixel": "pixel de rastreamento de abertura invisível",
   "IP pool": "pool de IP",
@@ -791,5 +793,6 @@
   "Zapier": "Zapier",
   "Zendesk": "Zendesk",
   "Zeotap": "Zeotap",
-  "zero-party data": "dados voluntários"
+  "zero-party data": "dados voluntários",
+  "Feature Flags": "Feature Flags"
 }

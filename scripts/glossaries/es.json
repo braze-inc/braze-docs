@@ -715,6 +715,7 @@
   "opt-in prompt": "mensaje de adhesión voluntaria",
   "opt-out link": "enlace de cancelación",
   "Optilyz": "Optilyz",
+  "Operator": "Operator",
   "Optional": "Opcional",
   "Options": "Opciones",
   "orchestration": "orquestación",
@@ -1129,5 +1130,6 @@
   "Zapier": "Zapier",
   "Zendesk": "Zendesk",
   "Zeotap": "Zeotap",
-  "zero-party data": "zero-party data"
+  "zero-party data": "zero-party data",
+  "Feature Flags": "Conmutador de características"
 }
