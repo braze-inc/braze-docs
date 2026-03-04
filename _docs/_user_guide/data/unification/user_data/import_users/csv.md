@@ -229,7 +229,7 @@ For example, the custom event `trip_booked` may have the properties `destination
 
 ### Step 4: Upload your file
 
-To upload your file, select **Attributes** or **Events**, select **Browse Files**, and upload your CSV. Braze displays a preview of the first few rows and a summary of the detected fields.
+To upload your file, select **Attributes** or **Events**, click **Browse Files**, and upload your CSV. Braze displays a preview of the first few rows and a summary of the detected fields.
 
 ![The upload completed modal showing a file preview, import name field, targeting preferences, and file validation checkbox.]({% image_buster /assets/img/csv_import/upload_completed.png %})
 
