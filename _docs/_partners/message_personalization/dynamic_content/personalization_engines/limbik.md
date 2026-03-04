@@ -1,19 +1,32 @@
-# Limbik 
+---
+nav_title: Limbik
+article_title: Limbik
+description: "This reference article outlines the partnership between Braze and Limbik, an AI resonance layer that predicts how audiences interpret and respond to messages using synthetic audiences and forecasting."
+alias: /partners/limbik/
+page_type: partner
+search_tag: Partner
+---
 
-Limbik is your AI resonance layer—predicting how real audiences interpret and respond to messages, concepts, and AI outputs before they reach the market. Powered by continuous primary research across 60+ countries and 25+ languages, Limbik delivers human-validated synthetic audiences—digital populations that simulate real audience response at machine speed and with research-grade accuracy (95% confidence, 1.5–3% margin of error). Limbik gives you the ability to immediately ensure your messaging resonates with what your target audience believes and feels.
+# Limbik
+
+> [Limbik](https://limbik.com/cognitive-ai) is your AI resonance layer—predicting how real audiences interpret and respond to messages, concepts, and AI outputs before they reach the market. Powered by continuous primary research across 60+ countries and 25+ languages, Limbik delivers human-validated synthetic audiences—digital populations that simulate real audience response at machine speed and with research-grade accuracy (95% confidence, 1.5% to 3% margin of error). Limbik gives you the ability to immediately ensure your messaging resonates with what your target audience believes and feels.
+
+*This integration is managed by Limbik.*
 
 ## Requirements
 
+The following are required to use Limbik with Braze:
+
 | Prerequisite | Description |
-|--|--|
-| Limbik account_id | Speak to your Limbik account team, or make a GET request to Limbik’s “Organisation” endpoint  |
-| Limbik Auth_token |Make a POST request to Limbik’s “Login” endpoint |
-| Braze Rest API_Key |A Braze REST API key with messages permissions. |
-| Braze campaign_id |Go to Messaging > Campaigns and select a pre-existing campaign. If the campaign you want does not exist yet, create one and save it. At the bottom of the individual campaign page, you can find your Campaign API Identifier. |
+| --- | --- |
+| Limbik `account_id` | Speak to your Limbik account team, or make a GET request to Limbik’s `organisation` endpoint  |
+| Limbik `auth_token` | Make a POST request to Limbik’s `login` endpoint |
+| Braze REST API key | A Braze REST API key with "Messages" permissions. Create one in the Braze dashboard under **Settings** > **API Keys**. |
+| Braze `campaign_id` | Go to **Messaging** > **Campaigns** and select a campaign. If the campaign you want does not exist yet, create one and save it. At the bottom of the campaign page, find the Campaign API identifier. |
 
-Before using any of the forecast endpoints, you must first identify which organization (account_id) you have access to. While most customers will have only one organization, some accounts may have multiple organizations available.
+Before using any of the forecast endpoints, you must first identify which organization (`account_id`) you have access to. While most customers have only one organization, some accounts may have multiple organizations available.
 
-### Retrieve Available Organizations
+{% details Retrieve available organizations %}
 
 Query the organizations endpoint to retrieve your available organizations:
 
@@ -23,7 +36,9 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 
-### Example Response
+{% enddetails %}
+
+{% details Example Response %}
 
 ```json
 {
@@ -38,12 +53,13 @@ curl -X 'GET' \
 
 Select the `uid` from your desired organization to use as the `account_id` header in all subsequent API requests.
 
+{% enddetails %}
 
 ## Authentication
 
-To access the API endpoints, you need a bearer token for authentication. Obtain your token by authenticating with your credentials:
+To access the API endpoints, you need a bearer token for authentication. Obtain your token by authenticating with your credentials.
 
-### Login Request
+{% details Login request %}
 
 ```sh
 curl -X 'POST' \
@@ -56,9 +72,11 @@ curl -X 'POST' \
 }'
 ```
 
-### Response
+{% enddetails %}
 
-The response will contain an `access_token` that you should use as the bearer token in all subsequent API requests:
+{% details Example response %}
+
+The response contains an `access_token` that you can use as the bearer token in all subsequent API requests:
 
 ```json
 {
@@ -73,23 +91,21 @@ Include this token in the `Authorization` header for all API requests:
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 
----
+{% alert note %}
+You can use API platforms like Postman to set up automated workflows that call multiple REST API endpoints from different organizations, such as the following workflow.
+{% endalert %}
 
+{% enddetails %}
 
-{% alert Note %}
-API Platforms like Postman can be leveraged by customers to set up automated workflows that interact with multiple Rest API endpoints from different organisations, like the workflow described below
-{%endalert%}
+## Use case - Generating message copy
 
-# Use case 1 - Generating Message Copy
+By using both Braze and Limbik’s REST API endpoints, you can use Limbik’s generative forecasts to create message copy and send it through Braze messaging channels, or adjust existing copy to improve impact for your audience. Both platforms expose functionality you can call programmatically to build sophisticated workflows. 
 
-By leveraging both Braze and Limbik AI’s Rest API endpoints, customers can programmatically make best use of Limbik’s Generative forecasts to generate intelligently designed message copy through Braze Messaging channels, or modify existing copy to maximise impact for the chosen audience. Limbik and Braze both offer a wide array of functionality that can be accessed programmatically through the respective endpoints, allowing for the development of many sophisticated workflows. 
+This documentation outlines two examples: generating message copy in Limbik and using this copy in a subsequent message sent through Braze, as well as using Limbik to score the quality of a given message for your chosen audience.
 
-This documentation will outline two examples: generating message copy in Limbik, and using this copy in a subsequent message sent through Braze, as well as using Limbik to score the quality of a given message for your chosen audience.
+{% details Limbik generative forecast request %}
 
-## Limbik Generative Forecast Request
-
-This endpoint allows users to generate a message and return it in a forecast template. The structure of a request to this endpoint is as follows:
-
+Use this endpoint to generate a message and return it in a forecast template. The structure of a request to this endpoint is as follows:
 
 ```json
 
@@ -101,9 +117,9 @@ GET: https://cortex.prod.limbik.com/rest/api/forecasts/generate/template?prompt=
 
 ```
 
+{% enddetails %}
 
-
-### Response
+{% details Example response %}
 ```json
 
 Limbik Forecast Template Response Example
@@ -129,55 +145,52 @@ Limbik Forecast Template Response Example
 }]
 ```
 
+The key element for this use case is the `additionalDetail` field, which contains the message copy that Limbik generated. 
 
-The key element for the purposes of this use case is the “additionalDetails” field, which contains a string, the message copy that Limbik has generated. 
+Use this value to populate a message sent to Braze. For example, with the POST `/campaigns/trigger/send` endpoint, use `additionalDetail` to populate a payload field. With the POST `/messages/send` endpoint, use it to populate the message object of your choice. 
 
-This can be used to populate a message sent to Braze. For instance, if making use of the POST /campaigns/trigger/send endpoint, the additionalDetail field could be used to populate a payload field. Alternatively, if sending through the POST /messages/send endpoint, the copy could be used to populate the message object of your choice. 
+{% enddetails %}
 
-### Response Fields
+### Response fields
 
 The response contains the following key fields:
 
-- **`type`**: The message type (e.g., `"Generate"` for AI-generated content, `"Message"` for validated messages)
-- **`displayText`**: A short title or summary of the message
-- **`additionalDetail`**: **The complete AI-generated message copy** - This is the primary field containing the full message text that can be sent through your messaging platform
-- **`population`**: The target population and segments for this message
+- **`type`:** The message type (for example, `"Generate"` for AI-generated content, `"Message"` for validated messages)
+- **`displayText`:** A short title or summary of the message
+- **`additionalDetail`**: **The complete AI-generated message copy** - This is the primary field containing the full message text that you can send through your messaging platform
+- **`population`:** The target population and segments for this message
 
-## Using with Braze
+### Using with Braze
 
-The `additionalDetail` field contains the message copy that can be sent to Braze. Here are two common integration patterns:
+The `additionalDetail` field from Limbik's response contains the message copy you send to Braze. One common integration pattern is to pass that value in the `trigger_properties.payload` when calling the Braze trigger send endpoint. In the following example, replace `{{additionalDetail}}` with the actual string from Limbik's `additionalDetail` field, and replace `{{YOUR_CAMPAIGN_ID}}` with your campaign ID.
 
-### Braze Trigger Message Request Example 
+### Braze trigger message request example
 
 ```json
-
 {
   "campaign_id": "{{YOUR_CAMPAIGN_ID}}",
   "trigger_properties": {
-    "payload" : "{{additionalDetail}}"
-    },
+    "payload": "{{additionalDetail}}"
+  },
   "broadcast": true
-    }
+}
 ```
 
+## Use case - Synthetic audience details 
 
+To build on use the first use case, use Limbik’s endpoint `/rest/api/populations/{account_id}/{population_id}`.
 
-# Use Case 2 - Synthetic audience details 
+This endpoint returns key data points that describe the makeup of Limbik’s synthetic audiences, such as gender, location, and so on. You can use these values to populate Connected Audience objects when calling Braze’s messaging endpoints. 
 
-To build on the workflow outlined above , we can leverage Limbik’s endpoint /rest/api/populations/{account_id}/{population_id}.
+{% alert note %}
+Connected Audience objects cannot target users based on Braze’s “default” attributes, so you must story any attributes you want to target in Braze as custom attributes.
+{% endalert %}
 
-This endpoint returns key data points that describe the make-up of Limbik’s synthetic audiences, such as gender, location etc. Users can take these elements and use them to populate connected audience objects, used when making request to Braze’s messaging endpoints. 
+To obtain forecast scores for specific segments, identify the available countries and their corresponding segments.
 
-{%alert Note %}
-Connected Audience objects cannot target users based on Braze’s “default” attributes, so any attributes that users wish to target must be captured in Braze as Custom Attributes.
-{%endalert%}
-
-To obtain forecast scores for specific segments, you first need to identify the available countries and their corresponding segments.
-
-## Step 1: List Available Countries
+### Step 1: List available countries
 
 Retrieve the list of countries available for your account:
-
 
 ```sh
 curl -X 'GET' \
@@ -185,13 +198,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 
+From the response, identify the country you want to use. For example, the United States has an `id` of `56`.
 
+### Step 2: Retrieve available segments
 
-From the response, identify the country you wish to use. For example, the United States has an `id` of `56`.
+After you retrieve the country ID, retrieve the full list of segments for that country. 
 
-## Step 2: Retrieve Available Segments
-
-Once you have the country ID, retrieve the full list of segments available for that country:
+{% details Example call %}
 
 ```sh
 curl -X 'GET' \
@@ -199,11 +212,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 
+{% alert note %}
+The response can be large. Cache this data (for example, in Redis) by name or key for better performance.
+{% endalert %}
 
-
-{% alert Note%} The response can be quite large. API users are advised to cache this data (for example, in Redis) by name or key for improved performance.{%endalert%}
+{% enddetails %}
  
-### Response 
+{% details Example response %} 
 
 ```json
 //For example, to target females in the US adult population
@@ -231,17 +246,15 @@ curl -X 'GET' \
 ]
 ```
 
+{% alert note %}
+- Segments are specified using a simplified composite key format (for example, `gender::female`).
+- The full composite key from the API response (`us2::gender::female`) is shortened to just the category and segment name.
+- For a complete reference of available populations and segments, see [Limbik audiences](https://audiences.limbik.com/).
+{% endalert %}
 
+Using the composite key value for your chosen forecast message, you can map these synthetic audience descriptors to values on real user profiles in Braze. 
 
-{% alert Note %}
-- Segments are specified using a simplified composite key format (e.g., `gender::female`)
-- The full composite key from the API response (`us2::gender::female`) is shortened to just the category and segment name
-- Refer to this [document](https://audiences.limbik.com/) for a complete reference of available populations and segments
-{%endalert%}
-
-Informed by the composite key value for the chosen forecast message, users can map these synthetic audience descriptors to values which may be available on real user profiles in Braze. 
-
-For instance, the composite key (‘fr1::education_level::master_s_degree’) could be leveraged in a Braze Connected Audience object as
+For example, you can use the composite key (`fr1::education_level::master_s_degree`) in a Braze Connected Audience object as follows:
 
 ```json
 {
@@ -259,17 +272,17 @@ For instance, the composite key (‘fr1::education_level::master_s_degree’) co
 }
 ```
 
+{% enddetails %}
 
-# Use case 3 - Evaluating Forecast Score
+## Use case - Evaluating forecast score
 
-Another key feature offered by Limbik is the ability to create an estimated score of a message against a synthetic audience. This can be achieved programmatically via Limbik’s forecasting/sync endpoint. 
+You can use Limbik to create an estimated score for a message against a synthetic audience. Do this programmatically with Limbik’s `forecasting/sync` endpoint. 
 
+### Option 1 - Synchronous forecast
 
-## Option 1 - Synchronous Forecast
+You can use the response payload from the template generation directly with the synchronous forecast endpoint:
 
-The response payload from the template generation can be used directly with the synchronous forecast endpoint:
-
-### Example Generic Request
+{% details Example generic request %}
 
 ```sh
 curl -X 'POST' \
@@ -288,9 +301,9 @@ curl -X 'POST' \
 }'
 ```
 
+{% enddetails %}
 
-
-### Response ( abbreviated )
+{% details Example response (abbreviated) %}
 
 ```json
 {
@@ -314,7 +327,7 @@ curl -X 'POST' \
         "moe": 0.02144,
         "pfi": "0.3611",
         "min_val": 0.2941,
-        "mean_val": 0.41831,
+        "mean_val": 0.41831
         }
       }
     },
@@ -323,7 +336,7 @@ curl -X 'POST' \
         "moe": 0.02381,
         "pfi": "0.3611",
         "min_val": 0.2,
-        "mean_val": 0.30395,
+        "mean_val": 0.30395
       }
     },
     "model_variant": "v4_0_0"
@@ -331,11 +344,13 @@ curl -X 'POST' \
 }
 ```
 
-## Option  2: Prepare Forecast Payload with Segments
+{% enddetails %}
 
-Create your forecast payload using the selected segments. Note that segments use a simplified composite key format
+### Option 2: Prepare forecast payload with segments
 
-### Example Segment-specific Request
+Create your forecast payload using the selected segments. Segments use a simplified composite key format.
+
+{% details Example segment-specific request %}
 
 ```json
 {
@@ -351,6 +366,4 @@ Create your forecast payload using the selected segments. Note that segments use
 }
 ```
 
-
-
-
+{% enddetails %}
