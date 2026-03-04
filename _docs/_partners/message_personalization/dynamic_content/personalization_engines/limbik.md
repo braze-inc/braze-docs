@@ -105,44 +105,47 @@ This documentation outlines two examples: generating message copy in Limbik and 
 
 {% details Limbik generative forecast request %}
 
-Use this endpoint to generate a message and return it in a forecast template. The structure of a request to this endpoint is as follows:
+Use this endpoint to generate a message and return it in a forecast template. Example request:
 
-```json
-
-GET: https://cortex.prod.limbik.com/rest/api/forecasts/generate/template?prompt={{prompt}}
-
-: account_id {{XXXXXX}}
-:Authorization {{XXXXX}}
-:accept application/json
-
+```sh
+curl -X 'GET' \
+  'https://cortex.prod.limbik.com/rest/api/forecasts/generate/template?prompt=YOUR_PROMPT' \
+  -H 'account_id: YOUR_ACCOUNT_ID' \
+  -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
+  -H 'accept: application/json'
 ```
+
+Replace `YOUR_PROMPT`, `YOUR_ACCOUNT_ID`, and `YOUR_ACCESS_TOKEN` with your prompt text, organization ID (from the organizations endpoint), and bearer token from the login endpoint.
 
 {% enddetails %}
 
 {% details Example response %}
-```json
 
-Limbik Forecast Template Response Example
-[{
-  "type": "Message",
-  "displayText": "Formula one next race",
-  "additionalDetail": "The latest dev in Formula...",
-  "messages": [
-    {
-      "body": "The latest dev in Formula ..."
+Example Limbik forecast template response:
+
+```json
+[
+  {
+    "type": "Message",
+    "displayText": "Formula one next race",
+    "additionalDetail": "The latest dev in Formula...",
+    "messages": [
+      {
+        "body": "The latest dev in Formula ..."
+      }
+    ],
+    "population": {
+      "id": 56,
+      "name": "us2",
+      "org_enabled": true,
+      "org_visible": true,
+      "categories": [],
+      "display_name": "US Adults",
+      "composite_key": "us2",
+      "enabled": true
     }
-  ],
-  "population": {
-    "id": 56,
-    "name": "us2",
-    "org_enabled": true,
-    "org_visible": true,
-    "categories": [],
-    "display_name": "US Adults",
-    "composite_key": "us2",
-    "enabled": true
   }
-}]
+]
 ```
 
 The key element for this use case is the `additionalDetail` field, which contains the message copy that Limbik generated. 
@@ -258,17 +261,15 @@ For example, you can use the composite key (`fr1::education_level::master_s_degr
 
 ```json
 {
-  "AND":
-    [
-{
-  "custom_attribute":
+  "AND": [
     {
-      "custom_attribute_name": "education_level",
-      "comparison": "equals",
-      "value": "masters"
+      "custom_attribute": {
+        "custom_attribute_name": "education_level",
+        "comparison": "equals",
+        "value": "masters"
+      }
     }
-}
-   ]
+  ]
 }
 ```
 
@@ -276,7 +277,7 @@ For example, you can use the composite key (`fr1::education_level::master_s_degr
 
 ## Use case - Evaluating forecast score
 
-You can use Limbik to create an estimated score for a message against a synthetic audience. Do this programmatically with Limbik’s `forecasting/sync` endpoint. 
+You can use Limbik to create an estimated score for a message against a synthetic audience. Do this programmatically with Limbik’s `forecasts/synchronous` endpoint. 
 
 ### Option 1 - Synchronous forecast
 
@@ -328,7 +329,6 @@ curl -X 'POST' \
         "pfi": "0.3611",
         "min_val": 0.2941,
         "mean_val": 0.41831
-        }
       }
     },
     "virmetrics": {
