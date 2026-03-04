@@ -34,7 +34,7 @@ You can use the connected audience object with the `audience` parameter on these
 
 ## Use cases
 
-Connected audiences are well-suited for scenarios where your back-end systems detect an event and need to notify a dynamically determined set of users, such as the following:
+Use connected audiences for scenarios where your back-end systems detect an event and need to notify a dynamically determined set of users:
 
 | Category | Example |
 | --- | --- |
