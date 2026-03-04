@@ -158,7 +158,7 @@ The processing order is not 100% predictable. For example, if there are multiple
 
 ## Why are new users not being created from my CDI sync?
 
-If your CDI integration has the **Update existing users only** option enabled, only users that already exist in Braze will be updated — new users will not be created. This means that if a row in your sync table references an `EXTERNAL_ID` that doesn't match any existing Braze user, that row will be skipped.
+If your CDI integration has the **Update existing users only** option enabled, only users who already exist in Braze are updated, and new users are not created. This means that if a row in your sync table references an `EXTERNAL_ID` that doesn't match any existing Braze user, that row is skipped.
 
 To create new users through CDI, turn off the **Update existing users only** toggle in your integration settings. Go to **Data Settings** > **Cloud Data Ingestion** and select an integration.
 
