@@ -178,7 +178,7 @@ The `additionalDetail` field from Limbik's response contains the message copy yo
 
 ## Use case - Synthetic audience details 
 
-To build on use the first use case, use Limbik’s endpoint `/rest/api/populations/{account_id}/{population_id}`.
+To build on the first use case, use Limbik’s endpoint `/rest/api/populations/{account_id}/{population_id}`.
 
 This endpoint returns key data points that describe the makeup of Limbik’s synthetic audiences, such as gender, location, and so on. You can use these values to populate Connected Audience objects when calling Braze’s messaging endpoints. 
 
