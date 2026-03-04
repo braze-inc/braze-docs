@@ -63,7 +63,7 @@ The cache age is up to five minutes (300 seconds). You can update this by adding
 ```
 {% endraw %}
 
-GET requests are cached. You can configure this by adding the :no_cache parameter to the Connected Content call.
+GET requests are cached. You can configure this by adding the `:no_cache` parameter to the Connected Content call.
 
 **POST requests are not cached by default.** To reduce load when the same POST is made repeatedly (for example, token retrieval or a request whose response doesn't change per user in the short term), add `:cache_max_age` to the Connected Content POST call. The minimum cache time is 5 minutes and the maximum is 4 hours.
 
