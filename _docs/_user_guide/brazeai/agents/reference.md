@@ -27,7 +27,7 @@ If you don't see **Braze Auto** as an option in the **Model** dropdown when crea
 
 ### Option 2: Bring your own API key
 
-With this option, you can connect your Braze account with providers like OpenAI, Anthropic, AWS Bedrock, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
+With this option, you can connect your Braze account with providers like OpenAI, Anthropic, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
 
 {% alert important %}
 We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months.
