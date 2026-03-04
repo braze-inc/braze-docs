@@ -51,7 +51,7 @@ To run the dashboard and view your data:
 ## Interpreting the data
 
 {% alert note %}
-The dashboard only surfaces up to the last 7 days of data. 
+The dashboard surfaces only up to the last 7 days of data. 
 {% endalert %}
 
 ### Summary tiles
