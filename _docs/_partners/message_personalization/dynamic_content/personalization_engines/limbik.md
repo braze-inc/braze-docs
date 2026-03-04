@@ -183,7 +183,7 @@ To build on the first use case, use Limbik’s endpoint `/rest/api/populations/{
 This endpoint returns key data points that describe the makeup of Limbik’s synthetic audiences, such as gender, location, and so on. You can use these values to populate Connected Audience objects when calling Braze’s messaging endpoints. 
 
 {% alert note %}
-Connected Audience objects cannot target users based on Braze’s “default” attributes, so you must story any attributes you want to target in Braze as custom attributes.
+Connected Audience objects cannot target users based on Braze’s “default” attributes, so you must store any attributes you want to target in Braze as custom attributes.
 {% endalert %}
 
 To obtain forecast scores for specific segments, identify the available countries and their corresponding segments.
