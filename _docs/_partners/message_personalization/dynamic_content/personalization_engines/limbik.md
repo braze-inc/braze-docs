@@ -13,7 +13,7 @@ search_tag: Partner
 
 _This integration is maintained by Limbik._
 
-## Requirements
+## Prerequisites
 
 The following are required to use Limbik with Braze:
 
