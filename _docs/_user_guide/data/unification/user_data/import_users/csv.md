@@ -225,18 +225,57 @@ For example, the custom event `trip_booked` may have the properties `destination
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Upload and preview your data
+### Step 4: Upload your file
 
-Before Braze processes your CSV, it will generate a preview of the first few rows so you can check for any issues. To generate your preview, choose **Attributes** or **Events**, then select **Browse Files**, and upload your CSV. 
+To upload your file, choose **Attributes** or **Events**, select **Browse Files**, and upload your CSV. Braze will display a preview of the first few rows and a summary of the detected fields.
 
-<!-- old image -->
-![CSV upload completed with errors involving mixed data types in a single column]({% image_buster /assets/img/csv_import/upload_csv.png %}){: style="max-width:70%"}
+![The upload completed modal showing a file preview, import name field, targeting preferences, and file validation checkbox.]({% image_buster /assets/img/csv_import/upload_completed.png %})
 
-{% alert important %}
-User Import preview doesn’t scan every row of the input file. Errors after the top few rows may not be caught, so consider examining the CSV file in full.
+In the **Import name** field, you can rename your import. By default, the file name is used.
+
+{% alert note %}
+The file preview shows only the first few rows of your file. To check every row before importing, use [file validation](#file-validation).
 {% endalert %}
 
-### Step 5: Choose targeting preferences
+### Step 5: Validate your file (optional) {#file-validation}
+
+Before starting your import, you can run file validation to check every row for errors and warnings. To validate your file, select **Validate file before importing**, then select **Start import**.
+
+Validation takes up to 2 minutes for files at the maximum allowed size. While validation runs, you can select **Skip and start import** to bypass it and proceed immediately.
+
+![The validation in progress dialog with a loading indicator and a Skip and start import button.]({% image_buster /assets/img/csv_import/validating_file.png %})
+
+{% alert note %}
+Validation checks for formatting errors and data type issues but doesn’t check whether a user exists in Braze. Rows that would fail for that reason won’t appear in the pre-import validation report.
+{% endalert %}
+
+#### Validation results
+
+When validation completes, one of the following results will appear.
+
+| Result | What it means | Next step |
+|---|---|---|
+| **Validation complete** | No issues found. | Select **Import data**. |
+| **Issues found** | Some rows have errors or warnings. | Download the error report to review them, then select **Import anyway** to proceed or **Cancel** to fix your file first. |
+| **Validation timed out** | Validation ran out of time. The rows that were checked had no issues. | Select **Import data**. A full report will be available in a few minutes. |
+| **Validation timed out with issues** | Validation ran out of time and found errors in some of the rows it checked. | Download the partial report to review what was found, then select **Import anyway** or **Cancel**. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+![The issues found dialog showing a count of rows with errors and warnings, with options to cancel, download the error report, or import anyway.]({% image_buster /assets/img/csv_import/validation_issues.png %})
+
+#### Understanding the error report
+
+The error report is a CSV file that contains every flagged row along with its original data and a description of the issue.
+
+| Issue type | Description |
+|---|---|
+| **Error** | The row will be skipped entirely during import. |
+| **Warning** | The row will be imported, but some values will be dropped. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+After reviewing the report, you can correct the issues in your original file and re-upload, or proceed with the import and accept the partial results.
+
+### Step 6: Choose targeting preferences
 
 You can also choose from the following targeting preferences. If you don't need to create a new targeting filter or segment from your import, select **Do not make this list available as a targeting filter**.
 
@@ -248,15 +287,26 @@ You can also choose from the following targeting preferences. If you don't need 
 
 ![A filter group with the "Updated/Imported from CSV" filter including a CSV file titled "Halloween season fun".]({% image_buster /assets/img/csv_import/add_filter_group.png %}){: style="max-width:85%;"}
 
-### Step 6: Start your CSV import
+### Step 7: Start your CSV import
 
-When you're ready, select **Start import**. You can track the current progress on the **User Import** page, which automatically refreshes every five seconds.
-
-If there's no issues, the status will update to **Complete** and the number of rows processed will be displayed. All data from processed rows will either be added to existing profiles or to newly created profiles.
+When you're ready, select **Start import**. You can track the current progress on the **Import Users** page, which automatically refreshes every 5 seconds.
 
 {% alert note %}
 You can import more than one CSV at the same time. CSV imports run concurrently, so the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, wait until a CSV import has finished before uploading a second one.
 {% endalert %}
+
+#### Import statuses
+
+| Status | Description |
+|---|---|
+| **Complete** | All rows imported successfully. |
+| **Partial success** | Some rows failed. Select the three-dot menu next to the import to download an error report or the original uploaded CSV. |
+| **In progress** | The import is currently running. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+![The Import Users page showing a Partial success status with the context menu open, displaying Download error report and Download uploaded CSV options.]({% image_buster /assets/img/csv_import/partial_success_menu.png %})
+
+The post-import error report includes rows that failed for reasons validation doesn't cover, such as a user not existing in Braze.
 
 ## Data point considerations
 
@@ -274,6 +324,8 @@ Setting `language` or `country` on a user through CSV import or API will prevent
 {% endalert %}
 
 ## Troubleshooting
+
+If you used [file validation](#file-validation), start with the error report—it includes the specific issue for each flagged row and a description of how to fix it. For rows that failed during import rather than validation, download the error report from the three-dot menu on the **Import Users** page.
 
 Review these common issues if you’re having trouble with CSV import. Still need help? Contact [support@braze.com](mailto:support@braze.com).
 
