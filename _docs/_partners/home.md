@@ -242,6 +242,8 @@ valid_partner_list:
   url: /docs/partners/whatsapp/
 - name: Sendbird
   url: /docs/partners/sendbird/
+- name: Shopgate
+  url: /docs/partners/shopgate/
 - name: Smartling
   url: /docs/partners/smartling/
 - name: Regal
