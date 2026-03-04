@@ -243,7 +243,7 @@ The file preview shows only the first few rows of your file. To check every row 
 
 Before starting your import, you can run file validation to check every row for errors and warnings. To validate your file, select **Validate file before importing**, then click **Start import**.
 
-Validation takes up to 2 minutes for files at the maximum allowed size. While validation runs, you can select **Skip validation** to bypass it and proceed immediately.
+Validation can take up to 2 minutes for files at the maximum allowed size. While validation runs, you can select **Skip validation** to bypass it and proceed immediately.
 
 #### Validation results
 
