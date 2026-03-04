@@ -214,6 +214,8 @@ valid_partner_list:
   url: /docs/partners/tellius/
 - name: Sheetlabs
   url: /docs/partners/sheetlabs/
+- name: Limbik
+  url: /docs/partners/limbik/
 - name: Contentsquare
   url: /docs/partners/contentsquare/
 - name: Sisu
