@@ -293,7 +293,7 @@ curl -X 'POST' \
   -d '{
   "type": "Generate",
   "displayText": "Formula one season testing 2026",
-  "additionalDetail": "🚀 Day 1 of 2026 F1 Bahrain testing just dropped BOMBS! Lando Norris edged out Max Verstappen for P1 in McLaren'\''s beast, with Ferrari hot on their heels 🔥. But the real shocker? Cadillac'\''s debutants Sergio Perez & Valtteri Bottas smashed 107 laps – nearly TWO race distances! New kids on the block are HERE to stay. Audi'\''s radical upgrades already turning heads too. Who'\''s your early fave for Australia? 👀 #F12026 #BahrainTesting #LandoNorris",
+  "additionalDetail": "Day 1 of the 2026 Formula 1 Bahrain testing session has concluded. Lando Norris recorded the fastest time in the McLaren, with Ferrari in second place. Cadillac drivers Sergio Perez and Valtteri Bottas completed 107 laps, nearly two race distances, and Audi introduced significant upgrades. Which team do you expect to perform best in Australia? #F12026 #BahrainTesting #LandoNorris",
   "population": {
     "population": "us2",
     "segments": []
