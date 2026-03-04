@@ -62,6 +62,10 @@ The Braze Initialization Tag exposes the following options. Most of these map di
 | **Service Worker Location** | `serviceWorkerLocation` | Custom path for the service worker file (default: `/service-worker.js`). |
 | **Session Timeout (seconds)** | `sessionTimeoutInSeconds` | Session timeout in seconds (default: 1800). |
 
+{% alert note %}
+To enable [Custom HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/) when using the Google Tag Manager Braze Initialization Tag, select **Allow HTML In-App Messages** in **Braze Initialization Options**. This checkbox sets `allowUserSuppliedJavascript: true` in `braze.initialize()`. The Google Tag Manager Braze Initialization Tag uses this label instead of the parameter name.
+{% endalert %}
+
 For options not exposed in the GTM template (such as `contentSecurityNonce`, `localization`, or `devicePropertyAllowlist`), use [runtime initialization]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) instead.
 
 ### Step 5: Set to Trigger on *all pages*
