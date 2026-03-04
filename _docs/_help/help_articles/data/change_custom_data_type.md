@@ -23,7 +23,7 @@ The custom attribute must not currently be in use in any active campaigns, Canva
 
 ![Custom Attributes tab to edit attribute or data type]({% image_buster /assets/img/change_custom_attribute.png %})
 
-## What to know
+## Things to know
 
 - **User data is not retroactively updated.** If a user profile had the attribute with the old data type, that value remains unchanged. The segmentation filter will look for the new data type, so users with the old value will be excluded from matching segments until their profile is updated.
 - **New data must match the new data type.** After the change, API calls or SDK events that send the previous data type for this attribute will not be accepted. Only values matching the new data type will be ingested.
