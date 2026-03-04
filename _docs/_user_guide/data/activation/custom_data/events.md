@@ -22,7 +22,7 @@ By tracking these different types of events, you can gain a deeper understanding
 
 In Braze, standard events are predefined actions that Braze recognizes across its platform. Unlike [custom events](#custom-events), you don't need to create or name standard events—they're built in. However, not all standard events are tracked the same way.
 
-**The following events are automatically tracked after SDK integration:**
+The following events are automatically tracked after SDK integration:
 
 - Session start
 - Session end
