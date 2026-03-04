@@ -19,7 +19,7 @@ The following are required to use Limbik with Braze:
 
 | Prerequisite | Description |
 | --- | --- |
-| Limbik `account_id` | Speak to your Limbik account team, or make a GET request to Limbik’s `organisation` endpoint  |
+| Limbik `account_id` | Speak to your Limbik account team, or make a GET request to Limbik’s `/rest/api/organizations` endpoint |
 | Limbik `auth_token` | Make a POST request to Limbik’s `login` endpoint |
 | Braze REST API key | A Braze REST API key with "Messages" permissions. Create one in the Braze dashboard under **Settings** > **API Keys**. |
 | Braze `campaign_id` | Go to **Messaging** > **Campaigns** and select a campaign. If the campaign you want does not exist yet, create one and save it. At the bottom of the campaign page, find the Campaign API identifier. |
