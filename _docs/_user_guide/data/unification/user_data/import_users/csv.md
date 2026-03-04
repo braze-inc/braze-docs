@@ -377,7 +377,7 @@ If a piece of default user data (such as `email` or `first_name`) is imported as
 
 Braze expects each value in a column to be of the same data type. Values that don't match their attribute's data type cause errors in segmenting.
 
-Additionally, beginning a number attribute with zero will cause issues because numbers starting with zeros are considered strings. When Braze converts that string, it may be treated like an octal value (which uses digits from zero to seven), meaning it is converted to its corresponding decimal value. For example, if the value in the CSV file is 0130, the Braze profile shows 88. To prevent this issue, use attributes with string datatypes. However, this data type isn't available in the segmentation number comparison.
+Additionally, beginning a number attribute with zero will cause issues because numbers starting with zeros are considered strings. When Braze converts that string, it may be treated like an octal value (which uses digits from zero to seven), meaning it is converted to its corresponding decimal value. For example, if the value in the CSV file is 0130, the Braze profile shows 88. To prevent this issue, use attributes with string data types. However, this data type isn't available in the segmentation number comparison.
 
 #### Default attribute types
 
