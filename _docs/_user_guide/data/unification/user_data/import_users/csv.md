@@ -243,10 +243,6 @@ Before starting your import, you can run file validation to check every row for 
 
 Validation takes up to 2 minutes for files at the maximum allowed size. While validation runs, you can select **Skip validation** to bypass it and proceed immediately.
 
-{% alert note %}
-Validation checks for formatting errors and data type issues but doesn’t check whether a user exists in Braze. Rows that would fail for that reason won’t appear in the pre-import validation report.
-{% endalert %}
-
 #### Validation results
 
 When validation completes, one of the following results will appear.
