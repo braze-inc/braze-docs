@@ -247,15 +247,15 @@ You can also [abort messages]({{site.baseurl}}/user_guide/personalization_and_dy
 
 ## Troubleshooting
 
-### Preview may coerce property types incorrectly
+### Preview may incorrectly coerce property types 
 
-When previewing a message in the dashboard, most variable types (such as custom attributes) are coerced to the correct type automatically. However, variables in the following namespaces don't have a defined type that the preview can look up:
+When previewing a message in the dashboard, most variable types (such as custom attributes) are  coerced to the correct type. However, variables in the following namespaces don't have a defined type that the preview can look up:
 
 - `api_trigger_properties`
 - `canvas_entry_properties`
 - `event_properties`
 
-For these properties, the preview attempts to infer the type from the value. The risk is that a value you intend to be a **string** may be wrongly interpreted as a **number**. For example, if a property value is `"3"` (a string), the preview may coerce it to the integer `3`, which can cause unexpected behavior in string operations like `contains` or `split`.
+For these properties, the preview attempts to infer the type from the value. This means that a value you intend to be a **string** could be wrongly interpreted as a **number**. For example, if a property value is a string `"3"`, the preview may coerce it to the integer `3`, which can cause unexpected behavior in string operations like `contains` or `split`.
 
 If you see unexpected preview results when using these property types, keep in mind that the preview's type inference may not match what happens at send time. At send time, the actual data types from the triggering event or API call are preserved.
 
