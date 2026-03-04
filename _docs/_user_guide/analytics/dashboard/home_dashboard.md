@@ -61,11 +61,11 @@ You can chart statistics for:
 - Daily Active Users
   - (Optional) Breakdown by segment
 - Email
-- IAM
+- In-app messages
 - KPI Formulas
-  - Select **Manage KPI Formulas** to create a formula or edit an existing formula
+  - Select **Manage KPI Formulas** to create a formula or edit an existing formula.
 - LINE
-- Monthly Active Users
+- Monthly Active Users (MAU)
 - New Users
 - Push
   - (Optional) Breakdown by segment
