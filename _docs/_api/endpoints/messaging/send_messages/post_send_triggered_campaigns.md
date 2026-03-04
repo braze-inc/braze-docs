@@ -77,14 +77,38 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`trigger_properties`| Optional | Object | See [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Personalization key-value pairs apply to all users in this request. |
 |`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to the entire segment configured as the campaign's target audience in the Braze dashboard. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger-than-expected audience. |
 |`audience`| Optional | Connected audience object| See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). When you include `audience`, the message is sent only to users who match the defined filters, such as custom attributes and subscription statuses. |
-|`recipients`| Optional | Array | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/).<br><br>If `send_to_existing_only` is `false`, an attribute object must be included.<br><br>If `recipients` is not provided and `broadcast` is set to true, the message is sent to the entire segment configured as the campaign's target audience in the Braze dashboard. <br><br> If `email` is the identifier, you must include [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in the recipients object. |
+|`recipients`| Optional | Array | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/).<br><br>If `send_to_existing_only` is `false`, an `attributes` object must be included.<br><br>You can update a user's subscription group status by including `subscription_groups` in the nested `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).<br><br>If `recipients` is not provided and `broadcast` is set to true, the message is sent to the entire segment configured as the campaign's target audience in the Braze dashboard.<br><br>If `email` is the identifier, you must include [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in the recipients object. |
 |`attachments`| Optional | Array | If `broadcast` is set to true, then the `attachments` list cannot be included. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-- The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `trigger_properties` object.
-- When `send_to_existing_only` is `true` (the default), Braze sends the message only to existing users. When set to `false` and an attributes object is provided, Braze creates a new user if one doesn't exist. Note that setting `send_to_existing_only` to `false` is not supported for user aliases&#8212;new alias-only users cannot be created through this endpoint. To send to an alias-only user, the user must already exist in Braze.
+### Recipient resolution behavior
 
-A user's subscription group status can be updated using the inclusion of a `subscription_groups` parameter within the `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+This section discusses how Braze picks a user profile for sending and what happens when one profile is not selected.
+
+#### Recipient limits and profile creation
+
+Learn more about how recipient limits and profile creation work for this endpoint.
+
+- The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `trigger_properties` object.
+- When `send_to_existing_only` is `true` (the default), Braze sends the message only to existing users.
+- When `send_to_existing_only` is `false` and an `attributes` object is provided, Braze creates a new user if one doesn't exist.
+- Setting `send_to_existing_only` to `false` is not supported for user aliases. New alias-only users can't be created through this endpoint. To send to an alias-only user, that user must already exist in Braze.
+
+#### Email identifier and prioritization ties
+
+When you identify recipients by email, Braze uses `prioritization`. Braze sends only when `prioritization` returns one profile.
+
+- If you use `email` as the identifier, Braze resolves the recipient using `prioritization`.
+- If `prioritization` returns a tie, Braze does not send.
+- Braze sends after the tie is broken and `prioritization` returns one profile. For example, if profile updates change one user's ordering fields, a later retry may pick one user and send.
+- Braze also does not send when `prioritization` returns no profiles.
+
+#### Retry behavior and `send_to_existing_only`
+
+Learn what happens when `prioritization` does not return exactly one profile.
+
+- When prioritization does not return exactly one user profile, Braze retries resolution up to 40 times. This retry behavior is expected.
+- The `send_to_existing_only` setting does not change prioritization tie behavior. The same tie and retry behavior applies whether this setting is `true` or `false`.
 
 {% alert note %}
 The `segment_id` parameter is not supported for this endpoint. To target a segment, configure the segment in the campaign's target audience settings in the Braze dashboard and use `"broadcast": true`, or use the `audience` parameter with [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) filters.
