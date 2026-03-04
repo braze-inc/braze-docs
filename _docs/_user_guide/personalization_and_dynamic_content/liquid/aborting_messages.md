@@ -67,10 +67,15 @@ You can use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/
 
 ## When abort logic is evaluated
 
-The timing of abort logic evaluation depends on the message channel:
+The timing of abort logic evaluation depends on the message channel.
 
-- **In-app messages:** Abort logic is evaluated at the time the in-app message is **triggered** (for example, when the user performs the trigger event or starts a session), not when the message is initially sent to the device. In-app messages are delivered to the SDK on session start and cached locally; the Liquid — including any `abort_message()` calls — is executed when the trigger condition is met.
-- **Push, email, SMS, webhooks, and Content Cards:** Abort logic is evaluated at **send time**, when Braze processes the message for delivery.
+### Push, email, SMS, webhooks, and Content Cards
+
+Abort logic is evaluated at **send time**, when Braze processes the message for delivery.
+
+### In-app messages
+
+Abort logic is evaluated at the time the in-app message is **triggered** (for example, when the user performs the trigger event or starts a session), not when the message is initially sent to the device. In-app messages are delivered to the SDK on session start and cached locally; the Liquid—including any `abort_message()` calls—is executed when the trigger condition is met.
 
 ## Considerations
 
