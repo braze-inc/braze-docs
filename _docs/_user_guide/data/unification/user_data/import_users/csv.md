@@ -159,7 +159,7 @@ The following default attributes are available for user import.
 | `last_name` | String | The last name of your users as they have indicated (for example, `Doe`). | No |
 | `email` | String | The email of your users as they have indicated (for example, `jane.doe@braze.com`). | No |
 | `country` | String | Country codes must be passed to Braze in the ISO-3166-1 alpha-2 standard (for example, `GB`). | No |
-| `dob` | String | Must be passed in the format “YYYY-MM-DD” (for example, `1980-12-21`). This imports your user’s Date of Birth and enable you to target users whose birthday is “today”. | No |
+| `dob` | String | Must be passed in the format “YYYY-MM-DD” (for example, `1980-12-21`). This imports your user’s Date of Birth and enables you to target users whose birthday is “today”. | No |
 | `gender` | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say), or nil (unknown). | No |
 | `home_city` | String | The home city of your users as they have indicated (for example, `London`). | No |
 | `language` | String | Language must be passed to Braze in the ISO-639-1 standard (for example, `en`). Refer to our [list of accepted languages]({{site.baseurl}}/user_guide/data/user_data_collection/language_codes/). | No |
