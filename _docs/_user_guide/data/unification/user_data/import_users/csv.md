@@ -347,7 +347,7 @@ There are a few reasons why the number of users imported might not match the tot
 | Accented characters | Your CSV may include names or attributes with accents. Ensure the file is UTF-8 encoded to prevent import issues. |
 | Braze ID belongs to an orphaned user | If a user was merged into another and Braze cannot associate the Braze ID with the remaining profile, the row won't be imported. |
 | Empty row | Blank rows in the CSV can cause malformed data errors. Check using a plain text editor, not Excel or Sheets. |
-| Including double quotation marks (`"` ) | This character is invalid and causes a malformed row. Use single quotation marks (`'`) instead. |
+| Unescaped or unbalanced double quotation marks (`"`) | Double quotation marks wrap string values that contain commas. If a value itself contains a double quotation mark, escape it by doubling it (`""`). Unescaped or unbalanced double quotation marks cause a malformed row. |
 | Inconsistent line breaks | Mixed line breaks (e.g., `\n` and `\r\n`) may cause the first row of data to be treated as part of the header. Use a hex or advanced text editor to inspect and fix. |
 | Incorrectly encoded file | Even if accents are allowed, the file must be UTF-8 encoded. Other encodings may work partially but are not fully supported. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
