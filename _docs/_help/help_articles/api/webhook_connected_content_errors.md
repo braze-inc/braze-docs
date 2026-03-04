@@ -105,10 +105,11 @@ table td {
     </tr>
     <tr>
       <td><b>429 Too Many Requests</b></td>
-      <td>There are too many requests sent in a given amount of time.</td>
+      <td>Your endpoint (or an upstream service) is refusing traffic because too many requests were sent in a given amount of time. Connected Content does not have its own rate limit; call volume follows your message delivery rate. Seeing 429s usually means your endpoint or middleware cannot handle the current request volume.</td>
       <td>
         <ul>
-          <li>Lower the rate limit on your campaign or Canvas step.</li>
+          <li>Lower the [delivery speed rate limit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting) on your campaign or Canvas step to reduce Connected Content calls per minute.</li>
+          <li>Scale your endpoint or middleware to handle multiple requests per recipient (for example, for email, Braze may render HTML, plain text, and AMP separately). See [Making a Connected Content API Call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/#understanding-connected-content-call-volume) for expected call volume.</li>
         </ul>
       </td>
     </tr>

@@ -10,6 +10,20 @@ search_rank: 2
 
 > Use Connected Content to insert any information accessible by API directly into messages you send to users. You can pull content either directly from your web server or from publicly accessible APIs.<br><br>This page covers how to make Connected Content API calls, advanced Connected Content use cases, error handling, and more.
 
+## Understanding Connected Content call volume
+
+{% alert important %}
+**One send does not equal one Connected Content call.** Braze does not guarantee a 1:1 ratio between message sends and Connected Content requests. The system is designed to favor correct message rendering and delivery over minimizing the number of calls. Your endpoints must be built to handle more requests than the number of recipients or messages sent.
+{% endalert %}
+
+Braze may make the same Connected Content API call more than once per recipient. Common reasons include:
+
+- **Email with multiple parts:** A single email can trigger separate rendering passes for the HTML body, plain text body, and AMP version (if present). Each pass can trigger Connected Content in that part, so one recipient may generate multiple identical or similar calls.
+- **Validation and retries:** Message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes.
+- **Channel behavior:** Connected Content runs when the message is sent for most channels; for in-app messages, the call happens when the message is viewed.
+
+If you see more Connected Content calls in your logs than sends or recipients, that behavior is expected. For guidance on reducing load and planning for scale, see [Best practices for high-volume endpoints](#best-practices-for-high-volume-endpoints).
+
 ## Sending a Connected Content call
 
 {% raw %}
@@ -65,11 +79,18 @@ You can allowlist specific URLs to be used for Connected Content. To access this
 Visit [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) to learn more about how to troubleshoot common error codes.
 {% endalert %}
 
+### Rate limits (429) versus unhealthy host detection
+
+These are two different mechanisms:
+
+- **429 Too Many Requests:** Your endpoint (or an upstream service) is returning this response. It means your server or middleware is refusing traffic, often because it has its own rate limit. Braze does not apply a separate rate limit to Connected Content; call volume follows your [message delivery speed rate limit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting). If you see 429s, scale your endpoint or middleware to handle the expected request volume, or lower the campaign or Canvas step rate limit so that fewer messages (and thus fewer Connected Content calls) are sent per minute.
+- **Unhealthy host detection:** A Braze-side safeguard that triggers after a high rate of *failures* (including 429, timeouts, 5XX) in a one-minute window. When triggered, Braze temporarily halts requests to that host and simulates a failure response. This is independent of your own rate limiting. To avoid hitting unhealthy host detection, ensure your endpoint can handle the call volume described in [Understanding Connected Content call volume](#understanding-connected-content-call-volume) and [Best practices for high-volume endpoints](#best-practices-for-high-volume-endpoints).
+
 ## Allowing for efficient performance
 
-Because Braze delivers messages at a very fast rate, be sure that your server can handle thousands of concurrent connections so the servers don't get overloaded when pulling down content. When using public APIs, confirm your usage won't violate any rate-limiting that the API provider may employ. Braze requires the server response time to be less than two seconds for performance reasons; if the server takes longer than two seconds to respond, the content won't be inserted.
+Because Braze delivers messages at a very fast rate, ensure your server can handle thousands of concurrent connections so it doesn't get overloaded when pulling down content. When using public APIs, confirm your usage won't violate any rate-limiting that the API provider may employ. Braze requires the server response time to be less than two seconds for performance reasons; if the server takes longer than two seconds to respond, the content is not inserted.
 
-Braze systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than once per recipient.
+For more on planning endpoint capacity and reducing call volume, see [Best practices for high-volume endpoints](#best-practices-for-high-volume-endpoints).
 
 ## Things to know
 
@@ -77,6 +98,15 @@ Braze systems may make the same Connected Content API call more than once per re
 * There is a 1 MB limit for Connected Content responses.
 * Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 * Connected Content calls do not follow redirects.
+
+## Best practices for high-volume endpoints
+
+If your messages use Connected Content and you send at high volume, plan for more requests than the number of recipients or sends:
+
+1. **Estimate peak load:** For email, a single recipient can generate multiple Connected Content calls (for example, HTML, plain text, and AMP). Use a conservative multiplier (for example, recipients × 2 or × 3 for email) when sizing your endpoint or middleware.
+2. **Use caching where appropriate:** GET requests are cached by default. For POST requests, add `:cache_max_age` when the response can be reused for a period (for example, token or content that doesn't change per request). See [Caching responses]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/caching_responses/) and the [POST caching FAQ](#what-is-caching-behavior) below.
+3. **Set delivery speed rate limiting:** Use [delivery speed rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting) on campaigns or Canvas steps that use Connected Content so that message (and thus Connected Content) volume stays within what your endpoint can handle.
+4. **Design for idempotency and retries:** Braze may call your endpoint more than once per recipient. Ensure your endpoint can tolerate duplicate requests without incorrect side effects.
 
 ## Authentication types
 
@@ -215,9 +245,7 @@ Using this tool, you can diagnose issues with the request headers, request body,
 
 ### Why are there more Connected Content calls than users or sends? 
 
-Braze may make the same Connected Content API call more than once per recipient because we may need to make a Connected Content API call to render a message payload. Message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes.
-
-It’s expected that a Connected Content API call can be made more than once per recipient, even if the retry logic is not used in the call. We recommend setting the rate limit of any messages that contain Connected Content or configuring your servers to be better able to handle the expected volume.
+This is expected behavior. Braze may make the same Connected Content API call more than once per recipient because message payloads can be rendered multiple times (for example, for email HTML, plain text, and AMP; for validation or retry logic; or other internal purposes). There is no guaranteed 1:1 ratio between sends and Connected Content calls. See [Understanding Connected Content call volume](#understanding-connected-content-call-volume) and [Best practices for high-volume endpoints](#best-practices-for-high-volume-endpoints) for details and mitigation.
 
 ### How does rate limiting work with Connected Content?
 
@@ -225,9 +253,15 @@ Connected Content doesn’t have its own rate limit. Instead, the rate limit is 
 
 ### What is caching behavior?
 
-By default, POST requests do not cache. However, you can add the `:cache_max_age` parameter to force the POST call to cache.
+GET requests are cached by default (see [Caching responses]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/caching_responses/)). **POST requests are not cached by default**, but you can enable caching by adding `:cache_max_age` to the Connected Content call. This can reduce endpoint load when the same POST (for example, a token or content request) would be made repeatedly within the cache window.
 
-Caching can help reduce duplicate Connected Content calls. However, it isn’t guaranteed to always result in a single Connected Content call per user.
+{% raw %}
+```liquid
+{% connected_content https://api.example.com/token :method post :body grant_type=client_credentials :cache_max_age 900 :save token %}
+```
+{% endraw %}
+
+Caching can help reduce duplicate Connected Content calls but isn't guaranteed to result in a single call per user. Cache duration is between five minutes and four hours. For full details, see [Caching responses]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/caching_responses/).
 
 ### What is the Connected Content HTTP default behavior? 
 
