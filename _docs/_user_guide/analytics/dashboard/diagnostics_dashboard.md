@@ -92,7 +92,7 @@ The following definitions explain the abort outcomes shown on the dashboard. Out
 | Connected Content failed | Braze tried to send the message, but Connected Content failed after the maximum number of retries (default is five). |
 | In-app-message rendering timeout | After multiple attempts to retry, the Liquid could not be rendered and timed out. |
 | Liquid abort | The [abort_message]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) Liquid tag was called, so the send was canceled. |
-| Liquid rendering timeout | It took too long to render the Liquid template. Most likely to occur for Banners (default timeout is 2 seconds; can be customized in app group settings). |
+| Liquid rendering timeout | It took too long to render the Liquid template. Most likely to occur for Banners, in-app messages, and email. |
 | Liquid syntax error | The Liquid template had a parsing error, so the message was canceled. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
