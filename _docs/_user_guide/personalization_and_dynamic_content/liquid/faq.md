@@ -96,7 +96,7 @@ If you notice extra spacing in sent messages that use Content Blocks with Liquid
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${has_discount}}} == true %}Discounted Item{% elsif {{custom_attribute.${is_new_arrival}}} == true %}New Arrival{% else %}Regular Item{% endif %}
-{% endraw %
+{% endraw %}
 
 ### When should I use `assign` versus `capture`?
 
