@@ -220,9 +220,9 @@ The response can be large. Cache this data (for example, in Redis) by name or ke
  
 {% details Example response %} 
 
-```json
-//For example, to target females in the US adult population
+For example, to target females in the US adult population:
 
+```json
 [
   {
     "id": 56,
