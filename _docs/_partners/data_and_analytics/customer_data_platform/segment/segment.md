@@ -494,15 +494,15 @@ Segment uses your Braze data center to pull in the appropriate Braze REST endpoi
 
 {% enddetails %}
 
-{% details Remove the Custom REST API endpoint to use Segment's event tracker %}
+{% details Remove the Custom REST API endpoint when using Segment's Event Tester. %}
 
-Segment's event tester uses our API endpoint and will throw a `401 Invalid API Key` error even if the correct Custom REST API endpoint is added in the settings. Remove the endpoint to use the event tracker.
+Segment's Event Tester sends events to the Braze `/users/track` REST API endpoint and will throw a `401 Invalid API Key` error if a Custom REST API endpoint is set in the Braze destination settings, even when that endpoint is correct. Remove the custom REST API endpoint value in Segment to allow the Event Tester to function properly.
 
 {% enddetails %}
 
 {% details Allow time for updates after configuring a new source. %}
 
-Segment keeps your configuration settings in the cache for a long time, so when configuring a new source (such as switching from Cloud to Device Mode) the app may not show anything new until the cache renews. Be mindful of this delay when planning to add a source.
+Segment keeps your configuration settings in the cache for a long time, so when configuring a new source (such as switching from Cloud to Device Mode) your app may not show new behavior or data until the cache renews. Be mindful of this delay when planning to add a source.
 
 {% enddetails %}
 
