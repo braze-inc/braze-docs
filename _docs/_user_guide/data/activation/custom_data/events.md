@@ -27,7 +27,7 @@ The following events are automatically tracked after SDK integration:
 - Session start
 - Session end
 
-**The following events are tracked after additional setup:**
+The following events are tracked after additional setup:
 
 - [Purchase events](#purchase-events): Your development team logs these using the SDK's purchase methods. For more information, see the Purchase events section.
 - Email engagement events (such as email opens and link clicks): Tracked by Braze when you configure Braze email and enable email tracking.
