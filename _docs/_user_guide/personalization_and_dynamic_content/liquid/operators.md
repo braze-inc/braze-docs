@@ -247,21 +247,26 @@ You can also [abort messages]({{site.baseurl}}/user_guide/personalization_and_dy
 
 ## Troubleshooting
 
-### Preview error when a messsage has Liquid filters and operations
+### Preview may coerce property types incorrectly
 
-When previewing a message in the dashboard, data is always sent as string values—even if the original value is a number or boolean. If your Liquid applies a numeric filter (such as `plus`, `minus`, or a comparison like `> 1`), the preview may show an error because the filter is operating on a string.
+When previewing a message in the dashboard, most variable types (such as custom attributes) are coerced to the correct type automatically. However, variables in the following namespaces don't have a defined type that the preview can look up:
 
-To fix this, convert the value to a number before using it in a comparison or math filter. Use `plus: 0` as a filter to cast the string to a number:
+- `api_trigger_properties`
+- `canvas_entry_properties`
+- `event_properties`
+
+For these properties, the preview attempts to infer the type from the value. The risk is that a value you intend to be a **string** may be wrongly interpreted as a **number**. For example, if a property value is `"3"` (a string), the preview may coerce it to the integer `3`, which can cause unexpected behavior in string operations like `contains` or `split`.
+
+If you see unexpected preview results when using these property types, keep in mind that the preview's type inference may not match what happens at send time. At send time, the actual data types from the triggering event or API call are preserved.
+
+To force a specific type in the preview, you can explicitly cast the value:
 
 {% raw %}
 ```liquid
+{% comment %} Force a value to be treated as a number {% endcomment %}
 {% assign orders = {{canvas_entry_properties.${number_of_orders}}} | plus: 0 %}
-{% if orders > 5 %}
-  Use SURPRISE10 to get 10% off your next order.
-{% else %}
-  Use FREEDELIVERY to get free delivery on your order.
-{% endif %}
+
+{% comment %} Force a value to be treated as a string {% endcomment %}
+{% assign code = {{api_trigger_properties.${promo_code}}} | append: "" %}
 ```
 {% endraw %}
-
-This also applies to event properties (`event_properties`) and API trigger properties (`api_trigger_properties`). At send time, the actual data types are preserved, but the dashboard preview always uses strings.
