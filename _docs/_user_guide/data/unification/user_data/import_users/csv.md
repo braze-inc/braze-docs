@@ -241,7 +241,7 @@ The file preview shows only the first few rows of your file. To check every row 
 
 Before starting your import, you can run file validation to check every row for errors and warnings. To validate your file, select **Validate file before importing**, then select **Start import**.
 
-Validation takes up to 2 minutes for files at the maximum allowed size. While validation runs, you can select **Skip and start import** to bypass it and proceed immediately.
+Validation takes up to 2 minutes for files at the maximum allowed size. While validation runs, you can select **Skip validation** to bypass it and proceed immediately.
 
 ![The validation in progress dialog with a loading indicator and a Skip and start import button.]({% image_buster /assets/img/csv_import/validating_file.png %})
 
