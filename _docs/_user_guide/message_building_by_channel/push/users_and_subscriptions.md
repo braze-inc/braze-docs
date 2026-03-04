@@ -87,7 +87,7 @@ Because there isn't a way for push providers (APNs/FCM) to distinguish between m
 
 ### Multiple devices and one user
 
-The push subscription state is user-based and is not specific to any individual app. The state of the push subscription is the value that was last set. So if a user has opted-in to push notifications, their push subscription state is `Opted-in` across all eligible devices. If a user later explicitly unsubscribes from push notifications through your application or other methods your brand provides, their push subscription state is updated to `Unsubscribed` and no push-registered devices can receive push notifications.
+The push subscription state is user-based and is not specific to any individual app. The state of the push subscription is the value that was last set. So if a user has opted-in to push notifications, their push subscription state is `Opted-In` across all eligible devices. If a user later explicitly unsubscribes from push notifications through your application or other methods your brand provides, their push subscription state is updated to `Unsubscribed` and no push-registered devices can receive push notifications.
 
 ## Foreground Push Enabled filter {#foreground-push-enabled}
 
