@@ -107,8 +107,8 @@ When you identify recipients by email, Braze uses `prioritization`. Braze sends 
 
 Learn what happens when `prioritization` does not return exactly one profile.
 
-- When prioritization does not return exactly one user profile, Braze retries resolution up to 40 times. This retry behavior is expected.
-- The `send_to_existing_only` setting does not change prioritization tie behavior. The same tie and retry behavior applies whether this setting is `true` or `false`.
+- When `prioritization` does not return exactly one user profile, Braze retries resolution up to 40 times. This retry behavior is expected.
+- The `send_to_existing_only` setting does not change `prioritization` tie behavior. The same tie and retry behavior applies whether this setting is `true` or `false`.
 
 {% alert note %}
 The `segment_id` parameter is not supported for this endpoint. To target a segment, configure the segment in the campaign's target audience settings in the Braze dashboard and use `"broadcast": true`, or use the `audience` parameter with [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) filters.
