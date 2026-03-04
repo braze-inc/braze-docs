@@ -42,12 +42,6 @@ To automatically associate landing page activity with the recipient's user profi
 
 When a user clicks this link, Braze automatically identifies them, so any preferences they submit are written to their existing profile — no manual URL parameters needed. For a full walkthrough, see [Track users through a form]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/).
 
-{% alert tip %}
-If you're linking to the landing page from an external channel (outside of Braze), you'll need to pass a user identifier in the URL manually and decode it in your custom code block. Use a URL-safe encoding approach (such as Base64url, or standard Base64 with URL-encoding) to avoid corruption — standard Base64 characters like `+` are treated as spaces by URL query parsers. See [Track users through a form]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/) for your landing page's unique URL.
-
-**Important:** Don't pass a raw or simply encoded user identifier (such as a plain Base64-encoded `external_id`) as the sole means of authorization. Anyone who can guess or manipulate the value could alter another user's profile. Instead, use a cryptographically signed or one-time token in the link and validate it server-side before allowing profile updates.
-{% endalert %}
-
 ## Step 2: Use a custom code block to capture preferences
 
 After creating your landing page, insert a custom code block that captures user preferences and writes them to Braze. When users arrive through the {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag, Braze already knows who they are, so your script only needs to:
