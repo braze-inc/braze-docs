@@ -3,6 +3,7 @@ nav_title: Operator
 article_title: BrazeAI Operator
 page_order: 7
 alias: /operator/
+toc_headers: h2
 description: "Learn how to access and use BrazeAI Operator<sup>TM</sup>, an AI-powered assistant built into the Braze dashboard, including its features and best practices."
 ---
 
