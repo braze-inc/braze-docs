@@ -1147,7 +1147,7 @@ This use case queries the end of a string to use in messaging.
 {% raw %}
 ```liquid
 {% assign interest = {{custom_attribute.${Buyer Interest}}} | first %}
-{% assign marketplace = {{interest}} | split: "" | reverse | join: "" | truncate: 4, "" %}
+{% assign marketplace = interest | split: "" | reverse | join: "" | truncate: 4, "" %}
 {% if {{marketplace}} == '3243' %}
 
 Your last marketplace search was on {{custom_attribute.${Last marketplace buyer interest} | date: '%d.%m.%Y'}}. Check out all of our new offers.
