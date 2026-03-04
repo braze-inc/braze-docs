@@ -113,7 +113,7 @@ To prevent Connected Content from caching the value it returns from a GET reques
 Be certain the provided Connected Content endpoint can handle large bursts of traffic before using this option, or you will likely see increased sending latency (increased delays or wider time intervals between request and response) due to Braze making Connected Content requests for every single message.
 {% endalert %}
 
-With a POST you don’t need to cache bust, as Braze never caches the results from POST requests.
+With a POST you typically don’t need to cache bust, since POST requests are not cached by default. If you have enabled caching for a POST call using `:cache_max_age`, you can omit `:no_cache` for that call unless you want to force a fresh request.
 
 ## Things to know
 
