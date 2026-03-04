@@ -25,6 +25,31 @@ This table lists the operators that are supported. Note that parentheses are inv
 | contains | checks to see if a string or string array contains a string|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% alert note %}
+Operators can be used in conditional statements (`if`, `elsif`, `unless`) but not in `assign` statements, `for` loops, `case`/`when` statements, or array access brackets. For a full breakdown, see [Where to use operators and filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
+
+### Grouping conditions without parentheses
+
+Liquid doesn't support parentheses for grouping expressions. To evaluate complex boolean logic such as `(a and b) or c`, use nested `if` statements or intermediate variables.
+
+For example, to check whether a value satisfies a compound condition, assign an intermediate variable:
+
+{% raw %}
+```liquid
+{% assign qualifies = false %}
+{% if points > 100 %}
+{% assign qualifies = true %}
+{% elsif points == 100 and member_level == 'gold' %}
+{% assign qualifies = true %}
+{% endif %}
+
+{% if qualifies %}
+You qualify for a reward!
+{% endif %}
+```
+{% endraw %}
+
 ## Tutorials
 
 Let's go through a few tutorials to learn how to use these operators for your marketing campaigns:

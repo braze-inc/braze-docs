@@ -1,0 +1,44 @@
+---
+description: Reference Braze SDK and product repos for verifying docs content
+alwaysApply: true
+---
+
+# Reference repos for content verification
+
+When verifying documentation (SDK behavior, APIs, product behavior), use the following repos in this workspace as source-of-truth. Prefer searching and citing these over docs alone.
+
+| Folder | Use for |
+|--------|--------|
+| `braze-android-sdk` | Android SDK |
+| `braze-swift-sdk` | iOS / Swift SDK |
+| `braze-web-sdk` | Web / JavaScript SDK |
+| `braze-react-native-sdk` | React Native SDK |
+| `braze-flutter-sdk` | Flutter SDK |
+| `braze-unity-sdk` | Unity SDK |
+| `braze-unreal-sdk` | Unreal SDK |
+| `braze-roku-sdk` | Roku SDK |
+| `braze-cordova-sdk` | Cordova SDK |
+| `braze-expo-plugin` | Expo plugin |
+| `braze-xamarin-sdk` | Xamarin SDK |
+| `braze-shopify-app` | Shopify app |
+| `liquid` | Liquid templating |
+| `grapesjs` | Drag-and-drop editor (GrapesJS) |
+| `event-replay` | Event replay |
+| `event-modeling-service` | Event modeling |
+| `platform` | Main Braze platform (backend/product) |
+
+### Localized UI terms (translations)
+
+Use these paths when you need to reference how Braze translates UI terms (e.g. for docs, glossaries, or consistency):
+
+| Repo | Location | Format | Use for |
+|------|----------|--------|--------|
+| `braze-swift-sdk` | `Sources/BrazeUICompat/ABKInAppMessage/Resources/<locale>.lproj/AppboyInAppMessageLocalizable.strings` (and `ABKContentCards/Resources/.../AppboyContentCardsLocalizable.strings`) | `.strings` (key = value) | In-app message and Content Cards UI (e.g. Close) on iOS |
+| `braze-android-sdk` | `android-sdk-ui/src/main/res/values/strings.xml` (default), `values-<locale>/strings.xml` (e.g. `values-de/strings.xml`) | Android `strings.xml` | Content Cards, in-app, push UI on Android |
+| `grapesjs` | `src/i18n/locale/<code>.js` (e.g. `en.js`, `de.js`) | JS objects | Drag-and-drop editor UI (labels, buttons, panel titles) |
+| `liquid` | `lib/liquid/locales/en.yml` | YAML | Liquid template error/syntax messages (en only in repo) |
+| `braze-shopify-app` | `extensions/braze-app-embed/locales/en.default.json` | JSON | Shopify app embed copy |
+
+To have these folders available in the workspace, open **`braze-workspace.code-workspace`** (File → Open Workspace from File) instead of opening the braze-docs folder alone.
+
+**Layout:** The workspace uses relative paths. It works for anyone as long as braze-docs and all reference repos are **sibling folders** in the same parent (e.g. `~/Documents/braze-docs`, `~/Documents/platform`, …). The parent folder can be anywhere (Documents, `~/code`, etc.).
