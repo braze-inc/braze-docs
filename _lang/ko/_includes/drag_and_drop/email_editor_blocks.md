@@ -112,7 +112,9 @@
 
 ### 이미지
 
-`Image` 편집기 블록에 대한 자세한 내용은 다음 표를 참조하세요. 동적 이미지(Liquid를 사용한 이미지)의 경우 자동 너비 설정을 사용하려면 대체 이미지를 설정해야 합니다. 이미지 사양은 [이메일 이미지 사양을]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email) 참조하세요.
+`Image` 편집기 블록에 대한 자세한 내용은 다음 표를 참조하세요. 동적 콘텐츠(Liquid 또는 연결된 콘텐츠가 있는 이미지)의 경우 자동 너비 설정을 사용하려면 대체 이미지를 설정해야 합니다. 이미지 사양은 [이메일 이미지 사양을]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email) 참조하세요.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 | 등록정보 | 설명 |
 |---|---|
@@ -120,7 +122,7 @@
 |맞춤| Orients the image to either the left, center or right of the block. |
 |Liquid가 있는 이미지| [Liquid]({{site.baseurl}}/liquid/) 로직을 사용하여 동일한 콘텐츠 블록 내에서 서로 다른 이미지를 동적으로 설정할 수 있습니다. |
 |URL| Set an image using the address to where it's hosted. |
-|대체 텍스트| A short description of the image that gives users the same information that's shown in the image. 이는 화면 리더 접근성을 위해 또는 이미지가 로드되지 않을 때 필수적입니다. |
+|대체 텍스트| A short description of the image that gives users the same information that's shown in the image. 이는 화면 리더 접근성 또는 이미지가 로드되지 않을 때 필수적인 기능입니다. |
 |모서리가 둥근 이미지| Render the image with rounded corners. By default, images are rendered with squared corners. |
 |Action| Triggers an action when the user clicks the image.|
 |차단 옵션| Sets padding around the image block. |

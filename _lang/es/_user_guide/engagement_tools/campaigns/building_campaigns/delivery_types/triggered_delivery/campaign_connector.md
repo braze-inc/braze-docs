@@ -41,7 +41,7 @@ Los desencadenantes del conector de campaña no pueden utilizarse para desencade
 
 ### Normas de entrega
 
-Ten en cuenta que no puedes utilizar el conector de campaña para enviar un mensaje a un usuario después de que haya completado una interacción con una campaña. Por ejemplo, si estás ejecutando una campaña de marketing durante nueve semanas y configuras una campaña de seguimiento que utiliza el conector de campaña al principio de la cuarta semana, la campaña de seguimiento sólo entregará mensajes a los usuarios que hayan interactuado con la campaña de marketing después de que se haya publicado la campaña de seguimiento (semanas 4-9). Por lo tanto, para asegurarse de que sus campañas de seguimiento llegan a todos los usuarios a los que se dirige, debería:
+Ten en cuenta que no puedes utilizar el conector de campaña para enviar un mensaje a un usuario después de que haya completado una interacción con una campaña. Por ejemplo, si estás ejecutando una campaña de marketing durante nueve semanas y configuras una campaña de seguimiento que utilice el conector de campaña al principio de la cuarta semana, la campaña de seguimiento sólo entregará mensajes a los usuarios que hayan interactuado con la campaña de marketing después de que se haya publicado la campaña de seguimiento (semanas 4-9). Por lo tanto, para asegurarse de que sus campañas de seguimiento llegan a todos los usuarios a los que se dirige, debería:
 
 - Configura tu campaña original como borrador
 - Configura y publica tu campaña de seguimiento

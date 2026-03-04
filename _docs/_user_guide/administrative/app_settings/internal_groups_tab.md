@@ -17,7 +17,23 @@ We also recommend checking out our [Testing and Troubleshooting](https://learnin
 
 ## Prerequisites
 
-To create and manage internal groups, you need the [Access Dev Console permission]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for your workspace.
+To create and manage internal groups, you need the [Access Dev Console legacy permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=legacy%20permissions) or these [granular permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=granular%20permissions):
+
+- View API Keys
+- Edit API Keys
+- View Internal Groups
+- Edit Internal Groups
+- View Message Activity Log
+- View Event User Log
+- View API identifiers
+- View API Usage Dashboard
+- View API Limits
+- View API Usage Alerts
+- Edit API Usage Alerts
+- Edit SDK Debugger
+- View SDK Debugger
+
+{% multi_lang_include deprecations/user_permissions.md %}
 
 ## Creating an internal group
 
@@ -87,7 +103,7 @@ Seed emails will have `[SEED]` appended to the start of the email subject line. 
 
 #### Subscription behavior
 
-Seed sends are designed for internal QA and review, so they intentionally bypass subscription checks for the seeded dashboard users. This means users with valid email addresses who are part of a Seed Group receive the message even if they are not subscribed. However, the message must be configured to send seed copies to that group.
+Seed sends are designed for internal QA and review, so they intentionally bypass subscription checks for the seeded company users. This means users with valid email addresses who are part of a Seed Group receive the message even if they are not subscribed. However, the message must be configured to send seed copies to that group.
 
 {% alert tip %}
 If your Seed Group members report not seeing the message in their inbox, check that they're listed in the internal group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their spam folders.

@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [ThoughtSpot](https://www.thoughtspot.com/) is the modern analytics cloud, a next-generation analytics platform that delivers live analytics to your modern data stack - empowering your colleagues, partners, and customers to turn data into actionable insights.
 
-The Braze and ThoughtSpot integration leverages ThoughtSpot TML Blocks that allow Braze users to accelerate their user behavior analytics with prebuilt templates of worksheets and models. This integration enables users to limitlessly search across their Braze interaction data and uncover actionable insights. 
+The Braze and ThoughtSpot integration leverages ThoughtSpot TML Blocks that allow company users to accelerate their user behavior analytics with prebuilt templates of worksheets and models. This integration enables users to limitlessly search across their Braze interaction data and uncover actionable insights. 
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ To start using ThoughtSpot on Braze, your data needs to be sent to a cloud data 
 
 ## TML Blocks
 
-Braze users can easily access and search all their digital interaction data. Our templates empower users to set up their analysis quickly with prebuilt visualizations and worksheets. Analyze your website's acquisition and user behavior with search, drill-downs, and spotIQ.
+Company users can easily access and search all their digital interaction data. Our templates empower users to set up their analysis quickly with prebuilt visualizations and worksheets. Analyze your website's acquisition and user behavior with search, drill-downs, and spotIQ.
 
 ## Integration
 

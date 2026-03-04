@@ -113,4 +113,4 @@ Saving the post-launch draft does not automatically trigger an update. The updat
 
 ## General Data Protection Regulation (GDPR) compliance
 
-Nearly every event record Braze stores includes a few fields representing users’ personally identifiable information (PII). Some events may include email address, phone number, device ID, language, gender, and location information. If a user’s request to be forgotten is submitted to Braze, we will null out those PII fields for any event belonging to those users. This way, we’re not removing the historical record of the event, but now the event can never be tied back to a specific individual.
+{% multi_lang_include partners/snowflake_pii_gdpr.md %}

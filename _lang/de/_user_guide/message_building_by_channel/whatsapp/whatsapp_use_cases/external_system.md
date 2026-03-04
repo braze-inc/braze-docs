@@ -62,7 +62,7 @@ Erstellen Sie zunächst eine Webhook-Kampagne, um eine Möglichkeit zu schaffen,
 ![Aktionsbasierte Zustellung mit einem Auslöser für das Senden einer eingehenden WhatsApp Nachricht.]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
 
 {: start="6"}
-6\. Stellen Sie Ihre Kampagne fertig, speichern Sie sie und starten Sie sie. Nachdem Sie die Kampagne gestartet haben, sendet Braze jedes Mal, wenn eine Nachricht eingeht, einen Webhook an Ihr externes System.
+6\. Stellen Sie Ihre Kampagne fertig, speichern Sie sie und starten Sie sie. Nachdem Sie die Kampagne gestartet haben, sendet Braze jedes Mal, wenn eine Nachricht empfangen wird, einen Webhook an Ihr externes System.
 
 ### Schritt 2: Erstellen Sie eine API-getriggerte Kampagne für ausgehende Nachrichten {#step-2}
 
@@ -91,7 +91,7 @@ Schließlich konfigurieren Sie Ihr externes System so, dass es Braze aufruft und
 3. Verwenden Sie die Eigenschaft des API-Triggers aus [Schritt 2](#step-2), um die Antwort des externen Systems einzufügen, und vergessen Sie nicht, Ihren API-Schlüssel in den Anfrage-Header zur Authentifizierung aufzunehmen, wie in diesem cURL-Beispiel:
 
 {% raw %}
-```json
+```bash
 curl -X POST \
   -H 'Content-Type:application/json' \
   -H 'Authorization: Bearer a valid rest API key' \
@@ -117,4 +117,4 @@ Jetzt haben Sie eine solide Grundlage für den Aufbau eines KI-Chatbot-Workflows
 Sie können Ihre Integrationslogik erweitern:
 - Verwenden Sie verschiedene Schlüsselwörter, um unterschiedliche Webhook-Kampagnen zu triggern.
 - Erstellen Sie komplexere Konversationsabläufe mit mehrstufigen, über APIs getriggerten Kampagnen.
-- Erfassen Sie Chat-Informationen in Braze als angepasste Attribute, um das Nutzerprofil zu erweitern und zukünftige Kampagnen zu segmentieren.
+- Erfassen Sie Chat-Informationen in Braze als angepasste Attribute, um das Nutzerprofil anzureichern und zukünftige Kampagnen zu segmentieren.

@@ -71,6 +71,8 @@ To compose your Banner, you can choose to:
 
 You can drag and drop blocks and rows into the canvas area to start building your message.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 To customize your message's background properties, border settings, and more, select **Styles**. If you only want to customize the style for a specific block or row, select it to make changes.
 
 ![Style panel of the Banner composer.]({% image_buster /assets/img/banners/banner_card_styles.png %})

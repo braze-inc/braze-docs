@@ -148,7 +148,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 
 ```json
 {
-{
     "dispatch_id": "dispatch_identifier",
     "schedule_id": "schedule_identifier",
     "message": "success"

@@ -133,8 +133,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
 - name: Hightouch
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
-- name: Tinyclues
-  url: /docs/partners/data_and_infrastructure_agility/cohort_import/tinyclues/
+- name: Splio
+  url: /docs/partners/splio/
 - name: Transcend
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
 - name: RevenueCat
@@ -144,7 +144,9 @@ valid_partner_list:
 - name: BlueConic
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
 - name: LINE
-  url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+  url: /docs/partners/message_orchestration/additional_channels/messaging/line/
+- name: LinkedIn Audience Sync
+  url: /docs/partners/canvas_audience_sync/linkedin_audience_sync/
 - name: Judo
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/
 - name: Shopify
@@ -347,41 +349,49 @@ valid_partner_list:
   url: /docs/partners/eppo/
 - name: Stripe
   url: /docs/partners/stripe/
-- name: 桶剣道
+- name: Okendo
   url: /docs/partners/okendo/
-- name: レムニスク
+- name: Lemnisk
   url: /docs/partners/lemnisk/
-- name: ジャスパー
+- name: Jasper
   url: /docs/partners/jasper/
-- name: カメレオン
+- name: Kameleoon
   url: /docs/partners/kameleoon/
-- name: スウィム
+- name: Swym
   url: /docs/partners/swym/
-- name: スタックアダプト
+- name: StackAdapt
   url: /docs/partners/stackadapt/
-- name: オッピジー
+- name: Oppizi
   url: /docs/partners/oppizi/
-- name: クラウディナリー
+- name: Cloudinary
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/cloudinary/
 - name: LILT
   url: /docs/partners/lilt/
-- name: 記事全文
+- name: Fullstory
   url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
-- name: オラクル・クラウドツイスト
+- name: Oracle Crowdtwist
   url: /docs/partners/crowdtwist/
-- name: ブリングス
+- name: Blings
   url: /docs/partners/blings/
-- name: Google オーディエンスの同期
+- name: Google Audience Sync
   url: /docs/google_audience_sync/ 
 - name: Optimizely
   url: /docs/partners/optimizely/
-- name: その他のレベル
+- name: OtherLevels
   url: /docs/partners/otherlevels/
   url: /docs/partners/crowdtwist
-- name: 記事全文
+- name: Fullstory
   url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
-- name: 開封ロイヤルティ
+- name: Open Loyalty
   url: /docs/partners/openloyalty/
 - name: DOTS.ECO
   url: /docs/partners/dots.eco/
+- name: Mailizio
+  url: /docs/partners/mailizio/
+- name: OpenAI
+  url: /docs/partners/openai/
+- name: Google Gemini
+  url: /docs/partners/gemini/
+- name: Anthropic
+  url: /docs/partners/anthropic/
 ---

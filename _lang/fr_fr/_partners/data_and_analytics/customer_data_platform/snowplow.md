@@ -16,7 +16,7 @@ _Cette intégration est maintenue par Snowplow._
 
 ## À propos de l'intégration
 
-L'intégration entre Braze et Snowplow vous permet de transmettre en temps réel les événements de Snowplow à Braze en utilisant la solution Event Forwarding de Snowplow. Cette intégration vous permet d'envoyer des événements à Braze tout en offrant flexibilité et contrôle. Plus précisément, vous pouvez :
+L'intégration entre Braze et Snowplow vous permet de transmettre les événements de Snowplow à Braze en temps réel en utilisant la solution Event Forwarding de Snowplow. Cette intégration vous permet d'envoyer des événements à Braze tout en offrant flexibilité et contrôle. Plus précisément, vous pouvez :
 - Filtrez et transformez les événements avant de les envoyer à Braze.
 - Mappez les données des événements de Snowplow aux attributs des utilisateurs de Braze, aux événements personnalisés et aux achats.
 - Conservez toutes les données dans votre cloud privé jusqu'à ce que vous décidiez de les transmettre.

@@ -3,6 +3,7 @@ nav_title: Implantar agentes
 article_title: Implantar agentes personalizados
 description: "Saiba como colocar agentes personalizados em uso no Braze depois de criá-los."
 alias: /deploying-agents/
+page_order: 2
 ---
 
 # Implantar agentes personalizados
@@ -17,11 +18,11 @@ Os Braze Currents estão atualmente na versão beta. Para obter ajuda para come�
 
 Na seção **Agent Usage (Uso do agente** ) do seu agente, é possível fazer referência e navegar para onde o agente está sendo usado ativamente em catálogos e Canvas.
 
-![A seção Agent Usage mostra dois agentes ativos e um agente inativo para Canvas.]( {% image_buster /assets/img/ai_agent/agent_usage.png %} )
+![A seção Agent Usage mostra dois agentes ativos e um agente inativo para Canvas.]({% image_buster /assets/img/ai_agent/agent_usage.png %})
 
 ## Agentes no Canva  
 
-É possível usar os agentes como etapas de uma jornada para personalizar mensagens ou orientar a tomada de decisões em tempo real. Para obter etapas detalhadas de configuração, consulte [Etapa do agente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
+É possível usar os agentes como etapas de uma jornada para personalizar mensagens ou orientar a tomada de decisões em tempo real. Para obter as etapas de configuração detalhadas, consulte a [etapa Agente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
 
 ### Casos de uso
 

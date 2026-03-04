@@ -86,7 +86,7 @@ Recurly fasst bestimmte Abo-Lebenszyklus-Ereignisse in einzelnen API-Aufrufen an
 
 - Recurly bündelt und versendet mehrere gleichzeitig erstellte Abos in einer einzigen Anfrage.
 - Recurly fasst mehrere gleichzeitige Verlängerungen für ein Konto in einer einzigen Anfrage zusammen.
-- Recurly sendet Ereignisse aus dem Lebenszyklus von Abos mit demselben Modell in einer einzigen Anfrage. Eine neu erstellte Rechnung mit einer Zahlung führt beispielsweise zu einer API-Anfrage, die sowohl die angepassten Events `Recurly Invoice Created` als auch `Recurly Successful Payment` enthält.
+- Recurly sendet Lebenszyklus-Ereignisse des gleichen Modells in einer einzigen Anfrage. Eine neu erstellte Rechnung mit einer Zahlung führt beispielsweise zu einer API-Anfrage, die sowohl die angepassten Events `Recurly Invoice Created` als auch `Recurly Successful Payment` enthält.
 
 Stapel werden in Gruppen von bis zu 75 Ereignissen auf einmal an Braze gesendet. Wenn zum Beispiel 100 Abos auf einmal erstellt werden, würde Recurly zwei API-Anfragen an Braze stellen. Weitere Informationen finden Sie unter [Stapeln von Nutzer:innen Tracking-Anfragen]({{site.baseurl}}/api/api_limits/#batch-user-track).
 

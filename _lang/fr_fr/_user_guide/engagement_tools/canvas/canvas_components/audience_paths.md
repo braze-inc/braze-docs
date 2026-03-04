@@ -2,7 +2,7 @@
 nav_title: "Parcours d'audience"
 article_title: Parcours d’audience 
 alias: /audience_paths/
-page_order: 1
+page_order: 3
 page_type: reference
 description: "Cet article de référence décrit la façon d’utiliser des parcours d’audience dans votre Canvas afin de filtrer et de segmenter les utilisateurs de manière intuitive à une grande échelle avec des regroupements d’utilisateurs en fonction de la priorité stratégique."
 tool: Canvas

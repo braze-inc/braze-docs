@@ -58,7 +58,7 @@ Introduce un porcentaje para tu grupo de control y selecciona **Guardar**. Una v
 
 El número de usuarios de tu grupo de control global se actualiza automáticamente tras su configuración inicial para seguir siendo proporcional a este porcentaje cuando se añaden más usuarios a tu espacio de trabajo. Además, los usuarios que se unan después de configurar el grupo de control global y que tengan números de contenedor aleatorios también se añadirán al grupo de control global. Si se añaden muchos usuarios, el tamaño de tu grupo de control global crece para mantener un porcentaje constante respecto a toda tu base de usuarios. Cuando crece el tamaño de tu grupo de control global, los usuarios que estaban antes en el grupo siguen permaneciendo en él (a menos que hagas cambios en tu grupo desactivándolo y creando uno nuevo).
 
-Para obtener directrices sobre porcentajes, consulta [Pruebas de buenas prácticas](#percentage-guidelines).
+Para conocer las pautas porcentuales, consulta [Pruebas de buenas prácticas](#percentage-guidelines).
 
 ![La Configuración del Grupo de Control Global con la Configuración de Audiencia establecida en "Asignar el cinco por ciento de todos los usuarios al Grupo de Control Global".]({% image_buster /assets/img/control_group/control_group4.png %})
 

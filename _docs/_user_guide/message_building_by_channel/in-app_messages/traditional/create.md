@@ -191,7 +191,9 @@ Select **Add Languages** and select your desired languages from the provided lis
 
 ### Image
 
-Depending on your message type, you can **Upload Image**, **Pick a Badge**, or use **Font Awesome**. To upload an image, click **Add Image** or provide an image URL. Clicking **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements—be sure to check what those are before commissioning or making an image from scratch!
+Depending on your message type, you can **Upload Image**, **Pick a Badge**, or use **Font Awesome**. To upload an image, select **Add Image** or provide an image URL. Selecting **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements—be sure to check what those are before commissioning or making an image from scratch.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 ### Header and body
 
@@ -341,11 +343,16 @@ Finally, after you've selected the action the in-app message will be triggered o
 
 You can choose between the following message priorities:
 
-- Low priority (shown after other messages)
-- Medium priority
 - High priority (shown before other messages)
+- Medium priority (default)
+- Low priority (shown after other messages)
 
-The high, medium, and low options for triggered message priorities are buckets, and as such multiple messages could have the same selected priority. To set priorities within these buckets, click **Set Exact Priority**, and you will be able to drag and drop campaigns to order them with the correct priority.
+The high, medium, and low options for triggered message priorities are buckets, and as such, multiple messages could have the same selected priority. When multiple messages share the same priority, the most recently created or assigned message takes precedence and is shown first:
+
+- **Default priority bucket:** When two campaigns share the same trigger and use the default (medium) priority, the campaign that was created last receives the trigger.
+- **Specific priority bucket:** When multiple campaigns share the same trigger and are assigned to a specific priority bucket, the campaign most recently assigned to that bucket receives the trigger.
+
+To set priorities within these buckets, click **Set Exact Priority**, and you can drag and drop campaigns to order them with the correct priority.
 
 ![An example of how priority is set for an in-app message campaign and Canvas.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 

@@ -18,11 +18,11 @@ _Essa integração é mantida pela Snowplow._
 
 A integração entre o Braze e o Snowplow o capacita a encaminhar eventos do Snowplow para o Braze em tempo real usando a solução Event Forwarding do Snowplow. Essa integração permite que você envie eventos para o Braze, oferecendo flexibilidade e controle. Especificamente, você pode:
 - Filtrar e transformar eventos antes de enviá-los ao Braze.
-- Mapeie os dados de eventos do Snowplow para atributos de usuários, eventos personalizados e compras do Braze.
+- Mapeie os dados de eventos do Snowplow para atributos de usuários do Braze, eventos personalizados e compras.
 - Mantenha todos os dados em sua nuvem privada até que você decida encaminhá-los.
 - Implante você mesmo a solução em sua conta de nuvem Snowplow existente. 
 
-O [encaminhamento de eventos](https://docs.snowplow.io/docs/destinations/forwarding-events/) da Snowplow é um recurso complementar pago disponível para os clientes da Snowplow. Para encaminhar eventos para o Braze sem esse complemento, use a integração [lado a lado do servidor do Google Tag Manager](https://docs.snowplow.io/docs/destinations/forwarding-events/google-tag-manager-server-side/) do Snowplow.
+O [encaminhamento de eventos](https://docs.snowplow.io/docs/destinations/forwarding-events/) da Snowplow é um recurso complementar pago disponível para os clientes da Snowplow. Para encaminhar eventos para o Braze sem esse complemento, use a integração [do lado a lado do servidor do Google Tag Manager](https://docs.snowplow.io/docs/destinations/forwarding-events/google-tag-manager-server-side/) do Snowplow.
 
 Aproveite os ricos dados de comportamento da Snowplow para promover interações poderosas centradas no cliente no Braze e enviar mensagens personalizadas em tempo real.
 
@@ -57,7 +57,7 @@ Para criar o encaminhador de eventos:
 
 ### Etapa 2: Configurar o encaminhador de eventos
 
-Ao configurar o encaminhador, você pode escolher quais eventos do Snowplow encaminhar e mapeá-los para os tipos de objetos do Braze:
+Ao configurar o encaminhador, você pode escolher quais eventos do Snowplow serão encaminhados e mapeá-los para os tipos de objetos do Braze:
 
 1. **[Atribuições do usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object)**: Atualize os dados do perfil do usuário e as propriedades personalizadas do usuário.
 2. **[Eventos personalizados]({{site.baseurl}}/api/objects_filters/event_object)**: Envie ações e comportamentos do usuário.

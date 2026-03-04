@@ -242,6 +242,10 @@ You can also choose to only send your campaign to users who have a specific [sub
 
 Optionally, you can also limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign.
 
+{% alert note %}
+When creating a new email campaign, the Control Group defaults to 20% and can be adjusted or removed as needed for your campaign.
+{% endalert %}
+
 ##### Multichannel campaigns with email and push
 
 For multichannel campaigns targeting both email and push channels, you may want to limit your campaign so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in statuses:

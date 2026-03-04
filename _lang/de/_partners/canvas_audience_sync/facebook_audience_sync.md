@@ -103,7 +103,7 @@ Wählen Sie das gewünschte Facebook-Anzeigenkonto aus. Geben Sie in der Dropdow
 2. Wählen Sie **Nutzer:innen zur Zielgruppe hinzufügen** und wählen Sie die Felder aus, die Sie mit Facebook synchronisieren möchten. 
 3. Wählen Sie dann **Zielgruppe erstellen**, um Ihre Zielgruppe zu speichern.
 
-![Zielgruppensynchronisierung für eine Zielgruppe mit den entsprechenden Informationen zu E-Mail, Telefon, Vorname und Nachname.]({% image_buster /assets/img/audience_sync/fb_sync.png %})
+![Zielgruppensynchronisierung für eine Zielgruppe mit den passenden Informationen zu E-Mail, Telefon, Vorname und Nachname.]({% image_buster /assets/img/audience_sync/fb_sync.png %})
 
 Sie werden oben im Schritt-Editor benachrichtigt, wenn die Zielgruppe erfolgreich erstellt wurde oder wenn während dieses Vorgangs ein Fehler auftritt. Sie können diese Zielgruppe auch referenzieren, wenn Nutzer:in später in der Canvas-Reise entfernt werden, da die Zielgruppe im Entwurfsmodus erstellt wurde.
 
@@ -207,7 +207,7 @@ Derzeit werden von Braze keine wertorientierten, angepassten Zielgruppen erwarte
 Um Audience Sync to Facebook nutzen zu können, müssen Sie diese Vereinbarung über die Bedingungen des Dienstes akzeptieren. 
 
 - Wenn Ihr Anzeigenkonto direkt mit Ihrem persönlichen Facebook-Konto verknüpft ist, können Sie die Bedingungen für den Dienst von in Ihrem persönlichen Konto hier akzeptieren: `https://www.facebook.com/ads/manage/customaudiences/tos.php?act=<ACCOUNT_ID>`.
-- Wenn Ihr Anzeigenkonto mit dem Business Manager-Konto Ihres Unternehmens verknüpft ist, müssen Sie die Bedingungen für den Dienst in Ihrem Facebook Business Manager-Konto hier akzeptieren: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
+- Wenn Ihr Anzeigenkonto mit dem Business Manager-Konto Ihres Unternehmens verknüpft ist, müssen Sie die Bedingungen des Dienstes in Ihrem Facebook Business Manager-Konto hier akzeptieren: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
 
 Nachdem Sie die Nutzungsbedingungen für Ihre angepasste Facebook Zielgruppe akzeptiert haben, gehen Sie wie folgt vor:
 

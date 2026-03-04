@@ -2,7 +2,7 @@
 nav_title: Rutas de audiencia
 article_title: Rutas de audiencia 
 alias: /audience_paths/
-page_order: 1
+page_order: 3
 page_type: reference
 description: "Este artículo de referencia describe cómo utilizar las Rutas de Audiencia en su Canvas para filtrar y segmentar intuitivamente a los usuarios a gran escala con agrupaciones de usuarios estratégicas basadas en prioridades."
 tool: Canvas

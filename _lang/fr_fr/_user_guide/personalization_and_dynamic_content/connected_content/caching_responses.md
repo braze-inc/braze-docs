@@ -14,12 +14,12 @@ Braze n'enregistre ni ne stocke en permanence les **corps de réponse du** conte
 Pour empêcher la mise en cache, vous pouvez spécifier `:no_cache`, ce qui peut entraîner une augmentation du trafic réseau. Pour faciliter le dépannage et le contrôle de l'état du système, Braze enregistre les métadonnées des requêtes de contenu connecté (telles que l'URL de la requête entièrement rendue et le code d'état de la réponse) pour les appels réussis et échoués. Ces journaux sont conservés jusqu'à 30 jours.
 
 {% details Connected Content rendering and data handling (advanced) %}
-Cette section offre une vue plus détaillée, de bout en bout, de la manière dont Braze rend le contenu liquide et connecté et de l'endroit où les données peuvent exister temporairement avant l'envoi d'un message. Cela peut faciliter l'examen de la confidentialité et du traitement des données.
+Cette section offre une vue plus détaillée, de bout en bout, de la façon dont Braze rend le contenu liquide et connecté et de l'endroit où les données peuvent exister temporairement avant l'envoi d'un message. Cela peut faciliter l'examen de la confidentialité et du traitement des données.
 
 #### Ce qui est stocké et ce qui ne l'est pas
 
 - **Contenu connecté corps de la réponse :** Non stocké de manière permanente par Braze. Il peut être conservé temporairement en mémoire et, lorsque la mise en cache est activée, stocké dans le cache avec une durée de vie (TTL).
-- **Métadonnées de la demande de contenu connecté :** Les métadonnées des requêtes, telles que l'URL entièrement rendu, le code d'état HTTP et la durée de la réponse, sont enregistrées à des fins de résolution des problèmes et de surveillance. Ces journaux sont conservés jusqu'à 30 jours. 
+- **Métadonnées de la demande de contenu connecté :** Les métadonnées des requêtes, telles que l'URL entièrement rendue, le code d'état HTTP et la durée de la réponse, sont enregistrées à des fins de résolution des problèmes et de surveillance. Ces journaux sont conservés jusqu'à 30 jours. 
 - **Message final envoyé :** Existe en mémoire pendant le rendu. Elle peut également être stockée ailleurs en fonction de votre configuration et de votre canal (par exemple, archivage des messages ou cartes de contenu).
 
 #### Flux de rendu (haut niveau)

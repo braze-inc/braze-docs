@@ -1,38 +1,110 @@
 ## Integrating the Android SDK
 
-### Step 1: Update your `build.gradle`
+### Step 1: Update your Gradle build configuration
 
-In your `build.gradle`, add [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html) to your list of repositories.
+In your project's repository configuration (for example, `settings.gradle`, `settings.gradle.kts`, or top-level `build.gradle`), add [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html) to your list of repositories. This syntax is the same for both Groovy and Kotlin DSL.
 
-```kotlin
+```groovy
 repositories {
   mavenCentral()
 }
 ```
 
-Next, add Braze to your dependencies.
+Next, add Braze to your dependencies. In the following examples, replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+
+{% alert note %}
+- For Kotlin DSL (`build.gradle.kts`), use the `implementation("...")` syntax.
+- For Groovy (`build.gradle`), use the `implementation '...'` syntax.
+- For [version catalogs](https://developer.android.com/build/migrate-to-catalogs), add entries to your `gradle/libs.versions.toml` file and reference them using the generated accessors.
+{% endalert %}
 
 {% tabs local %}
 {% tab base only %}
-If you don't plan on using Braze UI components, add the following code to your `build.gradle`. Replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+If you don't plan on using Braze UI components, add the following to your dependencies.
 
-```kotlin
+{% subtabs local %}
+{% subtab Groovy %}
+```groovy
 dependencies {
     implementation 'com.braze:android-sdk-base:SDK_VERSION' // (Required) Adds dependencies for the base Braze SDK.
     implementation 'com.braze:android-sdk-location:SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
 }
 ```
+{% endsubtab %}
+{% subtab Kotlin DSL %}
+```kotlin
+dependencies {
+    implementation("com.braze:android-sdk-base:SDK_VERSION") // (Required) Adds dependencies for the base Braze SDK.
+    implementation("com.braze:android-sdk-location:SDK_VERSION") // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endsubtab %}
+{% subtab Version catalog %}
+In your `gradle/libs.versions.toml` file:
+
+```toml
+[versions]
+braze = "SDK_VERSION"
+
+[libraries]
+braze-android-sdk-base = { group = "com.braze", name = "android-sdk-base", version.ref = "braze" }
+braze-android-sdk-location = { group = "com.braze", name = "android-sdk-location", version.ref = "braze" }
+```
+
+Then, in your `build.gradle` or `build.gradle.kts` file, add the following dependencies. This syntax is the same for both Groovy and Kotlin DSL.
+
+```groovy
+dependencies {
+    implementation(libs.braze.android.sdk.base) // (Required) Adds dependencies for the base Braze SDK.
+    implementation(libs.braze.android.sdk.location) // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 
 {% tab with ui components %}
-If you plan on using Braze UI components later, add the following code to your `build.gradle`.  Replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+If you plan on using Braze UI components, add the following to your dependencies.
 
-```kotlin
+{% subtabs local %}
+{% subtab Groovy %}
+```groovy
 dependencies {
-    implementation 'com.braze:android-sdk-ui:SDK_VERSION' // (Required) Adds dependencies for the Braze SDK and Braze UI components. 
+    implementation 'com.braze:android-sdk-ui:SDK_VERSION' // (Required) Adds dependencies for the Braze SDK and Braze UI components.
     implementation 'com.braze:android-sdk-location:SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
 }
 ```
+{% endsubtab %}
+{% subtab Kotlin DSL %}
+```kotlin
+dependencies {
+    implementation("com.braze:android-sdk-ui:SDK_VERSION") // (Required) Adds dependencies for the Braze SDK and Braze UI components.
+    implementation("com.braze:android-sdk-location:SDK_VERSION") // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endsubtab %}
+{% subtab Version catalog %}
+In your `gradle/libs.versions.toml` file:
+
+```toml
+[versions]
+braze = "SDK_VERSION"
+
+[libraries]
+braze-android-sdk-ui = { group = "com.braze", name = "android-sdk-ui", version.ref = "braze" }
+braze-android-sdk-location = { group = "com.braze", name = "android-sdk-location", version.ref = "braze" }
+```
+
+Then, in your `build.gradle` or `build.gradle.kts` file, add the following dependencies. This syntax is the same for both Groovy and Kotlin DSL.
+
+```groovy
+dependencies {
+    implementation(libs.braze.android.sdk.ui) // (Required) Adds dependencies for the Braze SDK and Braze UI components.
+    implementation(libs.braze.android.sdk.location) // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
@@ -111,6 +183,10 @@ Braze.enableDelayedInitialization(context)
 {% endsubtabs %}
 {% endtab %}
 {% endtabs %}
+
+{% alert note %}
+When delayed initialization is enabled and a push notification contains a deep link action, the deep link does not resolve.
+{% endalert %}
 
 #### Step 4.2: Configure push analytics (optional)
 
@@ -371,7 +447,7 @@ By default, the Braze Android SDK log level is set to `INFO`. You can [suppress 
 
 #### Enabling logs
 
-To help troubleshoot issues in your app, or reduce turnaround times with Braze Support, you'll want to enable verbose logs for the SDK. When you send verbose logs to Braze Support, ensure they begin as soon as you launch your application and end far after your issue occurs.
+To help troubleshoot issues in your app, or reduce turnaround times with Braze Support, you can enable verbose logs for the SDK. When you send verbose logs to Braze Support, ensure they begin as soon as you launch your application and end far after your issue occurs. For a centralized overview, see [Verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging). To learn how to interpret log output, see [Reading verbose logs]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs).
 
 Keep in mind, verbose logs are only intended for your development environment, so you'll want to disable them before releasing your app.
 

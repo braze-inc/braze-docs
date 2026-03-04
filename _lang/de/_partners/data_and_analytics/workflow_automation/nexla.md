@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Nexla
 
-> [Nexla](https://www.nexla.com) ist ein führendes Unternehmen im Bereich einheitlicher Datenoperationen und ein Gartner Cool Vendor 2021. Die Nexla-Plattform bietet Tools für die Erstellung skalierbarer Datenflüsse, die einen geregelten Datenbetrieb, Zusammenarbeit und Agilität für Geschäfts- und Datenteams ermöglichen. Teams, die mit Daten arbeiten, erhalten eine einheitliche Erfahrung ohne oder mit wenig Code, um Daten für jeden Anwendungsfall zu integrieren, zu transformieren, bereitzustellen und zu überwachen. 
+> [Nexla](https://www.nexla.com) ist ein führendes Unternehmen im Bereich einheitlicher Datenoperationen und ein Gartner Cool Vendor 2021. Die Nexla-Plattform bietet Tools für die Erstellung skalierbarer Datenströme, die einen geregelten Datenbetrieb, Zusammenarbeit und Agilität für Geschäfts- und Datenteams ermöglichen. Teams, die mit Daten arbeiten, erhalten eine einheitliche Erfahrung ohne oder mit wenig Code, um Daten für jeden Anwendungsfall zu integrieren, zu transformieren, bereitzustellen und zu überwachen. 
 
 Die Braze- und Nexla-Integration erlaubt es Kunden, die [Currents]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) verwenden, Nexla zu nutzen, um Data-Lake-Daten zu extrahieren, zu transformieren und in einem angepassten Format an andere Standorte zu laden, so dass Daten in Ihrem gesamten Ökosystem leicht zugänglich sind.
 

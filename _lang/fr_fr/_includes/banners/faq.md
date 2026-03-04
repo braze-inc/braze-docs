@@ -59,4 +59,10 @@ Non. Cependant, la plupart des étiquettes Liquid sont prises en charge pour les
 
 ## Puis-je capturer des événements de clics ?
 
-Les événements de clic ne sont capturés que si une action sur le clic est définie sur un élément `logClick` et est appelée à l'aide de la [passerelle JS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge).
+Oui. La manière dont les événements de clic sont capturés dépend de la manière dont votre bannière est rendue :
+
+- **Composants standard de l'éditeur :** Si votre bannière utilise des composants standard de l'éditeur (images, boutons, texte), les clics sont suivis automatiquement lors de l'utilisation des méthodes d'insertion du SDK.
+- **Blocs de code personnalisés :** Si votre bannière utilise le bloc éditeur de code personnalisé, vous devez appeler `brazeBridge.logClick()` à partir de votre HTML personnalisé pour suivre les clics. Cela s'applique même lorsque vous utilisez les méthodes du SDK pour insérer et rendre la bannière. Cela fonctionne de la même manière que le [pont JavaScript]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) pour les messages in-app en HTML.
+- **Interface utilisateur personnalisée (sans tête) :** Si vous créez une interface utilisateur entièrement personnalisée en utilisant les propriétés personnalisées de la bannière au lieu de rendre le code HTML de la bannière, appelez `logClick()` sur l'objet Banner à partir du code de votre application.
+
+Pour plus d'informations, reportez-vous aux [clics d'enregistrement]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks).

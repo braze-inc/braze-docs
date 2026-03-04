@@ -9,6 +9,10 @@ channel: email
 
 # Universal links and App Links
 
+{% alert tip %}
+For a comparison of link types across all messaging channels and guidance on when you need an AASA file, see [iOS deep linking guide]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide).
+{% endalert %}
+
 Apple universal links and Android App Links are mechanisms devised to provide a seamless transition between web content and mobile apps. While universal links are specific to iOS, Android App Links serve the same purpose for Android applications.
 
 ## How universal links and App Links work
@@ -55,7 +59,7 @@ For apps to support universal links or App Links, both iOS and Android require a
 
 In addition to this permissions file, there are hard-coded definitions of which link domains the app is allowed to open that are set up within the app:
 
-- **iOS:** Set as “Associated Domains” in Xcode
+- **iOS:** Set as "Associated Domains” in Xcode
 - **Android:** Defined in the app’s `AndroidManifest.xml` file
 
 This two-part domain-app association is required for a universal link or App Link to work and prevents any app from hijacking links from a particular domain or any domain from opening a particular app.
@@ -127,7 +131,7 @@ The AASA file contains a JSON object with a list of apps and the URL paths on th
     "apps": [],
     "details": [
       {
-        "appID": “JHGFJHHYX.com.facebook.ios",
+        "appID": "JHGFJHHYX.com.facebook.ios",
         "paths": [
           "*"
         ]

@@ -206,9 +206,14 @@ empty_swift_file.swift
 
 ### 2단계: 지연 초기화 설정(선택 사항)
 
-Braze Swift 소프트웨어 개발 키트가 초기화되는 시기를 지연하도록 선택할 수 있으며, 이는 앱에서 구성을 로드하거나 SDK를 시작하기 전에 사용자 동의를 기다려야 하는 경우에 유용합니다. 초기화가 지연되면 소프트웨어 개발 키트가 준비될 때까지 Braze 푸시 알림이 대기줄에 대기합니다.
+앱에서 구성을 로드하거나 SDK를 시작하기 전에 사용자 동의를 기다려야 하는 경우 유용하게 사용할 수 있는 Braze Swift SDK가 초기화되는 시기를 지연하도록 선택할 수 있습니다. 초기화 지연은 소프트웨어 개발 키트 초기화 전에 수신된 Braze 푸시 알림 및 푸시 토큰이 대기열에 추가되고 SDK가 초기화되면 처리되도록 합니다.
 
-이 기능을 인에이블하려면 가능한 한 빨리 `Braze.prepareForDelayedInitialization()` 으로 전화하여 `application(_:didFinishLaunchingWithOptions:)`.
+지연 초기화를 사용하려면 최소 Braze 소프트웨어 개발 키트 버전이 필요합니다:
+{% sdk_min_versions swift:11.2.0 %}
+
+#### 2.1 단계: 초기화 지연에 대비하세요
+
+앱 수명 주기 초기에 가능한 한 빨리 `Braze.prepareForDelayedInitialization()` 으로 연락( `application(_:didFinishLaunchingWithOptions:)` 이전 또는 그 이후)하세요. 이렇게 하면 소프트웨어 개발 키트가 초기화되기 전에 수신된 푸시 알림이 나중에 제대로 캡처되고 처리됩니다.
 
 {% alert note %}
 이는 Braze의 푸시 알림에만 적용됩니다. 다른 푸시 알림은 시스템 위임자가 정상적으로 처리합니다.
@@ -272,14 +277,121 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 {% endtab %}
 {% endtabs %}
 
+지연 초기화를 사용하는 경우 푸시 알림 자동화가 암시적으로 인에이블먼트됩니다. `pushAutomation` 매개 변수를 전달하여 [푸시 자동화](#swift_step-23-customize-push-automation-optional) 구성을 [커스텀할](#swift_step-23-customize-push-automation-optional) 수 있습니다.
+
+#### 2.2 단계: 푸시 행동 분석 동작 구성(선택 사항)
+
+지연 초기화를 인에이블먼트하면 푸시 분석이 기본값으로 대기줄에 대기합니다. 그러나 대신 푸시 분석을 명시적으로 대기줄에 넣거나 삭제하도록 선택할 수 있습니다.
+
+##### 명시적으로 대기줄 지정
+
+푸시 행동 분석을 명시적으로 대기줄에 넣으려면(기본값 동작) `analyticsBehavior` 매개변수에 `.queue` 을 전달합니다. 초기화 전에 대기줄에 있는 푸시 분석 이벤트는 초기화 시 처리되어 서버로 플러시됩니다.
+
+{% tabs local %}
+{% tab Swift %}
+```swift
+Braze.prepareForDelayedInitialization(analyticsBehavior: .queue)
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+[Braze prepareForDelayedInitializationWithAnalyticsBehavior:BRZPushEnqueueBehaviorQueue];
+```
+{% endtab %}
+{% endtabs %}
+
+##### 드롭
+
+소프트웨어 개발 키트 초기화 전에 받은 푸시 분석을 삭제하려면 `analyticsBehavior` 파라미터에 `.drop` 을 전달하세요. 이 옵션을 사용하면 소프트웨어 개발 키트가 초기화되지 않은 상태에서 발생하는 모든 푸시 분석 이벤트는 무시됩니다.
+
+{% tabs local %}
+{% tab Swift %}
+```swift
+Braze.prepareForDelayedInitialization(analyticsBehavior: .drop)
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+[Braze prepareForDelayedInitializationWithAnalyticsBehavior:BRZPushEnqueueBehaviorDrop];
+```
+{% endtab %}
+{% endtabs %}
+
+#### 2.3 단계: 푸시 자동화 커스텀(선택 사항)
+
+`pushAutomation` 매개 변수를 전달하여 푸시 자동화 구성을 커스텀할 수 있습니다. 기본값으로 `requestAuthorizationAtLaunch` 을 제외한 모든 자동화 기능이 인에이블먼트됩니다.
+
+{% tabs local %}
+{% tab SWIFT %}
+```swift
+// Enable all push automation
+featuresBraze.prepareForDelayedInitialization(pushAutomation: true)
+
+// Or customize specific automation options
+let automation = Braze.Configuration.Push.Automation()
+automation.automaticSetup = true
+automation.requestAuthorizationAtLaunch = false
+Braze.prepareForDelayedInitialization(pushAutomation: automation)
+```
+{% endtab %}
+
+{% tab OBJECTIVE-C %}
+```objc
+// Enable all push automation features
+[Braze prepareForDelayedInitializationWithPushAutomation:[[BRZConfigurationPushAutomation alloc] initWithAutomationEnabled:YES]];
+
+// Or customize specific automation options
+BRZConfigurationPushAutomation *automation = [[BRZConfigurationPushAutomation alloc] init];
+automation.automaticSetup = YES;
+automation.requestAuthorizationAtLaunch = NO;
+[Braze prepareForDelayedInitializationWithPushAutomation:automation analyticsBehavior:BRZPushEnqueueBehaviorQueue];
+```
+{% endtab %}
+{% endtabs %}
+
+#### 2.4 단계: SDK 초기화
+
+선택한 지연 기간(예: 서버에서 구성을 가져온 후 또는 사용자 동의 후)이 지나면 소프트웨어 개발 키트를 정상적으로 초기화합니다:
+
+{% tabs local %}
+{% tab SWIFT %}
+```swift
+func initializeBraze() {  
+  let configuration = Braze.Configuration(apiKey: "YOUR-API-KEY", endpoint: "YOUR-ENDPOINT")    
+  
+  // Enable push automation to match the delayed initialization configuration  
+  configuration.push.automation = true    
+  let braze = Braze(configuration: configuration)    
+  
+  // Store the Braze instance for later use 
+  AppDelegate.braze = braze
+}
+```
+{% endtab %}
+{% tab OBJECTIVE-C %}
+```objc
+- (void)initializeBraze {
+  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"YOUR-API-KEY" endpoint:@"YOUR-ENDPOINT"];
+  
+  // Enable push automation to match the delayed initialization configuration
+  configuration.push.automation = [[BRZConfigurationPushAutomation alloc] initWithAutomationEnabled:YES];
+  Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+  
+  // Store the Braze instance for later use
+  AppDelegate.braze = braze;
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% alert note %}
-[`Braze.prepareForDelayedInitialization(pushAutomation:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)) 는 선택적 `pushAutomation` 매개 변수를 허용합니다. `nil` 으로 설정하면 실행 시 푸시 승인 요청을 제외한 모든 푸시 자동화 기능이 인에이블먼트됩니다.
+소프트웨어 개발 키트가 초기화되면 대기줄에 있는 모든 푸시 알림, 푸시 토큰, 딥링크가 자동으로 처리됩니다.
 {% endalert %}
 
 ### 3단계: 앱 대리자를 업데이트하세요
 
 {% alert important %}
-다음은 프로젝트에 `AppDelegate` 을 이미 추가했다고 가정합니다(기본값으로 생성되지 않음). 사용할 계획이 없다면 앱 출시 시와 같이 가능한 한 빨리 Braze 소프트웨어 개발 키트를 초기화하세요.
+다음은 프로젝트에 `AppDelegate` 을 이미 추가했으며(기본값으로 생성되지 않음) 지연된 초기화 기능을 사용하지 않는다고 가정합니다. `AppDelegate` 을 사용할 계획이 없다면 앱 출시 시와 같이 가능한 한 빨리 Braze 소프트웨어 개발 키트를 초기화하세요. 지연 초기화 기능을 사용하는 경우 소프트웨어 개발 키트 초기화 [2.4단계를](#swift_step-24-initialize-the-sdk) 참조하고 이 단계는 무시하세요.
 {% endalert %}
 
 {% subtabs local %}

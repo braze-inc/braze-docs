@@ -37,6 +37,6 @@ Para arquivar um Canva:
 
 ## Desarquivamento
 
-Quando você desarquivar uma campanha ou um Canva, ele não entrará em atividade - seu status só será alterado para **Ativo**. Após o desarquivamento, você pode editar e revisar a configuração da mensagem sem que nenhuma mensagem seja enviada.
+Quando você desarquivar uma campanha ou um Canva, ele não entrará em atividade - seu status será alterado apenas para **Ativo**. Após o desarquivamento, você pode editar e revisar a configuração da mensagem sem que nenhuma mensagem seja enviada.
 
 Para retomar a campanha ou o Canva e começar a enviar mensagens, selecione o menu <i class="fas fa-ellipsis-vertical"></i> para a respectiva linha e selecione **Resume (Retomar**).

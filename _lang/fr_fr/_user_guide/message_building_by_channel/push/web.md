@@ -54,7 +54,9 @@ Envisagez d'utiliser un message dans le navigateur pour inciter les utilisateurs
 
 ## Navigateurs pris en charge
 
-Les navigateurs suivants prennent en charge les notifications push web. Cependant, les fenêtres de navigation privée ne prennent actuellement pas en charge les notifications push Web.
+Les navigateurs suivants prennent en charge les notifications push web.
+
+{% multi_lang_include alerts/important_alerts.md alert='Web push private browsing' %}
 
 - Chrome (et Chrome pour Android mobile)
 - Safari

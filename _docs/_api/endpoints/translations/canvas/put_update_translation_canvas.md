@@ -19,9 +19,7 @@ description: "This article outlines details about the Update translation in a Ca
 
 If you want to update translations after a Canvas has been launched, you'll need to [save your message as a draft]({{site.baseurl}}/post-launch_edits/) first.
 
-{% alert important %}
-This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Prerequisites
 

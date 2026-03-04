@@ -32,7 +32,7 @@ Em seguida, defina a **Janela do experimento**. A **Janela do experimento** espe
 
 ### Etapa 3: Determinar o fallback {#statistical-significance}
 
-Por padrão, se os resultados do teste não forem suficientes para determinar um vencedor estatisticamente significativo, todos os futuros usuários serão enviados para a jornada com melhor performance. Alternativamente, você pode selecionar **Continue enviando os futuros usuários para essa mistura de jornadas**. Essa opção envia futuros usuários para a combinação de jornadas de acordo com as porcentagens especificadas na distribuição da jornada experimental.
+Por padrão, se os resultados do teste não forem suficientes para determinar um vencedor estatisticamente significativo, todos os futuros usuários serão enviados para a jornada com melhor performance. Alternativamente, você pode selecionar **Continue enviando os futuros usuários para essa mistura de jornadas**. Essa opção envia os futuros usuários para a combinação de jornadas de acordo com as porcentagens especificadas na distribuição da jornada experimental.
 
 !["Continuar enviando a todos os futuros usuários a combinação de jornadas" selecionada como o que acontece com os usuários se o resultado do teste não for estatisticamente significativo.]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
@@ -50,7 +50,7 @@ Depois que um Caminho Vencedor é concluído, todos os usuários subsequentes qu
 
 ## Análise de dados {#analytics}
 
-Se a opção Jornada vitoriosa estiver ativada, sua visualização de análise de dados será separada em duas guias: **Experiência inicial** e **jornada vencedora**.
+Se a Jornada vitoriosa estiver ativada, sua visualização de análise de dados será separada em duas guias: **Experiência inicial** e **jornada vencedora**.
 
 - **Experimento inicial:** Mostra as métricas de cada jornada durante a janela do experimento. Você pode ver um resumo da performance de todas as jornadas para os eventos de conversão especificados e qual jornada foi selecionada como vencedora.
 - **Jornada vencedora:** Mostra apenas as métricas da jornada vencedora a partir do momento em que o experimento inicial foi concluído.

@@ -1,5 +1,5 @@
 ---
-nav_title: オブジェクト&amp;アンプ; フィルターs
+nav_title: オブジェクト&amp;アンプ; フィルター
 article_title: オブジェクトとフィルター
 page_order: 1.5
 description: "このランディングページには、Braze APIオブジェクトとBraze APIコールで使用されるフィルターが一覧表示されます。"

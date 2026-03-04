@@ -59,7 +59,7 @@ Kontextvariablen haben die gleichen erwarteten Formate für Datentypen wie [ange
 |String| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
 |Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
 |Array (von Objekten)| pet_details |{% raw %}<code>[_mem_lt_br>_mem_amp_emsp;{ "id": 1, "type": "dog", "breed": "beagle", "name": "Gus" }_mem_lt_br>_mem_amp_emsp;,_mem_lt_br>_mem_amp_emsp;{ "id": 2, "type": "cat", "breed": "calico", "name": "Gerald" }_mem_lt_br>]</code>{% endraw %}|
-|Uhrzeit (in UTC) | last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
+|Zeit (in UTC) | last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
 |Objekt (abgeflacht) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -162,6 +162,8 @@ Kontextvariablen werden deklariert und sind nur im Bereich eines Canvas zugängl
 {% alert note %}
 Verwenden Sie für Ihre Kontextvariable und den Vergleich denselben Datentyp. Wenn es sich bei Ihrer Kontextvariablen beispielsweise um einen zeitlichen Datentyp handelt, verwenden Sie Zeitvergleiche (wie "vor" oder "nach"). Die Verwendung nicht übereinstimmender Datentypen (z.B. String-Vergleiche mit einer Zeitkontextvariablen) kann zu unerwartetem Verhalten führen.
 {% endalert %}
+
+{% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
 
 Hier ist ein Beispiel für einen Filter für Kontextvariablen, der die Kontextvariable `product_name` mit der Regex `/braze/` vergleicht.
 

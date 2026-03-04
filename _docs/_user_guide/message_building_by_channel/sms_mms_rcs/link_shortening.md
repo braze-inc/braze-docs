@@ -128,10 +128,6 @@ For guidance on retargeting, visit [Retargeting]({{site.baseurl}}/user_guide/mes
 
 Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
 
-{% alert note %}
-At this time, RCS click events are not available through Currents.
-{% endalert %}
-
 ### Does link shortening work with deep links or universal links?
 
 Link shortening doesn't work with deep links. Alternatively, you can shorten universal links from third-party providers such as Branch or Appsflyer, but users may experience a brief redirect or "flickering" effect. This occurs because the shortened link routes through the web first before resolving to the universal link that supports app opening. Additionally, Braze is unable to troubleshoot issues that may arise when shortening universal links, such as breaking the attribution or causing unexpected redirects.

@@ -54,7 +54,7 @@ Die folgenden Meldungen dienen als Beispiel und stimmen möglicherweise nicht ge
 | Nachrichtentyp | Potenzielle Nachricht | Beschreibung |
 |---|---|---|
 | Soft Bounce | Zustellfehler mit E-Mail-Adresse same@example.com. | Die E-Mail-Adresse war gültig und die E-Mail-Nachricht erreichte den Mailserver des Empfängers, wurde aber wegen eines "temporären" Problems abgelehnt. <br><br>Häufige Gründe für Zustellfehler: {::nomarkdown} <ul> <li> Die Mailbox war voll (der Benutzer hat seine Quote überschritten) </li> <li> Der Server war ausgefallen </li> <li> Die Nachricht war zu groß für den Posteingang des Empfängers </li>  </ul> {:/} Wenn eine E-Mail einen Soft Bounce erhalten hat, versuchen wir es normalerweise innerhalb von 72 Stunden erneut, aber die Anzahl der Wiederholungsversuche variiert von Empfänger zu Empfänger. |
-| Hard Bounce | Das E-Mail-Konto, das Sie versucht haben zu erreichen, existiert nicht. Versuchen Sie, die E-Mail-Adresse des Empfängers noch einmal auf Tippfehler oder unnötige Leerzeichen zu überprüfen. | Ihre Nachricht hat den Posteingang dieser Person nie erreicht, weil es keinen Posteingang zu erreichen gab. Wenn Sie tiefer in die Materie eindringen möchten, enthalten solche Nachrichten manchmal Links in der Spalte **Details anzeigen**, mit denen Sie das Profil des Empfängers einsehen können.|
+| Hard Bounce | Das E-Mail-Konto, das Sie versucht haben zu erreichen, existiert nicht. Versuchen Sie, die E-Mail-Adresse des Empfängers noch einmal auf Tippfehler oder unnötige Leerzeichen zu überprüfen. | Ihre Nachricht hat den Posteingang dieser Person nie erreicht, weil es keinen Posteingang zu erreichen gab. Wenn Sie tiefer eindringen möchten, können Nachrichten wie diese manchmal Links in der Spalte **Details anzeigen** enthalten, über die Sie das Profil des beabsichtigten Empfängers:in einsehen können.|
 | Block | Die Spam-Nachricht wird aufgrund der Anti-Spam-Richtlinie zurückgewiesen. | Ihre Nachricht wurde als Spam kategorisiert. Dieser E-Mail-Fehler wird für eine:n Nutzer:in protokolliert, wenn wir ein Event vom ESP erhalten haben, das anzeigt, dass die E-Mail gelöscht wurde. Wenn Sie diese Nachricht jedoch häufig sehen, sollten Sie vielleicht Ihre Sendegewohnheiten oder den Content Ihrer Nachricht überdenken. Denken Sie auch zurück - haben Sie [Ihre IP aufgewärmt]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)? Wenn nicht, wenden Sie sich an Braze, um sich beraten zu lassen, wie Sie dies in Gang setzen können.|
 | Fehler bei abgebrochener Nachricht | empty-cart_web | Wenn Sie eine App mit einem Warenkorb haben oder eine Sendung mit einer Abbruchnachricht im Liquid erstellen, können Sie festlegen, welche Nachricht Sie erhalten, wenn die Sendung abgebrochen wird. In diesem Fall lautet die zurückgegebene Nachricht empty-cart_web.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -77,7 +77,7 @@ Die Fehler der letzten 60 Stunden finden Sie in den Protokollen der Nachrichtena
 ### Anzahl der gespeicherten Fehlerprotokolle
 
 Die Anzahl der gespeicherten Protokolle wird von mehreren Bedingungen beeinflusst. Wenn zum Beispiel eine geplante Kampagne an Tausende von Nutzer:innen gesendet wird, sehen wir im Nachrichten-Aktivitätsprotokoll möglicherweise eine Auswahl der Fehler statt aller Fehler. Im Folgenden finden Sie eine Übersicht über die Bedingungen, die beeinflussen, wie viele Protokolle gespeichert werden:
-- Es werden bis zu 20 Fehlerprotokolle desselben Fehlertyps für dieselbe Kampagne oder denselben Canvas-Schritt innerhalb einer festen Uhrzeit für die folgenden Fehlertypen gespeichert:
+- Bis zu 20 Fehlerprotokolle desselben Fehlertyps werden für dieselbe Kampagne oder denselben Canvas-Schritt innerhalb einer festen Uhrzeit für die folgenden Fehlertypen gespeichert:
     - Connected-Content-Fehler
     - Abbruch Nachrichtenfehler
     - Webhook-Fehler
@@ -99,9 +99,21 @@ Die Anzahl der gespeicherten Protokolle wird von mehreren Bedingungen beeinfluss
     - Live Activity-Fehler (Ungültige Push-Zugangsdaten)
     - Andere Fehler bei Live-Aktivitäten
     - APNS Feedback Entfernte Token-Fehler
-- Es werden bis zu 100 Fehlerprotokolle desselben Fehlertyps für dieselbe Kampagne oder denselben Canvas-Schritt innerhalb einer festen Uhrzeit für die folgenden Fehlertypen gespeichert:
+- Bis zu 100 Fehlerprotokolle desselben Fehlertyps werden für dieselbe Kampagne oder denselben Canvas-Schritt innerhalb einer festen Uhrzeit für die folgenden Fehlertypen gespeichert:
     - E-Mail Soft Bounce-Fehler
     - E-Mail Hard Bounce-Fehler
     - E-Mail Block Fehler
-- Es werden bis zu 100 User-Aliasing-Fehlerprotokolle für denselben Workspace innerhalb einer festen Uhrzeit gespeichert.
+- Bis zu 100 User-Aliasing-Fehlerprotokolle werden für denselben Workspace innerhalb einer festen Uhrzeit gespeichert.
 
+## Test sendet
+
+Das **Nachrichten-Aktivitätsprotokoll** zeigt Testprotokolle für diese Messaging-Kanäle an:
+
+- SMS
+- WhatsApp
+- LINE
+- Webhook
+
+Test-Sendeprotokolle sind für die folgenden Kanäle nicht verfügbar: E-Mail, Content Cards, In-App-Nachrichten und Push.
+
+Test-Sendeprotokollen wird das Präfix "[TEST SEND]" vorangestellt, aber es ist nicht garantiert, dass alle Test-Sendeprotokolle dieses Präfix haben (z.B. haben Connected-Content-Fehler dieses Präfix nicht).

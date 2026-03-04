@@ -65,7 +65,7 @@ Wählen Sie einzelne Braze Nutzer:innen oder eine beliebige Anzahl interner Grup
 
 Wenn Sie außerdem eine Vorschau der Nachricht als zufälliger Benutzer, angepasster Nutzer:innen oder bestehender Nutzer:innen anzeigen, können Sie stattdessen diese Vorschauversion versenden. Wenn Sie das Kontrollkästchen deaktivieren, können Sie die Attribute der einzelnen Nutzer:innen im Vergleich zur Vorschau verwenden.
 
-Wenn Sie einen IP-Pool verwenden, um eine E-Mail zu versenden, wählen Sie den IP-Pool aus, von dem die E-Mail gesendet werden soll, indem Sie den Pool aus der Dropdown-Liste auswählen.
+Wenn Sie einen IP-Pool zum Versenden einer E-Mail verwenden, wählen Sie den IP-Pool aus, von dem die E-Mail gesendet werden soll, indem Sie den Pool aus der Dropdown-Liste auswählen.
 
 ![Der Bereich Test des In-App-Nachricht-Editors, um die Testgruppe für Inhalte auszuwählen.]({% image_buster /assets/img_archive/content_test_preview.png %}){: style="max-width:60%" }
 
@@ -87,7 +87,7 @@ Bei gesendeten E-Mails wird `[SEED]` an den Anfang der Betreffzeile der E-Mail a
 
 #### Abo-Verhalten
 
-Seed-Sendungen sind für die interne Qualitätssicherung und Überprüfung gedacht. Sie umgehen also absichtlich die Abo-Prüfung für die Nutzer:innen des Dashboards. Das bedeutet, dass Nutzer:innen mit gültigen E-Mail-Adressen, die Teil einer Seed-Gruppe sind, die Nachricht auch dann erhalten, wenn sie nicht angemeldet sind. Allerdings muss die Nachricht so konfiguriert sein, dass sie Seed-Kopien an diese Gruppe sendet.
+Seed-Sendungen sind für die interne Qualitätssicherung und -überprüfung gedacht. Sie umgehen also absichtlich die Abo-Prüfung für die Nutzer:innen des Unternehmens. Das bedeutet, dass Nutzer:innen mit gültigen E-Mail-Adressen, die Teil einer Seed-Gruppe sind, die Nachricht auch dann erhalten, wenn sie nicht angemeldet sind. Allerdings muss die Nachricht so konfiguriert sein, dass sie Seed-Kopien an diese Gruppe sendet.
 
 {% alert tip %}
 Wenn die Mitglieder Ihrer Seed-Gruppe berichten, dass sie die Nachricht nicht in ihrem Posteingang sehen, überprüfen Sie, ob sie in der internen Gruppe aufgeführt sind, ob Ihre Betreffzeilen unterschiedlich sind und ob Google Mail die Nachrichten nicht gebündelt hat, oder lassen Sie sie ihre Spam-Ordner überprüfen.
