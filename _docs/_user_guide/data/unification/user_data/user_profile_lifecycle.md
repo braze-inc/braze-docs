@@ -68,7 +68,7 @@ For information on how to set an `external_id` against a user profile, see our d
 
 #### Considerations for orphaned users
 
-Users who become orphaned or who aren't part of a relevant segment or subscription group can't receive messages. This includes scenarios where orphaned users have already received a message or fall into a control group for a campaign.
+Users who become orphaned are generally not eligible to receive messages. Eligibility depends on factors like campaign re-eligibility settings and includes scenarios where orphaned users have already received a message or fall into a control group for a campaign.
 
 ## User aliases
 
