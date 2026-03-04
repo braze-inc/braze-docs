@@ -18,7 +18,7 @@ search_rank: 2
 
 Braze may make the same Connected Content API call more than once per recipient. Common reasons include:
 
-- **Email with multiple parts:** A single email can trigger separate rendering passes for the HTML body, plain text body, and AMP version (if present). Each pass can trigger Connected Content in that part, so one recipient may generate multiple identical or similar calls.
+- **Email with multiple parts:** A single email can trigger separate rendering passes for the HTML body, plain text body, and Accelerated Mobile Pages (AMP) version (if present). Each pass can trigger Connected Content in that part, so one recipient may generate multiple identical or similar calls.
 - **Validation and retries:** Message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes.
 - **Channel behavior:** Connected Content runs when the message is sent for most channels; for in-app messages, the call happens when the message is viewed.
 
