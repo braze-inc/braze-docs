@@ -115,9 +115,9 @@ This applies to the following three endpoints: [`/messages/send`]({{site.baseurl
 
 For these endpoints, broadcast requests are considered to target the same unique audience when all of the following match:
 
-- **The campaign or Canvas** being triggered (the `campaign_id` or `canvas_id` in your API request, if specified)
-- **The audience** being targeted (the segments/filters, or for API campaigns, the `segment_id` in your API request)
-- **The Connected Audience** filters (the `audience` object in your API request, if specified)
+- The campaign or Canvas being triggered (the `campaign_id` or `canvas_id` in your API request, if specified)
+- The audience being targeted (the segments or filters, or for API campaigns, the `segment_id` in your API request)
+- The connected audience filters (the `audience` object in your API request, if specified)
 
 Each unique combination of these attributes counts as a distinct audience, so the additional rate limit for each unique audience applies to each combination independently.
 
