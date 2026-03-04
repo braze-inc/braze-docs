@@ -10,6 +10,9 @@ description: "このリファレンス記事では、Braze ダッシュボード
 
 guide_featured_title: "トピック"
 guide_featured_list:
+- name: はじめに
+  link: /docs/user_guide/brazeai/operator/getting_started/
+  image: /assets/img/braze_icons/book-open-01.svg
 - name: アクションの確認
   link: /docs/user_guide/brazeai/operator/reviewing_actions/
   image: /assets/img/braze_icons/check-square-broken.svg
