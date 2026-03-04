@@ -71,11 +71,11 @@ The timing of abort logic evaluation depends on the message channel.
 
 ### Push, email, SMS, webhooks, and Content Cards
 
-Abort logic is evaluated at **send time**, when Braze processes the message for delivery.
+Abort logic is evaluated at send time, when Braze processes the message for delivery.
 
 ### In-app messages
 
-Abort logic is evaluated at the time the in-app message is **triggered** (for example, when the user performs the trigger event or starts a session), not when the message is initially sent to the device. In-app messages are delivered to the SDK on session start and cached locally; the Liquid—including any `abort_message()` calls—is executed when the trigger condition is met.
+Abort logic is evaluated at the time the in-app message is triggered (for example, when the user performs the trigger event or starts a session), not when the message is initially sent to the device. In-app messages are delivered to the SDK on session start and cached locally; the Liquid—including any `abort_message()` calls—is executed when the trigger condition is met.
 
 ## Considerations
 
