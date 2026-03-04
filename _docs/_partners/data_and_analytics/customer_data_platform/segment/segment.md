@@ -488,4 +488,21 @@ When passing user attribute data, check that you only pass values for attributes
 
 {% enddetails %}
 
+{% details Use the correct Braze data center %}
+
+Segment uses your Braze data center to pull in the appropriate REST API endpoint (such as `https://rest.iad-01.braze.com`) for making server-to-server calls.
+
+{% enddetails %}
+
+{% details Remove the Custom REST API endpoint to use Segment's event tracker %}
+
+Segment's event tester uses our API endpoint and will throw a `401 Invalid API Key` error even if the correct Custom REST API endpoint is added in the settings. Remove the endpoint to use the event tracker.
+
+{% enddetails %}
+
+{% details Allow time for updates after configuring a new source %}
+
+Segment keeps your configuration settings in the cache for a long time, so when configuring a new source (such as switching from Cloud to Device Mode) the app may not show anything new until the cache renews. Be mindful of this delay when planning to add a source.
+
+{% enddetails %}
 
