@@ -6,7 +6,7 @@ alias: /operator/
 description: "Learn how to access and use BrazeAI Operator<sup>TM</sup>, an AI-powered assistant built into the Braze dashboard, including its features and best practices."
 ---
 
-# Get started with BrazeAI Operator
+# BrazeAI Operator
 
 > BrazeAI Operator<sup>TM</sup> is an AI-powered assistant built into the dashboard. Operator helps get things done—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas.
 
