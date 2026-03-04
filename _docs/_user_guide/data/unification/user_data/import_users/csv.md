@@ -99,7 +99,7 @@ If you include both email addresses and phone numbers in your CSV file, the emai
 
 If an existing profile has that email address or phone number, that profile is updated, and Braze doesn't create a new profile. If there are multiple profiles with that same email address, Braze will use the same logic as the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) where the most recently updated profile will be updated.
 
-If a profile with that email address or phone number doesn’t exist, Braze creates a new profile with that identifier. You can use the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) to identify this profile later. To delete a user profile, you can also use the [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete) endpoint.
+If a profile with that email address or phone number doesn’t exist, Braze creates a new profile with that identifier. You can use the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) to identify this profile later. To delete a user profile, you can also use the [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) endpoint.
 {% endtab %}
 {% endtabs %}
 
