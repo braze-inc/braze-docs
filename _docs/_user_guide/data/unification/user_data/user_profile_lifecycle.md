@@ -66,6 +66,10 @@ If both the anonymous user and known user have a first name, the first name of t
 
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift), [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)).
 
+#### Considerations for orphaned users
+
+Users who become orphaned or who aren't part of a relevant segment or subscription group can't receive messages. This includes scenarios where orphaned users have already received a message or fall into a control group for a campaign.
+
 ## User aliases
 
 To refer to users by identifiers other than the Braze `external_id`, set user aliases against a user profile. Any alias set against a user profile will act in addition to the user's `braze_id` or `external_id` as opposed to replacing it. There's no limit to the number of aliases that you can set against a user profile.
