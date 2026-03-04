@@ -70,7 +70,7 @@ At the top of the page, there are key summary tiles for your selected timeframe 
 This time series chart shows a day-by-day breakdown of the different reasons a message was aborted or a user was dropped from a Canvas. This chart doesn't display the number of sends.  
 
 {% alert note %}
-To keep the chart organized, any abort or drop reason with zero occurrences in your selected time range will not be displayed on the chart.
+To keep the chart organized, any abort or drop reason with zero occurrences in your selected time range does not appear on the chart.
 {% endalert %}
 
 ### Message outcomes breakdown
