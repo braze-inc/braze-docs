@@ -24,7 +24,7 @@ To complete this guide, you need:
 | Requirement | Description |
 | --- | --- |
 | Landing page access | Access and permissions to create [landing pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/) in Braze. |
-| HTML and JavaScript knowledge | Basic familiarity with HTML and JavaScript to customize your landing page. |
+| HTML and JavaScript knowledge | Basic familiarity with HTML and JavaScript to customize your landing page. Required for [Option B](#option-b-personal-dates-custom-code-block) only. |
 | Liquid knowledge | Basic familiarity with [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) for templating personalized variables. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -42,14 +42,35 @@ To automatically associate landing page activity with the recipient's user profi
 
 When a user clicks this link, Braze automatically identifies them, so any preferences they submit are written to their existing profile — no manual URL parameters needed. For a full walkthrough, see [Track users through a form]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/).
 
-## Step 2: Use a custom code block to capture preferences
+## Step 2: Capture preferences on the landing page
 
-After creating your landing page, insert a custom code block that captures user preferences and writes them to Braze. When users arrive through the {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag, Braze already knows who they are, so your script only needs to:
+How you capture user preferences depends on whether you're collecting shared dates or personal dates. Choose the option that fits your use case.
+
+### Option A: Shared dates (DnD form blocks)
+
+For events where many users share the same date (such as holidays or sporting events), use the drag-and-drop editor's built-in [**Checkbox** form blocks]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#form-blocks) to capture preferences. Each checkbox natively sets a boolean custom attribute (`true` or `false`) on the user's profile when the form is submitted — no custom code needed.
+
+For example, add a checkbox labeled "Super Bowl 2026 reminder" that maps to the custom attribute `super_bowl_2026_reminder`. When a user checks the box and submits the form, Braze sets:
+
+```
+super_bowl_2026_reminder = true
+```
+
+These boolean attributes can then be used directly in [segment filters]({{site.baseurl}}/user_guide/engagement_tools/segments/) to build your target audience.
+
+### Option B: Personal dates (custom code block)
+
+For dates unique to each user (such as birthdays or anniversaries), insert a [**Custom Code** block]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#basic-blocks) on your landing page. The drag-and-drop editor doesn't include a date picker form block or support [nested custom attribute arrays of objects]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/array_of_objects/), so you need custom JavaScript to capture date input and write it to Braze using the `lpBridge` API.
+
+When users arrive through the {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag, Braze already knows who they are, so your script only needs to:
 
 1. Listen for the form submission button click.
-2. Use the `lpBridge` API to set custom attributes and flush the data to Braze.
+2. Read the date value from your custom input.
+3. Use the `lpBridge` API to set nested custom attributes and flush the data to Braze.
 
-### Example script
+Store these preferences using a nested custom attribute array of objects. This structure lets you store multiple reminders per user and add derived fields later, such as `next_reminder_name` or `last_reminder_date`.
+
+#### Example script
 
 The following example script disables the default button behavior and executes custom methods on button click. Replace the element IDs and attribute values with your own.
 
@@ -93,37 +114,17 @@ The following example script disables the default button behavior and executes c
 
 To find the element IDs for your landing page components, preview your page, right-click, and select **Inspect** in your browser. Locate the IDs for the button and message components in the HTML.
 
-In the script above, replace the `setCustomUserAttribute` call with the actual attributes you want to store. How you present options to your users depends on whether you're collecting shared dates or personal dates.
-
-### Option A: Shared dates
-
-For events where many users share the same date (such as holidays or sporting events), use checkboxes on the landing page that map to boolean custom attributes on the user profile.
-
-For example, if a user signs up for Super Bowl 2026 reminders, set:
-
-```
-super_bowl_2026_reminder = true
-```
-
-These boolean attributes can then be used directly in [segment filters]({{site.baseurl}}/user_guide/engagement_tools/segments/) to build your target audience.
-
-### Option B: Personal dates
-
-For dates unique to each user (such as birthdays or anniversaries), use a date picker input in a custom code block (for example, `<input type="date">`).
-
-Store these preferences using a [nested custom attribute array of objects]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/array_of_objects/). This structure lets you store multiple reminders per user and add derived fields later, such as `next_reminder_name` or `last_reminder_date`.
-
 ## Step 3: Set up and trigger reminder messages
 
 After collecting custom attributes through the landing page, create campaigns to message users about upcoming events.
 
 ### Option A: Shared dates {#step-3-option-a-shared-dates}
 
-If you used boolean custom attributes (Option A in [Step 2](#option-a-shared-dates)), use that attribute as a segment filter to build the audience for your reminder message. Then create a new campaign, scheduled before the event, to target this group with your chosen content.
+If you used boolean custom attributes (Option A in [Step 2](#option-a-shared-dates-dnd-form-blocks)), use that attribute as a segment filter to build the audience for your reminder message. Then create a new campaign, scheduled before the event, to target this group with your chosen content.
 
 ### Option B: Personal dates {#step-3-option-b-personal-dates}
 
-If you used nested custom attributes (Option B in [Step 2](#option-b-personal-dates)), use the **Nested Custom Attribute** audience filter to select all users who have a reminder date within a specific window — for example, two days from now.
+If you used nested custom attributes (Option B in [Step 2](#option-b-personal-dates-custom-code-block)), use the **Nested Custom Attribute** audience filter to select all users who have a reminder date within a specific window — for example, two days from now.
 
 To send reminders on an ongoing basis, set up a daily recurring campaign so that each day, users with upcoming reminders that fall within your window receive their messages.
 
