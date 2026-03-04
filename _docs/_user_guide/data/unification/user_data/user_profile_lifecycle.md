@@ -88,9 +88,9 @@ If an anonymous user profile with an alias is later recognized with an `external
 
 ### Searching for a user alias
 
-If you know a user's alias name and label, you can find the user in **User Search** with the format `alias_label:alias_name`. For example, if you have an alias-only profile with the name `alias_name: bobby_alias` and label `alias_label: m4pzOndtA-CnO0u`, you can find this user by entering `m4pzOndtA-CnO0u:bobby_alias`.
+If you know a user's alias name and label, you can find the user in **Search Users** with the format `alias_label:alias_name`. For example, if you have an alias-only profile with the name `alias_name: bobby_alias` and label `alias_label: m4pzOndtA-CnO0u`, you can find this user by entering `m4pzOndtA-CnO0u:bobby_alias`.
 
-If you don't know this information, you can call the [`Export User Data` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) and find the user alias in the API response.
+If you don't know this information, you can call the [`Export user profile by identifier` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) and find the user alias in the API response.
 
 ### Setting aliases on known user profiles
 
