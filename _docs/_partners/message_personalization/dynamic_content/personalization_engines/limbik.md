@@ -237,7 +237,7 @@ For example, to target females in the US adult population:
           {
             "id": 63793,
             "name": "female",
-            "composite_key": "us2::gender::female",
+            "composite_key": "us2::gender::female"
           }
         ]
       }
