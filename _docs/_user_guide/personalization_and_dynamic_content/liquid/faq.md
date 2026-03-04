@@ -86,22 +86,3 @@ For example, let's say you have a catalog called "Games" that has a selection ca
 {% endraw %}
 
 Once the set conditions are met, your message can proceed. Using this logic is a helpful way to save time, instead of repeating Liquid blocks for different conditions.
-
-### Why does my Liquid preview show an error when using filters with entry properties or event properties?
-
-When previewing a message in the dashboard, Canvas entry properties, event properties, and purchase properties are always sent as string values — even if the original value is a number or boolean. If your Liquid applies a numeric filter (such as `plus`, `minus`, or a comparison like `> 1`) to one of these properties, the preview may show an error or unexpected results because the filter is operating on a string.
-
-To fix this, convert the value to a number before using it in a comparison or math filter. Use `plus: 0` as a filter to cast the string to a number:
-
-{% raw %}
-```liquid
-{% assign burritos = {{canvas_entry_properties.${number_of_burritos}}} | plus: 0 %}
-{% if burritos > 1 %}
-  Give me all the burritos...
-{% else %}
-  I don't like burritos.
-{% endif %}
-```
-{% endraw %}
-
-This also applies to event properties (`event_properties`) and API trigger properties (`api_trigger_properties`). At send time, the actual data types are preserved, but the dashboard preview always uses strings.
