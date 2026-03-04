@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Limbik](https://limbik.com/cognitive-ai) is your AI resonance layer—predicting how real audiences interpret and respond to messages, concepts, and AI outputs before they reach the market. Powered by continuous primary research across 60+ countries and 25+ languages, Limbik delivers human-validated synthetic audiences—digital populations that simulate real audience response at machine speed and with research-grade accuracy (95% confidence, 1.5% to 3% margin of error). Limbik gives you the ability to immediately ensure your messaging resonates with what your target audience believes and feels.
 
-*This integration is managed by Limbik.*
+_This integration is maintained by Limbik._
 
 ## Requirements
 
