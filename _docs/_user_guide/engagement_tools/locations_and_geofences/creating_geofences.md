@@ -92,7 +92,7 @@ Both iOS and Android offer multiple levels of location access. The permission le
 
 ### Precise versus approximate location
 
-On iOS 14 and later, and Android 12 and later, users can choose between **precise** and **approximate** location.
+On iOS 14+ and Android 12+, users can choose between **precise** and **approximate** location.
 
 | Setting | Accuracy | Impact on geofencing |
 |---|---|---|
