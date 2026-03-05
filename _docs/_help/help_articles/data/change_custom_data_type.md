@@ -27,7 +27,7 @@ The custom attribute must not currently be in use in any active campaigns, Canva
 
 - **User data is not retroactively updated.** If a user profile had the attribute with the old data type, that value remains unchanged. The segmentation filter will look for the new data type, so users with the old value will be excluded from matching segments until their profile is updated.
 - **New data must match the new data type.** After the change, API calls or SDK events that send the previous data type for this attribute will not be accepted. Only values matching the new data type will be ingested.
-- **Filters are not automatically updated.** Segments and campaign filters referencing the changed attribute are not retroactively updated — you must remove and re-add them after the change.
+- **Filters are not automatically updated.** Segments and campaign filters referencing the changed attribute are not retroactively updated. You must remove and re-add them after the change.
 
 {% alert important %}
 The ability to prevent automatic detection from updating the custom attribute data type is currently in early access. Contact your customer success manager if you’re interested in participating in this early access.
