@@ -29,3 +29,11 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 {% endalert %}
 
 {% endif %}
+
+{% if include.alert == 'Shopify attributes REST API' %}
+
+{% alert note %}
+All attributes are sourced from the Braze REST API.
+{% endalert %}
+
+{% endif %}

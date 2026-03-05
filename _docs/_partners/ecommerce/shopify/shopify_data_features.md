@@ -763,7 +763,7 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 
 ## Supported Shopify custom attributes
 
-All attributes are sourced from the Braze REST API.
+{% multi_lang_include alerts/note_alerts.md alert='Shopify attributes REST API' %}
 
 {% tabs local %}
 {% tab Example Payload %}
@@ -820,6 +820,8 @@ After selecting your custom attribute, input a default value and copy the Liquid
 {% endtabs %}
 
 ## Supported Shopify standard attributes
+
+{% multi_lang_include alerts/note_alerts.md alert='Shopify attributes REST API' %}
 
 - Email
 - First Name
