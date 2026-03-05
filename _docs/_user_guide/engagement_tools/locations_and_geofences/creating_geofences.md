@@ -51,7 +51,7 @@ Geofence-triggered campaigns are available on iOS and Android. To support geofen
 * On iOS 11 and later, the user must grant "Always Allow" location access for geofencing to work.
 
 {% alert important %}
-Starting with Braze SDK version 3.6.0, Braze location collection is disabled by default. To verify that it's enabled on Android, confirm that `com_braze_enable_location_collection` is set to `true` in your `braze.xml`.
+Braze location collection is disabled by default. To verify that it's enabled on Android, confirm that `com_braze_enable_location_collection` is set to `true` in your `braze.xml`.
 {% endalert %}
 
 For platform-specific setup instructions, refer to [Geofences]({{site.baseurl}}/developer_guide/geofences/) in the developer guide.
