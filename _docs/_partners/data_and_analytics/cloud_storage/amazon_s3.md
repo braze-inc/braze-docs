@@ -37,7 +37,9 @@ To create a bucket for your app, do the following:
 1. Open the [Amazon S3 console](https://console.aws.amazon.com/s3/) and follow the instructions to **Sign in** or **Create an Account with AWS**. 
 2. After signing in, select **S3** from the **Storage & Content Delivery** category. 
 3. Select **Create Bucket** on the next screen. 
-4. You're prompted to create your bucket and select a region.
+4. When prompted, create your bucket and select an AWS Region.
+
+Braze does not let you choose or configure a region in the dashboard. The AWS Region is fixed by where you create the bucket in the AWS console. The integration sends data to the bucket name you provide, and AWS automatically routes requests to the bucket's region. If your connector tries to connect to a different region than you want (for example, `eu-west-1` instead of `eu-central-1`), create or use an S3 bucket in your desired region in AWS. There is nothing to change on the Braze side.
 
 {% alert note %}
 Currents does not support buckets with [Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html) configured.
