@@ -66,9 +66,9 @@ If both the anonymous user and known user have a first name, the first name of t
 
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift), [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)).
 
-#### Considerations for orphaned users
-
-Users who become orphaned are generally not eligible to receive messages. Eligibility depends on factors like campaign re-eligibility settings and includes scenarios where orphaned users have already received a message or fall into a control group for a campaign.
+{% alert note %}
+Orphaned users are not eligible to receive messages.
+{% endalert %}
 
 ## User aliases
 
