@@ -74,10 +74,9 @@ module Jekyll
       http.open_timeout = 60
       http.read_timeout = 120
       # Verify SSL by default. Set SKIP_PARTNER_SSL_VERIFY=true only to work around local
-      # SSL issues (e.g. CRL verification failures). Only allow skip when JEKYLL_ENV is
-      # explicitly development (Jekyll builds use JEKYLL_ENV, not RACK_ENV).
+      # SSL issues (e.g. CRL verification failures); never skip in production.
       skip_verify = ENV['SKIP_PARTNER_SSL_VERIFY'].to_s.downcase == 'true' &&
-                    ENV['JEKYLL_ENV'].to_s.downcase == 'development'
+                    ENV['RACK_ENV'].to_s.downcase != 'production'
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE if skip_verify
       res = http.get(link.request_uri)
       return res

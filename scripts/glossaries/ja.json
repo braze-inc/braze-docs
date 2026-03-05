@@ -363,9 +363,11 @@
   "install attribution": "インストールアトリビューション",
   "integrated data solution": "統合データソリューション",
   "Integrations": "統合",
+  "Intelligence Suite": "Intelligence Suite",
   "intelligent channel": "インテリジェントチャネル",
   "intelligent selection": "インテリジェントセレクション",
   "intelligent timing": "インテリジェントタイミング",
+  "Operator": "Operator",
   "interface": "インターフェイス",
   "internal": "内部",
   "Invisible open tracking pixel": "非表示のオープントラッキングピクセル",
@@ -753,5 +755,6 @@
   "Yodel Mobile": "Yodel Mobile",
   "Your message": "メッセージ",
   "Zapier": "Zapier",
-  "Zeotap": "Zeotap"
+  "Zeotap": "Zeotap",
+  "Feature Flags": "フィーチャーフラグ"
 }
