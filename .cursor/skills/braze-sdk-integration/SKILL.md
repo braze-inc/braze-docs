@@ -1,22 +1,22 @@
 ---
 name: braze-sdk-integration
-description: Guides integration, configuration, and debugging of the Braze SDK across Web, React Native, iOS, and Android. Use when the user mentions Braze, analytics integration, push notifications, in-app messages, or Content Cards.
+description: Supports initial Braze SDK setup and baseline configuration across Web, React Native, iOS, and Android. Use when you need help finding setup credentials, validating endpoint format, and creating starter configuration files.
 ---
 
-# Braze SDK integration skill
+# Braze SDK setup skill
 
-Use this skill when helping users integrate, configure, or debug the Braze SDK.
+Use this skill when helping users complete initial Braze SDK setup and baseline configuration.
+For deeper implementation and production debugging, use the Braze Docs MCP server. For setup steps, see [Building with an LLM](https://www.braze.com/docs/developer_guide/getting_started/build_with_llm).
 
 ## When to use
 
 Trigger this skill when the user mentions or asks about:
 
-- **Braze** (SDK, dashboard, or product)
-- **Analytics integration** (events, user attributes, sessions)
-- **Push notifications** (registration, delivery, troubleshooting)
-- **In-app messages** (display, triggers, HTML in-app messages)
-- **Content Cards** or **Banners**
-- **User identification** (`changeUser`, `external_id`)
+- **Braze SDK setup** across Web, React Native, iOS, or Android
+- **Setup credentials** (finding the API key and SDK endpoint)
+- **Endpoint format validation** (for example, `sdk.iad-01.braze.com`)
+- **Starter configuration files** (`res/values/braze.xml` or `BrazeConfig.ts`)
+- **First-run setup checks** (initialization order and session start basics)
 
 ## Instructions
 
@@ -40,13 +40,13 @@ Trigger this skill when the user mentions or asks about:
 
 ### Utility scripts
 
-**validate_setup.py**: Validates Braze API key and SDK endpoint format, then generates a boilerplate config file. Detects Android (Gradle) or Web (package.json) and writes `res/values/braze.xml` or `BrazeConfig.ts` accordingly. Run from the app project root:
+**validate_setup.py**: Validates SDK endpoint format and generates a starter config file. Detects Android (Gradle) or Web (package.json) and writes `res/values/braze.xml` or `BrazeConfig.ts` accordingly. Run from the app project root:
 
 ```bash
 python3 .cursor/skills/braze-sdk-integration/scripts/validate_setup.py
 ```
 
-The agent may run this script when helping with initial setup; the script prompts for API key and endpoint interactively.
+The agent may run this script when helping with initial setup. The script prompts for API key and endpoint interactively.
 
 ### Platform-specific configuration
 
@@ -88,11 +88,15 @@ let braze = Braze(configuration: configuration)
 
 ### Standard analytics
 
+Use this section as a handoff checklist after setup. For full implementation details, use platform-specific documentation.
+
 - **Identify user (when ID changes only)**: `changeUser(userId)` (Web: `braze.changeUser(userId)`; iOS/Android equivalent per platform docs). Call only when the logged-in user or anonymous→identified transition happens; do not call on every launch with the same ID.
 - **Custom events**: `logCustomEvent(eventName, eventProperties)` (property keys/values per platform).
 - **Purchases**: `logPurchase(productId, currency, price, quantity, properties?)`. **Mandatory fields**: `productId` (string), `currency` (e.g. `"USD"`), `price` (number). Quantity is typically 1 if omitted; optional properties object for metadata. Empty `productId` will not log the purchase.
 
-### Troubleshooting
+### Setup troubleshooting
+
+Use this section for setup blockers only. For runtime behavior issues after setup, use the platform-specific troubleshooting guides.
 
 - **SDK Debugger**: Use the [Braze SDK Debugger](https://www.braze.com/docs/developer_guide/sdk_integration/debugging/) (Braze dashboard → **Settings** → **Setup and Testing** → **SDK Debugger**) to inspect sessions, events, and user state without enabling verbose logging in the app.
 - **Verbose logging**: For deeper investigation, enable [verbose logging](https://www.braze.com/docs/developer_guide/sdk_integration/verbose_logging/) in the SDK (e.g. Web: `enableLogging: true`; iOS: `configuration.logger.level = .debug`; Android: per-doc logging level). Use sparingly in production.
