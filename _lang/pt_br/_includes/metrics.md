@@ -7,11 +7,11 @@
 {% endif %}
 
 {% if include.metric == "Audience" %}
-O <i>público</i> é a porcentagem de usuários que receberam uma determinada mensagem. Esse número é recebido do Braze.
+O <i>público</i> é a porcentagem de usuários que receberam uma determinada mensagem. Esse número é recebido da Braze.
 {% endif %}
 
 {% if include.metric == "Bounces" %}
-<i>Bounces</i> é o número total de mensagens que foram entregues sem sucesso aos destinatários pretendidos.
+<i>Bounces</i> é o número total de mensagens que não foram entregues com sucesso aos destinatários pretendidos.
 {% endif %}
 
 {% if include.metric == "Estimated Real Opens" %}
@@ -23,19 +23,19 @@ A <i>estimativa de aberturas reais</i> é uma estimativa de quantas aberturas ú
 {% endif %}
 
 {% if include.metric == "Hard Bounce" %}
-Um <i>Hard Bounce</i> é quando um e-mail não é entregue ao destinatário devido a um erro de entrega permanente. Um hard bounce pode ocorrer porque o nome de domínio não existe ou porque o destinatário é desconhecido.
+Um <i>hard bounce</i> é quando um e-mail não é entregue ao destinatário devido a um erro de entrega permanente. Um hard bounce pode ocorrer porque o nome de domínio não existe ou porque o destinatário é desconhecido.
 {% endif %}
 
 {% if include.metric == "Soft Bounce" %}
-Um <i>Soft Bounce</i> é quando um e-mail não é entregue ao destinatário devido a um erro de entrega temporário, mesmo que o endereço de e-mail do destinatário seja válido. Um soft bounce pode ocorrer porque a caixa de entrada do destinatário está cheia, o servidor estava fora do ar ou a mensagem era muito grande para a caixa de entrada do destinatário.
+Um <i>soft bounce</i> é quando um e-mail não é entregue ao destinatário devido a um erro de entrega temporário, mesmo que o endereço de e-mail do destinatário seja válido. Um soft bounce pode ocorrer porque a caixa de entrada do destinatário está cheia, o servidor estava fora do ar ou a mensagem era muito grande para a caixa de entrada do destinatário.
 {% endif %}
 
 {% if include.metric == "Deferral" %}
-Um <i>adiamentos</i> é quando um e-mail não foi entregue imediatamente, mas o Braze tenta novamente o e-mail por até 72 horas após essa falha temporária de entrega para maximizar as chances de uma entrega bem-sucedida antes que as tentativas para essa campanha específica sejam interrompidas.
+Um <i>adiamento</i> é quando um e-mail não foi entregue imediatamente, mas a Braze tenta novamente o envio do e-mail por até 72 horas após essa falha temporária de entrega para maximizar as chances de uma entrega bem-sucedida antes que as tentativas para essa campanha específica sejam interrompidas.
 {% endif %}
 
 {% if include.metric == "Body Click" %}
-As notificações por push de histórias registram um <i>clique no corpo da mensagem</i> quando a notificação é clicada. Ele não será gravado quando uma mensagem for expandida ou para cliques em botões de ação.
+As notificações de story por push registram um <i>clique no corpo da mensagem</i> quando a notificação é clicada. Não será registrado quando uma mensagem for expandida ou para cliques em botões de ação.
 {% endif %}
 
 {% if include.metric == "Body Clicks" %}
@@ -75,7 +75,7 @@ A <i>taxa de cliques para abertura</i> é a porcentagem de e-mails entregues que
 {% endif %}
 
 {% if include.metric == "Confirmation Page Dismissals" %}
-<i>Desistências da página de confirmação</i> é o total de cliques no botão fechar (x) na página de confirmação de um <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>questionário simples</a>.
+<i>Descartes da página de confirmação</i> é o total de cliques no botão fechar (x) na página de confirmação de um <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>questionário simples</a>.
 {% endif %}
 
 {% if include.metric == "Conversion Rate" %}
@@ -83,11 +83,11 @@ A <i>taxa de cliques para abertura</i> é a porcentagem de e-mails entregues que
 {% endif %}
 
 {% if include.metric == "Conversion Window" %}
-<i>Janela de conversão</i> é o número de dias após o recebimento da mensagem durante os quais as ações do usuário são rastreadas e atribuídas a um evento de conversão. As conversões que acontecem após este período não são atribuídas ao evento de conversão.
+<i>Janela de conversão</i> é o número de dias após o recebimento da mensagem durante os quais as ações do usuário são rastreadas e atribuídas a um evento de conversão. As conversões que acontecem após esse período não são atribuídas ao evento de conversão.
 {% endif %}
 
 {% if include.metric == "Conversions (B, C, D)" %}
-As <i>conversões (B, C, D)</i> são eventos de conversão adicionais adicionados após o evento de conversão primária. Esse é o número de vezes que um evento definido ocorreu após a interação ou a visualização de uma mensagem recebida de uma campanha do Braze.
+As <i>conversões (B, C, D)</i> são eventos de conversão adicionais incluídos após o evento de conversão primária. Esse é o número de vezes que um evento definido ocorreu após a interação ou a visualização de uma mensagem recebida de uma campanha da Braze.
 {% endif %}
 
 {% if include.metric == "Total Conversions" %}
@@ -99,7 +99,7 @@ As <i>conversões (B, C, D)</i> são eventos de conversão adicionais adicionado
 {% endif %}
 
 {% if include.metric == "Deliveries %" %}
-<i>Entregas %</i> é a porcentagem do número total de mensagens (Envios) enviadas e recebidas com êxito pelas partes que podem enviar e-mails.
+<i>Entregas %</i> é a porcentagem do número total de mensagens (Envios) enviadas e recebidas com êxito pelas partes que podem receber e-mails.
 {% endif %}
 
 {% if include.metric == "Delivery Failures" %}
@@ -107,7 +107,7 @@ As <i>falhas de entrega</i> ocorrem quando o SMS não pode ser enviado devido ao
 {% endif %}
 
 {% if include.metric == "Delivery Failures RCS" %}
-<i>As falhas de entrega</i> ocorrem quando o RCS não pode ser enviado devido ao transbordamento das filas (envio de RCS em uma taxa maior do que o remetente verificado pelo RCS pode suportar).
+As <i>falhas de entrega</i> ocorrem quando o RCS não pode ser enviado devido ao transbordamento das filas (envio de RCS em uma taxa maior do que o remetente verificado por RCS pode suportar).
 {% endif %}
 
 {% if include.metric == "Failed Delivery Rate" %}
@@ -119,7 +119,7 @@ A <i>taxa de falha na entrega</i> é a porcentagem de envios que falharam porque
 {% endif %}
 
 {% if include.metric == "Emailable" %}
-<i>Envio de e-mail</i> é o número total de usuários que têm um endereço de e-mail registrado e que explicitamente aceitaram ou se inscreveram.
+<i>Aptos para e-mail</i> é o número total de usuários que têm um endereço de e-mail registrado e que explicitamente aceitaram ou se inscreveram.
 {% endif %}
 
 {% if include.metric == "Errors" %}
@@ -127,7 +127,7 @@ A <i>taxa de falha na entrega</i> é a porcentagem de envios que falharam porque
 {% endif %}
 
 {% if include.metric == "Failures" %}
-As <i>falhas</i> ocorrem quando a mensagem do WhatsApp não pode ser enviada porque o prestador de serviço de Internet retornou um hard bounce. Um hard bounce significa uma falha permanente de entregabilidade.
+As <i>falhas</i> ocorrem quando a mensagem do WhatsApp não pode ser enviada porque o provedor de acesso à internet retornou um hard bounce. Um hard bounce significa uma falha permanente de entregabilidade.
 {% endif %}
 
 {% if include.metric == "Influenced Opens" %}
@@ -135,19 +135,19 @@ As <i>falhas</i> ocorrem quando a mensagem do WhatsApp não pode ser enviada por
 {% endif %}
 
 {% if include.metric == "Lifetime Revenue" %}
-<i>A receita vitalícia</i> é o total de <code>PurchaseEvents</code> valor do preço (em USD) recebido desde o início.
+A <i>receita vitalícia</i> é o valor total de preço de <code>PurchaseEvents</code> (em USD) recebido desde o início.
 {% endif %}
 
 {% if include.metric == "Lifetime Value Per User" %}
-O <i>Valor do tempo de vida por usuário</i> é a <i>receita do tempo de vida</i> dividida pelo total de <i>usuários</i> (localizado na página inicial).
+O <i>valor do tempo de vida por usuário</i> é a <i>receita vitalícia</i> dividida pelo total de <i>usuários</i> (localizado na página inicial).
 {% endif %}
 
 {% if include.metric == "Average Daily Revenue" %}
-A <i>receita média diária</i> é a média da soma da receita da campanha e da receita do Canva em um determinado dia.
+A <i>receita média diária</i> é a média da soma da receita da campanha e do Canvas em um determinado dia.
 {% endif %}
 
 {% if include.metric == "Daily Purchases" %}
-As <i>compras diárias</i> são a média do total de compras únicas <code>PurchaseEvents</code> durante o período de tempo.
+As <i>compras diárias</i> são a média do total de <code>PurchaseEvents</code> únicos durante o período.
 {% endif %}
 
 {% if include.metric == "Daily Revenue Per User" %}
@@ -163,23 +163,23 @@ As <i>aberturas por máquina</i> incluem a proporção de "aberturas" que são a
 {% endif %}
 
 {% if include.metric == "Opens" %}
-As <i>aberturas</i> são instâncias que incluem <i>aberturas diretas</i> e <i>aberturas por influência</i> nas quais o SDK da Braze determinou, usando um algoritmo proprietário, que uma notificação por push fez com que um usuário abrisse o aplicativo.
+As <i>aberturas</i> são instâncias que incluem <i>aberturas diretas</i> e <i>aberturas por influência</i> nas quais o SDK da Braze determinou, usando um algoritmo proprietário, que uma notificação por push fez com que um usuário abrisse o app.
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
-<i>Opt-Out</i> é quando um usuário respondeu à sua mensagem com uma <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">palavra-chave de aceitação</a> e cancelou a inscrição no seu programa de SMS ou RCS.
+<i>Opt-Out</i> é quando um usuário respondeu à sua mensagem com uma <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">palavra-chave de cancelamento</a> e cancelou a inscrição no seu programa de SMS ou RCS.
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
-<i>Pending Retry (Tentativa pendente)</i> é o número de solicitações que foram temporariamente rejeitadas pelo servidor de recebimento, mas que ainda tentaram ser reentregues pelo provedor de serviço de e-mail (ESP). O ESP tentará novamente a entrega até que um período de tempo limite seja atingido (normalmente após 72 horas).
+<i>Tentativa pendente</i> é o número de solicitações que foram temporariamente rejeitadas pelo servidor de recebimento, mas que ainda tiveram tentativas de reentrega pelo prestador de serviço de e-mail (ESP). O ESP tentará novamente a entrega até que um período de tempo limite seja atingido (normalmente após 72 horas).
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>Conversões primárias (A)</i> ou <i>Evento de conversão primária</i> é o número de usuários únicos que realizam um evento definido após receberem ou visualizarem uma mensagem de uma campanha do Braze. Esse evento é selecionado por você ao configurar a campanha e é usado como a principal métrica de sucesso para relatórios e otimização.
+<i>Conversões primárias (A)</i> ou <i>Evento de conversão primária</i> é o número de usuários únicos que realizam um evento definido após receberem ou visualizarem uma mensagem de uma campanha da Braze. Esse evento é selecionado por você ao configurar a campanha e é usado como a principal métrica de sucesso para relatórios e otimização.
 {% endif %}
 
 {% if include.metric == "Reads" %}
-<i>Reads</i> é quando o usuário lê a mensagem. Os recibos de leitura do usuário devem estar "Ativados" para que a Braze rastreie as leituras.
+<i>Leituras</i> é quando o usuário lê a mensagem. Os recibos de leitura do usuário devem estar "Ativados" para que a Braze rastreie as leituras.
 {% endif %}
 
 {% if include.metric == "Read Rate" %}
@@ -191,7 +191,7 @@ O <i>recebimento</i> é definido de forma diferente por canal e pode ser quando 
 {% endif %}
 
 {% if include.metric == "Rejections" %}
-<i>As rejeições</i> ocorrem quando o SMS ou RCS foi rejeitado pela operadora. Isso pode ocorrer por vários motivos, inclusive filtragem de conteúdo da operadora, disponibilidade do dispositivo de destino, o número de telefone não está mais em serviço e outros semelhantes.
+As <i>rejeições</i> ocorrem quando o SMS ou RCS foi rejeitado pela operadora. Isso pode ocorrer por vários motivos, inclusive filtragem de conteúdo da operadora, disponibilidade do dispositivo de destino, o número de telefone não está mais em serviço e outros semelhantes.
 {% endif %}
 
 {% if include.metric == "Revenue" %}
@@ -199,19 +199,19 @@ O <i>recebimento</i> é definido de forma diferente por canal e pode ser quando 
 {% endif %}
 
 {% if include.metric == "Messages Sent" %}
-<i>Mensagens enviadas</i> é o número total de mensagens enviadas em uma campanha. Após o lançamento de uma campanha programada, essa métrica incluirá todas as mensagens enviadas, independentemente de já terem sido enviadas devido ao limite de frequência. Isso não significa que a mensagem foi recebida ou entregue em um dispositivo, apenas que a mensagem foi enviada.
+<i>Mensagens enviadas</i> é o número total de mensagens enviadas em uma campanha. Após o lançamento de uma campanha programada, essa métrica incluirá todas as mensagens enviadas, independentemente de já terem sido enviadas devido ao limite de taxa. Isso não significa que a mensagem foi recebida ou entregue em um dispositivo, apenas que a mensagem foi enviada.
 {% endif %}
 
 {% if include.metric == "Sent" %}
-<i>Enviado</i> é toda vez que uma campanha ou etapa do Canva foi lançada ou disparada e um SMS ou RCS foi enviado pelo Braze. É possível que o SMS ou RCS não tenha chegado ao dispositivo do usuário devido a erros.
+<i>Enviado</i> é toda vez que uma campanha ou etapa do canva foi lançada ou disparada e um SMS ou RCS foi enviado pela Braze. É possível que o SMS ou RCS não tenha chegado ao dispositivo do usuário devido a erros.
 {% endif %}
 
 {% if include.metric == "Sends" %}
-<i>Envios</i> é o número total de mensagens enviadas em uma campanha. Após o lançamento de uma campanha programada, essa métrica incluirá todas as mensagens enviadas, independentemente de já terem sido enviadas devido ao limite de frequência. Isso não significa que a mensagem foi recebida ou entregue em um dispositivo, apenas que a mensagem foi enviada.
+<i>Envios</i> é o número total de mensagens enviadas em uma campanha. Após o lançamento de uma campanha programada, essa métrica incluirá todas as mensagens enviadas, independentemente de já terem sido enviadas devido ao limite de taxa. Isso não significa que a mensagem foi recebida ou entregue em um dispositivo, apenas que a mensagem foi enviada.
 {% endif %}
 
 {% if include.metric == "Sends to Carrier" %}
-O <i>envio para a operadora</i> está obsoleto, mas continuará a ter suporte para os usuários que já o possuem. É a soma de Entregas <i>Confirmadas</i>, <i>Rejeições</i> e <i>Envios</i> em que a entrega ou rejeição não foi confirmada pela operadora. Isso inclui os casos em que as operadoras não fornecem confirmação de entrega ou de rejeição, pois algumas operadoras não fornecem essa confirmação ou não podem fazê-lo no momento do envio.
+O <i>envio para a operadora</i> está obsoleto, mas continuará a ter suporte para os usuários que já o possuem. É a soma de <i>Entregas confirmadas</i>, <i>Rejeições</i> e <i>Envios</i> em que a entrega ou rejeição não foi confirmada pela operadora. Isso inclui os casos em que as operadoras não fornecem confirmação de entrega ou de rejeição, pois algumas operadoras não fornecem essa confirmação ou não podem fazê-lo no momento do envio.
 {% endif %}
 
 {% if include.metric == "Sends to Carrier Rate" %}
@@ -219,11 +219,11 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Spam" %}
-<i>Spam</i> é o número total de e-mails entregues que foram marcados como "spam" pelo destinatário. Embora o Braze não altere o estado da inscrição desses usuários, eles serão automaticamente excluídos em e-mails futuros, a menos que você esteja enviando um e-mail de transação, que está configurado para "enviar a todos os usuários, inclusive cancelar inscrição".
+<i>Spam</i> é o número total de e-mails entregues que foram marcados como "spam" pelo destinatário. Embora a Braze não altere o estado da inscrição desses usuários, eles serão automaticamente excluídos em e-mails futuros, a menos que você esteja enviando um e-mail de transação, que está configurado para "enviar a todos os usuários, inclusive os que cancelaram a inscrição".
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}
-<i>Dispensas de página de questionário</i> é o total de cliques no botão fechar (x) na página de perguntas de um <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>questionário simples</a>.
+<i>Descartes da página de questionário</i> é o total de cliques no botão fechar (x) na página de perguntas de um <a href='https://braze.com/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/'>questionário simples</a>.
 {% endif %}
 
 {% if include.metric == "Survey Submissions" %}
@@ -260,7 +260,7 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
-<i>Dispensas únicas</i> é o número de destinatários únicos que dispensaram um cartão de conteúdo de uma campanha. Um usuário que descarta um cartão de conteúdo de uma campanha várias vezes representa uma única rejeição.
+<i>Descartes únicos</i> é o número de destinatários únicos que descartaram um cartão de conteúdo de uma campanha. Um usuário que descarta um cartão de conteúdo de uma campanha várias vezes representa um único descarte.
 {% endif %}
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
@@ -270,15 +270,15 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>Unique Recipients (Destinatários únicos</i> ) é o número de destinatários diários únicos, ou usuários que receberam uma nova mensagem em um dia. Para que essa contagem seja incrementada para um usuário mais de uma vez, o usuário deve receber uma nova mensagem em um dia diferente.
+<i>Destinatários únicos</i> é o número de destinatários diários únicos, ou usuários que receberam uma nova mensagem em um dia. Para que essa contagem seja incrementada para um usuário mais de uma vez, o usuário deve receber uma nova mensagem em um dia diferente.
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}
-<i>Aberturas exclusivas</i> é o número total de mensagens enviadas que foram abertas por um único usuário pelo menos uma vez e são rastreadas durante um período de sete dias.
+<i>Aberturas únicas</i> é o número total de mensagens entregues que foram abertas por um único usuário pelo menos uma vez e são rastreadas durante um período de sete dias.
 {% endif %}
 
 {% if include.metric == "Unsubscribers or Unsub" %}
-<i>Cancelamentos de inscrição</i> ou <i>Unsub</i> é o número de mensagens que resultaram em um cancelamento de inscrição. Os cancelamentos de inscrição ocorrem quando um usuário clica no ink de cancelamento de inscrição da Braze.
+<i>Cancelamentos de inscrição</i> ou <i>Unsub</i> é o número de mensagens que resultaram em um cancelamento de inscrição. Os cancelamentos de inscrição ocorrem quando um usuário clica no link de cancelamento de inscrição da Braze.
 {% endif %}
 
 {% if include.metric == "Unsubscribes" %}
