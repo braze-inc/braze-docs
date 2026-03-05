@@ -7,6 +7,7 @@ alwaysApply: false
 Analyze Braze support case CSVs to identify documentation gaps and propose docs updates.
 
 <!-- This can be exported as a CSV from Looker https://braze.looker.com/x/4git0QPwJ9xjVtdBphbkPE or downloaded from Snowflake Growth instance and stored in ~/Documents/support-analyzer-files/latest/. The query logic pulls resolved cases from the last 2 days and all related conversations -->
+
 ## CSV Schema
 
 | Column | Description |
@@ -41,7 +42,7 @@ For each unique Case ID, determine if docs action is needed:
 For each **actionable** ticket:
 
 1. **Extract Q&A** - Distill the core question and resolution from message thread
-2. **Verify** - Cross-reference with source code of the Main Product at `../platform`. Do not rely solely on support cases or documentation to verify. Always cross-reference with source code. If you can verify the resolution against the source code, add a reference to the source file(s). If you cannot verify the resolution, say that you could not verify the resolution against the source code.
+2. **Verify** - Cross-reference with source code of the Main Product at `../platform`. Do not rely on support cases or documentation to verify. Always cross-reference with source code. If you can verify the resolution against the source code, add a reference to the source file(s). If you cannot verify the resolution, say that you could not verify the resolution against the source code.
 3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
 4. **Document source support case number** - Which case numbers were analyzed?
 
@@ -64,17 +65,20 @@ After processing all tickets:
 
 1. **Merge Duplicates** - Group tickets with identical or overlapping issues
 2. **Prioritize** by:
+   - Validated (Only if the resolution could be verified by source code)
    - Frequency (same question from multiple customers)
    - Impact (blocks core functionality vs. edge case)
    - Effort (quick clarification vs. new guide)
 3. **Batch by Doc** - Group changes targeting the same file
 4. **Maintain sources** - Maintain list of which Case IDs were referenced for the update
 
-Before moving to Step 4, prompt user to review and acknowledge they want to draft updates
+Before moving to Step 4, prompt user to review output.md and acknowledge they want to draft updates
 
 ---
 
 ## Step 4: Draft Updates
+
+Before moving to Step 5, prompt user to review and acknowledge they want to create branch
 
 For each docs update:
 
@@ -83,8 +87,6 @@ For each docs update:
 3. Keep additions concise and scannable (bullets, tables, code blocks)
 4. **Use alerts and FAQ entries as a last resort** — Only add a new alert, callout, or FAQ entry when the information genuinely cannot be worked into existing prose. These elements contribute to doc bloat and should be reserved for content that doesn't fit naturally elsewhere.
 
-
-Before moving to Step 5, prompt user to review and acknowledge they want to create branch
 
 ---
 
