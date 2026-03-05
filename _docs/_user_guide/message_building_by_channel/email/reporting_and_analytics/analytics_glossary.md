@@ -215,7 +215,7 @@ Count, Percentage
 Count, Percentage
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Unique Opens' %} For email, this is tracked over a 7 day period. This means a single user who opens the same email again after 7 days counts as a new unique open. As a result, dashboard unique open counts may be higher than a simple `DISTINCT user_id` query on Currents data. To match dashboard counts from Currents, filter for events where `is_unique` is `true`.
+{% multi_lang_include analytics/metrics.md metric='Unique Opens' %} For email, this is tracked over a seven-day period. This means a single user who opens the same email again after seven days counts as a new unique open. As a result, dashboard unique open counts may be higher than a simple `DISTINCT user_id` query on Currents data. To match dashboard counts from Currents, filter for events where `is_unique` is `true`.
 
 {::nomarkdown}
 <span class="calculation-line">
