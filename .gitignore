@@ -20,6 +20,10 @@ braze-docs.iml
 scripts/temp
 node_modules
 
+# Local project artifacts (never committed)
+_project/
+_ia_audit/
+
 # Generated translation/audit artifacts
 translation_results.json
 translation_pr_body.md
