@@ -260,8 +260,8 @@ Within the same IAM section of the console, select **Roles** > **Create Role**.
 
 Retrieve your Braze account ID and external ID from your Braze account:
 
-- **Currents**: In Braze, go to **Partner Integrations** > **Currents**. Next, select **Create New Current** then **Amazon S3 Data Export**. Here you'll find the identifiers needed to create your role.
-- **Dashboard data export**: In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role. (Create your roles here if you're only setting up message archiving.)
+- **Currents:** In Braze, go to **Partner Integrations** > **Currents**. Next, select **Create New Current** then **Amazon S3 Data Export**. Here you'll find the identifiers needed to create your role.
+- **Dashboard data export:** In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role. (Create your roles here if you're only setting up message archiving.)
 
 Back on the AWS Console, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, check the **Require external ID** box, and enter the Braze external ID. Select **Next** when complete.
 
@@ -341,7 +341,7 @@ Users who have integrated a cloud data storage solution and export APIs, dashboa
 - All dashboard reports and CSV reports are sent to the user's email for download (no storage permissions required) and backed up on Data Storage.
 
 {% alert important %}
-**JSON format requirement**: For JSON exports, Braze uses JSONL (newline-delimited JSON) format, where each line contains a separate JSON object. This format differs from standard JSON, which is a single JSON array or object. Each line in the exported file is a valid JSON object, but the file as a whole is not a single valid JSON document. When processing these files, parse each line individually as a separate JSON object rather than attempting to parse the entire file as a single JSON document.
+**JSON format requirement:** For JSON exports, Braze uses JSONL (newline-delimited JSON) format, where each line contains a separate JSON object. This format differs from standard JSON, which is a single JSON array or object. Each line in the exported file is a valid JSON object, but the file as a whole is not a single valid JSON document. When processing these files, parse each line individually as a separate JSON object rather than attempting to parse the entire file as a single JSON document.
 
 Currents exports use Apache Avro format (`.avro` files), not JSON. This JSON format requirement applies to dashboard data exports and API exports.
 {% endalert %}
