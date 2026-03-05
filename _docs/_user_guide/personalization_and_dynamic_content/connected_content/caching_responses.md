@@ -63,7 +63,7 @@ The cache age is up to five minutes (300 seconds). You can update this by adding
 ```
 {% endraw %}
 
-GET requests are cached. You can configure this by adding the :no_cache parameter to the Connected Content call.
+GET requests are cached. You can configure this by adding the `:no_cache` parameter to the Connected Content call.
 
 POST requests are not cached by default, but can be cached by adding the `:cache_max_age` parameter to the Connected Content call. The minimum cache time is 5 minutes, and the maximum cache time is 4 hours.
 
@@ -79,7 +79,7 @@ The Connected Content response body can be up to 1&nbsp;MB. If the response body
 
 Connected Content will cache the value it returns from GET endpoints for a minimum of five minutes. If a cache time is not specified, the default cache time is five minutes.
 
-Connected Content cache time can be configured to be longer with :cache_max_age, as shown in the following example. The minimum cache time is five minutes and the maximum cache time is four hours. Connected Content data is cached in-memory using a volatile cache system, such as Memcached. 
+Connected Content cache time can be configured to be longer with `:cache_max_age`, as shown in the following example. The minimum cache time is five minutes and the maximum cache time is four hours. Connected Content data is cached in-memory using a volatile cache system, such as Memcached. 
 
 As a result, regardless of the specified cache time, Connected Content data may be evicted from Braze’s in-memory cache earlier than specified. This means the cache durations are suggestions and may not actually represent the duration that the data is guaranteed to be cached by Braze and you may see more Connected Content requests than you may expect with a given cache duration.
 
