@@ -20,7 +20,7 @@ Braze may make the same Connected Content API call more than once per recipient.
 
 - **Email with multiple parts:** A single email can trigger separate rendering passes for the HTML body, plain text body, and Accelerated Mobile Pages (AMP) version (if present). Each pass can trigger Connected Content in that part, so one recipient may generate multiple identical or similar calls.
 - **Validation and retries:** Message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes.
-- **Channel behavior:** Connected Content runs when the message is sent for most channels; for in-app messages, the call happens when the message is viewed.
+- **Channel behavior:** Connected Content executes when the message is rendered. For in-app messages, the message is rendered at impression time.
 
 If you see more Connected Content calls in your logs than sends or recipients, that behavior is expected. For guidance on reducing load and planning for scale, see [Best practices for high-volume endpoints](#best-practices-for-high-volume-endpoints).
 
@@ -81,10 +81,10 @@ Visit [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/
 
 ### Rate limits (429) versus unhealthy host detection
 
-These are two different mechanisms:
+The following are different mechanisms:
 
-- **429 Too Many Requests:** Your endpoint (or an upstream service) is returning this response. It means your server or middleware is refusing traffic, often because it has its own rate limit. Braze does not apply a separate rate limit to Connected Content; call volume follows your [message delivery speed rate limit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting). If you see 429s, scale your endpoint or middleware to handle the expected request volume, or lower the campaign or Canvas step rate limit so that fewer messages (and thus fewer Connected Content calls) are sent per minute.
-- **Unhealthy host detection:** A Braze-side safeguard that triggers after a high rate of *failures* (including 429, timeouts, 5XX) in a one-minute window. When triggered, Braze temporarily halts requests to that host and simulates a failure response. This is independent of your own rate limiting. To avoid hitting unhealthy host detection, ensure your endpoint can handle the call volume described in [Understanding Connected Content call volume](#understanding-connected-content-call-volume) and [Best practices for high-volume endpoints](#best-practices-for-high-volume-endpoints).
+- **429 Too Many Requests:** Your endpoint (or an upstream service) is returning this response. It means your server or middleware is refusing traffic, often because it has its own rate limit. Braze does not apply a separate rate limit to Connected Content; Connected Content request volume scales directly with your [message delivery speed rate limit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting). Because messages can be rendered multiple times per recipient (for example, for email HTML, plain text, and AMP), the number of Connected Content requests can exceed that rate limit—do not assume it will be less than or equal to the messages per minute you set. If you see 429s, scale your endpoint or middleware to handle the expected request volume, or lower the campaign or Canvas step rate limit so that fewer messages (and thus fewer Connected Content calls) are sent per minute.
+- **Unhealthy host detection:** A Braze-side safeguard that triggers after a high rate and volume of *failures* in a one-minute window. The failure count includes 408, 429, 502, 503, 504, and 529. When triggered, Braze temporarily halts requests to that host and simulates a failure response. This is independent of your own rate limiting. For detection thresholds and more detail, see [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors/#unhealthy-host-detection). To avoid hitting unhealthy host detection, ensure your endpoint can handle the call volume described in [Understanding Connected Content call volume](#understanding-connected-content-call-volume) and [Best practices for high-volume endpoints](#best-practices-for-high-volume-endpoints).
 
 ## Allowing for efficient performance
 
@@ -96,16 +96,16 @@ For more on planning endpoint capacity and reducing call volume, see [Best pract
 
 * Braze does not charge for API calls and will not count toward your given data point usage.
 * There is a 1 MB limit for Connected Content responses.
-* Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
+* Connected Content executes when the message is rendered. For in-app messages, the message is rendered at impression time.
 * Connected Content calls do not follow redirects.
 
 ## Best practices for high-volume endpoints
 
 If your messages use Connected Content and you send at high volume, plan for more requests than the number of recipients or sends:
 
-1. **Estimate peak load:** For email, a single recipient can generate multiple Connected Content calls (for example, HTML, plain text, and AMP). Use a conservative multiplier (for example, recipients × 2 or × 3 for email) when sizing your endpoint or middleware.
+1. **Estimate peak load:** Use a conservative multiplier when sizing your endpoint or middleware—Connected Content requests can exceed the number of recipients or messages sent. For example, for email a single recipient can generate multiple calls (HTML, plain text, and AMP), so recipients × 2 or × 3 is often used as a conservative estimate.
 2. **Use caching where appropriate:** GET requests are cached by default. For POST requests, add `:cache_max_age` when the response can be reused for a period (for example, token or content that doesn't change per request). See [Caching responses]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/caching_responses/) and the [POST caching FAQ](#what-is-caching-behavior) below.
-3. **Set delivery speed rate limiting:** Use [delivery speed rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting) on campaigns or Canvas steps that use Connected Content so that message (and thus Connected Content) volume stays within what your endpoint can handle.
+3. **Set delivery speed rate limiting:** [Delivery speed rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting) on campaigns or Canvas steps is the only lever to indirectly limit Connected Content request volume—Braze does not rate limit Connected Content itself. It is only a proxy, and not a perfect one, because Connected Content requests are not 1:1 with messages. Use it to keep message (and thus Connected Content) volume within what your endpoint can handle.
 4. **Design for idempotency and retries:** Braze may call your endpoint more than once per recipient. Ensure your endpoint can tolerate duplicate requests without incorrect side effects.
 
 ## Authentication types

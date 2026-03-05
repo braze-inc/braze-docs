@@ -63,15 +63,9 @@ The cache age is up to five minutes (300 seconds). You can update this by adding
 ```
 {% endraw %}
 
-GET requests are cached. You can configure this by adding the `:no_cache` parameter to the Connected Content call.
+GET requests are cached. You can configure this by adding the :no_cache parameter to the Connected Content call.
 
-**POST requests are not cached by default.** To reduce load when the same POST is made repeatedly (for example, token retrieval or a request whose response doesn't change per user in the short term), add `:cache_max_age` to the Connected Content POST call. The minimum cache time is 5 minutes and the maximum is 4 hours.
-
-{% raw %}
-```liquid
-{% connected_content https://api.example.com/data :method post :body key=value :cache_max_age 900 :save result %}
-```
-{% endraw %}
+POST requests are not cached. This can be forced by adding the :cache_max_age parameter to the Connected Content call. The minimum cache time is 5 minutes, and the maximum cache time is 4 hours.
 
 {% alert note %}
 Cache settings aren’t guaranteed. Caching can reduce calls to your endpoints, so we recommend using multiple calls per endpoint within the cache duration rather than being overly reliant on caching.
@@ -113,7 +107,7 @@ To prevent Connected Content from caching the value it returns from a GET reques
 Be certain the provided Connected Content endpoint can handle large bursts of traffic before using this option, or you will likely see increased sending latency (increased delays or wider time intervals between request and response) due to Braze making Connected Content requests for every single message.
 {% endalert %}
 
-With a POST you typically don’t need to cache bust, since POST requests are not cached by default. If you have enabled caching for a POST call using `:cache_max_age`, you can omit `:no_cache` for that call unless you want to force a fresh request.
+With a POST you don’t need to cache bust, because POST requests are not cached by default. To cache a POST response, add `:cache_max_age`; to avoid caching a POST, omit `:cache_max_age`.
 
 ## Things to know
 
