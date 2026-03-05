@@ -1,6 +1,6 @@
 ---
 nav_title: "RFM segments"
-article_title: RFM SQL segments
+article_title: RFM SQL Segment Extensions
 page_order: 1
 page_type: reference
 alias: "/rfm_segments/"

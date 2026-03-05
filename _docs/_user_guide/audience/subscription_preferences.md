@@ -1,9 +1,9 @@
 ---
 nav_title: Subscription preferences
-article_title: Subscription Preferences
+article_title: Subscription preferences
 page_order: 4
 layout: dev_guide
-guide_top_header: "Subscription Preferences"
+guide_top_header: "Subscription preferences"
 guide_top_text: "Manage how users opt in and out of your messaging channels. Use preference centers to give users control over their communication preferences."
 
 page_type: landing

@@ -9,7 +9,7 @@ description: "This article will walk you through how to configure SAML just-in-t
 
 # SAML just-in-time provisioning 
 
-> Just-in-time provisioning works with [SAML SSO]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/saml_sso_setup/) to allow new company users to create a Braze account on their first sign in. This eliminates the need for administrators to manually create an account for a new company user, choose their permissions, assign them to a workspace, and wait for them to activate their account.
+> Just-in-time provisioning works with [SAML SSO]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/saml_sso_setup/) to allow new company users to create a Braze account on their first sign in. This eliminates the need for administrators to manually create an account for a new company user, choose their permissions, assign them to a workspace, and wait for them to activate their account.
 
 As a security measure, SAML just-in-time provisioning (JITP) only works for users with email domains that already exist in your company. JITP is only possible for domains where there is already at least one confirmed, non-impersonation developer in the company. 
 

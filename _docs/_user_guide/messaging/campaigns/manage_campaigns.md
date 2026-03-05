@@ -2,7 +2,7 @@
 nav_title: Manage campaigns
 article_title: Manage campaigns
 layout: dev_guide
-guide_top_header: "Managing Campaigns"
+guide_top_header: "Manage campaigns"
 guide_top_text: "Once you've launched your campaign, it's time to sit back and watch the data roll in. If you need to make any changes to your campaign, set up alerts, or archive your campaign, refer to the following articles for help."
 page_order: 3
 

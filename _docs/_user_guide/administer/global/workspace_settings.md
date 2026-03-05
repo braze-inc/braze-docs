@@ -4,7 +4,7 @@ article_title: Workspace settings
 page_order: 3
 layout: dev_guide
 guide_top_header: "Workspace settings"
-guide_top_text: "Configure workspace-level settings including APIs, branding, email preferences, logs, and more."
+guide_top_text: "Configure workspace-level settings including APIs, branding, email preferences, logs, and more.<br><br>Most features within <b>Workspace Settings</b> are only available to Braze account administrators. If you don't have access but feel that you should, contact your company's Braze account administrator."
 
 page_type: landing
 description: "This section covers workspace-level settings—APIs and identifiers, brand guidelines, email preferences, logs and alerts, and more."

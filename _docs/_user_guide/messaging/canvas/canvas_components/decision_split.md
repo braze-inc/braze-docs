@@ -1,6 +1,6 @@
 ---
-nav_title: Decision split
-article_title: Decision split 
+nav_title: Decision Split
+article_title: Decision Split 
 alias: /decision_split/
 page_order: 7
 page_type: reference

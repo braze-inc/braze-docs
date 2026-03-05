@@ -11,23 +11,26 @@ description: "This landing page is home to Braze dashboard campaigns. Here, you 
 search_rank: 3
 guide_featured_title: "Sections"
 guide_featured_list:
-  - name: Getting Started
-    link: /docs/user_guide/engagement_tools/campaigns/getting_started/
+  - name: Campaign basics
+    link: /docs/user_guide/messaging/campaigns/campaign_basics/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: Build Campaigns
-    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
+  - name: Create a campaign
+    link: /docs/user_guide/messaging/campaigns/creating_campaign/
     image: /assets/img/braze_icons/list.svg
-  - name: Manage Campaigns
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/
+  - name: Manage campaigns
+    link: /docs/user_guide/messaging/campaigns/manage_campaigns/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Test Campaigns
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
+  - name: Schedule your campaign
+    link: /docs/user_guide/messaging/campaigns/schedule_your_campaign/
+    image: /assets/img/braze_icons/clock.svg
+  - name: Test campaigns
+    link: /docs/user_guide/messaging/campaigns/test_campaigns/
     image: /assets/img/braze_icons/beaker-02.svg
-  - name: Ideas and Strategies
-    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/
+  - name: Ideas and strategies
+    link: /docs/user_guide/messaging/campaigns/ideas_and_strategies/
     image: /assets/img/braze_icons/lightbulb-02.svg
-  - name: Frequently Asked Questions
-    link: /docs/user_guide/engagement_tools/campaigns/faq/
+  - name: FAQ
+    link: /docs/user_guide/messaging/campaigns/faq/
     image: /assets/img/braze_icons/annotation-question.svg
 
 ---

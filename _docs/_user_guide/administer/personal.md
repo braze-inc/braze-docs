@@ -11,7 +11,7 @@ description: "This landing page covers personal settings and access—how to get
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Accessing your account
+- name: Access your account
   link: /docs/user_guide/administer/personal/accessing_your_account/
   image: /assets/img/braze_icons/user-circle.svg
 - name: The Braze dashboard

@@ -9,7 +9,7 @@ guide_top_text: "This page is located at <b>Settings</b> > <b>Admin Settings</b>
 page_type: landing
 description: "This landing page lists articles on admin settings. Here, you can find articles on configuring contact information, notification preferences, and security settings."
 
-guide_featured_title: "Section articles"
+guide_featured_title: "Topics"
 guide_featured_list:
 - name: Contact information
   link: /docs/user_guide/administer/global/admin_settings/contact_information/
@@ -20,6 +20,9 @@ guide_featured_list:
 - name: Security settings
   link: /docs/user_guide/administer/global/admin_settings/security_settings/
   image: /assets/img/braze_icons/shield-01.svg
+- name: SCIM provisioning
+  link: /docs/user_guide/administer/global/user_management/automated_user_provisioning/
+  image: /assets/img/braze_icons/users-01.svg
 ---
 
 {% alert warning %}

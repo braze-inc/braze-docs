@@ -1,6 +1,6 @@
 ---
-nav_title: Braze support
-article_title: Support
+nav_title: Braze Support
+article_title: Braze Support
 page_order: 4
 description: "This page will help you locate the Braze support portal to submit Braze product feedback. This page will only be accessible to Braze customers."
 alias: /braze_support/
@@ -9,6 +9,8 @@ search_rank: 7
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze Support
+
+> Learn how to access the Braze support portal, submit and track support cases, and provide the information needed for efficient troubleshooting.
 
 ## Access the support portal
 

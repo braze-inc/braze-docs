@@ -1,5 +1,5 @@
 ---
-nav_title: Segment extensions
+nav_title: Segment Extensions
 article_title: Segment Extensions
 page_order: 5
 page_type: reference

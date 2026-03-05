@@ -42,7 +42,7 @@ When you stop a Canvas, the following applies:
 
 ### Should I build one Canvas or separate Canvases per user lifecycle?
 
-Depending on what you’re looking to accomplish with your Canvas, you may need different approaches in how you build your user journey. The flexibility of Canvas allows you to map user journeys for any stage of the user lifecycle. Check out our [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) for several examples of streamlined approaches to creating effective user journeys.
+Depending on what you’re looking to accomplish with your Canvas, you may need different approaches in how you build your user journey. The flexibility of Canvas allows you to map user journeys for any stage of the user lifecycle. Check out our [Braze Canvas templates]({{site.baseurl}}/user_guide/messaging/templates/canvas_templates/braze_templates) for several examples of streamlined approaches to creating effective user journeys.
 
 ### When are in-app messages in Canvas sent?
 

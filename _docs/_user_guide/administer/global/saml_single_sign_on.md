@@ -12,19 +12,19 @@ description: "This landing page is home to articles on single sign-on (SSO). Her
 guide_featured_title: "SAML SSO Topics"
 guide_featured_list:
 - name: SAML SSO setup
-  link: /docs/user_guide/administer/global/saml__single_sign_on/saml_sso_setup/
+  link: /docs/user_guide/administer/global/saml_single_sign_on/saml_sso_setup/
   image: /assets/img/braze_icons/fingerprint-03.svg
 - name: SAML Just-in-Time provisioning
-  link: /docs/user_guide/administer/global/saml__single_sign_on/saml_just_in_time_provisioning/
+  link: /docs/user_guide/administer/global/saml_single_sign_on/saml_just_in_time_provisioning/
   image: /assets/img/braze_icons/user-plus-01.svg
 - name: Microsoft Entra SSO
-  link: /docs/user_guide/administer/global/saml__single_sign_on/microsoft_entra_sso/
+  link: /docs/user_guide/administer/global/saml_single_sign_on/microsoft_entra_sso/
   image: /assets/img/entra.png
 - name: Okta
-  link: /docs/user_guide/administer/global/saml__single_sign_on/okta/
+  link: /docs/user_guide/administer/global/saml_single_sign_on/okta/
   image: /assets/img/okta.png
 - name: OneLogin
-  link: /docs/user_guide/administer/global/saml__single_sign_on/onelogin/
+  link: /docs/user_guide/administer/global/saml_single_sign_on/onelogin/
   image: /assets/img/onelogin.png
 
 ---

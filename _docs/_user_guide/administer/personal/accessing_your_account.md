@@ -1,5 +1,5 @@
 ---
-nav_title: Accessing your account
+nav_title: Access your account
 article_title: Access Your Account
 page_order: 0
 page_type: reference
@@ -23,11 +23,11 @@ Whether it's your first time logging in or your hundredth, here's how to access 
 
 You can either log in from the [Braze.com](https://www.braze.com) home site, or use your dashboard URL that corresponds to your specific [Braze instance]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints/). For your convenience, Braze has several single sign-on (SSO) options such as:
 
-* [SAML SSO]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/saml_sso_setup/)
-    * [SAML just-in-time provisioning]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/saml_just_in_time_provisioning/)
-* [Microsoft Entra SSO]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/microsoft_entra_sso/)
-* [Okta]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/okta/)
-* [OneLogin]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/onelogin/)
+* [SAML SSO]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/saml_sso_setup/)
+    * [SAML just-in-time provisioning]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/saml_just_in_time_provisioning/)
+* [Microsoft Entra SSO]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/microsoft_entra_sso/)
+* [Okta]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/okta/)
+* [OneLogin]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/onelogin/)
 
 {% alert note %}
 After you log into Braze with SSO, you can no longer use your password to log into the dashboard.
@@ -63,7 +63,7 @@ If your email provider doesn't support `+` aliasing, you can still create separa
 
 The multi-company developers feature allows sharing of a single user account across multiple companies. Users can toggle between different company dashboards from their user profile menu.
 
-If you have SSO and want to set up multi-company developers, you need to enable a SAML Custom Entity ID by setting up a custom SAML SSO integration. Follow the steps in [Service Provider (SP) initiated login]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/saml_sso_setup/), but apply these changes:
+If you have SSO and want to set up multi-company developers, you need to enable a SAML Custom Entity ID by setting up a custom SAML SSO integration. Follow the steps in [Service Provider (SP) initiated login]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/saml_sso_setup/), but apply these changes:
 - Change **Entity ID** to `braze_dashboard_<companyID>` for each dashboard integration.
 - Contact your customer success manager or account manager to enable the `saml_sso_custom_entity_id` feature flipper for each dashboard.
 
@@ -156,7 +156,7 @@ You can tell what kind of lock out you're experiencing by the error message you 
 Your account security is important to us, so passwords are required to log into your Braze account.
 - Check that you are logging into the correct [Braze dashboard instance]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints/). Check with your account administrator or Braze account manager to be sure.
 - Your password may have expired, so you need to [reset it](#resetting-your-password).
-- If you use a [single sign-on]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/saml_sso_setup/) service, check with your account administrator that the set up has been completed properly.
+- If you use a [single sign-on]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/saml_sso_setup/) service, check with your account administrator that the set up has been completed properly.
 - If your company is on several instances of Braze, you may be using the incorrect email to log in.
 
 When in doubt, you can always [reset your password](#resetting-your-password).

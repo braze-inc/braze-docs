@@ -16,7 +16,7 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
     image: /assets/img/braze_icons/list.svg
   - name: Using Braze Canvas Templates
-    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/
+    link: /docs/user_guide/messaging/templates/canvas_templates/braze_templates/
     image: /assets/img/braze_icons/target-04.svg
   - name: Understanding Canvas Status
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/

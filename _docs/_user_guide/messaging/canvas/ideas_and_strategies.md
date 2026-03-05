@@ -28,7 +28,7 @@ guide_menu_list:
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg
   - name: Using Braze Canvas Templates
-    link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/
+    link: /docs/user_guide/messaging/templates/canvas_templates/braze_templates/
     image: /assets/img/braze_icons/target-04.svg
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/

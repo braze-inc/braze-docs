@@ -15,7 +15,7 @@ guide_featured_list:
   link: /docs/user_guide/administer/global/user_management/
   image: /assets/img/braze_icons/users-01.svg
 - name: SAML & single sign-on
-  link: /docs/user_guide/administer/global/saml__single_sign_on/
+  link: /docs/user_guide/administer/global/saml_single_sign_on/
   image: /assets/img/braze_icons/log-in-01.svg
 - name: Create and manage workspaces
   link: /docs/user_guide/administer/global/create_and_manage_workspaces/

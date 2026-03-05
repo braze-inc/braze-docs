@@ -1,5 +1,5 @@
 ---
-nav_title: Audience paths
+nav_title: Audience Paths
 article_title: Audience Paths 
 alias: /audience_paths/
 page_order: 3
@@ -103,5 +103,5 @@ Using a combination of Audience Paths steps and Intelligent Channel filters, you
 For example, in an Audience Paths step, you can create three audiences: Email, Mobile Push, and Everyone Else. For the Email audience, add the filter `Intelligent Channel is Email`. For the Mobile Push audience, add the filter `Intelligent Channel is Mobile Push`. Then, you can add a Message step for each of the audience paths to deliver personalized and relevant messages.
 
 {% alert tip %}
-Check out our [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) for examples on how you can customize these pre-built templates to your advantage.
+Check out our [Braze Canvas templates]({{site.baseurl}}/user_guide/messaging/templates/canvas_templates/braze_templates) for examples on how you can customize these pre-built templates to your advantage.
 {% endalert %}

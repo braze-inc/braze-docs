@@ -44,7 +44,7 @@ Use this field to define how long Braze will keep your session active. After Bra
 
 You can restrict your users from logging in using a password or SSO.
 
-For [SAML SSO]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/), customers need to set up their SAML settings before enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
+For [SAML SSO]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/), customers need to set up their SAML settings before enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
 
 ## Dashboard IP allowlisting
 

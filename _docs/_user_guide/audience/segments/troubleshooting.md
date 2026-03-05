@@ -10,6 +10,8 @@ description: "This reference article covers troubleshooting steps and considerat
 
 # Troubleshoot segments
 
+> This page covers common issues and questions that may come up when creating and managing segments in Braze.
+
 ## Errors
 
 ### Target audience is too complex to launch
