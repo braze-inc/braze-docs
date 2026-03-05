@@ -6,11 +6,13 @@ The Braze React Native SDK does not expose push notification customization (acti
 The following table shows which features require native configuration:
 
 | Feature | iOS | Android |
+| --- | --- | --- |
 | Action buttons | Configure in native Swift/Objective-C | Configure in native Java/Kotlin |
 | Push categories | Configure in native Swift/Objective-C | Configure in native Java/Kotlin |
 | Custom notification factory | N/A | Configure in native Java/Kotlin |
 | Badge customization | Configure in native Swift/Objective-C | N/A |
 | Custom sounds | Configure in native Swift/Objective-C | Configure in native Java/Kotlin |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### iOS customization
 
