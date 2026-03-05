@@ -23,10 +23,10 @@ Use AI item recommendations to calculate the most popular products or create per
 
 ### Prerequisites
 
-Before you start, you'll need to complete the following:
+Before you start, you must have the following:
 
-- You must have at least one [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) to use any of the recommendation types described below.
-- You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
+- At least one [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) to use any of the recommendation types described below.
+- Purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 
 ### Step 1: Create a new recommendation
 
