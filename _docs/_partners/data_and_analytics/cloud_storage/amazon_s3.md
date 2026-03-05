@@ -144,7 +144,7 @@ If you're only setting up message archiving, follow the steps in the **Dashboard
 
 In Braze, go to **Partner Integrations** > **Currents**.
 
-Next, select **Create Current** then **Amazon S3 Data Export**.
+Next, select **Create New Current** then **Amazon S3 Data Export**.
 
 Name your Current. In the **Credentials** section, make sure **AWS Secret Access Key** is selected, then input your S3 access ID, AWS secret access key, and AWS S3 bucket name in the designated fields.
 
@@ -259,7 +259,8 @@ Within the same IAM section of the console, select **Roles** > **Create Role**.
 ![]({{site.baseurl}}/assets/img/create_role_1_list.png)
 
 Retrieve your Braze account ID and external ID from your Braze account:
-- **Currents**: In Braze, go to **Partner Integrations** > **Data Export**. Next, select **Create Current** then **Amazon S3 Data Export**. Here you'll find the identifiers needed to create your role.
+
+- **Currents**: In Braze, go to **Partner Integrations** > **Currents**. Next, select **Create New Current** then **Amazon S3 Data Export**. Here you'll find the identifiers needed to create your role.
 - **Dashboard data export**: In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role. (Create your roles here if you're only setting up message archiving.)
 
 Back on the AWS Console, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, check the **Require external ID** box, and enter the Braze external ID. Select **Next** when complete.
@@ -297,7 +298,7 @@ If you're only setting up message archiving, follow the steps in the **Dashboard
 {% tabs %}
 {% tab Braze Currents %}
 
-In Braze, go to the **Currents** page under **Integrations**. Next, select **Create Current** and select **Amazon S3 Data Export**
+In Braze, go to **Partner Integrations** > **Currents**. Next, select **Create New Current** and select **Amazon S3 Data Export**
 
 ![]({{site.baseurl}}/assets/img/currents-role-arn.png)
 
