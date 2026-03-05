@@ -42,3 +42,11 @@ Use these paths when you need to reference how Braze translates UI terms (e.g. f
 To have these folders available in the workspace, open **`braze-workspace.code-workspace`** (File → Open Workspace from File) instead of opening the braze-docs folder alone.
 
 **Layout:** The workspace uses relative paths. It works for anyone as long as braze-docs and all reference repos are **sibling folders** in the same parent (e.g. `~/Documents/braze-docs`, `~/Documents/platform`, …). The parent folder can be anywhere (Documents, `~/code`, etc.).
+
+### Keeping repos up to date
+
+Keep your reference repos current when verifying SDK behavior, APIs, or product behavior so documentation checks use the latest code.
+
+- Pull the latest changes in each reference repo before you start verifying.
+- From the parent folder (the one containing `braze-docs` and the reference repos), run `git pull` in each repo you need, or use a loop to update all of them.
+- If you're unsure when a repo was last updated, run a pull before relying on it for verification.

@@ -21,6 +21,10 @@ description: "This reference article covers using an array of objects as a data 
 
 Updating or removing items in an array requires identifying the item by key and value, so consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
 
+{% alert important %}
+When a nested custom attribute in your request contains any invalid values (such as invalid time formats or `null` values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. Verify that all values within nested custom attributes are valid before sending. For more information, refer to [Create and update users]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#how-does-userstrack-handle-invalid-nested-custom-attributes).
+{% endalert %}
+
 {% alert tip %}
 For more information on using arrays of objects for user attributes objects, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 {% endalert %}
@@ -169,6 +173,16 @@ The following example shows removing any object in the `pets` array that has an 
 ```
 {% endtab %}
 {% endtabs %}
+
+### Processing order
+
+When a single `/users/track` request includes `$add`, `$remove`, and `$update` operations for the same array attribute, Braze processes them in this order:
+
+1. `$add`
+2. `$remove`
+3. `$update`
+
+Because `$add` runs before `$remove`, you can't use a `$remove` followed by `$add` as an upsert mechanism within a single request. The `$add` is processed first, then the `$remove` deletes the item. To upsert, send the `$remove` in a separate request before the `$add`.
 
 ### Timestamps
 

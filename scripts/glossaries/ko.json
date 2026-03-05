@@ -610,6 +610,7 @@
   "opt-in prompt": "옵트인 안내",
   "opt-out link": "옵트아웃 링크",
   "Optilyz": "Optilyz",
+  "Operator": "Operator",
   "Optional": "선택 사항",
   "Options": "옵션",
   "orchestration": "오케스트레이션",
@@ -952,5 +953,6 @@
   "Zapier": "Zapier",
   "Zendesk": "Zendesk",
   "zeotap": "Zeotap",
-  "zero-party data": "제로파티 데이터"
+  "zero-party data": "제로파티 데이터",
+  "Feature Flags": "기능 플래그"
 }

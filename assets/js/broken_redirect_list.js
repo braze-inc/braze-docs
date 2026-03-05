@@ -3693,6 +3693,9 @@ validurls['/docs/user_guide/engagement_tools/templates_and_media/content_blocks/
 validurls['/docs/user_guide/engagement_tools/templates_and_media/canvas_templates/'] = '/docs/user_guide/messaging/templates/canvas_templates/';
 validurls['/docs/user_guide/engagement_tools/templates_and_media/managing_templates/'] = '/docs/user_guide/messaging/templates/managing_templates/';
 validurls['/docs/user_guide/engagement_tools/templates_and_media/faqs/'] = '/docs/user_guide/messaging/design_and_edit/media_library/faq/';
+
+// BrazeAI > Operator
+validurls['/docs/user_guide/brazeai/operator/getting_started/'] = '/docs/user_guide/brazeai/operator/';
 // validurls['OLD'] = 'NEW';
 validurls['/docs/user_guide/personalization_and_dynamic_content/'] = '/docs/user_guide/messaging/design_and_edit/personalize/';
 validurls['/docs/user_guide/personalization_and_dynamic_content'] = '/docs/user_guide/messaging/design_and_edit/personalize/';
