@@ -159,7 +159,7 @@ Editing Canvases with time delays can be a bit tricky, so keep in mind the follo
 
 ### Stopping Canvases
 
-Stopping a Canvas won't exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they complete the step and move to the next step. However, if the time that the user should've progressed to the next step has passed, they instead exit the Canvas. 
+Stopping a Canvas does not exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they complete the step and move to the next step. However, if the time that the user should've progressed to the next step has passed, they instead exit the Canvas. 
 
 For example, let's say you have a Canvas created using the Canvas Flow workflow set to launch at 2 pm with one variant with two steps: a Delay step with a one-hour delay that goes into a Message step. 
 
