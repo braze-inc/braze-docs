@@ -6,14 +6,15 @@ alwaysApply: false
 
 Analyze Braze support case CSVs to identify documentation gaps and propose docs updates.
 
+<!-- This can be exported as a CSV from Looker https://braze.looker.com/x/4git0QPwJ9xjVtdBphbkPE or downloaded from Snowflake Growth instance and stored in ~/Documents/support-analyzer-files/latest/. The query logic pulls resolved cases from the last 2 days and all related conversations -->
 ## CSV Schema
 
 | Column | Description |
 |--------|-------------|
 | `Support Cases Email Message Case ID` | Primary case identifier (e.g., `500VP00000nQrMKYA0`) |
+| `Support Cases Closed or Resolved Date` | Timestamp of resolution |
 | `Support Cases Email Message Sent Date` | Timestamp of message |
 | `Support Cases Description` | Original support question |
-| `Support Cases Email Message Text Body` | Raw message content |
 | `Support Cases Email Message Text Body Cleaned` | Cleaned message for analysis |
 
 ---
@@ -69,6 +70,8 @@ After processing all tickets:
 3. **Batch by Doc** - Group changes targeting the same file
 4. **Maintain sources** - Maintain list of which Case IDs were referenced for the update
 
+Before moving to Step 4, prompt user to review and acknowledge they want to draft updates
+
 ---
 
 ## Step 4: Draft Updates
@@ -79,6 +82,9 @@ For each docs update:
 2. Draft changes following conventions in the codebase based on the style guides in `_docs/_contributing/style_guide/*`
 3. Keep additions concise and scannable (bullets, tables, code blocks)
 4. **Use alerts and FAQ entries as a last resort** — Only add a new alert, callout, or FAQ entry when the information genuinely cannot be worked into existing prose. These elements contribute to doc bloat and should be reserved for content that doesn't fit naturally elsewhere.
+
+
+Before moving to Step 5, prompt user to review and acknowledge they want to create branch
 
 ---
 
@@ -124,8 +130,8 @@ Cursor identifies team members based on the CODEOWNERS file. If no owner is foun
 ## Example Prompt
 
 ```
-@support-analyzer.mdc Analyze the CSV file in _data/ and draft docs updates.
+@support-analyzer.mdc Analyze the CSV file in `~/Documents/support-analyzer-files/latest/` and draft docs updates.
 Focus on [specific product area] if applicable.
 ```
 
-<!-- export from Looker https://braze.looker.com/x/qB0GXtyFV4YjUdsMKFgf85 -->
+<!-- export from Looker https://braze.looker.com/x/4git0QPwJ9xjVtdBphbkPE -->
