@@ -53,18 +53,18 @@ To place a link to the preference center in your emails, use the following Liqui
 ```
 {%endraw%}
 
-You can also use a combination of HTML that includes Liquid. For example, you can paste the following as the URL in either the HTML editor or drag-and-drop editor. This will show the basic preference center layout that lists all of the email subscription groups automatically. 
+You can also use a combination of HTML that includes Liquid. For example, you can paste the following as the URL in either the HTML editor or drag-and-drop editor. This will show the basic preference center layout that lists all of the email subscription groups automatically. If you use [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/), add a trailing question mark (`?`) after the Liquid tag so Braze can append tracking parameters.
 
 {% raw %}
 ```html
-<a href="{{preference_center.${kitchenerie_preference_center_example}}}">Edit your preferences</a>
+<a href="{{preference_center.${kitchenerie_preference_center_example}}}?">Edit your preferences</a>
 ```
 {%endraw%}
 
 The preference center has a checkbox that will allow your users to unsubscribe from all emails. Note that you will not be able to save these preferences if sent as a test message.
 
 {% alert important %}
-The above Liquid tag will only work when launching a campaign or Canvas. Sending a test email will not generate a valid link.
+The above Liquid tag will only work when launching a campaign or Canvas. Sending a test email will not generate a valid link. To verify the preference center link, launch the message in a campaign targeting only your test profile.
 {% endalert %}
 
 #### Editing a preference center
