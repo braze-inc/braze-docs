@@ -249,7 +249,7 @@ You can also [abort messages]({{site.baseurl}}/user_guide/personalization_and_dy
 
 ### Preview may incorrectly coerce property types 
 
-When previewing a message in the dashboard, most variable types (such as custom attributes) are  coerced to the correct type. However, variables in the following namespaces don't have a defined type that the preview can look up:
+When previewing a message in the dashboard, most variables (such as custom attributes) are coerced to the correct type. However, some variables don't have a defined type that the preview can look up:
 
 - `api_trigger_properties`
 - `canvas_entry_properties`
