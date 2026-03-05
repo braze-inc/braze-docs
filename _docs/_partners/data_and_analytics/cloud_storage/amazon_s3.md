@@ -142,7 +142,7 @@ If you're only setting up message archiving, follow the steps in the **Dashboard
 {% tabs %}
 {% tab Braze Currents %}
 
-In Braze, go to **Partner Integrations** > **Data Export**.
+In Braze, go to **Partner Integrations** > **Currents**.
 
 Next, select **Create Current** then **Amazon S3 Data Export**.
 
