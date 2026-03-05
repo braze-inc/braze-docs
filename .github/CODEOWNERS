@@ -9,8 +9,7 @@
 # Ensure new and updated Liquid use cases are tested before merging.
 /_docs/_user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases.md @rachel-feinberg
 
-# INGESTION ENDPOINTS
-# The Ingestion team owns Data Transformation templates for these endpoints.
+# ENDPOINTS
 /_docs/_api/endpoints/user_data/post_user_track.md @braze-inc/ingestion @lydia-xie
 /_docs/_api/endpoints/messaging/send_messages/post_send_messages.md @braze-inc/core-messaging @lydia-xie
 /_docs/_api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item.md @braze-inc/core-objects @lydia-xie
