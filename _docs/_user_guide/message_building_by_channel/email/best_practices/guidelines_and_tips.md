@@ -16,7 +16,7 @@ Here are some quick tips to keep in mind while building your content:
 
 - When formatting your email, use inline style sheets as CSS.
 - To use one email template for both mobile and desktop versions, keep the width under 500 pixels.
-- Images uploaded to the email template must be less than 5&nbsp;MB. Supported formats include PNG, JPEG, and GIF.
+- Images must be under 5&nbsp;MB. We recommend using PNG, JPEG, or GIF for maximum compatibility. Avoid SVG and WebP, as many major email clients do not yet support them.
 - Don't set heights and widths for images as this will cause unnecessary white space in a degraded email.
 - `div` tags should not be used as most email clients do not support their use. Instead, use nested tables.
 - Avoid using JavaScript because it does not work with any ESP.
