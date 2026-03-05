@@ -22,9 +22,9 @@ If your POST payload was accepted by our servers, then successful messages are m
 }
 ```
 
-Note that success only means that the RESTful API payload was correctly formed and passed onto our push notification or email or other messaging services. It does not mean that the messages were actually delivered, as additional factors could prevent the message from being delivered (for example, a device could be offline, the push token could be rejected by Apple's servers, you may have provided an unknown user ID).
+Note that success only means that the RESTful API payload was correctly formed and passed onto our push notification or email or other messaging services. It does not mean that the messages were actually delivered, as additional factors could prevent the message from being delivered (for example, a device could be offline, the push token could be rejected by Apple's servers, or you may have provided an unknown user ID).
 
-This also applies to non-messaging endpoints. For example, a `success` response from [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) confirms the request syntax was valid and has been queued for processing — but if the alias in the request doesn't match an existing user profile, the operation is silently dropped. Only the initial `success` response is returned; there is no follow-up notification if processing produces no result.
+For endpoints like [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify), which don't send messages, a success message only means that Braze received the request for processing. If there is no match for the alias after processing, the request will be dropped.
 
 If your message is successful but has non-fatal errors, you receive the following response:
 
