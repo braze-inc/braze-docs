@@ -65,7 +65,7 @@ The cache age is up to five minutes (300 seconds). You can update this by adding
 
 GET requests are cached. You can configure this by adding the :no_cache parameter to the Connected Content call.
 
-POST requests are not cached. This can be forced by adding the :cache_max_age parameter to the Connected Content call. The minimum cache time is 5 minutes, and the maximum cache time is 4 hours.
+POST requests are not cached by default, but can be cached by adding the `:cache_max_age` parameter to the Connected Content call. The minimum cache time is 5 minutes, and the maximum cache time is 4 hours.
 
 {% alert note %}
 Cache settings aren’t guaranteed. Caching can reduce calls to your endpoints, so we recommend using multiple calls per endpoint within the cache duration rather than being overly reliant on caching.
