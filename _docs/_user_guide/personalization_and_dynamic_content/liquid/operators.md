@@ -253,7 +253,7 @@ When previewing a message in the dashboard, most variables (such as custom attri
 
 - `api_trigger_properties`
 - `canvas_entry_properties`
-- `event_properties`
+- `context`
 
 For these properties, the preview attempts to infer the type from the value. This means that a value you intend to be a **string** could be wrongly interpreted as a **number**. For example, if a property value is a string `"3"`, the preview may coerce it to the integer `3`, which can cause unexpected behavior in string operations like `contains` or `split`.
 
