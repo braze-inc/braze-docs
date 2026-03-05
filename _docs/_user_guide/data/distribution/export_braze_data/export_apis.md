@@ -1,7 +1,7 @@
 ---
 nav_title: Export APIs
 article_title: Export APIs
-page_order: 8
+page_order: 5
 page_type: reference
 description: "This reference article describes why you might programmatically export a JSON file of dashboard data, over exporting a CSV directly from the dashboard."
 platform: API
@@ -20,6 +20,6 @@ There are a few reasons why you would prefer this method over exporting a CSV di
  -  You want to interact with the data programmatically.
 
 {% alert tip %}
-For help with CSV and API exports, refer to [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, refer to [Export troubleshooting]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/export_troubleshooting/).
 {% endalert %}
 

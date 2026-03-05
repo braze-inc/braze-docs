@@ -1,7 +1,7 @@
 ---
 nav_title: Data points
 article_title: Data Points Overview
-page_order: 10
+page_order: 3
 page_type: reference
 description: "This reference article outlines what data points are at Braze and how you can be aware of their usage."
 search_rank: 6
@@ -25,7 +25,7 @@ See this article's [Consumption count](#consumption-count) section to understand
 
 To view your data point usage, go to **Settings** > **Billing** and select the **Total Data Points Usage** tab.
 
-For more information on the data point dashboard components, refer to [Billing]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/).
+For more information on the data point dashboard components, refer to [Billing]({{site.baseurl}}/user_guide/administer/global/billing/).
 
 {% alert tip %}
 **Don't waste data points. Only update changing data!**<br><br>

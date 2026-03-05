@@ -1,7 +1,7 @@
 ---
 nav_title: Sync and delete account data
 article_title: Sync account data using CDI
-page_order: 4
+page_order: 5
 page_type: reference
 description: "Learn how to sync your Braze account data using CDI."
 

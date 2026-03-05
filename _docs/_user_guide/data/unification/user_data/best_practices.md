@@ -1,7 +1,7 @@
 ---
 nav_title: Collection best practices
 article_title: Collection Best Practices
-page_order: 3.1
+page_order: 4
 page_type: reference
 description: "The following article helps clarify different methods and best practices for collecting new and existing user data."
 
@@ -64,6 +64,6 @@ After user profiles are merged, this action cannot be undone.
 {% endalert %}
 
 ## Additional resources
-- Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) for additional context.<br>
+- Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/) for additional context.<br>
 - View our documentation on setting user IDs and calling the `changeUser()` method for [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention), and [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web).
 

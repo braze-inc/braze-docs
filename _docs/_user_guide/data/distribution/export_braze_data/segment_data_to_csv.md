@@ -1,7 +1,7 @@
 ---
-nav_title: Export segment data to CSV
-article_title: Export Segment Data to CSV
-page_order: 2
+nav_title: Segment data
+article_title: Export Segment Data
+page_order: 4
 page_type: reference
 description: "This reference article covers how to export segment data to CSV."
 
@@ -94,7 +94,7 @@ The following is included in your export depending on your selection.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) article.
+For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/export_troubleshooting/) article.
 {% endalert %} 
 
 ## Exporting large segments

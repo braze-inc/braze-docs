@@ -63,7 +63,7 @@ glossaries:
   - name: IP Warming
     description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming">IP warming</a> is the practice of gradually increasing the amount of mail sent out from a dedicated IP. This helps establish a reputation with Internet Service Providers, minimizing the probability of your messages getting flagged.
   - name: Key-Value Pairs
-    description: <a href="http://www.braze.com/docs/user_guide/personalization_and_dynamic_content/key_value_pairs/">Key-value pairs</a> are linked data items where the key is a unique identifier and the value is the content. They can be used to send extra data payloads to user devices.
+    description: <a href="http://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs/">Key-value pairs</a> are linked data items where the key is a unique identifier and the value is the content. They can be used to send extra data payloads to user devices.
   - name: Liquid
     description: Liquid is a commonly-used, customer-facing template language created by Shopify and written in Ruby. <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/">Liquid</a> is used to load and pull dynamic content. Liquid allows you to use objects, tags, and filters to <a href="http://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/">add personal customization</a>.
   - name: Messaging Channel

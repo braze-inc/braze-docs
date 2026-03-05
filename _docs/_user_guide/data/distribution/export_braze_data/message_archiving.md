@@ -2,7 +2,7 @@
 nav_title: Message archiving
 article_title: Message Archiving
 alias: "/message_archiving/"
-page_order: 0
+page_order: 1
 page_type: reference
 description: "This reference article covers message archiving, a feature that allows you to save a copy of messages sent to users."
 
@@ -106,7 +106,7 @@ The following are references to the JSON payload delivered to your cloud storage
 }
 ```
 
-The `extras` field contains the key-value pairs configured in the **Email Extras** field when composing an email in the HTML editor. Email extras work for all email service providers (including SendGrid and Sparkpost) and are included in archived messages regardless of which provider is used. For more information on configuring email extras, see [Creating an email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#adding-email-extras). For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
+The `extras` field contains the key-value pairs configured in the **Email Extras** field when composing an email in the HTML editor. Email extras work for all email service providers (including SendGrid and Sparkpost) and are included in archived messages regardless of which provider is used. For more information on configuring email extras, see [Creating an email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#adding-email-extras). For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
@@ -211,7 +211,7 @@ If your cloud storage bucket is unreachable, Braze will retry up to three times 
 
 ### What happens if my credentials are invalid?
 
-If your cloud storage credentials become invalid at any point, Braze won't be able to save any messages to your cloud storage bucket, and those messages will be lost. We recommend configuring your [notification preferences]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) for Amazon Web Services, Google Cloud Services, or Azure (Microsoft Cloud Services) so you'll receive alerts for any credential issues.
+If your cloud storage credentials become invalid at any point, Braze won't be able to save any messages to your cloud storage bucket, and those messages will be lost. We recommend configuring your [notification preferences]({{site.baseurl}}/user_guide/administer/global/admin_settings/notification_preferences/) for Amazon Web Services, Google Cloud Services, or Azure (Microsoft Cloud Services) so you'll receive alerts for any credential issues.
 
 ### Why does my archive file's `sent_at` timestamp differ slightly from the sent timestamp in Currents?
 
@@ -219,7 +219,7 @@ The rendered copy is uploaded immediately before sending the message to the user
 
 ### Can I create a new bucket specifically for message archiving while keeping the current bucket used for Currents data?
 
-No. If you're interested in creating these specific buckets, submit [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+No. If you're interested in creating these specific buckets, submit [product feedback]({{site.baseurl}}/user_guide/administer/personal/product_portal/).
 
 ### Is archived data written to a dedicated folder in an existing bucket, similar to how Currents data exports are structured?
 

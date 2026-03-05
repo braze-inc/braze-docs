@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: Cloud Data Ingestion FAQs
-page_order: 100
+page_order: 10
 page_type: FAQ
 description: "This page answers frequently asked questions about Cloud Data Ingestion."
 toc_headers: h2

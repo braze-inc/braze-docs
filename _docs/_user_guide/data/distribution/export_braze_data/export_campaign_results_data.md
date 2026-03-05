@@ -1,7 +1,7 @@
 ---
-nav_title: Export campaign data
+nav_title: Campaign data
 article_title: Export Campaign Data
-page_order: 0
+page_order: 2
 page_type: reference
 description: "This reference article covers how to export campaign results data from single, multi-channel, or multivariate campaigns. The article also lists how to export user data from the recipients."
 tool: 
@@ -76,7 +76,7 @@ In-app message campaign results contain graphs for the following analytics:
 You can export user data for all the recipients of a campaign as a CSV file. To do so, select the **User Data** button in the **Campaign Details** section.
 
 {% alert note %}
-Can't see the **User Data** button? To export user data, you need the **Export User Data** [permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for that workspace.
+Can't see the **User Data** button? To export user data, you need the **Export User Data** [permissions]({{site.baseurl}}/user_guide/administer/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for that workspace.
 {% endalert %}
 
 ![User Data dropdown on the Campaign Details page]({% image_buster /assets/img/campaign_export_example.png %})
@@ -92,6 +92,6 @@ The exported file includes the same user data fields that are included when you 
 - Whether user is in control group
 
 {% alert tip %}
-For help with CSV and API exports, check out [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, check out [Export troubleshooting]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/export_troubleshooting/).
 {% endalert %}
 

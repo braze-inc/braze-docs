@@ -14,7 +14,7 @@ description: "This reference article provides steps to create a transformation u
 
 | Requirement | Description |
 | --- | --- |
-| Two-factor authentication or SSO | You must have [two-factor authentication]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#two-factor-authentication) (2FA) or [single sign-on]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#single-sign-on-sso-authentication) (SSO) enabled for your account. |
+| Two-factor authentication or SSO | You must have [two-factor authentication]({{site.baseurl}}/user_guide/administer/global/admin_settings/security_settings/#two-factor-authentication) (2FA) or [single sign-on]({{site.baseurl}}/user_guide/administer/global/admin_settings/security_settings/#single-sign-on-sso-authentication) (SSO) enabled for your account. |
 | Correct permissions | You must be either an account admin or a workspace admin, or have "Manage Transformations" user permissions. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -46,7 +46,7 @@ Here’s what it looks like for Typeform:
 ![Example Data Transformation code that maps the webhook to Braze user profiles.]({% image_buster /assets/img/data_transformation/data_transformation11.png %})
 
 {% alert note %}
-Braze Data Transformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) if you're interested in using this type of platform with Braze Data Transformation.
+Braze Data Transformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback]({{site.baseurl}}/user_guide/administer/personal/product_portal/) if you're interested in using this type of platform with Braze Data Transformation.
 {% endalert %}
 
 ## Step 4: Write transformation code

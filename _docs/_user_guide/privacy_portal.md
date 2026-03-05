@@ -1,7 +1,7 @@
 ---
 nav_title: Privacy portal
 article_title: Privacy Portal
-page_order: 60
+page_order: 9
 layout: dev_guide
 search_rank: 3
 guide_top_header: "Braze Privacy Portal"

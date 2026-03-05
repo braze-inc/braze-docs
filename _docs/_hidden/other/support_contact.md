@@ -1340,7 +1340,7 @@ var ticket_lookuptable = {
   'Label': '* What can we help you with?',
   'SelectDefault': 'Select a topic...',
   'LinksTitle': ['Marketer documentation','Developer documentation','Marketer troubleshooting guide','Frequently Asked Questions'],
-  'Links': ['{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/developer_guide/platform_wide/platform_features/','{{site.baseurl}}/help/home/','{{site.baseurl}}/help/faqs/'],
+  'Links': ['{{site.baseurl}}/user_guide/home/','{{site.baseurl}}/developer_guide/platform_wide/platform_features/','{{site.baseurl}}/help/home/','{{site.baseurl}}/help/faqs/'],
   'SelectOption': {
     'Technical Issue': {
       'Label': '* Category',
@@ -1619,7 +1619,7 @@ var ticket_lookuptable = {
                 'Email' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['Create an Email Campaign with the Drag-And-Drop Editor','Create an Email Campaign with the HTML Editor'],
-                  'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/','{{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/']
+                  'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/','{{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/']
                 },
                 'Push' : {
                   'ShowSubmit': true,
@@ -1643,8 +1643,8 @@ var ticket_lookuptable = {
                 },
                 'SMS and MMS' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Create an SMS Campaign','Create an MMS Campaign'],
-                  'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/','{{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/']
+                  'LinksTitle': ['Create an SMS, MMS, or RCS Message'],
+                  'Links' : ['{{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/create/']
                 },
                 'WhatsApp' : {
                   'ShowSubmit': true,

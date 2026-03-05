@@ -1,5 +1,5 @@
 ---
-nav_title: Data distribution
+nav_title: Distribution
 article_title: Data Distribution
 page_order: 3
 layout: dev_guide

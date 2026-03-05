@@ -1,5 +1,5 @@
 ---
-nav_title: Data unification
+nav_title: Unification
 article_title: Data Unification
 page_order: 1
 layout: dev_guide
@@ -16,12 +16,12 @@ guide_featured_list:
   - name: Data Transformation
     link: /docs/user_guide/data/unification/data_transformation/
     image: /assets/img/braze_icons/database-01.svg
-  - name: User Data Collection
-    link: /docs/user_guide/data/unification/user_data_collection/
-    image: /assets/img/braze_icons/users-01.svg
   - name: Create a Formula
     link: /docs/user_guide/data/unification/creating_a_formula/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: User data
+    link: /docs/user_guide/data/unification/user_data/
+    image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title2: "Related articles"
 guide_menu_list2:
