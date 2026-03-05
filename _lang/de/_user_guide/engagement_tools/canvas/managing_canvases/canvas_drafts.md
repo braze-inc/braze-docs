@@ -1,5 +1,5 @@
 ---
-nav_title: Speichern von Entwürfen für Canvas
+nav_title: Entwürfe für Canvas speichern
 article_title: Entwürfe für Canvas speichern
 alias: "/save_as_draft/"
 page_order: 1
@@ -8,7 +8,7 @@ page_type: reference
 tool: Canvas
 ---
 
-# Speichern von Entwürfen für Canvas
+# Entwürfe für Canvas speichern
 
 > Während Sie Canvases erstellen und starten, können Sie ein aktives Canvas bearbeiten und als Entwurf speichern, so dass Sie Ihre Änderungen vor dem nächsten Start testen können. 
 
@@ -16,7 +16,7 @@ Wenn Sie ein aktives Canvas haben, das umfangreiche Änderungen erfordert, könn
 
 Wie bei jedem Canvas kann jeweils nur ein Benutzer einen Entwurf bearbeiten, und ein Canvas kann jeweils nur einen Entwurf haben. Für diese Entwürfe gibt es noch keine Analysen, da die Entwurfsänderungen noch nicht eingeführt wurden.
 
-\![Ein Beispiel für einen Canvas-Entwurf mit einem Banner, das den Nutzer:innen anzeigt, dass sie einen Canvas-Entwurf bearbeiten und die Möglichkeit haben, den aktiven Canvas anzuzeigen. In der Fußzeile haben Sie die Möglichkeit, zur Analyseansicht zurückzukehren, als Entwurf zu speichern oder den Entwurf zu starten.]({% image_buster /assets/img_archive/canvas_draft1.png %})
+![Ein Beispiel für einen Canvas-Entwurf mit einem Banner, das den Nutzer:innen anzeigt, dass sie einen Canvas-Entwurf bearbeiten und die Möglichkeit haben, den aktiven Canvas anzuzeigen. In der Fußzeile haben Sie die Möglichkeit, zur Analyseansicht zurückzukehren, als Entwurf zu speichern oder den Entwurf zu starten.]({% image_buster /assets/img_archive/canvas_draft1.png %})
 
 ## Einen Entwurf erstellen
 

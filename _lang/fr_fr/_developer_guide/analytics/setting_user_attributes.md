@@ -1,11 +1,11 @@
 ---
-nav_title: "Définition des attributs de l'utilisateur"
-article_title: "Définition des attributs de l'utilisateur via le SDK de Braze"
-page_order: 1.1
+nav_title: "Définir les attributs de l'utilisateur"
+article_title: "Définir les attributs de l'utilisateur via le SDK de Braze"
+page_order: 1.2
 description: "Découvrez comment définir les attributs de l'utilisateur via le SDK de Braze."
 ---
 
-# Définition des attributs de l'utilisateur
+# Définir les attributs de l'utilisateur
 
 > Découvrez comment définir les attributs de l'utilisateur via le SDK de Braze.
 
@@ -14,6 +14,10 @@ Pour les SDK wrapper non répertoriés, utilisez plutôt la méthode native Andr
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/analytics/setting_user_attributes.md %}
 {% endsdktab %}
@@ -22,15 +26,16 @@ Pour les SDK wrapper non répertoriés, utilisez plutôt la méthode native Andr
 {% multi_lang_include developer_guide/swift/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
+{% sdktab flutter %}
+{% multi_lang_include developer_guide/flutter/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
+{% sdktab roku %}
+{% multi_lang_include developer_guide/roku/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/analytics/setting_user_attributes.md %}
-{% endsdktab %}
 {% endsdktabs %}

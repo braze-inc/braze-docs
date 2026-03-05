@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Friendbuy
 
-> Nutzen Sie die Integration zwischen Friendbuy und Braze, um Ihre E-Mail- und SMS-Funktionen zu erweitern und gleichzeitig die Kommunikation Ihrer Empfehlungen und Kundenbindungs-Programme mühelos zu automatisieren. Braze erstellt Kundenprofile für alle Opt-in-Telefonnummern, die über Friendbuy erfasst wurden.
+> Nutzen Sie die Integration zwischen [Friendbuy](https://www.friendbuy.com/) und Braze, um Ihre E-Mail- und SMS-Funktionen zu erweitern und gleichzeitig die Kommunikation Ihrer Empfehlungen und Kundenbindungs-Programme mühelos zu automatisieren. Braze erstellt Kundenprofile für alle Opt-in-Telefonnummern, die über Friendbuy erfasst wurden.
 
 _Diese Integration wird von Friendbuy gepflegt._
 

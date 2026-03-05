@@ -21,14 +21,14 @@ Die folgenden Attribute sollten für das Objekt `Braze.User` festgelegt werden:
 Um ein Standardattribut für Nutzer:innen festzulegen, stellen Sie das entsprechende Feld auf dem gemeinsamen Objekt `Braze.User` ein. Im Folgenden sehen Sie ein Beispiel für die Einstellung des Attributs Vorname:
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(firstName: "Alex")
 ```
 
 {% endtab %}
-{% tab objektiv-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user setFirstName:@"Alex"];
@@ -42,14 +42,14 @@ AppDelegate.braze?.user.set(firstName: "Alex")
 Um ein Standardattribut für Nutzer:innen zu deaktivieren, übergeben Sie `nil` an die entsprechende Methode.
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(firstName: nil)
 ```
 
 {% endtab %}
-{% tab objektiv-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user setFirstName:nil];
@@ -69,7 +69,7 @@ Angepasste Attributwerte haben eine maximale Länge von 255 Zeichen; längere We
 ### Anpassen der Attribute
 
 {% tabs local %}
-{% tab String %}
+{% tab string %}
 So legen Sie ein angepasstes Attribut mit einem `string` Wert fest:
 
 {% subtabs %}
@@ -87,7 +87,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "yo
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Ganzzahl %}
+{% tab integer %}
 So passen Sie ein angepasstes Attribut mit einem `integer` Wert an:
 
 {% subtabs %}
@@ -105,7 +105,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Gleitkommazahlen %}
+{% tab floating-points %}
 Braze behandelt die Werte von `float` und `double` in unserer Datenbank gleich. So legen Sie ein angepasstes Attribut mit einem doppelten Wert fest:
 
 {% subtabs %}
@@ -141,7 +141,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBool
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Datum %}
+{% tab date %}
 So legen Sie ein angepasstes Attribut mit einem `date` Wert fest:
 
 {% subtabs %}
@@ -159,8 +159,8 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Array %}
-Die maximale Anzahl von Elementen in [benutzerdefinierten Attribut-Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) ist standardmäßig auf 25 festgelegt. Arrays, die die maximale Anzahl von Elementen überschreiten, werden so abgeschnitten, dass sie die maximale Anzahl von Elementen enthalten. Das Maximum für einzelne Arrays kann auf bis zu 100 erhöht werden. Wenn Sie möchten, dass dieser Höchstbetrag erhöht wird, wenden Sie sich an Ihren Kundenbetreuer.
+{% tab array %}
+Die maximale Anzahl von Elementen in [benutzerdefinierten Attribut-Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) ist standardmäßig auf 25 festgelegt. Arrays, die die maximale Anzahl von Elementen überschreiten, werden so abgeschnitten, dass sie die maximale Anzahl von Elementen enthalten. Das Maximum für einzelne Arrays kann auf bis zu 100 erhöht werden. Wenn Sie diese Höchstgrenze erhöhen möchten, wenden Sie sich an Ihren Manager:in für den Kundendienst.
 
 So passen Sie ein angepasstes Attribut mit einem `array` Wert an:
 
@@ -197,14 +197,14 @@ AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value:
 Dieser Code ist ein Beispiel für ein inkrementelles benutzerdefiniertes Attribut. Sie können den Wert eines angepassten Attributs um einen beliebigen `integer` oder `long` Wert erhöhen:
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", by: incrementIntegerValue)
 ```
 
 {% endtab %}
-{% tab objektiv-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user incrementCustomUserAttribute:@"your_attribute_key" by:incrementIntegerValue];
@@ -216,7 +216,7 @@ AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", 
 ### Angepasste Attribute nicht anpassen
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `unsetCustomAttribute`.
 
 ```swift
@@ -224,7 +224,7 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 ```
 
 {% endtab %}
-{% tab objektiv-c %}
+{% tab objective-c %}
 Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `unsetCustomAttributeWithKey`.
 
 ```objc
@@ -239,7 +239,7 @@ Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechende
 Sie können auch Eigenschaften innerhalb angepasster Attribute verschachteln. Im folgenden Beispiel wird ein `favorite_book` Objekt mit verschachtelten Eigenschaften als angepasstes Attribut auf das Nutzerprofil gesetzt. Weitere Einzelheiten finden Sie unter [Verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 ```swift
 let favoriteBook: [String: Any?] = [
   "title": "The Hobbit",
@@ -251,7 +251,7 @@ braze.user.setCustomAttribute(key: "favorite_book", dictionary: favoriteBook)
 ```
 {% endtab %}
 
-{% tab objektiv-c %}
+{% tab objective-c %}
 ```objc
 NSDictionary *favoriteBook = @{
   @"title": @"The Hobbit",
@@ -286,14 +286,14 @@ Die Benutzer werden bei Erhalt einer gültigen E-Mail-Adresse automatisch auf `s
 ### Einstellen von E-Mail-Abonnements
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(emailSubscriptionState: Braze.User.SubscriptionState)
 ```
 
 {% endtab %}
-{% tab objektiv-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user setEmailSubscriptionState: BRZUserSubscriptionState]
@@ -305,14 +305,14 @@ AppDelegate.braze?.user.set(emailSubscriptionState: Braze.User.SubscriptionState
 ### Abonnements für Push-Benachrichtigungen einstellen
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(pushNotificationSubscriptionState: Braze.User.SubscriptionState)
 ```
 
 {% endtab %}
-{% tab objektiv-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user setPushNotificationSubscriptionState: BRZUserSubscriptionState]

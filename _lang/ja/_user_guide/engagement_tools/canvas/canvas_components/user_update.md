@@ -2,7 +2,7 @@
 nav_title: ユーザー更新
 article_title: ユーザーの更新 
 alias: "/user_update/"
-page_order: 6
+page_order: 12
 page_type: reference
 description: "この記事では、ユーザー更新コンポーネントの概要と、そのキャンバスでの使用方法を説明します。"
 tool: Canvas

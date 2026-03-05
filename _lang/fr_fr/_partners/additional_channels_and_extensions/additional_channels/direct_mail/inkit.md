@@ -40,17 +40,17 @@ Pour créer un modèle de webhook Inkit à utiliser dans de futures campagnes ou
 
 Si vous souhaitez créer une campagne webhook Inkit unique ou utiliser un modèle existant, sélectionnez **Webhook** à Braze lors de la création d'une nouvelle campagne.
 
-![Une sélection de modèles de webhook prédéfinis disponibles dans l'onglet Modèles de webhook de la section Modèles et médias.]({% image_buster /assets/img/inkit-webhook-template.png %})
+![Une sélection de modèles de webhook prédéfinis disponibles dans l'onglet Modèles de webhook de la section Modèles & Media.]({% image_buster /assets/img/inkit-webhook-template.png %})
 
 Une fois que vous avez sélectionné le modèle de webhook Inkit, vous devriez voir ce qui suit :
 - **URL du webhook** : Blanc
 - **Corps de la requête** : Texte brut
 
-Dans le champ URL du webhook, vous devez [créer](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) et saisir une URL de webhook Inkit.
+Dans le champ Webhook URL, [créez](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) et saisissez une URL webhook Inkit.
 
-![Code du corps de la requête et URL du webhook affichés dans l'onglet de composition du générateur webhook Braze.]({% image_buster /assets/img/inkit-integration.png %})
+![Code du corps de la requête et URL du webhook affichés dans l'onglet de composition du générateur de webhooks Braze.]({% image_buster /assets/img/inkit-integration.png %})
 
-#### En-têtes et méthode de la requête
+#### En-têtes de requête et méthode
 
 Inkit a besoin d’un paramètre `HTTP Header` pour l'autorisation, y compris pour votre clé API Inkit encodée en base 64. Ce qui suit sera déjà inclus dans le modèle en tant que paire clé-valeur, mais dans l'onglet **Paramètres**, vous devez remplacer le `<INKIT_API_TOKEN>` par votre clé API Inkit.
 

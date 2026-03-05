@@ -22,7 +22,7 @@ To create and manage custom attributes in the dashboard, go to **Data Settings**
 The **Last updated** column lists the last time the custom attribute was edited, such as when it was last set to blocklist or active.
 
 {% alert important %}
-For proper message targeting, be sure that your custom attribute data type matches the actual custom attribute.
+For proper message targeting, be sure that your custom attribute data type matches the actual custom attribute. <br><br>For example, if `newsletter_subscribed` is defined as a string, your Liquid syntax should look like {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == 'true' %}```{% endraw %}. If `newsletter_subscribed` is defined as a Boolean, the Liquid syntax shouldn't have single-quotation marks: {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == true %}```{% endraw %}.
 {% endalert %}
 
 From this page, you can view, manage, create, or blocklist existing custom attributes. Select the menu next to a custom attribute for the following actions:
@@ -158,9 +158,7 @@ Note that if you input any values with spaces in between, before, or after words
 | Check if the string attribute **does not partially match any** of the inputted strings | **DOESN'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed (256 maximum) | If this filter specifies `gold` and a user profile doesn't contain `gold` in any string, the user will match this filter.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-A date string such as "12-1-2021" or "12/1/2021" will be converted to a datetime object and treated as a [time attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time).
-{% endalert %}
+{% multi_lang_include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 When segmenting using the **DOES NOT MATCH REGEX** filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.
@@ -170,7 +168,7 @@ When segmenting using the **DOES NOT MATCH REGEX** filter, you must already have
 
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
-By default, the length of an array for an attribute is up to 500 items. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 500, when a user watches a 501st movie, the first movie will be removed from the array, and the most recent movie will be added.
+Arrays have a maximum size of 100&nbsp;KB. The default length for an attribute is up to 500 items. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 500, when a user watches a 501st movie, the first movie will be removed from the array, and the most recent movie will be added. 
 
 Note that if you input any values with spaces in between, before, or after words, Braze will also check for the same spaces.
 

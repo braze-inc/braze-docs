@@ -35,22 +35,22 @@ En Braze, ve a **Integraciones de socios** > **Socios tecnológicos** y seleccio
 
 Antes de crear tu conexión de datos en Treasure Data, tendrás que autenticarte. Primero, selecciona **Centro de integraciones** y, a continuación, **Catálogo**.
 
-![Catálogo de Treasure Data Integrations Hub]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
+![Catálogo del Hub de Integraciones de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
 
 Busque la integración Braze en el **catálogo**, pase el ratón por encima del icono y seleccione **Crear autenticación**. Introduzca sus credenciales, asigne un nombre a la autenticación y seleccione **Hecho**.
 
-![Catálogo de Treasure Data Integrations Hub]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
+![Catálogo del Hub de Integraciones de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
 
 ### Paso 3: Define la audiencia de tu cohorte
 
 Sincronice sus cohortes con Braze mediante una activación en **Audience Studio** o ejecutando una consulta en **Data Workbench**.
 
 {% alert important %}
-Sólo se añadirán o eliminarán de una cohorte los usuarios que ya existan en Braze. La importación de cohortes no creará nuevos usuarios en Braze.
+Sólo se añaden o eliminan de una cohorte los usuarios que ya existen en Braze. La importación de cohortes no creará nuevos usuarios en Braze.
 {% endalert %}
 
 {% tabs local %}
-{% tab Workbench de datos %}
+{% tab Data Workbench %}
 #### Paso 3.1: Define tu consulta
 
 {% alert note %}
@@ -61,7 +61,7 @@ Las columnas de consulta deben especificarse con los nombres de columna y el tip
 2. Seleccione **Nueva consulta**.
 3. Ejecute la consulta para validar el conjunto de resultados.
 
-![Catálogo de Treasure Data Integrations Hub]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
+![Catálogo del Hub de Integraciones de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
 
 ##### Casos de uso: Sincronización de cohortes por identificador
 
@@ -69,7 +69,7 @@ Las columnas de consulta deben especificarse con los nombres de columna y el tip
 {% subtab Syncing External IDs %}
 Aquí tienes una tabla de ejemplo en Treasure Data:
 
-| external_id |	correo electrónico	| Id_dispositivo |
+| external_id |	correo electrónico	| device_ids |
 | ----------- | ----------- | ----------- |
 | `TDCohort1`	| `TDCohort1@gmail.com`	| `1a2b3c` |
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
@@ -100,7 +100,7 @@ Tras ejecutar la consulta, estos alias de usuario se añadirán a la cohorte en 
 {% subtab Syncing User Aliases %}
 Aquí tienes una tabla de ejemplo en Treasure Data:
 
-| external_id |	correo electrónico	| Id_dispositivo |
+| external_id |	correo electrónico	| device_ids |
 | ----------- | ----------- | ----------- |
 | `TDCohort1`	| `TDCohort1@gmail.com`	| `1a2b3c` |
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
@@ -127,7 +127,7 @@ Tras ejecutar la consulta, estos alias de usuario se añadirán a la cohorte en 
 {% subtab Syncing Device IDs %}
 Aquí tienes una tabla de ejemplo en Treasure Data:
 
-| external_id |	correo electrónico	| Id_dispositivo |
+| external_id |	correo electrónico	| device_ids |
 | ----------- | ----------- | ----------- |
 | `TDCohort1`	| `TDCohort1@gmail.com`	| `1a2b3c` |
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
@@ -160,7 +160,7 @@ Tras ejecutar la consulta, estos ID de dispositivo se añadirán a la cohorte en
 
 Una vez creada la consulta, seleccione **Exportar resultados**. Puede seleccionar una autenticación existente, como la creada en los últimos pasos, o crear una nueva autenticación que se utilizará para la salida. 
 
-![Catálogo de Treasure Data Integrations Hub]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
+![Catálogo del Hub de Integraciones de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
 
 
 | Asignación de resultados de exportación |	Descripción	| 
@@ -178,7 +178,7 @@ Sigue [los pasos de Treasure Data](https://docs.treasuredata.com/articles/#!int/
 Guarde la consulta con un nombre y ejecútela, o simplemente ejecútela. Una vez completada con éxito la consulta, el resultado de la misma se exporta automáticamente a Braze.
 
 {% endtab %}
-{% tab Estudio de audiencia %}
+{% tab Audience Studio %}
 #### Paso 3.1: Crear una activación
 
 Cree un nuevo segmento o elija un segmento existente para sincronizarlo con Braze como cohorte. Dentro del segmento, seleccione **Crear activación**.
@@ -200,7 +200,7 @@ Cree un nuevo segmento o elija un segmento existente para sincronizarlo con Braz
 
 #### Paso 3.3: Configurar la asignación de salidas
 
-![Activación de la integración de datos de Treasure Data Mapeado de salida]({% image_buster /assets/img/treasure_data/cohort/cohort6.png %}) 
+![Activación de integraciones de datos de Treasure Data Mapeado de resultados]({% image_buster /assets/img/treasure_data/cohort/cohort6.png %}) 
 
 | Asignación de salida de activación |	Descripción	| 
 | ----------- | ----------- |
@@ -227,7 +227,7 @@ Defina el calendario de sincronización que desee y guarde la activación.
 
 En Braze, vaya a **Segmentos**, cree un nuevo segmento y seleccione **Cohortes de datos de tesorería** como filtro. Desde aquí, puedes elegir qué cohorte de Treasure Data deseas incluir. Una vez creado su segmento de cohorte de Treasure Data, puede seleccionarlo como filtro de audiencia al crear una campaña o Canvas.
 
-![Catálogo de Treasure Data Integrations Hub]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
+![Catálogo del Hub de Integraciones de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
 
 ## Coincidencia de usuarios
 

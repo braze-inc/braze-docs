@@ -35,7 +35,7 @@ You must be a Dixa administrator to configure integrations within Dixa. For the 
 
 ![]({% image_buster /assets/img/dixa/dixa-create-integration.png %}){: style="width:450px;"}
 
-### Step 1: Create the integration in Dixa
+### 1단계: Create the integration in Dixa
 
 On the **Create Braze widget** page, fill in the following required fields to create the integration:
 
@@ -71,11 +71,11 @@ Choose to show or hide the user's custom Braze events.
 
 #### Display a list of purchases
 
-Choose to show or hide a list products purchased by the user. Here, you can see how many times it was purchased. To view the first and last purchase date, hover above the item. 
+사용자가 구매한 제품 목록을 표시하거나 숨기도록 선택합니다. 여기에서 사용자가 제품을 구매한 횟수를 확인할 수 있습니다. 첫 구매 날짜와 마지막 구매 날짜를 보려면 항목 위로 마우스를 가져갑니다. 
 
 ### Example integration
 
-The following shows an example of the integration:
+다음은 통합의 예를 보여줍니다:
 
-![The Braze and Dixa integration in Dixa that displays a user's email subscription state, custom attributes, custom events, and purchases.]({% image_buster /assets/img/dixa/dixa-braze-integration.png %}){: style="width:350px;"}
+![사용자의 이메일 구독 상태, 사용자 지정 속성, 사용자 지정 이벤트 및 구매를 표시하는 Braze와 Dixa의 통합 기능입니다.]({% image_buster /assets/img/dixa/dixa-braze-integration.png %}){: style="width:350px;"}
 

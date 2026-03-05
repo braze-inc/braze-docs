@@ -8,7 +8,7 @@ Pour obtenir la liste complète des types, fonctions, variables et autres, consu
 
 Avant de commencer, vérifiez que votre environnement est pris en charge par la [dernière version du SDK Braze Unity](https://github.com/braze-inc/braze-unity-sdk/releases).
 
-### Étape 1 : Choisissez votre package Braze Unity
+### Étape 1 : Choisissez votre package Braze Unity
 
 {% tabs %}
 {% tab Android %}
@@ -39,7 +39,7 @@ Le package Braze Unity est disponible au téléchargement sur la [page des versi
   - Pour importer automatiquement `SDWebImage`, veillez à *cocher* la case à côté de `Import SDWebImage dependency` dans l'interface utilisateur Unity sous Configuration Braze.
 
 {% alert note %}
-Pour savoir si vous avez besoin de la dépendance [SDWebimage](https://github.com/SDWebImage/SDWebImage) pour votre projet iOS, consultez le site [iOS in-app message documentation]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/).
+Pour savoir si vous avez besoin de la dépendance [SDWebimage](https://github.com/SDWebImage/SDWebImage) pour votre projet iOS, consultez la [documentation sur les messages in-app d'iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/).
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -175,7 +175,7 @@ Si votre application utilise déjà une autre sous-classe `UnityAppController`, 
 
 ## Personnaliser le package Unity
 
-### Étape 1 : Cloner le dépôt
+### Étape 1 : Cloner le dépôt
 
 Dans votre terminal, clonez le [dépôt GitHub Braze Unity SDK](https://github.com/braze-inc/braze-unity-sdk), puis naviguez jusqu'à ce dossier :
 

@@ -131,7 +131,7 @@ El archivo que contiene los artefactos de Redpoint Data Management (RPDM) para s
 
 #### Paso 4a: Actualiza la automatización RPI a Braze con tu punto final REST Braze y el directorio de salida RPI base 
 
-Después de importar los artefactos relacionados con Braze en Redpoint Data Management, abra la automatización denominada **AUTO_Process_RPI_to_Braze** y actualice las dos variables de automatización siguientes con los valores de su entorno:
+Tras importar los artefactos relacionados con Braze en Redpoint Data Management, abre la automatización denominada **AUTO_Process_RPI_to_Braze** y actualiza las dos variables de automatización siguientes con los valores de tu entorno:
 
 * **BRAZE_API_URL**: El punto final REST Braze
 * **BASE_OUTPUT_DIRECTORY**: El directorio de salida compartido entre Redpoint Interaction y Redpoint Data Management
@@ -140,7 +140,7 @@ Después de importar los artefactos relacionados con Braze en Redpoint Data Mana
 
 #### Paso 4b: Actualizar el proyecto de anexión de RPI a Braze 
 
-El proyecto de gestión de datos de Redpoint denominado **PROJ_RPI_to_Braze_Append** contiene el esquema del archivo de exportación de entrega saliente y las asignaciones para el objeto de atributo personalizado `rpi_cdp_attributes` en Braze. 
+El proyecto de gestión de datos de Redpoint llamado **PROJ_RPI_to_Braze_Append** contiene el esquema del archivo de exportación de entrega saliente y los mapeados del objeto atributo personalizado `rpi_cdp_attributes` en Braze. 
 
 Actualice el esquema de entrada de archivos y la herramienta de inyección de documentos denominada **RPI a Braze Document Injector** con cualquier atributo CDP personalizado adicional definido en su plantilla de archivo de exportación. Este ejemplo muestra la asignación adicional de educación, ingresos y estado civil:
 

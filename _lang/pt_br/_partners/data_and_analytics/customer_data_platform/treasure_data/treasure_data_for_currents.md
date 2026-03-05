@@ -25,7 +25,7 @@ A integração entre a Braze e o Treasure Data permite que você controle perfei
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-O Treasure Data registra cada evento em lotes. Para saber mais sobre como consultar o Treasure Data para obter contagens de eventos, consulte [Integração de importação do Braze Currents](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration).
+O Treasure Data registra cada evento em lotes. Para saber mais sobre como consultar o Treasure Data para obter contagens de eventos, consulte [Consulta de dados](https://docs.treasuredata.com/articles/int/braze-currents-import-integration/a/h2__592056238).<br><br>Se estiver procurando integrar-se ao novo conector de fluxo de dados do Treasure Data, consulte as etapas de configuração detalhadas em [Integração de importação de fluxo de dados do Braze Currents](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration/q/braze/qid/72364/qp/4). Em caso de dúvidas sobre a integração ou a configuração no Braze, entre em contato com a equipe da sua conta Braze.
 {% endalert %}
 
 ## Integração
@@ -47,7 +47,7 @@ Na Braze, navegue até **Currents** > **\+ Criar Current** > **Exportação do T
 Todos os eventos enviados ao Treasure Data incluirão o endereço `external_user_id` do usuário. No momento, a Braze não envia dados de eventos ao Treasure Data para usuários que não definiram o `external_user_id`.
 
 {% alert important %}
-Mantenha o URL do Treasure Data atualizada. Se o URL de seu conector estiver incorreto, o Braze não poderá enviar eventos. Se isso persistir por mais de 48 horas, os eventos do conector serão descartados, e os dados serão perdidos permanentemente.
+Mantenha o URL do Treasure Data atualizada. Se o URL de seu conector estiver incorreto, o Braze não poderá enviar eventos. Se isso persistir por mais de **5 dias**, os eventos do conector serão descartados e os dados serão perdidos permanentemente.
 {% endalert %}
 
 #### Exemplo de valor de campo de evento

@@ -1,12 +1,12 @@
 ## Pré-requisitos
 
-Antes de começar este tutorial, verifique se o seu SDK Braze atende aos requisitos mínimos de versão:
+Antes de iniciar este tutorial, verifique se o SDK do Braze atende aos requisitos mínimos de versão:
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
-## Exibindo banners para o SDK Android
+## Exibição de banners para o Android SDK
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Exibindo Banners Android" %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Displaying Banners Android" %}
 
 {% scrolly %}
 
@@ -89,32 +89,32 @@ class MainActivity : ComponentActivity() {
 </ScrollView>
 ```
 
-!!etapa
+!!!etapa
 linhas-MainApplication.kt=12
 
-#### 1\. Ativar depuração (opcional)
+#### 1\. Ativar a depuração (opcional)
 
-Para facilitar a solução de problemas durante o desenvolvimento, considere ativar a depuração.
+Para facilitar a solução de problemas durante o desenvolvimento, considere a possibilidade de ativar a depuração.
 
-!!etapa
-linhas-MainApplication.kt=21-28
+!!!etapa
+Linhas -MainApplication.kt=21-28
 
-#### 2\. Inscreva-se para atualizações de Banner
+#### 2\. Assine as atualizações do Banner
 
-Use `subscribeToBannersUpdates()` para registrar um manipulador que será executado sempre que um Banner for atualizado.
+Use `subscribeToBannersUpdates()` para registrar um manipulador que é executado sempre que um banner é atualizado.
 
-!!etapa
+!!!etapa
 linhas-MainActivity.kt=10-14
 
 #### 3\. Atualize suas colocações
 
-Após inicializar o SDK Braze, chame `requestBannersRefresh(["PLACEMENT_ID"])` para buscar o conteúdo mais recente do Banner para essa colocação.
+Depois de inicializar o SDK do Braze, chame `requestBannersRefresh(["PLACEMENT_ID"])` para buscar o conteúdo mais recente do Banner para esse posicionamento.
 
-!!etapa
-linhas-banners.xml=15-19
+!!!etapa
+Linhas -banners.xml=15-19
 
 #### 4\. Defina `BannerView` em seu `banners.xml`
 
-Em `banners.xml`, declare um elemento `<com.braze.ui.banners.BannerView>` com `app:placementId="PLACEMENT_ID"`. O Braze usará este elemento para inserir seu Banner na sua interface de usuário.
+Em `banners.xml`, declare um elemento `<com.braze.ui.banners.BannerView>` com `app:placementId="PLACEMENT_ID"`. O Braze usará esse elemento para inserir seu banner em sua UI.
 
 {% endscrolly %}

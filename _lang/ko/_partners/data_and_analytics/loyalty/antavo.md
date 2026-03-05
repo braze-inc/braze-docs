@@ -39,11 +39,11 @@ Provide the following credentials:
 - **API Token (Identifier):** The Braze REST API key that Antavo should use when sending requests to Braze.
 - **App Identifier:** The Braze app identifier.
 
-After you enter the credentials, click **Connect**.
+자격 증명을 입력한 후 **연결**을 클릭합니다.
 
-![Connect Braze screen in Antavo with Instance URL, API Token, and App Identifier.]({% image_buster /assets/img/antavo/connect_braze.png %})
+![인스턴스 URL, API 토큰 및 앱 식별자를 사용하여 Antavo에서 Braze 화면을 연결합니다.]({% image_buster /assets/img/antavo/connect_braze.png %})
 
-### Step 2: Configure field mapping
+### 2단계: Configure field mapping
 
 After the connection is established, you’ll be redirected to the **Sync Fields** page automatically in Antavo to configure the field synchronization between the two systems.   You can reach this page at any time through **Modules** > **Braze**.
 
@@ -58,25 +58,25 @@ You can find your list of custom attributes in Braze under **Data Settings** > *
 {% endalert %}
 
 {:start="4"}
-4\. To add additional field pairings, repeat steps 1–3.
+4\. 필드 페어링을 추가하려면 1~3단계를 반복합니다.
 5\. To remove a field from the list of synchronized data, click <i class="fa-solid fa-rectangle-xmark" title="Delete"></i> at the end of the row.
 6\. Click **Save**.
 
-When any value of the configured fields changes in Antavo, not only the synchronization of that single value is triggered, but every field added to the field mapping is included in the request.
+Antavo에서 구성된 필드의 값이 변경되면 해당 단일 값의 동기화가 트리거될 뿐만 아니라 필드 매핑에 추가된 모든 필드가 요청에 포함됩니다.
 
-![Sync Fields page in Antavo.]({% image_buster /assets/img/antavo/data_field_mapping.png %})
+![Antavo의 필드 동기화 페이지.]({% image_buster /assets/img/antavo/data_field_mapping.png %})
 
 {% alert important %}
-To minimize data point consumption, we recommend only mapping the fields that will be actioned on within Braze.
+데이터 포인트 사용량을 최소화하려면 Braze 내에서 작업할 필드만 매핑하는 것이 좋습니다.
 {% endalert %}
 
 #### Supported data types
 
-The integration supports all Braze custom attribute [data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage), namely: number (integer, float), string, array, boolean, object, array of objects, and date.
+이 통합은 숫자(정수, 플로트), 문자열, 배열, 부울, 오브젝트, 오브젝트 배열, 날짜 등 모든 Braze 커스텀 속성 [데이터 유형]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage)을 지원합니다.
 
-![Braze profile showing different custom attributes.]({% image_buster /assets/img/antavo/braze_profile.png %})
+![다양한 커스텀 속성을 보여주는 Braze 프로필.]({% image_buster /assets/img/antavo/braze_profile.png %})
 
-The data fields are populated based on the configured field mapping.
+데이터 필드는 구성된 필드 매핑에 따라 채워집니다.
 
 ## Triggers
 

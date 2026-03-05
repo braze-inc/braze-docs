@@ -1,6 +1,6 @@
 ---
-nav_title: セッションを追跡する
-article_title: iOS のセッションを追跡する
+nav_title: トラッキング、 追跡セッション
+article_title: iOS用トラックセッション
 platform: iOS
 page_order: 0
 description: "このリファレンス記事では、iOS アプリケーションのセッション最新情報を配信登録する方法を説明します。"

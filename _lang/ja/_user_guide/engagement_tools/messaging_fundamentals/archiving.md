@@ -1,7 +1,7 @@
 ---
 nav_title: アーカイブ
 article_title: アーカイブ
-page_order: 3
+page_order: 2
 page_type: reference
 description: "この参照記事では、キャンペーンとキャンバスをアーカイブする方法について説明します。"
 tool:

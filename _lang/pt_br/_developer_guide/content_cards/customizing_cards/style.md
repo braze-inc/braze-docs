@@ -1,6 +1,6 @@
 ---
 nav_title: Estilo
-article_title: Personalização do estilo dos cartões de conteúdo
+article_title: Personalize o estilo dos cartões de conteúdo
 page_order: 1
 description: "Este artigo cobre opções de estilo para seus Cartões de Conteúdo."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Personalização do estilo dos cartões de conteúdo
+# Personalize o estilo dos cartões de conteúdo
 
 > Os Cartões de Conteúdo da Braze vêm com uma aparência padrão. Este artigo cobre opções de estilo para seus Cartões de Conteúdo para ajudá-lo a corresponder à identidade da sua marca. Para obter a lista completa dos tipos de cartões de conteúdo, consulte [Sobre cartões de conteúdo]({{site.baseurl}}/developer_guide/content_cards/).
 
@@ -20,7 +20,7 @@ platform:
 
 A interface padrão dos Cartões de Conteúdo é importada da camada de interface do SDK da Braze. A partir daí, você pode ajustar certas partes do estilo do cartão, a ordem em que os cartões são exibidos e como o feed é mostrado aos seus usuários.
 
-![Dois cartões de conteúdo, um com a fonte padrão e os cantos quadrados e outro com os cantos arredondados e uma fonte encaracolada]({% image_buster/assets/img/content_cards/content-card-customization-attributes.png %})
+![Dois cartões de conteúdo, um com a fonte padrão e cantos quadrados, e outro com cantos arredondados e uma fonte cursiva]({% image_buster/assets/img/content_cards/content-card-customization-attributes.png %})
 
 {% alert note %}
 Propriedades do cartão de conteúdo, como `title`, `cardDescription`, `imageUrl`, etc., são editáveis diretamente por meio do [dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details), que é o método preferido para alterar esses detalhes.
@@ -28,7 +28,18 @@ Propriedades do cartão de conteúdo, como `title`, `cardDescription`, `imageUrl
 
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+Os estilos padrão do Braze são definidos em CSS dentro do SDK do Braze. Substituindo estilos selecionados em seu aplicativo, é possível personalizar nosso feed padrão com suas próprias imagens de fundo, famílias de fontes, estilos, tamanhos, animações e muito mais. O seguinte é um exemplo de substituição que fará com que os cartões de conteúdo apareçam com 800 px de largura:
+
+``` css
+body .ab-feed {
+  width: 800px;
+}
+```
+
+{% endtab %}
+{% tab android %}
 
 Por padrão, os Cartões de Conteúdo do SDK do Android e do FireOS correspondem às diretrizes padrão da interface do usuário do Android para proporcionar uma experiência perfeita. Você pode ver esses estilos padrão no arquivo [`res/values/styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml) na distribuição do SDK Braze:
 
@@ -198,17 +209,6 @@ Personalizar cartões de conteúdo por meio de `Attributes` não é compatível 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-Os estilos padrão do Braze são definidos em CSS dentro do SDK do Braze. Substituindo estilos selecionados em seu aplicativo, é possível personalizar nosso feed padrão com suas próprias imagens de fundo, famílias de fontes, estilos, tamanhos, animações e muito mais. O seguinte é um exemplo de substituição que fará com que os cartões de conteúdo apareçam com 800 px de largura:
-
-``` css
-body .ab-feed {
-  width: 800px;
-}
-```
-
-{% endtab %}
 {% endtabs %}
 
 ## Exemplos de personalização
@@ -218,7 +218,19 @@ body .ab-feed {
 Personalizar a fonte usada em seus Cartões de Conteúdo permite que você mantenha sua identidade de marca e crie uma experiência visualmente atraente para seus usuários. Use estas receitas para definir a fonte de todos os Cartões de Conteúdo programaticamente. 
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+Assim como qualquer outro elemento da web, você pode personalizar facilmente a aparência dos cartões de conteúdo através do CSS. No seu arquivo CSS ou estilos embutidos, use a propriedade `font-family` e especifique o nome da fonte desejada ou a pilha de fontes.
+
+```css
+/* CSS selector targeting the Content Card element */
+.card-element {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+```
+
+{% endtab %}
+{% tab android %}
 
 Para alterar a fonte padrão programaticamente, defina um estilo para os cartões e use o atributo `fontFamily` para instruir a Braze a usar sua família de fontes personalizada.
 
@@ -279,28 +291,45 @@ Confira o [app de exemplo de Exemplos](https://github.com/braze-inc/braze-swift-
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-Assim como qualquer outro elemento da web, você pode personalizar facilmente a aparência dos cartões de conteúdo através do CSS. No seu arquivo CSS ou estilos embutidos, use a propriedade `font-family` e especifique o nome da fonte desejada ou a pilha de fontes.
-
-```css
-/* CSS selector targeting the Content Card element */
-.card-element {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-}
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Ícones fixados personalizados
 
 Ao criar um cartão de conteúdo, os profissionais de marketing têm a opção de fixar o cartão. Um cartão fixado será exibido no topo do feed do usuário e não poderá ser descartado pelo usuário. À medida que você personaliza os estilos do seu cartão, você tem a capacidade de alterar a aparência do ícone fixado.
 
-![Lado a lado da prévia do cartão de conteúdo no Braze para celular e Web com a opção "Fixar este cartão na parte superior do feed" selecionada.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
+![Lado a lado da prévia do cartão de conteúdo na Braze para Mobile e Web com a opção "Fixar este cartão no topo do feed" selecionada.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+A estrutura do ícone fixado do cartão de conteúdo é:
+
+```css
+<div class="ab-pinned-indicator">
+  <i class="fa fa-star"></i>
+</div>
+```
+
+Se você quiser usar um ícone diferente do FontAwesome, basta substituir o nome da classe do elemento `i` pelo nome da classe do ícone desejado. 
+
+Se você quiser trocar o ícone completamente, remova o elemento `i` e adicione o ícone personalizado como um filho de `ab-pinned-indicator`. Existem algumas formas diferentes de fazer isso, mas um método simples seria `replaceChildren()` no elemento `ab-pinned-indicator`.
+
+Por exemplo:
+
+```javascript
+// Get the parent element
+const pinnedIndicator = document.querySelector('.ab-pinned-indicator');
+
+// Create a new custom icon element
+const customIcon = document.createElement('span');
+customIcon.classList.add('customIcon');
+
+// Replace the existing icon with the custom icon
+pinnedIndicator.replaceChildren(customIcon);
+```
+
+{% endtab %}
+{% tab android %}
 
 Para definir um ícone fixado personalizado, substitua o estilo `Braze.ContentCards.PinnedIcon`. Seu ativo de imagem personalizado deve ser declarado no elemento `android:src`. Por exemplo:
 
@@ -377,45 +406,25 @@ A personalização do indicador de pin via `Attributes` não é compatível com 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-A estrutura do ícone fixado do cartão de conteúdo é:
-
-```css
-<div class="ab-pinned-indicator">
-  <i class="fa fa-star"></i>
-</div>
-```
-
-Se você quiser usar um ícone diferente do FontAwesome, basta substituir o nome da classe do elemento `i` pelo nome da classe do ícone desejado. 
-
-Se você quiser trocar o ícone completamente, remova o elemento `i` e adicione o ícone personalizado como um filho de `ab-pinned-indicator`. Existem algumas formas diferentes de fazer isso, mas um método simples seria `replaceChildren()` no elemento `ab-pinned-indicator`.
-
-Por exemplo:
-
-```javascript
-// Get the parent element
-const pinnedIndicator = document.querySelector('.ab-pinned-indicator');
-
-// Create a new custom icon element
-const customIcon = document.createElement('span');
-customIcon.classList.add('customIcon');
-
-// Replace the existing icon with the custom icon
-pinnedIndicator.replaceChildren(customIcon);
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Alterando a cor do indicador de não lido
 
 Os Cartões de Conteúdo contêm uma linha azul na parte inferior do cartão que indica se o cartão foi visualizado ou não. 
 
-![Dois cartões de conteúdo exibidos lado a lado. O primeiro cartão tem uma LINE azul na parte inferior, indicando que não foi visto. O segundo cartão não tem uma linha azul, o que indica que ele já foi visto.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
+![Dois cartões de conteúdo exibidos lado a lado. O primeiro cartão tem uma LINE azul na parte inferior, indicando que não foi visto. O segundo cartão não tem uma linha azul, indicando que já foi visto.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+Para alterar a cor do indicador de não lido de um cartão, adicione CSS personalizado à sua página da web. Por exemplo, para definir a cor do indicador não visualizado para verde:
+
+```css
+.ab-unread-indicator { background-color: green; }
+```
+
+{% endtab %}
+{% tab android %}
 
 Altere a cor da barra indicadora de não lida alterando o valor em `com_braze_content_cards_unread_bar_color` no seu arquivo `colors.xml`:
 
@@ -479,21 +488,22 @@ A personalização apenas do indicador não visualizado via `Attributes` não é
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-Para alterar a cor do indicador de não lido de um cartão, adicione CSS personalizado à sua página da web. Por exemplo, para definir a cor do indicador não visualizado para verde:
-
-```css
-.ab-unread-indicator { background-color: green; }
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Desativando indicador de não lido
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+Oculte a barra indicadora de não lida adicionando o seguinte estilo ao seu `css`:
+
+```css
+.ab-unread-indicator { display: none; }
+```
+
+{% endtab %}
+
+{% tab android %}
 
 Oculte a barra de indicador não lido configurando [`setUnreadBarVisible`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/-content-card-view-holder/set-unread-bar-visible.html?query=fun%20setUnreadBarVisible(isVisible:%20Boolean)) em `ContentCardViewHolder` para `false`. 
 
@@ -502,7 +512,6 @@ Oculte a barra de indicador não lido configurando [`setUnreadBarVisible`](https
 {% tab Jetpack Compose %}
 Desativar o indicador de não lido não é suportado no Jetpack Compose.
 {% endtab %}
-
 {% tab swift %}
 {% subtabs %}
 {% subtab Swift %}
@@ -516,14 +525,5 @@ A personalização apenas do indicador não visualizado via `Attributes` não é
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab web %}
-
-Oculte a barra indicadora de não lida adicionando o seguinte estilo ao seu `css`:
-
-```css
-.ab-unread-indicator { display: none; }
-```
-
 {% endtab %}
 {% endtabs %}

@@ -65,7 +65,7 @@ Nehmen wir zum Beispiel an, wir haben eine Kampagne mit einem angepassten Event 
 Das Trigger-Ereignis "Sitzung starten" kann das allererste Öffnen der App durch den Nutzer sein, wenn das Segment Ihrer Kampagne für neue Nutzer gilt. (zum Beispiel, wenn Ihr Segment aus Nutzern ohne Sitzungen besteht).
 {% endalert %}
 
-Denken Sie daran, dass Sie eine ausgelöste Kampagne immer noch an ein bestimmtes Nutzersegment senden können. Nutzer, die nicht zu diesem Segment gehören, erhalten die Kampagne also nicht, selbst wenn sie das Auslöseereignis abschließen. Wenn Sie feststellen, dass Nutzer:innen die Kampagne nicht erhalten, obwohl sie sich für das Segment qualifiziert haben, lesen Sie unseren Abschnitt darüber, [warum ein Nutzer eine getriggerte Kampagne nicht erhalten haben könnte]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/).
+Denken Sie daran, dass Sie eine ausgelöste Kampagne immer noch an ein bestimmtes Nutzersegment senden können. Nutzer, die nicht zu diesem Segment gehören, erhalten die Kampagne also nicht, selbst wenn sie das Auslöseereignis abschließen.
 
 Für das Trigger-Event, wenn ein:e Nutzer:in seinem Profil eine E-Mail-Adresse hinzufügt, gelten die folgenden Regeln:
 

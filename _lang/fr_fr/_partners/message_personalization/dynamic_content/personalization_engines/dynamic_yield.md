@@ -1,7 +1,7 @@
 ---
 nav_title: Dynamic Yield
 article_title: Dynamic Yield
-description: "Cet article de référence décrit le partenariat entre Braze et Dynamic Yield. Ce partenariat vous permet de tirer parti du moteur de recommandation et de segmentation de Dynamic Yield pour créer des Blocs d'Expérience qui peuvent être intégrés dans les messages Braze."
+description: "Cet article de référence décrit le partenariat entre Braze et Dynamic Yield. Ce partenariat vous permet d'utiliser le moteur de recommandation et de segmentation de Dynamic Yield pour créer des blocs d'expérience qui peuvent être intégrés dans les messages de Braze."
 alias: /partners/dynamic_yield/
 page_type: partner
 search_tag: Partner
@@ -16,7 +16,7 @@ _Cette intégration est maintenue par Dynamic Yield._
 
 ## À propos de l'intégration
 
-Le partenariat entre Braze et Dynamic Yield vous permet de tirer parti du moteur de recommandation et de segmentation de Dynamic Yield pour créer des Blocs d'Expérience qui peuvent être intégrés dans les messages Braze. Les blocs d'expérience peuvent être composés de :
+Le partenariat entre Braze et Dynamic Yield vous permet d'utiliser le moteur de recommandation et de segmentation de Dynamic Yield pour créer des blocs d'expérience qui peuvent être intégrés dans les messages de Braze. Les blocs d'expérience peuvent être composés de :
 - **Blocs de recommandations**: Définir des algorithmes et des filtres pour obtenir le contenu personnalisé des utilisateurs qui se propage lorsque l'e-mail est ouvert. 
 - **Blocs de contenu dynamique**: Cibler différentes promotions et messages à différents utilisateurs. Le ciblage peut être basé soit sur l'affinité, soit sur l'audience. Dynamic Yield détermine quelle expérience personnalisée servir lorsque l'e-mail est ouvert. 
 

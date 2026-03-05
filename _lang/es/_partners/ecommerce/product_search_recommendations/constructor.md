@@ -65,7 +65,7 @@ Puedes utilizar la URL de la API de descubrimiento externo de Constructor para m
 
 | Entrada de datos | Descripción |
 |-------------|-------------|
-| `item_id` | Representa el elemento semilla. Necesario para estrategias basadas en elementos, como paquetes alternativos, complementarios. Por ejemplo, el primer elemento de un correo electrónico es el elemento semilla, y los siguientes son alternativos. |
+| `item_id` | Representa el elemento semilla. Necesario para estrategias basadas en elementos, como paquetes alternativos, complementarios. Por ejemplo, el primer elemento de un correo electrónico es el elemento semilla, y los siguientes elementos son alternativas. |
 | `num_results` | Número de productos que se añadirán al correo electrónico. El valor predeterminado es 10, hasta 100. Por ejemplo, `num_results = 3` significa que se añaden tres recomendaciones. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

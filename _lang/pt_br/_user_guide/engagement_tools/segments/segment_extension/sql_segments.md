@@ -1,9 +1,9 @@
 ---
-nav_title: "Extensões de Segmento SQL"
-article_title: Extensões de Segmento SQL
+nav_title: "Extensões de segmento do SQL"
+article_title: Extensões de segmento do SQL
 page_order: 3.2
 page_type: reference
-description: "Este artigo descreve como criar uma Extensão de Segmento SQL usando consultas Snowflake."
+description: "Este artigo descreve como criar uma extensão de segmento SQL usando consultas do Snowflake."
 tool: Segments
 ---
 

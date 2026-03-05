@@ -2,13 +2,13 @@ No painel da Braze, acesse **Configurações de Dados** > **Transformação de D
 
 Selecione **Criar Transformação** para nomear sua transformação, em seguida escolha sua experiência de edição.
 
-![Detalhes da transformação com a opção de escolher "Usar um modelo" ou "Começar do zero" para sua experiência de edição.]({% image_buster /assets/img/data_transformation/data_transformation10.png %}){: style="max-width:80%;"}
+![Detalhes de transformação com a opção de escolher "Usar um modelo" ou "Começar do zero" para sua experiência de edição.]({% image_buster /assets/img/data_transformation/data_transformation10.png %}){: style="max-width:80%;"}
 
 Selecione **Usar um modelo** para navegar por uma biblioteca de modelos, incluindo casos de uso de Transformação de Dados. Ou, selecione **Começar do zero** para carregar um modelo de código padrão. 
 
 Se você está começando do zero, escolha um destino para sua transformação. Você ainda pode inserir um modelo de código da biblioteca de modelos.
 
-{% details Mais sobre destinos %}
+{% details More on destinations %}
 * **POST: Rastrear usuários:** Transforma webhooks de uma plataforma de origem em atualizações de perfil de usuário, como atributos, eventos ou compras.
 * **PUT: Atualizar vários itens do catálogo:** Transforma webhooks de uma plataforma de origem em atualizações de itens do catálogo.
 * **DELETE: Excluir vários itens do catálogo:** Transforma webhooks de uma plataforma de origem em exclusões de itens do catálogo.

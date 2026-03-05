@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Geplante Nachrichten aktualisieren"
+nav_title: "POST: Update der geplanten Nachrichten"
 article_title: "POST: Geplante Nachrichten aktualisieren"
 search_tag: Endpoint
 page_order: 4
@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Update geplant
 {% api %}
 # Update der geplanten Nachrichten
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/messages/schedule/update
+/nachrichten/zeitplan/update
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um geplante Nachrichten zu aktualisieren.
@@ -24,11 +24,11 @@ Dieser Endpunkt akzeptiert Updates entweder für den Parameter `schedule` oder `
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `messages.schedule.update`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 ## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
 | `schedule_id` | Erforderlich | String | Die zu aktualisierende `schedule_id` (erhalten aus der Antwort auf Zeitplan erstellen). |
 |`schedule` | Optional | Objekt | Siehe [Zeitplan-Objekt]({{site.baseurl}}/api/objects_filters/schedule_object/). |
@@ -74,7 +74,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
       "title": "Updated title!",
       "alert": "Updated message!"
     },
-    "sms": {  
+    "sms": {
       "subscription_group_id": "subscription_group_identifier",
       "message_variation_id": "message_variation_identifier",
       "body": "This is my SMS body.",

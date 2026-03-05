@@ -40,17 +40,17 @@ To create an Inkit webhook template to use in future campaigns or Canvases, navi
 
 If you would like to create a one-off Inkit webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
-![A selection of available predesigned webhook templates in the Webhook Templates tab of the Templates & Media section.]({% image_buster /assets/img/inkit-webhook-template.png %})
+![템플릿 & 미디어 섹션의 웹훅 템플릿 탭에서 미리 디자인된 웹훅 템플릿을 선택할 수 있습니다.]({% image_buster /assets/img/inkit-webhook-template.png %})
 
 Once you have selected the Inkit webhook template, you should see the following:
 - **Webhook URL**: Blank
 - **Request Body**: Raw Text
 
-In the Webhook URL field, you will need to [create](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) and input a Inkit webhook URL.
+웹훅 URL 필드에 Inkit 웹훅 URL을 [생성하고](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) 입력합니다.
 
-![Request body code and webhook URL shown in the Braze webhook builder compose tab.]({% image_buster /assets/img/inkit-integration.png %})
+![Braze 웹훅 빌더 작성 탭에 표시된 요청 본문 코드와 웹훅 URL.]({% image_buster /assets/img/inkit-integration.png %})
 
-#### Request headers and method
+#### 요청 헤더 및 메서드
 
 Inkit requires an `HTTP Header` for authorization, including your Inkit API key encoded in base 64. The following will already be included within the template as a key-value pair, but in the **Settings** tab, you must replace the `<INKIT_API_TOKEN>` with your Inkit API key.
 

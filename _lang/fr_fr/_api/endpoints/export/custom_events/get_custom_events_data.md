@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Exportation d'événements personnalisés"
+nav_title: "GET : Exporter des événements personnalisés"
 article_title: "GET : Exportation d'événements personnalisés"
 search_tag: Endpoint
 page_order: 4
@@ -54,8 +54,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/events?cursor=c2tpc
 ## Réponse
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [

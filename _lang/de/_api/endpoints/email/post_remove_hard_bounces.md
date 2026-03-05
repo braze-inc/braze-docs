@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Hard Bounced E-Mails entfernen"
+nav_title: "POST: Hartnäckig gebouncte E-Mails entfernen"
 article_title: "POST: Hard Bounced E-Mails entfernen"
 search_tag: Endpoint
 page_order: 6

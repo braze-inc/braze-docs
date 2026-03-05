@@ -23,11 +23,21 @@ alias: /landing_pages/
 
 ランディングページにアクセス、作成、公開するには、管理者権限または次のすべての[権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions)が必要です。
 
-- ランディングページにアクセス
-- ランディングページの下書きを作成
+- ランディングページを表示
+- ランディングページの下書きを編集
 - ランディングページを公開
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
+
+## プランの階層
+
+利用できる公開ランディングページとカスタムドメインの数は、無料または有料（インクリメンタル）のプランタイプによって異なる。
+
+| 機能                                                                                                   | 無料階層     | 有料ティア (増分)     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| ランディングページの公開                                                                 | 1社につき5つ | 20追加 |
+| カスタムドメイン          | 1社につき1つ | 5追加 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## ランディングページへのGoogle タグマネージャの追加
 

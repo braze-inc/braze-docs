@@ -19,7 +19,7 @@ Esta página revisa la información anterior sobre nuestros mensajes dentro de l
 
 Esto revisará la información anterior sobre nuestros mensajes dentro de la aplicación. Para ver la información más actualizada sobre nuestra generación actual de mensajes dentro de la aplicación, consulta nuestra [documentación de resumen de mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
 
-{% details Pantalla completa %}
+{% details Fullscreen %}
 Son las más atractivas, pero también las más intrusivas, ya que cubren toda la pantalla de tu usuario. Son geniales para mostrar imágenes grandes y enriquecidas, y pueden ser útiles para transmitir información muy importante, como nuevas características cruciales y promociones que caducan. Como interrumpen más la experiencia del usuario, utilízalos con moderación para los contenidos de máxima prioridad.
 
 ![Mensaje a pantalla completa]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
@@ -48,7 +48,7 @@ Estos mensajes no son tan intrusivos como los mensajes a pantalla completa, ya q
 
 {% enddetails %}
 
-{% details Deslizamiento hacia arriba tradicional %}
+{% details Traditional Slideup %}
 Son el tipo de mensaje menos intrusivo, aunque pueden llamar más o menos la atención según el uso que hagas de los colores y los iconos de las señales. Este puede ser el formato de mensaje a utilizar cuando se incorporan nuevos usuarios y se les dirige hacia características concretas de la aplicación, ya que no detienen la experiencia de la aplicación y permiten una exploración continua.
 
 ![Mensaje de deslizamiento hacia arriba]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %}){: style="max-width:50%;"}
@@ -68,12 +68,12 @@ Son el tipo de mensaje menos intrusivo, aunque pueden llamar más o menos la ate
 
 ## Web
 
-Esto revisará la información anterior sobre mensajes dentro de la aplicación más personalizados. Para ver la información más actualizada sobre nuestra generación actual de mensajes dentro de la aplicación, consulta nuestra [documentación de personalización]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
+Esto revisará la información anterior sobre mensajes dentro de la aplicación más personalizados. Para ver la información más actualizada sobre nuestra generación actual de mensajes dentro de la aplicación, consulta nuestra [documentación de personalización]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
-{% details Captura de mensaje por correo electrónico %}
+{% details Email capture message %}
 Los mensajes de captura de correo electrónico te permiten pedir fácilmente a los usuarios de tu sitio que envíen su dirección de correo electrónico, tras lo cual estará disponible en el sistema Braze para utilizarla en todas tus campañas de mensajería.
 
-![Captura de mensaje por correo electrónico]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
+![Mensaje de captura de correo electrónico]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
 
 >  Para habilitar la captura de mensajes por correo electrónico dentro de la aplicación a través del SDK Web, debes proporcionar la opción de inicialización `allowUserSuppliedJavascript` a Braze, por ejemplo, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Esto es por razones de seguridad: los mensajes dentro de la aplicación en HTML pueden ejecutar JavaScript, por lo que necesitamos que un mantenedor del sitio los habilite.
 
@@ -87,9 +87,9 @@ Los mensajes de captura de correo electrónico te permiten pedir fácilmente a l
 
 {% enddetails %}
 
-{% details Mensaje HTML personalizado %}
+{% details Custom HTML Message %}
 
-Aunque los mensajes dentro de la aplicación de Braze se pueden personalizar de muchas maneras, puedes obtener un control aún mayor sobre el aspecto y la sensación de tus campañas utilizando mensajes diseñados y creados con HTML, CSS y JavaScript. Con una simple composición, puedes desbloquear funcionalidades y marcas personalizadas que se ajusten a cualquiera de tus necesidades. Los mensajes dentro de la aplicación en HTML permiten un mayor control sobre el aspecto de un mensaje, y todo lo que es compatible con HTML5 también lo es con Braze.
+Aunque los mensajes predeterminados dentro de la aplicación de Braze pueden personalizarse de diversas formas, puedes obtener un control aún mayor sobre el aspecto y la sensación de tus campañas utilizando mensajes diseñados y creados con HTML, CSS y JavaScript. Con una simple composición, puedes desbloquear funcionalidades y marcas personalizadas que se ajusten a cualquiera de tus necesidades. Los mensajes dentro de la aplicación en HTML permiten un mayor control sobre el aspecto de un mensaje, y todo lo que es compatible con HTML5 también lo es con Braze.
 
 **Puente JavaScript (appboyBridge)**
 
@@ -103,7 +103,7 @@ Además, para el seguimiento de los análisis, cualquier elemento `<a>` o `<butt
 
 {% enddetails %}
 
-{% details Plantillas HTML de mensajes dentro de la aplicación %}
+{% details HTML In App-Message Templates %}
 
 Hemos diseñado un conjunto de plantillas HTML5 de mensajes dentro de la aplicación para ayudarte a empezar. Consulta nuestro [repositorio de GitHub](https://github.com/braze-inc/in-app-message-templates), que contiene instrucciones detalladas sobre cómo utilizar y personalizar estas plantillas según tus necesidades.
 
@@ -153,19 +153,16 @@ Las siguientes estrategias son útiles para mantener bajo el tamaño de los arch
 
 - Haz referencia a fuentes incrustadas en tu aplicación o sitio web para personalizar tus mensajes HTML dentro de la aplicación, en lugar de incluir los archivos de fuentes en tu carpeta ZIP de activos HTML.
 - Asegúrate de no incluir CSS o JavaScript superfluos o duplicados en tus ZIP de activos HTML.
-- Utiliza [ImageOptim][25] en todas las imágenes para comprimirlas al mínimo tamaño posible sin reducir su calidad.
+- Utiliza [ImageOptim](https://imageoptim.com/) en todas las imágenes para comprimirlas al mínimo tamaño posible sin reducir su calidad.
 
 ### Especificaciones del iPhone 5
 
-![Especificaciones del iPhone 5][18]
+![Especificaciones del iPhone 5]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %})
 
 ### Especificaciones del iPhone 6
 
-![Especificaciones del iPhone 6][19]
+![Especificaciones del iPhone 6]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %})
 
 
-[18]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %}
 
-[19]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %}
 
-[25]: https://imageoptim.com/

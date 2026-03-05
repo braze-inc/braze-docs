@@ -89,7 +89,7 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 }
 ```
 
-| état_du_travail | Explication |
+| job_status | Explication |
 | --- | --- |
 | `running` | Le travail est en cours d'exécution. |
 | `success` | Toutes les lignes ont été synchronisées avec succès. |
@@ -108,6 +108,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `400 Invalid integration ID` | Vérifiez que votre `integration_id` est valide. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Pour connaître les autres codes d'état et les messages d'erreur associés, veuillez vous reporter à la section [Erreurs fatales et réponses.]({{site.baseurl}}/api/errors/#fatal-errors)
+Pour d'autres codes d'état et les messages d'erreur associés, veuillez vous reporter à la rubrique [Erreurs fatales & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

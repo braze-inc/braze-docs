@@ -4,7 +4,7 @@ article_title: Delete users
 page_order: 4.2
 toc_headers: h2
 description: "Learn how to delete an individual user or a segment of users directly through the Braze dashboard."
-alias: /user_guide/data/unification/user_data/delete_users/
+alias: /delete_users/
 hidden: true
 ---
 
@@ -13,12 +13,12 @@ hidden: true
 > Learn how to delete an individual user or a segment of users directly through the Braze dashboard.
 
 {% alert important %}
-This feature is currently in early access. Contact your customer success manager if you're interested in participating.
+Early access for this feature is temporarily closed. Contact your customer success manager for more details.
 {% endalert %}
 
 ## Prerequisites
 
-To delete users, you'll need to be an admin or have **Delete User** permissions.
+You must be an admin to delete users.
 
 ## About user deletion
 
@@ -70,6 +70,14 @@ The users in this segment won't be deleted immediately. Instead, they'll be mark
 {% alert tip %}
 To ensure that these exact users are deleted regardless of segment changes, a segment filter called **Pending Deletion** is automatically created. You can [use this filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) to check the status of pending deletions.
 {% endalert %}
+
+## Confirming segment deletions
+
+Braze sends a confirmation email with the number of profiles pending deletion.
+
+To continue with the deletion, log in to Braze and confirm the deletion request.
+
+If you don't confirm within the time frame shown in the email, the deletion request expires and doesn't proceed.
 
 ## Canceling segment deletions {#cancel}
 
@@ -134,6 +142,14 @@ You can also check the status of previous deletions by downloading a security ev
 ### Can I delete segments with more than 100 million users?
 
 No. You cannot delete segments with more than 100 million users. If you need help deleting a segment of this size, contact [support@braze.com](mailto:support@braze.com).
+
+### It looks like I am not able to delete 100 million users and am limited to deleting only 10 million. Is this a bug?
+
+No, this is not a bug. Certain customers are limited in the number of users they can delete during the early access (EA) program.
+
+As the EA program progresses, this capacity is designed to increase until all customers can delete up to 100 million users.
+
+If you want to increase this capacity, contact your Braze account manager. Requests are granted at the discretion of the product team.
 
 ### Does automated user merging affect user deletion?
 

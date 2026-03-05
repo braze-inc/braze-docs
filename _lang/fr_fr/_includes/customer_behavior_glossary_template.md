@@ -11,13 +11,13 @@ search_rank: 7
 
 Contactez votre conseiller Braze ou ouvrez un [ticket d'assistance]({{site.baseurl}}/braze_support/) si vous avez besoin d'accéder à des droits d'événements supplémentaires. Si vous ne trouvez pas ce dont vous avez besoin dans cet article, consultez notre [bibliothèque des événements d’engagement lié aux messages]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) ou nos [exemples d’échantillons de données Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
-{% details Explication du comportement des clients et de la structure des événements personnalisés et des valeurs de la plateforme %}
+{% details Explanation of customer behavior and user event structure and platform values %}
 
 ### Structure d’événement
 
 Cette ventilation des comportement des clients et des événements utilisateur montre le type d’informations généralement incluses dans un comportement des clients ou événement utilisateur. Avec une bonne compréhension de ses composants, vos développeurs et votre équipe BI peuvent utiliser les données d’événements Currents entrants pour créer des rapports et des graphiques axés sur les données, et tirer parti des précieux indicateurs de données fournis.
 
-![Ventilation d'un événement utilisateur montrant un événement d'achat avec les propriétés énumérées regroupées par propriétés spécifiques à l'utilisateur, propriétés spécifiques au comportement et propriétés spécifiques à l'appareil]({% image_buster /assets/img/customer_engagement_event.png %})
+![Décomposition d’un événement utilisateur montrant un événement d’achat avec les propriétés spécifiques à l’utilisateur, les propriétés spécifiques au comportement et les propriétés spécifiques à l’appareil]({% image_buster /assets/img/customer_engagement_event.png %})
 
 Le comportement des clients et les événements personnalisés se composent de propriétés **propres à l'utilisateur**, de propriétés **propres au comportement** et de propriétés **propres à l'appareil**.
 

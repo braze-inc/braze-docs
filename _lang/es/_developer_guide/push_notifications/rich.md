@@ -1,7 +1,7 @@
 ---
 page_order: 3
 nav_title: Notificaciones enriquecidas
-article_title: Configuración de notificaciones push enriquecidas para el SDK de Braze
+article_title: Configurar notificaciones push enriquecidas para el SDK de Braze
 channel:
   - push notifications
 ---

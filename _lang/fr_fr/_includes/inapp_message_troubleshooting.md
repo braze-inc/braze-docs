@@ -52,13 +52,13 @@ Si vous avez défini un délégué de message in-app pour gérer manuellement l'
 
 2. Si la campagne est déclenchée par un début de session ou un événement personnalisé, vous devez vous assurer que cet événement ou cette session est suffisamment fréquent pour déclencher le message. Vérifiez ces données sur les pages [Aperçu]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) (pour les données de session) ou [Événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting):
 
-![La page des événements personnalisés affiche un graphique indiquant le nombre de fois où l'événement personnalisé Ajouté aux favoris s'est produit sur une période d'un mois.]({% image_buster /assets/img_archive/trouble5.png %})
+![Page Événements personnalisés affichant un graphique pour le nombre de fois que l’événement personnalisé Added to Favorites (Ajouté aux favoris) s’est produit sur une période d’un mois]({% image_buster /assets/img_archive/trouble5.png %})
 
 ### Les impressions sont plus faibles qu'auparavant
 
 1. Assurez-vous que personne n'a modifié involontairement le segment ou la campagne depuis le lancement. Nos Journaux de modifications des segments et des campagnes vous informeront sur les changements, qui les a faits et quand.
 
-![Lien pour afficher le journal des modifications sur la page des détails de la campagne avec sept modifications depuis que l'utilisateur a consulté la campagne pour la dernière fois]({% image_buster /assets/img_archive/trouble4.png %})
+![Lien pour afficher les modifications sur la page Détails de la campagne avec sept changements depuis que l’utilisateur a vu la campagne pour la dernière fois]({% image_buster /assets/img_archive/trouble4.png %})
 
 2. Assurez-vous que vous n'avez pas réutilisé votre événement déclencheur dans une campagne de messages in-app distincte avec une priorité plus élevée.
 
@@ -72,19 +72,19 @@ Le SDK demande des messages in-app aux serveurs Braze au démarrage de la sessio
 
 #### Vérifier si les messages sont demandés et retournés
 
-1. Ajoutez vous en tant qu'utilisateur test]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) sur le tableau de bord.
+1. Ajoutez votre nom en tant qu'[utilisateur test]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) ] sur le tableau de bord.
 2. Configurez une campagne de messages in-app ciblée pour votre utilisateur.
 3. Assurez-vous qu’une nouvelle session se produit dans votre application.
 4. Utilisez le journal des événements utilisateurs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) pour vérifier que votre appareil demande des messages in-app au démarrage de la session. Recherchez la requête SDK associée à l’événement de démarrage de session de votre utilisateur test.
   - Si votre application était censée demander des messages intégrés déclenchés, vous devriez voir `trigger` dans le champ **Réponses demandées** sous **Données de réponse**.
   - Si votre application était censée demander des messages intégrés originaux, vous devriez voir `in_app` dans le champ **Réponses demandées** sous **Données de réponse**.
-5. Utilisez les journaux des événements utilisateurs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) pour vérifier si les messages in-app corrects sont renvoyés dans les données de réponse.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
+5. Utilisez le journal des événements utilisateurs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) pour vérifier si les messages in-app corrects sont renvoyés dans les données de réponse.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 ##### Résoudre les problèmes de messages non demandés
 
 Si vos messages in-app ne sont pas demandés, il est possible que votre application ne suive pas correctement les sessions, car les messages in-app sont actualisés au démarrage de la session. Assurez-vous également que votre application démarre réellement une session en fonction de la sémantique du délai d’expiration de session de votre application :
 
-![La demande de SDK trouvée dans le journal des événements utilisateurs affichant un événement de démarrage de session réussi.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
+![La requête SDK trouvée dans les journaux des utilisateurs d’événements affiche un événement de démarrage de session réussi.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
 
 ##### Résoudre les problèmes de messages non renvoyés
 
@@ -93,9 +93,9 @@ Si les messages in-app ne sont pas renvoyés, vous risquez probablement d’avoi
 1. Votre segment ne contient pas votre utilisateur.
   - Vérifiez dans l'onglet [\*\*Engagement**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) ] de votre utilisateur si le segment correct apparaît sous **Segments**.
 2. Votre utilisateur a déjà reçu le message in-app, mais n’était pas rééligible pour le recevoir à nouveau.
-  - Vérifiez les [paramètres de rééligibilité de la campagne]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) sous l'étape **Réception/distribution** du **Composeur de campagne** et assurez-vous que les paramètres de rééligibilité correspondent à votre configuration de test.
+  - Vérifiez les [paramètres de rééligibilité de la campagne]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) sous l'étape de **réception/distribution** du **Campaign Composer** et assurez-vous que les paramètres de rééligibilité correspondent à votre configuration de test.
 3. Votre utilisateur a atteint la limite de fréquence pour la campagne.
-  - Vérifiez les paramètres de la campagne [limite de fréquence]]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) et assurez-vous qu'ils correspondent à votre configuration de test.
+  - Vérifiez les paramètres de la campagne [limite de fréquence] sur le site]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) et assurez-vous qu'ils correspondent à votre configuration de test.
 4. Si un groupe de contrôle a été créé pour la campagne, votre utilisateur peut être tombé dans le groupe de contrôle.
   - Vous pouvez vérifier si cela s'est produit en créant un segment avec un filtre de variante de campagne reçue, où la variante de campagne est définie sur **Contrôle**, et vérifier si votre utilisateur est tombé dans ce segment.
   - Lors de la création de campagnes à des fins de test d’intégration, veillez à désactiver l’ajout d’un groupe de contrôle.

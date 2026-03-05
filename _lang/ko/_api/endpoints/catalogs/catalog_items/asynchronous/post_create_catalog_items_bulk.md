@@ -21,7 +21,7 @@ description: "이 문서에서는 여러 카탈로그 항목 만들기 Braze 엔
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cea18bb3-b83a-4160-81fe-8cd42aa6e7cc {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `catalogs.add_items` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -33,7 +33,7 @@ description: "이 문서에서는 여러 카탈로그 항목 만들기 Braze 엔
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
-| `catalog_name` | 필수 | 문자열 | 카탈로그의 이름입니다. |
+| `catalog_name` | Required | 문자열 | 카탈로그의 이름입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 매개변수
@@ -43,7 +43,7 @@ description: "이 문서에서는 여러 카탈로그 항목 만들기 Braze 엔
 | `items` | 필수 | 배열 | 항목 객체가 포함된 배열입니다. 항목 객체에는 카탈로그의 모든 필드가 포함되어야 합니다. 요청당 최대 50개의 항목 개체가 허용됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## 요청 예시
+## 예시 요청
 
 ```
 curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
@@ -144,7 +144,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## 문제 해결
 
-다음 표에는 반환될 수 있는 오류와 관련 문제 해결 단계가 나와 있습니다.
+다음 표에는 가능한 반환 오류와 관련된 문제 해결 단계가 나와 있습니다.
 
 | 오류 | 문제 해결 |
 | --- | --- |

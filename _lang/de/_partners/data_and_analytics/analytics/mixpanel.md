@@ -9,7 +9,7 @@ tool: Currents
 
 ---
  
-# [![Braze Lernkurse] ({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel
+# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"} Mixpanel
 
 > [Mixpanel](https://mixpanel.com/) ist eine Analytics-Plattform für Unternehmen, die es Ihnen erlaubt, Ereignisse aus Mixpanel in andere Plattformen zu exportieren, um tiefere Analysen durchzuführen. Die gesammelten Daten können dann dazu verwendet werden, angepasste Berichte zu erstellen und das Engagement und die Bindung der Nutzer:innen zu messen.
 
@@ -39,9 +39,9 @@ Klicken Sie in Ihrem Mixpanel Dashboard in einem neuen oder bestehenden Projekt 
 
 Navigieren Sie in Braze zu \*\*Currents > **\+ Create Current** > **Create Mixpanel Export**. Geben Sie einen Namen für die Integration, eine Kontakt-E-Mail, das Mixpanel API-Geheimnis und das Mixpanel Token in den aufgeführten Feldern an. Als nächstes wählen Sie die Ereignisse aus, die Sie tracken möchten; eine Liste der verfügbaren Ereignisse wird angezeigt. Klicken Sie abschließend auf **Strom starten**.
 
-![Die Braze Mixpanel Currents Seite. Diese Seite enthält Felder für den Namen der Integration, die E-Mail des Kontakts, das API-Geheimnis und das Mixpanel Export-Token. In der unteren Hälfte der Currents-Seite werden die verfügbaren Currents-Ereignisse aufgelistet, die Sie senden können.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
+![Die Braze Mixpanel Currents Seite. Diese Seite enthält Felder für den Namen der Integration, die E-Mail des Kontakts, das API-Geheimnis und das Mixpanel Export-Token. In der unteren Hälfte der Currents-Seite finden Sie eine Liste der Currents-Ereignisse, die Sie senden können.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
-{% tab Notiz %}
+{% tab note %}
 Lesen Sie die [Dokumente zur Integration](https://help.mixpanel.com/hc/en-us/articles/360001243663) von Mixpanel, um mehr zu erfahren.
 {% endtab %}
 

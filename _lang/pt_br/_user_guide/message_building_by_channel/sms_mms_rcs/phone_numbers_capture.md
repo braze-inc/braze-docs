@@ -1,5 +1,5 @@
 ---
-nav_title: "Captura de número de telefone"
+nav_title: "Captura do número de telefone"
 article_title: Captura de Número de Telefone
 layout: redirect
 page_order: 8

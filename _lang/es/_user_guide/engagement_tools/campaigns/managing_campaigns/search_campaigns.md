@@ -1,6 +1,6 @@
 ---
-nav_title: Búsqueda de campañas
-article_title: Búsqueda de campañas
+nav_title: Buscar campañas
+article_title: Buscar campañas
 page_order: 10
 page_type: reference
 description: "Este artículo describe las distintas formas en que puedes buscar campañas en la página de la lista de campañas."
@@ -9,7 +9,7 @@ tool:
 
 ---
 
-# Búsqueda de campañas
+# Buscar campañas
 
 > A medida que construyas más campañas en tu espacio de trabajo, puedes ajustar los filtros y columnas de la lista de campañas para clasificar y organizar estas campañas. Utilizar una combinación de estos métodos de búsqueda puede ayudarte a acotar los resultados, especialmente a medida que crece tu lista de campañas.
 
@@ -22,13 +22,13 @@ Hay varias formas de buscar campañas en la página de la lista de campañas sel
 
 Puedes utilizar la barra de búsqueda para introducir palabras clave y frases relacionadas con el nombre de tu campaña. Para hacer una búsqueda exacta, utiliza comillas ("") para rodear tu frase de búsqueda. Por ejemplo, para buscar específicamente campañas de prueba de webhook, introduce `"webhook test"` en la barra de búsqueda.
 
-La página de la lista de campañas contiene tres campañas. La página está organizada para mostrar las campañas activas. Las columnas son Nombre, Estado, Fecha de finalización, Tipo de campaña y Enviados para organizar la vista.]({% image_buster /assets/img/campaign_list_example.png %})
+![La página de la lista de campañas con tres campañas listadas. La página está organizada para mostrar las campañas activas. Las columnas son Nombre, Estado, Fecha de finalización, Tipo de campaña y Enviados para organizar la vista.]({% image_buster /assets/img/campaign_list_example.png %})
 
 ### Seleccionar un estado
 
 Por defecto, la lista de campañas mostrará tus campañas activas e inactivas. Puedes seleccionar el desplegable para ver las campañas según su estado (activa, borrador, archivada, parada e inactiva).
 
-Por ejemplo, si quieres auditar los borradores de tu campaña, selecciona **Estado** > **Borrador** para centrar tu lista de campañas.
+Por ejemplo, si quieres auditar los borradores de tu campaña, selecciona **Estado** > **Borrador** para enfocar tu lista de campañas.
 
 ### Búsqueda por etiquetas
 
@@ -41,7 +41,7 @@ Utiliza los filtros para agrupar los resultados según los siguientes detalles d
 - Tipo de campaña 
 - Quién creó la campaña
 - Quién editó por última vez la campaña
-- Horario de entrada
+- Cronograma de entrada
 - Segmento objetivo
 - Equipos
 - Campañas con datos de interacción caducados

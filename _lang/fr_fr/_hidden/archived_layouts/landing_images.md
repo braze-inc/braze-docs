@@ -1,5 +1,5 @@
 ---
-nav_title: PA pour une seule section avec images
+nav_title: Ss lp avec images
 layout: dev_guide
 
 page_order: 1.1

@@ -21,7 +21,7 @@ Um Content-Cards als Kontrollvariante in Ihrer angepassten UI zu verarbeiten, ü
 Ein Navigationscontroller ist ein View-Controller, der mindestens einen untergeordneten View-Controller in einer Navigationsschnittstelle verwaltet. Hier ist ein Beispiel, wie Sie eine Instanz von `BrazeContentCardUI.ViewController` in einen Navigationscontroller pushen:
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func pushViewController() {
@@ -53,7 +53,7 @@ func pushViewController() {
 Verwenden Sie modale Präsentationen, um den Workflow Ihrer App vorübergehend zu unterbrechen, z. B. indem Sie die Nutzer zur Angabe wichtiger Informationen auffordern. Diese Modellansicht verfügt über eine Navigationsleiste am oberen Rand und eine Schaltfläche **Erledigt** an der Seite der Leiste. Hier ist ein Beispiel, wie Sie eine Instanz von `BrazeContentCard.ViewController` in einen modalen Controller pushen:
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func presentModalViewController() {

@@ -24,6 +24,17 @@ Si un utilisateur se qualifie pour plusieurs campagnes de bannières qui partage
 
 Les bannières sont différentes des cartes de type bannière, ce qui signifie que vous ne pouvez pas utiliser des bannières et des cartes de type bannière dans le même flux. Pour remplacer les flux de cartes de contenu existants par des bannières, vous devrez [créer des placements dans votre application ou votre site web]({{site.baseurl}}/developer_guide/banners/placements/).
 
+## Puis-je déclencher une bannière en fonction des actions de l'utilisateur ?
+
+Bien que les bannières ne prennent pas en charge la [livraison par événement]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery), vous pouvez cibler les utilisateurs en fonction de leurs actions passées à l'aide de la segmentation et de la priorité.
+
+Par exemple, pour montrer une bannière spéciale uniquement aux utilisateurs qui ont terminé un événement `purchase`:
+1. **Ciblage :** Dans votre campagne, ciblez un segment d'utilisateurs qui ont effectué au moins une fois l'événement personnalisé `purchase`.
+2. **Priorité :** Si vous avez une bannière générale pour tous les utilisateurs et cette bannière spécifique pour les acheteurs ciblant le même ciblage, réglez la priorité de la bannière spécifique sur **Haute** et celle de la bannière générale sur **Moyenne** ou **Basse**.
+
+Lorsque l'utilisateur démarre une nouvelle session ou actualise les bannières après avoir effectué l'action, Braze évalue son éligibilité. S'ils correspondent au segment "Achat", la bannière prioritaire sera affichée.
+
+
 ## Les utilisateurs peuvent-ils supprimer manuellement une bannière ?
 
 Non. Les utilisateurs ne peuvent pas supprimer manuellement les bannières. Cependant, vous pouvez contrôler la visibilité de la bannière en gérant l'éligibilité des segments d'utilisateurs. Lorsqu'un utilisateur ne répond plus aux critères de ciblage d'une campagne Banner, il ne la verra plus lors de sa prochaine session.
@@ -48,4 +59,10 @@ Non. Cependant, la plupart des étiquettes Liquid sont prises en charge pour les
 
 ## Puis-je capturer des événements de clics ?
 
-Les événements de clic ne sont capturés que si une action sur le clic est définie sur un élément `logClick` et est appelée à l'aide de la [passerelle JS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge).
+Oui. La manière dont les événements de clic sont capturés dépend de la manière dont votre bannière est rendue :
+
+- **Composants standard de l'éditeur :** Si votre bannière utilise des composants standard de l'éditeur (images, boutons, texte), les clics sont suivis automatiquement lors de l'utilisation des méthodes d'insertion du SDK.
+- **Blocs de code personnalisés :** Si votre bannière utilise le bloc éditeur de code personnalisé, vous devez appeler `brazeBridge.logClick()` à partir de votre HTML personnalisé pour suivre les clics. Cela s'applique même lorsque vous utilisez les méthodes du SDK pour insérer et rendre la bannière. Cela fonctionne de la même manière que le [pont JavaScript]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) pour les messages in-app en HTML.
+- **Interface utilisateur personnalisée (sans tête) :** Si vous créez une interface utilisateur entièrement personnalisée en utilisant les propriétés personnalisées de la bannière au lieu de rendre le code HTML de la bannière, appelez `logClick()` sur l'objet Banner à partir du code de votre application.
+
+Pour plus d'informations, reportez-vous aux [clics d'enregistrement]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks).

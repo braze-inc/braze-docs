@@ -20,7 +20,7 @@ guide_featured_list:
   - name: キャンペーンの管理
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: キャンペーンのテスト
+  - name: テストキャンペーン
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
     image: /assets/img/braze_icons/beaker-02.svg
   - name: アイデアと戦略

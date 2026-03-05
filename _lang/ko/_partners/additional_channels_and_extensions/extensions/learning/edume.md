@@ -23,9 +23,9 @@ The Braze and eduMe integration leverages Braze [Connected Content]({{site.baseu
 | Requirement | Description |
 |---|---|
 | eduMe account | An eduMe account is required to take advantage of this partnership. |
-| eduMe API key | You must request an API key from your eduMe customer success contact. This key will be used in your Braze Connected Content call. |
-| eduMe link signing secret | You must request your customer success contact at eduMe to set up a link signing secret for your organization. This secret is used to enable seamless links in Connected Content. You will not have to do anything with this secret. |
-| eduMe group and content IDs | These identifiers are needed to set up your Connected Content calls. Reach out to your eduMe customer service contact for help obtaining these identifiers. |
+| eduMe API key | You must request an API key from your eduMe customer success contact. 이 키는 Braze 커넥티드 콘텐츠 통화에서 사용됩니다. |
+| eduMe link signing secret | You must request your customer success contact at eduMe to set up a link signing secret for your organization. This secret is used to enable seamless links in Connected Content. 이 비밀을 가지고 아무것도 할 필요가 없습니다. |
+| eduMe group and content IDs | These identifiers are needed to set up your Connected Content calls. 이러한 식별자를 얻는 데 도움이 필요하면 EduMe 고객 서비스 담당자에게 문의하세요. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
@@ -54,7 +54,7 @@ Access your onboarding course at:
   - Course: `getCourseLink?moduleId=12087`
   - Lesson: `getLessonLink?lessonId=25805`
   - eNPS survey: `getSurveyLink?surveyId=654`<br><br>
-3. Users who arrive at eduMe through this link will be added to an eduMe team or group of your choosing. Replace `groupId` with the relevant team ID or eduMe group ID. You will typically use the team ID except for courses that require enrollment, in which case you should use the group ID<br><br>
-4. Include an appropriate field to map the `externalUserId` field to. The example connected content call uses the `driver_id`, though your field will likely be different. This ID will be available in eduMe reports, allowing you to correlate them with your systems.<br><br>
+3. 이 링크를 통해 에듀미에 도착한 사용자는 선택한 에듀미 팀 또는 그룹에 추가됩니다. Replace `groupId` with the relevant team ID or eduMe group ID. 등록이 필요한 코스를 제외하고는 일반적으로 팀 ID를 사용하며, 이 경우 그룹 ID를 사용해야 합니다.<br><br>
+4. Include an appropriate field to map the `externalUserId` field to. The example connected content call uses the `driver_id`, though your field will likely be different. 이 ID는 EduMe 보고서에서 사용할 수 있으므로 시스템과 상호 연관시킬 수 있습니다.<br><br>
 5. Lastly, customize and test your message as needed. We recommend you send at least one test message, access the eduMe content, complete the lesson or course, and verify the eduMe analytics are being recorded. 
 

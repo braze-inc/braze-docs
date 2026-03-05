@@ -1,6 +1,6 @@
 ---
 nav_title: フィードの更新
-article_title: iOS 用コンテンツカードフィードの更新
+article_title: iOS用コンテンツカードフィードを更新する
 platform: iOS
 page_order: 4
 description: "この参考記事では、iOS アプリケーションでのコンテンツカード更新の実装について説明します。"

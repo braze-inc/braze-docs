@@ -23,9 +23,9 @@ A integração Braze e eduMe aproveita o Braze [Connected Content]({{site.baseur
 | Requisito | Descrição |
 |---|---|
 | Conta EduMe | É necessário ter uma conta eduMe para aproveitar essa parceria. |
-| Chave de API da EduMe | É necessário solicitar uma chave de API ao seu contato de sucesso do cliente da eduMe. Essa chave será usada na sua chamada do conteúdo conectado da Braze. |
-| Segredo de assinatura de link da eduMe | É necessário solicitar ao seu contato de sucesso do cliente na eduMe a criação de um link de assinatura secreto para sua organização. Esse segredo é usado para ativar links contínuos no conteúdo conectado. Você não precisará fazer nada com esse segredo. |
-| IDs de grupo e conteúdo do EduMe | Esses identificadores são necessários para configurar suas chamadas de Connected Content. Entre em contato com o atendimento ao cliente da eduMe para saber como obter esses identificadores. |
+| Chave de API da EduMe | É necessário solicitar uma chave de API ao seu contato de sucesso do cliente da eduMe. Essa chave é usada em sua chamada do Braze Connected Content. |
+| Segredo de assinatura de link da eduMe | É necessário solicitar ao seu contato de sucesso do cliente na eduMe a criação de um link de assinatura secreto para sua organização. Esse segredo é usado para ativar links contínuos no conteúdo conectado. Você não precisa fazer nada com esse segredo. |
+| IDs de grupo e conteúdo do EduMe | Esses identificadores são necessários para configurar suas chamadas de Connected Content. Entre em contato com o serviço de atendimento ao cliente da EduMe para obter ajuda na obtenção desses identificadores. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integração
@@ -54,7 +54,7 @@ Access your onboarding course at:
   - Curso: `getCourseLink?moduleId=12087`
   - Lição: `getLessonLink?lessonId=25805`
   - Pesquisa eNPS: `getSurveyLink?surveyId=654`<br><br>
-3. Os usuários que chegarem ao eduMe por meio desse link serão adicionados a uma equipe ou grupo do eduMe de sua escolha. Substitua `groupId` pelo ID da equipe relevante ou pelo ID do grupo EduMe. Normalmente, você usará o ID da equipe, exceto nos cursos que exigem inscrição, caso em que você deve usar o ID do grupo<br><br>
-4. Inclua um campo apropriado para mapear o campo `externalUserId`. O exemplo de chamada de conteúdo conectado usa o endereço `driver_id`, embora seu campo provavelmente seja diferente. Esse ID estará disponível nos relatórios da eduMe, permitindo que você os correlacione com seus sistemas.<br><br>
+3. Os usuários que chegam à eduMe por meio desse link são adicionados a uma equipe ou grupo da eduMe de sua escolha. Substitua `groupId` pelo ID da equipe relevante ou pelo ID do grupo EduMe. Normalmente, usa-se o ID da equipe, exceto para cursos que exigem inscrição, caso em que se deve usar o ID do grupo<br><br>
+4. Inclua um campo apropriado para mapear o campo `externalUserId`. O exemplo de chamada de conteúdo conectado usa o endereço `driver_id`, embora seu campo provavelmente seja diferente. Essa ID está disponível nos relatórios do EduMe, permitindo que você os correlacione com seus sistemas.<br><br>
 5. Por fim, personalize e teste sua mensagem conforme necessário. Recomendamos que envie pelo menos uma mensagem de teste, acesse o conteúdo do EduMe, conclua a lição ou o curso e verifique se a análise de dados do EduMe está sendo registrada. 
 

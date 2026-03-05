@@ -9,7 +9,7 @@ description: "Cet article explique les différents composants de l’objet Audie
 
 # Objet Audience connectée
 
-> Un objet Audience connectée est un sélecteur qui identifie l’audience à laquelle envoyer le message. 
+> Un objet d'audience connecté identifie l'audience de votre message. Par exemple, si vous utilisez des tableaux d'attributs personnalisés pour suivre chaque catégorie et émission de télévision qu'un utilisateur a favorisée, vous pouvez utiliser les audiences connectées pour envoyer automatiquement une notification push ou un e-mail à toute personne ayant favorisé une émission dès qu'un nouvel épisode est publié - sans avoir besoin de configurer un segment pour chaque émission.
 
 Cet objet est composé soit d'un seul filtre d'audience connectée, soit de plusieurs filtres d'audience connectée dans une expression logique utilisant des opérateurs `AND` ou `OR`.
 
@@ -34,7 +34,7 @@ Cet objet est composé soit d'un seul filtre d'audience connectée, soit de plus
 
 ## Filtres d’audience connectée
 
-L’association de plusieurs filtres d’attributs personnalisés crée un filtre d’audience connectée, qui crée lui-même un filtre d’audience connectée lorsqu’il est combiné avec les opérateurs `AND` et `OR`.
+La combinaison de plusieurs filtres d'attributs personnalisés avec les opérateurs `AND` et `OR` permet de créer un filtre d'audience connecté.
 
 ### Filtre d’attribut personnalisé
 
@@ -61,7 +61,7 @@ Le type de données de l’attribut personnalisé détermine les comparaisons qu
 | Tableau | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
 | Numérique | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
 | Valeur booléenne | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
-| Date | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
+| Date | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Mises en garde dans la comparaison des attributs
@@ -142,7 +142,7 @@ Ce filtre vous permet de segmenter en fonction du statut d’abonnement aux e-ma
 
 ### Dernier filtre d’application utilisé
 
-Ce filtre vous permet de segmenter en fonction du moment où l’utilisateur a utilisé l’application pour la dernière fois. Ces filtres contiennent deux champs :
+Ce filtre vous permet de segmenter en fonction du moment où l'utilisateur a utilisé l'appli pour la dernière fois. Ces filtres contiennent deux champs :
 
 #### Corps du filtre
 ```json
@@ -160,4 +160,4 @@ Ce filtre vous permet de segmenter en fonction du moment où l’utilisateur a u
 
 ### Considérations
 
-Les audiences connectées ne peuvent pas filtrer les utilisateurs en fonction d'attributs par défaut, d'événements personnalisés, de segments ou d'événements d'engagement aux messages. Pour utiliser ces filtres, nous vous recommandons de les incorporer dans un segment d'audience et de spécifier ensuite ce segment dans le champ [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).
+Les audiences connectées ne peuvent pas filtrer les utilisateurs en fonction d'attributs par défaut, d'événements personnalisés, de segments ou d'événements d'engagement aux messages. Pour utiliser ces filtres, nous vous recommandons de les incorporer dans un segment d'audience et de spécifier ensuite ce segment dans le paramètre `segment_id` pour l'[endpoint`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). Si vous utilisez d'autres endpoints, vous devrez d'abord ajouter le segment à la campagne déclenchée par l'API ou au Canvas dans le tableau de bord de Braze.

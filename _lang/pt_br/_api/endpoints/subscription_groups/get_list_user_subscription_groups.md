@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Listar os grupos de inscrições do usuário"
+nav_title: "OBTER: Listar grupos de inscrições de usuários"
 article_title: "OBTER: Listar os grupos de inscrições do usuário"
 search_tag: Endpoint
 page_order: 4
@@ -14,9 +14,9 @@ description: "Este artigo descreve detalhes sobre o endpoint Braze dos grupos de
 /subscription/user/status
 {% endapimethod %}
 
-> Use esse ponto de extremidade para listar e obter os grupos de inscrições de um determinado usuário.
+> Use esse ponto de extremidade para listar e obter os grupos de inscrições com o histórico de um determinado usuário.
 
-Se você quiser ver exemplos ou testar esse endpoint para **grupos de inscrições para e-mail**:
+Se você quiser ver exemplos ou testar este endpoint para **Grupos de Inscrição de E-mail**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d1c3b617-22f1-47bf-9ee8-499526824470 {% endapiref %}
 
@@ -51,15 +51,15 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 Se houver vários usuários (vários `external_ids`) que compartilham o mesmo endereço de e-mail, todos os usuários serão retornados como um usuário separado (mesmo que tenham o mesmo endereço de e-mail ou grupo de inscrições).
 {% endalert %}
 
-## Exemplo de solicitação 
+## Exemplo de solicitação
 
 {% tabs %}
-{% tab Vários Usuários %}
+{% tab Multiple Users %}
 {% raw %}
 `https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`
 {% endraw %}
 {% endtab %}
-{% tab SMS e WhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&limit=100&offset=1&phone=+11112223333' \
@@ -67,7 +67,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 ```
 {% endraw %}
 {% endtab %}
-{% tab e-mail %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&email=example@braze.com&limit=100&offset=0' \
@@ -79,19 +79,51 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 
 ## Exemplo de resposta
 
+Somente os grupos de inscrições que tiveram uma atualização de status de inscrição no histórico de um usuário serão incluídos em uma resposta bem-sucedida. Isso significa que os grupos de inscrições recém-criados não serão listados.
+
 ```json
 {
-  "success": true,
-  "subscription_groups": [
-    {
-      "subscription_group_id": "group_id_1",
-      "subscription_status": "subscribed"
-    },
-    {
-      "subscription_group_id": "group_id_2",
-      "subscription_status": "unsubscribed"
-    }
-  ]
+    "users": [
+        {
+            "email": "test@example.com",
+            "phone": "50505050",
+            "external_id": "20500",
+            "subscription_groups": [
+                {
+                  "id": "ec2fcc919fca",
+                  "name": "ActivationGroup",
+                  "channel": "email",
+                  "status": "Subscribed"
+                },
+                {
+                  "id": "7d7af9dd5556",
+                  "name": "ReactivationGroup",
+                  "channel": "email",
+                  "status": "Subscribed"
+                },
+                {
+                  "id": "a5e84fd16220",
+                  "name": "MarketingGroup",
+                  "channel": "sms",
+                  "status": "Unsubscribed"
+                },
+                {
+                  "id": "64d8cad9176c",
+                  "name": "TransactionalGroup",
+                  "channel": "sms",
+                  "status": "Unsubscribed"
+                },
+                {
+                  "id": "b2134cd63942",
+                  "name": "BankerMarketingGroup",
+                  "channel": "sms",
+                  "status": "Subscribed"
+                }
+            ]
+        }
+    ],
+    "total_count": 1,
+    "message": "success"
 }
 ```
 

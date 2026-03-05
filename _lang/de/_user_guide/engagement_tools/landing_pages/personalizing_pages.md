@@ -1,23 +1,23 @@
 ---
-nav_title: Personalisierung von Landing Pages
-article_title: Personalisierung von Landing Pages
+nav_title: Personalisieren Sie Ihre Landing Pages
+article_title: Personalisieren Sie Ihre Landing Pages
 description: "In diesem Artikel erfahren Sie, wie Sie die Landing Pages von Braze mit dem Drag-and-Drop-Editor personalisieren können."
 page_order: 4
 ---
 
-# Personalisierung von Landing Pages
+# Personalisieren Sie Ihre Landing Pages
 
 > Verwenden Sie Liquid Personalisierung auf Landing Pages, um den Inhalt dynamisch mit Nutzerprofil-Daten anzupassen. So können Sie beispielsweise Schlagzeilen auf der Grundlage verschiedener Nutzer:innen-Attribute personalisieren, ohne mehrere statische Landing Pages zu verwalten.
 
 {% alert important %}
-Die Liquid Personalisierung für Landing Pages ist nur auf der Pro-Stufe der Landing Pages verfügbar. [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) und [Aktionscodes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) werden bei der Personalisierung von Landing Pages in Liquid derzeit nicht unterstützt.
+Die Liquid Personalisierung für Landing Pages ist nur auf der Pro-Stufe der Landing Pages verfügbar. [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), [Mehrsprachigkeit]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings) und [Aktionscodes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) werden derzeit bei der Personalisierung von Landing Pages in Liquid nicht unterstützt.
 {% endalert %}
 
 ## Liquid einfüllen
 
 Im Drag-and-Drop-Editor können Sie die Personalisierung von Liquid sowohl im Editor als auch in den Seiten- oder Blockeinstellungen im rechten Panel einfügen. Eine Anleitung zur Implementierung von Liquid finden Sie in unserer speziellen [Liquid Dokumentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1).
 
-\![Landing Page Editor mit Liquid Personalisierung hinzugefügt.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
+![Landing Page Editor mit Liquid Personalisierung hinzugefügt.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 
 ## Vorschau und Test
 
@@ -40,6 +40,13 @@ Um zu verhindern, dass Ihre Seite die Größenbeschränkungen überschreitet ode
 
 - Führt nicht ständig Schleifen durch oder referenziert große Datensätze.
 - Verlassen Sie sich nicht auf umfangreiche mathematische oder bedingte Logik innerhalb des Liquid-Blocks.
+
+### Verwenden Sie Liquid für identifizierte und anonyme Nutzer:innen 
+
+Liquid kann die Landing Page sowohl für identifizierte als auch für anonyme Besucher anpassen.
+
+- **Identifizierte Nutzer:innen:** Verlinken Sie in einer Nachricht von Braze auf die Landing Page und fügen Sie den [Liquid-Tag der Landing Page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/#using-landing-page-liquid-tags) ein. Dadurch wird der Nutzer:in mit seinem Braze-Profil verknüpft und die Seite personalisiert.
+- **Anonyme Besucher:** Verwenden Sie Liquid für kontextuelle, nicht profilbasierte Inhalte, wie z.B. eine Zufallszahl oder eine Tageszeitansage.
 
 ## Fallback-Seiten
 

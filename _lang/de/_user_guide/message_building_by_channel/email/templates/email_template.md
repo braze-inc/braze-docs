@@ -1,6 +1,6 @@
 ---
-nav_title: Erstellen einer E-Mail-Vorlage
-article_title: Erstellen einer E-Mail-Vorlage
+nav_title: Eine E-Mail-Vorlage erstellen
+article_title: Eine E-Mail-Vorlage erstellen
 page_order: 0
 description: "Dieser Referenzartikel beschreibt, wie Sie E-Mail Templates erstellen, anpassen und verwalten."
 tool:
@@ -11,7 +11,7 @@ alias: "/dnd/email_template/"
 search_rank: 1
 ---
 
-# Erstellen einer E-Mail-Vorlage
+# Eine E-Mail-Vorlage erstellen
 
 > Das Braze-Dashboard verfügt über einen E-Mail-Vorlagen-Editor, mit dem Sie maßgeschneiderte, aufmerksamkeitsstarke E-Mails erstellen und zur späteren Verwendung in Kampagnen speichern können. Sie können auch Ihre eigene [HTML-E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/) hochladen.
 
@@ -25,7 +25,7 @@ Wählen Sie zwischen dem **Drag-and-Drop-Editor** oder dem **HTML-Editor** für 
 
 Als Nächstes können Sie aus vorgefertigten Braze Templates wählen, ein neues Template erstellen oder ein bestehendes Template (einfach oder [mobil responsiv]({{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates)) bearbeiten.
 
-![Eine E-Mail-Vorlage für den Frühjahrsverkauf eines Unternehmens mit der Möglichkeit, den Drag-and-Drop-Editor oder den HTML-Editor auszuwählen oder aus Braze-Vorlagen auszuwählen.]({% image_buster /assets/img/email_templates/template2.png %})
+![Eine E-Mail-Template für den Frühjahrsverkauf eines Unternehmens mit der Möglichkeit, den Drag-and-Drop-Editor oder den HTML-Editor auszuwählen oder aus Braze-Templates auszuwählen.]({% image_buster /assets/img/email_templates/template2.png %})
 
 {% alert note %}
 Vorhandene benutzerdefinierte HTML-Vorlagen müssen mit dem Drag-and-Drop-Editor neu erstellt werden.
@@ -43,7 +43,7 @@ Wenn Sie bei der Gestaltung Ihrer E-Mail-Vorlage keinen Abmeldelink einfügen, w
 
 E-Mail-Fehler werden auf der Registerkarte **Verfassen** des Nachrichten-Workflows angezeigt. Fehler hindern Sie am Vorankommen. "Warnungen" sind Hinweise, die Ihnen helfen sollen, die besten Praktiken zu befolgen. Je nach Ihrem Unternehmen können Sie sie auch ignorieren.
 
-![Fehler- und Warnliste aus einer Beispiel-E-Mail.]({% image_buster /assets/img/dnd_compose_error.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Liste der Fehler und Warnungen aus einer Beispiel E-Mail.]({% image_buster /assets/img/dnd_compose_error.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Hier finden Sie eine Liste der Fehler, die in unserem Editor berücksichtigt werden:
 
@@ -69,7 +69,7 @@ Sind Sie neugierig, wie Ihre E-Mails für Nutzer:innen im Dark Mode aussehen? W�
 
 Wenn Sie für eine abschließende Prüfung bereit sind, wählen Sie **Senden testen** und senden Sie eine Testnachricht an sich selbst oder an eine Gruppe von Inhaltstestern, um sicherzustellen, dass Ihre E-Mail auf einer Vielzahl von Geräten und E-Mail-Clients korrekt angezeigt wird.
 
-![Beispiel für eine Vorschau einer E-Mail, die zu Testzwecken verschickt wird.]({% image_buster /assets/img_archive/newEmailTest.png %})
+![Beispiel für eine Vorschau einer E-Mail, die zu Testzwecken versendet wird.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 Wenn Sie Probleme mit Ihrer Vorlage sehen oder Änderungen vornehmen möchten, wählen Sie **E-Mail bearbeiten**, um zum Editor zurückzukehren.
 
@@ -103,7 +103,7 @@ Sie können E-Mail-Vorlagen im Drag-and-Drop-Editor gemeinsam bearbeiten und kom
 
 Nachdem Ihre Vorlage gespeichert wurde, sehen die Benutzer Symbole über nicht beantworteten Kommentaren. Wählen Sie **Auflösen**, um diese Kommentare aufzulösen.
 
-![Ein Template für E-Mails mit dem Kommentar "Sieht gut aus".]({% image_buster /assets/img/email_templates/template_comment.png %})
+![Ein Kommentar in einer E-Mail-Template, der lautet "Sieht gut aus".]({% image_buster /assets/img/email_templates/template_comment.png %})
 
 Antworten auf häufig gestellte Fragen zu E-Mail Templates finden Sie in unseren [FAQ zu Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
 

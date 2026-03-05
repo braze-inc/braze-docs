@@ -35,7 +35,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishwar
 }'
 ```
 
-Depois de enviar essa carga útil, a resposta a seguir confirma que as três coleções foram removidas com êxito do catálogo de louças da Kitchenerie.
+Depois de enviar essa carga útil, a resposta confirma que o Braze removeu com êxito as três coleções do catálogo de louças da Kitchenerie.
 
 ```json
 {
@@ -53,7 +53,7 @@ Na MovieCanon, uma empresa de serviços de streaming, a equipe de desenvolvedore
 - delilah.york@example.com
 - evergreen.rebecca@example.com
 
-Para realizar essa tarefa, a equipe de desenvolvedores precisará de uma chave de API com a permissão `email.spam.remove` para usar o endpoint `/email/spam/remove`. Esse endpoint remove endereços de e-mail da lista de spam do Braze e da lista de spam mantida pelo provedor de e-mail do MovieCanon.
+Para realizar essa tarefa, a equipe de desenvolvedores precisa de uma chave de API com a permissão `email.spam.remove` para usar o endpoint `/email/spam/remove`. Esse endpoint remove endereços de e-mail da lista de spam do Braze e da lista de spam mantida pelo provedor de e-mail do MovieCanon.
 
 Para enviar essa solicitação, inclua um endereço de e-mail string ou um vetor de até 50 endereços de e-mail para modificar. Como a lista de e-mails a serem removidos é inferior a 50, o MovieCanon pode realizar essa tarefa com o seguinte corpo de solicitação:
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Depois de enviar essa carga útil com êxito, essa resposta confirma que os e-mails foram removidos da lista de spam do MovieCanon.
+Depois de enviar essa carga útil com êxito, essa resposta confirma que o Braze removeu os e-mails da lista de spam do MovieCanon.
 
 ```json
 {
@@ -84,10 +84,8 @@ Vamos nos aprofundar em como a Siege Valley Health pode realizar essas duas tare
 
 Para a primeira tarefa de auditoria de Canvas, use o [ponto de extremidade`/canvas/list` ]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) para exportar uma lista de Canvas que inclua o nome e as tags. Aqui está um exemplo de solicitação:
 
-{% details Esta é a resposta que a equipe de marketing da Siege Valley Health receberia. %}
+{% details Here’s the response that the Siege Valley Health marketing team would receive. %}
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
@@ -128,7 +126,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## Verificação das próximas campanhas e telas programadas
 
-A época mais movimentada do ano está se aproximando rapidamente para a Flash & Thread, uma marca de varejo que vende roupas e produtos de beleza on-line e em lojas. Sua equipe de marketing deseja verificar as próximas campanhas e canvas no dashboard do Braze antes de 31 de março de 2024, às 12 horas. Isso pode ser feito usando o [endpoint`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/). 
+A época mais movimentada do ano está se aproximando rapidamente para a Flash & Thread, uma marca de varejo que vende roupas e produtos de beleza on-line e em lojas. Sua equipe de marketing deseja verificar as próximas campanhas e canvas no dashboard do Braze antes de 31 de março de 2024, às 12 horas. Isso pode ser feito usando o [endpoint`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/).
 
 Aqui está o exemplo de solicitação:
 
@@ -137,7 +135,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-Esse endpoint retornará a lista de campanhas e canvas futuras. A partir daqui, a equipe de marketing pode confirmar sua lista de mensagens consultando o campo `name` para as campanhas e Canvas na resposta.
+Esse ponto de extremidade retorna a lista de campanhas e telas futuras. A partir daqui, a equipe de marketing pode confirmar sua lista de mensagens consultando o campo `name` para as campanhas e Canvas na resposta.
 
 ## Visualização de uma Central de Preferências antiga
 
@@ -150,7 +148,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-{% details Esta é a resposta que a equipe de marketing do PoliterWeekly receberia. %}
+{% details Here’s the response the PoliterWeekly marketing team would receive. %}
 
 ```json
 {
@@ -160,7 +158,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
   "updated_at": "2024-08-15T15:00:00",
   "preference_center_title": "Manage Your PoliterWeekly Notification Preferences",
   "preference_center_page_html": "<!DOCTYPE html><html><head><title>Your PoliterWeekly Newsletter Preferences</title><style>body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }.container { max-width: 600px; margin: auto; }h1 { color: #333; }.preference { margin-bottom: 20px; }.preference label { font-size: 16px; }.preference input[type=\"checkbox\"] { margin-right: 10px; }.submit-btn { background-color: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; }</style></head><body><div class=\"container\"><h1>Manage your notification preferences</h1><p>Select the types of updates you wish to receive from us:</p><form id=\"preferencesForm\"><div class=\"preference\"><label><input type=\"checkbox\" name=\"newsUpdates\" checked> News Updates</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"editorialPicks\"> Editorial Picks</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"events\"> Events & Webinars</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"specialOffers\"> Special Offers & Promotions</label></div><button type=\"submit\" class=\"submit-btn\">Save Preferences</button></form></div><script>document.getElementById('preferencesForm').addEventListener('submit', function(e) {e.preventDefault();alert('Your preferences have been saved!');});</script></body></html>",
-  "confirmation_page_html": "<!DOCTYPE html><html><head><title>PoliterWeekly Preferences Updated</title></head><body><h1>You're good to go!</h1><p>Your preferences have been updated successfully.</p></body></html>",
+  "confirmation_page_html": "<!DOCTYPE html><html><head><title>PoliterWeekly Preferences Updated</title></head><body><h1>You're good to go!</h1><p>Braze updated your preferences successfully.</p></body></html>",
   "redirect_page_html": null,
   "preference_center_options": {
     "meta-viewport-content": "width=device-width, initial-scale=1"
@@ -192,7 +190,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Depois de enviar essa carga útil, a resposta a seguir confirma que os números de telefone inválidos da CashBlastr foram removidos da lista de inválidos do Braze.
+Depois de enviar essa carga útil, a resposta confirma que o Braze removeu os números de telefone inválidos da CashBlastr da lista de inválidos do Braze.
 
 ```json
 {
@@ -211,7 +209,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 
-Esse ponto de extremidade também lista os status do grupo de inscrições para e-mail de um usuário e pode ser usado para ver o status do grupo de inscrições de vários usuários.
+Esse ponto de extremidade também lista os status do grupo de inscrições para e-mail de um usuário. Use-o para ver o status do grupo de inscrições de vários usuários.
 
 ## Verificação de um modelo HTML para envio de mensagens por e-mail
 
@@ -219,11 +217,9 @@ Na WorkFriends, uma rede social que ajuda a criar conexões entre trabalhadores 
 
 Nesse cenário, a WorkFriends tem usado historicamente um modelo HTML Singular com sua marca antiga. Em um esforço para alinhar a identidade de sua marca, a WorkFriends deseja verificar se há alguma informação útil nesse modelo HTML para aproveitar antes de fazer a transição para um novo modelo.
 
-{% details Esta é a resposta que a equipe da WorkFriends receberia. %}
+{% details Here’s the response that the WorkFriends team would receive. %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "WorkFriends_Email_Template_ID",
   "template_name": "Promo template",
@@ -239,4 +235,4 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 {% enddetails %}
 
-Depois de revisar essas informações de modelo, a WorkFriends também pode usar o [endpoint`/templates/email/update` ]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) para atualizar o modelo de e-mail por meio da API. O modelo de e-mail no dashboard do Braze refletirá essas edições.
+Depois de revisar essas informações de modelo, a WorkFriends também pode usar o [endpoint`/templates/email/update` ]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) para atualizar o modelo de e-mail por meio da API. O modelo de e-mail no dashboard do Braze reflete essas edições.

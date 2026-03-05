@@ -1,5 +1,5 @@
 ---
-nav_title: "LÖSCHEN: Mehrere Katalogartikel löschen"
+nav_title: "LÖSCHEN: Mehrere Artikel im Katalog löschen"
 article_title: "LÖSCHEN: Mehrere Katalogartikel löschen"
 search_tag: Endpoint
 page_order: 1

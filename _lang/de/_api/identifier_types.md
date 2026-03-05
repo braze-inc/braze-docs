@@ -3,7 +3,7 @@ nav_title: "API Bezeichner Typen"
 article_title: API Bezeichner Typen
 page_order: 2.2
 toc_headers: h2
-description: "Dieser Artikel referenziert die verschiedenen Arten von API-Bezeichnern, die im Braze-Dashboard vorhanden sind, wo Sie sie finden können und wofür sie verwendet werden." 
+description: "Dieser Artikel referenziert die verschiedenen Arten von API-Bezeichnern, die im Braze-Dashboard vorhanden sind, wo Sie sie finden können und wofür sie verwendet werden."
 page_type: reference
 
 ---
@@ -16,18 +16,18 @@ Die folgenden Bezeichner können verwendet werden, um von der externen API von B
 
 ## Bezeichner der App
 
-Der App-Bezeichner oder `app_id` ist ein Parameter, der eine Aktivität mit einer bestimmten App in Ihrem Workspace verbindet. Es zeigt an, mit welcher App innerhalb des Arbeitsbereichs Sie interagieren. Sie werden zum Beispiel feststellen, dass Sie eine `app_id` für Ihre iOS App, eine `app_id` für Ihre Android App und eine `app_id` für Ihre Internet Integration haben werden. Bei Braze kann es vorkommen, dass Sie mehrere Apps für dieselbe Plattform auf den verschiedenen von Braze unterstützten Plattformtypen haben.
+Der App-Bezeichner oder `app_id` ist ein Parameter, der eine Aktivität mit einer bestimmten App in Ihrem Workspace verbindet. Es zeigt an, mit welcher App innerhalb des Arbeitsbereichs Sie interagieren. Zum Beispiel haben Sie eine `app_id` für Ihre iOS App, eine `app_id` für Ihre Android App und eine `app_id` für Ihre Internet Integration. Bei Braze kann es vorkommen, dass Sie mehrere Apps für dieselbe Plattform auf den verschiedenen von Braze unterstützten Plattformtypen haben.
 
 ### Wo kann ich es finden?
 
 Es gibt zwei Möglichkeiten, Ihren Standort `app_id` zu finden:
 
 {% tabs local %}
-{% tab App Bezeichner %}
+{% tab App Identifiers %}
 Gehen Sie zu **Einstellungen** > **APIs und Bezeichner** > **App Bezeichner**. Ihr API-Schlüssel für jede App ist in der Spalte **Bezeichner** aufgeführt.
 {% endtab %}
 
-{% tab App Einstellungen %}
+{% tab App Settings %}
 Gehen Sie zu **Einstellungen** > **App-Einstellungen**. Ihr API-Schlüssel ist neben dem Feld **API-Schlüssel** im Bereich Einstellungen aufgeführt.
 
 {% endtab %}
@@ -59,7 +59,7 @@ Wenn die Build-Variante kompiliert wird, verwendet sie den neuen Bezeichner.
 
 ## Template Bezeichner
 
-Ein [Template-Bezeichner]({{site.baseurl}}/api/endpoints/templates/) oder eine Template ID ist ein zufälliger Schlüssel, der von Braze für ein bestimmtes Template innerhalb des Dashboards generiert wird. Template IDs sind für jede Vorlage eindeutig und können verwendet werden, um Templates über die API zu referenzieren. 
+Ein [Template-Bezeichner]({{site.baseurl}}/api/endpoints/templates/) oder eine Template ID ist ein zufälliger Schlüssel, der von Braze für ein bestimmtes Template innerhalb des Dashboards generiert wird. Template IDs sind für jede Vorlage eindeutig und können verwendet werden, um Templates über die API zu referenzieren.
 
 Templates sind ideal, wenn Ihr Unternehmen Ihre HTML-Designs für Kampagnen in Auftrag gibt. Nach der Erstellung der Templates verfügen Sie nun über ein Template, das nicht speziell für eine Kampagne, sondern für eine Reihe von Kampagnen, z. B. einen Newsletter, verwendet werden kann.
 
@@ -72,7 +72,7 @@ Sie können Ihre Template ID auf zwei Arten finden:
 Gehen Sie zu **Vorlagen**, wählen Sie eine Vorlagenseite aus und wählen Sie dann eine bereits vorhandene Vorlage. Wenn die gewünschte Vorlage noch nicht existiert, erstellen Sie eine und speichern Sie sie. Unten auf der Seite der einzelnen Templates finden Sie Ihren Bezeichner für das Template.
 {% endtab %}
 
-{% tab API-Schlüssel %}
+{% tab API Keys %}
 Gehen Sie zu **Einstellungen** > **APIs und Bezeichner**. Hier bietet Braze eine Suche nach **zusätzlichen API Bezeichnern** an, mit der Sie bestimmte Bezeichner nachschlagen können.
 
 {% endtab %}
@@ -85,9 +85,9 @@ Gehen Sie zu **Einstellungen** > **APIs und Bezeichner**. Hier bietet Braze eine
 
 ## Canvas Bezeichner
 
-Ein [Canvas-Bezeichner]({{site.baseurl}}/user_guide/engagement_tools/canvas/) oder eine Canvas ID ist ein zufälliger Schlüssel, der von Braze für ein bestimmtes Canvas innerhalb des Dashboards generiert wird. Canvas IDs sind für jedes Canvas eindeutig und können verwendet werden, um Canvase über die API zu referenzieren. 
+Ein [Canvas-Bezeichner]({{site.baseurl}}/user_guide/engagement_tools/canvas/) oder eine Canvas ID ist ein zufälliger Schlüssel, der von Braze für ein bestimmtes Canvas innerhalb des Dashboards generiert wird. Canvas IDs sind für jedes Canvas eindeutig und können verwendet werden, um Canvase über die API zu referenzieren.
 
-Denken Sie daran, dass es bei einem Canvas mit Varianten sowohl eine allgemeine Canvas-ID als auch individuelle Canvas-IDs für Varianten gibt, die unter dem Haupt-Canvas verschachtelt sind. 
+Denken Sie daran, dass es bei einem Canvas mit Varianten sowohl eine allgemeine Canvas-ID als auch individuelle Canvas-IDs für Varianten gibt, die unter dem Haupt-Canvas verschachtelt sind.
 
 ### Wo kann ich es finden?
 
@@ -103,21 +103,21 @@ Ihre Canvas ID finden Sie auf dem Dashboard. Gehen Sie zu **Messaging** > **Canv
 
 ## Bezeichner der Kampagne
 
-Ein Bezeichner oder eine ID für eine [Kampagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ist ein zufälliger Schlüssel, der von Braze für eine bestimmte Kampagne innerhalb des Dashboards generiert wird. Kampagnen-IDs sind für jede Kampagne eindeutig und können verwendet werden, um Kampagnen über die API zu referenzieren. 
+Ein Bezeichner oder eine ID für eine [Kampagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ist ein zufälliger Schlüssel, der von Braze für eine bestimmte Kampagne innerhalb des Dashboards generiert wird. Kampagnen-IDs sind für jede Kampagne eindeutig und können verwendet werden, um Kampagnen über die API zu referenzieren.
 
-Denken Sie daran, dass es bei Kampagnen mit Varianten sowohl eine ID für die gesamte Kampagne als auch IDs für die einzelnen Varianten gibt, die unter der Hauptkampagne eingebettet sind. 
+Denken Sie daran, dass es bei Kampagnen mit Varianten sowohl eine ID für die gesamte Kampagne als auch IDs für die einzelnen Varianten gibt, die unter der Hauptkampagne eingebettet sind.
 
 ### Wo kann ich es finden?
 
 Sie können Ihre ID für die Kampagne auf zwei Arten finden:
 
 {% tabs local %}
-{% tab Kampagnen %}
+{% tab Campaigns %}
 Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie eine bereits existierende Kampagne aus. Wenn die von Ihnen gewünschte Kampagne noch nicht existiert, erstellen Sie eine und speichern Sie sie. Unten auf der Seite der einzelnen Kampagnen finden Sie Ihren **API-Bezeichner für die Kampagne**.
 
 {% endtab %}
 
-{% tab API-Schlüssel %}
+{% tab API Keys %}
 Gehen Sie zu **Einstellungen** > **APIs und Bezeichner**. Hier bietet Braze eine Suche nach **zusätzlichen API Bezeichnern** an, mit der Sie bestimmte Bezeichner nachschlagen können.
 
 {% endtab %}
@@ -134,19 +134,19 @@ Gehen Sie zu **Einstellungen** > **APIs und Bezeichner**. Hier bietet Braze eine
 
 ## Bezeichner des Segments
 
-Ein [Segmentbezeichner]({{site.baseurl}}/user_guide/engagement_tools/segments/) oder eine Segment ID ist ein zufälliger Schlüssel, der von Braze für ein bestimmtes Segment innerhalb des Dashboards generiert wird. Segment IDs sind für jedes Segment eindeutig und können verwendet werden, um Segmente über die API zu referenzieren. 
+Ein [Segmentbezeichner]({{site.baseurl}}/user_guide/engagement_tools/segments/) oder eine Segment ID ist ein zufälliger Schlüssel, der von Braze für ein bestimmtes Segment innerhalb des Dashboards generiert wird. Segment IDs sind für jedes Segment eindeutig und können verwendet werden, um Segmente über die API zu referenzieren.
 
 ### Wo kann ich es finden?
 
 Sie können Ihre Segment ID auf zwei Arten finden:
 
 {% tabs local %}
-{% tab Segmente %}
-Gehen Sie zu **Zielgruppe** > **Segmente** und wählen Sie ein bereits bestehendes Segment aus. Wenn das gewünschte Segment noch nicht vorhanden ist, erstellen Sie es und speichern es. Unten auf der Seite der einzelnen Segmente finden Sie Ihren Bezeichner für die Segmente.
+{% tab Segments %}
+Gehen Sie zu **Zielgruppe** > **Segmente** und wählen Sie ein bereits bestehendes Segment aus. Wenn das gewünschte Segment noch nicht vorhanden ist, erstellen Sie es und speichern es. Unten auf der Seite mit den einzelnen Segmenten finden Sie Ihren Bezeichner für die Segmente.
 
 {% endtab %}
 
-{% tab API-Schlüssel %}
+{% tab API Keys %}
 Gehen Sie zu **Einstellungen** > **APIs und Bezeichner**. Hier bietet Braze eine Suche nach **zusätzlichen API Bezeichnern** an, mit der Sie bestimmte Bezeichner nachschlagen können.
 
 {% endtab %}
@@ -165,7 +165,7 @@ Ein Bezeichner oder eine ID ist ein Schlüssel, der entweder von Braze generiert
 
 ### Wo kann ich es finden?
 
-API- und API-getriggerte Kampagnen, die als Broadcast gesendet werden, generieren automatisch einen Sendebezeichner, wenn kein Sendebezeichner angegeben wird. Wenn Sie einen eigenen Bezeichner für das Senden angeben möchten, müssen Sie diesen zunächst über den [Endpunkt `/sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) erstellen. Der Bezeichner muss aus allen ASCII-Zeichen bestehen und darf höchstens 64 Zeichen lang sein. Sie können einen Bezeichner für mehrere Sendungen derselben Kampagne wiederverwenden, wenn Sie die Analytics für diese Sendungen zusammenfassen möchten.
+API- und API-getriggerte Kampagnen, die als Broadcast gesendet werden, generieren automatisch einen Sendebezeichner, wenn kein Sendebezeichner angegeben wird. Wenn Sie einen eigenen Bezeichner für das Senden angeben möchten, müssen Sie zunächst einen über den [Endpunkt`/sends/id/create` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) erstellen. Der Bezeichner muss aus allen ASCII-Zeichen bestehen und darf höchstens 64 Zeichen lang sein. Sie können einen Bezeichner für mehrere Sendungen derselben Kampagne wiederverwenden, wenn Sie die Analytics für diese Sendungen zusammenfassen möchten.
 
 ### Wofür kann es verwendet werden?
 Senden und verfolgen Sie die Performance von Nachrichten programmgesteuert, ohne dass für jeden Versand eine Kampagne erstellt werden muss.

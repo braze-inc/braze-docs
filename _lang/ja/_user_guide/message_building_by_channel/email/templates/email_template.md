@@ -1,6 +1,6 @@
 ---
-nav_title: メール テンプレートの作成
-article_title: メールテンプレートの作成
+nav_title: メールテンプレートを作成する
+article_title: メールテンプレートを作成する
 page_order: 0
 description: "この記事では、メールテンプレートの作成、カスタマイズ、および管理の方法について説明します。"
 tool:
@@ -11,7 +11,7 @@ alias: "/dnd/email_template/"
 search_rank: 1
 ---
 
-# メール テンプレートの作成
+# メールテンプレートを作成する
 
 > Braze ダッシュボードにはメールテンプレートエディターがあり、これにより、カスタムの目を引くメールを作成し、後でキャンペーンで使用するために保存することができます。独自の[HTML メール テンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/)をアップロードすることもできます。
 

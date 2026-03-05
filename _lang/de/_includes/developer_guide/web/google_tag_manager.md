@@ -1,4 +1,4 @@
-## Über Google Tag Manager für Internet {#google-tag-manager}
+## Über Google Tag Manager für das Internet {#google-tag-manager}
 
 Mit dem Google Tag Manager (GTM) können Sie per Fernzugriff Tags auf Ihrer Website hinzufügen, entfernen und bearbeiten, ohne dass eine Freigabe des Produktionscodes oder technische Ressourcen erforderlich sind. Braze bietet die folgenden Templates für das Internet SDK an:
 

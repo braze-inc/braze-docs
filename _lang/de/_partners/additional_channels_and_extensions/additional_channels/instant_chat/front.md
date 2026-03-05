@@ -178,7 +178,7 @@ Fügen Sie Ihrem Anfrage-Text Folgendes hinzu:
 
 Auf dem Tab Einstellungen konfigurieren Sie die Anfrage-Header `Authorization`, `content-type` und `accept`.
 
-![Eine Beispielanfrage mit den drei erforderlichen Kopfzeilen.]({% image_buster /assets/img/front/webhook_settings.png %}){: style="max-width:65%;"}
+![Eine Beispielanfrage mit den drei erforderlichen Headern.]({% image_buster /assets/img/front/webhook_settings.png %}){: style="max-width:65%;"}
 
 #### Schritt 5.3: Zeitplan für die erste Zustellung
 
@@ -192,7 +192,7 @@ Aktivieren Sie unter **Zustellungskontrollen** die Wiederzulassung.
 
 #### Schritt 5.4: Erstellen Sie Ihre zweite Webhook-Kampagne
 
-Da Ihre zweite Webhook-Kampagne mit der ersten übereinstimmen wird, können Sie [die erste duplizieren und umbenennen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns). Sie können dies jetzt tun.
+Da Ihre zweite Webhook-Kampagne mit der ersten übereinstimmt, können Sie [die erste Kampagne duplizieren und sie umbenennen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns).
 
 #### Schritt 5.5: Zeitplan für die zweite Zustellung
 
@@ -221,9 +221,9 @@ Konfigurieren Sie dann Ihren Filter:
 - SMS-Nachrichten werden bei Braze pro Nachrichtensegment berechnet. Wenn Sie verstehen, was ein Segment definiert und wie diese Nachrichten aufgeteilt werden, können Sie sich ein Bild davon machen, wie Sie für Nachrichten abgerechnet werden. Weitere Informationen finden Sie in unserer [Dokumentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
 - Lange Agentenantworten werden mehr abrechenbare Segmente verbrauchen.
 
-### Datenpunkt Verbrauch
+### Datenpunkte protokollieren
 
-Derzeit erfordert diese Integration, dass ein angepasstes Event in ein Nutzerprofil geschrieben wird, und zwar jedes Mal, wenn ein Live-Agent eine SMS von Front sendet. Dies mag für einen schnellen Austausch von nur ein paar Nachrichten geeignet sein - aber je länger die Konversationen werden, desto mehr Datenpunkte sind erforderlich. Für jedes angepasste Event, das in Braze protokolliert wird, wird ein Datenpunkt verbraucht.
+Derzeit erfordert diese Integration, dass ein angepasstes Event in ein Nutzerprofil geschrieben wird, und zwar jedes Mal, wenn ein Live-Agent eine SMS von Front sendet. Dies mag für einen schnellen Austausch von nur ein paar Nachrichten geeignet sein, aber je länger die Konversationen werden, desto mehr Datenpunkte sind erforderlich. Wenn Sie Fragen zu den Datenpunkten von Braze haben, kann Ihr Braze-Konto Manager:in diese Fragen beantworten.
 
 ### Einfügen von Links in SMS Nachrichten
 

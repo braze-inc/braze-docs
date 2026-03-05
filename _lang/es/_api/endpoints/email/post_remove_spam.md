@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Eliminar direcciones de correo electrónico de la lista de correo no deseado"
-article_title: "POST: Eliminar direcciones de correo electrónico de la lista de correo no deseado"
+nav_title: "PUBLICAR: Eliminar direcciones de correo electrónico de la lista de correo no deseado"
+article_title: "PUBLICAR: Eliminar direcciones de correo electrónico de la lista de correo no deseado"
 search_tag: Endpoint
 page_order: 7
 layout: api_page

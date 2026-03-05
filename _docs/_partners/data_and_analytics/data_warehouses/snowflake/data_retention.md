@@ -1,5 +1,5 @@
 ---
-nav_title: "Data Retention"
+nav_title: "Data retention"
 article_title: Snowflake Data Retention
 page_order: 3
 description: "This page covers how to retain full events data when the Braze retention policy is applied."
@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Snowflake data retention
 
-> Braze anonymizes—removes personally identifiable information (PII)—from all events data stored in Snowflake that is older than two years old. If you use Snowflake data sharing, you may choose to retain the full events data in your environment by storing a copy in your Snowflake account before the retention policy is applied.
+> Braze anonymizes (removes personally identifiable information, or PII) from most events data stored in Snowflake that is more than two years old. Certain events are retained until a user is deleted, as outlined later on this page. If you use Snowflake data sharing, you may choose to retain the full events data in your environment by storing a copy in your Snowflake account before the retention policy is applied.
 
 This page presents two ways you can retain non-anonymized data: 
 
@@ -19,6 +19,15 @@ This page presents two ways you can retain non-anonymized data:
 {% alert warning %}
 Braze automatically anonymizes events data for users that are deleted from Braze, as described in [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/). Any data copied outside of the shared database will not be included in this process, as Braze no longer manages it. 
 {% endalert %}
+
+## Events exempted from the two-year retention policy
+Braze retains events related to user lifecycle, subscription status, and inbound messaging until a user is deleted. The following events are exempt from the standard two-year retention policy:
+- `users.UserOrphan`
+- `users.UserDeleteRequest`
+- `users.behaviors.subscription.GlobalStateChange`
+- `users.behaviors.subscriptiongroup.StateChange`
+- `users.messages.sms.InboundReceive`
+- `users.messages.whatsapp.InboundReceive`
 
 ## Copying all data to another Snowflake database
 

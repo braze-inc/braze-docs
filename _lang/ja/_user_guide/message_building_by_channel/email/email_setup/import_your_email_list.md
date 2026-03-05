@@ -1,6 +1,6 @@
 ---
-nav_title: メール一覧のインポート
-article_title: メールリストをBrazeにインポートする
+nav_title: メール一覧を読み込む
+article_title: Braze への電子メールリストの読み込み
 page_order: 4
 page_type: reference
 description: "この参考記事では、メールリストをBrazeにインポートするためのベストプラクティスを解説している。"
@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# メールリストを Braze にインポートする {#importing-email-lists}
+# メール一覧をBraze に読み込む {#importing-email-lists}
 
 > メール送信を成功させるための重要なステップとして、質の高いメールリストを確保することがあります。適切なメールリスト管理によって配信到達性が向上し、より正確でクリーンなキャンペーン成果を得ることができます。
 

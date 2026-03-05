@@ -1,6 +1,6 @@
 ---
-nav_title: 開始後のキャンペーンの編集
-article_title: 開始後のキャンペーンの編集
+nav_title: 起動後のキャンペーンの変更
+article_title: 起動後にキャンペーンを編集する
 page_order: 1
 tool: Campaigns
 page_type: reference
@@ -8,7 +8,7 @@ description: "この記事では、キャンペーン開始後に特定の要素
 
 ---
 
-# 開始後のキャンペーンの編集
+# 起動後のキャンペーンの変更
 
 > この記事では、キャンペーン開始後に特定の要素を編集した場合の結果について概要を説明します。
 

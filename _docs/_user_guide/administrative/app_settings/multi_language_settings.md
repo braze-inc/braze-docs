@@ -14,7 +14,7 @@ description: "This article provides an overview of multi-language settings in th
 
 ## Add a locale
 
-1. Go to **Settings** > **Multi-Language Support** under **Workspace Settings**.
+1. Go to **Settings** > **Localization Settings**.
 2. Select **Add locale**, and then select **Default locale** or **Custom Attributes**.<br><br>![The "Add locale" dropdown with options to select the default locale or custom attributes.]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. Enter a name for the locale.
 4. Select the respective user attributes for your chosen locale option.

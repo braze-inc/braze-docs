@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Exportieren Sie Canvas Daten Serien Analytics"
+nav_title: "GET: Exportieren Sie Canvas Datenreihen Analytics"
 article_title: "GET: Exportieren Sie Canvas Daten Serien Analytics"
 search_tag: Endpoint
 page_order: 4
@@ -22,7 +22,7 @@ description: "Dieser Artikel beschreibt die Details des Export Canvas Datenreihe
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `canvas.data_series`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -51,8 +51,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_seri
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "data": {
     "name": (string) the Canvas name,

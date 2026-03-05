@@ -1,5 +1,5 @@
 ---
-nav_title: 환경설정 센터
+nav_title: 환경 설정 센터
 article_title: 환경설정 센터 엔드포인트
 search_tag: Endpoint
 page_order: 4

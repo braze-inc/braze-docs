@@ -43,6 +43,10 @@ BIG SALE
 
 In this example, `Big Sale` is a string, and `upcase` is the filter being applied.
 
+{% alert note %}
+Filters can be used in `assign` statements and output tags {% raw %}(`{{ }}`){% endraw %}, but not in conditionals (`if`, `elsif`, `unless`), `case`/`when`, `for` loops, or array access brackets. To use a filtered value in one of those contexts, assign the result to a variable first. For more details, see [Where to use operators and filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
+
 ### Syntax for multiple filters
 
 You can use multiple filters on one output. They are applied from left to right.
@@ -79,6 +83,7 @@ Array filters are used to change the output of arrays.
 | [map](https://shopify.dev/api/liquid/filters/map)           | Accepts an array element's attribute as a parameter and creates an array out of each array element's value.        | ✅  Yes   |
 | [reverse](https://shopify.dev/api/liquid/filters/reverse)       | Reverses the order of the items in an array.                                                                       | ✅  Yes   |
 | [size](https://shopify.dev/api/liquid/filters/size)          | Returns the size of a string (the number of characters) or an array (the number of elements).                      | ✅  Yes   |
+| [slice](https://shopify.dev/api/liquid/filters/slice)        | Returns a substring of a string or a subset of an array, starting at the specified index.                          | ✅  Yes   |
 | [sort](https://shopify.dev/api/liquid/filters/sort)         | Sorts the elements of an array by a given attribute of an element in the array.                                    | ✅  Yes   |
 | [sort_natural](https://shopify.dev/api/liquid/sort_natural) | Sorts the items in an array in case-insensitive alphabetical order.                                                | ✅  Yes   |
 | [uniq](https://shopify.dev/api/liquid/filters/uniq)         | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |

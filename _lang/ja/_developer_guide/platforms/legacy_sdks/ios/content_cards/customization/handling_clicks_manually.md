@@ -1,5 +1,5 @@
 ---
-nav_title: クリックの手動処理
+nav_title: 手動でのクリックの処理
 article_title: iOS でコンテンツカードのクリックを手動で処理する
 platform: iOS
 page_order: 3
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# クリックの手動処理
+# 手動でのクリックの処理
 
 コンテンツカードのクリックを手動で処理するには、[`ABKContentCardsTableViewControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_content_cards_table_view_controller_delegate-p.html) プロトコルを実装し、`ABKContentCardsTableViewController` の `delegate` プロパティとしてデリゲートオブジェクトを設定します。例については、[コンテンツカードのサンプルアプリ](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp)を参照してください。 
 

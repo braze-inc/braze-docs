@@ -16,7 +16,7 @@ description: "Este artigo descreve detalhes sobre o endpoint da Braze \"Excluir 
 
 > Use esse endpoint para cancelar uma mensagem do canva que você programou anteriormente via API - disparada antes de ser enviada.
 
-As mensagens programadas ou os disparos que forem excluídos muito perto ou durante o horário em que deveriam ser enviados serão atualizados com os melhores esforços, de modo que as exclusões de último segundo poderão ser aplicadas a todos, alguns ou nenhum dos usuários direcionados.
+As mensagens programadas ou os disparos que são excluídos perto ou durante o horário em que deveriam ser enviados são atualizados com os melhores esforços, de modo que o Braze pode aplicar exclusões de último segundo a todos, alguns ou nenhum de seus usuários direcionados.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 

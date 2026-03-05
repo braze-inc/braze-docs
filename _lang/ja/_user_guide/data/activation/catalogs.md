@@ -11,7 +11,7 @@ description: "このランディングページにはカタログが掲載され
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: カタログを作成する
+- name: カタログの作成
   link: /docs/user_guide/data/activation/catalogs/create/
   image: /assets/img/braze_icons/users-01.svg
 - name: カタログを使う

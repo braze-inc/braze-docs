@@ -1,5 +1,5 @@
 ---
-nav_title: Upgrade-Leitfaden für iOS 14
+nav_title: iOS 14 upgraden Anleitung
 article_title: Upgrade-Leitfaden für das iOS 14-SDK
 page_order: 7
 platform: iOS
@@ -86,7 +86,7 @@ Diese IDFA-Updates werden wirksam, nachdem die Endnutzer ihre Geräte auf iOS 14
 {% endalert %}
 
 #### Änderungen an der Braze IDFA Kollektion
-![IDFA]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![IDENTIFIER FOR ADVERTISERS (IDFA)]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 1. Braze wird es Apps weiterhin ermöglichen, den IDFA-Wert eines Nutzers _an_ das Braze SDK zu übermitteln.
 

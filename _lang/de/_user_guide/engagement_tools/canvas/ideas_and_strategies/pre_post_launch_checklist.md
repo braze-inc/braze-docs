@@ -23,7 +23,7 @@ Wenn Sie die Nutzer:innen entsprechend ihrer lokalen Zeitzone mit einem Zeitplan
 Sie erhalten eine Meldung, wenn Sie nicht genügend Puffer eingeplant haben. Eine schnelle Lösung ist die Anpassung der Sendezeit, um sicherzustellen, dass die Nutzer:innen volle 24 Stunden lang im Zielsegment bleiben können.
 {% endalert %}
 
-\![Ein Canvas mit einem Zeitplan, der Nutzer:innen am 30\. April 2025 ab 10 Uhr morgens in ihrer Ortszeit erfasst.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
+![Ein Canvas, der so geplant ist, dass er Nutzer:innen am 30\. April 2025 ab 10 Uhr morgens in ihrer Ortszeit erreicht.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Verwendung regulärer Ausdrücke für Zielgruppenfilter in Betracht ziehen
 
@@ -88,7 +88,7 @@ Wenn Sie keine Entry-Daten für Ihr Canvas sehen, kann der Grund dafür, dass Nu
 
 Wenn Sie in Ihrem Entry-Zeitplan die aktionsbasierte Entry verwenden, stellen Sie sicher, dass Sie hier nicht die gleiche Trigger-Aktion verwendet haben wie in Ihrer **Zielgruppe**. Es kann eine Race-Condition auftreten, bei der der oder die Nutzer:in zum Zeitpunkt der Ausführung des Trigger-Events nicht in der Zielgruppe ist, was bedeutet, dass er oder sie das Canvas nicht aufrufen wird.
 
-Prüfen Sie außerdem, ob das ausgewählte Segment Nutzer enthält, indem Sie die Tabelle **Zielpopulation** in den **Zielgruppeneinstellungen** überprüfen. Wenn diese Zahl niedrig ist, sehen Sie nach, wie Sie Ihre Eingabeeinstellungen anpassen oder Ihre ausgewählten Segmente oder Filter auf Fehler überprüfen können.
+Prüfen Sie außerdem, ob das ausgewählte Segment Nutzer enthält, indem Sie die Tabelle **Zielpopulation** in den **Zielgruppeneinstellungen** überprüfen. Wenn diese Zahl niedrig ist, sehen Sie nach, wie Sie Ihre Eingabeeinstellungen anpassen können, oder überprüfen Sie Ihre ausgewählten Segmente oder Filter auf eventuelle Fehler.
 
 ### Unerwarteter Abfall zwischen den Stufen
 

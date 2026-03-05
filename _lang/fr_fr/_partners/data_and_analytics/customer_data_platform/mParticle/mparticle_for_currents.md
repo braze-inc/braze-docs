@@ -45,7 +45,7 @@ La fonction d'intégration des flux de Braze prend en charge quatre flux distinc
 
 Pour chaque flux, sous **Agir en tant que plateforme**, sélectionnez la plateforme correspondante dans la liste. Si vous ne voyez pas d'option pour sélectionner un flux **act-as**, les données seront traitées comme non liées, mais peuvent toujours être transmises aux sorties de l'entrepôt de données.
 
-![La première boîte de dialogue d'intégration vous invite à fournir un nom de configuration, à déterminer l'état des flux et à sélectionner une plate-forme à utiliser.]({% image_buster /assets/img/braze-feed-act1.png %}){: style="max-width:40%;"}  ![La deuxième boîte de dialogue d'intégration affiche la clé et le secret serveur-serveur.]({% image_buster /assets/img/braze-feed-act2.png %}){: style="max-width:37%;"}
+![La première boîte de dialogue d'intégration, qui vous invite à fournir un nom de configuration, à déterminer un état de flux et à sélectionner la plateforme à utiliser.]({% image_buster /assets/img/braze-feed-act1.png %}){: style="max-width:40%;"}  ![La deuxième boîte de dialogue d'intégration affichant la clé et le secret serveur à serveur.]({% image_buster /assets/img/braze-feed-act2.png %}){: style="max-width:37%;"}
 
 Lorsque vous créez chaque entrée, mParticle vous fournit une clé et un secret. Copiez ces informations d'identification, en veillant à noter à quel flux correspond chaque paire d'informations d'identification.
 
@@ -53,10 +53,10 @@ Lorsque vous créez chaque entrée, mParticle vous fournit une clé et un secret
 
 Dans Braze, naviguez vers **Currents > + Créer un flux Currents > Créer un export mParticle**. Indiquez un nom d'intégration, un e-mail de contact ainsi que la clé API mParticle et la clé secrète mParticle pour chaque plateforme. Ensuite, sélectionnez les événements que vous souhaitez suivre ; une liste des événements disponibles est fournie. Enfin, cliquez sur **Lancer le flux Currents**
 
-![La page mParticle Currents dans Braze. Cette page contient des champs permettant de spécifier le nom de l'intégration, l'e-mail du contact, la clé API et la clé secrète.]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
+![La page mParticle Currents dans Braze. Ici, vous pouvez trouver des champs pour le nom de l’intégration, l’adresse e-mail de contact, la clé API et la clé secrète.]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
 {% alert important %}
-Il est important de tenir à jour votre clé API mParticle et votre clé secrète mParticle ; si les informations d'identification de votre connecteur expirent, le connecteur cessera d'envoyer des événements. Si cette situation persiste pendant plus de **48 heures**, les événements du connecteur seront abandonnés et les données seront définitivement perdues.
+Il est important de tenir à jour votre clé API mParticle et votre clé secrète mParticle ; si les informations d'identification de votre connecteur expirent, le connecteur cessera d'envoyer des événements. Si cette situation persiste pendant plus de **5 jours**, les événements du connecteur seront abandonnés et les données seront définitivement perdues.
 {% endalert %}
 
 Tous les événements envoyés à mParticle comprendront le site `external_user_id` de l'utilisateur en tant que `customerid`. À l'heure actuelle, Braze n'envoie pas de données d'événement pour les utilisateurs dont le site `external_user_id` n'est pas paramétré. Si vous souhaitez mapper le paramètre `external_user_id` à un autre ID dans mParticle qui n’est pas l'ID par défaut `customerid`, veuillez contacter votre gestionnaire du succès des clients Braze. 

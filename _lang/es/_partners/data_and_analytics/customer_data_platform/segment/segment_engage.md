@@ -34,7 +34,7 @@ La integración de Braze y Segment te permite utilizar [Engage](https://segment.
 1. En Segment, ve a la pestaña **Audiencias** de Engage y haz clic en **Nuevo**.
 2. Crea tu audiencia. Un rayo en la esquina superior de la página indicará si la audiencia se actualiza en tiempo real.
 3. A continuación, selecciona Braze como destino.
-4. Obtén una vista previa de tu audiencia haciendo clic en **Revisar y crear**. Por defecto, Segment consulta todos los datos históricos para establecer el valor actual del rasgo computado y la audiencia. Para omitir estos datos, desmarca **Relleno histórico**.
+4. Obtén una vista previa de tu audiencia haciendo clic en **Revisar & Crear**. Por defecto, Segment consulta todos los datos históricos para establecer el valor actual del rasgo computado y la audiencia. Para omitir estos datos, desmarca **Relleno histórico**.
 
 ### Paso 2: Captura tu clave de importación de datos de cohortes
 
@@ -57,7 +57,7 @@ En Braze, ve a **Segmentos**, crea un nuevo segmento y selecciona **Cohortes de 
 1. En Segment, ve a la pestaña **Rasgos computados** o **Audiencias** en **Engage**, y haz clic en **Nuevo**.
 2. Crea tu rasgo computarizado o audiencia. Un rayo en la esquina superior de la página indicará si el cálculo se actualiza en tiempo real.
 3. A continuación, selecciona **Braze** como destino. 
-4. Obtén una vista previa de tu audiencia haciendo clic en **Revisar y crear**. Por defecto, Segment consulta todos los datos históricos para establecer el valor actual del rasgo computado y la audiencia. Para omitir estos datos, desmarca **Relleno histórico**.
+4. Obtén una vista previa de tu audiencia haciendo clic en **Revisar & Crear**. Por defecto, Segment consulta todos los datos históricos para establecer el valor actual del rasgo computado y la audiencia. Para omitir estos datos, desmarca **Relleno histórico**.
 5. En la configuración de rasgo computado o audiencia, ajusta la configuración de conexión en función de cómo quieras que se envíen tus datos a Braze.
 
 #### Rasgos computados y audiencias
@@ -69,7 +69,7 @@ En Braze, ve a **Segmentos**, crea un nuevo segmento y selecciona **Cohortes de 
 Puedes elegir qué método utilizar (o utilizar ambos) cuando conectes el rasgo computado al destino Braze.
 
 {% tabs %}
-{% tab Identificar %}
+{% tab Identify %}
 
 Puedes enviar rasgos y audiencias computados a Braze como llamadas a `identify` para crear atributos personalizados en Braze. 
 
@@ -77,10 +77,10 @@ Por ejemplo, si tienes un atributo computado en Engage para "Último producto vi
 
 | Rasgo computado | Audiencias |
 | -------------- | --------- |
-| ![La sección de atributos personalizados dentro de un perfil de usuario lista "last_product_viewed_item" como "Sweater".]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![La sección de atributos personalizados dentro de un perfil de usuario lista "dormant_shopper" como "true".]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
+| ![La sección de atributos personalizados dentro del perfil de usuario muestra "last_product_viewed_item" como "Suéter".]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![La sección de atributos personalizados dentro de un perfil de usuario muestra "dormant_shopper" como "verdadero".]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
 
 {% endtab %}
-{% tab Seguimiento %}
+{% tab Track %}
 
 Puedes enviar rasgos computados y audiencias a Braze como llamadas a `track` para crear eventos personalizados en Braze. 
 
@@ -88,7 +88,7 @@ Siguiendo con el ejemplo anterior, si un usuario tiene un rasgo computado para "
 
 | Rasgo computado | Audiencias |
 | -------------- | --------- |
-| ![La sección de eventos personalizados dentro de un perfil de usuario enumera "Rasgo computado" "1" vez, siendo la última vez "hace 20 horas".]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![La sección de atributos personalizados dentro de un perfil de usuario muestra la hora "Audiencia introducida" "1", siendo la última hora "9 de marzo a la 1:45".]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
+| ![La sección de eventos personalizados dentro del perfil de usuario muestra "Rasgo computado" "1" vez, siendo la última vez "hace 20 horas".]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![La sección de atributos personalizados dentro de un perfil de usuario muestra la hora "Audiencia introducida" "1", siendo la última hora "9 de marzo a la 1:45".]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
 
 {% endtab %}
 {% endtabs %}

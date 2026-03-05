@@ -1,7 +1,7 @@
 ---
 page_order: 1
 nav_title: 시작하기
-article_title: 시작하기
+article_title: Getting Started
 layout: dev_guide
 
 guide_top_header: "Braze 시작하기"
@@ -28,7 +28,7 @@ search_rank: 4
 
 <br>
 
-이 가이드를 따라 하거나 [Braze Learning](https://learning.braze.com)에서 가이드 코스를 확인할 수 있습니다. 예를 들어 [마케터](https://learning.braze.com/path/marketer) 및 [개발자](https://learning.braze.com/path/developer) 학습 경로가 있습니다.
+이 가이드를 따라가거나 [Braze 학습에서](https://learning.braze.com) [마케터](https://learning.braze.com/path/marketer) 및 [개발자](https://learning.braze.com/path/developer) 학습 경로와 같은 가이드 과정을 확인할 수 있습니다.
 
 
 <br><br>

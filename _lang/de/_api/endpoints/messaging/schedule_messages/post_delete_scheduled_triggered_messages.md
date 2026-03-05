@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Geplante, API-getriggerte Kampagnen löschen"
+nav_title: "POST: Löschen Sie geplante, durch APIs getriggerte Kampagnen"
 article_title: "POST: Geplante, API-getriggerte Kampagnen löschen"
 search_tag: Endpoint
 page_order: 4
@@ -11,12 +11,12 @@ description: "Dieser Artikel beschreibt den Endpunkt von Braze für geplante, du
 {% api %}
 # Löschen Sie geplante, durch APIs getriggerte Kampagnen
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/campaigns/trigger/schedule/delete
+/kampagnen/triggern/zeitplan/loeschen
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um eine Canvas Nachricht zu stornieren, die Sie zuvor per API-getriggert geplant haben, bevor sie gesendet wurde.
 
-Geplante Nachrichten oder Trigger, die kurz vor oder während der Zeit, zu der sie gesendet werden sollten, gelöscht werden, werden nach bestem Wissen und Gewissen aktualisiert, so dass Löschungen in letzter Sekunde für alle, einige oder keinen Ihrer Targeting Nutzer:innen vorgenommen werden können.
+Geplante Nachrichten oder Trigger, die kurz vor oder während der Zeit, zu der sie gesendet werden sollten, gelöscht werden, werden nach bestem Wissen und Gewissen aktualisiert, so dass Braze möglicherweise in letzter Sekunde alle, einige oder keinen Ihrer Targeting Nutzer:innen löscht.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 

@@ -42,24 +42,17 @@ Ein Beispiel finden Sie [main.dart](https://github.com/braze-inc/braze-flutter-s
 
 ### Schritt 2: Weiterleitung von Content Card-Daten aus der nativen Schicht
 
-Um die Daten im Dart-Layer aus Schritt 1 zu empfangen, fügen Sie den folgenden Code hinzu, um die Content-Card-Daten aus den nativen Layern weiterzuleiten.
+{% alert note %}
+Dieser Schritt gilt nur für iOS. Die Daten der Content Card werden automatisch von der Android-Ebene weitergeleitet.
+{% endalert %}
 
-{% tabs %}
-{% tab Android %}
-
-Die Daten der Content Card werden automatisch von der Android-Ebene weitergeleitet.
-
-{% endtab %}
-{% tab iOS %}
+Um die Daten in der Dart-Schicht aus Schritt 1 zu erhalten, fügen Sie den folgenden Code hinzu, um die Content-Card-Daten von der nativen iOS-Schicht weiterzuleiten.
 
 1. Implementieren Sie `contentCards.subscribeToUpdates`, um Content-Cards Updates zu abonnieren. Eine Beschreibung hierzu finden Sie in der Dokumentation [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)).
 
 2. Ihre `contentCards.subscribeToUpdates` Callback-Implementierung muss `BrazePlugin.processContentCards(contentCards)` aufrufen.
 
 Ein Beispiel finden Sie [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in unserer Beispiel-App.
-
-{% endtab %}
-{% endtabs %}
 
 #### Wiederholung des Rückrufs für Inhaltskarten
 

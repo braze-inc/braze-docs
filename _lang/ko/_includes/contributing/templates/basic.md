@@ -1,6 +1,6 @@
 이 템플릿을 사용하여 Braze 문서용 페이지 또는 섹션을 만들 수 있습니다. 예는 [미리 보기 생성]({{site.baseurl}}/contributing/generating_a_preview/)을 참조하세요. 문서 내에서 사용되는 설명서 유형에 대한 가이드라인은 [페이지 유형]({{site.baseurl}}/contributing/page_types/)을 참조하세요.
 
-{% details 템플릿 표시 %}
+{% details Show template %}
 {% raw %}
 `````markdown
 ---

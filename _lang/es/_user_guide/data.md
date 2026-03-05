@@ -48,6 +48,6 @@ guide_menu_list2:
 
 ### Mantener los datos de las marcas seguros, protegidos y conformes a la normativa
 
-- **Prácticas de seguridad líderes del sector:** Realiza auditorías periódicas de terceros, incluidas SOC 2 Tipo 2 e ISO 27001, para cumplir las normas más exigentes del sector. Mantener un programa público de recompensas por errores para abordar de forma proactiva las vulnerabilidades potenciales y contar con un equipo de seguridad dedicado a salvaguardar los datos de clientes.
-- **Cumplimiento industrial:** Proporcionar herramientas que promuevan el cumplimiento de la normativa sobre protección de datos, incluidos el RGPD y la CCPA.
+- **Prácticas de seguridad líderes del sector:** Realiza auditorías periódicas de terceros, incluidas SOC 2 Tipo 2 e ISO 27001, para cumplir las normas más exigentes del sector. Mantener un programa público de recompensas por errores para abordar de forma proactiva las vulnerabilidades potenciales y contar con un equipo de seguridad dedicado y comprometido a salvaguardar los datos de clientes.
+- **Cumplimiento industrial:** Proporcionar herramientas que promuevan el cumplimiento de la normativa de protección de datos, incluidos el RGPD y la CCPA.
 - **Privacidad de datos:** Habilita a los clientes para que gestionen el consentimiento del usuario final, procesen las solicitudes y actúen sobre los derechos de los consumidores.

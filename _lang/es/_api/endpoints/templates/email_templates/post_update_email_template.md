@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Actualizar plantilla de correo electrónico"
-article_title: "POST: Actualizar plantillas de correo electrónico"
+nav_title: "PUBLICAR: Actualizar plantilla de correo electrónico"
+article_title: "PUBLICAR: Actualizar plantillas de correo electrónico"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -16,7 +16,7 @@ description: "En este artículo se describen los detalles del punto final Actual
 
 > Utiliza este punto final para actualizar plantillas de correo electrónico en el panel Braze.
 
-Puedes acceder a la página `email_template_id` de una plantilla de correo electrónico navegando hasta ella en **la página Plantillas y medios.**  El [punto final Crear plantilla de correo electrónico]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) también devolverá una referencia `email_template_id`.
+Puedes acceder a la página `email_template_id` de una plantilla de correo electrónico navegando hasta ella en la página **Plantillas & Medios**. El [punto final Crear plantilla de correo electrónico]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) también devolverá una referencia `email_template_id`.
 
 Todos los campos que no sean `email_template_id` son opcionales, pero debes especificar al menos un campo para actualizarlo.
 

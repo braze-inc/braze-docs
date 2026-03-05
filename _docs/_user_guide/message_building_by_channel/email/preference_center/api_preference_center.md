@@ -106,7 +106,7 @@ This approach does not require query string value-pairs embedded in the URL as t
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 
@@ -140,3 +140,39 @@ Then, through Currents, you could identify which users speak Spanish and how man
 ### Are both unsubscribe links and email preference centers required for sending?
 
 No. If you see the message "Your Email Body does not include an unsubscribe link" when composing an email campaign, this warning is expected if your unsubscribe link is in a Content Block.
+
+### How do I update the default browser icon?
+
+By default, the icon next to the browser tab name (favicon) uses the Braze logo. To add a custom favicon, you set it via the `links-tags` attribute in your Create or Update [Preference Center API call]({{site.baseurl}}/api/endpoints/preference_center). Braze then injects the {% raw %}`<link rel="icon" ...>`{% endraw %} tag into the hosted page for you.
+
+{% raw %}
+```
+{
+  "name": "MyPreferenceCenter",
+  "preference_center_title": "Email Preferences",
+  "preference_center_page_html": "<!doctype html> ...",
+  "confirmation_page_html": "<!doctype html> ...",
+  "state": "active",
+  "options": {
+    "links-tags": [
+      {
+        "rel": "icon",
+        "type": "image/png",
+        "sizes": "32x32",
+        "href": "https://yourcdn.com/path/to/favicon-32x32.png"
+      },
+      {
+        "rel": "shortcut icon",
+        "type": "image/x-icon",
+        "href": "https://yourcdn.com/path/to/favicon.ico"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "sizes": "180x180",
+        "href": "https://yourcdn.com/path/to/apple-touch-icon.png"
+      }
+    ]
+  }
+}
+```
+{% endraw %}

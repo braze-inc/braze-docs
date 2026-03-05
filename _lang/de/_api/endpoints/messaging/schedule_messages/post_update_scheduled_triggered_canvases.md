@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Geplante API-getriggerte Canvase aktualisieren"
+nav_title: "POST: Aktualisieren Sie geplante, durch APIs getriggerte Canvase"
 article_title: "POST: Geplante API-getriggerte Canvase aktualisieren"
 search_tag: Endpoint
 page_order: 4
@@ -11,18 +11,18 @@ description: "Dieser Artikel beschreibt die Details des durch die API getriggert
 {% api %}
 # Aktualisieren Sie geplante, durch APIs getriggerte Canvase
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/canvas/trigger/schedule/update
+/canvas/triggern/zeitplan/update
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um geplante, durch APIs getriggerte Canvase zu aktualisieren, die im Dashboard erstellt wurden.
 
-So können Sie entscheiden, welche Aktion die zu versendende Nachricht triggern soll. Sie können `trigger_properties` übergeben, das als Template in die Nachricht selbst eingefügt wird.
+So können Sie entscheiden, welche Aktion die Nachricht triggern soll. Sie können `trigger_properties`, die Braze Templates in die Nachricht selbst einfügen.
 
 Beachten Sie, dass Sie zum Versenden von Nachrichten über diesen Endpunkt eine Canvas ID benötigen, die Sie beim Erstellen eines [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier) erstellt haben.
 
 Jeder Zeitplan überschreibt den Zeitplan, den Sie in der Anfrage zum Erstellen von Zeitplänen oder in früheren Anfragen zum Update von Zeitplänen angegeben haben, vollständig.
-  - Wenn Sie z.B. ursprünglich `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` angegeben haben und dann in Ihrem Update `"schedule" : {"time" : "2015-02-20T14:14:47"}` angeben, wird Ihre Nachricht jetzt zur angegebenen Zeit in UTC und nicht in der Ortszeit des Nutzers:in gesendet.
-  - Geplante Trigger, die kurz vor oder während der Zeit, zu der sie gesendet werden sollten, aktualisiert werden, werden nach bestem Wissen und Gewissen aktualisiert, so dass Änderungen in letzter Sekunde auf alle, einige oder keinen Ihrer Nutzer:innen angewendet werden können.
+  - Wenn Sie z.B. ursprünglich `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` und in Ihrem Update `"schedule" : {"time" : "2015-02-20T14:14:47"}` angeben, sendet Braze Ihre Nachricht zur angegebenen Zeit in UTC, nicht in der Ortszeit des Nutzers:innen.
+  - Geplante Trigger, die Sie kurz vor oder während der Zeit, zu der sie gesendet werden sollten, aktualisieren, werden nach bestem Wissen und Gewissen aktualisiert, so dass Braze möglicherweise in letzter Sekunde Änderungen an allen, einigen oder keinem Ihrer Targeting Nutzer:innen vornimmt.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8fdf158b-ce20-41d8-80e4-a9300a6706d4 {% endapiref %}
 

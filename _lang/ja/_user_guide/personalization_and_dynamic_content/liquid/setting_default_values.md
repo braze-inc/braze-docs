@@ -1,6 +1,6 @@
 ---
 nav_title: デフォルト値を設定する
-article_title: Liquid のデフォルト値の設定
+article_title: デフォルトのリキッド値を設定する
 page_order: 5
 description: "このリファレンス記事では、メッセージで使用するパーソナライゼーション 属性のデフォルト フォールバックを設定する方法について説明します。"
 

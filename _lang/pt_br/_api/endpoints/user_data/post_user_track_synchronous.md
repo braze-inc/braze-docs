@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Rastreamento de usuários (síncrono)"
-article_title: "POST: Rastreamento de usuários (síncrono)"
+nav_title: "POST: Criar e atualizar usuários (síncrono)"
+article_title: "POST: Criar e atualizar usuários (Síncrono)"
 alias: /post_user_track_synchronous/
 layout: api_page
 page_order: 4.5
@@ -9,7 +9,7 @@ description: "Este artigo detalha o endpoint da Braze de rastreamento de usuári
 
 ---
 {% api %}
-# Rastreamento de usuários (síncrono)
+# Criar e atualizar usuários (síncrono)
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track/sync
 {% endapimethod %}
@@ -17,14 +17,14 @@ description: "Este artigo detalha o endpoint da Braze de rastreamento de usuári
 > Use esse endpoint para registrar eventos e compras personalizados e atualizar os atributos do perfil do usuário de forma síncrona. Esse endpoint funciona de forma semelhante ao [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track), que atualiza perfis de usuário de forma assíncrona.
 
 {% alert important %}
-Esse ponto de extremidade está atualmente na versão beta. Entre em contato com o gerente da sua conta Braze se estiver interessado em participar dessa versão beta.
+Este endpoint está atualmente em **beta limitada**. Embora não estejamos adicionando novos clientes ao beta neste momento, informe ao seu gerente de conta da Braze se você acha que esse recurso pode ser útil para sua integração com a Braze.
 {% endalert %}
 
 ## Chamadas síncronas e assíncronas à API
 
-Em uma chamada assíncrona, a API retornará o código de status `201`, indicando que sua solicitação foi recebida, compreendida e aceita com êxito. No entanto, isso não significa que sua solicitação tenha sido totalmente concluída.
+Em uma chamada assíncrona, a API retorna o código de status `201`, indicando que sua solicitação foi recebida, compreendida e aceita com sucesso. No entanto, isso não significa que sua solicitação tenha sido totalmente concluída.
 
-Em uma chamada síncrona, a API retornará um código de status `201`, indicando que sua solicitação foi recebida, compreendida, aceita e concluída com êxito. A resposta da chamada mostrará os campos selecionados do perfil do usuário como resultado da operação.
+Em uma chamada síncrona, a API retorna um código de status `201`, indicando que sua solicitação foi recebida, compreendida, aceita e concluída com sucesso. A resposta da chamada mostra campos selecionados do perfil do usuário como resultado da operação.
 
 Esse endpoint tem um limite de frequência menor do que o endpoint `/users/track` (consulte o [limite de frequência](#rate-limit) abaixo). Cada solicitação `/users/track/sync` pode incluir apenas um objeto de evento, um objeto de atributo **ou** um objeto de compra. Esse endpoint deve ser reservado para atualizações de perfil de usuário em que é necessária uma chamada síncrona. Para uma implementação adequada, recomendamos usar `/users/track/sync` e `/users/track` juntos.
 
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Parâmetros de solicitação
 
 {% alert important %}
-Para cada componente de solicitação listado na tabela a seguir, um dos componentes `external_id`, `user_alias`, `braze_id`, `email` ou `phone` é necessário informar.
+Para cada componente de solicitação listado na tabela a seguir, você deve incluir um dos `external_id`, `user_alias`, `braze_id`, `email` ou `phone`.
 {% endalert %}
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
@@ -74,14 +74,14 @@ Ao usar os [parâmetros de solicitação](#request-parameters) desse endpoint, v
 
 ### Envio de mensagens bem-sucedido
 
-As mensagens bem-sucedidas retornarão a seguinte resposta, que inclui informações sobre os dados do perfil do usuário que foram atualizados.
+Mensagens bem-sucedidas retornam a seguinte resposta, que inclui informações sobre os dados do perfil do usuário que a Braze atualizou.
 
 ```json
 {
     "users": (optional, object), the identifier of the user in the request. May be empty if no users are found and _update_existing_only key is set to true,
-        "custom_attributes": (optional, object), the custom attributes as a result of the request. Only custom attributes from the request will be listed,
-        "custom_events": (optional, object), the custom events as a result of the request. Only custom events from the request will be listed,
-        "purchase_events": (optional, object), the purchase events as a result of the request. Only purchase events from the request will be listed,
+        "custom_attributes": (optional, object), the custom attributes as a result of the request. Braze lists only custom attributes from the request,
+        "custom_events": (optional, object), the custom events as a result of the request. Braze lists only custom events from the request,
+        "purchase_events": (optional, object), the purchase events as a result of the request. Braze lists only purchase events from the request,
     },
     "message": "success"
 ```
@@ -146,7 +146,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ### Atualizar um evento personalizado por e-mail
@@ -201,7 +201,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ### Atualizar um evento de compra por alias de usuário
@@ -215,8 +215,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 --data-raw '{
   "purchases" : [
     {
-      "user_alias" : { 
-          "alias_name" : "device123", 
+      "user_alias" : {
+          "alias_name" : "device123",
           "alias_label" : "my_device_identifier"
       }
       "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
@@ -225,13 +225,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
       "price" : 219.98,
       "time" : "2022-12-06T19:20:45+01:00",
       "properties" : {
-          "products" : [ 
+          "products" : [
             {
               "name": "Monitor",
               "category": "Gaming",
               "product_amount": 19.99
             },
-            { 
+            {
               "name": "Gaming Keyboard",
               "category": "Gaming ",
               "product_amount": 199.99
@@ -249,8 +249,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 {
     "users": [
         {
-          "user_alias" : { 
-            "alias_name" : "device123", 
+          "user_alias" : {
+            "alias_name" : "device123",
             "alias_label" : "my_device_identifier"
           },
           "purchase_events": [
@@ -264,18 +264,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ## Perguntas frequentes
 
 ### Devo usar o ponto de extremidade assíncrono ou síncrono?
 
-Para a maioria das atualizações de perfil, o endpoint `/users/track` funcionará melhor devido ao seu limite de frequência mais alto e à flexibilidade para permitir solicitações em lote. No entanto, o endpoint `/users/track/sync` é útil se você estiver enfrentando condições de corrida devido a solicitações rápidas e consecutivas para o mesmo usuário.
+Para a maioria das atualizações de perfil, o endpoint `/users/track` funciona melhor devido ao seu limite de frequência mais alto e flexibilidade para permitir que você agrupe solicitações. No entanto, o endpoint `/users/track/sync` é útil se você estiver enfrentando condições de corrida devido a solicitações rápidas e consecutivas para o mesmo usuário.
 
 ### O tempo de resposta é diferente do ponto de extremidade `/users/track`?
 
-Ao fazer uma chamada síncrona, a API espera até que a solicitação seja concluída para retornar uma resposta. Consequentemente, as solicitações síncronas levarão mais tempo, em média, do que as solicitações assíncronas para `/users/track`. Para a maioria das solicitações, você pode contar com uma resposta em segundos.
+Com uma chamada síncrona, a API espera até que a Braze conclua a solicitação para retornar uma resposta. Como resultado, solicitações síncronas levam mais tempo em média do que solicitações assíncronas para `/users/track`. Para a maioria das solicitações, você pode contar com uma resposta em segundos.
 
 ### Posso enviar várias solicitações ao mesmo tempo?
 

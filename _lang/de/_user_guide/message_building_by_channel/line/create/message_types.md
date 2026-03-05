@@ -17,7 +17,7 @@ alias: /line/create/message_types/
 
 Wenn Sie eine LINE-Nachricht verfassen, können Sie Nachrichtentypen per Drag-and-Drop in den Composer ziehen und sie dann anpassen.
 
-\![Panel für Nachrichtentypen mit Nachrichtentypen, die Sie in den Composer-Editor ziehen können, einschließlich Text, Bild, Rich Message und kartenbasierte Nachricht.]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
+![Nachrichtentyp-Panel mit Nachrichtentypen, die Sie in den Composer-Editor ziehen können, wie Text, Bild, Rich Message und kartenbasierte Nachricht.]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
 
 ## Text
 
@@ -28,7 +28,7 @@ Zu den Anwendungsfällen gehören:
 - Senden Sie personalisierte Geburtstagsgrüße mit einzigartigen Aktionskarten
 - Geben Sie schnell Informationen zu bevorstehenden Ereignissen weiter
 
-\![Eine Textnachricht, die den Nutzer:innen daran erinnert, die Black Friday Party nicht zu vergessen und bis zu 80% vor Mitternacht zu sparen.]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
+![Eine Textnachricht, die auf Black Friday und die bis zu 80 % Rabatt bis Mitternacht hinweist.]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
 
 ## Bild
 
@@ -39,7 +39,7 @@ Zu den Anwendungsfällen gehören:
 - Heben Sie Sonderangebote zum Saisonende hervor, um die Nutzer zu ermutigen, sich mit günstigen Angeboten für die Winterkleidung des nächsten Jahres einzudecken.
 - Starten Sie einen visuellen Countdown für einen ladenweiten Jahresausverkauf
 
-\![Eine Nachricht, die für den Verkauf eines Toasters wirbt.]({% image_buster /assets/img/line/line_image_message.png %}){: style="max-width:40%;"}
+![Eine Bildnachricht, die für den Verkauf eines Toasters wirbt.]({% image_buster /assets/img/line/line_image_message.png %}){: style="max-width:40%;"}
 
 ### URL-Bild
 
@@ -64,7 +64,7 @@ Zu den Anwendungsfällen gehören:
 - Präsentieren Sie eine interaktive Speisekarte, die bei Auswahl eines Artikels eine Menübestellung startet.
 - Legen Sie mehrere Werbeaktionen an, die der Benutzer durch Auswahl eines Rasterquadrats auswählen kann.
 
-\![Eine Nachricht mit sechs Quadraten und einem Foto eines schwarz-weißen Gitters, auf das Nutzer:innen tippen können, um ein zufälliges Angebot zu erhalten.]({% image_buster /assets/img/line/line_rich_message.png %})
+![Eine Nachricht mit sechs Quadraten und einem Foto eines schwarz-weißen Gitters, auf das Nutzer:innen tippen können, um ein zufälliges Angebot zu erhalten.]({% image_buster /assets/img/line/line_rich_message.png %})
 
 ### Image-Map  
 
@@ -97,7 +97,7 @@ Anwendungsfälle umfassen:
 - Hervorhebung der meistverkauften Jacken der Saison
 - Präsentieren Sie eine Auswahl an Kochwerkzeugen und Gadgets, die in einem Kit enthalten sind
 
-\![Eine kartenbasierte Nachricht mit mindestens zwei Karten, die für Sandwiches im Composer-Editor werben.]({% image_buster /assets/img/line/line_card_message.png %})
+![Eine kartenbasierte Nachricht mit mindestens zwei Karten, die für Sandwiches im Composer-Editor werben.]({% image_buster /assets/img/line/line_card_message.png %})
 
 ### Nachricht
 

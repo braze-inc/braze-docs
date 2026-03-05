@@ -6,13 +6,13 @@ description: "This landing page lists the Braze API objects and filters used in 
 
 ---
 
-# Object and filters
+# Objects and filters
 
 > This page lists the Braze API objects and filters used in your Braze API calls.
 
 ## Objects and filters
 
-- [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
+- [Canvas context object]({{site.baseurl}}/api/objects_filters/context_object)
 - [Connected audience filter & object]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Event object]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/)

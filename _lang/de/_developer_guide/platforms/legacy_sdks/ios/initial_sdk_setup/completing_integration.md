@@ -1,6 +1,6 @@
 ---
 nav_title: Fertigstellung der Integration
-article_title: Fertigstellung der iOS SDK-Integration
+article_title: Vervollständigen Sie die iOS SDK-Integration
 platform: iOS
 description: "Dieser Referenzartikel beschreibt, wie Sie die Integration des Braze SDK abschließen, nachdem Sie es über eine der Integrationsoptionen installiert haben."
 page_order: 2
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Fertigstellung der Integration
+# Schließen Sie die Integration ab
 
 Bevor Sie diese Schritte ausführen, vergewissern Sie sich bitte, dass das SDK mit [Carthage]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/carthage_integration/), [CocoaPods]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/cocoapods/), dem [Swift-Paketmanager]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/) oder einer [manuellen]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/) Integration integriert wurde.
 
@@ -42,7 +42,7 @@ Fügen Sie als Nächstes in der Datei `AppDelegate.m` das folgende Snippet in di
 Aktualisieren Sie `YOUR-APP-IDENTIFIER-API-KEY` mit dem richtigen Wert auf Ihrer Seite **Einstellungen verwalten**. In unserer [API-Dokumentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) finden Sie weitere Informationen darüber, wo Sie den API-Schlüssel für Ihre App-Kennung finden.
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 Wenn Sie das Braze SDK mit CocoaPods, Carthage oder einer [dynamischen manuellen Integration]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/) integrieren, fügen Sie die folgende Codezeile in die Datei `AppDelegate.swift` ein:
 
@@ -108,7 +108,7 @@ Wenn Sie Braze beim Start anpassen möchten, können Sie stattdessen die Braze-I
 Fügen Sie in Ihrer `AppDelegate.m` Datei innerhalb Ihrer `application:didFinishLaunchingWithOptions:` Methode die folgende Braze-Methode hinzu:
 
 ```objc
-[Appboy startWithApiKey:@"YOUR-APP-IDENTIFER-API-KEY"
+[Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
           inApplication:application
       withLaunchOptions:launchOptions
       withAppboyOptions:appboyOptions];
@@ -117,7 +117,7 @@ Fügen Sie in Ihrer `AppDelegate.m` Datei innerhalb Ihrer `application:didFinish
 Beachten Sie, dass diese Methode die Initialisierungsmethode `startWithApiKey:inApplication:withLaunchOptions:` ersetzen würde.
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 Fügen Sie in `AppDelegate.swift` innerhalb der Methode `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` die folgende Braze-Methode hinzu, wobei `appboyOptions` ein `Dictionary` der Startkonfigurationswerte ist:
 

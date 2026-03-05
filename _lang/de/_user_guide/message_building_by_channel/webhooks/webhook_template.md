@@ -1,6 +1,6 @@
 ---
-nav_title: Erstellen einer Webhook-Vorlage
-article_title: Erstellen einer Webhook-Vorlage
+nav_title: Erstellen Sie ein Webhook Template
+article_title: Ein Webhook Template erstellen
 page_order: 2
 tool:
   - Templates
@@ -10,7 +10,7 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie Webhook-Templates 
 
 ---
 
-# Erstellen einer Webhook-Vorlage
+# Erstellen Sie ein Webhook Template
 
 > Während Sie Ihre Webhooks erstellen und anpassen, können Sie Webhook-Vorlagen für die spätere Verwendung innerhalb der Braze-Plattform erstellen und nutzen. Auf diese Weise können Sie konsequent eine Vielzahl von Webhooks für Ihre verschiedenen Kampagnen erstellen.
 
@@ -39,7 +39,7 @@ Wenn Sie z.B. [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/lin
 3. Fügen Sie einen Anfragetext hinzu. Dies kann entweder ein **JSON-Schlüssel/Wert-Paar** oder **Rohtext** sein.
 4. (Optional) Fügen Sie einen Anfragekopf hinzu. Dies kann für Ihr Webhook-Ziel erforderlich sein.
 
-![Der Tab "Zusammenstellen" beim Erstellen eines Webhook Templates. Verfügbare Felder sind die Webhook-URL, die HTTP-Methode, der Anfragetext und die Anfrage-Header. Sie können auch Sprachen hinzufügen.]({% image_buster /assets/img_archive/Webhook_template_test.png %}){: style="max-width:90%"}
+![Der Tab „Verfassen“ beim Erstellen eines Webhook-Templates. Verfügbare Felder sind die Webhook-URL, die HTTP-Methode, der Anfragetext und die Anfrage-Header. Sie können auch Sprachen hinzufügen.]({% image_buster /assets/img_archive/Webhook_template_test.png %}){: style="max-width:90%"}
 
 ## Schritt 5: Testen Sie Ihre Vorlage
 

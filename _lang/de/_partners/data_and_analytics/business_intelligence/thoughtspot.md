@@ -10,7 +10,7 @@ search_tag: Partner
 
 # ThoughtSpot
 
-> ThoughtSpot ist die moderne Analytics-Cloud, eine Analytics-Plattform der nächsten Generation, die Ihrem modernen Stack Live-Analysen zustellt und Ihre Kollegen, Partner und Kunden in die Lage versetzt, Daten in umsetzbare Insights zu verwandeln.
+> [ThoughtSpot](https://www.thoughtspot.com/) ist die moderne Analytics-Cloud, eine Analytics-Plattform der nächsten Generation, die Ihrem modernen Stack Live-Analysen zustellt und Ihre Kollegen, Partner und Kunden in die Lage versetzt, Daten in umsetzbare Insights zu verwandeln.
 
 Die Integration von Braze und ThoughtSpot nutzt ThoughtSpot TML-Blöcke, die es Nutzer:innen von Braze ermöglichen, ihre Verhaltensanalysen mit vorgefertigten Templates von Arbeitsblättern und Modellen zu beschleunigen. Diese Integration ermöglicht es Nutzern:innen, ihre Braze Interaktionsdaten grenzenlos zu durchsuchen und umsetzbare Insights zu entdecken. 
 

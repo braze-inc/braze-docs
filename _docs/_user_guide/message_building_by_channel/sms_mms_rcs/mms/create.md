@@ -38,6 +38,8 @@ Contact cards (sometimes known as vCard or Virtual Contact Files (vcf)) are a st
 
 Creating an MMS message requires your subscription group to be configured for MMS sending. This is indicated by seeing the MMS tag when selecting a subscription group. Upon selecting an MMS-enabled subscription group, you will have the ability to upload an image, reference an image URL, or include a contact card.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 ![The "Compose" tab to write your message.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Image specifications

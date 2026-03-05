@@ -2,7 +2,7 @@
 nav_title: メッセージ 
 article_title: メッセージ 
 alias: "/message_step/"
-page_order: 5
+page_order: 11
 page_type: reference
 description: "このリファレンス記事では、メッセージステップを使用してスタンドアロンメッセージを作成する方法について説明します。"
 tool: Canvas
@@ -22,12 +22,13 @@ tool: Canvas
 ### ステップ 1: メッセージングチャネルの選択
 
 次のメッセージングチャネルを選択できます。 
+- バナー（早期アクセス中）
 - コンテンツカードによって促進された
 - メール
 - LINE
 - プッシュ通知
 - SMS/MMS/RCS
-- アプリ内メッセージ 
+- アプリ内メッセージ
 - Webhook
 - WhatsApp
 

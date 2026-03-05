@@ -1,12 +1,12 @@
 ---
-nav_title: 購入のロギング
-article_title: Braze SDK を使用した購入のロギング
+nav_title: ログ購入
+article_title: Braze SDKを通じて購入履歴を記録する。
 page_order: 3.2
 description: "Braze SDK を使用して購入を記録する方法について説明します。"
 
 ---
 
-# 購入のロギング
+# ログ購入
 
 > Braze SDK を使用してアプリ内購入をログに記録する方法について説明します。これにより、時間の経過やさまざまなソースにわたる収益を把握できるようになります。これにより、カスタムイベント、カスタム属性、および購入イベントを使用して、[生涯価値に基づいて]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking)ユーザーをセグメント化できます。
 

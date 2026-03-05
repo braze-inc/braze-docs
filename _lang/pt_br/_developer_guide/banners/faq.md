@@ -2,7 +2,7 @@
 nav_title: Perguntas frequentes
 article_title: "Banners: Perguntas frequentes"
 page_order: 20
-description: "Estas são respostas para perguntas frequentes sobre Banners no Braze."
+description: "Estas são as respostas às perguntas mais frequentes sobre Banners no Braze."
 channel:
   - banners
 tool:

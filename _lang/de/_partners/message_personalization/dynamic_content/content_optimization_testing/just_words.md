@@ -77,10 +77,10 @@ Just Words arbeitet mit Canvase und Kampagnen, indem es Connected-Content verwen
 ```
 {% endraw %}
 
-![Braze A/B-Test Canvas-Einrichtung.]({% image_buster /assets/img/just_words/braze_canvas.png %}){: style="max-width:70%;"}
+![Braze A/B-Test Canvas einrichten.]({% image_buster /assets/img/just_words/braze_canvas.png %}){: style="max-width:70%;"}
 
 {% endtab %}
-{% tab Kampagne %}
+{% tab Campaign %}
 
 1. In dem Schritt **Nachrichten verfassen** Ihrer Kampagne erstellen Sie zwei Varianten.
 2. Gehen Sie im Schritt **Zielgruppe** zum Abschnitt **A/B-Tests** und ändern Sie die Prozentsätze der Nutzer:innen, die jede Ihrer Varianten (und Ihre optionale Kontrollgruppe) erhalten sollen. Sie können Ihren Test weiter anpassen, indem Sie eine Optimierungsoption auswählen. Weitere Informationen über A/B-Tests für Kampagnen finden Sie unter [Erstellen von multivariaten und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/).
@@ -145,7 +145,7 @@ Braze-Currents ermöglicht das Tracking und die Optimierung der Performance im L
 {: start="3" }
 3\. Geben Sie die S3-Zugangs-ID, den geheimen AWS-Zugangsschlüssel, den Bucket-Namen und den Ordner ein, die Sie von Just Words beim Onboarding erhalten haben.
 
-![Abschnitt "Zugangsdaten" für den geheimen AWS-Zugangsschlüssel.]({% image_buster /assets/img/just_words/aws_secret_access_key.png %}){: style="max-width:80%;"}
+![Abschnitt "Zugangsdaten" für den geheimen AWS Zugangsschlüssel.]({% image_buster /assets/img/just_words/aws_secret_access_key.png %}){: style="max-width:80%;"}
 
 {: start="4" }
 4\. Wählen Sie die Ereignisse aus, die Sie tracken möchten, z. B. Sendungen, Öffnungen, Klicks, Abmeldungen, Konversionen und andere.

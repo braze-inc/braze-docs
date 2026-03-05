@@ -1,7 +1,7 @@
 ---
 nav_title: 埋め込みサインアップ
 article_title: WhatsApp 埋め込みサインアップ
-page_order: 0
+page_order: 1
 description: "このリファレンス記事では、Braze のWhatsApp 埋め込みサインアップワークフローのステップ-by-ステップのチュートリアルについて説明します。"
 page_type: reference
 channel:

@@ -66,9 +66,13 @@ After your domain is verified, your custom domains will appear in the table on t
 
 Live monitoring will alert you in the Braze dashboard if any of your active domains have an issue, so that your custom links remain usable. If you encounter any issues, refer to the in-app error details or contact Braze [Support]({{site.baseurl}}/braze_support/) for assistance.
 
-## Using custom domains
+## Assigning custom domains to subscription groups
 
 After they're configured, custom domains can be assigned to one or multiple SMS, RCS, and WhatsApp subscription groups.
+
+1. Go to **Audience** > **Subscription Group Management**.
+2. Find and select your subscription group in the list.
+3. Under **Subscription Group Details**, select your custom domain as the **Link Shortening Domain**.
 
 ![Subscription groups settings that allow you to select a link-shortening domain.]({% image_buster /assets/img/custom_domain.png %})
 

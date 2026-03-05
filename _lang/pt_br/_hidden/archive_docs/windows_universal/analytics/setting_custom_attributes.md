@@ -1,18 +1,18 @@
 ---
-nav_title: Definindo Atributos Personalizados
-article_title: Definindo Atributos Personalizados para Windows Universal
+nav_title: Definir atributos personalizados
+article_title: Definir atributos personalizados para o Windows Universal
 platform: Windows Universal
 page_order: 3
 description: "Este artigo de referência cobre como definir atributos personalizados na Plataforma Universal do Windows."
 hidden: true
 ---
 
-# Definindo atributos personalizados
+# Definir atributos personalizados
 {% multi_lang_include archive/windows_deprecation.md %}
 
 Braze fornece métodos para atribuir atributos aos usuários. Você poderá filtrar e segmentar seus usuários de acordo com esses atributos no dashboard.
 
-Antes da implementação, certifique-se de revisar exemplos das opções de segmentação oferecidas por eventos personalizados, atributos personalizados e eventos de compra em nossas [Melhores práticas][7].
+Antes da implementação, certifique-se de revisar exemplos das opções de segmentação oferecidas por eventos personalizados, atributos personalizados e eventos de compra em nossas [Práticas recomendadas]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection).
 
 Os atributos do usuário podem ser atribuídos ao atual `IAppboyUser`. Para obter uma referência ao `IAppboyUser` atual, chame `Appboy.SharedInstance.AppboyUser`
 
@@ -37,28 +37,28 @@ Appboy.SharedInstance.AppboyUser.FirstName = "User's First Name"
 
 ## Atribuindo atributos personalizados ao usuário
 
-Além dos atributos de usuário padrão, a Braze também permite que você defina atributos personalizados usando vários tipos diferentes de dados. Para saber mais sobre as opções de segmentação e como cada um desses atributos afetará você, consulte nossas [Melhores práticas]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices-and-notes).
+Além dos atributos de usuário padrão, a Braze também permite que você defina atributos personalizados usando vários tipos diferentes de dados. Para saber mais sobre as opções de segmentação e como cada um desses atributos afetará você, consulte nossas [Práticas recomendadas]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices-and-notes).
 
 ### Definindo valores de atributo personalizado
 
 {% tabs %}
-{% tab Booleano %}
+{% tab Boolean %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, BOOL_VALUE);
 ```
 {% endtab %}
-{% tab Inteiro %}
+{% tab Integer %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, INT_VALUE);
 ```
 {% endtab %}
-{% tab Double ou Float %}
+{% tab Double or Float %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, DOUBLE_VALUE);
 ```
 Braze trata os valores FLOAT e DOUBLE exatamente da mesma forma em nosso banco de dados.
 {% endtab %}
-{% tab string %}
+{% tab String %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, "STRING_VALUE");
 ```
@@ -68,13 +68,13 @@ bool SetCustomAttribute(STRING_KEY, "STRING_VALUE");
 bool SetCustomAttribute(STRING_KEY, LONG_VALUE);
 ```
 {% endtab %}
-{% tab Data %}
+{% tab Date %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, "DATE_VALUE");
 ```
->  As datas transmitidas à Braze devem estar no formato [ISO 8601][2], e.g `2013-07-16T19:20:30+01:00` ou no formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`  e.g `2016-12-14T13:32:31.601-0800`
+>  As datas transmitidas à Braze devem estar no formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601), e.g `2013-07-16T19:20:30+01:00` ou no formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`  e.g `2016-12-14T13:32:31.601-0800`
 {% endtab %}
-{% tab Vetor %}
+{% tab Array %}
 ```csharp
 // Setting a custom attribute with an array value
 Appboy.SharedInstance.EventLogger.SetCustomAttributeArray("custom_attribute_array_test", testSetArray);
@@ -104,7 +104,7 @@ bool UnsetCustomAttribute(STRING_KEY);
 
 ### Definindo um atributo personalizado via a API REST
 
-Você também pode usar nossa API REST para definir atribuições de usuário. Consulte a documentação da [API de usuários][4] para obter detalhes.
+Você também pode usar nossa API REST para definir atribuições de usuário. Consulte a documentação da [API de usuários]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) para obter detalhes.
 
 ### limites de valor de atributo personalizado
 
@@ -126,10 +126,5 @@ Para configurar uma inscrição para seus usuários (seja e-mail ou push), você
 - `PushNotificationSubscriptionType`
   - Os usuários serão configurados para `Subscribed` automaticamente após o registro válido de push, no entanto, sugerimos que você estabeleça um processo de aceitação explícita e defina este valor para `OptedIn` após o recebimento do consentimento explícito do seu usuário.
 
->  Esses tipos se enquadram em `AppboyPlatform.PCL.Models.NotificationSubscriptionType`. Para saber mais, consulte [Gerenciar inscrições de usuários][10].
+>  Esses tipos se enquadram em `AppboyPlatform.PCL.Models.NotificationSubscriptionType`. Para saber mais, consulte [Gerenciar inscrições de usuários]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions).
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices--notes
-[2]: http://en.wikipedia.org/wiki/ISO_8601
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

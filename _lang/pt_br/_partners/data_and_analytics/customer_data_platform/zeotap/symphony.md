@@ -8,7 +8,7 @@ page_order: 2
 
 # Zeotap Symphony
 
-A integração Braze e Zeotap Symphony permite que você crie orquestrações em tempo real e execute campanhas de e-mail e notificações por push.
+A integração entre o Braze e o Zeotap Symphony permite que você crie orquestrações em tempo real e execute campanhas de envio de e-mail e notificações por push.
 
 - Envie nomes e sobrenomes pelo Zeotap, com base nos quais os usuários podem enviar e-mails personalizados pelo Braze.
 - Envie eventos personalizados ou um evento de compra em tempo real por meio do Zeotap, com base nos quais os usuários podem criar disparadores de campanha no Braze para direcionar seus clientes
@@ -43,14 +43,14 @@ Quando a integração for configurada com sucesso, você poderá criar campanhas
 ### Método 2
 Neste método, você pode integrar a Braze à Zeotap pela Symphony.
 
-- Este método não suporta os recursos da interface do usuário do Braze, como envio de mensagens no aplicativo, Cartões de Conteúdo ou notificações por push.
+- Esse método não oferece suporte aos recursos da interface do usuário do Braze, como envio de mensagens no app, cartões de conteúdo ou notificações por push.
 - A Zeotap recomenda mapear o site `hashed email` disponível no Zeotap Catalogue para o site `External ID`.
 
 Quando a integração for definida com sucesso, você só poderá criar campanhas de e-mail com base em atributos personalizados enviados ao Braze por meio do Symphony.
 
 ## Fluxo de dados para o Braze e identificadores suportados
 
-Os dados fluirão do Zeotap para o Braze usando o [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Os seguintes pontos resumem o fluxo de dados:
+Os dados fluirão do Zeotap para o Braze usando o [ponto de extremidade`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Os pontos a seguir resumem o fluxo de dados:
 
 1. O Zeotap envia atributos de perfil de usuário, atributos personalizados, eventos personalizados e campos de compra.
 2. Você mapeia todos os campos relevantes do Catálogo Zeotap para os campos do Braze na guia **Data To Send (Dados a serem enviados** ).
@@ -64,7 +64,7 @@ Após aplicar filtros ou adicionar uma condição para seus usuários no Symphon
 
 #### Adicionar novo destino
 Execute as etapas a seguir para adicionar um novo destino:
-1. Selecione **Adicionar Novo Destino**.
+1. Selecione **Add New Destination (Adicionar novo destino**).
 2. Procure por **Braze**.
 3. Adicione o **nome do cliente**, **a chave de API** e a **instância** e salve o destino.
 
@@ -80,8 +80,8 @@ Depois de criar um destino, você deve adicionar entradas no nível do fluxo de 
 #### Guia Dados a serem enviados
 A guia **Data To Send (Dados a serem enviados** ) permite mapear os campos do catálogo Zeotap para os campos do Braze que podem ser enviados ao Braze. O mapeamento pode ser feito de uma das seguintes maneiras:
 - **Mapeamento estático** \- Há determinados campos que o Zeotap mapeia automaticamente para os campos Braze relevantes, como e-mail, telefone, nome, sobrenome e assim por diante.<br>
-- **Seleção suspensa** – mapeie os campos relevantes ingeridos na Zeotap para os campos da Braze fornecidos no menu suspenso.<br>![Várias características do usuário definidas no Zeotap, como idioma, cidade, aniversário e mais.]({% image_buster /assets/img/zeotap/zeotap7.png %}){: style="max-width:70%;"}<br>
-- **Entrada de dados personalizados** \- Adicione dados personalizados mapeados ao campo Zeotap relevante e envie para o Braze.<br>![Selecionando "loyalty_points" como a característica do usuário no Zeotap.]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
+- **Seleção suspensa** – mapeie os campos relevantes ingeridos na Zeotap para os campos da Braze fornecidos no menu suspenso.<br>![Várias características de usuário definidas na Zeotap, como idioma, cidade, aniversário e muitas outras.]({% image_buster /assets/img/zeotap/zeotap7.png %}){: style="max-width:70%;"}<br>
+- **Entrada de dados personalizados** \- Adicione dados personalizados mapeados ao campo Zeotap relevante e envie para o Braze.<br>![Selecionando "loyalty_points" como a característica do usuário em Zeotap.]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
 
 ## Atribuições suportadas
 Você pode encontrar detalhes de todos os campos da Braze nesta seção.

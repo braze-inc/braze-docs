@@ -28,7 +28,7 @@ Additional details around using Recurly with Braze can be found in the [Recurly 
 | Requirement | Description |
 | ----------- | ----------- |
 | Recurly account | An Elite [Recurly](https://recurly.com/) subscription plan with the Braze feature flag enabled is required to take advantage of this partnership. The activation of credit invoices in your Recurly platform is also required.|
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. Since Recurly only uses the `users.track` endpoint, we recommend provisioning a Recurly specific key with only this permission. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. Recurly는 `users.track` 엔드포인트만 사용하므로 이 권한으로만 Recurly 특정 키를 프로비저닝하는 것이 좋습니다. |
 | Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 
 ## Integration
@@ -82,11 +82,11 @@ For effective customer engagement, you must [configure custom events]({{site.bas
 
 Because Recurly uses the Braze `/users/track` endpoint, the integration is subject to standard Braze rate limits of 50,000 requests per minute.
 
-Recurly batches certain subscription lifecycle events as single API calls to Braze to reduce the number of calls made.
+특정 구독 수명 주기 이벤트를 반복적으로 일괄 처리하여 Braze에 대한 단일 API 호출로 처리하여 요청 횟수를 줄입니다.
 
-- Creation of multiple subscriptions at the same time are batched and sent to Braze as a single request.
-- When multiple subscriptions are renewed at the same time for an account, each of those renewals is batched into a single request.
-- Same model subscription lifecycle events are sent as a single request. An example being a newly created invoice with a payment would send a single API request with both the `Recurly Invoice Created` and `Recurly Successful Payment` custom events.
+- 단일 요청으로 동시에 생성된 여러 구독을 반복적으로 일괄 처리하여 전송합니다.
+- 계정에 대한 여러 개의 동시 갱신을 하나의 요청으로 반복적으로 일괄 처리합니다.
+- 동일한 모델 구독 수명 주기 이벤트를 한 번의 요청으로 반복적으로 전송합니다. 예를 들어, 결제와 함께 새로 생성된 인보이스는 `Recurly Invoice Created` 및 `Recurly Successful Payment` 커스텀 이벤트가 모두 포함된 하나의 API 요청을 생성합니다.
 
 Batches are sent to Braze in groups of up to 75 events at a time. For example, if 100 subscriptions were created at once, Recurly would make two API requests to Braze. See [batching User Track requests]({{site.baseurl}}/api/api_limits/#batch-user-track) for details.
 

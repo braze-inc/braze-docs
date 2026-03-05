@@ -33,7 +33,7 @@ Erstellen Sie eine E-Mail-Kampagne mit einer Call-to-Action-Schaltfläche im Nac
 
 Verwenden Sie die Parameter in der URL, um Nutzerdaten zu übergeben, und erstellen Sie einen API-Aufruf, der beim Laden der Seite ausgelöst wird, um die:den Nutzer:in zum Webinar hinzuzufügen.
 
-![E-Mail Nachricht mit Liquid-Template, das Vorname, Nachname, E-Mail-Adresse und Ort enthält.]({% image_buster /assets/img/zoom/zoom1.png %})
+![Nachrichten per E-Mail mit Liquid-Templates, die den Vornamen, den Nachnamen, die E-Mail-Adresse und den Ort enthalten.]({% image_buster /assets/img/zoom/zoom1.png %})
 
 Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits in ihrem Braze-Profil vorhanden sind.
 
@@ -58,7 +58,7 @@ Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits 
 
 	Beispiel für einen Webhook-Aufruf an den Zoom-Endpunkt.<br>
 	{% raw %}
-	```json
+	```http
 	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{
@@ -94,7 +94,7 @@ Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits 
 
 	Beispiel für einen Webhook-Aufruf an den Zoom-Endpunkt.<br>
 	{% raw %}
-	```json
+	```http
 	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{

@@ -90,9 +90,7 @@ Mit der Funktion **Benutzerdefinierte URI** können Sie eine Web-URL oder eine A
 
 ## Benachrichtigungs-Anzeigepriorität
 
-{% alert important %}
-Die Einstellung für die Priorität der Benachrichtigungsanzeige wird auf Geräten mit Android O oder neuer nicht mehr verwendet. Bei neueren Geräten legen Sie die Priorität über die [Konfiguration des Benachrichtigungskanals](https://developer.android.com/training/notify-user/channels#importance) fest.
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='Android notification priority' %}
 
 Die Prioritätsstufe einer Push-Benachrichtigung wirkt sich darauf aus, wie Ihre Benachrichtigung im Vergleich zu anderen Benachrichtigungen in der Benachrichtigungsleiste angezeigt wird. Sie kann sich auch auf die Geschwindigkeit und die Art der Zustellung auswirken, da normale Nachrichten und Nachrichten mit geringerer Priorität mit etwas höherer Latenz oder in Stapeln gesendet werden können, um den Akku zu schonen, während Nachrichten mit hoher Priorität immer sofort gesendet werden.
 
@@ -154,7 +152,7 @@ Android-Push-Benachrichtigungen bieten ein optionales Feld, mit dem Sie festlege
 
 Außerdem können Android-Nutzer die Anzeige von Push-Benachrichtigungen auf dem Sperrbildschirm deaktivieren, indem sie die Datenschutzeinstellungen für Benachrichtigungen auf ihrem Gerät ändern. Diese Einstellung setzt die Sichtbarkeit der Push-Benachrichtigung außer Kraft.
 
-![Dashboard Push-Prioritätsstandort mit Enablement der Sichtbarkeit und Einstellung auf Privat.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Dashboard Push-Prioritätsort mit aktivierter Sichtbarkeit und der Einstellung Privat.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Unabhängig von der Sichtbarkeit werden alle Benachrichtigungen auf dem Sperrbildschirm des Benutzers angezeigt, wenn die Datenschutzeinstellung für Benachrichtigungen auf dem Gerät **Alle Inhalte anzeigen** lautet (Standardeinstellung). Ebenso werden Benachrichtigungen nicht auf dem Sperrbildschirm angezeigt, wenn der Datenschutz für Benachrichtigungen auf **Nicht anzeigen** eingestellt ist. Die Sichtbarkeit wirkt sich nur aus, wenn der Datenschutz für Ihre Benachrichtigungen auf **Sensible Inhalte ausblenden** eingestellt ist.
 

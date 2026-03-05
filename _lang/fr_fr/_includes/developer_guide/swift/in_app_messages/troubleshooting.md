@@ -25,7 +25,7 @@ Vous trouverez ci-dessous les bibliothèques connues pour être en conflit avec 
 NFX.sharedInstance().ignoreURLs(["https://cdn.braze.com"])
 ```
 {% endtab %}
-{% tab Objectif-C %}
+{% tab Objective-C %}
 ```objc
 [NFX.sharedInstance ignoreURLs:@[@"https://cdn.braze.com"]];
 ```
@@ -40,7 +40,7 @@ NFX.sharedInstance().ignoreURLs(["https://cdn.braze.com"])
 NetGuard.blackListHosts.append(contentsOf: ["cdn.braze.com"])
 ```
 {% endtab %}
-{% tab Objectif-C %}
+{% tab Objective-C %}
 ```objc
 NSMutableArray<NSString *> *blackListHosts = [NetGuard.blackListHosts mutableCopy];
 [blackListHosts addObject:@"cdn.braze.com"];
@@ -58,7 +58,7 @@ let brazeAssetsHostFilter = XNHostFilter(host: "https://cdn.braze.com")
 XNLogger.shared.addFilters([brazeAssetsHostFilter])
 ```
 {% endtab %}
-{% tab Objectif-C %}
+{% tab Objective-C %}
 ```objc
 XNHostFilter *brazeAssetsHostFilter = [[XNHostFilter alloc] initWithHost: @"https://cdn.braze.com"];
 [XNLogger.shared addFilters:@[brazeAssetsHostFilter]];

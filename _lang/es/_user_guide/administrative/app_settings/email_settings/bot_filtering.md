@@ -28,21 +28,21 @@ El filtrado de bots bloquea activamente los clics sospechosos de automatización
 
 Las siguientes métricas de Braze pueden verse afectadas por los clics de los robots:
 
-- Tasa total de clics
-- Tasa de clics única
-- Tasa de clics abiertos
+- Tasa de clics totales
+- Tasa de clics únicos
+- Tasa de clics de apertura
 - Tasa de conversión (si se selecciona "Campaña de clics" como evento de conversión)
 - Mapa de calor
 - Algunos filtros de segmento
 
-[Las características de Braze Intelligence]({{site.baseurl}}/user_guide/brazeai/intelligence) que aprovechan los datos de los clics sobre nuestros sistemas de detección pueden verse afectadas. Activar la configuración tiene el potencial de perturbar temporalmente nuestros sistemas de detección, lo que puede dar lugar a una disminución de la métrica o de la entrada debido a esta exclusión de los clics sospechosos de ser bots:
+[Las características de Braze Intelligence]({{site.baseurl}}/user_guide/brazeai/intelligence) que aprovechan los datos de los clics sobre nuestros sistemas de detección pueden verse afectadas. Activar la configuración tiene el potencial de perturbar temporalmente nuestros sistemas de detección, lo que puede dar lugar a una disminución de la métrica o de la entrada debido a esta exclusión de presuntos clics de bots:
 
 - Intelligent Selection
 - Canal inteligente
 - Intelligent Timing
 - Paso del experimento
-    - Camino Ganador
-    - Camino personalizado
+    - Recorrido ganador
+    - Recorrido personalizado
 - Campaña
     - Variante ganadora
     - Variante personalizada
@@ -54,21 +54,21 @@ Las cancelaciones de suscripción por presuntos clics de bots no se verán afect
 
 Los siguientes [filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) pueden verse afectados por el filtrado de bots para mensajes de correo electrónico:
 
-- [Campaña clicada/abierta o Canvas con etiqueta]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-opened-campaign-or-canvas-with-tag)
-- [Paso clicado/abierto]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-opened-step)
-- [Alias clicado en Campaña]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-campaign)
-- [Alias con clic en Paso en Canvas]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-canvas-step)
-- [Alias con clic en cualquier campaña o paso en Canvas]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-any-campaign-or-canvas-step)
+- [Campaña o Canvas que se abrió o en la que se hizo clic con etiqueta]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-opened-campaign-or-canvas-with-tag)
+- [Paso que se abrió o en el que se hizo clic]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-opened-step)
+- [Alias al que se hizo clic en la campaña]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-campaign)
+- [Alias en que se hizo clic en paso en Canvas]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-canvas-step)
+- [Alias con clic en cualquier paso de campaña o lienzo]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-any-campaign-or-canvas-step)
 - [Última interacción con un mensaje]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#last-engaged-with-message)
 - [Canal inteligente]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#intelligent-channel)
 
 ## Activar el filtrado de bots
 
-Ve a **Configuración** > **Preferencias de correo electrónico**. A continuación, selecciona **Eliminar clics de bot**. Esta configuración se aplica a nivel de espacio de trabajo.
+Vaya a **Configuración** > **Preferencias de correo electrónico**. A continuación, selecciona **Eliminar clics de bot**. Esta configuración se aplica a nivel de espacio de trabajo.
 
 Los presuntos clics de bots sólo se eliminarán una vez activada la configuración, y no se aplica retroactivamente a las métricas de tu espacio de trabajo.
 
-\![Configuración de filtrar correo electrónico activada en Preferencias de correo electrónico.]({% image_buster /assets/img/bot_tracking_email.png %})
+![Configuración de filtrar correo electrónico activada en Preferencias de correo electrónico.]({% image_buster /assets/img/bot_tracking_email.png %})
 
 {% alert important %}
 Si activas esta configuración y luego la desactivas, Braze no podrá restaurar en tus análisis ninguna actividad bot eliminada previamente.
@@ -80,7 +80,7 @@ Braze enviará los campos `is_suspected_bot_click` y `suspected_bot_click_reason
 
 | Campo Tipo de datos Descripción
 | `is_suspected_bot_click` | Booleano | Indica que se trata de un presunto clic de bot. Esto se enviará como valores nulos hasta que actives la configuración **Eliminar bots hace clic en** el espacio de trabajo. Este enfoque te permite comprender programáticamente cuándo se ha iniciado el filtrado de los clics de bot sospechosos en tu espacio de trabajo, de forma que puedas compararlo con precisión con los datos de Currents y Snowflake. |
-| `suspected_bot_click_reason` | Array | Indica la razón por la que se sospecha que se trata de un clic de bot. Se rellenará con valores, como `user_agent` y `ip_address`, aunque la configuración del espacio de trabajo para filtrar bots esté desactivada. Este campo puede proporcionar información sobre el impacto potencial de activar esta configuración, comparando el número de clics derivados de presuntos clics de bots con las interacciones humanas. |
+| `suspected_bot_click_reason` | Array | Indica la razón por la que se sospecha que es un clic de bot. Se rellenará con valores, como `user_agent` y `ip_address`, aunque la configuración del espacio de trabajo para filtrar bots esté desactivada. Este campo puede proporcionar información sobre el impacto potencial de activar esta configuración, comparando el número de clics derivados de presuntos clics de bots con las interacciones humanas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Preguntas más frecuentes

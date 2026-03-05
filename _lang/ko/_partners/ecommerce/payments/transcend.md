@@ -34,8 +34,8 @@ Transcend allows you to programmatically access, erase, and opt users out of com
 To get started, log in to [Transcend](https://app.transcend.io/login).
 1. Navigate to **Data Map > Add Data Silo > Braze** and select the **Connect** button.<br><br>
 2. When your account is provisioned, you will log in to one of the corresponding URLs: `https://dashboard-01.braze.com`, `https://dashboard-02.braze.com, ..., https://dashboard-01.braze.eu`.<br> Use the following [table]({{site.baseurl}}/api/basics/#endpoints) to figure out what subdomain you should include based on your dashboard URL.<br><br>
-3. When connected, navigate to the Transcend **Privacy Center** tab. Here, you'll need to map the data in Braze to your data practices. To do this, create a new category and a new Data Collection with the appropriate naming convention (for example, "Mailing Lists or User Profile"). When completed, hit **Publish**.<br><br>
-4. Navigate back to your Data Map and click on the Braze data silo. Expand **Manage Datapoints** and select the collection label (category) you created in the previous step from the dropdown. You can also choose which data actions (for example, access or erasure) are enabled for which data points. <br><br>
+3. When connected, navigate to the Transcend **Privacy Center** tab. Here, you'll need to map the data in Braze to your data practices. To do this, create a new category and a new Data Collection with the appropriate naming convention (for example, "Mailing Lists or User Profile"). 완료되면 **게시를** 선택합니다.<br><br>
+4. 데이터 맵으로 다시 이동하여 Braze 데이터 사일로를 선택합니다. Expand **Manage Datapoints** and select the collection label (category) you created in the previous step from the dropdown. You can also choose which data actions (for example, access or erasure) are enabled for which data points. <br><br>
 5. Next, while still in the Braze data silo, expand **Manage Identifiers**. Check the respective boxes for which identifiers you'd like enabled. For example, if you'd like Transcend to search users by email address, you'd check the box to enable the email address identifier.
 
 {% alert note %}
@@ -44,8 +44,8 @@ If identifiers are not enabled correctly, Transcend may not process requests for
 
 ### Step 2: Test requests
 Transcend recommends testing requests across your Data Map before you start processing requests from end-users.
-1. Go to **Privacy Center** in Transcend and click **View your Privacy Center**.<br><br>
-2. From your **Privacy Center**, click **Take Control**, then **Download my data**. Enter your email or log in to authenticate yourself before submitting the request.<br><br>
+1. Transend의 **개인정보 보호** 센터로 이동하여 **개인정보 보호센터 보기를** 선택합니다.<br><br>
+2. **개인정보 보호 센터에서** **관리하기를** 선택한 다음 **내 데이터 다운로드를** 선택합니다. Enter your email or log in to authenticate yourself before submitting the request.<br><br>
 3. Check your email for a message from Transcend. You'll be asked to click on a verification link to verify the request.<br><br>
 4. Next, back in the **Admin** dashboard, navigate to the **Incoming Requests** tab, and select your request. Contact Transcend at [support@transcend.io](mailto:support@transcend.io) if you don't see the request here.<br><br>
 5. After you've clicked into your request, navigate to the **Data Silos** tab and select **Braze**. Inspect and confirm the data returned.<br><br>

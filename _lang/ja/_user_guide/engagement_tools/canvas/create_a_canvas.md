@@ -12,7 +12,7 @@ tool: Canvas
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: キャンバスの作成
+  - name: キャンバスを作成する
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/palette.svg
   - name: キャンバスのコメント

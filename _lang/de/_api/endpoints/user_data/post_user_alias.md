@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Neuen Nutzer-Alias erstellen"
+nav_title: "POST: Neuen Nutzer:in-Alias erstellen"
 article_title: "POST: Neuen Nutzer-Alias erstellen"
 search_tag: Endpoint
 page_order: 1
@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Neue Nutzer:in erst
 {% api %}
 # Neuen Nutzer:in-Alias erstellen
 {% apimethod post %}
-/users/alias/new
+/benutzer/alias/new
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um neue User-Alias für bestehende identifizierte Nutzer:innen hinzuzufügen oder um neue nicht identifizierte Nutzer:innen zu erstellen.
@@ -81,8 +81,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"

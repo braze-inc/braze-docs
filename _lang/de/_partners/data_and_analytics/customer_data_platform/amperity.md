@@ -120,7 +120,7 @@ Geben Sie unter **Braze-Einstellungen** die Zugangsdaten zu Braze und die Zielei
 - `braze_id`: Ein automatisch zugewiesener Bezeichner von Braze, der nicht geändert werden kann und mit einem bestimmten Nutzer:innen verbunden ist, wenn diese in Braze erstellt werden.
 - `external_id`: Ein von Kund:in zugewiesener Bezeichner, normalerweise eine UUID. 
 
-![Der Abschnitt Braze-Einstellungen mit der Instanz "US-03", dem Bezeichner "external_id", dem leeren Segmentenamen, dem S3-Bucket "amperity-training-abc123" und dem S3-Ordner "braze-attributes".]({% image_buster /assets/img/amperity/braze_settings.png %}){: style="max-width:60%;"}
+![Der Abschnitt Braze-Einstellungen mit der Instanz "US-03", dem Bezeichner des leeren Segments "external_id",, dem S3-Bucket "amperity-training-abc123" und dem S3-Ordner "braze-attributes".]({% image_buster /assets/img/amperity/braze_settings.png %}){: style="max-width:60%;"}
 
 #### Schritt 2e: Eine Daten-Template hinzufügen
 

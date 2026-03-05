@@ -73,7 +73,7 @@ This use case shows how to find a user's birthday, compare it to the current dat
 {% raw %}
 ```liquid
 {% assign this_week = 'now' | date: '%W' %}
-{% assign birthday_week = ${date_of_birth}  | date: '%W' %}
+{% assign birthday_week = {{${date_of_birth}}} | date: '%W' %}
 {% assign last_week = {{this_week}} | minus: 1 %}
 {% assign next_week = {{this_week}} | plus: 1 %}
 {% assign birthday_week_conversion = {{birthday_week}} | plus: 0 %}
@@ -186,7 +186,7 @@ This use case calculates the last time a user opened your app and will display a
 
 {% raw %}
 ```liquid
-{% assign last_used_date = {{${last_used_app_date}} | date: "%s" %}
+{% assign last_used_date = {{${last_used_app_date}}} | date: "%s" %}
 {% assign now = 'now' | date: "%s" %}
 {% assign difference_in_days = {{now}} | minus: {{last_used_date}} | divided_by: 86400 %}
 {% if {{difference_in_days}} < 3 %}
@@ -203,7 +203,7 @@ This use case calculates how long ago a user used your app, and depending on the
 
 {% raw %}
 ```liquid
-{% assign last_used_date = {{${last_used_app_date}} | date: "%s" %}
+{% assign last_used_date = {{${last_used_app_date}}} | date: "%s" %}
 {% assign now = 'now' | date: "%s" %}
 {% assign difference_in_days = {{now}} | minus: {{last_used_date}} | divided_by: 86400 %}
 {% if {{difference_in_days}} < 3 %}
@@ -283,7 +283,7 @@ This use case captures different shipping options, calculates the length of time
 {% assign difference_e = express_shipping_end | minus: today %}
 {% assign difference_e_days = difference_e | divided_by: 86400.00 | round %}
 {% assign difference_o = overnight_shipping_end | minus: today %}
-{% assign difference_o_days = difference | divided_by: 86400.00 | round %}
+{% assign difference_o_days = difference_o | divided_by: 86400.00 | round %}
 
 {% if today >= standard_shipping_start and today <= standard_shipping_end %}
 {% if difference_s_days == 0 %}
@@ -657,7 +657,7 @@ This use case captures a list of the categories a user has purchased from, and i
 ```liquid
 {% assign category = {{custom_attribute.${categories_purchased}}} %}
 {% assign uniq_cat = {{category | uniq }} %}
-{% if {{uniq_cat | size}} == 1%}
+{% if {{uniq_cat | size}} == 1 %}
 {{uniq_cat}}
 {% else %}
 {% abort_message("Purchase category doesn't exist") %}
@@ -745,27 +745,27 @@ This use case will display the current date, month, and year, with the month in 
 
 {% if {{month}} == 'January' %}
 {{day}} Januari {{year}}
-{% elsif {{month)) == 'February' %}
+{% elsif {{month}} == 'February' %}
 {{day}} Februari {{year}}
-{% elsif {{month)) == 'March' %}
+{% elsif {{month}} == 'March' %}
 {{day}} Mars {{year}}
-{% elsif {{month)) == 'April' %}
+{% elsif {{month}} == 'April' %}
 {{day}} April {{year}}
-{% elsif {{month)) == 'May' %}
+{% elsif {{month}} == 'May' %}
 {{day}} Maj {{year}}
-{% elsif {{month)) == 'June' %}
+{% elsif {{month}} == 'June' %}
 {{day}} Juni {{year}}
-{% elsif {{month)) == 'July' %}
+{% elsif {{month}} == 'July' %}
 {{day}} Juli {{year}}
-{% elsif {{month)) == 'August' %}
+{% elsif {{month}} == 'August' %}
 {{day}} Augusti {{year}}
-{% elsif {{month)) == 'September' %}
+{% elsif {{month}} == 'September' %}
 {{day}} September {{year}}
-{% elsif {{month)) == 'October' %}
+{% elsif {{month}} == 'October' %}
 {{day}} Oktober {{year}}
-{% elsif {{month)) == 'November' %}
+{% elsif {{month}} == 'November' %}
 {{day}} November {{year}}
-{% elsif {{month)) == 'December' %}
+{% elsif {{month}} == 'December' %}
 {{day}} December {{year}}
 {% endif %}
 ```
@@ -1049,7 +1049,7 @@ The following step checks if the time_to_reminder is less than seven days away b
 Users are scheduled to enter the journey on day 2.
 {% endcomment %}
 
-{% else {{time_to_reminder}} < 604799 and {{time_to_reminder}} > 172860 %}
+{% elsif {{time_to_reminder}} < 604799 and {{time_to_reminder}} > 172860 %}
 {% assign time_to_first_message = reminder_start_date | plus: 172800 %}
 
 {
@@ -1146,8 +1146,8 @@ This use case queries the end of a string to use in messaging.
 
 {% raw %}
 ```liquid
-{% assign interest = {{custom_attribute.${Buyer Interest}} | first } %}
-{% assign marketplace = {{{{interest}} | split: "" | reverse | join: "" |  truncate: 4, ""}} %}
+{% assign interest = {{custom_attribute.${Buyer Interest}}} | first %}
+{% assign marketplace = interest | split: "" | reverse | join: "" | truncate: 4, "" %}
 {% if {{marketplace}} == '3243' %}
 
 Your last marketplace search was on {{custom_attribute.${Last marketplace buyer interest} | date: '%d.%m.%Y'}}. Check out all of our new offers.
@@ -1310,7 +1310,7 @@ For push notifications and in-app message channels, you can specify the device c
 
 {% raw %}
 ```liquid
-{% if {targeted_device.${carrier}} contains "verizon" or {targeted_device.${carrier}} contains "Verizon" %}
+{% if {{targeted_device.${carrier}}} contains "verizon" or {{targeted_device.${carrier}}} contains "Verizon" %}
 
 This is a message for Verizon users!
 
@@ -1362,6 +1362,7 @@ Thanks for joining our SMS program!
 Time zones
 {% endapitags %}
 
+- [Template in the user's time zone](#users-time-zone)
 - [Personalize a message depending on a user's time zone](#personalize-timezone)
 - [Append the CST time zone to a custom attribute](#time-append-cst)
 - [Insert a timestamp](#time-insert-timestamp)
@@ -1369,6 +1370,37 @@ Time zones
 - [Send a reoccurring in-app message campaign between a window of time in a user's local time zone](#time-reocurring-iam-window)
 - [Send different messages on weekdays versus weekends in a user's local time zone](#time-weekdays-vs-weekends)
 - [Send different messages based on time of day in a user's local time zone](#time-of-day)
+
+### Template in the user's time zone {#users-time-zone}
+
+By default, dates and times in Liquid are rendered in Coordinated Universal Time (UTC). To display dates and times in the user's local time zone, use the `time_zone` filter with the `date` filter.
+
+#### Assign local date and time
+
+To assign a variable that reflects the current date and time in the user's local time zone, use this format:
+
+{% raw %}
+```liquid
+{% assign local_date_time = 'now' | time_zone:{{${time_zone}}} | date: '%B %e, %Y' %}
+{{local_date_time}}
+```
+{% endraw %}
+
+- `now`: This retrieves the current date and time in UTC.
+- `time_zone`: This retrieves the user's local time zone from the default attribute using the {% raw %}`{{${time_zone}}}`{% endraw %} personalization tag.
+- `date`: This formats the user's local date and time according to your specifications. In the previous example, the system displays a string formatted like "February 26, 2026". For more formatting options, see [strftime.net](strftime.net).
+
+#### Apply the user's time zone with custom attributes
+
+You can apply the `time_zone` filter to custom attributes, like this:
+
+{% raw %}
+```liquid
+{{custom_attribute.${date_time_attribute} | time_zone: {{${time_zone}}} | date: '%a, %b %e, %Y'}}
+```
+{% endraw %}
+
+This outputs the `date_time_attribute` formatted as the abbreviated day of the week, followed by the abbreviated month, day, and four-digit year.
 
 ### Personalize a message depending on a user's time zone {#personalize-timezone}
 
@@ -1378,7 +1410,7 @@ This use case displays different messages based on a user's time zone.
 ```liquid
 {% if {{${time_zone}}} == 'xx' %}
 Message for time zone xx.
-{% elsif {{$time_zone}}} == 'yy' %}
+{% elsif {{${time_zone}}} == 'yy' %}
 Message for time zone yy.
 {% else %}
 {% abort_message("Invalid time zone") %}
@@ -1548,7 +1580,7 @@ You can alternatively use the following to get the same result.
 ```liquid
 {% assign last_month_name = 'now' | date: "%Y-%m-01" | date: '%s' | minus: 1 | date: "%B" %}
 
-Here's an overview of what your spending looked like in {{month}}.
+Here's an overview of what your spending looked like in {{last_month_name}}.
 ```
 {% endraw %}
 
@@ -1614,10 +1646,10 @@ For example, you may want to send a survey to your users on the last Wednesday o
 
 {% comment %}Assign the correct number of days if the current month is February, taking into account leap years.{% endcomment %}
 
-{% assign leap_year_remainder = {{current_year | modulo: 4 }} != "0" %}
+{% assign leap_year_remainder = current_year | modulo: 4 %}
 {% if leap_year_remainder == 0 and current_month == "Feb" %}
 {% assign last_day_of_month = 29 %}
-{% elsif leap_year_remainder != "0" and current_month == "Feb" %}
+{% elsif current_month == "Feb" %}
 {% assign last_day_of_month = 28 %}
 {% endif %}
 

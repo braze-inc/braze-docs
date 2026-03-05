@@ -29,7 +29,7 @@ Em sua integração do SDK do Braze, localize e remova todas as chamadas para `a
 
 ### Etapa 3: Integração de atualizações
 
-Por fim, substitua a chamada removida pelo seguinte trecho:
+Por fim, substitua a chamada removida pelo trecho a seguir. Entre em contato com `subscribeToInAppMessage()` antes de ligar para `openSession()`. Isso garante que o seu ouvinte de mensagens no app seja registrado a tempo de receber a mensagem push primer.
 
 ```javascript
 import * as braze from "@braze/web-sdk";

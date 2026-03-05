@@ -1,12 +1,12 @@
 ---
 nav_title: Unificação de dados
-article_title: Unificação de dados
+article_title: Unificação de Dados
 page_order: 1
 layout: dev_guide
-guide_top_header: "Unificação de dados"
-guide_top_text: "> Reúna os dados de seus usuários em um só lugar no Braze. Independentemente da fonte dos seus dados, é possível unificá-los para obter uma visão completa de quem são seus usuários, incluindo seus comportamentos, preferências e ações."
+guide_top_header: "Unificação de Dados"
+guide_top_text: "> Reúna os dados de usuários em um só lugar no Braze. Não importa a origem dos seus dados, você pode unificá-los todos para obter uma visão completa de quem são seus usuários, incluindo seus comportamentos, preferências e ações."
 page_type: landing
-description: "Esta seção inclui artigos relacionados à unificação de dados na Braze Data Platform."
+description: "Esta seção inclui artigos relacionados à unificação de dados na Plataforma de Dados Braze."
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
@@ -16,16 +16,16 @@ guide_featured_list:
   - name: Transformação de dados
     link: /docs/user_guide/data/unification/data_transformation/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Coleta de dados do usuário
+  - name: Coleta de dados de usuários
     link: /docs/user_guide/data/unification/user_data_collection/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Criação de uma fórmula
+  - name: Crie uma Fórmula
     link: /docs/user_guide/data/unification/creating_a_formula/
     image: /assets/img/braze_icons/beaker-02.svg
 
 guide_menu_title2: "Related articles"
 guide_menu_list2:
-  - name: API REST do Braze
+  - name: API REST da Braze
     link: /docs/api/home/
     image: /assets/img/braze_icons/code-02.svg
   - name: Shopify

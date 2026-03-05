@@ -1,5 +1,5 @@
 ---
-nav_title: PA pour une seule section avec icônes d’immobilisations
+nav_title: SS LP avec icônes FA
 layout: dev_guide
 
 page_order: 1.2

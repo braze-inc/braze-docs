@@ -15,7 +15,7 @@ search_tag: Partner
 Ce document décrit les cas d'utilisation de l'extension, comment l'installer dans vos bibliothèques de transfert d'événements et comment utiliser ses fonctionnalités dans une [règle](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) de transfert d'événements.
 
 {% alert note %}
-L'envoi d'attributs à Braze peut augmenter votre consommation de points de données. Consultez votre gestionnaire de compte Braze avant d'envoyer des attributs. Reportez-vous à la documentation de Braze sur les [points de données facturables]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points) pour plus d'informations.
+L'utilisation du transfert d'événements Adobe peut augmenter votre consommation de points données Braze. Pour plus d'informations, reportez-vous à la documentation de Braze sur les [points de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points).
 {% endalert %}
 
 ## Cas d'utilisation
@@ -62,7 +62,7 @@ Après avoir installé l'extension, créez une nouvelle [règle](https://experie
 ![]({% image_buster /assets/img/efe.png %})
 
 {% tabs local %}
-{% tab Identification de l'utilisateur %}
+{% tab User Identification %}
 
 | Entrée | Description |
 | --- | --- |
@@ -76,7 +76,7 @@ Pour lier l'événement à un utilisateur, vous devez remplir soit le champ `Ext
 {% endalert %}
 
 {% endtab %}
-{% tab Données sur les événements %}
+{% tab Event Data %}
 
 | Entrée | Description | Exigée |
 | --- | --- | --- |
@@ -91,7 +91,7 @@ L'action **Envoyer un événement de Braze** ne requiert que la spécification d
 {% endalert %}
 
 {% endtab %}
-{% tab Attribut de l'utilisateur %}
+{% tab User Attribute %}
 
 Les attributs utilisateur peuvent être un objet JSON contenant des champs qui créeront ou mettront à jour un attribut avec le nom et la valeur fournis sur le profil utilisateur spécifié. Les propriétés suivantes sont prises en charge :
 
@@ -106,13 +106,13 @@ Les attributs utilisateur peuvent être un objet JSON contenant des champs qui c
 | Pays | Le pays de l'utilisateur sous forme de chaîne de caractères au format [ISO-3166-1 alpha-2.](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)  |
 | Langue | La langue de l'utilisateur sous forme de chaîne de caractères au format [ISO-639-1.](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)  |
 | Date de naissance | Les données de naissance de l'utilisateur sous forme de chaîne de caractères au format "AAAA-MM-JJ" (par exemple, 1980-12-21). |
-| Fuseau horaire | Nom du fuseau horaire issu de la base de données [des fuseaux horaires IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, "America/New_York" ou "(US et Canada)"). |
+| Fuseau horaire | Nom du fuseau horaire de la base de données [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, ’America/New_York’ ou "Eastern Time (US & Canada)"). |
 | Facebook | Un hachage contenant l'une des chaînes suivantes : `id` (chaîne de caractères), `likes` (tableau de chaînes de caractères), `num_friends` (nombre entier). |
 | Twitter | Hash contenant l'un des éléments suivants : ID (nombre entier), `screen_name` (chaîne de caractères, identifiant X (anciennement Twitter)), `followers_count` (nombre entier), `friends_count` (nombre entier), `statuses_count`(nombre entier). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Tous les attributs ajoutés dans la configuration seront envoyés à chaque fois que l'événement est envoyé à Braze, que la valeur de l'attribut ait changé ou non. Lorsque vous configurez les attributs de l'utilisateur, assurez-vous que vous savez comment cela affectera votre consommation de points de données.
+Tous les attributs ajoutés dans la configuration seront envoyés à chaque fois que l'événement est envoyé à Braze, que la valeur de l'attribut ait changé ou non. Lorsque vous configurez les attributs de l'utilisateur, assurez-vous que vous savez comment cela affectera l'utilisation de vos points de données.
 {% endalert %}
 
 {% endtab %}
@@ -125,7 +125,7 @@ Après avoir installé l'extension, créez une nouvelle [règle](https://experie
 ![]({% image_buster /assets/img/efe2.png %})
 
 {% tabs local %}
-{% tab Identification de l'utilisateur %}
+{% tab User Identification %}
 
 | Entrée | Description |
 | --- | --- |
@@ -139,7 +139,7 @@ Pour lier l'événement à un utilisateur, vous devez remplir soit le champ `Ext
 {% endalert %}
 
 {% endtab %}
-{% tab Données d'achat %}
+{% tab Purchase Data %}
 
 | Entrée | Description | Exigée |
 | --- | --- | --- |
@@ -157,7 +157,7 @@ L'action **Envoyer un événement d'achat** ne nécessite que la spécification 
 {% endalert %}
 
 {% endtab %}
-{% tab Attributs de l'utilisateur %}
+{% tab User Attributes %}
 
 Vous pouvez choisir d'envoyer ou non des attributs avec chaque événement dans la vue de configuration.
 
@@ -174,13 +174,13 @@ Les attributs utilisateur peuvent être un objet JSON contenant des champs qui c
 | Pays | Le pays de l'utilisateur sous forme de chaîne de caractères au format [ISO-3166-1 alpha-2.](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)  |
 | Langue | La langue de l'utilisateur sous forme de chaîne de caractères au format [ISO-639-1.](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)  |
 | Date de naissance | Les données de naissance de l'utilisateur sous forme de chaîne de caractères au format "AAAA-MM-JJ" (par exemple, 1980-12-21). |
-| Fuseau horaire | Nom du fuseau horaire issu de la base de données [des fuseaux horaires IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, "America/New_York" ou "(US et Canada)"). |
+| Fuseau horaire | Nom du fuseau horaire de la base de données [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, ’America/New_York’ ou "Eastern Time (US & Canada)"). |
 | Facebook | Un hachage contenant l'une des chaînes suivantes : `id` (chaîne de caractères), `likes` (tableau de chaînes de caractères), `num_friends` (nombre entier). |
 | Twitter | Hash contenant l'un des éléments suivants : ID (nombre entier), `screen_name` (chaîne de caractères, identifiant X (anciennement Twitter)), `followers_count` (nombre entier), `friends_count` (nombre entier), `statuses_count`(nombre entier). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Tous les attributs ajoutés dans la configuration seront envoyés à chaque fois que l'événement est envoyé à Braze, que la valeur de l'attribut ait changé ou non. Lorsque vous configurez les attributs de l'utilisateur, assurez-vous de savoir comment cela affectera votre consommation de points de données.
+Tous les attributs ajoutés dans la configuration seront envoyés à chaque fois que l'événement est envoyé à Braze, que la valeur de l'attribut ait changé ou non. Lorsque vous configurez les attributs de l'utilisateur, assurez-vous de savoir comment cela affectera l'utilisation de vos points de données.
 {% endalert %}
 
 {% endtab %}

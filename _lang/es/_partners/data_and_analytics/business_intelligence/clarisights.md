@@ -33,17 +33,17 @@ La integración de Braze y Clarisights le permite importar datos de campañas Br
 Con la integración de Braze y Clarisights, los usuarios pueden crear diferentes visualizaciones y tablas para obtener información de las campañas que han creado. Algunos de los casos de uso más frecuentes son:
 
 {% tabs %}
-{% tab Mejor visibilidad %}
+{% tab Better visibility %}
 Mejor visibilidad del rendimiento global de las campañas y los lienzos.
 
 ![Un gráfico que muestra un ejemplo de mejor viabilidad en la plataforma Clarisights. Este gráfico incluye estadísticas de aperturas de campañas y Canvas, clics, envíos, conversiones, etc.]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
 {% endtab %}
-{% tab Informes detallados %}
+{% tab Granular reporting %}
 Informes detallados para campañas y lienzos.
 
 ![Un gráfico que muestra informes granulares, como "total enviado por canal de envío" y "tasa de conversión".]({{site.baseurl}}/assets/img/clarisights/unified_dashboard.png)
 {% endtab %}
-{% tab Cuadros de mando unificados %}
+{% tab Unified dashboards %}
 Paneles unificados para CMO y CXO.
 
 ![Un gráfico que muestra un ejemplo de paneles unificados.]({{site.baseurl}}/assets/img/clarisights/granular_reporting.png)

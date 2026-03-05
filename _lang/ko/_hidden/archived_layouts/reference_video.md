@@ -1,5 +1,5 @@
 ---
-nav_title: "동영상으로 참조"
+nav_title: "동영상으로 참조하기"
 
 page_order: 5
 

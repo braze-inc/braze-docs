@@ -22,7 +22,7 @@ Ahora, cuando se envían datos a Braze, el SDK puede detectar automáticamente e
 
 ## Seguimiento continuo de la ubicación
 
-Para hacer un seguimiento continuo de la ubicación de un usuario durante la carga de una página, utiliza el método de la API de geolocalización [`watchPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition) de la API de geolocalización. Al llamar a este método, se pedirá inmediatamente al usuario que permita o no el seguimiento (a menos que ya lo haya hecho).
+Para hacer un seguimiento continuo de la ubicación de un usuario durante la carga de una página, utiliza el método de la API de geolocalización [`watchPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition) de la API de geolocalización. Al llamar a este método, se pedirá inmediatamente al usuario que permita o rechace el seguimiento (a menos que ya lo haya hecho).
 
 Si optan por la adhesión voluntaria, ahora se invocará una devolución de llamada de éxito cada vez que se actualice su ubicación.
 

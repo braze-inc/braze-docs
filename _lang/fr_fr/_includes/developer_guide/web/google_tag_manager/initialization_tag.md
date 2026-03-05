@@ -12,7 +12,7 @@ Dans [Google Tag Manager](https://tagmanager.google.com/), choisissez votre espa
 
 Dans la galerie de modèles, recherchez `braze-inc`, puis sélectionnez **Braze Initialization Tag.**
 
-![La galerie de modèles présentant les différents modèles "Braze-inc".]({% image_buster /assets/img/web-gtm/template_gallery_results.png %}){: style="max-width:80%;"}
+![La galerie de modèles présente les différents modèles de "Braze-inc".]({% image_buster /assets/img/web-gtm/template_gallery_results.png %}){: style="max-width:80%;"}
 
 Sélectionnez **Ajouter à l'espace de travail** > **Ajouter.**
 
@@ -22,7 +22,7 @@ Sélectionnez **Ajouter à l'espace de travail** > **Ajouter.**
 
 Dans la section **Modèles**, sélectionnez le modèle que vous venez d'ajouter.
 
-![La page "Templates" du Google Tag Manager présente le modèle de balise d'initialisation de Braze.]({% image_buster /assets/img/web-gtm/select_tag_template.png %}){: style="max-width:95%;"}
+![La page "Templates" dans Google Tag Manager montre le modèle de l'étiquette d'initialisation de Braze.]({% image_buster /assets/img/web-gtm/select_tag_template.png %}){: style="max-width:95%;"}
 
 Sélectionnez l'icône en forme de crayon pour ouvrir le menu déroulant **Configuration des étiquettes**.
 
@@ -39,7 +39,7 @@ Saisissez les informations minimales requises :
 
 Pour des paramètres d'initialisation supplémentaires, sélectionnez **Options d'initialisation de Braze** et choisissez les options dont vous avez besoin.
 
-![La liste des options d'initialisation de la Braze se trouve sous "Configuration de l'étiquette".]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %}){: style="max-width:65%;"}
+![La liste des options d'initialisation de Braze se trouve sous " Configuration de l'étiquette ".]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %}){: style="max-width:65%;"}
 
 ### Étape 4 : Réglé sur Déclencheur sur *toutes les pages*
 

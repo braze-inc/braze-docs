@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Mettre à jour le statut du groupe d’abonnement de l’utilisateur"
+nav_title: "POST : Mise à jour du statut du groupe d'abonnement des utilisateurs"
 article_title: "POST : Mettre à jour le statut du groupe d’abonnement de l’utilisateur"
 search_tag: Endpoint
 page_order: 4
@@ -13,7 +13,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /subscription/status/set
 {% endapimethod %}
 
-> Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. 
+> Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze.
 
 Vous pouvez accéder au site `subscription_group_id` d'un groupe d'abonnement en accédant à la page **Groupe d'abonnement**.
 
@@ -29,6 +29,10 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d'
 
 Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `subscription.status.set`.
 
+{% alert note %}
+Si vous souhaitez utiliser cet endpoint avec les [groupes d'abonnement LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), contactez votre gestionnaire de satisfaction client.
+{% endalert %}
+
 ## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
@@ -36,7 +40,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 ## Corps de la demande
 
 {% tabs %}
-{% tab SMS et RCS %}
+{% tab SMS and RCS %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -48,13 +52,13 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   // SMS and RCS subscription group - one of external_id or phone is required
+   // SMS and RCS subscription group - you must include one of external_id or phone
  }
 ```
-\* groupes d'abonnement SMS et RCS : Uniquement `external_id` ou `phone` est accepté.
+\* groupes d'abonnement SMS et RCS : Braze n'accepte que `external_id` ou `phone`.
 
 {% endtab %}
-{% tab E-mail %}
+{% tab Email %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -66,11 +70,11 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
-   // Email subscription group - one of external_id or email is required
-   // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
+   // Email subscription group - you must include one of external_id or email
+   // Note that sending an email address that is linked to multiple profiles updates all relevant profiles
  }
 ```
-\* Groupes d'abonnement e-mail : `email` ou `external_id` est nécessaire.
+\* Groupes d'abonnement e-mail : Vous devez inclure soit `email` soit `external_id`.
 {% endtab %}
 {% endtabs %}
 
@@ -87,8 +91,8 @@ Lorsque vous créez de nouveaux utilisateurs à l'aide de l'endpoint [/users/tra
 | [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | Requis | Chaîne de caractères | L’`id` de votre groupe d’abonnement. |
 | `subscription_state` | Requis | Chaîne de caractères | Les valeurs disponibles sont `unsubscribed` (pas dans le groupe d’abonnement) ou `subscribed` (dans le groupe d’abonnement). |
 | `external_id` | Obligatoire* | Tableau de chaînes de caractères | L’`external_id` de l’utilisateur ou des utilisateurs (50 `id`s max). |
-| `email` | Obligatoire* | Chaîne de caractères ou tableau de chaînes de caractères | L’adresse e-mail de l’utilisateur peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (maximum 50). <br><br>Si plusieurs utilisateurs (`external_id`) d'un même espace de travail partagent la même adresse e-mail, tous les utilisateurs qui partagent cette adresse sont mis à jour en fonction des modifications apportées au groupe d'abonnement. |
-| `phone` | Obligatoire* | Chaîne de caractères dans [E.164](https://en.wikipedia.org/wiki/E.164) format | Le numéro de téléphone de l’utilisateur peut être transmis comme un tableau de chaînes de caractères. Vous devez inclure au moins un numéro de téléphone (jusqu'à 50). <br><br>Si plusieurs utilisateurs (`external_id`) du même espace de travail partagent le même numéro de téléphone, tous les utilisateurs qui partagent le numéro de téléphone sont mis à jour avec les mêmes changements de groupe d'abonnement. |
+| `email` | Obligatoire* | Chaîne de caractères ou tableau de chaînes de caractères | L’adresse e-mail de l’utilisateur peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (maximum 50). <br><br>Si plusieurs utilisateurs (`external_id`) du même espace de travail partagent la même adresse e-mail, Braze met à jour tous les utilisateurs qui partagent l'adresse e-mail en fonction des modifications apportées au groupe d'abonnement. |
+| `phone` | Obligatoire* | Chaîne de caractères dans [E.164](https://en.wikipedia.org/wiki/E.164) format | Le numéro de téléphone de l’utilisateur peut être transmis comme un tableau de chaînes de caractères. Vous devez inclure au moins un numéro de téléphone (jusqu'à 50). <br><br>Si plusieurs utilisateurs (`external_id`) du même espace de travail partagent le même numéro de téléphone, Braze met à jour tous les utilisateurs qui partagent le numéro de téléphone avec les mêmes changements de groupe d'abonnement. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de requêtes
@@ -134,7 +138,7 @@ Le code de statut `201` pourrait renvoyer le corps de réponse suivant.
 ```
 
 {% alert important %}
-L’endpoint accepte uniquement la valeur `email` ou `phone`, et non les deux. Si vous disposez des deux, vous recevrez cette réponse : `{"message":"Either an email address or a phone number should be provided, but not both."}`
+L'endpoint n'accepte que la valeur `email` ou `phone`, pas les deux. Si vous fournissez les deux, vous recevrez cette réponse : `{"message":"Either an email address or a phone number should be provided, but not both."}`
 {% endalert %}
 
 {% endapi %}

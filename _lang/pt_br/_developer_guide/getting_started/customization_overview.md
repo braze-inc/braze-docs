@@ -32,9 +32,9 @@ table td {
 </style>
 
 {% tabs %}
-{% tab Engatinhar %}
+{% tab Crawl %}
 
-![Exemplo de app financeiro que mostra cartões de conteúdo com imagem legendada e somente com imagem]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Exemplo de app financeiro mostrando cartões de conteúdo com imagem legendada e somente com imagem]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 A abordagem Crawl coloca o poder da personalização diretamente nas mãos dos profissionais de marketing. Embora seja necessário algum trabalho leve de desenvolvimento inicial para integrar os canais de envio de mensagens do Braze ao seu app ou site, essa abordagem permite que você comece a trabalhar mais cedo. 
 
@@ -76,7 +76,7 @@ Os profissionais de marketing determinam o conteúdo, o público e o momento das
 </table>
 
 {% endtab %}
-{% tab Caminhar %}
+{% tab Walk %}
 
 ![Exemplo de app financeiro mostrando cartões de conteúdo com personalização]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
@@ -122,13 +122,13 @@ Os profissionais de marketing ainda mantêm o controle do público, do conteúdo
 </table>
 
 {% endtab %}
-{% tab Executar %}
+{% tab Run %}
 
 ![Exemplo de app financeiro mostrando cartões de conteúdo personalizados com captura de e-mail]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Com a abordagem Correr, os desenvolvedores assumem o controle total da experiência do usuário. O código personalizado determina a aparência das mensagens, como elas se comportam e como interagem com outros canais de envio de mensagens (por exemplo, disparando um Content Card com base em uma notificação por push).
 
-Quando você cria conteúdo personalizado completamente novo, como novos tipos de cartões de conteúdo ou mensagens no app com interface de usuário personalizada, o SDK do Braze não rastreará automaticamente as [análises de dados]({{site.baseurl}}/developer_guide/analytics/). Você deve lidar com a análise de dados de forma programática para que os profissionais de marketing continuem a ter acesso a métricas como impressões, cliques e demissões no dashboard do Braze. Chame os métodos de análise de dados do Braze SDK para que ele retorne esses dados para a Braze. Cada canal de envio de mensagens tem um artigo de análise de dados para ajudar a facilitar isso.
+Quando você cria conteúdo personalizado completamente novo, como novos tipos de cartões de conteúdo ou mensagens no app com interface de usuário personalizada, o SDK do Braze não rastreará automaticamente as [análises de dados]({{site.baseurl}}/developer_guide/analytics/). Você deve lidar com a análise de dados de forma programática para que os profissionais de marketing continuem a ter acesso a métricas como impressões, cliques e demissões no dashboard do Braze. Chame os métodos de análise de dados do SDK da Braze para que ele retorne esses dados para a Braze. Cada canal de envio de mensagens tem um artigo de análise de dados para ajudar a facilitar isso.
 
 <table>
 <thead>

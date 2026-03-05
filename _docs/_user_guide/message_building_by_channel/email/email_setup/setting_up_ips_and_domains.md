@@ -34,6 +34,8 @@ After your IPs, domains, subdomains, and IP pools are configured, we'll send you
 
 {% multi_lang_include dns_records.md %}
 
+After Braze provides your DNS records, add them as soon as your DNS or IT team is able. Domain verification is time-bound, and if records are added too late, verification may fail even if the DNS records later resolve correctly. If your DNS records appear correct but verification fails, contact the Braze Onboarding or Support team to reinitiate verification.
+
 ### Next steps
 
 We'll check your setup and validate all information in our internal systems. The Braze Onboarding team will let you know when you're ready to go, or if there are issues with your DNS records that you must address with your engineering team.
@@ -42,21 +44,20 @@ We'll check your setup and validate all information in our internal systems. The
 
 This method will set up one sending domain, one tracking domain, and one IP in total for a company. If you're planning to set up more, please consult with Braze Onboarding team (method 1).
 
-{% alert important %}
-This self-service email setup feature is currently in beta. Contact your Braze account manager if you're interested in participating in the beta.<br>If you're using the self-service email setup feature, be sure to also consult with the Braze Onboarding team.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
+<br>If you're using the self-service email setup feature, be sure to also consult with the Braze Onboarding team.
 
 ### Prerequisites
 
 To use self-service email setup, you must meet the following prerequisites:
 
 1. You are a new customer in onboarding.
-2. You have the "Can Manage Company Settings" company-level permission.
+2. You have the "Manage Company Settings" company-level permission.
 
 ### Step 1: Begin setup
 
 1. Go to **Settings** > **Admin Settings** under **Company Settings**. 
-2. Next, select the **Sender Verification** tab. To view this tab, you must have the "Can Manage Company Settings" company-level permission.
+2. Next, select the **Sender Verification** tab. To view this tab, you must have the "Manage Company Settings" company-level permission.
 3. Click the **Start setup** button.
 
 ### Step 2: Add and verify a sending domain
@@ -66,6 +67,8 @@ A sending domain is used in the "from" address when sending an email. Enter a se
 Next, add the TXT and CNAME records from the bottom of the page to your DNS provider. Then, return to the Braze dashboard and click **Verify**.
 
 ![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
+
+If verification fails and you believe your DNS records are correct, contact Braze Support for assistance.
 
 {% alert important %}
 The sending domain must be a subordinate to a domain you own. For example, if you own "example.com", a subdomain could be "mail.example.com", which allows you to use the sending address "@mail.example.com".

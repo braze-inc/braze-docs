@@ -1,6 +1,6 @@
 ---
-nav_title: カスタム属性の設定
-article_title: iOS のカスタム属性の設定
+nav_title: カスタム属性を設定する
+article_title: iOSのカスタム属性を設定する
 platform: iOS
 page_order: 3
 description: "このリファレンス記事では、iOS アプリケーションでカスタム属性を設定する方法を説明します。"
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# iOS のカスタム属性の設定
+# iOSのカスタム属性を設定する
 
 Braze には、ユーザーに属性を割り当てるメソッドが用意されています。ダッシュボード上のこれらの属性に従って、ユーザーのフィルター処理とセグメント化を行うことができます。
 

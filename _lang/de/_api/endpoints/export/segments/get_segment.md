@@ -1,8 +1,8 @@
 ---
-nav_title: "GET: Liste der Segmente für den Export"
+nav_title: "GET: Liste der Segmente exportieren"
 article_title: "GET: Liste der Segmente für den Export"
 search_tag: Endpoint
-page_order: 4
+page_order: 1
 layout: api_page
 page_type: reference
 description: "Dieser Artikel beschreibt Details zum Export der Segmente Liste Braze Endpunkt."
@@ -24,7 +24,7 @@ Die Segmente werden in Gruppen von 100 zurückgegeben, sortiert nach dem Zeitpun
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `segments.list`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -45,8 +45,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/segments/list?page=
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "segments" : [

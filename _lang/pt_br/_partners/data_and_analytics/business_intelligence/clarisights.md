@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Clarisights](https://clarisights.com) é uma plataforma de relatórios de marketing de performance de autoatendimento para organizações orientadas por dados. Ela integra, processa e visualiza automaticamente todos os seus dados de fontes de marketing, analíticas e de atribuição.
 
-_Essa integração é mantida pela Clarisights._
+_Esta integração é mantida pela Clarisights._
 
 ## Sobre a integração
 
@@ -33,17 +33,17 @@ A integração entre o Braze e a Clarisights permite que você importe dados de 
 Com a integração do Braze e do Clarisights, os usuários podem criar diferentes visualizações e tabelas para obter insights das campanhas que criaram. Os casos de uso populares incluem:
 
 {% tabs %}
-{% tab Melhor visibilidade %}
+{% tab Better visibility %}
 Melhor visibilidade das campanhas gerais e da performance das Canvas.
 
 ![Um gráfico que mostra um exemplo de melhor viabilidade na plataforma da Clarisights. Esse gráfico inclui estatísticas de aberturas de campanhas e telas, cliques, envios, conversões etc.]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
 {% endtab %}
-{% tab Relatórios granulares %}
+{% tab Granular reporting %}
 Relatórios granulares para campanhas e telas.
 
 ![Um gráfico que mostra relatórios granulares, como "total enviado por canal de envio" e "taxa de conversão".]({{site.baseurl}}/assets/img/clarisights/unified_dashboard.png)
 {% endtab %}
-{% tab Dashboards unificados %}
+{% tab Unified dashboards %}
 Dashboards unificados para CMOs e CXOs.
 
 ![Um gráfico que mostra um exemplo de dashboards unificados.]({{site.baseurl}}/assets/img/clarisights/granular_reporting.png)
@@ -61,7 +61,7 @@ Para sincronizar os dados da Braze com a Clarisights, crie um conector da Braze 
 
 Para incluir o Braze como uma fonte de dados em seus relatórios do Clarisights, navegue até **Criar novo relatório**. Dê um nome ao seu relatório e selecione o **Braze** como fonte de dados no prompt que aparece. Você também pode escolher as métricas e dimensões a serem incluídas no relatório. Quando concluído, selecione **Criar relatório**. 
 
-Os dados do Braze começarão a fluir a partir do momento da próxima importação de dados programada. Entre em contato com o gerente de sucesso do cliente da Clarisights para solicitar provisionamentos para durações mais longas. 
+Os dados do Braze começarão a fluir a partir do momento da próxima importação de dados programada. Entre em contato com seu gerente de sucesso do cliente da Clarisights para solicitar backfills por períodos mais longos. 
 
 ![Configurações de relatório da Clarisights mostrando campos para nome e fonte de dados. Para este exemplo, a Braze é selecionada como a fonte de dados.]({{site.baseurl}}/assets/img/clarisights/braze_report.png)
 
