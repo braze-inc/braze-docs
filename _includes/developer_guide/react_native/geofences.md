@@ -40,7 +40,7 @@ Braze.requestLocationInitialization();
 On both iOS and Android, you can manually request a geofence update for a specific GPS coordinate using `requestGeofences`. By default, Braze automatically retrieves the device's location and requests geofences. To manually provide a coordinate instead:
 
 1. Disable automatic geofence requests. On Android, set `com_braze_automatic_geofence_requests_enabled` to `false` in your `braze.xml`. On iOS, set `automaticGeofenceRequests` to `false` in your Braze configuration.
-2. **Call `requestGeofences`** with the desired latitude and longitude:
+2. Call `requestGeofences` with the desired latitude and longitude:
 
 ```javascript
 import Braze from '@braze/react-native-sdk';
