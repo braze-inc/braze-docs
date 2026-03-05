@@ -11,15 +11,19 @@ description: "This article explains the connected audience object, including how
 
 > A connected audience is a dynamic audience filter you define inline within your API request, so you can target the right users at send time without creating or managing segments in the Braze dashboard.
 
-Instead of pre-building a segment for every possible audience combination, you pass filter criteria directly in the `audience` parameter of your API call. Braze evaluates each user against those criteria in real time and delivers the message only to users who match. This means a single API-triggered campaign or Canvas can serve an unlimited number of audience variations, driven entirely by your business logic.
+Instead of pre-building a segment for every possible audience combination, you pass filter criteria directly in the `audience` parameter of your API call. Braze evaluates each user against those criteria in real time and delivers the message only to users who match. This means a single campaign, Canvas, or API-only message definition can serve an unlimited number of audience variations, driven entirely by your business logic.
 
 ## How it works
 
-1. **Create an API-triggered campaign or Canvas** in the Braze dashboard. Define the message content and channel, and use [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) or [Canvas context]({{site.baseurl}}/api/objects_filters/context_object/) for dynamic personalization.
+1. **Define your message.** You can either create an API-triggered campaign or Canvas in the Braze dashboard, or define message content entirely inline using the [messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects) in your API request. Use [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) or [Canvas context]({{site.baseurl}}/api/objects_filters/context_object/) for dynamic personalization.
 2. **Call a supported endpoint** and include the `audience` parameter with your filter criteria. You can filter on custom attributes, push subscription status, email subscription status, and last-used-app time.
 3. **Braze evaluates the filters at send time**, delivering the message only to users who match your criteria.
 
-Because the audience is defined per request, your back-end systems can trigger contextually relevant messages in response to any business event (a price change, a weather alert, a live score update) without dashboard intervention.
+{% alert tip %}
+A `campaign_id` isn't required when using the `audience` parameter. The [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) and [`/messages/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/) endpoints let you define message content inline without a pre-created campaign. However, if you want to track campaign-level metrics (such as sends, clicks, or bounces) on the dashboard, include a `campaign_id`.
+{% endalert %}
+
+Because the audience is defined per request, your backend systems can trigger contextually relevant messages in response to any business event (a price change, a weather alert, a live score update) without dashboard intervention.
 
 ### Compatible endpoints
 
@@ -46,7 +50,7 @@ Use connected audiences for scenarios where your back-end systems detect an even
 | Financial services | A trading platform alerts users whose `watchlist` array includes a stock ticker that has crossed a price threshold. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-In each case, a single API-triggered campaign handles all variations. Your back end determines the filter values and passes them in the API request, so you don't need to create a separate segment or campaign for each product, show, team, or location.
+In each case, a single campaign or API-only message definition handles all variations. Your backend determines the filter values and passes them in the API request, so you don't need to create a separate segment or campaign for each product, show, team, or location.
 
 ## Example request
 
