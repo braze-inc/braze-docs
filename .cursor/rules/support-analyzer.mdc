@@ -71,9 +71,7 @@ After processing all tickets:
    - Effort (quick clarification vs. new guide)
 3. **Batch by Doc** - Group changes targeting the same file
 4. **Maintain sources** - Maintain list of which Case IDs were referenced for the update
-
-Before moving to Step 4, prompt user to review output.md and acknowledge they want to draft updates
-
+5. **Confirm review** - Ask the user to review the consolidated list and explicitly confirm that they want to proceed to Step 4 (drafting updates).
 ---
 
 ## Step 4: Draft Updates
