@@ -102,7 +102,7 @@ When setting a delivery speed rate limit for a multi-channel campaign or Canvas,
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-After adding locales to your workspace, [target users in different languages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) all within a Content Block.
+After adding locales to your workspace, you can [target users in different languages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) all within a Content Block.
 
 ### Partnerships
 
@@ -185,7 +185,7 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Expo Plugin 4.0.0](https://github.com/braze-inc/braze-expo-plugin/releases/tag/4.0.0)
     - This version requires 19.0.0 of the Braze React Native SDK.
     - (Android) Fixed a memory leak in the data persistence layer.
-    - (Android) Adds support for Braze.getInitialPushPayload() to handle push notification deep links when the app is launched from a terminated state. This resolves an issue where deep links from push notifications were not handled on Android when the app was cold started.
+    - (Android) Added support for Braze.getInitialPushPayload() to handle push notification deep links when the app is launched from a terminated state. This resolves an issue where deep links from push notifications were not handled on Android when the app was cold started.
 - [React Native SDK 19.0.0](https://github.com/braze-inc/braze-react-native-sdk/releases/tag/19.0.0)
     - Updates the native Swift SDK version bindings from Braze Swift SDK 13.3.0 to 14.0.1.
     - Updates the native Android SDK version bindings from Braze Android SDK 40.0.2 to 41.0.0.
