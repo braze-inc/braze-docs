@@ -34,7 +34,7 @@ When Braze "sends" a message, the final delivery may depend on external services
 
 ### Data freshness
 
-The data in this dashboard updates approximately every 15 minutes. The update frequency is not guaranteed and may fluctuate based on system load.
+The frequency at which data in this dashboard updates may fluctuate based on system load. While update frequency is not guaranteed, it is likely less than an hour in most cases.
 
 ## Configuring the dashboard
 
