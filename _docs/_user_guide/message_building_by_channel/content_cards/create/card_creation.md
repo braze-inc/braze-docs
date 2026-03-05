@@ -113,6 +113,10 @@ This section describes the main differences between card creation at campaign la
 
 ## Considerations
 
+### Using canvas entry properties
+
+When personalizing Content Cards with canvas entry properties, use the `${...}` accessor syntax (for example, {%raw%}`canvas_entry_properties.${property_name}`{%endraw%}). Dot notation without the accessor (for example, {%raw%}`canvas_entry_properties.property_name`{%endraw%}) may not resolve correctly in Content Cards, even if it works in other channels like push and email.
+
 ### Changing card creation after launch
 
 Braze recommends not changing how cards are created after a campaign has launched. Due to the differences in how Messages Sent is calculated between the two card creation types, changing how cards are created after the campaign has launched can affect the accuracy of your send volume.
