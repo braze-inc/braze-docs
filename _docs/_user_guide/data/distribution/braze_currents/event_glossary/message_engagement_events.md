@@ -12054,7 +12054,13 @@ This event occurs when one of your users sends an SMS to a phone number in one o
 
 When Braze receives an inbound SMS, we attribute that inbound message to any user that shares that phone number. As a result, you may receive multiple events per inbound message if multiple users in your Braze instance share the same phone number. If you require attribution of specific user IDs based on previous messages sent to that user, you can use the SMS Delivered event to attribute Inbound Received events to the user ID who most recently received a message from your Braze number.
 
-If we detect that this inbound message is a reply to an outbound campaign or Canvas component sent from Braze, we will also include the campaign or Canvas metadata with the event. Braze defines a reply as an inbound message coming within four hours of an outbound message. However, there is a one-minute cache for the attributed campaign information of the last outbound SMS received.
+If we detect that this inbound message is a reply to an outbound campaign or Canvas component sent from Braze, we will also include the campaign or Canvas metadata with the event. Braze uses a last-touch attribution model: when an inbound SMS is received, Braze looks for the most recent outbound message sent to that phone number within a four-hour window and attributes the inbound message to that campaign or Canvas. There is a one-minute cache for the attributed campaign information of the last outbound SMS received.
+
+The `campaign_id`, `canvas_id`, and related properties are blank when no outbound message can be attributed. Common scenarios include:
+
+- The user initiated the conversation organically (for example, texting a keyword promoted on a website or billboard).
+- The user replied or sent a keyword outside the four-hour attribution window.
+- No prior outbound message exists for that phone number.
 
 
 {% tabs %}
