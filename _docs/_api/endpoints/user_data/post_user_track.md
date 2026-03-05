@@ -66,7 +66,7 @@ Each request object must include at least one identifier. The following table de
 
 | Identifier type | Identifiers | Behavior |
 | --------------- | ----------- | -------- |
-| Primary | `external_id`, `user_alias`, `braze_id` | Used for user profile lookup. Only one primary identifier is allowed per request object—including more than one causes the request to be rejected. |
+| Primary | `external_id`, `user_alias`, `braze_id` | Used for user profile lookup. Only one primary identifier is allowed per request object—including more than one causes that object to be rejected. |
 | Secondary | `email`, `phone` | Used for user profile lookup **only** when no primary identifier is present. If both `email` and `phone` are included without a primary identifier, `email` takes precedence. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
