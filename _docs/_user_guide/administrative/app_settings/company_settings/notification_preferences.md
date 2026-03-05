@@ -25,6 +25,10 @@ You can also integrate with Slack to receive notifications. For steps, refer to 
 
 The following table describes available notifications and which channels are used to deliver them.
 
+{% alert note %}
+If you delete the default **Recipients** value of **All Dashboard Users** and want to add it back, you can manually enter it into the dropdown field.
+{% endalert %}
+
 | Notification | Description | Available notification channels |
 |--------------|-------------|-----------------|
 | API Usage Alerts | Selecting this takes you to the **API Usage Dashboard**, where you can then go to the [**API Usage Alerts**]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts/) tab and set up alerts to track key API request volumes. | Email, Webhook |
@@ -36,9 +40,9 @@ The following table describes available notifications and which channels are use
 | Campaign/Canvas Volume Limit Met | Notifies recipients when a campaign or Canvas meets its volume limit. | Email | 
 | Canvas Automatically Stopped | Notifies recipients when Braze has stopped a Canvas. | Email |
 | Canvas Interaction Expiration | Notifies recipients about any Canvas that is due for Canvas interaction data expiration, along with any information about segments, campaigns, or Canvases that reference it in a retargeting filter and were used to send a message in the previous 30 days. | Email |
-| Comments Within Canvases | Notifies recipients when a Canvas has new comments. If you delete the default **Recipients** value of **All Dashboard Users** and want to add it back, you can manually enter it into the dropdown field. | Email |
+| Comments Within Canvases | Notifies recipients when a Canvas has new comments. | Email |
 | Connected Content Errors | Notifies recipients when a Connected Content endpoint has errors. | Email |
-| Push Errors | Notifies recipients when a push endpoint has errors. | Email |
+| Push Errors | Notifies recipients when a push endpoint has errors. | Email, Webhook |
 | Scheduled Campaign Limit Met | Notifies recipients when the limit for a recurring scheduled campaign has been reached. | Email, Webhook |
 | Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Email, Webhook |
 | Webhook Errors | Notifies recipients when a webhook endpoint has errors. | Email |
