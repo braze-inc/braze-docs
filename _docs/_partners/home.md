@@ -214,6 +214,8 @@ valid_partner_list:
   url: /docs/partners/tellius/
 - name: Sheetlabs
   url: /docs/partners/sheetlabs/
+- name: Limbik
+  url: /docs/partners/limbik/
 - name: Contentsquare
   url: /docs/partners/contentsquare/
 - name: Sisu
@@ -242,6 +244,8 @@ valid_partner_list:
   url: /docs/partners/whatsapp/
 - name: Sendbird
   url: /docs/partners/sendbird/
+- name: Shopgate
+  url: /docs/partners/shopgate/
 - name: Smartling
   url: /docs/partners/smartling/
 - name: Regal
@@ -398,4 +402,8 @@ valid_partner_list:
   url: /docs/partners/anthropic/
 - name: Algolia
   url: /docs/partners/algolia/
+- name: Canva
+  url: /docs/partners/canva/
+- name: Figma
+  url: /docs/partners/figma/
 ---
