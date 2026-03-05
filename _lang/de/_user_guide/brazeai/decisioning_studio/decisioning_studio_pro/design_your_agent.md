@@ -9,7 +9,7 @@ description: "Erfahren Sie, wie Sie Ihren Decisioning Studio Pro-Agenten mit dem
 
 > Der erste Schritt bei der Einrichtung eines Agenten ist die Zusammenarbeit mit unserem Team von KI Decisioning Serviceleistungen; Dienste; Dienste, um Ihren Agenten zu entwerfen. Dieser Artikel behandelt die wichtigsten Design-Entscheidungen und wie Sie Ihre Zielgruppe definieren.
 
-Grundlegende Konzepte zu Entscheidungsagenten - einschließlich Metriken für den Erfolg, Dimensionen, Aktionsbanken und Einschränkungen - finden Sie unter [Designing Decisioning Agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/).
+Grundlegende Konzepte zu Entscheidungsagenten - einschließlich Metriken für den Erfolg, Dimensionen, Aktionsbanken und Einschränkungen - finden Sie unter [Designing Decisioning Agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/).
 
 ## Wichtige Designentscheidungen
 

@@ -9,7 +9,7 @@ description: "オーディエンス定義、サクセスメトリクス、ディ
 
 > エージェント設定の最初のステップは、AI デシジョンサービスチームと連携してエージェントをデザインします。ここでは、主要なデザイン決定とオーディエンスの定義方法について説明します。
 
-サクセスメトリック、ディメンション、アクションバンク、およびコンストレーニングts など、デシジョンエージェントに関する基本的な概念については、[デシジョンエージェントの設計]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/)を参照してください。
+サクセスメトリック、ディメンション、アクションバンク、およびコンストレーニングts など、デシジョンエージェントに関する基本的な概念については、[デシジョンエージェントの設計]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/)を参照してください。
 
 ## 重要な設計決定
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Préparer votre orchestration
 article_title: Préparer votre orchestration
-page_order: 3
+page_order: 5
 page_type: reference
 description: "Cet article de référence explique ce que vous devez préparer avant de configurer l'orchestration pour BrazeAI Decisioning Studio, notamment le choix de votre CEP et la collecte des informations d'identification et des ressources requises."
 ---
@@ -25,7 +25,7 @@ La première étape consiste à déterminer quelle plateforme d'engagement clien
 
 ### PEC soutenus
 
-| CEP | Décisions Studio Go | Decisioning Studio Pro | Type d’intégration |
+| CEP | Décisions Studio Go | Decisioning Studio Pro | Type d'intégration |
 |-----|:---------------------:|:----------------------:|------------------|
 | **Braze** | ✓ | ✓ | Intégration de l'API native (recommandée) |
 | **Salesforce Marketing Cloud** | ✓ | ✓ | Événements API + Générateur de parcours (Journey Builder) |
@@ -139,7 +139,7 @@ Gardez ces bonnes pratiques à l'esprit lorsque vous vous préparez à l'orchest
 2. **Effectuez un test approfondi.** Avant le lancement, testez votre intégration avec un petit groupe d'utilisateurs pour vérifier que le contenu dynamique s'affiche correctement.
 3. **Documentez votre configuration.** Gardez une trace des ID de campagne, des ID de modèle, des clés API et d'autres identifiants. Vous devrez les référencer dans le portail Decisioning Studio.
 4. **Coordonnez votre action avec celle de votre équipe.** La configuration de l'orchestration peut impliquer des équipes de marketing, d'ingénierie et de données. Veillez à ce que chacun comprenne son rôle dans le processus.
-5. **Prévoyez des données de retour d'information.** L'orchestration ne consiste pas seulement à envoyer des messages, mais aussi à collecter les données d'engagement et de conversion qui permettent à votre agent d'apprendre. Pour plus de détails, voir [Préparer vos sources de données]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/).
+5. **Prévoyez des données de retour d'information.** L'orchestration ne consiste pas seulement à envoyer des messages, mais aussi à collecter les données d'engagement et de conversion qui permettent à votre agent d'apprendre. Pour plus de détails, voir [Préparer vos sources de données]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/).
 
 ## Étapes suivantes
 
@@ -147,4 +147,3 @@ Une fois que vous avez rassemblé vos informations d'identification et planifié
 
 - [Décision Studio Go : Mettre en place l'orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
 - [Decisioning Studio Pro : Mettre en place l'orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
-

@@ -1,7 +1,7 @@
 ---
 nav_title: Preparação de suas fontes de dados
 article_title: Preparação de suas fontes de dados
-page_order: 2
+page_order: 4
 page_type: reference
 description: "Este artigo de referência aborda os ativos de dados de feedback críticos necessários para fechar o ciclo de decisão de IA e ativar seu agente para aprender e melhorar continuamente."
 ---
@@ -65,4 +65,3 @@ Os dados de engajamento e os dados de ativação são muito comumente encontrado
 | Cada registro tem um registro de data e hora associado | Compreender o tempo entre a comunicação e a sequência de ações do cliente é extremamente importante para o treinamento de agentes e o cálculo de métricas. |
 | São fornecidos os campos necessários para corresponder o conteúdo da comunicação aos eventos de ativação (como `event_id`) | A correspondência correta entre as características de comunicação e os envios é necessária para a atribuição e o treinamento do agente. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-

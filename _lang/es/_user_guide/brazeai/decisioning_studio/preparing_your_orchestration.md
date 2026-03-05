@@ -1,7 +1,7 @@
 ---
 nav_title: Preparar tu orquestación
 article_title: Preparar tu orquestación
-page_order: 3
+page_order: 5
 page_type: reference
 description: "Este artículo de referencia explica lo que tienes que preparar antes de configurar la orquestación para BrazeAI Decisioning Studio, incluida la elección de tu CEP y la recopilación de las credenciales y activos necesarios."
 ---
@@ -139,7 +139,7 @@ Ten en cuenta estas buenas prácticas cuando te prepares para la orquestación:
 2. **Prueba a fondo.** Antes de poner en marcha la integración, pruébala con un pequeño grupo de usuarios para comprobar que el contenido dinámico se rellena correctamente.
 3. **Documenta tu configuración.** Haz un seguimiento de los ID de campaña, los ID de plantilla, las claves de API y otros identificadores. Tendrás que hacer referencia a ellos en el portal Decisioning Studio.
 4. **Coordínate con tu equipo.** La configuración de la orquestación puede implicar a equipos de marketing, ingeniería y datos. Asegúrate de que todos comprenden su papel en el proceso.
-5. **Planifica los datos de respuesta.** La orquestación no consiste sólo en enviar mensajes, sino también en recopilar los datos de interacción y conversión que ayudan a tu agente a aprender. Consulta [Preparar tus orígenes de datos]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/) para más detalles.
+5. **Planifica los datos de respuesta.** La orquestación no consiste sólo en enviar mensajes, sino también en recopilar los datos de interacción y conversión que ayudan a tu agente a aprender. Consulta [Preparar tus orígenes de datos]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/) para más detalles.
 
 ## Próximos pasos
 
@@ -147,4 +147,3 @@ Una vez que hayas reunido tus credenciales y planificado tus campañas, estarás
 
 - [Estudio de decisión Go: Configurar la orquestación]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
 - [Decisioning Studio Pro: Configurar la orquestación]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
-

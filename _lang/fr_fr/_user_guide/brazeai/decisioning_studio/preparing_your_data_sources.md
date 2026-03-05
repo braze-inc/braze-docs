@@ -1,7 +1,7 @@
 ---
 nav_title: Préparer vos sources de données
 article_title: Préparer vos sources de données
-page_order: 2
+page_order: 4
 page_type: reference
 description: "Cet article de référence traite des ressources de données de retour d'information essentielles nécessaires pour fermer la boucle décisionnelle de l'intelligence artificielle et permettre à votre agent d'apprendre et de s'améliorer en permanence."
 ---
@@ -65,4 +65,3 @@ Les données d'engagement et les données d'activations se retrouvent très cour
 | Chaque enregistrement est associé à un horodatage | Il est extrêmement important de comprendre le temps écoulé entre les communications et la séquence des actions du client pour la formation des agents et le calcul des indicateurs. |
 | Les champs nécessaires pour faire correspondre le contenu de la communication aux événements d'activation sont fournis (tels que `event_id`). | La correspondance correcte entre les caractéristiques de la communication et les envois est nécessaire pour l'attribution et la formation des agents. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-

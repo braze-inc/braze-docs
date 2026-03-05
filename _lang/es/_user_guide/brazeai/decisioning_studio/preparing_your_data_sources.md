@@ -1,7 +1,7 @@
 ---
 nav_title: Preparar tus orígenes de datos
 article_title: Preparar tus orígenes de datos
-page_order: 2
+page_order: 4
 page_type: reference
 description: "Este artículo de referencia cubre los activos de datos de retroalimentación críticos necesarios para cerrar el bucle de toma de decisiones de la IA y habilitar a tu agente para que aprenda y mejore continuamente."
 ---
@@ -65,4 +65,3 @@ Los datos de interacción y los datos de activación suelen encontrarse en el mi
 | Cada registro tiene una marca de tiempo asociada | Comprender el tiempo que transcurre entre la comunicación y la secuencia de acciones del cliente es sumamente importante para la formación de los agentes y el cálculo de métricas. |
 | Se proporcionan los campos necesarios para hacer coincidir el contenido de la comunicación con los eventos de activación (como `event_id`) | Emparejar correctamente las características de comunicación con los envíos es necesario para la atribución y la formación de los agentes. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-

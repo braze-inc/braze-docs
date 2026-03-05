@@ -1,7 +1,7 @@
 ---
 nav_title: 意思決定エージェントをデザインする
 article_title: 意思決定エージェントをデザインする
-page_order: 4
+page_order: 6
 page_type: reference
 description: "このリファレンス記事では、意思決定エージェントを設計・構成するための主要な概念とベストプラクティスを取り上げている。"
 ---

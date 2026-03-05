@@ -27,7 +27,7 @@ Une fois lancé, votre agent sera :
 
 Une fois lancé, votre agent a besoin de données de retour pour apprendre et s'améliorer. Il s'agit notamment des données de conversion, des données d'engagement et des données d'activation qui indiquent à l'agent ce qui s'est passé après l'envoi des décisions d'engagement client.
 
-Pour obtenir des informations détaillées sur la préparation de ces ressources de données de retour d'information essentielles, voir [Préparer vos sources de données]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/).
+Pour obtenir des informations détaillées sur la préparation de ces ressources de données de retour d'information essentielles, voir [Préparer vos sources de données]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/).
 
 {% alert note %}
 Si l'agent est nativement intégré à la plateforme d'engagement client (comme Braze, SFMC ou Klaviyo), il se peut qu'aucune étape de configuration supplémentaire ne soit nécessaire pour les données de retour d'expérience, car celles-ci peuvent être envoyées automatiquement avec les données client.

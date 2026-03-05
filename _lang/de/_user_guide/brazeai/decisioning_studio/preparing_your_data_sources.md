@@ -1,7 +1,7 @@
 ---
 nav_title: Vorbereiten Ihrer Datenquellen
 article_title: Vorbereiten Ihrer Datenquellen
-page_order: 2
+page_order: 4
 page_type: reference
 description: "Dieser referenzierte Artikel behandelt die entscheidenden Daten, die Sie benötigen, um die KI-Entscheidungsschleife zu schließen und Ihren Agenten in die Lage zu versetzen, kontinuierlich zu lernen und sich zu verbessern."
 ---
@@ -65,4 +65,3 @@ Engagement-Daten und Aktivierungsdaten sind sehr häufig im selben Datenbestand 
 | Jeder Datensatz hat einen zugehörigen Zeitstempel | Das Verständnis der Zeit zwischen der Kommunikation und der Abfolge der Kund:in ist extrem wichtig für das Training der Agenten und die Berechnung von Metriken. |
 | Felder, die benötigt werden, um Kommunikationsinhalte mit Aktivierungsereignissen abzugleichen, werden bereitgestellt (z.B. `event_id`) | Die korrekte Zuordnung von Kommunikationsmerkmalen zu Sendungen ist für die Attribution und das Training von Agenten notwendig. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-

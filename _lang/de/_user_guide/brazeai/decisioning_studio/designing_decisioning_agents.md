@@ -1,7 +1,7 @@
 ---
 nav_title: Entwurf von Entscheidungsagenten
 article_title: Entwurf von Entscheidungsagenten
-page_order: 4
+page_order: 6
 page_type: reference
 description: "Dieser referenzierte Artikel behandelt die wichtigsten Konzepte und bewährten Verfahren für die Gestaltung und Konfiguration Ihres Entscheidungsagenten."
 ---

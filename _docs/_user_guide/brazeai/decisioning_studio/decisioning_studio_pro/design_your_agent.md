@@ -9,7 +9,7 @@ description: "Learn how to design your Decisioning Studio Pro agent with the AI 
 
 > The first step of agent setup is working with our AI Decisioning Services team to design your agent. This article covers the key design decisions and how to define your audience.
 
-For foundational concepts about decisioning agents—including success metrics, dimensions, action banks, and constraints—see [Designing Decisioning Agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/).
+For foundational concepts about decisioning agents—including success metrics, dimensions, action banks, and constraints—see [Designing Decisioning Agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/).
 
 ## Key design decisions
 

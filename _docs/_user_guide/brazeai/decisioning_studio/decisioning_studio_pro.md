@@ -1,5 +1,5 @@
 ---
-page_order: 2
+page_order: 5
 nav_title: Decisioning Studio Pro
 article_title: BrazeAI Decisioning Studio Pro
 description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>TM</sup> Pro into Braze."

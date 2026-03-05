@@ -1,7 +1,7 @@
 ---
 nav_title: Preparing your orchestration
 article_title: Preparing your orchestration
-page_order: 3
+page_order: 2
 page_type: reference
 description: "This reference article explains what you need to prepare before setting up orchestration for BrazeAI Decisioning Studio, including choosing your CEP and gathering the required credentials and assets."
 ---
@@ -139,7 +139,7 @@ Keep these best practices in mind as you prepare for orchestration:
 2. **Test thoroughly.** Before launching, test your integration with a small set of users to verify that dynamic content populates correctly.
 3. **Document your setup.** Keep track of campaign IDs, template IDs, API keys, and other identifiers. You'll need to reference these in the Decisioning Studio portal.
 4. **Coordinate with your team.** Orchestration setup may involve marketing, engineering, and data teams. Ensure everyone understands their role in the process.
-5. **Plan for feedback data.** Orchestration isn't just about sending messages—it's also about collecting the engagement and conversion data that helps your agent learn. See [Preparing your data sources]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/) for more details.
+5. **Plan for feedback data.** Orchestration isn't just about sending messages—it's also about collecting the engagement and conversion data that helps your agent learn. See [Preparing your data sources]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/) for more details.
 
 ## Next steps
 
@@ -147,4 +147,3 @@ Once you've gathered your credentials and planned your campaigns, you're ready t
 
 - [Decisioning Studio Go: Set up orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
 - [Decisioning Studio Pro: Set up orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
-

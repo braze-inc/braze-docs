@@ -1,7 +1,7 @@
 ---
 nav_title: "Conception d'agents décisionnels"
 article_title: "Conception d'agents décisionnels"
-page_order: 4
+page_order: 6
 page_type: reference
 description: "Cet article de référence couvre les concepts clés et les meilleures pratiques pour concevoir et configurer votre agent décisionnel."
 ---
@@ -43,19 +43,19 @@ Lors de la mise en place d'un agent décisionnel, vous devrez réfléchir à qua
 
 Votre indicateur de réussite est le résultat commercial que l'agent optimisera. Cela doit correspondre directement à vos objectifs commerciaux, et non à des indicateurs de substitution tels que les clics ou les ouvertures, mais à des résultats commerciaux réels tels que le chiffre d'affaires, les conversions, l'ARPU ou la valeur vie client.
 
-### Le « qui » : Sélectionnez votre audience
+### Le « qui » : Sélectionnez votre audience
 
 > Qui l'agent décisionnaire engagera-t-il ?
 
 Définissez l'audience de votre agent. Il peut s'agir de tous les clients, d'un segment spécifique (comme les membres d'un programme de fidélisation) ou de clients à un stade particulier de leur cycle de vie (comme les acheteurs récents ou les abonnés à risque).
 
-### Le « quoi » : Configurez votre banque d'actions
+### Le « quoi » : Configurez votre banque d'actions
 
 > Quelles sont les options que l'agent peut choisir pour déterminer le résultat ?
 
 La banque d'actions définit tous les leviers que l'agent peut actionner - les dimensions (comme le canal, l'offre, le moment et la fréquence) et les options spécifiques à l'intérieur de chaque dimension. L'agent expérimente différentes combinaisons de ces options pour trouver ce qui fonctionne le mieux pour chaque client.
 
-### Le « comment » : Configurez vos contraintes
+### Le « comment » : Configurez vos contraintes
 
 > Quelles sont les règles à respecter par l'agent ?
 

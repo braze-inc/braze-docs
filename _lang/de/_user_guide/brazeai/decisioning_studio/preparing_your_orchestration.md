@@ -1,7 +1,7 @@
 ---
 nav_title: Vorbereiten Ihrer Orchestrierung
 article_title: Vorbereiten Ihrer Orchestrierung
-page_order: 3
+page_order: 5
 page_type: reference
 description: "Dieser referenzierte Artikel erklärt, was Sie vorbereiten müssen, bevor Sie die Orchestrierung für BrazeAI Decisioning Studio einrichten. Dazu gehören die Auswahl Ihrer CEP und das Sammeln der erforderlichen Zugangsdaten und Assets."
 ---
@@ -139,7 +139,7 @@ Behalten Sie bei der Vorbereitung der Orchestrierung diese bewährten Verfahren 
 2. **Testen Sie gründlich.** Testen Sie Ihre Integration vor dem Start mit einer kleinen Gruppe von Nutzer:innen, um zu überprüfen, ob dynamischer Content korrekt aufgefüllt wird.
 3. **Dokumentieren Sie Ihre Einrichtung.** Behalten Sie den Überblick über Kampagnen IDs, Template IDs, API-Schlüssel und andere Bezeichner. Diese müssen Sie im Decisioning Studio Portal referenzieren.
 4. **Stimmen Sie sich mit Ihrem Team ab.** An der Einrichtung der Orchestrierung können Marketing-, Entwickler- und Daten-Teams beteiligt sein. Stellen Sie sicher, dass jeder seine Rolle in diesem Prozess versteht.
-5. **Planen Sie Daten für das Feedback.** Bei der Orchestrierung geht es nicht nur um das Versenden von Nachrichten, sondern auch um das Sammeln von Daten zum Engagement und zur Konversion, aus denen Ihr Agent lernen kann. Weitere Informationen finden Sie unter [Vorbereiten Ihrer Datenquellen]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/).
+5. **Planen Sie Daten für das Feedback.** Bei der Orchestrierung geht es nicht nur um das Versenden von Nachrichten, sondern auch um das Sammeln von Daten zum Engagement und zur Konversion, aus denen Ihr Agent lernen kann. Weitere Informationen finden Sie unter [Vorbereiten Ihrer Datenquellen]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/).
 
 ## Nächste Schritte
 
@@ -147,4 +147,3 @@ Sobald Sie Ihre Zugangsdaten gesammelt und Ihre Kampagnen geplant haben, können
 
 - [Decisioning Studio Go: Orchestrierung einrichten]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
 - [Decisioning Studio Pro: Orchestrierung einrichten]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
-

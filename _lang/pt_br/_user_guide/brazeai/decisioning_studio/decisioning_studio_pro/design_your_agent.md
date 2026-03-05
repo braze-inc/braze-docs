@@ -9,7 +9,7 @@ description: "Saiba como projetar seu agente do Decisioning Studio Pro com a equ
 
 > A primeira etapa da configuração do agente é trabalhar com nossa equipe de IA Decisioning Services para projetar seu agente. Este artigo aborda as principais decisões de design e como definir seu público.
 
-Para conhecer os conceitos básicos sobre agentes de decisão - incluindo métricas de sucesso, dimensões, bancos de ações e restrições - consulte [Projetando agentes de decisão]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/).
+Para conhecer os conceitos básicos sobre agentes de decisão - incluindo métricas de sucesso, dimensões, bancos de ações e restrições - consulte [Projetando agentes de decisão]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/).
 
 ## Principais decisões de design
 

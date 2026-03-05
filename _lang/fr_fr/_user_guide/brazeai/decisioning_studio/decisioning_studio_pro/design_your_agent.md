@@ -9,7 +9,7 @@ description: "Découvrez comment concevoir votre agent Decisioning Studio Pro av
 
 > La première étape de la configuration de l'agent consiste à travailler avec notre équipe de services d'intelligence artificielle décisionnelle pour concevoir votre agent. Cet article traite des principales décisions en matière de conception et de la manière de définir votre audience.
 
-Pour les concepts fondamentaux des agents décisionnels, notamment les indicateurs de réussite, les dimensions, les banques d'actions et les contraintes, voir [Conception d'agents décisionnels]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/).
+Pour les concepts fondamentaux des agents décisionnels, notamment les indicateurs de réussite, les dimensions, les banques d'actions et les contraintes, voir [Conception d'agents décisionnels]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/).
 
 ## Décisions clés en matière de conception
 

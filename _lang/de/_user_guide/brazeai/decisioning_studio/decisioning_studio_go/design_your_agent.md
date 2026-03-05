@@ -9,7 +9,7 @@ description: "Lernen Sie, wie Sie einen BrazeAI Decisioning Studio Go-Agenten en
 
 > In diesem Artikel erfahren Sie, wie Sie Ihren Go-Agenten in Decisioning Studio gestalten, einschließlich der Definition Ihrer Zielgruppe, des Auswählens von Dimensionen und des Verständnisses der Go-spezifischen Möglichkeiten und Einschränkungen.
 
-Grundlegende Konzepte zu Entscheidungsagenten - einschließlich Metriken für den Erfolg, Dimensionen, Aktionsbanken und Einschränkungen - finden Sie unter [Designing Decisioning Agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/).
+Grundlegende Konzepte zu Entscheidungsagenten - einschließlich Metriken für den Erfolg, Dimensionen, Aktionsbanken und Einschränkungen - finden Sie unter [Designing Decisioning Agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/).
 
 ## Go versus Pro Fähigkeiten
 

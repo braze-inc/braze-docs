@@ -1,7 +1,7 @@
 ---
 nav_title: オーケストレーションを準備する
 article_title: オーケストレーションを準備する
-page_order: 3
+page_order: 5
 page_type: reference
 description: "この参考記事では、CEPの選択、必要な認証情報とアセットの収集など、BrazeAI Decisioning Studioのオーケストレーションを設定する前に準備する必要があることを説明する。"
 ---
@@ -139,7 +139,7 @@ Brazeとの統合では、エージェントがどの次元を最適化するか
 2. **徹底的にテストする。**設定を開始する前に、少人数のユーザーで統合をテストし、ダイナミックなコンテンツが正しく入力されることを確認する。
 3. **セットアップをドキュメント化する。**キャンペーンID、テンプレートID、APIキー、その他の識別子を追跡する。Decisioning Studioポータルでこれらを参照する必要がある。
 4. **チームと調整する。**オーケストレーションのセットアップには、マーケティング、開発、データチームが関わることもある。全員が自分の役割を理解していることを確認する。
-5. **フィードバックデータの計画を立てる。**オーケストレーションはメッセージを送信するだけではない。エージェントの学習に役立つエンゲージメントやコンバージョンのデータ収集も重要だ。詳細は[データソースを準備するを]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/)参照のこと。
+5. **フィードバックデータの計画を立てる。**オーケストレーションはメッセージを送信するだけではない。エージェントの学習に役立つエンゲージメントやコンバージョンのデータ収集も重要だ。詳細は[データソースを準備するを]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/)参照のこと。
 
 ## 次のステップ
 
@@ -147,4 +147,3 @@ Brazeとの統合では、エージェントがどの次元を最適化するか
 
 - [デシジョン・スタジオ・ゴーオーケストレーションの設定]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
 - [デシジョン・スタジオ・プロオーケストレーションの設定]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
-

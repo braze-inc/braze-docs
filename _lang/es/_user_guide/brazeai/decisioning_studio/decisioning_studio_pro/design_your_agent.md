@@ -9,7 +9,7 @@ description: "Aprende a diseñar tu agente de Decisioning Studio Pro con el equi
 
 > El primer paso de la configuración del agente es trabajar con nuestro equipo de Servicios de Decisión de IA para diseñar tu agente. Este artículo trata de las decisiones clave de diseño y de cómo definir tu audiencia.
 
-Para conocer los conceptos básicos sobre los [agentes de decisión]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/)-incluidas las métricas de éxito, las dimensiones, los bancos de acciones y las restricciones-, consulta [Diseñar agentes de decisión]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/).
+Para conocer los conceptos básicos sobre los [agentes de decisión]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/)-incluidas las métricas de éxito, las dimensiones, los bancos de acciones y las restricciones-, consulta [Diseñar agentes de decisión]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/).
 
 ## Decisiones clave de diseño
 

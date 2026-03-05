@@ -27,7 +27,7 @@ AI 의사 결정 서비스 팀과 함께 모든 구성 단계를 완료한 후:
 
 일단 시작되면 상담원이 학습하고 개선하기 위해 피드백 데이터가 필요합니다. 여기에는 고객 참여 결정이 전송된 후 상담원에게 어떤 일이 일어났는지 알려주는 전환 데이터, 참여 데이터 및 활성화 데이터가 포함됩니다.
 
-이러한 중요한 피드백 데이터 자산을 준비하는 데 필요한 자세한 요구 사항은 [데이터 소스 준비하기를]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/) 참조하세요.
+이러한 중요한 피드백 데이터 자산을 준비하는 데 필요한 자세한 요구 사항은 [데이터 소스 준비하기를]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/) 참조하세요.
 
 {% alert note %}
 상담원이 고객 참여 플랫폼(예: Braze, SFMC 또는 Klaviyo)과 기본적으로 통합된 경우에는 피드백 데이터가 고객 데이터와 함께 자동으로 전송될 수 있으므로 별도의 구성 단계가 필요하지 않을 수 있습니다.

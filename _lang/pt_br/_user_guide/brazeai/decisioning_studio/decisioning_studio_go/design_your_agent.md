@@ -9,7 +9,7 @@ description: "Saiba como projetar um agente do BrazeAI Decisioning Studio Acessa
 
 > Este artigo aborda como projetar seu agente do Decisioning Studio Acessar, incluindo a definição de seu público, a seleção de dimensões e a compreensão das capacidades e limitações específicas do Acessar.
 
-Para conhecer os conceitos básicos sobre agentes de decisão - incluindo métricas de sucesso, dimensões, bancos de ações e restrições - consulte [Projetando agentes de decisão]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/).
+Para conhecer os conceitos básicos sobre agentes de decisão - incluindo métricas de sucesso, dimensões, bancos de ações e restrições - consulte [Projetando agentes de decisão]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/).
 
 ## Recursos do Acessar versus Pro
 

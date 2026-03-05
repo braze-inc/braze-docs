@@ -3231,6 +3231,10 @@ validurls['/docs/user_guide/brazeai/decisioning_studio/go/configuring_klaviyo'] 
 validurls['/docs/user_guide/brazeai/decisioning_studio/go/configuring_sfmc'] = '/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/';
 validurls['/docs/user_guide/brazeai/decisioning_studio/go/report_bau_campaign'] = '/docs/user_guide/brazeai/decisioning_studio/reporting/';
 validurls['/docs/user_guide/brazeai/decisioning_studio/integration'] = '/docs/user_guide/brazeai/decisioning_studio/getting_started/';
+validurls['/docs/user_guide/brazeai/decisioning_studio/getting_started/overview/'] = '/docs/user_guide/brazeai/decisioning_studio/getting_started/';
+validurls['/docs/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/'] = '/docs/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/';
+validurls['/docs/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_orchestration/'] = '/docs/user_guide/brazeai/decisioning_studio/preparing_your_orchestration/';
+validurls['/docs/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/'] = '/docs/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/';
 
 validurls['/docs/partners/tinyclues/'] = '/docs/partners/splio/';
 validurls['/docs/partners/data_and_analytics/cohort_import/tinyclues'] = '/docs/partners/splio/';

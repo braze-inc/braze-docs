@@ -27,7 +27,7 @@ AI Decisioning Servicesチームとすべての設定ステップを完了した
 
 一度立ち上げたエージェントは、学習と改善のためにフィードバックデータを必要とする。これにはコンバージョンデータ、エンゲージメントデータ、アクティベーションデータが含まれ、顧客エンゲージメント決定が送信された後に何が起こったかをエージェントに伝える。
 
-これらの重要なフィードバックデータ資産を準備するための詳細な要件については、[データソースを準備するを]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/)参照のこと。
+これらの重要なフィードバックデータ資産を準備するための詳細な要件については、[データソースを準備するを]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/)参照のこと。
 
 {% alert note %}
 エージェントがカスタマーエンゲージメントプラットフォーム（Braze、SFMC、Klaviyoなど）とネイティブに統合されている場合、フィードバックデータは顧客データと共に自動的に送信されるため、フィードバックデータに関する追加の設定ステップは必要ないかもしれない。

@@ -9,7 +9,7 @@ description: "Découvrez comment concevoir un agent Go de BrazeAI Decisioning St
 
 > Cet article explique comment concevoir votre agent Decisioning Studio Go, notamment en définissant votre audience, en sélectionnant les dimensions et en comprenant les capacités et les limites spécifiques à Go.
 
-Pour les concepts fondamentaux des agents décisionnels, notamment les indicateurs de réussite, les dimensions, les banques d'actions et les contraintes, voir [Conception d'agents décisionnels]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/).
+Pour les concepts fondamentaux des agents décisionnels, notamment les indicateurs de réussite, les dimensions, les banques d'actions et les contraintes, voir [Conception d'agents décisionnels]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/).
 
 ## Capacités Go versus Pro
 

@@ -9,7 +9,7 @@ description: "Aprende a diseñar un agente BrazeAI Decisioning Studio Go, incluy
 
 > Este artículo explica cómo diseñar tu agente Go de Decisioning Studio, incluyendo la definición de tu audiencia, la selección de dimensiones y la comprensión de las capacidades y limitaciones específicas de Go.
 
-Para conocer los conceptos básicos sobre los [agentes de decisión]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/)-incluidas las métricas de éxito, las dimensiones, los bancos de acciones y las restricciones-, consulta [Diseñar agentes de decisión]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/).
+Para conocer los conceptos básicos sobre los [agentes de decisión]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/)-incluidas las métricas de éxito, las dimensiones, los bancos de acciones y las restricciones-, consulta [Diseñar agentes de decisión]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/).
 
 ## Capacidades Go versus Pro
 
