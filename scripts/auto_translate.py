@@ -292,13 +292,15 @@ def cmd_translate(args):
         return
 
     all_files = [line.strip() for line in changed_path.read_text().splitlines() if line.strip()]
+    TRANSLATABLE_PREFIXES = ("_docs/", "_includes/")
     md_files = [
         f for f in all_files
-        if f.startswith("_docs/") and f.endswith(".md") and (REPO_ROOT / f).exists()
+        if any(f.startswith(p) for p in TRANSLATABLE_PREFIXES)
+        and f.endswith(".md") and (REPO_ROOT / f).exists()
     ]
 
     if not md_files:
-        print("No English .md files changed. Nothing to translate.")
+        print("No translatable .md files changed. Nothing to translate.")
         return
 
     skipped = []
@@ -335,7 +337,10 @@ def cmd_translate(args):
     futures = {}
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
         for fpath in translatable:
-            relative = str(Path(fpath).relative_to("_docs"))
+            if fpath.startswith("_docs/"):
+                relative = str(Path(fpath).relative_to("_docs"))
+            else:
+                relative = fpath
             english_content = (REPO_ROOT / fpath).read_text()
 
             for lang_key, lang_info in LANGUAGES.items():

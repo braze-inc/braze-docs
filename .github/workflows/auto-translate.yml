@@ -54,11 +54,11 @@ jobs:
           elif [ -n "${{ github.event.before }}" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
             git diff --name-only --diff-filter=ACMR \
               ${{ github.event.before }} ${{ github.sha }} \
-              -- '_docs/' > changed_files.txt
+              -- '_docs/' '_includes/' > changed_files.txt
           else
             git diff --name-only --diff-filter=ACMR \
               HEAD~1 HEAD \
-              -- '_docs/' > changed_files.txt
+              -- '_docs/' '_includes/' > changed_files.txt
           fi
 
           # Keep only markdown files
