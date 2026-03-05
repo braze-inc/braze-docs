@@ -10,7 +10,7 @@ tool: Canvas
 
 # User Update 
 
-> The User Update component allows you to update a user's attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
+> The User Update component allows you to update a user's attributes, events, and purchases in a JSON editor, so there's no need to include sensitive information like API keys.
 
 ## How this component works
 
@@ -22,29 +22,29 @@ After users enter the User Update step and it completes processing, they advance
 
 ## Creating a user update
 
-Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of the variant or step and select **User Update**. 
+Drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of the variant or step and select **User Update**. 
 
-There are three options that allow you to update existing, add new, or remove user profile information. All combined, the User Update steps in a workspace can update up to 200,000 user profiles per minute.
+There are three options that allow you to update existing user profile information, add new information, or remove user profile information. All combined, the User Update steps in a workspace can update up to 200,000 user profiles per minute.
 
 {% alert tip %}
 You can also test the changes made with this component by searching for a user and applying the change to them. This will update the user.
 {% endalert %}
 
-### Updating custom attributes
+## Updating custom attributes
 
-To add or update a custom attribute, select an attribute name from your list of attributes and enter the key value.
+To update or remove a custom attribute, select an attribute name from your list of attributes and enter the value.
 
 ![User Update step that updates the two attributes "Loyalty Member" and "Loyalty Program" to "true".]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
 
-### Removing custom attributes
+## Removing custom attributes
 
-To remove a custom attribute, select an attribute name using the dropdown. You can switch to the [advanced JSON composer](#advanced-json-composer) to further edit. 
+To remove a custom attribute, select an attribute name using the dropdown. You can switch to the [advanced JSON editor](#advanced-json-editor) to further edit. 
 
 ![User Update step that removes an attribute "Loyalty Member".]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
 
 ### Increasing and decreasing values
 
-The user update step can increase or decrease an attribute value. Select the attribute, select **Increment By** or **Decrement By**, and enter a number. 
+The User Update step can increase or decrease an attribute value. Select the attribute, select **Increment By** or **Decrement By**, and enter a number. 
 
 #### Track weekly progress
 
@@ -54,21 +54,46 @@ By incrementing a custom attribute that tracks an event, you can track the numbe
 
 ### Updating an array of objects
 
-An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) is a custom attribute stored on a user's profile that is data rich. This allows you to create a history of the user's interactions with your brand. This allows you to create segments based on a custom attribute that is a calculated field, such as purchase history or total lifetime value.
+An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) is a data-rich custom attribute stored on a user's profile. You can use it to create a history of the user's interactions with your brand and to create segments based on a calculated field, such as purchase history or total lifetime value.
 
-The User Update step can add or remove attributes to this array of objects. To update an array, select the array attribute name from your list of attributes and enter the key value.
+Using the **Advanced JSON Editor** option, you can insert JSON to add items to or remove items from this array of objects.
 
 #### Use case: Updating a user's wishlist
 
-Adding or removing an item from an array updates the user's wishlist.
+Track a user's wishlist so you can segment or personalize based on their saved items.
 
-![User Update step that adds an item "sunblock" to the attribute "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
+1. Create a custom attribute that is an array of objects, for example `wishlist`. Each object can include fields such as `product_id`, `product_name`, and `added_at`.
+2. In the User Update step, select **Advanced JSON Editor**. Then, in the **Compose** section, use the `$add` operation to append an item or the `$remove` operation to remove an item by value.
+
+The following is an example of adding an item to the wishlist:
+
+{% raw %}
+```json
+{
+  "attributes": [
+    {
+      "wishlist": {
+        "$add": [
+          {
+            "product_id": "SKU-123",
+            "product_name": "Wireless Headphones",
+            "added_at": "{{$isoTimestamp}}"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+{% endraw %}
+
+To remove an item, use `"wishlist": { "$remove": [ { "product_id": "SKU-123", ... } ] }` with the same object structure so Braze can match and remove it.
 
 #### Use case: Calculating the shopping cart total
 
 Track when a user has items in their shopping cart, when they add new items or remove items, and what the total shopping cart value is. 
 
-1. Create a custom array of objects called `shopping_cart`. The following example shows what this attribute may look like. Each item has a unique `product_id` that has more complex data in its own nested array of objects, including `price`.
+1. Create a custom array of objects called `shopping_cart`. The following example shows what this attribute may look like. Each item has a unique `product_id` that has additional data in its own nested array of objects, including `price`.
 
 {% raw %}
 ```javascript
@@ -108,8 +133,8 @@ The `shopping_cart` attribute carries the total of many custom events: the total
          "total_cart_value": 22.99,
          "shipping": 4.99,
          "items_in_cart": 2,
-         "product_id": ["1001", "1002"]
-         "gift": yes,
+         "product_id": ["1001", "1002"],
+         "gift": true,
          "discount_code": "flashsale1000",
          "timestamp": {"$time" : "{{$isoTimestamp}}"},
        }
@@ -128,7 +153,8 @@ You can use the user update step to persist a `canvas_entry_property`. Let’s s
 
 ### Personalization
 
-To store the property of the trigger event for a Canvas as an attribute, use the personalization modal to extract and store the Canvas entry property. User Update also supports the following personalization features: 
+To store the property of the trigger event for a Canvas as an attribute, use the personalization modal to extract and store the Canvas entry property. User Update also supports the following personalization features:
+
 * [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
 * [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)
@@ -139,19 +165,19 @@ To store the property of the trigger event for a Canvas as an attribute, use the
 We recommend careful use of Connected Content Liquid personalization in User Update steps, as this step type has a rate limit of 200,000 requests per minute. This rate limit overrides the Canvas rate limit.
 {% endalert %}
 
-## Advanced JSON composer
+## Advanced JSON editor
 
-Add an attribute, event, or purchase JSON object up to 65,536 characters to the JSON composer. A user's [global subscription]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) and [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) state can also be set.
+Add an attribute, event, or purchase JSON object up to 65,536 characters to the JSON editor. A user's [global subscription]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) and [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) state can also be set.
 
 ![]({% image_buster /assets/img_archive/canvas_user_update_composer.png %}){: style="max-width:90%;"}
 
-Using the advanced composer, you can also preview and test that the user profile is updated with the changes with the **Preview and test** tab. You can either select a random user or search for a specific user. Then, after sending a test to a user, view the user profile using the generated link.
+Using the JSON editor, you can also preview and test that the user profile is updated with your changes in the **Preview and test** tab. You can either select a random user or search for a specific user. Then, after sending a test to a user, view the user profile using the generated link.
 
 ![]({% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}){: style="max-width:90%;"}
 
 ### Considerations
 
-You don't need to include sensitive data like your API key while using the JSON composer, as this is automatically provided by the platform. As such, the following fields are unneeded and should not be used in the JSON composer:
+You don't need to include sensitive data like your API key while using the JSON editor, as this is automatically provided by the platform. The following fields should not be included in the JSON editor:
 * External user ID
 * API key
 * Braze cluster URL
@@ -164,7 +190,7 @@ Canvas properties (such as the `canvas_id`, `canvas_name`, and `canvas_variant_n
 {% raw %}
 ### Log custom events
 
-Using the JSON composer, you can also log custom events. Note that this requires a timestamp in ISO format, so assigning a time and date with Liquid at the beginning is needed. Consider this example that logs an event with a time.
+Using the JSON editor, you can also log custom events. Note that this requires a timestamp in ISO format, so assigning a time and date with Liquid at the beginning is needed. Consider this example that logs an event with a time.
 
 ```
 {% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
@@ -209,7 +235,7 @@ This next example links an event to a specific app using a custom event with opt
 
 ### Edit subscription state
 
-Within the JSON composer, you can also edit your user's subscription state. For example, the following shows a user's subscription state updated to `opted_in`. 
+Within the JSON editor, you can also edit a user's subscription state. For example, the following shows a user's subscription state updated to `opted_in`. 
 
 ```
 {
@@ -223,7 +249,7 @@ Within the JSON composer, you can also edit your user's subscription state. For 
 
 ### Update subscription groups 
 
-You can also update subscription groups using this Canvas step. The following example shows an update to subscription groups. You can perform one or multiple subscription group updates.
+You can also update subscription groups using this Canvas step. The following example shows how to update one or more subscription groups.
 
 ```
 {
