@@ -6,7 +6,7 @@ alwaysApply: false
 
 Analyze Braze support case CSVs to identify documentation gaps and propose docs updates.
 
-<!-- This can be exported as a CSV from Looker https://braze.looker.com/x/4git0QPwJ9xjVtdBphbkPE or downloaded from Snowflake Growth instance and stored in ~/Documents/support-analyzer-files/latest/. The query logic pulls resolved cases from the last 2 days and all related conversations -->
+<!-- This can be exported as a CSV from Looker https://braze.looker.com/x/4git0QPwJ9xjVtdBphbkPE or downloaded from the Snowflake Growth instance and stored in a local directory of your choice (for example, /path/to/support-analyzer-files/latest/ or a path configured via an environment variable). The query logic pulls resolved cases from the last 2 days and all related conversations. -->
 
 ## CSV Schema
 
