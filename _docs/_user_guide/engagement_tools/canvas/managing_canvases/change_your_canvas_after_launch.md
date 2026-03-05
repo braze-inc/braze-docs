@@ -58,7 +58,7 @@ You can't edit or delete existing connections, and you can't insert a step betwe
 If you update the **Delay** or **Window** settings for a Canvas step, users currently in that step at the time of the update adhere to the delay time that was assigned when they originally entered it. Only new users entering the Canvas and those who haven't been queued for that step yet receive the message at the updated time.
 {% endalert %}
 
-Stopping a Canvas does not exit users who are waiting to receive a message. If you re-enable the Canvas and users are still waiting for the message, they receive the message (unless the time they should have been sent the message has passed, then they won't receive it).
+Stopping a Canvas does not exit users who are waiting to receive a message. If you re-enable the Canvas and users are still waiting for the message, they receive the message (unless the time they should have been sent the message has passed, then they don't receive it).
 
 {% enddetails %}
 
