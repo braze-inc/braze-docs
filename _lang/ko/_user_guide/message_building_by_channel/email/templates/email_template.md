@@ -33,7 +33,7 @@ Next, you can choose from predesigned Braze templates, create a new template, or
 
 ## 3단계: 템플릿 사용자 지정
 
-편집기 환경을 선택한 후에는 이메일 템플릿을 창의적으로 사용자 지정할 수 있는 기회입니다. HTML 편집기에서 HTML을 사용하여 브랜딩을 만들고 에뮬레이션하거나 드래그 앤 드롭 편집기에서 다양한 [크리에이티브 세부 정보를]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#creative-details) 포함할 수 있습니다.
+편집기 환경을 선택한 후에는 이메일 템플릿을 창의적으로 사용자 지정할 수 있는 기회입니다. HTML 편집기에서 HTML을 사용하여 브랜딩을 만들고 에뮬레이션하거나 드래그 앤 드롭 편집기에서 다양한 [크리에이티브 세부 정보를]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details) 포함할 수 있습니다.
 
 ### 구독 취소 링크 포함
 

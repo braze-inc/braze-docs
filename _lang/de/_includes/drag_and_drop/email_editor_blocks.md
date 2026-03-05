@@ -2,7 +2,7 @@
 
 Editor-Blöcke befinden sich unter dem Abschnitt **Inhalt** für E-Mail Nachrichten. Um einen Editor-Block zu verwenden, ziehen Sie im Drag-and-Drop-Editor einen Editor-Block in eine Spalte. Es passt sich automatisch an die Spaltenbreite an. Jeder Editor-Block hat seine eigenen Einstellungen, wie z. B. die granulare Steuerung des Paddings.
 
-Weitere Informationen darüber, wie Sie diese Editor-Blöcke in Ihrer E-Mail verwenden und anpassen können, finden Sie unter [Weitere Anpassungen]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#other-customizations).
+Weitere Informationen darüber, wie Sie diese Editor-Blöcke in Ihrer E-Mail verwenden und anpassen können, finden Sie unter [Weitere Anpassungen]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#other-customizations).
 
 {% alert tip %}
 Sie können auch [angepasste Attribute]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) zu jeder URL innerhalb der Editor-Blöcke `Image`, `Button` oder `Text` hinzufügen.

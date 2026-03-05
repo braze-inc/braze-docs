@@ -136,7 +136,7 @@ Crea una audiencia objetivo para recibir recordatorios utilizando la segmentaci�
 
 ### Paso 2b: Crea tu mensaje
 
-Crea el mensaje de correo electrónico recordatorio siguiendo los pasos de [Crear un correo electrónico con HTML personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/). Utiliza Liquid para personalizar el mensaje con los datos del atributo personalizado de cliente que hayas creado ("viajes"), como en este ejemplo.
+Crea el mensaje de correo electrónico recordatorio siguiendo los pasos de [Crear un correo electrónico con HTML personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/). Utiliza Liquid para personalizar el mensaje con los datos del atributo personalizado de cliente que hayas creado ("viajes"), como en este ejemplo.
 
 {% raw %}
 ```liquid

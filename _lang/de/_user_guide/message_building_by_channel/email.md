@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
   image: /assets/img/braze_icons/link-03.svg
 - name: Erstellen Sie eine E-Mail-Kampagne
-  link: /docs/user_guide/message_building_by_channel/email/html_editor/
+  link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
   image: /assets/img/braze_icons/mail-01.svg
 - name: Drag-and-Drop-Editor
   link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/

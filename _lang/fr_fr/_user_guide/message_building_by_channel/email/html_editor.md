@@ -13,7 +13,7 @@ channel: email
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: "Créer un e-mail avec du HTML personnalisé"
-    link: /docs/user_guide/message_building_by_channel/email/html_editor/
+    link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
     image: /assets/img/braze_icons/mail-01.svg
   - name: "Inclusion CSS"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/

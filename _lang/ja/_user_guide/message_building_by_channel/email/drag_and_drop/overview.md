@@ -179,7 +179,7 @@ tool:
 メールメッセージの背景画像は、画像と画像の間に白い線や途切れが生じることがあるため、メールメッセージの細かい部分をテストして確認することが重要である。
 {% endalert %}
 
-ドラッグ＆ドロップエディターでメールメッセージをデザインしたら、引き続きキャンペーンやキャンバスを[作成]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas)しよう。
+ドラッグ＆ドロップエディターでメールメッセージをデザインしたら、引き続きキャンペーンやキャンバスを[作成]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas)しよう。
 
 {% details About the updated HTML engine %}
 ドラッグ＆ドロップ・エディターからHTMLを生成する基礎となるエンジンが最適化され、更新された結果、HTMLファイルの圧縮とレンダリングに関する利点がもたらされた。

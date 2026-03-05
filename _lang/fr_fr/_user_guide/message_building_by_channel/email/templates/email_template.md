@@ -33,7 +33,7 @@ Tous les modèles HTML personnalisés existants devront être recréés à l'aid
 
 ## Étape 3 : Personnaliser votre modèle
 
-Après avoir sélectionné votre expérience d’éditeur, ceci est l'occasion de faire preuve de créativité en personnalisant votre modèle d'e-mail. Vous pouvez utiliser HTML pour créer et émuler votre image de marque dans l'éditeur HTML, ou inclure une variété de [détails créatifs]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#creative-details) dans l'éditeur glisser-déposer.
+Après avoir sélectionné votre expérience d’éditeur, ceci est l'occasion de faire preuve de créativité en personnalisant votre modèle d'e-mail. Vous pouvez utiliser HTML pour créer et émuler votre image de marque dans l'éditeur HTML, ou inclure une variété de [détails créatifs]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details) dans l'éditeur glisser-déposer.
 
 ### Inclure un lien de désabonnement
 

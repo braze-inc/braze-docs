@@ -179,7 +179,7 @@ Inbox Vision vous permet de voir vos campagnes d'e-mails du point de vue des cli
 Les images d’arrière-plan dans les envois de messages par e-mail peuvent parfois entraîner l’apparition de lignes blanches ou de déconnexions entre les images. Il est donc important de tester et de vérifier les plus petits détails de votre message par e-mail.
 {% endalert %}
 
-Après avoir utilisé l'éditeur glisser-déposer pour concevoir et créer votre message e-mail, continuez à [créer]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas) le reste de votre campagne ou Canvas.
+Après avoir utilisé l'éditeur glisser-déposer pour concevoir et créer votre message e-mail, continuez à [créer]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) le reste de votre campagne ou Canvas.
 
 {% details About the updated HTML engine %}
 Le moteur sous-jacent qui produit du HTML à partir de l'éditeur de glisser-déposer a été optimisé et mis à jour, ce qui entraîne des avantages liés à la compression et au rendu des fichiers HTML.

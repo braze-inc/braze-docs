@@ -43,7 +43,7 @@ Vous pouvez maintenant passer à la configuration de votre campagne d’e-mails 
 
 ## Étape 2 : Configurer votre campagne
 
-Le flux de création des campagnes d'e-mails de transaction est simplifié par rapport à celui d'une [campagne d'e-mails standard]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/) afin de garantir que vos e-mails de transaction critiques pour l'entreprise puissent atteindre tous les utilisateurs.
+Le flux de création des campagnes d'e-mails de transaction est simplifié par rapport à celui d'une [campagne d'e-mails standard]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) afin de garantir que vos e-mails de transaction critiques pour l'entreprise puissent atteindre tous les utilisateurs.
 
 Par conséquent, vous remarquerez que plusieurs paramètres que vous connaissez peut-être d’autres types de campagnes Braze ne sont pas obligatoires lors de la configuration de ce type de campagne :
 

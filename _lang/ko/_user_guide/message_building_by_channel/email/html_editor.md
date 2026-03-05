@@ -13,7 +13,7 @@ channel: email
 guide_featured_title: "섹션 기사"
 guide_featured_list:
   - name: "커스텀 HTML로 이메일 만들기"
-    link: /docs/user_guide/message_building_by_channel/email/html_editor/
+    link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
     image: /assets/img/braze_icons/mail-01.svg
   - name: "CSS 인라인"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/

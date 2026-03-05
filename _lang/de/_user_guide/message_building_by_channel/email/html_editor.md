@@ -13,7 +13,7 @@ channel: email
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
   - name: "Erstellen Sie eine E-Mail mit angepasstem HTML"
-    link: /docs/user_guide/message_building_by_channel/email/html_editor/
+    link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
     image: /assets/img/braze_icons/mail-01.svg
   - name: "CSS-Inlining"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/

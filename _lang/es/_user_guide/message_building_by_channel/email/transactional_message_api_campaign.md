@@ -43,7 +43,7 @@ Ahora, puede pasar a configurar su campaña de correo electrónico transaccional
 
 ## Paso 2: Configura tu campaña
 
-El flujo de creación de campañas de correo electrónico transaccional se simplifica en comparación con el de una [campaña de correo electrónico estándar]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/) para garantizar que el correo electrónico transaccional crítico para su empresa pueda llegar a todos los usuarios.
+El flujo de creación de campañas de correo electrónico transaccional se simplifica en comparación con el de una [campaña de correo electrónico estándar]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) para garantizar que el correo electrónico transaccional crítico para su empresa pueda llegar a todos los usuarios.
 
 Como resultado, observará que varios ajustes con los que puede estar familiarizado de otros tipos de campaña Braze no son necesarios al configurar este tipo de campaña:
 

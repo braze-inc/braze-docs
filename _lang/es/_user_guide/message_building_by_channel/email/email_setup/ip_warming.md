@@ -60,7 +60,7 @@ La mayoría de los ISP solo almacenan los datos de reputación durante 30 días.
 
 ## Cómo limitar los envíos durante el calentamiento
 
-Nuestra función integrada de limitación de usuarios es una herramienta útil para ayudarle a calentar su dirección IP. Después de elegir los segmentos de mensajería deseados durante la creación de la campaña, en el paso [Usuarios objetivo]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas), seleccione el menú desplegable **Opciones avanzadas** para limitar sus usuarios. A medida que tu programa de calentamiento continúe, puedes aumentar gradualmente este límite para incrementar el volumen de correos electrónicos que envías.
+Nuestra función integrada de limitación de usuarios es una herramienta útil para ayudarle a calentar su dirección IP. Después de elegir los segmentos de mensajería deseados durante la creación de la campaña, en el paso [Usuarios objetivo]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas), seleccione el menú desplegable **Opciones avanzadas** para limitar sus usuarios. A medida que tu programa de calentamiento continúe, puedes aumentar gradualmente este límite para incrementar el volumen de correos electrónicos que envías.
 
 ![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 

@@ -33,7 +33,7 @@ search_rank: 1
 
 ## ステップ 3: テンプレートのカスタマイズ
 
-エディタエクスペリエンスを選択したら、メール テンプレートをカスタマイズしてクリエイティブにすることができます。HTML を使用して、HTML エディタでブランドを作成およびエミュレートしたり、ドラッグアンドドロップエディタにさまざまな[クリエイティブな詳細]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#creative-details) を含めることができます。
+エディタエクスペリエンスを選択したら、メール テンプレートをカスタマイズしてクリエイティブにすることができます。HTML を使用して、HTML エディタでブランドを作成およびエミュレートしたり、ドラッグアンドドロップエディタにさまざまな[クリエイティブな詳細]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details) を含めることができます。
 
 ### 配信停止リンクを含める
 

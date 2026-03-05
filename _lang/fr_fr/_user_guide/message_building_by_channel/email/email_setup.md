@@ -59,6 +59,6 @@ Le réchauffement d’adresses IP est l'**étape la plus importante** dans le pr
 
 En commençant par des volumes plus petits d’e-mails, vous établissez un niveau de confiance avec votre fournisseur d’e-mails, ce qui montre que vous envoyez uniquement des e-mails aux utilisateurs concernés. Envoyer votre premier lot d'e-mails à vos utilisateurs les plus engagés peut vous aider à gagner plus rapidement la confiance de votre fournisseur.
 
-Après avoir terminé de réchauffer votre adresse IP, vous pouvez [commencer à créer et à envoyer des e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/) !
+Après avoir terminé de réchauffer votre adresse IP, vous pouvez [commencer à créer et à envoyer des e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) !
 
 <br><br>

@@ -43,7 +43,7 @@ Jetzt können Sie mit der Konfiguration Ihrer transaktionalen E-Mail-Kampagne fo
 
 ## Schritt 2: Konfigurieren Sie Ihre Kampagne
 
-Der Ablauf der Kampagnenerstellung für Transaktions-E-Mail-Kampagnen ist im Vergleich zu dem einer [Standard-E-Mail-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/) vereinfacht, um sicherzustellen, dass Ihre geschäftskritischen Transaktions-E-Mails alle Benutzer erreichen können.
+Der Ablauf der Kampagnenerstellung für Transaktions-E-Mail-Kampagnen ist im Vergleich zu dem einer [Standard-E-Mail-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) vereinfacht, um sicherzustellen, dass Ihre geschäftskritischen Transaktions-E-Mails alle Benutzer erreichen können.
 
 Daher werden Sie feststellen, dass einige Einstellungen, die Sie vielleicht von anderen Braze-Kampagnentypen kennen, bei der Einrichtung dieses Kampagnentyps nicht erforderlich sind:
 

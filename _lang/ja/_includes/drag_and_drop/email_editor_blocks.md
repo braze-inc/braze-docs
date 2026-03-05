@@ -2,7 +2,7 @@
 
 エディタブロックs は、メール の**Content** にあります。エディターブロックを使うには、ドラッグ＆ドロップ・エディターでエディターブロックを列の中にドラッグする。カラム幅に自動調整される。各エディターブロックは、埋め込みのきめ細かなコントロールなど、独自の設定を持っています。
 
-メールでこれらのエディタブロックs を使用およびカスタマイズする方法の詳細については、[他のカスタマイズ]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#other-customizations)を参照してください。
+メールでこれらのエディタブロックs を使用およびカスタマイズする方法の詳細については、[他のカスタマイズ]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#other-customizations)を参照してください。
 
 {% alert tip %}
 `Image`、`Button`、または`Text` エディタブロックs 内の任意のURL に[カスタム属性s]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) を追加することもできます。

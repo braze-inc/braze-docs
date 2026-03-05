@@ -15,7 +15,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/content_cards/create/
   image: /assets/img/braze_icons/channel-content-cards.svg
 - name: Campaña de correo electrónico
-  link: /docs/user_guide/message_building_by_channel/email/html_editor/
+  link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
   image: /assets/img/braze_icons/channel-email.svg
 - name: Campaña de mensajes en la aplicación
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/

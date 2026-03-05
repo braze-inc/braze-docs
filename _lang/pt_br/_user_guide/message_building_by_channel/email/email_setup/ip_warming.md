@@ -60,7 +60,7 @@ A maioria dos provedores armazena dados de reputação por apenas 30 dias. Se vo
 
 ## Como limitar envios durante o aquecimento
 
-Nosso recurso integrado de limitação de usuários serve como uma ferramenta útil para ajudá-lo a aquecer seu endereço IP. Depois de escolher os seus segmentos de envio de mensagens desejados durante a criação da campanha, na [etapa de Usuários Alvo]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas), selecione o menu suspenso **Opções Avançadas** para limitar seus usuários. À medida que sua programação de aquecimento continua, você pode aumentar gradualmente esse limite para aumentar o volume de e-mails que você envia.
+Nosso recurso integrado de limitação de usuários serve como uma ferramenta útil para ajudá-lo a aquecer seu endereço IP. Depois de escolher os seus segmentos de envio de mensagens desejados durante a criação da campanha, na [etapa de Usuários Alvo]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas), selecione o menu suspenso **Opções Avançadas** para limitar seus usuários. À medida que sua programação de aquecimento continua, você pode aumentar gradualmente esse limite para aumentar o volume de e-mails que você envia.
 
 ![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 

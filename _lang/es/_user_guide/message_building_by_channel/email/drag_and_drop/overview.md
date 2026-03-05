@@ -179,7 +179,7 @@ Inbox Vision le permite ver sus campañas de correo electrónico desde la perspe
 Las imágenes de fondo en los mensajes de correo electrónico pueden provocar a veces la aparición de líneas blancas o desconexiones entre las imágenes, por lo que es importante probar y comprobar los detalles de su mensaje de correo electrónico.
 {% endalert %}
 
-Después de utilizar el editor de arrastrar y soltar para diseñar y crear tu mensaje de correo electrónico, continúa [construyendo]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas) el resto de tu campaña o Canvas.
+Después de utilizar el editor de arrastrar y soltar para diseñar y crear tu mensaje de correo electrónico, continúa [construyendo]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) el resto de tu campaña o Canvas.
 
 {% details About the updated HTML engine %}
 El motor subyacente que produce HTML a partir del editor de arrastrar y soltar se ha optimizado y actualizado, lo que se traduce en ventajas relacionadas con la compresión y el renderizado de archivos HTML.

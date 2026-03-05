@@ -22,7 +22,7 @@ Siga estas etapas para criar um cartão promocional do Gmail para uma campanha d
 
 ### Etapa 1: Criar uma campanha de e-mail
 
-Primeiro, [crie sua campanha de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/), e selecione o **editor de código HTML** como sua experiência de edição.
+Primeiro, [crie sua campanha de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/), e selecione o **editor de código HTML** como sua experiência de edição.
 
 ### Etapa 2: Adicione detalhes ao cartão de promoção do Gmail
 
@@ -98,7 +98,7 @@ Recomendamos fazer upload das imagens do seu produto para a biblioteca de mídia
 Após criar seu cartão de promoção do Gmail, selecione **Gerar código HTML**. Copie e cole o script no elemento `<head>` do HTML de seu e-mail. 
 
 {% alert tip %}
-Para o editor de arrastar e soltar, copie e cole o código HTML gerado na seção [tags de cabeçalho personalizadas]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#custom-head-tags) sob **Configurações de Envio**.
+Para o editor de arrastar e soltar, copie e cole o código HTML gerado na seção [tags de cabeçalho personalizadas]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#custom-head-tags) sob **Configurações de Envio**.
 {% endalert %}
 
 {% alert warning %}

@@ -136,7 +136,7 @@ Criar um público-alvo para receber lembretes usando segmentação multiclasse. 
 
 ### Etapa 2b: Crie sua mensagem
 
-Crie a mensagem de e-mail de lembrete seguindo os passos em [Criando um e-mail com HTML personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/). Use Liquid para personalizar a mensagem com dados do atributo de cliente personalizado que você criou (“trips”), como neste exemplo.
+Crie a mensagem de e-mail de lembrete seguindo os passos em [Criando um e-mail com HTML personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/). Use Liquid para personalizar a mensagem com dados do atributo de cliente personalizado que você criou (“trips”), como neste exemplo.
 
 {% raw %}
 ```liquid
