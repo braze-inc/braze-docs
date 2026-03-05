@@ -8,15 +8,15 @@ function isTranslationBranch(name) {
 	return name.startsWith('i18n_') || name.startsWith('auto-translate/');
 }
 
-// For develop and master branches, always build to make sure everything is updated
-if ((vercel_env == 'preview') && (branch_commit != 'develop')) {
+if (vercel_env == 'preview') {
 	if (vercel_lang == 'en') {
-		// English project: skip builds on translation branches
+		// English project: build develop and feature branches, skip translation branches
 		if (isTranslationBranch(branch_check) || isTranslationBranch(branch_commit)) {
 			build_app = 0;
 		}
 	}
 	else {
+		// Language projects: only build on translation branches and production
 		build_app = 0;
 
 		// auto-translate/ branches contain all languages — build every language project
@@ -25,9 +25,7 @@ if ((vercel_env == 'preview') && (branch_commit != 'develop')) {
 		}
 		// i18n_ branches: only build if the branch targets this language
 		else if (branch_check.startsWith('i18n_') && branch_commit.startsWith('i18n_') && branch_commit.includes(vercel_lang)) {
-			if (branch_check && (vercel_env == 'preview')) {
-				build_app = 1;
-			}
+			build_app = 1;
 		}
 	}
 }
