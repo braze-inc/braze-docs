@@ -68,7 +68,7 @@ No. Currents does not include campaign tags or message-level key-value pairs. As
 
 ### How does Braze notify customers of changes to Currents?
 
-When Currents changes occur (such as new event fields or event types), Braze sends an email to all customers with active Currents integrations who have used the dashboard within the past 30 days. For details on how schema changes work, refer to [Avro schema changes]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics/#avro-schema-changes).
+When Currents changes occur (such as new event fields or event types), Braze sends an email to all customers with active Currents integrations who have used the dashboard within the past 30 days. You can also refer to the [Currents changelog]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs) for latest changes.
 
 ### How much storage do I need for Currents data?
 
