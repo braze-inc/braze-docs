@@ -105,11 +105,11 @@ If links in your push notifications are opening in the app unexpectedly, it migh
 
 If your push notification title contains Liquid personalization and appears complete on Android but truncated on iOS, this is caused by how each platform handles newline characters (`\n`) in the title string.
 
-Android automatically strips whitespace, tabs, and newlines from push title strings. iOS does not — if a Liquid variable resolves to a value that contains a trailing newline, iOS treats the newline as the end of the title and cuts off the remaining text.
+Android automatically strips whitespace, tabs, and newlines from push title strings. iOS does not, so if a Liquid variable resolves to a value that contains a trailing newline, iOS treats the newline as the end of the title and cuts off the remaining text.
 
 For example, a title like `Regarding your flight from {% raw %}{{${city_from}}}{% endraw %} to {% raw %}{{${city_to}}}{% endraw %}` might display `Regarding your flight from` on iOS if the `city_from` variable includes a trailing newline.
 
-To fix this, apply the `strip_newlines` Liquid filter. The easiest approach is to wrap the entire title in a `capture` block:
+To fix this, apply the `strip_newlines` Liquid filter and wrap the entire title in a `capture` block:
 
 {% raw %}
 ```liquid
