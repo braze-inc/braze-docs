@@ -97,6 +97,16 @@ braze.openSession();
 **In-App Message Display**: To display in-app messages automatically when they're triggered, you must call `braze.automaticallyShowInAppMessages()`. Without this call, in-app messages don't display automatically. If you want to manage message display manually, remove this call and use `braze.subscribeToInAppMessage()` instead. For more information, see [In-app message delivery]({{site.baseurl}}/developer_guide/in_app_messages/delivery/).
 {% endalert %}
 
+#### Troubleshooting missing sessions for anonymous users
+
+If you're seeing "Session missing" behavior, or you're not able to track the session for users who stay anonymous on web, make sure your integration calls `braze.openSession()` during initialization.
+
+- **Scenario:** Anonymous users can return a Braze ID, but session data is blank or missing.
+- **Cause:** The implementation doesn't call `braze.openSession()`.
+- **Resolution:** Always call `braze.openSession()` after initialization (and after `braze.changeUser()` if you set an external ID).
+
+For more information, see [Step 2: Initialize the SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web&tab=code-based%20integration#step-2-initialize-the-sdk).
+
 {% alert important %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
@@ -107,11 +117,67 @@ Anonymous users on mobile or web devices may be counted towards your [MAU]({{sit
 {% endtab %}
 {% endtabs %}
 
+## Filtering bot traffic {#bot-filtering}
+
+MAU can include a percentage of bot users, which inflates your monthly active user count. While the Braze Web SDK includes built-in detection for some common web crawlers (such as search engine bots and social media preview bots), it is especially important to stay proactive with robust solutions to detect bots, as SDK updates alone cannot consistently detect every new bot.
+
+### Limitations of SDK-side bot detection
+
+The Web SDK includes basic user-agent-based bot detection that filters out known crawlers. However, this approach has limitations:
+
+- **New bots emerge constantly**: AI companies and other actors regularly create new bots that may disguise themselves to avoid detection.
+- **User-agent spoofing**: Sophisticated bots can mimic legitimate browser user-agents.
+- **Custom bots**: Non-technical users can now easily create bots using large language models (LLMs), making bot behavior unpredictable.
+
+### Implementing bot filtering
+
+{% alert important %}
+The solutions outlined below are general suggestions. Tailor bot filtering logic to your unique environment and traffic patterns.
+{% endalert %}
+
+The most robust solution is to implement your own bot filtering logic before initializing the Braze SDK. Common approaches include:
+
+#### Require user interaction
+
+Consider delaying SDK initialization until a user performs a meaningful interaction, such as accepting a cookie consent banner, scrolling, or clicking. This approach is often easier to implement and can be highly effective at filtering bot traffic.
+
+{% alert important %}
+Delaying SDK initialization until user interaction might cause Banners and Content Cards to also not display until that interaction occurs.
+{% endalert %}
+
+#### Custom bot detection
+
+Implement custom detection based on your specific bot traffic patterns, such as:
+
+- Analyzing user-agent strings for patterns you've identified in your traffic
+- Checking for headless browser indicators
+- Using third-party bot detection services
+- Monitoring behavioral signals specific to your site
+
+**Example of conditional initialization:**
+
+```javascript
+// Only initialize Braze if your custom bot detection determines this is not a bot
+if (!isLikelyBot()) {
+  braze.initialize('YOUR-API-KEY-HERE', {
+    baseUrl: "YOUR-SDK-ENDPOINT-HERE"
+  });
+  braze.automaticallyShowInAppMessages();
+  braze.openSession();
+}
+```
+
+### Best practices
+
+- Regularly analyze your MAU data and web traffic patterns to identify new bot behavior.
+- Test thoroughly to ensure your bot filtering doesn't prevent legitimate users from being tracked.
+- Update your filtering logic based on the bot traffic patterns you observe in your environment.
+
 ## Optional configurations
 
 ### Logging
 
-To quickly enable logging, you can add `?brazeLogging=true` as a parameter to your website URL. Alternatively, you can enable [basic](#web_basic-logging) or [custom](#web_custom-logging) logging.
+To quickly enable logging, you can add `?brazeLogging=true` as a parameter to your website URL. Alternatively, you can enable [basic](#web_basic-logging) or [custom](#web_custom-logging) logging. For a centralized overview across all platforms, see [Verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging).
 
 #### Basic logging
 

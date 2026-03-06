@@ -19,3 +19,9 @@ braze-docs.iml
 # Braze scripts
 scripts/temp
 node_modules
+
+# Generated translation/audit artifacts
+translation_results.json
+translation_pr_body.md
+qc_results.json
+glossary_audit_report.*
