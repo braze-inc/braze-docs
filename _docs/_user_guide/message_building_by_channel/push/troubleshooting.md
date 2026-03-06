@@ -105,11 +105,13 @@ If links in your push notifications are opening in the app unexpectedly, it migh
 
 When uploading a `.p12` push certificate in the Braze dashboard, you may see the following warning:
 
+{% alert important %}
 > The legacy .p12 and .pem certificate file types are deprecated in favor of .p8 files. Unlike .p8 files, the legacy file types expire annually and require error-prone manual updating.
 
-Apple `.p8` authentication keys are the recommended approach for APNs push because they don't expire and support all of your apps under a single key. If you're currently using a `.p12` or `.pem` certificate, we recommend migrating to a `.p8` key. For instructions, see [Upload your APNs token]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#upload-your-apns-token).
+Apple `.p8` authentication keys are the recommended approach for APNs push because they don't expire and support all of your apps under a single key. If you're currently using a `.p12` or `.pem` certificate, we recommend migrating to a `.p8` key. For instructions, see [Upload your APNs push certificate]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
 
 If you need to continue using a `.p12` certificate (for example, because your organization requires per-app certificates), you can dismiss the warning and proceed with the upload. Contact [Braze support]({{site.baseurl}}/braze_support/) if you need assistance.
+{% endalert %}
 
 ## Web push notifications aren't behaving as expected
 
