@@ -39,7 +39,7 @@ For example, if you'd like to send an in-app message to only iOS devices, select
 
 Add at least one filter to your segment. You can combine as many filters as you want to make your segmentation more specific. 
 
-{% include alerts/note_alerts.md alert='Segment profiles first app use' %}
+{% multi_lang_include alerts/note_alerts.md alert='Segment profiles first app use' %}
 
 #### Filter groups
 
