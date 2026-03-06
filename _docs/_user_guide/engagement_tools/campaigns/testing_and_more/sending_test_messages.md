@@ -93,7 +93,7 @@ In the **Preview** tab of your composer, the view of your message might not be i
 
 If a Content Card image is not rendering or appears broken:
 
-- **Verify the URL is correct and URL-encoded.** Special characters in the URL (such as spaces or query parameters) must be properly encoded, or the image request will fail.
+- **Verify the URL is correct and URL-encoded.** Special characters in the URL (such as spaces or query parameters) must be properly encoded. Otherwise, the image request fails.
 - **Check content security policies.** If your organization has a content security policy (CSP) or internal IT security rules, the policy may block the image domain. Confirm that the image URL's domain is allowed by your CSP.
 - **Use HTTPS.** Image URLs should use `https://` rather than `http://` to avoid mixed-content blocking in browsers and apps.
 - **Open the URL directly in a browser.** If the image doesn't load in a browser, the issue is with the image URL or hosting—not with Braze.
