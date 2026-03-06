@@ -13,45 +13,42 @@ guide_top_text: "O <sup>BrazeAITM</sup> oferece uma coleção de ferramentas ace
 
 guide_featured_title: "Recursos"
 guide_featured_list:
-  - name: Estúdio de Decisão
-    link: /docs/user_guide/brazeai/decisioning_studio/
-    image: /assets/img/braze_icons/stars-03.svg
   - name: Agentes
     link: /docs/user_guide/brazeai/agents/
     image: /assets/img/braze_icons/star-06.svg
-  - name: Operador BrazeAI
-    link: /docs/operator/
-    image: /assets/img/braze_icons/edit-05.svg
+  - name: Servidor Braze MCP
+    link: /docs/user_guide/brazeai/mcp_server/
+    image: /assets/img/braze_icons/dataflow-01.svg
   - name: Otimizador de conteúdo
-    link: /docs/user_guide/brazeai/content_optimizer
+    link: /docs/user_guide/brazeai/content_optimizer/
     image: /assets/img/braze_icons/image-user-check.svg
-  - name: Intelligence Suite
-    link: /docs/user_guide/brazeai/intelligence/
-    image: /assets/img/braze_icons/clock.svg
-  - name: Churn previsto
-    link: /docs/user_guide/brazeai/predictive_churn/
-    image: /assets/img/braze_icons/stars-01.svg
-  - name: Eventos previstos
-    link: /docs/user_guide/brazeai/predictive_events/
-    image: /assets/img/braze_icons/calendar-check-01.svg
-  - name: Recomendações
-    link: /docs/user_guide/brazeai/recommendations/
-    image: /assets/img/braze_icons/hearts.svg
+  - name: Estúdio de Decisão
+    link: /docs/user_guide/brazeai/decisioning_studio/
+    image: /assets/img/braze_icons/stars-03.svg
   - name: IA generativa
     link: /docs/user_guide/brazeai/generative_ai/
     image: /assets/img/braze_icons/lightbulb-02.svg
-  - name: Servidor Braze MCP
-    link: /docs/mcp/
-    image: /assets/img/braze_icons/dataflow-01.svg
-  - name: Variante vencedora e variante personalizada
-    link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
-    image: /assets/img/braze_icons/trophy-01.svg
-  - name: Jornada vencedora
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/
-    image: /assets/img/braze_icons/dataflow-03.svg
+  - name: Intelligence Suite
+    link: /docs/user_guide/brazeai/intelligence_suite/
+    image: /assets/img/braze_icons/clock.svg
+  - name: Recomendações de itens
+    link: /docs/user_guide/brazeai/item_recommendations/
+    image: /assets/img/braze_icons/hearts.svg
+  - name: Operador BrazeAI
+    link: /docs/user_guide/brazeai/operator/
+    image: /assets/img/braze_icons/edit-05.svg
+  - name: Suite preditiva
+    link: /docs/user_guide/brazeai/predictive_suite/
+    image: /assets/img/braze_icons/stars-01.svg
   - name: Jornadas personalizadas
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
     image: /assets/img/braze_icons/chevron-up-double.svg
+  - name: Jornada vencedora
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/
+    image: /assets/img/braze_icons/dataflow-03.svg
+  - name: Variante vencedora e variante personalizada
+    link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
+    image: /assets/img/braze_icons/trophy-01.svg
 ---
 
 <br>
