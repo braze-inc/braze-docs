@@ -66,7 +66,7 @@ We can further personalize our message by adding some text around our Liquid:
 
 {% raw %}
 ```liquid
-Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
+Get the ultimate trio {% catalog_items Games 1234 1235 1236 %}
 {{ items[0].title }}, {{ items[1].title }}, and {{ items[2].title }} today!
 ```
 {% endraw %}
@@ -105,10 +105,10 @@ In this example, the `catalog_items` tag fetches item `1234` from the `Games` ca
 {% catalog_selection_items item-list selections %} 
 {% if items[0].venue_name.size > 10 %}
 Message if the venue name's size is more than 10 characters. 
-{% elsif items[0].venue_name.size < 10 %}
-Message if the venue name's size is less than 10 characters. 
+{% elsif items[0].venue_name.size <= 10 %}
+Message if the venue name's size is 10 characters or fewer. 
 {% else %} 
-{% abort_message(no venue_name) %} 
+{% abort_message('no venue_name') %} 
 {% endif %}
 ```
 {% endraw %}
@@ -202,7 +202,7 @@ To render the following Liquid content:
 
 {% raw %}
 ```liquid
-Hi ${first_name}
+Hi ${first_name},
 
 {% catalog_items Messages greet_msg :rerender %}
 {{ items[0].Welcome_Message }}
