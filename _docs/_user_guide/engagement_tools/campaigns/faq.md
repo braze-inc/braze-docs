@@ -190,9 +190,9 @@ API-triggered and server-triggered campaigns are ideal for handling more advance
 
 If you add or change a maximum recipient limit on an active campaign, the limit may not be reflected in your send analytics for the following reasons:
 
-- **Limit added post-launch:** If the maximum recipient limit was not set when the campaign launched, messages that were already enqueued before the limit was applied will still be sent. The limit only takes effect for sends that are queued after the change is saved.
+- **Limit added post-launch:** If the maximum recipient limit is not set when the campaign launches, messages that are already enqueued before you apply the limit are still sent. The limit only takes effect for sends that you queue after you save the change.
 - **Rate limiting interaction:** If a campaign is also rate-limited, messages may be distributed over a longer time window. The maximum recipient limit is evaluated when messages are enqueued, not when they are delivered. If the limit is changed while messages are already in the queue, the original limit applies to those messages.
-- **Recurring campaigns:** For recurring campaigns, each scheduled send evaluates the maximum recipient limit independently. Changing the limit between sends won't retroactively adjust previous send counts.
+- **Recurring campaigns:** For recurring campaigns, each scheduled send evaluates the maximum recipient limit independently. Changing the limit between sends does not retroactively adjust previous send counts.
 
 To avoid misalignment, set the maximum recipient limit before launching the campaign and avoid modifying it while sends are in progress.
 
