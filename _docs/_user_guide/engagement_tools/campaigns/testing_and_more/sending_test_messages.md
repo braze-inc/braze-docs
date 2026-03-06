@@ -65,9 +65,11 @@ Keep in mind, your preview may not be identical to the final render on a user's 
 To send a test to either [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices with valid push tokens registered for the test user before sending. For iOS users, you must tap the push notification sent by Braze in order to view the test Content Card. This behavior only applies to test Content Cards.
 {% endalert %}
 
-{% alert note %}
-Test Content Cards are delivered through a silent push notification — the card is packaged in the push payload, and the SDK extracts and caches it locally when the push is received. This bypasses the normal card delivery system, which is why push must be enabled even though you're testing a Content Card. Test Content Cards expire approximately 5 minutes after they are sent.
-{% endalert %}
+Test Content Cards are delivered through a push notification. The card is packaged in the push payload, and the SDK extracts and caches it locally when the push is received.
+
+This process bypasses the normal card delivery system, which is why push must be enabled even though you're testing a Content Card.
+
+Test Content Cards expire approximately five minutes after they are sent.
 
 After creating your Content Card, you can send a test Content Card to your app to see what it will look like in real-time.
 
