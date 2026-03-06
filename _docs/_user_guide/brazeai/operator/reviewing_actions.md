@@ -2,10 +2,10 @@
 nav_title: Review actions
 article_title: Reviewing BrazeAI Operator<sup>TM</sup> actions
 page_order: 2
-description: "Learn how to review and approve actions when BrazeAI Operator<sup>TM</sup> proposes changes in the dashboard."
+description: "Learn how to review and approve actions when BrazeAI Operator proposes changes in the dashboard."
 ---
 
-# Reviewing BrazeAI Operator<sup>TM</sup> actions
+# Reviewing BrazeAI Operator actions
 
 > Learn how to review and approve actions when BrazeAI Operator<sup>TM</sup> proposes changes in the dashboard.
 
@@ -21,6 +21,19 @@ When Operator proposes changes in the dashboard (such as filling in form fields,
 4. **Action executes:** Approved actions are executed in Braze. Declined actions are not applied.
 
 If an action fails after approval, Operator will notify with details about the failure.
+
+### Availability
+
+Action cards are supported in the following editors:
+
+- In-app messages (traditional editor only)
+- Content Cards
+- Email (HTML editor only)
+- Push notifications
+- SMS/MMS/RCS
+- Webhooks
+
+On other pages, Operator provides a list of steps to follow in the UI instead of taking action itself. Operator functionality is regularly being improved, and expanded coverage for create tools is expected.
 
 ## Modify a plan
 

@@ -214,10 +214,11 @@ $(document).ready(function() {
       search_apis();
     });
 
-    if (location.hash && $(location.hash.replace('%20','-').replace('+','-')).offset()) {
+    var location_hash = (location.hash || "").replace('%20','-').replace('+','-').replace(/[^a-zA-Z0-9_-]+/g, '');
+    if (location_hash && $(location_hash).offset()) {
       // Scroll to generated hash
       $('html, body').animate({
-        scrollTop: $(location.hash).offset().top
+        scrollTop: $(location_hash).offset().top
       });
     }
   };
@@ -237,7 +238,7 @@ $(document).ready(function() {
 
     <div id="api-main">
     <div id="content_start"></div>
-    
+
     {%- unless hide_breadcrumb -%}
     <div id="breadcrumb">
     </div>
@@ -248,7 +249,7 @@ $(document).ready(function() {
     <p class="api_text">Use the search bar or the checkboxes below to find the events you need to use Currents effectively. <br> <br>  These schema include other App or Website activity such as Sessions, Custom Events, and Purchases tracked through the platform. </p>
 
     <div id="api_filter">
-        <input id="api_search" type="search" placeholder="Search" />
+        <input id="api_search" type="search" placeholder="Search" aria-label="Search glossary" />
         <div id="api_filter_list"></div>
     </div>
 
