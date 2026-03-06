@@ -38,7 +38,7 @@ You can track two types of API activity:
 - **REST API endpoints:** Actions like sending messages, creating campaigns, or exporting data.
 - **SDK API requests:** Events from your customer experience, such as triggering in-app messages or syncing user profiles. *This feature is available if you’ve purchased Monthly Active Users (CY 24–25).*
 
-Once you choose what to track, you can define alert conditions. For example, get notified if error responses increase by 20% within an hour. You’ll get a notification by email, webhook, or both, depending on your settings. To get started, see [API usage alerts]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts/).
+Once you choose what to track, you can define alert conditions. For example, get notified if error responses increase by 20% within an hour. You’ll get a notification by email, webhook, or both, depending on your settings. To get started, see [API usage alerts]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/api_usage_alerts/).
 
 ## App identifiers
 

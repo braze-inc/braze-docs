@@ -14,6 +14,8 @@ description: "This reference article covers the message and design requirements 
 
 > Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
 
+This message type is available in both the [drag-and-drop]({{site.baseurl}}/user_guide/channels/in_app_messages/drag_and_drop/) and [traditional editor]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/).
+
 ![Two modal in-app messages side-by-side, detailing the image and text recommendations. See following sections for details.]({% image_buster /assets/img/modal-spec.png %}){: style="max-width: 801px; border: none;"}
 
 ## Image specifications

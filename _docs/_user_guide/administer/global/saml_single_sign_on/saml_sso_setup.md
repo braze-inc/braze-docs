@@ -174,3 +174,10 @@ If you're using another IdP, check if your company uploaded the correct SAML or 
 ### Are you using a manual integration?
 
 If your company didn't download the Braze app from your IdP's app store, you need to download the pre-built integration. For example, if Okta is your IdP, you'd download the Braze app from their [integration page](https://www.okta.com/integrations/braze/).
+
+## Next steps
+
+After setting up SAML SSO, you can:
+
+- [Enforce SSO-only login]({{site.baseurl}}/user_guide/administer/global/admin_settings/security_settings/#restriction) in your security settings to restrict users from logging in with a password.
+- [Set up SAML just-in-time provisioning]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/saml_just_in_time_provisioning/) so new users automatically create Braze accounts on their first SSO sign-in.

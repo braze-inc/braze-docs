@@ -11,10 +11,10 @@ alias: /data_transformation/
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Create a Transformation
+  - name: Create a transformation
     link: /docs/user_guide/data/unification/data_transformation/creating_a_transformation/
     image: /assets/img/braze_icons/flip-forward.svg
-  - name: Use Cases
+  - name: Use cases
     link: /docs/user_guide/data/unification/data_transformation/use_cases/
     image: /assets/img/braze_icons/users-01.svg
 ---

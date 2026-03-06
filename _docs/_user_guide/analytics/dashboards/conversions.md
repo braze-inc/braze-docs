@@ -3,7 +3,7 @@ nav_title: Conversions
 article_title: Conversions Dashboard
 alias: "/conversions_dashboard_v2/"
 description: "The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods."
-page_order: 4
+page_order: 3
 page_type: reference
 tool: 
   - Reports
@@ -134,9 +134,9 @@ To download the time series data, select <i class="fas fa-bars"></i> and then se
 
 ### Why do I have low campaign or Canvas conversions?
 
-Your conversions might not be as high as you expect them to be when compared to previous campaigns or your expectations. Conversions are a tricky business, but they are dependent on a few simple functions in our platform: event tracking and conversion deadlines.
+Your conversions might not be as high as you expect them to be when compared to previous campaigns or your expectations. Conversions depend on two key functions: event tracking and conversion deadlines.
 
-To troubleshoot why that is, we recommend checking your event tracking and conversion deadlines.
+To troubleshoot, check your event tracking and conversion deadlines.
 
 #### Event tracking
 

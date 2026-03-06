@@ -1,10 +1,10 @@
 ---
 nav_title: Canvas components
-article_title: Canvas Components
+article_title: Canvas components
 page_order: 2
 alias: "/user_guide/engagement_tools/canvas/canvas_components/about/"
 layout: dev_guide
-guide_top_header: "Canvas Components"
+guide_top_header: "Canvas components"
 guide_top_text: "Enhance your Canvas journey with Canvas components. Canvas components can be used to simplify the process of determining the effectiveness of your Canvas by replacing excessive full steps with just one. Components in Canvas refer to the personalized user journey in your Canvas branches."
 
 page_type: landing
@@ -13,40 +13,40 @@ tool: Canvas
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Action Paths Step  
+  - name: Action Paths step  
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
     image: /assets/img/braze_icons/zap.svg
-  - name: Agent Step
+  - name: Agent step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/agent_step/
     image: /assets/img/braze_icons/briefcase-01.svg
-  - name: Audience Paths Step
+  - name: Audience Paths step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
     image: /assets/img/braze_icons/users-01.svg 
-  - name: Audience Sync Step
+  - name: Audience Sync step
     link: /docs/partners/canvas_audience_sync/
     image: /assets/img/braze_icons/refresh-ccw-02.svg
-  - name: Content Optimizer Step
+  - name: Content Optimizer step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step/
     image: /assets/img/braze_icons/target-04.svg
-  - name: Context Step
+  - name: Context step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/context/
     image: /assets/img/braze_icons/file-search-02.svg
-  - name: Decision Split Step
+  - name: Decision Split step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
     image: /assets/img/braze_icons/dataflow-04.svg
-  - name: Delay Step
+  - name: Delay step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
     image: /assets/img/braze_icons/clock-stopwatch.svg
-  - name: Experiment Paths Step
+  - name: Experiment Paths step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: Feature Flags in Canvas
-    link: /docs/developer_guide/feature_flags/canvas/
+  - name: Feature flags
+    link: /docs/user_guide/messaging/canvas/canvas_components/feature_flags/
     image: /assets/img/braze_icons/dataflow-03.svg
-  - name: Message Step
+  - name: Message step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
     image: /assets/img/braze_icons/message-square-02.svg
-  - name: User Update Step
+  - name: User Update step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     image: /assets/img/braze_icons/user-check-01.svg
 ---

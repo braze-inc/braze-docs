@@ -92,7 +92,7 @@ Note that in cases where your segment is very small relative to your workspace s
 
 ## Viewing performance data by segment
 
-Use [Query Builder report templates]({{site.baseurl}}/user_guide/analytics/reporting/data_by_segments/) to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
+Use [Query Builder report templates]({{site.baseurl}}/user_guide/analytics/reports/query_builder/data_by_segments/) to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
 
 ## Creating a segment breakdown report using Query Builder
 

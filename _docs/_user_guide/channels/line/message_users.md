@@ -9,7 +9,7 @@ channel:
 alias: /line/messaging_users/
 ---
 
-# Messaging LINE users
+# Message LINE users
 
 > LINE is a two-way communication channel. You can go beyond sending users messages and engage in conversations with users by using templated campaigns and Canvases. This article covers the details of messaging users, such as how to set trigger words for inbound messages and unrecognized responses.
 

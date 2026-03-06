@@ -4,7 +4,7 @@ article_title: Data Unification
 page_order: 1
 layout: dev_guide
 guide_top_header: "Data Unification"
-guide_top_text: "> Bring your user data together into one place in Braze. No matter the source of your data, you can unify it all to get a complete picture of who your users are, including their behaviors, preferences, and actions."
+guide_top_text: "Bring your user data together into one place in Braze. No matter the source of your data, you can unify it all to get a complete picture of who your users are, including their behaviors, preferences, and actions."
 page_type: landing
 description: "This section includes articles related to data unification in the Braze Data Platform."
 
@@ -16,7 +16,7 @@ guide_featured_list:
   - name: Data Transformation
     link: /docs/user_guide/data/unification/data_transformation/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Create a Formula
+  - name: Create a formula
     link: /docs/user_guide/data/unification/creating_a_formula/
     image: /assets/img/braze_icons/beaker-02.svg
   - name: User data

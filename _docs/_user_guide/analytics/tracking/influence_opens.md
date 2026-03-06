@@ -1,7 +1,7 @@
 ---
 nav_title: Influence opens
-article_title: Influenced Opens
-page_order: 7
+article_title: Influenced opens
+page_order: 2
 page_type: reference
 description: "This reference article explains influenced opens and how you can track them to provide a richer level of detail into your push campaigns."
 channel: push

@@ -9,7 +9,7 @@ description: "This article describes how to change the language the Braze dashbo
 
 # Language settings
 
-This article describes how to change the language the Braze dashboard appears in.
+> This article describes how to change the language the Braze dashboard appears in.
 
 ## Change your dashboard language settings
 

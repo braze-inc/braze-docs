@@ -27,10 +27,10 @@ guide_menu_list:
 - name: Custom HTML
   link: /docs/user_guide/channels/in_app_messages/message_types/custom_html/
   image: /assets/img/braze_icons/code-02.svg
-- name: Email Capture Form
+- name: Email capture form
   link: /docs/user_guide/channels/in_app_messages/message_types/email_capture_form/
   image: /assets/img/braze_icons/mail-04.svg
-- name: Simple Survey
+- name: Simple survey
   link: /docs/user_guide/channels/in_app_messages/message_types/simple_survey/
   image: /assets/img/braze_icons/clipboard.svg
 ---

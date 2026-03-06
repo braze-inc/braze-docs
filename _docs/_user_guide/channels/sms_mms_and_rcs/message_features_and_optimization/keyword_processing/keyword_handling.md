@@ -1,7 +1,7 @@
 ---
 nav_title: Custom keyword handling
-article_title: Custom Keyword Handling
-page_order: 3
+article_title: Custom keyword handling
+page_order: 2
 description: "This reference article covers how Braze deals with two-way SMS, MMS, and RCS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support."
 page_type: reference
 channel:
@@ -44,7 +44,7 @@ The following rules apply to keywords and keyword responses:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Interested in seeing how these keywords can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/retargeting/) for more information.
+Interested in seeing how these keywords can be used in your campaigns and Canvases to retarget and trigger messages? Visit [User retargeting]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/) for more information.
 {% endalert %}
 {% endtab %}
 
@@ -56,7 +56,7 @@ You can manage your own responses that are sent to users after they text in a ke
 
 1. In the Braze dashboard, go to **Audience** > **Subscription Group Management** and select an **SMS/MMS/RCS** subscription group. <br><br>
 2. Under **Global Keywords**, select a keyword category to edit a response for by selecting the pencil icon. ![Opt-in keywords with the pencil icon displaying.]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br> 
-3. In the tab that opens, edit your response. Be mindful of our [six rules to get compliance right]({{site.baseurl}}/user_guide/channels/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response, and read the following rules that apply to keywords and keyword responses. ![Responses]({% image_buster /assets/img/sms/keyword_home.png %}){: style="max-width:70%;"}<br><br>
+3. In the tab that opens, edit your response. Be mindful of our [six rules to get compliance right]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response, and read the following rules that apply to keywords and keyword responses. ![Responses]({% image_buster /assets/img/sms/keyword_home.png %}){: style="max-width:70%;"}<br><br>
 4. To automatically shorten static URLs in your response, select the **Link Shortening** toggle. The character counter will update to show the expected length of the shortened URL. ![A GIF showing the character counter updating when the "Link Shortening" toggle is on.]({% image_buster /assets/img/sms/link_shortening.gif %}){: style="max-width:60%;"}
 
 ##### Considerations
@@ -94,7 +94,7 @@ If you need to delete a language, select the **Delete Language** button at the b
 
 In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you can also create up to 25 of your own keyword categories. This allows you to identify arbitrary keywords and set up responses specific to your business. An example category might be "PROMO" or "DISCOUNT", which might prompt a response about promos that are happening this month. 
 
-These custom keywords operate in an "always-on" capacity, meaning that any user subscribed to your message service can text keywords and receive a response at any point. In addition to this behavior, you also have the option to define specific keywords that can only be sent to at [certain points]({{site.baseurl}}/user_guide/channels/sms/keywords/keyword_handling/#lifecycle-specific-keywords) of your user's lifecycle. 
+These custom keywords operate in an "always-on" capacity, meaning that any user subscribed to your message service can text keywords and receive a response at any point. In addition to this behavior, you also have the option to define specific keywords that can only be sent to at [certain points](#lifecycle-specific-keywords) of your user's lifecycle. 
 
 ![Keywords for a "Promo" category. If a user texts "YO", they receive the message with a promo code.]({% image_buster /assets/img/sms/sms_custom_keyword.png %})
 
@@ -106,7 +106,7 @@ To create a custom keyword category, do the following:
 2. Select **Add custom keyword**. ![Fields to add new keywords.]({% image_buster /assets/img/sms/sms_custom_step.png %}){: style="max-width:90%;"}
 3. Provide a keyword category name and define which keywords a user can text in to receive the reply message.
 
-After this keyword category is created, it will be available to [filter and trigger]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/retargeting/) against in your campaigns and Canvases.
+After this keyword category is created, it will be available to [filter and trigger]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/) against in your campaigns and Canvases.
 
 Keywords created in custom keyword categories adhere to all of the rules and validations for the creation of new keywords. 
 
@@ -126,13 +126,9 @@ This trigger supports filtering on the specific inbound message using is or is n
 
 ### Dealing with unknown keywords
 
-While not required, we strongly recommend setting up an auto-response for when users send inbound keywords that do not match an existing keyword. This message will notify the user that the keyword is not recognized and offer some guidance. 
-
-This can be done by creating an SMS, MMS, or RCS campaign with a message like "Sorry! We didn't recognize that keyword, text STOP to stop or HELP to help." Next, in the delivery step, select **Action-Based Delivery** and use the trigger **Sent inbound SMS to subscription group within keyword category OTHER**.
-
-![Action-based sending for a campaign with the trigger of "Sent inbound SMS to subscription group within keyword category "Other".]({% image_buster /assets/img/sms/sms_other.png %})
+We strongly recommend setting up an auto-response for when users send inbound keywords that don't match an existing keyword. For more information, see [Handle unknown phone numbers]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/unknown_phone_numbers/).
 
 {% alert tip %}
-Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/retargeting/) for more information.
+Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit [User retargeting]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/) for more information.
 {% endalert %}
 

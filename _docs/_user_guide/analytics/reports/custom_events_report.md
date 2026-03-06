@@ -1,7 +1,7 @@
 ---
 nav_title: Custom events report
 article_title: Custom events report
-page_order: 4
+page_order: 6
 page_type: reference
 description: "This page describes how to use the Custom Events Report to view occurrences of custom events over time, broken down by segment."
 tool: Reports

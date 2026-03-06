@@ -11,6 +11,8 @@ channel:
 
 # Meta resources
 
+> This page provides helpful Meta documentation, product updates, and frequently asked questions to improve your understanding of the WhatsApp integration with Braze.
+
 ## Meta documentation
 
 Review the following Meta documentation for guidance with display names, phone numbers, and more.

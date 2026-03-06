@@ -1,5 +1,5 @@
 ---
-nav_title: WhatsApp messages with optimized delivery
+nav_title: Optimized delivery
 article_title: WhatsApp messages with optimized delivery
 page_order: 1
 description: "This reference article covers the steps involved in building out and creating a WhatsApp message with optimized delivery."

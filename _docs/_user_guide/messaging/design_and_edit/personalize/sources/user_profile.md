@@ -7,7 +7,7 @@ description: "Learn how to personalize messages with user profile data, includin
 
 # User profile
 
-> Personalize your messages with data stored on each user's profile, including standard attributes, custom attributes, and event properties. Braze makes this data available through Liquid tags that you insert directly into your message content.
+> Personalize your messages with data stored on each user's profile, including standard attributes, custom attributes, and event properties. Braze makes this data available through [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid) tags that you insert directly into your message content.
 
 ## Standard attributes
 

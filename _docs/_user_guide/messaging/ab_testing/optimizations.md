@@ -8,6 +8,8 @@ description: "Learn how to use Winning Variant or Personalized Variant when crea
 
 # Optimize A/B tests with Winning Variant or Personalized Variants
 
+> Learn how to use Winning Variant or Personalized Variant when creating multivariate and A/B tests.
+
 When [creating an A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) for email, push, webhook, SMS, and WhatsApp campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
 
 ![Optimization options listed in the A/B Testing section when choosing your target audience. Three options are listed: No Optimization, Winning Variant, and Personalized Variant. Personalized Variant is selected.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})

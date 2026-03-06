@@ -1,20 +1,20 @@
 ---
 nav_title: Liquid reference
-article_title: Liquid Reference
+article_title: Liquid reference
 page_order: 2
 layout: dev_guide
 alias: /liquid/
 search_rank: 3
-guide_top_header: "Personalization Using Liquid Tags"
-guide_top_text: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them.<br><br>For more on Liquid, check out our guided <b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Dynamic Personalization with Liquid</a></b> Braze Learning path!"
+guide_top_header: "Liquid reference"
+guide_top_text: "Liquid is an open-source template language created by Shopify and used by Braze to power dynamic personalization. Instead of sending a static message to everyone, Liquid lets you create templates that change their content based on each recipient's specific profile data, behavior, or language."
 description: "This landing page covers all things Liquid, such as supported personalization tags, filters, setting default values, and more."
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Using Liquid
+- name: Use Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/
   image: /assets/img/braze_icons/beaker-02.svg
-- name: Supported Personalization Tags
+- name: Supported personalization tags
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
   image: /assets/img/braze_icons/tag-01.svg
 - name: Operators
@@ -23,25 +23,25 @@ guide_featured_list:
 - name: Filters
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/filters/
   image: /assets/img/braze_icons/flag-02.svg
-- name: Advanced Filters
+- name: Advanced filters
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/
   image: /assets/img/braze_icons/settings-01.svg
-- name: Setting Default Values
+- name: Set default values
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
   image: /assets/img/braze_icons/table.svg
-- name: Conditional Messaging Logic
+- name: Conditional messaging logic
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
   image: /assets/img/braze_icons/columns-01.svg
-- name: Aborting Messages
+- name: Abort messages
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
   image: /assets/img/braze_icons/refresh-ccw-01.svg
-- name: Liquid Use Cases
+- name: Liquid use cases
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
   image: /assets/img/braze_icons/list.svg
 - name: Tutorials
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/tutorials/
   image: /assets/img/braze_icons/book-open-01.svg
-- name: Frequently Asked Questions
+- name: Frequently asked questions
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
   image: /assets/img/braze_icons/annotation-question.svg
   
@@ -49,7 +49,7 @@ guide_featured_list:
 
 ## About Liquid
 
-> Liquid is an open-source template language developed by Shopify and written in Ruby. At Braze, Liquid is used to template data from a user's profile into messages. 
+Liquid acts as a bridge between your message and your user data. When you send a message, Braze scans the text for Liquid syntax. When it finds Liquid, it pulls the relevant data for that specific user and replaces the code with the actual value before the message is sent.
 
 For example, you can retrieve a custom attribute from a user profile that is an integer data type and round that value to the nearest whole number. For more on Liquid syntax and usage, refer to [**Supported personalization tags**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 

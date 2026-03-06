@@ -13,7 +13,9 @@ tool:
 
 # Fullscreen in-app messages
 
-> Fullscreen messages take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
+> Fullscreen messages take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates. 
+
+This message type is available in both the [drag-and-drop]({{site.baseurl}}/user_guide/channels/in_app_messages/drag_and_drop/) and [traditional editor]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/).
 
 {% tabs %}
 {% tab Portrait %}

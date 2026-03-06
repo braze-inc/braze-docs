@@ -1,12 +1,14 @@
 ---
-nav_title: Deep linking to in-app content
-article_title: Deep Linking to In-App Content
+nav_title: Deep link to in-app content
+article_title: Deep link to in-app content
 page_order: 1
 description: "This reference article covers guidance on how to add deep linking to your in-app message content."
 
 ---
 
-# Deep linking to in-app content
+# Deep link to in-app content
+
+> This guide describes how to add deep links to your in-app message content.
 
 {% alert tip %}
 **For developers:** For a guide to choosing between custom schemes, universal links, and other options — including when you need an AASA file, which app delegate methods to implement, and how to debug issues — see [iOS deep linking guide]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide) and [Deep linking troubleshooting]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).

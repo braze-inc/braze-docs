@@ -1,8 +1,8 @@
 ---
-nav_title: Braze support
-article_title: Support
+nav_title: Braze Support
+article_title: Braze Support
 page_order: 4
-description: "This page will help you locate the Braze support portal to submit Braze product feedback. This page will only be accessible to Braze customers."
+description: "This page will help you locate the Braze Support Portal to submit Braze product feedback. This page will only be accessible to Braze customers."
 alias: /braze_support/
 page_type: reference
 search_rank: 7
@@ -10,13 +10,15 @@ search_rank: 7
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze Support
 
-## Access the support portal
+> Learn how to access the Braze Support Portal, submit and track support cases, and provide the information needed for efficient troubleshooting.
+
+## Access the Support Portal
 
 To contact the Braze Support team, navigate to the Braze dashboard. In the dashboard, select **Support** > **Get help**.
 
 ![The "Support" dropdown with the option to get help.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Depending on your Braze permissions and whether you're a designated support contact, you will be directed to either the Braze support portal, where you can submit and track cases, or our standard support form. If you're unsure if you are a Braze support contact, contact your company's Braze administrator, Braze success manager, or account owner.
+Depending on your Braze permissions and whether you're a designated support contact, you will be directed to either the Braze Support Portal, where you can submit and track cases, or our standard support form. If you're unsure if you are a Braze support contact, contact your company's Braze administrator, Braze success manager, or account owner.
 
 ## Adding designated support contacts
 
@@ -31,7 +33,7 @@ Designated support contacts can access all support cases for your company, regar
 
 ### Gaining access
 
-After a user is designated as a support contact, the Braze support portal will send that user a welcome email with instructions to set up their access.
+After a user is designated as a support contact, the Braze Support Portal sends that user a welcome email with instructions to set up their access.
 
 ## Provide developer console screenshots
 

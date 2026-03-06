@@ -1,7 +1,7 @@
 ---
 nav_title: "User phone numbers"
 article_title: SMS User Phone Numbers
-page_order: 7
+page_order: 5
 description: "This reference article covers SMS phone number formatting, how to importing phone numbers, as well as how to add users to SMS subscription groups."
 page_type: reference
 alias: /user_phone_numbers/
@@ -70,3 +70,7 @@ For a user to receive an SMS or RCS message, they must have a valid phone number
 ## Third-party sourcing and verification
 
 Braze relies on third-party tools to source invalid numbers. Braze is not responsible for any outages or misinformation of these services. Thus, this tool should not be relied upon as your sole method of compliance for verifying invalid numbers.
+
+## Phone number capture
+
+To capture phone numbers through in-app messages, refer to [Phone number capture]({{site.baseurl}}/phone_number_capture/).

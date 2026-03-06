@@ -1,7 +1,7 @@
 ---
 nav_title: Create and manage workspaces
 article_title: Create and Manage Workspaces
-page_order: 2
+page_order: 0
 page_type: reference
 description: "This article covers how to create, set up, and manage your workspaces."
 
@@ -169,4 +169,9 @@ In the original Canvas workflow, add your segment to the Canvas component level 
 
 {% enddetails %}
 
+## Next steps
 
+After creating your workspace, configure it:
+
+- [Workspace settings]({{site.baseurl}}/user_guide/administer/global/workspace_settings/) to set up API keys, email preferences, push settings, and more.
+- [Manage company users]({{site.baseurl}}/user_guide/administer/global/user_management/manage_company_users/) to add users and assign permissions for this workspace.

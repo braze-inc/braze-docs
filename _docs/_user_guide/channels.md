@@ -4,7 +4,7 @@ article_title: Channels
 page_order: 5
 layout: dev_guide
 guide_top_header: "Channels"
-guide_top_text: "Reach your users through the right channel at the right time. Choose from in-product channels like in-app messages, Content Cards, and banners, or out-of-product channels like push, email, SMS, and WhatsApp."
+guide_top_text: "Reach your users through the right channel at the right time. Choose from in-product channels like in-app messages, Content Cards, and Banners, or out-of-product channels like push, email, SMS, and WhatsApp."
 
 page_type: landing
 description: "Reach your users through in-product and out-of-product messaging channels in Braze."

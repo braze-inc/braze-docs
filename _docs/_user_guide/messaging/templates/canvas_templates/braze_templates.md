@@ -1,13 +1,13 @@
 ---
-nav_title: Braze templates
-article_title: Braze Canvas templates
+nav_title: Use Braze templates
+article_title: Use Braze Canvas templates
 alias: "/canvas_templates/templates/"
 page_order: 2
 description: "This reference article covers how to create available Canvas templates."
 page_type: reference
 ---
 
-# Canvas templates
+# Use Braze Canvas templates
 
 > Braze has a selection of Canvas templates available for you to reference and use as best practices for common use cases. While these templates can't be edited, you can view them in **Templates** > **Braze templates** or use them in your Canvases.
 
@@ -88,10 +88,6 @@ Orchestrate personalized experiences that allow you to respond to feedback and b
 
 {% endtab %}
 {% endtabs %}
-
-{% alert tip %}
-For a step-by-step guide to creating an example Canvas using these Braze templates, see [Using Braze templates]({{site.baseurl}}/user_guide/messaging/canvas/get_started/braze_templates/).
-{% endalert %}
 
 ## eCommerce Canvas templates
 

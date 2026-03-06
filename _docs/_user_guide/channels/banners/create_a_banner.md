@@ -1,6 +1,6 @@
 ---
-nav_title: "Create a banner"
-article_title: "Create a banner"
+nav_title: "Create a Banner"
+article_title: "Create a Banner"
 page_order: 1
 description: "This reference article covers how to create, compose, configure and send Banners using Braze campaigns and Canvases."
 tool:
@@ -62,8 +62,8 @@ If all of the messages in your campaign are going to be similar or have the same
 To compose your Banner, you can choose to:
 
 - Start with a blank template
-- Use a Braze banner template
-- Select a saved banner template
+- Use a Braze Banner template
+- Select a saved Banner template
 
 ![Option to choose a blank Banner or a template.]({% image_buster /assets/img/banners/choose_banner_composer.png %})
 
@@ -93,7 +93,7 @@ You can add custom properties to a Banner to attach structured metadata, such as
 
 - Send metadata for your third-party analytics or integrations.
 - Use metadata such as a `timestamp` or JSON object to trigger conditional logic.
-- Control the behavior of a banner based on included metadata like `ratio` or `format`.
+- Control the behavior of a Banner based on included metadata like `ratio` or `format`.
 
 To add a custom property, select **Settings** > **Properties** > **Add property**.
 

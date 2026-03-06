@@ -1,6 +1,6 @@
 ---
-nav_title: "Handling unknown phone numbers"
-article_title: "Handling unknown phone numbers"
+nav_title: "Handle unknown phone numbers"
+article_title: "Handle unknown phone numbers"
 description: "This reference article covers how Braze will go about handling unknown phone numbers for WhatsApp users."
 page_type: reference
 channel:

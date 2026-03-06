@@ -104,7 +104,7 @@ iOS Push, Android Push
 In-App Message
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Body Clicks' %} For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
+{% multi_lang_include analytics/metrics.md metric='Body Clicks' %}
 
 <span class="calculation-line">Calculation: (Body Clicks) / (Impressions)</span>
 
@@ -483,7 +483,7 @@ Email
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
 
-When this occurs, Braze marks the email address as invalid but does not update the user's [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/). If an email receives a hard bounce, we will stop any future requests to this email address.
+When this occurs, Braze marks the email address as invalid but does not update the user's [subscription status]({{site.baseurl}}/user_guide/channels/email/subscriptions/). If an email receives a hard bounce, Braze stops any future requests to this email address.
 
 {% endapi %}
 
@@ -996,7 +996,7 @@ Email, iOS Push, Android Push, Web Push, LINE
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Total Revenue' %} This metric is only available on Campaign Comparison Reports through the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>
+{% multi_lang_include analytics/metrics.md metric='Total Revenue' %} This metric is only available on Campaign Comparison Reports through the <a href='/docs/user_guide/analytics/reports/report_builder/'>Report Builder</a>.
 
 {% endapi %}
 

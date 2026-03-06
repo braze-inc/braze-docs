@@ -1,7 +1,7 @@
 ---
 nav_title: Granular permissions migration
 article_title: Migrating to granular permissions
-page_order: 3
+page_order: 5
 page_type: reference
 alias: /granular_permissions_migration/
 description: "This reference article covers how to prepare for the migration to granular user permissions in Braze."

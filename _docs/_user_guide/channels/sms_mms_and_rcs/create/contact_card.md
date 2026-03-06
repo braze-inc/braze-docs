@@ -1,6 +1,6 @@
 ---
 nav_title: Contact cards
-article_title: Contact Cards
+article_title: Contact cards
 page_order: 3
 description: "This reference article covers how to create a contact card to include in your MMS and SMS messages."
 page_type: reference

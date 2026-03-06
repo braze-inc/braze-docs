@@ -1,7 +1,7 @@
 ---
 nav_title: User management
 article_title: User management
-page_order: 0
+page_order: 1
 layout: dev_guide
 guide_top_header: "User management"
 guide_top_text: "Manage company users, permissions, teams, and provisioning."

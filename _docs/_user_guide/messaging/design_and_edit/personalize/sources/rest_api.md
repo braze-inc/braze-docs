@@ -7,7 +7,7 @@ description: "Learn how to use Connected Content to pull data from REST APIs int
 
 # REST API
 
-> Pull data from external REST APIs directly into your messages at send time using Connected Content. This lets you personalize messages with real-time information from your own servers, third-party services, or any publicly accessible API endpoint.
+> Pull data from external REST APIs directly into your messages at send time using [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/). This lets you personalize messages with real-time information from your own servers, third-party services, or any publicly accessible API endpoint.
 
 ## How it works
 

@@ -90,7 +90,7 @@ Approved templates can be used in as many campaigns and Canvases as you like. Th
 Once WhatsApp templates have been approved, you can move over to the dashboard to build out a [WhatsApp Canvas or campaign]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_campaign/create/). 
 
 {% alert note %}
-After your WhatsApp Business Account is created, Meta will determine your starting messaging limit. To learn more, check out [throughput]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/user_phone_numbers/10dlc/#throughput).
+After your WhatsApp Business Account is created, Meta will determine your starting messaging limit. To learn more, check out [throughput]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/#throughput).
 {% endalert %}
 
 ## Next steps

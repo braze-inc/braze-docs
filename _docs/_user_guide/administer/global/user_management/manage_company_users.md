@@ -98,3 +98,10 @@ To create this new user, you can do either of the following:
 2. Create the user with a different email string (such as `testing+01@braze.com`) or another email alias. 
 
 If you don't receive the message activation in your inbox when using `testing+01@braze.com`, confirm with your IT team that you can accept messages from that kind of email address. Some administrators filter messages sent to email addresses with a `+`.
+
+## Next steps
+
+After adding users, manage their access:
+
+- [Permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/) to configure what each user can do in the dashboard.
+- [Teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) to organize users into groups with shared access to specific dashboard objects.

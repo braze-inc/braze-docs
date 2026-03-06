@@ -38,7 +38,7 @@ Each drag-and-drop Content Block is limited to one row. However, you can use dra
 
 ### Content Block specifications
 
-| Content Block Attribute | Specifications |
+| Content Block attribute | Specifications |
 |---|---|
 | Name | Required field with a maximum of 100 characters. It cannot be renamed after the Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
 | Description | (optional) Maximum of 250 characters. Describe the Content Block so that other Braze users know what it's for and where it's used. |

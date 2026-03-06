@@ -1,9 +1,9 @@
 ---
 nav_title: Customize
-article_title: Custom In-App Messages
+article_title: Customize in-app messages
 page_order: 4
 layout: dev_guide
-guide_top_header: "Custom In-App Messages"
+guide_top_header: "Customize in-app messages"
 guide_top_text: "Customize the look and feel of your in-app messages. Some options are specific to the drag-and-drop editor or the traditional editor—check each article for details."
 description: "This landing page covers customization options for in-app messages, including style settings, dark mode themes, color profiles, CSS templates, and video."
 

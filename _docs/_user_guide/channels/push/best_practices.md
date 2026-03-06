@@ -8,6 +8,8 @@ channel: push
 
 # Push best practices
 
+> This page contains push best practices and use cases to make sure your push messages inspire engagement rather than annoyance.
+
 Push notifications are powerful tools for engaging with your app's users, but they should be used with care to ensure they deliver timely and relevant messages. Before sending your push message, refer to the following best practices for things you should know and check for.
 
 {% alert important %}

@@ -1,6 +1,6 @@
 ---
-nav_title: "Messaging users"
-article_title: "Messaging users"
+nav_title: "Message users"
+article_title: "Message users"
 description: "This reference article covers how Braze will go about handling user messages."
 page_type: reference
 channel:

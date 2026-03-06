@@ -12,13 +12,13 @@ tool: Canvas
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Editing Canvases After Launch
+  - name: Editing Canvases after launch
     link: /docs/post-launch_edits/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Saving Drafts for Canvas
+  - name: Saving drafts for Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/
     image: /assets/img/braze_icons/save-03.svg
-  - name: Canvas Version History
+  - name: Canvas version history
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_version_history/
     image: /assets/img/braze_icons/list.svg
   - name: Cloning Canvases
@@ -27,19 +27,19 @@ guide_featured_list:
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
-  - name: Approval Workflow
+  - name: Approval workflow
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Messaging Rules for Approval
+  - name: Messaging rules for approval
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/
     image: /assets/img/braze_icons/check-square.svg
-  - name: Archiving Messages
+  - name: Archiving messages
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
-  - name: Copying Across Workspaces
+  - name: Copying across workspaces
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
     image: /assets/img/braze_icons/copy-07.svg
-  - name: Duplicating Messages
+  - name: Duplicating messages
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
 ---

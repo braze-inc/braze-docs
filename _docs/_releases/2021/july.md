@@ -18,7 +18,7 @@ Wondering how to do that one thing with Liquid? Just looking for inspiration? Ch
 
 ## Email tracking
 
-Open pixel tracking and click tracking can now be disabled per user profile. This flexibility helps customers support regional privacy laws, where an individual user profile might indicate they no longer want to be tracked. Check out our [Email tracking]({{site.baseurl}}/user_guide/analytics/tracking/email_tracking/) article to learn more.
+Open pixel tracking and click tracking can now be disabled per user profile. This flexibility helps customers support regional privacy laws, where an individual user profile might indicate they no longer want to be tracked. Check out [Open pixel and click tracking]({{site.baseurl}}/user_guide/channels/email/email_setup/open_pixel_and_click_tracking/) to learn more.
 
 ## SDK data collection options
 

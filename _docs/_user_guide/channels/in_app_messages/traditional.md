@@ -11,7 +11,7 @@ search_rank: 4.8
 toc_headers: h2
 ---
 
-# Create an in-app message
+# Create an in-app message with the traditional editor
 
 > You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide]({{site.baseurl}}/user_guide/channels/in_app_messages/best_practices/).
 

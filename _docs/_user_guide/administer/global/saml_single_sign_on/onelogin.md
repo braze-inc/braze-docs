@@ -1,7 +1,7 @@
 ---
 nav_title: OneLogin
 article_title: OneLogin
-page_order: 5
+page_order: 4
 page_type: tutorial
 description: "This article will walk you through how to configure Braze to use OneLogin for single sign-on."
 
@@ -29,7 +29,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 2. Go to **Apps** > **Add Apps** in the top navigation bar. Search for "Braze" and select the Braze app.![Search results for Braze in OneLogin.]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
 3. Save the Braze app to your Company.![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
 4. When saved, go to **Configuration** and add your **Braze Domain** and **RelayState** API key.![OneLogin Configuration tab for the Braze app.]({% image_buster /assets/img/onelogin_4.png %})<br><br>
-5. Braze expects the SAML assertions in a [specific format]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/saml_sso_setup/#configure-your-identity-provider). Under **Parameters** the attributes supported by Braze should be pre-populated. Verify that they are correct.![Braze SAML parameters in OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
+5. Braze expects the SAML assertions in a [specific format]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/saml_sso_setup/#configure-your-identity-provider). Under **Parameters** the attributes supported by Braze should be pre-populated. Verify that they are correct.![Braze SAML parameters in OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
 6. Copy the **Certificate** and **SAML 2.0 Endpoint (HTTP)** needed to set up the Braze dashboard from under the **SSO** tab.![Certificates to copy from the Braze app SSO tab in OneLogin.]({% image_buster /assets/img/onelogin_6.jpg %})
 
 ### Step 2: Configure OneLogin within Braze
@@ -50,6 +50,6 @@ On this page, input the following:
 ![SAML SSO settings with the toggle selected.]({% image_buster /assets/img/samlsso.png %})
 
 {% alert tip %}
-If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administer/global/saml__single_sign_on/saml_sso_setup/#restriction) from the **Company Settings** page.
+If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/saml_sso_setup/#restriction) from the **Company Settings** page.
 {% endalert %}
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Funnel reports
-article_title: Funnel Reports for Campaigns and Canvases
-page_order: 6
+article_title: Funnel Reports for campaigns and Canvases
+page_order: 8
 page_type: reference
 description: "This page covers the benefits of funnel reports, how to set them up, and how to interpret your report."
 tool: Reports
@@ -9,7 +9,7 @@ tool: Reports
 
 # Funnel reports
 
-> Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. ![Funnel Report 2]({% image_buster /assets/img/funnel_report/funnel_report2.png %}){: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
+> The **Funnel Report** page offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. ![Funnel Report 2]({% image_buster /assets/img/funnel_report/funnel_report2.png %}){: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
 
 If your campaign or Canvas uses a control group or multiple variants, you can understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 

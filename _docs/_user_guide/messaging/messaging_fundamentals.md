@@ -24,13 +24,13 @@ guide_featured_description: |
 
   ### Related articles
 guide_featured_list:
-  - name: Conversion Events
+  - name: Conversion events
     link: /docs/user_guide/messaging/messaging_fundamentals/conversion_events/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Delivery Types
+  - name: Delivery types
     link: /docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/
     image: /assets/img/braze_icons/beaker-02.svg
-  - name: Editor Blocks
+  - name: Editor blocks
     link: /docs/user_guide/messaging/design_and_edit/editor_blocks/
     image: /assets/img/braze_icons/align-left.svg
   - name: Localization
@@ -39,7 +39,7 @@ guide_featured_list:
   - name: Re-eligibility
     link: /docs/user_guide/messaging/messaging_fundamentals/re_eligibility/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Targeting Users
+  - name: Targeting users
     link: /docs/user_guide/messaging/messaging_fundamentals/target_users/
     image: /assets/img/braze_icons/target-04.svg
 
@@ -54,22 +54,22 @@ guide_menu_description: |
 
   ### Related articles
 guide_menu_list:
-  - name: Approval Workflow
+  - name: Approval workflow
     link: /docs/user_guide/messaging/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Archiving Messages
+  - name: Archiving messages
     link: /docs/user_guide/messaging/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
-  - name: Copying Across Workspaces
+  - name: Copying across workspaces
     link: /docs/user_guide/messaging/messaging_fundamentals/copy_across_workspaces/
     image: /assets/img/braze_icons/copy-07.svg
-  - name: Duplicating Messages
+  - name: Duplicating messages
     link: /docs/user_guide/messaging/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
-  - name: Messaging Statuses
+  - name: Messaging statuses
     link: /docs/user_guide/messaging/messaging_fundamentals/statuses/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: Know Before Sending
+  - name: Know before sending
     link: /docs/know_before_send/
     image: /assets/img/braze_icons/book-closed.svg
 ---

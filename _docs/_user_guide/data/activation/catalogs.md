@@ -11,16 +11,16 @@ description: "This landing page is home to catalogs. Use catalogs and filtered s
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Create a Catalog
+- name: Create a catalog
   link: /docs/user_guide/data/activation/catalogs/create/
   image: /assets/img/braze_icons/users-01.svg
-- name: Using Catalogs
+- name: Using catalogs
   link: /docs/user_guide/data/activation/catalogs/use/
   image: /assets/img/braze_icons/users-01.svg
-- name: Back-In-Stock Notifications
+- name: Back-in-stock notifications
   link: /docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/
   image: /assets/img/braze_icons/shopping-cart-03.svg
-- name: Price Drop Notifications
+- name: Price drop notifications
   link: /docs/price_drop_notifications/
   image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Selections
@@ -29,10 +29,10 @@ guide_featured_list:
 
 guide_menu_title: "Other articles"
 guide_menu_list:
-- name: Catalogs API Endpoints
+- name: Catalogs API endpoints
   link: /docs/api/endpoints/catalogs/
   image: /assets/img/braze_icons/server-01.svg
-- name: Drag-and-Drop Product Blocks
+- name: Drag-and-drop product blocks
   link: /docs/dnd_product_blocks/
   image: /assets/img/braze_icons/columns-01.svg
 ---

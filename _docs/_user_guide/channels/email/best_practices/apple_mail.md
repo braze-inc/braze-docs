@@ -11,10 +11,10 @@ channel:
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Sending Emails to Apple Private Relay
+- name: Sending emails to Apple Private Relay
   link: /docs/user_guide/channels/email/apple_mail/email_private_relay_apple_sso/
   image: /assets/img/braze_icons/list.svg
-- name: Apple Mail Privacy Protection
+- name: Apple Mail privacy protection
   link: /docs/user_guide/channels/email/apple_mail/mpp/
   image: /assets/img/braze_icons/apple.svg
 

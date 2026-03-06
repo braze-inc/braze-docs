@@ -9,6 +9,8 @@ description: "This article covers FAQs for multivariate and A/B tests with Braze
 
 # Multivariate and A/B test FAQs
 
+> This article covers frequently asked questions for multivariate and A/B tests with Braze.
+
 ## Testing basics
 
 ### What is the difference between A/B testing and multivariate testing?

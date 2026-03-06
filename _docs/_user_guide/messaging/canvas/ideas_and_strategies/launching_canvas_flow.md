@@ -1,5 +1,5 @@
 ---
-nav_title: Launch with Canvas flow
+nav_title: Launch with Canvas Flow
 article_title: Launch with Canvas Flow
 page_order: 3
 description: "This reference article covers how to prepare and test a Canvas built with Canvas Flow before launch."

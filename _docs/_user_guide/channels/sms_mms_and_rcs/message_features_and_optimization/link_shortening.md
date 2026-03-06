@@ -1,7 +1,7 @@
 ---
 nav_title: Link shortening
-article_title: Link Shortening
-page_order: 3
+article_title: Link shortening
+page_order: 1
 description: "This reference article covers how to turn on link shortening in your SMS messages and some frequently asked questions."
 page_type: reference
 alias: "/link_shortening/"
@@ -120,7 +120,9 @@ The **Historical Performance** and **SMS/MMS/RCS Performance** tables also inclu
 
 For guidance on retargeting, visit [Retargeting]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/#filter-by-advanced-tracking-links).
 
-{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
+## Custom domains
+
+You can use custom domains to brand your shortened URLs instead of the default `brz.ai` domain. For more information, see [Self-serve custom domains]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/custom_domains/).
 
 {% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
