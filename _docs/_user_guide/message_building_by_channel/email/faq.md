@@ -88,6 +88,10 @@ There are several reasons why a user might not receive an email that you expecte
 | The message was aborted | Check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) for abort reasons, such as Liquid errors or missing required fields. |
 | The user's email address was invalid or missing | In **User Search**, check the user's profile to verify that a valid email address was on file at the time of send. |
 | The user's email address previously hard bounced | A hard bounce marks the email address as invalid and prevents future sends to that address. Check the user's **Engagement** tab in their profile. For more details, refer to [Bounces]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#bounces). |
+| The user wasn't eligible for the campaign or Canvas | Check the **Target Audiences** (for campaigns) or **Target Audience** (for Canvas) [settings]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) to confirm the user met all audience filters, segment criteria, and delivery rules at the time of send. |
+| The message was aborted | Check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) for abort reasons, such as Liquid errors or missing required fields. |
+| The user's email address was invalid or missing | In **User Search**, check the user's profile to verify that a valid email address was on file at the time of send. |
+| The user's email address previously hard bounced | A hard bounce marks the email address as invalid and prevents future sends to that address. Check the user's **Engagement** tab in their profile. For more details, refer to [Bounces]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#bounces). |
 | The user is unsubscribed from email | Check the user's subscription status under **Contact Settings** on the **Engagement** tab. Braze won't send marketing emails to users who are unsubscribed. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
