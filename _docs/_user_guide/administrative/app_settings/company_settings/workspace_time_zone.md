@@ -26,7 +26,7 @@ Here, you can view a list of all your workspaces, their set time zone, and the l
 
 ### Setting a time zone 
 
-{% alert important %}
+{% alert note %}
 It may take up to a few minutes for time zone updates to take effect.
 {% endalert %}
 
