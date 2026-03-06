@@ -133,8 +133,6 @@ Each custom event or purchase can have up to 256 distinct custom event propertie
 
 The property values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs (`$`).
 
-The following keys are reserved and cannot be used as event property names for custom events: `time` and `event_name`. For purchase events, the reserved keys are: `time`, `product_id`, `quantity`, `event_name`, `price`, and `currency`. Using a reserved key in the `properties` object will return the error `Invalid 'properties' field`.
-
 Property values can be any of the following data types:
 
 | Data Type | Description |
@@ -150,6 +148,16 @@ Property values can be any of the following data types:
 Event property objects that contain array or object values can have an event property payload up to 100&nbsp;KB.
 
 You can change the data type of your custom event property, but be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
+
+#### Reserved keys
+
+You cannot use reserved keys as event property names. Using a reserved key in the `properties` object will return the error "Invalid `properties` field".
+
+| Property | Reserved Key |
+| --- | --- |
+| Custom events | `time` and `event_name` | 
+| Purchase events |`time`, `product_id`, `quantity`, `event_name`, `price`, `currency` | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Using custom event properties
 
