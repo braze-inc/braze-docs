@@ -18,7 +18,6 @@ This feature doesn't support Shopify Markets or Markets Pro. If you would like t
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Enable multiple stores | Contact your customer success manager to enable Shopify multiple store support. |
 | Set up a Shopify store | Be sure that you've already [set up at least one Shopify store with Braze]({{site.baseurl}}/shopify_overview/). |
 | Unique Shopify storefront domains for each region | Multiple store support is intended for use with unique Shopify store domains for different regional storefronts. <br><br>If you want to connect multiple sub-brands to Braze, we recommend creating separate workspaces for each sub-brand. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
