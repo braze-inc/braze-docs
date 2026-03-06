@@ -8,7 +8,7 @@ description: "Learn how to set user IDs through the Braze SDK."
 
 # Set user IDs
 
-> Learn how to set user IDs through the Braze SDK. These are unique identifiers that let you track users across devices and platforms, import their data through the [user data API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data), and send targeted messages through the [messaging API]({{site.baseurl}}/api/endpoints/messaging/). If you don't assign a unique ID to a user, Braze will assign them an anonymous ID instead&#8212;however, you won't be able to use these features until you do.
+> Learn how to set user IDs through the Braze SDK. These are unique identifiers that let you track users across devices and platforms, import their data through the [user data API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data), and send targeted messages through the [messaging API]({{site.baseurl}}/api/endpoints/messaging/). If you don't assign a unique ID to a user, Braze assigns them an anonymous ID instead; however, you can't use these features until you do.
 
 {% alert note %}
 For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
@@ -98,7 +98,7 @@ When you call `changeUser()`, the following behaviors apply:
 - When an anonymous user calls `changeUser()` with an **existing** user ID, the anonymous profile's data is not merged into the identified profile.
 
 {% alert warning %}
-**Do not assign a static default ID or call `changeUser()` when a user logs out.** Doing so will prevent you from re-engaging any previously logged-in users on shared devices and will cause all data to be logged against a single external ID, which can cause other features to not behave as expected. Instead, keep track of all user IDs separately and ensure your app's logout process allows for switching back to a previously logged-in user. When a new session starts, Braze will automatically refresh the data for the newly-active profile.
+Do not assign a static default ID or call `changeUser()` when a user logs out. Doing so prevents you from re-engaging any previously logged-in users on shared devices and causes all data to be logged against a single external ID, which can cause other features to not behave as expected. Instead, keep track of all user IDs separately and ensure your app's logout process allows for switching back to a previously logged-in user. When a new session starts, Braze automatically refreshes the data for the newly-active profile.
 {% endalert %}
 
 ## User aliases
