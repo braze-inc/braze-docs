@@ -23,6 +23,20 @@ Commons use cases for catalogs include:
 
 After this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
+## Supported data types {#supported-data-types}
+
+The following table lists the supported catalog data types and how they can be created or updated.
+
+| Data type    | Description                                   | Available via CSV upload | Available via API and CDI |
+|--------------|-----------------------------------------------|:------------------------:|:-------------------------:|
+| String       | A sequence of characters.                     | ✅ Yes                    | ✅ Yes                     |
+| Number       | A numeric value, either integer or float.     | ✅ Yes                    | ✅ Yes                     |
+| Boolean      | A `true` or `false` value.                    | ✅ Yes                    | ✅ Yes                     |
+| Time         | A string formatted in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.                        | ✅ Yes                    | ✅ Yes                     |
+| JSON object  | A nested object with key-value pairs. Can be displayed in the platform but can only be created or updated through the API or CDI.         | ⛔ No                     | ✅ Yes                     |
+| String array | A list of strings. Can be displayed in the platform but can only be created or updated through the API or CDI. Maximum of 100 elements. | ⛔ No                     | ✅ Yes                     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
 ## Creating a catalog
 
 To create a catalog, go to **Data Settings** > **Catalogs**, then select **Create New Catalog** and choose one of the following options:
@@ -40,7 +54,7 @@ Before you upload your CSV file, ensure that your CSV file meets the following r
 | File size | For Free plans, the total size of all CSV files across a company is limited to 100 MB. For Pro plans, the maximum file size for a single CSV file is 2 GB. |
 | Field values | Each cell (field value) can contain up to 5,000 characters. |
 | Valid characters | The `id` column and all header values can only contain letters, numbers, hyphens, and underscores. |
-| Data types | Supported data types for uploading a CSV file include string, integer, float, boolean, or datetime. |
+| Data types | Supported data types for CSV uploads include string, number, boolean, and time. For the full list of data types, including those available only through the API and CDI, refer to [Supported data types](#supported-data-types). |
 | Formatting | Format all text in lowercase to maintain consistency. |
 | Encoding | Save and upload the CSV file using UTF-8 encoding. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -135,7 +149,14 @@ After creating the catalog, you can begin referencing the [catalog in a campaign
 {% tab Create in browser %}
 ### Prerequisites
 
-Before you can edit or create catalogs in the browser, you'll need the **Manage Catalogs Dashboard** permission.
+Before you can edit or create catalogs in the browser, you need the following [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) for your workspace:
+
+- View Catalogs
+- Edit Catalogs
+- Export Catalogs
+- Delete Catalogs
+
+{% multi_lang_include deprecations/user_permissions.md %}
 
 ### Step 1: Enter catalog details
 
@@ -204,7 +225,7 @@ To update your catalog after uploading a CSV or creating a catalog in the browse
 
 As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
 
-Supported data types for using API include: string, number, boolean, time, array, and object.
+The REST API supports all [catalog data types](#supported-data-types), including JSON objects and string arrays. JSON objects and string arrays can only be created or updated through the REST API.
 
 ### Using Cloud Data Ingestion
 
