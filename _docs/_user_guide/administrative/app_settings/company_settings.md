@@ -20,6 +20,9 @@ guide_featured_list:
 - name: Security Settings
   link: /docs/user_guide/administrative/app_settings/company_settings/security_settings/
   image: /assets/img/braze_icons/shield-01.svg
+- name: Workspace Time Zones
+  link: /docs/user_guide/administrative/app_settings/company_settings/workspace_time_zone/
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Automated User Provisioning
   link: /docs/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/
   image: /assets/img/braze_icons/user-plus-01.svg

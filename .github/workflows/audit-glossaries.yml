@@ -1,0 +1,115 @@
+# Weekly audit of translation glossaries against source-of-truth localization
+# files in the platform and SDK repos.
+#
+# Compares scripts/glossaries/*.json against the actual UI translations in
+# the Braze platform dashboard, Android SDK, Swift SDK, and GrapesJS editor
+# to surface terminology drift.
+#
+# Creates a GitHub Issue when mismatches or missing terms are detected.
+name: Audit glossaries
+
+on:
+  schedule:
+    - cron: '0 6 * * 0'   # Every Sunday at 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout braze-docs
+        uses: actions/checkout@v4
+
+      - name: Clone reference repos
+        env:
+          GH_TOKEN: ${{ secrets.REFERENCE_REPO_TOKEN }}
+        run: |
+          # Clone repos needed for localization comparison.
+          # Public repos use HTTPS; private repos use the PAT.
+          clone_repo() {
+            local org=$1 repo=$2
+            echo "Cloning $org/$repo..."
+            git clone --depth 1 --filter=blob:none --sparse \
+              "https://x-access-token:${GH_TOKEN}@github.com/${org}/${repo}.git" \
+              "../${repo}" 2>/dev/null || \
+            git clone --depth 1 \
+              "https://github.com/${org}/${repo}.git" \
+              "../${repo}" 2>/dev/null || \
+            echo "  WARNING: Could not clone ${org}/${repo} — skipping"
+          }
+
+          clone_repo Appboy platform
+          clone_repo braze-inc braze-android-sdk
+          clone_repo braze-inc braze-swift-sdk
+          clone_repo braze-inc grapesjs
+
+          # Sparse-checkout only the locale directories we need
+          for repo in platform braze-android-sdk braze-swift-sdk grapesjs; do
+            if [ -d "../${repo}" ]; then
+              cd "../${repo}"
+              git sparse-checkout init --cone 2>/dev/null || true
+              case $repo in
+                platform)
+                  git sparse-checkout set dashboard/config/locales 2>/dev/null || true ;;
+                braze-android-sdk)
+                  git sparse-checkout set android-sdk-ui/src/main/res 2>/dev/null || true ;;
+                braze-swift-sdk)
+                  git sparse-checkout set Sources/BrazeUI/Resources/Localization 2>/dev/null || true ;;
+                grapesjs)
+                  git sparse-checkout set src/i18n/locale 2>/dev/null || true ;;
+              esac
+              cd "$GITHUB_WORKSPACE"
+            fi
+          done
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run glossary audit
+        id: audit
+        run: |
+          python scripts/audit_glossaries.py \
+            --platform-repo ../platform \
+            --android-repo ../braze-android-sdk \
+            --swift-repo ../braze-swift-sdk \
+            --grapesjs-repo ../grapesjs \
+            --output glossary_audit_report.json || true
+
+          # Read stats for the issue
+          if [ -f glossary_audit_report.json ]; then
+            mismatches=$(python3 -c "import json; r=json.load(open('glossary_audit_report.json')); print(r['stats']['total_mismatches'])")
+            missing=$(python3 -c "import json; r=json.load(open('glossary_audit_report.json')); print(r['stats']['total_missing'])")
+            echo "mismatches=${mismatches}" >> "$GITHUB_OUTPUT"
+            echo "missing=${missing}" >> "$GITHUB_OUTPUT"
+            echo "has_findings=$([ $mismatches -gt 0 ] || [ $missing -gt 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_findings=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create or update issue
+        if: steps.audit.outputs.has_findings == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          TITLE="Glossary audit: ${{ steps.audit.outputs.mismatches }} mismatches, ${{ steps.audit.outputs.missing }} missing terms ($DATE)"
+
+          BODY=$(cat glossary_audit_report.md)
+
+          # Close any previous open audit issues
+          gh issue list --label "glossary-audit" --state open --json number -q '.[].number' | while read num; do
+            gh issue close "$num" --comment "Superseded by new audit run on $DATE."
+          done
+
+          gh issue create \
+            --title "$TITLE" \
+            --body "$BODY" \
+            --label "glossary-audit"
