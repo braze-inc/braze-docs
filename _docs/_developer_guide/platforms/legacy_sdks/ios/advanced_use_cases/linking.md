@@ -284,7 +284,7 @@ func handleAppboyURL(_ url: URL?, from channel: ABKChannel, withExtras extras: [
 {% endtabs %}
 
 {% alert important %}
-When `handleAppboyURL:fromChannel:withExtras:` returns `YES`, Braze assumes your app is handling the URL and will not open it. If you're handling Universal Links, you must explicitly route the URL to your app's Universal Link handler (for example, by calling `application:continueUserActivity:restorationHandler:` yourself). Returning `YES` without handling the URL will cause the in-app message or Content Card to dismiss with no visible action.
+When `handleAppboyURL:fromChannel:withExtras:` returns `YES`, Braze assumes your app is handling the URL and will not open it. If you're handling Universal Links, you must explicitly route the URL to your app's Universal Link handler, such as by calling `application:continueUserActivity:restorationHandler:` yourself. Returning `YES` without handling the URL will cause the in-app message or Content Card to dismiss with no visible action.
 
 Return `NO` if you want Braze to handle the URL using its default behavior.
 {% endalert %}
