@@ -26,7 +26,7 @@ In-app messages can't be triggered through the API or by API events&#8212;only c
 
 ## Key-value pairs
 
-When you create a campaign in Braze, you can set key-value pairs as `extras`, which the the in-app messaging object can use to send data to your app.
+When you create a campaign in Braze, you can set key-value pairs as `extras`, which the in-app messaging object can use to send data to your app.
 
 {% tabs %}
 {% tab web %}
@@ -377,9 +377,7 @@ To manually display a pre-defined in-app message, use the following method:
 
 {% tabs %}
 {% tab web %}
-```javascript
-braze.requestInAppMessageDisplay();
-```
+For the Web SDK, use `braze.showInAppMessage(inAppMessage)` to display any in-app message. For details and an example, see [Displaying a message in real-time](#displaying-a-message-in-real-time).
 {% endtab %}
 
 {% tab android %}

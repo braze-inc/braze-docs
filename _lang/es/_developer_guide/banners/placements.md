@@ -11,7 +11,7 @@ platform:
   - React Native
 ---
 
-# Gestionar la colocación de banners
+# Gestionar las colocaciones de Banner
 
 > Aprende a crear y gestionar ubicaciones de banners en el SDK de Braze, incluido el acceso a sus propiedades únicas y el registro de impresiones. Para más información general, consulta [Acerca de los banners]({{site.baseurl}}/developer_guide/banners).
 
@@ -25,7 +25,7 @@ platform:
 
 Estas son las versiones mínimas del SDK necesarias para crear ubicaciones de Banner:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+{% multi_lang_include sdk_versions.md feature='banners' %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
@@ -248,7 +248,7 @@ This feature is not currently supported on Roku.
 ### Paso 4: Insertar utilizando el ID de colocación {#insertBanner}
 
 {% alert tip %}
-Para ver un tutorial completo paso a paso, consulta [Visualizar una pancarta por ID de colocación]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners).
+Para ver un tutorial completo paso a paso, consulta [Visualizar un Banner por ID de Colocación]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners).
 {% endalert %}
 
 {% tabs %}
@@ -498,7 +498,7 @@ This feature is not currently supported on Roku.
 
 ### Paso 5: Envía un Banner de prueba (opcional) {#handling-test-cards}
 
-Antes de lanzar una campaña de Banner, puedes [enviar un Banner de prueba]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) para verificar tu integración. Los banners de prueba se almacenarán en una caché en memoria independiente y no persistirán al reiniciar la aplicación. Aunque no es necesaria ninguna configuración adicional, tu dispositivo de prueba debe ser capaz de recibir notificaciones push en primer plano para que pueda mostrar la prueba.
+Antes de lanzar una campaña de Banner, puedes [enviar un Banner de prueba]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) para verificar tu integración. Los banners de prueba se almacenarán en una caché en memoria independiente y no persistirán al reiniciar la aplicación. Aunque no se necesita ninguna configuración adicional, tu dispositivo de prueba debe ser capaz de recibir notificaciones push en primer plano para que pueda mostrar la prueba.
 
 {% alert note %}
 Los banners de prueba son como cualquier otro banner, excepto que se eliminan en la siguiente sesión de aplicación.
@@ -507,6 +507,32 @@ Los banners de prueba son como cualquier otro banner, excepto que se eliminan en
 ## Registro de impresiones
 
 Braze registra automáticamente las impresiones de los banners que están a la vista cuando utilizas los métodos del SDK para insertar un banner, por lo que no es necesario hacer un seguimiento manual de las impresiones.
+
+## Registro de clics
+
+El método utilizado para registrar los clics en el banner depende de cómo se muestre el banner y de la ubicación del controlador de clics.
+
+### Contenido estándar del banner (automático)
+
+Si utilizas métodos predeterminados y listos para usar del SDK para insertar banners, y tu banner utiliza componentes estándar del editor (imágenes, botones, texto), los clics se siguen automáticamente. El SDK adjunta escuchadores de clics a estos elementos, y no se necesita código adicional.
+
+### Bloques de código personalizados
+
+Si tu Banner utiliza el bloque de editor **de código personalizado** en el panel de Braze, debes utilizar `brazeBridge.logClick()` para registrar los clics desde dentro de ese HTML personalizado. Esto se aplica incluso cuando se utilizan métodos del SDK para representar el Banner, porque el SDK no puede adjuntar automáticamente escuchas a elementos dentro de tu código personalizado.
+
+```html
+<button onclick="brazeBridge.logClick()">
+  Click me
+</button>
+```
+
+Es similar al [puente JavaScript]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) utilizado para los mensajes HTML dentro de la aplicación. El `brazeBridge` proporciona una capa de comunicación entre el HTML interno del Banner y el SDK Braze padre.
+
+### Implementaciones de IU personalizadas (headless)
+
+Si estás creando una interfaz de usuario totalmente personalizada utilizando las [propiedades personalizadas](#custom-properties) del Banner en lugar de renderizar el HTML del Banner, deberás registrar manualmente los clics (y las impresiones) desde el código de tu aplicación. Como el SDK no está renderizando el Banner, no tiene forma de hacer un seguimiento automático de las interacciones con tus elementos de IU personalizados.
+
+Utiliza el método `logClick()` en el objeto Banner.
 
 ## Dimensiones y tamaño
 

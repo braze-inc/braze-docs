@@ -123,7 +123,7 @@ Les segments créés avec des données d'événements personnalisés ne peuvent 
 
 Les propriétés d'événement personnalisées sont des métadonnées ou des attributs d'événement personnalisés qui décrivent une occurrence spécifique d'un événement. Ces propriétés peuvent être utilisées pour qualifier davantage les conditions de déclenchement, accroître la personnalisation des messages, suivre les conversions et générer des analyses/analytiques plus sophistiquées grâce à l'exportation de données brutes.
 
-Les propriétés d'événement personnalisées ne sont pas stockées dans le profil Braze et n'enregistrent donc pas de points données (voir [Points données](#data-points) pour les exceptions).
+Les propriétés d'événement personnalisé ne sont pas stockées dans le profil Braze et n'enregistrent donc pas de points données (voir [Points données](#data-points) pour les exceptions).
 
 {% alert important %}
 Chaque événement personnalisé ou achat peut avoir jusqu’à 256 propriétés de l'événement personnalisé distinctes. Si un événement personnalisé ou un achat est enregistré avec plus de 256 propriétés, seules les 256 premières propriétés seront capturées et utilisables.

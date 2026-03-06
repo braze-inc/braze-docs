@@ -46,7 +46,7 @@ SalesWings permet aux équipes marketing de suivre, de qualifier et de transmett
 
 _Exemple de hiérarchisation d'une liste de prospects ou de contacts par la fonction d’évaluation des prospects de SalesWings en mode natif dans Salesforce_
 
-![Exemple de hiérarchisation d'une liste de comptes par le lead scoring de SalesWings en mode natif dans Salesforce]({% image_buster /assets/img/saleswings/prioritized_account_list_braze_lead_scoring.png %})
+![Exemple de hiérarchisation d'une liste de comptes par le lead scoring de SalesWings nativement dans Salesforce]({% image_buster /assets/img/saleswings/prioritized_account_list_braze_lead_scoring.png %})
 
 _Exemple de hiérarchisation d'une liste de comptes par la fonction d’évaluation de SalesWings en mode natif dans Salesforce_
 {% endtab %}
@@ -150,7 +150,7 @@ Si vous activez l'option SalesWings insights push to Braze, SalesWings met à jo
 
 | Attribut personnalisé | Type | Description |
 | ----------- | ----------- | ----------- |
-| `sw_favorite` | booléen | Si le lead a été marqué comme favori dans SalesWings ou dans Salesforce CRM. |
+| `sw_favorite` | booléen | Si le lead a été marqué comme favori dans SalesWings ou dans Salesforce CRM |
 | `sw_last_active_at` | date | Le moment de la dernière activité du lead sur votre site web |
 | `sw_lead_link_open` | chaîne de caractères | Le lien pour accéder au profil d'un lead dans SalesWings (sans compte tableau de bord SalesWings) |
 | `sw_lead_link_protected` | chaîne de caractères | Le lien pour accéder au profil d'un lead dans SalesWings (avec un compte tableau de bord SalesWings) |

@@ -16,11 +16,11 @@ channel:
 
 Wenn das LINE-Klick-Tracking aktiviert ist, verkürzt Braze automatisch Ihre URLs, fügt Tracking-Mechanismen hinzu und zeichnet Klicks in Realtime auf. Während LINE Ihnen aggregierte Klickdaten bietet, liefert Braze granulare Nutzer:innen-Daten, die zeitnah und umsetzbar sind. Mit diesen Daten können Sie gezieltere Segmentierungs- und Retargeting-Strategien entwickeln, z. B. die Segmentierung von Nutzern auf der Grundlage ihres Klickverhaltens und das Auslösen von Nachrichten als Reaktion auf bestimmte Klicks.
 
-LINE Click Tracking kann für text-, rich- und kartenbasierte Nachrichten verwendet werden. Es unterstützt Links in Buttons und Bildbereichen, die eine URL als Klick-Aktion haben. Sie können URLs auch mit Liquid und angepassten Domains anpassen.
+LINE Click Tracking kann für text-, rich- und kartenbasierte Nachrichten verwendet werden. Es unterstützt Links in Buttons und Bildbereichen, die eine URL als Klick-Aktion haben. Sie können URLs auch mit Liquid und angepassten Domains personalisieren.
 
 ## Funktionsweise
 
-Sie können die Einstellungen für das Tracking von LINE-Klicks auf dem Tab **Einstellungen** verwalten, während Sie eine Nachricht verfassen. Wenn diese Funktion aktiviert ist, werden URLs unter Verwendung der Standard Braze Domain (`https://brz.ai`) oder der angepassten Domain, die für die Abo-Gruppe angegeben wurde, verkürzt und für den Nutzer:innen personalisiert.
+Sie können die Einstellungen für das Tracking von LINE-Klicks auf dem Tab **Einstellungen** verwalten, während Sie eine Nachricht verfassen. Wenn diese Funktion aktiviert ist, werden URLs unter Verwendung der Standard Braze Domain (`https://brz.ai`) oder der angepassten Domain, die für die Abo-Gruppe angegeben wurde, gekürzt und für den Nutzer:innen personalisiert.
 
 Alle URLs, die mit `http://` oder `https://` beginnen, werden gekürzt. Sie können bis zu 25 URLs in einer Nachricht verwenden. Verkürzte URLs, die Liquid Personalisierung (wie Tracking auf Nutzerebene oder UTM-Parameter) enthalten, sind zwei Monate lang gültig.
 
@@ -35,7 +35,7 @@ So richten Sie das Tracking von Klicks für eine Textnachricht ein:
 ![LINE Nachrichten-Editor mit einer Textnachricht, die eine lange URL enthält: https://braze.com/docs/user_guide/message_building_by_channel/line/create/]({% image_buster /assets/img/line/click_tracking_text_message.png %})
 
 {: start="2"}
-2\. Gehen Sie auf den Tab **Einstellungen** und bestätigen Sie, dass **Click Tracking** aktiviert ist. Das Tracking von Klicks ist standardmäßig für alle neuen Nachrichten aktiviert.
+2\. Gehen Sie zum Tab **Einstellungen** und bestätigen Sie, dass **Click Tracking** aktiviert ist. Das Tracking von Klicks ist standardmäßig für alle neuen Nachrichten aktiviert.
 
 {% alert note %}
 Auf dem Tab **Einstellungen** oder **Vorschau & Test** können Sie eine Vorschau des verkürzten Links sehen. Der vollständige Link wird im Composer angezeigt, während Sie Ihre Nachricht erstellen.
@@ -54,7 +54,7 @@ So richten Sie das Click Tracking für eine Rich Message ein:
 ![LINE Nachrichten-Editor mit einer Rich Nachricht mit zwei antippbaren Bereichen, die jeweils eine URL enthalten.]({% image_buster /assets/img/line/rich_message_click_tracking.png %})
 
 {: start="4"}
-4\. Gehen Sie auf den Tab **Einstellungen** und bestätigen Sie, dass **Click Tracking** aktiviert ist. Das Tracking von Klicks ist standardmäßig für alle neuen Nachrichten aktiviert.
+4\. Gehen Sie zum Tab **Einstellungen** und bestätigen Sie, dass **Click Tracking** aktiviert ist. Das Tracking von Klicks ist standardmäßig für alle neuen Nachrichten aktiviert.
 
 ### Kartenbasierte Nachrichten
 
@@ -66,7 +66,7 @@ So richten Sie das Click Tracking für eine kartenbasierte Nachricht ein:
 ![LINE Nachrichten-Editor mit einer kartenbasierten Nachricht mit zwei Buttons, die jeweils eine URL enthalten.]({% image_buster /assets/img/line/card_based_message_click_tracking.png %})
 
 {: start="3"}
-3\. Gehen Sie auf den Tab **Einstellungen** und bestätigen Sie, dass **Click Tracking** aktiviert ist. Das Tracking von Klicks ist standardmäßig für alle neuen Nachrichten aktiviert.
+3\. Gehen Sie zum Tab **Einstellungen** und bestätigen Sie, dass **Click Tracking** aktiviert ist. Das Tracking von Klicks ist standardmäßig für alle neuen Nachrichten aktiviert.
 
 {% alert note %}
 URLs in den Feldern **Titel** oder **Beschreibung** werden nicht gekürzt, da diese Felder in LINE nicht anklickbar sind.
@@ -74,7 +74,7 @@ URLs in den Feldern **Titel** oder **Beschreibung** werden nicht gekürzt, da di
 
 ## Angepasste Domains
 
-Das Tracking von LINE-Klicks erlaubt es Ihnen, Ihre eigene Domain zu verwenden, um das Erscheinungsbild Ihrer verkürzten URLs zu personalisieren und so ein einheitliches Markenimage zu vermitteln. Weitere Informationen finden Sie unter [Angepasste Domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains).
+Das LINE Tracking von Klicks erlaubt es Ihnen, Ihre eigene Domain zu verwenden, um das Erscheinungsbild Ihrer verkürzten URLs zu personalisieren und so ein einheitliches Markenimage zu vermitteln. Weitere Informationen finden Sie unter [Angepasste Domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains).
 
 ## Flüssige Personalisierung in URLs
 
@@ -98,7 +98,7 @@ https://example.com/{{url_var}}
 
 ## Kürzen Sie URLs, die von Liquid-Variablen gerendert werden
 
-Braze verkürzt URLs, die von Liquid gerendert werden, auch solche, die in API-triggernden Eigenschaften enthalten sind. Wenn {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} beispielsweise eine gültige URL darstellt, kürzen und tracken wir diese URL, bevor wir die LINE Nachricht senden.
+Braze verkürzt URLs, die von Liquid gerendert werden, auch solche, die in API-triggernden Eigenschaften enthalten sind. Wenn zum Beispiel {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} eine gültige URL darstellt, werden wir diese URL vor dem Versenden der LINE Nachricht kürzen und tracken.
 
 ## Testen
 
@@ -153,7 +153,7 @@ Personalisierte URLs sind ab dem Zeitpunkt der URL-Registrierung zwei Monate lan
 
 ### Muss das Braze SDK installiert werden, um URLs zu verkürzen?
 
-Nein, Click Tracking funktioniert ohne SDK-Integration.
+Nein, Click Tracking funktioniert auch ohne SDK-Integration.
 
 ### Kann ich wissen, welche einzelnen Benutzer auf eine URL klicken?
 

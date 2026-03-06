@@ -1,6 +1,7 @@
 ---
 nav_title: Brazeサポート
 article_title: サポート
+page_order: 7
 description: "このページでは、Braze製品のフィードバックを提出するためのBrazeサポートポータルを見つけるのに役立つ。このページは Braze のお客様のみがアクセスできます。"
 alias: /braze_support/
 page_type: reference

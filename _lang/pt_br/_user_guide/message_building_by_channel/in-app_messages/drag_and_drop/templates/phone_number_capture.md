@@ -18,9 +18,9 @@ description: "Esta página aborda como criar um formulário de inscrição para 
 
 ### Etapa 1: Escolha seu modelo
 
-Ao criar uma mensagem no app com o recurso de arrastar e soltar, selecione o **registro de SMS** (isso acomoda o registro de RCS) ou o **registro de WhatsApp** para o modelo e, em seguida, selecione **Criar mensagem**. Esses modelos são compatíveis tanto com apps móveis quanto com navegadores da Web.
+Ao criar uma mensagem no app com o recurso de arrastar e soltar, selecione **o registro de SMS** (isso acomoda o registro de RCS) ou o **registro de WhatsApp** para o modelo e, em seguida, selecione **Criar mensagem**. Esses modelos são compatíveis tanto com apps móveis quanto com navegadores da Web.
 
-![Modal para selecionar o envio de mensagens SMS ou WhatsApp como modelo ao criar uma mensagem no app.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}){: style="max-width:80%"}
+![Modal para selecionar o registro de SMS ou o registro do WhatsApp como modelo ao criar uma mensagem no app.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}){: style="max-width:80%"}
 
 ### Etapa 2: Configure seus estilos de mensagens
 

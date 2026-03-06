@@ -14,6 +14,10 @@ channel:
 
 > 연락처 카드(때때로 vCard 또는 가상 연락처 파일(VCF)로 알려짐)는 비즈니스 및 연락처 정보를 전송하기 위한 표준화된 파일 형식으로, 주소록이나 연락처 책에 쉽게 가져올 수 있습니다. 
 
+{% alert note %}
+연락처 카드를 보내는 것은 MMS로 요금이 부과됩니다. 연락처 카드를 생성할 때 예상 MMS 볼륨 및 메시지 크레딧 사용량을 검토하고, Braze [청구 페이지]({{site.baseurl}}/user_guide/administrative/access_billing/billing/)에서 비용을 확인하세요.
+{% endalert %}
+
 연락처 카드는 [프로그래밍 방식으로](https://www.twilio.com/blog/send-vcard-twilio-sms) 생성하고 Braze [미디어 라이브러리]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)에 업로드하거나 내장된 연락처 카드 생성기를 통해 생성할 수 있습니다. 이 카드에는 회사 이름, 전화번호, 주소, 이메일 및 작은 사진과 같은 공통 속성을 할당할 수 있습니다. 연락처 카드를 만들기 시작하려면 먼저 Braze에서 MMS를 사용할 수 있도록 설정되어 있는지 확인하세요.
 
 ## 연락처 카드 생성기

@@ -29,7 +29,7 @@ braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds
 
 ## Key-value pairs
 
-When you create a campaign in Braze, you can set key-value pairs as `extras`, which the the in-app messaging object can use to send data to your app. For example:
+When you create a campaign in Braze, you can set key-value pairs as `extras`, which the in-app messaging object can use to send data to your app. For example:
 
 ```javascript
 import * as braze from "@braze/web-sdk";

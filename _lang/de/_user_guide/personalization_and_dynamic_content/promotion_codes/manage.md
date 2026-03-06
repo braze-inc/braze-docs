@@ -54,13 +54,13 @@ Bei Testversand und E-Mail-Versand an Seed-Gruppen werden Aktionscodes verwendet
 
 Um denselben Aktionscode in späteren Nachrichten zu verwenden, muss der Code als benutzerdefiniertes Attribut im Benutzerprofil gespeichert werden. Dies kann durch ein [Nutzer:innen-Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) geschehen, das den Rabattcode einem angepassten Attribut wie "Promo Code" direkt vor einem Messaging-Schritt zuweist.
 
-Wählen Sie zunächst für jedes Feld im Schritt Nutzer:innen aktualisieren Folgendes aus:
+Wählen Sie zunächst im Schritt Nutzer:innen aktualisieren für jedes Feld Folgendes aus:
 
 - **Attributname:** Promo Code
 - **Aktion:** Aktualisieren
 - **Schlüssel-Wert:** Das Liquid Code Snippet des Aktionscodes, wie z.B. {% raw %}`{% promotion('spring25') %}`{% endraw %}
 
-Zweitens: Fügen Sie das angepasste Attribut (in diesem Beispiel {% raw %}`{{custom_attribute.${Promo Code}}`{% endraw %}) zu einer Nachricht hinzu. Der Rabattcode ist in einem Template enthalten.
+Zweitens: Fügen Sie das angepasste Attribut (in diesem Beispiel {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %}) zu einer Nachricht hinzu. Der Rabattcode ist in einem Template enthalten.
 
 ## Anzeigen der Verwendung von Aktionscodes
 

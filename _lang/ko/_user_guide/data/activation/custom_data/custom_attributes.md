@@ -62,7 +62,7 @@ You can view up to 100 usage reports at a time by selecting the checkboxes next 
 
 ### 값 탭
 
-사용량 보고서를 볼 때 **값** 탭을 선택하면 약 25만 명의 사용자 샘플을 기준으로 선택한 커스텀 속성의 상위 값을 볼 수 있습니다. 결과는 사용자의 하위 집합에서 샘플링된 것이므로 샘플에 기존의 모든 값이 포함되지는 않습니다. 즉, **값** 탭은 문제 해결이나 모든 사용자의 데이터를 통합해야 하는 사용 사례에 사용해서는 안 됩니다.
+사용량 보고서를 볼 때 **값** 탭을 선택하면 약 25만 명의 사용자 샘플을 기준으로 선택한 커스텀 속성의 상위 값을 볼 수 있습니다. 결과는 사용자의 하위 집합에서 샘플링된 것이므로 샘플에 기존의 모든 값이 포함되지는 않는다는 점에 유의하세요. 즉, **값** 탭은 문제 해결이나 모든 사용자의 데이터를 통합해야 하는 사용 사례에 사용해서는 안 됩니다.
 
 !['값' 탭이 열려 있는 선택한 커스텀 속성에 대한 사용 보고서로, '미국' 및 'PR'과 같은 국가 속성 값의 원형 차트가 표시됩니다.]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
 
@@ -158,9 +158,7 @@ You can view up to 100 usage reports at a time by selecting the checkboxes next 
 | 문자열 속성이 입력된 문자열과 **부분적으로 일치하지 않는지** 확인합니다. | **에는 다음 중 어느 것도 포함되지 않습니다.** | **문자열**<br>대소문자 구분, 여러 문자열 허용(최대 256개) | 이 필터가 `gold`를 지정하고 고객 프로필에 `gold`가 포함되지 않은 경우, 해당 사용자는 이 필터와 일치합니다.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-"12-1-2021" 또는 "12/1/2021"과 같은 날짜 문자열은 날짜/시간 개체로 변환되어 [시간 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time)으로 처리됩니다.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 **일치하지 않는 정규식** 필터를 사용하여 세그먼트할 때는 해당 고객 프로필에 값이 할당된 커스텀 속성이 이미 있어야 합니다. Braze는 커스텀 속성이 비어 있는지 확인하여 사용자가 제대로 타겟팅되고 있는지 확인하기 위해 "OR" 논리를 사용할 것을 제안합니다.

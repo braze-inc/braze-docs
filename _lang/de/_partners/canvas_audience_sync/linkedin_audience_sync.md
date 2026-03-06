@@ -21,9 +21,7 @@ Mit der Braze Audience Sync to LinkedIn können Marken Nutzerdaten aus ihrer Bra
 
 Mit diesem Feature können Marken kontrollieren, welche spezifischen First-Party-Daten mit LinkedIn geteilt werden. Bei Braze werden die Integrationen, mit denen Sie Ihre First-Party-Daten teilen können und nicht teilen können, genauestens berücksichtigt. Weitere Informationen finden Sie in unserer [Richtlinie zum Datenschutz](https://www.braze.com/privacy).
 
-{% alert important %}
-Audience Sync to LinkedIn befindet sich derzeit in der Beta-Phase. Kontaktieren Sie Ihren Braze-Konto Manager:in, wenn Sie an der Beta teilnehmen möchten.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Audience Sync to LinkedIn' type='beta' %}
 
 ## Voraussetzungen
 
@@ -155,7 +153,7 @@ LinkedIn bietet zusätzliche Metriken zu den Trefferquoten auf seiner Plattform.
 <br><br>
 Wählen Sie als Partner **LinkedIn**, Ihr Anzeigenkonto und die Zielgruppe aus, um die Größe der Zielgruppe und die Trefferquote von LinkedIn zu sehen.
 
-![Ein Beispiel für die Metriken der Audience Sync-Schritte mit 10.000 eingegebenen Nutzer:innen.]({% image_buster /assets/img/linkedin/linkedin11.png %})
+![Ein Beispiel für die Metriken des Audience Sync-Schrittes mit 10.000 eingegebenen Nutzer:innen.]({% image_buster /assets/img/linkedin/linkedin11.png %})
 {% endalert %}
 
 ## Häufig gestellte Fragen

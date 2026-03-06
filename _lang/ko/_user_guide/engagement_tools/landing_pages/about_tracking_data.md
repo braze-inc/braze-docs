@@ -1,5 +1,5 @@
 ---
-nav_title: 추적 데이터 정보
+nav_title: 추적 데이터에 대한 정보
 article_title: 랜딩 페이지 추적 데이터 정보
 description: "브레이즈에서 랜딩 페이지의 추적 및 익명화된 데이터에 대해 알아보세요."
 page_order: 10
@@ -32,10 +32,10 @@ Braze 웹 SDK는 사용자가 랜딩 페이지에서 양식을 제출할 때만 
 
 ## 중복된 사용자 프로필 병합하기
 
-Braze는 랜딩 페이지 양식이 제출될 때 이메일이나 전화와 같은 속성을 기반으로 사용자를 자동으로 병합하지 않습니다. 기존 고객 프로필과 일치하는 이메일 또는 전화번호로 양식을 제출하면 Braze는 별도의 고객 프로필을 생성합니다.
+Braze는 랜딩 페이지 양식이 제출될 때 이메일 또는 전화와 같은 속성을 기반으로 사용자를 자동으로 병합하지 않습니다. 이메일 또는 전화번호가 기존 사용자 프로필과 일치하는 경우, Braze는 별도의 사용자 프로필을 생성합니다.
 
-중복된 고객 프로필을 병합할 수 있습니다:
+중복 사용자 프로필을 병합하려면 다음을 수행할 수 있습니다:
 
-- 랜딩 페이지 양식이 제출되면 [`/users/merge` 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) 트리거하여 새 프로필을 기존 프로필과 병합합니다.
-- [일괄 병합을]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging) 예약하여 일치하는 식별자를 기준으로 중복된 프로필을 주기적으로 병합하세요.
+- 랜딩 페이지 양식이 제출될 때 [`/users/merge` 엔드포인트]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/)을 트리거하여 새 프로필을 기존 프로필과 병합합니다.
+- 일치하는 식별자를 기반으로 주기적으로 중복 프로필을 병합하기 위해 [대량 병합]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging)을 예약합니다.
 

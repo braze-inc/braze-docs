@@ -138,7 +138,7 @@ Para a carga útil de exemplo abaixo:
             "deadmau5",
             "Marsh",
             "Enamour"
-        ],
+        ]
     },
     "recommendations": {
         "concerts": [
@@ -159,7 +159,7 @@ Para a carga útil de exemplo abaixo:
             "label": "Anjunadeep",
             "release_date": "2023-04-28"
         }
-    },
+    }
 }
 ```
 

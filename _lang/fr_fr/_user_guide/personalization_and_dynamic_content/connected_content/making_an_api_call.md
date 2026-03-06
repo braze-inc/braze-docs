@@ -6,7 +6,7 @@ description: "Le présent article de référence explique comment effectuer un a
 search_rank: 2
 ---
 
-# [![Braze](https://learning.braze.com/connected-content)[cours d'apprentissage]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} Faire un appel à l'API du contenu connecté
+# [![Braze](https://learning.braze.com/connected-content)[cours d'apprentissage]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} Faire un appel à l'API de contenu connecté
 
 > Utilisez le contenu connecté pour insérer toute information accessible par API directement dans les messages que vous envoyez aux utilisateurs. Vous pouvez extraire du contenu directement à partir de votre serveur Web ou des API accessibles au public.<br><br>Cette page explique comment effectuer des appels à l'API du contenu connecté, les cas d'utilisation avancés du contenu connecté, la gestion des erreurs, etc.
 

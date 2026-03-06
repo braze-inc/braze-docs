@@ -14,7 +14,7 @@ page_order: 4
 
 ## Tracking von Shopify-Ereignissen
 
-Die Shopify Integration nutzt die [vom E-Commerce empfohlenen Ereignisse]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/), um die wichtigsten Einkaufsgewohnheiten zu erfassen. Beispiele für die Umsetzung und Marketing-Strategien, die diese Ereignisse nutzen, finden Sie in den [E-Commerce Anwendungsfällen]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/).
+Die Shopify Integration nutzt die [vom E-Commerce empfohlenen Ereignisse]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/), um das wichtigste Einkaufsverhalten zu erfassen. Beispiele für die Umsetzung und Marketing-Strategien, die diese Ereignisse nutzen, finden Sie in den [E-Commerce Anwendungsfällen]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/).
 
 {% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
 
@@ -317,7 +317,7 @@ Die Shopify Integration nutzt die [vom E-Commerce empfohlenen Ereignisse]({{site
        "price": "80.00",
        "fulfillment_status": null
      }
-   ],
+   ]
  }
 }
 ```
@@ -391,9 +391,9 @@ Die Shopify Integration nutzt die [vom E-Commerce empfohlenen Ereignisse]({{site
 {% subtab Account login %}
 ```json
 {
-	name: "shopify_account_login",
-	properties: {
-	source: "braze-mock-storefront.myshopify.com"
+	"name": "shopify_account_login",
+	"properties": {
+	"source": "braze-mock-storefront.myshopify.com"
   }
 }
 ```
@@ -578,7 +578,7 @@ Der Webhook "Kasse abgeschlossen" von Shopify enthält keine Produkt-URLs oder B
 | Fulfillment Versand | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | Variante ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variante Titel | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
@@ -628,7 +628,7 @@ Der Webhook "Kasse abgeschlossen" von Shopify enthält keine Produkt-URLs oder B
 | Fulfillment Versand | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | Variante ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variante Titel | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
@@ -743,7 +743,7 @@ Der Webhook "Kasse abgeschlossen" von Shopify enthält keine Produkt-URLs oder B
 {% endraw %}
 
 {% alert note %}
-Die Shopify-Integration unterstützt derzeit nicht das Auffüllen des [Kauf-Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) von Braze. Infolgedessen sollten Kauf-Filter, Liquid-Tags, aktionsbasierte Trigger und Analytics das Ereignis `ecommerce.order_placed` verwenden.
+Die Shopify-Integration unterstützt derzeit nicht das Auffüllen des [Kauf-Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) von Braze. Folglich sollten Kauf-Filter, Liquid-Tags, aktionsbasierte Trigger und Analytics das Ereignis `ecommerce.order_placed` verwenden.
 {% endalert %}
 
 {% endsubtab %}

@@ -51,6 +51,10 @@ Una aplicación o sitio web sólo puede tener una suscripción push por disposit
 
 Dado que los proveedores de push (APN/FCM) no pueden distinguir entre varios usuarios en un mismo dispositivo, pasamos el token de push al último usuario que inició sesión para determinar a qué usuario se debe enviar el push en el dispositivo.
 
+{% alert tip %}
+Si ves un mensaje de error en **Configuración de contacto** > **Registro de cambios push**, consulta [Mensajes de error push comunes]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/) para obtener explicaciones y los siguientes pasos.
+{% endalert %}
+
 ## Registro de token de notificaciones push
 
 Cada plataforma de dispositivos gestiona el registro de token de notificaciones push de forma diferente. Consulta a continuación los detalles específicos de cada plataforma:
@@ -76,7 +80,7 @@ iOS no genera automáticamente tokens de notificaciones push para una aplicació
 | Versión                         | ¿Autorización provisional? | Detalles                                                                                                                                                     |
 |------------------------------------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **iOS 12**      | Sí                         | Cuando un usuario se adhiere voluntariamente a las notificaciones push, recibes una autorización estándar que te permite enviar [notificaciones push en primer plano](#foreground-vs-background). Sin embargo, también puedes solicitar [una autorización provisional]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push), que te permite enviar [notificaciones push](#foreground-vs-background) silenciosas [en segundo plano](#foreground-vs-background) directamente al centro de notificaciones. |
-| **iOS 11 y posteriores** | No                          | Todos los usuarios deben optar explícitamente por recibir notificaciones push. Sólo se genera un token de notificaciones push cuando se concede el permiso.                                     |
+| **iOS 11 o anterior** | No                          | Todos los usuarios deben optar explícitamente por recibir notificaciones push. Sólo se genera un token de notificaciones push cuando se concede el permiso.                                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}

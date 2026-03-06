@@ -47,7 +47,7 @@ Das Dashboard **eCommerce Revenue - Last Touch Attribution** bezieht Daten aus e
 - `ecommerce.order_refunded`
 - `ecommerce.order_cancelled`
 
-Umsatz- und Auftragszahlen verwenden standardisierte Berechnungen von Braze.
+Umsatz- und Auftragszählungen verwenden standardisierte Berechnungen von Braze.
 
 | Metrisch | Berechnung |
 | --- | --- |
@@ -57,7 +57,7 @@ Umsatz- und Auftragszahlen verwenden standardisierte Berechnungen von Braze.
 
 ### Ausgeschlossene Daten
 
-Käufe, die über das alte Kauf-Event protokolliert wurden, sind nicht enthalten. Das **E-Commerce Revenue - Last Touch Attribution** Dashboard unterstützt derzeit keine Features, die an alte Kauf-Events gebunden sind, wie z.B. LTV oder Umsatzberichte innerhalb von Kampagnen oder Canvase. 
+Käufe, die über das alte Kauf-Event protokolliert wurden, sind nicht enthalten. Das **E-Commerce Revenue - Last Touch Attribution** Dashboard unterstützt derzeit keine Features, die an frühere Kauf-Events gebunden sind, wie z.B. LTV oder Umsatzberichte innerhalb von Kampagnen oder Canvase. 
 
 
 ## Umgang mit Währungen

@@ -79,7 +79,7 @@ Atualize o `external_source_id` para os usuários existentes da Punchh. O Punchh
 {% tab User sign-up API example %}
 Este exemplo permite enviar identificadores externos com um perfil de usuário no momento em que se faz o login. Isso é feito enviando `external_source` como "customer_id" e `external_source_id` como "111111111111111111" como um tipo de dados string.
 
-```json
+```bash
 curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'x-pch-digest: SIGNATURE' \
@@ -106,7 +106,7 @@ curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mo
 {% tab User update API example %}
 Este exemplo permite que você atualize identificadores externos com um perfil de usuário. Isso é feito enviando `external_source` como "customer_id" e `external_source_id` como "111111111111111111" como um tipo de dados string.
 
-```json
+```bash
 curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \

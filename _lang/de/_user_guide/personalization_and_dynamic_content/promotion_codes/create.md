@@ -55,7 +55,7 @@ Stellen Sie sicher, dass Ihre CSV-Datei diesen Richtlinien entspricht:
 Sie können unsere integrierte Integration mit [Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) oder [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) verwenden, um Aktionscodes zu erstellen und zu exportieren.
 
 {% alert important %}
-Die maximale Dateigröße beträgt 100 MB und die maximale Listengröße beträgt 20 MM unbenutzte Codes. Wenn Sie feststellen, dass eine falsche Datei hochgeladen wurde, laden Sie eine neue Datei hoch, um die vorherige Datei zu ersetzen.
+Die maximale Dateigröße beträgt 100 MB und die maximale Listengröße 20 Millionen unbenutzte Codes. Wenn Sie feststellen, dass eine falsche Datei hochgeladen wurde, laden Sie eine neue Datei hoch, um die vorherige Datei zu ersetzen.
 {% endalert %}
 
 1. Nachdem der Upload abgeschlossen ist, wählen Sie **Liste speichern**, um alle Details und Codes zu speichern, die Sie gerade eingegeben haben.

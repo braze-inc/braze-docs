@@ -1,6 +1,6 @@
 ---
 nav_title: Permissões
-article_title: Permissões do Braze
+article_title: Permissões de usuário da empresa
 page_order: 2
 page_type: reference
 description: "Este artigo de referência cobre como as permissões de usuário funcionam na Braze. Aqui, você pode aprender como editar e definir permissões de usuário, escolhendo quem pode acessar seus aplicativos no dashboard."
@@ -8,13 +8,13 @@ tool: Dashboard
 
 ---
 
-# Permissões do Braze
+# Permissões de usuário da empresa
 
 > Aprenda a criar conjuntos de permissões, criar funções, editar permissões de usuário e exportar permissões de usuário, para que você possa garantir que seus usuários acessem apenas os espaços de trabalho e recursos que mais precisam.
 
 ## Criando um conjunto de permissões
 
-Use conjuntos de permissões para agrupar permissões relacionadas a áreas ou ações específicas. Eles podem ser aplicados aos usuários do dashboard que precisam do mesmo acesso em diferentes espaços de trabalho. Para criar um conjunto de permissões, acessar **Configurações** > **Configurações de Permissão**, depois selecione **Criar conjunto de permissões**. Para uma descrição de cada permissão, consulte [Lista de permissões](#list-of-permissions).
+Use conjuntos de permissões para agrupar permissões relacionadas a áreas ou ações específicas. Eles podem ser aplicados aos usuários da empresa que precisam do mesmo acesso em diferentes espaços de trabalho. Para criar um conjunto de permissões, acessar **Configurações** > **Configurações de Permissão**, depois selecione **Criar conjunto de permissões**. Para uma descrição de cada permissão, consulte [Lista de permissões](#list-of-permissions).
 
 {% tabs local %}
 {% tab example permission sets %}
@@ -29,7 +29,7 @@ Use conjuntos de permissões para agrupar permissões relacionadas a áreas ou a
 
 ## Criando uma função
 
-As funções permitem mais estrutura ao agrupar suas permissões personalizadas individuais com os controles de acesso do espaço de trabalho. Isso é especialmente útil se você tiver muitas marcas ou espaços de trabalho regionais em um dashboard. Com funções, você pode adicionar usuários do dashboard aos espaços de trabalho certos e conceder diretamente as permissões associadas. Para uma descrição de cada permissão, consulte [Lista de permissões](#list-of-permissions).
+As funções permitem mais estrutura ao agrupar suas permissões personalizadas individuais com os controles de acesso do espaço de trabalho. Isso é especialmente útil se você tiver muitas marcas ou espaços de trabalho regionais em um dashboard. Com as funções, é possível adicionar usuários da empresa aos espaços de trabalho certos e conceder-lhes diretamente as permissões associadas. Para uma descrição de cada permissão, consulte [Lista de permissões](#list-of-permissions).
 
 {% tabs local %}
 {% tab example roles %}
@@ -54,7 +54,7 @@ Para adicionar com êxito um usuário a uma equipe e manter as mesmas permissõe
 
 ## Usuários limitados
 
-Os usuários limitados têm permissões específicas que lhes permitem gerenciar determinados aspectos do dashboard do Braze, embora tenham restrições em comparação com os administradores da empresa e do espaço de trabalho.
+Os usuários limitados têm permissões específicas que lhes permitem gerenciar determinados aspectos do dashboard do Braze, embora tenham restrições em comparação com os administradores da empresa e os administradores do espaço de trabalho.
 
 | Permissões | Os usuários limitados podem editar as permissões de outros usuários limitados se tiverem a permissão "Manage Dashboard Users" (Gerenciar usuários do dashboard) marcada. Eles também podem criar novos usuários limitados e modificar seus conjuntos de permissões. No entanto, eles não podem criar ou gerenciar contas de administrador da empresa. |
 | Limitações de função: Se um usuário limitado tiver todas as permissões, exceto "Administrador do grupo de app", ele ainda terá acesso a todas as outras permissões normalmente concedidas a um administrador de espaço de trabalho. |
@@ -66,7 +66,7 @@ Os usuários limitados têm permissões específicas que lhes permitem gerenciar
 | Tipo de usuário limitado | Descrição |
 | --- | --- |
 | Administrador do grupo de app | Os administradores de grupos de aplicativos têm permissões específicas para gerenciar grupos de aplicativos, mas não têm a mesma autoridade que os administradores da empresa. Os usuários limitados podem herdar permissões semelhantes às dos administradores do grupo de app se tiverem as permissões necessárias verificadas. |
-| Administrador da empresa | Os administradores da empresa têm permissões mais amplas, incluindo a capacidade de excluir usuários do dashboard. No entanto, eles não podem excluir suas próprias contas e devem entrar em contato com outro administrador da empresa para realizar essa ação. |
+| Administrador da empresa | Os administradores da empresa têm permissões mais amplas, incluindo a capacidade de excluir usuários da empresa. No entanto, eles não podem excluir suas próprias contas e devem entrar em contato com outro administrador da empresa para realizar essa ação. |
 | Permissão básica de somente leitura | Para acessar certas partes do dashboard, como a página Technology Partners, os usuários devem ter uma permissão básica de somente leitura. Isso inclui ter a opção "Manage External Integrations" (Gerenciar integrações externas) ativada, juntamente com permissões para Access Campaigns (Acessar campanhas), Canvas, Cards (Cartões), Segments (Segmentos) e Media Library (Biblioteca de mídia). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -75,7 +75,7 @@ Os usuários limitados têm permissões específicas que lhes permitem gerenciar
 Os usuários podem encontrar mensagens como "Acesso limitado". Você não tem permissão para acessar esta página." Nesses casos, o administrador da conta deve verificar se é possível resolver o problema desativando e reativando as permissões do usuário.
 
 {% alert note %}
-Não é possível mesclar ou importar permissões de usuário de um usuário do dashboard para outro.
+Não é possível mesclar ou importar permissões de usuário de um usuário da empresa para outro.
 {% endalert %}
 
 ## Editando as permissões de um usuário
@@ -92,8 +92,8 @@ Para editar as permissões atuais de administrador, empresa ou espaço de trabal
 Os administradores têm acesso a todos os recursos e a capacidade de modificar qualquer configuração da empresa. Eles podem:
 
 - Alterar [configurações de aprovação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)
-- Adicionar, editar, excluir, suspender ou reativar outros [Braze usuários]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
-- Exportar usuários do Braze como um CSV
+- Adicionar, editar, excluir, suspender ou cancelar a suspensão de outros [usuários da empresa]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- Exportar usuários da empresa como um CSV
 
 Para conceder ou remover privilégios de administrador, selecione **Este usuário é um administrador**, depois selecione **Atualizar usuário**.
 
@@ -150,14 +150,14 @@ Quando terminar, selecione **Atualizar usuário**.
 
 ## Exportando permissões de usuário
 
-Para baixar uma lista de seus usuários e suas permissões, acesse **Configurações** > **Usuários da empresa** e selecione **Exportar usuários**. Um arquivo CSV será enviado para o seu endereço de e-mail em breve.
+Para baixar uma lista dos usuários da empresa e suas permissões, acesse **Configurações** > **Usuários da empresa** e selecione **Exportar usuários**. Um arquivo CSV será enviado para o seu endereço de e-mail em breve.
 
 ![A página "Company Users" (Usuários da empresa) no Braze com a opção "Export Users" (Exportar usuários) em destaque.]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
 
 ## Lista de permissões
 
 {% alert important %}
-A partir de abril de 2024, para criar ou atualizar listas de códigos promocionais, os usuários do Braze precisam da permissão “Acessar Campanhas, canvas, Cartões, Segmentos, Biblioteca de Mídia”.
+A partir de abril de 2024, para criar ou atualizar listas de códigos promocionais, os usuários da empresa precisam da permissão "Access Campaigns, Canvas, Cards, Segments, Media Library".
 {% endalert %}
 
 |Nível|Nome|Definição|
@@ -177,7 +177,7 @@ A partir de abril de 2024, para criar ou atualizar listas de códigos promociona
 |Espaço de trabalho|Abrir Centrais de Preferências|Permite que os usuários lancem [centros de preferências]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Espaço de trabalho|Gerenciar apps|Permite que os usuários editem **Configurações do app**.|
 |Espaço de trabalho|Permissão para gerenciar catálogos do dashboard|Permite aos usuários criar e gerenciar catálogos.|
-|Espaço de trabalho|Gerenciar usuários do dashboard| Permite que os não administradores visualizem, editem e gerenciem a página **Usuários da empresa** e gerenciem os usuários do dashboard em seu espaço de trabalho, modificando as permissões de qualquer usuário, inclusive eles próprios. Os usuários com essa permissão não podem excluir usuários (somente os administradores podem excluir usuários).<br><br>Isso corresponde à permissão herdada `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
+|Espaço de trabalho|Gerenciar usuários do dashboard| Permite que os não administradores visualizem, editem e gerenciem a página **Company Users (Usuários da empresa** ) e gerenciem os usuários da empresa em seu espaço de trabalho, modificando as permissões de qualquer usuário, incluindo eles próprios. Os usuários com essa permissão não podem excluir usuários (somente os administradores podem excluir usuários).<br><br>Isso corresponde à permissão herdada `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
 |Espaço de trabalho|Gerenciar configurações de e-mail|Permite que os usuários salvem as alterações de configuração de e-mail (**Configurações** > **Preferências de e-mail**).|
 |Espaço de trabalho|Gerenciar eventos, atributos, compras|Permite que os usuários editem atributos personalizados (usuários sem essa capacidade ainda podem visualizar atributos personalizados), editem e visualizem propriedades de eventos personalizados e editem e visualizem propriedades de produtos em **Configurações de Dados**.|
 |Espaço de trabalho|Gerenciar integrações externas|Permite o acesso a todas as guias em **Parceiros de tecnologia**, a capacidade de sincronizar o Braze com outras plataformas e o acesso para gerenciar [a ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data/cloud_ingestion/).|
@@ -202,12 +202,15 @@ A partir de abril de 2024, para criar ou atualizar listas de códigos promociona
 |Espaço de trabalho|Arquivar modelos de canva|Permite que os usuários arquivem modelos do Canva.|
 |Espaço de trabalho|Gerenciar segmentação de propriedades personalizadas de eventos|Permite que os usuários criem segmentos com base na recência e na frequência da propriedade do evento.|
 |Espaço de trabalho|Publicar landing page|Permite que os usuários publiquem [landing pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/).|
-|Espaço de trabalho|Criar rascunhos de landing page|Permite que os usuários criem e salvem rascunhos de landing page.|
-|Espaço de trabalho|Acessar landing page|Permite que os usuários acessem a página **Landing Pages**.|
-|Espaço de trabalho|Criar e editar modelos de landing page|Permite que os usuários criem e editem modelos de landing page.|
+|Espaço de trabalho|Editar rascunhos de landing page|Permite que os usuários criem e salvem rascunhos de landing page.|
+|Espaço de trabalho|Ver landing pages|Permite que os usuários acessem a página **Landing Pages**.|
+|Espaço de trabalho|Editar modelos de landing page|Permite que os usuários criem e editem modelos de landing page.|
 |Espaço de trabalho|Exibir modelos de landing page|Permite que os usuários visualizem modelos de landing page.|
 |Espaço de trabalho|Arquivar modelos de landing page|Permite que os usuários arquivem modelos de landing page.|
 |Espaço de trabalho|Exibir agentes de IA personalizados|Permite que os usuários visualizem [agentes de IA personalizados]({{site.baseurl}}/user_guide/brazeai/agents/). Esse recurso está em beta.|
 |Espaço de trabalho|Criar agentes de IA personalizados|Permite que os usuários criem agentes de IA personalizados. Esse recurso está em beta.|
 |Espaço de trabalho|Editar agentes de IA personalizados|Permite que os usuários editem agentes de IA personalizados. Esse recurso está em beta.|
+| Espaço de trabalho | Exibir modelos de mensagens do WhatsApp | Permite que os usuários visualizem [modelos de mensagens do WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/?tab=template%20messages#step-2-compose-your-whatsapp-message). |
+| Espaço de trabalho | Editar modelos de mensagens do WhatsApp | Permite que os usuários criem modelos de mensagens do WhatsApp no construtor de modelos. Esse recurso está atualmente em acesso antecipado. |
+| Espaço de trabalho | Excluir modelos de mensagens do Whatsapp | Permite que os usuários excluam modelos de mensagens do WhatsApp no construtor de modelos. Esse recurso está atualmente em acesso antecipado. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

@@ -65,7 +65,15 @@ Also called device-mode, this integration maps Segment's SDK and [methods](#meth
 When using Segment's device-mode, you do not need to integrate the Braze SDK directly. When adding Braze as a device-mode destination for Segment, the Segment SDK will initialize the Braze SDK and call the relevant mapped Braze methods.
 {% endalert %}
 
+{% alert important %}
+For device-mode integrations on mobile, you must add the Braze destination plugin to your app in addition to configuring the destination in the Segment dashboard. The Segment SDK does not include the Braze plugin by default—without it, the Segment SDK cannot forward data or mapped method calls to Braze, and features like push, in-app messages, and Content Cards won't work. See the platform-specific tabs below for installation instructions.
+{% endalert %}
+
 When using a device-mode connection, similar to integrating the Braze SDK natively, the Braze SDK will assign a `device_id` and a backend identifier, `braze_id`, to every user. This allows Braze to capture anonymous activity from the device by matching those identifiers instead of `userId`. 
+
+{% alert note %}
+If you use [destination filters](https://segment.com/docs/connections/destinations/destination-filters/) with device-mode (Kotlin or Swift) destinations, you must configure the destination plugin with the filter support enabled. Refer to Segment's [destination filters documentation](https://segment.com/docs/connections/destinations/destination-filters/) for details on supported plugin versions.
+{% endalert %}
 
 {% tabs local %}
 {% tab Android %}
@@ -87,7 +95,7 @@ The Braze SDK you use will depend on which Segment SDK you use:
 
 To set up Braze as a device-mode destination for your Android source, choose **Actions** as the **Destination framework**, then select **Save**. 
 
-To complete the side-by-side integration, refer to Segment's detailed instructions for adding the Braze destination dependency to your [Android](https://segment.com/docs/connections/sources/catalog/libraries/mobile/kotlin-android/destination-plugins/braze-kotlin-android/) app.
+To complete the side-by-side integration, you must add the [Braze Kotlin destination plugin](https://segment.com/docs/connections/sources/catalog/libraries/mobile/kotlin-android/destination-plugins/braze-kotlin-android/) to your Android app. This plugin bridges the Segment SDK and the Braze SDK, allowing device-mode data to flow to Braze. Follow the Segment installation instructions to add the plugin dependency and initialize it with your Segment analytics instance.
 
 The source code for the [Android device mode](https://github.com/braze-inc/braze-segment-kotlin) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
@@ -109,7 +117,7 @@ The Braze SDK you use will depend on which Segment SDK you use:
 
 To set up Braze as a device-mode destination for your iOS source, choose **Actions** as the **Destination framework**, then select **Save**. 
 
-To complete the side-by-side integration, refer to Segment's detailed instructions for adding the Braze Segment pod to your [iOS](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/) app.
+To complete the side-by-side integration, you must add the [Braze Swift destination plugin](https://segment.com/docs/connections/sources/catalog/libraries/mobile/apple/destination-plugins/braze-swift/) to your iOS app. This plugin bridges the Segment SDK and the Braze SDK, allowing device-mode data to flow to Braze. Follow the Segment installation instructions to add the plugin dependency (through Swift Package Manager or CocoaPods) and initialize it with your Segment analytics instance.
 
 The source code for the [iOS device mode](https://github.com/braze-inc/braze-segment-swift) integration is maintained by Braze and is updated regularly to reflect new Braze SDK releases.
 
@@ -480,4 +488,21 @@ When passing user attribute data, check that you only pass values for attributes
 
 {% enddetails %}
 
+{% details Use the correct Braze data center. %}
+
+Segment uses your Braze data center to pull in the appropriate Braze REST endpoint (such as `https://rest.iad-01.braze.com`) for making server-to-server calls.
+
+{% enddetails %}
+
+{% details Remove the Custom REST API endpoint when using Segment's Event Tester. %}
+
+Segment's Event Tester sends events to the Braze `/users/track` REST API endpoint and throws a `401 Invalid API Key` error if a Custom REST API endpoint is set in the Braze destination settings, even when that endpoint is correct. Remove the custom REST API endpoint value in Segment to allow the Event Tester to function properly.
+
+{% enddetails %}
+
+{% details Allow time for updates after configuring a new source. %}
+
+Segment keeps your configuration settings in the cache for a long time, so when configuring a new source (such as switching from Cloud to Device Mode) your app may not show new behavior or data until the cache renews. Be mindful of this delay when planning to add a source.
+
+{% enddetails %}
 

@@ -48,7 +48,7 @@ La façon la plus directe d'utiliser des images et des vidéos directement à pa
 1. Copiez l'URL de l'image ou du GIF depuis le DAM dans Cloudinary en allant dans **Ressources** > **Bibliothèque multimédia** > **Ressources** > **Copier l'URL**.
 2. Créez l'étiquette de l'image en HTML, puis ajoutez `f_auto,q_auto` à l'URL copiée pour optimiser l'image ou le GIF.
 
-#### Exemple d'URL d'une image
+#### Exemple d'URL d'image
 
 {% raw %}
 ```bash
@@ -131,7 +131,7 @@ Pour permettre une sélection dynamique des ressources, Cloudinary doit pouvoir 
 
 #### Exemple d'URL
 
-Cet exemple suppose que les ressources dans Cloudinary ont deux champs SMD définis ("locale" et "audience") renseignés avec les valeurs attendues correspondant aux attributs Braze. En outre, les ressources nécessaires à la campagne ont reçu l'étiquette "samples" et la fonction personnalisée `segmentedBanner.js` a été téléchargée sur le compte Cloudinary. 
+Cet exemple suppose que les ressources dans Cloudinary ont deux champs SMD définis ("locale" et "audience") renseignés avec les valeurs attendues correspondant aux attributs Braze. De plus, les ressources nécessaires à la campagne ont reçu l'étiquette "samples" et la fonction personnalisée `segmentedBanner.js` a été téléchargée sur le compte Cloudinary. 
 
 {% raw %}
 ```bash

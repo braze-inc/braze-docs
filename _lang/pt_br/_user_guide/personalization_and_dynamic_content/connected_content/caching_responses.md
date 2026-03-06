@@ -40,7 +40,7 @@ O Braze usa um cache de várias camadas para respostas de Connected Content com 
 - **Cache da máquina local:** Um cache por trabalhador, como uma instância local do Memcached.
 - **Cache em todo o cluster:** Um cache distribuído compartilhado entre os trabalhadores, como um cluster do Memcached.
 
-Essas camadas de cache são voláteis e podem despejar dados antes do TTL configurado.
+Essas camadas de cache são voláteis e podem remover dados antes do TTL configurado.
 
 #### O que muda quando você usa `:no_cache`
 
@@ -68,7 +68,7 @@ As solicitações GET são armazenadas em cache. Você pode configurar isso adic
 As solicitações POST não são armazenadas em cache. Isso pode ser forçado adicionando o parâmetro :cache_max_age à chamada Connected Content. O tempo mínimo de cache é de 5 minutos e o tempo máximo de cache é de 4 horas.
 
 {% alert note %}
-As configurações de cache não são garantidas. O armazenamento em cache pode reduzir as chamadas para seus pontos de extremidade, por isso recomendamos o uso de várias chamadas por ponto de extremidade dentro da duração do cache, em vez de depender excessivamente do armazenamento em cache.
+As configurações de cache não são garantidas. O armazenamento em cache pode reduzir as chamadas para seus pontos de extremidade, portanto, recomendamos o uso de várias chamadas por ponto de extremidade dentro da duração do cache, em vez de depender excessivamente do armazenamento em cache.
 {% endalert %}
 
 ### Limite de tamanho do cache

@@ -359,7 +359,7 @@ Nachfolgend sehen Sie ein Beispiel für ein `contact.attribute.edited` Ereignis 
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.attribute.edited",
   "properties": {
@@ -423,7 +423,7 @@ Nachfolgend sehen Sie ein Beispiel für ein `contact.experiment.assigned` Ereign
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.experiment.assigned",
   "properties": {

@@ -139,7 +139,7 @@ tool: Canvas
 
 ### " Canvas variation&quot と入力しなかったか; および" Canvas コントロールグループ" と入力しなかったか?
 
-フィルターの詳細については、[セグメント化フィルターs]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters)を参照してください。
+フィルターの詳細については、[セグメント化フィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters)を参照してください。
 
 #### キャンバスのバリエーションが入力されていない
 

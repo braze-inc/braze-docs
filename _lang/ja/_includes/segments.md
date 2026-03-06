@@ -1,6 +1,6 @@
 {% if include.section == "Differing audience size" %}
 
-キャンペーンまたはキャンバスに表示されるターゲット層の大きさは、[到達可能なオーディエンスの大きさとSegment]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size#segment-membership-calculation)とは異なる場合があります。これは、そのSegmentをキャンペーンまたはキャンバスに直接的に追加する場合でも、追加のフィルターs がない場合でも同様です。
+キャンペーンまたはキャンバスに表示されるターゲット層の大きさは、[到達可能なオーディエンスの大きさとSegment]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size#segment-membership-calculation)とは異なる場合があります。これは、そのSegmentをキャンペーンまたはキャンバスに直接的に追加する場合でも、追加のフィルター がない場合でも同様です。
 これは、次のような理由でアプリすることがあります。
 
 - グローバルコントロールグループアプリがキャンペーンまたはキャンバスにある場合、そのグローバルコントロールグループ内のユーザーは、到達可能なユーザー数に含まれません。
