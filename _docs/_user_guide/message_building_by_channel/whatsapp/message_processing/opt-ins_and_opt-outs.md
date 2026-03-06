@@ -98,7 +98,7 @@ You can set up a campaign or Canvas that allows users who message in particular 
 
 #### Step 1: Create a Canvas with a trigger of "Inbound WhatsApp Message"
  
-![Action-based Canvas entry step that that enters users who send a WhatsApp inbound message.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
+![Action-based Canvas entry step that enters users who send a WhatsApp inbound message.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
 
 When selecting keyword triggers, include words like "Stop" or "No Message". If you choose this method, ensure your customers know your opt-out words. For example, after receiving the initial opt-in, include a follow-up response like "To opt-out of these messages, message "Stop" at any time." 
 

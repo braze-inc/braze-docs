@@ -57,4 +57,22 @@ Send all Braze data into the same database and filter by `app_group_id` to disti
 
 The number of Connectors you need depends on your specific configuration and entitlements. Contact your Braze account team to learn more about which entitlements are right for your use case.
 
+### What options exist for isolating data from different workspaces within the same Snowflake account?
+
+You can isolate logically using the `app_group_id` column, which identifies what workspace each row of data belongs to. The most common approaches are:
+
+- **Views (recommended):** Create a view for each workspace filtered by `app_group_id`. This avoids duplicating data while still giving each team or use case a clean, scoped view of their workspace data.
+- **Local table copies:** Copy data into separate tables filtered by `app_group_id`. This duplicates data, so the views approach is generally preferred.
+- **Row access policies and roles:** Use Snowflake-native row access policies combined with roles to restrict which rows each role can query. This keeps data in a single table while enforcing access at query time.
+
+You configure these within your Snowflake account.
+
+### Can I use a different Snowflake account to isolate data from different workspaces?
+
+Yes. If Workspace A shares to Account X and Workspace B shares to Account Y, each account receives an independent share with separate data. However, most organizations use a single Snowflake account for all business data. So, this approach may add operational overhead. Consider this trade-off before choosing it over the logical isolation approaches described in the previous section.
+
+### Is workspace data isolation a supported use case for Snowflake Data Sharing?
+
+Yes, through the logical isolation approaches described in the previous sections. Braze doesn't create separate shares for each workspace, so you manage isolation at the Snowflake level using views, row access policies, or separate accounts.
+
 
