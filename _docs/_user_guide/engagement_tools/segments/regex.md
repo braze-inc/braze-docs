@@ -198,7 +198,7 @@ Before using regex to filter phone numbers, remember that numbers logged for use
 
 Assuming you're searching for US phone numbers, use the regex format `1?\d\d\d\d\d\d\d\d\d\d`, where each repetition of `\d` is a digit you want to specify. The first three digits are the area code.
 
-Likewise, the format for UK phone numbers is `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Any other country would be the the respective country code, followed by the necessary number of `\d` repetitions for each remaining digit. So in the case of Lithuania with a country code of "3", their regex would be `^\+3\d\d\d\d\d\d\d\d\d\d`.
+Likewise, the format for UK phone numbers is `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Any other country would be the respective country code, followed by the necessary number of `\d` repetitions for each remaining digit. So in the case of Lithuania with a country code of "3", their regex would be `^\+3\d\d\d\d\d\d\d\d\d\d`.
 
 For example, let's say you wanted to filter users by phone number for a specific area code, "718". Use the phone number filter, set it to `matches regex`, and enter the following regex:
 

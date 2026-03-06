@@ -4,6 +4,11 @@
 Anytime you add, remove, or update your Cordova plugins, Cordova will overwrite the Podfile in your iOS app's Xcode project. This means you’ll need to set these features up again anytime you modify your Cordova plugins.
 {% endalert %}
 
+## Enabling push deep linking
+
+By default, the Braze Cordova SDK doesn't automatically handle deep links from push notifications. To enable push deep linking, follow the configuration steps in [Deep linking]({{site.baseurl}}/developer_guide/cordova/deep_linking/).
+For more details about these and other push configuration options, see [Optional configurations]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova#optional).
+
 ## Disabling basic push notifications (iOS only)
 
 After you integrate the Braze Cordova SDK for iOS, basic push notification functionality is enabled by default. To disable this functionality in your iOS app, add the following to your `config.xml` file. For more information, see [Optional configurations]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova#optional).

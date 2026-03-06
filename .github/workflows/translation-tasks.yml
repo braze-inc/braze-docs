@@ -13,6 +13,7 @@ permissions:
 
 jobs:
   translation-tasks:
+    if: startsWith(github.event.pull_request.head.ref, 'i18n_phrase-')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout PR branch

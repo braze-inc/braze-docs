@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [OpenAI](https://openai.com/) creates advanced AI models, like GPT, that enable natural language understanding and generation, empowering brands to build and scale meaningful customer interactions. 
 
-{% multi_lang_include alerts/important_alerts.md alert='Braze Agents beta' %}
+{% multi_lang_include alerts/important_alerts.md alert='Braze Agents' %}
 
 _This integration is maintained by OpenAI._
 
