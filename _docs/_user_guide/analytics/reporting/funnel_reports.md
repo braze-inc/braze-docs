@@ -88,3 +88,15 @@ In your funnel report, you can directly compare the control group alongside the 
 Orphaned users are not tracked in funnel reports. When an anonymous user enters a Canvas or campaign and later becomes identified through the `changeUser()` method, their Braze ID changes. Funnel reports only track follow-up events that match the user ID at the time of entry and do not account for events performed by the user after their ID changes. This means that conversion events performed by the user after becoming identified will not be included in the funnel report.
 {% endalert %}
 
+## Frequently asked questions
+
+### Why are the analytics on the Canvas different from the funnel report?
+
+Canvas step-level analytics and funnel reports use different scoping rules for the same date range, so they are not expected to match. The differences come down to how each report defines "which events count."
+
+**Canvas analytics (Analyze Variants tab):** The date range filters events by _when they occurred_. If you select January 1–7, you see all entries and conversion events that happened during that window — regardless of when the user entered the Canvas. A user who entered on January 1 but converted on January 8 would show 1 entry and 0 conversions, because the conversion fell outside the selected dates. The conversion window configured on the Canvas step can also extend well beyond 14 days, so step-level analytics may capture conversions over a longer horizon.
+
+**Funnel reports:** The date range filters _users by when they entered_ the Canvas. If you select January 1–7, the report includes every user who entered during that window, then tracks their actions for up to 14 days after entry (or whatever window you configure in the funnel). The same user who entered on January 1 and converted on January 8 would show 1 entry and 1 conversion, because the conversion happened within the post-entry window.
+
+Additionally, funnel reports require events to occur in the specified order and count each user at most once, while Canvas analytics count all conversions and engagement without an ordering constraint.
+
