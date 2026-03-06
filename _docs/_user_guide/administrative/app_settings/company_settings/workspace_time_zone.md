@@ -9,9 +9,7 @@ description: "This reference article covers how to configure different time zone
 
 > Workspace time zones allow admins to define specific time zones for individual workspaces. This makes scheduled campaigns and Canvases (that don't use local time or Intelligent Time delivery) send according to the workspace's designated time zone, rather than the overarching company time zone.
 
-{% alert important %}
-Workspace time zones are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='Workspace time zones' %}
 
 By default, a new workspace inherits the time zone set for your company. Admins can override this default for one or multiple workspaces with workspace time zones. When a workspace time zone is set, scheduled campaigns and Canvases within that workspace references that new time zone for their send times.
 
