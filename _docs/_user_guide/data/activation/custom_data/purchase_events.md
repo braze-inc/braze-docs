@@ -152,8 +152,6 @@ You can find this data on the [Revenue Report]({{site.baseurl}}/user_guide/data_
 
 When purchase events are logged in a non-USD currency, Braze converts the amount to USD using exchange rates from [Open Exchange Rates](http://openexchangerates.org). These rates are refreshed once every 24 hours. Because the exchange rates are cached, there may be slight differences from the real-time market rate, particularly for currencies experiencing rapid fluctuation.
 
-Revenue figures displayed in the dashboard — including Lifetime Revenue and the Revenue Report — reflect these converted USD amounts.
-
 #### Lifetime revenue calculation
 
 Braze uses purchase events to calculate the lifetime revenue (also called lifetime value or LTV) of a user, which is a prediction of the net profit attributed to the entire future relationship with a customer. This can help you make informed decisions about customer acquisition and retention strategies.
