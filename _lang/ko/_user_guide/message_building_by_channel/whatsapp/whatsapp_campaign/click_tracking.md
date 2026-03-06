@@ -63,6 +63,12 @@ channel:
 
 !["버튼 이름, 웹사이트 URL, 클릭 추적 URL 필드가 있는 '버튼' 섹션입니다.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
+{% alert important %}
+**API를 통해 템플릿 메시지 보내기**: [`/messages/send` 엔드포인트를]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) 통해 WhatsApp 템플릿 메시지를 보낼 때는 WhatsApp 클릭 추적( `brz.ai` 또는 커스텀 추적 도메인과 메시지 작성기의 **클릭 추적 URL** 필드 사용)이 지원되지 않습니다.
+
+API를 통해 템플릿 메시지를 전송하는 경우 `button_variables`)를 사용하여 CTA URL 변수를 채울 수 있지만 Braze는 API 요청 흐름에서 클릭 추적 URL이나 리디렉션 링크를 생성하지 않습니다. 클릭 추적을 사용하려면 Braze 대시보드에서 또는 Braze 캠페인 트리거를 통해 템플릿을 전송하세요.
+{% endalert %}
+
 {% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
 ## URL의 유동적 개인화

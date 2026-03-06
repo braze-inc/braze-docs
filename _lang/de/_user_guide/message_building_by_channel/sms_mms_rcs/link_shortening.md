@@ -74,7 +74,7 @@ https://example.com/{{url_var}}
 
 ### Kürzen Sie URLs, die von Liquid-Variablen gerendert werden
 
-Wir kürzen URLs, die von Liquid erstellt werden – auch solche in API-Triggereigenschaften. Wenn {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} beispielsweise eine gültige URL darstellt, kürzen und tracken wir diese URL, bevor wir die Nachricht senden. 
+Wir kürzen URLs, die von Liquid erstellt werden – auch solche in API-Triggereigenschaften. Wenn {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} beispielsweise eine gültige URL darstellt, kürzen und tracken wir diese URL, bevor wir die Nachricht versenden. 
 
 ### URLs im Endpunkt `/messages/send` verkürzen
 
@@ -134,10 +134,10 @@ Zur Zeit sind RCS-Klick-Ereignisse nicht über Currents verfügbar.
 
 ### Funktioniert die Linkverkürzung mit Deep Links oder universellen Links?
 
-Deeplinks können nicht gekürzt werden. Alternativ können Sie auch universelle Links von Drittanbietern wie Branch oder Appsflyer kürzen, aber Nutzer:innen werden dann möglicherweise kurzzeitig umgeleitet oder flackern". Dies liegt daran, dass der verkürzte Link zuerst durch das Internet geleitet wird, bevor er in den universellen Link aufgelöst wird, der die Öffnung der App unterstützt. Darüber hinaus ist Braze nicht in der Lage, Fehlerbehebungen vorzunehmen, die beim Kürzen von universellen Links auftreten können, z.B. wenn die Attribution unterbrochen wird oder unerwartete Weiterleitungen verursacht werden.
+Deeplinks können nicht gekürzt werden. Alternativ können Sie auch universelle Links von Drittanbietern wie Branch oder Appsflyer verkürzen, aber Nutzer:innen werden dann möglicherweise kurzzeitig umgeleitet oder flackern". Das liegt daran, dass der verkürzte Link zunächst durch das Internet geleitet wird, bevor er in den universellen Link aufgelöst wird, der die Öffnung der App unterstützt. Außerdem ist Braze nicht in der Lage, Fehlerbehebungen vorzunehmen, die beim Kürzen von universellen Links auftreten können, wie z.B. die Unterbrechung der Attribution oder unerwartete Umleitungen.
 
 {% alert note %}
-Testen Sie die Nutzer:in, bevor Sie die Linkverkürzung mit universellen Links implementieren, um sicherzustellen, dass sie Ihren Erwartungen entspricht.
+Testen Sie die Nutzer:in vor der Implementierung der Linkverkürzung mit universellen Links, um sicherzustellen, dass sie Ihren Erwartungen entspricht.
 {% endalert %}
 
 ### Ist `send_ids` mit SMS-Klick-Ereignissen verbunden?

@@ -151,7 +151,7 @@ Para conectar Survicate a Braze, la clave de API de Braze debe tener permisos `u
 
 ### Conectar tus cuestionarios a Braze
 
-Ahora que la integración Braze está conectada, puedes establecer configuraciones individuales para cada cuestionario. Ve a tu cuestionario, selecciona la pestaña **Conectar** y elige **Braze** de la lista de integraciones disponibles.
+Ahora que la integración Braze está conectada, puedes establecer una configuración individual para cada cuestionario. Ve a tu cuestionario, selecciona la pestaña **Conectar** y elige **Braze** de la lista de integraciones disponibles.
 
 ![Ve a tu cuestionario, selecciona la pestaña Conectar y elige Braze]({% image_buster /assets/img/survicate/survicate_14.png %})
 
@@ -215,7 +215,7 @@ También puedes utilizar estos datos al crear una campaña en Braze.
 
 ### Prueba la integración
 
-Cuando tengas tu cuestionario listo y la integración configurada, puedes probarla sin salir de Survicate haciendo clic en el botón Probar integración junto a cualquier atributo, etiqueta o nueva configuración de contacto que hayas creado. Survicate crea un contacto de prueba (`braze-test@survicate.com`) en tu cuenta de Braze. El perfil del contacto incluye campos actualizados según la configuración.
+Cuando tengas tu cuestionario listo y la integración configurada, puedes probarla sin salir de Survicate haciendo clic en el botón Probar integración, junto a cualquier atributo, etiqueta o configuración de nuevo contacto que hayas creado. Survicate crea un contacto de prueba (`braze-test@survicate.com`) en tu cuenta de Braze. El perfil del contacto incluye campos actualizados según la configuración.
 
 ![Haz clic en el botón Probar integración]({% image_buster /assets/img/survicate/survicate_26.png %})
 

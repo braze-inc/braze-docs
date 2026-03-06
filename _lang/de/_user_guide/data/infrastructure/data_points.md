@@ -65,7 +65,7 @@ Das Update eines angepassten Attributs auf `null` verbraucht ebenfalls einen Dat
 
 #### CSV
 
-Angepasste Attribute, die über den CSV-Import hochgeladen werden, zählen für Ihre Datenpunkte. Bei CSV-Importen zum Zwecke der Segmentierung (Importe mit `external_id`, `braze_id` oder `user_alias_name` als einzigem Feld) werden jedoch keine Datenpunkte protokolliert.
+Angepasste Attribute, die über den CSV-Import hochgeladen werden, zählen für Ihre Datenpunkte. Bei CSV-Importen zum Zweck der Segmentierung (Importe mit `external_id`, `braze_id` oder `user_alias_name` als einzigem Feld) werden jedoch keine Datenpunkte protokolliert.
 
 Da bei Änderungen des Abo-Status keine Datenpunkte protokolliert werden, fallen auch beim Update der Felder `email_subscribe`, `push_subscribe`, `subscription_group_id` oder `subscription_state` in Ihrer CSV-Datei keine Kosten an.
 
@@ -161,7 +161,7 @@ table td {
 | Zuweisung der Mixpanel-Kohorte | Alle Zuweisungen | |
 | Zuweisung der Hightouch Kohorte | Alle Zuweisungen | |
 | Appsflyer Kohorten-Zuordnung | Alle Zuweisungen | |
-| Jüngster Standort | Alle aktuellen Standorte | Beim Betreten oder Verlassen von Geoofences werden keine Datenpunkte protokolliert, da Geofence-Daten nicht im Nutzerprofil gespeichert sind. Geofences werden von Apple und Google Serviceleistungen; Diensten überwacht; Braze wird nur benachrichtigt, wenn ein Nutzer:innen einen Geofence triggert. |
+| Jüngster Standort | Alle aktuellen Standorte | Beim Betreten oder Verlassen von Geoofences werden keine Datenpunkte protokolliert, da Geofence-Daten nicht im Nutzerprofil gespeichert werden. Geofences werden von Apple und Google Serviceleistungen; Diensten überwacht; Braze wird nur benachrichtigt, wenn ein Nutzer:innen einen Geofence triggert. |
 | Twitter | Nutzername | |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

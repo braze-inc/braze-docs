@@ -1,7 +1,7 @@
 ---
 nav_title: Okendo
 article_title: "Okendo"
-description: "Apprenez à intégrer Okendo avec Braze."
+description: "Découvrez comment intégrer Okendo à Braze."
 page_type: partner
 search_tag: Partner
 alias: /partners/okendo/

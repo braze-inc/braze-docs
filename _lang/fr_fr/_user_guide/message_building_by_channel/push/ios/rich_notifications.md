@@ -131,7 +131,7 @@ Ajoutez votre fichier image, GIF, audio ou vidéo dans le champ **Rich Notificat
 
 Vous pouvez également limiter ce message à des utilisateurs qui ont un appareil qui exécute iOS 10. Pour les utilisateurs qui ne sont pas passés à iOS 10, elle apparaîtra sous forme de notifications textuelles sans le contenu enrichi si vous ne cochez pas l'option **N'envoyer qu'aux appareils prenant en charge les notifications enrichies**.
 
-![La section de l'image de notification étendue où vous pouvez ajouter une image ou entrer l'URL d'une image.]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
+![La section de l'image de notification étendue dans laquelle vous pouvez ajouter une image ou entrer une URL d'image.]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
 
 ### Étape 3 : Continuer à créer votre campagne
 

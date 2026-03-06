@@ -134,7 +134,7 @@ No momento, os eventos de cliques do RCS não estão disponíveis no Currents.
 
 ### O encurtamento de links funciona com deep links ou links universais?
 
-O encurtamento de links não funciona com deep links. Como alternativa, é possível encurtar links universais de provedores de terceiros, como Branch ou Appsflyer, mas os usuários podem experimentar um breve redirecionamento ou um efeito de "cintilação". Isso ocorre porque o link encurtado é roteado primeiro pela Web antes de ser resolvido para o link universal que suporta a abertura do app. Além disso, o Braze não consegue solucionar problemas que possam surgir ao encurtar links universais, como quebrar a atribuição ou causar redirecionamentos inesperados.
+O encurtamento de links não funciona com deep links. Como alternativa, é possível encurtar links universais de provedores de terceiros, como Branch ou Appsflyer, mas os usuários podem experimentar um breve redirecionamento ou efeito de "cintilação". Isso ocorre porque o link encurtado é roteado primeiro pela Web antes de ser resolvido para o link universal que suporta a abertura do app. Além disso, o Braze não consegue solucionar problemas que possam surgir ao encurtar links universais, como quebrar a atribuição ou causar redirecionamentos inesperados.
 
 {% alert note %}
 Teste a experiência do usuário antes de implementar o encurtamento de links com links universais para confirmar se ele atende às suas expectativas.

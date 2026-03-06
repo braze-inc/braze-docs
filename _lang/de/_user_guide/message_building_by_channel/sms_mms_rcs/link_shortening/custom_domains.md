@@ -13,7 +13,7 @@ channel:
 
 # Angepasste Domains zur Selbstbedienung
 
-> Auf dieser Seite erfahren Sie, wie Sie Ihre eigenen angepassten Domains im Braze-Dashboard einrichten können. Mit angepassten Domains können Sie anstelle eines generischen verkürzten Links oder der Braze-Domain (`brz.ai`) einen markenspezifischen verkürzten Link verwenden, der die Identität Ihrer Marke widerspiegelt - und damit das Vertrauen der Nutzer:innen und das Engagement der Kampagnen mit SMS-Links verbessert.
+> Auf dieser Seite erfahren Sie, wie Sie Ihre eigenen angepassten Domains im Braze-Dashboard einrichten können. Mit angepassten Domains können Sie anstelle eines generischen verkürzten Links oder der Braze-Domain (`brz.ai`) einen markenbezogenen verkürzten Link verwenden, der die Identität Ihrer Marke widerspiegelt - und damit das Vertrauen der Nutzer:innen und das Engagement der Kampagnen mit SMS-Links verbessert.
 
 Mit angepassten Domains zur Selbstbedienung können Sie Ihre eigenen angepassten Domains für SMS, RCS und WhatsApp konfigurieren und verwalten - direkt von Ihrem Braze-Dashboard aus. Sie können ganz einfach bis zu 10 angepasste Domains an einem Ort hinzufügen, überwachen und verwalten.
 

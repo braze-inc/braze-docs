@@ -127,7 +127,7 @@ With the Braze SDKs, you can track custom events or custom attributes that go be
 
 For example, the following JavaScript snippet tracks if the current user subscribes to a newsletter, and logs that as a custom event on their profile in Braze:
 
-```json
+```javascript
 braze.logCustomEvent(
   “subscribed_to_newsletter”,
   {
@@ -177,7 +177,7 @@ Select your `external_id` type from the dropdown.
 
 ### Step 4.2: 외부 ID를 검색할 엔드포인트 만들기
 
-외부 ID를 검색하기 위해 Braze가 호출할 수 있는 공용 엔드포인트를 만들어야 합니다. 이렇게 하면 Shopify에서 `braze.external_id` 메타필드를 직접 제공할 수 없는 시나리오에서 Braze가 ID를 가져올 수 있습니다.
+외부 ID를 검색하기 위해 Braze가 호출할 수 있는 공용 엔드포인트를 만들어야 합니다. 이를 통해 Shopify에서 `braze.external_id` 메타필드를 직접 제공할 수 없는 시나리오에서 Braze가 ID를 가져올 수 있습니다.
 
 #### 엔드포인트 사양
 

@@ -169,7 +169,7 @@ Ihre neu erstellte Rolle wird in der Liste erscheinen!
 {: start="2"}
 2\. Gehen Sie in Braze zu **Einstellungen** > **Unternehmenseinstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen** und blättern Sie zum Abschnitt **Sicherheitsereignis-Download**.
 
-!["Sicherheitsereignis-Download" mit einem umgeschalteten Schalter für "Export in AWS S3".]({% image_buster /assets/img/security_export/security_event_download3.png %})
+!["Download von Sicherheitsereignissen" mit einem umgeschalteten Schalter für "Export zu AWS S3".]({% image_buster /assets/img/security_export/security_event_download3.png %})
 
 {: start="3"}
 3\. Vergewissern Sie sich, dass die **AWS-Rolle ARN** ausgewählt ist, und geben Sie dann Ihren Rollen-ARN und den AWS S3 Bucket-Namen in die entsprechenden Felder ein.

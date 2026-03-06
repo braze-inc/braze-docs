@@ -572,7 +572,7 @@ So richten Sie regelmäßige Engagement-Berichte ein:
 3. Fügen Sie die [Kampagnen und Canvas-Nachrichten]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (einzeln oder [nach Tag]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) hinzu, die Sie in Ihrem Bericht zusammenstellen möchten.
 4. [Nehmen Sie Statistiken]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) in den Bericht [auf]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report).
 5. Wählen Sie die Komprimierung und den Deliminator für Ihren Bericht.
-6. Geben Sie die E-Mail-Adressen der Braze-Benutzer ein, die diesen Bericht erhalten sollen.
+6. Geben Sie die E-Mail-Adressen der Nutzer:innen des Unternehmens ein, die diesen Bericht erhalten sollen.
 7. Wählen Sie den [Zeitraum]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) aus, aus dem Sie Daten für Ihren Bericht ausführen möchten.
 8. Wählen Sie die [Intervalle (täglich, wöchentlich, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display), in denen Sie die Aufschlüsselung Ihrer Daten sehen möchten.
 9. Planen Sie Ihren Bericht so, dass er [sofort]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) oder zu einem [bestimmten Zeitpunkt in der Zukunft]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time) [gesendet wird]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately).

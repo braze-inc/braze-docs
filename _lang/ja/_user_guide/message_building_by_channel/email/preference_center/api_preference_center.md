@@ -1,13 +1,13 @@
 ---
-nav_title: 原薬メール ユーザー設定センター
-article_title: 原薬メール ユーザー設定センター
+nav_title: APIメール ユーザー設定センター
+article_title: APIメール ユーザー設定センター
 page_order: 1
 description: "ここでは、API メール ユーザー設定センターとそのカスタマイズ方法について説明します。"
 channel:
   - email
 ---
 
-# 原薬メール ユーザー設定センター
+# APIメール ユーザー設定センター
 
 > ユーザー設定センターを設定することで、ユーザーが[メールメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/email/)の通知設定を編集や管理するためのワンストップショップを提供できます。この記事では、API で生成されたユーザー設定センターの作成手順を説明しますが、[ドラッグ＆ドロップエディター]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/)を使ってユーザー設定センターを作成することもできます。
 
@@ -106,7 +106,7 @@ My encoded string is: {{my_string}}
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 

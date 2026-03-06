@@ -6,7 +6,7 @@ page_type: reference
 page_order: 0.0
 ---
 
-# Generate Liquid code with BrazeAI<sup>TM</sup>
+# Generate Liquid code with BrazeAI
 
 > The BrazeAI<sup>TM</sup> Liquid Assistant is a chat assistant powered by BrazeAI<sup>TM</sup> that helps generate the Liquid you need to personalize message content.
 

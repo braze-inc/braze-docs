@@ -71,6 +71,14 @@ Les utilisateurs de ce segment ne seront pas supprimés immédiatement. Au lieu 
 Pour s'assurer que ces utilisateurs précis sont supprimés indépendamment des changements de segmentation, un filtre de segmentation appelé **Suppression en attente** est automatiquement créé. Vous pouvez [utiliser ce filtre]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) pour vérifier l'état des suppressions en attente.
 {% endalert %}
 
+## Confirmation des suppressions de segments
+
+Braze envoie un e-mail de confirmation indiquant le nombre de profils en attente de suppression.
+
+Pour poursuivre la suppression, connectez-vous à Braze et confirmez la demande de suppression.
+
+Si vous ne confirmez pas dans le délai indiqué dans l'e-mail, la demande de suppression expire et n'est pas traitée.
+
 ## Annulation des suppressions de segments {#cancel}
 
 Vous disposez d'un délai de 7 jours pour annuler les segmentations en cours. Pour annuler, allez dans **Audience** > **Gérer l'audience**, puis sélectionnez l'onglet **Supprimer les utilisateurs.** 
@@ -79,7 +87,7 @@ Vous disposez d'un délai de 7 jours pour annuler les segmentations en cours. Po
 
 En regard d'une segmentation en attente de suppression, sélectionnez <i class="fa-solid fa-eye"></i> pour ouvrir les détails de l'enregistrement de suppression.
 
-![Suppression d'un segment en attente dans l'onglet "Supprimer des utilisateurs".]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
+![La suppression d'un segment en attente dans l'onglet "Supprimer des utilisateurs".]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
 
 Dans les détails de l'enregistrement de suppression, sélectionnez **Annuler suppression**.
 
@@ -121,9 +129,9 @@ Sur cette page, vous trouverez les informations générales suivantes pour toute
 | État | Indique si la demande de suppression est en attente, en cours ou terminée. |  
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-Pour plus de détails sur une demande spécifique, sélectionnez <i class="fa-solid fa-eye"></i> pour afficher les détails de l'enregistrement de suppression. Vous pouvez également y [annuler les suppressions de segments en cours](#cancel).
+Pour plus de détails sur une demande spécifique, sélectionnez <i class="fa-solid fa-eye"></i> pour afficher les détails de l'enregistrement de suppression. Vous pouvez également [annuler les suppressions de segments en cours](#cancel).
 
-![Suppression d'un segment en attente dans l'onglet "Supprimer des utilisateurs".]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
+![La suppression d'un segment en attente dans l'onglet "Supprimer des utilisateurs".]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
 
 ### Rapport sur les événements de sécurité
 
@@ -135,9 +143,17 @@ Vous pouvez également vérifier l'état des suppressions précédentes en tél�
 
 Non. Vous ne pouvez pas supprimer les segmentations qui comptent plus de 100 millions d'utilisateurs. Si vous avez besoin d'aide pour supprimer un segment de cette taille, contactez [support@braze.com](mailto:support@braze.com).
 
+### Il semble que je ne puisse pas supprimer 100 millions d'utilisateurs et que je sois limité à 10 millions. S'agit-il d'un bogue ?
+
+Non, il ne s'agit pas d'un bogue. Certains clients sont limités dans le nombre d'utilisateurs qu'ils peuvent supprimer pendant le programme d'accès anticipé (EA).
+
+Au fur et à mesure de l'avancement du programme EA, cette capacité est destinée à augmenter jusqu'à ce que tous les clients puissent supprimer jusqu'à 100 millions d'utilisateurs.
+
+Si vous souhaitez augmenter cette capacité, contactez votre gestionnaire de compte Braze. Les demandes sont accordées à la discrétion de l'équipe produit.
+
 ### La fusion automatisée des utilisateurs a-t-elle une incidence sur la suppression des utilisateurs ?
 
-Si une fusion planifiée comprend des profils utilisateurs en attente de suppression, Braze ignore ces profils et ne les fusionne pas. Pour fusionner ces profils, vous devez les empêcher d'être supprimés.
+Si une fusion planifiée inclut des profils utilisateurs en attente de suppression, Braze ignore ces profils et ne les fusionne pas. Pour fusionner ces profils, vous devez les empêcher d'être supprimés.
 
 ### Qu'advient-il des données envoyées aux utilisateurs en attente de suppression ?
 

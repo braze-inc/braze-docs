@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Simon IA
 
-> A [Simon IA][1] Plataforma de Marketing Agente ajuda equipes de marketing a alcançar verdadeira personalização um-a-um. Ela combina um CDP componível com agentes de IA que operam diretamente na Nuvem de Dados AI do Snowflake para atuar como a equipe de dados e execução de um profissional de marketing.
+> A [Simon IA][1] Plataforma de Marketing Agente ajuda equipes de marketing a alcançar verdadeira personalização um-a-um. Ela combina um CDP componível com agentes de IA que operam diretamente na Snowflake AI Data Cloud para atuar como a equipe de dados e execução de um profissional de marketing.
 
 Use a integração Braze e Simon IA para construir e sincronizar audiências avançadas no Braze para orquestração em tempo real, sem código. Com esta integração, você pode aproveitar a resolução de identidade do Simon IA, a unificação de dados de clientes e a segmentação impulsionada por IA para potencializar campanhas Braze mais personalizadas e impactantes a montante.
 
@@ -19,7 +19,7 @@ Para começar, você precisa autenticar sua conta Braze dentro da sua conta Simo
 
 | Requisito         | Descrição                                                                                                                                                               |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Simon IA          | Você deve ter uma conta Simon IA existente para aproveitar a integração Braze a partir do Simon IA.                                                                    |
+| Simon IA          | Você deve ter uma conta Simon IA existente para aproveitar a integração Braze dentro do Simon IA.                                                                    |
 | Chave da API REST do Braze  | Uma chave da API REST da Braze com as permissões `users.track`, `campaigns.trigger.schedule.create` e `campaigns.trigger.send`. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
 | URL do dashboard do Braze | [Seu URL do ponto de extremidade REST][3]. Seu endpoint dependerá do URL do Braze para sua instância.                                                                                |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -79,7 +79,7 @@ Depois que as características de contato forem ativadas pelo gerente da sua con
    2. Edite o **nome Downstream** se quiser que os nomes dos campos apareçam de forma diferente quando chegarem ao Braze.
    3. Se esta for a primeira vez que faz a integração com o Braze a partir do Simon, clique em **Backfill all contacts (Preencher todos os contatos**). O backfilling envia todos os pontos de dados para o Braze na primeira vez que você usa uma ação em um fluxo ou jornada para garantir que todos os seus dados estejam totalmente sincronizados. Em seguida, nas sincronizações subsequentes, somente as características que você escolher nessa tela serão enviadas ao Braze. Isso ajuda a garantir que você seja cobrado apenas pelos dados de que precisa.
 
-![Selecionando traços de sincronização no Simon IA.][10]
+![Selecionando características de sincronização no Simon IA.][10]
 
 [1]: https://www.simondata.com
 

@@ -26,7 +26,7 @@ search_rank: 8
 
 | 요구 사항 | Origin | Access | 설명
 |---|---|---|---|
-| 파트너 계정 | 그 파트너와 계정을 정리하거나 Braze 계정 매니저에게 제안 요청을 하세요. | 그 파트너의 사이트를 확인하거나 그 파트너에게 연락하여 가입하세요. | 회사 계정을 통해 해당 데이터에 액세스할 수 없는 경우 Braze는 파트너에게 데이터를 전송하지 않습니다.
+| 파트너 계정 | 해당 파트너와 계정을 정리하거나 Braze 계정 매니저에게 제안 요청하세요. | 해당 파트너의 사이트를 확인하거나 그 파트너에게 연락하여 가입하세요. | 회사 계정을 통해 해당 데이터에 액세스할 수 없는 경우 Braze는 파트너에게 데이터를 전송하지 않습니다.
 | 파트너 API 키 또는 토큰 | 일반적으로 파트너의 대시보드입니다. | 지정된 Braze 필드에 복사하여 붙여넣기 하세요. | Braze는 해당 파트너의 통합 페이지에 이를 위한 지정 필드가 있습니다. 우리는 데이터를 전송할 위치를 매핑하기 위해 이것이 필요합니다. **파트너 키 또는 토큰을 최신 상태로 유지하세요; 유효하지 않은 자격 증명은 커넥터를 비활성화하고 이벤트를 삭제할 수 있습니다.**
 | 인증 코드/키, 비밀 키, 인증 파일 | 해당 파트너의 계정 담당자에게 문의하세요. 파트너의 대시보드에도 존재할 수 있습니다. | 지정된 Braze 필드에 키를 복사하여 붙여넣습니다. `.json` 또는 기타 인증 파일을 Braze의 적절한 위치에 생성하고 업로드하세요. | Braze는 해당 파트너의 통합 페이지에 이를 위한 지정 필드가 있습니다. 이렇게 하면 Braze 자격 증명이 부여되고 파트너 계정에 파일을 쓸 수 있는 권한이 부여됩니다. **인증 세부 정보를 최신 상태로 유지하는 것이 중요합니다. 유효하지 않은 자격 증명은 커넥터를 비활성화하고 이벤트를 삭제할 수 있습니다.**
 | 버킷, 폴더 경로 | 일부 파트너는 데이터를 버킷별로 정리하고 분류합니다. 파트너의 대시보드에서 찾을 수 있습니다. | 필요한 경우, 버킷 이름 또는 파일 경로를 Braze의 지정된 공간에 정확히 복사하세요. | 일부 파트너에게는 필수 사항이지만, 필요할 때 올바르게 처리하는 것이 중요합니다. |
@@ -46,7 +46,7 @@ Braze Currents를 사용하면 플랫 파일을 사용하여 데이터 저장소
 
 ### 2단계: 오픈 커런트
 
-시작하려면 **파트너 통합** > **커런츠**로 가세요. 커런츠 통합 관리 페이지로 이동합니다.
+시작하려면 **파트너 통합** > **커런츠**로 이동하세요. 커런츠 통합 관리 페이지로 이동합니다.
 
 ![Braze 대시보드의 커런츠 페이지]({% image_buster /assets/img_archive/currents-main-page.png %})
 
@@ -87,16 +87,16 @@ Before you test, consider checking out our [sample Currents data in GitHub](http
 
 To test your integration, you can select **Send Test Events** to send one event from each of your selected event types to this Current. For detailed information about each event type, refer to our [Customer Behavior Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) libraries.
 
-![Braze 대시보드의 "커런츠 테스트" 페이지.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
+![Braze 대시보드의 "커런츠 테스트" 페이지입니다.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### 전류 커넥터 테스트
 
 테스트 커런츠 커넥터는 다양한 목적지를 테스트하고 시도해 볼 수 있는 기존 커넥터의 무료 버전입니다. 테스트 커런츠는 다음을 포함합니다.
 
-- 테스트 커런츠 커넥터를 구축할 수 있는 수에는 제한이 없습니다.
-- 7일 롤링 기간 동안 최대 10,000개의 이벤트가 집계됩니다. 이 이벤트 총계는 대시보드에서 매시간 업데이트됩니다.
+- 작업 공간당 최대 10개의 테스트 커런츠 커넥터.
+- 고정된 24시간 기간당 최대 1,500개의 이벤트, 자정 UTC에 리셋됩니다. 이 이벤트 총계는 대시보드에서 매시간 업데이트됩니다.
 
-테스트 커런츠 커넥터가 전송 한도에 도달하면, 커넥터는 다음 7일 기간까지 이벤트를 전송하지 않습니다.
+테스트 커런츠 커넥터가 전송 한도에 도달한 후, 다음 날(자정 UTC)까지 이벤트를 전송하지 않습니다.
 
 To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade Test Integration**.
 

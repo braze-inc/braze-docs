@@ -23,7 +23,7 @@ The Braze and PassKit integration allows you to increase and measure the engagem
 | Requirement | Description |
 | ----------- | ----------- |
 | PassKit account | Passkit 계정과 Passkit 계정 매니저가 있어야 합니다. |
-| `userDefinedID` | Passkit과 Braze 간에 사용자에 대한 커스텀 이벤트 및 커스텀 속성을 적절하게 업데이트하려면 Braze 외부 ID를 `userDefinedID` 로 설정해야 합니다. 이 `userDefinedID` 는 Passkit 엔드포인트에 API 호출을 할 때 사용됩니다. |
+| `userDefinedID` | Passkit과 Braze 간에 커스텀 이벤트 및 커스텀 속성을 사용자에게 적절하게 업데이트하려면 Braze 외부 ID를 `userDefinedID` 로 설정해야 합니다. 이 `userDefinedID` 는 Passkit 엔드포인트에 API 호출을 할 때 사용됩니다. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
