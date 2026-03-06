@@ -198,6 +198,6 @@ If some users are logging sessions and others aren't, verify the following:
 If the issue persists after verifying your implementation, reproduce the problem and collect the following information before contacting support:
 
 - The affected app version
-- [Verbose SDK logs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#android-verbose-logging) captured while the issue occurs
+- Verbose SDK logs ([Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_enabling-logs), [Swift]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift#swift_setting-the-log-level), [Web]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web#web_logging)) captured while the issue occurs
 - The code snippet for SDK initialization
 - A summary of any conditional logic applied before initialization
