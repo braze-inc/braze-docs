@@ -145,7 +145,7 @@ For further assistance with campaign troubleshooting, be sure to contact Braze S
 
 ### Why did users receive my campaign twice after I edited it?
 
-If you edit a live campaign without stopping it first, users may receive the message twice. This happens because editing a live campaign re-enqueues users for the updated version while the original queue is still being processed. Users who haven't been delivered the original message yet can end up in both queues. To prevent this, always [stop the campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/#risks-of-editing-live) before making changes.
+If you edit a live campaign without stopping it first, users may receive the message twice. This happens because editing a live campaign re-enqueues users for the updated version while the original queue is still being processed. Users who haven't received the original message yet can end up in both queues. To prevent this, always [stop the campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/#stopping-your-campaign) before making changes.
 
 ### What is the difference between the CSV Export User Data and CSV Export Email Address options on my campaign analytics page?
 
