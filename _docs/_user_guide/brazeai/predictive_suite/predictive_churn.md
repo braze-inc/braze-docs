@@ -25,7 +25,7 @@ Updating the risk scores of the prediction audience can be done at a [frequency 
 
 ## Accessing Predictive Churn
 
-{% include brazeai/predictions_page_access.md %}
+{% multi_lang_include brazeai/predictions_page_access.md %}
 
 Prior to purchasing this feature, it is available in preview mode. This will allow you to see a demo churn prediction with synthetic data and create one churn prediction model based on your user data at a time. This preview will not allow you to target users for messaging according to churn risk and will not regularly update after creation.
 
