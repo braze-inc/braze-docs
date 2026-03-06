@@ -7,7 +7,7 @@ description: "Learn about version management for the Braze SDK."
 
 # About version management
 
-> Learn about version management for the Braze SDK, so your app can stay up-to-date with the latest features and quality improvements. Because older versions of the SDK may not receive the latest patch, bugfix, or support, we recommend always keeping your it up-to-date as a part of your ongoing development lifecycle.
+> Learn about version management for the Braze SDK, so your app can stay up to date with the latest features and quality improvements. Because older versions of the SDK may not receive the latest patch, bugfix, or support, we recommend always keeping it up to date as a part of your ongoing development lifecycle.
 
 ## Versioning recommendations
 
@@ -21,16 +21,16 @@ All Braze SDKs adhere to the [Semantic Versioning Specification (SemVer)](https:
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert note %}
-Sometimes new Android or Apple OS updates require changes to the Braze SDK. To ensure your app is compatible with newer phones, it's important you keep your SDK up-to-date.
+Sometimes new Android or Apple OS updates require changes to the Braze SDK. To help keep your app compatible with newer phones, it's important you keep your SDK up to date.
 {% endalert %}
 
 ## Getting notified of new releases
 
-To receive automatic notifications when a new SDK version is released, you can "Watch" the GitHub repository for any Braze SDK:
+To receive automatic notifications when a new SDK version is released, you can watch the GitHub repository for any Braze SDK:
 
 1. Go to the SDK's GitHub repository (for example, [braze-android-sdk](https://github.com/braze-inc/braze-android-sdk), [braze-swift-sdk](https://github.com/braze-inc/braze-swift-sdk), or [braze-web-sdk](https://github.com/braze-inc/braze-web-sdk)).
-2. Select **Watch** in the upper-right corner.
-3. Select **Custom**, then check **Releases** and select **Apply**.
+2. Click **Watch** in the upper-right corner.
+3. Click **Custom**, then select **Releases**, and click **Apply**.
 
 You'll receive a GitHub notification (and an email, depending on your [notification settings](https://github.com/settings/notifications)) each time a new release is published. For the full list of SDK repositories, see [References, Repositories, and Sample Apps]({{site.baseurl}}/developer_guide/references/).
 
