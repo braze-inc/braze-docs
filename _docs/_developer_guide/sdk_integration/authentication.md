@@ -817,15 +817,22 @@ When a request is rejected because of an authentication error, the SDK will invo
 
 Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
 
-#### Can you use SDK authentication for anonymous users? {#faq-anonymous-users}
+#### Can you use JWT request protection for anonymous users? {#faq-anonymous-users}
 
-No. SDK authentication only applies to identified users — it is enforced after `changeUser` is called. Before a user is identified (for example, while browsing anonymously before signing up), the SDK can still send data to Braze without a JWT. Once `changeUser` is called and the user is identified, the JWT requirement takes effect.
+JWT-based request protection applies only to identified users, and enforcement starts after `changeUser` is called. Before a user is identified (for example, while browsing anonymously before signing up), the SDK can still send data to Braze without a JWT. After `changeUser` is called, requests for that identified profile require a valid JWT.
 
 This means a typical user journey might look like:
 
-1. A user visits your site or opens your app anonymously. Braze collects data without authentication.
-2. The user signs up or logs in, and your app calls `changeUser`. From this point on, Braze enforces SDK authentication for that user's requests.
+1. A user visits your site or opens your app anonymously. Braze collects this activity without a JWT.
+2. The user signs up or logs in, and your app calls `changeUser` with an `external_id`.
+3. Braze continues collecting activity for that user, and JWT-based request protection is enforced for requests for that identified profile.
 
 #### Does SDK authentication work with user aliases? {#faq-aliases}
 
-No. SDK authentication requires an `external_id`. It cannot be set up when only a `braze_id` or user alias is available. If your integration relies on alias-only profiles (without an `external_id`), SDK authentication cannot be enforced for those users.
+No. SDK authentication requires an `external_id`. You can't set it up when only a `braze_id` or `alias_id` is available, so alias-only profiles can't use SDK authentication.
+
+#### Does enabling SDK authentication block unauthenticated activity collection? {#faq-unauthenticated-collection}
+
+No. SDK authentication does not block legitimate anonymous activity collection. It only applies after a profile is identified with `changeUser`.
+
+If an identified user logs out, their previously issued JWT can remain valid until it expires. During that time, requests for that identified profile can still be accepted.
