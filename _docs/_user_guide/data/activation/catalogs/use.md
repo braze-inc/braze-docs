@@ -116,7 +116,7 @@ Message if the venue name's size is less than 10 characters.
 In this example, different messages display based on whether the `venue_name` field has more or fewer than 10 characters. If `venue_name` is blank, the message is aborted.
 
 {% alert tip %}
-To avoid Liquid syntax errors, use the blue **+** button in the message composer to insert catalog Liquid tags automatically.
+To avoid Liquid syntax errors, select the **+** plus button in the message composer to insert catalog Liquid tags automatically.
 {% endalert %}
 
 ### Using images {#using-images}
