@@ -20,7 +20,7 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 
 ## Setting a user ID
 
-To set a user ID, call the `changeUser()` method after the user initially log ins. IDs should be unique and follow our [naming best practices](#naming-best-practices).
+To set a user ID, call the `changeUser()` method after the user logs in. IDs should be unique and follow our [naming best practices](#naming-best-practices).
 
 If you're hashing a unique identifier instead, be sure to normalize the input of your hashing function. For example, when hashing an email address, remove any leading or trailing spaces and account for localization.
 
