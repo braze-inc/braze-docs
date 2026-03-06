@@ -48,7 +48,7 @@ For a full list of events that Currents logs, refer to the [Customer behavior ev
 
 ### Are all send events logged to Currents?
 
-Under normal circumstances, all events are logged to Currents. There are no scenarios where an event would be intentionally suppressed from the Currents stream.
+All events are logged to Currents. There are no scenarios where an event would be intentionally suppressed from the Currents stream.
 
 ### Can data be corrupted in Currents?
 
