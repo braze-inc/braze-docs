@@ -23,7 +23,7 @@ Beyond messaging, agents can enrich your catalogs by calculating or generating p
 
 ### When to use Braze Agents versus other BrazeAI features
 
-Use agents for personalizing content on the fly using a user’s specific context. For example, if an agent knows a particular user’s favorite ice cream flavor is chocolate and favorite topping is gummy bears, it can come up with push copy specific to that combination for that user as they pass through the Canvas.
+Use agents for personalizing content on the fly using a user’s specific context. For example, if an agent knows a particular user’s favorite ice cream flavor is chocolate and their favorite topping is gummy bears, it can come up with push copy specific to that combination for that user as they pass through the Canvas.
 
 However, the agent does not learn through trial and error, and it has no idea of an ultimate marketing goal it is looking to measure and maximize. Even if you tell it to generally write copy that drives conversions, it has no mechanism to “monitor” for the conversion impact of its agentic writing and integrate that data back into future agentic calls. You can think of this as “vibe” decisioning, not reward-based AI Decisioning.
 
@@ -48,8 +48,8 @@ Agents are configured with instructions (system prompts) that define how they be
 | --- | --- |
 | [Model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) | The agent’s “brain,” in this case a large language model (LLM). It interprets inputs, generates responses, and performs reasoning. A stronger model (trained on more relevant data) makes the agent more capable and versatile. |
 | [Instructions]({{site.baseurl}}/user_guide/brazeai/agents/reference/#writing-instructions) | The rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. Clear instructions make the agent more reliable and predictable. |
-| Context | Data passed into the agent at runtime wherever it is deployed, such as user profile fields or catalog rows. This input provides the information the agent uses to generate outputs. |
-| [Output variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/#define-the-output-variable) | The output the agent produces when used in Canvas steps. Output variables store the agent’s result to personalize content or guide workflow paths. Output variables can be a string, number, or boolean data type.  |
+| Context | Data passed into the agent at runtime, wherever it is deployed, such as user profile fields or catalog rows. This input provides the information the agent uses to generate outputs. |
+| [Output variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/#define-the-output-variable) | The output the agent produces when used in Canvas steps. Output variables store the agent’s result to personalize content or guide workflow paths. Output variables can be a string, a number, or a boolean data type.  |
 | [Execution](#limitations) | A single run of the agent. This counts against your daily limits. |
 | [Output format]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#select-output) | The predefined data structure of the agent's response. |
 | [Temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) | The level of deviation for the agent's output. This defines how precise or creative your agent can be. |
@@ -63,6 +63,12 @@ The following limitations apply:
 - By default, each run must complete within 15 seconds. After 15 seconds, the agent returns a `null` response where it is used.
     - If your agents consistently time out, contact your Braze account manager to increase this limit.
 - Input data is limited to 25 KB per request. Longer inputs are truncated.
+
+## How is my data used and sent to Braze-provided LLMs?
+
+In order to generate AI output through Braze AI features that Braze identifies as leveraging Braze-provided LLMs (“Output”), Braze will send your system prompt or any other input, as applicable (“Input”) to Braze-provided LLM. Data sent to the applicable Braze-provided LLM is not used to train or improve the Braze-provided LLM. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.
+
+The Braze-provided LLM for Braze Agents, identified as “Auto”, uses Google Gemini models. Google retains Inputs and Outputs submitted through Braze for 55 days, after which the data is deleted.
 
 ## Next steps
 
