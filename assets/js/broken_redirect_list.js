@@ -3316,4 +3316,7 @@ validurls['/docs/user_guide/brazeai/predictive_churn/troubleshooting/'] = '/docs
 validurls['/docs/user_guide/brazeai/predictive_churn/analytics/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/analytics/';
 validurls['/docs/user_guide/brazeai/predictive_churn/use_case/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/use_case/';
 validurls['/docs/user_guide/brazeai/predictive_churn/messaging_users/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/';
+
+// BrazeAI > Operator
+validurls['/docs/user_guide/brazeai/operator/getting_started/'] = '/docs/user_guide/brazeai/operator/';
 // validurls['OLD'] = 'NEW';

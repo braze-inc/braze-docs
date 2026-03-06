@@ -47,6 +47,19 @@ Use Braze user profile field names (listed as follows or any listed in the secti
 
 To remove a profile attribute, set it to `null`. Some fields, such as `external_id` and `user_alias` cannot be removed after they're added to a user profile.
 
+#### Identifier resolution
+
+Unless you're performing an [anonymous push token import](#push-token-import), each user attributes object must include at least one identifier: `external_id`, `user_alias`, `braze_id`, `email`, or `phone`. When possible, include only one identifier per object to avoid ambiguity about which user profile is being updated or created.
+
+Keep the following in mind when using identifiers:
+
+- **`external_id` and `user_alias` are mutually exclusive.** Including both in the same user attributes object returns an error. To add an alias to a user that already has an `external_id`, use the [`/users/alias/new` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_alias/).
+- **`email` takes precedence over `phone`.** If both `email` and `phone` are included in the same object, Braze uses `email` as the identifier. This means the attributes are applied to the user profile associated with that email address, even if the phone number belongs to a different profile.
+
+{% alert important %}
+To avoid unexpected behavior, use a single identifier per user attributes object. Providing multiple identifiers that reference different user profiles can lead to attributes being applied to the wrong profile.
+{% endalert %}
+
 #### Update existing profiles only
 
 If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze creates a new user profile if the `external_id` does not already exist.
