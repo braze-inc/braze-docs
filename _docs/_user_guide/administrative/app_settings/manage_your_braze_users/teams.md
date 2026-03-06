@@ -23,7 +23,7 @@ Teams are not available on all Braze contracts. To access this feature, contact 
 
 Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> **Add Team**.
 
-![Window to add a new Team.]({% image_buster /assets/img_archive/adding_a_team.png %}){: style="max-width:70%;"}
+![Window to add a new Team.]({% image_buster /assets/img_archive/adding_a_team.png %})
 
 Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data the Team has access to. For example, a possible use case is to perform [testing with Teams](#test-with-teams) by creating a development Team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on the product.
 
@@ -39,17 +39,87 @@ Then perform the following steps:
 
 1. In the **Workspace-level permissions** section, add the user to the appropriate workspace if they aren't already included.
 
-![A permission set for the "Swifty & Droidboy" workspace.]({% image_buster /assets/img/team_level_permissions.png %})
+![Workspace-level permissions with the Banner Template permission set.]({% image_buster /assets/img/team_level_permissions.png %})
 
 {: start="2"}
 2. Select **+ Add team-level permissions**, then select the **Team** you'd like to add this user to.
-3. Assign specific permissions from the **Team** permissions column.
+3. Assign specific permissions from the **Team** permissions section.
 
-![A section to select permissions for the "Customer Support" team.]({% image_buster /assets/img/teams.png %})
+![Team-level landing page template permissions.]({% image_buster /assets/img/teams.png %})
 
 ### Available Team-level permissions
 
 The following are all available permissions you can assign at the Team level. Any permissions not listed here are only granted on the workspace level, and these permissions will appear as "--" in the **Teams** permissions column.
+
+{% tabs %}
+{% tab Granular permissions %}
+
+{% multi_lang_include alerts/important_alerts.md alert="granular permissions ea" %}
+
+- View Campaigns
+- Edit Campaigns
+- Archive Campaigns
+- View Canvases
+- Edit Canvases
+- Archive Canvases
+- View Frequency Capping Rules
+- Edit Frequency Capping Rules
+- View Message Prioritization
+- Edit Message Prioritization
+- View Content Blocks
+- Edit Content Blocks
+- Archive Content Blocks
+- Launch Content Blocks
+- View Feature Flags
+- Edit Feature Flags
+- Archive Feature Flags
+- View Global Control Group
+- View Segments
+- Edit Segments
+- View IAM Templates
+- Edit IAM Templates
+- Archive IAM Templates
+- View Email Templates
+- Edit Email Templates
+- Archive Email Templates
+- View Webhook Templates
+- Edit Webhook Templates
+- Archive Webhook Templates
+- View Link Templates
+- Edit Link Templates
+- View Media Library Assets
+- Edit Media Library Assets
+- Delete Media Library Assets
+- View Locations
+- Edit Locations
+- Archive Locations
+- View Promotion Codes
+- Edit Promotion Codes
+- Export Promotion Codes
+- View Preference Centers
+- Edit Preference Centers
+- Launch Campaigns
+- Launch Canvases
+- Export User Data
+- View User Profiles PII Compliant
+- View Dashboard Users
+- Edit Dashboard Users
+- Approve Campaigns
+- Approve Canvases
+- Edit Canvas Templates
+- View Canvas Templates
+- Archive Canvas Templates
+- Publish Landing Pages
+- Edit Landing Page Templates
+- Edit Landing Page Drafts
+- View Landing Pages
+- Archive Landing Page Templates
+- View Reports
+- Create Reports
+- Edit Reports
+
+{% endtab %}
+{% tab Legacy permissions %}
 
 - Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, and Preference Centers
 - Send Campaigns, Canvases
@@ -67,6 +137,9 @@ The following are all available permissions you can assign at the Team level. An
 - Edit Landing Page Templates
 - View Landing Page Templates
 - Archive Landing Page Templates
+
+{% endtab %}
+{% endtabs %}
 
 To see descriptions of what each user permission includes and how to use them, check out our [User Permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions) section.
 
@@ -132,9 +205,8 @@ For changes to active campaigns:
 
 You can archive Teams from the **Internal Teams** page.
 
-Select one or many Teams to archive. If the Team is not associated with any object within Braze, Braze archives the Team immediately. If the Team is associated with an object, Braze presents you with an option to remove the Team after the archive process or replace the Team.
+Select one or many Teams to archive. If the Team is not associated with any object within Braze, the Team will be archived immediately. If the Team is associated with an object, you will be presented with an option to remove the Team after the archive process or replace the Team.
 
 ![Archiving a Team that is associated with an object in Braze]({% image_buster /assets/img_archive/archive_a_team.png %}){: style="max-width:70%;"}
 
 Braze admins can unarchive a Team by selecting the archived Team and selecting **Unarchive**.
-

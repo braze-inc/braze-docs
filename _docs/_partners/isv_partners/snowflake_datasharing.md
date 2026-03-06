@@ -113,4 +113,4 @@ Saving the post-launch draft does not automatically trigger an update. The updat
 
 ## General Data Protection Regulation (GDPR) compliance
 
-{% include partners/snowflake_pii_gdpr.md %}
+{% multi_lang_include partners/snowflake_pii_gdpr.md %}
