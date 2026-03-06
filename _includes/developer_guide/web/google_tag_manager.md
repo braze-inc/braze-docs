@@ -10,7 +10,7 @@ Google Tag Manager (GTM) lets you remotely add, remove, and edit tags on your we
 
 ## Logging custom events with GTM
 
-You can log custom events using a **Custom HTML** tag in GTM. This approach uses the GTM [data layer](https://developers.google.com/tag-platform/tag-manager/datalayer) to pass event data from your site to a GTM tag that calls the Braze SDK.
+You can log custom events using a **Custom HTML** tag in GTM. This approach uses the GTM [data layer](https://developers.google.com/tag-platform/tag-manager/datalayer) to pass event data from your site to a GTM tag that calls the Braze Web SDK.
 
 ### Step 1: Push the event to the data layer
 
