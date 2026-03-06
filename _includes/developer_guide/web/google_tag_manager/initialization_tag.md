@@ -47,7 +47,7 @@ The Braze Initialization Tag exposes the following options. Most of these map di
 
 | GTM option | Web SDK configuration or method | Description |
 | --- | --- | --- |
-| **Allow HTML In-App Messages** | `allowUserSuppliedJavascript` | Enables HTML in-app messages, Banners, and user-supplied JavaScript click actions. Required for [HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/) and [Banners]({{site.baseurl}}/developer_guide/banners/placements/?sdktab=web) that use custom HTML. Only enable this when you trust the HTML and JavaScript content, as it allows user-supplied JavaScript execution. |
+| **Allow HTML In-App Messages** | `allowUserSuppliedJavascript` | Enables HTML in-app messages, Banners, and user-supplied JavaScript click actions. Required for [HTML in-app messages]({{site.baseurl}}/user_guide/channels/in_app_messages/message_types/custom_html/) and [Banners]({{site.baseurl}}/developer_guide/banners/placements/?sdktab=web) that use custom HTML. Only enable this when you trust the HTML and JavaScript content, as it allows user-supplied JavaScript execution. |
 | **App Version Number** | `appVersion`, `appVersionNumber` | App version for segmentation (for example, `1.2.3.4`). |
 | **Automatically Open New Session** | `braze.openSession()` | Opens a new session after the SDK is initialized by calling this method for you. |
 | **Automatically show new in app messages** | `braze.automaticallyShowInAppMessages()` | Automatically displays new in-app messages when they arrive from the server by calling this method after initialization. |
@@ -61,6 +61,10 @@ The Braze Initialization Tag exposes the following options. Most of these map di
 | **Open Cards in New Tab** | `openCardsInNewTab` | Opens Content Card links in a new tab when using the default Feed UI. |
 | **Service Worker Location** | `serviceWorkerLocation` | Custom path for the service worker file (default: `/service-worker.js`). |
 | **Session Timeout (seconds)** | `sessionTimeoutInSeconds` | Session timeout in seconds (default: 1800). |
+
+{% alert note %}
+To enable [Custom HTML in-app messages]({{site.baseurl}}/user_guide/channels/in_app_messages/message_types/custom_html/) when using the Google Tag Manager Braze Initialization Tag, select **Allow HTML In-App Messages** in **Braze Initialization Options**. This checkbox maps to the `allowUserSuppliedJavascript` initialization option in `braze.initialize()` and sets it to `true`. The Google Tag Manager Braze Initialization Tag uses this label instead of the option name.
+{% endalert %}
 
 For options not exposed in the GTM template (such as `contentSecurityNonce`, `localization`, or `devicePropertyAllowlist`), use [runtime initialization]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) instead.
 
