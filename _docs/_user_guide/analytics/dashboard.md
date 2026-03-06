@@ -30,5 +30,8 @@ guide_featured_list:
   - name: eCommerce Revenue Dashboard
     link: /docs/ecommerce_revenue_dashboard/
     image: /assets/img/braze_icons/line-chart-up-04.svg  
+  - name: Messaging Diagnostics Dashboard
+    link: /docs/user_guide/analytics/dashboard/diagnostics_dashboard/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 ---
 <br><br>

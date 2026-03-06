@@ -18,6 +18,8 @@ fr:
   edit_github: Modifier cette page sur GitHub
   page_nav_title: Sur cette page
   helpful: "CETTE PAGE A-T-ELLE ÉTÉ UTILE?"
+  translation_banner: "Cette page a été traduite automatiquement et peut contenir des inexactitudes. Pour signaler une erreur de traduction,"
+  translation_banner_link: "ouvrez un ticket sur GitHub"
 ja:
   next: 次へ
   previous: 前へ
@@ -28,6 +30,8 @@ ja:
   edit_github: GitHub でこのページを編集
   page_nav_title: このページについて
   helpful: 「このページはどの程度役に立ちましたか?」
+  translation_banner: "このページはAIにより自動翻訳されており、不正確な内容が含まれている可能性があります。翻訳の誤りを報告するには、"
+  translation_banner_link: "GitHubでイシューを作成してください"
 ko:
   next: 다음
   previous: 이전
@@ -38,6 +42,8 @@ ko:
   edit_github: GitHub 에서 이 페이지를 편집합니다.
   page_nav_title: 이 페이지에
   helpful: "이 페이지가 얼마나 도움이 되었나요?"
+  translation_banner: "이 페이지는 AI로 자동 번역되었으며 부정확한 내용이 포함될 수 있습니다. 번역 오류를 신고하려면"
+  translation_banner_link: "GitHub에서 이슈를 생성해 주세요"
 pt-br:
   next: PRÓXIMO
   previous: ANTERIOR
@@ -48,6 +54,8 @@ pt-br:
   edit_github: Editar esta página no GitHub
   page_nav_title: Nesta página
   helpful: "QUÃO ÚTIL FOI ESTA PÁGINA?"
+  translation_banner: "Esta página foi traduzida automaticamente e pode conter imprecisões. Para relatar um erro de tradução,"
+  translation_banner_link: "abra um issue no GitHub"
 es:
   next: SIGUIENTE
   previous: ANTERIOR
@@ -58,6 +66,8 @@ es:
   edit_github: Editar esta página en GitHub
   page_nav_title: En esta página
   helpful: "¿QUÉ TAN ÚTIL FUE ESTA PÁGINA?"
+  translation_banner: "Esta página fue traducida automáticamente y puede contener errores. Para reportar un error de traducción,"
+  translation_banner_link: "abre un issue en GitHub"
 de:
   next: NÄCHSTES
   previous: VORHERIGES
@@ -68,3 +78,5 @@ de:
   edit_github: Diese Seite auf GitHub bearbeiten
   page_nav_title: Auf dieser Seite
   useful: "WIE HILFREICH WAR DIESE SEITE?"
+  translation_banner: "Diese Seite wurde automatisch übersetzt und kann Ungenauigkeiten enthalten. Um einen Übersetzungsfehler zu melden,"
+  translation_banner_link: "erstellen Sie ein Issue auf GitHub"
