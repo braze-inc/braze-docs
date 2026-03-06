@@ -88,9 +88,9 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 
 After adding a Content Block in an active campaign or Canvas, you can preview this Content Block from the Content Blocks Library by hovering over the Content Block and selecting the <i class="fa fa-eye preview-icon"></i> **Preview** icon. 
 
-This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, inclusion count with details, and an actual preview of the Content Block.
+This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, inclusion count with details (a clickable list of messages or Content Blocks that use the Content Block), and an actual preview of the Content Block.
 
-![A preview of a Content Block "Workout_Promo" for cycling and dancing that has six inclusions.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
+![A preview of a Content Block "Workout_Promo" for cycling and dancing that has one inclusion.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Nesting Content Blocks
 
