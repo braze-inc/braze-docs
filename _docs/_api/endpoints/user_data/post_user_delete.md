@@ -118,7 +118,7 @@ A successful response confirms the request was queued, not that deletion is comp
 
 If the user still exists after several minutes, verify that the identifier in your request matches the user's actual profile:
 
-- **`external_id`:** Confirm the value matches the user's external ID exactly.
+- **`external_ids` array:** Confirm each value matches a user's external ID exactly.
 - **`braze_id`:** You can find a user's `braze_id` by exporting their data with the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) or by exporting a segment to CSV (where the `braze_id` appears as "Appboy ID").
 - **Alias-only or email-only profiles:** If the profile has no `external_id`, create a segment filtering for **External User ID is blank** combined with the known email or phone number, then export to CSV to retrieve the `braze_id`.
 
