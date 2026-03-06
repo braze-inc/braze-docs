@@ -108,7 +108,7 @@ Calling `changeUser()` triggers a data flush as part of closing the current user
 {% endalert %}
 
 {% alert warning %}
-Do not assign a static default ID or call `changeUser()` when a user logs out. Doing so prevents you from re-engaging any previously logged-in users on shared devices and causes all data to be logged against a single external ID, which can cause other features to not behave as expected. Instead, keep track of all user IDs separately and ensure your app's logout process allows for switching back to a previously logged-in user. When a new session starts, Braze automatically refreshes the data for the newly-active profile.
+Do not assign a single, shared user ID (for example, a static default external ID) or call `changeUser()` when a user logs out. Doing so prevents you from re-engaging any previously logged-in users on shared devices and causes all data to be logged against a single user ID, which can cause other features to not behave as expected. Instead, keep track of all user IDs separately and ensure your app's logout process allows for switching back to a previously logged-in user. When a new session starts, Braze automatically refreshes the data for the newly-active profile.
 {% endalert %}
 
 ## User aliases
