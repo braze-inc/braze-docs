@@ -187,7 +187,7 @@ If you set a session timeout, all session semantics will automatically extend to
 
 ### Some users are not logging sessions
 
-Because sessions are only tracked after the SDK is initialized, users who don't trigger SDK initialization won't log any sessions. This typically happens when your app uses conditional logic before initializing the SDK—for example, gating initialization behind a login flow, consent prompt, or feature flag. In these cases, any user who doesn't satisfy the condition will never start a session.
+Because sessions are tracked only after the SDK is initialized, users who don't trigger SDK initialization don't log any sessions. This typically happens when your app uses conditional logic before initializing the SDK—for example, gating initialization behind a login flow, consent prompt, or feature flag. In these cases, any user who doesn't satisfy the condition never starts a session.
 
 If some users are logging sessions and others aren't, verify the following:
 
