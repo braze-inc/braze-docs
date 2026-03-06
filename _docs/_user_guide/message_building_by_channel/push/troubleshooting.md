@@ -201,7 +201,7 @@ If you're unable to register for push in Safari, check the following:
 4. **Browser preferences:** In Safari, go to **Safari** > **Settings** > **Websites** > **Notifications** and verify the **Allow websites to ask for permission to send notifications** checkbox is enabled.
 5. **Certificate errors:** If you see an error like `Authentication Error: pkcs12: error reading P12 data`, your Safari push certificate may be corrupted or in the wrong format. Re-export the certificate from Keychain Access in `.p12` format and re-upload it in the Braze dashboard.
 
-If these steps don't resolve the issue, enable [verbose logging]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) in the Web SDK, reproduce the problem, and include the logs when opening a [support ticket]({{site.baseurl}}/braze_support/).
+If these steps don't resolve the issue, enable [verbose logging]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging) in the Web SDK, reproduce the problem, and include the logs if you open a [support ticket]({{site.baseurl}}/braze_support/).
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
