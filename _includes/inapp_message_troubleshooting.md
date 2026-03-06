@@ -127,19 +127,20 @@ If your app is successfully requesting and receiving in-app messages, but they a
 7. If your in-app message is triggered by session start and you've set an extended session timeout, this will affect how quickly you can show messages. For instance, if your session timeout is set to 300 seconds, closing and re-opening the app in less than that time will not refresh the session, so an in-app message triggered by a session start will not display.
 {% if include.sdk == "Web" %}
 
-### Debugging in the browser console
+#### Debugging in the browser console
 
 You can test in-app messages and Content Cards triggered on session start directly from your browser's developer console:
 
 1. Open your website in Google Chrome (or another Chromium-based browser).
-2. Open the developer tools (**Right-click** > **Inspect**, or press **Command + Option + J** on Mac / **Ctrl + Shift + J** on Windows).
-3. In the **Console** tab, enable SDK logging:
+2. Open the developer tools (**Right-click** > **Inspect**, or press <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>J</kbd> on Mac / <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> on Windows).
+3. In the **Console** tab, toggle SDK logging on or off:
 
     ```javascript
     braze.toggleLogging();
     ```
+    If logging is already enabled, running this command disables it.
 
-4. To force a new session and trigger session-start messages, call `changeUser` with your test user's external ID:
+4. To force a new session and trigger session-start messages, call `braze.changeUser()` with your test user's external ID:
 
     ```javascript
     braze.changeUser("YOUR_TEST_USER_ID");
@@ -148,7 +149,6 @@ You can test in-app messages and Content Cards triggered on session start direct
 5. Check the console output for Braze SDK logs indicating whether in-app messages or Content Cards were delivered. If the message still doesn't display, review the logs for errors or eligibility issues.
 
 {% alert warning %}
-Do not use `changeUser` on a production site to force sessions outside of testing. This method is intended for debugging only.
+Do not use `braze.changeUser()` on a production site to force sessions outside of testing. This method is intended for debugging only.
 {% endalert %}
 {% endif %}
-
