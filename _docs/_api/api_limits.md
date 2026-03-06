@@ -17,8 +17,6 @@ A rate limit is the number of requests the API can receive in a given time perio
 API rate limits are subject to change depending on the proper usage of our system. We encourage sensible limits when making an API call to prevent damage or misuse.
 {% endalert %}
 
-Rate limits that are measured "per hour" reset on the clock hour, not on a rolling window. For example, if the limit is 250,000 requests per hour, you could make 50,000 requests at 10:59 PM and another 250,000 starting at 11:00 PM, because the counter resets at the top of each hour.
-
 ## Rate limits by request type
 
 Refer to the following for the default API rate limits of different request types. These default limits can be increased upon request. Contact your customer success manager for more information.
@@ -191,3 +189,6 @@ Understanding the optimal delay between endpoints is crucial when making consecu
 
 Under normal conditions, the time for our data eventual consistency to occur is 10-100ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur, so we recommend that you allow for a 5-minute delay between making subsequent calls to minimize the probability of error.
 
+### Rate limit reset
+
+Rate limits reset on the clock hour, not on a rolling window. For example, if the limit is 250,000 requests per hour, you could make 50,000 requests at 10:59 PM and another 250,000 starting at 11:00 PM, because the counter resets at the top of each hour.
