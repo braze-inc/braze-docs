@@ -237,10 +237,11 @@ $(document).ready(function() {
   $('#glossary_search').on('keyup',function(e){
     generate_glossarys(glossary_hash);
   });
-  if (location.hash && $(location.hash.replace('%20','-').replace('+','-')).offset()) {
+  var location_hash = (location.hash || "").replace('%20','-').replace('+','-').replace(/[^a-zA-Z0-9_-]+/g, '');
+  if (location_hash && $(location_hash).offset()) {
     // Scroll to generated hash
     $('html, body').animate({
-      scrollTop: $(location.hash).offset().top
+      scrollTop: $(location_hash).offset().top
     });
   }
 });
@@ -290,7 +291,7 @@ $(document).ready(function() {
     </div>
     <fieldset id="glossary_filter">
         <legend class="glossary_text">  {{ page.glossary_mid_text }} </legend>
-        <label for="glossary_search" id="glossary_label">&#8205;<input id="glossary_search" type="search" placeholder="Search" aria-label="Glassary Search" /></label>
+        <label for="glossary_search" id="glossary_label"><span class="sr-only">Search glossary</span><input id="glossary_search" type="search" placeholder="Search" /></label>
         <div id="glossary_filter_titlev2">{{ page.glossary_filter_text }}</div>
         {%- for tag in page.glossary_tags -%}
         <div class="glossary_filter_div">
