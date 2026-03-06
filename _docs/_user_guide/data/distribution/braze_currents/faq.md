@@ -84,4 +84,4 @@ If your storage bucket is unavailable at the time of data transfer, that data is
 
 ### How often does the schema ID update?
 
-Schema IDs are global across all event types and increment sequentially. Updates can happen at any time, and Braze will notify customers through email of upcoming changes. Each time a schema update occurs for any event type, the next available global ID is assigned. We recommend reading files recursively from the root path to handle schema ID changes. For more details, refer to [Avro schema changes]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics/#avro-schema-changes).
+Schema IDs are global across all event types and increment sequentially. Updates can occur at any time, and Braze will notify customers by email about upcoming changes. Each time a schema update occurs for any event type, the next available global ID is assigned. We recommend reading files recursively from the root path to handle schema ID changes. For more details, refer to [Avro schema changes]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics/#avro-schema-changes).
