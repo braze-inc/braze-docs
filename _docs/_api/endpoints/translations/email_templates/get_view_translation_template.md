@@ -17,7 +17,7 @@ description: "This article outlines details about the View all translations and 
 
 > Use this endpoint to view all translations and locales for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). See [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) for more information about translation features.
 
-{% include early_access_beta_alert.md feature='This endpoint' %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Prerequisites
 

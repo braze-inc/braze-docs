@@ -9,7 +9,7 @@ page_type: reference
 
 # Identifier field-level encryption
 
-{% include field_level_encryption_pii_description.md %}
+{% multi_lang_include field_level_encryption_pii_description.md %}
 
 {% alert important %}
 Identifier field-level encryption is available as an add-on feature. To get started with identifier field-level encryption, contact your Braze account manager.
