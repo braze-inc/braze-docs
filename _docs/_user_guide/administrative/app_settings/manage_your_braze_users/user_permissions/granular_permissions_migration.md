@@ -22,7 +22,7 @@ The migration includes these benefits:
 When migration is planned for your company, your Braze admins will receive emails and in-dashboard banners notifying them of the granular permission migration. To prepare for the migration, we recommend that a Braze admin do the following.
 
 1. Identify users, roles, or permission sets that may need to be updated for more tailored access after you migrate to the new permission framework. 
-2. If your company has automated user provisioning using SCIM or compliance tools that rely on permission strings, update them to match the new granular structure. 
+2. If your company has automated user provisioning using SCIM or compliance tools that rely on [permission strings]({{site.baseurl}}/scim_api_appendix/), update them to match the new granular structure. 
 3. Inform your Braze users of any upcoming changes to prevent confusion.
 4. At the scheduled migration date and time, your company will automatically migrate to granular permissions. No further action is required from company admins.
 
