@@ -496,7 +496,7 @@ Segment uses your Braze data center to pull in the appropriate Braze REST endpoi
 
 {% details Remove the Custom REST API endpoint when using Segment's Event Tester. %}
 
-Segment's Event Tester sends events to the Braze `/users/track` REST API endpoint and will throw a `401 Invalid API Key` error if a Custom REST API endpoint is set in the Braze destination settings, even when that endpoint is correct. Remove the custom REST API endpoint value in Segment to allow the Event Tester to function properly.
+Segment's Event Tester sends events to the Braze `/users/track` REST API endpoint and throws a `401 Invalid API Key` error if a Custom REST API endpoint is set in the Braze destination settings, even when that endpoint is correct. Remove the custom REST API endpoint value in Segment to allow the Event Tester to function properly.
 
 {% enddetails %}
 
