@@ -1,0 +1,23 @@
+{
+  "folders": [
+    { "name": "braze-docs", "path": "." },
+    { "name": "braze-shopify-app", "path": "../braze-shopify-app" },
+    { "name": "liquid", "path": "../liquid" },
+    { "name": "grapesjs", "path": "../grapesjs" },
+    { "name": "braze-android-sdk", "path": "../braze-android-sdk" },
+    { "name": "braze-swift-sdk", "path": "../braze-swift-sdk" },
+    { "name": "braze-web-sdk", "path": "../braze-web-sdk" },
+    { "name": "braze-react-native-sdk", "path": "../braze-react-native-sdk" },
+    { "name": "braze-flutter-sdk", "path": "../braze-flutter-sdk" },
+    { "name": "braze-unity-sdk", "path": "../braze-unity-sdk" },
+    { "name": "braze-unreal-sdk", "path": "../braze-unreal-sdk" },
+    { "name": "braze-roku-sdk", "path": "../braze-roku-sdk" },
+    { "name": "braze-cordova-sdk", "path": "../braze-cordova-sdk" },
+    { "name": "braze-expo-plugin", "path": "../braze-expo-plugin" },
+    { "name": "braze-xamarin-sdk", "path": "../braze-xamarin-sdk" },
+    { "name": "event-replay", "path": "../event-replay" },
+    { "name": "event-modeling-service", "path": "../event-modeling-service" },
+    { "name": "platform", "path": "../platform" }
+  ],
+  "settings": {}
+}
