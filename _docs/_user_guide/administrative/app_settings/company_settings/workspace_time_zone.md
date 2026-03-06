@@ -1,5 +1,5 @@
 ---
-nav_title: Workspace Time Zones
+nav_title: Workspace time zones
 article_title: Workspace Time Zones for Message Sending
 alias: /workspace_time_zones/
 description: "This reference article covers how to configure different time zones for your Braze workspaces, providing more control over campaign and Canvas scheduling for teams operating in various geographical locations."
