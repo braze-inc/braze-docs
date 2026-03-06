@@ -3,7 +3,7 @@ nav_title: "SMS and RCS senders"
 article_title: SMS and RCS Senders
 noindex: true
 page_order: 9
-description: "This article will walk you through important concepts involved in sending phone numbers with Braze."
+description: "This article provides an overview of the codes and senders available for sending SMS and RCS messages."
 page_type: reference
 alias: /sending_phone_numbers/
 channel:
@@ -12,5 +12,5 @@ channel:
   - RCS
 ---
 
-{% multi_lang_include archive/short_and_long_codes.md %}
+{% multi_lang_include short_and_long_codes.md %}
 <!-- TEMP_REGENERATE_TRIGGER -->

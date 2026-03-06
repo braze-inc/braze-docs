@@ -283,7 +283,7 @@ $(document).ready(function() {
   $(window).scroll(scrollHandler);
 
   // See if sdk tabs should be changed based on url hash
-  let location_hash = window.location.hash.slice(1);
+  let location_hash = window.location.hash.slice(1).replace(/[^a-zA-Z0-9_-]+/g, '');
   if (location_hash) {
     const sdk_hash = $('#' + decodeURIComponent(location_hash));
     if (sdk_hash.is(':header')) {

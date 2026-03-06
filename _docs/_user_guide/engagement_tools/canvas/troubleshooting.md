@@ -52,6 +52,14 @@ Consider the following questions for your target audience:
 - Have you added any additional filters that would limit the number of users entering the Canvas?
 - Do the users qualify to receive the first step of your variants? For example, if the first step of your Canvas is a push notification, but the entry audience is all push-disabled, then no users will receive messages.
 
+## Why did no users enter my daily scheduled Canvas on Daylight Saving Time day?
+
+On Daylight Saving Time (DST) transition days, daily scheduled Canvases can run up to one hour earlier or later than usual. If your entry criteria relies on custom attributes or events with timestamps that fall within one hour of the scheduled entry time, users may not yet qualify on DST day because the attribute or event hasn't been logged.
+
+For example, suppose users typically receive a custom attribute update at 3:00 p.m. in your Canvas's time zone and your Canvas runs daily at 3:30 p.m. in that same time zone. On a spring-forward DST day, the Canvas may evaluate users up to one hour earlier than usual relative to that attribute update—before the attribute has been logged. If re-eligibility is turned off, users who entered on previous days can't re-enter, resulting in zero entries for that day.
+
+To avoid this, ensure your custom attribute or event updates occur more than one hour before the Canvas's scheduled entry time.
+
 ## Why didn't my audience split evenly between the control group and variant group?
 
 When creating your Canvas, you may have expected your audience to split evenly between your control group and your variant group, like in the following [use case](#use-case). Let's discuss why that is and how to fix it!
