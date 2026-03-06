@@ -79,23 +79,17 @@ You can track eCommerce recommended event volume in the [Custom Events report]({
 
 ![Custom Events chart displaying results for six selected events.]({% image_buster /assets/img/ecommerce/custom_events_chart.png %})
 
-### Conversions report 
-
-### Custom Events report
-
-To create a [Custom Events report]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#analytics) based on who has performed an event supported through the integration, you can specify the specific [event name]({{site.baseurl}}/shopify_data_features/).
-
 ### Dashboards
 
 #### Conversions dashboard
 
-To gain insights into the trends related to orders placed from your launched Canvases, set up a [Conversions dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) and specify your Canvases.
+After you launch a campaign or Canvas using the "Places Order" conversion event, you can create a corresponding [conversion report]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#setting-up-your-report) to track performance.
+
+![Conversions Details table with campaigns and Canvases, and the associated conversion statistics.]({% image_buster /assets/img_archive/conversion_details_table.png %})
 
 #### eCommerce revenue dashboard
 
 To gain insights into revenue attributed to the last campaign or Canvas a user interacted with before placing an order, use the [eCommerce revenue dashboard]({{site.baseurl}}/ecommerce_revenue_dashboard/) and select a conversion window.
-
-### Query Builder
 
 ### Revenue report 
 

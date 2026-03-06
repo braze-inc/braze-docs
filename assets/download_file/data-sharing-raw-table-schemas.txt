@@ -1,3 +1,47 @@
+AGENTCONSOLE_AGENTEXECUTED_SHARED: Kafka record schema for when an Agent Console agent is executed
+	ID VARCHAR(16777216): Globally unique ID for this event
+	INVOCATION_ID VARCHAR(16777216): Globally unique ID for this message
+	REQUEST_ID VARCHAR(16777216): unique ID for this overall LLM request and complete execution
+	DURATION NUMBER(38,0): Duration of the session in seconds
+	PROMPT_TOKENS NUMBER(38,0): how many prompt tokens this request used
+	COMPLETION_TOKENS NUMBER(38,0): how many completion tokens this request used
+	TOTAL_TOKENS NUMBER(38,0): how many total tokens this request used
+	CACHE_TOKENS NUMBER(38,0): how many cached tokens this request used
+	REASONING_TOKENS NUMBER(38,0): how many reasoning tokens this request used
+	TIME NUMBER(38,0): UNIX timestamp at which the event happened
+	APP_GROUP_ID VARCHAR(16777216): BSON ID of the app group this user belongs to
+	AGENT_ID VARCHAR(16777216): BSON ID of the CustomerDefinedAgent
+	AGENT_NAME VARCHAR(16777216): Name of the CustomerDefinedAgent
+	MODEL_PROVIDER VARCHAR(16777216): Name of the LLM model provider
+	MODEL_NAME VARCHAR(16777216): Name of the LLM model used in this request
+	PROVIDER_REQUEST_ID VARCHAR(16777216): any request ID given to us by the model provider for the api call
+	CACHE_HIT BOOLEAN: whether or not this request hit the cache to return the response
+	LLM_OWNED_BY_CUSTOMER BOOLEAN: if the LLM call was the customer's; if true, we used customer's API key, if false, we use Braze's
+	IS_ERROR BOOLEAN: whether or not this request errored out
+	CANVAS_API_ID VARCHAR(16777216): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID VARCHAR(16777216): API ID of the Canvas step this event belongs to
+	USER_ID VARCHAR(16777216): [PII] Braze user ID of the user who performed this event
+	EXTERNAL_USER_ID VARCHAR(16777216): [PII] External ID of the user
+	INPUT VARCHAR(16777216): [PII] input to the LLM
+	OUTPUT VARCHAR(16777216): [PII] response from the LLM
+	INVOCATION_SOURCE VARCHAR(16777216): which ruby object invoked the LLM request
+	SF_CREATED_AT TIMESTAMP_NTZ(9): when this event was picked up by the Snowpipe
+
+AGENTCONSOLE_TOOLINVOCATION_SHARED: Kafka record schema for when a tool is executed
+	ID VARCHAR(16777216): Globally unique ID for this event
+	TOOL_CALL_ID VARCHAR(16777216): Globally unique ID for this tool call
+	DURATION NUMBER(38,0): Duration of the session in seconds
+	TIME NUMBER(38,0): UNIX timestamp at which the event happened
+	APP_GROUP_ID VARCHAR(16777216): BSON ID of the app group this user belongs to
+	AGENT_ID VARCHAR(16777216): BSON ID of the CustomerDefinedAgent
+	AGENT_NAME VARCHAR(16777216): Name of the CustomerDefinedAgent
+	IS_ERROR BOOLEAN: whether or not this request errored out
+	TOOL_NAME VARCHAR(16777216): Name of the Tool
+	TOOL_ARGUMENTS VARCHAR(16777216): [PII] JSON of the tool arguments
+	INVOCATION_SOURCE VARCHAR(16777216): which ruby object invoked the LLM request
+	SF_CREATED_AT TIMESTAMP_NTZ(9): when this event was picked up by the Snowpipe
+
 CHANGELOGS_GLOBALCONTROLGROUP_SHARED: Global Control Group changed
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
@@ -245,6 +289,7 @@ USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE_SHARED: Push Notification Toke
 	PUSH_TOKEN_STATE_CHANGE_TYPE (VARCHAR(16777216)): A description of the push token state change type
 	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
 	APP_API_ID (VARCHAR(16777216)): API ID of the app on which this event occurred
+	TIME_MS	NUMBER(38,0): Time in milliseconds when the event happened
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED: when a user is subscribed or unsubscribed globally from a channel such as email
@@ -1028,6 +1073,34 @@ USERS_MESSAGES_EMAIL_OPEN_SHARED: when a user begins opens an email
 	IS_AMP (BOOLEAN): Indicates that this is an AMP event
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
+USERS_MESSAGES_EMAIL_RETRY_SHARED: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+	APP_GROUP_API_ID VARCHAR(16777216): API ID of the app group this user belongs to
+	APP_GROUP_ID VARCHAR(16777216): BSON ID of the app group this user belongs to
+	EXTERNAL_USER_ID VARCHAR(16777216): [PII] External ID of the user
+	ID VARCHAR(16777216): Globally unique ID for this event
+	TIME NUMBER(38,0): UNIX timestamp at which the event happened
+	USER_ID VARCHAR(16777216): [PII] Braze user ID of the user who performed this event
+	RETRY_TYPE VARCHAR(16777216): Type of retry
+	RETRY_LOG VARCHAR(16777216): Log message describing retry details
+	SEND_ID VARCHAR(16777216): Message send ID this message belongs to
+	DISPATCH_ID VARCHAR(16777216): ID of the dispatch this message belongs to
+	CAMPAIGN_ID VARCHAR(16777216): BSON ID of the campaign this event belongs to
+	CAMPAIGN_API_ID VARCHAR(16777216): API ID of the campaign this event belongs to
+	MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the message variation this user received
+	CANVAS_ID VARCHAR(16777216): BSON ID of the Canvas this event belongs to
+	CANVAS_API_ID VARCHAR(16777216): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID VARCHAR(16777216): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas step message variation this user received
+	GENDER VARCHAR(16777216): [PII] Gender of the user
+	COUNTRY VARCHAR(16777216): [PII] Country of the user
+	TIMEZONE VARCHAR(16777216): Time zone of the user
+	LANGUAGE VARCHAR(16777216): [PII] Language of the user
+	EMAIL_ADDRESS VARCHAR(16777216): [PII] Email address of the user
+	IP_POOL VARCHAR(16777216): IP pool from which the email send was made
+	DEVICE_ID VARCHAR(16777216): ID of the device on which the event occurred
+	SF_CREATED_AT TIMESTAMP_NTZ(9): when this event was picked up by the Snowpipe
+
 USERS_MESSAGES_EMAIL_SEND_SHARED: when we send an email to a user
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
@@ -1343,6 +1416,33 @@ USERS_MESSAGES_LINE_INBOUNDRECEIVE_SHARED: when a LINE message is received from 
 	TIMEZONE (VARCHAR(16777216)): Time zone of the user
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
+USERS_MESSAGES_LINE_RETRY_SHARED: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+	APP_GROUP_API_ID VARCHAR(16777216): API ID of the app group this user belongs to
+	APP_GROUP_ID VARCHAR(16777216): BSON ID of the app group this user belongs to
+	EXTERNAL_USER_ID VARCHAR(16777216): [PII] External ID of the user
+	ID VARCHAR(16777216): Globally unique ID for this event
+	TIME NUMBER(38,0): UNIX timestamp at which the event happened
+	USER_ID VARCHAR(16777216): [PII] Braze user ID of the user who performed this event
+	RETRY_LOG VARCHAR(16777216): Log message describing retry details
+	RETRY_TYPE VARCHAR(16777216): Type of retry
+	CAMPAIGN_API_ID VARCHAR(16777216): API ID of the campaign this event belongs to
+	CAMPAIGN_ID VARCHAR(16777216): BSON ID of the campaign this event belongs to
+	CANVAS_ID VARCHAR(16777216): BSON ID of the Canvas this event belongs to
+	CANVAS_STEP_API_ID VARCHAR(16777216): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas step message variation this user received
+	DEVICE_ID VARCHAR(16777216): ID of the device on which the event occurred
+	DISPATCH_ID VARCHAR(16777216): ID of the dispatch this message belongs to
+	LINE_CHANNEL_ID VARCHAR(16777216): The LINE Channel ID the message was sent to or received from
+	LINE_CHANNEL_NAME VARCHAR(16777216): The LINE Channel Name the message was sent to or received from
+	MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the message variation this user received
+	NATIVE_LINE_ID VARCHAR(16777216): [PII] The user's Line ID from which the message was sent to or received from
+	SEND_ID VARCHAR(16777216): Message send ID this message belongs to
+	SUBSCRIPTION_GROUP_API_ID VARCHAR(16777216): Subscription group API ID
+	TIMEZONE VARCHAR(16777216): Time zone of the user
+	CANVAS_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas variation this event belongs to
+	CANVAS_API_ID VARCHAR(16777216): API ID of the Canvas this event belongs to
+	SF_CREATED_AT TIMESTAMP_NTZ(9): when this event was picked up by the Snowpipe
+
 USERS_MESSAGES_LINE_SEND_SHARED: when a LINE message is sent to LINE
 	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to
 	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
@@ -1634,6 +1734,34 @@ USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED: when a user opens a push notificati
 	AD_ID_TYPE (VARCHAR(16777216)): One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']
 	AD_TRACKING_ENABLED (BOOLEAN): Whether advertising tracking is enabled for the device
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
+
+USERS_MESSAGES_PUSHNOTIFICATION_RETRY_SHARED_ALL: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+	APP_GROUP_API_ID VARCHAR(16777216): API ID of the app group this user belongs to
+	APP_GROUP_ID VARCHAR(16777216): BSON ID of the app group this user belongs to
+	EXTERNAL_USER_ID VARCHAR(16777216): [PII] External ID of the user
+	ID VARCHAR(16777216): Globally unique ID for this event
+	TIME NUMBER(38,0): UNIX timestamp at which the event happened
+	USER_ID VARCHAR(16777216): [PII] Braze user ID of the user who performed this event
+	DEVICE_ID VARCHAR(16777216): ID of the device on which the event occurred
+	APP_API_ID VARCHAR(16777216): API ID of the app on which this event occurred
+	DISPATCH_ID VARCHAR(16777216): ID of the dispatch this message belongs to
+	SEND_ID VARCHAR(16777216): Message send ID this message belongs to
+	CAMPAIGN_ID VARCHAR(16777216): BSON ID of the campaign this event belongs to
+	CAMPAIGN_API_ID VARCHAR(16777216): API ID of the campaign this event belongs to
+	MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the message variation this user received
+	CANVAS_ID VARCHAR(16777216): BSON ID of the Canvas this event belongs to
+	CANVAS_API_ID VARCHAR(16777216): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID VARCHAR(16777216): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas step message variation this user received
+	GENDER VARCHAR(16777216): [PII] Gender of the user
+	COUNTRY VARCHAR(16777216): [PII] Country of the user
+	TIMEZONE VARCHAR(16777216): Time zone of the user
+	LANGUAGE VARCHAR(16777216): [PII] Language of the user
+	PLATFORM VARCHAR(16777216): Platform of the device
+	RETRY_TYPE VARCHAR(16777216): Type of retry
+	RETRY_LOG VARCHAR(16777216): Log message describing retry details
+	SF_CREATED_AT TIMESTAMP_NTZ(9): when this event was picked up by the Snowpipe
 
 USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED: when we send a push notification to a user
 	ID (VARCHAR(16777216)): Globally unique ID for this event
@@ -2012,6 +2140,26 @@ USERS_MESSAGES_SMS_REJECTION_SHARED: when a SMS message is not delivered to a us
 	IS_SMS_FALLBACK (BOOLEAN): Indicates if SMS fallback was attempted for this rejected RCS message. It is linked/paired to the SMS Delivery event
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
+USERS_MESSAGES_SMS_RETRY_SHARED: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+	APP_GROUP_API_ID VARCHAR(16777216): API ID of the app group this user belongs to
+	APP_GROUP_ID VARCHAR(16777216): BSON ID of the app group this user belongs to
+	EXTERNAL_USER_ID VARCHAR(16777216): [PII] External ID of the user
+	ID VARCHAR(16777216): Globally unique ID for this event
+	TIME NUMBER(38,0): UNIX timestamp at which the event happened
+	USER_ID VARCHAR(16777216): [PII] Braze user ID of the user who performed this event
+	CAMPAIGN_ID VARCHAR(16777216): BSON ID of the campaign this event belongs to
+	CAMPAIGN_API_ID VARCHAR(16777216): API ID of the campaign this event belongs to
+	MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the message variation this user received
+	CANVAS_ID VARCHAR(16777216): BSON ID of the Canvas this event belongs to
+	CANVAS_API_ID VARCHAR(16777216): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID VARCHAR(16777216): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas step message variation this user received
+	SUBSCRIPTION_GROUP_API_ID VARCHAR(16777216): Subscription group API ID
+	RETRY_TYPE VARCHAR(16777216): Type of retry
+	RETRY_LOG VARCHAR(16777216): Log message describing retry details
+	SF_CREATED_AT TIMESTAMP_NTZ(9): when this event was picked up by the Snowpipe
+
 USERS_MESSAGES_SMS_SEND_SHARED: when a SMS message is sent
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
@@ -2119,6 +2267,32 @@ USERS_MESSAGES_WEBHOOK_FAILURE_SHARED: A webhook message was delivered but faile
 	WEBHOOK_FAILURE_SOURCE (VARCHAR(16777216)): To tell whether an error was created by Braze or by the endpoint itself. The source field could be External Endpoint, Treat no status code to host unreachable
 	IS_TERMINAL (BOOLEAN): Whether this event was the terminal attempt in a send
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
+
+USERS_MESSAGES_WEBHOOK_RETRY_SHARED: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+	APP_GROUP_API_ID VARCHAR(16777216): API ID of the app group this user belongs to
+	APP_GROUP_ID VARCHAR(16777216): BSON ID of the app group this user belongs to
+	EXTERNAL_USER_ID VARCHAR(16777216): [PII] External ID of the user
+	ID VARCHAR(16777216): Globally unique ID for this event
+	TIME NUMBER(38,0): UNIX timestamp at which the event happened
+	USER_ID VARCHAR(16777216): [PII] Braze user ID of the user who performed this event
+	DEVICE_ID VARCHAR(16777216): ID of the device on which the event occurred
+	DISPATCH_ID VARCHAR(16777216): ID of the dispatch this message belongs to
+	SEND_ID VARCHAR(16777216): Message send ID this message belongs to
+	CAMPAIGN_ID VARCHAR(16777216): BSON ID of the campaign this event belongs to
+	CAMPAIGN_API_ID VARCHAR(16777216): API ID of the campaign this event belongs to
+	MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the message variation this user received
+	CANVAS_ID VARCHAR(16777216): BSON ID of the Canvas this event belongs to
+	CANVAS_API_ID VARCHAR(16777216): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID VARCHAR(16777216): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas step message variation this user received
+	GENDER VARCHAR(16777216): [PII] Gender of the user
+	COUNTRY VARCHAR(16777216): [PII] Country of the user
+	TIMEZONE VARCHAR(16777216): Time zone of the user
+	LANGUAGE VARCHAR(16777216): [PII] Language of the user
+	RETRY_TYPE VARCHAR(16777216): Type of retry
+	RETRY_LOG VARCHAR(16777216): Log message describing retry details
+	SF_CREATED_AT TIMESTAMP_NTZ(9): when this event was picked up by the Snowpipe
 
 USERS_MESSAGES_WEBHOOK_SEND_SHARED: when we send a webhook for a user
 	ID (VARCHAR(16777216)): Globally unique ID for this event
@@ -2306,6 +2480,30 @@ USERS_MESSAGES_WHATSAPP_READ_SHARED: when a WhatsApp message is read by the user
 	MESSAGE_ID (VARCHAR(16777216)): The unique ID generated by Meta for this message
 	FLOW_ID (VARCHAR(16777216)): The unique ID of the Flow in the WhatsApp Manager. Present if the user is responding to a WhatsApp Flow.
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
+
+USERS_MESSAGES_WHATSAPP_RETRY_SHARED: This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+	APP_GROUP_API_ID VARCHAR(16777216): API ID of the app group this user belongs to
+	APP_GROUP_ID VARCHAR(16777216): BSON ID of the app group this user belongs to
+	EXTERNAL_USER_ID VARCHAR(16777216): [PII] External ID of the user
+	ID VARCHAR(16777216): Globally unique ID for this event
+	TIME NUMBER(38,0): UNIX timestamp at which the event happened
+	USER_ID VARCHAR(16777216): [PII] Braze user ID of the user who performed this event
+	TO_PHONE_NUMBER VARCHAR(16777216): [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)
+	DEVICE_ID VARCHAR(16777216): ID of the device on which the event occurred
+	TIMEZONE VARCHAR(16777216): Time zone of the user
+	SUBSCRIPTION_GROUP_API_ID VARCHAR(16777216): Subscription group API ID
+	CAMPAIGN_ID VARCHAR(16777216): BSON ID of the campaign this event belongs to
+	CAMPAIGN_API_ID VARCHAR(16777216): API ID of the campaign this event belongs to
+	MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the message variation this user received
+	CANVAS_ID VARCHAR(16777216): BSON ID of the Canvas this event belongs to
+	CANVAS_API_ID VARCHAR(16777216): API ID of the Canvas this event belongs to
+	CANVAS_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas variation this event belongs to
+	CANVAS_STEP_API_ID VARCHAR(16777216): API ID of the Canvas step this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID VARCHAR(16777216): API ID of the Canvas step message variation this user received
+	DISPATCH_ID VARCHAR(16777216): ID of the dispatch this message belongs to
+	RETRY_TYPE VARCHAR(16777216): Type of retry
+	RETRY_LOG VARCHAR(16777216): Log message describing retry details
+	SF_CREATED_AT TIMESTAMP_NTZ(9): when this event was picked up by the Snowpipe
 
 USERS_MESSAGES_WHATSAPP_SEND_SHARED: when a WhatsApp message is sent to Meta
 	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group this user belongs to

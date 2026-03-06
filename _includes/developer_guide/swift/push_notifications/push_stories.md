@@ -135,6 +135,12 @@ Open the `Info.plist` file of the `Notification Content Extension`, then add and
 | `UNNotificationExtensionInitialContentSizeRatio` | Number  | `0.6`                  |
 | `UNNotificationExtensionUserInteractionEnabled`  | Boolean | `YES`                  |
 
+Additionally, add the following top-level `Braze` dictionary to the same `Info.plist` file, replacing `REPLACE_WITH_APPGROUP` with the App Group you created in [Step 2](#enable-capabilities):
+
+| Key              | Type   | Value                    |
+|------------------|--------|--------------------------|
+| `Braze.AppGroup` | String | `REPLACE_WITH_APPGROUP`  |
+
 Your `Info.plist` file should match the following image:
 
 ![]({% image_buster /assets/img/swift/push_story/notificationcontentextension_plist.png %})
