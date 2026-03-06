@@ -47,4 +47,4 @@ When adding an Apple Push Certificate in Braze, the **Send to Production** and *
 - **Send to Development:** Select this if the app was built in development mode in Xcode and signed with a development provisioning profile. Push notifications are routed through Apple's development (sandbox) gateway.
 - **Send to Production:** Select this if the app is distributed via Apple's TestFlight, App Store, or enterprise distribution. Push notifications are routed through Apple's production gateway.
 
-If the wrong option is selected, push notifications will silently fail because the push token type won't match the gateway. When in doubt, apps distributed through TestFlight or the App Store should use **Send to Production**.
+If the wrong option is selected, push notifications silently fail because the push token type does not match the gateway. Typically, apps distributed through TestFlight or the App Store should use **Send to Production**.
