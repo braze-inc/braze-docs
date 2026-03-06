@@ -67,7 +67,7 @@ The `BadToken` error may occur for several reasons:
 		- Ensuring that the push certificate being used to send push from the Braze dashboard and the provisioning profile are configured correctly.
 		- Recreating the APNS certification and then recreate the provisioning profile after the APNS certificate is configured to the `app_id`. This can sometimes solve some more visible problems.
 
-### TopicDisallowed
+### Bundle ID not allowed
 
 The `TopicDisallowed` error means APNs rejected the push because the topic (bundle ID) in the request isn't allowed for the authentication credentials being used. To resolve this:
 
