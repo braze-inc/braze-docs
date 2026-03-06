@@ -40,7 +40,7 @@ table td {
           <li>Check the request payload for any syntax errors.</li>
           <li>Confirm that all required fields are included and correctly formatted.</li>
           <li>If you're sending a JSON payload, validate the JSON structure.</li>
-          <li>If you're using Liquid to template personalization tags in the webhook request, verify that the Liquid does not resolve to a blank value or produce JSON-breaking characters (such as unescaped quotes). Preview the message for a test user to confirm the rendered output is valid.</li>
+          <li>If you're using Liquid to template in personalization tags in the webhook request, verify that the Liquid does not resolve to a blank value or produce JSON-breaking characters (such as unescaped quotes). Preview the message for a test user to confirm the rendered output is valid.</li>
         </ul>
       </td>
     </tr>
