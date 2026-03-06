@@ -114,7 +114,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 
 ### A success response was returned but the user still appears
 
-A successful response confirms the request was queued, not that deletion is complete. Deletion typically finishes in under a second, but it can take up to 5 minutes for the change to propagate across all caches. If you immediately search for the user in the dashboard or export their data via the API, you may still see results during this propagation window.
+A successful response confirms the request was queued, not that deletion is complete. Deletion typically finishes in under a second, but it can take up to five minutes for the change to propagate across all caches. If you immediately search for the user in the dashboard or export their data via the API, you may still see results during this propagation window.
 
 If the user still exists after several minutes, verify that the identifier in your request matches the user's actual profile:
 
@@ -122,8 +122,6 @@ If the user still exists after several minutes, verify that the identifier in yo
 - **`braze_id`:** You can find a user's `braze_id` by exporting their data with the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) or by exporting a segment to CSV (where the `braze_id` appears as "Appboy ID").
 - **Alias-only or email-only profiles:** If the profile has no `external_id`, create a segment filtering for **External User ID is blank** combined with the known email or phone number, then export to CSV to retrieve the `braze_id`.
 
-To confirm whether a user has been deleted, call the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) using the same identifier type you used in the delete request (for example, including the value in `external_ids`, `braze_id`, or `user_aliases`). If the user no longer exists, the response will contain `"users": []` and may include `"invalid_user_ids"` listing that identifier.
+To confirm whether a user has been deleted, call the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) using the same identifier type you used in the delete request (for example, including the value in `external_ids`, `braze_id`, or `user_aliases`). If the user no longer exists, the response contains `"users": []` and may include `"invalid_user_ids"` listing that identifier.
 
 {% endapi %}
-
-
