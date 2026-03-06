@@ -10,7 +10,7 @@ description: "This page provides an overview of how to trigger Braze Canvases us
 
 > Learn how to sync Canvas triggers using CDI for zero-copy personalization. This feature accesses user-specific information from your data storage solution and passes it to a destination Canvas. Canvas steps can optionally include personalization fields that are not persisted on Braze user profiles.
 
-{% include early_access_beta_alert.md feature='CDI Canvas triggers' %}
+{% multi_lang_include early_access_beta_alert.md feature='CDI Canvas triggers' %}
 
 ## Syncing Canvas triggers
 
