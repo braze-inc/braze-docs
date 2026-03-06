@@ -82,7 +82,7 @@ Select **Export rows** to export the row-level logs for a sync run. Then, choose
 * **Rows with errors:** Downloads a file containing only the rows that had an **Error** status.
 * **All rows:** Downloads a file containing every row processed in the run.
 
-{% include early_access_beta_alert.md feature='Exporting sync logs for all rows' %}
+{% multi_lang_include early_access_beta_alert.md feature='Exporting sync logs for all rows' %}
 
 Logs can't be exported directly from the dashboard. After the export is generated, you’ll receive an email with a link to download the log export file. 
 
