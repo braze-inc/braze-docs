@@ -114,7 +114,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 
 ### A success response was returned but the user still appears
 
-A successful response confirms the request was queued, not that deletion is complete. Deletion typically finishes in under a second, but it can take up to five minutes for the change to propagate across all caches. If you immediately search for the user in the dashboard or export their data via the API, you may still see results during this propagation window.
+A successful response confirms the request was queued, not that deletion is complete. Deletion typically finishes in under a second, but it can take up to 5 minutes for the change to propagate across all caches. If you immediately search for the user in the dashboard or export their data via the API, you may still see results during this propagation window.
 
 If the user still exists after several minutes, verify that the identifier in your request matches the user's actual profile:
 
