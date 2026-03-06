@@ -16,8 +16,8 @@ description: "This reference article discusses the concept of rate limiting and 
 
 Braze allows you to control marketing pressure by rate limiting your campaigns, regulating the amount of outgoing traffic from your platform. You can implement two different types of rate limiting for your campaigns: 
 
-1. [**User-centric rate limiting:**](#user-centric-rate-limiting) Focuses on providing the best experience for the user.
-2. [**Delivery speed rate limiting:**](#delivery-speed-rate-limiting) Takes into consideration the bandwidth of your servers.
+1. [User-centric rate limiting:](#user-centric-rate-limiting) Focuses on providing the best experience for the user.
+2. [Delivery speed rate limiting:](#delivery-speed-rate-limiting) Takes into consideration the bandwidth of your servers.
 
 Braze will try to evenly distribute the message sends throughout the minute, but can't guarantee this. For example, if you have a campaign with a rate limit of 5,000 messages per minute, we'll try to distribute the 5,000 requests evenly through the minute (about 84 messages per second), but there may be some variation in the per-second rate.
 
@@ -52,6 +52,10 @@ In the **Target Audiences** step of your campaign composer, you can also limit t
 ![Audience Summary with a selected checkbox for limiting the number of people who receive the campaign.]({% image_buster /assets/img_archive/total_limit.png %}){: style="max-width:50%;"} 
 
 By selecting the maximum user limit, you can limit the volume of messages sent on a per-channel basis or globally across all message types.
+
+{% alert note %}
+The maximum user cap limits the number of users dispatched, not the number of messages successfully sent. Because aborted messages count toward this cap, the actual number of messages sent may be lower than the configured limit. For example, if you set a cap of 10,000 and 2,000 messages are aborted due to Liquid logic or other conditions, only 8,000 messages are sent.
+{% endalert %}
 
 ##### Maximum user cap with optimizations
 
