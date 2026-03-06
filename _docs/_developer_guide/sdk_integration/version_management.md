@@ -28,7 +28,7 @@ Sometimes new Android or Apple OS updates require changes to the Braze SDK. To e
 
 In the Braze dashboard, go to **Settings** > **App Settings** to check which SDK version each of your apps is running. The SDK version is listed for each app under the app name.
 
-If the SDK version isn't shown in the dashboard, you can also check the weekly **Accounts Weekly Report** email, which includes an **App SDK version CSV** for your cluster (such as US-01, US-03, EU-01, or EU-02). Search your inbox for subject lines starting with `[Accounts Weekly Report] App SDK version CSV`.
+If the SDK version isn't shown in the dashboard, you can also check the weekly **Accounts Weekly Report** email, which includes an **App SDK version CSV** for your cluster (such as US-01, US-03, EU-01, or EU-02). Search your inbox for subject lines starting with "[Accounts Weekly Report] App SDK version CSV".
 
 ## About known issues
 
