@@ -81,7 +81,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 This property should not be used for updating a user's profile information. Use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
 
 {% alert tip %}
-**Adding existing users to a subscription group:** This endpoint is the recommended way to backfill or bulk-update subscription group membership for existing users. You can update up to 50 users per request by passing an array of `external_id`, `email`, or `phone` values. Users can also update their own subscription status through a [preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) link.
+**Adding existing users to a subscription group:** This endpoint is the recommended way to backfill or bulk-update subscription group membership for existing users. You can pass up to 50 `external_id`s, email addresses, or phone numbers per request. Users can also update their own subscription status through an [email preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) link.
 
 **Creating new users with a subscription group:** When creating new users using the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
 {% endalert %}
