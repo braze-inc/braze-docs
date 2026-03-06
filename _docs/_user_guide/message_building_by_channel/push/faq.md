@@ -22,7 +22,7 @@ When a push token is reassigned, the change is reflected in the user profile's *
 
 ### When I send a test push, does it go to all of my devices?
 
-Yes. The test push is sent to every push-enabled device associated with the selected user profile. If you have multiple phones or tablets logged in with the same user, each device with a valid push token will receive the notification. This is the same behavior as a production push send — Braze targets all push-enabled devices for the user.
+Yes. The test push is sent to every push-enabled device associated with the selected user profile. If you have multiple phones or tablets logged in with the same user, each device with a valid push token receives the notification. This is the same behavior as a production push send when Braze targets all push-enabled devices for the user.
 
 To send the test push to only one device, you can remove push tokens for the other devices from the user profile before testing. Alternatively, if you're sending with the [`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/), set `send_to_most_recent_device_only` to `true` in the `apple_push` or `android_push` object so that only the most recently active device receives the push.
 
