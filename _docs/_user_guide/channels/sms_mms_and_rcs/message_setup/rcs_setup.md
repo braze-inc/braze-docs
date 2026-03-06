@@ -1,7 +1,7 @@
 ---
 nav_title: "RCS setup"
 article_title: RCS Setup
-page_order: 1
+page_order: 6
 alias: /rcs_setup/
 description: "This reference article covers the requirements needed to get RCS up and running."
 page_type: reference
@@ -58,10 +58,59 @@ When your RCS-verified sender is approved, our operations team will update your 
 
 ## Step 3: Set up subscription groups
 
-RCS is typically used in two ways: 
-- To upgrade existing SMS traffic 
-- To enable new use cases that are only possible with the richer functionality provided by RCS
+Depending on your integration, Braze can add RCS-verified senders to your existing SMS subscription groups or set up new ones. For detailed setup instructions, refer to [SMS and RCS subscription groups]({{site.baseurl}}/sms_rcs_subscription_groups/).
 
-Depending on your integration, Braze can add RCS-verified senders to your existing SMS subscription groups or set up new subscription groups for you. In either case, your Braze team will guide you through a seamless and compliant SMS traffic upgrade. For more information, refer to [SMS and RCS subscription groups]({{site.baseurl}}/sms_rcs_subscription_groups/).
+## Migrating SMS traffic to RCS
 
-For new use cases that are not possible with SMS, consider setting up dedicated RCS subscription groups to align with your program goals.
+If you have separate SMS and RCS subscription groups, you can migrate users from SMS to RCS using a one-step Canvas. 
+
+Braze recommends that you test sending RCS to smaller volumes of users initially and migrate more users to the RCS subscription group over time. For example, if you have 1,000,000 users subscribed to an SMS subscription group, this could look like first migrating all users to the new subscription group and then segmenting on a smaller audience of 50,000 to 100,000 (5-10%) to test the RCS messages.
+
+### Step 1: Create a Canvas and fill out the Entry Schedule
+
+Create a Canvas and name it something easily identifiable (such as "SMS-RCS Subscription Group User Transfer"). Then, schedule the campaign whenever is convenient for you.
+
+### Step 2: Define your audience
+
+Define your audience using one of the following methods. Next, go to the **Send Settings** step and select **Users who are subscribed or opted-in**.
+
+| Method                          | Description                                                                                                                                                                                                 |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Create a segment**         | Build a segment that includes all users in a subscription group or a subset using segmentation filters (such as a random 5-10%). Segments update before each send to reflect your current user base.        |
+| **Apply campaign or Canvas filters** | Refine the audience in the **Target Audience** step of your campaign or Canvas. Adjust targeting options without leaving the page for added flexibility.                                         |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+### Step 3: Configure a User Update step
+
+Add a User Update Step to your Canvas. In the step, open the **Advanced JSON Editor** and input the following (for the unique user identifier field, we recommend using the `braze_id` field):
+
+{% raw %}
+```json
+{
+  "attributes": [
+    {
+      "braze_id": "{{${braze_id}}}",
+      "subscription_groups": [
+        {
+          "subscription_group_id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx",
+          "subscription_state": "subscribed",
+          "use_double_opt_in_logic": true
+        }
+      ]
+    }
+  ]
+}
+```
+{% endraw %}
+
+!["User Update Object" that contains the previously stated JSON code.]({% image_buster /assets/img/sms/user_update_object.png %})
+
+### Step 4: Test the Canvas
+
+We highly recommend [testing your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) to confirm it works as expected before sending it to your broader audience.
+
+### Step 5: Launch your Canvas
+
+After you have successfully tested your Canvas, go ahead and launch it for your subset of users!
+
+To confirm that your users were successfully migrated, we recommend checking a few individual user profiles that were updated. In the **Engagement** tab, look for **Contact Settings** and scroll to view the subscription groups the user is subscribed to. The RCS subscription group toggle should now be on.

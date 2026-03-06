@@ -1,6 +1,6 @@
 ---
 nav_title: Opt-in & opt-out keywords
-article_title: SMS Opt-In/Opt-Out Keywords
+article_title: SMS opt-in and opt-out keywords
 page_order: 0
 description: "This reference article covers how Braze processes basic opt-in and opt-out keywords for SMS messaging."
 page_type: reference
@@ -27,11 +27,11 @@ Braze will process the following keywords automatically and update the subscript
 | Help | `HELP`<br> `INFO` | User will receive your defined Help auto response. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Only the **exact, single-word message** will be processed (case insensitive). Keywords such as `STOP PLEASE` will be ignored unless [fuzzy opt-out]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/keywords/fuzzy_opt_out/) is turned on.
+Only the **exact, single-word message** will be processed (case insensitive). Keywords such as `STOP PLEASE` will be ignored unless [fuzzy opt-out]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out/) is turned on.
 
-If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The default response for these automatic response messages will be set during your [onboarding]({{site.baseurl}}/user_guide/channels/sms/sms_subscription_group/#setup-process) and phone number procurement period. Note that you may continue to update these responses after the initial onboarding period.
+If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The default response for these automatic response messages will be set during your [onboarding]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/) and phone number procurement period. Note that you may continue to update these responses after the initial onboarding period.
 
 {% alert tip %}
-Interested in expanding your opt-out processing? Try [fuzzy opt-out]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/keywords/fuzzy_opt_out/), a feature that attempts to recognize when an inbound message does not match an opt-out keyword, but indicates opt-out intent.
+Interested in expanding your opt-out processing? Try [fuzzy opt-out]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out/), a feature that attempts to recognize when an inbound message does not match an opt-out keyword, but indicates opt-out intent.
 {% endalert %}
 

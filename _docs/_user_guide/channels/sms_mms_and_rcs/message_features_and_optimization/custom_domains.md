@@ -1,7 +1,7 @@
 ---
 nav_title: Self-serve custom domains
-article_title: Self-Serve Custom Domains
-page_order: 0
+article_title: Self-serve custom domains
+page_order: 2
 description: "This page covers how to use custom domains with link shortening to personalize the look and feel of your shortened URLs."
 page_type: reference
 alias: "/custom_domains/"

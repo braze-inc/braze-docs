@@ -1,9 +1,9 @@
 ---
 nav_title: Double opt-in
-article_title: Double Opt-In
+article_title: Double opt-in
 description: "This reference article covers the double opt-in feature, and explains how to enable the feature, select opt-in keywords and reply messages, and enter users into the double opt-in workflow through subscription updates that occur in REST API, SDK, and preference center updates."
 page_type: reference
-page_order: 2
+page_order: 1
 channel:
   - SMS
   - MMS
@@ -16,7 +16,7 @@ channel:
 
 When double opt-in is turned on, users are sent a message that asks for their explicit consent before they can be messaged by your campaigns or Canvases. 
 
-While not an explicit requirement of the Telephone Consumer Protection Act of 1991 (TCPA), Braze recommends that you configure double opt-in to confirm users are aware and consenting to be a part of your SMS, MMS, or RCS program. For more information about compliance, view [Laws, regulations, and abuse prevention for SMS, MMS, and RCS]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/laws_and_regulations/).
+While not an explicit requirement of the Telephone Consumer Protection Act of 1991 (TCPA), Braze recommends that you configure double opt-in to confirm users are aware and consenting to be a part of your SMS, MMS, or RCS program. For more information about compliance, view [Laws, regulations, and abuse prevention for SMS, MMS, and RCS]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/).
 
 ## Double opt-in workflows
 
@@ -58,7 +58,7 @@ When a user receives an opt-in prompt, they have 30 days to confirm their opt-in
 
 Only after the user completes the double opt-in workflow does their [subscription group status]({{site.baseurl}}/sms_rcs_subscription_groups/) update to `Subscribed`. If the user begins the workflow but doesn’t complete it, they remain `Unsubscribed` and cannot be sent messages from that subscription group.
 
-Users can also be entered into the double opt-in workflow if they are [subscribed from other sources]({{site.baseurl}}/user_guide/channels/sms/sms_subscription_group#how-users-sms-subscription-groups-get-set) (for example, REST API, SDK).
+Users can also be entered into the double opt-in workflow if they are [subscribed from other sources]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/) (for example, REST API, SDK).
 
 ## Subscription sources {#subscription-sources}
 

@@ -83,17 +83,17 @@ You can chart statistics for:
 
 ## Available statistics
 
-The following are the definitions of your available statistics, how we calculate them, and why they should be important to you.
+The following are the definitions of your available statistics, how they're calculated, and why they should be important to you.
 
 ### Users
 
-*Users* is the total number of users created in that workspace. This includes all users we recorded using your app or website at any point in time, and those who might not be associated with a specific app or website. This number is the percentage of how many of your lifetime users are represented as *Monthly Active Users* (MAU), which is useful for seeing user retention over a long period of time.
+*Users* is the total number of users created in that workspace. This includes all users recorded using your app or website at any point in time, and those who might not be associated with a specific app or website. This number is the percentage of how many of your lifetime users are represented as *Monthly Active Users* (MAU), which is useful for seeing user retention over a long period of time.
 
 A low MAU-to-user ratio may indicate that you need to diversify your messaging channels or increase your efforts in reaching out to lapsing users. See our quick win on [capturing lapsing users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) for more info. In general, the MAU-to-lifetime ratio will inevitably decrease over time because of user churn, but Braze tools can help you minimize this effect by keeping users engaged longer.
 
 ### Lifetime sessions
 
-*Lifetime sessions* is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app or visits your website. For a more precise definition on how sessions are defined by platform, view the corresponding 
+*Lifetime sessions* is the total count of sessions that Braze has recorded since integration. A session is each time a user uses the app or visits your website. For a more precise definition on how sessions are defined by platform, view the corresponding 
 [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), or [Web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web) session tracking developer articles.
 
 ### Monthly active users

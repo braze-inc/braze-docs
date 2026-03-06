@@ -1,10 +1,10 @@
 ---
 nav_title: "Bot click filtering"
-article_title: "SMS and RCS Bot Click Filtering"
+article_title: "SMS and RCS bot click filtering"
 description: "This reference article covers SMS and RCS bot click filtering."
 alias: /sms_rcs_bot_click_filtering/
 page_type: reference
-page_order: 11
+page_order: 5
 channel:
   - SMS
   - RCS

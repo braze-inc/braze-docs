@@ -1,7 +1,7 @@
 ---
 nav_title: Handle unknown phone numbers
-article_title: Handle Unknown Phone Numbers
-page_order: 4
+article_title: Handle unknown phone numbers
+page_order: 3
 description: "This reference article covers how Braze processes unknown phone numbers from new users."
 page_type: reference
 channel:

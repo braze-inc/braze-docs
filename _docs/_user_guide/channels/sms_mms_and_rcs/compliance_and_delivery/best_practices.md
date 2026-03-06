@@ -27,7 +27,7 @@ When setting up SMS and MMS in Braze to manage opt-ins and opt-outs, refer to th
 * [Subscription Group REST APIs]({{site.baseurl}}/api/endpoints/subscription_groups): How to process opt-ins and outs they receive from a source other than a direct response to a message.
 * [Keyword processing]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/): Explanations for how Braze approaches keyword processing and management.
 * [SMS double opt-in]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in/): Requires users to explicitly confirm their opt-in intent before they can receive SMS messages. SMS double opt-in is a requirement for some countries, so Braze recommends configuring this.
-* [SMS message sending]({{site.baseurl}}/sending_phone_numbers/): Fundamentals of SMS sending at Braze, including the importance of subscription groups, requirements for SMS segments and message bodies, and more.
+* [SMS message sending]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/sms_sending/): Fundamentals of SMS sending at Braze, including the importance of subscription groups, requirements for SMS segments and message bodies, and more.
 
 ### Considerations
 
@@ -56,3 +56,25 @@ Traffic pumping is a form of fraud that occurs when a bad actor uses an online f
 
 Customers are responsible for monitoring the traffic that they are sending and will be invoiced for all SMS sent through their account. Between Braze and Customer, Customer is the party in the better position to detect and prevent traffic pumping.
 
+## Multi-country SMS sending
+
+Some brands may wish to send to a group of users that have phone numbers from different countries. In order to send an SMS message to a phone number in a particular country, it is best practice to use a long code or short code that is from the same country. In fact, short codes can only send SMS to phone numbers from the same country the short code was created in. 
+
+To overcome this limitation, during the subscription groups [setup process]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/), groups can be set up to hold long and short codes from multiple different countries. When completed, sending phone numbers with the same country code as the target user's phone number will automatically be used when launching a campaign. You will not have to create separate campaigns for users with phone numbers with different country codes, allowing you to launch one campaign or use one Canvas component to target relevant users.
+
+![SMS payloads are sent using the same country code as the target user's phone number.]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
+
+### General sending best practices
+
+1. **Get permission.** One of the most important rules for using SMS as a business is that you must first gain permission from customers to contact them. Failing to do so can damage your brand and result in hefty legal fees.
+2. **Choose the right number for your use case.** Three main types of phone numbers can send and receive SMS messages: long codes, short codes, and alphanumeric sender IDs, and their capabilities and availability in different regions vary. Think in advance if your business is served better with a vanity code.
+3. **Pay attention to timing.** Keep in mind that customers are more responsive to materials that are addressed directly to them. A little personalization goes a long way, such as using the recipient's first name or adding a conversational touch that reflects your customers' interests.
+4. **Engage in two-way conversations.** SMS is such an effective channel for engaging with customers that it's important to anticipate and effectively handle responses to your messages. 85% of consumers not only want to be able to receive information but also reply to businesses or engage in a conversation.
+5. **Measure what works.** Are you reaching customers at the right time, with the best frequency, and using the most effective calls to action? Using the right tracking tools can offer direct and measurable metrics that prove their ROI. 
+
+## High-volume sending
+
+Plan on doing some high-volume sending? We have some best practices for you to ensure it runs smoothly.
+
+- Adjust the delivery speed rate limiting for your campaign or Canvases as needed, based on target audience size. This ensures that you reach the send volume that you need and that Braze sends the messages at the rate that Twilio is expecting and can handle.
+- Ensure you stick to the 160-character limit, and be aware of special characters double-counting (for example, forward-slashes `\`, carets `^`, and tildes `~`). 

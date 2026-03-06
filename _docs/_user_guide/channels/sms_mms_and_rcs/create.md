@@ -89,7 +89,7 @@ Before proceeding, read the guidelines for [SMS message segments and copy limits
 
 ### Adding a contact card
 
-You can add a contact card to your SMS message so customers can add your business and contact information to their device contacts. You can assign properties such as company name, phone number, address, email, and a small photo. Refer to [Contact cards]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/mms/contact_card/) for details.
+You can add a contact card to your SMS message so customers can add your business and contact information to their device contacts. You can assign properties such as company name, phone number, address, email, and a small photo. Refer to [Contact cards]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/create/contact_card/) for details.
 
 {% endtab %}
 {% tab MMS %}
@@ -112,7 +112,7 @@ Enter your message body, then upload a PNG, JPEG, or GIF image from the [media l
 
 ### Contact cards
 
-You can also include a [contact card]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/mms/contact_card/) (vCard) instead of an image.
+You can also include a [contact card]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/create/contact_card/) (vCard) instead of an image.
 
 ### Carrier behavior
 

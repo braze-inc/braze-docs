@@ -362,7 +362,7 @@ validurls['/docs/developer_guide/platforms/android/content_cards/examples/'] = '
 
 validurls['/docs/hidden/private_betas/amphtml/'] = '/docs/amphtml/';
 validurls['/docs/test_currents_connectors/'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#test-currents-connectors';
-validurls['/docs/hidden/private_betas/global_control_group/'] = '/docs/user_guide/analytics/reports/global_control_group_report/';
+validurls['/docs/hidden/private_betas/global_control_group/'] = '/docs/user_guide/audience/global_control_group/';
 validurls['/docs/hidden/private_betas/canvas_in-app_messages/'] = '/docs/canvas_in-app_messages/';
 validurls['/docs/hidden/private_betas/predictive_churn/'] = '/docs/predictive_churn/';
 validurls['/docs/hidden/private_betas/decision_split/'] = '/docs/decision_split/';
@@ -1559,7 +1559,7 @@ validurls['/docs/user_guide/data_and_analytics/reporting/retention_reports'] = '
 validurls['/docs/user_guide/data_and_analytics/reporting/revenue_report'] = '/docs/user_guide/analytics/reports/revenue_report';
 validurls['/docs/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data'] = '/docs/user_guide/audience/segments/segment_data';
 validurls['/docs/user_guide/data_and_analytics/tracking'] = '/docs/user_guide/analytics/tracking';
-validurls['/docs/user_guide/data_and_analytics/tracking/email_tracking'] = '/docs/user_guide/analytics/tracking/open_pixel_and_click_tracking';
+validurls['/docs/user_guide/data_and_analytics/tracking/email_tracking'] = '/docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking';
 validurls['/docs/user_guide/data_and_analytics/tracking/influenced_opens'] = '/docs/user_guide/analytics/tracking/influence_opens';
 validurls['/docs/user_guide/data_and_analytics/tracking/segment_analytics_tracking'] = '/docs/user_guide/analytics/tracking/segment_analytics_tracking';
 validurls['/docs/user_guide/data_and_analytics/tracking/uninstall_tracking'] = '/docs/user_guide/analytics/tracking/uninstall_tracking';
@@ -2686,7 +2686,7 @@ validurls['/docs/user_guide/message_building_by_channel/sms/campaign/link_shorte
 validurls['/docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/message_usage'] = '/docs/user_guide/channels/sms_mms_and_rcs/reporting/';
 validurls['/docs/user_guide/message_building_by_channel/sms/mms'] = '/docs/user_guide/channels/sms_mms_and_rcs/';
 validurls['/docs/user_guide/message_building_by_channel/sms/mms/about_mms'] = '/docs/user_guide/channels/sms_mms_and_rcs/';
-validurls['/docs/user_guide/message_building_by_channel/sms/mms/contact_card'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/contact_card';
+validurls['/docs/user_guide/message_building_by_channel/sms/mms/contact_card'] = '/docs/user_guide/channels/sms_mms_and_rcs/create/contact_card/';
 validurls['/docs/user_guide/message_building_by_channel/sms/mms/create'] = '/docs/user_guide/channels/sms_mms_and_rcs/create';
 validurls['/docs/user_guide/message_building_by_channel/sms/mms/faqs'] = '/docs/user_guide/channels/sms_mms_and_rcs/faqs';
 validurls['/docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup';
@@ -2696,8 +2696,8 @@ validurls['/docs/user_guide/message_building_by_channel/sms/campaign/segments'] 
 validurls['/docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup';
 validurls['/docs/user_guide/message_building_by_channel/sms/campaign/create'] = '/docs/user_guide/channels/sms_mms_and_rcs/create';
 validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers';
-validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/10dlc'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc';
-validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/10dlc_application'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc/10dlc_application';
+validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/10dlc'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc';
+validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/10dlc_application'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/10dlc_application';
 
 validurls['/docs/user_guide/analytics/reports/viewing_and_understanding_segment_data/'] = '/docs/user_guide/audience/segments/segment_data/';
 validurls['/docs/partners/message_personalization/dynamic_content/certona'] = '/docs/partners/message_personalization/dynamic_content/personalized_recommendations/certona';
@@ -3553,10 +3553,10 @@ validurls['/docs/user_guide/analytics/query_builder/query_templates/'] = '/docs/
 validurls['/docs/user_guide/analytics/query_builder/sql_variables/'] = '/docs/user_guide/analytics/reports/query_builder/sql_variables/';
 
 // Analytics > Reports > Global control group report (from engagement_tools/testing)
-validurls['/docs/user_guide/engagement_tools/testing/global_control_group/'] = '/docs/user_guide/analytics/reports/global_control_group_report/';
+validurls['/docs/user_guide/engagement_tools/testing/global_control_group/'] = '/docs/user_guide/audience/global_control_group/';
 
 // Analytics > Tracking renames
-validurls['/docs/user_guide/analytics/tracking/email_tracking/'] = '/docs/user_guide/analytics/tracking/open_pixel_and_click_tracking/';
+validurls['/docs/user_guide/analytics/tracking/email_tracking/'] = '/docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking/';
 validurls['/docs/user_guide/analytics/tracking/influenced_opens/'] = '/docs/user_guide/analytics/tracking/influence_opens/';
 
 // Day 3: Messaging migration redirects
@@ -4425,8 +4425,8 @@ validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms'] = '/do
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/'] = '/docs/user_guide/channels/sms_mms_and_rcs/';
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/create'] = '/docs/user_guide/channels/sms_mms_and_rcs/create';
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/create/'] = '/docs/user_guide/channels/sms_mms_and_rcs/create/';
-validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/contact_card';
-validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/contact_card/';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card'] = '/docs/user_guide/channels/sms_mms_and_rcs/create/contact_card/';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/'] = '/docs/user_guide/channels/sms_mms_and_rcs/create/contact_card/';
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/faqs'] = '/docs/user_guide/channels/sms_mms_and_rcs/faqs';
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/faqs/'] = '/docs/user_guide/channels/sms_mms_and_rcs/faqs/';
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/mms_short_long_codes'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup';
@@ -4451,26 +4451,31 @@ validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/testing'] = 
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/testing/'] = '/docs/user_guide/channels/sms_mms_and_rcs/testing/';
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers';
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/';
-validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc';
-validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc/';
-validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/10dlc_application'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc/10dlc_application';
-validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/10dlc_application/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc/10dlc_application/';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/10dlc_application'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/10dlc_application';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/10dlc_application/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/10dlc_application/';
 
 // --- SMS/MMS/RCS restructure: internal moves ---
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/user_phone_numbers'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/user_phone_numbers/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/';
-validurls['/docs/user_guide/channels/sms_mms_and_rcs/user_phone_numbers/10dlc'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc';
-validurls['/docs/user_guide/channels/sms_mms_and_rcs/user_phone_numbers/10dlc/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc/';
-validurls['/docs/user_guide/channels/sms_mms_and_rcs/user_phone_numbers/10dlc/10dlc_application'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc/10dlc_application';
-validurls['/docs/user_guide/channels/sms_mms_and_rcs/user_phone_numbers/10dlc/10dlc_application/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc/10dlc_application/';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/user_phone_numbers/10dlc'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/user_phone_numbers/10dlc/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/user_phone_numbers/10dlc/10dlc_application'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/10dlc_application';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/user_phone_numbers/10dlc/10dlc_application/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/10dlc_application/';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/rcs/rcs_setup'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/rcs/rcs_setup/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup/';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc/10dlc_application'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/10dlc_application';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/10dlc/10dlc_application/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/10dlc_application/';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_setup/short_and_long_codes'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_setup/short_and_long_codes/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/mms/mms_short_long_codes'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/mms/mms_short_long_codes/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/';
-validurls['/docs/user_guide/channels/sms_mms_and_rcs/mms/contact_card'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/contact_card';
-validurls['/docs/user_guide/channels/sms_mms_and_rcs/mms/contact_card/'] = '/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/contact_card/';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/mms/contact_card'] = '/docs/user_guide/channels/sms_mms_and_rcs/create/contact_card/';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/mms/contact_card/'] = '/docs/user_guide/channels/sms_mms_and_rcs/create/contact_card/';
+validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/contact_card/'] = '/docs/user_guide/channels/sms_mms_and_rcs/create/contact_card/';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_setup/laws_and_regulations'] = '/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_setup/laws_and_regulations/'] = '/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/';
 validurls['/docs/user_guide/channels/sms_mms_and_rcs/message_setup/geographic_permissions'] = '/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/geographic_permissions';
@@ -4641,3 +4646,13 @@ validurls['/docs/user_guide/messaging/canvas/get_started/braze_templates/prefere
 validurls['/docs/user_guide/messaging/canvas/get_started/braze_templates/preference_survey/'] = '/docs/user_guide/messaging/templates/canvas_templates/preference_survey/';
 validurls['/docs/user_guide/messaging/templates/canvas_templates/templates'] = '/docs/user_guide/messaging/templates/canvas_templates/braze_templates';
 validurls['/docs/user_guide/messaging/templates/canvas_templates/templates/'] = '/docs/user_guide/messaging/templates/canvas_templates/braze_templates/';
+validurls['/docs/user_guide/analytics/dashboards/diagnostics_dashboard'] = '/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard';
+validurls['/docs/user_guide/analytics/dashboards/diagnostics_dashboard/'] = '/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard/';
+validurls['/docs/user_guide/analytics/reports/data_by_segments'] = '/docs/user_guide/analytics/reports/query_builder/data_by_segments';
+validurls['/docs/user_guide/analytics/reports/data_by_segments/'] = '/docs/user_guide/analytics/reports/query_builder/data_by_segments/';
+validurls['/docs/user_guide/analytics/reports/global_control_group_report'] = '/docs/user_guide/audience/global_control_group';
+validurls['/docs/user_guide/analytics/reports/global_control_group_report/'] = '/docs/user_guide/audience/global_control_group/';
+validurls['/docs/user_guide/analytics/tracking/email_tracking'] = '/docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking';
+validurls['/docs/user_guide/analytics/tracking/email_tracking/'] = '/docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking/';
+validurls['/docs/user_guide/analytics/tracking/open_pixel_and_click_tracking'] = '/docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking';
+validurls['/docs/user_guide/analytics/tracking/open_pixel_and_click_tracking/'] = '/docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking/';

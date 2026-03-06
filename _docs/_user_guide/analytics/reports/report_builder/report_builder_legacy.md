@@ -2,7 +2,7 @@
 nav_title: Report Builder (legacy)
 article_title: Report Builder (Legacy)
 alias: /report_builder_legacy/
-page_order: 0
+page_order: 1
 page_type: reference
 description: "This page covers how to run a report using the legacy report builder including campaign and Canvas creating comparison reports, and building reports and charts."
 tool: 
@@ -128,7 +128,7 @@ When you access a saved **Automatic Report**, the report will automatically upda
 
 In a **Manual Report**, you can edit a report by selecting **Edit**. From there, you can select or deselect campaigns to include in your report.
 
-In an **Automatic Report**, simply toggle your filters to narrow down the results in your report.
+In an **Automatic Report**, toggle your filters to narrow down the results in your report.
 
 ## Exporting reports
 

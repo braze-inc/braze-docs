@@ -1,7 +1,7 @@
 ---
 nav_title: Open pixel and click tracking
-article_title: Email Open Pixel and Click Tracking
-page_order: 1
+article_title: Email open pixel and click tracking
+page_order: 9
 page_type: reference
 description: "This reference article covers how to implement open pixel and click tracking."
 

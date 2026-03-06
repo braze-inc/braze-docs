@@ -19,7 +19,7 @@ guide_featured_list:
   link: /docs/dp-technical-assistance/
   image: /assets/img/braze_icons/settings-01.svg
 - name: Email open pixel and click tracking
-  link: /docs/user_guide/data_and_analytics/tracking/email_tracking#open-pixel-and-click-tracking-overview
+  link: /docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking/
   image: /assets/img/braze_icons/mail-01.svg
 - name: Email subscriptions
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states

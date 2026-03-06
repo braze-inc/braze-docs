@@ -1,10 +1,10 @@
 ---
 nav_title: Campaign analytics
 article_title: Campaign Analytics
-page_order: 2
+page_order: 1
 layout: dev_guide
 guide_top_header: "Campaign analytics"
-guide_top_text: "Campaign analytics gives you real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. Choose your messaging channel from those listed to learn more about campaign analytics specific to that channel. We also recommend you check out our <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> Braze Learning course for an overview of these analytics."
+guide_top_text: "Campaign analytics gives you real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. Choose your messaging channel from those listed to learn more about campaign analytics specific to that channel. You can also check out the <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> Braze Learning course for an overview of these analytics."
 
 page_type: landing
 description: "This landing page covers campaign reporting for each messaging channel and retention and funnel reports."
@@ -40,10 +40,10 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: Funnel reports
-    link: /docs/user_guide/analytics/
+    link: /docs/user_guide/analytics/reports/funnel_reports/
     image: /assets/img/braze_icons/flag-02.svg
   - name: Retention reports
-    link: /docs/user_guide/analytics/
+    link: /docs/user_guide/analytics/reports/retention_reports/
     image: /assets/img/braze_icons/user-check-01.svg
 
 ---

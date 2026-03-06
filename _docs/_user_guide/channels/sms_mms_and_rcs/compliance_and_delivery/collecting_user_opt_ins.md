@@ -1,6 +1,6 @@
 ---
-nav_title: "Collecting user opt-ins"
-article_title: Best Practices for Collecting User SMS Opt-Ins
+nav_title: "Collect user opt-ins"
+article_title: Best practices for collecting user SMS opt-ins
 page_order: 3
 description: "This reference article cover three best practices for collecting user opt-ins."
 page_type: reference
@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# Collecting user opt-ins
+# Collect user opt-ins
 
 > The following article lists some common SMS opt-in methods.
 

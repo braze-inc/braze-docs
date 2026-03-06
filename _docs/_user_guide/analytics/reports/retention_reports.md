@@ -1,7 +1,7 @@
 ---
 nav_title: Retention reports
-article_title: Retention Reports for Campaigns and Canvases
-page_order: 11
+article_title: Retention reports for campaigns and Canvases
+page_order: 9
 tool: Reports
 page_type: reference
 description: "This page goes over how to measure user retention for users who performed a selected retention event in a specific campaign or Canvas."
@@ -144,7 +144,7 @@ Some use cases for showing performance by variant:
 
 ## Things to look for in your retention reports
 
-Retention Reports are easy to generate, yet challenging to interpret and act on. To help aid marketers, we have assembled a couple of topics and questions to consider when looking at your Retention Reports.
+Retention Reports are straightforward to generate, yet challenging to interpret and act on. The following topics and questions can help you get more out of your Retention Reports.
 
 - Consider day-of-week trends for recurring campaigns (for example, Do Monday cohorts perform better than Saturday cohorts?).
 - Where does the impact start to decline? This could be a signal that a new campaign or Canvas that targets users at that point in time is needed as another boost to retention. 

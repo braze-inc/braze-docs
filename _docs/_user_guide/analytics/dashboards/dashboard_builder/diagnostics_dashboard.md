@@ -3,7 +3,7 @@ nav_title: Messaging diagnostics dashboard
 article_title: Messaging diagnostics dashboard
 description: "This reference article covers the messaging diagnostics dashboard, which helps you understand why messages from your campaigns or Canvases may not have been sent as expected."
 alias: /ccdd/
-page_order: 4.5
+page_order: 2
 ---
 
 # Messaging diagnostics dashboard

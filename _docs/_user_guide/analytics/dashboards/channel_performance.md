@@ -1,7 +1,7 @@
 ---
 nav_title: Channel performance
 article_title: Channel Performance Dashboard
-page_order: 3
+page_order: 2
 page_type: reference
 description: "This reference article covers the channel performance dashboard, which allows you to view performance metrics for entire channels across both campaigns and Canvases."
 tool: 
@@ -65,7 +65,7 @@ To better understand what is in this "Other" category, you can extract the user 
 
 ![Engagement by Device report that shows the number of clicks for mobile, desktop, tablet, and other devices. The most number of clicks occurs on mobile devices.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
-For email opens, Braze will separate Google Image Proxy, Apple Image Proxy, and Yahoo Mail Proxy. These services will cache and load all embedded images in an email before it’s delivered to the recipient. As a result, this will trigger an email open from the mailbox provider’s servers rather than the recipient’s server, which can lead to inflated email opens. These services are meant to enhance privacy, security, performance, and efficiency when loading images. This can also contain real opens from recipients, as these proxy services mask the user agent, and we categorize proxy data using the user agent.
+For email opens, Braze will separate Google Image Proxy, Apple Image Proxy, and Yahoo Mail Proxy. These services will cache and load all embedded images in an email before it’s delivered to the recipient. As a result, this will trigger an email open from the mailbox provider’s servers rather than the recipient’s server, which can lead to inflated email opens. These services are meant to enhance privacy, security, performance, and efficiency when loading images. This can also contain real opens from recipients, as these proxy services mask the user agent, and Braze categorizes proxy data using the user agent.
 
 ![Engagement by Device report that shows the number of clicks for Mobile, Desktop, Tablet, Apple Privacy Proxy, Google Image Proxy, Yahoo Mail Proxy, and Other. The most number of opens occurs on mobile devices.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
 
