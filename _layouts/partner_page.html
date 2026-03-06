@@ -34,39 +34,22 @@ hide_breadcrumb: false
 <script type="text/javascript">
 var alloy_partners = {%- alloy_partner -%};
 
-{%- assign vp = '' -%}
-
-{%- for valid_partner in page.valid_partner_list  -%}
-  {%- if vp != '' -%}
-    {%- assign vp = vp | append: ','  -%}
-  {%- endif -%}
-
-  {%- capture vp -%}
-  {{vp}}
-  "{{ valid_partner['name'] | downcase }}": [["{{ valid_partner['name'] }}","{{ valid_partner['url'] }}","{{ valid_partner['title'] }}"]
-  {%- endcapture -%}
-
-  {%- assign alt_vp = '' -%}
-  {%- if valid_partner['alt'] -%}
-    {%- for valid_alt in valid_partner['alt']   -%}
-        {%- capture alt_vp -%}
-        {{alt_vp}} ,["{{ valid_partner['name'] }}","{{ valid_alt['url'] }}","{{ valid_alt['title'] }}"]
-        {%- endcapture -%}
-    {%- endfor -%}
-
-  {%- endif -%}
-
-  {%- capture vp -%}
-    {{vp}}{{alt_vp}}]
-  {%- endcapture -%}
-
-
-{% endfor %}
-
-
-var valid_partners = {
-  {{ vp }}
-}
+var valid_partner_list = {{ page.valid_partner_list | jsonify }};
+var valid_partners = {};
+(function() {
+  if (typeof valid_partner_list === 'undefined' || !valid_partner_list) return;
+  valid_partner_list.forEach(function(p) {
+    var key = (p.name || '').toLowerCase();
+    if (!key) return;
+    var title = (p.title != null && p.title !== '') ? p.title : '';
+    valid_partners[key] = [[p.name || '', p.url || '', title]];
+    if (p.alt && p.alt.length) {
+      p.alt.forEach(function(a) {
+        valid_partners[key].push([p.name || '', a.url || '', (a.title != null && a.title !== '') ? a.title : '']);
+      });
+    }
+  });
+})();
 
 var alloy_data;
 if ('result' in alloy_partners) {
@@ -253,6 +236,7 @@ $(document).ready(function() {
         $('#results_msg').show();
       }
 
+      return result_cnt;
     };
     var partner_hash = {'data':{},'search': {}, 'sorted': []};
     if (alloy_data) {
@@ -270,7 +254,12 @@ $(document).ready(function() {
       partner_hash['sorted'].sort();
       set_filters();
 
-      generate_partners(partner_hash,true);
+      var result_cnt = generate_partners(partner_hash,true);
+      if (result_cnt > 0) {
+        $('#partner_list_fallback').hide();
+      } else {
+        $('#partner_list_fallback').show();
+      }
 
       for (var i = 0 ; i < filter_select.length; i++ ) {
         $('#' + filter_select[i]).on('change',function(e){
@@ -281,6 +270,8 @@ $(document).ready(function() {
       $('#partner_search').on('keyup',function(e){
         generate_partners(partner_hash,false);
       });
+    } else {
+      $('#partner_list_fallback').show();
     }
   });
 </script>
@@ -330,6 +321,14 @@ $(document).ready(function() {
     </fieldset>
     <div id="partner_list" class="flex mx-auto">
 
+    </div>
+    <div id="partner_list_fallback" class="partner-fallback-list">
+      <p>Partner documentation links:</p>
+      <ul class="list-unstyled">
+        {%- for p in page.valid_partner_list -%}
+        <li><a href="{{ p.url | remove_first: '/docs' | relative_url }}">{{ p.name }}</a></li>
+        {%- endfor -%}
+      </ul>
     </div>
     <div id="results_msg"></div>
 
