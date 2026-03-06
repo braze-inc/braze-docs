@@ -101,7 +101,7 @@ If links in your push notifications are opening in the app unexpectedly, it migh
 3. **Verify iOS push registration:** For iOS, revisit step 1 of the push integration guide on [registering push notifications with APNs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns). Ensure your delegate object is assigned synchronously before the app finishes launching. This step should be completed in the `application:didFinishLaunchingWithOptions:` method.
 4. **Test your integration:** After making adjustments, test the push notification behavior on both iOS and Android devices to confirm the issue is resolved.
 
-## Warning when uploading a .p12 or .pem certificate
+## Manage a .p12 or .pem certificate warning
 
 When uploading a `.p12` or `.pem` push certificate in the Braze dashboard, you may see the following warning:
 
