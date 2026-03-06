@@ -264,9 +264,9 @@ $(document).ready(function() {
     <div id="breadcrumb">
     </div>
     {%- endunless -%}
+    {% include ai_translation_banner.html %}
     <h1> {{ page.glossary_top_header }} </h1>
     <p class="glossary_text">  {{ page.glossary_top_text }} </p>
-    {% include ai_translation_banner.html %}
 
     <div id="glossary_filter">
         <label for="glossary_search" id="glossary_label"><span class="sr-only">Search glossary</span><input id="glossary_search" type="search" placeholder="Search" /></label>
