@@ -32,7 +32,7 @@ Um eine WhatsApp Abo-Gruppe zu archivieren, gehen Sie folgendermaßen vor:
 ### Schritt 2: Integrieren Sie die WhatsApp-Telefonnummer in den neuen Workspace
 
 1. Gehen Sie zu dem Workspace, in den Sie die WhatsApp-Telefonnummer verschieben möchten.
-2. Gehen Sie zu **Partnerintegrationen** > **Technologiepartner** > **WhatsApp** und blättern Sie dann zum Abschnitt **WhatsApp Messaging Integration**. 
+2. Gehen Sie zu **Partnerintegrationen** > **Technologiepartner** > **WhatsApp**, und blättern Sie dann zum Abschnitt **WhatsApp Messaging Integration**. 
 3. Wählen Sie die Option **Neue Abo-Gruppe und Rufnummer erstellen**
 4. Starten Sie den Integrationsprozess, bei dem Sie die Rufnummer aus der archivierten Abo-Gruppe auswählen können.
 

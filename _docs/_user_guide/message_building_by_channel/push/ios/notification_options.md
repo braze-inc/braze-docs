@@ -19,7 +19,7 @@ channel:
 
 If you want to categorize your messages and group them in your user's notification tray, you can utilize iOS's Notification Groups feature through Braze.
 
-Create your iOS push campaign, then to to the **Settings** tab and open the **Notification group** dropdown.
+Create your iOS push campaign, then go to the **Settings** tab and open the **Notification group** dropdown.
 
 ![The "Settings" tab with a "Notification group" dropdown that selected a value of "Coupons".]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 

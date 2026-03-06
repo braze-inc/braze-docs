@@ -112,6 +112,10 @@ Braze.enableDelayedInitialization(context)
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
+지연된 초기화가 인에이블먼트되어 있고 푸시 알림에 딥링크 작업이 포함된 경우 딥링크가 해결되지 않습니다.
+{% endalert %}
+
 #### Step 4.2: 푸시 분석 구성(선택 사항)
 
 지연 초기화를 인에이블먼트하면 푸시 분석이 기본값으로 대기줄에 대기합니다. 그러나 대신 푸시 분석을 [명시적으로 대기줄에](#explicitly-queue-push-analytics) 넣거나 [삭제하도록](#drop-push-analytics) 선택할 수 있습니다.
@@ -261,7 +265,7 @@ class MyApplication : Application() {
 
 ### 런타임 구성
 
-`braze.xml` 파일이 아닌 코드에서 Braze 옵션을 설정하려면 [런타임 구성을](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html) 사용하세요. 값이 두 위치에 모두 존재하는 경우 런타임 값이 대신 사용됩니다. 런타임에 모든 필수 설정이 제공되면 `braze.xml` 파일을 삭제할 수 있습니다.
+`braze.xml` 파일이 아닌 코드에서 Braze 옵션을 설정하려면 [런타임 구성을](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html) 사용하세요. 두 위치에 모두 값이 있는 경우 런타임 값이 대신 사용됩니다. 런타임에 모든 필수 설정이 제공되면 `braze.xml` 파일을 삭제할 수 있습니다.
 
 다음 예제에서는 [빌더 객체가](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) 생성된 다음 [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). 사용 가능한 런타임 옵션 중 일부만 표시되어 있으며, 전체 목록은 [KDoc을](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) 참조하세요.
 

@@ -112,6 +112,10 @@ Braze.enableDelayedInitialization(context)
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
+Wenn die verzögerte Initialisierung aktiviert ist und eine Push-Benachrichtigung eine Deeplink-Aktion enthält, wird der Deeplink nicht aufgelöst.
+{% endalert %}
+
 #### Schritt 4.2: Konfigurieren Sie Push Analytics (optional)
 
 Wenn die verzögerte Initialisierung aktiviert ist, werden Push Analytics standardmäßig in eine Warteschlange gestellt. Sie können Push Analytics jedoch auch [explizit in die Warteschlange stellen](#explicitly-queue-push-analytics) oder [ganz weglassen](#drop-push-analytics).

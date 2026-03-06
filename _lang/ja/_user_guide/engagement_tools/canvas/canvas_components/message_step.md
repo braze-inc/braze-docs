@@ -2,7 +2,7 @@
 nav_title: メッセージ 
 article_title: メッセージ 
 alias: "/message_step/"
-page_order: 5
+page_order: 11
 page_type: reference
 description: "このリファレンス記事では、メッセージステップを使用してスタンドアロンメッセージを作成する方法について説明します。"
 tool: Canvas

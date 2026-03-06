@@ -187,7 +187,7 @@ Tras realizar una solicitud al punto final, SessionM devuelve la lista completa 
 ```
 {% endraw %}
 
-Utilizando la notación de puntos Liquid, esto se puede introducir en el mensaje. Por ejemplo, para personalizar el mensaje con el resultado `offer_id`, podrías aprovechar la carga útil de retorno utilizando {% raw %}`{{wallet.payload.available_points}`{% endraw %}, que devuelve `100`.
+Utilizando la notación de puntos Liquid, esto se puede introducir en el mensaje. Por ejemplo, para personalizar el mensaje con el resultado `offer_id`, podrías aprovechar la carga útil de retorno utilizando {% raw %}`{{wallet.payload.available_points}}`{% endraw %}, que devuelve `100`.
 
 {% alert note %}
 Se trata de una API individual. Si tienes intención de enviar un lote de más de 500 usuarios, ponte en contacto con tu equipo de cuenta de SessionM para informarte sobre cómo incorporar datos masivos en la integración.

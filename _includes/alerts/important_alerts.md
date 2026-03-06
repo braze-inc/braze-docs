@@ -93,7 +93,15 @@ The Shopify integration supports Shopify customer create and customer update web
 {% if include.alert == 'context variable' %}
 
 {% alert important %}
-If you're participating in the Canvas Context early access, Canvas entry properties are part of Canvas context variables. This means `canvas_entry_properties` is now referenced as `context`. Each context variable includes a name, data type, and a value that can include Liquid. Currently, `canvas_entry_properties` are still backwards compatible. For more details, see [Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) and [Canvas  entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+Canvas entry properties are part of Canvas context variables. This means `canvas_entry_properties` is referenced as `context`. Each `context` variable includes a name, data type, and a value that can include Liquid. Currently, `canvas_entry_properties` are backwards compatible. For more details, see [Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) and [Canvas context object]({{site.baseurl}}/api/objects_filters/context_object).
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Braze Agents' %}
+
+{% alert important %}
+This partner appears on your **Technology Partners** page only if you have [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/) enabled. For help getting started, contact your customer success manager.
 {% endalert %}
 
 {% endif %}
@@ -109,6 +117,14 @@ If you're participating in the Canvas Context early access, Canvas entry propert
 Using "Day of year" for absolute dates can produce incorrect or unexpected results because the calculation ignores the year component. For example, if you're comparing a future contract end date in April to determine if it's within 63 days, using "Day of year" may incorrectly match dates because it only compares day numbers (119 vs 359) without considering that April is actually 188 days away.
 
 **General guideline**: Does the date repeat every year? **Yes** → Use "Day of year". **No** → Use "Time".
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'granular permissions ea' %}
+
+{% alert important %}
+Granular permissions are in early access. When migration is planned for your company, your Braze admins will receive emails and in-dashboard banners notifying them of the [granular permission migration]({{site.baseurl}}/granular_permissions_migration/).
 {% endalert %}
 
 {% endif %}

@@ -63,7 +63,7 @@ Create dynamic audiences in Braze based on Snowplow's high-quality behavioral da
 2. **[커스텀 이벤트]({{site.baseurl}}/api/objects_filters/event_object)**: 사용자 작업 및 행동을 전송합니다.
 3. **[구매]({{site.baseurl}}/api/objects_filters/purchase_object)**: 제품 세부 정보가 포함된 트랜잭션 데이터를 전송합니다.
 
-각 개체 유형에 대해 필드 매핑을 구성하여 Snowplow 이벤트 데이터가 Braze 필드에 매핑되는 방식을 지정할 수 있습니다. 자세한 설정 지침과 필드 매핑 구성은 Snowplow의 [전달자 만들기 설명서를](https://docs.snowplow.io/docs/destinations/forwarding-events/creating-forwarders/) 참조하세요.
+각 개체 유형에 대해 필드 매핑을 구성하여 Snowplow 이벤트 데이터가 Braze 필드에 매핑되는 방식을 지정할 수 있습니다. 자세한 설정 지침 및 필드 매핑 구성은 Snowplow의 [전달자 만들기 설명서를](https://docs.snowplow.io/docs/destinations/forwarding-events/creating-forwarders/) 참조하세요.
 
 ### 3단계: 통합 검증하기
 

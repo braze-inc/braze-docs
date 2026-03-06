@@ -127,7 +127,7 @@ O arquivo AASA contém um objeto JSON com uma lista de apps e as jornadas de URL
     "apps": [],
     "details": [
       {
-        "appID": “JHGFJHHYX.com.facebook.ios",
+        "appID": "JHGFJHHYX.com.facebook.ios",
         "paths": [
           "*"
         ]
@@ -265,7 +265,7 @@ Em seguida, confira se seu app está configurado para lidar corretamente com a j
 
 ### Desativar o rastreamento de cliques em uma base de link a link
 
-É possível desativar o rastreamento de cliques para links específicos adicionando código HTML à mensagem de e-mail para o editor de HTML ou a um bloco de HTML para o editor de arrastar e soltar.
+É possível desativar o rastreamento de cliques para links específicos adicionando código HTML à mensagem de e-mail para o editor de HTML ou a um bloco HTML para o editor de arrastar e soltar.
 
 #### SendGrid
 
@@ -293,7 +293,7 @@ Se o seu provedor de serviço de e-mail for o Amazon SES, use o código HTML `se
 
 #### Editor de arrastar e soltar
 
-Ao usar o editor de arrastar e soltar de e-mail, insira seu código HTML como um atributo personalizado se o link estiver anexado a um texto, um botão ou uma imagem.
+Ao usar o editor de arrastar e soltar de e-mail, insira seu código HTML como um atributo personalizado se o link estiver anexado ao texto, a um botão ou a uma imagem.
 
 ##### Atributo personalizado para um link de texto
 

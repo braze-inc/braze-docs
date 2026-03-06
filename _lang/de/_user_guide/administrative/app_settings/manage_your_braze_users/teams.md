@@ -9,7 +9,7 @@ description: "Dieser referenzierte Artikel beschreibt, wie Sie Braze Teams im Da
 
 # Teams
 
-> Als Braze-Administrator können Sie Ihre Nutzer:innen des Dashboards in Teams mit unterschiedlichen Nutzer:innenrollen und Berechtigungen gruppieren. So können Sie mehrere Gruppen von Dashboard-Benutzern, die nicht miteinander verbunden sind, in einem Arbeitsbereich zusammenarbeiten lassen, indem Sie die Arten von Inhalten, die bearbeitet werden können, voneinander trennen.
+> Als Braze-Administrator können Sie die Nutzer:innen Ihres Unternehmens in Teams mit unterschiedlichen Nutzer:innen-Rollen und Berechtigungen gruppieren. So können Sie mehrere, nicht miteinander verbundene Gruppen von Nutzer:innen eines Unternehmens in einem Workspace zusammenarbeiten lassen, indem Sie die Arten von Inhalten, die bearbeitet werden können, voneinander trennen.
 
 Teams können nach Standort, Sprache und angepassten Attributen eingerichtet werden, so dass Teammitglieder und Nicht-Teammitglieder unterschiedlichen Zugriff auf Messaging Features und Kundendaten haben. Team-Filter und Tags können über verschiedene Engagement-Tools zugewiesen werden. Die Anzahl der Teams, die Sie in Ihrem Workspace erstellen können, ist nicht begrenzt.
 
@@ -25,13 +25,13 @@ Gehen Sie zu **Einstellungen** > **Interne Teams** und wählen Sie <i class="fas
 
 ![Fenster, um ein neues Team hinzuzufügen.]({% image_buster /assets/img_archive/adding_a_team.png %}){: style="max-width:70%;"}
 
-Geben Sie den **Teamnamen** ein. Falls gewünscht, wählen Sie im Feld **Team definieren** ein angepasstes Attribut, einen Standort oder eine Sprache aus, um weiter zu definieren, auf welche Nutzerdaten das Team Zugriff hat. Ein möglicher Anwendungsfall ist z.B. das [Testen mit Teams](#test-with-teams), indem Sie ein Entwicklungsteam erstellen, das nur Zugriff auf Testnutzer:in hat, die durch ein angepasstes Attribut gekennzeichnet sind. Ein weiterer Anwendungsfall ist die Einschränkung der Kommunikation mit Nutzer:innen auf Basis des Produkts.
+Geben Sie den **Teamnamen** ein. Falls gewünscht, wählen Sie im Feld **Team definieren** ein angepasstes Attribut, einen Standort oder eine Sprache aus, um weiter zu definieren, auf welche Nutzerdaten das Team Zugriff hat. Ein möglicher Anwendungsfall ist z.B. das [Testen mit Teams](#test-with-teams), indem Sie ein Entwicklungsteam erstellen, das nur Zugriff auf Testnutzer:in hat, die durch ein angepasstes Attribut gekennzeichnet sind. Ein weiterer Anwendungsfall ist die Einschränkung der Kommunikation mit Nutzer:innen auf der Basis des Produkts.
 
 Wenn ein Team durch ein angepasstes Attribut, eine Sprache oder ein Land definiert ist, können Sie das Team verwenden, um Endnutzer nach Features wie Kampagnen, Canvase, Content-Cards, Segmenten und mehr zu filtern. Weitere Informationen finden Sie unter [Zuweisung von Team Tags](#tags-and-filters).
 
 ## Nutzer:innen zu Teams zuordnen
 
-Braze-Administratoren und eingeschränkte Nutzer:innen mit der Berechtigung "Kann Firmeneinstellungen verwalten" können einem Dashboard-Benutzer mit eingeschränktem Zugriff Berechtigungen auf Teamebene zuweisen. Wenn Sie einem Team zugewiesen sind, können Nutzer:innen des Dashboards nur die Daten lesen oder schreiben, die für ihr jeweiliges Team verfügbar sind, z.B. Benutzersprache, Standort oder angepasste Attribute, wie sie bei der Erstellung des Teams definiert wurden.
+Braze-Administratoren und eingeschränkte Nutzer:innen mit der Berechtigung "Kann Firmeneinstellungen verwalten" können einem Nutzer:innen mit eingeschränktem Zugriff auf Unternehmensebene Berechtigungen auf Teamebene zuweisen. Wenn Sie einem Team zugewiesen sind, können Nutzer:innen des Unternehmens nur die Daten lesen oder schreiben, die für ihr jeweiliges Team verfügbar sind, z.B. Benutzersprache, Standort oder angepasste Attribute, wie sie bei der Erstellung des Teams definiert wurden.
 
 Um einen Nutzer:innen einem Team zuzuordnen, navigieren Sie zu **Einstellungen** > **Unternehmensnutzer:innen** und wählen Sie einen Nutzer:innen aus, den Sie Ihrem Team hinzufügen möchten.
 
@@ -43,7 +43,7 @@ Führen Sie dann die folgenden Schritte aus:
 
 {: start="2"}
 2\. Wählen Sie **\+ Berechtigungen auf Teamebene hinzufügen** und wählen Sie dann das **Team** aus, dem Sie diesen Nutzer:innen hinzufügen möchten.
-3\. Weisen Sie bestimmte Berechtigungen aus der Spalte **Team-Berechtigungen** zu.
+3\. Weisen Sie bestimmte Berechtigungen in der Spalte **Team-Berechtigungen** zu.
 
 ![Ein Bereich zum Auswählen von Berechtigungen für das Team "Kundensupport".]({% image_buster /assets/img/teams.png %})
 
@@ -64,7 +64,7 @@ Im Folgenden finden Sie alle verfügbaren Berechtigungen, die Sie auf der Ebene 
 - Canvas-Templates erstellen und bearbeiten
 - Canvas-Templates anzeigen
 - Canvas-Templates archivieren
-- Landing-Page-Templates erstellen und bearbeiten
+- Landing-Page-Templates bearbeiten
 - Landing-Page-Templates anzeigen
 - Landing-Page-Templates archivieren
 
@@ -92,7 +92,7 @@ In diesem Szenario ist Michelle ein eingeschränkter Nutzer:in, der keine Berech
 
 Aufgrund der Michelle zugewiesenen Berechtigungen kann sie, wenn sie eine Kampagne erstellt, dieser Kampagne nur das Team "Entwicklung" zuweisen. Sie kann die Kampagne nur starten, wenn das Team zugewiesen ist, und sie kann keine anderen Tags des Teams sehen oder darauf zugreifen.
 
-![Dropdown-Menü für Kampagnen-Teams, das nur das Tag "Entwicklung" anzeigt.]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
+![Dropdown-Menü für Kampagnenteams, das nur das Tag "Entwicklung" anzeigt.]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
 {% tab Scenario 2 - Team permissions and workspace permissions %}

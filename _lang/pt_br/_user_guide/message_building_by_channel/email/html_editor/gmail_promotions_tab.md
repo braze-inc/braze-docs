@@ -24,9 +24,9 @@ Siga estas etapas para criar um cartão promocional do Gmail para uma campanha d
 
 Primeiro, [crie sua campanha de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/), e selecione o **editor de código HTML** como sua experiência de edição.
 
-### Etapa 2: Adicionar detalhes ao cartão de promoção do Gmail
+### Etapa 2: Adicione detalhes ao cartão de promoção do Gmail
 
-Em seguida, acesse a seção **Conteúdo** do editor de HTML e selecione a guia **Promoção do Gmail**. Preencha os campos sob **Informações Básicas**, depois selecione **Gerar Código HTML**. Isso ajudará a gerar o script para o seu cartão de guia de promoção do Gmail na seção **Copiar e colar código HTML em `<Head>`**.
+Em seguida, Acessar a seção **Conteúdo** do editor de HTML e selecione a guia **Promoção do Gmail**. Preencha os campos sob **Informações Básicas**, depois selecione **Gerar Código HTML**. Isso ajudará a gerar o script para o seu cartão de guia de promoção do Gmail na seção **Copiar e colar código HTML em `<Head>`**.
 
 ![Um exemplo de como criar um cartão.]({% image_buster /assets/img/create-gmail-promo.png %})
 
@@ -68,13 +68,13 @@ Use Cartões de Oferta para fornecer informações chave sobre a oferta diretame
 
 Os cartões promocionais em seu carrossel de produtos são úteis para fornecer imagens para sua oferta. Você também pode personalizar as variáveis do carrossel de produtos e incluir até dez prévias de imagens, sendo que cada imagem é única.
 
-1. Selecione o toggle **Cartões de Promoção**.
+1. Selecione o botão **Cartões de Promoção**.
 2. Selecione **Adicionar cartão de promoção**. Cada imagem em seu carrossel de produtos deve ter um URL exclusivo e usar a mesma proporção (4:5, 1:1, 1,91:1).
 3. Inclua uma URL de imagem.
 4. Para **URL de Destino**, adicione o link para sua promoção.
 
 {% alert tip %}
-Recomendamos fazer upload das imagens do seu produto para a biblioteca de mídia, e depois copiar e colar as URLs nos campos apropriados. Apenas formatos de imagem estáticos (PNG e JPEG) são aceitos. Alguns formatos de imagem (GIF) farão upload, mas não serão exibidos como esperado.
+Recomendamos fazer upload das imagens do seu produto para a biblioteca de mídia e, em seguida, copiar e colar as URLs nos campos apropriados. Apenas formatos de imagem estáticos (PNG e JPEG) são aceitos. Alguns formatos de imagem (GIF) farão upload, mas não serão exibidos como esperado.
 {% endalert %}
 
 {: start="5"}
@@ -115,7 +115,7 @@ Embora seja possível usar o Liquid nesse script, sugerimos que você teste o en
 
 ## Medindo Cartões do Gmail
 
-O Gmail não retorna análises sobre esses cartões, e provedores de serviços de e-mail (ESPs) como o Braze não podem inserir seu próprio rastreamento de links nos links na seção de cabeçalho (incluindo cartões de promoção e carrosséis de produtos). No entanto, você pode adicionar parâmetros UTM ou códigos únicos às URLs durante a configuração. Esses parâmetros permitem que você rastreie o engajamento usando suas próprias análises de site ou rastreamento de conversões, porque o rastreamento faz parte da própria URL—não inserido pelo ESP. O rastreamento de cliques em nível de ESP não está disponível para esses links.
+O Gmail não retorna análises sobre esses cartões, e provedores de serviços de e-mail (ESPs) como o Braze não podem inserir seu próprio rastreamento de links nos links na seção de cabeçalho (incluindo cartões de promoção e carrosséis de produtos). No entanto, você pode adicionar parâmetros UTM ou códigos exclusivos às URLs durante a configuração. Esses parâmetros permitem que você rastreie o engajamento usando suas próprias análises de site ou rastreamento de conversões, porque o rastreamento é parte da própria URL—não inserido pelo ESP. O rastreamento de cliques em nível de ESP não está disponível para esses links.
 
 ### Incorpore imagens
 
@@ -133,7 +133,7 @@ Existem muitos fatores que determinam se o carrossel de produtos será exibido n
 
 Todas as imagens na anotação ainda precisam passar por um filtro de qualidade. Para que o carrossel de produtos seja preenchido, todas as imagens na anotação devem estar na proporção de aspecto de imagem recomendada e ser imagens de produtos de alta qualidade e alta resolução em close-up. As imagens devem conter pouco ou nenhum texto. O filtro de qualidade também filtra conteúdo inadequado, portanto, as imagens devem ser adequadas para famílias, usuários e crianças.
 
-Além disso, o Gmail tem um limite de densidade sobre quantos carrosséis de produtos aparecem na guia de promoções do Gmail de um usuário. Por exemplo, se um usuário se inscrever em muitas marcas que usam carrosséis de produtos em seu e-mail de promoção, o Gmail eventualmente coloca um limite sobre quantos carrosséis de produtos são exibidos.
+Além disso, o Gmail tem um limite de densidade sobre quantos carrosséis de produtos aparecem na guia de promoções do Gmail de um usuário. Por exemplo, se um usuário se inscrever em muitas marcas que usam carrosséis de produtos em seu e-mail de promoção, o Gmail eventualmente impõe um limite sobre quantos carrosséis de produtos são exibidos.
 
 Devido às normas de privacidade e segurança do Google, os e-mails com anotações devem ser amplamente enviados para que a anotação funcione. É recomendável lançar uma campanha e enviá-la para pelo menos 100 destinatários para que o sistema do Google a detecte como um "envio em massa." Os URLs das imagens não podem variar entre os destinatários.
 
@@ -149,4 +149,4 @@ O Gmail determina quando e para quem exibir o cartão, portanto, não há garant
 
 Anotações não são suportadas para o Google Workspace. Para visualizar anotações, você pode criar um endereço de e-mail pessoal com o Gmail.
 
-Observe que as anotações não são exibidas na guia **Primária** ou em qualquer outra guia no app móvel do Gmail. As anotações não serão exibidas após um usuário abrir um e-mail ou se você estiver usando o tipo de anotação `DiscountOffer` e o horário e a data já tiverem expirado.
+Observe que as anotações não são exibidas na guia **Primária** ou em qualquer outra guia no app móvel do Gmail. As anotações não serão exibidas após um usuário abrir um e-mail ou se você estiver usando o tipo de anotação `DiscountOffer` e o tempo e a data já tiverem expirado.

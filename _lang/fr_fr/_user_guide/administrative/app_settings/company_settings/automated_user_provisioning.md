@@ -12,10 +12,12 @@ alias: /scim/automated_user_provisioning/
 
 > Utilisez le provisionnement SCIM pour créer et gérer automatiquement les utilisateurs de Braze via l'API. Cet article vous explique quelles informations fournir, comment générer votre jeton SCIM et où trouver votre endpoint API SCIM.
 
+{% include early_access_beta_alert.md feature='SCIM provisioning' %}
+
 ## Accès aux paramètres de provisionnement du SCIM
 
-1. Dans le tableau de bord de Braze, accédez à **Paramètres** > **Paramètres d'administration** > **Provisionnement SCIM** et ajoutez un fournisseur d'identité.
-2. Dans l'étape de **provisionnement de Braze**, sélectionnez une méthode de provisionnement et fournissez les paramètres d'accès.
+1. Dans le tableau de bord de Braze, accédez à **Paramètres** > **Paramètres d'administration** > **Provisionnement SCIM**, puis sélectionnez **Configurer l'intégration SCIM**.
+2. Dans l'étape de **configuration de Braze**, sélectionnez une méthode de provisionnement et fournissez des paramètres d'accès.
 
 ![Une page pour configurer l'intégration SCIM avec des sections pour sélectionner une méthode d'approvisionnement et fournir des paramètres d'accès.]({% image_buster /assets/img_archive/scim_braze_config.png %}){: style="max-width:70%;"}
 
@@ -25,29 +27,39 @@ alias: /scim/automated_user_provisioning/
 {% tabs %}
 {% tab Okta - Braze app %}
 
-{% alert important %}
-L'intégration d'Okta est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Okta integration' %}
+
+Utilisez l'option **Okta - Braze app** si vous avez configuré l'app Braze pour l'authentification SAML (SSO) dans Okta. Si vous avez configuré une app personnalisée pour le SSO, suivez les instructions de l'onglet [Okta - Intégration d'une app personnalisée]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/?tab=okta%20-%20custom%20app%20integration#step-1-set-up-scim-provisioning).
 
 ## Étape 1 : Configurer le provisionnement du SCIM
 
 ### Étape 1.1 : Activer le SCIM
 
-1. Accédez à votre application Braze dans Okta.
-2. Sélectionnez l'onglet **Général**.
-3. Dans la section **Paramètres de l'application**, sélectionnez **Modifier**.
-4. Dans le champ **Provisionnement**, sélectionnez **SCIM**, puis cliquez sur **Enregistrer.**
+1. Dans Okta, accédez à **Applications** > **Applications**, puis sélectionnez **Créer une intégration d'application.** Sélectionnez **SAML 2.0** comme méthode de connexion.
+2. Remplissez les détails suivants (qui se trouvent dans l'[étape de**configuration de**](#accessing-scim-provisioning-settings) Braze [**IdP**](#accessing-scim-provisioning-settings)) pour créer une app personnalisée :
+- Logo de l'application
+- URL d'authentification unique
+- URL de l'audience (ID de l'entité SP)
+3. Sélectionnez **Terminer**.
+4. Sélectionnez l'onglet **Général**. 
+5. Dans la section **Paramètres de l'application**, sélectionnez **Modifier**.
+6. Dans le champ **Provisionnement**, sélectionnez **SCIM**. 
 
-### Étape 1.2 : Mise en place de l'intégration du SCIM
+### Étape 1.2 : Désactiver la visibilité des applications
+
+1. Dans le champ **Visibilité de l'application**, cochez la case **Ne pas afficher l'icône de l'application à l'utilisateur**. Cela empêche les utilisateurs d'accéder au SSO par l'intermédiaire de l'application, qui est destinée uniquement au SCIM. 
+2. Sélectionnez **Enregistrer**.
+
+### Étape 1.3 : Mettre en place l'intégration du SCIM
 
 1. Sélectionnez l'onglet **Provisionnement**.
 2. Dans **Configuration** > **Intégration** > **Connexion SCIM**, sélectionnez **Modifier** et renseignez les valeurs des champs qui s'affichent dans le tableau de la page de **configuration du provisionnement SCIM**.
 
-### Étape 1.3 : Tester les informations d'identification de l'API
+### Étape 1.4 : Tester les informations d'identification de l'API
 
 Sélectionnez **Test API Credentials**. Un message de vérification apparaît si l'intégration est réussie et vous pouvez enregistrer.
 
-### Étape 1.4 : Activer le provisionnement de l'application
+### Étape 1.5 : Activer le provisionnement de l'application
 
 1. Dans **Provisioning** > **Settings** > **To App** > **Provisioning to App**, sélectionnez **Modifier**.
 2. Activez les éléments suivants :
@@ -60,15 +72,15 @@ Sélectionnez **Test API Credentials**. Un message de vérification apparaît si
 
 1. Sélectionnez l'onglet **Affectation**.
 2. Sélectionnez **Attribuer** et choisissez une option.
-3. Attribuez l'application aux personnes qui doivent avoir accès à Braze.
+3. Attribuez l'app aux personnes qui doivent avoir accès à Braze.
 4. Sélectionnez **Terminé** lorsque vous avez terminé le travail.
 
 {% endtab %}
 {% tab Okta - Custom app integration %}
 
-{% alert important %}
-L'intégration d'Okta est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Okta integration' %}
+
+Utilisez l'option **Okta - Intégration d'une app** personnalisée si vous avez configuré une app personnalisée pour le SSO. Si vous avez configuré l'app Braze pour l'authentification SAML unique (SSO) dans Okta, suivez les instructions de l'onglet [Okta - app Braze]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/?tab=okta%20-%20braze%20app#step-1-set-up-scim-provisioning).
 
 ## Étape 1 : Configurer le provisionnement du SCIM
 
@@ -106,13 +118,12 @@ L'intégration d'Okta est actuellement en accès anticipé. Contactez votre gest
 {% endtab %}
 {% tab Entra ID %}
 
-{% alert important %}
-L'intégration d'Entra ID est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Entra ID integration' %}
 
 ## Étape 1 : Configurer l'application de provisionnement SCIM
 
-### Étape 1.1. Connectez-vous au centre d'administration de Microsoft Entra
+### Étape 1.1 : Connectez-vous au centre d'administration de Microsoft Entra
+
 Connectez-vous à votre centre d'administration Microsoft Entra.
 
 ### Étape 1.2 : Créez et configurez votre application SCIM
@@ -121,7 +132,7 @@ Connectez-vous à votre centre d'administration Microsoft Entra.
 2. Sélectionnez **Nouvelle application**.
 3. Sélectionnez **Créer votre propre application**.
 4. Dans le panneau, saisissez un nom pour votre application.
-5. Dans la section **Que cherchez-vous à faire avec votre application ?**, sélectionnez **Intégrer une application que vous ne trouvez pas dans la galerie (Non-gallery)**.
+5. Dans la section **Que cherchez-vous à faire avec votre application ?** sélectionnez **Intégrer une application que vous ne trouvez pas dans la galerie (Non-gallery)**.
 6. Sélectionnez **Créer**.
 
 ### Étape 1.3 : Mise en place de l'intégration du SCIM
@@ -152,7 +163,7 @@ Connectez-vous à votre centre d'administration Microsoft Entra.
 - **Origine du service :** Saisissez le domaine d'origine de vos demandes SCIM. Braze l'utilise dans l'en-tête `X-Request-Origin` pour vérifier l'origine des demandes.
 - **IP Allowlisting (optionnel) :** Vous pouvez limiter les requêtes SCIM à des adresses IP spécifiques. Saisissez une liste ou une plage d'adresses IP à autoriser, séparées par des virgules. L'en-tête `X-Request-Origin` de chaque requête est utilisé pour vérifier l'adresse IP de la requête par rapport à la liste d'autorisation.
 
-![Formulaire de paramétrage du provisionnement du SCIM avec trois champs : Espace de travail par défaut, Origine du service, et liste d'autorisations IP en option. Le bouton "Générer un jeton SCIM" est désactivé.]({% image_buster /assets/img/scim_unfilled.png %})
+![Formulaire de paramétrage du provisionnement du SCIM avec trois champs : Espace de travail par défaut, origine du service et liste d'adresses IP autorisées en option. Le bouton "Générer un jeton SCIM" est désactivé.]({% image_buster /assets/img/scim_unfilled.png %})
 
 ## Étape 2 : Générer un jeton SCIM
 

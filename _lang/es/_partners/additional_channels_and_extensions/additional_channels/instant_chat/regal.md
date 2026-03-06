@@ -359,7 +359,7 @@ A continuación se muestra un ejemplo de carga útil para un evento `contact.att
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.attribute.edited",
   "properties": {
@@ -423,7 +423,7 @@ A continuación se muestra un ejemplo de carga útil para un evento `contact.exp
   "userId": "123",
   "traits": {
     "phone": "+17625555555",
-    "email": "xxx@gmail.com",
+    "email": "xxx@gmail.com"
   },
   "name": "contact.experiment.assigned",
   "properties": {

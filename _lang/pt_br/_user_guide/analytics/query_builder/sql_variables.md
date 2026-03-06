@@ -35,7 +35,7 @@ Substitua o seguinte:
 
 | Espaço reservado      | Descrição                                                                                                                              |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `variable_type`   | O tipo de variável pré-definido que você gostaria de usar, como `campaign` ou `catalog_fields`. Para a lista completa, veja [Tipos de variáveis suportadas](#variable-types). |
+| `variable_type`   | O tipo de variável pré-definido que você gostaria de usar, como `campaign` ou `catalog_fields`. Para a lista completa, veja [Tipos de variáveis suportados](#variable-types). |
 | `custom_label` | O rótulo usado para identificar a variável na aba **Variáveis** do seu Construtor de Consultas. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -163,7 +163,7 @@ options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value":
 
 ### Período
 
-Para exibir um calendário para selecionar datas. Substitua `start_date` e `end_date` por um timestamp Unix em segundos para uma data especificada em UTC, como `1696517353`. Opcionalmente, você pode definir apenas um `start_date` ou `end_date` para exibir apenas uma única data no calendário. Se os rótulos do seu `start_date` e `end_date` não coincidirem, eles serão tratados como duas datas separadas, em vez de um intervalo de datas.
+Para exibir um calendário para selecionar datas. Substitua `start_date` e `end_date` por um timestamp Unix em segundos para uma data especificada em UTC, como `1696517353`. Opcionalmente, você pode definir apenas um `start_date` ou `end_date` para exibir apenas uma única data no calendário. Se os rótulos do seu `start_date` e `end_date` não corresponderem, eles serão tratados como duas datas separadas, em vez de um intervalo de datas.
 
 {% tabs %}
 {% tab usage %}
@@ -193,7 +193,7 @@ Seu Liquid será usado para exibir um calendário dentro do intervalo de datas d
 
 {% tabs local %}
 {% tab one campaign %}
-Para selecionar uma campanha. Compartilhar o mesmo rótulo com um Canvas resultará em um botão de opção dentro da aba **Variáveis** para selecionar Canvas ou campanha.
+Para selecionar uma campanha. Compartilhar o mesmo rótulo com um Canvas resultará em um botão de opção dentro da aba **Variáveis** para selecionar entre Canvas ou campanha.
 
 {% subtabs %}
 {% subtab usage %}
@@ -207,7 +207,7 @@ campaign_id = '{{campaign.${custom_label}}}'
 {% endtab %}
 
 {% tab multiple campaigns %}
-Para campanhas de seleção múltipla. Compartilhar o mesmo rótulo com um Canvas resultará em um botão de opção dentro da aba **Variáveis** para selecionar Canvas ou campanha.
+Para campanhas de seleção múltipla. Compartilhar o mesmo rótulo com um Canvas resultará em um botão de opção dentro da aba **Variáveis** para selecionar entre Canvas ou campanha.
 
 - **Valor de substituição:** IDs BSON de campanhas
 
@@ -497,7 +497,7 @@ Para saber se o valor de uma variável está preenchido. Isso é útil para vari
 {% endtab %}
 {% endtabs %}
 
-`type` e `name` referem-se à variável referenciada. Por exemplo, para interromper o seguinte variável opcional: {% raw %}`{{campaigns.${messaging}}`{% endraw %}:
+`type` e `name` referem-se à variável referenciada. Por exemplo, para interromper a seguinte variável opcional: {% raw %}`{{campaigns.${messaging}}`{% endraw %}:
 
 {% raw %}
 ```sql

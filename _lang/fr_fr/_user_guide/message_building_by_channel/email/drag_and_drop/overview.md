@@ -244,7 +244,11 @@ La personnalisation liquide n'est pas prise en charge pour les blocs d'images et
 
 #### Images dynamiques
 
-Vous pouvez choisir d'insérer des images dynamiques dans vos e-mails en incluant du code Liquid dans l'attribut source de votre image. Par exemple, au lieu d'une image statique, vous pouvez insérer {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} comme URL de l'image pour inclure le prénom d'un utilisateur dans l'image. Ceci vous aide à personnaliser vos e-mails pour chaque utilisateur.
+Vous pouvez choisir d'inclure des images dynamiques dans votre envoi de messages e-mail en incluant [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) ou [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) dans l'attribut source de votre image. Par exemple, au lieu d'une image statique, vous pouvez insérer {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} comme URL de l'image pour inclure le prénom d'un utilisateur dans l'image. Ceci vous aide à personnaliser vos e-mails pour chaque utilisateur.
+
+{% alert important %}
+L'URL de votre image doit commencer par `https://`. L'utilisation de `http://` fait planter votre application.
+{% endalert %}
 
 ### Sens du texte
 

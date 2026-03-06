@@ -144,6 +144,10 @@ Añade un componente en tu Canvas y, a continuación, selecciona **Sincronizar a
 - **Información de contacto del cliente**: Contiene el correo electrónico o el número de teléfono de tus usuarios, o ambos, si existen en Braze. Google exige que sea un único campo para sincronizar en lugar de identificadores separados. Puedes seguir utilizando este campo único si sólo tienes uno de los identificadores.
 - **ID de anunciante móvil**: Selecciona IDFA de iOS o GAID de Android. Debido a los requisitos de Google para la correspondencia de clientes, no puedes tener ambos ID de anunciante móvil en las mismas listas de clientes.
 
+{% alert note %}
+**Acerca de los "¿Desaparecidos los ID de publicidad móvil? Vamos a arreglarlo":** Cuando sincronizas con una audiencia utilizando IDFA de iOS o GAID de Android como campo a emparejar, puede aparecer este mensaje en el editor de pasos. Es **informativo, no un error**. Te recuerda que debes confirmar que el campo ID del anuncio móvil con el que estás haciendo la coincidencia existe en tus datos de audiencia (por ejemplo, que los usuarios de la ruta de audiencia de Canvas tienen recogido el identificador correspondiente). Puedes descartarlo después de verificar tus datos.
+{% endalert %}
+
 {: start="4"}
 4\. A continuación, guarda tu audiencia seleccionando el botón **Crear audiencia** en la parte inferior del editor de pasos.
 

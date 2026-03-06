@@ -382,7 +382,7 @@ lines-ContentCardInboxActivity.kt=29-35,40-42,44
 
 #### 3\.コンテンツカード更新を購読する
 
-[`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>) を使用して、新しいコンテンツカードが利用可能になったときにUI が応答できるようにします。ここでは、アクティビティライフサイクルフック内でサブスクライバーs が登録され、削除されます。
+[`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>) を使用して、新しいコンテンツカードが利用可能になったときにUI が応答できるようにします。ここでは、アクティビティライフサイクルフック内でサブスクライバー が登録され、削除されます。
 
 !!step
 lines-ContentCardInboxActivity.kt=73-84
