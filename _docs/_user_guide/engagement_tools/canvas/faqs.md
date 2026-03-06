@@ -205,7 +205,7 @@ Exception events are created using Action Paths. Action Paths only support "afte
 
 ### What should I include when submitting a support ticket for a "Request Timed Out" error?
 
-If you encounter a "Request Timed Out" error while editing a Canvas and need to contact [Braze support]({{site.baseurl}}/braze_support/), include the following information to help speed up resolution:
+If you encounter a "Request Timed Out" error while editing a Canvas and need to contact [Braze Support]({{site.baseurl}}/braze_support/), include the following information to help speed up resolution:
 
 - **Screen recording:** A recording of the steps you took before seeing the error, including any page transitions.
 - **Timestamp and time zone:** The exact time the error occurred and your time zone.
