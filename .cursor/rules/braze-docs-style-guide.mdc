@@ -1,7 +1,7 @@
 ---
 description: Braze Docs style guide rules for writing and reviewing documentation content
 globs: _docs/**/*.md, _includes/**/*.md
-alwaysApply: false
+alwaysApply: true
 ---
 
 # Braze Docs Style Guide
