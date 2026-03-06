@@ -95,7 +95,7 @@ There are several reasons why a user might not receive an email that you expecte
 | The user is unsubscribed from email | Check the user's subscription status under **Contact Settings** on the **Engagement** tab. Braze won't send marketing emails to users who are unsubscribed. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### The email was sent but didn't arrive
+#### The email was sent, but didn't arrive in their inbox
 
 | Possible cause | What to check |
 |---|---|
