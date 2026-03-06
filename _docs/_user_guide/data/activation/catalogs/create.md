@@ -23,6 +23,20 @@ Commons use cases for catalogs include:
 
 After this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
+## Supported data types {#supported-data-types}
+
+The following table lists the supported catalog data types and how they can be created or updated.
+
+| Data type    | Description                                   | Available via CSV upload | Available via API and CDI |
+|--------------|-----------------------------------------------|:------------------------:|:-------------------------:|
+| String       | A sequence of characters.                     | ✅ Yes                    | ✅ Yes                     |
+| Number       | A numeric value, either integer or float.     | ✅ Yes                    | ✅ Yes                     |
+| Boolean      | A `true` or `false` value.                    | ✅ Yes                    | ✅ Yes                     |
+| Time         | A string formatted in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.                        | ✅ Yes                    | ✅ Yes                     |
+| JSON object  | A nested object with key-value pairs. Can be displayed in the platform but can only be created or updated through the API or CDI.         | ⛔ No                     | ✅ Yes                     |
+| String array | A list of strings. Can be displayed in the platform but can only be created or updated through the API or CDI. Maximum of 100 elements. | ⛔ No                     | ✅ Yes                     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
 ## Creating a catalog
 
 To create a catalog, go to **Data Settings** > **Catalogs**, then select **Create New Catalog** and choose one of the following options:
@@ -40,7 +54,7 @@ Before you upload your CSV file, ensure that your CSV file meets the following r
 | File size | For Free plans, the total size of all CSV files across a company is limited to 100 MB. For Pro plans, the maximum file size for a single CSV file is 2 GB. |
 | Field values | Each cell (field value) can contain up to 5,000 characters. |
 | Valid characters | The `id` column and all header values can only contain letters, numbers, hyphens, and underscores. |
-| Data types | Supported data types for uploading a CSV file include string, integer, float, boolean, or datetime. |
+| Data types | Supported data types for CSV uploads include string, number, boolean, and time. For the full list of data types, including those available only through the API and CDI, refer to [Supported data types](#supported-data-types). |
 | Formatting | Format all text in lowercase to maintain consistency. |
 | Encoding | Save and upload the CSV file using UTF-8 encoding. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -135,7 +149,14 @@ After creating the catalog, you can begin referencing the [catalog in a campaign
 {% tab Create in browser %}
 ### Prerequisites
 
-Before you can edit or create catalogs in the browser, you'll need the **Manage Catalogs Dashboard** permission.
+Before you can edit or create catalogs in the browser, you need the following [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) for your workspace:
+
+- View Catalogs
+- Edit Catalogs
+- Export Catalogs
+- Delete Catalogs
+
+{% multi_lang_include deprecations/user_permissions.md %}
 
 ### Step 1: Enter catalog details
 
@@ -167,6 +188,20 @@ Braze processes time values based on the dashboard timestamp. For example, if a 
 {% endtab %}
 {% endtabs %}
 
+## Catalog data types
+
+Catalogs support various data types to help you organize and structure your data effectively. The following table describes each supported data type and how it maps to CSV and API type names:
+
+| Data Type | Format | Example | Description |
+|-----------|--------|---------|-------------|
+| String | Text | `"Hello World"` | Any sequence of characters used for text data such as names, descriptions, and IDs. Equivalent to the `string` type in CSV and API imports. |
+| Time | ISO 8601 or Unix timestamp (seconds) | `"2024-03-15T14:30:00Z"` | Date and time values formatted as ISO 8601 or Unix timestamp in seconds. Equivalent to the `time` type in the API and the `datetime` type in CSV imports. |
+| Boolean | `true` or `false` | `true` | Logical values representing true or false states. Equivalent to the `boolean` type in CSV and API imports. |
+| Number | Integer or decimal | `42` or `19.99` | Numeric values including integers and floating-point numbers for prices, quantities, ratings, and more. Equivalent to the `integer` and `float` types in CSV imports and the `number` type in the API. |
+| Object | JSON object | `{"key": "value", "price": 10}` | Complex nested data structures. API `type` value is `object`. Displayed as JSON Object in the dashboard. Only available via API or Cloud Data Ingestion (CDI). |
+| Array | Array of strings | `["red", "blue", "green"]` | Lists of string values. API `type` value is `array`. Displayed as String array in the dashboard. Only available through the API or CDI. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
 ## Using templates in catalog names {#template-catalog-names}
 
 When naming your catalog, you can also use templates in a catalog name. This lets you dynamically generate catalog names based on variables like language or campaign. For example, you can use the following:
@@ -190,7 +225,7 @@ To update your catalog after uploading a CSV or creating a catalog in the browse
 
 As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
 
-Supported data types for using API include: string, integer, float, boolean, or datetime. You can also upload arrays and objects when managing your catalogs with the API.
+The REST API supports all [catalog data types](#supported-data-types), including JSON objects and string arrays. JSON objects and string arrays can only be created or updated through the REST API.
 
 ### Using Cloud Data Ingestion
 

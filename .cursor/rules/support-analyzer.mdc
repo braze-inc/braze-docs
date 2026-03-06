@@ -31,6 +31,8 @@ For each unique Case ID, determine if docs action is needed:
 | **Support-Only** | Account-specific, requires Braze internal access, or one-off config | Skip (no docs change) |
 | **Bug/Product** | Issue requiring code fix, not docs | Skip (escalate to eng) |
 
+> **Never document workarounds or bugs.** Documentation must describe how the product works — or is intended to work — not temporary workarounds for issues that will be (or should be) fixed. If a ticket's resolution relies on a workaround for a product defect, categorize it as **Bug/Product** and skip it. Workaround content creates maintenance burden and misleads customers once the underlying issue is resolved.
+
 ---
 
 ## Step 2: Per-Ticket Analysis
@@ -73,11 +75,10 @@ After processing all tickets:
 
 For each docs update:
 
-1. Read the target file to understand existing structure
-2. Draft changes following conventions in the codebase based on the style 
-guides in `_docs/_contributing/style_guide/*`
+1. **Prefer refining existing content over adding new elements** — After identifying the relevant file(s), read the surrounding content carefully. Look for opportunities to clarify, restructure, or expand language that's already there. Adjusting existing prose is almost always better than appending a new alert, callout, or FAQ entry.
+2. Draft changes following conventions in the codebase based on the style guides in `_docs/_contributing/style_guide/*`
 3. Keep additions concise and scannable (bullets, tables, code blocks)
-4. Add to FAQ sections when appropriate (see `_docs/_user_guide/**/faq.md` patterns)
+4. **Use alerts and FAQ entries as a last resort** — Only add a new alert, callout, or FAQ entry when the information genuinely cannot be worked into existing prose. These elements contribute to doc bloat and should be reserved for content that doesn't fit naturally elsewhere.
 
 ---
 
@@ -95,6 +96,8 @@ Stage and Commit all changes in `_docs` with a meaningful message derived from t
 ## Step 7: Generate the PR for each branch
 Create each PR with the naming conventin: `[SA] update summary`
 Example: `[SA] Add FAQ entry about machine opens vs other opens`
+
+Always add the label `support analyzer` to the PR by including `--label "support analyzer"` in the `gh pr create` command.
 
 Cursor fills out the PR automatically:
 
