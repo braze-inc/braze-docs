@@ -17,7 +17,7 @@ Here are some quick tips to keep in mind while building your content:
 - When formatting your email, use inline style sheets as CSS.
 - To use one email template for both mobile and desktop versions, keep the width under 500 pixels.
 - Images must be under 5&nbsp;MB. We recommend using PNG, JPEG, or GIF for maximum compatibility. Avoid SVG and WebP, as many major email clients do not yet support them.
-- Don't set heights and widths for images as this will cause unnecessary white space in a degraded email.
+- Don't set heights and widths for images as this can cause unnecessary white space in a degraded email.
 - `div` tags should not be used as most email clients do not support their use. Instead, use nested tables.
 - Avoid using JavaScript because it does not work with any ESP.
 - Braze improves load times by using a global CDN to host all email images.
@@ -32,7 +32,7 @@ Since spam filters watch for both an HTML and a plain text version of a message,
 Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message.
 {% endalert %}
 
-Email validation is done when a user's email address has been updated or is being imported into Braze via API, CSV upload, SDK, or modified in the dashboard. Note that your email addresses cannot include white spaces, and if send using the API, whitespaces will result in a 400 error.
+Email validation is done when a user's email address has been updated or is being imported into Braze via API, CSV upload, SDK, or modified in the dashboard. Note that your email addresses cannot include white spaces, and if send using the API, whitespaces result in a `400` error.
 
 Email addresses targeted via the Braze servers must be validated per [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) standards, Braze does not accept certain characters and recognizes them as invalid. If an email is bounced, Braze marks the email as invalid and the subscription status is not changed. 
 
