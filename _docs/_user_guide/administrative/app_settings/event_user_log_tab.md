@@ -56,7 +56,7 @@ If you're looking for events to arrive as fast as possible, try calling the `req
 
 ### In-app message impression failures
 
-If an in-app message fails to display, you can find the reason in the Event User Log by expanding the raw JSON data for the relevant SDK request. Look for the `error_code` field in the response — this code identifies the specific reason the impression failed (for example, an invalid color value or a rendering issue). Share this error code with Braze support if further investigation is needed.
+If an in-app message fails to display, you can find the reason in the Event User Log by expanding the raw JSON data for the relevant SDK request and looking for the `error_code` field in the response. The `error_code` identifies the specific reason the impression failed (for example, an invalid color value or a rendering issue). Share this error code with [Braze support]({{site.baseurl}}/braze_support/) if further investigation is needed.
 
 ### Session end and session start have similar timestamps (iOS)
 
