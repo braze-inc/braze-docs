@@ -18,7 +18,7 @@ Early access for this feature is temporarily closed. Contact your customer succe
 
 ## Prerequisites
 
-To delete users, you'll need to be an admin or have **Delete User** permissions.
+You must be an admin to delete users.
 
 ## About user deletion
 
