@@ -70,7 +70,7 @@ For Canvas agents, you can use Liquid in your instructions to reference user att
 Select **Add context** to choose what your agent can reference. This includes:
 
 - [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Give the agent access to your catalog data for more accurate responses.
-- [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Let the agent personalize responses based on which segments a user belongs to. You can select up to three segments.
+- [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Let the agent personalize responses based on which segments a user belongs to. You can select up to five segments.
 - [Brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
 - [All Canvas Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analyze all Canvas context data for a user when this agent is invoked, including any variables that are not referenced in the **Instructions** section.
 
@@ -166,6 +166,10 @@ Review the output with a critical eye. Consider the following questions:
 - Are the calculated values accurate?
 
 If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
+
+{% alert tip %}
+Avoid telling the agent exactly what you do not want it to do. LLMs may still generate that content if you mention it in the instructions.
+{% endalert %}
 
 ### Step 6: Use your agent
 
