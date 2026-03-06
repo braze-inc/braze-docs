@@ -7,17 +7,17 @@ description: "This reference article covers how to configure different time zone
 
 # Workspace time zones for message sending
 
-> Workspace time zones allow admins to define specific time zones for individual workspaces. This makes scheduled campaigns and Canvases (that don't use local time or Intelligent Time delivery) send according to the workspace's designated time zone, rather than the overarching company time zone.
+> Workspace time zones allow admins to define specific time zones for individual workspaces. This makes scheduled campaigns and Canvases (that don't use local time or Intelligent Timing) send according to the workspace's designated time zone, rather than the overarching company time zone.
 
 {% multi_lang_include early_access_beta_alert.md feature='Workspace time zones' %}
 
-By default, a new workspace inherits the time zone set for your company. Admins can override this default for one or multiple workspaces with workspace time zones. When a workspace time zone is set, scheduled campaigns and Canvases within that workspace references that new time zone for their send times.
+By default, a new workspace inherits the time zone set for your company. Admins can override this default for one or more workspaces with workspace time zones. When a workspace time zone is set, scheduled campaigns and Canvases within that workspace reference that new time zone for their send times.
 
 For example, if a workspace time zone is set to PST, and a campaign within that workspace is scheduled to send at 3 pm PST, it will deliver at 3 pm PST. This holds true even if your company's overall time zone is different (such as EST, where 3 pm PST would be 6 pm EST).
 
 ## Managing workspace time zones
 
-If you're an admin, you can access and manage workspace time zones by going to **Settings** > **Admin Settings** > **Workspace Time Zone**.
+If you're an admin, you can access and manage workspace time zones by going to **Settings** > **Admin Settings** > **Workspace Time Zones**.
 
 Here, you can view a list of all your workspaces, their set time zone, and the last time the time zone was edited. Use the search bar to find specific workspaces by name.
 
@@ -72,7 +72,7 @@ Inform relevant teams and stakeholders within each workspace about any time zone
 
 When a workspace time zone is updated, audience filters that use date-only criteria (where no specific time is provided) are re-evaluated based on the new time zone's boundaries.
 
-For filters such as "Last did custom event X after" Braze uses the workspace time zone to determine the start and end of the calendar day. Changing this setting shifts the 11:59 PM cutoff point for that specific date.
+For filters such as "Last did custom event X after" Braze uses the workspace time zone to determine the start and end of the calendar day. Changing this setting shifts the 11:59 pm cutoff point for that specific date.
 
 ### Example
 
@@ -85,4 +85,4 @@ Following this change, a user who performs the custom event at 10 pm PST on Marc
 
 ## Reporting discrepancies
 
-Workspace time zones provide precise control over campaign sending, but you should be aware of potential reporting discrepancies for this beta. Cross-reference data points and be mindful of the time zone when analyzing reports for workspaces with specific time zone overrides.
+Workspace time zones provide precise control over campaign sending, but you should be aware of potential reporting discrepancies while this feature is in early access. Cross-reference data points and be mindful of the time zone when analyzing reports for workspaces with specific time zone overrides.
