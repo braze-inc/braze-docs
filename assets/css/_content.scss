@@ -198,6 +198,20 @@
 			}
 		}
 
+		// Increase visual hierarchy for nested lists inside list items.
+		ol > li > ul,
+		ol > li > ol,
+		ul > li > ul,
+		ul > li > ol {
+			margin-left: 36px;
+			margin-top: 6px;
+		}
+
+		ol > li > ul,
+		ul > li > ul {
+			list-style: disc;
+		}
+
 		p + ol,
 		p + ul {
 			margin-top: -10px;
