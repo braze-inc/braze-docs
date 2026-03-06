@@ -133,7 +133,7 @@ Create an in-app message campaign that explains the value of location access. Al
 
 For best results, show the location primer when users are engaged and likely to see value in sharing their location.
 
-- **Target users who haven't granted location access yet.** Use custom attributes set by your app to track which users haven't been prompted or haven't granted permissions. Keep in mind that custom attributes are stored at the user level, so if a user has multiple devices, the permission status may be out-of-sync across devices. Unlike push primers, there isn't currently a way for the device to automatically suppress the message if location permission is already granted.
+- **Target users who haven't granted location access yet.** Work with your development team to determine the best way to track and segment users based on their location permission status.
 - **Time the primer after a high-value action,** such as completing a purchase, saving a store as a favorite, or browsing nearby events. Users are more likely to opt in when they understand the benefit.
 - **Avoid showing the primer on first launch.** Wait until users have experienced enough value from the app to want a more personalized experience.
 
