@@ -101,16 +101,16 @@ If links in your push notifications are opening in the app unexpectedly, it migh
 3. **Verify iOS push registration:** For iOS, revisit step 1 of the push integration guide on [registering push notifications with APNs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns). Ensure your delegate object is assigned synchronously before the app finishes launching. This step should be completed in the `application:didFinishLaunchingWithOptions:` method.
 4. **Test your integration:** After making adjustments, test the push notification behavior on both iOS and Android devices to confirm the issue is resolved.
 
-## Warning when uploading a .p12 certificate
+## Manage a .p12 or .pem certificate warning
 
-When uploading a `.p12` push certificate in the Braze dashboard, you may see the following warning:
+When uploading a `.p12` or `.pem` push certificate in the Braze dashboard, you may see the following warning:
 
 {% alert important %}
 > The legacy .p12 and .pem certificate file types are deprecated in favor of .p8 files. Unlike .p8 files, the legacy file types expire annually and require error-prone manual updating.
 
 Apple `.p8` authentication keys are the recommended approach for APNs push because they don't expire and support all of your apps under a single key. If you're currently using a `.p12` or `.pem` certificate, we recommend migrating to a `.p8` key. For instructions, see [Upload your APNs push certificate]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
 
-If you need to continue using a `.p12` certificate (for example, because your organization requires per-app certificates), you can dismiss the warning and proceed with the upload. Contact [Braze support]({{site.baseurl}}/braze_support/) if you need assistance.
+If you need to continue using a `.p12` or `.pem` certificate (for example, because your organization requires per-app certificates), you can dismiss the warning and proceed with the upload. Contact [Braze support]({{site.baseurl}}/braze_support/) if you need assistance.
 {% endalert %}
 
 ## Web push notifications aren't behaving as expected
