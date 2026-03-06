@@ -103,7 +103,7 @@ There are several reasons why a user might not receive an email that you expecte
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-A delivery event in Braze means the mailbox provider confirmed receipt of the email. However, final delivery to the user's inbox depends on the MBP. The MBP may route the message to spam, or in rare cases, silently prevent display of the message.
+A delivery event in Braze means the email was accepted by the mailbox provider's server. However, this does not guarantee that the message appears in the user's inbox. The MBP may route the message to spam or, in rare cases, silently prevent display of the message.
 {% endalert %}
 
 ### Can I add a "view this email in a browser" link to my emails?
