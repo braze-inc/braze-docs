@@ -1,7 +1,13 @@
 {% if include.section == "Prerequisites" %}
 ## Prerequisites
 
-To edit and manage [multi-language support]({{site.baseurl}}/multi_language_support/), you must have the "Manage Multi-Language Settings" user permission. To add the locale to a message, you'll need permissions for editing campaigns.
+To edit and manage [multi-language support]({{site.baseurl}}/multi_language_support/), you need the following [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) for your workspace:
+
+- View Multi Language Settings
+- Create Multi Language Locale Settings
+- Delete Multi Language Locale Settings
+
+To add the locale to a message, you need the "Edit Campaigns" permission.
 
 {% alert important %}
 Multi-language support is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
