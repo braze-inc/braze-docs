@@ -65,13 +65,13 @@ event_documentation:
       -  
         - "The `push_token_provisionally_opted_in` field only applies to iOS push tokens."
         - "If you have [Provisional Authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) set up, provisional tokens will have this field set to `true`. All other push tokens will be `false`."
-      - 
+      -
         - "Whenever a push token enters Braze, its lifecycle events are recorded. There are three types of token change events (\"add\", \"update\", and \"remove\") recorded in the `push_token_state_change_type` field. Note the following details:"
-        - "For a new token that hasn't existed before, this ingests one \"add\" event."
-        - "For updating the token with the same token string on the same user (gateway or `foreground_push_disabled` or other \"secondary\" fields changed), this will ingest one \"update\" event on the same token."
-        - "If a token moved from one user to another user, this will ingest one \"remove\" event for the old user and one \"add\" event for the new user."
-        - "If the same user or device generates a new token, this will ingest one \"remove\" event for the old token and one \"add\" event for the new token."
-        - "If Braze is removing a token (for reasons like an uninstall or invalid token), this will ingest one \"remove\" event for the token."
+        - "An \"add\" event is ingested when a new token is registered (for example, app opened on a new device) or when a token is set through `/users/track` with `push_tokens` for a user that didn't previously have one."
+        - "An \"update\" event is ingested when a property changes on an existing token without the token string itself changing. Properties that trigger an update include `foreground_push_disabled`, APNs gateway, web push keys, `provisionally_opted_in`, or `device_id`."
+        - "A standalone \"remove\" event is ingested when Braze removes a token due to a push bounce (APNs, FCM, or HMS reporting the token as invalid or expired), uninstall detection through silent push, or removal through the REST API or APNs feedback service."
+        - "An \"add\" and \"remove\" pair is ingested when the OS rotates the token string on the same device (same `user_id`, same `device_id`, different `push_token`, identical `time_ms`), or when a token moves between users (different `user_id`, same `device_id`, same `push_token`). Token movement is triggered by `changeUser` SDK calls, the `/users/merge` endpoint, or duplicate user cleanup."
+        - "If an anonymous profile is identified through the `/users/identify` endpoint, the `user_id` does not change and no token state change event is emitted."
     
   users.RandomBucketNumberUpdate:
     description: This user event occurs every time a new user is created within their workspace. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly-distributed segments of random users. Use this to group together a range of random bucket number values and compare performance across your campaigns and campaign variants.
