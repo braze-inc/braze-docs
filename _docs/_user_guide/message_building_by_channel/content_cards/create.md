@@ -136,7 +136,6 @@ You can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user
 {% multi_lang_include alerts/note_alerts.md alert='Content Cards frequency capping' %}
 
 For action-based delivery (such as triggering on session start), there is an expected short delay before the Content Card appears. The trigger event must first be flushed to Braze's servers, then the campaign creates the card in the database, and finally the SDK syncs to pull available cards to the device. For first-session users, this delay is unavoidable. For existing users who need instant availability, consider using scheduled delivery instead.
-For action-based delivery (such as triggering on session start), there is an expected short delay before the Content Card appears. The trigger event must first be flushed to Braze's servers, then the campaign creates the card in the database, and finally, the SDK syncs to pull available cards to the device. For first-session users, this delay is unavoidable. For existing users who need instant availability, consider using scheduled delivery instead.
 
 ##### Scheduled delivery
 
