@@ -151,7 +151,7 @@ You can change the data type of your custom event property, but be aware of the 
 
 #### Reserved keys
 
-You cannot use reserved keys as event property names. Using a reserved key in the `properties` object will return the error "Invalid `properties` field".
+You cannot use reserved keys as event property names. Using a reserved key in the `properties` object will return the error "Invalid 'properties' field".
 
 | Property | Reserved Key |
 | --- | --- |
