@@ -1,5 +1,9 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
+{% alert tip %}
+For help choosing between custom scheme deep links, universal links, and "Open Web URL Inside App," see [iOS deep linking guide]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide). For troubleshooting, see [Deep linking troubleshooting]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+{% endalert %}
+
 ## Handling deep links
 
 ### Step 1: Register a scheme {#register-a-scheme}
