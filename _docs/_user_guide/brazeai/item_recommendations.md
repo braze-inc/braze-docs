@@ -18,7 +18,7 @@ Before you can create or use item recommendations in Braze, you'll need to [crea
 
 ### AI Personalized {#ai}
 
-As part of the [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai) feature, AI Personalized recommendations take advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest in in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
+As part of the [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai) feature, AI Personalized recommendations take advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
 
 AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback, so your users are still getting relevant suggestions.
 
@@ -53,7 +53,7 @@ Predict and recommend the items a user is most likely to purchase next, based on
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose how you currently track purchase events and the corresponding event property.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations/).
 {% enddetails %}
 {% endtab %}
 {% endtabs %}
