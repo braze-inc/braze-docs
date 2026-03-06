@@ -97,6 +97,16 @@ braze.openSession();
 **In-App Message Display**: To display in-app messages automatically when they're triggered, you must call `braze.automaticallyShowInAppMessages()`. Without this call, in-app messages don't display automatically. If you want to manage message display manually, remove this call and use `braze.subscribeToInAppMessage()` instead. For more information, see [In-app message delivery]({{site.baseurl}}/developer_guide/in_app_messages/delivery/).
 {% endalert %}
 
+#### Troubleshooting missing sessions for anonymous users
+
+If you're seeing "Session missing" behavior, or you're not able to track the session for users who stay anonymous on web, make sure your integration calls `braze.openSession()` during initialization.
+
+- **Scenario:** Anonymous users can return a Braze ID, but session data is blank or missing.
+- **Cause:** The implementation doesn't call `braze.openSession()`.
+- **Resolution:** Always call `braze.openSession()` after initialization (and after `braze.changeUser()` if you set an external ID).
+
+For more information, see [Step 2: Initialize the SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web&tab=code-based%20integration#step-2-initialize-the-sdk).
+
 {% alert important %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
