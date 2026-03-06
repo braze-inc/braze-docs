@@ -193,7 +193,7 @@ Your push permissions are now reset. Open a new tab to your site and try it out.
 
 ### Safari push registration issues
 
-If users are unable to register for push on Safari specifically, check the following:
+If you're unable to register for push in Safari, check the following:
 
 1. **Safari Website Push ID:** Confirm you supplied the correct `safariWebsitePushId` when initializing the Braze Web SDK. You can find this value in **Settings** > **App Settings** > select your web app > **Configure Safari Push**.
 2. **Allowed domains:** Confirm the site requesting push is listed in the **Allowed Domains** field (also under **Configure Safari Push**). Domains must not end in a trailing slash (`/`).
