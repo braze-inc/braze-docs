@@ -40,7 +40,7 @@ Additional benefits of using an `external_id` include the following:
 
 ### Considerations for external IDs
 
-{% include alerts/warning_alerts.md alert='User profile external_id' %} 
+{% multi_lang_include alerts/warning_alerts.md alert='User profile external_id' %} 
 
 #### Risk of using an email or hashed email as an external ID
 

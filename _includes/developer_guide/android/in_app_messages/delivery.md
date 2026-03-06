@@ -28,7 +28,7 @@ To override this value, set `com_braze_trigger_action_minimum_time_interval_seco
 
 ## Key-value pairs
 
-When you create a campaign in Braze, you can set key-value pairs as `extras`, which the the in-app messaging object can use to send data to your app. For example:
+When you create a campaign in Braze, you can set key-value pairs as `extras`, which the in-app messaging object can use to send data to your app. For example:
 
 {% tabs %}
 {% tab JAVA %}
