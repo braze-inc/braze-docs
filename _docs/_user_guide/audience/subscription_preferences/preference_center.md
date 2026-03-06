@@ -14,7 +14,7 @@ guide_featured_list:
 - name: API email preference center
   link: /docs/user_guide/message_building_by_channel/email/preference_center/api_preference_center/
   image: /assets/img/braze_icons/list.svg
-- name: Drag-And-Drop Preference Center
+- name: Drag-and-drop preference center
   link: /docs/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/
   image: /assets/img/braze_icons/mail-01.svg
 

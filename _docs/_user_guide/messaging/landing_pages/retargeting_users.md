@@ -1,6 +1,6 @@
 ---
-nav_title: Retargeting users
-article_title: Retargeting users
+nav_title: Retarget users
+article_title: Retarget users
 description: "Learn how to retarget users who've submitted a form through a landing page."
 page_order: 3
 ---

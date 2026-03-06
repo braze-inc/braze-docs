@@ -1,6 +1,6 @@
 ---
-nav_title: Improving low latency
-article_title: Improve Low Latency for Content Cards as banners
+nav_title: Improve low latency
+article_title: Improve low latency for Content Cards as banners
 page_order: 10
 description: "This article covers strategies to ensure low-latency requirements are met with Content Cards."
 channel:

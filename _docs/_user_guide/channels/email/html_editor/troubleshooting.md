@@ -6,7 +6,9 @@ description: "This help article walks you through how to troubleshoot issues wit
 channel: email
 ---
 
-# Troubleshooting 
+# Troubleshooting
+
+> This article covers common issues with HTML emails and how to resolve them, including extension conflicts, rendering differences, and CSS inlining.
 
 ## HTML renders incorrectly in test emails
 

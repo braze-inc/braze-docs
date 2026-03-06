@@ -25,10 +25,10 @@ guide_featured_list:
   - name: Segment data
     link: /docs/user_guide/audience/segments/segment_data/
     image: /assets/img/braze_icons/bar-chart-01.svg
-  - name: Segment Extensions
+  - name: Segment extensions
     link: /docs/user_guide/audience/segments/segment_extension/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Segment Insights
+  - name: Segment insights
     link: /docs/user_guide/audience/segments/segment_insights/
     image: /assets/img/braze_icons/pie-chart-01.svg
 

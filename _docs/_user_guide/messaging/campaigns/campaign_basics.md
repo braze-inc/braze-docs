@@ -1,7 +1,7 @@
 ---
 nav_title: Campaign basics
 article_title: Campaign basics
-page_order: 1
+page_order: 0
 page_type: reference
 description: "This reference article covers the basics of campaigns, covering various questions you should ask yourself as you set up your first campaigns."
 tool: Campaigns

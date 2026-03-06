@@ -12,13 +12,13 @@ description: "This landing page is home to Canvas articles. Here, you'll find re
 
 guide_featured_title: "Sections"
 guide_featured_list:
-  - name: Getting Started
+  - name: Getting started
     link: /docs/user_guide/engagement_tools/canvas/get_started/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Build Canvases
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Canvas Components
+  - name: Canvas components
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/about/
     image: /assets/img/braze_icons/dataflow-03.svg 
   - name: Manage Canvases
@@ -27,10 +27,10 @@ guide_featured_list:
   - name: Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/
     image: /assets/img/braze_icons/beaker-02.svg
-  - name: Ideas and Strategies
+  - name: Ideas and strategies
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/
     image: /assets/img/braze_icons/target-04.svg
-  - name: Frequently Asked Questions
+  - name: Frequently asked questions
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     image: /assets/img/braze_icons/annotation-question.svg
   - name: Troubleshooting Canvases

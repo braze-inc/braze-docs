@@ -14,13 +14,13 @@ guide_featured_list:
   - name: Overview
     link: /docs/user_guide/brazeai/decisioning_studio/getting_started/overview/
     image: /assets/img/braze_icons/list.svg
-  - name: Preparing Your Data Sources
+  - name: Preparing your data sources
     link: /docs/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Preparing Your Orchestration
+  - name: Preparing your orchestration
     link: /docs/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_orchestration/
     image: /assets/img/braze_icons/dataflow-04.svg
-  - name: Designing Decisioning Agents
+  - name: Designing decisioning agents
     link: /docs/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/
     image: /assets/img/braze_icons/settings-01.svg
 

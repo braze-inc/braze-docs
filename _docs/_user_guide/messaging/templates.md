@@ -13,6 +13,9 @@ description: "Create and manage reusable message templates, Content Blocks, and 
 
 guide_featured_title: "Section articles"
 guide_featured_list:
+  - name: Manage templates
+    link: /docs/user_guide/messaging/templates/managing_templates/
+    image: /assets/img/braze_icons/archive.svg
   - name: Canvas templates
     link: /docs/user_guide/messaging/templates/canvas_templates/
     image: /assets/img/braze_icons/palette.svg
@@ -25,19 +28,4 @@ guide_featured_list:
   - name: Webhook templates
     link: /docs/user_guide/messaging/templates/webhook_templates/
     image: /assets/img/braze_icons/brackets.svg
-  - name: Manage templates
-    link: /docs/user_guide/messaging/templates/managing_templates/
-    image: /assets/img/braze_icons/archive.svg
 ---
-
-## About templates
-
-You can use and manage templates and creative content in the **Templates** section for the following features:
-
-- **[Email templates]({{site.baseurl}}/user_guide/messaging/templates/email_templates/)**
-- **[In-app message templates]({{site.baseurl}}/user_guide/messaging/templates/in_app_message_templates/)**
-- **[Canvas templates]({{site.baseurl}}/user_guide/messaging/templates/canvas_templates/)**
-- **[Content Blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/)**
-- **[Webhook templates]({{site.baseurl}}/user_guide/messaging/templates/webhook_templates/)**
-- **[Manage assets in the media library]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library/)**
-

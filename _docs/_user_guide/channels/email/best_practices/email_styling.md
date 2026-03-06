@@ -10,6 +10,8 @@ channel: email
 
 # Email styling
 
+> This article outlines email styling best practices, including subject lines, preheader text, email size, and image recommendations.
+
 ## Address styling
 
 The **Subject Line** is one of the first things that recipients will see upon receiving your message. Keeping it to 6 to 10 words will yield the highest open rates. 

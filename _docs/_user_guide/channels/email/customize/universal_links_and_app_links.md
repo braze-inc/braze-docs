@@ -3,11 +3,13 @@ nav_title: "Universal links and app links"
 article_title: "Universal links and app links"
 page_order: 6.4
 page_type: reference
-description: "This help article walks you through how to set up Apple universal links and Android App Links."
+description: "This article describes how to set up Apple universal links and Android App Links."
 channel: email
 ---
 
 # Universal links and App Links
+
+> This article describes how to set up Apple universal links and Android App Links.
 
 {% alert tip %}
 For a comparison of link types across all messaging channels and guidance on when you need an AASA file, see [iOS deep linking guide]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide).

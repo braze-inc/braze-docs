@@ -18,10 +18,10 @@ guide_featured_list:
   - name: Email
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Feature Flags
+  - name: Feature flags
     link: /docs/developer_guide/feature_flags/experiments/
     image: /assets/img/braze_icons/flag-06.svg
-  - name: In-App Messages
+  - name: In-app messages
     link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
     image: /assets/img/braze_icons/message-text-circle-01.svg
   - name: Push
@@ -39,10 +39,10 @@ guide_featured_list:
 
 guide_menu_title: "More articles"
 guide_menu_list:
-  - name: Funnel Reports
+  - name: Funnel reports
     link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: Retention Reports
+  - name: Retention reports
     link: /docs/user_guide/analytics/
     image: /assets/img/braze_icons/user-check-01.svg
 

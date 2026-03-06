@@ -1,7 +1,7 @@
 ---
 nav_title: Microsoft Entra SSO
 article_title: Microsoft Entra SSO
-page_order: 3
+page_order: 2
 page_type: tutorial
 description: "This article will walk you through how to set up Microsoft Entra single sign-on capabilities with Braze."
 

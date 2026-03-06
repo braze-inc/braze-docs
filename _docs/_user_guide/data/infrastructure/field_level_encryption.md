@@ -9,6 +9,8 @@ page_type: reference
 
 # Identifier field-level encryption
 
+> Encrypt email addresses to minimize personally identifiable information (PII) shared in Braze.
+
 {% multi_lang_include field_level_encryption_pii_description.md %}
 
 {% alert important %}

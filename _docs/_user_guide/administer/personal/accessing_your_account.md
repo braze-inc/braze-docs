@@ -211,3 +211,10 @@ If you're a new Braze user having trouble logging in or accessing your account f
 - Re-add user: If issues persist, the admin can delete your user account from the dashboard and re-add you. This allows for the creation of the user with the same details.
 
 If problems continue after these steps, contact [Support]({{site.baseurl}}/braze_support/) for further assistance.
+
+## Next steps
+
+After you access your account, explore these resources:
+
+- [The Braze dashboard]({{site.baseurl}}/user_guide/administer/personal/the_braze_dashboard/) to learn how to navigate key features and tools.
+- [Language settings]({{site.baseurl}}/user_guide/administer/personal/language_settings/) to set your preferred dashboard language.

@@ -12,25 +12,25 @@ tool: Reports
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Home Dashboard
+  - name: Home dashboard
     link: /docs/user_guide/analytics/dashboard/home_dashboard/
     image: /assets/img/braze_icons/phone-02.svg
-  - name: Channel Performance Dashboard
+  - name: Channel performance dashboard
     link: /docs/user_guide/analytics/dashboard/email_performance_dashboard/
     image: /assets/img/braze_icons/line-chart-up-01.svg
-  - name: Conversions Dashboard
+  - name: Conversions dashboard
     link: /docs/user_guide/analytics/dashboard/conversions_dashboard/
     image: /assets/img/braze_icons/bar-chart-07.svg
-  - name: Deliverability Center
+  - name: Deliverability center
     link: /docs/user_guide/analytics/dashboard/deliverability_center/
     image: /assets/img/braze_icons/navigation-pointer-01.svg
-  - name: API Usage Dashboard
+  - name: API usage dashboard
     link: /docs/user_guide/analytics/dashboard/api_usage_dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
-  - name: eCommerce Revenue Dashboard
+  - name: eCommerce revenue dashboard
     link: /docs/ecommerce_revenue_dashboard/
     image: /assets/img/braze_icons/line-chart-up-04.svg  
-  - name: Messaging Diagnostics Dashboard
+  - name: Messaging diagnostics dashboard
     link: /docs/user_guide/analytics/dashboards/diagnostics_dashboard/
     image: /assets/img/braze_icons/pie-chart-01.svg
 ---

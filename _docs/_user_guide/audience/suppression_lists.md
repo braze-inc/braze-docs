@@ -18,7 +18,7 @@ Suppression lists are dynamic and automatically apply to all forms of messaging,
 
 ### Message types and channels affected by suppression lists
 
-Suppression lists will apply to all message types and channels except for [feature flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/). This means that suppression lists by default apply to all channels, campaigns, and Canvases, including:
+Suppression lists will apply to all message types and channels except for [feature flags]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/feature_flags/). This means that suppression lists by default apply to all channels, campaigns, and Canvases, including:
 - [API campaigns]({{site.baseurl}}/api/api_campaigns/)
 - API-triggered campaigns and Canvases
 - [Transactional emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/)

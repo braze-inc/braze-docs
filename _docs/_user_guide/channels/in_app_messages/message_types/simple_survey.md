@@ -1,6 +1,6 @@
 ---
 nav_title: "Simple survey"
-article_title: Simple Survey In-App Message
+article_title: Simple survey in-app message
 page_order: 6
 page_type: reference
 description: "This reference article covers how to collect user attributes, insights, and preferences to power your campaign strategy using the in-app message surveys."
@@ -14,7 +14,9 @@ tool:
 
 > Use the **Simple Survey** in-app message template to collect user attributes, insights, and preferences that power your campaign strategy. 
 
-For example, ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature.
+This message type is available in the [traditional editor]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/).
+
+Common survey use cases include asking users how they'd like to use your app, learning more about their personal preferences, or asking about their satisfaction with a particular feature.
 
 ![Three simple survey messages: notification preferences, dietary preferences, and a customer satisfaction survey. The selected options in the surveys correspond to custom attributes that will be logged for that user.]({% image_buster /assets/img/iam/iam-survey.png %})
 

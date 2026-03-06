@@ -1,9 +1,9 @@
 ---
 page_order: 10
 nav_title: Best practices
-article_title: Email Best Practices
+article_title: Email best practices
 layout: dev_guide
-guide_top_header: "Email Best Practices"
+guide_top_header: "Email best practices"
 guide_top_text: "Before sending out your email messages, refer to the following articles for things you should know and check for."
 
 page_type: landing
@@ -15,19 +15,19 @@ guide_featured_list:
   - name: "Guidelines"
     link: /docs/user_guide/channels/email/best_practices/email_guidelines/
     image: /assets/img/braze_icons/award-03.svg
-  - name: "Email Styling"
+  - name: "Email styling"
     link: /docs/user_guide/channels/email/best_practices/email_styling/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: "Use Cases"
+  - name: "Use cases"
     link: /docs/user_guide/channels/email/best_practices/use_cases/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: "Sunset Policies"
+  - name: "Sunset policies"
     link: /docs/user_guide/channels/email/best_practices/sunset_policies/
     image: /assets/img/braze_icons/sun-setting-03.svg
-  - name: "Sending Test Messages"
+  - name: "Sending test messages"
     link: /docs/developer_guide/in_app_messages/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: "Know Before You Send"
+  - name: "Know before you send"
     link: /docs/know_before_send/
     image: /assets/img/braze_icons/send-01.svg
 

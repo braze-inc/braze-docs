@@ -40,7 +40,7 @@ Your treatment group is similar in size to your Global Control Group, but it is 
 
 ### Exclude users from feature flags
 
-You can't enable [feature flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) for users in your Global Control Group. This means users in your Global Control Group also can't be part of feature flag experiments.
+You can't enable [feature flags]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/feature_flags/) for users in your Global Control Group. This means users in your Global Control Group also can't be part of feature flag experiments.
 
 ### Exclude users from the Global Control Group
 

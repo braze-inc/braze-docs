@@ -12,16 +12,16 @@ tool: Canvas
 search_rank: 2
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Canvas Basics
+  - name: Canvas basics
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
     image: /assets/img/braze_icons/list.svg
-  - name: Using Braze Canvas Templates
+  - name: Using Braze Canvas templates
     link: /docs/user_guide/messaging/templates/canvas_templates/braze_templates/
     image: /assets/img/braze_icons/target-04.svg
-  - name: Understanding Canvas Status
+  - name: Understanding Canvas status
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Canvas Outlines
+  - name: Canvas outlines
     link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_outlines/
     image: /assets/img/braze_icons/git-branch-01.svg
 ---

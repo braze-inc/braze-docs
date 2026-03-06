@@ -1,13 +1,13 @@
 ---
 nav_title: Admin settings
 article_title: Admin Settings
-page_order: 4
+page_order: 3
 layout: dev_guide
 guide_top_header: "Admin Settings"
-guide_top_text: "This page is located at <b>Settings</b> > <b>Admin Settings</b>. You can then select the respective tab to navigate to the settings you want to manage. <br> <br> Most features within <b>Admin Settings</b> are only available to Braze account administrators. If you don't have access but feel that you should, contact your company's Braze account administrator."
+guide_top_text: "Admin settings apply across your entire company and affect all workspaces and users. Use these settings to manage company contact information, configure notification preferences, and enforce security policies such as authentication rules and IP allowlisting.<br><br>To manage these settings, go to <b>Settings</b> > <b>Admin Settings</b>. Most features are only available to Braze account administrators. For workspace-specific configuration, see <a href='/docs/user_guide/administer/global/workspace_settings/'>Workspace settings</a>."
 
 page_type: landing
-description: "This landing page lists articles on admin settings. Here, you can find articles on configuring contact information, notification preferences, and security settings."
+description: "Manage company-wide admin settings that apply across all workspaces, including contact information, notification preferences, and security policies."
 
 guide_featured_title: "Topics"
 guide_featured_list:

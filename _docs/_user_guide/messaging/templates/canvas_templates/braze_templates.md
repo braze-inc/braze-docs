@@ -1,39 +1,96 @@
 ---
-nav_title: Using Braze templates
-article_title: Use Braze Templates
+nav_title: Use Braze templates
+article_title: Use Braze Canvas templates
+alias: "/canvas_templates/templates/"
 page_order: 2
-layout: dev_guide
-guide_top_header: "Using Braze Templates"
-guide_top_text: "Unlock the potential of your marketing campaigns with <a href='/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/' target='_blank'>Braze Canvas templates</a>. These templates provide a streamlined approach to creating effective user journeys, allowing you to engage users at critical moments. Explore the following use case articles to see how you can build on these Canvas templates for your marketing goals."
-
-page_type: landing
-description: "This landing page is home to articles that will guide you on how you can customize and leverage Braze Canvas templates to fit your use cases, from targeting users for feature adoption or personalizing messages for onboarding users."
-tool: Canvas
-
-guide_featured_title: "Section articles"
-guide_featured_list:
-  - name: Abandoned Cart
-    link: /docs/user_guide/messaging/templates/canvas_templates/abandoned_cart/
-    image: /assets/img/braze_icons/users-right.svg
-  - name: Back In Stock
-    link: /docs/user_guide/messaging/templates/canvas_templates/back_in_stock/
-    image: /assets/img/braze_icons/shopping-cart-03.svg
-  - name: Email Sign-Up with Double Opt-In
-    link: /docs/user_guide/messaging/templates/canvas_templates/email_signup/
-    image: /assets/img/braze_icons/mail-01.svg
-  - name: Feature Adoption
-    link: /docs/user_guide/messaging/templates/canvas_templates/feature_adoption/
-    image: /assets/img/braze_icons/flag-02.svg
-  - name: Lapsing User
-    link: /docs/user_guide/messaging/templates/canvas_templates/lapsed_user/
-    image: /assets/img/braze_icons/target-05.svg
-  - name: Onboarding
-    link: /docs/user_guide/messaging/templates/canvas_templates/onboarding/
-    image: /assets/img/braze_icons/user-check-01.svg
-  - name: Onboarding with Preferences Survey
-    link: /docs/user_guide/messaging/templates/canvas_templates/preference_survey/
-    image: /assets/img/braze_icons/annotation-question.svg
-  - name: Purchase Feedback
-    link: /docs/user_guide/messaging/templates/canvas_templates/post_purchase_feedback/
-    image: /assets/img/braze_icons/coins-hand.svg
+description: "This reference article covers how to create available Canvas templates."
+page_type: reference
 ---
+
+# Use Braze Canvas templates
+
+> Braze has a selection of Canvas templates available for you to reference and use as best practices for common use cases. While these templates can't be edited, you can view them in **Templates** > **Braze templates** or use them in your Canvases.
+
+![Braze templates in the Canvas templates section with thirteen available templates.]({% image_buster /assets/img/braze_canvas_templates.png %})
+
+Select from the following available templates to reference or use as your Canvas.
+
+## Standard Canvas templates
+
+{% tabs %}
+{% tab Abandoned Intent %}
+
+### Abandoned intent
+
+Engage with users in real-time to encourage them to complete their purchases.
+
+Consider the following when using this template:
+
+- Add a specific audience. Currently, the audience paths are triggered based on "Made Any Purchase", but you can tailor this to specific products you want to target.
+- This template assumes you have a separate post-purchase journey, so making a purchase will cause users to exit the Canvas.
+- Fill out the details in the Audience Sync step.
+
+{% endtab %}
+{% tab Back In Stock %}
+
+### Back in stock
+
+Drive purchases by notifying your users when an item is back in stock with personalized messaging. Consider the following when using this template:
+
+- In **Entry Schedule**, select a catalog to use. This allows you to access data, such as products, discounts, and promotions, to further target your users.
+- In **Target Audience**, add a segment to target users who indicated interest in a certain item.
+- In the Message steps throughout the Canvas, update the Liquid to reference your catalog.
+
+{% endtab %}
+{% tab Feature Adoption %}
+
+### Feature adoption
+
+Deliver timely personalized messages to highlight the benefits and usage tips. Consider the following when using this template:
+
+- Exclude users who have already adopted the feature. For example, in **Target Audience**, add a filter for a custom event such as "Activated Feature" that has already occurred.
+- To use the Experiment Path step, define a conversion event. This event should be the event that signals feature adoption.
+- Set up the Action Path step in the template with custom events for "Activated Feature" and "Taken Tour".
+- Set up the custom attributes in the Message step named "Feedback Survey" to capture sentiment of feedback.
+
+{% endtab %}
+{% tab Lapsed User %}
+
+### Lapsed user
+
+Bring users back to your app with incentives based on their past engagements. Consider the following when using this template:
+
+- In **Basics**, select a specific app to track conversions for.
+- In the Canvas editor, add specific apps for the Action Paths steps.
+- Configure the Audience Sync step with the partners and audiences for your use case.
+
+{% endtab %}
+{% tab Onboarding %}
+
+### Onboarding
+
+Create onboarding journeys that promote strong initial adoption and encourage lasting relationships with your users. Consider the following when using this template:
+
+- In the Audience Paths step named "Audience Split", consider customizing the key actions for engaged users. In the template, the segment filter is "Has clicked email for step Welcome Email".
+
+{% endtab %}
+{% tab Post-Purchase Feedback %}
+
+### Post-purchase feedback
+
+Orchestrate personalized experiences that allow you to respond to feedback and build a relationship with your users. Consider the following when using this template:
+
+- In the first step of the Canvas editor:
+    - Specify the custom attributes in the in-app message to indicate the sentiment of the feedback based on the selected survey option. 
+    - Specify attributes on links for each call-to-action to capture which option is selected. These attributes are referenced in the subsequent audience path.
+- Customize the Audience Path with the attributes from the first step of this template.
+- Set up the Audience Sync step named "Ad Retargeting".
+
+{% endtab %}
+{% endtabs %}
+
+## eCommerce Canvas templates
+
+eCommerce Canvas templates are tailored specifically for eCommerce marketers, making it easier to implement essential strategies.
+
+{% multi_lang_include canvas/ecommerce_templates.md %}

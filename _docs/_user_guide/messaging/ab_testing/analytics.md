@@ -8,7 +8,7 @@ description: "This article explains how to view and interpret the results of a m
 
 # Multivariate and A/B test analytics
 
-> This article explains how to view the results of a multivariate or A/B test. If you haven't set up your test yet, refer to [Creating multivariate and A/B tests]({{site.baseurl}}/user_guide/messaging/ab_testing/create_tests/) for steps.
+> This article explains how to view the results of a multivariate or A/B test. If you haven't set up your test yet, refer to [Create multivariate and A/B tests]({{site.baseurl}}/user_guide/messaging/ab_testing/create_tests/) for steps.
 
 After your campaign has launched, you can check how each variant is performing by selecting your campaign from the **Campaigns** section of the dashboard. 
 

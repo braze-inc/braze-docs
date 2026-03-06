@@ -11,7 +11,7 @@ channel: push
 
 > There are many types of push notifications you can use to interact with your customers. You can configure most of these settings in your push campaigns, but some require backend configurations as noted in the descriptions.
 
-## Regular push
+## Standard push
 
 The all-encompassing push message. These appear on your user's device with a notification sound and message which slides in or appears in a notification bar or stack.
 
@@ -35,9 +35,9 @@ In-app message campaigns used to gain explicit push opt-in or opt-out signal fro
 
 For more information, see [Push primer in-app messages]({{site.baseurl}}/user_guide/channels/push/best_practices/push_primer_messages/).
 
-## Push stories
+## Push Stories
 
-Push stories are immersive messages that take your user through a visual journey in the form of a carousel. These are available for mobile devices only.
+Push Stories are immersive messages that take your user through a visual journey in the form of a carousel. These are available for mobile devices only.
 
 **Supported on:** iOS, Android
 

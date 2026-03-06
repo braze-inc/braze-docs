@@ -1,11 +1,14 @@
 ---
-nav_title: Currents Event Changelogs
+nav_title: Currents event changelogs
+article_title: Currents event changelogs
 page_order: 3
-description: "This page includes the event changes for each Currents release."
+description: "Track schema changes across Currents releases, including new event types and field additions for storage and data sharing."
 tool: Currents
 ---
 
 # Currents changelog
+
+> Track schema changes across Currents releases. Each version lists new event types and field additions for both storage and data sharing.
 
 ## Changes in Version 6 (release date 2026-03-04)
 
@@ -453,42 +456,26 @@ tool: Currents
 ### Changes for storage
 
 * Added new event type `agentconsole.AgentExecuted`.
-
 * Added new event type `agentconsole.ToolInvocation`.
-
 * Added new event type `users.messages.email.Retry`.
-
 * Added new event type `users.messages.line.Retry`.
-
 * Added new event type `users.messages.pushnotification.Retry`.
-
 * Added new event type `users.messages.sms.Retry`.
-
 * Added new event type `users.messages.webhook.Retry`.
-
 * Added new event type `users.messages.whatsapp.Retry`.
-
 * Field changes to event type `users.behaviors.pushnotification.TokenStateChange`:
     * Added new `long` field `time_ms`: Time in millisecond when the event happened
 
 ### Changes for data sharing
 
 * Added new event type `agentconsole.AgentExecuted`.
-
 * Added new event type `agentconsole.ToolInvocation`.
-
 * Added new event type `users.messages.email.Retry`.
-
 * Added new event type `users.messages.line.Retry`.
-
 * Added new event type `users.messages.pushnotification.Retry`.
-
 * Added new event type `users.messages.sms.Retry`.
-
 * Added new event type `users.messages.webhook.Retry`.
-
 * Added new event type `users.messages.whatsapp.Retry`.
-
 * Field changes to event type `users.behaviors.pushnotification.TokenStateChange`:
     * Added new `long` field `time_ms`: Time in millisecond when the event happened
 
@@ -532,27 +519,16 @@ tool: Currents
 ### Changes for storage
 
 * Added new event type `users.messages.line.Abort`.
-
 * Added new event type `users.messages.line.Click`.
-
 * Added new event type `users.messages.line.InboundReceive`.
-
 * Added new event type `users.messages.line.Send`.
-
 * Added new event type `users.messages.rcs.Abort`.
-
 * Added new event type `users.messages.rcs.Click`.
-
 * Added new event type `users.messages.rcs.Delivery`.
-
 * Added new event type `users.messages.rcs.InboundReceive`.
-
 * Added new event type `users.messages.rcs.Read`.
-
 * Added new event type `users.messages.rcs.Rejection`.
-
 * Added new event type `users.messages.rcs.Send`.
-
 * Field changes to event type `users.messages.sms.Delivery`:
     * Added new `boolean` field `is_sms_fallback`: Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID
 
@@ -593,27 +569,16 @@ tool: Currents
 ### Changes for data sharing
 
 * Added new event type `users.messages.line.Abort`.
-
 * Added new event type `users.messages.line.Click`.
-
 * Added new event type `users.messages.line.InboundReceive`.
-
 * Added new event type `users.messages.line.Send`.
-
 * Added new event type `users.messages.rcs.Abort`.
-
 * Added new event type `users.messages.rcs.Click`.
-
 * Added new event type `users.messages.rcs.Delivery`.
-
 * Added new event type `users.messages.rcs.InboundReceive`.
-
 * Added new event type `users.messages.rcs.Read`.
-
 * Added new event type `users.messages.rcs.Rejection`.
-
 * Added new event type `users.messages.rcs.Send`.
-
 * Field changes to event type `users.messages.sms.Delivery`:
     * Added new `boolean` field `is_sms_fallback`: Indicates if SMS fallback was attempted for this rejected RCS message. It is linked/paired to the SMS Delivery event
 
@@ -656,313 +621,160 @@ tool: Currents
 ### Changes for storage
 
 * Added new event type `users.behaviors.app.FirstSession`.
-
 * Added new event type `users.behaviors.app.SessionEnd`.
-
 * Added new event type `users.behaviors.app.SessionStart`.
-
 * Added new event type `users.behaviors.CustomEvent`.
-
 * Added new event type `users.behaviors.InstallAttribution`.
-
 * Added new event type `users.behaviors.liveactivity.PushToStartTokenChange`.
-
 * Added new event type `users.behaviors.liveactivity.UpdateTokenChange`.
-
 * Added new event type `users.behaviors.Location`.
-
 * Added new event type `users.behaviors.Purchase`.
-
 * Added new event type `users.behaviors.pushnotification.TokenStateChange`.
-
 * Added new event type `users.behaviors.subscription.GlobalStateChange`.
-
 * Added new event type `users.behaviors.subscriptiongroup.StateChange`.
-
 * Added new event type `users.behaviors.Uninstall`.
-
 * Added new event type `users.campaigns.Conversion`.
-
 * Added new event type `users.campaigns.EnrollInControl`.
-
 * Added new event type `users.canvas.Conversion`.
-
 * Added new event type `users.canvas.Entry`.
-
 * Added new event type `users.canvas.exit.MatchedAudience`.
-
 * Added new event type `users.canvas.exit.PerformedEvent`.
-
 * Added new event type `users.canvas.experimentstep.Conversion`.
-
 * Added new event type `users.canvas.experimentstep.SplitEntry`.
-
 * Added new event type `users.canvasstep.Progression`.
-
 * Added new event type `users.messages.banner.Abort`.
-
 * Added new event type `users.messages.banner.Click`.
-
 * Added new event type `users.messages.banner.Impression`.
-
 * Added new event type `users.messages.contentcard.Abort`.
-
 * Added new event type `users.messages.contentcard.Click`.
-
 * Added new event type `users.messages.contentcard.Dismiss`.
-
 * Added new event type `users.messages.contentcard.Impression`.
-
 * Added new event type `users.messages.contentcard.Send`.
-
 * Added new event type `users.messages.email.Abort`.
-
 * Added new event type `users.messages.email.Bounce`.
-
 * Added new event type `users.messages.email.Click`.
-
 * Added new event type `users.messages.email.Deferral`.
-
 * Added new event type `users.messages.email.Delivery`.
-
 * Added new event type `users.messages.email.MarkAsSpam`.
-
 * Added new event type `users.messages.email.Open`.
-
 * Added new event type `users.messages.email.Send`.
-
 * Added new event type `users.messages.email.SoftBounce`.
-
 * Added new event type `users.messages.email.Unsubscribe`.
-
 * Added new event type `users.messages.featureflag.Impression`.
-
 * Added new event type `users.messages.inappmessage.Abort`.
-
 * Added new event type `users.messages.inappmessage.Click`.
-
 * Added new event type `users.messages.inappmessage.Impression`.
-
 * Added new event type `users.messages.liveactivity.Outcome`.
-
 * Added new event type `users.messages.liveactivity.Send`.
-
 * Added new event type `users.messages.pushnotification.Abort`.
-
 * Added new event type `users.messages.pushnotification.Bounce`.
-
 * Added new event type `users.messages.pushnotification.IosForeground`.
-
 * Added new event type `users.messages.pushnotification.Open`.
-
 * Added new event type `users.messages.pushnotification.Send`.
-
 * Added new event type `users.messages.sms.Abort`.
-
 * Added new event type `users.messages.sms.CarrierSend`.
-
 * Added new event type `users.messages.sms.Delivery`.
-
 * Added new event type `users.messages.sms.DeliveryFailure`.
-
 * Added new event type `users.messages.sms.InboundReceive`.
-
 * Added new event type `users.messages.sms.Rejection`.
-
 * Added new event type `users.messages.sms.Send`.
-
 * Added new event type `users.messages.sms.ShortLinkClick`.
-
 * Added new event type `users.messages.webhook.Abort`.
-
 * Added new event type `users.messages.webhook.Failure`.
-
 * Added new event type `users.messages.webhook.Send`.
-
 * Added new event type `users.messages.whatsapp.Abort`.
-
 * Added new event type `users.messages.whatsapp.Click`.
-
 * Added new event type `users.messages.whatsapp.Delivery`.
-
 * Added new event type `users.messages.whatsapp.Failure`.
-
 * Added new event type `users.messages.whatsapp.InboundReceive`.
-
 * Added new event type `users.messages.whatsapp.Read`.
-
 * Added new event type `users.messages.whatsapp.Send`.
-
 * Added new event type `users.RandomBucketNumberUpdate`.
 
 ### Changes for data sharing
 
 * Added new event type `changelogs.GlobalControlGroup`.
-
 * Added new event type `users.behaviors.app.FirstSession`.
-
 * Added new event type `users.behaviors.app.NewsFeedImpression`.
-
 * Added new event type `users.behaviors.app.SessionEnd`.
-
 * Added new event type `users.behaviors.app.SessionStart`.
-
 * Added new event type `users.behaviors.CustomEvent`.
-
 * Added new event type `users.behaviors.geofence.DataEvent`.
-
 * Added new event type `users.behaviors.geofence.RecordEvent`.
-
 * Added new event type `users.behaviors.InstallAttribution`.
-
 * Added new event type `users.behaviors.liveactivity.PushToStartTokenChange`.
-
 * Added new event type `users.behaviors.liveactivity.UpdateTokenChange`.
-
 * Added new event type `users.behaviors.Location`.
-
 * Added new event type `users.behaviors.Purchase`.
-
 * Added new event type `users.behaviors.pushnotification.TokenStateChange`.
-
 * Added new event type `users.behaviors.subscription.GlobalStateChange`.
-
 * Added new event type `users.behaviors.subscriptiongroup.StateChange`.
-
 * Added new event type `users.behaviors.Uninstall`.
-
 * Added new event type `users.behaviors.UpgradedApp`.
-
 * Added new event type `users.campaigns.Conversion`.
-
 * Added new event type `users.campaigns.EnrollInControl`.
-
 * Added new event type `users.campaigns.FrequencyCap`.
-
 * Added new event type `users.campaigns.Revenue`.
-
 * Added new event type `users.canvas.Conversion`.
-
 * Added new event type `users.canvas.Entry`.
-
 * Added new event type `users.canvas.exit.MatchedAudience`.
-
 * Added new event type `users.canvas.exit.PerformedEvent`.
-
 * Added new event type `users.canvas.experimentstep.Conversion`.
-
 * Added new event type `users.canvas.experimentstep.SplitEntry`.
-
 * Added new event type `users.canvas.FrequencyCap`.
-
 * Added new event type `users.canvas.Revenue`.
-
 * Added new event type `users.canvasstep.Progression`.
-
 * Added new event type `users.messages.banner.Abort`.
-
 * Added new event type `users.messages.banner.Click`.
-
 * Added new event type `users.messages.banner.Impression`.
-
 * Added new event type `users.messages.contentcard.Abort`.
-
 * Added new event type `users.messages.contentcard.Click`.
-
 * Added new event type `users.messages.contentcard.Dismiss`.
-
 * Added new event type `users.messages.contentcard.Impression`.
-
 * Added new event type `users.messages.contentcard.Send`.
-
 * Added new event type `users.messages.email.Abort`.
-
 * Added new event type `users.messages.email.Bounce`.
-
 * Added new event type `users.messages.email.Click`.
-
 * Added new event type `users.messages.email.Deferral`.
-
 * Added new event type `users.messages.email.Delivery`.
-
 * Added new event type `users.messages.email.MarkAsSpam`.
-
 * Added new event type `users.messages.email.Open`.
-
 * Added new event type `users.messages.email.Send`.
-
 * Added new event type `users.messages.email.SoftBounce`.
-
 * Added new event type `users.messages.email.Unsubscribe`.
-
 * Added new event type `users.messages.featureflag.Impression`.
-
 * Added new event type `users.messages.inappmessage.Abort`.
-
 * Added new event type `users.messages.inappmessage.Click`.
-
 * Added new event type `users.messages.inappmessage.Impression`.
-
 * Added new event type `users.messages.liveactivity.Outcome`.
-
 * Added new event type `users.messages.liveactivity.Send`.
-
 * Added new event type `users.messages.newsfeedcard.Abort`.
-
 * Added new event type `users.messages.newsfeedcard.Click`.
-
 * Added new event type `users.messages.newsfeedcard.Impression`.
-
 * Added new event type `users.messages.pushnotification.Abort`.
-
 * Added new event type `users.messages.pushnotification.Bounce`.
-
 * Added new event type `users.messages.pushnotification.InfluencedOpen`.
-
 * Added new event type `users.messages.pushnotification.IosForeground`.
-
 * Added new event type `users.messages.pushnotification.Open`.
-
 * Added new event type `users.messages.pushnotification.Send`.
-
 * Added new event type `users.messages.sms.Abort`.
-
 * Added new event type `users.messages.sms.CarrierSend`.
-
 * Added new event type `users.messages.sms.Delivery`.
-
 * Added new event type `users.messages.sms.DeliveryFailure`.
-
 * Added new event type `users.messages.sms.InboundReceive`.
-
 * Added new event type `users.messages.sms.Rejection`.
-
 * Added new event type `users.messages.sms.Send`.
-
 * Added new event type `users.messages.sms.ShortLinkClick`.
-
 * Added new event type `users.messages.webhook.Abort`.
-
 * Added new event type `users.messages.webhook.Failure`.
-
 * Added new event type `users.messages.webhook.Send`.
-
 * Added new event type `users.messages.whatsapp.Abort`.
-
 * Added new event type `users.messages.whatsapp.Click`.
-
 * Added new event type `users.messages.whatsapp.Delivery`.
-
 * Added new event type `users.messages.whatsapp.Failure`.
-
 * Added new event type `users.messages.whatsapp.InboundReceive`.
-
 * Added new event type `users.messages.whatsapp.Read`.
-
 * Added new event type `users.messages.whatsapp.Send`.
-
 * Added new event type `users.RandomBucketNumberUpdate`.
-
 * Added new event type `users.UserDeleteRequest`.
-
 * Added new event type `users.UserOrphan`.

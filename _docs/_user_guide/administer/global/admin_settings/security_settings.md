@@ -363,3 +363,10 @@ If you encounter issues when entering your phone number on the Authy page and do
 3. If you still don't receive the SMS, try using a different network connection, such as your home network or a non-corporate Wi-Fi. Corporate networks may have security policies that interfere with SMS delivery.
 
 If issues persist, delete the old profile in the Authy app and scan the QR code again to set up 2FA. Ensure that you have disabled any ad blockers, enabled third-party cookies, or used a different browser before attempting the setup again.
+
+## Next steps
+
+For more information about authentication and access, see:
+
+- [SAML & single sign-on]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/) to set up SSO with your identity provider.
+- [Permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/) to control what actions users can perform in the dashboard.

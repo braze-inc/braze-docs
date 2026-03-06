@@ -12,7 +12,7 @@ guide_featured_list:
   - name: Create a Canvas template
     link: /docs/user_guide/messaging/templates/canvas_templates/create_a_canvas_template/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Braze templates
+  - name: Use Braze templates
     link: /docs/user_guide/messaging/templates/canvas_templates/braze_templates/
     image: /assets/img/braze_icons/palette.svg
 ---

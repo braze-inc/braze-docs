@@ -24,10 +24,10 @@ guide_featured_list:
   - name: Engagement reports
     link: /docs/user_guide/analytics/reports/engagement_reports/
     image: /assets/img/braze_icons/line-chart-up-01.svg
-  - name: Report Builder
+  - name: Report builder
     link: /docs/user_guide/analytics/reports/report_builder/
     image: /assets/img/braze_icons/tool-01.svg
-  - name: Query Builder
+  - name: Query builder
     link: /docs/user_guide/analytics/reports/query_builder/
     image: /assets/img/braze_icons/code-02.svg
 

@@ -12,6 +12,10 @@ channel:
 
 > While our standard in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. 
 
+This message type is available in the [traditional editor]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/).
+
+## How it works
+
 HTML in-app messages allow for greater control over the look and feel of a message, including the following:
 
 - Custom fonts and styles

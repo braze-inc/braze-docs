@@ -1,9 +1,9 @@
 ---
 nav_title: Email setup
-article_title: Onboarding Email Setup
+article_title: Email setup
 layout: dev_guide
 page_order: 1
-guide_top_header: "Email Setup"
+guide_top_header: "Email setup"
 guide_top_text: "Braze can help you start sending email campaigns. Either follow our guides or check out our <a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Email Onboarding</a> Braze Learning course."
 page_type: landing
 description: "This landing page includes resources on getting started with email campaigns, including setting up your IPs and domains, IP warming, email validation, and more."
@@ -11,28 +11,28 @@ channel: email
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: "Setting Up IPs and Domains"
+- name: "Setting up IPs and domains"
   link: /docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains/
   image: /assets/img/braze_icons/target-05.svg
-- name: "IP Warming"
+- name: "IP warming"
   link: /docs/user_guide/channels/email/email_setup/ip_warming/
   image: /assets/img/braze_icons/annotation-alert.svg
-- name: "Email Validation"
+- name: "Email validation"
   link: /docs/user_guide/channels/email/email_setup/email_validation/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: "Email Authentication"
+- name: "Email authentication"
   link: /docs/user_guide/channels/email/email_setup/authentication/
   image: /assets/img/braze_icons/user-square.svg
-- name: "Importing Your Email List"
+- name: "Importing your email list"
   link: /docs/user_guide/channels/email/email_setup/import_your_email_list/
   image: /assets/img/braze_icons/list.svg
-- name: "SSL Overview"
+- name: "SSL overview"
   link: /docs/user_guide/channels/email/email_setup/ssl/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
-- name: "Consent and Address Collection"
+- name: "Consent and address collection"
   link: /docs/user_guide/channels/email/email_setup/consent_and_address_collection/
   image: /assets/img/braze_icons/book-closed.svg
-- name: "Deliverability Pitfalls and Spam Traps"
+- name: "Deliverability pitfalls and spam traps"
   link: /docs/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps/
   image: /assets/img/braze_icons/alert-triangle.svg
 ---

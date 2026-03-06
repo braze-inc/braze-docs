@@ -10,7 +10,7 @@ description: "This reference article covers the different editor blocks that are
 tool: Media
 ---
 
-# Drag-and-Drop Editor blocks
+# Drag-and-drop editor blocks
 
 > Editor blocks are the various blocks available in the **Drag-And-Drop Editor**. This reference article includes a series of tiles that represent the different kinds of content you can use in your messages.
 

@@ -1,12 +1,12 @@
 ---
-nav_title: Using Liquid
-article_title: Liquid Use Case and Overview
+nav_title: Use Liquid
+article_title: Use Liquid
 page_order: 0
 description: "This reference article provides an overview of common Liquid use cases and how to include Liquid tags into your messaging."
 search_rank: 2
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Using Liquid
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Use Liquid
 
 > This article shows how you can use a variety of user attributes to dynamically insert personal information into your messaging.
 

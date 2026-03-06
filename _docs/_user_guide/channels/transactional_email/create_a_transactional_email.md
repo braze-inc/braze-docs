@@ -12,7 +12,7 @@ alias: "/api/api_campaigns/transactional_campaigns"
 
 ---
 
-# Transactional Email campaigns
+# Create a transactional email
 
 > Braze Transactional Emails are sent to facilitate an agreed-upon transaction between a sender and the recipient. This reference article covers how to create a transactional email campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [`/transactional/v1/campaigns/{campaign_id}/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 

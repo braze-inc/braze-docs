@@ -40,8 +40,8 @@ guide_featured_list:
   - name: Experiment Paths step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: Feature Flags in Canvas
-    link: /docs/developer_guide/feature_flags/canvas/
+  - name: Feature flags
+    link: /docs/user_guide/messaging/canvas/canvas_components/feature_flags/
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: Message step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/

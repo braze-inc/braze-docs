@@ -1,11 +1,11 @@
 ---
-nav_title: Using codes
-article_title: Using promotion codes
+nav_title: Use codes
+article_title: Use promotion codes
 page_order: 0.2
 description: "Learn how to use promotion codes and view usage for your campaigns and Canvases."
 ---
 
-# Using promotion codes
+# Use promotion codes
 
 > Learn how to use promotion codes and view usage for your campaigns and Canvases.
 
