@@ -239,8 +239,7 @@ $(document).ready(function() {
     <div id="api-main">
     <div id="content_start"></div>
 
-    <h1> Braze FAQ </h1>
-    <p class="api_text">Take a look through our collection of frequently asked questions, outlined by category. Use the search bar or the checkboxes below to find answers to your questions. </p>
+    {% multi_lang_include layouts/onboarding_faq_intro.html %}
 
     <div id="api_filter">
         <input id="api_search" type="search" placeholder="Search" aria-label="Search" />
