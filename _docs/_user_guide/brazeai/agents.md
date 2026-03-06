@@ -66,7 +66,7 @@ The following limitations apply:
 
 ## How is my data used and sent to Braze-provided LLMs?
 
-In order to generate AI output through Braze AI features that Braze identifies as leveraging Braze-provided LLMs (“Output”), Braze will send your system prompt or any other input, as applicable (“Input”) to Braze-provided LLM. Data sent to the applicable Braze-provided LLM is not used to train or improve the Braze-provided LLM. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.
+In order to generate AI output through Braze AI features that Braze identifies as leveraging Braze-provided LLMs (“Output”), Braze will send your system prompt or any other input, as applicable (“Input”) to the Braze-provided LLM. Data sent to the applicable Braze-provided LLM is not used to train or improve the Braze-provided LLM. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.
 
 The Braze-provided LLM for Braze Agents, identified as “Auto”, uses Google Gemini models. Google retains Inputs and Outputs submitted through Braze for 55 days, after which the data is deleted.
 
