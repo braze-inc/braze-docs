@@ -271,11 +271,11 @@ There are a few considerations to be aware of when turning off **Include Enriche
 ### Troubleshooting iOS push notifications with the Braze event kit
 
 If push notifications are not working when using the Braze event kit (embedded kit integration) on iOS, check the following:
-1. **Push token forwarding:** Confirm that mParticle is forwarding push tokens to Braze. In your mParticle dashboard, verify that the Braze kit connection has push enabled and that the correct Apple push certificate (`.p8` or `.p12`) is uploaded in the Braze dashboard.
+1. **Push token forwarding:** Confirm that mParticle is forwarding push tokens to Braze. In your mParticle dashboard, verify that the Braze kit connection has push enabled and that the correct Apple push credential is configured in the Braze dashboard (either an APNs auth key `.p8` or an APNs certificate `.p12`, depending on what your app uses).
 2. **Kit initialization order:** The Braze kit must be initialized before your app requests push permissions. If push permissions are requested before the kit is active, the push token may not be forwarded to Braze. Check that the mParticle SDK is started early in your app lifecycle.
 3. **Method swizzling:** The mParticle Apple kit uses method swizzling to automatically forward push tokens and handle push notification events. If you have disabled swizzling or another SDK is interfering, push tokens may not reach Braze. Verify that swizzling is enabled in your mParticle configuration.
 4. **Manual token handling:** If you manage push tokens manually (for example, by implementing `application:didRegisterForRemoteNotificationsWithDeviceToken:`), make sure you are passing the token to mParticle using `MParticle.sharedInstance().pushNotificationToken`. The kit will then forward it to Braze.
-5. **Environment mismatch:** Confirm the push certificate environment (development vs. production) matches your app's build. For details, refer to [iOS push troubleshooting]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/ios/).
+5. **Environment mismatch:** Confirm the APNs credential environment (development vs. production) matches your app's build. For details, refer to [iOS push troubleshooting]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/ios/).
 
 ### Sending unnecessary or duplicate data to Braze
 Braze counts a data point each time an attribute is passed to Braze, even if the value is unchanged. For this reason, Braze recommends only forwarding data needed to action on within Braze and ensuring that only deltas of attributes are being passed.
