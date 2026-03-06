@@ -24,7 +24,7 @@ The timing of a "Sent" event for Content Cards depends on the delivery type:
 In both cases, the card only appears in the user's profile under **Campaigns Received** once they have actually viewed it in the app. The **Last Received Campaign** retargeting filter in segments measures against the user profile (viewed), not the backend send event.
 
 {% alert note %}
-If a user doesn't have the app installed when a Content Card is sent, they won't receive the card when they install the app later, unless the campaign is configured with a recurring schedule or is triggered by a custom event after installation.
+If a user doesn't have the app installed when a Content Card is sent, they won't receive the card when they install the app later unless the campaign is configured with a recurring schedule or is triggered by a custom event after installation.
 {% endalert %}
 
 {% multi_lang_include analytics/campaign_analytics.md channel="Content Card" %}
