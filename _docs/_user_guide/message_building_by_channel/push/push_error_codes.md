@@ -91,9 +91,9 @@ This error appears in the Message Activity Log as:
 
 This is the iOS equivalent of the Android [DEVICE_UNREGISTERED](#device-unregistered) error. It typically occurs for one of the following reasons:
 
-- **The user uninstalled the app.** This is the most common cause.
-- **Push certificates were updated.** If your team changed or renewed the APNs certificates, users who registered with the previous certificates may have invalid tokens until the app re-registers them.
-- **Custom logic is unregistering users from push.** This is rare, but it's technically possible to programmatically unregister from remote notifications using the iOS SDK.
+- The user uninstalled the app. This is the most common cause.
+- Push certificates were updated. If your team changed or renewed the APNs certificates, users who registered with the previous certificates may have invalid tokens until the app re-registers them.
+- Custom logic is unregistering users from push. This is rare, but it's technically possible to programmatically unregister from remote notifications using the iOS SDK.
 
 {% alert note %}
 This error does not mean the user is push disabled—only that a specific token was removed from their profile. To check if the user still has valid tokens, go to **User Search** and review the **Contact Settings** section on the **Engagement** tab.
