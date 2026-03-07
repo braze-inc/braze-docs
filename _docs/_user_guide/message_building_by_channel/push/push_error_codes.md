@@ -39,9 +39,9 @@ This error appears in the Message Activity Log as:
 
 This typically occurs for one of the following reasons:
 
-- **The user uninstalled the app.** This is the most common cause. When the app is removed from a device, the push token becomes invalid.
-- **Push credentials were updated in the app.** If your team changed the FCM credentials or certificates bundled with the app, users who registered with the previous credentials will have invalid tokens until the app re-registers them.
-- **Custom logic is unregistering users from push.** This is rare, but it's technically possible to programmatically unregister a device from push using the Firebase/Android SDK.
+- The user uninstalled the app. This is the most common cause. When the app is removed from a device, the push token becomes invalid.
+- Push credentials were updated in the app. If your team changed the FCM credentials or certificates bundled with the app, users who registered with the previous credentials have invalid tokens until the app re-registers them.
+- Custom logic is unregistering users from push. This is rare, but it's technically possible to programmatically unregister a device from push using the Firebase/Android SDK.
 
 {% alert note %}
 This error does not mean the user is push disabled—only that a specific token was removed from their profile. This is common for users who are testing functionality and frequently installing and uninstalling the app. To check if the user still has valid tokens, go to **User Search** and review the **Contact Settings** section on the **Engagement** tab.
