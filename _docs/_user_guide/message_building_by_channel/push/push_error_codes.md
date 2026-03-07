@@ -44,7 +44,7 @@ This typically occurs for one of the following reasons:
 - **Custom logic is unregistering users from push.** This is rare, but it's technically possible to programmatically unregister a device from push using the Firebase/Android SDK.
 
 {% alert note %}
-This error does not mean the user is push disabled — only that a specific token was removed from their profile. This is common for users who are testing functionality and frequently installing and uninstalling the app. To check if the user still has valid tokens, go to **User Search** and review the **Contact Settings** section on the **Engagement** tab.
+This error does not mean the user is push disabled—only that a specific token was removed from their profile. This is common for users who are testing functionality and frequently installing and uninstalling the app. To check if the user still has valid tokens, go to **User Search** and review the **Contact Settings** section on the **Engagement** tab.
 {% endalert %}
 
 {% endtab %}
@@ -96,7 +96,7 @@ This is the iOS equivalent of the Android [DEVICE_UNREGISTERED](#device-unregist
 - **Custom logic is unregistering users from push.** This is rare, but it's technically possible to programmatically unregister from remote notifications using the iOS SDK.
 
 {% alert note %}
-This error does not mean the user is push disabled — only that a specific token was removed from their profile. To check if the user still has valid tokens, go to **User Search** and review the **Contact Settings** section on the **Engagement** tab.
+This error does not mean the user is push disabled—only that a specific token was removed from their profile. To check if the user still has valid tokens, go to **User Search** and review the **Contact Settings** section on the **Engagement** tab.
 {% endalert %}
 
 ### Push bounced: APNS feedback service removed
