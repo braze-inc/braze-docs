@@ -57,6 +57,10 @@ Data breakdowns like these can help you understand what specific data points are
 
 The **Total Data Points Usage** tab provides an in-depth look at your data point usage. You can view all data in this section aggregated by either weeks or months.
 
+{% alert note %}
+Data points information is cached every 24 hours.
+{% endalert %}
+
 ![Filtering Data Point Usage by weeks]({% image_buster /assets/img/subscription_and_billing2.png %})
 
 ### Contract details
