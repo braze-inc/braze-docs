@@ -230,7 +230,7 @@ This ensures the SDK is fully initialized before any action tags attempt to send
 
 #### Enable verbose logging
 
-To allow Braze technical support to access logs while testing, you can enable verbose logging on your Google Tag Manager integration. These logs will appear in the **Console** tab of your browser's [developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
+To capture detailed logs for troubleshooting, you can enable verbose logging on your Google Tag Manager integration. These logs will appear in the **Console** tab of your browser's [developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
 
 In your Google Tag Manager integration, navigate to your Braze Initialization Tag and select **Enable Web SDK Logging**.
 
