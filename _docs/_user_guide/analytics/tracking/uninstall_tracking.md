@@ -89,7 +89,7 @@ Check **Campaign Analytics** for campaigns and **Canvas Analytics** for Canvases
 
 ### How do I confirm uninstalls are genuine?
 
-Check user profiles for the `BadDeviceToken` push error. If you see this error in bulk around the same time frame as the uninstall spike, the uninstalls are likely genuine — `BadDeviceToken` indicates the device's push token is no longer valid, which typically happens when the app is uninstalled.
+Check user profiles for the `BadDeviceToken` push error. If you see this error in bulk around the same time frame as the uninstall spike, the uninstalls are likely genuine. `BadDeviceToken` indicates the device's push token is no longer valid, which typically happens when the app is uninstalled.
 
 ### Why are the number of app uninstalls different from what's in APNs?
 
