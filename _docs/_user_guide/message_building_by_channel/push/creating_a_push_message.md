@@ -171,7 +171,7 @@ If a user has your app installed on multiple devices, by default, your push mess
 
 There is some nuance for this setting. **Most recently used device** is determined by which device has the most recently updated push token—not the device with the most recent session. For example, if a new device's push token is added to a user profile with the API, that device is considered the most recently used device even if the user hasn't started a session on it yet.
 
-If this option is selected, Braze will limit multiple sends from occurring except when a campaign targets multiple platforms, such as both iOS and Android. If the user has your app on both an iOS and an Android device, they'll receive a push for both platforms. If a user's most recently used device isn't [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#foreground-push-enabled), the message will not send.
+If this option is selected, Braze limits multiple sends from occurring except when a campaign targets multiple platforms, such as both iOS and Android. If the user has your app on both an iOS and an Android device, they can receive a push notification for both platforms. If a user's most recently used device isn't [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#foreground-push-enabled), the message does not send.
 
 For iOS, you can further limit messaging by only sending push notifications to iPad devices, or only sending to iPhone and iPod devices.
 
