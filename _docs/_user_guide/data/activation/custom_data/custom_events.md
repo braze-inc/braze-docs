@@ -149,6 +149,16 @@ Event property objects that contain array or object values can have an event pro
 
 You can change the data type of your custom event property, but be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
 
+#### Reserved keys
+
+You cannot use reserved keys as event property names. Using a reserved key in the `properties` object will return the error "Invalid 'properties' field".
+
+| Property | Reserved Key |
+| --- | --- |
+| Custom events | `time` and `event_name` | 
+| Purchase events |`time`, `product_id`, `quantity`, `event_name`, `price`, `currency` | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ### Using custom event properties
 
 Custom event properties can be used to qualify campaign triggers, track conversions, and personalize messaging.
