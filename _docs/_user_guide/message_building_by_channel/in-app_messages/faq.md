@@ -53,9 +53,9 @@ To prevent this, during your campaign setup, select **Re-evaluate campaign eligi
 
 ### What is the minimum time interval between in-app message triggers?
 
-By default, Braze rate limits in-app messages to once every 30 seconds to ensure a quality user experience. This means that if two in-app messages are triggered within 30 seconds of each other, only the first one is displayed. The second message is suppressed, and the SDK logs a message similar to `Cannot show in-app message because another message is being shown`.
+By default, Braze rate limits in-app messages to once every 30 seconds to ensure a quality user experience. This means that if two in-app messages are triggered within 30 seconds of each other, only the first one is displayed. The second message is suppressed, and the SDK may log a message such as "Unable to present message - another message is already presented" (wording may vary by platform).
 
-You can customize this interval through the SDK, but we don't recommend setting it lower than 10 seconds in production apps to avoid overwhelming users. In test environments, you can temporarily set it to a lower value (such as 5 seconds) to verify that your messages are triggering as expected.
+You can customize this interval through the SDK. Braze does not recommend setting it lower than 10 seconds in production apps to avoid overwhelming users. In test environments, you can temporarily set it to a lower value (such as 5 seconds) to verify that your messages are triggering as expected.
 
 ### How does Braze calculate an in-app message expiration set to "after 1 day(s)"?
 
