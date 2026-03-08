@@ -10,19 +10,12 @@
 | Category | Count |
 |----------|-------|
 | Use case library | 113 |
-| Heavy white-label | 57 |
-| Not applicable (skip) | 15 |
+| Heavy white-label | 56 |
+| Not applicable (skip) | 16 |
 
 ## Actionable pages (Use case library + Heavy white-label)
 
-### 1. TAM Solution Repo (id: 258150071)
-- **Category:** Heavy white-label
-- **Tags:** —
-- **White-label:** Remove client name from title; generalize examples (e.g. 'your workspace', 'your segment').
-- **Link:** https://braze.atlassian.net/wiki/pages/viewpage.action?pageId=258150071
-- **Ready to draft:** Yes
-
-### 2. Best Practices for Content Card Ranking & Prioritization on Web - Betterment (id: 258164716)
+### 1. Best Practices for Content Card Ranking & Prioritization on Web - Betterment (id: 258164716)
 - **Category:** Heavy white-label
 - **Tags:** Content Cards, Solutions, Tam, Validated, Web SDK
 - **White-label:** Remove client name from title; generalize examples (e.g. 'your workspace', 'your segment').
@@ -1207,6 +1200,7 @@
 
 ## Skipped (Not applicable)
 
+- TAM Solution Repo (id: 258150071) — root/index page, not a use case
 - Ad-hoc Segmentation via CSV & Cloud Function - Activision (id: 258164922)
 - App Group (id: 258164688)
 - Braze Channels (id: 258164712)

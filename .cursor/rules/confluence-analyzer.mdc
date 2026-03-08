@@ -74,7 +74,9 @@ Always complete Phase 1 before Phase 2. When the JSON is large, process in batch
 
 ## Step 2: Triage & categorize
 
-For each page, decide:
+**Exclude the root/index page:** If the export was from a parent page, the first page in `pages` is often the parent itself (e.g. "TAM Solution Repo", id matching `parentPageId`). Treat it as **Not applicable** — it is the Confluence index/TOC, not a use case to draft.
+
+For each remaining page, decide:
 
 | Category | Criteria | Action |
 |----------|----------|--------|
