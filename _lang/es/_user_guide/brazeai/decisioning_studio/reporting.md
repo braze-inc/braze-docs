@@ -1,17 +1,17 @@
 ---
-nav_title: Informes e Insights
-article_title: Informes e Insights
-page_order: 3
+nav_title: Informes e información
+article_title: Informes e información
 description: "Aprende a ver los informes de BrazeAI Decisioning Studio™ en Braze, para que puedas entender cómo afectan a tus campañas las decisiones basadas en IA."
+page_order: 3
 ---
 
-# Informes e Insights
+# Informes e información
 
 > Aprende a ver los informes de BrazeAI Decisioning Studio™ en Braze, para que puedas entender cómo afectan a tus campañas las decisiones basadas en IA. Desde las métricas de rendimiento hasta el estado de los datos y los cambios del sistema, estos informes te ayudan a comprender los resultados, solucionar problemas y tomar decisiones informadas con confianza.
 
 ## Requisitos previos
 
-Antes de poder ver los informes de Decisioning Studio en Braze, tendrás que hacer lo siguiente:
+Antes de poder ver los informes de Decisioning Studio en el Braze, tendrás que
 
 - Tener un contrato activo para Braze y BrazeAI Decisioning Studio™. 
 - Ponerte en contacto con tu CSM para que te habilite BrazeAI Decisioning Studio™ en tu nombre.
@@ -19,7 +19,7 @@ Antes de poder ver los informes de Decisioning Studio en Braze, tendrás que hac
 
 ## Visualización de informes {#view}
 
-Para ver las métricas de los agentes de Decisioning Studio en Braze, ve a **AI Decisioning** > **BrazeAI Decisioning Studio™**, y luego selecciona un agente.
+Para ver las métricas de un agente de Decisioning Studio en Braze, ve a **AI Decisioning** > **BrazeAI Decisioning Studio™**, y luego selecciona un agente.
 
 ![Pantalla de inicio de informes de BrazeAI Decisioning Studio™ que muestra un panel con varias tarjetas de informe. Cada tarjeta muestra un tipo de informe, como Rendimiento, Información, Diagnóstico y Cronología, con breves descripciones e íconos para cada uno.]( {% image_buster /assets/img/decisioning_studio/reporting_home.png %} )
 
@@ -41,7 +41,7 @@ Para establecer o excluir fechas, selecciona <i class="fa-solid fa-gear"></i> **
 
 ### Rendimiento
 
-El informe de rendimiento ofrece métricas de agente de alto nivel que comparan los grupos de tratamiento (de Braze) con uno o más grupos de control, (como los ingresos). Admite dos puntos de vista diferentes: Árbol de **tendencias** y **conductores**.
+El informe de rendimiento ofrece métricas de agente de alto nivel que comparan los grupos de tratamiento (de Braze) con uno o más grupos de control (como los ingresos). Admite dos puntos de vista diferentes: Árbol de **tendencias** y **conductores**.
 
 De forma predeterminada, el informe utiliza la vista **Tendencias**, que compara el rendimiento de BrazeAI™ a lo largo del tiempo con el de tus grupos de control, y hace un seguimiento de la evolución del aumento.
 
@@ -63,7 +63,7 @@ Para comparar el rendimiento entre dos grupos, utiliza los desplegables para sel
 
 ### Información
 
-Las informaciones te muestran cómo se generan las distintas opciones de recomendación de tu banco de acciones, como la selección de SL o de bloque. Hay dos informes de información diferentes: **Preferencias de los agentes** y **SHAP**.
+La información te muestra cómo se generan las distintas opciones de recomendación de tu banco de acciones, como la selección de bloques. Hay dos informes de información diferentes: **Preferencias de los agentes** y **SHAP**.
 
 {% tabs local %}
 {% tab agent preferences %}
@@ -76,7 +76,7 @@ Consulta la tabla siguiente para obtener más detalles sobre este informe:
 | Campo | Descripción |
 |-------|-------------|
 | Dimensión | Atributo utilizado para organizar los resultados, como canal, campaña o plataforma. |
-| Grupo de comparación | Los grupos que quieres comparar en tu informe. Puedes seleccionar varios grupos de comparación, hasta NUM. |
+| Grupo de comparación | Los grupos que quieres comparar en tu informe. Puedes seleccionar varios grupos de comparación. |
 | Parámetro | La métrica aplicada a ese atributo, como aperturas, clics o tasa de conversión. |
 | Segment | El [segmento de audiencia]({{site.baseurl}}/user_guide/engagement_tools/segments/) que creaste en Braze. |
 | Opción             | La opción de recomendación específica seleccionada del banco de acciones. |
@@ -87,9 +87,9 @@ Consulta la tabla siguiente para obtener más detalles sobre este informe:
 {% endtab %}
 
 {% tab shaps %}
-El informe **SHAPs** utiliza el modelo Shapley Additive exPlanations (SHAP) para ayudarte a cuantificar cómo contribuye cada característica o variable a tu modelo de recomendación. Cada punto del gráfico representa un SHAP y la distribución de los puntos representa un sentido general del impacto direccional de una característica.
+El informe **SHAPs** utiliza el modelo Shapley Additive exPlanations (SHAP) para ayudarte a cuantificar cómo contribuye cada característica o variable a tu agente de recomendación. Cada punto del gráfico representa un SHAP y la distribución de los puntos representa un sentido general del impacto direccional de una característica.
 
-![Gráfico de informe SHAPs que muestra un gráfico de barras horizontales con múltiples barras de colores que representan diferentes características o variables. Cada barra muestra el impacto de una característica en el modelo de recomendación, con el eje x etiquetado como valor SHAP y el eje y que enumera nombres de características como Recencia, Frecuencia y Canal. El gráfico visualiza cómo cada característica contribuye positiva o negativamente a las predicciones del modelo.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
+![Gráfico de informe SHAPs que muestra un gráfico de barras horizontales con múltiples barras de colores que representan distintas características o variables. Cada barra muestra el impacto de una característica en el agente de recomendación, con el eje x etiquetado como valor SHAP y el eje y enumerando nombres de características como Recencia, Frecuencia y Canal. El gráfico visualiza cómo cada característica contribuye positiva o negativamente a las predicciones del agente.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -108,7 +108,7 @@ El informe de diagnóstico saliente muestra el volumen diario de recomendaciones
 
 {% tab inbound %}
 
-El informe de diagnóstico de entrada supervisa la salud de tus fuentes de datos en BrazeAI™. Hace un seguimiento de detalles como el recuento de archivos, tamaños y volúmenes de filas de cada activo, lo que ayuda a confirmar que los datos fluyen según lo esperado y a solucionar problemas antes de que afecten a tus modelos o campañas.
+El informe de diagnóstico de entrada supervisa la salud de tus fuentes de datos en BrazeAI™. Realiza un seguimiento de detalles como el recuento de archivos, tamaños y volúmenes de filas de cada activo, ayudándote a confirmar que los datos fluyen según lo esperado y a solucionar problemas antes de que afecten a tus agentes o campañas.
 
 Puedes utilizar el menú desplegable para seleccionar diferentes métricas del gráfico, como el tamaño medio de los archivos o el recuento de archivos.
 
@@ -132,16 +132,16 @@ Consulta la tabla siguiente para obtener más detalles sobre cada métrica del i
 
 ### Cronología
 
-El informe cronológico proporciona un registro visual de los acontecimientos clave junto con tus métricas de rendimiento. Estos eventos incluyen ejecuciones de modelos, cambios de configuración, actualizaciones de barandillas, etc. Las anotaciones aparecen directamente en los gráficos ascendentes y en una pestaña dedicada a la línea de tiempo, lo que te proporciona un contexto instantáneo de los cambios en los resultados sin necesidad de hacer un seguimiento de los cambios históricos.
+El informe cronológico proporciona un registro visual de los acontecimientos clave junto con tus métricas de rendimiento. Estos eventos incluyen ejecuciones de agentes, cambios de configuración, actualizaciones de barandillas, etc. Las anotaciones aparecen directamente en los gráficos ascendentes y en una pestaña dedicada a la línea de tiempo, lo que te proporciona un contexto instantáneo de los cambios en los resultados sin necesidad de hacer un seguimiento de los cambios históricos.
 
-![Informe cronológico que muestra un gráfico con las métricas de rendimiento a lo largo del tiempo. Los eventos clave, como las ejecuciones del modelo, los cambios de configuración y las actualizaciones de las barandillas, se marcan como íconos a lo largo de la línea de tiempo. Debajo del gráfico, una tabla enumera los eventos con columnas para la fecha, el tipo, la etiqueta, los detalles y la visibilidad en los gráficos.]({% image_buster /assets/img/decisioning_studio/reporting_timeline.png %})
+![Informe cronológico que muestra un gráfico con las métricas de rendimiento a lo largo del tiempo. Los eventos clave, como las ejecuciones del agente, los cambios de configuración y las actualizaciones de las barandillas, se marcan como iconos a lo largo de la línea de tiempo. Debajo del gráfico, una tabla enumera los eventos con columnas para la fecha, el tipo, la etiqueta, los detalles y la visibilidad en los gráficos.]({% image_buster /assets/img/decisioning_studio/reporting_timeline.png %})
 
 Para comparar el rendimiento entre dos grupos, utiliza los desplegables para seleccionar los criterios de comparación que desees. Consulta la tabla siguiente para más detalles:
 
 | Campo | Descripción |
 |-------|-------------|
 | Fecha | La fecha en que ocurrió el suceso. |
-| Tipo | La categoría del evento, como actualización del sistema, ejecución del modelo o cambio de configuración. |
+| Tipo | La categoría del evento, como actualización del sistema, ejecución del agente o cambio de configuración. |
 | Etiqueta | El nombre o identificador dado al evento. |
 | Detalles | Información adicional que describe el acontecimiento. |
 | Visible en Gráficos | Indica si el evento se muestra en los gráficos relacionados. |

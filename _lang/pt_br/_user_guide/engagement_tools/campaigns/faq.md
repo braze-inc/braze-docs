@@ -129,7 +129,7 @@ Se precisar fazer alterações, recomendamos interromper a campanha atual (isso 
 
 ### Por que o número de usuários que entram em uma campanha não corresponde ao número esperado?
 
-O número de usuários que entram em uma campanha pode diferir do seu número esperado por causa de como as audiências e os gatilhos são avaliados. Na Braze, um público é avaliado antes do disparador (a menos que esteja usando um disparador de [alteração de atribuição]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value)). Isso fará com que os usuários saiam da campanha se inicialmente não fizerem parte do público selecionado antes que qualquer ação-gatilho seja avaliada.
+O número de usuários que entram em uma campanha pode diferir do seu número esperado por causa de como as audiências e os gatilhos são avaliados. Na Braze, um público é avaliado antes do disparador (a menos que esteja usando um disparador de [alteração de atribuição]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value)). Isso fará com que os usuários saiam da campanha se não fizerem parte do público selecionado inicialmente, antes que qualquer ação-gatilho seja avaliada.
 
 {% alert tip %}
 Para obter mais assistência com a solução de problemas da campanha, entre em contato com o suporte da Braze dentro de 30 dias após a ocorrência do problema, pois só temos os registros de diagnóstico dos últimos 30 dias.
@@ -147,7 +147,7 @@ Sim, use o filtro `api_id:YOUR_API_ID` na página **Campanhas** para procurar um
 
 O tratamento de espaços em branco é diferente entre os campos de entrada e os componentes de texto exibidos devido ao estilo CSS. Nos componentes de texto com o CSS padrão `white-space: normal`, vários espaços consecutivos são recolhidos em um único espaço quando exibidos. Esse é o comportamento padrão do HTML para texto renderizado. 
 
-Os campos de entrada preservam vários espaços exatamente como você os insere, pois é necessário ver e editar o espaçamento exato para uma entrada de dados precisa. Isso significa que o texto com vários espaços pode aparecer de forma diferente quando visualizado em um campo de entrada (onde todos os espaços são preservados) e quando exibido em outras partes do dashboard (onde o CSS pode recolher vários espaços). 
+Os campos de entrada preservam vários espaços exatamente como você os insere, pois é necessário ver e editar o espaçamento exato para uma entrada de dados precisa. Isso significa que o texto com vários espaços pode ser exibido de forma diferente quando visualizado em um campo de entrada (onde todos os espaços são preservados) e quando exibido em outras partes do dashboard (onde o CSS pode recolher vários espaços). 
 
 Por exemplo, se você inserir um nome de campanha ou parâmetro UTM com vários espaços em um campo de entrada, verá todos os espaços preservados. No entanto, quando esse mesmo texto aparece em resultados de pesquisa, listas de campanhas ou outros componentes de texto, vários espaços podem aparecer como um único espaço devido ao tratamento de espaços em branco do CSS. 
 

@@ -13,7 +13,7 @@ channel:
 
 # Envio de mensagens sobre o produto
 
-> As mensagens de produtos permitem o envio de mensagens interativas do WhatsApp que exibem produtos diretamente do seu catálogo do Meta.
+> As mensagens de produtos permitem o envio de mensagens interativas pelo WhatsApp que exibem produtos diretamente do seu catálogo do Meta.
 
 Quando você envia uma mensagem de produto do WhatsApp para um usuário, ele acessa a seguinte jornada do cliente:
 
@@ -43,7 +43,7 @@ Aprimore sua experiência de mensagens de produtos com o seletor de produtos int
 {% tabs local %}
 {% tab Catalog messages %}
 
-As mensagens do catálogo exibem todo o seu catálogo de produtos em um formato interativo. Elas estão disponíveis como [mensagens modelo e de resposta](#building-a-product-message).
+As mensagens do catálogo exibem todo o seu catálogo de produtos em um formato interativo. Elas estão disponíveis como [modelos e mensagens de resposta](#building-a-product-message).
 
 Se tiver ativado as permissões de catálogo para o Braze durante a [capacitação](#setting-up-product-messages), você poderá selecionar qual miniatura estará visível para os usuários. 
 
@@ -55,7 +55,7 @@ Não é necessário fazer seleções adicionais de produtos no Braze, pois a con
 {% endtab %}
 {% tab Multi-product messages %}
 
-As mensagens de vários produtos destacam produtos específicos de seu catálogo, com até 30 itens destacados por mensagem. Elas estão disponíveis como [mensagens modelo e de resposta](#building-a-product-message).
+As mensagens de vários produtos destacam produtos específicos de seu catálogo, com até 30 itens destacados por mensagem. Elas estão disponíveis como [modelos e mensagens de resposta](#building-a-product-message).
 
 Você pode selecionar os produtos manualmente com IDs ou, se tiver ativado as permissões de catálogo durante a [capacitação](#setting-up-product-messages), usar o seletor de produtos suspenso.
 
@@ -85,7 +85,7 @@ Certifique-se de usar a ID do Braze Business Manager, `332231937299182`, como a 
 ![Janela para compartilhar um catálogo com um parceiro que contém campos para inserir um ID comercial do parceiro e atribuir a permissão "Gerenciar catálogo".]({% image_buster /assets/img/whatsapp/share_meta_catalog.png %}){: style="max-width:70%;"}
 
 {: start="3"}
-3\. Selecione as configurações do catálogo Meta. Você deve selecionar **Mostrar ícone do catálogo no cabeçalho do bate-papo** para enviar mensagens do catálogo.
+3\. Selecione as configurações do catálogo Meta. Você deve selecionar **Mostrar ícone de catálogo no cabeçalho do bate-papo** para enviar mensagens de catálogo.
 
 ![Página de configurações do WhatsApp Manager para o catálogo "Catalog_products".]({% image_buster /assets/img/whatsapp/meta_catalog_settings.png %}){: style="max-width:90%;"}
 
@@ -108,7 +108,7 @@ Você pode criar uma mensagem de produto usando uma mensagem modelo do WhatsApp 
 1. Em seu gerenciador do Meta Business, acesse **Modelos de mensagens**.
 2. Selecione **Catálogo** como formato e, em seguida, escolha entre **Mensagem de catálogo** (exibe o catálogo completo) e **Mensagem de catálogo de vários produtos** (destaca itens específicos).
 3. No Braze, crie uma campanha do WhatsApp ou uma etapa do Canva Message.
-4. Selecione o grupo de inscrições que corresponde ao local em que você enviou o modelo.
+4. Selecione o grupo de inscrições que corresponde ao local onde você enviou o modelo.
 5. Selecione **WhatsApp Template Message**.
 6. Selecione o modelo que você gostaria de usar.
     - Se selecionar um modelo de vários produtos, forneça o título da seção e os IDs de conteúdo dos produtos a serem destacados. Você pode copiar o Content ID diretamente do seu Meta Commerce Manager ou, se tiver ativado as permissões para o seletor de produtos integrado, selecionar os itens.
@@ -176,7 +176,7 @@ Quando os usuários interagem com as mensagens de produtos do WhatsApp, eles pod
 - **Configuração manual:** O processo de instalação requer a configuração manual de seu carrinho e fluxos de trabalho de envio de mensagens.
 
 {% alert note %}
-No momento, não oferecemos suporte a pagamentos que ocorrem diretamente no WhatsApp, e o suporte futuro será específico para cada país (atualmente, a Meta o oferece apenas para empresas sediadas e que trabalham diretamente com usuários na Índia, no Brasil e em Cingapura).
+No momento, não oferecemos suporte a pagamentos que ocorrem diretamente no WhatsApp, e o suporte futuro será específico para cada país (atualmente, o Meta oferece isso apenas para empresas sediadas e que trabalham diretamente com usuários na Índia, no Brasil e em Cingapura).
 {% endalert %}
 
 ### Configuração de disparadores de eventos de carrinho
@@ -196,7 +196,7 @@ O evento do carrinho inclui:
 - **Origem:** Marcado como "whats_app"
 - **Metadados:** Dados adicionais, como ID do catálogo e texto da mensagem
 
-Você pode encontrar informações adicionais sobre o evento do carrinho do Braze em [Tipos de eventos recomendados para comércio eletrônico]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events#types-of-ecommerce-recommended-events).
+Você pode encontrar informações adicionais sobre os eventos do carrinho do Braze em [Tipos de eventos recomendados para comércio eletrônico]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events#types-of-ecommerce-recommended-events).
 
 ### Configuração de uma resposta disparada
 
@@ -244,7 +244,7 @@ Use o Liquid para criar URLs de carrinho diretamente em sua mensagem de resposta
 {% endtab %}
 {% tab Connected Content %}
 
-Faça uma chamada API para o seu sistema de comércio eletrônico para gerar um URL de checkout personalizado. Isso é melhor se você precisar de geração dinâmica de URL de carrinho ou mapeamento complexo de produtos.
+Faça uma chamada API para seu sistema de comércio eletrônico para gerar um URL de checkout personalizado. Isso é melhor se você precisar de geração dinâmica de URL de carrinho ou mapeamento complexo de produtos.
 
 #### Configuração
 
@@ -264,9 +264,9 @@ Crie uma campanha de webhook ou uma etapa do Canva disparada pelo evento de com�
 1. Receber dados do carrinho
 2. Crie um carrinho em seu sistema
 3. Gerar o URL de checkout
-4. Envie um evento `checkout_started` para o Braze, disparando sua mensagem do WhatsApp para ser enviada com o link de checkout
+4. Envie um evento `checkout_started` para o Braze, disparando sua mensagem do WhatsApp para envio com o link de checkout
 
-![Diagrama mostrando o fluxo de trabalho da experiência de checkout para webhooks e eventos personalizados: O Meta envia uma mensagem de recebimento de pedido para a Braze, que tem chamadas de ida e volta com uma plataforma de comércio eletrônico e, em seguida, envia uma mensagem do WhatsApp com o URL do carrinho.]({% image_buster /assets/img/whatsapp/webhooks_custom_events_checkout.png %})
+![Diagrama mostrando o fluxo de trabalho da experiência de checkout para webhooks e eventos personalizados: O Meta envia uma mensagem de recebimento de pedido para o Braze, que tem chamadas de ida e volta com uma plataforma de comércio eletrônico e, em seguida, envia uma mensagem do WhatsApp com o URL do carrinho.]({% image_buster /assets/img/whatsapp/webhooks_custom_events_checkout.png %})
 
 {% endtab %}
 {% endtabs %}

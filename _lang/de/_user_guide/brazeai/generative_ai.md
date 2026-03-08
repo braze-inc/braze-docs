@@ -1,7 +1,7 @@
 ---
 nav_title: Generative KI
 article_title: Generative KI
-page_order: 20
+page_order: 5
 layout: dev_guide
 guide_top_header: "Generative KI"
 guide_top_text: "BrazeAI<sup>TM</sup> verfügt über verschiedene generative KI-Features zur Automatisierung, die Ihnen helfen, Ihre Effizienz und Kreativität zu steigern. Schaffen Sie kanalübergreifende Kundenerlebnisse und verbringen Sie dabei weniger Zeit mit routinemäßigen Texterstellungsaufgaben, der Verfeinerung von Inhalten und der Erstellung von Bildern."

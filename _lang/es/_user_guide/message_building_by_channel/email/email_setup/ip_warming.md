@@ -5,7 +5,8 @@ page_order: 1
 page_type: reference
 description: "Este artículo de referencia trata el tema del calentamiento de IP y las buenas prácticas."
 channel: email
-
+local_redirect:
+  automated-ip-warming: '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/automated_ip_warming/'
 ---
 
 # Calentamiento de IP
@@ -23,14 +24,6 @@ Los ISP estrangulan el envío de correo electrónico cuando sospechan que se tra
 Si la interacción es moderada, pueden seguir estrangulando tu correo electrónico para recopilar más datos de interacción y determinar con mayor certeza si el correo es o no spam. Si el correo electrónico tiene unas métricas de interacción muy altas, pueden dejar de acelerar este correo electrónico por completo. Utilizan esos datos para crear una reputación de correo electrónico que, a la larga, determinará si sus mensajes se filtran automáticamente a spam o no.
 
 Si tu dominio o IP está bloqueado por un ISP, los registros de mensajes en el [Registro de Actividad de Mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) contendrán información sobre qué sitios web visitar para apelar a estos ISP y salir de esas listas.
-
-## Calentamiento de IP automatizado
-
-Puedes utilizar el calentamiento de IP automatizado para aumentar gradualmente tu volumen de envíos diarios, permitiendo que los proveedores de buzones de entrada aprendan y confíen en tus patrones de envío. Controla tu rastreador de calentamiento de IP seleccionando la baldosa **Calentamiento de IP Automatizado** en la sección **Continúa donde lo dejaste** del panel de tu casa. 
-
-Braze envía primero a tus suscriptores más comprometidos, lo que permite que el volumen diario crezca a un ritmo acorde con las mejores prácticas. Después, Braze hace un seguimiento de las señales de interacción y capacidad de entrega. Si se detecta algún problema, tu horario se ajusta automáticamente.
-
-![Seguimiento del calentamiento de IP con el volumen de envíos de la semana del 16 de enero.]({% image_buster /assets/img/automated_ip_warming_example.png %})
 
 ## Calendario de calentamiento de IP
 
@@ -106,7 +99,7 @@ Confirme que su lista de correo electrónico está limpia y no tiene correos ele
 ### Controla la reputación del remitente
 
 Cuando lleves a cabo el proceso de calentamiento de IP, asegúrate de vigilar cuidadosamente la reputación del remitente mientras realizas el proceso de calentamiento de IP. Es importante vigilar estas métricas específicas:
-- **Tasas de rebote:** Si alguna campaña rebota más de un 3-5%, deberías evaluar la limpieza de tu lista siguiendo las directrices de nuestro [Mantenla limpia: la importancia del saneamiento de las listas de correo electrónico](https://www.braze.com/blog/email-list-hygiene/). Además, deberías plantearte implantar una [política de suspensión]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) para dejar de enviar por correo electrónico a las direcciones de correo electrónico inactivas o no comprometidas.
+- **Tasas de rebote:** Si alguna campaña rebota más de un 3-5%, debes evaluar la limpieza de tu lista siguiendo las directrices de nuestro [Mantenla limpia: la importancia del saneamiento de las listas de correo electrónico](https://www.braze.com/blog/email-list-hygiene/). Además, deberías plantearte aplicar una [política de suspensión]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) para dejar de enviar por correo electrónico a las direcciones de correo electrónico inactivas o que no participan.
 - **Informes de spam:** Si alguna campaña se considera spam en un porcentaje superior al 0,08%, debe reevaluar el contenido que envía, comprobar que está dirigido a un público interesado y asegurarse de que sus mensajes están redactados adecuadamente para despertar su interés.
 - **Tasas de apertura:** Las tasas de apertura son un indicador útil de la ubicación en la bandeja de entrada. Si sus tasas de apertura únicas superan el 25%, es probable que esté experimentando una alta colocación en la bandeja de entrada, lo que indica una reputación de remitente positiva.
 

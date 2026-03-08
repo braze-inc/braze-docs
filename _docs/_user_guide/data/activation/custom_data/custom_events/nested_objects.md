@@ -181,6 +181,25 @@ Using the **Add Personalization** modal, select **Advanced Event Properties** as
 
 ![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
+## Testing nested objects in messages
+
+The dashboard's **Preview & Test** tool doesn't support adding mock data for nested objects or nested custom attributes. To test messages that reference nested data through Liquid, you can preview messages with nested attributes as an existing user with that nested attribute, or preview messages with custom event properties by launching a live campaign to test users.
+
+### Nested custom attributes
+
+1. Import the nested attributes to the test user profile through the API.
+2. In your campaign or Canvas, go to **Preview & Test**.
+3. Select **Preview as user** and search for the test user. The Liquid will resolve using the actual nested attributes on that user's profile.
+
+### Nested event properties
+
+Nested event properties can't be previewed in the dashboard because they require a live event trigger. To test:
+
+1. Create a campaign or Canvas step that targets only your test users and is triggered by (or references) the custom event with nested properties.
+2. Launch the campaign to your test audience.
+3. Log the custom event with the nested object payload to your test user's profile (using the API or SDK).
+4. Verify that the message renders correctly with the nested property values.
+
 ## Frequently asked questions
 
 ### Does using nested objects log additional data points?

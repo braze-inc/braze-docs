@@ -15,7 +15,7 @@ Das Feature Data Push von Oracle Crowdtwist erlaubt die Übermittlung von Nutzer
 
 In diesem Leitfaden wird beschrieben, wie Sie die Live-Push-Feeds Benutzerprofil, Benutzeraktivität und Benutzereinlösung von Oracle Crowdtwist in Ihre Braze-Umgebung integrieren. Es gibt zwei weitere Arten von Daten Push, die in dieser Dokumentation nicht explizit behandelt werden, deren Einrichtung jedoch den gleichen Prinzipien folgt, wie sie unten beschrieben sind. 
 
-* [Live Push Nutzerprofil](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/PushUserProfile-withTiersv2.html): Umfasst die Erstellung neuer Profile und Updates für bestehende Profile.
+* [Live Push Benutzerprofil](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/PushUserProfile-withTiersv2.html): Umfasst die Erstellung neuer Profile und Updates für bestehende Profile.
 
 * [Live Push Nutzer](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserActivity.html):[in Aktivität](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserActivity.html): Enthält Daten über die Beendigung von Nutzer:innen-Aktivitäten.
 
@@ -249,7 +249,7 @@ Wenn Sie mit dem Objekt, das Sie im Feld "Ausgabe" sehen, zufrieden sind, klicke
 Die Webhook-URL Ihrer Datentransformation finden Sie im Panel auf der linken Seite. Kopieren Sie diese und verwenden Sie sie für die Konfiguration innerhalb des Integration Hub von Oracle Crowdtwist.
 
 {% alert important %}
-Die Endpunkte von Braze Data Transformation haben ein Rate-Limit von 1000 Anfragen pro Minute. Überlegen Sie, wie schnell Sie diese Daten in Braze zur Verfügung stellen möchten, und sprechen Sie mit Ihrem Braze-Konto Manager:in, wenn Sie ein höheres Rate-Limit für die Datentransformation benötigen.
+Die Endpunkte von Braze Data Transformation haben ein Rate-Limit von 1000 Anfragen pro Minute. Überlegen Sie, wie schnell Sie diese Daten in Braze zur Verfügung stellen möchten, und sprechen Sie mit Ihrem Braze Account Manager:in, wenn Sie ein höheres Rate-Limit für die Datentransformation benötigen.
 {% endalert %}
 
 Datentransformationen sind ein sehr dynamisches Werkzeug, und Sie können sie für Zwecke entwerfen, die über die in diesem Dokument beschriebenen hinausgehen, wenn Sie JavaScript verstehen und sich von unserer REST API Dokumentation leiten lassen. Wenn Sie Unterstützung oder eine Fehlerbehebung für komplexe Änderungen an Ihren Datentransformations-Templates benötigen, wenden Sie sich an Ihren Customer-Success-Manager:in, um zu erfahren, welche Hilfestellungen Ihnen zur Verfügung stehen.

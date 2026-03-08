@@ -16,7 +16,7 @@ Para formar um bom agente, você deverá:
 - Definir quais dimensões serão testadas, como oferta, linha de assunto, criativo, canal ou horário de envio.
 - Selecionar as opções para cada dimensão, como e-mail versus SMS, ou frequência diária versus semanal.
 
-![Exemplo de diagrama de um agente de estúdio de decisão para e-mails de referência.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![Exemplo de diagrama de um agente do Estúdio de Decisão para e-mails de referência.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Agentes de amostra
 
@@ -49,7 +49,7 @@ Com o projeto em mãos, a equipe trabalhará com você para identificar e conclu
 
 ### Etapa 3: Configure sua plataforma de entrega
 
-Em seguida, a equipe do AI Expert Service ajudará a configurar sua plataforma de automação de marketing. Embora o estúdio de tomada de decisões funcione melhor com a Braze, há suporte para várias outras plataformas. Fale com a equipe do AI Expert Service para obter recursos adicionais.
+Em seguida, a equipe de Serviço de Especialista em IA ajudará você a configurar sua plataforma de engajamento com clientes. Embora o Estúdio de Decisão funcione melhor com Braze, uma variedade de outras plataformas é suportada—entre em contato com sua equipe de Serviço de Especialista em IA para recursos adicionais.
 
 {% tabs local %}
 {% tab Braze %}

@@ -128,6 +128,10 @@ O Braze SDK fornece duas funcionalidades essenciais: coleta e sincroniza os dado
 Quando estiver totalmente integrado ao seu app ou site, o SDK da Braze oferece um nível de sofisticação de marketing totalmente realizado. Se você adiar a integração do SDK da Braze, algumas das funcionalidades descritas na documentação não estarão disponíveis.
 {% endalert %}
 
+{% alert note %}
+Para adicionar uma camada adicional de segurança, você pode ativar [a autenticação do SDK]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) para evitar solicitações não autorizadas do SDK. Esse recurso está disponível em todas as principais plataformas, incluindo Web, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin) e Expo.
+{% endalert %}
+
 Durante a implementação do SDK, você irá:
 
 * Escrever o código de integração de SDK para cada plataforma à qual você deseja oferecer suporte.
@@ -225,7 +229,7 @@ Você fará o rastreamento das atualizações da plataforma Braze por meio do Br
 
 ## Limites de taxa do SDK 
 
-### Usuários ativos mensais no período de 24 a 25 de janeiro de 2015, MAU universal, MAU da Web e MAU móvel  
+### Usuários ativos mensais no período de 24 a 25 de março de 2015, MAU universal, MAU da Web e MAU móvel  
 
 Para os clientes que adquiriram Monthly Active Users CY 24-25, Universal MAU, Web MAU e Mobile MAU, o Braze impõe limites de frequência do lado do servidor nas solicitações de API usadas por nossos SDKs para atualizar sessões, atributos personalizados de usuários, eventos e outros dados de perfil de usuários. Isso é para garantir a estabilidade da plataforma e manter um serviço rápido e confiável. 
 

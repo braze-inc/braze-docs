@@ -16,7 +16,7 @@ So erstellen Sie einen guten Agenten:
 - Legen Sie fest, welche Dimensionen getestet werden sollen, z. B. Angebot, Betreffzeile, Kreativität, Kanal oder Sendezeitpunkt.
 - Wählen Sie die Optionen für jede Dimension aus, z. B. E-Mail oder SMS oder tägliche oder wöchentliche Häufigkeit.
 
-![Beispieldiagramm eines Studioagenten zur Entscheidungsfindung für Empfehlungen in E-Mails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![Beispieldiagramm eines Decisioning Studio-Agenten für E-Mails mit Empfehlungen.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Beispiel-Agenten
 
@@ -49,7 +49,7 @@ Wenn der Entwurf steht, wird das Team mit Ihnen zusammenarbeiten, um alle zusät
 
 ### Schritt 3: Richten Sie Ihre Zustellungsplattform ein
 
-Als nächstes hilft Ihnen das Team von AI Expert Services bei der Einrichtung Ihrer Plattform für die Automatisierung des Marketings. Das Decisioning Studio funktioniert zwar am besten mit Braze, aber auch eine Reihe anderer Plattformen werden unterstützt. Wenden Sie sich an Ihr Team von AI Expert Services, um weitere Ressourcen zu erhalten.
+Als nächstes hilft Ihnen das KI Expert Service Team bei der Einrichtung Ihrer Customer-Engagement-Plattform. Obwohl das Decisioning Studio am besten mit Braze funktioniert, wird eine Vielzahl anderer Plattformen unterstützt. Wenden Sie sich an Ihr KI Expert Service Team, um weitere Ressourcen zu erhalten.
 
 {% tabs local %}
 {% tab Braze %}

@@ -2,7 +2,7 @@
 nav_title: Decision-Split
 article_title: Decision-Split 
 alias: /decision_split/
-page_order: 2
+page_order: 7
 page_type: reference
 description: "In diesem Referenzartikel erfahren Sie, wie Sie Decision-Splits in Ihrem Canvas erstellen und verwenden."
 tool: Canvas
@@ -11,7 +11,7 @@ tool: Canvas
 
 # Decision-Split 
 
-> Die Komponente Decision-Split in Canvas erlaubt es Ihnen, Ihren Nutzer:innen personalisierte Erlebnisse in Echtzeit zuzustellen.
+> Die Decision-Split-Komponente in Canvas erlaubt es Ihnen, Ihren Nutzer:innen personalisierte Realtime-Erlebnisse zuzustellen.
 
 ![Ein Decision-Split-Schritt mit dem Namen "Push aktiviert?" für Nutzer:innen, die kein Enablement haben, und Nutzer:innen, die Push aktiviert haben.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 

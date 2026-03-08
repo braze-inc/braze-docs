@@ -20,7 +20,7 @@ Esse erro raro ocorre se o público-alvo contiver muitos valores de regex, valor
 
 Quando você adiciona filtros de segmento a uma campanha ou Canva, esses filtros são traduzidos em consultas no Braze (a contagem de caracteres dessas consultas não é 1:1 para o número de caracteres que um usuário do dashboard vê). Quando a Braze envia uma campanha ou uma tela, executamos uma consulta que combina todos os filtros do público direcionado. Aplicamos um limiar que limita o número de caracteres na consulta resultante para um público-alvo. Para uma determinada campanha ou Canva, somamos a contagem de caracteres em todos os segmentos referenciados, incluindo todos os filtros adicionais. Para um determinado segmento, somamos a contagem de caracteres em todos os filtros e valores de filtro.
 
-Seu painel exibirá um erro quando uma campanha, Canva ou segmento exceder o limite e não puder ser lançado. Se você receber esse erro, simplifique seu público-alvo antes de iniciar novamente, inclusive:
+Seu dashboard exibirá um erro quando uma campanha, Canva ou segmento exceder o limite e não puder ser lançado. Se você receber esse erro, simplifique seu público-alvo antes de iniciar novamente, inclusive:
 
 - Se o seu público fizer referência a vários segmentos, certifique-se de que os segmentos não tenham redundâncias, como o fato de os mesmos filtros aparecerem em vários segmentos.
 - Certifique-se de que não esteja fazendo referência a dados desatualizados nos filtros de segmento. Por exemplo, um filtro desatualizado pode procurar usuários que não receberam uma determinada etapa do Canva na semana passada, mesmo que o Canva tenha sido interrompido há meses.
@@ -35,7 +35,7 @@ Começamos a limitar a contagem de caracteres em abril de 2025. As campanhas e a
 
 ### X campanhas ou telas ativas ou paradas excedem o limite de complexidade do público
 
-Esse banner é exibido na parte superior de uma lista de campanhas ou telas sempre que campanhas ou telas ativas ou paradas têm públicos que excedem o limite de complexidade do público. Selecione o banner para filtrar a lista apenas para as campanhas ou Canvas que excedem o limite e, em seguida, siga as etapas de solução de problemas em [O público-alvo é muito complexo para ser lançado](#target-audience-is-too-complex-to-launch).
+Esse banner é exibido na parte superior de uma lista de campanhas ou telas sempre que campanhas ou telas ativas ou paradas tiverem públicos que excedam o limite de complexidade do público. Selecione o banner para filtrar a lista apenas para as campanhas ou Canvas que excedem o limite e, em seguida, siga as etapas de solução de problemas em [O público-alvo é muito complexo para ser lançado](#target-audience-is-too-complex-to-launch).
 
 ![Banner de erro que diz que 4 telas ativas ou paradas excedem o limite de complexidade do público.]({% image_buster /assets/img/segment/audience_complexity_threshold_banner.png %})
 
@@ -106,6 +106,7 @@ O primeiro cenário é se o campo `app_id` for preenchido ao usar o ponto de ext
 O segundo cenário é se o campo `app_id` for preenchido ao usar o ponto de extremidade `/users/track` para migrar a criação de tickets, como neste exemplo: 
 
 ```json
+{
 "app_group_id": "{YOUR_APP_GROUP_ID}",
 "attributes": [
 {
@@ -119,4 +120,5 @@ O segundo cenário é se o campo `app_id` for preenchido ao usar o ponto de extr
       ]
   }
 ]
+}
 ```

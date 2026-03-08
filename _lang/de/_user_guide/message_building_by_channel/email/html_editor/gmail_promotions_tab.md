@@ -133,9 +133,9 @@ Es gibt viele Faktoren, die bestimmen, ob das Produktkarussell auf dem Tab Aktio
 
 Alle Bilder in der Anmerkung müssen noch einen Qualitätsfilter passieren. Damit das Produktkarussell ausgefüllt werden kann, müssen alle Bilder in der Anmerkung das empfohlene Bildseitenverhältnis aufweisen und qualitativ hochwertige, hochauflösende Nahaufnahmen von Produkten sein. Die Bilder sollten wenig bis gar keinen Text enthalten. Der Qualitätsfilter filtert auch unangemessene Inhalte. Ihre Bilder sollten also familien-, nutzer- und kinderfreundlich sein.
 
-Außerdem gibt es in Google Mail eine Obergrenze für die Dichte der Produktkarussells, die im Tab Aktionen eines Nutzers:innen erscheinen. Instanz, wenn ein Nutzer:in viele Marken abonniert, die Produkt-Karussells in ihren Aktionen per E-Mail verwenden, setzt Gmail schließlich eine Obergrenze für die Anzahl der angezeigten Produkt-Karussells.
+Darüber hinaus gibt es in Google Mail eine Obergrenze für die Dichte der Produktkarussells, die im Tab Aktionen eines Nutzers:innen erscheinen. Instanz, wenn ein Nutzer:in viele Marken abonniert, die Produkt-Karussells in ihren Aktionen per E-Mail verwenden, setzt Gmail schließlich eine Obergrenze für die Anzahl der angezeigten Produkt-Karussells.
 
-Aufgrund der Datenschutz- und Sicherheitsbestimmungen von Google müssen E-Mails mit Anmerkungen weit versendet werden, damit die Anmerkungen funktionieren. Es wird empfohlen, eine Kampagne einzuführen und an mindestens 100 Empfänger:in zu senden, damit das System von Google sie als "Massenversand" erkennt. Die Bild-URLs dürfen nicht zwischen den Empfängern variieren.
+Aufgrund der Datenschutz- und Sicherheitsbestimmungen von Google müssen E-Mails mit Anmerkungen weit versendet werden, damit die Anmerkungen funktionieren. Es wird empfohlen, eine Kampagne einzuführen und an mindestens 100 Empfänger:in zu senden, damit das System von Google sie als "Massensendung" erkennt. Die Bild-URLs dürfen nicht zwischen den Empfängern variieren.
 
 ### Wie werden die Klicks auf eine Aktionskarte oder ein Produktkarussell verfolgt?
 
@@ -147,6 +147,6 @@ Gmail bestimmt, wann und wem die Karte angezeigt wird. Es gibt also keine Garant
 
 ### Warum sehe ich keine Anmerkungen in meinem Tab für Aktionen in Google Mail?
 
-Anmerkungen werden für Google Workspace nicht unterstützt. Um eine Vorschau der Anmerkungen zu erhalten, können Sie eine persönliche E-Mail Adresse mit Gmail erstellen.
+Anmerkungen werden für Google Workspace nicht unterstützt. Für die Vorschau von Anmerkungen können Sie mit Gmail eine persönliche E-Mail Adresse erstellen.
 
 Beachten Sie, dass Anmerkungen weder im Tab **Primär** noch in einem anderen Tab in der mobilen App von Google Mail angezeigt werden. Anmerkungen werden nicht angezeigt, nachdem ein Nutzer:innen eine E-Mail geöffnet hat oder wenn Sie den Annotationstyp `DiscountOffer` verwenden und die Zeit und das Datum bereits abgelaufen sind.

@@ -100,7 +100,7 @@ Aunque los detalles de tu registro de DNS de Cloudflare caducarán a los 45 día
 
 ### ¿Se me notificará si se produce un error durante el proceso de actualización de DNS?
 
-Sí. Si hay un error, recibirás un aviso en el panel de Braze detallando el problema junto con los pasos para resolverlo. 
+Sí. Si se produce un error, recibirás un aviso en el panel de Braze detallando el problema junto con los pasos para resolverlo. 
 
 ### ¿Puedo utilizar un dominio personalizado en varios canales?
 

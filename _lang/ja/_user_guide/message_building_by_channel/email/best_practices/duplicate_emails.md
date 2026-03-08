@@ -14,7 +14,7 @@ channel: email
 
 ## メールサブスクリプションの更新
 
-Brazeは、メールキャンペーンを送信する際に、重複するメールアドレスを自動的にチェックし、削除する。これにより、複数のユーザープロファイルがアドレスを共有していても、Brazeがメールを複数回送信するのを防ぐことができる。
+Brazeは、メールキャンペーンを送信する際に、重複するメールアドレスを自動的にチェックし、削除する。これにより、複数のユーザープロファイルがアドレスを共有している場合でも、Brazeがメールを複数回送信するのを防ぐことができる。
 
 {% alert tip %}
 必ず、[ユーザーのメールサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions)や、特定のサブスクリプション状態のユーザーをターゲットにしたキャンペーンの設定を行うために Braze が提供しているツールを十分に理解してください。これらのツールは、[反スパム法を]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations)遵守するために不可欠である。

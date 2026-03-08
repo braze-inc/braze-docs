@@ -234,13 +234,17 @@ APIトリガーキャンペーンの場合、トリガーアクションが**Int
 
 #### ターゲットとするユーザーを選択する
 
-次に、[ターゲットユーザーs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)をSegmentsまたはフィルターsを選択します。Brazeは、メールを介して到達可能なユーザー数を含む、Segment集団のライブプレビューを示します。正確なSegmentメンバーシップは送信直前に計算されます。
+次に、[ターゲットユーザー]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)をSegmentsまたはフィルターを選択します。Brazeは、メールを介して到達可能なユーザー数を含む、Segment集団のライブプレビューを示します。正確なSegmentメンバーシップは送信直前に計算されます。
 
 {% multi_lang_include target_audiences.md %}
 
 また、特定の[サブスクリプションステータス]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)を持つユーザー (メールに登録してオプトインしたユーザーなど) にのみキャンペーンを送信することもできます。
 
 オプションで、セグメント内の指定されたユーザー数に配信を制限したり、キャンペーンが再来したときに同じメッセージを2回受け取ることをユーザーに許可することもできる。
+
+{% alert note %}
+新しいメール キャンペーンを作成すると、コントロールグループが20%にデフォルトされ、キャンペーンに合わせて必要に応じて調整または削除できます。
+{% endalert %}
 
 ##### Eメールとプッシュによるマルチチャネルキャンペーン
 

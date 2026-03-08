@@ -10,9 +10,7 @@ description: "Cette page donne un aperçu de la manière de déclencher les toil
 
 > Apprenez à synchroniser les déclencheurs de Canvas à l'aide de CDI pour une personnalisation sans copie. Cette fonctionnalité permet d'accéder à des informations spécifiques à l'utilisateur à partir de votre solution de stockage de données et de les transmettre à un Canvas de destination. Les étapes du canvas peuvent éventuellement inclure des champs de personnalisation qui ne sont pas conservés dans les profils utilisateurs de Braze.
 
-{% alert important %}
-Les déclencheurs CDI Canvas sont actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% include early_access_beta_alert.md feature='CDI Canvas triggers' %}
 
 ## Synchronisation des déclencheurs Canvas
 
@@ -137,7 +135,7 @@ Si votre compte dispose de politiques de réseau, autorisez la liste des IP de B
 {% endtab %}
 {% tab BigQuery %}
 
-##### Étape 1.1 : Créez un nouveau projet ou un nouveau jeu de données pour votre table source (facultatif).
+##### Étape 1.1 : Créez un nouveau projet ou un nouvel ensemble de données pour votre table source (facultatif).
 
 ```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
@@ -321,7 +319,7 @@ Une fois la configuration de la source terminée et le Canvas de destination lan
 Lorsque la synchronisation s'exécute, les utilisateurs de votre table source commencent à entrer dans le Canvas. Utilisez l'analyse/analytique Canvas et la page des journaux de synchronisation de l'ingestion de données dans le cloud pour surveiller les performances.
 
 {% alert tip %}  
-Passez en revue l'ensemble de votre configuration (du comportement de synchronisation à la configuration de Canvas) afin d'éviter les envois inattendus. Les paramètres du canvas, tels que la limite de débit, la limite de fréquence et les filtres de segmentation, permettent d'affiner encore l'envoi des messages.<br><br>Nous vous recommandons de procéder à un essai avec une audience réduite ou test avant de mettre en œuvre des cas d'utilisation en production.
+Passez en revue l'ensemble de votre configuration (du comportement de synchronisation à la configuration de Canvas) afin d'éviter les envois inattendus. Les paramètres du canvas tels que la limite de débit, la limite de fréquence et les filtres de segmentation permettent d'affiner encore l'envoi des messages.<br><br>Nous vous recommandons de procéder à un essai avec une audience réduite ou test avant de mettre en œuvre des cas d'utilisation en production.
 {% endalert %}
 
 ### Considérations
@@ -334,4 +332,4 @@ Bien que les déclencheurs CDI Canvas soient en accès anticipé, tenez compte d
 * Chaque cycle de synchronisation entrera les utilisateurs dans leur canvas de destination respectif à un rythme maximum d'environ 3,75 millions d'utilisateurs par heure.  
   * Préparez-vous à des délais d'entrée plus longs entre la source et le canvas lorsque :  
     * Synchronisation de plus de 3,75 millions d'utilisateurs par cycle de synchronisation.  
-    * Utilisation des déclencheurs CDI Canvas lorsque vous saturez déjà la limite de débit de votre API REST pour [ `/canvas/trigger/send`.]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#rate-limit)
+    * Utiliser les déclencheurs CDI Canvas lorsque vous saturez déjà la limite de débit de votre API REST pour [ `/canvas/trigger/send`.]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#rate-limit)

@@ -30,12 +30,12 @@ Para obter algumas ideias sobre como começar a diferenciar suas variantes, cons
 
 ## Etapa 3: Programe sua campanha
 
-O agendamento de sua campanha multivariante funciona da mesma forma que o agendamento de qualquer outra campanha do Braze. Todos os tipos de [entrega padrão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) estão disponíveis.
+O agendamento de sua campanha multivariante funciona da mesma forma que o agendamento de qualquer outra campanha do Braze. Todos os tipos de [entrega]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) padrão estão disponíveis.
 
-Depois que um teste multivariado começa, você não pode fazer alterações na campanha. Se você alterar os parâmetros, como a linha de assunto ou o corpo HTML, a Braze considera o experimento comprometido e desabilita imediatamente o experimento.
+Após o início de um teste multivariado, você não pode fazer alterações na campanha. Se você alterar os parâmetros, como a linha de assunto ou o corpo HTML, a Braze considera o experimento comprometido e desabilita imediatamente o experimento.
 
 {% alert important %}
-Para usar uma [otimização]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (disponível para canais selecionados), agende sua campanha para entregar uma vez. As otimizações não estão disponíveis para campanhas que se repetem ou que têm a reelegibilidade ativada.
+Para usar uma [otimização]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (disponível para canais selecionados), agende sua campanha para ser entregue uma vez. As otimizações não estão disponíveis para campanhas que se repetem ou que têm a reelegibilidade ativada.
 {% endalert %}
 
 ## Etapa 4: Escolha um segmento e distribua seus usuários entre as variantes
@@ -79,7 +79,7 @@ Na página de confirmação, revise os detalhes de sua campanha multivariante e 
 Se seu experimento já começou a enviar e você editar a mensagem, o experimento se torna inválido, e quaisquer resultados do experimento são removidos.
 
 - Para evitar qualquer interferência no comportamento esperado do experimento, recomendamos evitar edições de mensagens dentro de uma hora após o lançamento da campanha do experimento.
-- Se o seu experimento estiver concluído e você editar a mensagem após o envio, os resultados do experimento permanecem disponíveis na análise de dados do seu dashboard. No entanto, se você relançar a campanha, os resultados do experimento são removidos.
+- Se o seu experimento estiver concluído e você editar a mensagem após o envio, os resultados do experimento permanecem disponíveis na análise do seu dashboard. No entanto, se você relançar a campanha, os resultados do experimento serão removidos.
 
 ### Dicas para diferentes canais {#tips-different-channels}
 
@@ -98,7 +98,7 @@ Ao executar Testes A/B, não se esqueça de gerar [relatórios de funil]({{site.
 
 Além disso, a duração ideal de seu teste também pode variar dependendo do canal. Tenha em mente o tempo médio que a maioria dos usuários pode precisar para se engajar em cada canal.
 
-Por exemplo, se estiver testando um push, poderá obter resultados significativos mais rapidamente do que ao testar o envio de e-mail, pois os usuários veem os pushes imediatamente, mas pode levar dias até que vejam ou abram um e-mail. Se você estiver testando mensagens no aplicativo, tenha em mente que os usuários devem abrir o app para ver a campanha, então você deve esperar mais tempo para coletar resultados tanto dos seus usuários mais ativos quanto dos seus usuários mais típicos.
+Por exemplo, se estiver testando um push, poderá obter resultados significativos mais rapidamente do que ao testar o envio de e-mail, pois os usuários veem os pushes imediatamente, mas pode levar dias até que vejam ou abram um e-mail. Se você estiver testando mensagens no aplicativo, lembre-se de que os usuários devem abrir o app para ver a campanha, então você deve esperar mais tempo para coletar resultados tanto dos seus usuários mais ativos quanto dos seus usuários mais típicos.
 
 Se você não tiver certeza de quanto tempo seu teste deve durar, o recurso [Seleção Inteligente]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) pode ser útil para encontrar uma Variante Vencedora de forma eficiente.
 
@@ -126,7 +126,7 @@ Há alguns erros comuns que devem ser evitados, criando a aparência de diferen�
 
 Por exemplo, se você enviar uma mensagem push para um público amplo com um controle, o grupo de teste envia mensagens apenas para usuários com um token por push. No entanto, o grupo de controle inclui tanto usuários que têm um token por push quanto usuários que não têm. Nesse caso, seu público inicial para a campanha ou o Canva deve filtrar por ter um token por push (`Foreground Push Enabled` é `true`). O mesmo deve ser feito para a elegibilidade para receber mensagens em outros canais: optou por participar, tem um token por push ou está inscrito.
 
-Observe que se uma variante de controle não consistir em nenhuma etapa do Canvas, eventos de critérios de saída não são registrados para usuários na variante de controle.
+Observe que se uma variante de controle não consistir em nenhum passo do Canvas, eventos de critérios de saída não são registrados para usuários na variante de controle.
 
 {% alert note %}
 Se você usar manualmente números de balde aleatórios para grupos de controle, confira [coisas a serem observadas]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) em seus grupos de controle.
