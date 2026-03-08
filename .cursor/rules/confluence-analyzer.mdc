@@ -1,0 +1,187 @@
+---
+alwaysApply: false
+---
+
+# TAM Confluence use-case library: parse and draft from Confluence pages
+
+Analyze Confluence pages (TAM Solution Repo) exported to JSON to triage, white-label, and draft entries for a Braze docs **use case library**. Content is often client-specific and must be generalized before publication.
+
+## Data file location
+
+The Confluence export is at: **`_data/confluence_pages.json`**
+
+To refresh the export (after new or changed pages in Confluence), run:
+
+```bash
+python3 scripts/fetch_confluence_pages.py
+```
+
+Or, if API access is not available, export the space or parent page from Confluence (e.g. XML or HTML) and place it under `_data/`; a separate import script can convert it to the same JSON shape.
+
+---
+
+## JSON schema
+
+The file is JSON with one of two top-level shapes:
+
+**When using a parent page (subset):**
+
+- `parentPageId` — Confluence page ID of the parent (e.g. `"258150071"`).
+- `pages` — Array of page objects.
+
+**When using a full space:**
+
+- `spaceKey` — Confluence space key (e.g. `"RS"`).
+- `pages` — Array of page objects.
+
+### Page object fields
+
+| Field | Description |
+|-------|-------------|
+| `id` | Confluence page ID (string). |
+| `title` | Page title. |
+| `spaceKey` | Space key (may be empty in some exports). |
+| `link` | Full URL to view the page in Confluence. |
+| `bodyStorage` | **Main content** — Confluence storage format (HTML with `ac:structured-macro`, `ac:link`, etc.). Must be parsed and optionally converted to Markdown. |
+| `bodyView` | Rendered view HTML; sometimes easier to strip to plain text or simple HTML. |
+| `labels` | Array of label strings (useful for tagging). |
+| `version` | Page version number. |
+| `createdAt` | Creation timestamp. |
+| `updatedAt` | Last update timestamp. |
+| `slug` | URL-safe slug derived from title. |
+
+Use `bodyStorage` or `bodyView` as the primary source for the solution content. Confluence macros and internal links will need to be converted or removed for docs.
+
+---
+
+## Two-phase workflow
+
+- **Phase 1 (parse & triage):** Read the JSON, categorize each page (suitable for use case library? client-specific? internal-only?), identify what must be white-labeled, and produce a prioritized list.
+- **Phase 2 (draft):** For each selected page, generalize the content (remove client names, make applicable to any customer), convert to docs-style Markdown, tag by feature/product, and add to the use case library with links to relevant Braze docs.
+
+Always complete Phase 1 before Phase 2. When the JSON is large, process in batches (e.g. by section or label).
+
+---
+
+# Phase 1: Parse & Triage
+
+## Step 1: Parse the JSON
+
+1. Load `_data/confluence_pages.json`.
+2. Iterate over `pages` (or the subset the user requests).
+3. For each page, read `title`, `bodyStorage` (or `bodyView`), `labels`, `link`.
+4. Parse the body: strip or convert Confluence HTML/macros to extract headings, lists, steps, code blocks, and links. Identify any obvious client names, internal notes, or PII.
+
+## Step 2: Triage & categorize
+
+For each page, decide:
+
+| Category | Criteria | Action |
+|----------|----------|--------|
+| **Use case library** | Solution is generic or can be generalized; useful for any customer | Draft for use case library (Phase 2) |
+| **Heavy white-label** | Client-specific but pattern is reusable; needs names/context removed | Generalize then draft (Phase 2) |
+| **Internal-only** | TAM process, internal escalation, or not for public docs | Skip (do not publish) |
+| **Sensitive** | Contains PII, confidential details, or “do not publish” | Skip (do not publish) |
+| **Not applicable** | How-to for Confluence itself, meta/organizational only | Skip |
+
+> **Never document workarounds or bugs.** Only document how the product is intended to work. If the solution is a workaround for a product defect, skip it or note that it should be skipped until the product is fixed.
+
+Identify **white-label checklist** items per page: client names, account-specific examples, internal links to Confluence/Jira, and internal instructions (e.g. “escalate to #channel”) that must be removed or generalized.
+
+## Step 3: Tag by product/feature
+
+Assign one or more **tags** for the use case library (e.g. Canvas, Currents, Email, Segments, Liquid, SDKs, CDP, Messaging, API). Use page content and existing `labels` to decide. Tags will be used for filtering and linking to relevant docs.
+
+## Step 4: Prioritize and output
+
+1. Filter to pages that are **Use case library** or **Heavy white-label**.
+2. Prioritize by: clarity of solution, relevance to common use cases, and ease of generalization.
+3. Output a short backlog (e.g. to `output.md` or chat) with for each page:
+   - `id`, `title`, `link`
+   - Category
+   - Suggested tags
+   - White-label checklist (what to remove or generalize)
+   - Ready for Phase 2? (Yes / No — needs more context)
+
+### Example Phase 1 output (per page)
+
+```markdown
+### Page: [Title] (id: 258150072)
+- **Category**: Use case library / Heavy white-label
+- **Tags**: Canvas, Liquid
+- **White-label**: Remove "Client X", replace account example with "your workspace"
+- **Ready to draft**: Yes
+- **Confluence link**: [URL]
+```
+
+---
+
+# Phase 2: Draft use case library entries
+
+## Target: use case library
+
+- **Do not** scatter use cases across existing product docs. Publish them in a **single use case library** (e.g. under `_docs/_user_guide/use_case_library/` or a dedicated collection).
+- Each entry: one page or section with a clear title, summary, steps/solution (generalized), **tags** (for filtering), and **links to relevant Braze docs** (user guide, API, etc.).
+- Follow style in `_docs/_contributing/style_guide/*` and existing use-case-style pages (e.g. `_docs/_user_guide/getting_started/b2b_use_cases.md`, `_docs/_api/use_cases.md`).
+
+## Step 5: White-label and generalize
+
+For each page selected for Phase 2:
+
+1. **Remove** client names, account IDs, and internal links (Confluence/Jira).
+2. **Replace** with generic language: “your company,” “your segment,” “your workspace,” or placeholder names (e.g. “ExampleCo”) where an example is needed.
+3. **Strip** internal notes (e.g. “TAM should…”, “Escalate to…”) or generalize to “contact your customer success manager” or similar.
+4. **Redact** any PII or confidential details. Do not publish internal-only instructions.
+
+## Step 6: Convert content and draft
+
+1. Convert Confluence body (HTML/macros) to clean Markdown: headings, lists, code blocks, and links.
+2. Draft the use case entry: concise title, short summary, solution steps, and “Related documentation” links to existing Braze docs.
+3. Add front matter or metadata for **tags** (so the library can filter by Canvas, Currents, etc.).
+4. Save under the use case library path (exact structure can be decided when the library is first set up).
+
+## Step 7: Link to relevant docs
+
+For each use case, link to the most relevant Braze docs pages (user guide, API, partners) so readers can go from “solution” to “how the feature works.” Do not duplicate full feature docs; keep use case entries focused and link out.
+
+---
+
+## Refreshing the data
+
+- **With API access:** Run `python3 scripts/fetch_confluence_pages.py` (with `.env` configured). This overwrites `_data/confluence_pages.json` with the current parent page and descendants.
+- **Without API access:** Export the Confluence space or parent page (e.g. XML), place under `_data/`, and use or create an import script that produces the same JSON structure so this rule still applies.
+
+---
+
+## Source references
+
+| Resource | Path |
+|----------|------|
+| Docs repo | (current repo) |
+| Confluence pages JSON | `_data/confluence_pages.json` |
+| Fetch script | `scripts/fetch_confluence_pages.py` |
+| Style guide | `_docs/_contributing/style_guide/*` |
+
+---
+
+## Example prompts
+
+### Phase 1: Triage
+
+```
+@confluence-analyzer.mdc Run Phase 1 on _data/confluence_pages.json. Triage and categorize each page, suggest tags and white-label checklist, output backlog.
+```
+
+```
+@confluence-analyzer.mdc Run Phase 1 on the Confluence export but only for pages whose title or labels mention "Canvas" or "Liquid".
+```
+
+### Phase 2: Draft
+
+```
+@confluence-analyzer.mdc Run Phase 2 for the top 5 pages from the Phase 1 backlog. White-label and draft use case library entries with tags and links to relevant docs.
+```
+
+```
+@confluence-analyzer.mdc Run Phase 2 for the page with id 258150072. Generalize the content and add it to the use case library.
+```

@@ -1,0 +1,2 @@
+# For scripts/fetch_confluence_pages.py
+requests>=2.28.0
