@@ -1,7 +1,7 @@
 ---
 nav_title: WhatsApp Template Builder
 article_title: WhatsApp Template Builder
-description: "This reference article covers the WhatsApp Template Builder."
+description: "Learn how to create, configure, and submit WhatsApp message templates directly in Braze using the WhatsApp Template Builder."
 alias: /whatsapp_template_builder/
 page_type: reference
 channel:
@@ -22,7 +22,7 @@ Before creating a WhatsApp template in Braze, complete the [WhatsApp setup](http
 
 ## Create a template
 
-### Step 1: Create a template
+### Step 1: Go to WhatsApp Templates
 
 Go to **Templates** > **WhatsApp Templates**, then select **Create new template**.
 
@@ -44,7 +44,7 @@ Fill in the following fields:
 Under **Layout**, select the template type:
 
 - **Default:** A standard WhatsApp message. This is the layout covered in this article.  
-- **Carousel:** A message with horizontally scrollable cards. Refer to [Carousel templates]({{site.baseurl}}/whatsapp_carousel_templates/) for details.
+- **Carousel:** A message with horizontally scrollable cards. For more information, see [Carousel templates]({{site.baseurl}}/whatsapp_carousel_templates/).
 
 ### Step 4: Build your template
 
@@ -53,12 +53,12 @@ Under **Layout**, select the template type:
 Add a header to appear above the message body. You can choose:
 
 - **Text:** A short text header.  
-- **Media:** An image, video or document (URL only). Braze will store the media reference and submit a sample to Meta for approval.  
+- **Media:** An image, video, or document (URL only). Braze will store the media reference and submit a sample to Meta for approval.  
 - **None:** No header 
 
 #### Body
 
-Enter the main content of your message. You can personalize the body using Liquid or generic variables:
+Enter the main content of your message and personalize the body as needed by using Liquid or generic variables:
 
 {% raw %}
 - Use Liquid tags (for example, `{{${first_name}}}`). Braze saves your Liquid and surfaces it when you use the template in a campaign or Canvas composer.  
@@ -73,7 +73,15 @@ Add a short footer to appear below the message body.
 
 #### Buttons (optional)
 
-Add up to 10 buttons to your template. Button types have different character limits; Braze displays your remaining character count as you add buttons.
+Add up to 10 buttons to your template. Button types have different categories and specifications.
+
+| Button type | Category | Specifications |
+| --- | --- | --- |
+| Quick reply | Quick reply buttons |{::nomarkdown}<ul><li><b>Maximum count:</b> 10</li><li><b>Button text:</b> Up to 25 characters</li></ul> {:/}|
+| Phone number | Call to Action buttons | {::nomarkdown}<ul><li><b>Maximum count:</b> 1</li><li><b>Button text:</b> Up to 25 characters</li><li><b>Phone number:</b> Valid phone number with country code, without + (such as "14155552671")</li></ul> {:/}|
+| Visit website | Call to Action buttons | {::nomarkdown}<ul><li><b>Maximum count:</b> 2</li><li><b>Button text:</b> Up to 25 characters</li><li><b>Website URL:</b> Up to 2,000 characters</li></ul> {:/}|
+| Copy offer code | Call to Action buttons | {::nomarkdown}<ul><li><b>Maximum count:</b> 1</li><li><b>Button text:</b> "Copy offer code" (can't be edited)</li><li><b>Offer code:</b> Up to 15 characters</li></ul> {:/}|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ![WhatsApp template composer with quick reply and call to action buttons.]({% image_buster /assets/img/whatsapp/templates/buttons.png %})
 
@@ -84,17 +92,13 @@ Before submitting, preview how your message will appear to recipients:
 - **Preview as a user:** See a generic preview of the message.  
 - **Preview as a specific user:** Select a user profile to preview how the template will render with that user's data.
 
-{% alert note %}
-Templates must be approved by Meta before they can be sent. After approval, you can test the template within campaigns and Canvases.
-{% endalert %}
-
 ### Step 6: Submit for review
 
-Select **Submit** to send your template to Meta for review, which typically takes around five minutes but can take up to 24 hours. The template appears on your **WhatsApp templates** page when it's submitted, and the status will be updated on refresh of the **WhatsApp templates** page.
+Select **Submit** to send your template to Meta for review, which typically takes around five minutes but can take up to 24 hours. The template appears on your **WhatsApp templates** page when it's submitted, and the status updates when you refresh the **WhatsApp templates** page.
 
 ## Supported template categories
 
-At this time, only Marketing templates are available in the WhatsApp Template Builder.
+Only Marketing templates are currently supported in the WhatsApp Template Builder.
 
 ## Use an approved template in a campaign
 
@@ -102,11 +106,11 @@ After Meta approves your template, you can use it in a WhatsApp campaign or Canv
 
 1. Go to **Campaigns** and select **Create Campaign** > **WhatsApp**.  
 2. In the message composer, select your approved template.  
-3. Braze will automatically populate the template's content—including any media and Liquid you entered during template creation—so you don't have to re-enter it.  
-4. Update any variable content or personalization as needed. Fields locked by Meta (shown in gray) cannot be edited. To change locked content, you'll need to edit and resubmit the template for approval.  
+3. Braze automatically populates the template's content—including any media and Liquid you entered during template creation—so you don't have to re-enter it.  
+4. Update any variable content or personalization as needed. Fields locked by Meta (shown in gray) cannot be edited. To change locked content, you must edit and resubmit the template for approval.  
 5. Use the **Test** tab to preview the message, update body variables, and confirm the message looks as expected before launch.
 
-For more details on building WhatsApp campaigns, refer to [Create a WhatsApp message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/).
+For more information about building WhatsApp campaigns, see [Create a WhatsApp message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/).
 
 ## Frequently asked questions
 
@@ -114,9 +118,9 @@ For more details on building WhatsApp campaigns, refer to [Create a WhatsApp mes
 
 Reviews typically complete within five minutes, but can take up to 24 hours.
 
-### Can I edit a template after it's been approved? 
+### Can I edit a template after it's been approved?
 
-Any changes to locked content (body copy or other Meta-controlled fields) require resubmitting the template for approval, which must be done from the WhatsApp Business Manager. Variable content and personalization can be updated when building your campaign or canvas.
+Any changes to locked content (body copy or other Meta-controlled fields) require resubmitting the template for approval, which must be done from the WhatsApp Business Manager. You can update content and personalization when building your campaign or Canvas.
 
 ### What happens to templates I submitted before the Template Builder was available?
 
