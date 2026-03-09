@@ -7,9 +7,9 @@ description: "Dieser Artikel referenziert mehrere vorgefertigte Templates von Br
 toc_headers: h2
 ---
 
-# So nutzen Sie die vom E-Commerce empfohlenen Veranstaltungen
+# Verwendung von empfohlenen E-Commerce-Events
 
-> Auf dieser Seite erfahren Sie, wie und wo Sie die empfohlenen E-Commerce-Ereignisse auf der gesamten Plattform verwenden können, einschließlich der Verwendung von Braze E-Commerce Canvas Templates.
+> Auf dieser Seite erfahren Sie, wie und wo Sie die empfohlenen E-Commerce-Events auf der gesamten Plattform nutzen können, einschließlich der Verwendung von Braze E-Commerce Canvas-Templates.
 
 {% alert important %}
 [E-Commerce empfohlene Veranstaltungen]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) sind derzeit im frühen Zugriff. Wenden Sie sich an Ihren Customer-Success-Manager:in von Braze, wenn Sie an diesem frühzeitigen Zugang teilnehmen möchten. <br><br>Wenn Sie den neuen Shopify Konnektor verwenden, werden die empfohlenen E-Commerce-Ereignisse automatisch über die Integration verfügbar sein.
@@ -25,7 +25,7 @@ So verwenden Sie eine Canvas-Vorlage:
 
 ## E-Commerce Canvas Templates
 
-Braze bietet vier E-Commerce Canvas Templates an.
+Braze stellt vier E-Commerce-Canvas-Templates zur Verfügung.
 
 {% multi_lang_include canvas/ecommerce_templates.md %}
 
@@ -61,9 +61,9 @@ Da es sich bei den empfohlenen Events um angepasste Events handelt, können Sie 
 
 Segmentieren Sie Ihre Nutzer:innen mit E-Commerce-Filtern, wie z.B. **E-Commerce-Quelle** und **Gesamtumsatz**, indem Sie den Abschnitt **E-Commerce** im Segmentierer aufrufen. 
 
-Eine Liste der E-Commerce-Filter und ihrer Definitionen finden Sie unter [Segmentierungsfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) und wählen Sie die Suchkategorie "E-Commerce".
+Eine Liste der E-Commerce-Filter und deren Definitionen finden Sie unter [Segmentfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Wählen Sie dort die Suchkategorie „E-Commerce“ aus.
 
-![Segmente Filter Dropdown mit "E-Commerce" Filtern.]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:50%"}
+![Dropdown-Menü für Segmentfilter mit „E-Commerce“-Filtern.]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:50%"}
 
 {% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation for eCommerce filters' %}
 
@@ -73,30 +73,24 @@ Um nach verschachtelten Event-Eigenschaften zu segmentieren, können Sie [Segmen
 
 ## Analytics
 
-### Angepasste Events Bericht
+### Bericht über angepasste Events
 
-Im [Bericht Angepasste Events]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#analytics) können Sie das Volumen der im E-Commerce empfohlenen Events verfolgen. Filtern Sie nach **Angepasstes Event durchführen** und geben Sie dann den [Namen des empfohlenen E-Commerce Events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/#types-of-ecommerce-recommended-events) an, um dessen Performance im Zeitverlauf zu sehen.
+Sie können das Volumen der empfohlenen E-Commerce-Ereignisse im [Bericht]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#analytics) [„Angepasste Events“]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#analytics) verfolgen. Bitte filtern Sie nach **„Angepasstes Event durchführen**“ und geben Sie anschließend den [von E-Commerce empfohlenen Ereignisnamen]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/#types-of-ecommerce-recommended-events) an, um dessen Performance im Zeitverlauf anzuzeigen.
 
-![Angepasstes Chart für Events, das die Ergebnisse für sechs angepasste Events anzeigt.]({% image_buster /assets/img/ecommerce/custom_events_chart.png %})
-
-### Bericht über Konversionen 
-
-### Angepasste Events Bericht
-
-Um einen [Bericht über angepasste Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#analytics) zu erstellen, der darauf basiert, wer ein durch die Integration unterstütztes Event durchgeführt hat, können Sie den spezifischen [Eventnamen]({{site.baseurl}}/shopify_data_features/) angeben.
+![Angepasste Events-Chart, die die Ergebnisse für sechs ausgewählte Ereignisse anzeigt.]({% image_buster /assets/img/ecommerce/custom_events_chart.png %})
 
 ### Dashboards
 
 #### Dashboard für Konversionen
 
-Um Insights zu den Trends bei den Bestellungen zu erhalten, die von Ihren lancierten Canvase aus getätigt wurden, richten Sie ein [Dashboard für Konversionen]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) ein und geben Ihre Canvase an.
+Nachdem Sie eine Kampagne oder Canvas mit dem Konversions-Event „Bestellung aufgeben“ gestartet haben, können Sie einen entsprechenden [Conversion-Bericht]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#setting-up-your-report) erstellen, um die Performance zu verfolgen.
 
-#### E-Commerce Umsatz Dashboard
+![Tabelle mit Details zu Konversionen, einschließlich Kampagnen und Canvases sowie den zugehörigen Statistiken zu Konversionen.]({% image_buster /assets/img_archive/conversion_details_table.png %})
 
-Um Insights über die Attribution der letzten Kampagne oder des letzten Canvas zu erhalten, mit dem ein Nutzer:innen vor der Bestellung interagiert hat, verwenden Sie das [Dashboard für E-Commerce-Umsätze]({{site.baseurl}}/ecommerce_revenue_dashboard/) und wählen Sie ein Konversionsfenster aus.
+#### Dashboard für E-Commerce-Umsätze
 
-### Abfrage-Builder
+Um Insights in die Einnahmen zu erhalten, die der letzten Kampagne oder dem letzten Canvas zugeordnet werden können, mit denen ein Nutzer:in vor der Bestellung interagiert hat, nutzen Sie bitte das [Dashboard für den E-Commerce-Umsatz]({{site.baseurl}}/ecommerce_revenue_dashboard/) und wählen Sie ein Conversion-Fenster aus.
 
-### Bericht über die Einnahmen 
+### Umsatzbericht 
 
-Um Daten aus diesen neuen Ereignissen zu analysieren, gehen Sie zum [Dashboard Builder]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) und sehen Sie sich das [Dashboard**E-Commerce Umsatz - Last Touch Attribution**]({{site.baseurl}}/ecommerce_revenue_dashboard/) an.
+Um die Daten dieser neuen Ereignisse zu analysieren, gehen Sie zum [Dashboard Builder]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) und zeigen Sie das [Dashboard **„E-Commerce-Umsatz – Last-Touch-Attribution“**]({{site.baseurl}}/ecommerce_revenue_dashboard/) an.
