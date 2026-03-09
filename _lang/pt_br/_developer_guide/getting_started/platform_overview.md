@@ -25,7 +25,7 @@ Confira nosso curso gratuito [Developer Learning Path](https://learning.braze.co
 
 ## O que é a Braze?
 
-A Braze é uma plataforma de engajamento com clientes. Ele consome dados de usuários, apresenta ações e comportamentos dos usuários e permite que você aja sobre eles. A plataforma tem três componentes principais: o SDK, o dashboard e a API REST.
+A Braze é uma plataforma de engajamento com clientes. Ele consome dados de usuários, exibe ações e comportamentos dos usuários e permite que você aja sobre eles. A plataforma tem três componentes principais: o SDK, o dashboard e a API REST.
 
 Se você for um profissional de marketing e estiver procurando uma visão geral do Braze, consulte a [seção Introdução para profissionais de marketing]({{site.baseurl}}/user_guide/getting_started/overview/).
 
