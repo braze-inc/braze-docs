@@ -11,17 +11,17 @@ tool: Canvas
 
 # Mensaje 
 
-> Los pasos de mensajería te permiten añadir un mensaje independiente donde quieras en tu Canvas.
+> Los pasos de mensaje te permiten añadir un mensaje independiente donde quieras en tu Canvas.
 
-![Un paso de Mensaje llamado "Promoción almuerzo" utilizando el canal push.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![Un paso de mensaje denominado «Promoción del almuerzo» que utiliza el canal push.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 ## Crear un mensaje
 
-Para crear un componente Mensaje, añade primero un paso a tu Canvas. Arrastra y suelta el componente desde la barra lateral, o selecciona el botón <i class="fas fa-plus-circle"></i> más en la parte inferior de un paso y selecciona **Mensaje**. 
+Para crear un componente Mensaje, añade primero un paso a tu Canvas. Arrastre y suelte el componente desde la barra lateral, o seleccione el botón<i class="fas fa-plus-circle"></i> más en la parte inferior de un paso y seleccione **Mensaje**. 
 
 ### Paso 1: Selecciona tu canal de mensajería
 
-Puedes seleccionar uno de los siguientes canales de mensajería: 
+Puedes seleccionar entre los siguientes canales de mensajería: 
 - Banners (en acceso anticipado)
 - Tarjetas de contenido
 - Correo electrónico
@@ -32,11 +32,11 @@ Puedes seleccionar uno de los siguientes canales de mensajería:
 - Webhook
 - WhatsApp
 
-![Una lista de los canales de mensajería disponibles para seleccionar en el paso Mensaje.]({% image_buster /assets/img/canvas_components/message_step2.png %})
+![Una lista de canales de mensajería disponibles para seleccionar en el paso Mensaje.]({% image_buster /assets/img/canvas_components/message_step2.png %})
 
 ### Paso 2: Editar la configuración de entrega
 
-A continuación, puedes editar la configuración de la Entrega Inteligente, la anulación de las horas tranquilas y la validación de la entrega.
+A continuación, puedes editar la configuración de entrega inteligente, las excepciones de horas tranquilas y la validación de entregas.
 
 #### Intelligent Timing
 
@@ -50,7 +50,7 @@ Las validaciones de entrega proporcionan una comprobación adicional para confir
 
 ![La pestaña Configuración de entrega para la configuración del componente Mensaje. Las horas de silencio están activadas y la casilla de verificación Utilizar sincronización inteligente está seleccionada para enviar el mensaje a una hora óptima. Las validaciones de entrega se activan para validar la audiencia en el envío del mensaje.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
 
-## Cómo avanzan los usuarios
+## Cómo avanza un usuario
 
 Todos los usuarios que entren en el paso Mensaje avanzarán al siguiente paso cuando se cumpla alguna de las siguientes condiciones:
 
@@ -63,47 +63,49 @@ Todos los usuarios que entren en el paso Mensaje avanzarán al siguiente paso cu
 Si un Canvas basado en acciones se activa mediante un mensaje SMS entrante, puede hacer referencia a las propiedades de SMS en el primer paso (paso Mensaje) o en un paso Mensaje anidado bajo un paso Ruta de acción. Por ejemplo, en el paso Mensaje, podrías utilizar `{{sms.${inbound_message_body}}}` o `{{sms.${inbound_media_urls}}}`.
 {% endraw %}
 
-## Referencia a las propiedades de entrada del Canvas
+## Referencia a las propiedades del contexto
 
-Las propiedades de entrada al Canvas se configuran en el paso **Programa de entrada** de la creación de un Canvas e indicarán el desencadenante que introduce a un usuario en un Canvas. Estas propiedades también pueden acceder a las propiedades de las cargas útiles de entrada en los lienzos activados por API. El objeto `canvas_entry_properties` tiene un límite de tamaño máximo de 50 KB. 
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
-Las propiedades de entrada pueden utilizarse en Liquid en cualquier paso de Mensaje. Utiliza el siguiente Liquid cuando hagas referencia a estas propiedades de entrada: {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. Los eventos deben ser eventos personalizados o eventos de compra para poder utilizarse de esta forma.
+Las propiedades de entrada se configuran en el paso **Programación de entradas** de la creación de un Canvas y indicarán el desencadenante que hace que un usuario entre en un Canvas. Estas propiedades también pueden acceder a las propiedades de las cargas útiles de entrada en los lienzos activados por API. El objeto `context` tiene un límite de tamaño máximo de 50 KB.
+
+Las propiedades de entrada se pueden utilizar en Liquid en cualquier paso de mensaje. Utiliza el siguiente líquido cuando hagas referencia a estas propiedades de entrada: {% raw %}``{context.${property_name}}``{% endraw %}. Los eventos deben ser eventos personalizados o eventos de compra para poder utilizarse de esta forma.
 
 {% alert note %}
-En el caso concreto de los canales de mensajería dentro de la aplicación, sólo se puede hacer referencia a `canvas_entry_properties` en Canvas.
+En el caso concreto de los canales de mensajes dentro de la aplicación, solo`context` se puede hacer referencia a ellos en Canvas.
 {% endalert %}
 
-Utiliza el siguiente Liquid cuando hagas referencia a estas propiedades de entrada: {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. Tenga en cuenta que los eventos deben ser eventos personalizados o eventos de compra para ser utilizados de esta manera.
+Utiliza el siguiente líquido cuando hagas referencia a estas propiedades de entrada: {% raw %}``context.${property_name}``{% endraw %}. Tenga en cuenta que los eventos deben ser eventos personalizados o eventos de compra para ser utilizados de esta manera.
 
 {% raw %}
-Por ejemplo, considere la siguiente petición: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Podrías añadir la palabra "zapatos" a un mensaje con el `{{canvas_entry_properties.${product_name}}}` de Liquid.
+Por ejemplo, considere la siguiente petición: `\"context\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Podrías añadir la palabra "zapatos" a un mensaje con el `{{context.${product_name}}}` de Liquid.
 {% endraw %}
 
 También puede aprovechar [las propiedades de entrada persistentes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) en cualquier paso de Mensaje para guiar a sus usuarios a través de pasos personalizados en todo el flujo de trabajo de Canvas.
 
 ### Propiedades del evento
 
-Las propiedades del evento se refieren a las propiedades que configuras para los eventos personalizados y los eventos de la compra. Estas propiedades del evento pueden utilizarse en campañas con entrega basada en acciones, así como en Lienzos. 
+Las propiedades del evento se refieren a las propiedades que estableces para los eventos personalizados y los eventos de compra. Estas propiedades del evento se pueden utilizar en campañas con entrega basada en acciones, así como en lienzos. 
 
-En Canvas, las propiedades del evento personalizado y del evento de compra pueden utilizarse en Liquid en cualquier paso de Mensaje que siga a un paso de [Ruta de acción]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/). Por ejemplo, cuando hagas referencia a `event_properties`, utiliza este fragmento de código Liquid: {% raw %}``{{event_properties.${property_name}}}``{% endraw %} 
+En Canvas, las propiedades del evento personalizado y las propiedades de la compra se pueden utilizar en Liquid en cualquier paso de mensaje que siga a un paso [de rutas de acción]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/). Por ejemplo, al hacer referencia a `event_properties`, utiliza este fragmento de código de Liquid: {% raw %}``{{event_properties.${property_name}}}``{% endraw %} 
 
 {% alert important %}
-`event_properties` no puede utilizarse independientemente de los pasos de las Rutas de acción.
+`event_properties` No se puede utilizar independientemente de los pasos de las rutas de acción.
 {% endalert %}
 
 En el primer paso de Mensaje que sigue a una Ruta de Acción, puede utilizar `event_properties` relacionado con el evento al que se hace referencia en esa Ruta de Acción. Puede tener otros pasos (que no sean otro paso de Rutas de acción o Mensaje) entre este paso de Rutas de acción y el paso de Mensaje. Ten en cuenta que solo tendrás acceso a `event_properties` si tu paso de Mensaje puede remontarse a una ruta que no sea Todos los demás en un paso de Ruta de acción.
 
 {% alert important %}
-No puedes utilizar `event_properties` en el paso Mensaje principal. En su lugar, debe utilizar `canvas_entry_properties` o añadir un paso Rutas de acción con el evento correspondiente antes del paso Mensaje que incluye `event_properties`.
+No puedes utilizar `event_properties` en el paso Mensaje principal. En su lugar, debe utilizar `context` o añadir un paso Rutas de acción con el evento correspondiente antes del paso Mensaje que incluye `event_properties`.
 {% endalert %}
 
 {% details Expand for original Canvas editor %}
 
 Ya no puedes crear o duplicar Lienzos utilizando el editor original. Esta sección está disponible sólo como referencia.
 
-- `event_properties` no puede utilizarse en pasos completos programados. Sin embargo, puede utilizar `event_properties` en el primer paso completo de un Canvas basado en acciones, incluso si el paso completo está programado.
-- `canvas_entry_properties` sólo puede referenciarse en el primer paso completo de un Canvas.
-- En el caso concreto de los canales de mensajería dentro de la aplicación, se puede hacer referencia a `canvas_entry_properties` en el editor Canvas original si tienes habilitadas las propiedades de entrada persistente como parte del acceso anticipado anterior.
+- `event_properties` No se puede utilizar en pasos completos programados. Sin embargo, puede utilizar `event_properties` en el primer paso completo de un Canvas basado en acciones, incluso si el paso completo está programado.
+- `context` solo se puede hacer referencia a él en el primer paso completo de un lienzo.
+- En el caso concreto de los canales de mensajes dentro de la aplicación,`context`puedes consultar el editor Canvas original si tienes habilitadas las propiedades de entrada persistentes como parte del acceso anticipado anterior.
 
 {% enddetails %}
 
