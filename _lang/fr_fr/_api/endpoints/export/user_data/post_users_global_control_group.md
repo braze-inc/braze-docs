@@ -18,7 +18,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les u
 
 Les données des utilisateurs sont exportées sous la forme de plusieurs fichiers d'objets JSON d'utilisateurs séparés par de nouvelles lignes (par exemple, un objet JSON par ligne). Tous les utilisateurs d'un groupe de contrôle global sont inclus à chaque fois que les fichiers sont générés. Braze ne conserve pas l'historique des ajouts et suppressions d'utilisateurs dans un groupe de contrôle global.
 
-Pour localiser l'identifiant de segment de votre groupe de contrôle global, reportez-vous aux [types d'identifiants API]({{site.baseurl}}/api/identifier_types/?tab=segments#segment-identifier).
+Pour trouver l'identifiant de segment de votre groupe de contrôle global, veuillez vous référer aux [types d'identifiants API]({{site.baseurl}}/api/identifier_types/?tab=segments#segment-identifier).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
@@ -32,9 +32,9 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Informations relatives à la réponse basée sur les informations d’identification
 
-Si vous avez ajouté vos identifiants [S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) ou [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) à Braze via la page **Partenaires technologiques** correspondante, alors chaque fichier est téléchargé dans votre compartiment S3 sous la forme d'un fichier ZIP dont le format de clé ressemble à `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Si vous utilisez Azure, assurez-vous que la case **Faire de cette destination la destination par défaut de l'exportation de données est** cochée dans la page d'aperçu du partenaire Azure dans Braze.
+Si vous avez ajouté vos identifiants [S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) ou [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) à Braze via la page **de partenaire technologique** correspondante, chaque fichier est téléchargé dans votre compartiment sous forme de fichier ZIP avec un format de clé similaire à `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Si vous utilisez Azure, assurez-vous que la case **Faire de cette destination la destination par défaut de l'exportation de données est** cochée dans la page d'aperçu du partenaire Azure dans Braze.
 
-En général, nous créons un fichier pour 5 000 utilisateurs afin d'optimiser le traitement. L'exportation de segments plus petits au sein d'un grand espace de travail peut donner lieu à plusieurs fichiers. Vous pouvez alors décompresser les fichiers et concaténer tous les fichiers `json` dans un fichier unique si nécessaire. Si vous spécifiez un `output_format` de `gzip`, l'extension du fichier est `.gz` au lieu de `.zip`.
+En règle générale, nous créons un fichier pour chaque tranche de 5 000 utilisateurs afin d'optimiser le traitement. L'exportation de segments plus petits au sein d'un grand espace de travail peut donner lieu à plusieurs fichiers. Vous pouvez alors décompresser les fichiers et concaténer tous les fichiers `json` dans un fichier unique si nécessaire. Si vous spécifiez une valeur`output_format`de `gzip`, l'extension du fichier sera`.gz`  au lieu de `.zip`.
 
 {% details Export pathing breakdown for ZIP %}
 **Format ZIP :**
@@ -56,15 +56,15 @@ En général, nous créons un fichier pour 5 000 utilisateurs afin d'optimiser l
 
 {% enddetails %}
 
-Nous vous conseillons vivement de configurer vos propres identifiants S3 ou Azure (en vous rendant sur **Intégrations partenaires** > **Partenaires technologiques** > page partenaire) lorsque vous utilisez cet endpoint afin d'appliquer vos propres politiques de compartiment sur l'exportation.
+Nous vous recommandons vivement de configurer vos propres identifiants S3 ou Azure (en accédant à **Intégrations partenaires** > **Partenaires technologiques** > page de partenaire technologique) lorsque vous utilisez cet endpoint afin d'appliquer vos propres politiques de compartiment lors de l'exportation.
 
-![La page de partenaires technologiques pour Azure, avec un onglet pour Amazon S3.]({% image_buster /assets/img/technology_partners_page.png %})
+![La page de partenaire technologique pour Azure, avec un onglet pour Amazon S3.]({% image_buster /assets/img/technology_partners_page.png %})
 
-Si vous ne disposez pas de vos identifiants de stockage en nuage, la réponse à la demande fournit l'URL où un fichier ZIP contenant tous les fichiers de l'utilisateur peut être téléchargé. L'URL ne devient un emplacement/localisation valide que lorsque l'exportation est prête.
+Si vous ne disposez pas de vos identifiants de stockage en nuage, la réponse à la demande fournit l'URL où un fichier ZIP contenant tous les fichiers de l'utilisateur peut être téléchargé. L'URL ne devient une localisation valide qu'une fois l'exportation terminée.
 
 Sachez que si vous ne fournissez pas vos informations d’identification pour votre stockage cloud, il existe une limitation de la quantité de données que vous pouvez exporter à partir de cet endpoint. En fonction des champs que vous exportez et du nombre d’utilisateurs, le transfert de fichiers peut échouer si la quantité de données demandées est trop importante. La meilleure pratique consiste à spécifier les champs que vous souhaitez exporter en utilisant `fields_to_export` et à ne spécifier que les champs dont vous avez besoin afin de réduire la taille du transfert. Si vous obtenez des erreurs lors de la génération du fichier, envisagez de diviser votre base d'utilisateurs en plusieurs segments sur la base d'un numéro de compartiment aléatoire (par exemple, créez un segment dans lequel le numéro de compartiment aléatoire est inférieur à 1 000 ou compris entre 1 000 et 2 000).
 
-Dans l’un ou l’autre scénario, vous pouvez éventuellement fournir un `callback_endpoint` à notifier lorsque l’exportation est prête. Si l'adresse `callback_endpoint` est fournie, nous envoyons une demande de courrier à l'adresse indiquée lorsque le téléchargement est prêt. Le corps du message est `"success":true`. Si vous n'avez pas ajouté vos identifiants de stockage en nuage à Braze, le corps du message comporte en outre l'attribut `url` avec l'URL de téléchargement comme valeur.
+Dans l’un ou l’autre scénario, vous pouvez éventuellement fournir un `callback_endpoint` à notifier lorsque l’exportation est prête. Si l'adresse`callback_endpoint`est fournie, nous envoyons une requête POST à l'adresse indiquée lorsque le téléchargement est prêt. Le corps du message est `"success":true`. Si vous n'avez pas encore ajouté vos identifiants de stockage cloud à Braze, le corps du message contient également l'attribut`url`avec l'URL de téléchargement comme valeur.
 
 Les bases d’utilisateurs plus grandes entraîneront des temps d’exportation plus longs. Par exemple, une application avec 20 millions d’utilisateurs peut prendre une heure ou plus.
 
@@ -84,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-Les attributs personnalisés individuels ne peuvent pas être exportés. Toutefois, tous les attributs personnalisés peuvent être exportés en incluant custom_attributes dans le tableau fields_to_export (par exemple, `['first_name', 'email', 'custom_attributes']`).
+Les attributs personnalisés individuels ne peuvent pas être exportés. Cependant, tous les attributs personnalisés peuvent être exportés en les incluantcustom_attributesdans lefields_to_exporttableau (par exemple, `['first_name', 'email', 'custom_attributes']`).
 {% endalert %}
 
 ## Paramètres de demande
@@ -153,11 +153,11 @@ Voici une liste des `fields_to_export` valides. Utiliser `fields_to_export` pour
 }
 ```
 
-Une fois l'URL mise à disposition, elle n'est valable que pour quelques heures. Par conséquent, nous vous recommandons fortement d’ajouter vos propres informations d’identification S3 dans Braze.
+Une fois l'URL disponible, elle n'est valide que pendant quelques heures. Par conséquent, nous vous recommandons fortement d’ajouter vos propres informations d’identification S3 dans Braze.
 
 ### Exemple de sortie d'un fichier d'exportation utilisateur
 
-Objet d'exportation de l'utilisateur (nous incluons le moins de données possible - si un champ est absent de l'objet, il doit être considéré comme nul ou vide) :
+Objet d'exportation utilisateur (nous incluons le moins de données possible — si un champ est absent de l'objet, il doit être considéré comme nul ou vide) :
 
 {% tabs %}
 {% tab All fields %}
@@ -231,7 +231,7 @@ Objet d'exportation de l'utilisateur (nous incluons le moins de données possibl
         "last_used" : (string) date
       },
       ...
-    ],
+    ]
 }
 ```
 
@@ -310,7 +310,7 @@ Objet d'exportation de l'utilisateur (nous incluons le moins de données possibl
         "last_used": "2021-11-11T00:25:19.201Z"
       },
       ...
-    ],
+    ]
 }
 ```
 
