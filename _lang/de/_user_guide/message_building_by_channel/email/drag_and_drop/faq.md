@@ -21,13 +21,13 @@ Ja Gehen Sie in den Bereich **Vorschau und Test** des Drag&Drop-Editors und akti
 
 ### Wie kann ich die Auffüllung der E-Mail auf dem Handy ändern, ohne die Auffüllung in der Webansicht zu aktualisieren?
 
-Sie können das Padding nicht nur für die mobile und die Internet-Ansicht bearbeiten, so dass alle Änderungen in beiden Ansichten übernommen werden. Sie können jedoch im HTML-Editor eine CSS-Logik hinzufügen, die das Padding auf der Grundlage verschiedener Bildschirmgrößen einstellt. Dies wird im Drag-and-Drop-Editor nicht unterstützt. Sie können also die HTML-Datei exportieren und stattdessen den HTML-Editor verwenden.
+Es ist nicht möglich, das Padding ausschließlich für die Mobil- und Internetansicht zu bearbeiten, daher werden alle Änderungen in beiden Ansichten übernommen. Sie können jedoch im HTML-Editor CSS-Logik hinzufügen, die das Padding basierend auf verschiedenen Bildschirmgrößen festlegt. Dies wird im Drag-and-Drop-Editor nicht unterstützt. Sie können die HTML-Datei exportieren und stattdessen den HTML-Editor verwenden.
 
-### Wie kann ich eine Reihe von Buttons so optimieren, dass sie auf dem Desktop und auf dem Handy horizontal bleiben?
+### Wie kann ich eine Reihe von Buttons so optimieren, dass sie auf Desktop- und Mobilgeräten horizontal ausgerichtet bleibt?
 
-Wenn Sie beim Erstellen einer E-Mail mit dem Drag-and-Drop-Editor eine horizontale Reihe von Aktions-Buttons erstellen, kann es vorkommen, dass die Buttons auf dem Handy vertikal ausgerichtet werden. 
+Wenn Sie beim Erstellen einer E-Mail mit dem Drag-and-Drop-Editor eine horizontale Reihe von Aktions-Buttons erstellen, kann es vorkommen, dass die Buttons auf Mobilgeräten in eine vertikale Ausrichtung geändert werden. 
 
-Um das gleiche Format für alle Gerätegrößen beizubehalten, empfehlen wir, eine separate Zeile mit CTA-Buttons zu erstellen, deren Padding für Mobilgeräte optimiert ist und die so eingestellt sind, dass die Zeile auf einem Desktop-Gerät ausgeblendet wird. Zwei getrennte Zeilen bedeuten, dass Sie das gewünschte Padding für die beste Textdarstellung auf Desktop- und Mobilgeräten einstellen können.
+Um das gleiche Format über alle Gerätegrößen hinweg beizubehalten, empfehlen wir, eine separate Zeile mit CTA-Buttons zu erstellen, deren Padding für Mobilgeräte optimiert ist und die so eingestellt sind, dass sie auf Desktop-Geräten ausgeblendet werden. Durch die Verwendung von zwei separaten Zeilen können Sie das gewünschte Padding für eine optimale Textdarstellung auf Desktop- und Mobilgeräten festlegen.
 
 
 ### Kann ich die Zeilenhöhe im Drag-and-Drop-Editor anpassen?
@@ -43,8 +43,8 @@ Der Drag&Drop-Editor unterstützt derzeit zwei Ebenen. Sie können ein Hintergru
 
 ### Kann ich meine Drag-and-Drop-E-Mail als Vorlage speichern, nachdem ich sie in meiner Kampagne oder im Canvas erstellt habe?
 
-Nein, Sie müssen die E-Mail in **E-Mail Templates** neu erstellen, um sie zu speichern.
+Nein, Sie müssen die E-Mail in **den E-Mail-Templates** neu erstellen, um sie zu speichern.
 
 ### Kann ich dem Drag&Drop-Editor E-Mail-Anhänge hinzufügen?
 
-Nein, der Drag-and-Drop-Editor unterstützt nicht das Hinzufügen von Anhängen zu Ihren E-Mails.
+Nein, der Drag-and-Drop-Editor unterstützt das Hinzufügen von Anhängen zu Ihren E-Mails nicht.
