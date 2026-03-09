@@ -1,7 +1,7 @@
 ---
 nav_title: "PUBLICAR: Crear plantilla de correo electrónico"
 article_title: "PUBLICAR: Crear plantillas de correo electrónico"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -15,7 +15,7 @@ description: "En este artículo se describen los detalles del punto final Crear 
 
 > Utiliza este punto final para crear plantillas de correo electrónico en el panel Braze.
 
-Estas plantillas estarán disponibles en la página **Plantillas & Medios**. La respuesta de este punto final incluye un campo para `email_template_id`, que puede utilizarse para actualizar la plantilla en posteriores llamadas a la API.
+Estas plantillas estarán disponibles en la página **Plantillas&  Medios**. La respuesta de este punto final incluye un campo para `email_template_id`, que puede utilizarse para actualizar la plantilla en posteriores llamadas a la API.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
