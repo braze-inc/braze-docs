@@ -1,7 +1,7 @@
 Un [alias d'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) sert d'identifiant unique alternatif pour l'utilisateur. Vous pouvez utiliser des aliases pour identifier les utilisateurs selon d'autres critères que votre ID principal :
 
 * Définissez un identifiant cohérent pour l’analyse qui suivra un utilisateur donné avant et après qu’il s’est connecté à une application mobile ou un site Internet.
-* Ajoutez les identifiants utilisés par un fournisseur tiers à vos utilisateurs Braze afin de faciliter le rapprochement de vos données en externe.
+* Veuillez ajouter les identifiants utilisés par un fournisseur tiers aux utilisateurs de votre entreprise afin de faciliter le rapprochement de vos données en externe.
 
 Chaque alias se compose de deux parties : un nom pour l’identifiant lui-même et une étiquette indiquant le type d’alias. Les utilisateurs peuvent avoir plusieurs alias avec différentes étiquettes, mais un seul nom par étiquette. 
 
