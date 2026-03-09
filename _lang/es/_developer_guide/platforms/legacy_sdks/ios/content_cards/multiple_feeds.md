@@ -1,6 +1,6 @@
 ---
 nav_title: Múltiples fuentes
-article_title: Utiliza varias fuentes de tarjetas de contenido para iOS
+article_title: Usa varias fuentes de tarjetas de contenido para iOS
 platform: iOS
 page_order: 6
 description: "En este artículo de referencia se cubre la implementación de múltiples fuentes de tarjetas de contenido en tu aplicación iOS."
