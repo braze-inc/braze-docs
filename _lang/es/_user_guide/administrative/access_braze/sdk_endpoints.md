@@ -21,4 +21,4 @@ Si inicia sesión en [dashboard.braze.com](https://dashboard.braze.com) le envia
 Cuando integres tu SDK, utiliza el punto final SDK. Cuando realices llamadas a nuestra API REST, utiliza el punto final REST.
 {% endalert %}
 
-Para más detalles sobre cómo acceder a la API, consulta nuestro [artículo sobre el resumen de la API]({{site.baseurl}}/api/basics/). 
+Para obtener más información sobre cómo acceder a la API, consulta nuestro [artículo de resumen de la API.]({{site.baseurl}}/api/basics/) 
