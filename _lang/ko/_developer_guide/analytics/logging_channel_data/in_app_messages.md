@@ -1,12 +1,12 @@
 ---
 nav_title: 인앱 메시지
-article_title: Braze 소프트웨어 개발 키트를 통한 인앱 메시지 데이터 로그
+article_title: Braze SDK를 통해 인앱 메시지 데이터를 기록하십시오
 page_order: 7.1
 description: "Braze SDK를 통해 인앱 메시지(IAM) 데이터를 로그하는 방법을 알아보세요."
 noindex: true
 ---
 
-# 인앱 메시지 데이터 기록
+# 인앱 메시지 데이터를 기록하십시오
 
 > Braze SDK를 통해 인앱 메시지(IAM) 데이터를 로그하는 방법을 알아보세요.
 
