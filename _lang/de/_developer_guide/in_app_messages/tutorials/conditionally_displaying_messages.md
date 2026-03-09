@@ -79,7 +79,7 @@ Um die Nachricht anzuzeigen, rufen Sie [`showInAppMessage(message)`](https://js.
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/prerequisites/android.md %} Außerdem müssen Sie [In-App-Nachrichten für Android aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} Bitte beachten Sie, dass Sie [für Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages) auch [In-App-Nachrichten aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages) müssen.
 
 ## Bedingte Anzeige von In-App-Nachrichten für Android
 
@@ -174,7 +174,7 @@ Geben Sie eine `InAppMessageOperation` mit `DISPLAY_NOW` zurück, um die Nachric
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Sie müssen auch [In-App-Nachrichten für Swift aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Bitte beachten Sie, dass Sie auch [In-App-Nachrichten für SWIFT aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages) müssen.
 
 ## Bedingte Anzeige von In-App-Nachrichten für Swift
 
