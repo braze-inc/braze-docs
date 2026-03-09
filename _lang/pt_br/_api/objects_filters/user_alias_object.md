@@ -9,7 +9,7 @@ description: "Este artigo de referência explica os diferentes componentes do ob
 
 # Objeto de alias de usuário
 
-> Um alias serve como um identificador de usuário exclusivo alternativo. Usando um objeto de alias de usuário, é possível definir um identificador consistente para análise de dados que seguirá um determinado usuário antes e depois do registro em um app móvel ou site. Também é possível usar esse objeto para adicionar os identificadores usados por um fornecedor terceirizado aos seus usuários do Braze para reconciliar mais facilmente seus dados externamente.
+> Um alias serve como um identificador de usuário exclusivo alternativo. Usando um objeto de alias de usuário, é possível definir um identificador consistente para análise de dados que seguirá um determinado usuário antes e depois do registro em um app móvel ou site. Você também pode usar este objeto para adicionar os identificadores usados por um fornecedor terceirizado aos usuários da sua empresa para reconciliar seus dados externamente de forma mais fácil.
 
 O objeto de alias de usuário consiste em duas partes: um `alias_name` para o próprio identificador e um `alias_label` indicando o tipo de alias. Os usuários podem ter vários aliases com rótulos diferentes, mas apenas um `alias_name` por `alias_label`.
 
