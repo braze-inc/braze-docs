@@ -17,9 +17,7 @@ description: "이 문서에서는 이메일 템플릿 엔드포인트에 대한 
 
 > 이 엔드포인트를 사용하여 [이메일 템플릿]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)에 대한 모든 번역 및 로케일을 볼 수 있습니다. 번역 기능에 대한 자세한 내용은 [메시지의 로케일]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)를 참조하십시오.
 
-{% alert important %}
-이 엔드포인트는 현재 얼리 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Prerequisites
 
@@ -37,7 +35,7 @@ description: "이 문서에서는 이메일 템플릿 엔드포인트에 대한 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-모든 번역 ID는 보편적 고유 식별자(UUID)로 간주되며, GET 엔드포인트의 응답에서 찾을 수 있습니다.
+모든 번역 ID는 보편적인 고유 식별자(UUID)로 간주되며, GET 엔드포인트의 응답에서 찾을 수 있습니다.
 {% endalert %}
 
 ## 예시 요청
