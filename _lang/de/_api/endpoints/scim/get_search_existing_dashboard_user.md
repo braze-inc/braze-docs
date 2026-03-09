@@ -2,7 +2,7 @@
 nav_title: "GET: Bestehendes Dashboard-Benutzerkonto per E-Mail durchsuchen"
 article_title: "GET: Bestehendes Dashboard-Benutzerkonto per E-Mail durchsuchen"
 alias: /get_search_existing_dashboard_user_email/
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -12,7 +12,7 @@ description: "Dieser Artikel beschreibt die Suche nach einem bestehenden Dashboa
 {% api %}
 # Bestehendes Dashboard-Benutzerkonto per E-Mail durchsuchen
 {% apimethod get %}
-scim/v2/Benutzer?filter=Benutzername%20eq%20 "Nutzer:innen%40test.com"
+scim/v2/Nutzer:innen?Filter=userName%20eq%20"user%40test.com"
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um ein bestehendes Dashboard-Benutzerkonto zu suchen, indem Sie dessen E-Mail im Filter-Abfrageparameter angeben.
@@ -40,14 +40,14 @@ Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden di
 
 ## Parameter der Anfrage
 
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Beispiel Anfrage
-```json
+```bash
 curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
