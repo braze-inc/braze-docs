@@ -1,6 +1,6 @@
 ---
 nav_title: スタイル
-article_title: コンテンツカードのスタイルのカスタマイズ
+article_title: コンテンツカードのスタイルをカスタマイズする
 page_order: 1
 description: "この記事では、コンテンツ カードのスタイルオプションについて説明します。"
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# コンテンツカードのスタイルのカスタマイズ
+# コンテンツカードのスタイルをカスタマイズする
 
 > Braze コンテンツ カードには、デフォルトのルック アンドフィールが含まれています。この記事では、ブランドアイデンティティに合わせるためのコンテンツ カードのスタイルオプションについて説明します。コンテンツカードタイプの完全なリストについては、[コンテンツカードについて]({{site.baseurl}}/developer_guide/content_cards/)を参照してください。
 
@@ -30,13 +30,15 @@ platform:
 {% tabs %}
 {% tab web %}
 
-Braze のデフォルトスタイルは、Braze SDK 内の CSS で定義されます。アプリケーションで選択したスタイルを上書きすることで、独自の背景画像、フォントファミリ、スタイル、サイズ、アニメーションなどを使用して標準フィードをカスタマイズできます。たとえば、次の例はコンテンツカードを幅800 ピクセルで表示する上書きを示しています。
+Brazeのデフォルトスタイルは、Braze SDK内のCSSで定義されています。アプリケーションで選択したスタイルを上書きすることで、標準フィードを独自のバックグラウンド画像、フォントファミリー、スタイル、サイズ、アニメーションなどでカスタマイズできる。例えば、以下のオーバーライドはコンテンツカードを幅800ピクセルで表示させる例だ：
 
 ``` css
 body .ab-feed {
   width: 800px;
 }
 ```
+
+変更可能なプロパティの完全な一覧については、[BrazeのSDK設定オプションを](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)参照せよ。
 
 {% endtab %}
 {% tab android %}
@@ -179,7 +181,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 
 **プログラムによるコンテンツカードの変更**
 
-コンテンツ カードは、`Attributes`構造体の[`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform)クロージャを割り当てることで、プログラムにより変更できます。以下の例では、互換性のあるカードの`title`と`description`を変更しています。
+構造`Attributes`体にクロージャ[`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform)を割り当てることで、プログラム的にコンテンツカードを変更できる。以下の例では、互換性のあるカードの`title`と`description`を変更しています。
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -295,7 +297,7 @@ let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attrib
 
 ### カスタムの固定アイコン
 
-コンテンツカードの作成時、マーケターはカードを固定するオプションを選択できます。ピン留めされたカードはユーザーのフィードの上部に表示され、ユーザーが閉じることはできません。カードスタイルをカスタマイズすると、固定されたアイコンの外観を変更できます。
+コンテンツカードの作成時、マーケターはカードを固定するオプションを選択できます。固定されたカードはユーザーのフィードの上部に表示され、ユーザーはそれを非表示にできない。カードスタイルをカスタマイズする際に、ピン留めアイコンの見た目を変更できる。
 
 ![Braze for MobileとBraze for Webのコンテンツカードプレビューを、「このカードをフィードの先頭にピン留めする」オプションを選択した状態で並べてみた。]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
@@ -310,9 +312,9 @@ let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attrib
 </div>
 ```
 
-別の FontAwesome アイコンを使用する場合は、`i`要素のクラス名を目的のアイコンのクラス名に置き換えるだけです。  
+別のFontAwesomeアイコンを使いたいなら、要素`i`のクラス名を目的のアイコンのクラス名に置き換えればよい。 
 
-アイコンを全体的に交換したい場合は、`i`要素を削除し、カスタムアイコンを`ab-pinned-indicator`の子として追加します。いくつかの方法がありますが、簡単な方法の1つは`ab-pinned-indicator`要素の`replaceChildren()`です。
+アイコンを完全に切り替えたい場合は、要素`i`を削除し、カスタムアイコンをの子要素として追加`ab-pinned-indicator`する。アイコンを変更する方法はいくつかあるが、簡単な方法の一つは、要素`ab-pinned-indicator`に  `replaceChildren()`を使用することだ。
 
 以下に例を示します。
 
@@ -358,7 +360,7 @@ ContentCardStyling(
 )
 ```
 
-`ContentCardStyling`の[`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721)にComposableを指定することもできます。`pinnedComposable`が指定されている場合は、`pinnedResourceId`の値が上書きされます。
+`ContentCardStyling`の[`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721)にComposableを指定することもできます。が指定された`pinnedComposable`場合、の`pinnedResourceId`値を上書きする。
 
 ```kotlin
 ContentCardStyling(
@@ -460,7 +462,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
 viewController.view.tintColor = .systemGreen
 ```
 
-ただし、未表示のインジケーターのみを変更したい場合は、`BrazeContentCardUI.ViewController.Attributes`構造体の`unviewedIndicatorColor`プロパティにアクセスします。Braze`UITableViewCell` の実装を使用する場合は、セルが描画される前にプロパティにアクセスする必要がある。
+ただし、未閲覧インジケーターのみを変更したい場合は、構造`BrazeContentCardUI.ViewController.Attributes`体のプロパティ`unviewedIndicatorColor`にアクセスすればよい。Braze`UITableViewCell`の実装を使用する場合、セルが描画される前にプロパティにアクセスせよ。
 
 たとえば、未閲覧インジケーターの色を赤に設定するには、次のようにします。
 
