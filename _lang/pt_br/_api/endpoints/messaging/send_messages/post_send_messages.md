@@ -10,7 +10,7 @@ description: "Este artigo descreve detalhes sobre o endpoint Enviar mensagens im
 ---
 {% api %}
 # Envio imediato de mensagens usando apenas a API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /messages/send
 {% endapimethod %}
 
@@ -18,9 +18,26 @@ description: "Este artigo descreve detalhes sobre o endpoint Enviar mensagens im
 
 Se estiver direcionando a campanha para um segmento, um registro da sua solicitação será armazenado [Console de desenvolvedor](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
+
 {% multi_lang_include api/payload_size_alert.md %}
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
+{% alert important %}
+Ao usar este endpoint para campanhas API, o destinatário já deve existir no Braze para que a solicitação seja bem-sucedida. Isso se aplica ao especificar usuários nos parâmetros`external_user_ids``user_aliases`ou .
+{% endalert %}
+
+### Criar novos usuários com envios de API
+
+Se você precisar criar um usuário como parte de um envio usando a API, você tem duas opções:
+
+#### Opção 1: Use`/users/track`e envie
+
+Primeiro, crie o usuário com o[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)endpoint e, em seguida, aguarde a propagação dos dados (geralmente, recomenda-se aguardar alguns minutos) antes de iniciar o envio somente pela API. Observe que a Braze não garante os tempos de processamento`/users/track` de dados, portanto, podem ocorrer [condições de corrida]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) se você não deixar tempo suficiente entre essas chamadas.
+
+#### Opção 2: Use uma campanha disparada por API ou Canvas
+
+Use uma [campanha disparada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) ou um fluxo de trabalho [Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/). Isso permite que você crie um destinatário, caso ainda não exista um. Essa opção simplifica seus processos de back-end, mas exige que você configure uma campanha ou canva no dashboard do Braze.
+
 
 ## Pré-requisitos
 
@@ -33,7 +50,7 @@ Para usar esse endpoint, você precisará gerar uma chave de API com a permissã
 ## Corpo da solicitação
 
 {% alert tip %}
-Certifique-se de incluir [envio de mensagens]({{site.baseurl}}/api/objects_filters/#messaging-objects) no seu corpo para completar suas solicitações.
+Certifique-se de incluir [objetos de envio de mensagens]({{site.baseurl}}/api/objects_filters/#messaging-objects) no corpo da mensagem para concluir suas solicitações.
 {% endalert %}
 
 ```
@@ -79,7 +96,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`user_aliases`| Opcional | Vetor de objetos de alias de usuário| Consulte o [objeto de alias de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Opcional | String | Consulte [identificador de segmento]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`audience`| Opcional | Objeto de público conectado | Veja [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Opcional* | String | Para saber mais, consulte o [identificador de campanha]({{site.baseurl}}/api/identifier_types/#campaign-identifier/). <br><br>\*Obrigatório se você deseja rastrear métricas de campanha (como _Envios_, _Cliques_ ou _Retornos_) no dashboard do Braze. |
+|`campaign_id`| Opcional* | String | Para saber mais, consulte o [identificador de campanha]({{site.baseurl}}/api/identifier_types/#campaign-identifier/). <br><br>\*Obrigatório se você deseja realizar o rastreamento das métricas da campanha (como _envios_, _cliques_ ou _bounces_) no dashboard do Braze. |
 |`send_id`| Opcional | String | Consulte [enviar identificador]({{site.baseurl}}/api/identifier_types/#send-identifier). |
 |`override_frequency_capping`| Opcional | Booleano | Ignore `frequency_capping` para campanhas, o padrão é `false`. |
 |`recipient_subscription_state`| Opcional | String | Use essa opção para enviar mensagens apenas para usuários que tenham aceitado receber mensagens (`opted_in`), apenas para usuários que tenham feito a inscrição ou aceitado receber mensagens (`subscribed`) ou para todos os usuários, inclusive os que cancelaram a inscrição (`all`). <br><br>O uso de usuários do `all` é útil para envio de mensagens por e-mail de transação. O padrão é `subscribed`. |
