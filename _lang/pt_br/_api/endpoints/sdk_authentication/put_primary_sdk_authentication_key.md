@@ -1,20 +1,20 @@
 ---
-nav_title: "PUT: Definir a chave de autenticação primária do SDK"
-article_title: "PUT: Definir a chave de autenticação primária do SDK"
+nav_title: "PUT: Defina a chave de autenticação do SDK primário"
+article_title: "PUT: Defina a Chave de Autenticação do SDK Primário"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o endpoint do Braze Set primary SDK Authentication key."
+description: "Este artigo descreve detalhes sobre o endpoint Braze para definir a chave de autenticação do SDK primário."
 ---
 
 {% api %}
-# Definir a chave primária de autenticação do SDK
+# Defina a chave de autenticação do SDK
 {% apimethod put %}
 /app_group/sdk_authentication/primary
 {% endapimethod %}
 
-> Use esse endpoint para definir uma chave de autenticação do SDK como a chave primária do seu app.
+> Use este endpoint para definir uma chave de autenticação do SDK como a chave primária para seu app.
 
 ## Pré-requisitos
 
@@ -41,11 +41,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | -------- | --------- | ----------- |
 | `app_id` | Obrigatória | String | O identificador da API do app. |
-| `key_id` | Obrigatória | String | A ID da chave de autenticação do SDK a ser marcada como primária. |
+| `key_id` | Obrigatória | String | O ID da chave de autenticação do SDK a ser marcada como primária. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
-```json
+```bash
 curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authentication/primary' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -79,19 +79,19 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authe
 
 | Parâmetro | Tipo de dados | Descrição |
 | --------- | --------- | ----------- |
-| `keys` | Vetor | Vetor de todos os objetos de chave de autenticação do SDK. |
-| `keys[].id` | String | A ID da chave de autenticação do SDK. |
+| `keys` | Vetor | Array de todos os objetos de chave de autenticação do SDK. |
+| `keys[].id` | String | O ID da chave de autenticação do SDK. |
 | `keys[].rsa_public_key` | String | A string da chave pública RSA. |
 | `keys[].description` | String | Descrição da chave de autenticação do SDK. |
-| `keys[].is_primary` | Booleano | Se essa chave é a chave primária de autenticação do SDK. |
+| `keys[].is_primary` | Booleano | Se esta chave é a chave de autenticação do SDK primária. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Regras de validação
 
-Esse endpoint tem as seguintes regras de validação:
+Este endpoint possui as seguintes regras de validação:
 
-- O endereço `key_id` deve ser um ID de chave de autenticação do SDK válido.
-- O endereço `app_id` deve ser um identificador válido da API do app.
+- O `key_id` deve ser um ID de chave de autenticação do SDK válido.
+- O `app_id` deve ser um identificador de API de app válido.
 - A chave de autenticação do SDK deve existir para o app especificado.
 
 {% endapi %}
