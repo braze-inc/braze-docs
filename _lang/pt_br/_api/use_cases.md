@@ -35,7 +35,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishwar
 }'
 ```
 
-Depois de enviar essa carga útil, a resposta confirma que o Braze removeu com êxito as três coleções do catálogo de louças da Kitchenerie.
+Após enviar esta carga útil, a resposta confirma que o Braze removeu com sucesso as três coleções do catálogo de louças da Kitchenerie.
 
 ```json
 {
@@ -53,7 +53,7 @@ Na MovieCanon, uma empresa de serviços de streaming, a equipe de desenvolvedore
 - delilah.york@example.com
 - evergreen.rebecca@example.com
 
-Para realizar essa tarefa, a equipe de desenvolvedores precisa de uma chave de API com a permissão `email.spam.remove` para usar o endpoint `/email/spam/remove`. Esse endpoint remove endereços de e-mail da lista de spam do Braze e da lista de spam mantida pelo provedor de e-mail do MovieCanon.
+Para realizar esta tarefa, a equipe de desenvolvedores precisa de uma chave de API com a permissão `email.spam.remove` para usar o endpoint `/email/spam/remove`. Este endpoint remove endereços de e-mail da lista de spam do Braze e da lista de spam mantida pelo provedor de e-mail da MovieCanon.
 
 Para enviar essa solicitação, inclua um endereço de e-mail string ou um vetor de até 50 endereços de e-mail para modificar. Como a lista de e-mails a serem removidos é inferior a 50, o MovieCanon pode realizar essa tarefa com o seguinte corpo de solicitação:
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Depois de enviar essa carga útil com êxito, essa resposta confirma que o Braze removeu os e-mails da lista de spam do MovieCanon.
+Após enviar esta carga útil com sucesso, esta resposta confirma que o Braze removeu os e-mails da lista de spam da MovieCanon.
 
 ```json
 {
@@ -94,7 +94,7 @@ Para a primeira tarefa de auditoria de Canvas, use o [ponto de extremidade`/canv
   		"name": "PatientReminder_FluShot_2020",
   		"tags": {
         "flu_shots", "patienthealth", "2020"
-      },
+      }
   	},
   	{
   		"id": "canvas_identifier_2",
@@ -102,7 +102,7 @@ Para a primeira tarefa de auditoria de Canvas, use o [ponto de extremidade`/canv
   		"name": "PatientReminder2_FluShot_2020",
   		"tags": {
         "flu_shots", "patienthealth", "reminder", "2020"
-      },
+      }
   	},
     ... (more Canvases)
   ],
@@ -126,7 +126,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## Verificação das próximas campanhas e telas programadas
 
-A época mais movimentada do ano está se aproximando rapidamente para a Flash & Thread, uma marca de varejo que vende roupas e produtos de beleza on-line e em lojas. Sua equipe de marketing deseja verificar as próximas campanhas e canvas no dashboard do Braze antes de 31 de março de 2024, às 12 horas. Isso pode ser feito usando o [endpoint`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/).
+O período mais movimentado do ano está se aproximando rapidamente para a Flash & Thread, uma marca de varejo que vende roupas e produtos de beleza online e em lojas. Sua equipe de marketing deseja verificar as próximas campanhas e canvas no dashboard do Braze antes de 31 de março de 2024, às 12 horas. Isso pode ser feito usando o [endpoint`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/).
 
 Aqui está o exemplo de solicitação:
 
@@ -135,11 +135,11 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-Esse ponto de extremidade retorna a lista de campanhas e telas futuras. A partir daqui, a equipe de marketing pode confirmar sua lista de mensagens consultando o campo `name` para as campanhas e Canvas na resposta.
+Este endpoint retorna a lista de campanhas e canvases futuras. A partir daqui, a equipe de marketing pode confirmar sua lista de mensagens consultando o campo `name` para as campanhas e Canvas na resposta.
 
 ## Visualização de uma Central de Preferências antiga
 
-A PoliterWeekly é uma revista digital cujos assinantes podem ser contatados por e-mail. Em um esforço para entender melhor a jornada do usuário de seus assinantes, a equipe de marketing deseja revisar os detalhes da Central de Preferências do PoliterWeekly para verificar quando ela foi criada e atualizada pela última vez.
+A PoliterWeekly é uma revista digital cujos assinantes podem ser contatados por e-mail. Em um esforço para entender melhor a jornada do usuário de seus assinantes, a equipe de marketing deseja revisar os detalhes do centro de preferências do PoliterWeekly para verificar quando foi criado e atualizado pela última vez.
 
 Usando o [ponto de extremidade`/preference_center/v1/{preferenceCenterExternalID}` ]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/), a equipe de marketing só precisa inserir a ID externa da Central de Preferências como parâmetro de jornada, que teria a seguinte aparência:
 
@@ -182,7 +182,7 @@ Na CashBlastr, o objetivo principal é simplificar a forma como as pessoas podem
 
 Para enviar uma solicitação com o [endpoint`/sms/invalid_phone_numbers/remove` ]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/), os números de telefone precisam estar em um vetor de strings no [formatoe.164 ](https://en.wikipedia.org/wiki/E.164), com até 50 números de telefone por solicitação. Como a lista não ultrapassa 50 números de telefone, aqui está um exemplo do corpo da solicitação que a equipe de desenvolvedores da CashBlastr enviaria:
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
@@ -190,7 +190,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Depois de enviar essa carga útil, a resposta confirma que o Braze removeu os números de telefone inválidos da CashBlastr da lista de inválidos do Braze.
+Após enviar esta carga útil, a resposta confirma que o Braze removeu os números de telefone inválidos do CashBlastr da lista inválida do Braze.
 
 ```json
 {
@@ -209,7 +209,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 
-Esse ponto de extremidade também lista os status do grupo de inscrições para e-mail de um usuário. Use-o para ver o status do grupo de inscrições de vários usuários.
+Este endpoint também lista os status dos grupos de inscrição de um usuário para e-mail. Use-o para ver o status do grupo de inscrição para vários usuários.
 
 ## Verificação de um modelo HTML para envio de mensagens por e-mail
 
