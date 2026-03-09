@@ -81,8 +81,8 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
       "warehouse_type": (string) data warehouse type,
       "last_job_start_time": (string) timestamp of the last sync run in ISO 8601,
       "last_job_status": (string) status of the last sync run,
-      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601,
-    },
+      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601
+    }
   ],
   "message": "success"
 }
@@ -97,6 +97,6 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | `400 Invalid cursor` | Verifique se o site `cursor` é válido. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para obter códigos de status adicionais e mensagens de erro associadas, consulte [Erros fatais & responses]({{site.baseurl}}/api/errors/#fatal-errors).
+Para códigos de status adicionais e mensagens de erro associadas, consulte [Erros fatais & respostas]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}
