@@ -1,5 +1,5 @@
 ---
-nav_title: 피드 커스텀하기
+nav_title: 피드를 사용자 정의
 article_title: iOS용 콘텐츠 카드 피드 사용자 지정
 platform: iOS
 page_order: 2
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# 콘텐츠 카드 피드 커스텀하기
+# 콘텐츠 카드 피드를 사용자 정의
 
 `ABKContentCardsTableViewController`를 확장하여 모든 UI 요소와 콘텐츠 카드 동작을 커스텀하여 나만의 콘텐츠 카드 인터페이스를 만들 수 있습니다. 콘텐츠 카드 셀을 하위 클래스로 분류한 다음 프로그래밍 방식으로 사용하거나 새 클래스를 등록하는 사용자 지정 스토리보드를 도입하여 사용할 수도 있습니다. 전체 예제는 콘텐츠 카드 [샘플 앱](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp)을 확인하세요. 
 
@@ -102,9 +102,9 @@ override func setUpUI() {
 
 원하는 카드 유형별로 사용자 지정 클래스를 등록하여 사용자 지정 인터페이스를 제공할 수 있습니다. 
 
-![배너 콘텐츠 카드. 배너 콘텐츠 카드에는 배너 오른쪽에 "Braze 데모를 다운로드해 주셔서 감사합니다!"라는 텍스트와 함께 이미지가 표시됩니다.]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
-![캡션이 있는 이미지 콘텐츠 카드입니다. 자막 콘텐츠 카드에는 Braze 이미지와 함께 "Braze 데모를 다운로드해 주셔서 감사합니다!"라는 캡션이 하단에 오버레이되어 표시됩니다. ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
-![클래식 콘텐츠 카드. 클래식 콘텐츠 카드는 카드 중앙에 이미지가 표시되고 그 아래에 "Braze 데모를 다운로드해 주셔서 감사합니다"라는 문구가 적혀 있습니다.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
+![배너 콘텐츠 카드. 배너 콘텐츠 카드는 배너 오른쪽에 "Braze Demo를 다운로드해 주셔서 감사합니다!"라는 텍스트와 함께 이미지를 보여줍니다.]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
+![캡션이 있는 이미지 콘텐츠 카드입니다. 자막 콘텐츠 카드는 Braze 이미지를 보여주며 하단에 "Braze Demo를 다운로드해 주셔서 감사합니다!"라는 자막이 겹쳐져 있습니다. ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
+![클래식 콘텐츠 카드. 클래식 콘텐츠 카드는 카드 중앙에 이미지를 보여주며 그 아래에 "Braze Demo를 다운로드해 주셔서 감사합니다"라는 문구가 있습니다.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
 Braze는 세 가지 콘텐츠 카드 템플릿(배너, 캡션 이미지, 클래식)을 제공합니다. 또는 자체 커스텀 인터페이스를 제공하려면 다음 코드 스니펫을 참조하세요.
 
