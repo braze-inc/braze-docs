@@ -15,11 +15,9 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Ver tra
 /canvas/translations
 {% endapimethod %}
 
-> Use este endpoint para prévia uma mensagem traduzida para um canva. Veja [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para saber mais sobre os recursos de tradução.
+> Use este endpoint para prévia uma mensagem traduzida para um canva. Veja [Localizações em mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para saber mais sobre os recursos de tradução.
 
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Pré-requisitos
 
@@ -37,7 +35,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | `step_id`              | Obrigatória | String    | O ID de sua etapa do canva.        |
 |`message_variation_id`| Obrigatória | String | O ID da sua variação de mensagem. |
 | `locale_id`            | Opcional | String    | O ID (UUID) do local.       |
-| `post_launch_draft_version`| Opcional | Booleano | Quando `true` retorna a versão mais recente do rascunho em vez da versão publicada mais recente. Padrões para `false` retornando a versão ao vivo mais recente.
+| `post_launch_draft_version`| Opcional | Booleano | Quando `true` retorna a versão mais recente do rascunho em vez da versão publicada mais recente. Por padrão, retorna `false` a versão mais recente publicada.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
