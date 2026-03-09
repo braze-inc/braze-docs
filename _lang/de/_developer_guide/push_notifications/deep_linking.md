@@ -22,4 +22,8 @@ channel:
 {% sdktab flutter %}
 {% multi_lang_include developer_guide/flutter/deep_linking.md%}
 {% endsdktab %}
+
+{% sdktab cordova %}
+{% multi_lang_include developer_guide/cordova/deep_linking.md%}
+{% endsdktab %}
 {% endsdktabs %}
