@@ -1,7 +1,7 @@
 ---
 nav_title: "取得:キャンペーン分析をエクスポートする"
 article_title: "取得:キャンペーン分析をエクスポートする"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -222,7 +222,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 }
 ```
 
-可能なメッセージタイプは、`email`、`in_app_message`、`webhook`、`android_push`、`ios_push`、`kindle_push`、`web_push` です。すべてのプッシュメッセージタイプは、`android_push` に同じ統計が表示されます。
+可能なメッセージタイプは、`email`、`trigger_in_app_message`、`webhook`、`android_push`、`ios_push`、`kindle_push`、`web_push` です。すべてのプッシュメッセージタイプは、`android_push` に同じ統計が表示されます。
 
 {% alert tip %}
 CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
