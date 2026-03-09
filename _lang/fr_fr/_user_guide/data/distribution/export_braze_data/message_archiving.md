@@ -10,9 +10,9 @@ description: "Cet article de référence couvre l'archivage des messages, une fo
 
 # Archivage des messages
 
-> L'archivage des messages vous permet d'enregistrer une copie des messages envoyés aux utilisateurs à des fins d'archivage ou de conformité dans votre compartiment AWS S3, votre conteneur Azure Blob Storage ou votre compartiment Google Cloud Storage. <br><br> Cet article traite de la configuration de l'archivage des messages, des références des charges utiles JSON et des questions fréquemment posées.
+> L'archivage des messages vous permet d'enregistrer une copie des messages envoyés aux utilisateurs à des fins d'archivage ou de conformité dans votre compartiment AWS S3, votre conteneur Azure Blob Storage ou votre compartiment Google cloud storage. <br><br> Cet article explique comment configurer l'archivage des messages, les références de charge utile JSON et répond aux questions fréquemment posées.
 
-L'archivage des messages est disponible en tant que fonctionnalité supplémentaire. Pour démarrer l'archivage des messages, contactez votre gestionnaire satisfaction client Braze.
+L'archivage des messages est disponible en tant que fonctionnalité supplémentaire. Pour commencer à archiver vos messages, veuillez contacter votre gestionnaire de la satisfaction client Braze.
 
 ## Fonctionnement
 
@@ -52,7 +52,7 @@ Cette section vous guide dans la configuration de l'envoi de messages pour votre
 Si vous ne l'avez pas encore fait, connectez un compartiment de stockage Cloud à Braze. Pour les étapes, consultez la documentation de notre partenaire sur [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) ou [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
 
 {% alert note %}
-Vous n'avez pas besoin de configurer Currents pour l'archivage des messages, vous pouvez donc ignorer cette condition préalable dans la documentation du partenaire.
+Il n'est pas nécessaire de configurer Currents pour l'archivage des messages, vous pouvez donc ignorer cette condition préalable dans la documentation du partenaire.
 {% endalert %}
 
 ### Étape 2 : Sélectionnez les canaux pour l'archivage des messages
@@ -73,7 +73,7 @@ Si vous ne voyez pas **Archivage des messages** dans **Paramètres**, confirmez 
 
 ## Références de fichier
 
-Les éléments suivants sont des références à la charge utile JSON livrée à votre compartiment de stockage en nuage chaque fois qu'un message est envoyé. Consultez notre référentiel d'exemples de code pour [des fichiers d'exemple d'archive de messages](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
+Voici les références à la charge utile JSON transmise à votre compartiment de stockage cloud à chaque envoi de message. Consultez notre référentiel d'exemples de code pour [des fichiers d'exemple d'archive de messages](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
 
 {% tabs %}
 {% tab Email %}
@@ -106,7 +106,7 @@ Les éléments suivants sont des références à la charge utile JSON livrée à
 }
 ```
 
-Le champ `extras` contient les paires clé-valeur configurées dans le champ **Email Extras** lors de la composition d'un e-mail dans l'éditeur HTML. Les extras d'e-mail fonctionnent pour tous les fournisseurs de services d'e-mailing (y compris SendGrid et Sparkpost) et sont inclus dans les messages archivés quel que soit le fournisseur utilisé. Pour plus d'informations sur la configuration des e-mails supplémentaires, voir [Création d'une campagne d'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#adding-email-extras) Pour renvoyer des données à Currents, consultez [Suppléments de messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
+Ce`extras`champ contient les paires clé-valeur configurées dans le champ **« Email Extras** » lors de la rédaction d'un e-mail dans l'éditeur HTML. Les fonctionnalités supplémentaires d'e-mailing sont compatibles avec tous les fournisseurs de services d'e-mailing (y compris Sendgrid et Sparkpost) et sont incluses dans les messages archivés, quel que soit le fournisseur utilisé. Pour plus d'informations sur la configuration des options supplémentaires pour les e-mails, veuillez consulter [la section Création d'une campagne par e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#adding-email-extras). Pour renvoyer des données à Currents, consultez [Suppléments de messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
@@ -161,6 +161,33 @@ Le champ `extras` contient les paires clé-valeur configurées dans le champ **E
 }
 ```
 
+### Variations de la structure de la charge utile
+
+{% alert important %}
+Le `payload`champ de niveau supérieur dans les archives de notifications push contient l'intégralité de la charge utile du fournisseur telle qu'elle a été envoyée à l'appareil. Dans ce JSON, les clés telles que`aps`(pour les APN) ou`notification`et`data`(pour FCM) peuvent varier considérablement en fonction du type de message, de la plateforme et de la configuration.
+{% endalert %}
+
+L'archivage des messages capture la charge utile du message elle-même, mais n'inclut pas les métadonnées de réception/distribution envoyées à FCM ou APN. Les métadonnées de réception/distribution comprennent :
+
+- Jetons d'appareil
+- Paramètres prioritaires
+- Durée de vie (TTL)
+- Identifiants de réduction
+- En-têtes APN
+- Horodatage d'expiration
+- Autres champs de configuration de réception/distribution
+
+Ces champs servent d'instructions de réception/distribution au fournisseur de services push. Ils ne sont généralement pas considérés comme faisant partie du contenu du message.
+
+Par exemple :
+
+- **Les notifications push iOS** peuvent présenter des structures différentes pour les notifications enrichies (où`aps.alert`est un objet contenant des champs tels que`title`et `body`) et les notifications simples (où`aps.alert`est une chaîne de caractères).
+- **Les notifications push Android** (par exemple, FCM) utilisent des messages de données avec des clés personnalisées. La structure de la charge utile peut inclure différents champs facultatifs en fonction de la configuration du message, tels que des boutons poussoirs, des carrousels ou des métadonnées supplémentaires.
+
+De plus, les envois de test à partir du tableau de bord peuvent générer des structures de charge utile différentes de celles des messages de production.
+
+Le format de la charge utile JSON peut varier d'un message à l'autre et évoluer au fil du temps. Lors de l'analyse des charges utiles archivées, il est important de ne pas présumer d'une structure fixe ni de s'attendre à ce que les mêmes champs soient toujours présents. Mettre en œuvre une logique d'analyse flexible capable de traiter divers formats de charge utile.
+
 {% endtab %}
 {% endtabs %}
 
@@ -176,7 +203,7 @@ Lorsqu'un message est envoyé en dehors d'une campagne ou d'un Canvas, l'ID de l
 
 ### Comment faire pour en savoir plus sur cet envoi ?
 
-Vous pouvez utiliser `external_id` ou `dispatch_id` en conjonction avec `user_id` pour croiser le message modèle avec nos données Currents afin d'obtenir plus d'informations, comme l'heure à laquelle le message a été envoyé, si l'utilisateur a ouvert ou cliqué sur le message, et plus encore.
+Vous pouvez utiliser soit le`external_id`  soit`dispatch_id`le  en conjonction avec le`user_id`  pour croiser les références du message modèle avec nos données Currents afin de trouver plus d'informations, telles que l'horodatage de sa livraison, si l'utilisateur a ouvert ou cliqué sur le message, et plus encore.
 
 ### Comment les nouvelles tentatives sont-elles traitées ?
 
@@ -184,7 +211,7 @@ Si votre compartiment de stockage en nuage est inaccessible, Braze effectuera ju
 
 ### Que se passe-t-il si mes identifiants ne sont pas valides ?
 
-Si vos identifiants de stockage sur le cloud deviennent invalides à un moment donné, Braze ne pourra pas enregistrer de messages dans votre compartiment de stockage sur le cloud, et ces messages seront perdus. Nous vous recommandons de configurer vos [préférences de notification]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) pour Amazon Web Services, Google Cloud Services ou Azure (Microsoft Cloud Services) afin de recevoir des alertes en cas de problème d'authentification.
+Si vos identifiants de stockage sur le cloud deviennent invalides à un moment donné, Braze ne pourra pas enregistrer de messages dans votre compartiment de stockage sur le cloud, et ces messages seront perdus. Nous vous recommandons de configurer vos [préférences]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) [de notification]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) pour Amazon Web Services, Google Cloud Services ou Microsoft azure (Cloud Services) afin de recevoir des alertes en cas de problèmes liés aux identifiants.
 
 ### Pourquoi l'horodatage de mon fichier d'archive `sent_at` diffère-t-il légèrement de l'horodatage de l'envoi dans Currents ?
 
@@ -198,6 +225,6 @@ Non. Si vous souhaitez créer ces compartiments spécifiques, soumettez vos [com
 
 Les données sont écrites dans une section du compartiment ( `sent_messages` ). Reportez-vous à la section [Fonctionnement](#how-it-works) pour plus de détails.
 
-### Puis-je utiliser l'envoi de messages pour regrouper des fichiers dans différents espaces de travail ?
+### Puis-je utiliser l'archivage des messages pour regrouper les fichiers dans différents espaces de travail ?
 
-Non. L'archivage des messages ne permet pas de regrouper les fichiers en fonction des espaces de travail. Au lieu de cela, vous pouvez déterminer à quel espace de travail appartient l'ID API de la campagne ou de l'étape du canvas, puis les regrouper en fonction de ces informations.
+Non. L'archivage des messages ne prend pas en charge le regroupement des fichiers en fonction des espaces de travail. Vous pouvez plutôt déterminer à quel espace de travail appartient l'ID de l'API de la campagne ou de l'étape du canvas, puis les regrouper en fonction de cette information.
