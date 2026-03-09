@@ -1,4 +1,4 @@
-## Flutter 콘텐츠 카드 정보
+## 플러터 콘텐츠 카드에 대하여
 
 Braze SDK에는 콘텐츠 카드를 시작할 수 있는 기본 카드 피드가 포함되어 있습니다. 카드 피드를 표시하려면 `braze.launchContentCards()` 메서드를 사용할 수 있습니다. 기본 카드 피드는 Braze SDK에 포함되어 있으며 모든 분석 추적, 해제 및 사용자의 콘텐츠 카드 렌더링을 처리합니다.
 
@@ -46,7 +46,7 @@ contentCardsStreamSubscription.cancel();
 이 단계는 iOS 전용입니다. 콘텐츠 카드 데이터는 Android 계층에서 자동으로 전달됩니다.
 {% endalert %}
 
-1단계의 Dart 레이어에서 데이터를 받으려면 다음 코드를 추가하여 네이티브 iOS 레이어에서 콘텐츠 카드 데이터를 전달합니다.
+1단계에서 Dart 레이어로 데이터를 받으려면, 네이티브 iOS 레이어에서 콘텐츠 카드 데이터를 전달하기 위해 다음 코드를 추가하세요.
 
 1. 콘텐츠 카드 업데이트에 가입하려면 `contentCards.subscribeToUpdates`를 구현합니다. 자세한 내용은 [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)) 설명서를 참조하세요.
 
