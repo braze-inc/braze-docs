@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Exportar detalles del lienzo"
 article_title: "GET: Exportar detalles del Canvas"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -31,7 +31,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Obligatoria | Cadena | Ver [Identificador API de Canvas]({{site.baseurl}}/api/identifier_types/) |
-| `post_launch_draft_version` | Opcional | Booleano | Para los lienzos que tienen un borrador posterior al lanzamiento, si lo configuras en `true` se mostrarán los cambios disponibles en el borrador. Predeterminado a `false` |
+| `post_launch_draft_version` | Opcional | Booleano | Para los lienzos que tienen un borrador posterior al lanzamiento, en la configuración de esto`true` se mostrarán los cambios disponibles en el borrador. Predeterminado `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
@@ -46,7 +46,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Respuestas
 
 {% alert note %}
-Todos los pasos de Canvas tienen un campo `next_paths`, que es una matriz de datos `{name, next_step_id}`. Para los pasos en Canvas de Mensajes, el campo `next_step_ids` estará presente, pero no contendrá datos para otros pasos en Canvas.
+Todos los pasos de Canvas tienen un campo `next_paths`, que es una matriz de datos `{name, next_step_id}`. Para los pasos de mensaje, el`next_step_ids`campo estará presente, pero no contendrá datos para otros pasos en Canvas.
 {% endalert %}
 
 ```json
@@ -213,7 +213,7 @@ A continuación se muestra un ejemplo de respuesta que incluye mensajes Canvas e
         }
       }
     }
-  ],
+  ]
 }
 ```
 
