@@ -1,7 +1,7 @@
 ---
-nav_title: "GET: View source translations for email template"
+nav_title: "GET: Quellübersetzungen für Templates für E-Mails anzeigen"
 article_title: "GET: View Source Translations for E-Mail Template"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 1
 
 layout: api_page
@@ -12,14 +12,12 @@ description: "In diesem Artikel erfahren Sie mehr über die Quelltextübersetzun
 {% api %}
 # Anzeigen der Quellübersetzungen für eine E-Mail-Vorlage
 {% apimethod get %}
-/templates/email/translations/source
+/Templates/E-Mail/Übersetzungen/Quelle
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um die Quellübersetzungen für eine [E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) einzusehen. Weitere Informationen zu den Features für die Übersetzung finden Sie unter [Lokalisierung in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
+> Verwenden Sie diesen Endpunkt, um die Quellübersetzungen für eine [E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) einzusehen. Weitere Informationen zu den Übersetzungsfeatures finden Sie unter [„Locales in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)“.
 
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Voraussetzungen
 
