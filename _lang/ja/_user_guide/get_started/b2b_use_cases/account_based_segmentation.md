@@ -1,12 +1,12 @@
 ---
 nav_title: アカウントベースのセグメンテーション
-article_title: アカウントベースのセグメンテーションの設定
+article_title: アカウントベースのセグメンテーションを設定する
 page_order: 2
 page_type: reference
 description: "B2Bアカウントベースのセグメンテーションのユースケースを強化するためのBrazeの様々な機能の使用方法を学習する。"
 ---
 
-# アカウントベースのセグメンテーションの設定
+# アカウントベースのセグメンテーションを設定する
 
 > このページでは、さまざまな Braze 機能を使用して B2B アカウントベースのセグメンテーションユースケースを強化する方法について説明します。
 
@@ -108,7 +108,7 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### オプション 2: ビジネス・オブジェクトに接続ソースを使用する場合
 
-セグメンテーションでの接続元の基本的な使い方については、[CDI Segment拡張機能]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)を参照してください。[カタログを使用する場合](#option-1-when-using-catalogs-for-your-business-objects)」で取り上げたテンプレートは、ソーステーブルをどのようにフォーマットするかについてのヒントになる。
+セグメンテーションにおける接続済みソースの使用方法の基本については、[CDIセグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)を参照せよ。[カタログを使用する場合](#option-1-when-using-catalogs-for-your-business-objects)」で取り上げたテンプレートは、ソーステーブルをどのようにフォーマットするかについてのヒントになる。
 
 ## セグメントでアカウントベースのエクステンションを使用する
 
