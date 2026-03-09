@@ -1,31 +1,31 @@
 ---
-nav_title: ナビゲーションのディープリンク
-article_title: Braze Pilotのナビゲーション・ディープリンク
+nav_title: ナビゲーションディープリンク
+article_title: Braze操縦士におけるナビゲーションディープリンク
 page_order: 4
 page_type: reference
 description: "この参考記事では、エンジニアや開発者に必要な統合ステップを簡単に説明します。"
 ---
 
-# Braze Pilotのナビゲーションディープリンク
+# Braze水先人における航行の深度化
 
-> Braze Pilotは、BrazeメッセージングからPilotアプリの特定の部分へのディープリンクをサポートしている。これにより、エンゲージメントのユースケースを作成し、ユーザーをPilotアプリケーションのさまざまな部分に誘導することができる。また、オプションのディープリンクパラメータを使って、アプリ内の特定のページのコンテンツをユーザー向けにカスタマイズすることもできる。ディープリンクについては、[アプリ内コンテンツへのディープリンクを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking)参照のこと。
+> Braze操縦士は、Braze メッセージングから操縦士アプリの特定の部分へのディープリンクを支援する。これにより、エンゲージメント ユースケースs を作成し、ユーザーs をパイロットアプリライケーションのさまざまな部分に駆動することができます。オプションのディープリンクパラメータを使用して、ユーザーのアプリの特定のページの内容をカスタマイズすることもできます。ディープリンクの詳細については、[アプリ内容へのディープリンク]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking)を参照してください。
 
 ## 全般的な質問
 
-これらは、パイロットアプリのメインナビゲーションページのディープリンクである。 
+これらは、パイロットアプリのメインナビゲーションページのディープリンクです。 
 
-| スクリーン | ディープリンク |
+| 画面 | ディープリンク |
 | --- | --- |
 | プロジェクト | `braze-pilot://navigation/projects` |
 | ログデータ | `braze-pilot://navigation/logdata` |
 | 設定 | `braze-pilot://navigation/setup` |
-| 言語を変更する | `braze-pilot://navigation/selectlanguage` |
+| 言語の変更 | `braze-pilot://navigation/selectlanguage` |
 | カメラ | `braze-pilot://navigation/camera` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ステッピントン
 
-これらはパイロットの架空ブランドアプリ「ステッピングトン」のディープリンクである。
+これらは、パイロットにおけるSteppington架空のブランドアプリの深いつながりである。
 
 ### ディープリンクの例
 
@@ -33,24 +33,24 @@ description: "この参考記事では、エンジニアや開発者に必要な
 
 ### パラメータなしのディープリンク
 
-| スクリーン | ディープリンク |
+| 画面 | ディープリンク |
 | --- | --- |
 | スプラッシュスクリーン | `braze-pilot://navigation/steppington/splash` |
 | ホーム | `braze-pilot://navigation/steppington/home` |
-| ステッピングトン＋のページ | `braze-pilot://navigation/steppington/plus` |
-| ゴール画面 | `braze-pilot://navigation/steppington/goals` |
+| Steppington+ページ | `braze-pilot://navigation/steppington/plus` |
+| 目標画面 | `braze-pilot://navigation/steppington/goals` |
 | 目標変更画面 | `braze-pilot://navigation/steppington/changegoals` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### パラメータ付きディープリンク
+### パラメーターとのディープリンク
 
-| スクリーン | ディープリンク |
+| 画面 | ディープリンク |
 | --- | --- |
 | ワークアウト | `braze-pilot://navigation/steppington/workout` |
-| アクティブ・ワークアウト | `braze-pilot://navigation/steppington/activeworkout` |
+| アクティブワークアウト | `braze-pilot://navigation/steppington/activeworkout` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### 許容されるパラメーター
+#### 使用可能なパラメータ
 
 <style>
 table td {
@@ -82,7 +82,7 @@ th:nth-child(6), td:nth-child(6) {
             <th>パラメーター</th>
             <th>説明</th>
             <th>必須かどうか</th>
-            <th>デフォルト（指定がない場合）</th>
+            <th>デフォルト(指定しない場合)</th>
             <th>タイプ</th>
             <th>例</th>
         </tr>
@@ -90,7 +90,7 @@ th:nth-child(6), td:nth-child(6) {
     <tbody>
         <tr>
             <td><code>title</code></td>
-            <td>画面上部に表示されるタイトル。</td>
+            <td>画面の上部で使用されるタイトル。</td>
             <td>はい</td>
             <td></td>
             <td>string</td>
@@ -98,7 +98,7 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>icon</code></td>
-            <td>どのアイコンを使うかを表す文字列。</td>
+            <td>使用するアイコンを表す文字列。</td>
             <td>いいえ</td>
             <td><code>RUNNING_HOME</code></td>
             <td>string</td>
@@ -106,7 +106,7 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>image</code></td>
-            <td>画像, 写真のURL。</td>
+            <td>アイテムの"画像のURL。</td>
             <td>はい</td>
             <td></td>
             <td>string</td>
@@ -114,31 +114,31 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>info</code></td>
-            <td>ワークアウトスタートボタンの上に配置されるワークアウトに関する情報。</td>
+            <td>ワークアウト開始ボタンの上に配置するワークアウトに関する情報。</td>
             <td>はい</td>
             <td></td>
             <td>string</td>
-            <td>This%20workout%20is%20awesome%21</td>
+            <td>この%20 ワークアウト%20 は%20 素晴らしい%21</td>
         </tr>
         <tr>
             <td><code>workout</code></td>
-            <td>ワークアウトの名前だ。で送られた。 <code>st_completed_class</code> イベントを開催した。</td>
+            <td>ワークアウトの名前。送信済み <code>st_completed_class</code> イベント。</td>
             <td>はい</td>
             <td></td>
             <td>数値</td>
-            <td>5キロマラソン</td>
+            <td>5k%20Run</td>
         </tr>
         <tr>
             <td><code>calories</code></td>
-            <td>アクティブ・ワークアウト画面に表示するカロリー数。で送られた。 <code>st_completed_class</code> イベントを開催した。</td>
+            <td>アクティブなワークアウト画面に表示されるカロリーの数。送信済み <code>st_completed_class</code> イベント。</td>
             <td>いいえ</td>
-            <td>500～1,250の乱数</td>
+            <td>500から1250までの乱数</td>
             <td>数値</td>
             <td>600</td>
         </tr>
         <tr>
             <td><code>length</code></td>
-            <td>ワークアウトの長さ。で送られた。 <code>st_completed_class</code> イベントを開催した。</td>
+            <td>ワークアウトの長さ。送信済み <code>st_completed_class</code> イベント。</td>
             <td>いいえ</td>
             <td></td>
             <td>数値</td>
@@ -146,15 +146,15 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>workout_info_left_text</code></td>
-            <td>アクティブなワークアウト画面の左カードに使用されるテキスト。</td>
+            <td>ワークアウト画面の左側のカードで使用する文字。</td>
             <td>いいえ</td>
             <td></td>
             <td>string</td>
-            <td>ロード</td>
+            <td>Road%20Run</td>
         </tr>
         <tr>
             <td><code>workout_info_left_icon</code></td>
-            <td>アクティブなワークアウト画面の左カードで使用するアイコンである。</td>
+            <td>ワークアウト画面の左側のカードで使用するアイコン。</td>
             <td>いいえ</td>
             <td></td>
             <td>string</td>
@@ -162,7 +162,7 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>workout_info_center_text</code></td>
-            <td>アクティブなワークアウト画面のセンターカードで使用されるテキスト。</td>
+            <td>ワークアウトスクリーンの中央のカードで使用する文字。</td>
             <td>いいえ</td>
             <td></td>
             <td>string</td>
@@ -170,7 +170,7 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>workout_info_center_icon</code></td>
-            <td>アクティブなワークアウト画面のセンターカードで使用するアイコンである。</td>
+            <td>ワークアウト画面の中央カードで使用するアイコン。</td>
             <td>いいえ</td>
             <td></td>
             <td>string</td>
@@ -178,7 +178,7 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>workout_info_right_text</code></td>
-            <td>アクティブなワークアウト画面の右カードに使用されるテキスト。</td>
+            <td>ワークアウトスクリーンの右側のカードで使用する文字。</td>
             <td>いいえ</td>
             <td></td>
             <td>string</td>
@@ -186,7 +186,7 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>workout_info_right_icon</code></td>
-            <td>アクティブなワークアウト画面の右カードに使用されるアイコンである。</td>
+            <td>ワークアウト画面の右側のカードで使用するアイコン。</td>
             <td>いいえ</td>
             <td></td>
             <td>string</td>
@@ -195,21 +195,21 @@ th:nth-child(6), td:nth-child(6) {
     </tbody>
 </table>
 
-##### アイコンのオプション
+##### アイコンオプション
 
 | アイコン | 画像 |
 | --- | --- |
-| `RUNNING_HOME` | ![ランニングシューズのアイコンだ。]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}){:style="max-width:30%"} |
-| `HEART_DETAILS` | ![ハートのアイコンだ。]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}){:style="max-width:30%"} |
-| `TIMER_DETAILS` | ![ストップウォッチのアイコン。]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}){:style="max-width:30%"} |
-| `YOGA_HOME` | ![ヨガのポーズをとる人のアイコン。]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}){:style="max-width:30%"} |
-| `BICYCLE_HOME` | ![自転車のアイコンだ。]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}){:style="max-width:30%"} |
-| `DUMBBELL_HOME` | ![ダンベルのアイコンだ。]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}){:style="max-width:30%"} |
+| `RUNNING_HOME` | ![走っている靴のアイコン。]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}){:style="max-width:30%"} |
+| `HEART_DETAILS` | ![ハートアイコン。]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}){:style="max-width:30%"} |
+| `TIMER_DETAILS` | ![ストップウォッチアイコン。]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}){:style="max-width:30%"} |
+| `YOGA_HOME` | ![ヨガポーズの人物の象徴。]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}){:style="max-width:30%"} |
+| `BICYCLE_HOME` | ![自転車のアイコン。]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}){:style="max-width:30%"} |
+| `DUMBBELL_HOME` | ![ダンベルアイコン。]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}){:style="max-width:30%"} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## PantsLabyrinth
 
-これらはPilotの架空ブランドアプリ「PantsLabyrinth」のディープリンクである。
+これらは、パイロットにおけるパンツラビリンスの架空のブランドアプリの深いつながりである。
 
 ### ディープリンクの例
 
@@ -217,23 +217,23 @@ th:nth-child(6), td:nth-child(6) {
 
 ### パラメータなしのディープリンク
 
-| スクリーン | ディープリンク |
+| 画面 | ディープリンク |
 | --- | --- |
 | スプラッシュスクリーン | `braze-pilot://navigation/pantslabyrinth/splash` |
 | ようこそ画面 | `braze-pilot://navigation/pantslabyrinth/welcome` |
 | リスト画面 | `braze-pilot://navigation/pantslabyrinth/listing` |
 | カートページ | `braze-pilot://navigation/pantslabyrinth/cart` |
-| ウィッシュリスト | `braze-pilot://navigation/pantslabyrinth/wishlist` |
+| ウィッシュリストページ | `braze-pilot://navigation/pantslabyrinth/wishlist` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### パラメータ付きディープリンク
+### パラメーターとのディープリンク
 
-| スクリーン | ディープリンク |
+| 画面 | ディープリンク |
 | --- | --- |
-| アイテム詳細ページ | `braze-pilot://navigation/pantslabyrinth/itemdetails` |
+| 項目詳細ページ | `braze-pilot://navigation/pantslabyrinth/itemdetails` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### 許容されるパラメーター
+#### 使用可能なパラメータ
 
 <style>
 table td {
@@ -265,7 +265,7 @@ th:nth-child(6), td:nth-child(6) {
             <th>パラメーター</th>
             <th>説明</th>
             <th>必須かどうか</th>
-            <th>デフォルト（指定がない場合）</th>
+            <th>デフォルト(指定しない場合)</th>
             <th>タイプ</th>
             <th>例</th>
         </tr>
@@ -289,7 +289,7 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>image</code></td>
-            <td>画像, 写真のURL。</td>
+            <td>アイテムの"画像のURL。</td>
             <td>はい</td>
             <td></td>
             <td>string</td>
@@ -297,15 +297,15 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>description</code></td>
-            <td>商品の説明。</td>
+            <td>項目の説明。</td>
             <td>はい</td>
             <td></td>
             <td>string</td>
-            <td>This%20item%20is%20awesome%21</td>
+            <td>この%20item%20is%20awesome%21</td>
         </tr>
         <tr>
             <td><code>quantity</code></td>
-            <td>商品の数量。</td>
+            <td>アイテムの数量。</td>
             <td>いいえ</td>
             <td>1</td>
             <td>数値</td>
@@ -313,31 +313,31 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>size</code></td>
-            <td>アイテムのサイズを表す文字列。</td>
+            <td>項目のサイズを表す文字列。</td>
             <td>いいえ</td>
             <td>M</td>
             <td>string</td>
-            <td>大型</td>
+            <td>大</td>
         </tr>
         <tr>
             <td><code>colors</code></td>
-            <td>コンマで区切られた16進数の色のリスト。これらはこのアイテムで利用可能な色である。</td>
+            <td>カンマで区切られた16 進数の色のリスト。これらは、アイテムで使用可能な色です。</td>
             <td>いいえ</td>
             <td>%23000000</td>
             <td>string</td>
-            <td>230000FF,%23FF0000</td>
+            <td>230000%FF,%23FF0000</td>
         </tr>
         <tr>
             <td><code>color_strings</code></td>
-            <td>カンマで区切られた色文字列のリスト。テキストの色を表す。</td>
+            <td>カンマで区切られたカラー文字列のリスト。テキストの色を表します。</td>
             <td>いいえ</td>
-            <td>ブラック</td>
+            <td>黒</td>
             <td>string</td>
             <td>青、赤</td>
         </tr>
         <tr>
             <td><code>selected_color</code></td>
-            <td>ユーザーが画面に到着したときに、カラーセレクターで選択される色のセレクテッドインデックス。値が使われていない場合は、最初に選択された色が使われる。</td>
+            <td>ユーザーがスクリーンに到着したときに、カラーセレクターで選択するカラーの選択された索引。値が使用されていない場合は、最初の色が選択されます。</td>
             <td>いいえ</td>
             <td>0</td>
             <td>数値</td>
@@ -348,7 +348,7 @@ th:nth-child(6), td:nth-child(6) {
 
 ## ムービーキャノン
 
-これらはパイロットの架空ブランドアプリ「ステッピングトン」のディープリンクである。
+これらは、パイロットにおけるSteppington架空のブランドアプリの深いつながりである。
 
 ### ディープリンクの例
 
@@ -356,27 +356,27 @@ th:nth-child(6), td:nth-child(6) {
 
 ### パラメータなしのディープリンク
 
-| スクリーン | ディープリンク |
+| 画面 | ディープリンク |
 | --- | --- |
 | スプラッシュスクリーン | `braze-pilot://navigation/moviecannon/splash` |
 | ようこそ画面 | `braze-pilot://navigation/moviecannon/welcome` |
-| 映画一覧ページ | `braze-pilot://navigation/moviecannon/moviecannon` |
+| 動画一覧画面 | `braze-pilot://navigation/moviecannon/moviecannon` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### パラメータ付きディープリンク
+### パラメーターとのディープリンク
 
-| スクリーン | ディープリンク |
+| 画面 | ディープリンク |
 | --- | --- |
-| 映画詳細ページ | `braze-pilot://navigation/moviecannon/moviedetails` |
+| 動画詳細画面 | `braze-pilot://navigation/moviecannon/moviedetails` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### 許容されるパラメーター
+#### 使用可能なパラメータ
 
 | パラメーター | 説明 | 必須かどうか | タイプ | 例 |
 | --- | --- | --- | --- | --- |
-| `id` | 映画のIDだ。 | はい | 数値 | 1 |
-| `title` | 映画のタイトルだ。 | はい | string | ジョーズ |
-| `thumbnail` | ムービーの前に表示するサムネイルのWeb URL。 | はい | string | `https://picsum.photos/400` |
-| `video` | 表示する動画リストのインデックス。 | いいえ | 数値 | 0 |
-| `description` | 動画の説明である。 | はい | string | `This%20video%20is%20awesome%21` |
+| `id` | ムービーのID。 | はい | 数値 | 1 |
+| `title` | ムービーのタイトル。 | はい | string | ジョー |
+| `thumbnail` | ムービーの前に表示されるサムネイルのWeb URL。 | はい | string | `https://picsum.photos/400` |
+| `video` | 表示される動画s の一覧の索引。 | いいえ | 数値 | 0 |
+| `description` | 動画の記述。 | はい | string | `This%20video%20is%20awesome%21` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
