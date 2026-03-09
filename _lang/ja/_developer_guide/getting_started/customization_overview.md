@@ -34,11 +34,11 @@ table td {
 {% tabs %}
 {% tab Crawl %}
 
-![キャプション画像および画像専用コンテンツカードを表示する金融アプリの例]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![キャプション付き画像と画像のみのコンテンツカードを表示するサンプル金融アプリ]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 「ハイハイ」のアプローチは、マーケターに直接カスタマイズの力を与えます。Braze のメッセージングチャンネルをアプリやサイトに統合するには、前もって軽い開発作業が必要ですが、この方法であればすぐに稼働させることができます。 
 
-マーケターは、ダッシュボードを通じてメッセージの内容、オーディエンス、タイミングを決定します。しかし、スタイリングの選択肢は限られています。このアプローチは、開発者のリソースが限られているチームや、シンプルなコンテンツを素早く共有したいチームに最適です。 
+マーケターはダッシュボードを通じて、メッセージの内容、オーディエンス、タイミングを決定する。しかし、スタイリングの選択肢は限られています。このアプローチは、開発者のリソースが限られているチームや、シンプルなコンテンツを素早く共有したいチームに最適です。 
 
 <table>
 <thead>
@@ -78,7 +78,7 @@ table td {
 {% endtab %}
 {% tab Walk %}
 
-![カスタマイズしたコンテンツカードを表示する金融アプリの例]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![カスタマイズ可能なコンテンツカードを表示するサンプル金融アプリ]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 「歩く」のアプローチでは、アプリやサイトのブランディングに合わせて、マーケティングチームと開発チームの両方が参加します。 
 
@@ -124,7 +124,7 @@ table td {
 {% endtab %}
 {% tab Run %}
 
-![メールキャプチャ付きカスタムコンテンツカードを表示する金融アプリの例]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![メール収集機能付きのカスタムコンテンツカードを表示するサンプル金融アプリ]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 「走る」のアプローチでは、開発者が主導権を握り、ユーザーエクスペリエンスを完全にコントロールします。カスタムコードは、メッセージがどのように見えるか、どのように動作するか、他のメッセージングチャンネルとどのように相互作用するか (プッシュ通知に基づいてコンテンツカードをトリガーするなど) を指示します。
 
