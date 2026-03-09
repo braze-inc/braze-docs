@@ -62,7 +62,7 @@ Você pode estar vendo mais cliques do que aberturas por qualquer um dos seguint
 
 ### Por que estou vendo zero aberturas e cliques de e-mail?
 
-Você pode estar vendo zero aberturas e cliques de e-mail se houver uma má configuração com seu domínio de rastreamento. Isso pode ser devido a qualquer uma das seguintes razões:
+Você pode estar vendo zero aberturas e cliques de e-mail se houver uma configuração incorreta com seu domínio de rastreamento. Isso pode ser devido a qualquer uma das seguintes razões:
 - Há um problema de SSL onde as URLs de rastreamento estão `http` em vez de `https`.
 - Há um problema com seu CDN onde a string do agente do usuário nos eventos de abertura, eventos de clique, ou ambos não estão sendo preenchidos.
 
@@ -81,4 +81,30 @@ A Braze rastreia os links de cancelamento de inscrição se o seguinte Liquid fo
 Não, o Braze não oferece essa funcionalidade. Isso ocorre porque a maioria crescente dos e-mails é aberta em dispositivos móveis e clientes de e-mail modernos, que renderizam imagens e conteúdo sem problemas.
 
 **Solução alternativa:** Para obter esse mesmo resultado, é possível hospedar o conteúdo do e-mail em uma landing page externa (como seu site), que pode ser vinculada à campanha de e-mail que você está criando usando a ferramenta **Link** ao editar o corpo do e-mail.
+
+### Por que meus usuários estão sendo cancelados automaticamente por software de segurança de e-mail?
+
+Algumas ferramentas de segurança de e-mail corporativas (como Barracuda, Proofpoint e serviços similares) pré-buscam ou escaneiam todas as URLs em e-mails recebidos, incluindo links de cancelamento de inscrição. Isso pode causar cancelamentos de inscrição não intencionais quando a ferramenta de segurança segue o link de cancelamento de inscrição de um clique.
+
+Para mitigar isso:
+
+- **Recomende que os destinatários coloquem seu domínio de envio na lista de permissões:** Trabalhe com as equipes de TI dos destinatários afetados para adicionar seu domínio de envio e os domínios de rastreamento da Braze à lista de permissões de segurança de e-mail deles.
+- **Use um centro de preferências:** Em vez de um link direto de cancelamento de inscrição, use um [centro de preferências]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) que exija interação do usuário para confirmar a ação de cancelamento de inscrição. Scanners de segurança normalmente não completam formulários de múltiplas etapas.
+- **Revise os logs de cancelamento de inscrição:** Verifique o cabeçalho `User-Agent` e o endereço IP nos dados do evento de cancelamento de inscrição do Currents para identificar padrões consistentes com escaneamento automatizado (como cabeçalhos `User-Agent` consistentes em múltiplos cancelamentos de inscrição).
+
+Para mais detalhes sobre como o escaneamento do lado do servidor pode afetar as métricas de e-mail, consulte [Como lidar com aumentos nas taxas de cliques]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#handling-increases-in-click-rates).
+
+### Por que a taxa de abertura da minha máquina mudou inesperadamente?
+
+[Máquina abertas]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#machine-opens) são acionadas por recursos de segurança de e-mail, como a Proteção de Privacidade de E-mail da Apple (MPP), que pré-carrega o conteúdo do e-mail (incluindo o pixel de rastreamento) sem que o usuário abra fisicamente o e-mail. As taxas de abertura de máquina podem flutuar com base em:
+
+- Mudanças na proporção do seu público usando o Apple Mail ou outros clientes de e-mail com recursos de privacidade.
+- Atualizações nas funcionalidades de privacidade do provedor de e-mail ou comportamentos de detecção de bots.
+- Mudanças na segmentação ou direcionamento do seu público.
+
+As porcentagens de abertura de máquina não são uma medida confiável de engajamento real. Para uma visão mais precisa do desempenho do e-mail, concentre-se em *Outras Aberturas* (aberturas não-máquina) e *Cliques Únicos*. Você também pode comparar essas métricas ao longo do tempo usando o [Dashboard de Desempenho de E-mail]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard/).
+
+### A métrica *Aberturas Únicas* inclui aberturas de máquina?
+
+Não. *Aberturas Únicas* conta apenas [Outras Aberturas]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#other-opens), que exclui e-mails identificados como aberturas de máquina. *Aberturas de Máquina* são rastreadas separadamente. Na visualização **Análise de Campanha** e **Construtor de Relatórios**, você pode visualizar ambas as métricas de forma independente.
 
