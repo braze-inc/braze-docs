@@ -21,7 +21,7 @@ Pour pré-remplir les événements et attributs personnalisés, procédez comme 
 ![Naviguez jusqu'à Attributs personnalisés ou Événements personnalisés ou Produits.]({% image_buster /assets/img_archive/prepopulate_page.png %}){: style="max-width:90%;" }
 
 {: start="2"}
-2\. Pour ajouter un attribut personnalisé, un événement ou un produit, accédez à la page correspondante et sélectionnez **Ajouter des attributs personnalisés** ou **Ajouter des événements personnalisés** ou **Ajouter des produits**.<br><br>Pour les attributs personnalisés, sélectionnez un [type de données]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) pour cet attribut (par exemple, booléen ou chaîne de caractères). Le type de données d’un attribut détermine les filtres de segmentation disponibles pour cet attribut. <br><br>![Ajouter un nouvel attribut ou événement]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
+2\. Pour ajouter un attribut personnalisé, un événement personnalisé ou un produit, veuillez vous rendre sur la page correspondante et sélectionner **« Ajouter des attributs personnalisés** », « **Ajouter des événements personnalisés** » ou **« Ajouter des produits** ».<br><br>Pour les attributs personnalisés, sélectionnez un [type de données]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) pour cet attribut (par exemple, booléen ou chaîne de caractères). Le type de données d’un attribut détermine les filtres de segmentation disponibles pour cet attribut. <br><br>![Ajouter un nouvel attribut ou événement]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
 3\. Sélectionnez **Enregistrer**.
 
 ### Attribution de noms aux événements et attributs personnalisés
@@ -36,19 +36,66 @@ Après avoir créé un événement personnalisé ou un produit, sélectionnez **
 
 Pour assurer la traçabilité des attributs personnalisés, événements, produits ou propriétés d'événement ajoutés, vous devez demander à votre équipe de développement de les créer dans le SDK en utilisant le nom exact que vous avez utilisé pour les ajouter précédemment. Vous pouvez également utiliser l'[API]({{site.baseurl}}/api/basics/) de Braze pour importer des données sur cet attribut. Ensuite, l'attribut personnalisé, l'événement ou autre sera exploitable et s'appliquera à vos utilisateurs.
 
-{% include alerts/note_alerts.md alert='Manage custom data storage' %}
+{% multi_lang_include alerts/note_alerts.md alert='Manage custom data storage' %}
 
 ## Ajout à la liste de blocage des données personnalisées
 
-Vous pouvez parfois identifier des attributs personnalisés, des événements personnalisés ou des événements d'achat qui enregistrent trop de points de données, qui ne sont plus utiles à votre stratégie de marketing ou qui ont été enregistrés par erreur. 
+Il peut arriver que vous identifiiez des attributs personnalisés, des événements personnalisés ou des événements d'achat qui enregistrent un nombre excessif de points de données, qui ne sont plus pertinents pour votre stratégie marketing ou qui ont été enregistrés par erreur. 
 
 Pour empêcher l’envoi de ces données à Braze, vous pouvez bloquer un objet Données personnalisées pendant que votre équipe d’ingénierie travaille à le supprimer du backend de votre application ou de votre site Web. La mise en liste bloquée empêche un objet de données personnalisé particulier d'être enregistré par Braze à l'avenir, ce qui signifie qu'il n'apparaîtra pas lors de la recherche d'un utilisateur spécifique.
 
-{% alert important %}
-Pour mettre en liste de blocage des données personnalisées, vous devez disposer des [autorisations du client]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) pour accéder et modifier les campagnes, les Canvases et les segments.
-{% endalert %}
-
 Les données en liste de blocage ne seront pas envoyées par le SDK et le tableau de bord de Braze ne traitera pas les données en liste de blocage provenant d'autres sources (par exemple, l'API). Cependant, le blocage ne supprime pas les données des profils utilisateurs et ne diminue pas rétroactivement le nombre de points de données encourus pour cet objet personnalisé.
+
+### Autorisations utilisateur requises
+
+Pour bloquer des données personnalisées, vous devez disposer des [autorisations du client]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) dans le menu déroulant suivant pour votre espace de travail.
+
+{% details User permissions for blocklisting custom data %}
+
+{% multi_lang_include deprecations/user_permissions.md %}
+
+- Afficher les campagnes
+- Modifier les campagnes
+- Archiver les campagnes
+- Afficher les canvas
+- Modifier les canvas
+- Archiver les canvas
+- Afficher les règles de limite de fréquence
+- Modifier les règles de limitation de fréquence
+- Afficher l'ordre de priorité des messages
+- Modifier l'ordre de priorité des messages
+- Afficher les blocs de contenu
+- Voir les indicateurs de fonctionnalité
+- Modifier l’indicateur de fonctionnalité
+- Indicateurs de fonctionnalité d'archivage
+- Afficher le segment
+- Modifier les segments
+- Afficher les modèles IAM
+- Modifier les modèles IAM
+- Archiver les modèles IAM
+- Afficher les modèles d'e-mail
+- Modifier les modèles d’e-mail
+- Archiver les modèles d'e-mail
+- Afficher les modèles de webhook
+- Modifier les modèles de webhook
+- Archiver les modèles de webhook
+- Afficher les modèles de lien
+- Modifier les modèles de lien
+- Voir les ressources de la bibliothèque multimédia
+- Modifier les ressources de la bibliothèque multimédia
+- Supprimer des ressources de la bibliothèque multimédia
+- Afficher les emplacements
+- Modifier les emplacements
+- Emplacement des archives
+- Consulter les codes de promotion
+- Modifier les codes de promotion
+- Codes de promotion des exportations
+- Afficher les centres de préférences
+- Modifier les centres de préférences
+- Consulter les rapports
+- Modifier les rapports
+
+{% enddetails %}
 
 ### Bloquer des attributs personnalisés, des événements personnalisés et des produits
 
@@ -62,7 +109,7 @@ Pour arrêter le suivi d'un attribut personnalisé, d'un événement ou d'un pro
 2. Sélectionnez l'attribut personnalisé, l'événement ou le produit. Pour les attributs et les events personnalisés, vous pouvez en sélectionner jusqu'à 100 à la fois.
 3. Sélectionnez **Liste de blocage**.
 
-![Plusieurs attributs personnalisés sélectionnés qui sont mis en liste de blocage sur la page Attributs personnalisés.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
+![Plusieurs attributs personnalisés sélectionnés qui sont bloqués sur la page Attributs personnalisés.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
 Vous pouvez placer en liste de blocage jusqu'à 300 attributs personnalisés et 300 événements personnalisés. Pour empêcher la collecte de certains attributs d'appareils, consultez notre [guide SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
 
@@ -119,7 +166,7 @@ Lorsque vous supprimez des données personnalisées, gardez à l'esprit les dét
 * Les données sont supprimées de la plateforme Braze et des profils utilisateurs.
 * Vous pouvez "réutiliser" le nom de l'attribut personnalisé ou de l'événement personnalisé après sa suppression. Cela signifie que si vous remarquez que des données personnalisées "réapparaissent" dans Braze après avoir été supprimées, cela peut être dû à une intégration qui n'a pas été arrêtée et qui envoie des données avec le même nom de données personnalisées.
 * Il se peut que vous deviez à nouveau placer un élément sur liste de blocage si votre suppression entraîne la réapparition de données personnalisées. Le statut de liste de blocage n'est pas préservé car les données personnalisées sont supprimées.
-* La suppression des données personnalisées n'enregistre aucun [point de données]({{site.baseurl}}/user_guide/data/data_points) et ne génère pas non plus de nouveaux points de données à utiliser.
+* La suppression de données personnalisées n'enregistre aucun [point de donnée]({{site.baseurl}}/user_guide/data/data_points) et ne génère pas non plus de nouveaux points de données à utiliser.
 
 ## Forcer les comparaisons de type de données
 
