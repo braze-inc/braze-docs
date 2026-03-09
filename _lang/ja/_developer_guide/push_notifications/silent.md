@@ -1,7 +1,7 @@
 ---
 page_order: 2
 nav_title: サイレント通知
-article_title: Braze SDKのサイレントプッシュ通知の設定
+article_title: Braze SDKのサイレントプッシュ通知を設定する
 channel:
   - push notifications
 ---
