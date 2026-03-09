@@ -45,7 +45,7 @@ Il existe deux types d'éditeurs utilisés pour créer un bloc de contenu : clas
 | Nom | Champ obligatoire avec un maximum de 100 caractères. Il ne peut pas être renommé une fois le bloc de contenu enregistré. De plus, vous ne pouvez pas nommer un nouveau bloc de contenu en utilisant le même nom que le précédent bloc de contenu, même si le précédent a été archivé. |
 | Description | (facultatif) Maximum de 250 caractères. Décrivez le bloc de contenu afin que les autres utilisateurs de Braze sachent à quoi il sert et où il est utilisé. |
 | Taille du contenu | Maximum de 50 KB. |
-| Placement | Les blocs de contenu ne peuvent pas être utilisés dans un pied de page d'e-mail, mais vous pouvez [créer un bloc de contenu qui inclut un pied de page](#email-footers) à utiliser dans vos e-mails. |
+| Placement | Les blocs de contenu ne peuvent pas être utilisés dans le pied de page d'un e-mail, mais il est possible de [créer un bloc de contenu comprenant un pied de page](#email-footers) à utiliser dans vos e-mails. |
 | Création | Éditeur HTML ou éditeur par glisser-déposer. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -88,9 +88,9 @@ Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/
 
 Après avoir ajouté un bloc de contenu dans une campagne active ou un Canvas, vous pouvez prévisualiser ce bloc de contenu depuis la bibliothèque de blocs de contenu en survolant le bloc de contenu et en sélectionnant l'icône <i class="fa fa-eye preview-icon"></i> **Prévisualiser**. 
 
-Cet aperçu inclut des informations sur le bloc de contenu, telles que son créateur, les étiquettes, la date de création, la date de dernière modification, la description, le type d'éditeur, le nombre d'inclusions avec des détails et un aperçu réel du bloc de contenu.
+Cet aperçu comprend des informations sur le bloc de contenu, telles que son créateur, ses tags, sa date de création, sa date de dernière modification, sa description, le type d'éditeur, le nombre d'inclusions avec des détails (une liste cliquable des messages ou des blocs de contenu qui utilisent le bloc de contenu) et un aperçu réel du bloc de contenu.
 
-![Aperçu d'un bloc de contenu "Workout_Promo" pour le cyclisme et la danse qui comporte six inclusions.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
+![Voici un aperçu d'un bloc de contenu"Workout_Promo" sur le cyclisme et la danse qui comporte une inclusion.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Blocs de contenu imbriqués
 
@@ -100,21 +100,21 @@ Les blocs de contenu peuvent être imbriqués, mais une seule fois. Vous pouvez 
 Rien ne vous empêche d’imbriquer un troisième niveau de bloc de contenu, mais vous ne verrez pas le contenu s’étendre dans des imbrications au-delà de la seconde. Le contenu et l’extrait de code Liquid sont supprimés du message.
 {% endalert %}
 
-### Utilisation des pieds de page des e-mails dans les blocs de contenu {#email-footers}
+### Utilisation des pieds de page d'e-mail dans les blocs de contenu {#email-footers}
 
-Les blocs de contenu ne peuvent pas être utilisés dans le pied de page d'un e-mail, mais vous pouvez créer un bloc de contenu qui inclut le contenu du pied de page pour l'utiliser dans vos e-mails. Pour ce faire, suivez les étapes suivantes :
+Les blocs de contenu ne peuvent pas être utilisés dans le pied de page d'un e-mail, mais il est possible de créer un bloc de contenu incluant le contenu du pied de page pour l'utiliser dans vos e-mails. Pour ce faire, suivez les étapes suivantes :
 
-1. Allez dans **Paramètres** > **Préférences e-mail** > **Pied de page personnalisé** et créez le pied de page.
-2. Ajoutez le pied de page à un bloc de contenu dans la **bibliothèque des blocs de contenu**.
-3. Ajoutez ce bloc de contenu à vos modèles d'e-mail ou à vos messages.
+1. Veuillez vous rendre dans **Paramètres** > **Préférences e-mail** > **Pied de page personnalisé** et créer le pied de page.
+2. Veuillez ajouter le pied de page à un bloc de contenu dans la **bibliothèque de blocs de contenu**.
+3. Veuillez ajouter ce bloc de contenu à vos modèles d'e-mails ou à vos messages.
 
-Vous pouvez désormais utiliser le même pied de page dans plusieurs messages !
+Vous pouvez désormais utiliser le même pied de page dans plusieurs messages.
 
 ### Archivage des blocs de contenu
 
 ![Menu déroulant des paramètres étendus qui affiche trois options : Archiver, Dupliquer et Copier dans l'espace de travail.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
-Une fois que vous avez fini d'utiliser un bloc de contenu, vous pouvez l'archiver à partir de la page [Modèles et médias & ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Les blocs de contenu archivés sont en lecture seule. Par conséquent, sortez le bloc de contenu des archives avant de le modifier. Les blocs de contenu ne peuvent pas être archivés s'ils sont utilisés dans des messages.
+Une fois que vous avez fini d'utiliser un bloc de contenu, vous pouvez l'archiver à partir de la page [Modèles et& médias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Les blocs de contenu archivés sont en lecture seule. Par conséquent, sortez le bloc de contenu des archives avant de le modifier. Les blocs de contenu ne peuvent pas être archivés s'ils sont utilisés dans des messages.
 
 #### Bonnes pratiques
 
@@ -123,5 +123,5 @@ Une fois que vous avez fini d'utiliser un bloc de contenu, vous pouvez l'archive
 - Lorsque votre bloc est utilisé dans un nombre de messages supérieur à ce que vous pouvez raisonnablement gérer avec la première suggestion de cette liste, nous vous recommandons de supprimer tout le contenu du bloc. Cela permet d'éviter l'inclusion d'informations obsolètes dans les messages.
 - Si vous archivez accidentellement un bloc de contenu, vous pouvez le sortir des archives.
 
-![Panneau "Blocs de contenu enregistrés" dans lequel le menu déroulant des paramètres de "Test_32" est élargi pour afficher trois options : Désarchiver, Dupliquer et Copier dans l'espace de travail]({% image_buster /assets/img/unarchive-content-block.png %})
+![Panneau Blocs de contenu enregistrés où le menu déroulant des paramètres est développé"Test_32" pour afficher trois options : Désarchiver, Dupliquer et Copier dans l'espace de travail]({% image_buster /assets/img/unarchive-content-block.png %})
 
