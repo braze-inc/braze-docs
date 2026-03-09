@@ -1,5 +1,5 @@
 ---
-nav_title: ブラウザの拡張機能
+nav_title: ブラウザ拡張機能
 article_title: Web のブラウザーエクステンション統合
 platform: Web
 page_order: 20
