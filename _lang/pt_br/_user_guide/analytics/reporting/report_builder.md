@@ -3,7 +3,7 @@ nav_title: Criador de relatórios
 article_title: Criador de relatórios
 alias: /report_builder/
 page_type: reference
-description: "Este artigo de referência descreve o recurso Report Builder."
+description: "Este artigo de referência descreve o recurso Criador de Relatórios."
 tool:
     - Reports
 page_order: 6.2
@@ -11,63 +11,63 @@ page_order: 6.2
 
 # Criador de relatórios
 
-> Esta página aborda como usar o Report Builder para criar e visualizar relatórios granulares usando dados do Braze e como adicionar relatórios aos dashboards.
+> Esta página aborda como usar o Criador de Relatórios para criar e visualizar relatórios granulares usando dados do Braze, e como adicionar relatórios aos painéis.
 
-## Uso de um modelo de relatório
+## Usando um modelo de relatório
 
-1. Acesse **Análise de dados** > **Criador de relatórios (novo)**.
-2. Selecione a seta **Mais opções** ao lado do botão **Criar novo relatório** e, em seguida, selecione **Usar um modelo de relatório**.<br><br>![Botão suspenso "Criar novo relatório" com opções para criar um relatório personalizado ou usar um modelo.]({% image_buster /assets/img/report_builder_2/create_new_report.png %}){: style="max-width:40%;"}<br><br>
+1. Acessar **análise de dados** > **Criador de Relatórios (Novo)**.
+2. Selecione a seta **Mais opções** ao lado do botão **Criar Novo Relatório**, e depois selecione **Usar um modelo de relatório**.<br><br>![Menu suspenso do botão "Criar Novo Relatório" com opções para criar um relatório personalizado ou usar um modelo.]({% image_buster /assets/img/report_builder_2/create_new_report.png %}){: style="max-width:40%;"}<br><br>
 3. Selecione um dos modelos de relatório da biblioteca de modelos do Braze.
-    - Use os **itens de linha** e o menu suspenso **Tags** para encontrar relatórios relevantes para seus casos de uso.<br><br>![Janela "Braze report templates" (modelos de relatório Braze) com uma lista de modelos Braze para seleção.]({% image_buster /assets/img/report_builder_2/report_templates.png %}){: style="max-width:90%;"}<br><br>
-4. Siga a etapa 3 e seguintes em [Criar um relatório](#creating-a-report) para personalizar ainda mais o relatório de acordo com seu caso de uso.
+    - Use o menu suspenso **Itens de linha** e **Tags** para encontrar relatórios relevantes para seus casos de uso.<br><br>![Janela "modelos de relatório do Braze" com lista de modelos do Braze para selecionar.]({% image_buster /assets/img/report_builder_2/report_templates.png %}){: style="max-width:90%;"}<br><br>
+4. Siga o passo 3 e em diante em [Criando um relatório](#creating-a-report) para personalizar ainda mais o relatório para se adequar ao seu caso de uso.
 
-## Criação de um relatório
+## Criando um relatório
 
-1. Acesse **Análise de dados** > **Criador de relatórios (novo)**.
-2. Selecione **Criar novo relatório**.
-3. No menu suspenso **Rows (Linhas** ), selecione o que você gostaria de relatar:
+1. Acessar **análise de dados** > **Criador de Relatórios (Novo)**.
+2. Selecione **Criar Novo Relatório**.
+3. No menu suspenso **Linhas**, selecione sobre o que você gostaria de relatar:
     - Campanhas
     - Canvas
     - Campanhas e canvas
     - Canais
     - Tags
 
-    Note que sua seleção de **linhas** afetará [as métricas que podem ser visualizadas](#metrics-availability). Por exemplo, você pode visualizar métricas multivariantes somente se gerar relatórios sobre **Canvas** ou **Campanhas** com um detalhamento de **Variante**. Não é possível visualizar essas métricas ao gerar relatórios sobre **campanhas e telas**, mesmo que essas campanhas e telas tenham testes multivariantes. 
+    Observe que sua seleção de **Linhas** impactará [as métricas que você pode visualizar](#metrics-availability). Por exemplo, você pode visualizar métricas multivariantes apenas se relatar sobre **Canvases**, ou **Campanhas** com um **Variant** detalhamento. Você não pode visualizar essas métricas ao relatar sobre **Campanhas e Canvases**, mesmo que essas campanhas e Canvases tenham testes multivariantes. 
 
-![A seção "Rows and columns" (Linhas e colunas) contém campos para selecionar as linhas e os agrupamentos do seu relatório.]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
+![A seção "Linhas e colunas" com campos para selecionar as linhas e agrupamentos para seu relatório.]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
 
 {: start="4"}
-4\. (Opcional) Selecione **Adicionar detalhamento** para dividir seus dados em exibições mais granulares:
+4\. (Opcional) Selecione **Adicionar detalhamento** para dividir seus dados em visualizações mais granulares:
     \- Canais
     \- Data
-        \- Use isso para dividir seus dados em intervalos de tempo menores. Por exemplo, se estiver interessado em saber a performance de suas campanhas por dia, selecione a seguinte configuração:
-            - **Fileiras**: Campanhas
+        \- Use isso para dividir seus dados em intervalos de tempo menores. Por exemplo, se você está interessado em como suas campanhas se saíram por dia, selecione a seguinte configuração:
+            - **Linhas**: Campanhas
             - **Agrupamento:** Data
             - **Intervalo:** dias
     \- Variantes
-    \- Campanhas e telas
+    \- Campanhas e Canvases
 
 {% alert tip %}
-Experimente diferentes configurações de opções de drilldown para explorar as [várias maneiras de detalhar seus dados](#metrics-availability).
+Experimente diferentes configurações de opções de detalhamento para explorar as [muitas maneiras de dividir seus dados](#metrics-availability).
 {% endalert %}
 
 {: start="5"}
-5\. Na seção **Colunas**, selecione **Personalizar métricas**.
+5\. Na seção **Colunas**, selecione **Personalizar Métricas**.
 
-![A seção "Customize Metrics" (Personalizar métricas) com opções para selecionar várias métricas.]({% image_buster /assets/img/report_builder_2/customize_metrics.png %}){: style="width:90%;"}
+![A seção "Personalizar Métricas" com opções para selecionar várias métricas.]({% image_buster /assets/img/report_builder_2/customize_metrics.png %}){: style="width:90%;"}
 
 {: start="6"}
-6\. Procure métricas por categoria e marque a caixa de seleção correspondente para adicionar uma métrica ao seu relatório.
-    \- Reorganize as métricas e colunas arrastando o ícone pontilhado para cima ou para baixo.
+6\. Navegue pelas métricas por categoria e selecione a caixa de seleção correspondente para adicionar uma métrica ao seu relatório.
+    \- Reordene as métricas e colunas arrastando o ícone pontilhado para cima ou para baixo.
 7\. Em **Conteúdo do relatório**, configure o intervalo de datas para o qual você gostaria de incluir dados em seu relatório.
-8\. Em seguida, dependendo de suas seleções na etapa 3, escolha adicionar manual ou automaticamente campanhas, Canvas ou ambos ao seu relatório.
-    - **Adicionar manualmente:** Escolha cada campanha ou Canvas a ser incluído no relatório usando os filtros para datas e tags ou canais de **Último envio** ou pesquisando o nome da campanha ou do Canvas.<br><br>![A seção "Manually add campaigns and canvases" (Adicionar campanhas e telas manualmente) com uma lista de campanhas a serem selecionadas.]({% image_buster /assets/img/report_builder_2/manually_add.png %}){: style="width:90%;"}<br><br>
-    - **Adicionar automaticamente:** Defina regras para quais campanhas ou telas devem ser incluídas no relatório. Você só precisa selecionar um campo nesta página.
-        \- Note que, à medida que campanhas ou Canvas adicionais satisfizerem as condições definidas nessa tela, elas serão automaticamente adicionadas a futuras execuções do relatório.<br><br>![A seção "Automatically add campaigns and canvases" (Adicionar campanhas e telas automaticamente) com campos para definir regras para quais campanhas e telas devem ser adicionadas ao relatório.]({% image_buster /assets/img/report_builder_2/automatically_add.png %}){: style="width:90%;"}<br><br>
-9\. Execute o relatório selecionando **Salvar & Run**.
+8\. Então, dependendo de suas seleções na etapa 3, escolha adicionar campanhas, Canvases ou ambos manualmente ou automaticamente ao seu relatório.
+    - **Adicionar manualmente:** Escolha cada campanha ou Canvas para incluir no relatório usando os filtros para datas e tags ou canais de **Último Enviado**, ou pesquisando o nome da campanha ou Canvas.<br><br>![A seção "Adicionar campanhas e canvases manualmente" com uma lista de campanhas para selecionar.]({% image_buster /assets/img/report_builder_2/manually_add.png %}){: style="width:90%;"}<br><br>
+    - **Adicionar automaticamente:** Defina regras para quais campanhas ou Canvases incluir no relatório. Você só precisa selecionar um campo nesta página.
+        \- Note que, à medida que campanhas ou Canvases adicionais atendem às condições que você definiu nesta tela, elas serão automaticamente adicionadas às execuções futuras do seu relatório.<br><br>![A seção "Adicionar campanhas e canvases automaticamente" com campos para definir regras sobre quais campanhas e Canvases devem ser adicionadas ao relatório.]({% image_buster /assets/img/report_builder_2/automatically_add.png %}){: style="width:90%;"}<br><br>
+9\. Execute o relatório selecionando **Salvar & Executar**.
 
 {% alert note %}
-O relatório pode levar alguns minutos para ser executado, dependendo do intervalo de datas e do número de campanhas ou Canvas que você selecionou na fase de configuração.
+O relatório pode levar até alguns minutos para ser gerado, dependendo do intervalo de datas e do número de campanhas ou Canvases que você selecionou na etapa de configuração.
 {% endalert %}
 
 ## Disponibilidade de métricas
@@ -75,42 +75,42 @@ O relatório pode levar alguns minutos para ser executado, dependendo do interva
 Sua seleção para **Linhas** afeta as métricas que você pode selecionar.
 
 {% alert tip %}
-Se quiser fazer um relatório sobre as variantes ou etapas do Canvas, selecione **Canvas** para linhas e deixe o campo vazio ou selecione **Date (Data** ) como a pesquisa. Isso cria um menu suspenso de **visualização do Canvas** para exibir métricas somente para o Canvas ou agrupar métricas por variante, etapa do canva ou mensagem. 
+Se você quiser relatar sobre variantes ou etapas do Canvas, selecione **Canvases** para linhas e deixe o campo vazio ou selecione **Data** como a detalhamento. Isso cria um dropdown de **Visualização do Canvas** para visualizar métricas apenas para o Canvas, ou agrupar métricas por variante, etapa ou mensagem. 
 
-![O menu suspenso "Canva View" aberto.]({% image_buster /assets/img/report_builder_2/canvas_view_dropdown.png %}){: style="width:40%;"}
+![O dropdown "Visualização do Canvas" aberto.]({% image_buster /assets/img/report_builder_2/canvas_view_dropdown.png %}){: style="width:40%;"}
 {% endalert %}
 
 | Métrico | Descrição |
 | --- | --- |
-| Métricas de conversão | Disponível para campanhas, telas, campanhas e telas. |
-| Entradas | Disponível para Campanhas, Canvas, Campanhas e Canvas, Tags. |
-| Data do último envio | Disponível para campanhas, telas, campanhas e telas. Só é exibido para campanhas programadas - não é preenchido para campanhas baseadas em ações ou disparadas por API. |
+| Métricas de conversão | Disponível para Campanhas, Canvases, Campanhas e Canvases. |
+| Entradas | Disponível para Campanhas, Canvases, Campanhas e Canvases, Tags. |
+| Última Data Enviada | Disponível para Campanhas, Canvases, Campanhas e Canvases. Exibe apenas para campanhas agendadas—não é preenchido para campanhas baseadas em ação ou acionadas por API. |
 | Envios | Disponível para cada canal relevante. |
-| Mensagens enviadas | Disponível para Campanhas, Canvas, Campanhas e Canvas, Tags. |
-| Linha de assunto | Disponível para envios de e-mail com drilldown **de variantes**, canvas e canvas com drilldown **de variantes**. |
-| Total de receitas | Disponível para Campanhas, Canvas, Campanhas e Canvas, Tags. Indisponível com a pesquisa de **canais**. |
-| Impressões únicas | Disponível para Campanhas, Canvas, Campanhas e Canvas, Tags. |
-| Destinatários únicos | Disponível para Campanhas, Canvas, Campanhas e Canvas, Tags. Indisponível com a pesquisa de **canais**. |
+| Mensagens enviadas | Disponível para Campanhas, Canvases, Campanhas e Canvases, Tags. |
+| Linha de assunto | Disponível para campanhas de e-mail com detalhamento de **Variante**, Canvases e Canvases com detalhamento de **Variante**. |
+| Total de receitas | Disponível para Campanhas, Canvases, Campanhas e Canvases, Tags. Indisponível com detalhamento de **Canais**. |
+| Impressões únicas | Disponível para Campanhas, Canvases, Campanhas e Canvases, Tags. |
+| Destinatários únicos | Disponível para Campanhas, Canvases, Campanhas e Canvases, Tags. Indisponível com detalhamento de **Canais**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### Variantes de mensagens excluídas
 
-As estatísticas das variantes de mensagens excluídas não são exibidas quando você divide seu relatório por campanhas ou Canvas. No entanto, os totais em nível de canal incluem todas as estatísticas, independentemente de a variante ter sido excluída. Por exemplo, _os_ envios de e-mail incluem todos os envios de e-mail, mas se você analisar essas estatísticas por campanha, os números podem ser menores porque os envios de variantes de mensagens excluídas são filtrados.
+Estatísticas para variantes de mensagens excluídas não são exibidas quando você detalha seu relatório por campanhas ou Canvases. No entanto, os totais a nível de canal incluem todas as estatísticas, independentemente de o variante ter sido excluído. Por exemplo, _Sends_ para e-mail incluem todos os envios de e-mail, mas se você detalhar essas estatísticas por campanha, os números podem ser menores porque os envios de variantes de mensagens excluídas são filtrados.
 
 ## Visualização de um relatório
 
-Depois de executar o relatório, você pode visualizar os resultados em formato de tabela na página do relatório. 
+Após executar seu relatório, você pode visualizar seus resultados em formato de tabela na página do relatório. 
 
 ![Uma tabela dos dados do relatório para as métricas de cada campanha.]({% image_buster /assets/img/report_builder_2/report_table.png %}){: style="width:90%;"}
 
-### Criação de um gráfico de relatório
+### Criando um gráfico de relatório
 
-Na parte inferior da página, você pode criar um gráfico dos seus dados selecionando um **tipo de gráfico** e configurando as métricas do gráfico. Por padrão, você verá a primeira métrica.
+Na parte inferior da página, você pode criar um gráfico dos seus dados selecionando um **Tipo de gráfico** e configurando as métricas do gráfico. Por padrão, você verá a primeira métrica.
 
-![Um gráfico dos dados do relatório com opções para configurar o eixo x, o eixo y, o tipo de gráfico e muito mais.]({% image_buster /assets/img/report_builder_2/visualize_table.png %}){: style="max-width:90%;"}
+![Um gráfico dos dados do relatório com opções para configurar o eixo x do gráfico, o eixo y, o tipo de gráfico e mais.]({% image_buster /assets/img/report_builder_2/visualize_table.png %}){: style="max-width:90%;"}
 
 {% alert note %}
-Para criar um gráfico de linhas, selecione **Date (Data** ) como uma opção de pesquisa ao configurar o relatório. Isso exibirá as tendências ao longo do tempo.
+Para criar um gráfico de linha, selecione **Data** como uma opção de detalhamento ao configurar o relatório. Isso exibirá tendências ao longo do tempo.
 {% endalert %}
 
 #### Baixando um gráfico de relatório
@@ -119,23 +119,23 @@ Para baixar uma imagem do gráfico do relatório, selecione o ícone pontilhado 
 
 ![Um menu com opções de download para diferentes formatos de arquivo.]({% image_buster /assets/img/report_builder_2/download_options.png %}){: style="max-width:70%;"}
 
-## Compartilhamento de um relatório
+## Compartilhando um relatório
 
-Você pode compartilhar um link do dashboard para o relatório selecionando **Compartilhar** e uma destas opções:
-- **Compartilhe um link:** Copie e compartilhe o link.
+Você pode compartilhar um link do dashboard para o relatório selecionando **Compartilhar** e uma dessas opções:
+- **Compartilhar um link:** Copie e compartilhe o link.
 
-![Menu suspenso "Compartilhar um link" com um link para o relatório.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
+![Dropdown "Compartilhar um link" com um link para o relatório.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
 
-- **Enviar ou agendar um e-mail:** Envie um e-mail imediatamente ou em um horário designado que contenha um link para baixar que expira após uma hora. É possível selecionar destinatários entre os usuários da empresa listados no menu suspenso **Destinatários de e-mail** ou inserir qualquer outro endereço de e-mail.
+- **Enviar ou agendar um e-mail:** Envie um e-mail imediatamente ou em um horário designado que contenha um link de download que expira após uma hora. Você pode selecionar destinatários entre os usuários da empresa listados no dropdown **Destinatários de E-mail** ou inserir qualquer outro endereço de e-mail.
 
-![Janela "Agendar um e-mail" com campos para escolher como o relatório será formatado, quem deverá recebê-lo e quando deverá ser enviado.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
+!["Agendar um e-mail" janela com campos para escolher como o relatório é formatado, quem deve recebê-lo e quando deve ser enviado.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
 
-- **Baixar CSV:** Baixe um arquivo CSV do relatório.
+- **Baixar CSV:** Baixe um CSV do relatório.
 
-## Adição de um relatório a um dashboard
+## Adicionando um relatório a um dashboard
 
-1. Selecione o ícone pontilhado na parte superior da tabela de relatórios.
+1. Selecione o ícone pontilhado no topo da tabela do relatório.
 2. Selecione **Adicionar ao dashboard**.
 3. Selecione se deseja criar um novo dashboard ou adicionar a um dashboard existente.<br><br>![Janela com opções para selecionar se deseja adicionar o relatório a um dashboard novo ou existente.]({% image_buster /assets/img/report_builder_2/add_to_dashboard.png %}){: style="width:90%;"}<br><br>
-4. Siga as etapas do [Dashboard Builder]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) para saber mais sobre a criação de um dashboard.
+4. Siga os passos em [Construtor de Dashboard]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) para saber mais sobre como construir um dashboard.
 
