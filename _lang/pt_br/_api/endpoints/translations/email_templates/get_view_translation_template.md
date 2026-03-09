@@ -12,14 +12,12 @@ description: "Este artigo descreve detalhes sobre o endpoint Veja todas as tradu
 {% api %}
 # Veja todas as traduções e locais para um modelo de e-mail
 {% apimethod get %}
-/templates/e-mail/traduções/
+/templates/e-mail/traducoes/
 {% endapimethod %}
 
-> Use este endpoint para ver todas as traduções e locais para um [modelo de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Veja [Locais em mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para mais informações sobre recursos de tradução.
+> Use este endpoint para ver todas as traduções e locais para um [modelo de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Veja [Locais em mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para saber mais sobre os recursos de tradução.
 
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Pré-requisitos
 
@@ -33,7 +31,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 | Parâmetro     | Obrigatória | Tipo de dados | Descrição                     |
 |---------------|----------|-----------|---------------------------------|
-| `template_id` | Obrigatória | String    | O ID do seu modelo de e-mail. |
+| `template_id` | Obrigatória | String    | O ID para o seu modelo de e-mail. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
