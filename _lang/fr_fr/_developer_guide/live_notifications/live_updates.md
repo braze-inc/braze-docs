@@ -1,5 +1,5 @@
 ---
-nav_title: Mises à jour en ligne/instantanées pour Android
+nav_title: Mises à jour en ligne pour Android
 article_title: Mises à jour en ligne/en production/instantanée pour le SDK Android Braze
 page_order: 0.1
 description: "Découvrez comment configurer les mises à jour en direct pour le SDK Android Braze."
@@ -21,7 +21,7 @@ Vous pouvez utiliser l'interface [`IBrazeNotificationFactory`](https://braze-inc
 
 Dans cette section, vous serez le partenaire de Superb Owl, l'animateur d'un nouveau jeu télévisé dans lequel des équipes de sauvetage d'animaux sauvages s'affrontent pour savoir qui peut enregistrer le plus grand nombre de hiboux. Ils cherchent à exploiter les mises à jour en direct dans leur application Android, afin d'afficher l'état d'un match en cours et de faire des mises à jour dynamiques de la notification en temps réel.
 
-![Un exemple de mise à jour en ligne/instantanée depuis Android]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
+![Exemple de mise à jour en ligne depuis Android]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 
