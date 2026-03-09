@@ -1,6 +1,6 @@
 ---
-nav_title: Configurar delegados
-article_title: Establecer delegados de mensajes dentro de la aplicación para iOS
+nav_title: Establecer delegados
+article_title: Configurar delegados de mensajes dentro de la aplicación para iOS
 platform: iOS
 page_order: 2
 description: "Este artículo de referencia trata de la configuración de los delegados de mensajería dentro de la aplicación para tu aplicación de iOS."
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Configurar delegados
+# Establecer delegados
 
 Las personalizaciones de la visualización y entrega de mensajes dentro de la aplicación pueden realizarse en código configurando nuestros delegados opcionales.
 
