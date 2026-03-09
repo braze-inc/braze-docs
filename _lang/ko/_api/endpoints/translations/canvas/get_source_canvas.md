@@ -1,25 +1,23 @@
 ---
-nav_title: "GET: 캔버스 번역 태그의 기본값 보기"
-article_title: "GET: 캔버스 번역 태그의 기본값 보기"
+nav_title: "GET: 캔버스 번역 태그의 기본 소스 값을 보기"
+article_title: "GET: 캔버스 번역 태그의 기본 소스 값을 보기"
 search_tag: Endpoint
 page_order: 3
 
 layout: api_page
 page_type: reference
-description: "이 문서에서는 캔버스 번역 소스 엔드포인트에 대해 자세히 설명합니다."
+description: "이 문서에서는 캔버스 번역 소스 엔드포인트에 대한 세부 정보를 설명합니다."
 ---
 
 {% api %}
-# 캔버스의 번역 태그에 대한 기본값 보기
+# 캔버스의 번역 태그에 대한 기본 소스 값을 보기
 {% apimethod get %}
-/캔버스/번역/소스
+/canvas/translations/source
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 캔버스의 번역 태그에 대한 모든 기본값 번역 소스를 볼 수 있습니다. {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. 번역 기능에 대한 자세한 내용은 [메시징의 로캘을]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) 참조하세요.
+> 이 엔드포인트를 사용하여 캔버스의 번역 태그에 대한 모든 기본 번역 소스를 볼 수 있습니다. 이들은 {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}의 값입니다. 번역 기능에 대한 자세한 내용은 [메시지의 로케일]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)를 참조하십시오.
 
-{% alert important %}
-이 엔드포인트는 현재 얼리 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Prerequisites
 
@@ -36,12 +34,12 @@ description: "이 문서에서는 캔버스 번역 소스 엔드포인트에 대
 | `workflow_id`          | Required | 문자열    | 캔버스의 ID입니다.              |
 | `step_id`              | Required | 문자열    | 캔버스 단계의 ID입니다.        |
 |`message_variation_id`| Required | 문자열 | 메시지 변형의 ID입니다. |
-| `locale_id`            | Optional | 문자열    | 로캘의 ID(UUID)입니다.              |
-| `post_launch_draft_version`| 선택 사항 | 부울 | `true` 이 최신 라이브 게시 버전 대신 최신 초안 버전을 반환하는 경우. 기본값은 `false` 최신 라이브 버전을 반환합니다.
+| `locale_id`            | Optional | 문자열    | 로케일의 ID (UUID)입니다.              |
+| `post_launch_draft_version`| 선택 사항 | 부울 | `true`이 최신 라이브 게시 버전 대신 최신 초안 버전을 반환할 때. 기본적으로 `false`는 최신 라이브 버전을 반환합니다.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-모든 번역 ID는 GET 엔드포인트의 응답에서 찾을 수 있는 UUID(범용 고유 식별자)로 간주됩니다.
+모든 번역 ID는 보편적인 고유 식별자 (UUID)로 간주되며, GET 엔드포인트의 응답에서 찾을 수 있습니다.
 {% endalert %}
 
 ## 예시 요청
