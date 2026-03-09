@@ -1,6 +1,6 @@
 ---
 nav_title: Buenas prácticas
-article_title: Buenas prácticas de ingesta de datos en la nube
+article_title: Prácticas recomendadas para la ingesta de datos en la nube
 toc_headers: h2
 page_order: 0
 page_type: reference
@@ -10,23 +10,23 @@ description: "Esta página ofrece un resumen de la ingesta de datos en la nube, 
 
 # Buenas prácticas
 
-> Braze Cloud Data Ingestion le permite configurar una conexión directa desde su almacén de datos o sistema de almacenamiento de archivos a Braze para sincronizar datos relevantes de usuarios o catálogos. Cuando sincronices estos datos con Braze, podrás aprovecharlos para casos de uso como la personalización, la desencadenación o la segmentación. 
+> Braze Cloud Data Ingestion le permite configurar una conexión directa desde su almacén de datos o sistema de almacenamiento de archivos a Braze para sincronizar datos relevantes de usuarios o catálogos. Al sincronizar estos datos con Braze, puedes aprovecharlos para casos de uso como la personalización, el desencadenamiento o la segmentación. 
 
-## Comprender la columna `UPDATED_AT` 
+## Comprender la`UPDATED_AT`  columna
 
 {% alert note %}
-`UPDATED_AT` sólo es relevante para las integraciones de almacenes de datos, no para las sincronizaciones con S3.
+`UPDATED_AT` Es relevante solo para integraciones de almacenes de datos, no para sincronizaciones S3.
 {% endalert %}
 
-Cuando se ejecuta una sincronización, Braze se conecta directamente a tu instancia de almacén de datos, recupera todos los datos nuevos de la tabla especificada y actualiza los datos correspondientes en tu panel Braze. Cada vez que se ejecuta la sincronización, Braze refleja los datos actualizados.
+Cuando se ejecuta una sincronización, Braze se conecta directamente a tu instancia de almacén de datos, recupera todos los datos nuevos de la tabla especificada y actualiza los datos correspondientes en tu panel Braze. Cada vez que se ejecuta la sincronización, Braze refleja cualquier dato actualizado.
 
 {% alert important %}
-Braze CDI sincronizará las filas basándose estrictamente en el valor `UPDATED_AT`, independientemente de si el contenido de la fila es el mismo que el que está actualmente en Braze. Por ello, te recomendamos que utilices correctamente `UPDATED_AT` para sincronizar sólo los datos nuevos o actualizados, a fin de evitar un uso innecesario de punto de datos.
+Braze CDI sincronizará las filas basándose estrictamente en el`UPDATED_AT`valor, independientemente de si el contenido de la fila es el mismo que el que hay actualmente en Braze. Teniendo esto en cuenta, recomendamos utilizar`UPDATED_AT`  correctamente para sincronizar solo los datos nuevos o actualizados y evitar así el uso innecesario de puntos de datos.
 {% endalert %}
 
 ### Ejemplo: Sincronización recurrente
 
-Para ilustrar cómo se utiliza `UPDATED_AT` en una sincronización CDI, considera este ejemplo de sincronización recurrente para actualizar atributos de usuario:
+Para ilustrar cómo`UPDATED_AT`se utiliza  en una sincronización CDI, considera este ejemplo de sincronización periódica para actualizar los atributos de usuario:
 
 - Fuentes de almacenamiento de archivos 
    - Amazon S3
@@ -43,67 +43,250 @@ La ingesta de datos en la nube admite los siguientes tipos de datos:
 - Artículos del catálogo
 - Solicitudes de eliminación de usuarios
 
-Puedes actualizar los datos de usuario por ID externo, alias de usuario, ID de Braze, correo electrónico o número de teléfono. Puedes eliminar usuarios por ID externo, alias de usuario o ID de Braze. 
+Puedes actualizar los datos de usuario mediante el ID externo, el alias de usuario, el ID de Braze, el correo electrónico o el número de teléfono. Puedes eliminar usuarios por ID externo, alias de usuario o ID de Braze. 
 
 ## Qué se sincroniza
 
-Cada vez que se ejecuta una sincronización, Braze busca filas que no se hayan sincronizado previamente. Lo comprobamos utilizando la columna `UPDATED_AT` de su tabla o vista. Braze selecciona e importa cualquier fila en la que `UPDATED_AT` sea igual o posterior a la última marca de tiempo `UPDATED_AT` del último trabajo de sincronización realizado con éxito.
+Cada vez que se ejecuta una sincronización, Braze busca filas que no se hayan sincronizado previamente. Lo comprobamos utilizando la columna `UPDATED_AT` de su tabla o vista. Braze selecciona e importa todas las filas en las que`UPDATED_AT`  es igual o posterior a la última`UPDATED_AT`marca de tiempo de la última tarea de sincronización realizada con éxito.
 
 En tu almacén de datos, añade los siguientes usuarios y atributos a tu tabla, ajustando la hora `UPDATED_AT` a la hora en que añadas estos datos:
 
-| UPDATED_AT | EXTERNAL_ID | DESCARGA |
-| --- | --- | --- |
-| `2022-07-17 08:30:00` | `customer_1234` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_2": {<br>        "attribute_a":"example_value_1",<br>        "attribute_b":"example_value_1"<br>    },<br>    "attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
-| `2022-07-18 11:59:23` | `customer_3456` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_2":42,<br>    "attribute_3":"2019-07-16T19:20:30+1:00",<br>    "attribute_5":"testing"<br>} |
-| `2022-07-19 09:07:23` | `customer_5678` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_4":true,<br>    "attribute_5":"testing_123"<br>} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+<table role="presentation">
+  <thead>
+    <tr>
+      <th>UPDATED_AT</th>
+      <th>EXTERNAL_ID</th>
+      <th>DESCARGA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2022-07-17 08:30:00</code></td>
+      <td><code>customer_1234</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2": {
+        "attribute_a":"example_value_1",
+        "attribute_b":"example_value_1"
+    },
+    "attribute_3":"2019-07-16T19:20:30+1:00"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-18 11:59:23</code></td>
+      <td><code>customer_3456</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2":42,
+    "attribute_3":"2019-07-16T19:20:30+1:00",
+    "attribute_5":"testing"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-19 09:07:23</code></td>
+      <td><code>customer_5678</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_4":true,
+    "attribute_5":"testing_123"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-Durante la siguiente sincronización programada, Braze sincroniza en los perfiles de usuario todas las filas con una marca de tiempo `UPDATED_AT` igual o posterior a la marca de tiempo más reciente. Braze actualiza o añade campos, para que no tengas que sincronizar cada vez el perfil de usuario completo. Tras la sincronización, los perfiles de usuario reflejan las nuevas actualizaciones:
+Durante la siguiente sincronización programada, Braze sincroniza todas las filas con una`UPDATED_AT`marca de tiempo igual o posterior a la marca de tiempo más reciente en los perfiles de usuario. Braze actualiza o añade campos, por lo que no es necesario sincronizar el perfil completo de usuario cada vez. Tras la sincronización, los perfiles de usuario reflejan las nuevas actualizaciones:
 
-**Sincronización recurrente, segunda tirada el 20 de julio de 2022 a las 12 pm**
+**Sincronización periódica, segunda ejecución el 20 de julio de 2022 a las 12 p. m.**
 
-| UPDATED_AT | EXTERNAL_ID | DESCARGA |
-| --- | --- | --- |
-| `2022-07-17 08:30:00` | `customer_1234` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_2": {<br>        "attribute_a":"example_value_2",<br>        "attribute_b":"example_value_2"<br>    },<br>    "attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
-| `2022-07-18 11:59:23` | `customer_3456` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_2":42,<br>    "attribute_3":"2019-07-16T19:20:30+1:00",<br>    "attribute_5":"testing"<br>} |
-| `2022-07-19 09:07:23` | `customer_5678` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_4":true,<br>    "attribute_5":"testing_123"<br>} |
-| `2022-07-16 00:25:30` | `customer_9012` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_4":false,<br>    "attribute_5":"testing_123"<br>} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+<table role="presentation">
+  <thead>
+    <tr>
+      <th>UPDATED_AT</th>
+      <th>EXTERNAL_ID</th>
+      <th>DESCARGA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2022-07-17 08:30:00</code></td>
+      <td><code>customer_1234</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2": {
+        "attribute_a":"example_value_2",
+        "attribute_b":"example_value_2"
+    },
+    "attribute_3":"2019-07-16T19:20:30+1:00"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-18 11:59:23</code></td>
+      <td><code>customer_3456</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2":42,
+    "attribute_3":"2019-07-16T19:20:30+1:00",
+    "attribute_5":"testing"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-19 09:07:23</code></td>
+      <td><code>customer_5678</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_4":true,
+    "attribute_5":"testing_123"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-16 00:25:30</code></td>
+      <td><code>customer_9012</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_4":false,
+    "attribute_5":"testing_123"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-Se ha añadido una fila, pero el valor `UPDATED_AT` es anterior a `2022-07-19 09:07:23` (almacenado desde la primera ejecución). Como resultado, ninguna de estas filas se sincronizará en esta ejecución. La última `UPDATED_AT` para la sincronización no ha cambiado con esta ejecución, y sigue siendo `2022-07-19 09:07:23`.
+Se ha añadido una fila, pero el`UPDATED_AT`valor es anterior al`2022-07-19 09:07:23`(almacenado desde la primera ejecución). Como resultado, ninguna de estas filas se sincronizará en esta ejecución. El último`UPDATED_AT`  para la sincronización no se ve afectado por esta ejecución y permanece como  `2022-07-19 09:07:23`.
 
-**Sincronización recurrente, tercera carrera el 21 de julio de 2022 a las 12 pm**
+**Sincronización periódica, tercera ejecución el 21 de julio de 2022 a las 12 p. m.**
 
-| UPDATED_AT | EXTERNAL_ID | DESCARGA |
-| --- | --- | --- |
-| `2022-07-17 08:30:00` | `customer_1234` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_2": {<br>        "attribute_a":"example_value_1",<br>        "attribute_b":"example_value_1"<br>    },<br>    "attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
-| `2022-07-18 11:59:23` | `customer_3456` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_2":42,<br>    "attribute_3":"2019-07-16T19:20:30+1:00",<br>    "attribute_5":"testing"<br>} |
-| `2022-07-19 09:07:23` | `customer_5678` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_4":true,<br>    "attribute_5":"testing_123"<br>} |
-| `2022-07-16 00:25:30` | `customer_9012` | {<br>    "attribute_1":"xyz",<br>    "attribute_4":false,<br>    "attribute_5":"testing_123"<br>} |
-| `2022-07-21 08:30:00` | `customer_1234` | {<br>    "attribute_1":"abcdefg",<br>    "attribute_2": {<br>        "attribute_a":"example_value_2",<br>        "attribute_b":"example_value_2"<br>    },<br>    "attribute_3”:”2019-07-20T19:20:30+1:00"<br>} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+<table role="presentation">
+  <thead>
+    <tr>
+      <th>UPDATED_AT</th>
+      <th>EXTERNAL_ID</th>
+      <th>DESCARGA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2022-07-17 08:30:00</code></td>
+      <td><code>customer_1234</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2": {
+        "attribute_a":"example_value_1",
+        "attribute_b":"example_value_1"
+    },
+    "attribute_3":"2019-07-16T19:20:30+1:00"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-18 11:59:23</code></td>
+      <td><code>customer_3456</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2":42,
+    "attribute_3":"2019-07-16T19:20:30+1:00",
+    "attribute_5":"testing"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-19 09:07:23</code></td>
+      <td><code>customer_5678</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_4":true,
+    "attribute_5":"testing_123"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-16 00:25:30</code></td>
+      <td><code>customer_9012</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"xyz",
+    "attribute_4":false,
+    "attribute_5":"testing_123"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+    <tr>
+      <td><code>2022-07-21 08:30:00</code></td>
+      <td><code>customer_1234</code></td>
+      <td>
+{% highlight json linenos %}
+{
+    "attribute_1":"abcdefg",
+    "attribute_2": {
+        "attribute_a":"example_value_2",
+        "attribute_b":"example_value_2"
+    },
+    "attribute_3":"2019-07-20T19:20:30+1:00"
+}
+{% endhighlight %}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-En esta tercera ejecución, se añadió otra fila nueva. Ahora, una fila tiene un valor `UPDATED_AT` posterior a `2022-07-19 09:07:23`, lo que significa que sólo se sincronizará una fila. El último `UPDATED_AT` está ahora configurado como `2022-07-21 08:30:00`.
+En esta tercera tanda, se añadió otra fila nueva. Ahora, una fila tiene un`UPDATED_AT`valor posterior a `2022-07-19 09:07:23`, lo que significa que solo se sincronizará una fila. El último  ahora`UPDATED_AT` está configurado como `2022-07-21 08:30:00`.
 
 {% alert note %}
-`UPDATED_AT` se permite que los valores sean incluso posteriores a la hora de inicio de ejecución de una sincronización determinada. Sin embargo, esto no es recomendable, ya que empuja la última marca de tiempo `UPDATED_AT` "hacia el futuro" y las sincronizaciones posteriores no sincronizarán los valores anteriores.
+`UPDATED_AT` Los valores pueden ser incluso posteriores a la hora de inicio de la ejecución para una sincronización determinada. Sin embargo, esto no es recomendable, ya que pusha la última`UPDATED_AT`marca de tiempo «hacia el futuro» y las sincronizaciones posteriores no sincronizarán los valores anteriores.
 {% endalert %}
 
 ## Utiliza una fecha y hora UTC para la columna `UPDATED_AT` 
 
 La columna `UPDATED_AT` debe estar en UTC para evitar problemas con el horario de verano. Prefiere funciones solo UTC, como `SYSDATE()` en lugar de `CURRENT_DATE()` siempre que sea posible.
 
-## Asegúrate de que la hora de `UPDATED_AT` no coincide con la hora de tu sincronización.
+## Asegúrate de que`UPDATED_AT`la hora no sea la misma que la de tu sincronización.
 
-Tu sincronización CDI podría tener datos duplicados si alguno de los campos `UPDATED_AT` está exactamente a la misma hora que la última marca de tiempo `UPDATED_AT` del anterior trabajo de sincronización realizado con éxito. Esto se debe a que CDI elegirá un "límite inclusivo" cuando identifique cualquier fila que coincida en el tiempo con la sincronización anterior, y hará que las filas puedan sincronizarse. CDI volverá a analizar esas filas y creará datos duplicados.
+Tu sincronización CDI podría tener datos duplicados si alguno`UPDATED_AT`de los campos tiene exactamente la misma hora que la última`UPDATED_AT`marca de tiempo del último trabajo de sincronización realizado con éxito. Esto se debe a que CDI elegirá un «límite inclusivo» cuando identifique cualquier fila que coincida con la sincronización anterior y hará que las filas se puedan sincronizar. CDI volverá a importar esas filas y creará datos duplicados.
 
-Aquí tienes algunas sugerencias para evitar la duplicación de datos:
+A continuación, se incluyen algunas sugerencias para evitar la duplicación de datos:
 
-- Si estás configurando una sincronización con un `VIEW`, no utilices `CURRENT_TIMESTAMP` como valor predeterminado. Esto hará que todos los datos se sincronicen cada vez que se ejecute la sincronización porque el campo `UPDATED_AT` se evaluará a la hora en que se ejecuten nuestras consultas.
+- Si estás configurando una sincronización con un `VIEW`, no utilices`CURRENT_TIMESTAMP`  como valor predeterminado. Esto hará que todos los datos se sincronicen cada vez que se ejecute la sincronización porque el campo `UPDATED_AT` se evaluará a la hora en que se ejecuten nuestras consultas.
 - Si tiene procesos o consultas de muy larga duración que escriben datos en la tabla de origen, evite ejecutarlos simultáneamente con una sincronización, o evite utilizar la misma marca de tiempo para cada fila insertada.
 - Utilice una transacción para escribir todas las filas que tengan la misma marca de tiempo.
 
-### Ejemplo: Gestionar las actualizaciones posteriores
+### Ejemplo: Administración de actualizaciones posteriores
 
 Este ejemplo muestra el proceso general para sincronizar datos por primera vez y, a continuación, sólo actualizar los datos cambiantes (deltas) en las actualizaciones posteriores. Supongamos que tenemos una tabla `EXAMPLE_DATA` con algunos datos de usuario. El día 1 tiene los siguientes valores:
 
@@ -181,14 +364,42 @@ FROM EXAMPLE_DATA;
 
 Nada de esto se ha sincronizado antes con Braze, así que añádelo todo a la tabla de origen para CDI:
 
-| UPDATED_AT          | EXTERNAL_ID | DESCARGA                                                                                   |
-| :------------------ | ----------- | ----------------------------------------------------------------------------------------- |
-| 2023-03-16 15:00:00 | 12345       | { "ATTRIBUTE_1": "823", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"380", "ATTRIBUTE_4":"FALSE"} |
-| 2023-03-16 15:00:00 | 23456       | { "ATTRIBUTE_1": "28", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"823", "ATTRIBUTE_4":"TRUE"}   |
-| 2023-03-16 15:00:00 | 34567       | { "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}  |
-| 2023-03-16 15:00:00 | 45678       | { "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}   |
-| 2023-03-16 15:00:00 | 56789       | { "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+<table role="presentation">
+  <thead>
+    <tr>
+      <th>UPDATED_AT</th>
+      <th>EXTERNAL_ID</th>
+      <th>DESCARGA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>12345</td>
+      <td><code>{ "ATTRIBUTE_1": "823", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"380", "ATTRIBUTE_4":"FALSE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>23456</td>
+      <td><code>{ "ATTRIBUTE_1": "28", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"823", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>34567</td>
+      <td><code>{ "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>45678</td>
+      <td><code>{ "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>56789</td>
+      <td><code>{ "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"}</code></td>
+    </tr>
+  </tbody>
+</table>
 
 Se ejecuta una sincronización y Braze registra que has sincronizado todos los datos disponibles hasta "2023-03-16 15:00:00". A continuación, en la mañana del día 2, se ejecuta un ETL y se actualizan algunos campos de la tabla de usuarios (resaltados):
 
@@ -243,19 +454,67 @@ Se ejecuta una sincronización y Braze registra que has sincronizado todos los d
 
 Ahora tienes que añadir solo los valores modificados en la tabla fuente CDI. Estas filas pueden añadirse en lugar de actualizar las filas antiguas. Esa tabla tiene ahora este aspecto:
 
-| UPDATED_AT          | EXTERNAL_ID | DESCARGA                                                                                   |
-| :------------------ | ----------- | ----------------------------------------------------------------------------------------- |
-| 2023-03-16 15:00:00 | 12345       | { "ATTRIBUTE_1": "823", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"380", "ATTRIBUTE_4":"FALSE"} |
-| 2023-03-16 15:00:00 | 23456       | { "ATTRIBUTE_1": "28", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"823", "ATTRIBUTE_4":"TRUE"}   |
-| 2023-03-16 15:00:00 | 34567       | { "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}  |
-| 2023-03-16 15:00:00 | 45678       | { "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}   |
-| 2023-03-16 15:00:00 | 56789       | { "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"} |
-| 2023-03-17 09:30:00 | 12345       | { "ATTRIBUTE_1": "145", "ATTRIBUTE_2":"red", "ATTRIBUTE_4":"TRUE"} |
-| 2023-03-17 09:30:00 | 23456       | { "ATTRIBUTE_1": "15"} |
-| 2023-03-17 09:30:00 | 34567       | { "ATTRIBUTE_3":"495", "ATTRIBUTE_4":"FALSE"} |
-| 2023-03-17 09:30:00 | 45678       | { "ATTRIBUTE_2":"green"} |
-| 2023-03-17 09:30:00 | 56789       | { "ATTRIBUTE_3":"693"} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+<table role="presentation">
+  <thead>
+    <tr>
+      <th>UPDATED_AT</th>
+      <th>EXTERNAL_ID</th>
+      <th>DESCARGA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>12345</td>
+      <td><code>{ "ATTRIBUTE_1": "823", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"380", "ATTRIBUTE_4":"FALSE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>23456</td>
+      <td><code>{ "ATTRIBUTE_1": "28", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"823", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>34567</td>
+      <td><code>{ "ATTRIBUTE_1": "234", "ATTRIBUTE_2":"blue", "ATTRIBUTE_3":"384", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>45678</td>
+      <td><code>{ "ATTRIBUTE_1": "245", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"349", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-16 15:00:00</td>
+      <td>56789</td>
+      <td><code>{ "ATTRIBUTE_1": "1938", "ATTRIBUTE_2":"red", "ATTRIBUTE_3":"813", "ATTRIBUTE_4":"FALSE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-17 09:30:00</td>
+      <td>12345</td>
+      <td><code>{ "ATTRIBUTE_1": "145", "ATTRIBUTE_2":"red", "ATTRIBUTE_4":"TRUE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-17 09:30:00</td>
+      <td>23456</td>
+      <td><code>{ "ATTRIBUTE_1": "15"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-17 09:30:00</td>
+      <td>34567</td>
+      <td><code>{ "ATTRIBUTE_3":"495", "ATTRIBUTE_4":"FALSE"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-17 09:30:00</td>
+      <td>45678</td>
+      <td><code>{ "ATTRIBUTE_2":"green"}</code></td>
+    </tr>
+    <tr>
+      <td>2023-03-17 09:30:00</td>
+      <td>56789</td>
+      <td><code>{ "ATTRIBUTE_3":"693"}</code></td>
+    </tr>
+  </tbody>
+</table>
 
 CDI sólo sincronizará las nuevas filas, por lo que la próxima sincronización que se ejecute sólo sincronizará las últimas cinco filas.
 
@@ -263,9 +522,9 @@ CDI sólo sincronizará las nuevas filas, por lo que la próxima sincronización
 
 ### Escribir sólo atributos nuevos o actualizados para minimizar el consumo
 
-Cada vez que se ejecuta una sincronización, Braze busca filas que no se hayan sincronizado previamente. Lo comprobamos utilizando la columna `UPDATED_AT` de su tabla o vista. Braze selecciona e importa cualquier fila en la que `UPDATED_AT` sea igual o posterior a la última marca de tiempo de `UPDATED_AT` del último trabajo de sincronización realizado con éxito, independientemente de si coinciden o no con lo que hay actualmente en el perfil de usuario. Por ello, recomendamos sincronizar únicamente los atributos que desee añadir o actualizar.
+Cada vez que se ejecuta una sincronización, Braze busca filas que no se hayan sincronizado previamente. Lo comprobamos utilizando la columna `UPDATED_AT` de su tabla o vista. Braze selecciona e importa todas las filas en las que`UPDATED_AT`  es igual o posterior a la última`UPDATED_AT`marca de tiempo del último trabajo de sincronización realizado con éxito, independientemente de si son iguales a las que se encuentran actualmente en el perfil de usuario. Por ello, recomendamos sincronizar únicamente los atributos que desee añadir o actualizar.
 
-El uso de punto de datos es idéntico con CDI que con otros métodos de ingesta como las API REST o los SDK, por lo que depende de ti asegurarte de que sólo añades atributos nuevos o actualizados a tus tablas de origen.
+El uso de puntos de datos es idéntico con CDI y con otros métodos de ingestión, como las API REST o los SDK, por lo que depende de ti asegurarte de que solo añades atributos nuevos o actualizados a tus tablas de origen.
 
 ### Separa `EXTERNAL_ID` de la columna `PAYLOAD` 
 
@@ -279,23 +538,14 @@ Puedes establecerlo en `null` si quieres omitir un atributo del perfil de un usu
 
 Realiza actualizaciones incrementales de tus datos para evitar sobrescrituras involuntarias cuando se realicen actualizaciones simultáneas.
 
-En el siguiente ejemplo, un usuario tiene dos atributos:
-- Color: "Verde"
-- Talla: "Grande"
+{% alert important %}
+* **Actualizaciones de diferentes atributos:** En la gran mayoría de los casos, si dos actualizaciones no afectan a los mismos atributos de un usuario, sus resultados son totalmente independientes. Por ejemplo, si actualizas el `Color`atributo  de un usuario y actualizas por separado su`Size`atributo , ambas actualizaciones deben aplicarse correctamente, incluso si se producen con unos segundos de diferencia.
+* **Actualizaciones del mismo atributo:** Las condiciones de carrera pueden producirse cuando varias actualizaciones apuntan al mismo atributo dentro de una sola ejecución de sincronización. En estos casos excepcionales, una actualización puede sobrescribir otra. La mejor manera de evitar este comportamiento es asegurarse de que los datos de origen para la sincronización de CDI reflejen solo el estado más reciente de cada usuario, o que todas las actualizaciones para un usuario determinado o una combinación de usuario + atributo estén contenidas en una sola fila.
+* **Operadores de matriz de objetos:** Las únicas excepciones a las actualizaciones independientes son los operadores `$add`,`$remove`  `$update`y  para matrices de objetos, donde las actualizaciones de la misma matriz pueden interactuar entre sí.
+* **Eventos:** Las condiciones de carrera no afectan a los eventos porque cada evento es único y tiene una marca de tiempo asociada.
+{% endalert %}
 
-Entonces Braze recibe simultáneamente las dos actualizaciones siguientes para ese usuario:
-- Petición 1: Cambiar el color a "Rojo"
-- Petición 2: Cambia el tamaño a "Medio"
-
-Como la Petición 1 se produce en primer lugar, los atributos del usuario se actualizan a lo siguiente:
-- Color: "Rojo"
-- Talla: "Grande"
-
-Sin embargo, cuando se produce la Petición 2, Braze comienza con los valores originales de los atributos ("Verde" y "Grande") y, a continuación, actualiza los atributos del usuario a los siguientes:
-- Color: "Verde"
-- Talla: "Medio"
-
-Cuando finalicen las solicitudes, la Solicitud 2 sobrescribirá la actualización de la Solicitud 1, por lo que es mejor escalonar las actualizaciones para evitar que se sobrescriban las solicitudes.
+La mejor manera de evitar este comportamiento es asegurarse de que los datos de origen para la sincronización de CDI reflejen solo el estado más reciente de cada usuario, o que todas las actualizaciones para un usuario determinado o una combinación de usuario + atributo estén contenidas en una sola fila.
 
 ### Crear una cadena JSON a partir de otra tabla
 
@@ -458,9 +708,9 @@ Puede incluir atributos personalizados anidados en la columna de carga útil par
 
 {% endtab %}
 {% tab Event %}
-Para sincronizar eventos, se requiere un nombre de evento. Formatea el campo `time` como una cadena ISO 8601 o en formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Si el campo `time` no está presente, Braze utiliza el valor de la columna `UPDATED_AT` como hora del evento. Otros campos como `app_id` y `properties` son opcionales. 
+Para sincronizar eventos, se requiere un nombre de evento. Formatea el`time`campo como una cadena ISO 8601 o en`yyyy-MM-dd'T'HH:mm:ss:SSSZ`formato . Si el`time`campo no está presente, Braze utiliza el valor`UPDATED_AT` de la columna como hora del evento. Otros campos como `app_id` y `properties` son opcionales. 
 
-Ten en cuenta que sólo puedes sincronizar un evento por fila.
+Nota: solo puedes sincronizar un evento por fila.
 
 ```json
 {
@@ -476,9 +726,9 @@ Ten en cuenta que sólo puedes sincronizar un evento por fila.
 
 {% endtab %}
 {% tab Purchase %}
-Para sincronizar los eventos de compra, se necesitan `product_id`, `currency`, y `price`. Formatea el campo `time`, que es opcional, como una cadena ISO 8601 o en formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Si el campo `time` no está presente, Braze utiliza el valor de la columna `UPDATED_AT` como hora del evento. Otros campos, como `app_id`, `quantity` y `properties` son opcionales.
+Para sincronizar los eventos de compra,`product_id` se `price`requiere ,`currency` , y . Formatea el`time`campo, que es opcional, como una cadena ISO 8601 o en`yyyy-MM-dd'T'HH:mm:ss:SSSZ`formato . Si el`time`campo no está presente, Braze utiliza el valor`UPDATED_AT` de la columna como hora del evento. Otros campos, como `app_id`, `quantity` y `properties` son opcionales.
 
-Ten en cuenta que sólo puedes sincronizar un evento de compra por fila.
+Nota: solo puedes sincronizar un evento de compra por fila.
 
 ```json
 {
@@ -518,7 +768,7 @@ Ten en cuenta que sólo puedes sincronizar un evento de compra por fila.
 {% endtab %}
 {% endtabs %}
 
-### Evita los tiempos de espera en las consultas del almacén de datos
+### Evita los tiempos de espera en las consultas del almacén de datos.
 
 Recomendamos que las consultas se realicen en el plazo de una hora para obtener un rendimiento óptimo y evitar posibles errores. Si las consultas superan este plazo, considere la posibilidad de revisar la configuración de su almacén de datos. La optimización de los recursos asignados a su almacén puede ayudar a mejorar la velocidad de ejecución de las consultas.
 
@@ -527,9 +777,9 @@ Recomendamos que las consultas se realicen en el plazo de una hora para obtener 
 | Limitación            | Descripción                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Número de integraciones | No hay límite en el número de integraciones que puedes configurar. Sin embargo, sólo podrá configurar una integración por tabla o vista.                                             |
-| Cantidad de filas         | Por defecto, cada ejecución puede sincronizar hasta 500 millones de filas. Braze detiene cualquier sincronización con más de 500 millones de filas nuevas. Si necesitas un límite superior, ponte en contacto con tu administrador del éxito del cliente de Braze o con el soporte de Braze. |
+| Cantidad de filas         | De forma predeterminada, cada ejecución puede sincronizar hasta 500 millones de filas. Braze detiene cualquier sincronización con más de 500 millones de filas nuevas. Si necesitas un límite superior a este, ponte en contacto con tu administrador del éxito del cliente de Braze o con el soporte de Braze. |
 | Atributos por fila     | Cada fila debe contener un único ID de usuario y un objeto JSON con un máximo de 250 atributos. Cada clave del objeto JSON cuenta como un atributo (es decir, un array cuenta como un atributo). |
-| Tamaño de la carga útil           | Cada fila puede contener una carga útil de hasta 1 MB. Braze rechaza las cargas útiles superiores a 1 MB y registra el error "La carga útil era superior a 1 MB" en el registro de sincronización, junto con el ID externo asociado y la carga útil truncada. |
+| Tamaño de la carga útil           | Cada fila puede contener una carga útil de hasta 1 MB. Braze rechaza cargas útiles superiores a 1 MB y registra el error «La carga útil era superior a 1 MB» en el registro de sincronización, junto con el ID externo asociado y la carga útil truncada. |
 | Tipo de datos              | Puedes sincronizar atributos de usuario, eventos y compras a través de la ingesta de datos en la nube.                                                                                                  |
 | Región de Braze           | Este producto está disponible en todas las regiones Braze. Cualquier región Braze puede conectarse a cualquier región de datos de origen.                                                                              |
 | Región de origen       | Braze se conectará a su almacén de datos o entorno de nube en cualquier región o proveedor de nube.                                                                                        |
