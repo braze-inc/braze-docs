@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Lista de integraciones"
 article_title: "GET: Lista de integraciones"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 1
 alias: /api/cdi/get_integration_list/
 layout: api_page
@@ -81,8 +81,8 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
       "warehouse_type": (string) data warehouse type,
       "last_job_start_time": (string) timestamp of the last sync run in ISO 8601,
       "last_job_status": (string) status of the last sync run,
-      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601,
-    },
+      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601
+    }
   ],
   "message": "success"
 }
@@ -97,6 +97,6 @@ La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados 
 | `400 Invalid cursor` | Compruebe que su `cursor` es válido. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para obtener más códigos de estado y mensajes de error asociados, consulta [Errores fatales & respuestas]({{site.baseurl}}/api/errors/#fatal-errors).
+Para obtener más códigos de estado y mensajes de error asociados, consulta [Respuestas&]({{site.baseurl}}/api/errors/#fatal-errors) de [errores fatales]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}
