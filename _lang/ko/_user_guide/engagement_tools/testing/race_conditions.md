@@ -33,7 +33,7 @@ Braze에서 가장 일반적인 경합 조건 중 하나는 새로 생성된 사
 1. 사용자가 생성됩니다;
 2. 동일한 사용자가 즉시 메시지 타겟팅, 커스텀 이벤트 수행 또는 커스텀 속성 로깅을 수행합니다.
 
-그러나 경우에 따라 두 번째 이벤트가 먼저 트리거되기도 합니다. This means a message is attempting to be sent to a user that doesn’t exist yet. As a result, the user never receives it. This also applies to events or attributes, where the event or attribute attempts to be logged to a user profile that hasn’t been created yet.
+그러나 경우에 따라 두 번째 이벤트가 먼저 트리거됩니다. This means a message is attempting to be sent to a user that doesn’t exist yet. As a result, the user never receives it. This also applies to events or attributes, where the event or attribute attempts to be logged to a user profile that hasn’t been created yet.
 
 ### Best practices
 
@@ -48,7 +48,7 @@ For example, after a user registers for your app, you can send a promotional off
 ## Scenario 2: 여러 API 엔드포인트 사용
 
 {% alert important %}
-비동기 처리를 사용하여 속도와 유연성을 극대화합니다. 즉, API 호출이 개별적으로 전송될 경우 전송된 순서대로 처리된다는 보장을 할 수 없습니다.
+우리는 속도와 유연성을 극대화하기 위해 비동기 처리를 사용합니다. 이는 API 호출이 별도로 전송될 때, 전송된 순서대로 처리된다는 보장을 할 수 없음을 의미합니다.
 {% endalert %}
 
 다음과 같이 여러 API 엔드포인트에서 이 경합 조건이 발생할 수 있는 몇 가지 시나리오가 있습니다.
@@ -56,10 +56,10 @@ For example, after a user registers for your app, you can send a promotional off
 - 별도의 API 엔드포인트를 사용하여 사용자 생성 및 캔버스 또는 캠페인 트리거하기
 - 커스텀 속성, 이벤트 또는 구매를 업데이트하기 위해 `/users/track` 엔드포인트를 여러 번 개별적으로 호출하기
 
-When user information is sent to Braze using the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), it may occasionally take a few seconds to process. 즉, `/users/track` 와 `/campaign/trigger/send` 과 같은 메시징 엔드포인트에 동시에 요청이 이루어질 경우 메시지가 전송되기 전에 사용자 정보가 업데이트된다는 보장이 없습니다.
+When user information is sent to Braze using the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), it may occasionally take a few seconds to process. 이는 `/users/track` 및 메시징 엔드포인트에 `/campaign/trigger/send`와 같이 요청이 동시에 이루어질 때, 메시지가 전송되기 전에 사용자 정보가 업데이트된다는 보장을 할 수 없음을 의미합니다.
 
 {% alert note %}
-사용자 속성과 이벤트가 동일한 요청( `/users/track` 또는 소프트웨어 개발 키트에서)으로 전송되는 경우, Braze는 이벤트 또는 메시지 전송을 시도하기 전에 속성을 먼저 처리합니다.
+사용자 속성과 이벤트가 동일한 요청으로 전송되면(`/users/track` 또는 SDK에서), Braze는 메시지를 전송하기 전에 속성을 처리합니다.
 {% endalert %}
 
 ### Best practices
@@ -74,13 +74,13 @@ If you're sending a scheduled message API request, these requests must be separa
 
 Instead of using multiple endpoints, you can include the [user attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object#object-body) and [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object) in a single API call using the [`campaign/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns). 
 
-이러한 객체가 트리거에 포함되면 메시지가 트리거되기 전에 속성이 먼저 처리되어 잠재적인 경합 조건이 제거됩니다. Note that trigger properties don't update the user profile, but are used in the context of the message only.
+이러한 객체가 트리거와 함께 포함되면, 메시지가 트리거되기 전에 속성이 먼저 처리되어 잠재적인 경합 조건을 제거합니다. Note that trigger properties don't update the user profile, but are used in the context of the message only.
 
 #### Use the POST: Track users (sync) endpoint
 
 Use the [`/users/track/sync/` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) to record custom events and purchases and update user profile attributes synchronously. Using this endpoint to update user profiles at the same time and in a single call can help prevent potential race conditions.
 
-{% include early_access_beta_alert.md feature='This endpoint' type='beta' %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' type='beta' %}
 
 ## Scenario 3: 액션 기반 트리거와 대상 필터 매칭하기
 
@@ -102,7 +102,7 @@ For example, if your campaign trigger is “Has made a purchase” and your audi
 
 #### Avoid audience filters that assume the trigger event has been updated
 
-This best practice is similar to avoiding redundant filters with the trigger event. 일반적으로 트리거 이벤트가 고객 프로필에 업데이트된다고 가정하는 필터는 실패합니다.
+This best practice is similar to avoiding redundant filters with the trigger event. 일반적으로 트리거 이벤트가 사용자 프로필에 업데이트된다고 가정하는 필터는 실패합니다.
 
 #### Use Liquid aborts (attributes only)
 
@@ -119,10 +119,10 @@ In this case, you can implement a trigger delay in a campaign or use a Delay ste
 ```
 {% endraw %}
 
-#### 사용자 데이터 관리 방법 확인
+#### 사용자 데이터가 어떻게 관리되고 있는지 확인하십시오.
 
-캔버스 응모 평가 중 경합 조건이 있는 경우, 사용자가 응모하지 않아야 할 캔버스에 응모할 수 있습니다. 예를 들어, 사용자의 프로필을 오디언스에 포함되도록 설정한 다음 캔버스에서 사용자가 더 이상 오디언스에 포함되지 않도록 대기열에 추가한 후에 업데이트할 수 있습니다. 
+캔버스 진입 평가 중에 경합 조건이 발생하면, 사용자가 들어가서는 안 되는 캔버스에 들어갈 수 있습니다. 예를 들어, 사용자의 프로필이 오디언스에 포함되도록 설정되고, 이후 캔버스가 사용자를 대기열에 추가한 후 오디언스에서 더 이상 자격이 없도록 업데이트될 수 있습니다. 
 
-사용자가 같은 초 내에 캔버스 입력 이벤트를 여러 번 트리거하는 경우, Braze는 해당 초에 한 번의 입력만 허용합니다(재입력이 인에이블먼트된 경우에도). 이렇게 하면 중복 항목을 방지할 수 있으므로 총 캔버스 항목 수가 총 트리거 이벤트 수보다 적을 수 있습니다.
+사용자가 같은 초 내에 캔버스 진입 이벤트를 여러 번 트리거하면, Braze는 그 초에 대해 단 한 번의 진입만 허용합니다(재진입이 활성화되어 있더라도). 이는 중복 진입을 방지하므로, 총 캔버스 진입 수가 총 트리거 이벤트 수보다 적을 수 있습니다.
 
-사용자 데이터가 어떻게 관리되고 업데이트되는지, 특히 특정 속성이 언제 어떻게 업데이트되는지(예: 소프트웨어 개발 키트, API, 배치 API 및 기타 방법)를 확인하는 것이 좋습니다. 이를 통해 사용자가 캠페인이나 캔버스에 들어온 이유와 사용자 프로필이 업데이트된 시기를 식별하고 명확하게 파악할 수 있습니다.
+사용자 데이터가 어떻게 관리되고 업데이트되는지, 특히 SDK, API, 배치 API 및 기타 방법에 의해 특정 속성이 언제 어떻게 업데이트되는지를 확인하는 것을 권장합니다. 이는 사용자가 캠페인이나 캔버스에 들어간 이유와 사용자의 프로필이 업데이트된 시점을 식별하고 명확히 하는 데 도움이 될 수 있습니다.
