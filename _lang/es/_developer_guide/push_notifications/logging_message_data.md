@@ -1,12 +1,12 @@
 ---
 nav_title: Datos del mensaje de registro
-article_title: Registra los datos de las notificaciones push a través del SDK de Braze
+article_title: Registra los datos de las notificaciones push a través del SDK de Braze.
 page_order: 7.2
 description: "Aprende a registrar datos de notificaciones push a través del SDK de Braze."
 noindex: true
 ---
 
-# Registrar datos de notificación push
+# Registrar datos de notificaciones push
 
 > Aprende a registrar datos de notificaciones push a través del SDK de Braze.
 
