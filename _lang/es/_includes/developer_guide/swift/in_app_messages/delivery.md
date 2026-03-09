@@ -1,26 +1,26 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-## Mensajes desencadenados
+## Desencadenantes de mensajes
 
 ### Tipos de desencadenantes
 
-Los mensajes dentro de la aplicación se desencadenan automáticamente cuando el SDK registra uno de los siguientes tipos de eventos personalizados: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, y `Push Click`. Ten en cuenta que los desencadenadores `Specific Purchase` y `Custom Event` también contienen sólidos filtros de propiedades.
+Los mensajes dentro de la aplicación se desencadenan automáticamente cuando el SDK registra uno de los siguientes tipos de eventos personalizados: `Any Purchase`,`Specific Purchase` `Session Start`, `Custom Event`, y `Push Click`. Ten en cuenta que los `Specific Purchase`desencadenantes`Custom Event`  y  también contienen filtros de propiedades robustos.
 
 {% alert note %}
-Los mensajes dentro de la aplicación no pueden desencadenarse a través de la API ni mediante eventos de la API: sólo eventos personalizados registrados por el SDK. Para saber más sobre el registro, consulta [Registrar eventos personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift).
+Los mensajes dentro de la aplicación no se pueden desencadenar a través de la API ni mediante eventos de la API, solo mediante eventos personalizados registrados por el SDK. Para obtener más información sobre el registro, consulta [Registro de eventos personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift).
 {% endalert %}
 
 ### Semántica de la entrega
 
-Todos los mensajes elegibles dentro de la aplicación se entregan al dispositivo del usuario al inicio de su sesión. Cuando se entreguen, el SDK precargará los activos, para que estén disponibles en el momento de desencadenar, minimizando la latencia de visualización. Si el evento desencadenado tiene más de un mensaje dentro de la aplicación elegible, sólo se entregará el mensaje con la prioridad más alta.
+Todos los mensajes elegibles dentro de la aplicación se entregan al dispositivo del usuario al inicio de la sesión. Cuando se entregue, el SDK precargará los activos para que estén disponibles en el momento del desencadenamiento, minimizando así la latencia de visualización. Si el evento desencadenante tiene más de un mensaje dentro de la aplicación elegible, solo se entregará el mensaje con la prioridad más alta.
 
-Para más información sobre la semántica de inicio de sesión del SDK,[consultaCiclo de vida de]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift) la sesión.
+Para obtener más información sobre la semántica de inicio de sesión del SDK, consulta[ Ciclo de vida de la sesión]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift).
 
-### Límite de velocidad predeterminado
+### Límite predeterminado de velocidad
 
 De forma predeterminada, puedes enviar un mensaje dentro de la aplicación una vez cada 30 segundos.
 
-Para anular esto, añade la propiedad `triggerMinimumTimeInterval` a tu configuración de Braze antes de que se inicialice la instancia de Braze. Se puede establecer en cualquier número entero positivo y representa el intervalo de tiempo mínimo en segundos. Por ejemplo:
+Para anular esto, añade la`triggerMinimumTimeInterval`propiedad a tu configuración de Braze antes de que se inicialice la instancia de Braze. Se puede establecer en cualquier número entero positivo y representa el intervalo de tiempo mínimo en segundos. Por ejemplo:
 
 {% tabs %}
 {% tab swift %}
@@ -81,16 +81,16 @@ if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
 
 Para una implementación completa, puedes consultar los ejemplos de personalización de mensajes dentro de la aplicación en nuestra [aplicación de ejemplo](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
 
-## Desactivar los desencadenantes automáticos
+## Desactivación de los activadores automáticos
 
 Para evitar que los mensajes dentro de la aplicación se desencadenen automáticamente:
 
 1. Implementa el delegado `BrazeInAppMessageUIDelegate` como se describe en nuestro [artículo sobre iOS aquí](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 2. Actualiza tu método delegado `inAppMessage(_:displayChoiceForMessage:)` para que devuelva `.discard`.
 
-## Desencadenar mensajes manualmente
+## Activación manual de mensajes desencadenados
 
-### Utilizar un evento del lado del servidor
+### Uso de un evento del lado del servidor del servidor
 
 Para desencadenar mensajes dentro de la aplicación utilizando eventos del lado del servidor, envía un push silencioso al dispositivo para que éste registre un evento basado en SDK. Este evento SDK puede desencadenar posteriormente el mensaje dentro de la aplicación dirigido al usuario.
 
@@ -135,11 +135,11 @@ Debido a que se utiliza un mensaje push para registrar un evento personalizado r
 
 Crea una [campaña push silenciosa]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) que se desencadene a través del evento enviado por el servidor. 
 
-![Una campaña de mensajería dentro de la aplicación basada en acciones que se entregará a los usuarios cuyos perfiles de usuario tengan el evento personalizado "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+![Campaña de mensajes dentro de la aplicación basada en acciones que se entregará a los usuarios cuyos perfiles de usuario tengan el evento "server_event".]({%image_buster/assets/img_archive/iosServerSentPush.pngpersonalizado    %})
 
 La campaña push debe incluir extras de par clave-valor, que indiquen que esta campaña push se envía para registrar un evento personalizado del SDK. Este evento se utilizará para desencadenar el mensaje dentro de la aplicación.
 
-![Una campaña de mensajería dentro de la aplicación de entrega basada en acciones que tiene dos pares clave-valor. "CAMPAIGN_NAME" configurado como "Ejemplo de nombre de mensaje dentro de la aplicación", y "IS_SERVER_EVENT" configurado como "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![Una campaña de mensajes dentro de la aplicación basada en acciones que tiene dos pares clave-valor."CAMPAIGN_NAME"  establecido como «Ejemplo de nombre de mensaje dentro de la aplicación» y"IS_SERVER_EVENT"  establecido en «verdadero».]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 El código del método `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` comprueba si hay una clave `IS_SERVER_EVENT` y registrará un evento personalizado del SDK si la hay.
 
@@ -151,13 +151,13 @@ Crea tu campaña de mensajes dentro de la aplicación visible para el usuario en
 
 En el siguiente ejemplo, el mensaje específico dentro de la aplicación que se va a desencadenar se ha configurado enviando la propiedad del evento como parte del push silencioso inicial.
 
-![Una campaña de entrega basada en acciones de mensajes dentro de la aplicación que se entregará a los usuarios que realicen el evento personalizado "Desencadenante de mensajes dentro de la aplicación" donde "campaign_name" es igual a "Ejemplo de nombre de campaña de IAM".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Una campaña de mensajes dentro de la aplicación basada en acciones que se entregará a los usuarios que realicen el evento personalizado «Activador de mensajes dentro de la aplicación» donde"campaign_name"  es igual a «Ejemplo de nombre de campaña IAM».]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 {% alert note %}
 Ten en cuenta que estos mensajes dentro de la aplicación sólo se desencadenarán si se recibe el push silencioso mientras la aplicación está en primer plano.
 {% endalert %}
 
-### Visualización de un
+### Mostrar un valor predefinido
 
 Para mostrar manualmente un mensaje dentro de la aplicación predefinido, utiliza el siguiente método:
 
@@ -169,7 +169,7 @@ if let inAppMessage = AppDelegate.braze?.inAppMessagePresenter?.nextAvailableMes
 
 ### Mostrar un mensaje en tiempo real
 
-También puedes mostrar mensajes locales dentro de la aplicación en tiempo real llamando manualmente al método [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:)) en tu `inAppMessagePresenter`. Por ejemplo:
+También puedes mostrar mensajes dentro de la aplicación en tiempo real llamando manualmente al[`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:))método en tu `inAppMessagePresenter`. Por ejemplo:
 
 {% tabs %}
 {% tab swift %}
