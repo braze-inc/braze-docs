@@ -230,8 +230,8 @@ erDiagram
     GROUP_6 ||--o{ EVENT : joins
 ```
 
-- `PK` = clave primaria
-- `FK` = clave ajena
+- `PK` = clave principal
+- `FK` = clave externa
 
 ## Tablas de relaciones
 
