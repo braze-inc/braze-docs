@@ -1,6 +1,6 @@
 ---
 nav_title: プッシュ通知
-article_title: Braze SDKを通したプッシュ通知データの記録
+article_title: Braze SDKを通じてプッシュ通知データをログに記録する
 page_order: 7.2
 description: "Braze SDKを通してプッシュ通知データを記録する方法を学習する。"
 noindex: true
