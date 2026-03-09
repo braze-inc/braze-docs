@@ -1,5 +1,5 @@
 ---
-nav_title: トラッキング、 追跡セッション
+nav_title: トラックセッション
 article_title: iOS用トラックセッション
 platform: iOS
 page_order: 0
@@ -62,5 +62,5 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 ユーザーを介してセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの [**アプリの利用状況**] に移動します。「セッション」指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。
 
-![ユーザープロファイルのアプリ使用セクションで、セッション数、最終使用日、初使用日が表示される。]({% image_buster /assets/img_archive/test_session.png %})
+![ユーザープロファイルのアプリ利用状況セクションには、セッション数、最終利用日、初回利用日が表示される。]({% image_buster /assets/img_archive/test_session.png %})
 
