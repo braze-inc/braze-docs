@@ -23,7 +23,7 @@ Estos parámetros incluyen:
 
 ## Perfiles de usuario anónimos
 
-Cualquier usuario sin un `external_id` designado se denomina [usuario anónimo]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/). Por ejemplo, podrían ser usuarios que visitaron tu sitio web pero no se registraron, o usuarios que descargaron tu aplicación móvil pero no crearon un perfil.
+Cualquier usuario sin un nombre designado`external_id`se denomina [usuario]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/) [anónimo]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/). Por ejemplo, podrían ser usuarios que visitaron tu sitio web pero no se registraron, o usuarios que descargaron tu aplicación móvil pero no crearon un perfil.
 
 Inicialmente, cuando el SDK reconoce a un usuario, se crea un perfil de usuario anónimo con un `braze_id` asociado: un identificador único que Braze asigna automáticamente, que no se puede editar y que es específico del dispositivo. Este identificador puede utilizarse para actualizar el perfil del usuario a través de la [API]({{site.baseurl}}/api/endpoints/user_data/).
 
@@ -40,7 +40,7 @@ Otras ventajas de utilizar `external_id` son las siguientes:
 
 ### Consideraciones sobre los ID externos
 
-{% include alerts/warning_alerts.md alert='User profile external_id' %} 
+{% multi_lang_include alerts/warning_alerts.md alert='User profile external_id' %} 
 
 #### Riesgo de utilizar un correo electrónico o un correo con hash como ID externo
 
@@ -64,7 +64,7 @@ En otras palabras, ya tienes un perfil de usuario para este usuario. En este cas
 
 Si tanto el usuario anónimo como el usuario conocido tienen nombre de pila, se mantiene el nombre de pila del usuario conocido. Si el usuario conocido tiene un valor nulo y el usuario anónimo tiene un valor, el valor del usuario anónimo se fusiona en el perfil del usuario conocido si el valor entra dentro de estos [campos específicos del perfil de usuario]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior).
 
-Para obtener información sobre cómo configurar un `external_id` con un perfil de usuario, consulta nuestra documentación[(iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift), [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)).
+Para obtener información sobre cómo configurar un`external_id`  contra un perfil de usuario, consulta nuestra documentación ([iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift), [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)).
 
 ## Alias de usuario
 
@@ -74,7 +74,7 @@ Cada alias funciona como un par clave-valor que consta de dos partes: un `alias_
 
 ### Actualización de alias de usuario
 
-Un alias puede actualizarse con un nuevo nombre para una etiqueta determinada después de configurarla, ya sea utilizando nuestros [puntos finales de Datos de usuario]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) o pasando un nuevo nombre a través del SDK. El alias de usuario será entonces visible al exportar los datos de ese usuario.
+Un alias se puede actualizar con un nuevo nombre para una etiqueta de alias determinada después de haberlo establecido, ya sea utilizando nuestros [puntos finales de datos de usuario]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) o pasando un nuevo nombre a través del SDK. El alias de usuario será entonces visible al exportar los datos de ese usuario.
 
 ![Dos perfiles de usuario diferentes para usuarios distintos con la misma etiqueta de alias de usuario pero diferentes nombres de alias.]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
 
@@ -100,7 +100,7 @@ Para obtener información sobre cómo configurar un alias de usuario, consulte n
 
 ## Caso de uso avanzado
 
-Puedes establecer un nuevo alias de usuario para perfiles de usuario identificadores existentes a través de nuestro SDK y nuestra API utilizando los [puntos finales de Datos de usuario]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint). Sin embargo, los alias de usuario no pueden configurarse a través de la API para un perfil de usuario desconocido existente.
+Puedes establecer un nuevo alias de usuario para los perfiles de usuario identificados existentes a través de nuestro SDK y nuestra API utilizando los [puntos finales de datos de usuario]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint). Sin embargo, los alias de usuario no pueden configurarse a través de la API para un perfil de usuario desconocido existente.
 
 Los alias de usuario también se fusionan en el proceso. Sin embargo, si tanto el usuario que va a quedar huérfano como el usuario de destino tienen un alias con la misma etiqueta, sólo se mantiene el alias del usuario de destino.
 
@@ -108,8 +108,8 @@ Desinstalar y volver a instalar una aplicación generará un nuevo `braze_id` an
 
 ### Solución de problemas con ID de usuario
 
-Todos los ID de usuario se pueden utilizar para encontrar e identificar usuarios dentro de su cuadro de mandos para realizar pruebas. Para encontrar a tu usuario en el panel de Braze, consulta [Añadir usuarios de prueba]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users).
+Todos los ID de usuario se pueden utilizar para encontrar e identificar usuarios dentro de su cuadro de mandos para realizar pruebas. Para encontrar tu usuario en el panel de Braze, consulta [Añadir usuarios de prueba.]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users)
 
 {% alert important %}
-Braze prohibirá o bloqueará a los usuarios con más de 5.000.000 de sesiones ("usuarios ficticios") y dejará de ingerir sus eventos SDK, ya que estos usuarios son generalmente el resultado de una mala integración. Si descubres que esto le ha ocurrido a un usuario legítimo, ponte en contacto con tu director de cuentas Braze.
+Braze prohibirá o bloqueará a los usuarios con más de 5.000.000 de sesiones ("usuarios ficticios") y dejará de ingerir sus eventos SDK, ya que estos usuarios son generalmente el resultado de una mala integración. Si descubres que esto le ha sucedido a un usuario legítimo, ponte en contacto con tu director de cuentas de Braze.
 {% endalert %}
