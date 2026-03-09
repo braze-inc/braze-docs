@@ -4,7 +4,7 @@ nav_title: Início
 article_title: Guia da API do Braze
 layout: api_glossary
 glossary_top_header: "Guia da API do Braze"
-glossary_top_text: "A Braze oferece uma API REST de alta performance para que você possa rastrear usuários, enviar mensagens, exportar dados e muito mais. Esta página lista os endpoints da Braze API disponíveis e seus usos."
+glossary_top_text: "A Braze oferece uma API REST de alta performance para que você possa rastrear usuários, enviar mensagens, exportar dados e muito mais. Esta página lista os endpoints da API Braze disponíveis e seus usos."
 page_type: glossary
 description: "Esta landing page lista os endpoints da API Braze disponíveis e seus usos."
 glossary_tag_name: Endpoint Type
@@ -42,6 +42,7 @@ glossary_tags:
   - name: Lista de e-mails
   - name: Modelos de e-mail
   - name: KPI
+  - name: Biblioteca de mídia
   - name: Compras
   - name: Central de Preferências
   - name: Envio de mensagens
@@ -109,7 +110,7 @@ glossaries:
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_create_send_ids/'>/sends/id/create</a>"
-    description: "Crie IDs de envio para usar no envio de mensagens e no rastreamento do desempenho das mensagens de forma programática, sem a criação de campanhas para cada envio."
+    description: "Crie IDs de envio para usar no envio de mensagens e rastreamento do desempenho das mensagens programaticamente, sem a criação de campanhas para cada envio."
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{CAMPAIGN_ID}/send</a>"
@@ -149,7 +150,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canva/trigger/schedule/update</a>"
-    description: Atualize as telas programadas disparadas pela API que você criou no dashboard.
+    description: Atualize as Canvases programadas acionadas pela API que você criou no dashboard.
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/'>/messages/scheduled_broadcasts</a>"
@@ -225,7 +226,7 @@ glossaries:
     tags:
       - Campaigns
   - name: "<a href='/docs/api/endpoints/export/campaigns/get_campaigns/'>/campaigns/list</a>"
-    description: "Exporte uma lista de campanhas, cada uma das quais inclui o nome, o identificador da API da campanha, se é uma campanha de API e as tags associadas à campanha."
+    description: "Exporte uma lista de campanhas, cada uma das quais inclui seu nome, identificador da API da campanha, se é uma campanha da API e tags associadas à campanha."
     tags:
       - Campaigns
   - name: "<a href='/docs/api/endpoints/export/campaigns/get_send_analytics/'>/sends/data_series</a>"
@@ -257,11 +258,11 @@ glossaries:
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/segments/get_segment/'>/segments/list</a>"
-    description: "Exporte uma lista de segmentos, cada um dos quais inclui seu nome, identificador da API do segmento e se tem a análise de dados ativada."
+    description: "Exporte uma lista de segmentos, cada um dos quais inclui seu nome, identificador da API do segmento e se possui rastreamento de análise habilitado."
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/segment/cancel</a>"
-    description: Cancela as exportações para o ID de segmento fornecido.
+    description: Cancele as exportações para o ID de segmento fornecido.
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/sessions/get_sessions_analytics/'>/sessions/data_series</a>"
@@ -281,7 +282,7 @@ glossaries:
     tags:
       - Custom Events
   - name: "<a href='/docs/api/endpoints/export/custom_events/get_custom_events/'>/events/list</a>"
-    description: Exporte uma lista de nomes de eventos personalizados registrados para o seu app.
+    description: Exporte uma lista de nomes de eventos personalizados registrados para seu app.
     tags:
       - Custom Events
   - name: "<a href='/docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/'>/content_blocks/create</a>"
@@ -317,11 +318,11 @@ glossaries:
     tags:
       - KPI
   - name: "<a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>"
-    description: "Remover números de telefone \"inválidos\" da lista de inválidos no Braze. Use essa opção para revalidar números telefônicos depois que o Braze os marcar como inválidos."
+    description: "Remover números de telefone \"inválidos\" da lista de inválidos no Braze. Use isso para revalidar números de telefone após o Braze marcá-los como inválidos."
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/sms/get_query_invalid_numbers/'>/sms/invalid_phone_numbers</a>"
-    description: "Obter uma lista de números telefônicos que o Braze marcou como \"inválidos\" em um determinado período de tempo."
+    description: "Puxe uma lista de números de telefone que o Braze marcou como \"inválidos\" dentro de um determinado período de tempo."
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/export/purchases/get_list_product_id/'>/purchases/product_list</a>"
@@ -345,7 +346,7 @@ glossaries:
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>"
-    description: "Veja os detalhes de sua Central de Preferências, inclusive quando foi criada e atualizada."
+    description: "Veja os detalhes do seu centro de preferências, incluindo quando foi criado e atualizado."
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/post_create_preference_center'>/preference_center/v1</a>"
@@ -401,11 +402,11 @@ glossaries:
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
-    description: Substituir um item em um catálogo.
+    description: Substitua um item em um catálogo.
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>"
-    description: Substituir vários itens em um catálogo.
+    description: Substitua vários itens em um catálogo.
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>"
@@ -429,7 +430,7 @@ glossaries:
     tags:
       - SCIM
   - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
-    description: Procure uma conta de usuário existente no dashboard especificando o ID do recurso.
+    description: Procure uma conta de usuário do dashboard existente especificando seu ID de recurso.
     tags:
       - SCIM
   - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>"
@@ -465,11 +466,15 @@ glossaries:
     tags:
       - SDK Authentication
   - name: "<a href='/docs/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/'>/app_group/sdk_authentication/primary</a>"
-    description: Defina uma chave de autenticação do SDK como a chave primária de seu app.
+    description: Defina uma chave de autenticação do SDK como a chave primária para seu app.
     tags:
       - SDK Authentication
   - name: "<a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_authentication/delete</a>"
-    description: Exclua uma chave de autenticação do SDK para seu app.
+    description: Excluir uma chave de autenticação do SDK para seu app.
     tags:
       - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/media_library/manage_assets/create/'>/media_library/create</a>"
+    description: Fazer upload de um ativo para a biblioteca de mídia.
+    tags:
+      - Media Library
 ---
