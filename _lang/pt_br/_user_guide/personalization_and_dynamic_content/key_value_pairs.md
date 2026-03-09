@@ -127,7 +127,7 @@ Se você estiver usando a API do provedor HTTP/2, qualquer carga útil individua
 
 ###### campanhas acionadas por API
 
-A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e programadas por API, no dashboard defina uma chave como "example_key", e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
+A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e programadas, no dashboard defina uma chave como "example_key", e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ### Android
 
@@ -145,7 +145,7 @@ O backend do seu app deve ser capaz de processar pares chave-valor personalizado
 
 ###### campanhas acionadas por API
 
-A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e programadas por API, no dashboard defina uma chave como "example_key", e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
+A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e programadas, no dashboard defina uma chave como "example_key", e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ##### Opções de envio de mensagens do FCM
 
@@ -176,7 +176,7 @@ Pares chave-valor não podem ser definidos através do editor de arrastar e solt
 
 #### Campanhas disparadas por API
 
-A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e programadas por API, no dashboard defina uma chave como "example_key", e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
+A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e programadas, no dashboard defina uma chave como "example_key", e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ## E-mails
 
