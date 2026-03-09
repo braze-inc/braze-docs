@@ -85,8 +85,8 @@ The following are all available permissions you can assign at the Team level. An
 - View Webhook Templates
 - Edit Webhook Templates
 - Archive Webhook Templates
-- View Link Templates
-- Edit Link Templates
+- View Email Link Templates
+- Edit Email Link Templates
 - View Media Library Assets
 - Edit Media Library Assets
 - Delete Media Library Assets
@@ -102,7 +102,6 @@ The following are all available permissions you can assign at the Team level. An
 - Launch Canvases
 - Export User Data
 - View User Profiles PII Compliant
-- View Dashboard Users
 - Edit Dashboard Users
 - Approve Campaigns
 - Approve Canvases

@@ -46,8 +46,8 @@ To access the Deliverability Center, you need the "Access Campaigns, Canvases, C
 - View Webhook Templates
 - Edit Webhook Templates
 - Archive Webhook Templates
-- View Link Templates
-- Edit Link Templates
+- View Email Link Templates
+- Edit Email Link Templates
 - View Media Library Assets
 - Edit Media Library Assets
 - Delete Media Library Assets

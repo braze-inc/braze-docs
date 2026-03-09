@@ -20,6 +20,9 @@ guide_featured_list:
 - name: Security settings
   link: /docs/user_guide/administer/global/admin_settings/security_settings/
   image: /assets/img/braze_icons/shield-01.svg
+- name: Workspace time zones
+  link: /docs/user_guide/administer/global/admin_settings/workspace_time_zone/
+  image: /assets/img/braze_icons/user-circle.svg
 - name: SCIM provisioning
   link: /docs/user_guide/administer/global/user_management/automated_user_provisioning/
   image: /assets/img/braze_icons/users-01.svg

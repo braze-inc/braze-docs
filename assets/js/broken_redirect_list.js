@@ -938,6 +938,8 @@ validurls['/docs/user_guide/administrative/app_settings/company_settings/securit
 validurls['/docs/user_guide/administrative/app_settings/company_settings/security_settings/'] = '/docs/user_guide/administer/global/admin_settings/security_settings/';
 validurls['/docs/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3'] = '/docs/user_guide/administer/global/admin_settings/security_settings/security_export_s3';
 validurls['/docs/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/'] = '/docs/user_guide/administer/global/admin_settings/security_settings/security_export_s3/';
+validurls['/docs/user_guide/administrative/app_settings/company_settings/workspace_time_zone'] = '/docs/user_guide/administer/global/admin_settings/workspace_time_zone';
+validurls['/docs/user_guide/administrative/app_settings/company_settings/workspace_time_zone/'] = '/docs/user_guide/administer/global/admin_settings/workspace_time_zone/';
 validurls['/docs/user_guide/administrative/app_settings/brand_guidelines'] = '/docs/user_guide/administer/global/workspace_settings/brand_guidelines';
 validurls['/docs/user_guide/administrative/app_settings/brand_guidelines/'] = '/docs/user_guide/administer/global/workspace_settings/brand_guidelines/';
 validurls['/docs/user_guide/administrative/app_settings/email_settings'] = '/docs/user_guide/administer/global/workspace_settings/email_preferences';
