@@ -1,6 +1,6 @@
 ---
-nav_title: Klicks manuell behandeln
-article_title: Content-Card-Klicks manuell behandeln für iOS
+nav_title: Klicken Sie manuell
+article_title: Klickvorgänge auf Content-Cards für iOS manuell verarbeiten
 platform: iOS
 page_order: 3
 description: "In diesem Artikel erfahren Sie, wie Sie Klicks auf Inhaltskarten in Ihrer iOS-Anwendung manuell behandeln können."
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Klicks manuell behandeln
+# Klicken Sie manuell
 
 Sie können Content-Card-Klicks manuell verarbeiten, indem Sie das Protokoll [`ABKContentCardsTableViewControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_content_cards_table_view_controller_delegate-p.html) implementieren und Ihr Delegate-Objekt als Eigenschaft des Typs `delegate` für `ABKContentCardsTableViewController` festlegen. Ein Beispiel dafür finden Sie in der [Beispielanwendung Content Cards](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp). 
 
