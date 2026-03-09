@@ -58,8 +58,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/uninstalls/d
 }
 ```
 
-{% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
-{% endalert %}
+{% multi_lang_include alerts/tip_alerts.md alert='Export troubleshooting' %}
 
 {% endapi %}
