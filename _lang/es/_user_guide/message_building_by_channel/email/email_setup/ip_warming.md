@@ -21,13 +21,13 @@ El calentamiento de IP está diseñado para ayudarte a establecer una reputació
 
 Los ISP estrangulan el envío de correo electrónico cuando sospechan que se trata de spam para proteger a sus usuarios. Por ejemplo, si realiza un envío a 100.000 usuarios, el ISP podría entregar el correo electrónico sólo a 5.000 de esos usuarios durante la primera hora. A continuación, el ISP controla las medidas de interacción, como las tarifas abiertas, las tasas de clics, las cancelaciones de suscripción y los informes de correo no deseado. Así, si se produce un número significativo de informes de spam, podrían optar por relegar el resto de ese envío a la carpeta de spam en lugar de entregarlo en la bandeja de entrada del usuario. 
 
-Si la interacción es moderada, pueden seguir estrangulando tu correo electrónico para recopilar más datos de interacción y determinar con mayor certeza si el correo es o no spam. Si el correo electrónico tiene unas métricas de interacción muy altas, pueden dejar de acelerar este correo electrónico por completo. Utilizan esos datos para crear una reputación de correo electrónico que, a la larga, determinará si sus mensajes se filtran automáticamente a spam o no.
+Si la interacción es moderada, es posible que sigan limitando tu correo electrónico para recopilar más datos de interacción y determinar con mayor certeza si el correo electrónico es correo no deseado o no. Si el correo electrónico tiene unas métricas de interacción muy altas, pueden dejar de acelerar este correo electrónico por completo. Utilizan esos datos para crear una reputación de correo electrónico que, a la larga, determinará si sus mensajes se filtran automáticamente a spam o no.
 
 Si tu dominio o IP está bloqueado por un ISP, los registros de mensajes en el [Registro de Actividad de Mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) contendrán información sobre qué sitios web visitar para apelar a estos ISP y salir de esas listas.
 
 ## Calendario de calentamiento de IP
 
-Recomendamos encarecidamente respetar este calendario de calentamiento de IP estrictamente para apoyar la capacidad de entrega. También es importante que no te saltes días, ya que un escalado constante mejora las métricas de entrega.
+Recomendamos encarecidamente respetar este calendario de calentamiento de IP estrictamente para apoyar la capacidad de entrega. También es importante que no te saltes ningún día, ya que la escalabilidad constante mejora las métricas de entrega.
 
 Día | Nº de correos electrónicos a enviar
 ----|--------------------------|
@@ -52,7 +52,7 @@ Día | Nº de correos electrónicos a enviar
 
 Sugerimos calentar hasta tu envío máximo. Es decir, si normalmente envías 2 millones de correos electrónicos al día, pero tienes previsto enviar 7 millones durante un periodo estacional, ese "pico" de envíos es el que debes calentar.
 
-Una vez completado el calentamiento de IP y alcanzado el volumen diario deseado, debes tratar de mantener ese volumen diariamente. Es de esperar cierta fluctuación, pero alcanzar el volumen deseado y luego hacer un envío masivo sólo una vez a la semana, puede afectar negativamente a tus métricas de entrega y a la reputación del remitente. 
+Una vez completado el calentamiento de IP y alcanzado el volumen diario deseado, debes intentar mantener ese volumen a diario. Es normal que haya cierta fluctuación, pero alcanzar el volumen deseado y luego realizar solo un envío masivo una vez a la semana puede afectar negativamente a tus métricas de entrega y a la reputación del remitente. 
 
 {% alert important %}
 La mayoría de los ISP solo almacenan los datos de reputación durante 30 días. Si pasas un mes sin enviar ningún mensaje, tendrás que repetir el proceso de calentamiento de IP.
@@ -66,7 +66,7 @@ Nuestra función integrada de limitación de usuarios es una herramienta útil p
 
 ## Segmentación de subdominios
 
-Muchos ISP y proveedores de acceso al correo electrónico ya no filtran por reputación de la dirección IP. Estas tecnologías de filtrado ahora también tienen en cuenta la reputación basada en el dominio. Esto significa que los filtros examinarán todos los datos asociados al dominio del remitente y no sólo la dirección IP. Por esta razón, además de calentar la IP de su correo electrónico, también recomendamos tener dominios o subdominios separados para el correo de marketing, transaccional y corporativo. 
+Muchos ISP y proveedores de acceso al correo electrónico ya no filtran por la reputación de la dirección IP. Estas tecnologías de filtrado ahora también tienen en cuenta la reputación basada en el dominio. Esto significa que los filtros examinarán todos los datos asociados al dominio del remitente y no sólo la dirección IP. Por esta razón, además de calentar la IP de su correo electrónico, también recomendamos tener dominios o subdominios separados para el correo de marketing, transaccional y corporativo. 
 
 {% alert important %}
 La segmentación por subdominios es especialmente importante para los remitentes de gran volumen. Estos remitentes deben trabajar con un representante de Braze al configurar su cuenta para confirmar que se adhieren a esta práctica.
@@ -76,7 +76,7 @@ Recomendamos segmentar sus dominios de modo que el correo corporativo se envíe 
 
 ## Buenas prácticas
 
-Puedes evitar todas las consecuencias de no calentar de IP siguiendo estas buenas prácticas:
+Puedes evitar todas las consecuencias de no realizar el calentamiento de IP siguiendo estas prácticas recomendadas:
 
 ### Empezar con pequeños volúmenes de envío de correo electrónico
 
@@ -94,12 +94,12 @@ Consulte nuestro [calendario de calentamiento de IP](#ip-warming-schedules) para
 
 ### Limpie sus listas de correo electrónico
 
-Confirme que su lista de correo electrónico está limpia y no tiene correos electrónicos antiguos o no verificados. Lo ideal es que te asegures de que [cumples tanto la CASL como la CAN-SPAM]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/).
+Confirme que su lista de correo electrónico está limpia y no tiene correos electrónicos antiguos o no verificados. Lo ideal es asegurarte de que cumples tanto [con la ley CASL como con la ley CAN-SPAM]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/) para evitar el correo no deseado.
 
 ### Controla la reputación del remitente
 
 Cuando lleves a cabo el proceso de calentamiento de IP, asegúrate de vigilar cuidadosamente la reputación del remitente mientras realizas el proceso de calentamiento de IP. Es importante vigilar estas métricas específicas:
-- **Tasas de rebote:** Si alguna campaña rebota más de un 3-5%, debes evaluar la limpieza de tu lista siguiendo las directrices de nuestro [Mantenla limpia: la importancia del saneamiento de las listas de correo electrónico](https://www.braze.com/blog/email-list-hygiene/). Además, deberías plantearte aplicar una [política de suspensión]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) para dejar de enviar por correo electrónico a las direcciones de correo electrónico inactivas o que no participan.
+- **Tasas de rebote:** Si alguna campaña rebota más del 3-5 %, debes evaluar la limpieza de tu lista siguiendo las directrices de nuestro artículo [«Mantén tu lista limpia»: la importancia del saneamiento de las listas de correo electrónico](https://www.braze.com/blog/email-list-hygiene/). Además, deberías considerar la posibilidad de implementar una [política de caducidad]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) para dejar de realizar el envío por correo electrónico a direcciones inactivas o que no generan interacción.
 - **Informes de spam:** Si alguna campaña se considera spam en un porcentaje superior al 0,08%, debe reevaluar el contenido que envía, comprobar que está dirigido a un público interesado y asegurarse de que sus mensajes están redactados adecuadamente para despertar su interés.
 - **Tasas de apertura:** Las tasas de apertura son un indicador útil de la ubicación en la bandeja de entrada. Si sus tasas de apertura únicas superan el 25%, es probable que esté experimentando una alta colocación en la bandeja de entrada, lo que indica una reputación de remitente positiva.
 
