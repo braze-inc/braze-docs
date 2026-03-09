@@ -1,7 +1,7 @@
 ---
 nav_title: "PUBLICAR: Fusionar usuarios"
 article_title: "PUBLICAR: Fusionar usuarios"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 6
 layout: api_page
 page_type: reference
@@ -60,7 +60,7 @@ Este punto final fusiona los siguientes campos si no se encuentran en el usuario
 
 - Nombre
 - Apellido
-- Direcciones de correo electrónico (a menos que estén [codificadas]({{site.baseurl}}/user_guide/data/field_level_encryption/))
+- Direcciones de correo electrónico (a menos que estén [encriptadas]({{site.baseurl}}/user_guide/data/field_level_encryption/))
 - Género
 - Fecha de nacimiento
 - Número de teléfono
@@ -70,25 +70,25 @@ Este punto final fusiona los siguientes campos si no se encuentran en el usuario
 - Idioma
 - Información del dispositivo
 - Recuento de sesiones (la suma de las sesiones de ambos perfiles)
-- Fecha de la primera sesión (Braze elige la fecha más temprana de las dos)
-- Fecha de la última sesión (Braze elige la fecha más tardía de las dos)
-- Atributos personalizados (Braze conserva los atributos personalizados existentes en el perfil de destino e incluye atributos personalizados que no existían en el perfil de destino)
+- Fecha de la primera sesión (Braze elige la fecha más temprana de las dos fechas)
+- Fecha de la última sesión (Braze elige la fecha más reciente de las dos).
+- Atributos personalizados (Braze conserva los atributos personalizados existentes en el perfil de destino e incluye atributos personalizados que no existían en el perfil de destino).
 - Datos personalizados de eventos y compras
-- Propiedades del evento personalizado y del evento de compra para la segmentación "X veces en Y días" (donde X<=50 y Y<=30)
+- Propiedades del evento personalizado y propiedades de la compra para la segmentación «X veces en Y días» (dondeX<=50  y Y<=30)
 - Resumen segmentable de eventos personalizados
   - Recuento de eventos (la suma de ambos perfiles)
-  - El suceso ocurrió por primera vez (Braze elige la fecha más temprana de las dos)
-  - Última vez que ocurrió el suceso (Braze elige la fecha más tardía de las dos)
+  - Primera vez que ocurrió el evento (Braze elige la fecha más temprana de las dos fechas)
+  - Última vez que ocurrió el evento (Braze elige la fecha más reciente de las dos fechas)
 - Total de compras dentro de la aplicación en céntimos (la suma de ambos perfiles)
 - Número total de compras (la suma de ambos perfiles)
-- Fecha de la primera compra (Braze elige la fecha anterior de las dos)
-- Fecha de la última compra (Braze elige la fecha más tardía de las dos)
+- Fecha de la primera compra (Braze selecciona la fecha más temprana de las dos fechas).
+- Fecha de la última compra (Braze elige la fecha más reciente de las dos).
 - Resúmenes de la aplicación
-- Last_X_at campos (Braze actualiza los campos si los campos de perfil huérfanos son más recientes)
-- Datos de interacción de la campaña (Braze elige los campos de fecha más recientes)
-- Resúmenes del flujo de trabajo (Braze elige los campos de fecha más recientes)
+- Last_X_at campos (Braze actualiza los campos si los campos del perfil huérfano son más recientes)
+- Datos de interacción de la campaña (Braze selecciona los campos de fecha más recientes)
+- Resúmenes del flujo de trabajo (Braze selecciona los campos de fecha más recientes)
 - Historial de interacción de mensajes y mensajería
-- Braze fusiona los datos de sesión sólo si la aplicación existe en ambos perfiles de usuario.
+- Braze fusiona los datos de sesión solo si la aplicación existe en ambos perfiles de usuario.
 
 {% alert note %}
 Al fusionar usuarios, el uso del punto final `/users/merge` funciona del mismo modo que el [método `changeUser()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).
@@ -96,18 +96,18 @@ Al fusionar usuarios, el uso del punto final `/users/merge` funciona del mismo m
 
 #### Comportamiento personalizado de la fecha del evento y de la fecha del evento de compra
 
-Estos campos fusionados actualizan los filtros "para X eventos en Y días". Para los eventos de compra, estos filtros incluyen "número de compras en Y días" y "dinero gastado en los últimos Y días".
+Estos campos combinados actualizan los filtros «para X eventos en Y días». Para los eventos de compra, estos filtros incluyen "número de compras en Y días" y "dinero gastado en los últimos Y días".
 
 ### Fusionar usuarios por correo electrónico o número de teléfono
 
-Si se especifica un `email` o `phone` como identificador, debes incluir un valor `prioritization` adicional en el identificador. `prioritization` debe ser una matriz ordenada que especifique qué usuario fusionar si se encuentran varios usuarios. Esto significa que si más de un usuario coincide a partir de una priorización, no se produce la fusión.
+Si se especifica`email``phone`  o  como identificador, debes incluir un valor  `prioritization`adicional en el identificador. Debe ser una matriz`prioritization` ordenada que especifique qué usuario fusionar si se encuentran varios usuarios. Esto significa que si más de un usuario coincide con una priorización, no se produce la fusión.
 
 Los valores permitidos para la matriz son:
 
 - `identified`
 - `unidentified`
 - `most_recently_updated` (se refiere a dar prioridad al usuario actualizado más recientemente)
-- `least_recently_updated` (se refiere a dar prioridad al usuario actualizado menos recientemente)
+- `least_recently_updated` (se refiere a dar prioridad al usuario que menos recientemente ha actualizado su información)
 
 En la matriz de priorización solo puede existir una de las siguientes opciones a la vez:
 
@@ -120,7 +120,7 @@ En la matriz de priorización solo puede existir una de las siguientes opciones 
 
 Se trata de un cuerpo de petición básico para mostrar el patrón de la petición.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -165,9 +165,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Fusionar usuario no identificado
 
-La siguiente solicitud fusionaría el usuario no identificado actualizado más recientemente con la dirección de correo electrónico `john.smith@braze.com` en el usuario con un ID externo `john`. En este ejemplo, el uso de `most_recently_updated` filtra la consulta a un usuario no identificado. Así, si hubiera dos usuarios no identificados con esta dirección de correo electrónico, sólo uno se fusionaría con el usuario que tiene un ID externo `john`.
+La siguiente solicitud fusionaría el usuario no identificado actualizado más recientemente con la dirección de correo electrónico`john.smith@braze.com`  con el usuario con un ID externo`john` . En este ejemplo, el uso de`most_recently_updated`  filtra la consulta a un usuario no identificado. Por lo tanto, si hubiera dos usuarios no identificados con esta dirección de correo electrónico, solo uno se fusionaría con el usuario que tiene un ID externo`john`.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -189,11 +189,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Fusionar usuario no identificado en usuario identificado
 
-El siguiente ejemplo fusiona el usuario no identificado con dirección de correo electrónico `john.smith@braze.com` actualizado más recientemente con el usuario identificado con dirección de correo electrónico `john.smith@braze.com` actualizado más recientemente.
+El siguiente ejemplo fusiona el usuario no identificado actualizado más recientemente con la dirección de correo electrónico`john.smith@braze.com`  con el usuario identificado actualizado más recientemente con la dirección de correo electrónico`john.smith@braze.com` .
 
-El uso de `most_recently_updated` filtra las consultas a un usuario (un usuario no identificado para `identifier_to_merge`, y un usuario identificado para `identifier_to_keep`).
+Utiliza`most_recently_updated`filtros para las consultas a un usuario (un usuario no identificado para `identifier_to_merge`y un usuario con identificador para `identifier_to_keep`).
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -214,11 +214,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 }'
 ```
 
-### Fusionar un usuario no identificado sin incluir la priorización most_recently_updated 
+### Fusionar un usuario no identificado sin incluir lamost_recently_updatedpriorización.
 
-Si hay dos usuarios no identificados con la dirección de correo `john.smith@braze.com`, este ejemplo de solicitud no fusiona a ningún usuario porque hay dos usuarios no identificados con esa dirección de correo electrónico. Esta petición sólo funciona si sólo hay un usuario no identificado con la dirección de correo electrónico `john.smith@braze.com`.
+Si hay dos usuarios no identificados con la dirección de correo electrónico`john.smith@braze.com` , esta solicitud de ejemplo no fusiona ningún usuario porque hay dos usuarios no identificados con esa dirección de correo electrónico. Esta solicitud solo funciona si solo hay un usuario no identificado con la dirección de correo electrónico`john.smith@braze.com` .
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
