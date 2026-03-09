@@ -1,6 +1,6 @@
 ---
 nav_title: Comportement personnalisé en cas de clic
-article_title: Personnaliser le comportement des messages in-app au clic pour iOS
+article_title: Personnaliser le comportement des messages in-app sur clic pour iOS
 platform: iOS
 page_order: 5
 description: "Cet article de référence couvre le comportement au clic personnalisé du message in-app pour votre application iOS."
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Personnalisez le comportement des messages in-app en cas de clic.
+# Personnaliser le comportement des messages in-app lorsque l'utilisateur clique dessus
 
 La propriété de `inAppMessageClickActionType` sur le `ABKInAppMessage` définit le comportement d’action après avoir cliqué sur le message in-app. Cette propriété est en lecture seule. Si vous souhaitez modifier le comportement de clic du message in-app, vous pouvez employer la méthode suivante sur `ABKInAppMessage` :
 
