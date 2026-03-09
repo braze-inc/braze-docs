@@ -2,7 +2,7 @@
 nav_title: "GET: Buscar cuenta de usuario existente en el salpicadero por correo electrónico"
 article_title: "GET: Buscar cuenta de usuario existente en el panel por correo electrónico"
 alias: /get_search_existing_dashboard_user_email/
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -12,7 +12,7 @@ description: "En este artículo se describen los detalles del punto final Buscar
 {% api %}
 # Buscar cuenta de usuario existente en el salpicadero por correo electrónico
 {% apimethod get %}
-scim/v2/Usuarios?filter=nombreusuario%20eq%20 "usuario%40prueba.com"
+scim/v2/Users?filtrar=userName%20eq%20"user%40test.com"
 {% endapimethod %}
 
 > Utilice este punto final para buscar una cuenta de usuario del cuadro de mandos existente especificando su correo electrónico en el parámetro de consulta del filtro.
@@ -40,14 +40,14 @@ Para utilizar este punto final, necesitarás un token SCIM. Utilizarás el orige
 
 ## Parámetros de la solicitud
 
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Ejemplo de solicitud
-```json
+```bash
 curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
