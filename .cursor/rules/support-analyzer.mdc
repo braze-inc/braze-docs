@@ -40,7 +40,7 @@ For each unique Case ID, determine if docs action is needed:
 For each **actionable** ticket:
 
 1. **Extract Q&A** - Distill the core question and resolution from message thread
-2. **Verify** - Cross-reference with source code of the Main Product at `../platform`. Do not rely solely on support cases or documentation to verify. Always cross-reference with source code. If you can verify the resolution against the source code, add a reference to the source file(s). If you cannot verify the resolution, say that you could not verify the resolution against the source code.
+2. **Verify** - Cross-reference with source code of the Main Product at `../platform`. Do not rely solely on support cases or documentation to verify. Always cross-reference with source code. If you can verify the resolution against the source code, add a reference to the source file(s) in your analysis output only. If you cannot verify the resolution, say that you could not verify the resolution against the source code. **Never publish Braze source code paths in PR descriptions** (see Step 7).
 3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
 4. **Document source support case number** - Which case numbers were analyzed?
 
@@ -99,12 +99,14 @@ Example: `[SA] Add FAQ entry about machine opens vs other opens`
 
 Always add the label `support analyzer` to the PR by including `--label "support analyzer"` in the `gh pr create` command.
 
+**Do not publish Braze source code paths in the PR description.** Even when reference repos (e.g. `../platform`) were used to verify content, never list or cite file paths from those repos. Instead, use a phrase such as "Verified against Braze source code."
+
 Cursor fills out the PR automatically:
 
 ```text
 # Changes
 * [If this was related to a Docs discrepancy, make sure to note to tag the Eng owner in the description]
-* [Cursor analyzes code changes and lists them]
+* [Cursor analyzes code changes and lists them — do not include paths to Braze source repos; say "Verified against Braze source code" if applicable]
 * List of changes to help the reviewer understand the scope
 * List the Salesforce case IDs that were addressed in the update in a bulleted list of URLs with the format `https://braze.lightning.force.com/lightning/r/Case/<case ID>/view`
 ```
