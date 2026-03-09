@@ -1,16 +1,16 @@
 # Banner: Häufig gestellte Fragen
 
-> Hier finden Sie Antworten auf häufig gestellte Fragen zu Bannern in Braze. Weitere allgemeine Informationen finden Sie unter [Über Banner]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %}).
+> Hier finden Sie Antworten auf häufig gestellte Fragen zu Bannern in Braze. Weitere allgemeine Informationen finden Sie unter [Über Banner]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %})].
 
 ## Wann erscheinen die Banner Updates für Nutzer:innen?
 
-Die Banner werden mit den neuesten Daten aktualisiert, sobald Sie die Aktualisierungsmethode aufrufen. Sie müssen Ihre Banner-Kampagne nicht erneut versenden oder aktualisieren.
+Banner werden bei jedem Aufruf der Aktualisierungsmethode mit den neuesten Daten aktualisiert – es ist nicht erforderlich, Ihre Banner-Kampagne erneut zu senden oder ein Update durchzuführen.
 
 ## Wie viele Vermittlungen kann ich in einer Sitzung anfragen?
 
-In einer einzigen Anfrage zur Aktualisierung können Sie maximal 10 Platzierungen anfragen. Für jede Anfrage, die Sie stellen, gibt Braze das Banner mit der höchsten Priorität zurück, für das ein Nutzer:innen in Frage kommt. Weitere Anfragen führen zu einer Fehlermeldung.
+In einer einzigen Aktualisierungsanfrage können Sie maximal 10 Platzierungen anfragen. Für jede Anfrage, die Sie stellen, gibt Braze das Banner mit der höchsten Priorität zurück, für das ein Nutzer:innen in Frage kommt. Weitere Anfragen führen zu einer Fehlermeldung.
 
-Weitere Informationen finden Sie unter [Platzierungsanfragen]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %}).
+Weitere Informationen finden Sie unter [Platzierungsanfragen]]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %}).
 
 ## Wie viele Banner Kampagnen können gleichzeitig aktiv sein?
 
@@ -18,21 +18,21 @@ Jeder Workspace kann bis zu 200 aktive Banner-Kampagnen unterstützen. Wenn dies
 
 ## Welcher Banner wird bei Kampagnen, die sich eine Platzierung teilen, zuerst angezeigt?
 
-Wenn sich ein Nutzer:innen für mehrere Kampagnen qualifiziert, die sich dieselbe Platzierung teilen, wird das Banner mit der höchsten Priorität angezeigt. Weitere Informationen finden Sie unter [Banner Priorität]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %}).
+Wenn sich ein Nutzer:innen für mehrere Kampagnen qualifiziert, die sich dieselbe Platzierung teilen, wird das Banner mit der höchsten Priorität angezeigt. Weitere Informationen finden Sie unter [Bannerpriorität]]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %}).
 
 ## Kann ich Banner in meinem bestehenden Content-Card-Feed verwenden?
 
 Banner unterscheiden sich von Content-Cards, d.h. Sie können Banner und Content-Cards nicht im selben Feed verwenden. Um bestehende Content-Card-Feeds durch Banner zu ersetzen, müssen Sie [Platzierungen in Ihrer App oder Website erstellen]({{site.baseurl}}/developer_guide/banners/placements/).
 
-## Kann ich ein Banner auf der Grundlage von Nutzer:innen-Aktionen triggern?
+## Ist es möglich, ein Banner basierend auf Aktionen von Nutzern:innen zu triggern?
 
-Banner unterstützen zwar keine [aktionsbasierte Zustellung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery), aber Sie können Nutzer:innen auf der Grundlage ihrer früheren Aktionen mit Hilfe von Segmentierung und Priorität gezielt ansprechen.
+Obwohl Banner keine [aktionsbasierte Zustellung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery) unterstützen, können Sie Zielgruppen anhand ihrer bisherigen Aktionen mithilfe von Segmentierung und Priorisierung gezielt zusammenstellen.
 
-Zum Beispiel, um einen speziellen Banner nur Nutzern:innen zu zeigen, die ein `purchase` Ereignis abgeschlossen haben:
-1. **Targeting:** Stellen Sie in Ihrer Kampagne ein Segment von Nutzer:innen zusammen, die das angepasste Event `purchase` mindestens einmal durchgeführt haben.
-2. **Vorrangig:** Wenn Sie einen allgemeinen Banner für alle Nutzer:innen und diesen speziellen Banner für Käufer:innen haben, die auf dieselbe Platzierung abzielen, setzen Sie die Priorität des speziellen Banners auf **Hoch** und die des allgemeinen Banners auf **Mittel** oder **Niedrig**.
+Um beispielsweise ein spezielles Banner nur für Nutzer:innen anzuzeigen, die ein `purchase`bestimmtes Ereignis abgeschlossen haben:
+1. **Targeting:** Richten Sie Ihre Kampagne an ein Segment von Nutzer:innen, die das angepasste Event`purchase`mindestens einmal durchgeführt haben.
+2. **Vorrangig:** Wenn Sie ein allgemeines Banner für alle Nutzer:innen und dieses spezifische Banner für Käufer haben, das das Targeting auf dieselbe Platzierung hat, setzen Sie die Priorität des spezifischen Banners auf **„Hoch“** und die des allgemeinen Banners auf **„Mittel“** oder **„Niedrig**“.
 
-Wenn die Nutzer:innen eine neue Sitzung starten oder die Banner nach der Ausführung der Aktion aktualisieren, bewertet Braze ihre Berechtigung. Wenn sie dem Segment "Kauf" entsprechen, wird das Banner mit der höchsten Priorität angezeigt.
+Wenn die Nutzer:in eine neue Sitzung startet oder Banners nach der Aktion aktualisiert, überprüft Braze seine Berechtigung. Wenn sie dem Segment „Kauf“ entsprechen, wird das Banner mit hoher Priorität angezeigt.
 
 
 ## Können Nutzer:innen einen Banner manuell ablehnen?
@@ -59,10 +59,10 @@ Nein. Die meisten Liquid-Tags werden jedoch für Banner Nachrichten unterstützt
 
 ## Kann ich Klick-Ereignisse erfassen?
 
-Ja Wie Klick-Ereignisse erfasst werden, hängt davon ab, wie Ihr Banner gerendert wird:
+Ja Die Erfassung von Klicks hängt davon ab, wie Ihr Banner dargestellt wird:
 
-- **Standard-Editor-Komponenten:** Wenn Ihr Banner Standard-Editor-Komponenten (Bilder, Buttons, Text) verwendet, werden Klicks automatisch getrackt, wenn Sie die Einfügemethoden des SDK verwenden.
-- **Angepasste Code-Blöcke:** Wenn Ihr Banner den Editor-Block für angepassten Code verwendet, müssen Sie `brazeBridge.logClick()` aus Ihrem angepassten HTML aufrufen, um Klicks zu tracken. Dies gilt auch, wenn Sie die SDK-Methoden zum Einfügen und Rendern des Banners verwenden. Dies funktioniert genauso wie die [JavaScript-Brücke]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) für In-App-Nachrichten im HTML-Format.
-- **Angepasste UI (headless):** Wenn Sie ein vollständig angepasstes UI mit den angepassten Eigenschaften des Banners erstellen, anstatt den HTML-Code des Banners zu rendern, rufen Sie `logClick()` für das Banner-Objekt aus Ihrem Anwendungscode auf.
+- **Standard-Editor-Komponenten:** Wenn Ihr Banner Standard-Editor-Komponenten (Bilder, Buttons, Text) verwendet, wird das Tracking von Klicks automatisch durchgeführt, wenn Sie die Einfügemethoden des SDK verwenden.
+- **Angepasste Codeblöcke:** Wenn Sie Klicks für Elemente innerhalb eines benutzerdefinierten Code-Editor-Blocks verfolgen möchten, müssen Sie innerhalb Ihres benutzerdefinierten HTML-Codes aufrufen`brazeBridge.logClick()`, um Klicks zu verfolgen. Dies gilt auch bei der Verwendung der SDK-Methoden zum Einfügen und Rendern des Banners. Die vollständige Referenz finden Sie unter [angepasster Code und JavaScript-Brücke für Banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/custom_code/#javascript-bridge).
+- **Angepasste UI (Headless):** Wenn Sie eine vollständig angepasste UI unter Verwendung der angepassten Eigenschaften des Banners erstellen, anstatt das Banner-HTML zu rendern, rufen`logClick()`Sie das Banner-Objekt aus Ihrem Code auf.
 
-Weitere Informationen finden Sie unter [Klicks protokollieren]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks).
+Weitere Informationen finden Sie unter [Protokollierung von Klicks]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks).
