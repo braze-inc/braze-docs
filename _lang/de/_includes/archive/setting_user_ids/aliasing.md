@@ -1,7 +1,7 @@
 Ein [Benutzer-Alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) dient als alternativer eindeutiger Benutzeridentifikator. Sie können Aliasnamen verwenden, um Benutzer anhand anderer Dimensionen als Ihrer Haupt-Benutzer-ID zu identifizieren:
 
 * Legen Sie eine einheitliche Kennung für die Analyse fest, die einen bestimmten Benutzer sowohl vor als auch nach der Anmeldung bei einer mobilen App oder Website verfolgt.
-* Fügen Sie Ihren Braze-Benutzern die von einem Drittanbieter verwendeten Bezeichner hinzu, um Ihre Daten leichter extern abzugleichen.
+* Fügen Sie die von einem Drittanbieter verwendeten Bezeichner zu Ihren Unternehmensnutzer:innen hinzu, um Ihre Daten extern leichter abgleichen zu können.
 
 Jeder Alias besteht aus zwei Teilen: einem Namen für den Bezeichner selbst und einer Bezeichnung, die den Typ des Alias angibt. Benutzer können mehrere Aliasnamen mit unterschiedlichen Bezeichnungen haben, aber nur einen Namen pro Bezeichnung. 
 
