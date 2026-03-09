@@ -18,7 +18,7 @@
 
 ### デフォルト属性の設定
 
-デフォルトユーザー属性を設定するには、共有`Braze.User` オブジェクトの該当フィールドを設定する。以下は名属性の設定例です。
+デフォルトのユーザー属性を設定するには、共有`Braze.User`オブジェクトの適切なフィールドを設定する。以下は名属性の設定例です。
 
 {% tabs %}
 {% tab swift %}
@@ -37,9 +37,9 @@ AppDelegate.braze?.user.set(firstName: "Alex")
 {% endtab %}
 {% endtabs %}
 
-### デフォルト属性の設定を解除する
+### デフォルト属性の解除
 
-デフォルトのユーザー属性を解除するには、関連するメソッドに`nil` 。
+デフォルトのユーザー属性を解除するには、関連するメソッドに  `nil`を渡す。
 
 {% tabs %}
 {% tab swift %}
@@ -60,17 +60,17 @@ AppDelegate.braze?.user.set(firstName: nil)
 
 ## カスタムユーザー属性
 
-デフォルトのユーザー属性に加え、Brazeではいくつかのデータタイプを使用してカスタム属性を定義することができる。各属性のセグメンテーションオプションの詳細については、[ユーザーデータ収集を]({{site.baseurl}}/developer_guide/analytics/)参照のこと。
+デフォルトのユーザー属性に加えて、Brazeでは複数の異なるデータ型を使用してカスタム属性を定義することもできる。各属性のセグメンテーションオプションの詳細については、[ユーザーデータ収集を]({{site.baseurl}}/developer_guide/analytics/)参照せよ。
 
 {% alert important %}
-カスタム属性値の最大長は 255 文字です。これより長い値は切り捨てられます。詳細は以下を参照のこと。 [`Braze.User`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class).
+カスタム属性値の最大長は 255 文字です。これより長い値は切り捨てられます。詳細については、を参照せよ[`Braze.User`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class)。
 {% endalert %}
 
 ### カスタム属性の設定
 
 {% tabs local %}
 {% tab string %}
-`string` 、カスタム属性を設定する：
+カスタム属性を`string`値と共に設定するには：
 
 {% subtabs %}
 {% subtab swift %}
@@ -88,7 +88,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "yo
 {% endtab %}
 
 {% tab integer %}
-`integer` 、カスタム属性を設定する：
+カスタム属性を設定する際に値を`integer`指定するには：
 
 {% subtabs %}
 {% subtab swift %}
@@ -106,7 +106,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endtab %}
 
 {% tab floating-points %}
-Braze では、データベース内での `float` 値と `double` 値の扱いが同じです。カスタム属性に2倍の値を設定する：
+Braze では、データベース内での `float` 値と `double` 値の扱いが同じです。倍精度値を持つカスタム属性を設定するには：
 
 {% subtabs %}
 {% subtab swift %}
@@ -124,7 +124,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endtab %}
 
 {% tab boolean %}
-`boolean` 、カスタム属性を設定する：
+カスタム属性を`boolean`値と共に設定するには：
 
 {% subtabs %}
 {% subtab swift %}
@@ -142,7 +142,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBool
 {% endtab %}
 
 {% tab date %}
-`date` 、カスタム属性を設定する：
+カスタム属性を`date`値と共に設定するには：
 
 {% subtabs %}
 {% subtab swift %}
@@ -160,9 +160,9 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 {% endtab %}
 
 {% tab array %}
-[カスタム属性配列]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)内の要素の最大数は、デフォルトで 25 に設定されています。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。個々の配列の最大数は、100 まで増やすことができます。この上限を引き上げたい場合は、顧客サービスマネージャーに連絡すること。
+[カスタム属性配列]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)内の要素の最大数は、デフォルトで 25 に設定されています。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。個々の配列の最大値は500まで増やせる。この制限を500以上に引き上げるには、Brazeの顧客サクセスマネージャーに連絡すること。
 
-`array` 、カスタム属性を設定する：
+カスタム属性を設定する際に値を`array`指定するには：
 
 {% subtabs %}
 {% subtab swift %}
@@ -192,9 +192,9 @@ AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value:
 {% endtab %}
 {% endtabs %}
 
-### カスタム属性をインクリメントまたはデクリメントする
+### カスタム属性を増減させる
 
-このコードは、カスタム属性のインクリメントの例です。カスタム属性の値は、`integer` または`long` ：
+このコードは、カスタム属性のインクリメントの例です。カスタム属性の値は、任意の`integer`  または`long`  の値で増加させることができる。
 
 {% tabs %}
 {% tab swift %}
@@ -213,11 +213,11 @@ AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", 
 {% endtab %}
 {% endtabs %}
 
-### カスタム属性の設定を解除する
+### カスタム属性の設定解除
 
 {% tabs %}
 {% tab swift %}
-カスタム属性を解除するには、`unsetCustomAttribute` メソッドに関連する属性キーを渡す。
+カスタム属性を解除するには、該当する属性キーをメソッド`unsetCustomAttribute`に渡す。
 
 ```swift
 AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
@@ -225,7 +225,7 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 
 {% endtab %}
 {% tab objective-c %}
-カスタム属性を解除するには、`unsetCustomAttributeWithKey` メソッドに関連する属性キーを渡す。
+カスタム属性を解除するには、該当する属性キーをメソッド`unsetCustomAttributeWithKey`に渡す。
 
 ```objc
 [AppDelegate.braze.user unsetCustomAttributeWithKey:@"your_attribute_key"];
@@ -236,7 +236,7 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 
 ### 階層化カスタム属性
 
-また、カスタム属性の中にプロパティを入れ子にすることもできる。以下の例では、階層化プロパティを持つ`favorite_book` オブジェクトが、ユーザープロファイルのカスタム属性として設定されている。詳しくは、[階層化カスタム]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)属性を参照のこと。
+カスタム属性内にプロパティをネストすることもできる。次の例では、ネストされたプロパティを持つオブジェクト`favorite_book`が、ユーザープロファイルのカスタム属性として設定される。詳細については、[階層化カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)参照のこと。
 
 {% tabs %}
 {% tab swift %}
@@ -266,7 +266,7 @@ NSDictionary *favoriteBook = @{
 
 ### REST API の使用
 
-また、REST APIを使用して、ユーザー属性を設定または解除することもできる。詳細については、[ユーザーデータエンドポイント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
+ユーザー属性を設定または解除するには、当社のREST APIも利用できる。詳細については、[ユーザーデータエンドポイント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
 
 ## ユーザーサブスクリプションの設定
 
