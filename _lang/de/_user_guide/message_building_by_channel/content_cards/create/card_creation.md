@@ -28,12 +28,12 @@ Nach dem SDK-Upgrade muss auch ein Upgrade der Nutzer-App durchgeführt werden. 
 
 Sie können wählen, wann Braze eine Karte im Schritt **Zustellung** erstellt, wenn Sie eine neue [Content Card Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) mit geplanter Zustellung erstellen.
 
-![Abschnitt Content-Card-Steuerung bei der Bearbeitung der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation.png %})
+![Abschnitt „Content-Card Controls“ beim Bearbeiten der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation.png %})
 
 Die folgenden Optionen sind verfügbar:
 
 - **Beim Start der Kampagne:** Das bisherige Standardverhalten für Inhaltskarten. Braze ermittelt Zielgruppenzugehörigkeit und Personalisierung beim Kampagnenstart, erstellt dann die Karte und speichert sie, bis Ihre App geöffnet wird. 
-- **Auf den ersten Blick (empfohlen):** Wenn der Nutzer:innen Ihre App das nächste Mal öffnet (eine neue [Sitzung](https://www.braze.com/resources/articles/whats-an-app-session-anyway) beginnt), ermittelt Braze, für welche Content Cards der Nutzer:innen in Frage kommt, erstellt Templates für Personalisierungen wie Liquid oder Connected Content und erstellt dann die Karte. Diese Option liefert in der Regel eine bessere Performance.
+- **Auf den ersten Blick (empfohlen):** Wenn der Nutzer Ihre App das nächste Mal öffnet (eine neue [Sitzung](https://www.braze.com/resources/articles/whats-an-app-session-anyway) startet), ermittelt Braze, für welche Content-Cards der Nutzer berechtigt ist, erstellt Templates für Personalisierungen wie Liquid oder Connected-Content und erstellt anschließend die Content-Card. Diese Option bietet in der Regel eine bessere Performance.
 
 Unabhängig von der von Ihnen gewählten Option beginnt der Countdown für das Ablaufdatum der Content Card, wenn die Kampagne gestartet wird.
 
@@ -42,12 +42,12 @@ Unabhängig von der von Ihnen gewählten Option beginnt der Countdown für das A
 
 Sie können wählen, wann Braze eine Karte auf der Registerkarte **Nachrichtenkanäle** eines [Inhaltskarten-Nachrichtenschritts]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) erstellt.
 
-![Abschnitt Content-Card-Steuerung bei der Bearbeitung der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation_canvas.png %})
+![Abschnitt „Content-Card Controls“ beim Bearbeiten der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation_canvas.png %})
 
 Die folgenden Optionen sind verfügbar:
 
 - **Zu Beginn des Schritts:** Das bisherige Standardverhalten für Inhaltskarten. Braze ermittelt Zielgruppenzugehörigkeit und Personalisierung beim Kampagnenstart, erstellt dann die Karte und speichert sie, bis Ihre App geöffnet wird.
-- **Auf den ersten Blick (empfohlen):** Braze berechnet die Zielgruppenzugehörigkeit, wenn der Canvas-Schritt gestartet wird. Wenn der Nutzer:innen Ihre App das nächste Mal öffnet (eine neue [Sitzung](https://www.braze.com/resources/articles/whats-an-app-session-anyway) beginnt), erstellt Braze Templates für Personalisierungen wie Liquid oder Connected-Content und dann die Karte. Diese Option bietet eine bessere Performance bei der Zustellung der Karten und eine aktuellere Personalisierung.
+- **Auf den ersten Blick (empfohlen):** Braze berechnet die Zielgruppenzugehörigkeit, wenn der Canvas-Schritt gestartet wird. Wenn die Nutzer:in Ihre App das nächste Mal öffnet (eine neue [Sitzung](https://www.braze.com/resources/articles/whats-an-app-session-anyway) startet), erstellt Braze alle Personalisierungen wie Liquid oder Connected-Content und erstellt anschließend die Karte. Diese Option bietet eine verbesserte Performance bei der Zustellung von Karten und eine aktuellere Personalisierung.
 
 Unabhängig von der ausgewählten Option beginnt der Countdown für das Ablaufdatum der Content-Card, wenn der Canvas-Schritt gestartet wird.
 
@@ -62,7 +62,7 @@ Wenn bei anonymen Sitzungen zu Beginn eine Content-Card angezeigt werden soll, v
 Bei beiden Verfahren berechnet Braze nach der Kartenerstellung weder Zielgruppenzugehörigkeit noch Personalisierung neu.
 {% endalert %}
 
-### Unterschiede zwischen der Erstellung von Karten bei der Markteinführung oder beim Eingang und beim ersten Eindruck {#differences}
+### Unterschiede zwischen der Erstellung von Karten beim Start oder beim Eingang und beim ersten Eindruck {#differences}
 
 In diesem Abschnitt werden die wichtigsten Unterschiede zwischen der Kartenerstellung beim Kampagnenstart oder beim Einstieg in den Schritt und beim ersten Eindruck beschrieben.
 
@@ -89,7 +89,7 @@ In diesem Abschnitt werden die wichtigsten Unterschiede zwischen der Kartenerste
   <tr>
     <td class="leftHeader">Zielgruppe</td>
     <td class="tg-0pky">Braze wertet die Zielgruppenzugehörigkeit aus, wenn die Kampagne gesendet wird.<br><br>Neue und anonyme Nutzer:innen werden nicht auf ihre Zielgruppenzugehörigkeit hin geprüft, wenn sie versuchen, die Karte nach dem Kampagnenversand anzusehen. Bei wiederkehrenden Kampagnen erfolgt dies im nächsten Wiederholungsintervall.</td>
-    <td class="tg-0pky">Braze ermittelt die Zielgruppenzugehörigkeit, wenn Ihre App das nächste Mal geöffnet wird (Sitzungsbeginn, <a href="#campaign_note">nur Kampagnen*</a>).<br><br> Diese Einstellung hat eine größere Reichweite, da neue oder anonyme Benutzer immer auf ihre Berechtigung geprüft werden, wenn sie versuchen, die Karte einzusehen. <br><br>Außerdem ist das Rate-Limiting (Begrenzung der Anzahl der Personen, die die Karte erhalten) nicht anwendbar, wenn es auf den ersten Eindruck eingestellt ist.</td>
+    <td class="tg-0pky">Braze ermittelt die Zielgruppenzugehörigkeit, wenn Ihre App das nächste Mal geöffnet wird (Sitzungsbeginn, <a href="#campaign_note">nur Kampagnen*</a>).<br><br> Diese Einstellung hat eine größere Reichweite, da neue oder anonyme Benutzer immer auf ihre Berechtigung geprüft werden, wenn sie versuchen, die Karte einzusehen. <br><br>Darüber hinaus ist das Rate-Limiting (Begrenzung der Anzahl der Personen, die die Karte erhalten) nicht anwendbar, wenn es auf „auf den ersten Eindruck“ eingestellt ist.</td>
   </tr>
   <tr>
     <td class="leftHeader">Personalisierung</td>
@@ -98,13 +98,13 @@ In diesem Abschnitt werden die wichtigsten Unterschiede zwischen der Kartenerste
   </tr>
   <tr>
     <td class="leftHeader">Analytics</td>
-  <td class="tg-0pky"><em>Gesendete Nachrichten</em> referenziert auf die Anzahl der von Braze erstellten und zur Verfügung gestellten Karten. Dabei wird nicht berücksichtigt, ob Nutzer:innen die Karte angesehen haben.</td>
-  <td class="tg-0pky"><em>Gesendete Nachrichten</em> referenziert die Anzahl der Karten, die Braze nach dem Start einer Sitzung an einen Nutzer:innen sendet. Wenn ein Nutzer:innen in Canvas den Schritt betritt, ohne eine Sitzung zu starten, sendet Braze keine Karte. Daher stimmt diese Metrik möglicherweise nicht mit der Anzahl der Nutzer:innen überein, die einen Schritt betreten.<br><br>Erreichbare Nutzer:innen und Impressionen ändern sich zwar nicht, aber Sie müssen mit einem geringeren Sendevolumen<em>(gesendete Nachrichten</em>) rechnen, wenn Sie eine Karte beim ersten Eindruck erstellen, verglichen mit dem Start einer Kampagne oder dem Eingang eines Canvas-Schritts.</td>
+  <td class="tg-0pky"><em>„Gesendete Nachrichten“</em> bezieht sich auf die Anzahl der von Braze erstellten und zur Verfügung gestellten Karten. Dies berücksichtigt nicht, ob die Nutzer:innen die Karte angesehen haben.</td>
+  <td class="tg-0pky"><em>„Gesendete Nachrichten“</em> referenziert die Anzahl der Karten, die Braze nach Beginn einer Sitzung an einen Nutzer:in sendet. Wenn eine Nutzer:in in Braze-Canvas den Schritt aufruft, ohne eine Sitzung zu starten, sendet Braze keine Karte, sodass diese Metrik möglicherweise nicht mit der Anzahl der Nutzer:innen übereinstimmt, die einen Schritt aufrufen.<br><br>Während die erreichbaren Nutzer:innen und Impressionen unverändert bleiben, ist bei der Erstellung einer Karte beim ersten Eindruck im Vergleich zum Start der Kampagne oder zum Einstieg in den Canvas-Schritt mit einem geringeren Versandvolumen (<em>gesendete Nachrichten</em>) zu rechnen.</td>
   </tr>
   <tr>
     <td class="leftHeader">Bearbeitungszeit</td>
-  <td class="tg-0pky">Braze erstellt Karten für jeden in Frage kommenden Nutzer:innen des Segments zum Zeitpunkt der Einführung. Wählen Sie für große Zielgruppen die Option <b>Bei erster Impression</b> aus, damit die Karten nach dem Start schneller verfügbar sind.</td>
-  <td class="tg-0pky">Braze erstellt eine Karte beim ersten Versuch eines Nutzers:in, so dass es 1-2 Sekunden dauern kann, bis sie beim ersten Eindruck angezeigt wird.</td>
+  <td class="tg-0pky">Braze erstellt zum Zeitpunkt der Einführung Karten für jeden berechtigten Nutzer in diesem Segment. Für eine große Zielgruppe wählen Sie bitte <b>„At First Impression“</b>, damit die Karten nach dem Start schneller verfügbar sind.</td>
+  <td class="tg-0pky">Braze erstellt eine Karte, wenn eine Nutzer:in zum ersten Mal versucht, sie anzuzeigen. Daher kann es beim ersten Aufruf 1–2 Sekunden dauern, bis sie angezeigt wird.</td>
   </tr>
 </tbody>
 </table>
@@ -119,11 +119,11 @@ Braze empfiehlt, die Kartenerstellung nach dem Kampagnenstart nicht mehr zu änd
 
 ### Mögliche Bearbeitungszeit
 
-Wählen Sie für große Zielgruppen die Option, Karten bei der ersten Impression zu erstellen, damit die Karten schnell nach dem Start verfügbar sind. Kampagnen, die bei Sitzungsbeginn getriggert werden, können auch davon profitieren, dass sie bei der ersten Impression erstellt werden (verfügbar durch geplante Zustellung), um die Performance zu verbessern.
+Für große Zielgruppen wählen Sie bitte die Option, Karten beim ersten Eindruck zu erstellen, damit die Karten nach dem Start schnell verfügbar sind. Kampagnen, die zu Beginn einer Sitzung getriggert werden, können ebenfalls von einer Umstellung auf „Erster Eindruck“ (verfügbar über geplante Zustellung) profitieren, um die Performance zu verbessern.
 
-Wenn Karten bei der ersten Impression erstellt werden, kann es 1-2 Sekunden dauern, bis die Karten verarbeitet sind. Die Bearbeitungsdauer hängt von verschiedenen Faktoren wie der Kartengröße und der Komplexität der Template-Erstellung ab. Die Bearbeitungsdauer von Karten mit Connected-Content ist zum Beispiel mindestens so lang wie die Reaktionszeit bei Connected-Content.
+Wenn Karten bei der ersten Impression erstellt werden, kann es 1–2 Sekunden dauern, bis die Karten verarbeitet sind. Die Bearbeitungsdauer hängt von verschiedenen Faktoren wie der Kartengröße und der Komplexität der Template-Erstellung ab. Die Bearbeitungsdauer von Karten mit Connected-Content ist zum Beispiel mindestens so lang wie die Reaktionszeit bei Connected-Content.
 
 ### Frühere SDK-Versionen
 
-Wenn die App eines Nutzers:innen mit einer früheren SDK-Version arbeitet, erhält er trotzdem die von Ihnen gesendeten Content-Cards. Allerdings dauert es länger, bis die Karten erscheinen, und es kann sein, dass sie erst bei der nächsten Content-Card-Synchronisierung angezeigt werden.
+Wenn die App eines Nutzers eine frühere SDK-Version verwendet, erhält er weiterhin die von Ihnen gesendeten Content-Cards. Allerdings dauert es länger, bis die Karten angezeigt werden, und sie werden möglicherweise erst bei der nächsten Synchronisierung der Content-Cards angezeigt.
 
