@@ -1,6 +1,6 @@
-# Painel de uso de mensagens
+# Painel de Uso de Mensagens
 
-> O dashboard de uso de mensagens fornece insights de autoatendimento sobre o uso de créditos de SMS, RCS e WhatsApp para uma visão abrangente do uso histórico e atual em comparação com as atribuições do contrato. Essas percepções podem reduzir sua confusão e ajudá-lo a fazer ajustes para prevenir riscos de excedente.
+> O painel de uso de mensagens fornece insights de autoatendimento sobre o uso de créditos de SMS, RCS e WhatsApp para uma visão abrangente do uso histórico e atual em comparação com as alocações contratuais. Essas percepções podem reduzir sua confusão e ajudá-lo a fazer ajustes para prevenir riscos de excedente.
 
 O **Message Usage** dashboard é dividido em três seções:
 - [Visão Geral do Uso de Crédito](#credit-usage-overview)
@@ -13,7 +13,7 @@ Acesse o dashboard indo para **Configurações** > **Faturamento** > **Uso de Me
 
 **Visão Geral do Uso de Créditos de Mensagem** fornece uma visão geral do uso em todos os canais que utilizam créditos. Você pode ver como está seu ritmo em relação ao seu limite de crédito total e encontrar detalhes sobre seu contrato ativo e seu período de contrato.
 
-Esta página é exibida se você estiver em um contrato de créditos de mensagens. Os canais que usam créditos de mensagem são mostrados na **Visão geral do contrato de créditos**.
+Esta página exibe se você está em um contrato de créditos de mensagens. Os canais que usam créditos de mensagem são mostrados na **Visão geral do contrato de créditos**.
 
 {% alert note %}
 Se você comprou o WhatsApp, mas não está em um contrato de créditos de mensagem, ainda verá o consumo de créditos para o WhatsApp, porque é assim que os contratos legados do WhatsApp são cobrados. Isso difere do SMS legado, que consome créditos apenas quando você está em um contrato de créditos de mensagem.
@@ -29,11 +29,11 @@ O **Gráfico de Uso de Créditos de Mensagem** mostra seu uso durante o período
 
 ## SMS, MMS e RCS
 
-**SMS/MMS/RCS Credits Usage (Uso de créditos de SMS/MMS/RCS** ) mostra o detalhamento do uso do canal de SMS, MMS e RCS. As colunas na tabela de dados geralmente exigem que você tenha adquirido Créditos de Mensagens (embora o Braze ainda ofereça suporte temporário a modelos de cobrança mais antigos), e as colunas **Taxa de Crédito** e **Créditos** indicam a respectiva taxa do país e os créditos consumidos. Além disso, os blocos de alto nível indicarão o total de SMS e, quando relevante, o consumo de MMS no intervalo de datas selecionado.
+**Uso de Créditos SMS/MMS/RCS** mostra a divisão do uso para o canal SMS, MMS e RCS. As colunas na tabela de dados geralmente exigem que você tenha comprado Créditos de Mensagem (embora a Braze ainda suporte modelos de cobrança mais antigos temporariamente), e as colunas **Relação de Créditos** e **Créditos** indicam a respectiva taxa do país e os créditos consumidos. Além disso, os blocos de alto nível indicarão o consumo total de SMS e, quando relevante, de MMS ao longo do intervalo de datas selecionado.
 
-Os filtros estão disponíveis, permitindo que você filtre por **país** ou tipo de SMS e RCS.
+Filtros estão disponíveis permitindo que você filtre por **País** ou tipo de SMS e RCS.
 
-![SMS/MSS/RCS Credits Usage (Uso de créditos SMS/MSS/RCS) com blocos para dados de alto nível e uma seção para consumo por conta.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
+![Uso de Créditos SMS/MMS/RCS com blocos para dados de alto nível e uma seção para consumo por conta.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
 
 Ao contrário da **Visão Geral do Uso de Créditos de Mensagem**, esta seção contém dados históricos de períodos contratuais anteriores. 
 
@@ -41,7 +41,7 @@ Ao contrário da **Visão Geral do Uso de Créditos de Mensagem**, esta seção 
 É possível selecionar um intervalo de datas que contenha tanto o uso de não créditos quanto o uso de créditos de mensagem. Neste caso, o consumo que ocorreu fora dos créditos de mensagem será exibido `—` (nulo) nas colunas **Relação de créditos** e **Créditos**.
 {% endalert %}
 
-![Tabela de uso de créditos SMS/MMS/RCS com valores nulos.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
+![Tabela de Uso de Créditos SMS/MMS/RCS com valores nulos.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
 
 ## WhatsApp
 
@@ -64,18 +64,18 @@ Você pode filtrar seus dados por:
 Os dados mostrados no dashboard **Uso de Mensagens** estão no nível do contrato e não estão restritos a uma empresa de dashboard individual ou espaço de trabalho. Estes dados refletem o uso de todos os espaços de trabalho dentro do seu dashboard e, potencialmente, em todos os dashboards (se você tiver múltiplos).
 {% endalert %}
 
-- Os dados subjacentes são fornecidos em uma cadência diária, com as tabelas de dados atualizadas às 3h, 9h, 12h e 18h EST. O dashboard **de Uso de Mensagens** pode demorar mais de 24 horas para ser atualizado.
+- Os dados subjacentes são fornecidos em uma cadência diária, com as tabelas de dados atualizadas às 3h, 9h, 12h e 18h EST. O **Painel de Uso de Mensagens** pode levar mais de 24 horas para atualizar.
 - Braze segue a metodologia padrão de arredondamento: os números são arredondados para cima até a décima mais próxima.
 
 ### Seleção de intervalo de datas
 
-O dashboard **Uso de mensagens** exclui dos resultados a data de ponta do intervalo selecionado. Por exemplo, se você selecionar 1-31 de outubro, as estatísticas de uso de 31 de outubro serão excluídas. Para incluir o último dia do período desejado, amplie o intervalo em um dia. Por exemplo, para incluir todo o mês de outubro, selecione 1º de outubro a 1º de novembro.
+O **Painel de Uso de Mensagens** exclui a data final do intervalo selecionado dos resultados. Por exemplo, se você selecionar de 1 a 31 de outubro, as estatísticas de uso para 31 de outubro são excluídas. Para incluir o último dia do seu período desejado, estenda o intervalo em um dia. Por exemplo, para incluir todo o mês de outubro, selecione de 1 de outubro a 1 de novembro.
 
-### Comparação com provedores terceirizados
+### Comparando com provedores de terceiros
 
-Ao comparar os dados de uso de mensagens da Braze com dados de terceiros (como a Infobip), lembre-se:
+Ao comparar os dados de uso de mensagens da Braze com provedores de terceiros (como Infobip), tenha em mente:
 
-- **Segmentos de mensagens versus mensagens**: O Braze conta as mensagens SMS por segmentos. Uma única mensagem SMS que é dividida em vários segmentos (por exemplo, devido ao tamanho) é contada como vários segmentos no Braze. Para saber mais, consulte [Calculadoras de faturamento de SMS e RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
-- Envio **de mensagens com base em crédito ou sem crédito**: O dashboard inclui mensagens baseadas em crédito e não baseadas em crédito. Os provedores de terceiros podem contar apenas mensagens baseadas em crédito, o que pode causar discrepâncias nos totais.
-- **Inbound vs outbound**: Certifique-se de que esteja comparando os mesmos tipos de mensagens. Alguns dashboards de terceiros incluem mensagens de entrada e de saída em seus totais, enquanto o Braze permite filtrar por direção.
-- **Alinhamento do intervalo de datas**: Como o dashboard exclui a data de ponta, as comparações dia a dia podem se alinhar mais estreitamente do que intervalos de datas mais longos. Se estiver comparando dados de um período específico, estenda o intervalo de datas do Braze em um dia para incluir o último dia do período de comparação.
+- **Segmentos de mensagens vs mensagens**: A Braze conta mensagens SMS por segmentos. Uma única mensagem SMS que é dividida em vários segmentos (por exemplo, devido ao comprimento) é contada como vários segmentos no Braze. Para mais informações, veja [calculadoras de cobrança de SMS e RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
+- **Mensagens baseadas em crédito vs não crédito**: O dashboard inclui mensagens tanto baseadas em crédito quanto não baseadas em crédito. Provedores de terceiros podem contar apenas mensagens baseadas em crédito, o que pode causar discrepâncias nos totais.
+- **Entrada vs saída**: Certifique-se de que você está comparando os mesmos tipos de mensagens. Alguns dashboards de terceiros incluem tanto mensagens de entrada quanto de saída em seus totais, enquanto o Braze permite que você filtre por direção.
+- **Alinhamento de intervalo de datas**: Porque o dashboard exclui a data final, comparações dia a dia podem alinhar-se mais de perto do que intervalos de datas mais longos. Se você está comparando dados para um período específico, estenda seu intervalo de datas no Braze em um dia para incluir o último dia do seu período de comparação.
