@@ -1,5 +1,5 @@
 ---
-nav_title: Shareplay
+nav_title: Compartir juego
 article_title: Guía de implementación de mensajes dentro de la aplicación SharePlay
 platform: iOS
 page_order: 1
