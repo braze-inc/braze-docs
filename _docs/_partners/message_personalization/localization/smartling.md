@@ -23,7 +23,7 @@ The Braze Connector supports translations for messages in campaigns and Canvases
 | [IAM]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=in-app%20message) | ✅ | ✅ |
 | [Push]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=push) | ✅ | n/a |
 | Email Template | ✅ | ✅ |
-| Banners | n/a | ✅ |
+| Banners | ✅ | ✅ |
 | Content Blocks |  ✅* |  ✅* |
 
 *Refer to [Managing translations for Content Blocks](#managing-translations-for-content-blocks) for more information.
