@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Lista de claves de autenticación SDK"
-article_title: "GET: Lista de claves de autenticación SDK"
-search_tag: Endpoint
+nav_title: "GET: Lista de claves de autenticación del SDK"
+article_title: "GET: Lista de claves de autenticación del SDK"
+search_tag: Punto de conexión
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Este artículo describe los detalles sobre el punto final Braze de las claves de autenticación del SDK de listas."
+description: "Este artículo describe los detalles sobre las claves de autenticación del SDK de lista del punto final SDK de Braze."
 ---
 
 {% api %}
-# Lista de claves de autenticación SDK
+# Lista de claves de autenticación del SDK
 {% apimethod get %}
 /app_group/sdk_authentication/keys
 {% endapimethod %}
 
-> Utiliza este punto final para recuperar todas las claves de autenticación SDK de tu aplicación.
+> Utiliza este punto final SDK para recuperar todas las claves de autenticación SDK para tu aplicación.
 
 ## Requisitos previos
 
@@ -28,12 +28,12 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | Obligatoria | Cadena | El identificador de la API de la aplicación. |
+| `app_id` | Obligatoria | Cadena | El identificador API de la aplicación. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 
-```json
+```bash
 curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authentication/keys?app_id=01234567-89ab-cdef-0123-456789abcdef' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -64,17 +64,17 @@ curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authe
 | Parámetro | Tipo de datos | Descripción |
 | --------- | --------- | ----------- |
 | `keys` | Matriz | Matriz de objetos de clave de autenticación SDK. |
-| `keys[].id` | Cadena | El ID de la clave de autenticación SDK. |
+| `keys[].id` | Cadena | El ID de la clave de autenticación del SDK. |
 | `keys[].rsa_public_key` | Cadena | La cadena de clave pública RSA. |
-| `keys[].description` | Cadena | Descripción de la clave de autenticación SDK. |
-| `keys[].is_primary` | Booleano | Si esta clave es la clave principal de autenticación SDK. |
+| `keys[].description` | Cadena | Descripción de la clave de autenticación del SDK. |
+| `keys[].is_primary` | Booleano | Si esta clave es la clave de autenticación SDK principal. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Reglas de validación
 
 Este punto final tiene las siguientes reglas de validación:
 
-- El parámetro `app_id` debe ser un identificador de API de aplicación válido.
-- La aplicación debe existir en tu espacio de trabajo.
+- El`app_id`parámetro debe ser un identificador válido de la API de la aplicación.
+- La aplicación debe estar presente en tu espacio de trabajo.
 
 {% endapi %}
