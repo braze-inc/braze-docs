@@ -1,7 +1,7 @@
 ---
-nav_title: "POST: SDK-Authentifizierungsschlüssel erstellen"
+nav_title: "POST: Erstellen Sie einen SDK-Authentifizierungsschlüssel."
 article_title: "POST: SDK-Authentifizierungsschlüssel erstellen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 0
 layout: api_page
 page_type: reference
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Beispiel Anfrage
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_authentication/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
