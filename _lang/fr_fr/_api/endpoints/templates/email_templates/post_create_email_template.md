@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Créer des mod
 
 > Utilisez cet endpoint pour créer des modèles d’e-mail sur le tableau de bord de Braze.
 
-Ces modèles seront disponibles sur la page **Modèles et médias & **. La réponse de cet endpoint comprend un champ `email_template_id` qui peut être utilisé pour mettre à jour le modèle lors des prochains appels d’API.
+Ces modèles seront disponibles sur la page **Modèles et& médias**. La réponse de cet endpoint comprend un champ `email_template_id` qui peut être utilisé pour mettre à jour le modèle lors des prochains appels d’API.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | --------- | ---------| --------- | ----------- |
 |`template_name`|Requis|Chaîne de caractères|Nom de votre modèle d’e-mail|
 |`subject`|Requis|Chaîne de caractères|Ligne Objet du modèle d’e-mail.|
-|`body`|Requis|Chaîne de caractères|Corps du modèle d’e-mail pouvant inclure du HTML. Jusqu'à 400 KB.|
+|`body`|Requis|Chaîne de caractères|Corps du modèle d’e-mail pouvant inclure du HTML. Jusqu'à 400 Ko.|
 |`plaintext_body`|Facultatif|Chaîne de caractères|Une version en texte brut du corps du modèle d’e-mail.|
 |`preheader`|Facultatif|Chaîne de caractères|Accroche d’e-mail utilisée pour générer des aperçus chez certains clients.|
 |`tags`|Facultatif|Chaîne de caractères|Les [étiquettes]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) doivent déjà exister.|
