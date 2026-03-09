@@ -1,6 +1,6 @@
 ---
 nav_title: Atualizações ao vivo para Android
-article_title: Atualizações ao Vivo para o SDK Braze do Android
+article_title: Atualizações ao vivo para o SDK Braze do Android
 page_order: 0.1
 description: "Aprenda como configurar Atualizações ao Vivo para o SDK Braze do Android."
 platform: 
@@ -29,7 +29,7 @@ Nesta seção, você fará parceria com o Superb Owl, o anfitrião de um novo pr
 
 Em seu aplicativo, crie um novo arquivo chamado `MyCustomNotificationFactory.kt` que estenda [`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) para lidar com a forma como as Atualizações ao Vivo do Braze são exibidas.
 
-No exemplo a seguir, o Superb Owl criou uma fábrica de notificações personalizada para exibir uma Atualização ao Vivo para partidas em andamento. No próximo passo, você criará um novo método chamado `getTeamInfo` para mapear os dados de uma equipe para a atividade.
+No exemplo a seguir, o Superb Owl criou uma fábrica de notificações personalizada para exibir uma Atualização ao Vivo para partidas em andamento. Na próxima etapa, você criará um novo método chamado `getTeamInfo` para mapear os dados de uma equipe para a atividade.
 
 ```kotlin
 class MyCustomNotificationFactory : IBrazeNotificationFactory {
