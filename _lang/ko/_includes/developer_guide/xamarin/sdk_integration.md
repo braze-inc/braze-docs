@@ -1,6 +1,6 @@
 ## .NET MAUI SDK 통합
 
-Braze .NET MAUI (이전 Xamarin) SDK를 통합하면 기본 분석 기능과 사용자와 소통할 수 있는 인앱 메시지를 사용할 수 있습니다. 
+Braze .NET MAUI (이전의 Xamarin) SDK를 통합하면 기본 분석 기능과 사용자와 소통할 수 있는 인앱 메시지를 사용할 수 있습니다. 
 
 ### 필수 조건
 
@@ -18,17 +18,21 @@ Braze .NET MAUI (이전 Xamarin) SDK를 통합하면 기본 분석 기능과 사
 {% subtabs local %}
 {% subtab NuGet %}
 가장 간단한 통합 방법은 [NuGet.org](https://www.nuget.org/) 중앙 리포지토리에서 Braze SDK를 가져오는 것입니다. Visual Studio 사이드바에서 `Packages` 폴더를 오른쪽 클릭하고 `Add Packages...`를 클릭합니다.  'Braze'를 검색하고 [`BrazePlatform.BrazeAndroidBinding`](https://www.nuget.org/packages/BrazePlatform.BrazeAndroidBinding/) 패키지를 프로젝트에 설치합니다.
+
+Braze 위치 서비스 및 지오펜스를 사용하려면 [`BrazePlatform.BrazeAndroidLocationBinding`](https://www.nuget.org/packages/BrazePlatform.BrazeAndroidLocationBinding/) 패키지도 설치하십시오.
 {% endsubtab %}
 
 {% subtab Source %}
 두 번째 통합 방법은 [바인딩 소스를](https://github.com/braze-inc/braze-xamarin-sdk) 포함하는 것입니다. [`appboy-component/src/androidnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidNet6Binding) 아래에서 바인딩 소스 코드를 찾을 수 있습니다. .NET MAUI 애플리케이션에서 ```BrazeAndroidBinding.csproj```에 프로젝트 참조를 추가하면 바인딩이 프로젝트와 함께 빌드되고 Braze Android SDK에 접근할 수 있습니다.
+
+Braze 위치 서비스 및 지오펜스를 사용하려면 [`appboy-component/src/androidnet6/BrazeAndroidLocationBinding`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidLocationBinding) 아래에 있는 ```BrazeAndroidLocationBinding.csproj```에 프로젝트 참조를 추가하십시오.
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 
 {% tab ios %}
 {% alert important %}
-iOS SDK 버전 4.0.0 이상에 대한 .NET MAUI 바인딩은 [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/)를 사용하며, 이전 버전은 [레거시 AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk)를 사용합니다.
+.NET MAUI SDK 버전 4.0.0 이상에 대한 iOS 바인딩은 [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/)를 사용하며, 이전 버전은 [레거시 AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk)를 사용합니다.
 {% endalert %}
 
 .NET MAUI 바인딩은 .NET MAUI 앱에서 네이티브 라이브러리를 사용하는 방법입니다. 바인딩 구현은 라이브러리에 대한 C# 인터페이스를 빌드한 다음 애플리케이션에서 해당 인터페이스를 사용하는 작업으로 구성됩니다. Braze SDK 바인딩을 포함시키는 두 가지 방법(NuGet 사용 또는 소스에서 컴파일)이 있습니다.
