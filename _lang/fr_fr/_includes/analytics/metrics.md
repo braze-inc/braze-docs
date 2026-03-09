@@ -55,7 +55,7 @@ Le terme <i>Clics du bouton 1</i> désigne le nombre total de clics sur le bout
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}
-Le <i>taux de clics d'ouverture</i> est le pourcentage d'e-mails ouverts qui ont été cliqués au moins une fois par un seul utilisateur ou une seule machine. Il n'est disponible que dans le <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>générateur de rapports.</a>
+<i>Le taux de clics</i> est le pourcentage d'e-mails ouverts qui ont été cliqués au moins une fois par un utilisateur ou une machine unique. Il est uniquement disponible dans le <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>générateur de rapports</a>.
 {% endif %}
 
 {% if include.metric == "Close Message" %}
@@ -239,7 +239,7 @@ Le terme <i>Total des rejets</i> désigne le nombre de fois où les cartes de co
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
-Le <i>nombre total d'impressions</i> est le nombre de fois qu'un message est vu. Braze n'enregistre une impression que lorsque le message devient visible pour l'utilisateur sur son écran. Par exemple, si un message est placé au bas d'une page, l'impression n'est pas enregistrée tant que l'utilisateur n'a pas fait défiler la page vers le bas et que le message n'est pas visible. Si un utilisateur voit le même message deux fois, cela comptera comme deux impressions.
+<i>Le</i> <i>nombre total d'impressions</i> correspond au nombre de fois qu'un message est affiché. Braze enregistre une impression uniquement lorsque le message devient visible pour l'utilisateur sur son écran. Par exemple, si un message est placé au bas d'une page, l'impression n'est enregistrée que lorsque l'utilisateur fait défiler la page vers le bas et que le message apparaît à l'écran. Si un utilisateur voit le même message deux fois, cela sera comptabilisé comme deux impressions.
 {% endif %}
 
 {% if include.metric == "Total Opens" %}
@@ -251,7 +251,7 @@ Le <i>chiffre d'affaires</i> total est le chiffre d'affaires total, en dollars, 
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui ont cliqué au moins une fois sur un lien dans un message. <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+<i>Les clics uniques</i> correspondent au nombre distinct de destinataires ayant cliqué au moins une fois sur un lien dans un message et sont mesurés par <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
@@ -261,7 +261,7 @@ Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui on
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-Le nombre d'<i>impressions uniques</i> est le nombre total d'utilisateurs qui ont vu un message d'une campagne donnée. Une impression n'est enregistrée que lorsque le message devient visible sur l'écran d'un utilisateur.
+<i>Les impressions uniques</i> correspondent au nombre total d'utilisateurs ayant consulté un message issu d'une campagne donnée. Une impression n'est enregistrée que lorsque le message devient visible sur l'écran d'un utilisateur.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
