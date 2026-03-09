@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Mise à jour de la production en ligne/instantanée"
+nav_title: "POST : Mettre à jour l'activité en ligne/en production/instantanée"
 article_title: "POST : Mettre à jour l’activité en direct"
 search_tag: Endpoint
 page_order: 1
@@ -19,7 +19,7 @@ description: "Cet article présente en détail l’endpoint Mettre à jour l’a
 
 Après avoir enregistré une activité en direct, vous pouvez passer une charge utile JSON pour mettre à jour votre service de notification push Apple (APNs). Consultez la documentation d'Apple sur [la mise à jour de votre activité en direct avec des charges utiles de notification push](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) pour plus d'informations.
 
-Si `content-available` n'est pas défini, la priorité par défaut du service de notification push d'Apple (APN) est de 10. Si l'option `content-available` est activée, cette priorité est de 5. Pour plus de détails, reportez-vous à l'[objet Apple push]({{site.baseurl}}/api/objects_filters/messaging/apple_object).
+Si ce paramètre`content-available` n'est pas défini, la priorité par défaut du service Apple Notification push (APN) est 10. Si`content-available`  est défini, cette priorité est de 5. Veuillez vous référer à [l'objet push Apple]({{site.baseurl}}/api/objects_filters/messaging/apple_object) pour plus de détails.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
@@ -60,12 +60,12 @@ Pour utiliser cet endpoint, vous devrez effectuer les opérations suivantes :
 | `end_activity` | Facultatif | Valeur booléenne | Si `true`, cette requête met fin à l’activité en direct. |
 | `dismissal_date` | Facultatif | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre définit le moment de suppression de l’activité en direct de l’interface utilisateur. Si cette heure est dans le passé et `end_activity` est `true`, l'Activité en direct sera supprimée immédiatement.<br><br> Si `end_activity` est `false` ou omis, ce paramètre met uniquement à jour l'Activité en direct.|
 | `stale_date` | Facultatif | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre indique au système quand le contenu de l’activité en direct devient obsolète dans l’interface utilisateur. |
-| `notification` | Facultatif | Objet | Inclure un [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) objet pour définir une notification push. Le comportement de cette notification push dépend du fait que l'utilisateur est actif ou qu'il utilise un appareil proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> est inclus et que l’utilisateur est actif sur son iPhone lorsque la mise à jour est livrée, l’interface utilisateur de l’activité en direct mise à jour glissera vers le bas et s’affichera comme une notification push.</li><li>Si un <code>notification</code> est inclus et que l’utilisateur n’est pas actif sur son iPhone, son écran s’allume pour afficher l’interface utilisateur de l’activité en direct mise à jour sur son écran de verrouillage.</li><li>Le paramètre <code>notification alert</code> ne s’affichera pas comme une notification push standard. De plus, si un utilisateur dispose d’un appareil proxy, comme une Apple Watch, le <code>alert</code> s’affichera ici.</li></ul>{:/} |
+| `notification` | Facultatif | Objet | Inclure un [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) objet pour définir une notification push. Le comportement de cette notification push dépend du statut d'activité de l'utilisateur ou de l'utilisation éventuelle d'un appareil proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> est inclus et que l’utilisateur est actif sur son iPhone lorsque la mise à jour est livrée, l’interface utilisateur de l’activité en direct mise à jour glissera vers le bas et s’affichera comme une notification push.</li><li>Si un <code>notification</code> est inclus et que l’utilisateur n’est pas actif sur son iPhone, son écran s’allume pour afficher l’interface utilisateur de l’activité en direct mise à jour sur son écran de verrouillage.</li><li>Le paramètre <code>notification alert</code> ne s’affichera pas comme une notification push standard. De plus, si un utilisateur dispose d’un appareil proxy, comme une Apple Watch, le <code>alert</code> s’affichera ici.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \
