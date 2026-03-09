@@ -20,7 +20,7 @@ O Braze fornece métodos predefinidos para configurar as seguintes atribuições
 
 {% tabs %}
 {% tab using methods %}
-Para definir um atributo padrão para um usuário, chame o método `getUser()` na sua instância do Braze para obter uma referência ao usuário atual do seu app. Então você pode chamar métodos para definir um atributo de usuário.
+Para definir um atributo padrão para um usuário, chame o método `getUser()` na sua instância do Braze para obter uma referência ao usuário atual do seu app. Então você pode chamar métodos para definir um atributo do usuário.
 
 {% subtabs local %}
 {% subtab First name %}
@@ -42,7 +42,7 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 {% endtab %}
 
 {% tab google tag manager %}
-Usando o Google Tag Manager, atributos de usuário padrão (como o primeiro nome de um usuário) devem ser registrados da mesma forma que atributos de usuário personalizados. Certifique-se de que os valores que está passando para as atribuições padrão correspondam ao formato esperado especificado na documentação da [classe User](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
+Usando o Google Tag Manager, atributos padrão do usuário (como o primeiro nome de um usuário) devem ser registrados da mesma forma que atributos personalizados do usuário. Certifique-se de que os valores que está passando para as atribuições padrão correspondam ao formato esperado especificado na documentação da [classe User](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 Por exemplo, o atributo gender pode aceitar qualquer um dos seguintes valores: `"m" | "f" | "o" | "u" | "n" | "p"`. Portanto, para definir o gênero de um usuário como feminino, crie uma tag HTML personalizada com o seguinte conteúdo:
 
@@ -56,7 +56,7 @@ window.braze.getUser().setGender("f")
 
 ### Removendo atributos padrão
 
-Para remover um atributo de usuário padrão, passe `null` para o método relacionado. Por exemplo:
+Para remover um atributo padrão do usuário, passe `null` para o método relacionado. Por exemplo:
 
 {% tabs local %}
 {% tab First name %}
@@ -82,7 +82,7 @@ braze.getUser().setDateOfBirth(null, null, null);
 
 {% tabs %}
 {% tab using methods %}
-Além dos métodos de atributo de usuário padrão, você também pode definir [atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) para seus usuários. Especificações completas dos métodos, veja [nossos JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
+Além dos métodos de atributos padrão do usuário, você também pode definir [atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) para seus usuários. Especificações completas dos métodos, veja [nossos JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 {% subtabs local %}
 {% subtab String %}
@@ -138,7 +138,7 @@ braze.getUser().setCustomUserAttribute(
 {% endsubtab %}
 {% subtab Array %}
 
-Você pode ter até 25 elementos em arrays de atributos personalizados. Arrays individuais que são definidos manualmente (não detectados automaticamente) para **Tipo de Dados** podem ser aumentados até 100 no dashboard do Braze em **Configurações de Dados** > **Atributos Personalizados**. Se você quiser que esse máximo seja aumentado, entre em contato com seu gerente de conta do Braze.
+Você pode ter até 25 elementos em arrays de atributos personalizados. Arrays individuais que são definidos manualmente (não detectados automaticamente) para **Tipo de Dados** podem ser aumentados até 500 no dashboard do Braze em **Configurações de Dados** > **atributos personalizados**. Para aumentar esse limite acima de 500, entre em contato com seu gerente de conta do Braze.
 
 [As matrizes]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays) que excederem o número máximo de elementos serão truncadas para conter o número máximo de elementos.
 
@@ -161,7 +161,7 @@ As datas passadas para o Braze com esse método devem ser objetos JavaScript Dat
 {% endsubtabs %}
 
 {% alert important %}
-Chaves e valores de atributos personalizados podem ter no máximo 255 caracteres. Para mais informações sobre valores válidos de atributos personalizados, consulte a [documentação de referência](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
+As chaves e valores dos atributos personalizados podem ter no máximo 255 caracteres. Para mais informações sobre valores válidos de atributos personalizados, consulte a [documentação de referência](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 {% endalert %}
 {% endtab %}
 
@@ -192,7 +192,7 @@ braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
 
 ### Aninhando atributos personalizados
 
-Você também pode aninhar propriedades dentro de atributos personalizados. No exemplo a seguir, um `favorite_book` objeto com propriedades aninhadas é definido como um atributo personalizado no perfil do usuário. Para mais detalhes, consulte [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+Você também pode aninhar propriedades dentro de atributos personalizados. No exemplo a seguir, um objeto `favorite_book` com propriedades aninhadas é definido como um atributo personalizado no perfil do usuário. Para mais detalhes, consulte [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -225,13 +225,13 @@ Quando um usuário é registrado para receber notificações por push, o navegad
 
 Visite [Gerenciar inscrições de usuários]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) para saber mais sobre a implementação de inscrições e aceitação explícita.
 
-### Cancelando a inscrição de um usuário por e-mail
+### Cancelando a assinatura de um usuário de e-mail
 
 ```javascript
 braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
 ```
 
-### Cancelando a inscrição de um usuário por push
+### Cancelando a assinatura de um usuário de push
 
 ```java
 braze.getUser().setPushNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
