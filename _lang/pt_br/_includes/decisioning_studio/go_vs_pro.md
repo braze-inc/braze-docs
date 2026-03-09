@@ -1,21 +1,21 @@
-## Decisão de acessar o Studio vs. Acessar o site Decisioning Studio Pro 
+## Decisioning Studio Go vs. Decisioning Studio Pro 
 
-O Decisioning Studio oferece dois níveis: Acessar e ser profissional. Cada camada foi projetada para atender a diferentes necessidades e casos de uso.
+Decisioning Studio oferece dois níveis: Go e Pro. Cada nível é projetado para atender a diferentes necessidades e casos de uso.
 
-### Acessar o Decisioning Studio
+### Decisioning Studio Go
 
-O Acessar é ideal para equipes que estão começando a usar a tomada de decisões por IA. Ele inclui:
+Go é ideal para equipes que estão começando com a tomada de decisão em IA. Inclui:
 
-- Configuração criativa de autoatendimento com um agente de decisão pré-projetado
+- Configuração criativa autoatendida com um agente de decisão pré-projetado
 - Métrica de sucesso focada em cliques
-- Compatibilidade com três plataformas de engajamento com clientes (CEPs): Braze, Salesforce Marketing Cloud e Klaviyo
+- Compatibilidade com três Plataformas de Engajamento de Clientes (CEPs): Braze, Salesforce Marketing Cloud e Klaviyo
 
 ### Decisioning Studio Pro
 
-Pro oferece o conjunto completo de recursos do Decisioning Studio para casos de uso avançados. Os principais recursos incluem:
+Pro oferece a suíte completa de capacidades do Decisioning Studio para casos de uso avançados. Os principais recursos incluem:
 
-- Uma equipe dedicada de IA Decisioning Services para dar suporte desde o projeto do agente de decisão até o estado estável
+- Uma equipe dedicada de Serviços de Decisão em IA para apoiar você desde o design do agente de decisão até o estado estável
 - A métrica de sucesso pode ser qualquer métrica de negócios (não apenas cliques)
-- Capacidade de conectar qualquer fonte de dados de clientes para tomada de decisões
-- Conjunto completo de relatórios e insights
+- Capacidade de conectar qualquer fonte de dados de cliente para a tomada de decisão
+- Suíte completa de relatórios e insights
 - Padrões de orquestração estendidos
