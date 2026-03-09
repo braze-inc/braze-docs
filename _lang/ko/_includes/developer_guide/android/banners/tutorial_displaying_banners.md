@@ -1,10 +1,10 @@
 ## 필수 조건
 
-이 튜토리얼을 시작하기 전에 Braze 소프트웨어 개발 키트가 최소 버전 요구 사항을 충족하는지 확인하세요:
+이 튜토리얼을 시작하기 전에, Braze SDK가 최소 버전 요구 사항을 충족하는지 확인하십시오:
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
-## Android 소프트웨어 개발 키트 배너 표시하기
+## Android SDK에 대한 배너 표시
 
 {% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Displaying Banners Android" %}
 
@@ -97,24 +97,24 @@ lines-MainApplication.kt=12
 개발 중 문제 해결을 쉽게 하기 위해 디버깅을 활성화하는 것을 고려하세요.
 
 !!단계
-라인-MainApplication.kt=21-28
+lines-MainApplication.kt=21-28
 
-#### 2\. 배너 업데이트 가입하기
+#### 2\. 배너 업데이트 구독하기
 
-`subscribeToBannersUpdates()` 을 사용하여 배너가 업데이트될 때마다 실행되는 핸들러를 등록하세요.
+배너가 업데이트될 때마다 실행되는 핸들러를 등록하려면 `subscribeToBannersUpdates()`을 사용하십시오.
 
 !!단계
 lines-MainActivity.kt=10-14
 
-#### 3\. 게재 위치 새로고침하기
+#### 3\. 배치 새로 고침
 
-Braze 소프트웨어 개발 키트를 초기화한 후 `requestBannersRefresh(["PLACEMENT_ID"])` 으로 전화하여 해당 게재 위치에 대한 최신 배너 콘텐츠를 가져옵니다.
+Braze SDK를 초기화한 후, 해당 배치에 대한 최신 배너 콘텐츠를 가져오려면 `requestBannersRefresh(["PLACEMENT_ID"])`을 호출하십시오.
 
 !!단계
-라인-banners.xml=15-19
+lines-banners.xml=15-19
 
-#### 4\. `BannerView` 정의 `banners.xml`
+#### 4\. 당신의 `banners.xml`에서 `BannerView`을 정의하십시오
 
-`banners.xml` 에서 `app:placementId="PLACEMENT_ID"` 와 함께 `<com.braze.ui.banners.BannerView>` 요소를 선언합니다. Braze는 이 요소를 사용하여 UI에 배너를 삽입합니다.
+`banners.xml`에서 `app:placementId="PLACEMENT_ID"`으로 `<com.braze.ui.banners.BannerView>` 요소를 선언하십시오. Braze는 이 요소를 사용하여 UI에 배너를 삽입합니다.
 
 {% endscrolly %}
