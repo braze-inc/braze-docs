@@ -1,12 +1,12 @@
 ---
 nav_title: Segmentação baseada em contas
-article_title: Configurar a segmentação baseada em contas
+article_title: Configurar Segmentação Baseada em Conta
 page_order: 2
 page_type: reference
 description: "Saiba como usar vários recursos do Braze para potencializar seus casos de uso de segmentação baseada em contas B2B."
 ---
 
-# Configure a segmentação baseada em contas
+# Configurar segmentação baseada em conta
 
 > Esta página mostra como usar vários recursos do Braze para potencializar seus casos de uso de segmentação baseada em contas B2B.
 
@@ -49,7 +49,7 @@ Selecione as seguintes variáveis para um caso de uso de segmentação baseada e
 
 Para obter uma segmentação mais sofisticada ou complexa, consulte [Extensões de segmento do SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). Para ajudá-lo a começar, aqui estão alguns modelos de SQL que podem ser usados para ajudá-lo a obter uma vantagem inicial com a segmentação baseada em contas B2B:
 
-1. Crie um segmento comparando dois filtros em um único catálogo (por exemplo, usuários que trabalham no setor de restaurantes para uma conta de nível empresarial). Você deve incluir a ID do catálogo e a ID do item.
+1. Crie um segmento comparando dois filtros em um único catálogo (por exemplo, usuários que trabalham no setor de restaurantes para uma conta de nível empresarial). Você deve incluir o ID do catálogo e o ID do item.
 
 ```sql
 WITH salesforce_accounts AS (
@@ -108,7 +108,7 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Opção 2: Ao usar fontes conectadas para seus business objects
 
-Para obter informações básicas sobre como usar fontes conectadas na segmentação, consulte [Extensões de segmento do CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Use os modelos abordados em [Ao usar catálogos](#option-1-when-using-catalogs-for-your-business-objects) para se inspirar em como formatar as tabelas de origem, pois você pode formatá-las da maneira que quiser.
+Para o básico sobre como usar fontes conectadas na segmentação, consulte [Extensões de Segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Use os modelos abordados em [Ao usar catálogos](#option-1-when-using-catalogs-for-your-business-objects) para se inspirar em como formatar as tabelas de origem, pois você pode formatá-las da maneira que quiser.
 
 ## Usando sua extensão baseada em conta em um segmento
 
