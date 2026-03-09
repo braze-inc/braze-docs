@@ -1,44 +1,44 @@
 {% tabs %}
 {% tab Abandoned browse %}
 
-### Navegador abandonado
+### Navegação abandonada
 
-Use o modelo **Abandono de carrinho** para engajar os usuários que navegaram pelos produtos, mas não os adicionaram ao carrinho ou fizeram um pedido.
+Use o modelo de **Navegação Abandonada** para engajar usuários que navegaram por produtos, mas não os adicionaram ao carrinho ou realizaram um pedido.
 
-![Um modelo de Canva "Abandoned Browse" aplicado com "Entry Rules" expandidas.]({% image_buster /assets/img_archive/abandoned_browse.png %})
+![Um modelo de Canvas "Navegação Abandonada" aplicado com "Regras de Entrada" expandidas.]({% image_buster /assets/img_archive/abandoned_browse.png %})
 
 #### Configuração
 
-Na página Canvas, selecione **Usar um modelo de canvas** > **Modelos de Braze** e aplique o modelo **Abandoned browse**. 
+Na página do Canvas, selecione **Usar um Modelo de Canvas** > **modelos Braze** e, em seguida, aplique o modelo **Navegação Abandonada**. 
 
 ##### Configurações padrão
 
-As seguintes configurações são pré-configuradas em seu Canva:
+As seguintes configurações estão pré-configuradas no seu Canvas:
 - Tutorial 
-    - Nome da tela: **Navegador abandonado**
+    - Nome do Canvas: **Navegação Abandonada**
     - Evento de conversão: `ecommerce.order placed`
         - Prazo de conversão: 3 dias 
 - Cronograma de entrada 
-    - Baseado em ação quando um usuário executa o evento `ecommerce.product_viewed` 
-    - A hora de início é quando você cria o modelo do Canva<br><br>!["Opções baseadas em ações" para o Canva.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
+    - Baseado em ação quando um usuário realiza o evento `ecommerce.product_viewed`
+    - O horário de início é quando você cria o modelo de Canvas<br><br>!["Opções Baseadas em Ação" para o Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
 - Público alvo 
     - Público de entrada 
-        - O e-mail **não está em branco**
-        - Também é possível modificar os critérios de público-alvo de entrada para atender às suas necessidades comerciais
+        - E-mail **não está em branco**
+        - Você também pode modificar os critérios de público de entrada para atender às necessidades do seu negócio
     - Controles de entrada
-        - Os usuários são elegíveis para entrar novamente neste Canva após a conclusão da duração total do Canvas
+        - Os usuários são elegíveis para reentrar neste Canvas após a duração total do Canvas ser concluída
     - Critérios de saída 
-        - Realiza `ecommerce.cart_updated`, `ecommerce.checkout_started`, ou `ecommerce.order_placed`<br><br>![Controles de entrada e critérios de saída para o Canva.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
+        - Realiza `ecommerce.cart_updated`, `ecommerce.checkout_started` ou `ecommerce.order_placed`<br><br>![Controles de entrada e critérios de saída para o Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
 - Enviar configurações 
     - Usuários inscritos ou que aceitaram 
 - Etapa de postergação
     - 1 hora de postergação
 - Etapa da mensagem 
-    - Revise o modelo de e-mail e o bloco HTML com um exemplo de modelo Liquid para adicionar produtos à sua mensagem no modelo pré-criado. Se você usar seu próprio modelo de e-mail, também poderá fazer referência a [variáveis Liquid](#message-personalization), conforme demonstrado na seção a seguir.
+    - Revise o modelo de e-mail e o bloco HTML com um exemplo de template Liquid para adicionar produtos à sua mensagem no modelo pré-construído. Se você usar seu próprio modelo de e-mail, também pode referenciar [variáveis Liquid](#message-personalization), conforme demonstrado na seção a seguir.
 
-#### Personalização de produtos de navegação abandonada para e-mails 
+#### Personalização de produtos visualizados abandonados para e-mails 
 
-Aqui está um exemplo de como você adicionaria um bloco de produto HTML para seu e-mail Abandoned Browse. 
+Aqui está um exemplo de como você adicionaria um bloco de produto HTML para seu e-mail de Navegação Abandonada. 
 
 {% raw %}
 ```java
@@ -69,55 +69,55 @@ Aqui está um exemplo de como você adicionaria um bloco de produto HTML para se
 
 ### Carrinho abandonado
 
-Use o modelo **Abandono de carrinho** para cobrir possíveis vendas perdidas de clientes que adicionaram produtos ao carrinho, mas não continuaram a finalizar a compra ou a fazer um pedido. 
+Use o modelo **Carrinho Abandonado** para cobrir vendas potenciais perdidas de clientes que adicionaram produtos ao carrinho, mas não continuaram para o checkout ou realizaram um pedido. 
 
-![Um modelo de Canva "Abandoned Cart" aplicado com "Entry Rules" expandidas.]({% image_buster /assets/img_archive/abandoned_cart.png %})
+![Um modelo "Carrinho Abandonado" Canvas aplicado com "Regras de Entrada" expandidas.]({% image_buster /assets/img_archive/abandoned_cart.png %})
 
 #### Configuração
 
-Na página Canvas, selecione **Usar um modelo de canvas** > **Modelos do Braze** e aplique o modelo **Abandono de carrinho**. 
+Na página do Canvas, selecione **Usar um Modelo Canvas** > **modelos Braze** e, em seguida, aplique o modelo **Carrinho Abandonado**. 
 
 ##### Configurações padrão
 
-As seguintes configurações são pré-configuradas em seu Canva:
+As seguintes configurações estão pré-configuradas no seu Canvas:
 - Tutorial 
-    - Nome da tela: **Carrinho abandonado**
+    - Nome do Canvas: **Carrinho abandonado**
     - Evento de conversão: `ecommerce.order_placed`
         - Prazo de conversão: 3 dias 
 - Cronograma de entrada 
-    - Gatilho baseado em ação quando um usuário dispara o **evento Perform Cart Updated** (localizado no menu suspenso)
-    - A hora de início é quando você cria o modelo do Canva<br><br>!["Opções baseadas em ações" para o Canva.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
+    - Gatilho baseado em ação quando um usuário aciona o **Executar Evento de Atualização de Carrinho** (localizado no dropdown)
+    - O horário de início é quando você cria o modelo de Canvas<br><br>!["Opções Baseadas em Ação" para o Canvas.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
 - Público-alvo 
     - Público de entrada 
-        - Já usou esses apps **mais de 0** vezes 
-        - O e-mail **não está em branco**
+        - Usou esses aplicativos **mais de 0** vezes 
+        - E-mail **não está em branco**
     - Controles de entrada
-        - Os usuários são imediatamente reelegíveis para a entrada no Canva
+        - Os usuários são imediatamente re-elegíveis para entrada no Canvas
     - Critérios de saída 
-        - Realiza `ecommerce.cart_updated`, `ecommerce.checkout_started`, ou `ecommerce.order_placed`<br><br>![Controles de entrada e critérios de saída para o Canva.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
+        - Realiza `ecommerce.cart_updated`, `ecommerce.checkout_started` ou `ecommerce.order_placed`<br><br>![Controles de entrada e critérios de saída para o Canvas.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
 - Enviar configurações 
     - Usuários inscritos ou que aceitaram 
 - Etapa de postergação
      - 4 horas de postergação
 - Etapa da mensagem 
-    - Revise o modelo de e-mail e o bloco HTML com um exemplo de modelo Liquid para adicionar produtos à sua mensagem no modelo pré-criado. Se você usar seu próprio modelo de e-mail, também poderá fazer referência a [variáveis Liquid](#message-personalization), conforme demonstrado na seção a seguir.
+    - Revise o modelo de e-mail e o bloco HTML com um exemplo de template Liquid para adicionar produtos à sua mensagem no modelo pré-construído. Se você usar seu próprio modelo de e-mail, também pode referenciar [variáveis Liquid](#message-personalization), conforme demonstrado na seção a seguir.
 
-#### Como funciona a lógica de reentrada de carrinho abandonado
+#### Como funciona a lógica de reentrada do carrinho abandonado
 
-Quando um usuário inicia o processo de checkout, seu carrinho é marcado como `checkout_started`. Desse ponto em diante, quaisquer outras atualizações de carrinho com o mesmo ID de carrinho não qualificarão o usuário para entrar novamente na jornada do usuário do carrinho abandonado.
+Quando um usuário inicia o processo de checkout, seu carrinho é marcado como `checkout_started`. A partir desse ponto, quaisquer atualizações adicionais do carrinho com o mesmo ID de carrinho não qualificarão o usuário para reentrar na jornada do usuário do carrinho abandonado.
 
-1. Quando um usuário adiciona um item ao carrinho, ele entra no Canva.
-2. Sempre que adicionam ou atualizam itens, eles entram novamente no Canva - isso mantém os dados do carrinho e o envio de mensagens atualizados.
-3. Quando o usuário inicia o processo de checkout, seu carrinho é taggeado como `checkout_started`, e ele sai do Canva.
-4. Qualquer atualização futura do carrinho usando o mesmo ID de carrinho não disparará a reentrada porque esse carrinho já passou para o estágio de checkout.
+1. Quando um usuário adiciona um item ao seu carrinho, ele entra no Canvas.
+2. Cada vez que eles adicionam ou atualizam itens, eles reentram no Canvas—isso mantém os dados do carrinho e o envio de mensagens atualizados.
+3. Quando o usuário inicia o processo de checkout, seu carrinho é marcado como `checkout_started`, e ele sai do canva.
+4. Quaisquer futuras atualizações de carrinho usando o mesmo ID de carrinho não dispararão a reentrada porque este carrinho já se moveu para a fase de checkout.
 
-Quando os usuários passam para a jornada do usuário de checkout, eles são direcionados pelo [Canva de checkout abandonado](#abandoned-checkout), que é projetado para usuários mais avançados na jornada de compra.
+Quando os usuários avançam na jornada do usuário de checkout, eles são direcionados pelo [canva de checkout abandonado](#abandoned-checkout) em vez disso, que é projetado para usuários mais adiantados na jornada de compra.
 
-#### Personalização de produtos de carrinho abandonado para envio de e-mails {#abandoned-cart-checkout}
+#### Personalização de produtos de carrinho abandonado para e-mails {#abandoned-cart-checkout}
 
-As jornadas de usuários de carrinhos abandonados exigem uma tag especial do Liquid `shopping_cart` para personalização do produto. 
+Jornadas de usuários de carrinho abandonado requerem uma tag Liquid especial `shopping_cart` para personalização de produtos. 
 
-Aqui está um exemplo de como adicionar um bloco HTML com a tag `shopping_cart` Liquid para adicionar produtos ao seu e-mail. 
+Aqui está um exemplo de como você adicionaria um bloco HTML com sua tag Liquid `shopping_cart` para adicionar produtos ao seu e-mail. 
 
 {% raw %}
 ```java
@@ -144,12 +144,12 @@ Aqui está um exemplo de como adicionar um bloco HTML com a tag `shopping_cart` 
 {% endraw %}
 
 {% alert note %}
-Se você usa o Shopify, adicione o nome do catálogo para obter o URL da imagem variante.
+Se você usar Shopify, adicione o nome do seu catálogo para obter a URL da imagem da variante.
 {% endalert %}
 
-##### URL do carrinho em HTML
+##### URL do carrinho HTML
 
-Se quiser direcionar os usuários de volta ao carrinho, você pode adicionar uma propriedade de evento aninhada no objeto de metadados, como, por exemplo:
+Se você quiser direcionar os usuários de volta ao seu carrinho, pode adicionar uma propriedade de evento aninhada sob o objeto de metadados, como:
 
 {% raw %}
 ```liquid
@@ -157,7 +157,7 @@ Se quiser direcionar os usuários de volta ao carrinho, você pode adicionar uma
 ```
 {% endraw %}
 
-Se você usa o Shopify, crie o URL do carrinho usando esse modelo Liquid:
+Se você usar Shopify, crie sua URL de carrinho usando este modelo Liquid:
 
 {% raw %}
 ```liquid
@@ -170,45 +170,45 @@ Se você usa o Shopify, crie o URL do carrinho usando esse modelo Liquid:
 
 ### Checkout abandonado
 
-Use o modelo **Abandoned checkout** para direcionar os clientes que iniciaram o processo de checkout, mas saíram antes de fazer o pedido. 
+Use o modelo **Checkout Abandonado** para direcionar clientes que iniciaram o processo de checkout, mas saíram antes de finalizar o pedido. 
 
-![Um modelo de Canva "Abandoned Checkout" aplicado com "Regras de entrada" expandidas.]({% image_buster /assets/img_archive/abandoned_checkout.png %})
+![Um modelo de canva "Checkout Abandonado" aplicado com "Regras de Entrada" expandidas.]({% image_buster /assets/img_archive/abandoned_checkout.png %})
 
 #### Configuração
 
-Na página Canvas, selecione **Usar um modelo de canvas** > **Modelos do Braze** e aplique o modelo **Abandoned checkout**. 
+Na página do canva, selecione **Usar um Modelo de Canva** > **Modelos Braze** e, em seguida, aplique o modelo **Checkout Abandonado**. 
 
 ##### Configurações padrão
 
-As seguintes configurações são pré-configuradas em seu Canva:
+As seguintes configurações estão pré-configuradas no seu Canvas:
 
 - Tutorial 
-    - Nome da tela: **Checkout abandonado**
+    - Nome do Canvas: **Checkout abandonado**
     - Evento de conversão: `ecommerce.order_placed`
         - Prazo de conversão: 3 dias 
 - Cronograma de entrada 
-    - Gatilho baseado em ação quando um usuário realiza o evento `ecommerce.checkout_started` 
-    - A hora de início é quando você cria o modelo do Canva<br><br>!["Opções baseadas em ações" para o Canva.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
+    - Gatilho baseado em ação quando um usuário realiza o evento `ecommerce.checkout_started`
+    - O horário de início é quando você cria o modelo de Canvas<br><br>!["Opções Baseadas em Ação" para o Canvas.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
 - Público alvo 
     - Público de entrada 
-        - Já usou esses apps **mais de 0** vezes 
-        - O e-mail **não está em branco**
+        - Usou esses aplicativos **mais de 0** vezes 
+        - E-mail **não está em branco**
     - Controles de entrada
-        - Os usuários são imediatamente reelegíveis para a entrada no Canva
+        - Os usuários são imediatamente re-elegíveis para entrada no Canvas
         - Critérios de saída 
-            - Executa os eventos do site `ecommerce.order_placed` <br><br>![Controles de entrada e critérios de saída para o Canva.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
+            - Realiza os eventos `ecommerce.order_placed`<br><br>![Controles de entrada e critérios de saída para o Canvas.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
 - Enviar configurações 
     - Usuários inscritos ou que aceitaram 
 - Etapa de postergação
     - 4 horas de postergação
 - Etapa da mensagem 
-    - Revise o modelo de e-mail e o bloco HTML com um exemplo de modelo Liquid para adicionar produtos à sua mensagem no modelo pré-criado. Se você usar seu próprio modelo de e-mail, também poderá fazer referência a [variáveis Liquid](#message-personalization), conforme demonstrado na seção a seguir.
+    - Revise o modelo de e-mail e o bloco HTML com um exemplo de template Liquid para adicionar produtos à sua mensagem no modelo pré-construído. Se você usar seu próprio modelo de e-mail, também pode referenciar [variáveis Liquid](#message-personalization), conforme demonstrado na seção a seguir.
 
-#### Personalização de e-mails de checkout abandonado
+#### Personalização de checkout abandonado para e-mails
 
-As jornadas do usuário de checkout abandonado exigem uma tag especial do Liquid `shopping_cart` para personalização do produto. 
+Jornadas de usuários de checkout abandonado requerem uma tag Liquid especial `shopping_cart` para personalização de produtos. 
 
-Aqui está um exemplo de como adicionar um bloco HTML com a tag `shopping_cart` Liquid para adicionar produtos ao seu e-mail. 
+Aqui está um exemplo de como você adicionaria um bloco HTML com sua tag Liquid `shopping_cart` para adicionar produtos ao seu e-mail. 
 
 {% raw %}
 ```java
@@ -244,43 +244,43 @@ Aqui está um exemplo de como adicionar um bloco HTML com a tag `shopping_cart` 
 {% endtab %}
 {% tab Order confirmation and feedback survey %}
 
-### Confirmação do pedido e pesquisa de feedback
+### Confirmação de pedido e pesquisa de feedback
 
-Use o modelo **de pesquisa de feedback de confirmação de pedido & ** para confirmar pedidos bem-sucedidos e aumentar a satisfação do cliente.
+Use o modelo **Confirmação de pedido & pesquisa de feedback** para confirmar pedidos bem-sucedidos e aumentar a satisfação do cliente.
 
-![Um modelo de Canva de "Confirmação de pedido" aplicado com "Regras de entrada" expandidas.]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
+![Um modelo de Canvas "Confirmação de pedido" aplicado com "Regras de entrada" expandidas.]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
 
 #### Configuração
 
-Na página do Canvas, selecione **Usar um modelo do Canvas** > **Modelos do Braze** e aplique o modelo **de pesquisa de feedback de confirmação de pedido & **. 
+Na página do Canvas, selecione **Usar um modelo de Canvas** > **Modelos de Braze** e, em seguida, aplique o modelo **de pesquisa de feedback de confirmação de pedido &**. 
 
 ##### Configurações padrão
 
-As seguintes configurações são pré-configuradas em seu Canva:
+As seguintes configurações estão pré-configuradas no seu Canvas:
 
 - Tutorial 
-    - Nome da tela: **Confirmação do pedido com pesquisa de feedback**
+    - Nome do Canvas: **Confirmação de pedido com pesquisa de feedback**
     - Evento de conversão: `ecommerce.session_start`
         - Prazo de conversão: 10 dias 
 - Cronograma de entrada 
-    - Gatilho baseado em ação quando um usuário realiza o evento `ecommerce.cart_updated` 
-    - A hora de início é quando você cria o modelo do Canva<br><br>!["Opções baseadas em ações" para o Canva.]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
+    - Gatilho baseado em ação quando um usuário realiza o evento `ecommerce.cart_updated`
+    - O horário de início é quando você cria o modelo de Canvas<br><br>!["Opções Baseadas em Ação" para o Canvas.]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
 - Público alvo 
     - Público de entrada 
-        - Já usou esses apps **mais de 0** vezes 
-        - O e-mail **não está em branco**
+        - Usou esses aplicativos **mais de 0** vezes 
+        - E-mail **não está em branco**
     - Controles de entrada
-        - Os usuários são imediatamente reelegíveis para a entrada no Canva
+        - Os usuários são imediatamente re-elegíveis para entrada no Canvas
     - Critérios de saída 
-        - Não se aplica<br><br>![Filtros adicionais e controles de entrada para o Canva.]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
+        - Não se aplica<br><br>![Filtros adicionais e controles de entrada para o Canvas.]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
 - Enviar configurações 
     - Usuários inscritos ou que aceitaram 
 - Etapa da mensagem 
-    - Revise o modelo de e-mail e o bloco HTML com um exemplo de modelo Liquid para adicionar produtos à sua mensagem no modelo pré-criado. Se você usar seu próprio modelo de e-mail, também poderá fazer referência a [variáveis Liquid](#message-personalization), conforme demonstrado na seção a seguir.
+    - Revise o modelo de e-mail e o bloco HTML com um exemplo de template Liquid para adicionar produtos à sua mensagem no modelo pré-construído. Se você usar seu próprio modelo de e-mail, também pode referenciar [variáveis Liquid](#message-personalization), conforme demonstrado na seção a seguir.
 
-#### Personalização da confirmação do pedido para e-mails
+#### Personalização de confirmação de pedido para e-mails
 
-Aqui está um exemplo de como você adicionaria um bloco de produto HTML à confirmação do pedido após a realização de um pedido.
+Aqui está um exemplo de como você adicionaria um bloco de produto HTML à sua confirmação de pedido após um pedido ser feito.
 
 {% raw %}
 ```json
@@ -302,7 +302,7 @@ Aqui está um exemplo de como você adicionaria um bloco de produto HTML à conf
 ```
 {% endraw %}
 
-##### URL do status do pedido
+##### URL de status do pedido
 
 {% raw %}
 ```liquid
