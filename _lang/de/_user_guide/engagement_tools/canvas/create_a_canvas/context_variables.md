@@ -1,42 +1,42 @@
 ---
-nav_title: Kontext-Variablen
-article_title: Kontext-Variablen
+nav_title: Kontextvariablen
+article_title: Kontextvariablen
 page_type: reference
-description: "Dieser referenzierte Artikel erklärt die Kontextvariablen in Braze Canvase, einschließlich ihrer Typen, ihrer Verwendung und der besten Methoden."
+description: "Dieser Referenzartikel erläutert Kontextvariablen in Braze Canvases, einschließlich ihrer Typen, Verwendung und bewährten Verfahren."
 ---
 
-# Kontext-Variablen
+# Kontextvariablen
 
-> Kontextvariablen sind temporäre Daten, die Sie innerhalb der Reise eines Nutzers:innen durch ein bestimmtes Canvas erstellen und verwenden können. Sie ermöglichen es Ihnen, Verspätungen zu personalisieren, Nutzer:innen dynamisch zu segmentieren und Messaging anzureichern, ohne die Profil-Informationen eines Nutzers dauerhaft zu verändern. Kontextvariablen existieren nur innerhalb der Canvas-Sitzung und bleiben nicht über verschiedene Canvase oder außerhalb der Sitzung bestehen.
+> Kontextvariablen sind temporäre Datenelemente, die Sie erstellen und innerhalb der Reise der Nutzer:innen durch ein bestimmtes Canvas verwenden können. Sie ermöglichen es Ihnen, Verzögerungen individuell zu personalisieren, Nutzer:innen dynamisch zu segmentieren und Nachrichten zu bereichern, ohne das Profil einer Nutzer:in dauerhaft zu verändern. Kontextvariablen existieren nur innerhalb der Canvas-Sitzung und sind nicht über verschiedene Canvases hinweg oder außerhalb der Sitzung persistent.
 
 ## Wie Kontextvariablen funktionieren
 
-Kontextvariablen können auf zwei Arten gesetzt werden:
+Kontextvariablen können auf zwei Arten festgelegt werden:
 
 - **Am Eingang von Canvas:** Wenn Nutzer:innen ein Canvas betreten, können Daten aus dem Ereignis oder dem API-Trigger automatisch Kontextvariablen auffüllen.
-- **In einem Context-Schritt:** Sie können Kontextvariablen innerhalb des Canvas manuell definieren oder aktualisieren, indem Sie einen [Context-Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) hinzufügen.
+- **In einem Context-Schritt:** Sie können Kontextvariablen manuell innerhalb des Canvas definieren oder ein Update durchführen, indem Sie einen [Kontext-Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) hinzufügen.
 
 Jede Kontextvariable umfasst:
 
 - Ein Name (wie `flight_time` oder `subscription_renewal_date`)
-- Ein Datentyp (z. B. Zahl, String, Zeit oder Array)
+- Ein Datentyp (wie beispielsweise Zahl, String, Zeit oder Array)
 - Ein Wert, den Sie mit [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) oder über das Tool **Personalisierung hinzufügen** zuweisen.
 
 Wenn Sie eine Kontextvariable definiert haben, können Sie sie im gesamten Canvas verwenden, indem Sie sie in diesem Format referenzieren: {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
 
-Zum Beispiel könnte {% raw %}`{{context.${flight_time}}}`{% endraw %} die geplante Flugzeit des Nutzers:in zurückgeben.
+Beispielsweise könnte die Zeit im Zeitplan der Nutzer:{% raw %}`{{context.${flight_time}}}`{% endraw %}innen für den Flug zurückgegeben werden.
 
-Jedes Mal, wenn ein Nutzer:innen den Canvas betritt - auch wenn er ihn schon einmal betreten hat - werden die Kontextvariablen auf der Grundlage der letzten Eingabedaten und der Canvas-Einstellungen neu definiert. Dieser zustandsbasierte Ansatz lässt zu, dass jeder Canvas-Eingang seinen eigenen unabhängigen Kontext beibehält, so dass Nutzer:innen innerhalb ein und derselben Reise mehrere aktive Zustände haben können, während der spezifische Kontext für jeden Zustand beibehalten wird.
+Jedes Mal, wenn ein Nutzer:innen den Canvas betritt - auch wenn er ihn schon einmal betreten hat - werden die Kontextvariablen auf der Grundlage der letzten Eingabedaten und der Canvas-Einstellungen neu definiert. Dieser zustandsbehaftete Ansatz ermöglicht es jedem Canvas-Eintrag, seinen eigenen unabhängigen Kontext beizubehalten, sodass Nutzer:innen mehrere aktive Zustände innerhalb derselben Journey haben können, während der spezifische Kontext für jeden Zustand erhalten bleibt.
 
-Wenn eine Kund:in beispielsweise zwei Flüge ansteht, hat sie zwei verschiedene Reisezustände, die gleichzeitig ablaufen - jeder mit seinen eigenen flugspezifischen Kontextvariablen wie Abflugzeit und Ziel. So ist es zulässig, personalisierte Erinnerungen an den 14-Uhr-Flug nach New York zu senden und gleichzeitig verschiedene Updates für den morgigen 8-Uhr-Flug nach Los Angeles zu verschicken, so dass jede Nachricht für die jeweilige Buchung relevant bleibt.
+Wenn eine Kund:in beispielsweise zwei bevorstehende Flüge hat, gibt es zwei separate Reisestatus, die gleichzeitig ablaufen – jeder mit seinen eigenen flugspezifischen Kontextvariablen wie Abflugzeit und Ziel:e. Auf diese Weise ist es zulässig, personalisierte Erinnerungen für den Flug um 14 Uhr nach New York zu versenden und gleichzeitig verschiedene Updates für den Flug um 8 Uhr nach Los Angeles morgen bereitzustellen, sodass jede Nachricht für die jeweilige Buchung relevant bleibt.
 
 ## Überlegungen
 
-Sie können bis zu 10 Kontextvariablen pro [Context-Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/) definieren. Jeder Variablenname kann bis zu 100 Zeichen lang sein und darf nur Buchstaben, Zahlen oder Unterstriche enthalten.
+Sie können bis zu 10 Kontextvariablen pro [Kontextschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/) definieren. Jeder Variablenname kann bis zu 100 Zeichen lang sein und darf nur Buchstaben, Zahlen oder Unterstriche enthalten.
 
-Kontextvariablendefinitionen können bis zu 10.240 Zeichen lang sein. Wenn Sie Kontextvariablen in ein API-getriggertes Canvas übergeben, teilen sie sich denselben Namensraum wie Variablen, die in einem Kontext-Schritt erstellt wurden. Wenn Sie zum Beispiel eine Variable `purchased_item` im [Endpunkt-Kontextobjekt`/canvas/trigger/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) senden, können Sie sie als {% raw %}`{{context.${purchased_item}}}`{% endraw %} referenzieren. Wenn Sie diese Variable in einem Kontextschritt neu definieren, überschreibt der neue Wert den API-Wert für die Reise des Nutzers:innen.
+Kontextvariable-Definitionen können bis zu 10.240 Zeichen umfassen. Wenn Sie Kontextvariablen an ein API-gesteuertes Canvas übergeben, verwenden diese denselben Namespace wie Variablen, die in einem Kontext-Schritt erstellt wurden. Wenn Sie beispielsweise eine Variable`purchased_item`im [`/canvas/trigger/send`Endpunkt]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)-Objekt referenzieren, können Sie diese {% raw %}`{{context.${purchased_item}}}`{% endraw %}referenzieren. Wenn Sie diese Variable in einem Kontext-Schritt neu definieren, überschreibt der neue Wert den API-Wert für die Journey dieser Nutzer:innen.
 
-Sie können bis zu 50 KB pro Context-Schritt speichern, verteilt auf bis zu 10 Variablen. Wenn die Gesamtgröße aller Variablen in einem Schritt 50 KB überschreitet, werden alle Variablen, die diese Grenze überschreiten, nicht ausgewertet oder gespeichert. Wenn Sie beispielsweise drei Variablen in einem Context-Schritt haben:
+Sie können bis zu 50 KB pro Kontext-Schritt speichern, verteilt auf bis zu 10 Variablen. Wenn die Gesamtgröße aller Variablen in einem Schritt 50 KB überschreitet, werden alle Variablen, die diese Grenze überschreiten, nicht ausgewertet oder gespeichert. Wenn Sie beispielsweise drei Variablen in einem Kontext-Schritt haben:
 
 - Variable 1: 30 KB
 - Variable 2: 19 KB
@@ -49,7 +49,7 @@ Die Variable 3 wird nicht ausgewertet oder gespeichert, da die Summe der vorheri
 Kontextvariablen, die in dem Schritt erstellt oder aktualisiert werden, können die folgenden Datentypen zugewiesen werden.
 
 {% alert note %}
-Kontextvariablen haben die gleichen erwarteten Formate für Datentypen wie [angepasste Events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>Bei der Verwendung des Array-Typs versucht Braze, den Wert als JSON zu parsen, wodurch Arrays von Objekten erfolgreich erstellt werden können. Wenn die Objekte in Ihren Arrays kein gültiges JSON sind, ist das Ergebnis ein einfaches String-Array. <br><br>Für verschachtelte Objekte und Arrays von Objekten verwenden Sie den [`as_json_string` Liquid Filter](#converting-connected-content-strings-to-json). Wenn Sie das gleiche Objekt in einem Context-Schritt erstellen, müssen Sie das Objekt mit `as_json_string` rendern. {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
+Kontextvariablen haben dieselben erwarteten Formate für Datentypen wie [angepasste Events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>Bei Verwendung des Array-Typs versucht Braze, den Wert als JSON zu analysieren, wodurch Arrays von Objekten erfolgreich erstellt werden können. Wenn die Objekte in Ihren Arrays kein gültiges JSON sind, ist das Ergebnis ein einfaches String-Array. <br><br>Für verschachtelte Objekte und Objekt-Arrays verwenden Sie bitte den[`as_json_string`](#converting-connected-content-strings-to-json)[Liquid-Filter](#converting-connected-content-strings-to-json). Wenn Sie dasselbe Objekt in einem Kontext-Schritt erstellen, müssen Sie das Objekt mit Hilfe `as_json_string`von rendern, beispielsweise {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
 {% endalert %}
 
 | Datentyp | Beispiel für einen Variablennamen | Beispielwert |
@@ -63,28 +63,28 @@ Kontextvariablen haben die gleichen erwarteten Formate für Datentypen wie [ange
 |Objekt (abgeflacht) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Standardmäßig sind die Daten in UTC angegeben. Wenn Sie einen String-Datentyp verwenden, um einen Zeitwert zu speichern, können Sie die Zeit als eine andere Zeitzone wie PST definieren. 
+Standardmäßig ist der Datentyp „Zeit“ auf UTC eingestellt. Wenn Sie einen Zeitwert mit dem Datentyp „String“ speichern, können Sie die Zeit als andere Zeitzone, beispielsweise PST, definieren. 
 
-Wenn Sie z.B. eine Nachricht an einen Nutzer am Tag vor seinem Geburtstag senden, würden Sie die Kontextvariable als Zeitdatentyp speichern, da mit dem Senden am Vortag eine Liquid-Logik verbunden ist. Wenn Sie jedoch eine Nachricht zu Weihnachten (25\. Dezember) versenden, brauchen Sie die Uhrzeit nicht als dynamische Variable zu referenzieren, so dass die Verwendung eines String-Datentyps vorzuziehen ist.
+Wenn Sie beispielsweise einer Nutzer:in einen Tag vor ihrem Geburtstag eine Nachricht senden möchten, sollten Sie die Kontextvariable als Zeitdatentyp speichern, da mit dem Versand am Vortag eine Liquid-Logik verbunden ist. Wenn Sie jedoch eine Weihnachtsnachricht am ersten Weihnachtsfeiertag (25\. Dezember) versenden, ist es nicht erforderlich, die Uhrzeit als dynamische Variable zu referenzieren, sodass die Verwendung eines String-Datentyps vorzuziehen wäre.
 
 ## Verwendung von Kontextvariablen
 
-Sie können Kontextvariablen überall dort verwenden, wo Sie Liquid in einem Canvas einsetzen, z.B. in den Schritten für [Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) und [Nutzer:innen-Updates]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update), indem Sie **Personalisierung hinzufügen** auswählen.
+Sie können Kontextvariablen überall dort verwenden, wo Sie Liquid in einem Canvas einsetzen, beispielsweise in den Schritten [„Nachricht“]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) und [„Benutzerupdate“]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update), indem Sie **„Personalisierung hinzufügen“** auswählen.
 
 Nehmen wir zum Beispiel an, Sie möchten Passagiere vor ihrem nächsten Flug über ihren Zugang zur VIP-Lounge informieren. Diese Nachricht sollte nur an Passagiere gesendet werden, die ein First-Class-Ticket gekauft haben. Eine Kontextvariable ist eine flexible Möglichkeit, diese Informationen zu tracken.
 
 Nutzer:innen betreten das Canvas, wenn sie ein Flugticket kaufen. Um die Zugriffsberechtigung auf die Lounge zu bestimmen, erstellen wir in einem Kontextschritt eine Kontextvariable mit dem Namen `lounge_access_granted` und referenzieren diese Kontextvariable dann in den nachfolgenden Schritten der User:in.
 
-![Kontextvariable, mit der Sie verfolgen können, ob sich ein Passagier für den Zugang zur VIP-Lounge qualifiziert.]({% image_buster /assets/img/context_example4.png %}){: style="max-width:90%"}
+![Kontextvariable eingerichtet für Tracking, um zu verfolgen, ob ein Passagier für den Zugang zur VIP-Lounge qualifiziert ist.]({% image_buster /assets/img/context_example4.png %}){: style="max-width:90%"}
 
 In diesem Schritt von Context verwenden wir {% raw %}`{{custom_attribute.${purchased_flight}}}`{% endraw %}, um festzustellen, ob die Art des Fluges, den sie gekauft haben, `first_class` ist.
 
-Als Nächstes erstellen wir einen Schritt "Nachricht", um Nutzer:innen zu targetieren, bei denen {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} `true` ist. Bei dieser Nachricht handelt es sich um eine Push-Benachrichtigung, die personalisierte Lounge-Informationen enthält. Auf der Grundlage dieser Kontextvariablen erhalten die in Frage kommenden Passagiere die entsprechenden Nachrichten vor ihrem Flug.
+Als Nächstes erstellen wir einen Schritt "Nachricht", um Nutzer:innen zu targetieren, bei denen {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} `true` ist. Diese Nachricht wird als Push-Benachrichtigung versendet und enthält personalisierte Informationen zur Lounge. Auf der Grundlage dieser Kontextvariablen erhalten die in Frage kommenden Passagiere die entsprechenden Nachrichten vor ihrem Flug.
 
 - Passagiere der ersten Klasse erhalten ein Ticketing: "Genießen Sie exklusiven Zugang zur VIP-Lounge!"
 - Passagiere von Business- und Economy-Tickets erhalten: "Upgraden Sie Ihren Flug für exklusiven Zugang zur VIP-Lounge."
 
-![Ein Nachrichtenschritt mit verschiedenen Nachrichten, die Sie je nach Art des gekauften Flugtickets versenden können.]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
+![Ein Nachrichtenschritt mit unterschiedlichen Nachrichten, die je nach Art des gekauften Flugtickets versendet werden.]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 Sie können [personalisierte Verzögerungsoptionen]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) mit den Informationen aus dem Schritt Kontext hinzufügen, d.h. Sie können die Variable auswählen, die Nutzer:innen verzögert.
@@ -92,115 +92,115 @@ Sie können [personalisierte Verzögerungsoptionen]({{site.baseurl}}/user_guide/
 
 ### Für Aktions-Pfade und Ausstiegskriterien
 
-In diesen triggernden Aktionen können Sie Filter zum Vergleich von Eigenschaften entweder mit Kontextvariablen oder angepassten Attributen nutzen: **Passen Sie ein angepasstes Event an** und **tätigen Sie einen Kauf**. Diese Aktion triggern unterstützt auch Eigenschaftsfilter sowohl für einfache als auch für verschachtelte Eigenschaften. 
+Sie können in diesen Trigger-Aktionen den Vergleich von Eigenschaftsfiltern mit Kontextvariablen oder angepassten Attributen nutzen: **Passen Sie ein angepasstes Event an** und **tätigen Sie einen Kauf**. Diese Aktionsauslöser unterstützen auch Filter für grundlegende und verschachtelte Eigenschaften. 
 
-- Beim Vergleich mit grundlegenden Eigenschaften entsprechen die verfügbaren Vergleiche dem Typ der Eigenschaft, die durch das angepasste Event definiert ist. Für die Eigenschaften von Strings gibt es zum Beispiel genau gleiche Regex-Übereinstimmungen. Boolesche Eigenschaften sind true oder false. 
-- Beim Vergleich mit verschachtelten Eigenschaften sind die Typen nicht vordefiniert, so dass Sie ähnlich wie bei den Vergleichen für verschachtelte angepasste Attribute Vergleiche über mehrere Datentypen für Boolesche Werte, Zahlen, Strings, Zeit und Tag des Jahres auswählen können. Wenn Sie einen Datentyp auswählen, der nicht mit dem tatsächlichen Datentyp der verschachtelten Eigenschaft zum Zeitpunkt des Vergleichs übereinstimmt, wird der Nutzer:in nicht mit dem Aktions-Pfad oder den Ausstiegskriterien übereinstimmen.
+- Beim Vergleich mit grundlegenden Eigenschaften entsprechen die verfügbaren Vergleiche dem Typ der Eigenschaft, die durch das angepasste Event definiert ist. Beispielsweise weisen String-Eigenschaften exakt gleiche Regex-Übereinstimmungen auf. Boolesche Eigenschaften können entweder wahr oder falsch sein. 
+- Im Gegensatz zu verschachtelten Eigenschaften sind die Typen nicht vordefiniert, sodass Sie Vergleiche über mehrere Datentypen hinweg für Boolesche Werte, Zahlen, Strings, Uhrzeiten und Tage des Jahres auswählen können, ähnlich wie bei den Vergleichen für verschachtelte angepasste Attribute. Wenn Sie einen Datentyp auswählen, der zum Zeitpunkt des Vergleichs nicht mit dem tatsächlichen Datentyp der verschachtelten Eigenschaft übereinstimmt, wird der Nutzer:in den Aktions-Pfad oder die Ausstiegskriterien nicht erfüllen.
 
-#### Aktions-Pfad Beispiele
+#### Beispiele für Aktions-Pfade
 
 {% alert important %}
-Für angepasste Attribut-Vergleiche verwenden wir den Wert des angepassten Attributs zu dem Zeitpunkt, an dem die Aktion ausgeführt wird. Das bedeutet, dass ein Nutzer:innen nicht mit der Gruppe Aktions-Pfad übereinstimmt, wenn dieses angepasste Attribut zum Zeitpunkt des Vergleichs nicht ausgefüllt ist oder wenn der Wert des angepassten Attributs nicht mit den definierten Eigenschaften übereinstimmt. Dies ist selbst dann der Fall, wenn der Nutzer:innen bei der Eingabe des Schritts Aktions-Pfad einen Treffer erzielt hätte.
+Für den Vergleich von benutzerdefinierten Attributen verwenden wir den Wert des benutzerdefinierten Attributs zum Zeitpunkt der Ausführung der Aktion. Dies bedeutet, dass eine Nutzer:in nicht mit der Aktions-Pfad-Gruppe übereinstimmt, wenn dieses benutzerdefinierte Attribut zum Zeitpunkt des Vergleichs nicht ausgefüllt ist oder wenn der Wert des benutzerdefinierten Attributs nicht mit den definierten Eigenschaftsvergleichen übereinstimmt. Dies gilt auch dann, wenn die Nutzer:innen beim Aufrufen des Schritts „Aktions-Pfad“ übereinstimmen.
 {% endalert %}
 
 {% tabs %}
 {% tab Perform custom event %}
 
-Der folgende Aktions-Pfad ist so eingerichtet, dass Nutzer:innen, die das angepasste Event `Account_Created` mit der grundlegenden Eigenschaft `source` ausgeführt haben, nach der Kontextvariablen `app_source_variable` sortiert werden.
+Der folgende Aktions-Pfad ist eingerichtet, um Nutzer:innen, die das angepasste Event`Account_Created`mit der Grundeigenschaft ausgeführt haben, in `source`die Kontextvariable zu `app_source_variable`sortieren.
 
-![Ein Beispiel für einen Aktions-Pfad, der eine Kontextvariable referenziert, wenn ein angepasstes Event ausgeführt wird.]({% image_buster /assets/img/context_action_path1.png %})
+![Ein Beispiel für einen Aktions-Pfad, der bei der Ausführung eines angepassten Events auf eine Kontextvariable referenziert.]({% image_buster /assets/img/context_action_path1.png %})
 
 {% endtab %}
 {% tab Make purchase %}
 
-Der folgende Aktions-Pfad wurde eingerichtet, um die grundlegende Eigenschaft `brand` für den spezifischen Produktnamen `shoes` mit einer Kontextvariablen `promoted_shoe_brand` abzugleichen.
+Der folgende Aktions-Pfad ist so eingerichtet, dass er die grundlegende Eigenschaft`brand`für den spezifischen Produktnamen`shoes`einer Kontextvariablen zuordnet`promoted_shoe_brand`.
 
-![Ein Beispiel für einen Aktions-Pfad, der eine Kontextvariable referenziert, wenn Sie einen Kauf tätigen.]({% image_buster /assets/img/context_action_path2.png %})
+![Ein Beispiel für einen Aktions-Pfad, der beim Kauf eine Kontextvariable referenziert.]({% image_buster /assets/img/context_action_path2.png %})
 
 {% endtab %}
 {% endtabs %}
 
-#### Beispiele für Ausstiegskriterien
+#### Beispiele für Austrittskriterien
 
 {% tabs %}
 {% tab Perform custom event %}
 
-Die Ausstiegskriterien besagen, dass ein Nutzer:in den Canvas einsteigen kann, wenn er den Canvas an einem beliebigen Punkt verlässt:
+Die Ausstiegskriterien besagen, dass eine Nutzer:in zu jedem Zeitpunkt ihrer Reise im Canvas den Canvas verlässt, wenn:
 
-- Sie führen das angepasste Event **Warenkorb-Abbruch** durch, und
-- Die grundlegende Eigenschaft **Artikel im Warenkorb** entspricht dem String-Wert der Kontextvariablen `cart_item_threshold`.
+- Sie führen das angepasste Event **„Warenkorb verlassen**“ aus und
+- Die grundlegende Eigenschaft **„Artikel im Warenkorb**“ entspricht dem String-Wert der Kontextvariablen`cart_item_threshold`.
 
-![Beendigungskriterien, die eingerichtet wurden, um einen Nutzer:in zu beenden, wenn er ein angepasstes Event auf der Basis der Kontextvariablen ausführt.]({% image_buster /assets/img/context_exit_criteria1.png %})
+![Beendigungskriterien, die festgelegt werden, um einen Nutzer:in zu beenden, wenn er ein angepasstes Event basierend auf der Kontextvariablen ausführt.]({% image_buster /assets/img/context_exit_criteria1.png %})
 
 {% endtab %}
 {% tab Make purchase %}
 
-Die Ausstiegskriterien besagen, dass ein Nutzer:in den Canvas einsteigen kann, wenn er den Canvas an einem beliebigen Punkt verlässt:
+Die Ausstiegskriterien besagen, dass eine Nutzer:in zu jedem Zeitpunkt ihrer Reise im Canvas den Canvas verlässt, wenn:
 
-- Sie kaufen gezielt den Produktnamen "Buch", und
-- Die verschachtelte Eigenschaft "loyalty_program" dieses Kaufs ist gleich dem angepassten Attribut "VIP" des Nutzers:in.
+- Sie tätigen einen spezifischen Kauf für das Produkt mit dem Namen „Buch“ und
+- Die verschachtelte Eigenschaft dieses "loyalty_program"Kaufs entspricht dem benutzerdefinierten Attribut „VIP” des Nutzers.
 
-![Beendigungskriterien, um einen Nutzer:innen zu beenden, wenn er einen Kauf tätigt.]({% image_buster /assets/img/context_exit_criteria2.png %})
+![Es wurden Kriterien festgelegt, um eine Nutzer:in zu entfernen, wenn sie einen Kauf tätigt.]({% image_buster /assets/img/context_exit_criteria2.png %})
 
 {% endtab %}
 {% endtabs %}
 
-### Kontextabhängige Filter
+### Kontextvariable Filter
 
-Sie können Filter erstellen, die zuvor deklarierte Kontextvariablen in [Zielgruppen-Pfaden]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) und [Decision-Split-Schritten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) verwenden.
+Sie können Filter erstellen, die zuvor in den Schritten [„Zielgruppen-Pfade“]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) und [„Decision-Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split)-Schritte“ deklarierte Kontextvariablen verwenden.
 
 {% alert note %}
-Kontextvariable Filter sind nur für Zielgruppen-Pfade und Decision-Split-Schritte verfügbar.
+Kontextvariable Filter sind ausschließlich für Zielgruppen-Pfade und Decision-Split-Schritte verfügbar.
 {% endalert %}
 
-Kontextvariablen werden deklariert und sind nur im Bereich eines Canvas zugänglich, d.h. sie können nicht in Segmenten referenziert werden. Kontextvariable Filter funktionieren in Zielgruppen-Pfaden und Decision-Split-Schritten ähnlich - Zielgruppen-Pfade repräsentieren mehrere Gruppen, während Decision-Split-Schritte binäre Entscheidungen darstellen.
+Kontextvariablen werden deklariert und sind nur im Bereich eines Canvas zugänglich, was bedeutet, dass sie in Segmenten nicht referenziert werden können. Kontextvariable Filter funktionieren in Zielgruppen-Pfaden und Decision-Split-Schritten ähnlich – Zielgruppen-Pfade repräsentieren mehrere Gruppen, während Decision-Split-Schritte binäre Entscheidungen darstellen.
 
-![Beispiel für einen Decision-Split-Schritt mit der Option, einen Filter mit einer Kontextvariablen zu erstellen.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
+![Decision-Split-Schritt-Beispiel mit der Option, einen Filter mit einer Kontextvariablen zu erstellen.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
 
-Ähnlich wie Canvas-Kontextvariablen vordefinierte Typen haben, müssen die Vergleiche zwischen Kontextvariablen und statischen Werten [übereinstimmende Datentypen]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types) haben. Der Filter für Kontextvariablen lässt Vergleiche über mehrere Datentypen für Boolesche Werte, Zahlen, Strings, Zeit und Tag des Jahres zu, ähnlich wie bei den Vergleichen für [verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/).
+Ähnlich wie Canvas-Kontextvariablen vordefinierte Typen haben, müssen die Vergleiche zwischen Kontextvariablen und statischen Werten [übereinstimmende Datentypen]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types) aufweisen. Der Kontextvariablenfilter ermöglicht Vergleiche zwischen mehreren Datentypen für Boolesche Werte, Zahlen, Strings, Uhrzeiten und Tage des Jahres, ähnlich wie bei den Vergleichen für [verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/).
 
 {% alert note %}
-Verwenden Sie für Ihre Kontextvariable und den Vergleich denselben Datentyp. Wenn es sich bei Ihrer Kontextvariablen beispielsweise um einen zeitlichen Datentyp handelt, verwenden Sie Zeitvergleiche (wie "vor" oder "nach"). Die Verwendung nicht übereinstimmender Datentypen (z.B. String-Vergleiche mit einer Zeitkontextvariablen) kann zu unerwartetem Verhalten führen.
+Verwenden Sie für Ihre Kontextvariable und den Vergleich denselben Datentyp. Wenn Ihre Kontextvariable beispielsweise vom Datentyp „Zeit“ ist, verwenden Sie Zeitvergleiche (wie „vor“ oder „nach“). Die Verwendung nicht übereinstimmender Datentypen (wie beispielsweise String-Vergleiche mit einer Zeitkontextvariablen) kann zu unerwartetem Verhalten führen.
 {% endalert %}
 
 {% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
 
-Hier ist ein Beispiel für einen Filter für Kontextvariablen, der die Kontextvariable `product_name` mit der Regex `/braze/` vergleicht.
+Hier ist ein Beispiel für einen Kontextvariablen-Filter, der die Kontextvariable`product_name`mit dem Regex vergleicht`/braze/`.
 
-![Ein Filter, der für die Kontextvariable "product_name" eingerichtet wurde, um mit der Regex "/braze/" übereinzustimmen.]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}
+![Eine Filtereinstellung für die Kontextvariable, "product_name"die mit dem Regex „/Braze/“ übereinstimmt.]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}
 
-#### Abgleich mit Kontextvariablen oder angepassten Attributen
+#### Vergleich mit Kontextvariablen oder benutzerdefinierten Attributen
 
-Wenn Sie die Option **Mit einer Kontextvariablen oder einem angepassten Attribut vergleichen** auswählen, können Sie Filter für Kontextvariablen erstellen, die mit zuvor definierten Kontextvariablen oder angepassten Attributen von Nutzern:innen verglichen werden. Dies kann nützlich sein, um Vergleiche durchzuführen, die dynamisch pro Nutzer:in sind, wie z.B. API-getriggerte `context`, oder um komplexe Vergleichslogik, die über Kontextvariablen definiert ist, zu verdichten.
+Durch Auswahl der Option **„Mit einer Kontextvariablen oder einem benutzerdefinierten Attribut vergleichen**“ können Sie Filter erstellen, die mit zuvor definierten Kontextvariablen oder benutzerdefinierten Attributen verglichen werden. Dies kann nützlich sein, um dynamische Vergleiche pro Nutzer:in durchzuführen, beispielsweise API-gesteuerte`context`, oder um komplexe Vergleichslogik zu verdichten, die über Kontextvariablen definiert ist.
 
 {% tabs %}
 {% tab Example 1 %}
 
-Nehmen wir an, Sie möchten Nutzern:innen nach einer dynamischen Inaktivitätsperiode eine personalisierte Erinnerung schicken. Das bedeutet, dass jeder, der sich in den letzten drei Tagen nicht in Ihrer App angemeldet hat, eine Nachricht erhalten soll.
+Angenommen, Sie möchten eine personalisierte Erinnerung an Nutzer:innen senden, die eine dynamische Zeit lang inaktiv waren. Das betrifft alle Nutzer:innen, die sich in den letzten drei Tagen nicht in Ihrer App angemeldet haben und eine Nachricht erhalten sollen.
 
-Sie haben eine Kontextvariable `re_engagement_date`, die als {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %} definiert ist. Beachten Sie, dass `3 days` ein variabler Betrag sein kann, der auch als angepasstes Attribut eines Nutzers:innen gespeichert wird. Wenn also die `re_engagement_date` nach der `last_login_date` steht (die als angepasstes Attribut im Nutzerprofil gespeichert ist), wird ihnen eine Nachricht geschickt.
+Sie verfügen über eine Kontextvariable, `re_engagement_date`die wie folgt definiert{% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %} ist. Bitte beachten Sie, dass`3 days`es sich um einen variablen Betrag handeln kann, der ebenfalls als benutzerdefiniertes Attribut gespeichert wird. Wenn also das  nach dem`last_login_date`  (als benutzerdefiniertes `re_engagement_date`Attribut im Nutzerprofil gespeichert) steht, wird eine Nachricht an den Nutzer gesendet.
 
-![Eine Filtereinrichtung mit angepassten Attributen als Personalisierungstyp für die Kontextvariable "re_engagement_date" nach dem angepassten Attribut "last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %})
+![Eine Filtereinstellung mit angepassten Attributen als Personalisierungstyp für die Kontextvariable"re_engagement_date"nach dem angepassten Attribut/assets/img/context_variable_filter2.pngimage_buster"last_login_date".]({%%})
 
 {% endtab %}
 {% tab Example 2 %}
 
-Der folgende Filter vergleicht, ob die Kontextvariable `reminder_date` vor der Kontextvariablen `appointment_deadline` liegt. Auf diese Weise können Sie Nutzer:innen in einem Zielgruppen-Pfad gruppieren, um festzustellen, ob sie vor ihrem Termin zusätzliche Erinnerungen erhalten sollen.
+Der folgende Filter vergleicht die Kontextvariable`reminder_date`  mit der Kontextvariable `appointment_deadline`. Dies kann Gruppennutzer:innen in einem Schritt „Zielgruppen-Pfade“ dabei helfen, zu entscheiden, ob sie vor Ablauf ihrer Terminfrist zusätzliche Erinnerungen erhalten sollten.
 
-![Eine Filtereinrichtung mit Kontextvariablen als Personalisierungstyp für die Kontextvariable "reminder_date" auf der Kontextvariable "appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %})
+![Eine Filtereinstellung mit Kontextvariablen als Typ der Personalisierung für die Kontextvariable"reminder_date"auf der Kontextvariable/assets/img/context_variable_filter3.pngimage_buster"appointment_deadline".]({%%})
 
 {% endtab %}
 {% endtabs %}
 
 ## Standardisierung der Zeitzonenkonsistenz
 
-Während die meisten Event-Eigenschaften, die den Typ Zeitstempel verwenden, in Canvas bereits in UTC vorliegen, gibt es einige Ausnahmen. Mit der Hinzufügung von Canvas Context werden alle Standard Zeitstempel Event-Eigenschaften in aktionsbasierten Canvase durchgängig in UTC angegeben. Diese Änderung ist Teil umfassenderer Bemühungen, die Bearbeitung von Canvas-Schritten und Nachrichten berechenbarer und konsistenter zu gestalten. Beachten Sie, dass sich diese Änderung auf alle aktionsbasierten Canvase auswirkt, unabhängig davon, ob das jeweilige Canvas einen Kontext-Schritt verwendet oder nicht.
+Während die meisten Event-Eigenschaften, die den Zeitstempeltyp verwenden, in Canvas bereits in UTC vorliegen, gibt es einige Ausnahmen. Mit der Einführung von Canvas Context werden alle Standard-Zeitstempel-Event-Eigenschaften in aktionsbasierten Canvases einheitlich in UTC angegeben. Diese Änderung ist Teil einer umfassenderen Maßnahme, um eine vorhersehbarere und konsistentere Erfahrung bei der Bearbeitung von Canvas-Schritten und -Nachrichten zu gewährleisten. Bitte beachten Sie, dass diese Änderung Auswirkungen auf alle aktionsbasierten Canvases hat, unabhängig davon, ob das jeweilige Canvas einen Kontext-Schritt verwendet oder nicht.
 
 {% alert important %}
-In jedem Fall empfehlen wir dringend die Verwendung von [Liquid time_zone Filtern]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know), damit die Zeitstempel in der gewünschten Zeitzone dargestellt werden. Sie können diese [häufig gestellte Frage in dem Artikel Kontextschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#faq-example) als Beispiel referenzieren.
+Unter allen Umständen empfehlen wir dringend, [time_zoneLiquid-Filter]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) für Zeitstempel zu verwenden, die in der gewünschten Zeitzone dargestellt werden sollen. Sie können diese [häufig gestellte Frage im Artikel zum Kontext-Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#faq-example) referenzieren und als Beispiel verwenden.
 {% endalert %}
 
 ## Ähnliche Artikel
 
-- [Schritt zum Kontext]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/)
+- [Kontextschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/)
 - [Personalisierung und dynamischer Content mit Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
