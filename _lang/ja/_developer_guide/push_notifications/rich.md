@@ -1,7 +1,7 @@
 ---
 page_order: 3
 nav_title: リッチプッシュ通知
-article_title: Braze SDKのリッチプッシュ通知の設定
+article_title: Braze SDK向けにリッチプッシュ通知を設定する
 channel:
   - push notifications
 ---
