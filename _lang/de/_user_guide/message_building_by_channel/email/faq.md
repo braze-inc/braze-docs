@@ -22,8 +22,8 @@ Beachten Sie, dass diese Deduplizierung erfolgt, wenn die anvisierten Benutzer i
 API-abhängige Kampagnen werden dedupliziert oder versenden Duplikate – je nachdem, wo die Zielgruppe definiert ist. Mail-Doubletten müssen also direkt als separate `user_ids` im API-Aufruf angegangen werden, um mehrere Details zu erhalten. Hier werden drei mögliche Szenarien für API-gestützte Kampagnen vorgestellt:
 
 - **Szenario 1: Doppelte E-Mails im Zielsegment:** Wenn dieselbe E-Mail in mehreren Benutzerprofilen erscheint, die in den Zielgruppenfiltern des Dashboards für eine API-ausgelöste Kampagne gruppiert sind, erhält nur eines der Profile die E-Mail.
-- **Szenario 2: Doppelte E-Mails in verschiedenen `user_ids` des Empfängerobjekts ** Wenn dieselbe E-Mail in mehreren `External_user_IDs` auftaucht, die durch das Objekt `Empfänger` referenziert werden, wird die E-Mail zweimal gesendet.
-- **Szenario 3: Doppelte E-Mails aufgrund von doppelten user_ids innerhalb des Empfänger:in-Objekts:** Wenn Sie versuchen, dasselbe Benutzerprofil zweimal hinzuzufügen, wird nur eines der Profile die E-Mail erhalten.
+- **Szenario 2: Doppelte E-Mails in verschiedenen `user_ids` des Empfängerobjekts ** Sollte dieselbe E-Mail-Adresse in mehreren vom Objekt `External_user_IDs`„recipients“ referenzierten E-Mail-Adressen enthalten sein, wird die E-Mail zweimal versendet.
+- **Szenario 3: Doppelte E-Mails aufgrund von Duplikatenuser_idsinnerhalb des Objekts der Empfänger:innen:** Wenn Sie versuchen, dasselbe Benutzerprofil zweimal hinzuzufügen, wird nur eines der Profile die E-Mail erhalten.
 
 ### Werden Aktualisierungen meiner Einstellungen für ausgehende E-Mails rückwirkend angewendet?
 
@@ -81,4 +81,30 @@ Braze erfasst Abmeldelinks, wenn folgende Liquid in E-Mails verwendet wird: {%ra
 Nein, Braze bietet diese Funktion nicht an. Der Grund dafür ist, dass ein immer größerer Teil der E-Mails auf mobilen Geräten und modernen E-Mail-Clients geöffnet wird, die Bilder und Inhalte ohne Probleme darstellen.
 
 **Workaround:** Um dasselbe Ergebnis zu erzielen, können Sie den Inhalt Ihrer E-Mail auf einer externen Landing Page (z. B. Ihrer Website) hosten, die dann von der E-Mail-Kampagne, die Sie erstellen, mit dem **Link-Tool** beim Bearbeiten des E-Mail-Textes verlinkt werden kann.
+
+### Warum werden meine Nutzer:innen von der E-Mail-Sicherheitssoftware automatisch abgemeldet?
+
+Einige E-Mail-Sicherheitstools für Unternehmen (wie Barracuda, Proofpoint und ähnliche Dienste) laden alle URLs in eingehenden E-Mails vorab herunter oder scannen sie, einschließlich Links zum Abmelden. Dies kann zu unbeabsichtigten Abmeldungen führen, wenn das Sicherheitstool dem Ein-Klick-Link zum Abmelden von der Liste folgt.
+
+Um dies zu mildern:
+
+- **Wir empfehlen den Empfänger:innen, Ihre Absenderdomain auf die Whitelist zu setzen:** Bitte arbeiten Sie mit den IT-Teams der betroffenen Empfänger:innen zusammen, um Ihre Absender-Domain und die Tracking-Domains von Braze zur Whitelist ihrer E-Mail-Sicherheit hinzuzufügen.
+- **Bitte nutzen Sie das Einstellungscenter:** Anstelle eines direkten Links zum Abmelden sollte ein [Einstellungscenter]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) verwendet werden, das eine Interaktion der Nutzer:innen erfordert, um die Abmeldung zu bestätigen. Sicherheitsscanner füllen in der Regel keine mehrstufigen Formulare aus.
+- **Bitte überprüfen Sie die Protokolle zum Abmelden.** Bitte überprüfen Sie den`User-Agent`Header und die IP-Adresse in Ihren Currents-Daten zum Abmelden, um Muster zu identifizieren, die mit automatisiertem Scannen übereinstimmen (z. B. übereinstimmende`User-Agent`Header bei mehreren Abmeldungen).
+
+Weitere Informationen darüber, wie sich serverseitiges Scannen auf E-Mail-Metriken auswirken kann, finden Sie unter [Umgang mit steigenden Klickraten]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#handling-increases-in-click-rates).
+
+### Warum hat sich die Öffnungsrate meines Geräts unerwartet verändert?
+
+[Das Öffnen von E-Mails]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#machine-opens) wird durch E-Mail-Sicherheitsfunktionen wie Apple Mail MPP (E-Mail-Datenschutz) triggen, die E-Mail-Inhalte (einschließlich des Tracking-Pixels) vorladen, ohne dass die Nutzer:innen die E-Mail physisch öffnen. Die Öffnungsraten von Maschinen können aufgrund folgender Faktoren schwanken:
+
+- Veränderungen im Anteil Ihrer Zielgruppen, die Apple Mail oder andere E-Mail-Clients mit Datenschutzfunktionen verwenden.
+- Updates der Datenschutz-Features von E-Mail-Anbietern oder der Bot-Erkennungsmechanismen.
+- Änderungen in Ihrer Segmentierung der Zielgruppen oder im Targeting.
+
+Die Prozentsätze der Öffnungen der Maschinen stellen keinen verlässlichen Maßstab für das tatsächliche Engagement dar. Für eine genauere Darstellung der E-Mail-Performance sollten Sie sich auf *„Andere Öffnungen“* (nicht maschinelle Öffnungen) und *„Eindeutige Klicks“* konzentrieren. Sie können diese Metriken auch im Zeitverlauf mithilfe des [E-Mail-Performance-Dashboards]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard/) vergleichen.
+
+### Beinhaltet die Metrik *„Eindeutige Öffnungen“* auch maschinelle Öffnungen?
+
+Nein. *Als eindeutige Öffnungen* werden nur [andere Öffnungen]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#other-opens) gezählt, wobei E-Mails, die als maschinelle Öffnungen identifiziert wurden, ausgeschlossen sind. *Maschinenöffnungen* werden separat geTracked. In der Ansicht **„Kampagnen-Analytics“** und **im Berichts-Builder** können Sie beide Metriken unabhängig voneinander anzeigen.
 
