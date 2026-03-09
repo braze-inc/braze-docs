@@ -17,11 +17,9 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Atualiz
 
 > Use este endpoint para atualizar várias traduções para uma campanha. Veja [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para saber mais sobre os recursos de tradução.
 
-Se você quiser atualizar as traduções após uma campanha ter sido lançada, precisará [salvar sua mensagem como um rascunho]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) primeiro.
+Se você quiser atualizar as traduções após uma campanha ter sido lançada, precisará [save your message as a draft]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) primeiro.
 
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Pré-requisitos
 
