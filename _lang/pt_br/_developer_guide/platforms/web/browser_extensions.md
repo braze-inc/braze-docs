@@ -1,5 +1,5 @@
 ---
-nav_title: Extensões do navegador
+nav_title: Extensões de navegador
 article_title: Integração de extensões de navegador para a Web
 platform: Web
 page_order: 20
@@ -50,7 +50,7 @@ No entanto, se você usar o [Google Tag Manager]({{ site.baseurl }}/developer_gu
 Antes de começar, leia o [guia de configuração inicial do Web SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) para saber mais sobre a integração de JavaScript em geral.  <br><br>Pode ser interessante marcar a [referência do JavaScript SDK](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) para obter detalhes completos sobre todos os diferentes métodos e opções de configuração do SDK.
 {% endalert %}
 
-Para integrar o Braze Web SDK, primeiro você precisará baixar uma cópia da biblioteca JavaScript mais recente. Isso pode ser feito usando o NPM ou baixando-o diretamente da [CDN do Braze](https://js.appboycdn.com/web-sdk/latest/braze.min.js).
+Para integrar o Braze Web SDK, você primeiro precisará baixar uma cópia da biblioteca JavaScript mais recente. Isso pode ser feito usando NPM ou baixando diretamente do [Braze CDN](https://js.appboycdn.com/web-sdk/latest/braze.min.js).
 
 Como alternativa, se você preferir usar o [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) ou usar uma cópia hospedada externamente do Braze SDK, lembre-se de que o carregamento de recursos externos exigirá que você ajuste a configuração [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) em seu site `manifest.json`.
 
