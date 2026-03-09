@@ -175,7 +175,7 @@ Le terme <i>En attente d’une nouvelle tentative</i> désigne le nombre de dema
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>Les conversions principales (A)</i> ou <i>événement de conversion principal</i> correspondent au nombre d'utilisateurs uniques qui effectuent un événement défini après avoir reçu ou visualisé un message d'une campagne de Braze. Cet événement est sélectionné par vous lors de l'implémentation de la campagne et est utilisé comme principal indicateur de réussite pour la création de rapports et l'optimisation.
+<i>Les conversions primaires (A)</i> ou <i>événement de conversion principal</i> correspondent au nombre d'utilisateurs uniques qui effectuent un événement défini après avoir reçu ou consulté un message provenant d'une campagne Braze. Cet événement est sélectionné par vous lors de la configuration de la campagne et est utilisé comme indicateur de réussite principal pour le reporting et l'optimisation.
 {% endif %}
 
 {% if include.metric == "Reads" %}
@@ -251,12 +251,12 @@ Le <i>chiffre d'affaires</i> total est le chiffre d'affaires total, en dollars, 
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui ont cliqué au moins une fois sur un lien dans un message. <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+<i>Les clics uniques</i> correspondent au nombre distinct de destinataires ayant cliqué au moins une fois sur un lien dans un message et sont mesurés par <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 {% if include.metric == "Unique Clicks No Dispatch ID" %}
-Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui ont cliqué au moins une fois sur un lien dans un message.
+<i>Les clics uniques</i> correspondent au nombre distinct de destinataires ayant cliqué au moins une fois sur un lien dans un message.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
