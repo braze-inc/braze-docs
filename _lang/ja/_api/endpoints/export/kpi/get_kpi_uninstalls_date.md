@@ -1,7 +1,7 @@
 ---
 nav_title: "取得:毎日のアプリのアンインストールのKPIを日付別にエクスポートする"
 article_title: "取得:日ごとのアプリのアンインストールのKPIをエクスポートする"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -28,9 +28,9 @@ description: "この記事では、「日付別にアプリの日次アンイン
 
 ## リクエストパラメーター
 
-| パラメーター| required | データ型 | 説明 |
+| パラメーター| 必須かどうか | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
-| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
+| `length` | 必須かどうか | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
 | `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |
 | `app_id` | オプション | 文字列 | [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。除外した場合、ワークスペース内のすべてのアプリの結果が返される。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -58,8 +58,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/uninstalls/d
 }
 ```
 
-{% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
-{% endalert %}
+{% multi_lang_include alerts/tip_alerts.md alert='Export troubleshooting' %}
 
 {% endapi %}
