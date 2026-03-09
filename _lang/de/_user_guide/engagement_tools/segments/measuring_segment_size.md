@@ -1,5 +1,5 @@
 ---
-nav_title: Größe der Segmente messen
+nav_title: Segmentgröße messen
 article_title: Segmentgröße messen
 page_order: 5
 page_type: reference
@@ -8,7 +8,7 @@ tool:
 description: "Auf dieser Seite erfahren Sie, wie Sie die Mitgliedschaft und Größe Ihres Segments überwachen können."
 ---
 
-# Größe der Segmente messen
+# Segmentgröße messen
 
 > Auf dieser Seite erfahren Sie, wie Sie die Mitgliedschaft und Größe Ihres Segments überwachen können.
 
@@ -22,7 +22,7 @@ Jedes Segment zeigt die Gesamtzahl der Nutzer:innen an, die zu diesem Segment ge
 
 Es ist möglich, dass die Anzahl der Gesamtnutzer:innen von der Anzahl der Nutzer:innen abweicht, die über jeden Kanal erreichbar sind. Außerdem sind nicht alle Kanäle in der Tabelle der erreichbaren Nutzer:innen aufgeführt. Zum Beispiel werden Content-Cards, Webhooks und WhatsApp in der Aufschlüsselung nicht angezeigt. Das bedeutet, dass die Gesamtzahl der erreichbaren Nutzer:innen größer sein könnte als die Summe der Nutzer:innen der einzelnen angezeigten Kanäle.
 
-![Eine Tabelle mit der Gesamtzahl der erreichbaren Nutzer:innen, aufgeschlüsselt nach Nutzern:innen, die per E-Mail, iOS Push, Android Push, Web-Push und Kindle Push erreichbar sind.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
+![Eine Tabelle, die die Gesamtzahl der erreichbaren Nutzer:innen aufschlüsselt, unterteilt nach Nutzer:innen, die per E-Mail, iOS-Push, Android-Push, Web-Push und Kindle-Push erreichbar sind.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
 
 Damit ein:e Nutzer:in als über einen bestimmten Kanal erreichbar aufgeführt wird, muss er oder sie über beides verfügen:
 * Eine gültige E-Mail Adresse oder ein Push-Token, das mit ihrem Profil verknüpft ist, und
@@ -40,14 +40,14 @@ Braze liefert die folgenden Statistiken zur Segmentgröße.
 
 Für jede Filtergruppe können Sie die geschätzten erreichbaren Benutzer anzeigen. Wählen Sie **Zusätzliche Trichterstatistiken erweitern**, um eine Aufschlüsselung nach Kanälen zu sehen.
 
-![Eine Filtergruppe mit einem Filter für Nutzer:innen, die genau eine Sitzung gezählt haben.]({% image_buster /assets/img_archive/segment_filter_stats.png %}){: style="max-width:80%;"}
+![Eine Filtergruppe mit einem Filter für Nutzer:innen, die genau eine Sitzung hatten.]({% image_buster /assets/img_archive/segment_filter_stats.png %})
 
 ## Erreichbare Nutzer:innen Schätzung
 
 Sie können die geschätzten erreichbaren Nutzer:innen eines Segments, einschließlich der geschätzten Anzahl der Nutzer:innen für jeden Kanal, im Panel **Erreichbare Nutzer**:innen einsehen. Diese **Schätzung** zeigt Ihnen eine ungefähre Spanne für die Größe Ihres Segments und eine Schätzung, welcher Prozentsatz Ihrer gesamten Nutzer:innen-Basis in dieses Segment fällt. Beachten Sie, dass die geschätzten Statistiken 15 Minuten lang zwischengespeichert werden, es sei denn, Sie nehmen Änderungen an Ihrem Segment vor. In diesem Fall werden die geschätzten Statistiken automatisch aktualisiert. Sie können auch die genaue Anzahl der erreichbaren Nutzer:innen (sowohl für das Segment insgesamt als auch pro Kanal) anzeigen, indem Sie **Exakte Statistik berechnen** auswählen. 
 
 
-![Das Panel "Erreichbare Nutzer:innen" zeigt an, dass es schätzungsweise 2,3-2,4 Millionen Nutzer:innen gibt.]({% image_buster /assets/img_archive/reachable_users_side_panel.png %})
+![Das Panel „Erreichbare Nutzer:innen“ gibt an, dass es schätzungsweise 2,3 bis 2,4 Millionen Nutzer:innen gibt.]({% image_buster /assets/img_archive/reachable_users_side_panel.png %})
 
 ### Überlegungen zur Schätzung von Zählungen
 
@@ -57,7 +57,7 @@ Wenn Sie in Ihrem Workspace eine große Zahl von Nutzern:innen haben, kann es zu
 
 Sehr kleine Segmente haben einen geschätzten Bereich, der 0 einschließt, was bedeutet, dass der Prozentsatz der gesamten Nutzer:innen auf 0 gerundet werden kann. In diesen Fällen hilft Ihnen die Funktion **Exakte Statistik berechnen** dabei, eine genaue Zählung der Größe Ihres Segments zu erhalten, die in Wirklichkeit nicht 0 sein muss.
 
-![Das seitliche Panel "Erreichbare Nutzer:innen".]({% image_buster /assets/img_archive/reachable_users_panel.png %})
+![Das Panel „Erreichbare Nutzer:innen“ zeigt die genaue Anzahl von „31“ Nutzer:innen an.]({% image_buster /assets/img_archive/reachable_users_panel.png %})
 
 ### Erreichbare Nutzer:innen nach Kanal
 
@@ -75,15 +75,15 @@ Damit ein Nutzer:innen als über einen bestimmten Kanal erreichbar aufgelistet w
 - Eine gültige E-Mail Adresse oder ein Push-Token, das mit ihrem Profil verknüpft ist, und
 - Opt-in oder Abonnent:in für Ihre App.
 
-#### Angewandte Filter für kanalspezifisch erreichbare Nutzer:innen
+#### Angewandte Filter für kanalspezifische erreichbare Nutzer:innen
 
-Die folgenden Filter werden bei der Ermittlung der erreichbaren Nutzer:innen für jeden Kanal angewendet.
+Die folgenden Filter werden für jeden Kanal angewendet, um die erreichbaren Nutzer:innen zu ermitteln.
 
 | Kanal | Filter |
 | --- | --- |
 | E-Mail | **E-Mail verfügbar** ist wahr. |
-| Push | **Foreground Push Enabled** ist wahr. |
-| SMS | **Abo-Gruppe** ist eine beliebige SMS Abo-Gruppe. **Ungültige Rufnummer** ist falsch. |
+| Push | **Vordergrund-Push Enablement** ist wahr. |
+| SMS | **Eine Abo-Gruppe** ist eine beliebige SMS-Abo-Gruppe. **Die Telefonnummer** ist **ungültig**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Exakte Statistik berechnen 
@@ -95,20 +95,20 @@ Um die Statistiken für eine zuvor durchgeführte Berechnung zu aktualisieren, w
 Beachten Sie, dass die Genauigkeit einer Berechnung nur 99,999% oder mehr beträgt. Bei großen Segmenten werden Sie also möglicherweise leichte Abweichungen feststellen - selbst bei der Berechnung exakter Statistiken -, was normal ist. Außerdem werden die exakten Statistikergebnisse 24 Stunden lang zwischengespeichert, es sei denn, Sie nehmen Änderungen an Ihrem Segment vor. In diesem Fall können Sie die exakten Statistiken neu berechnen.
 
 {% alert note %}
-Segmente, die gleichmäßig durch [zufällige Bucket-Nummern]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) aufgeteilt sind, haben nicht die gleiche Größe. Wenn Sie z.B. ein Segment mit dem Filter **Random Bucket # kleiner als 5000** und ein Segment mit dem Filter **Random Bucket # mindestens 5000** erstellen, ist es möglich und zu erwarten, dass die Segmentgrößen um bis zu einigen Prozentpunkten abweichen. Der Grund dafür ist, dass inaktive Nutzer:innen gelöscht werden und Nutzer:innen nicht erreichbar sind.
+Segmente, die durch [zufällige Bucket-Nummern]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) gleichmäßig aufgeteilt werden, sind nicht gleich groß. Wenn Sie beispielsweise ein Segment mit dem Filter **„Zufällige Bucket-Nummer < 5000“** und ein Segment mit dem Filter **„Zufällige Bucket-Nummer ≥ 5000“** erstellen, ist es möglich und zu erwarten, dass die Segmentgrößen um bis zu einige Prozentpunkte variieren. Dies ist darauf zurückzuführen, dass inaktive Nutzer:innen gelöscht werden und Nutzer:innen möglicherweise nicht erreichbar sind.
 {% endalert %}
 
-![Das Panel "Erreichbare Nutzer:innen" mit einer Option zur Anzeige der Aufschlüsselung.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
+![Das Panel „Erreichbare Nutzer:innen“ mit der Option, die Aufschlüsselung anzuzeigen.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
 
 Die Statistiken auf der Ebene der einzelnen Filter werden immer geschätzt, auch wenn Sie exakte Statistiken berechnen. **Exakte Statistiken berechnen** berechnet nur die exakten Statistiken auf der Ebene des Segments, nicht auf der Ebene des Filters oder der Filtergruppe. Diese Berechnung kann einige Minuten in Anspruch nehmen. Insbesondere bei größeren Workspaces kann es vorkommen, dass Sie längere Zeit benötigen, um Berechnungen durchzuführen. Sie können Ihren Fortschritt auf dem Fortschrittsbalken im Panel **Erreichbare Nutzer:innen** verfolgen. Wenn eine Berechnung voraussichtlich länger als fünf Minuten dauert, wird Braze Ihnen die Ergebnisse per E-Mail schicken. 
 
 Braze priorisiert jeweils eine Berechnung pro Workspace, so dass die gleichzeitige Ausführung mehrerer Berechnungen zu Verzögerungen führen kann. Sie können **Warteschlange anzeigen** auswählen, um zu sehen, welche Segmente vor den Ihren liegen, wie weit sie fortgeschritten sind und wer sie initiiert hat. So erhalten Sie eine Idee davon, wann Ihre Berechnung möglicherweise priorisiert wird.
 
-![Eine Warteschlange für Berechnungen mit einer Berechnung.]({% image_buster /assets/img_archive/calculation_queue.png %})
+![Eine Berechnungswarteschlange mit einer Berechnung.]({% image_buster /assets/img_archive/calculation_queue.png %})
 
 Sie können eine exakte Statistikberechnung abbrechen, indem Sie **Abbrechen** auswählen. Dies kann von Vorteil sein, wenn sich mehrere Berechnungen in der Warteschlange befinden und Sie einer anderen Berechnung den Vorrang geben möchten. 
 
-![Eine aktive Berechnung mit der Option zum Abbrechen]({% image_buster /assets/img_archive/cancel_calculation.png %}){: style="max-width:25%"}
+![Eine aktive Berechnung mit der Möglichkeit zum Abbrechen]({% image_buster /assets/img_archive/cancel_calculation.png %}){: style="max-width:35%"}
 
 ## Historische Größe der Segmente anzeigen
 
@@ -118,7 +118,7 @@ Für alle Segmente können Sie ein Chart mit der geschätzten Mitgliederzahl der
 
 Da das Ziel dieses Charts darin besteht, Ihnen ein Gefühl für die Gesamttrends der Segmentmitgliedschaft zu vermitteln, ist die tägliche Anzahl eine Schätzung, ähnlich wie die Segmentgröße eine Schätzung ist, bevor Sie **Exakte Statistik berechnen** auswählen. Und da dieses Diagramm Schätzungen anzeigt, ist es möglich, dass die Größe Ihres Segments in diesem Chart als "0" erscheint, obwohl die tatsächliche Größe (die nach dem Auswählen von **Genaue Statistiken berechnen** ermittelt werden kann) nicht "0" ist. Es ist besonders wahrscheinlich, dass das Chart eine Schätzung von "0" anzeigt, wenn Ihr Segment im Verhältnis zur Größe Ihrer Workspace-Population sehr klein ist.
 
-Nehmen wir zum Beispiel an, Ihr Workspace enthält 100 Millionen Nutzer:innen und Ihr Segment hat etwa 700 Nutzer:innen. Es ist möglich, dass an manchen Tagen keine Nutzer:innen in dem Segment sind und keine Nutzer:innen in dem zufälligen Bucket-Bereich landen, der für die Schätzung der historischen Mitgliedschaft verwendet wird, so dass die Anzahl der Mitglieder an einem Tag 0 beträgt.
+Nehmen wir beispielsweise an, Ihr Workspace umfasst 100 Millionen Nutzer:innen und Ihr Segment hat etwa 700 Nutzer:innen. Es ist möglich, dass an manchen Tagen keine Nutzer:innen in diesem Segment sind und keine Nutzer:innen in den zufälligen Bucket-Bereich fallen, der für die historische Mitgliedschaftsschätzung verwendet wird, was zu einer Tagesmitgliedschaftszahl von 0 führt.
 
 Braze schätzt die Anzahl der Segmente, indem es eine Teilmenge Ihrer Nutzer:innen abfragt und diese Ergebnisse dann auf Ihre gesamte Zielgruppe hochrechnet. Das bedeutet, dass die Ergebnisse des Charts nur eine Schätzung der Segmentzugehörigkeit an diesem Tag darstellen und dass sie von Tag zu Tag schwanken können, da für diese Schätzung jeden Tag eine andere Stichprobe von Nutzer:innen abgefragt werden kann.
 
