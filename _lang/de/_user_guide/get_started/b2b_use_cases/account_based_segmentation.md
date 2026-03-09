@@ -1,12 +1,12 @@
 ---
 nav_title: Kontobasierte Segmentierung
-article_title: Kontobasierte Segmentierung einrichten
+article_title: Einrichtung einer kontenbasierten Segmentierung
 page_order: 2
 page_type: reference
 description: "Erfahren Sie, wie Sie die verschiedenen Features von Braze nutzen können, um Ihre Anwendungsfälle für die Segmentierung von B2B-Konten zu unterstützen."
 ---
 
-# Kontobasierte Segmentierung einrichten
+# Richten Sie eine kontenbasierte Segmentierung ein.
 
 > Auf dieser Seite erfahren Sie, wie Sie verschiedene Features von Braze nutzen können, um Ihre Anwendungsfälle für die Segmentierung von B2B-Konten zu unterstützen.
 
@@ -108,7 +108,7 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Option 2: Wenn Sie verbundene Quellen für Ihre Geschäftsobjekte verwenden
 
-Die Grundlagen für die Verwendung verbundener Quellen bei der Segmentierung finden Sie unter [CDI Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Lassen Sie sich von den Vorlagen unter [Bei der Verwendung von Katalogen](#option-1-when-using-catalogs-for-your-business-objects) inspirieren, wie Sie die Quelltabellen formatieren, denn Sie können sie beliebig formatieren.
+Grundlegende Informationen zur Verwendung verbundener Quellen bei der Segmentierung finden Sie in [den Segment-Erweiterungen von CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Lassen Sie sich von den Vorlagen unter [Bei der Verwendung von Katalogen](#option-1-when-using-catalogs-for-your-business-objects) inspirieren, wie Sie die Quelltabellen formatieren, denn Sie können sie beliebig formatieren.
 
 ## Verwendung Ihrer kontobasierten Erweiterung in einem Segment
 
