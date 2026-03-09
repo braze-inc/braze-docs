@@ -48,6 +48,10 @@ Ein Kauf-Objekt ist ein Objekt, das über die API übergeben wird, wenn ein Kauf
 - [ISO 4217 Währungscode Wiki](http://en.wikipedia.org/wiki/ISO_4217)
 - [ISO 8601 Zeitcode Wiki](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+Einige Bezeichnerpaare können nicht zusammen verwendet werden, und`email`hat Vorrang vor ,`phone` wenn beide angegeben sind. Ausführliche Informationen werden in der Referenz zu [Identifikatorauflösung]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution) angegeben.
+{% endalert %}
+
 ## ID des Produkts kaufen
 
 Innerhalb des Kauf-Objekts ist `product_id` ein Bezeichner für den Kauf (z.B. `Product Name` oder `Product Category`):
@@ -59,7 +63,7 @@ Innerhalb des Kauf-Objekts ist `product_id` ein Bezeichner für den Kauf (z.B. `
 
 Bei Braze bieten wir einige allgemeine Namenskonventionen für das Kauf-Objekt `product_id` an. Bei der Auswahl von `product_id` schlägt Braze vor, einfache Namen wie den Produktnamen oder die Produktkategorie (anstelle von SKUs) zu verwenden, mit der Absicht, alle protokollierten Artikel nach diesem `product_id` zu gruppieren.
 
-So lassen sich Produkte für die Segmentierung und das Triggern leichter identifizieren.
+Dies erleichtert die Identifizierung von Produkten für die Segmentierung und das Triggern.
 
 ### Käufe auf der Ebene der Bestellung protokollieren
 
@@ -116,10 +120,10 @@ Objekte mit Event-Eigenschaften, die Array- oder Objektwerte enthalten, können 
 
 Bitte beachten Sie, dass dieses Feature **pro Produkt** und nicht pro Kauf aktiviert wird. Wenn Sie z.B. ein großes Volumen an unterschiedlichen Produkten haben, die aber alle die gleichen Eigenschaften haben, ist eine Segmentierung vielleicht eher unnötig.
 
-In dieser Instanz empfehlen wir, bei der Festlegung von Datenstrukturen Produktnamen auf "Gruppenebene" anstelle von Bezeichnern auf Transaktionsebene zu verwenden. Zum Beispiel sollte ein Unternehmen, das Fahrkarten für Züge anbietet, Produkte für "Einzelfahrt", "Hin- und Rückfahrt", "Multi-City" und nicht für bestimmte Transaktionen wie "Transaktion 123" oder "Transaktion 046" haben. Ein weiteres Beispiel: Für das Kauf-Event "Essen" sollten Sie die Eigenschaften "Kuchen" und "Sandwich" festlegen.
+In diesem Fall empfehlen wir, bei der Festlegung der Datenstrukturen Produktnamen auf „Gruppenebene“ anstelle von Bezeichnern auf Transaktionsebene zu verwenden. Zum Beispiel sollte ein Unternehmen, das Fahrkarten für Züge anbietet, Produkte für "Einzelfahrt", "Hin- und Rückfahrt", "Multi-City" und nicht für bestimmte Transaktionen wie "Transaktion 123" oder "Transaktion 046" haben. Ein weiteres Beispiel: Für das Kauf-Event "Essen" sollten Sie die Eigenschaften "Kuchen" und "Sandwich" festlegen.
 
 {% alert important %}
-Beachten Sie, dass Produkte über die Braze REST API hinzugefügt werden können. Wenn Sie beispielsweise einen Anruf an den Endpunkt `/users/track` senden und eine neue Kauf-ID angeben, erstellt Braze automatisch ein Produkt im Abschnitt **Dateneinstellungen** > **Produkte** des Dashboards.
+Beachten Sie, dass Produkte über die Braze REST API hinzugefügt werden können. Wenn Sie beispielsweise einen Aufruf an den`/users/track`Endpunkt senden und eine neue Kauf-ID hinzufügen, erstellt Braze automatisch ein Produkt im Bereich **„Dateneinstellungen** > **Produkte“** des Dashboard-Bereichs.
 {% endalert %}
 
 ### Beispiel Kauf-Objekt
