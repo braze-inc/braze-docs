@@ -1,12 +1,12 @@
 ---
-nav_title: Suivi des désinstallations
-article_title: Suivre les désinstallations via le SDK de Braze
+nav_title: Suivre les désinstallations
+article_title: Suivez les désinstallations via le SDK Braze.
 page_order: 3.5
 description: "Découvrez comment suivre les désinstallations grâce au SDK de Braze."
 
 ---
 
-# Suivi des désinstallations
+# Suivre les désinstallations
 
 > Découvrez comment configurer le suivi des désinstallations via le SDK de Braze. Pour des informations générales, consultez le guide de l'utilisateur [: Désinstaller le suivi]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
 
