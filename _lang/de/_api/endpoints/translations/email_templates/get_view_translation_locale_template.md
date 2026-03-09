@@ -1,7 +1,7 @@
 ---
-nav_title: "GET: Spezifische Übersetzung und Lokalisierung für E-Mail Template anzeigen"
+nav_title: "GET: Spezifische Übersetzung und Ländereinstellung für Template für E-Mail anzeigen"
 article_title: "GET: Spezifische Übersetzung und Lokalisierung für E-Mail Template anzeigen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 2
 
 layout: api_page
@@ -12,14 +12,12 @@ description: "Dieser Artikel beschreibt die Details der anzeigenspezifischen Üb
 {% api %}
 # Anzeigen einer bestimmten Übersetzung und Lokalisierung für den Endpunkt der E-Mail-Vorlage
 {% apimethod get %}
-/templates/uebersetzungen/email
+/Templates/Übersetzungen/E-Mail
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine bestimmte Übersetzung und Lokalisierung für eine [E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) anzuzeigen. Weitere Informationen zu den Features für die Übersetzung finden Sie unter [Lokalisierung in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
+> Verwenden Sie diesen Endpunkt, um eine bestimmte Übersetzung und Spracheinstellung für ein [E-Mail-Template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) anzuzeigen. Weitere Informationen zu den Übersetzungsfeatures finden Sie unter [„Locales in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)“.
 
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Voraussetzungen
 
@@ -34,11 +32,11 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 | Parameter     | Erforderlich | Datentyp | Beschreibung                     |
 |---------------|----------|-----------|---------------------------------|
 | `template_id` | Erforderlich | String    | Die ID für Ihr E-Mail Template. |
-| `locale_id`   | Optional | String    | Die ID (UUID) des Gebietsschemas.           |
+| `locale_id`   | Optional | String    | Die ID (UUID) der Locale.           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Alle Übersetzungs-IDs werden als universelle eindeutige Bezeichner (UUIDs) betrachtet, die in der Antwort des GET-Endpunkts zu finden sind.
+Alle Übersetzungs-IDs gelten als universelle eindeutige Bezeichner (UUIDs), die in der Antwort des GET-Endpunkts zu finden sind.
 {% endalert %}
 
 ## Beispiel Anfrage
