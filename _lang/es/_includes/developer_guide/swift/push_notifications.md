@@ -2,25 +2,25 @@
 
 Las notificaciones push tienen una tasa limitada, así que no tengas miedo de enviar tantas como necesite tu aplicación. iOS y los servidores del servicio de notificaciones push de Apple (APN) controlarán la frecuencia con la que se entregan, y no te meterás en problemas por enviar demasiadas. Si tus notificaciones push están estranguladas, podrían retrasarse hasta la próxima vez que el dispositivo envíe un paquete de mantenimiento de conexión o reciba otra notificación.
 
-## Configuración de las notificaciones push
+## Configuración de notificaciones push
 
-### Paso 1: Sube tu token de APNs
+### Paso 1: Sube tu token APN
 
 {% multi_lang_include developer_guide/swift/apns_token.md %}
 
 ### Paso 2: Habilitar las capacidades push
 
-En Xcode, ve a la sección **Firma & Capacidades** del objetivo principal de la aplicación y añade la capacidad de notificaciones push.
+En Xcode, ve a la sección **Capacidades& de firma** del objetivo principal de la aplicación y añade la capacidad de notificaciones push.
 
-![La sección "Firma & Capacidades" en un proyecto Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![La sección «Capacidades de&firma» en un proyecto Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
-### Paso 3: Configurar la gestión push
+### Paso 3: Configurar el manejo de notificaciones push
 
-Puedes utilizar el SDK de Swift para automatizar el procesamiento de las notificaciones remotas recibidas de Braze. Esta es la forma más sencilla de gestionar las notificaciones push y es el método de gestión recomendado.
+Puedes utilizar el SDK de SWIFT para automatizar el procesamiento de las notificaciones remotas recibidas de Braze. Esta es la forma más sencilla de gestionar las notificaciones push y es el método de gestión recomendado.
 
 {% tabs local %}
 {% tab Automatic %}
-#### Paso 3.1: Habilitar la automatización en la propiedad push
+#### Paso 3.1: Habilita la automatización en la propiedad push.
 
 Para habilitar la integración push automática, establece la propiedad `automation` de la configuración de `push` en `true`:
 
@@ -182,7 +182,7 @@ A continuación, pasa las notificaciones push recibidas a Braze. Este paso es ne
 
 {% subtabs %}
 {% subtab Swift %}
-Para habilitar la gestión de push predeterminada de Braze, añade el siguiente código al método `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` de tu aplicación:
+Para habilitar el manejo predeterminado de notificaciones push de Braze, agrega el siguiente código al método `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)`de tu aplicación:
 
 ```swift
 if let braze = AppDelegate.braze, braze.notifications.handleBackgroundNotification(
@@ -208,7 +208,7 @@ completionHandler()
 {% endsubtab %}
 
 {% subtab OBJECTIVE-C %}
-Para habilitar la gestión de push predeterminada de Braze, añade el siguiente código al método `application:didReceiveRemoteNotification:fetchCompletionHandler:` de tu aplicación:
+Para habilitar el manejo predeterminado de notificaciones push de Braze, agrega el siguiente código al método `application:didReceiveRemoteNotification:fetchCompletionHandler:`de tu aplicación:
 
 ```objc
 BOOL processedByBraze = AppDelegate.braze != nil && [AppDelegate.braze.notifications handleBackgroundNotificationWithUserInfo:userInfo
@@ -360,13 +360,13 @@ Cuando utilices la integración push automática, `subscribeToUpdates(_:)` es la
 Crea tu suscripción a notificaciones push en `application(_:didFinishLaunchingWithOptions:)` para asegurarte de que tu suscripción se desencadena cuando un usuario final toca una notificación mientras tu aplicación está en estado finalizado.
 {% endalert %}
 
-## Gestión de notificaciones en primer plano
+## Manejo de notificaciones en primer plano
 
-Por defecto, cuando llega una notificación push mientras tu aplicación está en primer plano, iOS no la muestra automáticamente. Para mostrar notificaciones push en primer plano y seguirlas con los análisis Braze, llama al método `handleForegroundNotification(notification:)` dentro de tu implementación de `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)`.
+De forma predeterminada, cuando llega una notificación push mientras la aplicación está en primer plano, iOS no la muestra automáticamente. Para mostrar notificaciones push en primer plano y realizar su seguimiento con Braze Análisis, llama al`handleForegroundNotification(notification:)`método dentro de tu`UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)`implementación.
 
 ### Cómo funciona
 
-Cuando llamas a `handleForegroundNotification(notification:)`, Braze procesa la carga útil de la notificación para registrar los análisis y gestionar los vínculos profundos o las acciones de los botones. El comportamiento real de la visualización está controlado por la dirección `UNNotificationPresentationOptions` que pases al controlador de finalización.
+Cuando llamas`handleForegroundNotification(notification:)`, Braze procesa la carga útil de la notificación para registrar los análisis y gestionar cualquier vínculo profundo o acción de botón. El comportamiento real de la visualización está controlado por el`UNNotificationPresentationOptions`  que pasas al controlador de finalización.
 
 ```swift
 import BrazeKit
@@ -393,49 +393,49 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 }
 ```
 
-Para ver un ejemplo completo, consulta el [ejemplo de integración manual de notificaciones](https://github.com/braze-inc/braze-swift-sdk/blob/e31907eaa0dbd151dc2e6826de66cc494242ba60/Examples/Swift/Sources/PushNotifications-Manual/AppDelegate.swift#L1-L120) push en el repositorio de SDK de Braze Swift.
+Para ver un ejemplo completo, consulta la [muestra de integración manual de notificaciones push](https://github.com/braze-inc/braze-swift-sdk/blob/e31907eaa0dbd151dc2e6826de66cc494242ba60/Examples/Swift/Sources/PushNotifications-Manual/AppDelegate.swift#L1-L120) en el repositorio Braze Swift SDK.
 
 ## Push primers {#push-primers}
 
 Las campañas push primer animan a tus usuarios a habilitar las notificaciones push de tu aplicación en sus dispositivos. Esto puede hacerse sin necesidad de personalizar el SDK utilizando nuestro [primer push sin código]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
-## Gestión dinámica de la pasarela de APNs
+## Gestión dinámica de la puerta de enlace APN
 
-La gestión dinámica de la pasarela del servicio de notificaciones push de Apple (APNs) mejora la fiabilidad y eficacia de las notificaciones push de iOS al detectar automáticamente el entorno APNs correcto. Antes, seleccionabas manualmente los entornos de APN (desarrollo o producción) para tus notificaciones push, lo que a veces provocaba configuraciones incorrectas de las pasarelas, fallos en la entrega y errores en `BadDeviceToken`.
+La gestión dinámica de la puerta de enlace del servicio de notificaciones push de Apple (APN) mejora la fiabilidad y la eficiencia de las notificaciones push de iOS al detectar automáticamente el entorno APN correcto. Anteriormente, debías seleccionar manualmente los entornos APN (desarrollo o producción) para tus notificaciones push, lo que a veces provocaba configuraciones de puerta de enlace incorrectas, fallos en la entrega y`BadDeviceToken`  errores.
 
-Con la gestión dinámica de la pasarela de APNs, tendrás:
+Con la administración dinámica de la puerta de enlace APN, tendrás:
 
-- **Mayor fiabilidad:** Las notificaciones se entregan siempre en el entorno APN correcto, reduciendo las entregas fallidas.
-- **Configuración simplificada:** Ya no tendrás que administrar manualmente la configuración de la pasarela APN.
-- **Resistencia a los errores:** Los valores no válidos o ausentes de la pasarela se gestionan con elegancia, proporcionando un servicio ininterrumpido.
+- **Mayor fiabilidad:** Las notificaciones siempre se entregan al entorno APN correcto, lo que reduce los fallos en la entrega.
+- **Configuración simplificada:** Ya no es necesario administrar manualmente la configuración de la puerta de enlace APN.
+- **Resistencia a los errores:** Los valores de puerta de enlace no válidos o que faltan se gestionan correctamente, lo que garantiza un servicio ininterrumpido.
 
 ### Requisitos previos
 
-Braze es compatible con la gestión de pasarelas de APN dinámicas para notificaciones push en iOS con el siguiente requisito de versión del SDK:
+Braze admite la administración dinámica de puertas de enlace APN para notificaciones push en iOS con los siguientes requisitos de versión del SDK:
 
 {% sdk_min_versions swift:10.0.0 %}
 
 ### Cómo funciona
 
-Cuando una aplicación iOS se integra con el SDK Braze Swift, envía datos relacionados con el dispositivo, incluyendo [`aps-environment`](https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment) a la API del SDK Braze, si está disponible. El valor `apns_gateway` indica si la aplicación está utilizando el entorno APN de desarrollo (`dev`) o de producción (`prod`).
+Cuando una aplicación iOS se integra con el SDK Swift de Braze, envía datos relacionados con el dispositivo, incluidos[`aps-environment`](https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment)  a la API del SDK de Braze, si está disponible. El`apns_gateway`valor indica si la aplicación utiliza el entorno APN de desarrollo (`dev`) o de producción (`prod`).
 
 Braze también almacena el valor de puerta de enlace notificado para cada dispositivo. Si se recibe un nuevo valor de puerta de enlace válido, Braze actualiza automáticamente el valor almacenado.
 
 Cuando Braze envía una notificación push:
 
 - Si se almacena un valor de puerta de enlace válido (dev o prod) para el dispositivo, Braze lo utiliza para determinar el entorno APN correcto.
-- Si no se almacena ningún valor de puerta de enlace, Braze utiliza por defecto el entorno de APNs configurado en la página **Configuración de la aplicación**.
+- Si no se almacena ningún valor de puerta de enlace, Braze utiliza de forma predeterminada el entorno APN configurado en la página **Configuración de la aplicación**.
 
 ### Preguntas más frecuentes
 
 #### ¿Por qué se introdujo esta característica?
 
-Con la gestión dinámica de la pasarela de APNs, el entorno correcto se selecciona automáticamente. Antes, tenías que configurar manualmente la pasarela de APNs, lo que podía provocar errores en `BadDeviceToken`, invalidación de token y posibles problemas de limitación de tasa de APNs.
+Con la administración dinámica de la puerta de enlace APN, se selecciona automáticamente el entorno adecuado. Anteriormente, era necesario configurar manualmente la puerta de enlace APN, lo que podía provocar`BadDeviceToken`  errores, la invalidación de tokens y posibles problemas de límite de velocidad de APN.
 
-#### ¿Cómo afecta esto al rendimiento de la entrega push?
+#### ¿Cómo afecta esto al rendimiento de las entregas urgentes?
 
-Esta característica mejora las tasas de entrega al dirigir siempre los tokens de notificaciones push al entorno APN correcto, evitando fallos causados por pasarelas mal configuradas.
+Esta característica mejora las tasas de entrega al dirigir siempre los tokens de notificaciones push al entorno APN correcto, evitando fallos causados por puertas de enlace mal configuradas.
 
 #### ¿Puedo desactivar esta característica?
 
-La gestión de pasarelas de APN dinámicas está activada predeterminadamente y proporciona mejoras de fiabilidad. Si tienes casos de uso específicos que requieren la selección manual de la pasarela, ponte en contacto con [el soporte de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
+La gestión dinámica de puertas de enlace APN está activada de forma predeterminada y proporciona mejoras en la fiabilidad. Si tienes casos de uso específicos que requieren la selección manual de la puerta de enlace, ponte en contacto con [el soporte de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
