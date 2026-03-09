@@ -9,6 +9,10 @@ channel: email
 
 # Universelle Links und App-Links
 
+{% alert tip %}
+Einen Vergleich der Link-Typen für alle Messaging-Kanäle sowie Hinweise dazu, wann Sie eine AASA-Datei benötigen, finden Sie [im Leitfaden zu Deeplinking für iOS]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide).
+{% endalert %}
+
 Apple Universal Links und Android App Links sind Mechanismen, die für einen nahtlosen Übergang zwischen Webinhalten und mobilen Apps sorgen. Während universelle Links spezifisch für iOS sind, dienen Android App Links demselben Zweck für Android-Anwendungen.
 
 ## Wie Universal Links und App Links funktionieren
@@ -55,7 +59,7 @@ Damit Apps universelle Links oder App-Links unterstützen können, benötigen so
 
 Zusätzlich zu dieser Berechtigungsdatei gibt es hart kodierte Definitionen, welche Link Domains die App öffnen darf, die innerhalb der App eingerichtet werden:
 
-- **iOS:** Als "Zugehörige Domains" in Xcode festlegen
+- **iOS:** In Xcode als „Zugehörige Domains” festlegen
 - **Android:** Definiert in der Datei `AndroidManifest.xml` der App
 
 Diese zweiteilige Domain-App-Verknüpfung ist erforderlich, damit ein universeller Link oder ein App-Link funktioniert und verhindert, dass eine App Links von einer bestimmten Domain entführt oder eine Domain eine bestimmte App öffnet.
@@ -75,7 +79,7 @@ Diese Schritte sind der Dokumentation für Entwickler:in von Apple entnommen. We
 #### Schritt 1a: Registrieren Sie Ihre App {#step-1a}
 
 1. Gehen Sie auf developer.apple.com und melden Sie sich an.
-2. Klicken Sie auf **Zertifikate, Bezeichner & Profile**.
+2. Klicken Sie auf **„Zertifikate, Bezeichner, &Profile**“.
 3. Klicken Sie auf **Bezeichner**.
 4. Wenn Sie noch keinen registrierten App Bezeichner haben, klicken Sie auf +, um einen zu erstellen.
    a. Geben Sie einen **Namen** ein. Das kann alles sein, was Sie wollen.
@@ -138,7 +142,7 @@ Die AASA-Datei enthält ein JSON-Objekt mit einer Liste von Apps und den URL-Pfa
 ```
 
 - `appID`: Erstellt durch die Kombination der **Team ID** Ihrer App (gehen Sie zu `https://developer.apple.com/account/#/membership/`, um die Team ID zu erhalten) und des **Bundle Identifiers**. Im obigen Beispiel ist "JHGFJHHYX" die ID des Teams und "com.facebook.ios" ist die ID des Pakets.
-- `paths`: String-Array mit Strings, die angeben, welche Pfade von der Zuordnung ein- oder ausgeschlossen werden. Sie können `NOT` vor der Pfadangabe verwenden, um Pfade zu deaktivieren. In diesem Beispiel führen alle Links auf diesem Pfad ins Internet, anstatt die App zu öffnen. Sie können `*` als Platzhalter verwenden, um alle Pfade in einem Verzeichnis zu aktivieren, und `?`, um ein einzelnes Zeichen abzugleichen (z.B. /archives/201?/, um alle Nummern von 2010-2019 abzugleichen).
+- `paths`: String-Array mit Strings, die angeben, welche Pfade von der Zuordnung ein- oder ausgeschlossen werden. Sie können `NOT` vor der Pfadangabe verwenden, um Pfade zu deaktivieren. In diesem Beispiel führen alle Links auf diesem Pfad ins Internet, anstatt die App zu öffnen. Sie können  als Platzhalter`*` verwenden, um alle Pfade in einem Verzeichnis zu aktivieren, und  ,`?` um ein einzelnes Zeichen abzugleichen (z. B. /archives/201?/ für alle Zahlen von 2010 bis 2019).
 
 {% alert note %}
 Bei diesen Strings wird die Groß- und Kleinschreibung beachtet. Abfrage-Strings und Bezeichner von Fragmenten werden ignoriert.
@@ -200,7 +204,7 @@ Sie müssen Ihre App mit Ihrer Website verknüpfen. Dazu können Sie eine Datei 
 
 ### Schritt 3: Aktualisieren Sie Ihre App-Manifestdatei
 
-Fügen Sie in Ihrer Datei `AndroidManifest.xml` ein Element mit Metadaten innerhalb des Anwendungselements hinzu. Das Metadaten-Element sollte ein `android:name` Attribut von "asset_statements" und ein `android:resource` Attribut haben, das auf eine Ressourcendatei mit einem String-Array verweist, das die URL Ihrer Website enthält.
+Fügen Sie in Ihrer Datei `AndroidManifest.xml` ein Element mit Metadaten innerhalb des Anwendungselements hinzu. Das Metadatenelement sollte ein`android:name`Attribut  und ein`android:resource`Attribut"asset_statements"  aufweisen, das auf eine Ressourcendatei mit einem String-Array verweist, das die URL Ihrer Website enthält.
 
 ### Schritt 4: Bereiten Sie Ihre App auf den Umgang mit Deeplinks vor
 
@@ -216,7 +220,7 @@ Schließlich können Sie Ihre Deeplinks testen. Senden Sie sich selbst einen Lin
 ## Universelle Links, App Links und Click-Tracking
 
 {% alert note %}
-Click-Tracking-Links werden in der Regel als Teil Ihres Onboardings für E-Mails eingerichtet. Wenn dies nicht während des Onboarding der Kund:in geschehen ist, wenden Sie sich an Ihren Account Manager:in, um Hilfe zu erhalten.
+Click-Tracking-Links werden in der Regel als Teil Ihres Onboardings für E-Mails eingerichtet. Sollte dies während des Onboardings nicht abgeschlossen worden sein, wenden Sie sich bitte an Ihren Account Manager, um Unterstützung zu erhalten.
 {% endalert %}
 
 Unsere Partner für das Versenden von E-Mails, SendGrid und SparkPost, verwenden Domains für das Click-Tracking, um alle Links zu verpacken und URL-Parameter für das Click-Tracking in E-Mails von Braze einzubinden.
