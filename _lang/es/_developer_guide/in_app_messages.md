@@ -6,13 +6,13 @@ platform:
   - FireOS
   - Swift
 page_order: 2.2
-description: "Más información sobre los mensajes dentro de la aplicación y cómo configurarlos para el SDK de Braze."
+description: "Obtén información sobre los mensajes dentro de la aplicación y cómo configurarlos para el SDK de Braze."
 
 ---
 
 # Mensajes dentro de la aplicación
 
-> Más información sobre los mensajes dentro de la aplicación y cómo configurarlos para el SDK de Braze.
+> Obtén información sobre los mensajes dentro de la aplicación y cómo configurarlos para el SDK de Braze.
 
 {% sdktabs %}
 {% sdktab web %}
@@ -62,8 +62,8 @@ description: "Más información sobre los mensajes dentro de la aplicación y c�
 
 ## Próximos pasos
 
-¿Preparado para profundizar? Consulta estos tutoriales paso a paso:
+¿Listo para profundizar más? Echa un vistazo a estos tutoriales paso a paso:
 
-- Ajusta el tiempo de entrega de mensajes [aplazando y restableciendo los mensajes desencadenados]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
-- Perfecciona la orientación de los mensajes [estableciendo reglas de visualización condicionales]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages).  
-- Combina el aspecto de tu marca [personalizando el estilo del mensaje con pares clave-valor]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).
+- Ajusta el momento de entrega de los mensajes [aplazando y restaurando los mensajes desencadenados]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
+- Refina la orientación de los mensajes [estableciendo reglas de visualización condicionales]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages).  
+- Adapta el aspecto de tu marca [personalizando el estilo de los mensajes con pares clave-valor]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).
