@@ -21,10 +21,10 @@ Wenn ein Nutzerprofil in Braze erstellt wird, wird dieser Nutzerin oder diesem N
 
 ### Verwendung der globalen Kontrollgruppe
 
-Zufällige Bucket-Nummern werden in Ihrer globalen Kontrollgruppe verwendet - einer Gruppe von Benutzern, die keine Kampagnen oder Canvases erhalten. Braze wählt nach dem Zufallsprinzip mehrere Bereiche mit zufälligen Bucket-Nummern aus und schließt Benutzer aus diesen ausgewählten Buckets ein. Zufällige Bucket-Nummern werden ohne Gewichtung oder Berücksichtigung der zuletzt vergebenen Nummern zugewiesen. 
+Zufällige Bucket-Nummern werden in Ihrer globalen Kontrollgruppe verwendet - einer Gruppe von Benutzern, die keine Kampagnen oder Canvases erhalten. Braze wählt nach dem Zufallsprinzip mehrere Bereiche mit zufälligen Bucket-Nummern aus und schließt Benutzer aus diesen ausgewählten Buckets ein. Zufällige Bucket-Nummern werden ohne Gewichtung oder Berücksichtigung kürzlich zugewiesener Nummern vergeben. 
 
 {% alert note %}
-Wenn ein Nutzer:innen gelöscht und neu angelegt wird, erhält er eine andere zufällige Bucket-Nummer, da er als neuer Nutzer betrachtet wird.
+Wenn ein Nutzer:in gelöscht und neu erstellt wird, wird ihm eine andere zufällige Bucket-Nummer zugewiesen, da er als neuer Nutzer:in betrachtet wird.
 {% endalert %}
 
 Wenn Sie eine globale Kontrollgruppe eingerichtet haben und zufällige Bucket-Nummern für andere Anwendungsfälle verwenden möchten, lesen Sie die Hinweise, auf die [Sie achten]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) sollten.
@@ -41,7 +41,7 @@ Wenn Sie Benutzer für Tests innerhalb einer einzelnen Kampagne oder eines einze
 
 Fügen Sie beim [Erstellen eines Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) den Filter "Random Bucket #" hinzu. Geben Sie dann eine Zahl oder einen Zahlenbereich an, den Sie in Ihr Segment aufnehmen möchten.
 
-![Ein Filter für Segmente, der für zufällige Bucket-Nummern nicht mehr als "3000" ist.]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
+![Ein Segment-Filter für zufällige Bucket-Nummern, die nicht größer als „3000“ sind.]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 Sie können diese Art von Segmenten verwenden, wenn Sie einen Test mit drei verschiedenen Varianten durchführen und auch eine Kontrollgruppe einbeziehen möchten. Betrachten Sie den folgenden Beispielplan für die Erstellung von Segmenten gleicher Größe für drei Varianten und eine Kontrollgruppe:
 
@@ -53,6 +53,10 @@ Sie können diese Art von Segmenten verwenden, wenn Sie einen Test mit drei vers
 Je nachdem, wie viele Segmente Sie wünschen und wie sich die Nutzer innerhalb der einzelnen Segmente verteilen, kann Ihr Plan anders aussehen.
 
 Schalten Sie für jedes Ihrer Segmente mit zufälligen Bucket-Nummern, einschließlich der Kontrollgruppe, das [Analytics Tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) ein. Wenn Sie den Erfolg von Varianten im Vergleich zur Kontrollgruppe auswerten möchten, können Sie auf die Seite mit den [benutzerdefinierten Ereignissen]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/) gehen und sehen, wie oft jedes Segment bestimmte benutzerdefinierte Ereignisse abgeschlossen hat.
+
+{% alert tip %}
+Wenn Sie zufällige Bucket-Nummernsegmente in einem Canvas verwenden, beispielsweise als Filter in einem [Decision-Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/)-Schritt, stellen Sie bitte sicher, dass Ihre Canvas[-Ausstiegskriterien]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/), Zielgruppen-Filter und vorgelagerten Schritte nicht auf Segmente abzielen, die sich mit einem Ihrer Bucket-Bereiche überschneiden. In diesem Fall könnten Nutzer:innen in diesem Bereich unverhältnismäßig häufig entfernt werden, bevor sie die Aufteilung erreichen, was zu einer ungleichmäßigen Verteilung zwischen den Pfaden führen würde.
+{% endalert %}
 
 ### Zufälliger Wiedereintritt der Zielgruppe über zufällige Bucket-Nummern
 
