@@ -1,6 +1,6 @@
 ---
 nav_title: Déclenchement personnalisé
-article_title: "Personnaliser l'envoi déclenché des messages in-app pour iOS"
+article_title: Personnaliser le déclenchement des messages in-app pour iOS
 platform: iOS
 page_order: 7
 description: "Cet article de référence couvre le déclenchement de messagerie in-app personnalisée pour votre application iOS."
@@ -54,11 +54,11 @@ Lorsque la notification push silencieuse est reçue, un événement enregistré 
 
 Créer une campagne de notification push silencieuse déclenchée par l’événement envoyé par le serveur. Pour plus de détails sur la création d'une campagne de notification push silencieuse, reportez-vous aux [notifications push silencieuses]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/silent_push_notifications/).
 
-![Une campagne de messages in-app de livraison par événement qui sera délivrée aux utilisateurs qui effectuent l'événement personnalisé "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %}).
+![Une campagne de messages in-app, basée sur la livraison par événement, qui sera envoyée aux utilisateurs qui effectuent l'événement/assets/img_archive/iosServerSentPush.pngimage_buster"server_event".]({%personnalisé.
 
 La campagne de notification push doit inclure des extras de paires clé-valeur, qui indiquent que cette campagne de notification push est envoyée pour enregistrer un événement personnalisé SDK. Cet événement sera utilisé pour déclencher le message in-app.
 
-![n campagne de messages in-app de livraison/distribution basée sur des actions qui possède deux paires clé-valeur. "CAMPAIGN_NAME" défini comme "Exemple de nom de message in-app", et "IS_SERVER_EVENT" défini comme "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![Campagne de messages in-app basée sur l'événement, comportant deux paires clé-valeur."CAMPAIGN_NAME"Définissez « Exemple de nom de message in-app » et"IS_SERVER_EVENT"définissez « vrai ».]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 Le code de la méthode `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` vérifie la clé `IS_SERVER_EVENT` et enregistrera un événement personnalisé SDK s’il existe.
 
@@ -70,7 +70,7 @@ Créez votre campagne de messages in-app visibles par l’utilisateur dans le ta
 
 Dans l’exemple suivant, le message in-app spécifique à déclencher a été configuré en envoyant la propriété de l’événement dans le cadre de la première notification push silencieuse.
 
-![Une campagne de messages in-app de livraison par action qui sera délivrée aux utilisateurs qui effectuent l'événement personnalisé "In-app message trigger" où "campaign_name" est égal à "In-app message name example".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Une campagne de messages in-app basée sur l'événement personnalisé « Déclencheur de message in-app » qui sera envoyée aux utilisateurs qui effectuent l'événement personnalisé « Déclencheur de message in-app » où"campaign_name"  est égal à « Exemple de nom de message in-app ».]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 En raison d’un message push utilisé pour enregistrer un événement personnalisé, Braze devra stocker un jeton de notification push pour chaque utilisateur afin de permettre cette solution. Pour les utilisateurs d’iOS et d’Android, Braze ne stocke un jeton qu’à partir du point où un utilisateur a reçu un notification push de l’OS. Avant cela, l’utilisateur ne sera pas joignable par notification push, et la solution précédente ne sera pas possible.
 
