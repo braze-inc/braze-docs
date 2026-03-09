@@ -1,12 +1,12 @@
 ---
 nav_title: 계정 기반 세분화
-article_title: 계정 기반 세그먼트 세분화 설정하기
+article_title: 계정 기반 세분화 설정
 page_order: 2
 page_type: reference
 description: "다양한 Braze 기능을 사용하여 B2B 계정 기반 세분화 사용 사례를 강화하는 방법을 알아보세요."
 ---
 
-# 계정 기반 세그먼트 세분화 설정하기
+# 계정 기반 세분화 설정
 
 > 이 페이지에서는 B2B 계정 기반 세분화 사용 사례를 강화하기 위해 다양한 Braze 기능을 사용하는 방법을 보여줍니다.
 
@@ -19,7 +19,7 @@ You can do B2B account-based segmentation in two ways, depending on how you set 
 
 ### Option 1: 비즈니스 개체에 카탈로그를 사용하는 경우
 
-#### 기본 SQL 템플릿 세그먼트 세분화
+#### 기본 SQL 템플릿 세분화
 
 시작하는 데 도움을 드리기 위해 간단한 계정 기반 세분화를 위한 기본 SQL 템플릿을 만들었습니다.
 
@@ -108,7 +108,7 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Option 2: 비즈니스 개체에 연결된 소스를 사용하는 경우
 
-세분화에서 연결된 소스를 사용하는 방법에 대한 기본 사항은 [CDI 세그먼트 확장을]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) 참조하세요. 원하는 방식으로 서식을 지정할 수 있으므로 [카탈로그 사용 시에서](#option-1-when-using-catalogs-for-your-business-objects) 다루는 템플릿을 사용하여 소스 테이블의 서식을 지정하는 방법에 대한 영감을 얻을 수 있습니다.
+세분화에서 연결된 소스를 사용하는 방법에 대한 기본 사항은 [CDI 세그먼트 확장]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)을 참조하십시오. 원하는 방식으로 서식을 지정할 수 있으므로 [카탈로그 사용 시에서](#option-1-when-using-catalogs-for-your-business-objects) 다루는 템플릿을 사용하여 소스 테이블의 서식을 지정하는 방법에 대한 영감을 얻을 수 있습니다.
 
 ## 세그먼트에서 계정 기반 확장 프로그램 사용
 
