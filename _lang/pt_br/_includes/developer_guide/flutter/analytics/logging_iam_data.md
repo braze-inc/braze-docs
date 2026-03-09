@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/flutter.md %}
 
-## Envio de mensagens de registro de dados
+## Registrando dados de mensagens
 
 Para registrar análises de dados usando o `BrazeInAppMessage`, passe as referências de instância para a função de análises desejada:
 
@@ -19,9 +19,9 @@ braze.logInAppMessageImpression(inAppMessage);
 braze.logInAppMessageButtonClicked(inAppMessage, 0);
 ```
 
-## Acesso a dados de mensagens
+## Acessando dados de mensagens
 
-Para acessar os dados de mensagens no app no seu aplicativo Flutter, o site `BrazePlugin` suporta o envio de dados de mensagens no app usando [o Dart Streams](https://dart.dev/tutorials/language/streams).
+Para acessar os dados de mensagens no app em Flutter, o `BrazePlugin` suporta o envio de dados de mensagens no app usando [Dart Streams](https://dart.dev/tutorials/language/streams).
 
 O objeto `BrazeInAppMessage` é compatível com um subconjunto de campos disponíveis nos objetos do modelo nativo, incluindo `uri`, `message`, `header`, `buttons`, `extras`, entre outros.
 
@@ -56,7 +56,7 @@ Os dados das mensagens no app são encaminhados automaticamente da camada Androi
 {% tab iOS %}
 {% subtabs %}
 
-Você pode encaminhar dados de mensagens no app de duas maneiras:
+Você pode encaminhar os dados de mensagens no app de duas maneiras:
 
 {% subtab UI Delegate %}
 
@@ -88,7 +88,7 @@ class CustomInAppMessagePresenter: BrazeInAppMessageUI {
 {% endtab %}
 {% endtabs %}
 
-### Etapa 3: Repetição do retorno de chamada para mensagens no app (opcional)
+### Etapa 3: Reproduzindo o retorno de chamada para mensagens no app (opcional)
 
 Para armazenar mensagens no app disparadas antes que o retorno de chamada esteja disponível e reproduzi-las depois que ele for definido, adicione a seguinte entrada ao mapa `customConfigs` ao inicializar o `BrazePlugin`:
 ```dart
