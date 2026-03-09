@@ -17,7 +17,7 @@ search_rank: 7
 
 이 고객 행동 및 사용자 이벤트 분석은 일반적으로 고객 행동 또는 사용자 이벤트에 어떤 유형의 정보가 포함되는지 보여줍니다. 구성 요소에 대한 확실한 이해를 바탕으로 개발자와 비즈니스 인텔리전스 전략 팀은 수신되는 Currents 이벤트 데이터를 사용하여 데이터 기반 보고서와 차트를 만들고 다른 유용한 데이터 메트릭을 활용할 수 있습니다.
 
-![사용자별 속성, 행동별 속성, 기기별 속성별로 그룹화된 구매 이벤트를 보여주는 사용자 이벤트의 분석 정보]({% image_buster /assets/img/customer_engagement_event.png %})
+![구매 이벤트를 보여주는 사용자 이벤트의 분류로, 사용자 특정 속성, 행동 특정 속성 및 기기 특정 속성으로 그룹화된 나열된 속성]({% image_buster /assets/img/customer_engagement_event.png %})
 
 고객 행동 및 사용자 이벤트는 **사용자별** 속성, **행동별** 속성, **기기별** 속성으로 구성됩니다.
 
@@ -69,7 +69,7 @@ search_rank: 7
   "prev_random_bucket_number" : "(optional, int) Previous random bucket number",
   "random_bucket_number" : "(required, int) New random bucket number",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -107,7 +107,7 @@ search_rank: 7
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -170,7 +170,7 @@ search_rank: 7
 // users.behaviors.CustomEvent
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -201,11 +201,11 @@ search_rank: 7
 
 - For Custom Events, the payload will also be populated with any [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties) that are associated with the event.
 - `ad_id`, `ad_id_type`, 및 `ad_tracking_enabled`의 경우, 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자 또는 계정 매니저에게 문의하여 `ad_id` 으로 전송하기 위한 기능 플리퍼를 인에이블먼트하세요.
+- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우, 고객 성공 매니저 또는 계정 매니저에게 연락하여 `ad_id` 전송을 위한 기능 플리퍼를 활성화하십시오.
 {% endapi %}
 
 {% api %}
-## 설치 경로 속성 이벤트 {#install-attribution-events}
+## 설치 경로 이벤트 {#install-attribution-events}
 
 {% apitags %}
 기여도
@@ -224,7 +224,7 @@ search_rank: 7
   "id" : "(required, string) Globally unique ID for this event",
   "source" : "(required, string) The source of the attribution",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -273,7 +273,7 @@ search_rank: 7
 // Install Attribution (users.behaviors.InstallAttribution)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -327,7 +327,7 @@ search_rank: 7
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -400,7 +400,7 @@ search_rank: 7
 // Location (users.behaviors.Location)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -434,7 +434,7 @@ search_rank: 7
 #### 부동산 세부 정보
 
 - `ad_id`, `ad_id_type`, 및 `ad_tracking_enabled`의 경우, 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자 또는 계정 매니저에게 문의하여 `ad_id` 으로 전송하기 위한 기능 플리퍼를 인에이블먼트하세요.
+- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우, 고객 성공 매니저 또는 계정 매니저에게 연락하여 `ad_id` 전송을 위한 기능 플리퍼를 활성화하십시오.
 {% endapi %}
 
 {% api %}
@@ -472,7 +472,7 @@ search_rank: 7
   "product_id" : "(required, string) ID of the product purchased",
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -541,7 +541,7 @@ search_rank: 7
 // Purchased (users.behaviors.Purchase)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -574,7 +574,7 @@ search_rank: 7
 
 - For Purchase events, the payload will also be populated with any [purchase event properties]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties) that are associated with the event.
 - `ad_id`, `ad_id_type`, 및 `ad_tracking_enabled`의 경우, 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자 또는 계정 매니저에게 문의하여 `ad_id` 으로 전송하기 위한 기능 플리퍼를 인에이블먼트하세요.
+- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우, 고객 성공 매니저 또는 계정 매니저에게 연락하여 `ad_id` 전송을 위한 기능 플리퍼를 활성화하십시오.
 {% endapi %}
 
 {% api %}
@@ -611,7 +611,7 @@ search_rank: 7
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -668,7 +668,7 @@ search_rank: 7
 // First Session (users.behaviors.app.FirstSession)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -720,7 +720,7 @@ search_rank: 7
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -779,7 +779,7 @@ search_rank: 7
 // Session Ended (users.behaviors.app.SessionEnd)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -835,7 +835,7 @@ search_rank: 7
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -892,7 +892,7 @@ search_rank: 7
 // Session Started (users.behaviors.app.SessionStart)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -919,13 +919,13 @@ search_rank: 7
 {% endapi %}
 
 {% api %}
-## 토큰 변경 이벤트를 시작하기 위한 라이브 활동 푸시 {#live-activity-push-to-start-token-change-events}
+## 라이브 활동 푸시 시작 토큰 변경 이벤트 {#live-activity-push-to-start-token-change-events}
 
 {% apitags %}
 Live Activity, Push To Start Token
 {% endapitags %}
 
-이 이벤트는 Braze가 라이브 활동 푸시 시작 토큰을 사용자와 동기화할 때 발생합니다.
+이 이벤트는 Braze가 사용자와 함께 라이브 활동 푸시 시작 토큰을 동기화할 때 발생합니다.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -944,7 +944,7 @@ Live Activity, Push To Start Token
   "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1001,7 +1001,7 @@ Live Activity, Push To Start Token
 // Live Activity Push To Start Token Changed (users.behaviors.liveactivity.PushToStartTokenChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1028,7 +1028,7 @@ Live Activity, Push To Start Token
 {% endapi %}
 
 {% api %}
-## 실시간 활동 업데이트 토큰 변경 이벤트 {#live-activity-update-token-change-events}
+## 라이브 활동 업데이트 토큰 변경 이벤트 {#live-activity-update-token-change-events}
 
 {% apitags %}
 Live Activity, Update Token
@@ -1053,7 +1053,7 @@ This event occurs when Braze syncs Live Activity update token with the user
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "update_token" : "(optional, string) Live Activity update token",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1110,7 +1110,7 @@ This event occurs when Braze syncs Live Activity update token with the user
 // Live Activity Update Token Changed (users.behaviors.liveactivity.UpdateTokenChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1276,19 +1276,79 @@ Push, Token State Change
 
 #### 부동산 세부 정보
 
-- `push_token_foreground_push_disabled` 필드는 푸시 토큰이 포그라운드 푸시 또는 백그라운드 푸시를 받을 수 있는지 여부를 나타냅니다.
-  - 사용자가 기기에서 푸시 알림 권한을 명시적으로 허용한 경우 `false`, 토큰은 포그라운드 푸시 알림을 수신할 수 있습니다.
-  - 사용자가 기기에서 푸시 알림 권한을 명시적으로 거부한 경우 `true` 이며, 이 토큰은 백그라운드 푸시 알림에만 허용됩니다.
-  - 푸시 권한을 알 수 없는 경우 비어 있습니다. 기본값으로 Braze는 토큰에 포그라운드 푸시 알림을 보내려고 시도합니다.
+- `push_token_foreground_push_disabled` 필드는 푸시 토큰이 포그라운드 또는 백그라운드 푸시를 받을 수 있는지를 나타냅니다.
+  - 사용자가 자신의 기기에서 푸시 알림 권한을 명시적으로 허용한 경우, 이는 `false`이 되며, 토큰은 포그라운드 푸시 알림을 받을 수 있습니다.
+  - 사용자가 자신의 기기에서 푸시 알림 권한을 명시적으로 거부한 경우, 이는 `true`이 되며, 토큰은 백그라운드 푸시 알림만 허용됩니다.
+  - 푸시 권한이 알려지지 않은 경우, 이는 비어 있습니다. 기본적으로 Braze는 토큰에 포그라운드 푸시 알림을 보내려고 시도합니다.
 - `push_token_provisionally_opted_in` 필드는 iOS 푸시 토큰에만 적용됩니다.
-  - [임시 권한]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) 부여를 설정한 경우 임시 토큰의 이 필드는 `true` 로 설정됩니다. 다른 모든 푸시 토큰은 `false` 입니다.
-- `sdk_version` 필드는 소프트웨어 개발 키트에 의해 토큰 상태 변경이 시작된 경우에만 채워집니다.
-  - 토큰이 한 사용자에서 다른 사용자로 이동하도록 트리거하는 `changeUser` 소프트웨어 개발 키트 이벤트가 있는 경우 `sdk_version` 필드가 채워집니다.
-  - 푸시 반송이 있는 경우(예: 제거로 인해) `sdk_version` 필드가 비어 있습니다.
-- 푸시 토큰이 Braze에 들어올 때마다 라이프사이클 이벤트가 기록됩니다. `push_token_state_change_type` 필드에 기록되는 토큰 변경 이벤트에는 세 가지 유형("추가", "업데이트", "제거")이 있습니다. 다음 세부 사항을 참고하세요:
-  - 이전에 존재하지 않았던 새로운 토큰의 경우 하나의 "추가" 이벤트를 수집합니다.
-  - 동일한 사용자에서 동일한 토큰 문자열로 토큰을 업데이트하는 경우(게이트웨이 또는 `foreground_push_disabled` 또는 기타 "보조" 필드 변경), 동일한 토큰에서 하나의 "업데이트" 이벤트가 수집됩니다.
-  - 토큰이 한 사용자에서 다른 사용자로 이동한 경우 이전 사용자에 대한 '제거' 이벤트 1개와 새 사용자에 대한 '추가' 이벤트 1개가 수집됩니다.
-  - 동일한 사용자 또는 기기가 새 토큰을 생성하는 경우 이전 토큰에 대한 '제거' 이벤트 1개와 새 토큰에 대한 '추가' 이벤트 1개가 수집됩니다.
-  - Braze가 토큰을 제거하는 경우(제거 또는 유효하지 않은 토큰 등의 이유로) 토큰에 대해 하나의 "제거" 이벤트를 수집합니다.
+  - [임시 승인]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push)이 설정되어 있으면, 임시 토큰은 이 필드가 `true`로 설정됩니다. 모든 다른 푸시 토큰은 `false`이 됩니다.
+- `sdk_version` 필드는 토큰 상태 변경이 SDK에 의해 시작된 경우에만 채워집니다.
+  - 토큰이 한 사용자에서 다른 사용자로 이동하도록 트리거하는 `changeUser` SDK 이벤트가 있는 경우, `sdk_version` 필드가 채워집니다.
+  - 푸시 바운스가 발생하면(예: 제거로 인한 경우), `sdk_version` 필드는 비어 있습니다.
+- 푸시 토큰이 Braze에 들어올 때마다, 그 생애 주기 이벤트가 기록됩니다. `push_token_state_change_type` 필드에는 세 가지 유형의 토큰 변경 이벤트("추가", "업데이트", "제거")가 기록됩니다.
+
+#### 이벤트 유형
+
+##### 추가
+
+새 토큰이 등록될 때 "추가" 이벤트가 수집됩니다. 사용자가 새 기기에서 앱을 처음 열거나, 이전에 토큰이 없었던 사용자에 대해 [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트를 통해 `push_tokens`으로 설정될 때 발생합니다.
+
+##### 업데이트
+
+기존 토큰의 속성이 변경되지만 토큰 문자열 자체는 변경되지 않을 때 "업데이트" 이벤트가 수집됩니다. 토큰은 동일한 문자열, 동일한 사용자 및 동일한 앱을 가지지만, 다음 필드 중 하나 이상이 변경되었습니다: `foreground_push_disabled`, APNs 게이트웨이, 웹 푸시 키, `provisionally_opted_in` 또는 `device_id`.
+
+{% alert note %}
+대부분의 경우, 앱 재설치 또는 백업 복원은 새로운 `push_token`와 새로운 `device_id`을 가진 새로운 "추가" 이벤트를 발생시킵니다(왜냐하면 SDK가 새로운 `device_id`를 생성하고 OS가 새로운 푸시 토큰 문자열을 제공하기 때문입니다). 이로 인해 사용자 프로필에 두 개의 별도의 토큰 및 기기 항목이 생성되며, 이전 항목은 제거 추적 또는 캠페인 전송을 통해 나중에 정리됩니다.
+
+오직 `device_id`만 변경되고 `push_token`는 변경되지 않는 경우는 극히 드물 것입니다(이 경우 OS가 재설치 후 동일한 토큰 문자열을 반환해야 합니다).
+{% endalert %}
+
+##### 제거
+
+Braze가 토큰을 제거할 때 독립적인 "제거" 이벤트가 수집됩니다. 이는 여러 가지 이유로 발생할 수 있습니다:
+
+- 푸시 바운스(APNs, FCM 또는 HMS가 토큰을 유효하지 않거나 만료된 것으로 보고함)
+- 조용한 푸시를 통한 제거 감지
+- REST API 또는 APNs 피드백 서비스에 의해 제거된 토큰
+
+##### 쌍을 추가하고 제거하기
+
+쌍을 추가하고 제거하는 것은 두 가지 범주로 나뉩니다:
+
+**토큰 문자열 새로고침 (동일한 사용자):** 운영 체제는 동일한 기기에서 토큰 문자열을 회전시킵니다 (예: APNs 또는 FCM 토큰 회전). "추가" 이벤트 (새 토큰)와 "제거" 이벤트 (오래된 토큰)는 동일한 `user_id`, 동일한 `device_id`, 다른 `push_token`, 그리고 동일한 `time_ms`를 가집니다.
+
+**토큰이 사용자 간에 이동:** 토큰이 한 사용자에서 다른 사용자로 이동합니다. "추가" 이벤트 (새 사용자)와 "제거" 이벤트 (오래된 사용자)는 다른 `user_id`, 동일한 `device_id`, 동일한 `push_token`, 그리고 다른 `time_ms`를 가집니다 (일반적으로 100밀리초 미만의 간격). 다음 중 하나에 의해 트리거됩니다:
+
+- SDK는 익명 프로필에서 식별된 프로필로 `changeUser`을 호출합니다. "제거" 이벤트는 빈 `external_user_id`를 가집니다.
+- SDK는 한 식별된 프로필에서 다른 식별된 프로필로 `changeUser`을 호출합니다. 두 이벤트 모두 비어 있지 않은 `external_user_id`를 가집니다.
+- [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) 엔드포인트 또는 중복 사용자 정리는 고아 사용자의 토큰을 생존 사용자에게 이동시킵니다.
+
+{% alert note %}
+익명 프로필이 [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) 엔드포인트를 통해 식별되면, `user_id`는 변경되지 않으며 토큰 상태 변경 이벤트가 발생하지 않습니다.
+{% endalert %}
+
+#### 최신 활성 토큰 상태 쿼리
+
+각 사용자의 현재 푸시 토큰 상태를 결정하기 위해, 토큰 상태 변경 이벤트를 `push_token`, `user_id`, 및 `app_id`으로 분할한 다음, `time_ms`를 내림차순으로 정렬하고 "제거" 이벤트를 필터링합니다. 내부적으로, 토큰은 사용자당 토큰 문자열과 `app_id`로 키가 지정됩니다. `device_id`을 파티션 키로 사용하는 것은 권장되지 않습니다. 왜냐하면 `device_id`은 변경 가능한 속성이며, 이를 기준으로 파티션을 나누면 단일 토큰의 생애 주기가 여러 파티션에 걸쳐 나뉘어질 수 있기 때문입니다.
+
+다음 SQL 쿼리는 Snowflake에서 사용자별로 최신 활성 토큰 상태를 반환합니다:
+
+```sql
+WITH latest_token_state AS (
+  SELECT *,
+    ROW_NUMBER() OVER (
+      PARTITION BY PUSH_TOKEN, USER_ID, APP_ID
+      ORDER BY COALESCE(TIME_MS, TIME * 1000) DESC
+    ) AS rn
+  FROM USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE
+)
+SELECT
+  PUSH_TOKEN, USER_ID, EXTERNAL_USER_ID, PUSH_TOKEN_DEVICE_ID,
+  PUSH_TOKEN_STATE_CHANGE_TYPE, PUSH_TOKEN_FOREGROUND_PUSH_DISABLED,
+  TIME_MS, PLATFORM, APP_ID
+FROM latest_token_state
+WHERE rn = 1
+  AND PUSH_TOKEN_STATE_CHANGE_TYPE != 'remove';
+```
+
 {% endapi %}
