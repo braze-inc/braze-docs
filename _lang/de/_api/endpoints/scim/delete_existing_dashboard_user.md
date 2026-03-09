@@ -2,7 +2,7 @@
 nav_title: "LÖSCHEN: Dashboard-Benutzerkonto entfernen"
 article_title: "LÖSCHEN: Dashboard-Benutzerkonto entfernen"
 alias: /delete_existing_dashboard_user/
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -38,14 +38,14 @@ Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden di
 
 ## Körper der Anfrage
 
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Beispiel Anfrage
-```json
+```bash
 curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -56,13 +56,13 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/df
 
 ### Beispiel einer Fehlerantwort
 
-```json
+```http
 HTTP/1.1 204 Not Found
 Content-Type: text/html; charset=UTF-8
 ```
 
 Wenn ein Entwickler:in mit dieser ID nicht in Braze existiert, antwortet der Endpunkt mit:
-```json
+```http
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 
