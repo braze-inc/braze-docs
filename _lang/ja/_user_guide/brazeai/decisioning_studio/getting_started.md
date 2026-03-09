@@ -1,7 +1,7 @@
 ---
 nav_title: はじめに
 article_title: Decisioning Studioを使い始める
-layout: dev_guide
+layout: dev_guide_content_first
 guide_top_header: "Decisioning Studioを使い始める"
 guide_top_text: "デシジョニング・エージェントを作成する前に、これらの記事を参考にして、デシジョニング・スタジオを理解し、計画を立てよう。"
 page_order: 0
@@ -9,22 +9,6 @@ search_rank: 2
 page_type: landing
 description: "このセクションでは、Decisioning Studio の紹介と、Decisioning Studio を使用し て、あらゆるビジネス指標を最適化する意思決定エージェントを設計し、配備する方法について説明する。"
 
-guide_featured_title: "Section articles"
-guide_featured_list:
-  - name: Design Your Agent
-    link: /docs/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/
-    image: /assets/img/braze_icons/settings-01.svg
-  - name: Prepare Your Data
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/
-    image: /assets/img/braze_icons/database-01.svg
-  - name: Define Your Audience
-    link: /docs/user_guide/brazeai/decisioning_studio/define_your_audience/
-    image: /assets/img/braze_icons/users-01.svg
-  - name: Set Up Orchestration
-    link: /docs/user_guide/brazeai/decisioning_studio/set_up_orchestration/
-    image: /assets/img/braze_icons/dataflow-04.svg
-
-guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: デシジョン・スタジオについて
     link: /docs/user_guide/brazeai/decisioning_studio/about/

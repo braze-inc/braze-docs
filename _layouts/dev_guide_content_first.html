@@ -1,0 +1,364 @@
+---
+layout: default
+hide_toc: true
+hide_bottom_nav: true
+hide_breadcrumb: false
+---
+
+
+
+{%- comment -%} Assigned variables first by page, then by layout {%- endcomment -%}
+{%- assign hide_nav = page.hide_nav -%}
+
+
+{%- assign hide_bottom_nav = page.hide_bottom_nav -%}
+{%- assign hide_breadcrumb = page.hide_breadcrumb -%}
+{%- assign hide_feedback = page.hide_feedback -%}
+{%- unless hide_nav -%}
+{%- assign hide_nav = layout.hide_nav -%}
+{%- endunless -%}
+
+{%- unless hide_bottom_nav -%}
+{%- assign hide_bottom_nav = layout.hide_bottom_nav -%}
+{%- endunless -%}
+{%- unless hide_breadcrumb -%}
+{%- assign hide_breadcrumb = layout.hide_breadcrumb -%}
+{%- endunless -%}
+{%- unless hide_feedback -%}
+{%- assign hide_feedback = layout.hide_feedback -%}
+{%- endunless -%}
+
+
+
+{% unless hide_nav %}
+<div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 d-print-none collapse d-md-block" id="nav_bar"  >
+  <div id="nav_col" class="  ">
+  {% include left_nav_menu.html %}
+  </div>
+</div>
+{% endunless %}
+
+<div class="col d-print-block " id="main_content" >
+
+    <div id="dev-main">
+    <div id="content_start"></div>
+
+    {%- unless hide_breadcrumb -%}
+    <div id="breadcrumb">
+    </div>
+    {%- endunless -%}
+
+    <h1> {{ page.guide_top_header }} </h1>
+    <p>  {{ page.guide_top_text | markdownify }} </p>
+    <p>  {{ page.guide_top_text2 | markdownify }} </p>
+    <p>  {{ page.guide_top_text3 | markdownify }} </p>
+
+    {{content}}
+
+    {%- if page.guide_featured_title -%}<h2 class="guide_featured_title"> {{ page.guide_featured_title }} </h2>{%- endif -%}
+    {%- if page.guide_featured_description -%}
+    <p>{{ page.guide_featured_description | markdownify }}</p>
+    {%- endif -%}
+    <div id="guide_featured_list">
+
+      {%- for menu_list in page.guide_featured_list  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+            {%- endif %}
+          <div id="{{ menu_list.name | handle }}" class="guide_item">
+            {%- if menu_list.fa_icon -%}
+            <i class="{{menu_list.fa_icon}}"></i>
+            {%- else -%}
+              {%- if menu_list.image -%}
+              <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
+              {%- endif -%}
+            {%- endif -%}
+            <div class="menu_description">
+                {{ menu_list.name }}
+              </div>
+          </div>
+            {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    {%- if page.optional_guide_menu_title and page.optional_guide_menu_title != "" -%}
+    <h2 class="guide_menu_title"> {{ page.optional_guide_menu_title }}</h2>
+    {%- endif -%}
+    {%- if page.guide_menu_title  and page.guide_menu_title != "" -%}
+    <h2 class="guide_menu_title"> {{ page.guide_menu_title }}</h2>
+    {%- endif -%}
+    {%- if page.guide_menu_description -%}
+    <p>{{ page.guide_menu_description | markdownify }}</p>
+    {%- endif -%}
+    <div id="guide_list">
+
+      {%- for menu_list in page.guide_menu_list  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+          {%- endif %}
+      <div id="{{ menu_list.name | handle }}" class="guide_item">
+        {%- if menu_list.fa_icon -%}
+        <i class="{{menu_list.fa_icon}}"></i>
+        {%- else -%}
+          {%- if menu_list.image -%}
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
+          {%- endif -%}
+        {%- endif -%}
+        <div class="menu_description">
+            {{ menu_list.name }}
+          </div>
+      </div>
+        {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    {%- if page.guide_menu_title2 -%}
+    <h2 class="guide_menu_title"> {{ page.guide_menu_title2 }} </h2>
+    {%- if page.guide_menu_description2 -%}
+    <p>{{ page.guide_menu_description2 | markdownify }}</p>
+    {%- endif -%}
+    <div id="guide_list">
+
+      {%- for menu_list in page.guide_menu_list2  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+          {%- endif %}
+      <div id="{{ menu_list.name | handle }}" class="guide_item">
+        {%- if menu_list.fa_icon -%}
+        <i class="{{menu_list.fa_icon}}"></i>
+        {%- else -%}
+          {%- if menu_list.image -%}
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
+          {%- endif -%}
+        {%- endif -%}
+        <div class="menu_description">
+            {{ menu_list.name }}
+          </div>
+      </div>
+        {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+
+    </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title3 -%}
+    <h2 class="guide_menu_title"> {{ page.guide_menu_title3 }} </h2>
+    {%- if page.guide_menu_description3 -%}
+    <p>{{ page.guide_menu_description3 | markdownify }}</p>
+    {%- endif -%}
+    <div id="guide_list">
+
+      {%- for menu_list in page.guide_menu_list3  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+          {%- endif %}
+      <div id="{{ menu_list.name | handle }}" class="guide_item">
+        {%- if menu_list.fa_icon -%}
+        <i class="{{menu_list.fa_icon}}"></i>
+        {%- else -%}
+          {%- if menu_list.image -%}
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
+          {%- endif -%}
+        {%- endif -%}
+        <div class="menu_description">
+            {{ menu_list.name }}
+          </div>
+      </div>
+        {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title4 -%}
+    <h2 class="guide_menu_title"> {{ page.guide_menu_title4 }} </h2>
+    {%- if page.guide_menu_description4 -%}
+    <p>{{ page.guide_menu_description4 | markdownify }}</p>
+    {%- endif -%}
+    <div id="guide_list">
+
+      {%- for menu_list in page.guide_menu_list4  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+          {%- endif %}
+      <div id="{{ menu_list.name | handle }}" class="guide_item">
+        {%- if menu_list.fa_icon -%}
+        <i class="{{menu_list.fa_icon}}"></i>
+        {%- else -%}
+          {%- if menu_list.image -%}
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
+          {%- endif -%}
+        {%- endif -%}
+        <div class="menu_description">
+            {{ menu_list.name }}
+          </div>
+      </div>
+        {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title5 -%}
+    <h2 class="guide_menu_title"> {{ page.guide_menu_title5 }} </h2>
+    {%- if page.guide_menu_description5 -%}
+    <p>{{ page.guide_menu_description5 | markdownify }}</p>
+    {%- endif -%}
+    <div id="guide_list">
+
+      {%- for menu_list in page.guide_menu_list5  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+          {%- endif %}
+      <div id="{{ menu_list.name | handle }}" class="guide_item">
+        {%- if menu_list.fa_icon -%}
+        <i class="{{menu_list.fa_icon}}"></i>
+        {%- else -%}
+          {%- if menu_list.image -%}
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
+          {%- endif -%}
+        {%- endif -%}
+        <div class="menu_description">
+            {{ menu_list.name }}
+          </div>
+      </div>
+        {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title6 -%}
+    <h2 class="guide_menu_title"> {{ page.guide_menu_title6 }} </h2>
+    {%- if page.guide_menu_description6 -%}
+    <p>{{ page.guide_menu_description6 | markdownify }}</p>
+    {%- endif -%}
+    <div id="guide_list">
+
+      {%- for menu_list in page.guide_menu_list6  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+          {%- endif %}
+      <div id="{{ menu_list.name | handle }}" class="guide_item">
+        {%- if menu_list.fa_icon -%}
+        <i class="{{menu_list.fa_icon}}"></i>
+        {%- else -%}
+          {%- if menu_list.image -%}
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
+          {%- endif -%}
+        {%- endif -%}
+        <div class="menu_description">
+            {{ menu_list.name }}
+          </div>
+      </div>
+        {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title7 -%}
+    <h2 class="guide_menu_title"> {{ page.guide_menu_title7 }} </h2>
+    {%- if page.guide_menu_description7 -%}
+    <p>{{ page.guide_menu_description7 | markdownify }}</p>
+    {%- endif -%}
+    <div id="guide_list">
+
+      {%- for menu_list in page.guide_menu_list7  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+          {%- endif %}
+      <div id="{{ menu_list.name | handle }}" class="guide_item">
+        {%- if menu_list.fa_icon -%}
+        <i class="{{menu_list.fa_icon}}"></i>
+        {%- else -%}
+          {%- if menu_list.image -%}
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
+          {%- endif -%}
+        {%- endif -%}
+        <div class="menu_description">
+            {{ menu_list.name }}
+          </div>
+      </div>
+        {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title8 -%}
+    <h2 class="guide_menu_title"> {{ page.guide_menu_title8 }} </h2>
+    {%- if page.guide_menu_description8 -%}
+    <p>{{ page.guide_menu_description8 | markdownify }}</p>
+    {%- endif -%}
+    <div id="guide_list">
+
+      {%- for menu_list in page.guide_menu_list8  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+          {%- endif %}
+      <div id="{{ menu_list.name | handle }}" class="guide_item">
+        {%- if menu_list.fa_icon -%}
+        <i class="{{menu_list.fa_icon}}"></i>
+        {%- else -%}
+          {%- if menu_list.image -%}
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
+          {%- endif -%}
+        {%- endif -%}
+        <div class="menu_description">
+            {{ menu_list.name }}
+          </div>
+      </div>
+        {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+    {%- if page.guide_menu_title9 -%}
+    <h2 class="guide_menu_title"> {{ page.guide_menu_title9 }} </h2>
+    <div id="guide_list">
+
+      {%- for menu_list in page.guide_menu_list9  -%}
+        {%- if menu_list.link -%}
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
+          {%- endif %}
+      <div id="{{ menu_list.name | handle }}" class="guide_item">
+        {%- if menu_list.fa_icon -%}
+        <i class="{{menu_list.fa_icon}}"></i>
+        {%- else -%}
+          {%- if menu_list.image -%}
+          <img src="{{site.baseurl}}{{ menu_list.image}} " alt="{{ menu_list.name }} image" />
+          {%- endif -%}
+        {%- endif -%}
+        <div class="menu_description">
+            {{ menu_list.name }}
+          </div>
+      </div>
+        {%- if menu_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+    <div style="clear: left;margin-top: 5rem;"></div>
+    {%- if page.guide_footer_header and page.guide_footer_header != "" and page.guide_footer_header != " " -%}<h1> {{ page.guide_footer_header }} </h1>{%- endif -%}
+    <p>  {{ page.guide_footer_text }} </p>
+
+  </div>
+
+    {%- unless hide_bottom_nav -%}
+    <div id="bottom_nav" >
+      {%- unless hide_feedback -%}
+      {% include feedback.html  %}
+      {%- endunless -%}
+      <!-- div class="gradient-line" ></div -->
+    </div>
+
+    {%- endunless -%}
+
+    {% include footer.html class="footer_dev" %}
+</div>

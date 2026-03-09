@@ -1,7 +1,7 @@
 ---
 nav_title: Getting started
 article_title: Getting Started with Decisioning Studio
-layout: dev_guide
+layout: dev_guide_content_first
 guide_top_header: "Getting Started with Decisioning Studio"
 guide_top_text: "Before you create a decisioning agent, use these articles to guide your planning and understanding of Decisioning Studio."
 page_order: 0
@@ -80,5 +80,3 @@ A few best practices for designing Decisioning Studio agents:
 1. **Maximize data richness**: The more information agents have about your customers, the better they will perform.
 2. **Diversify actions**: The more diverse the set of actions the agent can take, the more it can personalize its strategy for each user.
 3. **Minimize constraints**: The fewer constraints on your agents, the better. Constraints should be designed to respect business rules while freeing agent-led experimentation as much as possible.
-
-## Setting up Decisioning Studio

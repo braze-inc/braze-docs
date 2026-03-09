@@ -1,7 +1,7 @@
 ---
 nav_title: Cómo empezar
 article_title: Primeros pasos con Decisioning Studio
-layout: dev_guide
+layout: dev_guide_content_first
 guide_top_header: "Primeros pasos con Decisioning Studio"
 guide_top_text: "Antes de crear un agente decisor, utiliza estos artículos para guiar tu planificación y comprensión de Decisioning Studio."
 page_order: 0
@@ -9,22 +9,6 @@ search_rank: 2
 page_type: landing
 description: "Esta sección proporciona una introducción a Decisioning Studio, y cómo puedes utilizarlo para diseñar y desplegar agentes de decisión que optimicen cualquier métrica empresarial."
 
-guide_featured_title: "Section articles"
-guide_featured_list:
-  - name: Design Your Agent
-    link: /docs/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/
-    image: /assets/img/braze_icons/settings-01.svg
-  - name: Prepare Your Data
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/
-    image: /assets/img/braze_icons/database-01.svg
-  - name: Define Your Audience
-    link: /docs/user_guide/brazeai/decisioning_studio/define_your_audience/
-    image: /assets/img/braze_icons/users-01.svg
-  - name: Set Up Orchestration
-    link: /docs/user_guide/brazeai/decisioning_studio/set_up_orchestration/
-    image: /assets/img/braze_icons/dataflow-04.svg
-
-guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: Acerca de Decisioning Studio
     link: /docs/user_guide/brazeai/decisioning_studio/about/
