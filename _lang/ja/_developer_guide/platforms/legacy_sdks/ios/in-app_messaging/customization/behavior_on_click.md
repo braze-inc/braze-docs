@@ -1,6 +1,6 @@
 ---
 nav_title: クリック時のカスタム動作
-article_title: iOS用にアプリ内メッセージのオンクリック動作をカスタマイズする
+article_title: iOS向けアプリ内メッセージのクリック時の動作をカスタマイズする
 platform: iOS
 page_order: 5
 description: "この参考記事では、iOS アプリケーションのアプリ内メッセージングのカスタムクリック時動作について説明します。"
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# アプリ内メッセージのビヘイビアをカスタマイズする
+# アプリ内メッセージのクリック時の動作をカスタマイズする
 
 `ABKInAppMessage` の`inAppMessageClickActionType` プロパティは、アプリ内メッセージがクリックされた後の動作を定義します。このプロパティは読み取り専用です。アプリ内メッセージのクリック動作を変更する場合は、`ABKInAppMessage` で以下のメソッドを呼び出すことができます。
 
