@@ -1,7 +1,7 @@
 ---
-nav_title: Uso del servidor Braze MCP
-article_title: Utiliza el servidor Braze MCP
-description: "Aprende a interactuar con tus datos Braze utilizando herramientas de lenguaje natural como Claude y Cursor."
+nav_title: Uso del servidor MCP de Braze
+article_title: Utiliza el servidor MCP de Braze.
+description: "Aprende a interactuar con tus datos de Braze utilizando herramientas de lenguaje natural como Claude y Cursor."
 page_order: 1.2
 noindex: true
 ---
