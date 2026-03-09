@@ -14,7 +14,7 @@ alias: /landing_pages/
 Nutzen Sie Landing Pages, um Ihre Zielgruppe zu vergrößern, Nutzerdaten zu erfassen, Sonderangebote zu bewerben und Kampagnen über mehrere Kanäle zu unterstützen.
 
 {% alert note %}
-Die Verfügbarkeit von Landing Pages und angepassten Domains hängt von Ihrem Braze-Paket ab. Wenden Sie sich an Ihren Account Manager oder Customer-Success-Manager:in, um loszulegen.
+Die Verfügbarkeit von Landing Pages und benutzerdefinierten Domains hängt von Ihrem Braze-Paket ab. Bitte wenden Sie sich an Ihren Account Manager oder Customer-Success-Manager, um loszulegen.
 {% endalert %}
 
 {% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
@@ -41,7 +41,7 @@ Die Anzahl der veröffentlichten Startseiten und angepassten Domains, die Sie nu
 
 ## Hinzufügen von Google Tag Manager zu einer Landing Page
 
-Um Google Tag Manager zu Ihren Landing Pages hinzuzufügen, fügen Sie Ihrer Landing Page im Drag-and-Drop-Editor einen **Custom Code-Block** hinzu und fügen dann den Tag Manager-Code in den Block ein. Stellen Sie sicher, dass Sie vor dem Code für den Tag Manager:in eine Datenebene einfügen, wie in diesem Beispiel:
+Um Google Tag Manager zu Ihren Landing Pages hinzuzufügen, fügen Sie im Drag-and-Drop-Editor einen **benutzerdefinierten Code**-Block zu Ihrer Landing Page hinzu und fügen Sie anschließend den Tag Manager-Code in den Block ein. Bitte stellen Sie sicher, dass Sie vor dem Tag Manager-Code eine Schicht mit Daten hinzufügen, wie in diesem Beispiel:
 
 ```
 <script>
@@ -56,13 +56,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 ```
 
-Einzelheiten zur Implementierung des Google Tag Managers finden Sie in [der Dokumentation von Google.](https://developers.google.com/tag-platform/tag-manager/datalayer#installation)
+Weitere Informationen zur Implementierung von Google Tag Manager finden Sie in [der Dokumentation von Google](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
 
 ## Häufig gestellte Fragen
 
 ### Was ist die maximale Größe für Landing Pages?
 
-Die Größe der Landing Page kann bis zu 500 KB betragen.
+Die Größe des Hauptteils der Landing Page darf bis zu 500 KB betragen.
 
 ### Gibt es irgendwelche technischen Voraussetzungen für die Veröffentlichung einer Landing Page?
 
