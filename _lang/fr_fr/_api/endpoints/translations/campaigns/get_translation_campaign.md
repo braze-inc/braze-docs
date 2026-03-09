@@ -15,11 +15,9 @@ description: "Cet article présente les détails de l'endpoint Afficher toutes l
 /campagnes/traductions
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour voir toutes les traductions de chaque variante de message dans une campagne. Pour plus d'informations sur les fonctionnalités de traduction, reportez-vous à la section [Locales dans les messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
+> Utilisez ce point de terminaison pour voir toutes les traductions de chaque variante de message dans une campagne. Veuillez consulter [la section Locales dans les messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) pour plus d'informations sur les fonctionnalités de traduction.
 
-{% alert important %}
-Cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Conditions préalables
 
@@ -36,7 +34,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 |`campaign_id`| Requis | Chaîne de caractères | L'ID de votre campagne. |
 |`message_variation_id`| Requis | Chaîne de caractères | L'ID de la variation de votre message. |
 |`locale_id`| Facultatif | Chaîne de caractères | Un UUID local pour filtrer les réponses. |
-| `post_launch_draft_version`| Facultatif | Valeur booléenne | Lorsque `true` renvoie la dernière version provisoire au lieu de la dernière version publiée en ligne/instantanée. La valeur par défaut est `false`, qui renvoie la dernière version en ligne/en production/instantanée.|
+| `post_launch_draft_version`| Facultatif | Valeur booléenne | Lorsque`true`  renvoie la dernière version préliminaire au lieu de la dernière version publiée en ligne/en production/instantanée. Par défaut, la dernière version `false`instantanée en ligne est renvoyée.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
