@@ -1,7 +1,7 @@
 ---
 nav_title: "取得:リストの統合"
 article_title: "取得:リスト統合"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 1
 alias: /api/cdi/get_integration_list/
 layout: api_page
@@ -30,7 +30,7 @@ description: "この記事では、「リスト統合」Braze エンドポイン
 
 このエンドポイントを呼び出すと、10個のアイテムが返される。10を超える統合のあるリストについては、応答の例に示すように、`Link` ヘッダーを使用して次のページのデータを取得します。
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
 | `cursor` | オプション | 文字列 | 統合リストのページネーションを決定する。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -81,8 +81,8 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
       "warehouse_type": (string) data warehouse type,
       "last_job_start_time": (string) timestamp of the last sync run in ISO 8601,
       "last_job_status": (string) status of the last sync run,
-      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601,
-    },
+      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601
+    }
   ],
   "message": "success"
 }
@@ -97,6 +97,6 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
 | `400 Invalid cursor` | `cursor` が有効であることを確認します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-その他のステータスコードと関連するエラーメッセージについては、[致命的エラー& レスポンスを]({{site.baseurl}}/api/errors/#fatal-errors)参照のこと。
+その他のステータスコードと関連するエラーメッセージについては、[致命的なエラー&応答]({{site.baseurl}}/api/errors/#fatal-errors)を参照のこと。
 
 {% endapi %}
