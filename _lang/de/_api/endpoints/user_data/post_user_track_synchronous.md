@@ -1,6 +1,6 @@
 ---
 nav_title: "POST: Nutzer:innen erstellen und aktualisieren (synchron)"
-article_title: "POST: Nutzer:innen erstellen und aktualisieren (Synchron)"
+article_title: "POST: Nutzer:innen erstellen und aktualisieren (synchron)"
 alias: /post_user_track_synchronous/
 layout: api_page
 page_order: 4.5
@@ -10,21 +10,21 @@ description: "Dieser Artikel beschreibt Details zum synchronen Tracking von Nutz
 ---
 {% api %}
 # Nutzer:innen erstellen und aktualisieren (synchron)
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/benutzer/track/sync
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
+/Nutzer:innen/Tracking/Synchronisieren
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um angepasste Events und Käufe aufzuzeichnen und die Attribute des Nutzerprofils synchron zu aktualisieren. Dieser Endpunkt funktioniert ähnlich wie der [Endpunkt `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track), der die Nutzerprofile asynchron aktualisiert.
 
 {% alert important %}
-Dieser Endpunkt befindet sich derzeit in einer **begrenzten Beta-Phase**. Obwohl wir im Moment keine neuen Kunden in die Beta-Version aufnehmen, lassen Sie Ihren Braze-Konto Manager:in wissen, ob Sie denken, dass dieses Feature für Ihre Braze Integration nützlich sein könnte.
+Dieser Endpunkt befindet sich derzeit in **einer eingeschränkten Beta-Phase**. Obwohl wir derzeit keine neuen Kunden zur Beta-Version hinzufügen, bitten wir Sie, Ihren Braze-Account Manager zu informieren, wenn Sie der Meinung sind, dass dieses Feature für Ihre Braze-Integration nützlich sein könnte.
 {% endalert %}
 
 ## Synchrone und asynchrone API-Aufrufe
 
-Bei einem asynchronen Aufruf gibt die API den Status Code `201` zurück, der anzeigt, dass Ihre Anfrage erfolgreich empfangen, verstanden und akzeptiert wurde. Dies bedeutet jedoch nicht, dass Ihre Anfrage vollständig bearbeitet wurde.
+Bei einem asynchronen Aufruf gibt die API den Statuscode zurück, der anzeigt, dass Ihre Anfrage `201`erfolgreich empfangen, verstanden und akzeptiert wurde. Dies bedeutet jedoch nicht, dass Ihre Anfrage vollständig bearbeitet wurde.
 
-Bei einem synchronen Aufruf gibt die API einen Status Code `201` zurück, der anzeigt, dass Ihre Anfrage erfolgreich empfangen, verstanden, akzeptiert und abgeschlossen wurde. In der Antwort auf den Anruf werden ausgewählte Felder des Nutzerprofils als Ergebnis des Vorgangs angezeigt.
+Bei einem synchronen Aufruf gibt die API einen Code zurück, der anzeigt, dass Ihre Anfrage erfolgreich empfangen`201`, verstanden, akzeptiert und abgeschlossen wurde. Die Antwort auf den Aufruf zeigt ausgewählte Felder des Nutzerprofils als Ergebnis der Operation an.
 
 Dieser Endpunkt hat ein niedrigeres Rate-Limit als der Endpunkt `/users/track` (siehe [Rate-Limit](#rate-limit) unten). Jede Anfrage von `/users/track/sync` kann nur ein Ereignisobjekt, ein Attribut-Objekt **oder** ein Kauf-Objekt enthalten. Dieser Endpunkt sollte für Updates von Nutzerprofilen reserviert sein, wenn ein synchroner Aufruf erforderlich ist. Für eine gesunde Implementierung empfehlen wir `/users/track/sync` und `/users/track` zusammen zu verwenden.
 
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Parameter der Anfrage
 
 {% alert important %}
-Für jede in der folgenden Tabelle aufgeführte Komponente der Anfrage müssen Sie eine der folgenden Angaben machen: `external_id`, `user_alias`, `braze_id`, `email`, oder `phone`.
+Für jede in der folgenden Tabelle aufgeführte Anfragekomponente müssen Sie eine der `external_id`Optionen `user_alias`, `braze_id`, `email`, oder angeben`phone`.
 {% endalert %}
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
@@ -74,7 +74,7 @@ Wenn Sie die [Anfrageparameter](#request-parameters) dieses Endpunkts verwenden,
 
 ### Erfolgreiche Nachricht
 
-Erfolgreiche Nachrichten liefern die folgende Antwort, die Informationen über die Nutzerprofildaten enthält, die Braze aktualisiert hat.
+Erfolgreiche Nachrichten geben die folgende Antwort zurück, die Informationen zu den von Braze aktualisierten Daten des Nutzerprofils enthält.
 
 ```json
 {
@@ -271,11 +271,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 
 ### Soll ich den asynchronen oder den synchronen Endpunkt verwenden?
 
-Für die meisten Updates von Profilen eignet sich der Endpunkt `/users/track` am besten, da er ein höheres Rate-Limit hat und die Flexibilität bietet, Anfragen in Stapeln zu verarbeiten. Der Endpunkt `/users/track/sync` ist jedoch nützlich, wenn Sie Race-Conditions aufgrund von schnellen, aufeinanderfolgenden Anfragen für denselben Nutzer:innen erleben.
+Für die meisten Profil-Updates eignet sich der`/users/track`Endpunkt am besten, da er höhere Rate-Limits und Flexibilität bietet, sodass Sie Anfragen stapelweise ausführen können. Der Endpunkt `/users/track/sync` ist jedoch nützlich, wenn Sie Race-Conditions aufgrund von schnellen, aufeinanderfolgenden Anfragen für denselben Nutzer:innen erleben.
 
 ### Weicht die Antwortzeit vom Endpunkt `/users/track` ab?
 
-Bei einem synchronen Aufruf wartet die API, bis Braze die Anfrage abgeschlossen hat, um eine Antwort zurückzugeben. Folglich brauchen synchrone Anfragen im Durchschnitt länger als asynchrone Anfragen an `/users/track`. Für die meisten Anfragen können Sie innerhalb von Sekunden eine Antwort erwarten.
+Bei einem synchronen Aufruf wartet die API, bis Braze die Anfrage abgeschlossen hat, um eine Antwort zurückzugeben. Infolgedessen dauern synchrone Anfragen im Durchschnitt länger als asynchrone Anfragen an `/users/track`. Für die meisten Anfragen können Sie innerhalb von Sekunden eine Antwort erwarten.
 
 ### Kann ich mehrere Anfragen gleichzeitig senden?
 
