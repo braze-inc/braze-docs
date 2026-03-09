@@ -39,7 +39,7 @@ Si se envían nuevas propiedades en el futuro, no estarán en el esquema hasta q
 
 ## Paso 2: Utilizar el objeto anidado
 
-Puedes hacer referencia a los datos anidados durante la segmentación y la personalización. Nota que no es necesario un esquema. Consulte los siguientes apartados para ver ejemplos de uso:
+Puedes hacer referencia a los datos anidados durante la segmentación y la personalización. Ten en cuenta que no es necesario un esquema. Consulte los siguientes apartados para ver ejemplos de uso:
 
 - [Cuerpo de la solicitud API](#api-request-body)
 - [Plantillas de Liquid](#liquid-templating)
@@ -84,7 +84,7 @@ A continuación se muestra un ejemplo de `/users/track` con un evento personaliz
 {% tab Restaurant Example%}
 
 A continuación se muestra un ejemplo de `/users/track` con un evento personalizado "Ordenado". Una vez completado un pedido, captura las propiedades de ese pedido enviando:
-- Una solicitud a la API que enumera `r_details` como propiedad
+- Una solicitud API que incluye`r_details`  como propiedad.
 - Las propiedades anidadas de ese orden
 
 ```
@@ -141,7 +141,7 @@ Para utilizar estas propiedades para desencadenar una campaña, selecciona tu ev
 
 Lanzamiento de una campaña con propiedades anidadas desde el evento "Lista de reproducción creada":
 
-![Un usuario que elige una propiedad anidada para filtrar propiedades en un evento personalizado.]({% image_buster /assets/img/nested_object2.png %})
+![Un usuario que elige una propiedad anidada para los filtros de propiedades en un evento personalizado.]({% image_buster /assets/img/nested_object2.png %})
 
 La condición de activación `songs[].album.yearReleased` "is" "1968" coincidirá con un evento en el que cualquiera de las canciones tenga un álbum publicado en 1968. Utilizamos la notación de corchetes `[]` para recorrer matrices y comprobar si **algún** elemento de la matriz recorrida coincide con la propiedad del evento.
 
@@ -154,9 +154,9 @@ El filtro **no es igual** sólo coincide si ninguna de las propiedades de tu mat
 
 Lanzamiento de una campaña con propiedades anidadas desde el evento "Ordenado":
 
-![Un usuario que añade el filtro de propiedades r_details.name es SandwichEmperor para un evento personalizado.]({% image_buster /assets/img/nested_object1.png %})
+![Un usuario que añade el filtro de propiedadr_details.name  es SandwichEmperor para un evento personalizado.]({% image_buster /assets/img/nested_object1.png %})
 
-`r_details.name`: "SándwichEmperador"<br>
+`r_details.name`: «SandwichEmperor»<br>
 `r_details.location.city`: "Montclair"
 {% endtab %}
 {% endtabs %}
@@ -181,11 +181,30 @@ Utilizando el modal **Añadir Personalización**, seleccione **Propiedades Avanz
 
 ![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
+## Comprobación de objetos anidados en mensajes
+
+La herramienta **Vista previa&  Prueba** del panel de control no admite la adición de datos simulados para objetos anidados o atributos personalizados anidados. Para probar mensajes que hacen referencia a datos anidados a través de Liquid, puedes obtener una vista previa de los mensajes con atributos anidados como un usuario existente con ese atributo anidado, u obtener una vista previa de los mensajes con propiedades del evento personalizadas lanzando una campaña en vivo para probar a los usuarios.
+
+### Atributos personalizados anidados
+
+1. Importa los atributos anidados al perfil de usuario de prueba a través de la API.
+2. En tu campaña o Canvas, ve a **Vista previa&  Prueba**.
+3. Selecciona **Vista previa como usuario** y busca el usuario de prueba. Liquid resolverá utilizando los atributos anidados reales del perfil de usuario.
+
+### Propiedades de eventos anidados
+
+Las propiedades de eventos anidados no se pueden previsualizar en el panel porque requieren un activador de eventos en vivo. Para probar:
+
+1. Crea una campaña o un paso en Canvas que se dirija únicamente a tus usuarios de prueba y que se desencadene (o haga referencia) al evento personalizado con propiedades anidadas.
+2. Lanza la campaña a tu audiencia.
+3. Registra el evento personalizado con la carga útil del objeto anidado en el perfil de usuario de prueba (utilizando la API o el SDK).
+4. Comprueba que el mensaje se muestra correctamente con los valores de propiedad anidados.
+
 ## Preguntas más frecuentes
 
 ### ¿El uso de objetos anidados registra puntos de datos adicionales?
 
-No hay ningún cambio en la forma en que registramos los puntos de datos como resultado de añadir esta capacidad. La segmentación basada en objetos anidados utiliza Extensiones de segmento, que no utilizan puntos de datos adicionales.
+La incorporación de esta función no supone ningún cambio en la forma en que registramos los puntos de datos. La segmentación basada en objetos anidados utiliza extensiones de segmento, que no utilizan puntos de datos adicionales.
 
 ### ¿Cuántos datos anidados se pueden enviar?
 
