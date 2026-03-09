@@ -1,5 +1,5 @@
 ---
-nav_title: Android용 실시간 업데이트
+nav_title: 안드로이드에 대한 실시간 업데이트
 article_title: 안드로이드 브레이즈 SDK 라이브 업데이트
 page_order: 0.1
 description: "Android Braze SDK의 라이브 업데이트를 설정하는 방법을 알아보세요."
@@ -21,7 +21,7 @@ hidden: true
 
 이 섹션에서는 야생동물 구조팀이 누가 가장 많은 올빼미를 구할 수 있는지 경쟁하는 새로운 게임 쇼의 호스트인 슈퍼 올빼미와 파트너가 됩니다. Android 앱에서 실시간 업데이트를 활용하여 진행 중인 경기의 상태를 표시하고 실시간으로 알림을 동적으로 업데이트할 수 있도록 하려고 합니다.
 
-![Android의 라이브 업데이트 예시]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
+![안드로이드의 실시간 업데이트 예시]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 
