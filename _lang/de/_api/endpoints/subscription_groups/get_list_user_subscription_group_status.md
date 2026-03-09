@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Abo-Gruppenstatus der Nutzer:innen auflisten"
 article_title: "GET: Status der Abo-Gruppe des Nutzers auflisten"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -96,8 +96,8 @@ Alle erfolgreichen Antworten geben `Subscribed`, `Unsubscribed` oder `Unknown` z
 }
 ```
 
-{% alert note %}
-Wenn sich ein Nutzer:innen global abmeldet, wird er von jeder Abo-Gruppe abgemeldet. Dieser Endpunkt gibt den letzten Abo-Status für jede Abo-Gruppe zurück. Dies ist das erwartete Verhalten, denn wenn der Nutzer:in sich selbst ein neues Abonnement abschließt, setzt Braze den Status jedes Abos zurück.
+{% alert important %}
+Dieser Endpunkt gibt den Abo-Gruppenstatus unabhängig vom globalen Abonnementstatus der Nutzer:innen zurück. Wenn ein Nutzer:in global abgemeldet ist, wird er im Braze-Dashboard als von jeder Abo-Gruppe abgemeldet angezeigt. Dieser Endpunkt gibt jedoch weiterhin den zuletzt gespeicherten Abo-Gruppenstatus zurück (z. B. `Subscribed`), da der globale Abo-Status einzelne Abo-Gruppen ersetzt, ohne sie zu überschreiben.<br><br>Braze speichert den Abo-Gruppenstatus, sodass bei einer globalen Neuanmeldung der Nutzer:in jede Abo-Gruppe auf ihren zuvor gespeicherten Status zurückgesetzt wird. Um den effektiven Abonnementstatus einer Nutzer:in zu ermitteln, überprüfen Sie sowohl ihren globalen Abonnementstatus als auch den von diesem Endpunkt zurückgegebenen Abo-Gruppenstatus.
 {% endalert %}
 
 {% endapi %}
