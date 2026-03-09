@@ -1,5 +1,5 @@
 ---
-nav_title: Aplicación avanzada (opcional)
+nav_title: Implementación avanzada (opcional)
 article_title: Implementación avanzada de notificaciones push para iOS (Opcional)
 platform: iOS
 page_order: 28
@@ -91,7 +91,7 @@ Las notificaciones push pueden mostrar información específica del usuario dent
 
 Para configurar un push personalizado en el panel, debes registrar la categoría específica que quieres que se muestre y, a continuación, dentro de los pares clave-valor mediante Liquid estándar, establecer los atributos de usuario adecuados que quieres que muestre el mensaje. Estas vistas pueden personalizarse en función de atributos específicos de usuario de un perfil de usuario concreto.
 
-![Cuatro conjuntos de pares clave-valor, en los que "next_session_name" y "next_session_complete_date" se configuran como una propiedad desencadenante de la API mediante Liquid, y "completed_session count" y "total_session_count" se configuran como un atributo personalizado del usuario mediante Liquid.]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
+![Cuatro conjuntos de pares clave-valor, donde"next_session_name"  y"next_session_complete_date"  se establecen como una propiedad de activación de API utilizando Liquid, y"completed_session  count" y"total_session_count"  se establecen como un atributo personalizado utilizando Liquid.]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
 
 #### Manejo de pares clave-valor
 
@@ -154,7 +154,7 @@ Ten en cuenta que la información solicitada aquí puede ser muy diversa, como l
 
 Para configurar un push capaz de capturar información en el panel, debes registrarte y configurar tu categoría personalizada, y proporcionar los pares clave-valor necesarios. Como se ve en el ejemplo, también puedes incluir una imagen en tu push. Para ello, debes integrar [notificaciones enriquecidas]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/rich_notifications/), establecer el estilo de notificación de tu campaña en Notificación enriquecida e incluir una imagen push enriquecida.
 
-![Un mensaje push con tres conjuntos de pares clave-valor. 1. "Braze_id" configurar como llamada Liquid para recuperar el ID de Braze. 2. "cert_title" configurado como "Certificado de especialista en marketing de Braze". 3. "Cert_description" configurado como "Los especialistas en marketing certificados de Braze conducen...".]({% image_buster /assets/img/push_implementation_guide/push9.png %})
+![Un mensaje push con tres conjuntos de pares clave-valor. 1\."Braze_id"Establece una llamada Liquid para recuperar el ID de Braze. 2\."cert_title"Establecer como «Certificación Braze Marketer». 3\."Cert_description"Establecer como «Los especialistas en marketing certificados en Braze impulsan...».]({% image_buster /assets/img/push_implementation_guide/push9.png %})
 
 #### Manejar las acciones de los botones
 
@@ -208,7 +208,7 @@ Visita la [sección siguiente](#logging-analytics) para comprender mejor cómo d
 
 El análisis de los registros solo puede hacerse en tiempo real con la ayuda del servidor del cliente que accede a nuestro [punto final`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Para registrar los análisis, envía el valor `braze_id` en el campo de los pares clave-valor (como se ve en la siguiente captura de pantalla) para identificar qué perfil de usuario hay que actualizar.
 
-![Un mensaje push con tres conjuntos de pares clave-valor. 1. "Braze_id" configurar como llamada Liquid para recuperar el ID de Braze. 2. "cert_title" configurado como "Certificado de especialista en marketing de Braze". 3. "Cert_description" configurado como "Los especialistas en marketing certificados de Braze conducen...".]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
+![Un mensaje push con tres conjuntos de pares clave-valor. 1\."Braze_id"Establece una llamada Liquid para recuperar el ID de Braze. 2\."cert_title"Establecer como «Certificación Braze Marketer». 3\."Cert_description"Establecer como «Los especialistas en marketing certificados en Braze impulsan...».]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
 
 ### Registrar manualmente
 
