@@ -34,7 +34,7 @@ Em seguida, envie a si mesmo um push de teste a partir do dashboard. Esse push d
 4. Verifique se o seu app não executa nenhuma ação automática indesejada ao receber o push.
 
 {% alert important %}
-Essas etapas de teste são um proxy para o envio de um push de rastreamento de desinstalação da Braze. Se você tiver contagens de badge ativadas, um número de badge será enviado junto com o push de teste, mas os pushes de rastreamento de desinstalação do Braze não definirão um número de badge em seu aplicativo.
+Essas etapas de teste são um proxy para o envio de um push de rastreamento de desinstalação da Braze. Se você tiver a contagem de badges ativada, um número de badge será enviado junto com o push de teste, mas os pushes de rastreamento de desinstalação do Braze não definirão um número de badge em seu aplicativo.
 {% endalert %}
 
 ## Etapa 4: Ativar o rastreamento de desinstalação
