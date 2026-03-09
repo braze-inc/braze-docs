@@ -1,7 +1,7 @@
 ---
 nav_title: "POST: Zeitplan für API-getriggerte Kampagnen"
 article_title: "POST: Zeitplan für API-getriggerte Kampagnen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -10,7 +10,7 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Zeitplan API-getrig
 ---
 {% api %}
 # Zeitplan für API-getriggerte Kampagnen
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /kampagnen/triggern/zeitplan/erstellen
 {% endapimethod %}
 
@@ -147,7 +147,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ### Beispiel für eine erfolgreiche Antwort
 
 ```json
-{
 {
     "dispatch_id": "dispatch_identifier",
     "schedule_id": "schedule_identifier",
