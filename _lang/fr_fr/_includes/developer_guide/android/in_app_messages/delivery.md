@@ -1,10 +1,10 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## Les messages déclenchés
+## Déclencheurs de messages
 
 ### Types de déclencheurs
 
-Les messages in-app sont automatiquement déclenchés lorsque le SDK enregistre l'un des types d'événements personnalisés suivants : `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, et `Push Click`. Notez que les déclencheurs `Specific Purchase` et `Custom Event` contiennent également des filtres de propriété robustes.
+Les messages in-app sont automatiquement déclenchés lorsque le SDK enregistre l'un des types d'événements personnalisés suivants : `Any Purchase`, `Specific Purchase`,`Session Start` , `Custom Event`, et `Push Click`. Veuillez noter que les `Specific Purchase`déclencheurs`Custom Event` et contiennent également des filtres de propriétés robustes.
 
 {% alert note %}
 Les messages in-app ne peuvent pas être déclenchés par l'API ou par des événements de l'API, mais uniquement par des événements personnalisés enregistrés par le SDK. Pour en savoir plus sur la journalisation, reportez-vous à la section [Journalisation des événements personnalisés]({{site.baseurl}}/developer_guide/analytics/logging_events/).
@@ -12,9 +12,9 @@ Les messages in-app ne peuvent pas être déclenchés par l'API ou par des évé
 
 ### Sémantiques de livraison
 
-Tous les messages in-app éligibles sont envoyés à l'appareil d'un utilisateur au début de sa session. Lorsqu'il est livré, le SDK prélève les ressources de manière à ce qu'elles soient disponibles au moment du déclenchement, ce qui minimise la latence d'affichage. Si l'événement déclencheur comporte plusieurs messages in-app éligibles, seul le message ayant la priorité la plus élevée sera délivré.
+Tous les messages in-app éligibles sont envoyés sur l'appareil de l'utilisateur au début de sa session. À la livraison, le SDK préchargera les ressources afin qu'elles soient disponibles au moment du déclencheur, ce qui minimisera la latence d'affichage. Si l'événement déclencheur comporte plusieurs messages in-app éligibles, seul le message ayant la priorité la plus élevée sera délivré.
 
-Pour plus d'informations sur la sémantique de démarrage de session du SDK, reportez-vous à la[sectionCycle de vie d']({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android)une session.
+Pour plus d'informations sur la sémantique de démarrage de session du SDK, veuillez [consulter la section Cycle de vie de la session]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android).
 
 ### Limite de débit
 
@@ -28,7 +28,7 @@ Pour remplacer cette valeur, définissez `com_braze_trigger_action_minimum_time_
 
 ## Paires clé-valeur
 
-Lorsque vous créez une campagne dans Braze, vous pouvez définir des paires clé-valeur en tant que `extras`, que l'objet de message in-app peut utiliser pour envoyer des données à votre application. Par exemple :
+Lorsque vous créez une campagne dans Braze, vous pouvez définir des paires clé-valeur que l'objet de message in-app peut utiliser pour`extras` envoyer des données à votre application. Par exemple :
 
 {% tabs %}
 {% tab JAVA %}
@@ -49,7 +49,7 @@ Pour plus d'informations, consultez le [KDoc](https://braze-inc.github.io/braze-
 
 ## Désactivation des déclencheurs automatiques
 
-Pour empêcher les messages in-app de se déclencher automatiquement :
+Pour éviter que les messages in-app ne se déclenchent automatiquement :
 
 1. Assurez-vous d’utiliser l’initiateur d’intégration automatique, activé par défaut à partir de la version `2.2.0`.
 2. Définissez l’opération par défaut de message in-app `DISCARD` en ajoutant la ligne suivante à votre fichier `braze.xml`.
@@ -60,7 +60,7 @@ Pour empêcher les messages in-app de se déclencher automatiquement :
 
 ## Déclenchement manuel des messages
 
-Par défaut, les messages in-app sont automatiquement déclenchés lorsque le SDK enregistre un événement personnalisé. Toutefois, vous pouvez déclencher manuellement un message à l'aide des méthodes suivantes.
+Par défaut, les messages in-app sont automatiquement déclenchés lorsque le SDK enregistre un événement personnalisé. Cependant, vous pouvez déclencher manuellement l'envoi d'un message en utilisant les méthodes suivantes.
 
 ### Utilisation d'un événement côté serveur
 
@@ -68,9 +68,9 @@ Pour déclencher un message in-app à l'aide d'un événement envoyé par le ser
 
 #### Étape 1 : Créez un rappel de poussée pour recevoir la poussée silencieuse.
 
-Enregistrez [votre rappel personnalisé de push even]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#push-callback) pour écouter une notification push silencieuse spécifique.
+Veuillez enregistrer [votre rappel push personnalisé]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#push-callback) afin de recevoir une notification push silencieuse spécifique.
 
-Dans l'exemple suivant, deux événements seront enregistrés pour la remise du message in-app, l'un par le serveur et l'autre à partir de votre callback push personnalisé. Pour vous assurer que le même événement n'est pas dupliqué, l'événement consigné dans votre rappel push doit suivre une convention de dénomination générique, par exemple, "événement déclencheur de message in-app", et ne pas porter le même nom que l'événement envoyé par le serveur. Si cela n’est pas fait, la segmentation et les données utilisateur peuvent être affectées par des événements enregistrés en double pour une seule action utilisateur.
+Dans l'exemple suivant, deux événements seront enregistrés pour le message in-app à livrer, l'un par le serveur et l'autre à partir de votre rappel push personnalisé. Pour vous assurer que le même événement n'est pas dupliqué, l'événement consigné dans votre rappel push doit suivre une convention de dénomination générique, par exemple, "événement déclencheur de message in-app", et ne pas porter le même nom que l'événement envoyé par le serveur. Si cela n’est pas fait, la segmentation et les données utilisateur peuvent être affectées par des événements enregistrés en double pour une seule action utilisateur.
 
 {% tabs %}
 {% tab JAVA %}
@@ -117,7 +117,7 @@ Créez une [campagne de push silencieuse]({{site.baseurl}}/developer_guide/push_
 
 La campagne de notifications push doit inclure des suppléments de paires clé-valeur qui indiquent que cette campagne de notifications push est envoyée pour enregistrer un événement personnalisé SDK. Cet événement sera utilisé pour déclencher le message in-app.
 
-![Deux ensembles de paires clé-valeur : IS_SERVER_EVENT avec la valeur "true" et CAMPAIGN_NAME avec la valeur "example campaign name".]({% image_buster /assets/img_archive/kvpConfiguration.png %}){: style="max-width:70%;" }
+![Deux ensembles de paires clé-valeur :IS_SERVER_EVENTdéfini sur « true » etCAMPAIGN_NAMEdéfini sur « nom de campagne à titre d'exemple ».]({% image_buster /assets/img_archive/kvpConfiguration.png %}){: style="max-width:70%;" }
 
 Le code exemple de fonction de rappel de notification push reconnaît les paires clé-valeur et enregistre l’événement personnalisé SDK approprié.
 
@@ -129,7 +129,7 @@ Créez votre campagne de messages in-app visibles par l'utilisateur dans le tabl
 
 Dans l’exemple suivant, le message in-app spécifique à déclencher a été configuré en envoyant la propriété de l’événement dans le cadre de la première notification push silencieuse.
 
-![Une campagne de réception/distribution par événement dans laquelle un message in-app se déclenchera lorsque "campaign_name" sera égal à "Exemple de nom de campagne IAM".]({% image_buster /assets/img_archive/iam_event_trigger.png %})
+![Une campagne de livraison par événement où un message in-app se déclenchera lorsque"campaign_name"  est égal à « exemple de nom de campagne IAM ».]({% image_buster /assets/img_archive/iam_event_trigger.png %})
 
 Si un événement envoyé par le serveur est enregistré alors que l’application n’est pas au premier plan, l’événement se connectera, mais le message in-app ne s’affichera pas. Si vous souhaitez que l’événement soit retardé jusqu’à ce que l’application soit au premier plan, une vérification doit être incluse dans votre récepteur de notification push personnalisé pour rejeter ou retarder l’événement jusqu’à ce que l’application passe au premier plan.
 
