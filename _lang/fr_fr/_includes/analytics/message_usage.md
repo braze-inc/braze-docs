@@ -25,15 +25,15 @@ Les données de l'**aperçu de l'utilisation des crédits de messages** sont lim
 
 Le graphique de l'**utilisation des crédits de messages sur le contrat** montre votre utilisation sur la période sélectionnée. La granularité de ce graphique dépend de l'horizon temporel que vous avez choisi. Exporter les options d'exportation en sélectionnant le menu dans le coin supérieur droit du graphique.
 
-![Tableau de bord de l'aperçu de l'utilisation des crédits de messages avec des sections pour l'utilisation des crédits, l'aperçu du contrat de crédit et la consommation des crédits par rapport au contrat.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
+![Tableau de bord présentant un aperçu de l'utilisation des crédits de messages, avec des sections consacrées à l'utilisation des crédits, à la présentation du contrat de crédits et à la consommation de crédits par rapport au contrat.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
 
 ## SMS, MMS et RCS
 
-L'**utilisation des crédits SMS/MMS/RCS** indique la répartition de l'utilisation des canaux SMS, MMS et RCS. Les colonnes du tableau de données exigent généralement que vous ayez acheté des crédits de messages (bien que Braze prenne encore temporairement en charge les anciens modèles de facturation), et les colonnes **Taux de crédit** et **Crédits** indiquent le taux de pays respectif et les crédits consommés. En outre, les tuiles de haut niveau indiquent la consommation totale de SMS et, le cas échéant, de MMS pour la plage de dates sélectionnée.
+**L'utilisation des crédits SMS/MMS/RCS** présente la répartition de l'utilisation pour les canaux SMS, MMS et RCS. Les colonnes du tableau de données exigent généralement que vous ayez acheté des crédits de messages (bien que Braze prenne encore temporairement en charge les anciens modèles de facturation), et les colonnes **Taux de crédit** et **Crédits** indiquent le taux de pays respectif et les crédits consommés. De plus, les vignettes de haut niveau indiqueront la consommation totale de SMS et, le cas échéant, de MMS pour la période sélectionnée.
 
 Des filtres sont disponibles, vous permettant de filtrer par **pays** ou par type de SMS et RCS.
 
-![Utilisation des crédits SMS/MSS/RCS avec des tuiles pour les données de haut niveau et une section pour la consommation par compte.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
+![Utilisation des crédits SMS/MSS/RCS avec des vignettes pour les données de haut niveau et une section pour la consommation par compte.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
 
 Contrairement à l'**aperçu de l'utilisation des crédits de messages**, cette section contient les données historiques des périodes contractuelles précédentes. 
 
@@ -56,7 +56,7 @@ Vous pouvez filtrer vos données par :
 - Type de catégorie de conversation
 - Région
 
-![Utilisation des crédits WhatsApp avec une tuile pour le total des crédits consommés et un tableau d'utilisation par compte.]({% image_buster /assets/img/app_settings/whatsapp_credit_consumption4.png %}){: style="max-width:70%;"}
+![Utilisation des crédits WhatsApp avec une vignette indiquant le total des crédits consommés et un tableau récapitulatif par compte.]({% image_buster /assets/img/app_settings/whatsapp_credit_consumption4.png %}){: style="max-width:70%;"}
 
 ## Choses à savoir
 
@@ -64,18 +64,18 @@ Vous pouvez filtrer vos données par :
 Les données présentées dans le tableau de bord de l' **utilisation des messages** se situent au niveau du contrat et ne se rapportent pas à une entreprise ou à un espace de travail particulier. Ces données reflètent l'utilisation de tous les espaces de travail de votre tableau de bord, et potentiellement de tous les tableaux de bord (si vous en avez plusieurs).
 {% endalert %}
 
-- Les données sous-jacentes sont fournies quotidiennement, les tableaux de données étant actualisés à 3 heures, 9 heures, 12 heures et 18 heures (heure de l'Est). La mise à jour du tableau de bord de l'**envoi des messages** peut prendre plus de 24 heures.
+- Les données sous-jacentes sont fournies quotidiennement, les tableaux de données étant actualisés à 3 heures, 9 heures, 12 heures et 18 heures (heure de l'Est). Le tableau de bord **Utilisation des messages** peut nécessiter plus de 24 heures pour se mettre à jour.
 - Braze suit la méthode d'arrondi standard : les chiffres sont arrondis au dixième le plus proche.
 
 ### Sélection de la plage de dates
 
-Le tableau de bord de l'**utilisation des messages** exclut des résultats la date de fin de la plage sélectionnée. Par exemple, si vous sélectionnez la période du 1er au 31 octobre, les statistiques d'utilisation du 31 octobre sont exclues. Pour inclure le dernier jour de la période souhaitée, prolongez la plage d'un jour. Par exemple, pour inclure tout le mois d'octobre, sélectionnez la période du 1er octobre au 1er novembre.
+Le tableau de bord **Utilisation des messages** exclut la date de fin de la période sélectionnée des résultats. Par exemple, si vous sélectionnez la période du 1er au 31 octobre, les statistiques d'utilisation du 31 octobre ne seront pas incluses. Pour inclure le dernier jour de la période souhaitée, veuillez prolonger la plage d'un jour. Par exemple, pour inclure tout le mois d'octobre, veuillez sélectionner du 1er octobre au 1er novembre.
 
 ### Comparaison avec des fournisseurs tiers
 
-Lorsque vous comparez les données d'envoi des messages de Braze avec celles de fournisseurs tiers (tels qu'Infobip), gardez à l'esprit ce qui suit :
+Lorsque vous comparez les données d'utilisation des messages Braze avec celles de fournisseurs tiers (tels qu'Infobip), veuillez tenir compte des éléments suivants :
 
-- **Segments de messages vs messages :** Braze compte les messages SMS par segments. Un message SMS unique qui est divisé en plusieurs segments (par exemple, en raison de sa longueur) est compté comme plusieurs segments dans Braze. Pour plus d'informations, consultez les [calculateurs de facturation SMS et RCS.]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/)
-- **Envois de messages basés sur le crédit ou non :** Le tableau de bord comprend à la fois des messages basés sur des crédits et des messages non basés sur des crédits. Les fournisseurs tiers peuvent ne comptabiliser que les messages basés sur le crédit, ce qui peut entraîner des divergences dans les totaux.
-- **Inbound vs outbound**: Assurez-vous que vous comparez les mêmes types de messages. Certains tableaux de bord tiers incluent les messages entrants et sortants dans leurs totaux, tandis que Braze vous permet de filtrer par direction.
-- **Alignement des dates**: Comme le tableau de bord exclut la date de fin, les comparaisons au jour le jour peuvent être plus proches que des plages de dates plus longues. Si vous comparez des données pour une période spécifique, étendez votre plage de dates Braze d'un jour afin d'inclure le dernier jour de votre période de comparaison.
+- **Segments de message et messages** : Braze comptabilise les messages SMS par segment de message. Un seul SMS divisé en plusieurs segments (par exemple, en raison de sa longueur) est comptabilisé comme plusieurs segments dans Braze. Pour plus d'informations, veuillez consulter [les calculateurs de facturation SMS et RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
+- **Messages basés sur les crédits ou non** : Le tableau de bord comprend à la fois des messages liés au crédit et des messages non liés au crédit. Les fournisseurs tiers peuvent ne compter que les messages basés sur le crédit, ce qui peut entraîner des écarts dans les totaux.
+- **Entrant vs sortant** : Veuillez vous assurer que vous comparez les mêmes types de messages. Certains tableaux de bord tiers incluent à la fois les messages entrants et sortants dans leurs totaux, tandis que Braze vous permet de filtrer par direction.
+- **Alignement de la plage de dates** : Étant donné que le tableau de bord exclut la date de fin, les comparaisons journalières peuvent être plus pertinentes que celles portant sur des périodes plus longues. Si vous comparez des données pour une période spécifique, veuillez prolonger votre plage de dates Braze d'un jour afin d'inclure le dernier jour de votre période de comparaison.
