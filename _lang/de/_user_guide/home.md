@@ -5,7 +5,7 @@ article_title: Braze-Nutzerhandbuch
 layout: user_guide
 
 user_top_header: "Braze-Nutzerhandbuch"
-user_top_text: "Hier erfahren Marketer und Administratoren alles, was sie für den Einstieg in Braze wissen müssen, und wie sie sinnvolle, datengestützte Kundeninteraktionen gestalten können."
+user_top_text: "Hier erfahren Marketer und Administratoren alles, was sie wissen müssen, um mit Braze zu beginnen und wie sie sinnvolle, datengestützte Kundeninteraktionen gestalten können."
 description: "Dies ist die Nutzerhandbuch-Landing-Page. Hier erfahren Marketingexperten und Administratoren alles, was sie für den Einstieg in Braze wissen müssen, und wie sie sinnvolle, datengesteuerte Kundeninteraktionen gestalten können."
 
 user_menu_list:
@@ -18,12 +18,12 @@ user_menu_list:
     image: /assets/img/braze_icons/log-in-04-braze-pink-dark.svg
     bg_color: '#F8D3E8'
     link: /docs/user_guide/administrative/access_braze/accessing_your_account/
-    description: Melden Sie sich bei der Plattform an.
+    description: Bitte melden Sie sich auf der Plattform an.
   - name: Eine Leinwand erstellen
     bg_color: '#FFD4BC'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/users-01-braze-orange-dark.svg
-    description: "In diesem Leitfaden erfahren Sie, wie Sie mit der Erstellung einer Customer Journey beginnen."
+    description: Dieser Leitfaden führt Sie durch die ersten Schritte beim Aufbau einer Customer Journey.
 
 popular_topic_list:
   - name: Nutzerimport
