@@ -48,6 +48,10 @@ Um objeto de compra é um objeto que é passado pela API quando uma compra é fe
 - [Wiki do código de moeda ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)
 - [ISO 8601 Time Code Wiki](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+Alguns pares de identificadores não podem ser usados juntos, e `email` tem precedência sobre `phone` quando ambos são fornecidos. Para detalhes completos, consulte [Resolução de identificadores]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+{% endalert %}
+
 ## ID do produto de compra
 
 No objeto de compra, o `product_id` é um identificador da compra (como `Product Name` ou `Product Category`):
