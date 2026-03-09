@@ -12,9 +12,9 @@ tags:
 
 # Content Card ranking and prioritization on Web
 
-This use case describes best practices and options for ranking and prioritizing Content Cards on websites that use the Braze Web SDK. Braze does not offer an out-of-the-box prioritization for Content Cards (unlike [In-App Message prioritization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/#step-7-build-the-remainder-of-your-campaign-or-canvas) with Low, Medium, and High). The approaches below use **key-value pairs (KVPs)** and custom logic to achieve a similar Low, Medium, and High priority system.
+This use case describes best practices and options for ranking and prioritizing Content Cards on websites that use the Braze Web SDK. Braze does not offer default prioritization for Content Cards (unlike [In-App Message prioritization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/#step-7-build-the-remainder-of-your-campaign-or-canvas) with Low, Medium, and High). The approaches below use **key-value pairs (KVPs)** and custom logic to achieve a similar Low, Medium, and High priority system.
 
-Braze uses a Crawl, Walk, and Run model for [Content Card customizations]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/). The solutions here are "Walk" and "Run" approaches and cover ranking and prioritization via KVPs. The specific handling and display of the Content Cards is up to your team to implement; refer to the [Braze Web SDK documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) for display and customization.
+Braze uses a Crawl, Walk, and Run model for [Content Card customizations]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/). The solutions here are "Walk" and "Run" approaches and cover ranking and prioritization via KVPs. Your team is responsible for the specific handling and display of the Content Cards. For display and customization details, refer to the [Braze Web SDK documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html).
 
 ---
 
@@ -32,7 +32,7 @@ This approach uses the **standard Content Card feed** with a small amount of cus
 
 ### Step 1: Configure the feed and sorting
 
-Configure the [standard Content Card feed]({{site.baseurl}}/developer_guide/content_cards/creating_cards/) in your webpage with the Braze Web SDK. Implement code that filters and sorts cards by the `priority_level` KVP in the `extras` property. Example: a function that returns cards sorted by priority (ascending):
+Configure the [standard Content Card feed]({{site.baseurl}}/developer_guide/content_cards/creating_cards/) in your webpage with the Braze Web SDK. Implement code that filters and sorts cards by the `priority_level` KVP in the `extras` property. The following function returns cards sorted by priority (ascending):
 
 ```javascript
 function showCardsByFeedType(...priority_levels) {
@@ -54,7 +54,7 @@ function showCardsByFeedType(...priority_levels) {
 
 ### Step 2: Display the feed
 
-Add code to display the feed (for example, via a button). The following shows cards with priorities 1, 2, and 3:
+Add code to display the feed (for example, via a button). This example shows cards with priorities 1, 2, and 3:
 
 ```javascript
 document.getElementById("priority_cards_toggle").onclick = function() {
@@ -128,9 +128,9 @@ Apply custom styling per feed if desired.
 
 ## Solution 3: Custom Content Card feed (Run)
 
-This solution uses a [custom Content Card view]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/) instead of the default feed. Your development team implements custom views/UI using Braze class properties and methods and the data models (e.g. `ab.ClassicCard`, `ab.Banner`, `ab.CaptionedImage`).
+This solution uses a [custom Content Card view]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/) instead of the default feed. Your development team implements custom views and UI using Braze class properties and methods and the data models (for example, `ab.ClassicCard`, `ab.Banner`, and `ab.CaptionedImage`).
 
-**Example:** Display cards by **priority level** and **expiry date** (e.g. limited-time offers, local offers, standing offers, with a second sort by expiry).
+**Example:** Display cards by **priority level** and **expiry date** (for example, limited-time offers, local offers, or standing offers, with a second sort by expiry).
 
 ### Step 1: Add KVPs for priority and expiry
 
@@ -155,6 +155,8 @@ Example `extras` object: `{ expiry_date: '2022-08-17', priority_level: '1' }`
 ---
 
 ## Related documentation
+
+For more on Content Cards, KVPs, and feed behavior, see the following:
 
 - [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/)
 - [Key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)
