@@ -1,5 +1,5 @@
 ---
-nav_title: HTML Nachrichten
+nav_title: HTML-Nachrichten
 article_title: Hinzufügen der Braze JavaScript-Schnittstelle zu WebViews für Swift
 platform: Swift
 page_order: 0.5
