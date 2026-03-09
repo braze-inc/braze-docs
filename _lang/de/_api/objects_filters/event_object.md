@@ -46,6 +46,10 @@ Wie Sie angepasste Events für eine bestimmte Plattform einrichten, erfahren Sie
 - [Bezeichner der App]({{site.baseurl}}/api/identifier_types/)
 - [ISO 8601 Zeitcode](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+Einige Bezeichnerpaare können nicht zusammen in einer einzigen Anfrage verwendet werden. Wenn sowohl`email`  als auch  `phone`angegeben sind,`email`hat  Vorrang vor `phone`. Ausführliche Informationen werden in [der Bezeichnerauflösung]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution) referenziert.
+{% endalert %}
+
 #### Nur bestehende Profile aktualisieren
 
 Um nur bestehende Nutzerprofile in Braze zu aktualisieren, sollten Sie den Schlüssel `_update_existing_only` mit dem Wert `true` im Hauptteil Ihrer Anfrage übergeben. Wenn dieser Wert weggelassen wird, erstellt Braze ein neues Nutzerprofil, wenn das `external_id` nicht bereits existiert.
@@ -80,7 +84,7 @@ Die folgenden Schlüssel sind reserviert und können nicht als benutzerdefiniert
 - `event_name`
 
 {% alert important %}
-Die Verwendung von reservierten Schlüsseln als Namen für angepasste Event-Eigenschaften führt zu API-Fehlern beim Senden von Anfragen an den Endpunkt `/users/track`.
+Die Verwendung reservierter Schlüssel als angepasste Event-Eigenschaftsnamen führt zu API-Fehlern beim Senden von Anfragen an den`/users/track`Endpunkt.
 {% endalert %}
 
 ### Persistenz der Eigenschaften von Ereignissen
@@ -89,7 +93,7 @@ Event-Eigenschaften dienen zum Filtern und zur Liquid Personalisierung von Nachr
 
 #### Ereignis Beispiel Anfrage
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
