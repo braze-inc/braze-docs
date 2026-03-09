@@ -1,97 +1,97 @@
 # Banners
 
-> Com os Banners, é possível criar envios de mensagens personalizados para seus usuários e, ao mesmo tempo, ampliar o alcance de seus outros canais, como e-mail ou notificações por push. Você pode incorporar Banners diretamente no seu app ou site, o que permite o engajamento com os usuários por meio de uma experiência que parece natural.
+> Com Banners, você pode criar mensagens personalizadas para seus usuários, enquanto amplia o alcance de seus outros canais, como e-mail ou notificações por push. Você pode incorporar Banners diretamente em seu app ou site, o que permite interagir com os usuários por meio de uma experiência que parece natural.
 
-![Um exemplo de banner renderizado em um dispositivo.]({% image_buster /assets/img/banners/sample_banner.png %})
+![Um exemplo de Banner exibido em um dispositivo.]({% image_buster /assets/img/banners/sample_banner.png %})
 
 ## Pré-requisitos
 
-A disponibilidade dos banners depende de seu pacote Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar.
+A disponibilidade de Banners depende do seu pacote Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar.
 
 ## Por que usar Banners?
 
-Os banners permitem que as equipes de marketing e de produtos personalizem o conteúdo do app ou do site de forma dinâmica, refletindo a elegibilidade e o comportamento do usuário em tempo real. Eles exibem mensagens em linha de forma persistente, proporcionando experiências não intrusivas e contextualmente relevantes que são atualizadas automaticamente no início de cada sessão do usuário.
+Os Banners permitem que as equipes de marketing e produto personalizem o conteúdo do app ou site dinamicamente, refletindo a elegibilidade e o comportamento do usuário em tempo real. Eles exibem mensagens de forma persistente, proporcionando experiências contextualmente relevantes e não intrusivas que se atualizam automaticamente no início de cada sessão do usuário.
 
-Depois que os banners são integrados a um aplicativo ou site, os profissionais de marketing podem projetar e lançar banners usando um simples editor de arrastar e soltar, eliminando a necessidade de assistência contínua ao desenvolvedor, reduzindo a complexidade e melhorando a eficiência.
+Depois que os Banners são integrados a um app ou site, os profissionais de marketing podem projetar e lançar Banners usando um simples editor de arrastar e soltar, eliminando a necessidade de assistência contínua de desenvolvedores, reduzindo a complexidade e melhorando a eficiência.
 
 | Caso de uso | Explicação |
 | --- | --- |
-| Anúncios | Mantenha anúncios como eventos futuros ou mudanças de política na vanguarda da experiência no app. |
-| Personalização de ofertas | Mostre promoções e incentivos personalizados com base no histórico de navegação de cada usuário, no conteúdo do carrinho, no nível de inscrição e no status de fidelidade. |
-| Direcionamento para o engajamento de novos usuários | Orientar os novos usuários nos fluxos de integração e na configuração da conta. |
-| Vendas e promoções | Destaque conteúdo em destaque, produtos em alta e campanhas de marca em andamento de forma persistente e direta na sua página inicial sem interromper a experiência do usuário. |
+| Anúncios | Mantenha anúncios como eventos futuros ou mudanças de políticas em destaque na experiência do seu app. |
+| Personalizando ofertas | Mostre promoções e incentivos personalizados com base no histórico de navegação, conteúdo do carrinho, nível de inscrição e status de fidelidade de cada usuário. |
+| Direcionamento de engajamento de novos usuários | Guie novos usuários através de fluxos de integração e configuração de conta. |
+| Vendas e promoções | Destaque conteúdo em destaque, produtos em tendência e campanhas de marca em andamento de forma persistente e direta na sua página inicial, sem interromper a experiência do usuário. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Recursos
 
-Os recursos para Banners incluem:
+Os recursos dos Banners incluem:
 
-- **Criação fácil de conteúdo:** Crie e prévia seu Banner usando um editor visual de arrastar e soltar com suporte para imagens, texto, botões, formulários de captura de e-mail, código personalizado e muito mais.
-- **Colocações flexíveis:** Defina vários locais em seu aplicativo ou site onde os banners podem ser exibidos, ativando o direcionamento preciso para contextos ou experiências de usuário específicos.
-- **Personalização dinâmica:** Os banners são atualizados dinamicamente a cada nova sessão de usuário, garantindo que o conteúdo permaneça atualizado e personalizado usando as ferramentas de personalização integradas do Braze e a lógica Liquid.
-- **Priorização de nativos:** Defina a prioridade de exibição para quando vários Banners direcionarem o mesmo posicionamento, garantindo que a mensagem certa chegue aos usuários no momento certo.
-- **Suporte a HTML personalizado:** Incorpore blocos HTML personalizados para personalização avançada ou integração perfeita com seus estilos da Web existentes.
+- **Construção de conteúdo fácil:** Crie e visualize seu Banner usando um editor visual de arrastar e soltar com suporte para imagens, texto, botões, formulários de captura de e-mail, código personalizado e muito mais.
+- **Posicionamentos flexíveis:** Defina múltiplos locais dentro do seu aplicativo ou site onde os Banners podem aparecer, permitindo direcionamento preciso a contextos ou experiências de usuário específicas.
+- **Personalização dinâmica:** Os banners são atualizados dinamicamente a cada nova sessão de usuário, garantindo que o conteúdo permaneça atual e personalizado usando as ferramentas de personalização integradas do Braze e a lógica Liquid.
+- **Priorização nativa:** Defina a prioridade de exibição para quando vários banners visam o mesmo local, garantindo que a mensagem certa chegue aos usuários no momento certo.
+- **Bloco de editor de código personalizado:** Use o bloco de editor de código personalizado para adicionar HTML personalizado para personalização avançada ou integração perfeita com seus estilos web existentes.
 
-## Sobre Banners {#about-banners}
+## Sobre os Banners {#about-banners}
 
 ### IDs de colocação {#placement-id}
 
-Os posicionamentos de banner são locais específicos em seu app ou site [criados com o SDK do Braze]({{site.baseurl}}/developer_guide/banners/placements/) que designam onde os banners podem aparecer.
+As colocações de banners são locais específicos em seu app ou site [que você cria com o SDK do Braze]({{site.baseurl}}/developer_guide/banners/placements/) que designam onde os banners podem aparecer.
 
-Os locais comuns incluem a parte superior de sua página inicial, páginas de detalhes de produtos e fluxos de checkout. Depois que os canais são criados, os banners podem ser [atribuídos em sua campanha de banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/).
+Locais comuns incluem o topo da sua página inicial, páginas de detalhes de produtos e fluxos de checkout. Depois que as colocações são criadas, os banners podem ser [atribuídos na sua campanha de Banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/).
 
-Não há limite fixo para o número de colocações que podem ser criadas por espaço de trabalho, e você pode criar quantas IDs de colocação forem necessárias para sua experiência. Cada colocação deve ser exclusiva em um espaço de trabalho. Uma única ID de posicionamento pode ser referenciada por até 25 mensagens ativas ao mesmo tempo.
+Não há um limite fixo para o número de colocações que você pode criar por espaço de trabalho, e você pode criar quantos IDs de colocação sua experiência exigir. Cada colocação deve ser única dentro de um espaço de trabalho. Um único ID de colocação pode ser referenciado por até 25 mensagens ativas ao mesmo tempo.
 
 {% alert important %}
-Evite modificar os IDs de posicionamento após o lançamento de uma campanha de banner.
+Evite modificar IDs de colocação após lançar uma campanha de Banner.
 {% endalert %}
 
-### Prioridade do banner {#priority}
+### Prioridade do Banner {#priority}
 
-Quando várias mensagens de banner fazem referência à mesma ID de posicionamento, os banners são exibidos em ordem de prioridade: alta, média ou baixa. Por padrão, os Banners são definidos como médios, mas você pode [definir manualmente a prioridade]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#set-priority) ao criar ou editar sua campanha de Banner. 
+Quando várias mensagens de Banner referenciam o mesmo ID de colocação, os banners são exibidos em ordem de prioridade: alta, média ou baixa. Por padrão, os banners são definidos como médios, mas você pode [definir manualmente a prioridade]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#set-priority) ao criar ou editar sua campanha de Banner. 
 
-Se vários Banners forem definidos com a mesma prioridade, o Banner mais novo para o qual o usuário é elegível será exibido primeiro.
+Se vários banners estiverem definidos para a mesma prioridade, o banner mais recente que o usuário é elegível é exibido primeiro.
 
 ### Solicitações de colocação {#requests}
 
 {% multi_lang_include banners/placement_requests.md %}
 
-### Envio de mensagens
+### Entrega de mensagens
 
-As mensagens no app ou no site são entregues como conteúdo HTML, normalmente renderizado em um iframe. Isso garante que seus Banners sejam renderizados de forma consistente em todos os dispositivos e ajuda a manter seus estilos e scripts separados do restante do seu código.
+Mensagens de banner são entregues ao seu app ou site como conteúdo HTML, tipicamente renderizado dentro de um iframe. Isso garante que seus banners sejam renderizados de forma consistente em diferentes dispositivos e ajuda a manter seus estilos e scripts separados do restante do seu código.
 
-Os iframes permitem atualizações de conteúdo dinâmicas e personalizadas que não exigem alterações em sua base de código. Cada iframe recupera e exibe o HTML de cada sessão de usuário usando a lógica de direcionamento e personalização de campanhas.
+Iframes permitem atualizações de conteúdo dinâmico e personalizado que não requerem alterações em sua base de código. Cada iframe recupera e exibe o HTML para cada sessão de usuário usando direcionamento de campanha e lógica de personalização.
 
 {% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
 
-### Dimensões e dimensionamento
+### Dimensões e tamanhos
 
-Veja a seguir o que você precisa saber sobre as dimensões e o tamanho do Banner:
+Aqui está o que você precisa saber sobre dimensões e tamanhos de banners:
 
-- Embora o criador permita que você faça uma prévia dos banners em diferentes dimensões, essas informações não são salvas nem enviadas ao SDK.
-- O HTML ocupa a largura total do contêiner em que é renderizado.
+- Enquanto o criador permite que você visualize banners em diferentes dimensões, essa informação não é salva ou enviada para o SDK.
+- O HTML ocupa toda a largura do contêiner em que é renderizado.
 - Recomendamos criar um elemento de dimensão fixa e testar essas dimensões no criador.
 
 ## Limitações
 
-Cada espaço de trabalho pode suportar até 200 campanhas ativas do Banner. Se esse limite for atingido, você precisará arquivar [ou desativar]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) uma campanha existente antes de criar uma nova.
+Cada espaço de trabalho pode suportar até 200 campanhas de banner ativas. Se esse limite for atingido, você precisará [arquivar ou desativar]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) uma campanha existente antes de criar uma nova.
 
-Além disso, as mensagens de banner não são compatíveis com os seguintes recursos:
+Além disso, mensagens de banner não suportam os seguintes recursos:
 
 - Campanhas acionadas por API e baseadas em ações
 - Conteúdo conectado
 - Códigos promocionais
-- Demissões controladas pelo usuário
-- `catalog_items` usando a [tag`:rerender` ]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)
+- Desativações controladas pelo usuário
+- `catalog_items` usando a [`:rerender` tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)
 
 {% alert tip %}
-Quer ajudar a priorizar o que está por vir? Entre em contato com [banners-feedback@braze.com](mailto:banners-feedback@braze.com).
+Quer ajudar a priorizar o que vem a seguir? Entre em contato com [banners-feedback@braze.com](mailto:banners-feedback@braze.com).
 {% endalert %}
 
 ## Próximos passos
 
-Agora que você já conhece os Banners, está pronto para as próximas etapas:
+Agora que você sabe sobre banners, está pronto para os próximos passos:
 
-1. [Criação de posicionamentos de banner em seu app ou site]({{site.baseurl}}/developer_guide/banners/placements/)
-2. [Criação de campanhas de banner no Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/)
-3. [Tutorial: Exibição de um banner por ID de posicionamento]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
+1. [Criando colocações de banner em seu app ou site]({{site.baseurl}}/developer_guide/banners/placements/)
+2. [Criando campanhas de Banner no Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/)
+3. [Tutorial: Exibindo um Banner pelo ID de Colocação]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
