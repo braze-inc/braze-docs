@@ -19,7 +19,7 @@ description: "이 문서에서는 목록 통합 Braze 엔드포인트에 대한 
 
 
 {% alert note %}
-이 엔드포인트를 사용하려면 `cdi.integration_list` 권한이 있는 API 키를 생성해야 합니다.
+이 엔드포인트를 사용하려면 `cdi.integration_list` 권한으로 API 키를 생성해야 합니다.
 {% endalert %}
 
 ## 사용량 제한
@@ -81,8 +81,8 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
       "warehouse_type": (string) data warehouse type,
       "last_job_start_time": (string) timestamp of the last sync run in ISO 8601,
       "last_job_status": (string) status of the last sync run,
-      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601,
-    },
+      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601
+    }
   ],
   "message": "success"
 }
@@ -97,6 +97,6 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
 | `400 Invalid cursor` | `cursor` 주소가 유효한지 확인합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-추가 상태 코드 및 관련 오류 메시지는 [심각한 오류 & 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
+추가 상태 코드 및 관련 오류 메시지는 [치명적인 오류 & 응답]({{site.baseurl}}/api/errors/#fatal-errors)을 참조하십시오.
 
 {% endapi %}
