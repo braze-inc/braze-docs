@@ -1,6 +1,6 @@
 ---
 nav_title: Comportamiento
-article_title: Personaliza el comportamiento de las tarjetas de contenido
+article_title: Personalizar el comportamiento de las tarjetas de contenido
 page_order: 2
 description: "Esta guía de implementación trata sobre cómo cambiar el comportamiento de las tarjetas de contenido, cómo añadir extras como pares clave-valor a tu carga útil, y recetas para personalizaciones comunes."
 channel:
@@ -12,9 +12,9 @@ platform:
   - Web
 ---
 
-# Personaliza el comportamiento de las tarjetas de contenido
+# Personalizar el comportamiento de las tarjetas de contenido
 
-> Esta guía de implementación trata sobre cómo cambiar el comportamiento de las tarjetas de contenido, cómo añadir extras como pares clave-valor a tu carga útil, y recetas para personalizaciones comunes. Para ver la lista completa de tipos de tarjetas de contenido, consulta [Acerca de las tarjetas de contenido]({{site.baseurl}}/developer_guide/content_cards/). 
+> Esta guía de implementación trata sobre cómo cambiar el comportamiento de las tarjetas de contenido, cómo añadir extras como pares clave-valor a tu carga útil, y recetas para personalizaciones comunes. Para obtener la lista completa de tipos de tarjetas de contenido, consulta [Acerca de las tarjetas de contenido]({{site.baseurl}}/developer_guide/content_cards/). 
 
 ## Pares clave-valor
 
@@ -58,7 +58,7 @@ El ejemplo de la derecha muestra una fuente con una lista híbrida de elementos 
 
 [Las campañas desencadenadas por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) son una buena estrategia a emplear cuando los valores de una tarjeta dependen de factores externos para determinar qué contenido mostrar al usuario. Por ejemplo, para mostrar contenido complementario, establece pares clave-valor utilizando Liquid. Ten en cuenta que `class_type` debe conocerse en el momento de la configuración.
 
-![Los pares clave-valor para el caso de uso de las tarjetas de contenido suplementario. En este ejemplo, diferentes aspectos de la tarjeta, como "tile_id", "tile_deeplink", y "tile_title", se configuran utilizando Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![Los pares clave-valor para el caso de uso de las tarjetas de contenido suplementario. En este ejemplo, diferentes aspectos de la tarjeta, como  "tile_id","tile_deeplink", y  ,"tile_title" se configuran utilizando Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ## Tarjetas de contenido como contenido interactivo
 ![En la esquina inferior izquierda de la pantalla aparece una tarjeta de contenido interactiva que muestra una promoción del 50%. Tras hacer clic, se aplicará una promoción al carrito.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
