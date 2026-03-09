@@ -1,6 +1,6 @@
 <ul>
-<li><code>dispatch_id</code> 는 캠페인 전송과 같은 특정 메시지 발송을 위한 ID입니다. 동일한 디스패치에서 발생한 모든 푸시 이벤트에는 동일한 <code>dispatch_id</code>. 사용 방법 <code>dispatch_id</code> 를 사용하여 동일한 발송에 속하는 이벤트를 그룹화하여 해당 발송의 푸시 메시지 수명 주기(예: 보내기, 반송, 열기)를 그룹화하고 상호 연관시킬 수 있습니다.</li>
-<li><code>state_change_source</code> 는 전체 소스 이름의 문자열을 반환합니다. 예를 들어, 소스 CSV 가져오기는 다음과 같은 문자열을 반환합니다. <code>CSV import</code>. 사용 가능한 소스는 아래에 나열되어 있습니다:</li>
+<li><code>dispatch_id</code> 특정 메시지 전송, 예를 들어 캠페인 전송을 위한 ID입니다. 같은 전송에서 발생하는 모든 푸시 이벤트는 동일한 <code>dispatch_id</code>입니다. 사용하십시오 <code>dispatch_id</code> 동일한 전송에 속하는 이벤트를 그룹화하여 해당 전송의 푸시 메시지 생애 주기를 그룹화하고 상관시킬 수 있습니다(예: 전송, 반송 및 열기).</li>
+<li><code>state_change_source</code> 전체 소스 이름의 문자열을 반환합니다. 예를 들어, 소스 CSV 가져오기는 문자열을 반환합니다. <code>CSV import</code>입니다. 사용 가능한 소스는 아래에 나열되어 있습니다:</li>
 </ul>
 <table class="reset-td-br-1 reset-td-br-2" role="presentation">
 <thead>
