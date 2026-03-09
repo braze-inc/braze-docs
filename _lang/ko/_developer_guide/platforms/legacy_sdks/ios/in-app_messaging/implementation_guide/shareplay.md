@@ -1,5 +1,5 @@
 ---
-nav_title: 공유 플레이
+nav_title: 공유 재생
 article_title: SharePlay 인앱 메시지 구현 가이드
 platform: iOS
 page_order: 1
