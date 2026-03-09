@@ -1,19 +1,19 @@
 ---
-nav_title: Objetos y filtros
+nav_title: Objetos y filtros para filtrar
 article_title: Objetos y filtros
 page_order: 1.5
 description: "Esta página de destino enumera los objetos y filtros de la API Braze utilizados en sus llamadas a la API Braze."
 
 ---
 
-# Objeto y filtros
+# Objetos y filtros
 
 > Esta página enumera los objetos y filtros de la API Braze utilizados en sus llamadas a la API Braze.
 
 ## Objetos y filtros
 
-- [Objeto de propiedades de entrada del lienzo]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
-- [Filtro de audiencia conectado & objeto]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [Objeto de contexto Canvas]({{site.baseurl}}/api/objects_filters/context_object)
+- [Objeto& filtro de audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Objeto del evento]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/)
 - [Objeto de destinatarios]({{site.baseurl}}/api/objects_filters/recipient_object/)
@@ -22,6 +22,7 @@ description: "Esta página de destino enumera los objetos y filtros de la API Br
 - [Objeto alias de usuario]({{site.baseurl}}/api/objects_filters/user_alias_object)
 - [Objeto de atributo de usuario]({{site.baseurl}}/api/objects_filters/user_attributes_object)
 - [Objeto de programación]({{site.baseurl}}/api/objects_filters/schedule_object/)
+- [Objeto de selección del catálogo]({{site.baseurl}}/api/objects_filters/catalog_selection_object/)
 
 ### Objetos de mensajería
   - [Objeto Android]({{site.baseurl}}/api/objects_filters/messaging/android_object/)
