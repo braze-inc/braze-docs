@@ -37,12 +37,12 @@ description: "Este artigo de referência explica os diferentes componentes do ob
   "header_variables": (optional, header variables object) an object to specify header variable values for specified template_name, required if the header has variables; see object specification below,
   "body_variables": (optional, body variable object) an object to specify body variable values for specified template_name, required if the body has variables; see object specification below,
   "button_variables": (optional, button variables object) an object to specify button variable values for specified template_name, required if buttons have variables; see object specification below,
-  "header_image_uri": (optional, string) URI to the header image, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API.
+  "header_media_uri": (optional, string) URI to the header media, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API.
 }
 ```
 
 {% alert important %}
-**Limitações de envio de mídia:** Os envios de mídia (documentos, vídeos e outros tipos de mídia) não são compatíveis com a API `messages/send`. Somente os tipos de cabeçalho TEXT e IMAGE são compatíveis com as mensagens de modelo enviadas por meio da API. Se o modelo do WhatsApp usar um cabeçalho do tipo DOCUMENT, VIDEO ou outro tipo de mídia, não será possível enviá-lo usando a API `messages/send`. Use a [API Campaigns Triggered]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) ou o dashboard do Braze para enviar modelos com cabeçalhos de mídia.
+**Limitações de envio de mídia:** Envios de mídia (documentos, vídeos e outros tipos de mídia) não são suportados pela API `messages/send`. Apenas tipos de cabeçalho TEXT e IMAGE são suportados para mensagens de modelo enviadas através da API. Se seu modelo do WhatsApp usar um cabeçalho de DOCUMENTO, VÍDEO ou outro tipo de mídia, você não pode enviá-lo usando a API `messages/send`. Use a API [Campanhas Disparadas API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) ou o dashboard do Braze para enviar modelos com cabeçalhos de mídia.
 {% endalert %}
 
 ##### Objeto de variáveis de cabeçalho
@@ -50,7 +50,9 @@ description: "Este artigo de referência explica os diferentes componentes do ob
 O objeto `header_variables` permite especificar valores para variáveis de cabeçalho no modelo do WhatsApp. Cada chave é o índice da variável de modelo do WhatsApp (indexado a partir de zero) a ser substituído pelo valor especificado.
 
 {% alert note %}
-**Requisito de tipo de cabeçalho:** Você pode usar `header_variables` apenas com modelos que tenham cabeçalhos do tipo TEXT. Para cabeçalhos IMAGE, use `header_image_uri` em vez disso. DOCUMENT, VIDEO e outros tipos de cabeçalho de mídia não são compatíveis com a API `messages/send`.
+Você pode usar `header_variables` apenas com modelos que têm cabeçalhos do tipo TEXT. Para cabeçalhos IMAGE, use `header_media_uri` em vez disso. Tipos de cabeçalho DOCUMENTO, VÍDEO e outros tipos de mídia não são suportados pela API `messages/send`.<br><br>
+
+`header_image_uri` é usado apenas para tipos de mensagens de resposta (como `quick_reply_response_message`), não para mensagens de modelo.
 {% endalert %}
 
 ```json
@@ -94,7 +96,7 @@ O objeto `button_variables` permite especificar valores para variáveis de botã
 
 ```json
 {
-  "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1",
+  "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1"
 }
 ```
 
@@ -108,7 +110,7 @@ Atualmente, apenas uma variável de botão pode ser especificada, que é o compo
 }
 ```
 
-### Envio de mensagens de resposta
+### Mensagens de Resposta
 
 #### text_response_message
 
@@ -197,7 +199,7 @@ O tipo `list_response_message` permite que você envie uma mensagem baseada em l
 }
 ```
 
-#### Objeto de seção de lista
+#### Objeto de Seção da Lista
 
 ```json
 {
@@ -206,7 +208,7 @@ O tipo `list_response_message` permite que você envie uma mensagem baseada em l
 }
 ```
 
-#### Objeto de linha de lista
+#### Objeto de Linha da Lista
 
 ```json
 {
@@ -262,7 +264,7 @@ O tipo `list_response_message` permite que você envie uma mensagem baseada em l
 
 #### flow_response_message
 
-O tipo `flow_response_message` permite que você envie uma mensagem baseada em fluxo no WhatsApp. Esse tipo de mensagem inclui um fluxo interativo que o destinatário pode concluir.
+O tipo `flow_response_message` permite que você envie uma mensagem baseada em fluxo no WhatsApp. Esse tipo de mensagem inclui um fluxo interativo que o destinatário pode completar.
 
 ```json
 {
@@ -276,7 +278,7 @@ O tipo `flow_response_message` permite que você envie uma mensagem baseada em f
 }
 ```
 
-##### Objeto do botão de fluxo
+##### Objeto de Botão de Fluxo
 
 ```json
 {
@@ -287,9 +289,9 @@ O tipo `flow_response_message` permite que você envie uma mensagem baseada em f
 
 ##### Restrições
 
-- **flow_button**: Deve incluir a legenda e o endereço `flow_id`.
+- **flow_button**: Deve incluir tanto a legenda quanto `flow_id`.
 - **legenda**: Máximo de 20 caracteres.
-- **flow_id**: Deve ser um ID de fluxo publicado válido.
+- **flow_id**: Deve ser um ID de Flow publicado válido.
 
 ##### Exemplo
 
