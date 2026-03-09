@@ -1,6 +1,6 @@
 ---
 nav_title: Desencadenado personalizado
-article_title: Personaliza el desencadenamiento de mensajes dentro de la aplicación para iOS
+article_title: Personalizar la activación de mensajes dentro de la aplicación para iOS
 platform: iOS
 page_order: 7
 description: "Este artículo de referencia trata de la mensajería personalizada dentro de la aplicación para tu aplicación de iOS."
@@ -54,11 +54,11 @@ Cuando se reciba el push silencioso, se registrará un evento "desencadenado de 
 
 Crea una campaña push silenciosa que se desencadene a través del evento enviado por el servidor. Para más detalles sobre cómo crear una campaña push silenciosa, consulta las [notificaciones push silenciosas]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/silent_push_notifications/).
 
-![Una campaña de mensajería dentro de la aplicación basada en acciones que se entregará a los usuarios que realicen el evento personalizado "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+![Una campaña de mensajes dentro de la aplicación basada en acciones que se entregará a los usuarios que realicen el evento "server_event".]({%image_buster/assets/img_archive/iosServerSentPush.pngpersonalizado    %})
 
 La campaña push debe incluir extras de par clave-valor, que indiquen que esta campaña push se envía para registrar un evento personalizado del SDK. Este evento se utilizará para desencadenar el mensaje dentro de la aplicación:
 
-![n campaña de mensajería dentro de la aplicación de entrega basada en acciones que tiene dos pares clave-valor. "CAMPAIGN_NAME" configurado como "Ejemplo de nombre de mensaje dentro de la aplicación", y "IS_SERVER_EVENT" configurado como "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![Campaña de mensajes dentro de la aplicación basada en acciones que tiene dos pares clave-valor."CAMPAIGN_NAME"  establecido como «Ejemplo de nombre de mensaje dentro de la aplicación» y"IS_SERVER_EVENT"  establecido en «verdadero».]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 El código del método `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` comprueba si hay una clave `IS_SERVER_EVENT` y registrará un evento personalizado del SDK si la hay.
 
@@ -70,7 +70,7 @@ Crea tu campaña de mensajes dentro de la aplicación, visible para el usuario, 
 
 En el siguiente ejemplo, el mensaje específico dentro de la aplicación que se va a desencadenar se ha configurado enviando la propiedad del evento como parte del push silencioso inicial.
 
-![Una campaña de entrega basada en acciones de mensajes dentro de la aplicación que se entregará a los usuarios que realicen el evento personalizado "Desencadenante de mensaje dentro de la aplicación" donde "campaign_name" es igual a "Ejemplo de nombre de mensaje dentro de la aplicación".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Campaña de mensajes dentro de la aplicación basada en acciones que se entregará a los usuarios que realicen el evento personalizado «Desencadenante de mensajes dentro de la aplicación» donde"campaign_name"  es igual a «Ejemplo de nombre de mensaje dentro de la aplicación».]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 Debido a que se utiliza un mensaje push para registrar un evento personalizado registrado en SDK, Braze necesitará almacenar un token de notificaciones push para cada usuario para habilitar esta solución. Tanto para iOS como para Android, Braze sólo almacenará un token a partir del momento en que un usuario haya recibido el aviso push del sistema operativo. Antes de esto, el usuario no será localizable mediante push, y la solución anterior no será posible.
 
