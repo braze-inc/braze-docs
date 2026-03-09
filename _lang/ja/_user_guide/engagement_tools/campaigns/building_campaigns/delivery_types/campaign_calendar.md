@@ -4,7 +4,7 @@ article_title: コンテンツカレンダー
 page_order: 4
 tool: Campaigns
 page_type: reference
-description: "この参照ページでは、コンテンツ・カレンダーの構成要素について説明する。"
+description: "このリファレンスページは、コンテンツカレンダーの構成要素について説明する。"
 ---
 
 # コンテンツカレンダー
@@ -18,11 +18,11 @@ description: "この参照ページでは、コンテンツ・カレンダーの
 メッセージング分析セクションには、最近および今後予定されているキャンペーンに関する 2 つのレポートが含まれています。
 
 - **今後のメッセージタイプ:**今後 14 日以内に予定されているプッシュ、メール、アプリ内メッセージキャンペーンの数。
-- **送信済みメッセージ:**過去14日以内に送信され開封されたメッセージング数。
+- **送信済みメッセージ:**過去14日間に送信され、開封されたメッセージの数。
 
-特定の日にカーソルを合わせると、その日のメッセージング分析をレポートで見ることができる。
+特定の日のメッセージング分析をレポートで見るには、その日にカーソルを合わせればよい。
 
-![メッセージングアナリティクスの「近日送信予定のメッセージタイプ」と「送信済みメッセージ」のグラフ。]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
+![メッセージング分析内の「今後のメッセージタイプ」と「送信済みメッセージ」のグラフ。]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
 
 データのコピーをダウンロードするには、<i class="fa-solid fa-bars" style="color: #2e7487;"></i>[**チャートコンテキストメニュー**] を選択し、希望のファイル形式を選択します。
 
@@ -31,11 +31,11 @@ description: "この参照ページでは、コンテンツ・カレンダーの
 送信カレンダーには、当月に予定されているすべてのキャンペーンが表示されます。
 
 {% alert note %}
-アプリ内メッセージは常にアクションベースなので、送信カレンダーには表示されない。
+アプリ内メッセージは常にアクションベースであるため、送信カレンダーには表示されない。
 {% endalert %}
 
-<i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i> **前の月を見る**」または「<i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i> **次の月を見る**」を選択して月を変更する。現在の月に戻るには、[**今日**] を選択します。
+**前の月を見る**か**次の月を見る**<i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i><i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i>かを選択して月を変更する。現在の月に戻るには、[**今日**] を選択します。
 
-![当月にスケジュールされたすべてのキャンペーンを表示する送信カレンダー。]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
+![今月のスケジュールされた全てのキャンペーンを表示する送信カレンダー。]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
 
-カレンダーでキャンペーンを選択し、キャンペーンを表示または変更する。詳細については、[[キャンペーンの管理]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns)] を参照してください。
+カレンダーでキャンペーンを選択すると、そのキャンペーンを表示または変更できる。詳細については、[[キャンペーンの管理]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns)] を参照してください。
