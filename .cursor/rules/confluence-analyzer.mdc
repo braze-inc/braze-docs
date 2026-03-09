@@ -146,6 +146,12 @@ For each page selected for Phase 2:
 
 For each use case, link to the most relevant Braze docs pages (user guide, API, partners) so readers can go from “solution” to “how the feature works.” Do not duplicate full feature docs; keep use case entries focused and link out.
 
+## PR descriptions: do not publish Braze source code paths
+
+When Braze source code repos (e.g. `../platform` or other internal repos) are used to verify technical content, **never include file paths, repo names, or code locations in the PR description or in any public commit message.** Do not write things like “verified in `platform/lib/...`” or “see `braze-app/...`”.
+
+Instead, use a generic phrase such as: **“Verified against Braze source code.”** This confirms that verification was done without exposing internal structure.
+
 ---
 
 ## Refreshing the data
