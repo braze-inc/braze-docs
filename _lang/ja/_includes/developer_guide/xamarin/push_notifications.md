@@ -8,7 +8,7 @@
 Java と C# で名前空間がどのように変わるかは、[GitHub のXample サンプルアプリ](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp)をチェックしてください。
 {% endalert %}
 
-.NET MAUI（旧Xamarin）のプッシュ通知を統合するには、Androidネイティブのプッシュ通知のステップを完了する必要がある。以下の手順はあくまで概要である。完全なチュートリアルについては、[ネイティブ・プッシュ通知ガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/)参照のこと。
+.NET MAUI（旧称Xamarin）向けにプッシュ通知を統合するには、ネイティブAndroidプッシュ通知のステップを完了する必要がある。以下の手順はあくまで概要である。完全なチュートリアルについては、[ネイティブ・プッシュ通知ガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/)参照のこと。
 
 ### ステップ1:プロジェクトを更新する
 
@@ -48,7 +48,7 @@ Java と C# で名前空間がどのように変わるかは、[GitHub のXample
 
 ### ステップ2:プッシュ通知の許可をリクエストする
 
-当社の.NET MAUI SDKが自動プッシュ設定をサポートするようになった。Brazeインスタンス構成に以下のコードを追加して、プッシュ自動化とパーミッションを設定する：
+当社の.NET MAUI SDKは、自動プッシュ設定をサポートするようになった。Brazeインスタンス構成に以下のコードを追加して、プッシュ自動化とパーミッションを設定する：
 
 ```csharp
 configuration.Push.Automation = new BRZConfigurationPushAutomation(true);
