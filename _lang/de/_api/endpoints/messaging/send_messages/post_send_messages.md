@@ -1,7 +1,7 @@
 ---
 nav_title: "POST: Senden Sie Nachrichten sofort nur über die API"
 article_title: "POST: Senden Sie Nachrichten sofort und nur über die API"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -10,7 +10,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Nachrichten so
 ---
 {% api %}
 # Senden Sie Nachrichten sofort nur über die API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /nachrichten/senden
 {% endapimethod %}
 
@@ -18,9 +18,26 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Nachrichten so
 
 Wenn Sie ein Segment Targeting betreiben, wird ein Datensatz Ihrer Anfrage in der [Entwickler:in-Konsole](https://dashboard.braze.com/app_settings/developer_console/activitylog/) gespeichert.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
+
 {% multi_lang_include api/payload_size_alert.md %}
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
+{% alert important %}
+Bei der Verwendung dieses Endpunkts für API-Kampagnen muss der Empfänger:in bereits in Braze vorhanden sein, damit die Anfrage erfolgreich ist. Dies gilt bei der Angabe von Nutzer:innen in den `external_user_ids`Parametern`user_aliases`  oder .
+{% endalert %}
+
+### Erstellen neuer Nutzer:innen mit API-Sends
+
+Wenn Sie im Rahmen einer Sendung über die API einen Nutzer:in erstellen müssen, stehen Ihnen zwei Optionen zur Verfügung:
+
+#### Option 1: Bitte verwenden Sie `/users/track`und anschließend senden Sie
+
+Erstellen Sie zunächst den Nutzer über den[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)Endpunkt und warten Sie anschließend, bis die Daten übertragen wurden (in der Regel werden einige Minuten empfohlen), bevor Sie den API-only-Sendvorgang starten. Bitte beachten Sie, dass Braze keine Garantie für die Datenverarbeitungszeiten übernimmt`/users/track`. Daher kann es zu [Race-Conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) kommen, wenn zwischen diesen Aufrufen nicht genügend Zeit zulässig ist.
+
+#### Option 2: Verwenden Sie eine API-gesteuerte Kampagne oder Canvas.
+
+Bitte verwenden Sie eine [API-gesteuerte Kampagne]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) oder einen [Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)-Workflow. Hiermit können Sie einen Empfänger:in anlegen, falls noch keiner vorhanden ist. Diese Option vereinfacht Ihre Backend-Prozesse, erfordert jedoch die Konfiguration einer Kampagne oder eines Canvas im Braze-Dashboard.
+
 
 ## Voraussetzungen
 
@@ -79,7 +96,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`user_aliases`| Optional | Array von Nutzer:innen-Alias-Objekten| Siehe [Nutzer-Alias Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Optional | String | Siehe [Bezeichner für Segmente]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`audience`| Optional | Verbundenes Objekt der Zielgruppe | Siehe [verbundene Zielgruppe]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Fakultativ* | String | Siehe [Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/#campaign-identifier/) für weitere Informationen. <br><br>\*Erforderlich, wenn Sie die Metriken der Kampagne (wie z.B. _Sendungen_, _Klicks_ oder _Bounces_) auf dem Braze-Dashboard tracken möchten. |
+|`campaign_id`| Fakultativ* | String | Siehe [Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/#campaign-identifier/) für weitere Informationen. <br><br>Erforderlich für Tracking von Kampagnen-Metriken (wie _Sendungen_, _Klicks_ oder _Bounces_) auf dem Braze-Dashboard. |
 |`send_id`| Optional | String | Siehe [Bezeichner senden]({{site.baseurl}}/api/identifier_types/#send-identifier). |
 |`override_frequency_capping`| Optional | Boolesch | Ignorieren Sie `frequency_capping` für Kampagnen, standardmäßig ist `false` eingestellt. |
 |`recipient_subscription_state`| Optional | String | Verwenden Sie diese Option, um Nachrichten nur an Nutzer:in (`opted_in`), nur an Nutzer:in (`subscribed`) oder an alle Nutzer:in zu senden, auch an abgemeldete Nutzer (`all`), die sich angemeldet haben. <br><br>Die Verwendung von `all` Nutzer:innen ist nützlich für Transaktions-E-Mails Messaging. Standardmäßig ist `subscribed` eingestellt. |
