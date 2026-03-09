@@ -1,6 +1,6 @@
 ---
 nav_title: Gestionar datos personalizados
-article_title: Gestionar datos personalizados
+article_title: Administrar datos personalizados
 page_order: 20
 page_type: reference
 description: "Este artículo de referencia explica cómo gestionar los datos personalizados, como la prepoblación de campañas y segmentos o el bloqueo y la eliminación de datos."
@@ -36,19 +36,66 @@ Después de crear un evento personalizado o un producto, selecciona **Gestionar 
 
 Para que estos atributos personalizados, eventos, productos o propiedades del evento añadidos sean trazables, debes pedir a tu equipo desarrollador que los cree en el SDK utilizando el nombre exacto que utilizaste para añadirlos anteriormente. O puedes utilizar [la API]({{site.baseurl}}/api/basics/) de Braze para importar datos sobre ese atributo. Después de eso, el atributo personalizado, evento u otro será accionable y se aplicará a sus usuarios.
 
-{% include alerts/note_alerts.md alert='Manage custom data storage' %}
+{% multi_lang_include alerts/note_alerts.md alert='Manage custom data storage' %}
 
 ## Bloquear datos personalizados
 
-Ocasionalmente puedes identificar atributos personalizados, eventos personalizados o eventos de compra que registran demasiados puntos de datos, ya no son útiles para tu estrategia de marketing o se registraron por error. 
+En ocasiones, es posible que identifiques atributos personalizados, eventos personalizados o eventos de compra que registran demasiados puntos de datos, ya no son útiles para tu estrategia de marketing o se registraron por error. 
 
 Para impedir que estos datos se envíen a Braze, puede bloquear un objeto de datos personalizado mientras su equipo de ingeniería trabaja para eliminarlo del backend de su aplicación o sitio web. El bloqueo impide que un objeto de datos personalizados concreto sea registrado por Braze en el futuro, lo que significa que no aparecerá cuando se busque a un usuario concreto.
 
-{% alert important %}
-Para bloquear datos de clientes, necesitas [permisos del usuario]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) para acceder y editar campañas, Lienzos y segmentos.
-{% endalert %}
-
 Los datos bloqueados no serán enviados por el SDK, y el panel de Braze no procesará los datos bloqueados de otras fuentes (por ejemplo, la API). Sin embargo, el bloqueo no elimina los datos de los perfiles de usuario ni disminuye retroactivamente la cantidad de puntos de datos incurridos para ese objeto de datos personalizado.
+
+### Permisos de usuario necesarios
+
+Para bloquear datos personalizados, necesitas los [permisos de usuario]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) en el siguiente menú desplegable para tu espacio de trabajo.
+
+{% details User permissions for blocklisting custom data %}
+
+{% multi_lang_include deprecations/user_permissions.md %}
+
+- Ver campañas
+- Editar campañas
+- Archivar campañas
+- Ver Canvas
+- Editar Canvas
+- Archivar Canvas
+- Ver las reglas de limitación de frecuencia
+- Editar reglas de limitación de frecuencia
+- Ver priorización de mensajes
+- Editar priorización de mensajes
+- Ver bloques de contenido
+- Ver las feature flags
+- Editar conmutador de características
+- Archiva feature flags
+- Ver segmentos
+- Editar segmentos
+- Ver plantillas IAM
+- Editar plantillas IAM
+- Archivar plantillas IAM
+- Ver plantillas de correo electrónico
+- Editar plantilla de correo electrónico
+- Archivar plantillas de correo electrónico
+- Ver plantillas webhook
+- Editar plantillas webhook
+- Archivar plantillas webhook
+- Ver plantillas de enlaces
+- Editar plantillas de enlaces
+- Ver activos de la biblioteca de medios
+- Editar activos de la biblioteca de medios
+- Eliminar activos de la biblioteca de medios
+- Ver ubicaciones
+- Editar ubicaciones
+- Ubicación de los archivos
+- Ver códigos promocionales
+- Editar códigos promocionales
+- Códigos promocionales de las exportaciones
+- Ver centros de preferencia
+- Editar centros de preferencia
+- Ver informes
+- Editar informes
+
+{% enddetails %}
 
 ### Bloqueo de atributos personalizados, eventos personalizados y productos
 
@@ -62,12 +109,12 @@ Para detener el seguimiento de un atributo personalizado, evento o producto espe
 2. Seleccione el atributo, evento o producto personalizado. Para atributos y eventos personalizados, puedes seleccionar hasta 100 a la vez para bloquearlos.
 3. Selecciona **Lista de bloqueo**.
 
-![Múltiples atributos personalizados seleccionados que aparecen bloqueados en la página Atributos personalizados.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
+![Varios atributos personalizados seleccionados que están incluidos en la lista de bloqueados en la página Atributos personalizados.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
-Puedes bloquear hasta 300 atributos personalizados y 300 eventos personalizados. Para evitar que se recojan determinados atributos de los dispositivos, consulta nuestra [guía del SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
+Puedes bloquear hasta 300 atributos personalizados y 300 eventos personalizados. Para evitar la recopilación de determinados atributos del dispositivo, consulta nuestra [guía SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
 
 {% alert important %}
-Los atributos personalizados o eventos personalizados con un estado de **Eliminado** contarán para el límite de la lista de bloqueados hasta que se eliminen.
+Los atributos personalizados o los eventos personalizados con estado **«En la papelera»** se tendrán en cuenta para el límite de la lista de bloqueados hasta que se eliminen.
 {% endalert %}
 
 Cuando se bloquea un evento o atributo personalizado, se aplica lo siguiente:
@@ -119,7 +166,7 @@ Cuando elimines datos personalizados, ten en cuenta los siguientes detalles:
 * Los datos se eliminan de la plataforma Braze y de los perfiles de usuario.
 * Puedes "reutilizar" el nombre del atributo personalizado o el nombre del evento personalizado después de eliminarlo. Esto significa que si observas que los datos personalizados "reaparecen" en Braze después de eliminarlos, puede deberse a una integración que no se ha detenido y está enviando datos con el mismo nombre de datos personalizados.
 * Puede que tengas que volver a bloquear un elemento si al borrarlo vuelven a aparecer datos personalizados. El estado de la lista de bloqueo no se conserva porque se han eliminado los datos personalizados.
-* Eliminar datos personalizados no registra ningún [punto de datos]({{site.baseurl}}/user_guide/data/data_points) y tampoco genera nuevos puntos de datos para utilizar.
+* Al eliminar datos personalizados, no se registran [puntos de]({{site.baseurl}}/user_guide/data/data_points) [datos]({{site.baseurl}}/user_guide/data/data_points) ni se generan nuevos puntos de datos para su uso.
 
 ## Forzar la comparación de tipos de datos
 
@@ -144,7 +191,7 @@ Si eliges forzar el tipo de datos de un atributo, cualquier dato que entre que n
 | Número | Los números enteros o flotantes (como `1`, `1.5`) se almacenarán como números |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para obtener más información sobre las opciones específicas de filtrar expuestas por las diferentes comparaciones de tipos de datos, consulta [Configurar informes]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting). Para más información sobre los distintos tipos de datos disponibles, consulta [Tipos de datos de atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
+Para obtener más información sobre las opciones para filtrar que ofrecen las diferentes comparaciones de tipos de datos, consulta [Configuración de informes]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting). Para obtener más información sobre los diferentes tipos de datos disponibles, consulta [Tipos de datos de atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
 
 {% alert note %}
 Los datos enviados a Braze son inmutables y no pueden borrarse ni modificarse después de que los hayamos recibido. Sin embargo, puede utilizar cualquiera de los pasos enumerados en las secciones anteriores para ejercer control sobre lo que está rastreando en su tablero.
