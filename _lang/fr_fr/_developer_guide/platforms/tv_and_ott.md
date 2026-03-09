@@ -258,7 +258,7 @@ Pour cibler les applications OTT pour la messagerie, nous vous recommandons de c
 ## Interface utilisateur Headless {#custom-ui}
 
 {% alert important %}
-Les plateformes qui prennent en charge les messages in-app ou les cartes de contenu par le biais d'une interface utilisateur sans tête n'incluent **pas** d'interface utilisateur ou de vues par défaut. Créez votre propre interface utilisateur personnalisée (par exemple pour les messages in-app), puis utilisez les modèles de données fournis par le SDK pour alimenter ces interfaces.
+Les plateformes qui prennent en charge les messages in-app ou les cartes de contenu via une interface utilisateur sans affichage **ne** comprennent aucune interface utilisateur ou vue par défaut. Créez votre propre interface utilisateur personnalisée (par exemple, pour les messages in-app), puis utilisez les modèles de données fournis par le SDK pour alimenter ces interfaces utilisateur.
 {% endalert %}
 
 Avec l'interface utilisateur Headless, Braze fournit un modèle de données, tel que JSON, que votre application peut lire et utiliser au sein d'une interface utilisateur contrôlée par votre application. Ces informations contiendront les champs configurés dans le tableau de bord (titre, corps, texte du bouton, couleurs, etc.) que votre application peut lire et afficher en conséquence. Pour plus d'informations sur l'envoi personnalisé de messages, voir ce qui suit :
