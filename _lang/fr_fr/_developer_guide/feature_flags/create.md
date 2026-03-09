@@ -1,5 +1,5 @@
 ---
-nav_title: Créer des drapeaux de fonctionnalité
+nav_title: Créer des indicateurs de fonctionnalité
 article_title: Création d’indicateurs de fonctionnalité
 page_order: 20
 description: "Cet article de référence explique comment créer des indicateurs de fonctionnalité pour coordonner les déploiements de nouvelles fonctionnalités."
