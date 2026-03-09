@@ -1,5 +1,5 @@
 ---
-nav_title: Administrador de paquetes Swift
+nav_title: Swift Package Manager
 article_title: Integración de Swift Package Manager para iOS
 platform: iOS
 page_order: 3
