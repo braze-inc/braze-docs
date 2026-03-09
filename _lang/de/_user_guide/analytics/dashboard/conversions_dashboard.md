@@ -51,17 +51,17 @@ Wenn Sie ein angepasstes Event auswählen, wird das Dropdown-Menü **Konversions
 
 ### Überlegungen
 
-Damit ein Nutzer:innen in dem Bericht gezählt wird, muss er die folgenden Kriterien innerhalb des ausgewählten Datumsbereichs erfüllen:
-1. Geben Sie den Canvas oder die Kampagne ein.
-2. Protokollieren Sie eine [Attribution-Methode]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods).
+Damit ein Nutzer:in im Bericht berücksichtigt wird, muss er innerhalb des ausgewählten Datumsbereichs die folgenden Kriterien erfüllen:
+1. Bitte betreten Sie die Canvas oder Kampagne.
+2. Bitte eine [Methode zur Attribution]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods) protokollieren.
 3. Führen Sie das Konversions-Event durch.
 
-Nehmen wir an, ein Nutzer:innen macht Folgendes:
-1. Tritt am 30\. September in den Canvas ein.
-2. Protokolliert eine Attribution Methode am 1\. Oktober.
+Nehmen wir beispielsweise an, ein Nutzer:in führt folgende Schritte aus:
+1. Tritt am 30\. September auf das Canvas.
+2. Protokolliert eine Methode der Attribution am 1\. Oktober.
 3. Führt das Konversions-Event am 2\. Oktober durch.
 
-Dieser Nutzer:innen erscheint **nicht** in einem Bericht mit einem Datumsbereich vom 1\. Oktober bis zum 7\. Oktober. Das liegt daran, dass der Nutzer:innen den Canvas vor dem Berichtszeitraum betreten hat, obwohl das Konversions-Event innerhalb des definierten Datumsbereichs stattfand. Damit die Nutzer:innen in einem Bericht erscheinen, muss der Datumsbereich den 30\. September umfassen.
+Dieser Nutzer:in **wird** in einem Bericht mit dem Datumsbereich vom 1\. bis zum 7\. Oktober **nicht** aufgeführt. Dies liegt daran, dass die Nutzer:innen Canvas vor dem Berichtszeitraum aufgerufen haben, obwohl das Konversions-Event innerhalb des definierten Datumsbereichs stattgefunden hat. Damit die Nutzer:innen in einem Bericht erscheinen, muss der Datumsbereich den 30\. September enthalten.
 
 ## Grundlegendes zu Ihrem Bericht
 
@@ -75,7 +75,7 @@ Ihr Bericht ist in drei Abschnitte unterteilt:
 
 Die Tabelle mit den Konversionsdetails zeigt immer eine Spalte für *Empfänger:innen* und eine weitere für *Konversionen* (Rate und Summe). Die beiden verbleibenden Tabellenspalten, die angezeigt werden, hängen von den Optionen ab, die Sie beim Einrichten Ihres Berichts ausgewählt haben. 
 
-![Tabelle mit den Details zur Konversion, in der Berührungen als Attributionsmethode für die Spalten drei und vier angezeigt werden.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+![Tabelle mit Details der Konversion, in der „Berührungen“ als Methode der Attribution für die Spalten drei und vier angegeben sind.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
 
 Die folgende Tabelle beschreibt mögliche Metriken.
 
@@ -101,7 +101,7 @@ Wählen Sie eine Download-Option aus, um die Zeitreihendaten herunterzuladen: PN
 Dieses Diagramm zeigt jeweils nur Daten für einen einzelnen Kanal an. Verwenden Sie das Dropdown-Menü **Kanal** auf dem Chart, um einen einzelnen Kanal auszuwählen.
 {% endalert %}
 
-![Funnel-Balkendiagramm für Konversionen für zwei Kampagnen, die ähnliche Ergebnisse für zugestellte E-Mails, geöffnete E-Mails, angeklickte E-Mails und Konversionen zeigen.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
+![Balkendiagramm zum Konversionstrichter für zwei E-Mail-Kampagnen, das ähnliche Ergebnisse für „E-Mail zugestellt“, „E-Mail geöffnet“, „E-Mail mit Klick“ und „Konversionen“ aufweist.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### Konversionen im Zeitverlauf
 
@@ -109,7 +109,7 @@ Dieses Zeitreihendiagramm enthält eine Darstellung der Konversionen pro Kampagn
 
 Um die Zeitreihendaten herunterzuladen, wählen Sie <i class="fas fa-bars"></i> und dann die gewünschte Download-Option aus. Die verfügbaren Optionen sind PNG, JPEG, PDF, SVG oder CSV.
 
-![Zeitreihengrafik der Konversionen für zwei E-Mail Kampagnen, die die Konversionen nach Tagen anzeigt.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
+![Zeitreihendiagramm der Konversionen im Zeitverlauf für zwei E-Mail-Kampagnen, das die Konversionen pro Tag darstellt.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### Attributionsmethoden
 
@@ -132,18 +132,18 @@ Um die Zeitreihendaten herunterzuladen, wählen Sie <i class="fas fa-bars"></i> 
 
 ## Fehlersuche
 
-### Warum habe ich niedrige Kampagnen- oder Canvas-Konversionen?
+### Warum sind meine Kampagnen- oder Canvas-Konversionen niedrig?
 
 Ihre Konversionen sind vielleicht nicht so hoch, wie Sie es erwarten, wenn Sie sie mit früheren Kampagnen oder Ihren Erwartungen vergleichen. Konversionen sind eine knifflige Angelegenheit, aber sie hängen von ein paar einfachen Funktionen in unserer Plattform ab: Event Tracking und Konversionsfristen.
 
-Zur Fehlerbehebung empfehlen wir Ihnen, Ihr Tracking von Ereignissen und Konversionsfristen zu überprüfen.
+Um die Ursache dafür zu ermitteln, empfehlen wir Ihnen die Fehlerbehebung bei Ihrem Tracking und Ihren Fristen für die Konversion.
 
 #### Tracking von Ereignissen
 
-Wenn eine Kampagne einen Sitzungsstart oder ein angepasstes Event auslöst, möchten Sie sicherstellen, dass dieses Event oder diese Sitzung häufig genug vorkommt, um die Nachricht zu triggern. Prüfen Sie das [Dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) für Sitzungsdaten oder Ihren [angepassten Events-Bericht]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/).
+Wenn eine Kampagne einen Sitzungsstart oder ein angepasstes Event auslöst, möchten Sie sicherstellen, dass dieses Event oder diese Sitzung häufig genug vorkommt, um die Nachricht zu triggern. Bitte überprüfen Sie das [Start-Dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) für Sitzungsdaten oder Ihren [angepassten Event]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/)-Bericht.
 
 #### Fristen für die Konversion
 
 Für jedes Konversions-Event, das Sie pro Kampagne auswählen, legen Sie die [Frist]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#creating-a-campaign-with-conversion-tracking) fest. Das bedeutet, dass Sie ein Zeitlimit festlegen, innerhalb dessen eine Konversion stattfinden muss, damit sie für die jeweilige Kampagne gezählt wird.
 
-Vergewissern Sie sich, dass Sie die [Regeln für das Konversion Tracking]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules) gelesen haben, um die Metriken Ihrer Kampagne zu verstehen. Für Nutzer:innen Konversionen in Canvas referenzieren Sie bitte die [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
+Bitte überprüfen Sie, ob Sie die Informationen zu [den Regeln für das Tracking der Konversionen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules) gelesen haben, um Ihre Metriken für die Kampagne zu verstehen. Für Nutzer:innen Konversionen in Canvas referenzieren Sie bitte die [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
