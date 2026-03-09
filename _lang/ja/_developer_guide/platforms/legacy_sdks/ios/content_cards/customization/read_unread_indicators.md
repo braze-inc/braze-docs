@@ -1,5 +1,5 @@
 ---
-nav_title: 読み取り&amp;アンプ;未読インジケータ
+nav_title: 既読・未読インジケーター
 article_title: iOS 用コンテンツカード既読 / 未読インジケーター
 platform: iOS
 page_order: 4
@@ -16,7 +16,7 @@ noindex: true
 
 ## 未閲覧インジケーターを無効にする
 
-![2つのコンテンツカードが並んで表示されます。左側のカードの下に青い線が表示され、表示されていないことを示します。右側のカードには、すでに表示されていることを示す青い線が表示されません。]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
+![2つのコンテンツカードが並んで表示されます。左側のカードの下に青い線が表示され、表示されていないことを示します。右側のカードには青い線がない。これは既に確認済みであることを示している。]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
 
 カードが閲覧されたかどうかを示すカード下部の青い線を無効にするには、`ABKContentCardsTableViewController` の `disableUnviewedIndicator` プロパティを `YES` に設定します。
 
