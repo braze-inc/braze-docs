@@ -40,7 +40,7 @@ Zu den weiteren Vorteilen der Verwendung von `external_id` gehören folgende:
 
 ### Überlegungen zu externen IDs
 
-{% include alerts/warning_alerts.md alert='User profile external_id' %} 
+{% multi_lang_include alerts/warning_alerts.md alert='User profile external_id' %} 
 
 #### Risiko der Verwendung einer E-Mail oder einer gehashten E-Mail als externe ID
 
@@ -74,7 +74,7 @@ Diese funktionieren wie ein Schlüssel-Wert-Paar, das aus zwei Teilen besteht: e
 
 ### Update der Nutzer:innen-Aliase
 
-Ein Alias kann mit einem neuen Namen für ein bestimmtes Etikett aktualisiert werden, nachdem es gesetzt wurde, indem Sie entweder unsere [Endpunkte für Nutzerdaten]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) verwenden oder einen neuen Namen über das SDK übergeben. Der Nutzer-Alias wird dann beim Exportieren der Daten des Nutzers:innen sichtbar sein.
+Ein Alias kann mit einem neuen Namen für ein bestimmtes Label aktualisiert werden, nachdem es entweder über unsere [Nutzerdaten-Endpunkte]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) festgelegt oder ein neuer Name über den SDK-Endpunkt übermittelt wurde. Der Nutzer-Alias wird dann beim Exportieren der Daten des Nutzers:innen sichtbar sein.
 
 ![Zwei Benutzerprofile für verschiedene Benutzer mit demselben Alias-Label aber unterschiedlichen Alias-Namen]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
 
@@ -111,5 +111,5 @@ Die Deinstallation und Neuinstallation einer App erzeugt eine neue anonyme `braz
 Um Benutzer zu Testzwecken in Ihrem Dashboard zu finden und zu erkennen, können alle Benutzer-IDs verwendet werden. Um Ihren Nutzer:innen im Braze-Dashboard zu finden, referenzieren Sie auf [Testnutzer:innen hinzufügen]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users).
 
 {% alert important %}
-Braze sperrt bzw. blockiert Benutzer mit mehr als 5.000.000 Sitzungen ("Dummy-Benutzer") und lässt ihre SDK-Ereignisse außer Acht, da sie meist auf Integrationsfehler zurückgehen. Wenn Sie feststellen, dass dies einem rechtmäßigen Nutzer:innen passiert ist, wenden Sie sich an Ihren Braze-Konto Manager:in.
+Braze sperrt bzw. blockiert Benutzer mit mehr als 5.000.000 Sitzungen ("Dummy-Benutzer") und lässt ihre SDK-Ereignisse außer Acht, da sie meist auf Integrationsfehler zurückgehen. Sollten Sie feststellen, dass dies bei einer legitimen Nutzer:in der Fall ist, wenden Sie sich bitte an Ihren Braze-Account Manager.
 {% endalert %}
