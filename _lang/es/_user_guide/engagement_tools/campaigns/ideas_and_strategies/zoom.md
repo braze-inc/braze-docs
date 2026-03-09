@@ -33,7 +33,7 @@ Cree una campaña de correo electrónico con un botón de llamada a la acción e
 
 Utilizando los parámetros de la URL para pasar los datos del usuario, cree una llamada a la API que se ejecute cuando se cargue la página para añadir al usuario al seminario web.
 
-![Mensaje de correo electrónico con la plantilla Liquid utilizada para incluir nombre, apellidos, dirección de correo electrónico y ciudad.]({% image_buster /assets/img/zoom/zoom1.png %})
+![Mensaje de correo electrónico con plantillas Liquid utilizado para incluir el nombre, los apellidos, la dirección de correo electrónico y la ciudad.]({% image_buster /assets/img/zoom/zoom1.png %})
 
 Los usuarios ya están registrados para el seminario web con los datos que ya existen en su perfil de Braze.
 
@@ -44,7 +44,7 @@ Los usuarios ya están registrados para el seminario web con los datos que ya ex
 
 	Configure el comportamiento del botón al hacer clic para que enlace con la página de destino del seminario web.<br>
 
-	![Enlace al seminario web cuando se hace clic en un botón.]({% image_buster /assets/img/zoom/zoom2.png %})<br><br>
+	![Enlace al seminario web al hacer un clic en un botón.]({% image_buster /assets/img/zoom/zoom2.png %})<br><br>
 
 	Un ejemplo sencillo de una página de aterrizaje para usuarios que se registran a través de un clic de botón desde un push. Informar al usuario de lo que ha contratado y confirmar su inscripción:<br>
 
@@ -54,7 +54,7 @@ Los usuarios ya están registrados para el seminario web con los datos que ya ex
 2. Cree una campaña webhook activada por el mensaje in-app o el clic en el botón.<br><br>
  	Utilizando los datos de usuario existentes en su perfil de Braze, registra al usuario para el seminario web.<br>
 
-	![Una campaña basada en acciones que se enviará a los usuarios que hayan hecho clic en un botón de una campaña específica.]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
+	![Una campaña basada en acciones que se enviará a los usuarios que hayan hecho clic en un botón para una campaña específica.]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
 
 	Ejemplo de llamada webhook al endpoint Zoom.<br>
 	{% raw %}
@@ -81,7 +81,7 @@ Los usuarios ya están registrados para el seminario web con los datos que ya ex
 
 	Configurar el comportamiento del botón al hacer clic para enlazar con la página de inicio del seminario web<br>
 
-	![Enlace al seminario web cuando se hace clic en un botón.]({% image_buster /assets/img/zoom/zoom3.png %})<br><br>
+	![Enlace al seminario web al hacer un clic en un botón.]({% image_buster /assets/img/zoom/zoom3.png %})<br><br>
 
 	Un ejemplo sencillo de una página de aterrizaje para usuarios que se registran haciendo clic en un botón de un mensaje in-app. Informar al usuario de lo que ha contratado y confirmar su inscripción:<br>
 
@@ -90,7 +90,7 @@ Los usuarios ya están registrados para el seminario web con los datos que ya ex
 2. Cree una campaña webhook activada por el mensaje in-app o el clic en el botón.<br><br>
 	Utilizando los datos de usuario existentes en su perfil de Braze, registra al usuario para el seminario web.<br>
 
-	![Una campaña basada en la acción que se enviará a los usuarios que hayan hecho clic en un botón de una campaña específica.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
+	![Campaña basada en acciones que se enviará a los usuarios que hayan hecho clic en un botón para una campaña específica.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
 
 	Ejemplo de llamada webhook al endpoint Zoom.<br>
 	{% raw %}
