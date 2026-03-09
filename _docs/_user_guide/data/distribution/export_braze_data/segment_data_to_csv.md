@@ -44,7 +44,7 @@ The following is included in your export depending on your selection.
 | Appboy ID                   | Internal ID (cannot be changed)                           |
 | country                     | Country                                    |
 | created_at                  | Date and time when the user profile was created                   |
-| created_from                | Method in which the user profile was created from (REST, SDK, CSV, etc.)         |
+| created_from                | Method used to create the user profile (for example, REST API, SDK, or CSV import)         |
 | devices                     | Device information                           |
 | date_of_birth               | Date of birth                                            |
 | email                       | Email address                                            |
