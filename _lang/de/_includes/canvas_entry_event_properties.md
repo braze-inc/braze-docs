@@ -3,27 +3,27 @@ Sie können Canvas Eingangs-Eigenschaften und Event-Eigenschaften in Ihren Nutze
 {% tabs local %}
 {% tab Canvas Entry Properties %}
 
-[Canvas-Entry-Eigenschaften]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) sind Eigenschaften für Canvase, die durch Aktionen oder die API getriggert werden. Beachten Sie, dass das Objekt `canvas_entry_properties` maximal 50 KB groß sein darf.
+[Canvas-Entry-Eigenschaften]({{site.baseurl}}/api/objects_filters/context_object/) sind Eigenschaften für Canvase, die durch Aktionen oder die API getriggert werden. Beachten Sie, dass das Objekt `canvas_entry_properties` maximal 50 KB groß sein darf.
 
 {% alert note %}
-Speziell für In-App-Nachricht-Kanäle gilt: `canvas_entry_properties` kann nur in Canvas referenziert werden.
+Speziell für In-App-Nachricht-Kanäle gilt: `context` kann nur in Canvas referenziert werden.
 {% endalert %}
 
-Sie können `canvas_entry_properties` in jedem Schritt von Messaging mit diesem Liquid-Format referenzieren: ``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``. Beachten Sie, dass es sich bei den Events um angepasste Events oder Kauf-Events handeln muss, um auf diese Weise verwendet werden zu können.
+Sie können `context` in jedem Schritt von Messaging mit diesem Liquid-Format referenzieren: ``{% raw %} context.${property_name} {% endraw %}``. Beachten Sie, dass es sich bei den Events um angepasste Events oder Kauf-Events handeln muss, um auf diese Weise verwendet werden zu können.
 
 #### Anwendungsfall
 
 {% raw %}
-Angenommen, der Shop RetailApp erhält folgende Anfrage: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. 
+Angenommen, der Shop RetailApp erhält folgende Anfrage: `\"context\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. 
 
-RetailApp kann den Produktnamen (Schuhe) mit diesem Liquid in eine Nachricht einfügen: `{{canvas_entry_properties.${product_name}}}`.
+RetailApp kann den Produktnamen (Schuhe) mit diesem Liquid in eine Nachricht einfügen: `{{context.${product_name}}}`.
 {% endraw %}
 
 RetailApp kann auch spezielle Nachrichten für verschiedene Eigenschaften von `product_name` in einem Canvas triggern, das Nutzer:innen anspricht, nachdem sie ein Kauf-Event ausgelöst haben. Sie können zum Beispiel unterschiedliche Nachrichten an Nutzer:innen, die Schuhe gekauft haben, und Nutzer:innen, die etwas anderes gekauft haben, senden, indem Sie das folgende Liquid in einen Messaging-Schritt einfügen.
 
 {% raw %}
 ```markdown
-{% if  {{canvas_entry_properties.${product_name}}} == "shoes" %}
+{% if  {{context.${product_name}}} == "shoes" %}
   Your order is set to ship soon. While you're waiting, why not step up your shoe care routine with a little upgrade? Check out our selection of shoelaces and premium shoe polish.
 {% else %}
   Your order will be on its way shortly. If you missed something, you have until the end of the week to add more items to your cart for the same discounts.
@@ -44,7 +44,7 @@ Sie können Canvase nicht mehr mit dem Original-Editor erstellen oder dupliziere
 Event-Eigenschaften referenzieren auf die Eigenschaften, die Sie für angepasste Events und Käufe festlegen. Diese `event_properties` können in Kampagnen mit aktionsbasierter Lieferung und Canvases verwendet werden.
 
 {% alert important %}
-Sie können `event_properties` nicht im ersten Nachrichten-Schritt Ihres Canvas verwenden. Stattdessen müssen Sie `canvas_entry_properties` verwenden oder einen Aktionspfadschritt mit dem entsprechenden Event **vor dem** Nachrichtenschritt hinzufügen, der `event_properties` enthält.
+Sie können `event_properties` nicht im ersten Nachrichten-Schritt Ihres Canvas verwenden. Stattdessen müssen Sie `context` verwenden oder einen Aktionspfadschritt mit dem entsprechenden Event **vor dem** Nachrichtenschritt hinzufügen, der `event_properties` enthält.
 {% endalert %}
 
 In Canvas können angepasste Event- und Kauf-Event-Eigenschaften in Liquid in jedem Nachrichten-Schritt verwendet werden, der auf einen Aktions-Pfad-Schritt folgt. Stellen Sie sicher, dass Sie {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} verwenden, wenn Sie auf diese Event-Eigenschaften verweisen. DiDiese Events müssen angepasste Events oder Kauf-Events sein, um auf diese Weise in der Komponente „Nachricht“ verwendet werden zu können.
