@@ -28,7 +28,7 @@ description: "Este artigo descreve os detalhes sobre o endpoint da Braze \"Exclu
 
 ## Exemplo de solicitação
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {
