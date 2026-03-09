@@ -48,7 +48,7 @@ Geofence-triggered campaigns are available on iOS and Android. To support geofen
 
 * Your integration must support background push notifications.
 * Braze geofences or location collection must be enabled.
-* On iOS 11 and later, the user must grant "Always Allow" location access for geofencing to work.
+* The user must grant "Always Allow" location access for geofencing to work.
 
 {% alert important %}
 Braze location collection is disabled by default. To verify that it's enabled on Android, confirm that `com_braze_enable_location_collection` is set to `true` in your `braze.xml`.
