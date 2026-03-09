@@ -14,32 +14,32 @@ channel:
 
 > Cette page explique comment utiliser des paires clé-valeur pour envoyer des données supplémentaires aux appareils des utilisateurs. Cette fonctionnalité est disponible sur les canaux de communication de notifications push, de messages in-app, d’e-mail et de cartes de contenu.
 
-Utilisez des paires clé-valeur pour ajouter des métadonnées structurées aux messages. Ces données supplémentaires peuvent enrichir les messages avec des informations contextuelles supplémentaires qui peuvent influencer le rendu ou le traitement d'un message.
+Veuillez utiliser des paires clé-valeur pour ajouter des métadonnées structurées aux messages. Ces données supplémentaires peuvent enrichir les messages avec des informations contextuelles supplémentaires susceptibles d'influencer la manière dont un message est rendu ou traité.
 
-Les paires clé-valeur étant des métadonnées, ces données ne sont pas nécessairement visibles par le destinataire, mais peuvent être utilisées par vos systèmes ou processus connectés pour personnaliser l'envoi des messages. 
+Les paires clé-valeur étant des métadonnées, ces données ne sont pas nécessairement visibles pour le destinataire, mais peuvent être utilisées par vos systèmes ou processus connectés pour personnaliser le traitement des messages. 
 
-Chaque paire est composée de
+Chaque paire comprend :
 
-- **Clé :** L'identifiant (exemple : `utm_source`)
-- **Avantage :** Les données associées (exemple : `newsletter`)
+- **Clé :** L'identifiant (Exemple : `utm_source`)
+- **Avantage :** Les données associées (Exemple : `newsletter`)
 
 ## Cas d’utilisation
 
-Voici quelques exemples de cas d'utilisation pour l'ajout de métadonnées avec des paires clé-valeur :
+Voici quelques exemples d'utilisation pour l'ajout de métadonnées avec des paires clé-valeur :
 
-1. **Paramètres de suivi :** Attacher des paramètres UTM à des fins d'analyse/analytique (si utilisé comme adjectif)
+1. **Paramètres de suivi :** Ajouter des paramètres UTM à des fins d'analyse/analytique
    - Clé : `utm_campaign`
    - Valeur : `spring_sale`
-2. **Tags personnalisés :** Ajout de tags pour le routage ou la catégorisation interne
+2. **Étiquettes personnalisées :** Ajouter des étiquettes pour le routage interne ou la catégorisation
    - Clé : `priority`
    - Valeur : `high`
-3. **Déclencheurs de comportement :** Métadonnées utilisées pour déclencher ou personnaliser des comportements in-app.
+3. **Déclencheurs comportementaux :** Les métadonnées sont utilisées en tant que déclencheurs ou pour personnaliser les comportements dans l'application.
    - Clé : `deep_link`
    - Valeur : `app://promo-page`
 
 ## Notifications push
 
-Les paires clé-valeur peuvent être ajoutées aux notifications push Android, iOS et web. Vous pourriez utiliser des paires clé-valeur pour mettre à jour les indicateurs internes et le contenu de l'app ou personnaliser les propriétés des notifications push, telles que la priorisation des alertes, la localisation et les sons.
+Les paires clé-valeur peuvent être ajoutées aux notifications push Android, iOS et Web. Vous pouvez utiliser des paires clé-valeur pour mettre à jour les indicateurs internes et le contenu de l'application ou pour personnaliser les propriétés des notifications push, telles que la priorisation des alertes, la localisation et les sons.
 
 Dans le compositeur de messages, sélectionnez l'onglet **Paramètres**, puis **Ajouter une nouvelle paire** et spécifiez vos paires clé-valeur.
 
@@ -127,7 +127,7 @@ Si vous utilisez l'API du fournisseur HTTP/2, toute charge utile individuelle qu
 
 ###### Campagnes déclenchées par API
 
-Braze vous permet d’envoyer une chaîne de caractères personnalisée de paires clé-valeur, connue sous le nom de `extras`. Pour accéder à vos extras dans les campagnes déclenchées par l'API et les campagnes planifiées déclenchées par l'API, dans le tableau de bord, définissez une clé comme "example_key", et une valeur comme {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. La console de développement affichera alors le message suivant `"extras": { "test": { "foo": 1, "bar": 1 }`
+Braze vous permet d’envoyer une chaîne de caractères personnalisée de paires clé-valeur, connue sous le nom de `extras`. Pour accéder à vos extras dans les campagnes déclenchées par API et les campagnes déclenchées par API en mode de planification, veuillez définir une clé comme"example_key",  et une valeur comme  dans le tableau{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} de bord. La console de développement affichera alors le message suivant `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ### Android
 
@@ -145,7 +145,7 @@ Le backend de votre application doit être en mesure de traiter les paires clé-
 
 ###### Campagnes déclenchées par API
 
-Braze vous permet d’envoyer une chaîne de caractères personnalisée de paires clé-valeur, connue sous le nom de `extras`. Pour accéder à vos extras dans les campagnes déclenchées par l'API et les campagnes planifiées déclenchées par l'API, dans le tableau de bord, définissez une clé comme "example_key", et une valeur comme {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. La console de développement affichera alors le message suivant : `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Braze vous permet d’envoyer une chaîne de caractères personnalisée de paires clé-valeur, connue sous le nom de `extras`. Pour accéder à vos extras dans les campagnes déclenchées par API et les campagnes déclenchées par API en mode de planification, veuillez définir une clé comme"example_key",  et une valeur comme  dans le tableau{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} de bord. La console de développement affichera alors le message suivant : `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ##### Options de messagerie FCM
 
@@ -167,7 +167,7 @@ Le système d'exploitation iOS peut [porter des notifications]({{site.baseurl}}/
 
 ## in-app Messages
 
-Vous pouvez ajouter une paire clé-valeur à un message in-app dans l'[éditeur traditionnel]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) en sélectionnant l'onglet **Paramètres**, en sélectionnant **Ajouter une nouvelle paire**, puis en spécifiant vos paires clé-valeur.
+Vous pouvez ajouter une paire clé-valeur à un message in-app dans l'[éditeur]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) [traditionnel]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) en sélectionnant l'onglet **Paramètres**, puis **Ajouter une nouvelle paire**, et enfin en spécifiant vos paires clé-valeur.
 
 {% alert note %}
 Les paires clé-valeur ne peuvent pas être définies via l'éditeur par glisser-déposer pour les messages in-app.
@@ -176,7 +176,7 @@ Les paires clé-valeur ne peuvent pas être définies via l'éditeur par glisser
 
 #### Campagnes déclenchées par API
 
-Braze vous permet d’envoyer une chaîne de caractères personnalisée de paires clé-valeur, connue sous le nom de `extras`. Pour accéder à vos extras dans les campagnes déclenchées par l'API et les campagnes planifiées déclenchées par l'API, dans le tableau de bord, définissez une clé comme "example_key", et une valeur comme {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. La console de développement affichera alors le message suivant : `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Braze vous permet d’envoyer une chaîne de caractères personnalisée de paires clé-valeur, connue sous le nom de `extras`. Pour accéder à vos extras dans les campagnes déclenchées par API et les campagnes déclenchées par API en mode de planification, veuillez définir une clé comme"example_key",  et une valeur comme  dans le tableau{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} de bord. La console de développement affichera alors le message suivant : `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ## E-mails
 
