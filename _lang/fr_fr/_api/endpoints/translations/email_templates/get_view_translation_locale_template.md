@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Afficher la traduction et les paramètres locaux spécifiques pour le modèle d'e-mail"
+nav_title: "GET : Afficher la traduction et les paramètres régionaux spécifiques pour le modèle d'e-mail d'e-mail"
 article_title: "GET : Afficher la traduction et la langue spécifiques pour le modèle d'e-mail"
 search_tag: Endpoint
 page_order: 2
@@ -12,14 +12,12 @@ description: "Cet article décrit les détails de la traduction et de la locale 
 {% api %}
 # Afficher une traduction et une locale spécifiques pour l'endpoint du modèle d'e-mail
 {% apimethod get %}
-/templates/translations/email
+/templates/traductions/e-mail
 {% endapimethod %}
 
-> Utilisez cet endpoint pour afficher une traduction et une région spécifiques pour un [modèle d'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) Pour plus d'informations sur les fonctionnalités de traduction, reportez-vous à la section [Locales dans les messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
+> Veuillez utiliser cet endpoint pour afficher une traduction et une locale spécifiques pour un [modèle d'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Veuillez consulter [la section Locales dans les messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) pour plus d'informations sur les fonctionnalités de traduction.
 
-{% alert important %}
-Cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Conditions préalables
 
@@ -80,7 +78,7 @@ Le code de statut `200` pourrait retourner l’en-tête et le corps de réponse 
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
