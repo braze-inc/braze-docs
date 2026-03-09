@@ -10,7 +10,7 @@ description: "Cet article présente les détails de l'envoi de messages immédia
 ---
 {% api %}
 # Envoyez des messages immédiatement en utilisant uniquement l'API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /messages/send
 {% endapimethod %}
 
@@ -18,9 +18,26 @@ description: "Cet article présente les détails de l'envoi de messages immédia
 
 Si vous souhaitez cibler un segment, un enregistrement de votre requête sera stocké dans la [console de développement](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
+
 {% multi_lang_include api/payload_size_alert.md %}
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
+{% alert important %}
+Lorsque vous utilisez cet endpoint pour les campagnes API, le destinataire doit déjà exister dans Braze pour que la demande aboutisse. Ceci s'applique lors de la spécification des utilisateurs dans les paramètres`external_user_ids` `user_aliases`ou .
+{% endalert %}
+
+### Création de nouveaux utilisateurs via l'API
+
+Si vous devez créer un utilisateur dans le cadre d'un envoi à l'aide de l'API, deux options s'offrent à vous :
+
+#### Option 1 : Veuillez utiliser`/users/track`puis envoyer
+
+Veuillez d'abord créer l'utilisateur à l'aide de[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)l'endpoint, puis attendre que les données soient propagées (il est généralement recommandé d'attendre quelques minutes) avant de lancer l'envoi via l'API uniquement. Veuillez noter que Braze ne garantit pas les délais de traitement `/users/track`des données, de sorte que [des conditions de concurrence]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) peuvent survenir si vous ne laissez pas suffisamment de temps entre ces appels.
+
+#### Option 2 : Veuillez utiliser une campagne déclenchée par API ou canvas.
+
+Veuillez utiliser une [campagne déclenchée par API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) ou un workflow [Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/). Ces options vous permettent de créer un destinataire s'il n'en existe pas déjà un. Cette option simplifie vos processus backend, mais nécessite la configuration d'une campagne ou d'un canvas dans le tableau de bord de Braze.
+
 
 ## Conditions préalables
 
@@ -79,7 +96,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`user_aliases`| Facultatif | Tableau des objets Alias utilisateur| Voir l'[objet alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Facultatif | Chaîne de caractères | Voir [identifiant de segmentation]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`audience`| Facultatif | Objet Audience connectée | Voir [audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| En option* | Chaîne de caractères | Pour plus d'informations, voir l'[identifiant de la campagne]({{site.baseurl}}/api/identifier_types/#campaign-identifier/). <br><br>\*Nécessaire si vous souhaitez suivre les indicateurs de la campagne (tels que les _envois_, les _clics_ ou les _rebonds_) sur le tableau de bord de Braze. |
+|`campaign_id`| En option* | Chaîne de caractères | Pour plus d'informations, voir l'[identifiant de la campagne]({{site.baseurl}}/api/identifier_types/#campaign-identifier/). <br><br>\*Obligatoire si vous souhaitez suivre les indicateurs de campagne (tels que _les envois_, _les clics_ ou _les rebonds_) sur le tableau de bord de Braze. |
 |`send_id`| Facultatif | Chaîne de caractères | Voir [identifiant d'envoi]({{site.baseurl}}/api/identifier_types/#send-identifier). |
 |`override_frequency_capping`| Facultatif | Valeur booléenne | Ignorez `frequency_capping` pour les campagnes, la valeur par défaut est `false`. |
 |`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
