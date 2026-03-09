@@ -2,7 +2,7 @@
 
 ## Über HTML Nachrichten
 
-Mit der Braze JavaScript-Schnittstelle können Sie Braze innerhalb der angepassten WebViews Ihrer App nutzen. Die [`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html) ist verantwortlich für:
+Mit der Braze JavaScript-Schnittstelle können Sie Braze innerhalb der angepassten WebViews Ihrer App nutzen. Der/die[`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html)ist verantwortlich für:
 
 1. Einspeisen der Braze JavaScript-Bridge in Ihre WebView, wie beschrieben in [Nutzerhandbuch: In-App-Nachrichten im HTML-Format]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages).
 2. Übergabe der von Ihrer WebView empfangenen Bridge-Methoden an das [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk).
@@ -54,11 +54,11 @@ Im Folgenden sehen Sie ein Beispiel für ein eingebettetes YouTube-Video in eine
 </body>
 ```
 
-## Deeplinks setzen
+## Verwendung von Deeplinks
 
-Wenn Sie Deeplinks oder externe Links in Android HTML In-App-Nachrichten verwenden, rufen Sie in Ihrem JavaScript **nicht** `brazeBridge.closeMessage()` auf. Die interne Logik des SDK schließt die In-App-Nachricht automatisch, wenn sie auf einen Link umleitet. Der Aufruf von `brazeBridge.closeMessage()` stört diesen Prozess und kann dazu führen, dass die Nachricht nicht mehr reagiert, wenn die Nutzer:innen zu Ihrer App zurückkehren. 
+Bei der Verwendung von Deeplinks oder externen Links in Android HTML-In-App-Nachrichten **sollten Sie** in Ihrem `brazeBridge.closeMessage()`JavaScript **nicht** aufrufen. Die interne Logik des SDK schließt die In-App-Nachricht automatisch, wenn sie zu einem Link weiterleitet. Der Aufruf`brazeBridge.closeMessage()`beeinträchtigt diesen Prozess und kann dazu führen, dass die Nachricht nicht mehr reagiert, wenn Nutzer:innen zu Ihrer App zurückkehren. 
 
-Im Folgenden sehen Sie ein Beispiel für einen Deeplink in einem Code Snippet:
+Das Folgende ist ein Beispiel für einen Deeplink in einem Snippet:
 
 {% raw %}
 ```javascript
