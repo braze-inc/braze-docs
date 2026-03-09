@@ -96,8 +96,8 @@ Todas as respostas bem-sucedidas retornarão `Subscribed`, `Unsubscribed` ou `Un
 }
 ```
 
-{% alert note %}
-Quando um usuário cancela a inscrição globalmente, ele cancela a inscrição de cada grupo de inscrições. Esse ponto de extremidade retorna o último status de inscrição para cada grupo de inscrições. Esse é um comportamento esperado porque, se o usuário decidir fazer uma nova inscrição global, o Braze reverterá cada status de inscrição.
+{% alert important %}
+Este endpoint retorna o status do grupo de inscrições independentemente do estado global de inscrição do usuário. Se um usuário estiver globalmente não inscrito, o dashboard do Braze o mostrará como não inscrito em cada grupo de inscrições. No entanto, este endpoint ainda retorna o último status de grupo de inscrições salvo (por exemplo, `Subscribed`) porque o estado global de inscrição se sobrepõe aos grupos de inscrições individuais sem sobrescrevê-los.<br><br>O Braze preserva os estados individuais dos grupos de inscrições para que, se o usuário se reinscrever globalmente, cada grupo de inscrições retorne ao seu status salvo anteriormente. Para determinar o estado efetivo de inscrição de um usuário, verifique tanto o status de inscrição global quanto o status do grupo de inscrições retornado por este endpoint.
 {% endalert %}
 
 {% endapi %}
