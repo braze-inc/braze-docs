@@ -1,6 +1,6 @@
 ---
-nav_title: 方向のカスタマイズ
-article_title: iOS用のアプリ内メッセージの方向をカスタマイズする
+nav_title: 向きをカスタマイズする
+article_title: iOS向けアプリ内メッセージの向きをカスタマイズする
 platform: iOS
 page_order: 3
 description: "この参考記事では、iOS アプリケーションのアプリ内メッセージの向きを設定する方法について説明します。"
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# 方向のカスタマイズ
+# 向きをカスタマイズする
 
 ## すべてのアプリ内メッセージの向きの設定
 
