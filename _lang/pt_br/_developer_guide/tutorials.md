@@ -4,7 +4,7 @@ article_title: Tutoriais do SDK Braze
 page_order: 1.9
 layout: dev_guide
 guide_top_header: "Tutoriais do SDK Braze"
-guide_top_text: "> Cada tutorial do SDK Braze inclui código passo a passo e rolável para ajudá-lo a implementar novos recursos em seu app. Escolha um tutorial abaixo para começar!"
+guide_top_text: "> Cada tutorial do SDK Braze inclui código passo a passo e rolável para ajudar você a implementar novos recursos em seu app. Escolha um tutorial abaixo para começar!"
 
 guide_menu_title: "Banners"
 guide_menu_list:
