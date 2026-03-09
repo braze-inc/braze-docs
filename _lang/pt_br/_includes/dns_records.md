@@ -7,6 +7,6 @@ A tabela a seguir contém recursos para criar e gerenciar registros DNS com prov
 | GoDaddy | [Adicionar um registro CNAME](https://www.godaddy.com/help/add-a-cname-record-19236?) |
 | Cloudflare | [Gerenciar registros DNS](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/) |
 | Squarespace | [Adição de configurações de DNS personalizadas](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
-| Amazon Route 53 | [Criação de registros usando o console do Amazon Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html) |
-| DNS do Google Cloud | [Início rápido: Configure os registros DNS para um nome de domínio com o Cloud DNS](https://docs.cloud.google.com/dns/docs/set-up-dns-records-domain-name) |
+| Amazon Route 53 | [Criando registros usando o console do Amazon Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html) |
+| Google Cloud DNS | [Introdução rápida: Configure registros DNS para um nome de domínio com o Cloud DNS](https://docs.cloud.google.com/dns/docs/set-up-dns-records-domain-name) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
