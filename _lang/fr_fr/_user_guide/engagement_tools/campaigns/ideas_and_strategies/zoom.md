@@ -79,7 +79,7 @@ Les utilisateurs sont maintenant enregistrés pour le webinaire avec les détail
 
 1. Créer une campagne de communication in-app<br><br>
 
-	Définissez le comportement du bouton au clic pour qu'il renvoie à la page d'atterrissage du webinaire.<br>
+	Veuillez définir le comportement du bouton lorsqu'on clique dessus afin qu'il redirige vers la page d'accueil du webinaire.<br>
 
 	![Lier vers le webinaire lorsqu’un bouton est cliqué.]({% image_buster /assets/img/zoom/zoom3.png %})<br><br>
 
