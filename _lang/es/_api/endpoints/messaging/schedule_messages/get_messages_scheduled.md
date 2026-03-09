@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Lista de próximas campañas programadas y Lonas"
 article_title: "GET: Enumerar próximas campañas y Canvas programados"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 0
 layout: api_page
 page_type: reference
@@ -52,8 +52,8 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
       "type": (string) the broadcast type either Canvas or Campaign,
       "tags": (array) an array of tag names formatted as strings,
       "next_send_time": (string) The next send time formatted in ISO 8601, may also include time zone if not local/intelligent delivery,
-      "schedule_type": (string) The schedule type, either local_time_zones, intelligent_delivery or the name of your company's time zone,
-    },
+      "schedule_type": (string) The schedule type, either local_time_zones, intelligent_delivery or the name of your company's time zone
+    }
   ]
 }
 ```
