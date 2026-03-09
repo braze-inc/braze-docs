@@ -12,7 +12,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Pesquis
 {% api %}
 # Pesquise a conta de usuário existente do dashboard por e-mail
 {% apimethod get %}
-scim/v2/Users?filter=userName%20eq%20 "user%40test.com"
+scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 {% endapimethod %}
 
 > Use esse ponto de extremidade para procurar uma conta de usuário existente no dashboard especificando seu e-mail no parâmetro de consulta do filtro.
@@ -40,14 +40,14 @@ Para usar esse endpoint, você precisará de um token SCIM. Você usará a orige
 
 ## Parâmetros de solicitação
 
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Exemplo de solicitação
-```json
+```bash
 curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
