@@ -55,7 +55,7 @@
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}
-<i>クリック開封率とは</i>、開封されたメールのうち、1ユーザーまたは1マシンによって少なくとも1回はクリックされたメールの開封率で、<a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>レポートビルダーでのみ</a>利用できる。
+<i>クリック開封率は</i>、開封されたメールのうち、単一のユーザーまたは機械によって少なくとも1回クリックされたものの割合である。この指標は<a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>レポート</a>ビルダーでのみ利用可能だ。
 {% endif %}
 
 {% if include.metric == "Close Message" %}
@@ -239,7 +239,7 @@
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
-<i>トータル・インプレッションは</i>、メッセージが閲覧された回数である。Brazeは、メッセージがユーザーの画面に表示されたときにのみ、インプレッションを記録する。例えば、メッセージがページの一番下に配置されている場合、ユーザーがスクロールダウンしてメッセージが表示されるまで、インプレッションは記録されない。ユーザーが同じメッセージを2回表示された場合、2回のインプレッションとしてカウントされる。
+<i>総インプレッションとは</i>、メッセージが表示された回数のことだ。Brazeは、メッセージがユーザーの画面上で表示された時点でのみインプレッションを記録する。例えば、メッセージがページの下部に配置されている場合、ユーザーがスクロールしてメッセージが表示されるまで、そのインプレッションは記録されない。ユーザーに同じメッセージが二度表示された場合、それは二回のインプレッションとしてカウントされる。
 {% endif %}
 
 {% if include.metric == "Total Opens" %}
@@ -251,7 +251,7 @@
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>ユニーククリック数とは</i>、メッセージ内のリンクを一度でもクリックした受信者の数であり、以下の方法で測定される。 <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+<i>ユニーククリックとは</i>、メッセージ内のリンクを少なくとも一度クリックした受信者の固有数を指し、によって測定される<a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>。
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
@@ -261,7 +261,7 @@
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-<i>ユニークインプレッションとは</i>、あるキャンペーンのメッセージを閲覧したユーザーの総数である。インプレッションは、メッセージがユーザーの画面に表示されたときにのみ記録される。
+<i>ユニークインプレッションとは、</i>特定のキャンペーンから送信されたメッセージを閲覧したユーザーの総数を指す。メッセージがユーザーの画面に表示された時のみ、インプレッションが記録される。
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
