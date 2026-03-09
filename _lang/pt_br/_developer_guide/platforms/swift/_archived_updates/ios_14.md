@@ -49,7 +49,7 @@ table td {
 
 ### Permissão de local aproximado
 
-![Local preciso]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+![Local Preciso]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
 #### Visão geral
 
@@ -123,7 +123,7 @@ Ao preencher seu questionário, consulte sua equipe jurídica e considere como o
 #### Coleta de dados padrão do Braze
 **Identificadores** \- Um identificador de dispositivo anônimo é sempre coletado pelo Braze SDK. Atualmente, está definido como o IDFV (identificador do fornecedor) do dispositivo.
 
-**Dados de uso** \- podem incluir dados de sessão do Braze, bem como qualquer evento ou coleta de atribuição que você use para medir a interação com o produto.
+**Dados de Uso** \- Isso pode incluir dados de sessão do Braze, bem como qualquer coleta de evento ou atributo que você use para medir a interação com o produto.
 
 #### Coleta de dados opcional
 Dados que você pode estar coletando opcionalmente por meio do uso do Braze:
