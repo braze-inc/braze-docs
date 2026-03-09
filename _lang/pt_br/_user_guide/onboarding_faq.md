@@ -283,7 +283,7 @@ Ao agendar uma campanha, você precisa escolher enviá-la em um horário designa
 
 A Braze recomenda fortemente que todas as campanhas no fuso local sejam agendadas com 24 horas de antecedência. Como tal campanha precisa ser enviada ao longo de um dia inteiro, agendá-la com 24 horas de antecedência permite que sua mensagem alcance todo o seu segmento. No entanto, você pode agendar essas campanhas com menos de 24 horas de antecedência, se necessário. Lembre-se de que a Braze não enviará mensagens para nenhum usuário que tenha perdido o horário de envio por mais de 1 hora.
 
-Por exemplo, se forem 13 horas e você programar uma campanha de fuso local para as 15 horas, a campanha será enviada imediatamente a todos os usuários cujo fuso local seja de 15 a 16 horas, mas não aos usuários cujo fuso local seja de 17 horas. Além disso, o horário de envio que você escolher para sua campanha ainda não deve ter ocorrido no fuso horário da sua empresa.
+Por exemplo, se for 13h e você agendar uma campanha para o fuso local às 15h, a campanha será enviada imediatamente para todos os usuários cujo fuso local é entre 15h e 16h, mas não para os usuários cujo fuso local é 17h. Além disso, o horário de envio que você escolher para sua campanha ainda não deve ter ocorrido no fuso horário da sua empresa.
 
 Editar uma campanha de fuso local que está programada para menos de 24 horas de antecedência não alterará o cronograma da mensagem. Se você decidir editar uma campanha de fuso local para enviar em um horário posterior (por exemplo, 19h em vez de 18h), os usuários que estavam no segmento alvo quando o horário de envio original foi escolhido ainda receberão a mensagem no horário original (18h). Se você editar um fuso local para enviar em um horário anterior (por exemplo, 16h em vez de 17h), a campanha ainda será enviada a todos os membros do segmento no horário original (17h).
 
@@ -436,7 +436,7 @@ Parar uma canva não fará com que os usuários que estão esperando em uma etap
 Canvas
 {% endapitags %}
 
-Os eventos de gatilho só são disparados enquanto o usuário está esperando para receber o componente do Canva ao qual está associado. Se um usuário realizar uma ação com antecedência, o evento de exceção não disparará.
+Eventos de exceção só disparam enquanto o usuário está esperando receber o componente do canva associado a eles. Se um usuário realizar uma ação com antecedência, o evento de exceção não disparará.
 
 Se você quiser excetuar usuários que realizaram um determinado evento com antecedência, use [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) em vez disso.
 
@@ -572,7 +572,7 @@ Para agendar um relatório de engajamento recorrente, faça o seguinte:
 3. Adicione as [campanhas e mensagens de canva]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individualmente ou [por tag]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) que você gostaria de compilar em seu relatório.
 4. [Adicione estatísticas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) ao seu relatório.
 5. Selecione a compressão e o delimitador para o seu relatório.
-6. Insira os endereços de e-mail dos usuários da empresa que devem receber esse relatório.
+6. Insira os endereços de e-mail dos usuários da empresa que devem receber este relatório.
 7. Selecione o [período de tempo]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) a partir do qual você gostaria que seu relatório executasse os dados.
 8. Selecione os [intervalos (diários, semanais, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display) nos quais gostaria de ver a divisão dos seus dados.
 9. Agende seu relatório para [enviar imediatamente]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) ou em um [momento futuro especificado]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
