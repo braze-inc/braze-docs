@@ -52,16 +52,16 @@ Se você selecionar um evento personalizado, não verá o menu suspenso **Evento
 ### Considerações
 
 Para que um usuário seja contado no relatório, ele deve atender aos seguintes critérios dentro do intervalo de datas selecionado:
-1. Insira o Canvas ou a campanha.
+1. Digite o Canvas ou a campanha.
 2. Registre um [método de atribuição]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods).
 3. Realize o evento de conversão.
 
 Por exemplo, digamos que um usuário faça o seguinte:
 1. Entre no Canvas em 30 de setembro.
-2. Registra um método de atribuição em 1 de outubro.
-3. Realiza o evento de conversão em 2 de outubro.
+2. Registre um método de atribuição em 1º de outubro.
+3. Realize o evento de conversão em 2 de outubro.
 
-Esse usuário **não** aparecerá em um relatório com um intervalo de datas de 1 a 7 de outubro. Isso ocorre porque o usuário entrou no Canvas antes do período de relatório, mesmo que o evento de conversão tenha ocorrido dentro do intervalo de datas definido. Para que o usuário apareça em um relatório, o intervalo de datas deve incluir 30 de setembro.
+Esse usuário **não** aparecerá em um relatório com um intervalo de datas de 1º a 7 de outubro. Isso ocorre porque o usuário entrou no Canvas antes do período de relatório, mesmo que o evento de conversão tenha ocorrido dentro do intervalo de datas definido. Para que o usuário apareça em um relatório, o intervalo de datas deve incluir 30 de setembro.
 
 ## Compreensão de seu relatório
 
