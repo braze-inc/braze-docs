@@ -1,7 +1,7 @@
 ---
 nav_title: "POST:コンテンツブロックを作成する"
 article_title: "POST:コンテンツ・ブロックを作成する"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -87,7 +87,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/cre
 | `Content cannot be blank` | |
 | `Content must be a string` | コンテンツが引用符 (`""`) で囲まれていることを確認する。 |
 | `Content must be smaller than 50kb` | コンテンツブロックのコンテンツは合計 50KB 未満である必要があります。 |
-| `Content contains malformed liquid` | 指定されたリキッドは有効でも解析可能でもない。有効な Liquid で再試行するか、サポートに連絡する。 |
+| `Content contains malformed liquid` | 指定されたリキッドは有効でも解析可能でもない。有効なLiquidで再試行するか、サポートに連絡せよ。 |
 | `Content Block cannot be referenced within itself` | |
 | `Content Block description cannot be blank` | |
 | `Content Block description must be a string` | コンテンツ・ブロックの説明が引用符 (`""`) で囲まれていることを確認する。 |
