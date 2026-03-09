@@ -34,24 +34,24 @@ Les raisons peuvent inclure :
 {% endtab %}
 {% tab iOS %}
 
-### Erreur d'envoi de push car la charge utile n'était pas valide
+### Une erreur s'est produite lors de l'envoi de la notification push en raison d'une charge utile non valide.
 
-Ce message peut apparaître dans l'onglet **Engagement du** profil utilisateur sous **Paramètres de contact** > **Journal des modifications** lorsque le service de notification push d'Apple (APN) rejette la demande de push en raison d'une charge utile non valide.
+Ce message peut apparaître dans l'onglet **Engagement** du profil utilisateur, sous **Paramètres de contact** > **Journal des modifications push,** lorsque le service Apple Notification push (APN) rejette la demande push en raison d'une charge utile non valide.
 
-Dans Braze, cet envoi de tableau de bord peut mapper à l'un des motifs d'erreur APN suivants :
+Dans Braze, ce message du tableau de bord peut correspondre à l'une des raisons d'erreur APN suivantes :
 
-- `PayloadEmpty` : Le contenu de la charge utile n'était pas conforme au type de message envoyé.
-- `PayloadTooLarge` : La charge utile dépassait la taille maximale de la charge utile des APN.
+- `PayloadEmpty` : La charge utile ne contenait pas le contenu requis pour le type de notification envoyée.
+- `PayloadTooLarge` : La charge utile a dépassé la taille maximale autorisée par APN.
 
-Les causes les plus fréquentes sont les suivantes :
+Les causes courantes comprennent :
 
-- clés personnalisées (et leurs valeurs) rendant la charge utile trop volumineuse (il peut s'agir de valeurs Liquid-rendered d'une taille inattendue).
-- Une alerte ou un corps vide ou manquant le cas échéant (ou une charge utile `aps` mal formée).
+- Les clés personnalisées (et leurs valeurs) peuvent rendre la charge utile trop volumineuse (cela peut inclure des valeurs rendues par Liquid qui sont plus importantes que prévu).
+- Une alerte ou un corps vide ou manquant lorsque cela est requis (ou une charge utile mal `aps`formée).
 
 Prochaines étapes :
 
-- Réduisez la taille des données utiles en supprimant les clés personnalisées et en raccourcissant les grandes valeurs dynamiques.
-- Si vous envoyez par l'API, validez la charge utile JSON finale (y compris la taille) avant de l'envoyer.
+- Réduisez la taille de la charge utile en supprimant les clés personnalisées et en raccourcissant les valeurs dynamiques volumineuses.
+- Si vous effectuez l'envoi via l'API, veuillez vérifier la charge utile JSON finale (y compris la taille) avant l'envoi.
 
 ### Échec du push : BadToken
 
