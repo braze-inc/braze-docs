@@ -1,5 +1,5 @@
 ---
-nav_title: 高度な実装（オプション）
+nav_title: 高度な実装（任意）
 article_title: iOS 用の高度なプッシュ通知の実装 (オプション)
 platform: iOS
 page_order: 28
@@ -13,7 +13,7 @@ noindex: true
 
 <br>
 {% alert important %}
-基本的なプッシュ通知開発者統合ガイドをお探しの場合は、見つける [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/).
+基本的なプッシュ通知開発者統合ガイドをお探しの場合は、それを見つけろ [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/).
 {% endalert %}
 
 # プッシュ通知実装ガイド
@@ -91,7 +91,7 @@ Objective-C<br>
 
 ダッシュボードでパーソナライズされたプッシュを設定するには、表示する特定のカテゴリーを登録し、標準の Liquid を使用してキーと値のペア内で、メッセージに表示する適切なユーザー属性を設定する必要があります。これらのビューは、特定のユーザープロファイルの特定のユーザー属性に基づいてカスタマイズできます。
 
-![4組のキーと値のペア。"next_session_name" と"next_session_complete_date" はAPIトリガーのプロパティとしてLiquidを使って設定され、"completed_session count" と"total_session_count" はカスタムユーザー属性としてLiquidを使って設定される。]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
+![4組のキーと値のペアがある。ここで"next_session_name"と"next_session_complete_date"はLiquidを使用してAPIトリガープロパティとして設定され、"completed_sessionと はLiquidを使用してカスタムユーザー属性として"total_session_count"設定される。]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
 
 #### キーと値のペアの処理
 
@@ -154,7 +154,7 @@ func didReceive(_ notification: UNNotification) {
 
 ダッシュボードで情報キャプチャ対応プッシュを設定するには、カスタムカテゴリーを登録および設定し、必要なキーと値のペアを指定する必要があります。例にあるように、プッシュに画像を含めることもできます。これを行うには、[リッチプッシュ通知]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/rich_notifications/)を統合し、キャンペーンの通知スタイルをリッチプッシュ通知に設定し、リッチプッシュ画像を含める必要があります。
 
-![キーと値のペアが3セットあるプッシュメッセージ。1\."Braze_id" Braze IDを取得するためのLiquidコールとして設定。2\."cert_title" を「マーケター証明書」に設定。3\."Cert_description" "Certified Braze marketers drive... "と設定する。]({% image_buster /assets/img/push_implementation_guide/push9.png %})
+![キーと値のペアが3セットあるプッシュメッセージ。1\.  Braze IDを取得"Braze_id"するためのLiquid呼び出しとして設定する。2\. 「Brazeマーケター"cert_title"証明書」として設定する。3\. 「認定Braze"Cert_description"マーケターが推進する…」と設定する。]({% image_buster /assets/img/push_implementation_guide/push9.png %})
 
 #### ボタンアクションの処理
 
@@ -208,7 +208,7 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 
 ロギング分析は、[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイントに到達する顧客のサーバーの助けを借りて、リアルタイムでのみ実行できます。分析をログに記録するには、`braze_id` 値をキーと値のペアフィールド (次のスクリーンショットを参照) に送信し、更新するユーザープロファイルを識別します。
 
-![キーと値のペアが3セットあるプッシュメッセージ。1\."Braze_id" Braze IDを取得するためのLiquidコールとして設定。2\."cert_title" を「マーケター証明書」に設定。3\."Cert_description" "Certified Braze marketers drive... "と設定する。]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
+![キーと値のペアが3セットあるプッシュメッセージ。1\.  Braze IDを取得"Braze_id"するためのLiquid呼び出しとして設定する。2\. 「Brazeマーケター"cert_title"証明書」として設定する。3\. 「認定Braze"Cert_description"マーケターが推進する…」と設定する。]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
 
 ### 手動ロギング
 
