@@ -1,5 +1,5 @@
 ---
-nav_title: Mise en œuvre avancée (facultatif)
+nav_title: Mise en œuvre avancée (facultative)
 article_title: Implémentation avancée de notifications push pour iOS (facultatif)
 platform: iOS
 page_order: 28
@@ -13,7 +13,7 @@ noindex: true
 
 <br>
 {% alert important %}
-Vous recherchez le guide d’intégration de base du développeur de notifications push ? Trouvez-le [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/).
+Vous recherchez le guide d’intégration de base du développeur de notifications push ? Veuillez trouver [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/).
 {% endalert %}
 
 # Guide d’implémentation des notifications push
@@ -91,7 +91,7 @@ Les notifications push peuvent afficher des informations spécifiques à l’uti
 
 Pour configurer un push personnalisé dans le tableau de bord, vous devez enregistrer la catégorie spécifique que vous souhaitez voir s'afficher, puis, dans les paires clé-valeur à l'aide de Liquid standard, définir les attributs utilisateur appropriés que vous souhaitez voir apparaître dans le message. Ces vues peuvent être personnalisées sur la base des attributs utilisateur spécifiques d’un profil utilisateur donné.
 
-![Quatre ensembles de paires clé-valeur, où "next_session_name" et "next_session_complete_date" sont définis comme une propriété de déclencheur API à l'aide de Liquid, et "completed_session count" et "total_session_count" sont définis comme un attribut personnalisé de l'utilisateur à l'aide de Liquid.]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
+![Quatre ensembles de paires clé-valeur, où"next_session_name"  et"next_session_complete_date"  sont définis comme déclencheur API à l'aide de Liquid, et"completed_session  count" et"total_session_count"  sont définis comme attribut utilisateur personnalisé à l'aide de Liquid.]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
 
 #### Gérer les paires clé-valeur
 
@@ -154,7 +154,7 @@ Notez que les informations demandées ici peuvent être très variables, comme l
 
 Pour configurer une notification push de capture d’information dans le tableau de bord, vous devez enregistrer et définir votre catégorie personnalisée et fournir les paires clé-valeur nécessaires. Comme illustré par l’exemple, vous pouvez également inclure une image dans votre notification push. Pour ce faire, vous devez intégrer les [notifications riches]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/rich_notifications/), définir le style de notification de votre campagne sur Notification riche et inclure une image push riche.
 
-![Une notification push avec trois ensembles de paires clé-valeur. 1. "Braze_id" réglé comme un appel liquide pour récupérer l'ID de Braze. 2. "cert_title" défini comme "Braze Marketer Certification". 3. "Cert_description" défini comme "Entraîneur certifié pour le marché de la Braze...".]({% image_buster /assets/img/push_implementation_guide/push9.png %})
+![Une notification push avec trois ensembles de paires clé-valeur. 1\."Braze_id"Définir comme appel Liquid pour récupérer l'ID de Braze. 2\."cert_title"Définir comme « Certification Braze Marketeur ». 3\."Cert_description"Définir comme « Les spécialistes certifiés du marketing de Braze stimulent... ».]({% image_buster /assets/img/push_implementation_guide/push9.png %})
 
 #### Gérer les actions des boutons
 
@@ -208,7 +208,7 @@ Consultez la [section suivante](#logging-analytics) pour mieux comprendre à quo
 
 L'enregistrement des analyses peut uniquement se faire en temps réel avec l'aide du serveur du client qui utilise notre endpoint [`/users/track`.]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Pour enregistrer l’analyse, envoyez la valeur `braze_id` dans le champ des paires clé-valeur (comme indiqué dans la capture d’écran suivante) pour identifier le profil utilisateur à mettre à jour.
 
-![Une notification push avec trois ensembles de paires clé-valeur. 1. "Braze_id" réglé comme un appel liquide pour récupérer l'ID de Braze. 2. "cert_title" défini comme "Braze Marketer Certification". 3. "Cert_description" défini comme "Entraîneur certifié pour le marché de la Braze...".]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
+![Une notification push avec trois ensembles de paires clé-valeur. 1\."Braze_id"Définir comme appel Liquid pour récupérer l'ID de Braze. 2\."cert_title"Définir comme « Certification Braze Marketeur ». 3\."Cert_description"Définir comme « Les spécialistes certifiés du marketing de Braze stimulent... ».]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
 
 ### Enregistrement manuel
 
