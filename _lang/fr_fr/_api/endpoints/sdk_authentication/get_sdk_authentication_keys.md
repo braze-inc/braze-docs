@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Liste des clés d'authentification du SDK"
+nav_title: "GET : Liste des clés d'authentification SDK"
 article_title: "GET : Liste des clés d'authentification du SDK"
 search_tag: Endpoint
 page_order: 1
@@ -33,7 +33,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Exemple de demande
 
-```json
+```bash
 curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authentication/keys?app_id=01234567-89ab-cdef-0123-456789abcdef' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
