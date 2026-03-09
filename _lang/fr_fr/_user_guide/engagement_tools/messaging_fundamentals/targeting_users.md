@@ -31,13 +31,13 @@ Pour cibler des utilisateurs appartenant à plusieurs segments créés précéde
 {% tab multiple filters %}
 Pour cibler les utilisateurs sans ajouter un segment, vous pouvez utiliser une série de filtres. Il s'agit d'une audience improvisée lors de la création du message, qui vous permet d'ignorer la création de segments lors de l'envoi à des audiences ponctuelles.
 
-![Filtres supplémentaires pour un message qui cible les utilisateurs qui ont ouvert une appli pour la dernière fois dans la journée, qui n'ont jamais reçu de campagne ou d'étape du canvas, et qui ont effectué un achat il y a moins de 30 jours.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
+![Filtres supplémentaires pour un message ciblant les utilisateurs qui ont ouvert une application pour la dernière fois au cours de la journée, qui n'ont jamais reçu de campagne ou d'étape du canvas et qui ont effectué un achat il y a moins de 30 jours.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
 {% endtab %}
 
 {% tab segments & filters %}
 Vous pouvez également cibler les utilisateurs d’un ou plusieurs segments créés précédemment qui appartiennent également à des filtres supplémentaires. Après avoir sélectionné vos segments, vous pouvez affiner votre audience dans la section **Additional Filters (Filtres supplémentaires)**. La capture d'écran suivante en témoigne : elle cible les utilisateurs qui font partie du segment "Utilisateurs actifs par jour", du segment "N'ont jamais ouvert d'e-mail" et qui ont effectué un achat il y a plus de 30 jours.
 
-![Options de ciblage pour un message comprenant deux segments et comportant un filtre supplémentaire pour un dernier achat effectué il y a moins de 30 jours.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:90%;"}
+![Options de ciblage pour un message comprenant deux segments et un filtre supplémentaire pour un dernier achat effectué il y a moins de 30 jours.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:90%;"}
 {% endtab %}
 
 {% tab Specific apps %}
@@ -46,18 +46,18 @@ Vous pouvez diffuser un message de campagne ou une étape du canvas à des apps 
 
 Toutefois, n'oubliez pas qu'un utilisateur peut utiliser plusieurs applications. Le filtre "Has app" identifie tous les utilisateurs qui possèdent l'application sélectionnée, mais ne contrôle pas les applications qui reçoivent les messages. Par exemple, si vous appliquez un filtre de segment où "A l'app" est défini sur Android, tous les utilisateurs qui ont également l'app iOS recevront également le message sur leur app iOS.
 
-![Un filtre pour les utilisateurs qui ont l'application "Hello, World (Android)".]({% image_buster /assets/img_archive/has_app_hello_world.png %}){: style="max-width:60%;"}
+![Filtre pour les utilisateurs qui possèdent l'application « Hello, World (Android) ».]({% image_buster /assets/img_archive/has_app_hello_world.png %}){: style="max-width:60%;"}
 
 Imaginons que vous souhaitiez envoyer un message in-app uniquement aux applications Android.
 
 1. Créez un segment et définissez **Apps et sites web ciblés** sur les **Utilisateurs d'apps spécifiques**, puis sélectionnez votre app Android.
 
-![Un segment ciblant les utilisateurs d'une application spécifique, "Test_Android".]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
+![Un segment de ciblage pour les utilisateurs d'une application spécifique,/assets/img_archive/app_test_android.pngimage_buster"Test_Android".]({%    %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\. Dans votre campagne ou Canvas, allez à l'étape des **audiences cibles** et confirmez que votre segment est ajouté dans la section **Utilisateurs ciblés par segment.** 
 
-![L'étape "Audiences ciblées" avec un exemple de segmentation sélectionné.]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
+![L'étape « Publics cibles » avec un exemple de segment sélectionné.]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
 
 {% alert note %}
 Cela ne fonctionnera pas si vous ajoutez votre segment dans la section **Filtres supplémentaires** par le biais d'un filtre d'appartenance à un segment. Vous devez faire directement référence à votre segment dans **Cibler les utilisateurs par segment** pour que votre message ne soit envoyé qu'à cette application.
@@ -74,19 +74,19 @@ Pour les campagnes d'e-mails, vous pouvez cibler les groupes initiateurs dans la
 
 Après avoir ajouté des segments et des filtres à votre audience, vous pouvez tester si votre audience est configurée comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) pour confirmer s'il correspond aux critères de l'audience.
 
-![La section "Recherche d'un utilisateur" avec un bouton "Recherche d'un utilisateur".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
+![La section « Recherche d'utilisateur » avec un bouton « Rechercher un utilisateur ».]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 #### Résumé de l’audience
 
 Le **résumé de l'audience** donne un aperçu des personnes qui font partie de votre audience cible. Ici, vous pouvez limiter davantage votre audience en fixant un nombre maximum d'utilisateurs ou en [limitant]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) la vitesse de réception/distribution.
 
-![La section "Résumé de l'audience" contient des options permettant de fixer un plafond d'utilisateurs ou une limite de débit pour la réception/distribution.]({% image_buster /assets/img_archive/audience_summary.png %})
+![La section « Résumé de l'audience » avec des options permettant de définir un nombre maximal d'utilisateurs ou une limite de débit pour la réception/distribution.]({% image_buster /assets/img_archive/audience_summary.png %})
 
 #### Tests A/B
 
 Dans la section **Test A/B**, vous pouvez configurer un test pour comparer les réponses des utilisateurs à plusieurs versions de la même campagne marketing. Ces versions partagent des objectifs marketing similaires, mais diffèrent en termes de formulation et de style. L’objectif est d’identifier la version de la campagne qui accomplit le mieux vos objectifs marketing. 
 
-Pour plus d'informations et de bonnes pratiques, consultez le site [Multivarié & Test A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
+Pour plus d'informations et pour connaître les meilleures pratiques, veuillez vous référer à [la section test A/B &multivarié]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 #### Statistiques d’audience
 
@@ -99,59 +99,59 @@ Braze fournit des statistiques d’audience détaillées pour les canaux ciblés
 
 {% multi_lang_include segments.md section='Differing audience size' %}
 
-![La section "Population totale" avec le nombre estimé d'utilisateurs joignables dans chaque canal ciblé.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
+![La section « Population totale » avec les estimations du nombre d'utilisateurs accessibles dans chaque canal ciblé.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
 {% alert note %}
 Le calcul de statistiques exactes peut prendre quelques minutes. Cette fonction ne calcule les statistiques exactes qu'au niveau du segment, et non au niveau du filtre ou du groupe de filtres.<br><br>
 Pour les segments de grande taille, il est normal de constater de légères variations, même en calculant des statistiques exactes. La précision de cette fonctionnalité devrait être égale ou supérieure à 99,999 %.
 {% endalert %}
 
-## Comment l'audience cible et les critères d'admission s'articulent-ils ?
+## Comment l'audience cible et les critères d'admission fonctionnent conjointement
 
-Lorsque vous créez une campagne ou un canvas dans Braze, le ciblage se fait en deux temps :
+Lorsque vous créez une campagne ou un canvas dans Braze, le ciblage se fait en deux étapes :
 
-1. **Audience ciblée :** Qui peut en bénéficier ?
-2. **Critères d'admission :** Ce qui déclenche la réception/distribution
+1. **Public cible :** Qui est admissible ?
+2. **Critères d'admission :** Qu'est-ce qui déclenche la réception/distribution ?
 
-L'ordre est important : Braze vérifie si une personne fait partie de l'audience cible avant d'évaluer les critères d'entrée. Si un utilisateur n'est pas déjà qualifié pour l'audience à ce moment-là, il n'entrera pas dans la campagne ou dans le Canvas, même s'il déclenche plus tard l'événement d'entrée. Considérez l'audience cible comme une salle d'attente : seuls les utilisateurs qui sont déjà à l'intérieur lorsque le déclencheur se produit peuvent avancer.
+L'ordre est important : Braze vérifie si une personne fait partie de l'audience cible avant d'évaluer les critères d'admissibilité. Si un utilisateur ne remplit pas les conditions requises pour faire partie de l'audience cible à ce moment-là, il ne pourra pas participer à la campagne ou à Canvas, même s'il déclenche ultérieurement l'événement d'entrée. Considérez l'audience cible comme une salle d'attente : seuls les utilisateurs qui s'y trouvent déjà lorsque le déclencheur se produit peuvent avancer.
 
 ### Exemple 1
 
 Vous souhaitez envoyer un message push lors de la première session d'un utilisateur.
 
-Vous définissez :
+Vous avez défini :
 
-- **Audience ciblée :** Utilisateurs avec nombre de sessions = 0
+- **Public cible :** Utilisateurs avec nombre de sessions = 0
 - **Événement d'entrée :** Lancer la session
 
-Lorsque l'utilisateur ouvre votre application, Braze constate que son nombre de sessions est désormais de 1 et qu'il n'est plus éligible à l'audience. L'événement d'entrée se produit après qu'ils soient éligibles, le message n'est donc pas envoyé.
+Lorsque l'utilisateur ouvre votre application, Braze constate que son nombre de sessions est désormais de 1 et qu'il ne remplit plus les conditions requises pour faire partie de l'audience. L'événement d'inscription a lieu après qu'ils soient admissibles, donc le message ne sera pas envoyé.
 
-Pour que cela fonctionne, l'utilisateur doit se qualifier pour l'audience avant le début de la session (retournez l'audience cible et le déclencheur d'entrée).
+Pour que cela fonctionne, l'utilisateur doit remplir les conditions requises pour faire partie de l'audience cible avant le début de la session (sélectionner l'audience cible et le déclencheur d'entrée).
 
 ### Exemple 2
 
 Vous souhaitez envoyer un e-mail aux utilisateurs qui ont dépensé plus de 10 $ au cours des 7 derniers jours.
 
-Vous définissez :
+Vous avez défini :
 
-- **Audience ciblée :** Utilisateurs ayant dépensé plus de 10 $ au cours des 7 derniers jours
+- **Public cible :** Utilisateurs ayant dépensé plus de 10 $ au cours des 7 derniers jours
 - **Événement d'entrée :** Tout achat
 
-Imaginez maintenant qu'un utilisateur dépense 12 dollars aujourd'hui. Cela ne déclenche pas l'envoi du message, mais les rend éligibles à l'audience. Ils ne recevront l'e-mail que s'ils effectuent un autre achat ultérieurement.
+Maintenant, supposons qu'un utilisateur dépense 12 $ aujourd'hui. Cela ne déclenche pas l'envoi du message, cela les rend simplement éligibles pour faire partie de l'audience. Ils ne recevront pas l'e-mail à moins qu'ils n'effectuent un autre achat ultérieurement.
 
-Une meilleure approche consisterait à faire appel à une audience plus large et à intégrer le filtre dans les critères d'entrée :
+Une meilleure approche consisterait à élargir l'audience cible et à déplacer le filtre vers les critères d'admission :
 
-- **L'audience :** Tous les utilisateurs (ou votre audience de base)
+- **Audience :** Tous les utilisateurs (ou votre audience cible)
 - **Événement d'entrée :** Effectuer un achat
-- **Filtre d'entrée :** Dépenses totales au cours des 7 derniers jours > 10
+- **Filtre d'entrée :** Dépenses totales au cours des 7 derniers jours supérieures à 10 $
 
-De cette manière, un achat qualifié répond au filtre et déclenche le message, sans qu'aucune autre action ne soit nécessaire.
+De cette manière, un achat éligible répond à la fois au critère de filtrage et déclenche le message, sans qu'aucune autre action ne soit nécessaire.
 
 ## Bonnes pratiques
 
-- Assurez-vous que le segment d'audience inclut les utilisateurs avant les critères de segmentation.
-- Évitez d'utiliser des filtres d'audience qui ne s'appliquent qu'après votre événement. Si un filtre dépend de quelque chose qui se produit au moment du déclencheur (comme "nombre de sessions = 0"), il se peut que l'utilisateur ne remplisse plus les conditions requises au moment de la vérification par Braze.
-- Utilisez la logique temporelle de manière réfléchie. Par exemple, si vous souhaitez cibler les nouveaux utilisateurs :
-    - Définissez votre audience cible sur "première utilisation de l'application au cours des 7 derniers jours".
-    - Définissez votre événement d'entrée sur "début de session".
-    - De cette façon, seuls les utilisateurs qui en sont encore à leur première semaine se qualifieront et s'inscriront lorsqu'ils commenceront une session.
+- Veuillez vous assurer que le segment d'audience inclut les utilisateurs avant que les critères d'entrée ne soient remplis.
+- Veuillez éviter d'utiliser des filtres d'audience qui ne s'appliquent qu'après votre événement. Si un filtre dépend d'un événement qui se produit au moment du déclencheur (comme « nombre de sessions = 0 »), l'utilisateur peut ne plus être éligible au moment où Braze effectue la vérification.
+- Veuillez utiliser la logique temporelle de manière réfléchie. Par exemple, si vous souhaitez réaliser un ciblage pour de nouveaux utilisateurs :
+    - Veuillez définir votre audience comme « ayant utilisé l'application pour la première fois au cours des 7 derniers jours ».
+    - Veuillez définir votre événement d'entrée sur « début de session ».
+    - De cette manière, seuls les utilisateurs qui en sont encore à leur première semaine seront éligibles et pourront participer lorsqu'ils commenceront une session.
