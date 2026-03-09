@@ -1,7 +1,7 @@
 ---
 nav_title: "POST:ユーザーをマージする"
 article_title: "POST:ユーザーをマージする"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 6
 layout: api_page
 page_type: reference
@@ -56,11 +56,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 エンドポイントは、`merge_updates` オブジェクトが更新される順序を保証しない。
 {% endalert %}
 
-このエンドポイントは、次のフィールドが対象ユーザーで見つからない場合にマージします。
+このエンドポイントは、対象ユーザーに以下のフィールドが存在しない場合、それらをマージする。
 
 - 名
 - 姓
-- メールアドレス([encrypted]({{site.baseurl}}/user_guide/data/field_level_encryption/) 以外)
+- メール（[暗号化]({{site.baseurl}}/user_guide/data/field_level_encryption/)されていない場合）
 - 性別
 - 生年月日
 - 電話番号
@@ -70,25 +70,25 @@ Authorization: Bearer YOUR_REST_API_KEY
 - 言語
 - デバイス情報
 - セッション数 （両方のプロファイルのセッションの合計）
-- 最初のセッション日(Brazeは、2つの日付の前の日付を選択します)
-- 最後のセッション日(Braze は2 つの日付の後の日付を選択します)
-- カスタム属性 s (Braze は、ターゲットプロファイル上に存在するカスタム属性を保持し、ターゲットプロファイル上に存在しないカスタム属性を含みます)
+- 初回セッションの日付（Brazeは二つの日付のうち早い方を選ぶ）
+- 最終セッションの日付（Brazeは2つの日付のうち遅い方を選択する）
+- カスタム属性（Brazeはターゲットプロファイル上の既存のカスタム属性を保持し、ターゲットプロファイルに存在しなかったカスタム属性も追加する）
 - カスタム・イベントと購入イベントのデータ
-- &quot のカスタムイベントおよび購入イベントプロパティ;Y 日数とクォートのX 回; セグメンテーション (ここでX<=50) および Y<=30)
+- 「X回をY日間で」セグメンテーション用のカスタムイベントおよび購入イベントのプロパティ（ここでX<=50  および Y<=30)
 - セグメント可能なカスタム・イベントのサマリー
   - イベント数（両プロファイルの合計）
-  - 最初に発生した事象(Braze は2 つの日付の前の日付を選択します)
-  - 最後に発生した事象(Braze は2 つの日付の後の日付を選択します)
+  - イベントが最初に発生した日時（Brazeは二つの日付のうち早い方を選択する）
+  - イベントが最後に発生した日時（Brazeは二つの日付のうち遅い方を選択する）
 - アプリ内購入の合計（セント単位）（両方のプロファイルの合計)
 - 購入総数 (両方のプロファイルの合計)
-- 最初の購入日(Brazeは2つの日付の前の日付を選択します)
-- 最終購入日(Brazeは2つの日付の後の日付を選択します)
+- 初回購入日（Brazeは二つの日付のうち早い方を選択する）
+- 最終購入日（Brazeは二つの日付のうち遅い方を選択する）
 - アプリの概要
-- Last_X_at フィールド s (Braze 更新 s フィールド s (孤立したプロファイル フィールドs がより新しい場合)
-- キャンペーンのアクション間データ(Brazeは最新の日付フィールドを選択します)
-- ワークフローの概要(Brazeは最新の日付フィールドを選択します)
+- Last_X_at フィールド（孤立したプロファイルのフィールドがより新しい場合、Brazeはフィールドを更新する）
+- キャンペーンのインタラクションデータ（Brazeは最も新しい日付フィールドを選択する）
+- ワークフローの概要（Brazeは最新の日付フィールドを選択する）
 - メッセージとメッセージのエンゲージメント履歴
-- Brazeは、両方のユーザープロファイルsにアプリが存在する場合にのみセッションをマージします。
+- Brazeは、アプリが両方のユーザープロファイルに存在する場合にのみセッションデータを統合する。
 
 {% alert note %}
 ユーザーをマージする場合、`/users/merge` エンドポイントを使用すると、[`changeUser()` メソッドを](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)使用した場合と同じように機能します。
@@ -96,11 +96,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 #### カスタムイベント日と購入イベント日の動作
 
-これらのマージされたフィールドs 更新 " X イベントのY days" フィルター s。購入イベントの場合、これらのフィルターには、「Y日間の購入回数」と「過去Y日間の使用金額」が含まれる。
+これらの結合フィールドは「X件のイベントがY日間で発生」というフィルターを更新する。購入イベントの場合、これらのフィルターには、「Y日間の購入回数」と「過去Y日間の使用金額」が含まれる。
 
 ### 電子メールまたは電話番号でユーザーをマージする
 
-`email`または`phone`が識別子として指定されている場合は、追加の`prioritization`値を識別子に含める必要があります。`prioritization` は、複数のユーザー が見つかった場合にマージするユーザーを指定する順序付けされた配列である必要があります。つまり、優先順位付けから複数のユーザーが一致した場合、マージは行われません。
+識別子として  または`phone`  `email`が指定された場合、識別子に追加の`prioritization`  値を含めなければならない。複数のユーザーが見つかった場合に、どのユーザーをマージするかを指定する順序付き配列`prioritization`であるべきだ。つまり、優先順位付けから複数のユーザーが一致した場合、マージは行われない。
 
 配列に指定できる値は次のとおりです。
 
@@ -120,7 +120,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 これはリクエストのパターンを示す基本的なリクエストボディである。
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -165,9 +165,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 未確認ユーザーをマージする
 
-次のリクエストは、直近に更新された識別されていないユーザーを、外部ID `john` を持つユーザーにメールアドレス`john.smith@braze.com` でマージします。この例題では、`most_recently_updated` フィルターを使用して、クエリーを1 つの不明なユーザーにします。そのため、2 つの未確認ユーザーがこのメールアドレスを持つ場合、1 つだけが外部ID `john` を持つユーザーにマージされます。
+以下のリクエストは、メールアドレスを持つ最新の更新された未識別ユーザーを、`john.smith@braze.com`external IDを持つ`john`ユーザーに統合する。この例では、フィルター`most_recently_updated`を使用することでクエリを未識別ユーザー1件に絞り込む。つまり、このメールアドレスを持つ未識別ユーザーが二人いた場合、external IDを持つユーザーにマージ`john`されるのは一人だけだ。
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -189,11 +189,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 未確認ユーザーを識別されたユーザーにマージする
 
-次に、直近の更新不明ユーザーとメールアドレス`john.smith@braze.com` を、メールアドレス`john.smith@braze.com` の識別されたユーザーにマージします。
+次の例では、メールアドレスを持つ最新の未識別ユーザーを、メールアドレス`john.smith@braze.com`を持つ最新の識別済み`john.smith@braze.com`ユーザーに統合する。
 
-`most_recently_updated` フィルターを使用すると、クエリーは1 つのユーザーに(`identifier_to_merge` には1 つの識別されないユーザー、`identifier_to_keep` には1 つの識別されたユーザー) になります。
+フィルター`most_recently_updated`を使用して、クエリを1人のユーザーに絞り込む（1人は未特定ユーザー、`identifier_to_merge`もう1人は識別子を持つユーザーである`identifier_to_keep`）。
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -214,11 +214,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 }'
 ```
 
-### most_recently_updated 優先順位を指定せずに、識別されていないユーザーをマージする
+### 優先most_recently_updated順位付けを含めずに、未識別ユーザーをマージする
 
-メールアドレス`john.smith@braze.com`を持つ2つの不明なユーザーがある場合、このリクエストは、そのメールアドレスを持つ2つの不明なユーザーがあるため、ユーザーをマージしません。このリクエストは、メール address `john.smith@braze.com` を持つ識別できないユーザーが1 つしかない場合にのみ機能します。
+メールアドレスが同じ未識別ユーザーが`john.smith@braze.com`2人いる場合、このリクエスト例ではユーザーをマージしない。なぜなら、そのメールアドレスを持つ未識別ユーザーが2人存在するからだ。このリクエストは、メールアドレスが未識別ユーザーが1人だけ`john.smith@braze.com`の場合にのみ機能する。
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
