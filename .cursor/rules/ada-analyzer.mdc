@@ -126,6 +126,7 @@ For **docs templates** (layouts, includes):
    - Example: `[ADA] Fix input_label_exists (form control labels) across docs`
 5. **Label**: Add `--label "ada"` when creating the PR, if that label exists in the repo.
 6. **Assign reviewers**: Per `CODEOWNERS`; if no owner is found for the changed files, assign to @braze-inc/docs-team.
+7. **Do not publish Braze source code paths**: If Braze reference repos were used to verify any behavior, never include their file paths in the PR description. Use a phrase such as "Verified against Braze source code." instead.
 
 ---
 
