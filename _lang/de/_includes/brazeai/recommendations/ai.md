@@ -1,6 +1,6 @@
 {% if include.section == "Plan-specific features" %}
 
-## Planspezifische KI Features
+## Planspezifische KI-Features
 
 Die folgende Tabelle beschreibt die Unterschiede zwischen der kostenlosen und der Pro-Version der KI-Empfehlungstypen Personalisiert, Beliebt und Tendenziell:
 
