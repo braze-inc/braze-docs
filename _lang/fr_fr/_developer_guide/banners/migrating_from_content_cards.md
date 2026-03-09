@@ -1,7 +1,7 @@
 ---
-nav_title: "Migration à partir des cartes de contenu"
-article_title: "Migrer des cartes de contenu vers les bannières"
-description: "Découvrez comment migrer des cartes de contenu vers les bannières, y compris des exemples de code pour tous les SDK pris en charge, les limitations et les avantages."
+nav_title: "Migration depuis les cartes de contenu"
+article_title: "Migration des cartes de contenu vers les bannières"
+description: "Découvrez comment effectuer la migration des cartes de contenu vers les bannières, avec des exemples de code pour tous les SDK pris en charge, les limitations et les avantages."
 page_order: 5
 toc_headers: h2
 channel:
@@ -14,61 +14,61 @@ platform:
   - React Native
 ---
 
-# Migrer des cartes de contenu vers les bannières
+# Migration des cartes de contenu vers les bannières
 
-> Ce guide vous aide à migrer des cartes de contenu vers les bannières pour les cas d'utilisation d'envoi de messages de type bannière. Les bannières sont idéales pour les messages in-app et web persistants, en ligne, qui apparaissent à des endroits spécifiques de votre application.
+> Ce guide vous assiste dans la migration des cartes de contenu vers les bannières pour les cas d'utilisation d'envoi de messages de type bannière. Les bannières sont idéales pour les messages in-app, persistants dans les applications et sur le Web, qui apparaissent à des emplacements spécifiques dans votre application.
 
-## Pourquoi migrer vers les bannières ?
+## Pourquoi effectuer la migration vers Banners ?
 
-- Si votre équipe d'ingénieurs crée ou maintient des cartes de contenu de type bannière personnalisées, la migration vers les bannières peut réduire cet investissement. Les bannières permettent aux marketeurs de contrôler directement l'interface utilisateur, libérant ainsi les développeurs pour d'autres tâches.
-- Si vous lancez de nouveaux messages sur la page d'accueil, des flux d'onboarding ou des annonces persistantes, commencez par des bannières plutôt que de créer des cartes de contenu. Vous pouvez bénéficier d'une personnalisation en temps réel, d'une absence d'expiration de 30 jours, d'une absence de limite de taille et d'une priorisation native dès le premier jour.
-- Si vous devez contourner la limite d'expiration de 30 jours, gérer une logique de rééligibilité complexe ou être frustré par une personnalisation périmée, Banners résout ces problèmes de manière native.
+- Si votre équipe d'ingénieurs crée ou gère des cartes de contenu personnalisées, la migration vers Banners peut réduire cet investissement continu. Les bannières permettent aux marketeurs de contrôler directement l'interface utilisateur, libérant ainsi les développeurs pour d'autres tâches.
+- Si vous lancez de nouveaux messages sur la page d'accueil, des flux d'onboarding ou des annonces persistantes, veuillez commencer par les bannières plutôt que de créer des cartes de contenu. Vous pouvez bénéficier d'une personnalisation en temps réel, sans expiration après 30 jours, sans limite de taille et avec une priorisation native dès le premier jour.
+- Si vous travaillez avec une limite d'expiration de 30 jours, gérez une logique de rééligibilité complexe ou êtes confronté à une personnalisation obsolète, Banners résout ces problèmes de manière native.
 
-Les bannières offrent plusieurs avantages par rapport aux cartes de contenu de type bannière pour l'envoi de messages :
+Les bannières présentent plusieurs avantages par rapport aux cartes de contenu pour l'envoi de messages de type bannière :
 
-### Accélération de la production
+### Production accélérée
 
-- **Réduction de l'assistance technique permanente requise**: Les marketeurs peuvent créer des messages personnalisés à l'aide d'un éditeur par glisser-déposer et d'un code HTML personnalisé sans avoir besoin de l'aide d'un développeur pour la personnalisation.
-- **Options de personnalisation souples**: Concevez directement dans l'éditeur, utilisez HTML ou exploitez les modèles de données existants avec des propriétés personnalisées.
+- **Réduction du soutien technique continu requis** : Les marketeurs peuvent créer des messages personnalisés à l'aide d'un éditeur par glisser-déposer et d'un code HTML personnalisé sans avoir besoin de l'aide d'un développeur pour la personnalisation.
+- **Options de personnalisation flexibles** : Concevez directement dans l'éditeur, utilisez le langage HTML ou exploitez les modèles de données existants avec des propriétés personnalisées.
 
-### Meilleure interface utilisateur
+### Une meilleure expérience utilisateur
 
-- **Mise à jour dynamique du contenu**: Les bannières s'actualisent Liquid logic and eligibility à chaque actualisation, ce qui permet aux utilisateurs de toujours voir le contenu le plus pertinent.
-- **Aide au placement des autochtones**: Les messages apparaissent dans des contextes spécifiques plutôt que dans un flux, offrant ainsi une meilleure pertinence contextuelle.
-- **Priorité aux autochtones**: Contrôle de l'ordre d'affichage sans logique personnalisée, ce qui facilite la gestion de la hiérarchie des messages.
+- **Mises à jour dynamiques du contenu dynamique** : Les bannières actualisent la logique Liquid et l'éligibilité à chaque actualisation, garantissant ainsi que les utilisateurs voient toujours le contenu le plus pertinent.
+- **Prise en charge du placement natif** : Les messages apparaissent dans des contextes spécifiques plutôt que dans un fil d'actualité, ce qui améliore la pertinence contextuelle.
+- **Priorisation native** : Contrôle de l'ordre d'affichage sans logique personnalisée, facilitant la gestion de la hiérarchie des messages.
 
 ### Persistance
 
-- **Pas de limite d'expiration :** Les campagnes de bannières n'ont pas de limite d'expiration de 30 jours comme les cartes de type bannière, ce qui permet une véritable persistance des messages.
+- **Aucune date d'expiration** : Les campagnes de bannières n'ont pas de limite d'expiration de 30 jours comme les cartes de contenu, ce qui permet une véritable persistance des messages.
 
-## Quand migrer ?
+## Quand migrer
 
-Envisagez de migrer vers les bannières si vous utilisez les cartes de contenu de type bannière pour :
+Envisagez la migration vers Banners si vous utilisez les cartes de contenu pour :
 
-- Héros de la page d'accueil, promotions sur les pages de produits, offres à la caisse
+- Héros de la page d'accueil, promotions sur les pages produits, offres à la caisse
 - Annonces de navigation persistantes ou messages dans la barre latérale
-- Messages toujours actifs pendant plus de 30 jours
-- Messages où vous souhaitez une personnalisation et une éligibilité en temps réel.
+- Messages permanents diffusés pendant plus de 30 jours
+- Messages pour lesquels vous souhaitez une personnalisation et une adéquation en temps réel
 
-## Quand conserver les cartes de contenu ?
+## Quand conserver les cartes de contenu
 
-Continuez à utiliser les cartes de contenu si nécessaire :
+Veuillez continuer à utiliser les cartes de contenu si nécessaire :
 
-- **Expériences en matière d'alimentation :** Tout cas d'utilisation impliquant plusieurs messages défilants ou une boîte de réception basée sur des cartes.
-- **Fonctionnalités spécifiques :** Les messages qui nécessitent un contenu connecté ou des codes promotionnels, car les bannières ne les prennent pas en charge de manière native.
-- **Réception/distribution déclenchée :** Cas d'utilisation nécessitant strictement une réception/distribution déclenchée par l'API ou par événement. Bien que les bannières ne prennent pas en charge la réception/distribution déclenchée par l'API ou basée sur l'action, l'évaluation de l'éligibilité en temps réel signifie que les utilisateurs sont instantanément qualifiés ou disqualifiés en fonction de l'appartenance à un segment à chaque actualisation.
+- **Expériences de nourrissage :** Tout cas d'utilisation impliquant plusieurs messages défilables ou une « boîte de réception » sous forme de cartes.
+- **Fonctionnalités spécifiques :** Les messages qui nécessitent du contenu connecté ou des codes de promotion, car les bannières ne les prennent pas en charge de manière native.
+- **Réception/distribution déclenchée :** Cas d'utilisation nécessitant strictement une réception/distribution déclenchée par une API ou basée sur une livraison par événement. Bien que les bannières ne prennent pas en charge la réception/distribution déclenchée par API ou basée sur des événements, l'évaluation d'éligibilité en temps réel signifie que les utilisateurs sont instantanément qualifiés ou disqualifiés en fonction de leur appartenance à un segment à chaque actualisation.
 
 ## Guide de migration
 
 ### Conditions préalables
 
-Avant de procéder à la migration, assurez-vous que votre SDK Braze répond aux exigences minimales en matière de version :
+Avant de procéder à la migration, veuillez vous assurer que votre SDK Braze répond aux exigences minimales en matière de version :
 
 {% multi_lang_include sdk_versions.md feature='banners' %}
 
 ### S'abonner aux mises à jour
 
-#### L'approche des cartes de contenu
+#### Approche par cartes de contenu
 
 {% tabs %}
 {% tab Web %}
@@ -126,7 +126,7 @@ StreamSubscription contentCardsStreamSubscription = braze.subscribeToContentCard
 {% endtab %}
 {% endtabs %}
 
-#### Approche par bannières
+#### Approche des bannières
 
 {% tabs %}
 {% tab Web %}
@@ -195,10 +195,10 @@ StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<Bra
 ### Afficher le contenu
 
 {% alert note %}
-Les cartes de contenu peuvent être rendues manuellement avec une logique d'interface utilisateur personnalisée, alors que les bannières ne peuvent être rendues qu'avec les méthodes SDK prêtes à l'emploi.
+Les cartes de contenu peuvent être rendues manuellement à l'aide d'une logique d'interface utilisateur personnalisée, tandis que les bannières ne peuvent être rendues qu'à l'aide des méthodes SDK prêtes à l'emploi.
 {% endalert %}
 
-#### L'approche des cartes de contenu
+#### Approche par cartes de contenu
 
 {% tabs %}
 {% tab Web %}
@@ -283,7 +283,7 @@ for (final card in cards) {
 {% endtab %}
 {% endtabs %}
 
-#### Approche par bannières
+#### Approche des bannières
 
 {% tabs %}
 {% tab Web %}
@@ -379,13 +379,13 @@ braze.requestBannersRefresh(["global_banner"]);
 {% endtab %}
 {% endtabs %}
 
-### Analyse/analytique des logs (implémentations personnalisées)
+### Analyse des journaux (implémentations personnalisées)
 
 {% alert note %}
-Les cartes de contenu et les bannières assurent automatiquement le suivi des analyses/analytiques lorsqu'elles utilisent leurs composants d'interface utilisateur par défaut. Les exemples ci-dessous concernent des implémentations personnalisées dans lesquelles vous créez votre propre interface utilisateur.
+Les cartes de contenu et les bannières effectuent automatiquement le suivi des analyses lorsqu'elles utilisent leurs composants d'interface utilisateur par défaut. Les exemples ci-dessous concernent des implémentations personnalisées dans lesquelles vous créez votre propre interface utilisateur.
 {% endalert %}
 
-#### L'approche des cartes de contenu
+#### Approche par cartes de contenu
 
 {% tabs %}
 {% tab Web %}
@@ -445,13 +445,13 @@ braze.logContentCardClicked(card);
 {% endtab %}
 {% endtabs %}
 
-#### Approche par bannières
+#### Approche des bannières
 
 {% tabs %}
 {% tab Web %}
 
 {% alert important %}
-L'analyse/analytique est automatiquement suivie lors de l'utilisation de `insertBanner()`. L'enregistrement manuel ne doit pas être utilisé lorsque vous utilisez `insertBanner()`.
+Les analyses sont automatiquement suivies lors de l'utilisation de `insertBanner()`. La journalisation manuelle ne devrait pas être utilisée lorsque vous utilisez `insertBanner()`.
 {% endalert %}
 
 ```javascript
@@ -469,7 +469,7 @@ braze.logBannerClick("global_banner", buttonId);
 {% tab Android %}
 
 {% alert important %}
-Les analyses/analytiques sont automatiquement suivies lors de l'utilisation de BannerView. L'enregistrement manuel ne doit pas être utilisé lors de l'utilisation de BannerView.
+Les analyses sont automatiquement suivies lorsque vous utilisez BannerView. La journalisation manuelle n'est pas recommandée lors de l'utilisation de BannerView.
 {% endalert %}
 
 ```kotlin
@@ -487,7 +487,7 @@ Braze.getInstance(context).logBannerClick("global_banner", buttonId);
 {% tab Swift %}
 
 {% alert important %}
-Les analyses/analytiques sont automatiquement suivies lors de l'utilisation de BannerUIView. L'enregistrement manuel ne doit pas être utilisé pour l'affichage par défaut de BannerUIView.
+Les analyses sont automatiquement suivies lors de l'utilisation de BannerUIView. La journalisation manuelle ne doit pas être utilisée pour BannerUIView par défaut.
 {% endalert %}
 
 ```swift
@@ -507,7 +507,7 @@ braze.banners.logClick(placementId: "global_banner", buttonId: buttonId)
 {% tab React Native %}
 
 {% alert important %}
-Les analyses/analytiques sont automatiquement suivies lors de l'utilisation de BrazeBannerView. Aucun enregistrement manuel n'est nécessaire.
+Les analyses sont automatiquement suivies lors de l'utilisation de BrazeBannerView. Aucune connexion manuelle n'est nécessaire.
 {% endalert %}
 
 ```javascript
@@ -521,7 +521,7 @@ Les analyses/analytiques sont automatiquement suivies lors de l'utilisation de B
 {% tab Flutter %}
 
 {% alert important %}
-Les analyses/analytiques sont automatiquement suivies lors de l'utilisation de BrazeBannerView. Aucun enregistrement manuel n'est nécessaire.
+Les analyses sont automatiquement suivies lors de l'utilisation de BrazeBannerView. Aucune connexion manuelle n'est nécessaire.
 {% endalert %}
 
 ```dart
@@ -536,7 +536,7 @@ Les analyses/analytiques sont automatiquement suivies lors de l'utilisation de B
 
 ### Gestion des groupes de contrôle
 
-#### L'approche des cartes de contenu
+#### Approche par cartes de contenu
 
 {% tabs %}
 {% tab Web %}
@@ -596,7 +596,7 @@ for (final card in cards) {
 {% endtab %}
 {% endtabs %}
 
-#### Approche par bannières
+#### Approche des bannières
 
 {% tabs %}
 {% tab Web %}
@@ -660,59 +660,59 @@ BrazeBannerView(
 
 ## Restrictions
 
-Lors de la migration des cartes de contenu vers les bannières, tenez compte des limitations suivantes :
+Lors de la migration des cartes de contenu vers les bannières, veuillez tenir compte des restrictions suivantes :
 
 ### Migration des messages déclenchés
 
-Les bannières ne prennent en charge que les campagnes de réception/distribution planifiées. Pour faire migrer un message qui était auparavant déclenché par l'API ou basé sur des actions, convertissez-le en un ciblage basé sur des segments :
+Les bannières ne prennent en charge que les campagnes de livraison avec planification. Pour migrer un message précédemment déclenché par une API ou basé sur une action, veuillez le convertir en ciblage basé sur un segment :
 
-- **Exemple :** Au lieu de déclencher une carte "Compléter le profil" avec l'API, créez une segmentation pour les utilisateurs qui se sont inscrits au cours des 7 derniers jours mais qui n'ont pas complété leur profil.
-- **Éligibilité en temps réel :** Les utilisateurs sont qualifiés ou disqualifiés pour la bannière instantanément à chaque actualisation en fonction de leur appartenance à un segment.
+- **Exemple :** Au lieu de déclencher une carte « Profil complet » avec l'API, veuillez créer un segment pour les utilisateurs qui se sont inscrits au cours des 7 derniers jours mais qui n'ont pas encore complété leur profil.
+- **Admissibilité en temps réel :** Les utilisateurs sont automatiquement admissibles ou non à la bannière à chaque actualisation, en fonction de leur appartenance à un segment.
 
-### Différences de fonctionnalité
+### Différences de fonctionnalités
 
 | Fonctionnalité | Cartes de contenu | Bannières |
 |---------|--------------|---------|
 | **Structure du contenu** |
-| Plusieurs cartes dans le flux | ✅ Supporté | ✅ Possibilité de créer des placements multiples pour obtenir une mise en œuvre de type carrousel. Une seule bannière est renvoyée par placement. |
-| Placements multiples | S.O. | ✅ Prise en charge de placements multiples |
-| Types de cartes (classique, légendée, image seule) | ✅ Plusieurs types prédéfinis | ✅ Bannière unique basée sur HTML (plus flexible) |
-| **Gestion du contenu** |
-| Éditeur par glisser-déposer | ❌ Nécessite un développeur pour la personnalisation | ✅ Les marketeurs peuvent créer/mettre à jour sans ingénierie |
-| HTML/CSS personnalisé | ❌ Limité à la structure de la carte | ✅ Prise en charge complète de HTML/CSS |
-| Paires clé-valeur pour la personnalisation | ✅ Nécessaire pour une personnalisation avancée | ✅ Des paires clé-valeur fortement typées appelées "propriétés" pour une personnalisation avancée. |
-| **Persistance & Expiration** |
-| Expiration de la carte | ✅ Pris en charge (limite de 30 jours) | ✅ Pris en charge (pas de limite d'expiration) |
-| Une véritable persévérance | ❌ Maximum de 30 jours | ✅ Persistance illimitée |
-| **Display & Ciblage** |
-| Feed UI | ✅ Alimentation par défaut disponible | ❌ Basé sur le placement uniquement |
-| Placement en fonction du contexte | ❌ Basé sur l'alimentation | ✅ Soutien au placement des autochtones |
-| Priorité aux autochtones | ❌ Requiert une logique personnalisée | ✅ Priorité intégrée |
+| Plusieurs cartes dans le flux | ✅ Pris en charge | ✅ Permet de créer plusieurs emplacements pour obtenir une mise en œuvre de type carrousel. Une seule bannière est renvoyée par emplacement. |
+| Placements multiples | S.O. | ✅ Prise en charge de plusieurs emplacements |
+| Types de cartes (classique, avec légende, image uniquement) | ✅ Plusieurs types prédéfinis | Bannière HTML unique (plus flexible) |
+| **Gestion de contenu** |
+| Éditeur par glisser-déposer | ❌ Nécessite l'intervention d'un développeur pour la personnalisation | ✅ Les marketeurs peuvent créer/mettre à jour sans intervention technique. |
+| HTML/CSS personnalisé | Limité à la structure de la carte | ✅ Prise en charge complète HTML/CSS |
+| Paires clé-valeur pour la personnalisation | ✅ Nécessaire pour une personnalisation avancée | ✅ Paires clé-valeur fortement typées appelées « propriétés » pour une personnalisation avancée |
+| **Persistance&  Expiration** |
+| Expiration de la carte | ✅ Pris en charge (limite de 30 jours) | ✅ Pris en charge (sans limite d'expiration) |
+| Véritable persévérance | ❌ Maximum de 30 jours | Persévérance illimitée |
+| **Ciblage &d'affichage** |
+| Interface utilisateur du flux | ✅ Flux par défaut disponible | ❌ Basé uniquement sur le placement |
+| Placement contextuel | ❌ Basé sur l'alimentation | ✅ Prise en charge native du placement |
+| Priorisation native | ❌ Nécessite une logique personnalisée | ✅ Priorisation intégrée |
 | **Interaction avec l'utilisateur** |
-| Renvoi manuel | ✅ Supporté | ❌ Non pris en charge |
-| Cartes épinglées | ✅ Supporté | S.O. |
+| Licenciement manuel | ✅ Pris en charge | ❌ Non pris en charge |
+| Cartes épinglées | ✅ Pris en charge | S.O. |
 | **Analyse** |
-| Analyse/analytique automatique (si utilisée comme interface par défaut) | ✅ Supporté | ✅ Supporté |
-| Tri par ordre de priorité | ❌ Non pris en charge | ✅ Supporté | 
+| Analyses automatiques (interface utilisateur par défaut) | ✅ Pris en charge | ✅ Pris en charge |
+| Tri par priorité | ❌ Non pris en charge | ✅ Pris en charge | 
 | **Mises à jour du contenu** |
-| Actualiser les modèles liquides | ❌ Une fois par carte lors de l'envoi/du lancement | ✅ S'actualise à chaque rafraîchissement |
-| Actualiser l'éligibilité | ❌ Une fois par carte lors de l'envoi/du lancement | ✅ S'actualise à chaque séance |
+| Actualisation du modèle liquide | Une fois par carte lors de l'envoi/du lancement | ✅ Se rafraîchit à chaque actualisation |
+| Actualisation des conditions d'admissibilité | Une fois par carte lors de l'envoi/du lancement | ✅ Actualise à chaque session |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Limites du produit
 
-- Jusqu'à 25 messages actifs par placement.
-- Jusqu'à 10 ID de placement par demande d'actualisation ; les demandes au-delà sont tronquées.
+- Jusqu'à 25 messages actifs par emplacement.
+- Jusqu'à 10 ID de placement par demande d'actualisation ; les demandes supplémentaires sont tronquées.
 
 ### Limitations du SDK
 
-- Les bannières ne sont actuellement pas prises en charge sur les plateformes .NET MAUI (Xamarin), Cordova, Unity, Vega ou TV.
-- Assurez-vous que vous utilisez les versions minimales du SDK indiquées dans les conditions préalables.
+- Les bannières ne sont actuellement pas prises en charge sur les plateformes .NET MAUI (Xamarin), cordova, Unity, Vega ou TV.
+- Veuillez vous assurer que vous utilisez les versions minimales du SDK indiquées dans les prérequis.
 
 ## Articles connexes
 
-- [Placement de bannières]({{site.baseurl}}/developer_guide/banners/placements)
+- [Emplacements des bannières]({{site.baseurl}}/developer_guide/banners/placements)
 - [Tutoriel : Affichage d'une bannière par ID de placement]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
-- [Analyse/analytique des bannières (si utilisées anjectives)]({{site.baseurl}}/developer_guide/banners/analytics)
+- [Analyse des bannières]({{site.baseurl}}/developer_guide/banners/analytics)
 - [FAQ sur les bannières]({{site.baseurl}}/developer_guide/banners/faq)
 
