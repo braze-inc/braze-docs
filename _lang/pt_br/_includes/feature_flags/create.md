@@ -26,13 +26,13 @@ Para gerenciar os Feature Flags no dashboard, você precisará ser um administra
 
 Acesse **Envio de mensagens** > **Feature Flags** e selecione **Criar Feature Flag**.
 
-![Uma tabela de dados que mostra um sinalizador de recurso existente e como criar um novo.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
+![Uma tabela de dados mostrando um feature flag existente e como criar um novo.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
 
 ### Etapa 2: Preencha os detalhes
 
-Em **Feature Flag details (Detalhes do sinalizador** de recurso), insira um nome, ID e descrição para seu sinalizador de recurso.
+Sob **Detalhes do feature flag**, insira um nome, ID e descrição para seu feature flag.
 
-![Um formulário que mostra que você pode adicionar um nome, ID, descrição e propriedades a um Feature Flag.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
+![Um formulário mostrando que você pode adicionar um nome, ID, descrição e propriedades a um feature flag.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
 
 
 | Campo        | Descrição                                                                |
@@ -40,16 +40,16 @@ Em **Feature Flag details (Detalhes do sinalizador** de recurso), insira um nome
 | Nome         | Um título legível por humanos para seus profissionais de marketing e administradores.              |
 | ID           | A ID exclusiva que você usará em seu código para verificar se esse recurso está [ativado para um usuário](#enabled). Esse ID não pode ser alterado posteriormente, portanto, revise nossas [práticas recomendadas de nomeação de ID](#naming-conventions) antes de continuar. |
 | Descrição  | Uma descrição opcional que fornece algum contexto sobre seu Feature Flag.   |
-| Propriedades   | Propriedades opcionais que configuram remotamente seu sinalizador de recurso. Eles podem ser sobrescritos nas etapas do canva ou em experimentos do canva. |
+| Propriedades   | Propriedades opcionais que configuram remotamente seu feature flag. Elas podem ser sobrescritas em etapas do Canvas ou em experimentos de feature flag. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Etapa 2a: Criar propriedades personalizadas
 
-Em **Properties (Propriedades**), você pode, opcionalmente, criar propriedades personalizadas que seu app pode acessar por meio do Braze SDK quando seu recurso estiver ativado. Você pode atribuir um valor de string, booleano, imagem, carimbo de data/hora, JSON ou um número a cada variável, bem como definir um valor padrão.
+Sob **Propriedades**, você pode opcionalmente criar propriedades personalizadas que seu app pode acessar através do SDK do Braze quando seu recurso estiver habilitado. Você pode atribuir um valor string, booleano, imagem, timestamp, JSON ou um número a cada variável, além de definir um valor padrão.
 
 {% tabs local %}
 {% tab example %}
-No exemplo a seguir, o feature flag mostra um banner de falta de estoque para uma loja de comércio eletrônico usando as propriedades personalizadas listadas: 
+No exemplo a seguir, o feature flag mostra um banner de esgotado para uma loja de eCommerce usando as propriedades personalizadas listadas: 
 
 |Nome da propriedade|Tipo|Valor|
 |--|--|--|
@@ -62,73 +62,73 @@ No exemplo a seguir, o feature flag mostra um banner de falta de estoque para um
 |`footer_settings`|`JSON`|`{ "colors": [ "red", "blue", "green" ], "placement": 123 }`|
 
 {% alert tip %}
-Não há limite para o número de propriedades que você pode adicionar. No entanto, as propriedades de um sinalizador de recurso são limitadas a um total de 10 KB. Tanto os valores de propriedade quanto as chaves estão limitados a 255 caracteres de comprimento.
+Não há limite para o número de propriedades que você pode adicionar. No entanto, as propriedades de um feature flag são limitadas a um total de 10 KB. Tanto os valores de propriedade quanto as chaves estão limitados a 255 caracteres de comprimento.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
 ### Etapa 4: Escolha os segmentos a serem direcionados
 
-Antes de implementar um Feature Flag, é necessário escolher um [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/) de usuários para direcionamento. Selecione **Add Rule (Adicionar regra** ) no sinalizador recém-criado e, em seguida, use os menus suspensos filter group (grupo de filtros) e segment (segmento) para filtrar os usuários do seu público-alvo. Adicione vários filtros para restringir ainda mais seu público.
+Antes de implementar um Feature Flag, é necessário escolher um [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/) de usuários para direcionamento. Selecione **Adicionar Regra** em seu flag recém-criado e depois use os menus suspensos de grupo de filtro e segmento para filtrar usuários fora do seu público-alvo. Adicione múltiplos filtros para restringir ainda mais seu público.
 
-![Uma caixa de texto denominada Rollout Traffic com a capacidade de adicionar segmentos e filtros.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
+![Uma caixa de texto rotulada Tráfego de Lançamento com a capacidade de adicionar segmentos e filtros.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
 
 ### Etapa 5: Definir o tráfego de lançamento {#rollout}
 
-Por padrão, os feature flags estão sempre inativos, o que permite separar a data de lançamento do seu recurso da ativação total do usuário. Para iniciar a implementação, use a seção **Rollout Traffic (Tráfego de implementação** ) para inserir uma porcentagem na caixa de texto. Isso escolherá a porcentagem de usuários aleatórios no seu segmento selecionado para receber esse novo recurso.
+Por padrão, os feature flags estão sempre inativos, o que permite separar a data de lançamento do seu recurso da ativação total dos usuários. Para iniciar seu lançamento, use a seção **Tráfego de Lançamento** para inserir uma porcentagem na caixa de texto. Isso escolherá a porcentagem de usuários aleatórios no seu segmento selecionado para receber este novo recurso.
 
 {% alert important %}
 Não defina seu tráfego de implementação acima de 0% até que o novo recurso possa entrar em operação. Na primeira definição do seu Feature Flag no dashboard, deixe essa configuração em 0%.
 {% endalert %}
 
 {% alert important %}
-Para implementar uma bandeira com apenas uma regra ou para um público Singular, adicione sua primeira regra com critérios de segmentação e porcentagens de implementação selecionadas. Por fim, confirme se a regra **Todos os outros** está desativada e salve sua bandeira.
+Para lançar um flag com apenas uma regra ou para um público singular, adicione sua primeira regra com critérios de segmentação e porcentagens de lançamento selecionadas. Por fim, confirme que a regra **Todos os Outros** está desativada e salve seu flag.
 {% endalert %}
 
-## Rollouts de bandeiras com várias regras
+## Lançamentos de feature flag com múltiplas regras
 
-Use rollouts de feature flag com várias regras para definir uma sequência de regras para avaliação de usuários, o que permite uma segmentação precisa e lançamentos controlados de recursos. Esse método é ideal para implementar o mesmo recurso para diversos públicos. 
+Use lançamentos de feature flag com múltiplas regras para definir uma sequência de regras para avaliar usuários, o que permite segmentação precisa e lançamentos controlados de recursos. Esse método é ideal para implantar o mesmo recurso para públicos diversos. 
 
 ### Ordem de avaliação
 
-As regras do Feature Flag são avaliadas de cima para baixo, na ordem em que estão listadas. Um usuário se qualifica para a primeira regra que cumprir. Se um usuário não atender a nenhuma regra, sua elegibilidade será determinada pela regra padrão "Todos os outros".
+As regras de feature flag são avaliadas de cima para baixo, na ordem em que estão listadas. Um usuário se qualifica pela primeira regra que atende. Se um usuário não atender a nenhuma regra, sua elegibilidade é determinada pela regra padrão "Todos os Outros".
 
 ### Qualificação do usuário
 
-- Se um usuário atender aos critérios da primeira regra, ele será imediatamente elegível para receber o Feature Flag.
+- Se um usuário atender aos critérios da primeira regra, ele está imediatamente elegível para receber a feature flag.
 - Se um usuário não se qualificar para a primeira regra, ele será avaliado em relação à segunda regra, e assim por diante.
 
-A avaliação sequencial continua até que um usuário se qualifique para uma regra ou chegue à regra "Todos os outros" na parte inferior da lista.
+A avaliação sequencial continua até que um usuário se qualifique para uma regra ou alcance a regra "Todos os Outros" no final da lista.
 
-### Regra "Todos os demais"
+### Regra "Todos os Outros"
 
-A regra "Todos os outros" funciona como padrão. Se um usuário não se qualificar para nenhuma regra anterior, sua elegibilidade para o sinalizador de recurso será determinada pela configuração de alternância da regra "Everyone Else" (Todos os outros). Por exemplo, se a regra "Everyone Else" (Todos os outros) estiver desativada, no estado padrão, um usuário que não atender aos critérios de nenhuma outra regra não receberá o sinalizador de recurso no início da sessão.
+A regra "Todos os Outros" atua como um padrão. Se um usuário não se qualificar para nenhuma das regras anteriores, sua elegibilidade para a feature flag será determinada pela configuração de alternância da regra "Todos os Outros". Por exemplo, se a regra "Todos os Outros" estiver alternada para "Desligado", no estado padrão, um usuário que não atender aos critérios de nenhuma outra regra não receberá a feature flag ao iniciar sua sessão.
 
-### Regras de reordenação
+### Reordenando regras
 
-Por padrão, as regras são ordenadas na sequência em que são criadas, mas você pode reordená-las arrastando-as e soltando-as no dashboard.
+Por padrão, as regras são ordenadas na sequência em que foram criadas, mas você pode reordenar essas regras arrastando e soltando-as no dashboard.
 
-![Uma imagem mostrando que um usuário pode adicionar uma regra a um feature flag.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
+![Uma imagem mostrando que um usuário pode adicionar uma regra a uma feature flag.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
 
-![Uma imagem mostrando um resumo de um Feature Flag com várias regras adicionadas e uma regra para todos os outros.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
+![Uma imagem mostrando um resumo de uma feature flag com várias regras adicionadas e uma regra de todos os outros.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
 
-### Casos de uso do Feature Flag com várias regras
+### Casos de uso de feature flags com múltiplas regras
 
 #### Liberar gradualmente uma página de checkout
 
-Digamos que você trabalhe para uma marca de comércio eletrônico e tenha uma nova página de checkout que deseja implementar em diferentes regiões geográficas para garantir a estabilidade. Usando os sinalizadores de recursos de várias regras, você pode definir o seguinte:
+Vamos supor que você trabalhe para uma marca de eCommerce e tenha uma nova página de checkout que deseja lançar em diferentes geografias para garantir estabilidade. Usando feature flags com múltiplas regras, você pode definir o seguinte:
 
-- **Regra 1:** Seu segmento dos EUA está definido como 100%.
-- **Regra 2:** Seu segmento está definido como 50% dos usuários brasileiros, portanto, nem todos eles recebem o fluxo de uma só vez. 
-- **Regra 3 (Todos os demais):** Para todos os outros usuários, ative a regra "Everyone Else" e defina-a como 15%, para que uma parte de todos os usuários possa fazer o check-out com o novo fluxo.
+- **Regra 1:** Seu segmento dos EUA está definido para 100%.
+- **Regra 2:** Seu segmento está definido para 50% dos seus usuários brasileiros, então nem todos eles recebem o fluxo ao mesmo tempo. 
+- **Regra 3 (Todos os demais):** Para todos os outros usuários, ative sua regra "Todos os Outros" e defina-a para 15%, para que uma parte de todos os usuários possa finalizar a compra com o novo fluxo.
 
-#### Alcançar primeiro os testadores internos
+#### Alcance os testadores internos primeiro
 
-Digamos que você seja um gerente de produto que queira mesmo garantir que seus testadores internos sempre recebam o sinalizador de recurso quando você lançar um novo produto. Você pode adicionar o segmento de testadores internos à sua primeira regra e defini-la como 100%, para que os testadores internos sejam elegíveis durante cada lançamento de recurso.
+Vamos supor que você seja um gerente de produto que quer garantir que seus testadores internos sempre recebam o feature flag quando você lançar um novo produto. Você pode adicionar seu segmento de testadores internos à sua primeira regra e defini-lo para 100%, para que seus testadores internos sejam elegíveis durante cada lançamento de feature.
 
 ## Usando o campo "enabled" para seus Feature Flags {#enabled}
 
-Depois de definir seu Feature Flag, configure seu app ou site para verificar se ele está ou não ativado para um determinado usuário. Quando a capacitação estiver ativada, você definirá alguma ação ou fará referência às propriedades variáveis do sinalizador de recurso com base no seu caso de uso. O SDK da Braze fornece métodos getter para obter o status do Feature Flag e suas propriedades em seu app. 
+Depois de definir seu feature flag, configure seu app ou site para verificar se ele está habilitado para um usuário específico. Quando a capacitação estiver ativada, você definirá alguma ação ou fará referência às propriedades variáveis do sinalizador de recurso com base no seu caso de uso. O SDK da Braze fornece métodos getter para obter o status do Feature Flag e suas propriedades em seu app. 
 
 Os Feature Flag são atualizados automaticamente no início da sessão para que você possa exibir a versão mais atualizada do seu recurso no lançamento. O SDK armazena esses valores em cache para que possam ser usados off-line. 
 
@@ -319,7 +319,7 @@ m.Braze.logFeatureFlagImpression("expanded_user_profile");
 
 Para acessar as propriedades de um Feature Flag, use um dos seguintes métodos, dependendo do tipo que você definiu no dashboard.
 
-Se não houver nenhuma propriedade do tipo correspondente para a chave que você forneceu, esses métodos retornarão `null`.
+Se não houver tal propriedade do tipo correspondente para a chave que você forneceu, esses métodos retornarão `null`.
 
 {% tabs %}
 {% tab Web %}
@@ -877,21 +877,21 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 {% endtab %}
 {% endtabs %}
 
-## Verificação da elegibilidade do usuário
+## Verificando a elegibilidade do usuário
 
-Para verificar para quais sinalizadores de recursos um usuário é elegível no Braze, vá para **Público** > **Pesquisar usuários** e, em seguida, pesquise e selecione um usuário.
+Para verificar quais feature flags um usuário é elegível no Braze, acesse **público** > **Buscar Usuários**, em seguida, pesquise e selecione um usuário.
 
-Na guia **Feature Flags Eligibility (Elegibilidade de sinalizadores** de recursos), você pode filtrar a lista de sinalizadores de recursos elegíveis por plataforma, aplicativo ou dispositivo. Também é possível fazer uma prévia da carga útil que será retornada ao usuário selecionando <i class="fa-solid fa-eye"></i> ao lado de um sinalizador de recurso.
+Na aba **Elegibilidade dos Feature Flags**, você pode filtrar a lista de feature flags elegíveis por plataforma, aplicativo ou dispositivo. Você também pode visualizar a carga útil que será retornada ao usuário selecionando <i class="fa-solid fa-eye"></i> ao lado de um feature flag.
 
-![Uma imagem que mostra a tabela de sinalizadores de recursos para os quais um usuário é elegível.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
+![Uma imagem mostrando a tabela de feature flags para as quais um usuário é elegível.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
 
 ## Exibir o changelog
 
 Para visualizar o changelog de um sinalizador de recurso, abra um sinalizador de recurso e selecione **Changelog**.
 
-![A página "Edit" (Editar) de um sinalizador de recurso, com o botão "Changelog" destacado.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
+![A página "Editar" de um feature flag, com o botão "Changelog" destacado.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
 
-Aqui, você pode verificar quando uma alteração ocorreu, quem fez a alteração, a qual categoria ela pertence e muito mais.
+Aqui, você pode revisar quando uma mudança aconteceu, quem fez a mudança, a qual categoria pertence e mais.
 
 ![O changelog do feature flag selecionado.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
 
@@ -899,7 +899,7 @@ Aqui, você pode verificar quando uma alteração ocorreu, quem fez a alteraçã
 
 O Braze mantém automaticamente o rastreamento de quais usuários estão atualmente habilitados para uma bandeira de recurso. Você pode criar um segmento ou envio de mensagens de destino usando o [filtro**Feature Flag**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). Para saber mais sobre filtragem em segmentos, consulte [Criação de um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
-![A seção "Filtros" com "Feature Flag" digitado na barra de pesquisa do filtro.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
+![A seção "Filtros" com "Feature Flag" digitado na barra de pesquisa de filtros.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
 
 {% alert note %}
 Para evitar segmentos recursivos, não é possível criar um segmento que faça referência a outros feature flags.
