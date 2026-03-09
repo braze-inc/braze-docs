@@ -2,7 +2,7 @@
 nav_title: 컨텍스트 변수
 article_title: 컨텍스트 변수
 page_type: reference
-description: "이 참조 문서는 Braze 캔버스에서 컨텍스트 변수의 유형, 사용법 및 모범 사례를 설명합니다."
+description: "이 참조 문서에서는 Braze 캔버스에서 컨텍스트 변수의 유형, 사용법 및 모범 사례를 설명합니다."
 ---
 
 # 컨텍스트 변수
@@ -26,9 +26,9 @@ description: "이 참조 문서는 Braze 캔버스에서 컨텍스트 변수의 
 
 예를 들어, {% raw %}`{{context.${flight_time}}}`{% endraw %}은 사용자의 예정된 비행 시간을 반환할 수 있습니다.
 
-사용자가 캔버스를 입력할 때마다(이전에 입력한 적이 있더라도) 최신 입력 데이터와 캔버스 설정을 기반으로 컨텍스트 변수가 재정의됩니다. 이 상태 유지 접근 방식은 각 캔버스 항목이 고유한 독립적인 컨텍스트를 유지할 수 있게 하여, 사용자가 동일한 여정 내에서 여러 활성 상태를 가질 수 있도록 하며 각 상태에 대한 특정 컨텍스트를 유지합니다.
+사용자가 캔버스를 입력할 때마다(이전에 입력한 적이 있더라도) 최신 입력 데이터와 캔버스 설정을 기반으로 컨텍스트 변수가 재정의됩니다. 이 상태 유지 접근 방식은 각 캔버스 항목이 고유한 독립적인 컨텍스트를 유지할 수 있게 하여, 사용자가 동일한 여정 내에서 여러 활성 상태를 가지면서 각 상태에 대한 특정 컨텍스트를 유지할 수 있게 합니다.
 
-예를 들어, 고객이 두 개의 예정된 비행이 있는 경우, 그들은 각각 출발 시간 및 목적지와 같은 비행별 컨텍스트 변수를 가진 두 개의 별도의 여정 상태를 동시에 실행하게 됩니다. 이렇게 하면 고객의 오후 2시 뉴욕행 비행에 대한 개인화된 알림을 보내면서 내일 오전 8시 로스앤젤레스행 비행에 대한 다른 업데이트를 보낼 수 있어, 각 메시지가 특정 예약과 관련성을 유지합니다.
+예를 들어, 고객이 두 개의 예정된 비행이 있는 경우, 그들은 각각 출발 시간 및 목적지와 같은 비행별 컨텍스트 변수를 가진 두 개의 별도 여정 상태를 동시에 실행하게 됩니다. 이렇게 하면 고객의 오후 2시 뉴욕행 비행에 대한 개인화된 알림을 보내면서 내일 오전 8시 로스앤젤레스행 비행에 대한 다른 업데이트를 보낼 수 있어, 각 메시지가 특정 예약과 관련성을 유지합니다.
 
 ## 고려 사항
 
@@ -63,13 +63,13 @@ Context 변수는 [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_
 |개체(평면) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-기본적으로, 시간 데이터 유형은 UTC입니다. 시간 값을 저장하기 위해 문자열 데이터 유형을 사용하는 경우, PST와 같은 다른 시간대의 시간을 정의할 수 있습니다. 
+기본적으로, 시간 데이터 유형은 UTC입니다. 시간 값을 저장하기 위해 문자열 데이터 유형을 사용하는 경우, PST와 같은 다른 시간대의 시간으로 정의할 수 있습니다. 
 
 예를 들어, 생일 전날 사용자에게 메시지를 보내는 경우, Liquid 논리가 생일 전날 보내는 것과 관련이 있으므로 시간 데이터 유형으로 Context 변수를 저장해야 합니다. 그러나 크리스마스 날(12월 25일)에 휴일 메시지를 보내는 경우, 시간을 동적 변수로 참조할 필요가 없으므로 문자열 데이터 유형을 사용하는 것이 바람직합니다.
 
 ## Context 변수 사용
 
-컨텍스트 변수를 캔버스의 Liquid를 사용하는 모든 곳에서 사용할 수 있습니다. 예를 들어 [메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) 및 [사용자 업데이트]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update) 단계에서 **개인화 추가**를 선택하여 사용할 수 있습니다.
+컨텍스트 변수를 캔버스에서 리퀴드 사용 시 어디에서나 사용할 수 있습니다. 예를 들어 [메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) 및 [사용자 업데이트]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update) 단계에서 **개인화 추가**를 선택하여 사용할 수 있습니다.
 
 예를 들어, 승객에게 다가오는 항공편 전에 VIP 라운지 이용에 대해 알리고 싶다고 가정해 보겠습니다. 이 메시지는 일등석 항공권을 구매한 승객에게만 전송해야 합니다. 컨텍스트 변수는 이러한 정보를 유연하게 추적하는 방법입니다.
 
@@ -90,14 +90,14 @@ Context 변수는 [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_
 컨텍스트 단계의 정보로 [개인화된 지연 옵션을]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) 추가할 수 있습니다. 즉, 사용자를 지연시키는 변수를 선택할 수 있습니다.
 {% endalert %}
 
-### 액션 경로 및 종료 기준에 대한 내용입니다.
+### 액션 경로 및 종료 기준에 대해
 
-이 트리거 작업에서 컨텍스트 변수 또는 커스텀 속성과 비교 속성 필터를 활용할 수 있습니다: **Perform Custom Event** and **Make Purchase**. 이 작업 트리거는 기본 속성과 중첩 속성 모두에 대한 속성 필터를 지원합니다. 
+이 트리거 작업에서 컨텍스트 변수 또는 커스텀 속성과 비교 속성 필터를 활용할 수 있습니다: **Perform Custom Event** and **Make Purchase**. 이 작업 트리거는 기본 및 중첩 속성 모두에 대한 속성 필터를 지원합니다. 
 
-- 기본 속성과 비교할 때 사용 가능한 비교는 커스텀 이벤트에 의해 정의된 속성의 유형과 일치합니다. 예를 들어, 문자열 속성은 정확히 일치하거나 정규식과 일치합니다. 부울 속성은 true 또는 false입니다. 
+- 기본 속성과 비교할 때 사용 가능한 비교는 커스텀 이벤트에 의해 정의된 속성의 유형과 일치합니다. 예를 들어, 문자열 속성은 정확히 일치하거나 정규식 일치를 가집니다. 부울 속성은 true 또는 false입니다. 
 - 중첩 속성과 비교할 때, 유형이 미리 정의되어 있지 않으므로 부울, 숫자, 문자열, 시간 및 연중일에 대해 여러 데이터 유형 간의 비교를 선택할 수 있습니다. 이는 중첩 커스텀 속성에 대한 비교와 유사합니다. 비교 시 중첩 속성의 실제 데이터 유형과 일치하지 않는 데이터 유형을 선택하면 사용자가 액션 경로 또는 종료 기준과 일치하지 않습니다.
 
-#### 액션 경로 예시입니다.
+#### 액션 경로 예시
 
 {% alert important %}
 커스텀 속성 비교의 경우, 작업이 수행될 때 커스텀 속성 값을 사용합니다. 이는 사용자가 비교 시점에 이 커스텀 속성이 채워져 있지 않거나 커스텀 속성 값이 정의된 속성 비교와 일치하지 않으면 액션 경로 그룹과 일치하지 않음을 의미합니다. 이는 사용자가 액션 경로 단계에 들어갔을 때 일치했더라도 마찬가지입니다.
@@ -113,7 +113,7 @@ Context 변수는 [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_
 {% endtab %}
 {% tab Make purchase %}
 
-다음 액션 경로는 특정 제품 이름 `shoes`에 대한 기본 속성 `brand`과 컨텍스트 변수를 일치시키도록 설정되어 있습니다.
+다음 액션 경로는 특정 제품 이름 `shoes`에 대한 기본 속성 `brand`을 컨텍스트 변수 `promoted_shoe_brand`와 일치하도록 설정되어 있습니다.
 
 ![구매할 때 컨텍스트 변수를 참조하는 액션 경로의 예입니다.]({% image_buster /assets/img/context_action_path2.png %})
 
@@ -137,7 +137,7 @@ Context 변수는 [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_
 
 종료 기준은 사용자의 여정에서 언제든지 캔버스를 종료할 수 있는 조건을 명시합니다.
 
-- 사용자가 "책" 제품 이름에 대해 특정 구매를 할 경우,
+- 사용자가 "책" 제품 이름에 대해 특정 구매를 수행하고,
 - 그 구매의 중첩 속성 "loyalty_program"이 사용자의 커스텀 속성 "VIP"와 같을 경우.
 
 ![구매를 수행하는 경우 사용자를 종료하도록 설정된 종료 기준입니다.]({% image_buster /assets/img/context_exit_criteria2.png %})
@@ -147,7 +147,7 @@ Context 변수는 [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_
 
 ### 컨텍스트 변수 필터
 
-이전에 선언된 컨텍스트 변수를 사용하여 [오디언스 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) 및 [결정 분할]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) 단계에서 필터를 생성할 수 있습니다.
+이전에 선언된 컨텍스트 변수를 [오디언스 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) 및 [결정 분할]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) 단계에서 사용할 수 있는 필터를 생성할 수 있습니다.
 
 {% alert note %}
 컨텍스트 변수 필터는 오디언스 경로 및 결정 분할 단계에서만 사용할 수 있습니다.
@@ -157,7 +157,7 @@ Context 변수는 [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_
 
 ![컨텍스트 변수를 사용하여 필터를 생성할 수 있는 결정 분할 단계 예시입니다.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
 
-캔버스의 컨텍스트 변수에 미리 정의된 유형이 있는 것처럼, 컨텍스트 변수와 정적 값 간의 비교는 [일치하는 데이터 유형]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types)을 가져야 합니다. 컨텍스트 변수 필터는 부울, 숫자, 문자열, 시간 및 연중일에 대한 여러 데이터 유형 간의 비교를 허용하며, [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/)에 대한 비교와 유사합니다.
+캔버스의 컨텍스트 변수에 미리 정의된 유형이 있는 것처럼, 컨텍스트 변수와 정적 값 간의 비교는 [일치하는 데이터 유형]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types)을 가져야 합니다. 컨텍스트 변수 필터는 부울, 숫자, 문자열, 시간 및 연중일과 같은 여러 데이터 유형 간의 비교를 허용하며, [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/)에 대한 비교와 유사합니다.
 
 {% alert note %}
 컨텍스트 변수와 비교에 동일한 데이터 유형을 사용하십시오. 예를 들어, 컨텍스트 변수가 시간 데이터 유형인 경우 시간 비교(예: "이전" 또는 "이후")를 사용하십시오. 데이터 유형이 일치하지 않는 경우(예: 시간 컨텍스트 변수와 문자열 비교) 예기치 않은 동작이 발생할 수 있습니다.
@@ -176,28 +176,28 @@ Context 변수는 [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_
 {% tabs %}
 {% tab Example 1 %}
 
-사용자가 마지막 3일 동안 앱에 로그인하지 않은 경우, 개인화된 알림을 보내고 싶다고 가정해 보겠습니다. 이 경우 메시지를 받아야 합니다.
+사용자가 마지막 3일 동안 앱에 로그인하지 않은 경우, 개인화된 알림을 사용자에게 보내고 싶다고 가정해 보겠습니다. 이 경우 메시지를 받아야 합니다.
 
-당신은 {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %}로 정의된 컨텍스트 변수 `re_engagement_date`를 가지고 있습니다. `3 days`는 사용자의 커스텀 속성으로 저장된 가변적인 양일 수 있습니다. 따라서 `re_engagement_date`가 `last_login_date` (사용자 프로필의 커스텀 속성으로 저장됨) 이후인 경우, 그들은 메시지를 받을 것입니다.
+당신은 {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %}로 정의된 컨텍스트 변수 `re_engagement_date`을 가지고 있습니다. `3 days`는 사용자의 커스텀 속성으로 저장된 가변적인 양일 수 있습니다. 따라서 `re_engagement_date`가 `last_login_date` 이후인 경우(사용자 프로필에 커스텀 속성으로 저장됨), 그들은 메시지를 받을 것입니다.
 
-![커스텀 속성을 개인화 유형으로 하는 필터 설정이 컨텍스트 변수 "re_engagement_date"에 대해 커스텀 속성 "last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %}) 이후에 있습니다.
+![커스텀 속성을 개인화 유형으로 하는 필터 설정이 컨텍스트 변수 "re_engagement_date"에 대해 커스텀 속성 "last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %})
 
 {% endtab %}
 {% tab Example 2 %}
 
-다음 필터는 컨텍스트 변수 `reminder_date`가 컨텍스트 변수 `appointment_deadline`보다 이전인지 비교합니다. 이는 사용자를 오디언스 경로 단계에서 그룹화하여 약속 마감일 전에 추가 알림을 받아야 하는지 여부를 결정하는 데 도움이 될 수 있습니다.
+다음 필터는 컨텍스트 변수 `reminder_date`이 컨텍스트 변수 `appointment_deadline`보다 이전인지 비교합니다. 이는 사용자 그룹을 오디언스 경로 단계에서 그룹화하여 약속 마감일 전에 추가 알림을 받아야 하는지 여부를 결정하는 데 도움이 될 수 있습니다.
 
-![컨텍스트 변수를 개인화 유형으로 하는 필터 설정이 컨텍스트 변수 "reminder_date"에 대해 컨텍스트 변수 "appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %})입니다.
+![컨텍스트 변수를 개인화 유형으로 하는 필터 설정이 컨텍스트 변수 "reminder_date"에 대해 컨텍스트 변수 "appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %})
 
 {% endtab %}
 {% endtabs %}
 
 ## 시간대 일관성 표준화
 
-대부분의 이벤트 속성이 타임스탬프 유형을 사용하는 경우 이미 Canvas에서 UTC에 있지만 몇 가지 예외가 있습니다. Canvas Context의 추가로, 모든 기본 타임스탬프 이벤트 속성은 액션 기반 Canvas에서 일관되게 UTC로 설정됩니다. 이 변경 사항은 Canvas 단계 및 메시지를 편집할 때 보다 예측 가능하고 일관된 경험을 보장하기 위한 더 넓은 노력의 일환입니다. 이 변경 사항은 특정 Canvas가 Context 단계를 사용하든 사용하지 않든 모든 액션 기반 Canvas에 영향을 미칠 것입니다.
+대부분의 이벤트 속성이 타임스탬프 유형을 사용하는 경우 이미 캔버스에서 UTC에 있습니다. 그러나 몇 가지 예외가 있습니다. 캔버스 컨텍스트가 추가됨에 따라, 모든 기본 타임스탬프 이벤트 속성은 액션 기반 캔버스에서 일관되게 UTC로 설정됩니다. 이 변경 사항은 캔버스 단계 및 메시지를 편집할 때 보다 예측 가능하고 일관된 경험을 보장하기 위한 더 넓은 노력의 일환입니다. 이 변경 사항은 특정 캔버스가 컨텍스트 단계를 사용하든 사용하지 않든 모든 액션 기반 캔버스에 영향을 미칠 것입니다.
 
 {% alert important %}
-모든 경우에 대해, 우리는 타임스탬프가 원하는 시간대에 표시되도록 [Liquid time_zone 필터]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know)를 사용하는 것을 강력히 권장합니다. 이 [컨텍스트 단계 기사에서 자주 묻는 질문]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#faq-example)를 참조하여 예를 확인할 수 있습니다.
+모든 경우에 대해, 타임스탬프가 원하는 시간대에 표시되도록 [Liquid time_zone 필터]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know)를 사용하는 것을 강력히 권장합니다. 이 [컨텍스트 단계 기사에서 자주 묻는 질문]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#faq-example)를 참조하여 예를 확인할 수 있습니다.
 {% endalert %}
 
 ## 관련 문서
