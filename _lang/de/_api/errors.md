@@ -1,5 +1,5 @@
 ---
-nav_title: Fehler &amp; Antworten
+nav_title: Fehler und Reaktionen
 article_title: API-Fehler &amp; Antworten
 description: "Dieser referenzierte Artikel behandelt die verschiedenen Fehler und Server-Antworten, die bei der Verwendung der Braze API auftreten können, und wie Sie diese beheben können."
 page_type: reference
@@ -14,7 +14,7 @@ page_order: 2.3
 
 ## Antworten des Servers
 
-Wenn Ihr POST-Payload von unseren Servern akzeptiert wurde, erhalten erfolgreiche Nachrichten die folgende Antwort:
+Wenn Ihre POST-Nutzlast von unseren Servern akzeptiert wurde, erhalten Sie die folgende Antwort für jede erfolgreiche Nachricht:
 
 ```json
 {
@@ -22,9 +22,11 @@ Wenn Ihr POST-Payload von unseren Servern akzeptiert wurde, erhalten erfolgreich
 }
 ```
 
-Beachten Sie, dass Erfolg nur bedeutet, dass die RESTful API-Nutzdaten korrekt geformt und an unsere Push-Benachrichtigung oder E-Mail- oder andere Messaging-Dienste weitergeleitet wurden. Es bedeutet nicht, dass die Nachrichten tatsächlich zugestellt wurden, da weitere Faktoren die Zustellung der Nachricht verhindern könnten (z.B. könnte ein Gerät offline sein, das Push-Token könnte von Apples Servern abgelehnt werden, Sie könnten eine unbekannte Nutzer:innen-ID angegeben haben).
+Bitte beachten Sie, dass „Erfolg“ lediglich bedeutet, dass die REST API-Nutzlast korrekt erstellt und an unseren Push-Benachrichtigungsdienst, E-Mail-Dienst oder andere Messaging-Dienste übermittelt wurde. Dies bedeutet nicht, dass die Nachrichten tatsächlich zugestellt wurden, da zusätzliche Faktoren die Zustellung der Nachricht verhindern könnten (beispielsweise könnte ein Gerät offline sein, der Push-Token könnte von den Servern von Apple abgelehnt werden oder Sie könnten eine unbekannte Benutzer-ID angegeben haben).
 
-Wenn Ihre Nachricht erfolgreich ist, aber nicht schwerwiegende Fehler aufweist, erhalten Sie folgende Antwort:
+Bei Endpunkten wie [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify), die keine Nachrichten senden, bedeutet eine Erfolgsmeldung lediglich, dass Braze die Anfrage zur Verarbeitung erhalten hat. Wenn nach der Verarbeitung keine Übereinstimmung für den Alias gefunden wird, wird die Anfrage abgebrochen.
+
+Wenn Ihre Nachricht erfolgreich ist, jedoch nicht schwerwiegende Fehler enthält, erhalten Sie die folgende Antwort:
 
 ```json
 {
@@ -32,7 +34,7 @@ Wenn Ihre Nachricht erfolgreich ist, aber nicht schwerwiegende Fehler aufweist, 
 }
 ```
 
-Im Falle eines Erfolgs werden alle Nachrichten, die nicht von einem Fehler im Array `errors` betroffen waren, weiterhin zugestellt. Wenn Ihre Nachricht einen schwerwiegenden Fehler aufweist, erhalten Sie die folgende Antwort:
+Im Falle eines Erfolgs werden alle Nachrichten, die nicht von einem Fehler im Array`errors` betroffen waren, weiterhin zugestellt. Wenn Ihre Nachricht einen schwerwiegenden Fehler enthält, erhalten Sie die folgende Antwort:
 
 ```json
 {
@@ -42,7 +44,7 @@ Im Falle eines Erfolgs werden alle Nachrichten, die nicht von einem Fehler im Ar
 
 ## Responses für getrackte Sende-IDs
 
-Analytics sind immer für Kampagnen verfügbar. Darüber hinaus sind Analytics für eine bestimmte Instanz des Kampagnenversands verfügbar, wenn die Kampagne als Broadcast gesendet wird. Wenn Tracking für eine bestimmte Instanz des Kampagnenversands verfügbar ist, erhalten Sie die folgende Antwort:
+Analytics sind immer für Kampagnen verfügbar. Darüber hinaus sind Analytics für eine bestimmte Instanz des Kampagnenversands verfügbar, wenn die Kampagne als Broadcast gesendet wird. Wenn Tracking für eine bestimmte Kampagnen-Instanz verfügbar ist, erhalten Sie die folgende Antwort:
 
 ```json
 {
@@ -58,18 +60,18 @@ Das Element Status Code einer Server-Antwort ist eine dreistellige Zahl, wobei d
 
 - Die **Klasse 2XX** des Status Codes (non-fatal) zeigt an, dass **Ihre Anfrage** erfolgreich empfangen, verstanden und akzeptiert wurde.
 - Die **Klasse 4XX** des Status Codes (fatal) weist auf einen **Client-Fehler** hin. In der Tabelle der schwerwiegenden Fehler finden Sie eine vollständige Liste der 4XX Fehlercodes und Beschreibungen.
-- Die **Klasse 5XX** des Status Codes (fatal) weist auf einen **Server-Fehler** hin. Es gibt mehrere mögliche Ursachen, z.B. kann der Server, auf den Sie zugreifen möchten, die Anfrage nicht ausführen, der Server wird gerade gewartet, so dass er die Anfrage nicht ausführen kann, oder der Server hat ein hohes Verkehrsaufkommen. In diesem Fall empfehlen wir Ihnen, Ihre Anfrage mit exponentiellem Backoff zu wiederholen. Im Falle eines Vorfalls oder Ausfalls ist Braze nicht in der Lage, REST API-Aufrufe, die während des Zeitfensters des Vorfalls fehlgeschlagen sind, wiederzugeben. Sie müssen alle Anrufe, die während des Ereignisfensters fehlgeschlagen sind, erneut versuchen.
+- Die **Klasse 5XX** des Status Codes (fatal) weist auf einen **Server-Fehler** hin. Es gibt mehrere mögliche Ursachen, z.B. kann der Server, auf den Sie zugreifen möchten, die Anfrage nicht ausführen, der Server wird gerade gewartet, so dass er die Anfrage nicht ausführen kann, oder der Server hat ein hohes Verkehrsaufkommen. In diesem Fall empfehlen wir Ihnen, Ihre Anfrage mit exponentiellem Backoff zu wiederholen. Im Falle eines Vorfalls oder Ausfalls ist Braze nicht in der Lage, REST API-Aufrufe, die während des Zeitfensters des Vorfalls fehlgeschlagen sind, wiederzugeben. Bitte wiederholen Sie alle Anrufe, die während des Vorfalls fehlgeschlagen sind.
   - Ein **502-Fehler** ist ein Fehler, bevor er den Zielserver erreicht.
   - Ein **503-Fehler** bedeutet, dass die Anfrage den Zielserver zwar erreicht hat, wir die Anfrage aber nicht abschließen können, weil die Kapazität nicht ausreicht, ein Netzwerkproblem vorliegt oder ähnliches.
   - Ein **504-Fehler** zeigt an, dass ein Server keine Antwort von einem anderen vorgelagerten Server erhalten hat.
 
 ### Schwerwiegende Fehler
 
-Die folgenden Statuscodes und zugehörigen Nachrichten werden zurückgegeben, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt.
+Die folgenden Statuscodes und zugehörigen Fehlernachrichten werden zurückgegeben, wenn bei Ihrer Anfrage ein schwerwiegender Fehler auftritt.
 
 {% endraw %}
 {% alert warning %}
-Alle der folgenden Fehlercodes zeigen an, dass keine Nachrichten gesendet werden.
+Alle folgenden Fehlercodes weisen darauf hin, dass keine Nachrichten gesendet werden.
 {% endalert %}
 {% raw %}
 
