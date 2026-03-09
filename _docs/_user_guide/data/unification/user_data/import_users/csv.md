@@ -323,9 +323,9 @@ Setting `language` or `country` on a user through CSV import or API prevents Bra
 
 ## Troubleshooting
 
-If you used [file validation](#file-validation), start with the error report—it includes the specific issue for each flagged row and a description of how to fix it. For rows that failed during import rather than validation, download the error report from the three-dot menu on the **Import Users** page.
+If you used [file validation](#file-validation), start with the error report, as it includes the specific issue for each flagged row and a description of how to fix it. For rows that failed during import rather than validation, download the error report by hovering over the row and selecting the <i class="fas fa-download" title="Download"></i> button on the **Import Users** page.
 
-If you’re having trouble with CSV import, review these common issues below. Still need help? Contact [support@braze.com](mailto:support@braze.com).
+For troubleshooting CSV import, review these common issues below.
 
 ### File formatting issues
 
