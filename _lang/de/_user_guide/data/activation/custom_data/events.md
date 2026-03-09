@@ -20,22 +20,24 @@ Durch das Tracking dieser verschiedenen Arten von Ereignissen erhalten Sie ein t
 
 ## Standard-Ereignisse
 
-In Braze sind Standardereignisse vordefinierte Aktionen, die Nutzer:innen in Ihrer App ausführen können und die Braze automatisch trackt, nachdem Sie das Braze SDK integriert haben. Hier sind einige Beispiele für Standardereignisse:
+In Braze sind Standardereignisse vordefinierte Aktionen, die Braze auf seiner gesamten Plattform erkennt. Im Gegensatz zu [angepassten Events](#custom-events) müssen Sie Standardereignisse nicht erstellen oder benennen – sie sind bereits integriert. Allerdings wird nicht bei allen Standardereignissen Tracking durchgeführt.
 
-- App starten
-- [Kauf](#purchase-events)
+Die folgenden Ereignisse werden nach der SDK-Integration automatisch erfasst:
+
 - Beginn der Sitzung
 - Ende der Sitzung
-- Push-Benachrichtigung angeklickt
-- E-Mail geöffnet
 
-Als Marketer können Sie diese Standardereignisse nutzen, um das Verhalten der Nutzer:innen und das Engagement für Ihre App zu verstehen. Sie können zum Beispiel sehen, wie oft Nutzer:innen Ihre App starten oder wie viele Käufe getätigt werden. Diese Informationen können von unschätzbarem Wert sein, wenn es darum geht, gezielte Marketing Kampagnen zu erstellen.
+Nach einer zusätzlichen Konfiguration wird das Tracking der folgenden Ereignisse durchgeführt:
 
-Während Standard-Events von Braze automatisch getrackt werden, müssen Kauf-Events, angepasste Events und angepasste Attribute von Ihrem Entwicklerteam auf der Grundlage Ihrer spezifischen Anforderungen und Ziele eingerichtet werden.
+- [Kauf-Events](#purchase-events): Ihr Entwicklungsteam protokolliert diese mithilfe der Kaufmethoden des SDK. Weitere Informationen finden Sie im Abschnitt „Kauf-Events“.
+- E-Mail-Engagement (wie Öffnungen von E-Mails und Klicks auf Links): Verfolgt von Braze, wenn Sie Braze-E-Mails konfigurieren und das E-Mail-Tracking aktivieren.
+- Push-Engagement-Ereignisse (wie die Öffnung und Klicks bei Push-Benachrichtigungen): Nach der Konfiguration von Push in Braze und der Integration der Push-Verarbeitung mit dem Braze SDK in Ihre App wird das Tracking aktiviert.
+
+Als Marketer können Sie Standardereignisse nutzen, um das Verhalten und das Engagement der Nutzer:innen zu verstehen. Beispielsweise zeigen Sitzungsdaten, wie häufig Nutzer:innen Ihre App oder Website öffnen, während Kauf-Events Ihnen dabei helfen, die Einnahmen im Zeitverlauf zu verfolgen.
 
 ## Kauf-Events
 
-Kauf-Events sind eine Möglichkeit, die Einkäufe Ihrer Nutzer:innen zu erfassen und zu tracken. Sie sind eine Art von Standard-Ereignis, das nach der Integration des Braze SDK standardmäßig verfügbar ist. Wenn Sie also Kauf-Events zum Tracking von Käufen verwenden, können Sie Ihre Einnahmen im Laufe der Zeit und über verschiedene Einnahmequellen hinweg direkt von Braze aus überwachen.
+Erfassen und verfolgen Sie die Käufe Ihrer Nutzer:innen. Nach der Integration des Braze SDK kann Ihr Entwicklungsteam Käufe mithilfe der Kaufmethoden des SDK protokollieren. Wenn Sie Kauf-Events zum Tracking von Käufen verwenden, können Sie Ihre Einnahmen im Zeitverlauf und über verschiedene Einnahmequellen hinweg direkt in Braze überwachen.
 
 Kauf-Events zeichnen die folgenden Schlüsselinformationen über einen Kauf auf:
 
@@ -63,7 +65,7 @@ Hier sehen Sie ein Beispiel für die Protokollierung eines Kauf-Events in einer 
 Appboy.sharedInstance()?.logPurchase("product_name", inCurrency: "USD", atPrice: NSDecimalNumber(string: "1.99"), withQuantity: 1)
 ```
 
-In diesem Beispiel ist "product_name" der Name des gekauften Produkts, "USD" ist die Währung des Kaufs, "1.99" ist der Preis des Produkts und "1" ist die gekaufte Menge.
+In diesem Beispiel ist"product_name"„Produktname“ der Name des gekauften Produkts, „USD“ die Währung des Kaufs, „1,99“ der Preis des Produkts und „1“ die gekaufte Menge.
 
 {:start="3"}
 3\. **Sehen Sie sich das Kauf-Event im Braze-Dashboard an:** Nachdem das Kauf-Event protokolliert wurde, können Sie es auf dem Braze-Dashboard einsehen. Sie können diese Daten nutzen, um Ihren Umsatz zu analysieren, Ihre Nutzer:innen zu segmentieren und vieles mehr.
@@ -82,7 +84,7 @@ Hier ein Beispiel dafür, wie Sie ein angepasstes Event in einer iOS App mit Swi
 Appboy.sharedInstance()?.logCustomEvent("completed_level")
 ```
 
-In diesem Beispiel ist "completed_level" der Name des angepassten Events, das protokolliert wird, wenn ein Nutzer:innen einen Level in einem Spiel abschließt. Dieses angepasste Event wird dann auf dem Profil des Nutzers:in in Braze aufgezeichnet, das Sie zum Triggern von Kampagnen und zur Personalisierung von Messaging verwenden können.
+In diesem Beispiel ist dies der Name des "completed_level"angepassten Events, das protokolliert wird, wenn ein Nutzer:in einen Level in einem Spiel abschließt. Dieses angepasste Event wird dann auf dem Profil des Nutzers:in in Braze aufgezeichnet, das Sie zum Triggern von Kampagnen und zur Personalisierung von Messaging verwenden können.
 
 Wenn Sie mehr erfahren möchten, besuchen Sie unseren Artikel über [angepasste Events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
 
@@ -100,7 +102,7 @@ Hier ein Beispiel dafür, wie Sie ein angepasstes Event in einer iOS App mit Swi
 Appboy.sharedInstance()?.logCustomEvent("updated_profile")
 ```
 
-In diesem Beispiel ist "updated_profile" der Name des angepassten Events, das protokolliert wird, wenn ein Nutzer:in sein Profil aktualisiert.
+In diesem Beispiel ist  der Name des "updated_profile"angepassten Events, das protokolliert wird, wenn ein Nutzer sein Profil aktualisiert.
 
 {:start="4"}
 4\. **Fügen Sie Eigenschaften zu Ihrem angepassten Event hinzu (optional):** Wenn Sie zusätzliche Details über das angepasste Event erfassen möchten, können Sie ihm Eigenschaften hinzufügen. Dazu übergeben Sie ein Wörterbuch mit Eigenschaften, wenn Sie das Ereignis protokollieren.
