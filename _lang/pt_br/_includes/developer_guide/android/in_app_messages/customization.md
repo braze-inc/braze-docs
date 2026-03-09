@@ -1,10 +1,10 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %} Você também precisará [configurar mensagens no app]({{site.baseurl}}/developer_guide/in_app_messages).
 
-## Configuração de ouvintes de gerenciadores personalizados
+## Configurando ouvintes de gerenciador personalizados
 
 {% tabs %}
 {% tab global listener %}
-Embora o ouvinte `BrazeInAppMessageManager` possa lidar automaticamente com a exibição e o ciclo de vida das mensagens no app, você precisará implementar um ouvinte de gerenciador personalizado se quiser personalizar totalmente as mensagens.
+Enquanto o `BrazeInAppMessageManager` ouvinte pode lidar automaticamente com a exibição e o ciclo de vida das mensagens no app, você precisará implementar um ouvinte de gerenciador personalizado se quiser personalizar completamente suas mensagens.
 {% endtab %}
 
 {% tab html listener %}
@@ -12,31 +12,31 @@ O SDK da Braze tem uma classe padrão `DefaultHtmlInAppMessageActionListener` qu
 {% endtab %}
 {% endtabs %}
 
-### Etapa 1: Implementar o ouvinte do gerenciador personalizado
+### Etapa 1: Implemente o ouvinte de gerenciador personalizado
 
 {% tabs %}
 {% tab global listener %}
-#### Etapa 1.1: Implementar `IInAppMessageManagerListener` 
+#### Etapa 1.1: Implemente `IInAppMessageManagerListener` 
 
 Crie uma classe que implemente o [`IInAppMessageManagerListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html).
 
-Os retornos de chamada em seu site `IInAppMessageManagerListener` também serão chamados em vários pontos do ciclo de vida das mensagens no app. Por exemplo, se você definir um ouvinte de gerenciador personalizado quando uma mensagem no app for recebida do Braze, o método [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) será chamado. Se sua implementação desse método retornar [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html)isso sinaliza para a Braze que a mensagem no app será tratada pelo aplicativo host e não deverá ser exibida pela Braze. Se [`InAppMessageOperation.DISPLAY_NOW`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-p-l-a-y_-n-o-w/index.html) for retornado, o Braze tentará exibir a mensagem no app. Esse método deve ser usado se você optar por exibir a mensagem no app de forma personalizada.
+Os callbacks em seu `IInAppMessageManagerListener` também serão chamados em vários pontos do ciclo de vida da mensagem no app. Por exemplo, se você definir um ouvinte de gerenciador personalizado quando uma mensagem no app for recebida do Braze, o método [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) será chamado. Se sua implementação desse método retornar [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html)isso sinaliza para a Braze que a mensagem no app será tratada pelo aplicativo host e não deverá ser exibida pela Braze. Se [`InAppMessageOperation.DISPLAY_NOW`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-p-l-a-y_-n-o-w/index.html) for retornado, o Braze tentará exibir a mensagem no app. Esse método deve ser usado se você optar por exibir a mensagem no app de forma personalizada.
 
-`IInAppMessageManagerListener` também inclui métodos delegados para cliques em mensagens e botões, que podem ser usados em casos como interceptar uma mensagem quando um botão ou mensagem é clicado para processamento posterior.
+`IInAppMessageManagerListener` também inclui métodos delegados para cliques em mensagens e botões, que podem ser usados em casos como interceptar uma mensagem quando um botão ou mensagem é clicado para processamento adicional.
 
-#### Etapa 1.2: Conecte-se aos métodos de ciclo de vida de exibição do IAM (opcional)
+#### Etapa 1.2: Conecte-se aos métodos do ciclo de vida da visualização do IAM (opcional)
 
 A interface [`IInAppMessageManagerListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html) tem métodos de visualização de mensagens no app chamados em pontos distintos do ciclo de vida da visualização de mensagens no app. Esses métodos são chamados na seguinte ordem:
 
-1. [`beforeInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-opened.html): Chamada imediatamente antes de a mensagem no app ser adicionada à exibição da atividade. A mensagem no app ainda não está visível para o usuário neste momento.
-2. [`afterInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-opened.html): Chamada logo após a mensagem no app ser adicionada à visualização da atividade. A mensagem no app agora está visível para o usuário nesse momento.
-3. [`beforeInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-closed.html): Chamada imediatamente antes de a mensagem no app ser removida da exibição da atividade. A mensagem no app ainda está visível para o usuário nesse momento.
-4. [`afterInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-closed.html): Chamada logo após a mensagem no app ser removida da visualização da atividade. A mensagem no app não está mais visível para o usuário neste momento.
+1. [`beforeInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-opened.html): Chamado logo antes da mensagem no app ser adicionada à visualização da atividade. A mensagem no app ainda não está visível para o usuário neste momento.
+2. [`afterInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-opened.html): Chamado logo após a mensagem no app ser adicionada à visualização da atividade. A mensagem no app agora está visível para o usuário nesse momento.
+3. [`beforeInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-closed.html): Chamado logo antes da mensagem no app ser removida da visualização da atividade. A mensagem no app ainda está visível para o usuário nesse momento.
+4. [`afterInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-closed.html): Chamado logo após a mensagem no app ser removida da visualização da atividade. A mensagem no app não está mais visível para o usuário neste momento.
 
-Note que o tempo entre [`afterInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-opened.html) e [`beforeInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-closed.html) é quando a visualização da mensagem no app está na tela, visível para o usuário.
+Observe que o tempo entre [`afterInAppMessageViewOpened`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/after-in-app-message-view-opened.html) e [`beforeInAppMessageViewClosed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-view-closed.html) é quando a visualização da mensagem no app está na tela, visível para o usuário.
 
 {% alert note %}
-A implementação desses métodos não é obrigatória. Eles são fornecidos apenas para rastrear e informar o ciclo de vida da visualização de mensagens no app. Você pode deixar essas implementações de método vazias.
+A implementação desses métodos não é obrigatória. Eles são fornecidos apenas para rastrear e informar o ciclo de vida da visualização da mensagem no app. Você pode deixar essas implementações de método vazias.
 {% endalert %}
 {% endtab %}
 
@@ -106,12 +106,12 @@ class CustomHtmlInAppMessageActionListener(private val mContext: Context) : IHtm
 {% endtab %}
 {% endtabs %}
 
-### Etapa 2: Instrua o Braze a usar o ouvinte do gerenciador personalizado
+### Etapa 2: Instruir o Braze a usar o ouvinte de gerenciador personalizado
 
 {% tabs %}
 {% tab global listener %}
 Depois de criar `IInAppMessageManagerListener`, chame `BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` para instruir `BrazeInAppMessageManager`
-para usar seu `IInAppMessageManagerListener` personalizado em vez do listener padrão. Faça isso em seu [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) antes de qualquer outra chamada para o Braze, para que o ouvinte personalizado seja definido antes que qualquer mensagem no app seja exibida.
+para usar seu `IInAppMessageManagerListener` personalizado em vez do listener padrão. Faça isso em seu [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) antes de qualquer outra chamada ao Braze, para que o ouvinte personalizado seja definido antes que qualquer mensagem no app seja exibida.
 
 #### Alteração de mensagens no app antes da exibição
 
@@ -161,7 +161,7 @@ Depois que uma mensagem no app tiver sido colocada no stack, você poderá solic
 {% endtab %}
 
 {% tab html listener %}
-Depois que seu `IHtmlInAppMessageActionListener` for criado, chame `BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener()` para instruir `BrazeInAppMessageManager` a usar seu `IHtmlInAppMessageActionListener` personalizado em vez do action listener padrão.
+Após a sua `IHtmlInAppMessageActionListener` ser criada, chame `BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener()` para instruir `BrazeInAppMessageManager` a usar seu `IHtmlInAppMessageActionListener` personalizado em vez do listener de ação padrão.
 
 Recomendamos que você configure seu `IHtmlInAppMessageActionListener` em seu [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) antes de qualquer outra chamada para o Braze. Isso definirá o ouvinte de ação personalizado antes que qualquer mensagem no app seja exibida:
 
@@ -180,9 +180,9 @@ BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(C
 {% endtab %}
 {% endtabs %}
 
-## Configuração de fábricas personalizadas
+## Definindo fábricas personalizadas
 
-Você pode substituir vários padrões por meio de objetos de fábrica personalizados. Esses podem ser registrados com o SDK da Braze conforme necessário para alcançar os resultados desejados. No entanto, se você decidir substituir uma fábrica, provavelmente precisará adiar explicitamente o padrão ou reimplementar a funcionalidade fornecida pelo padrão do Braze. O trecho de código a seguir ilustra como fornecer implementações personalizadas das interfaces `IInAppMessageViewFactory` e `IInAppMessageViewWrapperFactory`.
+Você pode substituir vários padrões através de objetos de fábrica personalizados. Esses podem ser registrados com o SDK da Braze conforme necessário para alcançar os resultados desejados. No entanto, se você decidir substituir uma fábrica, provavelmente precisará se referir explicitamente ao padrão ou reimplementar a funcionalidade fornecida pelo padrão Braze. O trecho de código a seguir ilustra como fornecer implementações personalizadas das interfaces `IInAppMessageViewFactory` e `IInAppMessageViewWrapperFactory`.
 
 {% tabs local %}
 {% tab Kotlin %}
@@ -230,7 +230,7 @@ As mensagens no app têm um comportamento de animação predefinido. As mensagen
 {% endtab %}
 {% endtabs %}
 
-### Etapa 1: Implementar a fábrica
+### Etapa 1: Implemente a fábrica
 
 {% tabs %}
 {% tab view %}
@@ -400,11 +400,11 @@ class CustomInAppMessageAnimationFactory : IInAppMessageAnimationFactory {
 {% endtab %}
 {% endtabs %}
 
-### Etapa 2: Instrua o Braze a usar a fábrica
+### Etapa 2: Instruir o Braze a usar a fábrica
 
 {% tabs %}
 {% tab view %}
-Depois que seu `IInAppMessageViewFactory` for criado, ligue para `BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()` para instruir `BrazeInAppMessageManager`
+Após a sua `IInAppMessageViewFactory` ser criada, chame `BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()` para instruir `BrazeInAppMessageManager`
 para usar seu `IInAppMessageViewFactory` personalizado em vez da visualização padrão de fábrica.
 
 {% alert tip %}
@@ -419,7 +419,7 @@ A implementação do site `IInAppMessageView` permite que você defina uma deter
 {% endtab %}
 
 {% tab view wrapper %}
-Depois que seu [`IInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper/index.html) for criado, chame [`BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-custom-in-app-message-view-factory.html) para instruir o site `BrazeInAppMessageManager` a usar seu [`IInAppMessageViewWrapperFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html) personalizado em vez da fábrica de wrapper de exibição padrão.
+Após a sua [`IInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper/index.html) ser criada, chame [`BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-custom-in-app-message-view-factory.html) para instruir `BrazeInAppMessageManager` a usar seu [`IInAppMessageViewWrapperFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html) personalizado em vez da fábrica de wrapper de visualização padrão.
 
 Recomendamos que você defina seu [`IInAppMessageViewWrapperFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html) em seu [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) antes de qualquer outra chamada para o Braze. Isso definirá a fábrica do wrapper de exibição personalizado antes que qualquer mensagem no app seja exibida:
 
@@ -448,7 +448,7 @@ Recomendamos que você configure seu `IInAppMessageAnimationFactory` em seu [`Ap
 
 Os elementos da {Braze} UI vêm com uma aparência padrão que corresponde às diretrizes padrão de UI do {Android} e proporciona uma experiência perfeita. Este artigo de referência aborda o estilo personalizado de envio de mensagens no app para seu aplicativo Android ou FireOS.
 
-### Definição de um estilo padrão
+### Definindo um estilo padrão
 
 Você pode ver os estilos padrão no arquivo [`styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml) do Braze SDK:
 
@@ -477,9 +477,9 @@ Para substituir um estilo, copie-o integralmente para o arquivo `styles.xml` em 
 Você pode personalizar algumas cores diretamente em sua campanha do Braze sem modificar o XML. Lembre-se de que as cores definidas no dashboard do Braze substituirão as cores que você definir em qualquer outro lugar.
 {% endalert %}
 
-### Personalização da fonte
+### Personalizando a fonte
 
-Você pode definir uma fonte personalizada localizando o tipo de letra no diretório `res/font`. Para usá-lo, substitua o estilo do texto da mensagem, dos cabeçalhos e do texto do botão e use o atributo `fontFamily` para instruir o Braze a usar sua família de fontes personalizada.
+Você pode definir uma fonte personalizada localizando a tipografia no diretório `res/font`. Para usá-lo, substitua o estilo do texto da mensagem, dos cabeçalhos e do texto do botão e use o atributo `fontFamily` para instruir o Braze a usar sua família de fontes personalizada.
 
 Por exemplo, para atualizar a fonte do texto do botão de mensagem no app, substitua o estilo `Braze.InAppMessage.Button` e faça referência à sua família de fontes personalizada. O valor da atribuição deve apontar para uma família de fontes em seu diretório `res/font`.
 
@@ -501,9 +501,23 @@ Além do estilo `Braze.InAppMessage.Button` para o texto do botão, o estilo par
 Assim como ocorre com outros estilos personalizados, o estilo inteiro deve ser copiado para o arquivo local `styles.xml` para que todas as atribuições sejam definidas corretamente.
 {% endalert %}
 
-## Envio de mensagens
+## Desfazimentos de mensagens
 
-### Desativação da desativação do botão Voltar
+### Deslizando para dispensar mensagens slideup
+
+Por padrão, mensagens in-app slideup podem ser dispensadas com um gesto de deslizar. A direção do deslizar depende da posição do slideup:
+
+- **Deslizar para a esquerda ou direita:** Dispensa o slideup independentemente de sua posição.
+- **Slideup de baixo para cima:** Deslizar de cima para baixo dispensa a mensagem. Deslizar de baixo para cima não o descarta.
+- **Slideup de cima:** Deslizar de baixo para cima descarta a mensagem. Deslizar de cima para baixo não o descarta.
+
+Esse comportamento de deslizar está embutido no [`DefaultInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-default-in-app-message-view-wrapper/index.html) padrão e se aplica apenas a mensagens slideup no aplicativo. Mensagens modais e mensagens completas no aplicativo não suportam deslizar para descartar. Para personalizar esse comportamento, você pode implementar uma [fábrica de wrapper de visualização personalizada](#android_setting-custom-factories).
+
+{% alert note %}
+Tocar fora de uma mensagem slideup não a descarta por padrão. Esse comportamento difere das mensagens modais, que podem ser configuradas para descartar ao tocar fora. Para slideups, use o gesto de deslizar ou o botão de fechar para descartar a mensagem.
+{% endalert %}
+
+### Desabilitando descartes com o botão voltar
 
 Por padrão, o botão Voltar do dispositivo descarta as mensagens no app da Braze. Esse comportamento pode ser desativado por mensagem via [`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html). 
 
@@ -554,17 +568,17 @@ BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(obje
 Nota que, se essa funcionalidade estiver desativada, será usado o comportamento padrão do botão Voltar do dispositivo da atividade do host. Isso pode fazer com que o botão de voltar feche o aplicativo em vez da mensagem no app exibida.
 {% endalert %}
 
-### Capacitação para demissões por contato externo
+### Habilitando descartes ao tocar fora
 
-Por padrão, a desativação do modal usando um toque externo é definida como `false`. Definir esse valor como `true` resultará no fechamento da mensagem no app modal quando o usuário tocar fora da mensagem no app. Esse comportamento pode ser ativado chamando:
+Por padrão, descartar o modal usando um toque fora é definido como `false`. Definir esse valor como `true` resultará no fechamento da mensagem no app modal quando o usuário tocar fora da mensagem no app. Esse comportamento pode ser ativado chamando:
 
 ```java
 BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
 ```
 
-## Personalização da orientação
+## Personalizando a orientação
 
-Para definir uma orientação fixa para uma mensagem no app, primeiro [defina um listener personalizado do gerenciador de mensagens no app]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). Em seguida, atualize a orientação do objeto `IInAppMessage` no método delegado `beforeInAppMessageDisplayed()`:
+Para definir uma orientação fixa para uma mensagem no app, primeiro [defina um listener personalizado do gerenciador de mensagens no app]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). Em seguida, atualize a orientação no objeto `IInAppMessage` no método delegado `beforeInAppMessageDisplayed()`:
 
 {% tabs %}
 {% tab JAVA %}
@@ -589,9 +603,9 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 
 Para dispositivos tablet, as mensagens no app aparecerão no estilo de orientação preferido do usuário, independentemente da orientação real da tela.
 
-## Desativação do tema escuro {#android-in-app-message-dark-theme-customization}
+## Desabilitando o tema escuro {#android-in-app-message-dark-theme-customization}
 
-Por padrão, o `IInAppMessageManagerListener`'s `beforeInAppMessageDisplayed()` verifica as configurações do sistema e ativa condicionalmente o estilo de tema escuro na mensagem com o seguinte código:
+Por padrão, `IInAppMessageManagerListener`'s `beforeInAppMessageDisplayed()` verifica as configurações do sistema e habilita condicionalmente o estilo do tema escuro na mensagem com o seguinte código:
 
 {% tabs %}
 {% tab JAVA %}
@@ -617,8 +631,8 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 {% endtab %}
 {% endtabs %}
 
-Para alterar isso, você pode chamar [`enableDarkTheme`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-themeable/enable-dark-theme.html) em qualquer etapa do processo de pré-exibição para implementar sua própria lógica condicional.
+Para mudar isso, você pode chamar [`enableDarkTheme`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-themeable/enable-dark-theme.html) em qualquer etapa do processo pré-exibição para implementar sua própria lógica condicional.
 
-## Personalização do prompt de revisão do Google Play
+## Personalizando o prompt de avaliação do Google Play
 
 Devido às limitações e restrições definidas pelo Google, os avisos personalizados de avaliação do Google Play não são compatíveis com a Braze no momento. Embora alguns usuários tenham conseguido integrar esses prompts com sucesso, outros apresentaram baixas taxas de sucesso devido às [cotas do Google Play](https://developer.android.com/guide/playcore/in-app-review#quotas). Faça a integração por sua própria conta e risco. Consulte a documentação sobre [os avisos de revisão no app do Google Play](https://developer.android.com/guide/playcore/in-app-review).
