@@ -3,7 +3,7 @@
 {% alert warning %}
 No asignes un `external_id` a un perfil de usuario antes de poder identificarlo de forma única. Después de identificar a un usuario, no puedes revertirlo a anónimo.
 <br><br>
-Se puede actualizar un `external_id` utilizando el [punto final`/users/external_ids/rename` ]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/). Sin embargo, cualquier intento de configurar un `external_id` diferente durante la sesión de un usuario creará un nuevo perfil de usuario con el nuevo `external_id` asociado. No se transmitirá ningún dato entre los dos perfiles.
+Se`external_id`puede actualizar utilizando el[`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/)[punto final]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/). Sin embargo, cualquier intento de establecer un valor diferente`external_id`  durante la sesión de un usuario creará un nuevo perfil de usuario con el nuevo`external_id`  asociado a él. No se transmitirá ningún dato entre los dos perfiles.
 {% endalert %}
 
 {% endif %}
@@ -19,7 +19,7 @@ Si tiene intención de crear más de uno de los mismos conectores Currents (por 
 {% if include.alert == 'Canvas race condition audience trigger' %}
 
 {% alert warning %}
-Evite configurar una campaña basada en acciones o Canvas con el mismo desencadenante que el filtro de audiencia (como un atributo modificado o la realización de un evento personalizado). Puede darse una [condición de carrera]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) en la que el usuario no esté en la audiencia en el momento de realizar el evento desencadenante, lo que significa que no recibirá la campaña ni entrará en el Canvas.
+Evite configurar una campaña basada en acciones o Canvas con el mismo desencadenante que el filtro de audiencia (como un atributo modificado o la realización de un evento personalizado). Puede producirse una [condición de]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) [carrera]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) en la que el usuario no se encuentre en la audiencia en el momento en que realice el evento desencadenante, lo que significa que no recibirá la campaña ni entrará en Canvas.
 {% endalert %}
 
 {% endif %}
