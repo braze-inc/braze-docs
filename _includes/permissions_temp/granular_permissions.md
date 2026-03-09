@@ -172,12 +172,12 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Edit Campaigns                                  | Create and update campaigns |
 | Archive Campaigns                               | Move campaigns to archive |
 | Launch Campaigns                                | Start, stop, pause, or resume existing campaigns |
-| Launch Canvases                                 | Start, stop, pause, or resume existing Canvases |
 | View Frequency Capping Rules                    | View Frequency Capping Rules |
 | Edit Frequency Capping Rules                    | Create and update Frequency Capping Rules |
 | View Canvases                                   | View Canvases |
 | Edit Canvases                                   | Create and update Canvases |
 | Archive Canvases                                | Move Canvases to archive |
+| Launch Canvases                                 | Start, stop, pause, or resume existing Canvases |
 | View Content Blocks                             | View Content Blocks |
 | Edit Content Blocks                             | Create and update Content Blocks |
 | Archive Content Blocks                          | Move Content Blocks to archive |
