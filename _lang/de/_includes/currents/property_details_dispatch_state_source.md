@@ -1,6 +1,6 @@
 <ul>
-<li><code>dispatch_id</code> ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten denselben <code>dispatch_id</code>. Verwenden Sie <code>dispatch_id</code> um Ereignisse zu gruppieren, die zum selben Versand gehören, was es Ihnen erlaubt, den Lebenszyklus von Push-Nachrichten für diesen Versand zu gruppieren und zu korrelieren (z. B. Senden, Bounce und Öffnen).</li>
-<li><code>state_change_source</code> gibt einen String mit dem vollständigen Namen der Quelle zurück. Der CSV-Import der Quelle liefert beispielsweise den String <code>CSV import</code>. Die verfügbaren Quellen sind unten aufgeführt:</li>
+<li><code>dispatch_id</code> ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse, die von der gleichen Herkunft stammen, enthalten dieselben <code>dispatch_id</code>. Verwendung <code>dispatch_id</code> Gruppieren Sie Ereignisse, die zur gleichen Sendung gehören, sodass Sie den Lebenszyklus der Push-Nachrichten für diese Sendung (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen können.</li>
+<li><code>state_change_source</code> gibt eine String-Zeichenfolge mit dem vollständigen Quellennamen zurück. Beispielsweise gibt der CSV-Import den String <code>CSV import</code>. Die verfügbaren Quellen sind unten aufgeführt:</li>
 </ul>
 <table class="reset-td-br-1 reset-td-br-2" role="presentation">
 <thead>
