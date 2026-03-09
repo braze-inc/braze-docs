@@ -1,82 +1,82 @@
 # Braze MCPサーバー
 
-> BrazeのMCPサーバーは、ClaudeやCursorのようなAIツールが、PIIではないBrazeのデータにアクセスし、データを変更することなく、質問に答えたり、傾向を分析したり、インサイトを提供できるようにする、安全な読み取り専用接続である。
+> Braze MCPサーバーについて学習しよう。これは安全な読み取り専用接続であり、ClaudeやCursorのようなAIツールが非PIIのBrazeデータにアクセスして質問に答え、傾向を分析し、データを変更せずにインサイトを提供することを可能にする。
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
-## モデル・コンテキスト・プロトコル（MCP）とは何か？
+## モデルコンテキストプロトコル（MCP）とは何か？
 
-​モデル・コンテキスト・プロトコル（MCP）は、AIエージェントが他のプラットフォームのデータに接続し、作業できるようにする標準である。大きく分けて2つの部分がある：
+​モデルコンテキストプロトコル（MCP）とは、AIエージェントが別のプラットフォームのデータに接続し、そのデータと連動できるようにする規格である。それは主に二つの部分から成っている：
 
-- **MCPクライアントだ：**CursorやClaudeなど、AIエージェントが動作するアプリケーション。
-- **MCPサーバーだ：**Brazeのような別のプラットフォームが提供するサービスで、AIが使用できるツールやアクセスできるデータを定義する。
+- **MCPクライアント：**AIエージェントが動作するアプリケーション、例えばCursorやClaudeなど。
+- **MCPサーバー：**別のプラットフォーム（例えばBrazeなど）が提供するサービスであり、AIが使用できるツールとアクセス可能なデータを定義するものだ。
 
 ## Braze MCPサーバーについて
 
-Braze MCPサーバーの設定]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}) の後、エージェント、アシスタント、チャットボットなどのAIツールをBrazeに直接接続し、キャンバス＆キャンペーン分析、カスタム属性、セグメンテーションなどの集計データを読み取ることができる。BrazeのMCPサーバーは素晴らしい：
+[Braze MCPサーバーの設定]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %})後、エージェントやアシスタント、チャットボットなどのAIツールをBrazeに直接接続できる。これにより、キャンバスやキャンペーン分析、カスタム属性、セグメントなどの集計データをAIツールが読み取れるようになる。Braze MCPサーバーは以下に最適だ：
 
 - Brazeのコンテキストを必要とするAI搭載ツールを構築する。
-- マルチステップエージェントワークフローを作成するCRMエンジニア。
-- テクニカルマーケターが自然言語によるクエリを試している。
+- CRMエンジニアが複数のステップからなるエージェントワークフローを開発している。
+- 技術系マーケターが自然言語クエリの実験を行っている。
 
-Braze MCPサーバーは、ユーザープロファイルからデータを返さない38の読み取り専用エンドポイントをサポートしている。これらのエンドポイントの一部のみをAPIキーに割り当てることで、エージェントがアクセスできるデータをさらに制限することができる。
+Braze MCPサーバーは、Brazeユーザープロファイルからデータを返さない読み取り専用エンドポイントを38個サポートしている。これらのエンドポイントの一部のみをBraze API キーに割り当てることで、エージェントがアクセスできるデータをさらに制限できる。
 
 {% alert warning %}
-APIキーに読み取り専用**以外の**権限を割り当てないこと。エージェントはBrazeにデータを書き込んだり削除しようとするかもしれないが、それは意図しない結果を引き起こす可能性がある。
+API キーに読み取り専用**以外の**権限を割り当ててはならない。エージェントはBraze内でデータの書き込みや削除を試みる可能性がある。これにより意図しない結果が生じる恐れがある。
 {% endalert %}
 
 ## 使用例
 
-ClaudeやCursorのようなツールを使って自然言語でBrazeと対話することができる。その他の例やベストプラクティスについては、[Braze MCPサーバーの使用]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}) を参照のこと。
+Brazeとは、ClaudeやCursorのようなツールを使って自然言語でやり取りできる。その他の例やベストプラクティスについては、[Braze MCPサーバーの使用方法]{% if include.section == "user" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}{{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}を参照せよ。
 
 {% tabs %}
 {% tab Claude %}
-![私が利用できるBrazeの機能は何ですか？]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
+![「利用可能なBrazeの機能は何か？」という質問がClaudeで尋ねられ、回答されている。]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-![私の利用可能なBrazeの機能は何ですか」と尋ねられ、Cursorで答える。]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+![「利用可能なBraze機能は何か」という質問がCursorで尋ねられ、回答されている。]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 
 ## よくある質問 (FAQ) {#faq}
 
-### どのMCPクライアントがサポートされているか？
+### どのMCPクライアントがサポートされているのか？
 
-[クロードと](https://claude.ai/) [カーソルだけが](https://cursor.com/)公式にサポートされている。Braze MCPサーバーを使用するには、これらのクライアントのいずれかのアカウントが必要である。
+正式にサポートされている[のはクロード](https://claude.ai/)と[カーソル](https://cursor.com/)だけだ。これらのクライアントのいずれかのアカウントを持っている必要がある。そうしなければ、Braze MCPサーバーを利用できない。
 
-### MCPクライアントがアクセスできるBrazeデータは？
+### MCPクライアントは、Brazeのどのデータにアクセスできるのか？
 
-MCPクライアントは、PIIを取得するために構築されていない読み取り専用のエンドポイントにのみアクセスできる。Brazeでデータを操作することはできない。
+MCPクライアントは、個人識別情報（PII）を取得する目的で構築されていない読み取り専用エンドポイントにのみアクセスできる。彼らはBrazeでデータを操作できない。
 
 ### MCPクライアントはBrazeデータを操作できるか？
 
-MCPサーバーが公開するのは、PII以外の読み取り専用データを扱うツールだけだ。
+いいえ。MCPサーバーが公開しているのは、非個人識別情報（非PII）の読み取り専用データを扱うツールのみである。
 
-### サードパーティのMCPサーバーをBrazeに使用できるか？
+### BrazeでサードパーティのMCPサーバーを使えるか？
 
-Brazeデータ用にサードパーティのMCPサーバーを使用することは推奨されない。[PyPiで](https://pypi.org/project/braze-mcp-server/)ホストされている公式Braze MCPサーバーのみを使用する。
+BrazeデータにサードパーティのMCPサーバーを使用することは推奨されない。[PyPi](https://pypi.org/project/braze-mcp-server/)でホストされている公式のBraze MCPサーバーのみを使用すること。
 
-### なぜBraze MCPサーバーはPIIや書き込みアクセスを提供しないのか？
+### なぜBraze MCPサーバーは個人識別情報（PII）や書き込みアクセスを提供しないのか？
 
-データを保護しつつイネーブルメントを可能にするため、サーバーは読み取り専用で、通常PIIを返さないエンドポイントに限定されている。これにより、貴重なユースケースをサポートしながらリスクを軽減することができる。
+データを保護しつつイノベーションをイネーブルメントするため、サーバーは読み取り専用かつ通常は個人識別情報（PII）を返さないエンドポイントに限定されている。これはリスクを減らしつつ、価値あるユースケースを支える。
 
-### APIキーを再利用できるか？
+### API キーは再利用できるか？
 
-いいえ。MCPクライアント用に新しいAPIキーを作成する必要がある。AIツールへのアクセスは、自分が納得できるものだけに限定し、権限の昇格は避けることを忘れないでほしい。
+いいや。MCPクライアント用に新しいAPI キーを作成する必要がある。AIツールには、自分が許容できる範囲のデータのみをアクセスさせるように注意し、権限の昇格は避けること。
 
 ### Braze MCPサーバーはローカルでホストされているのか、それともリモートでホストされているのか？
 
 Braze MCPサーバーはローカルでホストされている。
 
-### なぜカーソルは機能だけをリストアップしているのか？
+### カーソルが関数だけをリストしているのはなぜだ？
 
-質問モードかエージェントモードかを確認する。MCPサーバーを使用するには、エージェントモードにする必要がある。
+自分が質問モードかエージェントモードか確認しろ。MCPサーバーを使用するには、エージェントモードである必要がある。
 
-### エージェントが不正確と思われる回答を返した場合、どうすればよいか？
+### エージェントが間違っていると思われる答えを返してきたら、どうすればいいか？
 
-カーソルのようなツールで作業する場合、使用するモデルを変えてみるのもいいだろう。例えば、自動に設定されている場合は、特定のモデルに変更してみて、どのモデルがユースケースに最適なパフォーマンスを発揮するかを実験してみる。新しいチャットを開始して、プロンプトを再試行することもできる。 
+カーソルのようなツールを使う時、使っているモデルを変えてみるといいかもしれない。例えば、自動設定にしているなら、特定のモデルに変更してみて、そのモデルのパフォーマンスが自分のユースケースに最適か試してみることだ。新しいチャットを始めて、プロンプトを再試行してみるのも手だ。 
 
-問題が解決しない場合は、[mcp-product@braze.com](mailto:mcp-product@braze.com)までメールでお知らせいただきたい。可能であれば、動画を掲載し、通話機能を拡張して、エージェントがどのような通話を試みたかを確認できるようにしてほしい。
+問題が解決しない場合は、[mcp-product@](mailto:mcp-product@braze.com) までメールで[braze.com](mailto:mcp-product@braze.com)連絡してくれ。可能であれば、動画を含め、通話機能を拡張して、エージェントが試みた通話を確認できるようにしてほしい。
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}
