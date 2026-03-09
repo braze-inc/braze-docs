@@ -1,7 +1,7 @@
 ---
-nav_title: "POST: Duplizierte Kampagnen"
+nav_title: "POST: Doppelte Kampagnen"
 article_title: "POST: Duplizierte Kampagnen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -10,15 +10,11 @@ description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Doppelte Kampagn
 ---
 {% api %}
 # Duplizieren von Kampagnen über die API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /kampagnen/duplizieren
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um Kampagnen zu duplizieren. Dieser API Endpunkt ist vergleichbar mit dem [Duplizieren von Kampagnen im Braze-Dashboard][1].
-
-{% alert important %}
-Die Duplizierung einer Kampagne mit Hilfe der API befindet sich derzeit in der Early-Access-Phase. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
 
 ## Voraussetzungen
 
