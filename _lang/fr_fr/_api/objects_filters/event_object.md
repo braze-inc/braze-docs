@@ -46,6 +46,10 @@ Pour savoir comment configurer des événements personnalisés pour une platefor
 - [Identifiant de l'application]({{site.baseurl}}/api/identifier_types/)
 - [Code temporel ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+Certaines paires d'identifiants ne peuvent pas être utilisées conjointement dans une même requête. Lorsque les deux`email`paramètres`phone`sont fournis,`email`le paramètre a priorité sur le `phone`paramètre. Pour plus de détails, veuillez vous référer à [la section Résolution des identifiants]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+{% endalert %}
+
 #### Mettre à jour les profils existants uniquement
 
 Pour mettre à jour uniquement les profils utilisateurs existants dans Braze, vous devez transmettre la clé `_update_existing_only` avec la valeur `true` dans le corps de votre demande. Si cette valeur est omise, Braze créera un nouveau profil utilisateur si `external_id` n’existe pas déjà.
@@ -80,7 +84,7 @@ Les clés suivantes sont réservées et ne peuvent pas être utilisées comme pr
 - `event_name`
 
 {% alert important %}
-L'utilisation de clés réservées comme noms de propriétés d'événements personnalisés entraînera des erreurs d'API lors de l'envoi de requêtes à l'endpoint `/users/track`.
+L'utilisation de clés réservées comme noms de propriétés d'événements personnalisés entraînera des erreurs d'API lors de l'envoi de requêtes à `/users/track`l'endpoint.
 {% endalert %}
 
 ### Persistance des propriétés de l’événement
@@ -89,7 +93,7 @@ Les propriétés de l’événement sont conçues pour filtrer et personnaliser 
 
 #### Demande d’exemple d’événement
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
