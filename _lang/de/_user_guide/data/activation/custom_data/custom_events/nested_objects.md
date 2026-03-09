@@ -84,7 +84,7 @@ Im Folgenden finden Sie ein `/users/track` Beispiel mit einem angepassten Event 
 {% tab Restaurant Example%}
 
 Im Folgenden finden Sie ein `/users/track` Beispiel mit einem angepassten Event "Bestellt". Nachdem ein Auftrag abgeschlossen wurde, erfassen Sie die Eigenschaften dieses Auftrags, indem Sie ihn senden:
-- Eine API-Anfrage, die `r_details` als Eigenschaft auflistet
+- Eine API-Anfrage, die als Eigenschaft`r_details` auflistet
 - Die verschachtelten Eigenschaften dieser Reihenfolge
 
 ```
@@ -141,7 +141,7 @@ Um diese Eigenschaften zum Triggern einer Kampagne zu verwenden, wählen Sie Ihr
 
 Auslösen einer Kampagne mit verschachtelten Eigenschaften durch das Ereignis "Erstellte Wiedergabeliste":
 
-![Ein Nutzer:in, der eine verschachtelte Eigenschaft für Eigenschaftsfilter für ein angepasstes Event auswählt.]({% image_buster /assets/img/nested_object2.png %})
+![Eine Nutzer:in, die eine verschachtelte Eigenschaft für Filter bei einem angepassten Event auswählt.]({% image_buster /assets/img/nested_object2.png %})
 
 Die triggernde Bedingung `songs[].album.yearReleased` "ist" "1968" passt auf ein Ereignis, bei dem einer der Titel ein Album hat, das 1968 veröffentlicht wurde. Wir verwenden die Klammerschreibweise `[]` für das Durchlaufen von Arrays und stimmen überein, wenn **ein** Element in dem durchlaufenen Array mit der Ereigniseigenschaft übereinstimmt.
 
@@ -154,9 +154,9 @@ Der Filter " **Nicht gleich"** passt nur, wenn keine der Eigenschaften in Ihrem 
 
 Auslösen einer Kampagne mit verschachtelten Eigenschaften aus dem Ereignis "Bestellt":
 
-![Ein Nutzer:in, der die Eigenschaft Filter r_details.name hinzufügt, ist SandwichEmperor für ein angepasstes Event.]({% image_buster /assets/img/nested_object1.png %})
+![Ein Nutzer:in, der den Eigenschaftsfilter r_details.namehinzufügt, ist SandwichEmperor für ein angepasstes Event.]({% image_buster /assets/img/nested_object1.png %})
 
-`r_details.name`: "SandwichKaiser"<br>
+`r_details.name`: Sandwich-Kaiser<br>
 `r_details.location.city`: "Montclair"
 {% endtab %}
 {% endtabs %}
@@ -181,11 +181,30 @@ Wählen Sie im Modal " **Personalisierung hinzufügen"** als Personalisierungsty
 
 ![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
+## Testen von verschachtelten Objekten in Nachrichten
+
+Das **&Vorschau-Test**tool des Dashboards unterstützt nicht das Hinzufügen von Testdaten für verschachtelte Objekte oder verschachtelte angepasste Attribute. Um Nachrichten zu testen, die über Liquid auf verschachtelte Daten verweisen, können Sie Nachrichten mit verschachtelten Attributen als bestehender Benutzer mit diesem verschachtelten Attribut in der Vorschau anzeigen oder Nachrichten mit benutzerdefinierten Event-Eigenschaften in der Vorschau anzeigen, indem Sie eine Live-Kampagne starten, um Benutzer zu testen.
+
+### Verschachtelte angepasste Attribute
+
+1. Importieren Sie die verschachtelten Attribute über die API in das Nutzerprofil der Testnutzer:innen.
+2. Bitte gehen Sie in Ihrer Kampagne oder Ihrem Canvas zu **&„Vorschau“ und „Testen**“.
+3. Wählen Sie **„Vorschau als Nutzer:in“** aus und suchen Sie nach dem Testnutzer:in. Die Flüssigkeit wird unter Verwendung der tatsächlichen verschachtelten Attribute im Nutzerprofil dieser Nutzer:in aufgelöst.
+
+### Verschachtelte Event-Eigenschaften
+
+Verschachtelte Event-Eigenschaften können im Dashboard nicht in der Vorschau angezeigt werden, da sie einen Live-Ereignisauslöser erfordern. Zum Testen:
+
+1. Erstellen Sie eine Kampagne oder einen Canvas-Schritt, der ausschließlich auf Ihre Testnutzer:innen ausgerichtet ist und durch das angepasste Event mit verschachtelten Event-Eigenschaften ausgelöst wird (oder darauf referenziert).
+2. Starten Sie die Kampagne für Ihre Testzielgruppe.
+3. Protokollieren Sie das angepasste Event mit der verschachtelten Objekt-Nutzlast im Nutzerprofil Ihrer Testnutzer:innen (mithilfe der API oder des SDK).
+4. Bitte überprüfen Sie, ob die Nachricht mit den verschachtelten Eigenschaftswerten korrekt dargestellt wird.
+
 ## Häufig gestellte Fragen
 
-### Werden bei verschachtelten Objekten zusätzliche Datenpunkte aufgezeichnet?
+### Werden bei der Verwendung verschachtelter Objekte zusätzliche Datenpunkte protokolliert?
 
-Die Art und Weise, wie wir Datenpunkte protokollieren, ändert sich durch das Hinzufügen dieser Funktion nicht. Bei der Segmentierung auf der Grundlage verschachtelter Objekte werden Segment-Erweiterungen verwendet, die keine zusätzlichen Datenpunkte benötigen.
+Die Art und Weise, wie wir Datenpunkte protokollieren, ändert sich durch das Hinzufügen dieser Funktion nicht. Die Segmentierung auf Basis verschachtelter Objekte erfolgt mithilfe von Segment-Erweiterungen, die keine zusätzlichen Datenpunkte verwenden.
 
 ### Wie viele verschachtelte Daten können gesendet werden?
 
