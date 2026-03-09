@@ -21,10 +21,10 @@ Quando um perfil de usuário é criado no Braze, é atribuído automaticamente a
 
 ### Uso do grupo de controle global
 
-Os números de bucket aleatórios são usados no seu Global Control Group (Grupo de controle global) - um grupo de usuários que não recebe nenhuma campanha ou Canvas. O Braze seleciona aleatoriamente vários intervalos de números de buckets aleatórios e inclui usuários desses buckets selecionados. Números de balde aleatórios são atribuídos sem ponderação ou consideração de números alocados recentemente. 
+Os números de bucket aleatórios são usados no seu Global Control Group (Grupo de controle global) - um grupo de usuários que não recebe nenhuma campanha ou Canvas. O Braze seleciona aleatoriamente vários intervalos de números de buckets aleatórios e inclui usuários desses buckets selecionados. Números de grupos aleatórios são atribuídos sem ponderação ou consideração de números alocados recentemente. 
 
 {% alert note %}
-Quando um usuário é excluído e recriado, é atribuído a ele um número de bucket aleatório diferente, pois ele é considerado um novo usuário.
+Quando um usuário é excluído e recriado, o usuário recebe um número de grupo aleatório diferente porque é considerado um novo usuário.
 {% endalert %}
 
 Se você tiver um grupo de controle global configurado e quiser usar números aleatórios para outros casos de uso, consulte [Coisas a serem observadas]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for).
@@ -41,7 +41,7 @@ Se quiser segmentar usuários para testes em uma única campanha ou em um único
 
 Ao [criar um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), adicione o filtro "Random Bucket #". Em seguida, especifique um número ou intervalo de números para incluir em seu segmento.
 
-![Um filtro de segmento que é para números aleatórios de balde não mais que "3000".]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
+![Um filtro de segmento que é para números de grupos aleatórios não superiores a "3000".]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 Talvez você queira usar esses tipos de segmentos se quiser executar um teste de três variantes diferentes e também incluir um grupo de controle. Considere o seguinte exemplo de plano para criar segmentos de tamanho igual para três variantes e um grupo de controle:
 
@@ -53,6 +53,10 @@ Talvez você queira usar esses tipos de segmentos se quiser executar um teste de
 Dependendo do número de segmentos desejados e da distribuição de usuários em cada segmento, seu plano pode ser diferente.
 
 Para cada um dos segmentos de números aleatórios, incluindo o grupo de controle, ative o [rastreamento da análise de dados]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/). Ao avaliar o sucesso das variantes em relação ao grupo de controle, é possível acessar a página de [eventos personalizados]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/) e visualizar a frequência com que cada segmento concluiu determinados eventos personalizados.
+
+{% alert tip %}
+Ao usar segmentos de números de grupos aleatórios em um canva, por exemplo, como um filtro em uma [divisão de decisão]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) etapa, certifique-se de que os [critérios de saída]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/) do seu canva, filtros de público e etapas anteriores não visem segmentos que se sobreponham a uma de suas faixas de grupos. Se o fizerem, usuários nessa faixa podem ser removidos desproporcionalmente antes de chegar à divisão, causando uma distribuição desigual entre os caminhos.
+{% endalert %}
 
 ### Reentrada aleatória do público usando números de baldes aleatórios
 
