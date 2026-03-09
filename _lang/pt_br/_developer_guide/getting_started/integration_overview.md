@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Primeiros passos: Visão geral da integração
+# [![Curso de Aprendizado da Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}Introdução: Visão geral da integração
 
 > Este artigo fornece uma visão geral básica do processo de integração.
 
@@ -129,14 +129,14 @@ Quando estiver totalmente integrado ao seu app ou site, o SDK da Braze oferece u
 {% endalert %}
 
 {% alert note %}
-Para adicionar uma camada adicional de segurança, você pode ativar [a autenticação do SDK]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) para evitar solicitações não autorizadas do SDK. Esse recurso está disponível em todas as principais plataformas, incluindo Web, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin) e Expo.
+Para adicionar uma camada adicional de segurança, você pode ativar [autenticação do SDK]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) para evitar solicitações não autorizadas ao SDK. Este recurso está disponível em todas as principais plataformas, incluindo Web, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin) e Expo.
 {% endalert %}
 
 Durante a implementação do SDK, você irá:
 
 * Escrever o código de integração de SDK para cada plataforma à qual você deseja oferecer suporte.
 * Ative os canais de envio de mensagens para cada plataforma, garantindo que o SDK do Braze rastreie os dados das interações com seus clientes por e-mail, SMS, notificações por push e outros canais.
-* Crie quaisquer personalizações planejadas de componentes da interface do usuário (por exemplo, cartões de conteúdo personalizados). Para conteúdo totalmente personalizado, será necessário registrar a análise de dados, pois a coleta automática de dados do SDK não estará ciente dos seus novos componentes. Você pode padronizar essa implementação em nossos componentes padrão.
+* Crie quaisquer personalizações de componentes de UI planejadas (por exemplo, Cartões de Conteúdo personalizados). Para conteúdo totalmente personalizado, será necessário registrar a análise de dados, pois a coleta automática de dados do SDK não estará ciente dos seus novos componentes. Você pode padronizar essa implementação em nossos componentes padrão.
 
 ### Usando a API do Braze
 
@@ -202,7 +202,7 @@ Confira se os seus ambientes de produção e teste estão configurados antes de 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Ao realizar o controle de qualidade na integração do SDK, use o [depurador do SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) para solucionar problemas sem ativar o registro detalhado do seu aplicativo.
+Ao realizar QA na sua integração de SDK, use o [Depurador de SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) para solucionar problemas sem ativar o registro detalhado para seu app.
 {% endalert %}
 
 ### Passando a Braze para os profissionais de marketing
@@ -229,9 +229,9 @@ Você fará o rastreamento das atualizações da plataforma Braze por meio do Br
 
 ## Limites de taxa do SDK 
 
-### Usuários ativos mensais no período de 24 a 25 de março de 2015, MAU universal, MAU da Web e MAU móvel  
+### Usuários Ativos Mensais CY 24-25, MAU Universal, MAU Web e MAU Móvel  
 
-Para os clientes que adquiriram Monthly Active Users CY 24-25, Universal MAU, Web MAU e Mobile MAU, o Braze impõe limites de frequência do lado do servidor nas solicitações de API usadas por nossos SDKs para atualizar sessões, atributos personalizados de usuários, eventos e outros dados de perfil de usuários. Isso é para garantir a estabilidade da plataforma e manter um serviço rápido e confiável. 
+Para clientes que adquiriram Usuários Ativos Mensais CY 24-25, MAU Universal, MAU Web e MAU Móvel, a Braze aplica limites de frequência do lado do servidor nas solicitações de API usadas por nossos SDKs para atualizar sessões, atributos de usuário, eventos e outros dados de perfil de usuário. Isso é para garantir a estabilidade da plataforma e manter um serviço rápido e confiável. 
 
 * Os limites de taxa horária são definidos de acordo com o tráfego esperado do SDK em sua conta, que pode corresponder ao número de usuários ativos mensais (MAU) que você adquiriu, setor, sazonalidade ou outros fatores. Quando o limite de frequência horário é atingido, a Braze irá limitar as solicitações até a próxima hora.
 * Todas as solicitações com limite de taxa são automaticamente reprocessadas pelo SDK.
@@ -239,12 +239,25 @@ Para os clientes que adquiriram Monthly Active Users CY 24-25, Universal MAU, We
     * Revisando sua integração de SDK para reduzir a coleta excessiva de dados.
     * Bloqueando dados personalizados que não são essenciais para seus casos de uso de marketing.
 * Os limites de taxa de explosão são limites de taxa de curta duração que se aplicam quando um alto volume de solicitações chega em um período muito curto (ou seja, em segundos). Você não precisa tomar medidas quando os limites de estouro ocorrem, e o SDK tentará novamente em breve.
+* Limites de frequência constantes controlam o volume de solicitações sustentadas ao longo de uma janela móvel maior que a janela de explosão (por exemplo, vários minutos) e ajudam a suavizar o tráfego contínuo entre os limites de explosão e seu limite de frequência horário.
 
 ### Encontrando seus limites de taxa
 
 Para encontrar os limites atuais com base na taxa de transferência esperada do SDK, acesse **Configurações** > **APIs e identificadores** > **Limites de API e SDK**.
 
 Para uso histórico, acesse **Configurações** > **APIs e identificadores** > **Dashboard de API e SDK**.
+
+### Solicitando limites de frequência mais altos
+
+Se você precisar de um limite de frequência Braze mais alto, entre em contato com o suporte da Braze ou seu gerente de sucesso do cliente e inclua os seguintes detalhes:
+
+* Se você precisa de um aumento temporário ou permanente.
+* Por que você precisa do aumento.
+* Quais endpoints e ambientes são afetados.
+* Seu volume de tráfego aproximado e cronograma, incluindo data de início, duração e horários de pico.
+* Se você pode agrupar chamadas ou espalhar o tráfego ao longo do tempo.
+
+Após enviar sua solicitação, a Braze a revisa e atualiza você com o resultado.
 
 ### Mudanças e suporte
 
