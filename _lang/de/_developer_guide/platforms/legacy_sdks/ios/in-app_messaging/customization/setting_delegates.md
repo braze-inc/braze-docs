@@ -1,6 +1,6 @@
 ---
-nav_title: Delegierte festlegen
-article_title: In-App-Nachricht Delegierte für iOS festlegen
+nav_title: Delegierte ernennen
+article_title: In-App-Nachrichten-Delegates für iOS festlegen
 platform: iOS
 page_order: 2
 description: "Dieser Artikel referenziert die Einstellung von In-App-Nachrichtendelegierten für Ihre iOS-Anwendung."
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Delegierte festlegen
+# Delegierte ernennen
 
 Die Anzeige und Zustellung von In-App-Nachrichten kann im Code angepasst werden, indem Sie unsere optionalen Delegaten festlegen.
 
