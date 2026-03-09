@@ -15,7 +15,7 @@ _This integration is maintained by Smartling._
 
 ## About the integration
 
-The Braze Connector supports translations for messages in campaigns and Canvases (email, push, and in-app messages), email templates, and Content Blocks. Refer to the following table to learn about the supported channels and features when determining to use the new connector with multi-language support or legacy workflow.
+The Braze Connector supports translations for messages in campaigns and Canvases (email, push, and in-app messages, banners), email templates, and Content Blocks. Refer to the following table to learn about the supported channels and features when determining to use the new connector with multi-language support or legacy workflow.
 
 | Channel/Feature | Traditional Editor (ex. HTML) | Drag-and-Drop Editor |
 | --------------- | ----------------------------- | -------------------- |
@@ -34,7 +34,7 @@ Depending on your use case, manage translations for Content Blocks using either 
 
 In the updated workflow, using Braze multi-language support and locales in messages, translation tags are added to the Content Block. However, Smartling executes translations at the message level. The content is translated only when the content is included in a Campaign or Canvas and the target locale is set. To learn more, see [Managing translations for Content Blocks](#managing-translations-for-content-blocks).
 
-For email templates, only the legacy workflow is supported. To learn more, see [Managing translations using the legacy workflow](#managing-translations-using-the-legacy-workflow).
+To learn more about the legacy workflow, see [Managing translations using the legacy workflow](#managing-translations-using-the-legacy-workflow).
 
 ## Prerequisites
 
@@ -149,7 +149,7 @@ Translation tags belong on the Content Block. However, Smartling executes transl
 
 ## Managing translations using the legacy workflow
 
-If you prefer to manage translations directly within a Content Block or email template, see the legacy instructions in [Smartling's documentation](https://help.smartling.com/hc/en-us/articles/13248577069979-Translating-with-the-Braze-Connector). This method uses a language attribute and Liquid if/else logic to display text in different languages.
+If you prefer to manage translations directly within a Content Block, see the legacy instructions in [Smartling's documentation](https://help.smartling.com/hc/en-us/articles/13248577069979-Translating-with-the-Braze-Connector). This method uses a language attribute and Liquid if/else logic to display text in different languages.
 
 ## Frequently asked questions
 
