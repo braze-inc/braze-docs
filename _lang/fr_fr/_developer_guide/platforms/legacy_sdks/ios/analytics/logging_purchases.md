@@ -1,5 +1,5 @@
 ---
-nav_title: Achats de journaux
+nav_title: Enregistrer les achats
 article_title: Enregistrer les achats pour iOS
 platform: iOS
 page_order: 4
@@ -55,7 +55,7 @@ Consultez la [documentation de la classe iOS](http://appboy.github.io/appboy-ios
 ### Ajout d’une quantité
 Vous pouvez ajouter une quantité à vos achats si les clients effectuent le même achat plusieurs fois au cours d’une même commande. Vous pouvez y parvenir en transmettant un `NSUInteger` pour la quantité.
 
-* La quantité saisie doit être comprise entre [0 et 100] pour que le SDK enregistre un achat.
+* La quantité saisie doit être comprise entre 0 et 100 pour que le SDK puisse enregistrer un achat.
 * Les méthodes sans entrée de quantité auront une valeur de quantité égale à 1 par défaut.
 * Les méthodes avec une entrée de quantité n'ont pas de valeur par défaut et **doivent** recevoir une entrée de quantité pour que le SDK puisse enregistrer un achat.
 
