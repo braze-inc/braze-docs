@@ -1,6 +1,6 @@
 ---
 page_order: 0.1
-nav_title: メッセージをカスタマイズする
+nav_title: メッセージングをカスタマイズする
 article_title: Braze SDKのプッシュ通知をカスタマイズする
 channel:
   - push notifications
@@ -21,5 +21,9 @@ channel:
 
 {% sdktab fireos %}
 {% multi_lang_include developer_guide/fireos/push_notifications/customization.md %}
+{% endsdktab %}
+
+{% sdktab React Native %}
+{% multi_lang_include developer_guide/react_native/push_notifications/customization.md %}
 {% endsdktab %}
 {% endsdktabs %}
