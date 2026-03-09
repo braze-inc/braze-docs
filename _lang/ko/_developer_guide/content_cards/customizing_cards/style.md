@@ -1,6 +1,6 @@
 ---
 nav_title: 서식
-article_title: 콘텐츠 카드 스타일 커스텀하기
+article_title: 콘텐츠 카드의 스타일을 사용자 정의하세요
 page_order: 1
 description: "이 문서에서는 콘텐츠 카드의 스타일 지정 옵션을 다룹니다."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# 콘텐츠 카드 스타일 커스텀하기
+# 콘텐츠 카드의 스타일을 사용자 정의하세요
 
 > Braze 콘텐츠 카드에는 기본 모양과 느낌이 제공됩니다. 이 문서에서는 브랜드 정체성에 맞는 콘텐츠 카드의 스타일 옵션을 다룹니다. 콘텐츠 카드 유형 전체 목록은 [콘텐츠 카드 정보를]({{site.baseurl}}/developer_guide/content_cards/) 참조하세요.
 
@@ -30,13 +30,15 @@ platform:
 {% tabs %}
 {% tab web %}
 
-Braze의 기본 스타일은 Braze SDK 내 CSS에서 정의됩니다. 애플리케이션에서 선택한 스타일을 재정의하여 나만의 배경 이미지, 글꼴 모음, 스타일, 크기, 애니메이션 등으로 표준 피드를 맞춤 설정할 수 있습니다. 예를 들어, 다음은 콘텐츠 카드를 800px 너비로 표시하는 재정의 예제입니다.
+Braze의 기본 스타일은 Braze SDK 내 CSS에서 정의됩니다. 애플리케이션에서 선택한 스타일을 재정의하여, 배경 이미지, 글꼴 패밀리, 스타일, 크기, 애니메이션 등을 사용하여 표준 피드를 사용자 정의할 수 있습니다. 예를 들어, 다음은 콘텐츠 카드가 800px 너비로 표시되도록 하는 재정의의 예입니다:
 
 ``` css
 body .ab-feed {
   width: 800px;
 }
 ```
+
+수정할 수 있는 속성의 전체 목록은 [Braze의 SDK 구성 옵션](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)을 참조하세요.
 
 {% endtab %}
 {% tab android %}
@@ -179,7 +181,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 
 **프로그래밍 방식으로 콘텐츠 카드 수정하기**
 
-콘텐츠 카드는 프로그래밍 방식으로 [`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform) 클로저를 `Attributes` 구조에 할당하여 변경할 수 있습니다. 아래 예제에서는 호환되는 카드의 `title` 및 `description`을 수정합니다.
+`Attributes` 구조체에서 [`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform) 클로저를 할당하여 콘텐츠 카드를 프로그래밍 방식으로 변경할 수 있습니다. 아래 예제에서는 호환되는 카드의 `title` 및 `description`을 수정합니다.
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -295,7 +297,7 @@ let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attrib
 
 ### 사용자 지정 고정 아이콘
 
-콘텐츠 카드를 만들 때 마케팅 담당자는 카드를 고정할 수 있습니다. 고정 카드는 사용자의 피드 상단에 표시되며 사용자가 지울 수 없습니다. 카드 스타일을 사용자 지정할 때 고정된 아이콘의 모양을 변경할 수 있습니다.
+콘텐츠 카드를 만들 때 마케팅 담당자는 카드를 고정할 수 있습니다. 고정 카드는 사용자의 피드 상단에 표시되며, 사용자는 이를 해제할 수 없습니다. 카드 스타일을 사용자 정의할 때, 고정 아이콘의 모양을 변경할 수 있습니다.
 
 !["이 카드를 피드 상단에 고정" 옵션을 선택한 상태에서 모바일 및 웹용 Braze의 콘텐츠 카드 미리 보기를 나란히 배치합니다.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
@@ -310,11 +312,11 @@ let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attrib
 </div>
 ```
 
-다른 FontAwesome 아이콘을 사용하려면 `i` 요소의 클래스 이름을 원하는 아이콘의 클래스 이름으로 바꾸면 됩니다. 
+다른 FontAwesome 아이콘을 사용하려면, `i` 요소의 클래스 이름을 원하는 아이콘의 클래스 이름으로 바꿀 수 있습니다. 
 
-아이콘을 완전히 바꾸려면 `i` 요소를 제거하고 커스텀 아이콘을 `ab-pinned-indicator`의 하위 항목으로 추가합니다. 몇 가지 방법이 있지만 간단한 한 가지 방법은 `ab-pinned-indicator` 요소에서 `replaceChildren()`을 사용하는 것입니다.
+아이콘을 완전히 변경하려면, `i` 요소를 제거하고 사용자 정의 아이콘을 `ab-pinned-indicator`의 자식으로 추가하세요. 아이콘을 변경하는 방법은 여러 가지가 있지만, 한 가지 간단한 방법은 `ab-pinned-indicator` 요소에서 `replaceChildren()`을 사용하는 것입니다.
 
-예를 들어, 다음과 같습니다.
+For example:
 
 ```javascript
 // Get the parent element
@@ -358,7 +360,7 @@ ContentCardStyling(
 )
 ```
 
-에서 컴포저블을 지정할 수도 있습니다. [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721)`ContentCardStyling` 로 지정할 수도 있습니다. `pinnedComposable`을 지정하면 `pinnedResourceId` 값을 재정의합니다.
+에서 컴포저블을 지정할 수도 있습니다. [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721)`ContentCardStyling` 로 지정할 수도 있습니다. `pinnedComposable`가 지정되면, `pinnedResourceId` 값을 재정의합니다.
 
 ```kotlin
 ContentCardStyling(
@@ -460,7 +462,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
 viewController.view.tintColor = .systemGreen
 ```
 
-그러나 미열람 표시기만 수정하려면 `BrazeContentCardUI.ViewController.Attributes` 구조의 `unviewedIndicatorColor` 속성정보에 액세스하면 됩니다. Braze `UITableViewCell` 구현을 사용하는 경우 셀을 그리기 전에 속성정보에 액세스해야 합니다.
+그러나 보지 않은 표시기만 수정하려면, `BrazeContentCardUI.ViewController.Attributes` 구조체의 `unviewedIndicatorColor` 속성에 접근할 수 있습니다. Braze `UITableViewCell` 구현을 사용하는 경우, 셀 그리기 전에 속성에 접근하세요.
 
 예를 들어, 보지 않은 표시기의 색상을 빨간색으로 설정합니다:
 
