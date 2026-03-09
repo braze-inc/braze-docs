@@ -27,7 +27,7 @@ Braze permet aux clients de remplacer les images par défaut existantes par leur
 Étant donné que les cartes de contenu ont une taille maximale de 2 Ko pour le contenu que vous saisissez dans le tableau de bord (y compris le texte des messages, les URL d’images, les liens et toutes les paires clé-valeur), vérifiez la taille avant d’envoyer. Dépasser ce montant empêchera la carte d’être envoyée.
 
 {% alert important %}
-Le remplacement des images par défaut n'est actuellement pas pris en charge dans notre intégration .NET MAUI iOS.
+La modification des images par défaut n'est actuellement pas prise en charge dans notre intégration .NET MAUI iOS.
 {% endalert %}
 
 ## Désactivation du mode sombre
