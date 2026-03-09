@@ -74,17 +74,21 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|Obrigatória|String|Consulte [identificador de campanha]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Opcional | String | Consulte [enviar identificador]({{site.baseurl}}/api/identifier_types/). |
-|`trigger_properties`| Opcional | Objeto | Consulte [propriedades do disparador]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Pares de chave-valor de personalização se aplicam a todos os usuários nesta solicitação. |
-|`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para um segmento inteiro que uma campanha ou canva segmenta. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir essa flag inadvertidamente pode fazer com que você envie sua mensagem para um público maior do que o esperado. |
-|`audience`| Opcional | Objeto de público conectado| Veja [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Opcional | Vetor | Consulte [objeto de destinatários]({{site.baseurl}}/api/objects_filters/recipient_object/).<br><br>Se `send_to_existing_only` for `false`, um objeto de atribuição deverá ser incluído.<br><br>Se `recipients` não for fornecido e `broadcast` estiver definido como verdadeiro, a mensagem é enviada para todo o segmento direcionado pela campanha. <br><br> Se `email` for o identificador, você deve incluir [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) no objeto de destinatários. |
+|`trigger_properties`| Opcional | Objeto | Consulte [propriedades do disparador]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Os pares de chave-valor de personalização se aplicam a todos os usuários nesta solicitação. |
+|`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para todo o segmento configurado como o público-alvo da campanha no dashboard do Braze. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir essa flag inadvertidamente pode fazer com que você envie sua mensagem para um público maior do que o esperado. |
+|`audience`| Opcional | Objeto de público conectado| Veja [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). Quando você inclui `audience`, a mensagem é enviada apenas para usuários que correspondem aos filtros definidos, como atributos personalizados e status de inscrição. |
+|`recipients`| Opcional | Vetor | Consulte [objeto de destinatários]({{site.baseurl}}/api/objects_filters/recipient_object/).<br><br>Se `send_to_existing_only` for `false`, um objeto de atribuição deverá ser incluído.<br><br>Se `recipients` não for fornecido e `broadcast` estiver definido como verdadeiro, a mensagem é enviada para todo o segmento configurado como o público-alvo da campanha no dashboard do Braze. <br><br> Se `email` for o identificador, você deve incluir [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) no objeto de destinatários. |
 |`attachments`| Opcional | Vetor | Se `broadcast` estiver definido como true, a lista `attachments` não poderá ser incluída. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 - O vetor de objetos pode conter até 50 objetos, sendo que cada objeto contém uma única string `external_user_id` e um objeto `trigger_properties`.
-- Quando `send_to_existing_only` é `true` (o padrão), Braze envia a mensagem apenas para usuários existentes. Quando definido como `false` e um objeto de atributos é fornecido, Braze cria um novo usuário se um não existir. Observe que definir `send_to_existing_only` como `false` não é suportado para aliases de usuário—novos usuários apenas com alias não podem ser criados através deste endpoint. Para enviar para um usuário apenas com alias, o usuário deve já existir no Braze.
+- Quando `send_to_existing_only` é `true` (o padrão), o Braze envia a mensagem apenas para usuários existentes. Se o `external_user_id` não corresponder a nenhum usuário existente, a API ainda retorna uma resposta de sucesso `201`, mas o envio é cancelado internamente com um resultado de `Unknown External User ID` e nenhum evento Currents é gerado. Quando definido como `false` e um objeto de atributos é fornecido, o Braze cria um novo usuário se um não existir. Observe que definir `send_to_existing_only` como `false` não é suportado para aliases de usuário—novos usuários apenas com alias não podem ser criados através deste endpoint. Para enviar para um usuário apenas com alias, o usuário deve já existir no Braze.
 
 O status do grupo de inscrições de um usuário pode ser atualizado com a inclusão de um parâmetro `subscription_groups` no objeto `attributes`. Para obter mais informações, consulte [Objeto de atribuições do usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+
+{% alert note %}
+O parâmetro `segment_id` não é suportado para este endpoint. Para direcionar um segmento, configure o segmento nas configurações de público-alvo da campanha no dashboard do Braze e use `"broadcast": true`, ou use o parâmetro `audience` com filtros de [Audience Conectada]({{site.baseurl}}/api/objects_filters/connected_audience/).
+{% endalert %}
 
 ## Exemplo de solicitação
 ```
@@ -174,7 +178,7 @@ Se sua solicitação encontrar um erro fatal, consulte [Erros e respostas]({{sit
 
 ## Objeto de atribuições para campanhas
 
-Braze tem um objeto de envio de mensagens chamado `attributes` que permite adicionar, criar ou atualizar atributos e valores para um usuário antes de enviar uma campanha acionada por API. Usando o endpoint `campaign/trigger/send` enquanto esta chamada de API processa o objeto de atributos do usuário antes de processar e enviar a campanha. Isso ajuda a minimizar o risco de problemas causados por [condições de corrida]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/).
+O Braze tem um objeto de envio de mensagens chamado `attributes` que permite adicionar, criar ou atualizar atributos e valores para um usuário antes de enviar uma campanha acionada por API. Usando o endpoint `campaign/trigger/send` enquanto esta chamada de API processa o objeto de atributos do usuário antes de processar e enviar a campanha. Isso ajuda a minimizar o risco de problemas causados por [condições de corrida]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/).
 
 {% alert tip %}
 Está procurando a versão do Canva desse endpoint? Dê uma olhada em [Envio de mensagens do Canva usando entrega disparada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
