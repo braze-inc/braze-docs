@@ -11,9 +11,9 @@ tool: Canvas
 
 # 메시지 
 
-> 메시지 단계를 사용하면 캔버스에서 원하는 위치에 독립형 메시지를 추가할 수 있습니다.
+> 메시지 단계에서는 캔버스의 원하는 위치에 독립적인 메시지를 추가할 수 있습니다.
 
-![푸시 채널을 사용하는 "점심 프로모션"이라는 메시지 단계입니다.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+!["점심 프로모션"이라는 이름의 메시지 단계가 푸시 채널을 사용합니다.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 ## 메시지 생성
 
@@ -22,7 +22,7 @@ tool: Canvas
 ### Step 1: Select your messaging channel
 
 You can select from the following messaging channels: 
-- 배너(얼리 액세스 중)
+- 배너(조기 액세스)
 - 콘텐츠 카드
 - Email
 - LINE
@@ -32,7 +32,7 @@ You can select from the following messaging channels:
 - Webhook
 - WhatsApp
 
-![메시지 단계에 선택할 수 있는 메시징 채널 목록입니다.]({% image_buster /assets/img/canvas_components/message_step2.png %})
+![메시지 단계에서 선택할 수 있는 사용 가능한 메시징 채널 목록입니다.]({% image_buster /assets/img/canvas_components/message_step2.png %})
 
 ### 2단계: 배달 설정 편집
 
@@ -63,20 +63,22 @@ Next, you can edit settings for Intelligent Delivery, Quiet Hours overrides, and
 작업 기반 캔버스가 인바운드 SMS 메시지에 의해 트리거되는 경우, 첫 번째 단계(메시지 단계) 또는 행동 경로 단계 아래에 중첩된 메시지 단계에서 SMS 속성을 참조할 수 있습니다. 예를 들어 메시지 단계에서는 `{{sms.${inbound_message_body}}}` 또는 `{{sms.${inbound_media_urls}}}`을 사용할 수 있습니다.
 {% endraw %}
 
-## Referencing Canvas entry properties
+## 컨텍스트 속성 참조
 
-Canvas entry properties are configured in the **Entry Schedule** step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. 이러한 속성은 API 트리거 캔버스에 있는 항목 페이로드의 속성에도 액세스할 수 있습니다. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
-Entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. 이 방법으로 사용하려면 이벤트가 사용자 지정 이벤트 또는 구매 이벤트여야 합니다.
+입력 속성은 캔버스를 생성할 때 **입력 일정** 단계에서 구성되며, 사용자가 캔버스에 들어가는 트리거를 나타냅니다. 이러한 속성은 API 트리거 캔버스에 있는 항목 페이로드의 속성에도 액세스할 수 있습니다. Note that the `context` object has a maximum size limit of 50 KB.
+
+Entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %}``{context.${property_name}}``{% endraw %}. 이 방법으로 사용하려면 이벤트가 사용자 지정 이벤트 또는 구매 이벤트여야 합니다.
 
 {% alert note %}
-For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas.
+For in-app message channels specifically, `context` can only be referenced in Canvas.
 {% endalert %}
 
-Use the following Liquid when referencing these entry properties: {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. 이 방법을 사용하려면 이벤트가 사용자 지정 이벤트 또는 구매 이벤트여야 합니다.
+Use the following Liquid when referencing these entry properties: {% raw %}``context.${property_name}``{% endraw %}. 이 방법을 사용하려면 이벤트가 사용자 지정 이벤트 또는 구매 이벤트여야 합니다.
 
 {% raw %}
-예를 들어 다음 요청을 고려해 보세요: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Liquid `{{canvas_entry_properties.${product_name}}}`를 사용하여 메시지에 "신발"이라는 단어를 추가할 수 있습니다.
+예를 들어 다음 요청을 고려해 보세요: `\"context\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Liquid `{{context.${product_name}}}`를 사용하여 메시지에 "신발"이라는 단어를 추가할 수 있습니다.
 {% endraw %}
 
 You can also leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) in any Message step to guide your users through personalized steps throughout your Canvas workflow.
@@ -94,7 +96,7 @@ In Canvas, custom event and purchase event properties can be used in Liquid in a
 행동 경로 다음의 첫 번째 메시지 단계에서 해당 작업 경로에 참조된 이벤트와 관련된 `event_properties`를 사용할 수 있습니다. 이 행동 경로 단계와 메시지 단계 사이에 다른 단계(다른 작업 경로 또는 메시지 단계가 아닌)를 배치할 수 있습니다. 메시지 단계가 행동 경로 단계에서 모든 사람이 아닌 경로로 추적할 수 있는 경우에만 `event_properties`에 액세스할 수 있습니다.
 
 {% alert important %}
-You can't use `event_properties` in the lead Message step. 대신 `canvas_entry_properties`를 사용하거나 `event_properties`를 포함하는 메시지 단계 앞에 해당 이벤트가 포함된 작업 경로 단계를 추가해야 합니다.
+You can't use `event_properties` in the lead Message step. 대신 `context`를 사용하거나 `event_properties`를 포함하는 메시지 단계 앞에 해당 이벤트가 포함된 작업 경로 단계를 추가해야 합니다.
 {% endalert %}
 
 {% details Expand for original Canvas editor %}
@@ -102,8 +104,8 @@ You can't use `event_properties` in the lead Message step. 대신 `canvas_entry_
 You can no longer create or duplicate Canvases using the original editor. This section is available for reference only.
 
 - `event_properties` can't be used in scheduled full steps. However, you can use `event_properties` in the first full step of an action-based Canvas, even if the full step is scheduled.
-- `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
-- For in-app message channels specifically, `canvas_entry_properties` can be referenced in the original Canvas editor if you have persistent entry properties enabled as part of the previous early access.
+- `context` can be referenced only in the first full step of a Canvas.
+- For in-app message channels specifically, `context` can be referenced in the original Canvas editor if you have persistent entry properties enabled as part of the previous early access.
 
 {% enddetails %}
 
