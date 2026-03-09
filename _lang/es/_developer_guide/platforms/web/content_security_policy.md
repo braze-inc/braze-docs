@@ -36,7 +36,7 @@ braze.initialize(apiKey, {
 ### `connect-src` {#connect-src}
 
 {% alert warning %}
-Tu URL debe coincidir con el [punto final SDK de la API]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) de la opción de inicialización `baseUrl` que hayas elegido.
+Tu URL debe coincidir con el [punto final SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) de [la API]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) de la opción de inicialización`baseUrl` elegida.
 {% endalert %}
 
 |URL|Información|
