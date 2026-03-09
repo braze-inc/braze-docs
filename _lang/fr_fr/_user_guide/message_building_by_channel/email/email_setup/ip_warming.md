@@ -21,13 +21,13 @@ Le réchauffement d’adresses IP est conçu pour vous aider à établir une ré
 
 Les fournisseurs de services Internet arrêtent la livraison des e-mails lorsque la suspicion de spam se produit afin de protéger leurs utilisateurs. Par exemple, si vous envoyez à 100 000 utilisateurs, le fournisseur de services Internet peut envoyer l’e-mail à seulement 5 000 de ces utilisateurs au cours de la première heure. Le fournisseur de services Internet surveille ensuite les mesures d’engagement telles que les taux d’ouverture, les taux de clics, les désinscriptions et les rapports de courriers indésirables. Donc, si un nombre important de rapport de courrier indésirable se produit, ils peuvent choisir de reléguer le reste de cet envoi dans le dossier spam plutôt que de le remettre dans la boîte de réception de l'utilisateur. 
 
-Si l'engagement est modéré, ils peuvent continuer à étrangler votre e-mail pour collecter davantage de données d'engagement afin de déterminer avec plus de certitude si l'e-mail est un spam ou non. Si l’e-mail a des mesures d’engagement très élevées, il peut cesser de faire passer cet e-mail entièrement. Ils utilisent ces données pour créer une réputation de courrier électronique qui déterminera finalement si vos e-mails sont filtrés automatiquement vers le spam.
+Si l'engagement est modéré, ils peuvent continuer à limiter le débit de vos e-mails afin de collecter davantage de données d'engagement et de déterminer avec plus de certitude si l'e-mail est indésirable ou non. Si l’e-mail a des mesures d’engagement très élevées, il peut cesser de faire passer cet e-mail entièrement. Ils utilisent ces données pour créer une réputation de courrier électronique qui déterminera finalement si vos e-mails sont filtrés automatiquement vers le spam.
 
 Si votre domaine ou votre IP est bloqué par un FAI, les messages du [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) contiendront des informations sur les sites web à visiter pour faire appel à ces FAI et pour sortir de ces listes.
 
 ## Planifications de réchauffement d’adresses IP
 
-Nous recommandons fortement de respecter strictement cette planification de réchauffement d’adresses IP pour garantir la livrabilité. Il est également important de ne pas sauter de jours, car une mise à l'échelle cohérente améliore les indicateurs de réception/distribution.
+Nous recommandons fortement de respecter strictement cette planification de réchauffement d’adresses IP pour garantir la livrabilité. Il est également important de ne pas manquer de jours, car une mise à l'échelle régulière améliore les indicateurs de réception/distribution.
 
 Jour | Nombre d’e-mails à envoyer
 ----|--------------------------|
@@ -52,7 +52,7 @@ Jour | Nombre d’e-mails à envoyer
 
 Nous vous conseillons un réchauffement jusqu'à votre envoi maximal. En d'autres termes, si vous envoyez normalement 2 millions d'e-mails par jour mais que vous prévoyez d'en envoyer 7 millions pendant une période saisonnière, c'est à ce "pic" d'envoi que vous devez vous préparer.
 
-Une fois le réchauffement d'adresses IP terminé et que vous avez atteint le volume quotidien souhaité, vous devez viser à maintenir ce volume quotidiennement. Une certaine fluctuation est normale, mais si vous atteignez le volume souhaité et que vous ne procédez à un envoi massif qu'une fois par semaine, vous risquez de nuire à vos indicateurs de réception/distribution et à la réputation de l'expéditeur. 
+Une fois le réchauffement d’adresses IP terminé et le volume quotidien souhaité atteint, il est recommandé de s’efforcer de maintenir ce volume quotidiennement. Certaines fluctuations sont à prévoir, mais atteindre le volume souhaité, puis n'effectuer qu'un seul envoi massif par semaine, pourrait avoir un impact négatif sur vos indicateurs de réception/distribution et la réputation de l’expéditeur. 
 
 {% alert important %}
 La plupart des fournisseurs de services Internet stockent les données de réputation uniquement pendant 30 jours. Si vous passez un mois sans envoi de messages, vous devrez répéter le processus de réchauffement d’adresses IP.
@@ -66,7 +66,7 @@ Notre fonctionnalité intégrée de limitation du nombre d'utilisateurs est un o
 
 ## Segmentation du sous-domaine
 
-De nombreux FAI et fournisseurs d'accès à l'e-mail ne filtrent plus en fonction de la réputation des adresses IP. Ces technologies de filtrage représentent désormais une réputation basée sur le domaine. Cela signifie que les filtres analyseront toutes les données associées au domaine de l’expéditeur et non pas seulement à l’adresse IP. Pour cette raison, en plus de réchauffer votre e-mail adresse IP, nous vous recommandons également de disposer de domaines ou sous-domaines distincts pour le marketing, la transaction et la messagerie d’entreprise. 
+De nombreux fournisseurs d'accès Internet et fournisseurs d'accès à l'e-mail ne filtrent plus en fonction de la réputation des adresses IP. Ces technologies de filtrage représentent désormais une réputation basée sur le domaine. Cela signifie que les filtres analyseront toutes les données associées au domaine de l’expéditeur et non pas seulement à l’adresse IP. Pour cette raison, en plus de réchauffer votre e-mail adresse IP, nous vous recommandons également de disposer de domaines ou sous-domaines distincts pour le marketing, la transaction et la messagerie d’entreprise. 
 
 {% alert important %}
 La segmentation sous-domaine est particulièrement importante pour les expéditeurs à gros volumes. Ces expéditeurs doivent travailler avec un conseiller de Braze lors de la configuration de leur compte afin de s’assurer qu’ils respectent cette pratique.
@@ -76,7 +76,7 @@ Nous vous recommandons de segmenter vos domaines de sorte que le courrier d’en
 
 ## Bonnes pratiques
 
-Vous pouvez éviter toutes les conséquences de l'absence de réchauffement d'adresses IP en suivant ces bonnes pratiques :
+Vous pouvez éviter toutes les conséquences d'un manque de réchauffement d’adresses IP en suivant ces bonnes pratiques :
 
 ### Commencez par envoyer de petits volumes d’e-mails
 
