@@ -495,11 +495,16 @@ Analytics are automatically tracked when using BannerUIView. Manual logging shou
 // Manual logging should not be used for default BannerUIView
 
 // For custom implementations, use manual logging methods:
-// Log impression
-braze.banners.logImpression(placementId: "global_banner")
+// Get banner for specific placement
+braze.banners.getBanner(for: "global_banner") { banner in
+  guard let banner = banner else { return }
 
-// Log click (with optional buttonId)
-braze.banners.logClick(placementId: "global_banner", buttonId: buttonId)
+  // Log impression
+  banner.context?.logImpression()
+
+  // Log click (with optional buttonId)
+  banner.context?.logClick(buttonId: buttonId)
+}
 
 // Control groups are automatically handled by BannerUIView
 ```
