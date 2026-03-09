@@ -18,7 +18,7 @@ search_rank: 3.9
 
 ## Schritt 1: Wählen Sie, wo Sie Ihre Botschaft aufbauen möchten
 
-Verwenden Sie Kampagnen für einzelne, einfache Messagings (z.B. um Nutzer:innen mit einer Nachricht über ein Produkt zu informieren). Verwenden Sie Canvase für mehrstufige Nutzer:innen (z.B. um maßgeschneiderte Produktvorschläge auf der Grundlage des Nutzer:innenverhaltens im Laufe der Zeit zu versenden).
+Verwenden Sie Kampagnen für einzelne, einfache Nachrichten (z. B. um Nutzer:innen mit einer Nachricht über ein Produkt zu informieren). Verwenden Sie Canvases für mehrstufige User Journeys (z. B. zum Versenden maßgeschneiderter Produktvorschläge auf Grundlage des Nutzerverhaltens im Zeitverlauf).
 
 {% tabs %}
 {% tab Campaign %}
@@ -57,9 +57,9 @@ Wenn Sie mehr über das erwartete Verhalten und das Aussehen der einzelnen Typen
 
 | Nachrichtentyp | Beispiel | Beschreibung |
 |---|---|---|
-|[Klassisch]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![Eine klassische Content-Card mit einem kleinen Symbol und Text, um Sie zur Buchung eines Trainingskurses anzuregen.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |Die Classic Card hat ein einfaches Layout mit einem fettgedruckten Titel, einem Nachrichtentext und einem optionalen Bild, das links neben dem Titel und dem Text platziert ist. Für die Classic Card verwenden Sie am besten ein quadratisches Bild oder Symbol. |
-|[Bild mit Bildunterschrift]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![Eine Contentful Content-Card mit dem Bild eines Gewichthebers und einem Text, der zur Buchung eines Trainingskurses anregt.]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | Die hervorgehobene Image-Card präsentiert Ihren Inhalt mit Text und einem aufmerksamkeitsstarken Bild. |
-|[Nur Bild]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Eine Image Only Content-Card, die nur Text enthält.]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | Die Karte mit reinem Bildinhalt bietet Platz für Bilder, GIFs und andere kreative Nicht-Text-Inhalte. |
+|[Klassisch]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![Eine klassische Content-Card mit einem kleinen Symbol und Text, um zur Buchung eines Fitnesskurses anzuregen.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |Die Classic Card verfügt über ein übersichtliches Layout mit einem fettgedruckten Titel, einem Text mit der Nachricht und einem optionalen Bild, das links neben dem Titel und dem Text platziert werden kann. Für die Classic Card verwenden Sie am besten ein quadratisches Bild oder Symbol. |
+|[Bild mit Bildunterschrift]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![Eine hervorgehobene Content-Card mit dem Bild eines Gewichthebers und einem Text, der zur Buchung eines Trainingskurses animiert.]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | Die hervorgehobene Image-Card präsentiert Ihren Inhalt mit Text und einem aufmerksamkeitsstarken Bild. |
+|[Nur Bild]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Eine Bild-only-Content-Card, die ausschließlich Text enthält.]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | Die Karte mit reinem Bildinhalt bietet Platz für Bilder, GIFs und andere kreative Nicht-Text-Inhalte. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Schritt 3: Content-Card zusammenstellen
@@ -92,7 +92,7 @@ Fügen Sie ein Bild zu Ihrer Inhaltskarte hinzu, indem Sie **Bild hinzufügen** 
 
 #### Oben pinnen
 
-Braze zeigt eine gepinnte Karte ganz oben im Feed eines Nutzers an, und der Nutzer:innen kann sie nicht ausblenden. Wenn der Feed eines Nutzers:innen mehrere gepinnte Karten enthält, ordnet Braze sie chronologisch an. Nachdem Sie eine Karte verschickt haben, können Sie die gepinnte Option nicht mehr rückwirkend aktualisieren. Wenn Sie diese Option nach dem Senden einer Kampagne ändern, wirkt sich dies nur auf zukünftige Sendungen aus.
+Braze zeigt oben im Feed einer Nutzer:in eine gepinnte Karte an, die die Nutzer:in nicht ausblenden kann. Wenn der Feed eines Nutzers:in mehrere gepinnte Karten enthält, ordnet Braze diese in chronologischer Reihenfolge an. Nachdem Sie eine Karte gesendet haben, können Sie das Update für die Option „Angeheftet“ nicht mehr nachträglich durchführen. Wenn Sie diese Option nach dem Versand einer Kampagne ändern, wirkt sich dies nur auf zukünftige Sendungen aus.
 
 ![Side-by-Side-Vorschau der Content-Cards in Braze für Mobilgeräte und Web mit aktivierter Option „Diese Karte oben im Feed pinnen“.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
@@ -141,7 +141,7 @@ Für Content-Card-Kampagnen mit geplanter Zustellung können Sie festlegen, wann
 
 #### Zielgruppe auswählen
 
-Als nächstes können Sie [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) durch Segmente oder Filter zusammenstellen, um Ihre Zielgruppe einzugrenzen. Sie erhalten automatisch eine Vorschau darauf, wie diese ungefähre Segmentpopulation aussieht. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer berechnet wird, bevor die Nachricht gesendet wird.
+Anschließend [können Sie]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) Ihre Zielgruppe durch die Auswahl von Segmenten oder Filtern eingrenzen. Sie erhalten automatisch eine Vorschau, wie die ungefähre Segmentpopulation aussieht. Bitte beachten Sie, dass die genaue Segmentzugehörigkeit immer vor dem Versand der Nachricht berechnet wird.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -170,89 +170,89 @@ Sehen Sie sich als nächstes die [Content Card-Berichterstattung]({{site.baseurl
 
 ## Was Sie wissen sollten
 
-### Nutzlast- und Futtermitteleinschränkungen
+### Nutzlast- und Zufuhrbeschränkungen
 
-Um die Performance zu unterstützen, gelten für Content Cards zwei wichtige Einschränkungen: eine Begrenzung der Nutzdatengröße für jede Karte und eine maximale Anzahl von Karten, die in einem Feed erscheinen können.
+Um die Performance zu unterstützen, gelten für Content-Cards zwei wesentliche Einschränkungen: eine Begrenzung der Nutzlastgröße für jede Karte und eine maximale Anzahl von Karten, die in einem Feed angezeigt werden können.
 
 #### Größenbeschränkungen für Content-Cards
 
-Die gesamte Datenmenge für eine einzelne Content-Card darf 2 KB nicht überschreiten **, nachdem** eine Liquid-Personalisierung durchgeführt wurde. Dies beinhaltet:
+Die gesamte Datenlast für eine einzelne Content-Card darf **nach** der Darstellung einer Liquid-Personalisierung 2 KB nicht überschreiten. Dies beinhaltet:
 
 * Titel
 * Nachricht
 * Bild-URL (die Länge des URL-Strings selbst, nicht die Größe der Bilddatei)
 * Link-Text
-* Link-URLs für alle angegebenen Plattformen (separate URLs für iOS, Android und Internet zählen alle mit)
+* Link-URLs für alle angegebenen Plattformen (separate URLs für iOS, Android und Internet werden alle zur Gesamtzahl hinzugerechnet)
 * Schlüssel-Wert-Paare (sowohl die Schlüsselnamen als auch ihre Werte)
 
-Wenn Sie Liquid verwenden, um lange Strings (z.B. von angepassten Attributen) einzugeben, können Sie das Limit überschreiten. 
+Die Verwendung von Liquid zum Einfügen langer Strings von Text (z. B. aus benutzerdefinierten Attributen) kann dazu führen, dass Sie das Limit überschreiten. 
 
-Der Kampagnen-Composer zeigt eine Warnung an, wenn Ihr statischer Inhalt diese Grenze überschreitet. (Wir prognostizieren nicht die Größe für dynamischen Content mit Liquid.) **Wenn die Nachricht größer als 2 KB ist, wird sie beim Senden abgebrochen.** Sie können diese Abbrüche im Protokoll der Nachrichtenaktivitäten mit dem Grund `Content card maximum size exceeded` sehen.
+Der Kampagnenkomponist zeigt eine Warnung an, wenn Ihr statischer Inhalt das Limit überschreitet. (Wir geben keine Größenangaben für dynamischen Content unter Verwendung von Liquid.) **Wenn die Größe der Nachrichten 2 KB überschreitet, wird der Versand abgebrochen.** Sie können diese Abbruchvorgänge im Protokoll der Nachrichtenaktivität mit der entsprechenden Begründung einsehen`Content card maximum size exceeded`.
 
 {% alert important %}
-Während der Testsendungen können Content-Cards, die größer als 2 KB sind, noch zugestellt und korrekt angezeigt werden.
+Während Testversendungen können Content-Cards, die größer als 2 KB sind, weiterhin ordnungsgemäß zugestellt und angezeigt werden.
 {% endalert %}
 
-Hier finden Sie einige bewährte Verfahren zur Verwaltung der Größe von Content-Cards:
+Im Folgenden finden Sie einige bewährte Verfahren für die Verwaltung der Nutzlastgröße von Content-Cards:
 
-* Verwenden Sie URL-Verkürzer für lange Links. Bei URLs, insbesondere bei solchen mit umfangreichen Tracking-Parametern, kann es zu Problemen mit der Größenbegrenzung kommen. Die Verwendung eines Dienstes zur URL-Verkürzung kann die Anzahl der Zeichen drastisch reduzieren und Platz in der Nutzlast schaffen.
-* Kürzen Sie dynamische Inhalte mit Liquid. Bei der Personalisierung von Karten mit dynamischem Text aus Nutzer:innen-Attributen oder API-Aufrufen kann die Länge des Inhalts unvorhersehbar sein. Verwenden Sie proaktiv Liquid-Filter wie `truncate`, um die Länge von dynamischem Text zu begrenzen.
-* Seien Sie effizient mit Multiplattform-URLs. Das 2 KB-Limit umfasst die URLs für alle von Ihnen definierten Plattformen. Wenn Sie lange, eindeutige URLs für jede Plattform verwenden, kann sich die Größe der Nutzlast vervielfachen. Verwenden Sie nach Möglichkeit einen einzigen Link, der auf allen Plattformen funktioniert, oder verwenden Sie bei Bedarf URL-Verkürzungen.
-* Ziehen Sie Banner für reichhaltigere Inhalte in Betracht. Für Anwendungsfälle, die ständig große Mengen an Inhalten erfordern, sind Content-Cards möglicherweise nicht der richtige Kanal. Banner haben nicht die gleiche Beschränkung auf 2 KB Nutzlast und eignen sich besser für die Einbettung umfangreicher Inhalte direkt in eine App oder Website.
+* Verwenden Sie URL-Kürzer für lange Links. URLs, insbesondere solche mit umfangreichen Tracking-Parametern, können Probleme mit Größenbeschränkungen verursachen. Die Verwendung eines URL-Kürzungsdienstes kann die Zeichenanzahl erheblich reduzieren und Speicherplatz in der Nutzlast freigeben.
+* Kürzen Sie dynamischen Content mit Liquid. Bei der Personalisierung von Karten mit dynamischem Text aus Benutzerattributen oder API-Aufrufen kann die Länge des Inhalts unvorhersehbar sein. Bitte setzen Sie Liquid-Filter wie  proaktiv ein, um die Länge`truncate` von dynamischem Text zu begrenzen.
+* Seien Sie effizient mit plattformübergreifenden URLs. Die 2-KB-Beschränkung umfasst die URLs für alle von Ihnen definierten Plattformen. Die Verwendung langer, eindeutiger URLs für jede Plattform kann die Größe der Nutzlast vervielfachen. Bitte verwenden Sie nach Möglichkeit einen einzigen Link, der auf allen Plattformen funktioniert, oder nutzen Sie bei Bedarf URL-Kürzer.
+* Bitte erwägen Sie die Verwendung von Bannern für reichhaltigere Inhalte. Für Anwendungsfälle, die durchgehend große Mengen an Inhalten erfordern, sind Content-Cards möglicherweise nicht der geeignete Kanal. Banner unterliegen nicht derselben Beschränkung auf 2 KB Nutzlast und eignen sich besser für die Einbettung umfangreicherer Inhalte direkt in ein App-Erlebnis oder eine Website.
 
 #### Anzahl der Karten im Feed
 
-Alle Nutzer:innen können bis zu 250 nicht abgelaufene Content-Cards gleichzeitig in ihrem Feed haben. Wenn dieses Limit überschritten wird, gibt Braze die ältesten Karten nicht mehr zurück, auch wenn sie ungelesen sind. Abgeworfene Karten zählen ebenfalls zu diesem Limit, d.h. eine hohe Anzahl an abgeworfenen Karten kann den Platz für ältere Karten verringern.
+Alle Nutzer:innen können bis zu 250 nicht abgelaufene Content-Cards gleichzeitig in ihrem Feed haben. Wenn dieses Limit überschritten wird, gibt Braze die ältesten Karten nicht mehr zurück, auch wenn sie ungelesen sind. Abgelehnte Karten werden ebenfalls auf dieses Limit angerechnet, was bedeutet, dass eine hohe Anzahl abgelehnter Karten den verfügbaren Platz für ältere Karten verringern kann.
 
-Um Probleme mit dem Kartenlimit zu vermeiden, raten wir zu den folgenden bewährten Verfahren:
+Um Probleme mit dem Kartenlimit zu vermeiden, empfehlen wir die folgenden bewährten Verfahren:
 
-- **Verwenden Sie kürzere Verfallsdaten:** Für Kampagnen, die zeitkritisch sind (wie z.B. ein Wochenendverkauf), legen Sie ein bestimmtes Ablaufdatum fest. Auf diese Weise werden die Karten automatisch aus dem Feed entfernt und zählen nicht mehr für das Limit, wenn sie nicht mehr relevant sind.
-- **Nutzen Sie die aktionsbasierte Entfernung:** Richten Sie Entfernungsereignisse für transaktions- oder zielbasierte Karten ein. Zum Beispiel sollte eine Karte, die einen Nutzer:innen auffordert, sein Profil zu vervollständigen, entfernt werden, sobald ein `profile_completed` Ereignis protokolliert wird.
-- **Prüfen Sie langlaufende Kampagnen:** Überprüfen Sie wiederkehrende oder laufende Kampagnen, um sicherzustellen, dass sie Ihren Nutzer:innen kein schlechtes Erlebnis bereiten, indem sie den Feed im Laufe der Zeit mit zu vielen Karten füllen.
+- **Verwenden Sie kürzere Verfallsdaten:** Für zeitkritische Kampagnen (z. B. Wochenendverkäufe) legen Sie bitte ein bestimmtes Ablaufdatum fest. Auf diese Weise werden Karten automatisch aus dem Feed entfernt und zählen nicht mehr zum Limit, sobald sie nicht mehr relevant sind.
+- **Nutzen Sie die aktionsbasierte Entfernung:** Richten Sie Entfernungsereignisse für transaktions- oder zielbasierte Karten ein. Beispielsweise sollte eine Karte, die eine Nutzer:in dazu auffordert, ihr Profil zu vervollständigen, entfernt werden, sobald ein`profile_completed`Ereignis protokolliert wurde.
+- **Überprüfen Sie lang laufende Kampagnen:** Überprüfen Sie wiederkehrende oder laufende Kampagnen, um sicherzustellen, dass sie Ihren Nutzer:innen keine schlechte Erfahrung bieten, indem sie den Feed im Laufe der Zeit mit zu vielen Karten überladen.
 
-### Verständnis der Wiederzulassung für Content-Cards
+### Wiederzulassungsvoraussetzungen für Content-Cards
 
-Die Wiederholbarkeit bestimmt, ob und wann ein Nutzer:innen eine Nachricht aus derselben Kampagne mehr als einmal erhalten kann. Bei Content-Cards ist es wichtig zu verstehen, wie dies funktioniert, um wiederkehrende Kampagnen zu verwalten und sicherzustellen, dass die Nutzer:innen keine doppelten oder veralteten Nachrichten erhalten.
+Die Wiederzulässigkeit bestimmt, ob und wann ein Nutzer:in eine Nachricht aus derselben Kampagne mehr als einmal erhalten kann. Bei Content-Cards ist es von entscheidender Bedeutung, die Funktionsweise zu verstehen, um wiederkehrende Kampagnen zu verwalten und sicherzustellen, dass Nutzer:innen keine doppelten oder veralteten Nachrichten erhalten.
 
 {% alert tip %}
-Möchten Sie, dass Ihre Inhalte länger als 30 Tage verfügbar sind? Versuchen Sie es mit [Bannern]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
+Möchten Sie, dass Ihre Inhalte länger als 30 Tage verfügbar sind? Bitte versuchen Sie es [mit Bannern]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 {% endalert %}
 
-#### Wie die Wiedererlangung der Förderfähigkeit berechnet wird
+#### Wie die Wiederwählbarkeit berechnet wird
 
-Wenn Sie die Wiederzulassung aktivieren, beginnt der Countdown für den "Wiedereintritt" eines Nutzers in eine Kampagne, nachdem er die Nachricht erhalten hat. Der genaue Zeitpunkt, zu dem dieser Countdown beginnt, hängt von Ihren Einstellungen für die Kartenerstellung ab:
+Wenn Sie die Wiederberechtigung aktivieren, beginnt der Countdown für die „Wiederaufnahme“ eines Nutzers in eine Kampagne, nachdem ihm die Nachricht gesendet wurde. Der genaue Zeitpunkt, zu dem dieser Countdown beginnt, hängt von Ihren Einstellungen bei der Kartenerstellung ab:
 
-* Content-Cards, die [bei der ersten Impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) verwendet werden, verwenden die Impressionszeit zur Berechnung der Wiederzulässigkeit.
-* Content-Cards, die beim Start der Kampagne oder beim Eingang in den Canvas-Schritt erstellt werden, verwenden den spätesten Sende- oder Impressionszeitpunkt.
+* Content-Cards, die [den ersten Eindruck]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) verwenden, nutzen die Impression-Zeit, um die erneute Berechtigung zu berechnen.
+* Content-Cards, die beim Start einer Kampagne oder beim Aufrufen eines Canvas-Schritts erstellt werden, verwenden den spätesten Versand- oder Zeitpunkt für Impressionen.
 
-#### Die 30-Tage-Frist und die Wiederzulassung
+#### Die 30-tägige Gültigkeitsdauer und erneute Berechtigung
 
-Eine häufige Quelle der Verwirrung ist das Zusammenspiel zwischen der Wiederzulassung von Kampagnen und dem automatischen 30-tägigen Verfall aller Content-Cards. 
+Eine häufige Quelle für Verwirrung ist die Wechselwirkung zwischen der erneuten Wahlberechtigung für Kampagnen und dem automatischen Ablauf aller Content-Cards nach 30 Tagen. 
 
-Alle Content-Cards werden 30 Tage nach ihrer Versendung oder Entfernung automatisch aus den Systemen von Braze gelöscht. Wenn Sie eine lang laufende, wiederkehrende Kampagne haben, bei der die Wiederholbarkeit **ausgeschaltet** ist, kann ein Nutzer:innen die gleiche Karte nach 30 Tagen erneut erhalten. Wenn die ursprüngliche Karte gelöscht wird, kann das System nicht mehr feststellen, dass der Nutzer:innen die Kampagne erhalten hat, so dass er bei seiner nächsten Sitzung wieder teilnahmeberechtigt ist. 
+Alle Content-Cards werden 30 Tage nach dem Versand oder Entfernen automatisch aus den Systemen von Braze gelöscht. Wenn Sie eine langfristig laufende, wiederkehrende Kampagne mit deaktivierter Wiederberechtigung haben, kann es vorkommen, dass eine Nutzer:in nach 30 Tagen erneut dieselbe Karte erhält. Wenn die ursprüngliche Karte gelöscht wird, erkennt das System keinen Nachweis mehr darüber, dass diese Nutzer:in die Kampagne erhalten hat, sodass sie bei ihrer nächsten Sitzung erneut teilnahmeberechtigt ist. 
 
-Damit Nutzer:innen nur einmal eine Nachricht aus einer bestimmten Kampagne erhalten, fügen Sie Ihrer Kampagne oder Ihrem Canvas-Schritt einen Zielgruppen-Filter für Nutzer:innen hinzu, die noch keine Nachricht aus dieser Kampagne erhalten haben. Dieser Filter ist der zuverlässigste Weg, um doppelte Sendungen von lang laufenden Kampagnen zu verhindern.
+Damit Nutzer:innen eine Nachricht aus einer bestimmten Kampagne nur einmal erhalten, fügen Sie Ihrer Kampagne oder Ihrem Canvas-Schritt einen Zielgruppen-Filter für Nutzer:innen hinzu, die noch keine Nachricht aus dieser Kampagne erhalten haben. Dieser Filter stellt die zuverlässigste Methode dar, um doppelte Sendungen bei lang andauernden Kampagnen zu verhindern.
 
-### Content-Cards live verwalten
+### Verwaltung von Live-Content-Cards
 
 Nachdem die Content Cards versendet wurden, warten sie in einem "Posteingang" darauf, dem Benutzer zugestellt zu werden (ähnlich wie bei E-Mails). Nachdem Inhalte in die Content-Card gezogen wurden (zum Zeitpunkt der Anzeige), können sie während ihrer Lebensdauer nicht mehr geändert werden. Das gilt auch, wenn Sie eine API über Connected-Content aufrufen und sich die Daten des Endpunkts ändern. Diese Daten werden nicht mehr aktualisiert. Sie können nur den Versand an neue Nutzer unterbinden und sie aus den Feeds der Nutzer entfernen. Wenn Sie eine Kampagne ändern, werden nur zukünftige Karten, die verschickt werden, aktualisiert.
 
 #### Aktualisieren der gestarteten Karten
 
-Um eine Karte für Nutzer:innen zu ändern, die sie bereits erhalten haben, müssen Sie eine der folgenden Methoden verwenden:
+Um eine Karte für Nutzer:innen zu ändern, die diese bereits erhalten haben, müssen Sie eine der folgenden Methoden anwenden:
 
-##### Option 1: Duplizieren Sie die Kampagne (empfohlen für sofortige Änderungen)
+##### Option 1: Duplizieren Sie die Kampagne (empfohlen für sofortige Änderungen).
 
 {% alert tip %}
-Wir empfehlen diese Option für Nachrichten, in denen Sie die neuesten Inhalte in der Karte zeigen, Änderungen sofort angezeigt werden müssen oder wenn die Wiederzulassung ausgeschaltet ist.
+Wir empfehlen diese Option für Nachrichten, bei denen Sie die neuesten Inhalte in der Content-Card anzeigen, Änderungen sofort angezeigt werden müssen oder wenn die erneute Berechtigung deaktiviert ist.
 {% endalert %}
 
-Die erste Möglichkeit besteht darin, die Kampagne zu archivieren und eine neue, duplizierte Kampagne zu starten:
+Der erste Ansatz besteht darin, die Kampagne zu archivieren und eine neue, duplizierte Kampagne zu starten:
 
-1. Beenden Sie die ursprüngliche Kampagne und wählen Sie bei entsprechender Aufforderung `Remove card after the next sync`.
-2. Duplizieren Sie die Kampagne, nehmen Sie Ihre Änderungen vor und starten Sie die neue Version.
+1. Beenden Sie die ursprüngliche Kampagne und wählen Sie bei der entsprechenden Aufforderung die Option aus`Remove card after the next sync`.
+2. Bitte duplizieren Sie die Kampagne, nehmen Sie Ihre Änderungen vor und starten Sie die neue Version.
 
-Wenn Sie die Kampagne duplizieren, müssen Sie die Zielgruppe für die neue Version definieren. Verwenden Sie Segmentierungsfilter, um zu kontrollieren, wer die aktualisierte Karte erhält:
+Wenn Sie die Kampagne duplizieren, müssen Sie die Zielgruppe für die neue Version definieren. Verwenden Sie Filter für die Segmentierung, um zu steuern, wer die aktualisierte Karte erhält:
 * Wenn Benutzer nie wieder für eine Content Card in Frage kommen sollen, können Sie nach Benutzern filtern, die die vorherige Version der Content Card nicht erhalten haben, indem Sie den Filter `Received Message from Campaign` auf die Bedingung `Has Not` setzen.
 * Wenn Benutzer, die die vorherige Karte erhalten haben, in X Tagen wieder berechtigt sein sollten, können Sie den Filter für `Last Received Message from specific campaign` auf vor mehr als X Tagen **ODER** `Received Message from Campaign` mit der Bedingung `Has Not` setzen.
 
@@ -263,15 +263,15 @@ Wenn Sie die Kampagne duplizieren, müssen Sie die Zielgruppe für die neue Vers
 
 Nehmen wir an, Sie haben eine Kampagne so eingestellt, dass sie durch den Beginn einer Sitzung getriggert wird, und die Wiederzulässigkeit ist auf 30 Tage eingestellt. Ein Benutzer hat die Kampagne vor zwei Tagen erhalten, und Sie möchten die Kopie ändern. Zunächst würden Sie die Kampagne archivieren und die Karten aus dem Feed entfernen. Zweitens würden Sie die Kampagne duplizieren und mit der neuen Kopie neu starten. Wenn der oder die Nutzer:in eine weitere Sitzung hat, erhält er oder sie sofort die neue Karte.
 
-##### Option 2: Stoppen Sie die gleiche Kampagne und starten Sie sie neu
+##### Option 2: Die gleiche Kampagne beenden und erneut starten
 
 {% alert tip %}
 Wir empfehlen diese Option für eindeutige Nachrichten in einer Mitteilungszentrale oder im Posteingang (z.B. Aktionen), wenn es wichtig ist, dass die Analytics einheitlich sind, oder wenn die Aktualität der Nachricht keine Rolle spielt (z.B. wenn bestehende Empfänger:innen auf das Berechtigungsfenster warten können, bevor sie die aktualisierten Karten sehen).
 {% endalert %}
 
-Mit diesem Ansatz bleiben alle Ihre Analytics in einer einzigen Kampagne vereint. Neu berechtigte Nutzer:innen erhalten die neue Karte, aber für bestehende Empfänger:innen verzögert sich das Update, bis sie wieder berechtigt sind:
+Dieser Ansatz vereint alle Ihre Analytics in einer einzigen Kampagne. Neu berechtigte Nutzer:innen erhalten die neue Karte, jedoch verzögert sich das Update für bestehende Empfänger:innen, bis sie erneut berechtigt sind:
 
-1. Stoppen Sie Ihre Kampagne und wählen Sie bei der **nächsten Synchronisierung Karte entfernen** aus.
+1. Beenden Sie Ihre Kampagne und wählen Sie nach Aufforderung **die Option „Karte nach der nächsten Synchronisierung entfernen**“.
 2. Bearbeiten Sie Ihre Kampagne nach Bedarf.
 3. Starten Sie Ihre Kampagne neu.
 
@@ -282,42 +282,42 @@ Mit diesem Ansatz bleiben alle Ihre Analytics in einer einzigen Kampagne vereint
 
 Nehmen wir an, Sie haben eine Kampagne, die durch den Beginn einer Sitzung ausgelöst wird und deren Wiederzulässigkeit auf 30 Tage eingestellt ist. Ein Benutzer hat die Kampagne vor zwei Tagen erhalten, und Sie möchten die Kopie ändern. Beenden Sie zunächst die Kampagne und entfernen Sie die Karte aus dem Feed. Zweitens: Veröffentlichen Sie die Kampagne mit dem neuen Text erneut. Wenn der oder die Nutzer:in eine weitere Sitzung hat, erhält er oder sie die neue Karte in 28 Tagen.
 
-#### Entfernen und Verfall von Karten
+#### Karten entfernen und ablaufen lassen
 
-##### Manuelle Kartenentnahme
+##### Manuelles Entfernen der Karte
 
-Sie können die Karten für die Feeds aller Nutzer:innen jederzeit manuell entfernen, indem Sie die Kampagne stoppen.
+Sie können Karten für die Feeds aller Nutzer:innen jederzeit manuell entfernen, indem Sie die Kampagne beenden.
 
-1. Öffnen Sie die Content-Card-Kampagne und wählen Sie Kampagne stoppen.
-2. Wenn Sie dazu aufgefordert werden, wählen Sie **Karte nach der nächsten Synchronisierung entfernen**. Die Karte wird bei der nächsten Aktualisierung des Feeds entfernt.
+1. Öffnen Sie die Content-Card-Kampagne und wählen Sie „Kampagne beenden“.
+2. Wenn Sie dazu aufgefordert werden, wählen Sie **„Karte nach der nächsten Synchronisierung auswählen**“. Die Karte wird bei der nächsten Aktualisierung des Feeds entfernt.
 
-##### Automatisierte Kartenentnahme {#action-based-card-removal}
+##### Automatisiertes Entfernen von Karten {#action-based-card-removal}
 
-Sie können eine Karte automatisch entfernen, wenn ein Nutzer:innen eine bestimmte Aktion durchführt, z.B. einen Kauf abschließt oder ein Feature aktiviert.
+Sie können eine Karte automatisch entfernen, wenn ein Nutzer:in eine bestimmte Aktion ausführt, beispielsweise einen Kauf abschließt oder ein Feature aktiviert.
 
-Geben Sie in Ihrer Kampagne oder Ihrem Canvas-Schritt ein Entfernungsereignis an. Wenn ein Nutzer:innen dieses Ereignis ausführt, wird die Karte bei einer anschließenden Aktualisierung, nachdem Braze das Ereignis verarbeitet hat, aus seinem Feed entfernt. 
+Bitte geben Sie in Ihrer Kampagne oder Ihrem Canvas-Schritt ein Entfernungsereignis an. Wenn ein Nutzer:in dieses Ereignis ausführt, wird die Karte nach der Verarbeitung des Ereignisses durch Braze bei der nächsten Aktualisierung aus seinem Feed entfernt. 
 
 {% alert note %}
-Diese Entfernung erfolgt nicht sofort. Es gibt eine Verarbeitungsverzögerung, d.h. es kann mehrere Minuten und mehr als einen Feed-Refresh dauern, bis die Karte verschwindet.
+Diese Entfernung erfolgt nicht sofort. Es kommt zu einer Bearbeitungsverzögerung, daher kann es einige Minuten dauern und mehr als eine Aktualisierung des Feeds erforderlich sein, bis die Karte nicht mehr angezeigt wird.
 {% endalert %}
 
 {% alert tip %}
 Sie können mehrere benutzerdefinierte Ereignisse und Käufe angeben, die eine Karte aus dem Feed eines Benutzers entfernen sollen. Wenn der Benutzer **eine** dieser Aktionen durchführt, werden alle vorhandenen Karten, die von den Karten der Kampagne gesendet wurden, entfernt. Alle zukünftigen Karten, die in Frage kommen, werden weiterhin gemäß dem Zeitplan der Nachricht verschickt.
 {% endalert %}
 
-![Panel "Bedingungen für die Entfernung von Content-Cards" mit der Option "Ereignis für die Entfernung von Content-Cards".]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+![Panel „Bedingungen für das Entfernen von Content-Cards“ mit der Option „Ereignis zum Entfernen von Content-Cards“.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
 ##### Ablauf der Karte
 
-Content-Cards bleiben bis zu 30 Tage nach ihrer Versendung verfügbar. Nach 30 Tagen werden sie von Braze aus den Nutzer:innen-Feeds entfernt und aus den Systemen von Braze gelöscht.
+Content-Cards bleiben ab dem Zeitpunkt ihrer Versendung bis zu 30 Tage lang verfügbar. Nach Ablauf dieser Frist entfernt Braze sie aus den Feeds der Nutzer:innen und löscht sie aus den Systemen von Braze.
 
 #### Karten länger als 30 Tage gültig machen
 
 {% alert tip %}
-Für Anwendungsfälle, bei denen Nachrichten länger als die 30-Tage-Grenze für Content-Cards bestehen bleiben müssen, sollten Sie die Verwendung von Bannern in Betracht ziehen. Die Banner sind auf Persistenz ausgelegt und haben kein Pflichtfeld, so dass sie so lange sichtbar bleiben können, wie sie benötigt werden.
+Für Anwendungsfälle, in denen Nachrichten länger als die 30-tägige Begrenzung für Content-Cards bestehen bleiben müssen, empfehlen wir die Verwendung von Bannern. Banner sind auf Dauerhaftigkeit ausgelegt und haben kein obligatorisches Ablaufdatum, sodass sie so lange sichtbar bleiben können, wie sie benötigt werden.
 {% endalert %}
 
-Wenn Sie möchten, dass eine Karte so aussieht, als wäre sie immer verfügbar (i.e., hält länger als die maximale Dauer von 30 Tagen), können Sie eine wiederkehrende Kampagne erstellen, die die Karte effektiv alle 30 Tage ersetzt:
+Wenn Sie möchten, dass eine Karte so erscheint, als wäre sie immer verfügbar (i.ed. h. länger als maximal 30 Tage gültig), können Sie eine wiederkehrende Kampagne erstellen, die die Karte alle 30 Tage effektiv ersetzt:
 
 1. Legen Sie die Dauer der Content-Card auf 30 Tage fest.
 2. Leggen Sie die erneute Qualifizierung der Kampagne auf 30 Tage fest.
