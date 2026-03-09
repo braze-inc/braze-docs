@@ -1,7 +1,7 @@
 {% if include.alert == "Liquid email display name and reply-to address" %}
 
 {% alert tip %}
-**발신자 표시 이름 + 주소** 및 **회신 주소** 필드에 [Liquid를]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) 사용하여 커스텀 속성에 따라 동적으로 템플릿을 만들 수 있습니다. 이를 통해 단일 이메일 캠페인 또는 캔버스 단계를 사용하여 여러 브랜드, 지역 또는 부서에서 보낼 수 있습니다.
+[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)는 **From Display Name + Address** 및 **Reply-To Address** 필드에서 커스텀 속성을 기반으로 동적으로 템플릿화하는 데 사용할 수 있습니다. 이를 통해 단일 이메일 캠페인 또는 캔버스 단계에서 다양한 브랜드, 지역 또는 부서에서 보낼 수 있습니다.
 {% endalert %}
 
 {% endif %}
@@ -9,7 +9,7 @@
 {% if include.alert == "Reference properties from triggering event" %}
 
 {% alert tip %}
-[오디언스 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) 또는 [결정 분할]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) 단계에서 트리거 이벤트의 속성정보를 참조하기 위해 컨텍스트 단계가 필요하지 않습니다. **컨텍스트 변수** 필터를 사용하여 필터 그룹에서 직접 속성을 참조할 수 있습니다. 올바른 데이터 유형을 선택했는지 확인하세요.
+트리거 이벤트의 속성을 [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) 또는 [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) 단계에서 참조하기 위해 Context 단계를 필요로 하지 않습니다. 필터 그룹에서 **Context Variable** 필터를 사용하여 속성을 직접 참조할 수 있습니다. 올바른 데이터 유형을 선택해야 합니다.
 {% endalert %}
 
 {% endif %}
@@ -17,7 +17,7 @@
 {% if include.alert == 'catalog data images' %}
 
 {% alert tip %}
-카탈로그 트리거 항목에 대한 이미지를 가져오려면 카탈로그에 `image_url` 이라는 필드가 포함되어 있어야 합니다. 그런 다음 {%raw%}``{{ items[0].image_url }}``{%endraw%} 을 사용하여 참조할 수 있습니다.
+카탈로그 트리거 항목에 대한 이미지를 가져오려면 카탈로그에 `image_url`라는 필드가 포함되어 있어야 합니다. 그런 다음 {%raw%}``{{ items[0].image_url }}``{%endraw%}를 사용하여 참조할 수 있습니다.
 {% endalert %}
 
 {% endif %}
@@ -106,16 +106,16 @@ CSV 및 API 내보내기 문제 해결에 대한 도움은 [내보내기 문제 
   메시지 길이: <span id="sms_length" style="padding-left: 5px;">0자</span>.<br />
   SMS 세그먼트 수: <span id="sms_segments" style="padding-left: 5px;">0</span> 세그먼트. <br />
   메시지 출력: <span id="sms_output" style="padding-left: 5px;"></span><br />
-  <input type="checkbox" id="encoding_section" name="encoding_section"> <label for="encoding_section" style="padding-left: 5px; margin-bottom: 0px;">문자 인코딩 표시</label>
+  <input type="checkbox" id="encoding_section" name="encoding_section"> <label for="encoding_section" style="padding-left: 5px; margin-bottom: 0px;">Display Character Encoding</label>
   <div class="segment_data_hide" id="character_encoding_container">
     <div class="encoding_legend">
       <div class="encoding_legend_item"><span class="encoding_gsm">GSM</span> GSM-7 문자</div>
       <div class="encoding_legend_item"><span class="encoding_ucs2">UCS</span> UCS-2 문자</div>
     </div>
-    <span id="character_encoding_label">문자 인코딩: </span><span id="character_encoding" style="padding-left: 5px;"></span><br />
+    <span id="character_encoding_label">Character Encoding: </span><span id="character_encoding" style="padding-left: 5px;"></span><br />
   </div>
   <br />
-  <input type="checkbox" id="segment_section" name="segment_section"> <label for="segment_section" style="padding-left: 5px; margin-bottom: 0px;">디스플레이 세그먼트 세분화</label>
+  <input type="checkbox" id="segment_section" name="segment_section"> <label for="segment_section" style="padding-left: 5px; margin-bottom: 0px;">Display Segments</label>
   <span class="segment_data_hide" id="sms_segments_data"></span>
 </form>
 <script type="text/javascript">
@@ -381,42 +381,42 @@ auto: function (s) { return segmenter[smsutil.pickencoding(s)](s); },
   const t = (type === "auto") ? smsutil.pickencoding(s) : type;
 
   if (t === "GSM") {
-    반환 s.length \+ (s.match(/^|€|{|}|[|]|~||/g) || []).length;
+    return s.length \+ (s.match(/^|€|{|}|[|]|~||/g) || []).length;
   } else {
     return s.length;
   }
 }
 
-함수 escapeHtml(text) {
-  return text.replace(/[&<>"'/]/g, 함수 (c) {
+function escapeHtml(text) {
+  return text.replace(/[&<>"'/]/g, function (c) {
     switch (c) {
-      case '&': 반환 '&';
-      case '<': 반환 '<';
-case '>': 반환 '>';
-      case '"': 반환 '"';
-      케이스 "'": 반환 ''';
-      케이스 '/': '/'를 반환합니다;
-      기본값: 반환 C;
+      case '&': return '&';
+      case '<': return '<';
+case '>': return '>';
+      case '"': return '"';
+      case "'": return ''';
+      case '/': return '/';
+      기본값: return c;
       }
     });
   }
 
-함수 getCharacterEncoding(char, type) {
+function getCharacterEncoding(char, type) {
   if (type === "ucs2") return "ucs2";
-  if (type === "GSM") 반환 "GSM";
+  if (type === "gsm") return "gsm";
 
-  // 자동 감지의 경우, 문자가 GSM-7 설정에 있는지 확인합니다.
+  // 자동 감지를 위해, 문자가 GSM-7 세트에 있는지 확인합니다
   const codePoint = char.charCodeAt(0);
-  반환 (유니코드ToGsm의 코드포인트) ? "gsm" : "ucs2";
+  return (codePoint in unicodeToGsm) ? "gsm" : "ucs2";
 }
 
-함수 displayCharacterEncoding(text, type) {
-  const characters = smsutil.unicodeCharacters(텍스트);
-  반환 characters.map((문자, 인덱스) => {
+function displayCharacterEncoding(text, type) {
+  const characters = smsutil.unicodeCharacters(text);
+  return characters.map((char, index) => {
     const encoding = getCharacterEncoding(char, type);
-    const displayChar = char === " " ? " " : escapeHtml(char);
+    const displayChar = char === " " ? " " : escapeHtml(char);
     const titleChar = char === " " ? "space" : char;
-    const encodingClass = encoding === "gsm" ? "encoding_gsm": "encoding_ucs2";
+    const encodingClass = encoding === "gsm" ? "encoding_gsm" : "encoding_ucs2";
     const encodingLabel = encoding === "gsm" ? "GSM" : "UCS";
     return `<span id="character_encoding_data_${index}" class="${encodingClass}" title="${escapeHtml(titleChar)} - ${encoding.toUpperCase()}">${encodingLabel}</span>`;
   }).join("");
@@ -425,9 +425,9 @@ case '>': 반환 '>';
 함수 updateSMSSplit(){
     var sms_text = $('#sms_message_split').val();
     var sms_type = $('#sms_split input[name=sms_type]:checked').val();
-    변수 유니코드 입력 = smsutil.unicodeCharacters(sms_text);
-    var encodedChars = 인코더[sms_type](sms_text);
-    var smsSegments = 세그미터[sms_type](unicodeinput);
+    var unicodeinput = smsutil.unicodeCharacters(sms_text);
+    var encodedChars = encoder[sms_type](sms_text);
+    var smsSegments = segmenter[sms_type](unicodeinput);
     $('#sms_length').html(countLength(sms_type,sms_text));
     $('#sms_segments').html(smsSegments.length);
 
@@ -450,13 +450,13 @@ case '>': 반환 '>';
     $('#sms_output').html(messageOutput.join(""));
     $('#sms_segments_data').html(segmentsHtml);
 }
-// 3방향 하이라이트 기능으로 향상된 호버링 기능
-// 마우스 엔터/마우스 리브를 사용하여 핸들러 누적을 피하기
+// 향상된 호버 기능과 삼중 강조
+// 핸들러 누적을 피하기 위해 mouseenter/mouseleave 사용
 $("#sms_segments_data").on("mouseenter", "[id^='sms_segments_data_']", function(e){
-  const 세그먼트 인덱스 = e.target.id.split("sms_segments_data_")[1];
+  const segmentIndex = e.target.id.split("sms_segments_data_")[1];
   const messageOutputElement = `#message_output_data_${segmentIndex}`;
   const charIndex = $(messageOutputElement).attr('data-char-index');
-  const encodingElement = charIndex !== 정의되지 않음 ? `#character_encoding_data_${charIndex}`: null;
+  const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}` : null;
 
   let elementsToHighlight = `${messageOutputElement}, #${e.target.id}`;
   if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
@@ -467,10 +467,10 @@ $("#sms_segments_data").on("mouseenter", "[id^='sms_segments_data_']", function(
 });
 
 $("#sms_output").on("mouseenter", "[id^='message_output_data_']", function(e){
-  const 세그먼트 인덱스 = e.target.id.split("message_output_data_")[1];
+  const segmentIndex = e.target.id.split("message_output_data_")[1];
   const segmentElement = `#sms_segments_data_${segmentIndex}`;
   const charIndex = $(e.target).attr('data-char-index');
-  const encodingElement = charIndex !== 정의되지 않음 ? `#character_encoding_data_${charIndex}`: null;
+  const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}` : null;
 
   let elementsToHighlight = `${segmentElement}, #${e.target.id}`;
   if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
@@ -486,7 +486,7 @@ $("#character_encoding").on("mouseenter", "[id^='character_encoding_data_']", fu
   const messageOutputId = messageOutputElement.attr('ID');
 
   if(messageOutputId) {
-    const 세그먼트 인덱스 = messageOutputId.split("message_output_data_")[1];
+    const segmentIndex = messageOutputId.split("message_output_data_")[1];
     const segmentElement = `#sms_segments_data_${segmentIndex}`;
 
     const elementsToHighlight = `#${e.target.id}, #${messageOutputId}, ${segmentElement}`;
@@ -519,7 +519,7 @@ $('#sms_splitinput[name=sms_type]').change(function(e){
     $('#auto_encoding').html("");
     updateSMSSplit();
 });
-})(); // IIFE 종료
+})(); // End IIFE
 </script>
 
 {% endalert %}
