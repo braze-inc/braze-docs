@@ -1,7 +1,7 @@
 ---
 nav_title: "POST: Canvase duplizieren"
 article_title: "POST: Canvase duplizieren"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 5
 layout: api_page
 page_type: reference
@@ -10,15 +10,13 @@ description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Duplicate Canvas
 
 {% api %}
 # Canvase über die API duplizieren
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /canvas/duplicate
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um Canvase zu duplizieren. Dieser API Endpunkt ist vergleichbar mit der [Duplizierung von Canvase im Braze-Dashboard][1].
 
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Voraussetzungen
 
