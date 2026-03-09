@@ -1,11 +1,11 @@
-## Utilisation des blocs de l'éditeur d'e-mail
+## Utilisation des blocs éditeurs d'e-mails
 
-Les blocs éditeurs sont situés sous la section **Contenu** des messages e-mail. Pour utiliser un bloc éditeur, glissez un bloc éditeur à l'intérieur d'une colonne dans l'éditeur par glisser-déposer. Il s’ajuste automatiquement à la largeur de la colonne. Chaque bloc éditeur possède ses propres paramètres, tels que le contrôle granulaire sur la marge intérieure.
+Les blocs éditeurs se trouvent dans la section **Contenu** des messages d'e-mail. Pour utiliser un bloc éditeur, glissez un bloc éditeur à l'intérieur d'une colonne dans l'éditeur par glisser-déposer. Il s’ajuste automatiquement à la largeur de la colonne. Chaque bloc éditeur possède ses propres paramètres, tels que le contrôle granulaire sur la marge intérieure.
 
-Pour plus d'informations sur l'utilisation et la personnalisation de ces blocs éditeurs dans votre e-mail, consultez la rubrique [Autres personnalisations.]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#other-customizations)
+Pour plus d'informations sur la manière d'utiliser et de personnaliser ces blocs éditeurs dans votre e-mail, veuillez consulter la section [Autres personnalisations]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#other-customizations).
 
 {% alert tip %}
-Vous pouvez également ajouter des [attributs personnalisés]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) à n'importe quelle URL dans les blocs éditeurs `Image`, `Button`, ou `Text`.
+Vous pouvez également ajouter [des attributs personnalisés]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) à n'importe quelle URL dans les blocs `Image`éditeurs`Text` , `Button`, ou .
 {% endalert %}
 
 ## Types
@@ -20,11 +20,11 @@ Le tableau suivant décrit comment les utilisateurs peuvent exploiter chaque typ
 |Bouton| Ajoute un bouton standard. Les propriétés de ce bloc permettent de modifier et de configurer facilement les liens. | 
 |Ligne de séparation| Insère une ligne continue, en pointillés ou en tirets pour faciliter l’espacement.|
 |Espaceur| Ajoute de l’espace ou une marge intérieure entre les autres blocs. |
-|Image| Insère une image de la [bibliothèque multimédia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). | 
+|Image| Insère une image provenant de la [bibliothèque multimédia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). | 
 |Vidéo| Crée un lien vers le contenu vidéo. |
-|Réseaux sociaux| Insère l’icône de la plateforme des réseaux sociaux. Vous pouvez télécharger des images personnalisées pour les icônes spécifiques à une marque. |
+|Réseaux sociaux| Insère l’icône de la plateforme des réseaux sociaux. Vous pouvez télécharger des images personnalisées pour les icônes spécifiques à votre marque. |
 |Icônes| Insère une icône. Vous pouvez télécharger des images personnalisées. Braze utilise une marque substitutive surdimensionnée jusqu'à ce que vous téléchargiez une image. |
-|HTML| Insère l’élément HTML brut. Recommandé pour les [liquides]({{site.baseurl}}/liquid/), tels que le contenu connecté ou les déclarations conditionnelles. | 
+|HTML| Insère l’élément HTML brut. Recommandé pour [Liquid]({{site.baseurl}}/liquid/), tel que le contenu connecté ou les instructions conditionnelles. | 
 |Menu| Crée un menu flexible pour le message que vous créez. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
@@ -43,10 +43,10 @@ Reportez-vous au tableau suivant pour plus de détails sur les propriétés du b
 |Taille de police| Détermine la taille de votre texte. |
 |Couleur du texte| Modifie la couleur du titre. |
 |Couleur du lien| Modifie la couleur du lien. |
-|Alignement| Déplace le titre vers la gauche, le centre ou la droite. |
+|Alignement| Permet de déplacer le titre vers la gauche, le centre ou la droite. |
 |Hauteur de ligne| Modifie l’espace entre les lignes de texte. |
-|Espacement des lignes| Modifie l’espace entre chaque caractère. |
-|Sens du texte| La valeur par défaut est de gauche à droite, mais elle peut être modifiée pour être de [droite à gauche]({{site.baseurl}}/right_to_left_messages/). |
+|Interligne| Modifie l’espace entre chaque caractère. |
+|Sens du texte| Par défaut, de gauche à droite, mais peut être modifié pour être [de droite à gauche]({{site.baseurl}}/right_to_left_messages/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Paragraphe
@@ -60,11 +60,11 @@ Reportez-vous au tableau suivant pour plus de détails sur les propriétés du b
 |Taille de police| Détermine la taille de votre texte. |
 |Couleur du texte| Modifie la couleur du titre. |
 |Couleur du lien| Modifie la couleur du lien. |
-|Alignement| Déplace le titre vers la gauche, le centre ou la droite. |
+|Alignement| Permet de déplacer le titre vers la gauche, le centre ou la droite. |
 |Espacement des paragraphes| Modifie l’espace entre les paragraphes. |
 |Hauteur de ligne| Modifie l’espace entre les lignes de texte. |
 |Espacement des lettres| Modifie l’espace entre chaque caractère. |
-|Sens du texte| La valeur par défaut est de gauche à droite, mais elle peut être modifiée pour être de [droite à gauche]({{site.baseurl}}/right_to_left_messages/). |
+|Sens du texte| Par défaut, de gauche à droite, mais peut être modifié pour être [de droite à gauche]({{site.baseurl}}/right_to_left_messages/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Liste
@@ -81,12 +81,12 @@ Reportez-vous au tableau suivant pour plus de détails sur les propriétés du b
 |Taille de police| Détermine la taille de votre texte. |
 |Couleur du texte| Modifie la couleur du titre. |
 |Couleur du lien| Modifie la couleur du lien. |
-|Alignement| Déplace le titre vers la gauche, le centre ou la droite. |
+|Alignement| Permet de déplacer le titre vers la gauche, le centre ou la droite. |
 |Espacement des objets de liste| Modifie l’espace entre les éléments de liste. |
 |Indentation des éléments de la liste| Modifie l’indentation des éléments de liste. |
 |Hauteur de ligne| Modifie l’espace entre les lignes de texte. |
 |Espacement des lettres| Modifie l’espace entre chaque caractère. |
-|Sens du texte| La valeur par défaut est de gauche à droite, mais elle peut être modifiée pour être de [droite à gauche]({{site.baseurl}}/right_to_left_messages/). |
+|Sens du texte| Par défaut, de gauche à droite, mais peut être modifié pour être [de droite à gauche]({{site.baseurl}}/right_to_left_messages/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Ligne de séparation
@@ -112,18 +112,18 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 ### Image
 
-Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Image`. Pour les images dynamiques (images à contenu liquide ou connecté), vous devez définir une image de repli pour utiliser les paramètres de largeur automatique. Pour les [spécifications de l'image]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email), reportez-vous aux [spécifications de l'image de]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email) notre [e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Image`. Pour les images dynamiques (images avec contenu liquid ou contenu connecté), il est nécessaire de définir une image de secours afin d'utiliser les paramètres de largeur automatique. Pour les spécifications relatives aux images, veuillez vous référer à nos [spécifications relatives aux images dans les e-mails]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
 
 {% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 | Propriétés | Description |
 |---|---|
-|Largeur de l'auto| Modifie la largeur de l'image en pixels. |
+|Largeur automatique| Modifie la largeur de l'image en pixels. |
 |Alignement| Oriente l'image vers la gauche, le centre ou la droite du bloc. |
-|Image avec du Liquid| Utilisez la logique [Liquid]({{site.baseurl}}/liquid/) pour définir dynamiquement différentes images au sein d'un même bloc de contenu. |
+|Image avec du Liquid| Utilisez [Liquid]({{site.baseurl}}/liquid/) Logic pour définir de manière dynamique différentes images au sein d'un même bloc de contenu. |
 |URL| Définissez une image en utilisant l'adresse de l'endroit où elle est hébergée. |
-|Texte alternatif| Une courte description de l'image qui donne aux utilisateurs les mêmes informations que celles présentées dans l'image. Ceci est essentiel pour l'accessibilité des lecteurs d'écran ou lorsque l'image ne se charge pas. |
-|Image avec coins arrondis| Rendre l'image avec des coins arrondis. Par défaut, les images sont rendues avec des coins carrés. |
+|Texte alternatif| Une courte description de l'image qui donne aux utilisateurs les mêmes informations que celles présentées dans l'image. Ceci est essentiel pour l'accessibilité des lecteurs d'écran ou lorsque l'image ne parvient pas à se charger. |
+|Image aux coins arrondis| Rendre l'image avec des coins arrondis. Par défaut, les images sont rendues avec des coins carrés. |
 |Action| Déclenche une action lorsque l'utilisateur clique sur l'image.|
 |Options de blocage| Définit l'espacement autour du bloc d'image. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -142,9 +142,9 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 |---|---|
 |URL| L’URL de la vidéo. Notez que seuls YouTube et Vimeo sont pris en charge. |
 |Titre| Généré automatiquement à partir des métadonnées de la vidéo ou peut être personnalisé. |
-|Jouer à Icon Style| Inclut différentes options pour le bouton de lecture situé en haut d’une image vidéo. |
-|Couleur de l'icône de lecture| Option permettant de sélectionner **Clair** ou **Foncé** pour le bouton de lecture. |
-|Jouer la taille de l'icône| Choisissez la taille du pixel pour le bouton de lecture. Les valeurs préfixées vont de 50 px à 80 px (incrémentées de 5 px). |
+|Style de l'icône Lecture| Inclut différentes options pour le bouton de lecture situé en haut d’une image vidéo. |
+|Couleur de l'icône Lecture| Option permettant de sélectionner **Clair** ou **Foncé** pour le bouton de lecture. |
+|Taille de l'icône de lecture| Choisissez la taille du pixel pour le bouton de lecture. Les valeurs préfixées vont de 50 px à 80 px (incrémentées de 5 px). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
@@ -157,9 +157,9 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 | Propriétés | Description |
 |---|---|
-|Sélectionnez la collection d'icônes| Définit le style de votre collection d'icônes. |
+|Veuillez sélectionner une collection d'icônes.| Définit le style de votre collection d'icônes. |
 |Configurer la collection d'icônes| Défini l’URL pour chaque icône sociale. Inclut le basculeur " **Plus d'options"** pour modifier le titre et le texte alternatif. |
-|Alignement| Déplace l'icône sociale vers la gauche, le centre ou la droite. |
+|Alignement| Permet de déplacer l'icône sociale vers la gauche, au centre ou vers la droite. |
 |Espacement des icônes| Détermine l'espacement entre chaque icône sociale. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -174,11 +174,11 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 |Taille de police| Détermine la taille de votre texte. |
 |Couleur du texte| Modifie la couleur du titre. |
 |Couleur du lien| Modifie la couleur du lien. |
-|Alignement| Déplace l'icône vers la gauche, le centre ou la droite. |
+|Alignement| Permet de déplacer l'icône vers la gauche, au centre ou vers la droite. |
 |Espacement des lettres| Modifie l’espace entre chaque caractère. |
 |Taille de l'icône| Détermine la taille de votre icône. |
 |Espacement des icônes| Modifie l'espace de l'icône. |
-|Remplissage de l'icône| Modifie le remplissage de l'icône. |
+|Remplissage des icônes| Modifie le remplissage de l'icône. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTML
@@ -187,7 +187,7 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 | propriétés | Description |
 |---|---|
-|éditeur html| Saisir l’élément HTML brut. |
+|éditeur HTML| Saisir l’élément HTML brut. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Menu
@@ -201,18 +201,18 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 |Taille de police| La taille de votre menu. |
 |Couleur du texte| Modifie la couleur du menu. |
 |Couleur du lien| Modifie la couleur du texte du menu. |
-|Alignement| Déplace le menu vers la gauche, le centre ou la droite. |
+|Alignement| Permet de déplacer le menu vers la gauche, au centre ou vers la droite. |
 |Espacement des lettres| Modifie l’espace entre chaque caractère. |
 |Disposition| Détermine que la mise en page soit horizontale ou verticale. |
 |Séparateur| Ajouter un ou des caractères entre les options de menu. |
 |Menu mobile| Comprend des options pour modifier la taille de l’icône, la couleur et le type d’icône lorsqu’elle est affiché sur un appareil mobile. |
-|Rembourrage de l'article| Modifie le padding en utilisant soit le bouton **+** ou **-**, soit en entrant un nombre spécifique. |
-|Tous les côtés| Définit un numéro de remplissage cohérent si le remplissage des éléments est désactivé. |
+|Remplissage des articles| Modifie le padding en utilisant soit le bouton **+** ou **-**, soit en entrant un nombre spécifique. |
+|Tous les côtés| Définit un nombre de remplissage constant si le remplissage des éléments est désactivé. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Actions
 
-Vous pouvez assigner une action qui se produit lorsque l'utilisateur appuie sur un bouton, un lien ou une image dans le message. Vous pouvez également utiliser [Liquid]({{site.baseurl}}/liquid/) pour personnaliser les actions. Les tableaux suivants détaillent les actions de chaque bloc éditeur.
+Vous pouvez attribuer une action qui se produit lorsqu'un utilisateur clique sur un bouton, un lien ou une image dans le message. Vous pouvez également utiliser [Liquid]({{site.baseurl}}/liquid/) pour réaliser la personnalisation des actions. Les tableaux suivants détaillent les actions de chaque bloc éditeur.
 
 ### Bouton
 
@@ -220,11 +220,11 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 | Propriétés | Description |
 |---|---|
-|Type de lien| Détermine l'action lors du clic sur le bouton et définit le protocole approprié. |
-|URL| Dynamique en fonction du type de lien de la **page web ouverte.** |
-|Courrier à, Objet et Corps| Pour le type de lien **Envoyer un e-mail**, ceci définit l'adresse e-mail du destinataire, l'objet et le contenu qui s'afficheront dans un projet d'e-mail lorsque l'utilisateur sélectionnera le bouton.|
-|Tél| Pour le type de lien " **Appeler** " et " **Envoyer un SMS"**, ce paramètre définit le numéro de téléphone que l'utilisateur appellera ou enverra par SMS lorsqu'il sélectionnera le bouton.|
-|Message| Pour le type de lien **Envoyer un SMS**, ceci définit le contenu qui s'affichera dans un projet de message SMS lorsque l'utilisateur sélectionnera le bouton.|
-|Options des boutons| Définit diverses options pour les boutons, telles que la police, la largeur, la couleur, etc.|
-|Survol du bouton| Le style du bouton lorsqu'un utilisateur le survole à l'aide d'une souris ou d'un trackpad. Il s'agit de la couleur d'arrière-plan du bouton, de la couleur de la police et des styles de bordure.|
+|Type de lien| Détermine l'action à effectuer lorsque l'on clique sur le bouton et définit le protocole approprié. |
+|URL| Dynamique basé sur le type de lien **« Ouvrir la page Web** ».|
+|Destinataire, Objet et Corps du message| Pour le type de lien **« Envoyer un e-mail** », cela permet de définir l'adresse e-mail du destinataire, l'objet et le contenu qui seront renseignés dans un brouillon d'e-mail lorsque l'utilisateur cliquera sur le bouton.|
+|Tél.| Pour le type de lien **« Passer un appel** » et **« Envoyer un SMS** », cela permet de définir le numéro de téléphone que l'utilisateur appellera ou auquel il enverra un SMS lorsqu'il sélectionnera le bouton.|
+|Message| Pour le type de lien **« Envoyer un SMS** », cela définit le contenu qui apparaîtra dans un brouillon de message lorsque l'utilisateur sélectionnera le bouton.|
+|Options des boutons| Définit diverses options pour les boutons, telles que la police, la largeur, la couleur et autres.|
+|Bouton au survol| Le style du bouton lorsqu'un utilisateur le survole à l'aide d'une souris ou d'un trackpad. Il s'agit de la couleur d'arrière-plan du bouton, de la couleur de la police et des styles de bordure.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
