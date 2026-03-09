@@ -116,7 +116,7 @@ Stellen Sie sicher, dass Sie Braze im Haupt-Thread Ihrer Anwendung initialisiere
 Ab Dezember 2019 werden keine benutzerdefinierten Endpunkte mehr vergeben. Wenn Sie einen bereits bestehenden benutzerdefinierten Endpunkt haben, können Sie diesen weiterhin verwenden. Weitere Einzelheiten finden Sie in unserer <a href="{{site.baseurl}}/api/basics/#endpoints">Liste der verfügbaren Endpunkte</a>.
 {% endalert %}
 
-Ihre Vertretung von Braze sollte Ihnen bereits den [richtigen Endpunkt]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/)] mitgeteilt haben.
+Ihre Braze-Vertretung sollte Sie bereits über den korrekten Endpunkt]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/) informiert haben.
 
 #### Endpunktkonfiguration zur Kompilierzeit (empfohlen)
 Wenn ein bereits vorhandener benutzerdefinierter Endpunkt angegeben wird:
