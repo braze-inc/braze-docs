@@ -20,7 +20,7 @@ Entre em contato com o gerente da sua conta ou abra um [ticket de suporte]({{sit
 
 Esse detalhamento do evento mostra que tipo de informação geralmente é incluído em um evento de engajamento com mensagem. Com uma sólida compreensão de seus componentes, seus desenvolvedores e a equipe de estratégia de business intelligence podem usar os dados de eventos Currents recebidos para criar relatórios e gráficos orientados por dados e tirar proveito de outras métricas de dados valiosas.
 
-![Detalhamento de um evento de engajamento com mensagem mostrando um evento de cancelamento de inscrição de e-mail com as propriedades listadas agrupadas por propriedades específicas do usuário, propriedades de rastreamento da campanha ou do Canvas e propriedades específicas do evento]({% image_buster /assets/img/message_engagement_event.png %})
+![Análise de um evento de engajamento com mensagem mostrando um evento de cancelamento de inscrição por e-mail com as propriedades listadas agrupadas por propriedades específicas do usuário, propriedades de campanha ou de rastreamento do canva, e propriedades específicas do evento]({% image_buster /assets/img/message_engagement_event.png %})
 
 Os eventos de engajamento com mensagens são compostos por propriedades **específicas do usuário**, propriedades de **rastreamento de campanha/canva** e propriedades **específicas do evento**.
 
