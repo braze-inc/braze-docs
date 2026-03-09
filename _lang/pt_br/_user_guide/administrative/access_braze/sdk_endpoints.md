@@ -21,4 +21,4 @@ O registro em [dashboard.braze.com](https://dashboard.braze.com) o enviará auto
 Ao integrar seu SDK, use o endpoint do SDK. Ao fazer chamadas para nossa API REST, use o endpoint REST.
 {% endalert %}
 
-Para obter detalhes sobre como acessar a API, consulte nosso [artigo de visão geral da API]({{site.baseurl}}/api/basics/). 
+Para detalhes sobre como acessar a API, veja nosso [artigo de visão geral da API]({{site.baseurl}}/api/basics/). 
