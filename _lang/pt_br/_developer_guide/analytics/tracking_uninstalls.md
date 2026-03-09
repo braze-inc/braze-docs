@@ -1,14 +1,14 @@
 ---
-nav_title: Rastreamento de desinstalações
-article_title: Rastreamento de desinstalações por meio do SDK do Braze
+nav_title: Rastrear desinstalações
+article_title: Rastrear desinstalações através do SDK do Braze
 page_order: 3.5
-description: "Saiba como rastrear desinstalações por meio do SDK do Braze."
+description: "Aprenda como rastrear desinstalações através do SDK do Braze."
 
 ---
 
-# Rastreamento de desinstalações
+# Rastrear desinstalações
 
-> Saiba como configurar o rastreamento de desinstalação por meio do SDK do Braze. Para obter informações gerais, consulte [Guia do Usuário: Desinstalar o rastreamento]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
+> Aprenda como configurar o rastreamento de desinstalações através do SDK do Braze. Para informações gerais, veja [Guia do Usuário: Rastreamento de desinstalações]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
 
 {% sdktabs %}
 {% sdktab android %}
