@@ -34,7 +34,7 @@ Even if the mapping between your warehouse ID and your Braze ID is currently one
 Identity drift causes:
 
 - **Model training failures:** If the customer the model thought it was recommending to is actually a different person, the training signal is corrupted.
-- **Reporting inaccuracies:** Metrics become unmeaningful when the underlying identity mapping is unstable.
+- **Reporting inaccuracies:** Metrics become meaningless when the underlying identity mapping is unstable.
 - **Attribution errors:** Conversions get matched to the wrong recommendations.
 
 ## Why Braze External ID addresses these risks
