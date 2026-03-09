@@ -1,3 +1,3 @@
 {% alert important %}
-Ihre Nachricht wird nur an Nutzer:innen gesendet, die bereits den Bedingungen entsprechen, die Sie im Schritt **Targeting** festgelegt haben. Danach müssen sie immer noch den Trigger erfüllen, den Sie im Schritt **Zustellung planen** definieren. Stellen Sie sich die Zielgruppe wie einen Wartesaal vor - nur die Personen, die sich bereits darin befinden, können weitergehen, wenn die nächste Aktion stattfindet.
+Ihre Nachricht wird ausschließlich an Nutzer:innen gesendet, die bereits die Bedingungen erfüllen, die Sie im Schritt **„Zielgruppe“** festgelegt haben. Anschließend müssen sie noch die Bedingungen erfüllen, die Sie im Schritt **„Zeitplan für die Zustellung“** festgelegt haben. Stellen Sie sich die Zielgruppe als einen Warteraum vor – nur Personen, die sich bereits darin befinden, können voranschreiten, wenn die nächste Aktion erfolgt.
 {% endalert %}
