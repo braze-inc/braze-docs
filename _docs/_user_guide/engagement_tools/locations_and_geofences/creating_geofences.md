@@ -20,7 +20,7 @@ For a guided walkthrough, refer to the Braze Learning course [Create a Geofence]
 
 ## How it works
 
-Geofences are organized into geofence sets—a group of geofences that you can use to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences. You can create or upload an unlimited number of geofences.
+Geofences are organized into geofence sets — a group of geofences that you can use to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences. You can create or upload an unlimited number of geofences.
 
 Users who enter or exit your geofences add a new layer of user data that you can use for segmentation and re-targeting.
 
