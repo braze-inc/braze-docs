@@ -1,7 +1,7 @@
 ---
 nav_title: "PUT:キャンペーン内の翻訳を更新"
 article_title: "PUT:キャンペーン内の翻訳を更新"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 1
 
 layout: api_page
@@ -15,13 +15,11 @@ description: "この記事では、「キャンペーン内の翻訳を更新」
 /campaigns/translations
 {% endapimethod %}
 
-> キャンペーンの複数の翻訳を更新するには、このエンドポイントを使用する。翻訳機能の詳細については、[メッセージのローカライゼーションを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照のこと。
+> キャンペーンの複数の翻訳を更新するには、このエンドポイントを使用する。ローカライゼーション機能の詳細については、[メッセージ内のロケールを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照せよ。
 
 キャンペーンを開始した後に翻訳を更新したい場合は、まず[メッセージを下書きとして保存]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/)する必要があります。
 
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## 前提条件
 
@@ -37,16 +35,16 @@ description: "この記事では、「キャンペーン内の翻訳を更新」
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id` | 必須 | 文字列 | キャンペーンのID。 |
-| `message_variation_id` | 必須 | string | メッセージバリエーションの ID。 |
-| `locale_id`| 必須 | string | ロケールのID（UUID）。 |
+| `campaign_id` | 必須かどうか | 文字列 | キャンペーンのID。 |
+| `message_variation_id` | 必須かどうか | string | メッセージバリエーションの ID。 |
+| `locale_id`| 必須かどうか | string | ロケールの識別子（UUID）。 |
 | `translation_map` | 必須 | オブジェクト | 新しい翻訳を含むオブジェクト。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、GETエンドポイントのレスポンスで見つけることができる。
+すべての翻訳識別子はユニバーサル一意識別子（UUID）と見なされ、GETエンドポイントの応答で確認できる。
 {% endalert %}
 
 ## 例のリクエスト
