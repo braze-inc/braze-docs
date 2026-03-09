@@ -1,5 +1,5 @@
 ---
-nav_title: カスタムアプリストアのレビュープロンプト
+nav_title: カスタムアプリストアのレビュー依頼
 article_title: カスタム App Store レビュープロンプト
 platform: iOS
 page_order: 4
