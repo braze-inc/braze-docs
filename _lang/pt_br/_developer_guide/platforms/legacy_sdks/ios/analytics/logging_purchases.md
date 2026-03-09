@@ -1,6 +1,6 @@
 ---
-nav_title: Compras de registros
-article_title: Registro de compras para iOS
+nav_title: Registrar compras
+article_title: Registrar Compras para iOS
 platform: iOS
 page_order: 4
 description: "Este artigo de referência mostra como rastrear compras e receitas no app e atribuir propriedades de compra em seu aplicativo iOS."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Registro de compras para iOS
+# Registrar compras para iOS
 
 Registre as compras no app para poder rastrear sua receita ao longo do tempo e entre as fontes de receita e segmentar seus usuários pelo valor do tempo de vida deles.
 
@@ -55,7 +55,7 @@ Consulte a [documentação da classe iOS](http://appboy.github.io/appboy-ios-sdk
 ### Adição de quantidade
 Você pode adicionar uma quantidade às suas compras se os clientes fizerem a mesma compra várias vezes em um único checkout. Você pode fazer isso passando um `NSUInteger` para a quantidade.
 
-* Uma entrada de quantidade deve estar no intervalo de [0, 100] para que o SDK registre uma compra.
+* Uma entrada de quantidade deve estar na faixa de [0, 100] para o SDK registrar uma compra.
 * Os métodos sem uma entrada de quantidade terão um valor de quantidade padrão de 1.
 * Os métodos com uma entrada de quantidade não têm valor padrão e **devem** receber uma entrada de quantidade para que o SDK registre uma compra.
 
