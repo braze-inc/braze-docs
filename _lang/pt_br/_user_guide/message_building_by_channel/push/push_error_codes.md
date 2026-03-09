@@ -36,11 +36,11 @@ Falhas comuns podem incluir:
 
 ### Erro ao enviar push porque a carga útil era inválida
 
-Esta mensagem pode aparecer no perfil do usuário **Engajamento** guia sob **Configurações de Contato** > **Changelog de Push** quando o serviço de Notificações por Push da Apple (APNs) rejeita a solicitação de push devido a uma carga útil inválida.
+Esta mensagem pode aparecer na aba de perfil do usuário **Engajamento** sob **Configurações de Contato** > **Changelog de Push** quando o serviço de Notificações por Push da Apple (APNs) rejeita a solicitação de push devido a uma carga útil inválida.
 
-No Braze, esta mensagem do dashboard pode mapear para uma das seguintes razões de erro do APNs:
+No Braze, esta mensagem no dashboard pode mapear para uma das seguintes razões de erro do APNs:
 
-- `PayloadEmpty`: A carga útil estava faltando conteúdo obrigatório para o tipo de push que está sendo enviado.
+- `PayloadEmpty`: A carga útil estava faltando conteúdo necessário para o tipo de push que está sendo enviado.
 - `PayloadTooLarge`: A carga útil excedeu o tamanho máximo da carga útil do APNs.
 
 Causas comuns incluem:
@@ -51,7 +51,7 @@ Causas comuns incluem:
 Próximos passos:
 
 - Reduza o tamanho da carga útil cortando chaves personalizadas e encurtando valores dinâmicos grandes.
-- Se você enviar através da API, valide a carga útil JSON final (incluindo tamanho) antes de enviar.
+- Se você enviar através da API, valide a carga útil JSON final (incluindo o tamanho) antes de enviar.
 
 ### Push devolvido: BadToken
 
