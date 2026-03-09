@@ -32,6 +32,10 @@ Braze는 전 세계 여러 지역에 위치한 여러 데이터 센터를 운영
 
 {% multi_lang_include data_centers.md datacenters='ID' %}
 
+### 일본
+
+{% multi_lang_include data_centers.md datacenters='JP' %}
+
 ### United States
 
 {% multi_lang_include data_centers.md datacenters='US' %}
