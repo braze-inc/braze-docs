@@ -10,6 +10,8 @@ en:
   helpful: "HOW HELPFUL WAS THIS PAGE?"
   collapse_navigation: Collapse navigation
   expand_navigation: Expand navigation
+  expand_section: Expand section
+  collapse_section: Collapse section
   minimize_menu: Minimize menu
   expand_menu: Expand menu
   filter_navigation_topics: Filter navigation topics
@@ -27,6 +29,8 @@ fr:
   helpful: "CETTE PAGE A-T-ELLE ÉTÉ UTILE?"
   collapse_navigation: Réduire la navigation
   expand_navigation: Développer la navigation
+  expand_section: Développer la section
+  collapse_section: Réduire la section
   minimize_menu: Réduire le menu
   expand_menu: Développer le menu
   filter_navigation_topics: Filtrer les sujets de navigation
@@ -44,6 +48,8 @@ ja:
   helpful: 「このページはどの程度役に立ちましたか?」
   collapse_navigation: ナビゲーションを折りたたむ
   expand_navigation: ナビゲーションを展開する
+  expand_section: セクションを展開する
+  collapse_section: セクションを折りたたむ
   minimize_menu: メニューを最小化
   expand_menu: メニューを展開
   filter_navigation_topics: ナビゲーションのトピックをフィルター
@@ -61,6 +67,8 @@ ko:
   helpful: "이 페이지가 얼마나 도움이 되었나요?"
   collapse_navigation: 탐색 접기
   expand_navigation: 탐색 펼치기
+  expand_section: 섹션 펼치기
+  collapse_section: 섹션 접기
   minimize_menu: 메뉴 최소화
   expand_menu: 메뉴 확장
   filter_navigation_topics: 탐색 주제 필터
@@ -78,6 +86,8 @@ pt-br:
   helpful: "QUÃO ÚTIL FOI ESTA PÁGINA?"
   collapse_navigation: Recolher navegação
   expand_navigation: Expandir navegação
+  expand_section: Expandir seção
+  collapse_section: Recolher seção
   minimize_menu: Minimizar menu
   expand_menu: Expandir menu
   filter_navigation_topics: Filtrar tópicos da navegação
@@ -95,6 +105,8 @@ es:
   helpful: "¿QUÉ TAN ÚTIL FUE ESTA PÁGINA?"
   collapse_navigation: Contraer navegación
   expand_navigation: Expandir navegación
+  expand_section: Expandir sección
+  collapse_section: Contraer sección
   minimize_menu: Minimizar menú
   expand_menu: Expandir menú
   filter_navigation_topics: Filtrar temas de navegación
@@ -112,6 +124,8 @@ de:
   useful: "WIE HILFREICH WAR DIESE SEITE?"
   collapse_navigation: Navigation einklappen
   expand_navigation: Navigation erweitern
+  expand_section: Abschnitt erweitern
+  collapse_section: Abschnitt einklappen
   minimize_menu: Menü minimieren
   expand_menu: Menü erweitern
   filter_navigation_topics: Navigationsthemen filtern
