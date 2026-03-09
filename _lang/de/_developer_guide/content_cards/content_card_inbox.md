@@ -1,14 +1,14 @@
 ---
 nav_title: "Anleitung: Content-Card-Posteingänge"
-article_title: "Anleitung: Einen Posteingang mit Content-Cards erstellen"
+article_title: "Anleitung: Erstellen eines Posteingangs mit Content-Cards"
 description: ""
 page_order: 6
 layout: scrolly
 ---
 
-# Anleitung: Einen Posteingang mit Content-Cards erstellen
+# Anleitung: Erstellen eines Posteingangs mit Content-Cards
 
-> Folgen Sie dem Beispielcode in diesem Tutorial, um einen Posteingang mit Braze Content-Cards zu erstellen.
+> Bitte folgen Sie dem Beispielcode in diesem Tutorial, um einen Posteingang mit Braze Content-Cards zu erstellen.
 
 {% sdktabs %}
 {% sdktab android %}
@@ -175,34 +175,34 @@ Zeilen-MainApplication.kt=12
 Um die Fehlerbehebung während der Entwicklung zu erleichtern, sollten Sie das Debugging aktivieren.
 
 !Schritt
-Zeilen-ContentCardsInboxScreen.kt=47-69
+Zeilen ContentCardsInboxScreen.kt47–69
 
-#### 2\. Eine UI-Ansicht erstellen
+#### 2\. Erstellen Sie eine UI-Ansicht
 
-Für Jetpack Compose verwenden Sie ein [`LazyColumn`](<https://developer.android.com/develop/ui/compose/lists#lazy>) um Content-Cards in einer scrollbaren Liste anzuzeigen.
-
-!Schritt
-Zeilen-ContentCardsInboxScreen.kt=25-37
-
-#### 3\. Updates für Content-Cards abonnieren
-
-Verwenden Sie eine [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>) um den Lebenszyklus des Abos zu verwalten und eine ordnungsgemäße Bereinigung sicherzustellen, wenn das Composable die Komposition verlässt.
+Verwenden Sie für Jetpack Compose ein ,[`LazyColumn`](<https://developer.android.com/develop/ui/compose/lists#lazy>) um Content-Cards in einer scrollbaren Liste anzuzeigen.
 
 !Schritt
-Zeilen-ContentCardsInboxScreen.kt=84-95
+ZeilenContentCardsInboxScreen.kt 25–37
 
-#### 4\. Erstellen Sie ein angepasstes UI für den Posteingang
+#### 3\. Bitte abonnieren Sie die Updates für die Content-Cards.
 
-Mit den [Content-Card-Attributen](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) wie `title`, `description` und `url` können Sie Content-Cards erstellen, die Ihren spezifischen UI-Anforderungen entsprechen. In diesem Fall bauen wir einen Posteingang mit den Composables `Card` und `Column` von Jetpack Compose auf.
+Verwenden Sie ein , um den [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>)Lebenszyklus des Abos zu verwalten und sicherzustellen, dass eine ordnungsgemäße Bereinigung erfolgt, wenn das Composable die Komposition verlässt.
 
 !Schritt
-Zeilen-ContentCardsInboxScreen.kt=57,62
+Zeilen-=84-95ContentCardsInboxScreen.kt
 
-#### 5\. Tracking von Impressionen und Klicks
+#### 4\. Erstellen Sie eine angepasste UI für den Posteingang.
 
-Sie können Impressionen und Klicks protokollieren, indem Sie die [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>) und [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>) die für Content-Cards verfügbar sind.
+Mit den [Attributen](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) der Content-Card wie `title`,`description`  und`url`  können Sie Content-Cards erstellen, die Ihren spezifischen UI-Anforderungen entsprechen. In diesem Fall erstellen wir einen Posteingang mit den Composables`Column`  und  `Card`von Jetpack Compose.
 
-Impressionen sollten nur einmal protokolliert werden, wenn eine Karte vom Nutzer:innen angesehen wird. Verwenden Sie `LaunchedEffect`, um Impressionen zu protokollieren, wenn eine Karte sichtbar wird. Beachten Sie, dass Sie möglicherweise den Lebenszyklus Ihrer App sowie den Anwendungsfall berücksichtigen müssen, um sicherzustellen, dass Impressionen korrekt protokolliert werden.
+!Schritt
+Zeilen-=57ContentCardsInboxScreen.kt,62
+
+#### 5\. Verfolgen Sie Impressionen und Klicks
+
+Sie können Impressionen und Klicks mithilfe der für Content-Cards [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>)verfügbaren Methoden  [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>)und  protokollieren.
+
+Impressionen sollten nur einmal protokolliert werden, wenn eine Karte von einem Nutzer:in angesehen wird. Verwenden Sie diese `LaunchedEffect`Funktion, um Impressionen zu protokollieren, wenn eine Karte sichtbar wird. Bitte beachten Sie, dass Sie möglicherweise den Lebenszyklus Ihrer App sowie die Anwendungsfälle berücksichtigen müssen, um sicherzustellen, dass die Impressionen korrekt protokolliert werden.
 
 {% endscrolly %}
 
@@ -373,39 +373,39 @@ Um die Fehlerbehebung während der Entwicklung zu erleichtern, sollten Sie das D
 !Schritt
 lines-content_card_inbox.xml=1-24
 
-#### 2\. Eine UI-Ansicht erstellen
+#### 2\. Erstellen Sie eine UI-Ansicht
 
-In diesem Lernprogramm verwenden wir die Android [`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>) zur Anzeige von Content-Cards, aber wir empfehlen, ein UI mit Klassen und Komponenten zu erstellen, das Ihrem Anwendungsfall entspricht. Braze stellt das UI standardmäßig zur Verfügung, aber in diesem Tutorial erfahren Sie, wie Sie eine angepasste Ansicht erstellen, um das Aussehen und Verhalten anzupassen.
-
-!Schritt
-Zeilen-ContentCardInboxActivity.kt=29-35,40-42,44
-
-#### 3\. Updates für Content-Cards abonnieren
-
-Verwenden Sie [`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>) um zuzulassen, dass Ihr UI reagiert, wenn neue Content-Cards verfügbar sind. Hier werden Abonnent:innen im Rahmen der Lebenszyklus-Haken der Aktivität registriert und entfernt.
+In diesem Tutorial verwenden wir Android, [`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>)um Content-Cards anzuzeigen, jedoch empfehlen wir, eine UI mit Klassen und Komponenten zu erstellen, die Ihrem Anwendungsfall entspricht. Braze stellt standardmäßig die UI zur Verfügung, jedoch führt Sie dieses Tutorial durch die Erstellung einer benutzerdefinierten Ansicht, um das Erscheinungsbild und Verhalten anzupassen.
 
 !Schritt
-Zeilen-ContentCardInboxActivity.kt=73-84
+Zeilen ContentCardInboxActivity.kt29–35, 40–42, 44
 
-#### 4\. Erstellen Sie ein angepasstes UI für den Posteingang
+#### 3\. Bitte abonnieren Sie die Updates für die Content-Cards.
 
-Mit den [Content-Card-Attributen](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) wie `title`, `description` und `url` können Sie Content-Cards erstellen, die Ihren spezifischen UI-Anforderungen entsprechen. In diesem Fall bauen wir einen Posteingang mit dem nativen Android `RecyclerView` auf.
+Verwenden Sie[`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>)diese Funktion, damit Ihre UI reagieren kann, wenn neue Content-Cards verfügbar sind. Hier werden Abonnent:innen innerhalb der Aktivitätslebenszyklus-Hooks registriert und entfernt.
 
 !Schritt
-Zeilen-ContentCardInboxActivity.kt=90,93
+Zeilen ContentCardInboxActivity.kt73–84
 
-#### 5\. Tracking von Impressionen und Klicks
+#### 4\. Erstellen Sie eine angepasste UI für den Posteingang.
 
-Sie können Impressionen und Klicks protokollieren, indem Sie die [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>) und [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>) die für Content-Cards verfügbar sind.
+Mit den [Attributen](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) der Content-Card wie `title`,`description`  und`url`  können Sie Content-Cards erstellen, die Ihren spezifischen UI-Anforderungen entsprechen. In diesem Fall erstellen wir einen Posteingang mit der nativen `RecyclerView`Android-Funktion.
 
-Impressionen sollten nur einmal protokolliert werden, wenn eine Karte vom Nutzer:innen angesehen wird. Hier verwenden wir einen naiven Mechanismus zum Schutz vor doppelten Protokollen mit einem Flag pro Karte. Beachten Sie, dass Sie möglicherweise den Lebenszyklus Ihrer App sowie den Anwendungsfall berücksichtigen müssen, um sicherzustellen, dass Impressionen korrekt protokolliert werden.
+!Schritt
+Zeilen-=90ContentCardInboxActivity.kt,93
+
+#### 5\. Verfolgen Sie Impressionen und Klicks
+
+Sie können Impressionen und Klicks mithilfe der für Content-Cards [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>)verfügbaren Methoden  [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>)und  protokollieren.
+
+Impressionen sollten nur einmal protokolliert werden, wenn eine Karte von einem Nutzer:in angesehen wird. Hier verwenden wir einen einfachen Mechanismus, um doppelte Protokolle mit einem Flag pro Karte zu verhindern. Bitte beachten Sie, dass Sie möglicherweise den Lebenszyklus Ihrer App sowie die Anwendungsfälle berücksichtigen müssen, um sicherzustellen, dass die Impressionen korrekt protokolliert werden.
 
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Sie müssen auch [In-App-Nachrichten für Swift aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Bitte beachten Sie, dass Sie auch [In-App-Nachrichten für SWIFT aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages) müssen.
 
-## Erstellen eines Posteingangs mit Content-Cards für Swift
+## Erstellen eines Posteingangs mit Content-Cards für SWIFT
 
 {% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
 
@@ -530,7 +530,7 @@ class BrazeInboxViewController: UITableViewController {
 ```
 
 !Schritt
-Zeilen-AppDelegate.swift=15
+Zeilen-=15AppDelegate.swift
 
 #### 1\. Enablement von Fehlersuchen (optional)
 
@@ -539,34 +539,34 @@ Um die Fehlerbehebung während der Entwicklung zu erleichtern, sollten Sie das D
 !Schritt
 Zeilen-BrazeInboxView.swift=5
 
-#### 2\. Eine UI-Ansicht erstellen
+#### 2\. Erstellen Sie eine UI-Ansicht
 
-In diesem Lernprogramm verwenden wir die Swift [`UITableViewController`](https://developer.apple.com/documentation/uikit/uitableviewcontroller)aber wir empfehlen, ein UI mit Klassen und Komponenten zu erstellen, das Ihrem Anwendungsfall entspricht.
+In diesem Tutorial verwenden wir SWIFT[`UITableViewController`](https://developer.apple.com/documentation/uikit/uitableviewcontroller), empfehlen jedoch, eine UI mit Klassen und Komponenten zu erstellen, die Ihrem Anwendungsfall entspricht.
 
 !Schritt
 Zeilen-BrazeInboxView.swift=15-20
 
-#### 3\. Updates für Content-Cards abonnieren
+#### 3\. Bitte abonnieren Sie die Updates für die Content-Cards.
 
-Abonnieren Sie den Content-Cards-Listener, um die neuesten Updates zu erhalten, und rufen Sie dann `requestRefresh()` auf, um die neuesten Content-Cards für diesen Nutzer:in anzufragen.
-
-!Schritt
-Zeilen-BrazeInboxView.swift=34-35
-
-#### 4\. Erstellen Sie ein angepasstes UI für den Posteingang
-
-Die Verwendung der Content-Card [`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) wie `title`, `description` und `imageUrl` können Sie Content-Cards erstellen, die Ihren spezifischen UI-Anforderungen entsprechen. In diesem Fall bauen wir einen Posteingang mit den nativen Tabellen-APIs von Swift auf.
+Abonnieren Sie den Content-Cards-Listener, um die neuesten Updates zu erhalten, und rufen Sie anschließend`requestRefresh()` auf, um die neuesten Content-Cards für diesen Nutzer:in anzufordern.
 
 !Schritt
-Zeilen-BrazeInboxView.swift=8,43,49-56
+ZeilenBrazeInboxView.swift 34–35
 
-#### 5\. Tracking von Impressionen und Klicks
+#### 4\. Erstellen Sie eine angepasste UI für den Posteingang.
 
-Sie können Impressionen und Klicks protokollieren, indem Sie die [`logClick(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logclick(using:)/>) und [`logImpression(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logimpression(using:)/>) Methoden, die für eine Content-Card verfügbar sind.
+Mit den Content-Cards[`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard)wie `title`,`description`  und`imageUrl`  können Sie Content-Cards erstellen, die Ihren spezifischen UI-Anforderungen entsprechen. In diesem Fall erstellen wir einen Posteingang mit den nativen Tabellen-APIs von SWIFT.
 
-Außerdem können Sie [`logDismissed(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logdismissed(using:)/>) für Entlassungen verwenden.
+!Schritt
+Zeilen-=8BrazeInboxView.swift,43,49-56
 
-Impressionen sollten nur einmal protokolliert werden, wenn sie von einem Nutzer:innen angesehen werden. Hier wird ein naiver Mechanismus verwendet, der eine `Set` und `willDisplay` verwendet. Beachten Sie, dass Sie möglicherweise den UI-Lebenszyklus Ihrer App sowie den Anwendungsfall berücksichtigen müssen, um sicherzustellen, dass Impressionen korrekt protokolliert werden.
+#### 5\. Verfolgen Sie Impressionen und Klicks
+
+Sie können Impressionen und Klicks mithilfe der für eine Content-Card [`logClick(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logclick(using:)/>)verfügbaren Methoden  [`logImpression(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logimpression(using:)/>)und  protokollieren.
+
+Darüber hinaus können Sie für [`logDismissed(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logdismissed(using:)/>)Entlassungen verwenden.
+
+Impressionen sollten nur einmal protokolliert werden, wenn sie von den Nutzern:innen angesehen werden. Hier wird ein einfacher Mechanismus`willDisplay` unter Verwendung von a`Set`und b verwendet, um dies zu erreichen. Bitte beachten Sie, dass Sie möglicherweise den UI-Lebenszyklus Ihrer App sowie die Anwendungsfälle berücksichtigen müssen, um sicherzustellen, dass die Impressionen korrekt protokolliert werden.
 
 {% endscrolly %}
 {% endsdktab %}
@@ -735,43 +735,43 @@ braze.requestContentCardsRefresh();
 ```
 
 !Schritt
-Zeilen-main.js=3-4,9
+Zeilen-=3-4main.js,9
 
 #### 1\. Enablement von Fehlersuchen (optional)
 
-Um die Fehlerbehebung während der Entwicklung zu erleichtern, sollten Sie das Debugging aktivieren. Optional können Sie die Methoden des Braze Web SDK auch in der Konsole ausführen.
+Um die Fehlerbehebung während der Entwicklung zu erleichtern, sollten Sie das Debugging aktivieren. Optional können Sie auch Braze Internet SDK-Methoden in der Konsole ausführen.
 
 !Schritt
-Zeilen-index.html=1-44
+Zeilen-=1-44index.html
 
-#### 2\. Erstellen Sie die UI
+#### 2\. Entwickeln Sie die UI
 
-Erstellen Sie ein UI für die Seite des Posteingangs. Hier erstellen wir eine einfache HTML-Seite, die eine `div` mit der ID `cards-list` enthält. Dieser wird als Targeting-Container für die Darstellung von Content-Cards verwendet.
-
-!Schritt
-Zeilen-main.js=96-99,101
-
-#### 3\. Updates für Content-Cards abonnieren
-
-Abonnieren Sie den Content-Cards-Listener, um die neuesten Updates zu erhalten, und rufen Sie dann [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) auf, um die neuesten Content-Cards für diesen Nutzer:innen anzufordern. Alternativ können Sie den Abonnent:in auch vor `openSession()` aufrufen, um eine automatische Aktualisierung bei Sitzungsbeginn zu erhalten. 
+Bitte erstellen Sie eine UI für die Seite des Posteingangs. Hier erstellen wir eine einfache HTML-Seite, die ein Element`div`mit der ID enthält`cards-list`. Dies wird als Zielcontainer für die Darstellung von Content-Cards verwendet.
 
 !Schritt
-Zeilen-main.js=64,67,70-74
+Zeilen main.js96–99, 101
 
-#### 4\. Erstellen Sie die Elemente für den Posteingang
+#### 3\. Bitte abonnieren Sie die Updates für die Content-Cards.
 
-Mit den [Content-Card-Attributen](<https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html>) wie `title`, `description` und `url` können Sie Content-Cards anzeigen, die Ihren spezifischen UI-Anforderungen entsprechen.
+Abonnieren Sie den Content-Cards-Listener, um die neuesten Updates zu erhalten, und rufen Sie anschließend[`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) auf, um die neuesten Content-Cards für diese Nutzer:in anzufordern. Alternativ können Sie den Abonnenten:in vor Beginn der Sitzung kontaktieren, um `openSession()`eine automatische Aktualisierung zu veranlassen. 
 
 !Schritt
-Zeilen-main.js=22-25,28-43,84,91
+Zeilenmain.js 64, 67, 70–74
 
-#### 5\. Tracking von Impressionen und Klicks
+#### 4\. Erstellen Sie die Elemente des Posteingangs
 
-Sie können Impressionen und Klicks protokollieren, indem Sie die [`logContentCardImpressions`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions>) und [`logContentCardClick`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick>) die für Content-Cards verfügbar sind.
+Durch die Verwendung der [Attribute](<https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html>) der Content-Cards, wie z. B.`title` `description`,  und ,`url` können Sie Content-Cards entsprechend Ihren spezifischen UI-Anforderungen anzeigen.
 
-Außerdem können Sie [`logCardDismissal`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcarddismissal>) für Entlassungen verwenden.
+!Schritt
+Zeilen main.js22–25, 28–43, 84, 91
 
-Impressionen sollten nur einmal protokolliert werden, wenn sie von einem Nutzer:innen angesehen werden. Hier verhindert ein `IntersectionObserver` plus ein `Set` mit dem Schlüssel `card.id` doppelte Protokolle. Beachten Sie, dass Sie möglicherweise den UI-Lebenszyklus Ihrer App sowie den Anwendungsfall berücksichtigen müssen, um sicherzustellen, dass Impressionen korrekt protokolliert werden.
+#### 5\. Verfolgen Sie Impressionen und Klicks
+
+Sie können Impressionen und Klicks mithilfe der für Content-Cards [`logContentCardImpressions`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions>)verfügbaren Methoden  [`logContentCardClick`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick>)und  protokollieren.
+
+Darüber hinaus können Sie für [`logCardDismissal`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcarddismissal>)Entlassungen verwenden.
+
+Impressionen sollten nur einmal protokolliert werden, wenn sie von den Nutzern:innen angesehen werden. Hier verhindert ein`IntersectionObserver`Schlüssel`Set``card.id`mit dem Schlüssel  doppelte Protokolle. Bitte beachten Sie, dass Sie möglicherweise den UI-Lebenszyklus Ihrer App sowie die Anwendungsfälle berücksichtigen müssen, um sicherzustellen, dass die Impressionen korrekt protokolliert werden.
 
 {% endscrolly %}
 {% endsdktab %}
