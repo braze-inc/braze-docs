@@ -40,7 +40,7 @@ Les autres avantages de l’utilisation d’un `external_id` sont les suivants 
 
 ### Considérations relatives aux ID externes
 
-{% include alerts/warning_alerts.md alert='User profile external_id' %} 
+{% multi_lang_include alerts/warning_alerts.md alert='User profile external_id' %} 
 
 #### Risque lié à l'utilisation d'un e-mail ou d'un e-mail haché comme ID externe
 
@@ -74,7 +74,7 @@ Chaque alias fonctionne comme une paire clé-valeur composée de deux parties : 
 
 ### Mise à jour des alias utilisateurs
 
-Un alias peut être mis à jour avec un nouveau nom pour un libellé donné après qu'il a été défini, soit en utilisant nos [endpoints de données utilisateur]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint), soit en transmettant un nouveau nom par l'intermédiaire du SDK. L’alias utilisateur sera alors visible lors de l’exportation des données de cet utilisateur.
+Un alias peut être mis à jour avec un nouveau nom pour un libellé d'alias donné après sa configuration, soit en utilisant nos [endpoints de données utilisateur,]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) soit en transmettant un nouveau nom via le SDK. L’alias utilisateur sera alors visible lors de l’exportation des données de cet utilisateur.
 
 ![Deux profils utilisateurs différents pour des utilisateurs distincts avec le même libellé d'alias utilisateur mais des noms d'alias différents.]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
 
@@ -111,5 +111,5 @@ La désinstallation et la réinstallation d'une application génèrent une nouve
 Tous les identifiants utilisateur peuvent être utilisés pour trouver et identifier les utilisateurs dans votre tableau de bord pour les tests. Pour trouver votre utilisateur dans le tableau de bord de Braze, reportez-vous à la section [Ajout d'utilisateurs test]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users).
 
 {% alert important %}
-Braze interdira ou bloquera les utilisateurs ayant plus de 5 000 000 de sessions ("utilisateurs fictifs") et n'ingérera plus leurs événements SDK, car ces utilisateurs sont généralement le résultat d'une mauvaise intégration. Si vous constatez que cela est arrivé à un utilisateur légitime, contactez votre gestionnaire de compte Braze.
+Braze interdira ou bloquera les utilisateurs ayant plus de 5 000 000 de sessions ("utilisateurs fictifs") et n'ingérera plus leurs événements SDK, car ces utilisateurs sont généralement le résultat d'une mauvaise intégration. Si vous constatez que cela est arrivé à un utilisateur légitime, veuillez contacter votre gestionnaire de compte Braze.
 {% endalert %}
