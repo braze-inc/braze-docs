@@ -13,7 +13,7 @@ description: "Cet article de référence explique comment utiliser les catalogue
 
 ### Étape 1 : Ajouter un type de personnalisation {#step-one-personalization}
 
-Dans le composeur de messages de votre choix, sélectionnez l'icône <i class="fas fa-plus-circle"></i> plus pour ouvrir la fenêtre modale/boîte de dialogue **Ajouter une personnalisation** et sélectionnez **Articles de catalogue** pour le **type de personnalisation**. Sélectionnez ensuite le nom de votre catalogue. En reprenant l'exemple précédent, nous allons sélectionner le catalogue « Jeux ».
+Dans l'éditeur de message de votre choix, veuillez sélectionner l'icône<i class="fas fa-plus-circle"></i>« + » pour ouvrir la fenêtre modale **Ajouter une personnalisation**, puis sélectionnez **Éléments du catalogue** comme **type** **de personnalisation**. Veuillez ensuite sélectionner le nom de votre catalogue. En reprenant l'exemple précédent, nous allons sélectionner le catalogue « Jeux ».
 
 ![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
@@ -56,7 +56,7 @@ Vous recevrez un e-mail vous permettant de télécharger le fichier CSV après a
 
 ### Plusieurs articles
 
-Vous n'êtes pas limité à un seul élément dans un message. Utilisez la fenêtre modale/boîte de dialogue de **personnalisation** pour ajouter jusqu'à trois éléments de catalogue à la fois. Pour en ajouter d'autres, sélectionnez à nouveau **Ajouter une personnalisation** dans le compositeur et sélectionnez les éléments du catalogue et les informations supplémentaires à afficher.
+Vous n'êtes pas limité à un seul élément par message. Veuillez utiliser la boîte de dialogue modale **Ajouter une personnalisation** pour ajouter jusqu'à trois articles du catalogue à la fois. Pour ajouter d'autres éléments, veuillez sélectionner à nouveau **Ajouter une personnalisation** dans l'éditeur, puis sélectionnez les articles supplémentaires du catalogue et les informations à afficher.
 
 Dans cet exemple, nous ajoutons l’`id` de trois jeux, Tales, Teslagrad et Acaratus, pour les **produits du catalogue** et nous sélectionnons `title` pour les **informations à afficher**.
 
@@ -66,7 +66,7 @@ Nous pouvons personnaliser encore notre message en ajoutant du texte autour de n
 
 {% raw %}
 ```liquid
-Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
+Get the ultimate trio {% catalog_items Games 1234 1235 1236 %}
 {{ items[0].title }}, {{ items[1].title }}, and {{ items[2].title }} today!
 ```
 {% endraw %}
@@ -90,15 +90,15 @@ Pour ce faire, vous utiliserez une déclaration Liquid `if`, comme dans cet exem
 {% catalog_selection_items item-list selections %} 
 {% if items[0].venue_name.size > 10 %}
 Message if the venue name's size is more than 10 characters. 
-{% elsif items[0].venue_name.size < 10 %}
-Message if the venue name's size is less than 10 characters. 
+{% elsif items[0].venue_name.size <= 10 %}
+Message if the venue name's size is 10 characters or fewer. 
 {% else %} 
-{% abort_message(no venue_name) %} 
+{% abort_message('no venue_name') %} 
 {% endif %}
 ```
 {% endraw %}
 
-Dans cet exemple, des messages différents s'afficheront si l'attribut personnalisé `venue_name` comporte plus de 10 caractères ou moins de 10 caractères. Si `venue_name` est `blank`, rien ne s'affichera. 
+Dans cet exemple, différents messages s'affichent en fonction du nombre de caractères dans le champ de l'article `venue_name`du catalogue. Si`venue_name`le champ est vide, le message est interrompu.
 
 Notez que vous devez déclarer la liste du catalogue et, le cas échéant, la sélection avant d'utiliser les instructions `if`. Dans l'exemple, `item-list` est la liste du catalogue et `selections` est le nom de la sélection.
 
@@ -159,7 +159,7 @@ Get {{ items[0].title }} now for {{ items[0].price }}!
 {% endraw %}
 
 Il s’affichera comme suit :
-> Obtenez Tales maintenant pour seulement 7.49 !
+> Obtenez Tales dès maintenant pour seulement 7,49 $.
 
 Avec le modèle, vous pouvez transmettre un article du catalogue différent pour chaque utilisateur en fonction de ses attributs personnalisés individuels, des propriétés d’événement ou de tout autre champ de plateau.
 
@@ -173,9 +173,9 @@ Vous pouvez également composer manuellement des catalogues avec la logique Liqu
 
 #### Modélisation de produits de catalogue comprenant des étiquettes Liquid
 
-Comme pour le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), vous devez utiliser l'indicateur `:rerender` dans une étiquette Liquid pour rendre le contenu Liquid d'un article de catalogue. Notez que l'indicateur `:rerender` ne s'applique qu'à un seul niveau, ce qui signifie qu'il ne s'appliquera pas aux appels d'étiquettes Liquid imbriqués.
+Tout comme pour [le contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), il est nécessaire d'utiliser le`:rerender`drapeau dans une étiquette Liquid pour afficher le contenu Liquid d'un élément du catalogue. Notez que l'indicateur `:rerender` ne s'applique qu'à un seul niveau, ce qui signifie qu'il ne s'appliquera pas aux appels d'étiquettes Liquid imbriqués.
 
-Si un article de catalogue contient des champs de profil d'utilisateur (dans une étiquette Liquid de personnalisation), ces valeurs doivent être définies dans Liquid plus tôt dans le message et avant la mise en page pour que le rendu de Liquid soit correct. Si l’indicateur `:rerender` n'est pas fourni, le contenu brut Liquid sera restitué.
+Si un élément du catalogue contient des champs de profil utilisateur (dans une étiquette de personnalisation Liquid), ces valeurs doivent être définies dans Liquid plus tôt dans le message et avant la création du modèle afin de garantir le bon rendu de Liquid. Si l’indicateur `:rerender` n'est pas fourni, le contenu brut Liquid sera restitué.
 
 Par exemple, si un catalogue nommé « Messages » possède un produit avec ce Liquid :
 
@@ -185,7 +185,7 @@ Pour rendre le contenu Liquid suivant :
 
 {% raw %}
 ```liquid
-Hi ${first_name}
+Hi ${first_name},
 
 {% catalog_items Messages greet_msg :rerender %}
 {{ items[0].Welcome_Message }}
