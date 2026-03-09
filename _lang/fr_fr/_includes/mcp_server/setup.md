@@ -1,6 +1,6 @@
-# Configuration du serveur MCP de Braze
+# Configuration du serveur Braze MCP
 
-> Apprenez à configurer le serveur MCP de Braze, afin de pouvoir interagir avec vos données Braze en langage naturel à l'aide d'outils tels que Claude et Cursor. Pour plus d'informations générales, voir [Serveur MCP de Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> Découvrez comment configurer le serveur Braze MCP afin de pouvoir interagir avec vos données Braze en utilisant un langage naturel grâce à des outils tels que Claude et Cursor. Pour obtenir des informations générales, veuillez consulter [le serveur Braze MCP]{% if include.section == "user" %}.{{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/){% endif %}
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -10,20 +10,20 @@ Avant de commencer, vous avez besoin des éléments suivants :
 
 | Prérequis | Description |
 |--------------|-------------|
-| Clé API de Braze | Une clé API de Braze avec les autorisations requises. Vous créerez une nouvelle clé lors de la [configuration de votre serveur Braze MCP](#create-api-key). |
-| Client MCP | [Claude](https://claude.ai/), [Cursor](https://cursor.com/) et [Google Gemini CLI](https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli) sont officiellement pris en charge. Vous devez disposer d'un compte pour l'un de ces clients afin d'utiliser le serveur MCP de Braze. |
-| Terminal | Une application de terminal vous permettant d'exécuter des commandes et d'installer des outils. Utilisez votre application de terminal préférée ou celle qui est préinstallée sur votre ordinateur. |
+| Clé API Braze | Une clé API Braze avec les autorisations requises. Vous créerez une nouvelle clé lors de la[ configuration de votre serveur Braze MCP](#create-api-key). |
+| client MCP | [Claude](https://claude.ai/), [Cursor](https://cursor.com/) et [Google Gemini CLI](https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli) sont officiellement pris en charge. Il est nécessaire de disposer d'un compte auprès de l'un de ces clients pour pouvoir utiliser le serveur Braze MCP. |
+| Terminal | Une application terminale vous permettant d'exécuter des commandes et d'installer des outils. Veuillez utiliser votre application de terminal préférée ou celle qui est préinstallée sur votre ordinateur. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Configuration du serveur MCP de Braze
+## Configuration du serveur Braze MCP
 
-### Étape 1 : Installer `uv`
+### Étape 1 : Veuillez installer `uv`
 
-Tout d'abord, installez `uv`- un [outil en ligne de commande d'Astral](https://docs.astral.sh/uv/getting-started/installation/) pour la gestion des dépendances et des paquets Python.
+Tout d'abord, veuillez installer `uv`—un [outil en ligne de commande développé par Astral](https://docs.astral.sh/uv/getting-started/installation/) pour la gestion des dépendances et la manipulation des paquets Python.
 
 {% tabs local %}
 {% tab MacOS and Linux %}
-Ouvrez votre application de terminal, collez la commande suivante, puis appuyez sur <kbd>Entrée.</kbd>
+Veuillez ouvrir votre application de terminal, copier-coller la commande suivante, puis appuyer sur <kbd>Entrée</kbd>.
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -44,7 +44,7 @@ everything's installed!
 {% endtab %}
 
 {% tab Windows %}
- Ouvrez Windows PowerShell, collez la commande suivante, puis appuyez sur <kbd>Entrée.</kbd>
+ Veuillez ouvrir Windows PowerShell, insérer la commande suivante, puis appuyer sur <kbd>Entrée</kbd>.
 
 ```powershell
 irm https://astral.sh/uv/install.ps1 | iex
@@ -67,7 +67,7 @@ everything's installed!
 
 ### Étape 2 : Créer une clé API {#create-api-key}
 
-Le serveur MCP de Braze prend en charge 38 endpoints en lecture seule qui ne renvoient pas les données des profils utilisateurs de Braze. Allez dans **Paramètres** > **API et identifiants** > **Clés API** et créez une nouvelle clé avec certaines ou toutes les autorisations suivantes.
+Le serveur MCP Braze prend en charge 38 endpoints en lecture seule qui ne renvoient pas les données des profils utilisateurs Braze. Veuillez vous rendre dans **Paramètres** > **API et identifiants** > **Clés API** et créer une nouvelle clé avec certaines ou toutes les autorisations suivantes.
 
 {% details List of read-only, non-PII permissions %}
 #### Campagnes
@@ -213,31 +213,31 @@ Le serveur MCP de Braze prend en charge 38 endpoints en lecture seule qui ne ren
 {% enddetails %}
 
 {% alert warning %}
-Ne réutilisez pas une clé API existante - créez-en une spécifiquement pour votre client MCP. En outre, n'attribuez que des autorisations en lecture seule, non PII, car les agents peuvent essayer d'écrire ou de supprimer des données dans Braze.
+Veuillez ne pas réutiliser une clé API existante ; veuillez en créer une spécialement pour votre client MCP. De plus, veuillez n'attribuer que des autorisations en lecture seule, non liées aux informations personnelles identifiables, car les agents pourraient tenter d'écrire ou de supprimer des données dans Braze.
 {% endalert %}
 
 ### Étape 3 : Obtenez votre identifiant et votre endpoint
 
-Lorsque vous configurez votre client MCP, vous avez besoin de l'identifiant de votre clé API et de l'endpoint REST de votre espace de travail. Pour obtenir ces détails, retournez à la page **Clés API** dans le tableau de bord. Gardez cette page ouverte pour pouvoir y faire référence à l'[étape suivante.](#configure-client)
+Lorsque vous configurez votre client MCP, vous aurez besoin de l'identifiant de votre clé API et de l'endpoint REST de votre espace de travail. Pour obtenir ces informations, veuillez retourner à la page **Clés API** dans le tableau de bord. Veuillez garder cette page ouverte afin de pouvoir vous y référer lors de [l'étape suivante](#configure-client).
 
-![Les "clés API" dans Braze montrent une clé API nouvellement créée et l'endpoint REST de l'utilisateur.]({% image_buster /assets/img/mcp_server/get_indentifer_and_endpoint.png %}){: style="max-width:85%;"}
+![Les « clés API » dans Braze affichent une clé API nouvellement créée et l'endpoint REST de l'utilisateur.]({% image_buster /assets/img/mcp_server/get_indentifer_and_endpoint.png %}){: style="max-width:85%;"}
 
-### Étape 4 : Configurez votre client MCP {#configure-client}
+### Étape 4 : Veuillez configurer votre client MCP. {#configure-client}
 
-Configurez votre client MCP à l'aide du fichier de configuration fourni.
+Veuillez configurer votre client MCP à l'aide du fichier de configuration fourni.
 
 {% tabs %}
 {% tab Claude %}
-Configurez votre serveur MCP en utilisant le répertoire de connecteurs de [Claude Desktop](https://claude.ai/download). 
+Veuillez configurer votre serveur MCP en utilisant le répertoire du connecteur [Claude Desktop](https://claude.ai/download). 
 
-1. Dans Claude Desktop, allez dans **Paramètres** > **Connecteurs** > **Parcourir les connecteurs** > **Desktop Extensions** > **Braze MCP Server** > **Installer**.
-2. Saisissez votre clé API et l'URL de base.
-3. Enregistrez la configuration et redémarrez Claude Desktop.
+1. Dans Claude Desktop, veuillez vous rendre dans **Paramètres** > **Connecteurs** > **Parcourir les connecteurs** > **Extensions de bureau** > **Serveur Braze MCP** > **Installer**.
+2. Veuillez saisir votre clé API et votre URL de base.
+3. Veuillez enregistrer la configuration et redémarrer Claude Desktop.
 
 {% endtab %}
 
 {% tab Cursor %}
-Dans [Cursor](https://cursor.com/), allez dans **Paramètres** > **Outils et intégrations** > **Outils MCP** > **Ajouter un MCP personnalisé**, puis ajoutez l'extrait de code suivant :
+Dans [Cursor](https://cursor.com/), veuillez vous rendre dans **Paramètres** > **Outils et intégrations** > **Outils MCP** > **Ajouter un MCP personnalisé**, puis ajoutez l'extrait de code suivant :
 
 ```json
 {
@@ -254,7 +254,7 @@ Dans [Cursor](https://cursor.com/), allez dans **Paramètres** > **Outils et int
 }
 ```
 
-Remplacez `key-identifier` et `rest-endpoint` par les valeurs correspondantes de la page des **clés API** dans Braze. Votre configuration devrait ressembler à ce qui suit :
+Veuillez remplacer`key-identifier`  et`rest-endpoint`  par les valeurs correspondantes figurant sur la page **Clés API** dans Braze. Votre configuration devrait être similaire à celle-ci :
 
 ```json
 {
@@ -271,19 +271,19 @@ Remplacez `key-identifier` et `rest-endpoint` par les valeurs correspondantes de
 }
 ```
 
-Lorsque vous avez terminé, enregistrez la configuration et redémarrez Cursor.
+Une fois que vous avez terminé, veuillez enregistrer la configuration et redémarrer Cursor.
 {% endtab %}
 {% tab Gemini CLI %}
-Gemini CLI lit les paramètres de l'utilisateur à partir de `~/.gemini/settings.json`. S'il n'existe pas, vous pouvez le créer en exécutant la commande suivante dans votre terminal :
+Gemini CLI lit les paramètres utilisateur à partir de `~/.gemini/settings.json`. Si ce fichier n'existe pas, vous pouvez le créer en exécutant la commande suivante dans votre terminal :
 
 ```powershell
 mkdir -p ~/.gemini
 nano ~/.gemini/settings.json
 ```
 
-Ensuite, remplacez `yourname` par la chaîne de caractères qui précède `@BZXXXXXXXX` dans l'invite de votre terminal. Remplacez ensuite `key-identifier` et `rest-endpoint` par les valeurs correspondantes de la page des **clés API** dans Braze. 
+Ensuite, veuillez remplacer`yourname`par la chaîne de caractères exacte précédant`@BZXXXXXXXX`dans votre invite de commande. Veuillez ensuite remplacer`key-identifier`et`rest-endpoint`par les valeurs correspondantes figurant sur la page **Clés API** dans Braze. 
 
-Votre configuration devrait ressembler à ce qui suit :
+Votre configuration devrait être similaire à celle-ci :
 
 ```json
 {
@@ -300,7 +300,7 @@ Votre configuration devrait ressembler à ce qui suit :
 }
 ```
 
-Lorsque vous avez terminé, enregistrez la configuration et redémarrez Gemini CLI. Ensuite, dans Gemini, exécutez les commandes suivantes pour vérifier que le serveur MCP de Braze est répertorié et que les outils et le schéma sont disponibles :
+Une fois que vous avez terminé, veuillez enregistrer la configuration et redémarrer Gemini CLI. Ensuite, dans Gemini, exécutez les commandes suivantes pour vérifier que le serveur Braze MCP est répertorié et que les outils et le schéma sont disponibles :
 
 ```powershell
 gemini
@@ -309,26 +309,26 @@ gemini
 /mcp schema
 ```
 
-Vous devriez voir le serveur `braze` répertorié avec les outils et le schéma disponibles.
+Vous devriez voir le`braze`serveur répertorié avec les outils et le schéma disponibles à l'utilisation.
 
 {% endtab %}
 {% endtabs %}
 
-### Étape 5 : Envoyer une invite de test
+### Étape 5 : Veuillez envoyer une invite de test.
 
-Après avoir configuré le serveur MCP de Braze, essayez d'envoyer une invite de test à votre client MCP. Pour d'autres exemples et bonnes pratiques, consultez [Utilisation du serveur MCP de Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+Une fois le serveur Braze MCP configuré, veuillez essayer d'envoyer une invite de test à votre client MCP. Pour d'autres exemples et bonnes pratiques, veuillez consulter [Utilisation du serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}){{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}
-![La question "Quelles sont les fonctions de Braze dont je dispose ?" a été posée et a reçu une réponse de la part de Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
+![« Quelles sont les fonctions Braze à ma disposition ? » : question posée et réponse fournie dans Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-![La question "Quelles sont les fonctions de Braze disponibles ?" est posée et traitée dans le curseur.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+![« Quelles sont les fonctions Braze disponibles ? » : question posée et réponse fournie dans Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
 {% endtab %}
 
 {% tab Gemini CLI %}
-![Quelles sont les fonctions de Braze dont je dispose ?" est une question qui trouve sa réponse dans l'interface de programmation Gemini.]({% image_buster /assets/img/mcp_server/gemini_cli/what_are_my_available_braze_functions.png %})
+![Quelles sont les fonctions Braze disponibles pour moi ? Cette question est posée et traitée dans Gemini CLI.]({% image_buster /assets/img/mcp_server/gemini_cli/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -336,9 +336,9 @@ Après avoir configuré le serveur MCP de Braze, essayez d'envoyer une invite de
 
 ### Erreurs de terminal
 
-#### `uvx` commande non trouvée
+#### `uvx` commande introuvable
 
-Si vous recevez un message d'erreur indiquant que la commande `uvx` n'a pas été trouvée, réinstallez `uv` et redémarrez votre terminal.
+Si vous recevez une erreur indiquant que`uvx`la commande est introuvable, veuillez réinstaller`uv`et redémarrer votre terminal.
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -346,19 +346,19 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 #### `spawn uvx ENOENT` erreur
 
-Si vous recevez une erreur `spawn uvx ENOENT`, il se peut que vous deviez mettre à jour le chemin d'accès dans le fichier de configuration de votre client. Tout d'abord, ouvrez votre terminal et exécutez la commande suivante :
+Si vous rencontrez des`spawn uvx ENOENT`erreurs, il peut être nécessaire de mettre à jour le chemin d'accès au fichier dans le fichier de configuration de votre client. Tout d'abord, veuillez ouvrir votre terminal et exécuter la commande suivante :
 
 ```bash
 which uvx
 ```
 
-La commande doit renvoyer un message similaire au suivant :
+La commande devrait renvoyer un message similaire à celui-ci :
 
 ```bash
 /Users/alex-lee/.local/bin/uvx
 ```
 
-Copiez le message dans votre presse-papiers et ouvrez le [fichier de configuration de votre client](#configure-client). Remplacez `"command": "uvx"` par le chemin que vous avez copié, puis redémarrez votre client. Par exemple :
+Veuillez copier le message dans votre presse-papiers et ouvrir [le fichier de configuration de votre client](#configure-client). Veuillez remplacer`"command": "uvx"`par le chemin d'accès que vous avez copié, puis redémarrez votre client. Par exemple :
 
 ```json
 "command": "/Users/alex-lee/.local/bin/uvx"
@@ -366,30 +366,30 @@ Copiez le message dans votre presse-papiers et ouvrez le [fichier de configurati
 
 #### L'installation du paquet échoue
 
-Si l'installation de votre paquet échoue, essayez d'installer une version spécifique de Python à la place.
+Si l'installation de votre paquet échoue, veuillez essayer d'installer une version spécifique de Python à la place.
 
 ```bash
 uvx --python 3.12 braze-mcp-server@latest
 ```
 
-### Configuration du client
+### Configuration client
 
-#### Le client MCP ne trouve pas le serveur Braze
+#### Le client MCP ne parvient pas à localiser le serveur Braze.
 
-1. Vérifiez que la syntaxe de la configuration de votre client MCP est correcte.
-2. Redémarrez votre client MCP après les changements de configuration.
-3. Vérifiez que `uvx` se trouve dans votre système `PATH`.
+1. Veuillez vérifier que la syntaxe de configuration de votre client MCP est correcte.
+2. Veuillez redémarrer votre client MCP après avoir modifié la configuration.
+3. Veuillez vérifier que [nom du fichier`uvx`] est présent dans votre système`PATH`.
 
 #### Erreurs d'authentification
 
-1. Vérifiez que votre `BRAZE_API_KEY` est correct et actif.
-2. Veillez à ce que votre site `BRAZE_BASE_URL` corresponde à votre instance Braze.
-3. Vérifiez que votre clé API dispose des [autorisations nécessaires](#create-api-key).
+1. Veuillez vérifier que votre`BRAZE_API_KEY`  est correct et actif.
+2. Veuillez vous assurer que votre configuration`BRAZE_BASE_URL`correspond à votre instance Braze.
+3. Veuillez vérifier que votre clé API dispose des [autorisations appropriées](#create-api-key).
 
-#### Délais de connexion ou erreurs de réseau
+#### Délais d'attente de connexion ou erreurs réseau
 
-1. Vérifiez que votre `BRAZE_BASE_URL` est correct pour votre instance.
-2. Vérifiez votre connexion réseau et les paramètres de votre pare-feu.
-3. Assurez-vous d'utiliser HTTPS dans votre URL de base.
+1. Veuillez vérifier que votre`BRAZE_BASE_URL`  est correct pour votre instance.
+2. Veuillez vérifier votre connexion réseau et les paramètres de votre pare-feu.
+3. Veuillez vous assurer que vous utilisez le protocole HTTPS dans votre URL de base.
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}
