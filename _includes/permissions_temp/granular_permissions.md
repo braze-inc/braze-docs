@@ -47,7 +47,7 @@ Limited users have specific permissions that allow them to manage certain aspect
 | Scope | Description |
 | --- | --- |
 | Permissions | Limited users can edit the permissions of other limited users if they have the "Edit Dashboard Users" permission. They can also create new limited users and modify their permission sets. However, they can't create or manage company admin accounts. |
-| Role limitations | If a limited user has all permissions except "Workspace Admin", they will still have access to all other permissions typically granted to an workspace admin. |
+| Role limitations | If a limited user has all permissions except "Workspace Admin", they will still have access to all other permissions typically granted to a workspace admin. |
 | Visibility of permissions | If a limited user has the "Edit Dashboard Users" permission for one workspace (such as Dev) but not for another (such as Prod), they won't see the Prod workspace permissions in their dashboard users detail page. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -239,7 +239,7 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Edit Catalogs                                   | Create and update catalogs and selections |
 | Export Catalogs                                 | Download catalogs from the dashboard |
 | Delete Catalogs                                 | Permanently delete catalogs |
-| Edit Dashboard Users                            | View, create, and edit company users 
+| Edit Dashboard Users                            | View, create, and edit company users |
 | View Email Settings                             | View Email Preferences |
 | Edit Email Settings                             | Enable and update Email Preferences | 
 | Edit Identifier Field-Level Encryption            | Enable and update Field-Level Encryption settings |
