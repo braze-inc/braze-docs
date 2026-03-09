@@ -1,6 +1,6 @@
 ---
 nav_title: Behavior
-article_title: 콘텐츠 카드의 행동 커스텀하기
+article_title: 콘텐츠 카드의 동작을 사용자 정의합니다
 page_order: 2
 description: "이 구현 가이드에서는 콘텐츠 카드의 동작 변경, 페이로드에 키-값 페어와 같은 추가 항목 추가, 일반적인 사용자 지정에 대한 레시피에 대해 설명합니다."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# 콘텐츠 카드의 행동 커스텀하기
+# 콘텐츠 카드의 동작을 사용자 정의합니다
 
 > 이 구현 가이드에서는 콘텐츠 카드의 동작 변경, 페이로드에 키-값 페어와 같은 추가 항목 추가, 일반적인 사용자 지정에 대한 레시피에 대해 설명합니다. 콘텐츠 카드 유형 전체 목록은 [콘텐츠 카드 정보를]({{site.baseurl}}/developer_guide/content_cards/) 참조하세요. 
 
@@ -58,7 +58,7 @@ Braze를 사용하면 키-값 페어를 사용하여 콘텐츠 카드를 통해 
 
 [API 트리거 캠페인은]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) 카드의 값이 외부 요인에 따라 사용자에게 표시할 콘텐츠를 결정할 때 사용할 수 있는 좋은 전략입니다. 예를 들어 보충 콘텐츠를 표시하려면 Liquid를 사용하여 키-값 페어를 설정합니다. 설정 시 `class_type`을 알아야 합니다.
 
-![추가 콘텐츠 카드 사용 사례에 대한 키-값 쌍입니다. 이 예제에서는 "tile_id", "tile_deeplink", 및 "tile_title" 등 카드의 다양한 측면이 Liquid를 사용하여 설정되었습니다.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![추가 콘텐츠 카드 사용 사례에 대한 키-값 쌍입니다. 이 예제에서는 카드의 다양한 측면인 "tile_id", "tile_deeplink", 및 "tile_title"가 Liquid를 사용하여 설정됩니다.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ## 대화형 콘텐츠로서의 콘텐츠 카드
 ![화면 왼쪽 하단에 50% 프로모션을 표시하는 대화형 콘텐츠 카드가 나타납니다. 클릭하면 프로모션이 장바구니에 적용됩니다.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
