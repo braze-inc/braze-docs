@@ -18,7 +18,7 @@ Before you can create or use item recommendations in Braze, you'll need to [crea
 
 ### AI Personalized {#ai}
 
-As part of the [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/) feature, AI Personalized recommendations take advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest in in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
+As part of the [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/) feature, AI Personalized recommendations take advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
 
 AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback, so your users are still getting relevant suggestions.
 
@@ -47,13 +47,13 @@ Predict and recommend the items a user is most likely to purchase next, based on
 {% enddetails %}
 
 {% details Setting it up %}
-1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
 2. Set the **Type** to **AI Personalized**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose how you currently track purchase events and the corresponding event property.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations/).
 {% enddetails %}
 {% endtab %}
 {% endtabs %}
@@ -77,13 +77,13 @@ Encourage users to explore popular items in your catalog based on purchases. To 
 {% enddetails %}
 
 {% details Setting it up %}
-1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items. For example, the food delivery service might have a selection to filter for restaurant location or type of dish.
 5. Choose how you currently track events and the corresponding event property.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations).
 {% enddetails %}
 {% endtab %}
 
@@ -97,13 +97,13 @@ Encourage users to explore items that they’ve recently liked or items that are
 {% enddetails %}
 
 {% details Setting it up %}
-1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for likes from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations).
 {% enddetails %}
 {% endtab %}
 
@@ -117,13 +117,13 @@ Highlight items that have gained attention across your user base through views t
 {% enddetails %}
 
 {% details Setting it up %}
-1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for views from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations).
 {% enddetails %}
 {% endtab %}
 
@@ -139,13 +139,13 @@ For example, a fashion retailer could promote clothes and accessories that are t
 {% enddetails %}
 
 {% details Setting it up %}
-1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for added to cart from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations).
 {% enddetails %}
 {% endtab %}
 {% endtabs %}
@@ -169,13 +169,13 @@ Encourage users to revisit items that they’ve recently clicked on, based on a 
 {% enddetails %}
 
 {% details Setting it up %}
-1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for clicks from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations).
 {% enddetails %}
 
 {% endtab %}
@@ -189,13 +189,13 @@ Encourage users to explore items that they’ve recently liked or items that are
 {% enddetails %}
 
 {% details Setting it up %}
-1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for likes from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations).
 {% enddetails %}
 {% endtab %}
 
@@ -213,13 +213,13 @@ Promote items that users have recently interacted with, including views, clicks,
 {% enddetails %}
 
 {% details Setting it up %}
-1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for clicks from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations).
 {% enddetails %}
 {% endtab %}
 
@@ -233,13 +233,13 @@ Remind users of their interest in items that they recently added to their cart, 
 {% enddetails %}
 
 {% details Setting it up %}
-1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for added to cart from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations).
 {% enddetails %}
 {% endtab %}
 {% endtabs %}
@@ -271,7 +271,7 @@ Highlight items that your users have recently purchased with increased frequency
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose either a purchase event or a custom event that tracks purchases, along with the corresponding property.
 6. Train the recommendation.
-7. [Use the recommendation in messaging.]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging)
+7. [Use the recommendation in messaging.]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations)
 {% enddetails %}
 {% endtab %}
 
@@ -291,7 +291,7 @@ Highlight items that your users have recently liked with increased frequency. Fo
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose your custom event for tracking likes, along with the corresponding property.
 6. Train the recommendation.
-7. [Use the recommendation in messaging.]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging/)
+7. [Use the recommendation in messaging.]({{site.baseurl}}/user_guide/brazeai/item_recommendations/using_recommendations)
 {% enddetails %}
 {% endtab %}
 {% endtabs %}
