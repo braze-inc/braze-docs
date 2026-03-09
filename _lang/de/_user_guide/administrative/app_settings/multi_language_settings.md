@@ -8,13 +8,13 @@ description: "Dieser Artikel bietet eine Übersicht über die mehrsprachigen Ein
 
 # Übersetzung und mehrsprachige Einstellungen
 
-> Das Multi-Language Feature erlaubt es Ihnen, [translation tags]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) zu verwenden, um Nutzer:innen in verschiedenen Sprachen und Standorten in einer einzigen Nachricht zusammenzustellen.
+> Das Mehrsprachen-Feature ermöglicht es Ihnen, [Übersetzungs-Tags zu verwenden]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales), um Zielgruppen in verschiedenen Sprachen und an verschiedenen Standorten mit einer einzigen Nachricht anzusprechen.
 
 {% multi_lang_include locales.md section="Prerequisites" %}
 
 ## Gebietsschema hinzufügen
 
-1. Gehen Sie zu **Einstellungen** > **Lokalisierung Einstellungen**.
+1. Bitte gehen Sie zu **Einstellungen** > **Lokalisierungseinstellungen**.
 2. Wählen Sie **Gebietsschema hinzufügen** und wählen Sie dann **Standardgebietsschema** oder **Benutzerdefinierte Attribute**.<br><br>![Das Dropdown-Menü „Gebietsschema hinzufügen“ mit Optionen zur Auswahl des Standard-Gebietsschemas oder angepasster Attribute.]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. Geben Sie einen Namen für das Gebietsschema ein.
 4. Wählen Sie die entsprechenden Nutzerattribute für die von Ihnen gewählte Gebietsschema-Option aus.
@@ -22,12 +22,12 @@ description: "Dieser Artikel bietet eine Übersicht über die mehrsprachigen Ein
 {% tabs %}
 {% tab Default locale %}
 
-Verwenden Sie für **Standard-Gebietsschema** die Dropdown-Listen, um die hinzuzufügende Sprache und optional das Land, das mit der Sprache verknüpft werden soll, auszuwählen.<br><br>![Ein Fenster mit der Bezeichnung "Gebietsschema hinzufügen - Standardsprache und Land", um die Sprache und das Land festzulegen.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
+Verwenden Sie für **Standard-Gebietsschema** die Dropdown-Listen, um die hinzuzufügende Sprache und optional das Land, das mit der Sprache verknüpft werden soll, auszuwählen.<br><br>![Ein Fenster mit dem Titel „Sprache und Land hinzufügen – Standard-Sprache und Land“ zur Angabe der Sprache und des Landes.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% tab Custom attributes %}
 
-Für **benutzerdefinierte Attribute** wählen Sie aus der Dropdown-Liste das entsprechende benutzerdefinierte Attribut aus und geben in das Textfeld den Wert ein.<br><br>![Ein Fenster namens "Gebietsschema hinzufügen - Angepasste Attribute", um das angepasste Attribut und den Wert festzulegen.]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
+Für **benutzerdefinierte Attribute** wählen Sie aus der Dropdown-Liste das entsprechende benutzerdefinierte Attribut aus und geben in das Textfeld den Wert ein.<br><br>![Ein Fenster mit dem Titel „Lokalisierung hinzufügen – Angepasste Attribute”, in dem das angepasste Attribut und der Wert angegeben werden können.]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% endtabs %}
