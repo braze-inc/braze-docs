@@ -1,7 +1,7 @@
 ---
 nav_title: Traducciones
 article_title: Puntos finales de traducción
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 9
 layout: dev_guide
 
@@ -9,7 +9,7 @@ description: "Esta página de destino enumera los puntos finales de traducción 
 page_type: landing
 
 guide_top_header: "Puntos finales de traducción"
-guide_top_text: "Utiliza los puntos finales de traducción Braze para gestionar y actualizar las traducciones en tus campañas y Lienzos."
+guide_top_text: "Utiliza los puntos finales de traducción de Braze para administrar y actualizar las traducciones de tus campañas, lienzos y bloques de contenido."
 
 guide_featured_title: "Puntos finales de la campaña"
 guide_featured_list:
@@ -19,7 +19,7 @@ guide_featured_list:
   - name: "COLOCAR: Actualizar la traducción en una campaña"
     link: /docs/api/endpoints/translations/campaigns/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
-  - name: "GET: Ver las traducciones predeterminadas de las fuentes de la campaña"
+  - name: "GET: Ver traducciones predeterminadas de la campaña"
     link: /docs/api/endpoints/translations/campaigns/get_source_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
 
@@ -31,49 +31,56 @@ guide_menu_list:
   - name: "COLOCAR: Actualizar la traducción en un lienzo"
     link: /docs/api/endpoints/translations/canvas/put_update_translation_canvas/
     image: /assets/img/braze_icons/target-04.svg
-  - name: "GET: Ver traducciones predeterminadas del Canvas"
+  - name: "GET: Ver traducciones predeterminadas de Canvas"
     link: /docs/api/endpoints/translations/canvas/get_source_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
 
 guide_menu_title2: "Email template endpoints"
 guide_menu_list2:
-  - name: "GET: Ver las traducciones predeterminadas de la plantilla de correo electrónico"
+  - name: "GET: Ver plantillas de correo electrónico Traducciones predeterminadas de la fuente"
     link: /docs/api/endpoints/translations/email_templates/get_view_source_template/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: Ver traducción y localización específicas"
+  - name: "GET: Ver traducción específica y configuración de localización"
     link: /docs/api/endpoints/translations/email_templates/get_view_translation_locale_template/
     image: /assets/img/braze_icons/target-04.svg
-  - name: "GET: Ver todas las traducciones y localizaciones"
+  - name: "GET: Ver todas las traducciones y configuraciones de localización"
     link: /docs/api/endpoints/translations/email_templates/get_view_translation_template/
     image: /assets/img/braze_icons/target-04.svg
   - name: "COLOCAR: Actualizar traducciones en una plantilla de correo electrónico"
     link: /docs/api/endpoints/translations/email_templates/put_update_template/
     image: /assets/img/braze_icons/target-04.svg
 
+guide_menu_title3: "Content Block endpoints"
+guide_menu_list3:
+  - name: "GET: Ver todas las traducciones de un bloque de contenido"
+    link: /docs/api/endpoints/translations/content_blocks/get_translation_content_block/
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: "COLOCAR: Actualizar la traducción en un bloque de contenido"
+    link: /docs/api/endpoints/translations/content_blocks/put_update_translation_content_block/
+    image: /assets/img/braze_icons/target-04.svg
+
 ---
 
-{% alert important %}
-Los puntos finales de traducción de Braze se encuentran actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='Access to the Braze translation endpoints' %}
 
-## Cómo funcionan nuestros puntos finales de traducción
+## Cómo funcionan vuestros puntos finales de traducción
 
-Nuestros puntos finales de traducción trabajan con [composición multilingüe]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/), en la que un mensaje puede tener diferentes versiones que se pueden renderizar dependiendo del usuario que reciba el mensaje.
+Nuestros puntos finales de traducción funcionan con [composiciones multilingües]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/), en las que un mensaje puede tener diferentes versiones que se pueden mostrar en función del usuario que reciba el mensaje.
 
 ### Requisitos previos
 
-Antes de utilizar estos puntos finales, debes [añadir tus localizaciones]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/#add-a-locale).
+Antes de utilizar estos puntos finales, debes [añadir tus configuraciones de localización]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/#add-a-locale).
 
 ### Cómo comprobar tus traducciones
 
-Hay dos formas de validar el soporte de traducción mediante la API y el panel de Braze en campañas, lienzos (incluidos los pasos individuales) y plantillas de correo electrónico:
+Hay dos formas de validar la compatibilidad con la traducción utilizando la API y el panel de Braze en campañas, lienzos (incluidos pasos individuales), bloques de contenido y plantillas de correo electrónico:
 
 - Durante la composición (antes del lanzamiento)
 - Después del lanzamiento (utilizando borradores posteriores al lanzamiento)
 
-Antes de probar la actualización de las traducciones, debes
+Antes de probar la actualización de las traducciones, debes:
 
-1. [Añade tus localizaciones]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/#add-a-locale).
-2. Crea un mensaje y utiliza etiquetas de traducción cuando proceda.
+1. [Añade tus configuraciones de localización]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/#add-a-locale).
+2. Crea un mensaje y utiliza etiquetas de traducción cuando sea necesario.
 3. Guarda el mensaje.
-4. Selecciona las localizaciones que quieres incluir.
+4. Selecciona las configuraciones de localización regionales que deseas incluir.
