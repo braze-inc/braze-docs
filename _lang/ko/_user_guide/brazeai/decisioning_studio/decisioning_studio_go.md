@@ -1,7 +1,7 @@
 ---
 nav_title: 의사 결정 스튜디오 Go
 article_title: BrazeAI 의사 결정 스튜디오 Go
-page_order: 1
+page_order: 7
 description: "BrazeAI Decisioning <sup>StudioTM</sup> Go를 설정하고 통합하는 방법을 알아보세요."
 ---
 

@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: 의사 결정 스튜디오 FAQ
-page_order: 10
+page_order: 8
 page_type: FAQ
 description: "이 페이지에서는 Decisioning Studio에 대해 자주 묻는 질문에 대한 답변을 제공합니다."
 ---

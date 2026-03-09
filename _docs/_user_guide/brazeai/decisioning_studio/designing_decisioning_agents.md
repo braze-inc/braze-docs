@@ -1,7 +1,7 @@
 ---
-nav_title: Designing decisioning agents
+nav_title: Design your agent
 article_title: Designing decisioning agents
-page_order: 3
+page_order: 2
 page_type: reference
 description: "This reference article covers key concepts and best practices for designing and configuring your decisioning agent."
 ---
@@ -132,9 +132,4 @@ You could build a loyalty and engagement agent to maximize purchases by new enro
 
 ## Next steps
 
-Ready to build your own decisioning agent? Follow the next steps for your Decisioning Studio tier:
-
-- **Decisioning Studio Go**: [Set up Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
-- **Decisioning Studio Pro**: [Set up Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
-
-These guides walk you through connecting data sources, setting up orchestration, designing your agent, and launching to production.
+Ready to build your own decisioning agent? See [Getting Started with Decisioning Studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/) for a guide that walks you through connecting data sources, setting up orchestration, designing your agent, and launching to production.

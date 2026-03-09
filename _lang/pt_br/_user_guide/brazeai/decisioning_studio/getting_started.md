@@ -9,17 +9,20 @@ search_rank: 2
 page_type: landing
 description: "Esta seção fornece uma introdução ao Decisioning Studio e como você pode usá-lo para projetar e implantar agentes de decisão que otimizam qualquer métrica de negócios."
 
-guide_featured_title: "Artigos de seção"
+guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Preparando suas Fontes de Dados
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/
+  - name: Prepare Your Data
+    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Preparando sua Orquestração
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_orchestration/
-    image: /assets/img/braze_icons/dataflow-04.svg
-  - name: Projetando Agentes de Decisão
+  - name: Design Your Agent
     link: /docs/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/
     image: /assets/img/braze_icons/settings-01.svg
+  - name: Define Your Audience
+    link: /docs/user_guide/brazeai/decisioning_studio/define_your_audience/
+    image: /assets/img/braze_icons/users-01.svg
+  - name: Set Up Orchestration
+    link: /docs/user_guide/brazeai/decisioning_studio/set_up_orchestration/
+    image: /assets/img/braze_icons/dataflow-04.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
@@ -59,7 +62,7 @@ Todos os dados já existentes na [Braze Data Platform]({{site.baseurl}}/user_gui
 
 Para obter orientações detalhadas, consulte a documentação de seu nível do Decisioning Studio:
 - [Acessar o Decisioning Studio: Conectar fontes de dados]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
-- [Decisioning Studio Pro: Conectar fontes de dados]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/connect_data_sources/)
+- [Decisioning Studio Pro: Conectar fontes de dados]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/connecting_your_data/)
 
 ### Etapa 2: Configurar a orquestração
 
@@ -69,7 +72,7 @@ Em geral, você precisa configurar essa orquestração apenas uma vez.
 
 Para obter orientações detalhadas, consulte a documentação de seu nível do Decisioning Studio:
 - [Acessar o Decisioning Studio: Configurar a orquestração]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
-- [Decisioning Studio Pro: Configurar a orquestração]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
+- [Decisioning Studio Pro: Configurar a orquestração]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/set_up_orchestration/)
 
 ### Etapa 3: Projete seus agentes
 
@@ -77,7 +80,7 @@ Configure seus agentes de tomada de decisão para definir quais resultados você
 
 Para obter orientações específicas de nível:
 - [Acessar o Decisioning Studio: Crie seu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/design_your_agent/)
-- [Decisioning Studio Pro: Crie seu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/design_your_agent/)
+- [Decisioning Studio Pro: Crie seu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/)
 
 {% alert tip %}
 Para os clientes do Decisioning Studio Pro, a equipe do IA Decisioning Services o ajudará a projetar e lançar seus agentes de decisão.
@@ -89,7 +92,7 @@ Inicie seu agente de tomada de decisões e permita que ele aprenda e otimize con
 
 Para obter orientações detalhadas, consulte a documentação de seu nível do Decisioning Studio:
 - [Acessar o Decisioning Studio: Lance seu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/launch_your_agent/)
-- [Decisioning Studio Pro: Lance seu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/launch_your_agent/)
+- [Decisioning Studio Pro: Lance seu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/launch_your_agent/)
 
 ## Próximos passos
 

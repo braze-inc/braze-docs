@@ -1,7 +1,7 @@
 ---
 nav_title: Entscheidungsfindung Studio Go
 article_title: BrazeAI Decisioning Studio Go
-page_order: 1
+page_order: 7
 description: "Erfahren Sie, wie Sie BrazeAI Decisioning <sup>StudioTM</sup> Go einrichten und in Braze integrieren."
 ---
 

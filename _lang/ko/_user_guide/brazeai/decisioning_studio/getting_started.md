@@ -9,17 +9,20 @@ search_rank: 2
 page_type: landing
 description: "이 섹션에서는 의사 결정 스튜디오에 대한 소개와 이를 사용하여 모든 비즈니스 측정기준을 최적화하는 의사 결정 에이전트를 디자인하고 배포하는 방법에 대해 설명합니다."
 
-guide_featured_title: "섹션 기사"
+guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: 데이터 소스 준비하기
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/
+  - name: Prepare Your Data
+    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/
     image: /assets/img/braze_icons/database-01.svg
-  - name: 오케스트레이션 준비하기
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_orchestration/
-    image: /assets/img/braze_icons/dataflow-04.svg
-  - name: 의사 결정 에이전트 설계
+  - name: Design Your Agent
     link: /docs/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/
     image: /assets/img/braze_icons/settings-01.svg
+  - name: Define Your Audience
+    link: /docs/user_guide/brazeai/decisioning_studio/define_your_audience/
+    image: /assets/img/braze_icons/users-01.svg
+  - name: Set Up Orchestration
+    link: /docs/user_guide/brazeai/decisioning_studio/set_up_orchestration/
+    image: /assets/img/braze_icons/dataflow-04.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
@@ -59,7 +62,7 @@ Decisioning Studio를 설정하려면 다음 단계를 완료합니다:
 
 자세한 지침은 해당 Decisioning Studio 티어에 대한 설명서를 참조하세요:
 - [의사 결정 스튜디오 이동: 데이터 소스 연결]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
-- [디시전 스튜디오 프로: 데이터 소스 연결]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/connect_data_sources/)
+- [디시전 스튜디오 프로: 데이터 소스 연결]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/connecting_your_data/)
 
 ### 2단계: 오케스트레이션 설정하기
 
@@ -69,7 +72,7 @@ Decisioning Studio를 고객 참여 플랫폼(CEP)과 통합하여 상담원이 
 
 자세한 지침은 해당 Decisioning Studio 티어에 대한 설명서를 참조하세요:
 - [의사 결정 스튜디오 이동: 오케스트레이션 설정하기]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
-- [디시전 스튜디오 프로: 오케스트레이션 설정하기]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
+- [디시전 스튜디오 프로: 오케스트레이션 설정하기]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/set_up_orchestration/)
 
 ### 3단계: 상담원 디자인
 
@@ -77,7 +80,7 @@ Decisioning Studio를 고객 참여 플랫폼(CEP)과 통합하여 상담원이 
 
 티어별 안내를 참조하세요:
 - [의사 결정 스튜디오 이동: 에이전트 디자인]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/design_your_agent/)
-- [디시전 스튜디오 프로: 에이전트 디자인]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/design_your_agent/)
+- [디시전 스튜디오 프로: 에이전트 디자인]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/)
 
 {% alert tip %}
 의사 결정 스튜디오 프로 고객의 경우 AI 의사 결정 서비스 팀이 의사 결정 에이전트를 설계하고 출시할 수 있도록 지원합니다.
@@ -89,7 +92,7 @@ Decisioning Studio를 고객 참여 플랫폼(CEP)과 통합하여 상담원이 
 
 자세한 지침은 해당 Decisioning Studio 티어에 대한 설명서를 참조하세요:
 - [의사 결정 스튜디오 이동: 상담원 시작하기]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/launch_your_agent/)
-- [디시전 스튜디오 프로: 상담원 시작하기]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/launch_your_agent/)
+- [디시전 스튜디오 프로: 상담원 시작하기]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/launch_your_agent/)
 
 ## 다음 단계
 

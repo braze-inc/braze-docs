@@ -1,7 +1,7 @@
 ---
 nav_title: Preguntas frecuentes
 article_title: Preguntas frecuentes sobre el Estudio de decisiones
-page_order: 10
+page_order: 8
 page_type: FAQ
 description: "Esta página ofrece respuestas a las preguntas más frecuentes sobre Decisioning Studio."
 ---

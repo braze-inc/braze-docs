@@ -9,17 +9,20 @@ search_rank: 2
 page_type: landing
 description: "Esta sección proporciona una introducción a Decisioning Studio, y cómo puedes utilizarlo para diseñar y desplegar agentes de decisión que optimicen cualquier métrica empresarial."
 
-guide_featured_title: "Artículos de sección"
+guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Preparar tus orígenes de datos
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/
+  - name: Prepare Your Data
+    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Preparar tu orquestación
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_orchestration/
-    image: /assets/img/braze_icons/dataflow-04.svg
-  - name: Diseñar Agentes Decisores
+  - name: Design Your Agent
     link: /docs/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/
     image: /assets/img/braze_icons/settings-01.svg
+  - name: Define Your Audience
+    link: /docs/user_guide/brazeai/decisioning_studio/define_your_audience/
+    image: /assets/img/braze_icons/users-01.svg
+  - name: Set Up Orchestration
+    link: /docs/user_guide/brazeai/decisioning_studio/set_up_orchestration/
+    image: /assets/img/braze_icons/dataflow-04.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
@@ -59,7 +62,7 @@ Cualquier dato que ya esté en la [Plataforma de Datos Braze]({{site.baseurl}}/u
 
 Para obtener información detallada, consulta la documentación de tu nivel de Decisioning Studio:
 - [Estudio de decisión Go: Conectar orígenes de datos]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
-- [Decisioning Studio Pro: Conectar orígenes de datos]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/connect_data_sources/)
+- [Decisioning Studio Pro: Conectar orígenes de datos]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/connecting_your_data/)
 
 ### Paso 2: Configurar la orquestación
 
@@ -69,7 +72,7 @@ Por lo general, sólo tendrás que configurar esta orquestación una vez.
 
 Para obtener información detallada, consulta la documentación de tu nivel de Decisioning Studio:
 - [Estudio de decisión Go: Configurar la orquestación]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
-- [Decisioning Studio Pro: Configurar la orquestación]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
+- [Decisioning Studio Pro: Configurar la orquestación]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/set_up_orchestration/)
 
 ### Paso 3: Diseña a tus agentes
 
@@ -77,7 +80,7 @@ Configura tus agentes de decisión para definir qué resultados quieres maximiza
 
 Para una orientación específica por niveles:
 - [Estudio de decisión Go: Diseña tu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/design_your_agent/)
-- [Decisioning Studio Pro: Diseña tu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/design_your_agent/)
+- [Decisioning Studio Pro: Diseña tu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/)
 
 {% alert tip %}
 Para los clientes de Decisioning Studio Pro, tu equipo de Servicios de Decisión de IA te ayudará a diseñar y poner en marcha tus agentes de decisión.
@@ -89,7 +92,7 @@ Pon en marcha tu agente decisor y deja que aprenda continuamente y optimice los 
 
 Para obtener información detallada, consulta la documentación de tu nivel de Decisioning Studio:
 - [Estudio de decisión Go: Lanza tu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/launch_your_agent/)
-- [Decisioning Studio Pro: Lanza tu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/launch_your_agent/)
+- [Decisioning Studio Pro: Lanza tu agente]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/launch_your_agent/)
 
 ## Próximos pasos
 

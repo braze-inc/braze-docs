@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: デシジョン・スタジオ FAQ
-page_order: 10
+page_order: 8
 page_type: FAQ
 description: "このページでは、Decisioning Studioに関するよくある質問にお答えする。"
 ---

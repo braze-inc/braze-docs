@@ -1,7 +1,7 @@
 ---
 nav_title: Perguntas frequentes
 article_title: Perguntas frequentes sobre o Decisioning Studio
-page_order: 10
+page_order: 8
 page_type: FAQ
 description: "Esta página fornece respostas a perguntas frequentes sobre o Decisioning Studio."
 ---

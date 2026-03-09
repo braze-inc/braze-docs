@@ -11,15 +11,18 @@ description: "This section provides an introduction to Decisioning Studio, and h
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Preparing Your Data Sources
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/
+  - name: Prepare Your Data
+    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Preparing Your Orchestration
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_orchestration/
-    image: /assets/img/braze_icons/dataflow-04.svg
-  - name: Designing Decisioning Agents
+  - name: Design Your Agent
     link: /docs/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/
     image: /assets/img/braze_icons/settings-01.svg
+  - name: Define Your Audience
+    link: /docs/user_guide/brazeai/decisioning_studio/define_your_audience/
+    image: /assets/img/braze_icons/users-01.svg
+  - name: Set Up Orchestration
+    link: /docs/user_guide/brazeai/decisioning_studio/set_up_orchestration/
+    image: /assets/img/braze_icons/dataflow-04.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
@@ -37,17 +40,52 @@ guide_menu_list:
 
 BrazeAI Decisioning Studio™ allows you to design and deploy decisioning agents that optimize any business metric. A decisioning agent is a custom configuration tailored to meet a specific business goal.
 
-To do so, you must connect data sources, set up orchestration, and design your decisioning agents.
-
 {% alert tip %}
-For Decisioning Studio Pro Customers, your AI Expert Services team will support you in setting up Decisioning Studio for optimal performance.
+Your AI Expert Services team will support you in setting up Decisioning Studio for optimal performance.
 {% endalert %}
+
+## Key design decisions
+
+Working with the AI Decisioning Services team, you'll make the following decisions:
+
+| Decision | Description | Examples |
+|----------|-------------|----------|
+| **Success metric** | What will the agent maximize when personalizing customer engagement? | Revenue, LTV, ARPU, conversions, retention |
+| **Audience** | For whom will the Decisioning Studio agent make customer engagement decisions? | All customers, loyalty members, at-risk subscribers |
+| **Experiment groups** | How should Decisioning Studio's randomized controlled trials be structured? | Decisioning Studio, Random Control, BAU, Holdout |
+| **Dimensions** | What decisions should the agent personalize? | Time of day, subject line, frequency, offers, channel |
+| **Options** | What options does the agent have to work with? | Specific templates, offers, time windows |
+| **Constraints** | What decisions should the agent *never* make? | Geographic restrictions, budget limits, eligibility rules |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+Each of these decisions has implications for how much incremental uplift the agent may be able to generate, and how quickly. Our AI Decisioning Services team will work with you to design an agent that generates maximum value while respecting all of your business rules.
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_pro_agent_design.png %})
+
+## Decisioning Studio capabilities
+
+| Capability | Details |
+|------------|---------|
+| **Any success metric** | Optimize for revenue, conversions, ARPU, LTV, or any business KPI |
+| **Unlimited dimensions** | Personalize across offer, channel, timing, frequency, creative, and more |
+| **Any CEP** | Native integrations with Braze, SFMC, Klaviyo + custom integrations for any platform |
+| **AI Decisioning Services** | Dedicated support from Braze's data science team |
+| **Advanced experiment design** | Fully customizable treatment groups and holdouts |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+## Best practices
+
+A few best practices for designing Decisioning Studio agents:
+
+1. **Maximize data richness**: The more information agents have about your customers, the better they will perform.
+2. **Diversify actions**: The more diverse the set of actions the agent can take, the more it can personalize its strategy for each user.
+3. **Minimize constraints**: The fewer constraints on your agents, the better. Constraints should be designed to respect business rules while freeing agent-led experimentation as much as possible.
 
 ## Setting up Decisioning Studio
 
 To set up Decisioning Studio, you will complete the following steps:
 
-### Step 1: Connect data sources
+### Step 1: Prepare your data
 
 Connect customer profiles and engagement data so that the decisioning agents you create understand who each customer is and how they behave.
 
@@ -57,39 +95,31 @@ You typically only need to connect your data sources once, during the initial se
 Any data already in the [Braze Data Platform]({{site.baseurl}}/user_guide/data/braze_data_platform) is automatically available to Decisioning Studio.
 {% endalert %}
 
-For detailed guidance, see the documentation for your tier of Decisioning Studio:
-- [Decisioning Studio Go: Connect data sources]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
-- [Decisioning Studio Pro: Connect data sources]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/connect_data_sources/)
+For detailed guidance, see [Preparing your data]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/).
 
-### Step 2: Set up orchestration
+### Step 2: Define your audience
+
+Define the audience for your decisioning agent and configure treatment groups for randomized controlled trials.
+
+For detailed guidance, see [Define your audience]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/define_your_audience/).
+
+### Step 3: Set up orchestration
 
 Integrate Decisioning Studio with your customer engagement platform (CEP) to allow your agents to orchestrate actions. The CEP is the platform used to deliver personalized experiences to your customers based on the agent's decisions.
 
 You generally need to set up this orchestration only once.
 
-For detailed guidance, see the documentation for your tier of Decisioning Studio:
-- [Decisioning Studio Go: Set up orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
-- [Decisioning Studio Pro: Set up orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
+For detailed guidance, see [Set up orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/set_up_orchestration/).
 
-### Step 3: Design your agents
+### Step 4: Design your agents
 
 Configure your decisioning agents to define what outcomes you want to maximize and what actions the agent can take to achieve them. See [Designing Decisioning Agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/) for detailed guidance on agent design.
 
-For tier-specific guidance:
-- [Decisioning Studio Go: Design your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/design_your_agent/)
-- [Decisioning Studio Pro: Design your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/design_your_agent/)
-
-{% alert tip %}
-For Decisioning Studio Pro Customers, your AI Decisioning Services team will support you in designing and launching your decisioning agents.
-{% endalert %}
-
-### Step 4: Launch your decisioning agent
+### Step 5: Launch your decisioning agent
 
 Launch your decisioning agent and let it continuously learn and optimize for your business outcomes.
 
-For detailed guidance, see the documentation for your tier of Decisioning Studio:
-- [Decisioning Studio Go: Launch your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/launch_your_agent/)
-- [Decisioning Studio Pro: Launch your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/launch_your_agent/)
+For detailed guidance, see [Launch your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/launch_your_agent/).
 
 ## Next steps
 

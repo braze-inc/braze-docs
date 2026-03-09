@@ -1,7 +1,7 @@
 ---
-nav_title: Projetando agentes de decisão
+nav_title: Design your agent
 article_title: Projetando agentes de decisão
-page_order: 6
+page_order: 2
 page_type: reference
 description: "Este artigo de referência cobre conceitos-chave e melhores práticas para projetar e configurar seu agente de decisão."
 ---
@@ -135,6 +135,5 @@ Você poderia construir um agente de fidelidade e engajamento para maximizar com
 Pronto para construir seu próprio agente de decisão? Siga os próximos passos para o seu nível do Decisioning Studio:
 
 - **Decisioning Studio Go**: [Configurar o Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
-- **Decisioning Studio Pro**: [Configurar o Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
 
 Esses guias o orientam sobre como conectar fontes de dados, configurar a orquestração, projetar seu agente e lançar em produção.

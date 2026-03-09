@@ -1,7 +1,7 @@
 ---
-nav_title: Entwurf von Entscheidungsagenten
+nav_title: Design your agent
 article_title: Entwurf von Entscheidungsagenten
-page_order: 6
+page_order: 2
 page_type: reference
 description: "Dieser referenzierte Artikel behandelt die wichtigsten Konzepte und bewährten Verfahren für die Gestaltung und Konfiguration Ihres Entscheidungsagenten."
 ---
@@ -135,6 +135,5 @@ Sie könnten einen Kundenbindungs- und Engagement-Agenten erstellen, um die Käu
 Sind Sie bereit, Ihren eigenen Entscheidungsagenten zu erstellen? Folgen Sie den nächsten Schritten für Ihre Decisioning Studio-Ebene:
 
 - **Decisioning Studio Go**: [Decisioning Studio Go einrichten]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
-- **Decisioning Studio Pro**: [Decisioning Studio Pro einrichten]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
 
 Diese Anleitungen führen Sie durch die Verbindung von Datenquellen, die Einrichtung der Orchestrierung, das Design Ihres Agenten und den Start der Produktion.

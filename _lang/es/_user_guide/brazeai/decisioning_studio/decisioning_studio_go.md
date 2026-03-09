@@ -1,7 +1,7 @@
 ---
 nav_title: Estudio de decisión Go
 article_title: BrazeAI Estudio de Decisiones Go
-page_order: 1
+page_order: 7
 description: "Aprende a configurar e integrar BrazeAI Decisioning <sup>StudioTM</sup> Go en Braze."
 ---
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Acessar o Decisioning Studio
 article_title: Acessar o BrazeAI Decisioning Studio
-page_order: 1
+page_order: 7
 description: "Saiba como configurar e integrar o BrazeAI Decisioning <sup>StudioTM</sup> Acessar o Braze."
 ---
 

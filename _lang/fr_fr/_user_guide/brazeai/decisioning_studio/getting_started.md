@@ -9,17 +9,20 @@ search_rank: 2
 page_type: landing
 description: "Cette section présente Decisioning Studio et explique comment l'utiliser pour concevoir et déployer des agents décisionnels qui optimisent n'importe quel indicateur d'entreprise."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Préparer vos sources de données
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data_sources/
+  - name: Prepare Your Data
+    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Préparer votre orchestration
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_orchestration/
-    image: /assets/img/braze_icons/dataflow-04.svg
-  - name: "Conception d'agents décisionnels"
+  - name: Design Your Agent
     link: /docs/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/
     image: /assets/img/braze_icons/settings-01.svg
+  - name: Define Your Audience
+    link: /docs/user_guide/brazeai/decisioning_studio/define_your_audience/
+    image: /assets/img/braze_icons/users-01.svg
+  - name: Set Up Orchestration
+    link: /docs/user_guide/brazeai/decisioning_studio/set_up_orchestration/
+    image: /assets/img/braze_icons/dataflow-04.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
@@ -59,7 +62,7 @@ Toutes les données déjà présentes dans la [plateforme de données de Braze](
 
 Pour obtenir des conseils détaillés, consultez la documentation relative à votre niveau de Decisioning Studio :
 - [Décision Studio Go : Connecter les sources de données]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
-- [Decisioning Studio Pro : Connecter les sources de données]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/connect_data_sources/)
+- [Decisioning Studio Pro : Connecter les sources de données]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/connecting_your_data/)
 
 ### Étape 2 : Mettre en place l'orchestration
 
@@ -69,7 +72,7 @@ En général, vous ne devez configurer cette orchestration qu'une seule fois.
 
 Pour obtenir des conseils détaillés, consultez la documentation relative à votre niveau de Decisioning Studio :
 - [Décision Studio Go : Mettre en place l'orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
-- [Decisioning Studio Pro : Mettre en place l'orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
+- [Decisioning Studio Pro : Mettre en place l'orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/set_up_orchestration/)
 
 ### Étape 3 : Concevez vos agents
 
@@ -77,7 +80,7 @@ Configurez vos agents décisionnels pour définir les résultats que vous souhai
 
 Pour des conseils spécifiques à chaque niveau :
 - [Décision Studio Go : Concevez votre agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/design_your_agent/)
-- [Decisioning Studio Pro : Concevez votre agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/design_your_agent/)
+- [Decisioning Studio Pro : Concevez votre agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/)
 
 {% alert tip %}
 Pour les clients Decisioning Studio Pro, votre équipe Decisioning Services de l'intelligence artificielle vous aidera à concevoir et à lancer vos agents décisionnels.
@@ -89,7 +92,7 @@ Lancez votre agent décisionnel et laissez-le apprendre en permanence et optimis
 
 Pour obtenir des conseils détaillés, consultez la documentation relative à votre niveau de Decisioning Studio :
 - [Décision Studio Go : Lancez votre agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/launch_your_agent/)
-- [Decisioning Studio Pro : Lancez votre agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/launch_your_agent/)
+- [Decisioning Studio Pro : Lancez votre agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/launch_your_agent/)
 
 ## Étapes suivantes
 
