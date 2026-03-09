@@ -1,8 +1,8 @@
-{% multi_lang_include developer_guide/prerequisites/react_native.md %} [プッシュ通知の設定も]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native)必要だ。
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} [プッシュ通知の設定]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native)も必要だ。
 
-## Expoを使ってリッチプッシュ通知を可能にする
+## Expoを使ってリッチプッシュ通知をイネーブルメントする
 
-React Native SDKでは、**リッチプッシュ通知はデフォルトでAndroidで利用できる**。
+React Native SDKでは、**リッチプッシュ通知はAndroid向けにデフォルトで利用可能だ**。
 
 Expo を使用して iOS でリッチプッシュ通知を有効にするには、`app.json` の `expo.plugins` オブジェクトで `enableBrazeIosRichPush` プロパティを `true` に構成します。
 
