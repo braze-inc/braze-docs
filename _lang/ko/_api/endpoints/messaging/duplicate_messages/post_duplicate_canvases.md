@@ -16,9 +16,7 @@ description: "이 문서에서는 중복 캔버스 엔드포인트에 대한 세
 
 > 이 엔드포인트를 사용하여 캔버스를 복제합니다. 이 API 엔드포인트는 [Braze 대시보드에서 캔버스를 복제하는 것][1]과 유사합니다.
 
-{% alert important %}
-이 엔드포인트는 현재 얼리 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Prerequisites
 
