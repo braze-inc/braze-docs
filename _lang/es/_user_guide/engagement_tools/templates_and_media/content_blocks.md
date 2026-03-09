@@ -23,7 +23,7 @@ Con los bloques de contenido, puede:
 
 ## Crear un bloque de contenido
 
-Existen dos tipos de editores para crear un bloque de contenido: el clásico y el de arrastrar y soltar. Estos dos tipos de editores corresponden al tipo de Bloque de Contenido: HTML y arrastrar y soltar. También puedes crear y gestionar tus bloques de contenido [utilizando la API]({{site.baseurl}}/api/endpoints/templates/).
+Existen dos tipos de editores para crear un bloque de contenido: el clásico y el de arrastrar y soltar. Estos dos tipos de editores corresponden al tipo de Bloque de Contenido: HTML y arrastrar y soltar. También puedes crear y administrar tus bloques de contenido [mediante la API]({{site.baseurl}}/api/endpoints/templates/).
 
 {% tabs %}
 {% tab Drag-and-drop %}
@@ -44,13 +44,13 @@ Existen dos tipos de editores para crear un bloque de contenido: el clásico y e
 |---|---|
 | Apellidos | Campo obligatorio con un máximo de 100 caracteres. No se puede cambiar el nombre después de guardar el bloque de contenido. Además, no puede asignar a un nuevo Bloque de contenido el mismo nombre que a un Bloque de contenido anterior, aunque el anterior se haya archivado. |
 | Descripción | (opcional) Máximo 250 caracteres. Describa el Bloque de contenido para que otros usuarios de Braze sepan para qué sirve y dónde se utiliza. |
-| Tamaño del contenido | Máximo de 50 KB. |
-| Colocación | Los bloques de contenido no pueden utilizarse dentro de un pie de página de correo electrónico, pero puedes [crear un bloque de contenido que incluya un pie de página](#email-footers) para utilizarlo en tus correos electrónicos. |
+| Tamaño del contenido | Máximo 50 KB. |
+| Colocación | Los bloques de contenido no se pueden utilizar en el pie de página de un correo electrónico, pero puedes [crear un bloque de contenido que incluya un pie de página](#email-footers) para utilizarlo en tus correos electrónicos. |
 | Creación | Editor HTML o editor de arrastrar y soltar. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Al crear bloques de contenido, puede ser beneficioso visualizar HTML y Liquid añadiendo saltos de línea. Si se dejan estos saltos de línea durante el envío, se corre el riesgo de tener espacios extraños que pueden afectar a la representación del bloque. Para evitarlo, utiliza la etiqueta **Capturar** en tu bloque junto con el filtro ** de banda |**.
+Al crear bloques de contenido, puede resultar útil visualizar el código HTML y Liquid añadiendo saltos de línea. Si se dejan estos saltos de línea durante el envío, se corre el riesgo de tener espacios extraños que pueden afectar a la representación del bloque. Para evitarlo, utiliza la etiqueta **Capturar** en tu bloque junto con el filtro ** de banda |**.
 {% raw %}
 ```
 {% capture your_variable %}
@@ -69,7 +69,7 @@ Después de crear tu Bloque de Contenido, puedes insertarlo en tus mensajes sigu
 
 ### Lo que hay que saber
 
-- El uso de bloques de contenido HTML en correos electrónicos de arrastrar y soltar **o de** bloques de contenido de arrastrar y soltar en correos electrónicos HTML puede provocar problemas de representación inesperados. Esto se debe a que el editor de arrastrar y soltar genera HTML y CSS que representan dinámicamente el contenido, mientras que el editor HTML es más estático.
+- El uso de bloques de contenido HTML en correos electrónicos de arrastrar y soltar **o** bloques de contenido de arrastrar y soltar en correos electrónicos HTML puede provocar problemas de visualización inesperados. Esto se debe a que el editor de arrastrar y soltar genera HTML y CSS que representan de manera dinámica el contenido, mientras que el editor HTML es más estático.
 - Las propiedades del evento Canvas sólo se admiten en un Canvas. Si haces referencia a un bloque de contenido con propiedades de entrada de Canvas en una campaña, no se rellenará.
 
 ### Actualizar y copiar bloques de contenido
@@ -88,9 +88,9 @@ También puede [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates
 
 Después de añadir un Bloque de Contenido en una campaña o Lienzo activo, puedes previsualizar este Bloque de Contenido desde la Biblioteca de Bloques de Contenido pasando el ratón por encima del Bloque de Contenido y seleccionando el icono <i class="fa fa-eye preview-icon"></i> **Preview**. 
 
-Esta vista previa incluye información sobre el bloque de contenido, como quién lo creó, etiquetas, fecha de creación, fecha de la última edición, descripción, tipo de editor, recuento de inclusiones con detalles y una vista previa real del bloque de contenido.
+Esta vista previa incluye información sobre el bloque de contenido, como quién lo creó, etiquetas, fecha de creación, fecha de última edición, descripción, tipo de editor, recuento de inclusiones con detalles (una lista en la que se puede hacer clic de mensajes o bloques de contenido que utilizan el bloque de contenido) y una vista previa real del bloque de contenido.
 
-![Vista previa de un bloque de contenido "Workout_Promo" para ciclismo y baile que tiene seis inclusiones.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
+![Una vista previa de un bloque de contenido"Workout_Promo" para ciclismo y baile que tiene una inclusión.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Anidamiento de bloques de contenido
 
@@ -100,13 +100,13 @@ Los bloques de contenido pueden anidarse, pero sólo una vez. Puede anidar el bl
 Nada le impedirá anidar un tercer nivel de Bloque de Contenido, pero no verá expandirse el contenido en los anidados más allá del segundo. El contenido y el fragmento de Liquid se eliminan del mensaje.
 {% endalert %}
 
-### Utilizar pies de página de correo electrónico en bloques de contenido {#email-footers}
+### Uso de pies de página de correo electrónico en bloques de contenido {#email-footers}
 
-Los bloques de contenido no pueden utilizarse dentro del pie de página de un correo electrónico, pero puedes crear un bloque de contenido que incluya contenido del pie de página para utilizarlo en tus correos electrónicos. Para ello, sigue estos pasos:
+Los bloques de contenido no se pueden utilizar en el pie de página de un correo electrónico, pero puedes crear un bloque de contenido que incluya contenido de pie de página para utilizarlo en tus correos electrónicos. Para ello, sigue estos pasos:
 
 1. Ve a **Configuración** > **Preferencias de correo electrónico** > **Pie de página personalizado** y crea el pie de página.
-2. Añade el pie de página a un bloque de contenido de **la biblioteca de bloques de contenido**.
-3. Añade ese bloque de contenido a tus plantillas de correo electrónico o mensajes.
+2. Añade el pie de página a un bloque de contenido en la **biblioteca de bloques de contenido**.
+3. Añade ese bloque de contenido a tus plantillas o mensajes de correo electrónico.
 
 ¡Ahora puedes utilizar el mismo pie de página en varios mensajes!
 
@@ -114,14 +114,14 @@ Los bloques de contenido no pueden utilizarse dentro del pie de página de un co
 
 ![Menú desplegable de Configuración ampliado que muestra tres opciones: Archivar, Duplicar y Copiar en espacio de trabajo.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
-Cuando hayas terminado de utilizar un bloque de contenido, puedes archivarlo desde la página [Plantillas & Medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Los bloques de contenido archivados son de sólo lectura, así que desarchívelos antes de editarlos. Los bloques de contenido no pueden archivarse si se utilizan en algún mensaje.
+Una vez que hayas terminado de utilizar un bloque de contenido, puedes archivarlo desde la página [Plantillas y& medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Los bloques de contenido archivados son de sólo lectura, así que desarchívelos antes de editarlos. Los bloques de contenido no pueden archivarse si se utilizan en algún mensaje.
 
 #### Buenas prácticas
 
 - Si el bloque sólo se utiliza en unos pocos mensajes de correo electrónico, recomendamos archivar el bloque obsoleto y actualizar los mensajes en directo con un bloque más reciente que no se haya archivado.
 - Cuando tu bloque solo tiene una errata o necesita un cambio menor, no recomendamos archivarlo. En lugar de eso, ¡actualiza el bloque y empieza a enviar!
-- Cuando tu bloque se utilice en más mensajes de los que puedes gestionar razonablemente con la primera sugerencia de esta lista, te recomendamos que elimines todo el contenido del bloque. Esto evita que se incluya información obsoleta en los mensajes.
+- Cuando tu bloque se utilice en más mensajes de los que puedas gestionar razonablemente con la primera sugerencia de esta lista, te recomendamos eliminar todo el contenido del bloque. Esto evita que se incluya información obsoleta en los mensajes.
 - Si accidentalmente archivas un bloque de contenido, puedes desarchivarlo.
 
-![Panel de bloques de contenido guardados en el que el menú desplegable de configuración de "Test_32" se amplía para mostrar tres opciones: Desarchivar, duplicar y copiar en el espacio de trabajo]({% image_buster /assets/img/unarchive-content-block.png %})
+![Panel Bloques de contenido guardado, donde el menú desplegable de configuración"Test_32" se expande para mostrar tres opciones: Desarchivar, duplicar y copiar en el espacio de trabajo]({% image_buster /assets/img/unarchive-content-block.png %})
 
