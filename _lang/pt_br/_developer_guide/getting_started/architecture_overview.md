@@ -48,16 +48,16 @@ Esse banco de dados de perfil de usuário centrado na pessoa permite velocidade 
 
 ### Divisão da fonte de dados
 
-O Braze utiliza diferentes sistemas de armazenamento de dados para várias funcionalidades. Entender quais funcionalidades utilizam quais fontes de dados é importante para a gestão de dados e solução de problemas.
+O Braze utiliza diferentes sistemas de armazenamento de dados para várias funcionalidades. Entender quais funcionalidades usam quais fontes de dados é importante para a gestão de dados e resolução de problemas.
 
-#### Funcionalidades alimentadas por MongoDB
+#### Funcionalidades baseadas em MongoDB
 - Eventos personalizados (monitorados pelo SDK e pela API)
 - Atributos personalizados
 - Perfis de usuário
 - Eventos de compra
 - A maioria das funcionalidades de segmentação e direcionamento
 
-#### Funcionalidades alimentadas por Snowflake
+#### Funcionalidades baseadas em Snowflake
 - [Extensões de segmento do SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)
 - [Conjunto de Previsões]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)
 - [Caminhos Personalizados]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/) e [Variante Personalizada]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
@@ -65,7 +65,7 @@ O Braze utiliza diferentes sistemas de armazenamento de dados para várias funci
 - [Taxa de Abertura Real Estimada]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (não utiliza eventos personalizados)
 
 {% alert important %}
-**Considerações sobre remoção de dados:** Eventos personalizados são armazenados no MongoDB e são separados dos dados do Snowflake. Se você precisar remover dados de eventos personalizados errôneos, deve tratá-los no MongoDB. Funcionalidades alimentadas por Snowflake (como Extensões de Segmento SQL e outras funcionalidades alimentadas por Snowflake) utilizam dados do Snowflake, que são tratados separadamente. Remover dados de um sistema não remove automaticamente do outro.
+**Considerações sobre remoção de dados:** Eventos personalizados são armazenados no MongoDB e são separados dos dados do Snowflake. Se você precisar remover dados de eventos personalizados errôneos, deve tratá-los no MongoDB. Funcionalidades baseadas em Snowflake (como Extensões de Segmento SQL e outras funcionalidades baseadas em Snowflake) utilizam dados do Snowflake, que são tratados separadamente. Remover dados de um sistema não remove automaticamente do outro.
 {% endalert %}
 
 ### Fontes de dados de backend através da API do Braze
@@ -77,7 +77,7 @@ O Braze captura automaticamente dados primários de fontes de dados de front-end
 ### Integrações com parceiros
 A Braze tem mais de 150 parceiros tecnológicos, que chamamos de "Alloys". Você pode complementar seus Data Feeds por meio de uma rede significativamente robusta de [tecnologias interoperáveis e APIs de dados.]({{site.baseurl}}/partners/home) 
 
-### Conexão direta com o armazém através da Ingestão de Dados em Nuvem do Braze
+### Conexão direta com o armazém através da Ingestão de Dados na Nuvem do Braze
 É possível enviar dados de clientes de seu data warehouse para a plataforma por meio da [Ingestão de dados para nuvem da Braze]({{site.baseurl}}/user_guide/data/cloud_ingestion/) em apenas alguns minutos, permitindo a sincronização de atributos, eventos e compras relevantes do usuário. A integração da ingestão de dados para a nuvem oferece suporte a estruturas de dados complexas, incluindo JSON aninhado e vetores de objetos.
 
 A ingestão de dados na nuvem pode sincronizar dados do Snowflake, Amazon Redshift, Databricks e Google BigQuery.
