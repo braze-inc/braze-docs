@@ -73,6 +73,27 @@ braze.logCustomEvent('YOUR_EVENT_NAME');
 ```
 {% endtab %}
 
+{% tab cordova %}
+Braze Cordova 플러그인 메서드를 사용하세요:
+
+```javascript
+BrazePlugin.logCustomEvent("YOUR_EVENT_NAME");
+```
+
+`logCustomEvent` API는 다음을 수락합니다:
+- `eventName` (필수 문자열): 최대 255자를 사용하세요. 이름을 `$`로 시작하지 마세요. 영숫자 및 구두점을 사용하세요.
+- `eventProperties` (선택적 객체): 이벤트 메타데이터에 대한 키-값 쌍을 추가하세요. 키는 최대 255자를 사용하고, 키를 `$`로 시작하지 마세요.
+
+속성 값의 경우, `string` (최대 255자), `numeric`, `boolean`, 배열 또는 중첩된 JSON 객체를 사용하세요.
+
+구현 세부정보는 Braze Cordova SDK 소스를 참조하세요:
+- [`www/BrazePlugin.js` `logCustomEvent` 메서드 (138-140행)<1>
+- [`www/BrazePlugin.js` JSDoc (128-140행)<1>
+- [Android 핸들러 `src/android/BrazePlugin.kt` (108-115행)<1>
+- [iOS 핸들러 `src/ios/BrazePlugin.m` (308-313행)<1>
+- [iOS 메서드 선언 `src/ios/BrazePlugin.h` (24행)<1>
+{% endtab %}
+
 {% tab infillion %}
 [인필리온 비콘을](https://infillion.com/software/beacons/) Android 앱에 통합한 경우 선택적으로 `visit.getPlace()` 을 사용하여 위치별 이벤트를 기록할 수 있습니다. `requestImmediateDataFlush` 은 앱이 백그라운드에 있는 경우에도 이벤트가 기록되는지 확인합니다.
 
@@ -226,6 +247,61 @@ braze.logCustomEvent('custom_event_with_properties', properties: {
 ```
 {% endtab %}
 
+{% tab cordova %}
+속성 객체로 커스텀 이벤트 기록하기:
+
+```javascript
+var properties = {};
+properties["key1"] = "value1";
+properties["key2"] = ["value2", "value3"];
+properties["key3"] = false;
+BrazePlugin.logCustomEvent("YOUR-EVENT-NAME", properties);
+```
+
+속성을 인라인으로 전달할 수도 있습니다:
+
+```javascript
+BrazePlugin.logCustomEvent("YOUR-EVENT-NAME", {
+  "key": "value",
+  "amount": 42,
+});
+```
+
+공식 Cordova 샘플 앱에는 문자열, 숫자, 불리언, 배열 및 중첩 객체 속성이 포함되어 있습니다:
+- [`sample-project/www/js/index.js` (230-251행)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/sample-project/www/js/index.js#L230-L251)
+
+샘플 프로젝트 발췌:
+
+```javascript
+var properties = {};
+properties["One"] = "That's the Way of the World";
+properties["Two"] = "After the Love Has Gone";
+properties["Three"] = "Can't Hide Love";
+BrazePlugin.logCustomEvent("cordovaCustomEventWithProperties", properties);
+BrazePlugin.logCustomEvent("cordovaCustomEventWithoutProperties");
+BrazePlugin.logCustomEvent("cordovaCustomEventWithFloatProperties", {
+  "Cart Value": 4.95,
+  "Cart Item Name": "Spicy Chicken Bites 5 pack"
+});
+BrazePlugin.logCustomEvent("cordovaCustomEventWithNestedProperties", {
+  "array key": [1, "2", false],
+  "object key": {
+    "k1": "1",
+    "k2": 2,
+    "k3": false,
+  },
+  "deep key": {
+    "key": [1, "2", true]
+  }
+});
+```
+
+API 및 네이티브 브리지 세부정보는 다음을 참조하십시오:
+- [`www/BrazePlugin.js` JSDoc (128-140행)<1>
+- [Android 핸들러 `src/android/BrazePlugin.kt` (108-115행)<1>
+- [iOS 핸들러 `src/ios/BrazePlugin.m` (308-313행)<1>
+{% endtab %}
+
 {% tab react native %}
 ```javascript
 Braze.logCustomEvent("custom_event_with_properties", {
@@ -255,7 +331,7 @@ AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>
 
 ## Best practices
 
-커스텀 이벤트 속성이 예상대로 기록되도록 수행해야 할 세 가지 중요한 점검이 있습니다:
+커스텀 이벤트 속성이 예상대로 기록되도록 수행해야 할 세 가지 중요한 확인 사항이 있습니다:
 
 * [어떤 이벤트가 기록되는지 확인](#verify-events)
 * [로그 확인](#verify-log)
@@ -277,11 +353,11 @@ AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>
 
 1. **데이터 설정** > **사용자 지정 이벤트로** 이동합니다.
 2. 목록에서 커스텀 이벤트를 찾으세요.
-3. 이벤트에 대해 **속성 관리**를 선택하여 이벤트와 관련된 속성의 이름을 확인합니다.
+3. 이벤트에 대해 **속성 관리**를 선택하여 이벤트와 관련된 속성의 이름을 확인하십시오.
 
 ### 값 확인
 
-테스트 사용자로 [사용자 추가]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#adding-test-users)한 후, 값을 확인하기 위해 다음 단계를 따르세요: 
+[테스트 사용자로 사용자 추가한 후]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#adding-test-users), 값을 확인하려면 다음 단계를 따르십시오: 
 
 1. 앱 내에서 커스텀 이벤트를 수행합니다.
 2. 데이터가 플러시될 때까지 약 10초 정도 기다리세요.
