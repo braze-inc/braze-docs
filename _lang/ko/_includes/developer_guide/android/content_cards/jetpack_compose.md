@@ -12,7 +12,7 @@ setContent {
 
 ## 카드 클릭 처리
 
-카드 클릭을 처리하려면 `Card`를 가져와 `Boolean`을 `onCardClicked`로 반환하는 함수를 전달합니다. `true`가 반환되면 Braze는 분석을 위해 기록하는 작업 외에 클릭에 대한 어떠한 처리도 하지 않습니다. `false` 이 반환되면 Braze가 클릭을 처리합니다.
+카드 클릭을 처리하려면 `Card`를 가져와 `Boolean`을 `onCardClicked`로 반환하는 함수를 전달합니다. `true`가 반환되면 Braze는 분석을 위해 기록하는 작업 외에 클릭에 대한 어떠한 처리도 하지 않습니다. `false`가 반환되면, Braze는 클릭을 처리합니다.
 
 ```kotlin
 ContentCardsList(
