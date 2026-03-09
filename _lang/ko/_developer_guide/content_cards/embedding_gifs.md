@@ -1,6 +1,6 @@
 ---
 nav_title: GIF 삽입
-article_title: 콘텐츠 카드에 GIF 삽입하기
+article_title: 콘텐츠 카드에 GIF 삽입
 page_order: 5
 description: "Braze SDK를 사용하여 콘텐츠 카드에 GIF를 삽입하는 방법을 알아보세요."
 channel:
@@ -12,7 +12,7 @@ platform:
   - FireOS
 ---
 
-# 콘텐츠 카드에 GIF 삽입하기
+# 콘텐츠 카드에 GIF 삽입
 
 > Braze SDK를 사용하여 콘텐츠 카드에 GIF를 삽입하는 방법을 알아보세요.
 
