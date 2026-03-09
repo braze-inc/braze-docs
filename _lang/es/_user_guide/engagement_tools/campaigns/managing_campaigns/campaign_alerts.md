@@ -30,7 +30,7 @@ Vaya a la página de análisis de su campaña para empezar a configurar su alert
 
 Para una campaña recurrente programada, puede establecer umbrales superiores e inferiores para los mensajes enviados cada vez que se envíe la campaña. Para una campaña activada, puede establecer umbrales superiores e inferiores para el número de mensajes enviados cada hora y cada día.
 
-Puedes configurar una alerta por correo electrónico, una alerta por webhook o ambas. Las alertas webhook pueden ser muy útiles, ya que te permiten enviar una alerta a un canal de Slack. Para obtener más información sobre la integración de las alertas de campaña con Slack, consulta la documentación de Slack para [Enviar mensajes utilizando webhooks entrantes](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/).
+Puedes configurar una alerta por correo electrónico, una alerta por webhook o ambas. Las alertas webhook pueden ser muy útiles, ya que te permiten enviar una alerta a un canal de Slack. Para obtener más información sobre cómo integrar las alertas de campaña con Slack, consulta la documentación de Slack sobre [cómo enviar mensajes utilizando webhooks entrantes](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/).
 
 {% alert note %}
 Al configurar alertas de campaña para futuras campañas, puede recibir actualizaciones antes de que comience la campaña y después de que finalice. Esto se debe a que las alertas de campaña continuarán enviándose hasta que la campaña se haya detenido manualmente.
