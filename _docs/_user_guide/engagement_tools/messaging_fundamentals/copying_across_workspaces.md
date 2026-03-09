@@ -85,7 +85,7 @@ Note that the following is not a comprehensive list of what is copied across wor
 | Quiet time configurations | Trigger schedule | 
 | Frequency capping configurations | Canvas summaries | 
 | Recipient subscription state | Filters | 
-| Recurring schedule |  | 
+| Recurring schedule | Exit criteria | 
 | Is Transactional |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
