@@ -1,10 +1,16 @@
 {% if include.section == "Prerequisites" %}
 ## Pré-requisitos
 
-Para editar e gerenciar [o suporte a vários idiomas]({{site.baseurl}}/multi_language_support/), é necessário ter a permissão de usuário "Manage Multi-Language Settings" (Gerenciar configurações de vários idiomas). Para adicionar a localização a uma mensagem, você precisará de permissões para editar campanhas.
+Para editar e gerenciar [suporte multilíngue]({{site.baseurl}}/multi_language_support/), você precisa das seguintes [permissões de usuário]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) para o seu espaço de trabalho:
+
+- Ver Configurações de Múltiplas Línguas
+- Criar Configurações de Localidade Multilíngue
+- Excluir Configurações de Localidade Multilíngue
+
+Para adicionar a localidade a uma mensagem, você precisa da permissão "Editar Campanhas".
 
 {% alert important %}
-O suporte a vários idiomas está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
+O suporte multilíngue está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
 {% endalert %}
 
 {% endif %}
@@ -13,7 +19,7 @@ O suporte a vários idiomas está atualmente em acesso antecipado. Entre em cont
 
 ## Faça uma prévia de suas localidades
 
-No menu suspenso **Visualizar mensagem como usuário** na guia **Teste**, selecione **Usuário personalizado** e insira idiomas diferentes para prévia da mensagem e verifique se a mensagem foi traduzida conforme o esperado.
+No dropdown **Prévia da mensagem como usuário** dentro da aba **Teste**, selecione **Usuário personalizado** e insira diferentes idiomas para visualizar a mensagem e verificar se sua mensagem é traduzida conforme esperado.
 
 {% endif %}
 
@@ -21,14 +27,14 @@ No menu suspenso **Visualizar mensagem como usuário** na guia **Teste**, seleci
 
 ## Perguntas frequentes
 
-#### Posso fazer uma alteração na cópia traduzida em uma de minhas localizações?
-Sim. Primeiro, faça a edição no CSV e, em seguida, faça upload do arquivo novamente para fazer uma alteração na cópia traduzida.
+#### Posso fazer uma alteração na cópia traduzida em uma das minhas localidades?
+Sim. Primeiro, faça a edição no CSV, depois faça upload do arquivo novamente para alterar a cópia traduzida.
 
 #### Posso aninhar tags de tradução?
 Não.
 
 #### Posso adicionar estilo HTML nas tags de tradução?
-Sim, mas certifique-se de verificar se o estilo HTML não está traduzido com o conteúdo.
+Sim, mas certifique-se de verificar se a formatação HTML não é traduzida junto com o conteúdo.
 
 #### Que validações ou verificações extras o Braze faz?
 
