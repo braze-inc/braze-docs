@@ -258,7 +258,7 @@ Para direcionar apps OTT para envio de mensagens, recomendamos criar um segmento
 ## Headless UI {#custom-ui}
 
 {% alert important %}
-Plataformas que suportam mensagens in-app ou Cartões de Conteúdo através de UI headless **não** incluem qualquer UI ou visualizações padrão. Crie sua própria UI personalizada (como para mensagens in-app) e depois use os modelos de dados fornecidos pelo SDK para preencher essas UIs.
+Plataformas que suportam mensagens in-app ou Cartões de Conteúdo através de UI headless **não** incluem qualquer UI ou visualizações padrão. Crie sua própria UI personalizada (como para mensagens in-app) e use os modelos de dados fornecidos pelo SDK para preencher essas UIs.
 {% endalert %}
 
 Com a Headless UI, a Braze fornecerá um modelo de dados, como JSON, que seu app pode ler e usar dentro de uma interface de usuário que seu app controla. Esses dados conterão os campos configurados no dashboard (título, corpo, texto do botão, cores, etc.) que seu app pode ler e exibir de acordo. Para saber mais sobre o envio de mensagens personalizadas, consulte:
