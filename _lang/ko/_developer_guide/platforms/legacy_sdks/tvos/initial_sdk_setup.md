@@ -116,7 +116,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 2019년 12월부터 커스텀 엔드포인트는 더 이상 제공되지 않으며, 기존 커스텀 엔드포인트가 있는 경우 계속 사용할 수 있습니다. 자세한 내용은 <a href="{{site.baseurl}}/api/basics/#endpoints">사용 가능한 엔드포인트 목록</a>을 참조하십시오.
 {% endalert %}
 
-Braze 담당자가 이미 [올바른 엔드포인트]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/) 를 알려드렸을 것입니다.
+당신의 Braze 담당자는 이미 [올바른 엔드포인트]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/)에 대해 조언했어야 합니다.
 
 #### 컴파일 타임 엔드포인트 구성(권장)
 기존 사용자 지정 엔드포인트가 있는 경우:
