@@ -1,7 +1,7 @@
 ---
 nav_title: メッセージ
 article_title: メッセージングエンドポイント
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 3
 local_redirect: #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
   app-group-rest-api-key: '/docs/api/basics/#rest-api-key'
@@ -25,7 +25,7 @@ description: "このランディングページには、Braze メッセージン
 page_type: landing
 
 guide_top_header: "メッセージングエンドポイント"
-guide_top_text: "Braze メッセージング API でユーザーにメッセージを送信する方法は、2 種類あります。および `/messages/schedule` エンドポイントを使用して、API リクエストで <code class='highlighter-rouge'>/messages/send</code> メッセージの内容と構成を指定できます。また、BrazeダッシュボードでAPIトリガーキャンペーンを使ってメッセージの詳細を管理し、`/campaigns/trigger/send`と`/campaigns/trigger/schedule`エンドポイントを使って、いつ誰に送信するかをコントロールすることもできる。以下のセクションでは、両方のメソッドのリクエスト指定について詳しく説明します。<br> <br> 他のキャンペーンと同様に、ダッシュボードで[re-eligibility settings]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-API-triggered-campaigns)を設定することで、特定のユーザーがメッセージングAPIキャンペーンを受け取ることができる回数を制限することができる。Braze は、送信されたAPI リクエスト数に関係なく、キャンペーンの再受信を設定していないユーザーには API メッセージを配信しません。<br> <br> 「メッセージを送信」エンドポイントでは、指定したユーザーに即時メッセージを送信できます。セグメントをターゲットにしている場合、リクエストの記録は **メッセージアクティビティログ** に保存されます。「メッセージをスケジュール」エンドポイントを使用して、指定した時間にメッセージを送信するか、すでにスケジュールしたメッセージを変更またはキャンセルします。"
+guide_top_text: "Braze メッセージング API でユーザーにメッセージを送信する方法は、2 種類あります。および `/messages/schedule` エンドポイントを使用して、API リクエストで <code class='highlighter-rouge'>/messages/send</code> メッセージの内容と構成を指定できます。代わりに、BrazeダッシュボードでAPIトリガー型キャンペーンを使ってメッセージの詳細を管理し、`/campaigns/trigger/send`と`/campaigns/trigger/schedule`エンドポイントで送信時期と送信先をコントロールできる。以下のセクションでは、両方のメソッドのリクエスト指定について詳しく説明します。<br> <br> 他のキャンペーンと同様に、Braze ダッシュボードで [再資格設定](/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) を構成することで、特定のユーザーがメッセージング API キャンペーンを受信できる回数を制限できます。Braze は、送信されたAPI リクエスト数に関係なく、キャンペーンの再受信を設定していないユーザーには API メッセージを配信しません。<br> <br> 「メッセージを送信」エンドポイントでは、指定したユーザーに即時メッセージを送信できます。セグメントをターゲットにしている場合、リクエストの記録は **メッセージアクティビティログ** に保存されます。「メッセージをスケジュール」エンドポイントを使用して、指定した時間にメッセージを送信するか、すでにスケジュールしたメッセージを変更またはキャンセルします。"
 
 guide_featured_title: "「メッセージをスケジュール」エンドポイント"
 guide_featured_list:
