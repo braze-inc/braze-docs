@@ -20,6 +20,9 @@ guide_featured_list:
 - name: 보안 설정
   link: /docs/user_guide/administrative/app_settings/company_settings/security_settings/
   image: /assets/img/braze_icons/shield-01.svg
+- name: 작업 공간 시간대
+  link: /docs/user_guide/administrative/app_settings/company_settings/workspace_time_zone/
+  image: /assets/img/braze_icons/user-circle.svg
 - name: 자동화된 사용자 프로비저닝
   link: /docs/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/
   image: /assets/img/braze_icons/user-plus-01.svg
