@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Exportar análisis de campaña"
 article_title: "GET: Exportar análisis de campaña"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -222,7 +222,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 }
 ```
 
-Los posibles tipos de mensajería son: `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push`, y `web_push`. Todos los tipos de mensajes push tendrán las mismas estadísticas mostradas para `android_push`.
+Los posibles tipos de mensajería son: `email`, `trigger_in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push`, y `web_push`. Todos los tipos de mensajes push tendrán las mismas estadísticas mostradas para `android_push`.
 
 {% alert tip %}
 Para obtener ayuda con las exportaciones CSV y API, visita [Solución de problemas de exportación]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
