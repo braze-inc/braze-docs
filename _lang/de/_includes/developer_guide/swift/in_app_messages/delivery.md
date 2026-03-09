@@ -16,11 +16,11 @@ Alle in Frage kommenden In-App-Nachrichten werden dem Gerät eines Nutzers:innen
 
 Weitere Informationen über die Semantik des SDK für den Sitzungsstart finden Sie unter [Sitzungslebenszyklus]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift).
 
-### Standard Rate-Limits
+### Standard-Rate-Limits
 
 Standardmäßig können Sie einmal alle 30 Sekunden eine In-App-Nachricht senden.
 
-Um dies außer Kraft zu setzen, fügen Sie die Eigenschaft `triggerMinimumTimeInterval` zu Ihrer Braze-Konfiguration hinzu, bevor die Braze-Instanz initialisiert wird. Er kann auf eine beliebige positive ganze Zahl gesetzt werden und stellt das minimale Zeitintervall in Sekunden dar. Zum Beispiel:
+Um dies zu überschreiben, fügen Sie die`triggerMinimumTimeInterval`Eigenschaft zu Ihrer Braze-Konfiguration hinzu, bevor die Braze-Instanz initialisiert wird. Es kann auf jede positive ganze Zahl eingestellt werden und stellt das minimale Zeitintervall in Sekunden dar. Zum Beispiel:
 
 {% tabs %}
 {% tab swift %}
@@ -52,7 +52,7 @@ AppDelegate.braze = braze;
 
 ## Schlüssel-Wert-Paare
 
-Wenn Sie eine Kampagne in Braze erstellen, können Sie Schlüssel-Wert-Paare als `extras` festlegen, die das In-App-Nachricht-Objekt verwenden kann, um Daten an Ihre App zu senden. Zum Beispiel:
+Wenn Sie eine Kampagne in Braze erstellen, können Sie Schlüssel-Wert-Paare festlegen, die das `extras`In-App-Messaging-Objekt verwenden kann, um Daten an Ihre App zu senden. Zum Beispiel:
 
 {% tabs %}
 {% tab swift %}
@@ -135,11 +135,11 @@ Da eine Push-Nachricht verwendet wird, um ein vom SDK protokolliertes angepasste
 
 Erstellen Sie eine [Kampagne mit einer stillen Push-Benachrichtigung]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift), die über das vom Server gesendete Event ausgelöst wird. 
 
-![Eine aktionsbasierte Zustellung In-App-Nachricht-Kampagne, die Benutzern zugestellt wird, in deren Benutzerprofil das angepasste Event "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+![Eine aktionsbasierte Zustellung von In-App-Nachrichten, die an Benutzer zugestellt wird, deren Kundenprofile das angepasste Event/assets/img_archive/iosServerSentPush.pngimage_buster"server_event".]({%%}) enthalten.
 
 Die Push-Kampagne muss zusätzliche Schlüssel-Wert-Paare (Extras) enthalten, die angeben, dass diese Push-Kampagne gesendet wird, um ein angepasstes SDK-Event zu protokollieren. Dieses Event wird verwendet, um die In-App-Nachricht zu triggern.
 
-![Eine Kampagne mit aktionsbasierter Zustellung von In-App-Nachrichten, die zwei Schlüssel-Wert-Paare enthält. "CAMPAIGN_NAME" ist auf "In-App-Nachricht Beispiel" und "IS_SERVER_EVENT" auf "wahr" eingestellt.]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![Eine aktionsbasierte Zustellung von In-App-Nachrichten mit zwei Schlüssel-Wert-Paaren."CAMPAIGN_NAME"  Setzen Sie „Beispiel für den Namen der In-App-Nachricht“ und"IS_SERVER_EVENT"  setzen Sie „true“.]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 Der Code in der Methode `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` prüft auf den Schlüssel `IS_SERVER_EVENT` und protokolliert ein angepasstes SDK-Event, wenn dieser vorhanden ist.
 
@@ -151,13 +151,13 @@ Erstellen Sie im Braze-Dashboard eine für Ihre Nutzer sichtbare In-App-Nachrich
 
 Im folgenden Beispiel wurde die zu triggernde In-App-Nachricht konfiguriert, indem die Event-Eigenschaft im Rahmen des usprünglichen stillen Push gesendet wurde.
 
-![Eine aktionsbasierte Zustellung von In-App-Nachricht-Kampagnen, die Benutzern zugestellt wird, die das angepasste Event "In-App-Nachricht-Auslöser" ausführen, wobei "campaign_name" gleich "IAM-Kampagnenname Beispiel" ist.]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Eine aktionsbasierte Zustellung von In-App-Nachrichten, die an Benutzer zugestellt wird, die das angepasste Event „In-App-Nachrichtenauslöser“ ausführen, wobei"campaign_name"  gleich „IAM-Kampagnenname Beispiel“ ist.]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 {% alert note %}
 Beachten Sie, dass diese In-App-Nachrichten nur ausgelöst werden, wenn sich die Anwendung beim Empfang der stillen Push-Benachrichtigung im Vordergrund befindet.
 {% endalert %}
 
-### Anzeigen einer vordefinierten
+### Anzeige einer vordefinierten
 
 Um eine vordefinierte In-App-Nachricht manuell anzuzeigen, verwenden Sie die folgende Methode:
 
@@ -169,7 +169,7 @@ if let inAppMessage = AppDelegate.braze?.inAppMessagePresenter?.nextAvailableMes
 
 ### Anzeige einer Nachricht in Realtime
 
-Sie können auch lokale In-App-Nachrichten in Realtime anzeigen, indem Sie manuell die [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:)) Methode auf Ihrer `inAppMessagePresenter` aufrufen. Zum Beispiel:
+Sie können lokale In-App-Nachrichten auch in Realtime anzeigen, indem Sie die[`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:))Methode manuell in Ihrer aufrufen`inAppMessagePresenter`. Zum Beispiel:
 
 {% tabs %}
 {% tab swift %}
