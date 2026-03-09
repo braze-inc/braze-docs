@@ -333,3 +333,10 @@ While CDI Canvas triggers are in early access, consider the following details:
   * Be prepared for longer source-to-Canvas entry times when:  
     * Syncing more than 3.75M users per sync run.  
     * Using CDI Canvas triggers when already saturating your REST API's [rate limit for `/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#rate-limit).
+
+Consider the following about Zero Copy CDI when Message Archiving is enabled:
+
+* The results of the table are temporarily stored in Braze during processing. They are also exported to Snowflake for 30 days so you can view exactly what was synced.
+* Message Archiving is not saved anywhere within Braze. The copies are sent to be stored exclusively in your configured storage.
+* When using Zero Copy CDI with Canvas triggers, Braze doesn’t store a backup of the query results from the data warehouse and no data is copied into the user profile.
+* Canvas context properties may be logged in internal systems for up to 30 days.
