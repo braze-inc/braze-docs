@@ -2,14 +2,14 @@
 
 ## À propos des messages HTML
 
-Grâce à l'interface JavaScript de Braze, vous pouvez exploiter Braze à l'intérieur des WebViews personnalisées de votre application. Le [`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html) est responsable de :
+Grâce à l'interface JavaScript Braze, vous pouvez utiliser Braze dans les WebViews personnalisées de votre application. Le/la[`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html)est responsable de :
 
-1. Injecter le pont JavaScript de Braze dans votre WebView, comme indiqué dans le guide d'utilisation de [: Messages HTML in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages).
-2. Transmission des méthodes de pont reçues de votre WebView au [SDK Android de Braze](https://github.com/braze-inc/braze-android-sdk).
+1. Intégration du pont JavaScript Braze dans votre WebView, comme indiqué dans le guide[ de l'utilisateur : Messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) HTML.
+2. Transmission des méthodes de pontage reçues de votre WebView au [SDK Android Braze](https://github.com/braze-inc/braze-android-sdk).
 
 ## Ajouter l'interface à une WebView
 
-L’utilisation de la fonctionnalité de Braze à partir d’une WebView dans votre application peut être effectuée en ajoutant l’interface JavaScript de Braze à votre WebView. Après l'ajout de l'interface, la même API est disponible pour [User Guide : Les messages in-app au format HTML]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) seront disponibles dans votre WebView personnalisé.
+L’utilisation de la fonctionnalité de Braze à partir d’une WebView dans votre application peut être effectuée en ajoutant l’interface JavaScript de Braze à votre WebView. Une fois l'interface ajoutée, la même API est disponible pour le guide[ de l'utilisateur : Les messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) HTML seront accessibles dans votre WebView personnalisé.
 
 {% tabs %}
 {% tab JAVA %}
@@ -36,7 +36,7 @@ myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge")
 {% endtab %}
 {% endtabs %}
 
-## Intégrer du contenu YouTube
+## Intégration de contenu YouTube
 
 YouTube et d’autres contenus HTML5 peuvent être joués dans des messages in-app HTML. Cela nécessite que l’accélération matérielle soit activée dans l’activité où le message in-app est affiché. Consultez le [guide du développeur Android](https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling) pour plus de détails. L’accélération matérielle est uniquement disponible sur les versions 11 et ultérieures des API Android.
 
@@ -54,9 +54,9 @@ Voici un exemple de vidéo YouTube intégrée dans un extrait de code HTML :
 </body>
 ```
 
-## Utilisation de liens profonds
+## Utilisation des liens profonds
 
-Lors de la création de liens profonds ou de liens externes dans les messages in-app d'Android HTML, **n'** appelez **pas** `brazeBridge.closeMessage()` dans votre JavaScript. La logique interne du SDK ferme automatiquement le message in-app lorsqu'il redirige vers un lien. L'appel à `brazeBridge.closeMessage()` interfère avec ce processus et peut entraîner l'absence de réponse du message lorsque les utilisateurs reviennent à votre application. 
+Lorsque vous utilisez des liens profonds ou des liens externes dans des messages in-app Android, **veuillez ne pas** appeler`brazeBridge.closeMessage()`  dans votre JavaScript. La logique interne du SDK ferme automatiquement le message in-app lorsqu'il redirige vers un lien. Les appels`brazeBridge.closeMessage()`interfèrent avec ce processus et peuvent entraîner un blocage du message lorsque les utilisateurs reviennent à votre application. 
 
 Voici un exemple de lien profond dans un extrait de code :
 
