@@ -35,7 +35,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishwar
 }'
 ```
 
-Tras enviar esta carga útil, la respuesta confirma que Braze ha eliminado correctamente las tres colecciones del catálogo de vajillas de Kitchenerie.
+Después de enviar esta carga útil, la respuesta confirma que Braze ha eliminado correctamente las tres colecciones del catálogo de vajillas de Kitchenerie.
 
 ```json
 {
@@ -53,7 +53,7 @@ En MovieCanon, una empresa de servicios de streaming, el equipo de desarrollador
 - delilah.york@example.com
 - evergreen.rebecca@example.com
 
-Para realizar esta tarea, el equipo de desarrolladores necesita una clave de API con el permiso `email.spam.remove` para utilizar el punto final `/email/spam/remove`. Este punto final elimina direcciones de correo electrónico de la lista de correo no deseado de Braze y de la lista de correo no deseado mantenida por el proveedor de correo electrónico de MovieCanon.
+Para llevar a cabo esta tarea, el equipo de desarrolladores necesita una clave de API con permiso`email.spam.remove` para utilizar el`/email/spam/remove`punto final. Este punto final elimina las direcciones de correo electrónico de la lista de correo no deseado de Braze y de la lista de correo no deseado que mantiene el proveedor de correo electrónico de MovieCanon.
 
 Para enviar esta solicitud, incluye una dirección de correo electrónico de cadena o una matriz de hasta 50 direcciones de correo electrónico para modificar. Como la lista de correos electrónicos a eliminar es inferior a 50, MovieCanon puede realizar esta tarea con el siguiente cuerpo de solicitud:
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Tras enviar esta carga útil con éxito, esta respuesta confirma que Braze eliminó los correos electrónicos de la lista de correo no deseado de MovieCanon.
+Tras enviar correctamente esta carga útil, esta respuesta confirma que Braze ha eliminado los correos electrónicos de la lista de correo no deseado de MovieCanon.
 
 ```json
 {
@@ -94,7 +94,7 @@ Para la primera tarea de auditoría de Lienzos, utiliza el [punto final`/canvas/
   		"name": "PatientReminder_FluShot_2020",
   		"tags": {
         "flu_shots", "patienthealth", "2020"
-      },
+      }
   	},
   	{
   		"id": "canvas_identifier_2",
@@ -102,7 +102,7 @@ Para la primera tarea de auditoría de Lienzos, utiliza el [punto final`/canvas/
   		"name": "PatientReminder2_FluShot_2020",
   		"tags": {
         "flu_shots", "patienthealth", "reminder", "2020"
-      },
+      }
   	},
     ... (more Canvases)
   ],
@@ -126,7 +126,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## Comprobación de las próximas campañas y lonas programadas
 
-La época más ajetreada del año se acerca rápidamente para Flash & Thread, una marca de comercio minorista que vende ropa y productos de belleza en línea y en tiendas. Su equipo de marketing quiere comprobar las próximas campañas y Lienzos desde el panel de Braze antes del 31 de marzo de 2024, a las 12 h. Para ello, se puede utilizar el [punto final`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/).
+Se acerca rápidamente la época más ajetreada del año para Flash&Thread, una marca de comercio minorista que vende ropa y productos de belleza en línea y en tiendas. Su equipo de marketing quiere comprobar las próximas campañas y Lienzos desde el panel de Braze antes del 31 de marzo de 2024, a las 12 h. Para ello, se puede utilizar el [punto final`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/).
 
 Este es el ejemplo de solicitud:
 
@@ -135,11 +135,11 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-Este punto final devuelve la lista de próximas campañas y Lienzos. A partir de aquí, el equipo de marketing puede confirmar su lista de mensajes consultando el campo `name` para las campañas y Lienzos en la respuesta.
+Este punto final devuelve la lista de próximas campañas y lienzos. A partir de aquí, el equipo de marketing puede confirmar su lista de mensajes consultando el campo `name` para las campañas y Lienzos en la respuesta.
 
 ## Ver un centro de preferencias antiguo
 
-PoliterWeekly es una revista digital a la que se puede llegar a los suscriptores a través del correo electrónico. En un esfuerzo por comprender mejor el recorrido del usuario de sus suscriptores, el equipo de marketing quiere revisar los detalles del centro de preferencias de PoliterWeekly para comprobar cuándo se creó y actualizó por última vez.
+PoliterWeekly es una revista digital a la que se puede llegar a los suscriptores a través del correo electrónico. Con el fin de comprender mejor la experiencia de los suscriptores, el equipo de marketing quiere revisar los detalles del centro de preferencias de PoliterWeekly para comprobar cuándo se creó y cuándo se actualizó por última vez.
 
 Utilizando el [punto final`/preference_center/v1/{preferenceCenterExternalID}` ]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/), el equipo de marketing sólo tiene que insertar el ID externo del centro de preferencias como parámetro de ruta, que quedaría así:
 
@@ -182,7 +182,7 @@ En CashBlastr, el objetivo principal es agilizar la forma en que la gente puede 
 
 Para enviar una solicitud con el [punto final`/sms/invalid_phone_numbers/remove` ]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/), los números de teléfono deben estar en una matriz de cadenas en [formatoe.164 ](https://en.wikipedia.org/wiki/E.164), con un máximo de 50 números de teléfono por solicitud. Como la lista no supera los 50 números de teléfono, aquí tienes un ejemplo del cuerpo de la solicitud que enviaría el equipo de desarrolladores de CashBlastr:
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
@@ -190,7 +190,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Tras enviar esta carga útil, la respuesta confirma que Braze ha eliminado los números de teléfono no válidos de CashBlastr de la lista de no válidos de Braze.
+Después de enviar esta carga útil, la respuesta confirma que Braze ha eliminado los números de teléfono no válidos de CashBlastr de la lista de números no válidos de Braze.
 
 ```json
 {
@@ -209,7 +209,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 
-Este punto final también enumera los estados del grupo de suscripción de un usuario para el correo electrónico. Úsala para ver el estado del grupo de suscripción de varios usuarios.
+Este punto final también muestra los estados de los grupos de suscripción de un usuario para el correo electrónico. Úsalo para ver el estado del grupo de suscripción de varios usuarios.
 
 ## Comprobación de una plantilla HTML para mensajería por correo electrónico
 
