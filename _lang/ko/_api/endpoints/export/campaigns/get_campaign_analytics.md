@@ -222,7 +222,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 }
 ```
 
-가능한 메시지 유형은 `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push`, `web_push`입니다. 모든 푸시 메시지 유형에는 `android_push` 에 대해 동일한 통계가 표시됩니다.
+가능한 메시지 유형은 `email`, `trigger_in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push`, `web_push`입니다. 모든 푸시 메시지 유형에는 `android_push` 에 대해 동일한 통계가 표시됩니다.
 
 {% alert tip %}
 CSV 및 API 내보내기 문제 해결에 대한 도움은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)를 방문하세요.
