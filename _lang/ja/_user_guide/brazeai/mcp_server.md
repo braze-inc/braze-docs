@@ -1,7 +1,7 @@
 ---
 nav_title: Braze MCPサーバー
 article_title: Braze MCPサーバーについて
-description: "BrazeのMCPサーバーは、ClaudeやCursorのようなAIツールが、PIIではないBrazeのデータにアクセスし、データを変更することなく、質問に答えたり、傾向を分析したり、インサイトを提供できるようにする、安全な読み取り専用接続である。"
+description: "Braze MCPサーバーについて学習しよう。これは安全な読み取り専用接続であり、ClaudeやCursorのようなAIツールが非PIIのBrazeデータにアクセスして質問に答え、傾向を分析し、データを変更せずにインサイトを提供することを可能にする。"
 page_order: 3
 alias: /mcp/
 ---
