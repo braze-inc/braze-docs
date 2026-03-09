@@ -30,7 +30,7 @@ description: "Este artículo de referencia enumera filtros avanzados, ejemplos y
 | nombre del filtro | descripción del filtro | ejemplo de entrada | ejemplo de salida |
 |---|---|---|---|
 | `url_escape` | Identifica todos los caracteres de una cadena que no están permitidos en las URLS y los sustituye por sus variantes escapadas. | `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
-| `url_param_escape` | Sustituye todos los caracteres de una cadena que no están permitidos en las URL por sus variantes escapadas, incluido el ampersand (&) | `{{'hey<&>hi' | url_param_escape}}` | hey%3C%26%3Ehi |
+| `url_param_escape` | Reemplaza todos los caracteres de una cadena que no están permitidos en las URL por sus variantes escapadas, incluido el símbolo «&». (&) | `{{'hey<&>hi' | url_param_escape}}` | hey%3C%26%3Ehi |
 | `url_encode` | Codifica una cadena que sea compatible con la URL | `{{ 'google search' | url_encode }}` | google+search |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -83,12 +83,12 @@ No hay forma de instanciar un hash como variable (como una expresión) en Liquid
 
 Este filtro debe utilizarse siempre que se personalice una cadena en un diccionario JSON y es útil para los webhooks en particular.
 
-## Filtros con formato JSON
+## Filtros de formato JSON
 
 | nombre del filtro | descripción del filtro |
 |---|---|
-| `json_parse` | Convierte una cadena JSON en una estructura de datos correspondiente, como un objeto o una matriz. | 
-| `as_json_string` | Convierte una estructura de datos, como un objeto o una matriz, en la cadena JSON correspondiente. | 
+| `json_parse` | Convierte una cadena JSON en una estructura de datos correspondiente, como un objeto o una matriz de objetos. | 
+| `as_json_string` | Convierte una estructura de datos, como un objeto o una matriz de objetos, en una cadena JSON correspondiente. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
