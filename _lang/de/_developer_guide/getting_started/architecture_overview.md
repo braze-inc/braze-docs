@@ -21,7 +21,7 @@ platform:
 
 Bei Braze geht es in erster Linie um Daten. Die Braze-Plattform, unterstützt durch das SDK, die REST API und Partnerintegrationen, erlaubt Ihnen, Daten zu aggregieren und darauf zu reagieren. 
 
-![Braze hat verschiedene Schichten. Insgesamt besteht es aus dem SDK, der API, dem Dashboard und den Partnerintegrationen. Diese tragen jeweils zu einem Datenaufnahme-Layer, einem Klassifizierungs-Layer, einem Orchestrierungs-Layer, einem Personalisierungs-Layer und einem Aktions-Layer bei. Die Aktionsschicht verfügt über verschiedene Kanäle, darunter Push, In-App-Nachrichten, Connected Catalog, Webhook, SMS und E-Mail.]({% image_buster /assets/img/getting-started/braze_listen_understand_act.png %}){: style="display:block;margin:auto;" }
+![Braze hat verschiedene Schichten. Insgesamt besteht es aus dem SDK, der API, dem Dashboard und den Partnerintegrationen. Diese tragen jeweils zu einem Datenaufnahme-Layer, einem Klassifizierungs-Layer, einem Orchestrierungs-Layer, einem Personalisierungs-Layer und einem Aktions-Layer bei. Die Aktionsschicht verfügt über verschiedene Kanäle, darunter Push-Benachrichtigungen, In-App-Nachrichten, Connected Catalog, Webhook, SMS und E-Mail.]({% image_buster /assets/img/getting-started/braze_listen_understand_act.png %}){: style="display:block;margin:auto;" }
 
 * [Datenaufnahme](#ingestion): Braze bezieht Daten aus einer Vielzahl von Quellen.
 * [Klassifizierung](#classification): Ihr Marketing Team segmentiert Ihre Nutzer:innen dynamisch anhand dieser Metriken. 
@@ -34,41 +34,41 @@ All dies zusammen sorgt für erfolgreiche Interaktionen zwischen Ihrer Nutzerbas
 
 ## Datenaufnahme {#ingestion}
 
-Braze basiert auf einer Streaming-Daten-Architektur, die Snowflake, Kafka, MongoDB und Redis nutzt. Daten aus vielen Quellen können über SDK und API in Braze geladen werden. Die Plattform kann alle Daten in Realtime verarbeiten, unabhängig davon, wie verschachtelt oder strukturiert sie sind. Die Daten in Braze werden im Benutzerprofil gespeichert. 
+Braze basiert auf einer Streaming-Daten-Architektur, die Snowflake, Kafka, MongoDB und Redis nutzt. Daten aus verschiedenen Quellen können über SDK und API in Braze geladen werden. Die Plattform kann alle Daten in Realtime verarbeiten, unabhängig davon, wie verschachtelt oder strukturiert sie sind. Die Daten in Braze werden im Benutzerprofil gespeichert. 
 
 {% alert tip %}
 Braze kann die Daten eines Nutzers während seiner gesamten Reise zu Ihnen verfolgen, von dem Zeitpunkt, an dem er anonym ist, bis zu dem Zeitpunkt, an dem er in Ihrer App angemeldet und bekannt ist. Für jeden Ihrer Nutzer:innen sollten Sie eine ID festlegen, die in Braze `external_id`heißt. Diese sollten sich nicht ändern und zugänglich sein, wenn ein Benutzer die App öffnet. So können Sie Ihre Benutzer über verschiedene Geräte und Plattformen hinweg verfolgen. Lesen Sie den [Artikel Nutzer:innen Lebenszyklus]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) für bewährte Verfahren.
 {% endalert %}
 
-![Braze importiert Backend-Datenquellen aus der API, Frontend-Datenquellen aus dem SDK, Data Warehouse-Daten aus Braze Cloud Data Ingestion und aus Partnerintegrationen. Diese Daten werden über die Braze API exportiert. ]({% image_buster /assets/img/getting-started/import-export.png %}){: style="display:block;margin:auto;" }
+![Braze importiert Backend-Datenquellen aus der API, Frontend-Datenquellen aus dem SDK, Data Warehouse-Daten aus Braze Cloud Data Ingestion und aus Partnerintegrationen. Diese Daten werden über die Braze-API exportiert. ]({% image_buster /assets/img/getting-started/import-export.png %}){: style="display:block;margin:auto;" }
 
 {% alert note %}
 Diese personenbezogene Datenbank mit Nutzerprofilen ermöglicht eine interaktive Geschwindigkeit in Realtime. Braze berechnet Werte vor, wenn Daten eintreffen, und speichert die Ergebnisse in einem leichtgewichtigen Dokumentenformat, um schnell abrufbar zu sein. Und weil die Plattform von Anfang an so konzipiert wurde, ist sie ideal für die meisten Messaging-Anwendungsfälle – insbesondere in Kombination mit anderen Datenkonzepten wie Connected-Content, Produktkatalogen und verschachtelten Attributen.
 {% endalert %}
 
-### Aufschlüsselung der Datenquelle
+### Aufschlüsselung der Datenquellen
 
-Braze verwendet verschiedene Datenspeichersysteme für verschiedene Features. Für die Datenverwaltung und Fehlerbehebung ist es wichtig zu verstehen, welche Features welche Datenquellen verwenden.
+Braze setzt für verschiedene Features unterschiedliche Systeme zur Speicherung von Daten ein. Für die Datenverwaltung und Fehlerbehebung ist es von Bedeutung zu verstehen, welche Features welche Datenquellen verwenden.
 
-#### MongoDB-gestützte Features
-- Angepasste Events (Tracking durch SDK und API)
+#### MongoDB-basierte Features
+- Angepasste Events (verfolgt durch SDK und API)
 - Angepasste Attribute
 - Benutzerprofile
 - Kauf-Events
-- Die meisten Features zur Segmentierung und zum Targeting
+- Die meisten Features der Segmentierung und des Targetings
 
-#### Snowflake-gestützte Features
+#### Von Snowflake unterstützte Features
 - [SQL-Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)
-- [Prognose Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)
-- [Personalisierte Pfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/) und [personalisierte Variante]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
-- [KI Personalisierte Artikel-Empfehlungen]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)
-- [Geschätzte reale Öffnungsrate]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (verwendet keine angepassten Events)
+- [Vorhersagesuite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)
+- [Personalisierte Pfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/) und [personalisierte Varianten]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
+- [Personalisierte Artikelempfehlungen durch KI]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)
+- [Geschätzte tatsächliche Öffnungsrate]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (verwendet keine angepassten Events)
 
 {% alert important %}
-**Überlegungen zur Entfernung von Daten:** Angepasste Events werden in MongoDB gespeichert und sind von Snowflake-Daten getrennt. Wenn Sie fehlerhafte angepasste Events-Daten entfernen müssen, müssen Sie diese in MongoDB adressieren. Snowflake-gesteuerte Features (wie SQL Segment-Erweiterungen und andere Snowflake-gesteuerte Features) verwenden Daten aus Snowflake, die separat behandelt werden. Wenn Sie Daten aus einem System entfernen, werden sie nicht automatisch auch aus dem anderen System entfernt.
+**Überlegungen zur Löschung von Daten:** Angepasste Events werden in MongoDB gespeichert und sind von den Snowflake-Daten getrennt. Sollten Sie fehlerhafte Daten von angepassten Events entfernen müssen, müssen Sie dies in MongoDB vornehmen. Von Snowflake bereitgestellte Features (wie SQL-Segment-Erweiterungen und andere von Snowflake bereitgestellte Features) verwenden Daten aus Snowflake, die separat verarbeitet werden. Das Löschen von Daten aus einem System führt nicht automatisch zum Löschen dieser Daten aus dem anderen System.
 {% endalert %}
 
-### Backend-Datenquellen über die Braze API
+### Backend-Datenquellen über die Braze-API
 Braze kann über unsere [REST API]({{site.baseurl}}/api/endpoints/user_data) Daten aus Nutzer:innen-Datenbanken, Offline-Transaktionen und Data Warehouses abrufen. 
 
 ### Frontend-Datenquellen über Braze SDK
@@ -77,7 +77,7 @@ Braze erfasst über das [Braze SDK]({{site.baseurl}}/user_guide/getting_started/
 ### Partnerintegrationen
 Braze hat über 150 Technologie-Partner, die wir "Alloys" nennen. Sie können Ihre Daten-Feeds durch ein sinnvolles, robustes Netzwerk [interoperabler Technologien und Daten-APIs]({{site.baseurl}}/partners/home) ergänzen. 
 
-### Direkte Data Warehouse-Verbindung über Braze Cloud Datenaufnahme
+### Direkte Lageranbindung über Braze Cloud Datenaufnahme
 Sie können Daten von Ihrem Data Warehouse über [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) in wenigen Minuten in die Plattform streamen und so relevante Benutzerattribute, Events und Käufe synchronisieren. Die Integration von Cloud Data Ingestion unterstützt komplexe Datenstrukturen, einschließlich verschachtelter JSON und Arrays von Objekten.
 
 Cloud Data Ingestion kann Daten von Snowflake, Amazon Redshift, Databricks und Google BigQuery synchronisieren.
@@ -105,7 +105,7 @@ Von APIs getriggerte Kampagnen sind ideal für erweiterte transaktionale Anwendu
 Braze ermöglicht Ihnen, Funktionen für eine Auswahl von Nutzer über [Feature-Flags]({{site.baseurl}}/developer_guide/feature_flags/) aus der Ferne zu aktivieren oder zu deaktivieren. So können Ihre Marketer mit Messaging für Features, die Sie noch nicht für die gesamte Zielgruppe eingeführt haben, das richtige Segment Ihrer Nutzerbasis ansprechen. Darüber hinaus können Feature-Flags dazu verwendet werden, ein Feature in der Produktion ein- und auszuschalten, ohne zusätzliche Code-Bereitstellung oder Updates im App Shop. So können Sie neue Features sicher und zuverlässig einführen.
 
 ## Personalisierung {#personalization}
-Die Personalisierungsebene bietet Ihnen die Möglichkeit, dynamische Inhalte in Ihren Nachrichten zuzustellen. Durch den Einsatz von Liquid, einer weit verbreiteten Sprache für die Personalisierung, kann Ihr Team dynamisch auf vorhandene Daten zurückgreifen, um die auf jeden Empfänger:in zugeschnittene Nachricht anzuzeigen. Darüber hinaus können Sie mit [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) alle Informationen, auf die Sie auf Ihrem Webserver oder über APIs zugreifen können, direkt in die Nachrichten einfügen, die Sie versenden, z. B. Push-Benachrichtigungen oder E-Mails. Connected-Content baut auf Liquid auf und verwendet eine vertraute Syntax.
+Die Personalisierungsebene bietet Ihnen die Möglichkeit, dynamische Inhalte in Ihren Nachrichten zuzustellen. Durch den Einsatz von Liquid, einer weit verbreiteten Sprache für die Personalisierung, kann Ihr Team dynamisch auf vorhandene Daten zurückgreifen, um die auf jeden Empfänger:in zugeschnittene Nachricht anzuzeigen. Darüber hinaus können Sie mithilfe von [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) beliebige Informationen, die auf Ihrem Webserver oder über eine API verfügbar sind, direkt in die von Ihnen versendeten Nachrichten, wie Push-Benachrichtigungen oder E-Mails, einfügen. Connected-Content baut auf Liquid auf und verwendet eine vertraute Syntax.
 
 Und da dieser dynamische Content programmierbar ist, können Marketer berechnete Werte, Antworten aus anderen Aufrufen oder Artikel aus dem Produktkatalog einbeziehen. Nachdem Sie diese Systeme während der Implementierung eingerichtet haben, kann Ihr Marketing Team dies mit wenig bis gar keiner Unterstützung durch technische Teams tun. 
 
