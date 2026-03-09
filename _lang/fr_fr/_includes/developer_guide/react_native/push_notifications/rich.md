@@ -1,8 +1,8 @@
-{% multi_lang_include developer_guide/prerequisites/react_native.md %} Vous devrez également [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} Il vous sera également nécessaire de [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
-## Utiliser Expo pour activer des notifications push riches
+## Utilisation d'Expo pour activer les notifications push riches
 
-Pour le SDK React Native, les **notifications push riches sont disponibles par défaut pour Android**.
+Pour le SDK React native, **les notifications push riches sont disponibles par défaut pour Android**.
 
 Pour activer les notifications push enrichies sur iOS à l'aide d'Expo, configurez la propriété `enableBrazeIosRichPush` sur `true` dans votre objet `expo.plugins` dans `app.json` :
 
