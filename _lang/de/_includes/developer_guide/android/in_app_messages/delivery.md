@@ -28,7 +28,7 @@ Um diesen Wert zu überschreiben, legen Sie `com_braze_trigger_action_minimum_ti
 
 ## Schlüssel-Wert-Paare
 
-Wenn Sie eine Kampagne in Braze erstellen, können Sie Schlüssel-Wert-Paare als `extras` festlegen, die das In-App-Nachricht-Objekt verwenden kann, um Daten an Ihre App zu senden. Zum Beispiel:
+Wenn Sie eine Kampagne in Braze erstellen, können Sie Schlüssel-Wert-Paare festlegen, die das `extras`In-App-Messaging-Objekt verwenden kann, um Daten an Ihre App zu senden. Zum Beispiel:
 
 {% tabs %}
 {% tab JAVA %}
@@ -117,7 +117,7 @@ Erstellen Sie eine [stille Push-Kampagne]({{site.baseurl}}/developer_guide/push_
 
 Die Push-Kampagne muss Schlüssel-Wert-Paare enthalten, die angeben, dass diese Push-Kampagne gesendet wird, um ein angepasstes SDK-Event zu protokollieren. Dieses Event wird verwendet, um die In-App-Nachricht zu triggern.
 
-![Zwei Sätze von Schlüssel-Wert-Paaren: IS_SERVER_EVENT auf "true" und CAMPAIGN_NAME auf "Name der Beispielkampagne" gesetzt.]({% image_buster /assets/img_archive/kvpConfiguration.png %}){: style="max-width:70%;" }
+![Zwei Sätze von Schlüssel-Wert-Paaren:  auf IS_SERVER_EVENT„true“ gesetzt und  auf „BeispielnamenCAMPAIGN_NAME der Kampagne“ gesetzt.]({% image_buster /assets/img_archive/kvpConfiguration.png %}){: style="max-width:70%;" }
 
 Der frühere Code für den Push Callback erkennt die Schlüssel-Wert-Paare und protokolliert das entsprechende angepasste SDK-Event.
 
@@ -129,7 +129,7 @@ Erstellen Sie Ihre für Nutzer sichtbare In-App-Nachricht-Kampagne im Braze-Dash
 
 Im folgenden Beispiel wurde die zu triggernde In-App-Nachricht konfiguriert, indem die Event-Eigenschaft im Rahmen des usprünglichen stillen Push gesendet wurde.
 
-![Eine aktionsbasierte Zustellung, bei der eine In-App-Nachricht ausgelöst wird, wenn "campaign_name" gleich "IAM-Kampagnenname Beispiel" ist.]({% image_buster /assets/img_archive/iam_event_trigger.png %})
+![Eine aktionsbasierte Zustellung, bei der eine In-App-Nachricht ausgelöst wird, wenn"campaign_name"die Bedingung „IAM-Kampagnenname Beispiel“ erfüllt ist.]({% image_buster /assets/img_archive/iam_event_trigger.png %})
 
 Wenn ein vom Server gesendetes Event protokolliert wird, während sich die App nicht im Vordergrund befindet, wird das Event protokolliert, aber die In-App-Nachricht wird nicht angezeigt. Wenn Sie möchten, dass das Event verzögert wird, bis die Anwendung im Vordergrund ist, müssen Sie in Ihrem angepassten Push-Empfänger ein Häkchen setzen, um das Event zu verwerfen oder zu verzögern, bis die App in den Vordergrund getreten ist.
 
