@@ -18,14 +18,14 @@ Currents for Data Storage permet un flux continu de données de notre plateforme
 Ce contenu **s’applique uniquement aux données d’événements de fichiers plats que nous envoyons aux partenaires d’entrepôt de données (Google Cloud Storage, Amazon S3 et Microsoft Azure Blob Storage)**. <br><br>Pour le contenu qui s'applique aux autres partenaires, reportez-vous à notre liste de [partenaires disponibles]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) et consultez leurs pages respectives.
 {% endalert %}
 
-## Événements test
+## Épreuves tests
 
-Lorsque vous configurez une intégration currents, cliquez sur **Envoyer des événements de test** pour vérifier la connexion avec votre compartiment de stockage. Ces événements de test permettent de valider que votre intégration peut recevoir et traiter les données correctement.
+Lorsque vous configurez une intégration currents, veuillez cliquer sur **Envoyer des événements test** pour vérifier la connexion avec votre compartiment de stockage. Ces tests permettent de vérifier que votre intégration est en mesure de recevoir et de traiter correctement les données.
 
 {% alert important %}
-**Testez le format des données de l'événement :** Les événements de test contiennent des valeurs substitutives qui correspondent aux types de données corrects pour chaque champ, mais ils ne contiennent pas de données réalistes ou exactes. Par exemple, le champ `timezone` peut contenir une chaîne de caractères de type UUID au lieu d'un identifiant de fuseau horaire valide (tel que "America/Chicago"), et d'autres champs tels que `campaign_name` et `ip_pool` peuvent également contenir des valeurs substitutives au lieu de données réelles.<br>
+**Format des données de l'événement test :** Les événements de test contiennent des valeurs marque substitutive qui correspondent aux types de données appropriés pour chaque champ, mais ils ne contiennent pas de données réalistes ou précises. Par exemple, un`timezone`champ peut contenir une chaîne de caractères de type UUID au lieu d'un identifiant de fuseau horaire valide (tel que « America/Chicago »), et d'autres champs tels que`campaign_name`et`ip_pool`peuvent également contenir des valeurs de marque substitutive plutôt que des données réelles.<br>
 
-C'est un comportement attendu. Les événements de test servent principalement à tester la configuration de la connexion et de l'intégration, et non à valider l'exactitude des données. Pour voir des événements réels avec des données précises, utilisez une intégration currents de test pour envoyer des données d'événements réels dans votre pipeline.
+Il s'agit d'un comportement normal. Les événements tests servent principalement à tester la connexion et la configuration de l'intégration, et non à valider l'exactitude des données. Pour visualiser des événements réels avec des données précises, veuillez utiliser une intégration currents de test afin d'envoyer des données d'événements réels via votre pipeline.
 {% endalert %}
 
 ## Livraison au moins une fois
@@ -75,7 +75,7 @@ Vous ne voyez pas le code à cause de la barre de défilement ? Apprenez à ré
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Les conventions de dénomination des fichiers peuvent changer. Braze recommande de rechercher toutes les clés de votre compartiment dont le préfixe est <your-bucket-prefix>.
+Les conventions de nommage des fichiers peuvent être modifiées. Braze recommande de rechercher toutes les clés de votre compartiment qui ont le préfixe .<your-bucket-prefix>
 {% endalert %}
 
 ### Seuil d’écriture Avro
