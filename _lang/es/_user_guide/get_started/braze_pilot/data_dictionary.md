@@ -1,6 +1,6 @@
 ---
 nav_title: Diccionario de datos
-article_title: Diccionario de datos para Piloto Braze
+article_title: Diccionario de datos para Braze Pilot
 page_order: 3
 page_type: reference
 description: "Este artículo de referencia cubre brevemente los pasos de integración que deben seguir sus ingenieros o desarrolladores."
@@ -8,18 +8,18 @@ description: "Este artículo de referencia cubre brevemente los pasos de integra
 
 # Diccionario de datos
 
-> Cada simulación de aplicación en Braze Pilot está instrumentada para recopilar una serie de eventos y atributos basados en la actividad del usuario en la aplicación. 
+> Cada simulación de aplicación en Braze Pilot está instrumentada para recopilar una variedad de eventos y atributos basados en la actividad de los usuarios en la aplicación. 
 
 ## El enfoque de los datos
 
-La aplicación registra atributos personalizados y eventos típicos del sector representado por la marca ficticia. Puedes utilizar estos atributos para impulsar demostraciones para una variedad de casos de uso comunes.
-Generalmente, todos los eventos y atributos llevan como prefijo un código abreviado que corresponde a la simulación de la aplicación responsable de los datos. Por ejemplo:
+La aplicación registra atributos personalizados y eventos típicos del sector representado por la marca ficticia. Puedes utilizar estos atributos para potenciar demostraciones para una variedad de casos de uso comunes.
+Por lo general, todos los eventos y atributos llevan un prefijo con un código abreviado que corresponde a la simulación de la aplicación responsable de los datos. Por ejemplo:
 
 - Todos los datos registrados por la simulación de la aplicación Steppington llevan el prefijo `st_`
 - Todos los datos registrados por la simulación de la aplicación PantsLabyrinth llevan el prefijo `pl_`
 - Todos los datos registrados por la simulación de la aplicación MovieCanon llevan el prefijo `mc_`
 
-## Lista de eventos registrados y atributos
+## Lista de eventos y atributos registrados
 
 La siguiente tabla enumera los eventos y atributos registrados por Braze Pilot.
 
@@ -67,7 +67,7 @@ th:nth-child(5), td:nth-child(5) {
             <td>MovieCanon</td>
             <td>Evento</td>
             <td><code>title: string</code></td>
-            <td>Cuando el usuario termina de ver un video</td>
+            <td>Cuando terminas de ver un video</td>
         </tr>
         <tr>
             <td><code>mc_viewed_movie_page</code></td>
@@ -81,7 +81,7 @@ th:nth-child(5), td:nth-child(5) {
             <td>PantsLabyrinth</td>
             <td>Evento</td>
             <td><code>item_name: string</code></td>
-            <td>Cuando el usuario ve una página de producto</td>
+            <td>Cuando el usuario visualiza una página de producto</td>
         </tr>
         <tr>
             <td><code>pl_entered_app</code></td>
@@ -95,14 +95,14 @@ th:nth-child(5), td:nth-child(5) {
             <td>PantsLabyrinth</td>
             <td>Evento</td>
             <td><code>item_name: string</code></td>
-            <td>Cuando el usuario añade un artículo a su lista de deseos</td>
+            <td>Cuando el usuario añade un artículo a tu lista de deseos</td>
         </tr>
         <tr>
             <td><code>pl_added_item_to_cart</code></td>
             <td>PantsLabyrinth</td>
             <td>Evento</td>
             <td><code>item_name: string</code></td>
-            <td>Cuando el usuario añade un artículo a su cesta</td>
+            <td>Cuando el usuario añade un artículo a tu carrito</td>
         </tr>
         <tr>
             <td><code>&lt;purchase_event&gt;</code></td>
@@ -158,28 +158,28 @@ th:nth-child(5), td:nth-child(5) {
             <td>Steppington</td>
             <td>Evento</td>
             <td><code>class_type: string</code></td>
-            <td>Cuando el usuario favorece una clase</td>
+            <td>Cuando el usuario marca una clase como favorita</td>
         </tr>
         <tr>
             <td><code>st_unfavorited_class</code></td>
             <td>Steppington</td>
             <td>Evento</td>
             <td><code>class_type: string</code></td>
-            <td>Cuando al usuario no le gusta una clase</td>
+            <td>Cuando el usuario elimina una clase de sus favoritos</td>
         </tr>
         <tr>
             <td><code>st_started_free_trial</code></td>
             <td>Steppington</td>
             <td>Evento</td>
             <td></td>
-            <td>Cuando el usuario selecciona el botón <strong>Iniciar Prueba Gratuita</strong> </td>
+            <td>Cuando el usuario selecciona el botón <strong>«Iniciar prueba gratuita»</strong></td>
         </tr>
         <tr>
             <td><code>st_set_goal</code></td>
             <td>Steppington</td>
             <td>Evento</td>
             <td><code>goal_name: string</code><br><code>goal: number</code><br><code>units: string</code></td>
-            <td>Cuando el usuario selecciona el botón <strong>Iniciar prueba gratuita</strong>.</td>
+            <td>Cuando el usuario selecciona el botón <strong>«Iniciar prueba gratuita</strong>».</td>
         </tr>
     </tbody>
 </table>
