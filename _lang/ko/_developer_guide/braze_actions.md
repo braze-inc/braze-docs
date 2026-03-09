@@ -1,5 +1,5 @@
 ---
-nav_title: 브레이즈 액션 딥링크
+nav_title: 브레이즈 작업 딥링크
 article_title: 브레이즈 액션 딥링크
 page_order: 100
 description: "이 참조 문서에서는 Braze 작업 딥링크를 사용하여 메시징 채널 버튼 내에서 SDK 작업을 수행하는 방법을 다룹니다."
