@@ -1,12 +1,12 @@
 ---
 nav_title: 로그 메시지 데이터
-article_title: Braze 소프트웨어 개발 키트를 통해 푸시 알림 데이터를 기록하세요.
+article_title: Braze SDK를 통해 푸시 알림 데이터를 기록하다
 page_order: 7.2
 description: "Braze SDK를 통해 푸시 알림 데이터를 기록하는 방법을 알아보세요."
 noindex: true
 ---
 
-# 로그 푸시 알림 데이터
+# 푸시 알림 데이터를 기록하다
 
 > Braze SDK를 통해 푸시 알림 데이터를 기록하는 방법을 알아보세요.
 
