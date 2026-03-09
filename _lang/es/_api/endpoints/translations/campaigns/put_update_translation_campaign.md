@@ -1,7 +1,7 @@
 ---
 nav_title: "COLOCAR: Actualizar la traducción en una campaña"
 article_title: "COLOCAR: Actualizar la traducción en una campaña"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 1
 
 layout: api_page
@@ -15,13 +15,11 @@ description: "En este artículo se describen los detalles del punto final Actual
 /campaigns/translations
 {% endapimethod %}
 
-> Utilice este punto final para actualizar varias traducciones de una campaña. Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de traducción.
+> Utilice este punto final para actualizar varias traducciones de una campaña. Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de la localización.
 
-Si quieres actualizar las traducciones después de lanzar una campaña, primero tendrás que [guardar tu mensaje como borrador]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/).
+Si deseas actualizar las traducciones después de que se haya lanzado una campaña, primero deberás [guardar tu mensaje como borrador]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/).
 
-{% alert important %}
-Este punto final se encuentra actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Requisitos previos
 
@@ -40,13 +38,13 @@ No hay parámetros de ruta para este punto final.
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
 | `campaign_id` | Obligatoria | Cadena | El ID de su campaña. |
-| `message_variation_id` | Obligatoria | Cadena | El ID de la variación de tu mensaje. |
-| `locale_id`| Obligatoria | Cadena | El ID (UUID) de la localización. |
+| `message_variation_id` | Obligatoria | Cadena | El ID de tu variación de mensaje. |
+| `locale_id`| Obligatoria | Cadena | El ID (UUID) de la configuración regional. |
 | `translation_map` | Obligatoria | Objeto | Objeto que contiene las nuevas traducciones. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Todos los ID de traducción se consideran identificadores únicos universales (UUID), que pueden encontrarse en la respuesta del punto final GET.
+Todos los ID de traducción se consideran identificadores únicos universales (UUID), que se pueden encontrar en la respuesta del punto final GET.
 {% endalert %}
 
 ## Ejemplo de solicitud
