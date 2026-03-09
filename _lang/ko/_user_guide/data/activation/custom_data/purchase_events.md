@@ -15,7 +15,7 @@ search_rank: 3
 
 ## 구매 이벤트 기록
 
-[`/users/track` 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 통해 [구매 개체를]({{site.baseurl}}/api/objects_filters/purchase_object/) 전달하거나 아래 나열된 SDK 라이브러리 중 하나를 사용하여 구매를 기록할 수 있습니다.
+구매 내역을 기록하려면 [구매 객체를]({{site.baseurl}}/api/objects_filters/purchase_object/) 해당[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)[]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)엔드포인트로 전달하거나, 아래에 나열된 소프트웨어 개발 키트 라이브러리 중 하나를 사용하십시오.
 
 다음은 구매를 기록하는 데 사용되는 다양한 플랫폼의 방법을 나열한 것입니다. 이 페이지에서는 구매 이벤트에 속성 및 수량을 추가하는 방법에 대한 설명서도 확인할 수 있습니다. 이러한 속성을 기반으로 사용자를 추가로 타겟팅할 수 있습니다.
 
@@ -24,7 +24,7 @@ search_rank: 3
 - [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
-- [.NET MAUI(이전 Xamarin)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
+- [.NET MAUI (구 Xamarin)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## 구매 데이터 보기
@@ -69,7 +69,7 @@ Braze에서 구매 데이터를 사용할 수 있는 방법은 여러 가지가 
 
 사용자로부터 수집하는 다른 유형의 데이터와 마찬가지로, 구매 데이터를 사용하여 Liquid를 통해 메시지를 개인화할 수 있습니다. 예를 들어 사용자가 방금 구매한 제품과 유사한 제품을 추천하는 개인화된 이메일을 보낼 수 있습니다.
 
-사용자가 마지막으로 구매한 제품의 이름을 저장하는 `last_purchased_product` 이라는 구매 이벤트 속성정보가 있다고 가정해 보겠습니다. 이 속성을 사용하여 다음과 같이 이메일 메시지를 개인화할 수 있습니다:
+구매 이벤트 속성정보 중 하나가  라고 가정해`last_purchased_product` 보겠습니다. 이 속성은 사용자가 마지막으로 구매한 제품의 이름을 저장합니다. 이 속성을 사용하여 다음과 같이 이메일 메시지를 개인화할 수 있습니다:
 
 {% raw %}
 
@@ -85,7 +85,7 @@ Braze에서 구매 데이터를 사용할 수 있는 방법은 여러 가지가 
 
 {% endraw %}
 
-이 예제에서는 `last_purchased_product` 속성을 기반으로 메시지가 개인화됩니다. 사용자가 마지막으로 구매한 제품이 '러닝화'였다면 러닝 반바지와 물병을 추천하는 메시지를 받게 됩니다. 마지막 제품이 '요가 매트'였다면 요가 블록과 스트랩을 추천하는 메시지를 받게 됩니다. `last_purchased_product`이면 일반적인 감사 메시지를 받게 됩니다.
+이 예제에서는 `last_purchased_product` 속성을 기반으로 메시지가 개인화됩니다. 사용자가 마지막으로 구매한 제품이 '러닝화'였다면 러닝 반바지와 물병을 추천하는 메시지를 받게 됩니다. 마지막 제품이 "요가 매트"인 경우, 요가 블록과 스트랩을 추천하는 메시지를 받습니다. `last_purchased_product`이면 일반적인 감사 메시지를 받게 됩니다.
 
 ### 트리거 메시지
 
@@ -175,6 +175,10 @@ Braze에는 사용자의 LTV를 이해하기 위해 참조할 수 있는 두 가
 
 구매 이벤트 속성정보를 사용하면 트리거 조건에 대한 추가 자격을 부여하고, 메시징의 개인화를 강화하며, 원시 데이터 내보내기를 통해 보다 정교한 분석을 생성하는 데 사용할 수 있는 구매에 대한 속성을 설정할 수 있습니다. 속성정보 값 유형(문자열, 숫자, 부울, 날짜)은 플랫폼마다 다르며 키-값 페어로 할당되는 경우가 많습니다.
 
+{% alert warning %}
+다음 키들은 예약되어 있으며 구매 이벤트 속성정보 이름으로 사용할 수 없습니다: `time`,`product_id` `quantity`, `event_name`, `price`, , 및 `currency`. 객체에서`properties` 예약된 키를 사용하면 "잘못된 'properties' 필드" 오류가 반환됩니다.
+{% endalert %}
+
 For example, if you have an eCommerce application and want to message a user after making a purchase, you could additionally improve your target audience and allow for increased campaign personalization by adding a purchase event property of `brand_name`.
 
 **구매 이벤트 속성을 기반으로 트리거하는 예시입니다:**
@@ -185,9 +189,9 @@ For example, if you have an eCommerce application and want to message a user aft
 
 ### 이벤트 속성 세분화
 
-이벤트 속성정보 세분화를 사용하면 발생한 커스텀 이벤트뿐만 아니라 해당 이벤트와 관련된 속성을 기반으로 사용자를 타겟팅할 수 있습니다. 이렇게 하면 구매 및 커스텀 이벤트를 세분화할 때 필터링 옵션이 추가됩니다.
+이벤트 속성정보 세분화를 통해 사용자를 타겟팅할 수 있으며, 이는 단순히 수행된 커스텀 이벤트뿐만 아니라 해당 이벤트와 연관된 속성에도 기반합니다. 구매 및 커스텀 이벤트를 세분화할 때 추가 필터링 옵션을 제공합니다.
 
-![구매 이벤트 속성정보에 대한 세분화 필터는 특정 구매 이벤트 속성값을 기반으로 사용자를 필터링하는 옵션을 표시합니다(예: 설정된 기간 내에 특정 속성이 있는 제품을 구매한 사용자 필터링).]({% image_buster /assets/img/purchase_event_property.png %}){: style="max-width:80%;margin-left:15px;"}
+![구매 이벤트 속성정보 세분화 필터는 특정 구매 이벤트 속성정보 값을 기준으로 사용자를 필터링하는 옵션을 표시합니다. 예를 들어, 설정된 기간 내에 특정 속성을 가진 제품을 구매한 사용자를 필터링하는 것이 가능합니다.]({% image_buster /assets/img/purchase_event_property.png %}){: style="max-width:80%;margin-left:15px;"}
 
 이러한 세분화 필터에는 다음이 포함됩니다:
 - 지난 Y일 동안 값이 V인 속성 Y로 사용자 지정 이벤트를 X회 수행했습니다.
@@ -210,11 +214,11 @@ For example, if you have an eCommerce application and want to message a user aft
 
 Braze에서는 구매 개체에 대한 몇 가지 일반적인 이름 지정 규칙을 제공합니다 `product_id`. `product_id` 을 선택할 경우, Braze는 모든 로깅된 항목을 이 `product_id` 으로 그룹화하기 위해 SKU 대신 제품 이름 또는 제품 카테고리와 같은 간단한 이름을 사용할 것을 제안합니다.
 
-이를 통해 제품을 세분화하고 트리거하기 위한 식별자를 쉽게 찾을 수 있습니다. 
+이를 통해 제품을 세분화 및 트리거링을 위해 쉽게 식별할 수 있습니다. 
 
 ## 구매 이벤트 차단 목록
 
-때때로 너무 많은 데이터 포인트를 기록하거나 마케팅 전략에 더 이상 유용하지 않거나 오류로 기록된 구매 이벤트를 식별할 수 있습니다. 이 데이터가 Braze로 전송되지 않도록 하려면 엔지니어링 팀이 앱이나 웹사이트의 백엔드에서 해당 데이터를 제거하는 작업을 하는 동안 사용자 지정 데이터 개체를 차단 목록에 추가할 수 있습니다.
+구매 이벤트 중에는 너무 많은 데이터 포인트를 기록하거나, 마케팅 전략에 더 이상 유용하지 않거나, 오류로 기록된 경우가 가끔 있을 수 있습니다. 이 데이터가 Braze로 전송되지 않도록 하려면 엔지니어링 팀이 앱이나 웹사이트의 백엔드에서 해당 데이터를 제거하는 작업을 하는 동안 사용자 지정 데이터 개체를 차단 목록에 추가할 수 있습니다.
 
 Braze 대시보드의 **데이터 설정** > **제품**에서 차단 목록을 관리할 수 있습니다. 자세한 내용은 [사용자 지정 데이터 관리하기를]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) 참조하세요.
 
