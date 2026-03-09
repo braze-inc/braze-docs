@@ -216,7 +216,7 @@ No Google Cloud, selecione o projeto que seu app Android está usando e ative a 
 
 ![API do Firebase Cloud Messaging habilitada]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %}){: style="max-width:80%;"}
 
-### Etapa 4: Crie uma conta de serviço {#service-account}
+### Etapa 4: Criar uma conta de serviço {#service-account}
 
 Em seguida, crie uma nova conta de serviço, para que a Braze possa fazer chamadas de API autorizadas ao registrar tokens FCM. No Google Cloud, acesse **Contas de Serviço**, depois escolha seu projeto. Na página **Contas de serviço**, selecione **Criar conta de serviço**.
 
@@ -368,7 +368,7 @@ Para evitar que a Braze dispare solicitações de rede desnecessárias sempre qu
 
 ### Etapa 1: Registre o serviço de envio de mensagens do Braze Firebase
 
-Você pode criar um novo, existente ou um serviço de Mensagens do Firebase que não seja Braze. Escolha o que melhor atende às suas necessidades específicas.
+Você pode criar um novo, existente ou um serviço de mensagens Firebase que não seja Braze. Escolha o que melhor atende às suas necessidades específicas.
 
 {% tabs local %}
 {% tab New %}
@@ -479,7 +479,7 @@ Para obter informações gerais sobre os ícones de notificação do Android, vi
 
 A partir do Android N, você deve atualizar ou remover pequenos ativos de ícones de notificação que envolvam cores. O sistema Android (não o SDK do Braze) ignora todos os canais não alfa e de transparência nos ícones de ação e no ícone pequeno de notificação. Em outras palavras, o Android converterá todas as partes do seu pequeno ícone de notificação em monocromático, exceto as regiões transparentes.
 
-Para criar um ativo de ícone pequeno de notificação que exiba corretamente:
+Para criar um ativo de ícone pequeno de notificação que seja exibido corretamente:
 - Remova todas as cores da imagem, exceto o branco.
 - Todas as outras regiões não brancas do ativo devem ser transparentes.
 
@@ -563,7 +563,7 @@ Por padrão, quando uma notificação por push chega enquanto seu app está em p
 
 ### Como funciona?
 
-Quando você chama `BrazeFirebaseMessagingService.handleBrazeRemoteMessage`, a Braze determina se a carga útil é uma notificação por push da Braze e, se sim, cria e exibe a notificação com o método `NotificationManagerCompat`. Ao contrário do iOS, o Android exibe notificações independentemente de o app estar em primeiro plano ou em segundo plano.
+Quando você chama `BrazeFirebaseMessagingService.handleBrazeRemoteMessage`, a Braze determina se a carga útil é uma notificação por push da Braze e, se for, cria e exibe a notificação com o método `NotificationManagerCompat`. Diferente do iOS, o Android exibe notificações independentemente de o app estar em primeiro plano ou em segundo plano.
 
 {% tabs %}
 {% tab JAVA %}
@@ -623,7 +623,7 @@ Se você quiser um comportamento personalizado em primeiro plano, como suprimir 
 - Usar `subscribeToPushNotificationEvents` para reagir a eventos de push e tratar deep links com o método `BrazeNotificationUtils.routeUserWithNotificationOpenedIntent`. Para mais informações, veja o [exemplo de push do Firebase](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt).
 - Crie e publique sua própria notificação usando um `IBrazeNotificationFactory` personalizado, ou suprim a notificação não chamando `notificationManager.notify` em seu caminho de manipulação.
 
-Para mais informações sobre como personalizar notificações, veja [Fábrica de notificações personalizadas]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#custom-notification-factory).
+Para saber mais sobre como personalizar notificações, veja [Fábrica de notificações personalizadas]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#custom-notification-factory).
 
 #### Criação de deep links personalizados
 
@@ -633,7 +633,7 @@ Siga as instruções encontradas na [documentação do desenvolvedor Android](ht
 
 O dashboard do Braze oferece suporte à configuração de deep links ou URLs da Web em campanhas de notificações por push e canvas que serão abertos quando a notificação for clicada.
 
-![A configuração 'Comportamento ao Clicar' no dashboard da Braze com 'Deep Link para Aplicativo' selecionado no menu suspenso.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
+![A configuração 'Comportamento ao Clicar' no dashboard do Braze com 'Deep Link Into Application' selecionado no menu suspenso.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
 
 #### Personalização do comportamento da pilha traseira
 
@@ -675,7 +675,7 @@ Veja a configuração equivalente para seu `braze.xml`. Note que o nome da class
 
 ### Etapa 5: Definir canais de notificação
 
-O SDK do Braze para Android é compatível com os [canais de notificação do Android](https://developer.android.com/preview/features/notification-channels.html). Se uma notificação do Braze não contiver o ID de um canal de notificação ou se uma notificação do Braze contiver um ID de canal inválido, o Braze exibirá a notificação com o canal de notificação padrão definido no SDK. Os usuários do Braze usam os [canais de notificação do Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) na plataforma para agrupar notificações.
+O SDK do Braze para Android é compatível com os [canais de notificação do Android](https://developer.android.com/preview/features/notification-channels.html). Se uma notificação do Braze não contiver o ID de um canal de notificação ou se uma notificação do Braze contiver um ID de canal inválido, o Braze exibirá a notificação com o canal de notificação padrão definido no SDK. Os usuários da empresa usam [Canais de Notificação do Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) dentro da plataforma para agrupar notificações.
 
 Para definir o nome do canal de notificação padrão do Braze voltado para o usuário, use [`BrazeConfig.setDefaultNotificationChannelName()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html).
 
@@ -698,7 +698,7 @@ O nome e a descrição padrão do canal também podem ser configurados em `braze
 
 Nesse ponto, você poderá ver as notificações enviadas pelo Braze. Para testar isso, acesse a página **Campaigns (Campanhas** ) em seu dashboard do Braze e crie uma campanha **de notificação por push**. Escolha o **Android Push** e crie sua mensagem. Em seguida, clique no ícone do olho no criador para obter o remetente de teste. Digite o ID do usuário ou o endereço de e-mail do usuário atual e clique em **Send Test (Enviar teste**). Você deverá ver o push aparecer em seu dispositivo.
 
-![A aba 'Teste' de uma campanha de notificação por push no dashboard da Braze.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
+![A aba 'Teste' de uma campanha de notificação por push no dashboard do Braze.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
 
 Para problemas relacionados ao push display, consulte nosso [guia de solução de problemas]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android).
 
@@ -747,25 +747,25 @@ A [iniciativa de pessoas e conversas](https://developer.android.com/guide/topics
 
 Este recurso está disponível apenas na API REST da Braze. Consulte o [objeto push do Android]({{site.baseurl}}/api/objects_filters/messaging/android_object#android-conversation-push-object) para saber mais.
 
-## Erros de cota do FCM excedidos
+## Erros de cota do FCM excedida
 
-Quando seu limite para o Firebase Cloud Messaging (FCM) é excedido, o Google retorna erros de "cota excedida". O limite padrão do FCM é de 600.000 solicitações por minuto. A Braze tenta reenviar de acordo com as melhores práticas recomendadas pelo Google. No entanto, um grande volume desses erros pode prolongar o tempo de envio por vários minutos. Para atenuar o possível impacto, a Braze enviará um alerta de que o limite de taxa está sendo excedido e informando quais as medidas que você pode tomar para evitar os erros.
+Quando seu limite para o Firebase Cloud Messaging (FCM) é excedido, o Google retorna erros de "cota excedida". O limite padrão do FCM é de 600.000 solicitações por minuto. O Braze tenta reenviar de acordo com as melhores práticas recomendadas pelo Google. No entanto, um grande volume desses erros pode prolongar o tempo de envio por vários minutos. Para atenuar o possível impacto, a Braze enviará um alerta de que o limite de taxa está sendo excedido e informando quais as medidas que você pode tomar para evitar os erros.
 
-Para verificar seu limite atual, acesse seu **Google Cloud Console** > **APIs & Serviços** > **API do Firebase Cloud Messaging** > **Quotas & Limites do Sistema**, ou visite a [página de Quotas da API do FCM](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
+Para verificar seu limite atual, acesse seu **Google Cloud Console** > **APIs & Serviços** > **API do Firebase Cloud Messaging** > **Quotas & Limites do Sistema**, ou visite a [página de Quotas da API FCM](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
 
 ### Melhores práticas
 
 Recomendamos essas melhores práticas para manter esses volumes de erro baixos.
 
-#### Solicitar um aumento de limite de taxa do FCM
+#### Solicite um aumento de limite de taxa do FCM
 
 Para solicitar um aumento de limite de taxa do FCM, você pode entrar em contato diretamente com [Suporte do Firebase](https://firebase.google.com/support) ou fazer o seguinte:
 
-1. Acesse a [página de Quotas da API do FCM](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
+1. Acesse a [página de Quotas da API FCM](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
 2. Localize a cota de **Solicitações enviadas por minuto**.
 3. Selecione **Editar Cota**. 
 4. Insira um novo valor e envie sua solicitação.
 
-#### Solicitar limitação global de taxa via Braze
+#### Solicite limitação global de taxa via Braze
 
-Para aplicar um limite em todo o espaço de trabalho para notificações por push do Android, entre em contato com [Suporte da Braze]({{site.baseurl}}/help/support#access-the-support-portal).
+Para aplicar um limite em todo o espaço de trabalho para notificações por push do Android, entre em contato com [Braze Support]({{site.baseurl}}/help/support#access-the-support-portal).
