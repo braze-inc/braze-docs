@@ -55,7 +55,7 @@ Las notificaciones push de historias registran un <i>clic en el cuerpo</i> cuand
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}
-<i>La tasa de clics abiertos</i> es el porcentaje de correos electrónicos abiertos en los que un único usuario o máquina ha hecho clic al menos una vez, y sólo está disponible en el <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>generador de informes</a>.
+<i>La tasa de clics para abrir</i> es el porcentaje de correos electrónicos abiertos en los que un usuario o una máquina ha hecho clic al menos una vez, y solo está disponible en el <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>generador de informes</a>.
 {% endif %}
 
 {% if include.metric == "Close Message" %}
@@ -107,7 +107,7 @@ La <i>confianza</i> es el porcentaje de confianza en que una determinada variant
 {% endif %}
 
 {% if include.metric == "Delivery Failures RCS" %}
-<i>Los fallos de entrega</i> se producen cuando no se ha podido enviar el RCS por desbordamiento de las colas (envío de RCS a una tasa superior a la que puede soportar tu remitente verificado por RCS).
+<i>Los fallos de entrega</i> se producen cuando no se puede enviar el RCS debido al desbordamiento de las colas (envío de RCS a una tasa superior a la que puede gestionar tu remitente verificado por RCS).
 {% endif %}
 
 {% if include.metric == "Failed Delivery Rate" %}
@@ -167,7 +167,7 @@ Los <i>ingresos diarios por usuario</i> son los ingresos medios diarios por usua
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
-La <i>exclusión voluntaria</i> se produce cuando un usuario responde a tu mensaje con una <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">palabra clave de exclusión voluntaria</a> y se da de baja de tu programa de SMS o RCS.
+<i>La exclusión voluntaria</i> se produce cuando un usuario responde a tu mensaje con una <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">palabra clave de exclusión voluntaria</a> y cancela la suscripción a tu programa SMS o RCS.
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
@@ -179,7 +179,7 @@ El <i>reintento pendiente</i> hace referencia al número de solicitudes que fuer
 {% endif %}
 
 {% if include.metric == "Reads" %}
-<i>Lee</i> es cuando el usuario lee el mensaje. Los recibos de lectura del usuario deben estar "Activados" para que Braze realice un seguimiento de las lecturas.
+<i>Las lecturas</i> se producen cuando el usuario lee el mensaje. Los recibos de lectura del usuario deben estar "Activados" para que Braze realice un seguimiento de las lecturas.
 {% endif %}
 
 {% if include.metric == "Read Rate" %}
@@ -203,7 +203,7 @@ Los <i>ingresos</i> son los ingresos totales en dólares de los destinatarios de
 {% endif %}
 
 {% if include.metric == "Sent" %}
-Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un paso en Canvas, y se ha enviado un SMS o RCS desde Braze. Es posible que el SMS o RCS no haya llegado al dispositivo de un usuario debido a errores.
+Se <i>envía</i> cada vez que se inicia o se desencadena una campaña o un paso en Canvas, y se envía un SMS o RCS desde Braze. Es posible que el SMS o RCS no haya llegado al dispositivo del usuario debido a errores.
 {% endif %}
 
 {% if include.metric == "Sends" %}
@@ -219,7 +219,7 @@ Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un pa
 {% endif %}
 
 {% if include.metric == "Spam" %}
-<i>Spam</i> es el número total de correos electrónicos entregados que fueron marcados como "spam" por el destinatario. Aunque Braze no cambia el estado de suscripción de estos usuarios, estos usuarios serán excluidos automáticamente en futuros correos electrónicos, a menos que estés enviando un correo electrónico transaccional, que esté configurado para "enviar a todos los usuarios, incluida la cancelación suscripción".
+<i>El correo no deseado</i> es el número total de correos electrónicos entregados que han sido marcados como «correo no deseado» por el destinatario. Aunque Braze no cambia el estado de suscripción de estos usuarios, estos quedarán automáticamente excluidos de futuros correos electrónicos, a menos que envíes un correo electrónico transaccional, que está configurado para «enviar a todos los usuarios, incluidos los que han cancelado la suscripción».
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}
@@ -231,7 +231,7 @@ Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un pa
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>Clics totales</i> es el número de destinatarios únicos que hicieron clic en un enlace del mensaje entregado.
+<i>El total de clics</i> es el número de destinatarios únicos que han hecho clic en un enlace del mensaje entregado.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
@@ -239,7 +239,7 @@ Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un pa
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
-<i>El total de impresiones</i> es el número de veces que se ve un mensaje. Braze registra una impresión sólo cuando el mensaje se hace visible para el usuario en su pantalla. Por ejemplo, si un mensaje se coloca en la parte inferior de una página, la impresión no se registra hasta que el usuario se desplaza hacia abajo y el mensaje aparece a la vista. Si a un usuario se le muestra el mismo mensaje dos veces, contará como dos impresiones.
+<i>Las impresiones totales</i> son el número de veces que se ve un mensaje. Braze registra una impresión solo cuando el mensaje se hace visible para el usuario en tu pantalla. Por ejemplo, si un mensaje se coloca en la parte inferior de una página, la impresión no se registra hasta que el usuario se desplaza hacia abajo y el mensaje queda a la vista. Si a un usuario se le muestra el mismo mensaje dos veces, contará como dos impresiones.
 {% endif %}
 
 {% if include.metric == "Total Opens" %}
@@ -251,7 +251,7 @@ Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un pa
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>Clics únicos</i> es el número distinto de destinatarios que han hecho clic en un enlace dentro de un mensaje al menos una vez y se mide por <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+<i>Los clics únicos</i> son el número distintivo de destinatarios que han hecho clic en un enlace dentro de un mensaje al menos una vez y se miden mediante <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
@@ -261,11 +261,11 @@ Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un pa
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-Las <i>impresiones únicas</i> son el número total de usuarios que han visto un mensaje de una campaña determinada. Sólo se registra una impresión cuando el mensaje se hace visible en la pantalla de un usuario.
+<i>Las impresiones únicas</i> son el número total de usuarios que han visto un mensaje de una campaña determinada. Una impresión solo se registra cuando el mensaje se hace visible en la pantalla de un usuario.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>Destinatarios únicos</i> es el número de destinatarios únicos diarios, o usuarios que recibieron un mensaje nuevo en un día. Para que este recuento se incremente para un usuario más de una vez, el usuario debe recibir un nuevo mensaje en un día diferente.
+<i>Los destinatarios únicos</i> son el número de destinatarios únicos diarios, o usuarios que recibieron un nuevo mensaje en un día. Para que este recuento se incremente más de una vez para un usuario, este debe recibir un nuevo mensaje en un día diferente.
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}
