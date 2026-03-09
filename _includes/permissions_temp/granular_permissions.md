@@ -171,8 +171,6 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | View Campaigns                                  | View campaigns |
 | Edit Campaigns                                  | Create and update campaigns |
 | Archive Campaigns                               | Move campaigns to archive |
-| Send Campaigns                                  | Start, stop, pause, or resume campaigns | 
-| Send Canvases                         		  | Start, stop, pause, or resume Canvases |
 | Launch Campaigns                                | Start, stop, pause, or resume existing campaigns |
 | Launch Canvases                                 | Start, stop, pause, or resume existing Canvases |
 | View Frequency Capping Rules                    | View Frequency Capping Rules |
