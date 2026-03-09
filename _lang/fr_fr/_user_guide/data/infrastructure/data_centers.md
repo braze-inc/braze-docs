@@ -32,6 +32,10 @@ Imaginons que vous ayez une application mobile qui envoie des notifications push
 
 {% multi_lang_include data_centers.md datacenters='ID' %}
 
+### Japon
+
+{% multi_lang_include data_centers.md datacenters='JP' %}
+
 ### États-Unis
 
 {% multi_lang_include data_centers.md datacenters='US' %}
