@@ -116,7 +116,7 @@ Assurez-vous d’initialiser Braze dans le fil principal de votre application. L
 À partir de décembre 2019, les endpoints personnalisés ne sont plus fournis. Si vous disposez d’un endpoint personnalisé préexistant, vous pouvez continuer à l’utiliser. Pour plus de détails, consultez notre <a href="{{site.baseurl}}/api/basics/#endpoints">liste d’endpoints disponibles</a>.
 {% endalert %}
 
-Votre conseiller Braze devrait déjà vous avoir indiqué [l'endpoint correct]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
+Votre conseiller Braze devrait déjà vous avoir informé de l'endpoint correct]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 #### Configuration des endpoints de compilation (recommandée)
 Si vous avez un endpoint personnalisé préexistant :
