@@ -1,8 +1,8 @@
 {% comment %}
-  Früher Zugang oder Beta-Alarm. Verwenden Sie diese Option für Features/Endpunkte im Early Access oder in der Beta-Phase.
+  Frühzeitiger Zugang oder Beta-Benachrichtigung. Bitte verwenden Sie diese für Features/Endpunkte im Early Access oder in der Beta-Phase.
   Parameter:
-  - Feature (erforderlich): Das Feature oder Thema, e.g. "Dieser Endpunkt", "SCIM-Bereitstellung", "Die Okta Integration"
-  - Typ (optional): "early_access" (Standard) oder "beta"
+  - Feature (erforderlich): Das Feature oder Thema, e.g. „Dieser Endpunkt“, „SCIM-Bereitstellung“, „Die Okta-Integration“
+  - Typ (optional):"early_access"(Standard) oder „beta“
 {% endcomment %}
 {% if include.type == "beta" %}
 {% alert important %}
