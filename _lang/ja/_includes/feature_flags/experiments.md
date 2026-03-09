@@ -74,13 +74,13 @@ if (featureFlag?.enabled == true) {
 
 追加のデフォルトプロパティを編集、追加、削除するには、[**メッセージング**] > [**フィーチャーフラグ**] からフィーチャーフラグ自体を編集します。バリアントが無効になっている場合、SDKは指定された機能フラグの空のプロパティオブジェクトを返します。
 
-![「Experiment Variants」セクションの「link」変数キーは「/sales」で上書きされます。]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
+![「実験のバリアント」セクションにおいて、「link」変数キーが「/sales」で上書きされている。]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
 
 ### ステップ 4: ターゲットとするユーザーを選択する
 
 セグメントまたはフィルターのいずれかを使用して、[ターゲットユーザー]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)を選択します。例えば、**Received Feature Flag Variant**フィルターを使用して、すでにA/Bテストを受けたユーザーをリターゲティングすることができる。
 
-![フィルターグループサーチバーで「受信フィーチャーフラグバリアント」がハイライトされたフィーチャーフラグ実験の「ターゲット」ページ。]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
+![フィルターグループ検索バーで「受信したフィーチャーフラグのバリアント」が強調表示された、フィーチャーフラグ実験の「対象」ページ。]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
 {% alert note %}
 セグメントメンバーシップは、指定されたユーザーのフィーチャーフラグが更新されたときに計算されます。変更は、アプリがフィーチャーフラグをリフレッシュした後、または新しいセッションが開始されたときに利用可能になります。
