@@ -35,11 +35,11 @@ Hay dos formas de añadir el Bloque de contenido a tu correo electrónico: utili
 
 Para añadir un Bloque de Contenido en el editor, haga lo siguiente:
 
-1. Vaya a la pestaña **Filas** del editor y seleccione **Bloques de contenido**. 
+1. Ve a la pestaña **Filas** en el editor y selecciona **Bloques de contenido**. 
 2. Arrastre y suelte su Bloque de contenido en el editor de correo electrónico. 
-3. (Opcional) Ajusta la anchura de tu Bloque de contenido seleccionando el botón en el menú de navegación. La anchura predeterminada es del 100% cuando no se especifica en la configuración global de estilo de tu correo electrónico; de lo contrario, se respetará la configuración global. <br><br>![Una flecha de doble cara con una opción para editar la anchura.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
+3. (Opcional) Ajusta la anchura de tu Bloque de contenido seleccionando el botón en el menú de navegación. El ancho predeterminado es 100 % cuando no se especifica en la configuración de estilo global de tu correo electrónico; de lo contrario, se respetará la configuración global. <br><br>![Una flecha de doble cara con una opción para editar la anchura.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
 
-Después de añadir el Bloque de contenido al editor de correo electrónico, puedes realizar ediciones en el Bloque de contenido que no afectarán al Bloque de contenido original que creaste en **Plantillas & Medios**. Esto se debe a que los Bloques de contenido añadidos mediante arrastrar y soltar no están vinculados al Bloque de contenido original. Para ver los cambios realizados en el Bloque de contenido original, arrástrelo de nuevo al editor de correo electrónico. 
+Después de añadir el bloque de contenido al editor de correo electrónico, puedes realizar modificaciones en el bloque de contenido que no afectarán al bloque de contenido original que creaste en **Plantillas&y medios**. Esto se debe a que los Bloques de contenido añadidos mediante arrastrar y soltar no están vinculados al Bloque de contenido original. Para ver los cambios realizados en el Bloque de contenido original, arrástrelo de nuevo al editor de correo electrónico. 
 
 Puede producirse una desalineación en el editor de arrastrar y soltar cuando se añaden varios bloques de contenido a un único bloque de fila. Pruebe a utilizar bloques de fila separados para mantener la alineación del contenido a nivel de fila.
 
@@ -48,15 +48,15 @@ Puede producirse una desalineación en el editor de arrastrar y soltar cuando se
 Para añadir un bloque de contenido mediante Liquid, haga lo siguiente:
 
 1. Vaya a su campaña de correo electrónico y seleccione **Editar cuerpo de correo electrónico**. 
-2. Haga clic en <i class="fas fa-plus"></i> **Personalización**.
+2. Selecciona<i class="fas fa-plus"></i>**Personalización**.
 3. Localice la pestaña **Añadir personalización** y seleccione **Bloques de contenido** en el desplegable **Tipo de personalización**.
 4. Seleccione el nombre de su Bloque de Contenido en el campo **Atributo**. El campo del fragmento de código de Liquid se rellenará con tu etiqueta de Liquid del bloque de contenido. 
 5. Copie y pegue el fragmento de Liquid en un bloque del editor de texto. <br>![La pestaña Añadir personalización con opciones.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
 
-Cuando previsualice su mensaje de correo electrónico, el fragmento de Liquid se mostrará como Bloque de contenido del editor de arrastrar y soltar. 
+Cuando previsualice su mensaje de correo electrónico, el fragmento de Liquid se mostrará como Bloque de contenido del editor de arrastrar y soltar. Ten en cuenta que el estilo móvil (como la alineación y el tamaño del texto) no es compatible cuando se incluye un bloque de contenido como fragmento de código Liquid.
 
 {% alert important %}
-Cuando se añade un Bloque de contenido en el editor de correo electrónico con Liquid, este Bloque de contenido se vincula al Bloque de contenido original creado en **Plantillas & Medios**. Esto significa que el Bloque de Contenido se actualizará para reflejar cualquier cambio en la plantilla original del Bloque de Contenido.
+Cuando se añade un bloque de contenido al editor de correo electrónico con Liquid, este bloque de contenido se vincula al bloque de contenido original creado en **Plantillas y& medios**. Esto significa que el Bloque de Contenido se actualizará para reflejar cualquier cambio en la plantilla original del Bloque de Contenido.
 {% endalert %}
 
 ## Actualización de bloques de contenido
