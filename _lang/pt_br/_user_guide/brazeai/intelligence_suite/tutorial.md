@@ -1,37 +1,37 @@
 ---
-nav_title: "Tutorial: fast food"
-article_title: Tutorial da Intelligence Suite
+nav_title: "Tutorial: Restaurante de serviço rápido"
+article_title: Tutorial da suíte de inteligência
 page_order: 10
 search_rank: 12
-description: "Novo na Braze Intelligence Suite? Comece com este tutorial."
+description: "Novo na suíte de inteligência da Braze? Comece com este tutorial."
 tool:
   - Dashboard
 ---
 
-# Tutorial da Intelligence Suite
+# Tutorial da suíte de inteligência
 
-> Novo na Braze Intelligence Suite? Comece com este tutorial. Para informações gerais, consulte [Intelligence Suite]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/).
+> Novo na Suíte de Inteligência da Braze? Comece com este tutorial! Para mais informações gerais, veja [Suíte de Inteligência]({{site.baseurl}}/user_guide/brazeai/intelligence/).
 
-## Tutorial: fast food
+## Tutorial: Restaurante de serviço rápido
 
-Imagine que você trabalha no SandwichEmperor, uma rede de fast food com um novo item de menu por tempo limitado: o Royal Roast. Usamos dois recursos da Intelligence Suite para enviar ações personalizadas em um Canvas.
+Vamos imaginar que trabalhamos no SandwichEmperor, um restaurante de fast food que tem um novo item de menu por tempo limitado: o Royal Roast. Usaremos dois recursos do Intelligence Suite para enviar promoções personalizadas em um canva.
 
-### Etapa 1: Usar Intelligent Timing para o momento das notificações
+### Etapa 1: Use o Intelligent Timing para saber quando enviar notificações
 
-Usamos o Intelligent Timing para analisar as interações passadas dos usuários com o app e cada canal de mensagem e escolher automaticamente o melhor momento para promover o Royal Roast a cada usuário. Alguns usuários recebem a ação à tarde, outros à noite.
+Usaremos o Intelligent Timing para analisar as interações anteriores de nossos usuários com nosso app e cada canal de envio de mensagens e, em seguida, selecionaremos automaticamente o melhor momento para promover o Royal Roast para cada usuário. Alguns usuários podem receber a promoção à tarde, enquanto outros podem recebê-la à noite. 
 
-Para usuários sem interações passadas suficientes, definimos um horário de fallback: o horário de uso do app mais popular entre todos os usuários.
+Forneceremos um tempo de fallback para usuários que não têm interações anteriores suficientes para analisar: o tempo mais popular para usar o app entre todos os usuários.
 
-![Configurações de entrega do Intelligent Timing para um passo de mensagem.]({% image_buster /assets/img/intelligence_suite1.png %})
+![Configurações de envio de mensagens do Intelligent Timing para uma etapa de Mensagem.]({% image_buster /assets/img/intelligence_suite1.png %})
 
-### Etapa 2: Usar Intelligent Selection para a escolha da mensagem
+### Etapa 2: Use a Seleção Inteligente para selecionar a promoção
 
-Para as mensagens promocionais em si, usamos o Intelligent Selection para testar três mensagens (push, e-mail e SMS) para o Royal Roast. O Intelligent Selection analisa o desempenho de todas as mensagens promocionais duas vezes por dia e envia gradualmente mais da melhor e menos das demais.
+Para as mensagens promocionais reais, usaremos o Intelligent Selection para testar três mensagens diferentes (notificação por push, envio de e-mail e SMS) para o Royal Roast. A Intelligent Selection analisará a performance de todas as nossas mensagens promocionais duas vezes por dia e, em seguida, enviará gradualmente mais mensagens de melhor performance e menos mensagens de outras.
 
-Quando o Intelligent Selection tiver dados suficientes para determinar a melhor mensagem, essa mensagem será usada em 100% dos envios futuros.
+Depois que a Seleção Inteligente reunir dados suficientes para determinar a mensagem de melhor performance, ele usará essa mensagem em 100% dos envios futuros.
 
-![Área de teste A/B de um Canvas com Intelligent Selection ativado.]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
+![Seção Testes A/B de um Canva com a Seleção Inteligente ativada.]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
-### Etapa 3: Iniciar o Canvas
+### Etapa 3: Iniciar o Canva
 
-Com Intelligent Timing e Intelligent Selection, otimizamos o momento e a mensagem das ações do Royal Roast. Podemos iniciar o Canvas e observar as entregas se adaptarem às preferências dos usuários.
+Com o Intelligent Timing e a Seleção Inteligente, configuramos nossas promoções Royal Roast para serem otimizadas em termos de tempo e envio de mensagens. Podemos lançar nosso canva e observar como nossos envios mudam para acomodar as preferências do usuário.
