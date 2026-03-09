@@ -28,7 +28,7 @@ Les messages in-app modaux sont conçus pour s’adapter le mieux possible aux p
 
 Bien qu'il n'y ait pas de limite au nombre de caractères de texte que vous pouvez inclure dans un message in-app (ainsi que dans les boutons, le titre, le corps principal et autres), nous modérons le nombre de caractères de texte que vous utilisez. Un texte trop long obligera les utilisateurs à développer et à faire défiler le message.
 
-Tous les messages in-app ont une taille d'image recommandée de 500 Ko, une taille d'image maximale de 5 Mo, et prennent en charge les types de fichiers PNG, JPEG et GIF. Les images WebP ne sont pas prises en charge par tous les appareils ou navigateurs ; nous vous suggérons de convertir les images WebP en PNG ou JPEG avant de les ajouter aux messages in-app.
+Tous les messages in-app ont une taille d'image recommandée de 500 Ko, une taille d'image maximale de 5 Mo, et prennent en charge les types de fichiers PNG, JPEG et GIF. Les images WebP ne sont pas prises en charge par tous les appareils ou navigateurs ; nous vous recommandons de convertir les images WebP au format PNG ou JPEG avant de les ajouter à vos messages in-app.
 
 {% tabs %}
 {% tab Portrait %}
@@ -61,7 +61,7 @@ Tous les messages in-app ont une taille d'image recommandée de 500 Ko, une tail
 
 | Type | Rapport hauteur/largeur | Qualité de l’image | Remarques |
 | --- | --- | --- | --- |
-| Modale (image seulement) | 1:1 | Résolution maximale recommandée : 1200 x 2000 px <br> Résolution minimale : 600 x 600 px | Le message sera redimensionné pour s’adapter à la plupart des tailles d'image. La résolution maximale recommandée a un rapport hauteur/largeur de 3:5, ce qui peut ne pas donner des résultats optimaux. Bien que les images plus grandes soient utilisables, elles peuvent entraîner des temps de chargement plus longs. <br> Le rapport hauteur/largeur idéal pour les images est de 1:1\. Le non-respect de ce rapport peut déclencher un avertissement lors du téléchargement. Cet avertissement est une suggestion pour de meilleurs résultats et n'empêche pas le téléchargement d'images plus grandes. |
+| Modale (image seulement) | 1:1 | Résolution maximale recommandée : 1200 x 2000 pixels <br> Résolution minimale : 600 x 600 pixels | Le message sera redimensionné pour s’adapter à la plupart des tailles d'image. La résolution maximale recommandée présente un rapport hauteur/largeur de 3:5, ce qui peut ne pas fournir des résultats optimaux. Bien que les images de plus grande taille soient utilisables, elles peuvent entraîner des temps de chargement plus longs. <br> Le rapport hauteur/largeur idéal pour les images est 1:1\. Si ce rapport n'est pas respecté, un avertissement peut être déclenché lors du téléchargement. Cet avertissement est une recommandation visant à obtenir les meilleurs résultats possibles et n'empêche pas le téléchargement d'images plus volumineuses. |
 | Fenêtre modale avec texte | 29:10 | Haute résolution 1450 x 500 px <br> Résolution minimale 600 x 205 px | Les images hautes seront réduites et centrées horizontalement. Les images larges seront rognées sur les bords gauche et droit. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
@@ -128,7 +128,7 @@ table td {
     <tr>
       <td>Image d'inclinaison Android</td>
       <td>3:2</td>
-      <td>S.O.</td>
+      <td>N/A</td>
       <td>S.O.</td>
       <td>PNG, JPEG</td>
       <td>Pour plus de détails, consultez la section <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Notifications push d’images insérées pour Android</a>.</td>
@@ -152,7 +152,7 @@ table td {
 | --- | --- | 
 | Taille | 5 MB |
 | Largeur | En-tête : 600 px<br>Corps : 480 px |
-| Types de fichier | PNG, JPEG, GIF<br><br> La prise en charge des images WebP varie d'un client e-mail à l'autre. Pour un rendu fiable, convertissez les images WebP en PNG ou JPEG avant de les ajouter aux messages e-mail. |
+| Types de fichier | PNG, JPEG, GIF<br><br> La prise en charge des images WebP varie selon les clients de e-mail. Pour garantir un rendu fiable, veuillez convertir les images WebP au format PNG ou JPEG avant de les ajouter à vos messages d'e-mail. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Spécifications du texte | Propriétés maximales recommandées |
