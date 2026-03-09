@@ -20,22 +20,24 @@ Ao rastrear esses diferentes tipos de eventos, você pode obter uma compreensão
 
 ## Eventos padrão
 
-No Braze, os eventos padrão são ações predefinidas que os usuários podem realizar no seu app e que o Braze rastreia automaticamente após a integração do SDK do Braze. Aqui estão alguns exemplos de eventos padrão:
+No Braze, eventos padrão são ações predefinidas que o Braze reconhece em sua plataforma. Ao contrário de [eventos personalizados](#custom-events), você não precisa criar ou nomear eventos padrão - eles já estão integrados. No entanto, nem todos os eventos padrão são rastreados da mesma forma.
 
-- Lançamento do app
-- [Compra](#purchase-events)
+Os seguintes eventos são rastreados automaticamente após a integração do SDK:
+
 - Início da sessão
 - Fim da sessão
-- Clique na notificação por push
-- Abriu o e-mail
 
-Como profissional de marketing, você pode usar esses eventos padrão para entender o comportamento do usuário e o engajamento com seu app. Por exemplo, você pode ver com que frequência os usuários estão lançando seu app ou quantas compras estão sendo feitas. Essas informações podem ser valiosas quando se trata de criar campanhas de marketing direcionadas.
+Os seguintes eventos são rastreados após configuração adicional:
 
-É importante notar que, embora os eventos padrão sejam automaticamente rastreados pelo Braze, os eventos de compra, os eventos personalizados e os atributos personalizados precisam ser configurados pela sua equipe de desenvolvimento com base em suas necessidades e objetivos específicos.
+- [Eventos de compra](#purchase-events): Sua equipe de desenvolvimento registra esses eventos usando os métodos de compra do SDK. Para saber mais, consulte a seção de eventos de compra.
+- Eventos de engajamento por e-mail (como aberturas de e-mail e cliques em links): Rastreados pelo Braze quando você configura o e-mail do Braze e ativa o rastreamento de e-mail.
+- Eventos de engajamento por push (como aberturas e cliques em notificações por push): Rastreados após você configurar o push no Braze e integrar o manuseio de push com o SDK do Braze em seu app.
+
+Como profissional de marketing, você pode usar eventos padrão para entender o comportamento e o engajamento dos usuários. Por exemplo, os dados de sessão mostram com que frequência os usuários abrem seu app ou site, enquanto os eventos de compra ajudam você a rastrear a receita ao longo do tempo.
 
 ## Eventos de compra
 
-Os eventos de compra são uma forma de registrar e rastrear as compras feitas pelos seus usuários. Eles são um tipo de evento padrão que está disponível por padrão depois que você integra o SDK da Braze. Por isso, quando você usa eventos de compra para rastrear compras, pode monitorar sua receita ao longo do tempo e em diferentes fontes de receita diretamente da Braze.
+Eventos de compra registram e rastreiam as compras feitas pelos seus usuários. Após integrar o SDK do Braze, sua equipe de desenvolvimento pode registrar compras usando os métodos de compra do SDK. Quando você usa eventos de compra para rastrear compras, pode monitorar sua receita ao longo do tempo e em diferentes fontes de receita diretamente do Braze.
 
 Os eventos de compra registram as seguintes informações importantes sobre uma compra:
 
@@ -63,7 +65,7 @@ Veja um exemplo de como registrar um evento de compra em um app iOS usando Swift
 Appboy.sharedInstance()?.logPurchase("product_name", inCurrency: "USD", atPrice: NSDecimalNumber(string: "1.99"), withQuantity: 1)
 ```
 
-Neste exemplo, "product_name" é o nome do produto que foi comprado, "USD" é a moeda da compra, "1,99" é o preço do produto e "1" é a quantidade comprada.
+Neste exemplo, "product_name" é o nome do produto que foi comprado, "USD" é a moeda da compra, "1.99" é o preço do produto, e "1" é a quantidade comprada.
 
 {:start="3"}
 3\. **Visualize o evento de compra no dashboard da Braze:** Depois que o evento de compra for registrado, você poderá visualizá-lo no dashboard da Braze. Você pode usar esses dados para analisar sua receita, segmentar seus usuários e muito mais.
