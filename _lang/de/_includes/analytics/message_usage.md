@@ -29,11 +29,11 @@ Das Diagramm **Nutzung des Nachrichtenguthabens über den Vertrag** zeigt Ihre N
 
 ## SMS, MMS und RCS
 
-**SMS/MMS/RCS-Guthabenverbrauch** zeigt die Aufschlüsselung der Nutzung für den SMS-, MMS- und RCS-Kanal. Die Spalten in der Datentabelle setzen in der Regel voraus, dass Sie Nachrichten-Credits erworben haben (obwohl Braze vorübergehend noch ältere Abrechnungsmodelle unterstützt), und die Spalten **Credit ratio** und **Credits** geben den jeweiligen Ländersatz und die verbrauchten Credits an. Darüber hinaus zeigen Kacheln auf hoher Ebene den gesamten SMS- und ggf. MMS-Verbrauch im ausgewählten Datumsbereich an.
+**Die SMS/MMS/RCS-Guthabenverwendung** zeigt die Aufschlüsselung der Nutzung für die Kanäle SMS, MMS und RCS an. Die Spalten in der Datentabelle setzen in der Regel voraus, dass Sie Nachrichten-Credits erworben haben (obwohl Braze vorübergehend noch ältere Abrechnungsmodelle unterstützt), und die Spalten **Credit ratio** und **Credits** geben den jeweiligen Ländersatz und die verbrauchten Credits an. Darüber hinaus zeigen hochrangige Kacheln den gesamten SMS- und gegebenenfalls MMS-Verbrauch für den ausgewählten Zeitraum an.
 
 Es sind Filter verfügbar, die es Ihnen erlauben, nach **Land** oder SMS- und RCS-Typ zu filtern.
 
-![SMS/MSS/RCS-Guthabenverbrauch mit Kacheln für übergeordnete Daten und einem Abschnitt für den Verbrauch nach Konto.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
+![SMS/MSS/RCS-Guthabenverbrauch mit Kacheln für Daten auf hoher Ebene und einem Abschnitt für den Verbrauch pro Konto.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
 
 Anders als die **Übersicht über die Nutzung von Nachrichtenguthaben** enthält dieser Abschnitt historische Daten aus früheren Vertragszeiträumen. 
 
@@ -41,7 +41,7 @@ Anders als die **Übersicht über die Nutzung von Nachrichtenguthaben** enthält
 Es ist möglich, einen Datumsbereich auszuwählen, der sowohl die Verwendung von Nicht-Credits als auch von Nachrichten-Credits enthält. In diesem Fall wird der Verbrauch, der außerhalb des Nachrichtenguthabens stattgefunden hat, in den Spalten **Guthabenquote** und **Guthaben** mit `—` (Null) angezeigt.
 {% endalert %}
 
-![SMS/MMS/RCS-Guthaben-Nutzungstabelle mit Nullwerten.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
+![SMS/MMS/RCS-Guthaben-Verbrauchstabelle mit Nullwerten.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
 
 ## WhatsApp
 
@@ -64,18 +64,18 @@ Sie können Ihre Daten filtern nach:
 Die im Dashboard **Nachrichtenverwendung** angezeigten Daten beziehen sich auf die Vertragsebene und sind nicht auf ein einzelnes Dashboard-Unternehmen oder einen Arbeitsbereich beschränkt. Diese Daten spiegeln die Nutzung aller Arbeitsbereiche innerhalb Ihres Dashboards wider und möglicherweise auch aller Dashboards (wenn Sie mehrere haben).
 {% endalert %}
 
-- Die zugrundeliegenden Daten werden täglich zur Verfügung gestellt, wobei die Datentabellen um 3 Uhr, 9 Uhr, 12 Uhr und 18 Uhr EST aktualisiert werden. Das Update des Dashboards **zur Nutzung von Nachrichten** kann länger als 24 Stunden dauern.
+- Die zugrundeliegenden Daten werden täglich zur Verfügung gestellt, wobei die Datentabellen um 3 Uhr, 9 Uhr, 12 Uhr und 18 Uhr EST aktualisiert werden. Das Update des Dashboards **„Nachrichtennutzung“** kann länger als 24 Stunden dauern.
 - Braze folgt der üblichen Rundungsmethodik: Zahlen werden auf das nächste Zehntel aufgerundet.
 
 ### Auswahl des Datumsbereichs
 
-Das Dashboard **Nachrichtenverwendung** schließt das Enddatum des ausgewählten Bereichs von den Ergebnissen aus. Wenn Sie zum Beispiel Oktober 1-31 auswählen, werden die Nutzungsstatistiken für den 31\. Oktober ausgeschlossen. Um den letzten Tag des gewünschten Zeitraums einzubeziehen, erweitern Sie den Bereich um einen Tag. Um zum Beispiel den gesamten Oktober einzuschließen, wählen Sie 1\. Oktober - 1\. November aus.
+Das Dashboard **„Nachrichtennutzung“** schließt das Enddatum des ausgewählten Zeitraums aus den Ergebnissen aus. Wenn Sie beispielsweise den Zeitraum vom 1\. bis 31\. Oktober auswählen, werden die Nutzungsstatistiken für den 31\. Oktober nicht berücksichtigt. Um den letzten Tag Ihres gewünschten Zeitraums einzuschließen, erweitern Sie den Bereich um einen Tag. Um beispielsweise den gesamten Oktober einzubeziehen, wählen Sie bitte den Zeitraum vom 1\. Oktober bis zum 1\. November aus.
 
-### Vergleiche mit Drittanbietern
+### Vergleich mit Drittanbietern
 
-Wenn Sie die Daten über die Nutzung von Nachrichten von Braze mit denen von Drittanbietern (z.B. Infobip) vergleichen, sollten Sie dies nicht vergessen:
+Bitte beachten Sie beim Vergleich der Braze-Nachrichten-Nutzungsdaten mit denen von Drittanbietern (wie Infobip) Folgendes:
 
-- **Nachrichten-Segmente vs. Nachrichten**: Braze zählt SMS Nachrichten nach Segmenten. Eine einzelne SMS Nachricht, die in mehrere Segmente aufgeteilt ist (z.B. aufgrund ihrer Länge), wird in Braze als mehrere Segmente gezählt. Weitere Informationen finden Sie unter [Rechnungsrechner für SMS und RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
-- **Nachrichten auf Kreditbasis versus Nachrichten ohne Kreditbasis**: Das Dashboard enthält sowohl kreditbasierte als auch nicht kreditbasierte Nachrichten. Drittanbieter zählen möglicherweise nur Nachrichten auf Guthabenbasis, was zu Diskrepanzen in den Gesamtzahlen führen kann.
-- **Eingehend vs. Ausgehend**: Stellen Sie sicher, dass Sie dieselben Nachrichtentypen vergleichen. Einige Dashboards von Drittanbietern beziehen sowohl eingehende als auch ausgehende Nachrichten in ihre Gesamtwerte ein, während Braze es Ihnen erlaubt, nach der Richtung zu filtern.
-- **Ausrichtung des Datumsbereichs**: Da das Dashboard das Enddatum ausklammert, können Vergleiche von Tag zu Tag genauer ausfallen als bei längeren Datumsbereichen. Wenn Sie Daten für einen bestimmten Zeitraum vergleichen, erweitern Sie den Datumsbereich von Braze um einen Tag, um den letzten Tag Ihres Vergleichszeitraums einzubeziehen.
+- **Nachrichten-Segmente im Vergleich zu Nachrichten**: Braze zählt SMS-Nachrichten nach Segmenten. Eine einzelne SMS-Nachricht, die in mehrere Segmente unterteilt ist (beispielsweise aufgrund ihrer Länge), wird in Braze als mehrere Segmente gezählt. Weitere Informationen finden Sie unter [SMS- und RCS-Abrechnungsrechner]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
+- **Kreditbasierte und nicht kreditbasierte Nachrichten**: Das Dashboard enthält sowohl kreditbasierte als auch nicht kreditbasierte Nachrichten. Drittanbieter zählen möglicherweise nur kreditbasierte Nachrichten, was zu Abweichungen in den Gesamtzahlen führen kann.
+- **Eingehend vs. Ausgehend**: Bitte stellen Sie sicher, dass Sie die gleichen Nachrichtentypen vergleichen. Einige Dashboards von Drittanbietern berücksichtigen sowohl eingehende als auch ausgehende Nachrichten in ihren Gesamtzahlen, während Braze die Möglichkeit bietet, nach Richtung zu filtern.
+- **Datumsbereichsausrichtung**: Da das Dashboard das Enddatum nicht berücksichtigt, können Tagesvergleiche genauer sein als Vergleiche über längere Zeiträume. Wenn Sie Daten für einen bestimmten Zeitraum vergleichen möchten, erweitern Sie bitte Ihren Braze-Datumsbereich um einen Tag, um den letzten Tag Ihres Vergleichszeitraums einzubeziehen.
