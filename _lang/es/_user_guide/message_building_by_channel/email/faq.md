@@ -22,8 +22,8 @@ Ten en cuenta que esta deduplicación se produce si los usuarios a los que se di
 Las campañas desencadenadas por la API deduplicarán o enviarán deduplicados en función de dónde esté definida la audiencia. En resumen, los correos electrónicos duplicados deben dirigirse directamente como `user_ids` separado dentro de la llamada a la API para recibir múltiples detalles. A continuación se presentan tres posibles escenarios para campañas desencadenadas por API.
 
 - **Escenario 1: Correos electrónicos duplicados en el segmento de destino:** Si el mismo correo electrónico aparece en varios perfiles de usuario agrupados en los filtros de audiencia del panel de control para una campaña activada por API, sólo uno de los perfiles recibirá el correo electrónico.
-- **Escenario 2: Correos duplicados en diferentes `user_ids` dentro del objeto destinatarios:** Si el mismo correo electrónico aparece en varios `External_user_IDs` a los que hace referencia el objeto "destinatarios", el correo electrónico se enviará dos veces.
-- **Escenario 3: Correos electrónicos duplicados debido a la duplicidad de user_ids dentro del objeto destinatarios:** Si intenta añadir el mismo perfil de usuario dos veces, sólo uno de los perfiles recibirá el correo electrónico.
+- **Escenario 2: Correos duplicados en diferentes `user_ids` dentro del objeto destinatarios:** Si el mismo correo electrónico aparece en varias`External_user_IDs`referencias del objeto «destinatarios», el correo electrónico se enviará dos veces.
+- **Escenario 3: Correos electrónicos duplicados debido a duplicadosuser_idsdentro del objeto destinatarios:** Si intenta añadir el mismo perfil de usuario dos veces, sólo uno de los perfiles recibirá el correo electrónico.
 
 ### ¿Se aplicarán retroactivamente las actualizaciones de mi configuración de correo electrónico saliente?
 
@@ -60,11 +60,11 @@ Puede que veas más clics que aperturas por alguna de las siguientes razones:
 - Los usuarios hacen clic en algunos enlaces de correo electrónico dentro del panel de vista previa de sus teléfonos. En este caso, Braze registra este correo electrónico como pulsado pero no abierto.
 - Los usuarios vuelven a abrir un correo electrónico que habían previsualizado anteriormente.
 
-### ¿Por qué no veo ni aperturas ni clics en los correos electrónicos?
+### ¿Por qué no veo ninguna apertura ni ningún clic en los correos electrónicos?
 
-Puede que no veas ni aperturas ni clics en el correo electrónico si hay un error de configuración en tu dominio de seguimiento. Esto puede deberse a cualquiera de las siguientes razones:
-- Hay un problema de SSL en el que las URL de seguimiento son `http` en lugar de `https`.
-- Hay un problema con tu CDN por el que no se rellena la cadena del agente de usuario en los eventos de apertura, de clic o en ambos.
+Es posible que no veas ninguna apertura ni ningún clic en tus correos electrónicos si hay un error de configuración en tu dominio de seguimiento. Esto puede deberse a cualquiera de las siguientes razones:
+- Hay un problema con el protocolo SSL en el que las URL de seguimiento son`http`  en lugar de `https`.
+- Hay un problema con tu CDN por el que la cadena del agente de usuario en los eventos de apertura, los eventos de clic o ambos no se rellenan.
 
 ### ¿Cuáles son los riesgos potenciales de provocar clics en el servidor?
 
@@ -81,4 +81,30 @@ Braze rastrea los enlaces de cancelación de suscripción si se utiliza el sigui
 No, Braze no ofrece esta funcionalidad. Esto se debe a que una mayoría cada vez mayor del correo electrónico se abre en dispositivos móviles y clientes de correo modernos, que renderizan imágenes y contenidos sin problemas.
 
 **Solución:** Para lograr este mismo resultado, puede alojar el contenido de su correo electrónico en una página de destino externa (como su sitio web), a la que se puede enlazar desde la campaña de correo electrónico que está creando utilizando la herramienta **Enlace** al editar el cuerpo del correo electrónico.
+
+### ¿Por qué el software de seguridad del correo electrónico cancela automáticamente la suscripción de mis usuarios?
+
+Algunas herramientas de seguridad para el correo electrónico corporativo (como Barracuda, Proofpoint y servicios similares) descargan previamente o escanean todas las URL de los correos electrónicos entrantes, incluidos los enlaces para cancelar la suscripción. Esto puede provocar cancelaciones de suscripción involuntarias cuando la herramienta de seguridad sigue el enlace para cancelar la suscripción con un solo clic.
+
+Para mitigar esto:
+
+- **Recomienda a los destinatarios que incluyan tu dominio de envío en la lista blanca:** Trabaja con los equipos de TI de los destinatarios afectados para añadir tu dominio de envío y los dominios de seguimiento de Braze a su lista de permitidos de seguridad de correo electrónico.
+- **Utiliza un centro de preferencias:** En lugar de un enlace directo para cancelar la suscripción, utiliza un [centro de preferencias]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) que requiera la interacción del usuario para confirmar la acción de cancelación. Los escáneres de seguridad normalmente no completan formularios de varios pasos.
+- **Revisar los registros para cancelar suscripción:** Comprueba el`User-Agent`encabezado y la dirección IP en los datos de eventos de cancelación de suscripción de Currents para identificar patrones coherentes con el escaneo automatizado (como encabezados `User-Agent`coherentes en múltiples cancelaciones de suscripción).
+
+Para obtener más información sobre cómo el escaneo del lado del servidor puede afectar las métricas del correo electrónico, consulta Cómo [manejar los aumentos en las tasas de clics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#handling-increases-in-click-rates).
+
+### ¿Por qué ha cambiado inesperadamente la tasa de apertura de mi máquina?
+
+[Las aperturas automáticas]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#machine-opens) se desencadenan mediante características de seguridad del correo electrónico, como Apple Mail MPP, que precarga el contenido del correo electrónico (incluido el píxel de seguimiento) sin que el usuario abra físicamente el correo electrónico. Las tasas de apertura de las máquinas pueden variar en función de:
+
+- Cambios en la proporción de tu audiencia que utiliza Apple Mail u otros clientes de correo electrónico con funciones de privacidad.
+- Actualizaciones de las características de privacidad del proveedor de correo electrónico o de los comportamientos de detección de bots.
+- Cambios en la segmentación o orientación de tu audiencia.
+
+Los porcentajes de apertura de las máquinas no son una medida fiable de la interacción real. Para obtener una visión más precisa del rendimiento del correo electrónico, céntrate en *«Otras aperturas»* (aperturas no automáticas) y *«Clics únicos*». También puedes comparar estas métricas a lo largo del tiempo utilizando el [panel de rendimiento del correo electrónico]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard/).
+
+### ¿La métrica *«Unique Opens»* incluye las aperturas de máquinas?
+
+No. *Unique Opens* solo cuentan [otras aperturas]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#other-opens), lo que excluye los correos electrónicos identificados como aperturas de máquinas. *Las aperturas de máquinas* se siguen por separado. En la vista **Análisis de campañas** y **en el generador de informes**, puedes ver ambas métricas de forma independiente.
 
