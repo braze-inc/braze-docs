@@ -46,7 +46,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Réponses
 
 {% alert note %}
-Toutes les étapes Canvas ont un champ `next_paths` qui est un tableau de données `{name, next_step_id}`. Pour les étapes du message, le champ `next_step_ids` sera présent, mais ne contiendra pas de données pour les autres étapes de Canvas.
+Toutes les étapes Canvas ont un champ `next_paths` qui est un tableau de données `{name, next_step_id}`. Pour les étapes Message, le`next_step_ids`champ sera présent, mais ne contiendra pas de données pour les autres étapes du canvas.
 {% endalert %}
 
 ```json
@@ -213,7 +213,7 @@ Voici un exemple de réponse qui inclut les messages Canvas envoyés par différ
         }
       }
     }
-  ],
+  ]
 }
 ```
 
