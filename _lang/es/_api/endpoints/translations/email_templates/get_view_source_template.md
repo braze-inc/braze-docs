@@ -1,12 +1,12 @@
 ---
-nav_title: "GET: View source translations for plantilla de correo electrónico"
-article_title: "GET: View Source Translations for Plantilla de correo electrónico"
-search_tag: Endpoint
+nav_title: "GET: Ver traducciones originales para la plantilla de correo electrónico"
+article_title: "GET: Ver traducciones de la fuente para la plantilla de correo electrónico"
+search_tag: Punto de conexión
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles sobre las traducciones de Ver origen para un punto final de plantilla de correo electrónico."
+description: "Este artículo describe los detalles sobre el extremo Ver traducciones de origen para una plantilla de correo electrónico."
 ---
 
 {% api %}
@@ -15,11 +15,9 @@ description: "En este artículo se describen los detalles sobre las traducciones
 /plantillas/correo electrónico/traducciones/fuente
 {% endapimethod %}
 
-> Utiliza este punto final para ver las traducciones de origen de una [plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de traducción.
+> Utiliza este punto final para ver las traducciones originales de una [plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de traducción.
 
-{% alert important %}
-Este punto final se encuentra actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Requisitos previos
 
