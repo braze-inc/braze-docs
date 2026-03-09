@@ -3,7 +3,7 @@ nav_title: Démarrage
 article_title: Premiers pas avec Decisioning Studio
 layout: dev_guide_content_first
 guide_top_header: "Premiers pas avec Decisioning Studio"
-guide_top_text: "Avant de créer un agent décisionnel, utilisez ces articles pour vous aider à planifier et à comprendre Decisioning Studio."
+guide_top_text: ""
 page_order: 0
 search_rank: 2
 page_type: landing

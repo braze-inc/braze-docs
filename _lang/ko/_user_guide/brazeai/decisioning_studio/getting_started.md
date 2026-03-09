@@ -3,7 +3,7 @@ nav_title: 시작하기
 article_title: 의사 결정 스튜디오 시작하기
 layout: dev_guide_content_first
 guide_top_header: "의사 결정 스튜디오 시작하기"
-guide_top_text: "의사 결정 에이전트를 만들기 전에 다음 문서를 참조하여 의사 결정 스튜디오에 대한 계획을 세우고 이해하세요."
+guide_top_text: ""
 page_order: 0
 search_rank: 2
 page_type: landing

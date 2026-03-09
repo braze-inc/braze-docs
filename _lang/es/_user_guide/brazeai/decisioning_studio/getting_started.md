@@ -3,7 +3,7 @@ nav_title: Cómo empezar
 article_title: Primeros pasos con Decisioning Studio
 layout: dev_guide_content_first
 guide_top_header: "Primeros pasos con Decisioning Studio"
-guide_top_text: "Antes de crear un agente decisor, utiliza estos artículos para guiar tu planificación y comprensión de Decisioning Studio."
+guide_top_text: ""
 page_order: 0
 search_rank: 2
 page_type: landing

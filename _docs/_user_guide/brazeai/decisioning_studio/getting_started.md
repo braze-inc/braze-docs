@@ -3,7 +3,7 @@ nav_title: Getting started
 article_title: Getting Started with Decisioning Studio
 layout: dev_guide_content_first
 guide_top_header: "Getting Started with Decisioning Studio"
-guide_top_text: "Before you create a decisioning agent, use these articles to guide your planning and understanding of Decisioning Studio."
+guide_top_text: ""
 page_order: 0
 search_rank: 2
 page_type: landing
@@ -34,15 +34,9 @@ guide_menu_list:
     image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-# Getting started with Decisioning Studio
+BrazeAI Decisioning Studio™ allows you to design and deploy decisioning agents that optimize any business metric.
 
-> This reference gives an overview of the steps involved in setting up Decisioning Studio, including connecting data sources, setting up orchestration, and designing your decisioning agent.
-
-BrazeAI Decisioning Studio™ allows you to design and deploy decisioning agents that optimize any business metric. A decisioning agent is a custom configuration tailored to meet a specific business goal.
-
-{% alert tip %}
-Your AI Expert Services team will support you in setting up Decisioning Studio for optimal performance.
-{% endalert %}
+This reference gives an overview of the steps involved in setting up Decisioning Studio, including designing your agent, configuring and connecting data sources, setting up orchestration, and evaluating performance.
 
 ## Key design decisions
 

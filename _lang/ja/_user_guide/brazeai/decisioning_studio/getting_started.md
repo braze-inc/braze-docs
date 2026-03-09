@@ -3,7 +3,7 @@ nav_title: はじめに
 article_title: Decisioning Studioを使い始める
 layout: dev_guide_content_first
 guide_top_header: "Decisioning Studioを使い始める"
-guide_top_text: "デシジョニング・エージェントを作成する前に、これらの記事を参考にして、デシジョニング・スタジオを理解し、計画を立てよう。"
+guide_top_text: ""
 page_order: 0
 search_rank: 2
 page_type: landing
