@@ -1,7 +1,7 @@
 ---
 page_order: 3
-nav_title: Rich-Benachrichtigungen
-article_title: Einrichten von Rich-Push-Benachrichtigungen für das Braze SDK
+nav_title: Rich-Benachrichtigung
+article_title: Rich-Push-Benachrichtigungen für das Braze SDK einrichten
 channel:
   - push notifications
 ---
