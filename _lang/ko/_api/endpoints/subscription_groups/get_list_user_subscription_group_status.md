@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: 사용자의 구독 그룹 상태 나열하기"
+nav_title: "GET: 사용자의 구독 그룹 상태 목록"
 article_title: "GET: 사용자의 구독 그룹 상태 나열"
 search_tag: Endpoint
 page_order: 4
@@ -82,7 +82,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 {% endtab %}
 {% endtabs %}
 
-## 응답
+## Response
 
 모든 성공적인 응답은 구독 그룹의 상태 및 사용자 기록에 따라 `Subscribed`, `Unsubscribed` 또는 `Unknown` 로 반환됩니다.
 
@@ -96,8 +96,8 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 }
 ```
 
-{% alert note %}
-사용자가 전 세계적으로 구독을 탈퇴하면 각 구독 그룹에서 탈퇴됩니다. 이 엔드포인트는 각 구독 그룹에 대한 마지막 구독 상태를 반환합니다. 사용자가 전역 재구독을 결정하면 Braze는 각 구독 상태를 되돌리기 때문에 이는 예상되는 동작입니다.
+{% alert important %}
+이 엔드포인트는 사용자의 글로벌 구독 상태와 무관하게 구독 그룹 상태를 독립적으로 반환합니다. 사용자가 전역적으로 탈퇴한 경우, Braze 대시보드에서는 해당 사용자가 각 구독 그룹에서 탈퇴한 상태로 표시됩니다. 그러나 이 엔드포인트는 여전히 마지막으로 저장된 구독 그룹 상태(예: `Subscribed`)를 반환합니다. 글로벌 구독 상태가 개별 구독 그룹을 덮어쓰지 않으면서도 이를 우선시하기 때문입니다.<br><br>Braze는 개별 구독 그룹 상태를 보존하므로, 사용자가 전체적으로 재구독할 경우 각 구독 그룹은 이전에 저장된 상태로 복원됩니다. 사용자의 유효한 구독 상태를 확인하려면, 해당 사용자의 글로벌 구독 상태와 본 엔드포인트에서 반환된 구독 그룹 상태를 모두 확인하십시오.
 {% endalert %}
 
 {% endapi %}
