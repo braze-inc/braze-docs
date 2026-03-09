@@ -33,7 +33,7 @@ En Braze, una de las condiciones de carrera más comunes se produce con los mens
 1. Se crea un usuario;
 2. El mismo usuario recibe inmediatamente un mensaje, realiza un evento personalizado o registra un atributo personalizado.
 
-Sin embargo, en algunos casos, el segundo suceso se desencadena primero. Esto significa que se está intentando enviar un mensaje a un usuario que todavía no existe. Como resultado, el usuario nunca lo recibe. Esto también se aplica a los eventos o atributos, cuando el evento o atributo intenta registrarse en un perfil de usuario que aún no se ha creado.
+Sin embargo, en algunos casos, el segundo evento desencadena el primero. Esto significa que se está intentando enviar un mensaje a un usuario que todavía no existe. Como resultado, el usuario nunca lo recibe. Esto también se aplica a los eventos o atributos, cuando el evento o atributo intenta registrarse en un perfil de usuario que aún no se ha creado.
 
 ### Buenas prácticas
 
@@ -48,7 +48,7 @@ También puedes añadir este retraso en el [SDK de Braze]({{site.baseurl}}/devel
 ## Supuesto 2: Uso de varios puntos finales de API
 
 {% alert important %}
-Utilizamos el procesamiento asíncrono para maximizar la velocidad y la flexibilidad. Esto significa que cuando las llamadas a la API se nos envían por separado, no podemos garantizar que se procesen en el orden en que se enviaron.
+Utilizamos el procesamiento asíncrono para maximizar la velocidad y la flexibilidad. Esto significa que cuando las llamadas API se envían por separado, no podemos garantizar que se procesen en el orden en que se enviaron.
 {% endalert %}
 
 Hay algunas situaciones en las que varios puntos finales de la API también pueden dar lugar a esta condición de carrera, como cuando:
@@ -56,10 +56,10 @@ Hay algunas situaciones en las que varios puntos finales de la API también pued
 - Utilizar puntos finales de API separados para crear usuarios y desencadenar Canvas o campañas
 - Hacer varias llamadas separadas al punto final `/users/track` para actualizar atributos personalizados, eventos o compras.
 
-Cuando la información del usuario se envía a Braze utilizando el [punto final`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track), ocasionalmente puede tardar unos segundos en procesarse. Esto significa que cuando se realizan solicitudes simultáneamente a los puntos finales `/users/track` y de mensajería como `/campaign/trigger/send`, no hay garantía de que la información del usuario se actualice antes de enviar un mensaje.
+Cuando la información del usuario se envía a Braze utilizando el [punto final`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track), ocasionalmente puede tardar unos segundos en procesarse. Esto significa que cuando se realizan solicitudes simultáneas a los puntos finales`/users/track`  y de mensajería como `/campaign/trigger/send`, no hay garantía de que la información del usuario se actualice antes de enviar un mensaje.
 
 {% alert note %}
-Si se envían atributos de usuario y eventos en la misma solicitud (ya sea desde `/users/track` o desde el SDK), entonces Braze procesa los atributos antes que los eventos o que intentar enviar cualquier mensaje.
+Si los atributos y eventos del usuario se envían en la misma solicitud (ya sea desde`/users/track`  o desde el SDK), Braze procesa los atributos antes que los eventos o antes de intentar enviar cualquier mensaje.
 {% endalert %}
 
 ### Buenas prácticas
@@ -74,13 +74,13 @@ Si envías una solicitud de API de mensajes programados, estas solicitudes deben
 
 En lugar de utilizar varios puntos finales, puedes incluir los [atributos de usuario]({{site.baseurl}}/api/objects_filters/user_attributes_object#object-body) y [las propiedades desencadenantes]({{site.baseurl}}/api/objects_filters/trigger_properties_object) en una sola llamada a la API utilizando el [punto final`campaign/trigger/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns). 
 
-Cuando estos objetos se incluyen con el desencadenante, los atributos se procesan primero, antes de que se desencadene el mensaje, eliminando posibles condiciones de carrera. Ten en cuenta que las propiedades desencadenantes no actualizan el perfil de usuario, sino que sólo se utilizan en el contexto del mensaje.
+Cuando estos objetos se incluyen con el desencadenador, los atributos se procesan primero, antes de que se active el mensaje, lo que elimina posibles condiciones de carrera. Ten en cuenta que las propiedades desencadenantes no actualizan el perfil de usuario, sino que sólo se utilizan en el contexto del mensaje.
 
 #### Utiliza el POST: Punto final de seguimiento de usuarios (sincronización)
 
 Utiliza el [punto final`/users/track/sync/` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) para registrar eventos personalizados y compras y actualizar los atributos del perfil de usuario de forma sincrónica. Utilizar este punto final para actualizar los perfiles de usuario al mismo tiempo y en una sola llamada puede ayudar a evitar posibles condiciones de carrera.
 
-{% include early_access_beta_alert.md feature='This endpoint' type='beta' %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' type='beta' %}
 
 ## Escenario 3: Combinación de desencadenantes basados en acciones y filtros de audiencia
 
@@ -102,11 +102,11 @@ Por ejemplo, si el desencadenante de tu campaña es "Ha realizado una compra" y 
 
 #### Evita los filtros de audiencia que asumen que el evento desencadenante se ha actualizado
 
-Esta buena práctica es similar a evitar filtros redundantes con el evento desencadenar. Normalmente, un filtro que asume que el evento desencadenante se actualiza en el perfil de usuario falla.
+Esta buena práctica es similar a evitar filtros redundantes con el evento desencadenar. Por lo general, un filtro que asume que el evento desencadenante se actualiza en el perfil de usuario falla.
 
 #### Utilizar Liquid aborta (sólo atributos)
 
-En campañas y pasos en Canvas, utiliza Liquid aborts para evitar utilizar filtros de audiencia que contengan los atributos desencadenantes en el horario de entrada. Por ejemplo, supongamos que tienes un atributo de matriz "colores favoritos" y quieres dirigirte a cualquier usuario que actualice la matriz de atributos con cualquier valor, y que también tenga el color "azul" en la matriz después de que se haya completado la actualización. Si utilizas los filtros de audiencia en este ejemplo, te encontrarás con una condición de carrera y te perderás a los usuarios que añadan "azul" en la matriz por primera vez.
+En campañas y pasos en Canvas, utiliza Liquid aborts para evitar utilizar filtros de audiencia que contengan los atributos desencadenantes en el horario de entrada. Por ejemplo, supongamos que tienes un atributo de matriz «colores favoritos» y deseas dirigirte a cualquier usuario que actualice la matriz de atributos con cualquier valor y que, además, tenga el color «azul» en la matriz una vez completada la actualización. Si utilizas los filtros de audiencia en este ejemplo, te encontrarás con una condición de carrera y te perderás a los usuarios que añadan "azul" en la matriz por primera vez.
 
 En este caso, puedes implementar un desencadenante de retraso en una campaña o utilizar un paso de Retraso en Canvas para permitir que el perfil de usuario se actualice durante un periodo de tiempo y, a continuación, utilizar la siguiente lógica de cancelación de Liquid:
 
@@ -119,10 +119,10 @@ En este caso, puedes implementar un desencadenante de retraso en una campaña o 
 ```
 {% endraw %}
 
-#### Confirma cómo se gestionan los datos de usuario
+#### Confirmar cómo se administran los datos de usuario.
 
-Si hay una condición de carrera durante la evaluación de la entrada en el Canvas, los usuarios pueden entrar en un Canvas en el que no debían entrar. Por ejemplo, el perfil de usuario podría configurarse para ser incluido en la audiencia y posteriormente actualizarse después de que el Canvas haya puesto en cola a los usuarios para que dejen de ser elegibles en la audiencia. 
+Si se produce una condición de carrera durante la evaluación de la entrada en Canvas, los usuarios pueden entrar en un Canvas en el que no debían entrar. Por ejemplo, el perfil de usuario podría configurarse para que se incluya en la audiencia y, posteriormente, actualizarse después de que Canvas haya puesto a los usuarios en cola para que ya no sean elegibles en la audiencia. 
 
-Si un usuario desencadena el evento de entrada en Canvas varias veces en el mismo segundo, Braze sólo permite una entrada en ese segundo (aunque esté habilitada la reentrada). Así se evitan las entradas duplicadas, por lo que el número total de entradas en Canvas puede ser inferior al total de eventos desencadenantes.
+Si un usuario desencadena el evento de entrada en Canvas varias veces en el mismo segundo, Braze solo permite una entrada para ese segundo (incluso si la reentrada está habilitada). Esto evita entradas duplicadas, por lo que el número total de entradas en Canvas puede ser inferior al número total de eventos que desencadenan acciones.
 
-Recomendamos confirmar cómo se gestionan y actualizan los datos de usuario, concretamente cuándo y cómo se actualizan atributos específicos, como por SDK, API, API por lotes y otros métodos. Esto puede ayudar a identificar y aclarar por qué un usuario ha entrado en una campaña o Canvas frente a cuándo se actualizó el perfil de un usuario.
+Recomendamos confirmar cómo se administran y actualizan los datos de usuario, concretamente cuándo y cómo se actualizan atributos específicos, por ejemplo, mediante SDK, API, API por lotes y otros métodos. Esto puede ayudar a identificar y aclarar por qué un usuario ha entrado en una campaña o en Canvas en comparación con cuándo se actualizó el perfil de usuario.
