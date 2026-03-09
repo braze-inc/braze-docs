@@ -26,13 +26,13 @@ Para gestionar las banderas de características en el panel, necesitarás ser ad
 
 Ve a **Mensajería** > **Indicadores de características** y, a continuación, selecciona **Crear indicador de características**.
 
-![Una tabla de datos que muestra una bandera de característica existente y cómo crear una nueva.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
+![Una tabla de datos que muestra una característica existente y cómo crear una nueva.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
 
 ### Paso 2: Rellena los datos
 
-En **Detalles de la** bandera de característica, introduce un nombre, un ID y una descripción para tu bandera de característica.
+En **Detalles de la característica**, introduce un nombre, un ID y una descripción para tu característica.
 
-![Un formulario que muestra que puedes añadir un nombre, ID, descripción y propiedades a una bandera de característica.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
+![Un formulario que muestra que puedes añadir un nombre, un ID, una descripción y propiedades a una característica.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
 
 
 | Campo        | Descripción                                                                |
@@ -40,16 +40,16 @@ En **Detalles de la** bandera de característica, introduce un nombre, un ID y u
 | Apellidos         | Un título legible para tus especialistas en marketing y administradores.              |
 | ID           | El ID único que utilizarás en tu código para comprobar si esta característica está [habilitada para un usuario](#enabled). Este ID no se puede cambiar más tarde, así que revisa nuestras [mejores prácticas de denominación de ID](#naming-conventions) antes de continuar. |
 | Descripción  | Una descripción opcional que da algo de contexto sobre tu bandera de característica.   |
-| Propiedades   | Propiedades opcionales que configuran a distancia la bandera de tu característica. Se pueden sobrescribir en pasos en Canvas o en experimentos con la bandera de características. |
+| Propiedades   | Propiedades opcionales que configuran de forma remota tu indicador de característica. Se pueden sobrescribir en los pasos en Canvas o en los experimentos con indicadores de características. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Paso 2a: Crear propiedades personalizadas
 
-En **Propiedades**, puedes crear opcionalmente propiedades personalizadas a las que tu aplicación pueda acceder a través del SDK de Braze cuando tu característica esté habilitada. Puedes asignar un valor de cadena, booleano, de imagen, de marca de tiempo, JSON o numérico a cada variable, así como establecer un valor predeterminado.
+En **Propiedades**, puedes crear opcionalmente propiedades personalizadas a las que tu aplicación puede acceder a través del SDK de Braze cuando la característica está habilitada. Puedes asignar una cadena, un valor booleano, una imagen, una marca de tiempo, JSON o un valor numérico a cada variable, así como establecer un valor predeterminado.
 
 {% tabs local %}
 {% tab example %}
-En el siguiente ejemplo, la bandera de característica muestra un banner de agotado para una tienda de comercio electrónico utilizando las propiedades personalizadas indicadas: 
+En el siguiente ejemplo, la característica muestra un banner de agotamiento de existencias para una tienda de comercio electrónico utilizando las propiedades personalizadas enumeradas: 
 
 |Nombre de la propiedad|Tipo|Valor|
 |--|--|--|
@@ -62,73 +62,73 @@ En el siguiente ejemplo, la bandera de característica muestra un banner de agot
 |`footer_settings`|`JSON`|`{ "colors": [ "red", "blue", "green" ], "placement": 123 }`|
 
 {% alert tip %}
-No hay límite en el número de propiedades que puedes añadir. Sin embargo, las propiedades de una bandera de característica están limitadas a un total de 10 KB. Tanto los valores de propiedad como las claves tienen una longitud máxima de 255 caracteres.
+No hay límite en el número de propiedades que puedes añadir. Sin embargo, las propiedades de una característica de función están limitadas a un total de 10 KB. Tanto los valores de propiedad como las claves tienen una longitud máxima de 255 caracteres.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
 ### Paso 4: Elige segmentos a los que dirigirte
 
-Antes de desplegar una bandera de características, tienes que elegir un [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/) de usuarios al que dirigirte. Selecciona **Añadir regla** en la bandera que acabas de crear y, a continuación, utiliza los menús desplegables Grupo de filtrado y Segmento para filtrar a los usuarios de tu audiencia objetivo. Añade varios filtros para limitar aún más tu audiencia.
+Antes de desplegar una bandera de características, tienes que elegir un [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/) de usuarios al que dirigirte. Selecciona **Añadir regla** en tu bandera recién creada y, a continuación, utiliza los menús desplegables de grupo de filtros y segmento para filtrar a los usuarios de tu audiencia objetivo. Añade varios filtros para reducir aún más tu audiencia.
 
-![Un cuadro de texto con la etiqueta Tráfico de despliegue con la posibilidad de añadir segmentos y filtros.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
+![Un cuadro de texto denominado «Tráfico de implementación» con la posibilidad de añadir segmentos y filtros.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
 
 ### Paso 5: Configura el tráfico de despliegue {#rollout}
 
-Por defecto, las banderas de características están siempre inactivas, lo que te permite separar la fecha de lanzamiento de tus características de la activación total de tus usuarios. Para comenzar tu despliegue, utiliza la sección **Tráfico de despliegue** para introducir un porcentaje en el cuadro de texto. Esto elegirá el porcentaje de usuarios aleatorios en tu segmento seleccionado para recibir esta nueva característica.
+De forma predeterminada, los indicadores de características siempre están inactivos, lo que te permite separar la fecha de lanzamiento de la característica de la activación total de los usuarios. Para comenzar la implementación, utiliza la sección **Tráfico de implementación** para introducir un porcentaje en el cuadro de texto. Esto seleccionará el porcentaje de usuarios aleatorios de tu segmento seleccionado que recibirán esta nueva característica.
 
 {% alert important %}
 No configures el tráfico de despliegue por encima del 0 % hasta que estés listo para que tu nueva característica se active en vivo. Cuando definas inicialmente tu feature flag en el panel, deja esta configuración en 0 %.
 {% endalert %}
 
 {% alert important %}
-Para desplegar una bandera con una sola regla o a una audiencia singular, añade tu primera regla con los criterios de segmentación y los porcentajes de despliegue seleccionados. Por último, confirma que la regla **Todos los demás** está desactivada y guarda tu bandera.
+Para implementar una bandera con una sola regla o para una audiencia específica, añade tu primera regla con los criterios de segmentación y los porcentajes de implementación seleccionados. Por último, confirma que la regla **«Todos los demás»** esté alternada y guarda tu marca.
 {% endalert %}
 
-## Despliegues de banderas de características multirregla
+## Implementación de características con múltiples reglas
 
-Utiliza lanzamientos de banderas de características con reglas múltiples para definir una secuencia de reglas para evaluar a los usuarios, lo que permite una segmentación precisa y lanzamientos de características controlados. Este método es ideal para desplegar la misma característica a diversas audiencias. 
+Utiliza implementaciones de indicadores de características con múltiples reglas para definir una secuencia de reglas para evaluar a los usuarios, lo que permite una segmentación precisa y lanzamientos de características controlados. Este método es ideal para implementar la misma característica en audiencias diversas. 
 
 ### Orden de evaluación
 
-Las reglas de las banderas de características se evalúan de arriba a abajo, en el orden en que aparecen en la lista. Un usuario es apto para la primera norma que cumpla. Si un usuario no cumple ninguna regla, su elegibilidad se determina mediante la regla predeterminada "Todos los demás".
+Las reglas de las características de función se evalúan de arriba abajo, en el orden en que aparecen enumeradas. Un usuario cumple los requisitos de la primera regla que satisfaga. Si un usuario no cumple ninguna regla, su elegibilidad se determina mediante la regla predeterminada «Todos los demás».
 
-### Cualificación del usuario
+### Calificación del usuario
 
-- Si un usuario cumple los criterios de la primera regla, es inmediatamente elegible para recibir la bandera de característica.
-- Si un usuario no cumple la primera regla, se le evalúa según la segunda, y así sucesivamente.
+- Si un usuario cumple los criterios de la primera regla, inmediatamente pasa a ser elegible para recibir la bandera de característica.
+- Si un usuario no cumple la primera regla, se evalúa según la segunda regla, y así sucesivamente.
 
-La evaluación secuencial continúa hasta que un usuario cumple los requisitos para una regla o llega a la regla "Todos los demás" al final de la lista.
+La evaluación secuencial continúa hasta que un usuario cumple los requisitos de una regla o llega a la regla «Todos los demás» al final de la lista.
 
-### "Regla "Todos los demás
+### Regla de «todos los demás»
 
-La regla "Todos los demás" actúa como predeterminada. Si un usuario no cumple los requisitos de ninguna de las reglas anteriores, su elegibilidad para la bandera de característica vendrá determinada por la configuración de alternar de la regla "Todos los demás". Por ejemplo, si la regla "Todos los demás" se alterna con "Desactivado", en el estado predeterminado, un usuario que no cumpla los criterios de ninguna otra regla no recibirá el indicador de característica al iniciar su sesión.
+La regla «Todos los demás» actúa como regla predeterminada. Si un usuario no cumple ninguno de los requisitos anteriores, su elegibilidad para la bandera de característica se determinará mediante la configuración de la regla «Todos los demás». Por ejemplo, si la regla «Todos los demás» se alterna «Desactivada», en el estado predeterminado, un usuario que no cumpla los criterios de ninguna otra regla no recibirá la característica al iniciar su sesión.
 
-### Reglas de reordenación
+### Reglas para reordenar
 
-Por defecto, las reglas se ordenan en la secuencia en que se crean, pero puedes reordenarlas arrastrándolas y soltándolas en el panel.
+De forma predeterminada, las reglas se ordenan en la secuencia en la que se crean, pero puedes reordenarlas arrastrándolas y soltándolas en el panel.
 
-![Una imagen que muestra que un usuario puede añadir una regla a una bandera de característica.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
+![Imagen que muestra que un usuario puede añadir una regla a una característica.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
 
-![Una imagen que muestra un resumen de una bandera de característica con varias reglas añadidas y una regla para todos los demás.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
+![Imagen que muestra un resumen de una bandera de característica con varias reglas añadidas y una regla para todos los demás.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
 
-### Casos de uso de la bandera de características multirregla
+### Casos de uso de indicadores de características con múltiples reglas
 
-#### Liberar gradualmente una página de pago
+#### Libera gradualmente una página de pago
 
-Supongamos que trabajas para una marca de comercio electrónico y tienes una nueva página de pago que quieres implantar en distintas zonas geográficas para garantizar la estabilidad. Mediante los indicadores de características multirregla, puedes configurar lo siguiente:
+Supongamos que trabajas para una marca de comercio electrónico y tienes una nueva página de pago que deseas implementar en diferentes zonas geográficas para garantizar la estabilidad. Mediante el uso de características de función multirregla, puedes configurar lo siguiente:
 
-- **Regla 1:** Tu segmento de EE.UU. está configurado al 100%.
-- **Regla 2:** Tu segmento está establecido en el 50% de tus usuarios brasileños, por lo que no todos ellos reciben el flujo a la vez. 
-- **Regla 3 (El resto):** Para todos los demás usuarios, alterna tu regla "Todos los demás" y ajústala al 15%, de modo que una parte de todos los usuarios puedan realizar la salida con el nuevo flujo.
+- **Regla 1:** Tu segmento de EE. UU. está configurado al 100 %.
+- **Regla 2:** Tu segmento está configurado para el 50 % de tus usuarios brasileños, por lo que no todos recibirán el flujo al mismo tiempo. 
+- **Regla 3 (El resto):** Para el resto de usuarios, alterna la regla «Todos los demás» y configúrala al 15 %, de modo que una parte de todos los usuarios puedan realizar el pago con el nuevo flujo.
 
-#### Llega primero a los probadores internos
+#### Comunícate primero con los evaluadores internos.
 
-Supongamos que eres administrador de un producto y quieres asegurarte de que tus probadores internos reciben siempre la bandera de característica cuando lanzas un nuevo producto. Puedes añadir tu segmento de probadores internos a tu primera regla y establecerlo al 100%, para que tus probadores internos sean elegibles durante cada despliegue de características.
+Supongamos que eres un administrador de productos y quieres asegurarte de que tus probadores internos siempre reciban la bandera de característica cuando lances un nuevo producto. Puedes añadir el segmento de tus probadores internos a tu primera regla y establecerlo en el 100 %, de modo que tus probadores internos sean elegibles durante cada lanzamiento de características.
 
 ## Utilizar el campo "habilitación" para las banderas de tus características {#enabled}
 
-Después de definir la bandera de tu característica, configura tu aplicación o sitio para comprobar si está habilitada o no para un usuario concreto. Cuando esté habilitada, establecerás alguna acción o harás referencia a las propiedades variables del indicador de características en función de tu caso de uso. El SDK de Braze proporciona métodos para obtener el estado de tu feature flag y sus propiedades en tu aplicación. 
+Una vez definida la característica, configura tu aplicación o sitio web para comprobar si está habilitada para un usuario concreto. Cuando esté habilitada, establecerás alguna acción o harás referencia a las propiedades variables del indicador de características en función de tu caso de uso. El SDK de Braze proporciona métodos para obtener el estado de tu feature flag y sus propiedades en tu aplicación. 
 
 Las banderas de las características se actualizan automáticamente al inicio de la sesión, para que puedas mostrar la versión más actualizada de tu característica al iniciarla. El SDK almacena en caché estos valores para poder utilizarlos mientras no estés conectado. 
 
@@ -319,7 +319,7 @@ m.Braze.logFeatureFlagImpression("expanded_user_profile");
 
 Para acceder a las propiedades de una bandera de característica, utiliza uno de los métodos siguientes, según el tipo que hayas definido en el panel.
 
-Si no existe tal propiedad del tipo correspondiente para la clave que has proporcionado, estos métodos devolverán `null`.
+Si no existe ninguna propiedad de este tipo para la clave que has proporcionado, estos métodos devolverán `null`.
 
 {% tabs %}
 {% tab Web %}
@@ -879,27 +879,27 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 
 ## Comprobación de la elegibilidad de los usuarios
 
-Para comprobar para qué características es elegible un usuario en Braze, ve a **Audiencia** > **Buscar usuarios** y, a continuación, busca y selecciona un usuario.
+Para comprobar a qué características tiene derecho un usuario en Braze, ve a **Audiencia** > **Buscar usuarios**, luego busca y selecciona un usuario.
 
-En la pestaña **Elegibilidad de las** banderas de características, puedes filtrar la lista de banderas de características elegibles por plataforma, aplicación o dispositivo. También puedes obtener una vista previa de la carga útil que se devolverá al usuario seleccionando <i class="fa-solid fa-eye"></i> junto a la bandera de una característica.
+En la pestaña **Elegibilidad de indicadores de características**, puedes filtrar la lista de indicadores de características elegibles por plataforma, aplicación o dispositivo. También puedes obtener una vista previa de la carga útil que se devolverá al usuario seleccionando<i class="fa-solid fa-eye"></i>  junto a una bandera de característica.
 
-![Una imagen que muestra la tabla de banderas de características a las que puede optar un usuario.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
+![Imagen que muestra la tabla de características elegibles para los usuarios.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
 
 ## Ver el registro de cambios
 
 Para ver el registro de cambios de una feature flag, abre esta última y selecciona **Registro de cambios**.
 
-![Página "Editar" de la bandera de una característica, con el botón "Registro de cambios" resaltado.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
+![Página «Editar» de una característica, con el botón «Registro de cambios» resaltado.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
 
-Aquí puedes revisar cuándo se produjo un cambio, quién lo hizo, a qué categoría pertenece y mucho más.
+Aquí puedes revisar cuándo se produjo un cambio, quién lo realizó, a qué categoría pertenece y mucho más.
 
-![El registro de cambios de la bandera de característica seleccionada.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
+![El registro de cambios de la característica seleccionada.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
 
 ## Segmentación con indicadores de características {#segmentation}
 
 Braze hace un seguimiento automático de los usuarios que tienen habilitada una característica. Puedes crear un segmento o un objetivo de mensajería utilizando el [filtro **Feature flags**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). Para más información sobre cómo filtrar por segmentos, consulta [Crear un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
-![La sección "Filtros" con la "Bandera de características" introducida en la barra de búsqueda de filtros.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
+![La sección «Filtros» con «Feature Flag» escrito en la barra de búsqueda del filtro.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
 
 {% alert note %}
 Para evitar segmentos recursivos, no es posible crear un segmento que haga referencia a otras banderas de características.
