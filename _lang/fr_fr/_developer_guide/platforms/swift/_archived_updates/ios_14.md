@@ -49,7 +49,7 @@ table td {
 
 ### Autorisation de localisation approximative
 
-![Emplacement/localisation précis]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+![Localisation précise]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
 #### Aperçu
 
