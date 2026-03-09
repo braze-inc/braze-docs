@@ -29,7 +29,7 @@ Os Banners são diferentes dos Cartões de Conteúdo, o que significa que você 
 Embora os Banners não suportem [entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery), você pode direcionar usuários com base em suas ações passadas usando segmentação e prioridade.
 
 Por exemplo, para mostrar um Banner especial apenas para usuários que completaram um `purchase` evento:
-1. **Direcionamento:** Na sua campanha, direcione um segmento de usuários que realizaram o evento personalizado `purchase` pelo menos uma vez.
+1. **Direcionamento:** Em sua campanha, direcione um segmento de usuários que realizaram o evento personalizado `purchase` pelo menos uma vez.
 2. **Prioridade:** Se você tiver um Banner geral para todos os usuários e este Banner específico para compradores direcionando o mesmo local, defina a prioridade do Banner específico para **Alta** e o Banner geral para **Média** ou **Baixa**.
 
 Quando o usuário inicia uma nova sessão ou atualiza os Banners após realizar a ação, a Braze avalia sua elegibilidade. Se eles corresponderem ao segmento "Compra", o Banner de alta prioridade será exibido.
@@ -37,13 +37,13 @@ Quando o usuário inicia uma nova sessão ou atualiza os Banners após realizar 
 
 ## Os usuários podem dispensar manualmente um Banner?
 
-Não. Os usuários não podem dispensar manualmente os Banners. No entanto, você pode controlar a visibilidade do Banner gerenciando a elegibilidade do segmento de usuários. Quando um usuário não atende mais aos critérios de direcionamento para uma campanha de Banner, ele não verá novamente na sua próxima sessão.
+Não. Os usuários não podem dispensar manualmente os Banners. No entanto, você pode controlar a visibilidade do Banner gerenciando a elegibilidade do segmento de usuários. Quando um usuário não atende mais aos critérios de direcionamento para uma campanha de Banner, ele não verá o Banner novamente em sua próxima sessão.
 
 Por exemplo, se você exibir um Banner promocional até que um usuário faça uma compra, registrar um evento como `purchase_completed` pode remover esse usuário do segmento direcionado, efetivamente ocultando o Banner em sessões subsequentes.
 
 ## Posso exportar análises de campanhas de Banners usando a API da Braze?
 
-Sim. Você pode usar o [`/campaigns/data_series` endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/) para obter dados sobre quantas campanhas de Banner foram visualizadas, clicadas ou convertidas.
+Sim. Você pode usar o [`/campaigns/data_series` endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/) para obter dados sobre quantas campanhas de Banners foram visualizadas, clicadas ou convertidas.
 
 ## Quando os usuários são segmentados?
 
@@ -51,7 +51,7 @@ Os usuários são segmentados no início da sessão. Se os segmentos direcionado
 
 ## Como posso compor Banners para garantir a menor latência?
 
-Quanto mais simples a mensagem no seu Banner, mais rápido ele será renderizado. É melhor testar sua campanha de Banner em relação à latência esperada para seu caso de uso. Por exemplo, certifique-se de testar atributos Liquid como `catalog_items`.
+Quanto mais simples for o envio de mensagens no seu Banner, mais rápido ele será renderizado. É melhor testar sua campanha de Banner contra a latência esperada para seu caso de uso. Por exemplo, certifique-se de testar atributos Liquid como `catalog_items`.
 
 ## Todos os tags Liquid são suportados?
 
@@ -62,7 +62,7 @@ Não. No entanto, a maioria dos tags Liquid é suportada para mensagens de Banne
 Sim. Como os eventos de clique são capturados depende de como seu Banner é renderizado:
 
 - **Componentes do editor padrão:** Se seu Banner usar componentes do editor padrão (imagens, botões, texto), os cliques são rastreados automaticamente ao usar os métodos de inserção do SDK.
-- **Blocos de Código Personalizado:** Se seu Banner usar o bloco de editor de Código Personalizado, você deve chamar `brazeBridge.logClick()` de dentro do seu HTML personalizado para rastrear cliques. Isso se aplica mesmo ao usar os métodos do SDK para inserir e renderizar o Banner. Isso funciona da mesma forma que o [ponte JavaScript]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) para mensagens HTML no aplicativo.
-- **UI Personalizada (sem cabeça):** Se você estiver construindo uma UI totalmente personalizada usando as propriedades personalizadas do Banner em vez de renderizar o HTML do Banner, chame `logClick()` no objeto Banner a partir do seu código de aplicativo.
+- **Blocos de Código Personalizado:** Se você quiser rastrear cliques em elementos dentro de um bloco de editor de Código Personalizado, deve chamar `brazeBridge.logClick()` de dentro do seu HTML personalizado para rastrear cliques. Isso se aplica mesmo ao usar os métodos do SDK para inserir e renderizar o Banner. Para a referência completa, veja [Código personalizado e ponte JavaScript para Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/custom_code/#javascript-bridge).
+- **UI Personalizada (sem cabeça):** Se você estiver construindo uma UI totalmente personalizada usando as propriedades personalizadas do Banner em vez de renderizar o HTML do Banner, chame `logClick()` no objeto Banner a partir do código da sua aplicação.
 
 Para saber mais, veja [Registro de cliques]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks).
