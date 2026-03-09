@@ -57,7 +57,7 @@ After the template is submitted, it will appear in the WABA’s template list an
 
 ![Button to create a carousel template.]({% image_buster /assets/img/whatsapp/templates/create_carousel_template.png %})
 
-## Step 2: Configure template settings
+### Step 2: Configure template settings
 
 Fill the required fields.
 
@@ -67,7 +67,7 @@ Fill the required fields.
 | Template Language | Select the language for your template. Meta restricts templates to a single language, so choose the language your audience will see. |
 | Template Name | Enter a descriptive name that will help you identify this template later. Template names cannot contain spaces—use underscores or remove spaces entirely (such as `carousel_example` or `carouselexample`). |
 | Category | Automatically set to **Marketing**. All carousel messages are categorized as marketing messages. |
-{: .reset-td-br-1 .reset-td-br-2 role=“presentation”}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![WhatsApp template details panel with a WhatsApp business account selected, English as a template language, and a template name of “welcome_message”.]({% image_buster /assets/img/whatsapp/templates/whatsapp_template_details.png %}){: style="max-width:70%"}
 
@@ -206,4 +206,4 @@ After composition, proceed with your campaign or Canvas launch workflow, includi
 | Variables not populating in test | Ensure your Liquid syntax is correct and that the attributes exist in your user profiles. Check for typos in variable names and verify that default values are set where appropriate. |
 | Template name has spaces | Template names cannot contain spaces. Use underscores instead (`template_name`) or remove spaces entirely (`templatename`). |
 | Cannot change number of cards | The number of cards is fixed when you create the template and cannot be changed after submission. If you need a different number of cards, you'll need to create a new template. |
-{: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
