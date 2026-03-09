@@ -20,12 +20,12 @@ Note que esse conteúdo **se aplica apenas aos dados de eventos de arquivo simpl
 
 ## Eventos de teste
 
-Ao configurar uma integração do Currents, clique em **Send Test Events (Enviar eventos de teste** ) para verificar a conexão com seu bucket de armazenamento. Esses eventos de teste validam que sua integração pode receber e processar dados corretamente.
+Quando você configura uma integração Currents, clique **Enviar Eventos de Teste** para verificar a conexão com seu bucket de armazenamento. Esses eventos de teste validam se sua integração pode receber e processar dados corretamente.
 
 {% alert important %}
-**Formato de dados do evento de teste:** Os eventos de teste contêm valores de espaço reservado que correspondem aos tipos de dados corretos para cada campo, mas não contêm dados realistas ou precisos. Por exemplo, um campo `timezone` pode conter uma string do tipo UUID em vez de um identificador de fuso horário válido (como "America/Chicago"), e outros campos como `campaign_name` e `ip_pool` também podem conter valores de espaço reservado em vez de dados reais.<br>
+**Formato dos dados do evento de teste:** Eventos de teste contêm valores de espaço reservado que correspondem aos tipos de dados corretos para cada campo, mas não contêm dados realistas ou precisos. Por exemplo, um campo `timezone` pode conter uma string semelhante a UUID em vez de um identificador de fuso horário válido (como "America/Chicago"), e outros campos como `campaign_name` e `ip_pool` também podem conter valores de espaço reservado em vez de dados reais.<br>
 
-Esse é um comportamento esperado. Os eventos de teste servem principalmente para testar a conexão e a configuração da integração, e não para validar a precisão dos dados. Para ver eventos reais com dados precisos, use uma integração de teste do Currents para enviar dados de eventos reais por meio de seu pipeline.
+Esse é o comportamento esperado. Eventos de teste são principalmente para testar a conexão e a configuração da integração, não para validar a precisão dos dados. Para ver eventos reais com dados precisos, use uma integração Currents de teste para enviar dados de eventos reais através do seu pipeline.
 {% endalert %}
 
 ## Entrega pelo menos uma vez
@@ -75,7 +75,7 @@ Não é possível ver o código por causa da barra de rolagem? Saiba como corrig
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-As convenções de nomenclatura de arquivos podem mudar. A Braze recomenda pesquisar todas as chaves em seu intervalo que tenham o prefixo <your-bucket-prefix>.
+As convenções de nomenclatura de arquivos podem mudar. A Braze recomenda pesquisar todas as chaves em seu bucket que têm um prefixo de <your-bucket-prefix>.
 {% endalert %}
 
 ### Limite de gravação Avro
