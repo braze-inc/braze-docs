@@ -28,7 +28,7 @@ description: "Cet article présente les détails concernant l’endpoint Supprim
 
 ## Exemple de demande
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {
