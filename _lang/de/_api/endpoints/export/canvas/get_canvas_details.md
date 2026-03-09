@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Canvas Details exportieren"
 article_title: "GET: Canvas-Details exportieren"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -46,7 +46,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Antworten
 
 {% alert note %}
-Alle Canvas-Schritte verfügen über ein `next_paths` Feld, bei dem es sich um ein Array von `{name, next_step_id}` Daten handelt. Bei Messaging-Schritten ist das Feld `next_step_ids` vorhanden, enthält jedoch keine Daten für andere Canvas-Schritte.
+Alle Canvas-Schritte verfügen über ein `next_paths` Feld, bei dem es sich um ein Array von `{name, next_step_id}` Daten handelt. Bei Nachrichtenschritten ist das`next_step_ids`Feld vorhanden, enthält jedoch keine Daten für andere Canvas-Schritte.
 {% endalert %}
 
 ```json
@@ -213,7 +213,7 @@ Im Folgenden finden Sie eine Beispielantwort, die Canvas-Nachrichten enthält, d
         }
       }
     }
-  ],
+  ]
 }
 ```
 
