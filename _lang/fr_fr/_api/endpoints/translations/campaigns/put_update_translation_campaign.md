@@ -15,13 +15,11 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /campagnes/traductions
 {% endapimethod %}
 
-> Utilisez cet endpoint pour mettre à jour plusieurs traductions pour une campagne. Pour plus d'informations sur les fonctionnalités de traduction, reportez-vous à la section [Locales dans les messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
+> Utilisez cet endpoint pour mettre à jour plusieurs traductions pour une campagne. Veuillez consulter [la section Locales dans les messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) pour plus d'informations sur les fonctionnalités de traduction.
 
 Si vous souhaitez mettre à jour les traductions après le lancement d'une campagne, vous devrez d'abord [enregistrer votre message en tant que brouillon]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/).
 
-{% alert important %}
-Cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Conditions préalables
 
@@ -76,7 +74,7 @@ Quatre réponses de code de statut existent pour cet endpoint : `200`, `400`, `
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
