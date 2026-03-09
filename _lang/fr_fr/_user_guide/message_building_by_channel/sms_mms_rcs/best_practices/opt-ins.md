@@ -21,7 +21,7 @@ Demandez aux utilisateurs d’envoyer « START », « UNSTOP », « YES »
 
 Pour permettre aux utilisateurs d'opter pour les SMS à partir d'un message in-app, utilisez le [formulaire de capture de numéro de téléphone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) fourni par Braze pour créer un formulaire de marque qui vous permet de collecter des numéros de téléphone et d'augmenter votre liste de SMS.
 
-![Compositeur d'envoi de messages in-app avec un modèle de capture de numéro de téléphone.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
+![Éditeur de messages in-app avec un modèle pour la saisie du numéro de téléphone.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
 
 Braze vous recommande d'utiliser également la fonctionnalité de [double abonnement par SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/). Cette fonctionnalité fonctionne automatiquement avec le formulaire de capture du numéro de téléphone par message in-app, invitant les utilisateurs à confirmer leur intention après avoir soumis leur numéro de téléphone via le formulaire.
 
