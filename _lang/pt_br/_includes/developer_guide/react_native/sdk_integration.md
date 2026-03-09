@@ -1,24 +1,24 @@
-## Sobre o SDK do React Native Braze
+## Sobre o SDK Braze para React Native
 
-A integração do React Native Braze SDK fornece funcionalidade básica de análise de dados e permite integrar mensagens no app e cartões de conteúdo para iOS e Android com apenas uma base de código.
+Integrar o SDK Braze para React Native fornece funcionalidade básica de análise e permite integrar mensagens no app e Cartões de Conteúdo para iOS e Android com apenas uma base de código.
 
 ## Compatibilidade com a nova arquitetura
 
-A versão mínima do SDK a seguir é compatível com todos os apps que usam [a nova arquitetura do React Native](https://reactnative.dev/docs/the-new-architecture/landing-page):
+A seguinte versão mínima do SDK é compatível com todos os apps que usam [Nova Arquitetura do React Native](https://reactnative.dev/docs/the-new-architecture/landing-page):
 
 {% sdk_min_versions reactnative:2.0.1 %}
 
-A partir da versão 6.0.0 do SDK, o Braze usa um React Native Turbo Module, que é compatível com a Nova Arquitetura e com a arquitetura de ponte herdada, o que significa que não é necessária nenhuma configuração adicional.
+A partir da versão 6.0.0 do SDK, o Braze utiliza um Módulo Turbo do React Native, que é compatível tanto com a Nova Arquitetura quanto com a arquitetura de ponte legada—o que significa que nenhuma configuração adicional é necessária.
 
 {% alert warning %}
-Se o seu app para iOS estiver em conformidade com `RCTAppDelegate` e seguir nossa configuração anterior `AppDelegate`, revise os exemplos na [configuração nativa completa](#reactnative_step-2-complete-native-setup) para evitar a ocorrência de falhas ao assinar eventos no Turbo Module.
+Se seu app iOS estiver em conformidade com `RCTAppDelegate` e seguir nossa configuração anterior `AppDelegate`, revise os exemplos em [Configuração nativa completa](#reactnative_step-2-complete-native-setup) para evitar qualquer falha ao se inscrever em eventos no Módulo Turbo.
 {% endalert %}
 
-## Integração do SDK do React Native
+## Integrando o SDK React Native
 
 ### Pré-requisitos
 
-Para integrar o SDK, é necessária a versão 0.71 ou posterior do React Native. Para obter a lista completa de versões compatíveis, consulte nosso [repositório do GitHub do React Native SDK](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
+Para integrar o SDK, é necessário ter a versão 0.71 ou posterior do React Native. Para obter a lista completa de versões compatíveis, consulte nosso [repositório do GitHub do React Native SDK](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
 
 ### Etapa 1: Integrar a biblioteca do Braze
 
@@ -37,15 +37,15 @@ yarn add @braze/react-native-sdk
 
 ### Etapa 2: Escolha uma opção de configuração
 
-Você pode gerenciar o SDK do Braze usando o plug-in Braze Expo ou por meio de uma das camadas nativas. Com o plug-in Expo, você pode configurar determinados recursos do SDK sem escrever código em nenhuma das camadas nativas. Escolha a opção que melhor atenda às necessidades de seu app.
+Você pode gerenciar o SDK Braze usando o plugin Braze Expo ou através de uma das camadas nativas. Com o plugin Expo, você pode configurar certos recursos do SDK sem escrever código em nenhuma das camadas nativas. Escolha a opção que melhor atende às necessidades do seu app.
 
 {% tabs %}
 {% tab Expo %}
 #### Etapa 2.1: Instale o plug-in Braze Expo
 
-Confira se sua versão do SDK da Braze para React Native seja, no mínimo, 1.37.0. Para obter a lista completa das versões suportadas, consulte o [repositório do Braze React Native](https://github.com/braze-inc/braze-expo-plugin?tab=readme-ov-file#version-support).
+Confira se sua versão do SDK da Braze para React Native seja, no mínimo, 1.37.0. Para a lista completa de versões suportadas, confira o [repositório Braze React Native](https://github.com/braze-inc/braze-expo-plugin?tab=readme-ov-file#version-support).
 
-Para instalar o plug-in Braze Expo, execute o seguinte comando:
+Para instalar o plugin Braze Expo, execute o seguinte comando:
 
 ```bash
 npx expo install @braze/expo-plugin
@@ -65,7 +65,7 @@ Em `app.json`, adicione o plug-in Braze Expo. Você pode fornecer as seguintes o
 | `firebaseCloudMessagingSenderId`              | string  | Somente para Android. Seu ID de remetente do Firebase Cloud Messaging. Introduzido no React Native SDK v1.38.0 e no Expo Plugin v0.4.0.                                    |
 | `sessionTimeout`                              | inteiro | O tempo limite da sessão do Braze para seu aplicativo, em segundos.                                                                                               |
 | `enableSdkAuthentication`                     | booleano | Define se deve ativar o recurso de [autenticação do SDK](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication).      |
-| `logLevel`                                    | inteiro | Define o nível de registro para o seu aplicativo. O nível de registro padrão é 8 e registra minimamente as informações. Para ativar o registro detalhado para depuração, use o nível de registro 0.    |
+| `logLevel`                                    | inteiro | Define o nível de registro para o seu aplicativo. O nível de log padrão é 8 e registra minimamente informações. Para ativar o registro detalhado para depuração, use o nível de registro 0.    |
 | `minimumTriggerIntervalInSeconds`             | inteiro | O intervalo de tempo mínimo, em segundos, entre os disparos. O padrão é 30 segundos.                                                                           |
 | `enableAutomaticLocationCollection`           | booleano | Se a coleta automática de locais está ativada (se o usuário permitir).                                                                                  |
 | `enableGeofence`                              | booleano | Se as geofences estão ativadas.                                                                                                                           |
@@ -81,7 +81,7 @@ Em `app.json`, adicione o plug-in Braze Expo. Você pode fornecer as seguintes o
 | `enableBrazeIosPushStories`                   | booleano | Somente iOS. Se deseja ativar os stories por push da Braze para iOS.                                                                                                  |
 | `iosPushStoryAppGroup`                        | string  | Somente iOS. O grupo de app usado para o iOS Push Stories.                                                                                                       |
 | `iosUseUUIDAsDeviceId`                        | booleano | Somente iOS. Se o ID do dispositivo usará um UUID gerado aleatoriamente.                                                                                       |
-| `iosForwardUniversalLinks`                    | booleano | Somente iOS. Especifica se o SDK deve reconhecer e encaminhar automaticamente os links universais para os métodos do sistema (padrão: `false`). Quando ativada, o SDK encaminhará automaticamente os links universais para os métodos do sistema definidos em [Supporting universal links in your app](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks/). Introduzido no React Native SDK v11.1.0 e no Expo Plugin v3.2.0. |
+| `iosForwardUniversalLinks`                    | booleano | Somente iOS. Especifica se o SDK deve reconhecer automaticamente e encaminhar links universais para os métodos do sistema (padrão: `false`). Quando ativado, o SDK encaminhará automaticamente links universais para os métodos do sistema definidos em [Suporte a links universais no seu app](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks/). Introduzido no SDK React Native v11.1.0 e no Plugin Expo v3.2.0. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Exemplo de configuração:
@@ -123,30 +123,30 @@ Exemplo de configuração:
 }
 ```
 
-##### Configuração dos ícones de notificação por push do Android {#android-push-icons}
+##### Configurando ícones de notificação por push do Android {#android-push-icons}
 
-Ao usar os sites `androidNotificationLargeIcon` e `androidNotificationSmallIcon`, siga estas práticas recomendadas para exibir os ícones corretamente:
+Ao usar `androidNotificationLargeIcon` e `androidNotificationSmallIcon`, siga estas melhores práticas para exibição adequada do ícone:
 
-###### Posicionamento e formato dos ícones
+###### Posicionamento e formato do ícone
 
-Para usar ícones de notificação por push personalizados com o plug-in Braze Expo:
+Para usar ícones de notificação por push personalizados com o plugin Braze Expo:
 
-1. Crie seus arquivos de ícones seguindo os requisitos do Android, conforme detalhado em [Requisitos de ícones](#icon-requirements).
-2. Coloque-os nos diretórios nativos do Android de seu projeto em `android/app/src/main/res/drawable-<density>/` (por exemplo, `android/app/src/main/res/drawable-mdpi/`, `drawable-hdpi/`, ou semelhante).
-3. Como alternativa, se estiver gerenciando ativos no diretório do React Native, poderá usar a [configuração de ícones](https://docs.expo.dev/versions/latest/config/app/#icon) do Expo [app.json ou criar um](https://docs.expo.dev/versions/latest/config/app/#icon) [plug-in de configuração do Expo](https://docs.expo.dev/config-plugins/introduction/) para copiar os ícones para as pastas drawable do Android durante a pré-compilação.
+1. Crie seus arquivos de ícone seguindo os requisitos do Android conforme detalhado em [Requisitos de ícone](#icon-requirements).
+2. Coloque-os nos diretórios nativos do Android do seu projeto em `android/app/src/main/res/drawable-<density>/` (por exemplo, `android/app/src/main/res/drawable-mdpi/`, `drawable-hdpi/` ou similar).
+3. Alternativamente, se você estiver gerenciando ativos no seu diretório React Native, pode usar a [app.json configuração de ícone](https://docs.expo.dev/versions/latest/config/app/#icon) do Expo ou criar um [plugin de configuração do Expo](https://docs.expo.dev/config-plugins/introduction/) para copiar os ícones para as pastas drawable do Android durante a pré-construção.
 
-O plug-in Braze Expo faz referência a esses ícones usando o sistema de recursos desenháveis do Android.
+O plugin Braze Expo referencia esses ícones usando o sistema de recursos drawable do Android.
 
-###### Requisitos de ícones
+###### Requisitos de ícone
 
-- **Ícone pequeno:** Deve ser uma silhueta branca em um fundo transparente (esse é um requisito da plataforma Android)
-- **Ícone grande:** Pode ser uma imagem colorida
-- **Formato:** Recomenda-se o formato PNG
-- **Nomeação:** Use somente letras minúsculas, números e sublinhados (por exemplo, `my_large_icon.png`)
+- **Ícone pequeno:** Deve ser uma silhueta branca em um fundo transparente (este é um requisito da plataforma Android)
+- **Ícone grande:** Pode ser uma imagem em cores completas
+- **Formato:** O formato PNG é recomendado
+- **Nomenclatura:** Use apenas letras minúsculas, números e sublinhados (por exemplo, `my_large_icon.png`)
 
 ###### Configuração em app.json
 
-Use o prefixo `@drawable/` seguido do nome do arquivo _sem_ a extensão do arquivo. Por exemplo, se o seu arquivo de ícone tiver o nome `large_icon.png`, faça referência a ele como `@drawable/large_icon`:
+Use o prefixo `@drawable/` seguido pelo nome do arquivo _sem_ a extensão do arquivo. Por exemplo, se seu arquivo de ícone se chama `large_icon.png`, referencie-o como `@drawable/large_icon`:
 
 ```json
 {
@@ -165,24 +165,24 @@ Use o prefixo `@drawable/` seguido do nome do arquivo _sem_ a extensão do arqui
 ```
 
 {% alert important %}
-Não use jornadas relativas de arquivos (como `src/assets/images/icon.png`) nem inclua a extensão do arquivo ao fazer referência a ícones. O plug-in Expo requer o prefixo `@drawable/` para localizar corretamente os ícones nas pastas nativas do Android após o processo de pré-compilação.
+Não use caminhos de arquivo relativos (como `src/assets/images/icon.png`) ou inclua a extensão do arquivo ao referenciar ícones. O plugin Expo requer o prefixo `@drawable/` para localizar corretamente os ícones nas pastas nativas do Android após o processo de pré-construção.
 {% endalert %}
 
 ###### Como funciona?
 
-O plug-in Braze Expo faz referência a seus arquivos de ícones nos diretórios do Android `drawable`. Quando você executa `npx expo prebuild`, a Expo gera a estrutura de projeto nativa do Android. Seus ícones devem estar presentes nas pastas do Android `drawable` (colocados manualmente ou copiados por meio de um plug-in de configuração) antes do processo de compilação. O plug-in configura o Braze SDK para usar esses recursos desenháveis por seus nomes (sem jornada ou extensão), e é por isso que o prefixo `@drawable/` é necessário em sua configuração.
+O plugin Braze Expo referencia seus arquivos de ícone dos diretórios Android `drawable`. Quando você executa `npx expo prebuild`, o Expo gera a estrutura do projeto nativo do Android. Seus ícones devem estar presentes nas pastas Android `drawable` (seja colocados manualmente ou copiados através de um plugin de configuração) antes do processo de construção. O plugin então configura o SDK do Braze para usar esses recursos desenháveis pelos seus nomes (sem caminho ou extensão), por isso o prefixo `@drawable/` é necessário na sua configuração.
 
-Para saber mais sobre os ícones de notificação do Android, consulte [as diretrizes de ícones de notificação do Android](https://developer.android.com/develop/ui/views/notifications#icon).
+Para saber mais sobre ícones de notificação do Android, consulte [as diretrizes de ícones de notificação do Android](https://developer.android.com/develop/ui/views/notifications#icon).
 
 #### Etapa 2.3: Crie e execute seu aplicativo
 
-A pré-construção de seu aplicativo gera os arquivos nativos necessários para o funcionamento do plug-in Braze Expo.
+Pré-construir seu aplicativo gera os arquivos nativos necessários para o funcionamento do plugin Braze Expo.
 
 ```bash
 npx expo prebuild
 ```
 
-Execute seu aplicativo conforme especificado nos [documentos da Expo](https://docs.expo.dev/workflow/customizing/). Lembre-se de que, se você fizer alguma alteração nas opções de configuração, será necessário fazer o pré-compilamento e executar o aplicativo novamente.
+Execute seu aplicativo conforme especificado nos [documentos da Expo](https://docs.expo.dev/workflow/customizing/). Tenha em mente que, se você fizer alterações nas opções de configuração, será necessário pré-construir e executar o aplicativo novamente.
 {% endtab %}
 
 {% tab Android %}
@@ -201,7 +201,7 @@ buildscript {
 }
 ```
 
-Isso adiciona o Kotlin ao seu projeto.
+Isso adiciona Kotlin ao seu projeto.
 
 #### Etapa 2.2: Configurar o SDK do Braze
 
@@ -285,7 +285,7 @@ override fun onNewIntent(intent: Intent) {
 
 #### Etapa 2.1: (Opcional) Configurar o Podfile para XCFrameworks dinâmicos
 
-Para importar determinadas bibliotecas Braze, como a BrazeUI, em um arquivo Objective C++, você deve usar a sintaxe `#import`. A partir da versão 7.4.0 do Braze Swift SDK, os binários têm um [canal de distribuição opcional como XCFrameworks dinâmicos](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic), que são compatíveis com essa sintaxe.
+Para importar certas bibliotecas do Braze, como BrazeUI, em um arquivo Objective-C++, você deve usar a sintaxe `#import`. A partir da versão 7.4.0 do Braze Swift SDK, os binários têm um [canal de distribuição opcional como XCFrameworks dinâmicos](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic), que são compatíveis com essa sintaxe.
 
 Se quiser usar esse canal de distribuição, substitua manualmente os locais de origem do CocoaPods em seu Podfile. Consulte o exemplo abaixo e substitua `{your-version}` pela versão relevante que você deseja importar:
 
@@ -404,9 +404,9 @@ static Braze *_braze = nil;
 {% endtab %}
 {% endtabs %}
 
-### Etapa 3: Importar a biblioteca
+### Etapa 3: Importe a biblioteca
 
-Em seguida, `import` a biblioteca em seu código React Native. Para obter mais detalhes, confira nosso [projeto de exemplo](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). 
+Em seguida, `import` a biblioteca no seu código React Native. Para mais detalhes, confira nosso [projeto de exemplo](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). 
 
 ```javascript
 import Braze from "@braze/react-native-sdk";
@@ -414,7 +414,7 @@ import Braze from "@braze/react-native-sdk";
 
 ### Etapa 4: Teste a integração (opcional)
 
-Para testar a integração do SDK, inicie uma nova sessão em qualquer plataforma para um usuário chamando o seguinte código em seu app.
+Para testar sua integração de SDK, inicie uma nova sessão em qualquer plataforma para um usuário chamando o seguinte código no seu app.
 
 ```javascript
 Braze.changeUser("userId");
@@ -438,12 +438,12 @@ const App = () => {
   )
 ```
 
-No dashboard do Braze, acesse [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search) e procure o usuário com o ID correspondente a `some-user-id`. Aqui, é possível verificar se os dados da sessão e do dispositivo foram registrados.
+No dashboard do Braze, acesse [Pesquisa de Usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search) e procure o usuário com o ID correspondente a `some-user-id`. Aqui, você pode verificar se os dados da sessão e do dispositivo foram registrados.
 
 ## Próximos passos
 
-Após a integração do SDK do Braze, você pode começar a implementar recursos comuns de envio de mensagens:
+Após integrar o SDK do Braze, você pode começar a implementar recursos comuns de envio de mensagens:
 
-- [Notificações por push]({{site.baseurl}}/developer_guide/push_notifications/): Configure e envie notificações por push para seus usuários
-- [Mensagens no app]({{site.baseurl}}/developer_guide/in_app_messages/): Exiba mensagens contextuais em seu aplicativo
+- [Notificações por Push]({{site.baseurl}}/developer_guide/push_notifications/): Configure e envie notificações por push para seus usuários
+- [Mensagens no app]({{site.baseurl}}/developer_guide/in_app_messages/): Exiba mensagens contextuais dentro do seu app
 - [Banners]({{site.baseurl}}/developer_guide/banners/): Mostre banners persistentes na interface do seu app
