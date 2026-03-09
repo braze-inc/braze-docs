@@ -1,5 +1,5 @@
 ---
-nav_title: SWIFTのためのライブ活動
+nav_title: SWIFTのライブ活動
 article_title: Swift Braze SDKのライブ活動
 page_order: 0.2
 description: "Swift Braze SDK のライブアクティビティの設定方法について説明します。"
@@ -13,7 +13,7 @@ platform:
 
 ## CDI の仕組み
 
-![iPhone ロック画面の配信トラッカーのライブアクティビティ。車のついたステータス棒がほぼ半分に満ちている。テキストは「ピックアップまで2分」となっている。]({% image_buster /assets/img/swift/live_activities/example_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
+![iPhone ロック画面の配信トラッカーのライブアクティビティ。車のついたステータス棒がほぼ半分に満ちている。「ピックアップまであと2分」と表示されている]({% image_buster /assets/img/swift/live_activities/example_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
 ライブアクティビティは、静的情報と、更新された動的情報を組み合わせて表示します。たとえば、配達のステータス追跡機能を提供するライブアクティビティを作成できます。このライブアクティビティには、あなたの会社の名前が静的情報として含まれ、さらに、配達ドライバーが目的地に近づくにつれて更新される「配達までの時間」が動的情報として含まれます。
 
@@ -68,10 +68,10 @@ sequenceDiagram
 
 ## ライブアクティビティの実装
 
-#{% multi_lang_include developer_guide/prerequisites/swift.md %} また、以下を完了する必要がある：
+以下の項目も完了する必要がある{% multi_lang_include developer_guide/prerequisites/swift.md %}：
 
 - プロジェクトがiOS 16.1以降をターゲットにしていることを確認する。
-- Xcodeプロジェクトの**Signing& Capabilitiesの**下に、`Push Notification` エンタイトルメントを追加する。
+- Xcodeプロジェクトの**署名&機能**に権限`Push Notification`を追加する。
 - 通知の送信に `.p8` キーが使用されていることを確認します。`.p12` や`.pem` などの古いファイルはサポートされません。
 - Braze Swift SDK のバージョン8.2.0以降は、[ライブアクティビティをリモートで登録](#swift_step-2-start-the-activity)できます。この機能を使用するには、iOS 17.2 以降が必要です。
 
@@ -135,7 +135,7 @@ struct SportsActivityAttributes: ActivityAttributes {
 
 Xコードプロジェクトで、アプリの名前を選択し、**一般**を選択します。[**フレームワークとライブラリ**] の下に `BrazeKit` がリストされていることを確認します。
 
-![サンプルXcodeプロジェクトの「Frameworks and Libraries」にあるBrazeKitフレームワーク。]({% image_buster /assets/img/swift/live_activities/xcode_frameworks_and_libraries.png %})
+![サンプルXcodeプロジェクト内の「Frameworks and Library」にあるBrazeKitフレームワーク。]({% image_buster /assets/img/swift/live_activities/xcode_frameworks_and_libraries.png %})
 
 #### ステップ 2.2:BrazeLiveActivityAttributes プロトコルを追加する {#brazeActivityAttributes}
 
@@ -252,7 +252,7 @@ class LiveActivityManager {
 
 ライブアクティビティウィジェットによって、この最初の内容がユーザーに表示されます。 
 
-![2 つのチームのスコアを持つiPhone ロックスクリーンでのライブアクティビティ。野鳥基金とフクロウのリハビリ・チームはともに0点である。]({% image_buster /assets/img/swift/live_activities/example_1_1.png %}){: style="max-width:40%;"}
+![2 つのチームのスコアを持つiPhone ロックスクリーンでのライブアクティビティ。野鳥保護基金とフクロウ保護チームのスコアはどちらも0だ。]({% image_buster /assets/img/swift/live_activities/example_1_1.png %}){: style="max-width:40%;"}
 {% endtab %}
 {% endtabs %}
 
@@ -299,7 +299,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ### ステップ4:アクティビティを更新する {#update-the-activity}
 
-![2チームのスコアを持つiPhoneロック画面でのライブアクティビティ。野鳥基金は2ポイント、フクロウのリハビリ施設は4ポイントである。]({% image_buster /assets/img/swift/live_activities/example_1_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
+![2チームのスコアを持つiPhoneロック画面でのライブアクティビティ。野鳥保護基金は2ポイント、フクロウ保護施設は4ポイントだ。]({% image_buster /assets/img/swift/live_activities/example_1_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
 [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) エンドポイントを使用すると、Braze REST API を介して渡されたプッシュ通知を介してライブアクティビティを更新できます。このエンドポイントを使用して、Live Activity の`ContentState` を更新します。
 
@@ -318,14 +318,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 詳細については、[`/messages/live_activity/update`エンドポイント]({{site.baseurl}}/api/endpoints/messaging/live_activity/update)の記事を参照してください。
 
-## トラッキング、ライブ活動の追跡
+## ライブアクティビティのトラッキング, 追跡
 
-ライブ・アクティビティ・イベントは、Currents、Snowflake Data Sharing、Query Builderで利用できる。以下のイベントは、ライブ・アクティビティのライフサイクルの把握と監視、トークンの可用性の追跡、問題の診断や配信ステータスの独立系の検証に役立つ。
+ライブアクティビティのイベントは、Currents、Snowflake Data Sharing、およびクエリビルダーで利用可能だ。以下のイベントは、ライブアクティビティのライフサイクルを理解・監視し、トークンの利用可能性をトラッキングし、問題を独立系で診断したり配信ステータスを確認するのに役立つ。
 
-- [ライブ・アクティビティ プッシュ・トゥ・スタート トークン・チェンジ]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-push-to-start-token-change-events)：プッシュ・トゥ・スタート（PTS）トークンがBrazeに追加または更新されたタイミングをトラッキング追跡し、ユーザーごとのトークンの登録と利用可能性を追跡できる。
-- [ライブ・アクティビティ更新トークン変更]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-update-token-change-events)：ライブ・アクティビティ・アップデート（LAU）トークンの追加、更新、削除をトラッキング追跡する。
-- [ライブ・アクティビティを送る]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-send-events)：Brazeによってライブアクティビティが開始、更新、終了されるたびにログを記録する。
-- [ライブ活動の成果]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-outcome-events)：Brazeから送信されたライブアクティビティのAppleプッシュ通知サービス(APN)への最終配信ステータスを示す。
+- [ライブアクティビティのプッシュトークン変更]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-push-to-start-token-change-events)：プッシュ・トゥ・スタート（PTS）トークンがBrazeで追加または更新されたタイミングを捕捉する。これにより、ユーザーごとのトークン登録状況と利用可能状態をトラッキングできる。
+- [ライブアクティビティ更新トークンの変更]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-update-token-change-events)：ライブアクティビティ更新（LAU）トークンの追加、更新、または削除をトラッキングする。
+- [ライブアクティビティ送信]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-send-events)Brazeによってライブアクティビティが開始、更新、または終了されるたびにログを記録する。
+- [ライブ活動の成果]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-outcome-events)：Brazeから送信された各ライブアクティビティについて、Appleプッシュ通知サービス（APN）への最終的なステータスを示す。
 
 ## よくある質問 (FAQ) {#faq}
 
@@ -333,9 +333,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 #### ライブアクティビティをサポートしているプラットフォームは？
 
-現在、ライブ・アクティビティはiOSとiPadOS特有の機能である。デフォルトでは、iPhoneまたはiPadで起動したアクティビティは、ペアリングされたwatchOS 11+またはMacOS 26+デバイスにも表示される。
+現在、ライブアクティビティはiOSとiPadOSに固有の機能だ。デフォルトでは、iPhoneやiPadで起動したアクティビティは、ペアリングされたwatchOS 11以降またはMacOS 26以降のデバイスにも追加で表示される。
 
-![ライブ・アクティビティをアラートとして表示するMacOSのメニューバーのスクリーンショット。]({% image_buster /assets/img/live-activity-macos.png %}){: style="max-width:60%;"}
+![MacOSのメニューバーにライブアクティビティがアラートとして表示されているスクリーンショット。]({% image_buster /assets/img/live-activity-macos.png %}){: style="max-width:60%;"}
 
 ライブアクティビティの記事では、Braze Swift SDK を使用してライブアクティビティを管理するための[前提条件]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/#prerequisites)について説明しています。
 
@@ -385,7 +385,7 @@ Apple が提供するライブアクティビティ機能は、JavaScript では
 
 ライブアクティビティの Push-to-Start 通知を受信したら、Braze URL の `/push_token_tag` エンドポイントへの送信ネットワーク要求が表示され、`"tag"` フィールドの下に正しいアクティビティ ID が含まれていることを再確認します。
 
-最後に、更新ペイロードのライブ・アクティビティの属性タイプが、SDKのメソッド呼び出しで使用されている正確な文字列とクラスと一致していることを確認する`registerPushToStart` 。タイプミスを避けるために定数を使用する。  
+最後に、更新ペイロード内のライブアクティビティ属性タイプが、SDKメソッド呼び出しで使用した文字列とクラスと完全に`registerPushToStart`一致していることを確認せよ。定数を使ってタイプミスを避ける。  
 
 #### `live_activity/update` エンドポイントを使おうとすると、アクセス拒否応答が表示されます。なぜでしょう？
 
