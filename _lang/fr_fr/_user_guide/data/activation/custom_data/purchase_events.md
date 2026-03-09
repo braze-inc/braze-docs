@@ -15,7 +15,7 @@ Les événements d'achat sont des actions d'achat effectuées par vos utilisateu
 
 ## Enregistrement des événements d’achat
 
-Vous pouvez enregistrer des achats en transmettant un [objet d'achat]({{site.baseurl}}/api/objects_filters/purchase_object/) via l'[endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), ou en utilisant l'une de nos bibliothèques SDK énumérées ci-dessous.
+Vous pouvez enregistrer vos achats en transmettant un [objet d'achat]({{site.baseurl}}/api/objects_filters/purchase_object/) via [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)l'[endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) ou en utilisant l'une de nos bibliothèques SDK répertoriées ci-dessous.
 
 La liste suivante énumère les méthodes utilisées pour enregistrer les achats sur les différentes plateformes. Dans ces pages, vous trouverez également de la documentation sur la manière d'ajouter des propriétés et des quantités à votre événement d'achat. Vous pouvez ensuite cibler vos utilisateurs en fonction de ces propriétés.
 
@@ -69,7 +69,7 @@ Pour segmenter le nombre de fois qu'un achat spécifique a été effectué, enre
 
 Comme tout autre type de données que vous collectez auprès de vos utilisateurs, vous pouvez utiliser les données d'achat pour personnaliser votre envoi de messages grâce à Liquid. Par exemple, vous pouvez envoyer un e-mail personnalisé à un utilisateur en lui recommandant des produits similaires à ceux qu'il vient d'acheter.
 
-Supposons que vous disposiez d'une propriété d'événement achat appelée `last_purchased_product` qui stocke le nom du dernier produit acheté par un utilisateur. Vous pouvez utiliser cette propriété pour personnaliser un message e-mail comme celui-ci :
+Supposons que vous disposiez d'une propriété d'événement d'achat appelée`last_purchased_product`qui stocke le nom du dernier produit acheté par un utilisateur. Vous pouvez utiliser cette propriété pour réaliser la personnalisation d'un e-mail comme suit :
 
 {% raw %}
 
@@ -85,7 +85,7 @@ Supposons que vous disposiez d'une propriété d'événement achat appelée `las
 
 {% endraw %}
 
-Dans cet exemple, le message est personnalisé en fonction de la propriété `last_purchased_product`. Si le dernier produit acheté par l'utilisateur était "Chaussures de course", il reçoit un message lui recommandant des shorts de course et des bouteilles d'eau. Si le dernier produit était "Tapis de yoga", ils reçoivent un message recommandant des blocs et des sangles de yoga. Si le `last_purchased_product` est autre chose, il reçoit un message de remerciement générique.
+Dans cet exemple, le message est personnalisé en fonction de la propriété `last_purchased_product`. Si le dernier produit acheté par l'utilisateur était "Chaussures de course", il reçoit un message lui recommandant des shorts de course et des bouteilles d'eau. Si le dernier produit acheté était un « tapis de yoga », ils reçoivent un message leur recommandant des blocs et des sangles de yoga. Si le `last_purchased_product` est autre chose, il reçoit un message de remerciement générique.
 
 ### Déclencher des messages
 
@@ -175,6 +175,10 @@ Alors que le profil de Sam présente deux événements d'achat, il n'a en réali
 
 Avec les propriétés de l'événement d’achat, vous pouvez définir des propriétés sur les achats pour qualifier plus précisément les conditions de déclenchement, améliorer la personnalisation des messages et générer des analyses plus sophistiquées via l’exportation de données brutes. Les types de valeurs des propriétés (chaîne de caractères, numérique, booléenne, date) varient selon la plate-forme et sont souvent attribués sous forme de paires clé-valeur.
 
+{% alert warning %}
+Les clés suivantes sont réservées et ne peuvent pas être utilisées comme noms de propriétés d'événement d'achat : `time`,`product_id` `quantity`, `event_name`, `price`, , et `currency`. L'utilisation d'une clé réservée dans `properties`l'objet renverra l'erreur « Champ « propriétés » non valide ».
+{% endalert %}
+
 Par exemple, si vous avez une application de commerce électronique et que vous souhaitez envoyer un message à un utilisateur après avoir effectué un achat, vous pourriez en outre améliorer votre audience cible et permettre une personnalisation accrue de la campagne en ajoutant une propriété d'événement d'achat de `brand_name`.
 
 **Exemple de déclenchement basé sur les propriétés d'un événement d'achat :**
@@ -185,9 +189,9 @@ Pour en savoir plus, reportez-vous à l'[objet propriétés d'achat]({{site.base
 
 ### Segmentation des propriétés de l’événement
 
-La segmentation des propriétés d'événement vous permet de cibler les utilisateurs en fonction non seulement des événements personnalisés pris, mais aussi des propriétés associées à ces événements. Cela permet d'ajouter des options de filtrage supplémentaires lors de la segmentation des achats et des événements personnalisés.
+La segmentation des propriétés d'événement vous permet de cibler les utilisateurs non seulement en fonction des événements personnalisés enregistrés, mais également en fonction des propriétés associées à ces événements. Cela ajoute des options de filtrage supplémentaires lors de la segmentation des événements d'achat et des custom events.
 
-![Filtres de segmentation pour les propriétés d'événement d'achat, affichant des options pour filtrer les utilisateurs sur la base de valeurs spécifiques de propriétés d'événement d'achat, comme le filtrage des utilisateurs qui ont acheté un produit avec une certaine propriété dans un délai donné.]({% image_buster /assets/img/purchase_event_property.png %}){: style="max-width:80%;margin-left:15px;"}
+![Filtres de segmentation pour les propriétés d'événement d'achat, affichant des options permettant de filtrer les utilisateurs en fonction de valeurs spécifiques des propriétés d'événement d'achat, par exemple pour filtrer les utilisateurs ayant acheté un produit présentant une certaine propriété au cours d'une période donnée.]({% image_buster /assets/img/purchase_event_property.png %}){: style="max-width:80%;margin-left:15px;"}
 
 Ces filtres de segmentation comprennent :
 - A effectué l'événement personnalisé avec la propriété Y et la valeur V X fois au cours des Y derniers jours.
@@ -210,11 +214,11 @@ Pour enregistrer les achats au niveau de la commande plutôt qu'au niveau du pro
 
 Chez Braze, nous proposons des conventions générales de nommage pour l’objet Achat `product_id`. Lorsque vous choisissez `product_id`, Braze suggère d’utiliser des noms simples tels que le nom du produit ou la catégorie de produit (au lieu des unités de gestion des stocks) dans l’intention de regrouper tous les éléments enregistrés par ce `product_id`.
 
-Les produits sont ainsi facilement identifiables pour la segmentation et le déclencheur. 
+Cela facilite l'identification des produits pour la segmentation et les déclencheurs. 
 
 ## Exclure des événements d’achat
 
-Vous pouvez parfois identifier des événements d'achat qui enregistrent trop de points de données, qui ne sont plus utiles à votre stratégie de marketing ou qui ont été enregistrés par erreur. Pour empêcher l'envoi de ces données à Braze, vous pouvez mettre l'objet de données personnalisé sur liste de blocage pendant que votre équipe d'ingénieurs travaille à sa suppression du backend de votre appli ou de votre site web.
+Il peut arriver que vous identifiiez des événements d'achat qui enregistrent un nombre excessif de points de données, qui ne sont plus pertinents pour votre stratégie marketing ou qui ont été enregistrés par erreur. Pour empêcher l'envoi de ces données à Braze, vous pouvez mettre l'objet de données personnalisé sur liste de blocage pendant que votre équipe d'ingénieurs travaille à sa suppression du backend de votre appli ou de votre site web.
 
 Dans le tableau de bord de Braze, vous pouvez gérer la mise en liste de blocage à partir de **Paramètres des données** > **Produits**. Pour en savoir plus, consultez la rubrique [Gérer les données personnalisées]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/).
 
