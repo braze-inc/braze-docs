@@ -35,7 +35,7 @@ Con las feature flags de Braze, podemos desplegar la característica gradualment
 
 Para desplegar gradualmente esta característica, podemos [crear una bandera de característica]({{site.baseurl}}/developer_guide/feature_flags/create/) llamada "Widget de chat en vivo".
 
-![Detalles de la feature flag de un ejemplo llamado Widget de Chat en vivo. El ID es enable_live_chat. La descripción de esta característica indica que el widget de chat en vivo se mostrará en la página de soporte.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
+![Detalles de la feature flag de un ejemplo llamado Widget de Chat en vivo. El ID esenable_live_chat.  Esta descripción de la característica indica que el widget de chat en vivo se mostrará en la página de asistencia.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
 En el código de nuestra aplicación, sólo mostraremos el botón **Iniciar chat en vivo** cuando esté habilitada la bandera de la característica Braze:
 
@@ -231,11 +231,11 @@ Supongamos que lanzamos un nuevo programa de recompensas de fidelización para n
 
 Para coordinar eficazmente el despliegue de características y la mensajería, crearemos una nueva feature flag llamada `show_loyalty_program`. Para nuestro lanzamiento inicial por fases, dejaremos que Canvas controle cuándo y para quién se habilita la bandera de la característica. Por ahora, dejaremos el porcentaje de despliegue en 0% y no seleccionaremos ningún segmento de destino.
 
-![Una feature flag con el nombre Programa de recompensas por fidelización. El ID es show_loyalty_program, y la descripción que muestra el nuevo programa de recompensas de fidelización en la pantalla de inicio y en la página de perfil.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
+![Una feature flag con el nombre Programa de recompensas por fidelización. El ID esshow_loyalty_program,  y la descripción indica que se trata del nuevo programa de fidelización en la pantalla de inicio y en la página de perfil.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
 
-A continuación, en Canvas, crearemos un [paso en]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) Canvas que habilite la bandera de característica `show_loyalty_program` para nuestro segmento "Clientes de alto valor":
+A continuación, en Canvas, crearemos un [paso de indicador de función]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) que habilite el indicador`show_loyalty_program` de función para nuestro segmento «Clientes de alto valor»:
 
-![Un ejemplo de Canvas con un paso en Canvas de división de audiencias en el que el segmento de clientes de alto valor activa la bandera de característica show_loyalty_program.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
+![Un ejemplo de un lienzo con un paso de división de audiencia en el que el segmento de clientes de alto valor activa la banderashow_loyalty_program de característica.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 
 Ahora, los usuarios de este segmento empezarán a ver el nuevo programa de fidelización y, una vez habilitado, se enviarán automáticamente un correo electrónico y un cuestionario para ayudar a nuestro equipo a recabar opiniones.
 
@@ -245,7 +245,7 @@ Utiliza las banderas de características para experimentar y confirmar tus hipó
 
 Una [prueba A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) es una potente herramienta que compara las respuestas de los usuarios a múltiples versiones de una variable.
 
-En este ejemplo, nuestro equipo ha creado un nuevo flujo de pago para nuestra aplicación de comercio electrónico. Aunque estamos seguros de que mejora la experiencia del usuario, queremos hacer una prueba A/B para medir su impacto en los ingresos de nuestra aplicación.
+En este ejemplo, nuestro equipo ha creado un nuevo proceso de pago para nuestra aplicación de comercio electrónico. Aunque estamos seguros de que mejora la experiencia del usuario, queremos hacer una prueba A/B para medir su impacto en los ingresos de nuestra aplicación.
 
 Para empezar, crearemos una nueva feature flag llamada `enable_checkout_v2`. No añadiremos un porcentaje de audiencia o de lanzamiento. En su lugar, utilizaremos un experimento de señalización de características para dividir el tráfico, habilitar la característica y medir el resultado.
 
@@ -310,7 +310,7 @@ if let featureFlag, featureFlag.enabled {
 
 Configuraremos nuestra prueba A/B en un [Experimento de bandera de características]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
-Ahora, el 50% de los usuarios verán la experiencia antigua, mientras que el otro 50% verá la experiencia nueva. A continuación, podemos analizar las dos variantes para determinar qué flujo de pago dio lugar a una mayor tasa de conversión. {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
+Ahora, el 50% de los usuarios verán la experiencia antigua, mientras que el otro 50% verá la experiencia nueva. A continuación, podemos analizar las dos variantes para determinar qué proceso de pago ha dado lugar a una tasa de conversión más alta. {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
 
 ![Un experimento de bandera de características divide el tráfico en dos grupos del 50%.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
