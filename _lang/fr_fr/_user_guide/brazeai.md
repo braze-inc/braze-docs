@@ -22,7 +22,7 @@ guide_featured_list:
   - name: Optimiseur de contenu
     link: /docs/user_guide/brazeai/content_optimizer/
     image: /assets/img/braze_icons/image-user-check.svg
-  - name: Studio de décision
+  - name: Studio de prise de décision
     link: /docs/user_guide/brazeai/decisioning_studio/
     image: /assets/img/braze_icons/stars-03.svg
   - name: IA générative
@@ -31,13 +31,13 @@ guide_featured_list:
   - name: Intelligence Suite
     link: /docs/user_guide/brazeai/intelligence_suite/
     image: /assets/img/braze_icons/clock.svg
-  - name: Recommandations d'articles
+  - name: "Recommandations d'articles"
     link: /docs/user_guide/brazeai/item_recommendations/
     image: /assets/img/braze_icons/hearts.svg
-  - name: Opérateur BrazeAI
+  - name: Opérateur
     link: /docs/user_guide/brazeai/operator/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Suite prédictive
+  - name: Predictive Suite
     link: /docs/user_guide/brazeai/predictive_suite/
     image: /assets/img/braze_icons/stars-01.svg
   - name: Chemins personnalisés
