@@ -8,13 +8,13 @@
 
 ## 세션에서 요청할 수 있는 배치 수는 몇 개입니까?
 
-단일 새로 고침 요청에서 최대 10개의 배치를 요청할 수 있습니다. 요청한 각 배치에 대해 Braze는 사용자가 자격이 있는 가장 높은 우선 순위의 배너를 반환합니다. 추가 요청은 오류를 반환합니다.
+단일 새로 고침 요청에서 최대 10개의 배치를 요청할 수 있습니다. 요청하는 각 배치에 대해, Braze는 사용자가 자격이 있는 가장 높은 우선 순위의 배너를 반환합니다. 추가 요청은 오류를 반환합니다.
 
 자세한 내용은 [배치 요청]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %})을 참조하세요.
 
 ## 동시에 활성화할 수 있는 배너 캠페인은 몇 개입니까?
 
-각 작업 공간은 최대 200개의 활성 배너 캠페인을 지원할 수 있습니다. 이 한도에 도달하면 새 캠페인을 만들기 전에 기존 캠페인을 [아카이브하거나 비활성화]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status)해야 합니다.
+각 작업 공간은 최대 200개의 활성 배너 캠페인을 지원할 수 있습니다. 이 한도에 도달하면, 새 캠페인을 만들기 전에 기존 캠페인을 [아카이브하거나 비활성화해야 합니다.]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status)
 
 ## 배치를 공유하는 캠페인에서 어떤 배너가 먼저 표시됩니까?
 
@@ -22,13 +22,13 @@
 
 ## 기존 콘텐츠 카드 피드에서 배너를 사용할 수 있습니까?
 
-배너는 콘텐츠 카드와 다르므로 같은 피드에서 배너와 콘텐츠 카드를 사용할 수 없습니다. 기존 콘텐츠 카드 피드를 배너로 교체하려면 [앱이나 웹사이트에 배치를 생성해야 합니다.]({{site.baseurl}}/developer_guide/banners/placements/)
+배너는 콘텐츠 카드와 다르므로, 같은 피드에서 배너와 콘텐츠 카드를 사용할 수 없습니다. 기존 콘텐츠 카드 피드를 배너로 교체하려면, [앱이나 웹사이트에 배치를 생성해야 합니다.]({{site.baseurl}}/developer_guide/banners/placements/)
 
 ## 사용자 행동에 따라 배너를 트리거할 수 있습니까?
 
 배너는 [실행 기반 전달]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery)을 지원하지 않지만, 세분화 및 우선 순위를 사용하여 과거 행동에 따라 사용자를 타겟팅할 수 있습니다.
 
-예를 들어, 특정 배너를 `purchase` 이벤트를 완료한 사용자에게만 표시하려면:
+예를 들어, `purchase` 이벤트를 완료한 사용자에게만 특별한 배너를 표시하려면:
 1. **타겟팅:** 캠페인에서 커스텀 이벤트 `purchase`를 최소 한 번 수행한 사용자 세그먼트를 타겟팅하세요.
 2. **우선순위:** 모든 사용자에게 일반 배너가 있고 구매자를 위한 특정 배너가 동일한 위치를 타겟팅하는 경우, 특정 배너의 우선 순위를 **높음**으로 설정하고 일반 배너는 **중간** 또는 **낮음**으로 설정하세요.
 
@@ -62,7 +62,7 @@
 예. 클릭 이벤트가 캡처되는 방법은 배너가 렌더링되는 방식에 따라 다릅니다:
 
 - **표준 편집기 구성 요소:** 배너가 표준 편집기 구성 요소(이미지, 버튼, 텍스트)를 사용하는 경우, SDK의 삽입 방법을 사용할 때 클릭이 자동으로 추적됩니다.
-- **커스텀 코드 블록:** 배너가 커스텀 코드 편집기 블록을 사용하는 경우, 클릭을 추적하기 위해 커스텀 HTML 내에서 `brazeBridge.logClick()`를 호출해야 합니다. 이것은 배너를 삽입하고 렌더링하기 위해 SDK 방법을 사용할 때도 적용됩니다. 이것은 HTML 인앱 메시지에 대한 [JavaScript 브리지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge)와 동일하게 작동합니다.
-- **커스텀 UI (헤드리스):** 배너 HTML을 렌더링하는 대신 배너의 커스텀 속성을 사용하여 완전히 커스텀 UI를 구축하는 경우, 애플리케이션 코드에서 배너 객체에 대해 `logClick()`를 호출해야 합니다.
+- **커스텀 코드 블록:** 커스텀 코드 편집기 블록 내의 요소에 대한 클릭을 추적하려면, 클릭을 추적하기 위해 커스텀 HTML 내에서 `brazeBridge.logClick()`를 호출해야 합니다. 이것은 배너를 삽입하고 렌더링하기 위해 SDK 방법을 사용할 때도 적용됩니다. 전체 참조는 [배너를 위한 커스텀 코드 및 JavaScript 브리지]({{site.baseurl}}/user_guide/message_building_by_channel/banners/custom_code/#javascript-bridge)를 참조하세요.
+- **커스텀 UI(헤드리스):** 배너 HTML을 렌더링하는 대신 배너의 커스텀 속성을 사용하여 완전히 커스텀 UI를 구축하는 경우, 애플리케이션 코드에서 배너 객체에 `logClick()`를 호출하세요.
 
 자세한 정보는 [클릭 로깅]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks)을 참조하세요.
