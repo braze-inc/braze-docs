@@ -65,7 +65,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
     "teams" : (array) the names of the Teams associated with the campaign,
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
-            "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_card, in-app_message, or sms,
+            "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_cards, trigger_in_app_message, or sms,
             "name": (string) the name of the message in the dashboard (eg., "Variation 1")
             ... channel-specific fields for this message, see the following messages section ...
         }
@@ -78,22 +78,19 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 
 La réponse `messages` contiendra des informations sur chaque message. Voici des exemples de réponses de message pour chaque canal :
 
-#### Notification push
+{% tabs %}
+{% tab Content Cards %}
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
-    "name": (string) the name of the variant,
-    "alert": (string) the alert body text,
-    "extras": (hash) any key-value pairs provided,
-    "title": (string) the alert title text,
-    "action": (string) action link from click,
-    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
-    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
+    "channel": "content_cards",
+    "name": (string) the name of variant,
+    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
-#### E-mail
+{% endtab %}
+{% tab Email %}
 
 ```json
 {
@@ -114,7 +111,10 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-#### in-app Messages
+{% endtab %}
+{% tab In-app messages %}
+
+#### Enquêtes
 
 ```json
 {
@@ -124,7 +124,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
             {
                 "header":
                     {
-                         "text":(string) the display text for the header of the survey,
+                         "text":(string) the display text for the header of the survey
                     }
                 "choices": [
                     {
@@ -132,7 +132,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
                        "text": (string) the display text,
                        "custom_attribute_key": (string) the custom attribute key,
                        "custom_attribute_value": (sting) the custom attribute value,
-                       "deleted": (boolean) deleted from live campaign,
+                       "deleted": (boolean) deleted from live campaign
                     },
                     ...
                 ]
@@ -142,17 +142,47 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-#### Cartes de contenu
+#### Messages in-app contextuels, modaux ou en plein écran
 
 ```json
 {
-    "channel": "content_cards",
-    "name": (string) the name of variant,
-    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
+    "channel": "in_app_message",
+    "name": (string) the name of the variant,
+    "message": (string, optional) the body text,
+    "extras": (hash, optional) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
-#### Webhook
+{% endtab %}
+{% tab Push %}
+
+```json
+{
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
+    "alert": (string) the alert body text,
+    "extras": (hash) any key-value pairs provided,
+    "title": (string) the alert title text,
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
+}
+```
+
+{% endtab %}
+{% tab SMS %}
+
+```json
+{
+  "channel": "sms",
+  "body": (string) the payload body,
+  "from": (string) the list of numbers associated with the subscription group,
+  "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
+}
+```
+
+{% endtab %}
+{% tab Webhook %}
 
 ```json
 {
@@ -165,20 +195,10 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-#### SMS
+{% endtab %}
+{% tab WhatsApp %}
 
-```json
-{
-  "channel": "sms",
-  "body": (string) the payload body,
-  "from": (string) the list of numbers associated with the subscription group,
-  "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
-}
-```
-
-#### WhatsApp
-
-##### Messages types
+#### Messages types
 
 ```json
 {
@@ -193,7 +213,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-##### Messages d'envoi de messages
+#### Messages de réponse
 
 ```json
 {
@@ -208,7 +228,8 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-#### Messages de contrôle
+{% endtab %}
+{% tab Control messages %}
 
 ```json
 {
@@ -217,11 +238,17 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
+{% endtab %}
+{% endtabs %}
+
+
 ### Comportements de conversion
 
-Le tableau `conversion_behaviors` contient des informations sur chaque événement de conversion défini pour la campagne. Ces comportements sont dans l’ordre défini par la campagne. Par exemple, l'événement de conversion A est le premier élément du tableau, l'événement de conversion B est le deuxième, et ainsi de suite. Les listes suivantes présentent des exemples de comportement relatif aux événements de conversion :
+Le`conversion_behaviors`tableau contient des informations sur chaque comportement d'événement de conversion défini pour la campagne. Ces comportements sont dans l’ordre défini par la campagne. Par exemple, l'événement de conversion A est le premier élément du tableau, l'événement de conversion B est le deuxième, et ainsi de suite. Les listes suivantes présentent des exemples de comportement relatif aux événements de conversion :
 
-#### Clique sur l’e-mail
+
+{% tabs %}
+{% tab Clicks email %}
 
 ```json
 {
@@ -230,7 +257,8 @@ Le tableau `conversion_behaviors` contient des informations sur chaque événeme
 }
 ```
 
-#### Ouvre l’e-mail
+{% endtab %}
+{% tab Opens email %}
 
 ```json
 {
@@ -239,7 +267,8 @@ Le tableau `conversion_behaviors` contient des informations sur chaque événeme
 }
 ```
 
-#### Achète (tout achat)
+{% endtab %}
+{% tab Makes purchase (any purchase) %}
 
 ```json
 {
@@ -248,7 +277,8 @@ Le tableau `conversion_behaviors` contient des informations sur chaque événeme
 }
 ```
 
-#### Achète (produit spécifique)
+{% endtab %}
+{% tab Makes purchase (specific product) %}
 
 ```json
 {
@@ -258,7 +288,8 @@ Le tableau `conversion_behaviors` contient des informations sur chaque événeme
 }
 ```
 
-#### Effectue un événement personnalisé
+{% endtab %}
+{% tab Performs custom event %}
 
 ```json
 {
@@ -268,7 +299,9 @@ Le tableau `conversion_behaviors` contient des informations sur chaque événeme
 }
 ```
 
-#### Met à niveau l’application
+
+{% endtab %}
+{% tab Upgrades app %}
 
 ```json
 {
@@ -277,8 +310,8 @@ Le tableau `conversion_behaviors` contient des informations sur chaque événeme
     "app_ids": (array or null) array of app ids, such as ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
-
-#### Utilise l’application
+{% endtab %}
+{% tab Uses app %}
 
 ```json
 {
@@ -287,6 +320,9 @@ Le tableau `conversion_behaviors` contient des informations sur chaque événeme
     "app_ids": (array or null) array of app ids, such as ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
+
+{% endtab %}
+{% endtabs %}
 
 {% alert tip %}
 Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
