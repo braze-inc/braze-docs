@@ -48,6 +48,10 @@ Un objet Achat est un objet qui passe par l’API lorsqu’un achat a été effe
 - [ISO 4217 Code des devises Wiki](http://en.wikipedia.org/wiki/ISO_4217)
 - [ISO 8601 Time Code Wiki](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+Certaines paires d'identificateurs ne peuvent pas être utilisées conjointement, et`email`  a priorité sur`phone`  lorsque les deux sont fournis. Pour plus de détails, veuillez vous référer à [la section Résolution des identifiants]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+{% endalert %}
+
 ## ID du produit d'achat
 
 Dans l'objet Achat, le `product_id` est un identifiant pour l'achat (tel que `Product Name` ou `Product Category`) :
@@ -59,7 +63,7 @@ Dans l'objet Achat, le `product_id` est un identifiant pour l'achat (tel que `Pr
 
 Chez Braze, nous proposons des conventions générales de nommage pour l’objet Achat `product_id`. Lorsque vous choisissez `product_id`, Braze suggère d’utiliser des noms simples tels que le nom du produit ou la catégorie de produit (au lieu des unités de gestion des stocks) dans l’intention de regrouper tous les éléments enregistrés par ce `product_id`.
 
-Les produits sont ainsi plus faciles à identifier pour la segmentation et le déclencheur.
+Cela facilite l'identification des produits à des fins de segmentation et de déclenchement.
 
 ### Journaliser les achats au niveau de la commande
 
@@ -103,7 +107,7 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 | Datetimes | Formatés sous forme de chaînes de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Non pris en charge dans les tableaux. |
 | Chaînes de caractères | 255 caractères ou moins. |
 | Tableaux | Les tableaux ne peuvent pas inclure des dates/horodatages. |
-| Objets | Les objets sont ingérés sous forme de chaînes de caractères. |
+| Objets | Les objets sont traités sous forme de chaînes de caractères. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Les objets de propriété d'événement qui contiennent des valeurs de tableau ou d'objet peuvent avoir une charge utile de propriété d'événement allant jusqu'à 50 Ko.
@@ -116,10 +120,10 @@ Les [propriétés d'achat]({{site.baseurl}}/user_guide/data_and_analytics/custom
 
 Il est important de noter que cette fonctionnalité est activée **par produit**, et non par achat. Par exemple, si vous avez un volume élevé de produits distincts, mais que chacun d'entre eux possède les mêmes propriétés, la segmentation peut s'avérer plus inutile.
 
-Dans cette instance, nous recommandons d'utiliser des noms de produits au "niveau du groupe" plutôt que des identifiants au niveau de la transaction lors de la définition des structures de données. Par exemple, une société de vente de billets de train devrait avoir des produits pour "voyage simple", "voyage aller-retour", "multi-villes", et non des transactions spécifiques telles que la "transaction 123" ou la "transaction 046". Autre exemple, pour l'événement d'achat "nourriture", il serait préférable que les propriétés soient "gâteau" et "sandwich".
+Dans cette instance, nous recommandons d'utiliser les noms de produits au niveau du groupe plutôt que les identifiants au niveau des transactions lors de la configuration des structures de données. Par exemple, une société de vente de billets de train devrait avoir des produits pour "voyage simple", "voyage aller-retour", "multi-villes", et non des transactions spécifiques telles que la "transaction 123" ou la "transaction 046". Autre exemple, pour l'événement d'achat "nourriture", il serait préférable que les propriétés soient "gâteau" et "sandwich".
 
 {% alert important %}
-Notez que les produits peuvent être ajoutés via l'API REST de Braze. Par exemple, si vous envoyez un appel au point de terminaison `/users/track` et que vous incluez un nouvel ID d'achat, Braze crée automatiquement un produit dans la section **Paramètres des données** > **Produits** du tableau de bord.
+Notez que les produits peuvent être ajoutés via l'API REST de Braze. Par exemple, si vous envoyez un appel à `/users/track`l'endpoint et incluez un nouvel ID d'achat, Braze crée automatiquement un produit dans la section **Paramètres de données** > **Produits** du tableau de bord de Braze.
 {% endalert %}
 
 ### Exemple d’objet Achat
