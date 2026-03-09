@@ -26,7 +26,7 @@ description: "이 문서에서는 Braze 웹 SDK를 사용하여 스마트 TV(삼
 
 ## 분석
 
-분석을 위한 모든 동일한 웹 SDK 메서드는 스마트 TV에서도 사용할 수 있습니다. 사용자 지정 이벤트, 사용자 지정 속성 등을 추적하는 방법에 대한 전체 안내는 [애널리틱스를]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web) 참조하세요.
+분석을 위한 모든 동일한 웹 SDK 메서드는 스마트 TV에서도 사용할 수 있습니다. 커스텀 이벤트, 커스텀 속성 등을 추적하는 전체 안내는 [분석]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web)을(를) 참조하세요.
 
 ## 인앱 메시지 및 콘텐츠 카드
 
