@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Solución de problemas con mensajes dentro de la aplicación
+# Solución de problemas con los mensajes dentro de la aplicación
 
 ## Impresiones
 
@@ -34,30 +34,30 @@ El SDK solicita mensajes dentro de la aplicación a los servidores Braze al inic
 
 #### Comprueba si se solicitan y devuelven mensajes
 
-1. Añádase como [usuario de prueba]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) en el panel.
+1. Añádete como [usuario de prueba]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) en el panel.
 2. Configura una campaña de mensajes dentro de la aplicación dirigida a tu usuario.
 3. Asegúrate de que se produce una nueva sesión en tu aplicación.
-4. Utiliza el [registro de usuarios del evento]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) para comprobar que tu dispositivo solicita mensajes dentro de la aplicación al iniciar la sesión. Busca la solicitud SDK asociada al evento de inicio de sesión de tu usuario de prueba.
+4. Utiliza los registros de usuarios ]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab)del evento para comprobar que tu dispositivo solicita mensajes dentro de la aplicación al inicio de la sesión. Busca la solicitud SDK asociada al evento de inicio de sesión de tu usuario de prueba.
   - Si tu aplicación debía solicitar mensajes dentro de la aplicación desencadenados, deberías ver `trigger` en el campo **Respuestas solicitadas**, en **Datos de respuesta**.
   - Si tu aplicación debía solicitar mensajes originales dentro de la aplicación, deberías ver `in_app` en el campo **Respuestas solicitadas**, en **Datos de respuesta**.
-5. Utiliza los [registros de usuarios del evento]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) para comprobar si se devuelven los mensajes dentro de la aplicación correctos en los datos de respuesta.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
+5. Utiliza los registros de usuarios ]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab)del evento para comprobar si los mensajes correctos dentro de la aplicación se devuelven en los datos de respuesta.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 #### Solución de problemas de mensajes no solicitados
 
 Si tus mensajes dentro de la aplicación no se solicitan, es posible que tu aplicación no esté haciendo un seguimiento correcto de las sesiones, ya que los mensajes dentro de la aplicación se actualizan al iniciar la sesión. Además, asegúrate de que tu aplicación está iniciando realmente una sesión según la semántica de tiempo de espera de sesión de tu aplicación:
 
-![La solicitud SDK encontrada en los registros de usuarios del evento que muestra un evento de inicio de sesión con éxito.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
+![La solicitud del SDK que se encuentra en los registros de usuarios del evento muestra un evento de inicio de sesión correcto.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
 
 ### Solución de problemas de mensajes no devueltos
 
 Si tus mensajes dentro de la aplicación no se devuelven, es probable que estés experimentando un problema de orientación de la campaña:
 
 - Tu segmento no contiene a tu usuario.
-  - Comprueba la pestaña [\*\*Interacción**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) de tu usuario para ver si aparece el segmento correcto en **Segmentos**.
+  - Comprueba la pestaña []({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab)\*\*Interacción**] de tu usuario para ver si aparece el segmento correcto en **Segmentos**.
 - Tu usuario ha recibido previamente el mensaje dentro de la aplicación y no era elegible para volver a recibirlo.
-  - Comprueba la [configuración de elegibilidad de la campaña]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) en el paso **Entrega** del **Compositor de campañas** y asegúrate de que la configuración de elegibilidad se ajusta a tu configuración de pruebas.
+  - Comprueba la configuración de reelegibilidad]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) de la campaña en el paso **Entrega** del **Compositor** **de campañas** y asegúrate de que la configuración de reelegibilidad se ajusta a tu configuración de prueba.
 - Tu usuario alcanzó el límite de frecuencia de la campaña.
-  - Comprueba la configuración de la campaña [límite de frecuencia]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) y asegúrate de que se ajusta a tu configuración de pruebas.
+  - Comprueba la configuración de limitación de frecuencia]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) de la campaña y asegúrate de que se ajusta a tu configuración de prueba.
 - Si había un grupo de control en la campaña, tu usuario puede haber caído en el grupo de control.
   - Puedes comprobar si esto ha ocurrido creando un segmento con un filtro de variante de campaña recibida, en el que la variante de campaña esté configurada como **Control**, y comprobando si tu usuario cayó en ese segmento.
   - Cuando crees campañas para realizar pruebas de integración, asegúrate de no añadir un grupo de control.
