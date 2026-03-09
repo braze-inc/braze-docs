@@ -1,6 +1,6 @@
 ---
 nav_title: Nachrichten triggern
-article_title: Triggern Sie In-App-Nachrichten über das Braze SDK
+article_title: Triggern Sie In-App-Nachrichten über das Braze SDK.
 page_order: 0.2
 description: "Erfahren Sie, wie Sie In-App-Nachrichten über das Braze SDK triggern können."
 platform: 
@@ -26,7 +26,7 @@ In-App-Nachrichten können nicht über die API oder durch API-Ereignisse ausgel�
 
 ## Schlüssel-Wert-Paare
 
-Wenn Sie eine Kampagne in Braze erstellen, können Sie Schlüssel-Wert-Paare als `extras` festlegen, die das In-App-Nachricht-Objekt verwenden kann, um Daten an Ihre App zu senden.
+Wenn Sie eine Kampagne in Braze erstellen, können Sie Schlüssel-Wert-Paare festlegen, die das `extras`In-App-Messaging-Objekt verwenden kann, um Daten an Ihre App zu senden.
 
 {% tabs %}
 {% tab web %}
@@ -134,21 +134,21 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 Wenn Sie `braze.showInAppMessage` aufrufen, ohne `braze.automaticallyShowInAppMessages()` zu entfernen, werden Nachrichten möglicherweise doppelt angezeigt.
 {% endalert %}
 
-Für eine fortschrittlichere Kontrolle über das Timing von Nachrichten, einschließlich des Aufschiebens und Wiederherstellens getriggerter Nachrichten, lesen Sie bitte unser [Tutorial: Aufschieben und Wiederherstellen von getriggerten Nachrichten]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+Für eine erweiterte Steuerung des Nachrichtenzeitplans, einschließlich des Aufschiebens und Wiederherstellens getriggerter Nachrichten, lesen Sie bitte unser [Tutorial: Auslösen und Wiederherstellen von getriggerten Nachrichten]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
 {% endtab %}
 
 {% tab android %}
-1. Implementieren Sie die [`IInAppMessageManagerListener`](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?sdktab=android&tab=global%20listener#android_step-1-implement-the-custom-manager-listener) um einen angepassten Hörer einzustellen.
-2. Aktualisieren Sie Ihre [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) Methode so, dass sie Folgendes zurückgibt [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html).
+1. Implementieren Sie die [`IInAppMessageManagerListener`](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?sdktab=android&tab=global%20listener#android_step-1-implement-the-custom-manager-listener)Methode, um einen angepassten Listener festzulegen.
+2. Bitte Updateen Sie Ihre[`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html)Methode, um den Wert zurückzugeben[`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html).
 
-Für eine erweiterte Kontrolle über die Zeitsteuerung von Nachrichten, einschließlich der späteren Anzeige und der erneuten Einreihung in die Warteschlange, lesen Sie bitte unsere Seite [Nachrichten anpassen](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?tab=global%20listener&subtab=kotlin#android_step-2-instruct-braze-to-use-the-custom-manager-listener).
+Für eine erweiterte Steuerung des Nachrichtenzeitplans, einschließlich der Anzeige zu einem späteren Zeitpunkt und der erneuten Einreihung in die Warteschlange, konsultieren Sie bitte unsere Seite [„Anpassen von Nachrichten](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?tab=global%20listener&subtab=kotlin#android_step-2-instruct-braze-to-use-the-custom-manager-listener)“.
 {% endtab %}
 
 {% tab swift %}
-1. Implementieren Sie den Delegaten `BrazeInAppMessageUIDelegate` in Ihrer App. Eine vollständige Anleitung finden Sie unter [Tutorial: In-App-Nachricht UI](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
+1. Implementieren Sie den Delegaten `BrazeInAppMessageUIDelegate` in Ihrer App. Eine vollständige Anleitung referenzieren Sie unter [Tutorial: In-App-Nachricht UI](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 2. Aktualisieren Sie die Delegate-Methode `inAppMessage(_:displayChoiceForMessage:)`, um `.discard` zurückzugeben.
 
-Für eine fortschrittlichere Kontrolle über das Timing von Nachrichten, einschließlich des Aufschiebens und Wiederherstellens getriggerter Nachrichten, lesen Sie bitte unser [Tutorial: Aufschieben und Wiederherstellen von getriggerten Nachrichten]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+Für eine erweiterte Steuerung des Nachrichtenzeitplans, einschließlich des Aufschiebens und Wiederherstellens getriggerter Nachrichten, lesen Sie bitte unser [Tutorial: Auslösen und Wiederherstellen von getriggerten Nachrichten]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
 {% endtab %}
 
 {% tab flutter %}
@@ -239,7 +239,7 @@ Um eine In-App-Nachricht über ein vom Server gesendetes Ereignis auszulösen, s
 
 #### Schritt 1: Erstellen Sie einen Push-Callback, um den stillen Push zu empfangen
 
-Registrieren Sie Ihren angepassten Push-Callback, um auf eine bestimmte stille Push-Benachrichtigung zu warten. Weitere Informationen finden Sie unter [Einrichten von Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/push_notifications#android_setting-up-push-notifications).
+Registrieren Sie Ihren angepassten Push-Callback, um auf eine bestimmte stille Push-Benachrichtigung zu warten. Weitere Informationen referenzieren Sie unter [Push-Benachrichtigungen einrichten]({{site.baseurl}}/developer_guide/push_notifications#android_setting-up-push-notifications).
 
 Für die zuzustellende In-App-Nachricht werden zwei Events protokolliert, eines vom Server und eines von Ihrem angepassten Push-Callback. Um sicherzustellen, dass dasselbe Event nicht doppelt vorkommt, sollte das von Ihrem Push Callback protokollierte Event einer generischen Namenskonvention folgen, z. B. "In-App-Nachricht triggern", und nicht denselben Namen tragen wie das vom Server gesendete Event. Andernfalls können die Segmentierung und die Nutzerdaten dadurch beeinträchtigt werden, dass für eine einzelne Nutzer:innen-Aktion doppelte Ereignisse protokolliert werden.
 
@@ -288,7 +288,7 @@ Erstellen Sie eine [stille Push-Kampagne]({{site.baseurl}}/developer_guide/push_
 
 Die Push-Kampagne muss Schlüssel-Wert-Paare enthalten, die angeben, dass diese Push-Kampagne gesendet wird, um ein angepasstes SDK-Event zu protokollieren. Dieses Event wird verwendet, um die In-App-Nachricht zu triggern.
 
-![Zwei Sätze von Schlüssel-Wert-Paaren: IS_SERVER_EVENT auf "true" und CAMPAIGN_NAME auf "Name der Beispielkampagne" gesetzt.]({% image_buster /assets/img_archive/kvpConfiguration.png %}){: style="max-width:70%;" }
+![Zwei Sätze von Schlüssel-Wert-Paaren:  auf IS_SERVER_EVENT„true“ gesetzt und  auf „BeispielnamenCAMPAIGN_NAME der Kampagne“ gesetzt.]({% image_buster /assets/img_archive/kvpConfiguration.png %}){: style="max-width:70%;" }
 
 Der frühere Code für den Push Callback erkennt die Schlüssel-Wert-Paare und protokolliert das entsprechende angepasste SDK-Event.
 
@@ -300,7 +300,7 @@ Erstellen Sie Ihre für Nutzer sichtbare In-App-Nachricht-Kampagne im Braze-Dash
 
 Im folgenden Beispiel wurde die zu triggernde In-App-Nachricht konfiguriert, indem die Event-Eigenschaft im Rahmen des usprünglichen stillen Push gesendet wurde.
 
-![Eine aktionsbasierte Zustellung, bei der eine In-App-Nachricht ausgelöst wird, wenn "campaign_name" gleich "IAM-Kampagnenname Beispiel" ist.]({% image_buster /assets/img_archive/iam_event_trigger.png %})
+![Eine aktionsbasierte Zustellung, bei der eine In-App-Nachricht ausgelöst wird, wenn"campaign_name"die Bedingung „IAM-Kampagnenname Beispiel“ erfüllt ist.]({% image_buster /assets/img_archive/iam_event_trigger.png %})
 
 Wenn ein vom Server gesendetes Event protokolliert wird, während sich die App nicht im Vordergrund befindet, wird das Event protokolliert, aber die In-App-Nachricht wird nicht angezeigt. Wenn Sie möchten, dass das Event verzögert wird, bis die Anwendung im Vordergrund ist, müssen Sie in Ihrem angepassten Push-Empfänger ein Häkchen setzen, um das Event zu verwerfen oder zu verzögern, bis die App in den Vordergrund getreten ist.
 {% endtab %}
@@ -347,11 +347,11 @@ Da eine Push-Nachricht verwendet wird, um ein vom SDK protokolliertes angepasste
 
 Erstellen Sie eine [Kampagne mit einer stillen Push-Benachrichtigung]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift), die über das vom Server gesendete Event ausgelöst wird. 
 
-![Eine aktionsbasierte Zustellung In-App-Nachricht-Kampagne, die Benutzern zugestellt wird, in deren Benutzerprofil das angepasste Event "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+![Eine aktionsbasierte Zustellung von In-App-Nachrichten, die an Benutzer zugestellt wird, deren Kundenprofile das angepasste Event/assets/img_archive/iosServerSentPush.pngimage_buster"server_event".]({%%}) enthalten.
 
 Die Push-Kampagne muss zusätzliche Schlüssel-Wert-Paare (Extras) enthalten, die angeben, dass diese Push-Kampagne gesendet wird, um ein angepasstes SDK-Event zu protokollieren. Dieses Event wird verwendet, um die In-App-Nachricht zu triggern.
 
-![Eine Kampagne mit aktionsbasierter Zustellung von In-App-Nachrichten, die zwei Schlüssel-Wert-Paare enthält. "CAMPAIGN_NAME" ist auf "In-App-Nachricht Beispiel" und "IS_SERVER_EVENT" auf "wahr" eingestellt.]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![Eine aktionsbasierte Zustellung von In-App-Nachrichten mit zwei Schlüssel-Wert-Paaren."CAMPAIGN_NAME"  Setzen Sie „Beispiel für den Namen der In-App-Nachricht“ und"IS_SERVER_EVENT"  setzen Sie „true“.]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 Der Code in der Methode `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` prüft auf den Schlüssel `IS_SERVER_EVENT` und protokolliert ein angepasstes SDK-Event, wenn dieser vorhanden ist.
 
@@ -363,7 +363,7 @@ Erstellen Sie im Braze-Dashboard eine für Ihre Nutzer sichtbare In-App-Nachrich
 
 Im folgenden Beispiel wurde die zu triggernde In-App-Nachricht konfiguriert, indem die Event-Eigenschaft im Rahmen des usprünglichen stillen Push gesendet wurde.
 
-![Eine aktionsbasierte Zustellung von In-App-Nachricht-Kampagnen, die Benutzern zugestellt wird, die das angepasste Event "In-App-Nachricht-Auslöser" ausführen, wobei "campaign_name" gleich "IAM-Kampagnenname Beispiel" ist.]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Eine aktionsbasierte Zustellung von In-App-Nachrichten, die an Benutzer zugestellt wird, die das angepasste Event „In-App-Nachrichtenauslöser“ ausführen, wobei"campaign_name"  gleich „IAM-Kampagnenname Beispiel“ ist.]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 {% alert note %}
 Beachten Sie, dass diese In-App-Nachrichten nur ausgelöst werden, wenn sich die Anwendung beim Empfang der stillen Push-Benachrichtigung im Vordergrund befindet.
@@ -377,9 +377,7 @@ Um eine vordefinierte In-App-Nachricht manuell anzuzeigen, verwenden Sie die fol
 
 {% tabs %}
 {% tab web %}
-```javascript
-braze.requestInAppMessageDisplay();
-```
+Für das Web-SDK verwenden Sie bitte`braze.showInAppMessage(inAppMessage)`  , um jede In-App-Nachricht anzuzeigen. Weitere Informationen und ein Beispiel finden Sie unter [Anzeigen einer Nachricht in Realtime](#displaying-a-message-in-real-time).
 {% endtab %}
 
 {% tab android %}
