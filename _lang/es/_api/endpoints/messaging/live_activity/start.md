@@ -1,7 +1,7 @@
 ---
 nav_title: "PUBLICAR: Iniciar actividad en vivo"
 article_title: "PUBLICAR: Iniciar actividad en vivo"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 1
 
 layout: api_page
@@ -19,7 +19,7 @@ description: "En este artículo se describen los detalles del punto final Inicia
 
 Después de crear una Actividad en vivo, puedes hacer una petición POST para iniciar remotamente tu actividad para cualquier segmento dado. Para más información sobre las Actividades en vivo de Apple, consulta [Iniciar y actualizar Actividades en vivo con notificaciones push de ActivityKit](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications).
 
-Si `content-available` no está configurado, la prioridad predeterminada del servicio de notificaciones push de Apple (APN) es 10. Si `content-available` está configurado, esta prioridad es 5. Consulta el [objeto push de Apple]({{site.baseurl}}/api/objects_filters/messaging/apple_object) para más detalles.
+Si`content-available`no se configura, la prioridad predeterminada del servicio de notificaciones push de Apple (APN) es 10. Si`content-available`se establece, esta prioridad es 5. Consulta [el objeto push]({{site.baseurl}}/api/objects_filters/messaging/apple_object) de [Apple]({{site.baseurl}}/api/objects_filters/messaging/apple_object) para obtener más detalles.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
@@ -66,15 +66,15 @@ Para utilizar este punto final, tendrás que completar lo siguiente:
 | `content_state` | Obligatoria | Objeto  | Los parámetros de `ContentState` se definen al crear la Live Activity. Pase los valores actualizados para su `ContentState` utilizando este objeto.<br><br>El formato de esta solicitud debe coincidir con la forma que definió inicialmente. |
 | `dismissal_date` | Opcional | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Este parámetro define el tiempo para eliminar la Actividad en vivo de la IU del usuario. |
 | `stale_date` | Opcional | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Este parámetro indica al sistema cuándo el contenido de la Actividad en Directo se marca como obsoleto en la interfaz de usuario. |
-| `notification` | Obligatoria | Objeto | Incluya un objeto [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) para definir una notificación push. El comportamiento de esta notificación push depende de si el usuario está activo o si está utilizando un dispositivo proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> y el usuario está activo en su iPhone cuando se envía la actualización, la interfaz de usuario actualizada de Live Activity se deslizará hacia abajo y se mostrará como una notificación push.</li><li>Si un <code>notification</code> se incluye y el usuario no está activo en su iPhone, su pantalla se iluminará para mostrar la IU de Actividad en Directo actualizada en su pantalla de bloqueo.</li><li>La <code>notification alert</code> no se mostrará como una notificación push estándar. Además, si un usuario tiene un dispositivo proxy, como un Apple Watch, la <code>alert</code> se mostrará allí.</li></ul>{:/} |
-| `external_user_ids` | Opcional si se proporciona `segment_id` o `audience`  | Matriz de cadenas | Ver [ID de usuario externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). Máximo 50 ID externos de usuario.  |
+| `notification` | Obligatoria | Objeto | Incluya un objeto [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) para definir una notificación push. El comportamiento de esta notificación push depende de si tú eres un usuario activo o si estás utilizando un dispositivo proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> y el usuario está activo en su iPhone cuando se envía la actualización, la interfaz de usuario actualizada de Live Activity se deslizará hacia abajo y se mostrará como una notificación push.</li><li>Si un <code>notification</code> se incluye y el usuario no está activo en su iPhone, su pantalla se iluminará para mostrar la IU de Actividad en Directo actualizada en su pantalla de bloqueo.</li><li>La <code>notification alert</code> no se mostrará como una notificación push estándar. Además, si un usuario tiene un dispositivo proxy, como un Apple Watch, la <code>alert</code> se mostrará allí.</li></ul>{:/} |
+| `external_user_ids` | Opcional si se proporciona `segment_id` o `audience`  | Matriz de cadenas | Ver [ID de usuario externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). Máximo 50 ID externos.  |
 | `segment_id `  | Opcional si se proporciona `external_user_ids` o `audience`  | Cadena    | Ver [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
 | `custom_audience` | Opcional si se proporciona `external_user_ids` o `segment_id`  | Objeto de audiencia conectado  | Ver [audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/start' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \
