@@ -1,7 +1,7 @@
 ---
 nav_title: "POST:Eメールテンプレートを作成する"
 article_title: "POST:メールテンプレートを作成する"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -15,7 +15,7 @@ description: "この記事では、BrazeのEメールテンプレート作成エ
 
 > BrazeダッシュボードでEメールテンプレートを作成するには、このエンドポイントを使用する。
 
-これらのテンプレートは、**テンプレート& メディア**ページで利用できるようになる。このエンドポイントからの応答には`email_template_id`のフィールドが含まれており、後続のAPI呼び出しでテンプレートを更新するために使用できます。
+これらのテンプレートは**テンプレート&・メディア**ページで利用可能だ。このエンドポイントからの応答には`email_template_id`のフィールドが含まれており、後続のAPI呼び出しでテンプレートを更新するために使用できます。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -47,11 +47,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`template_name`|必須|文字列|メールテンプレートの名前|
-|`subject`|必須|文字列|メールテンプレートの件名|
-|`body`|必須|文字列|HTMLを含む可能性のあるメールテンプレート本文。400KBまで。|
+|`template_name`|必須かどうか|文字列|メールテンプレートの名前|
+|`subject`|必須かどうか|文字列|メールテンプレートの件名|
+|`body`|必須かどうか|文字列|HTMLを含む可能性のあるメールテンプレート本文。最大400キロバイト。|
 |`plaintext_body`|オプション|文字列|メールテンプレート本文のプレーンテキストバージョン。|
 |`preheader`|オプション|文字列|一部のクライアントでプレビューを生成するために使用されるメールプレヘッダー。|
 |`tags`|オプション|文字列|[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)はすでに存している必要があります。|
