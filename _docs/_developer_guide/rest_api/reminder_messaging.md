@@ -60,7 +60,7 @@ These boolean attributes can then be used directly in [segment filters]({{site.b
 
 ### Option B: Personal dates (custom code block)
 
-For dates unique to each user (such as birthdays or anniversaries), insert a [**Custom Code** block]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#basic-blocks) on your landing page. The drag-and-drop editor doesn't include a date picker form block or support [nested custom attribute arrays of objects]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/array_of_objects/), so you need custom JavaScript to capture date input and write it to Braze using the `lpBridge` API.
+For dates unique to each user (such as birthdays or anniversaries), use a [**Custom Code** block]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#basic-blocks) on your landing page to capture the date and write it to Braze using the `lpBridge` API. This approach gives you a date input (or picker) and lets you store preferences in a [nested custom attribute array of objects]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/array_of_objects/), which the drag-and-drop form blocks don't support.
 
 When users arrive through the {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag, Braze already knows who they are, so your script only needs to:
 
