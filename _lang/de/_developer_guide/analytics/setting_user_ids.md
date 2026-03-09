@@ -1,12 +1,12 @@
 ---
-nav_title: "Nutzer:innen IDs festlegen"
-article_title: "Setzen Sie Nutzer:innen IDs über das Braze SDK"
+nav_title: Benutzer-IDs festlegen
+article_title: Legen Sie Benutzer-IDs über das Braze SDK fest.
 page_order: 1.1
 description: "Lernen Sie, wie Sie Nutzer:innen IDs über das Braze SDK festlegen."
 
 ---
 
-# Nutzer:innen IDs festlegen
+# Benutzer-IDs festlegen
 
 > Lernen Sie, wie Sie Nutzer:innen IDs über das Braze SDK festlegen. Dabei handelt es sich um eindeutige Bezeichner, mit denen Sie Nutzer:innen geräte- und plattformübergreifend tracken, ihre Daten über die [Nutzerdaten-API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) importieren und gezielte Nachrichten über die [Messaging-API]({{site.baseurl}}/api/endpoints/messaging/) versenden können. Wenn Sie einem Nutzer:in keine eindeutige ID zuweisen, weist Braze ihm stattdessen eine anonyme ID zu. Solange Sie dies nicht tun, können Sie diese Features jedoch nicht nutzen.
 
@@ -36,7 +36,7 @@ Wenn Sie stattdessen den Google Tag Manager verwenden möchten, können Sie den 
 
 Achten Sie darauf, die eindeutige ID des aktuellen Benutzers in das Feld **Externe Benutzer-ID** einzugeben, die in der Regel mit einer von Ihrer Website gesendeten Datenschichtvariablen gefüllt wird.
 
-![Ein Dialogfeld mit den Konfigurationseinstellungen für Braze Action Tags. Enthaltene Einstellungen sind "Tag-Typ" und "externe Nutzer:innen ID".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
+![Ein Dialogfeld mit den Konfigurationseinstellungen für Braze Action Tags. Die enthaltenen Einstellungen sind „Tag-Typ“ und „externe ID“.]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
 {% endtab %}
 
 {% tab ANDROID %}
@@ -86,7 +86,17 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
+
+{% tab REACT NATIVE %}
+```javascript
+Braze.changeUser("YOUR_USER_ID_STRING");
+```
+{% endtab %}
 {% endtabs %}
+
+{% alert note %}
+Der Aufruf`changeUser()`triggert einen Daten-Flush als Teil des Schließens der aktuellen Sitzung der Nutzer:innen. Das SDK löscht automatisch alle ausstehenden Daten des vorherigen Nutzers, bevor es zum neuen Nutzer wechselt. Daher ist es nicht erforderlich, vor dem Aufruf manuell eine `changeUser()`Datenlöschung anzufordern.
+{% endalert %}
 
 {% alert warning %}
 **Weisen Sie keine statische Standard ID zu oder rufen Sie `changeUser()` an, wenn sich ein Nutzer:innen abmeldet.** Auf diese Weise können Sie keine erneute Interaktion mit zuvor eingeloggten Nutzer:innen auf gemeinsam genutzten Geräten durchführen. Verfolgen Sie stattdessen alle Nutzer:innen IDs separat und stellen Sie sicher, dass der Abmeldeprozess Ihrer App den Wechsel zu einem zuvor angemeldeten Nutzer:innen zulässt. Wenn eine neue Sitzung beginnt, aktualisiert Braze automatisch die Daten für das neu aktive Profil.
@@ -149,24 +159,35 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 }
 ```
 {% endtab %}
+
+{% tab react native %}
+```javascript
+Braze.addAlias("ALIAS_NAME", "ALIAS_LABEL");
+```
+{% endtab %}
 {% endtabs %}
 
 ## Bewährte ID-Benennungsmethoden {#naming-best-practices}
 
 Wir empfehlen Ihnen, Nutzer:innen IDs nach dem [UUID-Standard (Universally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier) ) zu erstellen, d.h. es handelt sich um 128-Bit-Strings, die zufällig und gut verteilt sind.
 
-Alternativ können Sie einen vorhandenen eindeutigen Bezeichner (z.B. einen Namen oder eine E-Mail Adresse) hashen, um stattdessen Ihre Nutzer:innen zu generieren. Wenn Sie dies tun, stellen Sie sicher, dass Sie eine [SDK-Authentifizierung]({{site.baseurl}}/developer_guide/authentication/) implementieren, damit Sie Nutzer:innen vor einem Identitätswechsel schützen können.
+Alternativ können Sie einen vorhandenen eindeutigen Bezeichner (z.B. einen Namen oder eine E-Mail Adresse) hashen, um stattdessen Ihre Nutzer:innen zu generieren. Wenn Sie dies tun, stellen Sie sicher, dass Sie eine [SDK-Authentifizierung]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) implementieren, damit Sie Nutzer:innen vor einem Identitätswechsel schützen können.
+
+{% alert warning %}
+Verwenden Sie für Ihre Nutzer-ID keine leicht zu erratenden Werte oder fortlaufende Zahlen. Dies könnte Ihr Unternehmen böswilligen Angriffen oder Datenexfiltration aussetzen.
+
+Für zusätzliche Sicherheit empfehlen wir die Verwendung [der SDK-Authentifizierung]({{site.baseurl}}/developer_guide/sdk_integration/authentication/).
+{% endalert %}
 
 Es ist zwar wichtig, dass Sie Ihre Nutzer:innen IDs von Anfang an richtig benennen, aber Sie können sie in Zukunft jederzeit mit dem [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) Endpunkt.
 
-| Empfohlen | Nicht empfohlen |
+| Nicht empfohlene ID-Ausweisarten | Beispiel nicht empfohlen |
 | ------------ | ----------- |
-| 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
-| 8c0b3728-7fa7-4c68-a32e-12de1d3ed2d5 | Anna@email.com |
-| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | Firmenname-1-2-19 |
-| 2d9e96a1-8f15-4eaf-bf7b-eb8c34e25962 | jon-doe-1-2-19 |
+| Sichtbare Profil-ID oder Benutzername der Nutzer:innen | JonDoe829525552 |
+| E-Mail-Adresse | Anna@email.com |
+| Automatisch inkrementierende ID für Nutzer:innen | 123 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
-Vermeiden Sie die Weitergabe von Details über die Erstellung von Nutzer:innen IDs, da dies Ihr Unternehmen bösartigen Angriffen oder der Löschung von Daten aussetzen könnte.
+Bitte vermeiden Sie es, Details darüber preiszugeben, wie Sie Benutzer-IDs erstellen, da dies Ihr Unternehmen böswilligen Angriffen oder Datenexfiltration aussetzen könnte.
 {% endalert %}
