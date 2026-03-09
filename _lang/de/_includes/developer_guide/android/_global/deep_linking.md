@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## Einen universellen Delegierten erstellen
+## Erstellen eines universellen Delegaten
 
 Das Android SDK bietet die Möglichkeit, ein einzelnes Delegatenobjekt festzulegen, um alle von Braze geöffneten Deeplinks über Content-Cards, In-App-Nachrichten und Push-Benachrichtigungen anzupassen.
 
@@ -142,24 +142,24 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 {% endtab %}
 {% endtabs %}
 
-## Anpassen der WebView-Aktivität {#Custom_Webview_Activity}
+## Passen der WebView-Aktivität an {#Custom_Webview_Activity}
 
-Wenn Braze innerhalb der App Deeplinks zu Websites öffnet, werden die Deeplinks von [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
+Bei der Öffnung von Deeplinks innerhalb der App durch Braze werden diese von verarbeitet[`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
 
 {% alert note %}
-Für angepasste HTML In-App-Nachrichten öffnen sich die mit `target="_blank"` konfigurierten Links im Standard Webbrowser des Geräts und werden nicht von `BrazeWebViewActivity` verarbeitet.
+Bei angepassten HTML-In-App-Nachrichten werden`target="_blank"` die konfigurierten Links im Standard-Webbrowser des Geräts geöffnet und nicht von verarbeitet`BrazeWebViewActivity`.
 {% endalert %}
 
 Um dies zu ändern:
 
-1. Erstellen Sie eine neue Aktivität, die die Ziel-URL von `Intent.getExtras()` mit dem Schlüssel `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA` behandelt. Für ein Beispiel, siehe [`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
+1. Erstellen Sie eine neue Aktivität, die die Ziel-URL von `Intent.getExtras()` mit dem Schlüssel `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA` behandelt. Ein Beispiel finden Sie unter[`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt) .
 2. Fügen Sie diese Aktivität zu `AndroidManifest.xml` hinzu und setzen Sie `exported` auf `false`.
     ```xml
     <activity
         android:name=".MyCustomWebViewActivity"
         android:exported="false" />
     ```
-3. Legen Sie Ihre angepasste Aktivität in einem `BrazeConfig` [builder Objekt](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html) fest. Erstellen Sie den Builder und übergeben Sie ihn an [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html) in Ihrem [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
+3. Legen Sie Ihre angepasste Aktivität in einem `BrazeConfig` [builder Objekt](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html) fest. Erstellen Sie den Builder und übergeben Sie ihn an[`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html)in Ihrer [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
 {% tabs %}
 {% tab JAVA %}
 
@@ -185,11 +185,11 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-## Jetpack Compose verwenden
+## Verwendung von Jetpack Compose
 
-Zur Behandlung von Deeplinks bei der Verwendung von Jetpack Compose mit NavHost:
+Um Deeplinks bei der Verwendung von Jetpack Compose mit NavHost zu verarbeiten:
 
-1. Vergewissern Sie sich, dass die Aktivität, die Ihren Deeplink verarbeitet, im Android Manifest registriert ist.
+1. Bitte stellen Sie sicher, dass die Aktivität, die Ihren Deeplink verarbeitet, im Android Manifest registriert ist.
     ```xml
     <activity
       ...
@@ -203,7 +203,7 @@ Zur Behandlung von Deeplinks bei der Verwendung von Jetpack Compose mit NavHost:
       </intent-filter>
     </activity>
     ```
-2. Geben Sie in NavHost an, welche Deeplinks er verarbeiten soll.
+2. Bitte geben Sie in NavHost an, welche Deeplinks verarbeitet werden sollen.
     ```kotlin
     composableWithCompositionLocal(
         route = "YOUR_ROUTE_HERE",
@@ -223,7 +223,7 @@ Zur Behandlung von Deeplinks bei der Verwendung von Jetpack Compose mit NavHost:
         )
     }
     ```
-3. Je nach Architektur Ihrer App müssen Sie möglicherweise auch die neue Absicht behandeln, die an Ihre aktuelle Aktivität gesendet wird.
+3. Je nach Architektur Ihrer App müssen Sie möglicherweise auch die neue Absicht verarbeiten, die an Ihre aktuelle Aktivität gesendet wird.
     ```kotlin
     DisposableEffect(Unit) {
         val listener = Consumer<Intent> {
