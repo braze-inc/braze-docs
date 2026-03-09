@@ -4,7 +4,7 @@ nav_title: 홈
 article_title: Braze API 가이드
 layout: api_glossary
 glossary_top_header: "Braze API 가이드"
-glossary_top_text: "Braze는 사용자 추적, 메시지 발송, 데이터 내보내기 등을 직접 수행할 수 있게 해주는 고성능 REST API를 제공합니다. 이 페이지에는 사용 가능한 Braze API 엔드포인트와 그 용도가 나열되어 있습니다."
+glossary_top_text: "Braze는 사용자 추적, 메시지 발송, 데이터 내보내기 등을 직접 수행할 수 있게 해주는 고성능 REST API를 제공합니다. 이 페이지는 사용 가능한 Braze API 엔드포인트와 그 용도를 나열합니다."
 page_type: glossary
 description: "이 랜딩 페이지에는 사용 가능한 Braze API 엔드포인트와 그 용도가 나열되어 있습니다."
 glossary_tag_name: Endpoint Type
@@ -42,6 +42,7 @@ glossary_tags:
   - name: 이메일 목록
   - name: 이메일 템플릿
   - name: KPI
+  - name: 미디어 라이브러리
   - name: Purchases
   - name: 환경설정 센터
   - name: 메시지 예약
@@ -109,7 +110,7 @@ glossaries:
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_create_send_ids/'>/sends/id/create</a>"
-    description: 각 전송에 대해 캠페인을 만들지 않고도 프로그래밍 방식으로 메시지 전송 및 메시지 성능/성과 추적에 사용할 전송 ID를 생성할 수 있습니다.
+    description: 메시지를 보내고 메시지 성능을 추적하기 위해 사용할 전송 ID를 생성합니다. 각 전송에 대해 캠페인을 생성하지 않고도 프로그래밍 방식으로 가능합니다.
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{CAMPAIGN_ID}/send</a>"
@@ -149,7 +150,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canvas/trigger/schedule/update</a>"
-    description: 대시보드에서 만든 API 트리거 예약 캔버스를 업데이트합니다.
+    description: 대시보드에서 생성한 예약된 API 트리거 캔버스를 업데이트합니다.
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/'>/messages/scheduled_broadcasts</a>"
@@ -225,7 +226,7 @@ glossaries:
     tags:
       - Campaigns
   - name: "<a href='/docs/api/endpoints/export/campaigns/get_campaigns/'>/campaigns/list</a>"
-    description: "각 캠페인의 이름, 캠페인 API 식별자, API 캠페인인지 여부, 캠페인과 연결된 태그가 포함된 캠페인 목록을 내보냅니다."
+    description: "각 캠페인의 이름, 캠페인 API 식별자, API 캠페인 여부 및 캠페인과 관련된 태그를 포함하는 캠페인 목록을 내보냅니다."
     tags:
       - Campaigns
   - name: "<a href='/docs/api/endpoints/export/campaigns/get_send_analytics/'>/sends/data_series</a>"
@@ -257,10 +258,10 @@ glossaries:
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/segments/get_segment/'>/segments/list</a>"
-    description: "각 세그먼트의 이름, 세그먼트 API 식별자, 분석 추적이 인에이블되었는지 여부가 포함된 세그먼트 목록을 내보냅니다."
+    description: "각 세그먼트의 이름, 세그먼트 API 식별자 및 분석 추적이 활성화되어 있는지 여부를 포함하는 세그먼트 목록을 내보냅니다."
     tags:
       - Segments
-  - name: "<a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/내보내기/세분화/취소</a>"
+  - name: "<a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/segment/cancel</a>"
     description: 제공된 세그먼트 ID에 대한 내보내기를 취소합니다.
     tags:
       - Segments
@@ -317,11 +318,11 @@ glossaries:
     tags:
       - KPI
   - name: "<a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>"
-    description: "Braze의 유효하지 않은 전화번호 목록에서 \"유효하지 않은\" 전화번호를 제거합니다. Braze에서 유효하지 않은 번호로 표시한 후 전화번호를 다시 유효성 검사할 때 이 기능을 사용합니다."
+    description: "Braze의 유효하지 않은 전화번호 목록에서 \"유효하지 않은\" 전화번호를 제거합니다. Braze가 전화번호를 유효하지 않다고 표시한 후 이를 재검증하는 데 사용합니다."
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/sms/get_query_invalid_numbers/'>/sms/invalid_phone_numbers</a>"
-    description: "특정 기간 내에 Braze가 '유효하지 않음'으로 표시한 전화번호 목록을 가져옵니다."
+    description: "특정 시간 내에 Braze가 \"유효하지 않음\"으로 표시한 전화번호 목록을 가져옵니다."
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/export/purchases/get_list_product_id/'>/purchases/product_list</a>"
@@ -345,7 +346,7 @@ glossaries:
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>"
-    description: 환경설정 센터의 생성 및 업데이트 시기를 포함하여 환경설정 센터에 대한 세부 정보를 확인합니다.
+    description: 생성 및 업데이트된 시간을 포함하여 기본 설정 센터의 세부정보를 봅니다.
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/post_create_preference_center'>/preference_center/v1</a>"
@@ -472,4 +473,8 @@ glossaries:
     description: 앱을 위한 SDK 인증 키를 삭제하세요.
     tags:
       - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/media_library/manage_assets/create/'>/media_library/create</a>"
+    description: 미디어 라이브러리에 자산을 업로드합니다.
+    tags:
+      - Media Library
 ---
