@@ -1,7 +1,7 @@
 ---
 nav_title: "PUT: Primären SDK-Authentifizierungsschlüssel festlegen"
 article_title: "PUT: Primären SDK-Authentifizierungsschlüssel festlegen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 2
 layout: api_page
 page_type: reference
@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
-```json
+```bash
 curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authentication/primary' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
