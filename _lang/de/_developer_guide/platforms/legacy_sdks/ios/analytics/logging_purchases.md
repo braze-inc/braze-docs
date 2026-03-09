@@ -1,6 +1,6 @@
 ---
-nav_title: Einkäufe protokollieren
-article_title: Käufe protokollieren für iOS
+nav_title: Holzankäufe
+article_title: Log-Käufe für iOS
 platform: iOS
 page_order: 4
 description: "Dieser referenzierte Artikel zeigt, wie Sie In-App-Käufe und Einnahmen tracken und Kauf-Details in Ihrer iOS-Anwendung zuweisen können."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Log-Käufe für iOS
+# Käufe für iOS protokollieren
 
 Erfassen Sie In-App-Käufe, um Ihre Umsätze im Zeitverlauf über verschiedene Umsatzquellen hinweg zu tracken und Ihre Nutzer nach ihrem Lifetime-Value zu segmentieren.
 
@@ -55,7 +55,7 @@ Weitere Einzelheiten finden Sie in der [Dokumentation zur iOS-Klasse](http://app
 ### Menge hinzufügen
 Sie können eine Menge zu Ihren Einkäufen hinzufügen, wenn Kunden denselben Einkauf mehrmals in einer einzigen Kasse tätigen. Sie können dies erreichen, indem Sie eine `NSUInteger` für die Menge eingeben.
 
-* Die eingegebene Menge muss im Bereich [0, 100] liegen, damit das SDK einen Kauf protokollieren kann.
+* Die eingegebene Menge muss im Bereich von [0, 100] liegen, damit das SDK einen Kauf protokollieren kann.
 * Methoden ohne Mengeneingabe haben standardmäßig den Mengenwert 1.
 * Methoden mit einer Mengeneingabe haben keinen Standardwert und **müssen** eine Mengeneingabe erhalten, damit das SDK einen Kauf protokollieren kann.
 
