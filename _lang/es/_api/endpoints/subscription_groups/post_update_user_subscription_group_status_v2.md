@@ -1,5 +1,5 @@
 ---
-nav_title: "PUBLICAR: Actualizar estado del grupo de suscripción de usuarios v2"
+nav_title: "PUBLICAR: Actualizar el estado del grupo de suscripción de los usuarios v2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
@@ -20,36 +20,36 @@ channel:
 
 Puedes acceder a la página `subscription_group_id` de un grupo de suscripción navegando a la página **Grupo de suscripción**.
 
-Para ver ejemplos o probar este punto final para **Grupos de suscripción por correo electrónico**:
+Para ver ejemplos o probar este punto final para **grupos de suscripción por correo electrónico**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662 {% endapiref %}
 
-Para ver ejemplos o probar este punto final para **Grupos de suscripción SMS**:
+Para ver ejemplos o probar este punto final para **grupos de suscripción por SMS**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
-Para ver ejemplos o probar este endpoint para **Grupos de WhatsApp**:
+Para ver ejemplos o probar este punto final para **grupos de WhatsApp**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
 ## Requisitos previos
 
-Para utilizar este punto final, necesitas una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `subscription.status.set`.
+Para utilizar este punto final, necesitas una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el`subscription.status.set`permiso.
 
 {% alert note %}
-Si estás interesado en utilizar este punto final con [grupos de suscripción de LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), ponte en contacto con tu administrador del éxito del cliente.
+Si estás interesado en utilizar este punto final con [los grupos de suscripción de LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), ponte en contacto con tu administrador del éxito del cliente.
 {% endalert %}
 
-## Diferencias con V1
+## Diferencias con respecto a la versión 1
 
-El punto final V2 difiere del [punto final V1]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) en lo siguiente:
+El punto final V2 difiere del [punto final]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) [V1]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) en los siguientes aspectos:
 
-- **Múltiples grupos de suscripción**: La V2 te permite actualizar varios grupos de suscripción en una sola solicitud de API, mientras que la V1 sólo admite un grupo de suscripción por solicitud.
-- **Actualiza el correo electrónico y los SMS en una sola llamada**: Si utilizas `external_ids`, puedes actualizar los grupos de suscripción por correo electrónico y SMS de los mismos usuarios en una sola llamada a la API. Con la V1, debes hacer llamadas a la API por separado para los grupos de suscripción por correo electrónico y SMS.
-- **Utilizando identificadores de correo electrónico o teléfono**: Si utilizas `emails` o `phones` en lugar de `external_ids`, no puedes actualizar los grupos de suscripción por correo electrónico y SMS en la misma solicitud. Debes hacer llamadas a la API por separado: una para los grupos de suscripción por correo electrónico y otra para los grupos de suscripción por SMS.
+- **Múltiples grupos de suscripción**: La versión 2 te permite actualizar varios grupos de suscripción en una sola solicitud de API, mientras que la versión 1 solo admite un grupo de suscripción por solicitud.
+- **Actualiza tanto el correo electrónico como el SMS en una sola llamada**: Al utilizar `external_ids`, puedes actualizar los grupos de suscripción por correo electrónico y SMS para los mismos usuarios en una sola llamada a la API. Con la versión V1, debes realizar llamadas API independientes para los grupos de suscripción por correo electrónico y SMS.
+- **Uso de identificadores de correo electrónico o teléfono**: Si utilizas`emails`  o`phones`  en lugar de `external_ids`, no podrás actualizar los grupos de suscripción por correo electrónico y SMS en la misma solicitud. Debes realizar llamadas API separadas: una para los grupos de suscripción por correo electrónico y otra para los grupos de suscripción por SMS.
 
 {% alert important %}
-**Formato del número de teléfono**: Los números de teléfono deben estar en [formatoE.164 ](https://en.wikipedia.org/wiki/E.164) (por ejemplo, `+12223334444`). Se rechazan los números de teléfono que no estén en formato E.164.
+**Formato del número de teléfono**: Los números de teléfono deben estar en[E.164](https://en.wikipedia.org/wiki/E.164)[formato](https://en.wikipedia.org/wiki/E.164) (por ejemplo, `+12223334444`). Los números de teléfono que no están enE.164formato  son rechazados.
 {% endalert %}
 
 ## Límite de velocidad
@@ -89,20 +89,20 @@ Al crear nuevos usuarios utilizando el [punto final`/users/track` ]({{site.baseu
 | `subscription_state` | Obligatoria | Cadena | Los valores disponibles son `unsubscribed` (no en el grupo de suscripción) o `subscribed` (en el grupo de suscripción). |
 | `external_ids` | Requerido* | Matriz de cadenas | El `external_id` del usuario o usuarios, puede incluir hasta 50 `id`s. |
 | `emails` | Requerido* | Cadena o matriz de cadenas | La dirección de correo electrónico del usuario, se puede pasar como una matriz de cadenas. Debe incluir al menos una dirección de correo electrónico (con un máximo de 50). <br><br>Si varios usuarios (`external_id`) del mismo espacio de trabajo comparten la misma dirección de correo electrónico, todos los usuarios que comparten la dirección de correo electrónico se actualizan con los cambios del grupo de suscripción. |
-| `phones` | Requerido* | Cadena en [E.164](https://en.wikipedia.org/wiki/E.164) formato | Puedes pasar los números de teléfono de los usuarios como una matriz de cadenas. Debe incluir al menos un número de teléfono (hasta 50). Los números de teléfono deben estar en formato E.164 (por ejemplo, `+12223334444`). <br><br>Si varios usuarios (`external_id`) del mismo espacio de trabajo comparten el mismo número de teléfono, todos los usuarios que comparten el número de teléfono se actualizan con los mismos cambios de grupo de suscripción.|
-| `use_double_opt_in_logic` | Opcional | Booleano | Si este parámetro se omite o se establece en `false`, los usuarios no entran en el flujo de trabajo de doble adhesión voluntaria por SMS. |
+| `phones` | Requerido* | Cadena en [E.164](https://en.wikipedia.org/wiki/E.164) formato | Puedes pasar los números de teléfono de los usuarios como una matriz de cadenas. Debes incluir al menos un número de teléfono (hasta 50). Los números de teléfono deben estar enE.164formato (por ejemplo, `+12223334444`). <br><br>Si varios usuarios (`external_id`) del mismo espacio de trabajo comparten el mismo número de teléfono, todos los usuarios que compartís el número de teléfono se actualizan con los mismos cambios del grupo de suscripción.|
+| `use_double_opt_in_logic` | Opcional | Booleano | Si este parámetro se omite o se establece en `false`, los usuarios no entran en el flujo de trabajo de adhesión voluntaria por SMS. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert important %}
 **Selección del identificador**: 
-- Para actualizar los grupos de suscripción por correo electrónico y SMS en una sola llamada a la API, utiliza `external_ids`. No puedes incluir `emails` y `phones` en la misma solicitud.
-- Si utilizas `emails` o `phones` en lugar de `external_ids`, haz llamadas a la API por separado: una para los grupos de suscripción por correo electrónico y otra para los grupos de suscripción por SMS.
-- Puedes enviar `emails`, `phones`, o `external_ids` individualmente.
+- Para actualizar los grupos de suscripción por correo electrónico y SMS en una sola llamada a la API, utiliza `external_ids`. No puedes incluir tanto`emails`  como`phones`  en la misma solicitud.
+- Si utilizas`emails`  o`phones`  en lugar de `external_ids`, realiza llamadas API separadas: una para los grupos de suscripción por correo electrónico y otra para los grupos de suscripción por SMS.
+- Puedes enviar `emails`, `phones`, o`external_ids`  individualmente.
 {% endalert %}
 
 ### Ejemplos de solicitudes
 
-El siguiente ejemplo utiliza `external_ids` para actualizar los grupos de suscripción por correo electrónico y SMS en una sola llamada a la API. Esto sólo es posible cuando se utiliza `external_ids`-no se pueden actualizar los grupos de suscripción por correo electrónico y SMS en una llamada cuando se utiliza `emails` o `phones`.
+El siguiente ejemplo utiliza`external_ids`  para actualizar los grupos de suscripción por correo electrónico y SMS en una sola llamada a la API. Esto solo es posible cuando se utiliza `external_ids`—no se pueden actualizar los grupos de suscripción por correo electrónico y SMS en una sola llamada cuando se utiliza`emails`  o `phones`.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \
