@@ -1,6 +1,6 @@
 ---
 nav_title: Style
-article_title: Personnaliser le style des cartes de contenu
+article_title: Personnalisez le style des cartes de contenu.
 page_order: 1
 description: "Cet article traite des options de style pour vos cartes de contenu."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Personnaliser le style des cartes de contenu
+# Personnalisez le style des cartes de contenu.
 
 > Les cartes de contenu de Braze ont une présentation par défaut. Cet article couvre les options de style pour vos cartes de contenu afin de vous aider à correspondre à l'identité de votre marque. Pour obtenir la liste complète des types de cartes de contenu, voir [À propos des cartes de contenu.]({{site.baseurl}}/developer_guide/content_cards/)
 
@@ -30,13 +30,15 @@ Les propriétés des cartes de contenu telles que `title`, `cardDescription`, `i
 {% tabs %}
 {% tab web %}
 
-Les styles par défaut de Braze sont définis en CSS dans le SDK de Braze. En écrasant des styles sélectionnés dans votre application, il est possible de personnaliser notre fil standard avec vos propres images de fond, des familles de polices, des styles, des tailles, des animations, et bien plus encore. Par exemple, voici un exemple d'override qui fera apparaître les cartes de contenu en 800 px de large :
+Les styles par défaut de Braze sont définis en CSS au sein du SDK Braze. En remplaçant les styles sélectionnés dans votre application, vous pouvez personnaliser notre flux standard avec vos propres images d'arrière-plan, polices, styles, tailles, animations, etc. Par exemple, voici un exemple de remplacement qui fait apparaître les cartes de contenu avec une largeur de 800 pixels :
 
 ``` css
 body .ab-feed {
   width: 800px;
 }
 ```
+
+Pour obtenir la liste complète des propriétés que vous pouvez modifier, veuillez consulter [les options de configuration du SDK Braze.](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)
 
 {% endtab %}
 {% tab android %}
@@ -179,7 +181,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 
 **Modifier les cartes de contenu par programmation**
 
-Les cartes de contenu peuvent être modifiées par programme en assignant la fermeture [`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform) à votre structure `Attributes`. L'exemple ci-dessous modifie les adresses `title` et `description` des cartes compatibles :
+Vous pouvez modifier les cartes de contenu par programmation en attribuant la[`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform)fermeture à votre`Attributes`structure. L'exemple ci-dessous modifie les adresses `title` et `description` des cartes compatibles :
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -295,7 +297,7 @@ Consultez l'[exemple d'application Examples](https://github.com/braze-inc/braze-
 
 ### Icônes épinglées personnalisées
 
-Lors de la création d'une carte de contenu, les marketeurs ont la possibilité d'épingler la carte. Une carte épinglée s’affiche en haut d’un flux d’un utilisateur et ne peut pas être rejetée par l’utilisateur. Lorsque vous personnalisez vos styles de cartes, vous avez la possibilité de modifier l'aspect de l'icône épinglée.
+Lors de la création d'une carte de contenu, les marketeurs ont la possibilité d'épingler la carte. Une carte épinglée s'affiche en haut du fil d'actualité d'un utilisateur, et celui-ci ne peut pas la supprimer. Lorsque vous personnalisez le style de vos cartes, vous pouvez modifier l'apparence de l'icône épinglée.
 
 ![Aperçu côte à côte de la carte de contenu dans Braze pour mobile et Web avec l’option « Épingler cette carte en haut du fil » sélectionnée.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
@@ -310,9 +312,9 @@ La structure de l'icône épinglée de la carte de contenu est la suivante :
 </div>
 ```
 
-Si vous souhaitez utiliser une autre icône FontAwesome, il vous suffit de remplacer le nom de classe de l'élément `i` par le nom de classe de l'icône souhaitée. 
+Si vous souhaitez utiliser une autre icône FontAwesome, vous pouvez remplacer le nom de classe de `i`l'élément par le nom de classe de l'icône souhaitée. 
 
-Si vous souhaitez remplacer complètement l'icône, supprimez l'élément `i` et ajoutez l'icône personnalisée en tant qu'enfant de `ab-pinned-indicator`. Il y a plusieurs façons de procéder, mais une méthode simple consiste à `replaceChildren()` sur l'élément `ab-pinned-indicator`.
+Si vous souhaitez changer complètement l'icône, veuillez supprimer `i`l'élément et ajouter l'icône personnalisée en tant qu'enfant de `ab-pinned-indicator`. Il existe plusieurs méthodes pour modifier l'icône, mais une méthode simple consiste à utiliser`replaceChildren()``ab-pinned-indicator`l'élément.
 
 Par exemple :
 
@@ -358,7 +360,7 @@ ContentCardStyling(
 )
 ```
 
-Vous pouvez également spécifier un Composable dans [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721) de `ContentCardStyling`. Si `pinnedComposable` est spécifié, il remplace la valeur de `pinnedResourceId`.
+Vous pouvez également spécifier un Composable dans [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721) de `ContentCardStyling`. Si`pinnedComposable`  est spécifié, il remplace la`pinnedResourceId`valeur .
 
 ```kotlin
 ContentCardStyling(
@@ -460,7 +462,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
 viewController.view.tintColor = .systemGreen
 ```
 
-Cependant, si vous souhaitez modifier uniquement l'indicateur non visualisé, vous pouvez accéder à la propriété `unviewedIndicatorColor` de votre structure `BrazeContentCardUI.ViewController.Attributes`. Si vous utilisez les implémentations `UITableViewCell` de Braze, vous devez accéder à la propriété avant que la cellule ne soit dessinée.
+Cependant, si vous souhaitez modifier uniquement l'indicateur non visualisé, vous pouvez accéder à la`unviewedIndicatorColor`propriété de votre`BrazeContentCardUI.ViewController.Attributes`structure. Si vous utilisez les implémentations`UITableViewCell` Braze, veuillez accéder à la propriété avant que la cellule ne soit dessinée.
 
 Par exemple, pour définir la couleur de l’indicateur non visionné en rouge :
 
