@@ -35,7 +35,7 @@ For the full list of endpoints with instructions and sample code, refer to [Expo
 
 | Requirement | Description |
 | --- | --- |
-| Braze REST API key | A REST API key with the appropriate export permissions for the endpoints you plan to call. API keys are scoped to specific endpoints, and permissions can't be changed after creation. For details, refer to [REST API key]({{site.baseurl}}/api/basics#rest-api-key/). |
+| Braze REST API key | A REST API key with the appropriate export permissions for the endpoints you plan to call. API keys are scoped to specific endpoints, and permissions can't be changed after creation. For details, refer to [REST API key]({{site.baseurl}}/api/basics#rest-api-key). |
 | Relevant identifiers | The identifiers for the data you want to export, such as a campaign ID, segment ID, or Canvas ID. You can find these on the Braze dashboard. For a full list, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/). |
 | Cloud storage credentials (optional) | If you're exporting large datasets, connect an [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/), or [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/) bucket to have export files written directly to your storage. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
