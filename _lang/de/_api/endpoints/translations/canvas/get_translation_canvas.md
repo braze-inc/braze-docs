@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Übersetzung für ein Canvas anzeigen"
 article_title: "GET: Übersetzung für ein Canvas anzeigen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 1
 
 layout: api_page
@@ -15,11 +15,9 @@ description: "Dieser Artikel beschreibt die Details der Ansichtsübersetzung fü
 /canvas/uebersetzungen
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine Vorschau auf eine übersetzte Nachricht für ein Canvas zu erhalten. Weitere Informationen zu den Features für die Übersetzung finden Sie unter [Lokalisierung in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
+> Verwenden Sie diesen Endpunkt, um eine Vorschau auf eine übersetzte Nachricht für ein Canvas zu erhalten. Weitere Informationen zu den Übersetzungsfeatures finden Sie unter [„Locales in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)“.
 
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Voraussetzungen
 
@@ -36,12 +34,12 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 | `workflow_id`          | Erforderlich | String    | Die ID des Canvas.              |
 | `step_id`              | Erforderlich | String    | Die ID Ihres Canvas-Schrittes.        |
 |`message_variation_id`| Erforderlich | String | Die ID Ihrer Nachrichtenvariation. |
-| `locale_id`            | Optional | String    | Die ID (UUID) des Gebietsschemas.       |
-| `post_launch_draft_version`| Optional | Boolesch | Wenn `true` die letzte Entwurfsversion anstelle der letzten live veröffentlichten Version zurückgibt. Der Standardwert ist `false`, der die letzte Live-Version zurückgibt.
+| `locale_id`            | Optional | String    | Die ID (UUID) der Locale.       |
+| `post_launch_draft_version`| Optional | Boolesch | Wenn die neueste Entwurfsversion anstelle der `true`zuletzt veröffentlichten Live-Version zurückgegeben wird. Standardmäßig`false`wird die aktuellste Live-Version zurückgegeben.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Alle Übersetzungs-IDs werden als universelle eindeutige Bezeichner (UUIDs) betrachtet, die in der Antwort des GET-Endpunkts zu finden sind.
+Alle Übersetzungs-IDs gelten als universelle eindeutige Bezeichner (UUIDs), die in der Antwort des GET-Endpunkts zu finden sind.
 {% endalert %}
 
 ## Beispiel Anfrage
