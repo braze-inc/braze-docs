@@ -30,7 +30,7 @@ Accédez à la page d’analytique de votre campagne pour commencer à configure
 
 Pour une campagne récurrente planifiée, vous pouvez définir des seuils supérieurs et inférieurs pour les messages envoyés chaque fois que la campagne envoie. Pour une campagne déclenchée, vous pouvez définir des seuils supérieurs et inférieurs pour le nombre de messages envoyés par heure et par jour.
 
-Vous pouvez configurer une alerte par e-mail, webhook ou les deux. Les alertes webhook peuvent être très utiles, car elles vous permettent d’envoyer une alerte à un canal Slack. Pour plus d'informations sur l'intégration des alertes de campagne avec Slack, consultez la documentation de Slack sur l' [envoi de messages à l'aide de webhooks entrants](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/).
+Vous pouvez configurer une alerte par e-mail, webhook ou les deux. Les alertes webhook peuvent être très utiles, car elles vous permettent d’envoyer une alerte à un canal Slack. Pour plus d'informations sur l'intégration des alertes de campagne à Slack, veuillez consulter la documentation Slack relative à [l'envoi de messages à l'aide de webhooks entrants.](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/)
 
 {% alert note %}
 Lorsque vous définissez des alertes de campagne pour de futures campagnes, vous pouvez recevoir des mises à jour avant le début et après la fin de la campagne. C’est pourquoi, les alertes de campagne continueront à être envoyées jusqu’à ce que la campagne ait été arrêtée manuellement.
