@@ -11,12 +11,12 @@ page_type: reference
 
 > Las fuentes conectadas son una alternativa de copia cero a la sincronización directa de datos con la función Cloud Data Ingestion (CDI) de Braze. Un origen conectado consulta directamente tu almacén de datos para crear nuevos segmentos sin copiar ninguno de los datos subyacentes a Braze. 
 
-Después de añadir una fuente conectada a tu espacio de trabajo Braze, puedes crear un segmento CDI dentro de Extensiones de segmento. Las extensiones de segmento CDI te permiten escribir SQL que consulta directamente tu almacén de datos (utilizando los datos que allí se ponen a disposición a través de tu CDI Connected Source), y crea y mantiene un grupo de usuarios a los que se puede dirigir dentro de Braze. 
+Después de añadir una fuente conectada a tu espacio de trabajo Braze, puedes crear un segmento CDI dentro de Extensiones de segmento. Las extensiones de segmento CDI te permiten escribir SQL que realiza una consulta directa en tu almacén de datos (utilizando los datos que están disponibles a través de tu fuente conectada CDI) y crea y mantiene un grupo de usuarios a los que puedes dirigirte dentro de Braze. 
 
-Para más información sobre cómo crear un segmento con esta fuente, consulta [Extensiones de segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+Para obtener más información sobre cómo crear un segmento con esta fuente, consulta [Extensiones]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) de [segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert warning %}
-Dado que las fuentes conectadas se ejecutan directamente en su almacén de datos, incurrirá en todos los costes asociados a la ejecución de estas consultas en su almacén de datos. Las fuentes conectadas no registran puntos de datos, y las extensiones de segmento CDI no consumen créditos de segmento SQL.
+Dado que las fuentes conectadas se ejecutan directamente en su almacén de datos, incurrirá en todos los costes asociados a la ejecución de estas consultas en su almacén de datos. Las fuentes conectadas no registran puntos de datos y las extensiones de segmento CDI no consumen créditos de segmento SQL.
 {% endalert %}
 
 ## Integración de fuentes conectadas
@@ -69,7 +69,7 @@ Las fuentes conectadas a la ingesta de datos en la nube requieren cierta configu
 5. Utiliza la fuente conectada para crear una o varias extensiones de segmento CDI.
 
 {% alert important %}
-Puede haber de dos a cinco minutos de tiempo de calentamiento cuando Braze se conecte a las instancias SQL Clásica y Pro, lo que provocará retrasos durante la configuración y prueba de la conexión, así como durante la creación y actualización de la Extensión de Segmento CDI. El uso de una instancia SQL sin servidor minimizará el tiempo de calentamiento y mejorará el rendimiento de las consultas, pero puede dar lugar a costes de integración ligeramente superiores.
+Puede haber un tiempo de calentamiento de entre dos y cinco minutos cuando Braze se conecta a instancias Classic y Pro SQL, lo que provocará retrasos durante la configuración y las pruebas de conexión, así como durante la creación y actualización de las extensiones de segmento CDI. El uso de una instancia SQL sin servidor minimizará el tiempo de calentamiento y mejorará el rendimiento de las consultas, pero puede dar lugar a costes de integración ligeramente superiores.
 {% endalert %}
 
 {% endtab %}
@@ -92,11 +92,11 @@ Configura los datos de origen y los recursos necesarios en tu entorno de almacé
 {% tab Snowflake %}
 #### Paso 2.1: Crear un rol y conceder permisos
 
-Crea un rol para que lo utilice tu fuente conectada. Este rol se utilizará para generar la lista de tablas disponibles en tus extensiones de segmento CDI, y para consultar las tablas de origen para crear nuevos segmentos. Una vez creada la fuente conectada, Braze descubrirá los nombres y la descripción de todas las tablas disponibles para el usuario en el esquema de la fuente.
+Crea un rol para que lo utilice tu fuente conectada. Esta función se utilizará para generar la lista de tablas disponibles en tus extensiones de segmento CDI y para realizar consultas a las tablas de origen con el fin de crear nuevos segmentos. Una vez creada la fuente conectada, Braze descubrirá los nombres y la descripción de todas las tablas disponibles para el usuario en el esquema de la fuente.
 
-Puede elegir conceder acceso a todas las tablas de un esquema, o conceder privilegios sólo a tablas específicas. Las tablas a las que tenga acceso el rol Braze estarán disponibles para su consulta en la Extensión de segmento CDI.
+Puede elegir conceder acceso a todas las tablas de un esquema, o conceder privilegios sólo a tablas específicas. Las tablas a las que tenga acceso la función Braze estarán disponibles para su consulta en las extensiones de segmento CDI.
 
-El permiso `create table` es necesario para que Braze pueda crear una tabla con los resultados de la consulta de tu extensión de segmento CDI antes de actualizar el segmento en Braze. Braze creará una tabla temporal por segmento, y la tabla sólo persistirá mientras Braze esté actualizando el segmento.
+Se requiere el`create table`permiso para que Braze pueda crear una tabla con los resultados de la consulta de la extensión de segmento CDI antes de actualizar el segmento en Braze. Braze creará una tabla temporal por segmento, y la tabla sólo persistirá mientras Braze esté actualizando el segmento.
 
 ```sql
 CREATE ROLE BRAZE_INGESTION_ROLE;
@@ -156,11 +156,11 @@ GRANT CREATE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 ```
 
-Crea un usuario para que lo utilice tu fuente conectada. Este usuario se utilizará para generar la lista de tablas disponibles en tus extensiones de segmento CDI, y para consultar las tablas de origen para crear nuevos segmentos. Una vez creada la fuente conectada, Braze descubrirá los nombres y la descripción de todas las tablas disponibles para el usuario en el esquema de la fuente. Si crea varias integraciones CDI, puede que desee conceder permisos a un esquema o gestionar los permisos mediante un grupo. 
+Crea un usuario para que lo utilice tu fuente conectada. Este usuario se utilizará para generar la lista de tablas disponibles en tus extensiones de segmento CDI y para realizar consultas a las tablas de origen con el fin de crear nuevos segmentos. Una vez creada la fuente conectada, Braze descubrirá los nombres y la descripción de todas las tablas disponibles para el usuario en el esquema de la fuente. Si crea varias integraciones CDI, puede que desee conceder permisos a un esquema o gestionar los permisos mediante un grupo. 
 
-Puede elegir conceder acceso a todas las tablas de un esquema, o conceder privilegios sólo a tablas específicas. Las tablas a las que tenga acceso el rol Braze estarán disponibles para su consulta en la Extensión de segmento CDI. Asegúrate de conceder acceso a las nuevas tablas al usuario cuando se creen, o establece permisos por defecto para el usuario. 
+Puede elegir conceder acceso a todas las tablas de un esquema, o conceder privilegios sólo a tablas específicas. Las tablas a las que tenga acceso la función Braze estarán disponibles para su consulta en las extensiones de segmento CDI. Asegúrate de conceder acceso a las nuevas tablas al usuario cuando se creen, o establece permisos por defecto para el usuario. 
 
-El permiso `create table` es necesario para que Braze pueda crear una tabla con los resultados de la consulta de tu extensión de segmento CDI antes de actualizar el segmento en Braze. Braze creará una tabla temporal por segmento, que sólo persistirá mientras Braze actualice el segmento.
+Se requiere el`create table`permiso para que Braze pueda crear una tabla con los resultados de la consulta de la extensión de segmento CDI antes de actualizar el segmento en Braze. Braze creará una tabla temporal por segmento, que sólo persistirá mientras Braze actualice el segmento.
 
 
 #### Paso 2.2: Permitir el acceso a las IP Braze    
@@ -186,11 +186,11 @@ Cree una cuenta de servicio en GCP para que Braze la utilice para conectarse y l
 - **Usuario de BigQuery Job:** Proporciona acceso Braze para ejecutar trabajos.
 - **bigquery.tables.create** Proporciona acceso Braze para crear tablas temporales durante la actualización de segmentos.
 
-Crea una cuenta de servicio para que la utilice tu fuente conectada. Este usuario se utilizará para generar la lista de tablas disponibles en tus extensiones de segmento CDI, y para consultar las tablas de origen para crear nuevos segmentos. Una vez creada la fuente conectada, Braze descubrirá los nombres y la descripción de todas las tablas disponibles para el usuario en el esquema de la fuente. 
+Crea una cuenta de servicio para que la utilice tu fuente conectada. Este usuario se utilizará para generar la lista de tablas disponibles en tus extensiones de segmento CDI y para realizar consultas a las tablas de origen con el fin de crear nuevos segmentos. Una vez creada la fuente conectada, Braze descubrirá los nombres y la descripción de todas las tablas disponibles para el usuario en el esquema de la fuente. 
 
-Puede optar por conceder acceso a todas las tablas de un conjunto de datos, o conceder privilegios sólo a tablas específicas. Las tablas a las que tenga acceso el rol Braze estarán disponibles para su consulta en la Extensión de segmento CDI. 
+Puede optar por conceder acceso a todas las tablas de un conjunto de datos, o conceder privilegios sólo a tablas específicas. Las tablas a las que tenga acceso la función Braze estarán disponibles para su consulta en las extensiones de segmento CDI. 
 
-El permiso `create table` es necesario para que Braze pueda crear una tabla con los resultados de la consulta de tu extensión de segmento CDI antes de actualizar el segmento en Braze. Braze creará una tabla temporal por segmento, y la tabla sólo persistirá mientras Braze esté actualizando el segmento. 
+Se requiere el`create table`permiso para que Braze pueda crear una tabla con los resultados de la consulta de la extensión de segmento CDI antes de actualizar el segmento en Braze. Braze creará una tabla temporal por segmento, y la tabla sólo persistirá mientras Braze esté actualizando el segmento. 
 
 Tras crear la cuenta de servicio y conceder los permisos, genera una clave JSON. Para más información, consulta [Google Cloud: Creación y eliminación de claves de cuentas de servicio](https://cloud.google.com/iam/docs/keys-create-delete). Más tarde lo cargarás en el panel de control de Braze.
 
@@ -208,17 +208,17 @@ Si tienes políticas de red en vigor, debes dar acceso de red Braze a tu instanc
 Para que Braze acceda a Databricks, es necesario crear un token de acceso personal.
 
 1. En tu espacio de trabajo de Databricks, selecciona tu nombre de usuario de Databricks en la barra superior y, a continuación, selecciona **Configuración de usuario** en el desplegable.
-2. Asegúrate de que la cuenta de servicio tiene privilegios `CREATE TABLE` en el esquema utilizado para la fuente conectada. 
+2. Asegúrate de que la cuenta de servicio tenga`CREATE TABLE`privilegios sobre el esquema utilizado para la fuente conectada. 
 3. En la pestaña **Tokens de acceso**, selecciona **Generar nuevo token**.
 4. Introduzca un comentario que le ayude a identificar este token, como "Braze CDI", y cambie la vida útil del token a sin vida útil dejando la casilla Vida útil (días) vacía (en blanco).
 5. Seleccione **Generar**.
 6. Copie el token mostrado y seleccione **Hecho**.
 
-Este token se utilizará para generar la lista de tablas disponibles en tus extensiones de segmento CDI, y para consultar las tablas de origen para crear nuevos segmentos. Una vez creada la fuente conectada, Braze descubrirá los nombres y la descripción de todas las tablas disponibles para el usuario en el esquema de la fuente. 
+Este token se utilizará para generar la lista de tablas disponibles en tus extensiones de segmento CDI y para realizar consultas a las tablas de origen con el fin de crear nuevos segmentos. Una vez creada la fuente conectada, Braze descubrirá los nombres y la descripción de todas las tablas disponibles para el usuario en el esquema de la fuente. 
 
-Puede elegir conceder acceso a todas las tablas de un esquema, o conceder privilegios sólo a tablas específicas. Las tablas a las que tenga acceso el rol Braze estarán disponibles para su consulta en la Extensión de segmento CDI.
+Puede elegir conceder acceso a todas las tablas de un esquema, o conceder privilegios sólo a tablas específicas. Las tablas a las que tenga acceso la función Braze estarán disponibles para su consulta en las extensiones de segmento CDI.
 
-El permiso `create table` es necesario para que Braze pueda crear una tabla con los resultados de la consulta de tu extensión de segmento CDI antes de actualizar el segmento en Braze. Braze creará una tabla temporal por segmento, que sólo persistirá mientras Braze actualice el segmento. 
+Se requiere el`create table`permiso para que Braze pueda crear una tabla con los resultados de la consulta de la extensión de segmento CDI antes de actualizar el segmento en Braze. Braze creará una tabla temporal por segmento, que sólo persistirá mientras Braze actualice el segmento. 
 
 Guarde el token en un lugar seguro hasta que necesite introducirlo en el panel de control de Braze durante el paso de creación de credenciales.
 
@@ -241,7 +241,7 @@ Braze se conectará a tu almacén Fabric utilizando un principal de servicio con
 1. En el portal de Azure, ve al centro de administración de Microsoft Entra y, a continuación, a **Registros de aplicaciones**.
 2. Selecciona **\+ Nuevo registro** en **Identidad > Aplicaciones > Registros de aplicaciones** 
 3. Introduce un nombre y selecciona `Accounts in this organizational directory only` como tipo de cuenta admitido. A continuación, selecciona **Registro**. 
-4. Selecciona la aplicación (servicio principal) que acabas de crear y, a continuación, ve a **Certificados & secrets > + Nuevo secreto de cliente**
+4. Selecciona la aplicación (entidad de servicio) que acabas de crear y, a continuación, ve a **Certificados&  secretos > + Nuevo certificado de cliente**.
 5. Introduce una descripción para el secreto y establece un periodo de caducidad para el secreto. Después, selecciona **Añadir**. 
 6. Toma nota del secreto de cliente creado para utilizarlo en la configuración de Braze. 
 
@@ -259,7 +259,7 @@ Proporcionarás acceso para que Braze se conecte a tu instancia de Fabric. En tu
 
 Necesitarás el punto final SQL de tu almacén para que Braze pueda conectarse. Para recuperar el punto final SQL, ve al **espacio de trabajo** en Fabric y, en la lista de elementos, pasa el ratón por encima del nombre del almacén y selecciona **Copiar cadena de conexión SQL**.
 
-![La página "Fabric Console" de Microsoft Azure, donde los usuarios deben recuperar la cadena de conexión SQL.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
+![La página «Fabric Console» (Consola de Fabric) en Microsoft Azure, donde los usuarios deben recuperar la cadena de conexión SQL.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
 
 #### Paso 2.4: Permitir IPs Braze en Firewall (Opcional)
 
@@ -359,7 +359,7 @@ Si las consultas se demoran constantemente y ha establecido un tiempo de ejecuci
 
 #### Paso 3.3: Prueba la conexión
 
-Selecciona **Probar conexión** para comprobar que la lista de tablas visibles para el usuario es la que esperas y, a continuación, selecciona **Hecho**. Tu fuente conectada ya está creada y lista para usar en Extensiones de segmento CDI.
+Selecciona **Probar conexión** para comprobar que la lista de tablas visibles para el usuario es la que esperas y, a continuación, selecciona **Hecho**. Tu fuente conectada ya está creada y lista para usar en las extensiones de segmento CDI.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
@@ -389,7 +389,7 @@ Si las consultas se demoran constantemente y ha establecido un tiempo de ejecuci
 
 #### Paso 3.3: Prueba la conexión
 
-Selecciona **Probar conexión** para comprobar que la lista de tablas visibles para el usuario es la que esperas y, a continuación, selecciona **Hecho**. Tu fuente conectada ya está creada y lista para usar en Extensiones de segmento CDI.
+Selecciona **Probar conexión** para comprobar que la lista de tablas visibles para el usuario es la que esperas y, a continuación, selecciona **Hecho**. Tu fuente conectada ya está creada y lista para usar en las extensiones de segmento CDI.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
@@ -419,7 +419,7 @@ Si las consultas se interrumpen constantemente y has establecido un tiempo máxi
 
 #### Paso 3.3: Prueba la conexión
 
-Selecciona **Probar conexión** para comprobar que la lista de tablas visibles para el usuario es la que esperas y, a continuación, selecciona **Hecho**. Tu fuente conectada ya está creada y lista para usar en Extensiones de segmento CDI.
+Selecciona **Probar conexión** para comprobar que la lista de tablas visibles para el usuario es la que esperas y, a continuación, selecciona **Hecho**. Tu fuente conectada ya está creada y lista para usar en las extensiones de segmento CDI.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
@@ -434,19 +434,19 @@ Añade la clave pública que anotaste en el último paso a tu usuario en Snowfla
 
 Si quieres rotar las claves en cualquier momento, puedes crear una nueva clave pública yendo a **Gestión de acceso a datos** en **la Ingesta de datos en la nube** y seleccionando **Generar nueva clave** para la cuenta correspondiente.
 
-![Gestión del acceso a los datos para las credenciales de acceso a los datos de Snowflake, con un botón para generar una nueva clave.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
+![Gestión del acceso a datos para las credenciales de acceso a datos de Snowflake, con un botón para generar una nueva clave.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
 
 ```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
 ```
 
-Después de añadir la clave al usuario en Snowflake, selecciona **Probar conexión** en Braze y, a continuación, selecciona **Hecho**. Tu fuente conectada ya está creada y lista para usar en Extensiones de segmento CDI.
+Después de añadir la clave al usuario en Snowflake, selecciona **Probar conexión** en Braze y, a continuación, selecciona **Hecho**. Tu fuente conectada ya está creada y lista para usar en las extensiones de segmento CDI.
 {% endtab %}
 
 {% tab Redshift %}
 Si te conectas con un túnel SSH, añade la clave pública que anotaste en el último paso al usuario del túnel SSH. 
 
-Después de añadir la clave al usuario, selecciona **Probar conexión** en Braze y, a continuación, selecciona **Hecho**. Tu fuente conectada ya está creada y lista para usar en Extensiones de segmento CDI.
+Después de añadir la clave al usuario, selecciona **Probar conexión** en Braze y, a continuación, selecciona **Hecho**. Tu fuente conectada ya está creada y lista para usar en las extensiones de segmento CDI.
 
 {% endtab %}
 {% tab BigQuery %}
@@ -495,7 +495,7 @@ Puede configurar varias fuentes con Braze, pero cada fuente debe configurarse pa
 
 ## Utilizar la fuente conectada
 
-Una vez creada la fuente, puedes utilizarla para crear una o varias extensiones de segmento CDI. Para más información sobre la creación de un segmento con esta fuente, consulta la [documentación Extensiones de segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+Una vez creada la fuente, puedes utilizarla para crear una o varias extensiones de segmento CDI. Para obtener más información sobre cómo crear un segmento con esta fuente, consulta la [documentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) de [Extensiones de segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert note %}
 Si las consultas se interrumpen constantemente y has establecido un tiempo máximo de ejecución de 60 minutos, considera la posibilidad de intentar optimizar el tiempo de ejecución de la consulta o dedicar más recursos de computación (como un almacén más grande) al usuario de Braze.
