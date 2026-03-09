@@ -1,7 +1,7 @@
 Um [alias de usuário]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) serve como um identificador de usuário exclusivo alternativo. É possível usar aliases para identificar usuários em dimensões diferentes do seu ID de usuário principal:
 
 * Defina um identificador consistente para análise de dados que seguirá um determinado usuário antes e depois de ele ter feito o registro em um app ou site móvel.
-* Adicione os identificadores usados por um fornecedor terceirizado aos seus usuários do Braze para reconciliar mais facilmente seus dados externamente.
+* Adicione os identificadores usados por um fornecedor terceirizado aos usuários da sua empresa para reconciliar seus dados externamente com mais facilidade.
 
 Cada alias consiste em duas partes: um nome para o próprio identificador e um rótulo que indica o tipo de alias. Os usuários podem ter vários aliases com rótulos diferentes, mas apenas um nome por rótulo. 
 
@@ -45,7 +45,7 @@ Braze.getInstance(context).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% endtab %}
 {% endtabs %}
 
-Para saber mais, consulte [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html#-1106019389%2FFunctions%2F-1725759721).
+Para saber mais, veja [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html#-1106019389%2FFunctions%2F-1725759721).
 
 {% elsif include.platform == "Web" %}
 
