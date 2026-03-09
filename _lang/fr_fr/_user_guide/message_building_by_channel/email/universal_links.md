@@ -1,5 +1,5 @@
 ---
-nav_title: Liens universels et liens vers les applications
+nav_title: Liens universels et liens vers des applications
 article_title: Liens universels et liens vers les applications
 page_order: 6.4
 page_type: reference
@@ -8,6 +8,10 @@ channel: email
 ---
 
 # Liens universels et liens vers les applications
+
+{% alert tip %}
+Pour une comparaison des types de liens sur tous les canaux de communication et des conseils sur les cas où un fichier AASA est nécessaire, veuillez consulter [le guide sur la création de liens profonds iOS]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide).
+{% endalert %}
 
 Les liens universels Apple et les liens vers les applications Android sont des mécanismes conçus pour assurer une transition fluide entre les contenus web et les applications mobiles. Alors que les liens universels sont spécifiques à iOS, les liens d'application Android ont la même fonction pour les applications Android.
 
@@ -55,7 +59,7 @@ Pour que les apps prennent en charge les liens universels ou App Links, iOS et A
 
 En plus de ce fichier de permissions, il existe des définitions codées en dur des domaines de liens que l'application est autorisée à ouvrir et qui sont configurées au sein de l'application :
 
-- **iOS :** Définir comme "Domaines associés" dans Xcode
+- **iOS :** Définir comme « Domaines associés » dans Xcode
 - **Android :** Défini dans le fichier `AndroidManifest.xml` de l'application
 
 Cette association domaine-app en deux parties est nécessaire pour qu'un lien universel ou App Link fonctionne et empêche toute app de détourner les liens d'un domaine particulier ou tout domaine d'ouvrir une app particulière.
@@ -75,7 +79,7 @@ Ces étapes sont adaptées de la documentation destinée aux développeurs d'App
 #### Étape 1a : Enregistrer votre application {#step-1a}
 
 1. Allez sur developer.apple.com et connectez-vous.
-2. Cliquez sur **Certificats, Identifiants & Profils**.
+2. Veuillez cliquer sur **Certificats, Identifiants, &Profils**.
 3. Cliquez sur **Identifiants**.
 4. Si vous n'avez pas encore d'identifiant d'application enregistré, cliquez sur + pour en créer un.
    a. Saisissez un **nom**. Il peut s'agir de tout ce que vous voulez.
@@ -138,7 +142,7 @@ Le fichier AASA contient un objet JSON avec une liste d'apps et les chemins d'UR
 ```
 
 - `appID` : Créé en combinant l'**ID d'équipe** de votre application (allez sur `https://developer.apple.com/account/#/membership/` pour obtenir l'ID d'équipe) et l'**identifiant de l'offre groupée**. Dans l'exemple ci-dessus, "JHGFJHHYX" est l'ID de l'équipe et "com.facebook.ios" est l'ID de l'offre groupée.
-- `paths` : Tableau de chaînes de caractères indiquant quels chemins sont inclus ou exclus de l'association. Vous pouvez utiliser `NOT` avant le chemin d'accès pour désactiver les chemins d'accès. Dans cet exemple, tous les liens de ce chemin iront sur le web au lieu d'ouvrir l'application. Vous pouvez utiliser `*` comme caractère générique pour activer tous les chemins d'accès d'un répertoire et `?` pour correspondre à un seul caractère (tel que /archives/201?/ pour correspondre à tous les numéros compris entre 2010 et 2019).
+- `paths` : Tableau de chaînes de caractères indiquant quels chemins sont inclus ou exclus de l'association. Vous pouvez utiliser `NOT` avant le chemin d'accès pour désactiver les chemins d'accès. Dans cet exemple, tous les liens de ce chemin iront sur le web au lieu d'ouvrir l'application. Vous pouvez utiliser`*`  comme caractère générique pour activer tous les chemins d'accès d'un répertoire et`?`  pour faire correspondre un seul caractère (par exemple, /archives/201?/ pour faire correspondre tous les chiffres de 2010 à 2019).
 
 {% alert note %}
 Ces chaînes sont sensibles à la casse et les chaînes de requête et les identificateurs de fragments sont ignorés.
@@ -200,7 +204,7 @@ Vous devez associer votre application à votre site web. Pour ce faire, vous pou
 
 ### Étape 3 : Mettez à jour le fichier manifeste de votre application
 
-Dans votre fichier `AndroidManifest.xml`, ajoutez un élément de méta-données à l'intérieur de l'élément d'application. L'élément meta-data doit avoir un attribut `android:name` de "asset_statements" et un attribut `android:resource` qui pointe vers un fichier de ressources avec une chaîne de caractères qui inclut l'URL de votre site web.
+Dans votre fichier `AndroidManifest.xml`, ajoutez un élément de méta-données à l'intérieur de l'élément d'application. L'élément de métadonnées doit comporter un`android:name`attribut  et"asset_statements" un`android:resource`attribut  qui pointe vers un fichier de ressources contenant un tableau de chaînes de caractères incluant l'URL de votre site Web.
 
 ### Étape 4 : Préparez votre application à gérer les liens profonds
 
@@ -216,7 +220,7 @@ Enfin, vous pouvez tester vos liens profonds. S'envoyer un lien par le biais d'u
 ## Liens universels, App Links et suivi des clics
 
 {% alert note %}
-Les liens de suivi des clics sont généralement mis en place dans le cadre de votre onboarding pour l'e-mail. Si cela n'a pas été fait lors de l'onboarding du client, contactez votre gestionnaire de compte pour obtenir de l'aide.
+Les liens de suivi des clics sont généralement mis en place dans le cadre de votre onboarding pour l'e-mail. Si cette opération n'a pas été effectuée lors de l'onboarding du client, veuillez contacter votre gestionnaire de compte pour obtenir de l'aide.
 {% endalert %}
 
 Nos partenaires d'envoi d'e-mails, SendGrid et SparkPost, utilisent des domaines de suivi des clics pour envelopper tous les liens et inclure des paramètres d'URL pour le suivi des clics dans les e-mails de Braze.
@@ -311,7 +315,7 @@ Sélectionnez les éléments suivants pour l'attribut personnalisé :
 - **Nom :** `data-msys-clicktrack`
 - **Valeur :** `0`
 
-![Un attribut personnalisé pour un lien de texte.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
+![Un attribut personnalisé pour un lien texte.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ##### Attribut personnalisé pour un bouton ou une image
 
