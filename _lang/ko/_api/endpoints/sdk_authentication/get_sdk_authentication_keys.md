@@ -33,7 +33,7 @@ description: "이 문서에서는 SDK 인증 키 목록 Braze 엔드포인트에
 
 ## 예시 요청
 
-```json
+```bash
 curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authentication/keys?app_id=01234567-89ab-cdef-0123-456789abcdef' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
