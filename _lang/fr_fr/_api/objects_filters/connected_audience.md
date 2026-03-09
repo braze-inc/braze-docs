@@ -9,7 +9,7 @@ description: "Cet article explique les différents composants de l’objet Audie
 
 # Objet Audience connectée
 
-> Un objet d'audience connecté identifie l'audience de votre message. Par exemple, si vous utilisez des tableaux d'attributs personnalisés pour suivre chaque catégorie et émission de télévision qu'un utilisateur a favorisée, vous pouvez utiliser les audiences connectées pour envoyer automatiquement une notification push ou un e-mail à toute personne ayant favorisé une émission dès qu'un nouvel épisode est publié - sans avoir besoin de configurer un segment pour chaque émission.
+> Un objet public connecté identifie l’audience de votre message. Par exemple, si vous utilisez des tableaux d'attributs personnalisés pour suivre toutes les catégories et émissions de télévision qu'un utilisateur a ajoutées à ses favoris, vous pouvez utiliser les audiences connectées pour envoyer automatiquement une notification push ou un e-mail à toute personne ayant ajouté une émission à ses favoris dès qu'un nouvel épisode est diffusé, sans avoir à configurer un segment pour chaque émission.
 
 Cet objet est composé soit d'un seul filtre d'audience connectée, soit de plusieurs filtres d'audience connectée dans une expression logique utilisant des opérateurs `AND` ou `OR`.
 
@@ -34,7 +34,7 @@ Cet objet est composé soit d'un seul filtre d'audience connectée, soit de plus
 
 ## Filtres d’audience connectée
 
-La combinaison de plusieurs filtres d'attributs personnalisés avec les opérateurs `AND` et `OR` permet de créer un filtre d'audience connecté.
+La combinaison de plusieurs filtres d'attributs personnalisés avec`AND`les`OR`opérateurs crée un filtre d'audience connecté.
 
 ### Filtre d’attribut personnalisé
 
@@ -60,7 +60,7 @@ Le type de données de l’attribut personnalisé détermine les comparaisons qu
 | Chaîne de caractères | `equals`, `not_equal`, `matches_regex`, `does_not_match_regex`, `exists`, `does_not_exist` |
 | Tableau | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
 | Numérique | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
-| Valeur booléenne | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
+| Valeur booléenne | `equals`, `not_equal`, `exists`, `does_not_exist` |
 | Date | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -83,7 +83,9 @@ Le type de données de l’attribut personnalisé détermine les comparaisons qu
       "value": "blue"
     }
 }
+```
 
+```json
 {
   "custom_attribute":
   {
@@ -92,7 +94,9 @@ Le type de données de l’attribut personnalisé détermine les comparaisons qu
     "value": "pizza"
   }
 }
+```
 
+```json
 {
   "custom_attribute":
   {
@@ -142,7 +146,7 @@ Ce filtre vous permet de segmenter en fonction du statut d’abonnement aux e-ma
 
 ### Dernier filtre d’application utilisé
 
-Ce filtre vous permet de segmenter en fonction du moment où l'utilisateur a utilisé l'appli pour la dernière fois. Ces filtres contiennent deux champs :
+Ce filtre vous permet de segmenter en fonction de la dernière utilisation de l'application par l'utilisateur. Ces filtres contiennent deux champs :
 
 #### Corps du filtre
 ```json
@@ -160,4 +164,4 @@ Ce filtre vous permet de segmenter en fonction du moment où l'utilisateur a uti
 
 ### Considérations
 
-Les audiences connectées ne peuvent pas filtrer les utilisateurs en fonction d'attributs par défaut, d'événements personnalisés, de segments ou d'événements d'engagement aux messages. Pour utiliser ces filtres, nous vous recommandons de les incorporer dans un segment d'audience et de spécifier ensuite ce segment dans le paramètre `segment_id` pour l'[endpoint`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). Si vous utilisez d'autres endpoints, vous devrez d'abord ajouter le segment à la campagne déclenchée par l'API ou au Canvas dans le tableau de bord de Braze.
+Les audiences connectées ne peuvent pas filtrer les utilisateurs en fonction d'attributs par défaut, d'événements personnalisés, de segments ou d'événements d'engagement aux messages. Pour utiliser ces filtres, nous vous recommandons de les intégrer à un segment d'audience, puis de spécifier ce segment dans le`segment_id`paramètre pour [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters)l'[endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). Lorsque vous utilisez d'autres endpoints, il est nécessaire d'ajouter le segment à la campagne déclenchée par l'API ou à Canvas dans le tableau de bord de Braze au préalable.
