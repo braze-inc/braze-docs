@@ -1,7 +1,7 @@
 ---
 nav_title: Platzierungen verwalten
-article_title: Verwalten Sie Bannerplatzierungen für das Braze SDK
-description: "Lernen Sie, wie Sie Bannerplatzierungen im Braze SDK erstellen und verwalten, einschließlich des Zugriffs auf ihre eindeutigen Eigenschaften und der Protokollierung von Impressionen."
+article_title: Verwalten Sie die Platzierung von Bannern für das Braze SDK.
+description: "Erfahren Sie, wie Sie Bannerplatzierungen im Braze SDK erstellen und verwalten, einschließlich des Zugriffs auf deren eindeutige Eigenschaften und der Protokollierung von Impressionen."
 page_order: 2
 platform:
   - iOS
@@ -11,11 +11,11 @@ platform:
   - React Native
 ---
 
-# Verwalten Sie Bannerplatzierungen
+# Bannerplatzierungen verwalten
 
-> Lernen Sie, wie Sie Bannerplatzierungen im Braze SDK erstellen und verwalten, einschließlich des Zugriffs auf ihre eindeutigen Eigenschaften und der Protokollierung von Impressionen. Weitere allgemeine Informationen finden Sie unter [Über Banner]({{site.baseurl}}/developer_guide/banners).
+> Erfahren Sie, wie Sie Bannerplatzierungen im Braze SDK erstellen und verwalten, einschließlich des Zugriffs auf deren eindeutige Eigenschaften und der Protokollierung von Impressionen. Weitere allgemeine Informationen finden Sie unter [Über Banner]({{site.baseurl}}/developer_guide/banners).
 
-## Über Anfragen zur Platzierung {#requests}
+## Bezüglich der Platzierungsanfragen {#requests}
 
 {% multi_lang_include banners/placement_requests.md %}
 
@@ -23,7 +23,7 @@ platform:
 
 ### Voraussetzungen
 
-Dies sind die Mindestversionen des SDK, die für die Erstellung von Bannerplatzierungen erforderlich sind:
+Dies sind die erforderlichen Mindestversionen des SDK, um Bannerplatzierungen zu erstellen:
 
 {% multi_lang_include sdk_versions.md feature='banners' %}
 
@@ -31,7 +31,7 @@ Dies sind die Mindestversionen des SDK, die für die Erstellung von Bannerplatzi
 
 ### Schritt 2: Aktualisieren Sie die Platzierungen in Ihrer App {#requestBannersRefresh}
 
-Die Platzierungen können durch den Aufruf der unten beschriebenen Aktualisierungsmethoden aufgefrischt werden. Diese Platzierungen werden automatisch zwischengespeichert, wenn die Sitzung eines Nutzers abläuft oder wenn Sie die Bezeichner:innen mit der Methode `changeUser` ändern.
+Platzierungen können durch Aufruf der unten beschriebenen Aktualisierungsmethoden aktualisiert werden. Diese Platzierungen werden automatisch zwischengespeichert, wenn die Sitzung einer Nutzer:in abläuft oder wenn Sie identifizierte Nutzer:innen mithilfe der`changeUser`Methode ändern.
 
 {% alert tip %}
 Aktualisieren Sie die Platzierungen so schnell wie möglich, um Verzögerungen beim Herunterladen oder Anzeigen von Bannern zu vermeiden.
@@ -115,14 +115,14 @@ This feature is not currently supported on Roku.
 ### Schritt 3: Auf Updates achten {#subscribeToBannersUpdates}
 
 {% alert tip %}
-Wenn Sie Banner mit den SDK-Methoden in dieser Anleitung einfügen, werden alle Analytics-Ereignisse (wie Impressionen und Klicks) automatisch verarbeitet und Impressionen werden nur protokolliert, wenn das Banner zu sehen ist.
+Wenn Sie Banner mithilfe der SDK-Methoden in diesem Leitfaden einfügen, werden alle Ereignisse von Analytics (wie Impressionen und Klicks) automatisch verarbeitet, und Impressionen werden nur protokolliert, wenn das Banner sichtbar ist.
 {% endalert %}
 
 {% tabs %}
 {% tab Web %}
 {% subtabs %}
-{% subtab Javascript %}
-Wenn Sie Vanilla JavaScript mit dem Internet Braze SDK verwenden, benutzen Sie [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) um auf Updates für die Platzierung zu warten und rufen dann [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) um sie zu holen.
+{% subtab JavaScript %}
+Wenn Sie Vanilla JavaScript mit dem Internet Braze SDK verwenden, nutzen Sie bitte  , um auf [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates)PlatzierungsUpdates zu warten, und rufen Sie anschließend[`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh)  auf, um diese abzurufen.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -136,7 +136,7 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 {% endsubtab %}
 {% subtab React %}
-Wenn Sie React mit dem Internet Braze SDK verwenden, richten Sie [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) innerhalb eines `useEffect` Hooks ein und rufen [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) nachdem Sie Ihren Listener registriert haben.
+Wenn Sie React mit dem Braze-SDK verwenden, richten Sie dies[`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates)innerhalb eines`useEffect`Hooks ein und rufen Sie es[`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh)nach der Registrierung Ihres Listeners auf.
 
 ```typescript
 import * as braze from "@braze/web-sdk";
@@ -262,7 +262,7 @@ Erstellen Sie ein Containerelement für das Banner. Stellen Sie sicher, dass Sie
 
 {% subtabs local %}
 {% subtab JavaScript %}
-Wenn Sie Vanilla JavaScript mit dem Internet Braze SDK verwenden, rufen Sie die [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) Methode auf, um den inneren HTML-Code des Container-Elements zu ersetzen.
+Wenn Sie Vanilla JavaScript mit dem Braze SDK verwenden, rufen Sie die[`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner)Methode auf, um den inneren HTML-Code des Containerelements zu ersetzen.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -297,7 +297,7 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 {% endsubtab %}
 
 {% subtab React %}
-Wenn Sie React mit dem Internet Braze SDK verwenden, rufen Sie die [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) Methode mit einem `ref` auf, um das innere HTML des Container-Elements zu ersetzen.
+Wenn Sie React mit dem Braze-SDK verwenden, rufen Sie die[`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner)Methode mit einem auf, um den inneren HTML-Code`ref` des Containerelements zu ersetzen.
 
 ```tsx
 import { useRef } from 'react';
@@ -504,21 +504,21 @@ Bevor Sie eine Kampagne starten, können Sie [ein Testbanner versenden]({{site.b
 Testbanner sind wie alle anderen Banner, nur dass sie bei der nächsten App-Sitzung wieder entfernt werden.
 {% endalert %}
 
-## Impressionen protokollieren
+## Protokoll-Impressionen
 
-Braze protokolliert automatisch Impressionen für Banner, die angezeigt werden, wenn Sie SDK-Methoden zum Einfügen eines Banners verwenden - Sie müssen also keine Impressionen manuell tracken.
+Braze protokolliert automatisch die Impressionen für Banner, die angezeigt werden, wenn Sie SDK-Methoden zum Einfügen eines Banners verwenden. Daher ist es nicht erforderlich, die Impressionen manuell zu verfolgen.
 
-## Klicks protokollieren
+## Klick-Protokollierung
 
-Die Methode zur Protokollierung von Banner-Klicks hängt davon ab, wie Ihr Banner gerendert wird und wo sich Ihr Click Handler befindet.
+Die Methode zur Protokollierung von Banner-Klicks hängt davon ab, wie Ihr Banner dargestellt wird und wo sich Ihr Klick-Handler befindet.
 
-### Standard-Banner-Inhalt (automatisch)
+### Standard-Bannerinhalt (automatisch)
 
-Wenn Sie Standard-SDK-Methoden zum Einfügen von Bannern verwenden und Ihr Banner Standard-Editor-Komponenten (Bilder, Buttons, Text) verwendet, werden Klicks automatisch getrackt. Das SDK fügt diesen Elementen Klick-Hörer zu, so dass kein zusätzlicher Code erforderlich ist.
+Wenn Sie die standardmäßigen, sofort einsatzbereiten SDK-Methoden zum Einfügen von Bannern verwenden und Ihr Banner Standard-Editor-Komponenten (Bilder, Buttons, Text) enthält, werden Klicks automatisch erfasst. Das SDK fügt diesen Elementen Klick-Listener hinzu, und es ist kein zusätzlicher Code erforderlich.
 
-### Angepasste Code-Blöcke
+### Benutzerdefinierte Codeblöcke
 
-Wenn Ihr Banner den Editor-Block für **angepassten Code** im Braze-Dashboard verwendet, müssen Sie `brazeBridge.logClick()` verwenden, um Klicks aus diesem angepassten HTML-Code heraus zu protokollieren. Dies gilt auch dann, wenn Sie SDK-Methoden zum Rendern des Banners verwenden, da das SDK nicht automatisch Listener an Elemente innerhalb Ihres angepassten Codes anhängen kann.
+Wenn Ihr Banner den **Custom Code** Editor-Block im Braze-Dashboard verwendet, müssen Sie  verwenden, um Klicks aus diesem `brazeBridge.logClick()`benutzerdefinierten HTML zu protokollieren. Dies gilt auch bei der Verwendung von SDK-Methoden zum Rendern des Banners, da das SDK nicht automatisch Listener an Elemente innerhalb Ihres angepassten Codes anhängen kann.
 
 ```html
 <button onclick="brazeBridge.logClick()">
@@ -526,13 +526,13 @@ Wenn Ihr Banner den Editor-Block für **angepassten Code** im Braze-Dashboard ve
 </button>
 ```
 
-Dies ähnelt der [JavaScript-Brücke]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge), die für In-App-Nachrichten im HTML-Format verwendet wird. Die `brazeBridge` bietet eine Kommunikationsschicht zwischen dem internen HTML des Banners und dem übergeordneten Braze SDK.
+Die vollständige Referenz finden Sie unter [angepasstem Code und JavaScript-Brücke für Banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/custom_code/#javascript-bridge). Das`brazeBridge`  stellt eine Kommunikationsschicht zwischen dem internen HTML des Banners und dem übergeordneten Braze SDK bereit.
 
-### Angepasste UI-Implementierungen (headless)
+### Angepasste UI-Implementierungen (Headless)
 
-Wenn Sie ein vollständig angepasstes UI erstellen, das die [benutzerdefinierten Eigenschaften](#custom-properties) des Banners verwendet, anstatt den HTML-Code des Banners zu rendern, müssen Sie Klicks (und Impressionen) manuell in Ihrem Anwendungscode protokollieren. Da das SDK das Banner nicht rendert, hat es keine Möglichkeit, Interaktionen mit Ihren angepassten UI-Elementen automatisch zu tracken.
+Wenn Sie eine vollständig angepasste UI unter Verwendung der [angepassten Eigenschaften](#custom-properties) des Banners erstellen, anstatt den Banner-HTML-Code zu rendern, müssen Sie Klicks (und Impressionen) manuell aus Ihrem Anwendungscode protokollieren. Da das SDK das Banner nicht rendert, kann es Interaktionen mit Ihren angepassten UI-Elementen nicht automatisch verfolgen.
 
-Verwenden Sie die Methode `logClick()` für das Objekt Banner.
+Verwenden Sie die`logClick()`Methode für das Banner-Objekt.
 
 ## Abmessungen und Größenangaben
 
@@ -542,23 +542,23 @@ Hier erfahren Sie, was Sie über die Abmessungen und die Größe von Bannern wis
 - Der HTML-Code nimmt die gesamte Breite des Containers ein, in dem er dargestellt wird.
 - Wir empfehlen, ein Element mit festen Abmessungen zu erstellen und diese Abmessungen im Composer zu testen.
 
-## Angepasste Eigenschaften {#custom-properties}
+## Benutzerdefinierte Eigenschaften {#custom-properties}
 
-Sie können angepasste Eigenschaften aus Ihrer Banner-Kampagne verwenden, um Key-Value-Daten über das SDK abzurufen und das Verhalten oder Aussehen Ihrer App zu ändern. Sie könnten zum Beispiel:
+Sie können benutzerdefinierte Eigenschaften aus Ihrer Banner-Kampagne verwenden, um Schlüsselwertdaten über das SDK abzurufen und das Verhalten oder das Erscheinungsbild Ihrer App anzupassen. Beispielsweise könnten Sie:
 
-- Senden Sie Metadaten für Ihre Analytics oder Integrationen von Drittanbietern.
-- Verwenden Sie Metadaten wie z.B. ein `timestamp` oder JSON-Objekt, um bedingte Logik zu triggern.
-- Steuern Sie das Verhalten eines Banners auf der Grundlage von enthaltenen Metadaten wie `ratio` oder `format`.
+- Bitte senden Sie Metadaten für Ihre Analytics oder Integrationen von Drittanbietern.
+- Verwenden Sie Metadaten wie ein `timestamp`JSON-Objekt, um bedingte Logik zu triggern.
+- Steuern Sie das Verhalten eines Banners basierend auf enthaltenen Metadaten wie`ratio`oder`format`.
 
 ### Voraussetzungen
 
-Sie müssen [angepasste Eigenschaften]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#custom-properties) zu Ihrer Banner Kampagne [hinzufügen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#custom-properties). Außerdem sind dies die Mindestversionen des SDKs, die für den Zugriff auf angepasste Eigenschaften erforderlich sind:
+Sie müssen Ihrer Banner-Kampagne [benutzerdefinierte Eigenschaften hinzufügen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#custom-properties). Darüber hinaus sind dies die erforderlichen Mindestversionen des SDK, um auf benutzerdefinierte Eigenschaften zugreifen zu können:
 
 {% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 reactnative:17.0.0 flutter:15.1.0 %}
 
-### Zugriff auf angepasste Eigenschaften
+### Auf benutzerdefinierte Eigenschaften zugreifen
 
-Um auf die angepassten Eigenschaften eines Banners zuzugreifen, verwenden Sie eine der folgenden Methoden, basierend auf dem im Dashboard definierten Typ der Eigenschaft. Wenn der Schlüssel nicht mit einer Eigenschaft dieses Typs übereinstimmt oder nicht vorhanden ist, gibt die Methode `null` zurück.
+Um auf die benutzerdefinierten Eigenschaften eines Banners zuzugreifen, verwenden Sie bitte eine der folgenden Methoden, je nach dem im Dashboard definierten Typ der Eigenschaft. Wenn der Schlüssel nicht mit einer Eigenschaft dieses Typs übereinstimmt oder nicht existiert, gibt die Methode zurück`null`.
 
 {% tabs local %}
 {% tab Web %}
