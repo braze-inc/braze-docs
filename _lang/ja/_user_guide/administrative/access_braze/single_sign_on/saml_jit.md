@@ -1,46 +1,46 @@
 ---
-nav_title: SAML ジャストインタイム・プロビジョニング
+nav_title: SAMLジャストインタイムプロビジョニング
 article_title: SAMLジャストインタイムプロビジョニング
 page_order: 1
 page_type: tutorial
-description: "この記事では、SAMLジャストインタイムプロビジョニングを設定して、新しい企業ユーザーが最初のサインイン時にBrazeアカウントを作成できるようにする方法を説明する。" 
+description: "この記事では、SAMLジャストインタイムプロビジョニングの設定方法を説明する。これにより、新規の会社ユーザーが初回サインイン時にBrazeアカウントを作成できるようになる。" 
 
 ---
 
 # SAMLジャストインタイムプロビジョニング 
 
-> ジャストインタイムプロビジョニングは、[SAML SSOと]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)連携し、新規企業ユーザーが初回サインイン時にBrazeアカウントを作成できるようにする。これにより、管理者は新しい企業ユーザーのアカウントを手動で作成し、権限を選択し、ワークスペースに割り当て、アカウントを有効にするのを待つ必要がなくなる。
+> ジャストインタイムプロビジョニングは[SAMLシングルサインオン]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)と連携し、新規企業ユーザーが初回サインイン時にBrazeアカウントを作成できるようにする。これにより、管理者が新しい会社ユーザーのために手動でアカウントを作成し、権限を選択し、ワークスペースに割り当て、アカウントの有効化を待つ必要がなくなる。
 
-セキュリティ対策として、SAMLジャストインタイム・プロビジョニング（JITP）は、社内にすでに存在するメール・ドメインのユーザーに対してのみ機能する。JITPは、偽装またはなりすましでない開発者が社内に少なくとも1人いることが確認されているドメインに対してのみ可能である。 
+セキュリティ対策として、SAMLのジャストインタイムプロビジョニング（JITP）は、自社のメールドメインが既に存在するユーザーに対してのみ機能する。JITPは、既に少なくとも1人の確認済みで偽装 or なりすましではない開発者が社内に存在するドメインでのみ可能である。 
 
-例えば、アカウント```jon.smith@decorumsoft.com``` 、JITPを使ってDecorumsoftにログインできるとしよう。アカウント```jane.smith@decorumsoft.com``` 、同じドメインを持ち、プロビジョニングを許可することもできる。しかし、```jon.smith@decorumsoft.eu``` でJITPを使用しようとすると、Decorumsoftダッシュボード内に```decorumsoft.eu``` のアカウントがないため、プロビジョニングが許可されない。 
+例えば、アカウントがJITPを使って```jon.smith@decorumsoft.com```Decorumsoftにログインできるとしよう。そのアカウントは同じドメイン```jane.smith@decorumsoft.com```を持ち、プロビジョニングを許可することもできる。ただし、Decorumsoft Brazeダッシュボード内にアカウント```decorumsoft.eu```が存在しない場合、JITPをプロビジョニングしようと```jon.smith@decorumsoft.eu```すると許可されない。 
 
-企業のために例外を設けるには、[サポートに]({{site.baseurl}}/braze_support/)連絡すること。
+企業に対して例外を適用したい場合は、[サポート]({{site.baseurl}}/braze_support/)に連絡すること。
 
 ## 前提条件
 
-SAML JITP は、SAML SSO が設定され、統合されていることを必要とする。Google SSOとは互換性がなく、Identity Provider Initiated（IdP主導）のログイン・ワークフローにのみ対応している。
+SAML JITPは、SAML SSOが設定され統合されていることを要求する。Google SSOとは互換性がなく、アイデンティティプロバイダー開始型（IdP開始型）のログインワークフローでのみサポートされている。
 
-## SAML ジャストインタイム・プロビジョニング（JITP）を設定する。
+## SAMLのジャストインタイムプロビジョニング（JITP）の設定
 
 Braze管理者に次の操作を依頼します。
 
-1. **設定**>**管理者設定**>**セキュリティ設定に**移動する。
+1. **設定** > **管理設定** > **セキュリティ設定** に移動する。
 2. ** SAML SSO** セクションで、** 自動ユーザープロビジョニング** オプションを切り替えます。
-3. デフォルトのワークスペースを選択して、新しい企業ユーザーを追加する。
-4. その新しい企業ユーザーに割り当てるデフォルト権限セットを選択する。権限セットの作成方法については、[ユーザー権限の設定]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)を参照してください。
+3. 新しい会社ユーザーを追加する際に、デフォルトのワークスペースを選択せよ。
+4. その新しい会社ユーザーに割り当てるデフォルトの権限セットを選択する。権限セットの作成方法については、[ユーザー権限の設定]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)を参照してください。
 6. ページ下部の**変更の保存**を選択します
 7. SSO プロバイダーの設定で、Braze のアクセスが必要なすべてのユーザーを SSO プロバイダーのディレクトリに追加します。
-8. 初回ログイン時に、ユーザーにIdPポータルからBrazeにアクセスするよう指示する。この後、SAMLシングルサインオンボタンが表示され、次回以降のログインに使用できる。
+8. ユーザーに初回ログイン時は、IdPポータル経由でBrazeにアクセスするよう指示する。これ以降、今後のログイン時にはSAMLシングルサインオンボタンが表示される。
 
 ## よくある質問
 
-### SAML JITP を無効にする方法は？
+### SAML JITPを無効にするにはどうすればよいのか？
 
-JITP設定後、[サポートに連絡して]({{site.baseurl}}/braze_support/)JITPをオフにする必要がある。
+JITPを設定した後、[サポートに連絡して]({{site.baseurl}}/braze_support/)無効化してもらう必要がある。
 
 ## トラブルシューティング
 
-### Microsoft Entra IDでシングルサインボタンが表示されない
+### シングルサインオンボタンはMicrosoft Entra IDでは表示されない
 
-Microsoft Entraの**Basic SAML Configuration**フォームの**Basic SAML ConfigurationフォームのBasic SAML ConfigurationフォームのBasic SAML Configuration**フォームの**Sign-On URL**フィールドにより、IdP主導のログインでユーザーにSSOボタンではなくパスワードオプションしか表示されないことがある。この問題を防ぐには、Microsoft Entra管理センターでBrazeを設定する際、**サインオンURL**フィールドを空白のままにしておく。
+Microsoft EntraのBraze向け**基本SAML設定**フォームにある「**サインオンURL」**フィールドは、IdP開始ログイン時にユーザーにSSOボタンではなくパスワード入力オプションのみを表示させる原因となる。この問題を防止するには、Microsoft Entra 管理センターで Braze を設定する際**、サインオン URL** フィールドを空白のままにしておくこと。
