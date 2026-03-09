@@ -1,5 +1,5 @@
 ---
-nav_title: Comportamento do cliente e eventos do usuário
+nav_title: Comportamento do cliente e eventos de usuário
 layout: customer_behavior_events_glossary
 page_order: 4
 excerpt_separator: ""
@@ -17,7 +17,7 @@ Entre em contato com seu representante Braze ou abra um [ticket de suporte]({{si
 
 Esse detalhamento do comportamento do cliente e dos eventos do usuário mostra que tipo de informação é geralmente incluído em um comportamento do cliente ou evento do usuário. Com uma sólida compreensão de seus componentes, seus desenvolvedores e a equipe de estratégia de business intelligence podem usar os dados de eventos Currents recebidos para criar relatórios e gráficos orientados por dados e tirar proveito de outras métricas de dados valiosas.
 
-![Análise de um evento de usuário mostrando um evento de compra com as propriedades listadas agrupadas por propriedades específicas do usuário, propriedades específicas do comportamento e propriedades específicas do dispositivo]({% image_buster /assets/img/customer_engagement_event.png %})
+![Análise de um evento de usuário mostrando um evento de compra com as propriedades listadas agrupadas por propriedades específicas do usuário, propriedades específicas de comportamento e propriedades específicas do dispositivo]({% image_buster /assets/img/customer_engagement_event.png %})
 
 O comportamento do cliente e os eventos do usuário são compostos por propriedades **específicas do usuário**, propriedades **específicas do comportamento** e propriedades **específicas do dispositivo**.
 
@@ -44,7 +44,7 @@ Os esquemas de armazenamento se aplicam aos dados de eventos de arquivo simples 
 {% endalert %}
 
 {% api %}
-## Eventos de Atualização de Número de Bucket Aleatório {#random-bucket-number-update-events}
+## Eventos de atualização de número de bucket aleatório {#random-bucket-number-update-events}
 
 {% apitags %}
 Número de bucket aleatório
@@ -69,7 +69,7 @@ Este evento Currents está disponível apenas para clientes que adquiriram um "c
   "prev_random_bucket_number" : "(optional, int) Previous random bucket number",
   "random_bucket_number" : "(required, int) New random bucket number",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -78,7 +78,7 @@ Este evento Currents está disponível apenas para clientes que adquiriram um "c
 {% endapi %}
 
 {% api %}
-## Eventos Personalizados {#custom-events}
+## Eventos personalizados {#custom-events}
 
 {% apitags %}
 Eventos personalizados
@@ -107,7 +107,7 @@ Esse evento ocorre quando um evento personalizado específico é disparado. Use 
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -170,7 +170,7 @@ Esse evento ocorre quando um evento personalizado específico é disparado. Use 
 // users.behaviors.CustomEvent
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -199,13 +199,13 @@ Esse evento ocorre quando um evento personalizado específico é disparado. Use 
 
 #### Detalhes da propriedade
 
-- Para Eventos Personalizados, a carga útil também será preenchida com quaisquer [propriedades de evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties) que estão associadas ao evento.
+- Para Eventos Personalizados, a carga útil também será preenchida com quaisquer [propriedades de evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties) associadas ao evento.
 - Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de anúncio do Google Android através dos SDKs nativos. Saiba mais sobre eles aqui: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Se você estiver usando Kafka para ingerir dados [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), entre em contato com seu gerente de sucesso do cliente ou gerente de conta para ativar o recurso de alternância para enviar `ad_id`.
 {% endapi %}
 
 {% api %}
-## Instalar eventos de Atribuição {#install-attribution-events}
+## Eventos de Atribuição de Instalação {#install-attribution-events}
 
 {% apitags %}
 Atribuição
@@ -224,7 +224,7 @@ Esse evento ocorre quando a instalação de um app é atribuída a uma fonte. Us
   "id" : "(required, string) Globally unique ID for this event",
   "source" : "(required, string) The source of the attribution",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -273,7 +273,7 @@ Esse evento ocorre quando a instalação de um app é atribuída a uma fonte. Us
 // Install Attribution (users.behaviors.InstallAttribution)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -327,7 +327,7 @@ Esse evento é disparado quando um usuário visita um local especificado. Use is
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -400,7 +400,7 @@ Esse evento é disparado quando um usuário visita um local especificado. Use is
 // Location (users.behaviors.Location)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -472,7 +472,7 @@ As propriedades de compra são eventos personalizados especiais e vêm com uma s
   "product_id" : "(required, string) ID of the product purchased",
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -541,7 +541,7 @@ As propriedades de compra são eventos personalizados especiais e vêm com uma s
 // Purchased (users.behaviors.Purchase)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -572,7 +572,7 @@ As propriedades de compra são eventos personalizados especiais e vêm com uma s
 
 #### Detalhes da propriedade
 
-- Para eventos de Compra, a carga útil também será preenchida com quaisquer [propriedades de evento de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties) que estão associadas ao evento.
+- Para eventos de Compra, a carga útil também será preenchida com quaisquer [propriedades de evento de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties) associadas ao evento.
 - Para `ad_id`, `ad_id_type` e `ad_tracking_enabled`, você precisa coletar explicitamente o IDFA do iOS e o ID de anúncio do Google Android através dos SDKs nativos. Saiba mais sobre eles aqui: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Se você estiver usando Kafka para ingerir dados [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), entre em contato com seu gerente de sucesso do cliente ou gerente de conta para ativar o recurso de alternância para enviar `ad_id`.
 {% endapi %}
@@ -611,7 +611,7 @@ Quando um usuário inicia sua primeira sessão, são disparados os eventos `Firs
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -668,7 +668,7 @@ Quando um usuário inicia sua primeira sessão, são disparados os eventos `Firs
 // First Session (users.behaviors.app.FirstSession)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -720,7 +720,7 @@ Isso ocorre quando um usuário sai do aplicativo e, portanto, encerra a sessão 
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -779,7 +779,7 @@ Isso ocorre quando um usuário sai do aplicativo e, portanto, encerra a sessão 
 // Session Ended (users.behaviors.app.SessionEnd)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -835,7 +835,7 @@ Quando um usuário inicia sua primeira sessão, são disparados os eventos `Firs
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -892,7 +892,7 @@ Quando um usuário inicia sua primeira sessão, são disparados os eventos `Firs
 // Session Started (users.behaviors.app.SessionStart)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -944,7 +944,7 @@ Este evento ocorre quando o Braze sincroniza o token de push para iniciar a ativ
   "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1001,7 +1001,7 @@ Este evento ocorre quando o Braze sincroniza o token de push para iniciar a ativ
 // Live Activity Push To Start Token Changed (users.behaviors.liveactivity.PushToStartTokenChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1031,7 +1031,7 @@ Este evento ocorre quando o Braze sincroniza o token de push para iniciar a ativ
 ## Eventos de mudança de token de atualização de atividade ao vivo {#live-activity-update-token-change-events}
 
 {% apitags %}
-Atividade ao vivo, Atualizar token
+Atividade ao Vivo, Mudança de Token
 {% endapitags %}
 
 Este evento ocorre quando o Braze sincroniza o token de atualização de atividade ao vivo com o usuário
@@ -1053,7 +1053,7 @@ Este evento ocorre quando o Braze sincroniza o token de atualização de ativida
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "update_token" : "(optional, string) Live Activity update token",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1110,7 +1110,7 @@ Este evento ocorre quando o Braze sincroniza o token de atualização de ativida
 // Live Activity Update Token Changed (users.behaviors.liveactivity.UpdateTokenChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1140,7 +1140,7 @@ Este evento ocorre quando o Braze sincroniza o token de atualização de ativida
 ## Eventos de mudança de estado do token de notificação por push {#push-notification-token-state-change-events}
 
 {% apitags %}
-Push, Mudança de estado do token
+Push, Mudança de Estado do Token
 {% endapitags %}
 
 Este evento ocorre quando um token por push é inserido, atualizado ou removido. Use isso para rastrear os estados dos tokens por push.
@@ -1283,12 +1283,72 @@ Este evento ocorre quando um token por push é inserido, atualizado ou removido.
 - O campo `push_token_provisionally_opted_in` se aplica apenas a tokens por push do iOS.
   - Se você tiver [Autorização Provisória]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) configurada, os tokens provisórios terão este campo definido como `true`. Todos os outros tokens por push serão `false`.
 - O campo `sdk_version` só será preenchido se a mudança de estado do token for iniciada pelo SDK.
-  - Se houver um evento SDK `changeUser` que aciona o token a ser movido de um usuário para outro, o campo `sdk_version` será preenchido.
+  - Se houver um evento SDK `changeUser` que aciona a mudança do token de um usuário para outro, o campo `sdk_version` será preenchido.
   - Se houver um bounce de push (por exemplo, devido à desinstalação), o campo `sdk_version` ficará em branco.
-- Sempre que um token por push entra no Braze, seus eventos de ciclo de vida são registrados. Existem três tipos de eventos de mudança de token ("adicionar", "atualizar" e "remover") registrados no campo `push_token_state_change_type`. Observe os seguintes detalhes:
-  - Para um novo token que não existia antes, isso ingere um evento "adicionar".
-  - Para atualizar o token com a mesma string de token no mesmo usuário (gateway ou `foreground_push_disabled` ou outros campos "secundários" alterados), isso irá ingerir um evento "atualizar" no mesmo token.
-  - Se um token foi transferido de um usuário para outro, isso irá ingerir um evento "remover" para o usuário antigo e um evento "adicionar" para o novo usuário.
-  - Se o mesmo usuário ou dispositivo gerar um novo token, isso irá ingerir um evento "remover" para o token antigo e um evento "adicionar" para o novo token.
-  - Se a Braze estiver removendo um token (por razões como desinstalação ou token inválido), isso irá ingerir um evento "remover" para o token.
+- Sempre que um token por push entra no Braze, seus eventos de ciclo de vida são registrados. Existem três tipos de eventos de mudança de token ("adicionar", "atualizar" e "remover") registrados no campo `push_token_state_change_type`.
+
+#### Tipos de eventos
+
+##### Adicionar
+
+Um evento de "adição" é registrado quando um novo token é cadastrado. Isso acontece quando um usuário abre o app em um novo dispositivo pela primeira vez, ou quando um token é definido através do endpoint [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) com `push_tokens` para um usuário que não tinha um anteriormente.
+
+##### Atualizar
+
+Um evento de "atualização" é registrado quando uma propriedade muda em um token existente sem que a string do token em si mude. O token tem a mesma string, mesmo usuário e mesmo app, mas um ou mais dos seguintes campos mudaram: `foreground_push_disabled`, gateway APNs, chaves de web push, `provisionally_opted_in` ou `device_id`.
+
+{% alert note %}
+Na maioria dos casos, a reinstalação do app ou a restauração de backup resulta em um novo evento de "adição" com um novo `push_token` e novo `device_id` (porque o SDK gera um novo `device_id` e o SO fornece uma nova string de token por push). Isso cria duas entradas separadas de token e dispositivo no perfil do usuário, e a entrada mais antiga é limpa posteriormente através do rastreamento de desinstalação ou envio de campanha.
+
+Seria extremamente raro que apenas o `device_id` mudasse sem que o `push_token` mudasse (isso exigiria que o SO retornasse a mesma string de token após a reinstalação).
+{% endalert %}
+
+##### Remover
+
+Um evento de "remoção" independente é registrado quando a Braze remove um token. Isso pode acontecer por várias razões:
+
+- Bounce de push (APNs, FCM ou HMS reporta o token como inválido ou expirado)
+- Detecção de desinstalação através de push silencioso
+- Token removido através da API REST ou serviço de feedback APNs
+
+##### Pares de adição e remoção
+
+Pares de adição e remoção se enquadram em duas categorias:
+
+**Atualização da string do token (mesmo usuário):** O SO rotaciona a string do token no mesmo dispositivo (por exemplo, rotação de token APNs ou FCM). O evento de "adição" (novo token) e o evento de "remoção" (token antigo) têm o mesmo `user_id`, mesmo `device_id`, `push_token` diferente e `time_ms` idêntico.
+
+**Token se move entre usuários:** Um token se move de um usuário para outro. O evento de "adição" (novo usuário) e o evento de "remoção" (usuário antigo) têm `user_id` diferentes, mesmo `device_id`, mesmo `push_token` e `time_ms` diferentes (tipicamente menos de 100 milissegundos de diferença). Isso é acionado por qualquer um dos seguintes:
+
+- O SDK chama `changeUser` de um perfil anônimo para um perfil identificado. O evento "remover" terá um `external_user_id` vazio.
+- O SDK chama `changeUser` de um perfil identificado para outro. Ambos os eventos terão um `external_user_id` não vazio.
+- O endpoint [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) ou a limpeza de usuários duplicados move os tokens do usuário órfão para o usuário sobrevivente.
+
+{% alert note %}
+Se um perfil anônimo for identificado através do endpoint [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/), o `user_id` não muda e nenhum evento de mudança de estado de token é emitido.
+{% endalert %}
+
+#### Consultando o estado do token ativo mais recente
+
+Para determinar o estado atual do token por push para cada usuário, particione os eventos de mudança de estado do token por `push_token`, `user_id` e `app_id`, depois ordene por `time_ms` em ordem decrescente e filtre os eventos "remover". Internamente, um token é indexado pela sua string de token e `app_id` por usuário. Usar `device_id` como chave de partição não é recomendado porque `device_id` é um atributo mutável, e particionar por ele pode dividir o ciclo de vida de um único token entre várias partições.
+
+A seguinte consulta SQL retorna o estado do token ativo mais recente por usuário no Snowflake:
+
+```sql
+WITH latest_token_state AS (
+  SELECT *,
+    ROW_NUMBER() OVER (
+      PARTITION BY PUSH_TOKEN, USER_ID, APP_ID
+      ORDER BY COALESCE(TIME_MS, TIME * 1000) DESC
+    ) AS rn
+  FROM USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE
+)
+SELECT
+  PUSH_TOKEN, USER_ID, EXTERNAL_USER_ID, PUSH_TOKEN_DEVICE_ID,
+  PUSH_TOKEN_STATE_CHANGE_TYPE, PUSH_TOKEN_FOREGROUND_PUSH_DISABLED,
+  TIME_MS, PLATFORM, APP_ID
+FROM latest_token_state
+WHERE rn = 1
+  AND PUSH_TOKEN_STATE_CHANGE_TYPE != 'remove';
+```
+
 {% endapi %}
