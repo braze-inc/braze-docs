@@ -1,10 +1,10 @@
 ## 前提条件
 
-このチュートリアルを開始する前に、Braze SDKが最低バージョン要件を満たしていることを確認してください。
+このチュートリアルを始める前に、Braze SDKが最低バージョン要件を満たしていることを確認せよ：
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
-## スウィフトSDKのバナーの表示
+## Swift SDKのバナーを表示する
 
 {% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Displaying Banners Swift" %}
 
@@ -118,39 +118,39 @@ final class BannerViewController: UIViewController {
 ```
 
 !!step
-lines-AppDelegate.swift=14
+lines-=14AppDelegate.swift
 
 #### 1\.デバッグを有効にする(オプション)
 
 開発中のトラブルシューティングを容易にするために、デバッグを有効にすることを検討してください。
 
 !!step
-lines-AppDelegate.swift=20
+行AppDelegate.swift数-=20
 
 #### 2\.配置を更新する
 
-Braze SDKを初期化した後、`call requestBannersRefresh(placementIds: ["PLACEMENT_ID"])` を実行して、それぞれのセッションの先頭でバナーの内容を更新します。
+Braze SDKを初期化した後、各セッションの開始時に`call requestBannersRefresh(placementIds: ["PLACEMENT_ID"])`バナーコンテンツを更新する。
 
 !!step
-lines-BannerViewController.swift=19-37
+行BannerViewController.swift番号19-37
 
 #### 3\.バナーを初期化し、コールバックを提供する
 
-BrazeオブジェクトとプレイスメントID で`BrazeBannerUI.BannerUIView` インスタンスを作成し、`processContentUpdates` コールバックを指定してバナーを非表示にし、提供されたコンテンツの高さに基づいてその高さのトレーニングt を更新します。
+Brazeオブジェクトと配置IDでインスタンス`BrazeBannerUI.BannerUIView`を作成し、提供されたコンテンツの高さに基づいてバナーを表示し、その高さ制約を更新する`processContentUpdates`コールバックを提供する。
 
 !!step
-lines-BannerViewController.swift=38-40
+行BannerViewController.swift-=38-40
 
-#### 4. 自動レイアウト設定を有効にするtsトレーニング
+#### 4. オートレイアウトの制約のイネーブルメント
 
-デフォルトでバナービューを非表示にしてから、マスク変換の自動サイズ変更を無効にして、自動レイアウト設定のトレーニングts を有効にします。
+デフォルトでバナービューを非表示にし、自動レイアウトのイネーブルメントを有効にするために自動リサイズマスクの変換を無効にする。
 
 !!step
-lines-BannerViewController.swift=43-58
+行BannerViewController.swift番号43-58
 
-#### 5. アンカーの内容と高さの設定トレーニングts
+#### 5. アンカーコンテンツを設定し、高さの制約を適用する
 
-Auto Layout を使用してメインコンテンツを上に固定し、その下にバナービューを配置します。バナーの先頭、末尾、および底辺を安全領域に固定し、内容がs 読み込むのときに更新d になる`0` の最初の高さcons トレーニングt を設定します。
+メインコンテンツをオートレイアウトで最上部に固定し、バナービューをその直下に配置する。バナーの上端、下端、および両端を安全領域に固定する。初期の高さ制約を設定し、コンテンツを読み込む際に更新される`0`ようにする。
 
 {% endscrolly %}
 {% endtab %}
@@ -249,7 +249,7 @@ struct BannerSwiftUIView: View {
 ```
 
 !!step
-lines-AppDelegate.swift=13
+行AppDelegate.swift数-=13
 
 #### 1\.デバッグを有効にする(オプション)
 
@@ -260,42 +260,42 @@ lines-AppDelegate.swift=19
 
 #### 2\.配置を更新する
 
-Braze SDKを初期化した後、`requestBannersRefresh(placementIds: ["PLACEMENT_ID"])` を呼び出して、それぞれのセッションの先頭でバナーの内容を更新します。
+Braze SDKを初期化した後、各セッションの開始時にバナーコンテンツを更新するために\``requestBannersRefresh(placementIds: ["PLACEMENT_ID"])`refresh`を呼び出す。
 
 !!step
-lines-BannerSwiftUIView.swift=1-46
+行BannerSwiftUIView.swift番号-=1-46
 
-#### 3\.ビューコンポーネントの作成
+#### 3\.ビューコンポーネントを作成する
 
-使用可能なバナーを表示し、必要に応じて主なアプリ内容を含む再利用可能なSwiftUI ビューコンポーネントを作成します。
-
-!!step
-lines-BannerSwiftUIView.swift=36-43
-
-#### 4. 利用可能なバナーのみ表示
-
-SDKが初期化され、バナーコンテンツがそのユーザーに存在する場合にのみ、`BrazeBannerUI.BannerView` を表示しようとします。`.onAppear`では、`getBanner(for:placementID)`を呼び出して`hasBannerForPlacement`の状態を設定します。
+利用可能なバナーを表示し、必要に応じてメインアプリコンテンツを含む、再利用可能なSwiftUIビューコンポーネントを作成する。
 
 !!step
-lines-BannerSwiftUIView.swift=17-32
+行BannerSwiftUIView.swift番号36-43
 
-#### 5. sを読み込むした後、`BannerView`のみを表示する
+#### 4. 利用可能なバナーのみを表示する
 
-UI の空白を回避するには、バナーが存在し、SDKが初期化されている場合にのみ`BrazeBannerUI.BannerView` を表示します。
+SDKが初期化され、かつそのユーザー向けのバナーコンテンツが存在する場合にのみ`BrazeBannerUI.BannerView`表示を試みる。において`.onAppear`、を呼び出して`getBanner(for:placementID)`の状態`hasBannerForPlacement`を設定する。
 
 !!step
-lines-BannerSwiftUIView.swift=23-32
+行BannerSwiftUIView.swift番号-=17-32
 
-#### 6. バナーの高さをダイナミックに更新
+#### 5. 読み込みが終わってから`BannerView`表示する
 
-`processContentUpdates` コールバックを使用して、s を読み込むするとすぐにバナーの内容の高さを取得します。SwiftUI ステート(`contentHeight`) をアップデートし、指定された高さを使用してly a `.frame(height:)` cons トレーニングt をアプリします。
+UIに空白部分が生じないように、バナーが存在し、かつSDKが初期化されている場合にのみ`BrazeBannerUI.BannerView`表示する。
+
+!!step
+行BannerSwiftUIView.swift番号23-32
+
+#### 6. バナーの高さをダイナミックに更新する
+
+コール`processContentUpdates`バックを使って、バナーのコンテンツの高さを読み込みが完了次第取得する。SwiftUIのステートを更新し、指定された高さを使って`contentHeight`制約`.frame(height:)`を適用する。
 
 !!step
 lines-BannerSwiftUIView.swift=34
 
 #### 7. バナーの高さを制限する
 
-バナーの高さが上限を超えないようにするには、`.frame(height: min(contentHeight, 80))` 修飾子をアプリします。これにより、バナーのコンテンツに関係なくUI の視覚的なバランスが維持されます。
+バナーが最大の高さを超えないようにするには、修飾`.frame(height: min(contentHeight, 80))`子を使う。これにより、バナーの内容に関わらず、UIの視覚的なバランスが保たれる。
 
 {% endscrolly %}
 {% endtab %}
