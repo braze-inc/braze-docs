@@ -1,6 +1,6 @@
 ---
 nav_title: 여러 피드
-article_title: iOS용 여러 콘텐츠 카드 피드 사용
+article_title: iOS용 여러 콘텐츠 카드 피드를 사용하세요
 platform: iOS
 page_order: 6
 description: "이 참조 문서에서는 iOS 애플리케이션에서 여러 콘텐츠 카드 피드를 구현하는 방법을 다룹니다."
