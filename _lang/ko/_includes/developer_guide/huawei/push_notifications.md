@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## 푸시 알림 설정하기
+## 푸시 알림 설정
 
 [Huawei](https://huaweimobileservices.com/)에서 제조한 최신 휴대폰에는 Google의 Firebase 클라우드 메시징(FCM) 대신 푸시 전송에 사용되는 서비스인 Huawei 모바일 서비스(HMS)가 탑재되어 있습니다.
 
@@ -85,13 +85,13 @@ class CustomPushService: HmsMessageService() {
 
 ### 4단계: 전경 알림 처리
 
-기본값으로 앱이 포그라운드에 있는 동안 푸시 알림이 도착하면 Huawei에서 자동으로 푸시 알림을 표시합니다. 분석 추적, 딥링크 처리 및 커스텀 처리를 위해 Braze가 푸시 알림 페이로드를 처리하도록 하려면 `HmsMessageService.onMessageReceived` 메서드 내에서 수신 푸시 데이터를 Braze로 라우팅하세요.
+기본값으로 앱이 전경에 있을 때 푸시 알림이 도착하면 Huawei는 이를 자동으로 표시합니다. Braze가 푸시 알림 페이로드를 처리하도록 하려면(분석 추적, 딥링크 처리 및 커스텀 처리를 위해), `HmsMessageService.onMessageReceived`메서드 내에서 수신 푸시 데이터를 Braze로 라우팅하십시오.
 
-`BrazeHuaweiPushHandler.handleHmsRemoteMessageData` 으로 전화하면 Braze는 페이로드가 Braze 푸시 알림인지 확인하고, 푸시 알림인 경우 알림을 생성하여 표시합니다. 자세한 내용은 Android 푸시 알림 설명서에서 [포그라운드 알림 처리하기를]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) 참조하세요.
+호출 시`BrazeHuaweiPushHandler.handleHmsRemoteMessageData`, Braze는 페이로드가 Braze 푸시 알림인지 판단하고, 해당되는 경우 알림을 생성하여 표시합니다. 자세한 내용은 Android 푸시 알림 설명서의 ['전경 알림 처리'를]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) 참조하십시오.
 
-전체 예제는 Braze Android 소프트웨어 개발 키트 설명서의 [Huawei 핸들러 참조를 참조](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-huawei-push-handler/index.html) 하세요.
+완전한 예시는 Braze Android 소프트웨어 개발 키트의 [Huawei 핸들러 참조를](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-huawei-push-handler/index.html) 참조하십시오.
 
-### 5단계: 푸시 알림 테스트(선택 사항)
+### 5단계: 푸시 알림 테스트하기 (선택 사항)
 
 지금까지 Braze 대시보드에서 새 Huawei Android 앱을 생성하고, Huawei 개발자 자격 증명으로 앱을 구성한 후 Braze 및 Huawei SDK를 앱에 통합했습니다.
 
@@ -103,7 +103,7 @@ class CustomPushService: HmsMessageService() {
 
 캠페인 이름을 지정한 후 푸시 플랫폼으로 **Android 푸시**를 선택합니다.
 
-![사용 가능한 푸시 플랫폼을 표시하는 캠페인 생성 작성기입니다.]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
+![사용 가능한 푸시 플랫폼을 표시하는 캠페인 생성 컴포저.]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
 
 다음으로, 제목과 메시지와 함께 푸시 캠페인을 작성합니다.
 
@@ -111,15 +111,15 @@ class CustomPushService: HmsMessageService() {
 
 **테스트** 탭에서 [`changeUser(USER_ID_STRING)` 메서드]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id)를 사용하여 앱에서 설정한 사용자 ID를 입력하고 **테스트 보내기**를 클릭하여 테스트 푸시를 보냅니다.
 
-![캠페인 작성기의 테스트 탭에서 사용자 ID를 제공하고 '개별 사용자 추가' 필드에 입력하면 자신에게 테스트 메시지를 보낼 수 있습니다.]({% image_buster /assets/img/huawei/huawei-test-send.png %})
+![캠페인 생성 편집기의 테스트 탭에서는 사용자 ID를 입력하고 "개별 사용자 추가" 필드에 입력하여 본인에게 테스트 메시지를 보낼 수 있음을 보여줍니다.]({% image_buster /assets/img/huawei/huawei-test-send.png %})
 
 이 시점에서 Braze로부터 Huawei(HMS) 기기로 테스트 푸시 알림을 받습니다.
 
-#### 5.3단계: Huawei 세그먼트 세분화 설정(선택 사항)
+#### 5.3단계: 화웨이 세분화 설정 (선택 사항)
 
 Braze 대시보드의 Huawei 앱은 Android 푸시 플랫폼을 기반으로 빌드되었으므로 모든 Android 사용자(Firebase 클라우드 메시징 및 Huawei 모바일 서비스)에게 푸시를 보내거나 특정 앱으로 캠페인 오디언스를 세분화할 수 있는 유연성을 지원합니다.
 
-화웨이 앱에만 푸시를 보내려면 [새 세그먼트 만들기]({{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform) ]를 클릭하고 **앱** 섹션에서 화웨이 앱을 선택합니다.
+화웨이 앱에만 푸시를 보내려면, [새 세그먼트를]({{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform) 생성하고 **앱** 섹션에서 화웨이 앱을 선택하세요.
 
 ![]({% image_buster /assets/img/huawei/huawei-segmentation.png %})
 
