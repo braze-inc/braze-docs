@@ -1,4 +1,4 @@
-## Über Flutter Content-Cards
+## Über Flutter-Content-Cards
 
 Das Braze SDK enthält einen Standard-Kartenfeed, der Ihnen den Einstieg in die Arbeit mit Content-Cards erleichtert. Sie können den Kartenfeed mit der Methode `braze.launchContentCards()` anzeigen. Der im Braze SDK enthaltene Standard-Kartenfeed verarbeitet das gesamte Analytics-Tracking, Ausblendungen und die Darstellung der Content-Cards.
 
@@ -43,10 +43,10 @@ Ein Beispiel finden Sie [main.dart](https://github.com/braze-inc/braze-flutter-s
 ### Schritt 2: Weiterleitung von Content Card-Daten aus der nativen Schicht
 
 {% alert note %}
-Dieser Schritt gilt nur für iOS. Die Daten der Content Card werden automatisch von der Android-Ebene weitergeleitet.
+Dieser Schritt gilt ausschließlich für iOS. Die Daten der Content Card werden automatisch von der Android-Ebene weitergeleitet.
 {% endalert %}
 
-Um die Daten in der Dart-Schicht aus Schritt 1 zu erhalten, fügen Sie den folgenden Code hinzu, um die Content-Card-Daten von der nativen iOS-Schicht weiterzuleiten.
+Um die Daten aus Schritt 1 in der Dart-Ebene zu empfangen, fügen Sie den folgenden Code hinzu, um die Daten der Content-Cards aus der nativen iOS-Ebene weiterzuleiten.
 
 1. Implementieren Sie `contentCards.subscribeToUpdates`, um Content-Cards Updates zu abonnieren. Eine Beschreibung hierzu finden Sie in der Dokumentation [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)).
 
