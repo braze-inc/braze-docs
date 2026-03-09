@@ -1,12 +1,12 @@
 ---
-nav_title: ユーザーIDを設定する
-article_title: Braze SDKでユーザーIDを設定する。
+nav_title: ユーザー IDを設定する
+article_title: Braze SDKを通じてユーザー IDを設定する
 page_order: 1.1
 description: "Braze SDKでユーザーIDを設定する方法を学習する。"
 
 ---
 
-# ユーザーIDを設定する
+# ユーザー IDを設定する
 
 > Braze SDKでユーザーIDを設定する方法を学習する。これは、デバイスやプラットフォームを超えてユーザーを追跡し、[ユーザーデータAPIを通じて]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)ユーザーデータをインポートし、[メッセージングAPIを通じて]({{site.baseurl}}/api/endpoints/messaging/)ターゲットメッセージを送信するための一意の識別子である。ユーザーに固有の ID を割り当てない場合、Braze は代わりに匿名 ID を割り当てますが、あなたが割り当てるまでこれらの機能を使用することはできません。
 
@@ -36,7 +36,7 @@ braze.changeUser(YOUR_USER_ID_STRING);
 
 現行のユーザーの一意のID を**外部ユーザー ID** フィールドに入力してください。通常は、Web サイトから送信されたデータレイヤー変数を使用して入力します。
 
-![Braze アクションタグ構成設定を示すダイアログボックス。設定項目は「タグタイプ」と「外部ユーザーID」だ。]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
+![Braze アクションタグ構成設定を示すダイアログボックス。設定項目には「タグタイプ」と「外部ユーザー ID」が含まれる。]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
 {% endtab %}
 
 {% tab ANDROID %}
@@ -86,7 +86,17 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
+
+{% tab REACT NATIVE %}
+```javascript
+Braze.changeUser("YOUR_USER_ID_STRING");
+```
+{% endtab %}
 {% endtabs %}
+
+{% alert note %}
+トリガー`changeUser()`が呼び出されると、現在のユーザーのセッションを閉じる過程でデータフラッシュが発生する。SDKは新しいユーザーに切り替える前に、前のユーザーに関する保留中のデータを自動的にフラッシュする。したがって、.`changeUser()`を呼び出す前に手動でデータフラッシュを要求する必要はない。
+{% endalert %}
 
 {% alert warning %}
 **ユーザーがログアウトしたときに、静的なデフォルト ID を割り当てたり、`changeUser()` を呼び出したりしないでください。**そうすることで、共有デバイスに以前ログインしたユーザーを再度エンゲージメントすることができなくなります。その代わりに、すべてのユーザーIDを別々に管理し、アプリのログアウト・プロセスで以前にログインしたユーザーに切り替えることができるようにする。新しいセッションが始まると、Braze は新しくアクティブになったプロファイルのデータを自動的に更新します。
@@ -149,24 +159,35 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 }
 ```
 {% endtab %}
+
+{% tab react native %}
+```javascript
+Braze.addAlias("ALIAS_NAME", "ALIAS_LABEL");
+```
+{% endtab %}
 {% endtabs %}
 
 ## IDネーミングのベストプラクティス {#naming-best-practices}
 
 ユーザー ID は、[汎用一意識別子 (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier) 標準を使用して作成することをおすすめします。UUID は、ランダムで適切に分散された 128 ビットの文字列です。
 
-あるいは、既存の一意識別子 (名前やメールアドレスなど) をハッシュ化してユーザー ID を生成することもできます。その場合は、必ず[SDK認証を]({{site.baseurl}}/developer_guide/authentication/)実装し、ユーザーの偽装やなりすましを防いでほしい。
+あるいは、既存の一意識別子 (名前やメールアドレスなど) をハッシュ化してユーザー ID を生成することもできます。その場合は、必ず[SDK認証を]({{site.baseurl}}/developer_guide/sdk_integration/authentication/)実装し、ユーザーの偽装やなりすましを防いでほしい。
+
+{% alert warning %}
+ユーザー IDには推測されやすい値や連番を使用してはならない。これにより、組織が悪意のある攻撃やデータ漏洩に晒される可能性がある。
+
+セキュリティを強化するには、[SDK認証]({{site.baseurl}}/developer_guide/sdk_integration/authentication/)を使用する。
+{% endalert %}
 
 最初からユーザーIDに正しい名前をつけることが重要だが、将来的にはいつでも [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/)エンドポイントを使って変更することができる。
 
-| おすすめ | 推奨しない |
+| 推奨されないIDの種類 | 例として推奨されない |
 | ------------ | ----------- |
-| 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
-| 8c0b3728-7fa7-4c68-a32e-12de1d3ed2d5 | Anna@email.com |
-| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | CompanyName-1-2-19 |
-| 2d9e96a1-8f15-4eaf-bf7b-eb8c34e25962 | jon-doe-1-2-19 |
+| ユーザーが閲覧可能なプロファイル ID またはユーザー名 | JonDoe829525552 |
+| 電子メールアドレス | Anna@email.com |
+| 自動増分するユーザー ID | 123 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
-ユーザーIDの作成方法の詳細を共有することは、悪意のある攻撃やユーザーデータの持ち出しに組織をさらす可能性があるため、避けること。
+ユーザー ID の作成方法に関する詳細を共有することは避けるべきだ。これは組織を悪意のある攻撃やデータ流出の危険に晒す可能性があるからだ。
 {% endalert %}
