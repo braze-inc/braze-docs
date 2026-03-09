@@ -6,7 +6,7 @@ page_type: reference
 description: "Aprende a utilizar varias características de Braze para potenciar tus casos de uso de segmentación basada en cuentas B2B."
 ---
 
-# Configura la segmentación basada en cuentas
+# Configurar la segmentación basada en cuentas
 
 > Esta página muestra cómo utilizar varias características de Braze para potenciar tus casos de uso de segmentación basada en cuentas B2B.
 
@@ -108,7 +108,7 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Opción 2: Cuando utilices fuentes conectadas para tus objetos de negocio
 
-Para obtener información básica sobre cómo utilizar fuentes conectadas en la segmentación, consulta [Extensiones de segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Utiliza las plantillas que se tratan en [Al utilizar catálogos](#option-1-when-using-catalogs-for-your-business-objects) para inspirarte sobre cómo dar formato a las tablas de origen, ya que puedes darles el formato que quieras.
+Para obtener información básica sobre cómo utilizar fuentes conectadas en la segmentación, consulta [Extensiones]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) de [segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Utiliza las plantillas que se describen en [Cuando utilices catálogos](#option-1-when-using-catalogs-for-your-business-objects) como fuente de inspiración para dar formato a las tablas de origen, ya que puedes darles el formato que desees.
 
 ## Utilizar tu extensión basada en cuentas en un segmento
 
