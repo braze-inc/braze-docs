@@ -1,5 +1,5 @@
 ---
-nav_title: Braze アクション ディープリンク
+nav_title: Brazeアクションのディープリンク
 article_title: Braze Actions ディープリンク
 page_order: 100
 description: "このリファレンス記事では、Braze Actions ディープリンクを使用して、メッセージングチャネルボタン内でSDKアクションを実行する方法について説明する。"
