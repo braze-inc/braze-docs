@@ -1,7 +1,7 @@
 ---
 nav_title: "DELETE: Eliminar el estado de suscripción por dirección de correo electrónico o número de teléfono"
 article_title: "DELETE: Eliminar estado de suscripción por dirección de correo electrónico o número de teléfono"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 0
 hidden: true
 layout: api_page
@@ -28,7 +28,7 @@ description: "En este artículo se describen los detalles sobre el punto final d
 
 ## Ejemplo de solicitud
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {
