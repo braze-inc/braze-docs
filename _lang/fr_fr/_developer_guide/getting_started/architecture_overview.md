@@ -34,7 +34,7 @@ Tout cela fonctionne ensemble pour créer des interactions réussies entre votre
 
 ## Ingestion de données {#ingestion}
 
-La plateforme Braze s’appuie sur une architecture de flux de données en continu, exploitant Snowflake, Kafka, MongoDB et Redis. Des données provenant de nombreuses sources peuvent être chargées dans Braze grâce au SDK et à l'API. La plateforme est capable de gérer toutes les données en temps réel, quelle que soit leur imbrication ou leur structure. Les données dans Braze sont stockées sur le profil utilisateur. 
+La plateforme Braze s’appuie sur une architecture de flux de données en continu, exploitant Snowflake, Kafka, MongoDB et Redis. Les données provenant de diverses sources peuvent être intégrées à Braze via SDK et API. La plateforme est capable de gérer toutes les données en temps réel, quelle que soit leur imbrication ou leur structure. Les données dans Braze sont stockées sur le profil utilisateur. 
 
 {% alert tip %}
 Braze peut suivre les données d'un utilisateur tout au long de son parcours avec vous, depuis le moment où il est anonyme jusqu'au moment où il est connecté à votre application et connu. Les identifiants d'utilisateur, appelés `external_id`s dans Braze, doivent être définis pour chacun de vos utilisateurs. Ces éléments doivent être immuables et accessibles lorsque l'utilisateur ouvre l'application, vous permettant de suivre vos utilisateurs sur différents appareils et plateformes. Consultez [l'article sur le cycle de vie des utilisateurs]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) pour connaître les bonnes pratiques.
@@ -46,38 +46,38 @@ Braze peut suivre les données d'un utilisateur tout au long de son parcours ave
 Cette base de données de profil utilisateur centrée sur la personne permet une vitesse interactive en temps réel. Braze pré-calcule les valeurs lorsque les données arrivent et stocke les résultats dans notre format de document léger pour une récupération rapide. Et comme la plateforme a été conçue de cette manière dès le départ, elle est idéale pour la plupart des contextes de communication, en particulier en combinaison avec d'autres concepts de données tels que le contenu connecté, les catalogues de produits et les attributs imbriqués.
 {% endalert %}
 
-### Ventilation des sources de données
+### Répartition des sources de données
 
-Braze utilise différents systèmes de stockage de données pour diverses fonctionnalités. Il est important de comprendre quelles fonctionnalités utilisent quelles sources de données pour la gestion des données et la résolution des problèmes.
+Braze utilise différents systèmes de stockage de données pour diverses fonctionnalités. Il est essentiel de comprendre quelles fonctionnalités utilisent quelles sources de données pour la gestion des données et la résolution des problèmes.
 
 #### Fonctionnalités basées sur MongoDB
-- Événements personnalisés (suivis par le SDK et l'API)
+- Événements personnalisés (suivis par SDK et API)
 - Attributs personnalisés
 - Profils utilisateur
 - Événements d’achat
 - La plupart des fonctionnalités de segmentation et de ciblage
 
-#### Fonctionnalités alimentées par Snowflake
+#### Fonctionnalités optimisées par Snowflake
 - [Segment Extensions SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)
-- [Predictive Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)
-- [Chemins personnalisés]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/) et [variante personnalisée]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
-- [Recommandations d'articles personnalisées par l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)
-- [Estimation du taux d'ouverture réel]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (n'utilise pas les événements personnalisés)
+- [Suite de prédiction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)
+- [Chemins personnalisés]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/) et [variantes personnalisées]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
+- [Recommandations de personnalisation d'articles par l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)
+- [Taux d’ouverture réel estimé]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (n'utilise pas de custom events)
 
 {% alert important %}
-**Considérations relatives à la suppression des données :** Les événements personnalisés sont stockés dans MongoDB et sont distincts des données de Snowflake. Si vous devez supprimer des données d'événements personnalisés erronées, vous devez les traiter dans MongoDB. Les fonctionnalités alimentées par Snowflake (comme les extensions de segments SQL et d'autres fonctionnalités alimentées par Snowflake) utilisent des données provenant de Snowflake, qui sont traitées séparément. Le fait de supprimer des données d'un système ne les supprime pas automatiquement de l'autre.
+**Considérations relatives à la suppression des données :** Les événements personnalisés sont stockés dans MongoDB et sont distincts des données Snowflake. Si vous devez supprimer des données d'événements personnalisés erronées, veuillez le faire dans MongoDB. Les fonctionnalités optimisées par Snowflake (telles que les extensions de segments SQL et d'autres fonctionnalités optimisées par Snowflake) utilisent les données de Snowflake, qui sont traitées séparément. La suppression de données d'un système ne les supprime pas automatiquement de l'autre.
 {% endalert %}
 
-### Sources de données dorsales via l'API de Braze
+### Sources de données backend via l'API Braze
 Braze peut extraire des données des bases de données des utilisateurs, des transactions hors ligne et des entrepôts de données par le biais de notre [API REST]({{site.baseurl}}/api/endpoints/user_data). 
 
-### Sources de données frontales via le SDK de Braze
+### Sources de données frontales via le SDK Braze
 Braze capture automatiquement des données first-party à partir de sources de données frontales, telles que les appareils des utilisateurs, par le biais du [SDK Braze]({{site.baseurl}}/user_guide/getting_started/web_sdk/). Le SDK gère les nouveaux utilisateurs (anonymes) et gère les données de leur profil utilisateur tout au long de leur cycle de vie. 
 
 ### Intégrations partenaires
 Braze compte plus de 150 partenaires technologiques, que nous appelons « Alloys ». Vous pouvez compléter vos flux de données par un réseau solide de [technologies interopérables et d'API de données.]({{site.baseurl}}/partners/home) 
 
-### Connexion directe à l'entrepôt par l'intermédiaire de Braze Cloud Data Ingestion
+### Connexion directe à l'entrepôt via Braze Cloud d'ingestion de données
 Vous pouvez transmettre des données clients de votre entrepôt de données à la plateforme via [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) en quelques minutes seulement, ce qui vous permet de synchroniser les attributs, les événements et les achats pertinents des utilisateurs. L'intégration de l'ingestion de données Cloud prend en charge des structures de données complexes, y compris des JSON imbriqués et des tableaux d'objets.
 
 L'ingestion de données Cloud peut synchroniser les données de Snowflake, Amazon Redshift, Databricks et Google BigQuery.
@@ -105,7 +105,7 @@ Les campagnes déclenchées par API sont idéales pour des cas d'utilisation tra
 Braze vous permet d'activer ou de désactiver à distance des fonctionnalités pour une sélection d'utilisateurs au moyen de [indicateurs de fonctionnalité]({{site.baseurl}}/developer_guide/feature_flags/). Cela permet à vos marketeurs de cibler le bon segment de votre base d'utilisateurs avec des messages pour des fonctionnalités que vous n'avez pas encore déployées à l'ensemble de votre audience. Mais plus que cela, les drapeaux de fonctionnalité peuvent être utilisés pour activer et désactiver une fonctionnalité en production sans déploiement de code supplémentaire ni mises à jour de l'App Store. Cela vous permet de déployer de nouvelles fonctionnalités en toute sécurité et en toute confiance.
 
 ## Personnalisation {#personalization}
-La couche de personnalisation représente la capacité à fournir du contenu dynamique dans vos messages. En utilisant Liquid, un langage de personnalisation largement utilisé, votre équipe peut extraire dynamiquement des données existantes pour afficher le message adapté à chaque destinataire. En outre, vous pouvez insérer toute information accessible sur votre serveur web ou via l'API directement dans les messages que vous envoyez, comme les notifications push ou les e-mails, en utilisant le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Le contenu connecté s’appuie sur Liquid et utilise une syntaxe que vous connaissez déjà.
+La couche de personnalisation représente la capacité à fournir du contenu dynamique dans vos messages. En utilisant Liquid, un langage de personnalisation largement utilisé, votre équipe peut extraire dynamiquement des données existantes pour afficher le message adapté à chaque destinataire. De plus, vous pouvez insérer toute information accessible sur votre serveur web ou via une API directement dans les messages que vous envoyez, tels que les notifications push ou les e-mails, en utilisant [le contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Le contenu connecté s’appuie sur Liquid et utilise une syntaxe que vous connaissez déjà.
 
 De plus, étant donné que ce contenu dynamique est programmable, les marketeurs peuvent inclure des valeurs calculées, des réponses d'autres appels ou des éléments du catalogue de produits. Après avoir mis en place ces systèmes lors de la mise en œuvre, votre équipe marketing pourra le faire avec peu ou pas de soutien des équipes techniques. 
 
