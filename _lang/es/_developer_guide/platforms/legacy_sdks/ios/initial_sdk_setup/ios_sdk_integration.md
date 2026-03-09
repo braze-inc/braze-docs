@@ -291,7 +291,7 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### Paso 2: Soporte para notificaciones remotas
-En la pestaña **Capacidades de Firma & **, añade la compatibilidad con **Modos en segundo plano** y selecciona **Notificaciones remotas** para empezar a admitir notificaciones push remotas originadas en Braze.<br><br>![Firma & Capacidades]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+En la pestaña **Capacidades& de firma**, añade la compatibilidad con **Modos de fondo** y selecciona **Notificaciones remotas** para comenzar a admitir las notificaciones push remotas procedentes de Braze.<br><br>![Capacidades& de firma]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
 ###### Paso 3: Gestión de notificaciones remotas
 El SDK de Braze puede gestionar notificaciones push remotas que se originen en Braze. Reenvía las notificaciones remotas a Braze; el SDK ignorará automáticamente las notificaciones push que no procedan de Braze. Añade el siguiente método a tu archivo `BrazeManager.swift` en la extensión de notificaciones push.
