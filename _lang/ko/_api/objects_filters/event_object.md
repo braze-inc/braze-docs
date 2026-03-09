@@ -46,6 +46,10 @@ description: "이 참고 문서에서는 이벤트 객체의 정의와 이벤트
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
 - [ISO 8601 시간 코드](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+일부 식별자 쌍은 단일 요청에서 함께 사용할 수 없습니다. `email`와 `phone`이 모두 제공되면 `email`가 `phone`보다 우선합니다. 자세한 내용은 [식별자 해석]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution)을 참조하십시오.
+{% endalert %}
+
 #### 기존 프로필만 업데이트
 
 Braze에서 기존 사용자 프로필만 업데이트하려면 요청 본문에 `true` 값과 함께 `_update_existing_only` 키를 전달해야 합니다. 이 값을 생략하면 `external_id` 주소가 없는 경우 Braze에서 새 사용자 프로필을 생성합니다.
@@ -80,7 +84,7 @@ Braze에서 기존 사용자 프로필만 업데이트하려면 요청 본문에
 - `event_name`
 
 {% alert important %}
-예약된 키를 커스텀 이벤트 속성정보로 사용하면 `/users/track` 엔드포인트로 요청을 보낼 때 API 오류가 발생합니다.
+예약된 키를 커스텀 이벤트 속성 이름으로 사용하면 `/users/track` 엔드포인트에 요청을 보낼 때 API 오류가 발생합니다.
 {% endalert %}
 
 ### 이벤트 속성 지속성
@@ -89,7 +93,7 @@ Braze에서 기존 사용자 프로필만 업데이트하려면 요청 본문에
 
 #### 이벤트 예제 요청
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
