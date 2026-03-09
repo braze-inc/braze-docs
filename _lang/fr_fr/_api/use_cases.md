@@ -35,7 +35,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishwar
 }'
 ```
 
-Après l'envoi de cette charge utile, la réponse confirme que Braze a réussi à supprimer les trois collections du catalogue de vaisselle de Kitchenerie.
+Après l'envoi de cette charge utile, la réponse confirme que Braze a supprimé avec succès les trois collections du catalogue de vaisselle de Kitchenerie.
 
 ```json
 {
@@ -53,7 +53,7 @@ Chez MovieCanon, une entreprise de services de streaming, l'équipe de développ
 - delilah.york@example.com
 - evergreen.rebecca@example.com
 
-Pour accomplir cette tâche, l'équipe de développeurs a besoin d'une clé API avec l'autorisation `email.spam.remove` pour utiliser l'endpoint `/email/spam/remove`. Cet endpoint supprime les adresses e-mail de la liste des spams de Braze et de la liste des spams gérée par le fournisseur de messagerie de MovieCanon.
+Pour accomplir cette tâche, l'équipe de développeurs a besoin d'une clé API avec `email.spam.remove`l'autorisation d'utiliser `/email/spam/remove`l'endpoint. Ce endpoint supprime les adresses e-mail de la liste de spam de Braze et de la liste de spam gérée par le fournisseur de messagerie électronique de MovieCanon.
 
 Pour envoyer cette demande, incluez soit une adresse e-mail sous forme de chaîne, soit un tableau de jusqu'à 50 adresses e-mail à modifier. Comme le nombre des e-mails à supprimer est inférieur à 50, MovieCanon peut accomplir cette tâche avec le corps de requête suivant :
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Après l'envoi réussi de cette charge utile, cette réponse confirme que Braze a supprimé les e-mails de la liste des spams de MovieCanon.
+Après avoir envoyé cette charge utile avec succès, cette réponse confirme que Braze a supprimé les e-mails de la liste de spam de MovieCanon.
 
 ```json
 {
@@ -94,7 +94,7 @@ Pour la première tâche d'audit des canvas, utilisez l’[endpoint `/canvas/lis
   		"name": "PatientReminder_FluShot_2020",
   		"tags": {
         "flu_shots", "patienthealth", "2020"
-      },
+      }
   	},
   	{
   		"id": "canvas_identifier_2",
@@ -102,7 +102,7 @@ Pour la première tâche d'audit des canvas, utilisez l’[endpoint `/canvas/lis
   		"name": "PatientReminder2_FluShot_2020",
   		"tags": {
         "flu_shots", "patienthealth", "reminder", "2020"
-      },
+      }
   	},
     ... (more Canvases)
   ],
@@ -113,8 +113,8 @@ Pour la première tâche d'audit des canvas, utilisez l’[endpoint `/canvas/lis
 
 Passons à la tâche suivante. Celle-ci consiste à afficher le résumé analytique du premier canvas de la liste des canvas de Siege Valley Health. Pour ce faire, nous utiliserons l’[endpoint `/canvas/data_summary`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) avec les paramètres de requête suivants :
 
-* `canvas_id` : "canvas_identifier_2"
-* `ending_at` : 2023-07-10T23:59:59
+* `canvas_id`: "canvas_identifier_2"
+* `ending_at` : 2023-07-10T23:59:59
 * `starting_at` : 2020-07-10T23:59:59
 
 Voici une demande d'exemple :
@@ -126,7 +126,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## Vérifier les campagnes et canvas planifiés à venir
 
-La période la plus chargée de l'année approche à grands pas pour Flash & Thread, une marque de retail qui vend des vêtements et des produits de beauté en ligne et en magasin. Son équipe marketing souhaite vérifier les campagnes et les canvas à venir depuis le tableau de bord de Braze avant le 31 mars 2024 à 12 heures. Cette tâche peut être effectuée au moyen de l’[endpoint `/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/).
+La période la plus intense de l'année approche à grands pas pour Flash&Thread, une marque de retailing qui commercialise des vêtements et des produits de beauté en ligne et en magasin. Son équipe marketing souhaite vérifier les campagnes et les canvas à venir depuis le tableau de bord de Braze avant le 31 mars 2024 à 12 heures. Cette tâche peut être effectuée au moyen de l’[endpoint `/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/).
 
 Voici la demande d'exemple :
 
@@ -135,11 +135,11 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-Cet endpoint renvoie la liste des campagnes et des toiles à venir. À partir de là, l'équipe marketing peut confirmer sa liste de messages en se référant au champ `name` pour les campagnes et les Canvases dans la réponse.
+Ce endpoint renvoie la liste des campagnes et des canevas à venir. À partir de là, l'équipe marketing peut confirmer sa liste de messages en se référant au champ `name` pour les campagnes et les Canvases dans la réponse.
 
 ## Affichage d'un ancien centre de préférences
 
-PoliterWeekly est un magazine numérique dont les abonnés sont joignables par e-mail. Dans le but de mieux comprendre le parcours utilisateur de ses abonnés, l'équipe marketing souhaite examiner les détails du centre de préférences de PoliterWeekly pour vérifier quand il a été créé et mis à jour pour la dernière fois.
+PoliterWeekly est un magazine numérique dont les abonnés sont joignables par e-mail. Afin de mieux appréhender le parcours utilisateur des utilisateurs abonnés, l'équipe marketing souhaite examiner les détails du centre de préférences de PoliterWeekly pour vérifier quand il a été créé et quand il a été mis à jour pour la dernière fois.
 
 En utilisant l’[endpoint `/preference_center/v1/{preferenceCenterExternalID}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/), l'équipe marketing n'a qu'à insérer l'ID externe du centre de préférences en tant que paramètre de chemin, ce qui ressemblerait à ceci :
 
@@ -182,7 +182,7 @@ Chez CashBlastr, l'objectif principal est de simplifier la façon dont les indiv
 
 Pour envoyer une demande avec le [`/sms/invalid_phone_numbers/remove` point de terminaison]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/), les numéros de téléphone doivent être dans un tableau de chaînes en [e.164 format](https://en.wikipedia.org/wiki/E.164), avec jusqu'à 50 numéros de téléphone par demande. Comme la liste ne dépasse pas 50 numéros de téléphone, voici un exemple du corps de la requête que l'équipe de développement de CashBlastr enverrait :
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
@@ -209,7 +209,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 
-Cet endpoint répertorie également les statuts du groupe d'abonnement d'un utilisateur pour l'e-mail. Utilisez-le pour connaître le statut du groupe d'abonnement de plusieurs utilisateurs.
+Ce endpoint répertorie également les statuts des groupes d'abonnement d'un utilisateur pour les e-mails. Veuillez l'utiliser pour consulter le statut du groupe d'abonnement pour plusieurs utilisateurs.
 
 ## Vérification d'un modèle HTML pour la messagerie électronique
 
