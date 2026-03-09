@@ -18,7 +18,7 @@ O rastreamento de desinstalação na Braze fornece os seguintes detalhes:
 2. Estatísticas de desinstalação em nível de campanha em um gráfico de série temporal na página **Detalhes da campanha** de uma campanha específica. Essa estatística especifica o número de destinatários da campanha que desinstalam a cada dia.
 
 {% alert note %}
-Você deve optar por desinstalar o rastreamento no seu dashboard da Braze. Este recurso está disponível para apps no iOS, Android e Fire OS.
+Você deve optar por desativar o rastreamento no seu dashboard da Braze. Este recurso está disponível para apps no iOS, Android e Fire OS.
 {% endalert %}
 
 ## Como funciona?
@@ -63,7 +63,7 @@ As estatísticas de desinstalação de campanhas estão localizadas em uma pági
 
 ### Como funciona?
 
-O Braze rastreia as desinstalações observando quando as mensagens push enviadas aos dispositivos dos usuários retornam um sinal do Firebase Cloud Messaging (FCM) ou do serviço de Notificações por Push da Apple (APNs) de que o app não está mais instalado. Se você ativar o Rastreamento Global de Desinstalação para um app, a Braze envia uma mensagem push silenciosa diária para os usuários para detectar se eles desinstalaram. A Braze envia este push "silencioso" para todos os usuários (a menos que o usuário tenha desativado os pushes silenciosos nas configurações do app); o push não aparece para os usuários. Se a Braze detectar que um usuário desinstalou, nós:
+O Braze rastreia as desinstalações observando quando as mensagens push enviadas aos dispositivos dos usuários retornam um sinal do Firebase Cloud Messaging (FCM) ou do serviço de Notificações por Push da Apple (APNs) de que o app não está mais instalado. Se você ativar o Rastreamento Global de Desinstalação para um app, a Braze envia uma mensagem push silenciosa diária para usuários para detectar se eles desinstalaram. A Braze envia este push "silencioso" para todos os usuários (a menos que o usuário tenha desativado os pushes silenciosos nas configurações do app); o push não aparece para os usuários. Se a Braze detectar que um usuário desinstalou, nós:
 
 * Aumenta a contagem total de desinstalações do app em um.
 * Aumenta em um a contagem de desinstalações para cada campanha que o usuário recebeu com êxito nas últimas 24 horas.
@@ -87,5 +87,5 @@ Por razões de privacidade, os provedores de push da Braze podem revogar tokens 
 
 A diferença é esperada. 
 
-A Apple usa um cronograma aleatório para atrasar a notificação quando um token push se torna inválido, o que significa que mesmo após um usuário desinstalar um app, o APNs pode continuar a retornar respostas bem-sucedidas para notificações push por um período de tempo. Esse atraso é intencional e projetado para proteger a privacidade do usuário. Nenhum bounce ou falha será relatado até que o APNs retorne um `410` status para um token inválido.
+A Apple usa um cronograma aleatório para atrasar a notificação quando um token push se torna inválido, o que significa que mesmo após um usuário desinstalar um app, o APNs pode continuar a retornar respostas bem-sucedidas para notificações push por um período de tempo. Esse atraso é intencional e projetado para proteger a privacidade do usuário. Nenhum bounce ou falha será relatado até que o APNs retorne um status `410` para um token inválido.
 
