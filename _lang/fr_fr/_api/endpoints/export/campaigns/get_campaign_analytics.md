@@ -222,7 +222,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 }
 ```
 
-Les types de messages possibles sont `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push` et `web_push`. Tous les types de messages des notifications push auront les mêmes statistiques que celles d’`android_push`.
+Les types de messages possibles sont `email`, `trigger_in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push` et `web_push`. Tous les types de messages des notifications push auront les mêmes statistiques que celles d’`android_push`.
 
 {% alert tip %}
 Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
