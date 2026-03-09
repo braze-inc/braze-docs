@@ -1,6 +1,6 @@
 ---
-nav_title: Seguimiento de sesiones
-article_title: Seguimiento de sesiones para iOS
+nav_title: Sesión de seguimiento
+article_title: Sesión de seguimiento para iOS
 platform: iOS
 page_order: 0
 description: "Este artículo de referencia muestra cómo suscribirte a las actualizaciones de sesión de tu aplicación iOS."
@@ -62,5 +62,5 @@ El valor mínimo de `sessionTimeoutInSeconds` es 1 segundo. El valor predetermin
 
 Para detectar sesiones a través de tu usuario, busca a tu usuario en el panel y navega hasta **Uso de la aplicación** en el perfil de usuario. Puedes confirmar que el seguimiento de sesiones funciona comprobando que la métrica "Sesiones" aumenta cuando esperas que lo haga.
 
-![La sección de uso de la aplicación de un perfil de usuario que muestra el número de sesiones, la última fecha de uso y la primera fecha de uso.]({% image_buster /assets/img_archive/test_session.png %})
+![La sección de uso de aplicaciones de un perfil de usuario que muestra el número de sesiones, la última fecha de uso y la primera fecha de uso.]({% image_buster /assets/img_archive/test_session.png %})
 
