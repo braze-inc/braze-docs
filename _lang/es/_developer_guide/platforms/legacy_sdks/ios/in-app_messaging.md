@@ -1,5 +1,5 @@
 ---
-nav_title: Mensajería dentro de la aplicación
+nav_title: Mensaje dentro de la aplicación
 page_order: 2
 config_only: true
 noindex: true
