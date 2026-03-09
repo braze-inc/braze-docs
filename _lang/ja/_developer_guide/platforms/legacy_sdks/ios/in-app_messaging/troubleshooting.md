@@ -14,7 +14,7 @@ noindex: true
 
 # アプリ内メッセージのトラブルシューティング
 
-## インプレッション
+## インプレッション数
 
 #### インプレッション分析やクリック分析が記録されていない
 
@@ -34,30 +34,30 @@ SDK はセッション開始時に Braze サーバーからアプリ内メッセ
 
 #### メッセージが要求され、返されたかどうかを確認する
 
-1. ダッシュボードに[テストユーザー]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) ]として追加する。
+1. ダッシュボードで自分自身を]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users)[テストユーザー]として追加しろ。
 2. ユーザーを対象としたアプリ内メッセージキャンペーンを設定します。
 3. アプリケーションで新しいセッションが発生することを確認します。
-4. event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) ] を使って、デバイスがセッション開始時にアプリ内メッセージを要求していることを確認する。テストユーザーのセッション開始イベントに関連付けられた SDK リクエストを見つけます。
+4. セッション開始時にデバイスがアプリ内メッセージを要求していることを確認するには、]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab)イベントユーザーログを使用する。テストユーザーのセッション開始イベントに関連付けられた SDK リクエストを見つけます。
   - トリガーされたアプリ内メッセージをリクエストするためのアプリであれば、[**レスポンスデータ**] の [**リクエスト済みレスポンス**] フィールドに `trigger` が表示されます。
   - アプリが元のアプリ内メッセージをリクエストするためのものだった場合、[**レスポンスデータ］**] の [**リクエスト済みレスポンス**] フィールドに `in_app` が表示されます。
-5. event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) ] を使って、正しいアプリ内メッセージがレスポンスデータで返されているかどうかをチェックする。<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
+5. イベントユーザーログを使って、レスポンスデータに正しい]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab)アプリ内メッセージが返されているか確認する。<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 #### リクエストされていないメッセージのトラブルシューティング
 
 アプリ内メッセージがリクエストされていない場合、アプリ内メッセージはセッション開始時にリフレッシュされるため、アプリがセッションを正しくトラッキングしていない可能性があります。また、アプリのセッションタイムアウトセマンティクスに基づいて、アプリが実際にセッションを開始していることを確認してください:
 
-![SDKリクエストは、成功したセッション開始イベントを表示するイベントユーザーログで見つかった。]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
+![イベントユーザーログに記録されたSDKリクエストは、セッション開始イベントが成功したことを示している。]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
 
 ### メッセージが返されない問題のトラブルシューティング
 
 アプリ内メッセージが返されない場合、キャンペーンターゲティングの問題が発生している可能性があります。
 
 - セグメントにユーザーが含まれていない。
-  - ユーザーの[\*\*エンゲージメント**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) ]タブを確認し、**セグメンテーションの**下に正しいセグメンテーションが表示されているか確認する。
+  - ユーザーの[\*\*エンゲージメント**]]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab)タブを確認し、**セグメント**欄に正しいセグメントが表示されているか確認せよ。
 - ユーザーが以前にアプリ内メッセージを受け取ったことがあり、再度受け取る資格がなかった。
-  - **キャンペーンコンポーザーの** **配信**ステップにある[キャンペーンの再適格設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) ] をチェックし、再適格設定があなたのテスト設定と一致していることを確認する。
+  - **キャンペーン作成**ツールの**配信**ステップにある[キャンペーン]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/)再適格性設定]を確認し、再適格性設定がテスト設定と一致していることを確認せよ。
 - ユーザーがキャンペーンのフリークエンシーキャップに達した。
-  - キャンペーン[フリークエンシーキャップ設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) を確認し、テスト設定と一致していることを確認する。
+  - キャンペーンのフリークエンシーキャップ設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)を確認し、テスト設定と一致していることを確認せよ。
 - キャンペーンにコントロールグループが存在した場合、ユーザーがコントロールグループに分類された可能性があります。
   - キャンペーンバリアントが [**制御**] に設定されている受信キャンペーンバリアントフィルターでセグメントを作成し、ユーザーがそのセグメントに分類されたかどうかを確認することで、これが発生したかどうかを確認できます。
   - 統合テスト目的でキャンペーンを作成する場合は、コントロールグループの追加をオプトアウトしてください。
