@@ -1,6 +1,6 @@
 ---
 nav_title: Angepasste Daten verwalten
-article_title: Angepasste Daten verwalten
+article_title: Benutzerdefinierte Daten verwalten
 page_order: 20
 page_type: reference
 description: "Dieser Artikel referenziert die Verwaltung angepasster Daten, wie z.B. die Vorbelegung von Kampagnen und Segmenten oder das Blockieren und Löschen von Daten."
@@ -36,19 +36,66 @@ Nachdem Sie ein angepasstes Event oder Produkt erstellt haben, wählen Sie **Eig
 
 Um diese hinzugefügten angepassten Attribute, Events, Produkte oder Event-Eigenschaften nachvollziehbar zu machen, müssen Sie Ihr Entwickler:in Team bitten, sie im SDK unter demselben Namen zu erstellen, unter dem Sie sie zuvor hinzugefügt haben. Oder Sie können die Braze [API]({{site.baseurl}}/api/basics/) verwenden, um Daten zu diesem Attribut zu importieren. Danach kann das angepasste Attribut, Event oder anderes auf Ihre Nutzer:innen angewendet werden.
 
-{% include alerts/note_alerts.md alert='Manage custom data storage' %}
+{% multi_lang_include alerts/note_alerts.md alert='Manage custom data storage' %}
 
 ## Blocklisting angepasster Daten
 
-Es kann vorkommen, dass Sie angepasste Attribute, angepasste Events oder Kauf-Events identifizieren, die entweder zu viele Datenpunkte aufzeichnen, für Ihre Marketing-Strategie nicht mehr nützlich sind oder irrtümlich aufgezeichnet wurden. 
+Gelegentlich können Sie benutzerdefinierte Attribute, angepasste Events oder Kauf-Events identifizieren, die entweder zu viele Datenpunkte protokollieren, für Ihre Marketingstrategie nicht mehr nützlich sind oder versehentlich aufgezeichnet wurden. 
 
 Um zu verhindern, dass diese Daten an Braze gesendet werden, können Sie ein angepasstes Datenobjekt auf eine Blockliste setzen, während Ihr Entwicklerteam daran arbeitet, es aus dem Backend Ihrer App oder Website zu entfernen. Die Blockliste verhindert, dass ein bestimmtes Objekt mit angepassten Daten von Braze aufgezeichnet wird, d.h. es wird bei der Suche nach einem bestimmten Nutzer:in nicht mehr angezeigt.
 
-{% alert important %}
-Um angepasste Daten zu blockieren, benötigen Sie die [Nutzer:innen die Berechtigung]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions), auf Kampagnen, Canvase und Segmente zuzugreifen und diese zu bearbeiten.
-{% endalert %}
-
 Daten auf der Blockliste werden nicht vom SDK gesendet, und das Braze-Dashboard verarbeitet keine Daten auf der Blockliste aus anderen Quellen (z.B. der API). Durch die Sperrung werden jedoch keine Daten aus Nutzerprofilen entfernt oder die Anzahl der Datenpunkte, die für dieses angepasste Datenobjekt anfallen, rückwirkend verringert.
+
+### Erforderliche Berechtigungen für Nutzer:innen
+
+Um benutzerdefinierte Daten auf die Sperrliste zu setzen, benötigen Sie die [Benutzerberechtigungen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) im folgenden Dropdown-Menü für Ihren Workspace.
+
+{% details User permissions for blocklisting custom data %}
+
+{% multi_lang_include deprecations/user_permissions.md %}
+
+- Kampagnen anzeigen
+- Kampagnen bearbeiten
+- Kampagnen archivieren
+- Canvase anzeigen
+- Canvase bearbeiten
+- Canvase archivieren
+- Frequency-Capping-Regeln anzeigen
+- Frequency-Capping-Regeln bearbeiten
+- Priorisierung von Nachrichten anzeigen
+- Priorisierung von Nachrichten bearbeiten
+- Content-Blöcke anzeigen
+- Feature-Flags anzeigen
+- Feature-Flags bearbeiten
+- Feature-Flags archivieren
+- Segmente anzeigen
+- Segmente bearbeiten
+- IAM-Templates anzeigen
+- IAM-Templates bearbeiten
+- IAM-Templates archivieren
+- E-Mail-Templates anzeigen
+- E-Mail-Templates bearbeiten
+- E-Mail Templates archivieren
+- Webhook-Templates anzeigen
+- Webhook-Templates bearbeiten
+- Webhook-Templates archivieren
+- Link-Templates anzeigen
+- Link-Templates bearbeiten
+- Mediathek Assets ansehen
+- Assets der Medienbibliothek bearbeiten
+- Assets der Medienbibliothek löschen
+- Standorte anzeigen
+- Standorte bearbeiten
+- Standorte archivieren
+- Aktionscodes anzeigen
+- Aktionscodes bearbeiten
+- Exportförderungsaktionscodes
+- Präferenzzentren anzeigen
+- Präferenzzentren bearbeiten
+- Berichte anzeigen
+- Berichte bearbeiten
+
+{% enddetails %}
 
 ### Blocklisting angepasster Attribute, angepasster Events und Produkte
 
@@ -62,7 +109,7 @@ Um das Tracking eines bestimmten angepassten Attributs, Ereignisses oder Produkt
 2. Wählen Sie das angepasste Attribut, das Event oder das Produkt aus. Für angepasste Attribute und Events können Sie jeweils bis zu 100 auswählen, um sie zu blockieren.
 3. Wählen Sie **Blockliste**.
 
-![Mehrere ausgewählte angepasste Attribute, die auf der Seite Angepasste Attribute in einer Blockliste aufgeführt sind.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
+![Mehrere ausgewählte benutzerdefinierte Attribute, die auf der Seite „Benutzerdefinierte Attribute“ auf der Sperrliste stehen.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
 Sie können bis zu 300 angepasste Attribute und 300 angepasste Events in eine Blockliste aufnehmen. Um die Erfassung bestimmter Attribute von Geräten zu verhindern, lesen Sie unseren [SDK-Leitfaden]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
 
@@ -119,7 +166,7 @@ Wenn Sie angepasste Daten löschen, sollten Sie die folgenden Details beachten:
 * Die Daten werden von der Braze-Plattform und aus den Nutzer:innen-Profilen entfernt.
 * Sie können den Namen des angepassten Attributs oder den Namen des angepassten Events nach dem Löschen "wiederverwenden". Wenn Sie also feststellen, dass angepasste Daten nach dem Löschen in Braze "wieder auftauchen", kann dies durch eine Integration verursacht werden, die nicht gestoppt wurde und Daten mit demselben Namen für angepasste Daten sendet.
 * Möglicherweise müssen Sie einen Artikel erneut auf die Sperrliste setzen, wenn Ihre Löschung dazu führt, dass angepasste Daten wieder auftauchen. Der Status der Sperrliste bleibt nicht erhalten, da die angepassten Daten gelöscht werden.
-* Wenn Sie angepasste Daten löschen, werden keine [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points) protokolliert und es werden auch keine neuen Datenpunkte zur Verwendung generiert.
+* Das Löschen angepasster Daten führt dazu, dass keine [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points) protokolliert werden und auch keine neuen Datenpunkte zur Verwendung generiert werden.
 
 ## Erzwingen von Datentypvergleichen
 
