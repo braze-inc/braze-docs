@@ -1,21 +1,21 @@
-## Entscheidung Studio Go vs. Decisioning Studio Pro 
+## Entscheidungsstudio Go vs. Entscheidungsstudio Pro 
 
-Decisioning Studio bietet zwei Stufen: Go und Pro. Jede Ebene ist auf unterschiedliche Bedürfnisse und Anwendungsfälle zugeschnitten.
+Decisioning Studio bietet zwei Stufen an: Bitte gehen Sie und werden Sie Profi. Jede Stufe ist auf unterschiedliche Anforderungen und Anwendungsfälle zugeschnitten.
 
-### Entscheidungsfindung Studio Go
+### Entscheidungsstudio Go
 
-Go ist ideal für Teams, die mit der KI-Entscheidungsfindung beginnen. Es umfasst:
+Go eignet sich ideal für Teams, die mit KI-Entscheidungsfindung beginnen. Es umfasst:
 
-- Kreative Konfiguration zur Selbstbedienung mit einem vorgefertigten Entscheidungsagenten
-- Erfolgsmetrik mit Fokus auf Klicks
+- Selbstständige kreative Konfiguration mit einem vorgefertigten Entscheidungsagenten
+- Erfolgsmetrik mit Schwerpunkt auf Klicks
 - Kompatibilität mit drei Customer-Engagement-Plattformen (CEPs): Braze, Salesforce Marketing Cloud und Klaviyo
 
-### Decisioning Studio Pro
+### Entscheidungsstudio Pro
 
-Pro bietet die gesamte Suite der Decisioning Studio-Funktionen für vorgebrachte Anwendungsfälle. Zu den wichtigsten Features gehören:
+Pro bietet die vollständige Suite der Decisioning Studio-Funktionen für fortgeschrittene Anwendungsfälle. Zu den wichtigsten Features gehören:
 
-- Ein engagiertes Team für KI Serviceleistungen; Dienste, das Sie vom Design des Entscheidungsagenten bis zum stabilen Zustand unterstützt
-- Die Erfolgsmetrik kann jede beliebige Geschäftsmetrik sein (nicht nur Klicks).
-- Möglichkeit, jede beliebige Datenquelle für Kundendaten zur Entscheidungsfindung zu verbinden
-- Vollständige Suite von Berichten und Insights
-- Erweiterte Orchestrierung
+- Ein engagiertes Team für KI-Entscheidungsdienst-Serviceleistungen, das Sie vom Entwurf des Entscheidungsagenten bis zum stabilen Zustand unterstützt.
+- Erfolgskennzahlen können beliebige Geschäftsmetriken sein (nicht nur Klicks).
+- Möglichkeit, beliebige Kundendatenquellen für Entscheidungsfindungen zu verknüpfen
+- Umfassende Berichts- und Insight-Funktionen
+- Erweiterte Muster der Orchestrierung
