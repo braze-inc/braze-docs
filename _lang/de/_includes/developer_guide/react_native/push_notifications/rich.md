@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/react_native.md %} Sie müssen auch [Push-Benachrichtigungen einrichten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} Bitte [richten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native) Sie auch [Push-Benachrichtigungen ein]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
 ## Verwendung von Expo zur Aktivierung von Rich-Push-Benachrichtigungen
 
