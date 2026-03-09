@@ -22,8 +22,8 @@ Para configurar su informe de panel de conversiones:
 3. Selecciona las campañas o los lienzos (o ambos) que quieras analizar. 
    - (opcional) Filtra campañas y Lienzos seleccionando una etiqueta.  
 4. Selecciona el **canal o canales** que quieres analizar para tus mensajes.
-5. Selecciona un **Desglose por** capas para ver diferentes dimensiones de los datos, como por variante, paso en Canvas, país o idioma.
-6. (Opcional) Si quieres calcular las conversiones de un evento que no se configuró como evento de conversión en la campaña o Canvas, activa [Usar eventos personalizados](#using-custom-events).
+5. Selecciona un **desglose por** capa para ver diferentes dimensiones de los datos, como por variante, paso en Canvas, país o idioma.
+6. (Opcional) Si deseas calcular las conversiones de un evento que no se configuró como evento de conversión en la campaña o en Canvas, activa [Usar eventos personalizados](#using-custom-events).
 7. Selecciona un [método de atribución](#attribution-methods) para analizar los mensajes seleccionados.
 
 {% alert note %}
@@ -51,17 +51,17 @@ Si seleccionas un evento personalizado, no verás el desplegable **Evento de con
 
 ### Consideraciones
 
-Para que un usuario se contabilice en el informe, debe cumplir los siguientes criterios dentro del intervalo de fechas seleccionado:
-1. Entra en el Canvas o campaña.
+Para que un usuario sea incluido en el informe, debe cumplir los siguientes criterios dentro del intervalo de fechas seleccionado:
+1. Entra en Canvas o en la campaña.
 2. Registra un [método de atribución]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods).
 3. Realiza el evento de conversión.
 
 Por ejemplo, supongamos que un usuario hace lo siguiente:
-1. Entra en el Canvas el 30 de septiembre.
+1. Entra en Canvas el 30 de septiembre.
 2. Registra un método de atribución el 1 de octubre.
 3. Realiza el evento de conversión el 2 de octubre.
 
-Este usuario **no** aparecerá en un informe con un intervalo de fechas del 1 al 7 de octubre. Esto se debe a que el usuario entró en el Canvas antes del periodo del informe, aunque el evento de conversión se produjo dentro del intervalo de fechas definido. Para que el usuario aparezca en un informe, el intervalo de fechas debe incluir el 30 de septiembre.
+Este usuario **no** aparecerá en un informe con un intervalo de fechas comprendido entre el 1 y el 7 de octubre. Esto se debe a que el usuario entró en Canvas antes del periodo de informe, aunque el evento de conversión se produjo dentro del intervalo de fechas definido. Para que el usuario aparezca en un informe, el intervalo de fechas debe incluir el 30 de septiembre.
 
 ## Comprender tu informe
 
@@ -75,7 +75,7 @@ El informe se divide en tres secciones:
 
 La tabla de detalles de conversión siempre muestra una columna para *Destinatarios* y otra para *Conversiones* (tasa y total). Las otras dos columnas de la tabla que aparecen dependen de las opciones seleccionadas al configurar el informe. 
 
-![Tabla de detalles de la conversión que muestra Toques como método de atribución para las columnas tres y cuatro.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+![Tabla con detalles de conversión que muestra «Toques» como método de atribución para las columnas tres y cuatro.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
 
 La siguiente tabla describe las métricas posibles.
 
@@ -101,7 +101,7 @@ Para descargar los datos de las series temporales, selecciona una opción de des
 Este gráfico sólo muestra los datos de un canal cada vez. Utilice el menú desplegable **Canal** del gráfico para seleccionar un único canal.
 {% endalert %}
 
-![Gráfico de barras del embudo de conversiones de dos campañas de correo electrónico que muestran resultados similares para el correo electrónico entregado, el correo electrónico abierto, el correo electrónico en el que se ha hecho clic y las conversiones.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
+![Gráfico de barras del embudo de conversión para dos campañas de envío por correo electrónico que muestran resultados similares en cuanto a correos electrónicos entregados, correos electrónicos abiertos, correos electrónicos con clic y conversiones.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### Conversiones a lo largo del tiempo
 
@@ -109,7 +109,7 @@ Este gráfico de series temporales incluye una representación de las conversion
 
 Para descargar los datos de las series temporales, selecciona <i class="fas fa-bars"></i> y luego elige la opción de descarga. Las opciones disponibles son PNG, JPEG, PDF, SVG o CSV.
 
-![Gráfico de series temporales de conversiones de dos campañas de correo electrónico, que muestra las conversiones por día.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
+![Gráfico de series temporales de conversiones a lo largo del tiempo para dos campañas de envío por correo electrónico, que muestra las conversiones por día.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### Métodos de atribución
 
@@ -132,18 +132,18 @@ Para descargar los datos de las series temporales, selecciona <i class="fas fa-b
 
 ## Solución de problemas
 
-### ¿Por qué tengo bajas conversiones de campaña o de Canvas?
+### ¿Por qué tengo pocas conversiones en mis campañas o en Canvas?
 
 Es posible que tus conversiones no sean tan altas como esperabas en comparación con campañas anteriores o con tus expectativas. Las conversiones son un asunto delicado, pero dependen de unas cuantas funciones sencillas de nuestra plataforma: el seguimiento de eventos y los plazos de conversión.
 
-Para solucionar el problema, te recomendamos que compruebes el seguimiento de tus eventos y los plazos de conversión.
+Para la solución de problemas, te recomendamos que compruebes el seguimiento de eventos y los plazos de conversión.
 
 #### Seguimiento de eventos
 
-Cuando una campaña desencadena un inicio de sesión o un evento personalizado, debes asegurarte de que este evento, o sesión, se produce con la frecuencia suficiente para desencadenar el mensaje. Consulta el [panel de inicio]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) para ver los datos de la sesión, o tu informe de [eventos personalizado]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/).
+Cuando una campaña desencadena un inicio de sesión o un evento personalizado, debes asegurarte de que este evento, o sesión, se produce con la frecuencia suficiente para desencadenar el mensaje. Consulta el [panel de control de inicio]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) para ver los datos de la sesión o tu informe [de eventos personalizados]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/).
 
 #### Plazos de conversión
 
-Para cada evento de conversión que selecciones por campaña, establece la [fecha límite]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#creating-a-campaign-with-conversion-tracking). Esto significa que estás estableciendo un límite de tiempo dentro del cual debe producirse una conversión para que cuente en cada campaña respectiva.
+Para cada evento de conversión que selecciones por campaña, debes establecer la [fecha límite]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#creating-a-campaign-with-conversion-tracking). Esto significa que estás estableciendo un límite de tiempo dentro del cual debe producirse una conversión para que cuente en cada campaña respectiva.
 
-Comprueba que has revisado la información sobre [las reglas de seguimiento de la conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules) para entender las métricas de tu campaña. Para las conversiones de usuario en Canvas, consulta [las preguntas frecuentes sobre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
+Comprueba que has revisado la información sobre [las reglas de seguimiento de conversiones]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules) para comprender las métricas de tu campaña. Para las conversiones de usuario en Canvas, consulta [las preguntas frecuentes sobre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
