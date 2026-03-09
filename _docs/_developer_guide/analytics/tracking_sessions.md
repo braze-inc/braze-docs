@@ -252,3 +252,22 @@ The React Native SDK relies on the native SDKs to manage sessions. To change the
 {% alert note %}
 If you set a session timeout, all session semantics will automatically extend to the set timeout.
 {% endalert %}
+
+## Troubleshooting
+
+### Some users are not logging sessions
+
+Because sessions are tracked only after the SDK is initialized, users who don't trigger SDK initialization don't log any sessions. This typically happens when your app uses conditional logic before initializing the SDK—for example, gating initialization behind a login flow, consent prompt, or feature flag. In these cases, any user who doesn't satisfy the condition never starts a session.
+
+If some users are logging sessions and others aren't, verify the following:
+
+- **Check your initialization logic.** Confirm that the SDK is initialized for all users and app entry points, not just some.
+- **Look for recent app changes.** New conditional logic around SDK initialization can cause a sudden drop in session counts.
+- **Compare affected and unaffected users.** Identify differences in app version, device type, or user flow that could explain why initialization is skipped for certain users.
+
+If the issue persists after verifying your implementation, reproduce the problem and collect the following information before contacting support:
+
+- The affected app version
+- Verbose SDK logs ([Verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging) or by platform: [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_enabling-logs), [Swift]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift#swift_setting-the-log-level), [Web]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web#web_logging)) captured while the issue occurs
+- The code snippet for SDK initialization
+- A summary of any conditional logic applied before initialization
