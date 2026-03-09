@@ -1,5 +1,5 @@
 ---
-nav_title: Android用ライブ更新
+nav_title: Android向けライブ更新
 article_title: Android Braze SDKのライブ更新
 page_order: 0.1
 description: "Android Braze SDK の Live 更新の設定方法を学びます。"
@@ -21,7 +21,7 @@ hidden: true
 
 このセクションでは、野生動物救助チームが誰が一番多くのフクロウを救えるかを競う新しいゲーム番組の司会者、スーパーブクロウとパートナーを組むことになる。Android アプリで Live 更新を活用して、進行中の一致のステータスを表示し、リアルタイムで通知をダイナミックに更新できるようにしようとしています。
 
-![Androidからのライブアップデートのサンプル]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
+![Androidからのライブ更新の例]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 
