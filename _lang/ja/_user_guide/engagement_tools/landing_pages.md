@@ -14,7 +14,7 @@ alias: /landing_pages/
 ランディングページを使用して、オーディエンスの拡大、ユーザーデータの収集、特別なオファーのプロモート、マルチチャネルキャンペーンの促進を行います。
 
 {% alert note %}
-ランディングページとカスタムドメインの可用性は、Brazeのパッケージによって異なります。開始するには、アカウントマネージャーまたは顧客のサクセスマネージャーに連絡してください。
+ランディングページとカスタムドメインの利用可否は、Brazeの契約プランによって異なる。アカウントマネージャーか顧客サクセスマネージャーに連絡して始めよう。
 {% endalert %}
 
 {% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
@@ -39,9 +39,9 @@ alias: /landing_pages/
 | カスタムドメイン          | 1社につき1つ | 5追加 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-## ランディングページへのGoogle タグマネージャの追加
+## ランディングページにGoogle Tag Managerを追加する
 
-ランディングページにGoogleタグマネージャを追加するには、ドラッグアンドドロップエディタで**カスタムコード**ブロックをランディングページに追加し、タグマネージャコードをブロックに挿入します。次の例のように、タグマネージャコードの前にデータレイヤを追加するようにしてください。
+ランディングページにGoogle Tag Managerを追加するには、ドラッグ＆ドロップエディターでランディングページに**カスタムコード**ブロックを追加し、そのブロックにGoogle Tag Managerのコードを挿入する。タグマネージャーのコードの前に、必ずデータレイヤーを追加すること。例えば、この例のように：
 
 ```
 <script>
@@ -56,13 +56,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 ```
 
-Googleタグマネージャの実装については、[Googleのドキュメント](https://developers.google.com/tag-platform/tag-manager/datalayer#installation)を参照してください。
+Google Tag Manager の実装に関する詳細は、[Google のドキュメントを](https://developers.google.com/tag-platform/tag-manager/datalayer#installation)参照せよ。
 
 ## よくある質問
 
 ### ランディングページの最大サイズは何ですか?
 
-ランディングページの本文サイズは、最大500KB です。
+ランディングページの本体サイズは最大500KBまでである。
 
 ### ランディングページを公開するための技術的な要件はありますか？
 
