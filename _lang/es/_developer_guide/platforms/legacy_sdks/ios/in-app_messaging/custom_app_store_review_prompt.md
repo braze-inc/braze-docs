@@ -1,5 +1,5 @@
 ---
-nav_title: Aviso personalizado de revisión de la tienda de aplicaciones
+nav_title: Solicitud de reseña en la tienda de aplicaciones personalizada
 article_title: Aviso personalizado de revisión de la App Store
 platform: iOS
 page_order: 4
