@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Status der Auftragssynchronisation auflisten"
-article_title: "GET: Job-Synchronisationsstatus auflisten"
-search_tag: Endpoint
+article_title: "GET: Job-Synchronisierungsstatus auflisten"
+search_tag: Endpunkt
 page_order: 1
 alias: /api/cdi/get_job_sync/
 layout: api_page
@@ -82,8 +82,8 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
         "sync_finish_time": (string) time the sync finished in ISO 8601,
         "last_timestamp_synced": (string) last UPDATED_AT timestamp processed by the sync in ISO 8601,
         "rows_synced": (integer) number of rows successfully synced to Braze,
-        "rows_failed_with_errors": (integer) number of rows failed because of errors,
-    },
+        "rows_failed_with_errors": (integer) number of rows failed because of errors
+    }
   ],
   "message": "success"
 }
@@ -108,6 +108,6 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | `400 Invalid integration ID` | Prüfen Sie, ob Ihre `integration_id` gültig ist. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler & Antworten]({{site.baseurl}}/api/errors/#fatal-errors).
+Weitere Status-Codes und zugehörige Fehlermeldungen werden in [„Fatal errors&responses]({{site.baseurl}}/api/errors/#fatal-errors)“ [(Antworten]({{site.baseurl}}/api/errors/#fatal-errors) auf schwerwiegende Fehler) referenziert.
 
 {% endapi %}
