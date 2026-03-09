@@ -6,11 +6,11 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o ponto de extremidade do Braze Look up an existing dashboard user account resource ID."
+description: "Este artigo descreve detalhes sobre o endpoint Braze para procurar o ID de recurso de uma conta de usuário existente no dashboard."
 ---
 
 {% api %}
-# Procure uma conta de usuário existente no dashboard por ID de recurso
+# Pesquise uma conta de usuário existente no dashboard por ID de recurso
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
@@ -35,14 +35,14 @@ Para usar esse endpoint, você precisará de um token SCIM. Você usará a orige
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Corpo da solicitação
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Exemplo de solicitação
-```json
+```bash
 curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -67,7 +67,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
         "roles": [
             {
                 "roleName": "Another Test Role",
-                "roleId": "23125dad23dfaae7,
+                "roleId": "23125dad23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25adfabcded",
