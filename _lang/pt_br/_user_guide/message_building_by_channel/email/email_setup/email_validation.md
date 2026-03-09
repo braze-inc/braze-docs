@@ -15,7 +15,7 @@ channel: email
 
 ## Como funciona?
 
-O Braze valida um endereço de e-mail quando é atualizado, importado por API, upload de CSV, SDK ou modificado no dashboard. Endereços de e-mail não podem incluir espaços em branco. Se você usar a API, espaços em branco retornam um erro `400`.
+O Braze valida um endereço de e-mail quando ele é atualizado, importado por API, upload de CSV, SDK ou modificado no dashboard. Endereços de e-mail não podem incluir espaços em branco. Se você usar a API, espaços em branco retornam um erro `400`.
 
 O Braze rejeita certos caracteres e marca o endereço como inválido. Se um e-mail retornar, o Braze marca o endereço como inválido e não altera o status da inscrição. Se o corpo do e-mail contiver caracteres [ASCII](https://en.wikipedia.org/wiki/ASCII) não padrão, o Braze não envia o e-mail.
 
@@ -48,10 +48,10 @@ O Braze rejeita certos caracteres e marca o endereço como inválido. Se um e-ma
 
 Essa validação é uma verificação de sintaxe, não um serviço de validação. Um dos objetivos desse processo é suportar caracteres internacionais (como UTF-8) na parte local do endereço de e-mail.
 
-O Braze valida a sintaxe tanto para a parte local quanto para a parte do host de um endereço de e-mail. A parte local é tudo antes do asperand (@); a parte do host é tudo depois. A parte local pode começar e terminar com qualquer caractere permitido, exceto um ponto (.). Esse processo não considera se o domínio tem um servidor MX válido ou se um usuário existe nesse domínio.
+O Braze valida a sintaxe tanto da parte local quanto da parte do host de um endereço de e-mail. A parte local é tudo que vem antes do arroba (@); a parte do host é tudo que vem depois. A parte local pode começar e terminar com qualquer caractere permitido, exceto um ponto (.). Esse processo não considera se o domínio tem um servidor MX válido ou se um usuário existe nesse domínio.
 
 {% alert important %}
-Se a parte do domínio contiver caracteres ASCII não padrão, precisará ser [Punycode-encoded](https://www.punycoder.com/) antes de ser fornecida ao Braze.
+Se a parte do domínio contiver caracteres ASCII não padrão, ela precisará ser [Punycode-encoded](https://www.punycoder.com/) antes de ser fornecida ao Braze.
 {% endalert %}
 
 Se o Braze receber um pedido para adicionar um usuário com um endereço de e-mail inválido, a API retorna um erro. Para um upload de CSV, o Braze cria o usuário, mas omite o endereço de e-mail inválido.
@@ -111,7 +111,7 @@ O nome do domínio deve atender a esses parâmetros:
 
 ### Validação adicional necessária
 
-O rótulo final do domínio deve ser um domínio de nível superior (TLD) válido, determinado por qualquer coisa após o ponto final (.). Este TLD deve aparecer na [lista de TLD da ICANN](https://data.iana.org/TLD/tlds-alpha-by-domain.txt). O validador Braze verifica apenas a sintaxe. Não captura erros de digitação ou endereços inexistentes.
+O rótulo final do domínio deve ser um domínio de nível superior (TLD) válido, determinado por qualquer coisa após o último ponto (.). Esse TLD deve aparecer na [lista de TLD da ICANN](https://data.iana.org/TLD/tlds-alpha-by-domain.txt). O validador Braze verifica apenas a sintaxe. Ele não detecta erros de digitação ou endereços inexistentes.
 
 {% alert important %}
 O Unicode é aceito apenas para a parte local do endereço de e-mail. O Unicode não é aceito para a parte do domínio, mas pode ser codificado em Punycode.
