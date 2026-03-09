@@ -1,7 +1,7 @@
 ---
 nav_title: Design your agent
 article_title: 의사 결정 에이전트 설계
-page_order: 2
+page_order: 1
 page_type: reference
 description: "이 참조 문서에서는 의사 결정 에이전트를 설계하고 구성하는 데 필요한 주요 개념과 모범 사례를 다룹니다."
 ---

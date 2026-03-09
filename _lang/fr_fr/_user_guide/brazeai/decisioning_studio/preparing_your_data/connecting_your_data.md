@@ -1,11 +1,11 @@
 ---
-nav_title: Connecting your data
-article_title: Connecting your data
-page_order: 6
+nav_title: Connect your data
+article_title: Connect your data
+page_order: 2
 description: "Learn how to connect customer data sources to BrazeAI Decisioning Studio for personalized AI decisioning."
 ---
 
-# Connecting your data
+# Connect your data
 
 > BrazeAI Decisioning Studio™ agents need to fully understand customer context in order to make effective decisions. This article explains how to connect customer data sources to Decisioning Studio.
 

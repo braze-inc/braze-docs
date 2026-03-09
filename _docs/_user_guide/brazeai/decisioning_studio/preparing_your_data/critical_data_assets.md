@@ -1,7 +1,7 @@
 ---
 nav_title: Critical data assets
 article_title: Critical data assets for Decisioning Studio
-page_order: 2
+page_order: 3
 page_type: reference
 description: "This reference article covers the required and optional data assets for BrazeAI Decisioning Studio, including the feedback data needed to close the AI decisioning loop."
 ---

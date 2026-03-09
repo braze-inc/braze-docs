@@ -1,7 +1,7 @@
 ---
 nav_title: Snapshots versus event streams
 article_title: Snapshots versus event streams
-page_order: 3
+page_order: 4
 page_type: reference
 description: "This reference article explains the difference between snapshot data and event stream data, and how each should be structured and delivered to BrazeAI Decisioning Studio."
 ---

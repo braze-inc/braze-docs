@@ -1,7 +1,7 @@
 ---
 nav_title: Design your agent
 article_title: Diseñar agentes decisores
-page_order: 2
+page_order: 1
 page_type: reference
 description: "Este artículo de referencia cubre los conceptos clave y las mejores prácticas para diseñar y configurar tu agente de decisión."
 ---

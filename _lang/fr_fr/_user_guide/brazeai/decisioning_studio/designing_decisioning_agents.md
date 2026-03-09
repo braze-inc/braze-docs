@@ -1,7 +1,7 @@
 ---
 nav_title: Design your agent
 article_title: "Conception d'agents décisionnels"
-page_order: 2
+page_order: 1
 page_type: reference
 description: "Cet article de référence couvre les concepts clés et les meilleures pratiques pour concevoir et configurer votre agent décisionnel."
 ---

@@ -1,7 +1,7 @@
 ---
 nav_title: Design your agent
 article_title: Designing decisioning agents
-page_order: 2
+page_order: 1
 page_type: reference
 description: "This reference article covers key concepts and best practices for designing and configuring your decisioning agent."
 ---

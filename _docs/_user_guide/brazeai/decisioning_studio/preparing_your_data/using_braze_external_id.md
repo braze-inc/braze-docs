@@ -1,7 +1,7 @@
 ---
 nav_title: Using Braze External ID
 article_title: Using Braze External ID as your unit of identity
-page_order: 4
+page_order: 5
 page_type: reference
 description: "This reference article explains why Decisioning Studio uses Braze External ID as the unit of customer identity and what happens if a different identifier structure is used."
 ---

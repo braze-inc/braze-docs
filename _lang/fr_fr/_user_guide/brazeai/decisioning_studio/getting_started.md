@@ -11,12 +11,12 @@ description: "Cette section présente Decisioning Studio et explique comment l'u
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Prepare Your Data
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/
-    image: /assets/img/braze_icons/database-01.svg
   - name: Design Your Agent
     link: /docs/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/
     image: /assets/img/braze_icons/settings-01.svg
+  - name: Prepare Your Data
+    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/
+    image: /assets/img/braze_icons/database-01.svg
   - name: Define Your Audience
     link: /docs/user_guide/brazeai/decisioning_studio/define_your_audience/
     image: /assets/img/braze_icons/users-01.svg
