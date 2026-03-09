@@ -20,12 +20,12 @@ Este contenido **sólo se aplica a los datos de eventos de archivos planos que e
 
 ## Eventos de prueba
 
-Cuando configures una integración de Currents, haz clic en **Enviar eventos de prueba** para verificar la conexión con tu contenedor de almacenamiento. Estos eventos de prueba validan que tu integración puede recibir y procesar datos correctamente.
+Cuando configures una integración de Currents, haz clic en **Enviar eventos de prueba** para verificar la conexión con tu contenedor de almacenamiento. Estas pruebas confirman que tu integración puede recibir y procesar datos correctamente.
 
 {% alert important %}
-**Formato de los datos del evento de prueba:** Los eventos de prueba contienen valores marcadores de posición que coinciden con los tipos de datos correctos de cada campo, pero no contienen datos realistas o precisos. Por ejemplo, un campo `timezone` puede contener una cadena similar a UUID en lugar de un identificador de zona horaria válido (como "America/Chicago"), y otros campos como `campaign_name` y `ip_pool` también pueden contener valores de marcador de posición en lugar de datos reales.<br>
+**Formato de datos del evento de prueba:** Los eventos de prueba contienen valores de marcador de posición que coinciden con los tipos de datos correctos para cada campo, pero no contienen datos realistas ni precisos. Por ejemplo, un`timezone`campo puede contener una cadena similar a un UUID en lugar de un identificador de zona horaria válido (como «America/Chicago»), y otros campos como`campaign_name`y también`ip_pool` pueden contener valores de marcador de posición en lugar de datos reales.<br>
 
-Este es el comportamiento esperado. Los eventos de prueba sirven principalmente para probar la conexión y la configuración de la integración, no para validar la exactitud de los datos. Para ver eventos reales con datos precisos, utiliza una integración Currents de prueba para enviar datos de eventos reales a través de tu canalización.
+Este es el comportamiento esperado. Las pruebas se realizan principalmente para comprobar la configuración de la conexión y la integración, no para validar la exactitud de los datos. Para ver eventos reales con datos precisos, utiliza una integración de Currents para enviar datos de eventos reales a través de tu canalización.
 {% endalert %}
 
 ## Entrega única
@@ -75,7 +75,7 @@ Currents creará un archivo para cada tipo de evento utilizando el siguiente for
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Las convenciones para nombrar los archivos pueden cambiar. Braze recomienda buscar todas las claves de tu contenedor que tengan el prefijo <your-bucket-prefix>.
+Las convenciones para nombrar archivos pueden cambiar. Braze recomienda buscar todas las claves de tu contenedor que tengan el prefijo .<your-bucket-prefix>
 {% endalert %}
 
 ### Umbral de escritura Avro
