@@ -1,6 +1,6 @@
 ---
-nav_title: iOS SDK Tracking deaktivieren
-article_title: SDK Tracking für iOS deaktivieren
+nav_title: Deaktivieren Sie das iOS SDK-Tracking.
+article_title: Deaktivieren Sie das SDK-Tracking für iOS.
 platform: iOS
 page_order: 8
 description: "Dieser Artikel zeigt, wie Sie die Datenerfassung für Ihre iOS-Anwendung deaktivieren können."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Datenerfassung für iOS deaktivieren
+# Deaktivieren Sie die Datenerfassung für iOS
 
 Um den Datenschutzbestimmungen zu entsprechen, kann das Tracking von Daten im iOS SDK mit der Methode [`disableSDK`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a8d3b78a98420713d8590ed63c9172733) gänzlich unterbunden werden. Diese Methode führt dazu, dass alle Netzwerkverbindungen abgebrochen werden und das Braze SDK keine Daten an unsere Server weitergibt. Wenn Sie die Datenerfassung später wieder aufnehmen möchten, können Sie [`requestEnableSDKOnNextAppRun`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a781078a40a3db0de64ac82dcae3b595b) verwenden, um die Datenerfassung fortzusetzen.
 
