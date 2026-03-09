@@ -1,7 +1,7 @@
 ---
 nav_title: "POST: Nutzer:innen zusammenführen"
 article_title: "POST: Nutzer:innen zusammenführen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 6
 layout: api_page
 page_type: reference
@@ -56,11 +56,11 @@ Das unten dokumentierte Verhalten gilt für alle Braze Features, die **nicht** v
 Der Endpunkt garantiert nicht die Reihenfolge der `merge_updates` Objekte, die aktualisiert werden.
 {% endalert %}
 
-Dieser Endpunkt stellt die folgenden Felder zusammen, wenn sie bei dem Targeting-Nutzer:innen nicht gefunden werden.
+Dieser Endpunkt führt die folgenden Felder zusammen, wenn sie bei der Zielgruppe nicht gefunden werden.
 
 - Vorname
 - Nachname
-- E-Mail-Adressen (sofern sie nicht [verschlüsselt]({{site.baseurl}}/user_guide/data/field_level_encryption/) sind)
+- E-Mail-Adressen (es sei denn, sie sind [verschlüsselt]({{site.baseurl}}/user_guide/data/field_level_encryption/))
 - Geschlecht
 - Geburtsdatum
 - Telefonnummer
@@ -70,22 +70,22 @@ Dieser Endpunkt stellt die folgenden Felder zusammen, wenn sie bei dem Targeting
 - Sprache
 - Informationen zum Gerät
 - Anzahl der Sitzungen (die Summe der Sitzungen aus beiden Profilen)
-- Datum der ersten Sitzung (Braze wählt das frühere Datum der beiden Termine)
-- Datum der letzten Sitzung (Braze wählt das spätere Datum der beiden Daten)
-- Angepasste Attribute (Braze behält die angepassten Attribute des Zielprofils bei und bezieht auch angepasste Attribute ein, die im Zielprofil nicht vorhanden waren)
+- Datum der ersten Sitzung (Braze wählt das frühere der beiden Daten)
+- Datum der letzten Sitzung (Braze wählt das spätere der beiden Daten aus)
+- Benutzerdefinierte Attribute (Braze behält vorhandene benutzerdefinierte Attribute im Zielprofil bei und fügt benutzerdefinierte Attribute hinzu, die im Zielprofil nicht vorhanden waren)
 - Angepasste Event- und Kauf-Event-Daten
-- Angepasste Event- und Kauf-Event-Eigenschaften für die Segmentierung "X Mal in Y Tagen" (wobei X<=50 und Y<=30)
+- Angepasste Event- und Kauf-Event-Eigenschaften für die Segmentierung „X-mal in Y Tagen“ (wobeiX<=50  und Y<=30)
 - Segmentierbare Zusammenfassung angepasster Events
   - Anzahl der Ereignisse (die Summe aus beiden Profilen)
-  - Das Ereignis ist zuerst eingetreten (Braze wählt das frühere Datum der beiden Daten)
-  - Ereignis ist zuletzt eingetreten (Braze wählt das spätere der beiden Daten)
+  - Das Ereignis ist zum ersten Mal aufgetreten (Braze wählt das frühere der beiden Daten).
+  - Das Ereignis ist zuletzt aufgetreten (Braze wählt das spätere der beiden Daten).
 - In-App-Käufe insgesamt in Cent (die Summe aus beiden Profilen)
 - Gesamtzahl der Käufe (die Summe aus beiden Profilen)
-- Datum des ersten Kaufs (Braze wählt das frühere der beiden Daten)
-- Datum des letzten Kaufs (Braze wählt das spätere Datum der beiden Daten)
+- Datum des ersten Kaufs (Braze wählt das frühere der beiden Daten aus)
+- Datum des letzten Kaufs (Braze wählt das spätere der beiden Daten aus)
 - App Zusammenfassungen
 - Last_X_at Felder (Braze aktualisiert die Felder, wenn die verwaisten Profilfelder aktueller sind)
-- Daten zur Interaktion mit Kampagnen (Braze wählt die aktuellsten Datumsfelder aus)
+- Interaktionsdaten der Kampagne (Braze wählt die aktuellsten Datumsfelder aus)
 - Workflow-Zusammenfassungen (Braze wählt die aktuellsten Datumsfelder aus)
 - Verlauf des Messaging und des Engagements für Nachrichten
 - Braze führt Sitzungsdaten nur zusammen, wenn die App in beiden Nutzerprofilen vorhanden ist.
@@ -96,11 +96,11 @@ Bei der Zusammenführung von Nutzer:innen funktioniert die Verwendung des Endpun
 
 #### Angepasstes Event-Datum und Kauf-Event-Datum Verhalten
 
-Diese zusammengeführten Felder aktualisieren die Filter "für X Ereignisse in Y Tagen". Bei Kauf-Events umfassen diese Filter "Anzahl der Käufe in Y Tagen" und "Geldausgabe in den letzten Y Tagen".
+Diese zusammengeführten Felder führen ein Update der Filter „für X Ereignisse in Y Tagen“ durch. Bei Kauf-Events umfassen diese Filter "Anzahl der Käufe in Y Tagen" und "Geldausgabe in den letzten Y Tagen".
 
 ### Zusammenführung von Nutzer:innen per E-Mail oder Telefonnummer
 
-Wenn ein `email` oder `phone` als Bezeichner angegeben wird, müssen Sie einen zusätzlichen Wert `prioritization` in den Bezeichner aufnehmen. Bei `prioritization` sollte es sich um ein geordnetes Array handeln, das angibt, welcher Nutzer:innen zusammengeführt werden soll, wenn mehrere Nutzer:innen gefunden werden. Das heißt, wenn mehr als ein Nutzer:innen aus einer Priorisierung übereinstimmt, findet keine Zusammenführung statt.
+Wenn ein`email`  oder  als Bezeichner`phone` angegeben wird, müssen Sie einen zusätzlichen`prioritization`  Wert in den Bezeichner aufnehmen. Es`prioritization`sollte ein geordnetes Array sein, das angibt, welcher Nutzer:in zusammengeführt werden soll, wenn mehrere Nutzer:innen gefunden werden. Dies bedeutet, dass bei mehreren übereinstimmenden Nutzer:innen aus einer Priorisierung keine Zusammenführung erfolgt.
 
 Die zulässigen Werte für das Array sind:
 
@@ -120,7 +120,7 @@ Es kann jeweils nur eine der folgenden Optionen im Prioritätsfeld vorhanden sei
 
 Dies ist ein einfacher Anfragekörper, der das Muster der Anfrage zeigt.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -165,9 +165,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Zusammenführung nicht identifizierter Nutzer:in
 
-Die folgende Anfrage würde den zuletzt aktualisierten nicht identifizierten Nutzer:innen mit der E-Mail Adresse `john.smith@braze.com` mit dem Nutzer mit einer externen ID `john` zusammenführen. In diesem Beispiel filtert die Verwendung von `most_recently_updated` die Abfrage auf einen nicht identifizierten Nutzer:innen. Wenn es also zwei nicht identifizierte Nutzer:innen mit dieser E-Mail Adresse gäbe, würde nur eine in die Nutzer:innen mit einer externen ID `john` zusammengeführt werden.
+Die folgende Anfrage würde den zuletzt aktualisierten nicht identifizierten Nutzer:in mit der E-Mail-Adresse`john.smith@braze.com`  mit dem Nutzer:in mit der externen ID `john`zusammenführen. In diesem Beispiel wird die Abfrage mithilfe von`most_recently_updated`Filtern auf einen nicht identifizierten Nutzer:in beschränkt. Wenn es also zwei nicht identifizierte Nutzer:innen mit dieser E-Mail-Adresse gäbe, würde nur einer mit dem Nutzer:in mit der externen ID zusammengeführt`john` werden.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -189,11 +189,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Zusammenführung nicht identifizierter Nutzer:innen in identifizierte Nutzer:innen
 
-In diesem nächsten Beispiel wird der zuletzt aktualisierte nicht identifizierte Nutzer:innen mit der E-Mail Adresse `john.smith@braze.com` mit dem zuletzt aktualisierten identifizierten Nutzer:innen mit der E-Mail Adresse `john.smith@braze.com` zusammengeführt.
+Das folgende Beispiel führt den zuletzt aktualisierten nicht identifizierten Nutzer mit der E-Mail-Adresse`john.smith@braze.com`mit dem zuletzt aktualisierten identifizierten Nutzer mit der E-Mail-Adresse zusammen`john.smith@braze.com`.
 
-Die Verwendung von `most_recently_updated` filtert die Abfragen auf einen Nutzer:in (einen nicht identifizierten Nutzer für `identifier_to_merge` und einen identifizierten Nutzer für `identifier_to_keep`).
+Die`most_recently_updated`Filterung der Abfragen auf einen Nutzer:in (ein nicht identifizierter Nutzer:in für `identifier_to_merge`und ein identifizierter Nutzer:in für den `identifier_to_keep`).
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -214,11 +214,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 }'
 ```
 
-### Zusammenführen eines nicht identifizierten Nutzer:innen ohne Einbeziehung der most_recently_updated Priorisierung
+### Zusammenführung einer nicht identifizierten Nutzer:in ohne Berücksichtigung dermost_recently_updatedPriorisierung
 
-Wenn es zwei nicht identifizierte Nutzer:innen mit der E-Mail Adresse `john.smith@braze.com` gibt, werden in dieser Beispielanfrage keine Nutzer:innen zusammengeführt, da es zwei nicht identifizierte Nutzer:innen mit dieser E-Mail Adresse gibt. Diese Anfrage funktioniert nur, wenn es nur einen nicht identifizierten Nutzer:innen mit der E-Mail Adresse `john.smith@braze.com` gibt.
+Wenn es zwei nicht identifizierte Nutzer:innen mit der E-Mail-Adresse gibt`john.smith@braze.com`, wird in dieser Anfrage keine Nutzer:in zusammengeführt, da es zwei nicht identifizierte Nutzer:innen mit dieser E-Mail-Adresse gibt. Diese Anfrage ist nur erfolgreich, wenn es lediglich einen nicht identifizierten Nutzer mit der E-Mail-Adresse gibt`john.smith@braze.com`.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
