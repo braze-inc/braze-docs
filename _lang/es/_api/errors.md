@@ -14,7 +14,7 @@ page_order: 2.3
 
 ## Respuestas del servidor
 
-Si la carga útil de tu POST fue aceptada por nuestros servidores, los mensajes exitosos reciben la siguiente respuesta:
+Si nuestros servidores han aceptado tu carga útil POST, los mensajes correctos recibirán la siguiente respuesta:
 
 ```json
 {
@@ -22,9 +22,11 @@ Si la carga útil de tu POST fue aceptada por nuestros servidores, los mensajes 
 }
 ```
 
-Ten en cuenta que el éxito solo significa que la payload de la API RESTful se formó correctamente y se pasó a nuestra notificación push, correo electrónico u otros servicios de mensajería. Esto no significa que los mensajes hayan sido realmente entregados, ya que otros factores podrían impedir la entrega del mensaje (por ejemplo, un dispositivo podría estar fuera de línea, el token push podría ser rechazado por los servidores de Apple, puede que hayas proporcionado un ID de usuario desconocido).
+Ten en cuenta que el éxito solo significa que la carga útil de la API REST se formó correctamente y se transmitió a nuestros servicios de notificación push, correo electrónico u otros servicios de mensajería. Esto no significa que los mensajes se hayan entregado realmente, ya que hay factores adicionales que podrían impedir la entrega del mensaje (por ejemplo, un dispositivo podría estar desconectado, el token de notificaciones push podría ser rechazado por los servidores de Apple o tú podrías haber proporcionado un ID de usuario desconocido).
 
-Si tu mensaje tiene éxito pero tiene errores no fatales, recibirás la siguiente respuesta:
+Para puntos finales como [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify), que no envían mensajes, un mensaje de éxito solo significa que Braze ha recibido la solicitud para su procesamiento. Si no hay ninguna coincidencia para el alias después del procesamiento, la solicitud se detiene.
+
+Si tu mensaje se envía correctamente pero contiene errores no fatales, recibirás la siguiente respuesta:
 
 ```json
 {
@@ -32,7 +34,7 @@ Si tu mensaje tiene éxito pero tiene errores no fatales, recibirás la siguient
 }
 ```
 
-En caso de éxito, se seguirán entregando los mensajes que no se hayan visto afectados por un error en la matriz `errors`. Si tu mensaje tiene un error fatal, recibirás la siguiente respuesta:
+En caso de éxito, los mensajes que no se hayan visto afectados por un error en la`errors`matriz se seguirán entregando. Si tu mensaje contiene un error fatal, recibirás la siguiente respuesta:
 
 ```json
 {
@@ -58,18 +60,18 @@ El elemento de código de estado de una respuesta del servidor es un número de 
 
 - La **clase** de código de estado **2XX** (no fatal) indica que **su solicitud** ha sido recibida, comprendida y aceptada correctamente.
 - La **clase** de código de estado **4XX** (fatal) indica un **error del cliente**. Consulte la tabla de errores fatales para obtener una lista completa de los códigos de error 4XX y sus descripciones.
-- La **clase** de código de estado **5XX** (fatal) indica un **error del servidor**. Hay varias causas posibles, por ejemplo, el servidor al que intenta acceder no puede ejecutar la solicitud, el servidor está en mantenimiento por lo que no puede ejecutar la solicitud, o el servidor está experimentando altos niveles de tráfico. Cuando esto ocurra, le recomendamos que reintente su petición con un backoff exponencial. En caso de incidente o interrupción, Braze no puede reproducir ninguna llamada a la API REST que haya fallado durante la ventana del incidente. Debes reintentar cualquier llamada que haya fallado durante la ventana de incidencias.
-  - Un **error 502** es un fallo antes de llegar al servidor de destino.
-  - Un **error 503** significa que la solicitud ha llegado al servidor de destino, pero no podemos completarla porque no hay capacidad suficiente, o hay un problema de red, o algo similar.
-  - Un **error 504** indica que un servidor no ha recibido una respuesta de otro servidor anterior.
+- La **clase** de código de estado **5XX** (fatal) indica un **error del servidor**. Hay varias causas posibles, por ejemplo, el servidor al que intenta acceder no puede ejecutar la solicitud, el servidor está en mantenimiento por lo que no puede ejecutar la solicitud, o el servidor está experimentando altos niveles de tráfico. Cuando esto ocurra, le recomendamos que reintente su petición con un backoff exponencial. En caso de incidente o interrupción, Braze no puede reproducir ninguna llamada a la API REST que haya fallado durante la ventana del incidente. Debes volver a intentar cualquier llamada que haya fallado durante el periodo del incidente.
+  - Un **error 502** es un fallo que se produce antes de llegar al servidor de destino.
+  - Un **error 503** significa que la solicitud llegó al servidor de destino, pero no podemos completarla porque no hay suficiente capacidad, hay un problema de red o algo similar.
+  - Un **error 504** indica que un servidor no ha recibido una respuesta de otro servidor ascendente.
 
 ### Errores fatales
 
-Los siguientes códigos de estado y mensajes de error asociados se devuelven si tu solicitud encuentra un error fatal.
+Si tu solicitud encuentra un error fatal, se devolverán los siguientes códigos de estado y mensajes de error asociados.
 
 {% endraw %}
 {% alert warning %}
-Todos los códigos de error siguientes indican que no se envía ningún mensaje.
+Todos los siguientes códigos de error indican que no se envían mensajes.
 {% endalert %}
 {% raw %}
 
@@ -92,7 +94,7 @@ Todos los códigos de error siguientes indican que no se envía ningún mensaje.
 | `400 Android Push Length Exceeded` | La carga útil JSON es superior a 4.000 bytes.|
 | `400 Bad Request` | No se puede analizar datetime `send_at`.|
 | `400 Bad Request` | En su solicitud, `in_local_time` es cierto pero `time` ya ha pasado en la zona horaria de su empresa.|
-| `401 Unauthorized` | Clave de API no válida. Este error también puede producirse si<br><br> \- Estás enviando la solicitud a la [instancia]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) incorrecta. Por ejemplo, si tu cuenta está en nuestra instancia de la UE (`https://dashboard-01.braze.eu`), la solicitud debe enviarse a `https://rest.fra-01.braze.eu`.<br>\- La sintaxis de la clave de API es utilizar comillas simples o dobles. La sintaxis correcta es `Authorization: Bearer {YOUR-API-KEY}`. |
+| `401 Unauthorized` | Clave de API no válida. Este error también puede producirse si:<br><br> \- Estás enviando la solicitud a la [instancia]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) incorrecta. Por ejemplo, si tu cuenta se encuentra en nuestra instancia de la UE (`https://dashboard-01.braze.eu`), la solicitud debe enviarse a `https://rest.fra-01.braze.eu`.<br>\- La sintaxis de la clave de API utiliza comillas simples o dobles. La sintaxis correcta es `Authorization: Bearer {YOUR-API-KEY}`. |
 | `403 Forbidden` | No se admite el plan de tarifas o la cuenta se desactiva por cualquier otro motivo.|
 | `403 Access Denied` | La clave API REST que está utilizando no tiene permisos suficientes, compruebe los permisos de la clave API en la página **Configuración**.|
 | `404 Not Found` | URL no válida. |
