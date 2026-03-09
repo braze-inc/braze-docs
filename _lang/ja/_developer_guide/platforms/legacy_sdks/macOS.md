@@ -1,5 +1,5 @@
 ---
-nav_title: MacOS (レガシー)
+nav_title: MacOS（レガシー）
 config_only: true
 noindex: true
 layout: redirect
