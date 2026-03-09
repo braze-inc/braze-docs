@@ -1,7 +1,7 @@
 ---
-nav_title: "取得:メールテンプレートのソース翻訳を表示する"
+nav_title: "取得:メールテンプレートの翻訳元を表示する"
 article_title: "取得:メールテンプレートのソース翻訳を表示"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 1
 
 layout: api_page
@@ -12,14 +12,12 @@ description: "この記事では、「メールテンプレートのソース翻
 {% api %}
 # メールテンプレートのソース翻訳を表示
 {% apimethod get %}
-/テンプレート/メール/翻訳/ソース
+/テンプレート/メール/翻訳/source
 {% endapimethod %}
 
-> [メールテンプレートの]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)ソース翻訳を表示するには、このエンドポイントを使用します。翻訳機能の詳細については、[メッセージのローカライゼーションを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照のこと。
+> [メールテンプレートの]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)ソース翻訳を表示するには、このエンドポイントを使用します。ローカライゼーション機能の詳細については、[メッセージ内のロケールを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照せよ。
 
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## 前提条件
 
@@ -31,9 +29,9 @@ description: "この記事では、「メールテンプレートのソース翻
 
 ## クエリーパラメーター
 
-| パラメータ     | required | データ型 | 説明                     |
+| パラメータ     | 必須かどうか | データ型 | 説明                     |
 |---------------|----------|-----------|---------------------------------|
-| `template_id` | 必須 | string    | メールテンプレートの ID。 |
+| `template_id` | 必須かどうか | string    | メールテンプレートの ID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
