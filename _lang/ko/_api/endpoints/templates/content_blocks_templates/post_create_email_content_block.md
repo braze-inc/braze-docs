@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: 콘텐츠 블록 만들기"
+nav_title: "POST: 콘텐츠 블록 생성"
 article_title: "POST: 콘텐츠 블록 생성"
 search_tag: Endpoint
 page_order: 4
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 예시 요청
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -87,7 +87,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/cre
 | `Content cannot be blank` | |
 | `Content must be a string` | 콘텐츠가 따옴표로 묶여 있는지 확인합니다(`""`). |
 | `Content must be smaller than 50kb` | 콘텐츠 블록의 콘텐츠는 총 50KB 미만이어야 합니다. |
-| `Content contains malformed liquid` | 제공된 리퀴드는 유효하지 않거나 파싱할 수 없습니다. 유효한 Liquid로 다시 시도하거나 지원팀에 문의하세요. |
+| `Content contains malformed liquid` | 제공된 리퀴드는 유효하지 않거나 파싱할 수 없습니다. 유효한 Liquid로 다시 시도하거나 지원팀에 문의하십시오. |
 | `Content Block cannot be referenced within itself` | |
 | `Content Block description cannot be blank` | |
 | `Content Block description must be a string` | 콘텐츠 블록 설명이 따옴표로 묶여 있는지 확인합니다(`""`). |
