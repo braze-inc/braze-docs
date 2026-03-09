@@ -1,6 +1,6 @@
 ---
-nav_title: "Test d'un message"
-article_title: Envoyez un message de test pour le SDK de Braze
+nav_title: "Vérification d'un message"
+article_title: Veuillez envoyer un message test pour le SDK Braze.
 page_order: 10.0
 description: "Découvrez comment envoyer un message de test pour le SDK de Braze."
 ---
