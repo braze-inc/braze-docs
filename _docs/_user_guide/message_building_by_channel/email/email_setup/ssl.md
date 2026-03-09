@@ -32,7 +32,7 @@ Major browsers such as Google Chrome restrict traffic through non-secure URLs to
 
 If you have an HTTP Strict Transport Security (HSTS) domain, set up SSL and configure a CDN to send required security certificates. Without SSL, image and web links break.
 
-## Acquiring an SSL certificate
+## Acquire an SSL certificate
 
 Acquire an SSL certificate through a third party, usually a Content Delivery Network (CDN). A CDN hosts the certificate and serves it to the browser when a user clicks a link by redirecting traffic through the CDN to apply certificates before sending it to SendGrid or SparkPost.
 
@@ -65,17 +65,27 @@ If you can't or don't want to use the listed CDNs for SSL click and open trackin
 For troubleshooting your CDN configuration, contact your CDN provider.
 {% endalert %}
 
-The following table includes step-by-step guides written by ESP partners on how to configure certain CDNs. While your specific CDN may not be listed, you must make sure your CDN has the ability to apply SSL certificates.
+Refer to the following resources by ESP partners on how to configure certain CDNs. While your specific CDN may not be listed, you must make sure your CDN has the ability to apply SSL certificates.
 
-| SendGrid | SparkPost |
-| -------- | --------- |
-| [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[Fastly](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)<br>[CloudFlare](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Fastly](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[Google Cloud Platform](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)<br>[Microsoft Azure](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+**Sendgrid**
 
-For Amazon SES, refer to [Option 2: Configuring an HTTPS domain](https://docs.aws.amazon.com/ses/latest/dg/configure-custom-open-click-domains.html) and specify the AWS tracking domain by region based on your Braze cluster:
+- [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)
+- [CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)
+- [Fastly](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)
+- [KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn)
 
-- **Braze US clusters:** `r.us-east-1.awstrack.me`
-- **Braze EU clusters:** `r.eu-central-1.awstrack.me`
+**Sparkpost**
+- [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)
+- [CloudFlare](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)
+- [Fastly](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)
+- [Google Cloud Platform](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)
+- [Microsoft Azure](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) 
+
+**Amazon SES:**
+- Refer to [Configuring custom domains to handle open and click tracking](https://docs.aws.amazon.com/ses/latest/dg/configure-custom-open-click-domains.html) and specify the AWS tracking domain by region based on your Braze cluster:
+    - **Braze US clusters:** `r.us-east-1.awstrack.me`
+    - **Braze EU clusters:** `r.eu-central-1.awstrack.me`
+- [CloudFlare](https://community.cloudflare.com/t/cloudflare-cdn-for-custom-domains-on-aws-ses/432141)
 
 {% alert important %}
 When you configure your CDN's click-tracking domain, enable the `X-Forwarded-Host` header to prevent potential security issues such as host header attacks. Refer to CDN documentation or your support team for steps.
