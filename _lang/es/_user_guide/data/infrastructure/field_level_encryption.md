@@ -9,10 +9,10 @@ page_type: reference
 
 # Cifrado a nivel de campo del identificador
 
-{% include field_level_encryption_pii_description.md %}
+{% multi_lang_include field_level_encryption_pii_description.md %}
 
 {% alert important %}
-La encriptación a nivel de campo identificador está disponible como característica adicional. Para empezar con el cifrado a nivel de campo identificador, ponte en contacto con tu director de cuentas Braze.
+La encriptación a nivel de campo identificador está disponible como característica adicional. Para empezar a utilizar el cifrado a nivel de campo de identificador, ponte en contacto con tu director de cuentas de Braze.
 {% endalert %}
 
 ## Cómo funciona
@@ -30,11 +30,11 @@ Sigue estos pasos para configurar tu método de autenticación con clave secreta
 3. Debes configurar KMS en las siguientes regiones de AWS:
     - **Clústeres Braze US:** `us-east-1`
     - **Clústeres Braze UE:** `eu-central-1`
-    - **Racimo AU Braze:** `ap-southeast-2`
-    - **Grupo ID Braze:** `ap-southeast-3`
+    - **Clúster Braze AU:** `ap-southeast-2`
+    - **Clúster de Braze ID:** `ap-southeast-3`
 4. En el servicio de administración de claves de AWS, crea dos claves y asegúrate de que el usuario IAM está añadido en los permisos de uso de claves:
     - **[Cifrar/descifrar](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html#create-symmetric-cmk):** Selecciona el tipo de clave **Simétrica** y el uso de las claves **Cifrar y Descifrar**.
-    - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Selecciona Tipo de clave **simétrica** y **Generar y verificar el uso de la clave MAC**. La especificación clave debe ser **HMAC_256**. Después de crear la clave, anota en algún sitio el ID de la clave HMAC, ya que tendrás que introducirlo en Braze.
+    - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Selecciona Tipo de clave **simétrica** y **Generar y verificar el uso de la clave MAC**. La especificación clave debería ser **HMAC_256**. Después de crear la clave, anota en algún sitio el ID de la clave HMAC, ya que tendrás que introducirlo en Braze.
 
 ![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
 
