@@ -43,6 +43,10 @@ BIG SALE
 
 En este ejemplo, `Big Sale` es una cadena y `upcase` es el filtro que se aplica.
 
+{% alert note %}
+Los filtros se pueden utilizar en`assign`  instrucciones y etiquetas de salida{% raw %} (`{{ }}`){% endraw %}, pero no en condicionales (`if`, `elsif`, `unless`), `case`/`when`,`for`  bucles o corchetes de acceso a matrices. Para utilizar un valor filtrado en uno de esos contextos, asigna primero el resultado a una variable. Para obtener más información, consulta [Dónde utilizar operadores y filtros para filtrar]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
+
 ### Sintaxis para filtros múltiples
 
 Puede utilizar varios filtros en una salida. Se aplican de izquierda a derecha.
@@ -79,7 +83,7 @@ Los filtros de matrices se utilizan para modificar la salida de las matrices.
 | [map](https://shopify.dev/api/liquid/filters/map)           | Acepta un atributo de elemento de matriz como parámetro y crea una matriz a partir del valor de cada elemento de matriz.        | ✅ Sí   |
 | [reverse](https://shopify.dev/api/liquid/filters/reverse)       | Invierte el orden de los elementos de una matriz.                                                                       | ✅ Sí   |
 | [size](https://shopify.dev/api/liquid/filters/size)          | Devuelve el tamaño de una cadena (el número de caracteres) o de una matriz (el número de elementos).                      | ✅ Sí   |
-| [slice](https://shopify.dev/api/liquid/filters/slice)        | Devuelve una subcadena de una cadena o un subconjunto de una matriz, empezando en el índice especificado.                          | ✅ Sí   |
+| [slice](https://shopify.dev/api/liquid/filters/slice)        | Devuelve una subcadena de una cadena o un subconjunto de una matriz, comenzando en el índice especificado.                          | ✅ Sí   |
 | [sort](https://shopify.dev/api/liquid/filters/sort)         | Ordena los elementos de una matriz por un atributo dado de un elemento de la matriz.                                    | ✅ Sí   |
 | [sort_natural](https://shopify.dev/api/liquid/sort_natural) | Ordena los elementos de una matriz por orden alfabético sin distinguir mayúsculas de minúsculas.                                                | ✅ Sí   |
 | [uniq](https://shopify.dev/api/liquid/filters/uniq)         | Elimina cualquier instancia duplicada de los elementos de una matriz.                                                           | ✅ Sí   |
@@ -256,14 +260,14 @@ Las comillas rectas son diferentes de las rizadas en Liquid. Tenga cuidado al co
 | Filtro          | Descripción     | Compatible |
 | :--------------- | ------------- | --------- |
 | [append](https://shopify.dev/api/liquid/filters/append)     | Añade caracteres a una cadena.           | ✅ Sí   |
-| [cameliza](https://shopify.dev/docs/api/liquid/filters/camelize)     | Convierte una cadena a CamelCase.             | ⛔ No    |
+| [camelizar](https://shopify.dev/docs/api/liquid/filters/camelize)     | Convierte una cadena a CamelCase.             | ⛔ No    |
 | [capitalize](https://shopify.dev/api/liquid/filters/capitalize)     | Escribe en mayúsculas la primera palabra de una cadena y en minúsculas el resto de caracteres.         | ✅ Sí   |
 | [downcase](https://shopify.dev/api/liquid/filters/downcase)      | Convierte una cadena a minúsculas.         | ✅ Sí   |
 | [escape](https://shopify.dev/api/liquid/filters/escape)    | Escapa de una cadena.             | ✅ Sí   |
-| [Manipula](https://shopify.dev/api/liquid/filters/handleize)        | Formatea una cadena en un asa.        | ⛔ No    |
-| [md5](https://shopify.dev/api/liquid/filters/md5)    | Convierte una cadena en un hash MD5. Para más información, consulta [Filtros de codificación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters).   | ✅ Sí   |
-| [sha1](https://shopify.dev/api/liquid/filters/sha1)    | Convierte una cadena en un hash SHA-1. Para más información, consulta [Filtros de codificación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters).  | ✅ Sí   |
-| hmac_sha1_hex<br>(anteriormente [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | Convierte una cadena en un hash SHA-1 utilizando un código de autenticación de mensajes hash (HMAC). Pasa la clave secreta del mensaje como parámetro al filtro. Para más información, consulta [Filtros de codificación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters). | ✅ Sí   |
+| [manejar](https://shopify.dev/api/liquid/filters/handleize)        | Formatea una cadena en un asa.        | ⛔ No    |
+| [md5](https://shopify.dev/api/liquid/filters/md5)    | Convierte una cadena en un hash MD5. Consulta [Filtros]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) de [codificación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para obtener más información.   | ✅ Sí   |
+| [sha1](https://shopify.dev/api/liquid/filters/sha1)    | Convierte una cadena en un hash SHA-1. Consulta [Filtros]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) de [codificación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para obtener más información.  | ✅ Sí   |
+| hmac_sha1_hex<br>(anteriormente[hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | Convierte una cadena en un hash SHA-1 utilizando un código de autenticación de mensajes hash (HMAC). Pasa la clave secreta del mensaje como parámetro al filtro. Consulta [Filtros]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) de [codificación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para obtener más información. | ✅ Sí   |
 | [hmac_sha256](https://shopify.dev/api/liquid/filters/hmac_sha256)    | Convierte una cadena en un hash SHA-256 utilizando un código de autenticación de mensajes hash (HMAC). Pasa la clave secreta del mensaje como parámetro al filtro.       | ✅ Sí   |
 | hmac_sha512 | Convierte una cadena en un hash SHA-512 utilizando un código de autenticación de mensajes hash (HMAC). Pasa la clave secreta del mensaje como parámetro al filtro. | ✅ Sí  |
 | [newline_to_br](https://shopify.dev/api/liquid/filters/newline_to_br)     | Inserta una etiqueta HTML de salto de línea `<br>` delante de cada salto de línea de una cadena.        | ✅ Sí   |
