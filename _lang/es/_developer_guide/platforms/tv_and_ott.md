@@ -1,5 +1,5 @@
 ---
-nav_title: TV y OTT
+nav_title: Televisión y OTT
 article_title: Integraciones de TV y OTT para Braze
 page_order: 15
 
@@ -14,7 +14,7 @@ platform:
 
 # Integraciones TV y OTT
 
-> A medida que la tecnología evoluciona hacia nuevas plataformas y dispositivos, ¡también puede hacerlo tu mensajería con Braze! Braze ofrece distintos canales de interacción para diferentes sistemas operativos de TV y métodos de entrega de contenidos OTT.
+> A medida que la tecnología evoluciona hacia nuevas plataformas y dispositivos, ¡también puede hacerlo tu mensajería con Braze! Braze ofrece diferentes canales de interacción para varios sistemas operativos de televisión y métodos de entrega de contenido OTT.
 
 ## Plataformas y características
 
@@ -258,7 +258,7 @@ Para segmentar las aplicaciones OTT para mensajería, te recomendamos que crees 
 ## Headless UI {#custom-ui}
 
 {% alert important %}
-Las plataformas que admiten mensajes dentro de la aplicación o tarjetas de contenido a través de la interfaz de usuario sin cabeza **no** incluyen ninguna interfaz de usuario ni vistas predeterminadas. Construye tu propia interfaz de usuario personalizada (por ejemplo, para mensajes dentro de la aplicación) y luego utiliza los modelos de datos proporcionados por el SDK para rellenar esas interfaces de usuario.
+Las plataformas que admiten mensajes dentro de la aplicación o tarjetas de contenido a través de una interfaz de usuario sin interfaz gráfica **no** incluyen ninguna interfaz de usuario ni vistas predeterminadas. Crea tu propia interfaz de usuario personalizada (por ejemplo, para mensajes dentro de la aplicación) y, a continuación, utiliza los modelos de datos proporcionados por el SDK para rellenar esas interfaces de usuario.
 {% endalert %}
 
 Con Headless UI, Braze entregará un modelo de datos, como JSON, que tu aplicación puede leer y utilizar dentro de una IU que tu aplicación controla. Estos datos contendrán los campos configurados en el panel (título, cuerpo, texto del botón, colores, etc.) que tu aplicación podrá leer y mostrar en consecuencia. Para más información sobre la mensajería personalizada, consulta lo siguiente:
