@@ -11,12 +11,12 @@ page_type: reference
 
 > Les sources connectées constituent une alternative en zéro copie à la synchronisation directe des données avec la fonctionnalité Cloud Data Ingestion (CDI) de Braze. Une source connectée interroge directement votre entrepôt de données pour créer de nouveaux segments sans copier les données sous-jacentes dans Braze. 
 
-Après avoir ajouté une source connectée à votre espace de travail Braze, vous pouvez créer un segment CDI dans Segment Extensions. Les CDI Segment Extensions vous permettent d'écrire un langage SQL qui interroge directement votre entrepôt de données (en utilisant les données mises à disposition par votre CDI Connected Source), et de créer et maintenir un groupe d'utilisateurs pouvant être ciblés au sein de Braze. 
+Après avoir ajouté une source connectée à votre espace de travail Braze, vous pouvez créer un segment CDI dans Segment Extensions. Les extensions de segments CDI vous permettent d'écrire du code SQL qui interroge directement votre entrepôt de données (en utilisant les données qui y sont disponibles via votre source connectée CDI) et de créer et gérer un groupe d'utilisateurs pouvant être ciblés dans Braze. 
 
-Pour plus d'informations sur la création d'un segment avec cette source, reportez-vous à [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+Pour plus d'informations sur la création d'un segment avec cette source, veuillez vous référer aux [extensions de segments CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert warning %}
-Étant donné que les sources connectées s'exécutent directement sur votre entrepôt de données, vous prenez en charge tous les coûts liés à l'exécution de ces requêtes dans votre entrepôt de données. Les sources connectées n'enregistrent pas les points de données et les CDI Segment Extensions ne consomment pas de crédits de segmentation SQL.
+Étant donné que les sources connectées s'exécutent directement sur votre entrepôt de données, vous prenez en charge tous les coûts liés à l'exécution de ces requêtes dans votre entrepôt de données. Les sources connectées n'enregistrent pas les points de données et les extensions de segments CDI n'utilisent pas de crédits de segment SQL.
 {% endalert %}
 
 ## Intégration des sources connectées
@@ -43,14 +43,14 @@ Les sources connectées de Cloud Data Ingestion nécessitent une certaine config
 **Dans votre entrepôt de données**
 
 {: start="8"}
-8\. Ajoutez la clé publique fournie dans le tableau de bord de Braze à l'[utilisateur Snowflake pour l'authentification](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). Lorsque vous avez terminé, vous pouvez utiliser la source connectée pour créer une ou plusieurs extensions de segments CDI.
+8\. Ajoutez la clé publique fournie dans le tableau de bord de Braze à l'[utilisateur Snowflake pour l'authentification](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). Une fois que vous avez terminé, vous pouvez utiliser la source connectée pour créer une ou plusieurs extensions de segments CDI.
 {% endtab %}
 
 {% tab Redshift %}
 1. Configurez les données sources et les ressources requises dans votre environnement Redshift.
 2. Créez une nouvelle source connectée dans le tableau de bord de Braze.
 4. Testez l'intégration.
-5. Utilisez la source connectée pour créer une ou plusieurs extensions de segments CDI.
+5. Veuillez utiliser la source connectée pour créer une ou plusieurs extensions de segments CDI.
 {% endtab %}
 
 {% tab BigQuery %}
@@ -58,7 +58,7 @@ Les sources connectées de Cloud Data Ingestion nécessitent une certaine config
 2. Créez un compte de service et autorisez l'accès au(x) projet(s) BigQuery et au(x) jeu(x) de données qui contiennent les données que vous souhaitez synchroniser.  
 3. Créez une nouvelle source connectée dans le tableau de bord de Braze.
 4. Testez l'intégration.
-5. Utilisez la source connectée pour créer une ou plusieurs extensions de segments CDI.
+5. Veuillez utiliser la source connectée pour créer une ou plusieurs extensions de segments CDI.
 {% endtab %}
 
 {% tab Databricks %}
@@ -66,10 +66,10 @@ Les sources connectées de Cloud Data Ingestion nécessitent une certaine config
 2. Créez un compte de service et autorisez l'accès au(x) projet(s) et jeu(x) de données Databricks contenant les données que vous souhaitez synchroniser.  
 3. Créez une nouvelle source connectée dans le tableau de bord de Braze.
 4. Testez l'intégration.
-5. Utilisez la source connectée pour créer une ou plusieurs extensions de segments CDI.
+5. Veuillez utiliser la source connectée pour créer une ou plusieurs extensions de segments CDI.
 
 {% alert important %}
-Il peut y avoir un temps de chauffe de deux à cinq minutes lorsque Braze se connecte aux instances SQL Classic et Pro, ce qui entraînera des retards lors de la configuration et des essais de connexion, ainsi que lors de la création et de l'actualisation des extensions segment d'un CDI. L'utilisation d'une instance SQL sans serveur permet de réduire ce temps de préchauffage et d’améliorer le débit des requêtes, mais peut entraîner des coûts d'intégration légèrement plus élevés.
+Il peut y avoir un délai de préchauffage de deux à cinq minutes lorsque Braze se connecte aux instances Classic et Pro SQL, ce qui peut entraîner des retards lors de la configuration et du test de la connexion, ainsi que lors de la création et de l'actualisation des extensions de segments CDI. L'utilisation d'une instance SQL sans serveur permet de réduire ce temps de préchauffage et d’améliorer le débit des requêtes, mais peut entraîner des coûts d'intégration légèrement plus élevés.
 {% endalert %}
 
 {% endtab %}
@@ -79,7 +79,7 @@ Il peut y avoir un temps de chauffe de deux à cinq minutes lorsque Braze se con
 2. Dans votre espace de travail Fabric, configurez les données sources et accordez des autorisations à votre principal de service 
 3. Créez une nouvelle source connectée dans le tableau de bord de Braze.
 4. Testez l'intégration.
-5. Utilisez la source connectée pour créer une ou plusieurs extensions de segments CDI.
+5. Veuillez utiliser la source connectée pour créer une ou plusieurs extensions de segments CDI.
 {% endtab %}
 
 {% endtabs %}
@@ -92,11 +92,11 @@ Configurez les données sources et les ressources nécessaires dans votre enviro
 {% tab Snowflake %}
 #### Étape 2.1 : Créer un rôle et accorder des autorisations
 
-Créez un rôle pour votre source connectée. Ce rôle sera utilisé pour générer la liste des tables disponibles dans vos extensions de segments CDI, et pour interroger les tables sources afin de créer de nouveaux segments. Après la création de la source connectée, Braze découvre les noms et la description de toutes les tables disponibles pour l'utilisateur dans le schéma de la source.
+Créez un rôle pour votre source connectée. Ce rôle sera utilisé pour générer la liste des tables disponibles dans vos extensions de segments CDI et pour interroger les tables sources afin de créer de nouveaux segments. Après la création de la source connectée, Braze découvre les noms et la description de toutes les tables disponibles pour l'utilisateur dans le schéma de la source.
 
-Vous pouvez choisir d'accorder l'accès à toutes les tables d'un schéma ou d'accorder des privilèges uniquement à des tables spécifiques. Les tables auxquelles le rôle Braze a accès pourront être interrogées dans l'extension de segment CDI.
+Vous pouvez choisir d'accorder l'accès à toutes les tables d'un schéma ou d'accorder des privilèges uniquement à des tables spécifiques. Toutes les tables auxquelles le rôle Braze a accès pourront être interrogées dans les extensions de segments CDI.
 
-L'autorisation `create table` est nécessaire pour que Braze puisse créer une table avec les résultats de votre requête CDI Segment Extension avant de mettre à jour le segment dans Braze. Braze créera une table temporaire par segment, et la table ne persistera que pendant que Braze met à jour le segment.
+Cette`create table`autorisation est nécessaire pour que Braze puisse créer un tableau avec les résultats de votre requête CDI extensions de segments avant de mettre à jour le segment dans Braze. Braze créera une table temporaire par segment, et la table ne persistera que pendant que Braze met à jour le segment.
 
 ```sql
 CREATE ROLE BRAZE_INGESTION_ROLE;
@@ -156,11 +156,11 @@ GRANT CREATE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 ```
 
-Créez un utilisateur pour votre source connectée. Cet utilisateur sera utilisé pour générer la liste des tables disponibles dans vos extensions de segments CDI, et pour interroger les tables sources afin de créer de nouveaux segments. Après la création de la source connectée, Braze découvre les noms et la description de toutes les tables disponibles pour l'utilisateur dans le schéma de la source. Si vous créez plusieurs intégrations CDI, vous souhaiterez peut-être accorder des autorisations à un schéma ou gérer les autorisations à l'aide d'un groupe. 
+Créez un utilisateur pour votre source connectée. Cet utilisateur sera utilisé pour générer la liste des tables disponibles dans vos extensions de segments CDI et pour interroger les tables sources afin de créer de nouveaux segments. Après la création de la source connectée, Braze découvre les noms et la description de toutes les tables disponibles pour l'utilisateur dans le schéma de la source. Si vous créez plusieurs intégrations CDI, vous souhaiterez peut-être accorder des autorisations à un schéma ou gérer les autorisations à l'aide d'un groupe. 
 
-Vous pouvez choisir d'accorder l'accès à toutes les tables d'un schéma ou d'accorder des privilèges uniquement à des tables spécifiques. Les tables auxquelles le rôle Braze a accès pourront être interrogées dans l'extension de segment CDI. Veillez à accorder à l'utilisateur l'accès à toutes les nouvelles tables lorsqu'elles sont créées, ou définissez des autorisations par défaut pour l'utilisateur. 
+Vous pouvez choisir d'accorder l'accès à toutes les tables d'un schéma ou d'accorder des privilèges uniquement à des tables spécifiques. Toutes les tables auxquelles le rôle Braze a accès pourront être interrogées dans les extensions de segments CDI. Veillez à accorder à l'utilisateur l'accès à toutes les nouvelles tables lorsqu'elles sont créées, ou définissez des autorisations par défaut pour l'utilisateur. 
 
-L'autorisation `create table` est nécessaire pour que Braze puisse créer une table avec les résultats de votre requête CDI Segment Extension avant de mettre à jour le segment dans Braze. Braze créera une table temporaire par segment, qui ne persistera que pendant la mise à jour du segment par Braze.
+Cette`create table`autorisation est nécessaire pour que Braze puisse créer un tableau avec les résultats de votre requête CDI extensions de segments avant de mettre à jour le segment dans Braze. Braze créera une table temporaire par segment, qui ne persistera que pendant la mise à jour du segment par Braze.
 
 
 #### Étape 2.2 : Autoriser l'accès aux IP de Braze    
@@ -186,11 +186,11 @@ Créez un compte de service dans GCP que Braze utilisera pour se connecter et li
 - **Utilisateur des tâches BigQuery :** Permet à Braze d'accéder à l'exécution des travaux.
 - **bigquery.tables.create** Permet à Braze de créer des tables temporaires lors de l'actualisation des segments.
 
-Créez un compte de service pour l'utilisation de votre source connectée. Cet utilisateur sera utilisé pour générer la liste des tables disponibles dans vos extensions de segments CDI, et pour interroger les tables sources afin de créer de nouveaux segments. Après la création de la source connectée, Braze découvre les noms et la description de toutes les tables disponibles pour l'utilisateur dans le schéma de la source. 
+Créez un compte de service pour l'utilisation de votre source connectée. Cet utilisateur sera utilisé pour générer la liste des tables disponibles dans vos extensions de segments CDI et pour interroger les tables sources afin de créer de nouveaux segments. Après la création de la source connectée, Braze découvre les noms et la description de toutes les tables disponibles pour l'utilisateur dans le schéma de la source. 
 
-Vous pouvez choisir d'accorder l'accès à toutes les tables d'un ensemble de données ou d'accorder des privilèges uniquement à des tables spécifiques. Les tables auxquelles le rôle Braze a accès pourront être interrogées dans l'extension de segment CDI. 
+Vous pouvez choisir d'accorder l'accès à toutes les tables d'un ensemble de données ou d'accorder des privilèges uniquement à des tables spécifiques. Toutes les tables auxquelles le rôle Braze a accès pourront être interrogées dans les extensions de segments CDI. 
 
-L'autorisation `create table` est nécessaire pour que Braze puisse créer une table avec les résultats de votre requête CDI Segment Extension avant de mettre à jour le segment dans Braze. Braze créera une table temporaire par segment, et la table ne persistera que pendant que Braze met à jour le segment. 
+Cette`create table`autorisation est nécessaire pour que Braze puisse créer un tableau avec les résultats de votre requête CDI extensions de segments avant de mettre à jour le segment dans Braze. Braze créera une table temporaire par segment, et la table ne persistera que pendant que Braze met à jour le segment. 
 
 Après avoir créé le compte de service et accordé les autorisations, générez une clé JSON. Pour plus d'informations, consultez [Google Cloud : Créer et supprimer des clés de compte de service](https://cloud.google.com/iam/docs/keys-create-delete). Vous chargerez ceci ultérieurement dans le tableau de bord de Braze.
 
@@ -208,7 +208,7 @@ Si vous avez mis en place des politiques réseau, vous devez donner à Braze un 
 Pour que Braze puisse accéder à Databricks, un jeton d'accès personnel doit être créé.
 
 1. Dans votre espace de travail Databricks, sélectionnez votre nom d'utilisateur Databricks dans la barre supérieure, puis sélectionnez **User Settings** dans le menu déroulant.
-2. Assurez-vous que le compte de service dispose des privilèges `CREATE TABLE` sur le schéma utilisé pour la source connectée. 
+2. Veuillez vous assurer que le compte de service dispose`CREATE TABLE`des privilèges sur le schéma utilisé pour la source connectée. 
 3. Dans l'onglet **Jetons d'accès**, sélectionnez **Générer un nouveau jeton**.
 4. Saisissez un commentaire qui vous aide à identifier ce jeton, par exemple « Braze CDI », et remplacez la durée de vie du jeton par aucune durée de vie en laissant vide la case Durée de vie (jours).
 5. Sélectionnez **Générer**.
@@ -216,9 +216,9 @@ Pour que Braze puisse accéder à Databricks, un jeton d'accès personnel doit �
 
 Ce jeton sera utilisé pour générer la liste des tables disponibles dans vos extensions de segments CDI et pour interroger les tables sources afin de créer de nouveaux segments. Après la création de la source connectée, Braze découvre les noms et la description de toutes les tables disponibles pour l'utilisateur dans le schéma de la source. 
 
-Vous pouvez choisir d'accorder l'accès à toutes les tables d'un schéma ou d'accorder des privilèges uniquement à des tables spécifiques. Les tables auxquelles le rôle Braze a accès pourront être interrogées dans l'extension de segment CDI.
+Vous pouvez choisir d'accorder l'accès à toutes les tables d'un schéma ou d'accorder des privilèges uniquement à des tables spécifiques. Toutes les tables auxquelles le rôle Braze a accès pourront être interrogées dans les extensions de segments CDI.
 
-L'autorisation `create table` est nécessaire pour que Braze puisse créer une table avec les résultats de votre requête CDI Segment Extension avant de mettre à jour le segment dans Braze. Braze créera une table temporaire par segment, qui ne persistera que pendant la mise à jour du segment par Braze. 
+Cette`create table`autorisation est nécessaire pour que Braze puisse créer un tableau avec les résultats de votre requête CDI extensions de segments avant de mettre à jour le segment dans Braze. Braze créera une table temporaire par segment, qui ne persistera que pendant la mise à jour du segment par Braze. 
 
 Conservez le jeton en lieu sûr jusqu'à ce que vous ayez besoin de le saisir dans le tableau de bord de Braze lors de l'étape de création d’identifiants.
 
@@ -241,7 +241,7 @@ Braze se connectera à votre entrepôt Fabric à l'aide d'un principal de servic
 1. Dans le portail Azure, naviguez jusqu'au centre d'administration de Microsoft Entra, puis **App Registrations**.
 2. Sélectionnez **\+ Nouvel enregistrement** sous **Identité > Applications > Enregistrements d'applications** 
 3. Saisissez un nom et sélectionnez `Accounts in this organizational directory only` comme type de compte pris en charge. Sélectionnez ensuite **Enregistrer**. 
-4. Sélectionnez l'application (service principal) que vous venez de créer, puis naviguez vers **Certificats & secrets > + Nouveau secret client**
+4. Veuillez sélectionner l'application (principal de service) que vous venez de créer, puis accédez à **Certificats&secrets > + Nouveau secret client.**
 5. Saisissez une description et une période d'expiration pour le secret. Sélectionnez ensuite **Ajouter**. 
 6. Notez le secret client créé pour être utilisé dans la configuration de Braze. 
 
@@ -259,7 +259,7 @@ Vous fournirez un accès permettant à Braze de se connecter à votre instance F
 
 Vous aurez besoin de l'endpoint SQL de votre entrepôt pour que Braze puisse se connecter. Pour récupérer cet endpoint SQL, allez dans l'**espace de travail** dans Fabric, et dans la liste des éléments, survolez le nom de l'entrepôt et sélectionnez **Copier la chaîne de connexion SQL**.
 
-![La page "Fabric Console" dans Microsoft azure, où les utilisateurs doivent récupérer la chaîne de caractères SQL.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
+![La page « Fabric Console » dans Microsoft azure, où les utilisateurs doivent récupérer la chaîne de caractères de connexion SQL.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
 
 #### Étape 2.4 : Autoriser les IP de Braze dans le pare-feu (facultatif)
 
@@ -287,7 +287,7 @@ Saisissez les informations relatives à votre entrepôt de données Snowflake et
 
 #### Étape 3.2 : Configurer les détails de la synchronisation
 
-Choisissez un nom pour la source connectée. Ce nom sera utilisé dans la liste des sources disponibles lorsque vous créerez une nouvelle extension de segmentation CDI. 
+Choisissez un nom pour la source connectée. Ce nom sera utilisé dans la liste des sources disponibles lorsque vous créerez une nouvelle extension de segment CDI. 
 
 Configurez une durée d'exécution maximale pour cette source. Lors de la création ou de l'actualisation d'un segment, Braze interrompt automatiquement les requêtes qui dépassent la durée d'exécution maximale. La durée d'exécution maximale autorisée est de 60 minutes. Une durée d'exécution inférieure réduira les coûts encourus sur votre compte Snowflake. 
 
@@ -317,7 +317,7 @@ Saisissez les informations relatives à votre entrepôt de données Redshift et 
 
 #### Étape 3.2 : Configurer les détails de la synchronisation
 
-Choisissez un nom pour la source connectée. Ce nom sera utilisé dans la liste des sources disponibles lorsque vous créerez une nouvelle extension de segmentation CDI. 
+Choisissez un nom pour la source connectée. Ce nom sera utilisé dans la liste des sources disponibles lorsque vous créerez une nouvelle extension de segment CDI. 
 
 Configurez une durée d'exécution maximale pour cette source. Lors de la création ou de l'actualisation d'un segment, Braze interrompt automatiquement les requêtes qui dépassent la durée d'exécution maximale. La durée d'exécution maximale autorisée est de 60 minutes ; une durée d'exécution inférieure réduira les coûts encourus sur votre compte Redshift. 
 
@@ -347,7 +347,7 @@ Saisissez les informations relatives à votre projet BigQuery et à votre jeu de
 
 #### Étape 3.2 : Configurer les détails de la synchronisation
 
-Choisissez un nom pour la source connectée. Ce nom sera utilisé dans la liste des sources disponibles lorsque vous créerez une nouvelle extension de segmentation CDI. 
+Choisissez un nom pour la source connectée. Ce nom sera utilisé dans la liste des sources disponibles lorsque vous créerez une nouvelle extension de segment CDI. 
 
 Configurez une durée d'exécution maximale pour cette source. Lors de la création ou de l'actualisation d'un segment, Braze interrompt automatiquement les requêtes qui dépassent la durée d'exécution maximale. La durée d'exécution maximale autorisée est de 60 minutes ; une durée d'exécution inférieure réduira les coûts encourus sur votre compte BigQuery. 
 
@@ -359,7 +359,7 @@ Si les requêtes expirent systématiquement alors que vous avez défini une dur�
 
 #### Étape 3.3 : Testez la connexion
 
-Sélectionnez **Tester la connexion** pour vérifier que la liste des tables visibles par l'utilisateur correspond à ce que vous attendez, puis sélectionnez **Terminé**. Votre source connectée est maintenant créée et prête à être utilisée dans CDI Segment Extensions.
+Sélectionnez **Tester la connexion** pour vérifier que la liste des tables visibles par l'utilisateur correspond à ce que vous attendez, puis sélectionnez **Terminé**. Votre source connectée est désormais créée et prête à être utilisée dans les extensions de segments CDI.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
@@ -377,7 +377,7 @@ Saisissez les informations relatives à vos identifiants Databricks et, en optio
 
 #### Étape 3.2 : Configurer les détails de la synchronisation
 
-Choisissez un nom pour la source connectée. Ce nom sera utilisé dans la liste des sources disponibles lorsque vous créerez une nouvelle extension de segmentation CDI. 
+Choisissez un nom pour la source connectée. Ce nom sera utilisé dans la liste des sources disponibles lorsque vous créerez une nouvelle extension de segment CDI. 
 
 Configurez une durée d'exécution maximale pour cette source. Lors de la création ou de l'actualisation d'un segment, Braze interrompt automatiquement les requêtes qui dépassent la durée d'exécution maximale. La durée d'exécution maximale autorisée est de 60 minutes ; une durée d'exécution inférieure réduira les coûts encourus sur votre compte Databricks. 
 
@@ -389,7 +389,7 @@ Si les requêtes expirent systématiquement alors que vous avez défini une dur�
 
 #### Étape 3.3 : Testez la connexion
 
-Sélectionnez **Tester la connexion** pour vérifier que la liste des tables visibles par l'utilisateur correspond à ce que vous attendez, puis sélectionnez **Terminé**. Votre source connectée est maintenant créée et prête à être utilisée dans CDI Segment Extensions.
+Sélectionnez **Tester la connexion** pour vérifier que la liste des tables visibles par l'utilisateur correspond à ce que vous attendez, puis sélectionnez **Terminé**. Votre source connectée est désormais créée et prête à être utilisée dans les extensions de segments CDI.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
@@ -407,7 +407,7 @@ Saisissez les informations relatives à vos identifiants Microsoft Fabric, ainsi
 
 #### Étape 3.2 : Configurer les détails de la synchronisation
 
-Choisissez un nom pour la source connectée. Ce nom sera utilisé dans la liste des sources disponibles lorsque vous créerez une nouvelle extension de segmentation CDI. 
+Choisissez un nom pour la source connectée. Ce nom sera utilisé dans la liste des sources disponibles lorsque vous créerez une nouvelle extension de segment CDI. 
 
 Configurez une durée d'exécution maximale pour cette source. Lors de la création ou de l'actualisation d'un segment, Braze interrompt automatiquement les requêtes qui dépassent la durée d'exécution maximale. La durée d'exécution maximale autorisée est de 60 minutes. Une durée d'exécution inférieure réduira les coûts encourus sur votre compte Microsoft Fabric. 
 
@@ -419,7 +419,7 @@ Si les requêtes expirent systématiquement alors que vous avez défini une dur�
 
 #### Étape 3.3 : Testez la connexion
 
-Sélectionnez **Tester la connexion** pour vérifier que la liste des tables visibles par l'utilisateur correspond à ce que vous attendez, puis sélectionnez **Terminé**. Votre source connectée est maintenant créée et prête à être utilisée dans CDI Segment Extensions.
+Sélectionnez **Tester la connexion** pour vérifier que la liste des tables visibles par l'utilisateur correspond à ce que vous attendez, puis sélectionnez **Terminé**. Votre source connectée est désormais créée et prête à être utilisée dans les extensions de segments CDI.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
@@ -434,19 +434,19 @@ Ajoutez la clé publique que vous avez notée lors de la dernière étape à vot
 
 Si vous souhaitez effectuer une rotation des clés à un moment donné, vous pouvez créer une nouvelle clé publique en allant dans **Gestion de l'accès aux données** dans **Cloud Data Ingestion** et en sélectionnant **Générer une nouvelle clé** pour le compte concerné.
 
-![Gestion de l'accès aux données pour les justificatifs d'accès aux données de Snowflake, avec un bouton pour générer une nouvelle clé.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
+![Gestion de l'accès aux données pour les informations d'identification d'accès aux données Snowflake, avec un bouton permettant de générer une nouvelle clé.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
 
 ```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
 ```
 
-Après avoir ajouté la clé à l'utilisateur dans Snowflake, sélectionnez **Tester la connexion** dans Braze, puis **Terminé**. Votre source connectée est maintenant créée et prête à être utilisée dans CDI Segment Extensions.
+Après avoir ajouté la clé à l'utilisateur dans Snowflake, sélectionnez **Tester la connexion** dans Braze, puis **Terminé**. Votre source connectée est désormais créée et prête à être utilisée dans les extensions de segments CDI.
 {% endtab %}
 
 {% tab Redshift %}
 Si vous vous connectez avec un tunnel SSH, ajoutez la clé publique que vous avez notée lors de la dernière étape à l'utilisateur du tunnel SSH. 
 
-Après avoir ajouté la clé à l'utilisateur, sélectionnez **Tester la connexion** dans Braze, puis **Terminé**. Votre source connectée est maintenant créée et prête à être utilisée dans CDI Segment Extensions.
+Après avoir ajouté la clé à l'utilisateur, sélectionnez **Tester la connexion** dans Braze, puis **Terminé**. Votre source connectée est désormais créée et prête à être utilisée dans les extensions de segments CDI.
 
 {% endtab %}
 {% tab BigQuery %}
@@ -495,7 +495,7 @@ Vous pouvez configurer plusieurs sources avec Braze, mais chaque source doit êt
 
 ## Utilisation de la source connectée
 
-Une fois la source créée, vous pouvez l'utiliser pour créer une ou plusieurs extensions de segments CDI. Pour plus d'informations sur la création d'un segment avec cette source, reportez-vous à la [documentation CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+Une fois la source créée, vous pouvez l'utiliser pour créer une ou plusieurs extensions de segments CDI. Pour plus d'informations sur la création d'un segment avec cette source, veuillez vous référer à la [documentation CDI extensions de segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert note %}
 Si les requêtes sont systématiquement interrompues alors que vous avez défini une durée d'exécution maximale de 60 minutes, envisagez d'optimiser le temps d'exécution de vos requêtes ou de dédier davantage de ressources de calcul (un entrepôt plus grand, par exemple) à l'utilisateur de Braze.
