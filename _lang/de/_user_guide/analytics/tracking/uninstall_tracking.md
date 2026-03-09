@@ -18,7 +18,7 @@ Uninstall-Tracking in Braze liefert die folgenden Details:
 2. Deinstallationsstatistiken auf Kampagnenebene in einem Zeitreihendiagramm auf der Seite **Kampagnendetails** für eine bestimmte Kampagne. Diese Statistik gibt die Anzahl der Empfänger:innen von Kampagnen an, die jeden Tag deinstallieren.
 
 {% alert note %}
-Sie müssen sich für die Deinstallation von Tracking auf Ihrem Braze-Dashboard entscheiden. Dieses Feature ist für Apps auf iOS, Android und Fire OS verfügbar.
+Bitte aktivieren Sie die Option zum Opt-in für das Uninstall-Tracking in Ihrem Braze-Dashboard. Dieses Feature ist für Apps auf iOS, Android und Fire OS verfügbar.
 {% endalert %}
 
 ## Funktionsweise
@@ -29,7 +29,7 @@ Braze sammelt automatisch eine Basisebene an Deinstallationsinformationen aus Ih
 
 Sie können das Tracking der Deinstallation auf der Seite **App-Einstellungen** unter **Einstellungen** für jede App, die Sie verfolgen möchten, aktivieren.
 
-Wenn Sie das Uninstall-Tracking für eine App aktivieren, sendet Braze eine nächtliche Push-Nachricht im Hintergrund an Nutzer:innen, die in den letzten 24 Stunden keine Sitzung aufgezeichnet oder eine Push-Nachricht erhalten haben.
+Wenn Sie das Uninstall-Tracking für eine App aktivieren, sendet Braze jede Nacht eine Push-Nachricht im Hintergrund an Nutzer:innen, die innerhalb der letzten 24 Stunden keine Sitzung aufgezeichnet oder keine Push-Nachricht erhalten haben.
 
 ### Konfiguration
 
@@ -63,13 +63,13 @@ Die Deinstallationsstatistiken für Kampagnen befinden sich auf der Seite **Camp
 
 ### Funktionsweise
 
-Braze verfolgt Deinstallationen, indem es beobachtet, wenn Push-Nachrichten, die an die Geräte der Nutzer:innen gesendet werden, entweder vom Firebase Cloud Messaging (FCM) oder vom Apple Push Notification Service (APN) ein Signal zurückgeben, dass die App nicht mehr installiert ist. Wenn Sie das globale Uninstall-Tracking für eine App aktivieren, sendet Braze täglich eine stille Push-Nachricht an die Nutzer:innen, um festzustellen, ob sie deinstalliert haben. Braze sendet diesen "stillen" Push an alle Nutzer:innen (es sei denn, der Nutzer hat die stillen Pushs in seinen App-Einstellungen deaktiviert); der Push wird den Nutzer:innen nicht angezeigt. Wenn Braze feststellt, dass ein Nutzer:innen deinstalliert hat, werden wir:
+Braze verfolgt Deinstallationen, indem es beobachtet, wenn Push-Nachrichten, die an die Geräte der Nutzer:innen gesendet werden, entweder vom Firebase Cloud Messaging (FCM) oder vom Apple Push Notification Service (APN) ein Signal zurückgeben, dass die App nicht mehr installiert ist. Wenn Sie das globale Uninstall-Tracking für eine App aktivieren, sendet Braze täglich eine stille Push-Nachricht an die Nutzer:innen, um festzustellen, ob sie die App deinstalliert haben. Braze sendet diesen „stillen“ Push an alle Nutzer:innen (es sei denn, der Nutzer:in hat stille Pushes in seinen App-Einstellungen deaktiviert); der Push wird den Nutzer:innen nicht angezeigt. Wenn Braze feststellt, dass eine Nutzer:in die App deinstalliert hat, gehen wir wie folgt vor:
 
 * Erhöht die Anzahl der Deinstallationen der App um eins.
 * Erhöhen der Anzahl der Uninstall-Vorgänge für jede Kampagne, die der oder die Nutzer:in in den letzten 24 Stunden erfolgreich erhalten hat, um eins.
 * Wenn ein Nutzer:in einem Zeitraum von 24 Stunden drei Kampagnen erhält und diese dann deinstalliert, erhöhen wir die Anzahl der "Deinstallationen" für alle drei Kampagnen.
 
-FCM und APNs schränken das Tracking von Deinstallationen ein. Braze erhöht die Anzahl der Deinstallationen nur, wenn FCM oder APNs uns mitteilen, dass ein Nutzer:innen deinstalliert hat. Diese Systeme von Drittanbietern können uns jedoch jederzeit über Deinstallationen informieren. Verwenden Sie das Uninstall-Tracking, um eher Richtungstrends als präzise Statistiken zu erkennen.
+FCM und APNs unterliegen Einschränkungen hinsichtlich des Uninstall-Tracking. Braze erhöht die Anzahl der Deinstallationen nur, wenn FCM oder APN uns mitteilen, dass eine Nutzer:in die App deinstalliert hat. Diese Drittanbietersysteme können uns jedoch jederzeit über Deinstallationen informieren. Verwenden Sie das Uninstall-Tracking, um allgemeine Trends zu erkennen, anstatt präzise Statistiken zu erhalten.
 
 Weitere Informationen zur Verwendung des Uninstall-Trackings finden Sie in unserem Blogbeitrag [Uninstall-Tracking: Ein Blick auf die Stärken und Grenzen der Branche](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 
@@ -80,7 +80,7 @@ Weitere Informationen zur Verwendung des Uninstall-Trackings finden Sie in unser
 Wenn die Deinstallation von Apps sprunghaft ansteigt, kann das daran liegen, dass Firebase Cloud Messaging (FCM) und der Apple Push Notification Service (APNS) alte Token in unterschiedlicher Häufigkeit widerrufen.
 
 {% alert note %}
-Aus Datenschutzgründen können die Push-Anbieter von Braze Token in unregelmäßigen Abständen widerrufen, was bedeutet, dass die Anzahl der Deinstallationen in einem bestimmten Zeitraum manchmal sprunghaft ansteigen kann.<br><br>Um diese Änderungen zu validieren, überwachen Sie das Tracking von Deinstallationen zusammen mit einer Metrik für Nutzer:innen, wie z.B. der Öffnungsrate von direkten Pushs. Wenn die Deinstallationen stark zunehmen, die direkten Öffnungen per Push aber stabil bleiben, ist dies wahrscheinlich eher auf einen Partner zurückzuführen, der alte Token widerruft, als auf das tatsächliche Verhalten der Nutzer:innen.
+Aus Datenschutzgründen können die Push-Anbieter von Braze Tokens in unregelmäßigen Abständen widerrufen, was dazu führen kann, dass die Anzahl der Deinstallationen in einem bestimmten Zeitraum gelegentlich stark ansteigt.<br><br>Um diese Änderungen zu validieren, überwachen Sie bitte das Uninstall-Tracking zusammen mit einer Metrik für Benutzeraktionen, wie beispielsweise die direkte Push-Öffnungsrate. Wenn die Deinstallationen stark zunehmen, die direkten Push-Öffnungen jedoch stabil bleiben, spiegelt der Anstieg wahrscheinlich eher die Aufhebung alter Tokens durch einen Partner wider als das tatsächliche Nutzerverhalten.
 {% endalert %}
 
 ### Warum unterscheidet sich die Anzahl der App-Deinstallationen von den Angaben in den APNs?
