@@ -1,6 +1,6 @@
 ---
-nav_title: Maneja los clics manualmente
-article_title: Maneja manualmente los clics de la tarjeta de contenido para iOS
+nav_title: Gestionar los clics manualmente
+article_title: Gestionar manualmente los clics en tarjetas de contenido para iOS
 platform: iOS
 page_order: 3
 description: "Este artículo explica cómo gestionar manualmente los clics de las tarjetas de contenido en tu aplicación iOS."
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Maneja los clics manualmente
+# Gestionar los clics manualmente
 
 Puedes gestionar manualmente los clics de la tarjeta de contenido implementando el protocolo [`ABKContentCardsTableViewControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_content_cards_table_view_controller_delegate-p.html) y configurando tu objeto delegado como la propiedad `delegate` de `ABKContentCardsTableViewController`. Consulta la [aplicación de muestra Tarjetas de contenido](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) para ver un ejemplo. 
 
