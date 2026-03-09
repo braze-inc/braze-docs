@@ -1,7 +1,7 @@
 ---
-nav_title: "POST: Synchronsignal triggern"
-article_title: "POST: Synchronsignal triggern"
-search_tag: Endpoint
+nav_title: "POST: Auslösersynchronisation"
+article_title: "POST: Sync auslösen"
+search_tag: Endpunkt
 page_order: 2
 alias: /api/cdi/post_trigger_sync/
 layout: api_page
@@ -18,7 +18,7 @@ description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Trigger sync Bra
 > Verwenden Sie diesen Endpunkt, um eine Synchronisierung für eine bestimmte Integration zu triggern.
 
 {% alert note %}
-Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berechtigung `cdi.integration_sync` erstellen.
+Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der entsprechenden`cdi.integration_sync` Berechtigung generieren.
 {% endalert %}
 
 ## Rate-Limit
@@ -29,7 +29,7 @@ Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berech
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `integration_id` | Erforderlich | String | Integration ID. Sie finden dies in der URL, wenn Sie eine Integration im Braze-Dashboard anzeigen. Das URL-Format lautet `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. |
+| `integration_id` | Erforderlich | String | Integration ID. Dies ist in der URL zu finden, wenn Sie eine Integration im Braze-Dashboard anzeigen. Das URL-Format lautet `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -63,6 +63,6 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | `429 Another job is in progress` | Für diese Integration wird derzeit eine Synchronisierung durchgeführt. Versuchen Sie es erneut, nachdem die Synchronisierung abgeschlossen ist. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler & Antworten]({{site.baseurl}}/api/errors/#fatal-errors).
+Weitere Statuscodes und zugehörige Fehlermeldungen finden Sie unter [„Fatal errors&responses“ (Antworten]({{site.baseurl}}/api/errors/#fatal-errors) auf schwerwiegende Fehler).
 
 {% endapi %}
