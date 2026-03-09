@@ -1,6 +1,6 @@
 ---
-nav_title: 세션 추적
-article_title: iOS용 세션 추적
+nav_title: 트랙 세션
+article_title: iOS용 트랙 세션
 platform: iOS
 page_order: 0
 description: "이 참조 문서에서는 iOS 애플리케이션의 세션 업데이트를 구독하는 방법을 설명합니다."
@@ -62,5 +62,5 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 사용자를 통해 세션을 감지하려면 대시보드에서 사용자를 찾고 고객 프로필에서 **앱 사용**으로 이동합니다. '세션' 측정기준이 예상했던 시점에 증가하는지 확인하여 세션 추적 기술이 작동함을 확인할 수 있습니다.
 
-![고객 프로필의 앱 사용 섹션에는 세션 수, 마지막으로 사용한 날짜, 처음 사용한 날짜가 표시됩니다.]({% image_buster /assets/img_archive/test_session.png %})
+![고객 프로필의 앱 사용 섹션으로, 세션 수, 마지막 사용 날짜 및 첫 사용 날짜를 표시합니다.]({% image_buster /assets/img_archive/test_session.png %})
 
