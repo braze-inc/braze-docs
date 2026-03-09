@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"} Mise en route : Aperçu de la plate-forme
+# [![Cours]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze Learning](https://learning.braze.com/path/developer) \- Premiers pas : Aperçu de la plate-forme
 
 > Cet article traite des composants et capacités de base de la plateforme Braze. Les liens de cet article renvoient à des rubriques essentielles de Braze. 
 
@@ -25,7 +25,7 @@ Consultez notre [parcours d'apprentissage gratuit pour les développeurs](https:
 
 ## Qu’est-ce que Braze ?
 
-Braze est une plateforme d'engagement client. Il ingère les données des utilisateurs, fait remonter à la surface les actions et les comportements des utilisateurs, et vous permet d'agir en conséquence. La plateforme se compose de trois éléments principaux : le SDK, le tableau de bord et l'API REST.
+Braze est une plateforme d'engagement client. Il collecte les données des utilisateurs, met en évidence leurs actions et leurs comportements, et vous permet d'agir en conséquence. La plateforme comprend trois composants principaux : le SDK, le tableau de bord et l'API REST.
 
 Si vous êtes un spécialiste du marketing à la recherche d'un aperçu plus global de Braze, consultez plutôt la [section Démarrer pour les marketeurs]({{site.baseurl}}/user_guide/getting_started/overview/).
 
@@ -68,7 +68,7 @@ Les données stockées dans Braze sont conservées et utilisables à des fins de
 
 ### Analyse des applications
 
-Le tableau de bord de Braze affiche des graphiques mis à jour en temps réel en fonction des indicateurs d'analyse/analytique et des événements personnalisés que vous instrumentalisez. La mesure et l'optimisation cohérentes à l'aide de tests A/B, de rapports personnalisés, d'analyses et d'informations automatisées contribuent à soutenir l'engagement et la différenciation de vos clients.
+Le tableau de bord de Braze affiche des graphiques mis à jour en temps réel en fonction des indicateurs analytiques et des événements personnalisés que vous configurez. Des mesures et une optimisation cohérentes à l'aide de tests A/B, de rapports personnalisés, d'analyses et d'informations automatisées contribuent à renforcer l'engagement client et à vous démarquer.
 
 ### Segmentation utilisateur
 
@@ -109,7 +109,7 @@ Après avoir défini un segment, les outils de communication de messages de Braz
 
 ## Intégration de Braze
 
-Braze est conçu pour une intégration rapide. Le délai moyen de valorisation est de six semaines pour l'ensemble de notre clientèle. Pour en savoir plus sur le processus d'intégration, consultez [Getting Started : Aperçu de l'intégration]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
+Braze est conçu pour une intégration rapide. Le délai moyen de rentabilisation est de six semaines pour l'ensemble de notre clientèle. Pour plus d'informations sur le processus d'intégration, veuillez consulter la section[ « Pour commencer » : Aperçu de l'intégration]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 ## Ressources à mettre en favoris
 
