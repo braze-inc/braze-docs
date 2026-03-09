@@ -1,6 +1,6 @@
 ---
-nav_title: "OBTER: Ver traduções de origem para o modelo de e-mail"
-article_title: "OBTER: Ver traduções de origem para o Modelo de E-mail"
+nav_title: "OBTER: Ver traduções de origem para modelo de e-mail"
+article_title: "OBTER: Ver traduções de origem para Modelo de E-mail"
 search_tag: Endpoint
 page_order: 1
 
@@ -15,11 +15,9 @@ description: "Este artigo descreve detalhes sobre as traduções de origem para 
 /templates/e-mail/traduções/origem
 {% endapimethod %}
 
-> Use este endpoint para ver as traduções de origem para um [modelo de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Veja [Localizações em mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para mais informações sobre recursos de tradução.
+> Use este endpoint para ver as traduções de origem para um [modelo de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Veja [Locais em mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para saber mais sobre recursos de tradução.
 
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Pré-requisitos
 
