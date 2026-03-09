@@ -144,22 +144,22 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 
 ## Personnalisation de l'activité WebView {#Custom_Webview_Activity}
 
-Lorsque Braze ouvre des liens profonds vers des sites web à l'intérieur de l'application, les liens profonds sont gérés par [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
+Lorsque Braze ouvre des liens profonds vers des sites Web à l'intérieur de l'application, ces liens sont gérés par [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
 
 {% alert note %}
-Pour les messages in-app personnalisés en HTML, les liens configurés avec `target="_blank"` s'ouvrent dans le navigateur web par défaut de l'appareil et ne sont pas gérés par `BrazeWebViewActivity`.
+Pour les messages in-app personnalisés, les liens configurés avec`target="_blank"`s'ouvrent dans le navigateur web par défaut de l'appareil et ne sont pas gérés par `BrazeWebViewActivity`.
 {% endalert %}
 
 Pour modifier ceci :
 
-1. Créez une nouvelle activité qui gère l’URL cible de `Intent.getExtras()` avec la clé `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. Pour un exemple, voir [`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
+1. Créez une nouvelle activité qui gère l’URL cible de `Intent.getExtras()` avec la clé `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. Pour un exemple, veuillez consulter [`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
 2. Ajoutez cette activité à `AndroidManifest.xml` et définir `exported` sur `false`.
     ```xml
     <activity
         android:name=".MyCustomWebViewActivity"
         android:exported="false" />
     ```
-3. Définissez votre objet personnalisé Activity dans un [objet générateur](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html) `BrazeConfig`. Créez le générateur et passez-le à [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html) dans votre [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
+3. Définissez votre objet personnalisé Activity dans un [objet générateur](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html) `BrazeConfig`. Veuillez créer le générateur et le transmettre à[`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html)  dans votre [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
 {% tabs %}
 {% tab JAVA %}
 
@@ -185,11 +185,11 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-## Utiliser Jetpack Compose
+## Utilisation de Jetpack Compose
 
-Pour gérer les liens profonds lorsque vous utilisez Jetpack Compose avec NavHost :
+Pour gérer les liens profonds lors de l'utilisation de Jetpack Compose avec NavHost :
 
-1. Assurez-vous que l'activité qui gère votre lien profond est enregistrée dans le manifeste Android.
+1. Veuillez vous assurer que l'activité gérant votre lien profond est enregistrée dans le manifeste Android.
     ```xml
     <activity
       ...
@@ -203,7 +203,7 @@ Pour gérer les liens profonds lorsque vous utilisez Jetpack Compose avec NavHos
       </intent-filter>
     </activity>
     ```
-2. Dans NavHost, indiquez les liens profonds que vous souhaitez qu'il gère.
+2. Dans NavHost, veuillez indiquer les liens profonds que vous souhaitez gérer.
     ```kotlin
     composableWithCompositionLocal(
         route = "YOUR_ROUTE_HERE",
