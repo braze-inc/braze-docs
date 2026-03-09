@@ -1,9 +1,9 @@
 ---
-nav_title: Abonnements et exclusions
+nav_title: Abonnement et désabonnement
 article_title: Abonnements et désabonnements à WhatsApp
 description: "Cet article de référence couvre les différentes méthodes d’abonnement et de désabonnement de WhatsApp."
 page_type: partner
-search_tag: Partner
+search_tag: Partenaire
 page_order: 5
 channel:
   - WhatsApp
@@ -12,7 +12,7 @@ alias: /user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
 
 # Abonnements et désabonnements
 
-> La gestion des abonnements et désabonnements de WhatsApp est cruciale, étant donné que WhatsApp surveille [l’évaluation de qualité de votre numéro de téléphone](https://www.facebook.com/business/help/896873687365001) et que de faibles notes peuvent entraîner une réduction de vos limites de messages. <br><br>L'un des moyens de créer une évaluation de qualité consiste à empêcher les utilisateurs de bloquer ou de signaler votre entreprise. Pour ce faire, vous pouvez fournir des [messages de haute qualité](https://developers.facebook.com/docs/whatsapp/messaging-limits#quality-rating-and-messaging-limits) (comme la valeur des messages pour vos utilisateurs), contrôler la fréquence des messages et permettre aux clients de s'abonner pour ne plus recevoir de communications à l'avenir. <br><br>Cette page explique comment mettre en place des abonnements et des exclusions, ainsi que les différences entre les modificateurs "expression régulière" et "is".
+> La gestion des abonnements et désabonnements de WhatsApp est cruciale, étant donné que WhatsApp surveille [l’évaluation de qualité de votre numéro de téléphone](https://www.facebook.com/business/help/896873687365001) et que de faibles notes peuvent entraîner une réduction de vos limites de messages. <br><br>Une méthode pour créer une note élevée consiste à empêcher les utilisateurs de bloquer ou de signaler votre entreprise. Pour ce faire, vous pouvez fournir des [messages de haute qualité](https://developers.facebook.com/docs/whatsapp/messaging-limits#quality-rating-and-messaging-limits) (comme la valeur des messages pour vos utilisateurs), contrôler la fréquence des messages et permettre aux clients de s'abonner pour ne plus recevoir de communications à l'avenir. <br><br>Cette page explique comment configurer les abonnements et les désinscriptions, ainsi que les différences entre les modificateurs « expression régulière » et « is ».
 
 Les abonnements peuvent provenir de sources externes ou de méthodes Braze telles que les SMS ou les messages intégrés à l’application et au navigateur. Les désabonnements peuvent être traités à l’aide de mots-clés définis dans les boutons marketing de Braze et de WhatsApp. Reportez-vous aux méthodes suivantes pour obtenir des conseils sur la configuration des options d’abonnement et de désabonnement.
 
@@ -67,7 +67,7 @@ Cela peut être configuré en tant que Canvas ou campagne, selon que vous souhai
 2. Créez une campagne webhook. Pour connaître un exemple de webhook, voir [Groupes d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#update-subscription-status).
 
 {% alert tip %}
-Notez que vous pouvez créer une URL ou un code QR pour rejoindre un canal WhatsApp depuis le [gestionnaire WhatsApp](https://business.facebook.com/wa/manage/phone-numbers/), sous **Numéro de téléphone** > **Liens de messages.**<br>![Composez le code QR de WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
+Notez que vous pouvez créer une URL ou un code QR pour rejoindre un canal WhatsApp depuis le [gestionnaire WhatsApp](https://business.facebook.com/wa/manage/phone-numbers/), sous **Numéro de téléphone** > **Liens de messages.**<br>![Compositeur de code QR WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
 {% endalert %}
 
 ### Méthodes d’abonnement alimentées par Braze 
@@ -98,11 +98,11 @@ Vous pouvez configurer une campagne ou un Canvas qui permet aux utilisateurs qui
 
 #### Étape 1 : Créez un canvas avec le déclencheur "Message WhatsApp entrant".
  
-![Étape du canvas basée sur l'action qui saisit les utilisateurs qui envoient un message entrant WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
+![Étape du canvas basée sur l'action qui enregistre les utilisateurs qui envoient un message WhatsApp entrant.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
 
 Lorsque vous sélectionnez des mots-clés déclencheurs, incluez des mots comme « Arrêter » ou « Aucun message ». Si vous choisissez cette méthode, assurez-vous que vos clients connaissent vos mots de désabonnement. Par exemple, après avoir reçu l’abonnement initial, ajoutez une réponse de suivi comme « Pour refuser ces messages, envoyez « Arrêter » à tout moment ». 
 
-![Étape du message pour envoyer un message entrant WhatsApp dont le corps du message est "STOP" ou "NO MESSAGE".]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
+![Étape de message pour envoyer un message WhatsApp entrant dont le corps du message est « STOP » ou « NO MESSAGE ».]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
 
 #### Étape 2 : Mettre à jour le profil de l’utilisateur
 
@@ -112,7 +112,7 @@ Mettez à jour le profil de l'utilisateur en utilisant l'une des méthodes décr
 
 Dans le créateur du modèle de message WhatsApp, vous pouvez inclure l’option de « désabonnement marketing ». Chaque fois que vous le faites, assurez-vous que le modèle est utilisé dans un Canvas avec une étape ultérieure pour un changement de groupe d’abonnement. 
 
-1. Créez un modèle de message avec la réponse rapide « désabonnement marketing ».<br>![Modèle de message avec une option de pied de page "Marketing opt-out".]({% image_buster /assets/img/whatsapp/whatsapp121.png %})<br><br>![Section permettant de configurer un bouton de sortie du marketeur.]({% image_buster /assets/img/whatsapp/whatsapp122.png %})<br><br>
+1. Créez un modèle de message avec la réponse rapide « désabonnement marketing ».<br>![Modèle de message avec une option de pied de page « Se désabonner du marketing »]({% image_buster /assets/img/whatsapp/whatsapp121.png %})<br><br>![Section permettant de configurer un bouton de désinscription marketing.]({% image_buster /assets/img/whatsapp/whatsapp122.png %})<br><br>
 2. Créez un Canvas qui utilise ce modèle de message.<br><br>
 3. Suivez les étapes de l’exemple précédent, mais avec le texte de déclenchement « STOP PROMOTIONS ».<br><br>
 4. Mettez à jour le statut d'abonnement de l'utilisateur en utilisant l'une des méthodes décrites dans [Groupes d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status).
@@ -136,10 +136,10 @@ L'étape de mise à jour de l'utilisateur permet d'éviter les conditions de con
 Pour les messages « ARRÊTER », inversez l'étape du message confirmant le désabonnement et l'étape de mise à jour de l'utilisateur. Si vous ne le faites pas, l'utilisateur sera d'abord exclu du groupe d'abonnement, puis ne pourra pas recevoir le message de confirmation.
 {% endalert %}
 
-![Une étape de message WhatsApp dont le corps du message est "START".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:80%;"}
+![Une étape de message WhatsApp dont le corps du message est « START ».]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:80%;"}
 
 {: start="2"}
-2\. Dans le canvas, créez une étape **Paramétrer la mise à jour utilisateur** et pour **Action**, sélectionnez **Éditeur JSON avancé**. <br><br>![L'utilisateur met à jour l'étape avec une action "Editeur JSON avancé".]({% image_buster /assets/img/whatsapp/user_update.png %})<br><br>
+2\. Dans le canvas, créez une étape **Paramétrer la mise à jour utilisateur** et pour **Action**, sélectionnez **Éditeur JSON avancé**. <br><br>![Étape de mise à jour de l'utilisateur avec une action « Éditeur JSON avancé ».]({% image_buster /assets/img/whatsapp/user_update.png %})<br><br>
 3\. Remplissez l'**objet User Update** avec la charge utile JSON suivante, en remplaçant `XXXXXXXXXXX` par l'ID de votre groupe d'abonnement :
 
 {% raw %}
@@ -160,7 +160,7 @@ Pour les messages « ARRÊTER », inversez l'étape du message confirmant le d
 {% endraw %}
 
 {: start="4"}
-4\. Ajoutez une étape de message WhatsApp ultérieure. <br><br>![Étape de mise à jour de l'utilisateur dans un canvas.]({% image_buster /assets/img/whatsapp/message_step.png %}){: style="max-width:25%;"}
+4\. Ajoutez une étape de message WhatsApp ultérieure. <br><br>![Étape de mise à jour utilisateur dans un canvas.]({% image_buster /assets/img/whatsapp/message_step.png %}){: style="max-width:25%;"}
 
 #### Considérations
 
@@ -176,17 +176,17 @@ Vous ne devez pas utiliser cette méthode pour les messages STOP. Le message de 
 
 1. Créez une campagne ou un canvas avec une étape **Envoyer un message WhatsApp entrant** basée sur un événement. Sélectionnez **Localisation du corps du message** et entrez « DÉMARRER » pour **EST**.
 
-![Étape du message WhatsApp dont le corps du message est "START".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:85%;"}
+![Étape du message WhatsApp où le corps du message est « START ».]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:85%;"}
 
 {: start="2"}
 2\. Dans la campagne ou le canvas, créez une étape Message de webhook et changez le **Corps de la demande** sur **Texte brut**.
 
-![Étape du message pour un webhook.]({% image_buster /assets/img/whatsapp/webhook_step.png %}){: style="max-width:85%;"}
+![Étape de message pour un webhook.]({% image_buster /assets/img/whatsapp/webhook_step.png %}){: style="max-width:85%;"}
 
 {: start="3"}
 3\. Saisissez l'[URL de l'endpoint]({{site.baseurl}}/api/basics/) du client dans l'**URL du webhook**, suivie du lien de l'endpoint `campaigns/trigger/send`. Par exemple, `https://dashboard-02.braze.eu/campaigns/trigger/send`.
 
-![URL du webhook dans la section "Compose Webhook".]({% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %}){: style="max-width:70%;"}
+![Champ URL du webhook dans la section « Créer un webhook ».]({% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %}){: style="max-width:70%;"}
 
 {: start="4"}
 4\. Dans le texte brut, saisissez la charge utile JSON suivante et remplacez `XXXXXXXXXXX` par l'ID de votre groupe d'abonnement. Vous devrez remplacer le site `campaign_id` après avoir créé votre deuxième campagne.
@@ -220,14 +220,14 @@ Vous ne devez pas utiliser cette méthode pour les messages STOP. Le message de 
 - Les mises à jour d'attributs à partir de la charge utile JSON du déclencheur de l'API du canvas ne sont pas encore prises en charge, de sorte que vous ne pouvez déclencher une campagne WhatsApp que pour le message de réponse WhatsApp (comme à l'étape 2).
 - Un modèle WhatsApp doit être approuvé pour pouvoir l'envoyer en tant que message de réponse. En effet, pour obtenir une réponse rapide, il faut que le déclencheur de l'envoi du message soit situé dans la même campagne ou le même Canvas. Si vous utilisez une [étape de mise à jour de l'utilisateur](#user-update-step), vous pouvez envoyer un message de réponse rapide sans l'approbation de Meta.
 
-## Comprendre la différence entre les modificateurs "expression régulière" et "is".
+## Comprendre la différence entre les modificateurs « expression régulière » et « is »
 
-Dans ce tableau, `STOP` est utilisé comme exemple de déclencheur pour démontrer le fonctionnement des modificateurs.
+Dans ce tableau, « `STOP`» est utilisé à titre d'exemple de mot déclencheur pour illustrer le fonctionnement des modificateurs.
 
-| Modificateur | Mot déclencheur | Action |
+| Modificateur | Déclencheur | Action |
 | --- | --- | --- |
-| `Is` | `STOP` | Capte toute utilisation du mot "stop" dans son intégralité, quel que soit le cas de figure. Par exemple, il attrape "stop" mais pas "arrêtez s'il vous plaît". |
-| `Matches regex` | `STOP` | Il attrape toute utilisation de "STOP" dans ce cas précis. Par exemple, il attrape "STOP" et "VEUILLEZ ARRÊTER", mais pas "stop". |
-| `Matches regex` | `(?i)STOP(?-i)` | Capture toute utilisation de "STOP" dans tous les cas. Par exemple, cela permet d'attraper "stop", "veuillez arrêter" et "n'arrêtez jamais de m'envoyer des messages". |
+| `Is` | `STOP` | Détecte toute utilisation du mot « stop » dans son intégralité, quelle que soit la casse. Par exemple, cela détecte « arrêtez » mais pas « veuillez arrêter ». |
+| `Matches regex` | `STOP` | Détecte toute utilisation de « STOP » dans ce cas précis. Par exemple, cela détecte « STOP » et « VEUILLEZ VOUS ARRÊTER », mais pas « arrêtez ». |
+| `Matches regex` | `(?i)STOP(?-i)` | Détecte toute utilisation du mot « STOP » dans tous les cas. Par exemple, cela inclut « arrêtez », « veuillez arrêter » et « cessez d'envoyer des messages à mon adresse ». |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
