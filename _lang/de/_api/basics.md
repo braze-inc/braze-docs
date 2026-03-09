@@ -19,6 +19,7 @@ alias: /api/api_key/
 | [Cloud-Datenaufnahme]({{site.baseurl}}/api/endpoints/cdi/)                | Verwalten Sie Ihre Data Warehouse Integrationen und Synchronisationen.                                    |
 | [E-Mail-Listen und Adressen]({{site.baseurl}}/api/endpoints/email/)         | Richten Sie die bidirektionale Synchronisierung zwischen Braze und Ihren E-Mail-Systemen ein und verwalten Sie sie.           |
 | [Exportieren]({{site.baseurl}}/api/endpoints/export/)                           | Greifen Sie auf verschiedene Details Ihrer Kampagnen, Canvase, KPIs und mehr zu und exportieren Sie sie.        |
+| [Medienbibliothek]({{site.baseurl}}/api/endpoints/media_library/)             | Verwalten Sie Assets innerhalb von Braze.                                                           |
 | [Nachrichten]({{site.baseurl}}/api/endpoints/messaging/)                      | Planen, versenden und verwalten Sie Ihre Kampagnen und Canvase.                               |
 | [Präferenzzentrum]({{site.baseurl}}/api/endpoints/preference_center/)     | Bauen Sie Ihr Einstellungscenter auf und aktualisieren Sie das Styling.                            |
 | [SCIM]({{site.baseurl}}/api/endpoints/scim/)                               | Verwalten Sie Nutzer:innen in cloudbasierten Anwendungen und Diensten.                      |
@@ -34,7 +35,13 @@ Im Folgenden finden Sie eine Übersicht der Begriffe, die in der Dokumentation d
 
 ### Endpunkte
 
-Braze verwaltet eine Reihe von verschiedenen Instanzen für unser Dashboard und die REST-Endpunkte. Wenn Ihr Konto eingerichtet ist, melden Sie sich unter einer der folgenden URLs an. Verwenden Sie den richtigen REST-Endpunkt, je nachdem, für welche Instanz Sie bereitgestellt werden. Wenn Sie sich nicht sicher sind, öffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/) oder verwenden Sie die folgende Tabelle, um die URL des Dashboards, das Sie verwenden, dem richtigen REST-Endpunkt zuzuordnen.
+Braze verwaltet eine Reihe von verschiedenen Instanzen für unser Dashboard und die REST-Endpunkte. Sobald Ihr Konto eingerichtet ist, melden Sie sich bitte unter einer der folgenden URLs an. Verwenden Sie den richtigen REST-Endpunkt, je nachdem, für welche Instanz Sie bereitgestellt werden. Wenn Sie sich nicht sicher sind, öffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/) oder verwenden Sie die folgende Tabelle, um die URL des Dashboards, das Sie verwenden, dem richtigen REST-Endpunkt zuzuordnen.
+
+Um Ihren REST-Endpunkt in Braze zu finden:
+
+1. Bitte melden Sie sich bei Braze an und navigieren Sie zu **„Einstellungen“** > **„APIs und Bezeichner“** > **„API-Schlüssel**“.
+2. Bitte wählen Sie einen vorhandenen API-Schlüssel aus oder klicken Sie auf **„API-Schlüssel erstellen“**, um einen neuen Schlüssel zu generieren.
+3. Bitte kopieren Sie den auf diesem Tab angezeigten REST-Endpunkt und verwenden Sie diesen Endpunkt für Ihre API-Anfragen.
 
 {% alert important %}
 Wenn Sie Endpunkte für API-Aufrufe verwenden, benutzen Sie den REST Endpunkt.
@@ -46,22 +53,22 @@ Verwenden Sie für die SDK-Integration den [SDK-Endpunkt]({{site.baseurl}}/user_
 
 ### API-Grenzen
 
-Für die meisten APIs hat Braze ein Standard Rate-Limit von 250.000 Anfragen pro Stunde. Für bestimmte Arten von Anfragen gelten jedoch eigene Rate-Limits, um hohe Datenmengen im gesamten Kundenstamm besser bewältigen zu können. Einzelheiten finden Sie unter [API Rate-Limits]({{site.baseurl}}/api/api_limits/)
+Für die meisten APIs hat Braze ein Standard Rate-Limit von 250.000 Anfragen pro Stunde. Bestimmte Anfragetypen unterliegen jedoch eigenen Rate-Limits, um große Datenmengen innerhalb der Kundenbasis besser verarbeiten zu können. Einzelheiten finden Sie unter [API Rate-Limits]({{site.baseurl}}/api/api_limits/)
 
 ### Benutzer-IDs
 
 - **Externe Nutzer:innen ID**: Die `external_id` dient als eindeutiger Bezeichner des Nutzers:in, für den Sie Daten übermitteln. Dieser Bezeichner sollte mit dem übereinstimmen, den Sie im Braze SDK festgelegt haben, um zu vermeiden, dass mehrere Profile für denselben Nutzer:in erstellt werden.
-- **Braze ID**: `braze_id` dient als eindeutiger Bezeichner für Nutzer:innen, den Braze festlegt. Sie können diesen Bezeichner verwenden, um Nutzer:innen über die REST API zu löschen, zusätzlich zu external_ids.
+- **Braze-Benutzer-ID**:`braze_id`Dient als eindeutiger Bezeichner für Nutzer:innen, der von Braze festgelegt wird. Sie können diesen Bezeichner verwenden, um Nutzer:innen über die REST API zu löschen, zusätzlich zu external_ids.
 
 Weitere Informationen finden Sie in den folgenden Artikeln zu Ihrer Plattform: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) und [Internet]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
 
 ## Über REST API-Schlüssel
 
-Ein REST-API-Schlüssel (Application Programming Interface, API) ist ein eindeutiger Code, den Sie an eine API übergeben, um den API-Aufruf zu authentifizieren und die aufrufende Anwendung oder den Nutzer zu identifizieren. Sie greifen auf die API über HTTPS-Webanfragen an den REST API Endpunkt Ihres Unternehmens zu. REST API-Schlüssel arbeiten mit App Bezeichner-Schlüsseln zusammen, um Daten zu tracken, abzurufen, zu senden, zu exportieren und zu analysieren und so sicherzustellen, dass alles reibungslos funktioniert.
+Ein REST-API-Schlüssel (REST-API-Schlüssel) ist ein eindeutiger Code, den Sie an eine API übermitteln, um den API-Aufruf zu authentifizieren und die aufrufende Anwendung oder den Nutzer:in zu identifizieren. Sie greifen über HTTPS-Anfragen im Internet auf den REST API-Endpunkt Ihres Unternehmens auf die API zu. REST-API-Schlüssel arbeiten mit App-Bezeichnern zusammen, um Daten zu verfolgen, abzurufen, zu senden, zu exportieren und zu analysieren, damit ein reibungsloser Ablauf gewährleistet ist.
 
 Workspaces und API-Schlüssel gehen bei Braze Hand in Hand. Workspaces sind so konzipiert, dass sie Versionen derselben Anwendung für mehrere Plattformen enthalten. Viele Kund:innen nutzen Workspaces auch, um kostenlose und Premium-Versionen ihrer Anwendungen auf derselben Plattform unterzubringen. Wie Sie vielleicht bemerken, nutzen auch diese Workspaces die REST API und haben ihre eigenen REST-API-Schlüssel. Diese Schlüssel können individuell angepasst werden, um den Zugriff auf bestimmte Endpunkte der API zu ermöglichen. Jeder Aufruf der API muss einen Schlüssel mit Zugriff auf den Endpunkt enthalten.
 
-Wir referenzieren sowohl den REST-API-Schlüssel als auch den Workspace-API-Schlüssel als `api_key`. Die `api_key` ist in jeder Anfrage als Anfrage-Header enthalten und dient als Authentifizierungsschlüssel, der Ihnen die Nutzung unserer REST APIs erlaubt. Diese REST APIs dienen dem Tracking von Nutzer:innen, dem Versand von Nachrichten, dem Export von Nutzerdaten und vielem mehr. Wenn Sie einen neuen REST API-Schlüssel erstellen, müssen Sie ihm Zugriff auf bestimmte Endpunkte geben. Indem Sie einem API-Schlüssel bestimmte Berechtigungen zuweisen, können Sie genau festlegen, welche Aufrufe ein API-Schlüssel authentifizieren kann.
+Wir referenzieren sowohl den REST-API-Schlüssel als auch den Workspace-API-Schlüssel als `api_key`. Die `api_key` ist in jeder Anfrage als Anfrage-Header enthalten und dient als Authentifizierungsschlüssel, der Ihnen die Nutzung unserer REST APIs erlaubt. Diese REST APIs dienen dem Tracking von Nutzer:innen, dem Versand von Nachrichten, dem Export von Nutzerdaten und vielem mehr. Wenn Sie einen neuen REST-API-Schlüssel erstellen, müssen Sie ihm Zugriff auf bestimmte Endpunkte gewähren. Indem Sie einem API-Schlüssel bestimmte Berechtigungen zuweisen, können Sie genau festlegen, welche Aufrufe ein API-Schlüssel authentifizieren kann.
 
 ![REST API-Schlüssel Panel auf dem Tab API-Schlüssel.]({% image_buster /assets/img_archive/rest-api-key.png %})
 
@@ -137,7 +144,7 @@ API-Schlüssel-Berechtigungen sind Berechtigungen, die Sie einem Nutzer:innen od
 | Berechtigung | Endpunkt | Beschreibung |
 |---|---|---|
 | `campaigns.trigger.send` | [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) | Triggern Sie den Versand einer bestehenden Kampagne. |
-| `campaigns.trigger.schedule.create` | [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/) | Planen Sie den Zeitplan für den Versand einer Kampagne mit API-getriggerter Zustellung. |
+| `campaigns.trigger.schedule.create` | [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/) | Planen Sie den Versand einer Kampagne mit API-gesteuerter Zustellung. |
 | `campaigns.trigger.schedule.update` | [`/campaigns/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/) | Aktualisieren Sie eine Kampagne, die mit einer API-getriggerten Zustellung geplant ist. |
 | `campaigns.trigger.schedule.delete` | [`/campaigns/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/) |Löschen Sie eine Kampagne, die mit einer API-getriggerten Zustellung geplant ist. |
 | `campaigns.list` | [`/campaigns/list`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) | Abfrage nach einer Liste von Kampagnen. |
@@ -155,7 +162,7 @@ API-Schlüssel-Berechtigungen sind Berechtigungen, die Sie einem Nutzer:innen od
 | Berechtigung | Endpunkt | Beschreibung |
 |---|---|---|
 | `canvas.trigger.send` | [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) | Trigger zum Senden eines vorhandenen Canvas. |
-| `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Planen Sie den Zeitplan für den Versand eines Canvas mit API-getriggerter Zustellung. |
+| `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Erstellen Sie einen Zeitplan für den Versand eines Canvas mit API-gesteuerter Zustellung. |
 | `canvas.trigger.schedule.update` | [`/canvas/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/) | Aktualisieren eines Canvas, für das eine API-getriggerte Zustellung festgelegt wurde. |
 | `canvas.trigger.schedule.delete` | [`/canvas/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/)| Löschen eines Canvas, für das eine API-getriggerte Zustellung festgelegt wurde. |
 | `canvas.list` | [`/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) |  Abfragen einer Liste der Canvase. |
@@ -309,7 +316,7 @@ API-Schlüssel-Berechtigungen sind Berechtigungen, die Sie einem Nutzer:innen od
 
 ### REST API-Schlüssel verwalten
 
-Unter **Einstellungen** > **APIs und Bezeichner** > **Tab API-Schlüssel** können Sie Details zu vorhandenen REST-API-Schlüsseln einsehen oder diese löschen. Beachten Sie, dass Sie REST API-Schlüssel nicht mehr bearbeiten können, nachdem Sie sie erstellt haben.
+Unter **Einstellungen** > **APIs und Bezeichner** > **Tab API-Schlüssel** können Sie Details zu vorhandenen REST-API-Schlüsseln einsehen oder diese löschen. Bitte beachten Sie, dass Sie REST-API-Schlüssel nach ihrer Erstellung nicht mehr bearbeiten können.
 
 Der Tab **API-Schlüssel** enthält die folgenden Informationen für jeden Schlüssel:
 
@@ -317,16 +324,16 @@ Der Tab **API-Schlüssel** enthält die folgenden Informationen für jeden Schl�
 | ------------ | :------------------------------------------------------------------------------------------------------------------ |
 | API-Schlüsselname | Der Name, der dem Schlüssel bei der Erstellung gegeben wurde.                                                                            |
 | Bezeichner   | Der API-Schlüssel.                                                                                                        |
-| Erstellt von   | Die E-Mail Adresse des Nutzers:in, der den Schlüssel erstellt hat. Dieses Feld wird als "N/A" für Schlüssel angezeigt, die vor Juni 2023 erstellt wurden. |
+| Erstellt von   | Die E-Mail Adresse des Nutzers:in, der den Schlüssel erstellt hat. Dieses Feld wird für Schlüssel, die vor Juni 2023 erstellt wurden, als „N/A“ angezeigt. |
 | Datum der Erstellung | Das Datum, an dem dieser Schlüssel erstellt wurde.                                                                                      |
-| Zuletzt angesehen    | Das Datum, an dem dieser Schlüssel zuletzt verwendet wurde. Dieses Feld wird als "N/A" für Schlüssel angezeigt, die noch nie verwendet wurden.                  |
+| Zuletzt angesehen    | Das Datum, an dem dieser Schlüssel zuletzt verwendet wurde. Dieses Feld wird für Schlüssel, die noch nie verwendet wurden, als „N/A“ angezeigt.                  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Um die Details eines API-Schlüssels anzuzeigen, bewegen Sie den Mauszeiger über den Schlüssel und wählen Sie <i class="fa-solid fa-eye" alt="View"></i> **Ansicht**. Dazu gehören alle Berechtigungen, die dieser Schlüssel hat, IPs auf der Whitelist (falls vorhanden) und ob dieser Schlüssel in die IP-Whitelist von Braze aufgenommen wurde.
 
 ![Die Liste der API-Schlüssel-Berechtigungen im Braze-Dashboard.]({% image_buster /assets/img_archive/view-api-key.png %})
 
-Beachten Sie, dass Braze beim [Löschen eines Nutzers]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/):innen nicht die zugehörigen API-Schlüssel löscht, die dieser Nutzer:innen erstellt hat. Um eine Taste zu löschen, bewegen Sie den Mauszeiger über die Taste und wählen Sie <i class="fa-solid fa-trash-can" alt="Delete"></i> **Löschen**.
+Bitte beachten Sie, dass Braze beim [Löschen eines Nutzers]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) die zugehörigen API-Schlüssel, die dieser Nutzer erstellt hat, nicht löscht. Um eine Taste zu löschen, bewegen Sie den Mauszeiger über die Taste und wählen Sie <i class="fa-solid fa-trash-can" alt="Delete"></i> **Löschen**.
 
 ![Ein API-Schlüssel mit dem Namen 'Last Seen', wobei das Papierkorbsymbol hervorgehoben ist und 'Löschen' anzeigt.]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
@@ -342,7 +349,7 @@ Eine gute Sicherheitspraxis besteht darin, einem Nutzer:innen nur so viel Zugrif
 Da REST API-Schlüssel den Zugang zu potenziell sensiblen REST API-Endpunkten erlauben, sollten Sie sicherstellen, dass sie sicher gespeichert und verwendet werden. Verwenden Sie diesen Schlüssel beispielsweise nicht, um AJAX-Aufrufe von Ihrer Website aus zu tätigen oder ihn auf andere Weise öffentlich zugänglich zu machen.
 {% endalert %}
 
-Wenn Sie versehentlich einen Schlüssel freigeben, können Sie ihn in der Entwickler:in löschen. Wenn Sie Hilfe bei diesem Vorgang benötigen, öffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/).
+Sollten Sie versehentlich einen Schlüssel preisgeben, können Sie ihn über die Entwicklungskonsole löschen. Wenn Sie Hilfe bei diesem Vorgang benötigen, öffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/).
 
 ### API IP allowlisting
 
@@ -353,18 +360,50 @@ Für zusätzliche Sicherheit können Sie eine Liste von IP-Adressen und Subnetze
 Wenn Sie nichts angeben, können Anfragen von jeder IP-Adresse gesendet werden.
 
 {% alert tip %}
-Wenn Sie einen Braze-to-Braze-Webhook erstellen und allowlisting verwenden, sehen Sie sich die Liste der [IPs an, die Sie auf die Whitelist setzen müssen]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
+Wenn Sie einen Braze-to-Braze-Webhook erstellen und eine Whitelist verwenden, finden Sie hier die Liste der [IP-Adressen, die auf die Whitelist gesetzt werden müssen]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
 {% endalert %}
+
+## API-Authentifizierung und -Sicherheit
+
+### Inhaber-Token-Authentifizierung
+
+Braze authentifiziert REST-API-Anfragen mithilfe des REST-API-Schlüssels, der als Bearer-Token im`Authorization`Anfrage-Header übermittelt wird. Wenn Sie eine Anfrage senden, geben Sie bitte Ihren API-Schlüssel im folgenden Format an:
+
+```bash
+Authorization: Bearer YOUR_REST_API_KEY
+```
+
+Bei jeder Anfrage führt Braze die folgenden serverseitigen Validierungsprüfungen durch:
+
+1. **Gültigkeit des Tokens:** Überprüft, ob der REST-API-Schlüssel in Braze vorhanden und aktiv ist (d. h. nicht widerrufen oder deaktiviert wurde).
+2. **Token-Autorisierung:** Bestätigt, dass der API-Schlüssel über die erforderlichen Berechtigungen für den angeforderten Endpunkt verfügt.
+
+Sollte die Authentifizierung fehlschlagen, gibt die API eine Fehlermeldung mit einem HTTP-Statuscode zurück. Beispielsweise weist auf einen ungültigen oder fehlenden Schlüssel hin`401 Unauthorized`, während`403 Forbidden`angibt, dass der Schlüssel keine Berechtigung für den angeforderten Endpunkt hat. Weitere Informationen finden Sie unter [API-Fehler]({{site.baseurl}}/api/errors/).
+
+### Sicherheit auf Netzwerkebene
+
+REST API-Anfragen an Braze werden über den gesamten Anfragepfad hinweg durch TLS-Verschlüsselung (Transport Layer Security) geschützt. Die folgende Tabelle beschreibt den Netzwerkfluss für eine API-Anfrage von Ihrem Server an Braze:
+
+| Schritt | Komponente | Beschreibung |
+| --- | --- | --- |
+| (1 %) | Ihr Server | Initiiert eine HTTPS-Anfrage mit TLS-Verschlüsselung. |
+| (2 %) | Cloudflare | Beendet die TLS-Verbindung des Clients und wendet Schutzmaßnahmen auf Netzwerkebene an. |
+| 3 | Netzwerk-Lastenausgleich (NLB) | Leitet Pakete an die Anwendungsinfrastruktur weiter. NLBs arbeiten auf Layer 4, was bedeutet, dass keine Layer-7-Proxying stattfindet. Pakete werden ohne Überprüfung oder Änderung auf HTTP-Ebene weitergeleitet. |
+| (4 %) | NGINX-Eingang | Beendet die interne TLS-Verbindung und leitet die Anfrage weiter. |
+| (5 %) | Unicorn (Server) | Verarbeitet die authentifizierte Anfrage. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+Die TLS-Verschlüsselung umfasst jede Verbindung in der Kette. Ihr Server stellt über TLS eine Verbindung zu Cloudflare her, und Cloudflare baut über den NLB eine separate TLS-Verbindung zum NGINX-Ingress auf, sodass Ihr API-Schlüssel und Ihre Anfragen Daten während der Übertragung verschlüsselt bleiben.
 
 ## Zusätzliche Ressourcen
 
 ### Ruby Client Bibliothek
 
-Wenn Sie Braze mit Ruby implementieren, können Sie die [Ruby Client Bibliothek](https://github.com/braze-inc/braze-api-client-ruby) verwenden, um die Zeit für den Datenimport zu reduzieren. Eine Client Bibliothek ist eine Sammlung von Code für eine bestimmte Programmiersprache - in diesem Fall Ruby -, die die Verwendung einer API erleichtert.
+Wenn Sie Braze mit Ruby implementieren, können Sie die [Ruby-Client-Bibliothek](https://github.com/braze-inc/braze-api-client-ruby) verwenden, um die Zeit für den Datenimport zu verkürzen. Eine Client Bibliothek ist eine Sammlung von Code für eine bestimmte Programmiersprache - in diesem Fall Ruby -, die die Verwendung einer API erleichtert.
 
 Die Ruby Client Bibliothek unterstützt die [Nutzer:innen Endpunkte]({{site.baseurl}}/api/endpoints/user_data).
 
 {% alert important %}
-Diese Client Bibliothek befindet sich in der Beta-Phase. Wenn Sie helfen möchten, diese Bibliothek zu verbessern, senden Sie Ihr Feedback an [smb-product@braze.com](mailto:smb-product@braze.com).
+Diese Client-Bibliothek befindet sich in der Beta-Phase. Um zur Verbesserung dieser Bibliothek beizutragen, senden Sie bitte Ihr Feedback an [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 
