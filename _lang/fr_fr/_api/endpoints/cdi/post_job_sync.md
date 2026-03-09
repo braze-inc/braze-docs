@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Synchronisation du déclencheur"
+nav_title: "POST : Déclencheur de synchronisation"
 article_title: "POST : Déclencher la synchronisation"
 search_tag: Endpoint
 page_order: 2
@@ -18,7 +18,7 @@ description: "Cet article présente en détail l’endpoint Braze Déclencher la
 > Utilisez cet endpoint pour déclencher une synchronisation pour une intégration donnée.
 
 {% alert note %}
-Pour utiliser cet endpoint, vous devez générer une clé API avec l'autorisation `cdi.integration_sync`.
+Pour utiliser cet endpoint, il est nécessaire de générer une clé API avec `cdi.integration_sync`l'autorisation.
 {% endalert %}
 
 ## Limite de débit
@@ -29,7 +29,7 @@ Pour utiliser cet endpoint, vous devez générer une clé API avec l'autorisatio
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `integration_id` | Requis | Chaîne de caractères | ID d'intégration. Vous le trouverez dans l'URL lorsque vous visualisez une intégration dans le tableau de bord de Braze. Le format URL est le suivant : `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. |
+| `integration_id` | Requis | Chaîne de caractères | ID d'intégration. Cette information est disponible dans l'URL lorsque vous consultez une intégration dans le tableau de bord de Braze. Le format de l'URL est `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
@@ -63,6 +63,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `429 Another job is in progress` | Une synchronisation est actuellement en cours pour cette intégration. Réessayez une fois la synchronisation terminée. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Pour connaître les autres codes d'état et les messages d'erreur associés, reportez-vous à la rubrique [Erreurs fatales & responses]({{site.baseurl}}/api/errors/#fatal-errors).
+Pour obtenir des codes d'état supplémentaires et les messages d'erreur associés, veuillez vous référer aux [&réponses aux erreurs fatales]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}
