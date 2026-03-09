@@ -1,6 +1,6 @@
 ---
 nav_title: Terminer l’intégration
-article_title: "Achever l'intégration SDK iOS"
+article_title: "Veuillez terminer l'intégration SDK iOS."
 platform: iOS
 description: "Cet article de référence montre comment terminer l’intégration du SDK Braze après l’avoir installé via l’une des options d’intégration."
 page_order: 2
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Achever l'intégration
+# Veuillez terminer l'intégration.
 
 Avant de suivre ces étapes, assurez-vous d'avoir intégré le SDK en utilisant [Carthage]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/carthage_integration/), [CocoaPods]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/cocoapods/), le [gestionnaire de paquets swift]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/) ou une intégration [manuelle]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/).
 
