@@ -1,5 +1,5 @@
 ---
-nav_title: 캔버스 구성 요소
+nav_title: 캔버스 컴포넌트
 article_title: 캔버스 구성 요소
 page_order: 2
 alias: "/user_guide/engagement_tools/canvas/canvas_components/about/"
@@ -25,7 +25,7 @@ guide_featured_list:
   - name: 오디언스 동기화 단계
     link: /docs/partners/canvas_audience_sync/
     image: /assets/img/braze_icons/refresh-ccw-02.svg
-  - name: 콘텐츠 최적화 프로그램 단계
+  - name: 콘텐츠 최적화 단계
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step/
     image: /assets/img/braze_icons/target-04.svg
   - name: 컨텍스트 단계
@@ -57,7 +57,7 @@ guide_featured_list:
 
 ### 사용자 여정 맞춤화
 
-![결정 분할 단계와 지연 단계 및 메시지 단계가 있는 캔버스 사용자 여정의 예시입니다.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![캔버스 사용자 여정의 예시: 결정 분할 단계에 이어 지연 단계와 메시지 단계가 배치된 구성.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 [작업 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths)를 사용하여 구매와 같은 행동 및 인게이지먼트 이벤트를 기반으로 사용자 여정을 분할할 수 있습니다. 오디언스를 필터링하고 타겟팅하려는 경우, [오디언스 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths)를 사용하면 오디언스 기준에 따라 사용자를 다양한 캔버스 경로로 전송하여 사용자 타겟팅을 간소화할 수 있습니다.
 
