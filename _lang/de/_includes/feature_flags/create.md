@@ -26,13 +26,13 @@ Um Feature-Flags im Dashboard zu verwalten, müssen Sie entweder Administrator s
 
 Gehen Sie zu **Messaging** > **Funktionskennzeichen** und wählen Sie dann **Funktionskennzeichen erstellen**.
 
-![Eine Datentabelle, die ein bestehendes Feature-Flag anzeigt und zeigt, wie Sie ein neues erstellen können.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
+![Eine Datentabelle, die ein vorhandenes Feature-Flag und die Vorgehensweise zum Erstellen eines neuen Feature-Flags darstellt.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
 
 ### Schritt 2: Details angeben
 
-Geben Sie unter **Feature-Flag Details** einen Namen, eine ID und eine Beschreibung für Ihr Feature-Flag ein.
+Geben Sie unter **„Feature-Flag-Details**“ einen Namen, eine ID und eine Beschreibung für Ihr Feature-Flag ein.
 
-![Ein Formular, mit dem Sie einem Feature-Flag einen Namen, eine ID, eine Beschreibung und Eigenschaften hinzufügen können.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
+![Ein Formular, in dem Sie einen Namen, eine ID, eine Beschreibung und Eigenschaften zu einem Feature-Flag hinzufügen können.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
 
 
 | Feld        | Beschreibung                                                                |
@@ -45,11 +45,11 @@ Geben Sie unter **Feature-Flag Details** einen Namen, eine ID und eine Beschreib
 
 ### Schritt 2a: Benutzerdefinierte Eigenschaften erstellen
 
-Unter **Eigenschaften** können Sie optional angepasste Eigenschaften erstellen, auf die Ihre App über das Braze SDK zugreifen kann, wenn Ihr Feature aktiviert ist. Sie können jeder Variablen einen String-, booleschen, Bild-, Zeitstempel-, JSON- oder Zahlenwert zuweisen sowie einen Standardwert festlegen.
+Unter **„Eigenschaften“** können Sie optional angepasste Eigenschaften erstellen, auf die Ihre App über das Braze SDK zugreifen kann, wenn Ihr Feature aktiviert ist. Sie können jeder Variablen einen String-, Booleschen-, Bild-, Zeitstempel-, JSON- oder Zahlenwert zuweisen sowie einen Standard-Wert festlegen.
 
 {% tabs local %}
 {% tab example %}
-Im folgenden Beispiel zeigt das Feature-Flag ein Banner für einen E-Commerce Shop an, in dem die angepassten Eigenschaften aufgeführt sind: 
+Im folgenden Beispiel zeigt das Feature-Flag ein Banner für einen Artikel, der in einem E-Commerce-Shop nicht vorrätig ist, unter Verwendung der aufgeführten benutzerdefinierten Eigenschaften an: 
 
 |Eigenschaftsname|Typ|Wert|
 |--|--|--|
@@ -69,66 +69,66 @@ Sie können beliebig viele Eigenschaften hinzufügen. Die Eigenschaften eines Fe
 
 ### Schritt 4: Wählen Sie Segmente für Ihre Zielgruppe
 
-Bevor Sie ein Feature-Flag einführen, müssen Sie ein [Nutzersegment]({{site.baseurl}}/user_guide/engagement_tools/segments/) als Zielgruppe auswählen. Wählen Sie **Regel hinzufügen** auf Ihrer neu erstellten Flagge aus und verwenden Sie dann die Dropdown-Menüs für Filtergruppen und Segmente, um Nutzer:innen aus Ihrer Zielgruppe herauszufiltern. Fügen Sie mehrere Filter hinzu, um Ihre Zielgruppe weiter einzugrenzen.
+Bevor Sie ein Feature-Flag einführen, müssen Sie ein [Nutzersegment]({{site.baseurl}}/user_guide/engagement_tools/segments/) als Zielgruppe auswählen. Wählen Sie **„Regel hinzufügen”** für Ihre neu erstellte Markierung und verwenden Sie anschließend die Dropdown-Menüs „Filtergruppe” und „Segment”, um Nutzer:innen aus Ihrer Zielgruppe herauszufiltern. Fügen Sie mehrere Filter hinzu, um Ihre Zielgruppen weiter einzugrenzen.
 
-![Ein Textfeld mit der Bezeichnung Rollout Traffic, in dem Sie Segmente und Filter hinzufügen können.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
+![Ein Textfeld mit der Bezeichnung „Rollout Traffic“ (Rollout-Datenverkehr), in dem Segmente und Filter hinzugefügt werden können.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
 
 ### Schritt 5: Rollout-Traffic festlegen {#rollout}
 
-Standardmäßig sind Feature-Flags immer inaktiv, so dass Sie das Datum der Veröffentlichung Ihres Features von der gesamten Nutzer:innen-Aktivierung trennen können. Um mit dem Rollout zu beginnen, verwenden Sie den Abschnitt **Rollout Traffic**, um einen Prozentsatz in das Textfeld einzugeben. Damit wählen Sie den Prozentsatz der zufällig ausgewählten Nutzer:innen in Ihrem Segment aus, die dieses neue Feature erhalten sollen.
+Standardmäßig sind Feature-Flags immer inaktiv, wodurch Sie das Veröffentlichungsdatum Ihrer Funktion von der vollständigen Benutzeraktivierung trennen können. Um mit der Einführung zu beginnen, geben Sie im Abschnitt **„Rollout-Traffic“** einen Prozentsatz in das Textfeld ein. Dadurch wird der Prozentsatz der zufälligen Nutzer:innen in Ihrem ausgewählten Segment ausgewählt, die dieses neue Feature erhalten sollen.
 
 {% alert important %}
 Legen Sie den Rollout-Traffic erst dann auf einen Wert über 0 % fest, wenn Sie bereit sind, Ihr neues Feature freizuschalten. Wenn Sie mit der Definition Ihres Feature-Flags im Dashboard beginnen, lassen Sie diese Einstellung auf 0 %.
 {% endalert %}
 
 {% alert important %}
-Wenn Sie eine Flagge mit nur einer Regel oder für eine singuläre Zielgruppe ausrollen möchten, fügen Sie Ihre erste Regel mit ausgewählten Segmentierungskriterien und Ausrollungsprozentsätzen hinzu. Vergewissern Sie sich abschließend, dass die Regel **Alle anderen** ausgeschaltet ist, und speichern Sie Ihre Markierung.
+Um eine Flagge mit nur einer Regel oder für eine einzelne Zielgruppe einzuführen, fügen Sie bitte Ihre erste Regel mit Segmentierungskriterien und ausgewählten Rollout-Prozentsätzen hinzu. Bitte überprüfen Sie abschließend, ob die Regel **„Alle anderen“** umgeschaltet ist, und speichern Sie Ihre Markierung.
 {% endalert %}
 
-## Multi-Regel Feature-Flags Rollouts
+## Einführung von Feature-Flag-Regeln mit mehreren Regeln
 
-Verwenden Sie Rollouts von Feature-Flags mit mehreren Regeln, um eine Abfolge von Regeln für die Bewertung von Nutzer:innen zu definieren, was eine präzise Segmentierung und kontrollierte Freigabe von Features ermöglicht. Diese Methode ist ideal für die Bereitstellung desselben Features für verschiedene Zielgruppen. 
+Nutzen Sie die Einführung von Feature-Flag-Rollouts mit mehreren Regeln, um eine Abfolge von Regeln für die Bewertung von Nutzern zu definieren, die eine präzise Segmentierung und kontrollierte Feature-Veröffentlichungen ermöglicht. Diese Methode eignet sich hervorragend, um das gleiche Feature für unterschiedliche Zielgruppen bereitzustellen. 
 
 ### Bewertungsauftrag
 
-Feature-Flag Regeln werden von oben nach unten ausgewertet, in der Reihenfolge, in der sie aufgelistet sind. Ein Nutzer:in qualifiziert sich für die erste Regel, die er erfüllt. Erfüllt ein Nutzer:innen keine der Regeln, wird seine Berechtigung durch die Standard-Regel "Alle anderen" bestimmt.
+Feature-Flag-Regeln werden von oben nach unten in der Reihenfolge ihrer Auflistung ausgewertet. Eine Nutzer:in erfüllt die erste Regel, die auf sie zutrifft. Wenn ein Nutzer:in keine der Regeln erfüllt, wird seine Berechtigung anhand der Standardregel „Alle anderen“ bestimmt.
 
-### Nutzer:in Qualifikation
+### Benutzerqualifikation
 
-- Wenn ein Nutzer:innen die Kriterien der ersten Regel erfüllt, kommt er sofort für den Erhalt des Feature-Flags in Frage.
-- Wenn ein Nutzer:innen nicht für die erste Regel in Frage kommt, wird er anhand der zweiten Regel bewertet, und so weiter.
+- Wenn eine Nutzer:in die Kriterien der ersten Regel erfüllt, ist sie sofort berechtigt, das Feature-Flag zu erhalten.
+- Wenn eine Nutzer:in die erste Regel nicht erfüllt, wird sie anhand der zweiten Regel bewertet und so weiter.
 
-Die sequentielle Auswertung wird fortgesetzt, bis sich ein Nutzer:innen für eine Regel qualifiziert oder die Regel "Alle anderen" am Ende der Liste erreicht.
+Die sequenzielle Auswertung wird fortgesetzt, bis eine Nutzer:in die Kriterien einer Regel erfüllt oder die Regel „Alle anderen“ am Ende der Liste erreicht.
 
-### Regel "Alle anderen"
+### Regel für „alle anderen“
 
-Die Regel "Alle anderen" dient als Standard. Wenn ein Nutzer:innen für keine der vorangegangenen Regeln in Frage kommt, wird seine Berechtigung für das Feature-Flag durch das Umschalten der Regel "Alle anderen" bestimmt. Wenn beispielsweise die Regel "Alle anderen" im Standardzustand auf "Aus" umgeschaltet ist, erhält ein Nutzer:innen, der die Kriterien für keine der anderen Regeln erfüllt, beim Start der Sitzung das Feature-Flag nicht.
+Die „Alle anderen“-Regel fungiert als Standard. Wenn eine Nutzer:in keine der vorangegangenen Regeln erfüllt, wird ihre Berechtigung für das Feature-Flag durch die Einstellung zum Umschalten der Regel „Alle anderen“ bestimmt. Wenn beispielsweise die Regel „Alle anderen“ umgeschaltet ist, erhält ein Nutzer, der die Kriterien für keine andere Regel erfüllt, im Standardzustand zu Beginn seiner Sitzung kein Feature-Flag.
 
 ### Regeln für die Neuordnung
 
-Standardmäßig werden die Regeln in der Reihenfolge ihrer Erstellung angeordnet. Sie können diese Regeln jedoch per Drag-and-Drop auf dem Dashboard neu anordnen.
+Standardmäßig werden die Regeln in der Reihenfolge ihrer Erstellung angeordnet. Sie können diese Regeln jedoch neu anordnen, indem Sie sie im Dashboard per Drag-and-Drop verschieben.
 
-![Ein Bild, das zeigt, dass ein Nutzer:innen eine Regel zu einem Feature-Flag hinzufügen kann.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
+![Ein Bild, das veranschaulicht, dass eine Nutzer:in eine Regel zu einem Feature-Flag hinzufügen kann.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
 
-![Ein Bild, das eine Zusammenfassung eines Feature-Flags mit mehreren hinzugefügten Regeln und einer Regel für alle anderen zeigt.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
+![Ein Bild, das eine Zusammenfassung eines Feature-Flags mit mehreren hinzugefügten Regeln und einer Regel für alle anderen Personen darstellt.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
 
 ### Anwendungsfälle für Feature-Flags mit mehreren Regeln
 
-#### Geben Sie nach und nach eine Kassenseite frei
+#### Die Checkout-Seite schrittweise freigeben
 
-Nehmen wir an, Sie arbeiten für eine E-Commerce-Marke und haben eine neue Checkout-Seite, die Sie in verschiedenen Ländern einführen möchten, um die Stabilität zu gewährleisten. Mit Hilfe von Multi-Regel Feature-Flags können Sie Folgendes einstellen:
+Angenommen, Sie sind für eine E-Commerce-Marke tätig und verfügen über eine neue Checkout-Seite, die Sie in verschiedenen Regionen einführen möchten, um die Stabilität sicherzustellen. Mit Hilfe von Feature-Flag-Regeln können Sie Folgendes festlegen:
 
-- **Regel 1:** Ihr US-Segment ist auf 100% eingestellt.
-- **Regel 2:** Ihr Segment ist auf 50% Ihrer brasilianischen Nutzer:innen eingestellt, so dass nicht alle auf einmal den Strom erhalten. 
-- **Regel 3 (Alle anderen):** Für alle anderen Nutzer:innen schalten Sie die Regel "Alle anderen" um und setzen sie auf 15%, damit ein Teil der Nutzer:innen mit dem neuen Fluss auschecken kann.
+- **Regel 1:** Ihr US-Segment ist auf 100 % eingestellt.
+- **Regel 2:** Ihr Segment ist auf 50 % Ihrer brasilianischen Nutzer:innen eingestellt, sodass nicht alle gleichzeitig den Ablauf erhalten. 
+- **Regel 3 (Alle anderen):** Für alle anderen Nutzer:innen umschalten Sie bitte Ihre Regel „Alle anderen“ und stellen Sie sie auf 15 % ein, damit ein Teil aller Nutzer:innen den neuen Ablauf testen kann.
 
-#### Erreichen Sie zuerst die internen Tester
+#### Bitte wenden Sie sich zunächst an die internen Tester.
 
-Nehmen wir an, Sie sind ein Manager:in, der sicherstellen möchte, dass Ihre internen Tester immer das Feature-Flag erhalten, wenn Sie ein neues Produkt herausbringen. Sie können das Segment Ihrer internen Tester zu Ihrer ersten Regel hinzufügen und es auf 100% setzen, so dass Ihre internen Tester bei jeder Einführung eines neuen Features berücksichtigt werden.
+Angenommen, Sie sind Produktmanager und möchten sicherstellen, dass Ihre internen Tester bei der Veröffentlichung eines neuen Produkts stets das Feature-Flag erhalten. Sie können Ihr internes Testersegment zu Ihrer ersten Regel hinzufügen und es auf 100 % festlegen, sodass Ihre internen Tester bei jeder Feature-Einführung berechtigt sind.
 
 ## Verwendung des Felds "aktiviert" für Feature-Flags {#enabled}
 
-Nachdem Sie Ihr Feature-Flag definiert haben, konfigurieren Sie Ihre App oder Website so, dass sie überprüft, ob es für einen bestimmten Nutzer:innen aktiviert ist oder nicht. Ist es aktiviert, legen Sie eine Aktion fest oder referenzieren die Variablen-Eigenschaften des Feature-Flags je nach Ihrem Anwendungsfall. Das Braze SDK stellt Getter-Methoden bereit, um den Status des Feature-Flags und seine Eigenschaften in Ihre App einzubinden. 
+Nachdem Sie Ihr Feature-Flag definiert haben, konfigurieren Sie Ihre App oder Website so, dass überprüft wird, ob es für einen bestimmten Nutzer:in aktiviert ist. Ist es aktiviert, legen Sie eine Aktion fest oder referenzieren die Variablen-Eigenschaften des Feature-Flags je nach Ihrem Anwendungsfall. Das Braze SDK stellt Getter-Methoden bereit, um den Status des Feature-Flags und seine Eigenschaften in Ihre App einzubinden. 
 
 Feature-Flags werden beim Sitzungsstart automatisch aktualisiert, sodass Sie jeweils die aktuellste Version Ihres Features anzeigen können. Das SDK speichert diese Werte im Cache, sodass sie auch offline verwendet werden können. 
 
@@ -319,7 +319,7 @@ m.Braze.logFeatureFlagImpression("expanded_user_profile");
 
 Um auf die Eigenschaften eines Feature-Flags zuzugreifen, verwenden Sie je nach dem im Dashboard definierten Typ eine der folgenden Methoden.
 
-Wenn es keine solche Eigenschaft des entsprechenden Typs für den von Ihnen angegebenen Schlüssel gibt, geben diese Methoden `null` zurück.
+Wenn für den von Ihnen angegebenen Schlüssel keine Eigenschaft des entsprechenden Typs vorhanden ist, geben diese Methoden zurück`null`.
 
 {% tabs %}
 {% tab Web %}
@@ -877,19 +877,19 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 {% endtab %}
 {% endtabs %}
 
-## Prüfung der Nutzer:innen auf Berechtigung
+## Überprüfung der Berechtigung der Nutzer:innen
 
-Um zu überprüfen, für welche Feature-Flags ein Nutzer:in Braze in Frage kommt, gehen Sie zu **Zielgruppe** > **Nutzer:innen suchen** und wählen Sie dann einen Nutzer aus.
+Um zu überprüfen, für welche Feature-Flags ein Benutzer in Braze berechtigt ist, gehen Sie zu **„Audience“** > **„Search Users“** (Zielgruppe > Benutzer suchen), suchen Sie dann nach einem Benutzer und wählen Sie ihn aus.
 
-Auf dem Tab **Feature-Flags Berechtigung** können Sie die Liste der in Frage kommenden Feature-Flags nach Plattform, Anwendung oder Gerät filtern. Sie können auch eine Vorschau der Nutzdaten anzeigen, die an den Nutzer:innen zurückgegeben werden, indem Sie <i class="fa-solid fa-eye"></i> neben einem Feature-Flag auswählen.
+Auf dem Tab **„Feature-Flag-Berechtigung“** können Sie die Liste der berechtigten Feature-Flags nach Plattform, Anwendung oder Gerät filtern. Sie können auch eine Vorschau der Nutzlast anzeigen, die an die Nutzer:innen zurückgegeben wird, indem Sie die Option<i class="fa-solid fa-eye"></i>neben einem Feature-Flag auswählen.
 
-![Ein Bild, das die Tabelle der Feature-Flags zeigt, für die ein Nutzer:innen in Frage kommt.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
+![Eine Abbildung, die die Tabelle der Feature-Flags zeigt, für die eine Nutzer:in berechtigt ist.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
 
 ## Anzeigen des Changelogs
 
 Um das Änderungsprotokoll eines Feature-Flags anzuzeigen, öffnen Sie ein Feature-Flag und wählen Sie **Änderungsprotokoll**.
 
-![Die Seite "Bearbeiten" eines Feature-Flags, wobei der Button "Changelog" hervorgehoben ist.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
+![Die Seite „Bearbeiten“ eines Feature-Flags, auf der der Button „Changelog“ hervorgehoben ist.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
 
 Hier können Sie nachsehen, wann eine Änderung stattgefunden hat, wer die Änderung vorgenommen hat, zu welcher Kategorie sie gehört und vieles mehr.
 
@@ -899,7 +899,7 @@ Hier können Sie nachsehen, wann eine Änderung stattgefunden hat, wer die Ände
 
 Braze merkt sich automatisch, welche Benutzer derzeit für ein Feature-Flag aktiviert sind. Mit dem [Filter **Feature-Flag**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags) können Sie ein Segment oder ein gezieltes Messaging erstellen. Weitere Informationen zum Filtern nach Segmenten finden Sie unter [Erstellen eines Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
-![Der Bereich "Filter" mit der Eingabe von "Feature-Flag" in der Suchleiste des Filters.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
+![Der Abschnitt „Filter“ mit dem Begriff „Feature-Flag“ in der Filtersuchleiste.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
 
 {% alert note %}
 Um rekursive Segmente zu vermeiden, ist es nicht möglich, ein Segment zu erstellen, das auf andere Feature-Flags referenziert.
