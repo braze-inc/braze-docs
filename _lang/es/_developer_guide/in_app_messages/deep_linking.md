@@ -1,14 +1,14 @@
 ---
 page_order: 1
 nav_title: Vínculos profundos
-article_title: Vinculación en profundidad de mensajes dentro de la aplicación para el SDK de Braze
+article_title: Vinculación en profundidad a mensajes dentro de la aplicación para el SDK de Braze
 channel:
   - push notifications
 ---
 
-# Vinculación en profundidad de mensajes dentro de la aplicación
+# Vinculación en profundidad en mensajes dentro de la aplicación
 
-> Aprende a establecer un vínculo profundo dentro de un mensaje dentro de la aplicación para el SDK de Braze.
+> Aprende a crear vínculos profundos dentro de un mensaje dentro de la aplicación para el SDK de Braze.
 
 {% sdktabs %}
 {% sdktab android %}
