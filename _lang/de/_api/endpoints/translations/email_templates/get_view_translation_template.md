@@ -1,7 +1,7 @@
 ---
-nav_title: "GET: Alle Übersetzungen und Lokalisierungen für E-Mail Template anzeigen"
+nav_title: "GET: Alle Übersetzungen und Sprachversionen für das E-Mail-Template anzeigen"
 article_title: "GET: Alle Übersetzungen und Lokalisierungen für E-Mail Template anzeigen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 3
 
 layout: api_page
@@ -12,14 +12,12 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Alle Übersetz
 {% api %}
 # Alle Übersetzungen und Lokalisierungen für eine E-Mail-Vorlage anzeigen
 {% apimethod get %}
-/templates/email/translations/
+/Templates/E-Mail/Übersetzungen/
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um alle Übersetzungen und Lokalisierungen für eine [E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) anzuzeigen. Weitere Informationen zu den Features für die Übersetzung finden Sie unter [Lokalisierung in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
+> Verwenden Sie diesen Endpunkt, um alle Übersetzungen und Lokalisierungen für eine [E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) anzuzeigen. Weitere Informationen zu den Übersetzungsfeatures finden Sie unter [„Locales in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)“.
 
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Voraussetzungen
 
@@ -37,7 +35,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Alle Übersetzungs-IDs werden als universelle eindeutige Bezeichner (UUIDs) betrachtet, die in der Antwort des GET-Endpunkts zu finden sind.
+Alle Übersetzungs-IDs gelten als universelle eindeutige Bezeichner (UUIDs), die in der Antwort des GET-Endpunkts zu finden sind.
 {% endalert %}
 
 ## Beispiel Anfrage
