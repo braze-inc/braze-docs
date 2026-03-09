@@ -1,25 +1,23 @@
 ---
-nav_title: "GET: Ver los valores de origen predeterminados para las etiquetas de traducción de las campañas"
-article_title: "GET: Ver los valores de origen predeterminados para las etiquetas de traducción de las campañas"
-search_tag: Endpoint
+nav_title: "GET: Ver los valores predeterminados de las fuentes para las etiquetas de traducción de campañas."
+article_title: "GET: Ver los valores predeterminados de las fuentes para las etiquetas de traducción de campañas."
+search_tag: Punto de conexión
 page_order: 3
 
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final de origen de la traducción de la campaña."
+description: "Este artículo describe los detalles sobre el punto final de origen de la traducción de la campaña."
 ---
 
 {% api %}
-# Ver los valores de origen predeterminados para las etiquetas de traducción de una campaña
+# Ver los valores predeterminados de las etiquetas de traducción de una campaña
 {% apimethod get %}
 /campañas/traducciones/fuente
 {% endapimethod %}
 
-> Utiliza este punto final para ver todas las fuentes de traducción predeterminadas para las etiquetas de traducción de una campaña. Estos son los valores dentro de {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de traducción.
+> Utiliza este punto final para ver todas las fuentes de traducción predeterminadas para las etiquetas de traducción de una campaña. Estos son los valores dentro del {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de la localización.
 
-{% alert important %}
-Este punto final se encuentra actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Requisitos previos
 
@@ -34,13 +32,13 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`| Obligatoria | Cadena | El ID de su campaña. |
-|`message_variation_id`| Obligatoria | Cadena | El ID de la variación de tu mensaje. |
-|`locale_id`| Opcional | Cadena | Un UUID de localización para filtrar las respuestas. |
-|`post_launch_draft_version`| Opcional | Booleano | Cuando `true` devuelve la última versión borrador en lugar de la última versión publicada en vivo. Predetermina `false` devolviendo la última versión en vivo.|
+|`message_variation_id`| Obligatoria | Cadena | El ID de tu variación de mensaje. |
+|`locale_id`| Opcional | Cadena | Un UUID local para filtrar las respuestas. |
+|`post_launch_draft_version`| Opcional | Booleano | Cuando`true`  devuelve la última versión preliminar en lugar de la última versión publicada en vivo. Predeterminado,`false`devuelve la última versión en vivo.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Todos los ID de traducción se consideran identificadores únicos universales (UUID), que pueden encontrarse en la respuesta del punto final GET.
+Todos los ID de traducción se consideran identificadores únicos universales (UUID), que se pueden encontrar en la respuesta del punto final GET.
 {% endalert %}
 
 ## Ejemplo de solicitud
