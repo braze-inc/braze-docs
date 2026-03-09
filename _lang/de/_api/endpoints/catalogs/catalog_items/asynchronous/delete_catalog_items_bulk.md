@@ -1,7 +1,7 @@
 ---
 nav_title: "LÖSCHEN: Mehrere Artikel im Katalog löschen"
 article_title: "LÖSCHEN: Mehrere Katalogartikel löschen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 1
 
 layout: api_page
@@ -86,7 +86,7 @@ Der Status Code `400` könnte den folgenden Antwortkörper zurückgeben. Unter [
       "parameter_values": []
     }
   ],
-  "message": "Invalid Request",
+  "message": "Invalid Request"
 }
 ```
 
