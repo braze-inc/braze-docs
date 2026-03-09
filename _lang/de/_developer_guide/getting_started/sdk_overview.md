@@ -5,7 +5,7 @@ description: "Dieser Onboarding-Referenzartikel enthält eine technische Übersi
 page_order: 0
 ---
 
-# [![Braze-Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} SDK-Übersicht für Entwickler:in
+# [![Braze Learning-](https://learning.braze.com/path/developer/sdk-integration-basics)Kurs[]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} SDK-Übersicht für Entwickler:innen
 
 > Bevor Sie mit der Integration der Braze SDKs beginnen, werden Sie sich vielleicht fragen, was genau Sie da eigentlich entwickeln und integrieren. Vielleicht sind Sie neugierig, wie Sie das SDK weiter an Ihre Bedürfnisse anpassen können. Dieser Artikel hilft Ihnen, alle Ihre Fragen zum SDK zu beantworten. 
 
@@ -25,11 +25,11 @@ Die SDKs von Braze haben einen sehr geringen Platzbedarf. Wir ändern die Flush-
 
 ## SDK-Kompatibilität
 
-Das Braze SDK ist so konzipiert, dass es andere SDKs in Ihrer App nicht beeinträchtigt. Wenn Sie Probleme haben, die Ihrer Meinung nach auf eine Inkompatibilität mit einem anderen SDK zurückzuführen sind, wenden Sie sich an den Braze Support.
+Das Braze SDK ist so konzipiert, dass es andere SDKs in Ihrer App nicht beeinträchtigt. Sollten Sie Probleme feststellen, die Ihrer Meinung nach auf Inkompatibilität mit einem anderen SDK zurückzuführen sind, wenden Sie sich bitte an den Braze-Support.
 
 ## Standard Analytics und Sitzungsbehandlung
 
-Bestimmte Nutzerdaten werden von unserem SDK automatisch erfasst, z. B. die zuerst verwendete App, die zuletzt verwendete App, die Gesamtzahl der Sitzungen, das Betriebssystem des Geräts usw. Wenn Sie unseren Integrationsleitfäden folgen, um unsere SDKs zu implementieren, können Sie die Vorteile dieser [Standard Datenerfassung]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/) nutzen. Wenn Sie diese Liste überprüfen, können Sie vermeiden, die gleichen Informationen über Nutzer mehrfach zu speichern. Mit Ausnahme des Sitzungsbeginns und -endes werden alle anderen automatisch getrackten Daten nicht auf die Datenpunkt-Nutzung angerechnet.
+Bestimmte Nutzerdaten werden von unserem SDK automatisch erfasst, z. B. die zuerst verwendete App, die zuletzt verwendete App, die Gesamtzahl der Sitzungen, das Betriebssystem des Geräts usw. Wenn Sie unseren Integrationsleitfäden folgen, um unsere SDKs zu implementieren, können Sie die Vorteile dieser [Standard Datenerfassung]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/) nutzen. Wenn Sie diese Liste überprüfen, können Sie vermeiden, die gleichen Informationen über Nutzer mehrfach zu speichern. Mit Ausnahme des Sitzungsbeginns und des Sitzungsendes werden alle anderen automatisch erfassten Daten nicht auf Ihre Datenpunkt-Nutzung angerechnet.
 
 {% alert note %}
 Alle unsere Features sind konfigurierbar, aber es empfiehlt sich, das Standardmodell für die Datenerfassung vollständig zu implementieren.
@@ -96,7 +96,7 @@ Weitere Einzelheiten zur Verwendung dieser Methode finden Sie unter [Speicherung
 
 Sie können die SDK-Version einer bestimmten App im Dashboard unter **Einstellungen > App-Einstellungen** sehen. Unter **Live SDK Version** finden Sie die höchste Braze SDK Version, die von Ihrer letzten Live-App für mindestens 5 % Ihrer Nutzer verwendet wurde.
 
-![Eine App namens Swifty in einem Workspace. Die Version des Live SDK ist 6.6.0.]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
+![Eine App namens Swifty in einem Workspace. Die Live SDK-Version ist 6.6.0.]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
 
 {% alert tip %}
 Wenn Sie eine iOS App haben, können Sie sich vergewissern, dass Sie das [Swift SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) anstelle des alten [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/) verwenden, wenn Ihre **Live SDK Version** gleich oder höher als 5.0.0 ist, was die erste veröffentlichte Version des Swift SDK war.
