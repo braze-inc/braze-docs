@@ -1,5 +1,5 @@
 ---
-nav_title: Comportamiento del cliente y eventos del usuario
+nav_title: Comportamiento del cliente y eventos de los usuarios
 layout: customer_behavior_events_glossary
 page_order: 4
 excerpt_separator: ""
