@@ -14,7 +14,7 @@ guide_menu_list:
 
 guide_menu_title2: "Content Cards"
 guide_menu_list2:
-  - name: コンテンツカードで受信トレイを作る
+  - name: コンテンツカードを使った受信トレイの作成
     link: /docs/developer_guide/content_cards/content_card_inbox
     image: /assets/img/braze_icons/brush-02.svg
 
