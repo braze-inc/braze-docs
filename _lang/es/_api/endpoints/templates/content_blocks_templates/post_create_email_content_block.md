@@ -1,7 +1,7 @@
 ---
 nav_title: "PUBLICAR: Crear bloque de contenido"
 article_title: "PUBLICAR: Crear bloque de contenido"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -87,7 +87,7 @@ La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados 
 | `Content cannot be blank` | |
 | `Content must be a string` | Asegúrate de que tu contenido está entre comillas (`""`). |
 | `Content must be smaller than 50kb` | El contenido de tu bloque de contenido debe ser inferior a 50 KB en total. |
-| `Content contains malformed liquid` | El Liquid proporcionado no es válido ni analizable. Inténtalo de nuevo con Liquid válido o ponte en contacto con el servicio de asistencia. |
+| `Content contains malformed liquid` | El Liquid proporcionado no es válido ni analizable. Vuelve a intentarlo con un Liquid válido o ponte en contacto con el servicio de asistencia. |
 | `Content Block cannot be referenced within itself` | |
 | `Content Block description cannot be blank` | |
 | `Content Block description must be a string` | Asegúrate de que la descripción de tu bloque de contenido está entre comillas (`""`). |
