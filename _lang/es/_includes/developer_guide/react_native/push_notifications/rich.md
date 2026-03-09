@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/react_native.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
-## Utilizar Expo para habilitar las notificaciones push enriquecidas
+## Uso de Expo para habilitar notificaciones push enriquecidas
 
 Para el SDK de React Native, **las notificaciones push enriquecidas están disponibles para Android de forma predeterminada**.
 
