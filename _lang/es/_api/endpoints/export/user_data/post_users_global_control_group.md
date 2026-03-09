@@ -1,7 +1,7 @@
 ---
 nav_title: "PUBLICAR: Exportar perfil de usuario por grupo de control global"
 article_title: "PUBLICAR: Exportar perfil de usuario por grupo de control global"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 6
 layout: api_page
 page_type: reference
@@ -32,9 +32,9 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Detalles de la respuesta basados en credenciales
 
-Si has añadido tus credenciales de [S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) o [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) a Braze a través de la página de **socios tecnológicos** correspondiente, entonces cada archivo se carga en tu contenedor como un archivo ZIP con el formato de clave que se parece a `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Si utilizas Azure, asegúrate de que tienes marcada la casilla **Hacer de éste el destino predeterminado de exportación de datos** en la página del socio de Azure en Braze.
+Si has añadido tus credenciales [de S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) o [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) a Braze a través de la página **de socios tecnológicos** correspondiente, cada archivo se cargará en tu contenedor como un archivo ZIP con un formato clave similar a `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Si utilizas Azure, asegúrate de que tienes marcada la casilla **Hacer de éste el destino predeterminado de exportación de datos** en la página del socio de Azure en Braze.
 
-Generalmente, creamos un archivo por cada 5.000 usuarios para optimizar el procesamiento. Exportar segmentos más pequeños dentro de un espacio de trabajo grande puede dar lugar a varios archivos. A continuación, puedes extraer los archivos y concatenar todos los archivos `json` en un único archivo si es necesario. Si especificas un `output_format` de `gzip`, entonces la extensión del archivo será `.gz` en lugar de `.zip`.
+Por lo general, creamos un archivo por cada 5000 usuarios para optimizar el procesamiento. Exportar segmentos más pequeños dentro de un espacio de trabajo grande puede dar lugar a varios archivos. A continuación, puedes extraer los archivos y concatenar todos los archivos `json` en un único archivo si es necesario. Si especificas un`output_format`  de `gzip`, entonces la extensión del archivo será`.gz`  en lugar de `.zip`.
 
 {% details Export pathing breakdown for ZIP %}
 **Formato ZIP:**
@@ -56,15 +56,15 @@ Generalmente, creamos un archivo por cada 5.000 usuarios para optimizar el proce
 
 {% enddetails %}
 
-Te recomendamos encarecidamente que configures tus propias credenciales de S3 o Azure (yendo a **Integraciones de socios** > **Socios tecnológicos** > página del socio) cuando utilices este punto final para aplicar tus propias políticas de contenedores en la exportación.
+Te recomendamos encarecidamente que configures tus propias credenciales de S3 o Azure (en **Integraciones del** **socio** > **Socios tecnológicos** > página del socio) cuando utilices este punto final para aplicar tus propias políticas de contenedor en la exportación.
 
 ![La página de socios tecnológicos de Azure, con una pestaña para Amazon S3.]({% image_buster /assets/img/technology_partners_page.png %})
 
-Si no se te facilitan tus credenciales de almacenamiento en la nube, la respuesta a la solicitud proporciona la URL donde se puede descargar un ZIP que contiene todos los archivos del usuario. La URL se convierte en una ubicación válida sólo cuando la exportación está lista.
+Si no se te facilitan tus credenciales de almacenamiento en la nube, la respuesta a la solicitud proporciona la URL donde se puede descargar un ZIP que contiene todos los archivos del usuario. La ubicación solo será válida una vez que la exportación esté lista.
 
 Ten en cuenta que si no proporcionas tus credenciales de almacenamiento en la nube, existe una limitación en la cantidad de datos que puedes exportar desde este punto final. Dependiendo de los campos que estés exportando y del número de usuarios, la transferencia del archivo puede fallar si es demasiado grande. Una práctica recomendada es especificar qué campos quieres exportar utilizando `fields_to_export` y especificando sólo los campos que necesitas para que el tamaño de la transferencia sea menor. Si obtienes errores al generar el archivo, considera la posibilidad de dividir tu base de usuarios en más segmentos basándote en un número de contenedor aleatorio (por ejemplo, crea un segmento en el que el número de contenedor aleatorio sea inferior a 1.000 o esté comprendido entre 1.000 y 2.000).
 
-En cualquiera de los dos casos, puedes proporcionar opcionalmente un `callback_endpoint` para que se te notifique cuando la exportación esté lista. Si se facilita la dirección `callback_endpoint`, haremos una petición por correo a la dirección facilitada cuando la descarga esté lista. El cuerpo del mensaje es `"success":true`. Si no has añadido tus credenciales de almacenamiento en la nube a Braze, el cuerpo de la entrada tiene además el atributo `url` con la URL de descarga como valor.
+En cualquiera de los dos casos, puedes proporcionar opcionalmente un `callback_endpoint` para que se te notifique cuando la exportación esté lista. Si se proporciona`callback_endpoint` el  , realizamos una solicitud de publicación a la dirección proporcionada cuando la descarga está lista. El cuerpo de la publicación es `"success":true`. Si no has añadido tus credenciales de almacenamiento en la nube a Braze, el cuerpo de la publicación tiene además el atributo`url`  con la URL de descarga como valor.
 
 Las bases de usuarios más grandes darán lugar a tiempos de exportación más largos. Por ejemplo, una aplicación con 20 millones de usuarios podría tardar una hora o más.
 
@@ -84,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-Los atributos personalizados individuales no se pueden exportar. Sin embargo, todos los atributos personalizados pueden exportarse incluyendo custom_attributes en la matriz fields_to_export (por ejemplo, `['first_name', 'email', 'custom_attributes']`).
+Los atributos personalizados individuales no se pueden exportar. Sin embargo, todos los atributos personalizados se pueden exportar incluyendocustom_attributes  en lafields_to_exportmatriz  (por ejemplo, `['first_name', 'email', 'custom_attributes']`).
 {% endalert %}
 
 ## Parámetros de la solicitud
@@ -153,11 +153,11 @@ La siguiente es una lista de elementos `fields_to_export` válidos. El uso de `f
 }
 ```
 
-Una vez que la URL está disponible, sólo es válida durante unas horas. Por ello, te recomendamos encarecidamente que añadas tus propias credenciales de S3 a Braze.
+Una vez que la URL está disponible, solo es válida durante unas pocas horas. Por ello, te recomendamos encarecidamente que añadas tus propias credenciales de S3 a Braze.
 
 ### Ejemplo de archivo de exportación de usuario
 
-Objeto de exportación del usuario (incluimos los menos datos posibles; si falta un campo en el objeto, debe considerarse nulo o vacío):
+Objeto de exportación de usuario (incluimos la menor cantidad de datos posible; si falta un campo en el objeto, se debe suponer que es nulo o está vacío):
 
 {% tabs %}
 {% tab All fields %}
@@ -231,7 +231,7 @@ Objeto de exportación del usuario (incluimos los menos datos posibles; si falta
         "last_used" : (string) date
       },
       ...
-    ],
+    ]
 }
 ```
 
@@ -310,7 +310,7 @@ Objeto de exportación del usuario (incluimos los menos datos posibles; si falta
         "last_used": "2021-11-11T00:25:19.201Z"
       },
       ...
-    ],
+    ]
 }
 ```
 
