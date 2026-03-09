@@ -11,7 +11,7 @@
 
   </form>
 </div>
-{%- 끝없는 -%}
+{%- endunless -%}
 
 <nav class="bd-links navbar navbar-expand-lg navbar-light" id="left_navmenu" aria-label="{{ site.data.i18n[site.language]['documentation_nav'] | default: 'Documentation' }}">
   {%- unless hide_nav_filter -%}
@@ -23,8 +23,8 @@
   <a href="https://learning.braze.com" target="_blank"><div class="nav_bottom_item"><i class="fa fa-flask"></i> Braze Learning </div></a --><a id="status-indicator" href="https://braze.statuspage.io" target="_blank" rel="noopener noreferrer">
     <div class="nav_bottom_item">
 
-      <div class="status-title">{{ site.data.i18n[site.language]['braze_status'] || 기본값: "BRAZE 시스템 상태"}}</div>
-      <div class="color-dot"></div><div class="color-description">{{ site.data.i18n[site.language]['braze_status_check'] || 기본값: "상태 확인 중" }}</div>
+      <div class="status-title">{{ site.data.i18n[site.language]['braze_status'] || default: "BRAZE 시스템 상태"}}</div>
+      <div class="color-dot"></div><div class="color-description">{{ site.data.i18n[site.language]['braze_status_check'] || default: "상태 확인 중" }}</div>
   </div></a>
 </div>
 <div class="sidebar-toggle-row"><button type="button" id="sidebar_toggle" class="btn btn-info d-print-none" tabindex="0" aria-label="{{ site.data.i18n[site.language]['minimize_menu'] | default: 'Minimize menu' }}" title="{{ site.data.i18n[site.language]['minimize_menu'] | default: 'Minimize menu' }}" data-toggle="tooltip" data-placement="right" aria-expanded="true"> <i class="fas fa-angle-double-left" aria-hidden="true"></i> </button></div>
