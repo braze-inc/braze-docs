@@ -2,15 +2,15 @@
 nav_title: "GET: Buscar una cuenta de usuario existente en el panel"
 article_title: "GET: Buscar una cuenta de usuario existente en el salpicadero"
 alias: /get_see_user_account_information/
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Braze Buscar un ID de recurso de cuenta de usuario de panel existente."
+description: "Este artículo describe los detalles sobre el punto final de Braze para buscar el ID de recurso de una cuenta de usuario existente en el panel de Braze."
 ---
 
 {% api %}
-# Buscar una cuenta de usuario existente en el panel por ID de recurso
+# Buscar una cuenta de usuario existente en el panel de control por ID de recurso
 {% apimethod get %}
 /scim/v2/Usuarios/{id}
 {% endapimethod %}
@@ -35,14 +35,14 @@ Para utilizar este punto final, necesitarás un token SCIM. Utilizarás el orige
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Cuerpo de la solicitud
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Ejemplo de solicitud
-```json
+```bash
 curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -67,7 +67,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
         "roles": [
             {
                 "roleName": "Another Test Role",
-                "roleId": "23125dad23dfaae7,
+                "roleId": "23125dad23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25adfabcded",
