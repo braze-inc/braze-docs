@@ -1,20 +1,20 @@
 ---
 nav_title: "Tutoriel : Boîtes de réception des cartes de contenu"
-article_title: "Tutoriel : Créer une boîte de réception avec des cartes de contenu"
+article_title: "Tutoriel : Création d'une boîte de réception avec des cartes de contenu"
 description: ""
 page_order: 6
 layout: scrolly
 ---
 
-# Tutoriel : Créer une boîte de réception avec des cartes de contenu
+# Tutoriel : Création d'une boîte de réception avec des cartes de contenu
 
-> Suivez l'exemple de code de ce tutoriel pour créer une boîte de réception avec les cartes de contenu de Braze.
+> Veuillez suivre l'exemple de code fourni dans ce tutoriel pour créer une boîte de réception avec les cartes de contenu Braze.
 
 {% sdktabs %}
 {% sdktab android %}
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## Créer une boîte de réception avec les cartes de contenu pour Android (Compose)
+## Création d'une boîte de réception avec des cartes de contenu pour Android (Compose)
 
 {% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
 
@@ -175,38 +175,38 @@ lignes-MainApplication.kt=12
 Pour faciliter la résolution des problèmes lors du développement, pensez à activer le débogage.
 
 !étape
-lignes-ContentCardsInboxScreen.kt=47-69
+lignes-=47-69ContentCardsInboxScreen.kt
 
-#### 2\. Créer une vue de l'interface utilisateur
+#### 2\. Créer une vue d'interface utilisateur
 
-Pour Jetpack Compose, utilisez un [`LazyColumn`](<https://developer.android.com/develop/ui/compose/lists#lazy>) pour afficher les cartes de contenu dans une liste déroulante.
-
-!étape
-lignes-ContentCardsInboxScreen.kt=25-37
-
-#### 3\. S'abonner aux mises à jour de la carte de contenu
-
-Utilisez un [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>) pour gérer le cycle de vie des abonnements, en veillant à ce qu'ils soient correctement nettoyés lorsque le composable quitte la composition.
+Pour Jetpack Compose, veuillez utiliser un[`LazyColumn`](<https://developer.android.com/develop/ui/compose/lists#lazy>)  pour afficher les cartes de contenu dans une liste déroulante.
 
 !étape
-lignes-ContentCardsInboxScreen.kt=84-95
+lignes-=25-37ContentCardsInboxScreen.kt
 
-#### 4\. Créer une boîte réception personnalisée
+#### 3\. Veuillez vous abonner aux mises à jour de la carte de contenu.
 
-L'utilisation des [attributs](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) des cartes de contenu tels que `title`, `description`, et `url` vous permet de créer des cartes de contenu répondant à vos besoins spécifiques en matière d'interface utilisateur. Dans ce cas, nous créons une boîte de réception avec les composables `Card` et `Column` de Jetpack Compose.
+Veuillez utiliser un[`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>)  pour gérer le cycle de vie de l'abonnement, en veillant à ce que le nettoyage soit effectué correctement lorsque le composable quitte la composition.
 
 !étape
-lignes-ContentCardsInboxScreen.kt=57,62
+lignes-=84-95ContentCardsInboxScreen.kt
 
-#### 5\. Suivi des impressions et des clics
+#### 4\. Créer une interface utilisateur personnalisée pour la boîte de réception
 
-Vous pouvez enregistrer les impressions et les clics à l'aide des boutons [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>) et [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>) disponibles pour les cartes de contenu.
+L'utilisation des [attributs](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) de carte de contenu tels que `title`,`description`  et  vous`url` permet de créer des cartes de contenu adaptées à vos besoins spécifiques en matière d'interface utilisateur. Dans ce cas, nous créons une boîte de réception à l'aide des composables`Column`  et  `Card`de Jetpack Compose.
 
-Les impressions ne doivent être enregistrées qu'une seule fois lorsqu'une carte est consultée par l'utilisateur. Utilisez `LaunchedEffect` pour enregistrer les impressions lorsqu'une carte devient visible. Notez que vous devrez peut-être prendre en compte le cycle de vie des vues de votre application, ainsi que le cas d'utilisation, pour vous assurer que les impressions sont enregistrées correctement.
+!étape
+lignes-=57ContentCardsInboxScreen.kt,62
+
+#### 5\. Suivre les impressions et les clics
+
+Vous pouvez enregistrer les impressions et les clics à l'aide des méthodes[`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>)  [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>)et  disponibles pour les cartes de contenu.
+
+Les impressions ne doivent être enregistrées qu'une seule fois lorsqu'une carte est consultée par l'utilisateur. Veuillez utiliser cette fonction`LaunchedEffect` pour enregistrer les impressions lorsqu'une carte devient visible. Veuillez noter qu'il peut être nécessaire de prendre en compte le cycle de vie de votre application, ainsi que les cas d'utilisation, afin de garantir que les impressions sont correctement enregistrées.
 
 {% endscrolly %}
 
-## Créer une boîte de réception avec les cartes de contenu pour Android (RecyclerView)
+## Création d'une boîte de réception avec des cartes de contenu pour Android (RecyclerView)
 
 {% scrolly %}
 
@@ -373,39 +373,39 @@ Pour faciliter la résolution des problèmes lors du développement, pensez à a
 !étape
 lines-content_card_inbox.xml=1-24
 
-#### 2\. Créer une vue de l'interface utilisateur
+#### 2\. Créer une vue d'interface utilisateur
 
-Dans ce tutoriel, nous utilisons l'interface Android [`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>) pour afficher les cartes de contenu, mais nous vous recommandons de créer une interface utilisateur avec des classes et des composants adaptés à votre cas d'utilisation. Braze fournit l'interface utilisateur par défaut, mais ce didacticiel vous guide pour créer une vue personnalisée afin d'en personnaliser l'apparence et le comportement.
-
-!étape
-lignes-ContentCardInboxActivity.kt=29-35,40-42,44
-
-#### 3\. S'abonner aux mises à jour de la carte de contenu
-
-Utiliser [`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>) pour permettre à votre interface utilisateur de réagir lorsque de nouvelles cartes de contenu sont disponibles. Ici, les abonnés sont enregistrés et supprimés dans les crochets du cycle de vie de l'activité.
+Dans ce tutoriel, nous utilisons Android[`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>)pour afficher des cartes de contenu, mais nous vous recommandons de créer une interface utilisateur avec des classes et des composants adaptés à votre cas d'utilisation. Braze fournit l'interface utilisateur par défaut, mais ce tutoriel vous guide dans la création d'une vue personnalisée afin de personnaliser l'apparence et le comportement.
 
 !étape
-lignes-ContentCardInboxActivity.kt=73-84
+lignes 29 à ContentCardInboxActivity.kt35, 40 à 42 et 44
 
-#### 4\. Créer une boîte réception personnalisée
+#### 3\. Veuillez vous abonner aux mises à jour de la carte de contenu.
 
-L'utilisation des [attributs](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) des cartes de contenu tels que `title`, `description` et `url` vous permet de créer des cartes de contenu répondant à vos besoins spécifiques en matière d'interface utilisateur. Dans ce cas, nous créons une boîte de réception avec la version native d'Android `RecyclerView`.
+Veuillez utiliser cette [`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>)fonctionnalité pour permettre à votre interface utilisateur de réagir lorsque de nouvelles cartes de contenu sont disponibles. Ici, les utilisateurs abonnés sont enregistrés et supprimés dans les hooks du cycle de vie de l'activité.
 
 !étape
-lignes-ContentCardInboxActivity.kt=90,93
+lignes-=73-84ContentCardInboxActivity.kt
 
-#### 5\. Suivi des impressions et des clics
+#### 4\. Créer une interface utilisateur personnalisée pour la boîte de réception
 
-Vous pouvez enregistrer les impressions et les clics à l'aide des boutons [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>) et [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>) disponibles pour les cartes de contenu.
+L'utilisation des [attributs](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) de la carte de contenu tels que `title`,`description`  et  vous`url` permet de créer des cartes de contenu adaptées à vos besoins spécifiques en matière d'interface utilisateur. Dans ce cas, nous créons une boîte de réception avec le natif Android`RecyclerView`.
 
-Les impressions ne doivent être enregistrées qu'une seule fois lorsqu'une carte est consultée par l'utilisateur. Nous utilisons ici un mécanisme naïf pour se prémunir contre la duplication des journaux avec un drapeau par carte. Notez que vous devrez peut-être prendre en compte le cycle de vie des vues de votre application, ainsi que le cas d'utilisation, pour vous assurer que les impressions sont enregistrées correctement.
+!étape
+lignes-=90ContentCardInboxActivity.kt,93
+
+#### 5\. Suivre les impressions et les clics
+
+Vous pouvez enregistrer les impressions et les clics à l'aide des méthodes[`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>)  [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>)et  disponibles pour les cartes de contenu.
+
+Les impressions ne doivent être enregistrées qu'une seule fois lorsqu'une carte est consultée par l'utilisateur. Ici, nous utilisons un mécanisme simple pour éviter les doublons dans les journaux grâce à un indicateur par carte. Veuillez noter qu'il peut être nécessaire de prendre en compte le cycle de vie de votre application, ainsi que les cas d'utilisation, afin de garantir que les impressions sont correctement enregistrées.
 
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Vous devrez également [activer les messages in-app pour Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Il vous sera également nécessaire d'[activer les messages in-app pour Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
 
-## Créer une boîte de réception avec les cartes de contenu pour Swift
+## Création d'une boîte de réception avec des cartes de contenu pour Swift
 
 {% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
 
@@ -530,7 +530,7 @@ class BrazeInboxViewController: UITableViewController {
 ```
 
 !étape
-lignes-AppDelegate.swift=15
+lignes-=15AppDelegate.swift
 
 #### 1\. Activer le débogage (facultatif)
 
@@ -539,41 +539,41 @@ Pour faciliter la résolution des problèmes lors du développement, pensez à a
 !étape
 lignes-BrazeInboxView.swift=5
 
-#### 2\. Créer une vue de l'interface utilisateur
+#### 2\. Créer une vue d'interface utilisateur
 
-Dans ce tutoriel, nous utilisons l'interface Swift [`UITableViewController`](https://developer.apple.com/documentation/uikit/uitableviewcontroller)mais nous vous recommandons de créer une interface utilisateur avec des classes et des composants adaptés à votre cas d'utilisation.
+Dans ce tutoriel, nous utilisons Swift[`UITableViewController`](https://developer.apple.com/documentation/uikit/uitableviewcontroller), mais nous vous recommandons de créer une interface utilisateur avec des classes et des composants adaptés à votre cas d'utilisation.
 
 !étape
 lignes-BrazeInboxView.swift=15-20
 
-#### 3\. S'abonner aux mises à jour de la carte de contenu
+#### 3\. Veuillez vous abonner aux mises à jour de la carte de contenu.
 
-Abonnez-vous à l'auditeur de cartes de contenu pour recevoir les dernières mises à jour, puis appelez `requestRefresh()` pour demander les dernières cartes de contenu pour cet utilisateur.
-
-!étape
-lignes-BrazeInboxView.swift=34-35
-
-#### 4\. Créer une boîte réception personnalisée
-
-Utilisation de la carte de contenu [`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) telles que `title`, `description`, et `imageUrl` vous permet de créer des cartes de contenu répondant à vos besoins spécifiques en matière d'interface utilisateur. Dans ce cas, nous créons une boîte de réception avec les API de table natives de Swift.
+Veuillez vous abonner à l'écouteur de cartes de contenu afin de recevoir les dernières mises à jour, puis appelez`requestRefresh()`pour demander les dernières cartes de contenu pour cet utilisateur.
 
 !étape
-lignes-BrazeInboxView.swift=8,43,49-56
+lignes-=34-35BrazeInboxView.swift
 
-#### 5\. Suivi des impressions et des clics
+#### 4\. Créer une interface utilisateur personnalisée pour la boîte de réception
 
-Vous pouvez enregistrer les impressions et les clics à l'aide des boutons [`logClick(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logclick(using:)/>) et [`logImpression(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logimpression(using:)/>) disponibles pour une carte de contenu.
+L'utilisation des cartes de contenu[`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) telles que `title`, `description`, et  vous`imageUrl` permet de créer des cartes de contenu adaptées à vos besoins spécifiques en matière d'interface utilisateur. Dans ce cas, nous créons une boîte de réception à l'aide des API de table natives de Swift.
 
-En outre, vous pouvez utiliser [`logDismissed(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logdismissed(using:)/>) pour les licenciements.
+!étape
+lignes-=8BrazeInboxView.swift,43,49-56
 
-Les impressions ne doivent être enregistrées qu'une seule fois lorsqu'elles sont vues par l'utilisateur. Ici, un mécanisme naïf utilisant `Set` et `willDisplay` est utilisé pour y parvenir. Notez que vous devrez peut-être prendre en compte le cycle de vie de l'interface utilisateur de votre application, ainsi que le cas d'utilisation, pour vous assurer que les impressions sont enregistrées correctement.
+#### 5\. Suivre les impressions et les clics
+
+Vous pouvez enregistrer les impressions et les clics à l'aide des méthodes[`logClick(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logclick(using:)/>)  [`logImpression(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logimpression(using:)/>)et  disponibles pour une carte de contenu.
+
+De plus, vous pouvez utiliser[`logDismissed(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logdismissed(using:)/>)  pour les licenciements.
+
+Les impressions ne doivent être enregistrées qu'une seule fois lorsqu'elles sont consultées par l'utilisateur. Ici, un mécanisme simple utilisant un`Set`  et un`willDisplay`  est utilisé pour atteindre cet objectif. Veuillez noter qu'il peut être nécessaire de prendre en compte le cycle de vie de l'interface utilisateur de votre application, ainsi que les cas d'utilisation, afin de garantir que les impressions sont correctement enregistrées.
 
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab web %}
 {% multi_lang_include developer_guide/prerequisites/web.md %} Cependant, aucune configuration supplémentaire n'est nécessaire.
 
-## Faire une boîte de réception avec les cartes de contenu pour le web
+## Création d'une boîte de réception avec des cartes de contenu pour le Web
 
 {% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
 
@@ -735,43 +735,43 @@ braze.requestContentCardsRefresh();
 ```
 
 !étape
-lignes-main.js=3-4,9
+lignes-=3-4main.js,9
 
 #### 1\. Activer le débogage (facultatif)
 
-Pour faciliter la résolution des problèmes lors du développement, pensez à activer le débogage. En option, vous pouvez également exécuter les méthodes du SDK Braze Web dans la console.
+Pour faciliter la résolution des problèmes lors du développement, pensez à activer le débogage. Vous avez également la possibilité d'exécuter les méthodes Braze Web SDK dans la console.
 
 !étape
-lignes-index.html=1-44
+lignes-=1-44index.html
 
 #### 2\. Créer l'interface utilisateur
 
-Créez une interface utilisateur pour la page de la boîte de réception. Ici, nous créons une page HTML de base, qui comprend un site `div` avec l'ID `cards-list`. Il est utilisé comme conteneur cible pour le rendu des cartes de contenu.
+Veuillez créer une interface utilisateur pour la page de la boîte de réception. Nous créons ici une page HTML de base, qui comprend un élément`div`avec l'ID `cards-list`. Ceci est utilisé comme conteneur cible pour le rendu des cartes de contenu.
 
 !étape
-lignes-main.js=96-99,101
+lignes-=96-99main.js,101
 
-#### 3\. S'abonner aux mises à jour de la carte de contenu
+#### 3\. Veuillez vous abonner aux mises à jour de la carte de contenu.
 
-Abonnez-vous à la liste d'écoute des cartes de contenu pour recevoir les dernières mises à jour, puis appelez la commande [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) pour demander les dernières cartes contenues pour cet utilisateur. Vous pouvez également appeler l'abonné avant `openSession()` pour qu'il s'actualise automatiquement au début de la session. 
+Veuillez vous abonner à l'écouteur de cartes de contenu afin de recevoir les dernières mises à jour, puis appelez[`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>)pour demander les dernières cartes de contenu pour cet utilisateur. Vous pouvez également contacter l'utilisateur abonné avant`openSession()`  pour actualiser la session au début. 
 
 !étape
-lignes-main.js=64,67,70-74
+lignes-=64main.js,67,70-74
 
 #### 4\. Créer les éléments de la boîte de réception
 
-L'utilisation des [attributs](<https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html>) des cartes de contenu tels que `title`, `description` et `url` vous permet d'afficher les cartes de contenu en fonction de vos besoins spécifiques en matière d'interface utilisateur.
+L'utilisation des [attributs](<https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html>) de la carte de contenu tels que `title`,`description`  et  vous`url` permet d'afficher des cartes de contenu adaptées à vos besoins spécifiques en matière d'interface utilisateur.
 
 !étape
-lignes-main.js=22-25,28-43,84,91
+lignes main.js22 à 25, 28 à 43, 84 et 91
 
-#### 5\. Suivi des impressions et des clics
+#### 5\. Suivre les impressions et les clics
 
-Vous pouvez enregistrer les impressions et les clics à l'aide des boutons [`logContentCardImpressions`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions>) et [`logContentCardClick`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick>) disponibles pour les cartes de contenu.
+Vous pouvez enregistrer les impressions et les clics à l'aide des méthodes[`logContentCardImpressions`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions>)  [`logContentCardClick`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick>)et  disponibles pour les cartes de contenu.
 
-En outre, vous pouvez utiliser [`logCardDismissal`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcarddismissal>) pour les licenciements.
+De plus, vous pouvez utiliser[`logCardDismissal`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcarddismissal>)  pour les licenciements.
 
-Les impressions ne doivent être enregistrées qu'une seule fois lorsqu'elles sont vues par l'utilisateur. Ici, un `IntersectionObserver` plus un `Set` avec `card.id` comme clé permet d'éviter les doubles enregistrements. Notez que vous devrez peut-être prendre en compte le cycle de vie de l'interface utilisateur de votre application, ainsi que le cas d'utilisation, pour vous assurer que les impressions sont enregistrées correctement.
+Les impressions ne doivent être enregistrées qu'une seule fois lorsqu'elles sont consultées par l'utilisateur. Ici, un`IntersectionObserver`  plus un`Set`  clé par`card.id`  empêche la duplication des journaux. Veuillez noter qu'il peut être nécessaire de prendre en compte le cycle de vie de l'interface utilisateur de votre application, ainsi que les cas d'utilisation, afin de garantir que les impressions sont correctement enregistrées.
 
 {% endscrolly %}
 {% endsdktab %}
