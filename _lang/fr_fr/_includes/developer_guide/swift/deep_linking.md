@@ -1,8 +1,12 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-## Création de liens profonds
+{% alert tip %}
+Pour obtenir de l'aide afin de choisir entre les liens profonds personnalisés, les liens universels et « Ouvrir l'URL Web dans l'application », veuillez consulter [le guide de la création de liens profonds iOS]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide). Pour la résolution des problèmes, veuillez consulter [la section Résolution des problèmes de création de liens profonds]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+{% endalert %}
 
-### Étape 1 : Enregistrer un régime {#register-a-scheme}
+## Gestion des liens profonds
+
+### Étape 1 : Enregistrer un programme {#register-a-scheme}
 
 Pour gérer les liens profonds, un schéma personnalisé doit être défini dans votre fichier `Info.plist`. La structure de navigation est définie par un ensemble de dictionnaires. Chacun de ces dictionnaires contient un tableau de chaînes de caractères.
 
@@ -29,7 +33,7 @@ Sinon, si vous souhaitez modifier votre fichier `Info.plist` directement, vous p
 </array>
 ```
 
-### Étape 2 : Ajouter une liste d'autorisation de schéma
+### Étape 2 : Ajouter une liste blanche de schémas
 
 Vous devez déclarer les schémas d'URL que vous souhaitez transmettre à `canOpenURL(_:)` en ajoutant la clé `LSApplicationQueriesSchemes` au fichier Info.plist de votre application. Si vous tentez d’appeler des schémas en dehors de cette liste, le système enregistrera une erreur dans les journaux de l’appareil et le lien profond ne s’ouvrira pas. Un exemple de cette erreur ressemblera à ceci :
 
@@ -83,15 +87,15 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 {% endtab %}
 {% endtabs %}
 
-## Sécurité du transport des applications (ATS)
+## Sécurité des transports d'applications (ATS)
 
-Selon la définition d'[Apple](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14), "App Transport Security est une fonctionnalité qui améliore la sécurité des connexions entre une application et les services web. La fonctionnalité consiste en des exigences de connexion par défaut conformes aux meilleures pratiques visant les connexions sécurisées. Les applications peuvent remplacer ce comportement par défaut et désactiver la sécurité du transport. »
+Selon la définition d'[Apple](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14), « App Transport Security est une fonctionnalité qui améliore la sécurité des connexions entre une application et les services Web. » La fonctionnalité consiste en des exigences de connexion par défaut conformes aux meilleures pratiques visant les connexions sécurisées. Les applications peuvent remplacer ce comportement par défaut et désactiver la sécurité du transport. »
 
 L'ATS est appliqué par défaut. Il nécessite que toutes les connexions utilisent HTTPS et soient chiffrées à l’aide de TLS 1.2 avec confidentialité de transmission. Pour plus d'informations, reportez-vous à la section [Exigences pour la connexion à l'aide de l'ATS.](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35)  Toutes les images servies par Braze aux terminaux sont gérées par un réseau de diffusion de contenu (« CDN ») qui prend en charge TLS 1.2 et est compatible avec ATS.
 
-À moins qu'elles ne soient spécifiées en tant qu'exceptions dans votre application `Info.plist`, les connexions qui ne respectent pas ces exigences échoueront avec des erreurs similaires à celles qui suivent.
+À moins qu'elles ne soient spécifiées comme exceptions dans le fichier de votre application`Info.plist`, les connexions qui ne respectent pas ces exigences échoueront et généreront des erreurs similaires à celles ci-dessous.
 
-**Exemple Erreur 1 :**
+**Exemple d'erreur 1 :**
 
 ```bash
 CFNetwork SSLHandshake failed (-9801)
@@ -106,9 +110,9 @@ NSURLSession/NSURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9802)
 
 La conformité ATS est appliquée aux liens ouverts dans l'application mobile (notre gestion par défaut des liens cliqués) et ne s'applique pas aux sites ouverts à l'extérieur via un navigateur web.
 
-### Travailler avec l'ATS
+### Collaboration avec ATS
 
-Vous pouvez gérer l'ATS de l'une ou l'autre des manières suivantes, mais nous vous recommandons de **vous conformer aux exigences de l'ATS**.
+Vous pouvez gérer l'ATS de l'une des manières suivantes, mais nous vous recommandons **de vous conformer aux exigences de l'ATS**.
 
 {% tabs local %}
 {% tab Comply %}
@@ -187,7 +191,7 @@ Pour décoder un lien codé, utilisez la propriété `String` [`removingPercentE
 
 ## Création de liens profonds vers les paramètres d’application
 
-Vous pouvez tirer parti de `UIApplicationOpenSettingsURLString` pour établir un lien profond entre les utilisateurs et les paramètres de votre application à partir des notifications push et des messages in-app de Braze.
+Vous pouvez utiliser la création de liens profonds pour`UIApplicationOpenSettingsURLString`rediriger les utilisateurs vers les paramètres de votre application à partir des notifications push Braze et des messages in-app.
 
 Pour faire passer les utilisateurs de votre application aux paramètres d'iOS :
 1. Tout d'abord, assurez-vous que votre application est configurée pour des [liens profonds basés sur des schémas](#swift_register-a-scheme) ou des [liens universels](#swift_universal-links).
@@ -259,7 +263,7 @@ Le SDK n'interroge pas le fichier `apple-app-site-association` de vos domaines. 
 
 ### BrazeDelegate
 
-Voici un exemple utilisant `BrazeDelegate`. Pour plus d'informations, consultez la [référence du SDK Braze Swift](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate).
+Voici un exemple utilisant `BrazeDelegate`. Pour plus d'informations, veuillez consulter [la référence Braze Swift SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate).
 
 {% tabs %}
 {% tab swift %}
