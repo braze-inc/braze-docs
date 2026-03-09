@@ -1,5 +1,5 @@
 ---
-nav_title: "Swift-Paketmanager:in"
+nav_title: Swift-Paketmanager
 article_title: Swift Package Manager Integration für iOS
 platform: iOS
 page_order: 3
