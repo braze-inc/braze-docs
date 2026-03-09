@@ -1,7 +1,7 @@
 ---
 nav_title: "PUBLICAR: Campañas duplicadas"
 article_title: "PUBLICAR: Campañas duplicadas"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -10,15 +10,11 @@ description: "En este artículo se describen los detalles del punto final Duplic
 ---
 {% api %}
 # Duplicar campañas utilizando la API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /campaigns/duplicate
 {% endapimethod %}
 
 > Utilice este punto final para duplicar campañas. Este punto final de la API es similar a la [duplicación de campañas en el panel de control de Braze][1].
-
-{% alert important %}
-Duplicar una campaña utilizando la API está actualmente en acceso temprano. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
 
 ## Requisitos previos
 
@@ -55,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Respuesta
 
-Este punto final devolverá un código de estado `202`, y la creación de la campaña se producirá de forma asíncrona. Puedes utilizar la [descarga de eventos de seguridad][2] para ver los registros de cuándo se duplicaron las campañas y mediante qué clave de API.
+Este punto final devolverá un código de estado `202`, y la creación de la campaña se producirá de forma asíncrona. Puedes utilizar la [descarga de eventos de seguridad][2] para ver registros de cuándo se duplicaron las campañas y con qué clave de API.
 
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns#duplicating-segments-campaigns-and-canvases
