@@ -1,7 +1,7 @@
 ---
 nav_title: Configuración del servidor Braze MCP
 article_title: Configurar el servidor Braze MCP
-description: "Aprende a configurar el servidor Braze MCP, para que puedas interactuar con tus datos Braze utilizando herramientas de lenguaje natural como Claude y Cursor."
+description: "Aprende a configurar el servidor MCP de Braze para poder interactuar con tus datos de Braze utilizando herramientas de lenguaje natural como Claude y Cursor."
 page_order: 1.1
 noindex: true
 ---
