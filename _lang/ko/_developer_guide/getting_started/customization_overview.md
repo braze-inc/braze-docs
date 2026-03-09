@@ -34,7 +34,7 @@ table td {
 {% tabs %}
 {% tab Crawl %}
 
-![자막 이미지 및 이미지 전용 콘텐츠 카드를 보여주는 샘플 금융 앱]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![샘플 금융 앱이 캡션 이미지 및 이미지 전용 콘텐츠 카드를 보여줍니다]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 기기 접근 방식에서는 마케터가 직접 사용자 지정하는 기능을 지원합니다. 앱이나 사이트와 Braze 메시징 채널을 통합하려면 사전에 약간의 개발 작업이 필요하지만, 이 접근 방식을 사용하면 더 빨리 시작하고 실행할 수 있습니다. 
 
@@ -78,7 +78,7 @@ table td {
 {% endtab %}
 {% tab Walk %}
 
-![커스텀이 적용된 콘텐츠 카드를 보여주는 금융 앱 샘플]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![샘플 금융 앱이 커스터마이징된 콘텐츠 카드를 보여줍니다]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 하이브리드 구현 방식인 걷기 구현 방식에는 마케팅 및 개발자 팀이 앱 또는 사이트의 브랜딩에 맞게 피칭을 준비하는 단계가 포함됩니다. 
 
@@ -124,7 +124,7 @@ table td {
 {% endtab %}
 {% tab Run %}
 
-![이메일 캡처가 포함된 커스텀 콘텐츠 카드를 보여주는 금융 앱 샘플]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![샘플 금융 앱이 이메일 캡처가 포함된 커스텀 콘텐츠 카드를 보여줍니다]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 달리기 접근 방식에서는 개발자가 주도적으로 사용자 경험을 완전히 제어할 수 있습니다. 커스텀 코드에서는 메시지의 모양, 작동 방식, 다른 메시징 채널과의 상호 작용 방식(예: 푸시 알림에 기반한 콘텐츠 카드 트리거)을 지정합니다.
 
