@@ -1,7 +1,7 @@
 ---
 nav_title: "POST:トリガー同期"
 article_title: "POST:トリガー同期"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 2
 alias: /api/cdi/post_trigger_sync/
 layout: api_page
@@ -18,7 +18,7 @@ description: "この記事では、「同期をトリガー」Braze エンドポ
 > このエンドポイントを使用して、特定のインテグレーションのシンクをトリガーします。
 
 {% alert note %}
-このエンドポイントを使用するには、`cdi.integration_sync` 権限を持つ API キーを生成する必要がある。
+このエンドポイントを使用するには、権限を持つ`cdi.integration_sync`API キーを生成する必要がある。
 {% endalert %}
 
 ## レート制限
@@ -27,9 +27,9 @@ description: "この記事では、「同期をトリガー」Braze エンドポ
 
 ## パスパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
-| `integration_id` | 必須 | 文字列 | 統合 ID。これは、Brazeダッシュボードでインテグレーションを表示する際のURLに記載されている。URLの形式は`https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]` である。 |
+| `integration_id` | 必須かどうか | 文字列 | 統合 ID。これは、Brazeダッシュボードで統合を表示した際のURLに含まれている。URLの形式は`https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
@@ -63,6 +63,6 @@ curl --location --request POST 'https://rest.iad-03.braze.com/cdi/integrations/0
 | `429 Another job is in progress` | この統合のために現在実行されている同期があります。同期が完了したら、もう一度試してください。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-その他のステータスコードと関連するエラーメッセージについては、[致命的エラー& レスポンスを]({{site.baseurl}}/api/errors/#fatal-errors)参照のこと。
+その他のステータスコードと関連するエラーメッセージについては、[致命的なエラー&応答]({{site.baseurl}}/api/errors/#fatal-errors)を参照のこと。
 
 {% endapi %}
