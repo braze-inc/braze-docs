@@ -9,9 +9,13 @@ description: "Saiba como usar o depurador do Braze SDK para solucionar problemas
 
 > Saiba como usar o depurador integrado do Braze SDK para solucionar problemas em seus canais com SDK, sem precisar ativar o registro detalhado em seu app.
 
+{% alert tip %}
+Para uma investigação mais profunda, você também pode [ativar o registro detalhado]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging) para capturar a saída detalhada do SDK e [aprender como ler logs detalhados]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs) para canais específicos.
+{% endalert %}
+
 ## Pré-requisitos
 
-Para usar o depurador do SDK do Braze, você precisará das permissões "Ver PII" e "Ver Perfis de Usuários em Conformidade com PII." Para baixar os logs da sua sessão de depuração, você também precisará da permissão "Exportar Dados de Usuários." Além disso, seu Braze SDK precisa atender ou apontar para as seguintes versões mínimas: 
+Para usar o depurador do SDK do Braze, você precisará das permissões "Ver IPI" e "Ver Perfis de Usuários em Conformidade com IPI." Para baixar os logs da sua sessão de depuração, você também precisará da permissão "Exportar dados de usuários." Além disso, seu Braze SDK precisa atender ou apontar para as seguintes versões mínimas: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
