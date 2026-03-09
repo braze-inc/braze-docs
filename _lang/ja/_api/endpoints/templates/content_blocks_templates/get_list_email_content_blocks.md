@@ -1,7 +1,7 @@
 ---
-nav_title: "取得:利用可能なコンテンツブロックをリストアップする"
+nav_title: "取得:利用可能なコンテンツブロックの一覧"
 article_title: "取得:利用可能なコンテンツブロックのリスト"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -55,7 +55,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list
       "inclusion_count" : (integer) the inclusion count,
       "created_at": (string) The time the Content Block was created in ISO 8601,
       "last_edited": (string) The time the Content Block was last edited in ISO 8601,
-      "tags": (array) An array of tags formatted as strings,
+      "tags": (array) An array of tags formatted as strings
     }
   ]
 }
