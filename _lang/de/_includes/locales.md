@@ -1,7 +1,13 @@
 {% if include.section == "Prerequisites" %}
 ## Voraussetzungen
 
-Um die [Mehrsprachenunterstützung]({{site.baseurl}}/multi_language_support/) konfigurieren zu können, benötigen Sie die Benutzerberechtigung "Mehrsprachigkeitseinstellungen konfigurieren". Um das Gebietsschema einer Nachricht einzustellen, benötigen Sie eine Berechtigung zur Bearbeitung von Kampagnen.
+Um [die Mehrsprachenunterstützung]({{site.baseurl}}/multi_language_support/) zu bearbeiten und zu verwalten, benötigen Sie die folgenden [Benutzerberechtigungen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) für Ihren Workspace:
+
+- Mehrsprachige Einstellungen anzeigen
+- Mehrsprachige Ländereinstellungen für die Lokalisierung erstellen
+- Mehrsprachige Lokalisierung-Einstellungen löschen
+
+Um die Ländereinstellung zu einer Nachricht hinzuzufügen, benötigen Sie die Berechtigung „Kampagnen bearbeiten”.
 
 {% alert important %}
 Die Unterstützung mehrerer Sprachen befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze Account Manager, wenn Sie an der Early-Access-Phase teilnehmen möchten.
