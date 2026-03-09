@@ -4,7 +4,7 @@ article_title: Push
 page_order: 4
 layout: dev_guide
 guide_top_header: "Push"
-guide_top_text: "Las notificaciones push son una forma probada de enviar llamadas a la acción urgentes a través del móvil o la Web, así como de reactivar la interacción de los usuarios que hace tiempo que no entran en la aplicación. Llevan al usuario directamente al contenido y demuestran el valor de tu aplicación. Las notificaciones push son útiles para conducir a los usuarios a un lugar concreto, pero debes utilizarlas con prudencia. <br><br> Lea cualquiera de los siguientes artículos o consulte nuestro curso [Push Braze Learning course](https://learning.braze.com/messaging-channels-push) para saber a quién puede enviar un push, cómo enviarlo y qué funciones avanzadas de push ofrece Braze. Para ver ejemplos de notificaciones push, consulta nuestras [historias de clientes](https://www.braze.com/customers)."
+guide_top_text: "Las notificaciones push son una forma probada y eficaz de enviar llamadas a la acción urgentes a través del móvil o la Web, así como de realizar la reactivación de la interacción con los usuarios que llevan tiempo sin utilizar la aplicación. Dirigen al usuario directamente al contenido y demuestran el valor de tu aplicación. Las notificaciones push son útiles para dirigir a los usuarios a un lugar específico, pero debes utilizarlas con prudencia. <br><br> Lea cualquiera de los siguientes artículos o consulte nuestro curso [Push Braze Learning course](https://learning.braze.com/messaging-channels-push) para saber a quién puede enviar un push, cómo enviarlo y qué funciones avanzadas de push ofrece Braze. Para ver ejemplos de notificaciones push, consulta nuestras [historias de clientes](https://www.braze.com/customers)."
 description: "Esta página de destino alberga mensajes push. Aquí encontrará artículos sobre tipos de push, registro push, habilitación push, primers push, informes push, etc."
 channel:
   - push
@@ -61,7 +61,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [![Curso de Braze](https://learning.braze.com/path/push-fundamentals) Learning []({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} Casos de uso
+## [![Curso ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"}de [Braze Learning](https://learning.braze.com/path/push-fundamentals) Casos de uso
 
 ![Ejemplo de mensaje push en los productos Apple.]({% image_buster /assets/img/red-dress.gif %}){: height="400px"}  ![Ejemplo de mensaje push de Cronómetro en una pantalla de inicio de iPhone que dice: "¡Hola! Esto es un push de iOS".]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 
@@ -72,10 +72,10 @@ Las notificaciones push son una gran herramienta para atraer a nuevos usuarios y
 | Incorporación inicial | Hasta que los usuarios no den los pasos iniciales para utilizar su aplicación (como el registro de una cuenta), su valor es muy limitado. Utilice las notificaciones push para instar a los usuarios a completar estos pasos para que puedan empezar a utilizar su aplicación en su totalidad. |
 | Primeras compras | Una vez que los usuarios se sientan cómodos utilizando su aplicación, puede utilizar las notificaciones push para convertirlos en compradores dentro de la aplicación. |
 | Novedades | Las notificaciones push pueden ser eficaces para notificar a los usuarios desvinculados nuevas funciones que podrían atraerlos de nuevo a su aplicación. |
-| Ofertas sensibles al tiempo | Si una oferta tiene fecha de caducidad, a veces los mensajes push son una buena forma de informar a los usuarios antes de que caduque. Estos mensajes generalmente tienen un alto sentido de urgencia y son óptimos para recordar su aplicación a los usuarios que la han abandonado recientemente.<br><br> Por ejemplo, supongamos que tu aplicación es un juego y ofreces a tus usuarios una bonificación en moneda del juego si mantienen una racha de juego diario. Avisar a un usuario de que esa racha está en peligro de romperse podría ser un empujón razonable si ha superado un determinado número de días. |
+| Ofertas sensibles al tiempo | Si una oferta tiene fecha de caducidad, a veces los mensajes push son una buena forma de informar a los usuarios antes de que caduque. Estos mensajes generalmente tienen un alto sentido de urgencia y son óptimos para recordar su aplicación a los usuarios que la han abandonado recientemente.<br><br> Por ejemplo, supongamos que tu aplicación es un juego y ofreces a tus usuarios una bonificación en moneda del juego si mantienen una racha de juego diario. Avisar a un usuario de que la racha corre el riesgo de romperse podría ser una push razonable si ha superado un determinado número de días. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para obtener más información sobre la reactivación de la interacción de los usuarios que han dejado de serlo, consulta nuestra página de [Quick Wins]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) sobre el tema.
+Para obtener más información sobre la reactivación de la interacción con usuarios inactivos, consulta nuestra página [Quick Wins]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) sobre este tema.
 
 ## Requisitos previos para utilizar push
 
@@ -91,7 +91,7 @@ Tenga en cuenta que los usuarios deben optar por recibir notificaciones push par
 
 ## Normativa sobre mensajes push
 
-Dado que los mensajes push son un tipo de mensajería intrusiva que va directamente al teléfono o al navegador de tu cliente, existen directrices para enviar mensajes push a través de aplicaciones y sitios web.
+Dado que los mensajes push son un tipo de mensajería intrusiva que se envía directamente al teléfono o navegador de tus clientes, existen directrices para enviar mensajes push a través de aplicaciones y sitios web.
 
 ### Normativa de notificaciones push móviles para aplicaciones
 
@@ -101,8 +101,8 @@ Tus mensajes push deben ajustarse a las directrices de las políticas de la App 
 
 |Políticas de Apple App Store|
 |---|
-|[3.2.2](https://developer.apple.com/app-store/review/guidelines/#unacceptable) Inaceptable: (i) Crear una interfaz para mostrar aplicaciones, extensiones o complementos de terceros similar a la App Store o como una colección de interés general.| 
-|[4.5.4](https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services) Las notificaciones push no deben ser necesarias para que la aplicación funcione, y no deben utilizarse para enviar información personal sensible o confidencial. Las notificaciones push no deben utilizarse con fines promocionales o de marketing directo a menos que los clientes hayan optado explícitamente por recibirlas a través de un lenguaje de consentimiento que aparezca en la interfaz de usuario de su aplicación, y usted proporcione un método en su aplicación para que un usuario pueda optar por no recibir tales mensajes.|
+|[3.2.2](https://developer.apple.com/app-store/review/guidelines/#unacceptable) Inaceptable: (i) Crear una interfaz para mostrar aplicaciones, extensiones o complementos de terceros similares a la App Store o como una colección de interés general.| 
+|[4.5.4](https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services) Las notificaciones push no deben ser necesarias para el funcionamiento de la aplicación y no deben utilizarse para enviar información personal sensible o confidencial. Las notificaciones push no deben utilizarse con fines promocionales o de marketing directo a menos que los clientes hayan optado explícitamente por recibirlas a través de un lenguaje de consentimiento que aparezca en la interfaz de usuario de su aplicación, y usted proporcione un método en su aplicación para que un usuario pueda optar por no recibir tales mensajes.|
 |[4.10](https://developer.apple.com/app-store/review/guidelines/#monetizing-built-in-capabilities) No podrá monetizar las capacidades integradas proporcionadas por el hardware o el sistema operativo, como las notificaciones Push, la cámara o el giroscopio; o los servicios y tecnologías de Apple, como el acceso a Apple Music, el almacenamiento en iCloud o las API de Screen Time.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
