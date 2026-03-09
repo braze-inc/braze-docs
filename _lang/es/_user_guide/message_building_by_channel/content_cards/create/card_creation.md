@@ -33,7 +33,7 @@ Puede elegir cuándo Braze crea una tarjeta en el paso **Entrega** al crear una 
 Existen las siguientes opciones:
 
 - **En el lanzamiento de la campaña:** El comportamiento anterior por defecto para las Tarjetas de Contenido. Braze calcula la elegibilidad de la audiencia y la personalización cuando se lanza la campaña, luego crea la tarjeta y la almacena hasta que el usuario abre su aplicación. 
-- **En la primera impresión (recomendado):** La próxima vez que el usuario abra tu aplicación (inicie una nueva [sesión](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze determinará para qué tarjetas de contenido es elegible, plantillas de personalización como Liquid o Contenido conectado, y luego creará la tarjeta. Esta opción suele entregar un mejor rendimiento.
+- **En la primera impresión (recomendado):** La próxima vez que el usuario abra tu aplicación (inicie una nueva [sesión](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze determinará cuáles son las tarjetas de contenido a las que el usuario es elegible, creará plantillas para cualquier personalización, como Liquid o contenido conectado, y luego creará la tarjeta. Esta opción suele entregar un mejor rendimiento.
 
 Independientemente de la opción seleccionada, la cuenta atrás de la fecha de caducidad de la tarjeta de contenido comenzará cuando se lance la campaña.
 
@@ -47,7 +47,7 @@ Puede elegir cuándo Braze crea una tarjeta en la pestaña **Canales de mensajer
 Existen las siguientes opciones:
 
 - **En la entrada del paso:** El comportamiento anterior por defecto para las Tarjetas de Contenido. Braze calcula la elegibilidad de la audiencia cuando el usuario entra en el paso Canvas, luego crea la tarjeta y la almacena hasta que el usuario abre su aplicación.
-- **En la primera impresión (recomendado):** Braze calcula la audiencia elegible cuando el usuario entra en el paso en Canvas. Cuando el usuario vuelve a abrir tu aplicación (inicia una nueva [sesión](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze crea plantillas de cualquier personalización, como Liquid o Contenido conectado, y luego crea la tarjeta. Esta opción entrega un mejor rendimiento en la entrega de tarjetas y una personalización más actualizada.
+- **En la primera impresión (recomendado):** Braze calcula la audiencia elegible cuando el usuario entra en el paso en Canvas. La próxima vez que el usuario abra tu aplicación (inicie una nueva [sesión](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze creará plantillas con cualquier personalización, como Liquid o contenido conectado, y luego creará la tarjeta. Esta opción ofrece un mejor rendimiento en la entrega de tarjetas y una personalización más actualizada.
 
 Independientemente de la opción seleccionada, la cuenta atrás de la fecha de caducidad de la tarjeta de contenido comenzará cuando el usuario entre en el paso Lienzo.
 
@@ -62,7 +62,7 @@ Si quieres que los usuarios anónimos vean una tarjeta de contenido en su primer
 Para ambas opciones, una vez creada una tarjeta, Braze no recalcula la elegibilidad del público ni la personalización.
 {% endalert %}
 
-### Diferencias entre crear tarjetas en el lanzamiento o entrada frente a en la primera impresión {#differences}
+### Diferencias entre crear tarjetas en el lanzamiento o la entrada frente a la primera impresión {#differences}
 
 En esta sección se describen las principales diferencias entre la creación de tarjetas en el momento del lanzamiento de la campaña o de la entrada en el paso y en la primera impresión.
 
@@ -89,7 +89,7 @@ En esta sección se describen las principales diferencias entre la creación de 
   <tr>
     <td class="leftHeader">Audiencia</td>
     <td class="tg-0pky">Braze evalúa los miembros de la audiencia cuando se envía la campaña.<br><br>No se evaluará la elegibilidad de los usuarios nuevos o anónimos si intentan ver la tarjeta después del envío de la campaña. Para las campañas recurrentes, será en el siguiente intervalo de recurrencia.</td>
-    <td class="tg-0pky">Braze evalúa la afiliación la próxima vez que el usuario abre su aplicación (inicia una sesión, <a href="#campaign_note">sólo campañas*</a>).<br><br> Esta configuración tendrá un alcance de público más amplio porque siempre se evaluará la elegibilidad de cualquier usuario nuevo o anónimo cuando intente ver la tarjeta. <br><br>Además, el límite de tasa (limitar el número de personas que recibirán la tarjeta) no es aplicable cuando se configura en la primera impresión.</td>
+    <td class="tg-0pky">Braze evalúa la afiliación la próxima vez que el usuario abre su aplicación (inicia una sesión, <a href="#campaign_note">sólo campañas*</a>).<br><br> Esta configuración tendrá un alcance de público más amplio porque siempre se evaluará la elegibilidad de cualquier usuario nuevo o anónimo cuando intente ver la tarjeta. <br><br>Además, el límite de velocidad (limitar el número de personas que recibirán la tarjeta) no es aplicable cuando se establece en «primera impresión».</td>
   </tr>
   <tr>
     <td class="leftHeader">Personalización</td>
@@ -98,13 +98,13 @@ En esta sección se describen las principales diferencias entre la creación de 
   </tr>
   <tr>
     <td class="leftHeader">Análisis</td>
-  <td class="tg-0pky"><em>Los mensajes enviados</em> se refieren al número de tarjetas que Braze ha creado y puesto a disposición. Esto no cuenta si los usuarios vieron la tarjeta.</td>
-  <td class="tg-0pky"><em>Mensajes enviados</em> se refiere al número de tarjetas que Braze envía a un usuario tras el inicio de una sesión. En Canvas, si un usuario entra en el paso sin iniciar una sesión, Braze no envía una tarjeta, por lo que esta métrica puede no coincidir con el número de usuarios que entran en un paso.<br><br>Aunque los usuarios alcanzables y las impresiones no cambian, es de esperar un menor volumen de envíos<em>(Mensajes enviados</em>) cuando creas una tarjeta en la primera impresión en comparación con el lanzamiento de una campaña o la entrada en el paso en Canvas.</td>
+  <td class="tg-0pky"><em>Los mensajes enviados</em> se refieren al número de tarjetas que Braze ha creado y puesto a disposición. Esto no tiene en cuenta si los usuarios han visto la tarjeta.</td>
+  <td class="tg-0pky"><em>Los mensajes enviados</em> se refieren al número de tarjetas que Braze envía a un usuario después del inicio de una sesión. En Canvas, si un usuario ingresa en el paso sin iniciar una sesión, Braze no envía una tarjeta, por lo que es posible que esta métrica no coincida con el número de usuarios que ingresan en un paso.<br><br>Aunque los usuarios alcanzables y las impresiones no cambian, se espera un volumen de envío menor (<em>mensajes enviados</em>) cuando creas una tarjeta en la primera impresión en comparación con el lanzamiento de la campaña o la entrada en el paso en Canvas.</td>
   </tr>
   <tr>
     <td class="leftHeader">Tiempo de procesamiento</td>
-  <td class="tg-0pky">Braze crea tarjetas para cada usuario elegible del segmento en el momento del lanzamiento. Para grandes audiencias, selecciona <b>En la primera impresión</b> para que las tarjetas estén disponibles más rápidamente tras el lanzamiento.</td>
-  <td class="tg-0pky">Braze crea una tarjeta la primera vez que un usuario intenta verla, por lo que puede tardar 1-2 segundos en mostrarse en la primera impresión.</td>
+  <td class="tg-0pky">Braze crea tarjetas para todos los usuarios elegibles del segmento en el momento del lanzamiento. Para audiencias grandes, selecciona <b>«A primera impresión»</b> para que las tarjetas estén disponibles más rápidamente después del lanzamiento.</td>
+  <td class="tg-0pky">Braze crea una tarjeta la primera vez que un usuario intenta verla, por lo que puede tardar entre 1 y 2 segundos en mostrarse la primera impresión.</td>
   </tr>
 </tbody>
 </table>
@@ -119,11 +119,11 @@ Braze recomienda no cambiar la forma de crear las tarjetas una vez lanzada la ca
 
 ### Tiempo potencial de procesamiento
 
-Para audiencias grandes, selecciona la opción de crear tarjetas en la primera impresión para que las tarjetas estén disponibles rápidamente tras el lanzamiento. Las campañas desencadenadas al inicio de la sesión también pueden beneficiarse de pasar a crear en la primera impresión (disponible a través de la entrega programada) para mejorar el rendimiento.
+Para audiencias numerosas, selecciona la opción de crear tarjetas a primera impresión, de modo que estén disponibles rápidamente tras el lanzamiento. Las campañas desencadenadas al inicio de la sesión también pueden beneficiarse del cambio a la creación de una primera impresión (disponible a través de la entrega programada) para mejorar el rendimiento.
 
-Cuando las tarjetas se crean en la primera impresión, pueden tardar 1-2 segundos en procesarse. La duración de este tiempo de procesamiento depende de varios factores, como el tamaño de la tarjeta y la complejidad de las opciones de plantillas de mensajes. Por ejemplo, el tiempo de procesamiento de las tarjetas que utilizan Contenidos Conectados será al menos tan largo como el tiempo de respuesta de Contenidos Conectados.
+Cuando las tarjetas se crean por primera vez durante la impresión, pueden tardar entre 1 y 2 segundos en procesarse. La duración de este tiempo de procesamiento depende de varios factores, como el tamaño de la tarjeta y la complejidad de las opciones de plantillas de mensajes. Por ejemplo, el tiempo de procesamiento de las tarjetas que utilizan Contenidos Conectados será al menos tan largo como el tiempo de respuesta de Contenidos Conectados.
 
 ### Versiones anteriores del SDK
 
-Si la aplicación de un usuario ejecuta una versión anterior del SDK, seguirá recibiendo las tarjetas de contenido que le envíes. Sin embargo, las tarjetas tardan más en aparecer y puede que no se muestren hasta la siguiente sincronización de la Tarjeta de Contenido.
+Si la aplicación de un usuario ejecuta una versión anterior del SDK, seguirá recibiendo las tarjetas de contenido que tú envíes. Sin embargo, las tarjetas tardan más en aparecer y es posible que no se muestren hasta la próxima sincronización de tarjetas de contenido.
 
