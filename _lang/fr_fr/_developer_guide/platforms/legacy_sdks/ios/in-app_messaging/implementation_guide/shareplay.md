@@ -1,5 +1,5 @@
 ---
-nav_title: Shareplay
+nav_title: Partage de lecture
 article_title: Guide d’implémentation des messages in-app SharePlay
 platform: iOS
 page_order: 1
