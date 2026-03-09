@@ -3,7 +3,7 @@ nav_title: Integração de beacons
 article_title: Integração de beacon para iOS
 platform: iOS
 page_order: 4
-description: "Este artigo aborda o registro de eventos personalizados usando Beacons Infillion para iOS."
+description: "Este artigo aborda o registro de eventos personalizados usando os Beacons Infillion para iOS."
 
 noindex: true
 ---
@@ -16,7 +16,7 @@ Aqui, veremos como integrar tipos específicos de beacons ao Braze para permitir
 
 ## Beacons Infillion
 
-Uma vez que você tenha seus Beacons Infillion configurados e integrados ao seu app, você pode registrar eventos personalizados como o início ou o fim de uma visita ou um beacon sendo avistado. Também é possível registrar propriedades para esses eventos, como o nome do local ou o tempo de permanência.
+Uma vez que você tenha seus Beacons Infillion configurados e integrados ao seu app, você pode registrar eventos personalizados, como o início ou o fim de uma visita ou um beacon sendo avistado. Também é possível registrar propriedades para esses eventos, como o nome do local ou o tempo de permanência.
 
 Para registrar um evento personalizado quando um usuário entrar em um local, insira este código no método `didBeginVisit`:
 
