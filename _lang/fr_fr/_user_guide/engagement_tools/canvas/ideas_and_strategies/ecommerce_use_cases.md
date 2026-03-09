@@ -9,7 +9,7 @@ toc_headers: h2
 
 # Comment utiliser les événements recommandés pour le commerce électronique
 
-> Cette page explique comment et où vous pouvez utiliser les événements recommandés par eCommerce sur la plateforme, notamment comment utiliser les modèles eCommerce Canvas de Braze.
+> Cette page explique comment et où vous pouvez utiliser les événements recommandés pour le commerce électronique sur la plateforme, y compris comment utiliser les modèles Braze eCommerce Canvas.
 
 {% alert important %}
 Les [événements recommandés pour le commerce électronique]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) sont actuellement en accès anticipé. Contactez votre gestionnaire satisfaction client Braze si vous souhaitez participer à cet accès anticipé. <br><br>Si vous utilisez le nouveau connecteur Shopify, les événements recommandés pour le commerce électronique seront automatiquement disponibles via l'intégration.
@@ -21,11 +21,11 @@ Pour utiliser un modèle Canvas :
 1. Allez dans **Messagerie** > **Canvas.**
 2. Sélectionnez **Créer un canvas** > **Utiliser un modèle de canvas**.
 3. Recherchez dans l'onglet **Modèles de Braze** le modèle que vous souhaitez utiliser. Vous pouvez prévisualiser un modèle en sélectionnant son nom.
-4. Sélectionnez **Appliquer** le modèle pour le modèle que vous souhaitez utiliser.<br><br>![La page "Canvas templates" s'ouvre sur l'onglet "Braze templates" et affiche une liste des modèles récemment utilisés et des modèles de Braze sélectionnables.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
+4. Sélectionnez **Appliquer** le modèle pour le modèle que vous souhaitez utiliser.<br><br>![La page « Modèles canvas » s'ouvre sur l'onglet « Modèles Braze » et affiche une liste des modèles récemment utilisés et des modèles Braze disponibles.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
 ## Modèles de canevas pour le commerce électronique
 
-Braze propose quatre modèles de canvas pour le commerce électronique.
+Braze propose quatre modèles canvas pour le commerce électronique.
 
 {% multi_lang_include canvas/ecommerce_templates.md %}
 
@@ -61,9 +61,9 @@ Parce que les événements recommandés sont des événements personnalisés plu
 
 Segmentez vos utilisateurs avec des filtres de commerce électronique, comme la **source de commerce électronique** et le **chiffre d'affaires total**, en allant à la section **Commerce électronique** dans le segmenteur. 
 
-Pour obtenir la liste des filtres eCommerce et leur définition, reportez-vous à la section [Filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) et sélectionnez la catégorie de recherche "eCommerce".
+Pour obtenir la liste des filtres e-commerce et leurs définitions, veuillez vous référer aux [filtres de segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) et sélectionner la catégorie de recherche « e-commerce ».
 
-![Segmentation de la liste déroulante des filtres avec des filtres "Ecommerce".]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:50%"}
+![Menu déroulant des filtres de segment avec les filtres « E-commerce ».]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:50%"}
 
 {% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation for eCommerce filters' %}
 
@@ -75,28 +75,22 @@ Pour segmenter par propriétés d'événement imbriquées, vous pouvez utiliser 
 
 ### Rapport sur les événements personnalisés
 
-Vous pouvez suivre le volume des événements recommandés pour le commerce électronique dans le [rapport sur les événements personnalisés]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#analytics). Filtrez par **Perform Custom Event**, puis indiquez le [nom de l'événement personnalisé eCommerce]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/#types-of-ecommerce-recommended-events) pour afficher ses performances dans le temps.
+Vous pouvez suivre le volume d'événements recommandés pour le commerce électronique dans le [rapport Custom events]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#analytics). Veuillez filtrer par **« Effectuer un événement personnalisé** », puis spécifiez le [nom de l'événement recommandé par eCommerce]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/#types-of-ecommerce-recommended-events) afin d'observer ses performances au fil du temps.
 
-![Graphique des événements personnalisés affichant les résultats de six événements sélectionnés.]({% image_buster /assets/img/ecommerce/custom_events_chart.png %})
-
-### Rapport sur les conversions 
-
-### Rapport sur les événements personnalisés
-
-Pour créer un [rapport sur les événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#analytics) en fonction des personnes qui ont effectué un événement pris en charge par l'intégration, vous pouvez spécifier le [nom de l'événement]({{site.baseurl}}/shopify_data_features/) spécifique.
+![Graphique des custom events affichant les résultats pour six événements sélectionnés.]({% image_buster /assets/img/ecommerce/custom_events_chart.png %})
 
 ### Tableaux de bord
 
 #### Tableau de bord de conversions
 
-Pour obtenir des informations sur les tendances liées aux commandes passées à partir de vos Canevas lancés, configurez un [tableau de bord des conversions]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) et spécifiez vos Canevas.
+Après avoir lancé une campagne ou un canvas à l'aide de l'événement de conversion « Commander », vous pouvez créer un [rapport de conversion]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#setting-up-your-report) correspondant afin de suivre les performances.
 
-#### Tableau de bord des chiffres affaires du commerce électronique
+![Tableau détaillé des conversions avec les campagnes et les canevas, ainsi que les statistiques de conversion associées.]({% image_buster /assets/img_archive/conversion_details_table.png %})
 
-Pour obtenir des informations sur les revenus attribués à la dernière campagne ou Canvas avec lequel un utilisateur a interagi avant de passer une commande, utilisez le [tableau de bord des revenus du commerce électronique]({{site.baseurl}}/ecommerce_revenue_dashboard/) et sélectionnez une fenêtre de conversion.
+#### Tableau de bord du chiffre d'affaires du commerce électronique
 
-### Générateur de requêtes
+Pour obtenir des informations sur le chiffre d'affaires attribué à la dernière campagne ou au dernier canvas avec lequel un utilisateur a interagi avant de passer une commande, veuillez utiliser le [tableau de bord du chiffre d'affaires e-commerce]({{site.baseurl}}/ecommerce_revenue_dashboard/) et sélectionner une fenêtre de conversion.
 
-### Chiffre d'affaires 
+### Rapport sur le chiffre d'affaires 
 
-Pour analyser les données de ces nouveaux événements, accédez au [générateur de tableau de bord]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) et affichez le [tableau de bord**eCommerce Revenue - Last Touch Attribution**]({{site.baseurl}}/ecommerce_revenue_dashboard/).
+Pour analyser les données issues de ces nouveaux événements, veuillez vous rendre dans le [générateur de tableaux de bord]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) et consulter le [tableau de bord **« Chiffre d'affaires e-commerce - Attribution au dernier point de contact**]({{site.baseurl}}/ecommerce_revenue_dashboard/) ».
