@@ -15,7 +15,7 @@ noindex: true
 
 ## Cambios de transparencia en las navegaciones de la IU
 
-Como parte de nuestras pruebas anuales de las betas de iOS, hemos identificado un cambio realizado por Apple que hace que determinadas barras de navegación de la interfaz de usuario aparezcan transparentes en lugar de opacas. Esto será visible en iOS 15 cuando utilices la interfaz de usuario predeterminada de Braze para las tarjetas de contenido, o cuando los enlaces profundos web se abran dentro de tu aplicación en lugar de en una aplicación de navegador independiente.
+Como parte de nuestras pruebas anuales de las betas de iOS, hemos identificado un cambio realizado por Apple que hace que determinadas barras de navegación de la interfaz de usuario aparezcan transparentes en lugar de opacas. Esto será visible en iOS 15 cuando utilices la interfaz de usuario predeterminada de Braze para las tarjetas de contenido, o cuando los vínculos profundos web se abran dentro de tu aplicación en lugar de en una aplicación de navegador independiente.
 
 Para evitar este cambio visual en iOS 15, te recomendamos encarecidamente que actualices al [SDK para iOS de Braze v4.3.2](https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2) lo antes posible, antes de que los usuarios empiecen a actualizar su teléfono al nuevo sistema operativo iOS 15.
 
