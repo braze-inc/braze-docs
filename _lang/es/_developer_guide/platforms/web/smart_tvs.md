@@ -1,13 +1,13 @@
 ---
-nav_title: Compatible con Smart TV
-article_title: Soporte de Smart TV para la Web Braze SDK
+nav_title: Compatibilidad con Smart TV
+article_title: Compatibilidad con Smart TV para el SDK de Web Braze
 platform: Web
 page_order: 30
 description: "Este artículo explica cómo utilizar el SDK Web de Braze para la integración con Smart TV (Samsung y LG)."
 
 ---
 
-# Compatible con Smart TV
+# Compatibilidad con Smart TV
 
 > El SDK Web de Braze te permite recopilar análisis y mostrar mensajes enriquecidos dentro de la aplicación y mensajes de tarjeta de contenido a los usuarios de Smart TV, incluidos [los televisores Samsung Tizen](https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html) y [LG (webOS)](https://webostv.developer.lge.com/discover). Este artículo explica cómo utilizar el SDK Web de Braze para la integración con Smart TV.
 
@@ -17,7 +17,7 @@ Para una referencia técnica completa, consulta nuestra [Documentación de JavaS
 
 {% multi_lang_include developer_guide/prerequisites/web.md %}
 
-## Configuración del SDK Braze Web
+## Configuración del SDK de Web Braze
 
 Hay dos cambios necesarios para la integración con Smart TV:
 
@@ -26,10 +26,10 @@ Hay dos cambios necesarios para la integración con Smart TV:
 
 ## Análisis
 
-Todos los mismos métodos del SDK Web para análisis se pueden utilizar en las Smart TV. Para un recorrido completo sobre el seguimiento de eventos personalizados, atributos personalizados y mucho más, consulta [Análisis]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web).
+Todos los mismos métodos del SDK Web para análisis se pueden utilizar en las Smart TV. Para obtener una guía completa sobre cómo realizar el seguimiento de eventos personalizados, atributos personalizados y mucho más, consulta [el análisis]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web).
 
 ## Mensajes dentro de la aplicación y tarjetas de contenido
 
 El SDK Web de Braze admite tanto [mensajes dentro de la aplicación]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=web) como [tarjetas de contenido]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web) en Smart TV. Ten en cuenta que debes utilizar el [ SDK Web "Core"](https://www.npmjs.com/package/@braze/web-sdk), ya que la representación de mensajes dentro de la aplicación y de tarjetas de contenido no es compatible con nuestra visualización de interfaz de usuario estándar y, en su lugar, debe ser personalizada por tu aplicación para adaptarse a la experiencia de tu TV App.
 
-Para más información sobre cómo tu aplicación Smart TV puede recibir y mostrar mensajes dentro de la aplicación, consulta [Desencadenar mensajes]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web).
+Para obtener más información sobre cómo tu aplicación para Smart TV puede recibir y mostrar mensajes dentro de la aplicación, consulta [Desencadenamiento de mensajes]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web).
