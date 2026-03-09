@@ -9,19 +9,19 @@ alias: /landing_pages/
 
 # Sobre landing pages
 
-> As páginas de destino do Braze são páginas da web independentes que podem impulsionar sua estratégia de aquisição e engajamento de usuários.
+> As landing pages do Braze são páginas da web independentes que podem impulsionar sua estratégia de aquisição e engajamento de usuários.
 
-Use páginas de destino para aumentar seu público, capturar dados de usuários, promover ofertas especiais e apoiar campanhas multicanal.
+Use landing pages para aumentar seu público, capturar dados de usuários, promover ofertas especiais e apoiar campanhas multicanal.
 
 {% alert note %}
-A disponibilidade de páginas de destino e domínios personalizados depende do seu pacote Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar.
+A disponibilidade de landing page e domínio personalizado depende do seu pacote Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar.
 {% endalert %}
 
 {% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
 
 ## Pré-requisitos
 
-Antes que você possa acessar, criar e publicar páginas de destino, você precisa de permissões de administrador [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) ou de todas as seguintes permissões:
+Antes que você possa acessar, criar e publicar landing pages, você precisa de permissões de administrador [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) ou de todas as seguintes permissões:
 
 - Ver landing pages
 - Editar rascunhos de landing page
@@ -39,9 +39,9 @@ O número de landing pages publicadas e domínios personalizados que você pode 
 | Domínios personalizados          | Um por empresa | Cinco adicionais |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-## Adicionando o Google Tag Manager a uma página de destino
+## Adicionando o Google Tag Manager a uma landing page
 
-Para adicionar o Google Tag Manager às suas páginas de destino, adicione um bloco **Custom Code** à sua página de destino no editor de arrastar e soltar, e insira o código do Tag Manager no bloco. Certifique-se de adicionar uma camada de dados antes do código do Tag Manager, como neste exemplo:
+Para adicionar o Google Tag Manager às suas landing pages, adicione um bloco **Custom Code** à sua landing page no editor de arrastar e soltar, e insira o código do Tag Manager no bloco. Certifique-se de adicionar uma camada de dados antes do código do Tag Manager, como neste exemplo:
 
 ```
 <script>
@@ -62,7 +62,7 @@ Para detalhes sobre a implementação do Google Tag Manager, consulte [Google's 
 
 ### Qual é o tamanho máximo das landing pages?
 
-O tamanho do corpo da página de destino pode ser de até 500 KB.
+O tamanho do corpo da landing page pode ser de até 500 KB.
 
 ### Há algum requisito técnico para publicar uma landing page?
 
