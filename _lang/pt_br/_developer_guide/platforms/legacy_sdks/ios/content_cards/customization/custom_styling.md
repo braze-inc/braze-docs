@@ -27,7 +27,7 @@ Braze permite que os clientes substituam as imagens padrão existentes por suas 
 Como os Cartões de Conteúdo têm um tamanho máximo de 2 KB para o conteúdo que você insere no dashboard (incluindo texto da mensagem, URLs de imagens, links e todos os pares chave-valor), verifique o tamanho antes de enviar. Exceder esse valor impedirá o cartão de enviar.
 
 {% alert important %}
-No momento, não há suporte para a substituição de imagens padrão em nossa integração .NET MAUI iOS.
+Substituir imagens padrão atualmente não é suportado na nossa integração .NET MAUI iOS.
 {% endalert %}
 
 ## Desativação do modo escuro
