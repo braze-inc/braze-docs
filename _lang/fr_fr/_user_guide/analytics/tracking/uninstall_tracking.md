@@ -18,7 +18,7 @@ Le suivi de la désinstallation dans Braze fournit les détails suivants :
 2. Statistiques de désinstallation au niveau de la campagne dans un graphique chronologique sur la page **Détails de la campagne** d'une campagne spécifique. Cette statistique spécifie le nombre de destinataires de campagne qui désinstallent chaque jour.
 
 {% alert note %}
-Vous devez opter pour la désinstallation du suivi sur votre tableau de bord de Braze. Cette fonctionnalité est disponible pour les apps sur iOS, Android et Fire OS.
+Il est nécessaire de souscrire à un abonnement pour désactiver le suivi sur votre tableau de bord de Braze. Cette fonctionnalité est disponible pour les applications sur iOS, Android et Fire OS.
 {% endalert %}
 
 ## Fonctionnement
@@ -29,7 +29,7 @@ Braze collecte automatiquement des informations basiques sur la désinstallation
 
 Vous pouvez activer le suivi des désinstallations sur la page **Paramètres des applications**, sous **Paramètres**, pour chaque application que vous souhaitez suivre.
 
-Lorsque vous activez le suivi des désinstallations pour une app, Braze envoie chaque nuit un message in-app en arrière-plan aux utilisateurs qui n'ont pas enregistré de session ou reçu de message in-app depuis 24 heures.
+Lorsque vous activez le suivi de désinstallation pour une application, Braze envoie chaque nuit un message push en arrière-plan aux utilisateurs qui n'ont pas enregistré de session ou reçu de push au cours des dernières 24 heures.
 
 ### Configuration
 
@@ -63,13 +63,13 @@ Les statistiques de désinstallation des campagnes sont situées sur la page **A
 
 ### Fonctionnement
 
-Braze suit les désinstallations en observant lorsque les messages de notification push envoyés aux appareils des utilisateurs renvoient un signal provenant soit de Firebase Cloud Messaging (FCM) soit d’Apple Push Notification Service (APN) indiquant que l’application n’est plus installée. Si vous activez le suivi global des désinstallations pour une app, Braze envoie quotidiennement un message push silencieux aux utilisateurs pour détecter s'ils ont désinstallé. Braze envoie ce push "silencieux" à tous les utilisateurs (sauf si l'utilisateur a désactivé les pushs silencieux dans les paramètres de son app) ; le push n'apparaît pas aux utilisateurs. Si Braze détecte qu'un utilisateur a désinstallé, nous.. :
+Braze suit les désinstallations en observant lorsque les messages de notification push envoyés aux appareils des utilisateurs renvoient un signal provenant soit de Firebase Cloud Messaging (FCM) soit d’Apple Push Notification Service (APN) indiquant que l’application n’est plus installée. Si vous activez le suivi global des désinstallations pour une application, Braze envoie quotidiennement un message push silencieux aux utilisateurs afin de détecter s'ils ont désinstallé l'application. Braze envoie cette notification « silencieuse » à tous les utilisateurs (à moins que l'utilisateur n'ait désactivé les notifications silencieuses dans les paramètres de son application) ; la notification n'apparaît pas aux utilisateurs. Si Braze détecte qu'un utilisateur a désinstallé l'application, nous :
 
 * Augmentez d'une unité le nombre total de désinstallations de l'application.
 * Augmentez d'une unité le nombre de désinstallations pour chaque campagne que l'utilisateur a reçue avec succès au cours des dernières 24 heures.
 * Si un utilisateur reçoit trois campagnes au cours d'une période de 24 heures, puis procède à une désinstallation, nous incrémentons le nombre de « désinstallations » pour les trois campagnes.
 
-La FCM et l'APN imposent des restrictions sur le suivi des désinstallations. Braze n'incrémente le nombre de désinstallations que lorsque les FCM ou les APN nous informent qu'un utilisateur a désinstallé, mais ces systèmes tiers peuvent nous informer des désinstallations à tout moment. Utilisez le suivi des désinstallations pour détecter les tendances directionnelles plutôt que des statistiques précises.
+FCM et APN imposent des restrictions sur le suivi des désinstallations. Braze augmente uniquement le nombre de désinstallations lorsque FCM ou APN nous informe qu'un utilisateur a désinstallé l'application. Cependant, ces systèmes tiers peuvent nous notifier les désinstallations à tout moment. Veuillez utiliser le suivi des désinstallations pour identifier les tendances générales plutôt que pour obtenir des statistiques précises.
 
 Pour en savoir plus sur l'utilisation du suivi des désinstallations, consultez notre article de blog [Uninstall Tracking : Le regard du secteur sur ses forces et ses limites](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 
@@ -80,7 +80,7 @@ Pour en savoir plus sur l'utilisation du suivi des désinstallations, consultez 
 Si vous constatez un pic de désinstallations de l’application, la raison peut être la révocation des anciens jetons à une fréquence différente par Firebase Cloud Messaging (FCM) et Apple Push Notification Service (APNS).
 
 {% alert note %}
-Pour des raisons de confidentialité, les fournisseurs de push de Braze peuvent révoquer les jetons à intervalles irréguliers, ce qui signifie que le nombre de désinstallations peut parfois grimper en flèche au cours d'une période donnée.<br><br>Pour valider ces changements, surveillez le suivi des désinstallations parallèlement à une mesure de l'action de l'utilisateur, comme le taux d'ouverture des pushs directs. Si les désinstallations augmentent fortement mais que les ouvertures en push direct restent stables, le pic reflète probablement un partenaire révoquant d'anciens jetons plutôt qu'un comportement réel de l'utilisateur.
+Pour des raisons de confidentialité, les fournisseurs de services push de Braze peuvent révoquer les jetons à intervalles irréguliers, ce qui signifie que le nombre de désinstallations peut parfois augmenter de manière significative au cours d'une période donnée.<br><br>Afin de valider ces modifications, veuillez surveiller le suivi des désinstallations parallèlement à un indicateur d'action utilisateur, tel que le taux d’ouverture des notifications push directes. Si les désinstallations augmentent considérablement mais que les ouvertures directes restent stables, cette hausse reflète probablement la révocation d'anciens jetons par un partenaire plutôt que le comportement réel des utilisateurs.
 {% endalert %}
 
 ### Pourquoi le nombre de désinstallations d'applications diffère-t-il de ce qui figure dans les APN ?
