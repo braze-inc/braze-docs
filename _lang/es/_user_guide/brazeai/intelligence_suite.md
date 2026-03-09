@@ -1,32 +1,32 @@
 ---
 nav_title: Intelligence Suite
-article_title: Acerca de la Braze Intelligence Suite
+article_title: Acerca de Braze Intelligence Suite
 page_order: 6
 search_rank: 12
-description: "La Braze Intelligence Suite automatiza la toma de decisiones con información basada en datos. Desde el momento de envío hasta las pruebas multivariantes, las marcas pueden usar estas herramientas y funciones para crear experiencias dinámicas y multicanal que se optimizan a escala."
+description: "La Intelligence Suite de Braze automatiza la toma de decisiones con información basada en datos. Desde el plazo de entrega hasta las pruebas multivariantes, las marcas pueden utilizar estas herramientas y características para crear experiencias dinámicas y a través de canales que se optimicen a escala."
 tool:
   - Dashboard
 ---
 
 # La Intelligence Suite
 
-> La Braze Intelligence Suite automatiza la toma de decisiones con información basada en datos. Desde el momento de envío hasta las pruebas multivariantes, las marcas pueden usar estas herramientas y funciones para crear experiencias dinámicas y multicanal que se optimizan a escala. La Intelligence Suite incluye tres funciones principales: Intelligent Timing, Intelligent Channel e Intelligent Selection.
+> La Intelligence Suite de Braze automatiza la toma de decisiones con información basada en datos. Desde el plazo de entrega hasta las pruebas multivariantes, las marcas pueden utilizar estas herramientas y características para crear experiencias dinámicas y a través de canales que se optimicen a escala. La Intelligence Suite consta de tres características principales: Intelligent Timing, Canal inteligente e Intelligent Selection.
 
-## Casos de uso
+## Ejemplos
 
-La Intelligence Suite ofrece funciones potentes para analizar el historial de usuarios y el rendimiento de campañas y Canvas, y luego realizar ajustes automáticos para aumentar la interacción, el alcance y las conversiones. Algunos ejemplos de beneficios por sector:
+La Intelligence Suite proporciona potentes características para analizar el historial de usuarios y el rendimiento de campañas y Canvas, y luego hacer ajustes automáticos para aumentar la interacción, la audiencia y las conversiones. Para ver algunos ejemplos de cómo estas características pueden beneficiar a distintos sectores, consulta los siguientes casos de uso.
 
 ### Comercio electrónico
 
-- **Ventas flash:** Usa el [filtro Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_channel/) para estudiar el historial de usuarios e identificar a los que responden más a las notificaciones push que a los emails, y luego envía notificaciones push y emails a los usuarios correspondientes. Opcionalmente, selecciona un canal específico para usuarios sin suficientes datos para determinar su canal preferido.
-- **Banners promocionales:** Usa [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_selection/) para analizar el rendimiento de distintos banners promocionales en una campaña recurrente y seleccionar y enviar automáticamente el banner con las tasas de clics más altas.
+- **Ventas flash:** Utiliza el [filtro del canal inteligente]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) para estudiar el historial del usuario e identificar a los usuarios que son más receptivos a las notificaciones push frente a los correos electrónicos, y luego envía notificaciones push y correos electrónicos a los usuarios respectivos. Opcionalmente, selecciona un canal específico para los usuarios que no dispongan de datos suficientes para determinar su canal preferido.
+- **Banners promocionales:** Utiliza [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) para analizar el rendimiento de diferentes banners promocionales en una campaña recurrente y, a continuación, selecciona y envía automáticamente el banner que genere las tasas de click-through más altas.
 
-### Viajes
+### Viaja a
 
-- **Ofertas de paquetes:** Usa Intelligent Selection para probar distintas ofertas de paquetes de viaje en un Canvas recurrente y desplazar gradualmente el tráfico del Canvas hacia la variante con mejor rendimiento para aumentar las tasas de reserva.
-- **Ofertas de viajes:** Usa el filtro Intelligent Channel para enviar ofertas de viajes personalizadas a través del canal más activo del usuario (email o SMS), maximizando la probabilidad de que interactúen con tus mensajes.
+- **Ofertas de paquetes:** Utiliza Intelligent Selection para probar diferentes ofertas de paquetes de viaje en un Canvas recurrente y cambia gradualmente el tráfico del Canvas a la variante con mejor rendimiento para conseguir tasas de reserva más altas.
+- **Ofertas de viajes:** Utiliza el filtro de canal inteligente para enviar ofertas de viajes personalizadas a través del canal más activo de un usuario, como el correo electrónico o los SMS, maximizando la probabilidad de que interactúen con tu mensaje.
 
-### Entretenimiento
+### entretenimiento
 
-- **Promoción de contenido nuevo:** Usa [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/) para enviar notificaciones sobre nuevas películas, series, música, etc. cuando los usuarios tienen más probabilidades de abrir tus mensajes.
-- **Compras en el juego:** Usa Intelligent Selection para probar distintos mensajes promocionales para compras en el juego y seleccionar automáticamente el que genera las tasas de conversión más altas.
+- **Promoción de nuevos contenidos:** Utiliza [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) para enviar notificaciones sobre nuevas películas, programas, música y otros tipos de contenido cuando sea más probable que los usuarios abran tu mensajería.
+- **Compras en el juego:** Utiliza Intelligent Selection para probar diferentes mensajes promocionales para compras dentro del juego y selecciona automáticamente el que genere las tasas de conversión más altas.
