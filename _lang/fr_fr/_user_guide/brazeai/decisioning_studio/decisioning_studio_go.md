@@ -8,9 +8,9 @@ description: "Découvrez comment configurer et intégrer BrazeAI Decisioning <su
 # BrazeAI Decisioning Studio™ Go
 
 {% alert important %}
-Note: We are currently building a new version of Decisioning Studio Go that will launch self-serve from the Braze Dashboard.
+Nous sommes en train de créer une nouvelle version de Decisioning Studio Go, qui sera disponible en libre-service depuis le tableau de bord Braze.
 
-The following documentation applies to the legacy version, which will be deprecated in 1H2026.
+La documentation suivante s’applique à la version héritée, qui sera mise hors service au premier semestre 2026.
 {% endalert %}
 
 ## À propos de Decisioning Studio Go
