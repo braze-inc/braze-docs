@@ -1,4 +1,4 @@
-## À propos des cartes de contenu de Flutter
+## À propos des cartes de contenu Flutter
 
 Le SDK Braze comprend un flux de cartes par défaut pour vous permettre de vous lancer dans les cartes de contenu. Pour afficher le flux de carte, vous pouvez utiliser la méthode `braze.launchContentCards()`. Le flux de cartes par défaut inclus avec le SDK Braze traitera tous les suivis, les masquages et le rendu des cartes de contenu d’un utilisateur.
 
@@ -43,10 +43,10 @@ Consultez [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master
 ### Étape 2 : Transférer les données de la carte de contenu depuis la couche native
 
 {% alert note %}
-Cette étape est réservée à iOS. Les données de la carte de contenu sont automatiquement transférées depuis la couche Android.
+Cette étape concerne uniquement iOS. Les données de la carte de contenu sont automatiquement transférées depuis la couche Android.
 {% endalert %}
 
-Pour recevoir les données dans la couche Dart de l'étape 1, ajoutez le code suivant pour transmettre les données de la carte de contenu depuis la couche native iOS.
+Pour recevoir les données dans la couche Dart de l'étape 1, veuillez ajouter le code suivant afin de transférer les données de la carte de contenu depuis la couche iOS native.
 
 1. Implémentez `contentCards.subscribeToUpdates` pour vous abonner aux mises à jour des cartes de contenu comme décrit dans la documentation [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)).
 
