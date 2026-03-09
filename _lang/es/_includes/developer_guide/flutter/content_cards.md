@@ -43,7 +43,7 @@ Para ver un ejemplo, consulta [main.dart](https://github.com/braze-inc/braze-flu
 ### Paso 2: Transmite los datos de la tarjeta de contenido de la capa nativa
 
 {% alert note %}
-Este paso es sólo para iOS. Los datos de la tarjeta de contenido se envían automáticamente desde la capa de Android.
+Este paso es solo para iOS. Los datos de la tarjeta de contenido se envían automáticamente desde la capa de Android.
 {% endalert %}
 
 Para recibir los datos en la capa Dart del paso 1, añade el siguiente código para reenviar los datos de la tarjeta de contenido desde la capa nativa de iOS.
