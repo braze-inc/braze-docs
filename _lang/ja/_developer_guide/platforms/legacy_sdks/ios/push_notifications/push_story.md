@@ -67,7 +67,7 @@ Push Story 機能では、メインアプリターゲットの ［**機能**］ 
 
 [Swift Package Manager の統合ガイド]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/)に従って、`AppboyPushStory` を `Notification Content Extension` に追加します。
 
-![Xcodeのフレームワークとライブラリーの下にある "+"アイコンを選択し、フレームワークを追加する。]({% image_buster /assets/img/ios/push_story/spm1.png %})
+![Xcodeで、フレームワークとライブラリーの下にある「+」アイコンを選択してフレームワークを追加する。]({% image_buster /assets/img/ios/push_story/spm1.png %})
 
 ![]({% image_buster /assets/img/ios/push_story/spm2.png %})
 
