@@ -106,12 +106,12 @@ Le code de statut `200` pourrait renvoyer le corps de réponse suivant.
         {
           "name": "time_field",
           "type": "time"
-        },
+        }
       ],
       "name": "my_catalog",
       "num_items": 3,
       "updated_at": "2022-11-02T09:03:19.967+00:00"
-    },
+    }
   ],
   "message": "success"
 }
