@@ -1,7 +1,7 @@
 ---
 nav_title: "取得:キャンバスの翻訳を表示する"
 article_title: "取得:キャンバスの翻訳を表示"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 1
 
 layout: api_page
@@ -15,11 +15,9 @@ description: "この記事では、「キャンバスの翻訳を表示する」
 /canvas/translations
 {% endapimethod %}
 
-> このエンドポイントを使用して、キャンバスの翻訳されたメッセージをプレビューします。翻訳機能の詳細については、[メッセージのローカライゼーションを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照のこと。
+> このエンドポイントを使用して、キャンバスの翻訳されたメッセージをプレビューします。ローカライゼーション機能の詳細については、[メッセージ内のロケールを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照せよ。
 
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## 前提条件
 
@@ -31,17 +29,17 @@ description: "この記事では、「キャンバスの翻訳を表示する」
 
 ## クエリーパラメーター
 
-| パラメータ              | required | データ型 | 説明                        |
+| パラメータ              | 必須かどうか | データ型 | 説明                        |
 |------------------------|----------|-----------|------------------------------------|
-| `workflow_id`          | 必須 | string    | キャンバスの ID。              |
-| `step_id`              | 必須 | 文字列    | キャンバスのステップのID。        |
-|`message_variation_id`| 必須 | string | メッセージバリエーションの ID。 |
-| `locale_id`            | オプション | string    | ロケールのID（UUID）。       |
-| `post_launch_draft_version`| オプション | ブール値 | `true` 、最新のライブ公開バージョンではなく、最新の下書きバージョンが返される。デフォルトは`false` 、最新のライブバージョンを返す。
+| `workflow_id`          | 必須かどうか | string    | キャンバスの ID。              |
+| `step_id`              | 必須かどうか | 文字列    | キャンバスのステップのID。        |
+|`message_variation_id`| 必須かどうか | string | メッセージバリエーションの ID。 |
+| `locale_id`            | オプション | string    | ロケールの識別子（UUID）。       |
+| `post_launch_draft_version`| オプション | ブール値 | returns `true`は最新の公開済みバージョンではなく、最新の下書き版を返す。デフォルトでは最新のライブ`false`バージョンを返す。
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、GETエンドポイントのレスポンスで見つけることができる。
+すべての翻訳識別子はユニバーサル一意識別子（UUID）と見なされ、GETエンドポイントの応答で確認できる。
 {% endalert %}
 
 ## 例のリクエスト
