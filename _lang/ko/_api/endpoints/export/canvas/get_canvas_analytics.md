@@ -48,7 +48,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_seri
 ```
 {% endraw %}
 
-## 응답
+## Response
 
 ```json
 {
@@ -76,8 +76,8 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_seri
         "step_stats": (optional) {
           "00000000-0000-0000-0000-0000000000000": (string) the API identifier for the step {
             "name": (string) the name of step,
-            "revenue": (float) the the number of dollars of revenue (USD),
-            "conversions": (int) the the number of conversions,
+            "revenue": (float) the number of dollars of revenue (USD),
+            "conversions": (int) the number of conversions,
             "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
             "messages": {
               "email": [
