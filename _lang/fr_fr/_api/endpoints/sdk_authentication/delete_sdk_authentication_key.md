@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE : Supprimer la clé d'authentification du SDK"
+nav_title: "DELETE : Supprimer la clé d'authentification SDK"
 article_title: "DELETE : Supprimer la clé d'authentification du SDK"
 search_tag: Endpoint
 page_order: 3
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Exemple de demande
 
-```json
+```bash
 curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_authentication/delete' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
