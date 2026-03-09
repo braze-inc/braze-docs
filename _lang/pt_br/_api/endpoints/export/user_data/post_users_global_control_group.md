@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Exportar perfil de usuário por grupo de controle global"
+nav_title: "POST: Exportar perfil de usuário pelo grupo de controle global"
 article_title: "POST: Exportar perfil de usuário por grupo de controle global"
 search_tag: Endpoint
 page_order: 6
@@ -18,7 +18,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Exporta
 
 Os dados de usuários são exportados como vários arquivos de objetos JSON de usuários separados por novas linhas (como um objeto JSON por linha). Todos os usuários de um Grupo de Controle Global são incluídos sempre que os arquivos são gerados. O Braze não armazena um histórico de quando os usuários são adicionados e removidos de um Grupo de Controle Global.
 
-Para localizar o identificador de segmento do seu grupo de controle global, consulte [Tipos de identificadores de API]({{site.baseurl}}/api/identifier_types/?tab=segments#segment-identifier).
+Para localizar o identificador do segmento do seu Grupo de Controle Global, consulte [tipos de identificadores de API]({{site.baseurl}}/api/identifier_types/?tab=segments#segment-identifier).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
@@ -32,9 +32,9 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Detalhes de resposta baseados em credenciais
 
-Se você adicionou suas credenciais [do S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) ou [do Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) ao Braze por meio da respectiva página de **parceiros de tecnologia**, cada arquivo será feito upload em seu bucket como um arquivo ZIP com o formato de chave semelhante a `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Se estiver usando o Azure, certifique-se de que a caixa **Tornar este o destino padrão de exportação de dados** esteja marcada na página de visão geral do parceiro do Azure no Braze.
+Se você adicionou suas credenciais de [S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) ou [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) ao Braze através da respectiva página de **Parceiros de Tecnologia**, então cada arquivo é enviado para o seu bucket como um arquivo ZIP com o formato de chave que se parece com `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Se estiver usando o Azure, certifique-se de que a caixa **Tornar este o destino padrão de exportação de dados** esteja marcada na página de visão geral do parceiro do Azure no Braze.
 
-Em geral, criamos um arquivo para cada 5.000 usuários para otimizar o processamento. A exportação de segmentos menores em um espaço de trabalho grande pode resultar em vários arquivos. Em seguida, você pode extrair os arquivos e concatenar todos os arquivos `json` em um único arquivo, se necessário. Se você especificar um `output_format` de `gzip`, a extensão do arquivo será `.gz` em vez de `.zip`.
+Geralmente, criamos um arquivo para cada 5.000 usuários para otimizar o processamento. A exportação de segmentos menores em um espaço de trabalho grande pode resultar em vários arquivos. Em seguida, você pode extrair os arquivos e concatenar todos os arquivos `json` em um único arquivo, se necessário. Se você especificar um `output_format` de `gzip`, então a extensão do arquivo é `.gz` em vez de `.zip`.
 
 {% details Export pathing breakdown for ZIP %}
 **Formato ZIP:**
@@ -56,15 +56,15 @@ Em geral, criamos um arquivo para cada 5.000 usuários para otimizar o processam
 
 {% enddetails %}
 
-É altamente recomendável configurar suas próprias credenciais do S3 ou do Azure (acessando **Partner Integrations** > **Technology Partners** > página do parceiro) ao usar esse endpoint para aplicar suas próprias políticas de bucket na exportação.
+Recomendamos fortemente configurar suas próprias credenciais de S3 ou Azure (indo para **Integrações de Parceiros** > **Parceiros de Tecnologia** > página do parceiro) ao usar este endpoint para impor suas próprias políticas de bucket na exportação.
 
-![A página Parceiros de tecnologia do Azure, com uma guia para o Amazon S3.]({% image_buster /assets/img/technology_partners_page.png %})
+![A página de Parceiros de Tecnologia para Azure, com uma guia para Amazon S3.]({% image_buster /assets/img/technology_partners_page.png %})
 
-Se não tiver fornecido suas credenciais de armazenamento em nuvem, a resposta à solicitação fornecerá o URL onde um ZIP contendo todos os arquivos do usuário pode ser baixado. O URL se torna um local válido somente depois que a exportação estiver pronta.
+Se não tiver fornecido suas credenciais de armazenamento em nuvem, a resposta à solicitação fornecerá o URL onde um ZIP contendo todos os arquivos do usuário pode ser baixado. A URL se torna um local válido apenas após a exportação estar pronta.
 
 Esteja ciente de que, se você não fornecer suas credenciais de armazenamento em nuvem, haverá uma limitação na quantidade de dados que você pode exportar desse endpoint. Dependendo dos campos que você está exportando e do número de usuários, a transferência do arquivo pode falhar se ele for muito grande. Uma prática recomendada é especificar quais campos você deseja exportar usando `fields_to_export` e especificando apenas os campos necessários para manter o tamanho da transferência menor. Se você estiver recebendo erros ao gerar o arquivo, considere dividir sua base de usuários em mais segmentos com base em um número de intervalo aleatório (por exemplo, crie um segmento em que o número de intervalo aleatório seja menor que 1.000 ou entre 1.000 e 2.000).
 
-Em qualquer um dos cenários, você tem a opção de fornecer um `callback_endpoint` para receber uma notificação quando a exportação estiver pronta. Se o endereço `callback_endpoint` for fornecido, faremos uma solicitação de postagem para o endereço fornecido quando o download estiver pronto. O corpo da postagem é `"success":true`. Se não tiver adicionado suas credenciais de armazenamento em nuvem ao Braze, o corpo da postagem também terá a atribuição `url` com o URL de download como valor.
+Em qualquer um dos cenários, você tem a opção de fornecer um `callback_endpoint` para receber uma notificação quando a exportação estiver pronta. Se o `callback_endpoint` for fornecido, fazemos uma solicitação POST para o endereço fornecido quando o download estiver pronto. O corpo do post é `"success":true`. Se você não adicionou suas credenciais de armazenamento em nuvem ao Braze, o corpo do post adicionalmente tem o atributo `url` com a URL de download como valor.
 
 Bases de usuários maiores resultarão em tempos de exportação mais longos. Por exemplo, um app com 20 milhões de usuários pode levar uma hora ou mais.
 
@@ -84,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-Atributos personalizados individuais não podem ser exportados. No entanto, todos os atributos personalizados podem ser exportados com a inclusão de custom_attributes na matriz fields_to_export (por exemplo, `['first_name', 'email', 'custom_attributes']`).
+Atributos personalizados individuais não podem ser exportados. No entanto, todos os atributos personalizados podem ser exportados incluindo custom_attributes no array fields_to_export (por exemplo, `['first_name', 'email', 'custom_attributes']`).
 {% endalert %}
 
 ## Parâmetros de solicitação
@@ -153,11 +153,11 @@ A seguir, uma lista de `fields_to_export` válidos. O uso do site `fields_to_exp
 }
 ```
 
-Depois que a URL é disponibilizada, ela é válida por apenas algumas horas. Portanto, é altamente recomendável que você adicione suas próprias credenciais S3 à Braze.
+Depois que a URL estiver disponível, ela é válida por apenas algumas horas. Portanto, é altamente recomendável que você adicione suas próprias credenciais S3 à Braze.
 
 ### Exemplo de saída de arquivo de exportação do usuário
 
-Objeto de exportação do usuário (incluímos o mínimo de dados possível - se um campo estiver faltando no objeto, ele deve ser considerado nulo ou vazio):
+Objeto de exportação de usuário (incluímos o menor número possível de dados—se um campo estiver ausente do objeto, deve-se assumir que é nulo ou vazio):
 
 {% tabs %}
 {% tab All fields %}
@@ -231,7 +231,7 @@ Objeto de exportação do usuário (incluímos o mínimo de dados possível - se
         "last_used" : (string) date
       },
       ...
-    ],
+    ]
 }
 ```
 
@@ -310,7 +310,7 @@ Objeto de exportação do usuário (incluímos o mínimo de dados possível - se
         "last_used": "2021-11-11T00:25:19.201Z"
       },
       ...
-    ],
+    ]
 }
 ```
 
