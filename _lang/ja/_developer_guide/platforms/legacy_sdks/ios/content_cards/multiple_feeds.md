@@ -1,6 +1,6 @@
 ---
 nav_title: 複数のフィード
-article_title: iOSで複数のコンテンツカードフィードを使用する
+article_title: iOS向けに複数のコンテンツカードフィードを使用する
 platform: iOS
 page_order: 6
 description: "この参考記事では、iOS アプリケーションに複数のコンテンツカードフィードを実装する方法について説明します。"
