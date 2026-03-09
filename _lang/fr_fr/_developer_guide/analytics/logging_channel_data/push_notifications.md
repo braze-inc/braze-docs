@@ -1,12 +1,12 @@
 ---
 nav_title: Notifications push
-article_title: Enregistrer les données de notification push via le SDK de Braze
+article_title: Enregistrer les données de notification push via le SDK Braze
 page_order: 7.2
 description: "Découvrez comment enregistrer les données des notifications push via le SDK de Braze."
 noindex: true
 ---
 
-# Enregistrer les données de notification push
+# Enregistrer les données des notifications push
 
 > Découvrez comment enregistrer les données des notifications push via le SDK de Braze.
 
