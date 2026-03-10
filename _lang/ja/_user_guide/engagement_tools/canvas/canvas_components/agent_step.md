@@ -114,4 +114,4 @@ toc_headers: h2
 - [Brazeエージェントの概要]({{site.baseurl}}/user_guide/brazeai/agents/)  
 - [カスタムエージェントを作成する]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)  
 - [エージェントを展開する]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)  
-- [エージェント向け参考資料]({{site.baseurl}}/user_guide/brazeai/agents/reference/)  
+- [エージェント向け参考資料]({{site.baseurl}}/user_guide/brazeai/agents/reference/)
