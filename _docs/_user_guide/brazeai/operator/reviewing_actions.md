@@ -24,16 +24,16 @@ If an action fails after approval, Operator will notify with details about the f
 
 ### Availability
 
-Action cards are supported in the following editors:
+Action cards are supported in the following editors and pages. On other pages, Operator provides a list of steps to follow in the UI instead of taking action itself. Operator functionality is regularly being improved, and expanded coverage for create tools is expected.
 
-- In-app messages (traditional editor only)
-- Content Cards
-- Email (HTML editor only)
-- Push notifications
-- SMS/MMS/RCS
-- Webhooks
-
-On other pages, Operator provides a list of steps to follow in the UI instead of taking action itself. Operator functionality is regularly being improved, and expanded coverage for create tools is expected.
+- **Message editors:**
+  - In-app messages (traditional editor only)
+  - Content Cards
+  - Email (HTML editor only)
+  - Push notifications
+  - SMS/MMS/RCS
+  - Webhooks
+- [Create custom agent]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents) page
 
 ## Modify a plan
 
