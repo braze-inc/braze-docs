@@ -176,3 +176,38 @@ table td {
 For more information, refer to [Content Card creative details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/).
 
 {% endif %}
+
+{% if include.variable_name == "WhatsApp images" %}
+
+These specifications apply to template headers, response media messages, and image messages.
+
+| Property | Specifications | Notes |
+|---|---|---|
+| Supported formats | JPEG, PNG | Meta officially supports only JPEG and PNG for image messages. WEBP is only supported for tickers only (not standard image messages). |
+| Maximum file size | 5 MB | |
+| Color mode | 8-bit, RGB or RGBA | |
+| Caption (image messages only) | Optional; 1,024 characters maximum | |
+| Recommended dimensions | 1,125 × 600 px | We recommend using JPEG or PNG images sized at 1,125×600 px (1.91:1) for consistent rendering across devices and compliance with Meta's requirements. |
+| Recommended aspect ratio | 1.91:1 (wide) | Square (1:1) and wide (16:9) formats are accepted, but images may be cropped or enlarged depending on the user's device.<br><br> For carousel cards, header images are automatically cropped to a wide ratio by WhatsApp, unless there is no body text, in which case it renders as a square.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endif %}
+
+{% if include.variable_name == "WhatsApp videos" %}
+
+The following specifications apply to template headers, response media messages, video messages, and carousel card headers.
+
+| Property | Specifications |
+|---|---|
+| Supported formats | MP4, 3GPP |
+| File size | 16 MB maximum |
+| Video codec | H.264 only |
+| Audio codec | AAC only |
+| Audio streams | Single audio stream or no audio stream |
+| Caption (video messages only) | Optional; 1,024 characters maximum |
+| Recommended aspect ratio | 1.91:1 (wide) |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% multi_lang_include alerts/important_alerts.md alert='Meta MP4 video issue' %}
+
+{% endif %}

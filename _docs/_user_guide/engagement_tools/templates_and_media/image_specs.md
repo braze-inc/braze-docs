@@ -37,6 +37,10 @@ Braze supports using [Font Awesome v4.3.0](https://fontawesome.com/v4.7.0/cheats
 
 {% multi_lang_include image_specs.md variable_name='email' %}
 
+## WhatsApp
+
+{% multi_lang_include image_specs.md variable_name='WhatsApp images' %}
+
 ## Image behavior
 
 {% multi_lang_include image_specs.md variable_name='image behavior' %}

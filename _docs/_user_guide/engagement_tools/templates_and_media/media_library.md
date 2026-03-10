@@ -3,6 +3,7 @@ nav_title: Media library
 article_title: Media library
 page_order: 0
 page_type: reference
+alias: /media_library/
 description: "This reference article covers the media library. Here, you can learn how to manage your assets in a single, centralized location, generate images using AI, access media in your message composer."
 tool: Media
 
@@ -69,9 +70,21 @@ For more information, refer to [In-app message creative details]({{site.baseurl}
 For additional resources, see [Push image and text specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 {% endalert %}
 
-### Video
+### WhatsApp
 
-Videos uploaded to the media library can only be used in WhatsApp messages. For more information, refer to [Creating a WhatsApp message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
+#### Images
+
+{% multi_lang_include image_specs.md variable_name='WhatsApp images' %}
+
+## Video specifications
+
+{% alert note %}
+Videos uploaded to the media library can only be used in WhatsApp messages. For more information, see [Creating a WhatsApp message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
+{% endalert %}
+
+### WhatsApp
+
+{% multi_lang_include image_specs.md variable_name='WhatsApp videos' %}
 
 ## Generating images with BrazeAI<sup>TM</sup> {#generate-ai}
 
