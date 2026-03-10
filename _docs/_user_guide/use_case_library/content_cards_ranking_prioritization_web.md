@@ -12,15 +12,15 @@ tags:
 
 # Content Card ranking and prioritization on Web
 
-This use case describes best practices and options for ranking and prioritizing Content Cards on websites that use the Braze Web SDK. Braze does not offer default prioritization for Content Cards (unlike [In-App Message prioritization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/#step-7-build-the-remainder-of-your-campaign-or-canvas) with Low, Medium, and High). The approaches below use **key-value pairs (KVPs)** and custom logic to achieve a similar Low, Medium, and High priority system.
+This use case describes best practices and options for ranking and prioritizing Content Cards on websites that use the Braze Web SDK. Braze does not offer default prioritization for Content Cards (unlike [In-App Message prioritization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/#step-7-build-the-remainder-of-your-campaign-or-canvas) with Low, Medium, and High). The approaches below use key-value pairs (KVPs) and custom logic to achieve a similar Low, Medium, and High priority system.
 
-Braze uses a Crawl, Walk, and Run model for [Content Card customizations]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/). The solutions here are "Walk" and "Run" approaches and cover ranking and prioritization via KVPs. Your team is responsible for the specific handling and display of the Content Cards. For display and customization details, refer to the [Braze Web SDK documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html).
+Braze uses a Crawl, Walk, and Run model for [Content Card customizations]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/). The solutions here are "Walk" and "Run" approaches and cover ranking and prioritization through KVPs. Your team is responsible for the specific handling and display of the Content Cards. For display and customization details, see the [Braze Web SDK documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html).
 
 ---
 
 ## Solution 1: Prioritized feed (Walk)
 
-This approach uses the **standard Content Card feed** with a small amount of custom development. You display cards from a single feed, filtered and sorted by a `priority_level` KVP. The same principle as [multiple feeds by feed type]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/) is used, but all priority levels are shown in one feed.
+This approach uses the standard Content Card feed with a small amount of custom development. You display cards from a single feed, filtered and sorted by a `priority_level` KVP. This approach uses the principle as [multiple feeds by feed type]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/), but all priority levels are shown in one feed.
 
 **Priority mapping:**
 
@@ -54,7 +54,7 @@ function showCardsByFeedType(...priority_levels) {
 
 ### Step 2: Display the feed
 
-Add code to display the feed (for example, via a button). This example shows cards with priorities 1, 2, and 3:
+Add code to display the feed (for example, with a button). This example shows cards with priorities 1, 2, and 3:
 
 ```javascript
 document.getElementById("priority_cards_toggle").onclick = function() {
@@ -68,7 +68,7 @@ When creating your Content Cards, set the KVPs in the **Settings** tab during th
 
 ### Step 4: Launch the campaign
 
-Complete **Schedule**, **Target**, **Assign**, and **Review**, then launch the campaign.
+Complete **Schedule**, **Target**, **Assign**, and **Review**, and then launch the campaign.
 
 **Result:**
 
