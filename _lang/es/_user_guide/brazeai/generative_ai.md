@@ -9,7 +9,7 @@ description: "<sup>BrazeAITM</sup> impulsa varias características de automatiza
 
 guide_featured_title: "Características"
 guide_featured_list:
-- name: Asistente de redacción AI
+- name: Asistente de redacción con inteligencia artificial
   link: /docs/user_guide/brazeai/generative_ai/copywriting/
   image: /assets/img/braze_icons/edit-05.svg
 - name: Generador de imágenes por IA

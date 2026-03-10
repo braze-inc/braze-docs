@@ -2,7 +2,7 @@
 nav_title: Directrices de marca
 article_title: Directrices de marca generadas por IA
 page_order: 2.2
-description: "Este artículo de referencia cubre las directrices de marca para el asistente de redacción AI, una característica que te permite adaptar el estilo de la copia generada por el asistente de redacción AI a la voz y el estilo de tu marca."
+description: "Este artículo de referencia cubre las directrices de marca para el asistente de redacción con inteligencia artificial, que te permite adaptar el estilo de la copia generada a la voz y el estilo de tu marca."
 ---
 
 # Crea directrices de marca con BrazeAI.
@@ -11,11 +11,11 @@ description: "Este artículo de referencia cubre las directrices de marca para e
 
 ## Creación de directrices de marca {#steps}
 
-Sigue estos pasos para crear directrices de marca en el asistente de redacción de IA. También puedes crear directrices de marca en la página de configuración de [Directrices de marca]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
+Sigue estos pasos para crear directrices de marca en el asistente de redacción con inteligencia artificial. También puedes crear directrices de marca en la página de configuración de [Directrices de marca]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
 
 ### Paso 1: Crear una directriz de marca
 
-1. En el creador de mensajes, busca y selecciona <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> para [abrir el asistente de redacción publicitaria con IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/#access).
+1. En el creador de mensajes, selecciona <i class="fa-solid fa-wand-magic-sparkles" title="Redactor de inteligencia artificial"></i> **Lanzar el redactor de inteligencia artificial** para [abrir el asistente de redacción con inteligencia artificial]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/).
 2. Selecciona **Aplicar directriz de marca** y luego **Crear una directriz de marca**.
 
 ![Menú desplegable para «Aplicar directrices de marca» ampliado con el botón «Crear una directriz de marca» en primer plano.]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
@@ -64,7 +64,7 @@ Puedes cambiar el idioma de salida independientemente del idioma en que esté tu
 
 Para editar tus directrices de marca existentes:
 
-1. Abre el asistente de redacción AI.
+1. Abre el asistente de redacción con inteligencia artificial.
 2. Aplica las directrices de marca que quieras cambiar. Aparecerá un botón cerca del campo.
 3. Selecciona **Editar directriz**.
 
