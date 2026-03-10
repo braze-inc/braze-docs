@@ -20,7 +20,7 @@ Before you start, complete the initial push notification integration for your pl
 
 ## Native push analytics vs. custom event logging
 
-These are two separate analytics workflows with different reporting surfaces.
+The following workflows each have different reporting surfaces.
 
 | Analytics category | Description | Where it appears |
 | --- | --- | --- |
