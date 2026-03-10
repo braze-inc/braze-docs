@@ -10,7 +10,7 @@ description: "This help article walks you through how to change the data type of
 # Change custom attribute or event data type
 
 {% alert note %}
-As of March 30, 2026, auto-detect only sets a custom attribute's data type upon initial ingestion. To change the data type after initial ingestion, update it manually using the steps below.
+As of March 30, 2026, auto-detect only sets a data type upon initial ingestion. To change the data type after initial ingestion, update it manually using the following steps.
 {% endalert %}
 
 To change the data type of a custom attribute or event, from the Braze dashboard, navigate to **Data Settings** and select either **Custom Attributes** or **Custom Events**.
