@@ -73,7 +73,7 @@ Exactly three years ago today we met for the first time!
 {% raw %}
 ```liquid
 {% assign this_week = 'now' | date: '%W' %}
-{% assign birthday_week = ${date_of_birth}  | date: '%W' %}
+{% assign birthday_week = {{${date_of_birth}}} | date: '%W' %}
 {% assign last_week = {{this_week}} | minus: 1 %}
 {% assign next_week = {{this_week}} | plus: 1 %}
 {% assign birthday_week_conversion = {{birthday_week}} | plus: 0 %}
@@ -283,7 +283,7 @@ you have {{ difference_days }} days left!
 {% assign difference_e = express_shipping_end | minus: today %}
 {% assign difference_e_days = difference_e | divided_by: 86400.00 | round %}
 {% assign difference_o = overnight_shipping_end | minus: today %}
-{% assign difference_o_days = difference | divided_by: 86400.00 | round %}
+{% assign difference_o_days = difference_o | divided_by: 86400.00 | round %}
 
 {% if today >= standard_shipping_start and today <= standard_shipping_end %}
 {% if difference_s_days == 0 %}
@@ -544,7 +544,7 @@ Hi, the offer is only valid today.
 
 - [一致するカスタム属性に基づいてメッセージをパーソナライズする](#attribute-matching)
 - [2つのカスタム属性を引いて、その差を金額で表示する](#attribute-monetary-difference)
-- [フルネームがfirst_name フィールドに保存されている場合、ユーザーの名を参照します](#attribute-first-name)
+- [ユーザーの名前がフルネームで保存されている場合、そのfirst_name名を参照する。](#attribute-first-name)
 
 ### 一致するカスタム属性に基づいてメッセージをパーソナライズする {#attribute-matching}
 
@@ -579,7 +579,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### フルネームがfirst_name フィールドに保存されている場合、ユーザーの名を参照します {#attribute-first-name}
+### ユーザーの名前がフルネームで保存されている場合、そのfirst_name名を参照する。 {#attribute-first-name}
 
 このユースケースでは、ユーザーの名を取得し (姓と名の両方が単一のフィールドに格納されている場合)、ユーザーの名を使用してウェルカムメッセージを表示します。
 
@@ -657,7 +657,7 @@ Did you forget something in your shopping cart?
 ```liquid
 {% assign category = {{custom_attribute.${categories_purchased}}} %}
 {% assign uniq_cat = {{category | uniq }} %}
-{% if {{uniq_cat | size}} == 1%}
+{% if {{uniq_cat | size}} == 1 %}
 {{uniq_cat}}
 {% else %}
 {% abort_message("Purchase category doesn't exist") %}
@@ -1146,8 +1146,8 @@ Link your Hertz account to use Hertz Fast Lane.
 
 {% raw %}
 ```liquid
-{% assign interest = {{custom_attribute.${Buyer Interest}} | first } %}
-{% assign marketplace = {{{{interest}} | split: "" | reverse | join: "" |  truncate: 4, ""}} %}
+{% assign interest = {{custom_attribute.${Buyer Interest}}} | first %}
+{% assign marketplace = interest | split: "" | reverse | join: "" | truncate: 4, "" %}
 {% if {{marketplace}} == '3243' %}
 
 Your last marketplace search was on {{custom_attribute.${Last marketplace buyer interest} | date: '%d.%m.%Y'}}. Check out all of our new offers.
@@ -1330,11 +1330,11 @@ This is a message for Verizon users!
 SMS
 {% endapitags %}
 
-- [受信したSMS キーワードに基づいて、さまざまなメッセージに応答する](#sms-keyword-response)
+- [受信したSMSのキーワードに基づいて、異なるメッセージで返信する](#sms-keyword-response)
 
-### 受信したSMS キーワードに基づいて、さまざまなメッセージに応答する {#sms-keyword-response}
+### 受信したSMSのキーワードに基づいて、異なるメッセージで返信する {#sms-keyword-response}
 
-このユースケースには、ダイナミックなのSMS キーワード処理が組み込まれており、さまざまなメッセージコピーで特定の受信メッセージに応答します。たとえば、誰かのテキストが"START"vs "JOIN"の場合に、異なる応答を送信できます。
+このユースケースはダイナミックなSMSキーワード処理を組み込み、特定の受信メッセージに対して異なるメッセージ文面をもって応答する。例えば、誰かが「START」と「JOIN」のどちらを送信したかによって、異なる返信を送ることができる。
 
 {% raw %}
 ```liquid
@@ -1362,6 +1362,7 @@ Thanks for joining our SMS program!
 タイムゾーン
 {% endapitags %}
 
+- [ユーザーのタイムゾーンにおけるテンプレート](#users-time-zone)
 - [ユーザーのタイムゾーンに応じてメッセージをパーソナライズする。](#personalize-timezone)
 - [CSTタイムゾーンをカスタム属性に追加する](#time-append-cst)
 - [タイムスタンプを挿入する](#time-insert-timestamp)
@@ -1369,6 +1370,37 @@ Thanks for joining our SMS program!
 - [ユーザーのローカルタイムゾーンの特定時間帯に定期のアプリ内メッセージのキャンペーンを送信する](#time-reocurring-iam-window)
 - [ユーザーのローカルタイムゾーンの平日と週末で異なるメッセージを送信する](#time-weekdays-vs-weekends)
 - [ユーザーのローカルタイムゾーンの時間帯に応じて異なるメッセージを送信する](#time-of-day)
+
+### ユーザーのタイムゾーンにおけるテンプレート {#users-time-zone}
+
+デフォルトでは、Liquidにおける日付と時刻は協定世界時（UTC）で表示される。日付と時刻をユーザーのローカルタイムゾーンで表示するには、\``time_zone`フィルター` と ``date`フィルター\` を併用する。
+
+#### ローカルの日付と時刻を設定する
+
+ユーザーが設定したローカルタイムゾーンにおける現在の日付と時刻を反映する変数を割り当てるには、次の形式を使う：
+
+{% raw %}
+```liquid
+{% assign local_date_time = 'now' | time_zone:{{${time_zone}}} | date: '%B %e, %Y' %}
+{{local_date_time}}
+```
+{% endraw %}
+
+- `now`:これはUTCでの現在の日付と時刻を取得する。
+- `time_zone`:これは、{% raw %}`{{${time_zone}}}`{% endraw %}パーソナライゼーションタグを使用して、デフォルト属性からユーザーのローカルタイムゾーンを取得する。
+- `date`:これはユーザーのローカル日時を指定した形式でフォーマットする。前の例では、システムは「2026年2月26日」という形式の文字列を表示する。その他の書式設定オプションについては、を参照せよ[strftime.net](strftime.net)。
+
+#### ユーザーのタイムゾーンをカスタム属性で適用する
+
+カスタム属性にフィルター`time_zone`を適用できる。例えばこうだ：
+
+{% raw %}
+```liquid
+{{custom_attribute.${date_time_attribute} | time_zone: {{${time_zone}}} | date: '%a, %b %e, %Y'}}
+```
+{% endraw %}
+
+これは、曜日を略称で表し、その後に月、日、そして4桁の年を略称で続けた`date_time_attribute`形式で出力する。
 
 ### ユーザーのタイムゾーンに応じてメッセージをパーソナライズする。 {#personalize-timezone}
 
@@ -1548,7 +1580,7 @@ Here's an overview of what your spending looked like in {{month}}.
 ```liquid
 {% assign last_month_name = 'now' | date: "%Y-%m-01" | date: '%s' | minus: 1 | date: "%B" %}
 
-Here's an overview of what your spending looked like in {{month}}.
+Here's an overview of what your spending looked like in {{last_month_name}}.
 ```
 {% endraw %}
 
@@ -1614,10 +1646,10 @@ The date is correct
 
 {% comment %}Assign the correct number of days if the current month is February, taking into account leap years.{% endcomment %}
 
-{% assign leap_year_remainder = {{current_year | modulo: 4 }} != "0" %}
+{% assign leap_year_remainder = current_year | modulo: 4 %}
 {% if leap_year_remainder == 0 and current_month == "Feb" %}
 {% assign last_day_of_month = 29 %}
-{% elsif leap_year_remainder != "0" and current_month == "Feb" %}
+{% elsif current_month == "Feb" %}
 {% assign last_day_of_month = 28 %}
 {% endif %}
 

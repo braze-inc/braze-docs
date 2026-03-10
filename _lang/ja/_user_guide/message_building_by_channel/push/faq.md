@@ -18,13 +18,13 @@ channel:
 
 プッシュトークンが再割り当てされると、ユーザープロファイルの**プッシュ通知の変更ログ**に変更が反映されます。これはユーザープロファイルの [**エンゲージメント**] タブで確認できます。
 
-![コンタクト設定」セクションの「プッシュ・チャンネルログ」。]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
+![「連絡先設定」セクション内の「プッシュ変更履歴」]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
-### Error sending push because payload was invalid」とはどういう意味か？
+### 「ペイロードが無効なためプッシュ送信にエラーが発生しました」とはどういう意味か？
 
-このメッセージは、APNが無効なペイロード(例えば、空のペイロードや大きすぎるペイロード)のためにプッシュリクエストを拒否したことを示す。
+このメッセージは、APNが無効なペイロード（例えば空のペイロードや大きすぎるペイロード）を理由にプッシュ要求を拒否したことを示している。
 
-詳細と次のステップについては、[よくあるプッシュのエラーメッセージを]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/)参照のこと。
+詳細と次のステップについては、[「よくあるプッシュエラーメッセージ」]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/)を参照せよ。
 
 ### オプトイン済みのユーザーにプッシュトークンがないのはなぜですか?
 

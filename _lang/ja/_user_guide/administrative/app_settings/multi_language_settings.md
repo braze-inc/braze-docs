@@ -1,20 +1,20 @@
 ---
 nav_title: 多言語設定
-article_title: 翻訳・多言語設定
+article_title: 翻訳と多言語設定
 alias: "/multi_language_support/"
 page_order: 5.5
 description: "この記事では、Braze ダッシュボードの多言語設定の概要と、メッセージングでロケールを使用する方法について説明します。"
 ---
 
-# 翻訳・多言語設定
+# 翻訳と多言語設定
 
-> 多言語機能を使用すると、[translation タグ s]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) を使用して、1 つのメッセージ内のすべての言語および場所でユーザーを対象にすることができます。
+> 多言語機能により、単一のメッセージ内で翻訳タグを使用して、異なる言語]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales)や地域にいるユーザーを対象にできる。
 
 {% multi_lang_include locales.md section="Prerequisites" %}
 
 ## ロケールを追加する
 
-1. **Settings** > **Localization Settings**に移動します。
+1. **設定**＞**ローカライゼーション設定**へ移動する。
 2. [**ロケールを追加**] を選択し、[**デフォルトのロケール**] または [**カスタム属性**] を選択します。<br><br>![デフォルトのロケールまたはカスタム属性を選択するオプションがある [ロケールを追加] ドロップダウン。]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. ロケールの名前を入力する。
 4. 選択したロケールオプションに対応するユーザー属性を選択します。
@@ -22,12 +22,12 @@ description: "この記事では、Braze ダッシュボードの多言語設定
 {% tabs %}
 {% tab Default locale %}
 
-**デフォルトロケール**の場合、ドロップダウンを使用して、追加する言語、およびオプションで言語に関連付ける国を選択します。<br><br>!["Add locale - Default Language and Country" というウィンドウで、言語と国を指定します。]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
+**デフォルトロケール**の場合、ドロップダウンを使用して、追加する言語、およびオプションで言語に関連付ける国を選択します。<br><br>![「ロケールを追加 - デフォルト言語と国」というウィンドウで言語と国を指定する。]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% tab Custom attributes %}
 
-**Custom Attributes** の場合、ドロップダウンを使用して関連付けられたカスタム属性を選択し、テキストフィールドに値を入力します。<br><br>!["Add locale - カスタム属性 s" というウィンドウで、カスタム属性と数値を指定します。]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
+**Custom Attributes** の場合、ドロップダウンを使用して関連付けられたカスタム属性を選択し、テキストフィールドに値を入力します。<br><br>![「ローカライゼーション追加 - カスタム属性」というウィンドウで、カスタム属性とその値を指定する。]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% endtabs %}
