@@ -19,15 +19,15 @@ channel:
 
 Si vous souhaitez catégoriser vos messages et les regrouper dans la zone de notification de votre utilisateur, vous pouvez utiliser la fonctionnalité Groupes de notification d’iOS via Braze.
 
-Créez votre campagne push iOS, puis vers l'onglet **Paramètres** et ouvrez le menu déroulant **Groupe de notification**.
+Veuillez créer votre campagne push iOS, puis accédez à l'onglet **Paramètres** et ouvrez le menu déroulant **Groupe de notification**.
 
-![L'onglet "Paramètres" avec un menu déroulant "Groupe de notification" qui a sélectionné la valeur "Coupons".]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
+![L'onglet « Paramètres » avec un menu déroulant « Groupe de notification » qui a sélectionné la valeur « Coupons ».]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
 Sélectionnez vos Groupes de notification dans la liste déroulante. Si les paramètres de votre groupe de notifications ne fonctionnent pas correctement ou si vous sélectionnez **Aucun** dans le menu déroulant, le message sera automatiquement envoyé normalement à tous les utilisateurs définis dans l'espace de travail.
 
 Si vous n’avez aucun Groupe de notification listé, vous pouvez en ajouter un à l’aide de l’ID de thread iOS. Vous aurez besoin d’un ID de thread iOS pour chaque groupe de notification que vous souhaitez ajouter. Ensuite, ajoutez-le à vos groupes de notification en cliquant sur **Gérer les groupes de notification** dans le menu déroulant et en remplissant les champs requis dans la fenêtre **Gérer les groupes de notification push iOS** qui apparaît.
 
-![Fenêtre permettant de gérer les groupes de notifications push d'iOS.]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
+![Fenêtre permettant la gestion des groupes de notifications push iOS.]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
 
 Créez votre campagne de notification push iOS, puis regardez en haut du volet de composition. Là, vous verrez un menu déroulant intitulé **Groupes de notification**.
 
@@ -74,7 +74,7 @@ Saisissez ensuite l’identifiant de catégorie récapitulative que vous avez d�
 
 Apple propose aux marques d’envoyer des notifications push discrètes vers les Centres de notification de leurs utilisateurs avant que ceux-ci n’aient officiellement et explicitement donné leur accord, ce qui vous donne l’occasion de tester très tôt la valeur de vos messages. Tout ce que vous avez à faire est de [configurer des notifications push provisoires](#set-up-provisional-push-notifications) dans votre application, puis tout utilisateur disposant d'un jeton push provisoire recevra vos messages.
 
-Contrairement à un jeton de push iOS traditionnel, un jeton de push provisoire agit comme un "laissez-passer d'essai" qui permet aux marques d'atteindre de nouveaux utilisateurs avant qu'ils n'aient vu et cliqué sur la demande d'abonnement push native d'Apple. Avec cette fonctionnalité, votre notification push sera envoyée directement à la barre de notification de votre nouvel utilisateur avec l’option « Keep » (Conserver) ou « Turn Off » (Désactiver) les notifications futures. Au lieu de faire l’expérience d’un parcours d’« abonnement », les utilisateurs feront l’expérience de quelque chose qui ressemble plus à un parcours de « désabonnement ».
+Contrairement à un jeton push iOS traditionnel, un jeton push provisoire agit comme un « laissez-passer d'essai » qui permet aux marques d'atteindre de nouveaux utilisateurs avant qu'ils n'aient vu et cliqué sur la demande d'abonnement native d'Apple pour les notifications push. Avec cette fonctionnalité, votre notification push sera envoyée directement à la barre de notification de votre nouvel utilisateur avec l’option « Keep » (Conserver) ou « Turn Off » (Désactiver) les notifications futures. Au lieu de faire l’expérience d’un parcours d’« abonnement », les utilisateurs feront l’expérience de quelque chose qui ressemble plus à un parcours de « désabonnement ».
 
 {% alert tip %}
 L’autorisation provisoire a le potentiel d’augmenter considérablement votre taux d’abonnement, mais seulement si les utilisateurs apprécient la valeur dans vos messages. Assurez-vous d'utiliser nos fonctionnalités de [segmentation des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), de [ciblage géographique]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/) et de [personnalisation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) pour garantir que les utilisateurs appropriés reçoivent ces notifications de "test" au bon moment. Ensuite, vous pouvez encourager les utilisateurs à s’abonner à vos notifications push, sachant qu’ils ajoutent de la valeur à l’expérience de vos utilisateurs avec votre application.
@@ -82,7 +82,7 @@ L’autorisation provisoire a le potentiel d’augmenter considérablement votre
 
 Quelle que soit l'option choisie par l'utilisateur, elle ajoutera le jeton approprié ou [statut d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) à leurs [Paramètres de contact]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) sous l'onglet **Engagement** dans leur profil utilisateur.
 
-![Paramètres de contact avec un statut d'abonné push.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![Paramètres de contact avec un statut d'utilisateur abonné.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
 Vous pourrez cibler vos utilisateurs en fonction de leur autorisation provisoire ou non en utilisant nos [filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
@@ -93,7 +93,7 @@ Si les utilisateurs choisissent de « désactiver » vos notifications push pr
 {% endalert %}
 
 {% alert important %}
-Si vous utilisez des demandes d'abonnement supplémentaires ou des [amorces de push in-app](https://www.braze.com/resources/glossary/priming-for-push/) (un message in-app qui encourage les utilisateurs à s'abonner aux notifications push), contactez votre conseiller Braze pour obtenir des conseils supplémentaires.
+Si vous utilisez des invites push supplémentaires ou [des amorces push intégrées à l'application](https://www.braze.com/resources/glossary/priming-for-push/) (message in-app qui encourage les utilisateurs à s'abonner aux notifications push), veuillez contacter votre conseiller Braze pour obtenir des conseils supplémentaires.
 {% endalert %}
 
 #### Configurer des notifications push provisoires
@@ -134,13 +134,13 @@ if (@available(iOS 12.0, *)) {
 
 Avec le nouveau mode Focus d’iOS 15, les utilisateurs contrôlent mieux le moment où les notifications des applications peuvent les « interrompre » par un son ou une vibration.
 
-![La page Paramètres de notification iOS qui montre les notifications activées pour une réception/distribution immédiate et avec des notifications sensibles au temps activées.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
+![Page des paramètres de notification iOS qui affiche les notifications activées pour une réception/distribution immédiate et les notifications urgentes activées.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
 
 Les applications peuvent maintenant spécifier le niveau d’interruption d’une notification, en fonction de son urgence.
 
 Pour changer le niveau d'interruption pour une notification push iOS, sélectionnez l'onglet **Paramètres** et choisissez le niveau souhaité dans le menu déroulant **Niveau d'interruption**.
 
-![Liste déroulante permettant de sélectionner le niveau d'interruption.]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
+![Menu déroulant permettant de sélectionner le niveau d'interruption.]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
 
 Cette fonctionnalité n’a pas de configuration minimale requise pour la version SDK, mais est uniquement appliquée pour les appareils exécutant iOS 15+.
 
@@ -158,7 +158,7 @@ Reportez-vous au tableau suivant pour connaître les niveaux d’interruption et
 
 ### Score de pertinence (iOS 15+) {#relevance-score}
 
-![Un résumé de notification pour iOS intitulé "Votre résumé de soirée" avec trois notifications.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![Un résumé des notifications pour iOS intitulé « Votre résumé de la soirée » avec trois notifications.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 iOS 15 introduit également un nouveau moyen pour les utilisateurs de planifier de manière facultative un regroupement de plusieurs notifications à des moments désignés de la journée. Cela permet d’éviter les interruptions constantes tout au long de la journée pour des notifications qui ne nécessitent pas une attention immédiate.
 
@@ -168,7 +168,7 @@ Toutes les notifications seront toujours accessibles dans le centre de notificat
 
 Pour définir le score de pertinence d'une notification iOS, entrez une valeur entre `0.0` et `1.0` dans l'onglet **Paramètres**. Par exemple, le message le plus important doit être envoyé avec `1.0`, alors qu’un message d’importance moyenne peut être envoyé avec `0.5`.
 
-![Score de pertinence de "0.5".]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
+![Note de pertinence de « 0,5 ».]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
 
 Cette fonctionnalité n’a pas de configuration minimale requise pour la version SDK, mais est uniquement appliquée pour les appareils exécutant iOS 15+.
 

@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
-## Mise en place des notifications push
+## Configuration des notifications push
 
 {% tabs %}
 {% tab android %}
@@ -8,7 +8,7 @@
 Pour voir comment les espaces de noms changent entre Java et C#, consultez notre [exemple d'application Xample sur GitHub](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp).
 {% endalert %}
 
-Pour intégrer les notifications push pour .NET MAUI (anciennement Xamarin), vous devrez suivre les étapes pour les notifications push natives Android. Les étapes suivantes ne sont qu'un résumé. Pour une présentation complète, consultez le [guide sur les notifications push natives]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
+Pour l'intégration des notifications push pour .NET MAUI (anciennement Xamarin), il est nécessaire de suivre les étapes relatives aux notifications push natives Android. Les étapes suivantes ne sont qu'un résumé. Pour une présentation complète, consultez le [guide sur les notifications push natives]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
 
 ### Étape 1 : Mettre à jour votre projet
 
@@ -48,7 +48,7 @@ Consultez les [instructions d'intégration de Swift]({{site.baseurl}}/developer_
 
 ### Étape 2 : Demander une autorisation de notification push
 
-Notre SDK .NET MAUI prend désormais en charge la configuration automatique de la fonction "push". Configurez l'automatisation du push et les autorisations en ajoutant le code suivant à la configuration de votre instance Braze :
+Notre SDK .NET MAUI prend désormais en charge la configuration automatique des notifications push. Configurez l'automatisation du push et les autorisations en ajoutant le code suivant à la configuration de votre instance Braze :
 
 ```csharp
 configuration.Push.Automation = new BRZConfigurationPushAutomation(true);

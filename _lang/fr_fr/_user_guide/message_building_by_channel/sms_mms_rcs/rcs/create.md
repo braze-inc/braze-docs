@@ -17,12 +17,12 @@ channel:
 
 ### Étape 1 : Choisissez où créer votre message
 
-Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont plus adaptées aux campagnes d'envoi de messages uniques et ciblés, tandis que les Canevas sont plus adaptés aux parcours utilisateurs en plusieurs étapes.
+Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont plus adaptées aux campagnes de communication uniques et avec ciblage, tandis que les canevas conviennent mieux aux parcours utilisateur en plusieurs étapes.
 
 {% tabs %}
 {% tab Campaign %}
 1. Allez dans **Messagerie** > **Campagnes** et sélectionnez **Créer une campagne**.
-2. Sélectionnez **SMS/MMS/RCS** ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multicanal**.
+2. Veuillez sélectionner **SMS/MMS/RCS** ou, pour le ciblage de campagnes sur plusieurs canaux, sélectionnez **Multicanal**.
 3. Donnez un nom clair et significatif à votre campagne.
 4. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire.
    * Les balises facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [générateur de rapports]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de certaines étiquettes spécifiques.
@@ -38,7 +38,7 @@ Vous ne savez pas si votre message doit être envoyé via une campagne ou un Can
 {: start="7"}
 7\. Choisissez entre SMS et RCS. Avant de composer des messages RCS, choisissez le canal de communication avec lequel vous les envoyez. Nous recommandons généralement d'utiliser RCS dans la mesure du possible, car il y a des avantages significatifs en termes d'engagement de l'utilisateur par rapport aux SMS ; cependant, nous offrons toujours la possibilité d'envoyer des SMS afin que vous ayez un maximum de flexibilité et de contrôle. 
 
-![Options permettant de sélectionner un type de message RCS ou SMS/MMS.]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
+![Options permettant de choisir entre un message RCS ou SMS/MMS.]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
 
 {% alert tip %}
 Si tous les messages de votre campagne vont être similaires ou avoir le même contenu, composez votre message avant d’ajouter des variantes supplémentaires. Vous pouvez ensuite choisir **Copier à partir de la variante** dans la liste déroulante **Ajouter une variante**.
@@ -47,7 +47,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 {% endtab %}
 {% tab Canvas %}
 1. [Créez votre canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) à l'aide du compositeur de canvas.
-2. Après avoir configuré votre canvas, ajoutez une étape **SMS/MMS/RCS** Message dans le générateur de canvas. 
+2. Une fois votre canevas configuré, veuillez ajouter une étape « Message **SMS/MMS/RCS** » dans le générateur de canevas. 
 3. Donnez un nom clair et significatif à votre étape.
 4. Sélectionnez un [groupe d'abonnement]({{site.baseurl}}/sms_rcs_subscription_groups/) compatible avec RCS. Lors de la sélection d’un groupe d’abonnement, Braze ajoute automatiquement un filtre de segmentation, garantissant que seuls les utilisateurs abonnés recevront la campagne. Seuls les codes longs et les codes courts appartenant à ce groupe d'abonnement seront utilisés pour le ciblage des utilisateurs.
 - **Repli sur le SMS :** Braze recommande vivement que chaque groupe d'abonnement qui contient un expéditeur RCS comprenne également au moins un code SMS de repli. Ceci est important pour la livrabilité dans les cas où les messages RCS n'aboutissent pas. Cela peut s'expliquer par l'incompatibilité de l'appareil de l'utilisateur et la couverture incomplète de l'opérateur dans un pays ou une région donné(e). En activant la fonction SMS fallback, votre message sera toujours transmis à l'utilisateur et vous ne manquerez jamais l'occasion d'entrer en contact avec lui.
@@ -55,7 +55,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 {: start="5"}
 5\. Choisissez entre SMS et RCS. Avant de composer des messages RCS, choisissez le canal de communication avec lequel vous les envoyez. Nous recommandons généralement d'utiliser RCS dans la mesure du possible, car il y a des avantages significatifs en termes d'engagement de l'utilisateur par rapport aux SMS ; cependant, nous offrons toujours la possibilité d'envoyer des SMS afin que vous ayez un maximum de flexibilité et de contrôle. 
 
-![Options permettant de sélectionner un type de message RCS ou SMS/MMS.]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
+![Options permettant de choisir entre un message RCS ou SMS/MMS.]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -64,7 +64,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 Pour votre type de message RCS, choisissez entre **Texte** ou **Média**.
 
-![Options permettant de sélectionner un type de message Texte ou Média.]({% image_buster /assets/img/rcs/rcs_text_media.png %}){: style="max-width:65%;"}
+![Options permettant de choisir entre un message texte ou multimédia.]({% image_buster /assets/img/rcs/rcs_text_media.png %}){: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Text %}
@@ -77,7 +77,7 @@ Comme leur nom l'indique, les messages texte RCS se concentrent sur le texte en 
     - Les **réponses suggérées** sont des boutons contenant des suggestions de réponses sur lesquelles les utilisateurs peuvent cliquer et qui sont pré-remplies dans leur saisie de texte, ce qui leur évite d'avoir à réfléchir à une réponse en leur proposant un ensemble limité de choix. 
     - Les **actions suggérées** sont des boutons qui déclenchent une action sur l'appareil de l'utilisateur. Ils se composent généralement d'un ou deux mots descriptifs et d'une icône visuelle pour aider l'utilisateur à comprendre ce que fait le bouton. Braze prend actuellement en charge les actions suggérées OpenURL. Le fonctionnement est similaire à celui d'une URL : les utilisateurs qui sélectionnent le bouton sont redirigés vers une page web ou un autre emplacement/localisation identifié par une URL. 
 
-![Un GIF de trois actions suggérées pour un message RCS promouvant les styles de mode en vogue : "La royauté des contes de fées", "L'université à la mode" et "Montrez-moi vos autres styles".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
+![Un GIF de trois actions suggérées pour un message RCS promouvant les styles de mode en vogue : « La royauté des contes de fées », « Le monde universitaire avant-gardiste » et « Veuillez me présenter vos autres styles ».]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
 
 #### Considérations
 
@@ -99,7 +99,7 @@ Les messages média RCS vous permettent d'utiliser des formats média attrayants
 - Prend en charge les fichiers vidéo, y compris les formats MP4, MPEG et MV4. Les fichiers vidéo peuvent être ajoutés par URL directement dans le compositeur de messages. 
 - Prend en charge les fichiers de documents au format PDF. Les fichiers de documents peuvent être ajoutés par l'intermédiaire de l'URL directement dans le compositeur de messages. 
 
-![RCS composer avec une option pour télécharger un fichier média.]({% image_buster /assets/img/rcs/rcs_media_type.png %})
+![Compositeur RCS avec une option permettant de télécharger un fichier multimédia.]({% image_buster /assets/img/rcs/rcs_media_type.png %})
 
 #### Spécifications des fichiers
 
@@ -129,7 +129,7 @@ Avant de poursuivre, lisez nos [lignes directrices concernant les limites des me
 
 ### Étape 4 : Prévisualiser et tester votre message
 
-Parce que le rendu RCS est contrôlé par le système d'exploitation de l'utilisateur, le fabricant de l'appareil, l'opérateur et l'application d'envoi de messages (par exemple, Google Messages vs. Apple Messages), l'apparence des messages peut varier. Par conséquent, l'aperçu du RCS affiché dans Braze peut ne pas correspondre exactement à ce que l'utilisateur final reçoit en fin de compte. Les différences peuvent porter sur la mise en page, la taille des supports, les boutons, les éléments de marque ou les fonctionnalités prises en charge. Braze recommande toujours de prévisualiser et de tester votre message avant de l’envoyer. Utilisez l'onglet **Test** pour envoyer un RCS de test à des groupes de test de contenu ou à des utilisateurs individuels, et prévisualiser le message en tant qu'utilisateur directement dans Braze. Cependant, le rendu final doit toujours être validé sur des appareils réels dans la mesure du possible, car Braze ne peut pas garantir une parité parfaite pour toutes les combinaisons d'OS, d'appareils et d'opérateurs.
+Étant donné que l'affichage RCS est contrôlé par le système d'exploitation de l'utilisateur, le fabricant de l'appareil, l'opérateur et l'application d'envoi de messages (par exemple, Google Messages par opposition à Apple Messages), l'apparence des messages peut varier. Par conséquent, l'aperçu RCS affiché dans Braze peut ne pas correspondre exactement à ce que l'utilisateur final recevra. Les différences peuvent concerner la mise en page, la taille des supports, les boutons, les éléments de marque ou les fonctionnalités prises en charge. Braze recommande toujours de prévisualiser et de tester votre message avant de l’envoyer. Veuillez utiliser l'onglet **Test** pour envoyer un RCS test à des groupes de test de contenu ou à des utilisateurs individuels, et prévisualiser le message en tant qu'utilisateur directement dans Braze. Cependant, le rendu final doit toujours être validé sur des appareils réels dans la mesure du possible, car Braze ne peut garantir une parfaite parité entre toutes les combinaisons de systèmes d'exploitation, d'appareils et d'opérateurs.
 
 
 ### Étape 5 : Créer le reste de votre campagne ou de votre Canvas
@@ -150,7 +150,7 @@ Ciblez les utilisateurs en choisissant des segments ou des filtres pour réduire
 
 {% multi_lang_include target_audiences.md %}
 
-Ensuite, vous sélectionnez l'audience la plus large à partir de vos segments et vous affinez cette segmentation à l'aide de [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) facultatifs. Vous recevez automatiquement un aperçu de ce à quoi ressemble la population de ce segment approximatif. N'oubliez pas que l'appartenance exacte à un segment est toujours calculée avant l'envoi du message.
+Ensuite, veuillez sélectionner l'audience la plus large parmi vos segments et affiner ce segment à l'aide de [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) facultatifs. Vous recevez automatiquement un aperçu de ce à quoi ressemble approximativement la population de ce segment. Veuillez noter que l'appartenance exacte à un segment est toujours calculée avant l'envoi du message.
 
 {% alert tip %}
 Vous souhaitez utiliser le reciblage RCS pour cibler les utilisateurs en fonction de leurs interactions par SMS et RCS ? Reportez-vous à la rubrique " [reciblage"]({{site.baseurl}}/sms_mms_rcs_user_retargeting/).
@@ -182,7 +182,7 @@ Si vous envisagez d'utiliser Liquid, veillez à inclure une valeur par défaut p
 
 Vous avez besoin d'aide pour créer un texte attrayant ? Essayez d'utiliser l'[assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Saisissez le nom ou la description d'un produit, et l'intelligence artificielle générera un texte marketing semblable à celui d'un humain, que vous pourrez utiliser dans vos messages.
 
-![Compositeur de messages avec une icône pour ouvrir l'assistant de rédaction de l'intelligence artificielle.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
+![Éditeur de messages avec une icône permettant d'accéder à l'assistant de rédaction à l'intelligence artificielle.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
 
 ## Foire aux questions
 

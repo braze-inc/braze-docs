@@ -1,12 +1,12 @@
 ---
 nav_title: Segmentation basée sur les comptes
-article_title: "Mise en place d'une segmentation basée sur les comptes"
+article_title: Configurer la segmentation basée sur les comptes
 page_order: 2
 page_type: reference
 description: "Apprenez à utiliser les différentes fonctionnalités de Braze pour alimenter vos cas d'utilisation de segmentation basée sur les comptes B2B."
 ---
 
-# Mettre en place une segmentation basée sur les comptes
+# Configurer la segmentation basée sur les comptes
 
 > Cette page montre comment utiliser diverses fonctionnalités de Braze pour alimenter vos cas d'utilisation de segmentation basée sur les comptes B2B.
 
@@ -108,7 +108,7 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Option 2 : Lorsque vous utilisez des sources connectées pour vos objets de gestion
 
-Pour savoir comment utiliser les sources connectées dans la segmentation, reportez-vous à [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Utilisez les modèles décrits dans la section [Utilisation des catalogues](#option-1-when-using-catalogs-for-your-business-objects) pour vous inspirer de la manière de formater les tables sources, car vous pouvez les formater comme vous le souhaitez.
+Pour obtenir des informations de base sur l'utilisation des sources connectées dans la segmentation, veuillez vous référer aux [extensions de segments CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Utilisez les modèles décrits dans la section [Utilisation des catalogues](#option-1-when-using-catalogs-for-your-business-objects) pour vous inspirer de la manière de formater les tables sources, car vous pouvez les formater comme vous le souhaitez.
 
 ## Utilisation de votre extension basée sur le compte dans un segment
 

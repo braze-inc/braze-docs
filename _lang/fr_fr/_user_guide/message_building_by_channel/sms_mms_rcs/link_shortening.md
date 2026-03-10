@@ -23,11 +23,11 @@ Le raccourcissement des liens et le suivi des clics peuvent être activés au [n
 
 La longueur de l'URL est déterminée par le type de suivi activé :
 - Le **suivi de base** permet le suivi des clics au niveau de la campagne. Les URL statiques auront une longueur de 20 caractères, et les URL personnalisées auront une longueur de 25 caractères.
-- Le **suivi avancé** permet de suivre les clics au niveau de la campagne et de l'utilisateur, et d'utiliser les fonctions de segmentation et de reciblage qui s'appuient sur les clics. Les clics génèrent également un [événement SMS]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) envoyé par Currents. Les URL statiques avec suivi avancé auront une longueur de 27-28 caractères, ce qui vous permettra de créer des segmentations d'utilisateurs ayant cliqué sur les URL. Les URL personnalisés auront une longueur de 32 à 33 caractères.
+- Le **suivi avancé** permet de suivre les clics au niveau de la campagne et de l'utilisateur, et d'utiliser les fonctions de segmentation et de reciblage qui s'appuient sur les clics. Les clics génèrent également un [événement SMS]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) envoyé par Currents. Les URL statiques avec suivi avancé auront une longueur de 27 à 28 caractères, ce qui vous permettra de créer des segments d'utilisateurs ayant cliqué sur les URL. Les URL de personnalisation auront une longueur de 32 à 33 caractères.
 
 Les liens sont raccourcis à l'aide de notre domaine court partagé (`brz.ai`). Un exemple d'URL peut ressembler à ceci : `https://brz.ai/8jshX` (basique, statique) ou `https://brz.ai/p/8jshX/2dj8d` (avancé, personnalisé). Pour plus d'informations, reportez-vous à la section [Test](#testing).
 
-Tous les URL statiques commençant par `http://` ou `https://` sont raccourcis. Les URL statiques raccourcis sont valables pendant un an à compter de la date de leur création. Les URL raccourcis qui contiennent la personnalisation Liquid sont valables pendant deux mois.
+Toutes les URL statiques commençant par`http://`ou`https://`sont raccourcies. Les URL raccourcies statiques sont valables pendant un an à compter de leur date de création. Les URL raccourcies contenant une personnalisation Liquid sont valables pendant deux mois.
 
 {% alert note %}
 Si vous prévoyez d'utiliser le [filtre de canal intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) <sup>BrazeAITM</sup> et que vous souhaitez que les canaux SMS et RCS soient sélectionnables, activez le raccourcissement de lien avec suivi avancé.
@@ -39,7 +39,7 @@ Pour utiliser le raccourcissement des liens, assurez-vous que la fonction de rac
 
 ![Compositeur de messages avec un bouton bascule pour le raccourcissement des liens.]({% image_buster /assets/img/link_shortening/shortening1.png %})
 
-Braze ne reconnaît que les URL qui commencent par `http://` ou `https://`. Lorsqu'une URL est reconnue, la section **Aperçu** est mise à jour avec une URL marque substitutive. Braze estime la longueur de l'URL après le raccourcissement, mais un avertissement vous invite à sélectionner un utilisateur test et à enregistrer le message en tant que brouillon pour obtenir une estimation plus précise.
+Braze ne reconnaît que les URL commençant par`http://`ou `https://`. Lorsqu'une URL est reconnue, la section **Aperçu** est mise à jour avec une URL marque substitutive. Braze estime la longueur de l'URL après raccourcissement, mais un avertissement vous invite à sélectionner un utilisateur test et à enregistrer le message comme brouillon pour obtenir une estimation plus précise.
 
 ![Compositeur de messages avec une URL longue dans la case "Message" et un lien raccourci généré dans l'aperçu.]({% image_buster /assets/img/link_shortening/shortening3.png %})
 
@@ -74,9 +74,9 @@ https://example.com/{{url_var}}
 
 ### Raccourcir les URL rendues par les variables Liquid
 
-Nous raccourcissons les URL qui sont générées par Liquid, même celles qui sont incluses dans les propriétés de déclencheurs API. Par exemple, si {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} conseille un URL valide, nous raccourcissons et suivons cet URL avant d'envoyer le message. 
+Nous raccourcissons les URL qui sont générées par Liquid, même celles qui sont incluses dans les propriétés de déclencheurs API. Par exemple, si l'URL{% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} est valide, nous raccourcissons et suivons cette URL avant d'envoyer le message. 
 
-### Raccourcir les URL dans l'endpoint `/messages/send` 
+### Raccourcir les URL dans`/messages/send`l'endpoint
 
 Le raccourcissement des liens est également activé pour les messages API uniquement via l’[`/messages/send`endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/). Pour activer également le suivi de base ou avancé, utilisez les paramètres de requête `link_shortening_enabled` ou `user_click_tracking_enabled`.
 
@@ -92,11 +92,11 @@ Pour obtenir une liste complète des paramètres de requête, consultez les [par
 
 Avant de lancer votre campagne ou votre Canvas, la meilleure pratique consiste à prévisualiser et à tester votre message. Pour ce faire, accédez à l'onglet **Test** pour prévisualiser et envoyer un message SMS ou RCS à des [groupes de test de contenu]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) ou à un utilisateur individuel. 
 
-Cet aperçu est mis à jour avec une personnalisation pertinente et l'URL raccourcie. Le nombre de caractères et les [segments facturables]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/) sont également mis à jour pour tenir compte de la personnalisation rendue et de l'URL raccourcie.
+Cet aperçu est mis à jour avec la personnalisation pertinente et l'URL raccourcie. Le nombre de caractères et de [segments facturables]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/) est également mis à jour afin de refléter la personnalisation appliquée et l'URL raccourcie.
 
-Veillez à enregistrer la campagne ou le canvas avant d'envoyer un message test afin de recevoir une représentation de l'URL raccourcie qui est expédiée dans votre message. Si la campagne ou le Canvas n'est pas enregistré avant un envoi de test, l'envoi de test inclut une URL marque substitutive.
+Veuillez enregistrer la campagne ou le canvas avant d'envoyer un message test afin de recevoir une représentation de l'URL raccourcie qui sera envoyée dans votre message. Si la campagne ou le canvas n'est pas enregistré avant un envoi test, celui-ci inclut une URL marque substitutive.
 
-Pour que les Canvas apparaissent dans le filtre "Cliquez sur le lien SMS abrégé", l'étape du canvas contenant le lien abrégé doit également être activée avec le suivi avancé, qui permet le suivi des clics au niveau de l'utilisateur. Si le lien court est configuré avec un suivi de base, l'option de filtrage des événements de clics sur le lien court SMS n'est pas disponible.
+Pour que les canevas apparaissent dans le filtre « Lien SMS raccourci cliqué », l'étape du canvas contenant le lien raccourci doit également être activée avec le suivi avancé, qui permet le suivi des clics au niveau de l'utilisateur. Si le lien court est configuré avec un suivi de base, l'option permettant de filtrer les événements de clic sur les liens courts SMS n'est pas disponible.
 
 {% alert important %}
 Si un brouillon est créé dans un Canvas actif, l'URL raccourcie ne sera pas générée. L'URL raccourci est généré lorsque le projet Canvas est rendu actif.
@@ -110,11 +110,11 @@ La personnalisation liquide et les URL raccourcis sont modélisés dans l'onglet
 
 ## Suivi des clics
 
-Lorsque le raccourcissement des liens est activé, le tableau des **performances SMS/MMS/RCS** comprend une colonne intitulée **Nombre total de clics** qui indique le nombre de clics par variante et le taux de clics associé. Pour plus de détails sur les indicateurs, reportez-vous à la section [Performances des messages.]({{site.baseurl}}/sms_mms_rcs_reporting/)
+Lorsque le raccourcissement des liens est activé, le tableau **Performances SMS/MMS/RCS** comprend une colonne intitulée **« Total des clics** » qui affiche le nombre de clics par variante et le taux de clics associé. Pour plus de détails sur les indicateurs, reportez-vous à la section [Performances des messages.]({{site.baseurl}}/sms_mms_rcs_reporting/)
 
 ![Tableau des indicateurs de performance des SMS et MMS.]({% image_buster /assets/img/link_shortening/shortening4.png %})
 
-Les tableaux " **Performances historiques** " et " **Performances SMS/MMS/RCS** " comprennent également une option " **Nombre total de clics** " et affichent une série chronologique quotidienne d'événements de clics. Les clics sont incrémentés lors de la redirection (par exemple lorsqu'un utilisateur visite un lien) et peuvent être incrémentés plus d'une fois par utilisateur.
+Les tableaux **« Performances historiques** » et **« Performances SMS/MMS/RCS** » comprennent également une option pour **le nombre total de clics** et affichent une série chronologique quotidienne des événements de clic. Les clics sont incrémentés lors de la redirection (par exemple lorsqu'un utilisateur visite un lien) et peuvent être incrémentés plus d'une fois par utilisateur.
 
 ## Reciblage des utilisateurs
 
@@ -128,16 +128,12 @@ Pour obtenir des conseils sur le reciblage, consultez le site [Retargeting]({{si
 
 Oui. Lorsque le **suivi avancé** est activé, vous pouvez recibler les utilisateurs qui ont cliqué sur des URL en exploitant les [filtres de reciblage par SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) ou les événements de clics par SMS (`users.messages.sms.ShortLinkClick`) envoyés par Currents.
 
-{% alert note %}
-Pour l'instant, les événements RCS click ne sont pas disponibles via Currents.
-{% endalert %}
-
 ### Le raccourcissement des liens fonctionne-t-il avec des liens profonds ou des liens universels ?
 
-La fonction de raccourcissement de liens ne fonctionne pas avec les liens profonds. Vous pouvez également raccourcir les liens universels à partir de fournisseurs tiers tels que Branch ou Appsflyer, mais les utilisateurs risquent de subir une brève redirection ou un effet de "scintillement". Cela est dû au fait que le lien raccourci passe d'abord par le web avant d'aboutir au lien universel qui permet l'ouverture de l'application. En outre, Braze n'est pas en mesure de résoudre les problèmes qui peuvent survenir lors du raccourcissement des liens universels, tels que la rupture de l'attribution ou des redirections inattendues.
+La fonction de raccourcissement de liens ne fonctionne pas avec les liens profonds. Il est également possible de raccourcir les liens universels provenant de fournisseurs tiers tels que Branch ou Appsflyer, mais les utilisateurs peuvent alors rencontrer un bref effet de redirection ou de « scintillement ». Cela se produit parce que le lien raccourci passe d'abord par le Web avant d'être résolu en lien universel qui prend en charge l'ouverture de l'application. De plus, Braze n'est pas en mesure de résoudre les problèmes pouvant survenir lors du raccourcissement des liens universels, tels que la rupture de l'attribution ou les redirections inattendues.
 
 {% alert note %}
-Testez l'expérience utilisateur avant de mettre en œuvre le raccourcissement de lien avec des liens universels pour confirmer qu'il répond à vos attentes.
+Veuillez tester l'expérience utilisateur avant de mettre en œuvre le raccourcissement des liens avec des liens universels afin de vous assurer qu'elle répond à vos attentes.
 {% endalert %}
 
 ### Le site `send_ids` est-il associé aux clics sur les SMS ?

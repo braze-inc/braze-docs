@@ -10,13 +10,15 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 ---
 {% api %}
 # Planifier des Canvas déclenchés par API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
 > Utilisez cet endpoint pour planifier des messages Canvas via une réception/distribution déclenchée par l'API, ce qui vous permet de décider quelle action doit déclencher l'envoi du message.
 
-Vous pouvez indiquer les `canvas_entry_properties` qui seront modélisées dans les messages envoyés dès les premières étapes du Canvas.
+Vous pouvez indiquer les `context` qui seront modélisées dans les messages envoyés dès les premières étapes du Canvas.
+
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 Notez que pour envoyer des messages avec cet endpoint, vous devez disposer d'un [ID Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier), créé lorsque vous créez un Canvas.
 
@@ -49,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the Canvas
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
+  "context": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message,
     "in_local_time": (optional, bool),
@@ -66,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `recipients` | Facultatif | Tableau des objets Destinataires | Voir [objet destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Facultatif | Objet Audience connectée | Voir [audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`broadcast`| Facultatif | Valeur booléenne | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
-| `canvas_entry_properties` | Facultatif | Objet | Personnalisation des paires clé-valeur pour tous les utilisateurs de cet envoi. Voir l'[objet des propriétés de l'entrée Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object). |
+| `context` | Facultatif | Objet | Personnalisation des paires clé-valeur pour tous les utilisateurs de cet envoi. Veuillez vous référer à [l'objet contextuel canvas]({{site.baseurl}}/api/objects_filters/context_object). |
 | `schedule` | Requis | Objet Planification | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -81,7 +83,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     {
       "user_alias": "example_alias",
       "external_user_id": "external_user_identifier",
-      "canvas_entry_properties": {}
+      "context": {}
     }
   ],
   "audience": {
@@ -132,7 +134,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     ]
   },
   "broadcast": false,
-  "canvas_entry_properties": {},
+  "context": {},
   "schedule": {
     "time": "",
     "in_local_time": false,

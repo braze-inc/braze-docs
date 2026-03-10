@@ -7,7 +7,7 @@ description: "Cet article décrit les événements/ propriétés personnalisés,
 search_rank: 2
 ---
 
-# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Événements personnalisés
+# [![](https://learning.braze.com/custom-events-and-attributes)C[ours]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze Learning](https://learning.braze.com/custom-events-and-attributes) Événements personnalisés
 
 > Cet article décrit les événements/ propriétés personnalisés, les filtres de segmentation associés, les propriétés d'entrée dans Canvas, les analyses pertinentes, etc. Pour en savoir plus sur les événements de Braze en général, consultez la rubrique [Événements.]({{site.baseurl}}/user_guide/data/custom_data/events/)
 
@@ -103,7 +103,7 @@ Le tableau suivant montre les filtres disponibles pour la segmentation des utili
 
 Braze note le nombre de fois où des événements personnalisés se sont produits et la dernière fois qu'ils ont été effectués par chaque utilisateur à des fins de segmentation. Consultez ces analyses en vous rendant dans la rubrique **Analytics** > **Custom Events Report (si vous utilisez un événement personnalisé**).
 
-Sur la page **Rapport sur les événements personnalisés** du tableau de bord, vous pouvez visualiser globalement la fréquence de chaque événement personnalisé. Les lignes grises superposées à la série chronologique indiquent la dernière fois qu'une campagne a été envoyée, ce qui est utile pour voir comment vos campagnes ont affecté l'activité des événements personnalisés.
+Sur la page **Rapport sur les événements personnalisés** du tableau de bord, vous pouvez visualiser globalement la fréquence de chaque événement personnalisé. Les lignes grises superposées à la série chronologique indiquent la dernière fois qu'une campagne a été envoyée, ce qui est utile pour visualiser l'impact de vos campagnes sur l'activité des événements personnalisés.
 
 ![Graphique du nombre d'événements personnalisés sur la page des événements personnalisés dans le tableau de bord montrant les tendances pour un événement personnalisé.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
@@ -123,7 +123,7 @@ Les segments créés avec des données d'événements personnalisés ne peuvent 
 
 Les propriétés d'événement personnalisées sont des métadonnées ou des attributs d'événement personnalisés qui décrivent une occurrence spécifique d'un événement. Ces propriétés peuvent être utilisées pour qualifier davantage les conditions de déclenchement, accroître la personnalisation des messages, suivre les conversions et générer des analyses/analytiques plus sophistiquées grâce à l'exportation de données brutes.
 
-Les propriétés d'événement personnalisé ne sont pas stockées dans le profil Braze et n'enregistrent donc pas de points données (voir [Points données](#data-points) pour les exceptions).
+Les propriétés d'événement personnalisées ne sont pas stockées dans le profil Braze et, par conséquent, n'enregistrent pas les points de données (voir [Points de données](#data-points) pour les exceptions).
 
 {% alert important %}
 Chaque événement personnalisé ou achat peut avoir jusqu’à 256 propriétés de l'événement personnalisé distinctes. Si un événement personnalisé ou un achat est enregistré avec plus de 256 propriétés, seules les 256 premières propriétés seront capturées et utilisables.
@@ -149,6 +149,16 @@ Les objets de propriété d'événement qui contiennent des valeurs de tableau o
 
 Vous pouvez modifier le type de données de votre propriété d'événement personnalisé, mais soyez conscient des conséquences d'un [changement de type de données]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) après la collecte des données.
 
+#### Clés réservées
+
+Il n'est pas possible d'utiliser des clés réservées comme noms de propriétés d'événement. L'utilisation d'une clé réservée dans `properties`l'objet renverra l'erreur « Champ « propriétés » non valide ».
+
+| Propriété | Clé réservée |
+| --- | --- |
+| Événements personnalisés | `time` et `event_name` | 
+| Événements d’achat |`time`, `product_id`, `quantity`, `event_name`, `price`, `currency` | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ### Utiliser des propriétés d’événement personnalisé
 
 Les propriétés d'événement personnalisé peuvent être utilisées pour qualifier les déclencheurs de campagne, suivre les conversions et personnaliser les messages.
@@ -157,7 +167,7 @@ Les propriétés d'événement personnalisé peuvent être utilisées pour quali
 
 Utilisez les propriétés d'événement personnalisées pour restreindre davantage votre audience dans le cadre d'une campagne ou d'un canvas particulier. Par exemple, si vous avez une application de commerce électronique et que vous souhaitez envoyer un message à un utilisateur lorsqu'il abandonne son panier, vous pouvez ajouter une propriété d'événement personnalisé de `item price` pour améliorer votre public cible et permettre une personnalisation accrue de la campagne.
 
-![Filtres de propriété de l’événement personnalisé pour une carte abandonnée. Deux filtres sont combinés avec un opérateur AND pour envoyer cette campagne aux utilisateurs qui ont abandonné leur carte avec un prix d'article compris entre 100 et 200 dollars.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
+![Filtres de propriété de l’événement personnalisé pour une carte abandonnée. Deux filtres sont combinés avec un opérateur AND pour envoyer cette campagne aux utilisateurs qui ont abandonné leur panier avec un article dont le prix est compris entre 100 et 200 dollars.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
 Les propriétés d'événement personnalisé imbriquées sont également prises en charge dans la [réception/distribution par événement]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 
@@ -200,7 +210,9 @@ Les propriétés des événements personnalisés sont mises à jour en temps ré
 
 ##### Ajout de propriétés d'événement pour la segmentation
 
-Vous devez [disposer des autorisations utilisateur]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) "Gérer la segmentation personnalisée des événements" pour créer des segments basés sur la récurrence et la fréquence des événements.
+Vous devez disposer de l'[autorisation utilisateur]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) « Modifier la segmentation des propriétés d'événement personnalisées » pour créer des segments basés sur la récence et la fréquence des propriétés d'événement.
+
+{% multi_lang_include deprecations/user_permissions.md %}
 
 Par défaut, vous pouvez avoir 20 propriétés d'événement segmentation par espace de travail. Contactez votre gestionnaire de compte Braze pour augmenter cette limite.
 
@@ -215,9 +227,9 @@ Les filtres de segmentation des propriétés d'événement sont les suivants :
 - A effectué des achats avec le bien A d'une valeur B, X fois au cours des Y derniers jours.
 - Ajoute la possibilité de segmentation dans un délai de 1 à 30 jours.
 
-![Un groupe de filtres dont la propriété "Abandon de panier" est "Nombre d'articles" et la valeur "2" plus d'une fois au cours des 30 derniers jours calendaires.]({% image_buster /assets/img/nested_object3.png %})
+![Un groupe de filtres qui contient « Panier abandonné » avec la propriété « nombre d'articles » et une valeur supérieure à 2 au cours des 30 derniers jours du calendrier.]({% image_buster /assets/img/nested_object3.png %})
 
-Les données ne sont enregistrées que pour une propriété d'événement donnée après que vous l'avez activée, et les propriétés d'événement ne sont disponibles qu'à partir de cette date.
+Les données ne sont enregistrées que pour une propriété d'événement donnée après que vous l'ayez activée, et les propriétés d'événement ne sont disponibles qu'à partir de cette date.
 
 ##### Points de données
 
@@ -242,8 +254,8 @@ Les propriétés de l'événement personnalisé sont conçues pour vous aider am
 
 Vous pouvez effectuer une segmentation basée sur les valeurs des propriétés d'événement de deux manières :
 
-1. **Sur 30 jours :** Vous pouvez utiliser la segmentation des propriétés d'événement en fonction de la fréquence et de la récurrence de valeurs de propriétés d'événement spécifiques au sein des segments de Braze. Cette option a une incidence sur l'utilisation des données.<br><br>
-2. **Sur 30 jours et au-delà :** Pour couvrir la segmentation des propriétés d'événement à court et à long terme, vous pouvez utiliser les [extensions de segments.]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) Cette fonctionnalité segmente les utilisateurs en fonction des événements personnalisés et des propriétés d'événement suivis au cours des deux dernières années. Cette option n'a pas d'incidence sur l'utilisation des données.
+1. **Sur 30 jours :** Vous pouvez utiliser la segmentation des propriétés d'événement en fonction de la fréquence et de la récence des valeurs spécifiques des propriétés d'événement au sein des segments Braze. Cette option a une incidence sur l'utilisation des données.<br><br>
+2. **Sur 30 jours et au-delà :** Pour couvrir la segmentation des propriétés d'événement à court et à long terme, vous pouvez utiliser les [extensions de segments.]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) Cette fonctionnalité segmente les utilisateurs en fonction des événements personnalisés et des propriétés d'événement suivis au cours des deux dernières années. Cette option n'a aucune incidence sur l'utilisation des données.
 
 Contactez votre gestionnaire du succès des clients Braze pour obtenir des recommandations sur la meilleure approche en fonction de vos besoins spécifiques.
 

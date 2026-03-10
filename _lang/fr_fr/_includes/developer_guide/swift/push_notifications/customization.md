@@ -1,6 +1,6 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Vous devrez également [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Il vous sera également nécessaire de [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
 
-## Personnaliser les boutons d'action {#push-action-buttons-integration}
+## Personnalisation des boutons d'action {#push-action-buttons-integration}
 
 Le SDK Braze Swift offre une prise en charge de la gestion des URL pour les boutons d'action push. Il existe quatre ensembles de boutons d'action par défaut pour les catégories de notification push par défaut de Braze : `Accept/Decline`, `Yes/No`, `Confirm/Cancel` et `More`.
 
@@ -9,12 +9,12 @@ Le SDK Braze Swift offre une prise en charge de la gestion des URL pour les bout
 ### Enregistrement manuel des boutons d'action
 
 {% alert important %}
-L'enregistrement manuel des boutons d'action push n'est pas recommandé.
+Il n'est pas recommandé d'enregistrer manuellement les boutons d'action push.
 {% endalert %}
 
-Si vous configurez [les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) à l'aide de l'option de configuration `configuration.push.automation`, Braze enregistre automatiquement les boutons d'action pour les catégories de push par défaut et gère l'analyse/analytique des clics sur les boutons d'action push et le routage des URL.
+Si vous [configurez les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) à l'aide de l'option`configuration.push.automation`de configuration, Braze enregistre automatiquement les boutons d'action pour les catégories push par défaut et gère l'analyse des clics sur les boutons d'action push et le routage des URL.
 
-Toutefois, vous pouvez choisir d'enregistrer manuellement les boutons d'action push à la place.
+Cependant, vous pouvez choisir d'enregistrer manuellement les boutons d'action push à la place.
 
 #### Étape 1 : Ajout des catégories de notification push par défaut de Braze {#registering}
 
@@ -65,7 +65,7 @@ AppDelegate.braze?.notifications.handleUserNotification(response: response, with
 
 Si vous utilisez le framework `UNNotification` et que vous avez implémenté les [méthodes de notification de]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling) Braze, vous devriez déjà avoir intégré cette méthode. 
 
-## Personnalisation des catégories de poussée {#customizing-push-categories}
+## Personnalisation des catégories de notifications personnalisées {#customizing-push-categories}
 
 En plus de fournir un ensemble de catégories de push par défaut, Braze prend en charge les catégories et actions de notification personnalisées. Après avoir enregistré des catégories dans votre application, vous pouvez utiliser le tableau de bord Braze pour envoyer ces catégories de notification personnalisées à vos utilisateurs.
 
@@ -120,7 +120,7 @@ UNNotificationCategory *likeCategory = [UNNotificationCategory categoryWithIdent
 {% endtabs %}
 
 {% alert note %}
-Lorsque vous créez une `UNNotificationAction`, vous pouvez spécifier une liste d'options d'action. Par exemple, `UNNotificationActionOptions.foreground` permet à vos utilisateurs d'ouvrir votre application après avoir appuyé sur le bouton d'action. Ceci est nécessaire pour les comportements de navigation au clic, tels que « Ouvrir l'application » et « Lien profond dans l'application ». Pour plus d'informations, voir [`UNNotificationActionOptions`](https://developer.apple.com/documentation/usernotifications/unnotificationactionoptions).
+Lorsque vous créez une `UNNotificationAction`, vous pouvez spécifier une liste d'options d'action. Par exemple,`.foreground`cela permet à vos utilisateurs d'ouvrir votre application après avoir appuyé sur le bouton d'action. Ceci est nécessaire pour les comportements de navigation au clic, tels que « Ouvrir l'application » et « Lien profond dans l'application ». Si vous souhaitez un bouton d'action qui supprime simplement la notification sans ouvrir l'application, veuillez`.foreground`ne pas l'inclure dans le tableau `options`d'actions. Pour plus d'informations, voir [`UNNotificationActionOptions`](https://developer.apple.com/documentation/usernotifications/unnotificationactionoptions).
 {% endalert %}
 
 ### Étape 2 : Sélectionnez vos catégories
@@ -128,7 +128,7 @@ Lorsque vous créez une `UNNotificationAction`, vous pouvez spécifier une liste
 Après avoir enregistré une catégorie, utilisez le tableau de bord Braze pour envoyer des notifications de ce type aux utilisateurs.
 
 {% alert tip %}
-Vous n'avez besoin de définir des catégories de notification personnalisées que pour les boutons d'action avec _actions spéciales_, telles que le lien profond dans votre application ou l'ouverture d'une URL. Vous n'avez pas besoin de les définir pour les boutons d'action qui ne font que rejeter une notification.
+Il est nécessaire de définir des boutons d'action sur le tableau de bord de Braze uniquement pour les comportements qui ne peuvent pas être créés localement dans votre code Swift, tels que la création de liens profonds vers votre application ou les redirections vers une URL web. Ces actions doivent être configurées sur le tableau de bord afin de pouvoir définir l'URL ou le lien profond à ouvrir. Pour les boutons d'action qui suppriment simplement la notification sans ouvrir l'application, il n'est pas nécessaire de les configurer sur le tableau de bord : la suppression est gérée automatiquement par iOS. Veuillez simplement enregistrer votre catégorie personnalisée et ses actions dans le code de votre application, puis saisir le nom de catégorie correspondant dans le tableau de bord.
 {% endalert %}
 
 1. Dans le tableau de bord Braze, sélectionnez **Messagerie** > **Notifications Push**, puis choisissez votre [campagne push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message) iOS.
@@ -138,9 +138,36 @@ Vous n'avez besoin de définir des catégories de notification personnalisées q
 
 ![Le tableau de bord de la campagne de notifications push avec la configuration des catégories personnalisées.]({% image_buster /assets/img_archive/ios-notification-category.png %})
 
+### Exemple : Catégorie de notification personnalisée {#example-custom-push-category}
+
+Supposons que vous souhaitiez créer une notification push avec deux boutons d'action : **Le gestionnaire**, qui crée des liens profonds vers votre application, et **Conserver**, qui supprime simplement la notification.
+
+Dans l'exemple suivant, `MANAGE_IDENTIFIER`l'action inclut `.foreground`l'option qui ouvre l'application lorsqu'on appuie dessus. Cela est nécessaire, car elle crée un lien profond vers une partie spécifique de l'application. L'action`KEEP_IDENTIFIER` utilise un tableau d'options vide, ce qui signifie qu'elle supprimera la notification sans ouvrir l'application.
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+Braze.Notifications.categories.insert(
+  .init(identifier: "YOUR_CATEGORY",
+        actions: [
+          .init(identifier: "KEEP_IDENTIFIER", title: "Keep", options: []),
+          .init(identifier: "MANAGE_IDENTIFIER", title: "Manage", options: [.foreground])
+        ],
+        intentIdentifiers: []
+       )
+)
+UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications.categories)
+```
+
+{% endtab %}
+{% endtabs %}
+
+Étant donné qu'il `MANAGE_IDENTIFIER`s'agit de liens profonds vers l'application, il est recommandé de configurer ce bouton d'action sur le tableau de bord de Braze avec l'URL du lien profond associé. Cependant, il n'est pas nécessaire de définir un bouton sur le tableau de bord pour cette fonction`KEEP_IDENTIFIER`, car elle ne fait que fermer la notification. Sur le tableau de bord, il vous suffit de saisir le nom de la catégorie (par exemple, `YOUR_CATEGORY`) correspondant à celui que vous avez enregistré dans le code de votre application.
+
 ## Personnalisation des badges
 
-Les badges sont de petites icônes idéales pour attirer l'attention d'un utilisateur. Vous pouvez spécifier un nombre de badges dans la rubrique [**Paramètres**]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_settings) lorsque vous composez une notification push à l'aide du tableau de bord de Braze. Vous pouvez également mettre à jour le nombre de badges manuellement par l'intermédiaire de la propriété [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) de votre application ou par le biais de la [notification à distance](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1). 
+Les badges sont de petites icônes idéales pour attirer l'attention d'un utilisateur. Vous pouvez définir un nombre de badges dans l'onglet [**Paramètres**]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_settings) lorsque vous rédigez une notification push à l'aide du tableau de bord de Braze. Vous pouvez également mettre à jour le nombre de badges manuellement par l'intermédiaire de la propriété [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) de votre application ou par le biais de la [notification à distance](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1). 
 
 Braze efface automatiquement le décompte des badges lorsqu'une notification Braze est reçue alors que l'application est au premier plan. Le fait de régler manuellement le numéro de badge sur 0 permet également d'effacer les notifications dans le centre de notification. 
 
@@ -181,9 +208,9 @@ UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotification
 {% endtab %}
 {% endtabs %}
 
-## Personnalisation des sons
+## Personnalisation des sons personnalisés
 
-### Étape 1 : Héberger le son dans votre application
+### Étape 1 : Hébergez le son dans votre application
 
 Les sons de notification push personnalisés doivent être hébergés localement dans le bundle principal de votre application. Les formats de données audio suivants sont acceptés :
 
@@ -210,7 +237,7 @@ afconvert /System/Library/Sounds/Submarine.aiff ~/Desktop/sub.caf -d ima4 -f caf
 Vous pouvez inspecter un son pour déterminer son format de données en l'ouvrant dans QuickTime Player et en choisissant **Afficher l'inspecteur de film** dans le menu **Film.**
 {% endalert %}
 
-### Étape 2 : Fournissez une URL de protocole pour le son
+### Étape 2 : Veuillez fournir une URL de protocole pour le son.
 
 Vous devez spécifier une URL de protocole qui dirige vers l'emplacement/localisation du fichier son dans votre application. Il existe deux méthodes pour ce faire :
 
@@ -219,7 +246,7 @@ Vous devez spécifier une URL de protocole qui dirige vers l'emplacement/localis
 
 ![Composeur de notifications push dans le tableau de bord de Braze]({% image_buster /assets/img_archive/sound_push_ios.png %})
 
-Si le fichier son spécifié n’existe pas ou si le mot-clé « default » est saisi, Braze utilisera le son d’alerte par défaut du appareil. Outre notre tableau de bord, le son peut également être configuré via notre [API d'envoi de messages][12].
+Si le fichier son spécifié n’existe pas ou si le mot-clé « default » est saisi, Braze utilisera le son d’alerte par défaut du appareil. Outre notre tableau de bord, le son peut également être configuré via notre [API d'envoi de messages].
 
 Pour plus d'informations, consultez la documentation du développeur Apple concernant [la préparation de sons d'alerte personnalisés](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html).
 
