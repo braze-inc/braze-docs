@@ -1,12 +1,12 @@
 ---
-nav_title: 流動ユースケース ライブラリー
-article_title: リキッド ユースケース ライブラリ
+nav_title: Liquidユースケース ライブラリー
+article_title: Liquidユースケース ライブラリ
 page_order: 10
 search_rank: 2
 excerpt_separator: ""
 page_type: glossary
 layout: liquid_use_case_glossary
-description: "このランディングページには、記念日、アプリの使用状況、カウントダウンなど、カテゴリー別に整理されたリキッドのユースケースのサンプルが掲載されている。"
+description: "このランディングページには、記念日、アプリの使用状況、カウントダウンなど、カテゴリー別に整理されたLiquidのユースケースのサンプルが掲載されている。"
 
 ---
 
@@ -177,7 +177,7 @@ Has language - Default language
 2 番目の`if` ステートメントは、標準 (デフォルト) の属性をチェックするだけです。ユーザーの `last_used_app_date` が `nil` ではなく (つまり、ユーザーがセッションを記録済み)、ユーザーの言語が分かっているためです。
 
 {% alert note %}
-[`Nil`](https://shopify.github.io/liquid/basics/types/#nil) は予約変数で、リキッドコードの結果がないときに返される。`Nil` は、`if` ブロックの中では、`false` として扱われる。
+[`Nil`](https://shopify.github.io/liquid/basics/types/#nil) は予約変数で、Liquidコードの結果がないときに返される。`Nil` は、`if` ブロックの中では、`false` として扱われる。
 {% endalert %}
 
 ### ユーザーが最後にアプリを開いた日に基づいてメッセージをパーソナライズする。 {#app-last-opened}
@@ -544,7 +544,7 @@ Hi, the offer is only valid today.
 
 - [一致するカスタム属性に基づいてメッセージをパーソナライズする](#attribute-matching)
 - [2つのカスタム属性を引いて、その差を金額で表示する](#attribute-monetary-difference)
-- [フルネームがfirst_name フィールドに保存されている場合、ユーザーの名を参照します](#attribute-first-name)
+- d[フルネームがfirst_name フィールドに保存されている場合、ユーザーの名を参照します](#attribute-first-name)
 
 ### 一致するカスタム属性に基づいてメッセージをパーソナライズする {#attribute-matching}
 
@@ -861,7 +861,7 @@ tuesday default
 このユースケースでは、コンテンツブロックに保存されたブロック済みユーザーのリストを取得し、それらのブロック済みユーザーが今後のキャンペーンやキャンバスでの通信やターゲット設定の対象外であることをチェックします。
 
 {% alert important %}
-このリキッドを使用するには、まずコンテンツブロック内にブロックされたメールのリストを保存する。このリストのメールアドレスの間に、追加のスペースや文字を挿入しないでください (例: `test@braze.com,abc@braze.com`)。
+このLiquidを使用するには、まずコンテンツブロック内にブロックされたメールのリストを保存する。このリストのメールアドレスの間に、追加のスペースや文字を挿入しないでください (例: `test@braze.com,abc@braze.com`)。
 {% endalert %}
 
 {% raw %}
