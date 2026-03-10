@@ -606,18 +606,28 @@ def check_untranslated(english_content, translated_content):
 
 
 def repair_brazeai_trademark(translated_content):
-    """Fix BrazeAI trademark formatting: only TM should be in <sup>, not the product name."""
+    """Fix BrazeAI trademark formatting: only TM should be in <sup>, not the product name.
+    Handles trailing language particles/suffixes inside the tag (e.g. <sup>BrazeAITM의</sup>
+    in Korean, <sup>BrazeAITMで</sup> in Japanese) by moving them after BrazeAI<sup>TM</sup>.
+    """
     repairs = []
     patterns = [
-        (re.compile(r'<sup>BrazeAI\s*(?:TM|™)</sup>'), 'BrazeAI<sup>TM</sup>'),
-        (re.compile(r'<sup>BrazeAI</sup>\s*(?:TM|™)'), 'BrazeAI<sup>TM</sup>'),
-        (re.compile(r'BrazeAI(?:<sup>)?™(?:</sup>)?'), 'BrazeAI<sup>TM</sup>'),
-        (re.compile(r'BrazeIA'), 'BrazeAI'),
+        # BrazeAI + TM/™ + optional trailing text inside <sup> (e.g. particles 의, で)
+        (re.compile(r'<sup>BrazeAI\s*(?:TM|™)([^<]*)</sup>'), r'BrazeAI<sup>TM</sup>\1',
+         'brazeai-tm — BrazeAI+TM in <sup> (trailing moved out) → TM only in <sup>'),
+        (re.compile(r'<sup>BrazeAI</sup>\s*(?:TM|™)'), 'BrazeAI<sup>TM</sup>',
+         'brazeai-tm — BrazeAI in <sup> with TM after → TM only in <sup>'),
+        (re.compile(r'BrazeAI(?:<sup>)?™(?:</sup>)?'), 'BrazeAI<sup>TM</sup>',
+         'brazeai-tm — normalized ™ to TM in <sup>'),
+        (re.compile(r'BrazeIA'), 'BrazeAI',
+         'brazeai-tm — corrected BrazeIA typo to BrazeAI'),
     ]
-    for pattern, replacement in patterns:
+    for item in patterns:
+        pattern, replacement = item[0], item[1]
+        message = item[2]
         if pattern.search(translated_content):
             translated_content = pattern.sub(replacement, translated_content)
-            repairs.append(f"brazeai-tm — fixed BrazeAI trademark formatting")
+            repairs.append(message)
     return translated_content, repairs
 
 
