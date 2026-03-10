@@ -23,6 +23,7 @@
 2. Was a different, higher priority in-app message displayed in place of the expected message?
 3. Are you on a recent version of the SDK? Some in-app message types have SDK version requirements.
 4. Have sessions been integrated properly in your integration? Are session analytics working for this app?
+5. Are you using a customized components library, which may interfere with how in-app messages display?
 
 ### My in-app message took a lot of time to appear
 
@@ -45,6 +46,15 @@ If you have set an in-app message delegate to manually handle message display or
 ### Impressions and Clicks aren't being logged
 If you have set an in-app message delegate to manually handle message display or click actions, you must manually log clicks and impressions on the in-app message.
 {% endif %}
+
+### Impressions are greater than Unique Impressions
+
+If your in-app message performance shows more _Impressions_ than _Unique Impressions_, the following may have happened:
+
+- If re-eligibility isn't turned on, users who received the campaign may have more than one device.
+- If your in-app message has a scheduled delay for a few minutes after the trigger event occurs, users may have received the message more than once.
+
+For more information on re-eligibility, refer to [Re-eligibility for campaigns and Canvas]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
 
 ### Impressions are lower than expected
 

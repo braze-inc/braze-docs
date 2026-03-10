@@ -46,4 +46,16 @@ channel: in-app messages
     <a href="appboy://close">X</a>
     ```
 
+## Drag-and-drop editor considerations
+
+- **Adding deep links for different devices:** The drag-and-drop editor doesn't support adding different deep links for different devices (unlike the traditional editor).
+- **Adjusting background image opacity:** The opacity setting doesn't allow complete transparency of background images (unlike the traditional IAM editor). You can use opacity settings to make the message background color completely transparent.
+- **Setting the maximum width:** The maximum width in the drag-and-drop editor is limited at 325px; this is primarily meant to accommodate the dashboard preview. Messages can display properly on smaller screen devices.
+- **Selecting different backgrounds for different platforms:** It's not possible to show two different backgrounds for the same message on different platforms (such as web and mobile).
+- **Applying message styles:** Background images apply to the full message and can't be customized per page. Message styles apply to the full message, not individual pages.
+- **Measuring Spacer blocks height:** The measurement unit for Spacer blocks is pixels (px) and can't be changed.
+- **Supported formats:** Currently, only modal and fullscreen in-app messages are supported in the drag-and-drop editor.
+- **Adjusting to size and aspect ratio:** The background image will stretch the in-app message, as the modal adjusts to fit the size and aspect ratio of the background image; you can adjust the ratio as needed.
+- **Background images and on-click behavior:** These persist across pages. For multi-page in-app messages with different full images on each page, add a button to allow users to click to the next page.
+
 

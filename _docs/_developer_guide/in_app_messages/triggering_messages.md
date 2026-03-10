@@ -24,6 +24,34 @@ At the start of a user's session, Braze will deliver all eligible in-app message
 In-app messages can't be triggered through the API or by API events&#8212;only custom events logged by the SDK. To learn more about logging, see [Logging Custom Events]({{site.baseurl}}/developer_guide/analytics/logging_events/).
 {% endalert %}
 
+## Causes of in-app message delays
+
+If you receive an in-app message campaign a few seconds after session start, the delay may have been caused by:
+
+- A delay in the campaign trigger
+- Customizations
+- The trigger event recording later than you expected (such as with a `templated_iam`)
+
+## Types of in-app messages
+
+Braze sends two types of in-app messages to user devices upon session start: `inapp` and `templated_iam`. As a dashboard user, you won't see the different types, but Braze handles them differently depending on the setup and content.
+
+### `inapp`
+
+An `inapp` in-app message is already templated with the necessary information, such as custom attributes that Braze already knows. Generally, once the in-app message downloads to the device, the trigger event causes the SDK to display the `inapp` in-app message even when the device is offline or on airplane mode.
+
+### `templated_iam`
+
+A `templated_iam` in-app message isn't yet templated with the necessary information. Braze needs to make another request to pull in the information before the message can display.
+
+In-app messages that contain the following are `templated_iam`:
+
+- Event properties
+- Canvas entry properties
+- Connected Content tags
+- SMS properties (if the `sms_inbound_response_handling` feature flipper is on)
+- **Re-evaluate campaign eligibility before displaying** is checked on the **Target Audiences** step (including HTML in-app messages with assets)
+
 ## Key-value pairs
 
 When you create a campaign in Braze, you can set key-value pairs as `extras`, which the in-app messaging object can use to send data to your app.

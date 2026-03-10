@@ -33,7 +33,9 @@ In Braze, one of the most common race conditions occurs with messages that targe
 1. A user gets created;
 2. The same user is immediately targeted for a message, performs a custom event, or logs a custom attribute.
 
-However, in some cases, the second event triggers first. This means a message is attempting to be sent to a user that doesn’t exist yet. As a result, the user never receives it. This also applies to events or attributes, where the event or attribute attempts to be logged to a user profile that hasn’t been created yet.
+However, in some cases, the second event triggers first. This means a message is attempting to be sent to a user that doesn’t exist yet. As a result, the user never receives it. This also applies to events or attributes, where the event or attribute attempts to be logged to a user profile that hasn't been created yet.
+
+In the case of in-app messages, the in-app message must load onto the user's device before being triggered. If the trigger event is part of the onboarding process, or the user exits the segment for the custom event as part of their first session, it's likely the user won't see the in-app message.
 
 ### Best practices
 

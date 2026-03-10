@@ -129,6 +129,18 @@ This table compares the in-app message flows that Sam experienced:
 | Templated | An abort event was logged because Sam performed the trigger action to trigger the templated in-app message, but received an abort in the Liquid templating. <br><br>Templated in-app messages log aborts because the Liquid evaluation occurs after the trigger action has been performed. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+## Considerations for scheduled delays and session starts
+
+It's possible that when an in-app message campaign has a **Schedule Delay** triggered on session start, if the user starts a session and then closes the app before the in-app message displays, the message will trigger on the next session start after the delay's expiry.
+
+This could cause non-ideal in-app message display behaviors, specifically if you have an in-app message campaign that doesn't have **Re-evaluate campaign eligibility before displaying** selected.
+
+For example, a user might receive an in-app message with an eight-second delay a month after the campaign was launched. This can happen if the user started a session, immediately ended the session, started a session a month later, and then eight seconds later received the in-app message. If the user navigates away from the app without closing it, the in-app message will display when the user returns to the app.
+
+## Chain-triggering two in-app messages in one session
+
+You can trigger an in-app message from session start, then trigger a second in-app message after a button is pressed in the first. To do this, build a JavaScript bridge to log a button click event that triggers the second message. The trigger for the second message must occur on the device side (the Braze SDK won't pick up custom attribute changes that occur on Braze servers). The default 30-second cooldown between in-app message triggers must be altered to show multiple in-app messages in quick succession. For implementation details, refer to the [Trigger in-app messages]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/) documentation for your platform.
+
 ## More resources
 
 Before you get started with creating your own in-app message campaigns—or using in-app messages in a multi-channel campaign—we highly recommend that you check out our [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/). This guide covers targeting, content, and conversion questions you should consider when building in-app messages.
