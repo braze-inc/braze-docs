@@ -1,12 +1,12 @@
 # Fonctions du serveur Braze MCP
 
-> Le serveur Braze MCP fournit un ensemble de fonctions API en lecture seule qui effectuent le mappage avec des endpoints API REST Braze spécifiques. Les clients MCP tels que Claude et Cursor peuvent appeler ces fonctions pour récupérer des données sans accéder aux informations personnelles identifiables ni apporter de modifications à votre espace de travail. Pour obtenir des informations générales, veuillez consulter [le serveur Braze MCP]{% if include.section == "user" %}.{{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/){% endif %}
+> Le serveur Braze MCP fournit un ensemble de fonctions API en lecture seule qui effectuent le mappage avec des endpoints API REST Braze spécifiques. Les clients MCP tels que Claude et Cursor peuvent appeler ces fonctions pour récupérer des données sans accéder aux informations personnelles identifiables ni apporter de modifications à votre espace de travail. Pour obtenir des informations générales, veuillez consulter [le serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## Conditions préalables
 
-Avant de pouvoir utiliser cette fonctionnalité, il est nécessaire de configurer le serveur Braze MCP.{% if include.section == "user" %}{{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}
+Avant de pouvoir utiliser cette fonctionnalité, il est nécessaire de [configurer le serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
 
 ## Fonctions API Braze disponibles
 

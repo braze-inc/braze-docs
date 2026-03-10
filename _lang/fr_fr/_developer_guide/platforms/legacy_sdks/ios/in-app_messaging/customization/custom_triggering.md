@@ -54,7 +54,7 @@ Lorsque la notification push silencieuse est reçue, un événement enregistré 
 
 Créer une campagne de notification push silencieuse déclenchée par l’événement envoyé par le serveur. Pour plus de détails sur la création d'une campagne de notification push silencieuse, reportez-vous aux [notifications push silencieuses]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/silent_push_notifications/).
 
-![Une campagne de messages in-app, basée sur la livraison par événement, qui sera envoyée aux utilisateurs qui effectuent l'événement/assets/img_archive/iosServerSentPush.pngimage_buster"server_event".]({%personnalisé.
+![Une campagne de messages in-app, basée sur la livraison par événement, qui sera envoyée aux utilisateurs qui effectuent l'événement personnalisé « server_event ».]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 La campagne de notification push doit inclure des extras de paires clé-valeur, qui indiquent que cette campagne de notification push est envoyée pour enregistrer un événement personnalisé SDK. Cet événement sera utilisé pour déclencher le message in-app.
 

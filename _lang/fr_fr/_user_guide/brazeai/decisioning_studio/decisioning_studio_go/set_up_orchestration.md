@@ -260,7 +260,7 @@ Le nom de l'extension de données cible est également fourni dans votre portail
 
 1. Veuillez attribuer un nom à l'automatisation et sélectionner **Enregistrer**.
 
-![Exemple d'automatisation/assets/img/decisioning_studio_go/query3.pngimage_buster"OFE_Experimenter_Test5_Automation".]({%    %})
+![Exemple d'automatisation « OFE_Experimenter_Test5_Automation ».]({% image_buster /assets/img/decisioning_studio_go/query3.png %})
 
 {: start="2"}
 2\. Ensuite, veuillez sélectionner **« Exécuter une fois** » pour vérifier que tout fonctionne correctement.
@@ -460,7 +460,7 @@ Avant de créer un flux dans Klaviyo, il est nécessaire de disposer des informa
 4\. Veuillez sélectionner le déclencheur.
 5\. Veuillez associer le nom de l'indicateur au nom du déclencheur dans votre portail BrazeAI Decisioning Studio™ Go.
 
-![Exemple de nom d'indicateur correspondant au nom de l'événement "OFE_TEST_CASE_API_EVENT_TRIGGER".]({%image_buster/assets/img/decisioning_studio_go/flow2.pngdéclencheur    %})
+![Exemple de nom d'indicateur correspondant au nom de l'événement « OFE_TEST_CASE_API_EVENT_TRIGGER » (déclencheur).]({% image_buster /assets/img/decisioning_studio_go/flow2.png %})
 
 {: start="6"}
 6\. Sélectionnez **Enregistrer**.

@@ -87,7 +87,7 @@ Veuillez saisir un nom et une description facultative pour votre catalogue. Veui
 Vous pouvez également [utiliser des modèles dans un nom de catalogue](#template-catalog-names), ce qui vous permet de générer dynamiquement des noms de catalogue en fonction de variables telles que la langue ou la campagne.
 {% endalert %}
 
-![Un catalogue nommé/assets/img_archive/in_browser_catalog.pngimage_buster"my_catalog".]({%%}){: style="max-width:80%;"}
+![Un catalogue nommé « my_catalog ».]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
 
 Sélectionnez **Process Catalog** pour créer le catalogue.
 
@@ -135,11 +135,11 @@ Nous allons créer le catalogue en téléchargeant un fichier CSV. Les types de 
 Ce type de données ne peut pas être modifié après la configuration de votre catalogue.
 {% endalert %}
 
-![Quatre noms de colonnes du catalogue : « ID », « title », « price »,/assets/img_archive/catalog_data_type.pngimage_buster"image_link".]({%%}){: style="max-width:85%;"}
+![Quatre noms de colonnes du catalogue : « ID », « title », « price », « image_link ».]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 Ensuite, nous nommerons ce catalogue"games_catalog"et sélectionnerons le bouton **Traiter le catalogue**. Braze vérifie alors que le catalogue ne contient pas d'erreurs avant de le créer.
 
-![Un catalogue nommé/assets/img_archive/catalog_new_name.pngimage_buster"games_catalog".]({%%}){: style="max-width:85%;"}
+![Un catalogue nommé « games_catalog ».]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 Notez que vous ne pourrez pas modifier ce nom après la création du catalogue. Vous pouvez supprimer un catalogue et télécharger à nouveau une version mise à jour en utilisant le même nom de catalogue.
 
@@ -170,7 +170,7 @@ Veuillez saisir un nom et une description facultative pour votre catalogue. Veui
 Vous pouvez également [utiliser des modèles dans un nom de catalogue](#template-catalog-names), ce qui vous permet de générer dynamiquement des noms de catalogue en fonction de variables telles que la langue ou la campagne.
 {% endalert %}
 
-![Un catalogue nommé/assets/img_archive/in_browser_catalog.pngimage_buster"my_catalog".]({%%}){: style="max-width:80%;"}
+![Un catalogue nommé « my_catalog ».]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
 
 ### Étape 2 : Veuillez créer votre catalogue
 

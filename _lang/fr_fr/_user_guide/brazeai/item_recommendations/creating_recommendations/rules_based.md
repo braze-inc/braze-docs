@@ -175,7 +175,7 @@ Par exemple :
 
 Allez dans l'onglet **Test** et sélectionnez **Utilisateur personnalisé** sous **Prévisualiser le message en tant qu'utilisateur**. Saisissez une date dans le champ **Attribut personnalisé** pour prévisualiser la carte de contenu qui serait envoyée à un utilisateur s'étant inscrit à cette date. <br><br>
 
-![Un exemple d'attribut personnalisé nommé/assets/img/recs/custom_attributes_test.pngimage_buster'start_date'.]({%%})
+![Un exemple d'attribut personnalisé nommé « start_date ».]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 {% endtab %}
 
 {% tab using Connected Content %}

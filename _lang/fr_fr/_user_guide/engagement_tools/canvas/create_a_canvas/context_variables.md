@@ -180,14 +180,14 @@ Supposons que vous souhaitiez envoyer un rappel personnalisé aux utilisateurs a
 
 Vous disposez d'une variable de contexte `re_engagement_date`définie comme {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %}suit. Veuillez noter que`3 days`cela peut être un montant variable qui est également stocké en tant qu'attribut personnalisé de l'utilisateur. Ainsi, si le`re_engagement_date`  est postérieur au`last_login_date`  (enregistré en tant qu'attribut personnalisé dans le profil utilisateur), un message leur sera envoyé.
 
-![Une configuration de filtre avec des attributs personnalisés comme type de personnalisation pour la variable de contexte"re_engagement_date" après l'attribut "last_login_date".]({%image_buster/assets/img/context_variable_filter2.pngpersonnalisé    %})
+![Une configuration de filtre avec des attributs personnalisés comme type de personnalisation pour la variable de contexte « re_engagement_date » après l'attribut « last_login_date ».]({% image_buster /assets/img/context_variable_filter2.png %})
 
 {% endtab %}
 {% tab Example 2 %}
 
 Le filtre suivant compare la variable de contexte`reminder_date`  à la variable de contexte`appointment_deadline` . Cela peut aider les utilisateurs du groupe dans une étape du parcours d'audience à déterminer s'ils doivent recevoir des rappels supplémentaires avant la date limite de leur rendez-vous.
 
-![Une configuration de filtre avec des variables de contexte comme type de personnalisation pour la variable de contexte"reminder_date"  sur la variable de contexte"appointment_deadline".]({%image_buster/assets/img/context_variable_filter3.png    %})
+![Une configuration de filtre avec des variables de contexte comme type de personnalisation pour la variable de contexte « reminder_date » sur la variable de contexte « appointment_deadline ».]({% image_buster /assets/img/context_variable_filter3.png %})
 
 {% endtab %}
 {% endtabs %}

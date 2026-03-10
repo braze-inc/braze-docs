@@ -52,7 +52,7 @@ Imaginons que vous souhaitiez envoyer un message in-app uniquement aux applicati
 
 1. Créez un segment et définissez **Apps et sites web ciblés** sur les **Utilisateurs d'apps spécifiques**, puis sélectionnez votre app Android.
 
-![Un segment de ciblage pour les utilisateurs d'une application spécifique,/assets/img_archive/app_test_android.pngimage_buster"Test_Android".]({%    %}){: style="max-width:60%;"}
+![Un segment de ciblage pour les utilisateurs d'une application spécifique « Test_Android ».]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\. Dans votre campagne ou Canvas, allez à l'étape des **audiences cibles** et confirmez que votre segment est ajouté dans la section **Utilisateurs ciblés par segment.** 

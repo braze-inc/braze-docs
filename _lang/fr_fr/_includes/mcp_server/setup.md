@@ -1,6 +1,6 @@
 # Configuration du serveur Braze MCP
 
-> Découvrez comment configurer le serveur Braze MCP afin de pouvoir interagir avec vos données Braze en utilisant un langage naturel grâce à des outils tels que Claude et Cursor. Pour obtenir des informations générales, veuillez consulter [le serveur Braze MCP]{% if include.section == "user" %}.{{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/){% endif %}
+> Découvrez comment configurer le serveur Braze MCP afin de pouvoir interagir avec vos données Braze en utilisant un langage naturel grâce à des outils tels que Claude et Cursor. Pour obtenir des informations générales, veuillez consulter [le serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -316,7 +316,7 @@ Vous devriez voir le`braze`serveur répertorié avec les outils et le schéma di
 
 ### Étape 5 : Veuillez envoyer une invite de test.
 
-Une fois le serveur Braze MCP configuré, veuillez essayer d'envoyer une invite de test à votre client MCP. Pour d'autres exemples et bonnes pratiques, veuillez consulter [Utilisation du serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}){{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+Une fois le serveur Braze MCP configuré, veuillez essayer d'envoyer une invite de test à votre client MCP. Pour d'autres exemples et bonnes pratiques, veuillez consulter [Utilisation du serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}

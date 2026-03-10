@@ -1,12 +1,12 @@
 # Utilisation du serveur Braze MCP
 
-> Découvrez comment interagir avec vos données Braze à l'aide du langage naturel grâce à des outils tels que Claude et Cursor. Pour obtenir des informations générales, veuillez consulter [le serveur Braze MCP]{% if include.section == "user" %}.{{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/){% endif %}
+> Découvrez comment interagir avec vos données Braze à l'aide du langage naturel grâce à des outils tels que Claude et Cursor. Pour obtenir des informations générales, veuillez consulter [le serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## Conditions préalables
 
-Avant de pouvoir utiliser cette fonctionnalité, il est nécessaire de configurer le serveur Braze MCP.{% if include.section == "user" %}{{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}
+Avant de pouvoir utiliser cette fonctionnalité, il est nécessaire de [configurer le serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
 
 ## Bonnes pratiques
 
@@ -20,7 +20,7 @@ Lorsque vous utilisez le serveur Braze MCP via des outils de langage naturel tel
 
 ## Exemples d’utilisation
 
-Après avoir configuré le serveur Braze MCP,{{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %} vous pouvez interagir avec Braze en {% if include.section == "user" %}utilisant le langage naturel grâce à des outils tels que{{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %} Claude ou Cursor. Voici quelques exemples pour vous aider à démarrer :
+Après avoir [configuré le serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, vous pouvez interagir avec Braze en utilisant le langage naturel grâce à des outils tels que Claude ou Cursor. Voici quelques exemples pour vous aider à démarrer :
 
 ### Quelles sont les fonctionnalités Braze à ma disposition ?
 

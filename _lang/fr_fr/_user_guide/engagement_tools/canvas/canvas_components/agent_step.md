@@ -57,7 +57,7 @@ Vous pouvez utiliser une variable de sortie dans l'ensemble du canvas en employa
 
 Pour utiliser une propriété spécifique d'une variable de sortie d'objet, veuillez utiliser la notation par points pour accéder à cette propriété à l'aide de liquid : {% raw %}`{{context.${response_variable_name}.field_name}}`{% endraw %}
 
-![Étape d'agent pour Body HTML Writer avec une sortie de type de données objet pour la variable/assets/img/ai_agent/test_agent_step.pngimage_buster"agent_output".]({%%}){: style="max-width:80%;"}
+![Étape d'agent pour Body HTML Writer avec une sortie de type de données objet pour la variable « agent_output ».]({% image_buster /assets/img/ai_agent/test_agent_step.png %}){: style="max-width:80%;"}
 
 ### Étape 4 : Veuillez ajouter tout contexte supplémentaire (facultatif)
 

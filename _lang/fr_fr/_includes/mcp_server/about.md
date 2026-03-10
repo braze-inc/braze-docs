@@ -13,7 +13,7 @@
 
 ## À propos du serveur Braze MCP
 
-Après avoir configuré le serveur Braze MCP, vous pouvez connecter des outils d'intelligence{{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %} artificielle tels {% if include.section == "user" %}{{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}que des agents, des assistants et des chatbots directement à Braze, leur permettant ainsi de lire des données agrégées telles que les analyses Canvas et Campaign, les attributs personnalisés, les segments, etc. Le serveur Braze MCP est particulièrement adapté pour :
+Après avoir [configuré le serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, vous pouvez connecter des outils d'intelligence artificielle tels que des agents, des assistants et des chatbots directement à Braze, leur permettant ainsi de lire des données agrégées telles que les analyses Canvas et Campaign, les attributs personnalisés, les segments, etc. Le serveur Braze MCP est particulièrement adapté pour :
 
 - Création d'outils basés sur l'intelligence artificielle nécessitant le contexte Braze.
 - Les ingénieurs CRM élaborent des workflows en plusieurs étapes pour les agents.
@@ -27,7 +27,7 @@ Veuillez ne pas attribuer à votre clé API des autorisations qui **ne** sont **
 
 ## Exemple d'utilisation
 
-Vous pouvez interagir avec Braze en utilisant le langage naturel grâce à des outils tels que Claude ou Cursor. Pour d'autres exemples et bonnes pratiques, veuillez consulter [Utilisation du serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}){{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+Vous pouvez interagir avec Braze en utilisant le langage naturel grâce à des outils tels que Claude ou Cursor. Pour d'autres exemples et bonnes pratiques, veuillez consulter [Utilisation du serveur Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}
