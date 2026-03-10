@@ -25,7 +25,7 @@ Add translation tags {% raw %}`{% translation your_id_here %}` and `{% endtransl
 
 Each translation should have a unique `id`. For example, when translating a simple greeting, you may name the ID "greeting":
 
-{% raw %}`{% translation greeting %}Hello!{% endtranslation}`{% endraw %}
+{% raw %}`{% translation greeting %}Hello!{% endtranslation %}`{% endraw %}
 
 #### Localizing HTML blocks
 
@@ -39,7 +39,7 @@ A more complicated paragraph may have multiple translation tags ("offer_text" an
 {% endraw %}
 
 {% alert important %}
-Wrapping large HTML blocks in translation tags can cause stylesheet or styling issues. Wrap the smallest text sections as possible.
+Wrapping large HTML blocks in translation tags can cause stylesheet or styling issues. Wrap the smallest text sections as much as possible.
 {% endalert %}
 
 #### Localizing Links
@@ -202,9 +202,9 @@ No, your translation tags should be as small as possible to avoid performance or
 | Scenario                                                                                                                                                 | Validation in Braze                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | A translation file is missing locales associated with the current message.                                                                               | This translation file won't be uploaded.                                                                       |
-| A translation file is missing text blocks, such as a text within Liquid translation tags, from the current email message.                                | This translation file won't be uploaded.                                                                       |
+| A translation file is missing text blocks, such as text within Liquid translation tags, from the current email message.                                | This translation file won't be uploaded.                                                                       |
 | The translation file includes the default text that doesn't match the text blocks in the current email message.                                          | This translation file won't be uploaded. Fix this in your CSV before attempting to upload again.               |
-| The translation file includes locales that don't exist in **Multi-Language Support** settings.                                                           | These locales will not be saved in Braze.                                                                      |
+| The translation file includes locales that don't exist in the **Multi-Language Support** settings.                                                           | These locales will not be saved in Braze.                                                                      |
 | The translation file includes text blocks that don't exist in the current message (such as the current draft at the time the translations are uploaded). | The text blocks that don't exist in your current message will not be saved from the translation file to Braze. |
 | Removing a locale from the message after that locale has already been uploaded to the message as part of the translation file.                           | Removing the locale will remove any translations associated with the locale in your message.                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
