@@ -114,7 +114,7 @@ The `messages` response will contain information about each message. The followi
 {% endtab %}
 {% tab In-app messages %}
 
-The response format depends on the in-app message `type` value. Survey in-app messages (`survey`) return `type` and `data` fields. Other in-app message types (`slideup`, `modal`, `fullscreen`) return `channel`, `name`, `message`, and `extras` fields.
+The response format depends on the type of in-app message. Survey in-app messages return `type` and `data` fields. Other in-app message types (slideup, modal, and fullscreen) return `name`, `message`, and `extras` fields.
 
 #### Surveys
 
