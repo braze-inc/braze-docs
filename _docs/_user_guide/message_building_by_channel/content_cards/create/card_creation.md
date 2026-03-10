@@ -113,9 +113,9 @@ This section describes the main differences between card creation at campaign la
 
 ## Considerations
 
-### Using canvas entry properties
+### Using Canvas entry properties
 
-When personalizing Content Cards with canvas entry properties, use the `${...}` accessor syntax (for example, {%raw%}`canvas_entry_properties.${property_name}`{%endraw%}). Dot notation without the accessor (for example, {%raw%}`canvas_entry_properties.property_name`{%endraw%}) may not resolve correctly in Content Cards, even if it works in other channels like push and email.
+When personalizing Content Cards with Canvas entry properties, use the `${...}` accessor syntax (for example, {%raw%}`canvas_entry_properties.${property_name}`{%endraw%}). Dot notation without the accessor (for example, {%raw%}`canvas_entry_properties.property_name`{%endraw%}) may not resolve correctly in Content Cards, even if it works in other channels like push and email.
 
 ### Changing card creation after launch
 
