@@ -67,7 +67,7 @@ For troubleshooting your CDN configuration, contact your CDN provider.
 
 Refer to the following resources by ESP partners on how to configure certain CDNs. While your specific CDN may not be listed, you must make sure your CDN has the ability to apply SSL certificates.
 
-**Sendgrid**
+**SendGrid**
 
 - [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)
 - [CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)
