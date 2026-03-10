@@ -118,7 +118,7 @@ The following definitions explain the abort outcomes shown on the dashboard. Out
 | Abort outcome | Explanation |
 | ---- | ---- |
 | Frequency capped | The user already received the maximum number of messages allowed per your workspace's [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#about-frequency-capping) rules, so the send was canceled. |
-| Quiet Hours abort | Quiet Hours was enabled for the campaign or Canvas step with the fallback set to **Abort message**. The user triggered the campaign or entered the Canvas message step during Quiet Hours, so the message was aborted. However, this doesn't exit the user from the Canvas. |
+| Quiet Hours abort | Quiet Hours was enabled for the campaign or Canvas step with the fallback set to **Abort message**. The user triggered the campaign or entered the Canvas Message step during Quiet Hours, so the message was aborted. However, this doesn't exit the user from the Canvas. |
 | Rate limited over 72 hours | The message was throttled for longer than 72 hours due to [delivery speed rate limits]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting), so the send was aborted. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
