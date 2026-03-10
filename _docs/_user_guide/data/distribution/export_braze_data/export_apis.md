@@ -10,13 +10,15 @@ platform: API
 
 # Export APIs
 
-> The Braze export APIs let you programmatically export dashboard data as JSON. You can pull campaign analytics, user profiles, KPIs, and more through the [export endpoints]({{site.baseurl}}/api/endpoints/export/).
+> The Braze export APIs let you programmatically export dashboard data as JSON. You can pull campaign analytics, user profiles, KPIs, and more through the [Export endpoints]({{site.baseurl}}/api/endpoints/export/).
 
 ## Prerequisites
 
+Before you begin, make sure you have the following:
+
 | Requirement | Description |
 | --- | --- |
-| Braze REST API key | A REST API key with the appropriate export permissions for the endpoints you plan to call. API keys are scoped to specific endpoints, and permissions can't be changed after creation. For details, refer to [REST API key]({{site.baseurl}}/api/basics#rest-api-key). |
+| Braze REST API key | A REST API key with the appropriate export permissions for the endpoints you plan to call. API keys are scoped to specific endpoints, and permissions can't be changed after creation. For details, refer to [REST API key]({{site.baseurl}}/api/basics/#about-rest-api-keys). |
 | Relevant identifiers | The identifiers for the data you want to export, such as a campaign ID, segment ID, or Canvas ID. You can find these on the Braze dashboard. For a full list, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/). |
 | Cloud storage credentials (optional) | If you're exporting large datasets, connect an [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/), or [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/) bucket to have export files written directly to your storage. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -48,12 +50,14 @@ For the full list of endpoints with instructions and sample code, refer to [Expo
 
 API exports return data in JSON format, unlike the CSV files you download from the dashboard. The delivery method depends on whether you have cloud storage connected:
 
-- **Without cloud storage:** Braze writes the export files to its own S3 bucket and includes a temporary download URL in the API response. This URL expires after four hours, and the export is packaged as a ZIP file containing JSON files. Each line in the JSON files represents one data object.
+- **Without cloud storage:** Braze writes the export files to its own S3 bucket and includes a temporary download URL in the API response. This URL expires after four hours, and the export is packaged as a compressed archive (ZIP or GZIP, depending on the `output_format` parameter) containing JSON files. Each line in the JSON files represents one data object.
 - **With cloud storage connected:** Braze writes the export files directly to your configured bucket. The API response doesn't include a download URL. Files follow your own retention policies and are typically more reliable for large exports.
 
 For more details on export delivery and troubleshooting, refer to [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 
 ## When to use export APIs instead of CSV downloads
+
+The following table describes common scenarios where using the export API is a better choice than a dashboard CSV download.
 
 | Scenario | Details |
 | --- | --- |
