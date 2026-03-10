@@ -169,7 +169,6 @@ If a user has your app installed on multiple devices, by default, your push mess
 
 ![Device options checkbox to only send this push to the user's most recently used device.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
 
-There is some nuance for this setting. **Most recently used device** is determined by which device has the most recently updated push token—not the device with the most recent session. For example, if a new device's push token is added to a user profile with the API, that device is considered the most recently used device even if the user hasn't started a session on it yet.
 
 By default, Braze sends messages to every device a user owns that has a valid push token. For iOS, you can further refine your reach by choosing to send notifications only to iPad devices, or only to iPhone and iPod devices.
 
