@@ -51,7 +51,7 @@ Give your recommendation a name and optional description.
 
 ### Step 3: Define your recommendation {#recommendation-type}
 
-Select a recommendation type. **Most Popular**, **Most Recent**, and **AI Personalized** use the last six months of item interaction data, such as purchase or custom event data. **Trending** uses a configurable time window based on the number and length of time bins you set. For more detailed information and use cases for each, see [Types and use cases]({{site.baseurl}}/user_guide/brazeai/recommendations/).
+Select a recommendation type. Each type uses the last six months of item interaction data, such as a purchase or custom event data. For more detailed information and uses cases for each, see [Types and Uses Cases]({{site.baseurl}}/user_guide/brazeai/recommendations/).
 
 {% alert tip %}
 When using **Most Recent** or **AI Personalized**, users with insufficient data to create individualized recommendations will receive **Most Popular** items as a fallback. You can see an approximation of the proportion of users receiving the **Most Popular** fallback displayed on the **Analytics** page. The **Most Popular** fallback only returns items that exist in the linked catalog. 
