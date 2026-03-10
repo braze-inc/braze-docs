@@ -1,12 +1,12 @@
 # Braze MCPサーバー機能
 
-> Braze MCPサーバーは、特定のBraze REST APIエンドポイントに対応する読み取り専用API関数のセットを公開している。MCPクライアントであるClaudeやCursorは、これらの関数を呼び出すことで、個人を特定できる情報（PII）にアクセスしたりワークスペースを変更したりすることなくデータを取得できる。より一般的な情報については、[Braze MCPサーバー]{% if include.section == "user" %}を参照せよ{{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}。{{site.baseurl}}/developer_guide/mcp_server/){% endif %}
+> Braze MCPサーバーは、特定のBraze REST APIエンドポイントに対応する読み取り専用API関数のセットを公開している。MCPクライアントであるClaudeやCursorは、これらの関数を呼び出すことで、個人を特定できる情報（PII）にアクセスしたりワークスペースを変更したりすることなくデータを取得できる。より一般的な情報については、[Braze MCPサーバー]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}を参照せよ。
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## 前提条件
 
-この機能を使う前に、[Braze MCPサーバーの設定]{% if include.section == "user" %}が必要だ。{{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}
+この機能を使う前に、[Braze MCPサーバーの設定]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}が必要だ。
 
 ## 利用可能なBraze API関数
 

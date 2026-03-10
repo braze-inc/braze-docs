@@ -1,6 +1,6 @@
 # Braze MCPサーバーの設定
 
-> Braze MCPサーバーの設定方法を学習すれば、ClaudeやCursorといったツールを使って自然言語でBrazeデータとやり取りできるようになる。より一般的な情報については、[Braze MCPサーバー]{% if include.section == "user" %}を参照せよ{{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}。{{site.baseurl}}/developer_guide/mcp_server/){% endif %}
+> Braze MCPサーバーの設定方法を学習すれば、ClaudeやCursorといったツールを使って自然言語でBrazeデータとやり取りできるようになる。より一般的な情報については、[Braze MCPサーバー]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}を参照せよ。
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -316,7 +316,7 @@ gemini
 
 ### ステップ 5: テストプロンプトを送れ
 
-Braze MCPサーバーを設定したら、MCPクライアントにテストプロンプトを送信してみろ。その他の例やベストプラクティスについては、[Braze MCPサーバーの使用方法]{% if include.section == "user" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}{{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}を参照せよ。
+Braze MCPサーバーを設定したら、MCPクライアントにテストプロンプトを送信してみろ。その他の例やベストプラクティスについては、[Braze MCPサーバーの使用方法]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}を参照せよ。
 
 {% tabs %}
 {% tab Claude %}

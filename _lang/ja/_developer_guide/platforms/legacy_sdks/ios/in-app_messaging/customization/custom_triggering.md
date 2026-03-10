@@ -54,7 +54,7 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 
 サーバー送信イベントを介してトリガーされるサイレントプッシュキャンペーンを作成します。サイレントプッシュキャンペーンの作成の詳細については、「[サイレントプッシュ通知]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/silent_push_notifications/)」を参照してください。
 
-![カスタムイベントを実行したユーザー"server_event".]({%image_buster/assets/img_archive/iosServerSentPush.pngに配信される、アクションベースのアプリ内メッセージキャンペーンだ。
+![カスタムイベント「server_event」を実行したユーザーに配信される、アクションベースのアプリ内メッセージキャンペーン。]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 プッシュキャンペーンにはキーと値のペアエクストラを含める必要があります。これは、このプッシュキャンペーンが SDK カスタムイベントを記録するために送信されることを示します。このイベントは次のアプリ内メッセージをトリガーするために使用されます。
 

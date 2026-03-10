@@ -1,12 +1,12 @@
 # Braze MCPサーバーを使用する
 
-> ClaudeやCursorといったツールを使って、自然言語でBrazeデータとやり取りする方法を学習しよう。より一般的な情報については、[Braze MCPサーバー]{% if include.section == "user" %}を参照せよ{{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}。{{site.baseurl}}/developer_guide/mcp_server/){% endif %}
+> ClaudeやCursorといったツールを使って、自然言語でBrazeデータとやり取りする方法を学習しよう。より一般的な情報については、[Braze MCPサーバー]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}を参照せよ。
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## 前提条件
 
-この機能を使う前に、[Braze MCPサーバーの設定]{% if include.section == "user" %}が必要だ。{{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}
+この機能を使う前に、[Braze MCPサーバーの設定]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}が必要だ。
 
 ## ベストプラクティス
 

@@ -118,35 +118,35 @@ final class BannerViewController: UIViewController {
 ```
 
 !!step
-lines-=14AppDelegate.swift
+lines-AppDelegate.swift=14
 
 #### 1\.デバッグを有効にする(オプション)
 
 開発中のトラブルシューティングを容易にするために、デバッグを有効にすることを検討してください。
 
 !!step
-行AppDelegate.swift数-=20
+lines-AppDelegate.swift=20
 
 #### 2\.配置を更新する
 
 Braze SDKを初期化した後、各セッションの開始時に`call requestBannersRefresh(placementIds: ["PLACEMENT_ID"])`バナーコンテンツを更新する。
 
 !!step
-行BannerViewController.swift番号19-37
+lines-BannerViewController.swift=19-37
 
 #### 3\.バナーを初期化し、コールバックを提供する
 
 Brazeオブジェクトと配置IDでインスタンス`BrazeBannerUI.BannerUIView`を作成し、提供されたコンテンツの高さに基づいてバナーを表示し、その高さ制約を更新する`processContentUpdates`コールバックを提供する。
 
 !!step
-行BannerViewController.swift-=38-40
+lines-BannerViewController.swift=38-40
 
 #### 4. オートレイアウトの制約のイネーブルメント
 
 デフォルトでバナービューを非表示にし、自動レイアウトのイネーブルメントを有効にするために自動リサイズマスクの変換を無効にする。
 
 !!step
-行BannerViewController.swift番号43-58
+lines-BannerViewController.swift=43-58
 
 #### 5. アンカーコンテンツを設定し、高さの制約を適用する
 
@@ -249,7 +249,7 @@ struct BannerSwiftUIView: View {
 ```
 
 !!step
-行AppDelegate.swift数-=13
+lines-AppDelegate.swift=13
 
 #### 1\.デバッグを有効にする(オプション)
 
@@ -263,28 +263,28 @@ lines-AppDelegate.swift=19
 Braze SDKを初期化した後、各セッションの開始時にバナーコンテンツを更新するために\``requestBannersRefresh(placementIds: ["PLACEMENT_ID"])`refresh`を呼び出す。
 
 !!step
-行BannerSwiftUIView.swift番号-=1-46
+lines-BannerSwiftUIView.swift=1-46
 
 #### 3\.ビューコンポーネントを作成する
 
 利用可能なバナーを表示し、必要に応じてメインアプリコンテンツを含む、再利用可能なSwiftUIビューコンポーネントを作成する。
 
 !!step
-行BannerSwiftUIView.swift番号36-43
+lines-BannerSwiftUIView.swift=36-43
 
 #### 4. 利用可能なバナーのみを表示する
 
 SDKが初期化され、かつそのユーザー向けのバナーコンテンツが存在する場合にのみ`BrazeBannerUI.BannerView`表示を試みる。において`.onAppear`、を呼び出して`getBanner(for:placementID)`の状態`hasBannerForPlacement`を設定する。
 
 !!step
-行BannerSwiftUIView.swift番号-=17-32
+lines-BannerSwiftUIView.swift=17-32
 
 #### 5. 読み込みが終わってから`BannerView`表示する
 
 UIに空白部分が生じないように、バナーが存在し、かつSDKが初期化されている場合にのみ`BrazeBannerUI.BannerView`表示する。
 
 !!step
-行BannerSwiftUIView.swift番号23-32
+lines-BannerSwiftUIView.swift=23-32
 
 #### 6. バナーの高さをダイナミックに更新する
 

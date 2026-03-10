@@ -44,7 +44,7 @@ BIG SALE
 この例では、`Big Sale` が文字列で、`upcase` が適用されるフィルターである。
 
 {% alert note %}
-フィルターは、ステートメント{% endraw %}や出力タグ{% raw %}`assign`（`{{ }}`）では使用できるが、条件式（`if`, `elsif`, `unless`）、`case`/`when`、`for`ループ、配列アクセスブラケットでは使用できない。それらの文脈のいずれかでフィルターされた値を使用するには、まず結果を変数に代入せよ。詳細については、[演算子とフィルターの使用箇所を]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters)参照せよ。
+フィルターは、`assign` ステートメントや出力タグ {% raw %}(`{{ }}`){% endraw %} では使用できるが、条件式（`if`, `elsif`, `unless`）、`case`/`when`、`for`ループ、配列アクセスブラケットでは使用できない。それらの文脈のいずれかでフィルターされた値を使用するには、まず結果を変数に代入せよ。詳細については、[演算子とフィルターの使用箇所]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters)を参照せよ。
 {% endalert %}
 
 ### 複数フィルターの構文

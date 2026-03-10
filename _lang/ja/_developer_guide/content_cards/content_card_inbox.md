@@ -175,28 +175,28 @@ lines-MainApplication.kt=12
 開発中のトラブルシューティングを容易にするために、デバッグを有効にすることを検討してください。
 
 !!step
-行ContentCardsInboxScreen.kt番号47-69
+lines-ContentCardsInboxScreen.kt=47-69
 
 #### 2\.UIビューを構築する
 
 Jetpack Composeでは、スクロール可能なリストにコンテンツカードを表示するために[`LazyColumn`](<https://developer.android.com/develop/ui/compose/lists#lazy>)、使用せよ。
 
 !!step
-行ContentCardsInboxScreen.kt番号25-37
+lines-ContentCardsInboxScreen.kt=25-37
 
 #### 3\.コンテンツカードの更新を購読する
 
 コンポーザブルがコンポジションから離脱する際に適切なクリーンアップを保証するため、サブスクリプションのライフサイクルを管理するために[`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>)使用せよ。
 
 !!step
-lines-=84-95ContentCardsInboxScreen.kt
+lines-ContentCardsInboxScreen.kt=84-95
 
 #### 4. カスタム受信トレイのUIを構築する
 
 コンテンツカードの[属性](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>)（例`title`：,`description` , ）を使用することで、特定のUI要件に合ったコンテンツカード`url`を作成できる。この場合、Jetpack Composeの\``Card`Composable`と`Column`\`Composable\`を使って受信トレイを構築している。
 
 !!step
-lines-=57ContentCardsInboxScreen.kt,62
+lines-ContentCardsInboxScreen.kt=57,62
 
 #### 5. インプレッションとクリックのトラッキング
 
@@ -378,21 +378,21 @@ lines-content_card_inbox.xml=1-24
 このチュートリアルでは、Androidの[`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>)コンテンツカードを表示するために使用するが、実際のユースケースに合ったクラスやコンポーネントでUIを構築することを推奨する。BrazeはデフォルトでUIを提供する。しかしこのチュートリアルでは、外観と動作をカスタマイズするためのカスタムビューの作成方法を説明する。
 
 !!step
-行ContentCardInboxActivity.kt番号29-35,40-42,44
+lines-ContentCardInboxActivity.kt=29-35,40-42,44
 
 #### 3\.コンテンツカードの更新を購読する
 
 新しいコンテンツカードが利用可能になった際に、UIが応答できるように[`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>)する。ここでは、サブスクライバーはアクティビティのライフサイクルフック内で登録および削除される。
 
 !!step
-行ContentCardInboxActivity.kt番号73-84
+lines-ContentCardInboxActivity.kt=73-84
 
 #### 4. カスタム受信トレイのUIを構築する
 
 コンテンツカードの[属性](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>)である`title`、`description`、およびを使用することで、特定のUI要件`url`に合うコンテンツカードを作成できる。この場合、Androidのネイティブ機能を使って受信トレイ`RecyclerView`を構築している。
 
 !!step
-lines-=90ContentCardInboxActivity.kt,93
+lines-ContentCardInboxActivity.kt=90,93
 
 #### 5. インプレッションとクリックのトラッキング
 
@@ -530,7 +530,7 @@ class BrazeInboxViewController: UITableViewController {
 ```
 
 !!step
-lines-=15AppDelegate.swift
+lines-AppDelegate.swift=15
 
 #### 1\.デバッグを有効にする(オプション)
 
@@ -551,14 +551,14 @@ lines-BrazeInboxView.swift=15-20
 コンテンツカードリスナーを購読して最新更新情報を受け取り、その後、そのユーザー向けの最新のコンテンツカードを要求`requestRefresh()`するために呼び出す。
 
 !!step
-行BrazeInboxView.swift34-35
+lines-BrazeInboxView.swift=34-35
 
 #### 4. カスタム受信トレイのUIを構築する
 
 コンテンツカードを使用[`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard)することで`title`、`description`特定のUI要件に合ったコンテンツカードを作成できる`imageUrl`。この場合、SWIFTのネイティブテーブルAPIを使って受信トレイを構築している。
 
 !!step
-lines-=8BrazeInboxView.swift,43,49-56
+lines-BrazeInboxView.swift=8,43,49-56
 
 #### 5. インプレッションとクリックのトラッキング
 
@@ -735,35 +735,35 @@ braze.requestContentCardsRefresh();
 ```
 
 !!step
-lines-=3-4main.js,9
+lines-main.js=3-4,9
 
 #### 1\.デバッグを有効にする(オプション)
 
 開発中のトラブルシューティングを容易にするために、デバッグを有効にすることを検討してください。必要に応じて、コンソールでBraze Web SDKのメソッドを実行することもできる。
 
 !!step
-行index.html番号-=1-44
+lines-index.html=1-44
 
 #### 2\.UIを構築する
 
 受信トレイページのUIを作成する。ここでは、基本的なHTMLページを作成している。これには、idが指定`div`された要素`cards-list`が含まれている。これはコンテンツカードのレンダリング対象コンテナとして使用される。
 
 !!step
-96main.js行目から99行目、101行目
+lines-main.js=96-99,101
 
 #### 3\.コンテンツカードの更新を購読する
 
 コンテンツカードリスナーを購読して最新更新情報を受け取り、その後、そのユーザー向けの最新のコンテンツカードを要求[`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>)するために呼び出す。代わりに、セッション開始時に自動更新を行うため`openSession()`、事前にサブスクライバーに電話をかける。 
 
 !!step
-lines-=64main.js,67,70-74
+lines-main.js=64,67,70-74
 
 #### 4. 受信トレイの要素を作成する
 
 コンテンツカードの[属性](<https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html>)（例`title`：、`description` 、 ）を使用することで、特定のUI要件に合わせてコンテンツカード`url`を表示できる。
 
 !!step
-行main.js番号22-25,28-43,84,91
+lines-main.js=22-25,28-43,84,91
 
 #### 5. インプレッションとクリックのトラッキング
 

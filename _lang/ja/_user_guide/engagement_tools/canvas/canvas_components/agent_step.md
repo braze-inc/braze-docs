@@ -57,7 +57,7 @@ toc_headers: h2
 
 オブジェクト出力変数から特定のプロパティを使用するには、Liquidでドット表記を使ってそのプロパティにアクセスする。 {% raw %}`{{context.${response_variable_name}.field_name}}`{% endraw %}
 
-![変数/assets/img/ai_agent/test_agent_step.pngimage_buster"agent_output".]({%%} の出力データ型がオブジェクトである場合の、ボディ HTML ライター用エージェントステップ{: style="max-width:80%;"}
+![変数「agent_output」の出力データ型がオブジェクトである場合の、ボディ HTML ライター用エージェントステップ。]({% image_buster /assets/img/ai_agent/test_agent_step.png %}){: style="max-width:80%;"}
 
 ### ステップ 4: 追加の文脈があれば追加せよ（任意）
 

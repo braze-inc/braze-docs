@@ -367,7 +367,7 @@ override func viewDidLoad() {
 
 キーと値のペアに、`attribute_key` を入力します。このキーは、ユーザーが選択した値とともに、カスタム属性としてユーザープロファイルに保存されます。カスタムビューロジックは、Braze に送信されたユーザー属性を処理する必要があります。
 
-![メッセージ作成画面で見つかった3 つのキーと値のペア。最初のキーと値のペアは「プッシュ"attribute_key"タグ」に設定される。二つ目は「通知のイネーブルメント（"subtitle_text"有効化）を行うと、また…」に設定される。三つ目は"view_type"    %})"table_list".]({%image_buster/assets/img/iam_implementation/dashboard3.png に設定される。{: style="max-width:65%;"}
+![メッセージ作成画面で見つかった3 つのキーと値のペア。最初のキーと値のペアは「プッシュタグ」に"attribute_key"設定される。二つ目は「通知を有効にすると…」に"subtitle_text"設定される。三つ目は"view_type"が"table_list"に設定される。]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
 
 #### アプリ内メッセージタッチのインターセプト
 ![設定とトグルの行を表示する Apple デバイス。カスタムビューはボタンを処理し、ボタンコントロールの外側でのタッチはアプリ内メッセージによって処理され、閉じられます。]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}

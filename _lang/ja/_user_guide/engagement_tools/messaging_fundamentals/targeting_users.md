@@ -52,7 +52,7 @@ tool:
 
 1. セグメントを作成し、**対象アプリとウェブサイト**を**特定アプリのユーザー**に設定し、Androidアプリを選択します。
 
-![特定のアプリからのユーザーを対象としたセグメント、/assets/img_archive/app_test_android.pngimage_buster"Test_Android".]({%    %}){: style="max-width:60%;"}
+![特定のアプリからのユーザーを対象としたセグメント、「Test_Android」。]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\.キャンペーンまたはキャンバスで**ターゲットオーディエンス**ステップに移動し、セグメントが [**セグメントを基準にユーザーをターゲットに設定**] セクションに追加されていることを確認します。 

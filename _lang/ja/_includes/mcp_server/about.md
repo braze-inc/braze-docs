@@ -27,7 +27,7 @@ API キーに読み取り専用**以外の**権限を割り当ててはならな
 
 ## 使用例
 
-Brazeとは、ClaudeやCursorのようなツールを使って自然言語でやり取りできる。その他の例やベストプラクティスについては、[Braze MCPサーバーの使用方法]{% if include.section == "user" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}{{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}を参照せよ。
+Brazeとは、ClaudeやCursorのようなツールを使って自然言語でやり取りできる。その他の例やベストプラクティスについては、[Braze MCPサーバーの使用方法]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}を参照せよ。
 
 {% tabs %}
 {% tab Claude %}

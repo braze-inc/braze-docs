@@ -175,7 +175,7 @@ page_order: 2
 
 **テスト」**タブに移動し、「**ユーザーとしてメッセージをプレビュー**」で**「カスタムユーザー**」を選択する。**カスタム属性**フィールドに日付を入力し、その日にサインアップしたユーザーに送信されるコンテンツカードをプレビューする。<br><br>
 
-![例として、%})'start_date'.]({%image_buster/assets/img/recs/custom_attributes_test.png というカスタム属性を挙げる。
+![例として、'start_date' というカスタム属性を挙げる。]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 {% endtab %}
 
 {% tab using Connected Content %}

@@ -175,7 +175,7 @@ UIエディタで、以下の項目を選択する：
 - **アクション:**更新
 - **キー値：** {% raw %} ```{% assign parsed_json = {{whats_app.${inbound_flow_response}}} | json_parse %}{{ parsed_json.FIELDS_THAT_APPLY }}```{% endraw %}
 
-![WhatsAppメッセージ作成画面に「パーソナライゼーションを追加」コンポーネントを組み込み、カスタム属性/assets/img/whatsapp/flows/parsed_json.pngimage_buster`inbound_flow_response`.]({%    %}) を含むWhatsAppプロパティのパーソナライゼーションを挿入する。
+![WhatsAppメッセージ作成画面に「パーソナライゼーションを追加」コンポーネントを組み込み、カスタム属性「inbound_flow_response」を含むWhatsAppプロパティのパーソナライゼーションを挿入する。]({% image_buster /assets/img/whatsapp/flows/parsed_json.png %})
 
 準備ができたら、フローをテストするためにテストメッセージを送れ。さあ、キャンバスを始めよう！
 
@@ -193,6 +193,6 @@ Liquidを通じてFlowレスポンスを使用し、[サポートされている
 1. WhatsAppのメッセージを作成する際は、プラスアイコンを選択して**「パーソナライゼーションを追加」**ウィンドウを開く。
 2. パーソナライゼーションタイプには**WhatsAppプロパティ**を選択し、カスタム**inbound_flow_response**属性にはWhats**Appプロパ**ティを選択する。これはユーザープロファイルへの情報保存、メッセージングへの組み込み、あるいはWebhookなどの他のサービスへの転送に利用できる。
 
-![WhatsAppメッセージ作成画面に「パーソナライゼーションを追加」コンポーネントを組み込み、カスタム属性/assets/img/whatsapp/flows/inbound_flow_response.pngimage_busterinbound_flow_response.]({%    %}) を含むWhatsAppプロパティのパーソナライゼーションを挿入する。{: style="max-width:80%;"}
+![WhatsAppメッセージ作成画面に「パーソナライゼーションを追加」コンポーネントを組み込み、カスタム属性「inbound_flow_response」を含むWhatsAppプロパティのパーソナライゼーションを挿入する。]({% image_buster /assets/img/whatsapp/flows/inbound_flow_response.png %}){: style="max-width:80%;"}
 
 質問や追加のサポートが必要な場合は、[サポートに]({{site.baseurl}}/braze_support/)連絡する。

@@ -260,7 +260,7 @@ Decisioning Studio GoをSalesforce Marketing Cloudと統合するには、アプ
 
 1. オートメーションに名前を付け、**保存**を選択する。
 
-![オートメーションの例    "OFE_Experimenter_Test5_Automation".]({%image_buster/assets/img/decisioning_studio_go/query3.png%})
+![オートメーションの例    "OFE_Experimenter_Test5_Automation".]({% image_buster /assets/img/decisioning_studio_go/query3.png %})
 
 {: start="2"}
 2\.次に、**一度だけ実行**を選択して、すべてが期待通りに動作していることを確認する。
@@ -460,7 +460,7 @@ Klaviyoでフローを作成する前に、参照するためにBrazeAI Decision
 4. トリガーを選べ。
 5. BrazeAI Decisioning Studio™ Go ポータルから、メトリック名とトリガーイベント名を対応付けよ。
 
-![トリガーイベント名に一致するメトリック"OFE_TEST_CASE_API_EVENT_TRIGGER".]({%image_buster/assets/img/decisioning_studio_go/flow2.png名の例    %})
+![トリガーイベント名に一致するメトリック"OFE_TEST_CASE_API_EVENT_TRIGGER".]({% image_buster /assets/img/decisioning_studio_go/flow2.png %})
 
 {: start="6"}
 6. [**保存**] を選択します。

@@ -97,21 +97,21 @@ lines-MainApplication.kt=12
 開発中のトラブルシューティングを容易にするために、デバッグを有効にすることを検討してください。
 
 !!step
-行MainApplication.kt番号21-28
+lines-MainApplication.kt=21-28
 
 #### 2\.バナーの更新情報をサブスクライバーが購読する
 
 バナーが更新されるたびに実行されるハンドラを登録するには、\``subscribeToBannersUpdates()`use` を使用する。
 
 !!step
-行MainActivity.kt-=10-14
+lines-MainActivity.kt=10-14
 
 #### 3\.配置を更新する
 
 Braze SDKを初期化した後、その配置の最新バナーコンテンツを取得`requestBannersRefresh(["PLACEMENT_ID"])`するために を呼び出す。
 
 !!step
-行banners.xml番号15-19
+lines-banners.xml=15-19
 
 #### 4. 定義せよ`BannerView`、お前の `banners.xml`
 

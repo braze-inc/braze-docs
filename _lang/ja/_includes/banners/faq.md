@@ -1,6 +1,6 @@
 # バナー:よくある質問
 
-> これらは、Braze のBanners に関するよくある質問に対する回答です。より一般的な情報については、[バナーについて]を]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %})参照せよ。
+> これらは、Braze のBanners に関するよくある質問に対する回答です。より一般的な情報については、[バナーについて]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %})を参照せよ。
 
 ## バナーの更新はいつユーザーに表示されるのか？
 
@@ -10,7 +10,7 @@
 
 1回の更新リクエストで、最大10個のプレースメントをリクエストできる。Brazeが提供するサービスでは、ユーザーが対象となるバナーの中で、優先度が最も高いものを、リクエストごとに返す。追加のリクエストはエラーを返す。
 
-詳細については、[配置リクエスト]を参照]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %})せよ。
+詳細については、[配置リクエスト]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %})を参照せよ。
 
 ## 同時にアクティブにできるバナーキャンペーンはいくつあるか？
 
@@ -18,7 +18,7 @@
 
 ## 同じ掲載枠を共有するキャンペーンでは、どのバナーが最初に表示されるのか？
 
-ユーザーが同じ掲載位置を共有する複数のバナー広告キャンペーンの対象となる場合、優先順位が最も高いバナーが表示される。詳細については、[バナー優先度]を参照]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %})せよ。
+ユーザーが同じ掲載位置を共有する複数のバナー広告キャンペーンの対象となる場合、優先順位が最も高いバナーが表示される。詳細については、[バナー優先度]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %})を参照せよ。
 
 ## 既存のコンテンツカードフィードでバナーを使えるか？
 

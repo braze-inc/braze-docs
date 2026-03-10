@@ -21,7 +21,7 @@ description: "この記事では、メッセージングでロケールを使用
 
 ### ステップ 2:メッセージに翻訳用Liquidタグを追加する {#add-translation-tags}
 
-翻訳するテキスト、画像, 写真、リンクURLをすべて囲むために`{% endtranslation %}`{% endraw %}、{% raw %}`{% translation your_id_here %}`翻訳タグとを追加する。
+翻訳するテキスト、画像、リンクURLをすべて囲むために、{% raw %}`{% translation your_id_here %}` と `{% endtranslation %}`{% endraw %} の翻訳タグを追加する。
 
 各翻訳には固有の `id`. が必要だ。例えば、簡単な挨拶を翻訳する場合、IDを「greeting」と名付けることができる：
 
