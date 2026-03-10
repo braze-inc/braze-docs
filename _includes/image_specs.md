@@ -183,7 +183,7 @@ These specifications apply to template headers, response media messages, and ima
 
 | Property | Specifications | Notes |
 |---|---|---|
-| Supported formats | JPEG, PNG | Meta officially supports only JPEG and PNG for image messages. WEBP is only supported for tickers only (not standard image messages). |
+| Supported formats | JPEG, PNG | Meta officially supports only JPEG and PNG for image messages. WebP is only supported for stickers (not standard image messages). |
 | Maximum file size | 5 MB | |
 | Color mode | 8-bit, RGB or RGBA | |
 | Caption (image messages only) | Optional; 1,024 characters maximum | |
