@@ -1,24 +1,22 @@
 ---
 nav_title: "PUBLICAR: Lienzos duplicados"
 article_title: "PUBLICAR: Lienzos duplicados"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 5
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Lienzos duplicados."
+description: "Este artículo describe los detalles sobre el punto final Duplicate Canvases."
 ---
 
 {% api %}
 # Duplicar lienzos utilizando la API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /canvas/duplicate
 {% endapimethod %}
 
 > Utiliza este punto final para duplicar Lienzos. Este punto final de la API es similar a [duplicar Lienzos en el panel de Braze][1].
 
-{% alert important %}
-Este punto final se encuentra actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Requisitos previos
 

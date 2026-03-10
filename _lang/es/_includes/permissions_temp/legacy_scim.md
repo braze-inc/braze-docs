@@ -1,14 +1,6 @@
----
-nav_title: "Objetos y apéndice de la API SCIM"
-article_title: Objetos de la API SCIM y Apéndice
-page_order: 8
-page_type: reference
-description: "En este artículo se explican los diferentes objetos de la API SCIM y el apéndice."
-hidden: true
-permalink: "/scim_api_appendix/"
----
-
-# Objetos y apéndice de la API SCIM
+{% alert important %}
+Braze presenta [los permisos granulares]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=granular%20permissions), una forma más flexible de administrar el acceso de los usuarios. Consulta [Migración a permisos granulares]({{site.baseurl}}/granular_permissions_migration/) para obtener más información sobre el proceso de migración, y la pestaña [API SCIM granular]({{site.baseurl}}/scim_api_appendix/?sdktab=granular%20scim%20api/) para ver los objetos API SCIM granulares y el apéndice.
+{% endalert %}
 
 ## Objeto permisos
 
@@ -31,9 +23,9 @@ Un objeto de permisos válido es un objeto JSON con los siguientes pares clave-v
 
 | Clave | Obligatoria | Tipo de datos | Descripción |
 | --- | --- | --- | --- |
-| `companyPermissions` | Opcional | Matriz | Matriz de cadenas de permisos a nivel de empresa de la tabla [Cadenas de permisos de empresa](#company), en la que la presencia de la cadena corresponde a que el usuario tiene el permiso correspondiente. |
-| `roles` | Opcional | Matriz | Matriz de [objetos de rol](#role-object). |
-| `appGroup` | Obligatoria | Matriz | Matriz de [objetos de permiso del espacio de trabajo](#workspace-permission-object). |
+| `companyPermissions` | Opcional | Matriz | Matriz de cadenas de permisos a nivel de empresa de la tabla [Cadenas de permisos de empresa]({{site.baseurl}}/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_company), en la que la presencia de la cadena corresponde a que el usuario tiene el permiso correspondiente. |
+| `roles` | Opcional | Matriz | Matriz de [objetos de rol]({{site.baseurl}}/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_role-object). |
+| `appGroup` | Obligatoria | Matriz | Matriz de [objetos de permiso del espacio de trabajo]({{site.baseurl}}/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-permissions-set-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Objeto de permisos del espacio de trabajo {#workspace-permission-object}
@@ -44,9 +36,9 @@ Un objeto de permiso de grupo de aplicaciones válido es un objeto JSON con los 
 | --- | --- | --- | --- |
 | `appGroupName`| Opcional | Cadena | Nombre del espacio de trabajo. Sirve para especificar a qué espacio de trabajo corresponden los permisos contenidos en este objeto. | 
 | `appGroupId` | Obligatorio si falta `appGroupName`  | Cadena | ID del espacio de trabajo, que sirve como método alternativo para especificar el espacio de trabajo. |
-| `appGroupPermissionSets` | Opcional | Matriz | Matriz con un único [objeto del conjunto de permisos del espacio de trabajo](#workspace-permissions-set-object). |
-| `appGroupPermissions` | Obligatoria | Matriz | Matriz de cadenas de permisos a nivel del espacio de trabajo de la tabla de [cadenas de permisos del espacio](#workspace-strings) de trabajo, en la que la presencia de la cadena corresponde a que el usuario tiene el permiso correspondiente para el espacio de trabajo especificado. |
-| `team` | Opcional | Matriz | Matriz de [objetos de permiso del equipo](#team-permissions-object). |
+| `appGroupPermissionSets` | Opcional | Matriz | Matriz con un único [objeto del conjunto de permisos del espacio de trabajo]({{site.baseurl}}/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-permissions-set-object). |
+| `appGroupPermissions` | Obligatoria | Matriz | Matriz de cadenas de permisos a nivel del espacio de trabajo de la tabla de [cadenas de permisos del espacio]({{site.baseurl}}/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-strings) de trabajo, en la que la presencia de la cadena corresponde a que el usuario tiene el permiso correspondiente para el espacio de trabajo especificado. |
+| `team` | Opcional | Matriz | Matriz de [objetos de permiso del equipo]({{site.baseurl}}/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_team-permissions-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Objeto de configuración de permisos del espacio de trabajo {#workspace-permissions-set-object}
@@ -67,7 +59,7 @@ Un objeto de permiso de equipo válido es un objeto JSON con los siguientes pare
 | --- | --- | --- | --- |
 | `teamName` | Opcional | Cadena | Nombre del equipo, que puede utilizarse para especificar a qué equipo corresponden los permisos de este objeto. |
 | `teamId` | Obligatorio si falta `teamName`  | Cadena | ID del equipo, que sirve como método alternativo para especificar el equipo. |
-| `teamPermissions` | Obligatoria | Matriz | Matriz de cadenas de permisos a nivel de equipo de la tabla [de cadenas de permisos de equipos](#team), en la que la presencia de la cadena corresponde a que el usuario tiene el permiso correspondiente para el equipo especificado. |
+| `teamPermissions` | Obligatoria | Matriz | Matriz de cadenas de permisos a nivel de equipo de la tabla [de cadenas de permisos de equipos]({{site.baseurl}}/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_team), en la que la presencia de la cadena corresponde a que el usuario tiene el permiso correspondiente para el equipo especificado. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Objeto de rol

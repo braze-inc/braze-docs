@@ -32,7 +32,7 @@ Puede haber cierta latencia en los mensajes dentro de la aplicación que se mues
 
 ## Intervalo de tiempo mínimo entre desencadenamientos
 
-De forma predeterminada, limitamos la tasa de mensajes dentro de la aplicación a una vez cada 30 segundos para facilitar una experiencia de usuario de calidad.
+De forma predeterminada, establecemos un límite de velocidad para los mensajes dentro de la aplicación, que son uno cada 30 segundos, para facilitar una experiencia de usuario de calidad.
 
 Puedes anular este valor a través de `ABKMinimumTriggerTimeIntervalKey` dentro del parámetro `appboyOptions` pasado a `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Establece en `ABKMinimumTriggerTimeIntervalKey` el valor entero que desees como tiempo mínimo en segundos entre mensajes dentro de la aplicación:
 

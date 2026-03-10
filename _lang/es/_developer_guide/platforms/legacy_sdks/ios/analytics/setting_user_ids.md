@@ -1,5 +1,5 @@
 ---
-nav_title: Configurar ID de usuario
+nav_title: Establecer ID de usuario
 article_title: Configurar ID de usuario para iOS
 platform: iOS
 page_order: 1
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Configurar ID de usuario para iOS
+# Establecer ID de usuario para iOS
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 

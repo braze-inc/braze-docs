@@ -21,6 +21,10 @@ description: "Este artículo de referencia cubre el uso de un array de objetos c
 
 Actualizar o eliminar elementos de una matriz requiere identificar el elemento por clave y valor, así que considera la posibilidad de incluir un identificador único para cada elemento de la matriz. La unicidad se aplica sólo a la matriz y es útil si desea actualizar y eliminar objetos específicos de su matriz. Braze no lo aplica.
 
+{% alert important %}
+Cuando un atributo personalizado anidado en tu solicitud contiene valores no válidos (como formatos de hora o`null`valores no válidos), Braze descarta todas las actualizaciones de atributos personalizados anidados en la solicitud del procesamiento. Esto se aplica a todas las estructuras anidadas dentro de ese atributo específico. Comprueba que todos los valores de los atributos personalizados anidados sean válidos antes de enviarlos. Para obtener más información, consulta [Crear y actualizar usuarios]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#how-does-userstrack-handle-invalid-nested-custom-attributes).
+{% endalert %}
+
 {% alert tip %}
 Para más información sobre el uso de matrices de objetos para objetos de atributos de usuario, consulta [Objeto de atributos de usuario]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 {% endalert %}
@@ -170,9 +174,19 @@ El siguiente ejemplo muestra la eliminación de cualquier objeto de la matriz `p
 {% endtab %}
 {% endtabs %}
 
+### Procesamiento del pedido
+
+Cuando una sola`/users/track`solicitud incluye `$add`operaciones `$remove`,  `$update`y  para el mismo atributo de matriz, Braze las procesa en este orden:
+
+1. `$add`
+2. `$remove`
+3. `$update`
+
+Dado que`$add`  se ejecuta antes que `$remove`, no puedes utilizar un`$remove`  seguido de`$add`  como mecanismo de upsert dentro de una sola solicitud. Primero se `$add`procesa el  y, a continuación, el`$remove`  elimina el elemento. Para realizar una inserción o actualización, envía el`$remove`  en una solicitud separada antes del `$add`.
+
 ### Marcas de tiempo
 
-Cuando incluyas campos como marcas de tiempo en una matriz de objetos, utiliza el formato `$time` en lugar de cadenas simples o enteros de época Unix.
+Cuando incluyas campos como marcas de tiempo en una matriz de objetos, utiliza el`$time`formato  en lugar de cadenas simples o enteros de la época unix.
 
 ```json
 {
@@ -194,7 +208,7 @@ Cuando incluyas campos como marcas de tiempo en una matriz de objetos, utiliza e
 ```
 
 {% alert tip %}
-Para más información, consulta [Atributos personalizados anidados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
+Para obtener más información, consulta [Attributos personalizados anidados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
 {% endalert %}
 
 ## Ejemplo de SDK
@@ -584,7 +598,7 @@ Los puntos de datos se registran de forma diferente dependiendo de si creas, act
 {% tabs local %}
 {% tab Create %}
 
-La creación de una nueva matriz registra un punto de datos por cada atributo de un objeto. Este ejemplo cuesta ocho puntos de datos: cada objeto mascota tiene cuatro atributos y hay dos objetos.
+Al crear una nueva matriz, se registra un punto de datos por cada atributo de un objeto. Este ejemplo cuesta ocho puntos de datos: cada objeto mascota tiene cuatro atributos y hay dos objetos.
 
 ```json
 {
@@ -612,7 +626,7 @@ La creación de una nueva matriz registra un punto de datos por cada atributo de
 {% endtab %}
 {% tab Update %}
 
-La actualización de una matriz existente registra un punto de datos por cada propiedad añadida. Este ejemplo cuesta dos puntos de datos, ya que sólo actualiza una propiedad en cada uno de los dos objetos.
+Al actualizar una matriz existente, se registra un punto de datos por cada propiedad añadida. Este ejemplo cuesta dos puntos de datos, ya que sólo actualiza una propiedad en cada uno de los dos objetos.
 
 ```json
 {
@@ -645,7 +659,7 @@ La actualización de una matriz existente registra un punto de datos por cada pr
 {% endtab %}
 {% tab Remove %}
 
-Eliminar un objeto de una matriz registra un punto de datos por cada criterio de eliminación que envíes. Este ejemplo cuesta tres puntos de datos, a pesar de que puede estar eliminando varios perros con esta declaración.
+Al eliminar un objeto de una matriz de objetos, se registra un punto de datos por cada criterio de eliminación que envíes. Este ejemplo cuesta tres puntos de datos, a pesar de que puede estar eliminando varios perros con esta declaración.
 
 ```json
 {
