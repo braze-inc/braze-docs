@@ -56,7 +56,7 @@ lines-index.js=6
 개발 중 문제 해결을 쉽게 하기 위해 디버깅을 활성화하는 것을 고려하세요.
 
 !!step
-라인-index.js=9-18
+lines-index.js=9-18
 
 #### 3\. 인앱 메시지 업데이트 구독
 
@@ -144,21 +144,21 @@ lines-MainApplication.kt=17
 개발 중 문제 해결을 쉽게 하기 위해 디버깅을 활성화하는 것을 고려하세요.
 
 !!step
-라인-MainApplication.kt=26-28
+lines-MainApplication.kt=26-28
 
 #### 2\. 활동 수명 주기 콜백 등록
 
 Braze의 기본 리스너를 등록하여 인앱 메시지 생명 주기를 처리합니다.
 
 !!step
-라인-MainApplication.kt=30-44
+lines-MainApplication.kt=30-44
 
 #### 3\. 인앱 메시지 수신기 설정
 
 `BrazeInAppMessageManager` 을 사용하여 메시지가 표시되기 전에 가로채는 사용자 지정 수신기를 설정하세요.
 
 !!step
-라인-MainApplication.kt=34-42
+lines-MainApplication.kt=34-42
 
 #### 4\. 조건부 논리 만들기
 
@@ -249,14 +249,14 @@ lines-AppDelegate.swift=12
 개발 중 문제 해결을 쉽게 하기 위해 디버깅을 활성화하는 것을 고려하세요.
 
 !!step
-라인-AppDelegate.swift=19-21
+lines-AppDelegate.swift=19-21
 
 #### 3\. Braze UI와 델리게이트를 설정하세요
 
 `BrazeInAppMessageUI()`은 기본적으로 인앱 메시지를 렌더링합니다. `self` 을 델리게이트로 지정하면 메시지가 표시되기 전에 메시지를 가로채서 처리할 수 있습니다.
 
 !!step
-라인-AppDelegate.swift=26-33
+lines-AppDelegate.swift=26-33
 
 #### 4\. 조건부 논리로 `DisplayChoice` 재정의
 

@@ -347,7 +347,7 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 
 서버 전송 이벤트를 통해 트리거되는 [무음 푸시 캠페인]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift)을 생성합니다. 
 
-![고객 프로필에 커스텀 이벤트/assets/img_archive/iosServerSentPush.pngimage_buster"server_event".]({%    %})가 있는 사용자에게 전달될 실행 기반 인앱 메시지 캠페인
+![고객 프로필에 커스텀 이벤트 "server_event"가 있는 사용자에게 전달될 실행 기반 인앱 메시지 캠페인.]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 푸시 캠페인에는 이 푸시 캠페인이 SDK 커스텀 이벤트를 기록하기 위해 전송되었음을 나타내는 키-값 페어 추가 항목이 포함되어야 합니다. 이 이벤트는 인앱 메시지를 트리거하는 데 사용됩니다.
 

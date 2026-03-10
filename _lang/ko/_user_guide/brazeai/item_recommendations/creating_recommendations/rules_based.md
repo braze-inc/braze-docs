@@ -175,7 +175,7 @@ For example:
 
 **테스트** 탭으로 이동하여 **사용자로 메시지 미리보기**에서 커스텀 **사용자를** 선택합니다. **커스텀 속성** 필드에 날짜를 입력하면 해당 날짜에 가입한 사용자에게 전송될 콘텐츠 카드를 미리 볼 수 있습니다. <br><br>
 
-![이름이 'start_date'.]({%인 예제 커스텀 속성입니다. image_buster /assets/img/recs/custom_attributes_test.png %})
+![인 예제 커스텀 속성입니다.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 {% endtab %}
 
 {% tab using Connected Content %}
