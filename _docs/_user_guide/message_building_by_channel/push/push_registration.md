@@ -130,6 +130,22 @@ If we want to launch a campaign, we create a campaign in Braze that generates a 
 | 1. Customer (device) registers to push provider<br>2. Provider generates and delivers push token<br>3. Flush tokens in Braze |1. Braze sends push payload to provider<br>2. Provider delivers the push payload to the device<br>3. SDK passes messaging stats to Braze |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+## Dissociating push tokens from a logged out device
+
+### iOS
+
+Check for device eligibility using Liquid. For example, you could set a custom attribute for the device's identifier for vendors (IDFV) on the user profile. Then, use Liquid logic in the iOS push campaign to see if the targeted device matches the IDFV custom attribute. If it matches, abort the push so it is not sent, and clear the value when the user logs in.
+
+Another approach is to unregister the push token when a user logs out. This uses the Apple method `unregisterForRemoteNotifications`, which unregisters the device for notifications received via APNs. You can call this on logout. When Braze attempts to send a push message to a device that has been unregistered, Braze will update the token's status to invalid and will no longer attempt to send push on subsequent sends. The user can re-register for remote notifications when they log back in.
+
+### Android
+
+Work with your developer team to build a custom broadcast receiver to receive the push notification. When a push is received, check whether the user is logged out on the device (using a local variable). If so, suppress the push notification; otherwise, show it.
+
+{% alert warning %}
+While it's possible to use the [`wipeData()` method]({{site.baseurl}}/developer_guide/analytics/managing_data_collection#android_wiping-previously-stored-data), **this will permanently delete all local Braze data**, including pending unsent events. We recommend only using this if you don't expect that user to ever sign in again or need a full logout for compliance reasons.
+{% endalert %}
+
 ## Frequently asked questions
 
 ### What happens when an opted-in user deletes and then redownloads my app?

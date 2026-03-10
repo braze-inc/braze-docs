@@ -31,6 +31,28 @@ Common failures may include:
 ### Push bounced: NotRegistered
 `NotRegistered` usually means that the app has been deleted from the device (such as our signal for Uninstall). This can also occur if multiple registration is happening and a second registration is invalidating the push token that Braze receives.
 
+### Push bounced: DEVICE_UNREGISTERED
+
+The following are possible reasons for this error:
+
+- **The user uninstalled the app.** This error is typically seen when users uninstall the app from their device.
+- **Updates to the push configuration in the app.** If credentials or certificates bundled with the app were changed, the user would re-register for push using the new credentials and previous push tokens could become invalid.
+- **Logic that unregisters users from push notifications.** While rare, this is possible. Refer to the relevant documentation for [iOS](https://developer.apple.com/documentation/uikit/uiapplication/1623093-unregisterforremotenotifications) and [Firebase/Android](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging#deleteToken()).
+
+{% alert important %}
+This error does not mean that the user is push disabled, only that a token was removed from their profile. This is common with users who are testing functionality and installing or uninstalling the app regularly. Refer to the user profile in **User Search** under **Engagement** > **Contact Settings** to verify if you still have any tokens recorded on the profile.
+{% endalert %}
+
+### Push bounced: Requested entity was not found
+
+This error can occur because of the following reasons:
+
+- The end user has uninstalled the app. You can check their user profile to confirm if this is the case.
+- There's an invalid notification channel. Depending on your integration, devices can have push tokens that are only valid for certain notification channels. When sending to an invalid channel, the message will bounce.
+- The payload size is too large.
+
+For more information, refer to [Google's documentation](https://firebase.google.com/docs/cloud-messaging/manage-tokens#stale-and-expired-tokens) on stale and expired registration tokens.
+
 {% endtab %}
 {% tab iOS %}
 

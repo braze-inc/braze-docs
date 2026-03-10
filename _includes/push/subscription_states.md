@@ -58,6 +58,12 @@ You can update a user's subscription state with the Braze SDK using the `setPush
 
 You can update a user's subscription state with the Braze REST API using the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update their [`push_subscribe`]({{site.baseurl}}/api/objects_filters/user_attributes_object) attribute.
 
+### Differences between push enablement and push subscription status
+
+The only automatic change Braze makes to a user's subscription state is to mark the user as opted-in if they accept the initial iOS push prompt. When this happens (either from the prompt or from system settings), Braze will mark the user as "opted-in" for push. Otherwise, the user's status is `Subscribed` until explicitly modified by SDK method or REST API call.
+
+Braze does not update push subscription status automatically when a user opts out of notifications. To update a user's push subscription status, you need to update it in Braze. For example, if a user disables push from an in-app preference center, you need to update the push subscription status to "unsubscribed" in Braze. Braze does not update user profiles based on your preference center. To align subscription states with a user's in-app preferences, call the appropriate methods using the [SDK]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#sdk-integration) (iOS or Android) or [REST API]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#rest-api).
+
 ### Checking push subscription state
 
 ![User profile for John Doe with their push subscription state set to Subscribed.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}

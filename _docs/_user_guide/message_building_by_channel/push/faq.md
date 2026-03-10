@@ -40,3 +40,17 @@ If you want the push token reassigned to the original user:
 1. Have the original user log into the profile with the missing push token.
 2. Trigger a new push send. This will move the token back to the account if they still have push enabled on the device level.
 
+### How does Braze determine when a push message is sent successfully?
+
+A message is logged as sent as soon as the message is received by the push service provider. This does not necessarily mean the user has received or viewed the message.
+
+For iOS, the push service provider is Apple Push Notification Service (APNs), and for Android, it is typically Firebase Cloud Messaging (FCM). The push service provider will immediately respond with success or failure. A failure could include a bounce or a retry for network failure.
+
+If a success message is returned, the send will be logged by Braze and the push service will then attempt to deliver to the device. If the device cannot immediately be reached, the service will retry up to its expiration option set in Braze (**TTL** for Android, **Expiry** for iOS). If the message times out, the push service will discard the push, but it will not be considered a bounce.
+
+- For action-based delivery push campaigns, the message send is logged as soon as the user has performed the action that triggers the campaign.
+- For scheduled campaigns, the send time is the time the message was enqueued and passed to the push service provider.
+- For both delivery types, the message will be marked as "sent" in Braze and in the user profile under **Campaigns Received**, even though the user may not have seen or received the push yet.
+
+The "deliveries" metric for push in the dashboard is calculated on page load as the number of sends minus bounces.
+
